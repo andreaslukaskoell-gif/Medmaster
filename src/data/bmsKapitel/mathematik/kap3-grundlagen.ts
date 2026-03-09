@@ -123,7 +123,7 @@ Ein **Doppelbruch** ist ein Bruch im Bruch -- in der Klinik allgegenwärtig bei 
 
 **Konzentrationsbruch:** NaCl 0,9 % = 0,9 g/100 mL = 9 mg/mL = 9 g/L. Umrechnung: Bruch erweitern/kürzen je nach gewünschter Einheit.
 
-{{DIAGRAM:percent-fractions}}
+{{DIAGRAM:fraction-operations}}
 
 ---
 
@@ -247,6 +247,12 @@ Ein **Doppelbruch** ist ein Bruch im Bruch -- in der Klinik allgegenwärtig bei 
           tags: ["doppelbruch", "kehrwert", "vereinfachung"],
         },
       ],
+      altfrage: {
+        question:
+          "Ein Medikament liegt in einer Konzentration von 2/5 mg/mL vor. Ein Patient soll 3/4 mg erhalten. Berechnen Sie das benötigte Volumen. Anschließend wird die Lösung 1:8 verdünnt. Welche Konzentration hat die verdünnte Lösung?",
+        answer:
+          "Volumen = Dosis / Konzentration = (3/4) / (2/5) = (3/4) × (5/2) = 15/8 = 1,875 mL. Division durch einen Bruch = Multiplikation mit dem Kehrwert. Verdünnung 1:8 bedeutet: neue Konzentration = (2/5) / 8 = 2/40 = 1/20 mg/mL = 0,05 mg/mL. Probe Volumen: 1,875 mL × 0,4 mg/mL = 0,75 mg = 3/4 mg ✓. Bruchrechnung ist die Grundlage jeder Dosierungsberechnung — Zähler und Nenner korrekt zu identifizieren verhindert Faktor-Fehler.",
+      },
     },
     {
       id: "ma-grund-02",
@@ -473,6 +479,12 @@ In der Epidemiologie sind drei Kennzahlen zentral -- alle basieren auf Prozentre
           tags: ["prozentrechnung", "rrr", "studienauswertung"],
         },
       ],
+      altfrage: {
+        question:
+          "In einer klinischen Studie mit 800 Teilnehmern erhalten 480 ein neues Medikament, der Rest ein Placebo. In der Medikamentengruppe treten bei 96 Patienten Nebenwirkungen auf, in der Placebogruppe bei 48. Berechnen Sie die Nebenwirkungsrate in beiden Gruppen und die absolute Risikodifferenz in Prozentpunkten.",
+        answer:
+          "Medikamentengruppe: 96/480 × 100 = 20 %. Placebogruppe: 48/320 × 100 = 15 %. Absolute Risikodifferenz = 20 % − 15 % = 5 Prozentpunkte. Die relative Risikoerhöhung beträgt (20 − 15)/15 × 100 = 33,3 %. Wichtig: 5 Prozentpunkte (absolute Differenz) und 33,3 % relative Erhöhung beschreiben denselben Sachverhalt aus unterschiedlicher Perspektive. Im MedAT wird gezielt nach dem Unterschied zwischen Prozentpunkten und prozentualer Änderung gefragt.",
+      },
       diagram: "percent-fractions",
     },
     {
@@ -522,7 +534,7 @@ Zwei Größen sind **direkt proportional**, wenn sie im selben Verhältnis steig
 
 ---
 
-{{DIAGRAM:percent-fractions}}
+{{DIAGRAM:proportional-relationship}}
 
 ## Indirekter Dreisatz (antiproportional)
 
@@ -703,6 +715,12 @@ Glucose 5 % und Glucose 20 % sollen zu 500 mL Glucose 8 % gemischt werden:
           tags: ["dreisatz", "zusammengesetzt", "perfusor", "klinisch"],
         },
       ],
+      altfrage: {
+        question:
+          "Ein Antibiotikum wird mit 15 mg/kg dosiert. Die Infusionslösung enthält 1,2 g in 100 mL. Ein Patient wiegt 80 kg und soll die Dosis über 30 Minuten erhalten. Berechnen Sie die Gesamtdosis, das benötigte Volumen und die Infusionsrate in mL/h.",
+        answer:
+          "Gesamtdosis = 15 mg/kg × 80 kg = 1200 mg. Konzentration = 1,2 g / 100 mL = 1200 mg / 100 mL = 12 mg/mL. Benötigtes Volumen = 1200 mg / 12 mg/mL = 100 mL. Infusionszeit = 30 min = 0,5 h. Rate = 100 mL / 0,5 h = 200 mL/h. Zusammengesetzter Dreisatz: Erst Gewicht (direkter Dreisatz), dann Konzentration (indirekter Dreisatz), dann Zeitumrechnung. Probe: 200 mL/h × 0,5 h = 100 mL × 12 mg/mL = 1200 mg ✓.",
+      },
     },
     {
       id: "ma-grund-04",
@@ -753,7 +771,7 @@ Das SI-System (Internationales Einheitensystem) verwendet **Präfixe**, um Vielf
 
 ---
 
-{{DIAGRAM:percent-fractions}}
+{{DIAGRAM:si-prefix-ladder}}
 
 ## Die Kettenmethode (Dimensional Analysis)
 
@@ -960,6 +978,12 @@ Diese Werte sollte man auswendig kennen, um Rechenfehler sofort zu erkennen:
           tags: ["glucose", "umrechnung", "rückrechnung"],
         },
       ],
+      altfrage: {
+        question:
+          "Ein Perfusor enthält Adrenalin 3 mg in 50 mL NaCl. Die Verordnung lautet: 0,05 µg/kg/min für einen 60 kg schweren Patienten. Berechnen Sie die Laufrate in mL/h. Geben Sie die Konzentration auch in µg/mL an.",
+        answer:
+          "Konzentration = 3 mg / 50 mL = 0,06 mg/mL = 60 µg/mL (1 mg = 1000 µg). Dosis pro Minute = 0,05 µg/kg/min × 60 kg = 3 µg/min. Rate in mL/min = 3 µg/min ÷ 60 µg/mL = 0,05 mL/min. Rate in mL/h = 0,05 × 60 = 3 mL/h. Kettenmethode: µg/min ÷ µg/mL = mL/min; die Einheit µg kürzt sich. Dann mL/min × 60 min/h = mL/h. Einheitenumrechnung mg → µg (× 1000) ist der kritische Schritt — ein Faktor-1000-Fehler wäre lebensgefährlich.",
+      },
     },
   ],
 };

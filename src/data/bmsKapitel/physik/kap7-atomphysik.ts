@@ -1590,7 +1590,7 @@ Der geologische Grund: Kristallines Grundgestein (Granit, Gneis) in diesen Regio
 **Beispiel 1 — Abstandsquadratgesetz:**
 Ein ⁶⁰Co-Präparat hat in 1 m Abstand eine Dosisleistung von 0,5 mSv/h. In welchem Abstand beträgt sie nur noch 0,02 mSv/h?
 
-Lösung: Ḋ₁·r₁² = Ḋ₂·r₂² → r₂ = r₁ · \\u221A(Ḋ₁/Ḋ₂) = 1 m · \\u221A(0,5/0,02) = 1 m · \\u221A25 = **5 m**.
+Lösung: Ḋ₁·r₁² = Ḋ₂·r₂² → r₂ = r₁ · √(Ḋ₁/Ḋ₂) = 1 m · √(0,5/0,02) = 1 m · √25 = **5 m**.
 
 **Beispiel 2 — Abschirmung (Halbwertsschichtdicke HVL):**
 ¹³⁷Cs-Quelle: Ḋ₀ = 100 mSv/h. HVL in Blei = 6,5 mm. Wie viel Blei für < 1 mSv/h?

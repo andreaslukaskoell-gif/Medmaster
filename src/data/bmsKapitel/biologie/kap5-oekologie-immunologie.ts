@@ -128,6 +128,22 @@ Die **Kapazitätsgrenze K** beschreibt in der Populationsökologie die maximale 
           tags: ["biotop", "biozönose", "ökosystem"],
         },
       ],
+      altfrage: {
+        text: "Welche Aussage zu ökologischen Grundbegriffen ist richtig?",
+        options: [
+          { id: "a", text: "Das Biotop umfasst alle Lebewesen eines Gebietes." },
+          { id: "b", text: "Eine Biozönose beschreibt den unbelebten Lebensraum." },
+          {
+            id: "c",
+            text: "Ein Ökosystem besteht aus Biotop (unbelebte Umwelt) und Biozönose (Lebensgemeinschaft).",
+          },
+          { id: "d", text: "Eine Population umfasst alle Arten in einem Gebiet." },
+          { id: "e", text: "Die Biosphäre ist eine Untereinheit des Bioms." },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "Ein **Ökosystem** ist die funktionelle Einheit aus **Biotop** (unbelebter Lebensraum: Boden, Wasser, Klima) und **Biozönose** (Lebensgemeinschaft aller Arten). A und B sind vertauscht. D beschreibt die Biozönose, nicht die Population (= eine Art). E ist falsch: die Biosphäre umfasst alle Biome.",
+      },
     },
     {
       id: "bio-10-02",
@@ -334,6 +350,34 @@ Klinische Parallele: Der **Mensch** ist dank **Thermoregulation** (Schwitzen, Va
           tags: ["shelford", "toleranzgesetz", "liebig"],
         },
       ],
+      altfrage: {
+        text: "Welche Aussage zu Umweltfaktoren und Toleranzkurven ist richtig?",
+        options: [
+          {
+            id: "a",
+            text: "Abiotische Faktoren sind ausschließlich durch andere Lebewesen bedingt.",
+          },
+          {
+            id: "b",
+            text: "Stenöke Arten haben einen breiten Toleranzbereich und besiedeln viele Habitate.",
+          },
+          {
+            id: "c",
+            text: "Nach Liebigs Minimumgesetz begrenzt der im Überfluss vorhandene Faktor das Wachstum.",
+          },
+          {
+            id: "d",
+            text: "Euryöke Arten haben einen breiten Toleranzbereich gegenüber einem Umweltfaktor.",
+          },
+          {
+            id: "e",
+            text: "Shelfords Toleranzgesetz berücksichtigt nur das Minimum, nicht das Maximum eines Faktors.",
+          },
+        ],
+        correctOptionId: "d",
+        explanation:
+          "**Euryök** = breiter Toleranzbereich (griech. eurys = weit); **stenök** = enger Toleranzbereich. A ist falsch: abiotisch = unbelebt (Temperatur, pH, Licht). B ist vertauscht (stenök = eng). C ist falsch: Liebig sagt, der im **Minimum** vorhandene Faktor limitiert. E ist falsch: Shelford erweitert Liebig um das Maximum.",
+      },
     },
 
     {
@@ -479,6 +523,28 @@ Bei Immunsuppression (z. B. HIV/AIDS mit CD4-T-Zell-Verlust, Chemotherapie-induz
           tags: ["connell", "fundamentale-nische", "realisierte-nische"],
         },
       ],
+      altfrage: {
+        text: "Welche Aussage zur ökologischen Nische ist richtig?",
+        options: [
+          { id: "a", text: "Die realisierte Nische ist stets größer als die fundamentale Nische." },
+          {
+            id: "b",
+            text: "Die fundamentale Nische beschreibt den tatsächlich genutzten Lebensbereich einer Art.",
+          },
+          {
+            id: "c",
+            text: "Konkurrenz kann die realisierte Nische einer Art gegenüber der fundamentalen Nische einschränken.",
+          },
+          { id: "d", text: "Die ökologische Nische und das Habitat sind synonyme Begriffe." },
+          {
+            id: "e",
+            text: "Das Connell-Experiment zeigt, dass Konkurrenz die fundamentale Nische vergrößert.",
+          },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "Die **fundamentale Nische** umfasst alle Bedingungen, unter denen eine Art theoretisch leben könnte. Die **realisierte Nische** ist der tatsächlich genutzte Bereich — sie ist durch Konkurrenz, Prädation und andere biotische Faktoren oft kleiner als die fundamentale Nische. Connells Seepocken-Experiment belegt dies: Ohne *Balanus* dehnte *Chthamalus* seinen Bereich aus.",
+      },
     },
 
     {
@@ -876,11 +942,24 @@ Bestimmte Schadstoffe werden **nicht abgebaut** und reichern sich entlang der Na
         "NPP und GPP definieren und die Bedeutung von Destruenten für den Stoffkreislauf erläutern",
         "Bioakkumulation und Biomagnifikation definieren, medizinisch relevante Beispiele (Methylquecksilber, DDT, Blei) benennen",
       ],
-      // TODO: echte MedAT-Altfrage prüfen - aktuell Übungsformat
       altfrage: {
-        question: "Warum nimmt die verfügbare Energie von Trophieebene zu Trophieebene ab?",
-        answer:
-          "Pro Trophieebene gehen ca. 90% der Energie durch Zellatmung (Wärme), Ausscheidung und unverdauliche Reste verloren (10%-Regel nach Lindeman). Nur ~10% werden in Biomasse umgewandelt und stehen der nächsten Stufe zur Verfügung. Deshalb gibt es selten mehr als 4-5 Trophieebenen und Top-Prädatoren sind immer selten.",
+        text: "Welche Aussage zum Energiefluss in Ökosystemen ist richtig?",
+        options: [
+          { id: "a", text: "Die Energie wird in einem Kreislauf vollständig recycelt." },
+          {
+            id: "b",
+            text: "Pro Trophieebene werden ca. 90 % der Energie in Biomasse umgewandelt.",
+          },
+          { id: "c", text: "Destruenten spielen keine Rolle im Stoffkreislauf." },
+          {
+            id: "d",
+            text: "Pro Trophieebene gehen ca. 90 % der Energie durch Zellatmung und Wärme verloren (10 %-Regel).",
+          },
+          { id: "e", text: "Nahrungsketten haben üblicherweise 10–15 Trophieebenen." },
+        ],
+        correctOptionId: "d",
+        explanation:
+          "Nach der **10 %-Regel** (Lindeman, 1942) werden pro Trophieebene nur ~10 % der Energie als Biomasse weitergegeben; ~90 % gehen durch Zellatmung (Wärme), Ausscheidung und unverdauliche Reste verloren. Deshalb haben Nahrungsketten selten mehr als 4–5 Glieder. A ist falsch: Energie fließt linear (kein Kreislauf). C ist falsch: Destruenten sind essenziell für den Stoffkreislauf.",
       },
       selfTest: [
         {
@@ -1312,6 +1391,34 @@ Bakterienwachstum in geschlossener Kultur (Blutkultur, Nährmedium) durchläuft 
           tags: ["r-strategen", "k-strategen", "lebensstrategien"],
         },
       ],
+      altfrage: {
+        text: "Welche Aussage zum Populationswachstum ist richtig?",
+        options: [
+          {
+            id: "a",
+            text: "Beim logistischen Wachstum gibt es keine obere Grenze der Populationsgröße.",
+          },
+          {
+            id: "b",
+            text: "K-Strategen haben viele Nachkommen, kurze Generationszeit und keine Brutpflege.",
+          },
+          {
+            id: "c",
+            text: "Die Kapazitätsgrenze K beschreibt die maximale Individuenzahl, die ein Habitat dauerhaft tragen kann.",
+          },
+          {
+            id: "d",
+            text: "Exponentielles Wachstum ist der Normalfall in natürlichen Populationen.",
+          },
+          {
+            id: "e",
+            text: "r-Strategen investieren viel in Brutpflege und haben wenige Nachkommen.",
+          },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "Die **Kapazitätsgrenze K** (carrying capacity) ist die maximale Populationsgröße, die ein Lebensraum mit seinen Ressourcen dauerhaft tragen kann. Beim logistischen Wachstum nähert sich die Population asymptotisch K an (A ist falsch). B und E sind vertauscht: K-Strategen = wenige Nachkommen, viel Brutpflege; r-Strategen = viele Nachkommen, wenig Brutpflege. D ist falsch: Exponentielles Wachstum tritt nur kurzzeitig auf (z. B. neue Habitate).",
+      },
     },
 
     // === from kap11-immunologie ===

@@ -2180,9 +2180,20 @@ Normaler Calvin-Zyklus. Erstes stabiles Produkt = 3-PGA (C3). Problem bei Hitze/
       ],
       diagram: "photosynthesis-z-scheme",
       altfrage: {
-        question: "Woher stammt der bei der Photosynthese freigesetzte Sauerstoff (O₂)?",
-        answer:
-          "Der O₂ stammt aus der Photolyse des Wassers (H₂O) im Photosystem II (Thylakoidmembran). 2 H₂O → O₂ + 4 H⁺ + 4 e⁻. Dies wurde durch Isotopenexperimente mit ¹⁸O bewiesen: ¹⁸O im H₂O erscheint im O₂, ¹⁸O im CO₂ erscheint in der Glucose. Häufiger Irrtum: O₂ stammt aus CO₂ — das ist falsch.",
+        text: "Welche Aussage zur Photosynthese ist richtig?",
+        options: [
+          { id: "a", text: "Der freigesetzte O₂ stammt aus der Spaltung von CO₂." },
+          { id: "b", text: "Die Lichtreaktion findet im Stroma des Chloroplasten statt." },
+          {
+            id: "c",
+            text: "RuBisCO fixiert CO₂ im Calvin-Zyklus und ist das häufigste Protein der Erde.",
+          },
+          { id: "d", text: "C4-Pflanzen öffnen ihre Stomata ausschließlich nachts." },
+          { id: "e", text: "Photosystem I (P700) spaltet Wasser und setzt Sauerstoff frei." },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "**RuBisCO** (Ribulose-1,5-bisphosphat-Carboxylase/Oxygenase) katalysiert die CO₂-Fixierung im Calvin-Zyklus und macht ca. 50 % des Blattproteins aus — es ist das häufigste Protein der Erde. A ist falsch: O₂ stammt aus der Photolyse von H₂O (PS II). B ist falsch: Lichtreaktion = Thylakoidmembran. D beschreibt CAM-Pflanzen, nicht C4. E ist falsch: PS II (P680) spaltet Wasser, nicht PS I.",
       },
       klinischerBezug:
         "Die Photosynthese ist die Grundlage allen aeroben Lebens: Sie produziert den Sauerstoff, den unsere Atmungskette als finalen Elektronenakzeptor benötigt, und fixiert den Kohlenstoff, der über die Nahrungskette zum Menschen gelangt. In der Umweltmedizin ist der Rückgang der Photosynthese-Kapazität (Entwaldung, Algensterben) mit dem Anstieg atmosphärischen CO₂ und dem Klimawandel verknüpft. Cyanobakterien-Toxine (Microcystine) können bei Wasserblüten zu Leberversagen führen — ein direkter medizinischer Bezug zu photosynthetischen Organismen.",

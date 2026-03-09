@@ -45,7 +45,7 @@ Das SI definiert genau **sieben Basisgrößen** — fundamentale, voneinander un
 | Stoffmenge | n | Mol | mol | Serumnatrium 140 mmol/L |
 | Lichtstärke | I_v | Candela | cd | OP-Leuchte ~160 000 cd |
 
-Seit der SI-Reform 2019 werden alle Basiseinheiten durch Naturkonstanten definiert: Das Kilogramm über die Planck-Konstante (fundamentale Quantenkonstante), das Meter über die Lichtgeschwindigkeit (1 m = Strecke, die Licht in 1/299 792 458 s zurücklegt), die Sekunde über die Casium-133-Atomuhr (9 192 631 770 Schwingungen).
+Seit der SI-Reform 2019 werden alle Basiseinheiten durch Naturkonstanten definiert: Das Kilogramm über die Planck-Konstante (fundamentale Quantenkonstante), das Meter über die Lichtgeschwindigkeit (1 m = Strecke, die Licht in 1/299 792 458 s zurücklegt), die Sekunde über die Cäsium-133-Atomuhr (9 192 631 770 Schwingungen).
 
 > **Merke:** Es gibt **genau 7** SI-Basisgrößen. Alle anderen Einheiten (Newton, Pascal, Joule, Watt) sind **abgeleitet** — sie ergeben sich als Produkt von Potenzen der Basiseinheiten.
 
@@ -64,7 +64,7 @@ Seit der SI-Reform 2019 werden alle Basiseinheiten durch Naturkonstanten definie
 | **Spannung** | Volt (V) | U = P/I | kg·m²·A⁻¹·s⁻³ | EKG-Signal ~1 mV |
 | **Frequenz** | Hertz (Hz) | f = 1/T | s⁻¹ | Ultraschall 2–18 MHz |
 
-Die Ableitungskette: **Newton** (Kraft) → **Pascal** (Kraft/Flache = Druck) → **Joule** (Kraft x Weg = Energie) → **Watt** (Energie/Zeit = Leistung). Diese Kette musst du vorwarts und ruckwarts sicher beherrschen.
+Die Ableitungskette: **Newton** (Kraft) → **Pascal** (Kraft/Fläche = Druck) → **Joule** (Kraft x Weg = Energie) → **Watt** (Energie/Zeit = Leistung). Diese Kette musst du vorwärts und rückwärts sicher beherrschen.
 
 > **Merke:** N = kg·m·s⁻², Pa = N/m², J = N·m, W = J/s. **Kraft wird in Newton gemessen** — nicht in m/s² (Beschleunigung!) und nicht in N·m (Arbeit!).
 
@@ -78,9 +78,9 @@ Jede physikalische Größe G besteht aus zwei untrennbaren Teilen:
 
 **G = {G} · [G]** (Zahlenwert mal Einheit)
 
-Korpergroße 1,75 m: Zahlenwert = 1,75, Einheit = m. Beim Einheitenwechsel andert sich der Zahlenwert (1,75 m = 175 cm), die Große selbst bleibt identisch. Ohne Einheit ist eine Zahl wie „120" mehrdeutig — Blutdruck in mmHg? Puls pro Minute? Glukose in mg/dL?
+Körpergröße 1,75 m: Zahlenwert = 1,75, Einheit = m. Beim Einheitenwechsel ändert sich der Zahlenwert (1,75 m = 175 cm), die Größe selbst bleibt identisch. Ohne Einheit ist eine Zahl wie „120" mehrdeutig — Blutdruck in mmHg? Puls pro Minute? Glukose in mg/dL?
 
-> **Merke:** Jede physikalische Größe = **Zahlenwert x Einheit**. Die **Dimensionsanalyse** pruft, ob beide Seiten einer Gleichung dieselbe Einheit haben — stimmen sie nicht uberein, ist die Formel garantiert falsch.
+> **Merke:** Jede physikalische Größe = **Zahlenwert x Einheit**. Die **Dimensionsanalyse** prüft, ob beide Seiten einer Gleichung dieselbe Einheit haben — stimmen sie nicht überein, ist die Formel garantiert falsch.
 
 ---
 
@@ -94,9 +94,9 @@ Korpergroße 1,75 m: Zahlenwert = 1,75, Einheit = m. Beim Einheitenwechsel ander
 | Addition | Arithmetisch (3 + 4 = 7) | Vektoriell (Pfeile, Komponenten) |
 | Medizin-Beispiele | Temperatur, Druck, Masse, Energie | Kraft, Geschwindigkeit, Beschleunigung |
 
-**Klinisch:** Der **Blutdruck** ist ein Skalar — er wirkt nach dem Pascalschen Prinzip (Druckausbreitung in ruhenden Fluiden) in alle Richtungen gleich. Die **Blutstromungsgeschwindigkeit** ist ein Vektor — sie hat eine definierte Richtung im Gefaß. Im **EKG** ist der Herzvektor (Summenvektor aller elektrischen Krafte im Herzmuskel) die Grundlage der Diagnostik.
+**Klinisch:** Der **Blutdruck** ist ein Skalar — er wirkt nach dem Pascalschen Prinzip (Druckausbreitung in ruhenden Fluiden) in alle Richtungen gleich. Die **Blutströmungsgeschwindigkeit** ist ein Vektor — sie hat eine definierte Richtung im Gefäß. Im **EKG** ist der Herzvektor (Summenvektor aller elektrischen Kräfte im Herzmuskel) die Grundlage der Diagnostik.
 
-> **Merke:** **Skalar** = nur Betrag (Temperatur, Druck, Masse). **Vektor** = Betrag + Richtung (Kraft, Geschwindigkeit). Haufige Falle: Druck scheint eine Richtung zu haben, ist aber ein Skalar!
+> **Merke:** **Skalar** = nur Betrag (Temperatur, Druck, Masse). **Vektor** = Betrag + Richtung (Kraft, Geschwindigkeit). Häufige Falle: Druck scheint eine Richtung zu haben, ist aber ein Skalar!
 
 ---
 
@@ -105,13 +105,13 @@ Korpergroße 1,75 m: Zahlenwert = 1,75, Einheit = m. Beim Einheitenwechsel ander
 | Typ | Definition | Beispiele | Beim Verdoppeln der Stoffmenge |
 |-----|-----------|-----------|-------------------------------|
 | **Extensiv** | Proportional zur Systemmenge | Masse, Volumen, Energie, Stoffmenge | Verdoppelt sich |
-| **Intensiv** | Unabhangig von der Menge | Temperatur, Druck, Dichte, Konzentration | Bleibt gleich |
+| **Intensiv** | Unabhängig von der Menge | Temperatur, Druck, Dichte, Konzentration | Bleibt gleich |
 
-Zwei Tassen Kaffee bei 80 °C zusammenschutten: Volumen verdoppelt (extensiv), Temperatur bleibt 80 °C (intensiv) — nicht 160 °C!
+Zwei Tassen Kaffee bei 80 °C zusammenschütten: Volumen verdoppelt (extensiv), Temperatur bleibt 80 °C (intensiv) — nicht 160 °C!
 
-**Klinisch entscheidend:** Die **Plasmakonzentration** eines Medikaments (intensiv, mg/L) bestimmt die Wirkung. Die **Dosis** (extensiv, mg) wird so gewahlt, dass unter Berucksichtigung des Verteilungsvolumens (Volumen, in dem sich der Wirkstoff verteilt) und der Nierenclearance (Fahigkeit der Niere, den Stoff auszuscheiden) die Zielkonzentration erreicht wird.
+**Klinisch entscheidend:** Die **Plasmakonzentration** eines Medikaments (intensiv, mg/L) bestimmt die Wirkung. Die **Dosis** (extensiv, mg) wird so gewählt, dass unter Berücksichtigung des Verteilungsvolumens (Volumen, in dem sich der Wirkstoff verteilt) und der Nierenclearance (Fähigkeit der Niere, den Stoff auszuscheiden) die Zielkonzentration erreicht wird.
 
-> **Merke:** **Extensiv** = addiert sich bei Vereinigung (Masse, Volumen). **Intensiv** = bleibt gleich (Temperatur, Konzentration). Quotient zweier extensiver Großen = intensive Große (z. B. Masse/Volumen = Dichte).
+> **Merke:** **Extensiv** = addiert sich bei Vereinigung (Masse, Volumen). **Intensiv** = bleibt gleich (Temperatur, Konzentration). Quotient zweier extensiver Größen = intensive Größe (z. B. Masse/Volumen = Dichte).
 
 ---
 
@@ -122,19 +122,19 @@ Diese Unterscheidung ist eine klassische MedAT-Falle:
 | Eigenschaft | Masse m | Gewichtskraft F_G |
 |-------------|---------|-------------------|
 | Einheit | kg (Basiseinheit) | N = kg·m·s⁻² (abgeleitet) |
-| Ortsabhangig? | Nein — uberall gleich | Ja — abhangig von g |
+| Ortsabhängig? | Nein — überall gleich | Ja — abhängig von g |
 | Formel | Intrinsische Eigenschaft | F_G = m · g |
 | Auf der Erde (70 kg) | 70 kg | 70 x 9,81 ≈ 687 N |
 | Auf dem Mond (70 kg) | 70 kg | 70 x 1,62 ≈ 113 N |
 
-> **Merke:** Masse (kg) ≠ Gewichtskraft (N). Masse ist ortsunabhangig, Gewichtskraft F_G = m·g hangt von der Fallbeschleunigung g am jeweiligen Ort ab.
+> **Merke:** Masse (kg) ≠ Gewichtskraft (N). Masse ist ortsunabhängig, Gewichtskraft F_G = m·g hängt von der Fallbeschleunigung g am jeweiligen Ort ab.
 
 ---
 
 ## Rechenbeispiele
 
 **Beispiel 1 — Infusionsrate (Dopamin):**
-Verordnung: 5 ug/kg/min, Patient 80 kg, Losung 200 mg in 250 mL NaCl.
+Verordnung: 5 ug/kg/min, Patient 80 kg, Lösung 200 mg in 250 mL NaCl.
 Gesamtdosis/min: 5 ug/kg/min x 80 kg = 400 ug/min = 0,4 mg/min.
 Konzentration: 200 mg / 250 mL = 0,8 mg/mL.
 Rate: 0,4 mg/min / 0,8 mg/mL = 0,5 mL/min = **30 mL/h**.
@@ -145,10 +145,10 @@ Rate: 0,4 mg/min / 0,8 mg/mL = 0,5 mL/min = **30 mL/h**.
 
 **Beispiel 3 — Grundumsatz in Watt:**
 1800 kcal/Tag x 4184 J/kcal = 7 531 200 J/Tag.
-P = 7 531 200 J / 86 400 s ≈ **87 W** — vergleichbar mit einer Gluhbirne!
+P = 7 531 200 J / 86 400 s ≈ **87 W** — vergleichbar mit einer Glühbirne!
 
-**Prufungsrelevante Zahlen:**
-- 7 SI-Basisgroßen (Merkhilfe: **L**uise **M**ag **Z**wei **A**lte **K**atzen **M**it **C**harme)
+**Prüfungsrelevante Zahlen:**
+- 7 SI-Basisgrößen (Merkhilfe: **L**uise **M**ag **Z**wei **A**lte **K**atzen **M**it **C**harme)
 - 1 mmHg ≈ 133 Pa; 1 kcal = 4,184 kJ; 1 eV ≈ 1,6 x 10⁻¹⁹ J
 - g ≈ 9,81 m/s²; 0 K = -273,15 °C
 - N = kg·m/s², Pa = N/m², J = N·m, W = J/s`,
@@ -327,17 +327,17 @@ Ohne ein einheitliches Messsystem wären internationale Studien, Gerätekalibrie
         "Größenordnungen",
         "Dosierungsfehler",
       ],
-      content: `Ein Wasserstoffatom misst 0,000 000 000 1 m, ein Erythrozyt (rotes Blutkorperchen) 0,000 008 m, der menschliche Korper 1,75 m — und die Entfernung zur Sonne betragt 150 000 000 000 m. Ohne ein System, das diese Spanne handhabbar macht, waren Medizin und Naturwissenschaft in Nullen ertrunken. Zwei Werkzeuge losen dieses Problem: **SI-Prafixe** und **wissenschaftliche Notation**.
+      content: `Ein Wasserstoffatom misst 0,000 000 000 1 m, ein Erythrozyt (rotes Blutkörperchen) 0,000 008 m, der menschliche Körper 1,75 m — und die Entfernung zur Sonne beträgt 150 000 000 000 m. Ohne ein System, das diese Spanne handhabbar macht, wären Medizin und Naturwissenschaft in Nullen ertrunken. Zwei Werkzeuge lösen dieses Problem: **SI-Präfixe** und **wissenschaftliche Notation**.
 
 {{DIAGRAM:si-prefixes}}
 
 ---
 
-## SI-Prafixe: Das metrische Vorsatzsystem
+## SI-Präfixe: Das metrische Vorsatzsystem
 
-**SI-Prafixe** sind Vorsatze vor einer Einheit, die einen festen Zehnerpotenz-Faktor darstellen. Aus „0,001 Gramm" wird „1 Milligramm" (1 mg), aus „1 000 Meter" wird „1 Kilometer" (1 km).
+**SI-Präfixe** sind Vorsätze vor einer Einheit, die einen festen Zehnerpotenz-Faktor darstellen. Aus „0,001 Gramm" wird „1 Milligramm" (1 mg), aus „1 000 Meter" wird „1 Kilometer" (1 km).
 
-| Prafixe (groß) | Symbol | Faktor | | Prafixe (klein) | Symbol | Faktor |
+| Präfixe (groß) | Symbol | Faktor | | Präfixe (klein) | Symbol | Faktor |
 |----------------|--------|--------|---|-----------------|--------|--------|
 | Tera | T | 10¹² | | Milli | m | 10⁻³ |
 | Giga | G | 10⁹ | | Mikro | u | 10⁻⁶ |
@@ -345,13 +345,13 @@ Ohne ein einheitliches Messsystem wären internationale Studien, Gerätekalibrie
 | Kilo | k | 10³ | | Piko | p | 10⁻¹² |
 | Hekto | h | 10² | | Femto | f | 10⁻¹⁵ |
 
-> **Merke:** Zwischen benachbarten Prafixen liegt jeweils Faktor 1000 (drei Zehnerpotenzen): kg → g → mg → ug → ng. Ein Sprung von Milli zu Mikro = Faktor 1000 — bei Adrenalin oder Fentanyl kann diese Verwechslung todlich sein!
+> **Merke:** Zwischen benachbarten Präfixen liegt jeweils Faktor 1000 (drei Zehnerpotenzen): kg → g → mg → ug → ng. Ein Sprung von Milli zu Mikro = Faktor 1000 — bei Adrenalin oder Fentanyl kann diese Verwechslung tödlich sein!
 
 ---
 
 ## Wissenschaftliche Notation (Exponentialschreibweise)
 
-Jede Zahl lasst sich schreiben als **a x 10^n**, wobei die **Mantisse** (a) zwischen 1 und 10 liegt (1 ≤ |a| < 10) und der **Exponent** (n) eine ganze Zahl ist.
+Jede Zahl lässt sich schreiben als **a x 10^n**, wobei die **Mantisse** (a) zwischen 1 und 10 liegt (1 ≤ |a| < 10) und der **Exponent** (n) eine ganze Zahl ist.
 
 | Zahl | Wissenschaftliche Notation | Bedeutung |
 |------|---------------------------|-----------|
@@ -364,7 +364,7 @@ Jede Zahl lasst sich schreiben als **a x 10^n**, wobei die **Mantisse** (a) zwis
 
 ---
 
-## Rechenregeln fur Zehnerpotenzen
+## Rechenregeln für Zehnerpotenzen
 
 | Operation | Regel | Beispiel |
 |-----------|-------|----------|
@@ -375,20 +375,20 @@ Jede Zahl lasst sich schreiben als **a x 10^n**, wobei die **Mantisse** (a) zwis
 **Mantissen korrekt verrechnen:**
 (3 x 10⁴) x (2 x 10³) = 6 x 10⁷ — Mantissen multiplizieren, Exponenten addieren.
 
-**Normierung nicht vergessen:** Wenn die Mantisse ≥ 10 wird, durch 10 teilen und Exponent um 1 erhohen:
+**Normierung nicht vergessen:** Wenn die Mantisse ≥ 10 wird, durch 10 teilen und Exponent um 1 erhöhen:
 (5 x 10⁴) x (4 x 10³) = 20 x 10⁷ = **2 x 10⁸**
 
 > **Merke:** Potenzregeln kompakt: Mult → Exp. addieren, Div → Exp. subtrahieren, Potenz → Exp. multiplizieren. Mantisse normieren (1 ≤ a < 10)!
 
 ---
 
-## Prafixe bei Flachen und Volumen — die haufigste Fehlerquelle
+## Präfixe bei Flächen und Volumen — die häufigste Fehlerquelle
 
 {{DIAGRAM:volume-conversion}}
 
-Bei Flachen- und Volumeneinheiten muss der Prafix-Exponent mit der Dimension **potenziert** werden:
+Bei Flächen- und Volumeneinheiten muss der Präfix-Exponent mit der Dimension **potenziert** werden:
 
-| Umrechnung | Rechnung | Ergebnis | Haufiger Fehler |
+| Umrechnung | Rechnung | Ergebnis | Häufiger Fehler |
 |------------|----------|----------|-----------------|
 | 1 cm² → m² | (10⁻² m)² | 10⁻⁴ m² | ≠ 10⁻² m² |
 | 1 cm³ → m³ | (10⁻² m)³ | 10⁻⁶ m³ | ≠ 10⁻² m³ |
@@ -399,18 +399,18 @@ Bei Flachen- und Volumeneinheiten muss der Prafix-Exponent mit der Dimension **p
 - 1 L = 1 dm³ = 10⁻³ m³
 - 1 m³ = 1000 L
 
-> **Merke:** Bei Volumenumrechnung den Exponenten immer mit 3 multiplizieren: cm → 10⁻², also cm³ → 10⁻⁶. Bei Flachen mit 2: cm² → 10⁻⁴.
+> **Merke:** Bei Volumenumrechnung den Exponenten immer mit 3 multiplizieren: cm → 10⁻², also cm³ → 10⁻⁶. Bei Flächen mit 2: cm² → 10⁻⁴.
 
 ---
 
-## Medizinisch relevante Großenordnungen
+## Medizinisch relevante Größenordnungen
 
-| Kategorie | Große | Wert | Prafix-Form |
+| Kategorie | Größe | Wert | Präfix-Form |
 |-----------|-------|------|-------------|
-| **Lange** | DNA-Durchmesser | 2 x 10⁻⁹ m | 2 nm |
+| **Länge** | DNA-Durchmesser | 2 x 10⁻⁹ m | 2 nm |
 | | Erythrozyt | 8 x 10⁻⁶ m | 8 um |
 | | Kapillare | 5-10 x 10⁻⁶ m | 5-10 um |
-| **Druck** | Atmosphare | 1,013 x 10⁵ Pa | ≈ 760 mmHg |
+| **Druck** | Atmosphäre | 1,013 x 10⁵ Pa | ≈ 760 mmHg |
 | | Systolischer RR | 1,6 x 10⁴ Pa | 120 mmHg |
 | | Osmotischer Druck Blut | 7,8 x 10⁵ Pa | 780 kPa |
 | **Konzentration** | Glukose normal | 3,9-6,1 mmol/L | |
@@ -426,16 +426,16 @@ Bei Flachen- und Volumeneinheiten muss der Prafix-Exponent mit der Dimension **p
 
 ## Signifikante Stellen und Rundung
 
-**Signifikante Stellen** (Ziffern mit Informationsgehalt) bestimmen die Prazision einer Messung:
+**Signifikante Stellen** (Ziffern mit Informationsgehalt) bestimmen die Präzision einer Messung:
 
 - Nicht-Null-Ziffern sind immer signifikant: 3,14 → 3 Stellen
 - Nullen zwischen Ziffern: signifikant: 1,005 → 4 Stellen
-- Fuhrende Nullen: **nicht** signifikant: 0,0045 → nur 2 Stellen (4 und 5)
+- Führende Nullen: **nicht** signifikant: 0,0045 → nur 2 Stellen (4 und 5)
 - Endnullen nach Komma: signifikant: 2,50 → 3 Stellen
 
 Das Ergebnis einer Berechnung hat so viele signifikante Stellen wie der ungenaueste Eingangswert. In wissenschaftlicher Notation ist die Stellenzahl sofort sichtbar: 4,5 x 10⁻⁵ → 2 signifikante Stellen.
 
-> **Merke:** Ein Blutzuckerwert von 5,5 mmol/L hat 2 signifikante Stellen. Ihn als 5,500 anzugeben wurde eine Messgenauigkeit vortauschen, die das Gerat nicht liefert.
+> **Merke:** Ein Blutzuckerwert von 5,5 mmol/L hat 2 signifikante Stellen. Ihn als 5,500 anzugeben würde eine Messgenauigkeit vortäuschen, die das Gerät nicht liefert.
 
 ---
 
@@ -449,10 +449,10 @@ In mL: 40 uL x 10⁻³ = 0,040 mL. In m³: 40 x 10⁻⁶ L = 40 x 10⁻⁹ m³ =
 Gentamicin 8 ug/mL, Verteilungsvolumen 17,5 L (0,25 L/kg x 70 kg).
 Gesamtmenge: 8 ug/mL x 17 500 mL = 140 000 ug = 140 mg = **0,14 g**.
 
-**Beispiel 3 — Rontgenwellenlange:**
-f = 3 x 10¹⁸ Hz. Wellenlange = c/f = (3 x 10⁸) / (3 x 10¹⁸) = **10⁻¹⁰ m = 0,1 nm**.
+**Beispiel 3 — Röntgenwellenlänge:**
+f = 3 x 10¹⁸ Hz. Wellenlänge = c/f = (3 x 10⁸) / (3 x 10¹⁸) = **10⁻¹⁰ m = 0,1 nm**.
 
-**Prufungsrelevante Zahlen:**
+**Prüfungsrelevante Zahlen:**
 - 1 mL = 1 cm³ = 10⁻⁶ m³; 1 L = 1 dm³ = 10⁻³ m³
 - mg → ug: Faktor 1000; ug → ng: Faktor 1000
 - Erythrozyt ~8 um, DNA ~2 nm, Eizelle ~53 um
@@ -636,29 +636,29 @@ Zweitens Heparin: Standarddosen werden in Einheiten (IE) oder mg/kg angegeben. I
         "Temperaturumrechnung",
         "dimensionslose Größen",
       ],
-      content: `Stell dir vor, du leitest eine Formel her und erhaltst als Ergebnis „Meter plus Sekunden". Irgendetwas muss schiefgelaufen sein — Langen und Zeiten zu addieren ist wie Apfel und Birnen zusammenzahlen. Die **Dimensionsanalyse** nutzt genau dieses Prinzip als machtigstes Werkzeug der Physik: Wenn die Einheiten nicht stimmen, ist die Formel garantiert falsch.
+      content: `Stell dir vor, du leitest eine Formel her und erhältst als Ergebnis „Meter plus Sekunden". Irgendetwas muss schiefgelaufen sein — Längen und Zeiten zu addieren ist wie Äpfel und Birnen zusammenzählen. Die **Dimensionsanalyse** nutzt genau dieses Prinzip als mächtigstes Werkzeug der Physik: Wenn die Einheiten nicht stimmen, ist die Formel garantiert falsch.
 
 {{DIAGRAM:dimensional-analysis}}
 
 ---
 
-## Basisdimensionen und das Prinzip der dimensionalen Homogenitat
+## Basisdimensionen und das Prinzip der dimensionalen Homogenität
 
-Die **Dimension** einer Große beschreibt ihre physikalische Natur — unabhangig von Zahlenwert oder konkreter Einheit. Die sieben **Basisdimensionen** entsprechen den SI-Basisgroßen:
+Die **Dimension** einer Größe beschreibt ihre physikalische Natur — unabhängig von Zahlenwert oder konkreter Einheit. Die sieben **Basisdimensionen** entsprechen den SI-Basisgrößen:
 
 | Basisdimension | Symbol | Beispiel-Einheit |
 |----------------|--------|-----------------|
-| Lange | L | m, cm, km |
+| Länge | L | m, cm, km |
 | Masse | M | kg, g |
 | Zeit | T | s, min, h |
-| Stromstarke | I | A |
+| Stromstärke | I | A |
 | Temperatur | Theta | K, °C |
 | Stoffmenge | N | mol |
-| Lichtstarke | J | cd |
+| Lichtstärke | J | cd |
 
-Jede abgeleitete Große hat eine eindeutige Dimensionsformel:
+Jede abgeleitete Größe hat eine eindeutige Dimensionsformel:
 
-| Große | Dimensionsformel | SI-Einheit |
+| Größe | Dimensionsformel | SI-Einheit |
 |-------|-----------------|------------|
 | Kraft | M·L·T⁻² | Newton (N) |
 | Druck | M·L⁻¹·T⁻² | Pascal (Pa) |
@@ -666,13 +666,13 @@ Jede abgeleitete Große hat eine eindeutige Dimensionsformel:
 | Leistung | M·L²·T⁻³ | Watt (W) |
 | Impuls | M·L·T⁻¹ | kg·m/s |
 
-Das **Prinzip der dimensionalen Homogenitat**: In jeder korrekten physikalischen Gleichung mussen beide Seiten dieselbe Dimension haben. Verschiedene Dimensionen konnen **niemals** addiert oder gleichgesetzt werden.
+Das **Prinzip der dimensionalen Homogenität**: In jeder korrekten physikalischen Gleichung müssen beide Seiten dieselbe Dimension haben. Verschiedene Dimensionen können **niemals** addiert oder gleichgesetzt werden.
 
-> **Merke:** Dimensionsanalyse = schnellster Weg, falsche Formeln zu entlarven. Stimmen die Einheiten links und rechts nicht uberein, ist die Formel falsch — auch ohne zu rechnen!
+> **Merke:** Dimensionsanalyse = schnellster Weg, falsche Formeln zu entlarven. Stimmen die Einheiten links und rechts nicht überein, ist die Formel falsch — auch ohne zu rechnen!
 
 ---
 
-## Dimensionsanalyse als Formelprufer
+## Dimensionsanalyse als Formelprüfer
 
 **Beispiel — falsche Energieformel entlarven:**
 Behauptung: E_kin = m·v (statt E_kin = 1/2·m·v²).
@@ -680,9 +680,9 @@ Behauptung: E_kin = m·v (statt E_kin = 1/2·m·v²).
 Linke Seite: [E_kin] = M·L²·T⁻² (Energie)
 Rechte Seite: [m·v] = M · L·T⁻¹ = M·L·T⁻¹ (das ist Impuls!)
 
-Dimensionen stimmen nicht uberein → Formel ist falsch. Korrekt: [m·v²] = M·(L·T⁻¹)² = M·L²·T⁻² — stimmt mit Energie uberein.
+Dimensionen stimmen nicht überein → Formel ist falsch. Korrekt: [m·v²] = M·(L·T⁻¹)² = M·L²·T⁻² — stimmt mit Energie überein.
 
-**Prufungstrick:** Bei MedAT-Formelfragen kannst du falsche Optionen allein durch Einheitenvergleich ausschließen — ohne die Formel inhaltlich zu kennen.
+**Prüfungstrick:** Bei MedAT-Formelfragen kannst du falsche Optionen allein durch Einheitenvergleich ausschließen — ohne die Formel inhaltlich zu kennen.
 
 ---
 
@@ -690,12 +690,12 @@ Dimensionen stimmen nicht uberein → Formel ist falsch. Korrekt: [m·v²] = M·
 
 {{DIAGRAM:unit-conversion-chain}}
 
-Die **Kettenmultiplikation** (Factor-Label-Methode) ist die sicherste Umrechnungsmethode: Man multipliziert mit Umrechnungsfaktoren der Form (neue Einheit / alte Einheit), die jeweils den Wert 1 haben, bis die gewunschte Einheit ubrig bleibt.
+Die **Kettenmultiplikation** (Factor-Label-Methode) ist die sicherste Umrechnungsmethode: Man multipliziert mit Umrechnungsfaktoren der Form (neue Einheit / alte Einheit), die jeweils den Wert 1 haben, bis die gewünschte Einheit übrig bleibt.
 
 **Geschwindigkeit: 72 km/h → m/s:**
 72 km/h x (1000 m / 1 km) x (1 h / 3600 s) = 72 x 1000/3600 = **20 m/s**
 
-> **Merke:** km/h / 3,6 = m/s. Umgekehrt: m/s x 3,6 = km/h. Diese Umrechnung kommt im MedAT sehr haufig vor!
+> **Merke:** km/h / 3,6 = m/s. Umgekehrt: m/s x 3,6 = km/h. Diese Umrechnung kommt im MedAT sehr häufig vor!
 
 **Druck: 120 mmHg → Pa:**
 120 mmHg x (133,3 Pa / 1 mmHg) = **15 996 Pa ≈ 16 kPa**
@@ -711,49 +711,49 @@ Die **Kettenmultiplikation** (Factor-Label-Methode) ist die sicherste Umrechnung
 |-----------|-----------|---------------------|
 | **Temperatur** | T(K) = T(°C) + 273,15 | 37°C = 310,15 K |
 | | T(°F) = 1,8 x T(°C) + 32 | Fieber: > 38°C = > 100,4°F |
-| **Druck** | 1 atm = 101 325 Pa ≈ 760 mmHg | Atmospharendruck |
+| **Druck** | 1 atm = 101 325 Pa ≈ 760 mmHg | Atmosphärendruck |
 | | 1 mmHg ≈ 133,3 Pa | Blutdruck-Umrechnung |
 | | 1 cmH₂O ≈ 98,1 Pa | Beatmungsdrucke (PEEP) |
 | | 1 mmHg ≈ 1,36 cmH₂O | Vergleich RR vs. Beatmung |
 | **Energie** | 1 kcal = 4,184 kJ | Nahrwertberechnung |
-| | 1 g KH/Protein ≈ 17 kJ (4 kcal) | Makronahrstoffe |
+| | 1 g KH/Protein ≈ 17 kJ (4 kcal) | Makronährstoffe |
 | | 1 g Fett ≈ 37 kJ (9 kcal) | Fett liefert 2x mehr! |
 
 ---
 
-## Dimensionslose Großen
+## Dimensionslose Größen
 
-**Dimensionslose Großen** sind reine Verhaltniszahlen ohne Einheit — sie bleiben unabhangig vom Einheitensystem gleich:
+**Dimensionslose Größen** sind reine Verhältniszahlen ohne Einheit — sie bleiben unabhängig vom Einheitensystem gleich:
 
-| Große | Formel | Klinische Bedeutung |
+| Größe | Formel | Klinische Bedeutung |
 |-------|--------|---------------------|
-| **Reynolds-Zahl** Re | (rho·v·d) / eta | Laminar vs. turbulente Stromung |
-| **Wirkungsgrad** eta | W_nutz / W_zu | Herz: ~20-25 % (Rest = Warme) |
-| **pH-Wert** | -log[H⁺] | Saure-Base-Gleichgewicht |
+| **Reynolds-Zahl** Re | (rho·v·d) / eta | Laminar vs. turbulente Strömung |
+| **Wirkungsgrad** eta | W_nutz / W_zu | Herz: ~20-25 % (Rest = Wärme) |
+| **pH-Wert** | -log[H⁺] | Säure-Base-Gleichgewicht |
 | **Brechungsindex** n | c/v | Augenoptik, Linsensysteme |
 
 Die **Reynolds-Zahl** ist die klinisch wichtigste dimensionslose Kennzahl:
 
 Re = (rho · v · d) / eta
 
-- rho = Dichte (kg/m³), v = Geschwindigkeit (m/s), d = Durchmesser (m), eta = Viskositat (Pa·s)
-- **Re < 2300**: laminare Stromung (geordnet — normal in kleinen Gefaßen)
-- **Re > 4000**: turbulente Stromung (chaotisch — horbar als Herzgerausch)
-- **2300-4000**: Ubergangsbereich
+- rho = Dichte (kg/m³), v = Geschwindigkeit (m/s), d = Durchmesser (m), eta = Viskosität (Pa·s)
+- **Re < 2300**: laminare Strömung (geordnet — normal in kleinen Gefäßen)
+- **Re > 4000**: turbulente Strömung (chaotisch — hörbar als Herzgeräusch)
+- **2300-4000**: Übergangsbereich
 
-Dimensionsanalyse bestatigt: [Re] = (kg/m³ · m/s · m) / (kg·m⁻¹·s⁻¹) = 1 (einheitenlos).
+Dimensionsanalyse bestätigt: [Re] = (kg/m³ · m/s · m) / (kg·m⁻¹·s⁻¹) = 1 (einheitenlos).
 
-**Klinisch:** Bei Anamie sinkt die Blutviskositat eta → Re steigt → Turbulenz → Stromungsgerausche horbar. Bei Aortenstenose steigt v lokal → Re erhoht → Systolikum (Herzgerausch).
+**Klinisch:** Bei Anämie sinkt die Blutviskosität eta → Re steigt → Turbulenz → Strömungsgeräusche hörbar. Bei Aortenstenose steigt v lokal → Re erhöht → Systolikum (Herzgeräusch).
 
-> **Merke:** Reynolds-Zahl: Re < 2300 laminar, Re > 4000 turbulent. eta im Nenner: niedrige Viskositat → hohe Re → Turbulenz. Erklart Anamie-Gerausche!
+> **Merke:** Reynolds-Zahl: Re < 2300 laminar, Re > 4000 turbulent. eta im Nenner: niedrige Viskosität → hohe Re → Turbulenz. Erklärt Anämie-Geräusche!
 
 ---
 
 ## Rechenbeispiele
 
-**Beispiel 1 — Formelprufer (Fallgeschwindigkeit):**
+**Beispiel 1 — Formelprüfer (Fallgeschwindigkeit):**
 Formel v = Wurzel(2·g·h) — dimensionskonsistent?
-[v] = L·T⁻¹. [g·h] = (L·T⁻²)·L = L²·T⁻². [Wurzel(g·h)] = L·T⁻¹. Stimmt uberein!
+[v] = L·T⁻¹. [g·h] = (L·T⁻²)·L = L²·T⁻². [Wurzel(g·h)] = L·T⁻¹. Stimmt überein!
 Zahlenbeispiel: Sturz aus 3 m → v = Wurzel(2 x 9,81 x 3) ≈ **7,67 m/s** ≈ 27,6 km/h.
 
 **Beispiel 2 — Druckumrechnung (Blutdruck):**
@@ -765,9 +765,9 @@ In Pascal: 140 x 133,3 = **18 662 Pa ≈ 18,7 kPa**.
 
 **Beispiel 4 — Reynolds-Zahl der Aorta:**
 rho = 1060 kg/m³, v = 0,5 m/s, d = 0,025 m, eta = 3,5 x 10⁻³ Pa·s.
-Re = (1060 x 0,5 x 0,025) / 0,0035 ≈ **3786** → Ubergangsbereich, bei Belastung turbulent.
+Re = (1060 x 0,5 x 0,025) / 0,0035 ≈ **3786** → Übergangsbereich, bei Belastung turbulent.
 
-**Prufungsrelevante Zahlen:**
+**Prüfungsrelevante Zahlen:**
 - km/h / 3,6 = m/s; 1 mmHg ≈ 133 Pa; 1 cmH₂O ≈ 98 Pa
 - 1 kcal = 4,184 kJ; 1 g Fett ≈ 9 kcal; 1 g KH/Protein ≈ 4 kcal
 - T(K) = T(°C) + 273,15; 37°C = 310,15 K = 98,6°F
@@ -1719,7 +1719,7 @@ Therapeutische Konsequenzen aus dem r⁴-Gesetz: (1) Perkutane transluminale Kor
         "Winkelgeschwindigkeit",
         "Schwerpunkt",
       ],
-      content: `Warum trennt eine Zentrifuge Blut in seine Bestandteile? Warum werden Kampfjetpiloten bei scharfen Kurven ohnmachtig? Und warum sind altere Menschen sturzgefahrdeter? Die Antwort liegt in zwei Grundphanomenen: **Gravitation** (Anziehungskraft zwischen Massen) und **Rotation** (Kreisbewegung mit den dabei auftretenden Beschleunigungen und Kraften).
+      content: `Warum trennt eine Zentrifuge Blut in seine Bestandteile? Warum werden Kampfjetpiloten bei scharfen Kurven ohnmächtig? Und warum sind ältere Menschen sturzgefährdeter? Die Antwort liegt in zwei Grundphänomenen: **Gravitation** (Anziehungskraft zwischen Massen) und **Rotation** (Kreisbewegung mit den dabei auftretenden Beschleunigungen und Kräften).
 
 {{DIAGRAM:centripetal-force}}
 
@@ -1727,27 +1727,27 @@ Therapeutische Konsequenzen aus dem r⁴-Gesetz: (1) Perkutane transluminale Kor
 
 ## Newtonsches Gravitationsgesetz
 
-Isaac Newton erkannte, dass dieselbe Kraft den Apfel fallen lasst und den Mond auf seiner Bahn halt:
+Isaac Newton erkannte, dass dieselbe Kraft den Apfel fallen lässt und den Mond auf seiner Bahn hält:
 
 **F_G = G · (m₁ · m₂) / r²**
 
-| Große | Bedeutung | Wert |
+| Größe | Bedeutung | Wert |
 |-------|-----------|------|
 | G | Gravitationskonstante | 6,674 x 10⁻¹¹ N·m²/kg² |
 | m₁, m₂ | Die beiden Massen | in kg |
 | r | Abstand der Massenmittelpunkte | in m |
 
-**Abstandsquadratgesetz:** Doppelter Abstand → vierfach kleinere Kraft. Auf der Erdoberflache vereinfacht sich die Formel zu **F_G = m · g** mit g = G·M_Erde/r_Erde² ≈ 9,81 m/s².
+**Abstandsquadratgesetz:** Doppelter Abstand → vierfach kleinere Kraft. Auf der Erdoberfläche vereinfacht sich die Formel zu **F_G = m · g** mit g = G·M_Erde/r_Erde² ≈ 9,81 m/s².
 
-> **Merke:** Masse (kg) ≠ Gewichtskraft (N)! Masse ist eine unveranderliche Materieeigenschaft. Gewichtskraft F_G = m·g hangt vom Ort ab. Auf dem Mond (g ≈ 1,62 m/s²) wiegt ein 70-kg-Mensch nur ~113 N statt ~687 N auf der Erde — seine Masse bleibt 70 kg.
+> **Merke:** Masse (kg) ≠ Gewichtskraft (N)! Masse ist eine unveränderliche Materieeigenschaft. Gewichtskraft F_G = m·g hängt vom Ort ab. Auf dem Mond (g ≈ 1,62 m/s²) wiegt ein 70-kg-Mensch nur ~113 N statt ~687 N auf der Erde — seine Masse bleibt 70 kg.
 
 ---
 
-## Kreisbewegung — Formeln und Zusammenhange
+## Kreisbewegung — Formeln und Zusammenhänge
 
-Bei gleichformiger Kreisbewegung bleibt der Geschwindigkeitsbetrag konstant, aber die Richtung andert sich standig. Dafur braucht es eine standige Beschleunigung zur Kreismitte — die **Zentripetalbeschleunigung** (Beschleunigung, die einen Korper auf einer Kreisbahn halt):
+Bei gleichförmiger Kreisbewegung bleibt der Geschwindigkeitsbetrag konstant, aber die Richtung ändert sich ständig. Dafür braucht es eine ständige Beschleunigung zur Kreismitte — die **Zentripetalbeschleunigung** (Beschleunigung, die einen Körper auf einer Kreisbahn hält):
 
-| Große | Formel | Einheit |
+| Größe | Formel | Einheit |
 |-------|--------|---------|
 | Winkelgeschwindigkeit | omega = 2·pi/T = 2·pi·f | rad/s |
 | Bahngeschwindigkeit | v = omega·r = 2·pi·r/T | m/s |
@@ -1767,12 +1767,12 @@ Die Zentripetalkraft ist eine **reale Kraft** — sie wird z. B. durch Gravitati
 | | Zentripetalkraft | Zentrifugalkraft |
 |---|-----------------|-----------------|
 | Richtung | Zur Kreismitte | Von der Kreismitte weg |
-| Typ | **Reale Kraft** | **Scheinkraft** (Tragheitskraft) |
+| Typ | **Reale Kraft** | **Scheinkraft** (Trägheitskraft) |
 | Bezugssystem | Inertialsystem (ruhender Beobachter) | Rotierendes Bezugssystem |
 | Formel | F_z = m·omega²·r | F_cf = m·omega²·r (gleicher Betrag!) |
-| MedAT-Falle | Was halt den Satelliten auf der Bahn? → **Gravitationskraft als Zentripetalkraft**, NICHT Zentrifugalkraft! |
+| MedAT-Falle | Was hält den Satelliten auf der Bahn? → **Gravitationskraft als Zentripetalkraft**, NICHT Zentrifugalkraft! |
 
-> **Merke:** Im MedAT ist die Antwort auf „Welche Kraft halt einen Satelliten auf seiner Bahn?" immer die **Gravitationskraft** (als Zentripetalkraft). Zentrifugalkraft existiert nur im mitrotierenden System!
+> **Merke:** Im MedAT ist die Antwort auf „Welche Kraft hält einen Satelliten auf seiner Bahn?" immer die **Gravitationskraft** (als Zentripetalkraft). Zentrifugalkraft existiert nur im mitrotierenden System!
 
 ---
 
@@ -1780,7 +1780,7 @@ Die Zentripetalkraft ist eine **reale Kraft** — sie wird z. B. durch Gravitati
 
 {{DIAGRAM:centrifuge-blood}}
 
-Die Zentrifuge ist das wichtigste physikalische Gerat im klinischen Labor. Sie erzeugt durch Rotation Beschleunigungen von Hunderten bis Hunderttausenden g, unter denen sich Blutbestandteile nach Dichte trennen:
+Die Zentrifuge ist das wichtigste physikalische Gerät im klinischen Labor. Sie erzeugt durch Rotation Beschleunigungen von Hunderten bis Hunderttausenden g, unter denen sich Blutbestandteile nach Dichte trennen:
 
 | Schicht (von unten) | Bestandteil | Dichte (g/mL) |
 |---------------------|-------------|---------------|
@@ -1802,51 +1802,51 @@ Vereinfachte Formel: RCF ≈ 1,118 x 10⁻⁵ x n² x r (n in rpm, r in mm).
 | Lipoprotein-Analytik | 100 000+ x g | LDL/HDL nach Dichte trennen |
 | DNA-Aufreinigung | 100 000-500 000 x g | Ultrazentrifuge mit CsCl |
 
-> **Merke:** RCF = omega²·r/g. Hoheres RCF → schnellere Sedimentation dichterer Teilchen. Hamatokrit (Anteil der Erythrozyten am Blutvolumen) wird durch Mikrohamatokrit-Zentrifugation bestimmt.
+> **Merke:** RCF = omega²·r/g. Höheres RCF → schnellere Sedimentation dichterer Teilchen. Hämatokrit (Anteil der Erythrozyten am Blutvolumen) wird durch Mikrohämatokrit-Zentrifugation bestimmt.
 
 ---
 
-## Rotation des Korpers: Tragheitsmoment und Stabilitat
+## Rotation des Körpers: Trägheitsmoment und Stabilität
 
-Das **Tragheitsmoment** I = Summe(m_i · r_i²) (kg·m²) ist das rotatorische Analogon zur Masse — es hangt davon ab, wie weit die Masse von der Drehachse entfernt ist:
+Das **Trägheitsmoment** I = Summe(m_i · r_i²) (kg·m²) ist das rotatorische Analogon zur Masse — es hängt davon ab, wie weit die Masse von der Drehachse entfernt ist:
 
 | Translatorisch | Rotatorisch | Analogie |
 |---------------|-------------|----------|
-| Masse m | Tragheitsmoment I | „Widerstand gegen Anderung" |
-| Kraft F | Drehmoment M = I·alpha | „Ursache der Anderung" |
+| Masse m | Trägheitsmoment I | „Widerstand gegen Änderung" |
+| Kraft F | Drehmoment M = I·alpha | „Ursache der Änderung" |
 | F = m·a | M = I·alpha | Grundgesetz |
 | v = v₀ + a·t | omega = omega₀ + alpha·t | Kinematik |
-| Impuls p = m·v | Drehimpuls L = I·omega | Erhaltungsgroße |
+| Impuls p = m·v | Drehimpuls L = I·omega | Erhaltungsgröße |
 
-**Drehimpulserhaltung:** L = I·omega = const (ohne außere Drehmomente). Eiskunstlaufer zieht Arme an → I sinkt → omega steigt → schnellere Drehung.
+**Drehimpulserhaltung:** L = I·omega = const (ohne äußere Drehmomente). Eiskunstläufer zieht Arme an → I sinkt → omega steigt → schnellere Drehung.
 
-**Gleichgewicht und Sturzpravention:**
+**Gleichgewicht und Sturzprävention:**
 
 | Gleichgewichtsart | Schwerpunkt bei Auslenkung | Beispiel |
 |-------------------|---------------------------|----------|
-| **Stabil** | Steigt (kehrt zuruck) | Kugel in Mulde |
+| **Stabil** | Steigt (kehrt zurück) | Kugel in Mulde |
 | **Labil** | Sinkt (kippt um) | Stift auf Spitze |
 | **Indifferent** | Bleibt gleich | Kugel auf Ebene |
 
-**Kippkriterium:** Die senkrechte Projektion des Schwerpunkts muss innerhalb der Standflache liegen. Tiefer Schwerpunkt + große Standflache = stabil. Altere Menschen mit schmaler Standbasis und reduzierter Muskelkraft → erhoht sturzgefahrdet. Gehstock verdoppelt die effektive Standbreite!
+**Kippkriterium:** Die senkrechte Projektion des Schwerpunkts muss innerhalb der Standfläche liegen. Tiefer Schwerpunkt + große Standfläche = stabil. Ältere Menschen mit schmaler Standbasis und reduzierter Muskelkraft → erhöht sturzgefährdet. Gehstock verdoppelt die effektive Standbreite!
 
-> **Merke:** Stabiles Gleichgewicht: Schwerpunkt tief, Standflache groß, Lot des Schwerpunkts innerhalb der Standflache. Drehimpulserhaltung: L = I·omega = const.
+> **Merke:** Stabiles Gleichgewicht: Schwerpunkt tief, Standfläche groß, Lot des Schwerpunkts innerhalb der Standfläche. Drehimpulserhaltung: L = I·omega = const.
 
 ---
 
-## g-Krafte in der Medizin
+## g-Kräfte in der Medizin
 
 | Situation | g-Wert | Medizinische Relevanz |
 |-----------|--------|----------------------|
 | Stehen/Liegen | 1 g | Referenzwert |
-| Autobremsung | 0,5-1 g | Alltaglich, sicher |
+| Autobremsung | 0,5-1 g | Alltäglich, sicher |
 | Achterbahn | 3-5 g | Kurzzeitig tolerierbar |
 | Frontalaufprall 50 km/h | ~20 g | Organverletzungen, Frakturen |
-| Kampfjetpilot | bis 9 g | G-LOC (Bewusstlosigkeit durch Blutversacken in den Beinen) |
+| Kampfjetpilot | bis 9 g | G-LOC (Bewusstlosigkeit durch Blutversacken in die Beine) |
 | Laborzentrifuge | ~1000 g | Bluttrennung |
 | Ultrazentrifuge | 100 000+ g | Lipoprotein-/DNA-Trennung |
 
-**Klinisch:** Bei Dezelerationstraumen (plotzliche Verzogerung, z. B. Aufprall) wirken auf innere Organe Krafte von F = m·a = m·(Vielfaches von g). Bei 20 g konnen Aortentranssektionen (Abriss der Hauptschlagader), Leberrupturen und diffuse axonale Hirnverletzungen (Zerreißung von Nervenfasern) auftreten. Gurt und Airbag verlangern die Bremsstrecke → niedrigeres g → geringere Verletzungsgefahr.
+**Klinisch:** Bei Dezelerationstraumen (plötzliche Verzögerung, z. B. Aufprall) wirken auf innere Organe Kräfte von F = m·a = m·(Vielfaches von g). Bei 20 g können Aortentranssektionen (Abriss der Hauptschlagader), Leberrupturen und diffuse axonale Hirnverletzungen (Zerreißung von Nervenfasern) auftreten. Gurt und Airbag verlängern die Bremsstrecke → niedrigeres g → geringere Verletzungsgefahr.
 
 ---
 
@@ -1856,28 +1856,28 @@ Das **Tragheitsmoment** I = Summe(m_i · r_i²) (kg·m²) ist das rotatorische A
 n = 3000 rpm, r = 15 cm = 0,15 m.
 omega = 2·pi x 3000/60 = **314 rad/s**.
 a_z = omega²·r = 314² x 0,15 = 98 596 x 0,15 = **14 789 m/s²**.
-RCF = 14 789/9,81 ≈ **1507 x g** → Serumgewinnung moglich.
+RCF = 14 789/9,81 ≈ **1507 x g** → Serumgewinnung möglich.
 
-**Beispiel 2 — Ultrazentrifuge fur Lipoproteine:**
-Benotigt: RCF ≈ 100 000 g, r = 8 cm = 0,08 m.
+**Beispiel 2 — Ultrazentrifuge für Lipoproteine:**
+Benötigt: RCF ≈ 100 000 g, r = 8 cm = 0,08 m.
 omega² = RCF·g/r = 100 000 x 9,81 / 0,08 = 1,226 x 10⁷ → omega ≈ 3502 rad/s.
 n = omega/(2·pi) x 60 ≈ **33 440 rpm**.
 
 **Beispiel 3 — Kurvenfahrt:**
 v = 20 m/s, r = 50 m → a_z = v²/r = 400/50 = **8 m/s² ≈ 0,8 g**.
-Auf nasser Fahrbahn (mu ≈ 0,4): max. a = mu·g = 4 m/s² — das Auto wurde bei 8 m/s² schleudern!
+Auf nasser Fahrbahn (mu ≈ 0,4): max. a = mu·g = 4 m/s² — das Auto würde bei 8 m/s² schleudern!
 
 **Beispiel 4 — Sturzsicherheit:**
 Patient (h = 1,80 m, Schwerpunkt bei 1,01 m), Standbreite 25 cm.
 Kippwinkel: tan(theta) = 0,125/1,01 → theta ≈ **7,1°**.
-Mit Gehstock (60 cm): theta ≈ **16,5°** → doppelte Kippstabilitat.
+Mit Gehstock (60 cm): theta ≈ **16,5°** → doppelte Kippstabilität.
 
-**Prufungsrelevante Zahlen:**
+**Prüfungsrelevante Zahlen:**
 - G = 6,674 x 10⁻¹¹ N·m²/kg²; g ≈ 9,81 m/s²; g_Mond ≈ 1,62 m/s²
 - a_z = v²/r = omega²·r; RCF = omega²·r/g
 - Standard-Zentrifuge: ~1000-2000 g; Ultrazentrifuge: 100 000+ g
-- Drehimpuls L = I·omega = const (Erhaltungsgroße)
-- Kippstabilitat: Lot des Schwerpunkts muss in Standflache liegen`,
+- Drehimpuls L = I·omega = const (Erhaltungsgröße)
+- Kippstabilität: Lot des Schwerpunkts muss in Standfläche liegen`,
       lernziele: [
         "Das Newtonsche Gravitationsgesetz anwenden und zwischen Masse und Gewichtskraft unterscheiden",
         "Zentripetalbeschleunigung und Zentripetalkraft für gleichförmige Kreisbewegungen berechnen",

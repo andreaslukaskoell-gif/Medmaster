@@ -587,17 +587,49 @@ export default function BMSUnterkapitel({
                     <h3 className="text-sm font-semibold text-red-800 dark:text-red-300 flex items-center gap-2 mb-2">
                       Altfragen-Klassiker
                     </h3>
-                    <p className="text-sm font-medium text-red-900 dark:text-red-200 mb-2">
-                      {uk.altfrage.question}
-                    </p>
-                    <details className="group">
-                      <summary className="text-sm text-red-700 dark:text-red-400 cursor-pointer hover:underline">
-                        Antwort anzeigen
-                      </summary>
-                      <p className="text-sm text-red-800 dark:text-red-300 mt-2 pl-4 border-l-2 border-red-300 dark:border-red-700">
-                        {uk.altfrage.answer}
-                      </p>
-                    </details>
+                    {"text" in uk.altfrage ? (
+                      <>
+                        <p className="text-sm font-medium text-red-900 dark:text-red-200 mb-3">
+                          {uk.altfrage.text}
+                        </p>
+                        <ul className="space-y-1.5 mb-3">
+                          {uk.altfrage.options.map((opt) => (
+                            <li
+                              key={opt.id}
+                              className="text-sm text-red-800 dark:text-red-300 flex gap-2"
+                            >
+                              <span className="font-semibold uppercase">{opt.id})</span>
+                              <span>{opt.text}</span>
+                            </li>
+                          ))}
+                        </ul>
+                        <details className="group">
+                          <summary className="text-sm text-red-700 dark:text-red-400 cursor-pointer hover:underline">
+                            Antwort anzeigen
+                          </summary>
+                          <p className="text-sm text-red-800 dark:text-red-300 mt-2 pl-4 border-l-2 border-red-300 dark:border-red-700">
+                            <span className="font-semibold">
+                              Richtig: {uk.altfrage.correctOptionId.toUpperCase()}
+                            </span>{" "}
+                            — {uk.altfrage.explanation}
+                          </p>
+                        </details>
+                      </>
+                    ) : (
+                      <>
+                        <p className="text-sm font-medium text-red-900 dark:text-red-200 mb-2">
+                          {uk.altfrage.question}
+                        </p>
+                        <details className="group">
+                          <summary className="text-sm text-red-700 dark:text-red-400 cursor-pointer hover:underline">
+                            Antwort anzeigen
+                          </summary>
+                          <p className="text-sm text-red-800 dark:text-red-300 mt-2 pl-4 border-l-2 border-red-300 dark:border-red-700">
+                            {uk.altfrage.answer}
+                          </p>
+                        </details>
+                      </>
+                    )}
                   </CardContent>
                 </Card>
               )}

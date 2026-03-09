@@ -1897,10 +1897,23 @@ Wenn der **posteriore Neuroporus** nicht schließt, kann es zur **Spina bifida**
       klinischerBezug:
         "Neuralrohrdefekte (Spina bifida, Anenzephalie) entstehen bei offenem Neuroporus. Folsäure 0,4 mg/Tag präkonzeptionell und in der Frühschwangerschaft reduziert das Risiko um ca. 70 %.",
       altfrage: {
-        question:
-          "Aus welchem Keimblatt entstehen Gehirn und Rückenmark, und durch welchen Prozess?",
-        answer:
-          "Aus dem Ektoderm durch die Neurulation: Das Notochord induziert die Neuralplatte, die sich zur Neuralrinne einfaltet und zum Neuralrohr schließt; aus dem Neuralrohr gehen Gehirn und Rückenmark (ZNS) hervor.",
+        text: "Welche Aussage zur Neurulation ist richtig?",
+        options: [
+          { id: "a", text: "Das Neuralrohr entsteht aus dem Mesoderm." },
+          {
+            id: "b",
+            text: "Der anteriore Neuroporus schließt am Tag 27, der posteriore am Tag 25.",
+          },
+          {
+            id: "c",
+            text: "Melanozyten und Nebennierenmark stammen von der Neuralleiste (Ektoderm-Derivat).",
+          },
+          { id: "d", text: "Die Neuralleiste ist ein Mesoderm-Derivat." },
+          { id: "e", text: "Folsäure-Supplementierung hat keinen Einfluss auf Neuralrohrdefekte." },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "Die **Neuralleiste** löst sich während des Neuralrohrschlusses vom Ektoderm ab. Aus ihr entstehen u. a. **Melanozyten**, sensorische/autonome **Ganglien**, **Schwann-Zellen** und das **Nebennierenmark**. A ist falsch: Neuralrohr = Ektoderm. B ist vertauscht (anterior Tag 25, posterior Tag 27). D ist falsch: Neuralleiste = Ektoderm. E ist falsch: Folsäure senkt das Risiko um ~70 %.",
       },
       selfTest: [
         {

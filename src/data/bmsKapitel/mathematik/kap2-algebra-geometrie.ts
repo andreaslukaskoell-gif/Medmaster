@@ -1348,6 +1348,12 @@ Probe: √(433² + 250²) = √(187489 + 62500) = √249989 ≈ 500 N ✓
       ],
       klinischerBezug:
         "Kräftezerlegung in der Orthopädie (Muskelzug am Knochen); Drehmoment an Gelenken (M = r × F × sin θ); EKG-Herzachse als Vektorwinkel; Strahlentherapie-Winkelplanung; Optik (Brechungsgesetz: n₁ sin θ₁ = n₂ sin θ₂).",
+      altfrage: {
+        question:
+          "Ein Rettungshubschrauber fliegt in 200 m Höhe auf ein Krankenhaus zu. Der Pilot misst den Tiefenwinkel zum Landeplatz als 30°. Welche horizontale Entfernung hat der Hubschrauber noch zum Landeplatz? (tan 30° ≈ 0,577; sin 30° = 0,5; cos 30° ≈ 0,866)",
+        answer:
+          "tan α = Gegenkathete / Ankathete. Hier ist die Höhe (200 m) die Gegenkathete und die horizontale Entfernung die Ankathete. tan 30° = 200 / x → x = 200 / tan 30° = 200 / 0,577 ≈ 346 m. Probe: tan 30° = 200/346 ≈ 0,578 ≈ 0,577 ✓. Alternativ über sin/cos: Hypotenuse = 200 / sin 30° = 400 m; horizontale Entfernung = 400 × cos 30° = 400 × 0,866 = 346,4 m. Die trigonometrischen Funktionen verknüpfen Winkel und Seitenverhältnisse im rechtwinkligen Dreieck — SOH-CAH-TOA.",
+      },
       selfTest: [
         {
           question:

@@ -145,6 +145,19 @@ Ein **Chromosom** ist ein langer DNA-Faden, der zusammen mit **Histonen** (Verpa
           tags: ["basenpaarung", "dna", "chargaff"],
         },
       ],
+      altfrage: {
+        text: "In einer DNA-Probe beträgt der Adenin-Anteil 32 %. Wie hoch ist der Guanin-Anteil?",
+        options: [
+          { id: "a", text: "32 %" },
+          { id: "b", text: "18 %" },
+          { id: "c", text: "36 %" },
+          { id: "d", text: "68 %" },
+          { id: "e", text: "16 %" },
+        ],
+        correctOptionId: "b",
+        explanation:
+          "Nach den **Chargaff-Regeln** gilt: A = T und G = C. Wenn A = 32 %, dann T = 32 %. Zusammen: A + T = 64 %. Der Rest entfällt auf G + C = 100 % - 64 % = 36 %. Da G = C, ist **G = 18 %** (und C = 18 %). Diese Rechenaufgabe ist ein MedAT-Klassiker.",
+      },
     },
 
     // ─── 2. Chromosomen: Aufbau und Karyotyp ──────────────────────────────────
@@ -279,6 +292,19 @@ Der **Karyotyp** ist die geordnete Darstellung aller Chromosomen einer Zelle (na
           tags: ["karyotyp", "metaphase", "zellzyklus"],
         },
       ],
+      altfrage: {
+        text: "Der Karyotyp 47,XXY entspricht welchem Syndrom?",
+        options: [
+          { id: "a", text: "Turner-Syndrom" },
+          { id: "b", text: "Down-Syndrom (Trisomie 21)" },
+          { id: "c", text: "Klinefelter-Syndrom" },
+          { id: "d", text: "Edwards-Syndrom (Trisomie 18)" },
+          { id: "e", text: "Pätau-Syndrom (Trisomie 13)" },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "Der Karyotyp **47,XXY** bedeutet: 47 Chromosomen, zwei X- und ein Y-Chromosom — das ist das **Klinefelter-Syndrom**. Betroffene sind phänotypisch männlich (Y vorhanden), aber mit überzähligem X-Chromosom. Typische Merkmale: Hochwuchs, Gynäkomastie, Infertilität. Turner-Syndrom = **45,X** (A falsch). Down-Syndrom = **47,XX,+21** oder **47,XY,+21** (B falsch).",
+      },
     },
 
     // ─── 3. Zellzyklus, Mitose und Meiose ─────────────────────────────────────
@@ -453,6 +479,19 @@ Der **Zellzyklus** umfasst die Vorbereitung der Zellteilung und die Teilung selb
           tags: ["mitose", "meiose", "vergleich"],
         },
       ],
+      altfrage: {
+        text: "In welcher Phase der Meiose findet das Crossing-over statt?",
+        options: [
+          { id: "a", text: "Prophase II" },
+          { id: "b", text: "Metaphase I" },
+          { id: "c", text: "Prophase I (Pachytän)" },
+          { id: "d", text: "Anaphase I" },
+          { id: "e", text: "Interphase (S-Phase)" },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "Das **Crossing-over** (Rekombination) findet in der **Prophase I** statt, genauer im **Pachytän** (Pachytän-Stadium). Dabei lagern sich homologe Chromosomen als **Bivalente** (Tetraden) aneinander und tauschen Chromatiden-Abschnitte über **Chiasmata** aus. Dies erhöht die genetische Vielfalt der Keimzellen. In der Metaphase I sind die Bivalente bereits an der Äquatorialplatte ausgerichtet (B falsch). In der Prophase II und Anaphase I findet kein Crossing-over statt.",
+      },
     },
 
     // ─── 4. Mendelsche Regeln ─────────────────────────────────────────────────
@@ -670,6 +709,19 @@ Nicht alle Merkmale folgen dem einfachen Mendel-Schema. Drei wichtige Phänomene
           tags: ["produktregel", "dihybrid", "wahrscheinlichkeit"],
         },
       ],
+      altfrage: {
+        text: "Zwei heterozygote Eltern (Aa) bekommen vier Kinder. Wie hoch ist die Wahrscheinlichkeit, dass ein einzelnes Kind den homozygot rezessiven Genotyp (aa) hat?",
+        options: [
+          { id: "a", text: "0 %" },
+          { id: "b", text: "25 %" },
+          { id: "c", text: "50 %" },
+          { id: "d", text: "75 %" },
+          { id: "e", text: "100 %" },
+        ],
+        correctOptionId: "b",
+        explanation:
+          "Nach der **2. Mendelschen Regel** (Spaltungsregel) ergibt die Kreuzung Aa x Aa die Genotypen **AA : Aa : aa = 1 : 2 : 1**. Die Wahrscheinlichkeit für **aa** beträgt **1/4 = 25 %** pro Kind. Wichtig: Diese Wahrscheinlichkeit gilt für **jedes einzelne Kind** unabhängig — sie sagt nicht, dass von 4 Kindern genau eines aa sein muss.",
+      },
     },
 
     // ─── 5. Genotyp, Phänotyp und Dominanzverhältnisse ────────────────────────
@@ -975,6 +1027,19 @@ Die **Sichelzellanämie** vereint mehrere Konzepte dieses Kapitels:
           tags: ["epistasie", "labrador", "geninteraktion"],
         },
       ],
+      altfrage: {
+        text: "Bei der Kreuzung zweier heterozygot roter Blumen (Rr x Rr) einer Pflanze mit intermediärem Erbgang treten in der F₂-Generation weiße Blumen auf. Welchen Genotyp haben diese?",
+        options: [
+          { id: "a", text: "RR" },
+          { id: "b", text: "Rr" },
+          { id: "c", text: "rr" },
+          { id: "d", text: "RR oder Rr" },
+          { id: "e", text: "Der Genotyp lässt sich nicht bestimmen." },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "Beim **intermediären Erbgang** zeigt der **Heterozygote** (Rr) einen Mischphänotyp (z. B. rosa bei roter und weißer Kreuzung). In der F₂-Generation (Rr x Rr) entstehen: **RR** (rot), **Rr** (rosa/Mischform), **rr** (weiß) im Verhältnis 1:2:1. Weiße Blumen haben den Genotyp **rr** (homozygot rezessiv). Im Unterschied zum dominant-rezessiven Erbgang kann man beim intermediären Erbgang den Genotyp direkt am Phänotyp ablesen.",
+      },
     },
 
     // ─── 6. Erbgänge: autosomal und X-chromosomal ─────────────────────────────
@@ -1196,6 +1261,22 @@ Das kranke Allel ist **dominant** auf dem X-Chromosom. **Kranker Vater (X^A Y):*
           tags: ["stammbaum", "symbole", "konsanguinität"],
         },
       ],
+      altfrage: {
+        text: "Ein Paar bekommt eine Tochter mit Hämophilie A (X-chromosomal rezessiv). Was lässt sich über die Eltern sagen?",
+        options: [
+          { id: "a", text: "Der Vater ist gesund, die Mutter ist homozygot krank." },
+          {
+            id: "b",
+            text: "Der Vater ist hemizygot betroffen (krank), die Mutter ist Konduktorin (heterozygot).",
+          },
+          { id: "c", text: "Beide Eltern müssen krank sein." },
+          { id: "d", text: "Der Vater ist Konduktor, die Mutter ist gesund." },
+          { id: "e", text: "Der Erbgang ist autosomal-dominant." },
+        ],
+        correctOptionId: "b",
+        explanation:
+          "Damit eine **Tochter** (XX) an einer **X-chromosomal rezessiven** Erkrankung leidet, muss sie **zwei** kranke X-Allele haben: eines vom Vater (der hemizygot betroffen sein muss, X^a Y) und eines von der Mutter (die mindestens **Konduktorin** sein muss, X^A X^a). Der Vater kann kein Konduktor sein (D falsch, Männer haben nur ein X). Der Erbgang ist X-chromosomal rezessiv, nicht autosomal-dominant (E falsch).",
+      },
     },
 
     // ─── 7. Blutgruppen: AB0-System ──────────────────────────────────────────
@@ -1365,6 +1446,19 @@ Ein seltener Sonderfall: Menschen mit dem **Bombay-Phänotyp** (h/h) können das
           tags: ["ab0", "genotyp", "phänotyp"],
         },
       ],
+      altfrage: {
+        text: "Eine Mutter hat die Blutgruppe A (Genotyp I^A i), der Vater hat Blutgruppe B (Genotyp I^B i). Welche Blutgruppe kann bei den Kindern NICHT auftreten?",
+        options: [
+          { id: "a", text: "Blutgruppe A" },
+          { id: "b", text: "Blutgruppe B" },
+          { id: "c", text: "Blutgruppe AB" },
+          { id: "d", text: "Blutgruppe 0" },
+          { id: "e", text: "Alle vier Blutgruppen (A, B, AB, 0) sind möglich." },
+        ],
+        correctOptionId: "e",
+        explanation:
+          "Bei Mutter I^A i und Vater I^B i ergeben sich im Punnett-Quadrat vier mögliche Genotypen: **I^A I^B** (AB), **I^A i** (A), **I^B i** (B), **ii** (0). Alle vier Blutgruppen sind möglich — es gibt **keine**, die ausgeschlossen wäre. Die richtige Antwort ist E, weil die Frage nach einer unmöglichen Blutgruppe fragt und tatsächlich alle auftreten können.",
+      },
     },
 
     // ─── 8. Mutationen ───────────────────────────────────────────────────────
@@ -1616,6 +1710,19 @@ Im Kontext der Tumorbiologie: **Onkogene** (GOF in Protoonkogenen, z. B. RAS-Mut
           tags: ["translokation", "chromosomenmutation", "balanciert"],
         },
       ],
+      altfrage: {
+        text: "Welche Mutation führt zu einer Verschiebung des Leserasters (Frameshift)?",
+        options: [
+          { id: "a", text: "Substitution einer Base durch eine andere (Punktmutation)" },
+          { id: "b", text: "Deletion von drei aufeinanderfolgenden Basenpaaren" },
+          { id: "c", text: "Insertion eines einzelnen Nukleotids in die codierende Sequenz" },
+          { id: "d", text: "Stille Mutation, die dieselbe Aminosäure codiert" },
+          { id: "e", text: "Duplikation eines ganzen Chromosoms" },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "Eine **Frameshift-Mutation** entsteht, wenn die Anzahl eingefügter oder deletierter Basen **nicht durch 3 teilbar** ist. Die Insertion eines **einzelnen Nukleotids** verschiebt das Leseraster aller nachfolgenden Codons → komplett verändertes Protein. Eine Substitution (A) ändert nur ein Codon. Die Deletion von 3 Basen (B) entfernt eine Aminosäure ohne Frameshift. Stille Mutationen (D) haben keinen Effekt. Chromosomenduplikation (E) ist eine Genommutation.",
+      },
     },
 
     // ─── 9. Genexpression (Grundprinzip) ─────────────────────────────────────
@@ -1805,6 +1912,25 @@ Vererbung bedeutet: Die DNA (Allele) wird über Keimzellen (Meiose) von Generati
           tags: ["zentraldogma", "reverse transkriptase", "retrovirus"],
         },
       ],
+      altfrage: {
+        text: "Welche Aussage zur Genexpression ist richtig?",
+        options: [
+          { id: "a", text: "Die Transkription findet an den Ribosomen im Zytoplasma statt." },
+          {
+            id: "b",
+            text: "Die RNA-Polymerase benötigt einen Primer, um die Transkription zu starten.",
+          },
+          {
+            id: "c",
+            text: "Beim Spleißen werden Introns aus der prä-mRNA entfernt und Exons zur reifen mRNA zusammengefügt.",
+          },
+          { id: "d", text: "Das Startcodon AUG codiert für Tryptophan." },
+          { id: "e", text: "Die Translation verläuft in 5'→3'-Richtung am codogenen Strang." },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "Beim **Spleißen** (Splicing) wird die prä-mRNA prozessiert: **Introns** (nicht-codierende Abschnitte) werden herausgeschnitten und die **Exons** (codierende Abschnitte) zur reifen mRNA verbunden. Dies geschieht durch das **Spleißosom** (snRNPs) im Zellkern. Die Transkription findet im **Zellkern** statt (A falsch). RNA-Polymerase braucht **keinen Primer** (B falsch). AUG codiert für **Methionin** (D falsch). Die Translation liest die **mRNA** in 5'→3'-Richtung, nicht den codogenen Strang (E falsch).",
+      },
     },
 
     // ─── 10. Tumorgenetik ──────────────────────────────────────────────────────
@@ -2096,6 +2222,25 @@ Das Verständnis der Tumorgenetik hat die Krebstherapie revolutioniert — Medik
           tags: ["imatinib", "bcr-abl", "cml", "targeted-therapy"],
         },
       ],
+      altfrage: {
+        text: "Welche Aussage zur Tumorgenetik ist richtig?",
+        options: [
+          { id: "a", text: "Tumorsuppressorgene fördern das Zellwachstum." },
+          {
+            id: "b",
+            text: "Ein einziger Treffer (Mutation) in einem Tumorsuppressorgen reicht für den Funktionsverlust.",
+          },
+          { id: "c", text: "Proto-Onkogene sind bereits mutierte, krebsfördernde Gene." },
+          {
+            id: "d",
+            text: "Nach der Two-Hit-Hypothese (Knudson) müssen beide Allele eines Tumorsuppressorgens inaktiviert werden, damit die Schutzfunktion verloren geht.",
+          },
+          { id: "e", text: "p53 ist ein Proto-Onkogen, das Zellteilung stimuliert." },
+        ],
+        correctOptionId: "d",
+        explanation:
+          "Die **Two-Hit-Hypothese** (Knudson, 1971) besagt, dass Tumorsuppressorgene **rezessiv** wirken: Erst wenn **beide Allele** durch Mutation, Deletion oder epigenetisches Silencing ausgeschaltet sind, geht die Schutzfunktion verloren. Bei hereditären Tumoren ist bereits ein Allel keimbahnmutiert (1. Hit), sodass nur noch ein somatischer 2. Hit nötig ist. Tumorsuppressorgene **bremsen** das Wachstum (A falsch). Proto-Onkogene sind **normale** Gene (C falsch). p53 ist ein **Tumorsuppressorgen** (E falsch).",
+      },
     },
 
     // ─── 11. Epigenetik ────────────────────────────────────────────────────────
@@ -2300,6 +2445,28 @@ Frauen haben zwei X-Chromosomen (XX), Männer nur eines (XY). Damit Frauen nicht
           tags: ["epigenetik", "mutation", "reversibel"],
         },
       ],
+      altfrage: {
+        text: "Welche Aussage zur Epigenetik ist richtig?",
+        options: [
+          { id: "a", text: "Epigenetische Veränderungen verändern die DNA-Sequenz direkt." },
+          {
+            id: "b",
+            text: "DNA-Methylierung an CpG-Inseln führt typischerweise zur Genaktivierung.",
+          },
+          {
+            id: "c",
+            text: "Genomisches Imprinting bewirkt, dass bestimmte Gene nur vom mütterlichen oder väterlichen Allel exprimiert werden.",
+          },
+          {
+            id: "d",
+            text: "X-Inaktivierung betrifft bei Frauen immer das väterliche X-Chromosom.",
+          },
+          { id: "e", text: "Histonacetylierung führt zu einer Verdichtung des Chromatins." },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "Beim **genomischen Imprinting** werden bestimmte Gene durch epigenetische Markierungen (v. a. DNA-Methylierung) so modifiziert, dass nur das **mütterliche** oder nur das **väterliche Allel** exprimiert wird. Beispiele: Prader-Willi-Syndrom (väterliche Deletion auf Chr. 15) und Angelman-Syndrom (mütterliche Deletion auf Chr. 15). Epigenetik verändert nicht die DNA-Sequenz (A falsch). DNA-Methylierung an CpG-Inseln **silenced** Gene (B falsch). X-Inaktivierung ist **zufällig** (D falsch). Histonacetylierung **lockert** Chromatin (E falsch).",
+      },
     },
   ],
 };

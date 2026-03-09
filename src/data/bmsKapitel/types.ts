@@ -58,10 +58,17 @@ export interface Unterkapitel {
   sections?: ContentSection[];
   diagram?: string;
   merksätze: string[];
-  altfrage?: {
-    question: string;
-    answer: string;
-  };
+  altfrage?:
+    | {
+        question: string;
+        answer: string;
+      }
+    | {
+        text: string;
+        options: { id: string; text: string }[];
+        correctOptionId: string;
+        explanation: string;
+      };
   klinischerBezug?: string;
   /** 3–5 Self-Test-Fragen pro Unterkapitel (MedAT-Vorgabe). Referenz: bio-4-01 in kap4-genetik.ts. */
   selfTest: SelfTestQuestion[];

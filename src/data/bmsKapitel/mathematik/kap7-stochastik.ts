@@ -1310,7 +1310,7 @@ x̄ = (x1 + x2 + ... + xn) / n = Summe aller Werte / Anzahl
 
 Beispiel: Messwerte {3, 5, 7, 7, 8}. x̄ = (3+5+7+7+8)/5 = 30/5 = 6
 
-Stell dir vor, alle Werte sind Gewichte auf einer Wippe: Der Mittelwert ist der Punkt, an dem die Wippe im Gleichgewicht steht. Ein einzelner schwerer Ausreisser verschiebt das Gleichgewicht massiv.
+Stell dir vor, alle Werte sind Gewichte auf einer Wippe: Der Mittelwert ist der Punkt, an dem die Wippe im Gleichgewicht steht. Ein einzelner schwerer Ausreißer verschiebt das Gleichgewicht massiv.
 
 **Median (Zentralwert):**
 Der mittlere Wert einer **sortierten** Datenreihe:
@@ -1319,28 +1319,28 @@ Der mittlere Wert einer **sortierten** Datenreihe:
 
 Beispiel: {3, 5, **7**, 7, 8} → n=5 → Position (5+1)/2 = 3 → Median = 7
 
-Stell dir eine Schlange von Menschen nach Groesse sortiert vor: Der Median ist die Person in der Mitte. Egal ob der Groesste 1,90 m oder 2,50 m ist — der Median aendert sich nicht.
+Stell dir eine Schlange von Menschen nach Größe sortiert vor: Der Median ist die Person in der Mitte. Egal ob der Größte 1,90 m oder 2,50 m ist — der Median ändert sich nicht.
 
 **Modus (Modalwert):**
-Der am haeufigsten vorkommende Wert. {3, 5, **7, 7**, 8} → Modus = 7 (kommt 2x vor). Kann auch mehrfach existieren (bimodale Verteilung, z. B. zwei Altersgruppen mit erhoehter Krankheitshaeufigkeit).
+Der am häufigsten vorkommende Wert. {3, 5, **7, 7**, 8} → Modus = 7 (kommt 2x vor). Kann auch mehrfach existieren (bimodale Verteilung, z. B. zwei Altersgruppen mit erhöhter Krankheitshäufigkeit).
 
-> **Merke:** Bei symmetrischer Verteilung gilt: Mittelwert = Median = Modus. Bei rechtsschiefer Verteilung (langer Schwanz nach rechts, z. B. Einkommensverteilung): Modus < Median < Mittelwert. Pruefungsregel: Ausreisser verschieben den Mittelwert, nicht den Median.
+> **Merke:** Bei symmetrischer Verteilung gilt: Mittelwert = Median = Modus. Bei rechtsschiefer Verteilung (langer Schwanz nach rechts, z. B. Einkommensverteilung): Modus < Median < Mittelwert. Prüfungsregel: Ausreißer verschieben den Mittelwert, nicht den Median.
 
-| Lagemass | Formel | Wann verwenden? |
+| Lagemaß | Formel | Wann verwenden? |
 |----------|--------|-----------------|
-| Mittelwert | Summe xi / n | Symmetrische Verteilung, keine Ausreisser |
-| Median | Mittlerer Wert (sortiert) | Schiefe Verteilung, Ausreisser vorhanden |
-| Modus | Haeufigster Wert | Kategoriale Daten, bimodale Verteilungen |
+| Mittelwert | Summe xi / n | Symmetrische Verteilung, keine Ausreißer |
+| Median | Mittlerer Wert (sortiert) | Schiefe Verteilung, Ausreißer vorhanden |
+| Modus | Häufigster Wert | Kategoriale Daten, bimodale Verteilungen |
 
 {{DIAGRAM:probability-distribution}}
 
 ---
 
-## Streumasse — Wie breit streuen die Daten?
+## Streumaße — Wie breit streuen die Daten?
 
 **Varianz (s-Quadrat):**
 
-Warum quadriert man die Abweichungen? Wuerde man die Differenzen (xi - x̄) einfach addieren, kaeme immer Null heraus — positive und negative Abweichungen heben sich auf. Das Quadrieren loest dieses Problem und gewichtet grosse Abweichungen staerker.
+Warum quadriert man die Abweichungen? Würde man die Differenzen (xi - x̄) einfach addieren, käme immer Null heraus — positive und negative Abweichungen heben sich auf. Das Quadrieren löst dieses Problem und gewichtet große Abweichungen stärker.
 
 s² = Summe von (xi - x̄)² / (n-1)     (Stichprobenvarianz)
 
@@ -1353,9 +1353,9 @@ s = Wurzel aus s² = Wurzel aus der Varianz
 
 s = Wurzel(4) = **2**. Die Messwerte weichen im Schnitt etwa 2 Einheiten vom Mittelwert ab. Gleiche Einheit wie die Originaldaten (im Gegensatz zur Varianz, die in Einheit² vorliegt).
 
-> **Merke:** Im Nenner steht n-1 (Bessel-Korrektur), nicht n! Eine Stichprobe unterschaetzt die wahre Streuung systematisch — n-1 korrigiert das. Im MedAT wird fast immer n-1 verwendet.
+> **Merke:** Im Nenner steht n-1 (Bessel-Korrektur), nicht n! Eine Stichprobe unterschätzt die wahre Streuung systematisch — n-1 korrigiert das. Im MedAT wird fast immer n-1 verwendet.
 
-**Schritt-fuer-Schritt-Rechenbeispiel — Varianz klinisch:**
+**Schritt-für-Schritt-Rechenbeispiel — Varianz klinisch:**
 Blutzuckerwerte (mg/dL) von 6 Patienten: {85, 90, 92, 88, 95, 100}.
 
 | Schritt | Rechnung | Ergebnis |
@@ -1368,9 +1368,9 @@ Blutzuckerwerte (mg/dL) von 6 Patienten: {85, 90, 92, 88, 95, 100}.
 Interpretation: Die Blutzuckerwerte streuen im Mittel um ca. 5,3 mg/dL um den Mittelwert von 91,7 mg/dL.
 
 **Interquartilsabstand (IQA):**
-IQA = Q3 - Q1 (75. Perzentil minus 25. Perzentil). Robust gegen Ausreisser. Wird im Boxplot dargestellt.
+IQA = Q3 - Q1 (75. Perzentil minus 25. Perzentil). Robust gegen Ausreißer. Wird im Boxplot dargestellt.
 
-> **Merke:** Faustregel fuer klinische Studien: Mittelwert + SD bei Normalverteilung. Median + IQA bei schiefer Verteilung oder Ausreissern. Beides wird angegeben — Transparenz ist Pflicht.
+> **Merke:** Faustregel für klinische Studien: Mittelwert + SD bei Normalverteilung. Median + IQA bei schiefer Verteilung oder Ausreißern. Beides wird angegeben — Transparenz ist Pflicht.
 
 {{DIAGRAM:standard-deviation}}
 
@@ -1378,20 +1378,20 @@ IQA = Q3 - Q1 (75. Perzentil minus 25. Perzentil). Robust gegen Ausreisser. Wird
 
 ## Normalverteilung — Die Glockenkurve
 
-Die **Normalverteilung** (Gauss-Verteilung) ist die wichtigste Wahrscheinlichkeitsverteilung in der Medizin. Blutdruck, Koerpergroesse, Laborwerte — fast alles folgt dieser symmetrischen Glockenkurve.
+Die **Normalverteilung** (Gauss-Verteilung) ist die wichtigste Wahrscheinlichkeitsverteilung in der Medizin. Blutdruck, Körpergröße, Laborwerte — fast alles folgt dieser symmetrischen Glockenkurve.
 
 **Parameter:**
 - **Mu** = Mittelwert = Modus = Median (bei Normalverteilung identisch)
 - **Sigma** = Standardabweichung (bestimmt die Breite der Glocke)
-- Groesseres Sigma → flachere, breitere Kurve
+- Größeres Sigma → flachere, breitere Kurve
 
 **Notation:** X ~ N(Mu, Sigma²) — "X ist normalverteilt mit Mittelwert Mu und Varianz Sigma²"
 
 Die Wendepunkte der Glockenkurve liegen exakt bei Mu +/- Sigma.
 
-### Die 68-95-99,7-Regel — Wichtigste Pruefungsformel
+### Die 68-95-99,7-Regel — Wichtigste Prüfungsformel
 
-| Bereich | Anteil der Daten | Ausserhalb (beidseitig) | Ausserhalb (einseitig) |
+| Bereich | Anteil der Daten | Außerhalb (beidseitig) | Außerhalb (einseitig) |
 |---------|-----------------|------------------------|----------------------|
 | Mu +/- 1 Sigma | ca. 68,3% | ca. 31,7% | ca. 15,9% |
 | Mu +/- 2 Sigma | ca. 95,4% | ca. 4,6% | ca. 2,3% |
@@ -1401,9 +1401,9 @@ Die Wendepunkte der Glockenkurve liegen exakt bei Mu +/- Sigma.
 - 68% haben Blutdruck zwischen 110 und 130 mmHg
 - 95% haben Blutdruck zwischen 100 und 140 mmHg
 - 99,7% haben Blutdruck zwischen 90 und 150 mmHg
-- Werte ueber 140 mmHg (ueber Mu+2 Sigma) liegen im oberen 2,3% → Hypertonie-Verdacht
+- Werte über 140 mmHg (über Mu+2 Sigma) liegen im oberen 2,3% → Hypertonie-Verdacht
 
-> **Merke:** 68-95-99,7 auswendig lernen! Haeufige MedAT-Falle: "Wie viel Prozent liegen OBERHALB von Mu+2 Sigma?" Antwort: 2,3% (nicht 4,6%!). Die Symmetrie halbiert den beidseitigen Wert. Merkhilfe: 2 Sigma = 2,3% pro Seite.
+> **Merke:** 68-95-99,7 auswendig lernen! Häufige MedAT-Falle: "Wie viel Prozent liegen OBERHALB von Mu+2 Sigma?" Antwort: 2,3% (nicht 4,6%!). Die Symmetrie halbiert den beidseitigen Wert. Merkhilfe: 2 Sigma = 2,3% pro Seite.
 
 ---
 
@@ -1413,7 +1413,7 @@ Jede Normalverteilung kann auf die **Standardnormalverteilung** N(0,1) standardi
 
 **z = (x - Mu) / Sigma**
 
-Der z-Wert gibt an, wie viele Standardabweichungen ein Wert vom Mittelwert entfernt ist. Wie ein Waehrungsrechner: Egal ob Blutdruck in mmHg oder Gewicht in kg — der z-Wert macht alles vergleichbar.
+Der z-Wert gibt an, wie viele Standardabweichungen ein Wert vom Mittelwert entfernt ist. Wie ein Währungsrechner: Egal ob Blutdruck in mmHg oder Gewicht in kg — der z-Wert macht alles vergleichbar.
 
 z = 0 → genau am Mittelwert
 z = +2 → 2 Standardabweichungen oberhalb (obere 2,3%)
@@ -1430,22 +1430,22 @@ z = -1,5 → 1,5 Standardabweichungen unterhalb
 | 0,0 | 50,0% | Median = Mittelwert |
 | +1,0 | 84,1% | Obere 16% beginnt |
 | +1,645 | 95,0% | Obere 5% beginnt |
-| +1,96 | 97,5% | Grenze fuer 95%-KI (beidseitig) |
+| +1,96 | 97,5% | Grenze für 95%-KI (beidseitig) |
 | +2,0 | 97,7% | Obere 2,3% |
-| +2,576 | 99,5% | Grenze fuer 99%-KI (beidseitig) |
-| +3,0 | 99,87% | Obere 0,13%, Ausreisser |
+| +2,576 | 99,5% | Grenze für 99%-KI (beidseitig) |
+| +3,0 | 99,87% | Obere 0,13%, Ausreißer |
 
 > **Merke:** Die drei wichtigsten z-Werte: z = 1,645 (einseitige 5%-Grenze), z = 1,96 (beidseitige 2,5%-Grenze, also 95%-KI), z = 2,576 (99%-KI). In der 68-95-99,7-Regel nutzt man die gerundeten Werte z = 1, 2, 3.
 
 ### z-Transformation — Rechenbeispiele
 
-**Beispiel 1: Ist ein Laborwert auffaellig?**
-Haemoglobin bei Frauen: N(Mu = 13,5 g/dL, Sigma = 1,2 g/dL). Patientin hat Hb = 10,5 g/dL.
+**Beispiel 1: Ist ein Laborwert auffällig?**
+Hämoglobin bei Frauen: N(Mu = 13,5 g/dL, Sigma = 1,2 g/dL). Patientin hat Hb = 10,5 g/dL.
 z = (10,5 - 13,5) / 1,2 = -3,0 / 1,2 = **-2,5**
-Phi(-2,5) = 0,006 → nur 0,6% der gesunden Frauen haben so niedrige Werte → **Anaemie-Verdacht**
+Phi(-2,5) = 0,006 → nur 0,6% der gesunden Frauen haben so niedrige Werte → **Anämie-Verdacht**
 
-**Beispiel 2: Perzentil-Berechnung (rueckwaerts):**
-Geburtsgewicht: N(Mu = 3.400 g, Sigma = 450 g). Ab welchem Gewicht gehoert ein Baby zu den leichtesten 5%?
+**Beispiel 2: Perzentil-Berechnung (rückwärts):**
+Geburtsgewicht: N(Mu = 3.400 g, Sigma = 450 g). Ab welchem Gewicht gehört ein Baby zu den leichtesten 5%?
 z = -1,645 (aus Tabelle). x = Mu + z x Sigma = 3.400 + (-1,645) x 450 = 3.400 - 740 = **2.660 g**
 Klinisch: SGA (Small for Gestational Age) bei Gewicht unter 2.660 g.
 
@@ -1456,19 +1456,19 @@ z2 = (250-200)/35 = 1,43 → Phi = 0,9236
 P = 0,9236 - 0,2843 = **0,639 = 63,9%**
 
 **Beispiel 4: 68-95-99,7 anwenden:**
-Koerpertemperatur: N(Mu = 36,8 Grad C, Sigma = 0,4 Grad C).
+Körpertemperatur: N(Mu = 36,8 Grad C, Sigma = 0,4 Grad C).
 - Mu +/- 1 Sigma = 36,4 bis 37,2 Grad C → 68% der Gesunden
 - Mu +/- 2 Sigma = 36,0 bis 37,6 Grad C → 95% der Gesunden
-- Temperatur ueber 37,6 Grad C (ueber Mu+2 Sigma): obere 2,3% → erhoehte Temperatur
-- Temperatur ueber 38,0 Grad C (ueber Mu+3 Sigma): obere 0,15% → Fieber
+- Temperatur über 37,6 Grad C (über Mu+2 Sigma): obere 2,3% → erhöhte Temperatur
+- Temperatur über 38,0 Grad C (über Mu+3 Sigma): obere 0,15% → Fieber
 
-> **Merke:** z = (x-Mu)/Sigma ist die universelle Skala. z groesser gleich 2 oder kleiner gleich -2 = klinisch auffaellig (weniger als 5% Wahrscheinlichkeit bei Gesunden). Das gilt fuer Laborwerte, Koerpermasse und Studienergebnisse gleichermassen.
+> **Merke:** z = (x-Mu)/Sigma ist die universelle Skala. z größer gleich 2 oder kleiner gleich -2 = klinisch auffällig (weniger als 5% Wahrscheinlichkeit bei Gesunden). Das gilt für Laborwerte, Körpermaße und Studienergebnisse gleichermaßen.
 
 ---
 
-## Konfidenzintervall — Wie genau ist die Schaetzung?
+## Konfidenzintervall — Wie genau ist die Schätzung?
 
-Das **95%-Konfidenzintervall (KI)** beantwortet: "In welchem Bereich liegt der wahre Populationswert mit 95% Sicherheit?" Stell dir vor, du wirfst ein Lasso: In 95 von 100 Wuerfen fangst du den wahren Wert ein.
+Das **95%-Konfidenzintervall (KI)** beantwortet: "In welchem Bereich liegt der wahre Populationswert mit 95% Sicherheit?" Stell dir vor, du wirfst ein Lasso: In 95 von 100 Würfen fängst du den wahren Wert ein.
 
 **Formel:** KI = x̄ +/- z x (Sigma / Wurzel(n)) = x̄ +/- 1,96 x SE
 
@@ -1481,14 +1481,14 @@ SE = 20/Wurzel(100) = 20/10 = 2,0
 
 **99%-KI:** z = 2,576 statt 1,96 → KI = 135 +/- 2,576 x 2,0 = 135 +/- 5,15 = **[129,8 ; 140,2] mmHg** (breiter, aber sicherer)
 
-| Stichprobengroesse n | SE (bei Sigma=20) | 95%-KI-Breite |
+| Stichprobengröße n | SE (bei Sigma=20) | 95%-KI-Breite |
 |---------------------|-------------------|---------------|
 | 25 | 4,0 | +/- 7,84 |
 | 100 | 2,0 | +/- 3,92 |
 | 400 | 1,0 | +/- 1,96 |
 | 1.600 | 0,5 | +/- 0,98 |
 
-> **Merke:** n vervierfachen = SE halbieren = KI-Breite halbieren. Das ist das Gesetz der grossen Zahlen in Aktion. Groessere Studien liefern genauere Schaetzungen — aber mit abnehmendem Grenznutzen.
+> **Merke:** n vervierfachen = SE halbieren = KI-Breite halbieren. Das ist das Gesetz der großen Zahlen in Aktion. Größere Studien liefern genauere Schätzungen — aber mit abnehmendem Grenznutzen.
 
 ---
 
@@ -1496,52 +1496,52 @@ SE = 20/Wurzel(100) = 20/10 = 2,0
 
 Laborwerte werden als Referenzbereiche angegeben: typischerweise Mu +/- 2 Sigma (umfasst 95% der Gesunden).
 
-**Ueberraschende Konsequenz:** Bei 20 unabhaengigen Laborwerten faellt jeder einzelne mit 5% Wahrscheinlichkeit aus dem Referenzbereich. P(mindestens 1 auffaellig) = 1 - 0,95 hoch 20 = 1 - 0,358 = **64%**. Mehr als jeder zweite Gesunde hat mindestens einen "auffaelligen" Wert!
+**Überraschende Konsequenz:** Bei 20 unabhängigen Laborwerten fällt jeder einzelne mit 5% Wahrscheinlichkeit aus dem Referenzbereich. P(mindestens 1 auffällig) = 1 - 0,95 hoch 20 = 1 - 0,358 = **64%**. Mehr als jeder zweite Gesunde hat mindestens einen "auffälligen" Wert!
 
 | Laborwert | Mu | Sigma | Referenzbereich (Mu +/- 2 Sigma) |
 |-----------|-----|-------|--------------------------------|
-| Hb Maenner | 15,0 g/dL | 1,5 | 12,0-18,0 |
+| Hb Männer | 15,0 g/dL | 1,5 | 12,0-18,0 |
 | Hb Frauen | 13,5 g/dL | 1,2 | 11,1-15,9 |
 | Cholesterin | 200 mg/dL | 35 | 130-270 |
-| Nuechternglukose | 90 mg/dL | 12 | 66-114 |
+| Nüchternglukose | 90 mg/dL | 12 | 66-114 |
 | Kreatinin M | 0,9 mg/dL | 0,15 | 0,6-1,2 |
 
 **Rechenbeispiel — Laborwert einstufen:**
 Serumnatrium: N(Mu = 140 mmol/L, Sigma = 3 mmol/L). Patient hat Na = 148 mmol/L.
-z = (148-140)/3 = 8/3 = **2,67** → obere 0,4% → **Hypernatriaemie wahrscheinlich**
-Vergleich: Na = 146 → z = 2,0 → obere 2,3% → grenzwertig. Na = 143 → z = 1,0 → unauffaellig.
+z = (148-140)/3 = 8/3 = **2,67** → obere 0,4% → **Hypernatriämie wahrscheinlich**
+Vergleich: Na = 146 → z = 2,0 → obere 2,3% → grenzwertig. Na = 143 → z = 1,0 → unauffällig.
 
-> **Merke:** Ein einzelner Wert ausserhalb Mu +/- 2 Sigma ist NICHT automatisch pathologisch — 5% der Gesunden fallen dort hin. Erst ausserhalb Mu +/- 3 Sigma (0,3%) ist hochverdaechtig. Immer den klinischen Gesamtkontext beachten!
+> **Merke:** Ein einzelner Wert außerhalb Mu +/- 2 Sigma ist NICHT automatisch pathologisch — 5% der Gesunden fallen dort hin. Erst außerhalb Mu +/- 3 Sigma (0,3%) ist hochverdächtig. Immer den klinischen Gesamtkontext beachten!
 
 ---
 
-## Sensitivitaet und Spezifitaet — Diagnostische Guete
+## Sensitivität und Spezifität — Diagnostische Güte
 
-Zwei zentrale Fragen bei jedem medizinischen Test: Erkennt er Kranke zuverlaessig? Und laesst er Gesunde in Ruhe?
+Zwei zentrale Fragen bei jedem medizinischen Test: Erkennt er Kranke zuverlässig? Und lässt er Gesunde in Ruhe?
 
-**Sensitivitaet = TP / (TP + FN)** — "Wie viel Prozent der Kranken werden erkannt?"
-Analogie: Ein Metalldetektor mit hoher Sensitivitaet piept bei jedem Metallstueck — aber vielleicht auch bei Steinen.
+**Sensitivität = TP / (TP + FN)** — "Wie viel Prozent der Kranken werden erkannt?"
+Analogie: Ein Metalldetektor mit hoher Sensitivität piept bei jedem Metallstück — aber vielleicht auch bei Steinen.
 
-**Spezifitaet = TN / (TN + FP)** — "Wie viel Prozent der Gesunden werden korrekt als gesund eingestuft?"
-Analogie: Ein spezifischer Detektor piept nur bei Gold — uebersieht aber manches Gold.
+**Spezifität = TN / (TN + FP)** — "Wie viel Prozent der Gesunden werden korrekt als gesund eingestuft?"
+Analogie: Ein spezifischer Detektor piept nur bei Gold — übersieht aber manches Gold.
 
-**PPV (positiver praediktiver Wert) = TP / (TP + FP)** — "Wenn der Test positiv ist: Wie wahrscheinlich bin ich wirklich krank?" Abhaengig von der Praevalenz!
+**PPV (positiver prädiktiver Wert) = TP / (TP + FP)** — "Wenn der Test positiv ist: Wie wahrscheinlich bin ich wirklich krank?" Abhängig von der Prävalenz!
 
-**NPV (negativer praediktiver Wert) = TN / (TN + FN)** — "Wenn der Test negativ ist: Wie wahrscheinlich bin ich wirklich gesund?"
+**NPV (negativer prädiktiver Wert) = TN / (TN + FN)** — "Wenn der Test negativ ist: Wie wahrscheinlich bin ich wirklich gesund?"
 
 | Kennzahl | Formel | Eigenschaft | Klinische Frage |
 |----------|--------|-------------|-----------------|
-| Sensitivitaet | TP/(TP+FN) | Testabhaengig | Kranke als krank erkannt? |
-| Spezifitaet | TN/(TN+FP) | Testabhaengig | Gesunde als gesund erkannt? |
-| PPV | TP/(TP+FP) | Praevalenzabhaengig | Positiver Befund zuverlaessig? |
-| NPV | TN/(TN+FN) | Praevalenzabhaengig | Negativer Befund zuverlaessig? |
+| Sensitivität | TP/(TP+FN) | Testabhängig | Kranke als krank erkannt? |
+| Spezifität | TN/(TN+FP) | Testabhängig | Gesunde als gesund erkannt? |
+| PPV | TP/(TP+FP) | Prävalenzabhängig | Positiver Befund zuverlässig? |
+| NPV | TN/(TN+FN) | Prävalenzabhängig | Negativer Befund zuverlässig? |
 
 **Merkhilfen:**
-- **SnNout:** Hohe **Sn** (Sensitivitaet) → **N**egativer Test schliesst Krankheit **out** (Ausschlussdiagnostik)
-- **SpPin:** Hohe **Sp** (Spezifitaet) → **P**ositiver Test schliesst Krankheit **in** (Bestaetigungsdiagnostik)
-- Praxis: Erst sensitiver Screeningtest (z. B. ELISA), dann spezifischer Bestaetigungstest (z. B. Western Blot)
+- **SnNout:** Hohe **Sn** (Sensitivität) → **N**egativer Test schließt Krankheit **out** (Ausschlussdiagnostik)
+- **SpPin:** Hohe **Sp** (Spezifität) → **P**ositiver Test schließt Krankheit **in** (Bestätigungsdiagnostik)
+- Praxis: Erst sensitiver Screeningtest (z. B. ELISA), dann spezifischer Bestätigungstest (z. B. Western Blot)
 
-> **Merke:** Sensitivitaet und Spezifitaet sind Testeigenschaften — unabhaengig von der Praevalenz. PPV und NPV aendern sich mit der Praevalenz! Bei seltenen Erkrankungen (niedrige Praevalenz) sinkt der PPV dramatisch, selbst bei gutem Test (Bayes-Paradox).
+> **Merke:** Sensitivität und Spezifität sind Testeigenschaften — unabhängig von der Prävalenz. PPV und NPV ändern sich mit der Prävalenz! Bei seltenen Erkrankungen (niedrige Prävalenz) sinkt der PPV dramatisch, selbst bei gutem Test (Bayes-Paradox).
 
 {{DIAGRAM:sensitivity-specificity}}
 
@@ -1554,25 +1554,25 @@ Studie: 500 Personen, 200 krank (Goldstandard), 300 gesund. Test positiv bei 180
 | Gesund | FP=60 | TN=240 | 300 |
 | Gesamt | 240 | 260 | 500 |
 
-- Sensitivitaet = 180/200 = **90%**
-- Spezifitaet = 240/300 = **80%**
-- PPV = 180/240 = **75%** (gilt nur bei dieser Praevalenz von 40%!)
+- Sensitivität = 180/200 = **90%**
+- Spezifität = 240/300 = **80%**
+- PPV = 180/240 = **75%** (gilt nur bei dieser Prävalenz von 40%!)
 - NPV = 240/260 = **92,3%**
 
-> **Merke:** In Studiendaten ist die Praevalenz oft kuenstlich hoch (hier 40%). In der Praxis (z. B. Praevalenz 1%) waere der PPV viel niedriger. Immer auf die Praevalenz achten, wenn PPV/NPV interpretiert werden!
+> **Merke:** In Studiendaten ist die Prävalenz oft künstlich hoch (hier 40%). In der Praxis (z. B. Prävalenz 1%) wäre der PPV viel niedriger. Immer auf die Prävalenz achten, wenn PPV/NPV interpretiert werden!
 
 ---
 
 ## p-Wert und Hypothesentests
 
-Der **p-Wert** beantwortet: "Wenn kein Effekt existiert (H0 wahr) — wie wahrscheinlich waere ein so extremes Ergebnis oder extremer?"
+Der **p-Wert** beantwortet: "Wenn kein Effekt existiert (H0 wahr) — wie wahrscheinlich wäre ein so extremes Ergebnis oder extremer?"
 
 **Nullhypothese (H0):** "Kein Effekt", "kein Unterschied"
 
 - p < 0,05: **Statistisch signifikant** → H0 wird abgelehnt
-- p groesser gleich 0,05: Kein ausreichender Beweis gegen H0 (aber KEIN Beweis FUER H0!)
+- p größer gleich 0,05: Kein ausreichender Beweis gegen H0 (aber KEIN Beweis FÜR H0!)
 
-**Drei haeufige Pruefungsfallen:**
+**Drei häufige Prüfungsfallen:**
 1. p-Wert ist NICHT "Wahrscheinlichkeit, dass H0 wahr ist"
 2. p < 0,05 bedeutet NICHT "klinisch bedeutsam" — nur statistisch signifikant
 3. Riesige Stichproben machen selbst triviale Unterschiede "signifikant"
@@ -1588,7 +1588,7 @@ Der **p-Wert** beantwortet: "Wenn kein Effekt existiert (H0 wahr) — wie wahrsc
 - **Typ-II-Fehler** = "falsch negatives" Studienergebnis (wie ein falsch-negativer Test)
 - **Power** = 1 - Beta = Wahrscheinlichkeit, einen echten Effekt zu finden (Konvention: mindestens 80%)
 
-> **Merke:** p < 0,05 = statistisch signifikant, aber klinische Relevanz braucht das Konfidenzintervall. Beispiel: Ein Medikament senkt den Blutdruck um 0,5 mmHg (p = 0,01 bei n = 10.000) — statistisch signifikant, aber klinisch wertlos. Das KI [0,1 ; 0,9] mmHg zeigt die winzige Effektgroesse.
+> **Merke:** p < 0,05 = statistisch signifikant, aber klinische Relevanz braucht das Konfidenzintervall. Beispiel: Ein Medikament senkt den Blutdruck um 0,5 mmHg (p = 0,01 bei n = 10.000) — statistisch signifikant, aber klinisch wertlos. Das KI [0,1 ; 0,9] mmHg zeigt die winzige Effektgröße.
 
 **Rechenbeispiel — p-Wert und KI zusammen:**
 Neues Antihypertensivum: x̄ = 8 mmHg Senkung (n = 100, Sigma = 20).
@@ -1601,34 +1601,34 @@ SE = 20/10 = 2,0. z = 8/2,0 = 4,0 → p < 0,0001 (hochsignifikant)
 
 ## ROC-Kurve — Tests visuell vergleichen
 
-Die **ROC-Kurve** (Receiver Operating Characteristic) zeigt alle moeglichen Sensitivitaet/Spezifitaet-Kombinationen eines Tests bei verschiedenen Cutoff-Werten.
+Die **ROC-Kurve** (Receiver Operating Characteristic) zeigt alle möglichen Sensitivität/Spezifität-Kombinationen eines Tests bei verschiedenen Cutoff-Werten.
 
 **Aufbau:**
-- x-Achse: 1 - Spezifitaet = Falsch-Positiv-Rate (0 bis 1)
-- y-Achse: Sensitivitaet = Richtig-Positiv-Rate (0 bis 1)
+- x-Achse: 1 - Spezifität = Falsch-Positiv-Rate (0 bis 1)
+- y-Achse: Sensitivität = Richtig-Positiv-Rate (0 bis 1)
 - Jeder Punkt = ein Cutoff-Wert
 
-**AUC (Area Under the Curve) — Testguete auf einen Blick:**
+**AUC (Area Under the Curve) — Testgüte auf einen Blick:**
 
 | AUC | Bewertung | Analogie |
 |-----|-----------|----------|
-| 0,5 | Zufall (Diagonale) | Muenzwurf |
+| 0,5 | Zufall (Diagonale) | Münzwurf |
 | 0,7-0,8 | Akzeptabel | Brauchbarer Schnelltest |
 | 0,8-0,9 | Gut | Solider Labortest |
-| ueber 0,9 | Exzellent | Goldstandard-nahe |
-| 1,0 | Perfekt | Kein Ueberlapp krank/gesund |
+| über 0,9 | Exzellent | Goldstandard-nahe |
+| 1,0 | Perfekt | Kein Überlapp krank/gesund |
 
 **Cutoff verschieben — der zentrale Tradeoff:**
-- Cutoff senken (empfindlicher): Sensitivitaet steigt, Spezifitaet sinkt → mehr Kranke erkannt, aber auch mehr falsch Positive
-- Cutoff erhoehen (strenger): Spezifitaet steigt, Sensitivitaet sinkt → weniger falsch Positive, aber Kranke werden uebersehen
-- Screening: hohe Sensitivitaet bevorzugen (niemanden uebersehen)
-- Bestaetigungstest: hohe Spezifitaet bevorzugen (sichere Diagnose)
+- Cutoff senken (empfindlicher): Sensitivität steigt, Spezifität sinkt → mehr Kranke erkannt, aber auch mehr falsch Positive
+- Cutoff erhöhen (strenger): Spezifität steigt, Sensitivität sinkt → weniger falsch Positive, aber Kranke werden übersehen
+- Screening: hohe Sensitivität bevorzugen (niemanden übersehen)
+- Bestätigungstest: hohe Spezifität bevorzugen (sichere Diagnose)
 
-> **Merke:** Je naeher die ROC-Kurve an der oberen linken Ecke, desto besser der Test. AUC > 0,8 = gut. Im MedAT wird typischerweise gefragt: "Was passiert, wenn der Cutoff gesenkt wird?" → Sensitivitaet steigt, Spezifitaet sinkt.
+> **Merke:** Je näher die ROC-Kurve an der oberen linken Ecke, desto besser der Test. AUC > 0,8 = gut. Im MedAT wird typischerweise gefragt: "Was passiert, wenn der Cutoff gesenkt wird?" → Sensitivität steigt, Spezifität sinkt.
 
 ---
 
-## Rechenbeispiele — Pruefungsformat
+## Rechenbeispiele — Prüfungsformat
 
 **Beispiel 1 — Referenzbereich berechnen:**
 Cholesterin: N(Mu = 200, Sigma = 35) mg/dL.
@@ -1636,17 +1636,17 @@ Referenzbereich = Mu +/- 2 Sigma = 200 +/- 70 = **130-270 mg/dL** (95% der Gesun
 Patient mit 235 mg/dL: z = (235-200)/35 = 1,0 → obere 16% → grenzwertig, aber innerhalb Referenz
 
 **Beispiel 2 — Pathologischen Wert erkennen:**
-Nuechternglukose: N(Mu = 90, Sigma = 12) mg/dL. Patient: 126 mg/dL.
-z = (126-90)/12 = 36/12 = **3,0** → ausserhalb Mu+3 Sigma → obere 0,15% → **Diabetes** (WHO: ab 126 mg/dL)
+Nüchternglukose: N(Mu = 90, Sigma = 12) mg/dL. Patient: 126 mg/dL.
+z = (126-90)/12 = 36/12 = **3,0** → außerhalb Mu+3 Sigma → obere 0,15% → **Diabetes** (WHO: ab 126 mg/dL)
 
 **Beispiel 3 — Sens/Spez-Tradeoff mit Zahlen:**
-Troponin-Test, Notaufnahme (Praevalenz 10%, n = 1.000):
+Troponin-Test, Notaufnahme (Prävalenz 10%, n = 1.000):
 Alter Cutoff: Sens 85%, Spez 92% → TP=85, FP=72, PPV = 85/157 = **54%**
 Neuer Cutoff (empfindlicher): Sens 95%, Spez 80% → TP=95, FP=180, PPV = 95/275 = **34,5%**
-Entscheidung: Sensitiver Cutoff in der Notaufnahme (kein Infarkt verpassen!), dann spezifischer Bestaetigungstest.
+Entscheidung: Sensitiver Cutoff in der Notaufnahme (kein Infarkt verpassen!), dann spezifischer Bestätigungstest.
 
 **Beispiel 4 — BMI-Perzentil bestimmen:**
-BMI (20-30-Jaehrige): N(Mu = 23,5 kg/m², Sigma = 3,2 kg/m²). Ab welchem BMI gehoert man zu den oberen 5%?
+BMI (20-30-Jährige): N(Mu = 23,5 kg/m², Sigma = 3,2 kg/m²). Ab welchem BMI gehört man zu den oberen 5%?
 z = 1,645 → x = 23,5 + 1,645 x 3,2 = 23,5 + 5,26 = **28,76 kg/m²**
 
 **Beispiel 5 — KI berechnen und interpretieren:**
@@ -1655,9 +1655,9 @@ SE = 16/Wurzel(64) = 16/8 = 2,0. 95%-KI = -32 +/- 1,96 x 2,0 = **[-35,9 ; -28,1]
 Null liegt NICHT im KI → Senkung ist statistisch signifikant.
 
 **Beispiel 6 — 20-Laborwerte-Problem:**
-Patient erhaelt 20 unabhaengige Bluttests. Wahrscheinlichkeit, dass ALLE im Referenzbereich liegen:
-P = 0,95 hoch 20 = 0,358 = **35,8%**. P(mindestens 1 auffaellig) = 1 - 0,358 = **64,2%**
-Jeder zweite Gesunde hat mindestens einen "auffaelligen" Wert — das ist kein Fehler, sondern Statistik!`,
+Patient erhält 20 unabhängige Bluttests. Wahrscheinlichkeit, dass ALLE im Referenzbereich liegen:
+P = 0,95 hoch 20 = 0,358 = **35,8%**. P(mindestens 1 auffällig) = 1 - 0,358 = **64,2%**
+Jeder zweite Gesunde hat mindestens einen "auffälligen" Wert — das ist kein Fehler, sondern Statistik!`,
       lernziele: [
         "Mittelwert, Median und Modus aus einem gegebenen Datensatz berechnen und bei schiefer Verteilung den geeigneteren Lageparameter auswählen",
         "Varianz und Standardabweichung berechnen und interpretieren",
