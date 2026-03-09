@@ -13,16 +13,96 @@ const FILE_MAP = {
   StatsUrgency: "stats-urgency", RichtigOderFalsch: "richtig-oder-falsch",
   ImplikationenChallenge: "implikationen-challenge", FigurenChallenge: "figuren-challenge",
 };
-const CAPTIONS = {
-  QuizChallenge: "Schaffst du diese MedAT-Frage? 🧠\n\n98% antworten FALSCH — Kommentiere deinen Buchstaben!\n\n📩 Schick an deinen MedAT-Lernpartner!\n🔖 Speichern für die Vorbereitung!\n\n📱 Gratis bis Ende März → medmaster.at\n\n#MedAT #MedAT2026 #Medizinstudium #BMS #MedUniWien",
-  TippDesTages: "Wusstest du das? 💡\n\nDie meisten wissen es NICHT!\n\n📩 Schick an jemanden der MedAT macht!\n🔖 Speichern für die Vorbereitung!\n\n📱 Gratis bis Ende März → medmaster.at\n\n#MedAT #MedAT2026 #Medizin #Lerntipps #BMS",
-  ZahlenfolgeChallenge: "Findest du das Muster? 🔢\n\nKommentiere deine Lösung!\n\n📩 Schick an deinen MedAT-Lernpartner!\n🔖 Speichern zum Üben!\n\n📱 KFF-Training gratis → medmaster.at\n\n#MedAT #MedAT2026 #KFF #Zahlenfolgen #Aufnahmeprüfung",
-  WortRaetsel: "Welches Wort ergibt sich? 🔤\n\nKommentiere deine Lösung!\n\n📩 Wer aus deinen Freunden findet es?\n🔖 Speichern zum Üben!\n\n📱 Gratis bis Ende März → medmaster.at\n\n#MedAT #MedAT2026 #KFF #Wortflüssigkeit #BMS",
-  StatsUrgency: "87% fallen beim MedAT durch. Gehörst du zu den 13%? 📊\n\nWer ÜBEN kann, gewinnt.\n\n📩 Schick an deinen MedAT-Lernpartner!\n🔖 Speichern als Reminder!\n\n📱 Gratis bis Ende März → medmaster.at\n\n#MedAT #MedAT2026 #Aufnahmeprüfung #Medizin #Lerntipps",
-  RichtigOderFalsch: "Richtig oder Falsch? 3 MedAT-Aussagen 🧠\n\nKommentiere: 3/3, 2/3, 1/3 oder 0/3! 💬\n\n📩 Schick an deinen MedAT-Lernpartner!\n🔖 Speichern für mehr Fragen!\n\n📱 Gratis testen → medmaster.at\n\n#MedAT #MedAT2026 #BMS #Prüfungsvorbereitung #MedUniInnsbruck",
-  ImplikationenChallenge: "Welcher Schluss ist zwingend? 🧠\n\nKommentiere A–E!\n\n📩 Schick an deinen MedAT-Lernpartner!\n🔖 Speichern zum Üben!\n\n📱 KFF-Training gratis → medmaster.at\n\n#MedAT #MedAT2026 #KFF #Implikationen #Logik",
-  FigurenChallenge: "Welche Figur passt? 🧩\n\nKommentiere A–E!\n\n📩 Schick an deinen MedAT-Lernpartner!\n🔖 Speichern zum Üben!\n\n📱 KFF-Training gratis → medmaster.at\n\n#MedAT #MedAT2026 #KFF #Figuren #Aufnahmeprüfung",
+// ── Caption rotation system ──────────────────────────────────
+// Multiple variants per reel type → random selection each post
+// Prevents audience fatigue from seeing the same caption daily
+
+function pick(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+
+const CTA_BLOCKS = [
+  "📩 Schick an deinen MedAT-Lernpartner!\n🔖 Speichern für die Vorbereitung!",
+  "📩 Markiere jemanden der MedAT macht!\n🔖 Speichern & später nochmal anschauen!",
+  "📩 Teilen mit deiner Lerngruppe!\n🔖 Speichern für die Wiederholung!",
+];
+
+const FOOTER = "\n\n📱 Gratis bis Ende März → medmaster.at";
+
+function caption(hooks, hashtags) {
+  const hook = pick(hooks);
+  const cta = pick(CTA_BLOCKS);
+  return `${hook}\n\n${cta}${FOOTER}\n\n${hashtags}`;
+}
+
+const CAPTIONS_FN = {
+  QuizChallenge: () => caption([
+    "Schaffst du diese MedAT-Frage? 🧠\n\n98% antworten FALSCH — Kommentiere deinen Buchstaben!",
+    "Diese BMS-Frage kostet die meisten 1 Punkt. 🧠\n\nKommentiere A–E bevor du die Lösung siehst!",
+    "Hier verlieren die meisten ihren Studienplatz. 🧠\n\nWelche Antwort wählst du? Kommentiere!",
+    "Traust du dich? Eine MedAT-Frage, 5 Optionen, 1 richtig. 🧠\n\nKommentiere deinen Buchstaben!",
+    "So sieht eine echte BMS-Frage aus. 🧠\n\nWürdest du den Punkt holen? Kommentiere A–E!",
+  ], "#MedAT #MedAT2026 #Medizinstudium #BMS #MedUniWien"),
+
+  TippDesTages: () => caption([
+    "Wusstest du das? 💡\n\nDie meisten MedAT-Bewerber wissen es NICHT!",
+    "Diesen Fakt vergessen 90% in der Prüfung. 💡\n\nSpeichere ihn dir JETZT!",
+    "1 Fakt, der dir im MedAT Punkte bringt. 💡\n\nDie wenigsten kennen ihn.",
+    "Hättest du das gewusst? 💡\n\nGenau sowas kommt im BMS-Teil dran.",
+    "Merke dir DAS für den MedAT. 💡\n\nEin Detail, das den Unterschied macht.",
+  ], "#MedAT #MedAT2026 #Medizin #Lerntipps #BMS"),
+
+  ZahlenfolgeChallenge: () => caption([
+    "Findest du das Muster? 🔢\n\nKommentiere deine Lösung BEVOR du die Auflösung siehst!",
+    "KFF-Zahlenfolge: Erkennst du die Regel? 🔢\n\nKommentiere die nächste Zahl!",
+    "Diese Zahlenfolge ist im MedAT dran. 🔢\n\nSchaffst du sie unter 30 Sekunden?",
+    "Zahlenfolgen = geschenkte Punkte im KFF. 🔢\n\nAber nur wenn du das Muster siehst!",
+    "90% brauchen zu lange für diese Zahlenfolge. 🔢\n\nWie schnell findest du die Regel?",
+  ], "#MedAT #MedAT2026 #KFF #Zahlenfolgen #Aufnahmeprüfung"),
+
+  WortRaetsel: () => caption([
+    "Welches Wort ergibt sich? 🔤\n\nKommentiere deine Lösung!",
+    "Ein Wort, 5 Buchstaben, wenige Sekunden Zeit. 🔤\n\nSchaffst du es?",
+    "Wortflüssigkeit trainieren = KFF-Punkte sichern. 🔤\n\nFindest du das Wort?",
+    "Wie schnell findest du das richtige Wort? 🔤\n\nDie meisten brauchen über 30 Sekunden.",
+    "KFF-Wortflüssigkeit: Eines der Wörter passt. 🔤\n\nKommentiere es!",
+  ], "#MedAT #MedAT2026 #KFF #Wortflüssigkeit #Aufnahmeprüfung"),
+
+  StatsUrgency: () => caption([
+    "87% fallen beim MedAT durch. Gehörst du zu den 13%? 📊\n\nWer ÜBEN kann, gewinnt.",
+    "16.000 Bewerber. 1.850 Plätze. Deine Vorbereitung entscheidet. 📊",
+    "Noch ~12 Wochen bis zum MedAT. Was hast du schon geschafft? 📊",
+    "Die Top 13% machen eine Sache anders: Sie üben GEZIELT. 📊",
+    "Jeder 8. bekommt einen Platz. Die anderen 7 haben zu wenig geübt. 📊",
+  ], "#MedAT #MedAT2026 #Aufnahmeprüfung #Medizin #Lerntipps"),
+
+  RichtigOderFalsch: () => caption([
+    "Richtig oder Falsch? 3 MedAT-Aussagen 🧠\n\nKommentiere: 3/3, 2/3, 1/3 oder 0/3!",
+    "3 Aussagen aus dem BMS. Wie viele kannst du? 🧠\n\nKommentiere dein Ergebnis!",
+    "Teste dein BMS-Wissen: 3 Aussagen, richtig oder falsch? 🧠\n\nKommentiere deine Punktzahl!",
+    "Die meisten schaffen nur 1/3. Und du? 🧠\n\nKommentiere ehrlich!",
+    "Richtig oder Falsch — klingt einfach, oder? 🧠\n\nProbier's und kommentiere dein Ergebnis!",
+  ], "#MedAT #MedAT2026 #BMS #Prüfungsvorbereitung #MedUniWien"),
+
+  ImplikationenChallenge: () => caption([
+    "Welcher Schluss ist zwingend? 🧠\n\nKommentiere A–E!",
+    "Logisches Denken im MedAT: Erkennst du den Schluss? 🧠\n\nKommentiere!",
+    "Implikationen = der schwerste KFF-Untertest. 🧠\n\nSchaffst du diese Aufgabe?",
+    "2 Prämissen, 5 Optionen, 1 zwingende Schlussfolgerung. 🧠\n\nWelche ist es?",
+    "Hier scheitern die meisten im KFF. 🧠\n\nKommentiere deinen Buchstaben!",
+  ], "#MedAT #MedAT2026 #KFF #Implikationen #Logik"),
+
+  FigurenChallenge: () => caption([
+    "Welche Figur passt? 🧩\n\nKommentiere A–E!",
+    "Figuren zusammensetzen: Siehst du es auf den ersten Blick? 🧩\n\nKommentiere!",
+    "KFF-Figuren — einfach, wenn man's sieht. Schwer, wenn nicht. 🧩",
+    "2 Teile, 1 richtige Figur. Welche? 🧩\n\nKommentiere A–E!",
+    "Räumliches Denken im MedAT. 🧩\n\nFindest du die richtige Kombination?",
+  ], "#MedAT #MedAT2026 #KFF #Figuren #Aufnahmeprüfung"),
 };
+
+// Generate caption for this run
+const CAPTIONS = Object.fromEntries(
+  Object.entries(CAPTIONS_FN).map(([k, fn]) => [k, fn()])
+);
 
 const IG_USER_ID = "17841446757059213";
 const FB_PAGE_ID = "990798194122764";
