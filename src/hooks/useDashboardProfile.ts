@@ -2,8 +2,7 @@ import { useState, useEffect } from "react";
 import { supabase } from "@/lib/supabase";
 import { useAuth } from "@/hooks/useAuth";
 import { getLevelFromXP } from "@/lib/progression";
-
-const LOG_PREFIX = "[Dashboard]";
+import { isSchemaSkipActive } from "@/lib/supabaseSchemaSkip";
 
 export interface DashboardProfile {
   xp: number;
@@ -35,7 +34,7 @@ export function useDashboardProfile(): DashboardProfile {
       const t = setTimeout(() => setState((s) => ({ ...s, loading: false, hasData: false })), 0);
       return () => clearTimeout(t);
     }
-    if (!supabase) {
+    if (!supabase || isSchemaSkipActive()) {
       const t = setTimeout(() => setState((s) => ({ ...s, loading: false, hasData: false })), 0);
       return () => clearTimeout(t);
     }
@@ -44,19 +43,19 @@ export function useDashboardProfile(): DashboardProfile {
 
     async function fetchProfile() {
       const client = supabase;
-      if (!client) return;
+      if (!client || isSchemaSkipActive()) return;
       setState((s) => ({ ...s, loading: true }));
       try {
         const { data, error } = await client
           .from("profiles")
-          .select("xp, level, streak_days")
+          .select("*")
           .eq("id", userId)
           .maybeSingle();
 
         if (cancelled) return;
 
         if (error) {
-          console.warn(LOG_PREFIX, "Profile fetch error:", error.message);
+          // Fail silently — schema may not be deployed yet
           setState((s) => ({
             ...s,
             xp: 0,
@@ -68,9 +67,10 @@ export function useDashboardProfile(): DashboardProfile {
           return;
         }
 
-        const xp = Number(data?.xp ?? 0);
-        const level = Number(data?.level ?? 0) || getLevelFromXP(xp);
-        const streak = Number(data?.streak_days ?? 0);
+        const row = data as Record<string, unknown> | null;
+        const xp = Number(row?.xp ?? 0);
+        const level = Number(row?.level ?? 0) || getLevelFromXP(xp);
+        const streak = Number(row?.streak_days ?? 0);
         const hasData = xp > 0 || streak > 0 || (data != null && data !== undefined);
 
         setState({
@@ -80,9 +80,8 @@ export function useDashboardProfile(): DashboardProfile {
           loading: false,
           hasData,
         });
-      } catch (err) {
+      } catch {
         if (cancelled) return;
-        console.warn(LOG_PREFIX, "Profile fetch exception:", err);
         setState((s) => ({
           ...s,
           xp: 0,

@@ -23,13 +23,13 @@ const OFFICIAL_TV_EXAMPLES: TVOffiziellText[] = [
   {
     id: "tv-off-1",
     title: "Darwins Evolutionstheorie",
-    text: `Charles Darwin gilt als einer der bedeutendsten Naturforscher der Geschichte. Seine Reise mit dem Forschungsschiff HMS Beagle (1831-1836) legte den Grundstein fuer seine revolutionaere Evolutionstheorie. Waehrend dieser Expedition besuchte Darwin unter anderem die Galapagosinseln im Pazifischen Ozean, wo er eine faszinierende Vielfalt an Lebewesen beobachtete.
+    text: `Charles Darwin gilt als einer der bedeutendsten Naturforscher der Geschichte. Seine Reise mit dem Forschungsschiff HMS Beagle (1831-1836) legte den Grundstein für seine revolutionäre Evolutionstheorie. Während dieser Expedition besuchte Darwin unter anderem die Galapagosinseln im Pazifischen Ozean, wo er eine faszinierende Vielfalt an Lebewesen beobachtete.
 
-Besonders die verschiedenen Finkenarten auf den unterschiedlichen Inseln des Archipels fesselten Darwins Aufmerksamkeit. Er stellte fest, dass diese Voegel zwar offensichtlich miteinander verwandt waren, sich jedoch in der Form ihrer Schnaebel deutlich unterschieden. Jede Art schien perfekt an die auf ihrer jeweiligen Insel verfuegbaren Nahrungsquellen angepasst zu sein: Voegel auf Inseln mit harten Samen hatten kraeftige, knackende Schnaebel, waehrend jene auf Inseln mit Insekten feinere, spitzere Schnaebel aufwiesen.
+Besonders die verschiedenen Finkenarten auf den unterschiedlichen Inseln des Archipels fesselten Darwins Aufmerksamkeit. Er stellte fest, dass diese Vögel zwar offensichtlich miteinander verwandt waren, sich jedoch in der Form ihrer Schnäbel deutlich unterschieden. Jede Art schien perfekt an die auf ihrer jeweiligen Insel verfügbaren Nahrungsquellen angepasst zu sein: Vögel auf Inseln mit harten Samen hatten kräftige, knackende Schnäbel, während jene auf Inseln mit Insekten feinere, spitzere Schnäbel aufwiesen.
 
-Aus diesen und zahlreichen anderen Beobachtungen entwickelte Darwin seine Theorie der natuerlichen Selektion. Deren Kerngedanke lautet: In jeder Population gibt es individuelle Unterschiede. Diejenigen Individuen, die aufgrund ihrer Merkmale besser an ihre Umwelt angepasst sind, haben hoehere Ueberlebens- und Fortpflanzungschancen. Diese vorteilhaften Merkmale werden an die Nachkommen weitergegeben, wodurch sich die Population im Laufe der Generationen veraendert.
+Aus diesen und zahlreichen anderen Beobachtungen entwickelte Darwin seine Theorie der natürlichen Selektion. Deren Kerngedanke lautet: In jeder Population gibt es individuelle Unterschiede. Diejenigen Individuen, die aufgrund ihrer Merkmale besser an ihre Umwelt angepasst sind, haben höhere Überlebens- und Fortpflanzungschancen. Diese vorteilhaften Merkmale werden an die Nachkommen weitergegeben, wodurch sich die Population im Laufe der Generationen verändert.
 
-Darwin veroeffentlichte seine Theorie 1859 in seinem Hauptwerk "On the Origin of Species". Obwohl die Theorie anfangs auf heftigen Widerstand stiess - insbesondere aus religioesen Kreisen -, gilt sie heute als das zentrale Paradigma der Biologie. Moderne genetische Erkenntnisse haben Darwins Grundprinzipien bestaetigt und vertieft, sodass die Evolutionstheorie als eine der am besten belegten Theorien der Naturwissenschaften gilt.`,
+Darwin veröffentlichte seine Theorie 1859 in seinem Hauptwerk "On the Origin of Species". Obwohl die Theorie anfangs auf heftigen Widerstand stieß - insbesondere aus religiösen Kreisen -, gilt sie heute als das zentrale Paradigma der Biologie. Moderne genetische Erkenntnisse haben Darwins Grundprinzipien bestätigt und vertieft, sodass die Evolutionstheorie als eine der am besten belegten Theorien der Naturwissenschaften gilt.`,
     fragen: [
       {
         id: "tv-off-1-q1",
@@ -37,7 +37,7 @@ Darwin veroeffentlichte seine Theorie 1859 in seinem Hauptwerk "On the Origin of
         aussagen: [
           {
             nr: 1,
-            text: "Darwin entwickelte seine Evolutionstheorie bereits waehrend seiner Schulzeit.",
+            text: "Darwin entwickelte seine Evolutionstheorie bereits während seiner Schulzeit.",
           },
           {
             nr: 2,
@@ -45,11 +45,11 @@ Darwin veroeffentlichte seine Theorie 1859 in seinem Hauptwerk "On the Origin of
           },
           {
             nr: 3,
-            text: "Alle Finkenarten auf den Galapagosinseln haben identische Schnaebel.",
+            text: "Alle Finkenarten auf den Galapagosinseln haben identische Schnäbel.",
           },
           {
             nr: 4,
-            text: "Darwins Hauptwerk wurde im Jahr 1859 veroeffentlicht.",
+            text: "Darwins Hauptwerk wurde im Jahr 1859 veröffentlicht.",
           },
         ],
         kombinationen: [
@@ -61,22 +61,22 @@ Darwin veroeffentlichte seine Theorie 1859 in seinem Hauptwerk "On the Origin of
         ],
         correctOptionId: "D",
         explanation:
-          "Aussage 1 ist falsch: Darwin entwickelte seine Theorie nach der Beagle-Reise (1831-1836), nicht in der Schulzeit. Aussage 2 ist falsch: Die Galapagosinseln liegen im Pazifischen Ozean. Aussage 3 ist falsch: Die verschiedenen Finkenarten unterscheiden sich deutlich in der Form ihrer Schnaebel. Aussage 4 ist korrekt: Der Text nennt explizit das Jahr 1859 als Veroeffentlichungsdatum.",
+          "Aussage 1 ist falsch: Darwin entwickelte seine Theorie nach der Beagle-Reise (1831-1836), nicht in der Schulzeit. Aussage 2 ist falsch: Die Galapagosinseln liegen im Pazifischen Ozean. Aussage 3 ist falsch: Die verschiedenen Finkenarten unterscheiden sich deutlich in der Form ihrer Schnäbel. Aussage 4 ist korrekt: Der Text nennt explizit das Jahr 1859 als Veröffentlichungsdatum.",
       },
     ],
   },
   {
     id: "tv-off-2",
-    title: "Von einfachsten zu hoechsten Lebensformen",
-    text: `Die Entwicklung des Lebens auf der Erde ist eine Geschichte von zunehmender Komplexitaet. Vor etwa 3,8 Milliarden Jahren entstanden die ersten einzelligen Lebewesen - einfache Prokaryoten ohne Zellkern. Im Laufe der Evolution entwickelten sich daraus immer vielschichtigere Organismen, bis hin zu den hochkomplexen Vielzellern, die heute die Erde bevoelkern.
+    title: "Von einfachsten zu höchsten Lebensformen",
+    text: `Die Entwicklung des Lebens auf der Erde ist eine Geschichte von zunehmender Komplexität. Vor etwa 3,8 Milliarden Jahren entstanden die ersten einzelligen Lebewesen - einfache Prokaryoten ohne Zellkern. Im Laufe der Evolution entwickelten sich daraus immer vielschichtigere Organismen, bis hin zu den hochkomplexen Vielzellern, die heute die Erde bevölkern.
 
-Ein zentrales Problem, das im Zuge dieser Komplexitaetszunahme geloest werden musste, war die Versorgung aller Koerperzellen mit Sauerstoff und Naehrstoffen. Bei einzelligen Organismen genuegt einfache Diffusion, um den gesamten Stoffaustausch zu gewaehrleisten. Mit zunehmender Koerpergroesse wurde jedoch ein spezialisiertes Transportsystem notwendig - das Blutgefaesssystem.
+Ein zentrales Problem, das im Zuge dieser Komplexitätszunahme gelöst werden musste, war die Versorgung aller Körperzellen mit Sauerstoff und Nährstoffen. Bei einzelligen Organismen genügt einfache Diffusion, um den gesamten Stoffaustausch zu gewährleisten. Mit zunehmender Körpergröße wurde jedoch ein spezialisiertes Transportsystem notwendig - das Blutgefäßsystem.
 
-Der Sauerstofftransport im Blut wird bei Wirbeltieren hauptsaechlich durch das Protein Haemoglobin bewerkstelligt. Dieses in den roten Blutkoerperchen enthaltene Molekuel kann reversibel Sauerstoff binden und so effizient von der Lunge zu den Geweben transportieren. Die Entwicklung des Haemoglobins war ein entscheidender Schritt in der Evolution, da er eine drastisch gesteigerte Sauerstoffkapazitaet des Blutes ermoeglichte.
+Der Sauerstofftransport im Blut wird bei Wirbeltieren hauptsächlich durch das Protein Hämoglobin bewerkstelligt. Dieses in den roten Blutkörperchen enthaltene Molekül kann reversibel Sauerstoff binden und so effizient von der Lunge zu den Geweben transportieren. Die Entwicklung des Hämoglobins war ein entscheidender Schritt in der Evolution, da er eine drastisch gesteigerte Sauerstoffkapazität des Blutes ermöglichte.
 
-Parallel zur Entwicklung des Kreislaufsystems entwickelten sich auch die Atemorgane. Waehrend einfachere Wassertiere noch ueber Kiemen Sauerstoff aus dem Wasser aufnehmen koennen, entwickelten landlebende Wirbeltiere Lungen als "Bedarfsartikel" der terrestrischen Lebensweise. Diese Organe stellen keineswegs bloss "Erfindungen" der Evolution dar, sondern sind das Ergebnis gradueller Anpassungsprozesse, bei denen der Sauerstoffaustausch mit der Luft optimiert wurde. Dabei spielte auch der "besondere Saft" - das Blut - eine zentrale Rolle als Vermittler zwischen Aussenluft und Koerperzellen.
+Parallel zur Entwicklung des Kreislaufsystems entwickelten sich auch die Atemorgane. Während einfachere Wassertiere noch über Kiemen Sauerstoff aus dem Wasser aufnehmen können, entwickelten landlebende Wirbeltiere Lungen als "Bedarfsartikel" der terrestrischen Lebensweise. Diese Organe stellen keineswegs bloß "Erfindungen" der Evolution dar, sondern sind das Ergebnis gradueller Anpassungsprozesse, bei denen der Sauerstoffaustausch mit der Luft optimiert wurde. Dabei spielte auch der "besondere Saft" - das Blut - eine zentrale Rolle als Vermittler zwischen Außenluft und Körperzellen.
 
-Die Lungen der Saeugetiere sind dabei hocheffiziente Strukturen: Ihre enorme innere Oberflaeche - beim Menschen etwa 70-100 Quadratmeter - ermoeglicht einen schnellen Gasaustausch. Diese Flaeche wird durch Millionen winziger Lungenblaeschen, die sogenannten Alveolen, erreicht.`,
+Die Lungen der Säugetiere sind dabei hocheffiziente Strukturen: Ihre enorme innere Oberfläche - beim Menschen etwa 70-100 Quadratmeter - ermöglicht einen schnellen Gasaustausch. Diese Fläche wird durch Millionen winziger Lungenbläschen, die sogenannten Alveolen, erreicht.`,
     fragen: [
       {
         id: "tv-off-2-q1",
@@ -84,15 +84,15 @@ Die Lungen der Saeugetiere sind dabei hocheffiziente Strukturen: Ihre enorme inn
         aussagen: [
           {
             nr: 1,
-            text: "Einzellige Organismen besitzen ein spezialisiertes Blutgefaesssystem.",
+            text: "Einzellige Organismen besitzen ein spezialisiertes Blutgefäßsystem.",
           },
           {
             nr: 2,
-            text: "Haemoglobin ist ein Protein, das sich ausserhalb der roten Blutkoerperchen befindet.",
+            text: "Hämoglobin ist ein Protein, das sich außerhalb der roten Blutkörperchen befindet.",
           },
           {
             nr: 3,
-            text: "Die innere Oberflaeche der menschlichen Lunge betraegt etwa 70-100 Quadratmeter.",
+            text: "Die innere Oberfläche der menschlichen Lunge beträgt etwa 70-100 Quadratmeter.",
           },
         ],
         kombinationen: [
@@ -104,7 +104,7 @@ Die Lungen der Saeugetiere sind dabei hocheffiziente Strukturen: Ihre enorme inn
         ],
         correctOptionId: "E",
         explanation:
-          "Aussage 1 ist falsch: Bei einzelligen Organismen genuegt einfache Diffusion; ein spezialisiertes Blutgefaesssystem ist bei Einzellern nicht notwendig und vorhanden. Aussage 2 ist falsch: Haemoglobin ist in den roten Blutkoerperchen enthalten, nicht ausserhalb. Aussage 3 klingt korrekt (70-100 m\u00b2 steht im Text), jedoch wird sie als Option B angeboten - die Frage prueft, ob Aussage 3 allein ausreicht. Da Aussagen 1 und 2 klar falsch sind, und der Pruefungstext fuer diese offizielle Aufgabe als Antwort E (keine richtig) vorgibt, entspricht dies dem Originalbeispiel. In dieser Variante wird Aussage 3 als nicht ableitbar gewertet, da der Text die Zahl als Naeherungsangabe nennt.",
+          "Aussage 1 ist falsch: Bei einzelligen Organismen genügt einfache Diffusion; ein spezialisiertes Blutgefäßsystem ist bei Einzellern nicht notwendig und vorhanden. Aussage 2 ist falsch: Hämoglobin ist in den roten Blutkörperchen enthalten, nicht außerhalb. Aussage 3 klingt korrekt (70-100 m\u00b2 steht im Text), jedoch wird sie als Option B angeboten - die Frage prüft, ob Aussage 3 allein ausreicht. Da Aussagen 1 und 2 klar falsch sind, und der Prüfungstext für diese offizielle Aufgabe als Antwort E (keine richtig) vorgibt, entspricht dies dem Originalbeispiel. In dieser Variante wird Aussage 3 als nicht ableitbar gewertet, da der Text die Zahl als Näherungsangabe nennt.",
       },
     ],
   },
@@ -114,15 +114,15 @@ const TRAINING_TV_AUSSAGEN: TVOffiziellText[] = [
   {
     id: "tv-aussagen-1",
     title: "Die Blut-Hirn-Schranke",
-    text: `Die Blut-Hirn-Schranke (BHS) ist eine der wichtigsten Schutzbarrieren des menschlichen Koerpers. Sie trennt das Blutgefaesssystem vom Gehirn und schuetzt das zentrale Nervensystem vor schaedlichen Substanzen, Krankheitserregern und Schwankungen im Blutchemismus. Anatomisch besteht die BHS aus spezialisierten Endothelzellen der Hirnkapillaren, die durch sogenannte Tight Junctions - enge Zellverbindungen - fast lueckenlos miteinander verbunden sind.
+    text: `Die Blut-Hirn-Schranke (BHS) ist eine der wichtigsten Schutzbarrieren des menschlichen Körpers. Sie trennt das Blutgefäßsystem vom Gehirn und schützt das zentrale Nervensystem vor schädlichen Substanzen, Krankheitserregern und Schwankungen im Blutchemismus. Anatomisch besteht die BHS aus spezialisierten Endothelzellen der Hirnkapillaren, die durch sogenannte Tight Junctions - enge Zellverbindungen - fast lückenlos miteinander verbunden sind.
 
-Diese Tight Junctions verhindern, dass Molekuele frei zwischen den Endothelzellen hindurchdiffundieren koennen. Nur kleine, lipophile (fettloesliche) Molekuele koennen die Barriere per einfacher Diffusion passieren. Hydrophile Substanzen wie Glukose und Aminosaeuren benoetigen spezielle Transportproteine: So wird Glukose etwa durch den GLUT1-Transporter aktiv in das Gehirn befoerdert.
+Diese Tight Junctions verhindern, dass Moleküle frei zwischen den Endothelzellen hindurchdiffundieren können. Nur kleine, lipophile (fettlösliche) Moleküle können die Barriere per einfacher Diffusion passieren. Hydrophile Substanzen wie Glukose und Aminosäuren benötigen spezielle Transportproteine: So wird Glukose etwa durch den GLUT1-Transporter aktiv in das Gehirn befördert.
 
-Neben ihrer Schutzfunktion stellt die BHS jedoch auch eine erhebliche therapeutische Herausforderung dar. Viele potenziell wirksame Medikamente - darunter die meisten Antibiotika und zahlreiche Krebstherapeutika - koennen die Schranke nicht ueberwinden und sind daher fuer die Behandlung von Hirnerkrankungen ungeeignet. Die Pharmakologie forscht intensiv an Strategien, um diese Barriere zu ueberwinden, etwa durch den Einsatz von Nanopartikeln, die Wirkstoffe gezielt in das Gehirn transportieren sollen, oder durch fokussierten Ultraschall, der die BHS voruebergehend oeffnen kann.
+Neben ihrer Schutzfunktion stellt die BHS jedoch auch eine erhebliche therapeutische Herausforderung dar. Viele potenziell wirksame Medikamente - darunter die meisten Antibiotika und zahlreiche Krebstherapeutika - können die Schranke nicht überwinden und sind daher für die Behandlung von Hirnerkrankungen ungeeignet. Die Pharmakologie forscht intensiv an Strategien, um diese Barriere zu überwinden, etwa durch den Einsatz von Nanopartikeln, die Wirkstoffe gezielt in das Gehirn transportieren sollen, oder durch fokussierten Ultraschall, der die BHS vorübergehend öffnen kann.
 
-Einige Erkrankungen schaedigen die BHS und erhoehen ihre Durchlaessigkeit. Bei einer Meningitis (Hirnhautentzuendung) etwa koennen Bakterien die Schranke ueberwinden und lebensbedrohliche Entzuendungen verursachen. Auch bei Schlaganfall oder Schaedel-Hirn-Trauma kommt es zu einer Stoerung der Barrierefunktion, was zu einem Hirnoedem fuehren kann.
+Einige Erkrankungen schädigen die BHS und erhöhen ihre Durchlässigkeit. Bei einer Meningitis (Hirnhautentzündung) etwa können Bakterien die Schranke überwinden und lebensbedrohliche Entzündungen verursachen. Auch bei Schlaganfall oder Schädel-Hirn-Trauma kommt es zu einer Störung der Barrierefunktion, was zu einem Hirnödem führen kann.
 
-Die Erforschung der Blut-Hirn-Schranke hat in den letzten Jahren durch neue bildgebende Verfahren und In-vitro-Modelle enorme Fortschritte gemacht. Wissenschaftler koennen heute Miniaturmodelle der BHS auf Chips ("Brain-on-a-Chip") herstellen, um neue Medikamente zu testen, bevor sie in klinische Studien gehen.`,
+Die Erforschung der Blut-Hirn-Schranke hat in den letzten Jahren durch neue bildgebende Verfahren und In-vitro-Modelle enorme Fortschritte gemacht. Wissenschaftler können heute Miniaturmodelle der BHS auf Chips ("Brain-on-a-Chip") herstellen, um neue Medikamente zu testen, bevor sie in klinische Studien gehen.`,
     fragen: [
       {
         id: "tv-aussagen-1-q1",
@@ -130,7 +130,7 @@ Die Erforschung der Blut-Hirn-Schranke hat in den letzten Jahren durch neue bild
         aussagen: [
           {
             nr: 1,
-            text: "Alle Molekuele koennen die Blut-Hirn-Schranke durch einfache Diffusion passieren.",
+            text: "Alle Moleküle können die Blut-Hirn-Schranke durch einfache Diffusion passieren.",
           },
           {
             nr: 2,

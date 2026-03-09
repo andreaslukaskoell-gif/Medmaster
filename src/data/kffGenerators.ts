@@ -792,12 +792,15 @@ export function generateAllergyPasses(count: number): AllergyPass[] {
       .slice(0, numAllergies)
       .sort();
     // Ensure no two passes share the exact same allergy set
-    const allergyKey = allergien.join(",");
+    let allergyKey = allergien.join(",");
     const usedAllergySets = new Set(passes.map((p) => p.allergies.join(",")));
-    while (usedAllergySets.has(allergyKey)) {
+    let retries = 0;
+    while (usedAllergySets.has(allergyKey) && retries < 50) {
       allergien = shuffle([...ALLERGIES])
         .slice(0, numAllergies)
         .sort();
+      allergyKey = allergien.join(",");
+      retries++;
     }
 
     passes.push({

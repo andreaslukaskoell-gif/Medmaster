@@ -3,6 +3,7 @@
  * Reads from bms_questions + user_question_attempts.
  */
 import { supabase } from "@/lib/supabase";
+import { isSchemaSkipActive } from "@/lib/supabaseSchemaSkip";
 import { fsrsSchedule, isDue, type FSRSState, type FSRSRating } from "@/lib/fsrs";
 
 // ── Types ────────────────────────────────────────────────────
@@ -94,7 +95,7 @@ export function filterValidBMSFragen(fragen: BMSFrage[]): BMSFrage[] {
 // ── Fetch questions for selection ────────────────────────────
 
 export async function fetchFragenForUK(uk_id: string): Promise<BMSFrage[]> {
-  if (!supabase) return [];
+  if (!supabase || isSchemaSkipActive()) return [];
   const { data, error } = await supabase
     .from("bms_questions")
     .select("*")
@@ -109,7 +110,7 @@ export async function fetchFragenForUK(uk_id: string): Promise<BMSFrage[]> {
 }
 
 export async function fetchFragenForUKs(uk_ids: string[]): Promise<BMSFrage[]> {
-  if (!supabase || !uk_ids.length) return [];
+  if (!supabase || !uk_ids.length || isSchemaSkipActive()) return [];
   const { data, error } = await supabase.from("bms_questions").select("*").in("uk_id", uk_ids);
 
   if (error) {
@@ -218,7 +219,7 @@ function buildNextFromCategorized(fragenWithFSRS: BMSFrage[], count: number): BM
 // ── Record attempt ────────────────────────────────────────────
 
 export async function recordAttempt(input: RecordAttemptInput): Promise<void> {
-  if (!supabase) return;
+  if (!supabase || isSchemaSkipActive()) return;
 
   const newFSRS = fsrsSchedule(input.prev_fsrs, input.fsrs_rating);
 
@@ -247,7 +248,7 @@ export interface MRSData {
 }
 
 export async function fetchMRSData(user_id: string | null): Promise<MRSData | null> {
-  if (!supabase || !user_id) return null;
+  if (!supabase || !user_id || isSchemaSkipActive()) return null;
 
   const thirtyDaysAgo = new Date(Date.now() - 30 * 86_400_000).toISOString();
 
@@ -307,7 +308,7 @@ export async function fetchErrorPatterns(
   user_id: string | null,
   uk_ids: string[]
 ): Promise<Record<string, ErrorPattern>> {
-  if (!supabase || !user_id || !uk_ids.length) return {};
+  if (!supabase || !user_id || !uk_ids.length || isSchemaSkipActive()) return {};
 
   // Get all question IDs for these UKs
   const { data: qData } = await supabase
@@ -357,7 +358,7 @@ async function fetchFSRSStates(
   question_ids: string[],
   user_id: string | null
 ): Promise<Record<string, FSRSState>> {
-  if (!supabase || !user_id || !question_ids.length) return {};
+  if (!supabase || !user_id || !question_ids.length || isSchemaSkipActive()) return {};
 
   // Latest attempt per question (ordered desc → take first per question_id)
   const { data, error } = await supabase

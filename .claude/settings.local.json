@@ -374,7 +374,19 @@
       "Bash(/opt/homebrew/bin/gh workflow:*)",
       "Bash(/tmp/check_diagrams.sh:*)",
       "Bash(pbcopy:*)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "mcp__plugin_claude-mem_mcp-search__get_observations",
+      "Bash(/tmp/analyze_zf.sh:*)",
+      "Bash(/tmp/check_quality.sh:*)",
+      "Bash(kill %1:*)",
+      "Bash(./scripts/qa-gm-portraits.sh:*)",
+      "WebFetch(domain:www.pexels.com)",
+      "WebFetch(domain:unsplash.com)",
+      "WebFetch(domain:generated.photos)",
+      "Bash(bash:*)",
+      "Bash(du:*)",
+      "Bash(sort:*)",
+      "Bash(sed:*)"
     ]
   }
 }

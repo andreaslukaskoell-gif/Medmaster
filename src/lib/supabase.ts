@@ -22,13 +22,13 @@ if (missing.length > 0) {
 const rawClient: SupabaseClient | null =
   supabaseUrl && supabaseAnonKey ? createClient(supabaseUrl, supabaseAnonKey) : null;
 
-/** Noop query builder: alle Methoden liefern sich selbst, .then() liefert leeres Ergebnis. */
-function createNoopFromBuilder(): PromiseLike<{ data: null; error: { message: string } }> {
+/** Noop query builder: alle Methoden liefern sich selbst, .then() liefert leeres Ergebnis (kein error). */
+function createNoopFromBuilder(): PromiseLike<{ data: null; error: null }> {
   const empty = Object.freeze({
     data: null as null,
-    error: Object.freeze({ message: "Schema unavailable (skip active)" }),
+    error: null as null,
   });
-  const chainable: PromiseLike<{ data: null; error: { message: string } }> = {
+  const chainable: PromiseLike<{ data: null; error: null }> = {
     then(onfulfilled?, onrejected?) {
       return Promise.resolve(empty).then(onfulfilled, onrejected);
     },
@@ -37,7 +37,7 @@ function createNoopFromBuilder(): PromiseLike<{ data: null; error: { message: st
     get() {
       return chainable;
     },
-  }) as PromiseLike<{ data: null; error: { message: string } }> & Record<string, unknown>;
+  }) as PromiseLike<{ data: null; error: null }> & Record<string, unknown>;
 }
 
 /** Supabase-Client: bei aktivem Schema-Skip liefert .from() einen Noop-Builder (kein Netzwerk). */
