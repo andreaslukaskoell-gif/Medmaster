@@ -124,7 +124,7 @@ export function StreakFire({ streak, hasActivityToday, className }: StreakFirePr
       <div
         className={cn(
           "relative flex items-center justify-center w-14 h-14 rounded-2xl transition-colors",
-          isGray ? "bg-gray-200 dark:bg-gray-700" : "bg-orange-100/80 dark:bg-orange-900/30"
+          isGray ? "bg-muted" : "bg-orange-100/80 dark:bg-orange-900/30"
         )}
       >
         <StreakFlameIcon

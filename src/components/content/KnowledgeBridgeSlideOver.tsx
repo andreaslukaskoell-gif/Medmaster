@@ -75,7 +75,7 @@ export function KnowledgeBridgeSlideOver({
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "tween", duration: 0.25, ease: "easeOut" }}
-            className="fixed right-0 top-0 bottom-0 w-full max-w-md z-50 flex flex-col bg-white dark:bg-slate-900 border-l border-slate-200 dark:border-white/10 shadow-2xl"
+            className="fixed right-0 top-0 bottom-0 w-full max-w-md z-50 flex flex-col bg-background border-l border-border shadow-2xl"
           >
             <div className="flex-1 overflow-y-auto p-4 flex flex-col">
               <div className="flex items-center justify-between mb-4">
@@ -84,23 +84,21 @@ export function KnowledgeBridgeSlideOver({
                     <Network className="w-5 h-5" />
                   </div>
                   <div>
-                    <h2 className="text-lg font-bold text-slate-900 dark:text-white">
-                      Knowledge Bridge
-                    </h2>
-                    <p className="text-xs text-slate-500 dark:text-slate-400">Verknüpfte Themen</p>
+                    <h2 className="text-lg font-bold text-app-foreground">Knowledge Bridge</h2>
+                    <p className="text-xs text-app-muted">Verknüpfte Themen</p>
                   </div>
                 </div>
                 <button
                   type="button"
                   onClick={onClose}
                   aria-label="Schließen"
-                  className="p-2 rounded-lg text-slate-500 hover:bg-slate-100 dark:hover:bg-white/10 cursor-pointer"
+                  className="p-2 rounded-lg text-muted hover:bg-muted/20 cursor-pointer"
                 >
                   <X className="w-5 h-5" />
                 </button>
               </div>
 
-              <p className="text-sm text-slate-600 dark:text-slate-300 mb-4">
+              <p className="text-sm text-app-muted mb-4">
                 Schlagworte in diesem Kapitel verknüpfen sich mit Themen in anderen Fächern – so
                 lernst du nicht in Silos, sondern vernetzt.
               </p>
@@ -119,17 +117,15 @@ export function KnowledgeBridgeSlideOver({
                         onClick={() => handleLink(topic.subject, topic.chapterId)}
                         className={cn(
                           "w-full text-left rounded-lg p-3 border transition-all text-sm",
-                          "bg-white dark:bg-slate-800/50 border-amber-200 dark:border-amber-800",
+                          "bg-card border-amber-200 dark:border-amber-800",
                           "hover:border-amber-400 dark:hover:border-amber-600"
                         )}
                       >
                         <span className="text-[10px] text-amber-600 dark:text-amber-400 font-medium">
                           {keyword}
                         </span>
-                        <p className="font-medium text-slate-900 dark:text-white mt-0.5">
-                          {topic.label}
-                        </p>
-                        <p className="text-xs text-slate-500 dark:text-slate-400">
+                        <p className="font-medium text-app-foreground mt-0.5">{topic.label}</p>
+                        <p className="text-xs text-app-muted">
                           {topic.chapterTitle} · {SUBJECT_LABELS[topic.subject] ?? topic.subject}
                         </p>
                       </button>
@@ -139,13 +135,11 @@ export function KnowledgeBridgeSlideOver({
               )}
 
               {related.length === 0 && deepRelated.length === 0 ? (
-                <div className="rounded-xl border border-dashed border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-slate-800/50 p-6 text-center">
-                  <BookOpen className="w-10 h-10 mx-auto text-slate-400 dark:text-slate-500 mb-2" />
-                  <p className="text-sm text-slate-600 dark:text-slate-400">
+                <div className="rounded-xl border border-dashed border-border p-6 text-center bg-muted/20">
+                  <BookOpen className="w-10 h-10 mx-auto text-muted mb-2" />
+                  <p className="text-sm text-app-muted">
                     Keine Brücken für dieses Kapitel gefunden. Mehr Schlagworte in{" "}
-                    <code className="text-xs bg-slate-200 dark:bg-slate-700 px-1 rounded">
-                      knowledgeBridge.ts
-                    </code>{" "}
+                    <code className="text-xs bg-muted/30 px-1 rounded">knowledgeBridge.ts</code>{" "}
                     anlegen.
                   </p>
                 </div>
@@ -164,7 +158,7 @@ export function KnowledgeBridgeSlideOver({
                         onClick={() => handleLink(topic.subject, topic.chapterId)}
                         className={cn(
                           "w-full text-left rounded-xl p-4 border transition-all",
-                          "bg-white dark:bg-slate-800/50 border-slate-200 dark:border-white/10",
+                          "bg-card border-border",
                           "hover:border-primary-400/60 dark:hover:border-primary-500/50",
                           "hover:shadow-[0_0_20px_rgba(59,130,246,0.12)] dark:hover:shadow-[0_0_20px_rgba(59,130,246,0.2)]",
                           "focus:outline-none focus:ring-2 focus:ring-primary-500/50"
@@ -178,21 +172,18 @@ export function KnowledgeBridgeSlideOver({
                             <span className="absolute -bottom-1 -right-1 w-3 h-3 rounded-full bg-primary-400 shadow-[0_0_8px_rgba(59,130,246,0.6)]" />
                           </div>
                           <div className="flex-1 min-w-0">
-                            <span className="text-[10px] font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500">
+                            <span className="text-[10px] font-semibold uppercase tracking-wider text-muted">
                               Schlagwort: {keyword}
                             </span>
-                            <p className="font-medium text-slate-900 dark:text-white mt-0.5">
-                              {topic.label}
-                            </p>
-                            <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
+                            <p className="font-medium text-app-foreground mt-0.5">{topic.label}</p>
+                            <p className="text-xs text-app-muted mt-0.5">
                               {topic.chapterTitle} ·{" "}
                               {SUBJECT_LABELS[topic.subject] ?? topic.subject}
                             </p>
                             <span
                               className={cn(
                                 "inline-block mt-2 text-[10px] font-medium px-2 py-0.5 rounded border",
-                                SUBJECT_COLORS[topic.subject] ??
-                                  "bg-slate-100 text-slate-600 dark:bg-slate-700 dark:text-slate-300"
+                                SUBJECT_COLORS[topic.subject] ?? "bg-muted/20 text-app-muted"
                               )}
                             >
                               {SUBJECT_LABELS[topic.subject] ?? topic.subject}
@@ -205,8 +196,8 @@ export function KnowledgeBridgeSlideOver({
                 </div>
               )}
             </div>
-            <div className="p-4 border-t border-slate-200 dark:border-white/10 shrink-0">
-              <p className="text-[10px] text-slate-400 dark:text-slate-500 text-center">
+            <div className="p-4 border-t border-border shrink-0">
+              <p className="text-[10px] text-muted text-center">
                 MedAT: Vernetztes Wissen bringt Bestnoten.
               </p>
             </div>

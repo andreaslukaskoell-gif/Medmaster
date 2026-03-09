@@ -19,7 +19,7 @@ function PageIndicator({ current, total }: { current: number; total: number }) {
         <div
           key={i}
           className={`h-1.5 rounded-full transition-all ${
-            i === current ? "w-6 bg-indigo-500" : "w-1.5 bg-gray-300 dark:bg-gray-600"
+            i === current ? "w-6 bg-indigo-500" : "w-1.5 bg-[var(--border)]"
           }`}
         />
       ))}
@@ -43,7 +43,7 @@ function Seite1() {
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2">
+        <h2 className="text-xl font-bold text-[var(--text-primary)] mb-2">
           Was ist Textverst&auml;ndnis?
         </h2>
         <p className="text-sm text-muted">
@@ -94,26 +94,24 @@ function Seite1() {
       </div>
 
       <div>
-        <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">
+        <h3 className="text-sm font-semibold text-[var(--muted)] uppercase tracking-wider mb-3">
           Fragetypen
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4">
+          <div className="bg-[var(--card)] border border-[var(--border)] rounded-lg p-4">
             <div className="flex items-center gap-2 mb-2">
               <Search className="w-4 h-4 text-indigo-500" />
-              <h4 className="font-semibold text-sm text-gray-900 dark:text-gray-100">
-                Detailfragen
-              </h4>
+              <h4 className="font-semibold text-sm text-[var(--text-primary)]">Detailfragen</h4>
             </div>
             <p className="text-xs text-muted mb-2">Fakten direkt aus dem Text</p>
             <p className="text-xs text-indigo-600 dark:text-indigo-400 italic">
               &quot;Laut dem Text, welche Funktion hat...?&quot;
             </p>
           </div>
-          <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4">
+          <div className="bg-[var(--card)] border border-[var(--border)] rounded-lg p-4">
             <div className="flex items-center gap-2 mb-2">
               <Target className="w-4 h-4 text-indigo-500" />
-              <h4 className="font-semibold text-sm text-gray-900 dark:text-gray-100">
+              <h4 className="font-semibold text-sm text-[var(--text-primary)]">
                 Verst&auml;ndnisfragen
               </h4>
             </div>
@@ -138,7 +136,7 @@ function Seite2() {
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2">
+        <h2 className="text-xl font-bold text-[var(--text-primary)] mb-2">
           Die Schema-Methode (4 Schritte)
         </h2>
         <p className="text-sm text-muted">
@@ -147,12 +145,12 @@ function Seite2() {
       </div>
 
       {/* Step 1 */}
-      <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-5 space-y-3">
+      <div className="bg-[var(--card)] border border-[var(--border)] rounded-lg p-5 space-y-3">
         <div className="flex items-center gap-3">
           <span className="bg-indigo-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
             1
           </span>
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100">
+          <h3 className="font-semibold text-[var(--text-primary)]">
             Text &uuml;berfliegen (30 Sekunden)
           </h3>
         </div>
@@ -182,18 +180,18 @@ function Seite2() {
       </div>
 
       {/* Step 2 */}
-      <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-5 space-y-3">
+      <div className="bg-[var(--card)] border border-[var(--border)] rounded-lg p-5 space-y-3">
         <div className="flex items-center gap-3">
           <span className="bg-indigo-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
             2
           </span>
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100">Fragen ZUERST lesen</h3>
+          <h3 className="font-semibold text-[var(--text-primary)]">Fragen ZUERST lesen</h3>
         </div>
         <p className="text-sm text-muted pl-11">
           Lies die Fragen <span className="font-bold">bevor</span> du den Text im Detail liest. So
           wei&szlig;t du, wonach du suchen musst, und liest den Text viel gezielter.
         </p>
-        <div className="pl-11 bg-gray-50 dark:bg-gray-800/50 rounded-lg p-3 text-sm">
+        <div className="pl-11 bg-[var(--border)]/30 rounded-lg p-3 text-sm">
           <p className="text-indigo-600 dark:text-indigo-400">
             <span className="font-bold">Beispiel:</span> Wenn eine Frage nach &quot;dem Zeitpunkt
             der Entdeckung&quot; fragt, achtest du beim Lesen besonders auf Jahreszahlen und
@@ -203,12 +201,12 @@ function Seite2() {
       </div>
 
       {/* Step 3 */}
-      <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-5 space-y-3">
+      <div className="bg-[var(--card)] border border-[var(--border)] rounded-lg p-5 space-y-3">
         <div className="flex items-center gap-3">
           <span className="bg-indigo-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
             3
           </span>
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100">Text gezielt lesen</h3>
+          <h3 className="font-semibold text-[var(--text-primary)]">Text gezielt lesen</h3>
         </div>
         <p className="text-sm text-muted pl-11">
           Jetzt liest du den Text gr&uuml;ndlich — aber mit Fokus auf die Fragen. Markiere mental
@@ -228,12 +226,12 @@ function Seite2() {
       </div>
 
       {/* Step 4 */}
-      <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-5 space-y-3">
+      <div className="bg-[var(--card)] border border-[var(--border)] rounded-lg p-5 space-y-3">
         <div className="flex items-center gap-3">
           <span className="bg-indigo-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
             4
           </span>
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100">
+          <h3 className="font-semibold text-[var(--text-primary)]">
             Fragen beantworten — NUR aus dem Text!
           </h3>
         </div>
@@ -261,7 +259,7 @@ function Seite3() {
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2">
+        <h2 className="text-xl font-bold text-[var(--text-primary)] mb-2">
           Typische Fallen & Zeitmanagement
         </h2>
         <p className="text-sm text-muted">
@@ -270,10 +268,10 @@ function Seite3() {
       </div>
 
       {/* Trap 1 */}
-      <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-5 space-y-3">
+      <div className="bg-[var(--card)] border border-[var(--border)] rounded-lg p-5 space-y-3">
         <div className="flex items-center gap-3">
           <AlertTriangle className="w-5 h-5 text-amber-500" />
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100">
+          <h3 className="font-semibold text-[var(--text-primary)]">
             Falle 1: &quot;Laut Text&quot; vs. &quot;Im Allgemeinen&quot;
           </h3>
         </div>
@@ -297,10 +295,10 @@ function Seite3() {
       </div>
 
       {/* Trap 2 */}
-      <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-5 space-y-3">
+      <div className="bg-[var(--card)] border border-[var(--border)] rounded-lg p-5 space-y-3">
         <div className="flex items-center gap-3">
           <AlertTriangle className="w-5 h-5 text-amber-500" />
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100">
+          <h3 className="font-semibold text-[var(--text-primary)]">
             Falle 2: &quot;Nicht im Text erw&auml;hnt&quot;
           </h3>
         </div>
@@ -311,12 +309,10 @@ function Seite3() {
       </div>
 
       {/* Trap 3 */}
-      <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-5 space-y-3">
+      <div className="bg-[var(--card)] border border-[var(--border)] rounded-lg p-5 space-y-3">
         <div className="flex items-center gap-3">
           <AlertTriangle className="w-5 h-5 text-amber-500" />
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100">
-            Falle 3: Zu schnelles Lesen
-          </h3>
+          <h3 className="font-semibold text-[var(--text-primary)]">Falle 3: Zu schnelles Lesen</h3>
         </div>
         <p className="text-sm text-muted pl-8">
           Manche Optionen klingen fast gleich, unterscheiden sich aber in kleinen Details (z.B.
@@ -340,9 +336,9 @@ function Seite3() {
             { time: "2:00", label: "Text lesen", desc: "Gezielt & gründlich" },
             { time: "3:00", label: "Fragen beantworten", desc: "~36 Sek pro Frage" },
           ].map(({ time, label, desc }) => (
-            <div key={label} className="bg-white dark:bg-gray-800 rounded-lg p-3 text-center">
+            <div key={label} className="bg-[var(--card)] rounded-lg p-3 text-center">
               <p className="text-lg font-bold text-indigo-600 dark:text-indigo-400">{time}</p>
-              <p className="text-xs font-semibold text-gray-900 dark:text-gray-100">{label}</p>
+              <p className="text-xs font-semibold text-[var(--text-primary)]">{label}</p>
               <p className="text-[10px] text-muted">{desc}</p>
             </div>
           ))}
@@ -383,7 +379,7 @@ export default function TextverstaendnisLernen() {
               className={`text-xs px-3 py-1.5 rounded-full transition-colors cursor-pointer ${
                 i === currentPage
                   ? "bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 font-medium"
-                  : "text-muted hover:bg-gray-100 dark:hover:bg-gray-800"
+                  : "text-muted hover:bg-[var(--border)]/50"
               }`}
             >
               {title}
@@ -396,7 +392,7 @@ export default function TextverstaendnisLernen() {
       <Page />
 
       {/* Bottom navigation */}
-      <div className="flex items-center justify-between pt-4 border-t border-gray-200 dark:border-gray-700">
+      <div className="flex items-center justify-between pt-4 border-t border-[var(--border)]">
         <button
           onClick={() => setCurrentPage((p) => Math.max(0, p - 1))}
           disabled={currentPage === 0}

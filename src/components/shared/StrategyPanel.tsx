@@ -69,7 +69,7 @@ export default function StrategyPanel({ testType, mode: controlledMode, classNam
               <p className="text-xs font-semibold uppercase tracking-wider text-teal-700 dark:text-teal-300 mb-2">
                 Empfohlener Lösungsweg
               </p>
-              <ol className="list-decimal list-inside space-y-1.5 text-sm text-gray-700 dark:text-gray-300">
+              <ol className="list-decimal list-inside space-y-1.5 text-sm text-[var(--text-secondary)]">
                 {strategy.steps.map((step, i) => (
                   <li key={i} className="pl-1">
                     {step}
@@ -79,7 +79,7 @@ export default function StrategyPanel({ testType, mode: controlledMode, classNam
             </div>
 
             {testType === "implications" && (
-              <div className="rounded-lg border border-teal-200 dark:border-teal-700/60 bg-white dark:bg-gray-900/50 p-4">
+              <div className="rounded-lg border border-teal-200 dark:border-teal-700/60 bg-white dark:bg-[var(--card)] p-4">
                 <p className="text-xs font-semibold uppercase tracking-wider text-teal-700 dark:text-teal-300 mb-3">
                   Was mit „Kreisen“ gemeint ist (Mengenbilder)
                 </p>
@@ -110,7 +110,7 @@ export default function StrategyPanel({ testType, mode: controlledMode, classNam
                         B
                       </text>
                     </svg>
-                    <span className="text-xs text-gray-700 dark:text-gray-300 font-medium">
+                    <span className="text-xs text-[var(--text-secondary)] font-medium">
                       Alle A sind B
                     </span>
                     <span className="text-[10px] text-muted">A ganz in B</span>
@@ -141,7 +141,7 @@ export default function StrategyPanel({ testType, mode: controlledMode, classNam
                         B
                       </text>
                     </svg>
-                    <span className="text-xs text-gray-700 dark:text-gray-300 font-medium">
+                    <span className="text-xs text-[var(--text-secondary)] font-medium">
                       Einige A sind B
                     </span>
                     <span className="text-[10px] text-muted">Schnitt (Überlappung)</span>
@@ -172,7 +172,7 @@ export default function StrategyPanel({ testType, mode: controlledMode, classNam
                         B
                       </text>
                     </svg>
-                    <span className="text-xs text-gray-700 dark:text-gray-300 font-medium">
+                    <span className="text-xs text-[var(--text-secondary)] font-medium">
                       Kein A ist B
                     </span>
                     <span className="text-[10px] text-muted">Keine Überlappung</span>

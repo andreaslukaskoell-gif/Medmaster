@@ -131,7 +131,7 @@ function ScoreGauge({ score, max, pct }: { score: number; max: number; pct: numb
           fill="none"
           stroke="currentColor"
           strokeWidth="12"
-          className="text-gray-200 dark:text-gray-700"
+          className="text-muted"
         />
         {/* Progress arc */}
         <circle
@@ -158,13 +158,7 @@ function ScoreGauge({ score, max, pct }: { score: number; max: number; pct: numb
         >
           {Math.round(score)}
         </text>
-        <text
-          x="100"
-          y="112"
-          textAnchor="middle"
-          className="fill-gray-500 dark:fill-gray-400"
-          fontSize="14"
-        >
+        <text x="100" y="112" textAnchor="middle" className="fill-muted-foreground" fontSize="14">
           von {max}
         </text>
         <text
@@ -216,11 +210,11 @@ function UniCard({ uni, scorePct }: { uni: { name: string; cutoff: number }; sco
       <div className="flex items-center justify-between mb-2">
         <div className="flex items-center gap-2">
           {cfg.icon}
-          <span className="font-semibold text-gray-900 dark:text-gray-100">{uni.name}</span>
+          <span className="font-semibold text-foreground">{uni.name}</span>
         </div>
         <Badge variant={cfg.badge}>{cfg.label}</Badge>
       </div>
-      <div className="flex items-center justify-between text-sm text-gray-600 dark:text-gray-400">
+      <div className="flex items-center justify-between text-sm text-muted-foreground">
         <span>Cutoff ~{uni.cutoff}%</span>
         <span className="font-medium">
           {diff > 0 ? "+" : ""}
@@ -251,10 +245,10 @@ function SectionCard({ s }: { s: SectionScore }) {
           </div>
           <div className="flex-1">
             <div className="flex items-center justify-between">
-              <span className="font-semibold text-gray-900 dark:text-gray-100">{s.label}</span>
+              <span className="font-semibold text-foreground">{s.label}</span>
               <span className={`text-xl font-bold ${color}`}>{s.pct.toFixed(0)}%</span>
             </div>
-            <div className="text-xs text-gray-500 dark:text-gray-400">
+            <div className="text-xs text-muted-foreground">
               {s.points.toFixed(1)} / {s.maxPoints.toFixed(1)} Punkte (Gewicht{" "}
               {(s.weight * 100).toFixed(0)}%)
             </div>
@@ -262,7 +256,7 @@ function SectionCard({ s }: { s: SectionScore }) {
         </div>
         <Progress value={s.pct} className="mb-2" barClassName={barClass} />
         <div className="flex items-center justify-between text-xs">
-          <span className="text-gray-500 dark:text-gray-400">{s.count} Ergebnisse</span>
+          <span className="text-muted-foreground">{s.count} Ergebnisse</span>
           {s.pct < 90 && uplift > 1 && (
             <span className="text-primary-600 dark:text-primary-400">
               Auf 90% = +{uplift.toFixed(1)} Punkte
@@ -282,10 +276,8 @@ function EmptyState() {
       <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center">
         <Target className="w-10 h-10 text-primary-600" />
       </div>
-      <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-3">
-        Noch nicht genug Daten
-      </h2>
-      <p className="text-gray-600 dark:text-gray-400 mb-6">
+      <h2 className="text-2xl font-bold text-foreground mb-3">Noch nicht genug Daten</h2>
+      <p className="text-muted-foreground mb-6">
         Beantworte mindestens 20 Fragen in verschiedenen Testteilen, damit wir eine aussagekräftige
         Prognose berechnen können.
       </p>
@@ -372,10 +364,8 @@ export default function Prognose() {
           <TrendingUp className="w-5 h-5" />
           <span className="text-sm font-medium uppercase tracking-wide">MedAT Prognose</span>
         </div>
-        <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100">
-          Deine Punkteprognose
-        </h1>
-        <p className="text-gray-500 dark:text-gray-400 mt-1">
+        <h1 className="text-3xl font-bold text-foreground">Deine Punkteprognose</h1>
+        <p className="text-muted-foreground mt-1">
           Basierend auf {quizResults.length} Übungsergebnissen ({totalAnswered} Fragen)
         </p>
       </div>
@@ -384,7 +374,7 @@ export default function Prognose() {
       <Card>
         <CardContent className="py-8 flex flex-col items-center">
           <ScoreGauge score={totalScore} max={MAX_TOTAL} pct={totalPct} />
-          <p className="mt-4 text-sm text-gray-500 dark:text-gray-400">
+          <p className="mt-4 text-sm text-muted-foreground">
             Geschätzter Gesamtscore (gewichtet: BMS 40%, KFF 40%, TV 10%, SEK 10%)
           </p>
         </CardContent>
@@ -395,7 +385,7 @@ export default function Prognose() {
 
       {/* Uni Chances */}
       <div>
-        <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-4 flex items-center gap-2">
+        <h2 className="text-xl font-bold text-foreground mb-4 flex items-center gap-2">
           <GraduationCap className="w-5 h-5 text-primary-600" />
           Uni-Chancen
         </h2>
@@ -404,14 +394,14 @@ export default function Prognose() {
             <UniCard key={uni.name} uni={uni} scorePct={totalPct} />
           ))}
         </div>
-        <p className="text-xs text-gray-400 dark:text-gray-500 mt-2">
+        <p className="text-xs text-muted-foreground/70 mt-2">
           * Cutoffs basieren auf Erfahrungswerten vergangener Jahre und können variieren.
         </p>
       </div>
 
       {/* Section Breakdown */}
       <div>
-        <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-4 flex items-center gap-2">
+        <h2 className="text-xl font-bold text-foreground mb-4 flex items-center gap-2">
           <Target className="w-5 h-5 text-primary-600" />
           Testteil-Aufschlüsselung
         </h2>
@@ -432,12 +422,12 @@ export default function Prognose() {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-gray-700 dark:text-gray-300 mb-3">
+            <p className="text-muted-foreground mb-3">
               Dein schwächster Bereich ist <strong>{weakest.label}</strong> mit{" "}
               <strong>{weakest.pct.toFixed(0)}%</strong>. Hier liegt dein größtes
               Verbesserungspotenzial.
             </p>
-            <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">{tips[weakest.key]}</p>
+            <p className="text-muted-foreground text-sm mb-4">{tips[weakest.key]}</p>
             <Link
               to={weakest.link}
               className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary-600 text-white hover:bg-primary-700 transition font-medium text-sm"

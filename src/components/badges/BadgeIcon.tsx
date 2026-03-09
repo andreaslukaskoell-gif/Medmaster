@@ -201,8 +201,7 @@ const TIER_STYLES: Record<BadgeTier, string> = {
   gold: "bg-amber-400/95 text-amber-950 border-amber-500 shadow-amber-600/50",
 };
 
-const STYLE_LOCKED =
-  "bg-slate-200 dark:bg-slate-700 text-slate-500 dark:text-slate-500 border-slate-300 dark:border-slate-600";
+const STYLE_LOCKED = "bg-muted/30 text-muted border-muted/50";
 
 interface BadgeIconProps {
   /** Badge-ID für eindeutiges Farbschema (kein Badge sieht gleich aus). */

@@ -67,12 +67,10 @@ export default function RegisterPage() {
 
   if (googleLoading) {
     return (
-      <div className="min-h-screen bg-gray-50 dark:bg-gray-950 flex items-center justify-center p-4">
+      <div className="min-h-screen bg-background flex items-center justify-center p-4">
         <div className="text-center space-y-4">
           <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-primary-600 mx-auto" />
-          <p className="text-sm font-medium text-gray-700 dark:text-gray-300">
-            Weiterleitung zu Google...
-          </p>
+          <p className="text-sm font-medium text-muted-foreground">Weiterleitung zu Google...</p>
           <p className="text-xs text-muted">Du wirst sicher über Google angemeldet</p>
         </div>
       </div>
@@ -80,7 +78,7 @@ export default function RegisterPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-950 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-background flex items-center justify-center p-4">
       <div className="w-full max-w-md space-y-6">
         <div className="text-center">
           <h1 className="text-3xl font-bold text-primary-700 dark:text-primary-400">MedMaster</h1>
@@ -129,7 +127,7 @@ export default function RegisterPage() {
             {/* Divider */}
             <div className="relative">
               <div className="absolute inset-0 flex items-center">
-                <div className="w-full border-t border-border dark:border-gray-700" />
+                <div className="w-full border-t border-border" />
               </div>
               <div className="relative flex justify-center text-xs">
                 <span className="bg-card dark:bg-gray-900 px-2 text-muted">oder</span>
@@ -148,7 +146,7 @@ export default function RegisterPage() {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <label className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 block">
+                  <label className="text-sm font-medium text-muted-foreground mb-1 block">
                     Username
                   </label>
                   <div className="relative">
@@ -160,13 +158,13 @@ export default function RegisterPage() {
                       placeholder="DeinUsername"
                       required
                       autoFocus
-                      className="w-full pl-10 pr-4 py-2.5 rounded-lg border border-border dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 text-sm outline-none focus:ring-2 focus:ring-primary-500"
+                      className="w-full pl-10 pr-4 py-2.5 rounded-lg border border-border bg-card text-gray-900 dark:text-gray-100 text-sm outline-none focus:ring-2 focus:ring-primary-500"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 block">
+                  <label className="text-sm font-medium text-muted-foreground mb-1 block">
                     E-Mail
                   </label>
                   <div className="relative">
@@ -177,13 +175,13 @@ export default function RegisterPage() {
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="deine@email.at"
                       required
-                      className="w-full pl-10 pr-4 py-2.5 rounded-lg border border-border dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 text-sm outline-none focus:ring-2 focus:ring-primary-500"
+                      className="w-full pl-10 pr-4 py-2.5 rounded-lg border border-border bg-card text-gray-900 dark:text-gray-100 text-sm outline-none focus:ring-2 focus:ring-primary-500"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 block">
+                  <label className="text-sm font-medium text-muted-foreground mb-1 block">
                     Passwort
                   </label>
                   <div className="relative">
@@ -194,7 +192,7 @@ export default function RegisterPage() {
                       onChange={(e) => setPassword(e.target.value)}
                       placeholder="Mindestens 6 Zeichen"
                       required
-                      className="w-full pl-10 pr-10 py-2.5 rounded-lg border border-border dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 text-sm outline-none focus:ring-2 focus:ring-primary-500"
+                      className="w-full pl-10 pr-10 py-2.5 rounded-lg border border-border bg-card text-gray-900 dark:text-gray-100 text-sm outline-none focus:ring-2 focus:ring-primary-500"
                     />
                     <button
                       type="button"
@@ -207,7 +205,7 @@ export default function RegisterPage() {
                 </div>
 
                 <div>
-                  <label className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 block">
+                  <label className="text-sm font-medium text-muted-foreground mb-1 block">
                     Geburtsdatum
                   </label>
                   <div className="relative">
@@ -217,7 +215,7 @@ export default function RegisterPage() {
                       value={birthDate}
                       onChange={(e) => setBirthDate(e.target.value)}
                       required
-                      className="w-full pl-10 pr-4 py-2.5 rounded-lg border border-border dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 text-sm outline-none focus:ring-2 focus:ring-primary-500"
+                      className="w-full pl-10 pr-4 py-2.5 rounded-lg border border-border bg-card text-gray-900 dark:text-gray-100 text-sm outline-none focus:ring-2 focus:ring-primary-500"
                     />
                   </div>
                 </div>

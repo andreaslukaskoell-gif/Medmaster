@@ -51,16 +51,14 @@ export function SectionTOC({
       className={cn(
         "rounded-xl border border-[var(--border)] p-4",
         "sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto",
-        isLeft
-          ? "w-[240px] min-w-0 shrink-0 bg-white dark:bg-slate-900 shadow-sm"
-          : "bg-white dark:bg-slate-900",
+        isLeft ? "w-[240px] min-w-0 shrink-0 bg-[var(--card)] shadow-sm" : "bg-[var(--card)]",
         className
       )}
       aria-label="Inhaltsverzeichnis"
     >
       <h3
         className={cn(
-          "text-xs font-semibold uppercase tracking-wider mb-3 text-slate-900 dark:text-slate-100"
+          "text-xs font-semibold uppercase tracking-wider mb-3 text-[var(--text-primary)]"
         )}
       >
         Inhalt
@@ -80,13 +78,13 @@ export function SectionTOC({
                   isLeft
                     ? cn(
                         "px-2 py-1.5 border-l-4 border-transparent",
-                        "text-slate-900 dark:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800",
+                        "text-[var(--text-primary)] hover:bg-[var(--border)]/50",
                         isCurrent &&
-                          "border-[var(--accent)] bg-slate-100 dark:bg-slate-800 font-semibold text-slate-900 dark:text-white"
+                          "border-[var(--accent)] bg-[var(--border)]/50 font-semibold text-[var(--text-primary)]"
                       )
                     : cn(
-                        "px-2 py-1.5 rounded-lg text-slate-900 dark:text-slate-100",
-                        "hover:bg-slate-100 dark:hover:bg-slate-800",
+                        "px-2 py-1.5 rounded-lg text-[var(--text-primary)]",
+                        "hover:bg-[var(--border)]/50",
                         isCurrent && "bg-[var(--accent)]/10 text-[var(--accent)] font-semibold"
                       )
                 )}

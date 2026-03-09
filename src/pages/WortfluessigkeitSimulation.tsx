@@ -199,9 +199,7 @@ export default function WortfluessigkeitSimulation() {
             <Timer className="w-8 h-8 text-orange-500" />
           </div>
           <div>
-            <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2">
-              Simulation starten
-            </h2>
+            <h2 className="text-xl font-bold text-foreground mb-2">Simulation starten</h2>
             <p className="text-sm text-muted max-w-md mx-auto">
               {TASK_COUNT} zuf&auml;llige W&ouml;rter (5 leicht, 5 mittel, 5 schwer) in{" "}
               {Math.floor(TIME_LIMIT / 60)} Minuten — genau wie im echten MedAT.
@@ -255,10 +253,10 @@ export default function WortfluessigkeitSimulation() {
           <CardContent className="p-6">
             <div className="text-center space-y-4">
               <div className="w-16 h-16 mx-auto rounded-2xl flex items-center justify-center bg-linear-to-br from-orange-500 to-red-600">
-                <Trophy className="w-8 h-8 text-white" />
+                <Trophy className="w-8 h-8 text-primary-foreground" />
               </div>
               <div>
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
+                <h2 className="text-2xl font-bold text-foreground">
                   {correctCount}/{TASK_COUNT}
                 </h2>
                 <p className="text-sm text-muted">
@@ -274,18 +272,18 @@ export default function WortfluessigkeitSimulation() {
               </div>
               <div className="flex justify-center gap-6 text-sm">
                 <div className="text-center">
-                  <p className="text-lg font-bold text-gray-900 dark:text-gray-100">
+                  <p className="text-lg font-bold text-foreground">
                     {formatTime(TIME_LIMIT - timeLeft)}
                   </p>
                   <p className="text-xs text-muted">Gesamtzeit</p>
                 </div>
                 <div className="text-center">
-                  <p className="text-lg font-bold text-gray-900 dark:text-gray-100">{avgTime}s</p>
+                  <p className="text-lg font-bold text-foreground">{avgTime}s</p>
                   <p className="text-xs text-muted">&Oslash; pro Wort</p>
                 </div>
               </div>
               <div className="w-full max-w-xs mx-auto">
-                <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
+                <div className="w-full bg-muted rounded-full h-3">
                   <div
                     className={`h-3 rounded-full transition-all ${
                       scorePercent >= 80
@@ -310,15 +308,12 @@ export default function WortfluessigkeitSimulation() {
         {/* Difficulty statistics */}
         <Card>
           <CardContent className="p-5">
-            <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">
+            <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-3">
               Schwierigkeits-Statistik
             </h3>
             <div className="grid grid-cols-3 gap-3">
               {diffStats.map((s) => (
-                <div
-                  key={s.difficulty}
-                  className="bg-gray-50 dark:bg-gray-800 rounded-lg p-3 text-center"
-                >
+                <div key={s.difficulty} className="bg-muted rounded-lg p-3 text-center">
                   <p className="text-xs text-muted mb-1">{difficultyLabels[s.difficulty].label}</p>
                   <p
                     className={`text-lg font-bold ${
@@ -339,7 +334,7 @@ export default function WortfluessigkeitSimulation() {
 
         {/* Results list */}
         <div className="space-y-2">
-          <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+          <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">
             Aufgaben&uuml;bersicht
           </h3>
           {results.map((result, i) => {
@@ -349,7 +344,7 @@ export default function WortfluessigkeitSimulation() {
                 <CardContent className="p-0">
                   <button
                     onClick={() => setExpandedResult(isExpanded ? null : i)}
-                    className="w-full text-left p-4 flex items-center gap-3 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors cursor-pointer"
+                    className="w-full text-left p-4 flex items-center gap-3 hover:bg-accent transition-colors cursor-pointer"
                   >
                     <span
                       className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${
@@ -361,7 +356,7 @@ export default function WortfluessigkeitSimulation() {
                       {i + 1}
                     </span>
                     <div className="flex-1 min-w-0">
-                      <p className="text-sm font-mono text-gray-900 dark:text-gray-100 tracking-wider">
+                      <p className="text-sm font-mono text-foreground tracking-wider">
                         {result.word.letters}
                       </p>
                     </div>
@@ -375,7 +370,7 @@ export default function WortfluessigkeitSimulation() {
                     </div>
                   </button>
                   {isExpanded && (
-                    <div className="px-4 pb-4 space-y-2 border-t border-gray-100 dark:border-gray-800 pt-3">
+                    <div className="px-4 pb-4 space-y-2 border-t border-border pt-3">
                       <div className="flex items-center gap-4 text-sm">
                         <span className="text-muted">Deine Antwort:</span>
                         <span
@@ -433,7 +428,7 @@ export default function WortfluessigkeitSimulation() {
           className={`w-5 h-5 ${isUrgent ? "text-red-500 animate-pulse" : "text-orange-500"}`}
         />
         <div className="flex-1">
-          <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+          <div className="w-full bg-muted rounded-full h-2.5">
             <div
               className={`h-2.5 rounded-full transition-all ${isUrgent ? "bg-red-500" : "bg-orange-500"}`}
               style={{ width: `${timePercent}%` }}
@@ -442,7 +437,7 @@ export default function WortfluessigkeitSimulation() {
         </div>
         <span
           className={`text-sm font-mono font-bold min-w-[48px] text-right ${
-            isUrgent ? "text-red-600 dark:text-red-400" : "text-gray-900 dark:text-gray-100"
+            isUrgent ? "text-red-600 dark:text-red-400" : "text-foreground"
           }`}
         >
           {formatTime(timeLeft)}
@@ -465,7 +460,7 @@ export default function WortfluessigkeitSimulation() {
                     : "bg-red-500"
                   : i === currentIndex
                     ? "bg-orange-500"
-                    : "bg-gray-300 dark:bg-gray-600"
+                    : "bg-muted-foreground/30"
               }`}
             />
           ))}
@@ -484,12 +479,12 @@ export default function WortfluessigkeitSimulation() {
           </div>
 
           {/* Letter tiles */}
-          <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl">
+          <div className="bg-muted p-6 rounded-xl">
             <div className="flex items-center justify-center gap-2 flex-wrap">
               {currentWord.letters.split("").map((letter, i) => (
                 <div
                   key={i}
-                  className="w-12 h-12 md:w-14 md:h-14 bg-white dark:bg-gray-700 shadow-md rounded-lg flex items-center justify-center text-2xl md:text-3xl font-bold border border-gray-200 dark:border-gray-600 text-gray-800 dark:text-gray-200"
+                  className="w-12 h-12 md:w-14 md:h-14 bg-background shadow-md rounded-lg flex items-center justify-center text-2xl md:text-3xl font-bold border border-border text-foreground"
                 >
                   {letter}
                 </div>
@@ -506,7 +501,7 @@ export default function WortfluessigkeitSimulation() {
               onChange={(e) => setUserInput(e.target.value.toUpperCase())}
               onKeyDown={handleKeyDown}
               placeholder="Wort eingeben..."
-              className="flex-1 px-4 py-3 text-lg font-mono font-bold text-center rounded-lg border-2 border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:border-orange-400 dark:focus:border-orange-500 outline-none"
+              className="flex-1 px-4 py-3 text-lg font-mono font-bold text-center rounded-lg border-2 border-border bg-background text-foreground focus:border-orange-400 dark:focus:border-orange-500 outline-none"
               autoComplete="off"
               spellCheck={false}
             />

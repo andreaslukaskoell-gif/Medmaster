@@ -41,14 +41,14 @@ export default function KFFStrategyView({ strategyKey, onBack, onContinue, conti
         <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
       </Button>
 
-      <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">{strategy.title}</h1>
+      <h1 className="text-2xl font-bold text-app-foreground">{strategy.title}</h1>
 
       <Card>
         <CardContent className="p-6 space-y-4">
           <h2 className="text-sm font-semibold uppercase tracking-wider text-teal-700 dark:text-teal-300">
             Empfohlener Lösungsweg
           </h2>
-          <ol className="list-decimal list-inside space-y-2 text-sm text-gray-700 dark:text-gray-300">
+          <ol className="list-decimal list-inside space-y-2 text-sm text-app-foreground/80">
             {strategy.steps.map((step, i) => (
               <li key={i} className="pl-1">
                 {step}
@@ -113,9 +113,7 @@ function ImplikationenKreise() {
                 B
               </text>
             </svg>
-            <span className="text-xs font-medium text-gray-700 dark:text-gray-300">
-              Alle A sind B
-            </span>
+            <span className="text-xs font-medium text-app-foreground/80">Alle A sind B</span>
             <span className="text-[10px] text-muted">A ganz in B</span>
           </div>
           <div className="flex flex-col items-center gap-2">
@@ -129,9 +127,7 @@ function ImplikationenKreise() {
                 B
               </text>
             </svg>
-            <span className="text-xs font-medium text-gray-700 dark:text-gray-300">
-              Einige A sind B
-            </span>
+            <span className="text-xs font-medium text-app-foreground/80">Einige A sind B</span>
             <span className="text-[10px] text-muted">Schnitt (Überlappung)</span>
           </div>
           <div className="flex flex-col items-center gap-2">
@@ -145,9 +141,7 @@ function ImplikationenKreise() {
                 B
               </text>
             </svg>
-            <span className="text-xs font-medium text-gray-700 dark:text-gray-300">
-              Kein A ist B
-            </span>
+            <span className="text-xs font-medium text-app-foreground/80">Kein A ist B</span>
             <span className="text-[10px] text-muted">Keine Überlappung</span>
           </div>
         </div>
@@ -167,12 +161,12 @@ function ZahlenfolgenDifferenzen() {
         <h2 className="text-sm font-semibold uppercase tracking-wider text-teal-700 dark:text-teal-300 mb-3">
           Beispiel: Differenzen prüfen
         </h2>
-        <div className="bg-gray-50 dark:bg-gray-800/50 rounded-lg p-4 font-mono text-sm">
-          <p className="text-gray-600 dark:text-gray-400 mb-1">Folge:</p>
-          <p className="text-gray-900 dark:text-gray-100 mb-2">2 → 5 → 8 → 11 → 14 → ? → ?</p>
-          <p className="text-gray-600 dark:text-gray-400 mb-1">1. Differenzen:</p>
+        <div className="bg-muted/10 rounded-lg p-4 font-mono text-sm">
+          <p className="text-app-muted mb-1">Folge:</p>
+          <p className="text-app-foreground mb-2">2 → 5 → 8 → 11 → 14 → ? → ?</p>
+          <p className="text-app-muted mb-1">1. Differenzen:</p>
           <p className="text-teal-700 dark:text-teal-300">+3, +3, +3, +3 → konstant</p>
-          <p className="text-gray-600 dark:text-gray-400 mt-2 mb-1">→ Nächste: 17, 20</p>
+          <p className="text-app-muted mt-2 mb-1">→ Nächste: 17, 20</p>
         </div>
         <p className="text-[10px] text-muted mt-2">
           Immer zuerst Differenzen bilden; wenn die nicht passen, Differenzen der Differenzen oder
@@ -198,7 +192,7 @@ function FigurenSkizze() {
           {FIGURE_STRATEGY_GALLERY.map(({ key, path, name }) => (
             <div
               key={key}
-              className="flex flex-col items-center gap-1.5 p-2 rounded-lg bg-gray-50 dark:bg-gray-800/50"
+              className="flex flex-col items-center gap-1.5 p-2 rounded-lg bg-muted/10"
             >
               <svg
                 viewBox="0 0 200 200"
@@ -208,7 +202,7 @@ function FigurenSkizze() {
               >
                 <path d={path} fill={FILL} stroke="#0e7490" strokeWidth="2" />
               </svg>
-              <span className="text-[10px] text-center text-gray-700 dark:text-gray-300 leading-tight">
+              <span className="text-[10px] text-center text-app-foreground/80 leading-tight">
                 {name.replace(/^ein |eine |einen /, "")}
               </span>
             </div>
@@ -253,10 +247,10 @@ function MerkfaehigkeitProfil() {
         <h2 className="text-sm font-semibold uppercase tracking-wider text-teal-700 dark:text-teal-300 mb-3">
           Ein Profil pro Person (nicht Einzeldaten)
         </h2>
-        <div className="flex items-center gap-4 rounded-lg border-2 border-teal-200 dark:border-teal-700/60 bg-white dark:bg-gray-900/50 p-4">
-          <div className="w-16 h-20 rounded bg-gray-300 dark:bg-gray-600 flex items-center justify-center shrink-0">
+        <div className="flex items-center gap-4 rounded-lg border-2 border-teal-200 dark:border-teal-700/60 bg-card p-4">
+          <div className="w-16 h-20 rounded bg-muted/30 flex items-center justify-center shrink-0">
             <svg
-              className="w-10 h-12 text-gray-500"
+              className="w-10 h-12 text-muted"
               viewBox="0 0 24 28"
               fill="currentColor"
               aria-hidden
@@ -265,9 +259,7 @@ function MerkfaehigkeitProfil() {
             </svg>
           </div>
           <div className="text-sm space-y-1">
-            <p className="font-semibold text-gray-900 dark:text-gray-100">
-              Name + 1 Merkmal + 1 Zahl
-            </p>
+            <p className="font-semibold text-app-foreground">Name + 1 Merkmal + 1 Zahl</p>
             <p className="text-muted text-xs">
               z. B. „Müller – Penicillin – Italien“ oder „Blutgruppe 0 – 12.03.1995“
             </p>

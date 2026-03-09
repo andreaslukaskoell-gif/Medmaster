@@ -195,7 +195,7 @@ function SelectionScreen({
           <Dumbbell className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
         </div>
         <div>
-          <h1 className="text-xl font-bold text-gray-900 dark:text-gray-100">Fragen-Trainer</h1>
+          <h1 className="text-xl font-bold text-[var(--text-primary)]">Fragen-Trainer</h1>
           <p className="text-sm text-muted-foreground">
             BMS: Fach wählen, dann trainieren oder offizielle Zeitvorgabe
           </p>
@@ -205,7 +205,7 @@ function SelectionScreen({
       {/* 1. Fach */}
       <Card>
         <CardContent className="p-4 space-y-3">
-          <p className="text-sm font-semibold text-gray-700 dark:text-gray-300">1. Fach wählen</p>
+          <p className="text-sm font-semibold text-[var(--text-secondary)]">1. Fach wählen</p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
             {BMS_SUBJECTS.map((s) => {
               const Icon = s.icon;
@@ -242,7 +242,7 @@ function SelectionScreen({
           {/* 2. Modus */}
           <Card>
             <CardContent className="p-4 space-y-3">
-              <p className="text-sm font-semibold text-gray-700 dark:text-gray-300">2. Modus</p>
+              <p className="text-sm font-semibold text-[var(--text-secondary)]">2. Modus</p>
               <div className="grid grid-cols-2 gap-2">
                 <button
                   type="button"
@@ -250,7 +250,7 @@ function SelectionScreen({
                   className={`px-4 py-3 rounded-xl border text-sm font-medium transition-all cursor-pointer text-left ${
                     mode === "einfach"
                       ? "border-emerald-500 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-800 dark:text-emerald-300"
-                      : "border-border text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800"
+                      : "border-border text-[var(--muted)] hover:bg-[var(--border)]/50"
                   }`}
                 >
                   <div className="font-semibold">Einfach trainieren</div>
@@ -264,7 +264,7 @@ function SelectionScreen({
                   className={`px-4 py-3 rounded-xl border text-sm font-medium transition-all cursor-pointer text-left ${
                     mode === "offiziell"
                       ? "border-emerald-500 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-800 dark:text-emerald-300"
-                      : "border-border text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800"
+                      : "border-border text-[var(--muted)] hover:bg-[var(--border)]/50"
                   }`}
                 >
                   <div className="font-semibold">Offizielle Simulation</div>
@@ -280,9 +280,7 @@ function SelectionScreen({
           {mode === "einfach" && (
             <Card>
               <CardContent className="p-4 space-y-3">
-                <p className="text-sm font-semibold text-gray-700 dark:text-gray-300">
-                  Anzahl Fragen
-                </p>
+                <p className="text-sm font-semibold text-[var(--text-secondary)]">Anzahl Fragen</p>
                 <div className="flex flex-wrap gap-2">
                   {EINFACH_COUNTS.map((n) => (
                     <button
@@ -292,7 +290,7 @@ function SelectionScreen({
                       className={`px-4 py-2 rounded-lg border text-sm font-medium transition-all cursor-pointer ${
                         count === n
                           ? "border-emerald-500 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-800 dark:text-emerald-300"
-                          : "border-border hover:bg-gray-50 dark:hover:bg-gray-800"
+                          : "border-border hover:bg-[var(--border)]/50"
                       }`}
                     >
                       {n}
@@ -536,7 +534,7 @@ function QuizScreen({
           </div>
         </div>
 
-        <div className="w-full h-1.5 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+        <div className="w-full h-1.5 bg-[var(--border)] rounded-full overflow-hidden">
           <div
             className="h-full bg-emerald-500 rounded-full transition-all duration-300"
             style={{ width: `${Math.round(progress * 100)}%` }}
@@ -549,7 +547,7 @@ function QuizScreen({
               <p className="text-xs font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wide">
                 Durchsicht — Frage {idx + 1}
               </p>
-              <p className="text-base font-medium text-gray-900 dark:text-gray-100">
+              <p className="text-base font-medium text-[var(--text-primary)]">
                 {reviewAnswer.frage.stamm}
               </p>
               {(reviewAnswer.frage.typ === "A" || reviewAnswer.frage.typ === "M") &&
@@ -560,8 +558,8 @@ function QuizScreen({
                         key={opt.key}
                         className={`text-sm px-3 py-2 rounded-lg ${
                           opt.key === reviewAnswer.chosenOption
-                            ? "bg-muted font-medium text-gray-800 dark:text-gray-200"
-                            : "text-gray-500 dark:text-gray-500"
+                            ? "bg-muted font-medium text-[var(--text-primary)]"
+                            : "text-[var(--muted)]"
                         }`}
                       >
                         <span className="font-bold mr-2">{opt.key}</span>
@@ -576,10 +574,7 @@ function QuizScreen({
               {reviewAnswer.frage.typ === "K" && reviewAnswer.frage.aussagen && (
                 <div className="space-y-1">
                   {reviewAnswer.frage.aussagen.map((a) => (
-                    <div
-                      key={a.nr}
-                      className="text-sm px-3 py-1.5 rounded-lg text-gray-600 dark:text-gray-400"
-                    >
+                    <div key={a.nr} className="text-sm px-3 py-1.5 rounded-lg text-[var(--muted)]">
                       <span className="font-bold mr-2">{a.nr}</span>
                       {a.text}
                     </div>
@@ -688,7 +683,7 @@ function QuizScreen({
                 className={`w-8 h-8 rounded-lg text-sm font-medium transition-colors shrink-0
                   ${isCurrent ? "ring-2 ring-emerald-500 bg-emerald-100 dark:bg-emerald-900/40 text-emerald-800 dark:text-emerald-200" : ""}
                   ${!isCurrent && answered ? "bg-muted text-muted-foreground hover:bg-muted/80" : ""}
-                  ${!isCurrent && !answered ? "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700" : ""}
+                  ${!isCurrent && !answered ? "bg-[var(--border)]/50 text-[var(--muted)] hover:bg-[var(--border)]" : ""}
                 `}
                 title={answered ? `Frage ${i + 1} (beantwortet)` : `Frage ${i + 1}`}
               >
@@ -732,7 +727,7 @@ function ResultsScreen({
             <div className="w-20 h-20 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center mx-auto mb-4">
               <Trophy className="w-10 h-10 text-emerald-600 dark:text-emerald-400" />
             </div>
-            <div className="text-5xl font-bold text-gray-900 dark:text-gray-100 mb-1">
+            <div className="text-5xl font-bold text-[var(--text-primary)] mb-1">
               {correct}
               <span className="text-2xl text-muted-foreground font-normal">/{total}</span>
             </div>
@@ -767,7 +762,7 @@ function ResultsScreen({
       {/* Falsch beantwortet + Begründung */}
       {wrong.length > 0 && (
         <details className="group" open>
-          <summary className="text-sm font-semibold text-gray-700 dark:text-gray-300 flex items-center gap-2 cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden mb-3">
+          <summary className="text-sm font-semibold text-[var(--text-secondary)] flex items-center gap-2 cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden mb-3">
             <BookOpen className="w-4 h-4" /> Falsch beantwortet ({wrong.length})
             <span className="ml-auto text-xs text-muted-foreground group-open:rotate-90 transition-transform">
               &#9654;
@@ -777,9 +772,7 @@ function ResultsScreen({
             {wrong.map(({ frage, chosenOption, typKChosenOption }) => (
               <Card key={frage.id} className="border-l-4 border-l-red-400">
                 <CardContent className="p-4 space-y-2">
-                  <p className="text-sm font-medium text-gray-900 dark:text-gray-100">
-                    {frage.stamm}
-                  </p>
+                  <p className="text-sm font-medium text-[var(--text-primary)]">{frage.stamm}</p>
                   {(frage.typ === "A" || frage.typ === "M") && frage.optionen && (
                     <div className="space-y-1">
                       {frage.optionen.map((opt) => (
@@ -790,7 +783,7 @@ function ResultsScreen({
                               ? "bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400 font-medium"
                               : opt.key === chosenOption
                                 ? "bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-400 line-through"
-                                : "text-gray-400 dark:text-gray-600"
+                                : "text-[var(--muted)]/60"
                           }`}
                         >
                           <span className="font-bold mr-1">{opt.key}</span>
@@ -808,7 +801,7 @@ function ResultsScreen({
                             className={`text-xs px-3 py-1.5 rounded-lg ${
                               a.korrekt
                                 ? "bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400"
-                                : "text-gray-500 dark:text-gray-500"
+                                : "text-[var(--muted)]"
                             }`}
                           >
                             <span className="font-bold mr-1">{a.nr}</span>
@@ -848,7 +841,7 @@ function ResultsScreen({
                       </p>
                     </div>
                   ) : (
-                    <p className="text-xs text-gray-500 dark:text-gray-500 italic">
+                    <p className="text-xs text-[var(--muted)] italic">
                       Keine Begründung hinterlegt.
                     </p>
                   )}
@@ -862,7 +855,7 @@ function ResultsScreen({
       {/* Richtig beantwortet + Begründung */}
       {right.length > 0 && (
         <details className="group">
-          <summary className="text-sm font-semibold text-gray-700 dark:text-gray-300 flex items-center gap-2 cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden mb-3">
+          <summary className="text-sm font-semibold text-[var(--text-secondary)] flex items-center gap-2 cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden mb-3">
             <BookOpen className="w-4 h-4" /> Richtig beantwortet ({right.length}) – Begründungen
             <span className="ml-auto text-xs text-muted-foreground group-open:rotate-90 transition-transform">
               &#9654;
@@ -872,9 +865,7 @@ function ResultsScreen({
             {right.map(({ frage }) => (
               <Card key={frage.id} className="border-l-4 border-l-green-400">
                 <CardContent className="p-4 space-y-2">
-                  <p className="text-sm font-medium text-gray-900 dark:text-gray-100">
-                    {frage.stamm}
-                  </p>
+                  <p className="text-sm font-medium text-[var(--text-primary)]">{frage.stamm}</p>
                   {(frage.typ === "A" || frage.typ === "M") && frage.optionen && (
                     <div className="space-y-1">
                       {frage.optionen.map((opt) => (
@@ -883,7 +874,7 @@ function ResultsScreen({
                           className={`text-xs px-3 py-1.5 rounded-lg ${
                             opt.key === frage.korrekte_option
                               ? "bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400 font-medium"
-                              : "text-gray-400 dark:text-gray-600"
+                              : "text-[var(--muted)]/60"
                           }`}
                         >
                           <span className="font-bold mr-1">{opt.key}</span>
@@ -901,7 +892,7 @@ function ResultsScreen({
                             className={`text-xs px-3 py-1.5 rounded-lg ${
                               a.korrekt
                                 ? "bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400"
-                                : "text-gray-500 dark:text-gray-500"
+                                : "text-[var(--muted)]"
                             }`}
                           >
                             <span className="font-bold mr-1">{a.nr}</span>
@@ -930,7 +921,7 @@ function ResultsScreen({
                       </p>
                     </div>
                   ) : (
-                    <p className="text-xs text-gray-500 dark:text-gray-500 italic">
+                    <p className="text-xs text-[var(--muted)] italic">
                       Keine Begründung hinterlegt.
                     </p>
                   )}
@@ -987,7 +978,7 @@ export default function FragenTrainer() {
       <div className="p-4 pb-24 lg:pb-8 md:p-6">
         <Card>
           <CardContent className="p-6 space-y-4">
-            <p className="text-gray-700 dark:text-gray-300">
+            <p className="text-[var(--text-secondary)]">
               Es kommen nur Fragen aus Kapiteln, die du schon gelernt hast. Schließe zuerst
               mindestens ein BMS-Kapitel ab, dann erscheinen hier die Lernplan-Fragen – zuerst
               Biologie, dann Chemie, Physik, Mathematik.

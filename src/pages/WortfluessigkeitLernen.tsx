@@ -9,7 +9,7 @@ function PageIndicator({ current, total }: { current: number; total: number }) {
         <div
           key={i}
           className={`h-1.5 rounded-full transition-all ${
-            i === current ? "w-6 bg-orange-500" : "w-1.5 bg-gray-300 dark:bg-gray-600"
+            i === current ? "w-6 bg-orange-500" : "w-1.5 bg-muted-foreground/30"
           }`}
         />
       ))}
@@ -38,12 +38,12 @@ function LetterExample({
   description: string;
 }) {
   return (
-    <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4">
+    <div className="bg-card border border-border rounded-lg p-4">
       <div className="flex items-center gap-2 mb-2 flex-wrap">
         {letters.split("").map((letter, i) => (
           <span
             key={i}
-            className="w-10 h-10 bg-gray-100 dark:bg-gray-700 rounded-lg flex items-center justify-center text-lg font-bold text-gray-800 dark:text-gray-200 shadow-sm"
+            className="w-10 h-10 bg-muted rounded-lg flex items-center justify-center text-lg font-bold text-foreground shadow-sm"
           >
             {letter}
           </span>
@@ -63,9 +63,7 @@ function Seite1() {
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2">
-          Was ist Wortfl&uuml;ssigkeit?
-        </h2>
+        <h2 className="text-xl font-bold text-foreground mb-2">Was ist Wortfl&uuml;ssigkeit?</h2>
         <p className="text-sm text-muted">
           Im Untertest &quot;Wortfl&uuml;ssigkeit&quot; des MedAT bekommst du eine Gruppe von
           durchmischten Buchstaben. Deine Aufgabe: Bilde daraus ein sinnvolles deutsches Wort. Nicht
@@ -107,7 +105,7 @@ function Seite1() {
       </div>
 
       <div>
-        <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">
+        <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-3">
           Beispiele nach Schwierigkeit
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -157,7 +155,7 @@ function Seite2() {
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2">
+        <h2 className="text-xl font-bold text-foreground mb-2">
           Strategien f&uuml;r Wortfl&uuml;ssigkeit
         </h2>
         <p className="text-sm text-muted">
@@ -167,9 +165,9 @@ function Seite2() {
       </div>
 
       {/* Strategy 1 */}
-      <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-5 space-y-3">
+      <div className="bg-card border border-border rounded-lg p-5 space-y-3">
         <div className="flex items-center gap-3">
-          <span className="bg-orange-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
+          <span className="bg-orange-500 text-primary-foreground text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
             1
           </span>
           <h3 className="font-semibold text-gray-900 dark:text-gray-100">
@@ -228,9 +226,9 @@ function Seite2() {
       </div>
 
       {/* Strategy 2 */}
-      <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-5 space-y-3">
+      <div className="bg-card border border-border rounded-lg p-5 space-y-3">
         <div className="flex items-center gap-3">
-          <span className="bg-orange-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
+          <span className="bg-orange-500 text-primary-foreground text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
             2
           </span>
           <h3 className="font-semibold text-gray-900 dark:text-gray-100">
@@ -256,9 +254,9 @@ function Seite2() {
       </div>
 
       {/* Strategy 3 */}
-      <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-5 space-y-3">
+      <div className="bg-card border border-border rounded-lg p-5 space-y-3">
         <div className="flex items-center gap-3">
-          <span className="bg-orange-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
+          <span className="bg-orange-500 text-primary-foreground text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
             3
           </span>
           <h3 className="font-semibold text-gray-900 dark:text-gray-100">

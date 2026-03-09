@@ -263,7 +263,7 @@ export default function TV() {
                   ) : (
                     <XCircle className="w-5 h-5 text-red-500 mt-0.5 shrink-0" />
                   )}
-                  <span className="text-sm font-medium text-gray-900 dark:text-gray-100">
+                  <span className="text-sm font-medium text-[var(--text-primary)]">
                     {i + 1}. {s.text}
                   </span>
                 </div>
@@ -304,34 +304,32 @@ export default function TV() {
         </Button>
         <Card>
           <CardHeader>
-            <CardTitle className="text-gray-900 dark:text-gray-100">{tvText.title}</CardTitle>
+            <CardTitle className="text-[var(--text-primary)]">{tvText.title}</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-line">
+            <div className="text-sm text-[var(--text-secondary)] leading-relaxed whitespace-pre-line">
               {tvText.content}
             </div>
           </CardContent>
         </Card>
-        <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
-          Aussagen bewerten
-        </h2>
+        <h2 className="text-lg font-semibold text-[var(--text-primary)]">Aussagen bewerten</h2>
         <div className="space-y-3">
           {statements.map((s, i) => (
             <Card key={s.id}>
               <CardContent className="p-4">
-                <p className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-3">
+                <p className="text-sm font-medium text-[var(--text-primary)] mb-3">
                   {i + 1}. {s.text}
                 </p>
                 <div className="flex gap-2">
                   <button
                     onClick={() => setLegacyAnswers((p) => ({ ...p, [s.id]: true }))}
-                    className={`flex-1 px-3 py-2 rounded-lg border text-sm font-medium transition-colors cursor-pointer ${legacyAnswers[s.id] === true ? "border-green-500 bg-green-50 dark:bg-green-900/20 text-green-800 dark:text-green-300" : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300"}`}
+                    className={`flex-1 px-3 py-2 rounded-lg border text-sm font-medium transition-colors cursor-pointer ${legacyAnswers[s.id] === true ? "border-green-500 bg-green-50 dark:bg-green-900/20 text-green-800 dark:text-green-300" : "border-border border-[var(--border)] hover:bg-[var(--border)]/50 text-[var(--text-secondary)]"}`}
                   >
                     Ableitbar
                   </button>
                   <button
                     onClick={() => setLegacyAnswers((p) => ({ ...p, [s.id]: false }))}
-                    className={`flex-1 px-3 py-2 rounded-lg border text-sm font-medium transition-colors cursor-pointer ${legacyAnswers[s.id] === false ? "border-red-500 bg-red-50 dark:bg-red-900/20 text-red-800 dark:text-red-300" : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300"}`}
+                    className={`flex-1 px-3 py-2 rounded-lg border text-sm font-medium transition-colors cursor-pointer ${legacyAnswers[s.id] === false ? "border-red-500 bg-red-50 dark:bg-red-900/20 text-red-800 dark:text-red-300" : "border-border border-[var(--border)] hover:bg-[var(--border)]/50 text-[var(--text-secondary)]"}`}
                   >
                     Nicht ableitbar
                   </button>
@@ -370,7 +368,7 @@ export default function TV() {
         </Card>
         {currentSet.texts.map((t) => (
           <div key={t.id} className="space-y-3">
-            <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-100 border-l-4 border-primary-500 pl-3">
+            <h3 className="text-sm font-semibold text-[var(--text-primary)] border-l-4 border-primary-500 pl-3">
               {t.title}
             </h3>
             {t.questions.map((q) => {
@@ -388,7 +386,7 @@ export default function TV() {
                       ) : (
                         <XCircle className="w-5 h-5 text-red-500 mt-0.5 shrink-0" />
                       )}
-                      <span className="text-sm font-medium text-gray-900 dark:text-gray-100">
+                      <span className="text-sm font-medium text-[var(--text-primary)]">
                         {q.question}
                       </span>
                     </div>
@@ -401,7 +399,7 @@ export default function TV() {
                               ? "bg-green-50 dark:bg-green-900/10 text-green-700 dark:text-green-400 font-medium"
                               : oi === userAnswer
                                 ? "bg-red-50 dark:bg-red-900/10 text-red-600 dark:text-red-400 line-through"
-                                : "text-gray-500 dark:text-gray-400"
+                                : "text-[var(--muted)]"
                           }`}
                         >
                           {LABELS[oi]}) {opt}
@@ -453,7 +451,7 @@ export default function TV() {
             </span>
           </div>
         </div>
-        <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+        <div className="w-full bg-[var(--border)] rounded-full h-2">
           <div
             className="bg-primary-500 h-2 rounded-full transition-all"
             style={{ width: `${(totalQuestionsAnswered / allSetQuestions.length) * 100}%` }}
@@ -469,7 +467,7 @@ export default function TV() {
               className={`px-3 py-2 rounded-lg text-xs font-medium whitespace-nowrap transition-colors cursor-pointer ${
                 ti === textIndex
                   ? "bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-400"
-                  : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700"
+                  : "bg-[var(--border)]/50 text-[var(--muted)] hover:bg-[var(--border)]"
               }`}
             >
               {ti + 1}. {t.title.slice(0, 20)}
@@ -484,12 +482,12 @@ export default function TV() {
           <div className="lg:sticky lg:top-20 lg:self-start lg:max-h-[calc(100vh-6rem)] lg:overflow-y-auto lg:pr-2">
             <Card>
               <CardHeader>
-                <CardTitle className="text-gray-900 dark:text-gray-100 text-base">
+                <CardTitle className="text-[var(--text-primary)] text-base">
                   {currentText.title}
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-line">
+                <div className="text-sm text-[var(--text-secondary)] leading-relaxed whitespace-pre-line">
                   {currentText.content}
                 </div>
               </CardContent>
@@ -501,7 +499,7 @@ export default function TV() {
             {currentText.questions.map((q) => (
               <Card key={q.id}>
                 <CardContent className="p-4">
-                  <p className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-3">
+                  <p className="text-sm font-medium text-[var(--text-primary)] mb-3">
                     {q.question}
                   </p>
                   <div className="space-y-2">
@@ -512,7 +510,7 @@ export default function TV() {
                         className={`w-full text-left px-3 py-2.5 rounded-lg border text-sm transition-colors cursor-pointer ${
                           mcAnswers[q.id] === oi
                             ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300"
-                            : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300"
+                            : "border-border border-[var(--border)] hover:bg-[var(--border)]/50 text-[var(--text-secondary)]"
                         }`}
                       >
                         <span className="font-semibold mr-1.5">{LABELS[oi]})</span>
@@ -579,12 +577,12 @@ export default function TV() {
               className={`border-l-4 ${isCorrect ? "border-l-green-500" : "border-l-red-500"}`}
             >
               <CardContent className="p-5">
-                <p className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-3">
+                <p className="text-sm font-medium text-[var(--text-primary)] mb-3">
                   Frage {qi + 1}: {q.frageText}
                 </p>
                 <div className="space-y-1 mb-3">
                   {q.aussagen.map((a) => (
-                    <p key={a.nr} className="text-xs text-gray-700 dark:text-gray-300 ml-2">
+                    <p key={a.nr} className="text-xs text-[var(--text-secondary)] ml-2">
                       {a.nr}. {a.text}
                     </p>
                   ))}
@@ -642,12 +640,12 @@ export default function TV() {
         {/* Text */}
         <Card>
           <CardHeader>
-            <CardTitle className="text-gray-900 dark:text-gray-100">
+            <CardTitle className="text-[var(--text-primary)]">
               {currentAussagenText.title}
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-line">
+            <div className="text-sm text-[var(--text-secondary)] leading-relaxed whitespace-pre-line">
               {currentAussagenText.text}
             </div>
           </CardContent>
@@ -657,13 +655,13 @@ export default function TV() {
         {allAussagenFragen.map((q, qi) => (
           <Card key={q.id}>
             <CardContent className="p-5">
-              <p className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-3">
+              <p className="text-sm font-medium text-[var(--text-primary)] mb-3">
                 Frage {qi + 1}: {q.frageText}
               </p>
               {/* Numbered statements */}
-              <div className="bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg mb-4 space-y-2">
+              <div className="bg-[var(--border)]/30 p-4 rounded-lg mb-4 space-y-2">
                 {q.aussagen.map((a) => (
-                  <p key={a.nr} className="text-sm text-gray-800 dark:text-gray-200">
+                  <p key={a.nr} className="text-sm text-[var(--text-primary)]">
                     <span className="font-medium mr-1">{a.nr}.</span> {a.text}
                   </p>
                 ))}
@@ -679,7 +677,7 @@ export default function TV() {
                       className={`w-full text-left px-3 py-2.5 rounded-lg border text-sm transition-colors cursor-pointer ${
                         isSelected
                           ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300"
-                          : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300"
+                          : "border-border border-[var(--border)] hover:bg-[var(--border)]/50 text-[var(--text-secondary)]"
                       }`}
                     >
                       <span className="font-semibold mr-1.5">{k.key}.</span>

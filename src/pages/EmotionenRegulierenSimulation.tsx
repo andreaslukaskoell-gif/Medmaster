@@ -185,7 +185,7 @@ export default function EmotionenRegulierenSimulation() {
             <Timer className="w-8 h-8 text-pink-500" />
           </div>
           <div className="text-center">
-            <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2">
+            <h2 className="text-xl font-bold text-[var(--text-primary)] mb-2">
               Emotionen regulieren — Simulation
             </h2>
             <p className="text-sm text-muted max-w-lg mx-auto mb-4">
@@ -195,7 +195,7 @@ export default function EmotionenRegulierenSimulation() {
               <strong> eine</strong> Möglichkeit, mit der die Ziele der Person unter den schilderten
               Umständen am besten erreicht werden können.
             </p>
-            <div className="bg-gray-50 dark:bg-gray-800/80 rounded-lg p-4 text-left text-sm text-gray-700 dark:text-gray-300 whitespace-pre-line">
+            <div className="bg-[var(--border)]/30 rounded-lg p-4 text-left text-sm text-[var(--text-secondary)] whitespace-pre-line">
               {OFFIZIELLE_INSTRUKTION}
             </div>
           </div>
@@ -234,7 +234,7 @@ export default function EmotionenRegulierenSimulation() {
               <Trophy className="w-8 h-8 text-white" />
             </div>
             <div>
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
+              <h2 className="text-2xl font-bold text-[var(--text-primary)]">
                 {correctCount}/{TASK_COUNT}
               </h2>
               <p className="text-sm text-muted">
@@ -250,18 +250,18 @@ export default function EmotionenRegulierenSimulation() {
             </div>
             <div className="flex justify-center gap-6 text-sm">
               <div className="text-center">
-                <p className="text-lg font-bold text-gray-900 dark:text-gray-100">
+                <p className="text-lg font-bold text-[var(--text-primary)]">
                   {formatTime(TIME_LIMIT - timeLeft)}
                 </p>
                 <p className="text-xs text-muted">Gesamtzeit</p>
               </div>
               <div className="text-center">
-                <p className="text-lg font-bold text-gray-900 dark:text-gray-100">{avgTime}s</p>
+                <p className="text-lg font-bold text-[var(--text-primary)]">{avgTime}s</p>
                 <p className="text-xs text-muted">Ø pro Aufgabe</p>
               </div>
             </div>
             <div className="w-full max-w-xs mx-auto">
-              <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
+              <div className="w-full bg-[var(--border)] rounded-full h-3">
                 <div
                   className={`h-3 rounded-full transition-all ${scorePercent >= 80 ? "bg-green-500" : scorePercent >= 50 ? "bg-amber-500" : "bg-red-500"}`}
                   style={{ width: `${scorePercent}%` }}
@@ -277,7 +277,7 @@ export default function EmotionenRegulierenSimulation() {
         </Card>
 
         <div className="space-y-2">
-          <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+          <h3 className="text-sm font-semibold text-[var(--muted)] uppercase tracking-wider">
             Aufgabenübersicht mit Erklärungen
           </h3>
           {results.map((result, i) => (
@@ -285,14 +285,14 @@ export default function EmotionenRegulierenSimulation() {
               <CardContent className="p-0">
                 <button
                   onClick={() => setExpandedResult(expandedResult === i ? null : i)}
-                  className="w-full text-left p-4 flex items-center gap-3 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors cursor-pointer"
+                  className="w-full text-left p-4 flex items-center gap-3 hover:bg-[var(--border)]/50 transition-colors cursor-pointer"
                 >
                   <span
                     className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${result.correct ? "bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400" : "bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400"}`}
                   >
                     {i + 1}
                   </span>
-                  <p className="text-sm text-gray-900 dark:text-gray-100 flex-1 truncate">
+                  <p className="text-sm text-[var(--text-primary)] flex-1 truncate">
                     {result.task.situation.slice(0, 80)}…
                   </p>
                   <div className="flex items-center gap-2 shrink-0">
@@ -308,8 +308,8 @@ export default function EmotionenRegulierenSimulation() {
                   </div>
                 </button>
                 {expandedResult === i && (
-                  <div className="px-4 pb-4 space-y-3 border-t border-gray-100 dark:border-gray-800 pt-3">
-                    <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">
+                  <div className="px-4 pb-4 space-y-3 border-t border-[var(--border)] pt-3">
+                    <div className="bg-[var(--border)]/30 p-3 rounded-lg">
                       <p className="text-xs text-muted mb-1">Situation:</p>
                       <p className="text-sm">{result.task.situation}</p>
                     </div>
@@ -332,7 +332,7 @@ export default function EmotionenRegulierenSimulation() {
                       <p className="text-xs font-medium text-amber-800 dark:text-amber-300 mb-1">
                         Erklärung der richtigen Antwort:
                       </p>
-                      <p className="text-sm text-gray-700 dark:text-gray-300">
+                      <p className="text-sm text-[var(--text-secondary)]">
                         {result.task.explanation}
                       </p>
                     </div>
@@ -364,7 +364,7 @@ export default function EmotionenRegulierenSimulation() {
       <div className="flex items-center gap-3">
         <Timer className={`w-5 h-5 ${isUrgent ? "text-red-500 animate-pulse" : "text-pink-500"}`} />
         <div className="flex-1">
-          <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+          <div className="w-full bg-[var(--border)] rounded-full h-2.5">
             <div
               className={`h-2.5 rounded-full transition-all ${isUrgent ? "bg-red-500" : "bg-pink-500"}`}
               style={{ width: `${timePercent}%` }}
@@ -372,7 +372,7 @@ export default function EmotionenRegulierenSimulation() {
           </div>
         </div>
         <span
-          className={`text-sm font-mono font-bold min-w-[48px] text-right ${isUrgent ? "text-red-600 dark:text-red-400" : "text-gray-900 dark:text-gray-100"}`}
+          className={`text-sm font-mono font-bold min-w-[48px] text-right ${isUrgent ? "text-red-600 dark:text-red-400" : "text-[var(--text-primary)]"}`}
         >
           {formatTime(timeLeft)}
         </span>
@@ -394,7 +394,7 @@ export default function EmotionenRegulierenSimulation() {
             {Array.from({ length: TASK_COUNT }, (_, i) => (
               <div
                 key={i}
-                className={`w-2 h-2 rounded-full ${i < results.length ? (results[i].correct ? "bg-green-500" : "bg-red-500") : i === currentIndex ? "bg-pink-500" : "bg-gray-300 dark:bg-gray-600"}`}
+                className={`w-2 h-2 rounded-full ${i < results.length ? (results[i].correct ? "bg-green-500" : "bg-red-500") : i === currentIndex ? "bg-pink-500" : "bg-[var(--border)]"}`}
               />
             ))}
           </div>
@@ -406,7 +406,7 @@ export default function EmotionenRegulierenSimulation() {
           <p className="text-xs font-semibold text-amber-800 dark:text-amber-300 mb-2">
             Ausfüllhilfe (offizielle Instruktion)
           </p>
-          <p className="text-sm text-gray-700 dark:text-gray-300 whitespace-pre-line">
+          <p className="text-sm text-[var(--text-secondary)] whitespace-pre-line">
             {EMOTIONEN_REGULIEREN_AUSFUELLHILFE}
           </p>
         </div>
@@ -414,13 +414,13 @@ export default function EmotionenRegulierenSimulation() {
 
       <Card>
         <CardContent className="p-0">
-          <div className="bg-gray-50 dark:bg-gray-800 p-6 border-b border-gray-200 dark:border-gray-700">
-            <p className="text-sm text-gray-900 dark:text-gray-100 leading-relaxed">
+          <div className="bg-[var(--border)]/30 p-6 border-b border-[var(--border)]">
+            <p className="text-sm text-[var(--text-primary)] leading-relaxed">
               {currentTask.situation}
             </p>
           </div>
           <div className="p-6 space-y-4">
-            <p className="text-sm font-medium text-gray-700 dark:text-gray-300">
+            <p className="text-sm font-medium text-[var(--text-secondary)]">
               Mit welcher der vier Möglichkeiten können die Ziele der Person unter den geschilderten
               Umständen am besten erreicht werden?
             </p>
@@ -432,15 +432,13 @@ export default function EmotionenRegulierenSimulation() {
                   className={`w-full text-left p-4 rounded-lg border-2 transition-all cursor-pointer flex items-start gap-3 ${
                     selectedAnswer === option.id
                       ? "border-pink-400 dark:border-pink-600 bg-pink-50 dark:bg-pink-900/20"
-                      : "border-gray-200 dark:border-gray-700 hover:bg-pink-50 dark:hover:bg-pink-900/10"
+                      : "border-[var(--border)] hover:bg-pink-50 dark:hover:bg-pink-900/10"
                   }`}
                 >
-                  <span className="shrink-0 w-7 h-7 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-sm font-bold text-gray-700 dark:text-gray-300">
+                  <span className="shrink-0 w-7 h-7 rounded-full bg-[var(--border)] flex items-center justify-center text-sm font-bold text-[var(--text-secondary)]">
                     {option.id}
                   </span>
-                  <span className="text-sm text-gray-900 dark:text-gray-100 pt-0.5">
-                    {option.text}
-                  </span>
+                  <span className="text-sm text-[var(--text-primary)] pt-0.5">{option.text}</span>
                 </button>
               ))}
             </div>

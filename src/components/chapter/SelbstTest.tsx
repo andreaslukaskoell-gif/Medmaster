@@ -90,16 +90,16 @@ interface KeyFactsGridProps {
 
 export function KeyFactsGrid({ title, facts }: KeyFactsGridProps) {
   return (
-    <div className="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-6 border border-gray-200 dark:border-gray-700 my-8">
-      <h3 className="font-bold text-slate-950 dark:text-white mb-4 flex items-center gap-2">
+    <div className="bg-[var(--border)]/30 rounded-xl p-6 border border-[var(--border)] my-8">
+      <h3 className="font-bold text-[var(--text-primary)] mb-4 flex items-center gap-2">
         📋 Key Facts — {title}
       </h3>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
         {facts.map((fact, i) => (
           <div key={i} className="flex items-start gap-2">
             <span className="text-teal-500 font-bold mt-0.5">•</span>
-            <span className="text-sm text-slate-900 dark:text-slate-100">
-              {fact.label}: <strong className="text-slate-950 dark:text-white">{fact.value}</strong>
+            <span className="text-sm text-[var(--text-primary)]">
+              {fact.label}: <strong className="text-[var(--text-primary)]">{fact.value}</strong>
             </span>
           </div>
         ))}
@@ -289,9 +289,9 @@ export function SelbstTest({ questions, onAnswer, onAllComplete }: SelbstTestPro
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
-          className="card-glass mt-8 rounded-2xl border border-slate-200/80 dark:border-slate-700/50 p-8 shadow-xl"
+          className="card-glass mt-8 rounded-2xl border border-[var(--border)] p-8 shadow-xl"
         >
-          <h3 className="text-2xl font-bold text-[#1e293b] dark:text-slate-100 mb-6 tracking-tight">
+          <h3 className="text-2xl font-bold text-[var(--text-primary)] mb-6 tracking-tight">
             Session abgeschlossen
           </h3>
           <div className="flex flex-col sm:flex-row sm:items-center gap-8 mb-6">
@@ -304,7 +304,7 @@ export function SelbstTest({ questions, onAnswer, onAllComplete }: SelbstTestPro
                   fill="none"
                   stroke="currentColor"
                   strokeWidth={stroke}
-                  className="text-slate-200 dark:text-slate-700"
+                  className="text-[var(--border)]"
                 />
                 <motion.circle
                   cx={size / 2}
@@ -321,16 +321,15 @@ export function SelbstTest({ questions, onAnswer, onAllComplete }: SelbstTestPro
                   transition={{ duration: 0.8, ease: "easeOut" }}
                 />
               </svg>
-              <span className="relative z-10 text-xl font-bold text-[#1e293b] dark:text-slate-100 tabular-nums">
+              <span className="relative z-10 text-xl font-bold text-[var(--text-primary)] tabular-nums">
                 {pct}%
               </span>
             </div>
             <div className="flex-1">
-              <p className="text-lg text-slate-900 dark:text-slate-100 leading-relaxed">
-                Du hast{" "}
-                <strong className="text-[#1e293b] dark:text-slate-100">{totalCorrect}</strong> von{" "}
-                <strong className="text-[#1e293b] dark:text-slate-100">{questions.length}</strong>{" "}
-                Fragen richtig beantwortet.
+              <p className="text-lg text-[var(--text-primary)] leading-relaxed">
+                Du hast <strong className="text-[var(--text-primary)]">{totalCorrect}</strong> von{" "}
+                <strong className="text-[var(--text-primary)]">{questions.length}</strong> Fragen
+                richtig beantwortet.
               </p>
               <p className="text-base font-medium text-[#007AFF] dark:text-primary-400 mt-2">
                 {getMotivationText(pct)}
@@ -339,7 +338,7 @@ export function SelbstTest({ questions, onAnswer, onAllComplete }: SelbstTestPro
           </div>
           {streakUpdates.length > 0 && (
             <div className="mb-6">
-              <p className="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-2">
+              <p className="text-xs font-semibold text-[var(--muted)] uppercase tracking-wider mb-2">
                 Vergessenskurve-Update
               </p>
               <div className="flex flex-wrap gap-2">
@@ -365,7 +364,7 @@ export function SelbstTest({ questions, onAnswer, onAllComplete }: SelbstTestPro
               <Button
                 variant="outline"
                 onClick={handleRetryWrong}
-                className="btn-med border-slate-300 dark:border-slate-600 hover:bg-slate-50 dark:hover:bg-slate-800/50"
+                className="btn-med border-[var(--border)] hover:bg-[var(--border)]/50"
               >
                 Test wiederholen (nur {wrongCount} falsche)
               </Button>
@@ -378,16 +377,14 @@ export function SelbstTest({ questions, onAnswer, onAllComplete }: SelbstTestPro
 
   return (
     <div className="space-y-6 mt-8">
-      <div className="pb-4 border-b-2 border-gray-300 dark:border-gray-600">
-        <h2 className="text-xl font-semibold text-slate-950 dark:text-white mb-2">
-          📝 Kontrollfragen
-        </h2>
-        <p className="text-sm text-slate-900 dark:text-slate-100">
+      <div className="pb-4 border-b-2 border-[var(--border)]">
+        <h2 className="text-xl font-semibold text-[var(--text-primary)] mb-2">📝 Kontrollfragen</h2>
+        <p className="text-sm text-[var(--text-primary)]">
           Teste dein Wissen mit diesen Fragen. Wähle eine Antwort und klicke auf "Antwort prüfen"
           für sofortiges Feedback.
         </p>
         {totalAnswered > 0 && (
-          <div className="mt-3 text-sm font-medium text-slate-900 dark:text-slate-100">
+          <div className="mt-3 text-sm font-medium text-[var(--text-primary)]">
             Fortschritt: {totalCorrect} von {totalAnswered} beantworteten Fragen richtig
           </div>
         )}

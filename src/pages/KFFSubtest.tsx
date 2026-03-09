@@ -158,7 +158,7 @@ export default function KFFSubtest() {
           <Icon className={`w-6 h-6 ${config.color}`} />
         </div>
         <div>
-          <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">{config.name}</h1>
+          <h1 className="text-2xl font-bold text-foreground">{config.name}</h1>
           <div className="flex items-center gap-3 mt-1">
             <span className="text-sm text-muted">{config.category}</span>
             {progress && progress.total > 0 && (
@@ -174,7 +174,7 @@ export default function KFFSubtest() {
       </div>
 
       {/* Tabs */}
-      <div className="flex gap-1 bg-gray-100 dark:bg-gray-800 rounded-lg p-1">
+      <div className="flex gap-1 bg-muted rounded-lg p-1">
         {tabs.map((tab) => {
           const TabIcon = tab.icon;
           const isActive = activeTab === tab.key;
@@ -184,8 +184,8 @@ export default function KFFSubtest() {
               onClick={() => setActiveTab(tab.key)}
               className={`flex-1 flex items-center justify-center gap-2 px-4 py-2.5 rounded-md text-sm font-medium transition-all cursor-pointer ${
                 isActive
-                  ? "bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 shadow-sm"
-                  : "text-muted hover:text-gray-700 dark:hover:text-gray-300"
+                  ? "bg-background text-foreground shadow-sm"
+                  : "text-muted hover:text-foreground"
               }`}
             >
               <TabIcon className="w-4 h-4" />
@@ -199,12 +199,10 @@ export default function KFFSubtest() {
       {activeTab === "lernen" && (
         <Card>
           <CardContent className="p-8 text-center">
-            <div className="w-16 h-16 bg-gray-100 dark:bg-gray-800 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <div className="w-16 h-16 bg-muted rounded-2xl flex items-center justify-center mx-auto mb-4">
               <Construction className="w-8 h-8 text-muted" />
             </div>
-            <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">
-              Strategie-Inhalte folgen
-            </h2>
+            <h2 className="text-lg font-semibold text-foreground mb-2">Strategie-Inhalte folgen</h2>
             <p className="text-sm text-muted max-w-md mx-auto">
               Die Lern- und Strategie-Inhalte für &quot;{config.name}&quot; werden in einem nächsten
               Update hinzugefügt.
@@ -216,12 +214,10 @@ export default function KFFSubtest() {
       {activeTab === "ueben" && (
         <Card>
           <CardContent className="p-8 text-center">
-            <div className="w-16 h-16 bg-gray-100 dark:bg-gray-800 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <div className="w-16 h-16 bg-muted rounded-2xl flex items-center justify-center mx-auto mb-4">
               <Dumbbell className="w-8 h-8 text-muted" />
             </div>
-            <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">
-              Übungsmodus
-            </h2>
+            <h2 className="text-lg font-semibold text-foreground mb-2">Übungsmodus</h2>
             <p className="text-sm text-muted max-w-md mx-auto">
               Der Übungsmodus ohne Zeitdruck für &quot;{config.name}&quot; wird in einem nächsten
               Update freigeschaltet.
@@ -233,12 +229,10 @@ export default function KFFSubtest() {
       {activeTab === "simulation" && (
         <Card>
           <CardContent className="p-8 text-center">
-            <div className="w-16 h-16 bg-gray-100 dark:bg-gray-800 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <div className="w-16 h-16 bg-muted rounded-2xl flex items-center justify-center mx-auto mb-4">
               <Timer className="w-8 h-8 text-muted" />
             </div>
-            <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">
-              Simulationsmodus
-            </h2>
+            <h2 className="text-lg font-semibold text-foreground mb-2">Simulationsmodus</h2>
             <p className="text-sm text-muted max-w-md mx-auto">
               Der Simulationsmodus mit Timer und Auswertung für &quot;{config.name}&quot; wird in
               einem nächsten Update freigeschaltet.

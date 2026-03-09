@@ -63,7 +63,7 @@ export function BadgeUnlockModal({ badgeId, onDismiss }: BadgeUnlockModalProps) 
               <button
                 type="button"
                 onClick={onDismiss}
-                className="absolute top-3 right-3 p-2 rounded-full text-slate-400 hover:bg-white/10 transition-colors cursor-pointer"
+                className="absolute top-3 right-3 p-2 rounded-full text-muted hover:bg-white/10 transition-colors cursor-pointer"
                 aria-label="Schließen"
               >
                 <X className="w-5 h-5" />
@@ -76,14 +76,14 @@ export function BadgeUnlockModal({ badgeId, onDismiss }: BadgeUnlockModalProps) 
               >
                 <BadgeIcon badgeId={badge.id} icon={badge.icon} earned size="lg" />
               </motion.div>
-              <p className="text-xs font-semibold uppercase tracking-wider text-primary-400 dark:text-primary-400 mb-1">
+              <p className="text-xs font-semibold uppercase tracking-wider text-primary-400 mb-1">
                 Badge freigeschaltet
               </p>
               <h2 id="badge-unlock-title" className="text-xl font-bold text-white mb-2">
                 {badge.name}
               </h2>
-              <p className="text-slate-400 dark:text-slate-400 text-sm mb-4">{badge.description}</p>
-              <p className="text-primary-300 dark:text-primary-400 text-sm font-medium">
+              <p className="text-muted text-sm mb-4">{badge.description}</p>
+              <p className="text-primary-300 text-sm font-medium">
                 {MOTIVATIONAL_MESSAGES[badge.tier]}
               </p>
               <button
@@ -93,7 +93,7 @@ export function BadgeUnlockModal({ badgeId, onDismiss }: BadgeUnlockModalProps) 
                   setShared(true);
                   setTimeout(() => setShared(false), 2000);
                 }}
-                className="mt-5 flex items-center gap-2 mx-auto px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-slate-300 text-sm transition-colors cursor-pointer"
+                className="mt-5 flex items-center gap-2 mx-auto px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-muted text-sm transition-colors cursor-pointer"
               >
                 <Share2 className="w-4 h-4" />
                 {shared ? "Kopiert!" : "Teilen"}

@@ -232,9 +232,7 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
         <Button variant="ghost" size="sm" onClick={onBack}>
           <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
         </Button>
-        <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
-          Figuren zusammensetzen
-        </h1>
+        <h1 className="text-2xl font-bold text-[var(--text-primary)]">Figuren zusammensetzen</h1>
         <p className="text-sm text-muted">
           Welche Figur entsteht aus den Teilen? (Nur Drehen/Verschieben, keine Spiegelung.) 1:30 min
           pro Aufgabe.
@@ -346,7 +344,7 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
         <Card>
           <CardContent className="p-6 space-y-6">
             <div>
-              <label className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-2 block">
+              <label className="text-sm font-medium text-[var(--text-primary)] mb-2 block">
                 Anzahl Aufgaben
               </label>
               <div className="flex gap-2">
@@ -357,7 +355,7 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
                     className={`flex-1 px-3 py-2 rounded-lg border text-sm font-medium transition-colors cursor-pointer ${
                       questionCount === c
                         ? "border-rose-500 bg-rose-50 dark:bg-rose-900/20"
-                        : "border-border dark:border-gray-700"
+                        : "border-[var(--border)]"
                     }`}
                   >
                     {c}
@@ -443,10 +441,10 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
                 </div>
                 {/* Assembly demonstration: large, clear visualization */}
                 <div className="ml-7 mb-4">
-                  <p className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <p className="text-sm font-medium text-[var(--text-secondary)] mb-2">
                     So setzen sich die Teile zusammen:
                   </p>
-                  <div className="flex items-center gap-3 sm:gap-6 bg-gray-50 dark:bg-gray-900/40 rounded-xl p-4 border border-gray-200 dark:border-gray-700">
+                  <div className="flex items-center gap-3 sm:gap-6 bg-[var(--border)]/30 rounded-xl p-4 border border-[var(--border)]">
                     {/* Puzzleteile — larger */}
                     <div className="flex-1 min-w-0">
                       <p className="text-xs font-medium text-muted mb-1 uppercase tracking-wider">
@@ -656,11 +654,7 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
   const minutes = Math.floor(timeLeft / 60);
   const seconds = timeLeft % 60;
   const timerColor =
-    timeLeft <= 15
-      ? "text-red-500"
-      : timeLeft <= 30
-        ? "text-orange-500"
-        : "text-gray-600 dark:text-gray-400";
+    timeLeft <= 15 ? "text-red-500" : timeLeft <= 30 ? "text-orange-500" : "text-[var(--muted)]";
 
   return (
     <div className="max-w-4xl mx-auto space-y-6">
@@ -691,23 +685,23 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
         </div>
       </div>
 
-      <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+      <div className="w-full bg-[var(--border)] rounded-full h-2">
         <div
           className="bg-rose-500 h-2 rounded-full transition-all"
           style={{ width: `${((index + 1) / questions.length) * 100}%` }}
         />
       </div>
 
-      <p className="text-sm font-medium text-gray-900 dark:text-gray-100">
+      <p className="text-sm font-medium text-[var(--text-primary)]">
         Welche Figur entsteht aus den Teilen? (Nur Drehen/Verschieben, keine Spiegelung.)
       </p>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <Card className="border-gray-200 dark:border-gray-700">
+        <Card className="border-[var(--border)]">
           <CardContent className="p-6">
             <p className="text-xs font-medium text-muted uppercase tracking-wider mb-3">
               Puzzleteile
             </p>
-            <div className="flex flex-wrap gap-4 justify-center py-4 bg-gray-50/50 dark:bg-gray-900/30 rounded-lg">
+            <div className="flex flex-wrap gap-4 justify-center py-4 bg-[var(--border)]/30 rounded-lg">
               {(() => {
                 const { viewBox, paths } = layoutPiecesCompact(fzQ.pieces);
                 return (
@@ -740,12 +734,10 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
                   className={`flex flex-col items-center justify-center min-h-[90px] p-3 rounded-lg border-2 transition-colors cursor-pointer ${
                     selected
                       ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300"
-                      : "border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/50 hover:border-gray-300 dark:hover:border-gray-600"
+                      : "border-[var(--border)] bg-[var(--card)] hover:border-[var(--border)]"
                   }`}
                 >
-                  <span className="text-sm font-bold text-gray-600 dark:text-gray-400 mb-1">
-                    {label}
-                  </span>
+                  <span className="text-sm font-bold text-[var(--muted)] mb-1">{label}</span>
                   {isOptionE(opt) ? (
                     <span className="text-xs text-center text-muted leading-tight">
                       Keine der Figuren ist richtig

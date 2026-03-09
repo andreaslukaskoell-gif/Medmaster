@@ -38,7 +38,7 @@ export function ExamTimer({ totalSeconds, onTimeUp, paused = false }: ExamTimerP
       className={`fixed top-4 right-4 z-50 flex items-center gap-2 px-3 py-1.5 rounded-full shadow-lg border backdrop-blur-sm font-mono text-sm font-semibold transition-colors ${
         isWarning
           ? "bg-red-50/90 dark:bg-red-950/90 border-red-300 dark:border-red-700 text-red-700 dark:text-red-400 animate-pulse"
-          : "bg-white/80 dark:bg-gray-900/80 border-gray-200/50 dark:border-gray-700/50 text-gray-900 dark:text-gray-100"
+          : "bg-[var(--card)]/80 border-[var(--border)]/50 text-[var(--text-primary)]"
       }`}
     >
       <Timer className={`w-4 h-4 ${isWarning ? "text-red-500" : "text-muted"}`} />

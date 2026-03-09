@@ -197,10 +197,10 @@ export default function TextverstaendnisSimulation() {
             <Timer className="w-8 h-8 text-indigo-500" />
           </div>
           <div>
-            <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-4 text-center">
+            <h2 className="text-xl font-bold text-[var(--text-primary)] mb-4 text-center">
               Übungstest Textverständnis
             </h2>
-            <div className="text-sm text-gray-700 dark:text-gray-300 whitespace-pre-line max-w-lg mx-auto bg-gray-50 dark:bg-gray-800/50 rounded-lg p-5">
+            <div className="text-sm text-[var(--text-secondary)] whitespace-pre-line max-w-lg mx-auto bg-[var(--border)]/30 rounded-lg p-5">
               {OFFICIAL_INSTRUCTIONS}
             </div>
           </div>
@@ -259,7 +259,7 @@ export default function TextverstaendnisSimulation() {
                 <Trophy className="w-8 h-8 text-white" />
               </div>
               <div>
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
+                <h2 className="text-2xl font-bold text-[var(--text-primary)]">
                   {correctCount}/{totalQuestions} Punkte
                 </h2>
                 <p className="text-sm text-muted">
@@ -273,14 +273,14 @@ export default function TextverstaendnisSimulation() {
               </div>
               <div className="flex justify-center gap-6 text-sm">
                 <div className="text-center">
-                  <p className="text-lg font-bold text-gray-900 dark:text-gray-100">
+                  <p className="text-lg font-bold text-[var(--text-primary)]">
                     {formatTime(TIME_LIMIT_SEC - timeLeft)}
                   </p>
                   <p className="text-xs text-muted">Bearbeitungszeit</p>
                 </div>
                 {best !== null && (
                   <div className="text-center">
-                    <p className="text-lg font-bold text-gray-900 dark:text-gray-100">
+                    <p className="text-lg font-bold text-[var(--text-primary)]">
                       Bester Versuch: {best}/{totalQuestions}
                     </p>
                     <p className="text-xs text-muted">Bewertungsmethode</p>
@@ -307,10 +307,8 @@ export default function TextverstaendnisSimulation() {
                     <p className="text-xs font-medium text-muted uppercase tracking-wider mb-2">
                       Informationstext
                     </p>
-                    <h3 className="font-bold text-gray-900 dark:text-gray-100 mb-3">
-                      {text.title}
-                    </h3>
-                    <div className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-line">
+                    <h3 className="font-bold text-[var(--text-primary)] mb-3">{text.title}</h3>
+                    <div className="text-sm text-[var(--text-secondary)] leading-relaxed whitespace-pre-line">
                       {text.text}
                     </div>
                   </CardContent>
@@ -319,10 +317,7 @@ export default function TextverstaendnisSimulation() {
                   const selected = answers[fq.globalIndex];
                   const isCorrect = selected === fq.q.correctAnswer;
                   return (
-                    <Card
-                      key={fq.globalIndex}
-                      className="border-l-4 border-l-gray-200 dark:border-l-gray-700"
-                    >
+                    <Card key={fq.globalIndex} className="border-l-4 border-l-[var(--border)]">
                       <CardContent className="p-4 space-y-3">
                         <div className="flex items-start gap-2">
                           {isCorrect ? (
@@ -330,7 +325,7 @@ export default function TextverstaendnisSimulation() {
                           ) : (
                             <XCircle className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
                           )}
-                          <p className="text-sm font-semibold text-gray-900 dark:text-gray-100">
+                          <p className="text-sm font-semibold text-[var(--text-primary)]">
                             Frage {fq.globalIndex + 1}: {fq.q.question}
                           </p>
                         </div>
@@ -358,7 +353,7 @@ export default function TextverstaendnisSimulation() {
                             );
                           })}
                         </div>
-                        <div className="bg-gray-50 dark:bg-gray-800/50 rounded-lg p-3 space-y-1">
+                        <div className="bg-[var(--border)]/30 rounded-lg p-3 space-y-1">
                           <p className="text-xs text-muted leading-relaxed">{fq.q.explanation}</p>
                           {fq.q.relevantPassage && (
                             <button
@@ -385,7 +380,7 @@ export default function TextverstaendnisSimulation() {
             <p className="text-xs font-medium text-indigo-800 dark:text-indigo-200 mb-1">
               Markierte Textstelle
             </p>
-            <p className="text-sm text-gray-700 dark:text-gray-300 italic">
+            <p className="text-sm text-[var(--text-secondary)] italic">
               &quot;{highlightedPassage}&quot;
             </p>
           </div>
@@ -410,17 +405,15 @@ export default function TextverstaendnisSimulation() {
   return (
     <div className="space-y-4">
       {/* Verbleibende Zeit (wie ANV) */}
-      <div className="flex items-center justify-between gap-4 py-2 px-3 bg-gray-100 dark:bg-gray-800/80 rounded-lg sticky top-0 z-10">
+      <div className="flex items-center justify-between gap-4 py-2 px-3 bg-[var(--border)]/50 rounded-lg sticky top-0 z-10">
         <div className="flex items-center gap-2">
           <Timer
             className={`w-5 h-5 ${isUrgent ? "text-red-500 animate-pulse" : "text-indigo-500"}`}
           />
-          <span className="text-sm font-medium text-gray-900 dark:text-gray-100">
-            Verbleibende Zeit
-          </span>
+          <span className="text-sm font-medium text-[var(--text-primary)]">Verbleibende Zeit</span>
           <span
             className={`font-mono font-bold min-w-[52px] ${
-              isUrgent ? "text-red-600 dark:text-red-400" : "text-gray-900 dark:text-gray-100"
+              isUrgent ? "text-red-600 dark:text-red-400" : "text-[var(--text-primary)]"
             }`}
           >
             {formatTime(timeLeft)}
@@ -435,7 +428,7 @@ export default function TextverstaendnisSimulation() {
               <div
                 key={i}
                 className={`w-1.5 h-1.5 rounded-full ${
-                  answers[i] !== undefined ? "bg-indigo-500" : "bg-gray-300 dark:bg-gray-600"
+                  answers[i] !== undefined ? "bg-indigo-500" : "bg-[var(--border)]"
                 }`}
                 title={answers[i] !== undefined ? "Beantwortet" : "Unvollständig"}
               />
@@ -458,13 +451,11 @@ export default function TextverstaendnisSimulation() {
                     <span aria-hidden>·</span>
                     <span>Frage markieren</span>
                   </div>
-                  <h3 className="font-bold text-gray-900 dark:text-gray-100 mb-2">
-                    Informationstext
-                  </h3>
-                  <h4 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">
+                  <h3 className="font-bold text-[var(--text-primary)] mb-2">Informationstext</h3>
+                  <h4 className="text-lg font-semibold text-[var(--text-primary)] mb-3">
                     {text.title}
                   </h4>
-                  <div className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-line max-h-[50vh] overflow-y-auto">
+                  <div className="text-sm text-[var(--text-secondary)] leading-relaxed whitespace-pre-line max-h-[50vh] overflow-y-auto">
                     {text.text}
                   </div>
                 </CardContent>
@@ -475,14 +466,11 @@ export default function TextverstaendnisSimulation() {
                 const selected = answers[fq.globalIndex];
                 const isUnvollstaendig = selected === undefined;
                 return (
-                  <Card
-                    key={fq.globalIndex}
-                    className="border border-gray-200 dark:border-gray-700"
-                  >
+                  <Card key={fq.globalIndex} className="border border-[var(--border)]">
                     <CardContent className="p-5 space-y-4">
                       <div className="flex items-start justify-between gap-2">
                         <div className="flex items-center gap-2 flex-wrap">
-                          <span className="text-sm font-semibold text-gray-900 dark:text-gray-100">
+                          <span className="text-sm font-semibold text-[var(--text-primary)]">
                             Frage {fq.globalIndex + 1}
                           </span>
                           <span
@@ -502,7 +490,7 @@ export default function TextverstaendnisSimulation() {
                           className={`p-2 rounded-lg border transition-colors cursor-pointer ${
                             marked.has(fq.globalIndex)
                               ? "bg-amber-100 dark:bg-amber-900/30 border-amber-400 text-amber-700 dark:text-amber-300"
-                              : "bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700 text-muted hover:bg-gray-100 dark:hover:bg-gray-700"
+                              : "bg-[var(--border)]/30 border-[var(--border)] text-muted hover:bg-[var(--border)]"
                           }`}
                           title="Frage markieren"
                         >
@@ -510,7 +498,7 @@ export default function TextverstaendnisSimulation() {
                         </button>
                       </div>
                       <p className="text-xs text-muted uppercase tracking-wider">Fragetext</p>
-                      <p className="text-base font-medium text-gray-900 dark:text-gray-100">
+                      <p className="text-base font-medium text-[var(--text-primary)]">
                         {fq.q.question}
                       </p>
                       <div className="space-y-2">
@@ -522,13 +510,13 @@ export default function TextverstaendnisSimulation() {
                             className={`w-full text-left p-3 rounded-lg border-2 transition-all text-sm cursor-pointer flex items-start gap-2 ${
                               selected === oi
                                 ? "border-indigo-500 bg-indigo-50 dark:bg-indigo-900/20"
-                                : "border-gray-200 dark:border-gray-700 hover:border-indigo-300 dark:hover:border-indigo-600"
+                                : "border-[var(--border)] hover:border-indigo-300 dark:hover:border-indigo-600"
                             }`}
                           >
                             <span className="font-bold text-xs mt-0.5 shrink-0 w-5">
                               {LABELS[oi]}.
                             </span>
-                            <span className="flex-1 text-gray-800 dark:text-gray-200">{opt}</span>
+                            <span className="flex-1 text-[var(--text-primary)]">{opt}</span>
                           </button>
                         ))}
                       </div>
@@ -542,7 +530,7 @@ export default function TextverstaendnisSimulation() {
       </div>
 
       {/* Abgabe / Zeit abgelaufen */}
-      <div className="sticky bottom-0 py-4 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
+      <div className="sticky bottom-0 py-4 bg-[var(--card)] border-t border-[var(--border)]">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted">
             Wenn Sie den Test zwischenspeichern, läuft die Testzeit weiter. Bei Ablauf der Zeit wird

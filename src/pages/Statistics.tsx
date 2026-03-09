@@ -35,7 +35,7 @@ const confidenceLabel: Record<string, { text: string; className: string }> = {
   },
   unbekannt: {
     text: "Unbekannt",
-    className: "bg-gray-100 text-gray-500 dark:bg-gray-800 dark:text-gray-400",
+    className: "bg-muted text-muted-foreground",
   },
 };
 
@@ -82,7 +82,7 @@ export default function Statistics() {
       <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "Statistik" }]} />
 
       <div>
-        <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Statistik</h1>
+        <h1 className="text-2xl font-bold text-foreground">Statistik</h1>
         <p className="text-muted mt-1">Dein Lernfortschritt im Überblick.</p>
       </div>
 
@@ -117,9 +117,7 @@ export default function Statistics() {
         <Card>
           <CardContent className="p-12 text-center space-y-4">
             <div className="text-5xl">📊</div>
-            <p className="text-lg font-semibold text-gray-900 dark:text-gray-100">
-              Noch keine Statistiken
-            </p>
+            <p className="text-lg font-semibold text-foreground">Noch keine Statistiken</p>
             <p className="text-sm text-muted max-w-xs mx-auto">
               Absolviere deinen ersten Test, um hier deine Lernstatistiken und Fortschritte zu
               sehen.
@@ -222,7 +220,7 @@ export default function Statistics() {
                       .slice()
                       .reverse()
                       .map((r) => (
-                        <tr key={r.id} className="border-b border-gray-50">
+                        <tr key={r.id} className="border-b border-border/50">
                           <td className="py-2 px-3">{r.date}</td>
                           <td className="py-2 px-3 uppercase font-medium">{r.type}</td>
                           <td className="py-2 px-3">{r.subject || "-"}</td>
@@ -281,7 +279,7 @@ export default function Statistics() {
                   return (
                     <div key={subj}>
                       <div className="flex items-center justify-between mb-1">
-                        <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                        <span className="text-sm font-medium text-foreground">
                           {meta?.label || subj}
                         </span>
                         <span className="text-xs text-muted">
@@ -311,7 +309,7 @@ export default function Statistics() {
                   className={`px-2 py-1 rounded text-xs font-medium transition-colors cursor-pointer ${
                     stichwortFach === f
                       ? "bg-primary-600 text-white"
-                      : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200"
+                      : "bg-muted text-muted-foreground hover:bg-accent"
                   }`}
                 >
                   {fachConfig[f]?.label || f}
@@ -372,10 +370,10 @@ export default function Statistics() {
                       .map(({ sw, stat }) => (
                         <div
                           key={sw.id}
-                          className="flex items-center gap-2 py-1.5 px-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800/50"
+                          className="flex items-center gap-2 py-1.5 px-2 rounded-lg hover:bg-accent"
                         >
                           <div className="flex-1 min-w-0">
-                            <span className="text-xs font-medium text-gray-900 dark:text-gray-100 truncate block">
+                            <span className="text-xs font-medium text-foreground truncate block">
                               {sw.thema}
                             </span>
                           </div>
@@ -410,7 +408,7 @@ export default function Statistics() {
 
                 {/* Unpracticed count */}
                 {unpracticed.length > 0 && (
-                  <p className="text-xs text-muted pt-1 border-t border-gray-100 dark:border-gray-800">
+                  <p className="text-xs text-muted pt-1 border-t border-border">
                     {unpracticed.length} Stichworte noch nicht geübt
                   </p>
                 )}

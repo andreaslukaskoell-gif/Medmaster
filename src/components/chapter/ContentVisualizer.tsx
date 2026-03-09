@@ -34,9 +34,7 @@ export function ContentVisualizer({
   if (!uk) {
     return (
       <div className={`space-y-6 ${contentClassName}`}>
-        <p className="text-sm text-slate-900 dark:text-slate-100">
-          Kein Inhalt für dieses Unterkapitel geladen.
-        </p>
+        <p className="text-sm text-foreground">Kein Inhalt für dieses Unterkapitel geladen.</p>
       </div>
     );
   }

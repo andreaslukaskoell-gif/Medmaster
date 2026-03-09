@@ -44,7 +44,7 @@ function OrbitRing({ subjectHeat, index }: { subjectHeat: SubjectHeat; index: nu
             {label.slice(0, 2)}
           </span>
         </motion.div>
-        <span className="mt-2 text-xs font-medium text-gray-700 dark:text-gray-300 text-center">
+        <span className="mt-2 text-xs font-medium text-[var(--text-secondary)] text-center">
           {label}
         </span>
         {overdueCount > 0 && (
@@ -64,7 +64,7 @@ export function MemoryHeatmapOrbits() {
   const hasUrgent = heats.some((h) => h.heat >= 0.75);
 
   return (
-    <Card className="border-slate-200 dark:border-slate-800">
+    <Card className="border-[var(--border)]">
       <CardHeader className="pb-2">
         <CardTitle className="text-base flex items-center gap-2">
           <span>Wissenszustand</span>

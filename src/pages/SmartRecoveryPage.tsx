@@ -178,9 +178,7 @@ export default function SmartRecoveryPage() {
         <Card className="border-2 border-primary-200 dark:border-primary-800">
           <CardContent className="p-8 text-center space-y-4">
             <Trophy className="w-14 h-14 mx-auto text-primary-500" />
-            <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100">
-              Smart-Recovery abgeschlossen
-            </h2>
+            <h2 className="text-xl font-bold text-foreground">Smart-Recovery abgeschlossen</h2>
             <p className="text-3xl font-bold text-primary-600 dark:text-primary-400">
               {score} / {total} richtig ({pct}%)
             </p>
@@ -231,9 +229,7 @@ export default function SmartRecoveryPage() {
               <BookOpen className="w-5 h-5 shrink-0" />
               <span className="font-semibold">Kurz wiederholen – dann die Frage</span>
             </div>
-            <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
-              {reentryExplanation}
-            </p>
+            <p className="text-sm text-muted-foreground leading-relaxed">{reentryExplanation}</p>
             {tipp && (
               <div className="rounded-lg bg-amber-100/80 dark:bg-amber-900/30 p-3 flex gap-2">
                 <Lightbulb className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
@@ -262,17 +258,14 @@ export default function SmartRecoveryPage() {
           )}
           <Card>
             <CardContent className="p-6">
-              <p className="text-base font-medium text-gray-900 dark:text-gray-100 mb-6">
-                {currentQuestion.text}
-              </p>
+              <p className="text-base font-medium text-foreground mb-6">{currentQuestion.text}</p>
               <div className="space-y-3">
                 {currentQuestion.options.map((opt) => {
                   const isSelected = answers[currentQuestion.id] === opt.id;
                   const isCorrectOpt = showResult && opt.id === currentQuestion.correctOptionId;
                   const isWrongSelected =
                     showResult && isSelected && opt.id !== currentQuestion.correctOptionId;
-                  let classes =
-                    "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300";
+                  let classes = "border-border hover:bg-accent text-muted-foreground";
                   if (isCorrectOpt)
                     classes =
                       "border-green-500 bg-green-50 dark:bg-green-900/20 text-green-800 dark:text-green-300";

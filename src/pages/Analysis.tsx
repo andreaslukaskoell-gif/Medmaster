@@ -150,9 +150,7 @@ export default function Analysis() {
       <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "Analyse" }]} />
 
       <div>
-        <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
-          Stärken/Schwächen-Analyse
-        </h1>
+        <h1 className="text-2xl font-bold text-foreground">Stärken/Schwächen-Analyse</h1>
         <p className="text-muted mt-1">Detaillierte Auswertung deiner Leistung nach Fachgebiet.</p>
       </div>
 
@@ -169,9 +167,7 @@ export default function Analysis() {
         <Card>
           <CardContent className="p-12 text-center space-y-4">
             <Target className="w-14 h-14 text-muted mx-auto" />
-            <p className="text-lg font-semibold text-gray-900 dark:text-gray-100">
-              Noch keine Analyse verfügbar
-            </p>
+            <p className="text-lg font-semibold text-foreground">Noch keine Analyse verfügbar</p>
             <p className="text-sm text-muted max-w-sm mx-auto">
               Mache deinen ersten Test, um hier dein persönliches Kompetenzprofil und Schwachstellen
               zu sehen.
@@ -231,7 +227,7 @@ export default function Analysis() {
                   <div className="space-y-2">
                     {strengths.map((s) => (
                       <div key={s.name} className="flex items-center justify-between">
-                        <span className="text-sm text-gray-700 dark:text-gray-300">{s.name}</span>
+                        <span className="text-sm text-foreground">{s.name}</span>
                         <Badge variant="success">{s.percentage}%</Badge>
                       </div>
                     ))}
@@ -254,7 +250,7 @@ export default function Analysis() {
                   <div className="space-y-2">
                     {average.map((s) => (
                       <div key={s.name} className="flex items-center justify-between">
-                        <span className="text-sm text-gray-700 dark:text-gray-300">{s.name}</span>
+                        <span className="text-sm text-foreground">{s.name}</span>
                         <Badge variant="warning">{s.percentage}%</Badge>
                       </div>
                     ))}
@@ -277,7 +273,7 @@ export default function Analysis() {
                   <div className="space-y-2">
                     {weaknesses.map((s) => (
                       <div key={s.name} className="flex items-center justify-between">
-                        <span className="text-sm text-gray-700 dark:text-gray-300">{s.name}</span>
+                        <span className="text-sm text-foreground">{s.name}</span>
                         <Badge variant="danger">{s.percentage}%</Badge>
                       </div>
                     ))}
@@ -296,9 +292,7 @@ export default function Analysis() {
                 {subjectData.map((d) => (
                   <div key={d.name}>
                     <div className="flex items-center justify-between mb-1">
-                      <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                        {d.name}
-                      </span>
+                      <span className="text-sm font-medium text-foreground">{d.name}</span>
                       <span className="text-xs text-muted">
                         {d.score}/{d.total} richtig ({d.percentage}%)
                       </span>
@@ -330,14 +324,11 @@ export default function Analysis() {
               <CardContent>
                 <div className="space-y-2">
                   {errorPatterns.map((p, i) => (
-                    <div
-                      key={i}
-                      className="flex items-center gap-3 p-3 rounded-lg bg-gray-50 dark:bg-gray-800"
-                    >
+                    <div key={i} className="flex items-center gap-3 p-3 rounded-lg bg-muted">
                       <Badge variant={p.severity === "danger" ? "danger" : "warning"}>
                         {p.severity === "danger" ? "Kritisch" : "Hinweis"}
                       </Badge>
-                      <span className="text-sm text-gray-700 dark:text-gray-300">{p.pattern}</span>
+                      <span className="text-sm text-foreground">{p.pattern}</span>
                     </div>
                   ))}
                 </div>
@@ -408,7 +399,7 @@ export default function Analysis() {
                   </div>
 
                   <div>
-                    <p className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-2">
+                    <p className="text-sm font-medium text-foreground mb-2">
                       Bereitschaft nach Fach
                     </p>
                     <ResponsiveContainer width="100%" height={180}>
@@ -424,7 +415,7 @@ export default function Analysis() {
 
                   {weakTopics.length > 0 && (
                     <div>
-                      <p className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-2">
+                      <p className="text-sm font-medium text-foreground mb-2">
                         Prioritäre Themen zum Verbessern
                       </p>
                       <div className="space-y-1.5">
@@ -432,13 +423,11 @@ export default function Analysis() {
                           <Link
                             key={t.stichwortId}
                             to={`/schwachstellen?stichwort=${t.stichwortId}`}
-                            className="flex items-center justify-between p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+                            className="flex items-center justify-between p-2 rounded-lg hover:bg-accent transition-colors"
                           >
                             <div className="flex items-center gap-2 min-w-0">
                               <Zap className="w-3.5 h-3.5 text-orange-500 shrink-0" />
-                              <span className="text-sm text-gray-700 dark:text-gray-300 truncate">
-                                {t.thema}
-                              </span>
+                              <span className="text-sm text-foreground truncate">{t.thema}</span>
                               <span className="text-[10px] text-muted">({t.fach})</span>
                             </div>
                             <Badge
@@ -514,7 +503,7 @@ export default function Analysis() {
                     <span className="text-primary-700 dark:text-primary-400 font-bold text-sm mt-0.5">
                       {i + 1}.
                     </span>
-                    <p className="text-sm text-gray-700 dark:text-gray-300">{rec}</p>
+                    <p className="text-sm text-foreground">{rec}</p>
                   </div>
                 ))}
               </div>

@@ -8,7 +8,7 @@ export function VergleichsTabelle({ headers, rows }: VergleichsTabelleProps) {
     <div className="overflow-x-auto my-6">
       <table className="w-full border-collapse text-sm">
         <thead>
-          <tr className="bg-slate-800 text-white">
+          <tr className="bg-[var(--text-primary)] text-[var(--card)]">
             {headers.map((h, i) => (
               <th
                 key={i}
@@ -23,14 +23,14 @@ export function VergleichsTabelle({ headers, rows }: VergleichsTabelleProps) {
           {rows.map((row, ri) => (
             <tr
               key={ri}
-              className={`border-b border-gray-200 dark:border-gray-700 ${
-                ri % 2 === 0 ? "bg-white dark:bg-gray-900" : "bg-gray-50 dark:bg-gray-800/50"
+              className={`border-b border-[var(--border)] ${
+                ri % 2 === 0 ? "bg-[var(--card)]" : "bg-[var(--border)]/30"
               }`}
             >
               {row.map((cell, ci) => (
                 <td
                   key={ci}
-                  className={`px-4 py-3 ${ci === 0 ? "font-medium text-slate-950 dark:text-white" : "text-slate-900 dark:text-slate-100"}`}
+                  className={`px-4 py-3 ${ci === 0 ? "font-medium text-[var(--text-primary)]" : "text-[var(--text-primary)]"}`}
                   dangerouslySetInnerHTML={{ __html: cell }}
                 />
               ))}

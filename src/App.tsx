@@ -61,7 +61,7 @@ const StichwortlistePublic = lazy(() => import("@/pages/StichwortlistePublic"));
 function LoadingSpinner() {
   return (
     <div className="flex items-center justify-center min-h-[60vh]">
-      <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-blue-500" />
+      <div className="animate-spin rounded-full h-8 w-8 border-2 border-[var(--accent)] border-t-transparent" />
     </div>
   );
 }
@@ -119,18 +119,18 @@ function RootRoute() {
 
 function NotFound404() {
   return (
-    <div className="min-h-screen flex items-center justify-center p-4 bg-linear-to-br from-slate-50 to-slate-100 dark:from-slate-950 dark:to-slate-900">
-      <div className="text-center space-y-4">
-        <h1 className="text-6xl font-bold text-gray-900 dark:text-white">404</h1>
-        <p className="text-lg text-gray-600 dark:text-gray-400">Seite nicht gefunden</p>
-        <p className="text-sm text-gray-500 dark:text-gray-500">
+    <div className="min-h-screen flex items-center justify-center p-4 bg-[var(--background)]">
+      <div className="text-center space-y-3">
+        <h1 className="text-5xl font-bold text-[var(--text-primary)]">404</h1>
+        <p className="text-base text-[var(--text-secondary)]">Seite nicht gefunden</p>
+        <p className="text-sm text-[var(--muted)]">
           Diese Seite existiert nicht oder wurde verschoben.
         </p>
         <a
           href="/dashboard"
-          className="inline-block mt-2 text-sm text-blue-600 dark:text-blue-400 hover:underline"
+          className="inline-block mt-2 text-sm font-medium text-[var(--accent)] hover:underline"
         >
-          → Zurück zum Dashboard
+          Zurück zum Dashboard
         </a>
       </div>
     </div>

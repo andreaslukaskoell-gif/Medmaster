@@ -31,7 +31,7 @@ export function XpProgressRingSkeleton({
   return (
     <div
       className={cn(
-        "rounded-full shrink-0 animate-pulse border border-slate-300 dark:border-slate-600 bg-transparent",
+        "rounded-full shrink-0 animate-pulse border border-border bg-transparent",
         className
       )}
       style={{ width: size, height: size, borderWidth: stroke }}
@@ -105,7 +105,7 @@ export function RadarHexagonSkeleton({
 
   return (
     <div
-      className={cn("rounded-xl overflow-hidden bg-slate-900/50 skeleton-shimmer", className)}
+      className={cn("rounded-xl overflow-hidden bg-background/50 skeleton-shimmer", className)}
       style={{ width: "100%", height }}
       aria-hidden
     >

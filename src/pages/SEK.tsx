@@ -330,7 +330,7 @@ function EmotionenErkennenQuiz({
         <Button variant="ghost" size="sm" onClick={onBack}>
           <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
         </Button>
-        <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Emotionen erkennen</h1>
+        <h1 className="text-2xl font-bold text-[var(--text-primary)]">Emotionen erkennen</h1>
         <div className="grid gap-4 sm:grid-cols-2">
           <Card
             className={`cursor-pointer border-2 transition-colors ${examMode === "exam" ? "border-primary-500" : "border-transparent hover:border-primary-300"}`}
@@ -339,7 +339,7 @@ function EmotionenErkennenQuiz({
             <CardContent className="p-6">
               <div className="flex items-center gap-2 mb-2">
                 <Timer className="w-5 h-5 text-primary-600" />
-                <h2 className="font-semibold text-gray-900 dark:text-gray-100">Prüfungsmodus</h2>
+                <h2 className="font-semibold text-[var(--text-primary)]">Prüfungsmodus</h2>
               </div>
               <p className="text-sm text-muted">
                 {eeConfig.questions} Aufgaben · {eeConfig.timeSeconds / 60} Minuten
@@ -354,7 +354,7 @@ function EmotionenErkennenQuiz({
             <CardContent className="p-6">
               <div className="flex items-center gap-2 mb-2">
                 <BookOpen className="w-5 h-5 text-green-600" />
-                <h2 className="font-semibold text-gray-900 dark:text-gray-100">Übungsmodus</h2>
+                <h2 className="font-semibold text-[var(--text-primary)]">Übungsmodus</h2>
               </div>
               <p className="text-sm text-muted">Kein Timer · sofortiges Feedback möglich</p>
               <p className="text-xs text-muted mt-1">Zum Lernen und Verstehen</p>
@@ -466,7 +466,7 @@ function EmotionenErkennenQuiz({
           </span>
         </div>
       </div>
-      <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+      <div className="w-full bg-[var(--border)] rounded-full h-2">
         <div
           className="bg-pink-500 h-2 rounded-full transition-all"
           style={{ width: `${((index + 1) / questions.length) * 100}%` }}
@@ -474,11 +474,11 @@ function EmotionenErkennenQuiz({
       </div>
       <Card>
         <CardContent className="p-6">
-          <div className="bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg mb-6">
+          <div className="bg-[var(--border)]/30 p-4 rounded-lg mb-6">
             <p className="text-xs text-muted uppercase tracking-wide mb-1">Situation:</p>
-            <p className="text-sm text-gray-800 dark:text-gray-200">{q.situation}</p>
+            <p className="text-sm text-[var(--text-primary)]">{q.situation}</p>
           </div>
-          <p className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-4">
+          <p className="text-sm font-medium text-[var(--text-primary)] mb-4">
             Wie fühlt sich {q.personName} in dieser Situation? Eher wahrscheinlich oder eher
             unwahrscheinlich?
           </p>
@@ -488,9 +488,9 @@ function EmotionenErkennenQuiz({
               return (
                 <div
                   key={e.id}
-                  className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 p-3 rounded-lg border border-border dark:border-gray-700"
+                  className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 p-3 rounded-lg border border-[var(--border)]"
                 >
-                  <span className="text-sm font-medium text-gray-900 dark:text-gray-100">
+                  <span className="text-sm font-medium text-[var(--text-primary)]">
                     ({e.id}) {e.text}
                   </span>
                   <div className="flex gap-2">
@@ -504,7 +504,7 @@ function EmotionenErkennenQuiz({
                       className={`px-3 py-2 rounded-lg text-xs font-medium transition-colors cursor-pointer ${
                         val === "wahrscheinlich"
                           ? "bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 border border-green-300 dark:border-green-700"
-                          : "bg-gray-50 dark:bg-gray-800 text-gray-500 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700"
+                          : "bg-[var(--border)]/30 text-[var(--muted)] border border-[var(--border)] hover:bg-[var(--border)]"
                       }`}
                     >
                       eher wahrscheinlich
@@ -519,7 +519,7 @@ function EmotionenErkennenQuiz({
                       className={`px-3 py-2 rounded-lg text-xs font-medium transition-colors cursor-pointer ${
                         val === "unwahrscheinlich"
                           ? "bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400 border border-red-300 dark:border-red-700"
-                          : "bg-gray-50 dark:bg-gray-800 text-gray-500 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700"
+                          : "bg-[var(--border)]/30 text-[var(--muted)] border border-[var(--border)] hover:bg-[var(--border)]"
                       }`}
                     >
                       eher unwahrscheinlich
@@ -620,9 +620,7 @@ function EmotionenRegulierenQuiz({
         <Button variant="ghost" size="sm" onClick={onBack}>
           <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
         </Button>
-        <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
-          Emotionen regulieren
-        </h1>
+        <h1 className="text-2xl font-bold text-[var(--text-primary)]">Emotionen regulieren</h1>
         <div className="grid gap-4 sm:grid-cols-2">
           <Card
             className={`cursor-pointer border-2 transition-colors ${examMode === "exam" ? "border-primary-500" : "border-transparent hover:border-primary-300"}`}
@@ -631,7 +629,7 @@ function EmotionenRegulierenQuiz({
             <CardContent className="p-6">
               <div className="flex items-center gap-2 mb-2">
                 <Timer className="w-5 h-5 text-primary-600" />
-                <h2 className="font-semibold text-gray-900 dark:text-gray-100">Prüfungsmodus</h2>
+                <h2 className="font-semibold text-[var(--text-primary)]">Prüfungsmodus</h2>
               </div>
               <p className="text-sm text-muted">
                 {erConfig.questions} Aufgaben · {erConfig.timeSeconds / 60} Minuten
@@ -646,7 +644,7 @@ function EmotionenRegulierenQuiz({
             <CardContent className="p-6">
               <div className="flex items-center gap-2 mb-2">
                 <BookOpen className="w-5 h-5 text-green-600" />
-                <h2 className="font-semibold text-gray-900 dark:text-gray-100">Übungsmodus</h2>
+                <h2 className="font-semibold text-[var(--text-primary)]">Übungsmodus</h2>
               </div>
               <p className="text-sm text-muted">Kein Timer · sofortiges Feedback möglich</p>
               <p className="text-xs text-muted mt-1">Zum Lernen und Verstehen</p>
@@ -758,7 +756,7 @@ function EmotionenRegulierenQuiz({
           </span>
         </div>
       </div>
-      <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+      <div className="w-full bg-[var(--border)] rounded-full h-2">
         <div
           className="bg-amber-500 h-2 rounded-full transition-all"
           style={{ width: `${((index + 1) / questions.length) * 100}%` }}
@@ -766,10 +764,10 @@ function EmotionenRegulierenQuiz({
       </div>
       <Card>
         <CardContent className="p-6">
-          <div className="bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg mb-4">
-            <p className="text-sm text-gray-800 dark:text-gray-200">{q.situation}</p>
+          <div className="bg-[var(--border)]/30 p-4 rounded-lg mb-4">
+            <p className="text-sm text-[var(--text-primary)]">{q.situation}</p>
           </div>
-          <p className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-3">
+          <p className="text-sm font-medium text-[var(--text-primary)] mb-3">
             Wie gehen Sie in dieser Situation idealerweise vor?
           </p>
           <div className="space-y-2">
@@ -782,19 +780,19 @@ function EmotionenRegulierenQuiz({
                   className={`flex items-start gap-3 p-3 rounded-lg border cursor-pointer transition-colors ${
                     isSelected
                       ? "border-amber-500 bg-amber-50 dark:bg-amber-900/20"
-                      : "border-border dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800"
+                      : "border-[var(--border)] hover:bg-[var(--border)]/50"
                   }`}
                 >
                   <div
                     className={`w-7 h-7 shrink-0 rounded-full border-2 flex items-center justify-center text-sm font-medium transition-colors ${
                       isSelected
                         ? "border-amber-500 bg-amber-500 text-white"
-                        : "border-gray-300 dark:border-gray-600 text-gray-500 dark:text-gray-400"
+                        : "border-[var(--border)] text-[var(--muted)]/60"
                     }`}
                   >
                     {opt.id}
                   </div>
-                  <p className="text-sm text-gray-800 dark:text-gray-200 pt-0.5">{opt.text}</p>
+                  <p className="text-sm text-[var(--text-primary)] pt-0.5">{opt.text}</p>
                 </div>
               );
             })}
@@ -921,9 +919,7 @@ function SozialesEntscheidenQuiz({
         <Button variant="ghost" size="sm" onClick={onBack}>
           <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
         </Button>
-        <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
-          Soziales Entscheiden
-        </h1>
+        <h1 className="text-2xl font-bold text-[var(--text-primary)]">Soziales Entscheiden</h1>
         <div className="grid gap-4 sm:grid-cols-2">
           <Card
             className={`cursor-pointer border-2 transition-colors ${examMode === "exam" ? "border-primary-500" : "border-transparent hover:border-primary-300"}`}
@@ -932,7 +928,7 @@ function SozialesEntscheidenQuiz({
             <CardContent className="p-6">
               <div className="flex items-center gap-2 mb-2">
                 <Timer className="w-5 h-5 text-primary-600" />
-                <h2 className="font-semibold text-gray-900 dark:text-gray-100">Prüfungsmodus</h2>
+                <h2 className="font-semibold text-[var(--text-primary)]">Prüfungsmodus</h2>
               </div>
               <p className="text-sm text-muted">
                 {seConfig.questions} Aufgaben · {seConfig.timeSeconds / 60} Minuten
@@ -947,7 +943,7 @@ function SozialesEntscheidenQuiz({
             <CardContent className="p-6">
               <div className="flex items-center gap-2 mb-2">
                 <BookOpen className="w-5 h-5 text-green-600" />
-                <h2 className="font-semibold text-gray-900 dark:text-gray-100">Übungsmodus</h2>
+                <h2 className="font-semibold text-[var(--text-primary)]">Übungsmodus</h2>
               </div>
               <p className="text-sm text-muted">Kein Timer · sofortiges Feedback möglich</p>
               <p className="text-xs text-muted mt-1">Zum Lernen und Verstehen</p>
@@ -974,12 +970,12 @@ function SozialesEntscheidenQuiz({
               Ausfüllvorschrift der Aufgabengruppe Soziales Entscheiden
             </CardTitle>
           </CardHeader>
-          <CardContent className="space-y-5 text-sm text-gray-700 dark:text-gray-300">
+          <CardContent className="space-y-5 text-sm text-[var(--text-secondary)]">
             <p>
               Die Aufgabe bei der Aufgabengruppe Soziales Entscheiden besteht darin, die fünf
               Überlegungen nach ihrer Wichtigkeit für die Entscheidung in eine Rangfolge zu bringen.
             </p>
-            <p className="font-semibold text-gray-900 dark:text-gray-100">Bitte beachten Sie:</p>
+            <p className="font-semibold text-[var(--text-primary)]">Bitte beachten Sie:</p>
             <ul className="list-disc pl-5 space-y-1">
               <li>
                 Es müssen immer <strong>alle fünf</strong> Überlegungen in eine{" "}
@@ -1005,7 +1001,7 @@ function SozialesEntscheidenQuiz({
               Wichtigkeitsstufe zugeordnet und alle fünf Wichtigkeitsstufen vergeben haben.
             </p>
 
-            <p className="font-semibold text-gray-900 dark:text-gray-100 pt-2">
+            <p className="font-semibold text-[var(--text-primary)] pt-2">
               Wie trage ich meine Antworten richtig ein?
             </p>
             <p>
@@ -1016,27 +1012,25 @@ function SozialesEntscheidenQuiz({
               Stufe zugeordnet.
             </p>
 
-            <p className="font-semibold text-gray-900 dark:text-gray-100">Richtiges Beispiel:</p>
+            <p className="font-semibold text-[var(--text-primary)]">Richtiges Beispiel:</p>
             <div className="overflow-x-auto">
-              <table className="w-full max-w-xs border border-border dark:border-gray-600 text-center">
+              <table className="w-full max-w-xs border border-[var(--border)] text-center">
                 <thead>
                   <tr className="bg-muted/50">
-                    <th className="border-b border-r border-border dark:border-gray-600 p-2"></th>
-                    <th className="border-b border-border dark:border-gray-600 p-2">1</th>
-                    <th className="border-b border-border dark:border-gray-600 p-2">2</th>
-                    <th className="border-b border-border dark:border-gray-600 p-2">3</th>
-                    <th className="border-b border-border dark:border-gray-600 p-2">4</th>
-                    <th className="border-b border-border dark:border-gray-600 p-2">5</th>
+                    <th className="border-b border-r border-[var(--border)] p-2"></th>
+                    <th className="border-b border-[var(--border)] p-2">1</th>
+                    <th className="border-b border-[var(--border)] p-2">2</th>
+                    <th className="border-b border-[var(--border)] p-2">3</th>
+                    <th className="border-b border-[var(--border)] p-2">4</th>
+                    <th className="border-b border-[var(--border)] p-2">5</th>
                   </tr>
                 </thead>
                 <tbody>
                   {["A", "B", "C", "D", "E"].map((row, i) => (
                     <tr key={row}>
-                      <td className="border-r border-border dark:border-gray-600 p-2 font-medium">
-                        {row}
-                      </td>
+                      <td className="border-r border-[var(--border)] p-2 font-medium">{row}</td>
                       {[1, 2, 3, 4, 5].map((col) => (
-                        <td key={col} className="border border-border dark:border-gray-600 p-2">
+                        <td key={col} className="border border-[var(--border)] p-2">
                           {i + 1 === col ? "✓" : ""}
                         </td>
                       ))}
@@ -1050,7 +1044,7 @@ function SozialesEntscheidenQuiz({
               Aufgabe wird gewertet.
             </p>
 
-            <p className="font-semibold text-gray-900 dark:text-gray-100">
+            <p className="font-semibold text-[var(--text-primary)]">
               Falsche Beispiele (Aufgabe wird mit 0 bewertet):
             </p>
             <ul className="list-disc pl-5 space-y-2">
@@ -1177,7 +1171,7 @@ function SozialesEntscheidenQuiz({
           </span>
         </div>
       </div>
-      <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+      <div className="w-full bg-[var(--border)] rounded-full h-2">
         <div
           className="bg-blue-500 h-2 rounded-full transition-all"
           style={{ width: `${((index + 1) / questions.length) * 100}%` }}
@@ -1185,10 +1179,10 @@ function SozialesEntscheidenQuiz({
       </div>
       <Card>
         <CardContent className="p-6">
-          <div className="bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg mb-6">
-            <p className="text-sm text-gray-800 dark:text-gray-200">{q.dilemma}</p>
+          <div className="bg-[var(--border)]/30 p-4 rounded-lg mb-6">
+            <p className="text-sm text-[var(--text-primary)]">{q.dilemma}</p>
           </div>
-          <p className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-4">
+          <p className="text-sm font-medium text-[var(--text-primary)] mb-4">
             Wie wichtig sind Ihrer Meinung nach die folgenden Überlegungen für diese
             Entscheidungssituation? Ordnen Sie die Überlegungen A) bis E) der Wichtigkeit nach,
             wobei <strong>1</strong> die (relativ) wichtigste und <strong>5</strong> die am
@@ -1198,22 +1192,22 @@ function SozialesEntscheidenQuiz({
             {q.aussagen.map((a, ai) => {
               const label = String.fromCharCode(65 + ai);
               return (
-                <p key={ai} className="text-sm text-gray-700 dark:text-gray-300">
-                  <span className="font-semibold text-gray-900 dark:text-gray-100">{label})</span>{" "}
-                  &bdquo;{a.text}&ldquo;
+                <p key={ai} className="text-sm text-[var(--text-secondary)]">
+                  <span className="font-semibold text-[var(--text-primary)]">{label})</span> &bdquo;
+                  {a.text}&ldquo;
                 </p>
               );
             })}
           </div>
           <div className="overflow-x-auto">
-            <table className="border border-border dark:border-gray-600 text-sm mx-auto">
+            <table className="border border-[var(--border)] text-sm mx-auto">
               <thead>
                 <tr className="bg-muted/50">
-                  <th className="border-b border-r border-border dark:border-gray-600 p-2 w-12"></th>
+                  <th className="border-b border-r border-[var(--border)] p-2 w-12"></th>
                   {[1, 2, 3, 4, 5].map((rank) => (
                     <th
                       key={rank}
-                      className="border-b border-border dark:border-gray-600 p-2 w-12 text-center font-semibold"
+                      className="border-b border-[var(--border)] p-2 w-12 text-center font-semibold"
                     >
                       {rank}
                     </th>
@@ -1225,7 +1219,7 @@ function SozialesEntscheidenQuiz({
                   const label = String.fromCharCode(65 + ai);
                   return (
                     <tr key={ai}>
-                      <td className="border-r border-b border-border dark:border-gray-600 p-2 font-semibold text-center">
+                      <td className="border-r border-b border-[var(--border)] p-2 font-semibold text-center">
                         {label}
                       </td>
                       {[1, 2, 3, 4, 5].map((rank) => {
@@ -1239,11 +1233,11 @@ function SozialesEntscheidenQuiz({
                           <td
                             key={rank}
                             onClick={() => !isUsedByOther && setRank(q.id, ai, rank)}
-                            className={`border border-border dark:border-gray-600 p-2 text-center cursor-pointer transition-colors ${
+                            className={`border border-[var(--border)] p-2 text-center cursor-pointer transition-colors ${
                               isSelected
                                 ? "bg-blue-500 text-white"
                                 : isUsedByOther
-                                  ? "bg-gray-100 dark:bg-gray-800 text-gray-300 dark:text-gray-600 cursor-not-allowed"
+                                  ? "bg-[var(--border)]/50 text-[var(--muted)]/60 cursor-not-allowed"
                                   : "hover:bg-blue-50 dark:hover:bg-blue-900/20"
                             }`}
                           >

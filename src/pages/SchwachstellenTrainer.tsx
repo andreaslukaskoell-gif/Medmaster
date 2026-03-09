@@ -291,11 +291,10 @@ export default function SchwachstellenTrainer() {
 
         <Card>
           <CardContent className="p-6">
-            <p className="text-base font-medium text-gray-900 dark:text-gray-100 mb-6">{q.text}</p>
+            <p className="text-base font-medium text-foreground mb-6">{q.text}</p>
             <div className="space-y-3">
               {q.options.map((opt) => {
-                let classes =
-                  "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300";
+                let classes = "border-border hover:bg-accent text-muted-foreground";
                 if (showResult) {
                   if (opt.id === q.correctOptionId) {
                     classes =
@@ -415,9 +414,7 @@ export default function SchwachstellenTrainer() {
           <Target className="w-5 h-5 text-red-600 dark:text-red-400" />
         </div>
         <div>
-          <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
-            Schwachstellen-Trainer
-          </h1>
+          <h1 className="text-2xl font-bold text-foreground">Schwachstellen-Trainer</h1>
           <p className="text-sm text-muted">Gezielt schwache Themen trainieren</p>
         </div>
       </div>
@@ -541,7 +538,7 @@ export default function SchwachstellenTrainer() {
               return (
                 <div
                   key={topic.stichwortId}
-                  className={`flex items-center justify-between p-3 rounded-lg ${fc?.bg || "bg-gray-50 dark:bg-gray-800"}`}
+                  className={`flex items-center justify-between p-3 rounded-lg ${fc?.bg || "bg-muted"}`}
                 >
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 mb-1">
@@ -628,7 +625,7 @@ export default function SchwachstellenTrainer() {
                 <div
                   className={`w-8 h-8 ${fc.accent} rounded-lg mx-auto mb-2 flex items-center justify-center`}
                 >
-                  <span className="text-white text-xs font-bold">{r}%</span>
+                  <span className="text-primary-foreground text-xs font-bold">{r}%</span>
                 </div>
                 <p className="text-xs font-medium">{fc.label}</p>
                 <Progress value={r} className="mt-2" />

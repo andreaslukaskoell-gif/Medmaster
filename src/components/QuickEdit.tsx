@@ -68,7 +68,7 @@ export function QuickEdit<T extends object>({
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="p-2 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-100 dark:hover:text-slate-300 dark:hover:bg-slate-800 transition-colors cursor-pointer"
+        className="p-2 rounded-lg text-muted-foreground hover:text-foreground hover:bg-accent dark:hover:text-foreground dark:hover:bg-accent transition-colors cursor-pointer"
         title={label}
         aria-label={label}
       >
@@ -90,17 +90,15 @@ export function QuickEdit<T extends object>({
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.96 }}
               transition={{ duration: 0.2 }}
-              className="relative w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl border border-slate-200/80 dark:border-slate-700/50 shadow-xl card-glass overflow-hidden"
+              className="relative w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl border border-border shadow-xl card-glass overflow-hidden"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="flex items-center justify-between px-4 py-3 border-b border-slate-200/80 dark:border-slate-700/50">
-                <h3 className="text-lg font-semibold text-midnight dark:text-slate-100">
-                  Quick-Edit
-                </h3>
+              <div className="flex items-center justify-between px-4 py-3 border-b border-border">
+                <h3 className="text-lg font-semibold text-foreground">Quick-Edit</h3>
                 <button
                   type="button"
                   onClick={handleClose}
-                  className="p-2 rounded-lg text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-700 dark:hover:text-slate-200 transition-colors cursor-pointer"
+                  className="p-2 rounded-lg text-muted-foreground hover:bg-accent dark:hover:bg-accent hover:text-foreground dark:hover:text-foreground transition-colors cursor-pointer"
                   aria-label="Schließen"
                 >
                   <X className="w-4 h-4" />
@@ -110,13 +108,13 @@ export function QuickEdit<T extends object>({
                 <textarea
                   value={text}
                   onChange={(e) => setText(e.target.value)}
-                  className="w-full h-[50vh] min-h-[200px] p-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white/80 dark:bg-slate-900/80 text-sm font-mono text-midnight dark:text-slate-100 placeholder:text-slate-400 resize-y focus:outline-none focus:ring-2 focus:ring-primary-500/50"
+                  className="w-full h-[50vh] min-h-[200px] p-3 rounded-xl border border-border bg-background/80 dark:bg-background/80 text-sm font-mono text-foreground placeholder:text-muted-foreground resize-y focus:outline-none focus:ring-2 focus:ring-primary-500/50"
                   placeholder="JSON …"
                   spellCheck={false}
                 />
               </div>
-              <div className="flex items-center justify-between gap-3 px-4 py-3 border-t border-slate-200/80 dark:border-slate-700/50 bg-slate-50/50 dark:bg-slate-900/30">
-                <span className="text-xs text-slate-500 dark:text-slate-400">
+              <div className="flex items-center justify-between gap-3 px-4 py-3 border-t border-border bg-muted/50">
+                <span className="text-xs text-muted-foreground">
                   Speichert lokal &amp; gibt JSON in der Konsole aus (zum Kopieren in die
                   Datendatei).
                 </span>
@@ -126,7 +124,7 @@ export function QuickEdit<T extends object>({
                     variant="outline"
                     size="sm"
                     onClick={handleClose}
-                    className="border-slate-200 dark:border-slate-700"
+                    className="border-border"
                   >
                     Abbrechen
                   </Button>

@@ -40,7 +40,7 @@ export class ErrorBoundary extends Component<Props, State> {
   render() {
     if (this.state.hasError) {
       return (
-        <div className="min-h-screen flex items-center justify-center bg-surface dark:bg-gray-950 px-4">
+        <div className="min-h-screen flex items-center justify-center bg-background px-4">
           <div className="text-center max-w-md w-full">
             <div
               className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-sm"
@@ -48,10 +48,8 @@ export class ErrorBoundary extends Component<Props, State> {
             >
               <AlertTriangle className="w-10 h-10" style={{ color: MEDICAL_BLUE }} />
             </div>
-            <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-2">
-              Etwas ist schiefgelaufen
-            </h1>
-            <p className="text-sm text-gray-500 dark:text-gray-400 mb-8">
+            <h1 className="text-2xl font-bold text-foreground mb-2">Etwas ist schiefgelaufen</h1>
+            <p className="text-sm text-muted-foreground mb-8">
               Ein unerwarteter Fehler ist aufgetreten. Du kannst es erneut versuchen oder die App
               neu starten.
             </p>
@@ -68,7 +66,7 @@ export class ErrorBoundary extends Component<Props, State> {
               <button
                 type="button"
                 onClick={this.handleRestart}
-                className="inline-flex items-center justify-center gap-2 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-medium px-6 py-3 rounded-2xl bg-transparent hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                className="inline-flex items-center justify-center gap-2 border border-border text-foreground font-medium px-6 py-3 rounded-2xl bg-transparent hover:bg-muted transition-colors"
               >
                 <RefreshCw className="w-5 h-5" />
                 App neu starten

@@ -126,7 +126,7 @@ export default function EmotionenRegulierenUeben() {
               className={`text-xs px-3 py-1.5 rounded-full transition-colors cursor-pointer ${
                 difficultyFilter === null
                   ? "bg-pink-100 dark:bg-pink-900/30 text-pink-700 dark:text-pink-300 font-medium"
-                  : "text-muted hover:bg-gray-100 dark:hover:bg-gray-800"
+                  : "text-muted hover:bg-accent"
               }`}
             >
               Alle
@@ -143,7 +143,7 @@ export default function EmotionenRegulierenUeben() {
                 className={`text-xs px-3 py-1.5 rounded-full transition-colors cursor-pointer ${
                   difficultyFilter === d
                     ? `${difficultyLabels[d].bg} ${difficultyLabels[d].color} font-medium`
-                    : "text-muted hover:bg-gray-100 dark:hover:bg-gray-800"
+                    : "text-muted hover:bg-accent"
                 }`}
               >
                 {difficultyLabels[d].label}
@@ -155,7 +155,7 @@ export default function EmotionenRegulierenUeben() {
               setShuffled(!shuffled);
               handleReset();
             }}
-            className={`text-muted hover:text-gray-700 dark:hover:text-gray-300 cursor-pointer ${shuffled ? "text-pink-500" : ""}`}
+            className={`text-muted hover:text-foreground cursor-pointer ${shuffled ? "text-pink-500" : ""}`}
             title="Zufällige Reihenfolge"
           >
             <Shuffle className="w-4 h-4" />
@@ -173,7 +173,7 @@ export default function EmotionenRegulierenUeben() {
           </span>
           <button
             onClick={handleReset}
-            className="text-muted hover:text-gray-700 dark:hover:text-gray-300 cursor-pointer"
+            className="text-muted hover:text-foreground cursor-pointer"
             title="Zurücksetzen"
           >
             <RotateCcw className="w-4 h-4" />
@@ -182,7 +182,7 @@ export default function EmotionenRegulierenUeben() {
       </div>
 
       {/* Progress bar */}
-      <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5">
+      <div className="w-full bg-muted rounded-full h-1.5">
         <div
           className="h-1.5 rounded-full bg-pink-500 transition-all"
           style={{ width: `${((currentIndex + 1) / filteredTasks.length) * 100}%` }}
@@ -193,7 +193,7 @@ export default function EmotionenRegulierenUeben() {
       <Card>
         <CardContent className="p-0">
           {/* Scenario */}
-          <div className="bg-gray-50 dark:bg-gray-800 p-6 border-b border-gray-200 dark:border-gray-700">
+          <div className="bg-muted p-6 border-b border-border">
             <div className="flex items-center justify-between mb-2">
               <div className="flex items-center gap-2">
                 <span
@@ -207,14 +207,12 @@ export default function EmotionenRegulierenUeben() {
               </div>
               <span className="text-xs text-muted">{currentTask.id}</span>
             </div>
-            <p className="text-sm text-gray-900 dark:text-gray-100 leading-relaxed">
-              {currentTask.scenario}
-            </p>
+            <p className="text-sm text-foreground leading-relaxed">{currentTask.scenario}</p>
           </div>
 
           {/* Question & Options */}
           <div className="p-6 space-y-4">
-            <p className="text-sm font-medium text-gray-700 dark:text-gray-300">
+            <p className="text-sm font-medium text-muted-foreground">
               Welche Regulationsstrategie wäre am effektivsten?
             </p>
 
@@ -222,7 +220,7 @@ export default function EmotionenRegulierenUeben() {
               {currentTask.options.map((option, i) => {
                 const isSelected = selectedAnswer === i;
                 const isCorrectOption = i === currentTask.correctAnswer;
-                let borderClass = "border-gray-200 dark:border-gray-700";
+                let borderClass = "border-border";
                 let bgClass = "hover:bg-pink-50 dark:hover:bg-pink-900/10";
 
                 if (isChecked) {
@@ -250,14 +248,12 @@ export default function EmotionenRegulierenUeben() {
                     <div className="flex items-start gap-3">
                       <div className="shrink-0 mt-0.5">
                         <span
-                          className={`inline-block text-xs font-medium px-2 py-0.5 rounded-full ${strategyColors[option.strategy] || "bg-gray-100 text-gray-700"}`}
+                          className={`inline-block text-xs font-medium px-2 py-0.5 rounded-full ${strategyColors[option.strategy] || "bg-muted text-foreground"}`}
                         >
                           {option.strategy}
                         </span>
                       </div>
-                      <span className="text-sm text-gray-900 dark:text-gray-100 flex-1">
-                        {option.description}
-                      </span>
+                      <span className="text-sm text-foreground flex-1">{option.description}</span>
                       {isChecked && isCorrectOption && (
                         <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0 mt-0.5" />
                       )}
@@ -291,7 +287,7 @@ export default function EmotionenRegulierenUeben() {
                   </button>
                   <button
                     onClick={() => setShowExplanation(!showExplanation)}
-                    className="px-4 py-2.5 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors cursor-pointer"
+                    className="px-4 py-2.5 border border-border text-muted-foreground rounded-lg text-sm font-medium hover:bg-accent transition-colors cursor-pointer"
                   >
                     {showExplanation ? "Erklärung verbergen" : "Erklärung anzeigen"}
                   </button>
@@ -323,17 +319,13 @@ export default function EmotionenRegulierenUeben() {
 
             {/* Explanation */}
             {showExplanation && isChecked && (
-              <div className="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 space-y-3">
-                <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">
-                  Erklärung
-                </h4>
-                <p className="text-sm text-gray-700 dark:text-gray-300">
-                  {currentTask.explanation}
-                </p>
+              <div className="bg-muted border border-border rounded-lg p-4 space-y-3">
+                <h4 className="text-sm font-semibold text-foreground">Erklärung</h4>
+                <p className="text-sm text-muted-foreground">{currentTask.explanation}</p>
                 <div>
                   <p className="text-xs text-muted mb-1">Richtige Strategie:</p>
                   <span
-                    className={`inline-block text-xs font-medium px-2 py-1 rounded-full ${strategyColors[currentTask.options[currentTask.correctAnswer].strategy] || "bg-gray-100 text-gray-700"}`}
+                    className={`inline-block text-xs font-medium px-2 py-1 rounded-full ${strategyColors[currentTask.options[currentTask.correctAnswer].strategy] || "bg-muted text-foreground"}`}
                   >
                     {currentTask.options[currentTask.correctAnswer].strategy}
                   </span>

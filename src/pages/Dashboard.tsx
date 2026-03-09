@@ -491,7 +491,7 @@ export default function Dashboard() {
             aria-labelledby="smart-adjust-title"
           >
             <div
-              className="relative w-full max-w-md rounded-2xl border border-white/10 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md shadow-xl p-6"
+              className="relative w-full max-w-md rounded-2xl border border-[var(--border)] bg-[var(--card)]/95 backdrop-blur-md shadow-xl p-6"
               onClick={(e) => e.stopPropagation()}
             >
               <h2
@@ -542,8 +542,10 @@ function ReferralCard() {
               setShared(true);
               setTimeout(() => setShared(false), 3000);
             }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-white transition-colors"
-            style={{ backgroundColor: shared ? "#16a34a" : "#1b3ea7" }}
+            className={cn(
+              "inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-white transition-colors",
+              shared ? "bg-[var(--success)]" : "bg-[var(--accent)]"
+            )}
           >
             {shared ? (
               <>

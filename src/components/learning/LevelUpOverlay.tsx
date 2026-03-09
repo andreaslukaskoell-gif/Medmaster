@@ -58,14 +58,14 @@ export function LevelUpOverlay({ level, levelName, feature, onDismiss }: LevelUp
             exit={{ scale: 0.95, opacity: 0 }}
             transition={{ type: "spring", stiffness: 400, damping: 28 }}
             onClick={(e) => e.stopPropagation()}
-            className="relative w-full max-w-md rounded-2xl overflow-hidden border-2 border-amber-400/60 dark:border-amber-300/50 bg-linear-to-b from-amber-50 to-violet-50 dark:from-slate-900 dark:to-violet-950/50 shadow-2xl shadow-amber-500/20 dark:shadow-violet-500/20"
+            className="relative w-full max-w-md rounded-2xl overflow-hidden border-2 border-amber-400/60 dark:border-amber-300/50 bg-linear-to-b from-amber-50 to-violet-50 dark:from-background dark:to-violet-950/50 shadow-2xl shadow-amber-500/20 dark:shadow-violet-500/20"
           >
             <div className="absolute inset-0 bg-linear-to-br from-amber-200/20 via-transparent to-violet-300/20 dark:from-amber-500/10 dark:to-violet-500/20 pointer-events-none" />
             <div className="relative p-8 text-center">
               <button
                 type="button"
                 onClick={onDismiss}
-                className="absolute top-3 right-3 p-2 rounded-full text-slate-500 dark:text-slate-400 hover:bg-white/20 dark:hover:bg-white/10 transition-colors cursor-pointer"
+                className="absolute top-3 right-3 p-2 rounded-full text-muted-foreground hover:bg-foreground/10 transition-colors cursor-pointer"
                 aria-label="Schließen"
               >
                 <X className="w-5 h-5" />
@@ -100,7 +100,7 @@ export function LevelUpOverlay({ level, levelName, feature, onDismiss }: LevelUp
                   <span className="font-semibold">{feature} freigeschaltet</span>
                 </motion.div>
               )}
-              <p className="text-sm text-slate-500 dark:text-slate-400 mt-4">
+              <p className="text-sm text-muted-foreground mt-4">
                 Klicken oder Escape zum Schließen
               </p>
             </div>

@@ -179,7 +179,7 @@ export default function TextverstaendnisUeben() {
             className={`text-xs px-3 py-1.5 rounded-full transition-colors cursor-pointer ${
               difficultyFilter === null
                 ? "bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 font-medium"
-                : "text-muted hover:bg-gray-100 dark:hover:bg-gray-800"
+                : "text-muted hover:bg-accent"
             }`}
           >
             Alle
@@ -197,7 +197,7 @@ export default function TextverstaendnisUeben() {
               className={`text-xs px-3 py-1.5 rounded-full transition-colors cursor-pointer ${
                 difficultyFilter === d
                   ? `${difficultyLabels[d].bg} ${difficultyLabels[d].color} font-medium`
-                  : "text-muted hover:bg-gray-100 dark:hover:bg-gray-800"
+                  : "text-muted hover:bg-accent"
               }`}
             >
               {difficultyLabels[d].label}
@@ -210,7 +210,7 @@ export default function TextverstaendnisUeben() {
             className={`flex items-center gap-1 text-xs px-3 py-1.5 rounded-full transition-colors cursor-pointer ${
               shuffled
                 ? "bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600"
-                : "text-muted hover:bg-gray-100 dark:hover:bg-gray-800"
+                : "text-muted hover:bg-accent"
             }`}
           >
             <Shuffle className="w-3 h-3" />
@@ -218,7 +218,7 @@ export default function TextverstaendnisUeben() {
           </button>
           <button
             onClick={handleReset}
-            className="flex items-center gap-1 text-xs px-3 py-1.5 rounded-full text-muted hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors cursor-pointer"
+            className="flex items-center gap-1 text-xs px-3 py-1.5 rounded-full text-muted hover:bg-accent transition-colors cursor-pointer"
           >
             <RotateCcw className="w-3 h-3" />
             Reset
@@ -230,7 +230,7 @@ export default function TextverstaendnisUeben() {
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
           <BookOpen className="w-4 h-4 text-indigo-500" />
-          <span className="text-sm font-medium text-gray-900 dark:text-gray-100">
+          <span className="text-sm font-medium text-foreground">
             Text {textIndex + 1} von {filteredTexts.length}
           </span>
           <span
@@ -244,14 +244,14 @@ export default function TextverstaendnisUeben() {
           <button
             onClick={handlePrevText}
             disabled={textIndex === 0}
-            className="p-1.5 rounded-lg text-muted hover:bg-gray-100 dark:hover:bg-gray-800 disabled:opacity-30 disabled:cursor-not-allowed transition-colors cursor-pointer"
+            className="p-1.5 rounded-lg text-muted hover:bg-accent disabled:opacity-30 disabled:cursor-not-allowed transition-colors cursor-pointer"
           >
             <ChevronLeft className="w-4 h-4" />
           </button>
           <button
             onClick={handleNextText}
             disabled={textIndex >= filteredTexts.length - 1}
-            className="p-1.5 rounded-lg text-muted hover:bg-gray-100 dark:hover:bg-gray-800 disabled:opacity-30 disabled:cursor-not-allowed transition-colors cursor-pointer"
+            className="p-1.5 rounded-lg text-muted hover:bg-accent disabled:opacity-30 disabled:cursor-not-allowed transition-colors cursor-pointer"
           >
             <ChevronRight className="w-4 h-4" />
           </button>
@@ -261,10 +261,8 @@ export default function TextverstaendnisUeben() {
       {/* Split view: Text | Questions */}
       <div className="lg:grid lg:grid-cols-2 lg:gap-6 space-y-4 lg:space-y-0">
         {/* Text panel */}
-        <div className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow border border-gray-200 dark:border-gray-700 lg:max-h-[80vh] lg:overflow-y-auto">
-          <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-4">
-            {currentText.title}
-          </h2>
+        <div className="bg-card p-6 rounded-xl shadow border border-border lg:max-h-[80vh] lg:overflow-y-auto">
+          <h2 className="text-lg font-bold text-foreground mb-4">{currentText.title}</h2>
           <div
             className="prose prose-sm dark:prose-invert max-w-none text-base leading-relaxed"
             dangerouslySetInnerHTML={{ __html: textHtml.replace(/\n/g, "<br/>") }}
@@ -289,7 +287,7 @@ export default function TextverstaendnisUeben() {
           {allAnswered && !showResultsForText && (
             <Card className="border-indigo-200 dark:border-indigo-800">
               <CardContent className="p-4 text-center">
-                <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">
+                <p className="text-sm text-muted-foreground mb-3">
                   Alle Fragen beantwortet. Auswertung anzeigen?
                 </p>
                 <button
@@ -306,10 +304,10 @@ export default function TextverstaendnisUeben() {
           {showResultsBlock && (
             <Card className="border-indigo-200 dark:border-indigo-800">
               <CardContent className="p-4 text-center space-y-3">
-                <p className="text-sm font-semibold text-gray-900 dark:text-gray-100">
+                <p className="text-sm font-semibold text-foreground">
                   Ergebnis: {correctCount}/{currentText.questions.length} richtig
                 </p>
-                <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                <div className="w-full bg-muted rounded-full h-2">
                   <div
                     className={`h-2 rounded-full transition-all ${
                       correctCount === currentText.questions.length
@@ -357,7 +355,7 @@ function QuestionCard({
   return (
     <Card>
       <CardContent className="p-4 space-y-3">
-        <p className="text-sm font-semibold text-gray-900 dark:text-gray-100">
+        <p className="text-sm font-semibold text-foreground">
           <span className="text-indigo-500 mr-1.5">F{qIdx + 1}.</span>
           {question.question}
         </p>
@@ -366,8 +364,7 @@ function QuestionCard({
           {question.options.map((opt, optIdx) => {
             const isSelected = selected === optIdx;
             const isCorrect = optIdx === question.correctAnswer;
-            let optClass =
-              "border-gray-200 dark:border-gray-700 hover:border-indigo-300 dark:hover:border-indigo-600";
+            let optClass = "border-border hover:border-indigo-300 dark:hover:border-indigo-600";
 
             if (isResultsView) {
               if (isCorrect) {
@@ -375,7 +372,7 @@ function QuestionCard({
               } else if (isSelected && !isCorrect) {
                 optClass = "border-red-500 bg-red-50 dark:bg-red-900/20";
               } else {
-                optClass = "border-gray-200 dark:border-gray-700 opacity-60";
+                optClass = "border-border opacity-60";
               }
             } else if (isSelected) {
               optClass = "border-indigo-500 bg-indigo-50 dark:bg-indigo-900/20";
@@ -392,7 +389,7 @@ function QuestionCard({
                   <span className="font-bold text-xs mt-0.5 shrink-0 w-5">
                     {String.fromCharCode(65 + optIdx)}.
                   </span>
-                  <span className="flex-1 text-gray-800 dark:text-gray-200">{opt}</span>
+                  <span className="flex-1 text-foreground">{opt}</span>
                   {isResultsView && isCorrect && (
                     <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0 mt-0.5" />
                   )}
@@ -407,7 +404,7 @@ function QuestionCard({
 
         {/* Erklärung nur in der Ergebnis-Ansicht */}
         {isResultsView && (
-          <div className="bg-gray-50 dark:bg-gray-800/50 rounded-lg p-3 space-y-2">
+          <div className="bg-muted rounded-lg p-3 space-y-2">
             <p className="text-xs text-muted leading-relaxed">
               {stripMarkdownAsterisks(question.explanation)}
             </p>

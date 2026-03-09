@@ -103,7 +103,7 @@ function ScoreCircle({
         r={r}
         fill="none"
         strokeWidth="10"
-        className="stroke-gray-200 dark:stroke-gray-700"
+        className="stroke-[var(--border)]"
       />
       <circle
         cx="60"
@@ -122,18 +122,12 @@ function ScoreCircle({
         x="60"
         y="54"
         textAnchor="middle"
-        className="fill-gray-900 dark:fill-gray-100 text-2xl font-bold"
+        className="fill-[var(--text-primary)] text-2xl font-bold"
         fontSize="28"
       >
         {score}/{total}
       </text>
-      <text
-        x="60"
-        y="76"
-        textAnchor="middle"
-        className="fill-gray-500 dark:fill-gray-400 text-xs"
-        fontSize="12"
-      >
+      <text x="60" y="76" textAnchor="middle" className="fill-[var(--muted)] text-xs" fontSize="12">
         {Math.round(pct * 100)}%
       </text>
     </svg>
@@ -240,7 +234,7 @@ export default function WissenCheck() {
           ]}
         />
         <div>
-          <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Wissenscheck</h1>
+          <h1 className="text-2xl font-bold text-[var(--text-primary)]">Wissenscheck</h1>
           <p className="text-muted mt-1">
             Wähle ein Fach für einen kurzen Quick-Check (10 Fragen, 8 Min).
           </p>
@@ -260,7 +254,7 @@ export default function WissenCheck() {
                   <cfg.icon className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900 dark:text-gray-100">{cfg.label}</h3>
+                  <h3 className="font-semibold text-[var(--text-primary)]">{cfg.label}</h3>
                   <p className="text-xs text-muted">{QUESTION_COUNT} Fragen · 8 Min</p>
                 </div>
               </CardContent>
@@ -279,7 +273,7 @@ export default function WissenCheck() {
     return (
       <div className="max-w-3xl mx-auto py-10 text-center">
         <AlertTriangle className="w-12 h-12 mx-auto text-yellow-500 mb-4" />
-        <p className="text-lg text-gray-700 dark:text-gray-300">Unbekanntes Fach.</p>
+        <p className="text-lg text-[var(--text-secondary)]">Unbekanntes Fach.</p>
         <Button variant="outline" className="mt-4" onClick={() => navigate("/wissencheck")}>
           <ArrowLeft className="w-4 h-4 mr-2" />
           Fach wählen
@@ -310,22 +304,22 @@ export default function WissenCheck() {
               <SubjectIcon className="w-8 h-8 text-white" />
             </div>
             <div>
-              <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
+              <h1 className="text-2xl font-bold text-[var(--text-primary)]">
                 {config.label} Wissenscheck
               </h1>
               <p className="text-muted mt-2">Teste dein Wissen mit einem kurzen Quick-Check.</p>
             </div>
             <div className="flex justify-center gap-6 text-sm">
-              <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+              <div className="flex items-center gap-2 text-[var(--muted)]">
                 <CheckCircle2 className="w-4 h-4" />
                 <span>{QUESTION_COUNT} Fragen</span>
               </div>
-              <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+              <div className="flex items-center gap-2 text-[var(--muted)]">
                 <Clock className="w-4 h-4" />
                 <span>8 Minuten</span>
               </div>
             </div>
-            <div className="text-xs text-muted bg-gray-50 dark:bg-gray-800/50 rounded-lg p-3">
+            <div className="text-xs text-muted bg-[var(--border)]/30 rounded-lg p-3">
               Die Fragen werden zufällig aus dem gesamten Fragenpool ausgewählt. Beantworte alle
               Fragen innerhalb des Zeitlimits. Nach Ablauf der Zeit wird automatisch abgegeben.
             </div>
@@ -377,7 +371,7 @@ export default function WissenCheck() {
           />
           <Card>
             <CardContent className="p-6 text-center space-y-4">
-              <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100">
+              <h2 className="text-xl font-bold text-[var(--text-primary)]">
                 Logic-Builder abgeschlossen
               </h2>
               <div className="flex justify-center">
@@ -432,7 +426,7 @@ export default function WissenCheck() {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <SubjectIcon className={`w-5 h-5 ${config.color}`} />
-            <span className="font-semibold text-gray-900 dark:text-gray-100">
+            <span className="font-semibold text-[var(--text-primary)]">
               {config.label} · Logic-Builder
             </span>
           </div>
@@ -440,7 +434,7 @@ export default function WissenCheck() {
             Reihenfolge {logicIndex + 1} von {logicQuestions.length}
           </span>
         </div>
-        <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+        <div className="w-full bg-[var(--border)] rounded-full h-2">
           <div
             className={`${config.accent} h-2 rounded-full transition-all`}
             style={{ width: `${((logicIndex + 1) / logicQuestions.length) * 100}%` }}
@@ -475,7 +469,7 @@ export default function WissenCheck() {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <SubjectIcon className={`w-5 h-5 ${config.color}`} />
-            <span className="font-semibold text-gray-900 dark:text-gray-100">
+            <span className="font-semibold text-[var(--text-primary)]">
               {config.label} Wissenscheck
             </span>
           </div>
@@ -483,7 +477,7 @@ export default function WissenCheck() {
             className={`flex items-center gap-1.5 font-mono text-sm font-medium px-3 py-1 rounded-lg ${
               timeWarning
                 ? "bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400"
-                : "bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300"
+                : "bg-[var(--border)]/50 text-[var(--text-secondary)]"
             }`}
           >
             <Clock className="w-4 h-4" />
@@ -499,7 +493,7 @@ export default function WissenCheck() {
             </span>
             <span>{Object.keys(answers).length} beantwortet</span>
           </div>
-          <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+          <div className="w-full bg-[var(--border)] rounded-full h-2">
             <div
               className={`${config.accent} h-2 rounded-full transition-all duration-300`}
               style={{ width: `${((current + 1) / questions.length) * 100}%` }}
@@ -514,9 +508,7 @@ export default function WissenCheck() {
               <Badge variant="info" className="shrink-0 mt-0.5">
                 {current + 1}/{questions.length}
               </Badge>
-              <p className="text-gray-900 dark:text-gray-100 font-medium leading-relaxed">
-                {q.text}
-              </p>
+              <p className="text-[var(--text-primary)] font-medium leading-relaxed">{q.text}</p>
             </div>
 
             {/* Options */}
@@ -525,15 +517,14 @@ export default function WissenCheck() {
                 const letter = String.fromCharCode(65 + idx); // A, B, C, D, E
                 const isSelected = answers[q.id] === opt.id;
                 const isCorrect = opt.id === q.correctOptionId;
-                let optClass =
-                  "border-border dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-500 cursor-pointer";
+                let optClass = "border-[var(--border)] hover:border-[var(--muted)] cursor-pointer";
                 if (answered) {
                   if (isCorrect) {
                     optClass = "border-green-500 bg-green-50 dark:bg-green-900/20";
                   } else if (isSelected && !isCorrect) {
                     optClass = "border-red-500 bg-red-50 dark:bg-red-900/20";
                   } else {
-                    optClass = "border-border dark:border-gray-700 opacity-60";
+                    optClass = "border-[var(--border)] opacity-60";
                   }
                 }
                 return (
@@ -553,7 +544,7 @@ export default function WissenCheck() {
                             ? "bg-red-500 text-white"
                             : isSelected
                               ? `${config.accent} text-white`
-                              : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400"
+                              : "bg-[var(--border)]/50 text-[var(--muted)]"
                       }`}
                     >
                       {answered && isCorrect ? (
@@ -564,9 +555,7 @@ export default function WissenCheck() {
                         letter
                       )}
                     </span>
-                    <span className="text-sm text-gray-800 dark:text-gray-200 pt-0.5">
-                      {opt.text}
-                    </span>
+                    <span className="text-sm text-[var(--text-primary)] pt-0.5">{opt.text}</span>
                   </button>
                 );
               })}
@@ -617,7 +606,7 @@ export default function WissenCheck() {
       {/* Score Card */}
       <Card>
         <CardContent className="p-6 text-center space-y-4">
-          <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100">Ergebnis</h2>
+          <h2 className="text-xl font-bold text-[var(--text-primary)]">Ergebnis</h2>
           <div className="flex justify-center">
             <ScoreCircle score={score} total={questions.length} ringClass={config.ring} />
           </div>
@@ -647,7 +636,7 @@ export default function WissenCheck() {
 
       {/* Answer Review */}
       <div className="space-y-2">
-        <h3 className="font-semibold text-gray-900 dark:text-gray-100">Deine Antworten</h3>
+        <h3 className="font-semibold text-[var(--text-primary)]">Deine Antworten</h3>
         {questions.map((q, i) => {
           const selected = answers[q.id] || "";
           const correct = selected === q.correctOptionId;
@@ -664,7 +653,7 @@ export default function WissenCheck() {
                   ) : (
                     <XCircle className="w-5 h-5 text-red-500 shrink-0" />
                   )}
-                  <span className="text-sm text-gray-800 dark:text-gray-200 flex-1 line-clamp-1">
+                  <span className="text-sm text-[var(--text-primary)] flex-1 line-clamp-1">
                     {i + 1}. {q.text}
                   </span>
                   {isExpanded ? (
@@ -674,7 +663,7 @@ export default function WissenCheck() {
                   )}
                 </button>
                 {isExpanded && (
-                  <div className="px-4 pb-4 space-y-2 border-t border-border dark:border-gray-700 pt-3">
+                  <div className="px-4 pb-4 space-y-2 border-t border-[var(--border)] pt-3">
                     <div className="space-y-1">
                       {q.options.map((opt) => {
                         const isCorrectOpt = opt.id === q.correctOptionId;
@@ -687,7 +676,7 @@ export default function WissenCheck() {
                                 ? "bg-green-50 dark:bg-green-900/20 text-green-800 dark:text-green-300"
                                 : isSelectedOpt
                                   ? "bg-red-50 dark:bg-red-900/20 text-red-800 dark:text-red-300"
-                                  : "text-gray-600 dark:text-gray-400"
+                                  : "text-[var(--muted)]"
                             }`}
                           >
                             {isCorrectOpt && <CheckCircle2 className="w-3.5 h-3.5 shrink-0" />}
@@ -699,7 +688,7 @@ export default function WissenCheck() {
                         );
                       })}
                     </div>
-                    <div className="text-xs text-muted bg-gray-50 dark:bg-gray-800/50 rounded p-2">
+                    <div className="text-xs text-muted bg-[var(--border)]/30 rounded p-2">
                       {stripMarkdownAsterisks(q.explanation)}
                     </div>
                   </div>

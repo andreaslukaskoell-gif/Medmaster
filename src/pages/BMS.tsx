@@ -614,7 +614,7 @@ export default function BMS() {
             </div>
             <div className="w-full bg-[var(--border)] rounded-full h-1.5">
               <div
-                className="bg-[var(--color-primary-500)] h-1.5 rounded-full transition-all duration-300"
+                className="bg-[var(--accent)] h-1.5 rounded-full transition-all duration-500"
                 style={{ width: `${(subjectCompletedUK / subjectUK) * 100}%` }}
               />
             </div>
@@ -637,7 +637,7 @@ export default function BMS() {
         )}
 
         <div className="space-y-3">
-          <h2 className="text-lg font-semibold text-midnight dark:text-slate-100 flex items-center gap-2">
+          <h2 className="text-lg font-semibold text-[var(--text-primary)] flex items-center gap-2">
             <BookOpen className="w-5 h-5 text-primary-500" />
             Kapitel
           </h2>
@@ -652,10 +652,10 @@ export default function BMS() {
                     <subjectData.icon className="w-8 h-8" />
                   </div>
                 </div>
-                <h3 className="text-lg font-semibold text-midnight dark:text-slate-100 mb-2">
+                <h3 className="text-lg font-semibold text-[var(--text-primary)] mb-2">
                   Noch keine Kapitel vorhanden
                 </h3>
-                <p className="text-slate-600 dark:text-slate-400 mb-6">
+                <p className="text-[var(--muted)] mb-6">
                   Es gibt noch keine {subjectData.label}-Kapitel. Du kannst neue Kapitel im Editor
                   erstellen.
                 </p>
@@ -710,7 +710,7 @@ export default function BMS() {
                       <div className="text-2xl shrink-0">{kap.icon || "📚"}</div>
                       <div className="flex-1 min-w-0">
                         <div className="flex items-center gap-2 flex-wrap">
-                          <h3 className="font-medium text-midnight dark:text-slate-100">
+                          <h3 className="font-medium text-[var(--text-primary)]">
                             {kap.title || "Untitled Chapter"}
                           </h3>
                           {isCompleted && (
@@ -725,7 +725,7 @@ export default function BMS() {
                             </span>
                           )}
                         </div>
-                        <div className="flex items-center gap-3 mt-1 text-xs text-slate-500 dark:text-slate-400">
+                        <div className="flex items-center gap-3 mt-1 text-xs text-[var(--muted)]">
                           <span>{ukTotal} Unterkapitel</span>
                           {kap.estimatedTime && (
                             <span className="flex items-center gap-1">
@@ -734,14 +734,14 @@ export default function BMS() {
                             </span>
                           )}
                         </div>
-                        <div className="w-full bg-slate-100 dark:bg-slate-800 rounded-full h-1.5 mt-2">
+                        <div className="w-full bg-[var(--border)] rounded-full h-1.5 mt-2">
                           <div
-                            className="bg-primary-500 h-1.5 rounded-full transition-all duration-300"
+                            className="bg-[var(--accent)] h-1.5 rounded-full transition-all duration-500"
                             style={{ width: `${Math.min(100, progressPct)}%` }}
                           />
                         </div>
                       </div>
-                      <ChevronRight className="w-5 h-5 text-slate-400 shrink-0" />
+                      <ChevronRight className="w-5 h-5 text-[var(--muted)] shrink-0" />
                     </div>
                   </CardContent>
                 </Card>

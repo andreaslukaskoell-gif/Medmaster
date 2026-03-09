@@ -43,7 +43,7 @@ function ScoreArc({ score }: { score: number }) {
         stroke="#e5e7eb"
         strokeWidth="8"
         strokeLinecap="round"
-        className="dark:stroke-gray-700"
+        className="dark:stroke-[var(--border)]"
       />
       {/* Fill */}
       {score > 0 && (
@@ -98,12 +98,10 @@ export function MRSWidget({ mrs, loading, fallback }: Props) {
           <CardContent className="p-4">
             <div className="flex items-center justify-between mb-3">
               <div>
-                <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide">
+                <p className="text-xs font-semibold text-[var(--muted)] uppercase tracking-wide">
                   MedAT Readiness (BMS)
                 </p>
-                <p className="text-sm font-bold text-gray-900 dark:text-gray-100 mt-0.5">
-                  {scoreLabel}
-                </p>
+                <p className="text-sm font-bold text-[var(--text-primary)] mt-0.5">{scoreLabel}</p>
               </div>
               <ScoreArc score={score} />
             </div>
@@ -118,7 +116,7 @@ export function MRSWidget({ mrs, loading, fallback }: Props) {
     return (
       <Card className="border-dashed">
         <CardContent className="p-4 text-center space-y-1">
-          <TrendingUp className="w-6 h-6 mx-auto text-gray-300 dark:text-gray-600" />
+          <TrendingUp className="w-6 h-6 mx-auto text-[var(--muted)]/60" />
           <p className="text-xs text-muted-foreground font-medium">MedAT Readiness Score</p>
           <p className="text-xs text-muted-foreground">
             Beantworte BMS-Fragen im Fragen-Trainer, um deinen Score zu sehen.
@@ -142,34 +140,28 @@ export function MRSWidget({ mrs, loading, fallback }: Props) {
       <CardContent className="p-4">
         <div className="flex items-center justify-between mb-3">
           <div>
-            <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide">
+            <p className="text-xs font-semibold text-[var(--muted)] uppercase tracking-wide">
               MedAT Readiness
             </p>
-            <p className="text-sm font-bold text-gray-900 dark:text-gray-100 mt-0.5">
-              {scoreLabel}
-            </p>
+            <p className="text-sm font-bold text-[var(--text-primary)] mt-0.5">{scoreLabel}</p>
           </div>
           <ScoreArc score={mrs.score} />
         </div>
 
         <div className="grid grid-cols-3 gap-2 text-center">
-          <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-2">
-            <p className="text-xs font-bold text-gray-900 dark:text-gray-100">
-              {mrs.fsrsRetention}%
-            </p>
+          <div className="bg-[var(--border)]/30 rounded-lg p-2">
+            <p className="text-xs font-bold text-[var(--text-primary)]">{mrs.fsrsRetention}%</p>
             <p className="text-[10px] text-muted-foreground">Retention</p>
           </div>
-          <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-2">
-            <p className="text-xs font-bold text-gray-900 dark:text-gray-100">
+          <div className="bg-[var(--border)]/30 rounded-lg p-2">
+            <p className="text-xs font-bold text-[var(--text-primary)]">
               {mrs.consistencyDays}
               <span className="font-normal text-[10px]">d</span>
             </p>
             <p className="text-[10px] text-muted-foreground">Kontinuität</p>
           </div>
-          <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-2">
-            <p className="text-xs font-bold text-gray-900 dark:text-gray-100">
-              {mrs.totalAttempts}
-            </p>
+          <div className="bg-[var(--border)]/30 rounded-lg p-2">
+            <p className="text-xs font-bold text-[var(--text-primary)]">{mrs.totalAttempts}</p>
             <p className="text-[10px] text-muted-foreground">Antworten</p>
           </div>
         </div>

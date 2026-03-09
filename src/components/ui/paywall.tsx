@@ -13,12 +13,12 @@ export function Paywall({ feature, requiredTier = "standard", children }: Props)
   return (
     <div className="relative">
       <div className="blur-sm pointer-events-none select-none">{children}</div>
-      <div className="absolute inset-0 bg-white/60 dark:bg-gray-900/70 backdrop-blur-sm flex items-center justify-center rounded-xl">
+      <div className="absolute inset-0 bg-background/60 backdrop-blur-sm flex items-center justify-center rounded-xl">
         <div className="text-center p-6 max-w-sm">
-          <div className="w-14 h-14 bg-gray-100 dark:bg-gray-800 rounded-2xl flex items-center justify-center mx-auto mb-4">
-            <Lock className="w-7 h-7 text-gray-500" />
+          <div className="w-14 h-14 bg-muted rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <Lock className="w-7 h-7 text-muted-foreground" />
           </div>
-          <h3 className="font-bold text-gray-900 dark:text-gray-100 mb-2">
+          <h3 className="font-bold text-foreground mb-2">
             {requiredTier === "pro" ? "Pro" : "Standard"}-Feature
           </h3>
           <p className="text-sm text-muted mb-4">

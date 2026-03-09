@@ -108,7 +108,7 @@ export default function EmotionenErkennenUeben() {
         <div className="flex items-center gap-2">
           <button
             onClick={handleShuffle}
-            className="text-muted hover:text-gray-700 dark:hover:text-gray-300 cursor-pointer"
+            className="text-muted-foreground hover:text-foreground cursor-pointer"
             title="Zufällige Reihenfolge"
           >
             <Shuffle className="w-4 h-4" />
@@ -128,7 +128,7 @@ export default function EmotionenErkennenUeben() {
           </span>
           <button
             onClick={handleReset}
-            className="text-muted hover:text-gray-700 dark:hover:text-gray-300 cursor-pointer"
+            className="text-muted-foreground hover:text-foreground cursor-pointer"
             title="Zurücksetzen"
           >
             <RotateCcw className="w-4 h-4" />
@@ -136,7 +136,7 @@ export default function EmotionenErkennenUeben() {
         </div>
       </div>
 
-      <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5">
+      <div className="w-full bg-muted rounded-full h-1.5">
         <div
           className="h-1.5 rounded-full bg-amber-500 transition-all"
           style={{ width: `${((index + 1) / tasks.length) * 100}%` }}
@@ -145,15 +145,13 @@ export default function EmotionenErkennenUeben() {
 
       <Card>
         <CardContent className="p-6 space-y-6">
-          <div className="bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg">
+          <div className="bg-muted/50 p-4 rounded-lg">
             <p className="text-xs text-muted uppercase tracking-wide mb-1">
               Situationsbeschreibung
             </p>
-            <p className="text-sm text-gray-800 dark:text-gray-200 leading-relaxed">
-              {currentTask.situation}
-            </p>
+            <p className="text-sm text-foreground leading-relaxed">{currentTask.situation}</p>
           </div>
-          <p className="text-sm font-medium text-gray-900 dark:text-gray-100">
+          <p className="text-sm font-medium text-foreground">
             Wie fühlt sich {currentTask.personName} in dieser Situation? Eher wahrscheinlich oder
             eher unwahrscheinlich?
           </p>
@@ -165,9 +163,9 @@ export default function EmotionenErkennenUeben() {
               return (
                 <div
                   key={e.id}
-                  className={`flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 p-3 rounded-lg border ${showResult ? (isRight ? "border-green-500 dark:border-green-600 bg-green-50 dark:bg-green-900/15" : "border-red-500 dark:border-red-600 bg-red-50 dark:bg-red-900/15") : "border-border dark:border-gray-700"}`}
+                  className={`flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 p-3 rounded-lg border ${showResult ? (isRight ? "border-green-500 dark:border-green-600 bg-green-50 dark:bg-green-900/15" : "border-red-500 dark:border-red-600 bg-red-50 dark:bg-red-900/15") : "border-border"}`}
                 >
-                  <span className="text-sm font-medium text-gray-900 dark:text-gray-100">
+                  <span className="text-sm font-medium text-foreground">
                     ({e.id}) {e.text}
                     {showResult && (
                       <span className="ml-2">
@@ -189,7 +187,7 @@ export default function EmotionenErkennenUeben() {
                       className={`px-3 py-2 rounded-lg text-xs font-medium transition-colors cursor-pointer disabled:cursor-default ${
                         val === "wahrscheinlich"
                           ? "bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 border border-green-300 dark:border-green-700"
-                          : "bg-gray-50 dark:bg-gray-800 text-gray-500 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700"
+                          : "bg-muted/50 text-muted-foreground border border-border hover:bg-muted"
                       }`}
                     >
                       eher wahrscheinlich
@@ -201,7 +199,7 @@ export default function EmotionenErkennenUeben() {
                       className={`px-3 py-2 rounded-lg text-xs font-medium transition-colors cursor-pointer disabled:cursor-default ${
                         val === "unwahrscheinlich"
                           ? "bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400 border border-red-300 dark:border-red-700"
-                          : "bg-gray-50 dark:bg-gray-800 text-gray-500 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700"
+                          : "bg-muted/50 text-muted-foreground border border-border hover:bg-muted"
                       }`}
                     >
                       eher unwahrscheinlich
@@ -252,11 +250,9 @@ export default function EmotionenErkennenUeben() {
           </div>
 
           {isChecked && (
-            <div className="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4">
-              <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100 mb-2">
-                Erklärung
-              </h4>
-              <p className="text-sm text-gray-700 dark:text-gray-300">{currentTask.explanation}</p>
+            <div className="bg-muted/50 border border-border rounded-lg p-4">
+              <h4 className="text-sm font-semibold text-foreground mb-2">Erklärung</h4>
+              <p className="text-sm text-muted-foreground">{currentTask.explanation}</p>
             </div>
           )}
         </CardContent>

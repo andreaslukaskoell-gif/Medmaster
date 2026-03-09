@@ -22,14 +22,12 @@ export default function StrategyGuideView({ guide, onBack }: Props) {
       <Button variant="ghost" size="sm" onClick={onBack}>
         <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
       </Button>
-      <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">{guide.title}</h1>
+      <h1 className="text-2xl font-bold text-[var(--text-primary)]">{guide.title}</h1>
       {guide.sections.map((s, i) => (
         <Card key={i}>
           <CardContent className="p-6">
-            <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">
-              {s.heading}
-            </h2>
-            <div className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-line">
+            <h2 className="text-lg font-semibold text-[var(--text-primary)] mb-3">{s.heading}</h2>
+            <div className="text-sm text-[var(--text-secondary)] leading-relaxed whitespace-pre-line">
               {s.content}
             </div>
           </CardContent>

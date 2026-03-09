@@ -220,8 +220,6 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
   }, []);
 
   const lastPath = useAdaptiveStore((s) => s.lastPath);
-  const lastViewedKapitelId = useAdaptiveStore((s) => s.lastViewedKapitelId);
-  const lastViewedUnterkapitelId = useAdaptiveStore((s) => s.lastViewedUnterkapitelId);
 
   const xp = useStore((s) => s.xp);
   const currentLevel = useMemo(() => getLevelFromXP(xp ?? 0), [xp]);
@@ -256,37 +254,53 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
 
   const lastPathLabel = useMemo(() => {
     if (!lastPath || lastPath === "/" || lastPath === "/bms") return null;
-    if (lastViewedUnterkapitelId && bmsModule) {
-      const found = bmsModule.findChapterByUnterkapitelId(lastViewedUnterkapitelId);
-      if (found) {
-        const uk = found.kapitel.unterkapitel?.[found.index];
-        const subj: Record<string, string> = {
-          biologie: "Bio",
-          chemie: "Chemie",
-          physik: "Physik",
-          mathematik: "Mathe",
-        };
-        return uk
-          ? `${subj[found.kapitel.subject]} · ${uk.title}`
-          : `${subj[found.kapitel.subject]} · ${found.kapitel.title}`;
+
+    const subj: Record<string, string> = {
+      biologie: "Bio",
+      chemie: "Chemie",
+      physik: "Physik",
+      mathematik: "Mathe",
+    };
+
+    // Parse subject and kapitelId directly from the lastPath URL
+    // to avoid stale lastViewedKapitelId/lastViewedUnterkapitelId
+    const slugToSubject: Record<string, string> = {
+      biologie: "biologie",
+      chemie: "chemie",
+      physik: "physik",
+      mathematik: "mathematik",
+    };
+    const pathMatch = lastPath.match(/\/bms\/([^/]+)(?:\/([^/]+))?/);
+    if (pathMatch && bmsModule) {
+      const subjectSlug = pathMatch[1];
+      const kapitelSlug = pathMatch[2]; // may be undefined for subject-level paths
+      const subjectId = slugToSubject[subjectSlug];
+
+      if (subjectId && kapitelSlug) {
+        // Try to find the Kapitel by its id from the URL
+        const kap = bmsModule.getKapitelById(kapitelSlug);
+        if (kap) {
+          // Verify the kapitel actually belongs to this subject
+          if (kap.subject === subjectId) {
+            return `${subj[subjectId]} · ${kap.title}`;
+          }
+        }
+        // Fallback: use slug as-is
+        return `${subj[subjectId] ?? subjectSlug} · ${kapitelSlug}`;
+      }
+      if (subjectId && !kapitelSlug) {
+        return `${subj[subjectId]} · Übersicht`;
       }
     }
-    if (lastViewedKapitelId && bmsModule) {
-      const kap = bmsModule.getKapitelById(lastViewedKapitelId);
-      if (kap) {
-        const subj: Record<string, string> = {
-          biologie: "Bio",
-          chemie: "Chemie",
-          physik: "Physik",
-          mathematik: "Mathe",
-        };
-        return `${subj[kap.subject]} · ${kap.title}`;
-      }
+
+    // Non-BMS last path
+    if (pathMatch) {
+      const m = pathMatch;
+      return m[2] ? `${m[1]} · ${m[2]}` : m[1];
     }
-    const m = lastPath.match(/\/bms\/([^/]+)\/([^/]+)/);
-    if (m) return `${m[1]} · ${m[2]}`;
+
     return "Zuletzt gelesen";
-  }, [lastPath, lastViewedKapitelId, lastViewedUnterkapitelId, bmsModule]);
+  }, [lastPath, bmsModule]);
 
   const isLastPathActive = lastPath !== null && lastPath !== "/" && pathname === lastPath;
   const filterDue = useMemo(() => new URLSearchParams(search).get("filter") === "due", [search]);

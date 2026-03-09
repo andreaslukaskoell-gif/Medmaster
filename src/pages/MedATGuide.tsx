@@ -190,14 +190,10 @@ const SECTIONS: { id: string; title: string; content: ContentBlock[] }[] = [
 
 function ContentParagraph({ block }: { block: ContentBlock }) {
   if (typeof block === "string") {
-    return (
-      <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
-        {block}
-      </p>
-    );
+    return <p className="text-sm sm:text-base text-app-foreground/80 leading-relaxed">{block}</p>;
   }
   return (
-    <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
+    <p className="text-sm sm:text-base text-app-foreground/80 leading-relaxed">
       <strong>{block.bold}</strong>
       {block.rest}
     </p>
@@ -267,8 +263,8 @@ export default function MedATGuide() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-950">
-      <nav className="sticky top-0 z-40 bg-white/90 dark:bg-gray-950/90 backdrop-blur-xl border-b border-gray-100 dark:border-gray-800/50 shadow-sm">
+    <div className="min-h-screen bg-background">
+      <nav className="sticky top-0 z-40 bg-background/90 backdrop-blur-xl border-b border-border/50 shadow-sm">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
             <div
@@ -277,7 +273,7 @@ export default function MedATGuide() {
             >
               <GraduationCap className="w-4 h-4" />
             </div>
-            <span className="text-lg font-bold text-gray-900 dark:text-gray-100">MedMaster</span>
+            <span className="text-lg font-bold text-app-foreground">MedMaster</span>
           </Link>
           <Link
             to="/register"
@@ -289,15 +285,15 @@ export default function MedATGuide() {
         </div>
       </nav>
 
-      <header className="bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800">
+      <header className="bg-card border-b border-border">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-14 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-2xl text-sm font-medium mb-6 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-400">
             Aktualisiert für 2026
           </div>
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-gray-100 mb-4">
+          <h1 className="text-3xl sm:text-4xl font-extrabold text-app-foreground mb-4">
             MedAT 2026: Alles was du wissen musst
           </h1>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="text-lg text-muted max-w-2xl mx-auto">
             Testaufbau, Vorbereitung, Tipps — der komplette Guide von MedAT-Absolventen.
           </p>
         </div>
@@ -305,8 +301,8 @@ export default function MedATGuide() {
 
       {/* Table of Contents */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-6">
-        <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-6">
-          <h2 className="text-sm font-bold text-gray-900 dark:text-gray-100 mb-3 uppercase tracking-wide">
+        <div className="bg-card rounded-2xl border border-border p-6">
+          <h2 className="text-sm font-bold text-app-foreground mb-3 uppercase tracking-wide">
             Inhalt
           </h2>
           <nav className="grid grid-cols-1 sm:grid-cols-2 gap-1">
@@ -328,11 +324,9 @@ export default function MedATGuide() {
           <section
             key={s.id}
             id={s.id}
-            className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-6 sm:p-8"
+            className="bg-card rounded-2xl border border-border p-6 sm:p-8"
           >
-            <h2 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-gray-100 mb-5">
-              {s.title}
-            </h2>
+            <h2 className="text-xl sm:text-2xl font-bold text-app-foreground mb-5">{s.title}</h2>
             <div className="space-y-4">
               {s.content.map((block, i) => (
                 <ContentParagraph key={i} block={block} />
@@ -343,10 +337,10 @@ export default function MedATGuide() {
 
         {/* CTA */}
         <div className="text-center bg-white dark:bg-gray-900 rounded-2xl p-8 sm:p-10 border border-gray-200 dark:border-gray-800">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-3">
+          <h2 className="text-2xl font-bold text-app-foreground mb-3">
             Bereit für die MedAT-Vorbereitung?
           </h2>
-          <p className="text-gray-600 dark:text-gray-400 mb-6 max-w-md mx-auto">
+          <p className="text-muted mb-6 max-w-md mx-auto">
             Starte jetzt mit 4.300+ Übungsfragen, KI-adaptivem Lernen und Prüfungssimulationen —
             komplett kostenlos.
           </p>
@@ -360,7 +354,7 @@ export default function MedATGuide() {
             </Link>
             <Link
               to="/medat-uebungsfragen"
-              className="inline-flex items-center justify-center gap-2 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 font-semibold px-8 py-4 rounded-2xl text-base"
+              className="inline-flex items-center justify-center gap-2 bg-surface text-app-foreground/80 font-semibold px-8 py-4 rounded-2xl text-base"
             >
               Übungsfragen testen
             </Link>
@@ -371,45 +365,41 @@ export default function MedATGuide() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <Link
             to="/faq"
-            className="flex items-center gap-3 p-5 rounded-2xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-700 transition-colors"
+            className="flex items-center gap-3 p-5 rounded-2xl bg-card border border-border hover:border-border transition-colors"
           >
             <span className="text-2xl">❓</span>
             <div>
-              <span className="text-sm font-semibold text-gray-900 dark:text-gray-100 block">
-                FAQ
-              </span>
-              <span className="text-xs text-gray-500">Häufige Fragen zum MedAT</span>
+              <span className="text-sm font-semibold text-app-foreground block">FAQ</span>
+              <span className="text-xs text-muted">Häufige Fragen zum MedAT</span>
             </div>
           </Link>
           <Link
             to="/medat-uebungsfragen"
-            className="flex items-center gap-3 p-5 rounded-2xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-700 transition-colors"
+            className="flex items-center gap-3 p-5 rounded-2xl bg-card border border-border hover:border-border transition-colors"
           >
             <span className="text-2xl">✏️</span>
             <div>
-              <span className="text-sm font-semibold text-gray-900 dark:text-gray-100 block">
-                Übungsfragen
-              </span>
-              <span className="text-xs text-gray-500">BMS + KFF kostenlos testen</span>
+              <span className="text-sm font-semibold text-app-foreground block">Übungsfragen</span>
+              <span className="text-xs text-muted">BMS + KFF kostenlos testen</span>
             </div>
           </Link>
         </div>
       </main>
 
-      <footer className="py-6 bg-gray-100 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
+      <footer className="py-6 bg-surface border-t border-border">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <div className="flex items-center gap-2">
-            <GraduationCap className="w-4 h-4 text-gray-400" />
-            <span className="text-sm font-semibold text-gray-500">MedMaster</span>
+            <GraduationCap className="w-4 h-4 text-muted" />
+            <span className="text-sm font-semibold text-muted">MedMaster</span>
           </div>
-          <div className="flex gap-4 text-xs text-gray-400">
-            <Link to="/impressum" className="hover:text-gray-600 transition-colors">
+          <div className="flex gap-4 text-xs text-muted">
+            <Link to="/impressum" className="hover:text-app-foreground transition-colors">
               Impressum
             </Link>
-            <Link to="/datenschutz" className="hover:text-gray-600 transition-colors">
+            <Link to="/datenschutz" className="hover:text-app-foreground transition-colors">
               Datenschutz
             </Link>
-            <Link to="/agb" className="hover:text-gray-600 transition-colors">
+            <Link to="/agb" className="hover:text-app-foreground transition-colors">
               AGB
             </Link>
           </div>

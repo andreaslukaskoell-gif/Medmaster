@@ -20,14 +20,14 @@ export function LevelGate({ requiredLevel, featureLabel, children }: LevelGatePr
 
   return (
     <div className="min-h-[60vh] flex items-center justify-center p-6">
-      <div className="max-w-md w-full rounded-2xl border-2 border-amber-200 dark:border-violet-800 bg-linear-to-b from-amber-50/80 to-violet-50/80 dark:from-slate-900 dark:to-violet-950/30 p-8 text-center shadow-xl">
+      <div className="max-w-md w-full rounded-2xl border-2 border-amber-200 dark:border-violet-800 bg-linear-to-b from-amber-50/80 to-violet-50/80 dark:from-background dark:to-violet-950/30 p-8 text-center shadow-xl">
         <div className="w-16 h-16 rounded-full bg-amber-100 dark:bg-violet-900/50 flex items-center justify-center mx-auto mb-4">
           <Lock className="w-8 h-8 text-amber-600 dark:text-violet-400" />
         </div>
         <h2 className="text-xl font-bold text-amber-900 dark:text-amber-100 mb-2">
           {featureLabel} ab Level {requiredLevel}
         </h2>
-        <p className="text-slate-600 dark:text-slate-400 mb-2">
+        <p className="text-muted-foreground mb-2">
           Du bist aktuell Level {level}. Lese Kapitel und beantworte Quizfragen, um XP zu sammeln
           und Level {requiredLevel} zu erreichen.
         </p>

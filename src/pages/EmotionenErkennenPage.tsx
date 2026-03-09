@@ -36,9 +36,7 @@ export default function EmotionenErkennenPage() {
           <Eye className="w-6 h-6 text-amber-600 dark:text-amber-400" />
         </div>
         <div>
-          <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
-            Emotionen erkennen
-          </h1>
+          <h1 className="text-2xl font-bold text-foreground">Emotionen erkennen</h1>
           <div className="flex items-center gap-3 mt-1">
             <span className="text-sm text-muted">SEK</span>
             {progress && progress.total > 0 && (
@@ -54,7 +52,7 @@ export default function EmotionenErkennenPage() {
       </div>
 
       {/* Tabs */}
-      <div className="flex gap-1 bg-gray-100 dark:bg-gray-800 rounded-lg p-1">
+      <div className="flex gap-1 bg-muted rounded-lg p-1">
         {tabs.map((tab) => {
           const TabIcon = tab.icon;
           const isActive = activeTab === tab.key;
@@ -64,8 +62,8 @@ export default function EmotionenErkennenPage() {
               onClick={() => setActiveTab(tab.key)}
               className={`flex-1 flex items-center justify-center gap-2 px-4 py-2.5 rounded-md text-sm font-medium transition-all cursor-pointer ${
                 isActive
-                  ? "bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 shadow-sm"
-                  : "text-muted hover:text-gray-700 dark:hover:text-gray-300"
+                  ? "bg-background text-foreground shadow-sm"
+                  : "text-muted-foreground hover:text-foreground"
               }`}
             >
               <TabIcon className="w-4 h-4" />

@@ -38,7 +38,7 @@ const OPTIONS: { value: Confidence; emoji: string; label: string; ring: string; 
 export function ConfidenzButtons({ value, onChange, disabled }: Props) {
   return (
     <div className="space-y-1.5">
-      <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide">
+      <p className="text-xs font-semibold text-[var(--muted)] uppercase tracking-wide">
         Wie sicher bist du?
       </p>
       <div className="flex gap-2">
@@ -51,7 +51,7 @@ export function ConfidenzButtons({ value, onChange, disabled }: Props) {
               ${
                 value === opt.value
                   ? `${opt.bg} ${opt.ring} ring-2 border-transparent scale-105 shadow-sm`
-                  : "border-border hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-600 dark:text-gray-400"
+                  : "border-border hover:bg-[var(--border)]/50 text-[var(--muted)]"
               }
               ${disabled ? "opacity-50 cursor-default" : ""}
             `}

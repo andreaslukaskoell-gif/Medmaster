@@ -18,7 +18,7 @@ const SUBJECT_CONFIG: Record<string, { label: string; emoji: string; color: stri
   chemie: { label: "Chemie", emoji: "⚗️", color: "text-red-600" },
   physik: { label: "Physik", emoji: "⚛️", color: "text-blue-600" },
   mathematik: { label: "Mathematik", emoji: "📐", color: "text-violet-600" },
-  gemischt: { label: "Gemischt", emoji: "🎯", color: "text-gray-700" },
+  gemischt: { label: "Gemischt", emoji: "🎯", color: "text-foreground" },
 };
 
 /** Seeded random using daily seed + optional challenge seed */
@@ -123,17 +123,15 @@ export default function QuizChallenge() {
   // ── INTRO ──────────────────────────────────────────────────────
   if (phase === "intro") {
     return (
-      <div className="min-h-screen bg-gray-50 dark:bg-gray-950 flex items-center justify-center p-4">
+      <div className="min-h-screen bg-background flex items-center justify-center p-4">
         <Card className="max-w-md w-full">
           <CardContent className="p-8 text-center space-y-6">
             <div className="w-20 h-20 mx-auto rounded-2xl flex items-center justify-center bg-linear-to-br from-[#1b3ea7] to-[#3655b2]">
-              <Zap className="w-10 h-10 text-white" />
+              <Zap className="w-10 h-10 text-primary-foreground" />
             </div>
 
             <div>
-              <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
-                MedAT Quiz-Challenge
-              </h1>
+              <h1 className="text-2xl font-bold text-foreground">MedAT Quiz-Challenge</h1>
               <p className="text-muted mt-2">
                 {QUESTION_COUNT} Fragen &bull; {TIME_PER_QUESTION}s pro Frage &bull;{" "}
                 <span className={config.color}>
@@ -168,7 +166,7 @@ export default function QuizChallenge() {
                       <Link
                         key={key}
                         to={`/challenge?fach=${key}`}
-                        className="text-xs px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition"
+                        className="text-xs px-3 py-1.5 rounded-full bg-muted hover:bg-accent transition"
                       >
                         {cfg.emoji} {cfg.label}
                       </Link>
@@ -192,17 +190,13 @@ export default function QuizChallenge() {
     const answered = answers[q.id];
 
     return (
-      <div className="min-h-screen bg-gray-50 dark:bg-gray-950 p-4">
+      <div className="min-h-screen bg-background p-4">
         <div className="max-w-lg mx-auto space-y-4">
           {/* Header: timer + progress */}
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2 text-sm font-medium">
               <Timer className="w-4 h-4 text-muted" />
-              <span
-                className={
-                  timeLeft < 30 ? "text-red-500 font-bold" : "text-gray-700 dark:text-gray-300"
-                }
-              >
+              <span className={timeLeft < 30 ? "text-red-500 font-bold" : "text-foreground"}>
                 {formatTime(timeLeft)}
               </span>
             </div>
@@ -217,7 +211,7 @@ export default function QuizChallenge() {
                         ? answers[questions[i].id] === questions[i].correctOptionId
                           ? "bg-green-500"
                           : "bg-red-400"
-                        : "bg-gray-300 dark:bg-gray-600"
+                        : "bg-muted-foreground/30"
                   }`}
                 />
               ))}
@@ -230,9 +224,7 @@ export default function QuizChallenge() {
           {/* Question */}
           <Card>
             <CardContent className="p-6 space-y-4">
-              <p className="text-lg font-semibold text-gray-900 dark:text-gray-100 leading-relaxed">
-                {q.text}
-              </p>
+              <p className="text-lg font-semibold text-foreground leading-relaxed">{q.text}</p>
 
               <div className="space-y-2">
                 {q.options.map((opt, i) => {
@@ -241,12 +233,12 @@ export default function QuizChallenge() {
                   const showResult = !!answered;
 
                   let style =
-                    "border-gray-200 dark:border-gray-700 hover:border-[#1b3ea7] hover:bg-blue-50/50 dark:hover:bg-blue-900/20 cursor-pointer";
+                    "border-border hover:border-[#1b3ea7] hover:bg-blue-50/50 dark:hover:bg-blue-900/20 cursor-pointer";
                   if (showResult && isCorrect)
                     style = "border-green-500 bg-green-50 dark:bg-green-900/20";
                   else if (showResult && isSelected && !isCorrect)
                     style = "border-red-400 bg-red-50 dark:bg-red-900/20";
-                  else if (showResult) style = "border-gray-200 dark:border-gray-700 opacity-60";
+                  else if (showResult) style = "border-border opacity-60";
 
                   return (
                     <button
@@ -255,7 +247,7 @@ export default function QuizChallenge() {
                       disabled={!!answered}
                       className={`w-full flex items-center gap-3 p-3 rounded-xl border-2 transition-all text-left ${style}`}
                     >
-                      <span className="w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-lg bg-gray-100 dark:bg-gray-800 font-bold text-sm">
+                      <span className="w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-lg bg-muted font-bold text-sm">
                         {OPTION_LABELS[i]}
                       </span>
                       <span className="flex-1 text-sm">{opt.text}</span>
@@ -310,7 +302,7 @@ export default function QuizChallenge() {
           : "Hier ist Potential!";
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-950 p-4">
+    <div className="min-h-screen bg-background p-4">
       <div className="max-w-lg mx-auto space-y-6">
         {/* Score card */}
         <Card>
@@ -323,14 +315,12 @@ export default function QuizChallenge() {
               <p className="text-muted mt-1">
                 {pct}% richtig &bull; {formatTime(totalTime)}
               </p>
-              <p className="text-lg font-semibold mt-2 text-gray-800 dark:text-gray-200">
-                {message}
-              </p>
+              <p className="text-lg font-semibold mt-2 text-foreground">{message}</p>
             </div>
 
             {/* Score bar */}
             <div className="w-full max-w-xs mx-auto">
-              <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
+              <div className="w-full bg-muted rounded-full h-3">
                 <div
                   className={`h-3 rounded-full transition-all ${
                     pct >= 80 ? "bg-green-500" : pct >= 50 ? "bg-amber-500" : "bg-red-500"
@@ -342,9 +332,7 @@ export default function QuizChallenge() {
 
             {/* Share */}
             <div className="pt-2 space-y-3">
-              <p className="text-sm font-semibold text-gray-700 dark:text-gray-300">
-                Fordere deine Freunde heraus!
-              </p>
+              <p className="text-sm font-semibold text-foreground">Fordere deine Freunde heraus!</p>
               <ShareResultButton text={shareText} />
             </div>
           </CardContent>
@@ -368,7 +356,7 @@ export default function QuizChallenge() {
                       <XCircle className="w-5 h-5 text-red-400 mt-0.5 flex-shrink-0" />
                     )}
                     <div className="space-y-1">
-                      <p className="text-sm font-medium text-gray-900 dark:text-gray-100">
+                      <p className="text-sm font-medium text-foreground">
                         {i + 1}. {q.text}
                       </p>
                       {!correct && (
@@ -390,7 +378,7 @@ export default function QuizChallenge() {
         {/* CTA */}
         <Card className="border-2" style={{ borderColor: NAVY }}>
           <CardContent className="p-6 text-center space-y-4">
-            <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100">Bereit für mehr?</h3>
+            <h3 className="text-lg font-bold text-foreground">Bereit für mehr?</h3>
             <p className="text-sm text-muted">
               4.300+ Übungsfragen &bull; Alle MedAT-Bereiche &bull; KI-Adaptiv &bull; 2 Wochen
               gratis
@@ -406,7 +394,7 @@ export default function QuizChallenge() {
               </Link>
               <Link
                 to={`/challenge?fach=${subject}`}
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl border-2 font-semibold transition-colors hover:bg-gray-50 dark:hover:bg-gray-800"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl border-2 font-semibold transition-colors hover:bg-accent"
                 style={{ borderColor: NAVY, color: NAVY }}
               >
                 Nochmal spielen

@@ -144,10 +144,7 @@ function buildMarkdownComponents(keywordLinkEntries?: KeywordLinkEntry[]) {
     },
     table: ({ children, ...props }: ComponentProps<"table">) => (
       <div className="overflow-x-auto my-4">
-        <table
-          className="w-full text-sm border-collapse border border-gray-200 dark:border-gray-700"
-          {...props}
-        >
+        <table className="w-full text-sm border-collapse border border-border" {...props}>
           {children}
         </table>
       </div>
@@ -626,7 +623,7 @@ export function SubchapterContent({
     <div className="space-y-6 content-section">
       {topics.length > 0 && (
         <div className="flex flex-wrap gap-1.5 pb-3 border-b border-[var(--border)]">
-          <span className="text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wide self-center mr-1">
+          <span className="text-xs font-semibold text-foreground uppercase tracking-wide self-center mr-1">
             Themen:
           </span>
           {topics.map((topic) => (

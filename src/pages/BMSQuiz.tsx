@@ -232,9 +232,7 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
             return (
               <Card>
                 <CardContent className="p-5">
-                  <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-100 mb-3">
-                    Ergebnis nach Fach
-                  </h3>
+                  <h3 className="text-sm font-semibold text-foreground mb-3">Ergebnis nach Fach</h3>
                   <div className="grid grid-cols-2 gap-3">
                     {Object.entries(bySubject).map(([subj, data]) => {
                       const c = subjectColors[subj];
@@ -281,7 +279,7 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
                     ) : (
                       <XCircle className="w-5 h-5 text-red-500 mt-0.5 shrink-0" />
                     )}
-                    <p className="text-sm font-medium text-gray-900 dark:text-gray-100">
+                    <p className="text-sm font-medium text-foreground">
                       {i + 1}. {q.text}
                     </p>
                   </div>
@@ -297,7 +295,7 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
                               ? "bg-green-50 dark:bg-green-900/20 text-green-800 dark:text-green-300 font-medium"
                               : isSelected && !isCorrectOpt
                                 ? "bg-red-50 dark:bg-red-900/20 text-red-800 dark:text-red-300 line-through"
-                                : "text-gray-600 dark:text-gray-400"
+                                : "text-muted-foreground"
                           }`}
                         >
                           {opt.id.toUpperCase()}) {opt.text}
@@ -372,7 +370,7 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
           </Badge>
           <button
             onClick={() => toggleFlagQuestion(currentQuestion.id)}
-            className={`p-1.5 rounded cursor-pointer ${isFlagged ? "text-red-500" : "text-muted hover:text-gray-700 dark:hover:text-gray-300"}`}
+            className={`p-1.5 rounded cursor-pointer ${isFlagged ? "text-red-500" : "text-muted hover:text-foreground"}`}
             title="Markieren (F)"
           >
             <Flag className="w-4 h-4" />
@@ -383,7 +381,7 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
         </div>
       </div>
 
-      <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+      <div className="w-full bg-muted rounded-full h-2">
         <div
           className="bg-primary-600 h-2 rounded-full transition-all"
           style={{ width: `${((currentIndex + 1) / questions.length) * 100}%` }}
@@ -392,9 +390,7 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
 
       <Card>
         <CardContent className="p-6">
-          <p className="text-base font-medium text-gray-900 dark:text-gray-100 mb-6">
-            {currentQuestion.text}
-          </p>
+          <p className="text-base font-medium text-foreground mb-6">{currentQuestion.text}</p>
           <div className="space-y-3">
             {currentQuestion.options.map((opt, i) => (
               <button
@@ -403,12 +399,12 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
                 className={`w-full text-left px-4 py-3 rounded-lg border text-sm transition-colors cursor-pointer ${
                   answers[currentQuestion.id] === opt.id
                     ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300"
-                    : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300"
+                    : "border-border dark:border-border hover:bg-accent text-foreground"
                 }`}
               >
                 <span className="font-semibold mr-2">{opt.id.toUpperCase()})</span>
                 {opt.text}
-                <kbd className="float-right text-[10px] bg-gray-200 dark:bg-gray-600 px-1.5 py-0.5 rounded text-muted">
+                <kbd className="float-right text-[10px] bg-muted px-1.5 py-0.5 rounded text-muted">
                   {i + 1}
                 </kbd>
               </button>
@@ -467,7 +463,7 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
                 ? "bg-primary-700 text-white"
                 : answers[q.id]
                   ? "bg-primary-200 dark:bg-primary-800 text-primary-800 dark:text-primary-200"
-                  : "bg-gray-200 dark:bg-gray-700 text-gray-500 dark:text-gray-400"
+                  : "bg-muted text-muted-foreground"
             }`}
           >
             {i + 1}

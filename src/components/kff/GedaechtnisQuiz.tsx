@@ -44,18 +44,18 @@ function AllergyPassCard({ pass }: { pass: AllergyPass }) {
     .toUpperCase()
     .slice(0, 2);
   return (
-    <div className="rounded-2xl border border-gray-300 dark:border-gray-600 bg-gray-100 dark:bg-gray-800 shadow-md overflow-hidden">
+    <div className="rounded-2xl border border-[var(--border)] bg-[var(--border)]/50 shadow-md overflow-hidden">
       {/* Header — MedAT-Stil */}
-      <div className="flex items-center justify-between px-4 py-2 border-b-2 border-red-500 bg-white dark:bg-gray-900">
-        <span className="text-base font-bold tracking-wide text-gray-700 dark:text-gray-200">
+      <div className="flex items-center justify-between px-4 py-2 border-b-2 border-red-500 bg-[var(--card)]">
+        <span className="text-base font-bold tracking-wide text-[var(--text-secondary)]">
           ALLERGIEAUSWEIS
         </span>
         <span className="text-red-500 text-xl font-bold">+</span>
       </div>
       {/* Body */}
-      <div className="flex p-3 gap-3 bg-white dark:bg-gray-900">
+      <div className="flex p-3 gap-3 bg-[var(--card)]">
         {/* Photo */}
-        <div className="w-24 h-28 shrink-0 rounded border border-gray-300 dark:border-gray-600 overflow-hidden bg-gray-200 dark:bg-gray-700">
+        <div className="w-24 h-28 shrink-0 rounded border border-[var(--border)] overflow-hidden bg-[var(--border)]">
           {pass.photo ? (
             <img
               src={pass.photo}
@@ -66,7 +66,7 @@ function AllergyPassCard({ pass }: { pass: AllergyPass }) {
               }}
             />
           ) : (
-            <div className="w-full h-full flex items-center justify-center text-gray-500 dark:text-gray-400 text-xl font-bold">
+            <div className="w-full h-full flex items-center justify-center text-[var(--muted)] text-xl font-bold">
               {initials}
             </div>
           )}
@@ -75,39 +75,35 @@ function AllergyPassCard({ pass }: { pass: AllergyPass }) {
         <div className="flex-1 text-sm space-y-0.5">
           <div>
             <span className="font-semibold text-red-600 dark:text-red-400">Name:</span>{" "}
-            <span className="text-gray-900 dark:text-gray-100">{pass.name.toUpperCase()}</span>
+            <span className="text-[var(--text-primary)]">{pass.name.toUpperCase()}</span>
           </div>
           <div>
             <span className="font-semibold text-red-600 dark:text-red-400">Geburtstag:</span>{" "}
-            <span className="text-gray-800 dark:text-gray-200">{pass.birthdate}</span>
+            <span className="text-[var(--text-primary)]">{pass.birthdate}</span>
           </div>
           <div>
             <span className="font-semibold text-red-600 dark:text-red-400">
               Medikamenteneinnahme:
             </span>{" "}
-            <span className="text-gray-800 dark:text-gray-200">
-              {pass.medications ? "Ja" : "Nein"}
-            </span>
+            <span className="text-[var(--text-primary)]">{pass.medications ? "Ja" : "Nein"}</span>
           </div>
           <div>
             <span className="font-semibold text-red-600 dark:text-red-400">Blutgruppe:</span>{" "}
-            <span className="text-gray-800 dark:text-gray-200">{pass.bloodGroup}</span>
+            <span className="text-[var(--text-primary)]">{pass.bloodGroup}</span>
           </div>
           <div>
             <span className="font-semibold text-red-600 dark:text-red-400">
               Bekannte Allergien:
             </span>{" "}
-            <span className="text-gray-800 dark:text-gray-200">{pass.allergies.join(", ")}</span>
+            <span className="text-[var(--text-primary)]">{pass.allergies.join(", ")}</span>
           </div>
           <div>
             <span className="font-semibold text-red-600 dark:text-red-400">Ausweisnummer:</span>{" "}
-            <span className="font-mono text-gray-800 dark:text-gray-200">
-              {pass.passportNumber}
-            </span>
+            <span className="font-mono text-[var(--text-primary)]">{pass.passportNumber}</span>
           </div>
           <div>
             <span className="font-semibold text-red-600 dark:text-red-400">Ausstellungsland:</span>{" "}
-            <span className="text-gray-800 dark:text-gray-200">{pass.country}</span>
+            <span className="text-[var(--text-primary)]">{pass.country}</span>
           </div>
         </div>
       </div>
@@ -164,7 +160,7 @@ export function GedaechtnisSetup({ onLearn, onBack }: { onLearn: () => void; onB
       <Button variant="ghost" size="sm" onClick={onBack}>
         <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
       </Button>
-      <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
+      <h1 className="text-2xl font-bold text-[var(--text-primary)]">
         Gedächtnis & Merkfähigkeit (Allergiepässe)
       </h1>
       <p className="text-sm text-muted">
@@ -192,8 +188,8 @@ export function GedaechtnisSetup({ onLearn, onBack }: { onLearn: () => void; onB
             )}
           </Button>
           {dbError && <p className="text-sm text-amber-700 dark:text-amber-400">{dbError}</p>}
-          <div className="border-t border-border dark:border-gray-700 pt-4">
-            <label className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-3 block">
+          <div className="border-t border-[var(--border)] pt-4">
+            <label className="text-sm font-medium text-[var(--text-primary)] mb-3 block">
               Fallback: Set lokal erzeugen (Anzahl Pässe)
             </label>
             <div className="flex flex-wrap gap-2">
@@ -204,7 +200,7 @@ export function GedaechtnisSetup({ onLearn, onBack }: { onLearn: () => void; onB
                   className={`px-4 py-2 rounded-lg border text-sm font-medium transition-colors cursor-pointer ${
                     passCount === n
                       ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300"
-                      : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800"
+                      : "border-[var(--border)] hover:bg-[var(--border)]/50"
                   }`}
                 >
                   {n}
@@ -257,7 +253,7 @@ export function GedaechtnisLearn({ onStart, onBack }: { onStart: () => void; onB
                   className={`px-2 py-1 rounded text-sm ${
                     learnMinutes === min
                       ? "bg-primary-100 dark:bg-primary-900/30 text-primary-800 dark:text-primary-200"
-                      : "bg-gray-100 dark:bg-gray-800 text-muted"
+                      : "bg-[var(--border)]/50 text-muted"
                   }`}
                 >
                   {min} min
@@ -268,13 +264,13 @@ export function GedaechtnisLearn({ onStart, onBack }: { onStart: () => void; onB
               </Button>
             </div>
           ) : (
-            <span className="font-mono text-lg font-semibold text-gray-900 dark:text-gray-100">
+            <span className="font-mono text-lg font-semibold text-[var(--text-primary)]">
               {m}:{s.toString().padStart(2, "0")}
             </span>
           )}
         </div>
       </div>
-      <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Allergieausweise</h1>
+      <h1 className="text-2xl font-bold text-[var(--text-primary)]">Allergieausweise</h1>
       <p className="text-sm text-muted">
         Präge dir die folgenden Ausweise ein. In der Prüfphase sind sie nicht mehr sichtbar.
       </p>
@@ -456,7 +452,7 @@ export function GedaechtnisQuiz({ onBack }: { onBack: () => void }) {
         </Button>
         <div className="flex items-center gap-3">
           <span
-            className={`font-mono text-sm font-bold tabular-nums ${quizSecondsLeft <= 60 ? "text-red-600 dark:text-red-400 animate-pulse" : "text-gray-600 dark:text-gray-400"}`}
+            className={`font-mono text-sm font-bold tabular-nums ${quizSecondsLeft <= 60 ? "text-red-600 dark:text-red-400 animate-pulse" : "text-[var(--muted)]"}`}
           >
             {String(Math.floor(quizSecondsLeft / 60)).padStart(2, "0")}:
             {String(quizSecondsLeft % 60).padStart(2, "0")}
@@ -464,7 +460,7 @@ export function GedaechtnisQuiz({ onBack }: { onBack: () => void }) {
           <Badge variant="danger">Prüfphase</Badge>
         </div>
       </div>
-      <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+      <div className="w-full bg-[var(--border)] rounded-full h-2">
         <div
           className="bg-primary-600 h-2 rounded-full transition-all"
           style={{ width: `${((index + 1) / questions.length) * 100}%` }}
@@ -480,7 +476,7 @@ export function GedaechtnisQuiz({ onBack }: { onBack: () => void }) {
               <img
                 src={q.photoUrl}
                 alt=""
-                className="w-20 h-24 rounded-lg object-cover border border-gray-200 dark:border-gray-700"
+                className="w-20 h-24 rounded-lg object-cover border border-[var(--border)]"
                 onError={(e) => {
                   const el = e.target as HTMLImageElement;
                   el.style.display = "none";
@@ -488,7 +484,7 @@ export function GedaechtnisQuiz({ onBack }: { onBack: () => void }) {
                   if (parent && !parent.querySelector(".photo-fallback")) {
                     const fallback = document.createElement("div");
                     fallback.className =
-                      "photo-fallback w-20 h-24 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-2xl font-bold text-gray-400";
+                      "photo-fallback w-20 h-24 rounded-lg border border-[var(--border)] bg-[var(--border)]/50 flex items-center justify-center text-2xl font-bold text-[var(--muted)]";
                     fallback.textContent = (q.question.match(/[A-ZÄÖÜ]/g) || ["?"])
                       .slice(0, 2)
                       .join("");
@@ -498,9 +494,7 @@ export function GedaechtnisQuiz({ onBack }: { onBack: () => void }) {
               />
             </div>
           )}
-          <p className="text-base font-medium text-gray-900 dark:text-gray-100 mb-6">
-            {q.question}
-          </p>
+          <p className="text-base font-medium text-[var(--text-primary)] mb-6">{q.question}</p>
           <div className="space-y-2">
             {q.options.map((opt, oi) => (
               <button
@@ -509,12 +503,12 @@ export function GedaechtnisQuiz({ onBack }: { onBack: () => void }) {
                 className={`w-full text-left px-4 py-3 rounded-lg border text-sm transition-colors cursor-pointer flex items-center gap-2 ${
                   answers[q.id] === oi
                     ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300"
-                    : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800"
+                    : "border-[var(--border)] hover:bg-[var(--border)]/50"
                 }`}
               >
                 <span className="font-semibold shrink-0">{String.fromCharCode(65 + oi)})</span>
                 {opt}
-                <kbd className="ml-auto text-[10px] bg-gray-200 dark:bg-gray-600 px-1.5 py-0.5 rounded text-muted">
+                <kbd className="ml-auto text-[10px] bg-[var(--border)] px-1.5 py-0.5 rounded text-muted">
                   {oi + 1}
                 </kbd>
               </button>

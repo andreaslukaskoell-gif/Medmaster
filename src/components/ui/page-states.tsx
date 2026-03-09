@@ -13,13 +13,13 @@ export function PageLoading({ message = "Laden...", className }: PageLoadingProp
   return (
     <div
       className={cn(
-        "flex flex-col items-center justify-center gap-3 py-12 px-4 text-gray-500 dark:text-gray-400",
+        "flex flex-col items-center justify-center gap-3 py-12 px-4 text-[var(--muted)]",
         className
       )}
       role="status"
       aria-live="polite"
     >
-      <div className="h-10 w-10 animate-spin rounded-full border-2 border-primary-500 border-t-transparent" />
+      <div className="h-10 w-10 animate-spin rounded-full border-2 border-[var(--accent)] border-t-transparent" />
       <p className="text-sm">{message}</p>
     </div>
   );
@@ -66,10 +66,10 @@ export function PageError({
       )}
       role="alert"
     >
-      <div className="rounded-2xl bg-red-100 dark:bg-red-900/30 p-4">
-        <AlertCircle className="h-10 w-10 text-red-600 dark:text-red-400" />
+      <div className="rounded-2xl bg-red-50 dark:bg-red-900/20 p-4">
+        <AlertCircle className="h-8 w-8 text-red-500 dark:text-red-400" />
       </div>
-      <p className="text-sm text-gray-700 dark:text-gray-300 max-w-md">{message}</p>
+      <p className="text-sm text-[var(--text-secondary)] max-w-md">{message}</p>
       {action}
       {onRetry && (
         <Button variant="outline" onClick={onRetry} className="gap-2">
@@ -97,13 +97,13 @@ export function PageEmpty({
   return (
     <div
       className={cn(
-        "flex flex-col items-center justify-center gap-4 py-12 px-4 text-center text-gray-500 dark:text-gray-400",
+        "flex flex-col items-center justify-center gap-4 py-12 px-4 text-center text-[var(--muted)]",
         className
       )}
     >
       {icon ?? (
-        <div className="rounded-2xl bg-gray-100 dark:bg-gray-800 p-4">
-          <Inbox className="h-10 w-10 text-gray-400 dark:text-gray-500" />
+        <div className="rounded-2xl bg-[var(--border)]/50 p-4">
+          <Inbox className="h-8 w-8 text-[var(--muted)]" />
         </div>
       )}
       <p className="text-sm max-w-md">{message}</p>

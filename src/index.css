@@ -479,7 +479,7 @@ body.dark-body .dashboard-page-bg {
   background: var(--muted);
 }
 
-/* Skeleton: Shimmer von Dunkelblau zu hellerem Blau (links nach rechts) */
+/* Skeleton: Shimmer (Design-System-konform) */
 @keyframes skeleton-shimmer {
   0% {
     background-position: -200% 0;
@@ -491,11 +491,9 @@ body.dark-body .dashboard-page-bg {
 .skeleton-shimmer {
   background: linear-gradient(
     90deg,
-    #0f172a 0%,
-    #1e293b 25%,
-    #334155 50%,
-    #1e293b 75%,
-    #0f172a 100%
+    var(--border) 0%,
+    color-mix(in srgb, var(--border) 60%, white) 50%,
+    var(--border) 100%
   );
   background-size: 200% 100%;
   animation: skeleton-shimmer 1.8s ease-in-out infinite;
@@ -503,11 +501,9 @@ body.dark-body .dashboard-page-bg {
 .dark .skeleton-shimmer {
   background: linear-gradient(
     90deg,
-    #0f172a 0%,
-    #1e3a5f 25%,
-    #2563eb 40%,
-    #1e3a5f 60%,
-    #0f172a 100%
+    var(--border) 0%,
+    color-mix(in srgb, var(--border) 60%, var(--surface)) 50%,
+    var(--border) 100%
   );
   background-size: 200% 100%;
   animation: skeleton-shimmer 1.8s ease-in-out infinite;

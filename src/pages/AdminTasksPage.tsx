@@ -88,7 +88,7 @@ export default function AdminTasksPage() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100 p-4">
+    <div className="min-h-screen bg-background text-foreground p-4">
       <div className="max-w-5xl mx-auto space-y-4">
         <div className="flex items-center gap-4">
           <Button variant="ghost" size="sm" onClick={() => navigate("/dashboard")}>
@@ -101,7 +101,7 @@ export default function AdminTasksPage() {
           <label className="flex items-center gap-2">
             <span className="text-sm font-medium">Domain</span>
             <select
-              className="border rounded px-2 py-1 dark:bg-slate-800 dark:border-slate-600"
+              className="border rounded px-2 py-1 dark:bg-muted dark:border-border"
               value={domain}
               onChange={(e) => setDomain(e.target.value as TaskDomain)}
             >
@@ -115,7 +115,7 @@ export default function AdminTasksPage() {
           <label className="flex items-center gap-2">
             <span className="text-sm font-medium">Quelle</span>
             <select
-              className="border rounded px-2 py-1 dark:bg-slate-800 dark:border-slate-600"
+              className="border rounded px-2 py-1 dark:bg-muted dark:border-border"
               value={source}
               onChange={(e) =>
                 setSource(e.target.value as "" | "official" | "generated" | "curated")
@@ -148,14 +148,14 @@ export default function AdminTasksPage() {
           </Button>
         </div>
 
-        <div className="rounded border border-slate-200 dark:border-slate-700 overflow-hidden">
+        <div className="rounded border border-border overflow-hidden">
           {loading ? (
             <div className="p-8 text-center text-muted">Laden…</div>
           ) : tasks.length === 0 ? (
             <div className="p-8 text-center text-muted">Keine Aufgaben in dieser Auswahl.</div>
           ) : (
             <table className="w-full text-sm">
-              <thead className="bg-slate-100 dark:bg-slate-800">
+              <thead className="bg-muted">
                 <tr>
                   <th className="text-left p-2">ID</th>
                   <th className="text-left p-2">Typ</th>
@@ -167,7 +167,7 @@ export default function AdminTasksPage() {
               </thead>
               <tbody>
                 {tasks.map((t) => (
-                  <tr key={t.id} className="border-t border-slate-200 dark:border-slate-700">
+                  <tr key={t.id} className="border-t border-border">
                     <td className="p-2 font-mono text-xs truncate max-w-[120px]" title={t.id}>
                       {t.id}
                     </td>

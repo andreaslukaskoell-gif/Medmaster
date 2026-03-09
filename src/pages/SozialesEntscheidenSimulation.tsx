@@ -210,9 +210,7 @@ export default function SozialesEntscheidenSimulation() {
             <Timer className="w-8 h-8 text-teal-500" />
           </div>
           <div>
-            <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2">
-              Simulation starten
-            </h2>
+            <h2 className="text-xl font-bold text-app-foreground mb-2">Simulation starten</h2>
             <p className="text-sm text-muted max-w-md mx-auto">
               {SCENARIO_COUNT} zufällige Szenarien mit je 8 Handlungsoptionen in {TIME_LIMIT / 60}{" "}
               Minuten. Bewerte jede Option auf der Skala 1-6.
@@ -252,9 +250,7 @@ export default function SozialesEntscheidenSimulation() {
               <Trophy className="w-8 h-8 text-white" />
             </div>
             <div>
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
-                {scorePercent}%
-              </h2>
+              <h2 className="text-2xl font-bold text-app-foreground">{scorePercent}%</h2>
               <p className="text-sm text-muted">
                 Übereinstimmung —{" "}
                 {scorePercent >= 80
@@ -268,18 +264,18 @@ export default function SozialesEntscheidenSimulation() {
             </div>
             <div className="flex justify-center gap-6 text-sm">
               <div className="text-center">
-                <p className="text-lg font-bold text-gray-900 dark:text-gray-100">
+                <p className="text-lg font-bold text-app-foreground">
                   {formatTime(TIME_LIMIT - timeLeft)}
                 </p>
                 <p className="text-xs text-muted">Gesamtzeit</p>
               </div>
               <div className="text-center">
-                <p className="text-lg font-bold text-gray-900 dark:text-gray-100">{avgTime}s</p>
+                <p className="text-lg font-bold text-app-foreground">{avgTime}s</p>
                 <p className="text-xs text-muted">Ø pro Szenario</p>
               </div>
             </div>
             <div className="w-full max-w-xs mx-auto">
-              <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
+              <div className="w-full bg-border rounded-full h-3">
                 <div
                   className={`h-3 rounded-full transition-all ${scorePercent >= 80 ? "bg-green-500" : scorePercent >= 50 ? "bg-amber-500" : "bg-red-500"}`}
                   style={{ width: `${scorePercent}%` }}
@@ -295,7 +291,7 @@ export default function SozialesEntscheidenSimulation() {
         </Card>
 
         <div className="space-y-2">
-          <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+          <h3 className="text-sm font-semibold text-muted uppercase tracking-wider">
             Szenarien-Übersicht
           </h3>
           {results.map((result, i) => {
@@ -307,14 +303,14 @@ export default function SozialesEntscheidenSimulation() {
                 <CardContent className="p-0">
                   <button
                     onClick={() => setExpandedResult(expandedResult === i ? null : i)}
-                    className="w-full text-left p-4 flex items-center gap-3 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors cursor-pointer"
+                    className="w-full text-left p-4 flex items-center gap-3 hover:bg-surface transition-colors cursor-pointer"
                   >
                     <span
                       className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${scenarioPercent >= 70 ? "bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400" : "bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400"}`}
                     >
                       {i + 1}
                     </span>
-                    <p className="text-sm text-gray-900 dark:text-gray-100 flex-1 truncate">
+                    <p className="text-sm text-app-foreground flex-1 truncate">
                       {result.scenario.scenario.slice(0, 80)}...
                     </p>
                     <div className="flex items-center gap-2 shrink-0">
@@ -327,7 +323,7 @@ export default function SozialesEntscheidenSimulation() {
                     </div>
                   </button>
                   {expandedResult === i && (
-                    <div className="px-4 pb-4 space-y-2 border-t border-gray-100 dark:border-gray-800 pt-3">
+                    <div className="px-4 pb-4 space-y-2 border-t border-border pt-3">
                       {result.scenario.handlungsoptionen.map((opt, j) => {
                         const userRating = result.ratings[j];
                         const deviation =
@@ -382,7 +378,7 @@ export default function SozialesEntscheidenSimulation() {
       <div className="flex items-center gap-3">
         <Timer className={`w-5 h-5 ${isUrgent ? "text-red-500 animate-pulse" : "text-teal-500"}`} />
         <div className="flex-1">
-          <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+          <div className="w-full bg-border rounded-full h-2.5">
             <div
               className={`h-2.5 rounded-full transition-all ${isUrgent ? "bg-red-500" : "bg-teal-500"}`}
               style={{ width: `${timePercent}%` }}
@@ -413,7 +409,7 @@ export default function SozialesEntscheidenSimulation() {
       <Card>
         <CardContent className="p-0">
           <div className="bg-gray-50 dark:bg-gray-800 p-6 border-b border-gray-200 dark:border-gray-700">
-            <p className="text-sm text-gray-900 dark:text-gray-100 leading-relaxed">
+            <p className="text-sm text-app-foreground leading-relaxed">
               {currentScenario.scenario}
             </p>
           </div>
@@ -427,7 +423,7 @@ export default function SozialesEntscheidenSimulation() {
                   key={i}
                   className="border border-gray-200 dark:border-gray-700 rounded-lg p-4 space-y-2"
                 >
-                  <p className="text-sm text-gray-900 dark:text-gray-100">
+                  <p className="text-sm text-app-foreground">
                     <span className="font-bold text-teal-500 mr-1">{i + 1}.</span>
                     {option.text}
                   </p>

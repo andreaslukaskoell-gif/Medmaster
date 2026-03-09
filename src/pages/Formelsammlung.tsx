@@ -63,9 +63,7 @@ function FormelCard({ f }: { f: Formel }) {
           </div>
           <div className="min-w-0 flex-1">
             <div className="flex items-center gap-2 flex-wrap">
-              <h3 className="font-semibold text-gray-900 dark:text-gray-100 text-sm leading-tight">
-                {f.name}
-              </h3>
+              <h3 className="font-semibold text-foreground text-sm leading-tight">{f.name}</h3>
               <Badge variant="default" className="text-[10px] shrink-0">
                 {f.kapitel}
               </Badge>
@@ -74,20 +72,18 @@ function FormelCard({ f }: { f: Formel }) {
         </div>
 
         {/* Formel */}
-        <div className="bg-gray-50 dark:bg-gray-800/50 rounded-lg px-4 py-3 mb-3">
-          <p className="text-lg font-mono font-bold text-gray-900 dark:text-gray-100 whitespace-pre-line leading-relaxed">
+        <div className="bg-muted rounded-lg px-4 py-3 mb-3">
+          <p className="text-lg font-mono font-bold text-foreground whitespace-pre-line leading-relaxed">
             {f.formel}
           </p>
         </div>
 
         {/* Variablen & Einheiten */}
         <p className="text-xs text-muted mb-1">
-          <span className="font-medium text-gray-700 dark:text-gray-300">Variablen:</span>{" "}
-          {f.variablen}
+          <span className="font-medium text-foreground/80">Variablen:</span> {f.variablen}
         </p>
         <p className="text-xs text-muted mb-2">
-          <span className="font-medium text-gray-700 dark:text-gray-300">Einheiten:</span>{" "}
-          {f.einheiten}
+          <span className="font-medium text-foreground/80">Einheiten:</span> {f.einheiten}
         </p>
 
         {/* Beispiel Toggle */}
@@ -100,7 +96,7 @@ function FormelCard({ f }: { f: Formel }) {
           {open ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
         </button>
         {open && (
-          <div className="mt-2 text-sm text-gray-700 dark:text-gray-300 bg-primary-50 dark:bg-primary-900/20 rounded-md px-3 py-2">
+          <div className="mt-2 text-sm text-muted-foreground bg-primary-50 dark:bg-primary-900/20 rounded-md px-3 py-2">
             {f.beispiel}
           </div>
         )}
@@ -152,7 +148,7 @@ export default function Formelsammlung() {
 
       {/* Header */}
       <div>
-        <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Formelsammlung</h1>
+        <h1 className="text-2xl font-bold text-foreground">Formelsammlung</h1>
         <p className="text-muted mt-1">
           {formeln.length} Formeln für Physik, Chemie und Mathematik
         </p>
@@ -161,24 +157,24 @@ export default function Formelsammlung() {
       {/* Search + Filter */}
       <div className="flex flex-col sm:flex-row gap-3">
         <div className="relative flex-1">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground/70" />
           <input
             type="text"
             placeholder="Formel suchen…"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="w-full pl-9 pr-4 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm text-gray-900 dark:text-gray-100 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500"
+            className="w-full pl-9 pr-4 py-2 rounded-lg border border-border bg-background text-sm text-foreground placeholder:text-muted-foreground/70 focus:outline-none focus:ring-2 focus:ring-primary-500"
           />
         </div>
-        <div className="flex rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden shrink-0">
+        <div className="flex rounded-lg border border-border overflow-hidden shrink-0">
           {tabs.map((t) => (
             <button
               key={t.key}
               onClick={() => setFilter(t.key)}
               className={`px-3 py-2 text-sm font-medium transition-colors ${
                 filter === t.key
-                  ? "bg-primary-600 text-white"
-                  : "bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700"
+                  ? "bg-primary-600 text-primary-foreground"
+                  : "bg-background text-muted-foreground hover:bg-accent"
               }`}
             >
               {t.label}
@@ -193,7 +189,7 @@ export default function Formelsammlung() {
       ) : (
         Array.from(grouped.entries()).map(([chapter, items]) => (
           <div key={chapter}>
-            <h2 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">
+            <h2 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-3">
               {chapter} ({items.length})
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">

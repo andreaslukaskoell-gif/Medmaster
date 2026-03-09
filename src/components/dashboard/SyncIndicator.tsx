@@ -1,8 +1,6 @@
 import { Cloud } from "lucide-react";
 import { useSyncStatus } from "@/stores/syncStatus";
 
-const MEDICAL_BLUE = "#0055ff";
-
 /**
  * Small, subtle indicator when a sync is in progress (e.g. corner of dashboard).
  */
@@ -13,21 +11,15 @@ export function SyncIndicator() {
 
   return (
     <div
-      className="absolute top-0 right-0 z-10 flex items-center gap-1.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white/90 dark:bg-gray-900/90 px-2.5 py-1.5 shadow-sm backdrop-blur-sm"
+      className="absolute top-0 right-0 z-10 flex items-center gap-1.5 rounded-xl border border-[var(--border)] bg-[var(--card)]/90 px-2.5 py-1.5 shadow-sm backdrop-blur-sm"
       title="Daten werden synchronisiert..."
       aria-hidden
     >
       <span className="relative flex h-2 w-2">
-        <span
-          className="absolute inline-flex h-full w-full animate-ping rounded-full opacity-75"
-          style={{ backgroundColor: MEDICAL_BLUE }}
-        />
-        <span
-          className="relative inline-flex h-2 w-2 rounded-full"
-          style={{ backgroundColor: MEDICAL_BLUE }}
-        />
+        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[var(--accent)] opacity-75" />
+        <span className="relative inline-flex h-2 w-2 rounded-full bg-[var(--accent)]" />
       </span>
-      <Cloud className="w-3.5 h-3.5 text-gray-500 dark:text-gray-400" />
+      <Cloud className="w-3.5 h-3.5 text-[var(--muted)]" />
     </div>
   );
 }

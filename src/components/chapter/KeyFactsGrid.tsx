@@ -5,16 +5,16 @@ interface KeyFactsGridProps {
 
 export function KeyFactsGrid({ title, facts }: KeyFactsGridProps) {
   return (
-    <div className="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-6 border border-gray-200 dark:border-gray-700 my-8">
-      <h3 className="font-bold text-slate-950 dark:text-white mb-4 flex items-center gap-2">
+    <div className="bg-[var(--border)]/30 rounded-xl p-6 border border-[var(--border)] my-8">
+      <h3 className="font-bold text-[var(--text-primary)] mb-4 flex items-center gap-2">
         📋 Key Facts — {title}
       </h3>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
         {facts.map((fact, i) => (
           <div key={i} className="flex items-start gap-2">
             <span className="text-teal-500 font-bold mt-0.5">•</span>
-            <span className="text-sm text-slate-900 dark:text-slate-100">
-              {fact.label}: <strong className="text-slate-950 dark:text-white">{fact.value}</strong>
+            <span className="text-sm text-[var(--text-primary)]">
+              {fact.label}: <strong className="text-[var(--text-primary)]">{fact.value}</strong>
             </span>
           </div>
         ))}

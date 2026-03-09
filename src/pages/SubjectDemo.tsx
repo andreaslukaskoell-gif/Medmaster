@@ -193,7 +193,7 @@ function QuestionCard({ q, index }: { q: Question; index: number }) {
   };
 
   return (
-    <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 overflow-hidden">
+    <div className="bg-[var(--surface)] dark:bg-[var(--surface)] rounded-2xl border border-app-border overflow-hidden">
       <div className="p-5 sm:p-6">
         <div className="flex items-start gap-3 mb-4">
           <span
@@ -202,21 +202,20 @@ function QuestionCard({ q, index }: { q: Question; index: number }) {
           >
             {index + 1}
           </span>
-          <p className="text-gray-900 dark:text-gray-100 font-medium leading-relaxed">{q.text}</p>
+          <p className="text-app-foreground font-medium leading-relaxed">{q.text}</p>
         </div>
         <div className="space-y-2">
           {q.options.map((opt) => {
             const isCorrect = opt.id === q.correctOptionId;
             const isSelected = opt.id === selected;
-            let style =
-              "border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600 cursor-pointer";
+            let style = "border-app-border hover:border-app-border cursor-pointer";
             if (revealed) {
               if (isCorrect)
                 style =
                   "border-emerald-400 bg-emerald-50 dark:bg-emerald-900/20 dark:border-emerald-600";
               else if (isSelected)
                 style = "border-red-400 bg-red-50 dark:bg-red-900/20 dark:border-red-600";
-              else style = "border-gray-100 dark:border-gray-800 opacity-60";
+              else style = "border-app-border/50 opacity-60";
             }
             return (
               <button
@@ -225,10 +224,10 @@ function QuestionCard({ q, index }: { q: Question; index: number }) {
                 disabled={revealed}
                 className={`w-full text-left flex items-center gap-3 px-4 py-3 rounded-xl border transition-all ${style}`}
               >
-                <span className="shrink-0 w-7 h-7 rounded-lg flex items-center justify-center text-xs font-bold bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">
+                <span className="shrink-0 w-7 h-7 rounded-lg flex items-center justify-center text-xs font-bold bg-background dark:bg-background text-[var(--text-secondary)]">
                   {opt.id.toUpperCase()}
                 </span>
-                <span className="text-sm text-gray-800 dark:text-gray-200">{opt.text}</span>
+                <span className="text-sm text-app-foreground">{opt.text}</span>
                 {revealed && isCorrect && (
                   <CheckCircle2 className="w-5 h-5 text-emerald-500 ml-auto shrink-0" />
                 )}
@@ -240,8 +239,8 @@ function QuestionCard({ q, index }: { q: Question; index: number }) {
           })}
         </div>
         {revealed && (
-          <div className="mt-4 p-4 rounded-xl bg-gray-50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-700">
-            <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+          <div className="mt-4 p-4 rounded-xl bg-background/50 border border-app-border/50">
+            <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
               <span className="font-semibold">Erkl{"\u00e4"}rung: </span>
               {q.explanation}
             </p>
@@ -303,14 +302,14 @@ function LeadCapture({ subject }: { subject: string }) {
   }
 
   return (
-    <div className="bg-white dark:bg-gray-900 rounded-2xl p-6 sm:p-8 border border-gray-200 dark:border-gray-800">
+    <div className="bg-[var(--surface)] dark:bg-[var(--surface)] rounded-2xl p-6 sm:p-8 border border-app-border">
       <div className="flex items-center gap-3 mb-3">
         <Mail className="w-5 h-5 text-gray-400" />
-        <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100">
+        <h3 className="text-lg font-bold text-app-foreground">
           T{"\u00e4"}gliche MedAT-Frage per E-Mail
         </h3>
       </div>
-      <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+      <p className="text-sm text-[var(--text-secondary)] mb-4">
         Jeden Morgen eine {subject}-Frage mit Erkl{"\u00e4"}rung — gratis und jederzeit
         abbestellbar.
       </p>
@@ -321,7 +320,7 @@ function LeadCapture({ subject }: { subject: string }) {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="deine@email.at"
-          className="flex-1 px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-sm text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="flex-1 px-4 py-3 rounded-xl border border-app-border bg-gray-50 dark:bg-gray-800 text-sm text-app-foreground focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
         <button
           type="submit"
@@ -469,7 +468,7 @@ export default function SubjectDemo() {
             >
               <GraduationCap className="w-4 h-4" />
             </div>
-            <span className="text-lg font-bold text-gray-900 dark:text-gray-100">MedMaster</span>
+            <span className="text-lg font-bold text-app-foreground">MedMaster</span>
           </Link>
           <Link
             to="/register"
@@ -481,7 +480,7 @@ export default function SubjectDemo() {
         </div>
       </nav>
 
-      <header className="bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800">
+      <header className="bg-[var(--surface)] dark:bg-[var(--surface)] border-b border-gray-100 dark:border-gray-800">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-14 text-center">
           <div className="inline-flex items-center gap-2 mb-4">
             <span
@@ -491,12 +490,10 @@ export default function SubjectDemo() {
             </span>
             <span className="text-xs text-gray-400">{totalCount} Fragen</span>
           </div>
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-gray-100 mb-4">
+          <h1 className="text-3xl sm:text-4xl font-extrabold text-app-foreground mb-4">
             {meta.h1}
           </h1>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-2">
-            {meta.desc}
-          </p>
+          <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto mb-2">{meta.desc}</p>
           <p className="text-sm text-gray-500">
             Jeden Tag 10 neue Fragen. {totalCount}+ insgesamt auf MedMaster.
           </p>
@@ -508,7 +505,7 @@ export default function SubjectDemo() {
           {meta.topics.map((t) => (
             <span
               key={t}
-              className="text-xs px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400"
+              className="text-xs px-3 py-1.5 rounded-lg bg-background dark:bg-background text-[var(--text-secondary)]"
             >
               {t}
             </span>
@@ -529,17 +526,15 @@ export default function SubjectDemo() {
           ))}
         </div>
 
-        <section className="bg-white dark:bg-gray-900 rounded-2xl p-6 sm:p-8 border border-gray-200 dark:border-gray-800">
-          <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-6">
+        <section className="bg-[var(--surface)] dark:bg-[var(--surface)] rounded-2xl p-6 sm:p-8 border border-app-border">
+          <h2 className="text-xl font-bold text-app-foreground mb-6">
             H{"\u00e4"}ufige Fragen — MedAT {meta.label}
           </h2>
           <div className="space-y-6">
             {meta.faq.map((f, i) => (
               <div key={i}>
-                <h3 className="text-base font-semibold text-gray-800 dark:text-gray-200 mb-2">
-                  {f.q}
-                </h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{f.a}</p>
+                <h3 className="text-base font-semibold text-app-foreground mb-2">{f.q}</h3>
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{f.a}</p>
               </div>
             ))}
           </div>
@@ -552,30 +547,28 @@ export default function SubjectDemo() {
               <Link
                 key={key}
                 to={`/medat-${key}-fragen`}
-                className="flex items-center gap-2 p-4 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-700 transition-colors"
+                className="flex items-center gap-2 p-4 rounded-xl bg-[var(--surface)] dark:bg-[var(--surface)] border border-app-border hover:border-gray-300 dark:hover:border-gray-700 transition-colors"
               >
                 <span className="text-lg">{m.emoji}</span>
-                <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                  {m.label}
-                </span>
+                <span className="text-sm font-medium text-[var(--text-secondary)]">{m.label}</span>
               </Link>
             ))}
           <Link
             to="/medat-uebungsfragen"
-            className="flex items-center gap-2 p-4 rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-700 transition-colors"
+            className="flex items-center gap-2 p-4 rounded-xl bg-[var(--surface)] dark:bg-[var(--surface)] border border-app-border hover:border-gray-300 dark:hover:border-gray-700 transition-colors"
           >
             <span className="text-lg">{"\uD83D\uDCDA"}</span>
-            <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+            <span className="text-sm font-medium text-[var(--text-secondary)]">
               Alle F{"\u00e4"}cher
             </span>
           </Link>
         </div>
 
-        <div className="text-center bg-white dark:bg-gray-900 rounded-2xl p-8 sm:p-10 border border-gray-200 dark:border-gray-800">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-3">
+        <div className="text-center bg-[var(--surface)] dark:bg-[var(--surface)] rounded-2xl p-8 sm:p-10 border border-app-border">
+          <h2 className="text-2xl font-bold text-app-foreground mb-3">
             Alle {totalCount}+ {meta.label}-Fragen freischalten
           </h2>
-          <p className="text-gray-600 dark:text-gray-400 mb-6 max-w-md mx-auto">
+          <p className="text-[var(--text-secondary)] mb-6 max-w-md mx-auto">
             Registriere dich jetzt und erhalte 14 Tage vollen Zugang zu allen BMS-F{"\u00e4"}chern,
             KFF, Textverst{"\u00e4"}ndnis und SEK.
           </p>
@@ -589,7 +582,7 @@ export default function SubjectDemo() {
         </div>
       </main>
 
-      <footer className="py-6 bg-gray-100 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
+      <footer className="py-6 bg-gray-100 dark:bg-gray-900 border-t border-app-border">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <div className="flex items-center gap-2">
             <GraduationCap className="w-4 h-4 text-gray-400" />

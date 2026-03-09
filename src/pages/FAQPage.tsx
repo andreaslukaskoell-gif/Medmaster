@@ -108,23 +108,19 @@ const CATEGORIES = [...new Set(FAQ_ITEMS.map((f) => f.category))];
 function FAQItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false);
   return (
-    <div className="border-b border-gray-100 dark:border-gray-800 last:border-0">
+    <div className="border-b border-border last:border-0">
       <button
         onClick={() => setOpen(!open)}
         className="w-full flex items-start justify-between gap-4 py-5 text-left"
       >
-        <h3 className="text-base font-semibold text-gray-900 dark:text-gray-100 leading-relaxed">
-          {q}
-        </h3>
+        <h3 className="text-base font-semibold text-app-foreground leading-relaxed">{q}</h3>
         {open ? (
-          <ChevronUp className="w-5 h-5 text-gray-400 shrink-0 mt-0.5" />
+          <ChevronUp className="w-5 h-5 text-muted shrink-0 mt-0.5" />
         ) : (
-          <ChevronDown className="w-5 h-5 text-gray-400 shrink-0 mt-0.5" />
+          <ChevronDown className="w-5 h-5 text-muted shrink-0 mt-0.5" />
         )}
       </button>
-      {open && (
-        <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed pb-5 -mt-1">{a}</p>
-      )}
+      {open && <p className="text-sm text-muted leading-relaxed pb-5 -mt-1">{a}</p>}
     </div>
   );
 }
@@ -158,8 +154,8 @@ export default function FAQPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-950">
-      <nav className="sticky top-0 z-40 bg-white/90 dark:bg-gray-950/90 backdrop-blur-xl border-b border-gray-100 dark:border-gray-800/50 shadow-sm">
+    <div className="min-h-screen bg-background">
+      <nav className="sticky top-0 z-40 bg-background/90 backdrop-blur-xl border-b border-border/50 shadow-sm">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
             <div
@@ -168,7 +164,7 @@ export default function FAQPage() {
             >
               <GraduationCap className="w-4 h-4" />
             </div>
-            <span className="text-lg font-bold text-gray-900 dark:text-gray-100">MedMaster</span>
+            <span className="text-lg font-bold text-app-foreground">MedMaster</span>
           </Link>
           <Link
             to="/register"
@@ -180,12 +176,12 @@ export default function FAQPage() {
         </div>
       </nav>
 
-      <header className="bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800">
+      <header className="bg-card border-b border-border">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-14 text-center">
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-gray-100 mb-4">
+          <h1 className="text-3xl sm:text-4xl font-extrabold text-app-foreground mb-4">
             Häufige Fragen zum MedAT 2026
           </h1>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="text-lg text-muted max-w-2xl mx-auto">
             Alles was du über den MedAT, die Vorbereitung und MedMaster wissen musst.
           </p>
         </div>
@@ -194,8 +190,8 @@ export default function FAQPage() {
       <main className="max-w-4xl mx-auto px-4 sm:px-6 py-8 space-y-10">
         {CATEGORIES.map((cat) => (
           <section key={cat}>
-            <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2">{cat}</h2>
-            <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 px-6">
+            <h2 className="text-xl font-bold text-app-foreground mb-2">{cat}</h2>
+            <div className="bg-card rounded-2xl border border-border px-6">
               {FAQ_ITEMS.filter((f) => f.category === cat).map((f) => (
                 <FAQItem key={f.q} q={f.q} a={f.a} />
               ))}
@@ -207,51 +203,45 @@ export default function FAQPage() {
         <section className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <Link
             to="/medat-guide"
-            className="flex flex-col items-center gap-2 p-6 rounded-2xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-700 transition-colors text-center"
+            className="flex flex-col items-center gap-2 p-6 rounded-2xl bg-card border border-border hover:border-border transition-colors text-center"
           >
             <span className="text-2xl">📖</span>
-            <span className="text-sm font-semibold text-gray-900 dark:text-gray-100">
-              MedAT 2026 Guide
-            </span>
-            <span className="text-xs text-gray-500">Kompletter Überblick</span>
+            <span className="text-sm font-semibold text-app-foreground">MedAT 2026 Guide</span>
+            <span className="text-xs text-muted">Kompletter Überblick</span>
           </Link>
           <Link
             to="/medat-uebungsfragen"
-            className="flex flex-col items-center gap-2 p-6 rounded-2xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-700 transition-colors text-center"
+            className="flex flex-col items-center gap-2 p-6 rounded-2xl bg-card border border-border hover:border-border transition-colors text-center"
           >
             <span className="text-2xl">✏️</span>
-            <span className="text-sm font-semibold text-gray-900 dark:text-gray-100">
-              Übungsfragen testen
-            </span>
-            <span className="text-xs text-gray-500">BMS + KFF kostenlos</span>
+            <span className="text-sm font-semibold text-app-foreground">Übungsfragen testen</span>
+            <span className="text-xs text-muted">BMS + KFF kostenlos</span>
           </Link>
           <Link
             to="/register"
-            className="flex flex-col items-center gap-2 p-6 rounded-2xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-700 transition-colors text-center"
+            className="flex flex-col items-center gap-2 p-6 rounded-2xl bg-card border border-border hover:border-border transition-colors text-center"
           >
             <span className="text-2xl">🚀</span>
-            <span className="text-sm font-semibold text-gray-900 dark:text-gray-100">
-              Kostenlos starten
-            </span>
-            <span className="text-xs text-gray-500">4.300+ Fragen</span>
+            <span className="text-sm font-semibold text-app-foreground">Kostenlos starten</span>
+            <span className="text-xs text-muted">4.300+ Fragen</span>
           </Link>
         </section>
       </main>
 
-      <footer className="py-6 bg-gray-100 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
+      <footer className="py-6 bg-surface border-t border-border">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <div className="flex items-center gap-2">
-            <GraduationCap className="w-4 h-4 text-gray-400" />
-            <span className="text-sm font-semibold text-gray-500">MedMaster</span>
+            <GraduationCap className="w-4 h-4 text-muted" />
+            <span className="text-sm font-semibold text-muted">MedMaster</span>
           </div>
-          <div className="flex gap-4 text-xs text-gray-400">
-            <Link to="/impressum" className="hover:text-gray-600 transition-colors">
+          <div className="flex gap-4 text-xs text-muted">
+            <Link to="/impressum" className="hover:text-app-foreground transition-colors">
               Impressum
             </Link>
-            <Link to="/datenschutz" className="hover:text-gray-600 transition-colors">
+            <Link to="/datenschutz" className="hover:text-app-foreground transition-colors">
               Datenschutz
             </Link>
-            <Link to="/agb" className="hover:text-gray-600 transition-colors">
+            <Link to="/agb" className="hover:text-app-foreground transition-colors">
               AGB
             </Link>
           </div>

@@ -68,7 +68,7 @@ export function TypKQuestion({
   return (
     <div className="space-y-4">
       {/* Question stem */}
-      <p className="text-base font-medium text-gray-900 dark:text-gray-100 leading-relaxed">
+      <p className="text-base font-medium text-[var(--text-primary)] leading-relaxed">
         {stammDisplay}
       </p>
 
@@ -76,7 +76,7 @@ export function TypKQuestion({
       <div
         className={`space-y-2 transition-opacity duration-200 ${locked ? "opacity-30 pointer-events-none" : ""}`}
       >
-        <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide">
+        <p className="text-xs font-semibold text-[var(--muted)] uppercase tracking-wide">
           {mode === "trainer" ? "Jede Aussage beurteilen:" : "Aussagen:"}
         </p>
 
@@ -98,10 +98,12 @@ export function TypKQuestion({
             >
               <div className="flex items-start gap-3">
                 {/* Aussage number */}
-                <span className="text-xs font-bold text-gray-400 mt-0.5 w-4 shrink-0">{a.nr}</span>
+                <span className="text-xs font-bold text-[var(--muted)]/60 mt-0.5 w-4 shrink-0">
+                  {a.nr}
+                </span>
 
                 {/* Text */}
-                <p className="text-sm text-gray-700 dark:text-gray-300 flex-1 leading-relaxed">
+                <p className="text-sm text-[var(--text-secondary)] flex-1 leading-relaxed">
                   {a.text}
                 </p>
 
@@ -114,7 +116,7 @@ export function TypKQuestion({
                         ${
                           decision === true
                             ? "border-green-500 bg-green-100 dark:bg-green-900/30 text-green-600"
-                            : "border-gray-200 dark:border-gray-700 text-gray-400 hover:border-green-400 hover:text-green-500"
+                            : "border-[var(--border)] text-[var(--muted)]/60 hover:border-green-400 hover:text-green-500"
                         }`}
                     >
                       <Check className="w-4 h-4" />
@@ -125,7 +127,7 @@ export function TypKQuestion({
                         ${
                           decision === false
                             ? "border-red-500 bg-red-100 dark:bg-red-900/30 text-red-600"
-                            : "border-gray-200 dark:border-gray-700 text-gray-400 hover:border-red-400 hover:text-red-500"
+                            : "border-[var(--border)] text-[var(--muted)]/60 hover:border-red-400 hover:text-red-500"
                         }`}
                     >
                       <X className="w-4 h-4" />
@@ -178,12 +180,11 @@ export function TypKQuestion({
         <div
           className={`space-y-2 transition-opacity duration-200 ${locked ? "opacity-30 pointer-events-none" : ""}`}
         >
-          <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide">
+          <p className="text-xs font-semibold text-[var(--muted)] uppercase tracking-wide">
             Welche Kombination ist richtig?
           </p>
           {kombinationen.map((k, i) => {
-            let cls =
-              "border-border hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300";
+            let cls = "border-border hover:bg-[var(--border)]/50 text-[var(--text-secondary)]";
 
             if (revealed) {
               if (k.key === korrekt) {
@@ -193,7 +194,7 @@ export function TypKQuestion({
                 cls =
                   "border-red-400 bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-400 line-through";
               } else {
-                cls = "border-border opacity-40 text-gray-400";
+                cls = "border-border opacity-40 text-[var(--muted)]/60";
               }
             }
 
@@ -258,7 +259,7 @@ export function TypKQuestion({
                     {isCorrect ? "Richtig!" : `Falsch — Richtig wäre: ${korrekt}`}
                   </span>
                 </div>
-                <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                <p className="text-sm text-[var(--muted)] leading-relaxed">
                   {stripMarkdownAsterisks(frage.erklaerung)}
                 </p>
               </CardContent>

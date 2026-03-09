@@ -198,9 +198,7 @@ export default function BMSKapitelView({
             {subjectLabels[kapitel.subject]}
           </p>
           <div className="flex flex-wrap items-center gap-2">
-            <h1 className="text-2xl font-bold text-midnight dark:text-slate-100">
-              {kapitel.title}
-            </h1>
+            <h1 className="text-2xl font-bold text-foreground">{kapitel.title}</h1>
             <ChapterSRSBadge chapterId={kapitel.id} />
           </div>
           <div className="flex items-center gap-4 mt-2 text-sm text-slate-500 dark:text-slate-400">
@@ -256,7 +254,7 @@ export default function BMSKapitelView({
 
       {/* Unterkapitel list */}
       <div className="space-y-3">
-        <h2 className="text-lg font-semibold text-midnight dark:text-slate-100">Unterkapitel</h2>
+        <h2 className="text-lg font-semibold text-foreground">Unterkapitel</h2>
         {unterkapitel.length === 0 ? (
           <Card className={`border-l-4 ${subjectColors.border}`}>
             <CardContent className="p-6 text-center">
@@ -308,7 +306,7 @@ export default function BMSKapitelView({
                       )}
                       <div className="flex-1 min-w-0">
                         <h3
-                          className={`font-medium text-sm ${isDone ? "text-slate-500 dark:text-slate-400" : "text-midnight dark:text-slate-100"}`}
+                          className={`font-medium text-sm ${isDone ? "text-slate-500 dark:text-slate-400" : "text-foreground"}`}
                         >
                           {uk.title || "Untitled Subchapter"}
                         </h3>
@@ -341,7 +339,7 @@ export default function BMSKapitelView({
 
           return (
             <div className="space-y-3 mt-8 pt-6 border-t border-slate-200 dark:border-slate-700">
-              <h3 className="font-semibold text-midnight dark:text-slate-100 flex items-center gap-2">
+              <h3 className="font-semibold text-foreground flex items-center gap-2">
                 <ArrowRight className={`w-5 h-5 ${colors.icon}`} />
                 Verwandte Kapitel
               </h3>

@@ -136,7 +136,7 @@ export default function KFFAcademy() {
       <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "KFF Academy" }]} />
 
       <div>
-        <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">KFF Academy</h1>
+        <h1 className="text-2xl font-bold text-foreground">KFF Academy</h1>
         <p className="text-muted mt-1">Kognitive Fähigkeiten und Fertigkeiten — 40% des MedAT</p>
       </div>
 
@@ -161,7 +161,7 @@ export default function KFFAcademy() {
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 mb-0.5">
-                      <h3 className="font-semibold text-gray-900 dark:text-gray-100 text-sm truncate">
+                      <h3 className="font-semibold text-foreground text-sm truncate">
                         {subtest.name}
                       </h3>
                     </div>
@@ -177,13 +177,13 @@ export default function KFFAcademy() {
                 <div className="space-y-1.5">
                   <div className="flex items-center justify-between text-xs">
                     <span className="text-muted">Fortschritt</span>
-                    <span className="font-medium text-gray-900 dark:text-gray-100">{pct}%</span>
+                    <span className="font-medium text-foreground">{pct}%</span>
                   </div>
-                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5">
+                  <div className="w-full bg-muted rounded-full h-1.5">
                     <div
                       className={`h-1.5 rounded-full transition-all ${
                         pct === 0
-                          ? "bg-gray-300 dark:bg-gray-600"
+                          ? "bg-muted-foreground/30"
                           : pct < 50
                             ? "bg-amber-500"
                             : pct < 80

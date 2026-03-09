@@ -70,7 +70,7 @@ export default function Pricing() {
       <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "Preise" }]} />
 
       <div className="text-center">
-        <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100">Wähle deinen Plan</h1>
+        <h1 className="text-3xl font-bold text-foreground">Wähle deinen Plan</h1>
         <p className="text-muted mt-2 max-w-lg mx-auto">
           Investiere in deine Zukunft. Alle Pläne sind jederzeit kündbar.
         </p>
@@ -91,11 +91,11 @@ export default function Pricing() {
               </div>
             )}
             <CardContent className="p-6 pt-8">
-              <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100">{plan.name}</h3>
+              <h3 className="text-xl font-bold text-foreground">{plan.name}</h3>
               <p className="text-sm text-muted mb-4">{plan.description}</p>
 
               <div className="mb-6">
-                <span className="text-4xl font-bold text-gray-900 dark:text-gray-100">
+                <span className="text-4xl font-bold text-foreground">
                   {plan.price === "0" ? "Gratis" : `€${plan.price}`}
                 </span>
                 {plan.price !== "0" && (
@@ -120,10 +120,10 @@ export default function Pricing() {
                     {f.included ? (
                       <Check className="w-4 h-4 text-green-500 mt-0.5 shrink-0" />
                     ) : (
-                      <X className="w-4 h-4 text-gray-300 dark:text-gray-600 mt-0.5 shrink-0" />
+                      <X className="w-4 h-4 text-muted-foreground/70 mt-0.5 shrink-0" />
                     )}
                     <span
-                      className={`text-sm ${f.included ? "text-gray-700 dark:text-gray-300" : "text-gray-400 dark:text-gray-500"}`}
+                      className={`text-sm ${f.included ? "text-foreground" : "text-muted-foreground/70"}`}
                     >
                       {f.text}
                     </span>

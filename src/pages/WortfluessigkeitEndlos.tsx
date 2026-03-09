@@ -177,7 +177,7 @@ export default function WortfluessigkeitEndlos() {
         ? "text-orange-500"
         : streak >= 5
           ? "text-amber-500"
-          : "text-gray-400";
+          : "text-muted-foreground/70";
 
   const streakBg =
     streak >= 20
@@ -186,7 +186,7 @@ export default function WortfluessigkeitEndlos() {
         ? "bg-orange-100 dark:bg-orange-900/30"
         : streak >= 5
           ? "bg-amber-100 dark:bg-amber-900/30"
-          : "bg-gray-100 dark:bg-gray-800";
+          : "bg-muted";
 
   // === START SCREEN ===
   if (phase === "start") {
@@ -197,9 +197,7 @@ export default function WortfluessigkeitEndlos() {
             <Flame className="w-8 h-8 text-white" />
           </div>
           <div>
-            <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2">
-              Endlos-Modus
-            </h2>
+            <h2 className="text-xl font-bold text-foreground mb-2">Endlos-Modus</h2>
             <p className="text-sm text-muted max-w-md mx-auto">
               Trainiere bis du nicht mehr kannst! Zuf&auml;llige W&ouml;rter, endlos. Ein Fehler
               beendet das Spiel. Wie weit kommst du?
@@ -239,9 +237,7 @@ export default function WortfluessigkeitEndlos() {
               <Trophy className="w-8 h-8 text-white" />
             </div>
             <div>
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
-                {streak} richtig in Folge!
-              </h2>
+              <h2 className="text-2xl font-bold text-foreground">{streak} richtig in Folge!</h2>
               {isNewRecord && (
                 <p className="text-orange-600 dark:text-orange-400 font-semibold mt-1">
                   Neuer Rekord!
@@ -262,7 +258,7 @@ export default function WortfluessigkeitEndlos() {
 
             <div className="flex items-center justify-center gap-6 text-sm">
               <div className="text-center">
-                <p className="text-2xl font-bold text-gray-900 dark:text-gray-100">{streak}</p>
+                <p className="text-2xl font-bold text-foreground">{streak}</p>
                 <p className="text-xs text-muted">Streak</p>
               </div>
               <div className="text-center">

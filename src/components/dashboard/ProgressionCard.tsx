@@ -26,23 +26,23 @@ export function ProgressionCard({ xp, className }: ProgressionCardProps) {
   return (
     <div
       className={cn(
-        "rounded-2xl border border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900 shadow-sm p-4 flex flex-col gap-3",
+        "rounded-2xl border border-[var(--border)] bg-[var(--card)] shadow-sm p-4 flex flex-col gap-3",
         className
       )}
     >
       <div className="flex items-center justify-between gap-2">
         <div>
-          <p className="text-2xl font-bold text-gray-900 dark:text-gray-100 tabular-nums">
+          <p className="text-2xl font-bold text-[var(--text-primary)] tabular-nums">
             {xp.toLocaleString()} MedPoints
           </p>
-          <p className="text-sm font-medium text-primary-600 dark:text-primary-400">{levelName}</p>
+          <p className="text-sm font-medium text-[var(--accent)]">{levelName}</p>
         </div>
         <div className="text-right shrink-0">
-          <span className="text-lg font-bold text-gray-700 dark:text-gray-300">Level {level}</span>
+          <span className="text-lg font-bold text-[var(--text-secondary)]">Level {level}</span>
         </div>
       </div>
       <div className="space-y-1">
-        <div className="flex justify-between text-xs text-muted">
+        <div className="flex justify-between text-xs text-[var(--muted)]">
           <span>Zum nächsten Level</span>
           <span>
             {xpInLevel} / {xpRequiredForNext}

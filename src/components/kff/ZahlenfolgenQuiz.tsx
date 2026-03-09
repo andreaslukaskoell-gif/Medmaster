@@ -42,7 +42,7 @@ function ZahlenfolgeBoxes({ sequence }: { sequence: (number | "?")[] }) {
           className={`min-w-[3rem] px-2 py-2 border rounded-md text-center font-mono text-base font-semibold ${
             val === "?"
               ? "border-primary-400 dark:border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-700 dark:text-primary-300"
-              : "border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
+              : "border-[var(--border)] bg-[var(--card)] text-[var(--text-primary)]"
           }`}
         >
           {val}
@@ -192,7 +192,7 @@ export function ZahlenfolgenQuiz({
         <Button variant="ghost" size="sm" onClick={onBack}>
           <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
         </Button>
-        <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Zahlenfolgen</h1>
+        <h1 className="text-2xl font-bold text-[var(--text-primary)]">Zahlenfolgen</h1>
         <UebungsbeschreibungCard id="kff-zahlenfolgen" collapsible defaultCollapsed />
         <OfficialInstructionCard instruction={OFFICIAL_ZF_INSTRUCTION} />
 
@@ -274,7 +274,7 @@ export function ZahlenfolgenQuiz({
           </CardHeader>
           <CardContent className="space-y-6">
             <div>
-              <label className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-3 block">
+              <label className="text-sm font-medium text-[var(--text-primary)] mb-3 block">
                 Anzahl Fragen
               </label>
               <div className="flex gap-3">
@@ -285,7 +285,7 @@ export function ZahlenfolgenQuiz({
                     className={`flex-1 px-4 py-3 rounded-lg border text-sm font-medium transition-colors cursor-pointer ${
                       questionCount === c
                         ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300"
-                        : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800"
+                        : "border-[var(--border)] hover:bg-[var(--border)]/50"
                     }`}
                   >
                     {c}
@@ -456,7 +456,7 @@ export function ZahlenfolgenQuiz({
           </span>
         </div>
       </div>
-      <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+      <div className="w-full bg-[var(--border)] rounded-full h-2">
         <div
           className="bg-primary-600 h-2 rounded-full transition-all"
           style={{ width: total ? `${((index + 1) / total) * 100}%` : "0%" }}
@@ -479,11 +479,11 @@ export function ZahlenfolgenQuiz({
                 <button
                   key={opt.key}
                   onClick={() => setAnswers((p) => ({ ...p, [currentQ.id]: opt.key }))}
-                  className={`px-4 py-3 rounded-lg border text-sm font-medium transition-colors cursor-pointer text-left ${answers[currentQ.id] === opt.key ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300" : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800"}`}
+                  className={`px-4 py-3 rounded-lg border text-sm font-medium transition-colors cursor-pointer text-left ${answers[currentQ.id] === opt.key ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300" : "border-[var(--border)] hover:bg-[var(--border)]/50"}`}
                 >
                   <span className="font-semibold mr-2">{opt.key})</span>
                   {optionDisplay(opt)}
-                  <kbd className="float-right text-[10px] bg-gray-200 dark:bg-gray-600 px-1.5 py-0.5 rounded text-muted">
+                  <kbd className="float-right text-[10px] bg-[var(--border)] px-1.5 py-0.5 rounded text-muted">
                     {oi + 1}
                   </kbd>
                 </button>

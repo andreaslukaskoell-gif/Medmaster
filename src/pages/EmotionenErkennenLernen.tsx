@@ -13,7 +13,7 @@ function PageIndicator({ current, total }: { current: number; total: number }) {
         <div
           key={i}
           className={`h-1.5 rounded-full transition-all ${
-            i === current ? "w-6 bg-amber-500" : "w-1.5 bg-gray-300 dark:bg-gray-600"
+            i === current ? "w-6 bg-amber-500" : "w-1.5 bg-[var(--border)]"
           }`}
         />
       ))}
@@ -143,7 +143,7 @@ function Seite1() {
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2">
+        <h2 className="text-xl font-bold text-[var(--text-primary)] mb-2">
           Aufgabenformat &amp; Emotionsliste
         </h2>
         <p className="text-sm text-muted">
@@ -157,20 +157,20 @@ function Seite1() {
       {/* Format explanation */}
       <Card>
         <CardContent className="p-5 space-y-3">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100">
+          <h3 className="font-semibold text-[var(--text-primary)]">
             So sieht eine Aufgabe aus (offizielles MedAT-Format)
           </h3>
-          <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg border-l-4 border-amber-400">
+          <div className="bg-[var(--border)]/30 p-4 rounded-lg border-l-4 border-amber-400">
             <p className="text-sm text-muted mb-1">Situationsbeschreibung:</p>
-            <p className="text-sm italic text-gray-700 dark:text-gray-300">
+            <p className="text-sm italic text-[var(--text-secondary)]">
               &quot;Tanja trifft auf einem Klassentreffen eine gute Schulfreundin, die nun bereits
               seit vielen Jahren im Ausland lebt. Ursprünglich hatte die Freundin ihren Besuch
               abgesagt.&quot;
             </p>
           </div>
-          <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg border-l-4 border-indigo-400">
+          <div className="bg-[var(--border)]/30 p-4 rounded-lg border-l-4 border-indigo-400">
             <p className="text-sm text-muted mb-1">Frage:</p>
-            <p className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <p className="text-sm font-medium text-[var(--text-secondary)] mb-2">
               Wie fühlt sich Tanja in dieser Situation? (Für jede Möglichkeit: eher wahrscheinlich
               oder eher unwahrscheinlich?)
             </p>
@@ -201,7 +201,7 @@ function Seite1() {
         </summary>
         <Card>
           <CardContent className="p-5">
-            <div className="text-sm text-gray-700 dark:text-gray-300 whitespace-pre-wrap leading-relaxed">
+            <div className="text-sm text-[var(--text-secondary)] whitespace-pre-wrap leading-relaxed">
               {EMOTIONEN_ERKENNEN_AUSFUELLVORSCHRIFT}
             </div>
           </CardContent>
@@ -210,7 +210,7 @@ function Seite1() {
 
       {/* Emotion list */}
       <div>
-        <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">
+        <h3 className="text-sm font-semibold text-[var(--muted)] uppercase tracking-wider mb-3">
           Die 20 Emotionen — Lerne sie auswendig!
         </h3>
         <div className="flex flex-wrap gap-1 mb-3">
@@ -227,7 +227,7 @@ function Seite1() {
               className={`text-xs px-3 py-1.5 rounded-full transition-colors cursor-pointer ${
                 filter === f.key
                   ? "bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 font-medium"
-                  : "text-muted hover:bg-gray-100 dark:hover:bg-gray-800"
+                  : "text-muted hover:bg-[var(--border)]/50"
               }`}
             >
               {f.label}
@@ -259,7 +259,7 @@ function Seite2() {
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2">
+        <h2 className="text-xl font-bold text-[var(--text-primary)] mb-2">
           Lösungsstrategie Schritt für Schritt
         </h2>
         <p className="text-sm text-muted">
@@ -274,7 +274,7 @@ function Seite2() {
             <span className="bg-amber-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
               1
             </span>
-            <h3 className="font-semibold text-gray-900 dark:text-gray-100">
+            <h3 className="font-semibold text-[var(--text-primary)]">
               Situation lesen &amp; verstehen
             </h3>
           </div>
@@ -292,7 +292,7 @@ function Seite2() {
             <span className="bg-amber-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
               2
             </span>
-            <h3 className="font-semibold text-gray-900 dark:text-gray-100">
+            <h3 className="font-semibold text-[var(--text-primary)]">
               Beteiligte Personen identifizieren
             </h3>
           </div>
@@ -310,7 +310,7 @@ function Seite2() {
             <span className="bg-amber-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
               3
             </span>
-            <h3 className="font-semibold text-gray-900 dark:text-gray-100">
+            <h3 className="font-semibold text-[var(--text-primary)]">
               Kontext + Erwartung → Emotion ableiten
             </h3>
           </div>
@@ -318,8 +318,8 @@ function Seite2() {
             Für jede Person: Was hat sie erwartet? Was ist tatsächlich passiert? Die Diskrepanz
             zwischen Erwartung und Realität bestimmt die Emotion.
           </p>
-          <div className="pl-11 bg-gray-50 dark:bg-gray-800 rounded-lg p-3 text-sm space-y-1">
-            <p className="font-medium text-gray-700 dark:text-gray-300">Formel:</p>
+          <div className="pl-11 bg-[var(--border)]/30 rounded-lg p-3 text-sm space-y-1">
+            <p className="font-medium text-[var(--text-secondary)]">Formel:</p>
             <p className="text-muted">Erwartung erfüllt → Freude, Erleichterung, Stolz</p>
             <p className="text-muted">Erwartung enttäuscht → Enttäuschung, Trauer, Frustration</p>
             <p className="text-muted">Bedrohung wahrgenommen → Angst, Nervosität</p>
@@ -336,7 +336,7 @@ function Seite2() {
             <span className="bg-amber-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
               4
             </span>
-            <h3 className="font-semibold text-gray-900 dark:text-gray-100">
+            <h3 className="font-semibold text-[var(--text-primary)]">
               &quot;Einige&quot; vs. &quot;Alle&quot; beachten
             </h3>
           </div>
@@ -361,7 +361,7 @@ function Seite3() {
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2">
+        <h2 className="text-xl font-bold text-[var(--text-primary)] mb-2">
           Typische Fallen &amp; Expert-Tipps
         </h2>
         <p className="text-sm text-muted">
@@ -395,33 +395,33 @@ function Seite3() {
             Neid vs. Eifersucht, Scham vs. Schuld, Trauer vs. Enttäuschung — achte auf die feinen
             Unterschiede!
           </p>
-          <div className="bg-white dark:bg-gray-800 rounded-lg p-3 space-y-2">
+          <div className="bg-[var(--card)] rounded-lg p-3 space-y-2">
             <div className="text-sm">
-              <span className="font-medium text-gray-700 dark:text-gray-300">Neid:</span>
+              <span className="font-medium text-[var(--text-secondary)]">Neid:</span>
               <span className="text-muted ml-1">Jemand HAT etwas, das ich auch will</span>
             </div>
             <div className="text-sm">
-              <span className="font-medium text-gray-700 dark:text-gray-300">Eifersucht:</span>
+              <span className="font-medium text-[var(--text-secondary)]">Eifersucht:</span>
               <span className="text-muted ml-1">
                 Jemand BEDROHT eine Beziehung, die mir wichtig ist
               </span>
             </div>
             <div className="text-sm">
-              <span className="font-medium text-gray-700 dark:text-gray-300">Scham:</span>
+              <span className="font-medium text-[var(--text-secondary)]">Scham:</span>
               <span className="text-muted ml-1">ICH bin schlecht (Selbstbewertung)</span>
             </div>
             <div className="text-sm">
-              <span className="font-medium text-gray-700 dark:text-gray-300">Schuld:</span>
+              <span className="font-medium text-[var(--text-secondary)]">Schuld:</span>
               <span className="text-muted ml-1">
                 Ich habe etwas FALSCHES GETAN (Handlungsbewertung)
               </span>
             </div>
             <div className="text-sm">
-              <span className="font-medium text-gray-700 dark:text-gray-300">Trauer:</span>
+              <span className="font-medium text-[var(--text-secondary)]">Trauer:</span>
               <span className="text-muted ml-1">Endgültiger Verlust</span>
             </div>
             <div className="text-sm">
-              <span className="font-medium text-gray-700 dark:text-gray-300">Enttäuschung:</span>
+              <span className="font-medium text-[var(--text-secondary)]">Enttäuschung:</span>
               <span className="text-muted ml-1">Erwartung wurde nicht erfüllt</span>
             </div>
           </div>
@@ -507,7 +507,7 @@ export default function EmotionenErkennenLernen() {
               className={`text-xs px-3 py-1.5 rounded-full transition-colors cursor-pointer ${
                 i === currentPage
                   ? "bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 font-medium"
-                  : "text-muted hover:bg-gray-100 dark:hover:bg-gray-800"
+                  : "text-muted hover:bg-[var(--border)]/50"
               }`}
             >
               {title}
@@ -520,7 +520,7 @@ export default function EmotionenErkennenLernen() {
       <Page />
 
       {/* Bottom navigation */}
-      <div className="flex items-center justify-between pt-4 border-t border-gray-200 dark:border-gray-700">
+      <div className="flex items-center justify-between pt-4 border-t border-[var(--border)]">
         <button
           onClick={() => setCurrentPage((p) => Math.max(0, p - 1))}
           disabled={currentPage === 0}

@@ -43,10 +43,10 @@ export function OfficialInstructionCard({
             <div className="w-8 h-8 rounded-lg bg-blue-50 dark:bg-blue-950/30 flex items-center justify-center shrink-0">
               <FileText className="w-4 h-4 text-blue-600 dark:text-blue-400" />
             </div>
-            <h3 className="text-base font-semibold text-gray-900 dark:text-gray-100">{title}</h3>
+            <h3 className="text-base font-semibold text-[var(--text-primary)]">{title}</h3>
             <button
               type="button"
-              className="ml-auto p-1 rounded text-muted hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors cursor-pointer"
+              className="ml-auto p-1 rounded text-muted hover:bg-[var(--border)]/50 transition-colors cursor-pointer"
               aria-expanded={!collapsed}
               tabIndex={-1}
             >

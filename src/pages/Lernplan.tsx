@@ -199,7 +199,7 @@ export default function Lernplan() {
                 return (
                   <>
                     <div className="flex items-center justify-between">
-                      <span className="text-sm text-gray-700 dark:text-gray-300">
+                      <span className="text-sm text-[var(--text-secondary)]">
                         {concretePlan
                           ? `ca. ${concretePlan.totalMinutesEstimate} Min heute`
                           : "Lade Plan…"}
@@ -238,7 +238,7 @@ export default function Lernplan() {
                                       className={`flex items-center gap-2 p-2 rounded-lg border transition-colors text-left ${
                                         isDone
                                           ? "border-emerald-200 dark:border-emerald-800/50 bg-emerald-50/50 dark:bg-emerald-900/10"
-                                          : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800/50"
+                                          : "border-border dark:border-[var(--border)] hover:bg-[var(--border)]/50"
                                       }`}
                                     >
                                       {isDone ? (
@@ -250,7 +250,7 @@ export default function Lernplan() {
                                         className={`text-sm font-medium truncate flex-1 ${
                                           isDone
                                             ? "text-emerald-800 dark:text-emerald-200"
-                                            : "text-gray-900 dark:text-gray-100"
+                                            : "text-[var(--text-primary)]"
                                         }`}
                                       >
                                         {item.title}
@@ -296,7 +296,7 @@ export default function Lernplan() {
                                         className={`text-sm font-medium truncate flex-1 ${
                                           isDone
                                             ? "text-emerald-800 dark:text-emerald-200"
-                                            : "text-gray-900 dark:text-gray-100"
+                                            : "text-[var(--text-primary)]"
                                         }`}
                                       >
                                         {item.title}
@@ -334,7 +334,7 @@ export default function Lernplan() {
                                   className={`flex flex-wrap gap-2 p-3 rounded-lg border transition-colors ${
                                     bmsDone
                                       ? "border-emerald-200 dark:border-emerald-800/50 bg-emerald-50/50 dark:bg-emerald-900/10"
-                                      : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800/50"
+                                      : "border-border dark:border-[var(--border)] hover:bg-[var(--border)]/50"
                                   }`}
                                 >
                                   {bmsDone ? (
@@ -382,7 +382,7 @@ export default function Lernplan() {
                                   className={`flex flex-wrap gap-2 p-3 rounded-lg border transition-colors ${
                                     kffDone
                                       ? "border-emerald-200 dark:border-emerald-800/50 bg-emerald-50/50 dark:bg-emerald-900/10"
-                                      : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800/50"
+                                      : "border-border dark:border-[var(--border)] hover:bg-[var(--border)]/50"
                                   }`}
                                 >
                                   {kffDone ? (
@@ -425,7 +425,7 @@ export default function Lernplan() {
                                   className={`flex items-center gap-2 p-3 rounded-lg border transition-colors ${
                                     tvDone
                                       ? "border-emerald-200 dark:border-emerald-800/50 bg-emerald-50/50 dark:bg-emerald-900/10"
-                                      : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800/50"
+                                      : "border-border dark:border-[var(--border)] hover:bg-[var(--border)]/50"
                                   }`}
                                 >
                                   {tvDone ? (
@@ -435,7 +435,7 @@ export default function Lernplan() {
                                     className={`text-sm font-medium flex-1 ${
                                       tvDone
                                         ? "text-emerald-800 dark:text-emerald-200"
-                                        : "text-gray-900 dark:text-gray-100"
+                                        : "text-[var(--text-primary)]"
                                     }`}
                                   >
                                     {concretePlan.tvTexts} Text{concretePlan.tvTexts > 1 ? "e" : ""}{" "}
@@ -467,7 +467,7 @@ export default function Lernplan() {
                                   className={`flex items-center gap-2 p-3 rounded-lg border transition-colors ${
                                     sekDone
                                       ? "border-emerald-200 dark:border-emerald-800/50 bg-emerald-50/50 dark:bg-emerald-900/10"
-                                      : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800/50"
+                                      : "border-border dark:border-[var(--border)] hover:bg-[var(--border)]/50"
                                   }`}
                                 >
                                   {sekDone ? (
@@ -513,9 +513,7 @@ export default function Lernplan() {
       {/* 2. Lernphasen (nur wenn Plan existiert) */}
       {plan && (
         <div>
-          <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">
-            Lernphasen
-          </h2>
+          <h2 className="text-lg font-semibold text-[var(--text-primary)] mb-3">Lernphasen</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {plan.phases.map((phase, i) => {
               const pc = phaseConfig[phase.phase as keyof typeof phaseConfig];
@@ -547,7 +545,7 @@ export default function Lernplan() {
         </CardHeader>
         <CardContent className="space-y-4">
           <div>
-            <label className="text-sm font-medium text-gray-700 dark:text-gray-300 block mb-2">
+            <label className="text-sm font-medium text-[var(--text-secondary)] block mb-2">
               An wie vielen Tagen pro Woche kannst du lernen?
             </label>
             <div className="flex items-center gap-4">
@@ -565,7 +563,7 @@ export default function Lernplan() {
             </div>
           </div>
           <div>
-            <label className="text-sm font-medium text-gray-700 dark:text-gray-300 block mb-2">
+            <label className="text-sm font-medium text-[var(--text-secondary)] block mb-2">
               Wie viele Stunden pro Lerntag?
             </label>
             <div className="flex items-center gap-4">

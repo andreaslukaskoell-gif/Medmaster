@@ -75,7 +75,7 @@ export function QuizQuestion({ question, questionNumber, onAnswerChange }: QuizQ
 
   return (
     <motion.div
-      className="bg-white/80 dark:bg-slate-900/60 backdrop-blur-md rounded-xl border border-slate-200 dark:border-white/10 p-6 shadow-sm dark:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.05)] hover:shadow-md transition-shadow"
+      className="bg-[var(--card)]/80 backdrop-blur-md rounded-xl border border-[var(--border)] p-6 shadow-sm dark:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.05)] hover:shadow-md transition-shadow"
       animate={isWrong ? { x: [0, -8, 8, -8, 8, 0] } : isCorrect ? { scale: [1, 1.02, 1] } : {}}
       data-answered={isAnswered}
       transition={{ duration: isWrong ? 0.4 : 0.3, ease: "easeOut" }}
@@ -86,7 +86,7 @@ export function QuizQuestion({ question, questionNumber, onAnswerChange }: QuizQ
           <span className="shrink-0 w-8 h-8 rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 font-bold flex items-center justify-center text-sm">
             {questionNumber}
           </span>
-          <p className="text-sm font-semibold text-slate-950 dark:text-white leading-relaxed flex-1">
+          <p className="text-sm font-semibold text-[var(--text-primary)] leading-relaxed flex-1">
             {question.question}
           </p>
         </div>
@@ -112,8 +112,8 @@ export function QuizQuestion({ question, questionNumber, onAnswerChange }: QuizQ
                       : isWrongChosen
                         ? "bg-red-500/20 border-red-500 text-red-900 dark:text-red-100 shadow-[0_0_12px_rgba(239,68,68,0.2)]"
                         : isAnswered
-                          ? "border-slate-200 dark:border-white/10 bg-slate-50/80 dark:bg-slate-800/50 text-gray-500 cursor-not-allowed"
-                          : "bg-white/70 dark:bg-slate-800/50 border-white/30 dark:border-white/10 hover:border-emerald-400 text-slate-900 dark:text-slate-100 cursor-pointer"
+                          ? "border-[var(--border)] bg-[var(--border)]/30 text-[var(--muted)] cursor-not-allowed"
+                          : "bg-[var(--card)]/70 border-[var(--border)] hover:border-emerald-400 text-[var(--text-primary)] cursor-pointer"
                   }`}
               >
                 <span className="font-bold mr-3 text-sm shrink-0">
@@ -162,7 +162,7 @@ export function QuizQuestion({ question, questionNumber, onAnswerChange }: QuizQ
               </p>
               {isCorrect && (
                 <>
-                  <p className="text-sm text-slate-900 dark:text-slate-100 leading-relaxed">
+                  <p className="text-sm text-[var(--text-primary)] leading-relaxed">
                     {stripMarkdownAsterisks(explanation)}
                   </p>
                   {merksatz && (
@@ -174,7 +174,7 @@ export function QuizQuestion({ question, questionNumber, onAnswerChange }: QuizQ
               )}
               {isWrong && (
                 <>
-                  <p className="text-sm text-slate-900 dark:text-slate-100 mb-3">
+                  <p className="text-sm text-[var(--text-primary)] mb-3">
                     {solutionRevealed
                       ? null
                       : "Wähle „Wiederholen“, um es erneut zu versuchen, oder „Mit Tipp lösen“, um einen Tipp zu sehen und dann die Lösung anzuzeigen."}
@@ -212,7 +212,7 @@ export function QuizQuestion({ question, questionNumber, onAnswerChange }: QuizQ
                   )}
                   {solutionRevealed ? (
                     <>
-                      <p className="text-sm text-slate-900 dark:text-slate-100 leading-relaxed">
+                      <p className="text-sm text-[var(--text-primary)] leading-relaxed">
                         {stripMarkdownAsterisks(explanation)}
                       </p>
                       {merksatz && (
@@ -243,7 +243,7 @@ export function QuizQuestion({ question, questionNumber, onAnswerChange }: QuizQ
                             whileTap={{ scale: 0.97 }}
                             whileHover={{ scale: 1.02 }}
                             transition={{ type: "spring", stiffness: 400, damping: 20 }}
-                            className="inline-flex items-center gap-2 px-3 py-1.5 text-sm font-medium rounded-md border border-amber-300 dark:border-amber-700 text-amber-800 dark:text-amber-200 hover:bg-amber-50 dark:hover:bg-amber-900/20 focus:outline-none focus:ring-2 focus:ring-amber-400/50 focus:ring-offset-2 dark:focus:ring-offset-slate-900 active:ring-2 active:ring-amber-400/60 active:shadow-[0_0_12px_rgba(251,191,36,0.25)]"
+                            className="inline-flex items-center gap-2 px-3 py-1.5 text-sm font-medium rounded-md border border-amber-300 dark:border-amber-700 text-amber-800 dark:text-amber-200 hover:bg-amber-50 dark:hover:bg-amber-900/20 focus:outline-none focus:ring-2 focus:ring-amber-400/50 focus:ring-offset-2 dark:focus:ring-offset-[var(--card)] active:ring-2 active:ring-amber-400/60 active:shadow-[0_0_12px_rgba(251,191,36,0.25)]"
                           >
                             <Lightbulb className="w-4 h-4" />
                             {hintIndex === 0 ? "Mit Tipp lösen" : "Weiterer Tipp"}
@@ -259,7 +259,7 @@ export function QuizQuestion({ question, questionNumber, onAnswerChange }: QuizQ
                             whileTap={{ scale: 0.97 }}
                             whileHover={{ scale: 1.02 }}
                             transition={{ type: "spring", stiffness: 400, damping: 20 }}
-                            className="inline-flex items-center gap-2 px-3 py-1.5 text-sm font-medium rounded-md border border-slate-200 dark:border-white/10 bg-transparent hover:bg-slate-50 dark:hover:bg-white/5 text-slate-900 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-primary-400/50 focus:ring-offset-2 dark:focus:ring-offset-slate-900 active:ring-2 active:ring-primary-400/60 active:shadow-[0_0_12px_rgba(0,122,255,0.2)]"
+                            className="inline-flex items-center gap-2 px-3 py-1.5 text-sm font-medium rounded-md border border-[var(--border)] bg-transparent hover:bg-[var(--border)]/50 text-[var(--text-primary)] focus:outline-none focus:ring-2 focus:ring-primary-400/50 focus:ring-offset-2 dark:focus:ring-offset-[var(--card)] active:ring-2 active:ring-primary-400/60 active:shadow-[0_0_12px_rgba(0,122,255,0.2)]"
                           >
                             <BookOpen className="w-4 h-4" />
                             Lösung anzeigen

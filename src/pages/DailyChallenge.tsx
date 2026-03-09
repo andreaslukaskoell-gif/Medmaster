@@ -165,12 +165,12 @@ export default function DailyChallengePage() {
   // --- Already completed today ---
   if (existingResult && !isFinished) {
     return (
-      <div className="min-h-screen bg-gray-50 dark:bg-gray-950 flex flex-col">
+      <div className="min-h-screen bg-[var(--border)]/30 flex flex-col">
         <div className="max-w-2xl mx-auto w-full px-4 py-8 flex flex-col gap-6">
           {/* Back */}
           <button
             onClick={() => navigate("/dashboard")}
-            className="flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 transition-colors w-fit"
+            className="flex items-center gap-1.5 text-sm text-[var(--muted)] hover:text-[var(--text-secondary)] transition-colors w-fit"
           >
             <ArrowLeft className="w-4 h-4" />
             Zurück zum Dashboard
@@ -182,28 +182,28 @@ export default function DailyChallengePage() {
               <Target className="w-4 h-4" />
               BMS des Tages
             </div>
-            <p className="text-gray-500 dark:text-gray-400 text-sm">{displayDate}</p>
+            <p className="text-[var(--muted)] text-sm">{displayDate}</p>
           </div>
 
           {/* Already done card */}
-          <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 p-8 text-center space-y-5">
+          <div className="bg-[var(--card)] rounded-2xl shadow-sm border border-[var(--border)] p-8 text-center space-y-5">
             <div className="flex justify-center">
               {existingResult.solved ? (
                 <div className="w-20 h-20 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center">
                   <Trophy className="w-10 h-10 text-green-500" />
                 </div>
               ) : (
-                <div className="w-20 h-20 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
-                  <XCircle className="w-10 h-10 text-gray-400" />
+                <div className="w-20 h-20 rounded-full bg-[var(--border)]/50 flex items-center justify-center">
+                  <XCircle className="w-10 h-10 text-[var(--muted)]/60" />
                 </div>
               )}
             </div>
 
             <div>
-              <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100">
+              <h2 className="text-xl font-bold text-[var(--text-primary)]">
                 {existingResult.solved ? "Heute bereits gelöst!" : "Heute nicht geschafft"}
               </h2>
-              <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">
+              <p className="text-[var(--muted)] text-sm mt-1">
                 {existingResult.solved
                   ? `In ${existingResult.correctOnAttempt}/3 Versuchen`
                   : "Morgen wieder!"}
@@ -216,12 +216,12 @@ export default function DailyChallengePage() {
             </div>
 
             {/* Countdown */}
-            <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-4 space-y-1">
-              <div className="flex items-center justify-center gap-2 text-gray-500 dark:text-gray-400 text-xs uppercase tracking-wider font-semibold">
+            <div className="bg-[var(--border)]/30 rounded-xl p-4 space-y-1">
+              <div className="flex items-center justify-center gap-2 text-[var(--muted)] text-xs uppercase tracking-wider font-semibold">
                 <Clock className="w-3.5 h-3.5" />
                 Nächste Frage in
               </div>
-              <div className="text-3xl font-mono font-bold text-gray-900 dark:text-gray-100 tracking-wider">
+              <div className="text-3xl font-mono font-bold text-[var(--text-primary)] tracking-wider">
                 {countdown}
               </div>
             </div>
@@ -241,25 +241,26 @@ export default function DailyChallengePage() {
   // --- Loading state ---
   if (!challenge) {
     return (
-      <div className="min-h-screen bg-gray-50 dark:bg-gray-950 flex items-center justify-center">
+      <div className="min-h-screen bg-[var(--border)]/30 flex items-center justify-center">
         <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-blue-500" />
       </div>
     );
   }
 
   const fachLabel = FACH_LABELS[challenge.fach] ?? challenge.fach;
-  const fachColorClass = FACH_COLORS[challenge.fach] ?? "bg-gray-100 text-gray-700";
+  const fachColorClass =
+    FACH_COLORS[challenge.fach] ?? "bg-[var(--border)]/50 text-[var(--text-secondary)]";
   const letterLabels = ["A", "B", "C", "D", "E"];
 
   // --- Finished state ---
   if (isFinished && finalResult) {
     return (
-      <div className="min-h-screen bg-gray-50 dark:bg-gray-950 flex flex-col">
+      <div className="min-h-screen bg-[var(--border)]/30 flex flex-col">
         <div className="max-w-2xl mx-auto w-full px-4 py-8 flex flex-col gap-6">
           {/* Back */}
           <button
             onClick={() => navigate("/dashboard")}
-            className="flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 transition-colors w-fit"
+            className="flex items-center gap-1.5 text-sm text-[var(--muted)] hover:text-[var(--text-secondary)] transition-colors w-fit"
           >
             <ArrowLeft className="w-4 h-4" />
             Zurück zum Dashboard
@@ -271,11 +272,11 @@ export default function DailyChallengePage() {
               <Target className="w-4 h-4" />
               BMS des Tages
             </div>
-            <p className="text-gray-500 dark:text-gray-400 text-sm">{displayDate}</p>
+            <p className="text-[var(--muted)] text-sm">{displayDate}</p>
           </div>
 
           {/* Result card */}
-          <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 overflow-hidden">
+          <div className="bg-[var(--card)] rounded-2xl shadow-sm border border-[var(--border)] overflow-hidden">
             {/* Status banner */}
             <div
               className={cn(
@@ -303,7 +304,7 @@ export default function DailyChallengePage() {
                     ? `Richtig! In ${finalResult.correctOnAttempt}/3 Versuchen`
                     : "Leider nicht richtig"}
                 </p>
-                <p className="text-sm text-gray-500 dark:text-gray-400">
+                <p className="text-sm text-[var(--muted)]">
                   {finalResult.solved
                     ? "Gut gemacht — weiter so!"
                     : `Die richtige Antwort war: ${letterLabels[challenge.correctIndex]}`}
@@ -327,7 +328,7 @@ export default function DailyChallengePage() {
               </span>
 
               {/* Question */}
-              <p className="text-base font-semibold text-gray-900 dark:text-gray-100 leading-snug">
+              <p className="text-base font-semibold text-[var(--text-primary)] leading-snug">
                 {challenge.question}
               </p>
 
@@ -345,7 +346,7 @@ export default function DailyChallengePage() {
                           ? "bg-green-50 border-green-300 dark:bg-green-900/20 dark:border-green-700 text-green-800 dark:text-green-200"
                           : isWrongSelected
                             ? "bg-red-50 border-red-300 dark:bg-red-900/20 dark:border-red-700 text-red-800 dark:text-red-200"
-                            : "bg-gray-50 border-gray-200 dark:bg-gray-800/50 dark:border-gray-700 text-gray-600 dark:text-gray-400"
+                            : "bg-[var(--border)]/30 border-[var(--border)] text-[var(--muted)]"
                       )}
                     >
                       <span className="font-bold flex-shrink-0 mt-0.5">{letterLabels[i]}.</span>
@@ -372,12 +373,12 @@ export default function DailyChallengePage() {
               </div>
 
               {/* Countdown */}
-              <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-4 text-center space-y-1">
-                <div className="flex items-center justify-center gap-2 text-gray-500 dark:text-gray-400 text-xs uppercase tracking-wider font-semibold">
+              <div className="bg-[var(--border)]/30 rounded-xl p-4 text-center space-y-1">
+                <div className="flex items-center justify-center gap-2 text-[var(--muted)] text-xs uppercase tracking-wider font-semibold">
                   <Clock className="w-3.5 h-3.5" />
                   Nachste Frage in
                 </div>
-                <div className="text-2xl font-mono font-bold text-gray-900 dark:text-gray-100 tracking-wider">
+                <div className="text-2xl font-mono font-bold text-[var(--text-primary)] tracking-wider">
                   {countdown}
                 </div>
               </div>
@@ -405,12 +406,12 @@ export default function DailyChallengePage() {
 
   // --- Active challenge state ---
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-950 flex flex-col">
+    <div className="min-h-screen bg-[var(--border)]/30 flex flex-col">
       <div className="max-w-2xl mx-auto w-full px-4 py-8 flex flex-col gap-6">
         {/* Back */}
         <button
           onClick={() => navigate("/dashboard")}
-          className="flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 transition-colors w-fit"
+          className="flex items-center gap-1.5 text-sm text-[var(--muted)] hover:text-[var(--text-secondary)] transition-colors w-fit"
         >
           <ArrowLeft className="w-4 h-4" />
           Zurück zum Dashboard
@@ -422,13 +423,13 @@ export default function DailyChallengePage() {
             <Target className="w-4 h-4" />
             BMS des Tages
           </div>
-          <p className="text-gray-500 dark:text-gray-400 text-sm">{displayDate}</p>
+          <p className="text-[var(--muted)] text-sm">{displayDate}</p>
         </div>
 
         {/* Question card */}
-        <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 overflow-hidden">
+        <div className="bg-[var(--card)] rounded-2xl shadow-sm border border-[var(--border)] overflow-hidden">
           {/* Top meta bar */}
-          <div className="px-6 py-4 border-b border-gray-100 dark:border-gray-800 flex items-center justify-between">
+          <div className="px-6 py-4 border-b border-[var(--border)] flex items-center justify-between">
             <span
               className={cn(
                 "text-xs font-semibold px-2.5 py-1 rounded-full uppercase tracking-wide",
@@ -439,7 +440,7 @@ export default function DailyChallengePage() {
             </span>
             {/* Attempt dots */}
             <div className="flex items-center gap-2">
-              <span className="text-xs text-gray-400 dark:text-gray-500 mr-1">Versuche</span>
+              <span className="text-xs text-[var(--muted)]/60 mr-1">Versuche</span>
               {[1, 2, 3].map((n) => (
                 <div
                   key={n}
@@ -449,7 +450,7 @@ export default function DailyChallengePage() {
                       ? "bg-red-400 dark:bg-red-500"
                       : n === attempt
                         ? "bg-amber-400 dark:bg-amber-500 ring-2 ring-amber-200 dark:ring-amber-800"
-                        : "bg-gray-200 dark:bg-gray-700"
+                        : "bg-[var(--border)]"
                   )}
                 />
               ))}
@@ -458,12 +459,12 @@ export default function DailyChallengePage() {
 
           <div className="p-6 space-y-6">
             {/* Kapitel hint */}
-            <p className="text-xs text-gray-400 dark:text-gray-500 font-medium uppercase tracking-wider">
+            <p className="text-xs text-[var(--muted)]/60 font-medium uppercase tracking-wider">
               {challenge.kapitelTitle}
             </p>
 
             {/* Question text */}
-            <p className="text-lg font-semibold text-gray-900 dark:text-gray-100 leading-snug">
+            <p className="text-lg font-semibold text-[var(--text-primary)] leading-snug">
               {challenge.question}
             </p>
 
@@ -484,14 +485,14 @@ export default function DailyChallengePage() {
                       "w-full text-left flex items-start gap-3 px-4 py-3.5 rounded-xl border-2 text-sm font-medium transition-all duration-200",
                       // Base style
                       selectedIndex === null
-                        ? "border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 hover:border-blue-400 hover:bg-blue-50 dark:hover:border-blue-500 dark:hover:bg-blue-900/20 cursor-pointer"
+                        ? "border-[var(--border)] bg-[var(--card)] text-[var(--text-secondary)] hover:border-blue-400 hover:bg-blue-50 dark:hover:border-blue-500 dark:hover:bg-blue-900/20 cursor-pointer"
                         : isCorrectSelected
                           ? "border-green-400 bg-green-50 dark:bg-green-900/20 dark:border-green-600 text-green-800 dark:text-green-200 cursor-default"
                           : isWrong
                             ? "border-red-400 bg-red-50 dark:bg-red-900/20 dark:border-red-600 text-red-800 dark:text-red-200 cursor-default animate-shake"
                             : isCorrect && answerState !== "idle"
                               ? "border-green-300 bg-green-50/50 dark:bg-green-900/10 dark:border-green-800 text-green-700 dark:text-green-300 cursor-default"
-                              : "border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-400 dark:text-gray-500 cursor-default opacity-60"
+                              : "border-[var(--border)] bg-[var(--card)] text-[var(--muted)] cursor-default opacity-60"
                     )}
                   >
                     {/* Letter badge */}
@@ -499,14 +500,14 @@ export default function DailyChallengePage() {
                       className={cn(
                         "flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold mt-0.5",
                         selectedIndex === null
-                          ? "bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300"
+                          ? "bg-[var(--border)]/50 text-[var(--muted)]"
                           : isCorrectSelected
                             ? "bg-green-500 text-white"
                             : isWrong
                               ? "bg-red-500 text-white"
                               : isCorrect && answerState !== "idle"
                                 ? "bg-green-400 text-white"
-                                : "bg-gray-100 dark:bg-gray-700 text-gray-400 dark:text-gray-500"
+                                : "bg-[var(--border)]/50 text-[var(--muted)]/60"
                       )}
                     >
                       {letterLabels[i]}
@@ -534,7 +535,7 @@ export default function DailyChallengePage() {
 
             {/* Instruction hint */}
             {selectedIndex === null && (
-              <p className="text-xs text-center text-gray-400 dark:text-gray-500">
+              <p className="text-xs text-center text-[var(--muted)]/60">
                 Wähle die richtige Antwort — du hast 3 Versuche
               </p>
             )}
@@ -542,23 +543,23 @@ export default function DailyChallengePage() {
         </div>
 
         {/* XP preview */}
-        <div className="flex items-center justify-center gap-6 text-xs text-gray-500 dark:text-gray-500">
+        <div className="flex items-center justify-center gap-6 text-xs text-[var(--muted)]">
           <div className="flex items-center gap-1.5">
             <div className="w-2.5 h-2.5 rounded-full bg-amber-500" />
             <span>
-              1. Versuch: <strong className="text-gray-700 dark:text-gray-300">100 XP</strong>
+              1. Versuch: <strong className="text-[var(--text-secondary)]">100 XP</strong>
             </span>
           </div>
           <div className="flex items-center gap-1.5">
             <div className="w-2.5 h-2.5 rounded-full bg-amber-400" />
             <span>
-              2. Versuch: <strong className="text-gray-700 dark:text-gray-300">75 XP</strong>
+              2. Versuch: <strong className="text-[var(--text-secondary)]">75 XP</strong>
             </span>
           </div>
           <div className="flex items-center gap-1.5">
             <div className="w-2.5 h-2.5 rounded-full bg-amber-300" />
             <span>
-              3. Versuch: <strong className="text-gray-700 dark:text-gray-300">50 XP</strong>
+              3. Versuch: <strong className="text-[var(--text-secondary)]">50 XP</strong>
             </span>
           </div>
         </div>

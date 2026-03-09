@@ -36,12 +36,12 @@ export function UebungsbeschreibungCard({
       <div className="w-8 h-8 rounded-lg bg-primary/10 dark:bg-primary/20 flex items-center justify-center shrink-0">
         <Info className="w-4 h-4 text-primary" />
       </div>
-      <h3 className="text-base font-semibold text-gray-900 dark:text-gray-100">{u.title}</h3>
+      <h3 className="text-base font-semibold text-[var(--text-primary)]">{u.title}</h3>
       {collapsible && (
         <button
           type="button"
           onClick={() => setCollapsed((c) => !c)}
-          className="ml-auto p-1 rounded text-muted hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors cursor-pointer"
+          className="ml-auto p-1 rounded text-muted hover:bg-[var(--border)]/50 transition-colors cursor-pointer"
           aria-expanded={!collapsed}
         >
           {collapsed ? <ChevronDown className="w-4 h-4" /> : <ChevronUp className="w-4 h-4" />}
@@ -53,15 +53,15 @@ export function UebungsbeschreibungCard({
   const body = (
     <div className="space-y-4 text-sm">
       <section>
-        <h4 className="font-medium text-gray-800 dark:text-gray-200 mb-1">Ablauf</h4>
+        <h4 className="font-medium text-[var(--text-primary)] mb-1">Ablauf</h4>
         <p className="text-muted leading-relaxed">{u.ablauf}</p>
       </section>
       <section>
-        <h4 className="font-medium text-gray-800 dark:text-gray-200 mb-1">Aufbau & Struktur</h4>
+        <h4 className="font-medium text-[var(--text-primary)] mb-1">Aufbau & Struktur</h4>
         <p className="text-muted leading-relaxed">{u.aufbauStruktur}</p>
       </section>
       <section>
-        <h4 className="font-medium text-gray-800 dark:text-gray-200 mb-1">Bewertung</h4>
+        <h4 className="font-medium text-[var(--text-primary)] mb-1">Bewertung</h4>
         <p className="text-muted leading-relaxed">{u.bewertung}</p>
       </section>
     </div>

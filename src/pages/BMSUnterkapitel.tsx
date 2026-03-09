@@ -428,14 +428,14 @@ export default function BMSUnterkapitel({
         <div className="flex items-center gap-2">
           <button
             onClick={() => setShowNotes(!showNotes)}
-            className={`p-2 rounded-lg border border-transparent dark:border-white/10 cursor-pointer ${showNotes ? "bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700" : "text-muted hover:bg-gray-100 dark:hover:bg-white/5"}`}
+            className={`p-2 rounded-lg border border-transparent dark:border-white/10 cursor-pointer ${showNotes ? "bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700" : "text-muted hover:bg-accent"}`}
             title="Notizen"
           >
             <StickyNote className="w-4 h-4" />
           </button>
           <button
             onClick={() => toggleBookmarkChapter(uk.id)}
-            className={`p-2 rounded-lg border border-transparent dark:border-white/10 cursor-pointer ${isBookmarked ? "bg-primary-100 dark:bg-primary-900/30 text-primary-700" : "text-muted hover:bg-gray-100 dark:hover:bg-white/5"}`}
+            className={`p-2 rounded-lg border border-transparent dark:border-white/10 cursor-pointer ${isBookmarked ? "bg-primary-100 dark:bg-primary-900/30 text-primary-700" : "text-muted hover:bg-accent"}`}
             title="Lesezeichen"
           >
             <Bookmark className={`w-4 h-4 ${isBookmarked ? "fill-current" : ""}`} />
@@ -449,14 +449,14 @@ export default function BMSUnterkapitel({
           </button>
           <button
             onClick={() => setHinterfragMode(!hinterfragMode)}
-            className={`p-2 rounded-lg border border-transparent dark:border-white/10 cursor-pointer ${hinterfragMode ? "bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300" : "text-muted hover:bg-gray-100 dark:hover:bg-white/5"}`}
+            className={`p-2 rounded-lg border border-transparent dark:border-white/10 cursor-pointer ${hinterfragMode ? "bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300" : "text-muted hover:bg-accent"}`}
             title="Hinterfrag-Modus: Kernsätze als Frage anzeigen, Antwort bei Klick/Hover (Active Recall)"
           >
             <HelpCircle className="w-4 h-4" />
           </button>
           <button
             onClick={() => setQuickReviewMode(!quickReviewMode)}
-            className={`p-2 rounded-lg border border-transparent dark:border-white/10 cursor-pointer ${quickReviewMode ? "bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300" : "text-muted hover:bg-gray-100 dark:hover:bg-white/5"}`}
+            className={`p-2 rounded-lg border border-transparent dark:border-white/10 cursor-pointer ${quickReviewMode ? "bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300" : "text-muted hover:bg-accent"}`}
             title="Quick Review: Nur Merksätze anzeigen (R)"
           >
             <Zap className="w-4 h-4" />
@@ -475,7 +475,7 @@ export default function BMSUnterkapitel({
             {completedCount}/{total} abgeschlossen
           </span>
         </div>
-        <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+        <div className="w-full bg-muted rounded-full h-2">
           <div
             className={`${subjectProgressColors[kapitel.subject] || "bg-primary-600"} h-2 rounded-full transition-all`}
             style={{ width: `${(completedCount / total) * 100}%` }}

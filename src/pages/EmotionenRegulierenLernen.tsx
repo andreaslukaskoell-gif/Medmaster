@@ -13,7 +13,7 @@ function PageIndicator({ current, total }: { current: number; total: number }) {
         <div
           key={i}
           className={`h-1.5 rounded-full transition-all ${
-            i === current ? "w-6 bg-pink-500" : "w-1.5 bg-gray-300 dark:bg-gray-600"
+            i === current ? "w-6 bg-pink-500" : "w-1.5 bg-[var(--border)]"
           }`}
         />
       ))}
@@ -107,7 +107,7 @@ function Seite1() {
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2">
+        <h2 className="text-xl font-bold text-[var(--text-primary)] mb-2">
           Das Prozessmodell nach Gross
         </h2>
         <p className="text-sm text-muted">
@@ -117,8 +117,8 @@ function Seite1() {
       </div>
 
       {/* Timeline visualization */}
-      <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
-        <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-4">
+      <div className="bg-[var(--border)]/30 rounded-lg p-4">
+        <h3 className="text-sm font-semibold text-[var(--muted)] uppercase tracking-wider mb-4">
           Emotionsprozess → 5 Eingriffspunkte
         </h3>
         <div className="flex items-center gap-1 overflow-x-auto pb-2">
@@ -132,9 +132,7 @@ function Seite1() {
                 </div>
                 <p className="text-[10px] text-muted mt-1 max-w-[80px] leading-tight">{s.name}</p>
               </div>
-              {i < strategies.length - 1 && (
-                <div className="w-6 h-0.5 bg-gray-300 dark:bg-gray-600 mx-1" />
-              )}
+              {i < strategies.length - 1 && <div className="w-6 h-0.5 bg-[var(--border)] mx-1" />}
             </div>
           ))}
         </div>
@@ -160,9 +158,9 @@ function Seite1() {
               </span>
             </div>
             <p className={`text-sm ${s.descColor}`}>{s.description}</p>
-            <div className="bg-white dark:bg-gray-800 rounded-lg p-3">
+            <div className="bg-[var(--card)] rounded-lg p-3">
               <p className="text-xs text-muted mb-0.5">Beispiel:</p>
-              <p className="text-sm italic text-gray-700 dark:text-gray-300">{s.example}</p>
+              <p className="text-sm italic text-[var(--text-secondary)]">{s.example}</p>
             </div>
           </div>
         ))}
@@ -176,7 +174,7 @@ function Seite2() {
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2">
+        <h2 className="text-xl font-bold text-[var(--text-primary)] mb-2">
           Kognitive Veränderung — Die Königsstrategie
         </h2>
         <p className="text-sm text-muted">
@@ -191,13 +189,13 @@ function Seite2() {
 
       {/* Reframing-Techniken */}
       <div>
-        <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">
+        <h3 className="text-sm font-semibold text-[var(--muted)] uppercase tracking-wider mb-3">
           4 Reframing-Techniken
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <Card>
             <CardContent className="p-4">
-              <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-1">
+              <h4 className="font-semibold text-[var(--text-primary)] mb-1">
                 1. Perspektivenwechsel
               </h4>
               <p className="text-sm text-muted mb-2">
@@ -205,7 +203,7 @@ function Seite2() {
               </p>
               <div className="bg-green-50 dark:bg-green-900/15 rounded-lg p-3">
                 <p className="text-xs text-muted">Beispiel:</p>
-                <p className="text-sm italic text-gray-700 dark:text-gray-300">
+                <p className="text-sm italic text-[var(--text-secondary)]">
                   &quot;Der Prof hat es nicht persönlich gemeint — er steht selbst unter
                   Druck.&quot;
                 </p>
@@ -215,15 +213,13 @@ function Seite2() {
 
           <Card>
             <CardContent className="p-4">
-              <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-1">
-                2. Lernchance sehen
-              </h4>
+              <h4 className="font-semibold text-[var(--text-primary)] mb-1">2. Lernchance sehen</h4>
               <p className="text-sm text-muted mb-2">
                 Negative Erfahrungen als Wachstumsmöglichkeit umdeuten.
               </p>
               <div className="bg-green-50 dark:bg-green-900/15 rounded-lg p-3">
                 <p className="text-xs text-muted">Beispiel:</p>
-                <p className="text-sm italic text-gray-700 dark:text-gray-300">
+                <p className="text-sm italic text-[var(--text-secondary)]">
                   &quot;Durch diesen Fehler weiß ich jetzt, worauf ich achten muss.&quot;
                 </p>
               </div>
@@ -232,15 +228,13 @@ function Seite2() {
 
           <Card>
             <CardContent className="p-4">
-              <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-1">
-                3. Relativierung
-              </h4>
+              <h4 className="font-semibold text-[var(--text-primary)] mb-1">3. Relativierung</h4>
               <p className="text-sm text-muted mb-2">
                 Die Situation in einen größeren Kontext einordnen.
               </p>
               <div className="bg-green-50 dark:bg-green-900/15 rounded-lg p-3">
                 <p className="text-xs text-muted">Beispiel:</p>
-                <p className="text-sm italic text-gray-700 dark:text-gray-300">
+                <p className="text-sm italic text-[var(--text-secondary)]">
                   &quot;In fünf Jahren werde ich darüber lachen. Es ist nicht das Ende der
                   Welt.&quot;
                 </p>
@@ -250,13 +244,11 @@ function Seite2() {
 
           <Card>
             <CardContent className="p-4">
-              <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-1">
-                4. Uminterpretation
-              </h4>
+              <h4 className="font-semibold text-[var(--text-primary)] mb-1">4. Uminterpretation</h4>
               <p className="text-sm text-muted mb-2">Körperliche Symptome positiv umdeuten.</p>
               <div className="bg-green-50 dark:bg-green-900/15 rounded-lg p-3">
                 <p className="text-xs text-muted">Beispiel:</p>
-                <p className="text-sm italic text-gray-700 dark:text-gray-300">
+                <p className="text-sm italic text-[var(--text-secondary)]">
                   &quot;Mein Herzklopfen ist Aufregung, nicht Angst — mein Körper ist bereit!&quot;
                 </p>
               </div>
@@ -301,7 +293,7 @@ function Seite3() {
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2">
+        <h2 className="text-xl font-bold text-[var(--text-primary)] mb-2">
           Aufgabenformat &amp; Lösungsstrategie
         </h2>
         <p className="text-sm text-muted">
@@ -318,7 +310,7 @@ function Seite3() {
               Ausfüllhilfe (offizielle Instruktion)
             </h3>
           </div>
-          <p className="text-sm text-gray-700 dark:text-gray-300 whitespace-pre-line">
+          <p className="text-sm text-[var(--text-secondary)] whitespace-pre-line">
             {EMOTIONEN_REGULIEREN_AUSFUELLHILFE}
           </p>
           <p className="text-xs text-muted">
@@ -331,16 +323,16 @@ function Seite3() {
       {/* Format */}
       <Card>
         <CardContent className="p-5 space-y-3">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100">Aufgabenformat</h3>
-          <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg border-l-4 border-pink-400">
+          <h3 className="font-semibold text-[var(--text-primary)]">Aufgabenformat</h3>
+          <div className="bg-[var(--border)]/30 p-4 rounded-lg border-l-4 border-pink-400">
             <p className="text-sm text-muted mb-1">Situation + unerwünschte Emotion:</p>
-            <p className="text-sm italic text-gray-700 dark:text-gray-300">
+            <p className="text-sm italic text-[var(--text-secondary)]">
               &quot;Vor der Anatomie-Prüfung spürt Markus starke Prüfungsangst...&quot;
             </p>
           </div>
-          <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg border-l-4 border-indigo-400">
+          <div className="bg-[var(--border)]/30 p-4 rounded-lg border-l-4 border-indigo-400">
             <p className="text-sm text-muted mb-1">Frage:</p>
-            <p className="text-sm font-medium text-gray-700 dark:text-gray-300">
+            <p className="text-sm font-medium text-[var(--text-secondary)]">
               &quot;Welche Strategie wäre am effektivsten?&quot;
             </p>
           </div>
@@ -350,7 +342,7 @@ function Seite3() {
 
       {/* Lösungsstrategie */}
       <div className="space-y-3">
-        <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+        <h3 className="text-sm font-semibold text-[var(--muted)] uppercase tracking-wider">
           3-Schritt-Methode
         </h3>
 
@@ -360,9 +352,7 @@ function Seite3() {
               <span className="bg-pink-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
                 1
               </span>
-              <h3 className="font-semibold text-gray-900 dark:text-gray-100">
-                Situation analysieren
-              </h3>
+              <h3 className="font-semibold text-[var(--text-primary)]">Situation analysieren</h3>
             </div>
             <p className="text-sm text-muted pl-11">
               Ist die Situation veränderbar? Vermeidbar? Oder muss die Person damit umgehen?
@@ -376,7 +366,7 @@ function Seite3() {
               <span className="bg-pink-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
                 2
               </span>
-              <h3 className="font-semibold text-gray-900 dark:text-gray-100">Zeitpunkt beachten</h3>
+              <h3 className="font-semibold text-[var(--text-primary)]">Zeitpunkt beachten</h3>
             </div>
             <p className="text-sm text-muted pl-11">
               Ist die Person NOCH NICHT in der Situation? → Situationsauswahl prüfen. Ist sie
@@ -391,7 +381,7 @@ function Seite3() {
               <span className="bg-pink-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
                 3
               </span>
-              <h3 className="font-semibold text-gray-900 dark:text-gray-100">
+              <h3 className="font-semibold text-[var(--text-primary)]">
                 Langfristig vs. kurzfristig
               </h3>
             </div>
@@ -467,7 +457,7 @@ export default function EmotionenRegulierenLernen() {
               className={`text-xs px-3 py-1.5 rounded-full transition-colors cursor-pointer ${
                 i === currentPage
                   ? "bg-pink-100 dark:bg-pink-900/30 text-pink-700 dark:text-pink-300 font-medium"
-                  : "text-muted hover:bg-gray-100 dark:hover:bg-gray-800"
+                  : "text-muted hover:bg-[var(--border)]/50"
               }`}
             >
               {title}
@@ -480,7 +470,7 @@ export default function EmotionenRegulierenLernen() {
       <Page />
 
       {/* Bottom navigation */}
-      <div className="flex items-center justify-between pt-4 border-t border-gray-200 dark:border-gray-700">
+      <div className="flex items-center justify-between pt-4 border-t border-[var(--border)]">
         <button
           onClick={() => setCurrentPage((p) => Math.max(0, p - 1))}
           disabled={currentPage === 0}

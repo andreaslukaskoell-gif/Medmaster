@@ -11,7 +11,7 @@ function PageIndicator({ current, total }: { current: number; total: number }) {
         <div
           key={i}
           className={`h-1.5 rounded-full transition-all ${
-            i === current ? "w-6 bg-blue-500" : "w-1.5 bg-gray-300 dark:bg-gray-600"
+            i === current ? "w-6 bg-blue-500" : "w-1.5 bg-[var(--border)]"
           }`}
         />
       ))}
@@ -42,14 +42,14 @@ function SequenceExample({
   description: string;
 }) {
   return (
-    <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4">
-      <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-1">{label}</h4>
+    <div className="bg-[var(--card)] border border-[var(--border)] rounded-lg p-4">
+      <h4 className="font-semibold text-[var(--text-primary)] mb-1">{label}</h4>
       <p className="text-sm text-muted mb-3">{description}</p>
       <div className="flex items-center gap-2 flex-wrap font-mono text-lg">
         {sequence.map((val, i) => (
           <span
             key={i}
-            className={`px-2 py-1 rounded ${colors[i] || "text-gray-700 dark:text-gray-300"}`}
+            className={`px-2 py-1 rounded ${colors[i] || "text-[var(--text-secondary)]"}`}
           >
             {val}
           </span>
@@ -70,9 +70,7 @@ function Seite1() {
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2">
-          Mustertypen erkennen
-        </h2>
+        <h2 className="text-xl font-bold text-[var(--text-primary)] mb-2">Mustertypen erkennen</h2>
         <p className="text-sm text-muted">
           Im MedAT gibt es 6 Haupttypen von Zahlenfolgen. Lerne sie zu erkennen, um Aufgaben schnell
           und sicher zu l&ouml;sen.
@@ -81,7 +79,7 @@ function Seite1() {
 
       {/* Simple */}
       <div>
-        <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">
+        <h3 className="text-sm font-semibold text-[var(--muted)] uppercase tracking-wider mb-3">
           1. Simple Folgen
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -102,7 +100,7 @@ function Seite1() {
 
       {/* Zweiersprung */}
       <div>
-        <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">
+        <h3 className="text-sm font-semibold text-[var(--muted)] uppercase tracking-wider mb-3">
           2. Zweiersprung (h&auml;ufigstes Muster!)
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -126,7 +124,7 @@ function Seite1() {
 
       {/* Dreiersprung */}
       <div>
-        <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">
+        <h3 className="text-sm font-semibold text-[var(--muted)] uppercase tracking-wider mb-3">
           3. Dreiersprung
         </h3>
         <SequenceExample
@@ -139,7 +137,7 @@ function Seite1() {
 
       {/* Vierersprung */}
       <div>
-        <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">
+        <h3 className="text-sm font-semibold text-[var(--muted)] uppercase tracking-wider mb-3">
           4. Vierersprung
         </h3>
         <SequenceExample
@@ -152,7 +150,7 @@ function Seite1() {
 
       {/* Rekursiv */}
       <div>
-        <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">
+        <h3 className="text-sm font-semibold text-[var(--muted)] uppercase tracking-wider mb-3">
           5. Rekursive Folgen
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -173,7 +171,7 @@ function Seite1() {
 
       {/* Komplex */}
       <div>
-        <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">
+        <h3 className="text-sm font-semibold text-[var(--muted)] uppercase tracking-wider mb-3">
           6. Komplexe Folgen
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -200,7 +198,7 @@ function Seite2() {
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2">
+        <h2 className="text-xl font-bold text-[var(--text-primary)] mb-2">
           L&ouml;sungsstrategie Schritt f&uuml;r Schritt
         </h2>
         <p className="text-sm text-muted">
@@ -209,12 +207,12 @@ function Seite2() {
       </div>
 
       {/* Schritt 1 */}
-      <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-5 space-y-3">
+      <div className="bg-[var(--card)] border border-[var(--border)] rounded-lg p-5 space-y-3">
         <div className="flex items-center gap-3">
           <span className="bg-blue-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
             1
           </span>
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100">
+          <h3 className="font-semibold text-[var(--text-primary)]">
             Differenzen bilden (1. Ordnung)
           </h3>
         </div>
@@ -222,7 +220,7 @@ function Seite2() {
           Berechne die Differenz zwischen aufeinanderfolgenden Zahlen. Sind alle Differenzen gleich?
           → Simple Folge mit konstanter Differenz.
         </p>
-        <div className="pl-11 bg-gray-50 dark:bg-gray-800/50 rounded-lg p-3 text-sm">
+        <div className="pl-11 bg-[var(--border)]/30 rounded-lg p-3 text-sm">
           <p className="font-mono">Folge: 5, 8, 11, ?, 17, 20, ?, 26</p>
           <p className="font-mono text-blue-600 dark:text-blue-400 mt-1">
             Diff.: +3, +3, +3, +3, +3, +3, +3
@@ -234,12 +232,12 @@ function Seite2() {
       </div>
 
       {/* Schritt 2 */}
-      <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-5 space-y-3">
+      <div className="bg-[var(--card)] border border-[var(--border)] rounded-lg p-5 space-y-3">
         <div className="flex items-center gap-3">
           <span className="bg-blue-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
             2
           </span>
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100">
+          <h3 className="font-semibold text-[var(--text-primary)]">
             Differenzen der Differenzen (2. Ordnung)
           </h3>
         </div>
@@ -247,7 +245,7 @@ function Seite2() {
           Wenn die 1. Differenzen kein Muster zeigen, bilde die Differenzen der Differenzen.
           Konstante 2. Differenz? → Quadratische Folge.
         </p>
-        <div className="pl-11 bg-gray-50 dark:bg-gray-800/50 rounded-lg p-3 text-sm">
+        <div className="pl-11 bg-[var(--border)]/30 rounded-lg p-3 text-sm">
           <p className="font-mono">Folge: 1, 4, 9, 16, 25, ...</p>
           <p className="font-mono text-blue-600 dark:text-blue-400 mt-1">
             1. Diff.: +3, +5, +7, +9
@@ -260,20 +258,18 @@ function Seite2() {
       </div>
 
       {/* Schritt 3 */}
-      <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-5 space-y-3">
+      <div className="bg-[var(--card)] border border-[var(--border)] rounded-lg p-5 space-y-3">
         <div className="flex items-center gap-3">
           <span className="bg-blue-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
             3
           </span>
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100">
-            Zweiersprung pr&uuml;fen
-          </h3>
+          <h3 className="font-semibold text-[var(--text-primary)]">Zweiersprung pr&uuml;fen</h3>
         </div>
         <p className="text-sm text-muted pl-11">
           Kein Muster bei den Differenzen? Markiere jede 2. Zahl und pr&uuml;fe beide Teilfolgen
           separat. Das ist mit 90% der h&auml;ufigste MedAT-Aufgabentyp!
         </p>
-        <div className="pl-11 bg-gray-50 dark:bg-gray-800/50 rounded-lg p-3 text-sm">
+        <div className="pl-11 bg-[var(--border)]/30 rounded-lg p-3 text-sm">
           <p className="font-mono">Folge: 3, 10, 6, 20, 9, 30, ?, 40</p>
           <p className="mt-1">
             <span className="font-mono bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 px-1 rounded">
@@ -291,14 +287,12 @@ function Seite2() {
       </div>
 
       {/* Schritt 4 */}
-      <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-5 space-y-3">
+      <div className="bg-[var(--card)] border border-[var(--border)] rounded-lg p-5 space-y-3">
         <div className="flex items-center gap-3">
           <span className="bg-blue-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
             4
           </span>
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100">
-            Dreiersprung / Vierersprung
-          </h3>
+          <h3 className="font-semibold text-[var(--text-primary)]">Dreiersprung / Vierersprung</h3>
         </div>
         <p className="text-sm text-muted pl-11">
           Immer noch kein Muster? Probiere jede 3. oder 4. Zahl zu markieren. Seltener im MedAT,
@@ -307,18 +301,18 @@ function Seite2() {
       </div>
 
       {/* Schritt 5 */}
-      <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-5 space-y-3">
+      <div className="bg-[var(--card)] border border-[var(--border)] rounded-lg p-5 space-y-3">
         <div className="flex items-center gap-3">
           <span className="bg-blue-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
             5
           </span>
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100">Rekursion pr&uuml;fen</h3>
+          <h3 className="font-semibold text-[var(--text-primary)]">Rekursion pr&uuml;fen</h3>
         </div>
         <p className="text-sm text-muted pl-11">
           Pr&uuml;fe ob a+b=c, a&times;b=c oder &auml;hnliche Beziehungen zwischen
           aufeinanderfolgenden Zahlen bestehen.
         </p>
-        <div className="pl-11 bg-gray-50 dark:bg-gray-800/50 rounded-lg p-3 text-sm">
+        <div className="pl-11 bg-[var(--border)]/30 rounded-lg p-3 text-sm">
           <p className="font-mono">Folge: 2, 3, 5, 8, 13, 21, ...</p>
           <p className="font-mono text-blue-600 dark:text-blue-400 mt-1">
             2+3=5, 3+5=8, 5+8=13, 8+13=21
@@ -424,7 +418,7 @@ export default function ZahlenfolgenLernen() {
               className={`text-xs px-3 py-1.5 rounded-full transition-colors cursor-pointer ${
                 i === currentPage
                   ? "bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 font-medium"
-                  : "text-muted hover:bg-gray-100 dark:hover:bg-gray-800"
+                  : "text-muted hover:bg-[var(--border)]/50"
               }`}
             >
               {title}
@@ -437,7 +431,7 @@ export default function ZahlenfolgenLernen() {
       <Page />
 
       {/* Bottom navigation */}
-      <div className="flex items-center justify-between pt-4 border-t border-gray-200 dark:border-gray-700">
+      <div className="flex items-center justify-between pt-4 border-t border-[var(--border)]">
         <button
           onClick={() => setCurrentPage((p) => Math.max(0, p - 1))}
           disabled={currentPage === 0}

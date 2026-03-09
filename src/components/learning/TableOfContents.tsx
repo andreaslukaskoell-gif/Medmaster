@@ -96,7 +96,7 @@ export function TableOfContents({ sections }: Props) {
               } ${
                 activeId === id
                   ? "text-primary-700 dark:text-primary-300 font-bold bg-primary-100 dark:bg-primary-900/30"
-                  : "text-gray-600 dark:text-gray-400 hover:text-primary-700 dark:hover:text-primary-300 hover:bg-primary-50 dark:hover:bg-primary-900/20"
+                  : "text-muted-foreground hover:text-primary-700 dark:hover:text-primary-300 hover:bg-primary-50 dark:hover:bg-primary-900/20"
               }`}
             >
               <span className="text-primary-500 dark:text-primary-500 mr-1.5">{label}</span>

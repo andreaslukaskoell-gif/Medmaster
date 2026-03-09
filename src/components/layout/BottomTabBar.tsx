@@ -58,7 +58,7 @@ export function BottomTabBar() {
       className="lg:hidden fixed bottom-0 left-0 right-0 z-50 safe-area-pb"
       aria-label="Hauptnavigation"
     >
-      <div className="bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl border-t border-slate-200/80 dark:border-slate-700/50 shadow-[0_-4px_20px_rgba(0,0,0,0.06)] dark:shadow-[0_-4px_20px_rgba(0,0,0,0.2)] pb-[env(safe-area-inset-bottom)]">
+      <div className="bg-[var(--topbar-bg)] backdrop-blur-xl border-t border-[var(--border)] shadow-[0_-2px_12px_rgba(0,0,0,0.04)] dark:shadow-[0_-2px_12px_rgba(0,0,0,0.15)] pb-[env(safe-area-inset-bottom)]">
         <div className="grid grid-cols-5 h-16 max-w-lg mx-auto">
           {tabs.map((tab) => {
             const { to, label, icon: Icon, end, activeColor, activeBg, indicatorColor } = tab;
@@ -75,7 +75,7 @@ export function BottomTabBar() {
                     "flex flex-col items-center justify-center gap-0.5 text-xs font-medium transition-colors duration-200 cursor-pointer",
                     isActive
                       ? `${activeColor} ${activeBg}`
-                      : "text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-300"
+                      : "text-[var(--muted)] hover:text-[var(--foreground)]"
                   )
                 }
                 aria-current={isActive ? "page" : undefined}

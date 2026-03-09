@@ -116,7 +116,7 @@ export default function ImplikationenUeben() {
               className={`text-xs px-3 py-1.5 rounded-full transition-colors cursor-pointer ${
                 difficultyFilter === null
                   ? "bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 font-medium"
-                  : "text-muted hover:bg-gray-100 dark:hover:bg-gray-800"
+                  : "text-muted hover:bg-accent"
               }`}
             >
               Alle
@@ -134,7 +134,7 @@ export default function ImplikationenUeben() {
                 className={`text-xs px-3 py-1.5 rounded-full transition-colors cursor-pointer ${
                   difficultyFilter === d
                     ? `${difficultyLabels[d].bg} ${difficultyLabels[d].color} font-medium`
-                    : "text-muted hover:bg-gray-100 dark:hover:bg-gray-800"
+                    : "text-muted hover:bg-accent"
                 }`}
               >
                 {difficultyLabels[d].label}
@@ -154,7 +154,7 @@ export default function ImplikationenUeben() {
           </span>
           <button
             onClick={handleReset}
-            className="text-muted hover:text-gray-700 dark:hover:text-gray-300 cursor-pointer"
+            className="text-muted hover:text-foreground cursor-pointer"
             title="Zurücksetzen"
           >
             <RotateCcw className="w-4 h-4" />
@@ -163,7 +163,7 @@ export default function ImplikationenUeben() {
       </div>
 
       {/* Progress bar */}
-      <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5">
+      <div className="w-full bg-muted rounded-full h-1.5">
         <div
           className="h-1.5 rounded-full bg-purple-500 transition-all"
           style={{ width: `${((currentIndex + 1) / filteredTasks.length) * 100}%` }}
@@ -183,21 +183,21 @@ export default function ImplikationenUeben() {
 
           {/* Premises */}
           <div className="space-y-3">
-            <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg border-l-4 border-purple-400">
+            <div className="bg-muted p-4 rounded-lg border-l-4 border-purple-400">
               <p className="text-sm text-muted mb-1">Aussage 1:</p>
-              <p className="text-base font-medium text-gray-900 dark:text-gray-100">
+              <p className="text-base font-medium text-foreground">
                 &laquo;{currentTask.premise1}&raquo;
               </p>
             </div>
-            <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg border-l-4 border-indigo-400">
+            <div className="bg-muted p-4 rounded-lg border-l-4 border-indigo-400">
               <p className="text-sm text-muted mb-1">Aussage 2:</p>
-              <p className="text-base font-medium text-gray-900 dark:text-gray-100">
+              <p className="text-base font-medium text-foreground">
                 &laquo;{currentTask.premise2}&raquo;
               </p>
             </div>
           </div>
 
-          <p className="text-sm font-medium text-gray-700 dark:text-gray-300">
+          <p className="text-sm font-medium text-muted-foreground">
             Welche Schlussfolgerung ist zwingend?
           </p>
 
@@ -206,7 +206,7 @@ export default function ImplikationenUeben() {
             {currentTask.options.map((option, i) => {
               const isSelected = selectedAnswer === i;
               const isCorrectOption = i === currentTask.correctAnswer;
-              let borderClass = "border-gray-200 dark:border-gray-700";
+              let borderClass = "border-border";
               let bgClass = "hover:bg-purple-50 dark:hover:bg-purple-900/10";
 
               if (isChecked) {
@@ -237,7 +237,7 @@ export default function ImplikationenUeben() {
                     >
                       {optionLabels[i]}
                     </span>
-                    <span className="text-sm text-gray-900 dark:text-gray-100">{option}</span>
+                    <span className="text-sm text-foreground">{option}</span>
                     {isChecked && isCorrectOption && (
                       <CheckCircle2 className="w-4 h-4 text-green-500 ml-auto shrink-0 mt-0.5" />
                     )}
@@ -280,7 +280,7 @@ export default function ImplikationenUeben() {
                 </button>
                 <button
                   onClick={() => setShowExplanation(!showExplanation)}
-                  className="px-4 py-2.5 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors cursor-pointer"
+                  className="px-4 py-2.5 border border-border text-muted-foreground rounded-lg text-sm font-medium hover:bg-accent transition-colors cursor-pointer"
                 >
                   {showExplanation ? "Lösung verbergen" : "Lösungsweg anzeigen"}
                 </button>
@@ -346,8 +346,8 @@ export default function ImplikationenUeben() {
 
           {/* Explanation */}
           {showExplanation && isChecked && currentTask && (
-            <div className="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 space-y-3">
-              <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">
+            <div className="bg-muted border border-border rounded-lg p-4 space-y-3">
+              <h4 className="text-sm font-semibold text-foreground">
                 Lösungsweg (formale Mengenlogik)
               </h4>
               <p className="text-xs text-muted">
@@ -367,9 +367,7 @@ export default function ImplikationenUeben() {
                     ))}
                   </div>
                 </div>
-                <p className="text-sm text-gray-700 dark:text-gray-300">
-                  {currentTask.explanation}
-                </p>
+                <p className="text-sm text-muted-foreground">{currentTask.explanation}</p>
               </div>
             </div>
           )}

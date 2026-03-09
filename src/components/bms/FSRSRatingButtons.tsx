@@ -43,7 +43,7 @@ const RATINGS: { value: FSRSRating; label: string; sub: string; cls: string }[] 
 export function FSRSRatingButtons({ onRate, disabled, suggestedRating }: Props) {
   return (
     <div className="space-y-1.5">
-      <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide">
+      <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">
         Wie leicht war es?
       </p>
       <div className="grid grid-cols-4 gap-1.5">
@@ -56,7 +56,7 @@ export function FSRSRatingButtons({ onRate, disabled, suggestedRating }: Props) 
               disabled={disabled}
               className={`flex flex-col items-center gap-0.5 py-2.5 px-1 rounded-xl border text-center
                 transition-all cursor-pointer ${r.cls}
-                ${isSuggested ? "ring-2 ring-offset-2 ring-primary-500 dark:ring-offset-gray-900 scale-105" : ""}
+                ${isSuggested ? "ring-2 ring-offset-2 ring-primary-500 ring-offset-background scale-105" : ""}
                 ${disabled ? "opacity-50 cursor-default" : "hover:scale-105 active:scale-95"}
               `}
             >

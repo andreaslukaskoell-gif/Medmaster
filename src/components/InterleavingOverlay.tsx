@@ -37,12 +37,12 @@ export function InterleavingOverlay({ visible, currentArea, onDismiss }: Props) 
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: 16, opacity: 0 }}
               transition={{ type: "tween", duration: 0.25 }}
-              className="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-lg shadow-black/10 dark:shadow-black/30 p-4"
+              className="rounded-xl border border-border bg-card shadow-lg shadow-black/10 dark:shadow-black/30 p-4"
             >
-              <p className="text-sm font-medium text-gray-700 dark:text-gray-200 mb-3">
+              <p className="text-sm font-medium text-foreground mb-3">
                 Zeit für einen Kontextwechsel?
               </p>
-              <p className="text-xs text-gray-500 dark:text-gray-400 mb-4">
+              <p className="text-xs text-muted-foreground mb-4">
                 Du bist seit über 45 Minuten in {areaLabel(currentArea)}. Ein kurzer Wechsel
                 trainiert die kognitive Flexibilität und beugt Ermüdung vor.
               </p>

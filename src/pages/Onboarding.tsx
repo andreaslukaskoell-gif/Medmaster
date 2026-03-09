@@ -65,10 +65,8 @@ function StepWelcome({ onNext }: { onNext: () => void }) {
       </div>
 
       <div className="space-y-3">
-        <h1 className="text-3xl font-extrabold text-gray-900 dark:text-gray-100">
-          Willkommen bei Medmaster 🧠
-        </h1>
-        <p className="text-gray-500 dark:text-gray-400 text-base max-w-sm mx-auto">
+        <h1 className="text-3xl font-extrabold text-foreground">Willkommen bei Medmaster 🧠</h1>
+        <p className="text-muted-foreground text-base max-w-sm mx-auto">
           Lass uns deinen persoenlichen Lernplan erstellen.
         </p>
       </div>
@@ -115,10 +113,8 @@ function StepDate({
       </div>
 
       <div className="space-y-2">
-        <h2 className="text-2xl font-extrabold text-gray-900 dark:text-gray-100">
-          Wann schreibst du die BMS?
-        </h2>
-        <p className="text-gray-500 dark:text-gray-400 text-sm">Gib dein Pruefungsdatum ein</p>
+        <h2 className="text-2xl font-extrabold text-foreground">Wann schreibst du die BMS?</h2>
+        <p className="text-muted-foreground text-sm">Gib dein Pruefungsdatum ein</p>
       </div>
 
       <div className="w-full max-w-xs space-y-4">
@@ -127,7 +123,7 @@ function StepDate({
           min={minDate}
           value={value}
           onChange={(e) => onChange(e.target.value)}
-          className="w-full border border-gray-300 dark:border-gray-600 rounded-xl px-4 py-3 text-center text-gray-900 dark:text-gray-100 bg-white dark:bg-gray-800 text-base focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full border border-border rounded-xl px-4 py-3 text-center text-foreground bg-card text-base focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
 
         <AnimatePresence>
@@ -190,10 +186,8 @@ function StepTime({
       </div>
 
       <div className="space-y-2">
-        <h2 className="text-2xl font-extrabold text-gray-900 dark:text-gray-100">
-          Wie viel Zeit hast du pro Tag?
-        </h2>
-        <p className="text-gray-500 dark:text-gray-400 text-sm">Waehle deine taegliche Lernzeit</p>
+        <h2 className="text-2xl font-extrabold text-foreground">Wie viel Zeit hast du pro Tag?</h2>
+        <p className="text-muted-foreground text-sm">Waehle deine taegliche Lernzeit</p>
       </div>
 
       <div className="w-full max-w-xs space-y-4">
@@ -206,7 +200,7 @@ function StepTime({
                 "rounded-2xl border-2 py-5 px-3 text-center font-bold text-lg transition-all cursor-pointer",
                 value === opt.value
                   ? "border-blue-500 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 shadow-md"
-                  : "border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:border-gray-300 dark:hover:border-gray-600"
+                  : "border-border bg-card text-muted-foreground hover:border-border/80"
               )}
             >
               {opt.label}
@@ -265,12 +259,8 @@ function StepFach({
       </div>
 
       <div className="space-y-2">
-        <h2 className="text-2xl font-extrabold text-gray-900 dark:text-gray-100">
-          Was ist dein schwaechstes Fach?
-        </h2>
-        <p className="text-gray-500 dark:text-gray-400 text-sm">
-          Wir priorisieren deine Schwachstellen
-        </p>
+        <h2 className="text-2xl font-extrabold text-foreground">Was ist dein schwaechstes Fach?</h2>
+        <p className="text-muted-foreground text-sm">Wir priorisieren deine Schwachstellen</p>
       </div>
 
       <div className="w-full max-w-xs space-y-4">
@@ -283,7 +273,7 @@ function StepFach({
                 "rounded-2xl border-2 py-5 px-3 text-center font-bold transition-all cursor-pointer",
                 value === fach.id
                   ? "border-blue-500 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 shadow-md"
-                  : "border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:border-gray-300 dark:hover:border-gray-600"
+                  : "border-border bg-card text-muted-foreground hover:border-border/80"
               )}
             >
               <div className="text-2xl mb-1">{fach.emoji}</div>
@@ -372,9 +362,7 @@ function StepDone() {
         transition={{ delay: 0.3 }}
         className="space-y-1"
       >
-        <h2 className="text-3xl font-extrabold text-gray-900 dark:text-gray-100">
-          Alles bereit! 🎉
-        </h2>
+        <h2 className="text-3xl font-extrabold text-foreground">Alles bereit! 🎉</h2>
         <p className="text-lg font-bold text-green-600 dark:text-green-400">
           +50 XP — Willkommen an Bord!
         </p>
@@ -386,7 +374,7 @@ function StepDone() {
         transition={{ delay: 0.5 }}
         className="w-full space-y-2"
       >
-        <p className="text-sm text-gray-500 dark:text-gray-400 mb-3">Wo möchtest du starten?</p>
+        <p className="text-sm text-muted-foreground mb-3">Wo möchtest du starten?</p>
         {firstActions.map((action, i) => (
           <motion.button
             key={action.path}
@@ -399,7 +387,7 @@ function StepDone() {
             <span className="text-2xl">{action.icon}</span>
             <div className="flex-1 min-w-0">
               <p className={`font-semibold text-sm ${action.textColor}`}>{action.label}</p>
-              <p className="text-xs text-gray-500 dark:text-gray-400">{action.description}</p>
+              <p className="text-xs text-muted-foreground">{action.description}</p>
             </div>
             <ArrowRight className={`w-4 h-4 shrink-0 ${action.textColor}`} />
           </motion.button>
@@ -433,7 +421,7 @@ function StepIndicator({ current }: { current: Step }) {
                 ? "bg-blue-500 text-white"
                 : i === currentIdx
                   ? "bg-blue-500 text-white ring-4 ring-blue-200 dark:ring-blue-800"
-                  : "bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500"
+                  : "bg-muted text-muted-foreground/70"
             )}
           >
             {i < currentIdx ? <CheckCircle2 className="w-4 h-4" /> : i + 1}
@@ -442,7 +430,7 @@ function StepIndicator({ current }: { current: Step }) {
             <div
               className={cn(
                 "flex-1 h-0.5 w-6 rounded-full transition-all",
-                i < currentIdx ? "bg-blue-500" : "bg-gray-200 dark:bg-gray-700"
+                i < currentIdx ? "bg-blue-500" : "bg-muted"
               )}
             />
           )}
@@ -499,7 +487,7 @@ export default function Onboarding() {
   const showIndicator = step !== "done";
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-950 px-4">
+    <div className="min-h-screen flex items-center justify-center bg-background px-4">
       <div className="w-full max-w-sm">
         {showIndicator && <StepIndicator current={step} />}
 

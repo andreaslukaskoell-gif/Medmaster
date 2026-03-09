@@ -137,7 +137,7 @@ export default function TodayPage() {
         {/* Konkreter Lernplan für heute (wenn aktiv) */}
         {concretePlan && (
           <Link to="/lernplan" className="block mb-6">
-            <Card className="border-2 border-primary-200 dark:border-primary-800 hover:bg-gray-50/50 dark:hover:bg-gray-900/30 transition-colors">
+            <Card className="border-2 border-primary-200 dark:border-primary-800 hover:bg-accent/50 transition-colors">
               <CardContent className="p-4">
                 <div className="flex items-center justify-between gap-2 mb-2">
                   <h3 className="font-semibold text-[var(--text-primary)] flex items-center gap-2">

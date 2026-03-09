@@ -185,9 +185,7 @@ export function ImplikationenQuiz({
         <Button variant="ghost" size="sm" onClick={onBack}>
           <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
         </Button>
-        <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
-          Implikationen erkennen
-        </h1>
+        <h1 className="text-2xl font-bold text-[var(--text-primary)]">Implikationen erkennen</h1>
         <p className="text-sm text-muted">
           Kategorische Syllogismen: Zwei Prämissen mit "Alle" / "Einige" / "Kein" — welche
           Schlussfolgerung ist korrekt?
@@ -294,7 +292,7 @@ export function ImplikationenQuiz({
           </CardHeader>
           <CardContent className="space-y-6">
             <div>
-              <label className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-3 block">
+              <label className="text-sm font-medium text-[var(--text-primary)] mb-3 block">
                 Anzahl Fragen
               </label>
               <div className="flex gap-3">
@@ -305,7 +303,7 @@ export function ImplikationenQuiz({
                     className={`flex-1 px-4 py-3 rounded-lg border text-sm font-medium transition-colors cursor-pointer ${
                       questionCount === c
                         ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300"
-                        : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800"
+                        : "border-[var(--border)] hover:bg-[var(--border)]/50"
                     }`}
                   >
                     {c}
@@ -382,10 +380,10 @@ export function ImplikationenQuiz({
                     {qu.source ? `Quelle: ${qu.source}` : "Offizielle Beispielaufgabe"}
                   </p>
                 )}
-                <p className="text-sm text-gray-700 dark:text-gray-300 ml-7 mb-1">
+                <p className="text-sm text-[var(--text-secondary)] ml-7 mb-1">
                   <strong>Prämisse 1:</strong> {qu.premise1}
                 </p>
-                <p className="text-sm text-gray-700 dark:text-gray-300 ml-7 mb-1">
+                <p className="text-sm text-[var(--text-secondary)] ml-7 mb-1">
                   <strong>Prämisse 2:</strong> {qu.premise2}
                 </p>
                 {!correct && answers[qu.id] !== undefined && (
@@ -490,7 +488,7 @@ export function ImplikationenQuiz({
           </span>
         </div>
       </div>
-      <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+      <div className="w-full bg-[var(--border)] rounded-full h-2">
         <div
           className="bg-primary-600 h-2 rounded-full transition-all"
           style={{
@@ -516,15 +514,15 @@ export function ImplikationenQuiz({
               {currentQ.source ? `Quelle: ${currentQ.source}` : "Offizielle Beispielaufgabe"}
             </p>
           )}
-          <div className="bg-gray-50 dark:bg-gray-800 border-l-4 border-primary-400 p-4 rounded-r-lg mb-6 space-y-2">
-            <p className="text-base font-medium text-gray-900 dark:text-gray-100 italic">
+          <div className="bg-[var(--border)]/30 border-l-4 border-primary-400 p-4 rounded-r-lg mb-6 space-y-2">
+            <p className="text-base font-medium text-[var(--text-primary)] italic">
               &bdquo;{currentQ.premise1 ?? "Fehler beim Laden"}&ldquo;
             </p>
-            <p className="text-base font-medium text-gray-900 dark:text-gray-100 italic">
+            <p className="text-base font-medium text-[var(--text-primary)] italic">
               &bdquo;{currentQ.premise2 ?? "Fehler beim Laden"}&ldquo;
             </p>
           </div>
-          <p className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-3">
+          <p className="text-sm font-medium text-[var(--text-primary)] mb-3">
             Welche Schlussfolgerung ist korrekt?
           </p>
           <div className="space-y-2">
@@ -536,13 +534,13 @@ export function ImplikationenQuiz({
                   className={`w-full text-left px-4 py-3 rounded-lg border text-sm transition-colors cursor-pointer ${
                     answers[currentQ.id] === oi
                       ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300"
-                      : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800"
+                      : "border-[var(--border)] hover:bg-[var(--border)]/50"
                   }`}
                 >
                   <span className="font-semibold mr-2">({String.fromCharCode(65 + oi)})</span>
                   {opt}
                   {!opt.endsWith(".") && !opt.endsWith("?") ? "." : ""}
-                  <kbd className="float-right text-[10px] bg-gray-200 dark:bg-gray-600 px-1.5 py-0.5 rounded text-muted">
+                  <kbd className="float-right text-[10px] bg-[var(--border)] px-1.5 py-0.5 rounded text-muted">
                     {oi + 1}
                   </kbd>
                 </button>

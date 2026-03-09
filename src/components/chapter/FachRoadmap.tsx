@@ -56,7 +56,7 @@ export function FachRoadmap({ chapters, currentChapterId, onSelectChapter }: Fac
       <div className="relative">
         {/* Fade gradient to indicate scrollability */}
         {sorted.length > 3 && (
-          <div className="absolute right-0 top-0 bottom-2 w-16 bg-linear-to-l from-white dark:from-slate-800 to-transparent pointer-events-none z-10" />
+          <div className="absolute right-0 top-0 bottom-2 w-16 bg-linear-to-l from-[var(--card)] to-transparent pointer-events-none z-10" />
         )}
 
         <div className="flex items-center gap-2 overflow-x-auto pb-2">
@@ -69,7 +69,7 @@ export function FachRoadmap({ chapters, currentChapterId, onSelectChapter }: Fac
                 className={`px-3 py-2 rounded-md whitespace-nowrap text-sm font-medium transition ${
                   currentChapterId === chapter.id
                     ? `${colors.button} text-white shadow-md`
-                    : "bg-white/50 dark:bg-slate-700/50 hover:bg-white/70 dark:hover:bg-slate-700/70"
+                    : "bg-[var(--card)]/50 hover:bg-[var(--card)]/70"
                 }`}
               >
                 {chapter.sequence ? `${chapter.sequence}. ` : ""}
@@ -77,7 +77,7 @@ export function FachRoadmap({ chapters, currentChapterId, onSelectChapter }: Fac
               </motion.button>
 
               {idx < sorted.length - 1 && (
-                <ArrowRight className="w-4 h-4 text-slate-400 dark:text-slate-500 flex-shrink-0" />
+                <ArrowRight className="w-4 h-4 text-[var(--muted)]/60 flex-shrink-0" />
               )}
             </React.Fragment>
           ))}

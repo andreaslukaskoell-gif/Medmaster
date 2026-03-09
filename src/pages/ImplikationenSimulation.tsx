@@ -182,7 +182,7 @@ export default function ImplikationenSimulation() {
             <Timer className="w-8 h-8 text-purple-500" />
           </div>
           <div>
-            <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2">
+            <h2 className="text-xl font-bold text-[var(--text-primary)] mb-2">
               Simulation starten
             </h2>
             <p className="text-sm text-muted max-w-md mx-auto">
@@ -228,7 +228,7 @@ export default function ImplikationenSimulation() {
                 <Trophy className="w-8 h-8 text-white" />
               </div>
               <div>
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
+                <h2 className="text-2xl font-bold text-[var(--text-primary)]">
                   {correctCount}/{TASK_COUNT}
                 </h2>
                 <p className="text-sm text-muted">
@@ -244,19 +244,19 @@ export default function ImplikationenSimulation() {
               </div>
               <div className="flex justify-center gap-6 text-sm">
                 <div className="text-center">
-                  <p className="text-lg font-bold text-gray-900 dark:text-gray-100">
+                  <p className="text-lg font-bold text-[var(--text-primary)]">
                     {formatTime(TIME_LIMIT - timeLeft)}
                   </p>
                   <p className="text-xs text-muted">Gesamtzeit</p>
                 </div>
                 <div className="text-center">
-                  <p className="text-lg font-bold text-gray-900 dark:text-gray-100">{avgTime}s</p>
+                  <p className="text-lg font-bold text-[var(--text-primary)]">{avgTime}s</p>
                   <p className="text-xs text-muted">Ø pro Aufgabe</p>
                 </div>
               </div>
               {/* Score bar */}
               <div className="w-full max-w-xs mx-auto">
-                <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
+                <div className="w-full bg-[var(--border)] rounded-full h-3">
                   <div
                     className={`h-3 rounded-full transition-all ${
                       scorePercent >= 80
@@ -280,7 +280,7 @@ export default function ImplikationenSimulation() {
 
         {/* Results list */}
         <div className="space-y-2">
-          <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+          <h3 className="text-sm font-semibold text-[var(--muted)] uppercase tracking-wider">
             Aufgabenübersicht
           </h3>
           {results.map((result, i) => {
@@ -290,7 +290,7 @@ export default function ImplikationenSimulation() {
                 <CardContent className="p-0">
                   <button
                     onClick={() => setExpandedResult(isExpanded ? null : i)}
-                    className="w-full text-left p-4 flex items-center gap-3 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors cursor-pointer"
+                    className="w-full text-left p-4 flex items-center gap-3 hover:bg-[var(--border)]/50 transition-colors cursor-pointer"
                   >
                     <span
                       className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${
@@ -302,7 +302,7 @@ export default function ImplikationenSimulation() {
                       {i + 1}
                     </span>
                     <div className="flex-1 min-w-0">
-                      <p className="text-sm text-gray-900 dark:text-gray-100 truncate">
+                      <p className="text-sm text-[var(--text-primary)] truncate">
                         {result.task.premise1}
                       </p>
                     </div>
@@ -316,13 +316,13 @@ export default function ImplikationenSimulation() {
                     </div>
                   </button>
                   {isExpanded && (
-                    <div className="px-4 pb-4 space-y-3 border-t border-gray-100 dark:border-gray-800 pt-3">
+                    <div className="px-4 pb-4 space-y-3 border-t border-[var(--border)] pt-3">
                       <div className="space-y-2">
-                        <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg border-l-4 border-purple-400">
+                        <div className="bg-[var(--border)]/30 p-3 rounded-lg border-l-4 border-purple-400">
                           <p className="text-xs text-muted mb-0.5">Aussage 1:</p>
                           <p className="text-sm">&laquo;{result.task.premise1}&raquo;</p>
                         </div>
-                        <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg border-l-4 border-indigo-400">
+                        <div className="bg-[var(--border)]/30 p-3 rounded-lg border-l-4 border-indigo-400">
                           <p className="text-xs text-muted mb-0.5">Aussage 2:</p>
                           <p className="text-sm">&laquo;{result.task.premise2}&raquo;</p>
                         </div>
@@ -350,12 +350,10 @@ export default function ImplikationenSimulation() {
                           );
                         })}
                       </div>
-                      <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-3">
-                        <p className="text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">
-                          Lösungsweg:
-                        </p>
+                      <div className="bg-[var(--border)]/30 rounded-lg p-3">
+                        <p className="text-xs font-medium text-[var(--muted)] mb-1">Lösungsweg:</p>
 
-                        <p className="text-sm text-gray-700 dark:text-gray-300">
+                        <p className="text-sm text-[var(--text-secondary)]">
                           {result.task.explanation}
                         </p>
                       </div>
@@ -393,7 +391,7 @@ export default function ImplikationenSimulation() {
           className={`w-5 h-5 ${isUrgent ? "text-red-500 animate-pulse" : "text-purple-500"}`}
         />
         <div className="flex-1">
-          <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+          <div className="w-full bg-[var(--border)] rounded-full h-2.5">
             <div
               className={`h-2.5 rounded-full transition-all ${isUrgent ? "bg-red-500" : "bg-purple-500"}`}
               style={{ width: `${timePercent}%` }}
@@ -401,7 +399,7 @@ export default function ImplikationenSimulation() {
           </div>
         </div>
         <span
-          className={`text-sm font-mono font-bold min-w-[48px] text-right ${isUrgent ? "text-red-600 dark:text-red-400" : "text-gray-900 dark:text-gray-100"}`}
+          className={`text-sm font-mono font-bold min-w-[48px] text-right ${isUrgent ? "text-red-600 dark:text-red-400" : "text-[var(--text-primary)]"}`}
         >
           {formatTime(timeLeft)}
         </span>
@@ -423,7 +421,7 @@ export default function ImplikationenSimulation() {
                     : "bg-red-500"
                   : i === currentIndex
                     ? "bg-purple-500"
-                    : "bg-gray-300 dark:bg-gray-600"
+                    : "bg-[var(--border)]"
               }`}
             />
           ))}
@@ -434,21 +432,21 @@ export default function ImplikationenSimulation() {
       <Card>
         <CardContent className="p-6 space-y-5">
           <div className="space-y-3">
-            <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg border-l-4 border-purple-400">
+            <div className="bg-[var(--border)]/30 p-4 rounded-lg border-l-4 border-purple-400">
               <p className="text-sm text-muted mb-1">Aussage 1:</p>
-              <p className="text-base font-medium text-gray-900 dark:text-gray-100">
+              <p className="text-base font-medium text-[var(--text-primary)]">
                 &laquo;{currentTask.premise1}&raquo;
               </p>
             </div>
-            <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg border-l-4 border-indigo-400">
+            <div className="bg-[var(--border)]/30 p-4 rounded-lg border-l-4 border-indigo-400">
               <p className="text-sm text-muted mb-1">Aussage 2:</p>
-              <p className="text-base font-medium text-gray-900 dark:text-gray-100">
+              <p className="text-base font-medium text-[var(--text-primary)]">
                 &laquo;{currentTask.premise2}&raquo;
               </p>
             </div>
           </div>
 
-          <p className="text-sm font-medium text-gray-700 dark:text-gray-300">
+          <p className="text-sm font-medium text-[var(--text-secondary)]">
             Welche Schlussfolgerung ist zwingend?
           </p>
 
@@ -460,16 +458,16 @@ export default function ImplikationenSimulation() {
                 className={`w-full text-left p-3 rounded-lg border-2 transition-all cursor-pointer ${
                   selectedAnswer === i
                     ? "border-purple-400 dark:border-purple-600 bg-purple-50 dark:bg-purple-900/20"
-                    : "border-gray-200 dark:border-gray-700 hover:bg-purple-50 dark:hover:bg-purple-900/10"
+                    : "border-[var(--border)] hover:bg-purple-50 dark:hover:bg-purple-900/10"
                 }`}
               >
                 <div className="flex items-start gap-3">
                   <span
-                    className={`text-sm font-bold mt-0.5 ${selectedAnswer === i ? "text-purple-600" : "text-gray-400"}`}
+                    className={`text-sm font-bold mt-0.5 ${selectedAnswer === i ? "text-purple-600" : "text-[var(--muted)]/60"}`}
                   >
                     {optionLabels[i]}
                   </span>
-                  <span className="text-sm text-gray-900 dark:text-gray-100">{option}</span>
+                  <span className="text-sm text-[var(--text-primary)]">{option}</span>
                 </div>
               </button>
             ))}

@@ -65,7 +65,7 @@ export function SmartLink({ to, description, children, className }: SmartLinkPro
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 4 }}
             transition={{ duration: 0.15 }}
-            className="fixed z-50 px-3 py-2 text-sm text-slate-100 bg-slate-800 dark:bg-slate-700 rounded-lg shadow-lg border border-white/10 max-w-[280px] pointer-events-none"
+            className="fixed z-50 px-3 py-2 text-sm text-foreground bg-card rounded-lg shadow-lg border border-border max-w-[280px] pointer-events-none"
             style={{
               left: tooltipPos.x,
               top: tooltipPos.y,
@@ -73,9 +73,7 @@ export function SmartLink({ to, description, children, className }: SmartLinkPro
             }}
           >
             {description}
-            <span className="block text-xs text-slate-300 dark:text-slate-400 mt-1">
-              Klicken zum Öffnen
-            </span>
+            <span className="block text-xs text-muted-foreground mt-1">Klicken zum Öffnen</span>
           </motion.div>
         )}
       </AnimatePresence>

@@ -195,7 +195,7 @@ export function WortflüssigkeitQuiz({
         <Button variant="ghost" size="sm" onClick={onBack}>
           <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
         </Button>
-        <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Wortflüssigkeit</h1>
+        <h1 className="text-2xl font-bold text-[var(--text-primary)]">Wortflüssigkeit</h1>
         <p className="text-sm text-muted">
           Die Buchstaben eines Wortes wurden vertauscht. Finde heraus, mit welchem Buchstaben das
           Wort beginnt (oder ob keine der Antworten passt)!
@@ -298,7 +298,7 @@ export function WortflüssigkeitQuiz({
           </CardHeader>
           <CardContent className="space-y-6">
             <div>
-              <label className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-3 block">
+              <label className="text-sm font-medium text-[var(--text-primary)] mb-3 block">
                 Anzahl Fragen
               </label>
               <div className="flex gap-3">
@@ -309,7 +309,7 @@ export function WortflüssigkeitQuiz({
                     className={`flex-1 px-4 py-3 rounded-lg border text-sm font-medium transition-colors cursor-pointer ${
                       questionCount === c
                         ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300"
-                        : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800"
+                        : "border-[var(--border)] hover:bg-[var(--border)]/50"
                     }`}
                   >
                     {c}
@@ -470,7 +470,7 @@ export function WortflüssigkeitQuiz({
           </span>
         </div>
       </div>
-      <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+      <div className="w-full bg-[var(--border)] rounded-full h-2">
         <div
           className="bg-primary-600 h-2 rounded-full transition-all"
           style={{ width: `${((index + 1) / safeQuestions.length) * 100}%` }}
@@ -489,7 +489,7 @@ export function WortflüssigkeitQuiz({
             {currentQ.letters.map((letter, i) => (
               <div
                 key={i}
-                className="min-w-[2.5rem] px-2 py-2 border rounded-md text-center font-mono text-lg font-bold border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
+                className="min-w-[2.5rem] px-2 py-2 border rounded-md text-center font-mono text-lg font-bold border-[var(--border)] bg-[var(--card)] text-[var(--text-primary)]"
               >
                 {letter}
               </div>
@@ -503,12 +503,12 @@ export function WortflüssigkeitQuiz({
                 className={`w-full text-left px-4 py-3 rounded-lg border text-sm transition-colors cursor-pointer ${
                   answers[taskId] === opt
                     ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300"
-                    : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800"
+                    : "border-[var(--border)] hover:bg-[var(--border)]/50"
                 }`}
               >
                 <span className="font-semibold mr-2">({String.fromCharCode(65 + li)})</span>
                 {opt === "-" ? "Keine der Antworten ist richtig" : `Anfangsbuchstabe: ${opt}`}
-                <kbd className="float-right text-[10px] bg-gray-200 dark:bg-gray-600 px-1.5 py-0.5 rounded text-muted">
+                <kbd className="float-right text-[10px] bg-[var(--border)] px-1.5 py-0.5 rounded text-muted">
                   {li + 1}
                 </kbd>
               </button>

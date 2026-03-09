@@ -48,7 +48,7 @@ function ProgressRing({
         fill="none"
         stroke="currentColor"
         strokeWidth={stroke}
-        className="text-gray-200 dark:text-gray-700"
+        className="text-[var(--border)]"
       />
       <circle
         cx={size / 2}
@@ -180,18 +180,16 @@ export default function PerformanceOverview() {
       <div className="flex items-center gap-4">
         <Link
           to="/dashboard"
-          className="p-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+          className="p-2 rounded-lg text-[var(--muted)] hover:bg-[var(--border)]/50 transition-colors"
         >
           <ArrowLeft className="w-5 h-5" />
         </Link>
-        <h1 className="text-2xl font-bold text-gray-900 dark:text-slate-100">
-          Erfolge & Wissensstand
-        </h1>
+        <h1 className="text-2xl font-bold text-[var(--text-primary)]">Erfolge & Wissensstand</h1>
       </div>
 
       {/* Wissenszustand (Heatmap) */}
       <section>
-        <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">
+        <h2 className="text-lg font-semibold text-[var(--text-primary)] mb-3">
           Wissenszustand pro Fach
         </h2>
         <MemoryHeatmapOrbits />
@@ -199,7 +197,7 @@ export default function PerformanceOverview() {
 
       {/* Prüfungs-Readiness */}
       <section>
-        <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">
+        <h2 className="text-lg font-semibold text-[var(--text-primary)] mb-3">
           Prüfungs-Readiness
         </h2>
         {!mounted ? (
@@ -216,7 +214,7 @@ export default function PerformanceOverview() {
           </Card>
         ) : (
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-            <Card className="border border-slate-200/60 dark:border-slate-700/60 shadow-sm">
+            <Card className="border border-[var(--border)] shadow-sm">
               <CardContent className="p-5">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="relative flex items-center justify-center">
@@ -226,7 +224,7 @@ export default function PerformanceOverview() {
                     </span>
                   </div>
                   <div>
-                    <p className="text-base font-bold text-gray-900 dark:text-gray-100">
+                    <p className="text-base font-bold text-[var(--text-primary)]">
                       MedAT-Bereitschaft
                     </p>
                     <p className="text-xs text-muted">
@@ -246,14 +244,14 @@ export default function PerformanceOverview() {
                     return (
                       <div key={f.id}>
                         <div className="flex items-center justify-between mb-1">
-                          <span className="text-xs font-medium text-gray-700 dark:text-gray-300">
+                          <span className="text-xs font-medium text-[var(--text-secondary)]">
                             {f.label}
                           </span>
-                          <span className="text-xs font-bold text-gray-600 dark:text-gray-400">
+                          <span className="text-xs font-bold text-[var(--muted)]">
                             {Math.round(fachReady)}%
                           </span>
                         </div>
-                        <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                        <div className="w-full bg-[var(--border)] rounded-full h-2">
                           <div
                             className={cn(f.color, "h-2 rounded-full transition-all duration-500")}
                             style={{ width: `${Math.min(100, fachReady)}%` }}
@@ -268,11 +266,11 @@ export default function PerformanceOverview() {
 
             <div className="space-y-4">
               {weakTopics.length > 0 && (
-                <Card className="border-l-4 border-l-orange-400 border border-slate-200/60 dark:border-slate-700/60 shadow-sm">
+                <Card className="border-l-4 border-l-orange-400 border border-[var(--border)] shadow-sm">
                   <CardContent className="p-4">
                     <div className="flex items-center gap-2 mb-2">
                       <AlertTriangle className="w-4 h-4 text-orange-500" />
-                      <p className="text-xs font-semibold text-gray-900 dark:text-gray-100">
+                      <p className="text-xs font-semibold text-[var(--text-primary)]">
                         Fokus-Themen
                       </p>
                     </div>
@@ -288,7 +286,7 @@ export default function PerformanceOverview() {
                             >
                               {t.fach.slice(0, 3).toUpperCase()}
                             </span>
-                            <span className="text-[11px] text-gray-700 dark:text-gray-300 truncate">
+                            <span className="text-[11px] text-[var(--text-secondary)] truncate">
                               {t.thema}
                             </span>
                           </div>
@@ -302,11 +300,11 @@ export default function PerformanceOverview() {
                 </Card>
               )}
               {strongTopics.length > 0 && (
-                <Card className="border-l-4 border-l-emerald-400 border border-slate-200/60 dark:border-slate-700/60 shadow-sm">
+                <Card className="border-l-4 border-l-emerald-400 border border-[var(--border)] shadow-sm">
                   <CardContent className="p-4">
                     <div className="flex items-center gap-2 mb-2">
                       <CheckCircle2 className="w-4 h-4 text-emerald-500" />
-                      <p className="text-xs font-semibold text-gray-900 dark:text-gray-100">
+                      <p className="text-xs font-semibold text-[var(--text-primary)]">
                         Starke Themen
                       </p>
                     </div>
@@ -322,7 +320,7 @@ export default function PerformanceOverview() {
                             >
                               {t.fach.slice(0, 3).toUpperCase()}
                             </span>
-                            <span className="text-[11px] text-gray-700 dark:text-gray-300 truncate">
+                            <span className="text-[11px] text-[var(--text-secondary)] truncate">
                               {t.thema}
                             </span>
                           </div>
@@ -342,7 +340,7 @@ export default function PerformanceOverview() {
 
       {/* Meilensteine */}
       <section>
-        <Card className="border border-slate-200/60 dark:border-slate-700/60 shadow-sm">
+        <Card className="border border-[var(--border)] shadow-sm">
           <CardHeader className="pb-2">
             <CardTitle className="text-base flex items-center gap-2">
               <Trophy className="w-4 h-4 text-yellow-500" />
@@ -361,14 +359,14 @@ export default function PerformanceOverview() {
                     "flex flex-col items-center gap-1 p-2 rounded-lg transition-colors",
                     m.check
                       ? "bg-yellow-50 dark:bg-yellow-900/20"
-                      : "bg-gray-50 dark:bg-gray-800/50 opacity-40"
+                      : "bg-[var(--border)]/30 opacity-40"
                   )}
                   title={m.label}
                 >
                   <m.icon
                     className={cn(
                       "w-5 h-5",
-                      m.check ? "text-yellow-500" : "text-gray-400 dark:text-gray-600"
+                      m.check ? "text-yellow-500" : "text-[var(--muted)]/60"
                     )}
                   />
                   <span
@@ -376,7 +374,7 @@ export default function PerformanceOverview() {
                       "text-[9px] text-center leading-tight",
                       m.check
                         ? "text-yellow-700 dark:text-yellow-400 font-medium"
-                        : "text-gray-400 dark:text-gray-600"
+                        : "text-[var(--muted)]/60"
                     )}
                   >
                     {m.label}
@@ -390,7 +388,7 @@ export default function PerformanceOverview() {
 
       {/* Meine Erfolge – Badges */}
       <section>
-        <Card className="border border-slate-200/60 dark:border-slate-700/60 shadow-sm">
+        <Card className="border border-[var(--border)] shadow-sm">
           <CardHeader className="pb-2">
             <CardTitle className="text-base flex items-center gap-2">
               <Trophy className="w-4 h-4 text-amber-500" />
@@ -411,7 +409,7 @@ export default function PerformanceOverview() {
                       "flex items-center gap-3 p-3 rounded-xl border transition-colors",
                       earned
                         ? "bg-amber-50/50 dark:bg-amber-900/20 border-amber-200 dark:border-amber-800"
-                        : "bg-slate-50/50 dark:bg-slate-800/30 border-slate-200 dark:border-white/10"
+                        : "bg-[var(--border)]/30 border-[var(--border)]"
                     )}
                   >
                     <BadgeIcon badgeId={badge.id} icon={badge.icon} earned={earned} size="sm" />
@@ -419,9 +417,7 @@ export default function PerformanceOverview() {
                       <p
                         className={cn(
                           "text-sm font-medium",
-                          earned
-                            ? "text-amber-900 dark:text-amber-100"
-                            : "text-slate-600 dark:text-slate-400"
+                          earned ? "text-amber-900 dark:text-amber-100" : "text-[var(--muted)]"
                         )}
                       >
                         {badge.name}
@@ -430,9 +426,7 @@ export default function PerformanceOverview() {
                         {badge.description}
                       </p>
                       {!earned && progress && (
-                        <p className="text-[10px] text-slate-500 dark:text-slate-500 mt-0.5">
-                          {progress}
-                        </p>
+                        <p className="text-[10px] text-[var(--muted)] mt-0.5">{progress}</p>
                       )}
                     </div>
                   </div>
@@ -470,7 +464,7 @@ export default function PerformanceOverview() {
                     }[fach] ?? fach;
                   return (
                     <li key={fach} className="flex items-center justify-between text-sm">
-                      <span className="font-medium text-gray-900 dark:text-gray-100">{label}</span>
+                      <span className="font-medium text-[var(--text-primary)]">{label}</span>
                       <span className="text-amber-700 dark:text-amber-300 font-semibold">
                         Besser als {betterThanPercent} % der Bewerber
                       </span>

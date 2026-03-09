@@ -199,9 +199,7 @@ export default function StichwortlistePage() {
       <BreadcrumbNav items={[{ label: "BMS", href: "/bms" }, { label: "Stichwortliste" }]} />
 
       <div>
-        <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
-          BMS-Stichwortliste 2025/2026
-        </h1>
+        <h1 className="text-2xl font-bold text-foreground">BMS-Stichwortliste 2025/2026</h1>
         <p className="text-muted mt-1">Offizielle Prüfungsthemen mit Lernfortschritt-Tracking</p>
       </div>
 
@@ -251,7 +249,7 @@ export default function StichwortlistePage() {
               <span>{statusCounts.inBearbeitung} in Bearbeitung</span>
             </div>
             <div className="flex items-center gap-2">
-              <AlertCircle className="w-4 h-4 text-gray-400" />
+              <AlertCircle className="w-4 h-4 text-muted-foreground/70" />
               <span>{statusCounts.nichtBegonnen} nicht begonnen</span>
             </div>
             {stats.neu2026 > 0 && (
@@ -275,8 +273,8 @@ export default function StichwortlistePage() {
               onClick={() => setActiveTab(tab.id)}
               className={`px-3 py-1.5 rounded-lg text-sm font-medium whitespace-nowrap transition-colors cursor-pointer ${
                 activeTab === tab.id
-                  ? "bg-primary-600 text-white"
-                  : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700"
+                  ? "bg-primary-600 text-primary-foreground"
+                  : "bg-muted text-muted-foreground hover:bg-accent"
               }`}
             >
               {tab.label}
@@ -285,19 +283,19 @@ export default function StichwortlistePage() {
         </div>
         <div className="flex gap-2 flex-1">
           <div className="relative flex-1">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground/70" />
             <input
               type="text"
               placeholder="Stichwort suchen..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-9 pr-3 py-1.5 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm"
+              className="w-full pl-9 pr-3 py-1.5 rounded-lg border border-border bg-background text-sm"
             />
           </div>
           <select
             value={priorityFilter}
             onChange={(e) => setPriorityFilter(e.target.value)}
-            className="px-3 py-1.5 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm cursor-pointer"
+            className="px-3 py-1.5 rounded-lg border border-border bg-background text-sm cursor-pointer"
           >
             <option value="alle">Alle Prioritäten</option>
             <option value="hoch">Hoch</option>
@@ -317,7 +315,7 @@ export default function StichwortlistePage() {
                 <span className={`text-xs font-bold px-2 py-0.5 rounded ${colors.badge}`}>
                   {fachConfig[group.fach as keyof typeof fachConfig]?.label}
                 </span>
-                <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-100">
+                <h3 className="text-sm font-semibold text-foreground">
                   {group.kapitelNr}. {group.kapitel}
                 </h3>
               </div>
@@ -338,7 +336,7 @@ export default function StichwortlistePage() {
                         <div className="flex items-start justify-between gap-3">
                           <div className="flex-1 min-w-0">
                             <div className="flex items-center gap-2 flex-wrap">
-                              <span className="font-medium text-gray-900 dark:text-gray-100 text-sm">
+                              <span className="font-medium text-foreground text-sm">
                                 {sw.thema}
                               </span>
                               {sw.neu2026 && (
@@ -373,7 +371,7 @@ export default function StichwortlistePage() {
                                         ? "bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-300"
                                         : as.confidence === "unsicher"
                                           ? "bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300"
-                                          : "bg-gray-100 text-gray-500 dark:bg-gray-800 dark:text-gray-400"
+                                          : "bg-muted text-muted-foreground"
                                     }`}
                                   >
                                     {as.confidence === "sicher"
@@ -408,7 +406,7 @@ export default function StichwortlistePage() {
                               </span>
                             )}
                             {st.status === "nicht-begonnen" && (
-                              <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-500 dark:bg-gray-800 dark:text-gray-400">
+                              <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium bg-muted text-muted-foreground">
                                 Offen
                               </span>
                             )}

@@ -62,7 +62,7 @@ export default function FlashcardsPage() {
       <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "Karteikarten" }]} />
 
       <div>
-        <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Karteikarten</h1>
+        <h1 className="text-2xl font-bold text-foreground">Karteikarten</h1>
         <p className="text-muted mt-1">Lerne mit Spaced Repetition. Wähle einen Stapel aus.</p>
       </div>
 
@@ -97,7 +97,7 @@ export default function FlashcardsPage() {
 
       {Object.entries(grouped).map(([category, categoryDecks]) => (
         <div key={category}>
-          <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">
+          <h2 className="text-lg font-semibold text-foreground mb-3">
             {categoryLabels[category] || category}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -110,7 +110,9 @@ export default function FlashcardsPage() {
                   setView("study");
                 }}
               >
-                <div className={`h-1.5 ${categoryColors[category]?.stripe || "bg-gray-400"}`} />
+                <div
+                  className={`h-1.5 ${categoryColors[category]?.stripe || "bg-muted-foreground/50"}`}
+                />
                 <CardContent className="p-4">
                   <div className="flex items-center justify-between mb-2">
                     <Badge className={categoryColors[category]?.badge}>
@@ -118,7 +120,7 @@ export default function FlashcardsPage() {
                     </Badge>
                     <span className="text-xs text-muted">{deck.count} Karten</span>
                   </div>
-                  <h3 className="font-semibold text-gray-900 dark:text-gray-100">{deck.label}</h3>
+                  <h3 className="font-semibold text-foreground">{deck.label}</h3>
                 </CardContent>
               </Card>
             ))}
@@ -266,7 +268,7 @@ function FlashcardStudy({
         </span>
       </div>
 
-      <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+      <div className="w-full bg-muted rounded-full h-2">
         <div
           className="bg-primary-600 h-2 rounded-full transition-all"
           style={{ width: `${((index + 1) / total) * 100}%` }}
@@ -287,9 +289,10 @@ function FlashcardStudy({
           <Card className="absolute inset-0 [backface-visibility:hidden] shadow-lg">
             <CardContent className="p-10 flex flex-col items-center justify-center min-h-[320px]">
               <Badge className="mb-5">{card.topic}</Badge>
-              <p className="text-xl font-semibold text-gray-900 dark:text-gray-100 text-center leading-relaxed">
+              <p className="text-xl font-semibold text-foreground text-center leading-relaxed">
                 {card.front}
               </p>
+
               <p className="text-xs text-muted mt-8">Tippe zum Umdrehen</p>
             </CardContent>
           </Card>
@@ -300,7 +303,7 @@ function FlashcardStudy({
               <Badge variant="success" className="mb-5">
                 Antwort
               </Badge>
-              <p className="text-base text-gray-700 dark:text-gray-300 text-center whitespace-pre-line leading-relaxed">
+              <p className="text-base text-muted-foreground text-center whitespace-pre-line leading-relaxed">
                 {card.back}
               </p>
             </CardContent>
@@ -355,7 +358,7 @@ function FlashcardStudy({
         <div className="flex justify-center">
           <p className="text-sm text-muted">
             Tippe auf die Karte oder drücke{" "}
-            <kbd className="px-1.5 py-0.5 rounded bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-[10px] font-mono">
+            <kbd className="px-1.5 py-0.5 rounded bg-muted border border-border text-[10px] font-mono">
               Space
             </kbd>{" "}
             zum Umdrehen
@@ -372,7 +375,7 @@ function FlashcardStudy({
             }
           }}
           disabled={index === 0}
-          className="p-2 text-muted hover:text-gray-700 dark:hover:text-gray-300 disabled:opacity-30 cursor-pointer"
+          className="p-2 text-muted hover:text-foreground disabled:opacity-30 cursor-pointer"
         >
           <ChevronLeft className="w-5 h-5" />
         </button>
@@ -384,7 +387,7 @@ function FlashcardStudy({
             }
           }}
           disabled={index >= total - 1}
-          className="p-2 text-muted hover:text-gray-700 dark:hover:text-gray-300 disabled:opacity-30 cursor-pointer"
+          className="p-2 text-muted hover:text-foreground disabled:opacity-30 cursor-pointer"
         >
           <ChevronRight className="w-5 h-5" />
         </button>

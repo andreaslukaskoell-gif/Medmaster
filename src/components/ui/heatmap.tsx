@@ -28,7 +28,7 @@ function levelFromCount(count: number): 0 | 1 | 2 | 3 {
 }
 
 const COLORS = [
-  "bg-slate-100 dark:bg-slate-800",
+  "bg-[var(--border)]",
   "bg-sky-200 dark:bg-sky-900",
   "bg-sky-400 dark:bg-sky-700",
   "bg-primary-600 dark:bg-primary-500",
@@ -155,7 +155,7 @@ export function Heatmap({ className }: HeatmapProps) {
       </div>
       {tooltip && (
         <div
-          className="fixed z-50 bg-gray-900 text-white text-xs px-2 py-1 rounded shadow-lg pointer-events-none"
+          className="fixed z-50 bg-[var(--foreground)] text-[var(--background)] text-xs px-2 py-1 rounded shadow-lg pointer-events-none"
           style={{ left: tooltip.x, top: tooltip.y }}
         >
           {tooltip.isMedAT ? (

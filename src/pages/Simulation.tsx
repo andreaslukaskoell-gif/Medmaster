@@ -1156,7 +1156,7 @@ export default function Simulation() {
       <div className="max-w-4xl mx-auto space-y-6">
         <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "Simulation" }]} />
         <div>
-          <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Testsimulation</h1>
+          <h1 className="text-2xl font-bold text-[var(--text-primary)]">Testsimulation</h1>
           <p className="text-muted mt-1">Simuliere den MedAT-H unter realistischen Bedingungen.</p>
         </div>
 
@@ -1168,7 +1168,7 @@ export default function Simulation() {
                 <Clock className="w-7 h-7 text-orange-600 dark:text-orange-400" />
               </div>
               <div>
-                <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100">
+                <h2 className="text-lg font-bold text-[var(--text-primary)]">
                   MedAT-H Vollsimulation
                 </h2>
                 <p className="text-sm text-muted">Alle 4 Testteile mit exaktem Timing und Pausen</p>
@@ -1177,12 +1177,10 @@ export default function Simulation() {
 
             <div className="space-y-3">
               {/* BMS */}
-              <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-3">
+              <div className="bg-[var(--border)]/30 rounded-lg p-3">
                 <div className="flex items-center gap-2 mb-2">
                   <BookOpen className="w-4 h-4 text-teal-600 dark:text-teal-400" />
-                  <span className="font-semibold text-sm text-gray-900 dark:text-gray-100">
-                    BMS
-                  </span>
+                  <span className="font-semibold text-sm text-[var(--text-primary)]">BMS</span>
                   <span className="text-xs text-muted">94 Fragen, 75 Min</span>
                 </div>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
@@ -1194,22 +1192,20 @@ export default function Simulation() {
                 </div>
               </div>
               {/* TV */}
-              <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-3">
+              <div className="bg-[var(--border)]/30 rounded-lg p-3">
                 <div className="flex items-center gap-2">
                   <FileText className="w-4 h-4 text-blue-600 dark:text-blue-400" />
-                  <span className="font-semibold text-sm text-gray-900 dark:text-gray-100">
+                  <span className="font-semibold text-sm text-[var(--text-primary)]">
                     Textverständnis
                   </span>
                   <span className="text-xs text-muted">12 Aussagen, 35 Min</span>
                 </div>
               </div>
               {/* KFF */}
-              <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-3">
+              <div className="bg-[var(--border)]/30 rounded-lg p-3">
                 <div className="flex items-center gap-2 mb-2">
                   <Brain className="w-4 h-4 text-purple-600 dark:text-purple-400" />
-                  <span className="font-semibold text-sm text-gray-900 dark:text-gray-100">
-                    KFF
-                  </span>
+                  <span className="font-semibold text-sm text-[var(--text-primary)]">KFF</span>
                   <span className="text-xs text-muted">5 Untertests, ~93 Min</span>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-2 text-xs text-muted">
@@ -1221,12 +1217,10 @@ export default function Simulation() {
                 </div>
               </div>
               {/* SEK */}
-              <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-3">
+              <div className="bg-[var(--border)]/30 rounded-lg p-3">
                 <div className="flex items-center gap-2 mb-2">
                   <Heart className="w-4 h-4 text-rose-600 dark:text-rose-400" />
-                  <span className="font-semibold text-sm text-gray-900 dark:text-gray-100">
-                    SEK
-                  </span>
+                  <span className="font-semibold text-sm text-[var(--text-primary)]">SEK</span>
                   <span className="text-xs text-muted">3 Untertests, 45 Min</span>
                 </div>
                 <div className="grid grid-cols-3 gap-2 text-xs text-muted">
@@ -1264,7 +1258,7 @@ export default function Simulation() {
         </Card>
 
         {/* Individual Section Tests */}
-        <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100">Einzelne Testteile</h2>
+        <h2 className="text-lg font-bold text-[var(--text-primary)]">Einzelne Testteile</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {/* BMS */}
           <Card>
@@ -1274,7 +1268,7 @@ export default function Simulation() {
                   <BookOpen className="w-5 h-5 text-teal-600 dark:text-teal-400" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-gray-900 dark:text-gray-100">BMS</h3>
+                  <h3 className="font-bold text-[var(--text-primary)]">BMS</h3>
                   <p className="text-xs text-muted">94 Fragen, 75 Min</p>
                 </div>
               </div>
@@ -1292,7 +1286,7 @@ export default function Simulation() {
                   <FileText className="w-5 h-5 text-blue-600 dark:text-blue-400" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-gray-900 dark:text-gray-100">Textverständnis</h3>
+                  <h3 className="font-bold text-[var(--text-primary)]">Textverständnis</h3>
                   <p className="text-xs text-muted">12 Aussagen, 35 Min</p>
                 </div>
               </div>
@@ -1310,7 +1304,7 @@ export default function Simulation() {
                   <Brain className="w-5 h-5 text-purple-600 dark:text-purple-400" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-gray-900 dark:text-gray-100">KFF</h3>
+                  <h3 className="font-bold text-[var(--text-primary)]">KFF</h3>
                   <p className="text-xs text-muted">5 Untertests, ~93 Min</p>
                 </div>
               </div>
@@ -1328,7 +1322,7 @@ export default function Simulation() {
                   <Heart className="w-5 h-5 text-rose-600 dark:text-rose-400" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-gray-900 dark:text-gray-100">SEK</h3>
+                  <h3 className="font-bold text-[var(--text-primary)]">SEK</h3>
                   <p className="text-xs text-muted">3 Untertests, 45 Min</p>
                 </div>
               </div>
@@ -1347,9 +1341,7 @@ export default function Simulation() {
                 <Timer className="w-7 h-7 text-blue-600 dark:text-blue-400" />
               </div>
               <div>
-                <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100">
-                  Kurztest (BMS)
-                </h2>
+                <h2 className="text-lg font-bold text-[var(--text-primary)]">Kurztest (BMS)</h2>
                 <p className="text-sm text-muted">Schnelles Ueben eines einzelnen Fachs</p>
               </div>
             </div>
@@ -1359,9 +1351,9 @@ export default function Simulation() {
                 <button
                   key={opt.id}
                   onClick={() => startSimulation("kurz", opt.id)}
-                  className="bg-gray-50 dark:bg-gray-800 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-lg p-4 text-left transition-colors cursor-pointer border border-transparent hover:border-blue-200 dark:hover:border-blue-800"
+                  className="bg-[var(--border)]/30 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-lg p-4 text-left transition-colors cursor-pointer border border-transparent hover:border-blue-200 dark:hover:border-blue-800"
                 >
-                  <p className="font-semibold text-gray-900 dark:text-gray-100">{opt.label}</p>
+                  <p className="font-semibold text-[var(--text-primary)]">{opt.label}</p>
                   <p className="text-xs text-muted">
                     {opt.questionCount} Fragen / {opt.timeLimitMinutes} Min
                   </p>
@@ -1391,7 +1383,7 @@ export default function Simulation() {
             <div className="w-20 h-20 bg-yellow-100 dark:bg-yellow-900/30 rounded-2xl flex items-center justify-center mx-auto">
               <Coffee className="w-10 h-10 text-yellow-600 dark:text-yellow-400" />
             </div>
-            <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100">Pause</h2>
+            <h2 className="text-xl font-bold text-[var(--text-primary)]">Pause</h2>
             <p className="text-muted">
               {currentGroup}: {currentSec.label} abgeschlossen!
               {nextSec && (
@@ -1427,11 +1419,11 @@ export default function Simulation() {
             <span className="text-sm text-muted ml-2">Lernphase - Präge dir die Ausweise ein!</span>
           </div>
           <div
-            className={`flex items-center gap-2 px-3 py-1.5 rounded-lg ${learnTimeLeft < 120 ? "bg-red-50 dark:bg-red-900/20" : "bg-gray-100 dark:bg-gray-800"}`}
+            className={`flex items-center gap-2 px-3 py-1.5 rounded-lg ${learnTimeLeft < 120 ? "bg-red-50 dark:bg-red-900/20" : "bg-[var(--border)]/50"}`}
           >
             <Eye className="w-4 h-4 text-muted" />
             <span
-              className={`text-sm font-mono font-bold ${learnTimeLeft < 120 ? "text-red-600 dark:text-red-400" : "text-gray-900 dark:text-gray-100"}`}
+              className={`text-sm font-mono font-bold ${learnTimeLeft < 120 ? "text-red-600 dark:text-red-400" : "text-[var(--text-primary)]"}`}
             >
               {formatTime(learnTimeLeft)}
             </span>
@@ -1449,14 +1441,14 @@ export default function Simulation() {
             <Card key={card.id}>
               <CardContent className="p-4 space-y-2">
                 <div className="flex items-center justify-between">
-                  <h3 className="font-bold text-gray-900 dark:text-gray-100">{card.name}</h3>
+                  <h3 className="font-bold text-[var(--text-primary)]">{card.name}</h3>
                   <Badge variant="default">#{i + 1}</Badge>
                 </div>
                 <div className="grid grid-cols-2 gap-x-4 gap-y-1 text-sm">
                   <div>
                     <span className="text-muted">Geburtsdatum:</span>
                   </div>
-                  <div className="text-gray-900 dark:text-gray-100">{card.geburtsdatum}</div>
+                  <div className="text-[var(--text-primary)]">{card.geburtsdatum}</div>
                   <div>
                     <span className="text-muted">Blutgruppe:</span>
                   </div>
@@ -1466,15 +1458,15 @@ export default function Simulation() {
                   <div>
                     <span className="text-muted">Ausweisnr.:</span>
                   </div>
-                  <div className="text-gray-900 dark:text-gray-100">{card.ausweisnummer}</div>
+                  <div className="text-[var(--text-primary)]">{card.ausweisnummer}</div>
                   <div>
                     <span className="text-muted">Land:</span>
                   </div>
-                  <div className="text-gray-900 dark:text-gray-100">{card.land}</div>
+                  <div className="text-[var(--text-primary)]">{card.land}</div>
                   <div>
                     <span className="text-muted">Medikamente:</span>
                   </div>
-                  <div className="text-gray-900 dark:text-gray-100">
+                  <div className="text-[var(--text-primary)]">
                     {card.medikamente ? "Ja" : "Nein"}
                   </div>
                 </div>
@@ -1559,7 +1551,7 @@ export default function Simulation() {
           ]}
         />
 
-        <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Simulationsergebnis</h1>
+        <h1 className="text-2xl font-bold text-[var(--text-primary)]">Simulationsergebnis</h1>
 
         {/* Overall score */}
         <Card>
@@ -1587,9 +1579,7 @@ export default function Simulation() {
                     <p className="text-2xl font-bold text-primary-700 dark:text-primary-400">
                       {pct}%
                     </p>
-                    <p className="text-sm font-medium text-gray-900 dark:text-gray-100">
-                      {data.label}
-                    </p>
+                    <p className="text-sm font-medium text-[var(--text-primary)]">{data.label}</p>
                     <p className="text-xs text-muted">
                       {data.score}/{data.total}
                     </p>
@@ -1603,16 +1593,16 @@ export default function Simulation() {
         {/* Per-section breakdown */}
         <Card>
           <CardContent className="p-5 space-y-3">
-            <h3 className="font-bold text-gray-900 dark:text-gray-100 flex items-center gap-2">
+            <h3 className="font-bold text-[var(--text-primary)] flex items-center gap-2">
               <BarChart3 className="w-4 h-4" /> Detaillierte Aufschlüsselung
             </h3>
             {sectionScores.map((s) => (
               <div
                 key={s.sec.id}
-                className="flex items-center justify-between py-2 border-b border-gray-100 dark:border-gray-800 last:border-b-0"
+                className="flex items-center justify-between py-2 border-b border-[var(--border)] last:border-b-0"
               >
                 <div>
-                  <span className="text-sm font-medium text-gray-900 dark:text-gray-100">
+                  <span className="text-sm font-medium text-[var(--text-primary)]">
                     {s.sec.label}
                   </span>
                   {s.sec.parentGroup && (
@@ -1623,7 +1613,7 @@ export default function Simulation() {
                   <span className="text-sm text-muted">
                     {s.score}/{s.total}
                   </span>
-                  <div className="w-24 bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                  <div className="w-24 bg-[var(--border)] rounded-full h-2">
                     <div
                       className={`h-2 rounded-full ${s.pct >= 70 ? "bg-green-500" : s.pct >= 50 ? "bg-yellow-500" : "bg-red-500"}`}
                       style={{ width: `${s.pct}%` }}
@@ -1644,7 +1634,7 @@ export default function Simulation() {
         {timeEntries.length > 0 && (
           <Card>
             <CardContent className="p-5 space-y-3">
-              <h3 className="font-bold text-gray-900 dark:text-gray-100 flex items-center gap-2">
+              <h3 className="font-bold text-[var(--text-primary)] flex items-center gap-2">
                 <Clock className="w-4 h-4" /> Zeitnutzung
               </h3>
               {timeEntries.map((entry) => {
@@ -1653,15 +1643,15 @@ export default function Simulation() {
                 return (
                   <div
                     key={entry.sectionId}
-                    className="flex items-center justify-between py-2 border-b border-gray-100 dark:border-gray-800 last:border-b-0"
+                    className="flex items-center justify-between py-2 border-b border-[var(--border)] last:border-b-0"
                   >
-                    <span className="text-sm text-gray-900 dark:text-gray-100">{entry.label}</span>
+                    <span className="text-sm text-[var(--text-primary)]">{entry.label}</span>
                     <div className="flex items-center gap-2 text-sm text-muted">
                       <span>
                         {formatTime(entry.used)} / {formatTime(entry.allocated)}
                       </span>
                       <span
-                        className={`font-medium ${usedPct > 90 ? "text-red-600 dark:text-red-400" : "text-gray-600 dark:text-gray-400"}`}
+                        className={`font-medium ${usedPct > 90 ? "text-red-600 dark:text-red-400" : "text-[var(--muted)]"}`}
                       >
                         ({usedPct}%)
                       </span>
@@ -1677,7 +1667,7 @@ export default function Simulation() {
         {weakAreas.length > 0 && weakAreas[0].pct < 70 && (
           <Card className="border-l-4 border-l-amber-500">
             <CardContent className="p-5 space-y-3">
-              <h3 className="font-bold text-gray-900 dark:text-gray-100 flex items-center gap-2">
+              <h3 className="font-bold text-[var(--text-primary)] flex items-center gap-2">
                 <AlertTriangle className="w-4 h-4 text-amber-500" /> Schwächen-Analyse
               </h3>
               <p className="text-sm text-muted">
@@ -1694,7 +1684,7 @@ export default function Simulation() {
                     >
                       <XCircle className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0" />
                       <div>
-                        <span className="text-sm font-medium text-gray-900 dark:text-gray-100">
+                        <span className="text-sm font-medium text-[var(--text-primary)]">
                           {area.sec.label}
                         </span>
                         <span className="text-xs text-muted ml-2">
@@ -1723,7 +1713,7 @@ export default function Simulation() {
           return (
             <Card>
               <CardContent className="p-5 space-y-3">
-                <h3 className="font-bold text-gray-900 dark:text-gray-100 flex items-center gap-2">
+                <h3 className="font-bold text-[var(--text-primary)] flex items-center gap-2">
                   <TrendingUp className="w-4 h-4" /> Vergleich mit früheren Versuchen
                 </h3>
                 <div className="flex items-center gap-4 mb-3">
@@ -1734,10 +1724,10 @@ export default function Simulation() {
                     <p className="text-xs text-muted">Jetzt</p>
                   </div>
                   <div
-                    className={`text-center px-3 py-1 rounded-lg ${diff > 0 ? "bg-green-50 dark:bg-green-900/20" : diff < 0 ? "bg-red-50 dark:bg-red-900/20" : "bg-gray-50 dark:bg-gray-800"}`}
+                    className={`text-center px-3 py-1 rounded-lg ${diff > 0 ? "bg-green-50 dark:bg-green-900/20" : diff < 0 ? "bg-red-50 dark:bg-red-900/20" : "bg-[var(--border)]/30"}`}
                   >
                     <p
-                      className={`text-lg font-bold ${diff > 0 ? "text-green-600 dark:text-green-400" : diff < 0 ? "text-red-600 dark:text-red-400" : "text-gray-600 dark:text-gray-400"}`}
+                      className={`text-lg font-bold ${diff > 0 ? "text-green-600 dark:text-green-400" : diff < 0 ? "text-red-600 dark:text-red-400" : "text-[var(--muted)]"}`}
                     >
                       {diff > 0 ? "+" : ""}
                       {diff}%
@@ -1745,9 +1735,7 @@ export default function Simulation() {
                     <p className="text-xs text-muted">vs. letztes Mal</p>
                   </div>
                   <div className="text-center">
-                    <p className="text-2xl font-bold text-gray-500 dark:text-gray-400">
-                      {lastPct}%
-                    </p>
+                    <p className="text-2xl font-bold text-[var(--muted)]">{lastPct}%</p>
                     <p className="text-xs text-muted">Letztes Mal</p>
                   </div>
                 </div>
@@ -1822,7 +1810,7 @@ export default function Simulation() {
                       )}
                       <div className="flex-1">
                         <div className="flex items-center gap-2 flex-wrap">
-                          <span className="text-sm font-medium text-gray-900 dark:text-gray-100">
+                          <span className="text-sm font-medium text-[var(--text-primary)]">
                             {i + 1}. {getQuestionDisplayText(q).slice(0, 120)}
                             {getQuestionDisplayText(q).length > 120 ? "..." : ""}
                           </span>
@@ -1882,7 +1870,7 @@ export default function Simulation() {
   const renderBmsMcq = () => (
     <Card>
       <CardContent className="p-6">
-        <p className="text-base font-medium text-gray-900 dark:text-gray-100 mb-6">{q.text}</p>
+        <p className="text-base font-medium text-[var(--text-primary)] mb-6">{q.text}</p>
         <div className="space-y-3">
           {q.options?.map((opt) => (
             <button
@@ -1891,7 +1879,7 @@ export default function Simulation() {
               className={`w-full text-left px-4 py-3 rounded-lg border text-sm transition-colors cursor-pointer ${
                 answers[q.id] === opt.id
                   ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300"
-                  : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300"
+                  : "border-[var(--border)] hover:bg-[var(--border)]/50 text-[var(--text-secondary)]"
               }`}
             >
               <span className="font-semibold mr-2">{opt.id.toUpperCase()})</span>
@@ -1910,8 +1898,8 @@ export default function Simulation() {
         {tvText && (
           <Card>
             <CardContent className="p-5">
-              <h3 className="font-bold text-gray-900 dark:text-gray-100 mb-3">{tvText.title}</h3>
-              <div className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-line max-h-64 overflow-y-auto">
+              <h3 className="font-bold text-[var(--text-primary)] mb-3">{tvText.title}</h3>
+              <div className="text-sm text-[var(--text-secondary)] leading-relaxed whitespace-pre-line max-h-64 overflow-y-auto">
                 {tvText.content}
               </div>
             </CardContent>
@@ -1920,7 +1908,7 @@ export default function Simulation() {
         <Card>
           <CardContent className="p-6">
             <p className="text-sm text-muted mb-2">Ist folgende Aussage aus dem Text ableitbar?</p>
-            <p className="text-base font-medium text-gray-900 dark:text-gray-100 mb-6">
+            <p className="text-base font-medium text-[var(--text-primary)] mb-6">
               "{q.statementText}"
             </p>
             <div className="grid grid-cols-2 gap-3">
@@ -1929,7 +1917,7 @@ export default function Simulation() {
                 className={`px-4 py-3 rounded-lg border text-sm font-medium transition-colors cursor-pointer ${
                   answers[q.id] === "ableitbar"
                     ? "border-green-500 bg-green-50 dark:bg-green-900/20 text-green-800 dark:text-green-300"
-                    : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300"
+                    : "border-[var(--border)] hover:bg-[var(--border)]/50 text-[var(--text-secondary)]"
                 }`}
               >
                 <CheckCircle2 className="w-4 h-4 inline mr-2" />
@@ -1940,7 +1928,7 @@ export default function Simulation() {
                 className={`px-4 py-3 rounded-lg border text-sm font-medium transition-colors cursor-pointer ${
                   answers[q.id] === "nicht-ableitbar"
                     ? "border-red-500 bg-red-50 dark:bg-red-900/20 text-red-800 dark:text-red-300"
-                    : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300"
+                    : "border-[var(--border)] hover:bg-[var(--border)]/50 text-[var(--text-secondary)]"
                 }`}
               >
                 <XCircle className="w-4 h-4 inline mr-2" />
@@ -1959,7 +1947,7 @@ export default function Simulation() {
         <p className="text-sm text-muted mb-2">Welche Zahl setzt die Folge fort?</p>
         <div className="flex items-center gap-3 mb-6 flex-wrap">
           {q.sequence?.map((n, i) => (
-            <span key={i} className="text-2xl font-mono font-bold text-gray-900 dark:text-gray-100">
+            <span key={i} className="text-2xl font-mono font-bold text-[var(--text-primary)]">
               {n}
               {i < (q.sequence?.length || 0) - 1 ? "," : ""}
             </span>
@@ -1977,7 +1965,7 @@ export default function Simulation() {
               className={`px-4 py-3 rounded-lg border text-sm font-mono font-bold transition-colors cursor-pointer text-left ${
                 answers[q.id] === String(oi)
                   ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300"
-                  : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300"
+                  : "border-[var(--border)] hover:bg-[var(--border)]/50 text-[var(--text-secondary)]"
               }`}
             >
               <span className="font-semibold mr-2">{String.fromCharCode(65 + oi)})</span>
@@ -1992,7 +1980,7 @@ export default function Simulation() {
   const renderGedaechtnisQuiz = () => (
     <Card>
       <CardContent className="p-6">
-        <p className="text-base font-medium text-gray-900 dark:text-gray-100 mb-6">{q.memText}</p>
+        <p className="text-base font-medium text-[var(--text-primary)] mb-6">{q.memText}</p>
         <div className="space-y-3">
           {q.memOptions?.map((opt, i) => (
             <button
@@ -2001,7 +1989,7 @@ export default function Simulation() {
               className={`w-full text-left px-4 py-3 rounded-lg border text-sm transition-colors cursor-pointer ${
                 answers[q.id] === opt
                   ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300"
-                  : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300"
+                  : "border-[var(--border)] hover:bg-[var(--border)]/50 text-[var(--text-secondary)]"
               }`}
             >
               {opt}
@@ -2018,13 +2006,13 @@ export default function Simulation() {
         <div className="space-y-4 mb-6">
           <div>
             <p className="text-xs text-muted uppercase tracking-wider mb-1">Prämisse 1</p>
-            <p className="text-base font-medium text-gray-900 dark:text-gray-100 border-l-4 border-purple-400 pl-3">
+            <p className="text-base font-medium text-[var(--text-primary)] border-l-4 border-purple-400 pl-3">
               {q.premise1}
             </p>
           </div>
           <div>
             <p className="text-xs text-muted uppercase tracking-wider mb-1">Prämisse 2</p>
-            <p className="text-base font-medium text-gray-900 dark:text-gray-100 border-l-4 border-purple-400 pl-3">
+            <p className="text-base font-medium text-[var(--text-primary)] border-l-4 border-purple-400 pl-3">
               {q.premise2}
             </p>
           </div>
@@ -2038,7 +2026,7 @@ export default function Simulation() {
               className={`w-full text-left px-4 py-3 rounded-lg border text-sm font-medium transition-colors cursor-pointer ${
                 answers[q.id] === String(oi)
                   ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300"
-                  : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300"
+                  : "border-[var(--border)] hover:bg-[var(--border)]/50 text-[var(--text-secondary)]"
               }`}
             >
               <span className="font-semibold mr-2">{String.fromCharCode(65 + oi)})</span>
@@ -2055,7 +2043,7 @@ export default function Simulation() {
       <CardContent className="p-6">
         <p className="text-sm text-muted mb-2">Mit welchem Buchstaben beginnt das Wort?</p>
         <div className="text-center mb-6">
-          <span className="text-3xl font-mono font-bold tracking-widest text-gray-900 dark:text-gray-100">
+          <span className="text-3xl font-mono font-bold tracking-widest text-[var(--text-primary)]">
             {q.scrambled}
           </span>
         </div>
@@ -2067,7 +2055,7 @@ export default function Simulation() {
               className={`w-full text-left px-4 py-3 rounded-lg border text-sm font-semibold transition-colors cursor-pointer ${
                 answers[q.id] === letter
                   ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300"
-                  : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300"
+                  : "border-[var(--border)] hover:bg-[var(--border)]/50 text-[var(--text-secondary)]"
               }`}
             >
               ({String.fromCharCode(65 + li)}){" "}
@@ -2088,12 +2076,12 @@ export default function Simulation() {
     const FZ_OPT_LABELS = ["A", "B", "C", "D", "E"];
     const { viewBox: piecesVB, paths: piecePaths } = layoutPiecesCompact(aufgabe.pieces);
     return (
-      <Card className="border-gray-200 dark:border-gray-700">
+      <Card className="border-[var(--border)]">
         <CardContent className="p-6">
           <p className="text-xs font-medium text-muted uppercase tracking-wider mb-3">
             Puzzleteile
           </p>
-          <div className="flex justify-center py-4 bg-gray-50/50 dark:bg-gray-900/30 rounded-lg mb-6">
+          <div className="flex justify-center py-4 bg-[var(--border)]/20 rounded-lg mb-6">
             <svg
               viewBox={piecesVB}
               {...FIGURE_SVG_ASPECT_PROPS}
@@ -2104,7 +2092,7 @@ export default function Simulation() {
               ))}
             </svg>
           </div>
-          <p className="text-sm font-medium text-gray-900 dark:text-gray-100 mb-3">
+          <p className="text-sm font-medium text-[var(--text-primary)] mb-3">
             Welche Figur entsteht aus den Teilen?
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-5 gap-3">
@@ -2119,12 +2107,10 @@ export default function Simulation() {
                   className={`flex flex-col items-center justify-center min-h-[100px] p-4 rounded-lg border-2 transition-colors cursor-pointer ${
                     selected
                       ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20"
-                      : "border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/50 hover:border-gray-300 dark:hover:border-gray-600"
+                      : "border-[var(--border)] bg-[var(--card)]/50 hover:border-[var(--border)]"
                   }`}
                 >
-                  <span className="text-sm font-bold text-gray-600 dark:text-gray-400 mb-2">
-                    {label}
-                  </span>
+                  <span className="text-sm font-bold text-[var(--muted)] mb-2">{label}</span>
                   {optE ? (
                     <span className="text-xs text-center text-muted leading-tight">
                       Keine der Figuren ist richtig
@@ -2164,9 +2150,9 @@ export default function Simulation() {
         <CardContent className="p-6">
           <div className="mb-4">
             <p className="text-xs text-muted uppercase tracking-wider mb-1">Situation</p>
-            <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">{situation}</p>
+            <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{situation}</p>
           </div>
-          <p className="text-base font-medium text-gray-900 dark:text-gray-100 mb-6">{question}</p>
+          <p className="text-base font-medium text-[var(--text-primary)] mb-6">{question}</p>
           <div className="space-y-3">
             {q.options?.map((opt) => (
               <button
@@ -2175,7 +2161,7 @@ export default function Simulation() {
                 className={`w-full text-left px-4 py-3 rounded-lg border text-sm transition-colors cursor-pointer ${
                   answers[q.id] === opt.id
                     ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300"
-                    : "border-border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300"
+                    : "border-[var(--border)] hover:bg-[var(--border)]/50 text-[var(--text-secondary)]"
                 }`}
               >
                 <span className="font-semibold mr-2">{opt.id.toUpperCase()})</span>
@@ -2228,11 +2214,11 @@ export default function Simulation() {
           </span>
         </div>
         <div
-          className={`flex items-center gap-2 px-3 py-1.5 rounded-lg ${timeLeft < 300 ? "bg-red-50 dark:bg-red-900/20" : "bg-gray-100 dark:bg-gray-800"}`}
+          className={`flex items-center gap-2 px-3 py-1.5 rounded-lg ${timeLeft < 300 ? "bg-red-50 dark:bg-red-900/20" : "bg-[var(--border)]/50"}`}
         >
           <Clock className={`w-4 h-4 ${timeLeft < 300 ? "text-red-500" : "text-muted"}`} />
           <span
-            className={`text-sm font-mono font-bold ${timeLeft < 300 ? "text-red-600 dark:text-red-400" : "text-gray-900 dark:text-gray-100"}`}
+            className={`text-sm font-mono font-bold ${timeLeft < 300 ? "text-red-600 dark:text-red-400" : "text-[var(--text-primary)]"}`}
           >
             {formatTime(timeLeft)}
           </span>
@@ -2240,7 +2226,7 @@ export default function Simulation() {
       </div>
 
       {/* Progress bar */}
-      <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+      <div className="w-full bg-[var(--border)] rounded-full h-2">
         <div
           className="bg-primary-600 h-2 rounded-full transition-all"
           style={{ width: `${((index + 1) / sectionQuestions.length) * 100}%` }}
@@ -2287,7 +2273,7 @@ export default function Simulation() {
                 ? "bg-primary-700 text-white"
                 : answers[sq.id]
                   ? "bg-primary-200 dark:bg-primary-800 text-primary-800 dark:text-primary-200"
-                  : "bg-gray-200 dark:bg-gray-700 text-gray-500 dark:text-gray-400"
+                  : "bg-[var(--border)] text-[var(--muted)]"
             }`}
           >
             {i + 1}

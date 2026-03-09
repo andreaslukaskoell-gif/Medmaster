@@ -20,7 +20,7 @@ function PageIndicator({ current, total }: { current: number; total: number }) {
         <div
           key={i}
           className={`h-1.5 rounded-full transition-all ${
-            i === current ? "w-6 bg-purple-500" : "w-1.5 bg-gray-300 dark:bg-gray-600"
+            i === current ? "w-6 bg-purple-500" : "w-1.5 bg-[var(--border)]"
           }`}
         />
       ))}
@@ -49,8 +49,8 @@ function AussagenBox({
   children: ReactNode;
 }) {
   return (
-    <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4">
-      <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-1">{label}</h4>
+    <div className="bg-[var(--card)] border border-[var(--border)] rounded-lg p-4">
+      <h4 className="font-semibold text-[var(--text-primary)] mb-1">{label}</h4>
       <p className="text-sm text-muted mb-3">{description}</p>
       <div className="flex justify-center">{children}</div>
     </div>
@@ -62,9 +62,7 @@ function Seite1() {
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2">
-          Die 4 Grundaussagen
-        </h2>
+        <h2 className="text-xl font-bold text-[var(--text-primary)] mb-2">Die 4 Grundaussagen</h2>
         <p className="text-sm text-muted">
           Jede Implikationsaufgabe besteht aus Aussagen mit den Quantoren &quot;Alle&quot; und
           &quot;Einige&quot;. Es gibt genau 4 mögliche Grundaussagen.
@@ -72,7 +70,7 @@ function Seite1() {
       </div>
 
       <div>
-        <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">
+        <h3 className="text-sm font-semibold text-[var(--muted)] uppercase tracking-wider mb-3">
           Absolute Aussagen
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -92,7 +90,7 @@ function Seite1() {
       </div>
 
       <div>
-        <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">
+        <h3 className="text-sm font-semibold text-[var(--muted)] uppercase tracking-wider mb-3">
           Partielle Aussagen
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -124,9 +122,7 @@ function Seite2() {
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2">
-          Die 5 goldenen Regeln
-        </h2>
+        <h2 className="text-xl font-bold text-[var(--text-primary)] mb-2">Die 5 goldenen Regeln</h2>
         <p className="text-sm text-muted">
           Mit diesen 5 Regeln kannst du die meisten Optionen sofort eliminieren — ohne ein Diagramm
           zeichnen zu müssen.
@@ -147,7 +143,7 @@ function Seite2() {
           Wenn beide Aussagen &quot;einige&quot; enthalten, kann man nichts Zwingendes schließen. →
           Antwort E
         </p>
-        <div className="bg-white dark:bg-gray-800 rounded-lg p-3">
+        <div className="bg-[var(--card)] rounded-lg p-3">
           <p className="text-xs text-muted mb-1">Beispiel:</p>
           <p className="text-sm italic">&quot;Einige Ärzte sind Sportler&quot;</p>
           <p className="text-sm italic">&quot;Einige Sportler sind Vegetarier&quot;</p>
@@ -179,7 +175,7 @@ function Seite2() {
           Wenn beide Aussagen &quot;keine&quot; enthalten, kann man nichts Zwingendes schließen. →
           Antwort E
         </p>
-        <div className="bg-white dark:bg-gray-800 rounded-lg p-3">
+        <div className="bg-[var(--card)] rounded-lg p-3">
           <p className="text-xs text-muted mb-1">Beispiel:</p>
           <p className="text-sm italic">&quot;Alle Katzen sind keine Vögel&quot;</p>
           <p className="text-sm italic">&quot;Alle Fische sind keine Vögel&quot;</p>
@@ -211,7 +207,7 @@ function Seite2() {
           Wenn keine der Aussagen das Wort &quot;keine&quot; enthält, dann kann auch die
           Schlussfolgerung kein &quot;keine&quot; enthalten.
         </p>
-        <div className="bg-white dark:bg-gray-800 rounded-lg p-3">
+        <div className="bg-[var(--card)] rounded-lg p-3">
           <p className="text-xs text-muted mb-1">Beispiel:</p>
           <p className="text-sm italic">&quot;Alle Hunde sind Säugetiere&quot;</p>
           <p className="text-sm italic">&quot;Alle Säugetiere sind Wirbeltiere&quot;</p>
@@ -243,7 +239,7 @@ function Seite2() {
           Kommt &quot;keine&quot; in genau einer Aussage vor, muss die Schlussfolgerung ebenfalls
           &quot;keine&quot; enthalten.
         </p>
-        <div className="bg-white dark:bg-gray-800 rounded-lg p-3">
+        <div className="bg-[var(--card)] rounded-lg p-3">
           <p className="text-xs text-muted mb-1">Beispiel:</p>
           <p className="text-sm italic">&quot;Alle Rosen sind Pflanzen&quot;</p>
           <p className="text-sm italic">&quot;Alle Pflanzen sind keine Tiere&quot;</p>
@@ -275,7 +271,7 @@ function Seite2() {
           Enthält genau eine Aussage &quot;einige&quot;, muss die Schlussfolgerung ebenfalls
           &quot;einige&quot; enthalten.
         </p>
-        <div className="bg-white dark:bg-gray-800 rounded-lg p-3">
+        <div className="bg-[var(--card)] rounded-lg p-3">
           <p className="text-xs text-muted mb-1">Beispiel:</p>
           <p className="text-sm italic">&quot;Alle Lehrer sind Akademiker&quot;</p>
           <p className="text-sm italic">&quot;Einige Lehrer sind Musiker&quot;</p>
@@ -306,7 +302,7 @@ function Seite3() {
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2">
+        <h2 className="text-xl font-bold text-[var(--text-primary)] mb-2">
           Lösungsstrategie Schritt für Schritt
         </h2>
         <p className="text-sm text-muted">
@@ -321,16 +317,14 @@ function Seite3() {
             <span className="bg-purple-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
               1
             </span>
-            <h3 className="font-semibold text-gray-900 dark:text-gray-100">
-              Goldene Regeln anwenden
-            </h3>
+            <h3 className="font-semibold text-[var(--text-primary)]">Goldene Regeln anwenden</h3>
           </div>
           <p className="text-sm text-muted pl-11">
             Prüfe zuerst, ob die Regeln 1-2 greifen (→ sofort E). Dann verwende Regeln 3-5, um
             unmögliche Optionen zu streichen.
           </p>
-          <div className="pl-11 bg-gray-50 dark:bg-gray-800 rounded-lg p-3 text-sm">
-            <p className="font-medium text-gray-700 dark:text-gray-300 mb-1">Beispiel:</p>
+          <div className="pl-11 bg-[var(--border)]/30 rounded-lg p-3 text-sm">
+            <p className="font-medium text-[var(--text-secondary)] mb-1">Beispiel:</p>
             <p className="italic text-muted">
               &quot;Alle Äpfel sind Obst&quot; + &quot;Alle Äpfel sind keine Gemüse&quot;
             </p>
@@ -350,7 +344,7 @@ function Seite3() {
             <span className="bg-purple-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
               2
             </span>
-            <h3 className="font-semibold text-gray-900 dark:text-gray-100">
+            <h3 className="font-semibold text-[var(--text-primary)]">
               Erste Aussage als Euler-Diagramm
             </h3>
           </div>
@@ -371,9 +365,7 @@ function Seite3() {
             <span className="bg-purple-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
               3
             </span>
-            <h3 className="font-semibold text-gray-900 dark:text-gray-100">
-              Zweite Aussage einzeichnen
-            </h3>
+            <h3 className="font-semibold text-[var(--text-primary)]">Zweite Aussage einzeichnen</h3>
           </div>
           <p className="text-sm text-muted pl-11">
             Zeichne den dritten Kreis ein. Bei &quot;einige&quot; gibt es mehrere mögliche
@@ -390,9 +382,7 @@ function Seite3() {
             <span className="bg-purple-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
               4
             </span>
-            <h3 className="font-semibold text-gray-900 dark:text-gray-100">
-              Schlussfolgerung ablesen
-            </h3>
+            <h3 className="font-semibold text-[var(--text-primary)]">Schlussfolgerung ablesen</h3>
           </div>
           <p className="text-sm text-muted pl-11">
             Lies aus dem Diagramm ab, welche Beziehung zwischen den äußeren Begriffen (den
@@ -403,7 +393,7 @@ function Seite3() {
 
       {/* Sonderfälle */}
       <div>
-        <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">
+        <h3 className="text-sm font-semibold text-[var(--muted)] uppercase tracking-wider mb-3">
           Sonderfälle
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -493,7 +483,7 @@ export default function ImplikationenLernen() {
               className={`text-xs px-3 py-1.5 rounded-full transition-colors cursor-pointer ${
                 i === currentPage
                   ? "bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 font-medium"
-                  : "text-muted hover:bg-gray-100 dark:hover:bg-gray-800"
+                  : "text-muted hover:bg-[var(--border)]/50"
               }`}
             >
               {title}
@@ -506,7 +496,7 @@ export default function ImplikationenLernen() {
       <Page />
 
       {/* Bottom navigation */}
-      <div className="flex items-center justify-between pt-4 border-t border-gray-200 dark:border-gray-700">
+      <div className="flex items-center justify-between pt-4 border-t border-[var(--border)]">
         <button
           onClick={() => setCurrentPage((p) => Math.max(0, p - 1))}
           disabled={currentPage === 0}

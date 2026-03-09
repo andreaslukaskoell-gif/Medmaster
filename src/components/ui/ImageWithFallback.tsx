@@ -48,7 +48,7 @@ export function ImageWithFallback({
   }, [lightboxOpen]);
 
   const placeholderBase =
-    "absolute inset-0 flex items-center justify-center bg-linear-to-br from-slate-100 to-primary-50 dark:from-slate-800 dark:to-primary-950/30";
+    "absolute inset-0 flex items-center justify-center bg-linear-to-br from-muted to-primary-50 dark:from-muted dark:to-primary-950/30";
 
   return (
     <>
@@ -59,8 +59,8 @@ export function ImageWithFallback({
         {/* Progressive: blur placeholder while loading */}
         {status === "loading" && (
           <div className={`${placeholderBase} animate-pulse`} aria-hidden>
-            <div className="h-16 w-16 rounded-full bg-slate-200/80 dark:bg-slate-600/50 blur-md" />
-            <ImageIcon className="absolute w-8 h-8 text-slate-400 dark:text-slate-500" />
+            <div className="h-16 w-16 rounded-full bg-muted/80 blur-md" />
+            <ImageIcon className="absolute w-8 h-8 text-muted-foreground/70" />
           </div>
         )}
 
@@ -68,10 +68,8 @@ export function ImageWithFallback({
         {status === "error" && (
           <div className={`${placeholderBase} min-h-[120px]`}>
             <div className="text-center px-4">
-              <ImageOff className="w-10 h-10 mx-auto text-slate-400 dark:text-slate-500 mb-2" />
-              <p className="text-xs text-slate-500 dark:text-slate-400">
-                Bild konnte nicht geladen werden
-              </p>
+              <ImageOff className="w-10 h-10 mx-auto text-muted-foreground/70 mb-2" />
+              <p className="text-xs text-muted-foreground">Bild konnte nicht geladen werden</p>
             </div>
           </div>
         )}

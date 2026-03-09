@@ -32,15 +32,14 @@ export function TypAQuestion({ frage, chosenOption, revealed, onChoose }: Props)
   return (
     <div className="space-y-3">
       {/* Question stem */}
-      <p className="text-base font-medium text-gray-900 dark:text-gray-100 leading-relaxed">
+      <p className="text-base font-medium text-[var(--text-primary)] leading-relaxed">
         {stammDisplay}
       </p>
 
       {/* Options */}
       <div className="space-y-2">
         {optionen.map((opt, i) => {
-          let cls =
-            "border-border hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300";
+          let cls = "border-border hover:bg-[var(--border)]/50 text-[var(--text-secondary)]";
 
           if (revealed) {
             if (opt.key === correct) {
@@ -50,7 +49,7 @@ export function TypAQuestion({ frage, chosenOption, revealed, onChoose }: Props)
               cls =
                 "border-red-400 bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-400 line-through";
             } else {
-              cls = "border-border opacity-40 text-gray-400 dark:text-gray-500";
+              cls = "border-border opacity-40 text-[var(--muted)]/60";
             }
           }
 
@@ -115,7 +114,7 @@ export function TypAQuestion({ frage, chosenOption, revealed, onChoose }: Props)
                   </span>
                 </div>
                 {frage.erklaerung && (
-                  <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                  <p className="text-sm text-[var(--muted)] leading-relaxed">
                     {stripMarkdownAsterisks(frage.erklaerung)}
                   </p>
                 )}

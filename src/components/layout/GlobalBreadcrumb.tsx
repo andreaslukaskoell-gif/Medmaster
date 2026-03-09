@@ -18,7 +18,7 @@ export function GlobalBreadcrumb() {
 
   return (
     <Breadcrumb className="flex-1 min-w-0 basis-0" aria-label="Navigationspfad">
-      <BreadcrumbList className="text-slate-500 dark:text-slate-400 text-xs sm:text-sm flex-wrap">
+      <BreadcrumbList className="text-muted-foreground text-xs sm:text-sm flex-wrap">
         {items.map((item, i) => {
           const isLast = i === items.length - 1;
           return (
@@ -26,7 +26,7 @@ export function GlobalBreadcrumb() {
               {i > 0 && <BreadcrumbSeparator />}
               <BreadcrumbItem>
                 {isLast && !item.href ? (
-                  <BreadcrumbPage className="text-midnight dark:text-slate-100 font-medium truncate max-w-[120px] sm:max-w-[200px]">
+                  <BreadcrumbPage className="text-foreground font-medium truncate max-w-[120px] sm:max-w-[200px]">
                     {item.label}
                   </BreadcrumbPage>
                 ) : item.href ? (
@@ -39,7 +39,7 @@ export function GlobalBreadcrumb() {
                     </Link>
                   </BreadcrumbLink>
                 ) : (
-                  <BreadcrumbPage className="text-midnight dark:text-slate-100 font-medium truncate max-w-[120px] sm:max-w-[200px]">
+                  <BreadcrumbPage className="text-foreground font-medium truncate max-w-[120px] sm:max-w-[200px]">
                     {item.label}
                   </BreadcrumbPage>
                 )}

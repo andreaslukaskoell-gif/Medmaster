@@ -97,9 +97,9 @@ function formatText(text: string, escapeHtml = false): string {
 
 export function QuestionsWidget({ markdown }: Props) {
   return (
-    <div className="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-6 shadow-sm">
-      <h2 className="mb-4 text-xl font-semibold text-gray-900 dark:text-gray-100">Übungsfragen</h2>
-      <div className="prose max-w-none text-gray-700 dark:text-gray-300">
+    <div className="rounded-xl border border-border bg-card p-6 shadow-sm">
+      <h2 className="mb-4 text-xl font-semibold text-foreground">Übungsfragen</h2>
+      <div className="prose max-w-none text-foreground/80">
         <div
           dangerouslySetInnerHTML={{
             __html: formatText(markdown, true),

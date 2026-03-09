@@ -97,7 +97,15 @@ export default function KFF() {
         />
       );
     }
-    return <FigurenQuiz onBack={() => setView("overview")} autoStart={autoStartRef.current} />;
+    return (
+      <FigurenQuiz
+        onBack={() => {
+          autoStartRef.current = false;
+          setView("overview");
+        }}
+        autoStart={autoStartRef.current}
+      />
+    );
   }
 
   if (view === "strategy") {
@@ -116,7 +124,10 @@ export default function KFF() {
     }
     return (
       <ZahlenfolgenQuiz
-        onBack={() => setView("overview")}
+        onBack={() => {
+          autoStartRef.current = false;
+          setView("overview");
+        }}
         initialQuestionCount={planZfCount > 0 ? planZfCount : undefined}
         autoStart={autoStartRef.current}
       />
@@ -159,7 +170,10 @@ export default function KFF() {
     }
     return (
       <ImplikationenQuiz
-        onBack={() => setView("overview")}
+        onBack={() => {
+          autoStartRef.current = false;
+          setView("overview");
+        }}
         initialQuestionCount={planImpCount > 0 ? planImpCount : undefined}
         autoStart={autoStartRef.current}
       />
@@ -176,7 +190,13 @@ export default function KFF() {
       );
     }
     return (
-      <WortflüssigkeitQuiz onBack={() => setView("overview")} autoStart={autoStartRef.current} />
+      <WortflüssigkeitQuiz
+        onBack={() => {
+          autoStartRef.current = false;
+          setView("overview");
+        }}
+        autoStart={autoStartRef.current}
+      />
     );
   }
 
@@ -238,9 +258,7 @@ export default function KFF() {
     <div className="max-w-5xl mx-auto space-y-6">
       <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "KFF" }]} />
       <div>
-        <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
-          KFF - Kognitive Fähigkeiten
-        </h1>
+        <h1 className="text-2xl font-bold text-foreground">KFF - Kognitive Fähigkeiten</h1>
         <p className="text-muted mt-1">
           Trainiere Zahlenfolgen, Gedächtnis, logisches Denken und Wortflüssigkeit.
         </p>
@@ -264,7 +282,7 @@ export default function KFF() {
                 </div>
                 <div>
                   <div className="flex items-center gap-2">
-                    <h3 className="font-semibold text-gray-900 dark:text-gray-100">{m.title}</h3>
+                    <h3 className="font-semibold text-foreground">{m.title}</h3>
                     {m.badge && (
                       <Badge variant="info" className="text-[10px]">
                         {m.badge}
