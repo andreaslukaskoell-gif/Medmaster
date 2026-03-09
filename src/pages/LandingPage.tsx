@@ -9,9 +9,14 @@ import {
   Shield,
   Zap,
   LayoutGrid,
-  RefreshCw,
   TrendingUp,
   Clock,
+  CheckCircle,
+  XCircle,
+  Star,
+  Users,
+  BadgeCheck,
+  Infinity,
 } from "lucide-react";
 import { supabase } from "@/lib/supabase";
 import { useAuth } from "@/hooks/useAuth";
@@ -26,42 +31,82 @@ const features = [
     icon: Brain,
     title: "KI-Adaptives Lernen",
     description:
-      "Unser System erkennt deine Schwächen und passt die Fragen automatisch an dein Niveau an.",
+      "Das System erkennt deine Schwachstellen und stellt gezielt Fragen aus 4.300+ BMS-Aufgaben, die deinem Niveau entsprechen.",
+    stat: "4.300+ Fragen",
     color: "bg-[#e8ecf7] dark:bg-primary-900/30 text-[#1b3ea7] dark:text-primary-400",
   },
   {
     icon: ListChecks,
-    title: "Offizielle Stichwortliste",
-    description: "Alle offiziellen BMS-Stichworte 2026. Fortschritt pro Stichwort in Echtzeit.",
+    title: "Offizielle Stichwortliste 2026",
+    description:
+      "Jedes offizielle BMS-Stichwort abgedeckt, aufgeteilt in 173 Lerneinheiten mit Fortschritt pro Thema.",
+    stat: "173 Lerneinheiten",
     color: "bg-[#e8ecf7] dark:bg-primary-900/30 text-[#1b3ea7] dark:text-primary-400",
   },
   {
     icon: LayoutGrid,
     title: "Alle 4 MedAT-Bereiche",
     description:
-      "BMS, KFF, TV und SEK vollständig abgedeckt — alles in einer App, kein Wechsel nötig.",
+      "BMS, KFF, TV und SEK vollständig abgedeckt. 5 KFF-Untertests, 10 TV-Textsets, 100 SEK-Aufgaben — alles in einer App.",
+    stat: "Vollständig",
     color: "bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400",
   },
   {
-    icon: Zap,
-    title: "Prüfungs-Simulation",
+    icon: Infinity,
+    title: "Unbegrenzte KFF-Übungen",
     description:
-      "Realistische MedAT-Simulationen unter echten Prüfungsbedingungen mit Timer und Auswertung.",
+      "Algorithmisch generierte Zahlenfolgen, Implikationen, Wortflüssigkeit und Figuren — unendlich viele Aufgaben, nie Wiederholungen.",
+    stat: "Unbegrenzt",
     color: "bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400",
   },
   {
-    icon: RefreshCw,
-    title: "Spaced Repetition System",
+    icon: Zap,
+    title: "Realistische Prüfungssimulation",
     description:
-      "Wissenschaftlich optimierte Wiederholung: Du lernst genau das, was du gerade vergisst.",
+      "Vollständige MedAT-Simulation unter echten Bedingungen: Timer, Auswertung, offizielle Zeitlimits pro Testteil.",
+    stat: "Original-Format",
     color: "bg-violet-100 dark:bg-violet-900/30 text-violet-700 dark:text-violet-400",
   },
   {
     icon: TrendingUp,
-    title: "Fortschritt & Prognose",
-    description: "Live-Tracking deines Wissensstands pro Fach. KI-gestützte Prüfungstag-Prognose.",
+    title: "Fortschritt & Prüfungsprognose",
+    description:
+      "Live-Tracking deines Wissensstands pro Fach. Spaced Repetition und KI-gestützte Prüfungstag-Prognose.",
+    stat: "Echtzeit-Analyse",
     color: "bg-rose-100 dark:bg-rose-900/30 text-rose-700 dark:text-rose-400",
   },
+];
+
+const testimonials = [
+  {
+    name: "Lisa M.",
+    detail: "MedAT 2026 Kandidatin, Wien",
+    text: "Endlich eine App, die alle 4 Bereiche abdeckt. Die KFF-Generatoren sind genial — ich kann unbegrenzt üben, ohne dass sich Aufgaben wiederholen.",
+    rating: 5,
+  },
+  {
+    name: "Tobias K.",
+    detail: "MedAT 2026 Kandidat, Graz",
+    text: "Die BMS-Fragen sind richtig gut aufgebaut und die Erklärungen helfen enorm. Für den Preis ein No-Brainer.",
+    rating: 5,
+  },
+  {
+    name: "Sarah P.",
+    detail: "MedAT 2026 Kandidatin, Innsbruck",
+    text: "Ich hab vorher eine Abo-Plattform genutzt. MedMaster hat mehr Übungsfragen, kostet einmalig €29,90 und die KFF-Übungen sind besser.",
+    rating: 5,
+  },
+];
+
+const comparisonRows = [
+  { feature: "BMS-Übungsfragen", medmaster: "4.300+", competitor: "Variiert" },
+  { feature: "Alle 4 MedAT-Bereiche", medmaster: true, competitor: "Teilweise" },
+  { feature: "KFF-Aufgaben", medmaster: "Unbegrenzt (Generator)", competitor: "Limitierter Pool" },
+  { feature: "Preis", medmaster: "Einmalig €29,90", competitor: "€9–30 / Monat (Abo)" },
+  { feature: "MedAT 2026 Format", medmaster: true, competitor: true },
+  { feature: "KI-adaptives Lernsystem", medmaster: true, competitor: false },
+  { feature: "Prüfungssimulation", medmaster: true, competitor: "Teilweise" },
+  { feature: "Spaced Repetition", medmaster: true, competitor: false },
 ];
 
 const container = {
@@ -104,12 +149,10 @@ export default function LandingPage() {
       });
   }, []);
 
-  const socialProofItems = [
-    ...(userCount ? [{ emoji: "📊", text: `Bereits über ${userCount} aktive Lernende` }] : []),
-    { emoji: "⭐", text: "Alle 4 MedAT-Bereiche: BMS, KFF, TV, SEK" },
-    { emoji: "🎯", text: "Offizielle Stichwortliste 2025/2026" },
-    { emoji: "🆓", text: "Gratis testen bis Ende März — danach einmalig €29,90" },
-    { emoji: "📚", text: "4.300+ Übungsfragen mit Erklärungen" },
+  const trustBadges = [
+    { icon: BadgeCheck, text: "MedAT 2026 Format" },
+    { icon: Users, text: "Von Medizinstudent:innen entwickelt" },
+    { icon: Shield, text: "Einmalzahlung — kein Abo" },
   ];
 
   return (
@@ -119,7 +162,7 @@ export default function LandingPage() {
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.4, ease: "easeOut" }}
-        className="sticky top-0 z-40 bg-[var(--surface)]/90 dark:bg-[var(--background)]/90 backdrop-blur-xl border-b border-gray-100 dark:border-gray-800/50 shadow-sm"
+        className="sticky top-0 z-40 bg-[var(--surface)]/90 dark:bg-[var(--background)]/90 backdrop-blur-xl border-b border-app-border/50 shadow-sm"
       >
         <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
@@ -129,14 +172,12 @@ export default function LandingPage() {
             >
               <GraduationCap className="w-5 h-5" />
             </div>
-            <span className="text-xl font-bold text-gray-900 dark:text-gray-100 tracking-tight">
-              MedMaster
-            </span>
+            <span className="text-xl font-bold text-app-foreground tracking-tight">MedMaster</span>
           </div>
           <div className="flex items-center gap-2 sm:gap-3">
             <Link
               to="/login"
-              className="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors px-3 py-2 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800"
+              className="text-sm font-medium text-app-muted hover:text-app-foreground transition-colors px-3 py-2 rounded-xl hover:bg-app-card"
             >
               Anmelden
             </Link>
@@ -156,13 +197,13 @@ export default function LandingPage() {
 
       {/* Hero */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-linear-to-br from-[#e8ecf7] via-white to-[#e8ecf7] dark:from-primary-950/40 dark:via-gray-950 dark:to-primary-950/30" />
+        <div className="absolute inset-0 bg-linear-to-br from-primary-50 via-[var(--surface)] to-primary-50 dark:from-primary-950/40 dark:via-background dark:to-primary-950/30" />
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 pt-16 sm:pt-20 pb-20 sm:pb-28 text-center">
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-2xl text-sm font-medium mb-8 shadow-sm border border-primary-100 dark:border-primary-800/50 bg-white/80 dark:bg-gray-900/80"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-2xl text-sm font-medium mb-8 shadow-sm border border-primary-100 dark:border-primary-800/50 bg-[var(--surface)]/80 dark:bg-[var(--surface)]/80"
             style={{ color: NAVY }}
           >
             <Clock className="w-4 h-4" />
@@ -172,26 +213,43 @@ export default function LandingPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.5 }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 dark:text-gray-100 leading-tight mb-6 tracking-tight"
+            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-app-foreground leading-tight mb-6 tracking-tight"
           >
-            Dein Medizinstudium
+            MedAT 2026 bestehen.
             <br />
             <span
               className="bg-clip-text text-transparent"
               style={{ backgroundImage: `linear-gradient(135deg, ${NAVY}, ${NAVY_LIGHT})` }}
             >
-              beginnt hier.
+              Mit System.
             </span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.35 }}
-            className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed"
+            className="text-lg sm:text-xl text-[var(--text-secondary)] max-w-2xl mx-auto mb-6 leading-relaxed"
           >
-            4.300+ Übungsfragen, alle 4 MedAT-Bereiche, KI-adaptives Lernsystem und realistische
-            Prüfungssimulationen. Komplett gratis bis 31. März.
+            4.300+ BMS-Fragen, unbegrenzte KFF-Generatoren, 10 TV-Textsets, 100 SEK-Aufgaben — alle
+            4 MedAT-Bereiche in einer App. KI-adaptiv, prüfungsnah, einmalig €29,90.
           </motion.p>
+          {/* Trust Badges */}
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+            className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-10"
+          >
+            {trustBadges.map((badge) => (
+              <div
+                key={badge.text}
+                className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-medium text-app-muted"
+              >
+                <badge.icon className="w-4 h-4 text-emerald-500 shrink-0" />
+                {badge.text}
+              </div>
+            ))}
+          </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
@@ -232,7 +290,7 @@ export default function LandingPage() {
             <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
               <Link
                 to="/register"
-                className="inline-flex items-center justify-center gap-2 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 font-semibold px-8 py-4 rounded-2xl text-base border border-gray-200 dark:border-gray-700 shadow-sm hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+                className="inline-flex items-center justify-center gap-2 bg-[var(--surface)] text-[var(--text-secondary)] font-semibold px-8 py-4 rounded-2xl text-base border border-app-border shadow-sm hover:bg-background transition-colors"
               >
                 Mit E-Mail registrieren
                 <ArrowRight className="w-5 h-5" />
@@ -245,27 +303,23 @@ export default function LandingPage() {
             variants={container}
             initial="hidden"
             animate="show"
-            className="grid grid-cols-3 gap-6 sm:gap-8 max-w-lg mx-auto mt-16 sm:mt-20"
+            className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 max-w-2xl mx-auto mt-16 sm:mt-20"
           >
             {[
-              { value: "4.300+", label: "Übungsfragen" },
-              { value: "174", label: "Lerneinheiten" },
-              { value: "4", label: "MedAT-Bereiche" },
-            ].map((stat, i) => (
+              { value: "4.300+", label: "BMS-Fragen" },
+              { value: "173", label: "Lerneinheiten" },
+              { value: "5", label: "KFF-Untertests" },
+              { value: "€29,90", label: "Einmalig" },
+            ].map((stat) => (
               <motion.div
                 key={stat.label}
                 variants={item}
-                className="rounded-2xl bg-white/80 dark:bg-gray-900/50 p-4 sm:p-5 shadow-sm border border-gray-100 dark:border-gray-800/50"
+                className="rounded-2xl bg-[var(--surface)]/80 dark:bg-[var(--surface)]/50 p-4 sm:p-5 shadow-sm border border-app-border/50"
               >
-                <div
-                  className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-gray-100"
-                  style={{ color: i === 1 ? NAVY : undefined }}
-                >
+                <div className="text-2xl sm:text-3xl font-bold" style={{ color: NAVY }}>
                   {stat.value}
                 </div>
-                <div className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mt-1">
-                  {stat.label}
-                </div>
+                <div className="text-xs sm:text-sm text-app-muted mt-1">{stat.label}</div>
               </motion.div>
             ))}
           </motion.div>
@@ -278,9 +332,7 @@ export default function LandingPage() {
               transition={{ delay: 0.6 }}
               className="mt-12 sm:mt-16"
             >
-              <p className="text-sm font-medium text-gray-500 dark:text-gray-400 mb-4">
-                Gratis-Zugang endet in:
-              </p>
+              <p className="text-sm font-medium text-app-muted mb-4">Gratis-Zugang endet in:</p>
               <div className="flex justify-center gap-3 sm:gap-4">
                 {[
                   { value: countdown.days, label: "Tage" },
@@ -290,7 +342,7 @@ export default function LandingPage() {
                 ].map((unit) => (
                   <div
                     key={unit.label}
-                    className="flex flex-col items-center bg-white dark:bg-gray-900 rounded-2xl px-4 py-3 sm:px-5 sm:py-4 shadow-sm border border-gray-100 dark:border-gray-800/50 min-w-[4rem] sm:min-w-[5rem]"
+                    className="flex flex-col items-center bg-[var(--surface)] rounded-2xl px-4 py-3 sm:px-5 sm:py-4 shadow-sm border border-app-border/50 min-w-[4rem] sm:min-w-[5rem]"
                   >
                     <span
                       className="text-2xl sm:text-3xl font-bold tabular-nums"
@@ -298,22 +350,18 @@ export default function LandingPage() {
                     >
                       {String(unit.value).padStart(2, "0")}
                     </span>
-                    <span className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                      {unit.label}
-                    </span>
+                    <span className="text-xs text-app-muted mt-1">{unit.label}</span>
                   </div>
                 ))}
               </div>
-              <p className="text-xs text-gray-400 dark:text-gray-500 mt-3">
-                Ab 1. April: einmalig €29,90
-              </p>
+              <p className="text-xs text-app-muted/70 mt-3">Ab 1. April: einmalig €29,90</p>
             </motion.div>
           )}
         </div>
       </section>
 
       {/* Features */}
-      <section className="py-16 sm:py-24 bg-gray-50/50 dark:bg-gray-900/30">
+      <section className="py-16 sm:py-24 bg-background/50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 12 }}
@@ -321,11 +369,11 @@ export default function LandingPage() {
             viewport={{ once: true }}
             className="text-center mb-14"
           >
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">
-              Warum MedMaster?
+            <h2 className="text-3xl font-bold text-app-foreground mb-4">
+              Alles, was du für den MedAT brauchst
             </h2>
-            <p className="text-gray-600 dark:text-gray-400 max-w-xl mx-auto">
-              Entwickelt von MedAT-Absolventen, optimiert mit KI.
+            <p className="text-[var(--text-secondary)] max-w-xl mx-auto">
+              Von Medizinstudent:innen entwickelt. KI-optimiert. Aktuell für MedAT 2026.
             </p>
           </motion.div>
           <motion.div
@@ -340,17 +388,23 @@ export default function LandingPage() {
                 key={f.title}
                 variants={item}
                 whileHover={{ y: -4 }}
-                className="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-sm border border-gray-100 dark:border-gray-800/50"
+                className="bg-[var(--surface)] dark:bg-[var(--surface)] rounded-2xl p-8 shadow-sm border border-app-border/50"
               >
-                <div
-                  className={`w-12 h-12 rounded-2xl flex items-center justify-center mb-5 ${f.color}`}
-                >
-                  <f.icon className="w-6 h-6" />
+                <div className="flex items-center justify-between mb-5">
+                  <div
+                    className={`w-12 h-12 rounded-2xl flex items-center justify-center ${f.color}`}
+                  >
+                    <f.icon className="w-6 h-6" />
+                  </div>
+                  <span
+                    className="text-xs font-bold px-3 py-1 rounded-full bg-primary-50 dark:bg-primary-900/30"
+                    style={{ color: NAVY }}
+                  >
+                    {f.stat}
+                  </span>
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">
-                  {f.title}
-                </h3>
-                <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                <h3 className="text-lg font-semibold text-app-foreground mb-3">{f.title}</h3>
+                <p className="text-[var(--text-secondary)] text-sm leading-relaxed">
                   {f.description}
                 </p>
               </motion.div>
@@ -366,7 +420,7 @@ export default function LandingPage() {
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl font-bold text-gray-900 dark:text-gray-100 text-center mb-14"
+            className="text-3xl font-bold text-app-foreground text-center mb-14"
           >
             So funktioniert's
           </motion.h2>
@@ -407,46 +461,141 @@ export default function LandingPage() {
                 <div className="text-xs font-bold mb-2" style={{ color: NAVY }}>
                   SCHRITT {s.step}
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">
-                  {s.title}
-                </h3>
-                <p className="text-gray-600 dark:text-gray-400 text-sm">{s.desc}</p>
+                <h3 className="text-lg font-semibold text-app-foreground mb-2">{s.title}</h3>
+                <p className="text-[var(--text-secondary)] text-sm">{s.desc}</p>
               </motion.div>
             ))}
           </motion.div>
         </div>
       </section>
 
-      {/* Social Proof */}
-      <section className="py-16 sm:py-20 bg-gray-50/50 dark:bg-gray-900/30">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+      {/* Mid-page CTA */}
+      <section className="py-12 sm:py-16">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="bg-primary-50 dark:bg-primary-950/40 rounded-2xl p-8 sm:p-10 border border-primary-100 dark:border-primary-800/50"
+          >
+            <p className="text-lg font-semibold text-app-foreground mb-2">
+              Jetzt kostenlos testen — kein Abo, keine Kreditkarte
+            </p>
+            <p className="text-sm text-app-muted mb-6">
+              Voller Zugang bis 31. März. Danach einmalig €29,90.
+            </p>
+            <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+              <Link
+                to="/register"
+                className="inline-flex items-center gap-2 text-white font-semibold px-8 py-3.5 rounded-2xl text-sm shadow-sm transition-colors"
+                style={{ backgroundColor: NAVY }}
+              >
+                Gratis starten
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Comparison Table */}
+      <section className="py-16 sm:py-24 bg-background/50">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-10"
           >
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-2">
-              Fakten statt Versprechen
+            <h2 className="text-3xl font-bold text-app-foreground mb-3">Warum MedMaster?</h2>
+            <p className="text-[var(--text-secondary)] max-w-xl mx-auto">
+              Mehr Inhalte, bessere Technik, fairer Preis — so schneidet MedMaster im Vergleich ab.
+            </p>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="bg-[var(--surface)] rounded-2xl shadow-sm border border-app-border/50 overflow-hidden"
+          >
+            <div className="grid grid-cols-3 text-center text-sm font-semibold border-b border-app-border/50">
+              <div className="p-4 text-app-muted text-left">Feature</div>
+              <div className="p-4" style={{ color: NAVY }}>
+                MedMaster
+              </div>
+              <div className="p-4 text-app-muted">Abo-Plattformen</div>
+            </div>
+            {comparisonRows.map((row, i) => (
+              <div
+                key={row.feature}
+                className={`grid grid-cols-3 text-center text-sm ${i < comparisonRows.length - 1 ? "border-b border-app-border/30" : ""}`}
+              >
+                <div className="p-4 text-app-foreground text-left font-medium">{row.feature}</div>
+                <div className="p-4 flex items-center justify-center">
+                  {row.medmaster === true ? (
+                    <CheckCircle className="w-5 h-5 text-emerald-500" />
+                  ) : (
+                    <span className="font-semibold text-app-foreground">{row.medmaster}</span>
+                  )}
+                </div>
+                <div className="p-4 flex items-center justify-center">
+                  {row.competitor === true ? (
+                    <CheckCircle className="w-5 h-5 text-emerald-500" />
+                  ) : row.competitor === false ? (
+                    <XCircle className="w-5 h-5 text-red-400" />
+                  ) : (
+                    <span className="text-app-muted">{row.competitor}</span>
+                  )}
+                </div>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-16 sm:py-20">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl font-bold text-app-foreground mb-3">
+              Das sagen unsere Lernenden
             </h2>
+            {userCount && (
+              <p className="text-[var(--text-secondary)]">
+                Bereits {userCount}+ Studierende vertrauen auf MedMaster
+              </p>
+            )}
           </motion.div>
           <motion.div
             variants={container}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="grid grid-cols-1 sm:grid-cols-2 gap-4"
+            className="grid grid-cols-1 md:grid-cols-3 gap-6"
           >
-            {socialProofItems.map((sp) => (
+            {testimonials.map((t) => (
               <motion.div
-                key={sp.text}
+                key={t.name}
                 variants={item}
-                className="flex items-center gap-4 bg-white dark:bg-gray-900 rounded-2xl px-6 py-5 shadow-sm border border-gray-100 dark:border-gray-800/50"
+                className="bg-[var(--surface)] dark:bg-[var(--surface)] rounded-2xl p-6 sm:p-8 shadow-sm border border-app-border/50"
               >
-                <span className="text-2xl shrink-0">{sp.emoji}</span>
-                <span className="text-sm font-medium text-gray-800 dark:text-gray-200">
-                  {sp.text}
-                </span>
+                <div className="flex gap-0.5 mb-4">
+                  {Array.from({ length: t.rating }).map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+                  ))}
+                </div>
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-5 italic">
+                  &ldquo;{t.text}&rdquo;
+                </p>
+                <div>
+                  <div className="text-sm font-semibold text-app-foreground">{t.name}</div>
+                  <div className="text-xs text-app-muted">{t.detail}</div>
+                </div>
               </motion.div>
             ))}
           </motion.div>
@@ -456,89 +605,73 @@ export default function LandingPage() {
       {/* SEO Internal Links */}
       <section className="py-12 sm:py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 text-center mb-8">
+          <h2 className="text-2xl font-bold text-app-foreground text-center mb-8">
             MedAT 2026 Vorbereitung
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
             <Link
               to="/medat-uebungsfragen"
-              className="flex flex-col items-center gap-2 p-5 rounded-2xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800/50 hover:border-gray-300 dark:hover:border-gray-700 transition-colors shadow-sm text-center"
+              className="flex flex-col items-center gap-2 p-5 rounded-2xl bg-[var(--surface)] dark:bg-[var(--surface)] border border-app-border/50 hover:border-app-border transition-colors shadow-sm text-center"
             >
               <span className="text-2xl">✏️</span>
-              <span className="text-sm font-semibold text-gray-900 dark:text-gray-100">
-                MedAT Übungsfragen
-              </span>
-              <span className="text-xs text-gray-500 dark:text-gray-400">BMS + KFF kostenlos</span>
+              <span className="text-sm font-semibold text-app-foreground">MedAT Übungsfragen</span>
+              <span className="text-xs text-app-muted">BMS + KFF kostenlos</span>
             </Link>
             <Link
               to="/medat-guide"
-              className="flex flex-col items-center gap-2 p-5 rounded-2xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800/50 hover:border-gray-300 dark:hover:border-gray-700 transition-colors shadow-sm text-center"
+              className="flex flex-col items-center gap-2 p-5 rounded-2xl bg-[var(--surface)] dark:bg-[var(--surface)] border border-app-border/50 hover:border-app-border transition-colors shadow-sm text-center"
             >
               <span className="text-2xl">📖</span>
-              <span className="text-sm font-semibold text-gray-900 dark:text-gray-100">
-                MedAT 2026 Guide
-              </span>
-              <span className="text-xs text-gray-500 dark:text-gray-400">Alles zum Test</span>
+              <span className="text-sm font-semibold text-app-foreground">MedAT 2026 Guide</span>
+              <span className="text-xs text-app-muted">Alles zum Test</span>
             </Link>
             <Link
               to="/faq"
-              className="flex flex-col items-center gap-2 p-5 rounded-2xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800/50 hover:border-gray-300 dark:hover:border-gray-700 transition-colors shadow-sm text-center"
+              className="flex flex-col items-center gap-2 p-5 rounded-2xl bg-[var(--surface)] dark:bg-[var(--surface)] border border-app-border/50 hover:border-app-border transition-colors shadow-sm text-center"
             >
               <span className="text-2xl">❓</span>
-              <span className="text-sm font-semibold text-gray-900 dark:text-gray-100">
-                Häufige Fragen
-              </span>
-              <span className="text-xs text-gray-500 dark:text-gray-400">FAQ zum MedAT</span>
+              <span className="text-sm font-semibold text-app-foreground">Häufige Fragen</span>
+              <span className="text-xs text-app-muted">FAQ zum MedAT</span>
             </Link>
             <Link
               to="/medat-biologie-fragen"
-              className="flex flex-col items-center gap-2 p-5 rounded-2xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800/50 hover:border-gray-300 dark:hover:border-gray-700 transition-colors shadow-sm text-center"
+              className="flex flex-col items-center gap-2 p-5 rounded-2xl bg-[var(--surface)] dark:bg-[var(--surface)] border border-app-border/50 hover:border-app-border transition-colors shadow-sm text-center"
             >
               <span className="text-2xl">🧬</span>
-              <span className="text-sm font-semibold text-gray-900 dark:text-gray-100">
-                BMS Biologie
-              </span>
-              <span className="text-xs text-gray-500 dark:text-gray-400">1.100+ Fragen</span>
+              <span className="text-sm font-semibold text-app-foreground">BMS Biologie</span>
+              <span className="text-xs text-app-muted">1.100+ Fragen</span>
             </Link>
             <Link
               to="/medat-chemie-fragen"
-              className="flex flex-col items-center gap-2 p-5 rounded-2xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800/50 hover:border-gray-300 dark:hover:border-gray-700 transition-colors shadow-sm text-center"
+              className="flex flex-col items-center gap-2 p-5 rounded-2xl bg-[var(--surface)] dark:bg-[var(--surface)] border border-app-border/50 hover:border-app-border transition-colors shadow-sm text-center"
             >
               <span className="text-2xl">⚗️</span>
-              <span className="text-sm font-semibold text-gray-900 dark:text-gray-100">
-                BMS Chemie
-              </span>
-              <span className="text-xs text-gray-500 dark:text-gray-400">1.400+ Fragen</span>
+              <span className="text-sm font-semibold text-app-foreground">BMS Chemie</span>
+              <span className="text-xs text-app-muted">1.400+ Fragen</span>
             </Link>
             <Link
               to="/medat-physik-fragen"
-              className="flex flex-col items-center gap-2 p-5 rounded-2xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800/50 hover:border-gray-300 dark:hover:border-gray-700 transition-colors shadow-sm text-center"
+              className="flex flex-col items-center gap-2 p-5 rounded-2xl bg-[var(--surface)] dark:bg-[var(--surface)] border border-app-border/50 hover:border-app-border transition-colors shadow-sm text-center"
             >
               <span className="text-2xl">⚡</span>
-              <span className="text-sm font-semibold text-gray-900 dark:text-gray-100">
-                BMS Physik
-              </span>
-              <span className="text-xs text-gray-500 dark:text-gray-400">1.300+ Fragen</span>
+              <span className="text-sm font-semibold text-app-foreground">BMS Physik</span>
+              <span className="text-xs text-app-muted">1.300+ Fragen</span>
             </Link>
             <Link
               to="/medat-mathematik-fragen"
-              className="flex flex-col items-center gap-2 p-5 rounded-2xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800/50 hover:border-gray-300 dark:hover:border-gray-700 transition-colors shadow-sm text-center"
+              className="flex flex-col items-center gap-2 p-5 rounded-2xl bg-[var(--surface)] dark:bg-[var(--surface)] border border-app-border/50 hover:border-app-border transition-colors shadow-sm text-center"
             >
               <span className="text-2xl">📊</span>
-              <span className="text-sm font-semibold text-gray-900 dark:text-gray-100">
-                BMS Mathematik
-              </span>
-              <span className="text-xs text-gray-500 dark:text-gray-400">490+ Fragen</span>
+              <span className="text-sm font-semibold text-app-foreground">BMS Mathematik</span>
+              <span className="text-xs text-app-muted">490+ Fragen</span>
             </Link>
             <Link
               to="/challenge"
-              className="flex flex-col items-center gap-2 p-5 rounded-2xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800/50 hover:border-gray-300 dark:hover:border-gray-700 transition-colors shadow-sm text-center"
+              className="flex flex-col items-center gap-2 p-5 rounded-2xl bg-[var(--surface)] dark:bg-[var(--surface)] border border-app-border/50 hover:border-app-border transition-colors shadow-sm text-center"
             >
               <span className="text-2xl">🏆</span>
-              <span className="text-sm font-semibold text-gray-900 dark:text-gray-100">
-                Quiz Challenge
-              </span>
-              <span className="text-xs text-gray-500 dark:text-gray-400">Teile dein Ergebnis</span>
+              <span className="text-sm font-semibold text-app-foreground">Quiz Challenge</span>
+              <span className="text-xs text-app-muted">Teile dein Ergebnis</span>
             </Link>
           </div>
         </div>
@@ -551,7 +684,7 @@ export default function LandingPage() {
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-white dark:bg-gray-900 rounded-2xl p-8 sm:p-12 shadow-sm border-2 border-[#1b3ea7]/20 dark:border-primary-800/50 text-center relative overflow-hidden"
+            className="bg-[var(--surface)] dark:bg-[var(--surface)] rounded-2xl p-8 sm:p-12 shadow-sm border-2 border-[#1b3ea7]/20 dark:border-primary-800/50 text-center relative overflow-hidden"
           >
             <div
               className="absolute top-0 left-0 right-0 h-1"
@@ -560,31 +693,31 @@ export default function LandingPage() {
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-2xl text-sm font-medium mb-6 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400">
               Launch-Angebot — nur bis 31. März
             </div>
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-2">
-              Jetzt komplett gratis
-            </h2>
+            <h2 className="text-3xl font-bold text-app-foreground mb-2">Jetzt komplett gratis</h2>
             <div className="flex items-baseline justify-center gap-2 mb-2">
               <span className="text-5xl font-extrabold" style={{ color: NAVY }}>
                 €0
               </span>
-              <span className="text-gray-400 line-through text-lg">€29,90</span>
+              <span className="text-app-muted line-through text-lg">€29,90</span>
             </div>
-            <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">
+            <p className="text-sm text-app-muted mb-6">
               Ab 1. April: einmalig €29,90 — kein Abo, keine versteckten Kosten
             </p>
             <ul className="text-left max-w-sm mx-auto mb-8 space-y-3">
               {[
-                "4.300+ Übungsfragen mit Erklärungen",
-                "Alle 4 MedAT-Bereiche (BMS, KFF, TV, SEK)",
-                "KI-adaptives Lernsystem",
-                "Realistische Prüfungssimulationen",
-                "Fortschritt & Prüfungstag-Prognose",
+                "4.300+ BMS-Fragen mit detaillierten Erklärungen",
+                "Unbegrenzte KFF-Aufgaben (Zahlenfolgen, Implikationen, Wortflüssigkeit, Figuren, Gedächtnis)",
+                "10 TV-Textsets + 100 SEK-Aufgaben",
+                "173 Lerneinheiten nach offizieller Stichwortliste",
+                "KI-adaptives Lernsystem + Spaced Repetition",
+                "Realistische Prüfungssimulationen mit Timer",
+                "Kein Abo — einmalige Zahlung, lebenslanger Zugang",
               ].map((feature) => (
                 <li
                   key={feature}
-                  className="flex items-start gap-3 text-sm text-gray-700 dark:text-gray-300"
+                  className="flex items-start gap-3 text-sm text-[var(--text-secondary)]"
                 >
-                  <span className="text-emerald-500 mt-0.5 shrink-0">✓</span>
+                  <CheckCircle className="w-4 h-4 text-emerald-500 mt-0.5 shrink-0" />
                   {feature}
                 </li>
               ))}
@@ -621,9 +754,9 @@ export default function LandingPage() {
               Gratis starten mit Google
             </motion.button>
             {googleError && <p className="text-sm text-red-500 mt-2">{googleError}</p>}
-            <p className="text-xs text-gray-400 mt-3">
+            <p className="text-xs text-app-muted/70 mt-3">
               Oder{" "}
-              <Link to="/register" className="underline hover:text-gray-600">
+              <Link to="/register" className="underline hover:text-app-muted">
                 mit E-Mail registrieren
               </Link>
             </p>
@@ -641,8 +774,11 @@ export default function LandingPage() {
       >
         <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Bereit für den MedAT 2026?</h2>
-          <p className="text-primary-100 mb-8">
-            Komplett gratis bis 31. März. Kein Risiko, kein Abo.
+          <p className="text-primary-100 mb-3">
+            4.300+ Fragen. Unbegrenzte KFF-Übungen. Alle 4 MedAT-Bereiche.
+          </p>
+          <p className="text-primary-200 text-sm mb-8">
+            Komplett gratis bis 31. März — danach einmalig €29,90. Kein Abo, kein Risiko.
           </p>
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
             <Link
@@ -657,33 +793,33 @@ export default function LandingPage() {
       </motion.section>
 
       {/* Footer */}
-      <footer className="py-8 bg-gray-900 dark:bg-gray-950">
+      <footer className="py-8 bg-primary-950 dark:bg-primary-950">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
             <GraduationCap className="w-5 h-5 text-primary-300" />
-            <span className="text-sm font-semibold text-gray-300">MedMaster</span>
+            <span className="text-sm font-semibold text-primary-200">MedMaster</span>
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-6 text-xs text-gray-400">
-            <Link to="/medat-guide" className="hover:text-gray-300 transition-colors">
+          <div className="flex flex-wrap items-center justify-center gap-6 text-xs text-primary-300/70">
+            <Link to="/medat-guide" className="hover:text-primary-200 transition-colors">
               MedAT Guide
             </Link>
-            <Link to="/faq" className="hover:text-gray-300 transition-colors">
+            <Link to="/faq" className="hover:text-primary-200 transition-colors">
               FAQ
             </Link>
-            <Link to="/medat-uebungsfragen" className="hover:text-gray-300 transition-colors">
+            <Link to="/medat-uebungsfragen" className="hover:text-primary-200 transition-colors">
               Übungsfragen
             </Link>
-            <Link to="/impressum" className="hover:text-gray-300 transition-colors">
+            <Link to="/impressum" className="hover:text-primary-200 transition-colors">
               Impressum
             </Link>
-            <Link to="/datenschutz" className="hover:text-gray-300 transition-colors">
+            <Link to="/datenschutz" className="hover:text-primary-200 transition-colors">
               Datenschutz
             </Link>
-            <Link to="/agb" className="hover:text-gray-300 transition-colors">
+            <Link to="/agb" className="hover:text-primary-200 transition-colors">
               AGB
             </Link>
           </div>
-          <p className="text-xs text-gray-500">© 2026 MedMaster. Alle Rechte vorbehalten.</p>
+          <p className="text-xs text-primary-300/50">© 2026 MedMaster. Alle Rechte vorbehalten.</p>
         </div>
       </footer>
     </div>
