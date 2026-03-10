@@ -312,7 +312,9 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
   }, [isLastPathActive]);
 
   const chaptersBySubject = (subject: "biologie" | "chemie" | "physik" | "mathematik"): Kapitel[] =>
-    bmsModule?.getKapitelBySubject(subject) ?? [];
+    (bmsModule?.getKapitelBySubject(subject) ?? []).filter(
+      (k) => k.unterkapitel && k.unterkapitel.length > 0
+    );
 
   // Sections are always open — no toggle needed
 

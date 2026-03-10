@@ -137,7 +137,11 @@ export async function loadBMSChaptersFromSupabase(): Promise<Kapitel[]> {
       })
     );
 
-    return chaptersWithSubchapters.filter((ch): ch is Kapitel => ch !== null);
+    // Filter out null entries and ghost chapters with no unterkapitel
+    return chaptersWithSubchapters.filter(
+      (ch): ch is Kapitel =>
+        ch !== null && ch.unterkapitel !== undefined && ch.unterkapitel.length > 0
+    );
   } catch (error) {
     console.error("Error in loadBMSChaptersFromSupabase:", error);
     return [];

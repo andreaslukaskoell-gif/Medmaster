@@ -326,9 +326,12 @@ export default function BMS() {
     });
   }, [chaptersForSelectedSubject]);
 
-  // Filter for roadmap: only chapters with sequence metadata (BMS learning path)
+  // Filter for roadmap: only chapters with sequence metadata AND at least 1 unterkapitel
+  // (excludes Supabase ghost entries like empty "Optik" phys-kap6)
   const roadmapChapters = useMemo(() => {
-    return sortedChapters.filter((c) => c.sequence !== undefined);
+    return sortedChapters.filter(
+      (c) => c.sequence !== undefined && c.unterkapitel && c.unterkapitel.length > 0
+    );
   }, [sortedChapters]);
 
   // Compute merged chapters for all subjects (only Supabase)
@@ -373,9 +376,12 @@ export default function BMS() {
     }
   }, [supabaseChapters]);
 
-  // Only count BMS learning-path chapters (with sequence) — filters out Supabase ghost entries
+  // Only count BMS learning-path chapters (with sequence + content) — filters out Supabase ghost entries
   const bmsKapitel = useMemo(
-    () => safeAlleKapitel.filter((k) => k.sequence !== undefined),
+    () =>
+      safeAlleKapitel.filter(
+        (k) => k.sequence !== undefined && k.unterkapitel && k.unterkapitel.length > 0
+      ),
     [safeAlleKapitel]
   );
 
@@ -832,8 +838,10 @@ export default function BMS() {
             sKapitel = [];
           }
 
-          // Only count sequenced (BMS learning-path) chapters
-          const sBmsKapitel = sKapitel.filter((k) => k.sequence !== undefined);
+          // Only count sequenced (BMS learning-path) chapters with content
+          const sBmsKapitel = sKapitel.filter(
+            (k) => k.sequence !== undefined && k.unterkapitel && k.unterkapitel.length > 0
+          );
 
           const sTotal = sBmsKapitel.reduce((sum, k) => {
             if (!k.unterkapitel || !Array.isArray(k.unterkapitel)) return sum;

@@ -654,7 +654,7 @@ export default function BMSUnterkapitel({
         </div>
 
         {/* Dev-only: Status-Overlay am Seitenende */}
-        {(process.env.NODE_ENV === "development" || import.meta.env.DEV) && (
+        {import.meta.env.DEV && (
           <div className="mt-6 py-3 px-4 rounded-lg bg-[var(--surface)] border border-[var(--border)] text-xs text-[var(--muted)]">
             <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
               <span>

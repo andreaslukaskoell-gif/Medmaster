@@ -12,7 +12,10 @@ export const alleKapitel: Kapitel[] = [
   ...(chemieKapitel || []),
   ...(physikKapitel || []),
   ...(mathematikKapitel || []),
-].filter((k): k is Kapitel => !!(k && k.id && k.title && k.subject)); // Filter invalid chapters
+].filter(
+  (k): k is Kapitel =>
+    !!(k && k.id && k.title && k.subject && k.unterkapitel && k.unterkapitel.length > 0)
+); // Filter invalid or empty chapters
 
 export function getKapitelBySubject(subject: string): Kapitel[] {
   if (!subject) return [];
