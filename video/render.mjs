@@ -50,6 +50,8 @@ function pick(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
 }
 
+const dayOfYear = Math.floor((Date.now() - new Date(new Date().getFullYear(), 0, 0)) / 86400000);
+
 // Fallback figuren data (pre-rendered SVG paths) in case extraction didn't run
 const FIGUREN_FALLBACK = {
   piecePaths: [
@@ -71,7 +73,9 @@ const FIGUREN_FALLBACK = {
 function getProps(compId) {
   switch (compId) {
     case "QuizChallenge": {
-      const q = pick(data.questions);
+      const q = curatedQuestionId
+        ? data.questions.find(qq => qq.id === curatedQuestionId) || pick(data.questions)
+        : pick(data.questions);
       return {
         question: q.text,
         subject: q.subject,
@@ -130,6 +134,70 @@ function getProps(compId) {
     }
     case "FigurenChallenge":
       return fzData.length > 0 ? pick(fzData) : FIGUREN_FALLBACK;
+    case "BMSExplainer": {
+      // Curated explainer topics — passed via --explainer-json or use default rotation
+      if (process.env.EXPLAINER_JSON) {
+        return JSON.parse(process.env.EXPLAINER_JSON);
+      }
+      const EXPLAINER_TOPICS = [
+        {
+          subject: "Biologie",
+          hook: "So wird Membrantransport endlich logisch",
+          topicTitle: "Aktiver vs. passiver Transport",
+          imageUrl: "",
+          steps: [
+            "Passiv: entlang des Konzentrationsgefälles, ohne ATP",
+            "Aktiv: gegen das Gefälle, braucht ATP-Energie",
+            "Beispiel: Na⁺/K⁺-Pumpe = aktiv (3 Na⁺ raus, 2 K⁺ rein)",
+          ],
+          merke: "Passiv = bergab (gratis). Aktiv = bergauf (kostet ATP).",
+          cta: "Dieses Thema kommt im MedAT — lern es jetzt richtig",
+        },
+        {
+          subject: "Biologie",
+          hook: "DNA-Replikation in 60 Sekunden",
+          topicTitle: "DNA-Replikation",
+          imageUrl: "",
+          steps: [
+            "Helikase öffnet den Doppelstrang (Replikationsgabel)",
+            "Primase setzt RNA-Primer → DNA-Polymerase III baut 5'→3'",
+            "Leitstrang: kontinuierlich. Folgestrang: Okazaki-Fragmente",
+            "DNA-Polymerase I ersetzt Primer, Ligase verbindet Fragmente",
+          ],
+          merke: "Semikonservativ: Jeder neue Strang enthält einen alten + einen neuen.",
+          cta: "Kommt jedes Jahr im MedAT — lern es jetzt richtig",
+        },
+        {
+          subject: "Biologie",
+          hook: "Wie dein Herz wirklich funktioniert",
+          topicTitle: "Herzanatomie & Kreislauf",
+          imageUrl: "",
+          steps: [
+            "4 Kammern: 2 Vorhöfe (Atrien) + 2 Kammern (Ventrikel)",
+            "Rechts: sauerstoffarmes Blut → Lunge (Lungenkreislauf)",
+            "Links: sauerstoffreiches Blut → Körper (Körperkreislauf)",
+            "Erregungsleitung: Sinusknoten → AV-Knoten → His-Bündel → Purkinje",
+          ],
+          merke: "Linker Ventrikel = dickste Wand, pumpt in den ganzen Körper.",
+          cta: "Herzkreislauf ist MedAT-Dauerbrenner — jetzt verstehen",
+        },
+        {
+          subject: "Chemie",
+          hook: "pH-Wert: Sauer oder basisch?",
+          topicTitle: "Die pH-Skala",
+          imageUrl: "",
+          steps: [
+            "pH = −log₁₀[H⁺]: niedrig = sauer, hoch = basisch",
+            "pH 7 = neutral (reines Wasser bei 25°C)",
+            "Jede pH-Stufe = Faktor 10 in der H⁺-Konzentration",
+            "Puffer halten pH stabil (z.B. Bicarbonat im Blut: pH 7,4)",
+          ],
+          merke: "pH < 7 sauer, pH = 7 neutral, pH > 7 basisch. Jede Stufe = ×10.",
+          cta: "pH-Berechnungen kommen garantiert — jetzt üben",
+        },
+      ];
+      return EXPLAINER_TOPICS[dayOfYear % EXPLAINER_TOPICS.length];
+    }
     default:
       return {};
   }
@@ -144,6 +212,8 @@ const ALL_COMPS = [
   "RichtigOderFalsch",
   "ImplikationenChallenge",
   "FigurenChallenge",
+  "BMSExplainer",
+  "BMSExplainerVoiceover",
 ];
 
 const COMP_TO_FILE = {
@@ -155,6 +225,8 @@ const COMP_TO_FILE = {
   RichtigOderFalsch: "richtig-oder-falsch",
   ImplikationenChallenge: "implikationen-challenge",
   FigurenChallenge: "figuren-challenge",
+  BMSExplainer: "bms-explainer",
+  BMSExplainerVoiceover: "bms-explainer-voiceover",
 };
 
 // ── Parse CLI args ──────────────────────────────────────────
@@ -163,11 +235,16 @@ const compIdx = args.indexOf("--comp");
 const requestedComp = compIdx >= 0 ? args[compIdx + 1] : null;
 const compsToRender = requestedComp ? [requestedComp] : ALL_COMPS;
 
+// Optional: curate specific question for QuizChallenge
+const qidIdx = args.indexOf("--question-id");
+const curatedQuestionId = qidIdx >= 0 ? args[qidIdx + 1] : null;
+
 // ── Bundle + Render ─────────────────────────────────────────
 console.log("Bundling Remotion project...");
 const bundleLocation = await bundle({
   entryPoint: resolve(__dirname, "src/index.ts"),
   webpackOverride: (config) => config,
+  publicDir: resolve(__dirname, "public"),
 });
 console.log("Bundle ready.\n");
 

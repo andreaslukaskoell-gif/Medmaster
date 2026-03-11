@@ -7,6 +7,8 @@ import { StatsUrgency } from "./compositions/StatsUrgency";
 import { RichtigOderFalsch } from "./compositions/RichtigOderFalsch";
 import { ImplikationenChallenge } from "./compositions/ImplikationenChallenge";
 import { FigurenChallenge } from "./compositions/FigurenChallenge";
+import { BMSExplainer } from "./compositions/BMSExplainer";
+import { BMSExplainerVoiceover } from "./compositions/BMSExplainerVoiceover";
 import { FPS, WIDTH, HEIGHT } from "./shared/brand";
 
 export const RemotionRoot: React.FC = () => {
@@ -160,6 +162,65 @@ export const RemotionRoot: React.FC = () => {
           ],
           correctIndex: 1,
           explanation: "Die 2 Teile setzen sich exakt zur gewählten Figur zusammen.",
+        }}
+      />
+
+      {/* 13s — BMS topic explainer with real MedMaster image */}
+      <Composition
+        id="BMSExplainer"
+        component={BMSExplainer}
+        durationInFrames={390}
+        fps={FPS}
+        width={WIDTH}
+        height={HEIGHT}
+        defaultProps={{
+          subject: "Biologie",
+          hook: "So wird Membrantransport endlich logisch",
+          topicTitle: "Aktiver vs. passiver Transport",
+          imageUrl: "https://www.medmaster.at/images/bms/bio-diffusion.jpg",
+          steps: [
+            "Passiv: entlang des Konzentrationsgefälles, ohne ATP",
+            "Aktiv: gegen das Gefälle, braucht ATP-Energie",
+            "Beispiel: Na⁺/K⁺-Pumpe = aktiv (3 Na⁺ raus, 2 K⁺ rein)",
+          ],
+          merke: "Passiv = bergab (gratis). Aktiv = bergauf (kostet ATP).",
+          cta: "Dieses Thema kommt im MedAT — lern es jetzt richtig",
+        }}
+      />
+      {/* ~51s — Premium BMS explainer with voice-over (per-segment normalized) */}
+      <Composition
+        id="BMSExplainerVoiceover"
+        component={BMSExplainerVoiceover}
+        durationInFrames={Math.round(51.7 * FPS)}
+        fps={FPS}
+        width={WIDTH}
+        height={HEIGHT}
+        defaultProps={{
+          subject: "Biologie",
+          hook: "Deine Nieren filtern\n1.700 Liter Blut am Tag.",
+          topicTitle: "Niere",
+          imageUrl: "bio-niere.jpg",
+          audioSrc: "niere-voice-only.wav",
+          images: [
+            { url: "bio-niere.jpg", startFrame: 90, endFrame: 577 },
+            { url: "bio-nephron-blutfluss.jpg", startFrame: 577, endFrame: 1064 },
+            { url: "bio-harnblase.jpg", startFrame: 1064, endFrame: 1551 }
+          ],
+          subtitles: [
+            { text: "Dein Blut wird jeden Tag komplett gefiltert,\nfast sechzigmal.", startFrame: 0, endFrame: 98 },
+            { text: "Aber wohin geht der ganze Abfall?", startFrame: 106, endFrame: 159 },
+            { text: "Genau. In die Nieren.", startFrame: 175, endFrame: 220 },
+            { text: "Jede Niere enthält etwa\neine Million Nephrone.", startFrame: 244, endFrame: 315 },
+            { text: "Das Nephron ist die\nfunktionelle Einheit der Niere.", startFrame: 323, endFrame: 399 },
+            { text: "Zuerst wird das Blut im Glomerulus filtriert,\nein Netz aus feinen Kapillaren.", startFrame: 415, endFrame: 540 },
+            { text: "Dabei entsteht der Primärharn,\netwa hundertachtzig Liter pro Tag.", startFrame: 556, endFrame: 665 },
+            { text: "Das ist viel zu viel.\nAlso wird im Tubulus das meiste zurückgeholt.", startFrame: 673, endFrame: 780 },
+            { text: "Wasser, Glucose, Aminosäuren, alles,\nwas der Körper noch braucht.", startFrame: 804, endFrame: 945 },
+            { text: "Am Ende bleiben nur ein bis\nzwei Liter Urin übrig.", startFrame: 962, endFrame: 1065 },
+            { text: "Die Niere reguliert auch den Blutdruck,\nüber das Renin-Angiotensin-System.", startFrame: 1073, endFrame: 1196 },
+            { text: "Glomerulus filtert, Tubulus holt zurück.\nVon hundertachtzig auf zwei Liter.", startFrame: 1212, endFrame: 1350 },
+            { text: "Merk dir das. Mehr auf mett,\nmaster, punkt, ah, teh.", startFrame: 1374, endFrame: 1505 }
+          ],
         }}
       />
     </>

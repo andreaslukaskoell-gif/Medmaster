@@ -39,6 +39,25 @@ dist-ssr
 # Remotion temp data
 video/.data/
 
+# TTS models (large binaries)
+video/tts-models/*.onnx
+video/tts-models/*.onnx.json
+
+# Generated audio (reproducible via scripts)
+video/*.wav
+video/public/*.wav
+video/public/*.mp3
+
+# Rendered videos (reproducible via render.mjs)
+marketing/reels/*.mp4
+
+# Runtime data
+.reel-post-history.json
+.reel-performance-cache.json
+
+# Temp screenshots
+*.png
+
 # Planning artifacts
 .planning/
 

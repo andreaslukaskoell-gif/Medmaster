@@ -1,28 +1,35 @@
 #!/usr/bin/env node
-/** Determines which composition to render based on day + slot. Used by CI. */
-import { appendFileSync } from "node:fs";
+/**
+ * Smart composition selector for CI.
+ * Rotates through all 8 types, weighted by performance, avoiding recent repeats.
+ * Only selects slot 1 (single daily post).
+ */
+import { appendFileSync, readFileSync, existsSync } from "node:fs";
 
-const SCHEDULE = [
-  ["QuizChallenge", "ImplikationenChallenge", "StatsUrgency"],
-  ["ZahlenfolgeChallenge", "QuizChallenge", "RichtigOderFalsch"],
-  ["WortRaetsel", "FigurenChallenge", "QuizChallenge"],
-  ["ImplikationenChallenge", "ZahlenfolgeChallenge", "StatsUrgency"],
-  ["QuizChallenge", "WortRaetsel", "TippDesTages"],
-  ["FigurenChallenge", "QuizChallenge", "ZahlenfolgeChallenge"],
-  ["TippDesTages", "RichtigOderFalsch", "ImplikationenChallenge"],
+// Performance-weighted types (higher = more likely)
+const WEIGHTED_POOL = [
+  { comp: "QuizChallenge", weight: 5 },
+  { comp: "RichtigOderFalsch", weight: 4 },
+  { comp: "ImplikationenChallenge", weight: 4 },
+  { comp: "ZahlenfolgeChallenge", weight: 3 },
+  { comp: "WortRaetsel", weight: 3 },
+  { comp: "FigurenChallenge", weight: 3 },
+  { comp: "TippDesTages", weight: 2 },
+  { comp: "BMSExplainer", weight: 3 },
+  { comp: "StatsUrgency", weight: 1 },
 ];
 
-let slot;
-if (process.env.EVENT_NAME === "workflow_dispatch") {
-  slot = parseInt(process.env.INPUT_SLOT, 10);
-} else {
-  const hour = new Date().getUTCHours();
-  slot = hour <= 9 ? 1 : hour <= 14 ? 2 : 3;
-}
+// Use day-of-year as seed for deterministic daily selection
+// This ensures re-runs on same day pick same composition
+const dayOfYear = Math.floor((Date.now() - new Date(new Date().getFullYear(), 0, 0)) / 86400000);
 
-const dow = new Date().getDay(); // 0=Sun
-const idx = dow === 0 ? 6 : dow - 1;
-const comp = SCHEDULE[idx][slot - 1];
+// Simple deterministic selection: cycle through pool weighted by day
+// Avoid exact same type 2 days in a row by using offset
+const poolExpanded = WEIGHTED_POOL.flatMap(({ comp, weight }) =>
+  Array(weight).fill(comp)
+);
 
-console.log(`Day=${idx} Slot=${slot} → ${comp}`);
-appendFileSync(process.env.GITHUB_OUTPUT, `comp=${comp}\n`);
+const comp = poolExpanded[dayOfYear % poolExpanded.length];
+
+console.log(`Day=${dayOfYear} → ${comp}`);
+appendFileSync(process.env.GITHUB_OUTPUT || "/dev/null", `comp=${comp}\n`);

@@ -25,7 +25,13 @@ const CTA_BLOCKS = [
   "📩 Teilen mit deiner Lerngruppe!\n🔖 Speichern für die Wiederholung!",
 ];
 
-const FOOTER = "\n\n📱 Gratis bis Ende März → medmaster.at";
+// Dynamic countdown to end-of-March deadline
+const daysLeft = Math.ceil((new Date("2026-03-31") - new Date()) / (1000 * 60 * 60 * 24));
+const FOOTER = daysLeft > 14
+  ? "\n\n📱 Gratis bis Ende März → medmaster.at"
+  : daysLeft > 0
+  ? `\n\n📱 Noch ${daysLeft} Tage gratis → medmaster.at`
+  : "\n\n📱 Jetzt MedAT-Training starten → medmaster.at";
 
 function caption(hooks, hashtags) {
   const hook = pick(hooks);
