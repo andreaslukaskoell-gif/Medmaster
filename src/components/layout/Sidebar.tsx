@@ -58,8 +58,6 @@ type NavItem = {
   emphasized?: boolean;
   /** Zusätzliche Pfade, die diesen Eintrag als aktiv markieren (z. B. Fortschritt-Subseiten). */
   activePaths?: string[];
-  /** Icon-Farbe (Tailwind-Klasse), z. B. text-pink-500. Bei aktiv wird weiterhin --accent genutzt. */
-  iconColor?: string;
 };
 
 /** MedAT-orientierte Struktur: LERNEN → TRAINIEREN → FORTSCHRITT → MEHR. Dashboard ist fix oben. */
@@ -68,66 +66,28 @@ const NAV_SECTIONS: { id: string; title: string; items: NavItem[] }[] = [
     id: "lernen",
     title: "LERNEN",
     items: [
-      {
-        to: "/bms",
-        icon: BookOpen,
-        label: "BMS-Inhalte",
-        hasChildren: true,
-        iconColor: "text-emerald-600 dark:text-emerald-400",
-      },
-      { to: "/kff", icon: Brain, label: "KFF", iconColor: "text-pink-500 dark:text-pink-400" },
-      { to: "/tv", icon: FileText, label: "TV", iconColor: "text-amber-600 dark:text-amber-400" },
-      { to: "/sek", icon: Heart, label: "SEK", iconColor: "text-rose-500 dark:text-rose-400" },
-      {
-        to: "/lernplan",
-        icon: CalendarDays,
-        label: "Lernplan",
-        iconColor: "text-lime-600 dark:text-lime-400",
-      },
+      { to: "/bms", icon: BookOpen, label: "BMS-Inhalte", hasChildren: true },
+      { to: "/kff", icon: Brain, label: "KFF" },
+      { to: "/tv", icon: FileText, label: "TV" },
+      { to: "/sek", icon: Heart, label: "SEK" },
+      { to: "/lernplan", icon: CalendarDays, label: "Lernplan" },
     ],
   },
   {
     id: "training",
     title: "TRAINIEREN",
     items: [
-      {
-        to: "/fragen-trainer",
-        icon: Dumbbell,
-        label: "Fragen-Trainer",
-        iconColor: "text-violet-500 dark:text-violet-400",
-      },
-      {
-        to: "/simulation",
-        icon: Timer,
-        label: "Simulation",
-        requiredLevel: 0,
-        iconColor: "text-orange-500 dark:text-orange-400",
-      },
-      {
-        to: "/formelsammlung",
-        icon: BookMarked,
-        label: "Formelsammlung",
-        iconColor: "text-teal-500 dark:text-teal-400",
-      },
+      { to: "/fragen-trainer", icon: Dumbbell, label: "Fragen-Trainer" },
+      { to: "/simulation", icon: Timer, label: "Simulation", requiredLevel: 0 },
+      { to: "/formelsammlung", icon: BookMarked, label: "Formelsammlung" },
     ],
   },
   {
     id: "fortschritt",
     title: "FORTSCHRITT",
     items: [
-      {
-        to: "/fortschritt",
-        icon: BarChart3,
-        label: "Fortschritt",
-        emphasized: true,
-        iconColor: "text-indigo-500 dark:text-indigo-400",
-      },
-      {
-        to: "/stichwortliste",
-        icon: ListChecks,
-        label: "Stichwortliste",
-        iconColor: "text-cyan-500 dark:text-cyan-400",
-      },
+      { to: "/fortschritt", icon: BarChart3, label: "Fortschritt", emphasized: true },
+      { to: "/stichwortliste", icon: ListChecks, label: "Stichwortliste" },
     ],
   },
 ];
@@ -136,8 +96,8 @@ const NAV_SECTIONS: { id: string; title: string; items: NavItem[] }[] = [
 
 function SectionHeader({ title }: { title: string }) {
   return (
-    <div className="mb-2 mt-3 first:mt-0">
-      <div className="flex items-center gap-1.5 w-full py-2 px-2 text-[10px] font-semibold uppercase tracking-widest text-[var(--muted)]">
+    <div className="mb-1 mt-4 first:mt-0">
+      <div className="flex items-center gap-1.5 w-full py-1.5 px-3 text-[11px] font-medium text-[var(--muted)]/70">
         {title}
       </div>
     </div>
@@ -151,29 +111,24 @@ function NavItemRow({
   label,
   active,
   emphasized,
-  iconColor,
 }: {
   icon: typeof BookOpen;
   label: string;
   active: boolean;
   emphasized?: boolean;
-  iconColor?: string;
 }) {
   return (
     <div
       className={cn(
-        "sidebar-nav-item flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm font-medium cursor-pointer border-l-[3px] pl-[9px]",
+        "sidebar-nav-item flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm font-medium cursor-pointer",
         active
-          ? "bg-[var(--accent)]/10 text-[var(--foreground)] border-[var(--accent)] font-semibold"
-          : "text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-[var(--foreground)]/5 border-transparent",
-        emphasized && !active && "bg-[var(--accent)]/5 border-[var(--accent)]/40"
+          ? "bg-[var(--accent)]/10 text-[var(--foreground)] font-semibold"
+          : "text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-[var(--foreground)]/5",
+        emphasized && !active && "bg-[var(--accent)]/5"
       )}
     >
       <Icon
-        className={cn(
-          "w-4 h-4 shrink-0",
-          active ? "text-[var(--accent)]" : (iconColor ?? "text-[var(--muted)]")
-        )}
+        className={cn("w-4 h-4 shrink-0", active ? "text-[var(--accent)]" : "text-[var(--muted)]")}
       />
       <span className="truncate flex-1">{label}</span>
     </div>
@@ -396,10 +351,10 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
             {({ isActive: dashboardActive }) => (
               <div
                 className={cn(
-                  "flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-sm font-semibold transition-colors cursor-pointer border-l-[3px] pl-[9px]",
+                  "flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-sm font-semibold transition-colors cursor-pointer",
                   dashboardActive
-                    ? "bg-[var(--accent)]/15 text-[var(--foreground)] border-[var(--accent)]"
-                    : "bg-[var(--foreground)]/5 text-[var(--foreground)] border-transparent hover:bg-[var(--foreground)]/8"
+                    ? "bg-[var(--accent)]/12 text-[var(--foreground)]"
+                    : "text-[var(--foreground)] hover:bg-[var(--foreground)]/5"
                 )}
               >
                 <LayoutDashboard className="w-4 h-4 shrink-0 text-[var(--accent)]" />
@@ -416,10 +371,10 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
               {({ isActive: active }) => (
                 <div
                   className={cn(
-                    "flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-sm font-semibold transition-colors cursor-pointer border-l-[3px] pl-[9px]",
+                    "flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-sm font-semibold transition-colors cursor-pointer",
                     active
-                      ? "bg-[var(--accent)]/15 text-[var(--foreground)] border-[var(--accent)]"
-                      : "bg-[var(--accent)]/8 text-[var(--foreground)] border-[var(--accent)]/50 hover:bg-[var(--accent)]/12"
+                      ? "bg-[var(--accent)]/12 text-[var(--foreground)]"
+                      : "bg-[var(--accent)]/6 text-[var(--foreground)] hover:bg-[var(--accent)]/10"
                   )}
                 >
                   <BookOpen className="w-4 h-4 shrink-0 text-[var(--accent)]" />
@@ -477,18 +432,16 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
                         <NavLink to="/bms" end={false} onClick={onClose} className="flex-1 min-w-0">
                           <div
                             className={cn(
-                              "sidebar-nav-item flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm font-medium cursor-pointer relative border-l-[3px] pl-[9px]",
+                              "sidebar-nav-item flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm font-medium cursor-pointer relative",
                               isBmsActive
-                                ? "bg-[var(--accent)]/10 text-[var(--foreground)] border-[var(--accent)] font-semibold"
-                                : "border-transparent hover:bg-[var(--foreground)]/5"
+                                ? "bg-[var(--accent)]/10 text-[var(--foreground)] font-semibold"
+                                : "hover:bg-[var(--foreground)]/5"
                             )}
                           >
                             <item.icon
                               className={cn(
                                 "w-4 h-4 shrink-0",
-                                isBmsActive
-                                  ? "text-[var(--accent)]"
-                                  : (item.iconColor ?? "text-[var(--muted)]")
+                                isBmsActive ? "text-[var(--accent)]" : "text-[var(--muted)]"
                               )}
                             />
                             <span className="truncate flex-1">{item.label}</span>
@@ -615,10 +568,10 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
                                                     to={href}
                                                     onClick={onClose}
                                                     className={cn(
-                                                      "sidebar-nav-item block py-1.5 px-2 rounded-md text-xs border-l-2 -ml-px pl-3",
+                                                      "sidebar-nav-item block py-1.5 px-2 rounded-md text-xs pl-3",
                                                       chapterActive
-                                                        ? "border-[var(--accent)] bg-[var(--accent)]/10 text-[var(--foreground)] font-medium"
-                                                        : "border-transparent text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-[var(--foreground)]/5"
+                                                        ? "bg-[var(--accent)]/10 text-[var(--foreground)] font-medium"
+                                                        : "text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-[var(--foreground)]/5"
                                                     )}
                                                   >
                                                     <span className="truncate block">
@@ -652,7 +605,6 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
                         label={item.label}
                         active={to === "/fortschritt" ? isActive(to) : itemActive}
                         emphasized={item.emphasized}
-                        iconColor={item.iconColor}
                       />
                     )}
                   </NavLink>

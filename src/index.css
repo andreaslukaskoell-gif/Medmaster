@@ -37,9 +37,14 @@
   /* Transitions */
   --ease-out: 0.15s ease-out;
   --ease-out-slow: 0.2s ease-out;
-  /* Dashboard: etwas wärmer und farbiger (Light) */
-  --dashboard-bg: #e8ecf7;
-  --dashboard-bg-solid: #e8ecf7;
+  /* Elevation (shadow tokens) */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.08);
+  /* Dashboard */
+  --dashboard-bg: #f4f6fa;
+  --dashboard-bg-solid: #f4f6fa;
   /* Fach-Akzente (unverändert) */
   --accent-bio: #329556;
   --accent-chem: #c2410c;
@@ -64,6 +69,10 @@
   --warning-bg: rgba(245, 158, 11, 0.15);
   --sidebar-bg: #0f172a;
   --topbar-bg: rgba(15, 23, 42, 0.92);
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.12);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 2px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.16);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.2);
   --dashboard-bg: #0f172a;
   --dashboard-bg-solid: #0f172a;
 }
@@ -450,14 +459,14 @@ select:focus {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Dashboard: farbenfroher Verlauf (Light + Dark) */
+/* Dashboard: subtle tint, not a gradient show */
 .dashboard-page-bg {
-  background: linear-gradient(160deg, #eef2ff 0%, #e8ecf7 35%, #e0e7ff 70%, #ddd6fe 100%);
+  background: var(--background);
   min-height: 100vh;
 }
 .dark .dashboard-page-bg,
 body.dark-body .dashboard-page-bg {
-  background: linear-gradient(160deg, #0f172a 0%, #1e293b 40%, #312e81 70%, #1e1b4b 100%);
+  background: var(--background);
 }
 
 /* Sidebar: schmale Scrollbar, Navy-Konsistenz */

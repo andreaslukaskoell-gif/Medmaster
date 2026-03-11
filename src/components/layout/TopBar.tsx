@@ -96,33 +96,33 @@ export function TopBar({ menuButtonRef, onMenuToggle, sidebarOpen = false }: Top
           <button
             type="button"
             onClick={openCommandPalette}
-            className="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-[var(--border)] text-sm text-[var(--muted)] hover:border-[var(--color-primary-500)]/50 hover:text-[var(--foreground)] transition-colors cursor-pointer"
+            className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[var(--foreground)]/[0.04] text-sm text-[var(--muted)] hover:bg-[var(--foreground)]/[0.07] hover:text-[var(--foreground)] transition-colors cursor-pointer"
           >
             <Search className="w-3.5 h-3.5" />
             <span className="hidden sm:inline text-xs">Suche</span>
-            <kbd className="hidden sm:inline text-[10px] bg-[var(--border)] text-[var(--muted)] px-1.5 py-0.5 rounded font-mono">
+            <kbd className="hidden sm:inline text-[10px] text-[var(--muted)] opacity-60 font-mono">
               ⌘K
             </kbd>
           </button>
 
-          {/* Level */}
-          <Link
-            to="/fortschritt"
-            className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border border-[var(--border)] text-xs font-semibold text-[var(--muted)] hover:text-[var(--foreground)] hover:border-[var(--color-primary-500)]/50 transition-colors"
-          >
-            <Award className="w-3.5 h-3.5 shrink-0 text-[var(--accent)]" />
-            <span className="min-w-3 text-center">{showStoreValues ? level : "–"}</span>
-          </Link>
-
-          {/* Streak */}
-          <div className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border border-[var(--border)] text-xs font-semibold text-[var(--muted)] hover:text-[var(--foreground)] transition-colors">
-            <StreakFlameIcon
-              streak={streak ?? 0}
-              hasActivityToday={hasActivityToday}
-              size="inherit"
-              className="w-3.5 h-3.5 shrink-0"
-            />
-            <span className="min-w-3 text-center">{showStoreValues ? (streak ?? 0) : "–"}</span>
+          {/* Level + Streak group */}
+          <div className="flex items-center gap-0.5 text-xs font-semibold text-[var(--muted)]">
+            <Link
+              to="/fortschritt"
+              className="flex items-center gap-1.5 px-2 py-1.5 rounded-lg hover:bg-[var(--foreground)]/5 hover:text-[var(--foreground)] transition-colors"
+            >
+              <Award className="w-3.5 h-3.5 shrink-0 text-[var(--accent)]" />
+              <span className="min-w-3 text-center">{showStoreValues ? level : "–"}</span>
+            </Link>
+            <div className="flex items-center gap-1.5 px-2 py-1.5 rounded-lg hover:bg-[var(--foreground)]/5 hover:text-[var(--foreground)] transition-colors">
+              <StreakFlameIcon
+                streak={streak ?? 0}
+                hasActivityToday={hasActivityToday}
+                size="inherit"
+                className="w-3.5 h-3.5 shrink-0"
+              />
+              <span className="min-w-3 text-center">{showStoreValues ? (streak ?? 0) : "–"}</span>
+            </div>
           </div>
 
           <SyncStatus />
@@ -132,7 +132,7 @@ export function TopBar({ menuButtonRef, onMenuToggle, sidebarOpen = false }: Top
         <button
           type="button"
           onClick={toggleDarkMode}
-          className="p-2 rounded-lg border border-[var(--border)] text-[var(--muted)] hover:text-[var(--foreground)] hover:border-[var(--foreground)]/20 transition-colors cursor-pointer"
+          className="p-2 rounded-lg text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-[var(--foreground)]/5 transition-colors cursor-pointer"
           aria-label={darkMode ? "Hellmodus" : "Darkmodus"}
         >
           {darkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
