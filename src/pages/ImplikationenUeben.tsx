@@ -88,7 +88,7 @@ export default function ImplikationenUeben() {
     return (
       <Card>
         <CardContent className="p-8 text-center">
-          <p className="text-muted">Keine Aufgaben für diesen Filter verfügbar.</p>
+          <p className="text-[var(--muted)]">Keine Aufgaben für diesen Filter verfügbar.</p>
         </CardContent>
       </Card>
     );
@@ -103,7 +103,7 @@ export default function ImplikationenUeben() {
       {/* Top bar: filter + progress */}
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div className="flex items-center gap-2">
-          <Filter className="w-4 h-4 text-muted" />
+          <Filter className="w-4 h-4 text-[var(--muted)]" />
           <div className="flex gap-1">
             <button
               onClick={() => {
@@ -116,7 +116,7 @@ export default function ImplikationenUeben() {
               className={`text-xs px-3 py-1.5 rounded-full transition-colors cursor-pointer ${
                 difficultyFilter === null
                   ? "bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 font-medium"
-                  : "text-muted hover:bg-accent"
+                  : "text-[var(--muted)] hover:bg-accent"
               }`}
             >
               Alle
@@ -134,7 +134,7 @@ export default function ImplikationenUeben() {
                 className={`text-xs px-3 py-1.5 rounded-full transition-colors cursor-pointer ${
                   difficultyFilter === d
                     ? `${difficultyLabels[d].bg} ${difficultyLabels[d].color} font-medium`
-                    : "text-muted hover:bg-accent"
+                    : "text-[var(--muted)] hover:bg-accent"
                 }`}
               >
                 {difficultyLabels[d].label}
@@ -143,7 +143,7 @@ export default function ImplikationenUeben() {
           </div>
         </div>
         <div className="flex items-center gap-3">
-          <span className="text-sm text-muted">
+          <span className="text-sm text-[var(--muted)]">
             Aufgabe {currentIndex + 1} von {filteredTasks.length} —{" "}
             <span className="font-medium text-green-600 dark:text-green-400">
               {correctCount} richtig
@@ -154,7 +154,7 @@ export default function ImplikationenUeben() {
           </span>
           <button
             onClick={handleReset}
-            className="text-muted hover:text-foreground cursor-pointer"
+            className="text-[var(--muted)] hover:text-[var(--text-primary)] cursor-pointer"
             title="Zurücksetzen"
           >
             <RotateCcw className="w-4 h-4" />
@@ -163,7 +163,7 @@ export default function ImplikationenUeben() {
       </div>
 
       {/* Progress bar */}
-      <div className="w-full bg-muted rounded-full h-1.5">
+      <div className="w-full bg-[var(--surface)] rounded-full h-1.5">
         <div
           className="h-1.5 rounded-full bg-purple-500 transition-all"
           style={{ width: `${((currentIndex + 1) / filteredTasks.length) * 100}%` }}
@@ -178,20 +178,20 @@ export default function ImplikationenUeben() {
             <span className={`text-xs font-medium px-2 py-1 rounded-full ${diff.bg} ${diff.color}`}>
               {diff.label}
             </span>
-            <span className="text-xs text-muted">{currentTask.id}</span>
+            <span className="text-xs text-[var(--muted)]">{currentTask.id}</span>
           </div>
 
           {/* Premises */}
           <div className="space-y-3">
-            <div className="bg-muted p-4 rounded-lg border-l-4 border-purple-400">
-              <p className="text-sm text-muted mb-1">Aussage 1:</p>
-              <p className="text-base font-medium text-foreground">
+            <div className="bg-[var(--surface)] p-4 rounded-lg border-l-4 border-purple-400">
+              <p className="text-sm text-[var(--muted)] mb-1">Aussage 1:</p>
+              <p className="text-base font-medium text-[var(--text-primary)]">
                 &laquo;{currentTask.premise1}&raquo;
               </p>
             </div>
-            <div className="bg-muted p-4 rounded-lg border-l-4 border-indigo-400">
-              <p className="text-sm text-muted mb-1">Aussage 2:</p>
-              <p className="text-base font-medium text-foreground">
+            <div className="bg-[var(--surface)] p-4 rounded-lg border-l-4 border-indigo-400">
+              <p className="text-sm text-[var(--muted)] mb-1">Aussage 2:</p>
+              <p className="text-base font-medium text-[var(--text-primary)]">
                 &laquo;{currentTask.premise2}&raquo;
               </p>
             </div>
@@ -206,7 +206,7 @@ export default function ImplikationenUeben() {
             {currentTask.options.map((option, i) => {
               const isSelected = selectedAnswer === i;
               const isCorrectOption = i === currentTask.correctAnswer;
-              let borderClass = "border-border";
+              let borderClass = "border-[var(--border)]";
               let bgClass = "hover:bg-purple-50 dark:hover:bg-purple-900/10";
 
               if (isChecked) {
@@ -237,7 +237,7 @@ export default function ImplikationenUeben() {
                     >
                       {optionLabels[i]}
                     </span>
-                    <span className="text-sm text-foreground">{option}</span>
+                    <span className="text-sm text-[var(--text-primary)]">{option}</span>
                     {isChecked && isCorrectOption && (
                       <CheckCircle2 className="w-4 h-4 text-green-500 ml-auto shrink-0 mt-0.5" />
                     )}
@@ -280,7 +280,7 @@ export default function ImplikationenUeben() {
                 </button>
                 <button
                   onClick={() => setShowExplanation(!showExplanation)}
-                  className="px-4 py-2.5 border border-border text-muted-foreground rounded-lg text-sm font-medium hover:bg-accent transition-colors cursor-pointer"
+                  className="px-4 py-2.5 border border-[var(--border)] text-muted-foreground rounded-lg text-sm font-medium hover:bg-accent transition-colors cursor-pointer"
                 >
                   {showExplanation ? "Lösung verbergen" : "Lösungsweg anzeigen"}
                 </button>
@@ -346,16 +346,16 @@ export default function ImplikationenUeben() {
 
           {/* Explanation */}
           {showExplanation && isChecked && currentTask && (
-            <div className="bg-muted border border-border rounded-lg p-4 space-y-3">
-              <h4 className="text-sm font-semibold text-foreground">
+            <div className="bg-[var(--surface)] border border-[var(--border)] rounded-lg p-4 space-y-3">
+              <h4 className="text-sm font-semibold text-[var(--text-primary)]">
                 Lösungsweg (formale Mengenlogik)
               </h4>
-              <p className="text-xs text-muted">
+              <p className="text-xs text-[var(--muted)]">
                 Die Lösung ergibt sich aus der formalen Mengenlogik der Prämissen.
               </p>
               <div className="space-y-2">
                 <div>
-                  <p className="text-xs text-muted mb-1">Angewandte Regeln:</p>
+                  <p className="text-xs text-[var(--muted)] mb-1">Angewandte Regeln:</p>
                   <div className="flex flex-wrap gap-1">
                     {currentTask.rulesApplied.map((rule) => (
                       <span

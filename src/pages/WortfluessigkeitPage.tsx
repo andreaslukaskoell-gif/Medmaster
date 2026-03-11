@@ -38,13 +38,13 @@ export default function WortfluessigkeitPage() {
           <Type className="w-6 h-6 text-orange-600 dark:text-orange-400" />
         </div>
         <div>
-          <h1 className="text-2xl font-bold text-foreground">Wortfl&uuml;ssigkeit</h1>
+          <h1 className="text-2xl font-bold text-[var(--text-primary)]">Wortfl&uuml;ssigkeit</h1>
           <div className="flex items-center gap-3 mt-1">
-            <span className="text-sm text-muted">KFF</span>
+            <span className="text-sm text-[var(--muted)]">KFF</span>
             {progress && progress.total > 0 && (
               <>
-                <span className="text-muted">&middot;</span>
-                <span className="text-sm text-muted">
+                <span className="text-[var(--muted)]">&middot;</span>
+                <span className="text-sm text-[var(--muted)]">
                   {pct}% richtig ({progress.correct}/{progress.total})
                 </span>
               </>
@@ -54,7 +54,7 @@ export default function WortfluessigkeitPage() {
       </div>
 
       {/* Tabs */}
-      <div className="flex gap-1 bg-muted rounded-lg p-1">
+      <div className="flex gap-1 bg-[var(--surface)] rounded-lg p-1">
         {tabs.map((tab) => {
           const TabIcon = tab.icon;
           const isActive = activeTab === tab.key;
@@ -64,8 +64,8 @@ export default function WortfluessigkeitPage() {
               onClick={() => setActiveTab(tab.key)}
               className={`flex-1 flex items-center justify-center gap-2 px-4 py-2.5 rounded-md text-sm font-medium transition-all cursor-pointer ${
                 isActive
-                  ? "bg-background text-foreground shadow-sm"
-                  : "text-muted-foreground hover:text-foreground"
+                  ? "bg-[var(--background)] text-[var(--text-primary)] shadow-sm"
+                  : "text-[var(--muted)] hover:text-[var(--text-primary)]"
               }`}
             >
               <TabIcon className="w-4 h-4" />

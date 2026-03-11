@@ -131,7 +131,7 @@ function ScoreGauge({ score, max, pct }: { score: number; max: number; pct: numb
           fill="none"
           stroke="currentColor"
           strokeWidth="12"
-          className="text-muted"
+          className="text-[var(--muted)]"
         />
         {/* Progress arc */}
         <circle
@@ -210,7 +210,7 @@ function UniCard({ uni, scorePct }: { uni: { name: string; cutoff: number }; sco
       <div className="flex items-center justify-between mb-2">
         <div className="flex items-center gap-2">
           {cfg.icon}
-          <span className="font-semibold text-foreground">{uni.name}</span>
+          <span className="font-semibold text-[var(--text-primary)]">{uni.name}</span>
         </div>
         <Badge variant={cfg.badge}>{cfg.label}</Badge>
       </div>
@@ -240,12 +240,12 @@ function SectionCard({ s }: { s: SectionScore }) {
     <Card>
       <CardContent className="p-5">
         <div className="flex items-center gap-3 mb-3">
-          <div className="p-2 rounded-lg bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300">
+          <div className="p-2 rounded-lg bg-[var(--accent)]/10 dark:bg-[var(--accent)]/10 text-[var(--accent)]/30">
             {s.icon}
           </div>
           <div className="flex-1">
             <div className="flex items-center justify-between">
-              <span className="font-semibold text-foreground">{s.label}</span>
+              <span className="font-semibold text-[var(--text-primary)]">{s.label}</span>
               <span className={`text-xl font-bold ${color}`}>{s.pct.toFixed(0)}%</span>
             </div>
             <div className="text-xs text-muted-foreground">
@@ -258,9 +258,7 @@ function SectionCard({ s }: { s: SectionScore }) {
         <div className="flex items-center justify-between text-xs">
           <span className="text-muted-foreground">{s.count} Ergebnisse</span>
           {s.pct < 90 && uplift > 1 && (
-            <span className="text-primary-600 dark:text-primary-400">
-              Auf 90% = +{uplift.toFixed(1)} Punkte
-            </span>
+            <span className="text-[var(--accent)]/60">Auf 90% = +{uplift.toFixed(1)} Punkte</span>
           )}
         </div>
       </CardContent>
@@ -273,10 +271,10 @@ function SectionCard({ s }: { s: SectionScore }) {
 function EmptyState() {
   return (
     <div className="max-w-lg mx-auto text-center py-16 px-4">
-      <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center">
-        <Target className="w-10 h-10 text-primary-600" />
+      <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-[var(--accent)]/10 dark:bg-[var(--accent)]/10 flex items-center justify-center">
+        <Target className="w-10 h-10 text-[var(--accent)]" />
       </div>
-      <h2 className="text-2xl font-bold text-foreground mb-3">Noch nicht genug Daten</h2>
+      <h2 className="text-2xl font-bold text-[var(--text-primary)] mb-3">Noch nicht genug Daten</h2>
       <p className="text-muted-foreground mb-6">
         Beantworte mindestens 20 Fragen in verschiedenen Testteilen, damit wir eine aussagekräftige
         Prognose berechnen können.
@@ -284,13 +282,13 @@ function EmptyState() {
       <div className="flex flex-col sm:flex-row gap-3 justify-center">
         <Link
           to="/bms"
-          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-primary-600 text-white hover:bg-primary-700 transition font-medium"
+          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[var(--accent)] text-white hover:bg-[var(--accent)] transition font-medium"
         >
           <BookOpen className="w-4 h-4" /> BMS üben
         </Link>
         <Link
           to="/kff"
-          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-primary-300 text-primary-700 hover:bg-primary-50 dark:border-primary-700 dark:text-primary-300 dark:hover:bg-primary-900/20 transition font-medium"
+          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-[var(--accent)]/30 text-[var(--accent)] hover:bg-[var(--accent)]/5 dark:border-[var(--accent)] dark:text-[var(--accent)]/30 dark:hover:bg-[var(--accent)]/10/20 transition font-medium"
         >
           <Brain className="w-4 h-4" /> KFF üben
         </Link>
@@ -360,11 +358,11 @@ export default function Prognose() {
     <div className="max-w-4xl mx-auto px-4 py-6 space-y-8">
       {/* Header */}
       <div className="text-center">
-        <div className="inline-flex items-center gap-2 text-primary-600 dark:text-primary-400 mb-2">
+        <div className="inline-flex items-center gap-2 text-[var(--accent)]/60 mb-2">
           <TrendingUp className="w-5 h-5" />
           <span className="text-sm font-medium uppercase tracking-wide">MedAT Prognose</span>
         </div>
-        <h1 className="text-3xl font-bold text-foreground">Deine Punkteprognose</h1>
+        <h1 className="text-3xl font-bold text-[var(--text-primary)]">Deine Punkteprognose</h1>
         <p className="text-muted-foreground mt-1">
           Basierend auf {quizResults.length} Übungsergebnissen ({totalAnswered} Fragen)
         </p>
@@ -385,8 +383,8 @@ export default function Prognose() {
 
       {/* Uni Chances */}
       <div>
-        <h2 className="text-xl font-bold text-foreground mb-4 flex items-center gap-2">
-          <GraduationCap className="w-5 h-5 text-primary-600" />
+        <h2 className="text-xl font-bold text-[var(--text-primary)] mb-4 flex items-center gap-2">
+          <GraduationCap className="w-5 h-5 text-[var(--accent)]" />
           Uni-Chancen
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -401,8 +399,8 @@ export default function Prognose() {
 
       {/* Section Breakdown */}
       <div>
-        <h2 className="text-xl font-bold text-foreground mb-4 flex items-center gap-2">
-          <Target className="w-5 h-5 text-primary-600" />
+        <h2 className="text-xl font-bold text-[var(--text-primary)] mb-4 flex items-center gap-2">
+          <Target className="w-5 h-5 text-[var(--accent)]" />
           Testteil-Aufschlüsselung
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -414,9 +412,9 @@ export default function Prognose() {
 
       {/* Recommendation */}
       {weakest && (
-        <Card className="border-primary-200 dark:border-primary-800 bg-primary-50/50 dark:bg-primary-900/10">
+        <Card className="border-[var(--accent)]/20 dark:border-[var(--accent)] bg-[var(--accent)]/5/50 dark:bg-[var(--accent)]/10">
           <CardHeader>
-            <CardTitle className="flex items-center gap-2 text-primary-700 dark:text-primary-300">
+            <CardTitle className="flex items-center gap-2 text-[var(--accent)]/30">
               <AlertTriangle className="w-5 h-5" />
               Empfehlung
             </CardTitle>
@@ -430,7 +428,7 @@ export default function Prognose() {
             <p className="text-muted-foreground text-sm mb-4">{tips[weakest.key]}</p>
             <Link
               to={weakest.link}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary-600 text-white hover:bg-primary-700 transition font-medium text-sm"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[var(--accent)] text-white hover:bg-[var(--accent)] transition font-medium text-sm"
             >
               {weakest.label} trainieren <ArrowRight className="w-4 h-4" />
             </Link>

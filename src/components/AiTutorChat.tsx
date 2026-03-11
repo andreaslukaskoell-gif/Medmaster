@@ -120,31 +120,33 @@ export function AiTutorChat({ question, userAnswer, onClose }: AiTutorChatProps)
       <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={onClose} />
 
       {/* Chat Panel */}
-      <div className="relative w-full sm:max-w-lg h-full sm:h-[600px] sm:max-h-[85vh] bg-background sm:rounded-2xl flex flex-col overflow-hidden shadow-2xl">
+      <div className="relative w-full sm:max-w-lg h-full sm:h-[600px] sm:max-h-[85vh] bg-[var(--background)] sm:rounded-2xl flex flex-col overflow-hidden shadow-2xl">
         {/* Header */}
-        <div className="flex items-center justify-between px-4 py-3 bg-card border-b border-border">
+        <div className="flex items-center justify-between px-4 py-3 bg-[var(--card)] border-b border-[var(--border)]">
           <div className="flex items-center gap-2.5">
             <div className="w-8 h-8 bg-indigo-600 rounded-full flex items-center justify-center">
               <Sparkles className="w-4 h-4 text-white" />
             </div>
             <div>
-              <h3 className="text-sm font-semibold text-app-foreground">MedMaster KI-Tutor</h3>
-              <p className="text-[10px] text-app-muted">Erklärt dir die Antwort</p>
+              <h3 className="text-sm font-semibold text-[var(--text-primary)]">
+                MedMaster KI-Tutor
+              </h3>
+              <p className="text-[10px] text-[var(--muted)]">Erklärt dir die Antwort</p>
             </div>
           </div>
           <button
             onClick={onClose}
-            className="text-app-muted hover:text-app-foreground transition-colors cursor-pointer p-1"
+            className="text-[var(--muted)] hover:text-[var(--text-primary)] transition-colors cursor-pointer p-1"
           >
             <X className="w-5 h-5" />
           </button>
         </div>
 
         {/* Question Context (pinned at top) */}
-        <div className="px-4 py-2.5 bg-card/50 border-b border-border/50">
+        <div className="px-4 py-2.5 bg-[var(--card)]/50 border-b border-[var(--border)]/50">
           <div className="flex items-start gap-2">
-            <BookOpen className="w-3.5 h-3.5 text-muted mt-0.5 shrink-0" />
-            <p className="text-[11px] text-app-muted line-clamp-2">{question.text}</p>
+            <BookOpen className="w-3.5 h-3.5 text-[var(--muted)] mt-0.5 shrink-0" />
+            <p className="text-[11px] text-[var(--muted)] line-clamp-2">{question.text}</p>
           </div>
         </div>
 
@@ -164,7 +166,7 @@ export function AiTutorChat({ question, userAnswer, onClose }: AiTutorChatProps)
                 className={`max-w-[80%] rounded-2xl px-4 py-2.5 text-sm whitespace-pre-line leading-relaxed ${
                   msg.role === "user"
                     ? "bg-blue-600 text-white rounded-br-md"
-                    : "bg-card text-app-foreground rounded-bl-md"
+                    : "bg-[var(--card)] text-[var(--text-primary)] rounded-bl-md"
                 }`}
               >
                 {msg.text}
@@ -177,11 +179,11 @@ export function AiTutorChat({ question, userAnswer, onClose }: AiTutorChatProps)
               <div className="w-7 h-7 bg-indigo-600 rounded-full flex items-center justify-center shrink-0 mt-1">
                 <Sparkles className="w-3.5 h-3.5 text-white" />
               </div>
-              <div className="bg-card rounded-2xl rounded-bl-md px-4 py-3">
+              <div className="bg-[var(--card)] rounded-2xl rounded-bl-md px-4 py-3">
                 <div className="flex gap-1.5">
-                  <div className="w-2 h-2 bg-muted rounded-full animate-bounce [animation-delay:0ms]" />
-                  <div className="w-2 h-2 bg-muted rounded-full animate-bounce [animation-delay:150ms]" />
-                  <div className="w-2 h-2 bg-muted rounded-full animate-bounce [animation-delay:300ms]" />
+                  <div className="w-2 h-2 bg-[var(--surface)] rounded-full animate-bounce [animation-delay:0ms]" />
+                  <div className="w-2 h-2 bg-[var(--surface)] rounded-full animate-bounce [animation-delay:150ms]" />
+                  <div className="w-2 h-2 bg-[var(--surface)] rounded-full animate-bounce [animation-delay:300ms]" />
                 </div>
               </div>
             </div>
@@ -212,7 +214,7 @@ export function AiTutorChat({ question, userAnswer, onClose }: AiTutorChatProps)
                     );
                   }, 50);
                 }}
-                className="text-xs bg-card hover:bg-muted/30 text-app-muted px-3 py-1.5 rounded-full transition-colors cursor-pointer border border-border"
+                className="text-xs bg-[var(--card)] hover:bg-[var(--surface)]/30 text-[var(--muted)] px-3 py-1.5 rounded-full transition-colors cursor-pointer border border-[var(--border)]"
               >
                 {qq}
               </button>
@@ -221,7 +223,7 @@ export function AiTutorChat({ question, userAnswer, onClose }: AiTutorChatProps)
         )}
 
         {/* Input */}
-        <div className="px-4 py-3 bg-card border-t border-border">
+        <div className="px-4 py-3 bg-[var(--card)] border-t border-[var(--border)]">
           <form
             onSubmit={(e) => {
               e.preventDefault();
@@ -235,7 +237,7 @@ export function AiTutorChat({ question, userAnswer, onClose }: AiTutorChatProps)
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="Frag mich etwas..."
-              className="flex-1 bg-muted/20 text-app-foreground text-sm rounded-full px-4 py-2.5 outline-none placeholder:text-muted focus:ring-2 focus:ring-indigo-500"
+              className="flex-1 bg-[var(--surface)]/20 text-[var(--text-primary)] text-sm rounded-full px-4 py-2.5 outline-none placeholder:text-[var(--muted)] focus:ring-2 focus:ring-indigo-500"
               disabled={isTyping}
             />
             <button

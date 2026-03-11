@@ -25,7 +25,7 @@ export function LogicBuilder({
   question,
   onCorrect,
   onWrong,
-  accentClass = "bg-primary-600",
+  accentClass = "bg-[var(--accent)]",
 }: LogicBuilderProps) {
   const { title, correctOrder, explanation } = question;
 
@@ -71,29 +71,29 @@ export function LogicBuilder({
 
   return (
     <div className="space-y-5">
-      <p className="text-sm font-medium text-foreground">{title}</p>
-      <p className="text-xs text-muted">
+      <p className="text-sm font-medium text-[var(--text-primary)]">{title}</p>
+      <p className="text-xs text-[var(--muted)]">
         Tippe die Fragmente in der richtigen Reihenfolge an. Klicke auf ein gewähltes Fragment, um
         es zurückzusetzen.
       </p>
 
       {/* Ausgewählte Reihenfolge (mit Pfeilen) */}
-      <div className="min-h-[3rem] flex flex-wrap items-center gap-2 p-3 rounded-xl bg-muted border-2 border-dashed border-border">
+      <div className="min-h-[3rem] flex flex-wrap items-center gap-2 p-3 rounded-xl bg-[var(--surface)] border-2 border-dashed border-[var(--border)]">
         {selectedOrder.length === 0 ? (
-          <span className="text-sm text-muted">Reihenfolge hier aufbauen …</span>
+          <span className="text-sm text-[var(--muted)]">Reihenfolge hier aufbauen …</span>
         ) : (
           selectedOrder.map((fragment, i) => (
             <span key={`${fragment}-${i}`} className="inline-flex items-center gap-2">
               <motion.button
                 type="button"
                 onClick={() => removeFromOrder(fragment)}
-                className="px-3 py-2 rounded-lg bg-card border-2 border-border text-sm font-medium text-foreground hover:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/50"
+                className="px-3 py-2 rounded-lg bg-[var(--card)] border-2 border-[var(--border)] text-sm font-medium text-[var(--text-primary)] hover:border-[var(--accent)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/50"
                 whileTap={{ scale: 0.98 }}
               >
                 {fragment}
               </motion.button>
               {i < selectedOrder.length - 1 && (
-                <ArrowRight className="w-4 h-4 text-muted-foreground/70 shrink-0" aria-hidden />
+                <ArrowRight className="w-4 h-4 text-[var(--muted)]/70 shrink-0" aria-hidden />
               )}
             </span>
           ))
@@ -118,7 +118,7 @@ export function LogicBuilder({
             type="button"
             onClick={() => addToOrder(fragment)}
             disabled={solved}
-            className="px-4 py-2.5 rounded-xl border-2 border-border bg-card text-foreground font-medium text-sm hover:border-primary-500 hover:bg-primary-50 dark:hover:bg-primary-900/20 focus:outline-none focus:ring-2 focus:ring-primary-500/50 disabled:opacity-50 disabled:pointer-events-none"
+            className="px-4 py-2.5 rounded-xl border-2 border-[var(--border)] bg-[var(--card)] text-[var(--text-primary)] font-medium text-sm hover:border-[var(--accent)] hover:bg-[var(--accent)]/10 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/50 disabled:opacity-50 disabled:pointer-events-none"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >

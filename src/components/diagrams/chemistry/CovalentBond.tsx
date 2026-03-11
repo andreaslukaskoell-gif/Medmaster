@@ -8,7 +8,7 @@ export default function CovalentBond() {
       <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">
         Kovalente Bindung — H\u2082O
       </h4>
-      <p className="text-xs text-muted">Lewis-Struktur, Bindungswinkel und Dipolmoment.</p>
+      <p className="text-xs text-[var(--muted)]">Lewis-Struktur, Bindungswinkel und Dipolmoment.</p>
       <svg viewBox="0 0 420 350" className="w-full max-w-lg mx-auto">
         <title>Kovalente Bindung — Elektronenpaarbindung</title>
         <defs>

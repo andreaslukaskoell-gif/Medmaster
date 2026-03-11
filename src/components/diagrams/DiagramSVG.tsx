@@ -231,7 +231,7 @@ export default function DiagramSVG({ type, className }: Props) {
     <figure className={className}>
       <Suspense
         fallback={
-          <div className="flex items-center justify-center h-48 text-muted text-sm">
+          <div className="flex items-center justify-center h-48 text-[var(--muted)] text-sm">
             Diagramm wird geladen...
           </div>
         }

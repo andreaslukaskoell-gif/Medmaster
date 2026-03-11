@@ -24,9 +24,10 @@ import { usePageTitle } from "@/hooks/usePageTitle";
 
 const NAVY = "#1b3ea7"; /* Signature Navy (--accent) */
 const NAVY_HOVER = "#163286"; /* --accent-hover */
-const NAVY_LIGHT = "#3655b2"; /* primary-400 for gradients */
+const NAVY_LIGHT = "#3655b2"; /* lighter accent for gradients */
 
-const ICON_STYLE = "bg-primary-50 dark:bg-primary-900/30 text-[#1b3ea7] dark:text-primary-400";
+const ICON_STYLE =
+  "bg-[var(--accent)]/5 dark:bg-[var(--accent)]/10 text-[#1b3ea7] dark:text-[var(--accent)]";
 
 const features = [
   {
@@ -158,7 +159,7 @@ export default function LandingPage() {
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.4, ease: "easeOut" }}
-        className="sticky top-0 z-40 bg-[var(--surface)]/90 dark:bg-[var(--background)]/90 backdrop-blur-xl border-b border-app-border/50 shadow-sm"
+        className="sticky top-0 z-40 bg-[var(--surface)]/90 dark:bg-[var(--background)]/90 backdrop-blur-xl border-b border-[var(--border)] shadow-sm"
       >
         <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
@@ -168,12 +169,14 @@ export default function LandingPage() {
             >
               <GraduationCap className="w-5 h-5" />
             </div>
-            <span className="text-xl font-bold text-app-foreground tracking-tight">MedMaster</span>
+            <span className="text-xl font-bold text-[var(--text-primary)] tracking-tight">
+              MedMaster
+            </span>
           </div>
           <div className="flex items-center gap-2 sm:gap-3">
             <Link
               to="/login"
-              className="text-sm font-medium text-app-muted hover:text-app-foreground transition-colors px-3 py-2 rounded-xl hover:bg-app-card"
+              className="text-sm font-medium text-[var(--muted)] hover:text-[var(--text-primary)] transition-colors px-3 py-2 rounded-xl hover:bg-[var(--card)]"
             >
               Anmelden
             </Link>
@@ -191,13 +194,13 @@ export default function LandingPage() {
 
       {/* Hero */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-linear-to-br from-primary-50 via-[var(--surface)] to-primary-50 dark:from-primary-950/40 dark:via-background dark:to-primary-950/30" />
+        <div className="absolute inset-0 bg-linear-to-br from-[var(--accent)]/5 via-[var(--surface)] to-[var(--accent)]/5 dark:from-[var(--accent)]/5 dark:via-background dark:to-[var(--accent)]/5" />
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 pt-16 sm:pt-20 pb-20 sm:pb-28 text-center">
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-2xl text-sm font-medium mb-8 shadow-sm border border-primary-100 dark:border-primary-800/50 bg-[var(--surface)]/80 dark:bg-[var(--surface)]/80"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-2xl text-sm font-medium mb-8 shadow-sm border border-[var(--border)] bg-[var(--surface)]/80 dark:bg-[var(--surface)]/80"
             style={{ color: NAVY }}
           >
             <Clock className="w-4 h-4" />
@@ -207,7 +210,7 @@ export default function LandingPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.5 }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-app-foreground leading-tight mb-6 tracking-tight"
+            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[var(--text-primary)] leading-tight mb-6 tracking-tight"
           >
             MedAT 2026 bestehen.
             <br />
@@ -237,7 +240,7 @@ export default function LandingPage() {
             {trustBadges.map((badge) => (
               <div
                 key={badge.text}
-                className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-medium text-app-muted"
+                className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-medium text-[var(--muted)]"
               >
                 <badge.icon className="w-4 h-4 text-emerald-500 shrink-0" />
                 {badge.text}
@@ -306,7 +309,7 @@ export default function LandingPage() {
                 variants={item}
                 className="rounded-xl bg-[var(--surface)]/80 dark:bg-[var(--surface)]/50 p-4 sm:p-5 shadow-[var(--shadow-xs)]"
               >
-                <div className="text-2xl sm:text-3xl font-bold text-app-foreground">
+                <div className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)]">
                   {stat.value}
                 </div>
                 <div className="text-xs sm:text-sm text-[var(--muted)] mt-1">{stat.label}</div>
@@ -322,7 +325,9 @@ export default function LandingPage() {
               transition={{ delay: 0.6 }}
               className="mt-12 sm:mt-16"
             >
-              <p className="text-sm font-medium text-app-muted mb-4">Gratis-Zugang endet in:</p>
+              <p className="text-sm font-medium text-[var(--muted)] mb-4">
+                Gratis-Zugang endet in:
+              </p>
               <div className="flex justify-center gap-3 sm:gap-4">
                 {[
                   { value: countdown.days, label: "Tage" },
@@ -334,21 +339,21 @@ export default function LandingPage() {
                     key={unit.label}
                     className="flex flex-col items-center bg-[var(--surface)]/80 rounded-xl px-4 py-3 sm:px-5 sm:py-4 shadow-[var(--shadow-xs)] min-w-[4rem] sm:min-w-[5rem]"
                   >
-                    <span className="text-2xl sm:text-3xl font-bold tabular-nums text-app-foreground">
+                    <span className="text-2xl sm:text-3xl font-bold tabular-nums text-[var(--text-primary)]">
                       {String(unit.value).padStart(2, "0")}
                     </span>
                     <span className="text-xs text-[var(--muted)] mt-1">{unit.label}</span>
                   </div>
                 ))}
               </div>
-              <p className="text-xs text-app-muted/70 mt-3">Ab 1. April: einmalig €29,90</p>
+              <p className="text-xs text-[var(--muted)]/70 mt-3">Ab 1. April: einmalig €29,90</p>
             </motion.div>
           )}
         </div>
       </section>
 
       {/* Features */}
-      <section className="py-16 sm:py-24 bg-background/50">
+      <section className="py-16 sm:py-24 bg-[var(--background)]/50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 12 }}
@@ -356,7 +361,7 @@ export default function LandingPage() {
             viewport={{ once: true }}
             className="text-center mb-14"
           >
-            <h2 className="text-3xl font-bold text-app-foreground mb-4">
+            <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-4">
               Alles, was du für den MedAT brauchst
             </h2>
             <p className="text-[var(--text-secondary)] max-w-xl mx-auto">
@@ -384,7 +389,9 @@ export default function LandingPage() {
                   </div>
                   <span className="text-xs font-medium text-[var(--muted)]">{f.stat}</span>
                 </div>
-                <h3 className="text-base font-semibold text-app-foreground mb-2">{f.title}</h3>
+                <h3 className="text-base font-semibold text-[var(--text-primary)] mb-2">
+                  {f.title}
+                </h3>
                 <p className="text-[var(--text-secondary)] text-sm leading-relaxed">
                   {f.description}
                 </p>
@@ -401,7 +408,7 @@ export default function LandingPage() {
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl font-bold text-app-foreground text-center mb-14"
+            className="text-3xl font-bold text-[var(--text-primary)] text-center mb-14"
           >
             So funktioniert's
           </motion.h2>
@@ -439,7 +446,9 @@ export default function LandingPage() {
                   <s.icon className="w-5 h-5" />
                 </div>
                 <div className="text-xs font-medium text-[var(--muted)] mb-1">{s.step}.</div>
-                <h3 className="text-base font-semibold text-app-foreground mb-2">{s.title}</h3>
+                <h3 className="text-base font-semibold text-[var(--text-primary)] mb-2">
+                  {s.title}
+                </h3>
                 <p className="text-[var(--text-secondary)] text-sm">{s.desc}</p>
               </motion.div>
             ))}
@@ -454,12 +463,12 @@ export default function LandingPage() {
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-primary-50 dark:bg-primary-950/40 rounded-2xl p-8 sm:p-10 border border-primary-100 dark:border-primary-800/50"
+            className="bg-[var(--surface)] rounded-2xl p-8 sm:p-10 border border-[var(--border)]"
           >
-            <p className="text-lg font-semibold text-app-foreground mb-2">
+            <p className="text-lg font-semibold text-[var(--text-primary)] mb-2">
               Jetzt kostenlos testen — kein Abo, keine Kreditkarte
             </p>
-            <p className="text-sm text-app-muted mb-6">
+            <p className="text-sm text-[var(--muted)] mb-6">
               Voller Zugang bis 31. März. Danach einmalig €29,90.
             </p>
             <Link
@@ -475,7 +484,7 @@ export default function LandingPage() {
       </section>
 
       {/* Comparison Table */}
-      <section className="py-16 sm:py-24 bg-background/50">
+      <section className="py-16 sm:py-24 bg-[var(--background)]/50">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 12 }}
@@ -483,7 +492,7 @@ export default function LandingPage() {
             viewport={{ once: true }}
             className="text-center mb-10"
           >
-            <h2 className="text-3xl font-bold text-app-foreground mb-3">Warum MedMaster?</h2>
+            <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-3">Warum MedMaster?</h2>
             <p className="text-[var(--text-secondary)] max-w-xl mx-auto">
               Mehr Inhalte, bessere Technik, fairer Preis — so schneidet MedMaster im Vergleich ab.
             </p>
@@ -492,26 +501,30 @@ export default function LandingPage() {
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-[var(--surface)] rounded-2xl shadow-sm border border-app-border/50 overflow-hidden"
+            className="bg-[var(--surface)] rounded-2xl shadow-sm border border-[var(--border)] overflow-hidden"
           >
-            <div className="grid grid-cols-3 text-center text-sm font-semibold border-b border-app-border/50">
-              <div className="p-4 text-app-muted text-left">Feature</div>
+            <div className="grid grid-cols-3 text-center text-sm font-semibold border-b border-[var(--border)]">
+              <div className="p-4 text-[var(--muted)] text-left">Feature</div>
               <div className="p-4" style={{ color: NAVY }}>
                 MedMaster
               </div>
-              <div className="p-4 text-app-muted">Abo-Plattformen</div>
+              <div className="p-4 text-[var(--muted)]">Abo-Plattformen</div>
             </div>
             {comparisonRows.map((row, i) => (
               <div
                 key={row.feature}
-                className={`grid grid-cols-3 text-center text-sm ${i < comparisonRows.length - 1 ? "border-b border-app-border/30" : ""}`}
+                className={`grid grid-cols-3 text-center text-sm ${i < comparisonRows.length - 1 ? "border-b border-[var(--border)]" : ""}`}
               >
-                <div className="p-4 text-app-foreground text-left font-medium">{row.feature}</div>
+                <div className="p-4 text-[var(--text-primary)] text-left font-medium">
+                  {row.feature}
+                </div>
                 <div className="p-4 flex items-center justify-center">
                   {row.medmaster === true ? (
                     <CheckCircle className="w-5 h-5 text-emerald-500" />
                   ) : (
-                    <span className="font-semibold text-app-foreground">{row.medmaster}</span>
+                    <span className="font-semibold text-[var(--text-primary)]">
+                      {row.medmaster}
+                    </span>
                   )}
                 </div>
                 <div className="p-4 flex items-center justify-center">
@@ -520,7 +533,7 @@ export default function LandingPage() {
                   ) : row.competitor === false ? (
                     <XCircle className="w-5 h-5 text-red-400" />
                   ) : (
-                    <span className="text-app-muted">{row.competitor}</span>
+                    <span className="text-[var(--muted)]">{row.competitor}</span>
                   )}
                 </div>
               </div>
@@ -538,7 +551,7 @@ export default function LandingPage() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl font-bold text-app-foreground mb-3">
+            <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-3">
               Das sagen unsere Lernenden
             </h2>
             {userCount && (
@@ -569,8 +582,8 @@ export default function LandingPage() {
                   &ldquo;{t.text}&rdquo;
                 </p>
                 <div>
-                  <div className="text-sm font-semibold text-app-foreground">{t.name}</div>
-                  <div className="text-xs text-app-muted">{t.detail}</div>
+                  <div className="text-sm font-semibold text-[var(--text-primary)]">{t.name}</div>
+                  <div className="text-xs text-[var(--muted)]">{t.detail}</div>
                 </div>
               </motion.div>
             ))}
@@ -581,7 +594,7 @@ export default function LandingPage() {
       {/* SEO Internal Links */}
       <section className="py-12 sm:py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <h2 className="text-2xl font-bold text-app-foreground text-center mb-8">
+          <h2 className="text-2xl font-bold text-[var(--text-primary)] text-center mb-8">
             MedAT 2026 Vorbereitung
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
@@ -604,7 +617,7 @@ export default function LandingPage() {
                 to={link.to}
                 className="flex flex-col gap-1 p-4 rounded-xl bg-[var(--surface)] shadow-[var(--shadow-xs)] hover:shadow-[var(--shadow-sm)] transition-shadow text-left"
               >
-                <span className="text-sm font-medium text-app-foreground">{link.label}</span>
+                <span className="text-sm font-medium text-[var(--text-primary)]">{link.label}</span>
                 <span className="text-xs text-[var(--muted)]">{link.sub}</span>
               </Link>
             ))}
@@ -619,23 +632,20 @@ export default function LandingPage() {
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-[var(--surface)] dark:bg-[var(--surface)] rounded-2xl p-8 sm:p-12 shadow-sm border-2 border-[#1b3ea7]/20 dark:border-primary-800/50 text-center relative overflow-hidden"
+            className="bg-[var(--surface)] dark:bg-[var(--surface)] rounded-2xl p-8 sm:p-12 shadow-sm border border-[var(--border)] text-center relative overflow-hidden"
           >
-            <div
-              className="absolute top-0 left-0 right-0 h-1"
-              style={{ background: `linear-gradient(90deg, ${NAVY}, ${NAVY_LIGHT})` }}
-            />
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-2xl text-sm font-medium mb-6 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400">
+            <div className="absolute top-0 left-0 right-0 h-1 bg-[var(--accent)]" />
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-2xl text-sm font-medium mb-6 bg-[var(--accent)]/10 text-[var(--accent)]">
               Launch-Angebot — nur bis 31. März
             </div>
-            <h2 className="text-3xl font-bold text-app-foreground mb-2">Jetzt komplett gratis</h2>
+            <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-2">
+              Jetzt komplett gratis
+            </h2>
             <div className="flex items-baseline justify-center gap-2 mb-2">
-              <span className="text-5xl font-extrabold" style={{ color: NAVY }}>
-                €0
-              </span>
-              <span className="text-app-muted line-through text-lg">€29,90</span>
+              <span className="text-5xl font-extrabold text-[var(--accent)]">€0</span>
+              <span className="text-[var(--muted)] line-through text-lg">€29,90</span>
             </div>
-            <p className="text-sm text-app-muted mb-6">
+            <p className="text-sm text-[var(--muted)] mb-6">
               Ab 1. April: einmalig €29,90 — kein Abo, keine versteckten Kosten
             </p>
             <ul className="text-left max-w-sm mx-auto mb-8 space-y-3">
@@ -652,7 +662,7 @@ export default function LandingPage() {
                   key={feature}
                   className="flex items-start gap-3 text-sm text-[var(--text-secondary)]"
                 >
-                  <CheckCircle className="w-4 h-4 text-emerald-500 mt-0.5 shrink-0" />
+                  <CheckCircle className="w-4 h-4 text-[var(--accent)] mt-0.5 shrink-0" />
                   {feature}
                 </li>
               ))}
@@ -663,8 +673,7 @@ export default function LandingPage() {
                 const { error } = await signInWithGoogle();
                 if (error) setGoogleError(error.message);
               }}
-              className="inline-flex items-center justify-center gap-3 text-white font-semibold px-8 py-4 rounded-xl text-base shadow-[var(--shadow-sm)] w-full sm:w-auto transition-colors hover:opacity-90 cursor-pointer"
-              style={{ backgroundColor: NAVY }}
+              className="inline-flex items-center justify-center gap-3 text-white font-semibold px-8 py-4 rounded-xl text-base shadow-[var(--shadow-sm)] w-full sm:w-auto transition-colors hover:opacity-90 cursor-pointer bg-[var(--accent)]"
             >
               <svg className="w-5 h-5" viewBox="0 0 24 24">
                 <path
@@ -687,9 +696,9 @@ export default function LandingPage() {
               Gratis starten mit Google
             </button>
             {googleError && <p className="text-sm text-red-500 mt-2">{googleError}</p>}
-            <p className="text-xs text-app-muted/70 mt-3">
+            <p className="text-xs text-[var(--muted)]/70 mt-3">
               Oder{" "}
-              <Link to="/register" className="underline hover:text-app-muted">
+              <Link to="/register" className="underline hover:text-[var(--muted)]">
                 mit E-Mail registrieren
               </Link>
             </p>
@@ -707,15 +716,15 @@ export default function LandingPage() {
       >
         <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Bereit für den MedAT 2026?</h2>
-          <p className="text-primary-100 mb-3">
+          <p className="text-white/90 mb-3">
             4.300+ Fragen. Unbegrenzte KFF-Übungen. Alle 4 MedAT-Bereiche.
           </p>
-          <p className="text-primary-200 text-sm mb-8">
+          <p className="text-white/70 text-sm mb-8">
             Komplett gratis bis 31. März — danach einmalig €29,90. Kein Abo, kein Risiko.
           </p>
           <Link
             to="/register"
-            className="inline-flex items-center gap-2 bg-white text-[#1b3ea7] font-semibold px-8 py-4 rounded-xl text-lg shadow-[var(--shadow-sm)] hover:bg-primary-50 transition-colors"
+            className="inline-flex items-center gap-2 bg-white text-[#1b3ea7] font-semibold px-8 py-4 rounded-xl text-lg shadow-[var(--shadow-sm)] hover:bg-white/90 transition-colors"
           >
             Gratis starten
             <ArrowRight className="w-5 h-5" />
@@ -724,33 +733,33 @@ export default function LandingPage() {
       </motion.section>
 
       {/* Footer */}
-      <footer className="py-8 bg-primary-950 dark:bg-primary-950">
+      <footer className="py-8 bg-[var(--accent)] dark:bg-[var(--accent)]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
-            <GraduationCap className="w-5 h-5 text-primary-300" />
-            <span className="text-sm font-semibold text-primary-200">MedMaster</span>
+            <GraduationCap className="w-5 h-5 text-white/70" />
+            <span className="text-sm font-semibold text-white/80">MedMaster</span>
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-6 text-xs text-primary-300/70">
-            <Link to="/medat-guide" className="hover:text-primary-200 transition-colors">
+          <div className="flex flex-wrap items-center justify-center gap-6 text-xs text-white/60">
+            <Link to="/medat-guide" className="hover:text-white/80 transition-colors">
               MedAT Guide
             </Link>
-            <Link to="/faq" className="hover:text-primary-200 transition-colors">
+            <Link to="/faq" className="hover:text-white/80 transition-colors">
               FAQ
             </Link>
-            <Link to="/medat-uebungsfragen" className="hover:text-primary-200 transition-colors">
+            <Link to="/medat-uebungsfragen" className="hover:text-white/80 transition-colors">
               Übungsfragen
             </Link>
-            <Link to="/impressum" className="hover:text-primary-200 transition-colors">
+            <Link to="/impressum" className="hover:text-white/80 transition-colors">
               Impressum
             </Link>
-            <Link to="/datenschutz" className="hover:text-primary-200 transition-colors">
+            <Link to="/datenschutz" className="hover:text-white/80 transition-colors">
               Datenschutz
             </Link>
-            <Link to="/agb" className="hover:text-primary-200 transition-colors">
+            <Link to="/agb" className="hover:text-white/80 transition-colors">
               AGB
             </Link>
           </div>
-          <p className="text-xs text-primary-300/50">© 2026 MedMaster. Alle Rechte vorbehalten.</p>
+          <p className="text-xs text-white/50">© 2026 MedMaster. Alle Rechte vorbehalten.</p>
         </div>
       </footer>
     </div>

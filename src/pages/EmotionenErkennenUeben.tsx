@@ -94,7 +94,7 @@ export default function EmotionenErkennenUeben() {
     return (
       <Card>
         <CardContent className="p-8 text-center">
-          <p className="text-muted">Keine Aufgaben verfügbar.</p>
+          <p className="text-[var(--muted)]">Keine Aufgaben verfügbar.</p>
         </CardContent>
       </Card>
     );
@@ -108,17 +108,17 @@ export default function EmotionenErkennenUeben() {
         <div className="flex items-center gap-2">
           <button
             onClick={handleShuffle}
-            className="text-muted-foreground hover:text-foreground cursor-pointer"
+            className="text-muted-foreground hover:text-[var(--text-primary)] cursor-pointer"
             title="Zufällige Reihenfolge"
           >
             <Shuffle className="w-4 h-4" />
           </button>
-          <span className="text-sm text-muted">
+          <span className="text-sm text-[var(--muted)]">
             Aufgabe {index + 1}/{tasks.length}
           </span>
         </div>
         <div className="flex items-center gap-3">
-          <span className="text-sm text-muted">
+          <span className="text-sm text-[var(--muted)]">
             <span className="font-medium text-green-600 dark:text-green-400">
               {correctCount} richtig
             </span>
@@ -128,7 +128,7 @@ export default function EmotionenErkennenUeben() {
           </span>
           <button
             onClick={handleReset}
-            className="text-muted-foreground hover:text-foreground cursor-pointer"
+            className="text-muted-foreground hover:text-[var(--text-primary)] cursor-pointer"
             title="Zurücksetzen"
           >
             <RotateCcw className="w-4 h-4" />
@@ -136,7 +136,7 @@ export default function EmotionenErkennenUeben() {
         </div>
       </div>
 
-      <div className="w-full bg-muted rounded-full h-1.5">
+      <div className="w-full bg-[var(--surface)] rounded-full h-1.5">
         <div
           className="h-1.5 rounded-full bg-amber-500 transition-all"
           style={{ width: `${((index + 1) / tasks.length) * 100}%` }}
@@ -145,13 +145,15 @@ export default function EmotionenErkennenUeben() {
 
       <Card>
         <CardContent className="p-6 space-y-6">
-          <div className="bg-muted/50 p-4 rounded-lg">
-            <p className="text-xs text-muted uppercase tracking-wide mb-1">
+          <div className="bg-[var(--surface)]/50 p-4 rounded-lg">
+            <p className="text-xs text-[var(--muted)] uppercase tracking-wide mb-1">
               Situationsbeschreibung
             </p>
-            <p className="text-sm text-foreground leading-relaxed">{currentTask.situation}</p>
+            <p className="text-sm text-[var(--text-primary)] leading-relaxed">
+              {currentTask.situation}
+            </p>
           </div>
-          <p className="text-sm font-medium text-foreground">
+          <p className="text-sm font-medium text-[var(--text-primary)]">
             Wie fühlt sich {currentTask.personName} in dieser Situation? Eher wahrscheinlich oder
             eher unwahrscheinlich?
           </p>
@@ -163,9 +165,9 @@ export default function EmotionenErkennenUeben() {
               return (
                 <div
                   key={e.id}
-                  className={`flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 p-3 rounded-lg border ${showResult ? (isRight ? "border-green-500 dark:border-green-600 bg-green-50 dark:bg-green-900/15" : "border-red-500 dark:border-red-600 bg-red-50 dark:bg-red-900/15") : "border-border"}`}
+                  className={`flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 p-3 rounded-lg border ${showResult ? (isRight ? "border-green-500 dark:border-green-600 bg-green-50 dark:bg-green-900/15" : "border-red-500 dark:border-red-600 bg-red-50 dark:bg-red-900/15") : "border-[var(--border)]"}`}
                 >
-                  <span className="text-sm font-medium text-foreground">
+                  <span className="text-sm font-medium text-[var(--text-primary)]">
                     ({e.id}) {e.text}
                     {showResult && (
                       <span className="ml-2">
@@ -187,7 +189,7 @@ export default function EmotionenErkennenUeben() {
                       className={`px-3 py-2 rounded-lg text-xs font-medium transition-colors cursor-pointer disabled:cursor-default ${
                         val === "wahrscheinlich"
                           ? "bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 border border-green-300 dark:border-green-700"
-                          : "bg-muted/50 text-muted-foreground border border-border hover:bg-muted"
+                          : "bg-[var(--surface)]/50 text-muted-foreground border border-[var(--border)] hover:bg-[var(--surface)]"
                       }`}
                     >
                       eher wahrscheinlich
@@ -199,7 +201,7 @@ export default function EmotionenErkennenUeben() {
                       className={`px-3 py-2 rounded-lg text-xs font-medium transition-colors cursor-pointer disabled:cursor-default ${
                         val === "unwahrscheinlich"
                           ? "bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400 border border-red-300 dark:border-red-700"
-                          : "bg-muted/50 text-muted-foreground border border-border hover:bg-muted"
+                          : "bg-[var(--surface)]/50 text-muted-foreground border border-[var(--border)] hover:bg-[var(--surface)]"
                       }`}
                     >
                       eher unwahrscheinlich
@@ -250,8 +252,8 @@ export default function EmotionenErkennenUeben() {
           </div>
 
           {isChecked && (
-            <div className="bg-muted/50 border border-border rounded-lg p-4">
-              <h4 className="text-sm font-semibold text-foreground mb-2">Erklärung</h4>
+            <div className="bg-[var(--surface)]/50 border border-[var(--border)] rounded-lg p-4">
+              <h4 className="text-sm font-semibold text-[var(--text-primary)] mb-2">Erklärung</h4>
               <p className="text-sm text-muted-foreground">{currentTask.explanation}</p>
             </div>
           )}

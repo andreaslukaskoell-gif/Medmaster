@@ -46,7 +46,7 @@ export function OfficialInstructionCard({
             <h3 className="text-base font-semibold text-[var(--text-primary)]">{title}</h3>
             <button
               type="button"
-              className="ml-auto p-1 rounded text-muted hover:bg-[var(--border)]/50 transition-colors cursor-pointer"
+              className="ml-auto p-1 rounded text-[var(--muted)] hover:bg-[var(--border)]/50 transition-colors cursor-pointer"
               aria-expanded={!collapsed}
               tabIndex={-1}
             >
@@ -56,7 +56,9 @@ export function OfficialInstructionCard({
         </div>
         {!collapsed && (
           <div className="mt-4 pl-10">
-            <p className="text-sm text-muted leading-relaxed whitespace-pre-line">{instruction}</p>
+            <p className="text-sm text-[var(--muted)] leading-relaxed whitespace-pre-line">
+              {instruction}
+            </p>
           </div>
         )}
       </CardContent>

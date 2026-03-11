@@ -35,7 +35,7 @@ const confidenceLabel: Record<string, { text: string; className: string }> = {
   },
   unbekannt: {
     text: "Unbekannt",
-    className: "bg-muted text-muted-foreground",
+    className: "bg-[var(--surface)] text-muted-foreground",
   },
 };
 
@@ -82,33 +82,33 @@ export default function Statistics() {
       <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "Statistik" }]} />
 
       <div>
-        <h1 className="text-2xl font-bold text-foreground">Statistik</h1>
-        <p className="text-muted mt-1">Dein Lernfortschritt im Überblick.</p>
+        <h1 className="text-2xl font-bold text-[var(--text-primary)]">Statistik</h1>
+        <p className="text-[var(--muted)] mt-1">Dein Lernfortschritt im Überblick.</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
         <Card>
           <CardContent className="p-4 text-center">
-            <p className="text-3xl font-bold text-primary-700">{xp}</p>
-            <p className="text-xs text-muted">Gesamt-XP</p>
+            <p className="text-3xl font-bold text-[var(--accent)]">{xp}</p>
+            <p className="text-xs text-[var(--muted)]">Gesamt-XP</p>
           </CardContent>
         </Card>
         <Card>
           <CardContent className="p-4 text-center">
             <p className="text-3xl font-bold text-orange-600">{streak}</p>
-            <p className="text-xs text-muted">Tage-Streak</p>
+            <p className="text-xs text-[var(--muted)]">Tage-Streak</p>
           </CardContent>
         </Card>
         <Card>
           <CardContent className="p-4 text-center">
             <p className="text-3xl font-bold text-blue-600">{totalQuizzes}</p>
-            <p className="text-xs text-muted">Quizze absolviert</p>
+            <p className="text-xs text-[var(--muted)]">Quizze absolviert</p>
           </CardContent>
         </Card>
         <Card>
           <CardContent className="p-4 text-center">
             <p className="text-3xl font-bold text-green-600">{avgPct}%</p>
-            <p className="text-xs text-muted">Durchschnitt</p>
+            <p className="text-xs text-[var(--muted)]">Durchschnitt</p>
           </CardContent>
         </Card>
       </div>
@@ -117,14 +117,16 @@ export default function Statistics() {
         <Card>
           <CardContent className="p-12 text-center space-y-4">
             <div className="text-5xl">📊</div>
-            <p className="text-lg font-semibold text-foreground">Noch keine Statistiken</p>
-            <p className="text-sm text-muted max-w-xs mx-auto">
+            <p className="text-lg font-semibold text-[var(--text-primary)]">
+              Noch keine Statistiken
+            </p>
+            <p className="text-sm text-[var(--muted)] max-w-xs mx-auto">
               Absolviere deinen ersten Test, um hier deine Lernstatistiken und Fortschritte zu
               sehen.
             </p>
             <a
               href="/simulation"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary-600 text-white text-sm font-medium hover:bg-primary-700 transition-colors"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[var(--accent)] text-white text-sm font-medium hover:bg-[var(--accent)] transition-colors"
             >
               Erste Simulation starten →
             </a>
@@ -207,12 +209,16 @@ export default function Statistics() {
               <div className="overflow-x-auto">
                 <table className="w-full text-sm">
                   <thead>
-                    <tr className="border-b border-border">
-                      <th className="text-left py-2 px-3 text-muted font-medium">Datum</th>
-                      <th className="text-left py-2 px-3 text-muted font-medium">Typ</th>
-                      <th className="text-left py-2 px-3 text-muted font-medium">Thema</th>
-                      <th className="text-right py-2 px-3 text-muted font-medium">Ergebnis</th>
-                      <th className="text-right py-2 px-3 text-muted font-medium">Prozent</th>
+                    <tr className="border-b border-[var(--border)]">
+                      <th className="text-left py-2 px-3 text-[var(--muted)] font-medium">Datum</th>
+                      <th className="text-left py-2 px-3 text-[var(--muted)] font-medium">Typ</th>
+                      <th className="text-left py-2 px-3 text-[var(--muted)] font-medium">Thema</th>
+                      <th className="text-right py-2 px-3 text-[var(--muted)] font-medium">
+                        Ergebnis
+                      </th>
+                      <th className="text-right py-2 px-3 text-[var(--muted)] font-medium">
+                        Prozent
+                      </th>
                     </tr>
                   </thead>
                   <tbody>
@@ -220,14 +226,14 @@ export default function Statistics() {
                       .slice()
                       .reverse()
                       .map((r) => (
-                        <tr key={r.id} className="border-b border-border/50">
+                        <tr key={r.id} className="border-b border-[var(--border)]/50">
                           <td className="py-2 px-3">{r.date}</td>
                           <td className="py-2 px-3 uppercase font-medium">{r.type}</td>
                           <td className="py-2 px-3">{r.subject || "-"}</td>
                           <td className="py-2 px-3 text-right">
                             {r.score}/{r.total}
                           </td>
-                          <td className="py-2 px-3 text-right font-bold text-primary-700">
+                          <td className="py-2 px-3 text-right font-bold text-[var(--accent)]">
                             {Math.round((r.score / r.total) * 100)}%
                           </td>
                         </tr>
@@ -279,10 +285,10 @@ export default function Statistics() {
                   return (
                     <div key={subj}>
                       <div className="flex items-center justify-between mb-1">
-                        <span className="text-sm font-medium text-foreground">
+                        <span className="text-sm font-medium text-[var(--text-primary)]">
                           {meta?.label || subj}
                         </span>
-                        <span className="text-xs text-muted">
+                        <span className="text-xs text-[var(--muted)]">
                           {data.correct}/{data.total} richtig ({pct}%)
                         </span>
                       </div>
@@ -308,8 +314,8 @@ export default function Statistics() {
                   onClick={() => setStichwortFach(f)}
                   className={`px-2 py-1 rounded text-xs font-medium transition-colors cursor-pointer ${
                     stichwortFach === f
-                      ? "bg-primary-600 text-white"
-                      : "bg-muted text-muted-foreground hover:bg-accent"
+                      ? "bg-[var(--accent)] text-white"
+                      : "bg-[var(--surface)] text-muted-foreground hover:bg-accent"
                   }`}
                 >
                   {fachConfig[f]?.label || f}
@@ -343,22 +349,22 @@ export default function Statistics() {
                 {/* Summary */}
                 <div className="grid grid-cols-4 gap-3 text-center text-sm">
                   <div>
-                    <p className="text-lg font-bold text-primary-700">
+                    <p className="text-lg font-bold text-[var(--accent)]">
                       {practicedCount}/{totalSw}
                     </p>
-                    <p className="text-[10px] text-muted">Geübt</p>
+                    <p className="text-[10px] text-[var(--muted)]">Geübt</p>
                   </div>
                   <div>
                     <p className="text-lg font-bold text-green-600">{avgRate}%</p>
-                    <p className="text-[10px] text-muted">Durchschnitt</p>
+                    <p className="text-[10px] text-[var(--muted)]">Durchschnitt</p>
                   </div>
                   <div>
                     <p className="text-lg font-bold text-green-600">{sicherCount}</p>
-                    <p className="text-[10px] text-muted">Sicher</p>
+                    <p className="text-[10px] text-[var(--muted)]">Sicher</p>
                   </div>
                   <div>
                     <p className="text-lg font-bold text-amber-600">{unsicherCount}</p>
-                    <p className="text-[10px] text-muted">Unsicher</p>
+                    <p className="text-[10px] text-[var(--muted)]">Unsicher</p>
                   </div>
                 </div>
 
@@ -373,7 +379,7 @@ export default function Statistics() {
                           className="flex items-center gap-2 py-1.5 px-2 rounded-lg hover:bg-accent"
                         >
                           <div className="flex-1 min-w-0">
-                            <span className="text-xs font-medium text-foreground truncate block">
+                            <span className="text-xs font-medium text-[var(--text-primary)] truncate block">
                               {sw.thema}
                             </span>
                           </div>
@@ -384,7 +390,7 @@ export default function Statistics() {
                           >
                             {confidenceLabel[stat!.confidence]?.text || stat!.confidence}
                           </span>
-                          <span className="text-[10px] text-muted w-12 text-right">
+                          <span className="text-[10px] text-[var(--muted)] w-12 text-right">
                             {stat!.totalAttempts}x
                           </span>
                           <div className="w-16">
@@ -408,7 +414,7 @@ export default function Statistics() {
 
                 {/* Unpracticed count */}
                 {unpracticed.length > 0 && (
-                  <p className="text-xs text-muted pt-1 border-t border-border">
+                  <p className="text-xs text-[var(--muted)] pt-1 border-t border-[var(--border)]">
                     {unpracticed.length} Stichworte noch nicht geübt
                   </p>
                 )}

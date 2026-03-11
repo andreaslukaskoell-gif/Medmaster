@@ -16,7 +16,7 @@ export default function EnzymeSubstrate() {
       <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">
         Enzym-Substrat-Reaktion
       </h4>
-      <p className="text-xs text-muted">Schlüssel-Schloss-Modell in drei Schritten.</p>
+      <p className="text-xs text-[var(--muted)]">Schlüssel-Schloss-Modell in drei Schritten.</p>
 
       <div className="flex gap-2 mb-2">
         {([1, 2, 3] as Step[]).map((s) => (

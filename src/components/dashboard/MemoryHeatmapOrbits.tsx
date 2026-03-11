@@ -16,7 +16,7 @@ function OrbitRing({ subjectHeat, index }: { subjectHeat: SubjectHeat; index: nu
   return (
     <Link
       to={path}
-      className="block focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 rounded-full"
+      className="block focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] rounded-full"
     >
       <motion.div
         className="relative flex flex-col items-center justify-center"
@@ -52,7 +52,7 @@ function OrbitRing({ subjectHeat, index }: { subjectHeat: SubjectHeat; index: nu
             {overdueCount}
           </span>
         )}
-        {isEmpty && <span className="text-[10px] text-muted">kein Inhalt</span>}
+        {isEmpty && <span className="text-[10px] text-[var(--muted)]">kein Inhalt</span>}
       </motion.div>
     </Link>
   );
@@ -75,7 +75,7 @@ export function MemoryHeatmapOrbits() {
             </span>
           )}
         </CardTitle>
-        <p className="text-xs text-muted mt-0.5">
+        <p className="text-xs text-[var(--muted)] mt-0.5">
           Grün = frisch · Gelb = bald wiederholen · Rot = dein Gehirn löscht – rette ihn!
         </p>
       </CardHeader>

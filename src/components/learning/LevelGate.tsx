@@ -27,7 +27,7 @@ export function LevelGate({ requiredLevel, featureLabel, children }: LevelGatePr
         <h2 className="text-xl font-bold text-amber-900 dark:text-amber-100 mb-2">
           {featureLabel} ab Level {requiredLevel}
         </h2>
-        <p className="text-muted-foreground mb-2">
+        <p className="text-[var(--muted)] mb-2">
           Du bist aktuell Level {level}. Lese Kapitel und beantworte Quizfragen, um XP zu sammeln
           und Level {requiredLevel} zu erreichen.
         </p>

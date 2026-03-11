@@ -150,8 +150,10 @@ export default function Analysis() {
       <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "Analyse" }]} />
 
       <div>
-        <h1 className="text-2xl font-bold text-foreground">Stärken/Schwächen-Analyse</h1>
-        <p className="text-muted mt-1">Detaillierte Auswertung deiner Leistung nach Fachgebiet.</p>
+        <h1 className="text-2xl font-bold text-[var(--text-primary)]">Stärken/Schwächen-Analyse</h1>
+        <p className="text-[var(--muted)] mt-1">
+          Detaillierte Auswertung deiner Leistung nach Fachgebiet.
+        </p>
       </div>
 
       {!mounted ? (
@@ -166,15 +168,17 @@ export default function Analysis() {
       ) : !hasData ? (
         <Card>
           <CardContent className="p-12 text-center space-y-4">
-            <Target className="w-14 h-14 text-muted mx-auto" />
-            <p className="text-lg font-semibold text-foreground">Noch keine Analyse verfügbar</p>
-            <p className="text-sm text-muted max-w-sm mx-auto">
+            <Target className="w-14 h-14 text-[var(--muted)] mx-auto" />
+            <p className="text-lg font-semibold text-[var(--text-primary)]">
+              Noch keine Analyse verfügbar
+            </p>
+            <p className="text-sm text-[var(--muted)] max-w-sm mx-auto">
               Mache deinen ersten Test, um hier dein persönliches Kompetenzprofil und Schwachstellen
               zu sehen.
             </p>
             <a
               href="/simulation"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary-600 text-white text-sm font-medium hover:bg-primary-700 transition-colors"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[var(--accent)] text-white text-sm font-medium hover:bg-[var(--accent)] transition-colors"
             >
               Erste Simulation starten →
             </a>
@@ -222,12 +226,12 @@ export default function Analysis() {
               </CardHeader>
               <CardContent>
                 {strengths.length === 0 ? (
-                  <p className="text-xs text-muted">Noch keine Stärken identifiziert</p>
+                  <p className="text-xs text-[var(--muted)]">Noch keine Stärken identifiziert</p>
                 ) : (
                   <div className="space-y-2">
                     {strengths.map((s) => (
                       <div key={s.name} className="flex items-center justify-between">
-                        <span className="text-sm text-foreground">{s.name}</span>
+                        <span className="text-sm text-[var(--text-primary)]">{s.name}</span>
                         <Badge variant="success">{s.percentage}%</Badge>
                       </div>
                     ))}
@@ -245,12 +249,12 @@ export default function Analysis() {
               </CardHeader>
               <CardContent>
                 {average.length === 0 ? (
-                  <p className="text-xs text-muted">-</p>
+                  <p className="text-xs text-[var(--muted)]">-</p>
                 ) : (
                   <div className="space-y-2">
                     {average.map((s) => (
                       <div key={s.name} className="flex items-center justify-between">
-                        <span className="text-sm text-foreground">{s.name}</span>
+                        <span className="text-sm text-[var(--text-primary)]">{s.name}</span>
                         <Badge variant="warning">{s.percentage}%</Badge>
                       </div>
                     ))}
@@ -268,12 +272,12 @@ export default function Analysis() {
               </CardHeader>
               <CardContent>
                 {weaknesses.length === 0 ? (
-                  <p className="text-xs text-muted">Keine Schwächen identifiziert</p>
+                  <p className="text-xs text-[var(--muted)]">Keine Schwächen identifiziert</p>
                 ) : (
                   <div className="space-y-2">
                     {weaknesses.map((s) => (
                       <div key={s.name} className="flex items-center justify-between">
-                        <span className="text-sm text-foreground">{s.name}</span>
+                        <span className="text-sm text-[var(--text-primary)]">{s.name}</span>
                         <Badge variant="danger">{s.percentage}%</Badge>
                       </div>
                     ))}
@@ -292,8 +296,10 @@ export default function Analysis() {
                 {subjectData.map((d) => (
                   <div key={d.name}>
                     <div className="flex items-center justify-between mb-1">
-                      <span className="text-sm font-medium text-foreground">{d.name}</span>
-                      <span className="text-xs text-muted">
+                      <span className="text-sm font-medium text-[var(--text-primary)]">
+                        {d.name}
+                      </span>
+                      <span className="text-xs text-[var(--muted)]">
                         {d.score}/{d.total} richtig ({d.percentage}%)
                       </span>
                     </div>
@@ -324,11 +330,14 @@ export default function Analysis() {
               <CardContent>
                 <div className="space-y-2">
                   {errorPatterns.map((p, i) => (
-                    <div key={i} className="flex items-center gap-3 p-3 rounded-lg bg-muted">
+                    <div
+                      key={i}
+                      className="flex items-center gap-3 p-3 rounded-lg bg-[var(--surface)]"
+                    >
                       <Badge variant={p.severity === "danger" ? "danger" : "warning"}>
                         {p.severity === "danger" ? "Kritisch" : "Hinweis"}
                       </Badge>
-                      <span className="text-sm text-foreground">{p.pattern}</span>
+                      <span className="text-sm text-[var(--text-primary)]">{p.pattern}</span>
                     </div>
                   ))}
                 </div>
@@ -369,37 +378,35 @@ export default function Analysis() {
             const weakTopics = store.getWeakestTopics(5);
 
             return (
-              <Card className="border-2 border-primary-200 dark:border-primary-800">
+              <Card className="border-2 border-[var(--accent)]/20 dark:border-[var(--accent)]/30">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <Calendar className="w-5 h-5 text-primary-600" />
+                    <Calendar className="w-5 h-5 text-[var(--accent)]" />
                     Prüfungstag-Prognose
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                    <div className="bg-primary-50 dark:bg-primary-900/20 rounded-lg p-4 text-center">
-                      <p className="text-3xl font-bold text-primary-700 dark:text-primary-400">
-                        {readiness}%
-                      </p>
-                      <p className="text-xs text-muted mt-1">Aktuelle Bereitschaft</p>
+                    <div className="bg-[var(--accent)]/5 dark:bg-[var(--accent)]/10 rounded-lg p-4 text-center">
+                      <p className="text-3xl font-bold text-[var(--accent)]">{readiness}%</p>
+                      <p className="text-xs text-[var(--muted)] mt-1">Aktuelle Bereitschaft</p>
                     </div>
                     <div className="bg-emerald-50 dark:bg-emerald-900/20 rounded-lg p-4 text-center">
                       <p className="text-3xl font-bold text-emerald-700 dark:text-emerald-400">
                         {projectedReadiness}%
                       </p>
-                      <p className="text-xs text-muted mt-1">Prognose am Prüfungstag</p>
+                      <p className="text-xs text-[var(--muted)] mt-1">Prognose am Prüfungstag</p>
                     </div>
                     <div className="bg-orange-50 dark:bg-orange-900/20 rounded-lg p-4 text-center">
                       <p className="text-3xl font-bold text-orange-700 dark:text-orange-400">
                         {days}
                       </p>
-                      <p className="text-xs text-muted mt-1">Tage bis MedAT</p>
+                      <p className="text-xs text-[var(--muted)] mt-1">Tage bis MedAT</p>
                     </div>
                   </div>
 
                   <div>
-                    <p className="text-sm font-medium text-foreground mb-2">
+                    <p className="text-sm font-medium text-[var(--text-primary)] mb-2">
                       Bereitschaft nach Fach
                     </p>
                     <ResponsiveContainer width="100%" height={180}>
@@ -415,7 +422,7 @@ export default function Analysis() {
 
                   {weakTopics.length > 0 && (
                     <div>
-                      <p className="text-sm font-medium text-foreground mb-2">
+                      <p className="text-sm font-medium text-[var(--text-primary)] mb-2">
                         Prioritäre Themen zum Verbessern
                       </p>
                       <div className="space-y-1.5">
@@ -427,8 +434,10 @@ export default function Analysis() {
                           >
                             <div className="flex items-center gap-2 min-w-0">
                               <Zap className="w-3.5 h-3.5 text-orange-500 shrink-0" />
-                              <span className="text-sm text-foreground truncate">{t.thema}</span>
-                              <span className="text-[10px] text-muted">({t.fach})</span>
+                              <span className="text-sm text-[var(--text-primary)] truncate">
+                                {t.thema}
+                              </span>
+                              <span className="text-[10px] text-[var(--muted)]">({t.fach})</span>
                             </div>
                             <Badge
                               variant={t.rate < 30 ? "danger" : "warning"}
@@ -500,10 +509,8 @@ export default function Analysis() {
               <div className="space-y-2">
                 {recommendations.map((rec, i) => (
                   <div key={i} className="flex items-start gap-2">
-                    <span className="text-primary-700 dark:text-primary-400 font-bold text-sm mt-0.5">
-                      {i + 1}.
-                    </span>
-                    <p className="text-sm text-foreground">{rec}</p>
+                    <span className="text-[var(--accent)] font-bold text-sm mt-0.5">{i + 1}.</span>
+                    <p className="text-sm text-[var(--text-primary)]">{rec}</p>
                   </div>
                 ))}
               </div>

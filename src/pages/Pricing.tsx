@@ -70,8 +70,8 @@ export default function Pricing() {
       <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "Preise" }]} />
 
       <div className="text-center">
-        <h1 className="text-3xl font-bold text-foreground">Wähle deinen Plan</h1>
-        <p className="text-muted mt-2 max-w-lg mx-auto">
+        <h1 className="text-3xl font-bold text-[var(--text-primary)]">Wähle deinen Plan</h1>
+        <p className="text-[var(--muted)] mt-2 max-w-lg mx-auto">
           Investiere in deine Zukunft. Alle Pläne sind jederzeit kündbar.
         </p>
         <p className="text-sm text-amber-600 dark:text-amber-400 mt-2">
@@ -83,23 +83,23 @@ export default function Pricing() {
         {plans.map((plan) => (
           <Card
             key={plan.name}
-            className={`relative ${plan.highlighted ? "border-2 border-primary-500 shadow-lg md:scale-105" : ""}`}
+            className={`relative ${plan.highlighted ? "border-2 border-[var(--accent)] shadow-lg md:scale-105" : ""}`}
           >
             {plan.highlighted && (
               <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                <Badge className="bg-primary-700 text-white px-3 py-1">Beliebteste Wahl</Badge>
+                <Badge className="bg-[var(--accent)] text-white px-3 py-1">Beliebteste Wahl</Badge>
               </div>
             )}
             <CardContent className="p-6 pt-8">
-              <h3 className="text-xl font-bold text-foreground">{plan.name}</h3>
-              <p className="text-sm text-muted mb-4">{plan.description}</p>
+              <h3 className="text-xl font-bold text-[var(--text-primary)]">{plan.name}</h3>
+              <p className="text-sm text-[var(--muted)] mb-4">{plan.description}</p>
 
               <div className="mb-6">
-                <span className="text-4xl font-bold text-foreground">
+                <span className="text-4xl font-bold text-[var(--text-primary)]">
                   {plan.price === "0" ? "Gratis" : `€${plan.price}`}
                 </span>
                 {plan.price !== "0" && (
-                  <span className="text-sm text-muted ml-1">/ {plan.period}</span>
+                  <span className="text-sm text-[var(--muted)] ml-1">/ {plan.period}</span>
                 )}
               </div>
 
@@ -120,10 +120,10 @@ export default function Pricing() {
                     {f.included ? (
                       <Check className="w-4 h-4 text-green-500 mt-0.5 shrink-0" />
                     ) : (
-                      <X className="w-4 h-4 text-muted-foreground/70 mt-0.5 shrink-0" />
+                      <X className="w-4 h-4 text-[var(--muted)]/70 mt-0.5 shrink-0" />
                     )}
                     <span
-                      className={`text-sm ${f.included ? "text-foreground" : "text-muted-foreground/70"}`}
+                      className={`text-sm ${f.included ? "text-[var(--text-primary)]" : "text-[var(--muted)]/70"}`}
                     >
                       {f.text}
                     </span>
@@ -135,13 +135,11 @@ export default function Pricing() {
         ))}
       </div>
 
-      <div className="text-center text-sm text-muted space-y-2">
+      <div className="text-center text-sm text-[var(--muted)] space-y-2">
         <p>Alle Preise inkl. MwSt. Jederzeit kündbar.</p>
         <p>
           Fragen? Schreib uns an{" "}
-          <span className="text-primary-700 dark:text-primary-400 font-medium">
-            support@medmaster.at
-          </span>
+          <span className="text-[var(--accent)] font-medium">support@medmaster.at</span>
         </p>
       </div>
     </div>

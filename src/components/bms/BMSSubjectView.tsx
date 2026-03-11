@@ -84,13 +84,13 @@ export function BMSSubjectView({
 
       <div>
         <h1 className="text-xl font-semibold text-[var(--foreground)] flex items-center gap-3">
-          <subjectData.icon className="w-6 h-6 text-[var(--color-primary-500)]" />
+          <subjectData.icon className="w-6 h-6 text-[var(--accent)]" />
           {subjectData.label}
         </h1>
         <p className="text-sm text-[var(--muted)] mt-1">
           {kapitel.length} Kapitel · {subjectUK} Unterkapitel
           {subjectUK > 0 && (
-            <span className="text-[var(--color-primary-500)] font-medium ml-2">
+            <span className="text-[var(--accent)] font-medium ml-2">
               {subjectCompletedUK}/{subjectUK} abgeschlossen
             </span>
           )}
@@ -129,7 +129,7 @@ export function BMSSubjectView({
 
       <div className="space-y-3">
         <h2 className="text-lg font-semibold text-[var(--text-primary)] flex items-center gap-2">
-          <BookOpen className="w-5 h-5 text-primary-500" />
+          <BookOpen className="w-5 h-5 text-[var(--accent)]" />
           Kapitel
         </h2>
 
@@ -165,7 +165,7 @@ export function BMSSubjectView({
           return (
             <Card
               key={kap.id}
-              className={`hover:shadow-md transition-all cursor-pointer border-l-4 ${subjectData.colors.border} ${hasMastery ? "ring-1 ring-amber-400/60 dark:ring-amber-500/50 shadow-amber-500/10" : ""}`}
+              className={`hover:shadow-md transition-all cursor-pointer border-l-[3px] border-l-[var(--accent)] ${hasMastery ? "ring-1 ring-amber-400/60 dark:ring-amber-500/50 shadow-amber-500/10" : ""}`}
               onClick={() => onSelectChapter(kap)}
             >
               <CardContent className="p-4">

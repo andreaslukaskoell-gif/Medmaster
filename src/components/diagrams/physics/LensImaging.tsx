@@ -8,7 +8,7 @@ export default function LensImaging() {
   return (
     <div className="space-y-3">
       <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">Linsenabbildung</h4>
-      <p className="text-xs text-muted">Sammellinse und Zerstreuungslinse im Vergleich.</p>
+      <p className="text-xs text-[var(--muted)]">Sammellinse und Zerstreuungslinse im Vergleich.</p>
 
       <div className="flex gap-2 mb-2">
         <button

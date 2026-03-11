@@ -179,8 +179,8 @@ function formatText(
   let inUnorderedList = false;
 
   // Bestimme Blockquote-Farben basierend auf Subject
-  const borderClass = subjectBorderColor || "border-primary-500";
-  const bgClass = subjectBgColor || "bg-primary-50 dark:bg-primary-900/20";
+  const borderClass = subjectBorderColor || "border-[var(--accent)]";
+  const bgClass = subjectBgColor || "bg-[var(--accent)]/5 dark:bg-[var(--accent)]/10";
   const blockquoteClasses = `border-l-4 ${borderClass} pl-4 py-2 my-4 ${bgClass} rounded-r`;
 
   for (let i = 0; i < lines.length; i++) {
@@ -208,12 +208,12 @@ function formatText(
 
       // CSS-Klassen für verschiedene Überschriften-Level
       const headingClasses = {
-        1: "text-2xl font-bold text-foreground mt-6 mb-4",
-        2: "text-xl font-bold text-foreground mt-5 mb-3",
-        3: "text-lg font-semibold text-foreground mt-4 mb-2",
-        4: "text-base font-semibold text-foreground mt-3 mb-2",
-        5: "text-sm font-semibold text-foreground/80 mt-3 mb-2",
-        6: "text-sm font-medium text-foreground/80 mt-2 mb-1",
+        1: "text-2xl font-bold text-[var(--text-primary)] mt-6 mb-4",
+        2: "text-xl font-bold text-[var(--text-primary)] mt-5 mb-3",
+        3: "text-lg font-semibold text-[var(--text-primary)] mt-4 mb-2",
+        4: "text-base font-semibold text-[var(--text-primary)] mt-3 mb-2",
+        5: "text-sm font-semibold text-[var(--text-primary)]/80 mt-3 mb-2",
+        6: "text-sm font-medium text-[var(--text-primary)]/80 mt-2 mb-1",
       };
       processed.push(
         `<h${level} class="${headingClasses[level as keyof typeof headingClasses] || ""}">${content}</h${level}>`
@@ -974,13 +974,13 @@ ${existingImports.map((imp) => `  ${imp.varName},`).join("\n")}
   return (
     <div className="max-w-6xl mx-auto space-y-6 p-6">
       <div>
-        <h1 className="text-3xl font-bold text-foreground">Kapitel-Editor</h1>
-        <p className="text-muted mt-2">
+        <h1 className="text-3xl font-bold text-[var(--text-primary)]">Kapitel-Editor</h1>
+        <p className="text-[var(--muted)] mt-2">
           Wähle ein Überkapitel aus und füge Unterkapitel-Inhalt ein
         </p>
       </div>
 
-      <Card className="border-2 border-primary-500">
+      <Card className="border-2 border-[var(--accent)]">
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <FileText className="w-5 h-5" />
@@ -990,7 +990,9 @@ ${existingImports.map((imp) => `  ${imp.varName},`).join("\n")}
         <CardContent className="space-y-4">
           {/* Fachgebiet */}
           <div>
-            <label className="text-sm font-medium text-foreground/80 mb-2 block">Fachgebiet</label>
+            <label className="text-sm font-medium text-[var(--text-primary)]/80 mb-2 block">
+              Fachgebiet
+            </label>
             <select
               value={detectedSubject}
               onChange={(e) => {
@@ -999,7 +1001,7 @@ ${existingImports.map((imp) => `  ${imp.varName},`).join("\n")}
                 setIsCreatingNewChapter(false);
                 setNewChapterTitle("");
               }}
-              className="w-full px-4 py-2 rounded-lg border border-border bg-background text-foreground text-sm outline-none focus:ring-2 focus:ring-primary-500"
+              className="w-full px-4 py-2 rounded-lg border border-[var(--border)] bg-[var(--background)] text-[var(--text-primary)] text-sm outline-none focus:ring-2 focus:ring-[var(--accent)]"
             >
               <option value="biologie">Biologie</option>
               <option value="chemie">Chemie</option>
@@ -1010,7 +1012,7 @@ ${existingImports.map((imp) => `  ${imp.varName},`).join("\n")}
 
           {/* Überkapitel-Auswahl */}
           <div>
-            <label className="text-sm font-medium text-foreground/80 mb-2 block">
+            <label className="text-sm font-medium text-[var(--text-primary)]/80 mb-2 block">
               Überkapitel auswählen <span className="text-red-500">*</span>
             </label>
             <div className="space-y-2">
@@ -1026,7 +1028,7 @@ ${existingImports.map((imp) => `  ${imp.varName},`).join("\n")}
                     setNewChapterTitle("");
                   }
                 }}
-                className="w-full px-4 py-2 rounded-lg border border-border bg-background text-foreground text-sm outline-none focus:ring-2 focus:ring-primary-500"
+                className="w-full px-4 py-2 rounded-lg border border-[var(--border)] bg-[var(--background)] text-[var(--text-primary)] text-sm outline-none focus:ring-2 focus:ring-[var(--accent)]"
               >
                 <option value="">-- Bitte wählen --</option>
                 <option value="__NEW__">+ Neues Überkapitel anlegen</option>
@@ -1045,9 +1047,9 @@ ${existingImports.map((imp) => `  ${imp.varName},`).join("\n")}
                     value={newChapterTitle}
                     onChange={(e) => setNewChapterTitle(e.target.value)}
                     placeholder="Titel des neuen Überkapitels eingeben..."
-                    className="w-full px-4 py-2 rounded-lg border border-border bg-background text-foreground text-sm outline-none focus:ring-2 focus:ring-primary-500"
+                    className="w-full px-4 py-2 rounded-lg border border-[var(--border)] bg-[var(--background)] text-[var(--text-primary)] text-sm outline-none focus:ring-2 focus:ring-[var(--accent)]"
                   />
-                  <p className="text-xs text-muted mt-1">
+                  <p className="text-xs text-[var(--muted)] mt-1">
                     ⚠️ Prüfe, ob ein Überkapitel mit diesem Titel bereits existiert!
                   </p>
                 </div>
@@ -1057,7 +1059,7 @@ ${existingImports.map((imp) => `  ${imp.varName},`).join("\n")}
 
           {/* Inhalt */}
           <div>
-            <label className="text-sm font-medium text-foreground/80 mb-2 block">
+            <label className="text-sm font-medium text-[var(--text-primary)]/80 mb-2 block">
               Inhalt einfügen <span className="text-red-500">*</span>
             </label>
             <div className="space-y-2">
@@ -1088,7 +1090,7 @@ Die Zellmembran besteht aus einer Doppellipidschicht...
 
 → Titel: "Die Zellmembran"
 → Inhalt: Alles ab Zeile 2`}
-                className="w-full h-[400px] px-4 py-3 rounded-lg border border-border bg-background text-foreground text-base leading-relaxed font-mono outline-none focus:ring-2 focus:ring-primary-500 resize-none whitespace-pre-wrap"
+                className="w-full h-[400px] px-4 py-3 rounded-lg border border-[var(--border)] bg-[var(--background)] text-[var(--text-primary)] text-base leading-relaxed font-mono outline-none focus:ring-2 focus:ring-[var(--accent)] resize-none whitespace-pre-wrap"
                 style={{
                   fontFamily:
                     'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',

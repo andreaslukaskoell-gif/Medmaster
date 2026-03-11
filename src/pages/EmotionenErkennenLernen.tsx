@@ -146,7 +146,7 @@ function Seite1() {
         <h2 className="text-xl font-bold text-[var(--text-primary)] mb-2">
           Aufgabenformat &amp; Emotionsliste
         </h2>
-        <p className="text-sm text-muted">
+        <p className="text-sm text-[var(--muted)]">
           Im Untertest &quot;Emotionen erkennen&quot; erhältst du eine kurze Situationsbeschreibung
           und den Namen einer Person. Deine Aufgabe: Für fünf vorgegebene Emotionen angeben, ob sie
           bei dieser Person in der Situation eher wahrscheinlich oder eher unwahrscheinlich sind.
@@ -161,7 +161,7 @@ function Seite1() {
             So sieht eine Aufgabe aus (offizielles MedAT-Format)
           </h3>
           <div className="bg-[var(--border)]/30 p-4 rounded-lg border-l-4 border-amber-400">
-            <p className="text-sm text-muted mb-1">Situationsbeschreibung:</p>
+            <p className="text-sm text-[var(--muted)] mb-1">Situationsbeschreibung:</p>
             <p className="text-sm italic text-[var(--text-secondary)]">
               &quot;Tanja trifft auf einem Klassentreffen eine gute Schulfreundin, die nun bereits
               seit vielen Jahren im Ausland lebt. Ursprünglich hatte die Freundin ihren Besuch
@@ -169,7 +169,7 @@ function Seite1() {
             </p>
           </div>
           <div className="bg-[var(--border)]/30 p-4 rounded-lg border-l-4 border-indigo-400">
-            <p className="text-sm text-muted mb-1">Frage:</p>
+            <p className="text-sm text-[var(--muted)] mb-1">Frage:</p>
             <p className="text-sm font-medium text-[var(--text-secondary)] mb-2">
               Wie fühlt sich Tanja in dieser Situation? (Für jede Möglichkeit: eher wahrscheinlich
               oder eher unwahrscheinlich?)
@@ -184,7 +184,7 @@ function Seite1() {
               ].map((opt) => (
                 <p
                   key={opt}
-                  className={`text-sm ${opt.includes("✓") ? "text-green-600 dark:text-green-400 font-medium" : "text-muted"}`}
+                  className={`text-sm ${opt.includes("✓") ? "text-green-600 dark:text-green-400 font-medium" : "text-[var(--muted)]"}`}
                 >
                   {opt}
                 </p>
@@ -227,7 +227,7 @@ function Seite1() {
               className={`text-xs px-3 py-1.5 rounded-full transition-colors cursor-pointer ${
                 filter === f.key
                   ? "bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 font-medium"
-                  : "text-muted hover:bg-[var(--border)]/50"
+                  : "text-[var(--muted)] hover:bg-[var(--border)]/50"
               }`}
             >
               {f.label}
@@ -262,7 +262,7 @@ function Seite2() {
         <h2 className="text-xl font-bold text-[var(--text-primary)] mb-2">
           Lösungsstrategie Schritt für Schritt
         </h2>
-        <p className="text-sm text-muted">
+        <p className="text-sm text-[var(--muted)]">
           Mit dieser Methode analysierst du jede Situation systematisch.
         </p>
       </div>
@@ -278,7 +278,7 @@ function Seite2() {
               Situation lesen &amp; verstehen
             </h3>
           </div>
-          <p className="text-sm text-muted pl-11">
+          <p className="text-sm text-[var(--muted)] pl-11">
             Lies die Situationsbeschreibung aufmerksam. Achte auf Schlüsselwörter wie
             &quot;unerwartet&quot;, &quot;jahrelang&quot;, &quot;zum ersten Mal&quot;.
           </p>
@@ -296,7 +296,7 @@ function Seite2() {
               Beteiligte Personen identifizieren
             </h3>
           </div>
-          <p className="text-sm text-muted pl-11">
+          <p className="text-sm text-[var(--muted)] pl-11">
             Wer ist beteiligt? Welche Rollen haben sie? Ein Patient fühlt anders als ein Arzt, ein
             Freund anders als ein Vorgesetzter.
           </p>
@@ -314,17 +314,21 @@ function Seite2() {
               Kontext + Erwartung → Emotion ableiten
             </h3>
           </div>
-          <p className="text-sm text-muted pl-11">
+          <p className="text-sm text-[var(--muted)] pl-11">
             Für jede Person: Was hat sie erwartet? Was ist tatsächlich passiert? Die Diskrepanz
             zwischen Erwartung und Realität bestimmt die Emotion.
           </p>
           <div className="pl-11 bg-[var(--border)]/30 rounded-lg p-3 text-sm space-y-1">
             <p className="font-medium text-[var(--text-secondary)]">Formel:</p>
-            <p className="text-muted">Erwartung erfüllt → Freude, Erleichterung, Stolz</p>
-            <p className="text-muted">Erwartung enttäuscht → Enttäuschung, Trauer, Frustration</p>
-            <p className="text-muted">Bedrohung wahrgenommen → Angst, Nervosität</p>
-            <p className="text-muted">Ungerechtigkeit wahrgenommen → Wut/Ärger, Empörung</p>
-            <p className="text-muted">Eigenes Versagen → Scham, Schuld</p>
+            <p className="text-[var(--muted)]">Erwartung erfüllt → Freude, Erleichterung, Stolz</p>
+            <p className="text-[var(--muted)]">
+              Erwartung enttäuscht → Enttäuschung, Trauer, Frustration
+            </p>
+            <p className="text-[var(--muted)]">Bedrohung wahrgenommen → Angst, Nervosität</p>
+            <p className="text-[var(--muted)]">
+              Ungerechtigkeit wahrgenommen → Wut/Ärger, Empörung
+            </p>
+            <p className="text-[var(--muted)]">Eigenes Versagen → Scham, Schuld</p>
           </div>
         </CardContent>
       </Card>
@@ -340,7 +344,7 @@ function Seite2() {
               &quot;Einige&quot; vs. &quot;Alle&quot; beachten
             </h3>
           </div>
-          <p className="text-sm text-muted pl-11">
+          <p className="text-sm text-[var(--muted)] pl-11">
             Achte auf die Frageformulierung: &quot;Am ehesten&quot; fragt nach der dominanten
             Emotion. &quot;Welche Emotionen könnte X empfinden?&quot; kann mehrere richtige
             Antworten haben.
@@ -364,7 +368,7 @@ function Seite3() {
         <h2 className="text-xl font-bold text-[var(--text-primary)] mb-2">
           Typische Fallen &amp; Expert-Tipps
         </h2>
-        <p className="text-sm text-muted">
+        <p className="text-sm text-[var(--muted)]">
           Diese Fehler kosten die meisten Punkte — und so vermeidest du sie.
         </p>
       </div>
@@ -398,31 +402,31 @@ function Seite3() {
           <div className="bg-[var(--card)] rounded-lg p-3 space-y-2">
             <div className="text-sm">
               <span className="font-medium text-[var(--text-secondary)]">Neid:</span>
-              <span className="text-muted ml-1">Jemand HAT etwas, das ich auch will</span>
+              <span className="text-[var(--muted)] ml-1">Jemand HAT etwas, das ich auch will</span>
             </div>
             <div className="text-sm">
               <span className="font-medium text-[var(--text-secondary)]">Eifersucht:</span>
-              <span className="text-muted ml-1">
+              <span className="text-[var(--muted)] ml-1">
                 Jemand BEDROHT eine Beziehung, die mir wichtig ist
               </span>
             </div>
             <div className="text-sm">
               <span className="font-medium text-[var(--text-secondary)]">Scham:</span>
-              <span className="text-muted ml-1">ICH bin schlecht (Selbstbewertung)</span>
+              <span className="text-[var(--muted)] ml-1">ICH bin schlecht (Selbstbewertung)</span>
             </div>
             <div className="text-sm">
               <span className="font-medium text-[var(--text-secondary)]">Schuld:</span>
-              <span className="text-muted ml-1">
+              <span className="text-[var(--muted)] ml-1">
                 Ich habe etwas FALSCHES GETAN (Handlungsbewertung)
               </span>
             </div>
             <div className="text-sm">
               <span className="font-medium text-[var(--text-secondary)]">Trauer:</span>
-              <span className="text-muted ml-1">Endgültiger Verlust</span>
+              <span className="text-[var(--muted)] ml-1">Endgültiger Verlust</span>
             </div>
             <div className="text-sm">
               <span className="font-medium text-[var(--text-secondary)]">Enttäuschung:</span>
-              <span className="text-muted ml-1">Erwartung wurde nicht erfüllt</span>
+              <span className="text-[var(--muted)] ml-1">Erwartung wurde nicht erfüllt</span>
             </div>
           </div>
         </div>
@@ -495,7 +499,7 @@ export default function EmotionenErkennenLernen() {
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
           <PageIndicator current={currentPage} total={totalPages} />
-          <span className="text-xs text-muted">
+          <span className="text-xs text-[var(--muted)]">
             Seite {currentPage + 1} von {totalPages}
           </span>
         </div>
@@ -507,7 +511,7 @@ export default function EmotionenErkennenLernen() {
               className={`text-xs px-3 py-1.5 rounded-full transition-colors cursor-pointer ${
                 i === currentPage
                   ? "bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 font-medium"
-                  : "text-muted hover:bg-[var(--border)]/50"
+                  : "text-[var(--muted)] hover:bg-[var(--border)]/50"
               }`}
             >
               {title}

@@ -194,8 +194,7 @@ export default function Dashboard() {
             <div
               className={cn(
                 cardClass,
-                "p-5 sm:p-8 border-l-4 border-l-[var(--accent-phys)] bg-[var(--card)] shadow-md",
-                "bg-linear-to-br from-[var(--card)] via-[var(--card)] to-blue-50/50 dark:to-blue-950/20"
+                "p-5 sm:p-8 border-l-4 border-l-[var(--accent)] bg-[var(--card)] shadow-md"
               )}
             >
               <div className="flex flex-col gap-5">
@@ -228,7 +227,7 @@ export default function Dashboard() {
                     {concretePlan.bmsRead.length > 0 && (
                       <Link
                         to="/bms"
-                        className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-200 hover:bg-emerald-200 dark:hover:bg-emerald-900/50 transition-colors"
+                        className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-[var(--accent)]/10 text-[var(--accent)] hover:bg-[var(--accent)]/15 transition-colors"
                       >
                         <BookOpen className="w-3.5 h-3.5" />
                         {concretePlan.bmsRead.length} Kapitel lernen
@@ -237,7 +236,7 @@ export default function Dashboard() {
                     {concretePlan.bmsReview.length > 0 && (
                       <Link
                         to="/bms"
-                        className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-200 hover:bg-amber-200 dark:hover:bg-amber-900/50 transition-colors"
+                        className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-[var(--accent)]/10 text-[var(--accent)] hover:bg-[var(--accent)]/15 transition-colors"
                       >
                         <RefreshCw className="w-3.5 h-3.5" />
                         {concretePlan.bmsReview.length} wiederholen
@@ -246,7 +245,7 @@ export default function Dashboard() {
                     {concretePlan.bmsQuestions.length > 0 && (
                       <Link
                         to="/fragen-trainer"
-                        className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-200 hover:bg-emerald-200 dark:hover:bg-emerald-900/50 transition-colors"
+                        className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-[var(--accent)]/10 text-[var(--accent)] hover:bg-[var(--accent)]/15 transition-colors"
                       >
                         <ListChecks className="w-3.5 h-3.5" />
                         BMS-Fragen
@@ -255,7 +254,7 @@ export default function Dashboard() {
                     {concretePlan.kffTasks.length > 0 && (
                       <Link
                         to="/kff"
-                        className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-pink-100 dark:bg-pink-900/30 text-pink-800 dark:text-pink-200 hover:bg-pink-200 dark:hover:bg-pink-900/50 transition-colors"
+                        className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-[var(--accent)]/10 text-[var(--accent)] hover:bg-[var(--accent)]/15 transition-colors"
                       >
                         <Brain className="w-3.5 h-3.5" />
                         KFF
@@ -264,7 +263,7 @@ export default function Dashboard() {
                     {concretePlan.tvTexts > 0 && (
                       <Link
                         to="/tv"
-                        className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-200 hover:bg-amber-200 dark:hover:bg-amber-900/50 transition-colors"
+                        className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-[var(--accent)]/10 text-[var(--accent)] hover:bg-[var(--accent)]/15 transition-colors"
                       >
                         <FileText className="w-3.5 h-3.5" />
                         TV
@@ -273,7 +272,7 @@ export default function Dashboard() {
                     {concretePlan.sekTasks.length > 0 && (
                       <Link
                         to="/sek"
-                        className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-rose-100 dark:bg-rose-900/30 text-rose-800 dark:text-rose-200 hover:bg-rose-200 dark:hover:bg-rose-900/50 transition-colors"
+                        className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-[var(--accent)]/10 text-[var(--accent)] hover:bg-[var(--accent)]/15 transition-colors"
                       >
                         <Heart className="w-3.5 h-3.5" />
                         SEK
@@ -361,12 +360,11 @@ export default function Dashboard() {
             <div
               className={cn(
                 cardClass,
-                "p-4 sm:p-5 flex items-center gap-4 border-l-4 border-l-amber-500",
-                "bg-linear-to-br from-amber-50/60 to-orange-50/40 dark:from-amber-950/30 dark:to-orange-950/20"
+                "p-4 sm:p-5 flex items-center gap-4 border-l-4 border-l-[var(--accent)]"
               )}
               aria-label="Streak"
             >
-              <div className="w-12 h-12 rounded-xl bg-amber-100 dark:bg-amber-900/50 flex items-center justify-center shrink-0">
+              <div className="w-12 h-12 rounded-xl bg-[var(--accent)]/10 flex items-center justify-center shrink-0">
                 <StreakFlameIcon
                   streak={flameStreak}
                   hasActivityToday={flameHasActivity}
@@ -395,8 +393,8 @@ export default function Dashboard() {
                 "p-3 lg:p-4 flex items-center lg:flex-col gap-3 lg:gap-2 lg:text-center"
               )}
             >
-              <div className="w-9 h-9 rounded-lg bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center shrink-0">
-                <Timer className="w-4.5 h-4.5 text-orange-500" />
+              <div className="w-9 h-9 rounded-lg bg-[var(--accent)]/10 flex items-center justify-center shrink-0">
+                <Timer className="w-4.5 h-4.5 text-[var(--accent)]" />
               </div>
               <span className="text-sm lg:text-xs font-medium text-[var(--text-primary)]">
                 Simulation
@@ -409,8 +407,8 @@ export default function Dashboard() {
                 "p-3 lg:p-4 flex items-center lg:flex-col gap-3 lg:gap-2 lg:text-center"
               )}
             >
-              <div className="w-9 h-9 rounded-lg bg-violet-100 dark:bg-violet-900/30 flex items-center justify-center shrink-0">
-                <Dumbbell className="w-4.5 h-4.5 text-violet-500" />
+              <div className="w-9 h-9 rounded-lg bg-[var(--accent)]/10 flex items-center justify-center shrink-0">
+                <Dumbbell className="w-4.5 h-4.5 text-[var(--accent)]" />
               </div>
               <span className="text-sm lg:text-xs font-medium text-[var(--text-primary)]">
                 Fragen-Trainer
@@ -423,23 +421,17 @@ export default function Dashboard() {
                 "p-3 lg:p-4 flex items-center lg:flex-col gap-3 lg:gap-2 lg:text-center"
               )}
             >
-              <div className="w-9 h-9 rounded-lg bg-indigo-100 dark:bg-indigo-900/30 flex items-center justify-center shrink-0">
-                <BarChart3 className="w-4.5 h-4.5 text-indigo-500" />
+              <div className="w-9 h-9 rounded-lg bg-[var(--accent)]/10 flex items-center justify-center shrink-0">
+                <BarChart3 className="w-4.5 h-4.5 text-[var(--accent)]" />
               </div>
               <span className="text-sm lg:text-xs font-medium text-[var(--text-primary)]">
                 Fortschritt
               </span>
             </Link>
             <Link to="/fortschritt">
-              <div
-                className={cn(
-                  cardClass,
-                  "h-full p-3 lg:p-4 flex items-center gap-3",
-                  "border-l-4 border-l-[var(--accent-math)] bg-linear-to-br from-violet-50/50 to-[var(--card)]/80 dark:from-violet-950/20 dark:to-[var(--card)]/80"
-                )}
-              >
-                <div className="w-9 h-9 rounded-lg bg-[var(--accent-math)]/20 flex items-center justify-center shrink-0">
-                  <TrendingUp className="w-4.5 h-4.5 text-[var(--accent-math)]" />
+              <div className={cn(cardClass, "h-full p-3 lg:p-4 flex items-center gap-3")}>
+                <div className="w-9 h-9 rounded-lg bg-[var(--accent)]/10 flex items-center justify-center shrink-0">
+                  <TrendingUp className="w-4.5 h-4.5 text-[var(--accent)]" />
                 </div>
                 <div className="min-w-0 flex-1">
                   <p className="text-sm font-medium text-[var(--text-primary)]">Prognose</p>
@@ -450,7 +442,7 @@ export default function Dashboard() {
                   </p>
                 </div>
                 {prognoseSummary.hasEnoughData && (
-                  <p className="text-xl font-bold text-[var(--accent-math)] shrink-0">
+                  <p className="text-xl font-bold text-[var(--accent)] shrink-0">
                     {prognoseSummary.totalPct.toFixed(0)}%
                   </p>
                 )}
@@ -464,13 +456,7 @@ export default function Dashboard() {
             aria-label="Wochen-Aktivität und Freunde"
             className="grid grid-cols-1 lg:grid-cols-2 gap-4"
           >
-            <div
-              className={cn(
-                cardClass,
-                "p-5 border-l-4 border-l-[var(--success)]",
-                "bg-linear-to-br from-teal-50/40 to-[var(--card)] dark:from-teal-950/20 dark:to-[var(--card)]"
-              )}
-            >
+            <div className={cn(cardClass, "p-5 border-l-4 border-l-[var(--accent)]")}>
               <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
                 <p className="text-sm font-medium text-[var(--muted)]">Wochen-Aktivität</p>
                 <p className="text-sm text-[var(--text-primary)]">
@@ -526,7 +512,7 @@ export default function Dashboard() {
 function ReferralCard() {
   const [shared, setShared] = useState(false);
   return (
-    <div className="h-full rounded-xl border border-[var(--accent)]/20 bg-linear-to-br from-[#e8ecf7] to-white dark:from-primary-950/30 dark:to-[var(--card)] p-5 shadow-sm">
+    <div className="h-full rounded-xl border border-[var(--border)] bg-[var(--card)] p-5 shadow-sm">
       <div className="flex items-start justify-between gap-4">
         <div className="flex-1">
           <p className="text-sm font-semibold text-[var(--text-primary)] mb-1">Freunde einladen</p>

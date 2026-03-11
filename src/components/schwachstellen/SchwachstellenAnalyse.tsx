@@ -67,12 +67,12 @@ export function SchwachstellenAnalyse() {
 
   return (
     <div
-      className="rounded-2xl overflow-hidden border border-border/50"
+      className="rounded-2xl overflow-hidden border border-[var(--border)]/50"
       style={{ background: MIDNIGHT }}
     >
-      <div className="p-5 border-b border-border/50">
-        <h2 className="text-lg font-bold text-foreground">Fehler-Analyse</h2>
-        <p className="text-sm text-muted-foreground mt-0.5">
+      <div className="p-5 border-b border-[var(--border)]/50">
+        <h2 className="text-lg font-bold text-[var(--text-primary)]">Fehler-Analyse</h2>
+        <p className="text-sm text-[var(--muted)] mt-0.5">
           Wo du die meisten Fehler machst (Größe = Anzahl) · Root-Cause-Verteilung
         </p>
       </div>
@@ -83,10 +83,10 @@ export function SchwachstellenAnalyse() {
             <div className="lg:col-span-2">
               <RadarHexagonSkeleton height={280} className="rounded-xl" />
             </div>
-            <div className="h-[280px] rounded-xl overflow-hidden bg-background/50 skeleton-shimmer animate-pulse" />
+            <div className="h-[280px] rounded-xl overflow-hidden bg-[var(--background)]/50 skeleton-shimmer animate-pulse" />
           </div>
         ) : !hasData ? (
-          <p className="text-muted-foreground text-sm text-center py-8">
+          <p className="text-[var(--muted)] text-sm text-center py-8">
             Noch keine BMS-Quizze absolviert. Sobald Fehler vorliegen, siehst du hier Treemap und
             Empfehlung.
           </p>
@@ -94,7 +94,7 @@ export function SchwachstellenAnalyse() {
           <>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
               {/* Treemap: Fehler nach Fach/Thema */}
-              <div className="lg:col-span-2 h-[280px] rounded-xl overflow-hidden bg-background/50">
+              <div className="lg:col-span-2 h-[280px] rounded-xl overflow-hidden bg-[var(--background)]/50">
                 {totalWrong > 0 ? (
                   <ResponsiveContainer width="100%" height="100%">
                     <Treemap
@@ -157,7 +157,7 @@ export function SchwachstellenAnalyse() {
                     </Treemap>
                   </ResponsiveContainer>
                 ) : (
-                  <div className="h-full flex items-center justify-center text-muted-foreground text-sm">
+                  <div className="h-full flex items-center justify-center text-[var(--muted)] text-sm">
                     Noch keine Fehler in BMS-Quizzen
                   </div>
                 )}
@@ -199,12 +199,12 @@ export function SchwachstellenAnalyse() {
                       </PieChart>
                     </ResponsiveContainer>
                   ) : (
-                    <div className="h-full flex items-center justify-center text-muted-foreground text-sm">
+                    <div className="h-full flex items-center justify-center text-[var(--muted)] text-sm">
                       —
                     </div>
                   )}
                 </div>
-                <p className="text-xs text-muted-foreground mt-2 text-center">
+                <p className="text-xs text-[var(--muted)] mt-2 text-center">
                   Wissenslücke vs. Flüchtigkeit
                 </p>
               </div>
@@ -218,7 +218,7 @@ export function SchwachstellenAnalyse() {
                 borderColor: "rgba(255, 51, 102, 0.35)",
               }}
             >
-              <p className="text-sm font-medium text-foreground leading-relaxed">
+              <p className="text-sm font-medium text-[var(--text-primary)] leading-relaxed">
                 {actionSentence}
               </p>
             </div>

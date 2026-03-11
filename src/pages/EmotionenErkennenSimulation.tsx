@@ -154,12 +154,14 @@ export default function EmotionenErkennenSimulation() {
             <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2">
               Emotionen erkennen — Simulation
             </h2>
-            <p className="text-sm text-muted max-w-md mx-auto mb-2">
+            <p className="text-sm text-[var(--muted)] max-w-md mx-auto mb-2">
               {TASK_COUNT} Situationsbeschreibungen. Pro Aufgabe 5 Emotionen als &quot;eher
               wahrscheinlich&quot; oder &quot;eher unwahrscheinlich&quot; bewerten. Eine Aufgabe
               gilt nur als richtig, wenn alle 5 Zuordnungen stimmen (Alles-oder-Nichts).
             </p>
-            <p className="text-xs text-muted max-w-md mx-auto">{EMOTIONEN_ERKENNEN_INSTRUKTION}</p>
+            <p className="text-xs text-[var(--muted)] max-w-md mx-auto">
+              {EMOTIONEN_ERKENNEN_INSTRUKTION}
+            </p>
           </div>
           <details className="max-w-md mx-auto text-left group">
             <summary className="text-sm font-medium text-amber-700 dark:text-amber-400 cursor-pointer list-none flex items-center justify-center gap-1 [&::-webkit-details-marker]:hidden">
@@ -169,7 +171,7 @@ export default function EmotionenErkennenSimulation() {
               {EMOTIONEN_ERKENNEN_AUSFUELLVORSCHRIFT}
             </div>
           </details>
-          <div className="flex items-center justify-center gap-4 text-sm text-muted">
+          <div className="flex items-center justify-center gap-4 text-sm text-[var(--muted)]">
             <span className="flex items-center gap-1">
               <Clock className="w-4 h-4" /> 21:00 min
             </span>
@@ -203,7 +205,7 @@ export default function EmotionenErkennenSimulation() {
               <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
                 {score}/{total}
               </h2>
-              <p className="text-sm text-muted">
+              <p className="text-sm text-[var(--muted)]">
                 {percent}% richtig (Alles-oder-Nichts) —{" "}
                 {percent >= 80
                   ? "Ausgezeichnet!"
@@ -279,7 +281,7 @@ export default function EmotionenErkennenSimulation() {
                         );
                       })}
                     </div>
-                    <p className="text-xs text-muted border-t border-gray-200 dark:border-gray-700 pt-2">
+                    <p className="text-xs text-[var(--muted)] border-t border-gray-200 dark:border-gray-700 pt-2">
                       {r.task.explanation}
                     </p>
                   </div>
@@ -328,7 +330,7 @@ export default function EmotionenErkennenSimulation() {
         </span>
       </div>
 
-      <div className="flex items-center justify-between text-sm text-muted">
+      <div className="flex items-center justify-between text-sm text-[var(--muted)]">
         <span>
           Aufgabe {index + 1} von {tasks.length}
         </span>
@@ -337,7 +339,7 @@ export default function EmotionenErkennenSimulation() {
       <Card>
         <CardContent className="p-6 space-y-6">
           <div className="bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg">
-            <p className="text-xs text-muted uppercase tracking-wide mb-1">
+            <p className="text-xs text-[var(--muted)] uppercase tracking-wide mb-1">
               Situationsbeschreibung
             </p>
             <p className="text-sm text-gray-800 dark:text-gray-200 leading-relaxed">
@@ -354,7 +356,7 @@ export default function EmotionenErkennenSimulation() {
               return (
                 <div
                   key={e.id}
-                  className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 p-3 rounded-lg border border-border dark:border-gray-700"
+                  className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 p-3 rounded-lg border border-[var(--border)] dark:border-gray-700"
                 >
                   <span className="text-sm font-medium text-gray-900 dark:text-gray-100">
                     ({e.id}) {e.text}

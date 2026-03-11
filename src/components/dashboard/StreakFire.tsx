@@ -124,7 +124,7 @@ export function StreakFire({ streak, hasActivityToday, className }: StreakFirePr
       <div
         className={cn(
           "relative flex items-center justify-center w-14 h-14 rounded-2xl transition-colors",
-          isGray ? "bg-muted" : "bg-orange-100/80 dark:bg-orange-900/30"
+          isGray ? "bg-[var(--surface)]" : "bg-orange-100/80 dark:bg-orange-900/30"
         )}
       >
         <StreakFlameIcon
@@ -143,7 +143,7 @@ export function StreakFire({ streak, hasActivityToday, className }: StreakFirePr
       >
         {streak}
       </span>
-      <span className="text-xs text-muted">
+      <span className="text-xs text-[var(--muted)]">
         {hasActivityToday ? "Tage-Streak" : "Heute noch nichts"}
       </span>
     </div>

@@ -18,7 +18,7 @@ const SUBJECT_CONFIG: Record<string, { label: string; emoji: string; color: stri
   chemie: { label: "Chemie", emoji: "⚗️", color: "text-red-600" },
   physik: { label: "Physik", emoji: "⚛️", color: "text-blue-600" },
   mathematik: { label: "Mathematik", emoji: "📐", color: "text-violet-600" },
-  gemischt: { label: "Gemischt", emoji: "🎯", color: "text-foreground" },
+  gemischt: { label: "Gemischt", emoji: "🎯", color: "text-[var(--text-primary)]" },
 };
 
 /** Seeded random using daily seed + optional challenge seed */
@@ -123,16 +123,18 @@ export default function QuizChallenge() {
   // ── INTRO ──────────────────────────────────────────────────────
   if (phase === "intro") {
     return (
-      <div className="min-h-screen bg-background flex items-center justify-center p-4">
+      <div className="min-h-screen bg-[var(--background)] flex items-center justify-center p-4">
         <Card className="max-w-md w-full">
           <CardContent className="p-8 text-center space-y-6">
             <div className="w-20 h-20 mx-auto rounded-2xl flex items-center justify-center bg-linear-to-br from-[#1b3ea7] to-[#3655b2]">
-              <Zap className="w-10 h-10 text-primary-foreground" />
+              <Zap className="w-10 h-10 text-white" />
             </div>
 
             <div>
-              <h1 className="text-2xl font-bold text-foreground">MedAT Quiz-Challenge</h1>
-              <p className="text-muted mt-2">
+              <h1 className="text-2xl font-bold text-[var(--text-primary)]">
+                MedAT Quiz-Challenge
+              </h1>
+              <p className="text-[var(--muted)] mt-2">
                 {QUESTION_COUNT} Fragen &bull; {TIME_PER_QUESTION}s pro Frage &bull;{" "}
                 <span className={config.color}>
                   {config.emoji} {config.label}
@@ -166,7 +168,7 @@ export default function QuizChallenge() {
                       <Link
                         key={key}
                         to={`/challenge?fach=${key}`}
-                        className="text-xs px-3 py-1.5 rounded-full bg-muted hover:bg-accent transition"
+                        className="text-xs px-3 py-1.5 rounded-full bg-[var(--surface)] hover:bg-accent transition"
                       >
                         {cfg.emoji} {cfg.label}
                       </Link>
@@ -175,7 +177,7 @@ export default function QuizChallenge() {
               )}
             </div>
 
-            <p className="text-xs text-muted">
+            <p className="text-xs text-[var(--muted)]">
               Kostenlos &bull; Kein Account nötig &bull; Ergebnis sofort teilbar
             </p>
           </CardContent>
@@ -190,13 +192,15 @@ export default function QuizChallenge() {
     const answered = answers[q.id];
 
     return (
-      <div className="min-h-screen bg-background p-4">
+      <div className="min-h-screen bg-[var(--background)] p-4">
         <div className="max-w-lg mx-auto space-y-4">
           {/* Header: timer + progress */}
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2 text-sm font-medium">
-              <Timer className="w-4 h-4 text-muted" />
-              <span className={timeLeft < 30 ? "text-red-500 font-bold" : "text-foreground"}>
+              <Timer className="w-4 h-4 text-[var(--muted)]" />
+              <span
+                className={timeLeft < 30 ? "text-red-500 font-bold" : "text-[var(--text-primary)]"}
+              >
                 {formatTime(timeLeft)}
               </span>
             </div>
@@ -211,12 +215,12 @@ export default function QuizChallenge() {
                         ? answers[questions[i].id] === questions[i].correctOptionId
                           ? "bg-green-500"
                           : "bg-red-400"
-                        : "bg-muted-foreground/30"
+                        : "bg-[var(--muted)]/30"
                   }`}
                 />
               ))}
             </div>
-            <span className="text-sm text-muted">
+            <span className="text-sm text-[var(--muted)]">
               {current + 1}/{QUESTION_COUNT}
             </span>
           </div>
@@ -224,7 +228,9 @@ export default function QuizChallenge() {
           {/* Question */}
           <Card>
             <CardContent className="p-6 space-y-4">
-              <p className="text-lg font-semibold text-foreground leading-relaxed">{q.text}</p>
+              <p className="text-lg font-semibold text-[var(--text-primary)] leading-relaxed">
+                {q.text}
+              </p>
 
               <div className="space-y-2">
                 {q.options.map((opt, i) => {
@@ -233,12 +239,12 @@ export default function QuizChallenge() {
                   const showResult = !!answered;
 
                   let style =
-                    "border-border hover:border-[#1b3ea7] hover:bg-blue-50/50 dark:hover:bg-blue-900/20 cursor-pointer";
+                    "border-[var(--border)] hover:border-[#1b3ea7] hover:bg-blue-50/50 dark:hover:bg-blue-900/20 cursor-pointer";
                   if (showResult && isCorrect)
                     style = "border-green-500 bg-green-50 dark:bg-green-900/20";
                   else if (showResult && isSelected && !isCorrect)
                     style = "border-red-400 bg-red-50 dark:bg-red-900/20";
-                  else if (showResult) style = "border-border opacity-60";
+                  else if (showResult) style = "border-[var(--border)] opacity-60";
 
                   return (
                     <button
@@ -247,7 +253,7 @@ export default function QuizChallenge() {
                       disabled={!!answered}
                       className={`w-full flex items-center gap-3 p-3 rounded-xl border-2 transition-all text-left ${style}`}
                     >
-                      <span className="w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-lg bg-muted font-bold text-sm">
+                      <span className="w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-lg bg-[var(--surface)] font-bold text-sm">
                         {OPTION_LABELS[i]}
                       </span>
                       <span className="flex-1 text-sm">{opt.text}</span>
@@ -302,7 +308,7 @@ export default function QuizChallenge() {
           : "Hier ist Potential!";
 
   return (
-    <div className="min-h-screen bg-background p-4">
+    <div className="min-h-screen bg-[var(--background)] p-4">
       <div className="max-w-lg mx-auto space-y-6">
         {/* Score card */}
         <Card>
@@ -312,15 +318,15 @@ export default function QuizChallenge() {
               <div className="text-4xl font-bold" style={{ color: NAVY }}>
                 {score}/{QUESTION_COUNT}
               </div>
-              <p className="text-muted mt-1">
+              <p className="text-[var(--muted)] mt-1">
                 {pct}% richtig &bull; {formatTime(totalTime)}
               </p>
-              <p className="text-lg font-semibold mt-2 text-foreground">{message}</p>
+              <p className="text-lg font-semibold mt-2 text-[var(--text-primary)]">{message}</p>
             </div>
 
             {/* Score bar */}
             <div className="w-full max-w-xs mx-auto">
-              <div className="w-full bg-muted rounded-full h-3">
+              <div className="w-full bg-[var(--surface)] rounded-full h-3">
                 <div
                   className={`h-3 rounded-full transition-all ${
                     pct >= 80 ? "bg-green-500" : pct >= 50 ? "bg-amber-500" : "bg-red-500"
@@ -332,7 +338,9 @@ export default function QuizChallenge() {
 
             {/* Share */}
             <div className="pt-2 space-y-3">
-              <p className="text-sm font-semibold text-foreground">Fordere deine Freunde heraus!</p>
+              <p className="text-sm font-semibold text-[var(--text-primary)]">
+                Fordere deine Freunde heraus!
+              </p>
               <ShareResultButton text={shareText} />
             </div>
           </CardContent>
@@ -356,7 +364,7 @@ export default function QuizChallenge() {
                       <XCircle className="w-5 h-5 text-red-400 mt-0.5 flex-shrink-0" />
                     )}
                     <div className="space-y-1">
-                      <p className="text-sm font-medium text-foreground">
+                      <p className="text-sm font-medium text-[var(--text-primary)]">
                         {i + 1}. {q.text}
                       </p>
                       {!correct && (
@@ -366,7 +374,9 @@ export default function QuizChallenge() {
                           {q.options.find((o) => o.id === q.correctOptionId)?.text}
                         </p>
                       )}
-                      {q.explanation && <p className="text-xs text-muted mt-1">{q.explanation}</p>}
+                      {q.explanation && (
+                        <p className="text-xs text-[var(--muted)] mt-1">{q.explanation}</p>
+                      )}
                     </div>
                   </div>
                 </CardContent>
@@ -378,8 +388,8 @@ export default function QuizChallenge() {
         {/* CTA */}
         <Card className="border-2" style={{ borderColor: NAVY }}>
           <CardContent className="p-6 text-center space-y-4">
-            <h3 className="text-lg font-bold text-foreground">Bereit für mehr?</h3>
-            <p className="text-sm text-muted">
+            <h3 className="text-lg font-bold text-[var(--text-primary)]">Bereit für mehr?</h3>
+            <p className="text-sm text-[var(--muted)]">
               4.300+ Übungsfragen &bull; Alle MedAT-Bereiche &bull; KI-Adaptiv &bull; 2 Wochen
               gratis
             </p>

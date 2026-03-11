@@ -55,15 +55,15 @@ export function BadgeUnlockModal({ badgeId, onDismiss }: BadgeUnlockModalProps) 
             className={cn(
               "relative w-full max-w-md rounded-2xl overflow-hidden border border-white/20",
               "bg-[#0f172a]/95 backdrop-blur-xl shadow-2xl",
-              "ring-2 ring-primary-500/30"
+              "ring-2 ring-[var(--accent)]/30"
             )}
           >
-            <div className="absolute inset-0 bg-linear-to-br from-primary-500/10 via-transparent to-violet-500/10 pointer-events-none" />
+            <div className="absolute inset-0 bg-linear-to-br from-[var(--accent)]/10 via-transparent to-violet-500/10 pointer-events-none" />
             <div className="relative p-8 text-center">
               <button
                 type="button"
                 onClick={onDismiss}
-                className="absolute top-3 right-3 p-2 rounded-full text-muted hover:bg-white/10 transition-colors cursor-pointer"
+                className="absolute top-3 right-3 p-2 rounded-full text-[var(--muted)] hover:bg-white/10 transition-colors cursor-pointer"
                 aria-label="Schließen"
               >
                 <X className="w-5 h-5" />
@@ -76,14 +76,14 @@ export function BadgeUnlockModal({ badgeId, onDismiss }: BadgeUnlockModalProps) 
               >
                 <BadgeIcon badgeId={badge.id} icon={badge.icon} earned size="lg" />
               </motion.div>
-              <p className="text-xs font-semibold uppercase tracking-wider text-primary-400 mb-1">
+              <p className="text-xs font-semibold uppercase tracking-wider text-[var(--accent)]/60 mb-1">
                 Badge freigeschaltet
               </p>
               <h2 id="badge-unlock-title" className="text-xl font-bold text-white mb-2">
                 {badge.name}
               </h2>
-              <p className="text-muted text-sm mb-4">{badge.description}</p>
-              <p className="text-primary-300 text-sm font-medium">
+              <p className="text-[var(--muted)] text-sm mb-4">{badge.description}</p>
+              <p className="text-[var(--accent)]/30 text-sm font-medium">
                 {MOTIVATIONAL_MESSAGES[badge.tier]}
               </p>
               <button
@@ -93,7 +93,7 @@ export function BadgeUnlockModal({ badgeId, onDismiss }: BadgeUnlockModalProps) 
                   setShared(true);
                   setTimeout(() => setShared(false), 2000);
                 }}
-                className="mt-5 flex items-center gap-2 mx-auto px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-muted text-sm transition-colors cursor-pointer"
+                className="mt-5 flex items-center gap-2 mx-auto px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-[var(--muted)] text-sm transition-colors cursor-pointer"
               >
                 <Share2 className="w-4 h-4" />
                 {shared ? "Kopiert!" : "Teilen"}

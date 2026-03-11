@@ -9,7 +9,7 @@ function PageIndicator({ current, total }: { current: number; total: number }) {
         <div
           key={i}
           className={`h-1.5 rounded-full transition-all ${
-            i === current ? "w-6 bg-orange-500" : "w-1.5 bg-muted-foreground/30"
+            i === current ? "w-6 bg-orange-500" : "w-1.5 bg-[var(--muted)]/30"
           }`}
         />
       ))}
@@ -38,12 +38,12 @@ function LetterExample({
   description: string;
 }) {
   return (
-    <div className="bg-card border border-border rounded-lg p-4">
+    <div className="bg-[var(--card)] border border-[var(--border)] rounded-lg p-4">
       <div className="flex items-center gap-2 mb-2 flex-wrap">
         {letters.split("").map((letter, i) => (
           <span
             key={i}
-            className="w-10 h-10 bg-muted rounded-lg flex items-center justify-center text-lg font-bold text-foreground shadow-sm"
+            className="w-10 h-10 bg-[var(--surface)] rounded-lg flex items-center justify-center text-lg font-bold text-[var(--text-primary)] shadow-sm"
           >
             {letter}
           </span>
@@ -53,7 +53,7 @@ function LetterExample({
         <span className="text-green-600 dark:text-green-400 font-bold">&rarr;</span>
         <span className="font-bold text-green-700 dark:text-green-300 text-lg">{solution}</span>
       </div>
-      <p className="text-sm text-muted mt-1">{description}</p>
+      <p className="text-sm text-[var(--muted)] mt-1">{description}</p>
     </div>
   );
 }
@@ -63,8 +63,10 @@ function Seite1() {
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-xl font-bold text-foreground mb-2">Was ist Wortfl&uuml;ssigkeit?</h2>
-        <p className="text-sm text-muted">
+        <h2 className="text-xl font-bold text-[var(--text-primary)] mb-2">
+          Was ist Wortfl&uuml;ssigkeit?
+        </h2>
+        <p className="text-sm text-[var(--muted)]">
           Im Untertest &quot;Wortfl&uuml;ssigkeit&quot; des MedAT bekommst du eine Gruppe von
           durchmischten Buchstaben. Deine Aufgabe: Bilde daraus ein sinnvolles deutsches Wort. Nicht
           alle Buchstaben m&uuml;ssen verwendet werden!
@@ -105,7 +107,7 @@ function Seite1() {
       </div>
 
       <div>
-        <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-3">
+        <h3 className="text-sm font-semibold text-[var(--muted)] uppercase tracking-wider mb-3">
           Beispiele nach Schwierigkeit
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -155,26 +157,26 @@ function Seite2() {
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-xl font-bold text-foreground mb-2">
+        <h2 className="text-xl font-bold text-[var(--text-primary)] mb-2">
           Strategien f&uuml;r Wortfl&uuml;ssigkeit
         </h2>
-        <p className="text-sm text-muted">
+        <p className="text-sm text-[var(--muted)]">
           Mit den richtigen Strategien l&ouml;st du Wortfl&uuml;ssigkeit-Aufgaben schnell und
           sicher.
         </p>
       </div>
 
       {/* Strategy 1 */}
-      <div className="bg-card border border-border rounded-lg p-5 space-y-3">
+      <div className="bg-[var(--card)] border border-[var(--border)] rounded-lg p-5 space-y-3">
         <div className="flex items-center gap-3">
-          <span className="bg-orange-500 text-primary-foreground text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
+          <span className="bg-orange-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
             1
           </span>
           <h3 className="font-semibold text-gray-900 dark:text-gray-100">
             H&auml;ufige Anfangs- und Endsilben suchen
           </h3>
         </div>
-        <p className="text-sm text-muted pl-11">
+        <p className="text-sm text-[var(--muted)] pl-11">
           Suche zuerst nach typischen deutschen Wortanf&auml;ngen und -endungen. Das schr&auml;nkt
           die M&ouml;glichkeiten sofort ein.
         </p>
@@ -226,16 +228,16 @@ function Seite2() {
       </div>
 
       {/* Strategy 2 */}
-      <div className="bg-card border border-border rounded-lg p-5 space-y-3">
+      <div className="bg-[var(--card)] border border-[var(--border)] rounded-lg p-5 space-y-3">
         <div className="flex items-center gap-3">
-          <span className="bg-orange-500 text-primary-foreground text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
+          <span className="bg-orange-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
             2
           </span>
           <h3 className="font-semibold text-gray-900 dark:text-gray-100">
             Vokale zuerst identifizieren
           </h3>
         </div>
-        <p className="text-sm text-muted pl-11">
+        <p className="text-sm text-[var(--muted)] pl-11">
           Markiere zuerst alle Vokale (A, E, I, O, U). Die Vokal-Konsonant-Struktur gibt dir einen
           Hinweis auf die Wortstruktur.
         </p>
@@ -254,16 +256,16 @@ function Seite2() {
       </div>
 
       {/* Strategy 3 */}
-      <div className="bg-card border border-border rounded-lg p-5 space-y-3">
+      <div className="bg-[var(--card)] border border-[var(--border)] rounded-lg p-5 space-y-3">
         <div className="flex items-center gap-3">
-          <span className="bg-orange-500 text-primary-foreground text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
+          <span className="bg-orange-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
             3
           </span>
           <h3 className="font-semibold text-gray-900 dark:text-gray-100">
             H&auml;ufige Buchstabenkombinationen erkennen
           </h3>
         </div>
-        <p className="text-sm text-muted pl-11">
+        <p className="text-sm text-[var(--muted)] pl-11">
           Bestimmte Buchstabenkombinationen kommen im Deutschen extrem h&auml;ufig vor. Wenn du sie
           siehst, bilde daraus den Kern des Worts.
         </p>
@@ -278,7 +280,7 @@ function Seite2() {
           ].map(({ combo, example }) => (
             <div key={combo} className="bg-gray-50 dark:bg-gray-800/50 rounded-lg p-2 text-center">
               <p className="font-mono font-bold text-orange-600 dark:text-orange-400">{combo}</p>
-              <p className="text-xs text-muted mt-0.5">{example}</p>
+              <p className="text-xs text-[var(--muted)] mt-0.5">{example}</p>
             </div>
           ))}
         </div>
@@ -368,7 +370,7 @@ export default function WortfluessigkeitLernen() {
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
           <PageIndicator current={currentPage} total={totalPages} />
-          <span className="text-xs text-muted">
+          <span className="text-xs text-[var(--muted)]">
             Seite {currentPage + 1} von {totalPages}
           </span>
         </div>
@@ -380,7 +382,7 @@ export default function WortfluessigkeitLernen() {
               className={`text-xs px-3 py-1.5 rounded-full transition-colors cursor-pointer ${
                 i === currentPage
                   ? "bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 font-medium"
-                  : "text-muted hover:bg-gray-100 dark:hover:bg-gray-800"
+                  : "text-[var(--muted)] hover:bg-gray-100 dark:hover:bg-gray-800"
               }`}
             >
               {title}

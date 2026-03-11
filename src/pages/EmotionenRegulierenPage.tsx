@@ -36,13 +36,13 @@ export default function EmotionenRegulierenPage() {
           <Heart className="w-6 h-6 text-pink-600 dark:text-pink-400" />
         </div>
         <div>
-          <h1 className="text-2xl font-bold text-foreground">Emotionen regulieren</h1>
+          <h1 className="text-2xl font-bold text-[var(--text-primary)]">Emotionen regulieren</h1>
           <div className="flex items-center gap-3 mt-1">
-            <span className="text-sm text-muted">SEK</span>
+            <span className="text-sm text-[var(--muted)]">SEK</span>
             {progress && progress.total > 0 && (
               <>
-                <span className="text-muted">&middot;</span>
-                <span className="text-sm text-muted">
+                <span className="text-[var(--muted)]">&middot;</span>
+                <span className="text-sm text-[var(--muted)]">
                   {pct}% richtig ({progress.correct}/{progress.total})
                 </span>
               </>
@@ -52,7 +52,7 @@ export default function EmotionenRegulierenPage() {
       </div>
 
       {/* Tabs */}
-      <div className="flex gap-1 bg-muted rounded-lg p-1">
+      <div className="flex gap-1 bg-[var(--surface)] rounded-lg p-1">
         {tabs.map((tab) => {
           const TabIcon = tab.icon;
           const isActive = activeTab === tab.key;
@@ -62,8 +62,8 @@ export default function EmotionenRegulierenPage() {
               onClick={() => setActiveTab(tab.key)}
               className={`flex-1 flex items-center justify-center gap-2 px-4 py-2.5 rounded-md text-sm font-medium transition-all cursor-pointer ${
                 isActive
-                  ? "bg-background text-foreground shadow-sm"
-                  : "text-muted-foreground hover:text-foreground"
+                  ? "bg-[var(--background)] text-[var(--text-primary)] shadow-sm"
+                  : "text-muted-foreground hover:text-[var(--text-primary)]"
               }`}
             >
               <TabIcon className="w-4 h-4" />

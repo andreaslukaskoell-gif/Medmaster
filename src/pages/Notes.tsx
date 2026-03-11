@@ -54,7 +54,7 @@ function parseMarkdown(text: string): string {
     // Links [text](url)
     result = result.replace(
       /\[([^\]]+)\]\(([^)]+)\)/g,
-      '<a href="$2" class="text-primary-600 hover:underline" target="_blank" rel="noopener noreferrer">$1</a>'
+      '<a href="$2" class="text-[var(--accent)] hover:underline" target="_blank" rel="noopener noreferrer">$1</a>'
     );
 
     return result;
@@ -109,7 +109,7 @@ function parseMarkdown(text: string): string {
       }
       const quoteContent = quoteLines.map(processInline).join("<br />");
       htmlParts.push(
-        `<blockquote class="border-l-4 border-primary-300 pl-3 italic text-gray-600 dark:text-gray-400 my-2">${quoteContent}</blockquote>`
+        `<blockquote class="border-l-4 border-[var(--accent)]/30 pl-3 italic text-gray-600 dark:text-gray-400 my-2">${quoteContent}</blockquote>`
       );
       continue;
     }
@@ -297,7 +297,7 @@ export default function Notes() {
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Meine Notizen</h1>
-          <p className="text-muted mt-1">
+          <p className="text-[var(--muted)] mt-1">
             {allNotes.length} Notiz{allNotes.length !== 1 ? "en" : ""} gespeichert
           </p>
         </div>
@@ -305,13 +305,13 @@ export default function Notes() {
 
       {/* Search */}
       <div className="relative">
-        <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted" />
+        <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[var(--muted)]" />
         <input
           type="text"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           placeholder="Notizen durchsuchen..."
-          className="w-full pl-10 pr-4 py-2.5 rounded-lg border border-border dark:border-gray-700 bg-white dark:bg-gray-900 text-sm text-gray-900 dark:text-gray-100 placeholder:text-muted outline-none focus:ring-2 focus:ring-primary-500"
+          className="w-full pl-10 pr-4 py-2.5 rounded-lg border border-[var(--border)] dark:border-gray-700 bg-white dark:bg-gray-900 text-sm text-gray-900 dark:text-gray-100 placeholder:text-[var(--muted)] outline-none focus:ring-2 focus:ring-[var(--accent)]"
         />
       </div>
 
@@ -319,8 +319,8 @@ export default function Notes() {
       {allNotes.length === 0 ? (
         <Card>
           <CardContent className="p-12 text-center">
-            <StickyNote className="w-12 h-12 text-muted mx-auto mb-3" />
-            <p className="text-muted">
+            <StickyNote className="w-12 h-12 text-[var(--muted)] mx-auto mb-3" />
+            <p className="text-[var(--muted)]">
               {searchQuery.length >= 2
                 ? "Keine Notizen gefunden."
                 : "Noch keine Notizen. Erstelle Notizen beim Lesen von BMS-Kapiteln!"}
@@ -338,7 +338,7 @@ export default function Notes() {
                   <div className="flex items-center justify-between">
                     <div>
                       <CardTitle className="text-base">{n.chapterTitle}</CardTitle>
-                      <p className="text-xs text-muted capitalize mt-0.5">{n.subject}</p>
+                      <p className="text-xs text-[var(--muted)] capitalize mt-0.5">{n.subject}</p>
                     </div>
                     <div className="flex gap-1">
                       {!isEditing && (
@@ -367,13 +367,13 @@ export default function Notes() {
                   {isEditing ? (
                     <div className="space-y-2">
                       {/* ---- Edit / Preview toggle ---- */}
-                      <div className="flex items-center gap-1 border-b border-border dark:border-gray-700 pb-2">
+                      <div className="flex items-center gap-1 border-b border-[var(--border)] dark:border-gray-700 pb-2">
                         <button
                           type="button"
                           onClick={() => setPreviewMode(false)}
                           className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-md transition-colors ${
                             !previewMode
-                              ? "bg-primary-100 dark:bg-primary-900/40 text-primary-700 dark:text-primary-300"
+                              ? "bg-[var(--accent)]/10 dark:bg-[var(--accent)]/10 text-[var(--accent)]/30"
                               : "text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
                           }`}
                         >
@@ -385,7 +385,7 @@ export default function Notes() {
                           onClick={() => setPreviewMode(true)}
                           className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-md transition-colors ${
                             previewMode
-                              ? "bg-primary-100 dark:bg-primary-900/40 text-primary-700 dark:text-primary-300"
+                              ? "bg-[var(--accent)]/10 dark:bg-[var(--accent)]/10 text-[var(--accent)]/30"
                               : "text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
                           }`}
                         >
@@ -397,7 +397,7 @@ export default function Notes() {
                       {previewMode ? (
                         /* ---- Live preview ---- */
                         <div
-                          className="min-h-[8rem] p-3 rounded-lg border border-border dark:border-gray-700 bg-white dark:bg-gray-800 overflow-y-auto prose-sm"
+                          className="min-h-[8rem] p-3 rounded-lg border border-[var(--border)] dark:border-gray-700 bg-white dark:bg-gray-800 overflow-y-auto prose-sm"
                           dangerouslySetInnerHTML={{
                             __html: parseMarkdown(editContent),
                           }}
@@ -405,7 +405,7 @@ export default function Notes() {
                       ) : (
                         <>
                           {/* ---- Formatting toolbar ---- */}
-                          <div className="flex flex-wrap items-center gap-1 rounded-lg bg-gray-50 dark:bg-gray-800/60 border border-border dark:border-gray-700 px-2 py-1.5">
+                          <div className="flex flex-wrap items-center gap-1 rounded-lg bg-gray-50 dark:bg-gray-800/60 border border-[var(--border)] dark:border-gray-700 px-2 py-1.5">
                             {toolbarHints.map((hint) => {
                               const Icon = hint.icon;
                               return (
@@ -414,7 +414,7 @@ export default function Notes() {
                                   type="button"
                                   title={`${hint.label}  (${hint.syntax})`}
                                   onClick={() => insertSyntax(hint.insert)}
-                                  className="inline-flex items-center gap-1 px-1.5 py-1 text-xs text-gray-500 dark:text-gray-400 hover:text-primary-700 dark:hover:text-primary-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded transition-colors"
+                                  className="inline-flex items-center gap-1 px-1.5 py-1 text-xs text-gray-500 dark:text-gray-400 hover:text-[var(--accent)] dark:hover:text-[var(--accent)]/30 hover:bg-gray-200 dark:hover:bg-gray-700 rounded transition-colors"
                                 >
                                   <Icon className="w-3.5 h-3.5" />
                                   <span className="hidden sm:inline">{hint.label}</span>
@@ -428,7 +428,7 @@ export default function Notes() {
                             data-markdown-editor=""
                             value={editContent}
                             onChange={(e) => setEditContent(e.target.value)}
-                            className="w-full h-48 p-3 rounded-lg border border-border dark:border-gray-700 bg-white dark:bg-gray-800 text-sm font-mono text-gray-900 dark:text-gray-100 outline-none focus:ring-2 focus:ring-primary-500 resize-y"
+                            className="w-full h-48 p-3 rounded-lg border border-[var(--border)] dark:border-gray-700 bg-white dark:bg-gray-800 text-sm font-mono text-gray-900 dark:text-gray-100 outline-none focus:ring-2 focus:ring-[var(--accent)] resize-y"
                           />
                         </>
                       )}

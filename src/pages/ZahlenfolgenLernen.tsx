@@ -44,7 +44,7 @@ function SequenceExample({
   return (
     <div className="bg-[var(--card)] border border-[var(--border)] rounded-lg p-4">
       <h4 className="font-semibold text-[var(--text-primary)] mb-1">{label}</h4>
-      <p className="text-sm text-muted mb-3">{description}</p>
+      <p className="text-sm text-[var(--muted)] mb-3">{description}</p>
       <div className="flex items-center gap-2 flex-wrap font-mono text-lg">
         {sequence.map((val, i) => (
           <span
@@ -71,7 +71,7 @@ function Seite1() {
     <div className="space-y-6">
       <div>
         <h2 className="text-xl font-bold text-[var(--text-primary)] mb-2">Mustertypen erkennen</h2>
-        <p className="text-sm text-muted">
+        <p className="text-sm text-[var(--muted)]">
           Im MedAT gibt es 6 Haupttypen von Zahlenfolgen. Lerne sie zu erkennen, um Aufgaben schnell
           und sicher zu l&ouml;sen.
         </p>
@@ -201,7 +201,7 @@ function Seite2() {
         <h2 className="text-xl font-bold text-[var(--text-primary)] mb-2">
           L&ouml;sungsstrategie Schritt f&uuml;r Schritt
         </h2>
-        <p className="text-sm text-muted">
+        <p className="text-sm text-[var(--muted)]">
           Gehe bei jeder Aufgabe systematisch vor — so findest du das Muster schnell und sicher.
         </p>
       </div>
@@ -216,7 +216,7 @@ function Seite2() {
             Differenzen bilden (1. Ordnung)
           </h3>
         </div>
-        <p className="text-sm text-muted pl-11">
+        <p className="text-sm text-[var(--muted)] pl-11">
           Berechne die Differenz zwischen aufeinanderfolgenden Zahlen. Sind alle Differenzen gleich?
           → Simple Folge mit konstanter Differenz.
         </p>
@@ -241,7 +241,7 @@ function Seite2() {
             Differenzen der Differenzen (2. Ordnung)
           </h3>
         </div>
-        <p className="text-sm text-muted pl-11">
+        <p className="text-sm text-[var(--muted)] pl-11">
           Wenn die 1. Differenzen kein Muster zeigen, bilde die Differenzen der Differenzen.
           Konstante 2. Differenz? → Quadratische Folge.
         </p>
@@ -265,7 +265,7 @@ function Seite2() {
           </span>
           <h3 className="font-semibold text-[var(--text-primary)]">Zweiersprung pr&uuml;fen</h3>
         </div>
-        <p className="text-sm text-muted pl-11">
+        <p className="text-sm text-[var(--muted)] pl-11">
           Kein Muster bei den Differenzen? Markiere jede 2. Zahl und pr&uuml;fe beide Teilfolgen
           separat. Das ist mit 90% der h&auml;ufigste MedAT-Aufgabentyp!
         </p>
@@ -294,7 +294,7 @@ function Seite2() {
           </span>
           <h3 className="font-semibold text-[var(--text-primary)]">Dreiersprung / Vierersprung</h3>
         </div>
-        <p className="text-sm text-muted pl-11">
+        <p className="text-sm text-[var(--muted)] pl-11">
           Immer noch kein Muster? Probiere jede 3. oder 4. Zahl zu markieren. Seltener im MedAT,
           aber kommt vor.
         </p>
@@ -308,7 +308,7 @@ function Seite2() {
           </span>
           <h3 className="font-semibold text-[var(--text-primary)]">Rekursion pr&uuml;fen</h3>
         </div>
-        <p className="text-sm text-muted pl-11">
+        <p className="text-sm text-[var(--muted)] pl-11">
           Pr&uuml;fe ob a+b=c, a&times;b=c oder &auml;hnliche Beziehungen zwischen
           aufeinanderfolgenden Zahlen bestehen.
         </p>
@@ -406,7 +406,7 @@ export default function ZahlenfolgenLernen() {
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
           <PageIndicator current={currentPage} total={totalPages} />
-          <span className="text-xs text-muted">
+          <span className="text-xs text-[var(--muted)]">
             Seite {currentPage + 1} von {totalPages}
           </span>
         </div>
@@ -418,7 +418,7 @@ export default function ZahlenfolgenLernen() {
               className={`text-xs px-3 py-1.5 rounded-full transition-colors cursor-pointer ${
                 i === currentPage
                   ? "bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 font-medium"
-                  : "text-muted hover:bg-[var(--border)]/50"
+                  : "text-[var(--muted)] hover:bg-[var(--border)]/50"
               }`}
             >
               {title}

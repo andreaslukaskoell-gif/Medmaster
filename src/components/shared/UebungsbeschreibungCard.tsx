@@ -41,7 +41,7 @@ export function UebungsbeschreibungCard({
         <button
           type="button"
           onClick={() => setCollapsed((c) => !c)}
-          className="ml-auto p-1 rounded text-muted hover:bg-[var(--border)]/50 transition-colors cursor-pointer"
+          className="ml-auto p-1 rounded text-[var(--muted)] hover:bg-[var(--border)]/50 transition-colors cursor-pointer"
           aria-expanded={!collapsed}
         >
           {collapsed ? <ChevronDown className="w-4 h-4" /> : <ChevronUp className="w-4 h-4" />}
@@ -54,15 +54,15 @@ export function UebungsbeschreibungCard({
     <div className="space-y-4 text-sm">
       <section>
         <h4 className="font-medium text-[var(--text-primary)] mb-1">Ablauf</h4>
-        <p className="text-muted leading-relaxed">{u.ablauf}</p>
+        <p className="text-[var(--muted)] leading-relaxed">{u.ablauf}</p>
       </section>
       <section>
         <h4 className="font-medium text-[var(--text-primary)] mb-1">Aufbau & Struktur</h4>
-        <p className="text-muted leading-relaxed">{u.aufbauStruktur}</p>
+        <p className="text-[var(--muted)] leading-relaxed">{u.aufbauStruktur}</p>
       </section>
       <section>
         <h4 className="font-medium text-[var(--text-primary)] mb-1">Bewertung</h4>
-        <p className="text-muted leading-relaxed">{u.bewertung}</p>
+        <p className="text-[var(--muted)] leading-relaxed">{u.bewertung}</p>
       </section>
     </div>
   );

@@ -104,7 +104,7 @@ export default function EMSpectrum() {
       <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">
         Elektromagnetisches Spektrum
       </h4>
-      <p className="text-xs text-muted">Klicke auf einen Bereich für Details.</p>
+      <p className="text-xs text-[var(--muted)]">Klicke auf einen Bereich für Details.</p>
       <svg viewBox="0 0 460 300" className="w-full max-w-lg mx-auto">
         <title>Elektromagnetisches Spektrum</title>
         <defs>

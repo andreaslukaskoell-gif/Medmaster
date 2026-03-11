@@ -35,7 +35,7 @@ export function ChapterSRSBadge({ chapterId, className }: ChapterSRSBadgeProps) 
     style = "bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400";
   } else {
     label = daysUntil === 1 ? "Wiederholung morgen" : `Wiederholung in ${daysUntil} Tagen`;
-    style = "bg-muted text-muted-foreground";
+    style = "bg-[var(--surface)] text-[var(--muted)]";
   }
 
   return (

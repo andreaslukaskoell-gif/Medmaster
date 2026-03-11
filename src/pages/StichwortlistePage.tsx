@@ -199,8 +199,12 @@ export default function StichwortlistePage() {
       <BreadcrumbNav items={[{ label: "BMS", href: "/bms" }, { label: "Stichwortliste" }]} />
 
       <div>
-        <h1 className="text-2xl font-bold text-foreground">BMS-Stichwortliste 2025/2026</h1>
-        <p className="text-muted mt-1">Offizielle Prüfungsthemen mit Lernfortschritt-Tracking</p>
+        <h1 className="text-2xl font-bold text-[var(--text-primary)]">
+          BMS-Stichwortliste 2025/2026
+        </h1>
+        <p className="text-[var(--muted)] mt-1">
+          Offizielle Prüfungsthemen mit Lernfortschritt-Tracking
+        </p>
       </div>
 
       {/* Abdeckungs-Dashboard */}
@@ -223,7 +227,7 @@ export default function StichwortlistePage() {
                   <span className={`text-xs font-bold ${colors.text}`}>{fs.prozent}%</span>
                 </div>
                 <Progress value={fs.prozent} className="h-2" />
-                <p className="text-xs text-muted mt-1.5">
+                <p className="text-xs text-[var(--muted)] mt-1.5">
                   {fs.abgedeckt}/{fs.total} Stichworte
                 </p>
               </CardContent>
@@ -237,7 +241,7 @@ export default function StichwortlistePage() {
         <CardContent className="p-4">
           <div className="flex flex-wrap items-center gap-4 text-sm">
             <div className="flex items-center gap-2">
-              <Target className="w-4 h-4 text-primary-600" />
+              <Target className="w-4 h-4 text-[var(--accent)]" />
               <span className="font-medium">{stats.total} Stichworte gesamt</span>
             </div>
             <div className="flex items-center gap-2">
@@ -273,8 +277,8 @@ export default function StichwortlistePage() {
               onClick={() => setActiveTab(tab.id)}
               className={`px-3 py-1.5 rounded-lg text-sm font-medium whitespace-nowrap transition-colors cursor-pointer ${
                 activeTab === tab.id
-                  ? "bg-primary-600 text-primary-foreground"
-                  : "bg-muted text-muted-foreground hover:bg-accent"
+                  ? "bg-[var(--accent)] text-white"
+                  : "bg-[var(--surface)] text-muted-foreground hover:bg-accent"
               }`}
             >
               {tab.label}
@@ -289,13 +293,13 @@ export default function StichwortlistePage() {
               placeholder="Stichwort suchen..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-9 pr-3 py-1.5 rounded-lg border border-border bg-background text-sm"
+              className="w-full pl-9 pr-3 py-1.5 rounded-lg border border-[var(--border)] bg-[var(--background)] text-sm"
             />
           </div>
           <select
             value={priorityFilter}
             onChange={(e) => setPriorityFilter(e.target.value)}
-            className="px-3 py-1.5 rounded-lg border border-border bg-background text-sm cursor-pointer"
+            className="px-3 py-1.5 rounded-lg border border-[var(--border)] bg-[var(--background)] text-sm cursor-pointer"
           >
             <option value="alle">Alle Prioritäten</option>
             <option value="hoch">Hoch</option>
@@ -315,7 +319,7 @@ export default function StichwortlistePage() {
                 <span className={`text-xs font-bold px-2 py-0.5 rounded ${colors.badge}`}>
                   {fachConfig[group.fach as keyof typeof fachConfig]?.label}
                 </span>
-                <h3 className="text-sm font-semibold text-foreground">
+                <h3 className="text-sm font-semibold text-[var(--text-primary)]">
                   {group.kapitelNr}. {group.kapitel}
                 </h3>
               </div>
@@ -336,7 +340,7 @@ export default function StichwortlistePage() {
                         <div className="flex items-start justify-between gap-3">
                           <div className="flex-1 min-w-0">
                             <div className="flex items-center gap-2 flex-wrap">
-                              <span className="font-medium text-foreground text-sm">
+                              <span className="font-medium text-[var(--text-primary)] text-sm">
                                 {sw.thema}
                               </span>
                               {sw.neu2026 && (
@@ -350,14 +354,14 @@ export default function StichwortlistePage() {
                                 </span>
                               )}
                             </div>
-                            <p className="text-xs text-muted mt-1 truncate">
+                            <p className="text-xs text-[var(--muted)] mt-1 truncate">
                               {sw.unterthemen.join(" · ")}
                             </p>
                           </div>
 
                           <div className="flex items-center gap-2 shrink-0">
                             {st.questionCount > 0 && (
-                              <span className="text-xs text-muted hidden sm:inline">
+                              <span className="text-xs text-[var(--muted)] hidden sm:inline">
                                 {st.questionCount} Fragen
                               </span>
                             )}
@@ -371,7 +375,7 @@ export default function StichwortlistePage() {
                                         ? "bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-300"
                                         : as.confidence === "unsicher"
                                           ? "bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300"
-                                          : "bg-muted text-muted-foreground"
+                                          : "bg-[var(--surface)] text-muted-foreground"
                                     }`}
                                   >
                                     {as.confidence === "sicher"
@@ -406,14 +410,14 @@ export default function StichwortlistePage() {
                               </span>
                             )}
                             {st.status === "nicht-begonnen" && (
-                              <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium bg-muted text-muted-foreground">
+                              <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium bg-[var(--surface)] text-muted-foreground">
                                 Offen
                               </span>
                             )}
                             {st.questionCount > 0 && (
                               <Link
                                 to={`/schwachstellen?stichwort=${sw.id}`}
-                                className="inline-flex items-center gap-1 px-2 py-1 rounded-lg text-xs font-medium bg-primary-100 text-primary-700 dark:bg-primary-900/30 dark:text-primary-400 hover:bg-primary-200 dark:hover:bg-primary-900/50 transition-colors"
+                                className="inline-flex items-center gap-1 px-2 py-1 rounded-lg text-xs font-medium bg-[var(--accent)]/10 text-[var(--accent)] dark:bg-[var(--accent)]/10 dark:text-[var(--accent)]/60 hover:bg-[var(--accent)]/20 dark:hover:bg-[var(--accent)]/10/50 transition-colors"
                               >
                                 <Play className="w-3 h-3" /> Üben
                               </Link>
@@ -422,7 +426,7 @@ export default function StichwortlistePage() {
                         </div>
 
                         {st.lastPracticed && (
-                          <p className="text-[10px] text-muted mt-1">
+                          <p className="text-[10px] text-[var(--muted)] mt-1">
                             Zuletzt geübt: {st.lastPracticed}
                           </p>
                         )}
@@ -436,7 +440,7 @@ export default function StichwortlistePage() {
         })}
 
         {grouped.length === 0 && (
-          <div className="text-center py-12 text-muted">
+          <div className="text-center py-12 text-[var(--muted)]">
             <Search className="w-8 h-8 mx-auto mb-2 opacity-50" />
             <p>Keine Stichworte gefunden.</p>
           </div>

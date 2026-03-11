@@ -186,19 +186,19 @@ export function ImplikationenQuiz({
           <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
         </Button>
         <h1 className="text-2xl font-bold text-[var(--text-primary)]">Implikationen erkennen</h1>
-        <p className="text-sm text-muted">
+        <p className="text-sm text-[var(--muted)]">
           Kategorische Syllogismen: Zwei Prämissen mit "Alle" / "Einige" / "Kein" — welche
           Schlussfolgerung ist korrekt?
         </p>
         <UebungsbeschreibungCard id="kff-implikationen" collapsible defaultCollapsed />
         <OfficialInstructionCard instruction={OFFICIAL_IMP_INSTRUCTION} />
 
-        <Card className="border-primary-200 dark:border-primary-800/50 bg-primary-50/50 dark:bg-primary-950/20">
+        <Card className="border-[var(--accent)]/30 bg-[var(--accent)]/5">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-lg">
               <Timer className="w-5 h-5" /> Prüfungsmodus
             </CardTitle>
-            <p className="text-sm text-muted">
+            <p className="text-sm text-[var(--muted)]">
               {EXAM_CONFIG.implikationen.questions} Aufgaben ·{" "}
               {EXAM_CONFIG.implikationen.timeSeconds / 60} Minuten — wie im echten MedAT.
             </p>
@@ -283,7 +283,7 @@ export function ImplikationenQuiz({
         <Card>
           <CardHeader>
             <CardTitle className="text-lg">🧪 Training</CardTitle>
-            <p className="text-sm text-muted">
+            <p className="text-sm text-[var(--muted)]">
               Aufgaben aus der Datenbank – verschiedene Logik-Typen und Inhalte.
             </p>
             <p className="mt-1">
@@ -302,7 +302,7 @@ export function ImplikationenQuiz({
                     onClick={() => setQuestionCount(c)}
                     className={`flex-1 px-4 py-3 rounded-lg border text-sm font-medium transition-colors cursor-pointer ${
                       questionCount === c
-                        ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300"
+                        ? "border-[var(--accent)] bg-[var(--accent)]/10 text-[var(--accent)]"
                         : "border-[var(--border)] hover:bg-[var(--border)]/50"
                     }`}
                   >
@@ -314,7 +314,7 @@ export function ImplikationenQuiz({
             <Button className="w-full" size="lg" onClick={startTraining} disabled={trainingLoading}>
               {trainingLoading ? (
                 <>
-                  <span className="animate-spin mr-2 inline-block w-5 h-5 border-2 border-primary-500 border-t-transparent rounded-full" />
+                  <span className="animate-spin mr-2 inline-block w-5 h-5 border-2 border-[var(--accent)] border-t-transparent rounded-full" />
                   Wird geladen…
                 </>
               ) : (
@@ -341,10 +341,10 @@ export function ImplikationenQuiz({
         </Button>
         <Card>
           <CardContent className="p-6 text-center">
-            <div className="text-4xl font-bold text-primary-700 dark:text-primary-400">
+            <div className="text-4xl font-bold text-[var(--accent)]">
               {score}/{safeQuestions.length}
             </div>
-            <p className="text-muted mt-1">
+            <p className="text-[var(--muted)] mt-1">
               {safeQuestions.length ? Math.round((score / safeQuestions.length) * 100) : 0}% richtig
             </p>
             <p className="text-sm text-green-600 dark:text-green-400 mt-1">+{score * 10} XP</p>
@@ -376,7 +376,7 @@ export function ImplikationenQuiz({
                   )}
                 </div>
                 {(qu.source || (qu.id.startsWith("imp-") && !qu.id.startsWith("imp-train"))) && (
-                  <p className="text-xs text-muted mb-2 ml-7">
+                  <p className="text-xs text-[var(--muted)] mb-2 ml-7">
                     {qu.source ? `Quelle: ${qu.source}` : "Offizielle Beispielaufgabe"}
                   </p>
                 )}
@@ -394,8 +394,8 @@ export function ImplikationenQuiz({
                 <p className="text-sm text-green-700 dark:text-green-400 ml-7">
                   Richtig: {qu.options?.[qu.correctAnswer]}
                 </p>
-                <div className="ml-7 mt-2 bg-blue-50 dark:bg-blue-900/20 p-3 rounded-lg">
-                  <p className="text-xs text-blue-700 dark:text-blue-400">
+                <div className="ml-7 mt-2 bg-[var(--surface)] p-3 rounded-lg">
+                  <p className="text-xs text-[var(--muted)]">
                     {stripMarkdownAsterisks(qu.explanation)}
                   </p>
                 </div>
@@ -430,7 +430,7 @@ export function ImplikationenQuiz({
         {isTrainingEmpty ? (
           <Card>
             <CardContent className="p-6 text-center space-y-4">
-              <p className="text-muted">
+              <p className="text-[var(--muted)]">
                 Es konnten keine Trainingsaufgaben geladen werden. Der Aufgaben-Pool ist
                 möglicherweise noch nicht gefüllt oder es gab einen Verbindungsfehler.
               </p>
@@ -442,8 +442,10 @@ export function ImplikationenQuiz({
         ) : (
           <Card>
             <CardContent className="p-6 text-center">
-              <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-blue-500 mx-auto" />
-              <p className="text-sm text-muted mt-4">Fragen werden geladen und geprüft...</p>
+              <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-[var(--accent)] mx-auto" />
+              <p className="text-sm text-[var(--muted)] mt-4">
+                Fragen werden geladen und geprüft...
+              </p>
             </CardContent>
           </Card>
         )}
@@ -483,14 +485,14 @@ export function ImplikationenQuiz({
               Prüfungsmodus
             </Badge>
           )}
-          <span className="text-sm text-muted">
+          <span className="text-sm text-[var(--muted)]">
             Frage {index + 1} von {safeQuestions.length}
           </span>
         </div>
       </div>
       <div className="w-full bg-[var(--border)] rounded-full h-2">
         <div
-          className="bg-primary-600 h-2 rounded-full transition-all"
+          className="bg-[var(--accent)] h-2 rounded-full transition-all"
           style={{
             width: safeQuestions.length ? `${((index + 1) / safeQuestions.length) * 100}%` : "0%",
           }}
@@ -510,11 +512,11 @@ export function ImplikationenQuiz({
           )}
           {(currentQ.source ||
             (currentQ.id.startsWith("imp-") && !currentQ.id.startsWith("imp-train"))) && (
-            <p className="text-xs text-muted mb-3">
+            <p className="text-xs text-[var(--muted)] mb-3">
               {currentQ.source ? `Quelle: ${currentQ.source}` : "Offizielle Beispielaufgabe"}
             </p>
           )}
-          <div className="bg-[var(--border)]/30 border-l-4 border-primary-400 p-4 rounded-r-lg mb-6 space-y-2">
+          <div className="bg-[var(--border)]/30 border-l-4 border-[var(--accent)] p-4 rounded-r-lg mb-6 space-y-2">
             <p className="text-base font-medium text-[var(--text-primary)] italic">
               &bdquo;{currentQ.premise1 ?? "Fehler beim Laden"}&ldquo;
             </p>
@@ -533,14 +535,14 @@ export function ImplikationenQuiz({
                   onClick={() => setAnswers((p) => ({ ...p, [currentQ.id]: oi }))}
                   className={`w-full text-left px-4 py-3 rounded-lg border text-sm transition-colors cursor-pointer ${
                     answers[currentQ.id] === oi
-                      ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300"
+                      ? "border-[var(--accent)] bg-[var(--accent)]/10 text-[var(--accent)]"
                       : "border-[var(--border)] hover:bg-[var(--border)]/50"
                   }`}
                 >
                   <span className="font-semibold mr-2">({String.fromCharCode(65 + oi)})</span>
                   {opt}
                   {!opt.endsWith(".") && !opt.endsWith("?") ? "." : ""}
-                  <kbd className="float-right text-[10px] bg-[var(--border)] px-1.5 py-0.5 rounded text-muted">
+                  <kbd className="float-right text-[10px] bg-[var(--border)] px-1.5 py-0.5 rounded text-[var(--muted)]">
                     {oi + 1}
                   </kbd>
                 </button>

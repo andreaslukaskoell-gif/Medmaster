@@ -121,7 +121,7 @@ export default function AdminDashboard() {
                 {rows.map((row) => (
                   <tr
                     key={row.unterkapitel.id}
-                    className="border-b border-slate-100 dark:border-slate-700/80 hover:bg-primary-50/50 dark:hover:bg-slate-700/50 transition-colors cursor-pointer"
+                    className="border-b border-slate-100 dark:border-slate-700/80 hover:bg-[var(--accent)]/5 dark:hover:bg-slate-700/50 transition-colors cursor-pointer"
                     onClick={() => navigate(row.href)}
                   >
                     <td className="p-3 text-slate-600 dark:text-slate-400">

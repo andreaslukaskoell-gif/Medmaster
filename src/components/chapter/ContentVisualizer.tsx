@@ -34,7 +34,9 @@ export function ContentVisualizer({
   if (!uk) {
     return (
       <div className={`space-y-6 ${contentClassName}`}>
-        <p className="text-sm text-foreground">Kein Inhalt für dieses Unterkapitel geladen.</p>
+        <p className="text-sm text-[var(--text-primary)]">
+          Kein Inhalt für dieses Unterkapitel geladen.
+        </p>
       </div>
     );
   }
@@ -51,7 +53,7 @@ export function ContentVisualizer({
             lightbox
           />
           {uk.imageCaption && (
-            <figcaption className="mt-2 text-center text-xs text-[var(--text-muted)] italic">
+            <figcaption className="mt-2 text-center text-xs text-[var(--text-[var(--muted)])] italic">
               {uk.imageCaption}
             </figcaption>
           )}

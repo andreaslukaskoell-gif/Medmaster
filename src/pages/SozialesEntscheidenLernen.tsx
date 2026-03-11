@@ -37,7 +37,7 @@ function Seite1() {
     <div className="space-y-6">
       <div>
         <h2 className="text-xl font-bold text-[var(--text-primary)] mb-2">Aufgabenformat</h2>
-        <p className="text-sm text-muted">
+        <p className="text-sm text-[var(--muted)]">
           Seit 2015 im MedAT. Du bekommst ein soziales Dilemma und bewertest 8 Handlungsoptionen auf
           einer Skala von 1 bis 6.
         </p>
@@ -48,7 +48,7 @@ function Seite1() {
         <CardContent className="p-5 space-y-4">
           <h3 className="font-semibold text-[var(--text-primary)]">So sieht eine Aufgabe aus</h3>
           <div className="bg-[var(--border)]/30 p-4 rounded-lg border-l-4 border-teal-400">
-            <p className="text-sm text-muted mb-1">Szenario:</p>
+            <p className="text-sm text-[var(--muted)] mb-1">Szenario:</p>
             <p className="text-sm italic text-[var(--text-secondary)]">
               &quot;Du bist als Famulant auf der Inneren Medizin. Du beobachtest, wie ein Oberarzt
               einen Patienten herablassend behandelt...&quot;
@@ -65,20 +65,22 @@ function Seite1() {
                   &quot;Du sprichst den Oberarzt unter vier Augen an.&quot;
                 </p>
                 <div className="flex items-center gap-2">
-                  <span className="text-xs text-muted w-24">unangemessen</span>
+                  <span className="text-xs text-[var(--muted)] w-24">unangemessen</span>
                   <div className="flex-1 flex items-center gap-1">
                     {[1, 2, 3, 4, 5, 6].map((n) => (
                       <div
                         key={n}
                         className={`flex-1 h-8 rounded-md flex items-center justify-center text-xs font-medium transition-colors ${
-                          n === 5 ? "bg-teal-500 text-white" : "bg-[var(--border)] text-muted"
+                          n === 5
+                            ? "bg-teal-500 text-white"
+                            : "bg-[var(--border)] text-[var(--muted)]"
                         }`}
                       >
                         {n}
                       </div>
                     ))}
                   </div>
-                  <span className="text-xs text-muted w-24 text-right">angemessen</span>
+                  <span className="text-xs text-[var(--muted)] w-24 text-right">angemessen</span>
                 </div>
               </div>
             </div>
@@ -154,7 +156,7 @@ function Seite2() {
         <h2 className="text-xl font-bold text-[var(--text-primary)] mb-2">
           Die ärztliche Perspektive
         </h2>
-        <p className="text-sm text-muted">
+        <p className="text-sm text-[var(--muted)]">
           IMMER aus der Sicht eines &quot;guten Arztes&quot; bewerten — nicht aus deiner
           persönlichen Perspektive.
         </p>
@@ -179,12 +181,12 @@ function Seite2() {
                 </div>
                 <h4 className="font-semibold text-[var(--text-primary)]">Empathie</h4>
               </div>
-              <p className="text-sm text-muted">
+              <p className="text-sm text-[var(--muted)]">
                 Zeigt die Handlung Verständnis und Mitgefühl für die betroffene(n) Person(en)?
               </p>
               <div className="mt-2 text-xs">
                 <span className="text-green-600 dark:text-green-400">Hoch bewertet:</span>
-                <span className="text-muted ml-1">Zuhören, Verstehen, Unterstützen</span>
+                <span className="text-[var(--muted)] ml-1">Zuhören, Verstehen, Unterstützen</span>
               </div>
             </CardContent>
           </Card>
@@ -197,12 +199,12 @@ function Seite2() {
                 </div>
                 <h4 className="font-semibold text-[var(--text-primary)]">Professionalität</h4>
               </div>
-              <p className="text-sm text-muted">
+              <p className="text-sm text-[var(--muted)]">
                 Entspricht die Handlung dem professionellen Standard?
               </p>
               <div className="mt-2 text-xs">
                 <span className="text-green-600 dark:text-green-400">Hoch bewertet:</span>
-                <span className="text-muted ml-1">Sachlich, konstruktiv, respektvoll</span>
+                <span className="text-[var(--muted)] ml-1">Sachlich, konstruktiv, respektvoll</span>
               </div>
             </CardContent>
           </Card>
@@ -215,12 +217,12 @@ function Seite2() {
                 </div>
                 <h4 className="font-semibold text-[var(--text-primary)]">Patientenwohl</h4>
               </div>
-              <p className="text-sm text-muted">
+              <p className="text-sm text-[var(--muted)]">
                 Steht das Wohl des Patienten im Zentrum der Entscheidung?
               </p>
               <div className="mt-2 text-xs">
                 <span className="text-green-600 dark:text-green-400">Hoch bewertet:</span>
-                <span className="text-muted ml-1">Patientenorientiert, fürsorglich</span>
+                <span className="text-[var(--muted)] ml-1">Patientenorientiert, fürsorglich</span>
               </div>
             </CardContent>
           </Card>
@@ -233,10 +235,12 @@ function Seite2() {
                 </div>
                 <h4 className="font-semibold text-[var(--text-primary)]">Ethik</h4>
               </div>
-              <p className="text-sm text-muted">Ist die Handlung ethisch vertretbar?</p>
+              <p className="text-sm text-[var(--muted)]">Ist die Handlung ethisch vertretbar?</p>
               <div className="mt-2 text-xs">
                 <span className="text-green-600 dark:text-green-400">Hoch bewertet:</span>
-                <span className="text-muted ml-1">Gerecht, transparent, verantwortungsvoll</span>
+                <span className="text-[var(--muted)] ml-1">
+                  Gerecht, transparent, verantwortungsvoll
+                </span>
               </div>
             </CardContent>
           </Card>
@@ -280,7 +284,7 @@ function Seite3() {
         <h2 className="text-xl font-bold text-[var(--text-primary)] mb-2">
           Lösungsstrategie &amp; Auswertung
         </h2>
-        <p className="text-sm text-muted">
+        <p className="text-sm text-[var(--muted)]">
           So gehst du systematisch vor und maximierst deine Punkte.
         </p>
       </div>
@@ -297,7 +301,7 @@ function Seite3() {
                 Szenario lesen &amp; Perspektive einnehmen
               </h3>
             </div>
-            <p className="text-sm text-muted pl-11">
+            <p className="text-sm text-[var(--muted)] pl-11">
               Versetze dich in einen jungen Arzt/eine junge Ärztin. Was ist das Kernproblem? Wer ist
               betroffen?
             </p>
@@ -312,7 +316,7 @@ function Seite3() {
               </span>
               <h3 className="font-semibold text-[var(--text-primary)]">Alle 8 Optionen lesen</h3>
             </div>
-            <p className="text-sm text-muted pl-11">
+            <p className="text-sm text-[var(--muted)] pl-11">
               Lies zuerst ALLE Optionen, bevor du bewertest. Das gibt dir einen Überblick über das
               Spektrum der Möglichkeiten.
             </p>
@@ -327,7 +331,7 @@ function Seite3() {
               </span>
               <h3 className="font-semibold text-[var(--text-primary)]">4 Dimensionen durchgehen</h3>
             </div>
-            <p className="text-sm text-muted pl-11">
+            <p className="text-sm text-[var(--muted)] pl-11">
               Pro Option: Empathie ✓/✗ | Professionalität ✓/✗ | Patientenwohl ✓/✗ | Ethik ✓/✗
             </p>
           </CardContent>
@@ -343,7 +347,7 @@ function Seite3() {
                 Extreme nur bei klaren Fällen
               </h3>
             </div>
-            <p className="text-sm text-muted pl-11">
+            <p className="text-sm text-[var(--muted)] pl-11">
               1 und 6 nur vergeben, wenn die Option EINDEUTIG unangemessen oder angemessen ist. Im
               Zweifel: 2-3 oder 4-5 wählen.
             </p>
@@ -354,7 +358,7 @@ function Seite3() {
       {/* Auswertung */}
       <div className="bg-[var(--border)]/30 rounded-lg p-4 space-y-3">
         <h3 className="font-semibold text-[var(--text-primary)]">Auswertung</h3>
-        <p className="text-sm text-muted">
+        <p className="text-sm text-[var(--muted)]">
           Dein Score basiert auf der Abweichung deiner Bewertung vom Ideal:
         </p>
         <div className="space-y-2">
@@ -459,7 +463,7 @@ export default function SozialesEntscheidenLernen() {
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
           <PageIndicator current={currentPage} total={totalPages} />
-          <span className="text-xs text-muted">
+          <span className="text-xs text-[var(--muted)]">
             Seite {currentPage + 1} von {totalPages}
           </span>
         </div>
@@ -471,7 +475,7 @@ export default function SozialesEntscheidenLernen() {
               className={`text-xs px-3 py-1.5 rounded-full transition-colors cursor-pointer ${
                 i === currentPage
                   ? "bg-teal-100 dark:bg-teal-900/30 text-teal-700 dark:text-teal-300 font-medium"
-                  : "text-muted hover:bg-[var(--border)]/50"
+                  : "text-[var(--muted)] hover:bg-[var(--border)]/50"
               }`}
             >
               {title}

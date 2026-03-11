@@ -26,22 +26,22 @@ export default function LernplanChoice() {
   };
 
   return (
-    <div className="min-h-screen bg-background px-4 py-10 sm:py-14 flex flex-col items-center justify-center">
+    <div className="min-h-screen bg-[var(--background)] px-4 py-10 sm:py-14 flex flex-col items-center justify-center">
       <div className="mx-auto w-full max-w-md space-y-6">
         <div className="text-center">
-          <div className="inline-flex w-16 h-16 items-center justify-center rounded-2xl bg-primary-500/15 ring-2 ring-primary-500/30">
-            <CalendarDays className="w-8 h-8 text-primary-500" aria-hidden />
+          <div className="inline-flex w-16 h-16 items-center justify-center rounded-2xl bg-[var(--accent)]/15 ring-2 ring-[var(--accent)]/30">
+            <CalendarDays className="w-8 h-8 text-[var(--accent)]" aria-hidden />
           </div>
-          <h1 className="mt-4 text-2xl font-bold tracking-tight text-app-foreground">
+          <h1 className="mt-4 text-2xl font-bold tracking-tight text-[var(--text-primary)]">
             Lernplan erstellen?
           </h1>
-          <p className="mt-2 text-sm leading-relaxed text-app-muted max-w-sm mx-auto">
+          <p className="mt-2 text-sm leading-relaxed text-[var(--muted)] max-w-sm mx-auto">
             Mit einem Lernplan schlagen wir dir tägliche Ziele vor und du behältst bis zum MedAT den
             Überblick. Du kannst ihn jederzeit unter „Lernplan“ anpassen oder später erstellen.
           </p>
         </div>
 
-        <Card className="border-app-border bg-app-card">
+        <Card className="border-[var(--border)] bg-[var(--card)]">
           <CardContent className="pt-6 pb-6 space-y-4">
             <Button
               size="lg"
@@ -64,7 +64,7 @@ export default function LernplanChoice() {
           </CardContent>
         </Card>
 
-        <p className="text-center text-xs text-app-muted">
+        <p className="text-center text-xs text-[var(--muted)]">
           Du findest den Lernplan jederzeit in der Sidebar unter „Lernplan“.
         </p>
       </div>

@@ -39,7 +39,8 @@ export function TypAQuestion({ frage, chosenOption, revealed, onChoose }: Props)
       {/* Options */}
       <div className="space-y-2">
         {optionen.map((opt, i) => {
-          let cls = "border-border hover:bg-[var(--border)]/50 text-[var(--text-secondary)]";
+          let cls =
+            "border-[var(--border)] hover:bg-[var(--border)]/50 text-[var(--text-secondary)]";
 
           if (revealed) {
             if (opt.key === correct) {
@@ -49,7 +50,7 @@ export function TypAQuestion({ frage, chosenOption, revealed, onChoose }: Props)
               cls =
                 "border-red-400 bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-400 line-through";
             } else {
-              cls = "border-border opacity-40 text-[var(--muted)]/60";
+              cls = "border-[var(--border)] opacity-40 text-[var(--muted)]/60";
             }
           }
 

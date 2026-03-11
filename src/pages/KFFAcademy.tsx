@@ -136,8 +136,10 @@ export default function KFFAcademy() {
       <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "KFF Academy" }]} />
 
       <div>
-        <h1 className="text-2xl font-bold text-foreground">KFF Academy</h1>
-        <p className="text-muted mt-1">Kognitive Fähigkeiten und Fertigkeiten — 40% des MedAT</p>
+        <h1 className="text-2xl font-bold text-[var(--text-primary)]">KFF Academy</h1>
+        <p className="text-[var(--muted)] mt-1">
+          Kognitive Fähigkeiten und Fertigkeiten — 40% des MedAT
+        </p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -161,7 +163,7 @@ export default function KFFAcademy() {
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 mb-0.5">
-                      <h3 className="font-semibold text-foreground text-sm truncate">
+                      <h3 className="font-semibold text-[var(--text-primary)] text-sm truncate">
                         {subtest.name}
                       </h3>
                     </div>
@@ -176,14 +178,14 @@ export default function KFFAcademy() {
                 {/* Progress bar */}
                 <div className="space-y-1.5">
                   <div className="flex items-center justify-between text-xs">
-                    <span className="text-muted">Fortschritt</span>
-                    <span className="font-medium text-foreground">{pct}%</span>
+                    <span className="text-[var(--muted)]">Fortschritt</span>
+                    <span className="font-medium text-[var(--text-primary)]">{pct}%</span>
                   </div>
-                  <div className="w-full bg-muted rounded-full h-1.5">
+                  <div className="w-full bg-[var(--surface)] rounded-full h-1.5">
                     <div
                       className={`h-1.5 rounded-full transition-all ${
                         pct === 0
-                          ? "bg-muted-foreground/30"
+                          ? "bg-[var(--surface)]-foreground/30"
                           : pct < 50
                             ? "bg-amber-500"
                             : pct < 80
@@ -193,7 +195,7 @@ export default function KFFAcademy() {
                       style={{ width: `${Math.max(pct, 2)}%` }}
                     />
                   </div>
-                  <div className="flex items-center justify-between text-[10px] text-muted">
+                  <div className="flex items-center justify-between text-[10px] text-[var(--muted)]">
                     <span>{p?.total ?? 0} Übungen absolviert</span>
                     {p?.lastPracticed && (
                       <span>Zuletzt: {new Date(p.lastPracticed).toLocaleDateString("de-AT")}</span>

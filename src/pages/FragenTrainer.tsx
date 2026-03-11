@@ -218,7 +218,7 @@ function SelectionScreen({
                   className={`flex items-center gap-3 px-4 py-3.5 rounded-xl border-2 text-sm font-medium transition-all cursor-pointer text-left ${
                     selected
                       ? `${s.borderClass} ${s.bgClass} font-semibold`
-                      : "border-border text-[var(--text-secondary)] hover:border-[var(--muted)]/50 hover:bg-[var(--foreground)]/3"
+                      : "border-[var(--border)] text-[var(--text-secondary)] hover:border-[var(--muted)]/50 hover:bg-[var(--foreground)]/3"
                   }`}
                 >
                   <div
@@ -250,7 +250,7 @@ function SelectionScreen({
                   className={`px-4 py-3 rounded-xl border text-sm font-medium transition-all cursor-pointer text-left ${
                     mode === "einfach"
                       ? "border-emerald-500 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-800 dark:text-emerald-300"
-                      : "border-border text-[var(--muted)] hover:bg-[var(--border)]/50"
+                      : "border-[var(--border)] text-[var(--muted)] hover:bg-[var(--border)]/50"
                   }`}
                 >
                   <div className="font-semibold">Einfach trainieren</div>
@@ -264,7 +264,7 @@ function SelectionScreen({
                   className={`px-4 py-3 rounded-xl border text-sm font-medium transition-all cursor-pointer text-left ${
                     mode === "offiziell"
                       ? "border-emerald-500 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-800 dark:text-emerald-300"
-                      : "border-border text-[var(--muted)] hover:bg-[var(--border)]/50"
+                      : "border-[var(--border)] text-[var(--muted)] hover:bg-[var(--border)]/50"
                   }`}
                 >
                   <div className="font-semibold">Offizielle Simulation</div>
@@ -290,7 +290,7 @@ function SelectionScreen({
                       className={`px-4 py-2 rounded-lg border text-sm font-medium transition-all cursor-pointer ${
                         count === n
                           ? "border-emerald-500 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-800 dark:text-emerald-300"
-                          : "border-border hover:bg-[var(--border)]/50"
+                          : "border-[var(--border)] hover:bg-[var(--border)]/50"
                       }`}
                     >
                       {n}
@@ -558,7 +558,7 @@ function QuizScreen({
                         key={opt.key}
                         className={`text-sm px-3 py-2 rounded-lg ${
                           opt.key === reviewAnswer.chosenOption
-                            ? "bg-muted font-medium text-[var(--text-primary)]"
+                            ? "bg-[var(--surface)] font-medium text-[var(--text-primary)]"
                             : "text-[var(--muted)]"
                         }`}
                       >
@@ -632,8 +632,9 @@ function QuizScreen({
                       />
                       {!revealed && (
                         <p className="text-xs text-muted-foreground mt-2">
-                          Tipp: Tasten <kbd className="px-1 rounded bg-muted font-mono">1</kbd>–
-                          <kbd className="px-1 rounded bg-muted font-mono">5</kbd> = A–E
+                          Tipp: Tasten{" "}
+                          <kbd className="px-1 rounded bg-[var(--surface)] font-mono">1</kbd>–
+                          <kbd className="px-1 rounded bg-[var(--surface)] font-mono">5</kbd> = A–E
                         </p>
                       )}
                     </>
@@ -653,8 +654,10 @@ function QuizScreen({
                       />
                       {!revealed && typKPhase === 2 && (
                         <p className="text-xs text-muted-foreground mt-2">
-                          Tipp: Tasten <kbd className="px-1 rounded bg-muted font-mono">1</kbd>–
-                          <kbd className="px-1 rounded bg-muted font-mono">5</kbd> = Kombination A–E
+                          Tipp: Tasten{" "}
+                          <kbd className="px-1 rounded bg-[var(--surface)] font-mono">1</kbd>–
+                          <kbd className="px-1 rounded bg-[var(--surface)] font-mono">5</kbd> =
+                          Kombination A–E
                         </p>
                       )}
                     </>
@@ -668,7 +671,7 @@ function QuizScreen({
 
       {/* Rechte Seite: Fragen-Navigation */}
       <div className="w-12 shrink-0 flex flex-col gap-1">
-        <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide sticky top-0 bg-background/95 py-1">
+        <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide sticky top-0 bg-[var(--background)]/95 py-1">
           Nr.
         </p>
         <div className="flex flex-col gap-0.5 max-h-[60vh] overflow-y-auto">
@@ -682,7 +685,7 @@ function QuizScreen({
                 onClick={() => goToQuestion(i)}
                 className={`w-8 h-8 rounded-lg text-sm font-medium transition-colors shrink-0
                   ${isCurrent ? "ring-2 ring-emerald-500 bg-emerald-100 dark:bg-emerald-900/40 text-emerald-800 dark:text-emerald-200" : ""}
-                  ${!isCurrent && answered ? "bg-muted text-muted-foreground hover:bg-muted/80" : ""}
+                  ${!isCurrent && answered ? "bg-[var(--surface)] text-muted-foreground hover:bg-[var(--surface)]/80" : ""}
                   ${!isCurrent && !answered ? "bg-[var(--border)]/50 text-[var(--muted)] hover:bg-[var(--border)]" : ""}
                 `}
                 title={answered ? `Frage ${i + 1} (beantwortet)` : `Frage ${i + 1}`}

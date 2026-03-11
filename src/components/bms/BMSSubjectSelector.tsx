@@ -60,7 +60,7 @@ export function BMSSubjectSelector({
           <p className="text-sm text-[var(--muted)] mt-1">
             {bmsKapitel.length} Kapitel · {totalUK} Unterkapitel
             {totalUK > 0 && (
-              <span className="text-[var(--color-primary-500)] font-medium ml-2">
+              <span className="text-[var(--accent)] font-medium ml-2">
                 {completedUK}/{totalUK} abgeschlossen
               </span>
             )}
@@ -147,7 +147,7 @@ function SubjectCard({
     physik: "var(--accent-phys)",
     mathematik: "var(--accent-math)",
   };
-  const accentColor = accentVars[subject.id] ?? "var(--color-primary-500)";
+  const accentColor = accentVars[subject.id] ?? "var(--accent)";
 
   return (
     <BlurFade delay={0.1 + idx * 0.05} inView>

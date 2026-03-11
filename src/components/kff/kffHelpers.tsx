@@ -145,9 +145,9 @@ export function TaskDbCountHint({ domain }: { domain: TaskDomain }) {
       cancelled = true;
     };
   }, [domain]);
-  if (count === null) return <span className="text-muted text-sm">Lade Anzahl…</span>;
+  if (count === null) return <span className="text-[var(--muted)] text-sm">Lade Anzahl…</span>;
   return (
-    <span className="text-muted text-sm">
+    <span className="text-[var(--muted)] text-sm">
       Aktuell {count} Aufgabe{count !== 1 ? "n" : ""} in der Datenbank.
     </span>
   );

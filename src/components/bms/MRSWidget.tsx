@@ -71,7 +71,7 @@ export function MRSWidget({ mrs, loading, fallback }: Props) {
     return (
       <Card>
         <CardContent className="p-4 flex items-center justify-center h-24">
-          <Loader2 className="w-5 h-5 animate-spin text-muted-foreground" />
+          <Loader2 className="w-5 h-5 animate-spin text-[var(--muted)]" />
         </CardContent>
       </Card>
     );
@@ -105,7 +105,7 @@ export function MRSWidget({ mrs, loading, fallback }: Props) {
               </div>
               <ScoreArc score={score} />
             </div>
-            <p className="text-[10px] text-muted-foreground">
+            <p className="text-[10px] text-[var(--muted)]">
               Basierend auf {fallback.totalQuestions} beantworteten BMS-Fragen (Kapitel-Quiz &
               Trainer). Für Retention & Kontinuität „Fragen-Trainer“ mit Modus „Supabase“ nutzen.
             </p>
@@ -117,8 +117,8 @@ export function MRSWidget({ mrs, loading, fallback }: Props) {
       <Card className="border-dashed">
         <CardContent className="p-4 text-center space-y-1">
           <TrendingUp className="w-6 h-6 mx-auto text-[var(--muted)]/60" />
-          <p className="text-xs text-muted-foreground font-medium">MedAT Readiness Score</p>
-          <p className="text-xs text-muted-foreground">
+          <p className="text-xs text-[var(--muted)] font-medium">MedAT Readiness Score</p>
+          <p className="text-xs text-[var(--muted)]">
             Beantworte BMS-Fragen im Fragen-Trainer, um deinen Score zu sehen.
           </p>
         </CardContent>
@@ -151,18 +151,18 @@ export function MRSWidget({ mrs, loading, fallback }: Props) {
         <div className="grid grid-cols-3 gap-2 text-center">
           <div className="bg-[var(--border)]/30 rounded-lg p-2">
             <p className="text-xs font-bold text-[var(--text-primary)]">{mrs.fsrsRetention}%</p>
-            <p className="text-[10px] text-muted-foreground">Retention</p>
+            <p className="text-[10px] text-[var(--muted)]">Retention</p>
           </div>
           <div className="bg-[var(--border)]/30 rounded-lg p-2">
             <p className="text-xs font-bold text-[var(--text-primary)]">
               {mrs.consistencyDays}
               <span className="font-normal text-[10px]">d</span>
             </p>
-            <p className="text-[10px] text-muted-foreground">Kontinuität</p>
+            <p className="text-[10px] text-[var(--muted)]">Kontinuität</p>
           </div>
           <div className="bg-[var(--border)]/30 rounded-lg p-2">
             <p className="text-xs font-bold text-[var(--text-primary)]">{mrs.totalAttempts}</p>
-            <p className="text-[10px] text-muted-foreground">Antworten</p>
+            <p className="text-[10px] text-[var(--muted)]">Antworten</p>
           </div>
         </div>
       </CardContent>

@@ -51,7 +51,7 @@ export function ConfidenzButtons({ value, onChange, disabled }: Props) {
               ${
                 value === opt.value
                   ? `${opt.bg} ${opt.ring} ring-2 border-transparent scale-105 shadow-sm`
-                  : "border-border hover:bg-[var(--border)]/50 text-[var(--muted)]"
+                  : "border-[var(--border)] hover:bg-[var(--border)]/50 text-[var(--muted)]"
               }
               ${disabled ? "opacity-50 cursor-default" : ""}
             `}

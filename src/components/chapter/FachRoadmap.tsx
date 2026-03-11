@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import type { Kapitel } from "@/data/bmsKapitel/types";
-import { getSubjectColors, type SubjectId } from "@/data/bmsKapitel/colors";
 import { ArrowRight } from "lucide-react";
 
 interface FachRoadmapProps {
@@ -31,8 +30,6 @@ export function FachRoadmap({ chapters, currentChapterId, onSelectChapter }: Fac
   const subject = chapters[0]?.subject;
   if (!subject) return null;
 
-  const colors = getSubjectColors(subject as SubjectId);
-
   // Sort by sequence (chapters without sequence appear at end)
   const sorted = [...chapters].sort((a, b) => {
     const aSeq = a.sequence ?? 999;
@@ -45,11 +42,9 @@ export function FachRoadmap({ chapters, currentChapterId, onSelectChapter }: Fac
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
-      className={`p-6 rounded-lg border-l-4 ${colors.border} ${colors.bg} ${colors.bgDark}`}
+      className="p-6 rounded-lg border-l-[3px] border-l-[var(--accent)] bg-[var(--surface)]"
     >
-      <h3
-        className={`font-semibold ${colors.text} ${colors.textDark} mb-4 flex items-center gap-2`}
-      >
+      <h3 className="font-semibold text-[var(--text-primary)] mb-4 flex items-center gap-2">
         Lernpfad
       </h3>
 
@@ -68,7 +63,7 @@ export function FachRoadmap({ chapters, currentChapterId, onSelectChapter }: Fac
                 onClick={() => onSelectChapter?.(chapter.id)}
                 className={`px-3 py-2 rounded-md whitespace-nowrap text-sm font-medium transition ${
                   currentChapterId === chapter.id
-                    ? `${colors.button} text-white shadow-md`
+                    ? "bg-[var(--accent)] text-white shadow-md"
                     : "bg-[var(--card)]/50 hover:bg-[var(--card)]/70"
                 }`}
               >

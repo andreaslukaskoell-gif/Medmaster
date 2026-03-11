@@ -175,14 +175,16 @@ export default function SmartRecoveryPage() {
             { label: "Smart-Recovery" },
           ]}
         />
-        <Card className="border-2 border-primary-200 dark:border-primary-800">
+        <Card className="border-2 border-[var(--accent)]/20 dark:border-[var(--accent)]">
           <CardContent className="p-8 text-center space-y-4">
-            <Trophy className="w-14 h-14 mx-auto text-primary-500" />
-            <h2 className="text-xl font-bold text-foreground">Smart-Recovery abgeschlossen</h2>
-            <p className="text-3xl font-bold text-primary-600 dark:text-primary-400">
+            <Trophy className="w-14 h-14 mx-auto text-[var(--accent)]" />
+            <h2 className="text-xl font-bold text-[var(--text-primary)]">
+              Smart-Recovery abgeschlossen
+            </h2>
+            <p className="text-3xl font-bold text-[var(--accent)]/60">
               {score} / {total} richtig ({pct}%)
             </p>
-            <p className="text-sm text-muted">
+            <p className="text-sm text-[var(--muted)]">
               Du hast deine Schwachstellen gezielt wiederholt. Weiter so!
             </p>
             <div className="flex gap-3 justify-center pt-2">
@@ -216,7 +218,7 @@ export default function SmartRecoveryPage() {
           <ArrowLeft className="w-4 h-4 mr-1" />
           Abbrechen
         </Button>
-        <span className="text-sm text-muted">
+        <span className="text-sm text-[var(--muted)]">
           Frage {currentIndex + 1} von {questions.length}
         </span>
       </div>
@@ -253,19 +255,21 @@ export default function SmartRecoveryPage() {
               >
                 {fachColors[sw.fach]?.label ?? sw.fach}
               </span>
-              <span className="text-xs text-muted">{sw.thema}</span>
+              <span className="text-xs text-[var(--muted)]">{sw.thema}</span>
             </div>
           )}
           <Card>
             <CardContent className="p-6">
-              <p className="text-base font-medium text-foreground mb-6">{currentQuestion.text}</p>
+              <p className="text-base font-medium text-[var(--text-primary)] mb-6">
+                {currentQuestion.text}
+              </p>
               <div className="space-y-3">
                 {currentQuestion.options.map((opt) => {
                   const isSelected = answers[currentQuestion.id] === opt.id;
                   const isCorrectOpt = showResult && opt.id === currentQuestion.correctOptionId;
                   const isWrongSelected =
                     showResult && isSelected && opt.id !== currentQuestion.correctOptionId;
-                  let classes = "border-border hover:bg-accent text-muted-foreground";
+                  let classes = "border-[var(--border)] hover:bg-accent text-muted-foreground";
                   if (isCorrectOpt)
                     classes =
                       "border-green-500 bg-green-50 dark:bg-green-900/20 text-green-800 dark:text-green-300";
@@ -274,7 +278,7 @@ export default function SmartRecoveryPage() {
                       "border-red-500 bg-red-50 dark:bg-red-900/20 text-red-800 dark:text-red-300";
                   else if (isSelected)
                     classes =
-                      "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300";
+                      "border-[var(--accent)] bg-[var(--accent)]/5 dark:bg-[var(--accent)]/10 text-[var(--accent)]/30";
 
                   return (
                     <button
@@ -309,7 +313,7 @@ export default function SmartRecoveryPage() {
                       : "Leider falsch"}
                   </span>
                 </div>
-                <p className="text-sm text-muted">
+                <p className="text-sm text-[var(--muted)]">
                   {stripMarkdownAsterisks(currentQuestion.explanation)}
                 </p>
               </CardContent>

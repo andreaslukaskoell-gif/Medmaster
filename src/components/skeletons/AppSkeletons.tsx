@@ -31,7 +31,7 @@ export function XpProgressRingSkeleton({
   return (
     <div
       className={cn(
-        "rounded-full shrink-0 animate-pulse border border-border bg-transparent",
+        "rounded-full shrink-0 animate-pulse border border-[var(--border)] bg-transparent",
         className
       )}
       style={{ width: size, height: size, borderWidth: stroke }}
@@ -59,11 +59,11 @@ export function LeaderboardSkeleton({ className }: { className?: string }) {
       {/* Liste: Midnight-Blue-Container + 10 Rows (exakt wie LeaderboardRow: px-4 py-3, Avatar 36px, etc.) */}
       <div
         className={cn(
-          "rounded-2xl overflow-hidden border border-white/20 dark:border-white/10",
-          "bg-[#0f172a]/80 dark:bg-[#0f172a]/90 backdrop-blur-xl"
+          "rounded-2xl overflow-hidden border border-[var(--border)]",
+          "bg-[var(--card)] backdrop-blur-xl"
         )}
       >
-        <div className="divide-y divide-white/10">
+        <div className="divide-y divide-[var(--border)]">
           {Array.from({ length: TOP_LIST_SIZE }).map((_, i) => (
             <div key={i} className={cn("flex items-center gap-3 px-4", LEADERBOARD_ROW_HEIGHT)}>
               <SkeletonBox className="h-5 w-10 shrink-0 rounded" />
@@ -105,7 +105,7 @@ export function RadarHexagonSkeleton({
 
   return (
     <div
-      className={cn("rounded-xl overflow-hidden bg-background/50 skeleton-shimmer", className)}
+      className={cn("rounded-xl overflow-hidden bg-[var(--surface)] skeleton-shimmer", className)}
       style={{ width: "100%", height }}
       aria-hidden
     >
@@ -114,12 +114,7 @@ export function RadarHexagonSkeleton({
         preserveAspectRatio="xMidYMid meet"
         className="w-full h-full block"
       >
-        <polygon
-          points={points}
-          fill="rgba(15, 23, 42, 0.6)"
-          stroke="rgba(51, 65, 85, 0.9)"
-          strokeWidth="2"
-        />
+        <polygon points={points} fill="var(--surface)" stroke="var(--border)" strokeWidth="2" />
         {[0.33, 0.66].map((scale) => (
           <polygon
             key={scale}
@@ -128,7 +123,7 @@ export function RadarHexagonSkeleton({
               return `${cx + r * scale * Math.cos(angle)},${cy + r * scale * Math.sin(angle)}`;
             }).join(" ")}
             fill="none"
-            stroke="rgba(51, 65, 85, 0.5)"
+            stroke="var(--border)"
             strokeWidth="0.5"
           />
         ))}

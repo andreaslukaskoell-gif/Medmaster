@@ -333,22 +333,22 @@ function EmotionenErkennenQuiz({
         <h1 className="text-2xl font-bold text-[var(--text-primary)]">Emotionen erkennen</h1>
         <div className="grid gap-4 sm:grid-cols-2">
           <Card
-            className={`cursor-pointer border-2 transition-colors ${examMode === "exam" ? "border-primary-500" : "border-transparent hover:border-primary-300"}`}
+            className={`cursor-pointer border-2 transition-colors ${examMode === "exam" ? "border-[var(--accent)]" : "border-transparent hover:border-[var(--accent)]/30"}`}
             onClick={() => setExamMode("exam")}
           >
             <CardContent className="p-6">
               <div className="flex items-center gap-2 mb-2">
-                <Timer className="w-5 h-5 text-primary-600" />
+                <Timer className="w-5 h-5 text-[var(--accent)]" />
                 <h2 className="font-semibold text-[var(--text-primary)]">Prüfungsmodus</h2>
               </div>
-              <p className="text-sm text-muted">
+              <p className="text-sm text-[var(--muted)]">
                 {eeConfig.questions} Aufgaben · {eeConfig.timeSeconds / 60} Minuten
               </p>
-              <p className="text-xs text-muted mt-1">Wie im echten MedAT</p>
+              <p className="text-xs text-[var(--muted)] mt-1">Wie im echten MedAT</p>
             </CardContent>
           </Card>
           <Card
-            className={`cursor-pointer border-2 transition-colors ${examMode === "practice" ? "border-primary-500" : "border-transparent hover:border-primary-300"}`}
+            className={`cursor-pointer border-2 transition-colors ${examMode === "practice" ? "border-[var(--accent)]" : "border-transparent hover:border-[var(--accent)]/30"}`}
             onClick={() => setExamMode("practice")}
           >
             <CardContent className="p-6">
@@ -356,8 +356,10 @@ function EmotionenErkennenQuiz({
                 <BookOpen className="w-5 h-5 text-green-600" />
                 <h2 className="font-semibold text-[var(--text-primary)]">Übungsmodus</h2>
               </div>
-              <p className="text-sm text-muted">Kein Timer · sofortiges Feedback möglich</p>
-              <p className="text-xs text-muted mt-1">Zum Lernen und Verstehen</p>
+              <p className="text-sm text-[var(--muted)]">
+                Kein Timer · sofortiges Feedback möglich
+              </p>
+              <p className="text-xs text-[var(--muted)] mt-1">Zum Lernen und Verstehen</p>
             </CardContent>
           </Card>
         </div>
@@ -384,7 +386,7 @@ function EmotionenErkennenQuiz({
             <div className="text-4xl font-bold text-pink-700 dark:text-pink-400">
               {score}/{questions.length}
             </div>
-            <p className="text-muted mt-1">
+            <p className="text-[var(--muted)] mt-1">
               {Math.round((score / questions.length) * 100)}% — Alles-oder-Nichts
             </p>
             <p className="text-sm text-green-600 dark:text-green-400 mt-1">+{score * 15} XP</p>
@@ -436,7 +438,8 @@ function EmotionenErkennenQuiz({
   }
 
   const q = questions[index];
-  if (!q) return <div className="p-8 text-center text-muted">Keine Aufgaben verfügbar.</div>;
+  if (!q)
+    return <div className="p-8 text-center text-[var(--muted)]">Keine Aufgaben verfügbar.</div>;
   const currentAnswers = answers[q.id] || {};
   const allQuestionsAnswered = questions.every((qu) => {
     const a = answers[qu.id] || {};
@@ -457,11 +460,11 @@ function EmotionenErkennenQuiz({
             Emotionen erkennen
           </Badge>
           {examMode === "exam" && (
-            <Badge className="bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-400">
+            <Badge className="bg-[var(--accent)]/10 dark:bg-[var(--accent)]/10 text-[var(--accent)]/60">
               Prüfung
             </Badge>
           )}
-          <span className="text-sm text-muted">
+          <span className="text-sm text-[var(--muted)]">
             {index + 1}/{questions.length}
           </span>
         </div>
@@ -475,7 +478,7 @@ function EmotionenErkennenQuiz({
       <Card>
         <CardContent className="p-6">
           <div className="bg-[var(--border)]/30 p-4 rounded-lg mb-6">
-            <p className="text-xs text-muted uppercase tracking-wide mb-1">Situation:</p>
+            <p className="text-xs text-[var(--muted)] uppercase tracking-wide mb-1">Situation:</p>
             <p className="text-sm text-[var(--text-primary)]">{q.situation}</p>
           </div>
           <p className="text-sm font-medium text-[var(--text-primary)] mb-4">
@@ -623,22 +626,22 @@ function EmotionenRegulierenQuiz({
         <h1 className="text-2xl font-bold text-[var(--text-primary)]">Emotionen regulieren</h1>
         <div className="grid gap-4 sm:grid-cols-2">
           <Card
-            className={`cursor-pointer border-2 transition-colors ${examMode === "exam" ? "border-primary-500" : "border-transparent hover:border-primary-300"}`}
+            className={`cursor-pointer border-2 transition-colors ${examMode === "exam" ? "border-[var(--accent)]" : "border-transparent hover:border-[var(--accent)]/30"}`}
             onClick={() => setExamMode("exam")}
           >
             <CardContent className="p-6">
               <div className="flex items-center gap-2 mb-2">
-                <Timer className="w-5 h-5 text-primary-600" />
+                <Timer className="w-5 h-5 text-[var(--accent)]" />
                 <h2 className="font-semibold text-[var(--text-primary)]">Prüfungsmodus</h2>
               </div>
-              <p className="text-sm text-muted">
+              <p className="text-sm text-[var(--muted)]">
                 {erConfig.questions} Aufgaben · {erConfig.timeSeconds / 60} Minuten
               </p>
-              <p className="text-xs text-muted mt-1">Wie im echten MedAT</p>
+              <p className="text-xs text-[var(--muted)] mt-1">Wie im echten MedAT</p>
             </CardContent>
           </Card>
           <Card
-            className={`cursor-pointer border-2 transition-colors ${examMode === "practice" ? "border-primary-500" : "border-transparent hover:border-primary-300"}`}
+            className={`cursor-pointer border-2 transition-colors ${examMode === "practice" ? "border-[var(--accent)]" : "border-transparent hover:border-[var(--accent)]/30"}`}
             onClick={() => setExamMode("practice")}
           >
             <CardContent className="p-6">
@@ -646,8 +649,10 @@ function EmotionenRegulierenQuiz({
                 <BookOpen className="w-5 h-5 text-green-600" />
                 <h2 className="font-semibold text-[var(--text-primary)]">Übungsmodus</h2>
               </div>
-              <p className="text-sm text-muted">Kein Timer · sofortiges Feedback möglich</p>
-              <p className="text-xs text-muted mt-1">Zum Lernen und Verstehen</p>
+              <p className="text-sm text-[var(--muted)]">
+                Kein Timer · sofortiges Feedback möglich
+              </p>
+              <p className="text-xs text-[var(--muted)] mt-1">Zum Lernen und Verstehen</p>
             </CardContent>
           </Card>
         </div>
@@ -674,7 +679,7 @@ function EmotionenRegulierenQuiz({
             <div className="text-4xl font-bold text-amber-700 dark:text-amber-400">
               {totalScore}/{maxScore}
             </div>
-            <p className="text-muted mt-1">
+            <p className="text-[var(--muted)] mt-1">
               {Math.round((totalScore / maxScore) * 100)}% — Richtig/Falsch
             </p>
             <p className="text-sm text-green-600 dark:text-green-400 mt-1">+{totalScore * 15} XP</p>
@@ -717,7 +722,9 @@ function EmotionenRegulierenQuiz({
                     </div>
                   ))}
                 </div>
-                {q.explanation && <p className="text-xs text-muted mt-2 ml-2">{q.explanation}</p>}
+                {q.explanation && (
+                  <p className="text-xs text-[var(--muted)] mt-2 ml-2">{q.explanation}</p>
+                )}
               </CardContent>
             </Card>
           );
@@ -730,7 +737,8 @@ function EmotionenRegulierenQuiz({
   }
 
   const q = questions[index];
-  if (!q) return <div className="p-8 text-center text-muted">Keine Aufgaben verfügbar.</div>;
+  if (!q)
+    return <div className="p-8 text-center text-[var(--muted)]">Keine Aufgaben verfügbar.</div>;
   const allAnswered = questions.every((qu) => answers[qu.id] !== undefined);
 
   return (
@@ -747,11 +755,11 @@ function EmotionenRegulierenQuiz({
             Emotionen regulieren
           </Badge>
           {examMode === "exam" && (
-            <Badge className="bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-400">
+            <Badge className="bg-[var(--accent)]/10 dark:bg-[var(--accent)]/10 text-[var(--accent)]/60">
               Prüfung
             </Badge>
           )}
-          <span className="text-sm text-muted">
+          <span className="text-sm text-[var(--muted)]">
             {index + 1}/{questions.length}
           </span>
         </div>
@@ -922,22 +930,22 @@ function SozialesEntscheidenQuiz({
         <h1 className="text-2xl font-bold text-[var(--text-primary)]">Soziales Entscheiden</h1>
         <div className="grid gap-4 sm:grid-cols-2">
           <Card
-            className={`cursor-pointer border-2 transition-colors ${examMode === "exam" ? "border-primary-500" : "border-transparent hover:border-primary-300"}`}
+            className={`cursor-pointer border-2 transition-colors ${examMode === "exam" ? "border-[var(--accent)]" : "border-transparent hover:border-[var(--accent)]/30"}`}
             onClick={() => setExamMode("exam")}
           >
             <CardContent className="p-6">
               <div className="flex items-center gap-2 mb-2">
-                <Timer className="w-5 h-5 text-primary-600" />
+                <Timer className="w-5 h-5 text-[var(--accent)]" />
                 <h2 className="font-semibold text-[var(--text-primary)]">Prüfungsmodus</h2>
               </div>
-              <p className="text-sm text-muted">
+              <p className="text-sm text-[var(--muted)]">
                 {seConfig.questions} Aufgaben · {seConfig.timeSeconds / 60} Minuten
               </p>
-              <p className="text-xs text-muted mt-1">Wie im echten MedAT</p>
+              <p className="text-xs text-[var(--muted)] mt-1">Wie im echten MedAT</p>
             </CardContent>
           </Card>
           <Card
-            className={`cursor-pointer border-2 transition-colors ${examMode === "practice" ? "border-primary-500" : "border-transparent hover:border-primary-300"}`}
+            className={`cursor-pointer border-2 transition-colors ${examMode === "practice" ? "border-[var(--accent)]" : "border-transparent hover:border-[var(--accent)]/30"}`}
             onClick={() => setExamMode("practice")}
           >
             <CardContent className="p-6">
@@ -945,8 +953,10 @@ function SozialesEntscheidenQuiz({
                 <BookOpen className="w-5 h-5 text-green-600" />
                 <h2 className="font-semibold text-[var(--text-primary)]">Übungsmodus</h2>
               </div>
-              <p className="text-sm text-muted">Kein Timer · sofortiges Feedback möglich</p>
-              <p className="text-xs text-muted mt-1">Zum Lernen und Verstehen</p>
+              <p className="text-sm text-[var(--muted)]">
+                Kein Timer · sofortiges Feedback möglich
+              </p>
+              <p className="text-xs text-[var(--muted)] mt-1">Zum Lernen und Verstehen</p>
             </CardContent>
           </Card>
         </div>
@@ -1016,7 +1026,7 @@ function SozialesEntscheidenQuiz({
             <div className="overflow-x-auto">
               <table className="w-full max-w-xs border border-[var(--border)] text-center">
                 <thead>
-                  <tr className="bg-muted/50">
+                  <tr className="bg-[var(--surface)]/50">
                     <th className="border-b border-r border-[var(--border)] p-2"></th>
                     <th className="border-b border-[var(--border)] p-2">1</th>
                     <th className="border-b border-[var(--border)] p-2">2</th>
@@ -1039,7 +1049,7 @@ function SozialesEntscheidenQuiz({
                 </tbody>
               </table>
             </div>
-            <p className="text-muted text-xs">
+            <p className="text-[var(--muted)] text-xs">
               Jede Wichtigkeitsstufe nur einmal vergeben, allen Überlegungen eine Stufe zugeordnet →
               Aufgabe wird gewertet.
             </p>
@@ -1089,7 +1099,7 @@ function SozialesEntscheidenQuiz({
             <div className="text-4xl font-bold text-blue-700 dark:text-blue-400">
               {Math.round((totalScore / maxScore) * 100)}%
             </div>
-            <p className="text-muted mt-1">
+            <p className="text-[var(--muted)] mt-1">
               {totalScore} von {maxScore} Punkten (Übereinstimmung mit der theoretischen
               Rangordnung)
             </p>
@@ -1139,7 +1149,8 @@ function SozialesEntscheidenQuiz({
   }
 
   const q = questions[index];
-  if (!q) return <div className="p-8 text-center text-muted">Keine Aufgaben verfügbar.</div>;
+  if (!q)
+    return <div className="p-8 text-center text-[var(--muted)]">Keine Aufgaben verfügbar.</div>;
   const currentRanking = rankings[q.id] || {};
   const _allRanked = q.aussagen.every((_, i) => currentRanking[i] !== undefined);
   void _allRanked;
@@ -1162,11 +1173,11 @@ function SozialesEntscheidenQuiz({
             Soziales Entscheiden
           </Badge>
           {examMode === "exam" && (
-            <Badge className="bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-400">
+            <Badge className="bg-[var(--accent)]/10 dark:bg-[var(--accent)]/10 text-[var(--accent)]/60">
               Prüfung
             </Badge>
           )}
-          <span className="text-sm text-muted">
+          <span className="text-sm text-[var(--muted)]">
             {index + 1}/{questions.length}
           </span>
         </div>
@@ -1202,7 +1213,7 @@ function SozialesEntscheidenQuiz({
           <div className="overflow-x-auto">
             <table className="border border-[var(--border)] text-sm mx-auto">
               <thead>
-                <tr className="bg-muted/50">
+                <tr className="bg-[var(--surface)]/50">
                   <th className="border-b border-r border-[var(--border)] p-2 w-12"></th>
                   {[1, 2, 3, 4, 5].map((rank) => (
                     <th

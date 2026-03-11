@@ -145,7 +145,9 @@ export default function WortfluessigkeitUeben() {
     return (
       <Card>
         <CardContent className="p-8 text-center">
-          <p className="text-muted">Keine W&ouml;rter f&uuml;r diesen Filter verf&uuml;gbar.</p>
+          <p className="text-[var(--muted)]">
+            Keine W&ouml;rter f&uuml;r diesen Filter verf&uuml;gbar.
+          </p>
         </CardContent>
       </Card>
     );
@@ -160,7 +162,7 @@ export default function WortfluessigkeitUeben() {
       {/* Top bar: filter + progress */}
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div className="flex items-center gap-2">
-          <Filter className="w-4 h-4 text-muted" />
+          <Filter className="w-4 h-4 text-[var(--muted)]" />
           <div className="flex gap-1">
             <button
               onClick={() => {
@@ -173,7 +175,7 @@ export default function WortfluessigkeitUeben() {
               className={`text-xs px-3 py-1.5 rounded-full transition-colors cursor-pointer ${
                 difficultyFilter === null
                   ? "bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 font-medium"
-                  : "text-muted hover:bg-gray-100 dark:hover:bg-gray-800"
+                  : "text-[var(--muted)] hover:bg-gray-100 dark:hover:bg-gray-800"
               }`}
             >
               Alle
@@ -191,7 +193,7 @@ export default function WortfluessigkeitUeben() {
                 className={`text-xs px-3 py-1.5 rounded-full transition-colors cursor-pointer ${
                   difficultyFilter === d
                     ? `${difficultyLabels[d].bg} ${difficultyLabels[d].color} font-medium`
-                    : "text-muted hover:bg-gray-100 dark:hover:bg-gray-800"
+                    : "text-[var(--muted)] hover:bg-gray-100 dark:hover:bg-gray-800"
                 }`}
               >
                 {difficultyLabels[d].label}
@@ -200,7 +202,7 @@ export default function WortfluessigkeitUeben() {
           </div>
         </div>
         <div className="flex items-center gap-3">
-          <span className="text-sm text-muted">
+          <span className="text-sm text-[var(--muted)]">
             {currentIndex + 1}/{orderedWords.length} —{" "}
             <span className="font-medium text-green-600 dark:text-green-400">
               {correctCount} richtig
@@ -211,14 +213,14 @@ export default function WortfluessigkeitUeben() {
           </span>
           <button
             onClick={handleShuffle}
-            className="text-muted hover:text-gray-700 dark:hover:text-gray-300 cursor-pointer"
+            className="text-[var(--muted)] hover:text-gray-700 dark:hover:text-gray-300 cursor-pointer"
             title="Mischen"
           >
             <Shuffle className="w-4 h-4" />
           </button>
           <button
             onClick={handleReset}
-            className="text-muted hover:text-gray-700 dark:hover:text-gray-300 cursor-pointer"
+            className="text-[var(--muted)] hover:text-gray-700 dark:hover:text-gray-300 cursor-pointer"
             title="Zurücksetzen"
           >
             <RotateCcw className="w-4 h-4" />
@@ -251,12 +253,12 @@ export default function WortfluessigkeitUeben() {
                 {currentWord.category}
               </span>
             </div>
-            <span className="text-xs text-muted">{currentWord.id}</span>
+            <span className="text-xs text-[var(--muted)]">{currentWord.id}</span>
           </div>
 
           {/* Letter tiles */}
           <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl">
-            <p className="text-xs text-muted mb-4 text-center">
+            <p className="text-xs text-[var(--muted)] mb-4 text-center">
               Bilde ein sinnvolles deutsches Wort:
             </p>
             <div className="flex items-center justify-center gap-2 flex-wrap">

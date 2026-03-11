@@ -65,7 +65,7 @@ export function LevelUpOverlay({ level, levelName, feature, onDismiss }: LevelUp
               <button
                 type="button"
                 onClick={onDismiss}
-                className="absolute top-3 right-3 p-2 rounded-full text-muted-foreground hover:bg-foreground/10 transition-colors cursor-pointer"
+                className="absolute top-3 right-3 p-2 rounded-full text-[var(--muted)] hover:bg-foreground/10 transition-colors cursor-pointer"
                 aria-label="Schließen"
               >
                 <X className="w-5 h-5" />
@@ -100,9 +100,7 @@ export function LevelUpOverlay({ level, levelName, feature, onDismiss }: LevelUp
                   <span className="font-semibold">{feature} freigeschaltet</span>
                 </motion.div>
               )}
-              <p className="text-sm text-muted-foreground mt-4">
-                Klicken oder Escape zum Schließen
-              </p>
+              <p className="text-sm text-[var(--muted)] mt-4">Klicken oder Escape zum Schließen</p>
             </div>
           </motion.div>
         </motion.div>

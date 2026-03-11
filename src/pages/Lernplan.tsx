@@ -162,10 +162,10 @@ export default function Lernplan() {
 
       {/* 1. Heutiger Lernplan – ganz oben */}
       <div ref={todayPlanRef}>
-        <Card className="border-2 border-primary-200 dark:border-primary-800">
+        <Card className="border-2 border-[var(--accent)]/20 dark:border-[var(--accent)]/30">
           <CardHeader className="pb-2">
             <CardTitle className="flex items-center gap-2 text-base">
-              <CalendarDays className="w-4 h-4 text-primary-600" />
+              <CalendarDays className="w-4 h-4 text-[var(--accent)]" />
               Heutiger Lernplan
               {updateFeedback && (
                 <span className="text-sm font-normal text-emerald-600 dark:text-emerald-400 animate-pulse">
@@ -173,7 +173,7 @@ export default function Lernplan() {
                 </span>
               )}
             </CardTitle>
-            <p className="text-sm text-muted font-normal">
+            <p className="text-sm text-[var(--muted)] font-normal">
               Konkrete Vorschläge für heute – machbar und nicht überfordernd.
             </p>
             {adaptation && adaptation.reason === "schnell_und_gut" && (
@@ -204,7 +204,7 @@ export default function Lernplan() {
                           ? `ca. ${concretePlan.totalMinutesEstimate} Min heute`
                           : "Lade Plan…"}
                       </span>
-                      <span className="text-sm font-bold text-primary-700 dark:text-primary-400">
+                      <span className="text-sm font-bold text-[var(--accent)]">
                         {primaryProgressPct}%
                       </span>
                     </div>
@@ -217,7 +217,7 @@ export default function Lernplan() {
                       <div className="space-y-4 pt-2">
                         {concretePlan.bmsRead.length > 0 && (
                           <div>
-                            <h4 className="text-xs font-semibold uppercase tracking-wide text-muted mb-2 flex items-center gap-1.5">
+                            <h4 className="text-xs font-semibold uppercase tracking-wide text-[var(--muted)] mb-2 flex items-center gap-1.5">
                               <BookOpen className="w-3.5 h-3.5" />
                               Kapitel lernen
                             </h4>
@@ -238,7 +238,7 @@ export default function Lernplan() {
                                       className={`flex items-center gap-2 p-2 rounded-lg border transition-colors text-left ${
                                         isDone
                                           ? "border-emerald-200 dark:border-emerald-800/50 bg-emerald-50/50 dark:bg-emerald-900/10"
-                                          : "border-border dark:border-[var(--border)] hover:bg-[var(--border)]/50"
+                                          : "border-[var(--border)] dark:border-[var(--border)] hover:bg-[var(--border)]/50"
                                       }`}
                                     >
                                       {isDone ? (
@@ -256,7 +256,7 @@ export default function Lernplan() {
                                         {item.title}
                                       </span>
                                       {!isDone && (
-                                        <ArrowRight className="w-4 h-4 shrink-0 text-muted" />
+                                        <ArrowRight className="w-4 h-4 shrink-0 text-[var(--muted)]" />
                                       )}
                                     </Link>
                                   </li>
@@ -268,7 +268,7 @@ export default function Lernplan() {
 
                         {concretePlan.bmsReview.length > 0 && (
                           <div>
-                            <h4 className="text-xs font-semibold uppercase tracking-wide text-muted mb-2 flex items-center gap-1.5">
+                            <h4 className="text-xs font-semibold uppercase tracking-wide text-[var(--muted)] mb-2 flex items-center gap-1.5">
                               <RefreshCw className="w-3.5 h-3.5" />
                               Wiederholen (fällig)
                             </h4>
@@ -319,7 +319,7 @@ export default function Lernplan() {
                             )?.done;
                             return (
                               <div>
-                                <h4 className="text-xs font-semibold uppercase tracking-wide text-muted mb-2 flex items-center gap-1.5">
+                                <h4 className="text-xs font-semibold uppercase tracking-wide text-[var(--muted)] mb-2 flex items-center gap-1.5">
                                   <ListChecks className="w-3.5 h-3.5" />
                                   BMS-Fragen
                                 </h4>
@@ -334,7 +334,7 @@ export default function Lernplan() {
                                   className={`flex flex-wrap gap-2 p-3 rounded-lg border transition-colors ${
                                     bmsDone
                                       ? "border-emerald-200 dark:border-emerald-800/50 bg-emerald-50/50 dark:bg-emerald-900/10"
-                                      : "border-border dark:border-[var(--border)] hover:bg-[var(--border)]/50"
+                                      : "border-[var(--border)] dark:border-[var(--border)] hover:bg-[var(--border)]/50"
                                   }`}
                                 >
                                   {bmsDone ? (
@@ -352,7 +352,7 @@ export default function Lernplan() {
                                       {q.label}: {q.count}
                                     </span>
                                   ))}
-                                  <span className="text-xs text-muted self-center ml-auto">
+                                  <span className="text-xs text-[var(--muted)] self-center ml-auto">
                                     {bmsDone ? "Erledigt" : "Fragen-Trainer →"}
                                   </span>
                                 </Link>
@@ -367,7 +367,7 @@ export default function Lernplan() {
                             )?.done;
                             return (
                               <div>
-                                <h4 className="text-xs font-semibold uppercase tracking-wide text-muted mb-2 flex items-center gap-1.5">
+                                <h4 className="text-xs font-semibold uppercase tracking-wide text-[var(--muted)] mb-2 flex items-center gap-1.5">
                                   <Brain className="w-3.5 h-3.5" />
                                   KFF
                                 </h4>
@@ -382,7 +382,7 @@ export default function Lernplan() {
                                   className={`flex flex-wrap gap-2 p-3 rounded-lg border transition-colors ${
                                     kffDone
                                       ? "border-emerald-200 dark:border-emerald-800/50 bg-emerald-50/50 dark:bg-emerald-900/10"
-                                      : "border-border dark:border-[var(--border)] hover:bg-[var(--border)]/50"
+                                      : "border-[var(--border)] dark:border-[var(--border)] hover:bg-[var(--border)]/50"
                                   }`}
                                 >
                                   {kffDone ? (
@@ -400,7 +400,7 @@ export default function Lernplan() {
                                       {t.label}: {t.count}
                                     </span>
                                   ))}
-                                  <span className="text-xs text-muted self-center ml-auto">
+                                  <span className="text-xs text-[var(--muted)] self-center ml-auto">
                                     {kffDone ? "Erledigt" : "KFF →"}
                                   </span>
                                 </Link>
@@ -415,7 +415,7 @@ export default function Lernplan() {
                             )?.done;
                             return (
                               <div>
-                                <h4 className="text-xs font-semibold uppercase tracking-wide text-muted mb-2 flex items-center gap-1.5">
+                                <h4 className="text-xs font-semibold uppercase tracking-wide text-[var(--muted)] mb-2 flex items-center gap-1.5">
                                   <FileText className="w-3.5 h-3.5" />
                                   TV
                                 </h4>
@@ -425,7 +425,7 @@ export default function Lernplan() {
                                   className={`flex items-center gap-2 p-3 rounded-lg border transition-colors ${
                                     tvDone
                                       ? "border-emerald-200 dark:border-emerald-800/50 bg-emerald-50/50 dark:bg-emerald-900/10"
-                                      : "border-border dark:border-[var(--border)] hover:bg-[var(--border)]/50"
+                                      : "border-[var(--border)] dark:border-[var(--border)] hover:bg-[var(--border)]/50"
                                   }`}
                                 >
                                   {tvDone ? (
@@ -442,9 +442,11 @@ export default function Lernplan() {
                                     bearbeiten
                                   </span>
                                   {!tvDone && (
-                                    <ArrowRight className="w-4 h-4 shrink-0 text-muted ml-auto" />
+                                    <ArrowRight className="w-4 h-4 shrink-0 text-[var(--muted)] ml-auto" />
                                   )}
-                                  {tvDone && <span className="text-xs text-muted">Erledigt</span>}
+                                  {tvDone && (
+                                    <span className="text-xs text-[var(--muted)]">Erledigt</span>
+                                  )}
                                 </Link>
                               </div>
                             );
@@ -457,7 +459,7 @@ export default function Lernplan() {
                             )?.done;
                             return (
                               <div>
-                                <h4 className="text-xs font-semibold uppercase tracking-wide text-muted mb-2 flex items-center gap-1.5">
+                                <h4 className="text-xs font-semibold uppercase tracking-wide text-[var(--muted)] mb-2 flex items-center gap-1.5">
                                   <Heart className="w-3.5 h-3.5" />
                                   SEK
                                 </h4>
@@ -467,7 +469,7 @@ export default function Lernplan() {
                                   className={`flex items-center gap-2 p-3 rounded-lg border transition-colors ${
                                     sekDone
                                       ? "border-emerald-200 dark:border-emerald-800/50 bg-emerald-50/50 dark:bg-emerald-900/10"
-                                      : "border-border dark:border-[var(--border)] hover:bg-[var(--border)]/50"
+                                      : "border-[var(--border)] dark:border-[var(--border)] hover:bg-[var(--border)]/50"
                                   }`}
                                 >
                                   {sekDone ? (
@@ -488,7 +490,7 @@ export default function Lernplan() {
                                       </span>
                                     ))}
                                   </div>
-                                  <span className="text-xs text-muted shrink-0">
+                                  <span className="text-xs text-[var(--muted)] shrink-0">
                                     {sekDone ? "Erledigt" : "SEK →"}
                                   </span>
                                 </Link>
@@ -501,7 +503,7 @@ export default function Lernplan() {
                 );
               })()
             ) : (
-              <p className="text-sm text-muted">
+              <p className="text-sm text-[var(--muted)]">
                 Noch kein Lernplan. Stelle unten deine Wochenstunden ein und generiere deinen Plan –
                 dann siehst du hier deine Tagesaufgaben.
               </p>
@@ -519,14 +521,14 @@ export default function Lernplan() {
               const pc = phaseConfig[phase.phase as keyof typeof phaseConfig];
               const isActive = plan.activePhase === phase.phase;
               return (
-                <Card key={i} className={isActive ? "ring-2 ring-primary-500" : ""}>
+                <Card key={i} className={isActive ? "ring-2 ring-[var(--accent)]" : ""}>
                   <CardContent className="p-4">
                     <div className="flex items-center gap-2 mb-2">
                       <Badge variant={pc.badge}>{pc.label}</Badge>
-                      <span className="text-xs text-muted">{phase.weeks} Wochen</span>
+                      <span className="text-xs text-[var(--muted)]">{phase.weeks} Wochen</span>
                       {isActive && <Badge variant="success">Aktuell</Badge>}
                     </div>
-                    <p className="text-xs text-muted">{pc.desc}</p>
+                    <p className="text-xs text-[var(--muted)]">{pc.desc}</p>
                   </CardContent>
                 </Card>
               );
@@ -539,7 +541,7 @@ export default function Lernplan() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Clock className="w-5 h-5 text-primary-700" />
+            <Clock className="w-5 h-5 text-[var(--accent)]" />
             Lernplan anpassen
           </CardTitle>
         </CardHeader>
@@ -555,9 +557,9 @@ export default function Lernplan() {
                 max={7}
                 value={daysPerWeek}
                 onChange={(e) => setDaysPerWeek(Number(e.target.value))}
-                className="flex-1 accent-primary-700"
+                className="flex-1 accent-[var(--accent)]"
               />
-              <span className="text-lg font-bold text-primary-700 w-16 text-right">
+              <span className="text-lg font-bold text-[var(--accent)] w-16 text-right">
                 {daysPerWeek} Tage
               </span>
             </div>
@@ -574,26 +576,26 @@ export default function Lernplan() {
                 step={0.25}
                 value={hoursPerDay}
                 onChange={(e) => setHoursPerDay(Number(e.target.value))}
-                className="flex-1 accent-primary-700"
+                className="flex-1 accent-[var(--accent)]"
               />
-              <span className="text-lg font-bold text-primary-700 w-20 text-right">
+              <span className="text-lg font-bold text-[var(--accent)] w-20 text-right">
                 {hoursPerDay}h/Tag
               </span>
             </div>
           </div>
-          <p className="text-sm text-muted">
-            = <strong className="text-foreground">{derivedHoursPerWeek} h/Woche</strong>
+          <p className="text-sm text-[var(--muted)]">
+            = <strong className="text-[var(--text-primary)]">{derivedHoursPerWeek} h/Woche</strong>
           </p>
 
           {recommendedHoursPerDay != null && days > 0 && (
-            <div className="rounded-lg bg-primary-50 dark:bg-primary-900/20 border border-primary-200 dark:border-primary-800 p-3">
-              <p className="text-sm font-medium text-primary-800 dark:text-primary-200">
-                Unsere Empfehlung
-              </p>
-              <p className="text-sm text-muted mt-0.5">
+            <div className="rounded-lg bg-[var(--accent)]/5 dark:bg-[var(--accent)]/10 border border-[var(--accent)]/20 dark:border-[var(--accent)]/30 p-3">
+              <p className="text-sm font-medium text-[var(--accent)]">Unsere Empfehlung</p>
+              <p className="text-sm text-[var(--muted)] mt-0.5">
                 Damit du bis zum MedAT durchkommst, empfehlen wir mind.{" "}
-                <strong className="text-foreground">{recommendedHoursPerDay} h</strong> pro Tag an{" "}
-                <strong className="text-foreground">{daysPerWeek} Tagen</strong> pro Woche.
+                <strong className="text-[var(--text-primary)]">{recommendedHoursPerDay} h</strong>{" "}
+                pro Tag an{" "}
+                <strong className="text-[var(--text-primary)]">{daysPerWeek} Tagen</strong> pro
+                Woche.
                 {hoursPerDay < recommendedHoursPerDay && (
                   <span className="block mt-1 text-amber-700 dark:text-amber-400">
                     Dein aktueller Wert ({hoursPerDay} h/Tag) liegt darunter – du müsstest mehr Zeit

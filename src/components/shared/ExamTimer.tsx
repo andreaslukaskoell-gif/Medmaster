@@ -41,7 +41,7 @@ export function ExamTimer({ totalSeconds, onTimeUp, paused = false }: ExamTimerP
           : "bg-[var(--card)]/80 border-[var(--border)]/50 text-[var(--text-primary)]"
       }`}
     >
-      <Timer className={`w-4 h-4 ${isWarning ? "text-red-500" : "text-muted"}`} />
+      <Timer className={`w-4 h-4 ${isWarning ? "text-red-500" : "text-[var(--muted)]"}`} />
       <span>
         {min}:{sec.toString().padStart(2, "0")}
       </span>

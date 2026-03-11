@@ -16,7 +16,7 @@ export function KapitelFortschritt({ chapterTitle, xp = 25 }: KapitelFortschritt
         <Button
           size="lg"
           onClick={() => setCompleted(true)}
-          className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-3 text-base"
+          className="bg-[var(--accent)] hover:opacity-90 text-white px-8 py-3 text-base"
         >
           Kapitel als abgeschlossen markieren
         </Button>
@@ -25,15 +25,13 @@ export function KapitelFortschritt({ chapterTitle, xp = 25 }: KapitelFortschritt
   }
 
   return (
-    <div className="mt-10 bg-linear-to-r from-teal-50 to-emerald-50 dark:from-teal-900/30 dark:to-emerald-900/30 border border-teal-200 dark:border-teal-700 rounded-2xl p-8 text-center animate-in fade-in zoom-in duration-500">
-      <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-100 dark:bg-teal-800 rounded-full mb-4">
-        <CheckCircle2 className="w-10 h-10 text-teal-600 dark:text-teal-400" />
+    <div className="mt-10 bg-[var(--success)]/5 border border-[var(--success)]/20 rounded-2xl p-8 text-center animate-in fade-in zoom-in duration-500">
+      <div className="inline-flex items-center justify-center w-16 h-16 bg-[var(--success)]/10 rounded-full mb-4">
+        <CheckCircle2 className="w-10 h-10 text-[var(--success)]" />
       </div>
-      <h3 className="text-xl font-bold text-teal-800 dark:text-teal-200 mb-1">
-        Kapitel abgeschlossen!
-      </h3>
-      <p className="text-teal-600 dark:text-teal-400 text-sm mb-3">{chapterTitle}</p>
-      <div className="inline-block bg-teal-600 text-white font-bold text-lg px-6 py-2 rounded-full">
+      <h3 className="text-xl font-bold text-[var(--text-primary)] mb-1">Kapitel abgeschlossen!</h3>
+      <p className="text-[var(--success)] text-sm mb-3">{chapterTitle}</p>
+      <div className="inline-block bg-[var(--success)] text-white font-bold text-lg px-6 py-2 rounded-full">
         +{xp} XP
       </div>
     </div>

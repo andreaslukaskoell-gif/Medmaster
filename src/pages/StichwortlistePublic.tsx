@@ -384,9 +384,9 @@ export default function StichwortlistePublic() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-[var(--background)]">
       {/* Nav */}
-      <nav className="sticky top-0 z-40 bg-background/90 backdrop-blur-xl border-b border-border/50 shadow-sm">
+      <nav className="sticky top-0 z-40 bg-[var(--background)]/90 backdrop-blur-xl border-b border-[var(--border)]/50 shadow-sm">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
             <div
@@ -395,7 +395,7 @@ export default function StichwortlistePublic() {
             >
               <GraduationCap className="w-4 h-4" />
             </div>
-            <span className="text-lg font-bold text-app-foreground">MedMaster</span>
+            <span className="text-lg font-bold text-[var(--text-primary)]">MedMaster</span>
           </Link>
           <Link
             to="/register"
@@ -408,7 +408,7 @@ export default function StichwortlistePublic() {
       </nav>
 
       {/* Hero */}
-      <header className="bg-card border-b border-border">
+      <header className="bg-[var(--card)] border-b border-[var(--border)]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 py-10 sm:py-14 text-center">
           <div
             className="inline-flex items-center gap-2 px-4 py-2 rounded-2xl text-sm font-medium mb-6"
@@ -417,10 +417,10 @@ export default function StichwortlistePublic() {
             <BookOpen className="w-4 h-4" />
             Offiziell — MedAT 2026
           </div>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-app-foreground mb-4 tracking-tight">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[var(--text-primary)] mb-4 tracking-tight">
             BMS Stichwortliste 2026
           </h1>
-          <p className="text-lg text-muted max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-[var(--muted)] max-w-2xl mx-auto leading-relaxed">
             Die vollständige offizielle Themenliste für den BMS-Teil des MedAT 2026. Alle Stichworte
             aus Biologie, Chemie, Physik und Mathematik — mit über 4.300 Übungsfragen auf MedMaster.
           </p>
@@ -429,7 +429,7 @@ export default function StichwortlistePublic() {
               <a
                 key={s.id}
                 href={`#${s.id}`}
-                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-2xl text-sm font-medium bg-card border border-border text-app-foreground/80 hover:border-border transition-colors shadow-sm"
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-2xl text-sm font-medium bg-[var(--card)] border border-[var(--border)] text-[var(--text-primary)]/80 hover:border-[var(--border)] transition-colors shadow-sm"
               >
                 <span>{s.emoji}</span>
                 {s.label}
@@ -464,9 +464,11 @@ export default function StichwortlistePublic() {
               {subject.topics.map((topic) => (
                 <div
                   key={topic.name}
-                  className={`bg-card rounded-2xl border ${subject.colorBorder} p-5 sm:p-6`}
+                  className={`bg-[var(--card)] rounded-2xl border ${subject.colorBorder} p-5 sm:p-6`}
                 >
-                  <h3 className="text-base font-semibold text-app-foreground mb-4">{topic.name}</h3>
+                  <h3 className="text-base font-semibold text-[var(--text-primary)] mb-4">
+                    {topic.name}
+                  </h3>
                   <div className="flex flex-wrap gap-2">
                     {topic.keywords.map((kw) => (
                       <span
@@ -482,9 +484,9 @@ export default function StichwortlistePublic() {
             </div>
 
             {/* Question count CTA */}
-            <div className="mt-4 flex items-center justify-between bg-card rounded-2xl border border-border px-5 py-4">
-              <span className="text-sm text-muted">
-                <span className="font-semibold text-app-foreground">
+            <div className="mt-4 flex items-center justify-between bg-[var(--card)] rounded-2xl border border-[var(--border)] px-5 py-4">
+              <span className="text-sm text-[var(--muted)]">
+                <span className="font-semibold text-[var(--text-primary)]">
                   {subject.questionCount} Übungsfragen
                 </span>{" "}
                 verfügbar
@@ -525,60 +527,60 @@ export default function StichwortlistePublic() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <Link
             to="/medat-guide"
-            className="flex items-center gap-3 p-5 rounded-2xl bg-card border border-border hover:border-border transition-colors"
+            className="flex items-center gap-3 p-5 rounded-2xl bg-[var(--card)] border border-[var(--border)] hover:border-[var(--border)] transition-colors"
           >
             <span className="text-2xl">📖</span>
             <div>
-              <span className="text-sm font-semibold text-app-foreground block">
+              <span className="text-sm font-semibold text-[var(--text-primary)] block">
                 MedAT 2026 Guide
               </span>
-              <span className="text-xs text-muted">Alles zum Testaufbau</span>
+              <span className="text-xs text-[var(--muted)]">Alles zum Testaufbau</span>
             </div>
           </Link>
           <Link
             to="/faq"
-            className="flex items-center gap-3 p-5 rounded-2xl bg-card border border-border hover:border-border transition-colors"
+            className="flex items-center gap-3 p-5 rounded-2xl bg-[var(--card)] border border-[var(--border)] hover:border-[var(--border)] transition-colors"
           >
             <span className="text-2xl">❓</span>
             <div>
-              <span className="text-sm font-semibold text-app-foreground block">FAQ</span>
-              <span className="text-xs text-muted">Häufige Fragen zum MedAT</span>
+              <span className="text-sm font-semibold text-[var(--text-primary)] block">FAQ</span>
+              <span className="text-xs text-[var(--muted)]">Häufige Fragen zum MedAT</span>
             </div>
           </Link>
           <Link
             to="/medat-uebungsfragen"
-            className="flex items-center gap-3 p-5 rounded-2xl bg-card border border-border hover:border-border transition-colors"
+            className="flex items-center gap-3 p-5 rounded-2xl bg-[var(--card)] border border-[var(--border)] hover:border-[var(--border)] transition-colors"
           >
             <span className="text-2xl">✏️</span>
             <div>
-              <span className="text-sm font-semibold text-app-foreground block">
+              <span className="text-sm font-semibold text-[var(--text-primary)] block">
                 MedAT Übungsfragen
               </span>
-              <span className="text-xs text-muted">BMS + KFF kostenlos</span>
+              <span className="text-xs text-[var(--muted)]">BMS + KFF kostenlos</span>
             </div>
           </Link>
         </div>
       </main>
 
       {/* Footer */}
-      <footer className="py-6 bg-surface border-t border-border mt-10">
+      <footer className="py-6 bg-surface border-t border-[var(--border)] mt-10">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <div className="flex items-center gap-2">
-            <GraduationCap className="w-4 h-4 text-muted" />
-            <span className="text-sm font-semibold text-muted">MedMaster</span>
+            <GraduationCap className="w-4 h-4 text-[var(--muted)]" />
+            <span className="text-sm font-semibold text-[var(--muted)]">MedMaster</span>
           </div>
-          <div className="flex gap-4 text-xs text-muted">
-            <Link to="/impressum" className="hover:text-app-foreground transition-colors">
+          <div className="flex gap-4 text-xs text-[var(--muted)]">
+            <Link to="/impressum" className="hover:text-[var(--text-primary)] transition-colors">
               Impressum
             </Link>
-            <Link to="/datenschutz" className="hover:text-app-foreground transition-colors">
+            <Link to="/datenschutz" className="hover:text-[var(--text-primary)] transition-colors">
               Datenschutz
             </Link>
-            <Link to="/agb" className="hover:text-app-foreground transition-colors">
+            <Link to="/agb" className="hover:text-[var(--text-primary)] transition-colors">
               AGB
             </Link>
           </div>
-          <p className="text-xs text-muted">© 2026 MedMaster. Alle Rechte vorbehalten.</p>
+          <p className="text-xs text-[var(--muted)]">© 2026 MedMaster. Alle Rechte vorbehalten.</p>
         </div>
       </footer>
     </div>

@@ -241,10 +241,10 @@ export default function TV() {
         </Button>
         <Card>
           <CardContent className="p-6 text-center">
-            <div className="text-4xl font-bold text-primary-700 dark:text-primary-400">
+            <div className="text-4xl font-bold text-[var(--accent)]/60">
               {score}/{statements.length}
             </div>
-            <p className="text-muted mt-1">
+            <p className="text-[var(--muted)] mt-1">
               {Math.round((score / statements.length) * 100)}% richtig
             </p>
           </CardContent>
@@ -323,13 +323,13 @@ export default function TV() {
                 <div className="flex gap-2">
                   <button
                     onClick={() => setLegacyAnswers((p) => ({ ...p, [s.id]: true }))}
-                    className={`flex-1 px-3 py-2 rounded-lg border text-sm font-medium transition-colors cursor-pointer ${legacyAnswers[s.id] === true ? "border-green-500 bg-green-50 dark:bg-green-900/20 text-green-800 dark:text-green-300" : "border-border border-[var(--border)] hover:bg-[var(--border)]/50 text-[var(--text-secondary)]"}`}
+                    className={`flex-1 px-3 py-2 rounded-lg border text-sm font-medium transition-colors cursor-pointer ${legacyAnswers[s.id] === true ? "border-green-500 bg-green-50 dark:bg-green-900/20 text-green-800 dark:text-green-300" : "border-[var(--border)] border-[var(--border)] hover:bg-[var(--border)]/50 text-[var(--text-secondary)]"}`}
                   >
                     Ableitbar
                   </button>
                   <button
                     onClick={() => setLegacyAnswers((p) => ({ ...p, [s.id]: false }))}
-                    className={`flex-1 px-3 py-2 rounded-lg border text-sm font-medium transition-colors cursor-pointer ${legacyAnswers[s.id] === false ? "border-red-500 bg-red-50 dark:bg-red-900/20 text-red-800 dark:text-red-300" : "border-border border-[var(--border)] hover:bg-[var(--border)]/50 text-[var(--text-secondary)]"}`}
+                    className={`flex-1 px-3 py-2 rounded-lg border text-sm font-medium transition-colors cursor-pointer ${legacyAnswers[s.id] === false ? "border-red-500 bg-red-50 dark:bg-red-900/20 text-red-800 dark:text-red-300" : "border-[var(--border)] border-[var(--border)] hover:bg-[var(--border)]/50 text-[var(--text-secondary)]"}`}
                   >
                     Nicht ableitbar
                   </button>
@@ -357,10 +357,10 @@ export default function TV() {
         </Button>
         <Card>
           <CardContent className="p-6 text-center">
-            <div className="text-4xl font-bold text-primary-700 dark:text-primary-400">
+            <div className="text-4xl font-bold text-[var(--accent)]/60">
               {score}/{allSetQuestions.length}
             </div>
-            <p className="text-muted mt-1">
+            <p className="text-[var(--muted)] mt-1">
               {Math.round((score / allSetQuestions.length) * 100)}% richtig
             </p>
             <p className="text-sm text-green-600 dark:text-green-400 mt-1">+{score * 10} XP</p>
@@ -368,7 +368,7 @@ export default function TV() {
         </Card>
         {currentSet.texts.map((t) => (
           <div key={t.id} className="space-y-3">
-            <h3 className="text-sm font-semibold text-[var(--text-primary)] border-l-4 border-primary-500 pl-3">
+            <h3 className="text-sm font-semibold text-[var(--text-primary)] border-l-4 border-[var(--accent)] pl-3">
               {t.title}
             </h3>
             {t.questions.map((q) => {
@@ -446,14 +446,14 @@ export default function TV() {
             <Badge variant="info">
               Text {textIndex + 1}/{currentSet.texts.length}
             </Badge>
-            <span className="text-sm text-muted">
+            <span className="text-sm text-[var(--muted)]">
               {totalQuestionsAnswered}/{allSetQuestions.length} beantwortet
             </span>
           </div>
         </div>
         <div className="w-full bg-[var(--border)] rounded-full h-2">
           <div
-            className="bg-primary-500 h-2 rounded-full transition-all"
+            className="bg-[var(--accent)] h-2 rounded-full transition-all"
             style={{ width: `${(totalQuestionsAnswered / allSetQuestions.length) * 100}%` }}
           />
         </div>
@@ -466,7 +466,7 @@ export default function TV() {
               onClick={() => setTextIndex(ti)}
               className={`px-3 py-2 rounded-lg text-xs font-medium whitespace-nowrap transition-colors cursor-pointer ${
                 ti === textIndex
-                  ? "bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-400"
+                  ? "bg-[var(--accent)]/10 dark:bg-[var(--accent)]/10 text-[var(--accent)]/60"
                   : "bg-[var(--border)]/50 text-[var(--muted)] hover:bg-[var(--border)]"
               }`}
             >
@@ -509,8 +509,8 @@ export default function TV() {
                         onClick={() => setMcAnswers((p) => ({ ...p, [q.id]: oi }))}
                         className={`w-full text-left px-3 py-2.5 rounded-lg border text-sm transition-colors cursor-pointer ${
                           mcAnswers[q.id] === oi
-                            ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300"
-                            : "border-border border-[var(--border)] hover:bg-[var(--border)]/50 text-[var(--text-secondary)]"
+                            ? "border-[var(--accent)] bg-[var(--accent)]/5 dark:bg-[var(--accent)]/10 text-[var(--accent)]/30"
+                            : "border-[var(--border)] border-[var(--border)] hover:bg-[var(--border)]/50 text-[var(--text-secondary)]"
                         }`}
                       >
                         <span className="font-semibold mr-1.5">{LABELS[oi]})</span>
@@ -560,10 +560,10 @@ export default function TV() {
         </Button>
         <Card>
           <CardContent className="p-6 text-center">
-            <div className="text-4xl font-bold text-primary-700 dark:text-primary-400">
+            <div className="text-4xl font-bold text-[var(--accent)]/60">
               {score}/{allAussagenFragen.length}
             </div>
-            <p className="text-muted mt-1">
+            <p className="text-[var(--muted)] mt-1">
               {Math.round((score / allAussagenFragen.length) * 100)}% richtig
             </p>
           </CardContent>
@@ -676,8 +676,8 @@ export default function TV() {
                       onClick={() => setAussagenAnswers((p) => ({ ...p, [q.id]: k.key }))}
                       className={`w-full text-left px-3 py-2.5 rounded-lg border text-sm transition-colors cursor-pointer ${
                         isSelected
-                          ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300"
-                          : "border-border border-[var(--border)] hover:bg-[var(--border)]/50 text-[var(--text-secondary)]"
+                          ? "border-[var(--accent)] bg-[var(--accent)]/5 dark:bg-[var(--accent)]/10 text-[var(--accent)]/30"
+                          : "border-[var(--border)] border-[var(--border)] hover:bg-[var(--border)]/50 text-[var(--text-secondary)]"
                       }`}
                     >
                       <span className="font-semibold mr-1.5">{k.key}.</span>
@@ -713,9 +713,11 @@ export default function TV() {
       {/* Header */}
       <div>
         <h1 className="text-2xl font-bold text-[var(--foreground)]">TV — Textverständnis</h1>
-        <p className="text-muted mt-1">5 Texte lesen, Fragen beantworten — wie im echten MedAT.</p>
+        <p className="text-[var(--muted)] mt-1">
+          5 Texte lesen, Fragen beantworten — wie im echten MedAT.
+        </p>
         {dailyPlanTvTexts != null && dailyPlanTvTexts > 0 && (
-          <p className="text-sm text-primary-600 dark:text-primary-400 mt-2 font-medium">
+          <p className="text-sm text-[var(--accent)]/60 mt-2 font-medium">
             Lernplan heute: {dailyPlanTvTexts} Text{dailyPlanTvTexts > 1 ? "e" : ""}
           </p>
         )}
@@ -730,7 +732,9 @@ export default function TV() {
             </div>
             <div>
               <h3 className="font-semibold text-[var(--foreground)]">Strategie-Guide</h3>
-              <p className="text-sm text-muted">Lerne die beste Vorgehensweise für TV-Aufgaben</p>
+              <p className="text-sm text-[var(--muted)]">
+                Lerne die beste Vorgehensweise für TV-Aufgaben
+              </p>
             </div>
           </div>
           <Button
@@ -748,7 +752,7 @@ export default function TV() {
         <section className="space-y-4">
           <div>
             <h2 className="text-lg font-semibold text-[var(--foreground)]">Testsets</h2>
-            <p className="text-sm text-muted mt-0.5">
+            <p className="text-sm text-[var(--muted)] mt-0.5">
               Multiple-Choice Sets mit je 5 Texten — wie im echten MedAT
             </p>
           </div>
@@ -776,7 +780,7 @@ export default function TV() {
                             {set.difficulty}
                           </Badge>
                         </div>
-                        <p className="text-xs text-muted mt-1">
+                        <p className="text-xs text-[var(--muted)] mt-1">
                           {set.texts.length} Texte · {totalQ} Fragen
                         </p>
                       </div>
@@ -801,7 +805,7 @@ export default function TV() {
               MedAT
             </Badge>
           </div>
-          <p className="text-sm text-muted mt-0.5">
+          <p className="text-sm text-[var(--muted)] mt-0.5">
             Aussagen-Kombination: Nummerierte Aussagen bewerten, dann passende Kombination (A-E)
             wählen
           </p>
@@ -829,7 +833,7 @@ export default function TV() {
                         </Badge>
                       )}
                     </div>
-                    <p className="text-xs text-muted mt-1">
+                    <p className="text-xs text-[var(--muted)] mt-1">
                       {t.fragen.length} Frage{t.fragen.length > 1 ? "n" : ""} · Aussagen-Format
                     </p>
                   </div>
@@ -847,7 +851,7 @@ export default function TV() {
       <section className="space-y-4 border-t border-[var(--border)] pt-8">
         <div>
           <h2 className="text-lg font-semibold text-[var(--foreground)]">Klassischer Modus</h2>
-          <p className="text-sm text-muted mt-0.5">
+          <p className="text-sm text-[var(--muted)] mt-0.5">
             Einzelne Texte mit Ableitbar/Nicht-Ableitbar Aussagen
           </p>
         </div>
@@ -857,13 +861,13 @@ export default function TV() {
               <CardContent className="p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
                 <div className="flex items-center gap-3 flex-1 min-w-0">
                   <div className="w-8 h-8 bg-[var(--card)] border border-[var(--border)] rounded-lg flex items-center justify-center shrink-0">
-                    <span className="text-xs font-semibold text-muted">{i + 1}</span>
+                    <span className="text-xs font-semibold text-[var(--muted)]">{i + 1}</span>
                   </div>
                   <div className="min-w-0">
                     <h3 className="font-semibold text-[var(--foreground)] text-sm truncate">
                       {t.title}
                     </h3>
-                    <p className="text-xs text-muted mt-0.5">
+                    <p className="text-xs text-[var(--muted)] mt-0.5">
                       {t.statements.length} Aussagen zu bewerten
                     </p>
                   </div>
@@ -895,7 +899,7 @@ export default function TV() {
           <div className="flex justify-center pt-2">
             <button
               onClick={() => setShowAllLegacy(false)}
-              className="text-sm text-muted hover:text-[var(--foreground)] transition-colors cursor-pointer"
+              className="text-sm text-[var(--muted)] hover:text-[var(--foreground)] transition-colors cursor-pointer"
             >
               Weniger anzeigen
             </button>

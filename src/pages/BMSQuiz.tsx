@@ -200,10 +200,10 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
 
         <Card>
           <CardContent className="p-6 text-center">
-            <div className="text-4xl font-bold text-primary-700 dark:text-primary-400">
+            <div className="text-4xl font-bold text-[var(--accent)]">
               {score}/{questions.length}
             </div>
-            <p className="text-muted mt-1">{pct}% richtig</p>
+            <p className="text-[var(--muted)] mt-1">{pct}% richtig</p>
             <p className="text-sm text-green-600 dark:text-green-400 font-medium mt-2">
               +{score * 10} XP erhalten
             </p>
@@ -232,7 +232,9 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
             return (
               <Card>
                 <CardContent className="p-5">
-                  <h3 className="text-sm font-semibold text-foreground mb-3">Ergebnis nach Fach</h3>
+                  <h3 className="text-sm font-semibold text-[var(--text-primary)] mb-3">
+                    Ergebnis nach Fach
+                  </h3>
                   <div className="grid grid-cols-2 gap-3">
                     {Object.entries(bySubject).map(([subj, data]) => {
                       const c = subjectColors[subj];
@@ -251,7 +253,7 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
                               {subjPct}%
                             </Badge>
                           </div>
-                          <p className="text-xs text-muted">
+                          <p className="text-xs text-[var(--muted)]">
                             {data.correct}/{data.total} richtig
                           </p>
                         </div>
@@ -279,7 +281,7 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
                     ) : (
                       <XCircle className="w-5 h-5 text-red-500 mt-0.5 shrink-0" />
                     )}
-                    <p className="text-sm font-medium text-foreground">
+                    <p className="text-sm font-medium text-[var(--text-primary)]">
                       {i + 1}. {q.text}
                     </p>
                   </div>
@@ -370,27 +372,29 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
           </Badge>
           <button
             onClick={() => toggleFlagQuestion(currentQuestion.id)}
-            className={`p-1.5 rounded cursor-pointer ${isFlagged ? "text-red-500" : "text-muted hover:text-foreground"}`}
+            className={`p-1.5 rounded cursor-pointer ${isFlagged ? "text-red-500" : "text-[var(--muted)] hover:text-[var(--text-primary)]"}`}
             title="Markieren (F)"
           >
             <Flag className="w-4 h-4" />
           </button>
-          <span className="text-sm text-muted">
+          <span className="text-sm text-[var(--muted)]">
             Frage {currentIndex + 1} von {questions.length}
           </span>
         </div>
       </div>
 
-      <div className="w-full bg-muted rounded-full h-2">
+      <div className="w-full bg-[var(--surface)] rounded-full h-2">
         <div
-          className="bg-primary-600 h-2 rounded-full transition-all"
+          className="bg-[var(--accent)] h-2 rounded-full transition-all"
           style={{ width: `${((currentIndex + 1) / questions.length) * 100}%` }}
         />
       </div>
 
       <Card>
         <CardContent className="p-6">
-          <p className="text-base font-medium text-foreground mb-6">{currentQuestion.text}</p>
+          <p className="text-base font-medium text-[var(--text-primary)] mb-6">
+            {currentQuestion.text}
+          </p>
           <div className="space-y-3">
             {currentQuestion.options.map((opt, i) => (
               <button
@@ -398,13 +402,13 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
                 onClick={() => handleSelect(opt.id)}
                 className={`w-full text-left px-4 py-3 rounded-lg border text-sm transition-colors cursor-pointer ${
                   answers[currentQuestion.id] === opt.id
-                    ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300"
-                    : "border-border dark:border-border hover:bg-accent text-foreground"
+                    ? "border-[var(--accent)] bg-[var(--accent)]/5 dark:bg-[var(--accent)]/10 text-[var(--accent)]"
+                    : "border-[var(--border)] dark:border-[var(--border)] hover:bg-accent text-[var(--text-primary)]"
                 }`}
               >
                 <span className="font-semibold mr-2">{opt.id.toUpperCase()})</span>
                 {opt.text}
-                <kbd className="float-right text-[10px] bg-muted px-1.5 py-0.5 rounded text-muted">
+                <kbd className="float-right text-[10px] bg-[var(--surface)] px-1.5 py-0.5 rounded text-[var(--muted)]">
                   {i + 1}
                 </kbd>
               </button>
@@ -460,10 +464,10 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
             onClick={() => setCurrentIndex(i)}
             className={`w-8 h-8 rounded-full text-xs font-medium transition-colors cursor-pointer relative ${
               i === currentIndex
-                ? "bg-primary-700 text-white"
+                ? "bg-[var(--accent)] text-white"
                 : answers[q.id]
-                  ? "bg-primary-200 dark:bg-primary-800 text-primary-800 dark:text-primary-200"
-                  : "bg-muted text-muted-foreground"
+                  ? "bg-[var(--accent)]/20 dark:bg-[var(--accent)]/30 text-[var(--accent)]"
+                  : "bg-[var(--surface)] text-muted-foreground"
             }`}
           >
             {i + 1}
@@ -475,7 +479,7 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
       </div>
 
       <div className="text-center">
-        <p className="text-[10px] text-muted">
+        <p className="text-[10px] text-[var(--muted)]">
           Tastatur: 1-5 Antwort · Enter Weiter · F Markieren · S Überspringen
         </p>
       </div>

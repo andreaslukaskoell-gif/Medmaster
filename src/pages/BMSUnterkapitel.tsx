@@ -50,18 +50,12 @@ const subjectLabels: Record<string, string> = {
   mathematik: "Mathematik",
 };
 
-const subjectProgressColors: Record<string, string> = {
-  biologie: "bg-emerald-500",
-  chemie: "bg-red-500",
-  physik: "bg-blue-500",
-  mathematik: "bg-violet-500",
-};
-
-const subjectTextColors: Record<string, string> = {
-  biologie: "text-emerald-700 dark:text-emerald-400",
-  chemie: "text-red-700 dark:text-red-400",
-  physik: "text-blue-700 dark:text-blue-400",
-  mathematik: "text-violet-700 dark:text-violet-400",
+/** Thin accent color for subject label — small indicator, OK to keep per-subject. */
+const subjectAccentVars: Record<string, string> = {
+  biologie: "var(--accent-bio)",
+  chemie: "var(--accent-chem)",
+  physik: "var(--accent-phys)",
+  mathematik: "var(--accent-math)",
 };
 
 export default function BMSUnterkapitel({
@@ -413,7 +407,7 @@ export default function BMSUnterkapitel({
       {/* Reading progress bar — fixed at top */}
       <div className="fixed top-0 left-0 right-0 z-[200] h-0.5 bg-transparent pointer-events-none">
         <div
-          className={`h-full transition-all duration-100 ${subjectProgressColors[kapitel.subject] || "bg-primary-600"}`}
+          className="h-full transition-all duration-100 bg-[var(--accent)]"
           style={{ width: `${scrollProgress}%` }}
         />
       </div>
@@ -428,35 +422,35 @@ export default function BMSUnterkapitel({
         <div className="flex items-center gap-2">
           <button
             onClick={() => setShowNotes(!showNotes)}
-            className={`p-2 rounded-lg border border-transparent dark:border-white/10 cursor-pointer ${showNotes ? "bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700" : "text-muted hover:bg-accent"}`}
+            className={`p-2 rounded-lg border border-transparent dark:border-white/10 cursor-pointer ${showNotes ? "bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700" : "text-[var(--muted)] hover:bg-accent"}`}
             title="Notizen"
           >
             <StickyNote className="w-4 h-4" />
           </button>
           <button
             onClick={() => toggleBookmarkChapter(uk.id)}
-            className={`p-2 rounded-lg border border-transparent dark:border-white/10 cursor-pointer ${isBookmarked ? "bg-primary-100 dark:bg-primary-900/30 text-primary-700" : "text-muted hover:bg-accent"}`}
+            className={`p-2 rounded-lg border border-transparent dark:border-white/10 cursor-pointer ${isBookmarked ? "bg-[var(--accent)]/10 text-[var(--accent)]" : "text-[var(--muted)] hover:bg-accent"}`}
             title="Lesezeichen"
           >
             <Bookmark className={`w-4 h-4 ${isBookmarked ? "fill-current" : ""}`} />
           </button>
           <button
             onClick={() => setBridgeOpen(true)}
-            className="p-2 rounded-lg border border-transparent dark:border-white/10 cursor-pointer text-muted hover:bg-primary-100 dark:hover:bg-white/5 hover:text-primary-600 dark:hover:text-primary-400"
+            className="p-2 rounded-lg border border-transparent dark:border-white/10 cursor-pointer text-[var(--muted)] hover:bg-[var(--accent)]/10 hover:text-[var(--accent)]"
             title="Verknüpfte Themen (Knowledge Bridge)"
           >
             <Network className="w-4 h-4" />
           </button>
           <button
             onClick={() => setHinterfragMode(!hinterfragMode)}
-            className={`p-2 rounded-lg border border-transparent dark:border-white/10 cursor-pointer ${hinterfragMode ? "bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300" : "text-muted hover:bg-accent"}`}
+            className={`p-2 rounded-lg border border-transparent dark:border-white/10 cursor-pointer ${hinterfragMode ? "bg-[var(--accent)]/10 text-[var(--accent)]" : "text-[var(--muted)] hover:bg-accent"}`}
             title="Hinterfrag-Modus: Kernsätze als Frage anzeigen, Antwort bei Klick/Hover (Active Recall)"
           >
             <HelpCircle className="w-4 h-4" />
           </button>
           <button
             onClick={() => setQuickReviewMode(!quickReviewMode)}
-            className={`p-2 rounded-lg border border-transparent dark:border-white/10 cursor-pointer ${quickReviewMode ? "bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300" : "text-muted hover:bg-accent"}`}
+            className={`p-2 rounded-lg border border-transparent dark:border-white/10 cursor-pointer ${quickReviewMode ? "bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300" : "text-[var(--muted)] hover:bg-accent"}`}
             title="Quick Review: Nur Merksätze anzeigen (R)"
           >
             <Zap className="w-4 h-4" />
@@ -467,7 +461,7 @@ export default function BMSUnterkapitel({
 
       {/* Progress bar */}
       <div className="space-y-1">
-        <div className="flex justify-between text-xs text-muted">
+        <div className="flex justify-between text-xs text-[var(--muted)]">
           <span>
             Unterkapitel {unterkapitelIndex + 1} von {total}
           </span>
@@ -475,9 +469,9 @@ export default function BMSUnterkapitel({
             {completedCount}/{total} abgeschlossen
           </span>
         </div>
-        <div className="w-full bg-muted rounded-full h-2">
+        <div className="w-full bg-[var(--surface)] rounded-full h-2">
           <div
-            className={`${subjectProgressColors[kapitel.subject] || "bg-primary-600"} h-2 rounded-full transition-all`}
+            className="bg-[var(--accent)] h-2 rounded-full transition-all"
             style={{ width: `${(completedCount / total) * 100}%` }}
           />
         </div>
@@ -488,7 +482,8 @@ export default function BMSUnterkapitel({
         <div>
           <div className="flex flex-wrap items-center gap-2">
             <p
-              className={`text-sm font-medium ${subjectTextColors[kapitel.subject] || "text-primary-700 dark:text-primary-400"}`}
+              className="text-sm font-medium"
+              style={{ color: subjectAccentVars[kapitel.subject] ?? "var(--accent)" }}
             >
               {kapitel.title} — {unterkapitelIndex + 1}/{total}
             </p>
@@ -496,7 +491,7 @@ export default function BMSUnterkapitel({
           </div>
           <div className="flex items-center gap-3 mt-1">
             <h1 className="text-2xl font-bold text-[var(--text-primary)]">{uk.title}</h1>
-            <span className="flex items-center gap-1 text-xs text-muted shrink-0">
+            <span className="flex items-center gap-1 text-xs text-[var(--muted)] shrink-0">
               <Clock className="w-3 h-3" aria-hidden />
               Ca. {readingTimeMin} Min Lesezeit
             </span>
@@ -515,7 +510,7 @@ export default function BMSUnterkapitel({
                 value={noteText}
                 onChange={(e) => setNoteText(e.target.value)}
                 placeholder="Notizen zu diesem Unterkapitel..."
-                className="w-full h-24 p-3 rounded-lg border border-yellow-200 dark:border-yellow-800 bg-yellow-50 dark:bg-yellow-900/10 text-sm text-[var(--text-primary)] placeholder:text-muted outline-none focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500 dark:focus:border-primary-400 resize-y"
+                className="w-full h-24 p-3 rounded-lg border border-yellow-200 dark:border-yellow-800 bg-yellow-50 dark:bg-yellow-900/10 text-sm text-[var(--text-primary)] placeholder:text-[var(--muted)] outline-none focus:ring-2 focus:ring-[var(--accent)]/50 focus:border-[var(--accent)] resize-y"
               />
               <Button size="sm" onClick={() => setNote(uk.id, noteText)}>
                 Speichern
@@ -556,7 +551,7 @@ export default function BMSUnterkapitel({
                   </div>
                 ))
             ) : (
-              <p className="text-sm text-muted text-center py-8">
+              <p className="text-sm text-[var(--muted)] text-center py-8">
                 Keine Merksätze in den Sektionen vorhanden.
               </p>
             )}

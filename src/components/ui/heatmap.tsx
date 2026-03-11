@@ -31,7 +31,7 @@ const COLORS = [
   "bg-[var(--border)]",
   "bg-sky-200 dark:bg-sky-900",
   "bg-sky-400 dark:bg-sky-700",
-  "bg-primary-600 dark:bg-primary-500",
+  "bg-[var(--accent)] dark:bg-[var(--accent)]",
 ];
 
 function toDateKey(d: Date): string {
@@ -149,7 +149,7 @@ export function Heatmap({ className }: HeatmapProps) {
           </div>
         ))}
       </div>
-      <div className="flex items-center justify-between mt-1 text-xs text-muted">
+      <div className="flex items-center justify-between mt-1 text-xs text-[var(--muted)]">
         <span>26.02.26</span>
         <span className="font-medium text-red-600 dark:text-red-400">MedAT 03.07.26</span>
       </div>
@@ -171,7 +171,7 @@ export function Heatmap({ className }: HeatmapProps) {
           )}
         </div>
       )}
-      <div className="flex items-center gap-2 mt-1 text-xs text-muted">
+      <div className="flex items-center gap-2 mt-1 text-xs text-[var(--muted)]">
         <span>Weniger</span>
         {COLORS.map((c, i) => (
           <div key={i} className={cn("w-3 h-3 rounded-sm", c)} />

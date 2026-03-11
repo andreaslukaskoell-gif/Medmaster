@@ -60,7 +60,7 @@ function ProgressRing({
         strokeDasharray={circumference}
         strokeDashoffset={offset}
         strokeLinecap="round"
-        className="text-primary-600 transition-all duration-500"
+        className="text-[var(--accent)] transition-all duration-500"
       />
     </svg>
   );
@@ -219,7 +219,7 @@ export default function PerformanceOverview() {
                 <div className="flex items-center gap-4 mb-4">
                   <div className="relative flex items-center justify-center">
                     <ProgressRing value={readiness} size={72} stroke={6} />
-                    <span className="absolute text-lg font-bold text-primary-700 dark:text-primary-400">
+                    <span className="absolute text-lg font-bold text-[var(--accent)]/60">
                       {readiness}%
                     </span>
                   </div>
@@ -227,7 +227,7 @@ export default function PerformanceOverview() {
                     <p className="text-base font-bold text-[var(--text-primary)]">
                       MedAT-Bereitschaft
                     </p>
-                    <p className="text-xs text-muted">
+                    <p className="text-xs text-[var(--muted)]">
                       {totalQuestionsAnswered} Fragen, {totalCorrect} richtig
                     </p>
                     {dailyChallengeStreak > 0 && (
@@ -348,7 +348,7 @@ export default function PerformanceOverview() {
             </CardTitle>
           </CardHeader>
           <CardContent className="pt-0">
-            <p className="text-xs text-muted mb-3">
+            <p className="text-xs text-[var(--muted)] mb-3">
               {unlockedCount}/{milestones.length} erreicht
             </p>
             <div className="grid grid-cols-4 sm:grid-cols-8 gap-2">
@@ -396,7 +396,7 @@ export default function PerformanceOverview() {
             </CardTitle>
           </CardHeader>
           <CardContent className="pt-0">
-            <p className="text-sm text-muted mb-4">
+            <p className="text-sm text-[var(--muted)] mb-4">
               Sammle Badges durch Lernen, Streaks und besondere Leistungen.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -422,7 +422,7 @@ export default function PerformanceOverview() {
                       >
                         {badge.name}
                       </p>
-                      <p className="text-xs text-muted truncate" title={badge.description}>
+                      <p className="text-xs text-[var(--muted)] truncate" title={badge.description}>
                         {badge.description}
                       </p>
                       {!earned && progress && (
@@ -448,7 +448,7 @@ export default function PerformanceOverview() {
               </CardTitle>
             </CardHeader>
             <CardContent className="pt-0">
-              <p className="text-sm text-muted mb-3">
+              <p className="text-sm text-[var(--muted)] mb-3">
                 Du hast in mindestens einem Fach 50 % erreicht – Vergleichsstatistik (simuliert).
               </p>
               <ul className="space-y-2">

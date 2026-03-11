@@ -15,11 +15,11 @@ export function FloatingQuestionCounter({ current, total, label = "Frage" }: Pro
       </span>
       <div className="w-20 h-1.5 bg-[var(--border)] rounded-full overflow-hidden">
         <div
-          className="h-full bg-primary-500 rounded-full transition-all duration-300"
+          className="h-full bg-[var(--accent)] rounded-full transition-all duration-300"
           style={{ width: `${pct}%` }}
         />
       </div>
-      <span className="text-[10px] text-muted font-mono">{pct}%</span>
+      <span className="text-[10px] text-[var(--muted)] font-mono">{pct}%</span>
     </div>
   );
 }

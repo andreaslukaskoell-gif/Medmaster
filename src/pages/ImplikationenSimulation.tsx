@@ -185,12 +185,12 @@ export default function ImplikationenSimulation() {
             <h2 className="text-xl font-bold text-[var(--text-primary)] mb-2">
               Simulation starten
             </h2>
-            <p className="text-sm text-muted max-w-md mx-auto">
+            <p className="text-sm text-[var(--muted)] max-w-md mx-auto">
               {TASK_COUNT} zufällige Aufgaben in {TIME_LIMIT / 60} Minuten — genau wie im echten
               MedAT. Keine Tipps, keine Lösungswege während der Simulation.
             </p>
           </div>
-          <div className="flex flex-col items-center gap-2 text-sm text-muted">
+          <div className="flex flex-col items-center gap-2 text-sm text-[var(--muted)]">
             <div className="flex items-center gap-4">
               <span className="flex items-center gap-1">
                 <Clock className="w-4 h-4" /> {TIME_LIMIT / 60}:00 min
@@ -231,7 +231,7 @@ export default function ImplikationenSimulation() {
                 <h2 className="text-2xl font-bold text-[var(--text-primary)]">
                   {correctCount}/{TASK_COUNT}
                 </h2>
-                <p className="text-sm text-muted">
+                <p className="text-sm text-[var(--muted)]">
                   {scorePercent}% richtig —{" "}
                   {scorePercent >= 80
                     ? "Ausgezeichnet!"
@@ -247,11 +247,11 @@ export default function ImplikationenSimulation() {
                   <p className="text-lg font-bold text-[var(--text-primary)]">
                     {formatTime(TIME_LIMIT - timeLeft)}
                   </p>
-                  <p className="text-xs text-muted">Gesamtzeit</p>
+                  <p className="text-xs text-[var(--muted)]">Gesamtzeit</p>
                 </div>
                 <div className="text-center">
                   <p className="text-lg font-bold text-[var(--text-primary)]">{avgTime}s</p>
-                  <p className="text-xs text-muted">Ø pro Aufgabe</p>
+                  <p className="text-xs text-[var(--muted)]">Ø pro Aufgabe</p>
                 </div>
               </div>
               {/* Score bar */}
@@ -307,7 +307,7 @@ export default function ImplikationenSimulation() {
                       </p>
                     </div>
                     <div className="flex items-center gap-2 shrink-0">
-                      <span className="text-xs text-muted">{result.timeSpent}s</span>
+                      <span className="text-xs text-[var(--muted)]">{result.timeSpent}s</span>
                       {result.correct ? (
                         <CheckCircle2 className="w-4 h-4 text-green-500" />
                       ) : (
@@ -319,11 +319,11 @@ export default function ImplikationenSimulation() {
                     <div className="px-4 pb-4 space-y-3 border-t border-[var(--border)] pt-3">
                       <div className="space-y-2">
                         <div className="bg-[var(--border)]/30 p-3 rounded-lg border-l-4 border-purple-400">
-                          <p className="text-xs text-muted mb-0.5">Aussage 1:</p>
+                          <p className="text-xs text-[var(--muted)] mb-0.5">Aussage 1:</p>
                           <p className="text-sm">&laquo;{result.task.premise1}&raquo;</p>
                         </div>
                         <div className="bg-[var(--border)]/30 p-3 rounded-lg border-l-4 border-indigo-400">
-                          <p className="text-xs text-muted mb-0.5">Aussage 2:</p>
+                          <p className="text-xs text-[var(--muted)] mb-0.5">Aussage 2:</p>
                           <p className="text-sm">&laquo;{result.task.premise2}&raquo;</p>
                         </div>
                       </div>
@@ -339,7 +339,7 @@ export default function ImplikationenSimulation() {
                                   ? "bg-green-50 dark:bg-green-900/15 text-green-800 dark:text-green-300 font-medium"
                                   : isUserChoice
                                     ? "bg-red-50 dark:bg-red-900/15 text-red-800 dark:text-red-300"
-                                    : "text-muted"
+                                    : "text-[var(--muted)]"
                               }`}
                             >
                               <span className="font-bold mr-2">{optionLabels[j]}</span>
@@ -406,7 +406,7 @@ export default function ImplikationenSimulation() {
       </div>
 
       {/* Progress */}
-      <div className="flex items-center justify-between text-sm text-muted">
+      <div className="flex items-center justify-between text-sm text-[var(--muted)]">
         <span>
           Aufgabe {currentIndex + 1} von {TASK_COUNT}
         </span>
@@ -433,13 +433,13 @@ export default function ImplikationenSimulation() {
         <CardContent className="p-6 space-y-5">
           <div className="space-y-3">
             <div className="bg-[var(--border)]/30 p-4 rounded-lg border-l-4 border-purple-400">
-              <p className="text-sm text-muted mb-1">Aussage 1:</p>
+              <p className="text-sm text-[var(--muted)] mb-1">Aussage 1:</p>
               <p className="text-base font-medium text-[var(--text-primary)]">
                 &laquo;{currentTask.premise1}&raquo;
               </p>
             </div>
             <div className="bg-[var(--border)]/30 p-4 rounded-lg border-l-4 border-indigo-400">
-              <p className="text-sm text-muted mb-1">Aussage 2:</p>
+              <p className="text-sm text-[var(--muted)] mb-1">Aussage 2:</p>
               <p className="text-base font-medium text-[var(--text-primary)]">
                 &laquo;{currentTask.premise2}&raquo;
               </p>

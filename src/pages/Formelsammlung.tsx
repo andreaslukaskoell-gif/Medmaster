@@ -63,7 +63,9 @@ function FormelCard({ f }: { f: Formel }) {
           </div>
           <div className="min-w-0 flex-1">
             <div className="flex items-center gap-2 flex-wrap">
-              <h3 className="font-semibold text-foreground text-sm leading-tight">{f.name}</h3>
+              <h3 className="font-semibold text-[var(--text-primary)] text-sm leading-tight">
+                {f.name}
+              </h3>
               <Badge variant="default" className="text-[10px] shrink-0">
                 {f.kapitel}
               </Badge>
@@ -72,31 +74,33 @@ function FormelCard({ f }: { f: Formel }) {
         </div>
 
         {/* Formel */}
-        <div className="bg-muted rounded-lg px-4 py-3 mb-3">
-          <p className="text-lg font-mono font-bold text-foreground whitespace-pre-line leading-relaxed">
+        <div className="bg-[var(--surface)] rounded-lg px-4 py-3 mb-3">
+          <p className="text-lg font-mono font-bold text-[var(--text-primary)] whitespace-pre-line leading-relaxed">
             {f.formel}
           </p>
         </div>
 
         {/* Variablen & Einheiten */}
-        <p className="text-xs text-muted mb-1">
-          <span className="font-medium text-foreground/80">Variablen:</span> {f.variablen}
+        <p className="text-xs text-[var(--muted)] mb-1">
+          <span className="font-medium text-[var(--text-primary)]/80">Variablen:</span>{" "}
+          {f.variablen}
         </p>
-        <p className="text-xs text-muted mb-2">
-          <span className="font-medium text-foreground/80">Einheiten:</span> {f.einheiten}
+        <p className="text-xs text-[var(--muted)] mb-2">
+          <span className="font-medium text-[var(--text-primary)]/80">Einheiten:</span>{" "}
+          {f.einheiten}
         </p>
 
         {/* Beispiel Toggle */}
         <button
           onClick={() => setOpen(!open)}
-          className="flex items-center gap-1 text-xs font-medium text-primary-600 dark:text-primary-400 hover:underline mt-1"
+          className="flex items-center gap-1 text-xs font-medium text-[var(--accent)] hover:underline mt-1"
         >
           <BookOpen className="w-3.5 h-3.5" />
           Beispiel
           {open ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
         </button>
         {open && (
-          <div className="mt-2 text-sm text-muted-foreground bg-primary-50 dark:bg-primary-900/20 rounded-md px-3 py-2">
+          <div className="mt-2 text-sm text-muted-foreground bg-[var(--accent)]/5 dark:bg-[var(--accent)]/10 rounded-md px-3 py-2">
             {f.beispiel}
           </div>
         )}
@@ -148,8 +152,8 @@ export default function Formelsammlung() {
 
       {/* Header */}
       <div>
-        <h1 className="text-2xl font-bold text-foreground">Formelsammlung</h1>
-        <p className="text-muted mt-1">
+        <h1 className="text-2xl font-bold text-[var(--text-primary)]">Formelsammlung</h1>
+        <p className="text-[var(--muted)] mt-1">
           {formeln.length} Formeln für Physik, Chemie und Mathematik
         </p>
       </div>
@@ -163,18 +167,18 @@ export default function Formelsammlung() {
             placeholder="Formel suchen…"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="w-full pl-9 pr-4 py-2 rounded-lg border border-border bg-background text-sm text-foreground placeholder:text-muted-foreground/70 focus:outline-none focus:ring-2 focus:ring-primary-500"
+            className="w-full pl-9 pr-4 py-2 rounded-lg border border-[var(--border)] bg-[var(--background)] text-sm text-[var(--text-primary)] placeholder:text-muted-foreground/70 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
           />
         </div>
-        <div className="flex rounded-lg border border-border overflow-hidden shrink-0">
+        <div className="flex rounded-lg border border-[var(--border)] overflow-hidden shrink-0">
           {tabs.map((t) => (
             <button
               key={t.key}
               onClick={() => setFilter(t.key)}
               className={`px-3 py-2 text-sm font-medium transition-colors ${
                 filter === t.key
-                  ? "bg-primary-600 text-primary-foreground"
-                  : "bg-background text-muted-foreground hover:bg-accent"
+                  ? "bg-[var(--accent)] text-white"
+                  : "bg-[var(--background)] text-muted-foreground hover:bg-accent"
               }`}
             >
               {t.label}
@@ -185,7 +189,7 @@ export default function Formelsammlung() {
 
       {/* Formeln grouped by chapter */}
       {filtered.length === 0 ? (
-        <div className="text-center py-12 text-muted">Keine Formeln gefunden.</div>
+        <div className="text-center py-12 text-[var(--muted)]">Keine Formeln gefunden.</div>
       ) : (
         Array.from(grouped.entries()).map(([chapter, items]) => (
           <div key={chapter}>

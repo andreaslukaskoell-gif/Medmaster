@@ -155,7 +155,7 @@ export function Leaderboard() {
           <p className="text-slate-400 text-sm mb-4">
             Die Rangliste füllt sich wenn mehr Lernende beitreten.
           </p>
-          <p className="text-primary-400 font-semibold text-sm mb-6">
+          <p className="text-[var(--accent)]/60 font-semibold text-sm mb-6">
             Du kannst der Erste sein! 🥇
           </p>
           <button
@@ -168,7 +168,7 @@ export function Leaderboard() {
                 navigator.clipboard.writeText(text).catch(() => {});
               }
             }}
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary-600 hover:bg-primary-500 text-white text-sm font-medium transition-colors cursor-pointer"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[var(--accent)] hover:bg-[var(--accent)] text-white text-sm font-medium transition-colors cursor-pointer"
           >
             Freunde einladen
           </button>
@@ -193,7 +193,7 @@ export function Leaderboard() {
             className={cn(
               "px-4 py-2 rounded-xl text-sm font-medium transition-all cursor-pointer",
               category === tab.id
-                ? "bg-primary-600 text-white shadow-lg shadow-primary-500/25"
+                ? "bg-[var(--accent)] text-white shadow-lg shadow-[var(--accent)]/25"
                 : "bg-white/80 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700/80 border border-slate-200 dark:border-white/10"
             )}
           >
@@ -217,10 +217,12 @@ export function Leaderboard() {
 
       {/* Relativ-Ranking */}
       {currentEntry && (
-        <div className="rounded-xl bg-primary-500/15 dark:bg-primary-500/20 border border-primary-400/30 dark:border-primary-400/20 px-4 py-3 text-center">
-          <p className="text-sm font-semibold text-primary-800 dark:text-primary-200">
+        <div className="rounded-xl bg-[var(--accent)]/15 dark:bg-[var(--accent)]/20 border border-[var(--accent)]/60/30 dark:border-[var(--accent)]/60/20 px-4 py-3 text-center">
+          <p className="text-sm font-semibold text-[var(--accent)] dark:text-[var(--accent)]/20">
             Du bist in den{" "}
-            <span className="text-primary-600 dark:text-primary-400">Top {topPercent}%</span>
+            <span className="text-[var(--accent)] dark:text-[var(--accent)]/60">
+              Top {topPercent}%
+            </span>
             {category === "weekly"
               ? " dieser Woche"
               : category === "fach"
@@ -261,23 +263,23 @@ export function Leaderboard() {
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           className={cn(
-            "sticky bottom-4 rounded-2xl border-2 border-primary-400/50 dark:border-primary-400/40",
+            "sticky bottom-4 rounded-2xl border-2 border-[var(--accent)]/60/50 dark:border-[var(--accent)]/60/40",
             "bg-[#0f172a]/95 dark:bg-[#0f172a]/98 backdrop-blur-xl",
             "shadow-[0_0_30px_rgba(0,85,255,0.2)] dark:shadow-[0_0_40px_rgba(0,85,255,0.25)]",
             "p-4 z-10"
           )}
         >
           <div className="flex items-center gap-3">
-            <span className="text-lg font-bold text-primary-400 w-8 text-center">
+            <span className="text-lg font-bold text-[var(--accent)]/60 w-8 text-center">
               {currentRank}
             </span>
-            <div className="w-10 h-10 rounded-full bg-primary-500/30 flex items-center justify-center text-sm font-bold text-primary-200 shrink-0">
+            <div className="w-10 h-10 rounded-full bg-[var(--accent)]/30 flex items-center justify-center text-sm font-bold text-[var(--accent)]/20 shrink-0">
               {currentEntry.avatar}
             </div>
             <div className="flex-1 min-w-0">
               <p className="font-semibold text-white truncate">
                 {currentEntry.nickname}
-                <span className="ml-2 text-xs font-normal text-primary-400">Du</span>
+                <span className="ml-2 text-xs font-normal text-[var(--accent)]/60">Du</span>
               </p>
               <div className="flex items-center gap-2 mt-0.5">
                 <span className="text-xs text-slate-400">Level {currentEntry.level}</span>
@@ -297,7 +299,7 @@ export function Leaderboard() {
               </div>
             </div>
             <div className="text-right shrink-0">
-              <p className="text-sm font-bold text-primary-300">
+              <p className="text-sm font-bold text-[var(--accent)]/30">
                 {category === "global"
                   ? `${currentEntry.xp} XP`
                   : category === "weekly"
@@ -338,7 +340,7 @@ function LeaderboardRow({
     <div
       className={cn(
         "flex items-center gap-3 px-4 py-3 transition-colors",
-        entry.isCurrentUser && "bg-primary-500/15 dark:bg-primary-500/20",
+        entry.isCurrentUser && "bg-[var(--accent)]/15 dark:bg-[var(--accent)]/20",
         isTop3 && "border-l-4 " + borderClass
       )}
     >
@@ -373,12 +375,12 @@ function LeaderboardRow({
         <p
           className={cn(
             "text-sm font-medium truncate",
-            entry.isCurrentUser ? "text-primary-300" : "text-slate-200"
+            entry.isCurrentUser ? "text-[var(--accent)]/30" : "text-slate-200"
           )}
         >
           {entry.nickname}
           {entry.isCurrentUser && (
-            <span className="ml-1.5 text-[10px] font-normal text-primary-400">Du</span>
+            <span className="ml-1.5 text-[10px] font-normal text-[var(--accent)]/60">Du</span>
           )}
         </p>
         <div className="flex items-center gap-2 mt-0.5">

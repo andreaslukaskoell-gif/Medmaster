@@ -331,7 +331,7 @@ export function SelbstTest({ questions, onAnswer, onAllComplete }: SelbstTestPro
                 <strong className="text-[var(--text-primary)]">{questions.length}</strong> Fragen
                 richtig beantwortet.
               </p>
-              <p className="text-base font-medium text-[#007AFF] dark:text-primary-400 mt-2">
+              <p className="text-base font-medium text-[#007AFF] dark:text-[var(--accent)]/60 mt-2">
                 {getMotivationText(pct)}
               </p>
             </div>

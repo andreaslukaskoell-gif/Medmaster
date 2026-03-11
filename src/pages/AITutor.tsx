@@ -47,7 +47,7 @@ export default function AITutor() {
   return (
     <div className="flex flex-col h-[calc(100vh-4rem)] max-w-3xl mx-auto">
       {/* Header */}
-      <div className="flex items-center gap-3 px-4 py-3 border-b border-border">
+      <div className="flex items-center gap-3 px-4 py-3 border-b border-[var(--border)]">
         <div className="w-9 h-9 rounded-xl bg-purple-600 flex items-center justify-center">
           <Bot className="w-5 h-5 text-white" />
         </div>
@@ -81,7 +81,7 @@ export default function AITutor() {
                 <button
                   key={s}
                   onClick={() => send(s)}
-                  className="px-3 py-1.5 rounded-full text-sm border border-border hover:bg-accent hover:text-accent-foreground transition-colors cursor-pointer"
+                  className="px-3 py-1.5 rounded-full text-sm border border-[var(--border)] hover:bg-accent hover:text-accent-foreground transition-colors cursor-pointer"
                 >
                   {s}
                 </button>
@@ -98,8 +98,8 @@ export default function AITutor() {
             <div
               className={`max-w-[80%] px-3.5 py-2.5 rounded-2xl text-sm leading-relaxed ${
                 msg.role === "user"
-                  ? "bg-primary text-primary-foreground rounded-br-md"
-                  : "bg-muted text-foreground rounded-bl-md"
+                  ? "bg-[var(--accent)] text-white rounded-br-md"
+                  : "bg-[var(--surface)] text-[var(--text-primary)] rounded-bl-md"
               }`}
             >
               {msg.text}
@@ -109,7 +109,7 @@ export default function AITutor() {
 
         {typing && (
           <div className="flex justify-start">
-            <div className="bg-muted rounded-2xl rounded-bl-md px-4 py-3 flex items-center gap-1">
+            <div className="bg-[var(--surface)] rounded-2xl rounded-bl-md px-4 py-3 flex items-center gap-1">
               <span className="w-2 h-2 rounded-full bg-muted-foreground/50 animate-bounce [animation-delay:0ms]" />
               <span className="w-2 h-2 rounded-full bg-muted-foreground/50 animate-bounce [animation-delay:150ms]" />
               <span className="w-2 h-2 rounded-full bg-muted-foreground/50 animate-bounce [animation-delay:300ms]" />
@@ -121,7 +121,7 @@ export default function AITutor() {
       </div>
 
       {/* Input */}
-      <div className="px-4 py-3 border-t border-border">
+      <div className="px-4 py-3 border-t border-[var(--border)]">
         <form
           onSubmit={(e) => {
             e.preventDefault();
@@ -135,12 +135,12 @@ export default function AITutor() {
             onChange={(e) => setInput(e.target.value)}
             placeholder="Stelle eine MedAT-Frage..."
             disabled={typing}
-            className="flex-1 rounded-xl border border-input bg-background px-4 py-2.5 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring disabled:opacity-50"
+            className="flex-1 rounded-xl border border-input bg-[var(--background)] px-4 py-2.5 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring disabled:opacity-50"
           />
           <button
             type="submit"
             disabled={!input.trim() || typing}
-            className="shrink-0 w-10 h-10 rounded-xl bg-primary text-primary-foreground flex items-center justify-center disabled:opacity-50 hover:bg-primary/90 transition-colors cursor-pointer"
+            className="shrink-0 w-10 h-10 rounded-xl bg-[var(--accent)] text-white flex items-center justify-center disabled:opacity-50 hover:bg-[var(--accent)]/90 transition-colors cursor-pointer"
           >
             <Send className="w-4 h-4" />
           </button>

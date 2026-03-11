@@ -58,14 +58,14 @@ export default function BMSChapter({ chapter, onBack }: Props) {
         <div className="flex gap-2">
           <button
             onClick={() => setShowNotes(!showNotes)}
-            className={`p-2 rounded-lg cursor-pointer ${showNotes ? "bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700" : "text-muted hover:bg-accent"}`}
+            className={`p-2 rounded-lg cursor-pointer ${showNotes ? "bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700" : "text-[var(--muted)] hover:bg-accent"}`}
             title="Notizen"
           >
             <StickyNote className="w-4 h-4" />
           </button>
           <button
             onClick={() => toggleBookmarkChapter(chapter.id)}
-            className={`p-2 rounded-lg cursor-pointer ${isBookmarked ? "bg-primary-100 dark:bg-primary-900/30 text-primary-700" : "text-muted hover:bg-accent"}`}
+            className={`p-2 rounded-lg cursor-pointer ${isBookmarked ? "bg-[var(--accent)]/10 dark:bg-[var(--accent)]/10 text-[var(--accent)]" : "text-[var(--muted)] hover:bg-accent"}`}
             title="Lesezeichen"
           >
             <Bookmark className={`w-4 h-4 ${isBookmarked ? "fill-current" : ""}`} />
@@ -88,17 +88,15 @@ export default function BMSChapter({ chapter, onBack }: Props) {
       ) : (
         <>
           <div>
-            <p className="text-sm text-primary-700 dark:text-primary-400 font-medium uppercase tracking-wide">
+            <p className="text-sm text-[var(--accent)] font-medium uppercase tracking-wide">
               {subjectLabels[chapter.subject]}
             </p>
-            <h1 className="text-2xl font-bold text-foreground mt-1">{chapter.title}</h1>
+            <h1 className="text-2xl font-bold text-[var(--text-primary)] mt-1">{chapter.title}</h1>
           </div>
           {chapter.overview && (
-            <Card className="border-primary-200 dark:border-primary-800 bg-primary-50/50 dark:bg-primary-900/10">
+            <Card className="border-[var(--accent)]/20 dark:border-[var(--accent)]/30 bg-[var(--accent)]/5 dark:bg-[var(--accent)]/10">
               <CardContent className="p-5">
-                <p className="text-sm text-primary-800 dark:text-primary-300 leading-relaxed">
-                  {chapter.overview}
-                </p>
+                <p className="text-sm text-[var(--accent)] leading-relaxed">{chapter.overview}</p>
               </CardContent>
             </Card>
           )}
@@ -121,7 +119,7 @@ export default function BMSChapter({ chapter, onBack }: Props) {
               value={noteText}
               onChange={(e) => setNoteText(e.target.value)}
               placeholder="Notizen zu diesem Kapitel..."
-              className="w-full h-24 p-3 rounded-lg border border-yellow-200 dark:border-yellow-800 bg-yellow-50 dark:bg-yellow-900/10 text-sm text-foreground placeholder:text-muted outline-none focus:ring-2 focus:ring-yellow-400 resize-y"
+              className="w-full h-24 p-3 rounded-lg border border-yellow-200 dark:border-yellow-800 bg-yellow-50 dark:bg-yellow-900/10 text-sm text-[var(--text-primary)] placeholder:text-[var(--muted)] outline-none focus:ring-2 focus:ring-yellow-400 resize-y"
             />
             <Button size="sm" onClick={handleSaveNote}>
               Speichern
@@ -139,17 +137,17 @@ export default function BMSChapter({ chapter, onBack }: Props) {
               chemie: "border-red-500",
               physik: "border-blue-500",
               mathematik: "border-violet-500",
-            }[chapter.subject] || "border-primary-500";
+            }[chapter.subject] || "border-[var(--accent)]";
           return (
             <Card key={i}>
               <CardContent className="p-6 space-y-4">
                 <h2
-                  className={`text-lg font-semibold text-foreground border-l-4 ${borderColor} pl-4`}
+                  className={`text-lg font-semibold text-[var(--text-primary)] border-l-4 ${borderColor} pl-4`}
                 >
                   {section.heading}
                 </h2>
                 <div
-                  className="text-base text-foreground leading-relaxed whitespace-pre-line"
+                  className="text-base text-[var(--text-primary)] leading-relaxed whitespace-pre-line"
                   dangerouslySetInnerHTML={{ __html: section.content }}
                 />
 
@@ -214,13 +212,13 @@ export default function BMSChapter({ chapter, onBack }: Props) {
       {!chapter.selfTestQuestions && selfTestQuestions.length > 0 && (
         <Card>
           <CardContent className="p-5 space-y-4">
-            <h3 className="text-sm font-semibold text-foreground flex items-center gap-2">
-              <Target className="w-4 h-4 text-primary-600" />
+            <h3 className="text-sm font-semibold text-[var(--text-primary)] flex items-center gap-2">
+              <Target className="w-4 h-4 text-[var(--accent)]" />
               Selbsttest ({selfTestQuestions.length} Fragen)
             </h3>
             {selfTestQuestions.map((q, qi) => (
               <div key={q.id} className="space-y-2">
-                <p className="text-sm font-medium text-foreground">
+                <p className="text-sm font-medium text-[var(--text-primary)]">
                   {qi + 1}. {q.text}
                 </p>
                 <div className="space-y-1.5 ml-4">
@@ -239,8 +237,8 @@ export default function BMSChapter({ chapter, onBack }: Props) {
                             : isWrong
                               ? "bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-300 line-through"
                               : selected
-                                ? "bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300 border border-primary-300 dark:border-primary-700"
-                                : "hover:bg-accent text-foreground"
+                                ? "bg-[var(--accent)]/5 dark:bg-[var(--accent)]/10 text-[var(--accent)] border border-[var(--accent)]/30 dark:border-[var(--accent)]/30"
+                                : "hover:bg-accent text-[var(--text-primary)]"
                         }`}
                       >
                         <span className="font-semibold mr-1.5">{opt.id.toUpperCase()})</span>
@@ -275,7 +273,7 @@ export default function BMSChapter({ chapter, onBack }: Props) {
                 Auswerten
               </Button>
             ) : (
-              <p className="text-sm font-medium text-primary-700 dark:text-primary-400">
+              <p className="text-sm font-medium text-[var(--accent)]">
                 {
                   selfTestQuestions.filter((q) => selfTestAnswers[q.id] === q.correctOptionId)
                     .length

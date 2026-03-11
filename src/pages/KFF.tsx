@@ -207,8 +207,8 @@ export default function KFF() {
       desc: "Erkenne das Muster und finde die nächste Zahl. Unendlich viele geprüfte Trainingsaufgaben.",
       strategyKey: "zahlenfolgen" as StrategyKey,
       startView: "zahlenfolgen" as KffView,
-      color: "bg-blue-100 dark:bg-blue-900/30",
-      textColor: "text-blue-600 dark:text-blue-400",
+      color: "bg-[var(--accent)]/10",
+      textColor: "text-[var(--accent)]",
       badge: "Unbegrenzt",
     },
     {
@@ -217,8 +217,8 @@ export default function KFF() {
       desc: "Lernphase: Allergieausweise einprägen. Prüfphase: Fragen A–E wie im MedAT.",
       strategyKey: "gedaechtnis" as StrategyKey,
       startView: "gedaechtnis-setup" as KffView,
-      color: "bg-green-100 dark:bg-green-900/30",
-      textColor: "text-green-600 dark:text-green-400",
+      color: "bg-[var(--accent)]/10",
+      textColor: "text-[var(--accent)]",
       badge: "MedAT-Format",
     },
     {
@@ -228,8 +228,8 @@ export default function KFF() {
       badge: "Unbegrenzt",
       strategyKey: "implikationen" as StrategyKey,
       startView: "implikationen" as KffView,
-      color: "bg-purple-100 dark:bg-purple-900/30",
-      textColor: "text-purple-600 dark:text-purple-400",
+      color: "bg-[var(--accent)]/10",
+      textColor: "text-[var(--accent)]",
     },
     {
       id: "wortflüssigkeit" as const,
@@ -237,8 +237,8 @@ export default function KFF() {
       desc: "Erkenne das Wort aus den vertauschten Buchstaben. Mit welchem Buchstaben beginnt es?",
       strategyKey: "wortflüssigkeit" as StrategyKey,
       startView: "wortflüssigkeit" as KffView,
-      color: "bg-orange-100 dark:bg-orange-900/30",
-      textColor: "text-orange-600 dark:text-orange-400",
+      color: "bg-[var(--accent)]/10",
+      textColor: "text-[var(--accent)]",
       badge: "930+ Aufgaben",
     },
     {
@@ -247,8 +247,8 @@ export default function KFF() {
       desc: "Welche Figur entsteht aus den Puzzleteilen? Trainiere räumliches Vorstellungsvermögen.",
       strategyKey: "figuren" as StrategyKey,
       startView: "figuren-quiz" as KffView,
-      color: "bg-rose-100 dark:bg-rose-900/30",
-      textColor: "text-rose-600 dark:text-rose-400",
+      color: "bg-[var(--accent)]/10",
+      textColor: "text-[var(--accent)]",
       icon: "puzzle",
       badge: "Unbegrenzt",
     },
@@ -258,8 +258,10 @@ export default function KFF() {
     <div className="max-w-5xl mx-auto space-y-6">
       <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "KFF" }]} />
       <div>
-        <h1 className="text-2xl font-bold text-foreground">KFF - Kognitive Fähigkeiten</h1>
-        <p className="text-muted mt-1">
+        <h1 className="text-2xl font-bold text-[var(--text-primary)]">
+          KFF - Kognitive Fähigkeiten
+        </h1>
+        <p className="text-[var(--muted)] mt-1">
           Trainiere Zahlenfolgen, Gedächtnis, logisches Denken und Wortflüssigkeit.
         </p>
         <Badge variant="info" className="mt-2 text-xs font-normal">
@@ -282,14 +284,14 @@ export default function KFF() {
                 </div>
                 <div>
                   <div className="flex items-center gap-2">
-                    <h3 className="font-semibold text-foreground">{m.title}</h3>
+                    <h3 className="font-semibold text-[var(--text-primary)]">{m.title}</h3>
                     {m.badge && (
                       <Badge variant="info" className="text-[10px]">
                         {m.badge}
                       </Badge>
                     )}
                   </div>
-                  <p className="text-sm text-muted mt-0.5">{m.desc}</p>
+                  <p className="text-sm text-[var(--muted)] mt-0.5">{m.desc}</p>
                 </div>
               </div>
               <div className="flex gap-2">

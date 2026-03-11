@@ -10,7 +10,7 @@ export default function IonicBond() {
       <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">
         Ionenbindung — NaCl
       </h4>
-      <p className="text-xs text-muted">Elektronenuebertragung und Kristallgitter.</p>
+      <p className="text-xs text-[var(--muted)]">Elektronenuebertragung und Kristallgitter.</p>
       <div className="flex gap-2 mb-2">
         <button
           onClick={() => setStep("transfer")}

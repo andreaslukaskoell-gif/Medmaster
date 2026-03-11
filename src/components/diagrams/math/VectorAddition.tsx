@@ -22,7 +22,7 @@ export default function VectorAddition() {
   return (
     <div className="space-y-3">
       <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">Vektoraddition</h4>
-      <p className="text-xs text-muted">Parallelogrammregel: a + b = c</p>
+      <p className="text-xs text-[var(--muted)]">Parallelogrammregel: a + b = c</p>
 
       <div className="flex gap-2 mb-2">
         <button

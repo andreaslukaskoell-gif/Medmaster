@@ -12,7 +12,7 @@ const SLIDES = [
   {
     key: "bms",
     icon: BookOpen,
-    color: "bg-primary-500/10 text-primary-500",
+    color: "bg-[var(--accent)]/10 text-[var(--accent)]",
     title: "BMS lernen",
     text: "Lerne Biologie, Chemie, Physik und Mathe mit unseren Lernkapiteln und über 4300 Übungsfragen.",
   },
@@ -87,7 +87,7 @@ export default function MedATOnboarding() {
   };
 
   return (
-    <div className="min-h-screen bg-background px-4 py-10 sm:py-14">
+    <div className="min-h-screen bg-[var(--background)] px-4 py-10 sm:py-14">
       <div className="mx-auto w-full max-w-md">
         {/* Step indicator */}
         <nav className="mb-10" aria-label="Fortschritt">
@@ -97,7 +97,7 @@ export default function MedATOnboarding() {
                 key={i}
                 className={cn(
                   "h-2 rounded-full transition-all duration-300",
-                  i === index ? "w-8 bg-primary-500" : "w-2 bg-app-border"
+                  i === index ? "w-8 bg-[var(--accent)]" : "w-2 bg-[var(--border)]"
                 )}
               />
             ))}
@@ -127,10 +127,10 @@ export default function MedATOnboarding() {
                   return <Icon className="w-10 h-10" aria-hidden />;
                 })()}
               </div>
-              <h1 className="mt-6 text-2xl font-bold tracking-tight text-app-foreground">
+              <h1 className="mt-6 text-2xl font-bold tracking-tight text-[var(--text-primary)]">
                 {SLIDES[index].title}
               </h1>
-              <p className="mt-3 max-w-sm text-sm leading-relaxed text-app-muted">
+              <p className="mt-3 max-w-sm text-sm leading-relaxed text-[var(--muted)]">
                 {SLIDES[index].text}
               </p>
             </motion.div>
@@ -147,13 +147,13 @@ export default function MedATOnboarding() {
               transition={{ type: "tween", duration: 0.25 }}
               className="flex flex-col items-center text-center"
             >
-              <div className="flex h-20 w-20 items-center justify-center rounded-2xl bg-primary-500/10">
-                <User className="w-10 h-10 text-primary-500" aria-hidden />
+              <div className="flex h-20 w-20 items-center justify-center rounded-2xl bg-[var(--accent)]/10">
+                <User className="w-10 h-10 text-[var(--accent)]" aria-hidden />
               </div>
-              <h1 className="mt-6 text-2xl font-bold tracking-tight text-app-foreground">
+              <h1 className="mt-6 text-2xl font-bold tracking-tight text-[var(--text-primary)]">
                 Wie heißt du?
               </h1>
-              <p className="mt-3 max-w-sm text-sm leading-relaxed text-app-muted">
+              <p className="mt-3 max-w-sm text-sm leading-relaxed text-[var(--muted)]">
                 Wähle einen Namen, der im Dashboard und in der Community angezeigt wird.
               </p>
               <input
@@ -169,7 +169,7 @@ export default function MedATOnboarding() {
                 placeholder="Dein Name"
                 maxLength={30}
                 autoFocus
-                className="mt-6 w-full max-w-xs rounded-lg border border-app-border bg-app-card px-4 py-3 text-center text-lg font-medium text-app-foreground placeholder:text-app-muted/50 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                className="mt-6 w-full max-w-xs rounded-lg border border-[var(--border)] bg-[var(--card)] px-4 py-3 text-center text-lg font-medium text-[var(--text-primary)] placeholder:text-[var(--muted)]/50 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
               />
               {error && <p className="mt-2 text-sm text-red-500">{error}</p>}
             </motion.div>

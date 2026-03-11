@@ -193,7 +193,7 @@ function QuestionCard({ q, index }: { q: Question; index: number }) {
   };
 
   return (
-    <div className="bg-[var(--surface)] dark:bg-[var(--surface)] rounded-2xl border border-app-border overflow-hidden">
+    <div className="bg-[var(--surface)] rounded-2xl border border-[var(--border)] overflow-hidden">
       <div className="p-5 sm:p-6">
         <div className="flex items-start gap-3 mb-4">
           <span
@@ -202,20 +202,20 @@ function QuestionCard({ q, index }: { q: Question; index: number }) {
           >
             {index + 1}
           </span>
-          <p className="text-app-foreground font-medium leading-relaxed">{q.text}</p>
+          <p className="text-[var(--text-primary)] font-medium leading-relaxed">{q.text}</p>
         </div>
         <div className="space-y-2">
           {q.options.map((opt) => {
             const isCorrect = opt.id === q.correctOptionId;
             const isSelected = opt.id === selected;
-            let style = "border-app-border hover:border-app-border cursor-pointer";
+            let style = "border-[var(--border)] hover:border-[var(--border)] cursor-pointer";
             if (revealed) {
               if (isCorrect)
                 style =
                   "border-emerald-400 bg-emerald-50 dark:bg-emerald-900/20 dark:border-emerald-600";
               else if (isSelected)
                 style = "border-red-400 bg-red-50 dark:bg-red-900/20 dark:border-red-600";
-              else style = "border-app-border/50 opacity-60";
+              else style = "border-[var(--border)]/50 opacity-60";
             }
             return (
               <button
@@ -224,10 +224,10 @@ function QuestionCard({ q, index }: { q: Question; index: number }) {
                 disabled={revealed}
                 className={`w-full text-left flex items-center gap-3 px-4 py-3 rounded-xl border transition-all ${style}`}
               >
-                <span className="shrink-0 w-7 h-7 rounded-lg flex items-center justify-center text-xs font-bold bg-background dark:bg-background text-[var(--text-secondary)]">
+                <span className="shrink-0 w-7 h-7 rounded-lg flex items-center justify-center text-xs font-bold bg-[var(--background)] text-[var(--text-secondary)]">
                   {opt.id.toUpperCase()}
                 </span>
-                <span className="text-sm text-app-foreground">{opt.text}</span>
+                <span className="text-sm text-[var(--text-primary)]">{opt.text}</span>
                 {revealed && isCorrect && (
                   <CheckCircle2 className="w-5 h-5 text-emerald-500 ml-auto shrink-0" />
                 )}
@@ -239,7 +239,7 @@ function QuestionCard({ q, index }: { q: Question; index: number }) {
           })}
         </div>
         {revealed && (
-          <div className="mt-4 p-4 rounded-xl bg-background/50 border border-app-border/50">
+          <div className="mt-4 p-4 rounded-xl bg-[var(--background)]/50 border border-[var(--border)]/50">
             <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
               <span className="font-semibold">Erkl{"\u00e4"}rung: </span>
               {q.explanation}
@@ -251,7 +251,7 @@ function QuestionCard({ q, index }: { q: Question; index: number }) {
             setRevealed(!revealed);
             if (revealed) setSelected(null);
           }}
-          className="mt-3 flex items-center gap-1 text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300 transition-colors"
+          className="mt-3 flex items-center gap-1 text-sm text-[var(--muted)] hover:text-[var(--text-primary)] transition-colors"
         >
           {revealed ? (
             <>
@@ -302,10 +302,10 @@ function LeadCapture({ subject }: { subject: string }) {
   }
 
   return (
-    <div className="bg-[var(--surface)] dark:bg-[var(--surface)] rounded-2xl p-6 sm:p-8 border border-app-border">
+    <div className="bg-[var(--surface)] rounded-2xl p-6 sm:p-8 border border-[var(--border)]">
       <div className="flex items-center gap-3 mb-3">
-        <Mail className="w-5 h-5 text-gray-400" />
-        <h3 className="text-lg font-bold text-app-foreground">
+        <Mail className="w-5 h-5 text-[var(--muted)]" />
+        <h3 className="text-lg font-bold text-[var(--text-primary)]">
           T{"\u00e4"}gliche MedAT-Frage per E-Mail
         </h3>
       </div>
@@ -320,7 +320,7 @@ function LeadCapture({ subject }: { subject: string }) {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="deine@email.at"
-          className="flex-1 px-4 py-3 rounded-xl border border-app-border bg-gray-50 dark:bg-gray-800 text-sm text-app-foreground focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="flex-1 px-4 py-3 rounded-xl border border-[var(--border)] bg-[var(--surface)] text-sm text-[var(--text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
         />
         <button
           type="submit"
@@ -456,10 +456,10 @@ export default function SubjectDemo() {
   const totalCount = pool.length.toLocaleString("de-AT");
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-950">
+    <div className="min-h-screen bg-[var(--background)]">
       <FAQSchema faqs={meta.faq} subjectLabel={meta.label} subjectKey={subjectKey} />
 
-      <nav className="sticky top-0 z-40 bg-white/90 dark:bg-gray-950/90 backdrop-blur-xl border-b border-gray-100 dark:border-gray-800/50 shadow-sm">
+      <nav className="sticky top-0 z-40 bg-[var(--surface)]/90 backdrop-blur-xl border-b border-[var(--border)]/50 shadow-sm">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
             <div
@@ -468,7 +468,7 @@ export default function SubjectDemo() {
             >
               <GraduationCap className="w-4 h-4" />
             </div>
-            <span className="text-lg font-bold text-app-foreground">MedMaster</span>
+            <span className="text-lg font-bold text-[var(--text-primary)]">MedMaster</span>
           </Link>
           <Link
             to="/register"
@@ -480,7 +480,7 @@ export default function SubjectDemo() {
         </div>
       </nav>
 
-      <header className="bg-[var(--surface)] dark:bg-[var(--surface)] border-b border-gray-100 dark:border-gray-800">
+      <header className="bg-[var(--surface)] border-b border-[var(--border)]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-14 text-center">
           <div className="inline-flex items-center gap-2 mb-4">
             <span
@@ -488,13 +488,13 @@ export default function SubjectDemo() {
             >
               {meta.emoji} {meta.label}
             </span>
-            <span className="text-xs text-gray-400">{totalCount} Fragen</span>
+            <span className="text-xs text-[var(--muted)]">{totalCount} Fragen</span>
           </div>
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-app-foreground mb-4">
+          <h1 className="text-3xl sm:text-4xl font-extrabold text-[var(--text-primary)] mb-4">
             {meta.h1}
           </h1>
           <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto mb-2">{meta.desc}</p>
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-[var(--muted)]">
             Jeden Tag 10 neue Fragen. {totalCount}+ insgesamt auf MedMaster.
           </p>
         </div>
@@ -505,7 +505,7 @@ export default function SubjectDemo() {
           {meta.topics.map((t) => (
             <span
               key={t}
-              className="text-xs px-3 py-1.5 rounded-lg bg-background dark:bg-background text-[var(--text-secondary)]"
+              className="text-xs px-3 py-1.5 rounded-lg bg-[var(--background)] text-[var(--text-secondary)]"
             >
               {t}
             </span>
@@ -526,14 +526,14 @@ export default function SubjectDemo() {
           ))}
         </div>
 
-        <section className="bg-[var(--surface)] dark:bg-[var(--surface)] rounded-2xl p-6 sm:p-8 border border-app-border">
-          <h2 className="text-xl font-bold text-app-foreground mb-6">
+        <section className="bg-[var(--surface)] rounded-2xl p-6 sm:p-8 border border-[var(--border)]">
+          <h2 className="text-xl font-bold text-[var(--text-primary)] mb-6">
             H{"\u00e4"}ufige Fragen — MedAT {meta.label}
           </h2>
           <div className="space-y-6">
             {meta.faq.map((f, i) => (
               <div key={i}>
-                <h3 className="text-base font-semibold text-app-foreground mb-2">{f.q}</h3>
+                <h3 className="text-base font-semibold text-[var(--text-primary)] mb-2">{f.q}</h3>
                 <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{f.a}</p>
               </div>
             ))}
@@ -547,7 +547,7 @@ export default function SubjectDemo() {
               <Link
                 key={key}
                 to={`/medat-${key}-fragen`}
-                className="flex items-center gap-2 p-4 rounded-xl bg-[var(--surface)] dark:bg-[var(--surface)] border border-app-border hover:border-gray-300 dark:hover:border-gray-700 transition-colors"
+                className="flex items-center gap-2 p-4 rounded-xl bg-[var(--surface)] border border-[var(--border)] hover:border-[var(--accent)]/30 transition-colors"
               >
                 <span className="text-lg">{m.emoji}</span>
                 <span className="text-sm font-medium text-[var(--text-secondary)]">{m.label}</span>
@@ -555,7 +555,7 @@ export default function SubjectDemo() {
             ))}
           <Link
             to="/medat-uebungsfragen"
-            className="flex items-center gap-2 p-4 rounded-xl bg-[var(--surface)] dark:bg-[var(--surface)] border border-app-border hover:border-gray-300 dark:hover:border-gray-700 transition-colors"
+            className="flex items-center gap-2 p-4 rounded-xl bg-[var(--surface)] border border-[var(--border)] hover:border-[var(--accent)]/30 transition-colors"
           >
             <span className="text-lg">{"\uD83D\uDCDA"}</span>
             <span className="text-sm font-medium text-[var(--text-secondary)]">
@@ -564,8 +564,8 @@ export default function SubjectDemo() {
           </Link>
         </div>
 
-        <div className="text-center bg-[var(--surface)] dark:bg-[var(--surface)] rounded-2xl p-8 sm:p-10 border border-app-border">
-          <h2 className="text-2xl font-bold text-app-foreground mb-3">
+        <div className="text-center bg-[var(--surface)] rounded-2xl p-8 sm:p-10 border border-[var(--border)]">
+          <h2 className="text-2xl font-bold text-[var(--text-primary)] mb-3">
             Alle {totalCount}+ {meta.label}-Fragen freischalten
           </h2>
           <p className="text-[var(--text-secondary)] mb-6 max-w-md mx-auto">
@@ -582,20 +582,20 @@ export default function SubjectDemo() {
         </div>
       </main>
 
-      <footer className="py-6 bg-gray-100 dark:bg-gray-900 border-t border-app-border">
+      <footer className="py-6 bg-[var(--surface)] border-t border-[var(--border)]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <div className="flex items-center gap-2">
-            <GraduationCap className="w-4 h-4 text-gray-400" />
-            <span className="text-sm font-semibold text-gray-500">MedMaster</span>
+            <GraduationCap className="w-4 h-4 text-[var(--muted)]" />
+            <span className="text-sm font-semibold text-[var(--muted)]">MedMaster</span>
           </div>
-          <div className="flex gap-4 text-xs text-gray-400">
-            <Link to="/impressum" className="hover:text-gray-600 transition-colors">
+          <div className="flex gap-4 text-xs text-[var(--muted)]">
+            <Link to="/impressum" className="hover:text-[var(--text-primary)] transition-colors">
               Impressum
             </Link>
-            <Link to="/datenschutz" className="hover:text-gray-600 transition-colors">
+            <Link to="/datenschutz" className="hover:text-[var(--text-primary)] transition-colors">
               Datenschutz
             </Link>
-            <Link to="/agb" className="hover:text-gray-600 transition-colors">
+            <Link to="/agb" className="hover:text-[var(--text-primary)] transition-colors">
               AGB
             </Link>
           </div>

@@ -270,7 +270,7 @@ export default function SchwachstellenTrainer() {
                 Daily Challenge
               </Badge>
             )}
-            <span className="text-sm text-muted">
+            <span className="text-sm text-[var(--muted)]">
               {currentIndex + 1} / {quizQuestions.length}
             </span>
           </div>
@@ -291,10 +291,10 @@ export default function SchwachstellenTrainer() {
 
         <Card>
           <CardContent className="p-6">
-            <p className="text-base font-medium text-foreground mb-6">{q.text}</p>
+            <p className="text-base font-medium text-[var(--text-primary)] mb-6">{q.text}</p>
             <div className="space-y-3">
               {q.options.map((opt) => {
-                let classes = "border-border hover:bg-accent text-muted-foreground";
+                let classes = "border-[var(--border)] hover:bg-accent text-muted-foreground";
                 if (showResult) {
                   if (opt.id === q.correctOptionId) {
                     classes =
@@ -305,7 +305,7 @@ export default function SchwachstellenTrainer() {
                   }
                 } else if (userAnswer === opt.id) {
                   classes =
-                    "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300";
+                    "border-[var(--accent)] bg-[var(--accent)]/5 dark:bg-[var(--accent)]/10 text-[var(--accent)]/30";
                 }
 
                 return (
@@ -338,7 +338,9 @@ export default function SchwachstellenTrainer() {
                     {isCorrect ? "Richtig!" : "Leider falsch"}
                   </span>
                 </div>
-                <p className="text-sm text-muted">{stripMarkdownAsterisks(q.explanation)}</p>
+                <p className="text-sm text-[var(--muted)]">
+                  {stripMarkdownAsterisks(q.explanation)}
+                </p>
               </CardContent>
             </Card>
 
@@ -414,8 +416,8 @@ export default function SchwachstellenTrainer() {
           <Target className="w-5 h-5 text-red-600 dark:text-red-400" />
         </div>
         <div>
-          <h1 className="text-2xl font-bold text-foreground">Schwachstellen-Trainer</h1>
-          <p className="text-sm text-muted">Gezielt schwache Themen trainieren</p>
+          <h1 className="text-2xl font-bold text-[var(--text-primary)]">Schwachstellen-Trainer</h1>
+          <p className="text-sm text-[var(--muted)]">Gezielt schwache Themen trainieren</p>
         </div>
       </div>
 
@@ -426,10 +428,8 @@ export default function SchwachstellenTrainer() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <Card>
           <CardContent className="p-5 text-center">
-            <div className="text-3xl font-bold text-primary-700 dark:text-primary-400">
-              {readiness}%
-            </div>
-            <p className="text-xs text-muted mt-1">MedAT Readiness</p>
+            <div className="text-3xl font-bold text-[var(--accent)]/60">{readiness}%</div>
+            <p className="text-xs text-[var(--muted)] mt-1">MedAT Readiness</p>
             <Progress value={readiness} className="mt-3" />
           </CardContent>
         </Card>
@@ -441,8 +441,8 @@ export default function SchwachstellenTrainer() {
                 {profile.dailyChallengeStreak}
               </span>
             </div>
-            <p className="text-xs text-muted mt-1">Tages-Streak</p>
-            <p className="text-xs text-muted">
+            <p className="text-xs text-[var(--muted)] mt-1">Tages-Streak</p>
+            <p className="text-xs text-[var(--muted)]">
               {profile.totalQuestionsAnswered} Fragen beantwortet
             </p>
           </CardContent>
@@ -452,7 +452,7 @@ export default function SchwachstellenTrainer() {
             <div className="text-3xl font-bold text-emerald-600 dark:text-emerald-400">
               {totalPracticed}/{totalStichworte}
             </div>
-            <p className="text-xs text-muted mt-1">Stichworte geübt</p>
+            <p className="text-xs text-[var(--muted)] mt-1">Stichworte geübt</p>
             <Progress value={(totalPracticed / totalStichworte) * 100} className="mt-3" />
           </CardContent>
         </Card>
@@ -468,7 +468,7 @@ export default function SchwachstellenTrainer() {
             </CardTitle>
           </CardHeader>
           <CardContent className="pb-5">
-            <p className="text-sm text-muted mb-4">
+            <p className="text-sm text-[var(--muted)] mb-4">
               15 adaptive Fragen aus deinen Schwachstellen — Bonus-XP und Streak-Aufbau!
             </p>
             <Button onClick={startDailyChallenge} className="gap-2">
@@ -487,7 +487,7 @@ export default function SchwachstellenTrainer() {
               </CardTitle>
             </CardHeader>
             <CardContent className="pb-5">
-              <p className="text-sm text-muted mb-4">
+              <p className="text-sm text-[var(--muted)] mb-4">
                 Falsch beantwortete Fragen nochmal durchgehen — mit Erklärung vor jeder Frage.
               </p>
               <Button
@@ -518,7 +518,7 @@ export default function SchwachstellenTrainer() {
         </CardHeader>
         <CardContent className="space-y-3">
           {weakTopics.length === 0 ? (
-            <p className="text-sm text-muted">
+            <p className="text-sm text-[var(--muted)]">
               Bearbeite zuerst einige Quizze, damit deine Schwachstellen erkannt werden.
             </p>
           ) : (
@@ -538,7 +538,7 @@ export default function SchwachstellenTrainer() {
               return (
                 <div
                   key={topic.stichwortId}
-                  className={`flex items-center justify-between p-3 rounded-lg ${fc?.bg || "bg-muted"}`}
+                  className={`flex items-center justify-between p-3 rounded-lg ${fc?.bg || "bg-[var(--surface)]"}`}
                 >
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 mb-1">
@@ -549,8 +549,10 @@ export default function SchwachstellenTrainer() {
                     </div>
                     <div className="flex items-center gap-3">
                       <Progress value={topic.rate} className="flex-1 max-w-[120px]" />
-                      <span className="text-xs text-muted">{topic.rate}%</span>
-                      <span className="text-[10px] text-muted">{questionsAvailable} Fragen</span>
+                      <span className="text-xs text-[var(--muted)]">{topic.rate}%</span>
+                      <span className="text-[10px] text-[var(--muted)]">
+                        {questionsAvailable} Fragen
+                      </span>
                     </div>
                   </div>
                   <div className="flex gap-2 ml-3 shrink-0">
@@ -625,7 +627,7 @@ export default function SchwachstellenTrainer() {
                 <div
                   className={`w-8 h-8 ${fc.accent} rounded-lg mx-auto mb-2 flex items-center justify-center`}
                 >
-                  <span className="text-primary-foreground text-xs font-bold">{r}%</span>
+                  <span className="text-white text-xs font-bold">{r}%</span>
                 </div>
                 <p className="text-xs font-medium">{fc.label}</p>
                 <Progress value={r} className="mt-2" />

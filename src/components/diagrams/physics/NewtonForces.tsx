@@ -39,7 +39,7 @@ export default function NewtonForces() {
       <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">
         Kr\u00E4fte an der Schiefen Ebene
       </h4>
-      <p className="text-xs text-muted">Klicke auf eine Kraft f\u00FCr Details.</p>
+      <p className="text-xs text-[var(--muted)]">Klicke auf eine Kraft f\u00FCr Details.</p>
       <svg viewBox="0 0 520 350" className="w-full max-w-2xl mx-auto">
         <title>Newtonsche Gesetze und Kräftediagramm</title>
         <defs>

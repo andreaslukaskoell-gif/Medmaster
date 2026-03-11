@@ -12,7 +12,7 @@ export function KeyFactsGrid({ title, facts }: KeyFactsGridProps) {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
         {facts.map((fact, i) => (
           <div key={i} className="flex items-start gap-2">
-            <span className="text-teal-500 font-bold mt-0.5">•</span>
+            <span className="text-[var(--accent)] font-bold mt-0.5">•</span>
             <span className="text-sm text-[var(--text-primary)]">
               {fact.label}: <strong className="text-[var(--text-primary)]">{fact.value}</strong>
             </span>

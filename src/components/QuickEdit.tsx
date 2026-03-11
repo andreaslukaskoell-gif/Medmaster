@@ -68,7 +68,7 @@ export function QuickEdit<T extends object>({
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="p-2 rounded-lg text-muted-foreground hover:text-foreground hover:bg-accent dark:hover:text-foreground dark:hover:bg-accent transition-colors cursor-pointer"
+        className="p-2 rounded-lg text-[var(--muted)] hover:text-[var(--text-primary)] hover:bg-[var(--surface)] dark:hover:text-[var(--text-primary)] dark:hover:bg-[var(--surface)] transition-colors cursor-pointer"
         title={label}
         aria-label={label}
       >
@@ -90,15 +90,15 @@ export function QuickEdit<T extends object>({
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.96 }}
               transition={{ duration: 0.2 }}
-              className="relative w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl border border-border shadow-xl card-glass overflow-hidden"
+              className="relative w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl border border-[var(--border)] shadow-xl card-glass overflow-hidden"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="flex items-center justify-between px-4 py-3 border-b border-border">
-                <h3 className="text-lg font-semibold text-foreground">Quick-Edit</h3>
+              <div className="flex items-center justify-between px-4 py-3 border-b border-[var(--border)]">
+                <h3 className="text-lg font-semibold text-[var(--text-primary)]">Quick-Edit</h3>
                 <button
                   type="button"
                   onClick={handleClose}
-                  className="p-2 rounded-lg text-muted-foreground hover:bg-accent dark:hover:bg-accent hover:text-foreground dark:hover:text-foreground transition-colors cursor-pointer"
+                  className="p-2 rounded-lg text-[var(--muted)] hover:bg-[var(--surface)] dark:hover:bg-[var(--surface)] hover:text-[var(--text-primary)] dark:hover:text-[var(--text-primary)] transition-colors cursor-pointer"
                   aria-label="Schließen"
                 >
                   <X className="w-4 h-4" />
@@ -108,13 +108,13 @@ export function QuickEdit<T extends object>({
                 <textarea
                   value={text}
                   onChange={(e) => setText(e.target.value)}
-                  className="w-full h-[50vh] min-h-[200px] p-3 rounded-xl border border-border bg-background/80 dark:bg-background/80 text-sm font-mono text-foreground placeholder:text-muted-foreground resize-y focus:outline-none focus:ring-2 focus:ring-primary-500/50"
+                  className="w-full h-[50vh] min-h-[200px] p-3 rounded-xl border border-[var(--border)] bg-[var(--background)]/80 dark:bg-[var(--background)]/80 text-sm font-mono text-[var(--text-primary)] placeholder:text-[var(--muted)] resize-y focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/50"
                   placeholder="JSON …"
                   spellCheck={false}
                 />
               </div>
-              <div className="flex items-center justify-between gap-3 px-4 py-3 border-t border-border bg-muted/50">
-                <span className="text-xs text-muted-foreground">
+              <div className="flex items-center justify-between gap-3 px-4 py-3 border-t border-[var(--border)] bg-[var(--surface)]/50">
+                <span className="text-xs text-[var(--muted)]">
                   Speichert lokal &amp; gibt JSON in der Konsole aus (zum Kopieren in die
                   Datendatei).
                 </span>
@@ -124,7 +124,7 @@ export function QuickEdit<T extends object>({
                     variant="outline"
                     size="sm"
                     onClick={handleClose}
-                    className="border-border"
+                    className="border-[var(--border)]"
                   >
                     Abbrechen
                   </Button>
@@ -132,7 +132,7 @@ export function QuickEdit<T extends object>({
                     type="button"
                     size="sm"
                     onClick={handleSave}
-                    className="bg-primary-500 hover:bg-primary-600 text-white"
+                    className="bg-[var(--accent)] hover:bg-[var(--accent)] text-white"
                   >
                     {copied ? (
                       <>

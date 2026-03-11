@@ -39,9 +39,9 @@ const subjectConfig: Record<
   biologie: {
     label: "Biologie",
     icon: Dna,
-    color: "text-primary-700 dark:text-primary-400",
-    accent: "bg-primary-600",
-    ring: "stroke-primary-500",
+    color: "text-[var(--accent)]/60",
+    accent: "bg-[var(--accent)]",
+    ring: "stroke-[var(--accent)]",
   },
   chemie: {
     label: "Chemie",
@@ -235,7 +235,7 @@ export default function WissenCheck() {
         />
         <div>
           <h1 className="text-2xl font-bold text-[var(--text-primary)]">Wissenscheck</h1>
-          <p className="text-muted mt-1">
+          <p className="text-[var(--muted)] mt-1">
             Wähle ein Fach für einen kurzen Quick-Check (10 Fragen, 8 Min).
           </p>
         </div>
@@ -255,7 +255,7 @@ export default function WissenCheck() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-[var(--text-primary)]">{cfg.label}</h3>
-                  <p className="text-xs text-muted">{QUESTION_COUNT} Fragen · 8 Min</p>
+                  <p className="text-xs text-[var(--muted)]">{QUESTION_COUNT} Fragen · 8 Min</p>
                 </div>
               </CardContent>
             </Card>
@@ -307,7 +307,9 @@ export default function WissenCheck() {
               <h1 className="text-2xl font-bold text-[var(--text-primary)]">
                 {config.label} Wissenscheck
               </h1>
-              <p className="text-muted mt-2">Teste dein Wissen mit einem kurzen Quick-Check.</p>
+              <p className="text-[var(--muted)] mt-2">
+                Teste dein Wissen mit einem kurzen Quick-Check.
+              </p>
             </div>
             <div className="flex justify-center gap-6 text-sm">
               <div className="flex items-center gap-2 text-[var(--muted)]">
@@ -319,7 +321,7 @@ export default function WissenCheck() {
                 <span>8 Minuten</span>
               </div>
             </div>
-            <div className="text-xs text-muted bg-[var(--border)]/30 rounded-lg p-3">
+            <div className="text-xs text-[var(--muted)] bg-[var(--border)]/30 rounded-lg p-3">
               Die Fragen werden zufällig aus dem gesamten Fragenpool ausgewählt. Beantworte alle
               Fragen innerhalb des Zeitlimits. Nach Ablauf der Zeit wird automatisch abgegeben.
             </div>
@@ -381,7 +383,7 @@ export default function WissenCheck() {
                   ringClass={config.ring}
                 />
               </div>
-              <p className="text-sm text-muted">
+              <p className="text-sm text-[var(--muted)]">
                 Du hast {logicCorrect} von {logicQuestions.length} Reihenfolgen richtig gelöst.
               </p>
               <div className="flex gap-3 justify-center">
@@ -430,7 +432,7 @@ export default function WissenCheck() {
               {config.label} · Logic-Builder
             </span>
           </div>
-          <span className="text-sm text-muted">
+          <span className="text-sm text-[var(--muted)]">
             Reihenfolge {logicIndex + 1} von {logicQuestions.length}
           </span>
         </div>
@@ -487,7 +489,7 @@ export default function WissenCheck() {
 
         {/* Progress bar */}
         <div className="space-y-1">
-          <div className="flex justify-between text-xs text-muted">
+          <div className="flex justify-between text-xs text-[var(--muted)]">
             <span>
               Frage {current + 1} von {questions.length}
             </span>
@@ -618,7 +620,7 @@ export default function WissenCheck() {
               {pct >= 80 ? "Sehr gut!" : pct >= 50 ? "Gut, weiter üben!" : "Mehr Übung nötig"}
             </Badge>
           </div>
-          <p className="text-sm text-muted">
+          <p className="text-sm text-[var(--muted)]">
             Du hast {score} von {questions.length} Fragen richtig beantwortet.
           </p>
           <div className="flex gap-3 justify-center pt-2">
@@ -657,9 +659,9 @@ export default function WissenCheck() {
                     {i + 1}. {q.text}
                   </span>
                   {isExpanded ? (
-                    <ChevronUp className="w-4 h-4 text-muted shrink-0" />
+                    <ChevronUp className="w-4 h-4 text-[var(--muted)] shrink-0" />
                   ) : (
-                    <ChevronDown className="w-4 h-4 text-muted shrink-0" />
+                    <ChevronDown className="w-4 h-4 text-[var(--muted)] shrink-0" />
                   )}
                 </button>
                 {isExpanded && (
@@ -688,7 +690,7 @@ export default function WissenCheck() {
                         );
                       })}
                     </div>
-                    <div className="text-xs text-muted bg-[var(--border)]/30 rounded p-2">
+                    <div className="text-xs text-[var(--muted)] bg-[var(--border)]/30 rounded p-2">
                       {stripMarkdownAsterisks(q.explanation)}
                     </div>
                   </div>

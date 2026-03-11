@@ -52,7 +52,7 @@ export function SmartLink({ to, description, children, className }: SmartLinkPro
         }}
         onClick={handleClick}
         className={cn(
-          "cursor-pointer border-b border-primary-500/60 dark:border-primary-400/60 text-primary-700 dark:text-primary-300 hover:border-primary-600 dark:hover:border-primary-300 hover:text-primary-800 dark:hover:text-primary-200 transition-colors",
+          "cursor-pointer border-b border-[var(--accent)]/60 dark:border-[var(--accent)]/60/60 text-[var(--accent)] dark:text-[var(--accent)]/30 hover:border-[var(--accent)] dark:hover:border-[var(--accent)]/30 hover:text-[var(--accent)] dark:hover:text-[var(--accent)]/20 transition-colors",
           className
         )}
       >
@@ -65,7 +65,7 @@ export function SmartLink({ to, description, children, className }: SmartLinkPro
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 4 }}
             transition={{ duration: 0.15 }}
-            className="fixed z-50 px-3 py-2 text-sm text-foreground bg-card rounded-lg shadow-lg border border-border max-w-[280px] pointer-events-none"
+            className="fixed z-50 px-3 py-2 text-sm text-[var(--text-primary)] bg-[var(--card)] rounded-lg shadow-lg border border-[var(--border)] max-w-[280px] pointer-events-none"
             style={{
               left: tooltipPos.x,
               top: tooltipPos.y,
@@ -73,7 +73,7 @@ export function SmartLink({ to, description, children, className }: SmartLinkPro
             }}
           >
             {description}
-            <span className="block text-xs text-muted-foreground mt-1">Klicken zum Öffnen</span>
+            <span className="block text-xs text-[var(--muted)] mt-1">Klicken zum Öffnen</span>
           </motion.div>
         )}
       </AnimatePresence>

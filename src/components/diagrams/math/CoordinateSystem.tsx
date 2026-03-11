@@ -55,7 +55,7 @@ export default function CoordinateSystem() {
       <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">
         Koordinatensystem — Funktionstypen
       </h4>
-      <p className="text-xs text-muted">Schalte Funktionen ein und aus.</p>
+      <p className="text-xs text-[var(--muted)]">Schalte Funktionen ein und aus.</p>
 
       <div className="flex gap-2 flex-wrap mb-2">
         {functions.map((f) => (

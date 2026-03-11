@@ -188,7 +188,7 @@ export default function EmotionenRegulierenSimulation() {
             <h2 className="text-xl font-bold text-[var(--text-primary)] mb-2">
               Emotionen regulieren — Simulation
             </h2>
-            <p className="text-sm text-muted max-w-lg mx-auto mb-4">
+            <p className="text-sm text-[var(--muted)] max-w-lg mx-auto mb-4">
               Mit diesen Aufgaben wird Ihr Wissen darüber gemessen, wie man in bestimmten
               Situationen mit Emotionen effektiv umgehen kann, um bestimmte Ziele zu erreichen. Sie
               wählen bei jeder Aufgabe die
@@ -199,7 +199,7 @@ export default function EmotionenRegulierenSimulation() {
               {OFFIZIELLE_INSTRUKTION}
             </div>
           </div>
-          <div className="flex items-center justify-center gap-4 text-sm text-muted">
+          <div className="flex items-center justify-center gap-4 text-sm text-[var(--muted)]">
             <span className="flex items-center gap-1">
               <Clock className="w-4 h-4" /> 18:00 min
             </span>
@@ -237,7 +237,7 @@ export default function EmotionenRegulierenSimulation() {
               <h2 className="text-2xl font-bold text-[var(--text-primary)]">
                 {correctCount}/{TASK_COUNT}
               </h2>
-              <p className="text-sm text-muted">
+              <p className="text-sm text-[var(--muted)]">
                 {scorePercent}% richtig —{" "}
                 {scorePercent >= 80
                   ? "Ausgezeichnet!"
@@ -253,11 +253,11 @@ export default function EmotionenRegulierenSimulation() {
                 <p className="text-lg font-bold text-[var(--text-primary)]">
                   {formatTime(TIME_LIMIT - timeLeft)}
                 </p>
-                <p className="text-xs text-muted">Gesamtzeit</p>
+                <p className="text-xs text-[var(--muted)]">Gesamtzeit</p>
               </div>
               <div className="text-center">
                 <p className="text-lg font-bold text-[var(--text-primary)]">{avgTime}s</p>
-                <p className="text-xs text-muted">Ø pro Aufgabe</p>
+                <p className="text-xs text-[var(--muted)]">Ø pro Aufgabe</p>
               </div>
             </div>
             <div className="w-full max-w-xs mx-auto">
@@ -296,10 +296,10 @@ export default function EmotionenRegulierenSimulation() {
                     {result.task.situation.slice(0, 80)}…
                   </p>
                   <div className="flex items-center gap-2 shrink-0">
-                    <span className="text-xs text-muted">
+                    <span className="text-xs text-[var(--muted)]">
                       {result.userAnswer ?? "—"} / {result.task.correctOptionId}
                     </span>
-                    <span className="text-xs text-muted">{result.timeSpent}s</span>
+                    <span className="text-xs text-[var(--muted)]">{result.timeSpent}s</span>
                     {result.correct ? (
                       <CheckCircle2 className="w-4 h-4 text-green-500" />
                     ) : (
@@ -310,14 +310,14 @@ export default function EmotionenRegulierenSimulation() {
                 {expandedResult === i && (
                   <div className="px-4 pb-4 space-y-3 border-t border-[var(--border)] pt-3">
                     <div className="bg-[var(--border)]/30 p-3 rounded-lg">
-                      <p className="text-xs text-muted mb-1">Situation:</p>
+                      <p className="text-xs text-[var(--muted)] mb-1">Situation:</p>
                       <p className="text-sm">{result.task.situation}</p>
                     </div>
                     <div className="space-y-1">
                       {result.task.options.map((opt) => (
                         <div
                           key={opt.id}
-                          className={`text-sm px-3 py-2 rounded ${opt.id === result.task.correctOptionId ? "bg-green-50 dark:bg-green-900/15 text-green-800 dark:text-green-300 font-medium" : opt.id === result.userAnswer ? "bg-red-50 dark:bg-red-900/15 text-red-800 dark:text-red-300" : "text-muted"}`}
+                          className={`text-sm px-3 py-2 rounded ${opt.id === result.task.correctOptionId ? "bg-green-50 dark:bg-green-900/15 text-green-800 dark:text-green-300 font-medium" : opt.id === result.userAnswer ? "bg-red-50 dark:bg-red-900/15 text-red-800 dark:text-red-300" : "text-[var(--muted)]"}`}
                         >
                           <span className="font-medium mr-2">{opt.id}</span>
                           {opt.text}
@@ -378,7 +378,7 @@ export default function EmotionenRegulierenSimulation() {
         </span>
       </div>
 
-      <div className="flex items-center justify-between text-sm text-muted">
+      <div className="flex items-center justify-between text-sm text-[var(--muted)]">
         <span>
           Aufgabe {currentIndex + 1} von {TASK_COUNT}
         </span>

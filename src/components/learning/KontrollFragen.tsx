@@ -41,8 +41,8 @@ export function KontrollFragen({ questions, onAnswer }: KontrollFragenProps) {
   // Early return if no questions available
   if (total === 0) {
     return (
-      <div className="rounded-xl border border-emerald-200 dark:border-emerald-800 bg-card p-6 text-center">
-        <p className="text-sm text-app-muted">Keine Kontrollfragen verfügbar.</p>
+      <div className="rounded-xl border border-emerald-200 dark:border-emerald-800 bg-[var(--card)] p-6 text-center">
+        <p className="text-sm text-[var(--muted)]">Keine Kontrollfragen verfügbar.</p>
       </div>
     );
   }
@@ -121,7 +121,7 @@ export function KontrollFragen({ questions, onAnswer }: KontrollFragenProps) {
   if (finished) {
     const pct = Math.round((correctCount / total) * 100);
     return (
-      <div className="rounded-xl border border-emerald-200 dark:border-emerald-800 bg-card shadow-lg overflow-hidden">
+      <div className="rounded-xl border border-emerald-200 dark:border-emerald-800 bg-[var(--card)] shadow-lg overflow-hidden">
         <div className="bg-linear-to-r from-emerald-500 to-teal-500 px-6 py-4">
           <h3 className="text-lg font-bold text-white">Kontrollfragen — Ergebnis</h3>
         </div>
@@ -130,7 +130,7 @@ export function KontrollFragen({ questions, onAnswer }: KontrollFragenProps) {
             <div className="text-4xl font-bold text-emerald-700 dark:text-emerald-400">
               {correctCount} von {total}
             </div>
-            <p className="text-sm text-app-muted">
+            <p className="text-sm text-[var(--muted)]">
               {pct === 100
                 ? "Perfekt! Alles richtig!"
                 : pct >= 80
@@ -143,11 +143,11 @@ export function KontrollFragen({ questions, onAnswer }: KontrollFragenProps) {
 
           {/* Progress bar */}
           <div className="space-y-1">
-            <div className="flex justify-between text-xs text-app-muted">
+            <div className="flex justify-between text-xs text-[var(--muted)]">
               <span>{correctCount} richtig</span>
               <span>{pct}%</span>
             </div>
-            <div className="w-full bg-muted/30 rounded-full h-3">
+            <div className="w-full bg-[var(--surface)]/30 rounded-full h-3">
               <div
                 className="h-3 rounded-full transition-all duration-500 bg-linear-to-r from-emerald-500 to-teal-500"
                 style={{ width: `${pct}%` }}
@@ -184,7 +184,7 @@ export function KontrollFragen({ questions, onAnswer }: KontrollFragenProps) {
   }
 
   return (
-    <div className="rounded-xl border border-emerald-200 dark:border-emerald-800 bg-card shadow-lg overflow-hidden">
+    <div className="rounded-xl border border-emerald-200 dark:border-emerald-800 bg-[var(--card)] shadow-lg overflow-hidden">
       {/* Header */}
       <div className="bg-linear-to-r from-emerald-500 to-teal-500 px-6 py-4">
         <div className="flex items-center justify-between">
@@ -204,7 +204,9 @@ export function KontrollFragen({ questions, onAnswer }: KontrollFragenProps) {
 
       {/* Question */}
       <div className="p-6 space-y-4">
-        <p className="font-medium text-app-foreground leading-relaxed">{q?.question ?? ""}</p>
+        <p className="font-medium text-[var(--text-primary)] leading-relaxed">
+          {q?.question ?? ""}
+        </p>
 
         {/* Options */}
         <div className="space-y-2">
@@ -227,8 +229,8 @@ export function KontrollFragen({ questions, onAnswer }: KontrollFragenProps) {
                 " border-emerald-500 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-800 dark:text-emerald-300";
             } else {
               className += answered
-                ? " border-border text-muted cursor-default"
-                : " border-border hover:border-emerald-300 hover:bg-emerald-50/50 dark:hover:bg-emerald-900/10 cursor-pointer";
+                ? " border-[var(--border)] text-[var(--muted)] cursor-default"
+                : " border-[var(--border)] hover:border-emerald-300 hover:bg-emerald-50/50 dark:hover:bg-emerald-900/10 cursor-pointer";
             }
 
             const allowSecondTry = showHintOnly && secondTry;
@@ -248,7 +250,7 @@ export function KontrollFragen({ questions, onAnswer }: KontrollFragenProps) {
                       ? "bg-emerald-500 text-white"
                       : isWrongSelected
                         ? "bg-red-500 text-white"
-                        : "bg-muted/20 text-app-muted"
+                        : "bg-[var(--surface)]/20 text-[var(--muted)]"
                   }`}
                 >
                   {String.fromCharCode(65 + oi)}

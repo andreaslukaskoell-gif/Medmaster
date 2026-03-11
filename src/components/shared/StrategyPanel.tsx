@@ -113,7 +113,7 @@ export default function StrategyPanel({ testType, mode: controlledMode, classNam
                     <span className="text-xs text-[var(--text-secondary)] font-medium">
                       Alle A sind B
                     </span>
-                    <span className="text-[10px] text-muted">A ganz in B</span>
+                    <span className="text-[10px] text-[var(--muted)]">A ganz in B</span>
                   </div>
                   {/* Einige A sind B: Überlappung */}
                   <div className="flex flex-col items-center gap-2">
@@ -144,7 +144,7 @@ export default function StrategyPanel({ testType, mode: controlledMode, classNam
                     <span className="text-xs text-[var(--text-secondary)] font-medium">
                       Einige A sind B
                     </span>
-                    <span className="text-[10px] text-muted">Schnitt (Überlappung)</span>
+                    <span className="text-[10px] text-[var(--muted)]">Schnitt (Überlappung)</span>
                   </div>
                   {/* Kein A ist B: getrennt */}
                   <div className="flex flex-col items-center gap-2">
@@ -175,10 +175,10 @@ export default function StrategyPanel({ testType, mode: controlledMode, classNam
                     <span className="text-xs text-[var(--text-secondary)] font-medium">
                       Kein A ist B
                     </span>
-                    <span className="text-[10px] text-muted">Keine Überlappung</span>
+                    <span className="text-[10px] text-[var(--muted)]">Keine Überlappung</span>
                   </div>
                 </div>
-                <p className="text-[10px] text-muted mt-3 text-center">
+                <p className="text-[10px] text-[var(--muted)] mt-3 text-center">
                   Zeichne solche Kreise gedanklich oder auf dem Schmierblatt; dann siehst du, was
                   zwingend folgt.
                 </p>

@@ -50,7 +50,7 @@ export default function Community() {
 
       <div>
         <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Community</h1>
-        <p className="text-muted mt-1">Dein Lernfortschritt auf einen Blick.</p>
+        <p className="text-[var(--muted)] mt-1">Dein Lernfortschritt auf einen Blick.</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -60,18 +60,16 @@ export default function Community() {
               <TrendingUp className="w-6 h-6 text-yellow-600 dark:text-yellow-400" />
             </div>
             <p className="text-3xl font-bold text-yellow-700 dark:text-yellow-400">{avgScore}%</p>
-            <p className="text-xs text-muted">Dein Durchschnitt</p>
+            <p className="text-xs text-[var(--muted)]">Dein Durchschnitt</p>
           </CardContent>
         </Card>
         <Card>
           <CardContent className="p-4 text-center">
-            <div className="w-12 h-12 bg-primary-100 dark:bg-primary-900/30 rounded-xl flex items-center justify-center mx-auto mb-2">
-              <Trophy className="w-6 h-6 text-primary-700 dark:text-primary-400" />
+            <div className="w-12 h-12 bg-[var(--accent)]/10 dark:bg-[var(--accent)]/10 rounded-xl flex items-center justify-center mx-auto mb-2">
+              <Trophy className="w-6 h-6 text-[var(--accent)]" />
             </div>
-            <p className="text-3xl font-bold text-primary-700 dark:text-primary-400">
-              {totalQuizzes}
-            </p>
-            <p className="text-xs text-muted">Abgeschlossene Quizze</p>
+            <p className="text-3xl font-bold text-[var(--accent)]">{totalQuizzes}</p>
+            <p className="text-xs text-[var(--muted)]">Abgeschlossene Quizze</p>
           </CardContent>
         </Card>
       </div>
@@ -83,8 +81,8 @@ export default function Community() {
             onClick={() => setActiveTab(t.id)}
             className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors cursor-pointer ${
               activeTab === t.id
-                ? "bg-primary-700 text-white"
-                : "bg-white dark:bg-gray-900 border border-border dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800"
+                ? "bg-[var(--accent)] text-white"
+                : "bg-white dark:bg-gray-900 border border-[var(--border)] dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800"
             }`}
           >
             {t.label}
@@ -100,9 +98,9 @@ export default function Community() {
             </CardHeader>
             <CardContent>
               {totalQuizzes < 5 ? (
-                <p className="text-sm text-muted">
+                <p className="text-sm text-[var(--muted)]">
                   Löse mindestens 5 Quizze um deinen Vergleichswert zu sehen.
-                  <span className="block mt-1 text-primary-600 dark:text-primary-400 font-medium">
+                  <span className="block mt-1 text-[var(--accent)] font-medium">
                     Bisher: {totalQuizzes}/5 Quizze abgeschlossen.
                   </span>
                 </p>
@@ -112,17 +110,17 @@ export default function Community() {
                     Dein Durchschnitt:{" "}
                     <span className="font-bold text-gray-900 dark:text-white">{avgScore}%</span>
                     {" — "}
-                    <span className="font-semibold text-primary-700 dark:text-primary-400">
+                    <span className="font-semibold text-[var(--accent)]">
                       {getScoreBewertung(avgScore)}
                     </span>
                   </p>
                   <div className="h-2.5 rounded-full bg-gray-200 dark:bg-gray-700 overflow-hidden">
                     <div
-                      className="h-full rounded-full bg-primary-500 transition-all duration-700"
+                      className="h-full rounded-full bg-[var(--accent)] transition-all duration-700"
                       style={{ width: `${avgScore}%` }}
                     />
                   </div>
-                  <p className="text-xs text-muted">
+                  <p className="text-xs text-[var(--muted)]">
                     Basiert auf {totalQuizzes} abgeschlossenen Quizzen.
                   </p>
                 </div>
@@ -145,7 +143,7 @@ export default function Community() {
                       <div className="flex-1">
                         <Progress value={sp.score} />
                       </div>
-                      <span className="text-xs font-bold text-primary-700 dark:text-primary-400 w-12 text-right">
+                      <span className="text-xs font-bold text-[var(--accent)] w-12 text-right">
                         {sp.score}%
                       </span>
                     </div>

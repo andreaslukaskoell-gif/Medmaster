@@ -83,9 +83,9 @@ export default function AdminPreview() {
   const chapterId = "bio-kap1";
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-[var(--background)] text-[var(--text-primary)]">
       {/* Header */}
-      <header className="sticky top-0 z-10 border-b border-border bg-background/90 backdrop-blur supports-backdrop-filter:bg-background/80">
+      <header className="sticky top-0 z-10 border-b border-[var(--border)] bg-[var(--background)]/90 backdrop-blur supports-backdrop-filter:bg-[var(--background)]/80">
         <div className="max-w-[1800px] mx-auto px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <Button variant="ghost" size="sm" asChild>
@@ -94,7 +94,7 @@ export default function AdminPreview() {
                 Zurück
               </Link>
             </Button>
-            <h1 className="text-lg font-semibold text-foreground">Content-Vorschau</h1>
+            <h1 className="text-lg font-semibold text-[var(--text-primary)]">Content-Vorschau</h1>
           </div>
           <span className="text-xs text-muted-foreground">
             JSON links → Vorschau rechts (Live-Update)
@@ -106,14 +106,14 @@ export default function AdminPreview() {
       <div className="max-w-[1800px] mx-auto px-4 py-4 flex gap-4 h-[calc(100vh-56px)]">
         {/* Left: JSON input */}
         <div className="w-1/2 min-w-0 flex flex-col">
-          <label className="text-sm font-medium text-foreground mb-2 block">
+          <label className="text-sm font-medium text-[var(--text-primary)] mb-2 block">
             JSON (Unterkapitel)
           </label>
           <textarea
             value={inputText}
             onChange={(e) => setInputText(e.target.value)}
             spellCheck={false}
-            className="flex-1 w-full p-4 rounded-xl border border-border bg-background text-foreground font-mono text-sm resize-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none"
+            className="flex-1 w-full p-4 rounded-xl border border-[var(--border)] bg-[var(--background)] text-[var(--text-primary)] font-mono text-sm resize-none focus:ring-2 focus:ring-[var(--accent)] focus:border-[var(--accent)] outline-none"
             placeholder="Unterkapitel-JSON einfügen …"
           />
           {error && (
@@ -124,8 +124,10 @@ export default function AdminPreview() {
         </div>
 
         {/* Right: Rendered preview (1:1 like BMSUnterkapitel content area) */}
-        <div className="w-1/2 min-w-0 flex flex-col overflow-hidden border-l border-border pl-4">
-          <label className="text-sm font-medium text-foreground mb-2 block">Vorschau</label>
+        <div className="w-1/2 min-w-0 flex flex-col overflow-hidden border-l border-[var(--border)] pl-4">
+          <label className="text-sm font-medium text-[var(--text-primary)] mb-2 block">
+            Vorschau
+          </label>
           <div className="flex-1 overflow-y-auto pr-2 space-y-6">
             {error && !uk ? (
               <Card className="border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-900/10">
@@ -139,7 +141,7 @@ export default function AdminPreview() {
                 <p className="text-sm font-medium text-emerald-700 dark:text-emerald-400">
                   Kapitel — Vorschau
                 </p>
-                <h2 className="text-2xl font-bold text-foreground mt-1">{uk.title}</h2>
+                <h2 className="text-2xl font-bold text-[var(--text-primary)] mt-1">{uk.title}</h2>
 
                 {/* Main content card (same as BMSUnterkapitel) */}
                 <Card className="mt-4">
@@ -156,8 +158,8 @@ export default function AdminPreview() {
                 {/* Merksätze */}
                 {uk.merksätze && uk.merksätze.length > 0 && (
                   <div className="space-y-4 mt-6">
-                    <div className="mb-2 pb-2 border-b-2 border-border">
-                      <h3 className="text-xl font-bold text-foreground">
+                    <div className="mb-2 pb-2 border-b-2 border-[var(--border)]">
+                      <h3 className="text-xl font-bold text-[var(--text-primary)]">
                         💡 Prüfungsrelevante Merksätze
                       </h3>
                     </div>
@@ -246,10 +248,12 @@ export default function AdminPreview() {
 
                 {/* Additional notes */}
                 {uk.additionalNotes && uk.additionalNotes.trim() && (
-                  <Card className="mt-6 border-border">
+                  <Card className="mt-6 border-[var(--border)]">
                     <CardContent className="p-5">
-                      <h3 className="text-sm font-semibold text-foreground mb-3">Zusatznotizen</h3>
-                      <div className="prose prose-sm prose-slate dark:prose-invert max-w-none text-foreground">
+                      <h3 className="text-sm font-semibold text-[var(--text-primary)] mb-3">
+                        Zusatznotizen
+                      </h3>
+                      <div className="prose prose-sm prose-slate dark:prose-invert max-w-none text-[var(--text-primary)]">
                         <ReactMarkdown remarkPlugins={[remarkGfm]}>
                           {uk.additionalNotes}
                         </ReactMarkdown>

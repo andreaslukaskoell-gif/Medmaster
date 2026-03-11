@@ -188,13 +188,13 @@ export default function ZahlenfolgenSimulation() {
             <h2 className="text-xl font-bold text-[var(--text-primary)] mb-2">
               Simulation starten
             </h2>
-            <p className="text-sm text-muted max-w-md mx-auto">
+            <p className="text-sm text-[var(--muted)] max-w-md mx-auto">
               {TASK_COUNT} zuf&auml;llige Zahlenfolgen in {Math.floor(TIME_LIMIT / 60)} Minuten —
               genau wie im echten MedAT. Keine Tipps, keine L&ouml;sungswege w&auml;hrend der
               Simulation.
             </p>
           </div>
-          <div className="flex flex-col items-center gap-2 text-sm text-muted">
+          <div className="flex flex-col items-center gap-2 text-sm text-[var(--muted)]">
             <div className="flex items-center gap-4">
               <span className="flex items-center gap-1">
                 <Clock className="w-4 h-4" /> {Math.floor(TIME_LIMIT / 60)}
@@ -236,7 +236,7 @@ export default function ZahlenfolgenSimulation() {
                 <h2 className="text-2xl font-bold text-[var(--text-primary)]">
                   {correctCount}/{TASK_COUNT}
                 </h2>
-                <p className="text-sm text-muted">
+                <p className="text-sm text-[var(--muted)]">
                   {scorePercent}% richtig —{" "}
                   {scorePercent >= 80
                     ? "Ausgezeichnet!"
@@ -252,11 +252,11 @@ export default function ZahlenfolgenSimulation() {
                   <p className="text-lg font-bold text-[var(--text-primary)]">
                     {formatTime(TIME_LIMIT - timeLeft)}
                   </p>
-                  <p className="text-xs text-muted">Gesamtzeit</p>
+                  <p className="text-xs text-[var(--muted)]">Gesamtzeit</p>
                 </div>
                 <div className="text-center">
                   <p className="text-lg font-bold text-[var(--text-primary)]">{avgTime}s</p>
-                  <p className="text-xs text-muted">&Oslash; pro Aufgabe</p>
+                  <p className="text-xs text-[var(--muted)]">&Oslash; pro Aufgabe</p>
                 </div>
               </div>
               {/* Score bar */}
@@ -292,7 +292,7 @@ export default function ZahlenfolgenSimulation() {
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
               {Object.entries(patternStats).map(([pattern, stats]) => (
                 <div key={pattern} className="bg-[var(--border)]/30 rounded-lg p-3 text-center">
-                  <p className="text-xs text-muted mb-1">
+                  <p className="text-xs text-[var(--muted)] mb-1">
                     {patternLabels[pattern as ZahlenfolgenPattern]}
                   </p>
                   <p
@@ -343,7 +343,7 @@ export default function ZahlenfolgenSimulation() {
                       </p>
                     </div>
                     <div className="flex items-center gap-2 shrink-0">
-                      <span className="text-xs text-muted">{result.timeSpent}s</span>
+                      <span className="text-xs text-[var(--muted)]">{result.timeSpent}s</span>
                       {result.correct ? (
                         <CheckCircle2 className="w-4 h-4 text-green-500" />
                       ) : (
@@ -355,7 +355,7 @@ export default function ZahlenfolgenSimulation() {
                     <div className="px-4 pb-4 space-y-3 border-t border-[var(--border)] pt-3">
                       {/* Full sequence */}
                       <div className="bg-[var(--border)]/30 p-3 rounded-lg">
-                        <p className="text-xs text-muted mb-2">Vollst&auml;ndige Folge:</p>
+                        <p className="text-xs text-[var(--muted)] mb-2">Vollst&auml;ndige Folge:</p>
                         <div className="flex flex-wrap gap-1.5 font-mono text-base">
                           {result.task.sequence.map((val, j) => {
                             const isMissing = result.task.missingIndices.includes(j);
@@ -387,7 +387,7 @@ export default function ZahlenfolgenSimulation() {
                                   ? "bg-green-50 dark:bg-green-900/15 text-green-800 dark:text-green-300 font-medium"
                                   : isUserChoice
                                     ? "bg-red-50 dark:bg-red-900/15 text-red-800 dark:text-red-300"
-                                    : "text-muted"
+                                    : "text-[var(--muted)]"
                               }`}
                             >
                               <span className="font-bold mr-2 font-sans">{optionLabels[j]}</span>
@@ -454,7 +454,7 @@ export default function ZahlenfolgenSimulation() {
       </div>
 
       {/* Progress dots */}
-      <div className="flex items-center justify-between text-sm text-muted">
+      <div className="flex items-center justify-between text-sm text-[var(--muted)]">
         <span>
           Aufgabe {currentIndex + 1} von {TASK_COUNT}
         </span>

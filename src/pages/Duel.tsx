@@ -273,31 +273,31 @@ export default function Duel() {
         <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "Duell" }]} />
 
         <div>
-          <h1 className="text-2xl font-bold text-foreground">Duell-Modus</h1>
-          <p className="text-muted mt-1">Tritt gegen einen KI-Gegner an!</p>
+          <h1 className="text-2xl font-bold text-[var(--text-primary)]">Duell-Modus</h1>
+          <p className="text-[var(--muted)] mt-1">Tritt gegen einen KI-Gegner an!</p>
         </div>
 
         <Card>
           <CardContent className="p-8 text-center space-y-6">
-            <div className="w-20 h-20 bg-primary-100 dark:bg-primary-900/30 rounded-2xl flex items-center justify-center mx-auto">
-              <Swords className="w-10 h-10 text-primary-700 dark:text-primary-400" />
+            <div className="w-20 h-20 bg-[var(--accent)]/10 dark:bg-[var(--accent)]/10 rounded-2xl flex items-center justify-center mx-auto">
+              <Swords className="w-10 h-10 text-[var(--accent)]" />
             </div>
-            <h2 className="text-xl font-bold text-foreground">BMS-Duell</h2>
-            <p className="text-muted max-w-md mx-auto">
+            <h2 className="text-xl font-bold text-[var(--text-primary)]">BMS-Duell</h2>
+            <p className="text-[var(--muted)] max-w-md mx-auto">
               5 Fragen, 30 Sekunden pro Frage. Der KI-Gegner passt sich deinem Niveau an.
             </p>
             <div className="flex gap-4 justify-center text-sm">
-              <div className="bg-muted px-4 py-2 rounded-lg">
-                <p className="font-semibold text-foreground">5</p>
-                <p className="text-xs text-muted">Fragen</p>
+              <div className="bg-[var(--surface)] px-4 py-2 rounded-lg">
+                <p className="font-semibold text-[var(--text-primary)]">5</p>
+                <p className="text-xs text-[var(--muted)]">Fragen</p>
               </div>
-              <div className="bg-muted px-4 py-2 rounded-lg">
-                <p className="font-semibold text-foreground">30s</p>
-                <p className="text-xs text-muted">pro Frage</p>
+              <div className="bg-[var(--surface)] px-4 py-2 rounded-lg">
+                <p className="font-semibold text-[var(--text-primary)]">30s</p>
+                <p className="text-xs text-[var(--muted)]">pro Frage</p>
               </div>
-              <div className="bg-muted px-4 py-2 rounded-lg">
-                <p className="font-semibold text-foreground">{Math.round(readiness)}%</p>
-                <p className="text-xs text-muted">Bereitschaft</p>
+              <div className="bg-[var(--surface)] px-4 py-2 rounded-lg">
+                <p className="font-semibold text-[var(--text-primary)]">{Math.round(readiness)}%</p>
+                <p className="text-xs text-[var(--muted)]">Bereitschaft</p>
               </div>
             </div>
 
@@ -331,7 +331,7 @@ export default function Duel() {
             </div>
 
             {weakTopics.length > 0 && (
-              <div className="text-xs text-muted space-y-1">
+              <div className="text-xs text-[var(--muted)] space-y-1">
                 <p className="font-medium">Deine Schwachstellen:</p>
                 {weakTopics.map((t) => (
                   <span
@@ -368,13 +368,13 @@ export default function Duel() {
         <Card>
           <CardContent className="p-8 text-center space-y-6">
             <div
-              className={`w-20 h-20 rounded-2xl flex items-center justify-center mx-auto ${playerWon ? "bg-yellow-100 dark:bg-yellow-900/30" : draw ? "bg-muted" : "bg-red-100 dark:bg-red-900/30"}`}
+              className={`w-20 h-20 rounded-2xl flex items-center justify-center mx-auto ${playerWon ? "bg-yellow-100 dark:bg-yellow-900/30" : draw ? "bg-[var(--surface)]" : "bg-red-100 dark:bg-red-900/30"}`}
             >
               <Trophy
                 className={`w-10 h-10 ${playerWon ? "text-yellow-600" : draw ? "text-muted-foreground" : "text-red-500"}`}
               />
             </div>
-            <h2 className="text-2xl font-bold text-foreground">
+            <h2 className="text-2xl font-bold text-[var(--text-primary)]">
               {playerWon ? "Du hast gewonnen!" : draw ? "Unentschieden!" : "Knapp verloren!"}
             </h2>
 
@@ -389,13 +389,11 @@ export default function Duel() {
 
             <div className="flex items-center justify-center gap-8">
               <div className="text-center">
-                <div className="w-14 h-14 bg-primary-100 dark:bg-primary-900/30 rounded-full flex items-center justify-center mx-auto mb-2">
-                  <User className="w-7 h-7 text-primary-700 dark:text-primary-400" />
+                <div className="w-14 h-14 bg-[var(--accent)]/10 dark:bg-[var(--accent)]/10 rounded-full flex items-center justify-center mx-auto mb-2">
+                  <User className="w-7 h-7 text-[var(--accent)]" />
                 </div>
-                <p className="font-bold text-2xl text-primary-700 dark:text-primary-400">
-                  {playerScore}
-                </p>
-                <p className="text-xs text-muted">Du</p>
+                <p className="font-bold text-2xl text-[var(--accent)]">{playerScore}</p>
+                <p className="text-xs text-[var(--muted)]">Du</p>
               </div>
               <div className="text-2xl font-bold text-muted-foreground">vs</div>
               <div className="text-center">
@@ -403,7 +401,7 @@ export default function Duel() {
                   <Bot className="w-7 h-7 text-red-600 dark:text-red-400" />
                 </div>
                 <p className="font-bold text-2xl text-red-600 dark:text-red-400">{opponentScore}</p>
-                <p className="text-xs text-muted">{duel.opponentName}</p>
+                <p className="text-xs text-[var(--muted)]">{duel.opponentName}</p>
               </div>
             </div>
 
@@ -419,12 +417,12 @@ export default function Duel() {
                 const isExpanded = showExplanation === q.id;
 
                 return (
-                  <div key={q.id} className="border-b border-border last:border-0 pb-2">
+                  <div key={q.id} className="border-b border-[var(--border)] last:border-0 pb-2">
                     <button
                       onClick={() => setShowExplanation(isExpanded ? null : q.id)}
                       className="flex items-center gap-3 py-2 w-full text-left hover:bg-accent rounded px-1 -mx-1 cursor-pointer"
                     >
-                      <span className="text-xs text-muted w-5">{i + 1}.</span>
+                      <span className="text-xs text-[var(--muted)] w-5">{i + 1}.</span>
                       <div className="flex-1 text-sm text-muted-foreground truncate">{q.text}</div>
                       <div className="flex gap-2 shrink-0">
                         <Badge
@@ -507,25 +505,29 @@ export default function Duel() {
     <div className="max-w-3xl mx-auto space-y-6">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-primary-100 dark:bg-primary-900/30 rounded-full flex items-center justify-center">
-            <User className="w-4 h-4 text-primary-700 dark:text-primary-400" />
+          <div className="w-8 h-8 bg-[var(--accent)]/10 dark:bg-[var(--accent)]/10 rounded-full flex items-center justify-center">
+            <User className="w-4 h-4 text-[var(--accent)]" />
           </div>
-          <span className="text-sm font-medium text-foreground">Du</span>
+          <span className="text-sm font-medium text-[var(--text-primary)]">Du</span>
         </div>
 
         <div
-          className={`flex items-center gap-2 px-4 py-2 rounded-lg ${duel.timeLeft <= 10 ? "bg-red-50 dark:bg-red-900/20" : "bg-muted"}`}
+          className={`flex items-center gap-2 px-4 py-2 rounded-lg ${duel.timeLeft <= 10 ? "bg-red-50 dark:bg-red-900/20" : "bg-[var(--surface)]"}`}
         >
-          <Clock className={`w-4 h-4 ${duel.timeLeft <= 10 ? "text-red-500" : "text-muted"}`} />
+          <Clock
+            className={`w-4 h-4 ${duel.timeLeft <= 10 ? "text-red-500" : "text-[var(--muted)]"}`}
+          />
           <span
-            className={`text-lg font-mono font-bold ${duel.timeLeft <= 10 ? "text-red-600" : "text-foreground"}`}
+            className={`text-lg font-mono font-bold ${duel.timeLeft <= 10 ? "text-red-600" : "text-[var(--text-primary)]"}`}
           >
             {duel.timeLeft}s
           </span>
         </div>
 
         <div className="flex items-center gap-2">
-          <span className="text-sm font-medium text-foreground">{duel.opponentName}</span>
+          <span className="text-sm font-medium text-[var(--text-primary)]">
+            {duel.opponentName}
+          </span>
           <div className="w-8 h-8 bg-red-100 dark:bg-red-900/30 rounded-full flex items-center justify-center">
             <Bot className="w-4 h-4 text-red-600 dark:text-red-400" />
           </div>
@@ -544,10 +546,12 @@ export default function Duel() {
       )}
 
       <div className="flex justify-center gap-8">
-        <span className="text-xl font-bold text-primary-700 dark:text-primary-400">
+        <span className="text-xl font-bold text-[var(--accent)]">
           {duel.questions.filter((q) => duel.playerAnswers[q.id] === q.correctOptionId).length}
         </span>
-        <span className="text-sm text-muted self-center">Frage {duel.currentIndex + 1}/5</span>
+        <span className="text-sm text-[var(--muted)] self-center">
+          Frage {duel.currentIndex + 1}/5
+        </span>
         <span className="text-xl font-bold text-red-600 dark:text-red-400">
           {
             duel.questions.filter((q) => duel.opponentAnswers[q.id]?.answer === q.correctOptionId)
@@ -556,16 +560,16 @@ export default function Duel() {
         </span>
       </div>
 
-      <div className="w-full bg-muted rounded-full h-2">
+      <div className="w-full bg-[var(--surface)] rounded-full h-2">
         <div
-          className="bg-primary-600 h-2 rounded-full transition-all"
+          className="bg-[var(--accent)] h-2 rounded-full transition-all"
           style={{ width: `${((duel.currentIndex + 1) / 5) * 100}%` }}
         />
       </div>
 
       <Card>
         <CardContent className="p-6">
-          <p className="text-base font-medium text-foreground mb-6">{q.text}</p>
+          <p className="text-base font-medium text-[var(--text-primary)] mb-6">{q.text}</p>
           <div className="space-y-3">
             {q.options.map((opt) => (
               <button
@@ -579,7 +583,7 @@ export default function Duel() {
                       : "border-red-500 bg-red-50 dark:bg-red-900/20 text-red-800 dark:text-red-300"
                     : answered && opt.id === q.correctOptionId
                       ? "border-green-500 bg-green-50 dark:bg-green-900/20 text-green-800 dark:text-green-300"
-                      : "border-border hover:bg-accent text-muted-foreground"
+                      : "border-[var(--border)] hover:bg-accent text-muted-foreground"
                 } ${answered ? "pointer-events-none" : ""}`}
               >
                 <span className="font-semibold mr-2">{opt.id.toUpperCase()})</span>
@@ -594,7 +598,7 @@ export default function Duel() {
                 <Zap className="w-3 h-3 mr-1" /> {duel.opponentName} hat geantwortet
               </Badge>
             ) : (
-              <span className="text-xs text-muted animate-pulse">
+              <span className="text-xs text-[var(--muted)] animate-pulse">
                 {duel.opponentName} denkt nach...
               </span>
             )}

@@ -24,11 +24,11 @@ export function SyncToast() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
           transition={{ duration: 0.2 }}
-          className="fixed bottom-6 left-1/2 -translate-x-1/2 z-100 flex items-center gap-2 rounded-xl border border-border bg-card shadow-lg px-4 py-2.5 text-sm text-foreground"
+          className="fixed bottom-6 left-1/2 -translate-x-1/2 z-100 flex items-center gap-2 rounded-xl border border-[var(--border)] bg-[var(--card)] shadow-lg px-4 py-2.5 text-sm text-[var(--text-primary)]"
           role="status"
           aria-live="polite"
         >
-          <CloudCheck className="w-4 h-4 text-primary-500 shrink-0" />
+          <CloudCheck className="w-4 h-4 text-[var(--accent)] shrink-0" />
           <span>{message}</span>
         </motion.div>
       )}

@@ -9,7 +9,7 @@ export function MedATCountdown() {
   const { progress } = getMedATProgressFromJan2026();
 
   return (
-    <div className="card-glass rounded-2xl border border-[var(--border)] p-6 sm:p-8 shadow-lg">
+    <div className="rounded-2xl border border-[var(--border)] bg-[var(--card)] p-6 sm:p-8 shadow-sm">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
         <div className="flex items-center gap-4">
           <div className="w-14 h-14 rounded-2xl bg-[var(--accent)]/10 flex items-center justify-center shrink-0">

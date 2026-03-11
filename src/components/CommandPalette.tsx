@@ -215,22 +215,22 @@ export function CommandPalette({ open, onClose }: CommandPaletteProps) {
           role="dialog"
           aria-modal="true"
           aria-label="Kapitel und Unterkapitel durchsuchen"
-          className="relative w-full max-w-xl bg-card rounded-2xl shadow-2xl border border-border overflow-hidden card-glass"
+          className="relative w-full max-w-xl bg-[var(--card)] rounded-2xl shadow-2xl border border-[var(--border)] overflow-hidden card-glass"
           onClick={(e) => e.stopPropagation()}
           ref={containerRef}
         >
-          <div className="flex items-center gap-3 px-4 py-3 border-b border-border">
-            <Search className="w-4 h-4 text-muted shrink-0" />
+          <div className="flex items-center gap-3 px-4 py-3 border-b border-[var(--border)]">
+            <Search className="w-4 h-4 text-[var(--muted)] shrink-0" />
             <input
               ref={inputRef}
               type="text"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Kapitel & Unterkapitel durchsuchen..."
-              className="flex-1 bg-transparent text-sm outline-none text-app-foreground placeholder:text-muted"
+              className="flex-1 bg-transparent text-sm outline-none text-[var(--text-primary)] placeholder:text-[var(--muted)]"
               aria-label="Suche"
             />
-            <kbd className="hidden sm:inline text-[10px] bg-muted/20 text-muted px-2 py-1 rounded">
+            <kbd className="hidden sm:inline text-[10px] bg-[var(--border)] text-[var(--muted)] px-2 py-1 rounded">
               Esc
             </kbd>
           </div>
@@ -239,7 +239,7 @@ export function CommandPalette({ open, onClose }: CommandPaletteProps) {
             {/* Zuletzt besucht — shown only when query is empty */}
             {!query.trim() && lastViewedItem && (
               <div className="mb-1">
-                <p className="flex items-center gap-1.5 px-2 py-1 text-[10px] font-semibold uppercase tracking-wider text-muted">
+                <p className="flex items-center gap-1.5 px-2 py-1 text-[10px] font-semibold uppercase tracking-wider text-[var(--muted)]">
                   <Clock className="w-3 h-3" /> Zuletzt besucht
                 </p>
                 <ResultRow
@@ -249,11 +249,11 @@ export function CommandPalette({ open, onClose }: CommandPaletteProps) {
                   completedChapters={completedChapters}
                   onSelect={() => selectItem(lastViewedItem)}
                 />
-                <div className="my-1 border-t border-border" />
+                <div className="my-1 border-t border-[var(--border)]" />
               </div>
             )}
             {results.length === 0 ? (
-              <div className="py-8 text-center text-sm text-app-muted">
+              <div className="py-8 text-center text-sm text-[var(--muted)]">
                 Keine Treffer. Tippe z.B. einen Kapitel- oder Unterkapitel-Titel.
               </div>
             ) : (
@@ -269,14 +269,14 @@ export function CommandPalette({ open, onClose }: CommandPaletteProps) {
             )}
           </div>
 
-          <div className="px-4 py-2 border-t border-border space-y-1">
+          <div className="px-4 py-2 border-t border-[var(--border)] space-y-1">
             {showKeyboardHint && (
-              <p className="text-[11px] text-app-muted">
-                Tipp: Mit <kbd className="px-1 py-0.5 rounded bg-muted/20 font-mono">⌘K</kbd>{" "}
+              <p className="text-[11px] text-[var(--muted)]">
+                Tipp: Mit <kbd className="px-1 py-0.5 rounded bg-[var(--border)] font-mono">⌘K</kbd>{" "}
                 (Strg+K) öffnest du die Suche jederzeit.
               </p>
             )}
-            <div className="flex items-center justify-between text-xs text-app-muted">
+            <div className="flex items-center justify-between text-xs text-[var(--muted)]">
               <span>↑↓ Auswählen · Enter öffnen</span>
               <span className="flex items-center gap-1.5">
                 <Flame className="w-3.5 h-3.5 text-orange-500" />
@@ -334,23 +334,23 @@ function ResultRow({
       whileHover={{ scale: 1.005 }}
       whileTap={{ scale: 0.995 }}
       className={`w-full text-left px-3 py-2.5 rounded-xl flex items-center gap-3 cursor-pointer transition-colors ${
-        isSelected ? "bg-primary-500/10 text-app-foreground" : "hover:bg-muted/10"
+        isSelected ? "bg-[var(--accent)]/10 text-[var(--text-primary)]" : "hover:bg-[var(--border)]"
       }`}
       onClick={onSelect}
     >
-      <div className="w-8 h-8 rounded-lg bg-muted/20 flex items-center justify-center shrink-0">
-        <BookOpen className="w-4 h-4 text-primary-500" />
+      <div className="w-8 h-8 rounded-lg bg-[var(--border)] flex items-center justify-center shrink-0">
+        <BookOpen className="w-4 h-4 text-[var(--accent)]" />
       </div>
       <div className="flex-1 min-w-0">
-        <p className="text-sm font-medium text-app-foreground truncate">{title}</p>
-        <p className="text-xs text-app-muted truncate">{subtitle}</p>
+        <p className="text-sm font-medium text-[var(--text-primary)] truncate">{title}</p>
+        <p className="text-xs text-[var(--muted)] truncate">{subtitle}</p>
       </div>
       {progressLabel && (
         <span
           className={`shrink-0 text-xs font-medium px-2.5 py-1 rounded-full ${
             progressBadge === "done"
               ? "bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-400"
-              : "bg-muted/20 text-app-muted"
+              : "bg-[var(--border)] text-[var(--muted)]"
           }`}
         >
           {progressBadge === "done" && !progressLabel.includes("/") ? (

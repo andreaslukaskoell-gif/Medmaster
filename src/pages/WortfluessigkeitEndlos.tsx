@@ -177,7 +177,7 @@ export default function WortfluessigkeitEndlos() {
         ? "text-orange-500"
         : streak >= 5
           ? "text-amber-500"
-          : "text-muted-foreground/70";
+          : "text-[var(--muted)]/70";
 
   const streakBg =
     streak >= 20
@@ -186,7 +186,7 @@ export default function WortfluessigkeitEndlos() {
         ? "bg-orange-100 dark:bg-orange-900/30"
         : streak >= 5
           ? "bg-amber-100 dark:bg-amber-900/30"
-          : "bg-muted";
+          : "bg-[var(--surface)]";
 
   // === START SCREEN ===
   if (phase === "start") {
@@ -197,8 +197,8 @@ export default function WortfluessigkeitEndlos() {
             <Flame className="w-8 h-8 text-white" />
           </div>
           <div>
-            <h2 className="text-xl font-bold text-foreground mb-2">Endlos-Modus</h2>
-            <p className="text-sm text-muted max-w-md mx-auto">
+            <h2 className="text-xl font-bold text-[var(--text-primary)] mb-2">Endlos-Modus</h2>
+            <p className="text-sm text-[var(--muted)] max-w-md mx-auto">
               Trainiere bis du nicht mehr kannst! Zuf&auml;llige W&ouml;rter, endlos. Ein Fehler
               beendet das Spiel. Wie weit kommst du?
             </p>
@@ -206,7 +206,7 @@ export default function WortfluessigkeitEndlos() {
           {bestStreak > 0 && (
             <div className="flex items-center justify-center gap-2 text-sm">
               <Trophy className="w-4 h-4 text-amber-500" />
-              <span className="text-muted">
+              <span className="text-[var(--muted)]">
                 Dein Rekord:{" "}
                 <span className="font-bold text-amber-600 dark:text-amber-400">
                   {bestStreak} W&ouml;rter
@@ -237,13 +237,15 @@ export default function WortfluessigkeitEndlos() {
               <Trophy className="w-8 h-8 text-white" />
             </div>
             <div>
-              <h2 className="text-2xl font-bold text-foreground">{streak} richtig in Folge!</h2>
+              <h2 className="text-2xl font-bold text-[var(--text-primary)]">
+                {streak} richtig in Folge!
+              </h2>
               {isNewRecord && (
                 <p className="text-orange-600 dark:text-orange-400 font-semibold mt-1">
                   Neuer Rekord!
                 </p>
               )}
-              <p className="text-sm text-muted mt-2">
+              <p className="text-sm text-[var(--muted)] mt-2">
                 {totalCorrect}/{totalAnswered} gesamt richtig
               </p>
             </div>
@@ -258,14 +260,14 @@ export default function WortfluessigkeitEndlos() {
 
             <div className="flex items-center justify-center gap-6 text-sm">
               <div className="text-center">
-                <p className="text-2xl font-bold text-foreground">{streak}</p>
-                <p className="text-xs text-muted">Streak</p>
+                <p className="text-2xl font-bold text-[var(--text-primary)]">{streak}</p>
+                <p className="text-xs text-[var(--muted)]">Streak</p>
               </div>
               <div className="text-center">
                 <p className="text-2xl font-bold text-amber-600 dark:text-amber-400">
                   {bestStreak}
                 </p>
-                <p className="text-xs text-muted">Rekord</p>
+                <p className="text-xs text-[var(--muted)]">Rekord</p>
               </div>
             </div>
 
@@ -297,15 +299,15 @@ export default function WortfluessigkeitEndlos() {
             <span className={`text-sm font-bold ${streakColor}`}>{streak}</span>
           </div>
           {streak >= 5 && (
-            <span className="text-xs text-muted flex items-center gap-1">
+            <span className="text-xs text-[var(--muted)] flex items-center gap-1">
               <Zap className="w-3 h-3" />
               {streak >= 20 ? "UNAUFHALTBAR!" : streak >= 10 ? "On Fire!" : "Streak!"}
             </span>
           )}
         </div>
         <div className="flex items-center gap-3">
-          <span className="text-sm text-muted">{totalCorrect} gel&ouml;st</span>
-          <div className="flex items-center gap-1 text-xs text-muted">
+          <span className="text-sm text-[var(--muted)]">{totalCorrect} gel&ouml;st</span>
+          <div className="flex items-center gap-1 text-xs text-[var(--muted)]">
             <Trophy className="w-3.5 h-3.5 text-amber-500" />
             {bestStreak}
           </div>

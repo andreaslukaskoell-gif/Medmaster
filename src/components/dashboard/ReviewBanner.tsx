@@ -10,15 +10,15 @@ export function ReviewBanner() {
   if (dueCount === 0) return null;
   return (
     <Link to="/bms?filter=due">
-      <div className="rounded-xl border border-primary-200 dark:border-primary-800 bg-primary-50/60 dark:bg-primary-900/20 p-4 flex items-center gap-4 hover:shadow-md transition-shadow cursor-pointer">
-        <div className="w-12 h-12 rounded-xl bg-primary-100 dark:bg-primary-900/40 flex items-center justify-center shrink-0">
-          <BookOpen className="w-6 h-6 text-primary-600 dark:text-primary-400" />
+      <div className="rounded-xl border border-[var(--border)] bg-[var(--card)] p-4 flex items-center gap-4 hover:shadow-md transition-shadow cursor-pointer">
+        <div className="w-12 h-12 rounded-xl bg-[var(--accent)]/10 flex items-center justify-center shrink-0">
+          <BookOpen className="w-6 h-6 text-[var(--accent)]" />
         </div>
         <div className="min-w-0 flex-1">
-          <p className="font-semibold text-primary-900 dark:text-primary-100">
+          <p className="font-semibold text-[var(--text-primary)]">
             Du hast {dueCount} {dueCount === 1 ? "Thema" : "Themen"} zum Wiederholen!
           </p>
-          <p className="text-sm text-primary-700 dark:text-primary-300">
+          <p className="text-sm text-[var(--text-secondary)]">
             Klicken, um fällige Kapitel anzuzeigen
           </p>
         </div>

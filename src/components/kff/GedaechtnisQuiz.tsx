@@ -163,7 +163,7 @@ export function GedaechtnisSetup({ onLearn, onBack }: { onLearn: () => void; onB
       <h1 className="text-2xl font-bold text-[var(--text-primary)]">
         Gedächtnis & Merkfähigkeit (Allergiepässe)
       </h1>
-      <p className="text-sm text-muted">
+      <p className="text-sm text-[var(--muted)]">
         Lernphase: Allergieausweise einprägen. Prüfphase: Fragen A–E. E = „Keine der
         Antwortmöglichkeiten ist richtig."
       </p>
@@ -173,7 +173,7 @@ export function GedaechtnisSetup({ onLearn, onBack }: { onLearn: () => void; onB
       <Card>
         <CardHeader>
           <CardTitle className="text-lg">🧠 Training</CardTitle>
-          <p className="text-sm text-muted">
+          <p className="text-sm text-[var(--muted)]">
             Trainingsaufgaben aus der Datenbank (8 Pässe + bis zu 25 Fragen) oder lokal generiert.
           </p>
         </CardHeader>
@@ -199,7 +199,7 @@ export function GedaechtnisSetup({ onLearn, onBack }: { onLearn: () => void; onB
                   onClick={() => setPassCount(n)}
                   className={`px-4 py-2 rounded-lg border text-sm font-medium transition-colors cursor-pointer ${
                     passCount === n
-                      ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300"
+                      ? "border-[var(--accent)] bg-[var(--accent)]/10 text-[var(--accent)]"
                       : "border-[var(--border)] hover:bg-[var(--border)]/50"
                   }`}
                 >
@@ -242,7 +242,7 @@ export function GedaechtnisLearn({ onStart, onBack }: { onStart: () => void; onB
           <Badge variant="warning">Lernphase – präge dir alles ein!</Badge>
           {!started ? (
             <div className="flex items-center gap-2">
-              <span className="text-sm text-muted">Zeit:</span>
+              <span className="text-sm text-[var(--muted)]">Zeit:</span>
               {[3, 4, 5, 6, 7, 8].map((min) => (
                 <button
                   key={min}
@@ -252,8 +252,8 @@ export function GedaechtnisLearn({ onStart, onBack }: { onStart: () => void; onB
                   }}
                   className={`px-2 py-1 rounded text-sm ${
                     learnMinutes === min
-                      ? "bg-primary-100 dark:bg-primary-900/30 text-primary-800 dark:text-primary-200"
-                      : "bg-[var(--border)]/50 text-muted"
+                      ? "bg-[var(--accent)]/10 text-[var(--accent)]"
+                      : "bg-[var(--border)]/50 text-[var(--muted)]"
                   }`}
                 >
                   {min} min
@@ -271,7 +271,7 @@ export function GedaechtnisLearn({ onStart, onBack }: { onStart: () => void; onB
         </div>
       </div>
       <h1 className="text-2xl font-bold text-[var(--text-primary)]">Allergieausweise</h1>
-      <p className="text-sm text-muted">
+      <p className="text-sm text-[var(--muted)]">
         Präge dir die folgenden Ausweise ein. In der Prüfphase sind sie nicht mehr sichtbar.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
@@ -372,7 +372,9 @@ export function GedaechtnisQuiz({ onBack }: { onBack: () => void }) {
         <Button variant="ghost" size="sm" onClick={onBack}>
           <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
         </Button>
-        <p className="text-muted">Keine Fragen verfügbar. Bitte starte zuerst die Lernphase.</p>
+        <p className="text-[var(--muted)]">
+          Keine Fragen verfügbar. Bitte starte zuerst die Lernphase.
+        </p>
       </div>
     );
   }
@@ -386,10 +388,10 @@ export function GedaechtnisQuiz({ onBack }: { onBack: () => void }) {
         </Button>
         <Card>
           <CardContent className="p-6 text-center">
-            <div className="text-4xl font-bold text-primary-700 dark:text-primary-400">
+            <div className="text-4xl font-bold text-[var(--accent)]">
               {score}/{questions.length}
             </div>
-            <p className="text-muted mt-1">
+            <p className="text-[var(--muted)] mt-1">
               {Math.round((score / questions.length) * 100)}% richtig
             </p>
             <p className="text-sm text-green-600 dark:text-green-400 mt-1">+{score * 10} XP</p>
@@ -439,7 +441,7 @@ export function GedaechtnisQuiz({ onBack }: { onBack: () => void }) {
         <Button variant="ghost" size="sm" onClick={onBack}>
           <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
         </Button>
-        <p className="text-muted">Frage nicht gefunden.</p>
+        <p className="text-[var(--muted)]">Frage nicht gefunden.</p>
       </div>
     );
   }
@@ -462,13 +464,13 @@ export function GedaechtnisQuiz({ onBack }: { onBack: () => void }) {
       </div>
       <div className="w-full bg-[var(--border)] rounded-full h-2">
         <div
-          className="bg-primary-600 h-2 rounded-full transition-all"
+          className="bg-[var(--accent)] h-2 rounded-full transition-all"
           style={{ width: `${((index + 1) / questions.length) * 100}%` }}
         />
       </div>
       <Card>
         <CardContent className="p-6">
-          <p className="text-sm text-muted mb-1">
+          <p className="text-sm text-[var(--muted)] mb-1">
             Frage {index + 1} von {questions.length}
           </p>
           {q.photoUrl && (
@@ -502,13 +504,13 @@ export function GedaechtnisQuiz({ onBack }: { onBack: () => void }) {
                 onClick={() => setAnswers((p) => ({ ...p, [q.id]: oi }))}
                 className={`w-full text-left px-4 py-3 rounded-lg border text-sm transition-colors cursor-pointer flex items-center gap-2 ${
                   answers[q.id] === oi
-                    ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300"
+                    ? "border-[var(--accent)] bg-[var(--accent)]/10 text-[var(--accent)]"
                     : "border-[var(--border)] hover:bg-[var(--border)]/50"
                 }`}
               >
                 <span className="font-semibold shrink-0">{String.fromCharCode(65 + oi)})</span>
                 {opt}
-                <kbd className="ml-auto text-[10px] bg-[var(--border)] px-1.5 py-0.5 rounded text-muted">
+                <kbd className="ml-auto text-[10px] bg-[var(--border)] px-1.5 py-0.5 rounded text-[var(--muted)]">
                   {oi + 1}
                 </kbd>
               </button>

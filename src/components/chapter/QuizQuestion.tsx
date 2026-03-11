@@ -105,7 +105,7 @@ export function QuizQuestion({ question, questionNumber, onAnswerChange }: QuizQ
                 type="button"
                 onClick={() => handleSelectAnswer(oi)}
                 disabled={isAnswered}
-                className={`w-full min-w-0 text-left px-4 py-3 rounded-xl border-2 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500/50
+                className={`w-full min-w-0 text-left px-4 py-3 rounded-xl border-2 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/50
                   ${
                     showAsCorrect
                       ? "bg-green-500/20 border-green-500 text-green-900 dark:text-green-100 font-medium shadow-[0_0_12px_rgba(34,197,94,0.25)]"
@@ -230,7 +230,7 @@ export function QuizQuestion({ question, questionNumber, onAnswerChange }: QuizQ
                             onClick={handleSecondTry}
                             whileTap={{ scale: 0.97 }}
                             whileHover={{ scale: 1.02 }}
-                            className="inline-flex items-center gap-2 px-3 py-1.5 text-sm font-medium rounded-md border border-emerald-300 dark:border-emerald-700 text-emerald-800 dark:text-emerald-200 hover:bg-emerald-50 dark:hover:bg-emerald-900/20"
+                            className="inline-flex items-center gap-2 px-3 py-1.5 text-sm font-medium rounded-md border border-[var(--border)] text-[var(--text-primary)] hover:bg-[var(--border)]/30"
                           >
                             <RotateCcw className="w-4 h-4" />
                             Wiederholen
@@ -243,7 +243,7 @@ export function QuizQuestion({ question, questionNumber, onAnswerChange }: QuizQ
                             whileTap={{ scale: 0.97 }}
                             whileHover={{ scale: 1.02 }}
                             transition={{ type: "spring", stiffness: 400, damping: 20 }}
-                            className="inline-flex items-center gap-2 px-3 py-1.5 text-sm font-medium rounded-md border border-amber-300 dark:border-amber-700 text-amber-800 dark:text-amber-200 hover:bg-amber-50 dark:hover:bg-amber-900/20 focus:outline-none focus:ring-2 focus:ring-amber-400/50 focus:ring-offset-2 dark:focus:ring-offset-[var(--card)] active:ring-2 active:ring-amber-400/60 active:shadow-[0_0_12px_rgba(251,191,36,0.25)]"
+                            className="inline-flex items-center gap-2 px-3 py-1.5 text-sm font-medium rounded-md border border-[var(--accent)]/30 text-[var(--accent)] hover:bg-[var(--accent)]/5 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/30 focus:ring-offset-2 dark:focus:ring-offset-[var(--card)]"
                           >
                             <Lightbulb className="w-4 h-4" />
                             {hintIndex === 0 ? "Mit Tipp lösen" : "Weiterer Tipp"}
@@ -259,7 +259,7 @@ export function QuizQuestion({ question, questionNumber, onAnswerChange }: QuizQ
                             whileTap={{ scale: 0.97 }}
                             whileHover={{ scale: 1.02 }}
                             transition={{ type: "spring", stiffness: 400, damping: 20 }}
-                            className="inline-flex items-center gap-2 px-3 py-1.5 text-sm font-medium rounded-md border border-[var(--border)] bg-transparent hover:bg-[var(--border)]/50 text-[var(--text-primary)] focus:outline-none focus:ring-2 focus:ring-primary-400/50 focus:ring-offset-2 dark:focus:ring-offset-[var(--card)] active:ring-2 active:ring-primary-400/60 active:shadow-[0_0_12px_rgba(0,122,255,0.2)]"
+                            className="inline-flex items-center gap-2 px-3 py-1.5 text-sm font-medium rounded-md border border-[var(--border)] bg-transparent hover:bg-[var(--border)]/50 text-[var(--text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/50 focus:ring-offset-2 dark:focus:ring-offset-[var(--card)] active:ring-2 active:ring-[var(--accent)]/60 active:shadow-[0_0_12px_rgba(0,122,255,0.2)]"
                           >
                             <BookOpen className="w-4 h-4" />
                             Lösung anzeigen

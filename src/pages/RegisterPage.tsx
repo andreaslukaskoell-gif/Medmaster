@@ -67,22 +67,22 @@ export default function RegisterPage() {
 
   if (googleLoading) {
     return (
-      <div className="min-h-screen bg-background flex items-center justify-center p-4">
+      <div className="min-h-screen bg-[var(--background)] flex items-center justify-center p-4">
         <div className="text-center space-y-4">
-          <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-primary-600 mx-auto" />
+          <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-[var(--accent)] mx-auto" />
           <p className="text-sm font-medium text-muted-foreground">Weiterleitung zu Google...</p>
-          <p className="text-xs text-muted">Du wirst sicher über Google angemeldet</p>
+          <p className="text-xs text-[var(--muted)]">Du wirst sicher über Google angemeldet</p>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-background flex items-center justify-center p-4">
+    <div className="min-h-screen bg-[var(--background)] flex items-center justify-center p-4">
       <div className="w-full max-w-md space-y-6">
         <div className="text-center">
-          <h1 className="text-3xl font-bold text-primary-700 dark:text-primary-400">MedMaster</h1>
-          <p className="text-muted mt-2">Erstelle dein kostenloses Konto</p>
+          <h1 className="text-3xl font-bold text-[var(--accent)]/60">MedMaster</h1>
+          <p className="text-[var(--muted)] mt-2">Erstelle dein kostenloses Konto</p>
           <p className="text-xs text-emerald-600 dark:text-emerald-400 font-medium mt-1">
             Komplett gratis bis 31. März 2026
           </p>
@@ -120,17 +120,19 @@ export default function RegisterPage() {
               <ArrowRight className="w-4 h-4 ml-2" />
             </Button>
 
-            <p className="text-center text-xs text-muted">
+            <p className="text-center text-xs text-[var(--muted)]">
               Schnellste Option — 1 Klick, kein Passwort nötig
             </p>
 
             {/* Divider */}
             <div className="relative">
               <div className="absolute inset-0 flex items-center">
-                <div className="w-full border-t border-border" />
+                <div className="w-full border-t border-[var(--border)]" />
               </div>
               <div className="relative flex justify-center text-xs">
-                <span className="bg-card dark:bg-gray-900 px-2 text-muted">oder</span>
+                <span className="bg-[var(--card)] dark:bg-gray-900 px-2 text-[var(--muted)]">
+                  oder
+                </span>
               </div>
             </div>
 
@@ -139,7 +141,7 @@ export default function RegisterPage() {
               <button
                 type="button"
                 onClick={() => setShowEmailForm(true)}
-                className="w-full text-sm text-primary-600 dark:text-primary-400 font-medium hover:underline py-2"
+                className="w-full text-sm text-[var(--accent)]/60 font-medium hover:underline py-2"
               >
                 Mit E-Mail & Passwort registrieren
               </button>
@@ -150,7 +152,7 @@ export default function RegisterPage() {
                     Username
                   </label>
                   <div className="relative">
-                    <User className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted" />
+                    <User className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[var(--muted)]" />
                     <input
                       type="text"
                       value={username}
@@ -158,7 +160,7 @@ export default function RegisterPage() {
                       placeholder="DeinUsername"
                       required
                       autoFocus
-                      className="w-full pl-10 pr-4 py-2.5 rounded-lg border border-border bg-card text-gray-900 dark:text-gray-100 text-sm outline-none focus:ring-2 focus:ring-primary-500"
+                      className="w-full pl-10 pr-4 py-2.5 rounded-lg border border-[var(--border)] bg-[var(--card)] text-gray-900 dark:text-gray-100 text-sm outline-none focus:ring-2 focus:ring-[var(--accent)]"
                     />
                   </div>
                 </div>
@@ -168,14 +170,14 @@ export default function RegisterPage() {
                     E-Mail
                   </label>
                   <div className="relative">
-                    <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted" />
+                    <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[var(--muted)]" />
                     <input
                       type="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="deine@email.at"
                       required
-                      className="w-full pl-10 pr-4 py-2.5 rounded-lg border border-border bg-card text-gray-900 dark:text-gray-100 text-sm outline-none focus:ring-2 focus:ring-primary-500"
+                      className="w-full pl-10 pr-4 py-2.5 rounded-lg border border-[var(--border)] bg-[var(--card)] text-gray-900 dark:text-gray-100 text-sm outline-none focus:ring-2 focus:ring-[var(--accent)]"
                     />
                   </div>
                 </div>
@@ -185,19 +187,19 @@ export default function RegisterPage() {
                     Passwort
                   </label>
                   <div className="relative">
-                    <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted" />
+                    <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[var(--muted)]" />
                     <input
                       type={showPassword ? "text" : "password"}
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
                       placeholder="Mindestens 6 Zeichen"
                       required
-                      className="w-full pl-10 pr-10 py-2.5 rounded-lg border border-border bg-card text-gray-900 dark:text-gray-100 text-sm outline-none focus:ring-2 focus:ring-primary-500"
+                      className="w-full pl-10 pr-10 py-2.5 rounded-lg border border-[var(--border)] bg-[var(--card)] text-gray-900 dark:text-gray-100 text-sm outline-none focus:ring-2 focus:ring-[var(--accent)]"
                     />
                     <button
                       type="button"
                       onClick={() => setShowPassword(!showPassword)}
-                      className="absolute right-3 top-1/2 -translate-y-1/2 text-muted hover:text-gray-700 dark:hover:text-gray-300"
+                      className="absolute right-3 top-1/2 -translate-y-1/2 text-[var(--muted)] hover:text-gray-700 dark:hover:text-gray-300"
                     >
                       {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
                     </button>
@@ -209,13 +211,13 @@ export default function RegisterPage() {
                     Geburtsdatum
                   </label>
                   <div className="relative">
-                    <Calendar className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted" />
+                    <Calendar className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[var(--muted)]" />
                     <input
                       type="date"
                       value={birthDate}
                       onChange={(e) => setBirthDate(e.target.value)}
                       required
-                      className="w-full pl-10 pr-4 py-2.5 rounded-lg border border-border bg-card text-gray-900 dark:text-gray-100 text-sm outline-none focus:ring-2 focus:ring-primary-500"
+                      className="w-full pl-10 pr-4 py-2.5 rounded-lg border border-[var(--border)] bg-[var(--card)] text-gray-900 dark:text-gray-100 text-sm outline-none focus:ring-2 focus:ring-[var(--accent)]"
                     />
                   </div>
                 </div>
@@ -225,7 +227,7 @@ export default function RegisterPage() {
                     type="checkbox"
                     checked={acceptedAgb}
                     onChange={(e) => setAcceptedAgb(e.target.checked)}
-                    className="mt-1 w-4 h-4 rounded border-gray-300 text-primary-600 focus:ring-primary-500"
+                    className="mt-1 w-4 h-4 rounded border-gray-300 text-[var(--accent)] focus:ring-[var(--accent)]"
                   />
                   <span className="text-sm text-gray-600 dark:text-gray-400">
                     Ich akzeptiere die{" "}
@@ -233,7 +235,7 @@ export default function RegisterPage() {
                       to="/agb"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-primary-600 dark:text-primary-400 font-medium hover:underline"
+                      className="text-[var(--accent)]/60 font-medium hover:underline"
                     >
                       AGB
                     </Link>{" "}
@@ -242,7 +244,7 @@ export default function RegisterPage() {
                       to="/datenschutz"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-primary-600 dark:text-primary-400 font-medium hover:underline"
+                      className="text-[var(--accent)]/60 font-medium hover:underline"
                     >
                       Datenschutzerklärung
                     </Link>
@@ -256,12 +258,9 @@ export default function RegisterPage() {
               </form>
             )}
 
-            <p className="text-center text-sm text-muted">
+            <p className="text-center text-sm text-[var(--muted)]">
               Bereits ein Konto?{" "}
-              <Link
-                to="/login"
-                className="text-primary-600 dark:text-primary-400 font-medium hover:underline"
-              >
+              <Link to="/login" className="text-[var(--accent)]/60 font-medium hover:underline">
                 Anmelden
               </Link>
             </p>

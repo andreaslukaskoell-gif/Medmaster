@@ -60,27 +60,27 @@ export function TableOfContents({ sections }: Props) {
   const numbered = buildNumberedList(sections);
 
   return (
-    <nav className="rounded-xl border border-primary-200 dark:border-primary-800 bg-primary-50/50 dark:bg-primary-900/10 overflow-hidden">
+    <nav className="rounded-xl border border-[var(--accent)]/20 dark:border-[var(--accent)] bg-[var(--accent)]/5/50 dark:bg-[var(--accent)]/10 overflow-hidden">
       {/* Mobile toggle */}
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="w-full flex items-center justify-between p-3 md:hidden cursor-pointer"
       >
-        <span className="text-sm font-semibold text-primary-700 dark:text-primary-400 flex items-center gap-2">
+        <span className="text-sm font-semibold text-[var(--accent)] dark:text-[var(--accent)]/60 flex items-center gap-2">
           <List className="w-4 h-4" />
           Inhaltsverzeichnis
         </span>
         {isOpen ? (
-          <ChevronUp className="w-4 h-4 text-primary-600 dark:text-primary-400" />
+          <ChevronUp className="w-4 h-4 text-[var(--accent)] dark:text-[var(--accent)]/60" />
         ) : (
-          <ChevronDown className="w-4 h-4 text-primary-600 dark:text-primary-400" />
+          <ChevronDown className="w-4 h-4 text-[var(--accent)] dark:text-[var(--accent)]/60" />
         )}
       </button>
 
       {/* Desktop header (always visible) */}
       <div className="hidden md:flex items-center gap-2 p-3 pb-0">
-        <List className="w-4 h-4 text-primary-600 dark:text-primary-400" />
-        <span className="text-sm font-semibold text-primary-700 dark:text-primary-400">
+        <List className="w-4 h-4 text-[var(--accent)] dark:text-[var(--accent)]/60" />
+        <span className="text-sm font-semibold text-[var(--accent)] dark:text-[var(--accent)]/60">
           Inhaltsverzeichnis
         </span>
       </div>
@@ -95,11 +95,11 @@ export function TableOfContents({ sections }: Props) {
                 level === 3 ? "pl-7" : ""
               } ${
                 activeId === id
-                  ? "text-primary-700 dark:text-primary-300 font-bold bg-primary-100 dark:bg-primary-900/30"
-                  : "text-muted-foreground hover:text-primary-700 dark:hover:text-primary-300 hover:bg-primary-50 dark:hover:bg-primary-900/20"
+                  ? "text-[var(--accent)] dark:text-[var(--accent)]/30 font-bold bg-[var(--accent)]/10 dark:bg-[var(--accent)]/30"
+                  : "text-[var(--muted)] hover:text-[var(--accent)] dark:hover:text-[var(--accent)]/30 hover:bg-[var(--accent)]/5 dark:hover:bg-[var(--accent)]/20"
               }`}
             >
-              <span className="text-primary-500 dark:text-primary-500 mr-1.5">{label}</span>
+              <span className="text-[var(--accent)] dark:text-[var(--accent)] mr-1.5">{label}</span>
               {title}
             </button>
           </li>

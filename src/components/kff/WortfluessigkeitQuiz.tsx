@@ -196,19 +196,19 @@ export function WortflüssigkeitQuiz({
           <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
         </Button>
         <h1 className="text-2xl font-bold text-[var(--text-primary)]">Wortflüssigkeit</h1>
-        <p className="text-sm text-muted">
+        <p className="text-sm text-[var(--muted)]">
           Die Buchstaben eines Wortes wurden vertauscht. Finde heraus, mit welchem Buchstaben das
           Wort beginnt (oder ob keine der Antworten passt)!
         </p>
         <UebungsbeschreibungCard id="kff-wortfluessigkeit" collapsible defaultCollapsed />
         <OfficialInstructionCard instruction={OFFICIAL_WF_INSTRUCTION} />
 
-        <Card className="border-primary-200 dark:border-primary-800/50 bg-primary-50/50 dark:bg-primary-950/20">
+        <Card className="border-[var(--accent)]/30 bg-[var(--accent)]/5">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-lg">
               <Timer className="w-5 h-5" /> Prüfungsmodus
             </CardTitle>
-            <p className="text-sm text-muted">
+            <p className="text-sm text-[var(--muted)]">
               {EXAM_CONFIG.wortfluessigkeit.questions} Aufgaben ·{" "}
               {EXAM_CONFIG.wortfluessigkeit.timeSeconds / 60} Minuten — wie im echten MedAT.
             </p>
@@ -289,7 +289,7 @@ export function WortflüssigkeitQuiz({
         <Card>
           <CardHeader>
             <CardTitle className="text-lg">🧪 Training</CardTitle>
-            <p className="text-sm text-muted">
+            <p className="text-sm text-[var(--muted)]">
               Aufgaben aus der Datenbank – verschiedene Wörter, gleiche Regel.
             </p>
             <p className="mt-1">
@@ -308,7 +308,7 @@ export function WortflüssigkeitQuiz({
                     onClick={() => setQuestionCount(c)}
                     className={`flex-1 px-4 py-3 rounded-lg border text-sm font-medium transition-colors cursor-pointer ${
                       questionCount === c
-                        ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300"
+                        ? "border-[var(--accent)] bg-[var(--accent)]/10 text-[var(--accent)]"
                         : "border-[var(--border)] hover:bg-[var(--border)]/50"
                     }`}
                   >
@@ -320,7 +320,7 @@ export function WortflüssigkeitQuiz({
             <Button className="w-full" size="lg" onClick={startTraining} disabled={trainingLoading}>
               {trainingLoading ? (
                 <>
-                  <span className="animate-spin mr-2 inline-block w-5 h-5 border-2 border-primary-500 border-t-transparent rounded-full" />
+                  <span className="animate-spin mr-2 inline-block w-5 h-5 border-2 border-[var(--accent)] border-t-transparent rounded-full" />
                   Wird geladen…
                 </>
               ) : (
@@ -350,10 +350,10 @@ export function WortflüssigkeitQuiz({
         </Button>
         <Card>
           <CardContent className="p-6 text-center">
-            <div className="text-4xl font-bold text-primary-700 dark:text-primary-400">
+            <div className="text-4xl font-bold text-[var(--accent)]">
               {score}/{safeQuestions.length}
             </div>
-            <p className="text-muted mt-1">
+            <p className="text-[var(--muted)] mt-1">
               {safeQuestions.length ? Math.round((score / safeQuestions.length) * 100) : 0}% richtig
             </p>
             <p className="text-sm text-green-600 dark:text-green-400 mt-1">+{score * 10} XP</p>
@@ -380,7 +380,9 @@ export function WortflüssigkeitQuiz({
                     Geprüfte Trainingsaufgabe (MedAT-Logik)
                   </Badge>
                 </div>
-                {qu.source && <p className="text-xs text-muted mb-2">Quelle: {qu.source}</p>}
+                {qu.source && (
+                  <p className="text-xs text-[var(--muted)] mb-2">Quelle: {qu.source}</p>
+                )}
                 {!correct && answers[id] !== undefined && (
                   <p className="text-sm text-red-600 dark:text-red-400 ml-7">
                     Deine Antwort: {answers[id] === "-" ? "Keine passt" : answers[id]}
@@ -391,8 +393,8 @@ export function WortflüssigkeitQuiz({
                   {qu.correctIndex < 4 && ` (beginnt mit ${qu.options[qu.correctIndex]})`}
                   {qu.correctIndex === 4 && " (keine der Antworten war richtig)"}
                 </p>
-                <div className="ml-7 mt-2 bg-blue-50 dark:bg-blue-900/20 p-3 rounded-lg">
-                  <p className="text-xs text-blue-700 dark:text-blue-400">
+                <div className="ml-7 mt-2 bg-[var(--surface)] p-3 rounded-lg">
+                  <p className="text-xs text-[var(--muted)]">
                     {stripMarkdownAsterisks(qu.explanation)}
                   </p>
                 </div>
@@ -427,7 +429,7 @@ export function WortflüssigkeitQuiz({
         {isTrainingEmpty ? (
           <Card>
             <CardContent className="p-6 text-center space-y-4">
-              <p className="text-muted">
+              <p className="text-[var(--muted)]">
                 Es konnten keine Trainingsaufgaben geladen werden. Der Aufgaben-Pool ist
                 möglicherweise noch nicht gefüllt oder es gab einen Verbindungsfehler.
               </p>
@@ -437,8 +439,8 @@ export function WortflüssigkeitQuiz({
             </CardContent>
           </Card>
         ) : (
-          <div className="flex flex-col items-center justify-center gap-4 text-muted">
-            <div className="animate-spin w-8 h-8 border-2 border-primary-500 border-t-transparent rounded-full" />
+          <div className="flex flex-col items-center justify-center gap-4 text-[var(--muted)]">
+            <div className="animate-spin w-8 h-8 border-2 border-[var(--accent)] border-t-transparent rounded-full" />
             <p>Wörter werden geladen...</p>
           </div>
         )}
@@ -465,14 +467,14 @@ export function WortflüssigkeitQuiz({
               Prüfungsmodus
             </Badge>
           )}
-          <span className="text-sm text-muted">
+          <span className="text-sm text-[var(--muted)]">
             Wort {index + 1} von {safeQuestions.length}
           </span>
         </div>
       </div>
       <div className="w-full bg-[var(--border)] rounded-full h-2">
         <div
-          className="bg-primary-600 h-2 rounded-full transition-all"
+          className="bg-[var(--accent)] h-2 rounded-full transition-all"
           style={{ width: `${((index + 1) / safeQuestions.length) * 100}%` }}
         />
       </div>
@@ -481,8 +483,10 @@ export function WortflüssigkeitQuiz({
           <Badge variant="info" className="mb-2">
             Geprüfte Trainingsaufgabe (MedAT-Logik)
           </Badge>
-          {currentQ.source && <p className="text-xs text-muted mb-3">Quelle: {currentQ.source}</p>}
-          <p className="text-sm text-muted mb-4">
+          {currentQ.source && (
+            <p className="text-xs text-[var(--muted)] mb-3">Quelle: {currentQ.source}</p>
+          )}
+          <p className="text-sm text-[var(--muted)] mb-4">
             Mit welchem Buchstaben beginnt dieses Wort? (oder: Keine passt)
           </p>
           <div className="flex flex-wrap gap-1.5 justify-center my-2 mb-8">
@@ -502,13 +506,13 @@ export function WortflüssigkeitQuiz({
                 onClick={() => setAnswers((p) => ({ ...p, [taskId]: opt }))}
                 className={`w-full text-left px-4 py-3 rounded-lg border text-sm transition-colors cursor-pointer ${
                   answers[taskId] === opt
-                    ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300"
+                    ? "border-[var(--accent)] bg-[var(--accent)]/10 text-[var(--accent)]"
                     : "border-[var(--border)] hover:bg-[var(--border)]/50"
                 }`}
               >
                 <span className="font-semibold mr-2">({String.fromCharCode(65 + li)})</span>
                 {opt === "-" ? "Keine der Antworten ist richtig" : `Anfangsbuchstabe: ${opt}`}
-                <kbd className="float-right text-[10px] bg-[var(--border)] px-1.5 py-0.5 rounded text-muted">
+                <kbd className="float-right text-[10px] bg-[var(--border)] px-1.5 py-0.5 rounded text-[var(--muted)]">
                   {li + 1}
                 </kbd>
               </button>

@@ -33,7 +33,7 @@ export function FirstTimeKffIntro({ strategyKey, onContinue, onBack }: Props) {
         <ArrowLeft className="w-4 h-4 mr-1" /> Zurück zur Übersicht
       </Button>
 
-      <p className="text-sm text-muted">
+      <p className="text-sm text-[var(--muted)]">
         Beim ersten Mal erklären wir dir hier den Ablauf und die besten Lösungsstrategien für diesen
         Untertest.
       </p>

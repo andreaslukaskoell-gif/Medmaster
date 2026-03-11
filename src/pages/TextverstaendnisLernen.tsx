@@ -46,7 +46,7 @@ function Seite1() {
         <h2 className="text-xl font-bold text-[var(--text-primary)] mb-2">
           Was ist Textverst&auml;ndnis?
         </h2>
-        <p className="text-sm text-muted">
+        <p className="text-sm text-[var(--muted)]">
           Im Untertest &quot;Textverst&auml;ndnis&quot; (TV) des MedAT bekommst du einen
           wissenschaftlichen Text mit ca. 500-800 W&ouml;rtern. Anschlie&szlig;end beantwortest du
           4-6 Multiple-Choice-Fragen dazu. Der TV-Teil macht 10% der MedAT-Gesamtpunktzahl aus.
@@ -103,7 +103,7 @@ function Seite1() {
               <Search className="w-4 h-4 text-indigo-500" />
               <h4 className="font-semibold text-sm text-[var(--text-primary)]">Detailfragen</h4>
             </div>
-            <p className="text-xs text-muted mb-2">Fakten direkt aus dem Text</p>
+            <p className="text-xs text-[var(--muted)] mb-2">Fakten direkt aus dem Text</p>
             <p className="text-xs text-indigo-600 dark:text-indigo-400 italic">
               &quot;Laut dem Text, welche Funktion hat...?&quot;
             </p>
@@ -115,7 +115,7 @@ function Seite1() {
                 Verst&auml;ndnisfragen
               </h4>
             </div>
-            <p className="text-xs text-muted mb-2">Schlussfolgerungen aus dem Text</p>
+            <p className="text-xs text-[var(--muted)] mb-2">Schlussfolgerungen aus dem Text</p>
             <p className="text-xs text-indigo-600 dark:text-indigo-400 italic">
               &quot;Was kann aus dem Text geschlossen werden?&quot;
             </p>
@@ -139,7 +139,7 @@ function Seite2() {
         <h2 className="text-xl font-bold text-[var(--text-primary)] mb-2">
           Die Schema-Methode (4 Schritte)
         </h2>
-        <p className="text-sm text-muted">
+        <p className="text-sm text-[var(--muted)]">
           Mit dieser bew&auml;hrten Methode bearbeitest du jeden TV-Text systematisch und effizient.
         </p>
       </div>
@@ -154,7 +154,7 @@ function Seite2() {
             Text &uuml;berfliegen (30 Sekunden)
           </h3>
         </div>
-        <p className="text-sm text-muted pl-11">
+        <p className="text-sm text-[var(--muted)] pl-11">
           Lies den Text NICHT sofort im Detail! Verschaffe dir zuerst einen &Uuml;berblick:
         </p>
         <div className="pl-11 grid grid-cols-1 sm:grid-cols-3 gap-2">
@@ -173,7 +173,7 @@ function Seite2() {
             >
               <Icon className="w-4 h-4 text-indigo-500 mx-auto mb-1" />
               <p className="text-xs font-semibold text-indigo-700 dark:text-indigo-400">{label}</p>
-              <p className="text-[10px] text-muted mt-0.5">{desc}</p>
+              <p className="text-[10px] text-[var(--muted)] mt-0.5">{desc}</p>
             </div>
           ))}
         </div>
@@ -187,7 +187,7 @@ function Seite2() {
           </span>
           <h3 className="font-semibold text-[var(--text-primary)]">Fragen ZUERST lesen</h3>
         </div>
-        <p className="text-sm text-muted pl-11">
+        <p className="text-sm text-[var(--muted)] pl-11">
           Lies die Fragen <span className="font-bold">bevor</span> du den Text im Detail liest. So
           wei&szlig;t du, wonach du suchen musst, und liest den Text viel gezielter.
         </p>
@@ -208,7 +208,7 @@ function Seite2() {
           </span>
           <h3 className="font-semibold text-[var(--text-primary)]">Text gezielt lesen</h3>
         </div>
-        <p className="text-sm text-muted pl-11">
+        <p className="text-sm text-[var(--muted)] pl-11">
           Jetzt liest du den Text gr&uuml;ndlich — aber mit Fokus auf die Fragen. Markiere mental
           die Stellen, die f&uuml;r die Fragen relevant sein k&ouml;nnten.
         </p>
@@ -235,7 +235,7 @@ function Seite2() {
             Fragen beantworten — NUR aus dem Text!
           </h3>
         </div>
-        <p className="text-sm text-muted pl-11">
+        <p className="text-sm text-[var(--muted)] pl-11">
           Beantworte jede Frage <span className="font-bold">ausschlie&szlig;lich</span> auf Basis
           des Textes. Dein Vorwissen kann dir Fallen stellen!
         </p>
@@ -262,7 +262,7 @@ function Seite3() {
         <h2 className="text-xl font-bold text-[var(--text-primary)] mb-2">
           Typische Fallen & Zeitmanagement
         </h2>
-        <p className="text-sm text-muted">
+        <p className="text-sm text-[var(--muted)]">
           Diese h&auml;ufigen Fehler kosten Punkte — erkenne und vermeide sie!
         </p>
       </div>
@@ -275,7 +275,7 @@ function Seite3() {
             Falle 1: &quot;Laut Text&quot; vs. &quot;Im Allgemeinen&quot;
           </h3>
         </div>
-        <p className="text-sm text-muted pl-8">
+        <p className="text-sm text-[var(--muted)] pl-8">
           Wenn eine Frage mit &quot;Laut dem Text...&quot; beginnt, z&auml;hlt NUR was im Text
           steht. Auch wenn eine Antwortoption allgemein korrekt w&auml;re — wenn sie nicht im Text
           erw&auml;hnt wird, ist sie falsch!
@@ -283,13 +283,13 @@ function Seite3() {
         <div className="pl-8 grid grid-cols-2 gap-3">
           <div className="bg-red-50 dark:bg-red-900/15 rounded-lg p-3 text-center">
             <p className="text-xs font-bold text-red-600 dark:text-red-400 mb-1">FALSCH</p>
-            <p className="text-xs text-muted">
+            <p className="text-xs text-[var(--muted)]">
               &quot;Das wei&szlig; ich aus dem Bio-Unterricht&quot;
             </p>
           </div>
           <div className="bg-green-50 dark:bg-green-900/15 rounded-lg p-3 text-center">
             <p className="text-xs font-bold text-green-600 dark:text-green-400 mb-1">RICHTIG</p>
-            <p className="text-xs text-muted">&quot;Der Text sagt in Absatz 3...&quot;</p>
+            <p className="text-xs text-[var(--muted)]">&quot;Der Text sagt in Absatz 3...&quot;</p>
           </div>
         </div>
       </div>
@@ -302,7 +302,7 @@ function Seite3() {
             Falle 2: &quot;Nicht im Text erw&auml;hnt&quot;
           </h3>
         </div>
-        <p className="text-sm text-muted pl-8">
+        <p className="text-sm text-[var(--muted)] pl-8">
           Manchmal ist die korrekte Antwort &quot;wurde im Text nicht erw&auml;hnt&quot; oder eine
           Option, die bewusst NICHT im Text steht. Achte auf Negativ-Formulierungen in den Fragen!
         </p>
@@ -314,7 +314,7 @@ function Seite3() {
           <AlertTriangle className="w-5 h-5 text-amber-500" />
           <h3 className="font-semibold text-[var(--text-primary)]">Falle 3: Zu schnelles Lesen</h3>
         </div>
-        <p className="text-sm text-muted pl-8">
+        <p className="text-sm text-[var(--muted)] pl-8">
           Manche Optionen klingen fast gleich, unterscheiden sich aber in kleinen Details (z.B.
           &quot;alle Zellen&quot; vs. &quot;bestimmte Zellen&quot;). Lies jede Option
           sorgf&auml;ltig!
@@ -339,7 +339,7 @@ function Seite3() {
             <div key={label} className="bg-[var(--card)] rounded-lg p-3 text-center">
               <p className="text-lg font-bold text-indigo-600 dark:text-indigo-400">{time}</p>
               <p className="text-xs font-semibold text-[var(--text-primary)]">{label}</p>
-              <p className="text-[10px] text-muted">{desc}</p>
+              <p className="text-[10px] text-[var(--muted)]">{desc}</p>
             </div>
           ))}
         </div>
@@ -367,7 +367,7 @@ export default function TextverstaendnisLernen() {
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
           <PageIndicator current={currentPage} total={totalPages} />
-          <span className="text-xs text-muted">
+          <span className="text-xs text-[var(--muted)]">
             Seite {currentPage + 1} von {totalPages}
           </span>
         </div>
@@ -379,7 +379,7 @@ export default function TextverstaendnisLernen() {
               className={`text-xs px-3 py-1.5 rounded-full transition-colors cursor-pointer ${
                 i === currentPage
                   ? "bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 font-medium"
-                  : "text-muted hover:bg-[var(--border)]/50"
+                  : "text-[var(--muted)] hover:bg-[var(--border)]/50"
               }`}
             >
               {title}

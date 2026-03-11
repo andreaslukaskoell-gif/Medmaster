@@ -129,7 +129,9 @@ export default function ZahlenfolgenUeben() {
     return (
       <Card>
         <CardContent className="p-8 text-center">
-          <p className="text-muted">Keine Aufgaben f&uuml;r diesen Filter verf&uuml;gbar.</p>
+          <p className="text-[var(--muted)]">
+            Keine Aufgaben f&uuml;r diesen Filter verf&uuml;gbar.
+          </p>
         </CardContent>
       </Card>
     );
@@ -145,7 +147,7 @@ export default function ZahlenfolgenUeben() {
       {/* Top bar: filter + progress */}
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div className="flex items-center gap-2">
-          <Filter className="w-4 h-4 text-muted" />
+          <Filter className="w-4 h-4 text-[var(--muted)]" />
           <div className="flex gap-1">
             <button
               onClick={() => {
@@ -158,7 +160,7 @@ export default function ZahlenfolgenUeben() {
               className={`text-xs px-3 py-1.5 rounded-full transition-colors cursor-pointer ${
                 difficultyFilter === null
                   ? "bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 font-medium"
-                  : "text-muted hover:bg-gray-100 dark:hover:bg-gray-800"
+                  : "text-[var(--muted)] hover:bg-gray-100 dark:hover:bg-gray-800"
               }`}
             >
               Alle
@@ -176,7 +178,7 @@ export default function ZahlenfolgenUeben() {
                 className={`text-xs px-3 py-1.5 rounded-full transition-colors cursor-pointer ${
                   difficultyFilter === d
                     ? `${difficultyLabels[d].bg} ${difficultyLabels[d].color} font-medium`
-                    : "text-muted hover:bg-gray-100 dark:hover:bg-gray-800"
+                    : "text-[var(--muted)] hover:bg-gray-100 dark:hover:bg-gray-800"
                 }`}
               >
                 {difficultyLabels[d].label}
@@ -185,7 +187,7 @@ export default function ZahlenfolgenUeben() {
           </div>
         </div>
         <div className="flex items-center gap-3">
-          <span className="text-sm text-muted">
+          <span className="text-sm text-[var(--muted)]">
             Aufgabe {currentIndex + 1} von {filteredTasks.length} —{" "}
             <span className="font-medium text-green-600 dark:text-green-400">
               {correctCount} richtig
@@ -196,7 +198,7 @@ export default function ZahlenfolgenUeben() {
           </span>
           <button
             onClick={handleReset}
-            className="text-muted hover:text-gray-700 dark:hover:text-gray-300 cursor-pointer"
+            className="text-[var(--muted)] hover:text-gray-700 dark:hover:text-gray-300 cursor-pointer"
             title="Zur&uuml;cksetzen"
           >
             <RotateCcw className="w-4 h-4" />
@@ -231,12 +233,14 @@ export default function ZahlenfolgenUeben() {
                 {patternLabels[currentTask.pattern]}
               </span>
             </div>
-            <span className="text-xs text-muted">{currentTask.id}</span>
+            <span className="text-xs text-[var(--muted)]">{currentTask.id}</span>
           </div>
 
           {/* Number sequence display */}
           <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl">
-            <p className="text-xs text-muted mb-3 text-center">Finde die fehlenden Werte:</p>
+            <p className="text-xs text-[var(--muted)] mb-3 text-center">
+              Finde die fehlenden Werte:
+            </p>
             <div className="flex items-center justify-center gap-2 flex-wrap font-mono text-2xl">
               {currentTask.sequence.map((val, i) => {
                 const isMissing = currentTask.missingIndices.includes(i);
@@ -437,7 +441,7 @@ export default function ZahlenfolgenUeben() {
               </h4>
               <div className="space-y-2">
                 <div>
-                  <p className="text-xs text-muted mb-1">Mustertyp:</p>
+                  <p className="text-xs text-[var(--muted)] mb-1">Mustertyp:</p>
                   <span
                     className={`inline-flex text-xs font-medium px-2 py-1 rounded-full ${patternColors[currentTask.pattern]}`}
                   >

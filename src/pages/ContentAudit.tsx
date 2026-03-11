@@ -113,7 +113,7 @@ export default function ContentAudit() {
       <div className="flex items-center gap-4 flex-wrap">
         <Link
           to="/dashboard"
-          className="inline-flex items-center gap-2 text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary-500"
+          className="inline-flex items-center gap-2 text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-[var(--accent)]"
         >
           <ArrowLeft className="w-4 h-4" />
           Zurück

@@ -108,19 +108,19 @@ const CATEGORIES = [...new Set(FAQ_ITEMS.map((f) => f.category))];
 function FAQItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false);
   return (
-    <div className="border-b border-border last:border-0">
+    <div className="border-b border-[var(--border)] last:border-0">
       <button
         onClick={() => setOpen(!open)}
         className="w-full flex items-start justify-between gap-4 py-5 text-left"
       >
-        <h3 className="text-base font-semibold text-app-foreground leading-relaxed">{q}</h3>
+        <h3 className="text-base font-semibold text-[var(--text-primary)] leading-relaxed">{q}</h3>
         {open ? (
-          <ChevronUp className="w-5 h-5 text-muted shrink-0 mt-0.5" />
+          <ChevronUp className="w-5 h-5 text-[var(--muted)] shrink-0 mt-0.5" />
         ) : (
-          <ChevronDown className="w-5 h-5 text-muted shrink-0 mt-0.5" />
+          <ChevronDown className="w-5 h-5 text-[var(--muted)] shrink-0 mt-0.5" />
         )}
       </button>
-      {open && <p className="text-sm text-muted leading-relaxed pb-5 -mt-1">{a}</p>}
+      {open && <p className="text-sm text-[var(--muted)] leading-relaxed pb-5 -mt-1">{a}</p>}
     </div>
   );
 }
@@ -154,8 +154,8 @@ export default function FAQPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background">
-      <nav className="sticky top-0 z-40 bg-background/90 backdrop-blur-xl border-b border-border/50 shadow-sm">
+    <div className="min-h-screen bg-[var(--background)]">
+      <nav className="sticky top-0 z-40 bg-[var(--background)]/90 backdrop-blur-xl border-b border-[var(--border)]/50 shadow-sm">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
             <div
@@ -164,7 +164,7 @@ export default function FAQPage() {
             >
               <GraduationCap className="w-4 h-4" />
             </div>
-            <span className="text-lg font-bold text-app-foreground">MedMaster</span>
+            <span className="text-lg font-bold text-[var(--text-primary)]">MedMaster</span>
           </Link>
           <Link
             to="/register"
@@ -176,12 +176,12 @@ export default function FAQPage() {
         </div>
       </nav>
 
-      <header className="bg-card border-b border-border">
+      <header className="bg-[var(--card)] border-b border-[var(--border)]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-14 text-center">
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-app-foreground mb-4">
+          <h1 className="text-3xl sm:text-4xl font-extrabold text-[var(--text-primary)] mb-4">
             Häufige Fragen zum MedAT 2026
           </h1>
-          <p className="text-lg text-muted max-w-2xl mx-auto">
+          <p className="text-lg text-[var(--muted)] max-w-2xl mx-auto">
             Alles was du über den MedAT, die Vorbereitung und MedMaster wissen musst.
           </p>
         </div>
@@ -190,8 +190,8 @@ export default function FAQPage() {
       <main className="max-w-4xl mx-auto px-4 sm:px-6 py-8 space-y-10">
         {CATEGORIES.map((cat) => (
           <section key={cat}>
-            <h2 className="text-xl font-bold text-app-foreground mb-2">{cat}</h2>
-            <div className="bg-card rounded-2xl border border-border px-6">
+            <h2 className="text-xl font-bold text-[var(--text-primary)] mb-2">{cat}</h2>
+            <div className="bg-[var(--card)] rounded-2xl border border-[var(--border)] px-6">
               {FAQ_ITEMS.filter((f) => f.category === cat).map((f) => (
                 <FAQItem key={f.q} q={f.q} a={f.a} />
               ))}
@@ -203,45 +203,51 @@ export default function FAQPage() {
         <section className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <Link
             to="/medat-guide"
-            className="flex flex-col items-center gap-2 p-6 rounded-2xl bg-card border border-border hover:border-border transition-colors text-center"
+            className="flex flex-col items-center gap-2 p-6 rounded-2xl bg-[var(--card)] border border-[var(--border)] hover:border-[var(--border)] transition-colors text-center"
           >
             <span className="text-2xl">📖</span>
-            <span className="text-sm font-semibold text-app-foreground">MedAT 2026 Guide</span>
-            <span className="text-xs text-muted">Kompletter Überblick</span>
+            <span className="text-sm font-semibold text-[var(--text-primary)]">
+              MedAT 2026 Guide
+            </span>
+            <span className="text-xs text-[var(--muted)]">Kompletter Überblick</span>
           </Link>
           <Link
             to="/medat-uebungsfragen"
-            className="flex flex-col items-center gap-2 p-6 rounded-2xl bg-card border border-border hover:border-border transition-colors text-center"
+            className="flex flex-col items-center gap-2 p-6 rounded-2xl bg-[var(--card)] border border-[var(--border)] hover:border-[var(--border)] transition-colors text-center"
           >
             <span className="text-2xl">✏️</span>
-            <span className="text-sm font-semibold text-app-foreground">Übungsfragen testen</span>
-            <span className="text-xs text-muted">BMS + KFF kostenlos</span>
+            <span className="text-sm font-semibold text-[var(--text-primary)]">
+              Übungsfragen testen
+            </span>
+            <span className="text-xs text-[var(--muted)]">BMS + KFF kostenlos</span>
           </Link>
           <Link
             to="/register"
-            className="flex flex-col items-center gap-2 p-6 rounded-2xl bg-card border border-border hover:border-border transition-colors text-center"
+            className="flex flex-col items-center gap-2 p-6 rounded-2xl bg-[var(--card)] border border-[var(--border)] hover:border-[var(--border)] transition-colors text-center"
           >
             <span className="text-2xl">🚀</span>
-            <span className="text-sm font-semibold text-app-foreground">Kostenlos starten</span>
-            <span className="text-xs text-muted">4.300+ Fragen</span>
+            <span className="text-sm font-semibold text-[var(--text-primary)]">
+              Kostenlos starten
+            </span>
+            <span className="text-xs text-[var(--muted)]">4.300+ Fragen</span>
           </Link>
         </section>
       </main>
 
-      <footer className="py-6 bg-surface border-t border-border">
+      <footer className="py-6 bg-surface border-t border-[var(--border)]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <div className="flex items-center gap-2">
-            <GraduationCap className="w-4 h-4 text-muted" />
-            <span className="text-sm font-semibold text-muted">MedMaster</span>
+            <GraduationCap className="w-4 h-4 text-[var(--muted)]" />
+            <span className="text-sm font-semibold text-[var(--muted)]">MedMaster</span>
           </div>
-          <div className="flex gap-4 text-xs text-muted">
-            <Link to="/impressum" className="hover:text-app-foreground transition-colors">
+          <div className="flex gap-4 text-xs text-[var(--muted)]">
+            <Link to="/impressum" className="hover:text-[var(--text-primary)] transition-colors">
               Impressum
             </Link>
-            <Link to="/datenschutz" className="hover:text-app-foreground transition-colors">
+            <Link to="/datenschutz" className="hover:text-[var(--text-primary)] transition-colors">
               Datenschutz
             </Link>
-            <Link to="/agb" className="hover:text-app-foreground transition-colors">
+            <Link to="/agb" className="hover:text-[var(--text-primary)] transition-colors">
               AGB
             </Link>
           </div>

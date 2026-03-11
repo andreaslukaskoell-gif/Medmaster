@@ -109,7 +109,7 @@ export default function SozialesEntscheidenUeben() {
     return (
       <Card>
         <CardContent className="p-8 text-center">
-          <p className="text-muted">Keine Szenarien verfügbar.</p>
+          <p className="text-[var(--muted)]">Keine Szenarien verfügbar.</p>
         </CardContent>
       </Card>
     );
@@ -122,18 +122,18 @@ export default function SozialesEntscheidenUeben() {
         <div className="flex items-center gap-2">
           <button
             onClick={handleShuffle}
-            className="text-muted hover:text-gray-700 dark:hover:text-gray-300 cursor-pointer"
+            className="text-[var(--muted)] hover:text-gray-700 dark:hover:text-gray-300 cursor-pointer"
             title="Zufällige Reihenfolge"
           >
             <Shuffle className="w-4 h-4" />
           </button>
-          <span className="text-sm text-muted">
+          <span className="text-sm text-[var(--muted)]">
             Szenario {currentIndex + 1} von {scenarios.length}
           </span>
         </div>
         <div className="flex items-center gap-3">
           {scenariosCompleted > 0 && (
-            <span className="text-sm text-muted">
+            <span className="text-sm text-[var(--muted)]">
               <span className="font-medium text-green-600 dark:text-green-400">
                 {Math.round((totalScore / totalMaxScore) * 100)}%
               </span>{" "}
@@ -142,7 +142,7 @@ export default function SozialesEntscheidenUeben() {
           )}
           <button
             onClick={handleReset}
-            className="text-muted hover:text-gray-700 dark:hover:text-gray-300 cursor-pointer"
+            className="text-[var(--muted)] hover:text-gray-700 dark:hover:text-gray-300 cursor-pointer"
             title="Zurücksetzen"
           >
             <RotateCcw className="w-4 h-4" />
@@ -167,7 +167,7 @@ export default function SozialesEntscheidenUeben() {
               <span className="text-xs font-medium text-teal-600 dark:text-teal-400">
                 {currentScenario.id}
               </span>
-              <span className="text-xs text-muted">Szenario</span>
+              <span className="text-xs text-[var(--muted)]">Szenario</span>
             </div>
             <p className="text-sm text-gray-900 dark:text-gray-100 leading-relaxed">
               {currentScenario.scenario}
@@ -208,7 +208,9 @@ export default function SozialesEntscheidenUeben() {
 
                     {/* Rating buttons */}
                     <div className="flex items-center gap-2">
-                      <span className="text-[10px] text-muted w-20 shrink-0">unangemessen</span>
+                      <span className="text-[10px] text-[var(--muted)] w-20 shrink-0">
+                        unangemessen
+                      </span>
                       <div className="flex-1 flex gap-1">
                         {[1, 2, 3, 4, 5, 6].map((value) => {
                           const isSelected = userRating === value;
@@ -228,7 +230,7 @@ export default function SozialesEntscheidenUeben() {
                                     : "bg-teal-500 text-white"
                                   : isIdeal
                                     ? "bg-green-500 text-white ring-2 ring-green-400"
-                                    : "bg-gray-200 dark:bg-gray-700 text-muted hover:bg-gray-300 dark:hover:bg-gray-600"
+                                    : "bg-gray-200 dark:bg-gray-700 text-[var(--muted)] hover:bg-gray-300 dark:hover:bg-gray-600"
                               }`}
                             >
                               {ratingLabels[value]}
@@ -239,7 +241,7 @@ export default function SozialesEntscheidenUeben() {
                           );
                         })}
                       </div>
-                      <span className="text-[10px] text-muted w-20 text-right shrink-0">
+                      <span className="text-[10px] text-[var(--muted)] w-20 text-right shrink-0">
                         angemessen
                       </span>
                     </div>
@@ -269,7 +271,7 @@ export default function SozialesEntscheidenUeben() {
                     {isExpanded && isSubmitted && (
                       <div className="bg-white dark:bg-gray-900 rounded-lg p-3 text-xs text-gray-700 dark:text-gray-300">
                         <span className="font-medium">Idealbewertung: {option.idealRating}</span>
-                        <span className="text-muted"> — </span>
+                        <span className="text-[var(--muted)]"> — </span>
                         {option.explanation}
                       </div>
                     )}
@@ -324,7 +326,7 @@ export default function SozialesEntscheidenUeben() {
                     <p className="text-sm font-semibold text-gray-900 dark:text-gray-100">
                       Ergebnis dieses Szenarios
                     </p>
-                    <p className="text-xs text-muted mt-0.5">
+                    <p className="text-xs text-[var(--muted)] mt-0.5">
                       Gesamtabweichung:{" "}
                       {currentScenario.handlungsoptionen.reduce(
                         (sum, opt, i) => sum + Math.abs((ratings[i] || 0) - opt.idealRating),
@@ -346,7 +348,7 @@ export default function SozialesEntscheidenUeben() {
                       )}
                       %
                     </p>
-                    <p className="text-xs text-muted">Übereinstimmung</p>
+                    <p className="text-xs text-[var(--muted)]">Übereinstimmung</p>
                   </div>
                 </div>
               </div>

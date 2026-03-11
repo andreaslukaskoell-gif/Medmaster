@@ -194,16 +194,16 @@ export default function PlacementTest() {
   // ─── Intro ───────────────────────────────────────────────
   if (phase === "intro") {
     return (
-      <div className="min-h-screen bg-background p-6 flex flex-col items-center justify-center">
+      <div className="min-h-screen bg-[var(--background)] p-6 flex flex-col items-center justify-center">
         <Card className="max-w-md w-full">
           <CardContent className="pt-6 space-y-4">
-            <h1 className="text-xl font-bold text-app-foreground">Einstufungstest</h1>
-            <p className="text-sm text-app-muted">
+            <h1 className="text-xl font-bold text-[var(--text-primary)]">Einstufungstest</h1>
+            <p className="text-sm text-[var(--muted)]">
               Du beantwortest {PLACEMENT_COUNT} Aufgaben aus BMS und KFF. Am Ende wird dein
               Startniveau geschätzt – danach startest du mit dem passenden Schwierigkeitsgrad.
             </p>
             {loading ? (
-              <p className="text-sm text-app-muted">Lade Aufgaben...</p>
+              <p className="text-sm text-[var(--muted)]">Lade Aufgaben...</p>
             ) : (
               <Button
                 className="w-full"
@@ -222,8 +222,8 @@ export default function PlacementTest() {
   // ─── Result / empty ──────────────────────────────────────
   if (phase === "result" || !currentItem) {
     return (
-      <div className="min-h-screen bg-background p-6 flex items-center justify-center">
-        <p className="text-app-muted">Einstufung wird gespeichert...</p>
+      <div className="min-h-screen bg-[var(--background)] p-6 flex items-center justify-center">
+        <p className="text-[var(--muted)]">Einstufung wird gespeichert...</p>
       </div>
     );
   }
@@ -234,14 +234,14 @@ export default function PlacementTest() {
   if (currentItem.kind === "bms") {
     const q = currentItem.question;
     return (
-      <div className="min-h-screen bg-background p-6">
+      <div className="min-h-screen bg-[var(--background)] p-6">
         <div className="max-w-lg mx-auto space-y-4">
-          <p className="text-sm text-app-muted">
+          <p className="text-sm text-[var(--muted)]">
             {totalLabel} (BMS – {q.subject.charAt(0).toUpperCase() + q.subject.slice(1)})
           </p>
           <Card>
             <CardContent className="pt-6 space-y-3">
-              <p className="font-medium text-app-foreground">{q.text}</p>
+              <p className="font-medium text-[var(--text-primary)]">{q.text}</p>
               <div className="flex flex-col gap-2">
                 {q.options.map((opt, i) => (
                   <Button
@@ -269,23 +269,23 @@ export default function PlacementTest() {
     const valid = filterValidSequenceTasks([data]);
     if (valid.length === 0) {
       return (
-        <div className="min-h-screen bg-background p-6 flex items-center justify-center">
-          <p className="text-app-muted">Lade nächste Aufgabe...</p>
+        <div className="min-h-screen bg-[var(--background)] p-6 flex items-center justify-center">
+          <p className="text-[var(--muted)]">Lade nächste Aufgabe...</p>
         </div>
       );
     }
     const q = valid[0]!;
     const opts = q.options ?? [];
     return (
-      <div className="min-h-screen bg-background p-6">
+      <div className="min-h-screen bg-[var(--background)] p-6">
         <div className="max-w-lg mx-auto space-y-4">
-          <p className="text-sm text-app-muted">{totalLabel} (Zahlenfolge)</p>
+          <p className="text-sm text-[var(--muted)]">{totalLabel} (Zahlenfolge)</p>
           <Card>
             <CardContent className="pt-6">
-              <p className="font-medium text-app-foreground mb-2">
+              <p className="font-medium text-[var(--text-primary)] mb-2">
                 Welche beiden Zahlen folgen als Nächstes?
               </p>
-              <p className="text-lg font-mono text-app-foreground mb-4">
+              <p className="text-lg font-mono text-[var(--text-primary)] mb-4">
                 [{q.sequence.map((x) => (x === "?" ? "?" : String(x))).join(", ")}]
               </p>
               <div className="flex flex-wrap gap-2">
@@ -318,21 +318,23 @@ export default function PlacementTest() {
     const valid = filterValidImplikationTasks([data]);
     if (valid.length === 0) {
       return (
-        <div className="min-h-screen bg-background p-6 flex items-center justify-center">
-          <p className="text-app-muted">Lade nächste Aufgabe...</p>
+        <div className="min-h-screen bg-[var(--background)] p-6 flex items-center justify-center">
+          <p className="text-[var(--muted)]">Lade nächste Aufgabe...</p>
         </div>
       );
     }
     const q = valid[0]!;
     return (
-      <div className="min-h-screen bg-background p-6">
+      <div className="min-h-screen bg-[var(--background)] p-6">
         <div className="max-w-lg mx-auto space-y-4">
-          <p className="text-sm text-app-muted">{totalLabel} (Implikationen)</p>
+          <p className="text-sm text-[var(--muted)]">{totalLabel} (Implikationen)</p>
           <Card>
             <CardContent className="pt-6 space-y-3">
-              <p className="font-medium text-app-foreground">{q.premise1}</p>
-              <p className="font-medium text-app-foreground">{q.premise2}</p>
-              <p className="text-sm text-app-muted pt-2">Welche Schlussfolgerung folgt zwingend?</p>
+              <p className="font-medium text-[var(--text-primary)]">{q.premise1}</p>
+              <p className="font-medium text-[var(--text-primary)]">{q.premise2}</p>
+              <p className="text-sm text-[var(--muted)] pt-2">
+                Welche Schlussfolgerung folgt zwingend?
+              </p>
               <div className="flex flex-col gap-2">
                 {(q.options ?? []).map((text, i) => (
                   <Button
@@ -353,8 +355,8 @@ export default function PlacementTest() {
   }
 
   return (
-    <div className="min-h-screen bg-background p-6 flex items-center justify-center">
-      <p className="text-app-muted">Unbekannter Aufgabentyp.</p>
+    <div className="min-h-screen bg-[var(--background)] p-6 flex items-center justify-center">
+      <p className="text-[var(--muted)]">Unbekannter Aufgabentyp.</p>
     </div>
   );
 }

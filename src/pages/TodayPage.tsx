@@ -137,11 +137,11 @@ export default function TodayPage() {
         {/* Konkreter Lernplan für heute (wenn aktiv) */}
         {concretePlan && (
           <Link to="/lernplan" className="block mb-6">
-            <Card className="border-2 border-primary-200 dark:border-primary-800 hover:bg-accent/50 transition-colors">
+            <Card className="border-2 border-[var(--accent)]/20 dark:border-[var(--accent)] hover:bg-accent/50 transition-colors">
               <CardContent className="p-4">
                 <div className="flex items-center justify-between gap-2 mb-2">
                   <h3 className="font-semibold text-[var(--text-primary)] flex items-center gap-2">
-                    <CalendarDays className="w-4 h-4 text-primary-500" />
+                    <CalendarDays className="w-4 h-4 text-[var(--accent)]" />
                     Lernplan für heute
                   </h3>
                   <span className="text-xs text-[var(--muted)]">
@@ -163,7 +163,7 @@ export default function TodayPage() {
                     concretePlan.sekTasks.length === 0 &&
                     "Alles erledigt?"}
                 </p>
-                <span className="text-xs text-primary-600 dark:text-primary-400 font-medium flex items-center gap-1">
+                <span className="text-xs text-[var(--accent)]/60 font-medium flex items-center gap-1">
                   Details im Lernplan
                   <ArrowRight className="w-3 h-3" />
                 </span>

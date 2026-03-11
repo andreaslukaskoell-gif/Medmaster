@@ -71,7 +71,7 @@ function BMSQuestionCard({ q, index }: { q: Question; index: number }) {
   };
 
   return (
-    <div className="bg-[var(--surface)] dark:bg-[var(--surface)] rounded-2xl border border-app-border overflow-hidden">
+    <div className="bg-[var(--surface)] rounded-2xl border border-[var(--border)] overflow-hidden">
       <div className="p-5 sm:p-6">
         <div className="flex items-start gap-3 mb-4">
           <span
@@ -80,7 +80,7 @@ function BMSQuestionCard({ q, index }: { q: Question; index: number }) {
           >
             {index + 1}
           </span>
-          <p className="text-app-foreground font-medium leading-relaxed">{q.text}</p>
+          <p className="text-[var(--text-primary)] font-medium leading-relaxed">{q.text}</p>
         </div>
         <OptionsList
           options={q.options.map((o) => ({ id: o.id, text: o.text }))}
@@ -114,14 +114,14 @@ function ZFCard({ task, index }: { task: SequenceTask; index: number }) {
   };
 
   return (
-    <div className="bg-[var(--surface)] dark:bg-[var(--surface)] rounded-2xl border border-app-border overflow-hidden">
+    <div className="bg-[var(--surface)] rounded-2xl border border-[var(--border)] overflow-hidden">
       <div className="p-5 sm:p-6">
         <div className="flex items-start gap-3 mb-4">
           <span className="shrink-0 w-8 h-8 rounded-xl flex items-center justify-center text-sm font-bold text-white bg-amber-500">
             {index + 1}
           </span>
           <div>
-            <p className="text-xs text-app-muted mb-2">Erg{"\u00e4"}nze die Zahlenfolge:</p>
+            <p className="text-xs text-[var(--muted)] mb-2">Erg{"\u00e4"}nze die Zahlenfolge:</p>
             <div className="flex flex-wrap gap-2">
               {task.sequence.map((v, i) => (
                 <span
@@ -129,7 +129,7 @@ function ZFCard({ task, index }: { task: SequenceTask; index: number }) {
                   className={`inline-flex items-center justify-center min-w-[40px] h-10 px-2 rounded-lg font-mono text-base font-semibold ${
                     v === "?"
                       ? "bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 border-2 border-amber-300 dark:border-amber-700"
-                      : "bg-background dark:bg-background text-app-foreground"
+                      : "bg-[var(--background)] text-[var(--text-primary)]"
                   }`}
                 >
                   {v === "?" ? "?" : v}
@@ -143,14 +143,14 @@ function ZFCard({ task, index }: { task: SequenceTask; index: number }) {
             const isCorrect = opt.key === task.correctOptionId;
             const isSelected = opt.key === selected;
             const displayText = opt.value ? `${opt.value[0]}, ${opt.value[1]}` : (opt.text ?? "");
-            let style = "border-app-border hover:border-app-border cursor-pointer";
+            let style = "border-[var(--border)] hover:border-[var(--border)] cursor-pointer";
             if (revealed) {
               if (isCorrect)
                 style =
                   "border-emerald-400 bg-emerald-50 dark:bg-emerald-900/20 dark:border-emerald-600";
               else if (isSelected)
                 style = "border-red-400 bg-red-50 dark:bg-red-900/20 dark:border-red-600";
-              else style = "border-app-border/50 opacity-60";
+              else style = "border-[var(--border)]/50 opacity-60";
             }
             return (
               <button
@@ -159,10 +159,10 @@ function ZFCard({ task, index }: { task: SequenceTask; index: number }) {
                 disabled={revealed}
                 className={`w-full text-left flex items-center gap-3 px-4 py-3 rounded-xl border transition-all ${style}`}
               >
-                <span className="shrink-0 w-7 h-7 rounded-lg flex items-center justify-center text-xs font-bold bg-background dark:bg-background text-[var(--text-secondary)]">
+                <span className="shrink-0 w-7 h-7 rounded-lg flex items-center justify-center text-xs font-bold bg-[var(--background)] text-[var(--text-secondary)]">
                   {opt.key}
                 </span>
-                <span className="text-sm text-app-foreground font-mono">{displayText}</span>
+                <span className="text-sm text-[var(--text-primary)] font-mono">{displayText}</span>
                 {revealed && isCorrect && (
                   <CheckCircle2 className="w-5 h-5 text-emerald-500 ml-auto shrink-0" />
                 )}
@@ -198,14 +198,14 @@ function WFCard({ task, index }: { task: WordFluencyTask; index: number }) {
   };
 
   return (
-    <div className="bg-[var(--surface)] dark:bg-[var(--surface)] rounded-2xl border border-app-border overflow-hidden">
+    <div className="bg-[var(--surface)] rounded-2xl border border-[var(--border)] overflow-hidden">
       <div className="p-5 sm:p-6">
         <div className="flex items-start gap-3 mb-4">
           <span className="shrink-0 w-8 h-8 rounded-xl flex items-center justify-center text-sm font-bold text-white bg-teal-500">
             {index + 1}
           </span>
           <div>
-            <p className="text-xs text-app-muted mb-2">Welcher Anfangsbuchstabe?</p>
+            <p className="text-xs text-[var(--muted)] mb-2">Welcher Anfangsbuchstabe?</p>
             <div className="flex flex-wrap gap-1.5">
               {task.letters.map((l, i) => (
                 <span
@@ -222,14 +222,14 @@ function WFCard({ task, index }: { task: WordFluencyTask; index: number }) {
           {task.options.map((opt, i) => {
             const isCorrect = i === task.correctIndex;
             const isSelected = i === selected;
-            let style = "border-app-border hover:border-app-border cursor-pointer";
+            let style = "border-[var(--border)] hover:border-[var(--border)] cursor-pointer";
             if (revealed) {
               if (isCorrect)
                 style =
                   "border-emerald-400 bg-emerald-50 dark:bg-emerald-900/20 dark:border-emerald-600";
               else if (isSelected)
                 style = "border-red-400 bg-red-50 dark:bg-red-900/20 dark:border-red-600";
-              else style = "border-app-border/50 opacity-60";
+              else style = "border-[var(--border)]/50 opacity-60";
             }
             return (
               <button
@@ -238,10 +238,10 @@ function WFCard({ task, index }: { task: WordFluencyTask; index: number }) {
                 disabled={revealed}
                 className={`w-full text-left flex items-center gap-3 px-4 py-3 rounded-xl border transition-all ${style}`}
               >
-                <span className="shrink-0 w-7 h-7 rounded-lg flex items-center justify-center text-xs font-bold bg-background dark:bg-background text-[var(--text-secondary)]">
+                <span className="shrink-0 w-7 h-7 rounded-lg flex items-center justify-center text-xs font-bold bg-[var(--background)] text-[var(--text-secondary)]">
                   {OPTION_LABELS[i]}
                 </span>
-                <span className="text-sm text-app-foreground font-mono">
+                <span className="text-sm text-[var(--text-primary)] font-mono">
                   {opt === "-" ? "Keine der Antworten ist richtig" : opt}
                 </span>
                 {revealed && isCorrect && (
@@ -255,7 +255,7 @@ function WFCard({ task, index }: { task: WordFluencyTask; index: number }) {
           })}
         </div>
         {revealed && (
-          <div className="mt-4 p-4 rounded-xl bg-background/50 border border-app-border/50">
+          <div className="mt-4 p-4 rounded-xl bg-[var(--background)]/50 border border-[var(--border)]/50">
             <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
               <span className="font-semibold">L{"\u00f6"}sung: </span>
               {task.solutionWord} — {task.explanation}
@@ -265,7 +265,7 @@ function WFCard({ task, index }: { task: WordFluencyTask; index: number }) {
         {!revealed && (
           <button
             onClick={() => setRevealed(true)}
-            className="mt-3 flex items-center gap-1 text-sm text-app-muted hover:text-app-foreground transition-colors"
+            className="mt-3 flex items-center gap-1 text-sm text-[var(--muted)] hover:text-[var(--text-primary)] transition-colors"
           >
             <ChevronDown className="w-4 h-4" /> Antwort anzeigen
           </button>
@@ -276,7 +276,7 @@ function WFCard({ task, index }: { task: WordFluencyTask; index: number }) {
               setRevealed(false);
               setSelected(null);
             }}
-            className="mt-3 flex items-center gap-1 text-sm text-app-muted hover:text-app-foreground transition-colors"
+            className="mt-3 flex items-center gap-1 text-sm text-[var(--muted)] hover:text-[var(--text-primary)] transition-colors"
           >
             <ChevronUp className="w-4 h-4" /> Einklappen
           </button>
@@ -298,21 +298,23 @@ function IMPCard({ task, index }: { task: ImplikationTask; index: number }) {
   };
 
   return (
-    <div className="bg-[var(--surface)] dark:bg-[var(--surface)] rounded-2xl border border-app-border overflow-hidden">
+    <div className="bg-[var(--surface)] rounded-2xl border border-[var(--border)] overflow-hidden">
       <div className="p-5 sm:p-6">
         <div className="flex items-start gap-3 mb-4">
           <span className="shrink-0 w-8 h-8 rounded-xl flex items-center justify-center text-sm font-bold text-white bg-indigo-500">
             {index + 1}
           </span>
           <div>
-            <p className="text-xs text-app-muted mb-2">Welche Schlussfolgerung ist zwingend?</p>
+            <p className="text-xs text-[var(--muted)] mb-2">
+              Welche Schlussfolgerung ist zwingend?
+            </p>
             <div className="space-y-2 p-3 rounded-xl bg-indigo-50 dark:bg-indigo-900/20 border border-indigo-100 dark:border-indigo-800">
-              <p className="text-sm text-app-foreground italic">
+              <p className="text-sm text-[var(--text-primary)] italic">
                 {"\u201E"}
                 {task.premise1}
                 {"\u201C"}
               </p>
-              <p className="text-sm text-app-foreground italic">
+              <p className="text-sm text-[var(--text-primary)] italic">
                 {"\u201E"}
                 {task.premise2}
                 {"\u201C"}
@@ -324,14 +326,14 @@ function IMPCard({ task, index }: { task: ImplikationTask; index: number }) {
           {task.options.map((opt, i) => {
             const isCorrect = i === task.correctAnswer;
             const isSelected = i === selected;
-            let style = "border-app-border hover:border-app-border cursor-pointer";
+            let style = "border-[var(--border)] hover:border-[var(--border)] cursor-pointer";
             if (revealed) {
               if (isCorrect)
                 style =
                   "border-emerald-400 bg-emerald-50 dark:bg-emerald-900/20 dark:border-emerald-600";
               else if (isSelected)
                 style = "border-red-400 bg-red-50 dark:bg-red-900/20 dark:border-red-600";
-              else style = "border-app-border/50 opacity-60";
+              else style = "border-[var(--border)]/50 opacity-60";
             }
             return (
               <button
@@ -340,10 +342,10 @@ function IMPCard({ task, index }: { task: ImplikationTask; index: number }) {
                 disabled={revealed}
                 className={`w-full text-left flex items-center gap-3 px-4 py-3 rounded-xl border transition-all ${style}`}
               >
-                <span className="shrink-0 w-7 h-7 rounded-lg flex items-center justify-center text-xs font-bold bg-background dark:bg-background text-[var(--text-secondary)]">
+                <span className="shrink-0 w-7 h-7 rounded-lg flex items-center justify-center text-xs font-bold bg-[var(--background)] text-[var(--text-secondary)]">
                   {OPTION_LABELS[i]}
                 </span>
-                <span className="text-sm text-app-foreground">{opt}</span>
+                <span className="text-sm text-[var(--text-primary)]">{opt}</span>
                 {revealed && isCorrect && (
                   <CheckCircle2 className="w-5 h-5 text-emerald-500 ml-auto shrink-0" />
                 )}
@@ -386,14 +388,14 @@ function OptionsList({
       {options.map((opt) => {
         const isCorrect = opt.id === correctId;
         const isSelected = opt.id === selected;
-        let style = "border-app-border hover:border-app-border cursor-pointer";
+        let style = "border-[var(--border)] hover:border-[var(--border)] cursor-pointer";
         if (revealed) {
           if (isCorrect)
             style =
               "border-emerald-400 bg-emerald-50 dark:bg-emerald-900/20 dark:border-emerald-600";
           else if (isSelected && !isCorrect)
             style = "border-red-400 bg-red-50 dark:bg-red-900/20 dark:border-red-600";
-          else style = "border-app-border/50 opacity-60";
+          else style = "border-[var(--border)]/50 opacity-60";
         }
         return (
           <button
@@ -402,10 +404,10 @@ function OptionsList({
             disabled={revealed}
             className={`w-full text-left flex items-center gap-3 px-4 py-3 rounded-xl border transition-all ${style}`}
           >
-            <span className="shrink-0 w-7 h-7 rounded-lg flex items-center justify-center text-xs font-bold bg-background dark:bg-background text-[var(--text-secondary)]">
+            <span className="shrink-0 w-7 h-7 rounded-lg flex items-center justify-center text-xs font-bold bg-[var(--background)] text-[var(--text-secondary)]">
               {opt.id.toUpperCase()}
             </span>
-            <span className="text-sm text-app-foreground">{opt.text}</span>
+            <span className="text-sm text-[var(--text-primary)]">{opt.text}</span>
             {revealed && isCorrect && (
               <CheckCircle2 className="w-5 h-5 text-emerald-500 ml-auto shrink-0" />
             )}
@@ -431,7 +433,7 @@ function ExplanationBlock({
   return (
     <>
       {revealed && (
-        <div className="mt-4 p-4 rounded-xl bg-background/50 border border-app-border/50">
+        <div className="mt-4 p-4 rounded-xl bg-[var(--background)]/50 border border-[var(--border)]/50">
           <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
             <span className="font-semibold">Erkl{"\u00e4"}rung: </span>
             {explanation}
@@ -440,7 +442,7 @@ function ExplanationBlock({
       )}
       <button
         onClick={onToggle}
-        className="mt-3 flex items-center gap-1 text-sm text-app-muted hover:text-app-foreground transition-colors"
+        className="mt-3 flex items-center gap-1 text-sm text-[var(--muted)] hover:text-[var(--text-primary)] transition-colors"
       >
         {revealed ? (
           <>
@@ -470,9 +472,9 @@ function SectionHeader({
     <div className="mb-6">
       <div className="flex items-center gap-3 mb-2">
         <div className={`w-1.5 h-8 rounded-full ${color}`} />
-        <h2 className="text-xl sm:text-2xl font-bold text-app-foreground">{title}</h2>
+        <h2 className="text-xl sm:text-2xl font-bold text-[var(--text-primary)]">{title}</h2>
       </div>
-      <p className="text-sm text-app-muted ml-5">{subtitle}</p>
+      <p className="text-sm text-[var(--muted)] ml-5">{subtitle}</p>
     </div>
   );
 }
@@ -503,9 +505,9 @@ export default function BMSDemo() {
   const totalCount = allBmsQuestions.length.toLocaleString("de-AT");
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-[var(--background)]">
       {/* Nav */}
-      <nav className="sticky top-0 z-40 bg-[var(--surface)]/90 dark:bg-background/90 backdrop-blur-xl border-b border-app-border/50 shadow-sm">
+      <nav className="sticky top-0 z-40 bg-[var(--surface)]/90 backdrop-blur-xl border-b border-[var(--border)]/50 shadow-sm">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
             <div
@@ -514,7 +516,7 @@ export default function BMSDemo() {
             >
               <GraduationCap className="w-4 h-4" />
             </div>
-            <span className="text-lg font-bold text-app-foreground">MedMaster</span>
+            <span className="text-lg font-bold text-[var(--text-primary)]">MedMaster</span>
           </Link>
           <Link
             to="/register"
@@ -527,15 +529,15 @@ export default function BMSDemo() {
       </nav>
 
       {/* Hero */}
-      <header className="bg-[var(--surface)] dark:bg-[var(--surface)] border-b border-app-border">
+      <header className="bg-[var(--surface)] border-b border-[var(--border)]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-14 text-center">
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-app-foreground mb-4">
+          <h1 className="text-3xl sm:text-4xl font-extrabold text-[var(--text-primary)] mb-4">
             MedAT-{"\u00dc"}bungsfragen — kostenlos testen
           </h1>
           <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto mb-2">
             BMS-Fragen + KFF-Aufgaben: teste dein Wissen ohne Anmeldung.
           </p>
-          <p className="text-sm text-app-muted">
+          <p className="text-sm text-[var(--muted)]">
             Jeden Tag neue Aufgaben. {totalCount}+ Fragen auf MedMaster verf{"\u00fc"}gbar.
           </p>
         </div>
@@ -551,7 +553,7 @@ export default function BMSDemo() {
           />
 
           {/* Subject Tabs */}
-          <div className="border-b border-app-border mb-6">
+          <div className="border-b border-[var(--border)] mb-6">
             <div className="flex gap-1 overflow-x-auto">
               {SUBJECTS.map((s) => {
                 const isActive = activeTab === s.key;
@@ -563,7 +565,7 @@ export default function BMSDemo() {
                     className={`px-4 py-3 text-sm font-medium whitespace-nowrap border-b-2 transition-colors ${
                       isActive
                         ? tabStyle.active
-                        : "border-transparent text-app-muted hover:text-app-foreground"
+                        : "border-transparent text-[var(--muted)] hover:text-[var(--text-primary)]"
                     }`}
                   >
                     {s.label}
@@ -579,7 +581,7 @@ export default function BMSDemo() {
             >
               {SUBJECTS.find((s) => s.key === activeTab)?.label}
             </span>
-            <span className="text-sm text-app-muted">
+            <span className="text-sm text-[var(--muted)]">
               5 von {allBmsQuestions.filter((q) => q.subject === activeTab).length} Fragen
             </span>
           </div>
@@ -634,8 +636,8 @@ export default function BMSDemo() {
         </section>
 
         {/* ── CTA ──────────────────────────────────────── */}
-        <div className="text-center bg-[var(--surface)] dark:bg-[var(--surface)] rounded-2xl p-8 sm:p-10 border border-app-border">
-          <h2 className="text-2xl font-bold text-app-foreground mb-3">
+        <div className="text-center bg-[var(--surface)] rounded-2xl p-8 sm:p-10 border border-[var(--border)]">
+          <h2 className="text-2xl font-bold text-[var(--text-primary)] mb-3">
             Alle {totalCount}+ Fragen kostenlos testen
           </h2>
           <p className="text-[var(--text-secondary)] mb-6 max-w-md mx-auto">
@@ -653,20 +655,20 @@ export default function BMSDemo() {
       </main>
 
       {/* Footer */}
-      <footer className="py-6 bg-background border-t border-app-border">
+      <footer className="py-6 bg-[var(--background)] border-t border-[var(--border)]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <div className="flex items-center gap-2">
-            <GraduationCap className="w-4 h-4 text-app-muted" />
-            <span className="text-sm font-semibold text-app-muted">MedMaster</span>
+            <GraduationCap className="w-4 h-4 text-[var(--muted)]" />
+            <span className="text-sm font-semibold text-[var(--muted)]">MedMaster</span>
           </div>
-          <div className="flex gap-4 text-xs text-app-muted/70">
-            <Link to="/impressum" className="hover:text-app-muted transition-colors">
+          <div className="flex gap-4 text-xs text-[var(--muted)]/70">
+            <Link to="/impressum" className="hover:text-[var(--muted)] transition-colors">
               Impressum
             </Link>
-            <Link to="/datenschutz" className="hover:text-app-muted transition-colors">
+            <Link to="/datenschutz" className="hover:text-[var(--muted)] transition-colors">
               Datenschutz
             </Link>
-            <Link to="/agb" className="hover:text-app-muted transition-colors">
+            <Link to="/agb" className="hover:text-[var(--muted)] transition-colors">
               AGB
             </Link>
           </div>

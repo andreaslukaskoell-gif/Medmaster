@@ -199,13 +199,15 @@ export default function WortfluessigkeitSimulation() {
             <Timer className="w-8 h-8 text-orange-500" />
           </div>
           <div>
-            <h2 className="text-xl font-bold text-foreground mb-2">Simulation starten</h2>
-            <p className="text-sm text-muted max-w-md mx-auto">
+            <h2 className="text-xl font-bold text-[var(--text-primary)] mb-2">
+              Simulation starten
+            </h2>
+            <p className="text-sm text-[var(--muted)] max-w-md mx-auto">
               {TASK_COUNT} zuf&auml;llige W&ouml;rter (5 leicht, 5 mittel, 5 schwer) in{" "}
               {Math.floor(TIME_LIMIT / 60)} Minuten — genau wie im echten MedAT.
             </p>
           </div>
-          <div className="flex flex-col items-center gap-2 text-sm text-muted">
+          <div className="flex flex-col items-center gap-2 text-sm text-[var(--muted)]">
             <div className="flex items-center gap-4">
               <span className="flex items-center gap-1">
                 <Clock className="w-4 h-4" /> {Math.floor(TIME_LIMIT / 60)}:00 min
@@ -253,13 +255,13 @@ export default function WortfluessigkeitSimulation() {
           <CardContent className="p-6">
             <div className="text-center space-y-4">
               <div className="w-16 h-16 mx-auto rounded-2xl flex items-center justify-center bg-linear-to-br from-orange-500 to-red-600">
-                <Trophy className="w-8 h-8 text-primary-foreground" />
+                <Trophy className="w-8 h-8 text-white" />
               </div>
               <div>
-                <h2 className="text-2xl font-bold text-foreground">
+                <h2 className="text-2xl font-bold text-[var(--text-primary)]">
                   {correctCount}/{TASK_COUNT}
                 </h2>
-                <p className="text-sm text-muted">
+                <p className="text-sm text-[var(--muted)]">
                   {scorePercent}% richtig —{" "}
                   {scorePercent >= 80
                     ? "Ausgezeichnet!"
@@ -272,18 +274,18 @@ export default function WortfluessigkeitSimulation() {
               </div>
               <div className="flex justify-center gap-6 text-sm">
                 <div className="text-center">
-                  <p className="text-lg font-bold text-foreground">
+                  <p className="text-lg font-bold text-[var(--text-primary)]">
                     {formatTime(TIME_LIMIT - timeLeft)}
                   </p>
-                  <p className="text-xs text-muted">Gesamtzeit</p>
+                  <p className="text-xs text-[var(--muted)]">Gesamtzeit</p>
                 </div>
                 <div className="text-center">
-                  <p className="text-lg font-bold text-foreground">{avgTime}s</p>
-                  <p className="text-xs text-muted">&Oslash; pro Wort</p>
+                  <p className="text-lg font-bold text-[var(--text-primary)]">{avgTime}s</p>
+                  <p className="text-xs text-[var(--muted)]">&Oslash; pro Wort</p>
                 </div>
               </div>
               <div className="w-full max-w-xs mx-auto">
-                <div className="w-full bg-muted rounded-full h-3">
+                <div className="w-full bg-[var(--surface)] rounded-full h-3">
                   <div
                     className={`h-3 rounded-full transition-all ${
                       scorePercent >= 80
@@ -308,13 +310,15 @@ export default function WortfluessigkeitSimulation() {
         {/* Difficulty statistics */}
         <Card>
           <CardContent className="p-5">
-            <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-3">
+            <h3 className="text-sm font-semibold text-[var(--muted)] uppercase tracking-wider mb-3">
               Schwierigkeits-Statistik
             </h3>
             <div className="grid grid-cols-3 gap-3">
               {diffStats.map((s) => (
-                <div key={s.difficulty} className="bg-muted rounded-lg p-3 text-center">
-                  <p className="text-xs text-muted mb-1">{difficultyLabels[s.difficulty].label}</p>
+                <div key={s.difficulty} className="bg-[var(--surface)] rounded-lg p-3 text-center">
+                  <p className="text-xs text-[var(--muted)] mb-1">
+                    {difficultyLabels[s.difficulty].label}
+                  </p>
                   <p
                     className={`text-lg font-bold ${
                       s.correct === s.total
@@ -334,7 +338,7 @@ export default function WortfluessigkeitSimulation() {
 
         {/* Results list */}
         <div className="space-y-2">
-          <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">
+          <h3 className="text-sm font-semibold text-[var(--muted)] uppercase tracking-wider">
             Aufgaben&uuml;bersicht
           </h3>
           {results.map((result, i) => {
@@ -356,12 +360,12 @@ export default function WortfluessigkeitSimulation() {
                       {i + 1}
                     </span>
                     <div className="flex-1 min-w-0">
-                      <p className="text-sm font-mono text-foreground tracking-wider">
+                      <p className="text-sm font-mono text-[var(--text-primary)] tracking-wider">
                         {result.word.letters}
                       </p>
                     </div>
                     <div className="flex items-center gap-2 shrink-0">
-                      <span className="text-xs text-muted">{result.timeSpent}s</span>
+                      <span className="text-xs text-[var(--muted)]">{result.timeSpent}s</span>
                       {result.correct ? (
                         <CheckCircle2 className="w-4 h-4 text-green-500" />
                       ) : (
@@ -370,9 +374,9 @@ export default function WortfluessigkeitSimulation() {
                     </div>
                   </button>
                   {isExpanded && (
-                    <div className="px-4 pb-4 space-y-2 border-t border-border pt-3">
+                    <div className="px-4 pb-4 space-y-2 border-t border-[var(--border)] pt-3">
                       <div className="flex items-center gap-4 text-sm">
-                        <span className="text-muted">Deine Antwort:</span>
+                        <span className="text-[var(--muted)]">Deine Antwort:</span>
                         <span
                           className={`font-mono font-bold ${
                             result.correct
@@ -384,7 +388,7 @@ export default function WortfluessigkeitSimulation() {
                         </span>
                       </div>
                       <div className="flex items-center gap-4 text-sm">
-                        <span className="text-muted">L&ouml;sung:</span>
+                        <span className="text-[var(--muted)]">L&ouml;sung:</span>
                         <span className="font-mono font-bold text-green-600 dark:text-green-400">
                           {result.word.solution}
                           {result.word.alternativeSolutions?.length
@@ -428,7 +432,7 @@ export default function WortfluessigkeitSimulation() {
           className={`w-5 h-5 ${isUrgent ? "text-red-500 animate-pulse" : "text-orange-500"}`}
         />
         <div className="flex-1">
-          <div className="w-full bg-muted rounded-full h-2.5">
+          <div className="w-full bg-[var(--surface)] rounded-full h-2.5">
             <div
               className={`h-2.5 rounded-full transition-all ${isUrgent ? "bg-red-500" : "bg-orange-500"}`}
               style={{ width: `${timePercent}%` }}
@@ -437,7 +441,7 @@ export default function WortfluessigkeitSimulation() {
         </div>
         <span
           className={`text-sm font-mono font-bold min-w-[48px] text-right ${
-            isUrgent ? "text-red-600 dark:text-red-400" : "text-foreground"
+            isUrgent ? "text-red-600 dark:text-red-400" : "text-[var(--text-primary)]"
           }`}
         >
           {formatTime(timeLeft)}
@@ -445,7 +449,7 @@ export default function WortfluessigkeitSimulation() {
       </div>
 
       {/* Progress dots */}
-      <div className="flex items-center justify-between text-sm text-muted">
+      <div className="flex items-center justify-between text-sm text-[var(--muted)]">
         <span>
           Wort {currentIndex + 1} von {TASK_COUNT}
         </span>
@@ -460,7 +464,7 @@ export default function WortfluessigkeitSimulation() {
                     : "bg-red-500"
                   : i === currentIndex
                     ? "bg-orange-500"
-                    : "bg-muted-foreground/30"
+                    : "bg-[var(--muted)]/30"
               }`}
             />
           ))}
@@ -479,12 +483,12 @@ export default function WortfluessigkeitSimulation() {
           </div>
 
           {/* Letter tiles */}
-          <div className="bg-muted p-6 rounded-xl">
+          <div className="bg-[var(--surface)] p-6 rounded-xl">
             <div className="flex items-center justify-center gap-2 flex-wrap">
               {currentWord.letters.split("").map((letter, i) => (
                 <div
                   key={i}
-                  className="w-12 h-12 md:w-14 md:h-14 bg-background shadow-md rounded-lg flex items-center justify-center text-2xl md:text-3xl font-bold border border-border text-foreground"
+                  className="w-12 h-12 md:w-14 md:h-14 bg-[var(--background)] shadow-md rounded-lg flex items-center justify-center text-2xl md:text-3xl font-bold border border-[var(--border)] text-[var(--text-primary)]"
                 >
                   {letter}
                 </div>
@@ -501,7 +505,7 @@ export default function WortfluessigkeitSimulation() {
               onChange={(e) => setUserInput(e.target.value.toUpperCase())}
               onKeyDown={handleKeyDown}
               placeholder="Wort eingeben..."
-              className="flex-1 px-4 py-3 text-lg font-mono font-bold text-center rounded-lg border-2 border-border bg-background text-foreground focus:border-orange-400 dark:focus:border-orange-500 outline-none"
+              className="flex-1 px-4 py-3 text-lg font-mono font-bold text-center rounded-lg border-2 border-[var(--border)] bg-[var(--background)] text-[var(--text-primary)] focus:border-orange-400 dark:focus:border-orange-500 outline-none"
               autoComplete="off"
               spellCheck={false}
             />

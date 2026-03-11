@@ -41,7 +41,7 @@ function ZahlenfolgeBoxes({ sequence }: { sequence: (number | "?")[] }) {
           key={i}
           className={`min-w-[3rem] px-2 py-2 border rounded-md text-center font-mono text-base font-semibold ${
             val === "?"
-              ? "border-primary-400 dark:border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-700 dark:text-primary-300"
+              ? "border-[var(--accent)] bg-[var(--accent)]/10 text-[var(--accent)]"
               : "border-[var(--border)] bg-[var(--card)] text-[var(--text-primary)]"
           }`}
         >
@@ -196,12 +196,12 @@ export function ZahlenfolgenQuiz({
         <UebungsbeschreibungCard id="kff-zahlenfolgen" collapsible defaultCollapsed />
         <OfficialInstructionCard instruction={OFFICIAL_ZF_INSTRUCTION} />
 
-        <Card className="border-primary-200 dark:border-primary-800/50 bg-primary-50/50 dark:bg-primary-950/20">
+        <Card className="border-[var(--accent)]/30 bg-[var(--accent)]/5">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-lg">
               <Timer className="w-5 h-5" /> Prüfungsmodus
             </CardTitle>
-            <p className="text-sm text-muted">
+            <p className="text-sm text-[var(--muted)]">
               {EXAM_CONFIG.zahlenfolgen.questions} Aufgaben ·{" "}
               {EXAM_CONFIG.zahlenfolgen.timeSeconds / 60} Minuten — wie im echten MedAT.
             </p>
@@ -264,7 +264,7 @@ export function ZahlenfolgenQuiz({
         <Card>
           <CardHeader>
             <CardTitle className="text-lg">Training</CardTitle>
-            <p className="text-sm text-muted">
+            <p className="text-sm text-[var(--muted)]">
               Aufgaben aus der Datenbank -- Schwierigkeit wird automatisch gemischt (leicht, mittel,
               schwer).
             </p>
@@ -284,7 +284,7 @@ export function ZahlenfolgenQuiz({
                     onClick={() => setQuestionCount(c)}
                     className={`flex-1 px-4 py-3 rounded-lg border text-sm font-medium transition-colors cursor-pointer ${
                       questionCount === c
-                        ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300"
+                        ? "border-[var(--accent)] bg-[var(--accent)]/10 text-[var(--accent)]"
                         : "border-[var(--border)] hover:bg-[var(--border)]/50"
                     }`}
                   >
@@ -296,7 +296,7 @@ export function ZahlenfolgenQuiz({
             <Button className="w-full" size="lg" onClick={startTraining} disabled={trainingLoading}>
               {trainingLoading ? (
                 <>
-                  <span className="animate-spin mr-2 inline-block w-5 h-5 border-2 border-primary-500 border-t-transparent rounded-full" />
+                  <span className="animate-spin mr-2 inline-block w-5 h-5 border-2 border-[var(--accent)] border-t-transparent rounded-full" />
                   Wird geladen…
                 </>
               ) : (
@@ -329,10 +329,10 @@ export function ZahlenfolgenQuiz({
         </Button>
         <Card>
           <CardContent className="p-6 text-center">
-            <div className="text-4xl font-bold text-primary-700 dark:text-primary-400">
+            <div className="text-4xl font-bold text-[var(--accent)]">
               {score}/{resultQuestions.length}
             </div>
-            <p className="text-muted mt-1">
+            <p className="text-[var(--muted)] mt-1">
               {resultQuestions.length ? Math.round((score / resultQuestions.length) * 100) : 0}%
               richtig
             </p>
@@ -368,8 +368,8 @@ export function ZahlenfolgenQuiz({
                 <p className="text-sm text-green-700 dark:text-green-400 ml-7">
                   Richtige Antwort: {q.correctNext[0]}, {q.correctNext[1]}
                 </p>
-                <div className="ml-7 mt-2 bg-blue-50 dark:bg-blue-900/20 p-3 rounded-lg">
-                  <p className="text-xs text-blue-700 dark:text-blue-400">
+                <div className="ml-7 mt-2 bg-[var(--surface)] p-3 rounded-lg">
+                  <p className="text-xs text-[var(--muted)]">
                     {stripMarkdownAsterisks(q.explanation)}
                   </p>
                 </div>
@@ -404,7 +404,7 @@ export function ZahlenfolgenQuiz({
         {isTrainingEmpty ? (
           <Card>
             <CardContent className="p-6 text-center space-y-4">
-              <p className="text-muted">
+              <p className="text-[var(--muted)]">
                 Es konnten keine Trainingsaufgaben geladen werden. Der Aufgaben-Pool ist
                 möglicherweise noch nicht gefüllt oder es gab einen Verbindungsfehler.
               </p>
@@ -414,8 +414,8 @@ export function ZahlenfolgenQuiz({
             </CardContent>
           </Card>
         ) : (
-          <div className="flex flex-col items-center justify-center gap-4 text-muted">
-            <div className="animate-spin w-8 h-8 border-2 border-primary-500 border-t-transparent rounded-full" />
+          <div className="flex flex-col items-center justify-center gap-4 text-[var(--muted)]">
+            <div className="animate-spin w-8 h-8 border-2 border-[var(--accent)] border-t-transparent rounded-full" />
             <p>Fragen werden geladen und geprüft...</p>
           </div>
         )}
@@ -428,7 +428,7 @@ export function ZahlenfolgenQuiz({
         <Button variant="ghost" size="sm" onClick={onBack}>
           <ArrowLeft className="w-4 h-4 mr-1" /> Zurück zum Setup
         </Button>
-        <p className="text-muted">Frage nicht gefunden.</p>
+        <p className="text-[var(--muted)]">Frage nicht gefunden.</p>
       </div>
     );
   }
@@ -451,14 +451,14 @@ export function ZahlenfolgenQuiz({
               Prüfungsmodus
             </Badge>
           )}
-          <span className="text-sm text-muted">
+          <span className="text-sm text-[var(--muted)]">
             Frage {index + 1} von {total}
           </span>
         </div>
       </div>
       <div className="w-full bg-[var(--border)] rounded-full h-2">
         <div
-          className="bg-primary-600 h-2 rounded-full transition-all"
+          className="bg-[var(--accent)] h-2 rounded-full transition-all"
           style={{ width: total ? `${((index + 1) / total) * 100}%` : "0%" }}
         />
       </div>
@@ -470,7 +470,7 @@ export function ZahlenfolgenQuiz({
             </Badge>
           )}
           <ZahlenfolgeBoxes sequence={currentQ.sequence} />
-          <p className="text-sm text-muted mb-6 text-center">
+          <p className="text-sm text-[var(--muted)] mb-6 text-center">
             Welche zwei Zahlen folgen als nächstes?
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -479,20 +479,22 @@ export function ZahlenfolgenQuiz({
                 <button
                   key={opt.key}
                   onClick={() => setAnswers((p) => ({ ...p, [currentQ.id]: opt.key }))}
-                  className={`px-4 py-3 rounded-lg border text-sm font-medium transition-colors cursor-pointer text-left ${answers[currentQ.id] === opt.key ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300" : "border-[var(--border)] hover:bg-[var(--border)]/50"}`}
+                  className={`px-4 py-3 rounded-lg border text-sm font-medium transition-colors cursor-pointer text-left ${answers[currentQ.id] === opt.key ? "border-[var(--accent)] bg-[var(--accent)]/10 text-[var(--accent)]" : "border-[var(--border)] hover:bg-[var(--border)]/50"}`}
                 >
                   <span className="font-semibold mr-2">{opt.key})</span>
                   {optionDisplay(opt)}
-                  <kbd className="float-right text-[10px] bg-[var(--border)] px-1.5 py-0.5 rounded text-muted">
+                  <kbd className="float-right text-[10px] bg-[var(--border)] px-1.5 py-0.5 rounded text-[var(--muted)]">
                     {oi + 1}
                   </kbd>
                 </button>
               ))
             ) : (
-              <p className="text-sm text-muted">Keine Optionen geladen.</p>
+              <p className="text-sm text-[var(--muted)]">Keine Optionen geladen.</p>
             )}
           </div>
-          {currentQ.source && <p className="text-xs text-muted mt-3">Quelle: {currentQ.source}</p>}
+          {currentQ.source && (
+            <p className="text-xs text-[var(--muted)] mt-3">Quelle: {currentQ.source}</p>
+          )}
         </CardContent>
       </Card>
       <div className="flex justify-between">

@@ -233,19 +233,19 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
           <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
         </Button>
         <h1 className="text-2xl font-bold text-[var(--text-primary)]">Figuren zusammensetzen</h1>
-        <p className="text-sm text-muted">
+        <p className="text-sm text-[var(--muted)]">
           Welche Figur entsteht aus den Teilen? (Nur Drehen/Verschieben, keine Spiegelung.) 1:30 min
           pro Aufgabe.
         </p>
         <UebungsbeschreibungCard id="kff-figuren" collapsible defaultCollapsed />
         <OfficialInstructionCard instruction={OFFICIAL_FZ_INSTRUCTION} />
 
-        <Card className="border-primary-200 dark:border-primary-800/50 bg-primary-50/50 dark:bg-primary-950/20">
+        <Card className="border-[var(--accent)]/30 bg-[var(--accent)]/5">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-lg">
               <Timer className="w-5 h-5" /> Prüfungsmodus
             </CardTitle>
-            <p className="text-sm text-muted">
+            <p className="text-sm text-[var(--muted)]">
               {EXAM_CONFIG.figuren.questions} Aufgaben · {EXAM_CONFIG.figuren.timeSeconds / 60}{" "}
               Minuten gesamt — wie im echten MedAT (kein Timer pro Frage).
             </p>
@@ -354,7 +354,7 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
                     onClick={() => setQuestionCount(c)}
                     className={`flex-1 px-3 py-2 rounded-lg border text-sm font-medium transition-colors cursor-pointer ${
                       questionCount === c
-                        ? "border-rose-500 bg-rose-50 dark:bg-rose-900/20"
+                        ? "border-[var(--accent)] bg-[var(--accent)]/10 text-[var(--accent)]"
                         : "border-[var(--border)]"
                     }`}
                   >
@@ -370,7 +370,7 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
               <Button size="lg" onClick={startTraining} disabled={trainingLoading}>
                 {trainingLoading ? (
                   <>
-                    <span className="animate-spin mr-2 inline-block w-5 h-5 border-2 border-rose-500 border-t-transparent rounded-full" />
+                    <span className="animate-spin mr-2 inline-block w-5 h-5 border-2 border-[var(--accent)] border-t-transparent rounded-full" />
                     Wird geladen…
                   </>
                 ) : (
@@ -401,10 +401,10 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
         </Button>
         <Card>
           <CardContent className="p-6 text-center">
-            <div className="text-4xl font-bold text-rose-700 dark:text-rose-400">
+            <div className="text-4xl font-bold text-[var(--accent)]">
               {score}/{questions.length}
             </div>
-            <p className="text-muted mt-1">
+            <p className="text-[var(--muted)] mt-1">
               {Math.round((score / questions.length) * 100)}% richtig
             </p>
             <p className="text-sm text-green-600 dark:text-green-400 mt-1">+{score * 10} XP</p>
@@ -432,7 +432,7 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
                   </Badge>
                   {q.source && (
                     <span
-                      className="text-[10px] text-muted truncate max-w-[180px]"
+                      className="text-[10px] text-[var(--muted)] truncate max-w-[180px]"
                       title={q.source}
                     >
                       {q.source}
@@ -447,7 +447,7 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
                   <div className="flex items-center gap-3 sm:gap-6 bg-[var(--border)]/30 rounded-xl p-4 border border-[var(--border)]">
                     {/* Puzzleteile — larger */}
                     <div className="flex-1 min-w-0">
-                      <p className="text-xs font-medium text-muted mb-1 uppercase tracking-wider">
+                      <p className="text-xs font-medium text-[var(--muted)] mb-1 uppercase tracking-wider">
                         {q.pieces.length} Teile
                       </p>
                       {(() => {
@@ -474,11 +474,11 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
                     </div>
                     {/* Arrow */}
                     <div className="flex flex-col items-center gap-0.5 shrink-0">
-                      <span className="text-2xl text-muted">→</span>
+                      <span className="text-2xl text-[var(--muted)]">→</span>
                     </div>
                     {/* Target shape with cut lines — much larger and prominent */}
                     <div className="shrink-0">
-                      <p className="text-xs font-medium text-muted mb-1 uppercase tracking-wider">
+                      <p className="text-xs font-medium text-[var(--muted)] mb-1 uppercase tracking-wider">
                         {getShapeDisplayName(q.targetShapeId)}
                       </p>
                       <svg
@@ -508,7 +508,7 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
                       </svg>
                     </div>
                   </div>
-                  <p className="text-[11px] text-muted mt-1.5 ml-1">
+                  <p className="text-[11px] text-[var(--muted)] mt-1.5 ml-1">
                     Die gestrichelten Linien zeigen, wo die Teile zusammenstoßen.
                   </p>
                 </div>
@@ -577,8 +577,8 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
                   )}
                 </div>
                 {/* Explanation — specific, pedagogically clear */}
-                <div className="ml-7 mt-2 bg-blue-50 dark:bg-blue-900/20 p-3.5 rounded-lg space-y-1.5">
-                  <p className="text-xs font-medium text-blue-800 dark:text-blue-300">
+                <div className="ml-7 mt-2 bg-[var(--surface)] p-3.5 rounded-lg space-y-1.5">
+                  <p className="text-xs font-medium text-[var(--text-secondary)]">
                     {(() => {
                       const name = getShapeDisplayNameAkk(q.targetShapeId);
                       const n = q.pieces.length;
@@ -587,7 +587,7 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
                         : `Die ${n} Teile ergeben zusammengesetzt ${name} (Option ${correctLabel}).`;
                     })()}
                   </p>
-                  <p className="text-[11px] text-blue-600 dark:text-blue-400">
+                  <p className="text-[11px] text-[var(--muted)]">
                     {correct
                       ? "Gut erkannt! Achte auf die Gesamtfläche und die Winkel der Teile."
                       : q.correctIndex === 4
@@ -628,7 +628,7 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
         {isTrainingEmpty ? (
           <Card>
             <CardContent className="p-6 text-center space-y-4">
-              <p className="text-muted">
+              <p className="text-[var(--muted)]">
                 Es konnten keine Trainingsaufgaben geladen werden. Der Aufgaben-Pool ist
                 möglicherweise noch nicht gefüllt oder es gab einen Verbindungsfehler.
               </p>
@@ -643,7 +643,7 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
             </CardContent>
           </Card>
         ) : (
-          <p className="text-muted">Keine Aufgabe geladen.</p>
+          <p className="text-[var(--muted)]">Keine Aufgabe geladen.</p>
         )}
       </div>
     );
@@ -654,7 +654,11 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
   const minutes = Math.floor(timeLeft / 60);
   const seconds = timeLeft % 60;
   const timerColor =
-    timeLeft <= 15 ? "text-red-500" : timeLeft <= 30 ? "text-orange-500" : "text-[var(--muted)]";
+    timeLeft <= 15
+      ? "text-red-500"
+      : timeLeft <= 30
+        ? "text-[var(--warning)]"
+        : "text-[var(--muted)]";
 
   return (
     <div className="max-w-4xl mx-auto space-y-6">
@@ -671,7 +675,7 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
               Prüfungsmodus
             </Badge>
           )}
-          <span className="text-sm text-muted">
+          <span className="text-sm text-[var(--muted)]">
             Aufgabe {index + 1} von {questions.length}
           </span>
           {examMode !== "exam" && (
@@ -687,7 +691,7 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
 
       <div className="w-full bg-[var(--border)] rounded-full h-2">
         <div
-          className="bg-rose-500 h-2 rounded-full transition-all"
+          className="bg-[var(--accent)] h-2 rounded-full transition-all"
           style={{ width: `${((index + 1) / questions.length) * 100}%` }}
         />
       </div>
@@ -698,7 +702,7 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <Card className="border-[var(--border)]">
           <CardContent className="p-6">
-            <p className="text-xs font-medium text-muted uppercase tracking-wider mb-3">
+            <p className="text-xs font-medium text-[var(--muted)] uppercase tracking-wider mb-3">
               Puzzleteile
             </p>
             <div className="flex flex-wrap gap-4 justify-center py-4 bg-[var(--border)]/30 rounded-lg">
@@ -720,7 +724,7 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
           </CardContent>
         </Card>
         <div>
-          <p className="text-xs font-medium text-muted uppercase tracking-wider mb-3">
+          <p className="text-xs font-medium text-[var(--muted)] uppercase tracking-wider mb-3">
             Antwortoptionen
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-5 lg:grid-cols-2 gap-3">
@@ -733,13 +737,13 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
                   onClick={() => setAnswers((p) => ({ ...p, [fzQ.id]: label }))}
                   className={`flex flex-col items-center justify-center min-h-[90px] p-3 rounded-lg border-2 transition-colors cursor-pointer ${
                     selected
-                      ? "border-primary-500 bg-primary-50 dark:bg-primary-900/20 text-primary-800 dark:text-primary-300"
+                      ? "border-[var(--accent)] bg-[var(--accent)]/10 text-[var(--accent)]"
                       : "border-[var(--border)] bg-[var(--card)] hover:border-[var(--border)]"
                   }`}
                 >
                   <span className="text-sm font-bold text-[var(--muted)] mb-1">{label}</span>
                   {isOptionE(opt) ? (
-                    <span className="text-xs text-center text-muted leading-tight">
+                    <span className="text-xs text-center text-[var(--muted)] leading-tight">
                       Keine der Figuren ist richtig
                     </span>
                   ) : (

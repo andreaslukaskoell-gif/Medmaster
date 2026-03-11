@@ -138,7 +138,7 @@ export function ImplikationSolutionDiagram({
           layout={layout}
           highlightRegion={isNone ? undefined : highlight}
         />
-        <p className="text-xs font-medium text-center text-muted">
+        <p className="text-xs font-medium text-center text-[var(--muted)]">
           {invalid
             ? "Ungültige Aufgabe – Diagramm kann nicht aus den Prämissen abgeleitet werden."
             : useDefaultVisual

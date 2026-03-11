@@ -102,7 +102,7 @@ function HinterfragBlock({
           setRevealed(true);
         }
       }}
-      className="inline-flex items-center gap-1 cursor-pointer select-none rounded px-1 -mx-1 hover:bg-primary-100 dark:hover:bg-primary-900/30 focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:ring-offset-1 border-b-2 border-dashed border-primary-400 dark:border-primary-500 text-primary-700 dark:text-primary-300"
+      className="inline-flex items-center gap-1 cursor-pointer select-none rounded px-1 -mx-1 hover:bg-[var(--accent)]/10 dark:hover:bg-[var(--accent)]/30 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/50 focus:ring-offset-1 border-b-2 border-dashed border-[var(--accent)]/60 dark:border-[var(--accent)] text-[var(--accent)] dark:text-[var(--accent)]/30"
       title="Klicken oder Hover zum Enthüllen"
     >
       {isRevealed ? (
@@ -118,7 +118,7 @@ function HinterfragBlock({
 }
 
 const SMART_LINK_SUBTLE_CLASS =
-  "border-b border-dotted border-primary-400/60 dark:border-primary-500/50";
+  "border-b border-dotted border-[var(--accent)]/60/60 dark:border-[var(--accent)]/50";
 
 function getTextContent(children: ReactNode): string {
   if (typeof children === "string") return children;
@@ -144,7 +144,7 @@ function buildMarkdownComponents(keywordLinkEntries?: KeywordLinkEntry[]) {
     },
     table: ({ children, ...props }: ComponentProps<"table">) => (
       <div className="overflow-x-auto my-4">
-        <table className="w-full text-sm border-collapse border border-border" {...props}>
+        <table className="w-full text-sm border-collapse border border-[var(--border)]" {...props}>
           {children}
         </table>
       </div>
@@ -381,7 +381,7 @@ export function SubchapterContent({
                 lightbox
               />
               {uk.imageCaption && (
-                <figcaption className="mt-2 text-center text-xs text-[var(--text-muted)] italic">
+                <figcaption className="mt-2 text-center text-xs text-[var(--text-[var(--muted)])] italic">
                   {uk.imageCaption}
                 </figcaption>
               )}
@@ -623,7 +623,7 @@ export function SubchapterContent({
     <div className="space-y-6 content-section">
       {topics.length > 0 && (
         <div className="flex flex-wrap gap-1.5 pb-3 border-b border-[var(--border)]">
-          <span className="text-xs font-semibold text-foreground uppercase tracking-wide self-center mr-1">
+          <span className="text-xs font-semibold text-[var(--text-primary)] uppercase tracking-wide self-center mr-1">
             Themen:
           </span>
           {topics.map((topic) => (

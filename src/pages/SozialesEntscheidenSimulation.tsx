@@ -210,13 +210,15 @@ export default function SozialesEntscheidenSimulation() {
             <Timer className="w-8 h-8 text-teal-500" />
           </div>
           <div>
-            <h2 className="text-xl font-bold text-app-foreground mb-2">Simulation starten</h2>
-            <p className="text-sm text-muted max-w-md mx-auto">
+            <h2 className="text-xl font-bold text-[var(--text-primary)] mb-2">
+              Simulation starten
+            </h2>
+            <p className="text-sm text-[var(--muted)] max-w-md mx-auto">
               {SCENARIO_COUNT} zufällige Szenarien mit je 8 Handlungsoptionen in {TIME_LIMIT / 60}{" "}
               Minuten. Bewerte jede Option auf der Skala 1-6.
             </p>
           </div>
-          <div className="flex items-center justify-center gap-4 text-sm text-muted">
+          <div className="flex items-center justify-center gap-4 text-sm text-[var(--muted)]">
             <span className="flex items-center gap-1">
               <Clock className="w-4 h-4" /> {TIME_LIMIT / 60}:00 min
             </span>
@@ -250,8 +252,8 @@ export default function SozialesEntscheidenSimulation() {
               <Trophy className="w-8 h-8 text-white" />
             </div>
             <div>
-              <h2 className="text-2xl font-bold text-app-foreground">{scorePercent}%</h2>
-              <p className="text-sm text-muted">
+              <h2 className="text-2xl font-bold text-[var(--text-primary)]">{scorePercent}%</h2>
+              <p className="text-sm text-[var(--muted)]">
                 Übereinstimmung —{" "}
                 {scorePercent >= 80
                   ? "Ausgezeichnet!"
@@ -264,18 +266,18 @@ export default function SozialesEntscheidenSimulation() {
             </div>
             <div className="flex justify-center gap-6 text-sm">
               <div className="text-center">
-                <p className="text-lg font-bold text-app-foreground">
+                <p className="text-lg font-bold text-[var(--text-primary)]">
                   {formatTime(TIME_LIMIT - timeLeft)}
                 </p>
-                <p className="text-xs text-muted">Gesamtzeit</p>
+                <p className="text-xs text-[var(--muted)]">Gesamtzeit</p>
               </div>
               <div className="text-center">
-                <p className="text-lg font-bold text-app-foreground">{avgTime}s</p>
-                <p className="text-xs text-muted">Ø pro Szenario</p>
+                <p className="text-lg font-bold text-[var(--text-primary)]">{avgTime}s</p>
+                <p className="text-xs text-[var(--muted)]">Ø pro Szenario</p>
               </div>
             </div>
             <div className="w-full max-w-xs mx-auto">
-              <div className="w-full bg-border rounded-full h-3">
+              <div className="w-full bg-[var(--border)] rounded-full h-3">
                 <div
                   className={`h-3 rounded-full transition-all ${scorePercent >= 80 ? "bg-green-500" : scorePercent >= 50 ? "bg-amber-500" : "bg-red-500"}`}
                   style={{ width: `${scorePercent}%` }}
@@ -291,7 +293,7 @@ export default function SozialesEntscheidenSimulation() {
         </Card>
 
         <div className="space-y-2">
-          <h3 className="text-sm font-semibold text-muted uppercase tracking-wider">
+          <h3 className="text-sm font-semibold text-[var(--muted)] uppercase tracking-wider">
             Szenarien-Übersicht
           </h3>
           {results.map((result, i) => {
@@ -310,11 +312,11 @@ export default function SozialesEntscheidenSimulation() {
                     >
                       {i + 1}
                     </span>
-                    <p className="text-sm text-app-foreground flex-1 truncate">
+                    <p className="text-sm text-[var(--text-primary)] flex-1 truncate">
                       {result.scenario.scenario.slice(0, 80)}...
                     </p>
                     <div className="flex items-center gap-2 shrink-0">
-                      <span className="text-xs text-muted">{result.timeSpent}s</span>
+                      <span className="text-xs text-[var(--muted)]">{result.timeSpent}s</span>
                       <span
                         className={`text-xs font-medium ${scenarioPercent >= 70 ? "text-green-600 dark:text-green-400" : "text-amber-600 dark:text-amber-400"}`}
                       >
@@ -323,7 +325,7 @@ export default function SozialesEntscheidenSimulation() {
                     </div>
                   </button>
                   {expandedResult === i && (
-                    <div className="px-4 pb-4 space-y-2 border-t border-border pt-3">
+                    <div className="px-4 pb-4 space-y-2 border-t border-[var(--border)] pt-3">
                       {result.scenario.handlungsoptionen.map((opt, j) => {
                         const userRating = result.ratings[j];
                         const deviation =
@@ -337,10 +339,10 @@ export default function SozialesEntscheidenSimulation() {
                               {j + 1}. {opt.text}
                             </p>
                             <div className="flex items-center gap-3 text-xs">
-                              <span className="text-muted">
+                              <span className="text-[var(--muted)]">
                                 Deine Bewertung: <strong>{userRating ?? "—"}</strong>
                               </span>
-                              <span className="text-muted">
+                              <span className="text-[var(--muted)]">
                                 Ideal: <strong>{opt.idealRating}</strong>
                               </span>
                               <span className={`font-medium ${getDeviationColor(deviation)}`}>
@@ -378,7 +380,7 @@ export default function SozialesEntscheidenSimulation() {
       <div className="flex items-center gap-3">
         <Timer className={`w-5 h-5 ${isUrgent ? "text-red-500 animate-pulse" : "text-teal-500"}`} />
         <div className="flex-1">
-          <div className="w-full bg-border rounded-full h-2.5">
+          <div className="w-full bg-[var(--border)] rounded-full h-2.5">
             <div
               className={`h-2.5 rounded-full transition-all ${isUrgent ? "bg-red-500" : "bg-teal-500"}`}
               style={{ width: `${timePercent}%` }}
@@ -392,7 +394,7 @@ export default function SozialesEntscheidenSimulation() {
         </span>
       </div>
 
-      <div className="flex items-center justify-between text-sm text-muted">
+      <div className="flex items-center justify-between text-sm text-[var(--muted)]">
         <span>
           Szenario {currentIndex + 1} von {scenarios.length}
         </span>
@@ -409,7 +411,7 @@ export default function SozialesEntscheidenSimulation() {
       <Card>
         <CardContent className="p-0">
           <div className="bg-gray-50 dark:bg-gray-800 p-6 border-b border-gray-200 dark:border-gray-700">
-            <p className="text-sm text-app-foreground leading-relaxed">
+            <p className="text-sm text-[var(--text-primary)] leading-relaxed">
               {currentScenario.scenario}
             </p>
           </div>
@@ -423,12 +425,14 @@ export default function SozialesEntscheidenSimulation() {
                   key={i}
                   className="border border-gray-200 dark:border-gray-700 rounded-lg p-4 space-y-2"
                 >
-                  <p className="text-sm text-app-foreground">
+                  <p className="text-sm text-[var(--text-primary)]">
                     <span className="font-bold text-teal-500 mr-1">{i + 1}.</span>
                     {option.text}
                   </p>
                   <div className="flex items-center gap-2">
-                    <span className="text-[10px] text-muted w-20 shrink-0">unangemessen</span>
+                    <span className="text-[10px] text-[var(--muted)] w-20 shrink-0">
+                      unangemessen
+                    </span>
                     <div className="flex-1 flex gap-1">
                       {[1, 2, 3, 4, 5, 6].map((value) => (
                         <button
@@ -437,14 +441,14 @@ export default function SozialesEntscheidenSimulation() {
                           className={`flex-1 h-9 rounded-md text-xs font-medium transition-all cursor-pointer ${
                             ratings[i] === value
                               ? "bg-teal-500 text-white"
-                              : "bg-gray-200 dark:bg-gray-700 text-muted hover:bg-gray-300 dark:hover:bg-gray-600"
+                              : "bg-gray-200 dark:bg-gray-700 text-[var(--muted)] hover:bg-gray-300 dark:hover:bg-gray-600"
                           }`}
                         >
                           {value}
                         </button>
                       ))}
                     </div>
-                    <span className="text-[10px] text-muted w-20 text-right shrink-0">
+                    <span className="text-[10px] text-[var(--muted)] w-20 text-right shrink-0">
                       angemessen
                     </span>
                   </div>

@@ -110,7 +110,7 @@ function Seite1() {
         <h2 className="text-xl font-bold text-[var(--text-primary)] mb-2">
           Das Prozessmodell nach Gross
         </h2>
-        <p className="text-sm text-muted">
+        <p className="text-sm text-[var(--muted)]">
           Seit 2023 im MedAT: Du musst die 5 Regulationsstrategien kennen und anwenden können. Sie
           beschreiben, WO im Emotionsprozess man regulierend eingreifen kann.
         </p>
@@ -130,13 +130,15 @@ function Seite1() {
                 >
                   {s.number}
                 </div>
-                <p className="text-[10px] text-muted mt-1 max-w-[80px] leading-tight">{s.name}</p>
+                <p className="text-[10px] text-[var(--muted)] mt-1 max-w-[80px] leading-tight">
+                  {s.name}
+                </p>
               </div>
               {i < strategies.length - 1 && <div className="w-6 h-0.5 bg-[var(--border)] mx-1" />}
             </div>
           ))}
         </div>
-        <div className="flex items-center justify-between mt-3 text-[10px] text-muted">
+        <div className="flex items-center justify-between mt-3 text-[10px] text-[var(--muted)]">
           <span>← Früh im Prozess</span>
           <span>Spät im Prozess →</span>
         </div>
@@ -153,13 +155,13 @@ function Seite1() {
                 {s.number}
               </span>
               <h3 className={`font-semibold ${s.textColor}`}>{s.name}</h3>
-              <span className="text-[10px] bg-white/50 dark:bg-black/20 px-2 py-0.5 rounded-full text-muted">
+              <span className="text-[10px] bg-white/50 dark:bg-black/20 px-2 py-0.5 rounded-full text-[var(--muted)]">
                 {s.when}
               </span>
             </div>
             <p className={`text-sm ${s.descColor}`}>{s.description}</p>
             <div className="bg-[var(--card)] rounded-lg p-3">
-              <p className="text-xs text-muted mb-0.5">Beispiel:</p>
+              <p className="text-xs text-[var(--muted)] mb-0.5">Beispiel:</p>
               <p className="text-sm italic text-[var(--text-secondary)]">{s.example}</p>
             </div>
           </div>
@@ -177,7 +179,7 @@ function Seite2() {
         <h2 className="text-xl font-bold text-[var(--text-primary)] mb-2">
           Kognitive Veränderung — Die Königsstrategie
         </h2>
-        <p className="text-sm text-muted">
+        <p className="text-sm text-[var(--muted)]">
           Diese Strategie ist im MedAT FAST IMMER die richtige Antwort. Lerne sie im Detail!
         </p>
       </div>
@@ -198,11 +200,11 @@ function Seite2() {
               <h4 className="font-semibold text-[var(--text-primary)] mb-1">
                 1. Perspektivenwechsel
               </h4>
-              <p className="text-sm text-muted mb-2">
+              <p className="text-sm text-[var(--muted)] mb-2">
                 Die Situation aus der Sicht einer anderen Person betrachten.
               </p>
               <div className="bg-green-50 dark:bg-green-900/15 rounded-lg p-3">
-                <p className="text-xs text-muted">Beispiel:</p>
+                <p className="text-xs text-[var(--muted)]">Beispiel:</p>
                 <p className="text-sm italic text-[var(--text-secondary)]">
                   &quot;Der Prof hat es nicht persönlich gemeint — er steht selbst unter
                   Druck.&quot;
@@ -214,11 +216,11 @@ function Seite2() {
           <Card>
             <CardContent className="p-4">
               <h4 className="font-semibold text-[var(--text-primary)] mb-1">2. Lernchance sehen</h4>
-              <p className="text-sm text-muted mb-2">
+              <p className="text-sm text-[var(--muted)] mb-2">
                 Negative Erfahrungen als Wachstumsmöglichkeit umdeuten.
               </p>
               <div className="bg-green-50 dark:bg-green-900/15 rounded-lg p-3">
-                <p className="text-xs text-muted">Beispiel:</p>
+                <p className="text-xs text-[var(--muted)]">Beispiel:</p>
                 <p className="text-sm italic text-[var(--text-secondary)]">
                   &quot;Durch diesen Fehler weiß ich jetzt, worauf ich achten muss.&quot;
                 </p>
@@ -229,11 +231,11 @@ function Seite2() {
           <Card>
             <CardContent className="p-4">
               <h4 className="font-semibold text-[var(--text-primary)] mb-1">3. Relativierung</h4>
-              <p className="text-sm text-muted mb-2">
+              <p className="text-sm text-[var(--muted)] mb-2">
                 Die Situation in einen größeren Kontext einordnen.
               </p>
               <div className="bg-green-50 dark:bg-green-900/15 rounded-lg p-3">
-                <p className="text-xs text-muted">Beispiel:</p>
+                <p className="text-xs text-[var(--muted)]">Beispiel:</p>
                 <p className="text-sm italic text-[var(--text-secondary)]">
                   &quot;In fünf Jahren werde ich darüber lachen. Es ist nicht das Ende der
                   Welt.&quot;
@@ -245,9 +247,11 @@ function Seite2() {
           <Card>
             <CardContent className="p-4">
               <h4 className="font-semibold text-[var(--text-primary)] mb-1">4. Uminterpretation</h4>
-              <p className="text-sm text-muted mb-2">Körperliche Symptome positiv umdeuten.</p>
+              <p className="text-sm text-[var(--muted)] mb-2">
+                Körperliche Symptome positiv umdeuten.
+              </p>
               <div className="bg-green-50 dark:bg-green-900/15 rounded-lg p-3">
-                <p className="text-xs text-muted">Beispiel:</p>
+                <p className="text-xs text-[var(--muted)]">Beispiel:</p>
                 <p className="text-sm italic text-[var(--text-secondary)]">
                   &quot;Mein Herzklopfen ist Aufregung, nicht Angst — mein Körper ist bereit!&quot;
                 </p>
@@ -296,7 +300,7 @@ function Seite3() {
         <h2 className="text-xl font-bold text-[var(--text-primary)] mb-2">
           Aufgabenformat &amp; Lösungsstrategie
         </h2>
-        <p className="text-sm text-muted">
+        <p className="text-sm text-[var(--muted)]">
           So sieht eine Aufgabe im MedAT aus — und so löst du sie.
         </p>
       </div>
@@ -313,7 +317,7 @@ function Seite3() {
           <p className="text-sm text-[var(--text-secondary)] whitespace-pre-line">
             {EMOTIONEN_REGULIEREN_AUSFUELLHILFE}
           </p>
-          <p className="text-xs text-muted">
+          <p className="text-xs text-[var(--muted)]">
             Diese Instruktion erscheint im Aufnahmeverfahren vor den Aufgaben. In der Simulation
             kannst du sie jederzeit über &quot;Ausfüllhilfe anzeigen&quot; einblenden.
           </p>
@@ -325,18 +329,18 @@ function Seite3() {
         <CardContent className="p-5 space-y-3">
           <h3 className="font-semibold text-[var(--text-primary)]">Aufgabenformat</h3>
           <div className="bg-[var(--border)]/30 p-4 rounded-lg border-l-4 border-pink-400">
-            <p className="text-sm text-muted mb-1">Situation + unerwünschte Emotion:</p>
+            <p className="text-sm text-[var(--muted)] mb-1">Situation + unerwünschte Emotion:</p>
             <p className="text-sm italic text-[var(--text-secondary)]">
               &quot;Vor der Anatomie-Prüfung spürt Markus starke Prüfungsangst...&quot;
             </p>
           </div>
           <div className="bg-[var(--border)]/30 p-4 rounded-lg border-l-4 border-indigo-400">
-            <p className="text-sm text-muted mb-1">Frage:</p>
+            <p className="text-sm text-[var(--muted)] mb-1">Frage:</p>
             <p className="text-sm font-medium text-[var(--text-secondary)]">
               &quot;Welche Strategie wäre am effektivsten?&quot;
             </p>
           </div>
-          <p className="text-sm text-muted">→ 5 Optionen (eine pro Strategie)</p>
+          <p className="text-sm text-[var(--muted)]">→ 5 Optionen (eine pro Strategie)</p>
         </CardContent>
       </Card>
 
@@ -354,7 +358,7 @@ function Seite3() {
               </span>
               <h3 className="font-semibold text-[var(--text-primary)]">Situation analysieren</h3>
             </div>
-            <p className="text-sm text-muted pl-11">
+            <p className="text-sm text-[var(--muted)] pl-11">
               Ist die Situation veränderbar? Vermeidbar? Oder muss die Person damit umgehen?
             </p>
           </CardContent>
@@ -368,7 +372,7 @@ function Seite3() {
               </span>
               <h3 className="font-semibold text-[var(--text-primary)]">Zeitpunkt beachten</h3>
             </div>
-            <p className="text-sm text-muted pl-11">
+            <p className="text-sm text-[var(--muted)] pl-11">
               Ist die Person NOCH NICHT in der Situation? → Situationsauswahl prüfen. Ist sie
               MITTENDRIN? → Kognitive Veränderung als Standard prüfen.
             </p>
@@ -385,7 +389,7 @@ function Seite3() {
                 Langfristig vs. kurzfristig
               </h3>
             </div>
-            <p className="text-sm text-muted pl-11">
+            <p className="text-sm text-[var(--muted)] pl-11">
               Die Frage fragt nach der &quot;effektivsten&quot; Strategie — damit ist LANGFRISTIG
               gemeint. Kognitive Veränderung ist fast immer langfristig am effektivsten.
             </p>
@@ -445,7 +449,7 @@ export default function EmotionenRegulierenLernen() {
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
           <PageIndicator current={currentPage} total={totalPages} />
-          <span className="text-xs text-muted">
+          <span className="text-xs text-[var(--muted)]">
             Seite {currentPage + 1} von {totalPages}
           </span>
         </div>
@@ -457,7 +461,7 @@ export default function EmotionenRegulierenLernen() {
               className={`text-xs px-3 py-1.5 rounded-full transition-colors cursor-pointer ${
                 i === currentPage
                   ? "bg-pink-100 dark:bg-pink-900/30 text-pink-700 dark:text-pink-300 font-medium"
-                  : "text-muted hover:bg-[var(--border)]/50"
+                  : "text-[var(--muted)] hover:bg-[var(--border)]/50"
               }`}
             >
               {title}
