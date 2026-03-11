@@ -306,7 +306,6 @@ In der Atemgasanalytik gelten Kohlenwasserstoffe wie Ethan und Pentan als Biomar
       ],
     },
 
-
     // ch-12-02 archiviert → _archiv/chemie/kap6-org-archived-uks.ts (NOT in MedAT Stichwortliste scope)
 
     // ─────────────────────────────────────────────────────────────────

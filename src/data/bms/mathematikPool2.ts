@@ -1,6 +1,6 @@
 /**
  * Mathematik BMS Pool 2 — 70 Fragen im MedAT-Stil (Typ A).
- * Stoff: mathe-kap1 (Zahlen), mathe-kap2 (Algebra), mathe-kap3 (Grundlagen), mathe-kap5 (Funktionen), mathe-kap6 (Vektoren), mathe-kap7 (Stochastik).
+ * Stoff: mathe-kap1 (Zahlen), mathe-kap2 (Algebra), mathe-kap3 (Grundlagen), mathe-kap5 (Funktionen), mathe-kap6 (Vektoren).
  * Schwierigkeit: 28 leicht / 28 mittel / 14 schwer.
  */
 import type { Question } from "./index";
@@ -678,115 +678,5 @@ export const mathematikPool2: Question[] = [
     ["Schwerpunkt", "Dreieck", "Koordinaten"]
   ),
 
-  // ─── mathe-kap7: Stochastik & Kombinatorik (11 Fragen) ──────────────────
-  q(
-    "ma-pool-2-060",
-    "mathe-kap7",
-    "Ein fairer Würfel wird zweimal geworfen. Mit welcher Wahrscheinlichkeit erscheint mindestens einmal eine 6?",
-    ["1/3", "11/36", "1/6", "1/36", "1/12"],
-    1,
-    "P(mindestens eine 6) = 1 − P(keine 6) = 1 − (5/6)² = 1 − 25/36 = 11/36.",
-    "mittel",
-    ["Wahrscheinlichkeit", "Gegenwahrscheinlichkeit", "Würfel"]
-  ),
-  q(
-    "ma-pool-2-061",
-    "mathe-kap7",
-    "In einer Gruppe von 10 Patienten reagieren 7 auf eine Behandlung. Wie viele Möglichkeiten gibt es, 3 Patienten aus der Gruppe auszuwählen, die alle auf die Behandlung reagieren?",
-    ["35", "30", "21", "10", "120"],
-    0,
-    "Aus 7 Reagierenden werden 3 gewählt: C(7,3) = 7! / (3! · 4!) = (7·6·5)/(3·2·1) = 35.",
-    "mittel",
-    ["Kombinatorik", "Binomialkoeffizient", "Auswahl"]
-  ),
-  q(
-    "ma-pool-2-062",
-    "mathe-kap7",
-    "Ein diagnostischer Test ist positiv mit P(pos|krank) = 0,9 und P(pos|gesund) = 0,1. Die Prävalenz beträgt 10 %. Wie hoch ist die Wahrscheinlichkeit, tatsächlich krank zu sein, wenn der Test positiv ist? (Bayes-Theorem)",
-    ["50 %", "90 %", "9 %", "47,4 %", "81 %"],
-    0,
-    "P(krank|pos) = P(pos|krank)·P(krank) / P(pos). P(pos) = 0,9·0,1 + 0,1·0,9 = 0,09 + 0,09 = 0,18. P(krank|pos) = 0,09/0,18 = 0,5 = 50 %.",
-    "schwer",
-    ["Bayes-Theorem", "Testtheorie", "Bedingte Wahrscheinlichkeit", "Epidemiologie"]
-  ),
-  q(
-    "ma-pool-2-063",
-    "mathe-kap7",
-    "Auf einer Isolierstation befinden sich 5 Patienten. Wie viele Möglichkeiten gibt es, sie in einer Reihe aufzustellen (für die Visite)?",
-    ["25", "120", "20", "60", "100"],
-    1,
-    "Permutationen von 5 Elementen: 5! = 5×4×3×2×1 = 120.",
-    "leicht",
-    ["Permutationen", "Kombinatorik", "Fakultät"]
-  ),
-  q(
-    "ma-pool-2-064",
-    "mathe-kap7",
-    "X sei binomialverteilt mit n = 10 und p = 0,5. Was ist der Erwartungswert E(X)?",
-    ["2,5", "10", "5", "0,5", "25"],
-    2,
-    "E(X) = n · p = 10 × 0,5 = 5.",
-    "leicht",
-    ["Binomialverteilung", "Erwartungswert", "Statistik"]
-  ),
-  q(
-    "ma-pool-2-065",
-    "mathe-kap7",
-    "Bei der Hardy-Weinberg-Gleichung gilt: p² + 2pq + q² = 1. Die Allelfrequenz des rezessiven Allels beträgt q = 0,2. Wie groß ist der Anteil der heterozygoten Genotypen (2pq)?",
-    ["4 %", "16 %", "32 %", "64 %", "20 %"],
-    2,
-    "p = 1 − q = 0,8. 2pq = 2 × 0,8 × 0,2 = 0,32 = 32 %.",
-    "mittel",
-    ["Hardy-Weinberg", "Populationsgenetik", "Wahrscheinlichkeit"]
-  ),
-  q(
-    "ma-pool-2-066",
-    "mathe-kap7",
-    "Zwei unabhängige Ereignisse A und B haben P(A) = 0,4 und P(B) = 0,3. Wie groß ist P(A ∪ B)?",
-    ["0,12", "0,58", "0,7", "0,70", "0,18"],
-    1,
-    "P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = 0,4 + 0,3 − 0,4·0,3 = 0,7 − 0,12 = 0,58.",
-    "mittel",
-    ["Wahrscheinlichkeit", "Additionssatz", "Unabhängigkeit"]
-  ),
-  q(
-    "ma-pool-2-067",
-    "mathe-kap7",
-    "In einem Labor werden zufällig 2 Reagenzgläser aus 8 entnommen (4 enthalten Probe A, 4 enthalten Probe B). Mit welcher Wahrscheinlichkeit sind beide entnommenen Gläser von Probe A?",
-    ["1/2", "3/14", "1/4", "1/14", "2/7"],
-    1,
-    "P(beide A) = C(4,2)/C(8,2) = 6/28 = 3/14.",
-    "schwer",
-    ["Kombinatorik", "Wahrscheinlichkeit ohne Zurücklegen"]
-  ),
-  q(
-    "ma-pool-2-068",
-    "mathe-kap7",
-    "Die Standardabweichung einer Binomialverteilung mit n = 100 und p = 0,25 ist:",
-    ["25", "√25 = 5", "√18,75 ≈ 4,33", "√75 ≈ 8,66", "2,5"],
-    2,
-    "Varianz σ² = n·p·(1−p) = 100·0,25·0,75 = 18,75. Standardabweichung σ = √18,75 ≈ 4,33.",
-    "mittel",
-    ["Binomialverteilung", "Standardabweichung", "Statistik"]
-  ),
-  q(
-    "ma-pool-2-069",
-    "mathe-kap7",
-    "Wie viele unterschiedliche dreistellige PINs (Ziffern 0–9, Wiederholung erlaubt) sind möglich?",
-    ["10", "720", "1000", "30", "100"],
-    2,
-    "Jede der 3 Stellen hat 10 Möglichkeiten (0–9). Gesamt: 10³ = 1000.",
-    "leicht",
-    ["Kombinatorik", "Variation mit Wiederholung"]
-  ),
-  q(
-    "ma-pool-2-070",
-    "mathe-kap7",
-    "In einer Studie haben 30 % der Teilnehmer Bluthochdruck und 20 % Diabetes. 10 % haben beide Erkrankungen. Wie groß ist die Wahrscheinlichkeit, dass ein zufällig gewählter Teilnehmer mindestens eine der beiden Erkrankungen hat?",
-    ["50 %", "40 %", "60 %", "30 %", "45 %"],
-    1,
-    "P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = 0,30 + 0,20 − 0,10 = 0,40 = 40 %.",
-    "leicht",
-    ["Additionssatz", "Wahrscheinlichkeit", "Epidemiologie"]
-  ),
+  // ARCHIVED: mathe-kap7 (Stochastik) — 11 Fragen entfernt (nicht in MedAT 2026 Stichwortliste)
 ];

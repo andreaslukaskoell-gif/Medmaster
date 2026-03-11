@@ -6,29 +6,12 @@
 import { useState, useEffect, useMemo } from "react";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { usePageTitle } from "@/hooks/usePageTitle";
-import { BlurFade } from "@/components/ui/blur-fade";
-import {
-  Dna,
-  Atom,
-  Zap,
-  Calculator,
-  BookOpen,
-  Play,
-  CheckCircle2,
-  Clock,
-  ChevronRight,
-  ArrowLeft,
-  Award,
-} from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import type { Kapitel } from "@/data/bmsKapitel/types";
-import { SUBJECT_COLORS } from "@/data/bmsKapitel/colors";
-import { FachRoadmap } from "@/components/chapter/FachRoadmap";
 import BMSKapitelView from "./BMSKapitelView";
 import { printChapterOverview, listAllChapters } from "@/utils/listChapters";
-import { loadBMSChaptersSWR } from "@/lib/bmsChaptersLoader";
 import {
   subjectFromSlug,
   chapterIdFromParams,
@@ -38,82 +21,24 @@ import {
 import { useBreadcrumb } from "@/contexts/BreadcrumbContext";
 import { useAuth } from "@/hooks/useAuth";
 import { migrateBMSChaptersToSupabase, checkMigrationStatus } from "@/scripts/migrateBMS";
-import { PageLoadingSkeleton, PageError, PageEmpty } from "@/components/ui/page-states";
-import { MRSWidget } from "@/components/bms/MRSWidget";
+import { PageLoadingSkeleton, PageError } from "@/components/ui/page-states";
 import { useMRS } from "@/hooks/useFragenTrainer";
-import { UebungsbeschreibungCard } from "@/components/shared/UebungsbeschreibungCard";
+import { subjects } from "@/data/bmsSubjects";
+import { BMSSubjectSelector } from "@/components/bms/BMSSubjectSelector";
+import { BMSSubjectView } from "@/components/bms/BMSSubjectView";
+import { useBMSChapters } from "@/hooks/useBMSChapters";
 
-// Safe imports with fallbacks - prevents "Failed to fetch dynamically imported module" errors
-// Fixed: Use proper ES6 imports with error handling
-import {
-  getKapitelBySubject as _getKapitelBySubject,
-  alleKapitel as _alleKapitel,
-} from "@/data/bmsKapitel";
-import { getStichworteByKapitel } from "@/data/stichwortliste";
 import { useStore as _useStore } from "@/store/useStore";
 import { useAdaptiveStore } from "@/store/adaptiveLearning";
 
-// Safe wrappers that never throw
-const getKapitelBySubject = (subject: string): Kapitel[] => {
-  try {
-    return _getKapitelBySubject ? _getKapitelBySubject(subject) : [];
-  } catch (error) {
-    console.error("❌ Error in getKapitelBySubject:", error);
-    return [];
-  }
-};
-
-const alleKapitel: Kapitel[] = (() => {
-  try {
-    return Array.isArray(_alleKapitel) ? _alleKapitel : [];
-  } catch (error) {
-    console.error("❌ Error accessing alleKapitel:", error);
-    return [];
-  }
-})();
-
-// Safe store access helper - always returns same structure (prevents hook order errors)
 function useSafeStore() {
   try {
-    // Always call hook unconditionally (React rule - hooks must be called in same order)
     return _useStore ? _useStore() : { completedChapters: [] };
   } catch (error) {
-    console.error("❌ Error accessing store:", error);
-    // Return fallback with same structure
+    console.error("Error accessing store:", error);
     return { completedChapters: [] };
   }
 }
-
-const subjects = [
-  {
-    id: "biologie" as const,
-    label: "Biologie",
-    icon: Dna,
-    colors: SUBJECT_COLORS.biologie,
-    description: "Lebewesen, Zellen, Genetik, Evolution",
-  },
-  {
-    id: "chemie" as const,
-    label: "Chemie",
-    icon: Atom,
-    colors: SUBJECT_COLORS.chemie,
-    description: "Periodensystem, Bindungen, Reaktionen",
-  },
-  {
-    id: "physik" as const,
-    label: "Physik",
-    icon: Zap,
-    colors: SUBJECT_COLORS.physik,
-    description: "Mechanik, Elektrizität, Wellen, Optik",
-  },
-  {
-    id: "mathematik" as const,
-    label: "Mathematik",
-    icon: Calculator,
-    colors: SUBJECT_COLORS.mathematik,
-    description: "Algebra, Analysis, Geometrie, Trigonometrie",
-  },
-] as const;
 
 export default function BMS() {
   usePageTitle("BMS – Biomedizinische Grundlagen");
@@ -125,11 +50,8 @@ export default function BMS() {
   const [searchParams] = useSearchParams();
   const [selectedSubject, setSelectedSubject] = useState<string | null>(null);
   const [activeKapitel, setActiveKapitel] = useState<Kapitel | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-  const [supabaseChapters, setSupabaseChapters] = useState<Kapitel[]>([]);
 
-  // Safe store access with fallback
+  // Store access
   const store = useSafeStore();
   const completedChapters = useMemo(
     () =>
@@ -157,6 +79,20 @@ export default function BMS() {
     return null;
   }, [profile.totalQuestionsAnswered, profile.totalCorrect, getMedATReadiness]);
 
+  // Chapter loading and computation via custom hook
+  const {
+    isLoading,
+    error,
+    supabaseChapters,
+    chaptersForSelectedSubject,
+    roadmapChapters,
+    bmsKapitel,
+    totalUK,
+    completedUK,
+    getKapitelBySubject,
+  } = useBMSChapters(selectedSubject, completedChapters);
+
+  // MRS refetch on window focus
   useEffect(() => {
     if (!userId) return;
     const onFocus = () => refetchMRS();
@@ -164,6 +100,7 @@ export default function BMS() {
     return () => window.removeEventListener("focus", onFocus);
   }, [userId, refetchMRS]);
 
+  // Breadcrumb + lastPath sync
   useEffect(() => {
     if (activeKapitel) return;
     if (selectedSubject) {
@@ -180,86 +117,40 @@ export default function BMS() {
     }
   }, [activeKapitel, selectedSubject, setBreadcrumbs, setLastPath]);
 
-  // Initialize and listen for localStorage changes
+  // Dev-only console helpers
   useEffect(() => {
-    const t = setTimeout(() => setIsLoading(false), 0);
-    return () => clearTimeout(t);
-  }, []);
-
-  useEffect(() => {
-    // Make chapter listing and optimization functions available in console for debugging
-    //   window.showChapters() - zeigt Übersicht
-    //   window.listChapters() - gibt Daten zurück
-    //   window.optimizeChapters() - optimiert alle Kapitel
-    //   window.restoreChapters() - stellt Backup wieder her
     (window as any).showChapters = printChapterOverview;
     (window as any).listChapters = listAllChapters;
-    // Migration Funktion
     (window as any).migrateBMSChapters = async () => {
-      if (import.meta.env.DEV) console.log("🚀 Starte Migration von localStorage zu Supabase...");
+      if (import.meta.env.DEV) console.log("Starte Migration von localStorage zu Supabase...");
       try {
         const result = await migrateBMSChaptersToSupabase();
         if (result.success) {
           if (import.meta.env.DEV)
             console.log(
-              `✅ Migration erfolgreich! ${result.chaptersMigrated} Kapitel, ${result.subchaptersMigrated} Unterkapitel migriert.`
+              `Migration erfolgreich! ${result.chaptersMigrated} Kapitel, ${result.subchaptersMigrated} Unterkapitel migriert.`
             );
-          if (result.errors.length > 0) {
-            console.warn("⚠️ Einige Fehler:", result.errors);
-          }
-          if (import.meta.env.DEV) console.log("🔄 Seite neu laden, um aus Supabase zu laden...");
+          if (result.errors.length > 0) console.warn("Einige Fehler:", result.errors);
           setTimeout(() => window.location.reload(), 1000);
         } else {
-          console.error("❌ Migration fehlgeschlagen:", result.errors);
+          console.error("Migration fehlgeschlagen:", result.errors);
         }
         return result;
       } catch (error) {
-        console.error("❌ Fehler bei Migration:", error);
+        console.error("Fehler bei Migration:", error);
         throw error;
       }
     };
-    // Migration Status prüfen
     (window as any).checkMigrationStatus = async () => {
       const status = await checkMigrationStatus();
-      if (import.meta.env.DEV) console.log("📊 Migration Status:", status);
+      if (import.meta.env.DEV) console.log("Migration Status:", status);
       return status;
     };
-
-    // Auto-show chapters overview on load (can be commented out)
-    // printChapterOverview();
   }, []);
 
-  // Stale-While-Revalidate: zuerst Cache (sofort), dann Supabase
-  useEffect(() => {
-    const t = setTimeout(() => {
-      setIsLoading(true);
-      setError(null);
-      loadBMSChaptersSWR(
-        (chapters, source) => {
-          setSupabaseChapters(chapters);
-          setIsLoading(false);
-          if (source === "cache") {
-            if (import.meta.env.DEV)
-              console.log("📦 Showing cached chapters (revalidating in background)");
-          } else {
-            if (import.meta.env.DEV)
-              console.log("✅ Loaded", chapters.length, "chapters from Supabase");
-          }
-        },
-        (err) => {
-          setError(err);
-          setIsLoading(false);
-        },
-        () => {}
-      );
-    }, 0);
-    return () => clearTimeout(t);
-  }, []);
-
-  // URL-Sync: Lese fach/kapitel aus URL und setze State (sobald Kapitel geladen)
+  // URL sync: read fach/kapitel from URL
   useEffect(() => {
     if (supabaseChapters.length === 0) return;
-
     const subjectId = subjectFromSlug(fachParam);
     const t = setTimeout(() => {
       if (subjectId) {
@@ -272,145 +163,11 @@ export default function BMS() {
     return () => clearTimeout(t);
   }, [fachParam, kapitelParam, supabaseChapters]);
 
-  // Compute merged chapters for selected subject (only Supabase)
-  const chaptersForSelectedSubject = useMemo(() => {
-    if (!selectedSubject) return [];
-    try {
-      const staticChapters = (getKapitelBySubject && getKapitelBySubject(selectedSubject)) || [];
-      const sourceChapters = supabaseChapters.filter((k) => k?.subject === selectedSubject);
-
-      // Standard merge: Supabase has precedence
-      const merged = [...staticChapters];
-      for (const dynamicChapter of sourceChapters) {
-        if (!dynamicChapter?.id) continue;
-        const index = merged.findIndex((c) => c?.id === dynamicChapter.id);
-        if (index >= 0) {
-          merged[index] = { ...merged[index], ...dynamicChapter };
-        } else {
-          merged.push(dynamicChapter);
-        }
-      }
-
-      // POST-PROCESSING: BMS learning path chapters get their static content back
-      const staticById = new Map(staticChapters.map((c) => [c.id, c]));
-      return merged.map((chapter) => {
-        const staticChap = staticById.get(chapter.id);
-        if (staticChap?.sequence !== undefined) {
-          // BMS sequenced chapter: static content takes precedence
-          return {
-            ...chapter,
-            title: staticChap.title,
-            unterkapitel: staticChap.unterkapitel?.length
-              ? staticChap.unterkapitel
-              : chapter.unterkapitel,
-            sequence: staticChap.sequence,
-            sequenceTitle: staticChap.sequenceTitle,
-            linkedChapters: staticChap.linkedChapters ?? [],
-          };
-        }
-        return chapter; // Normal chapter: keep Supabase content
-      });
-    } catch (error) {
-      console.error("❌ Error computing chapters for subject:", error);
-      return [];
-    }
-  }, [selectedSubject, supabaseChapters]);
-
-  // Sort chapters by sequence number (Phase 4: STRUCT-02)
-  const sortedChapters = useMemo(() => {
-    if (!Array.isArray(chaptersForSelectedSubject)) return [];
-    return [...chaptersForSelectedSubject].sort((a, b) => {
-      const aSeq = a.sequence ?? 999;
-      const bSeq = b.sequence ?? 999;
-      return aSeq - bSeq;
-    });
-  }, [chaptersForSelectedSubject]);
-
-  // Filter for roadmap: only chapters with sequence metadata AND at least 1 unterkapitel
-  // (excludes Supabase ghost entries like empty "Optik" phys-kap6)
-  const roadmapChapters = useMemo(() => {
-    return sortedChapters.filter(
-      (c) => c.sequence !== undefined && c.unterkapitel && c.unterkapitel.length > 0
-    );
-  }, [sortedChapters]);
-
-  // Compute merged chapters for all subjects (only Supabase)
-  const safeAlleKapitel = useMemo(() => {
-    try {
-      const staticChapters = Array.isArray(alleKapitel) ? alleKapitel : [];
-
-      // Standard merge: Supabase has precedence
-      const merged = [...staticChapters];
-      for (const supabaseChapter of supabaseChapters) {
-        if (!supabaseChapter?.id) continue;
-        const index = merged.findIndex((c) => c?.id === supabaseChapter.id);
-        if (index >= 0) {
-          merged[index] = { ...merged[index], ...supabaseChapter };
-        } else {
-          merged.push(supabaseChapter);
-        }
-      }
-
-      // POST-PROCESSING: BMS learning path chapters get their static content back
-      const staticById = new Map(staticChapters.map((c) => [c.id, c]));
-      return merged.map((chapter) => {
-        const staticChap = staticById.get(chapter.id);
-        if (staticChap?.sequence !== undefined) {
-          // BMS sequenced chapter: static content takes precedence
-          return {
-            ...chapter,
-            title: staticChap.title,
-            unterkapitel: staticChap.unterkapitel?.length
-              ? staticChap.unterkapitel
-              : chapter.unterkapitel,
-            sequence: staticChap.sequence,
-            sequenceTitle: staticChap.sequenceTitle,
-            linkedChapters: staticChap.linkedChapters ?? [],
-          };
-        }
-        return chapter; // Normal chapter: keep Supabase content
-      });
-    } catch (error) {
-      console.error("❌ Error merging chapters:", error);
-      return [];
-    }
-  }, [supabaseChapters]);
-
-  // Only count BMS learning-path chapters (with sequence + content) — filters out Supabase ghost entries
-  const bmsKapitel = useMemo(
-    () =>
-      safeAlleKapitel.filter(
-        (k) => k.sequence !== undefined && k.unterkapitel && k.unterkapitel.length > 0
-      ),
-    [safeAlleKapitel]
-  );
-
-  // Compute totals for main view - MUST be called unconditionally before any early returns
-  const totalUK = useMemo(() => {
-    return bmsKapitel.reduce((sum, k) => {
-      if (!k.unterkapitel || !Array.isArray(k.unterkapitel)) return sum;
-      return sum + k.unterkapitel.length;
-    }, 0);
-  }, [bmsKapitel]);
-
-  const completedUK = useMemo(() => {
-    return bmsKapitel.reduce((sum, k) => {
-      if (!k.unterkapitel || !Array.isArray(k.unterkapitel)) return sum;
-      return (
-        sum +
-        (k.unterkapitel.filter((u) => u && u.id && completedChapters.includes(u.id)).length || 0)
-      );
-    }, 0);
-  }, [bmsKapitel, completedChapters]);
-
-  // Update activeKapitel from post-processed chapters (after BMS override)
-  // MUST come AFTER chaptersForSelectedSubject useMemo to avoid Temporal Dead Zone
+  // Resolve activeKapitel from URL after chapters are ready
   useEffect(() => {
     if (!selectedSubject || chaptersForSelectedSubject.length === 0) return;
-
     const allChapterIds = chaptersForSelectedSubject.map((c) => c.id);
     const chapterId = chapterIdFromParams(fachParam, kapitelParam, allChapterIds);
-
     if (chapterId) {
       const chapter = chaptersForSelectedSubject.find((c) => c.id === chapterId);
       if (chapter) {
@@ -420,7 +177,8 @@ export default function BMS() {
     }
   }, [fachParam, kapitelParam, selectedSubject, chaptersForSelectedSubject]);
 
-  // Error state: nur anzeigen wenn wirklich keine Daten (kein Cache, Supabase leer/Fehler)
+  // --- Render ---
+
   if (error && supabaseChapters.length === 0) {
     return (
       <div className="max-w-6xl mx-auto p-6">
@@ -430,7 +188,6 @@ export default function BMS() {
     );
   }
 
-  // Loading state (nur wenn noch keine Daten aus Cache)
   if (isLoading && supabaseChapters.length === 0) {
     return (
       <div className="max-w-6xl mx-auto space-y-6 p-6">
@@ -509,447 +266,43 @@ export default function BMS() {
       );
     }
 
-    // Use only sequenced (official BMS) chapters to avoid Supabase ghost entries
-    const kapitel = Array.isArray(roadmapChapters) ? roadmapChapters : [];
-
-    if (kapitel.length === 0) {
-      return (
-        <div className="max-w-5xl mx-auto p-6">
-          <BreadcrumbNav
-            items={[
-              { label: "Dashboard", href: "/dashboard" },
-              { label: "BMS", href: "/bms" },
-              { label: subjectData.label },
-            ]}
-          />
-          <div className="flex items-center gap-4 flex-wrap mt-4">
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => {
-                setSelectedSubject(null);
-                navigate("/bms");
-              }}
-            >
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Zurück zu Fächern
-            </Button>
-          </div>
-          <PageEmpty
-            message="In diesem Fach sind noch keine Kapitel vorhanden."
-            action={
-              <Button variant="outline" className="gap-2" onClick={() => navigate("/bms")}>
-                <BookOpen className="w-4 h-4" />
-                Anderes Fach wählen
-              </Button>
-            }
-          />
-        </div>
-      );
-    }
-
-    const subjectUK = kapitel.reduce((sum, k) => {
-      if (!k || !k.unterkapitel || !Array.isArray(k.unterkapitel)) return sum;
-      return sum + k.unterkapitel.length;
-    }, 0);
-
-    const subjectCompletedUK = kapitel.reduce((sum, k) => {
-      if (!k || !k.unterkapitel || !Array.isArray(k.unterkapitel)) return sum;
-      return (
-        sum +
-        (k.unterkapitel.filter((u) => u && u.id && completedChapters.includes(u.id)).length || 0)
-      );
-    }, 0);
-
     return (
-      <div className="max-w-5xl mx-auto space-y-6 p-6">
-        <BreadcrumbNav
-          items={[
-            { label: "Dashboard", href: "/dashboard" },
-            { label: "BMS", href: "/bms" },
-            { label: subjectData.label },
-          ]}
-        />
-
-        <div className="flex items-center gap-4 flex-wrap">
-          <Button
-            variant="ghost"
-            size="sm"
-            onClick={() => {
-              setSelectedSubject(null);
-              navigate("/bms");
-            }}
-          >
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Zurück zu Fächern
-          </Button>
-          <Button
-            size="sm"
-            onClick={() => navigate(`/bms/quiz/${selectedSubject}`)}
-            className="gap-2"
-          >
-            <Play className="w-4 h-4" />
-            Quiz starten
-          </Button>
-        </div>
-
-        <div>
-          <h1 className="text-xl font-semibold text-[var(--foreground)] flex items-center gap-3">
-            <subjectData.icon className="w-6 h-6 text-[var(--color-primary-500)]" />
-            {subjectData.label}
-          </h1>
-          <p className="text-sm text-[var(--muted)] mt-1">
-            {kapitel.length} Kapitel · {subjectUK} Unterkapitel
-            {subjectUK > 0 && (
-              <span className="text-[var(--color-primary-500)] font-medium ml-2">
-                {subjectCompletedUK}/{subjectUK} abgeschlossen
-              </span>
-            )}
-          </p>
-        </div>
-
-        <UebungsbeschreibungCard id="bms" collapsible defaultCollapsed />
-
-        {subjectUK > 0 && (
-          <div className="space-y-1">
-            <div className="flex justify-between text-xs text-[var(--muted)]">
-              <span>Fortschritt</span>
-              <span>
-                {subjectCompletedUK}/{subjectUK} Unterkapitel
-              </span>
-            </div>
-            <div className="w-full bg-[var(--border)] rounded-full h-1.5">
-              <div
-                className="bg-[var(--accent)] h-1.5 rounded-full transition-all duration-500"
-                style={{ width: `${(subjectCompletedUK / subjectUK) * 100}%` }}
-              />
-            </div>
-          </div>
-        )}
-
-        {/* Visual Learning Roadmap - Phase 4: STRUCT-03 */}
-        {roadmapChapters.length > 0 && (
-          <FachRoadmap
-            chapters={roadmapChapters}
-            currentChapterId={undefined}
-            onSelectChapter={(chapterId) => {
-              const chapter = kapitel.find((c) => c.id === chapterId);
-              if (chapter) {
-                setActiveKapitel(chapter);
-                navigate(pathForChapter(selectedSubject, chapterId));
-              }
-            }}
-          />
-        )}
-
-        <div className="space-y-3">
-          <h2 className="text-lg font-semibold text-[var(--text-primary)] flex items-center gap-2">
-            <BookOpen className="w-5 h-5 text-primary-500" />
-            Kapitel
-          </h2>
-
-          {kapitel.length === 0 ? (
-            <Card className={`border-l-4 ${subjectData.colors.border}`}>
-              <CardContent className="p-8 text-center">
-                <div className="mb-4 flex justify-center">
-                  <div
-                    className={`w-16 h-16 rounded-full ${subjectData.colors.bg} ${subjectData.colors.bgDark} ${subjectData.colors.text} ${subjectData.colors.textDark} flex items-center justify-center`}
-                  >
-                    <subjectData.icon className="w-8 h-8" />
-                  </div>
-                </div>
-                <h3 className="text-lg font-semibold text-[var(--text-primary)] mb-2">
-                  Noch keine Kapitel vorhanden
-                </h3>
-                <p className="text-[var(--muted)] mb-6">
-                  Es gibt noch keine {subjectData.label}-Kapitel. Du kannst neue Kapitel im Editor
-                  erstellen.
-                </p>
-                <Button onClick={() => navigate("/admin/kapitel-editor")} className="gap-2">
-                  <BookOpen className="w-4 h-4" />
-                  Zum Kapitel-Editor
-                </Button>
-              </CardContent>
-            </Card>
-          ) : (
-            kapitel.map((kap) => {
-              if (!kap || !kap.id || typeof kap.id !== "string" || typeof kap.title !== "string") {
-                return null;
-              }
-              const ukTotal =
-                kap.unterkapitel && Array.isArray(kap.unterkapitel) ? kap.unterkapitel.length : 0;
-              const ukDone =
-                kap.unterkapitel && Array.isArray(kap.unterkapitel)
-                  ? kap.unterkapitel.filter((u) => u && u.id && completedChapters.includes(u.id))
-                      .length
-                  : 0;
-              const isCompleted =
-                completedChapters.includes(kap.id) || (ukTotal > 0 && ukDone === ukTotal);
-              const kapMatch = kap.id.match(/kap(\d+)/i);
-              const kapitelNr = kapMatch ? parseInt(kapMatch[1], 10) : 0;
-              const stichworte = getStichworteByKapitel(kap.subject, kapitelNr);
-              const topicTotal = stichworte.length;
-              const topicLearned =
-                topicTotal > 0
-                  ? stichworte.filter((s) => (stichwortStats[s.id]?.streak ?? 0) > 0).length
-                  : 0;
-              const hasMastery =
-                topicTotal > 0 && stichworte.some((s) => (stichwortStats[s.id]?.streak ?? 0) >= 3);
-              const progressPct =
-                topicTotal > 0
-                  ? (topicLearned / topicTotal) * 100
-                  : ukTotal > 0
-                    ? (ukDone / ukTotal) * 100
-                    : 0;
-
-              return (
-                <Card
-                  key={kap.id}
-                  className={`hover:shadow-md transition-all cursor-pointer border-l-4 ${subjectData.colors.border} ${hasMastery ? "ring-1 ring-amber-400/60 dark:ring-amber-500/50 shadow-amber-500/10" : ""}`}
-                  onClick={() => {
-                    setActiveKapitel(kap);
-                    navigate(pathForChapter(kap.subject, kap.id));
-                  }}
-                >
-                  <CardContent className="p-4">
-                    <div className="flex items-center gap-3">
-                      <div className="text-2xl shrink-0">{kap.icon || "📚"}</div>
-                      <div className="flex-1 min-w-0">
-                        <div className="flex items-center gap-2 flex-wrap">
-                          <h3 className="font-medium text-[var(--text-primary)]">
-                            {kap.title || "Untitled Chapter"}
-                          </h3>
-                          {isCompleted && (
-                            <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
-                          )}
-                          {hasMastery && (
-                            <span
-                              className="inline-flex items-center text-amber-600 dark:text-amber-400"
-                              title="Mastery (Streak ≥ 3)"
-                            >
-                              <Award className="w-4 h-4 shrink-0" />
-                            </span>
-                          )}
-                        </div>
-                        <div className="flex items-center gap-3 mt-1 text-xs text-[var(--muted)]">
-                          <span>{ukTotal} Unterkapitel</span>
-                          {kap.estimatedTime && (
-                            <span className="flex items-center gap-1">
-                              <Clock className="w-3 h-3" />
-                              {kap.estimatedTime}
-                            </span>
-                          )}
-                        </div>
-                        <div className="w-full bg-[var(--border)] rounded-full h-1.5 mt-2">
-                          <div
-                            className="bg-[var(--accent)] h-1.5 rounded-full transition-all duration-500"
-                            style={{ width: `${Math.min(100, progressPct)}%` }}
-                          />
-                        </div>
-                      </div>
-                      <ChevronRight className="w-5 h-5 text-[var(--muted)] shrink-0" />
-                    </div>
-                  </CardContent>
-                </Card>
-              );
-            })
-          )}
-        </div>
-      </div>
+      <BMSSubjectView
+        subjectData={subjectData}
+        roadmapChapters={roadmapChapters}
+        completedChapters={completedChapters}
+        stichwortStats={stichwortStats}
+        onBack={() => {
+          setSelectedSubject(null);
+          navigate("/bms");
+        }}
+        onSelectChapter={(chapter) => {
+          setActiveKapitel(chapter);
+          navigate(pathForChapter(chapter.subject, chapter.id));
+        }}
+        onStartQuiz={() => navigate(`/bms/quiz/${selectedSubject}`)}
+      />
     );
   }
 
   // Main view: 4 subject cards
-  // Note: totalUK and completedUK are already computed above (before early returns)
-  const filterParam = searchParams.get("filter");
   return (
-    <div className="max-w-5xl mx-auto space-y-8 px-6 py-8">
-      <BreadcrumbNav items={[{ label: "Dashboard", href: "/dashboard" }, { label: "BMS" }]} />
-
-      {/* filter=due banner */}
-      {filterParam === "due" && (
-        <div className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-700 text-yellow-800 dark:text-yellow-300 text-sm">
-          <Clock className="w-4 h-4 shrink-0" />
-          <span className="font-medium">Zeigt fällige Kapitel</span>
-          <span className="text-yellow-600 dark:text-yellow-400">
-            — Wiederhole Kapitel, die zur Festigung bereit sind.
-          </span>
-        </div>
-      )}
-
-      <BlurFade delay={0} inView>
-        <div>
-          <h1 className="text-2xl font-semibold text-[var(--foreground)]">BMS</h1>
-          <p className="text-sm text-[var(--muted)] mt-1">
-            {bmsKapitel.length} Kapitel · {totalUK} Unterkapitel
-            {totalUK > 0 && (
-              <span className="text-[var(--color-primary-500)] font-medium ml-2">
-                {completedUK}/{totalUK} abgeschlossen
-              </span>
-            )}
-          </p>
-        </div>
-      </BlurFade>
-
-      {/* MedAT Readiness Score */}
-      <BlurFade delay={0.05} inView>
-        <MRSWidget mrs={mrs} loading={mrsLoading} fallback={mrsFallback} />
-      </BlurFade>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {subjects.map((subject, idx) => {
-          let sKapitel: Kapitel[] = [];
-          try {
-            const staticChapters = (getKapitelBySubject && getKapitelBySubject(subject.id)) || [];
-            const dynamicChapters = supabaseChapters.filter((k) => k?.subject === subject.id);
-
-            // Standard merge: Supabase has precedence
-            sKapitel = [...staticChapters];
-            for (const dynamicChapter of dynamicChapters) {
-              if (!dynamicChapter?.id) continue;
-              const index = sKapitel.findIndex((c) => c?.id === dynamicChapter.id);
-              if (index >= 0) {
-                sKapitel[index] = { ...sKapitel[index], ...dynamicChapter };
-              } else {
-                sKapitel.push(dynamicChapter);
-              }
-            }
-
-            // POST-PROCESSING: BMS learning path chapters get their static content back
-            const staticById = new Map(staticChapters.map((c) => [c.id, c]));
-            sKapitel = sKapitel.map((chapter) => {
-              const staticChap = staticById.get(chapter.id);
-              if (staticChap?.sequence !== undefined) {
-                return {
-                  ...chapter,
-                  title: staticChap.title,
-                  unterkapitel: staticChap.unterkapitel?.length
-                    ? staticChap.unterkapitel
-                    : chapter.unterkapitel,
-                  sequence: staticChap.sequence,
-                  sequenceTitle: staticChap.sequenceTitle,
-                  linkedChapters: staticChap.linkedChapters ?? [],
-                };
-              }
-              return chapter;
-            });
-          } catch (error) {
-            console.error(`❌ Error loading chapters for ${subject.id}:`, error);
-            sKapitel = [];
-          }
-
-          // Only count sequenced (BMS learning-path) chapters with content
-          const sBmsKapitel = sKapitel.filter(
-            (k) => k.sequence !== undefined && k.unterkapitel && k.unterkapitel.length > 0
-          );
-
-          const sTotal = sBmsKapitel.reduce((sum, k) => {
-            if (!k.unterkapitel || !Array.isArray(k.unterkapitel)) return sum;
-            return sum + k.unterkapitel.length;
-          }, 0);
-
-          const sDone = sBmsKapitel.reduce((sum, k) => {
-            if (!k.unterkapitel || !Array.isArray(k.unterkapitel)) return sum;
-            return (
-              sum +
-              (k.unterkapitel.filter((u) => u && u.id && completedChapters.includes(u.id)).length ||
-                0)
-            );
-          }, 0);
-
-          const progressPct = sTotal > 0 ? (sDone / sTotal) * 100 : 0;
-
-          // Subject accent color via CSS variable
-          const accentVars: Record<string, string> = {
-            biologie: "var(--accent-bio)",
-            chemie: "var(--accent-chem)",
-            physik: "var(--accent-phys)",
-            mathematik: "var(--accent-math)",
-          };
-          const accentColor = accentVars[subject.id] ?? "var(--color-primary-500)";
-
-          return (
-            <BlurFade key={subject.id} delay={0.1 + idx * 0.05} inView>
-              <div
-                className="group relative rounded-lg border border-[var(--border)] bg-[var(--card)] p-5 cursor-pointer overflow-hidden transition-all duration-200 hover:border-[var(--foreground)]/20 hover:shadow-[0_2px_12px_0_rgba(0,0,0,0.08)]"
-                style={{ borderLeftWidth: "3px", borderLeftColor: accentColor }}
-                onClick={() => {
-                  setSelectedSubject(subject.id);
-                  navigate(pathForSubject(subject.id));
-                }}
-              >
-                <div className="flex items-start gap-4">
-                  {/* Icon */}
-                  <div
-                    className="w-10 h-10 rounded-lg flex items-center justify-center shrink-0 transition-transform duration-200 group-hover:scale-105"
-                    style={{ backgroundColor: `${accentColor}18`, color: accentColor }}
-                  >
-                    <subject.icon className="w-5 h-5" />
-                  </div>
-
-                  {/* Content */}
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center justify-between gap-2 mb-0.5">
-                      <h2 className="text-base font-semibold text-[var(--foreground)]">
-                        {subject.label}
-                      </h2>
-                      <ChevronRight className="w-4 h-4 text-[var(--muted)] shrink-0 transition-transform duration-200 group-hover:translate-x-0.5" />
-                    </div>
-
-                    <p className="text-xs text-[var(--muted)] mb-3 leading-relaxed">
-                      {subject.description}
-                    </p>
-
-                    <div className="flex items-center gap-3 text-xs text-[var(--muted)] mb-2.5">
-                      <span>{sBmsKapitel.length} Kapitel</span>
-                      {sTotal > 0 && (
-                        <>
-                          <span>·</span>
-                          <span style={{ color: accentColor }} className="font-medium">
-                            {sDone}/{sTotal} UK
-                          </span>
-                        </>
-                      )}
-                    </div>
-
-                    {/* Progress bar */}
-                    {sTotal > 0 && (
-                      <div className="w-full bg-[var(--border)] rounded-full h-1.5">
-                        <div
-                          className="h-1.5 rounded-full transition-all duration-500"
-                          style={{
-                            width: `${progressPct}%`,
-                            backgroundColor: accentColor,
-                          }}
-                        />
-                      </div>
-                    )}
-                  </div>
-                </div>
-              </div>
-            </BlurFade>
-          );
-        })}
-      </div>
-
-      {bmsKapitel.length === 0 && (
-        <BlurFade delay={0.2} inView>
-          <Card className="border-[var(--border)] bg-[var(--card)]">
-            <CardContent className="p-6 text-center">
-              <h3 className="text-base font-semibold text-[var(--foreground)] mb-2">
-                Noch keine Kapitel vorhanden
-              </h3>
-              <p className="text-sm text-[var(--muted)] mb-4">
-                Erstelle deine ersten Kapitel im Editor.
-              </p>
-              <Button onClick={() => navigate("/admin/kapitel-editor")} className="gap-2">
-                <BookOpen className="w-4 h-4" />
-                Zum Kapitel-Editor
-              </Button>
-            </CardContent>
-          </Card>
-        </BlurFade>
-      )}
-    </div>
+    <BMSSubjectSelector
+      bmsKapitel={bmsKapitel}
+      supabaseChapters={supabaseChapters}
+      completedChapters={completedChapters}
+      totalUK={totalUK}
+      completedUK={completedUK}
+      mrs={mrs}
+      mrsLoading={mrsLoading}
+      mrsFallback={mrsFallback}
+      filterParam={searchParams.get("filter")}
+      getKapitelBySubject={getKapitelBySubject}
+      onSelectSubject={(subjectId) => {
+        setSelectedSubject(subjectId);
+        navigate(pathForSubject(subjectId));
+      }}
+      onNavigate={navigate}
+    />
   );
 }

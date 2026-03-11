@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /**
  * Mathematik BMS Pool 12 — 60 Fragen im MedAT-Stil (Typ A).
- * Stoff: mathe-kap1, mathe-kap2, mathe-kap5, mathe-kap6, mathe-kap7.
+ * Stoff: mathe-kap1, mathe-kap2, mathe-kap5, mathe-kap6.
  */
 import type { Question } from "./index";
 
@@ -29,6 +29,6 @@ function q(
   };
 }
 
-const KAP = ["mathe-kap1", "mathe-kap2", "mathe-kap5", "mathe-kap6", "mathe-kap7"] as const;
+const KAP = ["mathe-kap1", "mathe-kap2", "mathe-kap5", "mathe-kap6"] as const;
 
 export const mathematikPool12: Question[] = [];

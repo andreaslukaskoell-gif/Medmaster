@@ -1,6 +1,6 @@
 /**
  * Mathematik BMS — offizielle MedAT-Stil-Fragen (an Prüfungsformat angelehnt).
- * Stoff: mathe-kap1 (Zahlen & Einheiten), mathe-kap2 (Algebra & Geometrie), mathe-kap5 (Funktionen), mathe-kap6 (Vektoren), mathe-kap7 (Stochastik).
+ * Stoff: mathe-kap1 (Zahlen & Einheiten), mathe-kap2 (Algebra & Geometrie), mathe-kap5 (Funktionen), mathe-kap6 (Vektoren).
  */
 import type { Question } from "./index";
 

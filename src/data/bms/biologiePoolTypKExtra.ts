@@ -99,52 +99,6 @@ export const biologiePoolTypKExtra: BMSFrage[] = [
     fsrs: null,
   },
   {
-    id: "bio-pool-typk-013",
-    typ: "K",
-    fach: "biologie",
-    uk_id: "bio-1-09",
-    stamm: "Welche der folgenden Aussagen zur Photosynthese sind richtig?",
-    aussagen: [
-      {
-        nr: 1,
-        text: "Die Lichtreaktionen finden in den Thylakoidmembranen statt und produzieren ATP und NADPH.",
-        korrekt: true,
-      },
-      {
-        nr: 2,
-        text: "Im Calvin-Zyklus wird CO₂ durch RuBisCO an Ribulose-1,5-bisphosphat fixiert.",
-        korrekt: true,
-      },
-      {
-        nr: 3,
-        text: "Chlorophyll a absorbiert vor allem grünes Licht (ca. 550 nm).",
-        korrekt: false,
-      },
-      {
-        nr: 4,
-        text: "Bei der Lichtreaktion wird Wasser gespalten und Sauerstoff als Nebenprodukt freigesetzt.",
-        korrekt: true,
-      },
-      {
-        nr: 5,
-        text: "Der Calvin-Zyklus benötigt ATP und NADPH aus den Lichtreaktionen.",
-        korrekt: true,
-      },
-    ],
-    kombinationen: [
-      { key: "A", nummern: [1, 2, 3, 4] },
-      { key: "B", nummern: [2, 3, 5] },
-      { key: "C", nummern: [1, 3, 4] },
-      { key: "D", nummern: [1, 2, 4, 5] },
-      { key: "E", nummern: [1, 2, 3, 4, 5] },
-    ],
-    korrekte_option: "D",
-    erklaerung:
-      "Richtig sind 1, 2, 4 und 5. Chlorophyll a absorbiert hauptsächlich rotes (660–700 nm) und blaues (430–450 nm) Licht, nicht grünes (3 falsch).",
-    schwierigkeit: 2,
-    fsrs: null,
-  },
-  {
     id: "bio-pool-typk-014",
     typ: "K",
     fach: "biologie",

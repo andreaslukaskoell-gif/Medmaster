@@ -78,53 +78,7 @@ export const mathematikPoolTypKExtra: BMSFrage[] = [
     schwierigkeit: 1,
     fsrs: null,
   },
-  {
-    id: "ma-pool-typk-013",
-    typ: "K",
-    fach: "mathematik",
-    uk_id: "mathe-kap7",
-    stamm:
-      "Welche der folgenden Aussagen zur Wahrscheinlichkeitsrechnung (z. B. in der Labordiagnostik) sind richtig?",
-    aussagen: [
-      {
-        nr: 1,
-        text: "Die Summe aller Wahrscheinlichkeiten eines vollständigen Ereignisraums ist 1.",
-        korrekt: true,
-      },
-      {
-        nr: 2,
-        text: "Bei unabhängigen Ereignissen A und B gilt P(A ∩ B) = P(A) · P(B).",
-        korrekt: true,
-      },
-      {
-        nr: 3,
-        text: "P(A ∪ B) = P(A) + P(B) gilt immer, auch wenn A und B nicht disjunkt sind.",
-        korrekt: false,
-      },
-      {
-        nr: 4,
-        text: "Das Komplementärereignis von A hat die Wahrscheinlichkeit 1 − P(A).",
-        korrekt: true,
-      },
-      {
-        nr: 5,
-        text: "Beim Ziehen ohne Zurücklegen sind die Einzelziehungen stochastisch unabhängig.",
-        korrekt: false,
-      },
-    ],
-    kombinationen: [
-      { key: "A", nummern: [1, 2, 3, 4] },
-      { key: "B", nummern: [1, 2, 4] },
-      { key: "C", nummern: [2, 4, 5] },
-      { key: "D", nummern: [1, 3, 5] },
-      { key: "E", nummern: [1, 2, 3, 4, 5] },
-    ],
-    korrekte_option: "B",
-    erklaerung:
-      "Richtig sind 1, 2 und 4. P(A ∪ B) = P(A) + P(B) − P(A ∩ B) (3 falsch). Beim Ziehen ohne Zurücklegen ändern sich die Wahrscheinlichkeiten → abhängig (5 falsch).",
-    schwierigkeit: 2,
-    fsrs: null,
-  },
+  // ARCHIVED: ma-pool-typk-013 (Stochastik) — entfernt (nicht in MedAT 2026 Stichwortliste)
   {
     id: "ma-pool-typk-014",
     typ: "K",
@@ -265,53 +219,7 @@ export const mathematikPoolTypKExtra: BMSFrage[] = [
     schwierigkeit: 2,
     fsrs: null,
   },
-  {
-    id: "ma-pool-typk-017",
-    typ: "K",
-    fach: "mathematik",
-    uk_id: "mathe-kap7",
-    stamm:
-      "Welche der folgenden Aussagen zur Kombinatorik (z. B. in der Genetik und Diagnostik) sind richtig?",
-    aussagen: [
-      {
-        nr: 1,
-        text: "Die Anzahl der Möglichkeiten, k Objekte aus n ohne Reihenfolge auszuwählen, ist C(n,k) = n! / (k!(n−k)!).",
-        korrekt: true,
-      },
-      {
-        nr: 2,
-        text: "C(5,2) = 10.",
-        korrekt: true,
-      },
-      {
-        nr: 3,
-        text: "Die Permutation von n verschiedenen Objekten ist n! (n Fakultät).",
-        korrekt: true,
-      },
-      {
-        nr: 4,
-        text: "C(n,0) = 0 für alle n ≥ 1.",
-        korrekt: false,
-      },
-      {
-        nr: 5,
-        text: "C(n,n) = 1.",
-        korrekt: true,
-      },
-    ],
-    kombinationen: [
-      { key: "A", nummern: [1, 2, 3, 5] },
-      { key: "B", nummern: [1, 2, 4] },
-      { key: "C", nummern: [2, 3, 4, 5] },
-      { key: "D", nummern: [1, 3, 4, 5] },
-      { key: "E", nummern: [1, 2, 3, 4, 5] },
-    ],
-    korrekte_option: "A",
-    erklaerung:
-      "Richtig sind 1, 2, 3 und 5. C(n,0) = n!/(0!·n!) = 1 für alle n ≥ 0 — nicht 0 (4 falsch).",
-    schwierigkeit: 2,
-    fsrs: null,
-  },
+  // ARCHIVED: ma-pool-typk-017 (Kombinatorik) — entfernt (nicht in MedAT 2026 Stichwortliste)
   {
     id: "ma-pool-typk-018",
     typ: "K",
@@ -543,52 +451,7 @@ export const mathematikPoolTypKExtra: BMSFrage[] = [
     schwierigkeit: 2,
     fsrs: null,
   },
-  {
-    id: "ma-pool-typk-023",
-    typ: "K",
-    fach: "mathematik",
-    uk_id: "mathe-kap7",
-    stamm: "Welche der folgenden Aussagen zur Normalverteilung (klinische Messwerte) sind richtig?",
-    aussagen: [
-      {
-        nr: 1,
-        text: "Die Normalverteilung ist symmetrisch um ihren Mittelwert μ.",
-        korrekt: true,
-      },
-      {
-        nr: 2,
-        text: "Etwa 68% aller Werte liegen innerhalb von ±1 Standardabweichung (σ) um den Mittelwert.",
-        korrekt: true,
-      },
-      {
-        nr: 3,
-        text: "Bei einer Normalverteilung sind Median, Modus und Mittelwert identisch.",
-        korrekt: true,
-      },
-      {
-        nr: 4,
-        text: "Die Standardnormalverteilung hat μ = 0 und σ = 2.",
-        korrekt: false,
-      },
-      {
-        nr: 5,
-        text: "Etwa 95% der Werte einer Normalverteilung liegen innerhalb von ±2σ vom Mittelwert.",
-        korrekt: true,
-      },
-    ],
-    kombinationen: [
-      { key: "A", nummern: [1, 2, 3, 5] },
-      { key: "B", nummern: [1, 2, 4, 5] },
-      { key: "C", nummern: [2, 3, 4] },
-      { key: "D", nummern: [1, 4, 5] },
-      { key: "E", nummern: [1, 2, 3, 4, 5] },
-    ],
-    korrekte_option: "A",
-    erklaerung:
-      "Richtig sind 1, 2, 3 und 5. Die Standardnormalverteilung hat μ = 0 und σ = 1 (nicht σ = 2) (4 falsch).",
-    schwierigkeit: 2,
-    fsrs: null,
-  },
+  // ARCHIVED: ma-pool-typk-023 (Normalverteilung) — entfernt (nicht in MedAT 2026 Stichwortliste)
   {
     id: "ma-pool-typk-024",
     typ: "K",
@@ -821,53 +684,7 @@ export const mathematikPoolTypKExtra: BMSFrage[] = [
     schwierigkeit: 3,
     fsrs: null,
   },
-  {
-    id: "ma-pool-typk-029",
-    typ: "K",
-    fach: "mathematik",
-    uk_id: "mathe-kap7",
-    stamm:
-      "Welche der folgenden Aussagen zu statistischen Kennzahlen (klinische Studien) sind richtig?",
-    aussagen: [
-      {
-        nr: 1,
-        text: "Der Median teilt eine sortierte Datenmenge in zwei gleich große Hälften.",
-        korrekt: true,
-      },
-      {
-        nr: 2,
-        text: "Der arithmetische Mittelwert ist empfindlich gegenüber Ausreißern.",
-        korrekt: true,
-      },
-      {
-        nr: 3,
-        text: "Die Varianz ist die Quadratwurzel der Standardabweichung.",
-        korrekt: false,
-      },
-      {
-        nr: 4,
-        text: "Der Modus ist der am häufigsten vorkommende Wert in einer Datenmenge.",
-        korrekt: true,
-      },
-      {
-        nr: 5,
-        text: "Bei einer rechtsschiefen Verteilung ist Mittelwert > Median > Modus.",
-        korrekt: true,
-      },
-    ],
-    kombinationen: [
-      { key: "A", nummern: [1, 2, 3, 5] },
-      { key: "B", nummern: [2, 3, 4] },
-      { key: "C", nummern: [1, 2, 4, 5] },
-      { key: "D", nummern: [1, 3, 4, 5] },
-      { key: "E", nummern: [1, 2, 3, 4, 5] },
-    ],
-    korrekte_option: "C",
-    erklaerung:
-      "Richtig sind 1, 2, 4 und 5. Die Standardabweichung ist die Quadratwurzel der Varianz — nicht umgekehrt (3 falsch).",
-    schwierigkeit: 1,
-    fsrs: null,
-  },
+  // ARCHIVED: ma-pool-typk-029 (Statistische Kennzahlen) — entfernt (nicht in MedAT 2026 Stichwortliste)
   {
     id: "ma-pool-typk-030",
     typ: "K",

@@ -2468,5 +2468,309 @@ Frauen haben zwei X-Chromosomen (XX), Männer nur eines (XY). Damit Frauen nicht
           "Beim **genomischen Imprinting** werden bestimmte Gene durch epigenetische Markierungen (v. a. DNA-Methylierung) so modifiziert, dass nur das **mütterliche** oder nur das **väterliche Allel** exprimiert wird. Beispiele: Prader-Willi-Syndrom (väterliche Deletion auf Chr. 15) und Angelman-Syndrom (mütterliche Deletion auf Chr. 15). Epigenetik verändert nicht die DNA-Sequenz (A falsch). DNA-Methylierung an CpG-Inseln **silenced** Gene (B falsch). X-Inaktivierung ist **zufällig** (D falsch). Histonacetylierung **lockert** Chromatin (E falsch).",
       },
     },
+    // ─── 12. Methoden der Genetik & Gentechnik ─────────────────────────────────
+    {
+      id: "bio-4-12",
+      title: "Methoden der Genetik & Gentechnik",
+      stichworte: [
+        "PCR",
+        "Polymerase-Kettenreaktion",
+        "Restriktionsenzyme",
+        "Gelelektrophorese",
+        "Klonierung",
+        "CRISPR",
+        "Cas9",
+        "Gentechnik",
+        "DNA-Sequenzierung",
+        "Sanger-Methode",
+        "Genetischer Fingerabdruck",
+        "Plasmid",
+        "Vektor",
+        "Transformation",
+        "Taq-Polymerase",
+        "Primer",
+        "GVO",
+      ],
+      content: `## PCR — DNA millionenfach kopieren
+
+Die **Polymerase-Kettenreaktion** (PCR, engl. polymerase chain reaction) ist die wichtigste Methode der modernen Molekularbiologie. Sie erlaubt es, einen bestimmten DNA-Abschnitt innerhalb weniger Stunden **millionenfach zu vervielfältigen** (Amplifikation), selbst wenn nur winzige Mengen Ausgangs-DNA vorhanden sind — etwa aus einem Blutstropfen, einem Haar oder einer archäologischen Probe.
+
+**Benötigte Komponenten:**
+- **Template-DNA** — der DNA-Abschnitt, der kopiert werden soll
+- **Zwei Primer** (kurze einzelsträngige DNA-Stücke, ~20 Nukleotide) — markieren Anfang und Ende des Zielbereichs
+- **Taq-Polymerase** — eine hitzestabile DNA-Polymerase aus dem Bakterium *Thermus aquaticus* (lebt in heißen Quellen, daher hitzestabil bis ~95 °C)
+- **dNTPs** (Desoxynukleosidtriphosphate) — die vier DNA-Bausteine (dATP, dTTP, dGTP, dCTP)
+- **Puffer mit Mg²⁺** — Cofaktor der Polymerase
+
+> **Merke:** PCR-Zutaten = Template + 2 Primer + Taq-Polymerase + dNTPs + Mg²⁺-Puffer. Die Taq-Polymerase ist hitzestabil, weil sie aus einem thermophilen Bakterium stammt.
+
+---
+
+## Die drei Schritte eines PCR-Zyklus
+
+Jeder PCR-Zyklus besteht aus drei Temperaturschritten, die im **Thermocycler** (programmierbares Heiz-/Kühlgerät) ablaufen:
+
+| Schritt | Temperatur | Was passiert |
+|---------|-----------|-------------|
+| **1. Denaturierung** | ~95 °C | DNA-Doppelstrang wird in Einzelstränge aufgetrennt (H-Brücken brechen) |
+| **2. Annealing** (Primer-Hybridisierung) | ~55–65 °C | Primer lagern sich an die komplementären Bereiche der Einzelstränge an |
+| **3. Elongation** (Verlängerung) | ~72 °C | Taq-Polymerase verlängert die Primer → neuer Doppelstrang |
+
+Nach **n Zyklen** entstehen theoretisch **2ⁿ** Kopien des Zielabschnitts. Typisch sind 25–35 Zyklen → 2³⁰ ≈ **1 Milliarde Kopien**.
+
+> **Merke:** PCR = Denaturierung (95 °C) → Annealing (~60 °C) → Elongation (72 °C). Pro Zyklus verdoppelt sich die DNA-Menge → nach 30 Zyklen ca. 10⁹ Kopien. Eselsbrücke: **D-A-E** (Denaturierung–Annealing–Elongation).
+
+**Prüfungstipp:** Rechenaufgabe: „Nach 20 PCR-Zyklen, wie viele Kopien?" → 2²⁰ = 1.048.576 ≈ **1 Million**. Formel: 2ⁿ (n = Anzahl Zyklen).
+
+---
+
+## Gelelektrophorese — DNA nach Größe sortieren
+
+Nach der PCR (oder nach einem Restriktionsverdau) muss man die entstandenen DNA-Fragmente **sichtbar machen** und **nach Größe auftrennen**. Dazu dient die **Gelelektrophorese**.
+
+**Prinzip:** DNA ist **negativ geladen** (Phosphatgruppen). In einem elektrischen Feld wandert sie daher zum **Pluspol** (Anode). Kleine Fragmente bewegen sich schneller durch die Gelporen als große → **Auftrennung nach Größe**.
+
+**Ablauf:**
+1. DNA-Proben in Taschen eines Agarosegels (Polysaccharid-Gel aus Algen) pipettieren
+2. Spannung anlegen → DNA wandert Richtung Anode
+3. Gel färben (z. B. mit Ethidiumbromid oder SYBR Green) → unter UV-Licht werden **Banden** sichtbar
+4. Größe der Fragmente durch Vergleich mit einem **Größenstandard** (DNA-Leiter, Marker mit bekannten Fragmentlängen) bestimmen
+
+> **Merke:** Gelelektrophorese trennt DNA-Fragmente nach Größe: kleine Fragmente wandern weit (schnell), große bleiben oben (langsam). DNA wandert zur Anode (+), weil sie negativ geladen ist.
+
+---
+
+## Restriktionsenzyme — die molekulare Schere
+
+**Restriktionsenzyme** (Restriktionsendonukleasen) sind bakterielle Enzyme, die DNA an **spezifischen Erkennungssequenzen** (meist 4–8 bp lang, oft palindromisch (von beiden Seiten gleich lesbar)) schneiden. Bakterien nutzen sie als Abwehr gegen Fremd-DNA (z. B. Phagen-DNA). Die eigene DNA schützen sie durch **Methylierung** der Erkennungssequenzen.
+
+**Beispiele:**
+
+| Enzym | Erkennungssequenz | Schnittmuster |
+|-------|------------------|--------------|
+| **EcoRI** | 5'-G↓AATTC-3' | Sticky Ends (überhängende Einzelstrangenden) |
+| **HindIII** | 5'-A↓AGCTT-3' | Sticky Ends |
+| **SmaI** | 5'-CCC↓GGG-3' | Blunt Ends (glatte Enden) |
+
+**Sticky Ends vs. Blunt Ends:**
+- **Sticky Ends** (klebrige Enden): Versetzter Schnitt → komplementäre Einzelstrangüberhänge → können mit kompatiblen Enden ligiert (verbunden) werden → bevorzugt für **Klonierung**
+- **Blunt Ends** (glatte Enden): Gerader Schnitt → keine Überhänge → weniger effizient, aber universell kombinierbar
+
+> **Merke:** Restriktionsenzyme schneiden DNA an palindromischen Erkennungssequenzen. Sticky Ends = versetzter Schnitt (Überhänge) → ideal für Klonierung. Blunt Ends = gerader Schnitt. Name: Enzym stammt vom Bakterium (z. B. EcoRI = *Escherichia coli* Stamm RY13).
+
+---
+
+## Klonierung — ein Gen in einen Vektor einbauen
+
+Bei der **Klonierung** (molekulare Klonierung, nicht zu verwechseln mit dem Klonen von Organismen) wird ein bestimmtes DNA-Fragment (z. B. ein Gen) in einen **Vektor** (Transportmolekül) eingebaut und in eine Wirtszelle eingeschleust, um es dort zu vermehren oder zur Expression zu bringen.
+
+**Ablauf Schritt für Schritt:**
+1. **Ziel-DNA und Vektor** mit demselben Restriktionsenzym schneiden → kompatible Sticky Ends
+2. **Ligation:** DNA-Ligase verbindet Ziel-DNA und Vektor → **rekombinantes Plasmid**
+3. **Transformation:** Rekombinantes Plasmid in Bakterien (meist *E. coli*) einschleusen (z. B. durch Hitzeschock oder Elektroporation (kurzer elektrischer Puls öffnet Membranporen))
+4. **Selektion:** Nur Bakterien mit Plasmid überleben auf Antibiotikum-haltigem Nährboden (Plasmid trägt Antibiotikaresistenzgen)
+5. **Vermehrung:** Bakterien vermehren sich → Plasmid wird mitkopiert → viele Kopien des eingesetzten Gens
+
+**Vektoren:**
+- **Plasmide** — kleine, ringförmige DNA-Moleküle in Bakterien (häufigster Vektor, nimmt Fragmente bis ~10 kb auf)
+- **Bakteriophagen** (Phagen) — für größere Inserts (~25 kb)
+- **BACs** (Bacterial Artificial Chromosomes) — für sehr große Inserts (~300 kb)
+
+> **Merke:** Klonierung = Ziel-DNA + Vektor mit gleichem Restriktionsenzym schneiden → Ligase verbindet → Transformation in Bakterien → Selektion über Antibiotikum. Plasmide sind die Standardvektoren.
+
+---
+
+## DNA-Sequenzierung — die Basenabfolge lesen
+
+Die **Sanger-Sequenzierung** (Kettenabbruchmethode, entwickelt von Frederick Sanger, 1977) war die erste Methode, um die Basenabfolge von DNA zu bestimmen.
+
+**Prinzip:** Der Reaktionsansatz enthält neben normalen dNTPs auch **ddNTPs** (Didesoxyribonukleosidtriphosphate) — ihnen fehlt die 3'-OH-Gruppe, sodass die DNA-Kette bei ihrem Einbau **abbricht**. Da der Einbau zufällig erfolgt, entstehen Fragmente unterschiedlicher Länge, die jeweils an einer bestimmten Base enden. Trennung per Kapillarelektrophorese → Reihenfolge der Basen ablesen.
+
+**Moderne Variante:** **Next-Generation-Sequencing** (NGS) — massiv parallele Sequenzierung von Millionen DNA-Fragmenten gleichzeitig. Ermöglicht die Sequenzierung ganzer Genome in wenigen Stunden.
+
+> **Merke:** Sanger-Sequenzierung: ddNTPs brechen die Kettenverlängerung ab → Fragmente unterschiedlicher Länge → Basenreihenfolge ablesen. NGS = massiv parallel, schneller, günstiger → Whole Genome Sequencing.
+
+---
+
+## Genetischer Fingerabdruck — DNA-Profil zur Identifikation
+
+Jeder Mensch (außer eineiige Zwillinge) hat ein **einzigartiges DNA-Profil**. Genutzt werden **STRs** (Short Tandem Repeats) — kurze, sich wiederholende DNA-Sequenzen (z. B. AGAT wiederholt 8–20×), deren Anzahl zwischen Individuen variiert.
+
+**Ablauf:**
+1. DNA isolieren (z. B. aus Blut, Speichel, Haaren)
+2. STR-Loci per **PCR** amplifizieren (standardisierte Marker, z. B. 16 STR-Loci)
+3. Fragmente per **Kapillarelektrophorese** auftrennen → STR-Profil
+4. Profile vergleichen: Übereinstimmung bei allen Loci → Identifikation
+
+**Anwendungen:** Forensik (Tatorte), Vaterschaftstest, Identifizierung von Katastrophenopfern, Abstammungsgutachten.
+
+> **Merke:** Genetischer Fingerabdruck = STR-Analyse per PCR + Elektrophorese. STRs sind kurze Tandem-Wiederholungen, deren Anzahl individuell variiert. 16 STR-Loci = praktisch eindeutig.
+
+---
+
+## CRISPR/Cas9 — Genom gezielt editieren
+
+**CRISPR/Cas9** (Clustered Regularly Interspaced Short Palindromic Repeats) ist ein revolutionäres Werkzeug zur gezielten **Genomeditierung**. Ursprünglich ist es ein **bakterielles Immunsystem** gegen Phagen.
+
+**Prinzip:**
+1. Eine **guide-RNA** (gRNA, ~20 Nukleotide) wird so designt, dass sie **komplementär** zur Zielsequenz im Genom ist
+2. Die gRNA führt das **Cas9-Protein** (eine Endonuklease) zur Zielstelle
+3. Cas9 erzeugt einen **Doppelstrangbruch** an der exakten Zielstelle
+4. Die Zelle repariert den Bruch — dabei kann man:
+   - **Gen ausschalten** (Knock-out): Reparatur durch NHEJ (Non-Homologous End Joining) → fehlerhafte Reparatur → Gen defekt
+   - **Gen einfügen/korrigieren** (Knock-in): Reparatur durch HDR (Homology-Directed Repair) mit einer mitgelieferten DNA-Vorlage → präzise Änderung
+
+**Vorteile gegenüber älteren Methoden** (Zinkfingernukleasen, TALENs): Einfacher zu designen (nur gRNA anpassen), günstiger, effizienter, multiplexing-fähig (mehrere Gene gleichzeitig).
+
+> **Merke:** CRISPR/Cas9 = guide-RNA führt Cas9-Nuklease zur Zielstelle → Doppelstrangbruch → Gen ausschalten (NHEJ) oder korrigieren (HDR). Nobelpreis 2020 (Charpentier & Doudna). Einfacher und präziser als alle Vorgängermethoden.
+
+---
+
+## Gentechnisch veränderte Organismen (GVO)
+
+**GVO** (gentechnisch veränderte Organismen, engl. GMO) enthalten Fremd-DNA, die gezielt eingebracht wurde. Das Grundprinzip: Ein **Transgen** (gewünschtes Gen) wird mithilfe eines Vektors in das Genom eines Organismus integriert.
+
+**Herstellung transgener Organismen:**
+- **Bakterien:** Transformation mit rekombinantem Plasmid → z. B. *E. coli* produziert **humanes Insulin** (erstes gentechnisches Medikament, 1982)
+- **Pflanzen:** Agrobacterium tumefaciens überträgt T-DNA (natürlicher Gentransfer) oder Genkanone (Biolistik) → z. B. Bt-Mais (trägt Insektizidgen aus *Bacillus thuringiensis*)
+- **Tiere:** Mikroinjektion in befruchtete Eizelle oder CRISPR → z. B. transgene Mäuse für Krankheitsmodelle
+
+**Ethische Aspekte und Regulierung:**
+- GVO-Kennzeichnungspflicht in der EU (> 0,9 % GVO-Anteil)
+- Debatte: Chancen (Ertragssteigerung, Vitaminanreicherung wie Golden Rice) vs. Risiken (Auskreuzung, Biodiversitätsverlust, unbekannte Langzeiteffekte)
+
+> **Merke:** GVO = Organismus mit eingebautem Transgen. Herstellung über Vektoren (Plasmide, Agrobacterium) oder CRISPR. Insulin aus *E. coli* = erstes gentechnisches Medikament. EU: Kennzeichnungspflicht ab 0,9 % GVO.
+
+---
+
+## Klonen von Organismen
+
+Beim **reproduktiven Klonen** wird ein genetisch identischer Organismus erzeugt. Die bekannteste Methode ist der **somatische Kerntransfer** (SCNT):
+
+1. Entkernung einer **Eizelle** (Kern wird entfernt)
+2. **Zellkern** einer Körperzelle (somatische Zelle) des zu klonenden Organismus wird in die entkernte Eizelle übertragen
+3. Elektrische Stimulation → Eizelle beginnt sich zu teilen
+4. Embryo wird in eine Leihmutter übertragen → genetisch identischer Klon
+
+**Dolly** (1996, Roslin Institute, Edinburgh) war das erste aus einer adulten Zelle geklonte Säugetier (Schaf). Dolly starb 2003 mit 6 Jahren (Arthritis, Lungenerkrankung) — Diskussion über beschleunigte Alterung bei Klonen.
+
+**Therapeutisches Klonen:** Ziel ist nicht ein ganzer Organismus, sondern die Gewinnung von **embryonalen Stammzellen** aus dem geklonten Embryo (Blastozysten-Stadium) → potenzielle Therapie für degenerative Erkrankungen. Ethisch umstritten, da Embryonen zerstört werden.
+
+> **Merke:** Reproduktives Klonen = somatischer Kerntransfer (SCNT) → genetisch identischer Organismus (Dolly, 1996). Therapeutisches Klonen → embryonale Stammzellen. Ethisch stark diskutiert.`,
+      lernziele: [
+        "PCR-Prinzip und die drei Zyklusschritte (Denaturierung, Annealing, Elongation) erklären.",
+        "Gelelektrophorese als Methode zur Größenauftrennung von DNA-Fragmenten beschreiben.",
+        "Funktion von Restriktionsenzymen und den Unterschied Sticky/Blunt Ends kennen.",
+        "Den Ablauf einer molekularen Klonierung (Schneiden → Ligieren → Transformation → Selektion) darstellen.",
+        "CRISPR/Cas9 als Methode zur gezielten Genomeditierung verstehen.",
+        "Sanger-Sequenzierung und genetischen Fingerabdruck (STR-Analyse) erklären.",
+      ],
+      sections: [],
+      merksätze: [
+        "PCR = Denaturierung (95 °C) → Annealing (~60 °C) → Elongation (72 °C); nach n Zyklen 2ⁿ Kopien.",
+        "Restriktionsenzyme schneiden DNA an palindromischen Sequenzen: Sticky Ends (versetzt) oder Blunt Ends (glatt).",
+        "Klonierung: Ziel-DNA + Vektor mit gleichem Restriktionsenzym schneiden → Ligase → Transformation → Selektion.",
+        "CRISPR/Cas9: guide-RNA führt Cas9 zur Zielstelle → Doppelstrangbruch → Knock-out (NHEJ) oder Knock-in (HDR).",
+      ],
+      selfTest: [
+        {
+          question: "Welche Temperatur wird beim Annealing-Schritt der PCR verwendet?",
+          options: ["95 °C", "37 °C", "55–65 °C", "72 °C", "4 °C"],
+          correctIndex: 2,
+          explanation:
+            "Beim **Annealing** (Primer-Hybridisierung) wird die Temperatur auf **55–65 °C** gesenkt, damit sich die Primer an die komplementären Bereiche der Einzelstränge anlagern können. 95 °C = Denaturierung, 72 °C = Elongation.",
+          difficulty: 1,
+          tags: ["pcr", "annealing", "temperatur"],
+        },
+        {
+          question:
+            "Warum wird bei der PCR die Taq-Polymerase verwendet und nicht eine herkömmliche DNA-Polymerase?",
+          options: [
+            "Taq-Polymerase ist billiger",
+            "Taq-Polymerase hat Proofreading-Aktivität",
+            "Taq-Polymerase ist hitzestabil und übersteht den Denaturierungsschritt bei 95 °C",
+            "Taq-Polymerase benötigt keine Primer",
+            "Taq-Polymerase arbeitet nur bei Raumtemperatur",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Die **Taq-Polymerase** stammt aus dem thermophilen Bakterium *Thermus aquaticus* und ist **hitzestabil** — sie übersteht die Denaturierung bei 95 °C, ohne ihre Aktivität zu verlieren. Eine herkömmliche DNA-Polymerase würde bei dieser Temperatur denaturieren.",
+          difficulty: 1,
+          tags: ["pcr", "taq-polymerase", "thermostabil"],
+        },
+        {
+          question: "Was sind Sticky Ends bei Restriktionsenzymen?",
+          options: [
+            "Glatte DNA-Enden ohne Überhänge",
+            "Überhängende komplementäre Einzelstrangenden nach versetztem Schnitt",
+            "Ringförmig geschlossene DNA-Enden",
+            "DNA-Enden mit angehängten Proteinen",
+            "Methylierte Erkennungssequenzen",
+          ],
+          correctIndex: 1,
+          explanation:
+            "**Sticky Ends** (klebrige Enden) entstehen durch einen **versetzten Schnitt** des Restriktionsenzyms und haben **komplementäre Einzelstrangüberhänge**. Diese können mit kompatiblen Sticky Ends anderer Fragmente hybridisieren und durch DNA-Ligase verbunden werden — ideal für die Klonierung.",
+          difficulty: 1,
+          tags: ["restriktionsenzyme", "sticky-ends", "klonierung"],
+        },
+        {
+          question:
+            "Bei der Gelelektrophorese wandern DNA-Fragmente zur Anode (+). Welche Fragmente wandern am weitesten?",
+          options: [
+            "Die größten Fragmente",
+            "Die kleinsten Fragmente",
+            "Alle Fragmente wandern gleich weit",
+            "Nur ringförmige DNA wandert",
+            "Nur einzelsträngige DNA wandert",
+          ],
+          correctIndex: 1,
+          explanation:
+            "**Kleine DNA-Fragmente** wandern am weitesten durch das Agarosegel, weil sie leichter durch die Gelporen schlüpfen. Große Fragmente werden stärker gebremst und bleiben näher an der Auftragsstelle. DNA wandert zur Anode (+), weil sie durch die Phosphatgruppen **negativ geladen** ist.",
+          difficulty: 1,
+          tags: ["gelelektrophorese", "dna-auftrennung"],
+        },
+        {
+          question: "Wie funktioniert CRISPR/Cas9 bei einem Gen-Knockout?",
+          options: [
+            "Cas9 methyliert die Ziel-DNA",
+            "Die guide-RNA ersetzt das defekte Gen",
+            "Cas9 erzeugt einen Doppelstrangbruch, der durch fehlerhafte NHEJ-Reparatur das Gen zerstört",
+            "CRISPR entfernt das gesamte Chromosom",
+            "Cas9 blockiert die Transkription ohne die DNA zu schneiden",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Beim **Gen-Knockout** mit CRISPR/Cas9 führt die **guide-RNA** das Cas9-Protein zur Zielsequenz. Cas9 erzeugt einen **Doppelstrangbruch**. Die Zelle repariert diesen durch **NHEJ** (Non-Homologous End Joining), wobei oft Insertionen oder Deletionen entstehen → **Leserasterverschiebung** → Gen wird funktionsunfähig.",
+          difficulty: 2,
+          tags: ["crispr", "cas9", "knockout", "nhej"],
+        },
+        {
+          question:
+            "Nach 25 PCR-Zyklen: Wie viele Kopien des Zielabschnitts sind theoretisch entstanden (ausgehend von einem DNA-Molekül)?",
+          options: ["25", "50", "2⁵ = 32", "2²⁵ ≈ 33,5 Millionen", "25² = 625"],
+          correctIndex: 3,
+          explanation:
+            "Bei der PCR **verdoppelt** sich die DNA-Menge in jedem Zyklus. Nach **n Zyklen** gibt es **2ⁿ** Kopien. Nach 25 Zyklen: 2²⁵ = 33.554.432 ≈ **33,5 Millionen** Kopien. Dies ist eine häufige MedAT-Rechenaufgabe.",
+          difficulty: 2,
+          tags: ["pcr", "rechenfrage", "amplifikation"],
+        },
+      ],
+      altfrage: {
+        text: "Welche Aussage zur Polymerase-Kettenreaktion (PCR) ist richtig?",
+        options: [
+          { id: "a", text: "Beim Annealing wird die DNA bei 95 °C denaturiert." },
+          {
+            id: "b",
+            text: "Die Taq-Polymerase stammt aus einem thermophilen Bakterium und ist hitzestabil.",
+          },
+          { id: "c", text: "Nach 10 Zyklen liegen theoretisch 20 Kopien der Ziel-DNA vor." },
+          { id: "d", text: "Für die PCR werden keine Primer benötigt." },
+          { id: "e", text: "Die Elongation erfolgt bei 4 °C." },
+        ],
+        correctOptionId: "b",
+        explanation:
+          "Die **Taq-Polymerase** stammt aus *Thermus aquaticus*, einem **thermophilen Bakterium** aus heißen Quellen, und ist daher **hitzestabil** (übersteht 95 °C). A ist falsch: 95 °C ist die Denaturierungstemperatur, nicht die Annealing-Temperatur (~55–65 °C). C ist falsch: Nach 10 Zyklen liegen 2¹⁰ = 1024 Kopien vor (nicht 20). D ist falsch: Primer sind essenziell. E ist falsch: Elongation erfolgt bei ~72 °C.",
+      },
+    },
   ],
 };
