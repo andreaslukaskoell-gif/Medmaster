@@ -26,6 +26,8 @@ const NAVY = "#1b3ea7"; /* Signature Navy (--accent) */
 const NAVY_HOVER = "#163286"; /* --accent-hover */
 const NAVY_LIGHT = "#3655b2"; /* primary-400 for gradients */
 
+const ICON_STYLE = "bg-primary-50 dark:bg-primary-900/30 text-[#1b3ea7] dark:text-primary-400";
+
 const features = [
   {
     icon: Brain,
@@ -33,7 +35,6 @@ const features = [
     description:
       "Das System erkennt deine Schwachstellen und stellt gezielt Fragen aus 4.300+ BMS-Aufgaben, die deinem Niveau entsprechen.",
     stat: "4.300+ Fragen",
-    color: "bg-[#e8ecf7] dark:bg-primary-900/30 text-[#1b3ea7] dark:text-primary-400",
   },
   {
     icon: ListChecks,
@@ -41,7 +42,6 @@ const features = [
     description:
       "Jedes offizielle BMS-Stichwort abgedeckt, aufgeteilt in 173 Lerneinheiten mit Fortschritt pro Thema.",
     stat: "173 Lerneinheiten",
-    color: "bg-[#e8ecf7] dark:bg-primary-900/30 text-[#1b3ea7] dark:text-primary-400",
   },
   {
     icon: LayoutGrid,
@@ -49,7 +49,6 @@ const features = [
     description:
       "BMS, KFF, TV und SEK vollständig abgedeckt. 5 KFF-Untertests, 10 TV-Textsets, 100 SEK-Aufgaben — alles in einer App.",
     stat: "Vollständig",
-    color: "bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400",
   },
   {
     icon: Infinity,
@@ -57,7 +56,6 @@ const features = [
     description:
       "Algorithmisch generierte Zahlenfolgen, Implikationen, Wortflüssigkeit und Figuren — unendlich viele Aufgaben, nie Wiederholungen.",
     stat: "Unbegrenzt",
-    color: "bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400",
   },
   {
     icon: Zap,
@@ -65,7 +63,6 @@ const features = [
     description:
       "Vollständige MedAT-Simulation unter echten Bedingungen: Timer, Auswertung, offizielle Zeitlimits pro Testteil.",
     stat: "Original-Format",
-    color: "bg-violet-100 dark:bg-violet-900/30 text-violet-700 dark:text-violet-400",
   },
   {
     icon: TrendingUp,
@@ -73,7 +70,6 @@ const features = [
     description:
       "Live-Tracking deines Wissensstands pro Fach. Spaced Repetition und KI-gestützte Prüfungstag-Prognose.",
     stat: "Echtzeit-Analyse",
-    color: "bg-rose-100 dark:bg-rose-900/30 text-rose-700 dark:text-rose-400",
   },
 ];
 
@@ -181,16 +177,14 @@ export default function LandingPage() {
             >
               Anmelden
             </Link>
-            <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-              <Link
-                to="/register"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-white px-5 py-2.5 rounded-2xl shadow-sm transition-colors"
-                style={{ backgroundColor: NAVY }}
-              >
-                Gratis testen
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </motion.div>
+            <Link
+              to="/register"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-white px-5 py-2.5 rounded-xl shadow-[var(--shadow-sm)] transition-colors hover:opacity-90"
+              style={{ backgroundColor: NAVY }}
+            >
+              Gratis testen
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         </div>
       </motion.nav>
@@ -256,15 +250,13 @@ export default function LandingPage() {
             transition={{ delay: 0.45 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <motion.button
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
+            <button
               onClick={async () => {
                 setGoogleError("");
                 const { error } = await signInWithGoogle();
                 if (error) setGoogleError(error.message);
               }}
-              className="inline-flex items-center justify-center gap-3 text-white font-semibold px-8 py-4 rounded-2xl text-base shadow-sm transition-colors"
+              className="inline-flex items-center justify-center gap-3 text-white font-semibold px-8 py-4 rounded-xl text-base shadow-[var(--shadow-sm)] transition-colors hover:opacity-90 cursor-pointer"
               style={{ backgroundColor: NAVY }}
             >
               <svg className="w-5 h-5" viewBox="0 0 24 24">
@@ -286,16 +278,14 @@ export default function LandingPage() {
                 />
               </svg>
               In 10 Sekunden starten
-            </motion.button>
-            <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-              <Link
-                to="/register"
-                className="inline-flex items-center justify-center gap-2 bg-[var(--surface)] text-[var(--text-secondary)] font-semibold px-8 py-4 rounded-2xl text-base border border-app-border shadow-sm hover:bg-background transition-colors"
-              >
-                Mit E-Mail registrieren
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-            </motion.div>
+            </button>
+            <Link
+              to="/register"
+              className="inline-flex items-center justify-center gap-2 bg-[var(--surface)] text-[var(--text-secondary)] font-semibold px-8 py-4 rounded-xl text-base shadow-[var(--shadow-xs)] hover:shadow-[var(--shadow-sm)] transition-shadow"
+            >
+              Mit E-Mail registrieren
+              <ArrowRight className="w-5 h-5" />
+            </Link>
           </motion.div>
           {googleError && <p className="text-sm text-red-500 mt-2">{googleError}</p>}
 
@@ -314,12 +304,12 @@ export default function LandingPage() {
               <motion.div
                 key={stat.label}
                 variants={item}
-                className="rounded-2xl bg-[var(--surface)]/80 dark:bg-[var(--surface)]/50 p-4 sm:p-5 shadow-sm border border-app-border/50"
+                className="rounded-xl bg-[var(--surface)]/80 dark:bg-[var(--surface)]/50 p-4 sm:p-5 shadow-[var(--shadow-xs)]"
               >
-                <div className="text-2xl sm:text-3xl font-bold" style={{ color: NAVY }}>
+                <div className="text-2xl sm:text-3xl font-bold text-app-foreground">
                   {stat.value}
                 </div>
-                <div className="text-xs sm:text-sm text-app-muted mt-1">{stat.label}</div>
+                <div className="text-xs sm:text-sm text-[var(--muted)] mt-1">{stat.label}</div>
               </motion.div>
             ))}
           </motion.div>
@@ -342,15 +332,12 @@ export default function LandingPage() {
                 ].map((unit) => (
                   <div
                     key={unit.label}
-                    className="flex flex-col items-center bg-[var(--surface)] rounded-2xl px-4 py-3 sm:px-5 sm:py-4 shadow-sm border border-app-border/50 min-w-[4rem] sm:min-w-[5rem]"
+                    className="flex flex-col items-center bg-[var(--surface)]/80 rounded-xl px-4 py-3 sm:px-5 sm:py-4 shadow-[var(--shadow-xs)] min-w-[4rem] sm:min-w-[5rem]"
                   >
-                    <span
-                      className="text-2xl sm:text-3xl font-bold tabular-nums"
-                      style={{ color: NAVY }}
-                    >
+                    <span className="text-2xl sm:text-3xl font-bold tabular-nums text-app-foreground">
                       {String(unit.value).padStart(2, "0")}
                     </span>
-                    <span className="text-xs text-app-muted mt-1">{unit.label}</span>
+                    <span className="text-xs text-[var(--muted)] mt-1">{unit.label}</span>
                   </div>
                 ))}
               </div>
@@ -387,23 +374,17 @@ export default function LandingPage() {
               <motion.div
                 key={f.title}
                 variants={item}
-                whileHover={{ y: -4 }}
-                className="bg-[var(--surface)] dark:bg-[var(--surface)] rounded-2xl p-8 shadow-sm border border-app-border/50"
+                className="bg-[var(--surface)] dark:bg-[var(--surface)] rounded-2xl p-8 shadow-[var(--shadow-sm)]"
               >
                 <div className="flex items-center justify-between mb-5">
                   <div
-                    className={`w-12 h-12 rounded-2xl flex items-center justify-center ${f.color}`}
+                    className={`w-10 h-10 rounded-xl flex items-center justify-center ${ICON_STYLE}`}
                   >
-                    <f.icon className="w-6 h-6" />
+                    <f.icon className="w-5 h-5" />
                   </div>
-                  <span
-                    className="text-xs font-bold px-3 py-1 rounded-full bg-primary-50 dark:bg-primary-900/30"
-                    style={{ color: NAVY }}
-                  >
-                    {f.stat}
-                  </span>
+                  <span className="text-xs font-medium text-[var(--muted)]">{f.stat}</span>
                 </div>
-                <h3 className="text-lg font-semibold text-app-foreground mb-3">{f.title}</h3>
+                <h3 className="text-base font-semibold text-app-foreground mb-2">{f.title}</h3>
                 <p className="text-[var(--text-secondary)] text-sm leading-relaxed">
                   {f.description}
                 </p>
@@ -453,15 +434,12 @@ export default function LandingPage() {
             ].map((s) => (
               <motion.div key={s.step} variants={item} className="text-center">
                 <div
-                  className="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-sm bg-[#e8ecf7] dark:bg-primary-900/30"
-                  style={{ color: NAVY }}
+                  className={`w-10 h-10 rounded-xl flex items-center justify-center mx-auto mb-4 ${ICON_STYLE}`}
                 >
-                  <s.icon className="w-7 h-7" />
+                  <s.icon className="w-5 h-5" />
                 </div>
-                <div className="text-xs font-bold mb-2" style={{ color: NAVY }}>
-                  SCHRITT {s.step}
-                </div>
-                <h3 className="text-lg font-semibold text-app-foreground mb-2">{s.title}</h3>
+                <div className="text-xs font-medium text-[var(--muted)] mb-1">{s.step}.</div>
+                <h3 className="text-base font-semibold text-app-foreground mb-2">{s.title}</h3>
                 <p className="text-[var(--text-secondary)] text-sm">{s.desc}</p>
               </motion.div>
             ))}
@@ -484,16 +462,14 @@ export default function LandingPage() {
             <p className="text-sm text-app-muted mb-6">
               Voller Zugang bis 31. März. Danach einmalig €29,90.
             </p>
-            <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-              <Link
-                to="/register"
-                className="inline-flex items-center gap-2 text-white font-semibold px-8 py-3.5 rounded-2xl text-sm shadow-sm transition-colors"
-                style={{ backgroundColor: NAVY }}
-              >
-                Gratis starten
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </motion.div>
+            <Link
+              to="/register"
+              className="inline-flex items-center gap-2 text-white font-semibold px-8 py-3.5 rounded-xl text-sm shadow-[var(--shadow-sm)] transition-colors hover:opacity-90"
+              style={{ backgroundColor: NAVY }}
+            >
+              Gratis starten
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </motion.div>
         </div>
       </section>
@@ -582,7 +558,7 @@ export default function LandingPage() {
               <motion.div
                 key={t.name}
                 variants={item}
-                className="bg-[var(--surface)] dark:bg-[var(--surface)] rounded-2xl p-6 sm:p-8 shadow-sm border border-app-border/50"
+                className="bg-[var(--surface)] dark:bg-[var(--surface)] rounded-2xl p-6 sm:p-8 shadow-[var(--shadow-sm)]"
               >
                 <div className="flex gap-0.5 mb-4">
                   {Array.from({ length: t.rating }).map((_, i) => (
@@ -608,71 +584,30 @@ export default function LandingPage() {
           <h2 className="text-2xl font-bold text-app-foreground text-center mb-8">
             MedAT 2026 Vorbereitung
           </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-            <Link
-              to="/medat-uebungsfragen"
-              className="flex flex-col items-center gap-2 p-5 rounded-2xl bg-[var(--surface)] dark:bg-[var(--surface)] border border-app-border/50 hover:border-app-border transition-colors shadow-sm text-center"
-            >
-              <span className="text-2xl">✏️</span>
-              <span className="text-sm font-semibold text-app-foreground">MedAT Übungsfragen</span>
-              <span className="text-xs text-app-muted">BMS + KFF kostenlos</span>
-            </Link>
-            <Link
-              to="/medat-guide"
-              className="flex flex-col items-center gap-2 p-5 rounded-2xl bg-[var(--surface)] dark:bg-[var(--surface)] border border-app-border/50 hover:border-app-border transition-colors shadow-sm text-center"
-            >
-              <span className="text-2xl">📖</span>
-              <span className="text-sm font-semibold text-app-foreground">MedAT 2026 Guide</span>
-              <span className="text-xs text-app-muted">Alles zum Test</span>
-            </Link>
-            <Link
-              to="/faq"
-              className="flex flex-col items-center gap-2 p-5 rounded-2xl bg-[var(--surface)] dark:bg-[var(--surface)] border border-app-border/50 hover:border-app-border transition-colors shadow-sm text-center"
-            >
-              <span className="text-2xl">❓</span>
-              <span className="text-sm font-semibold text-app-foreground">Häufige Fragen</span>
-              <span className="text-xs text-app-muted">FAQ zum MedAT</span>
-            </Link>
-            <Link
-              to="/medat-biologie-fragen"
-              className="flex flex-col items-center gap-2 p-5 rounded-2xl bg-[var(--surface)] dark:bg-[var(--surface)] border border-app-border/50 hover:border-app-border transition-colors shadow-sm text-center"
-            >
-              <span className="text-2xl">🧬</span>
-              <span className="text-sm font-semibold text-app-foreground">BMS Biologie</span>
-              <span className="text-xs text-app-muted">1.100+ Fragen</span>
-            </Link>
-            <Link
-              to="/medat-chemie-fragen"
-              className="flex flex-col items-center gap-2 p-5 rounded-2xl bg-[var(--surface)] dark:bg-[var(--surface)] border border-app-border/50 hover:border-app-border transition-colors shadow-sm text-center"
-            >
-              <span className="text-2xl">⚗️</span>
-              <span className="text-sm font-semibold text-app-foreground">BMS Chemie</span>
-              <span className="text-xs text-app-muted">1.400+ Fragen</span>
-            </Link>
-            <Link
-              to="/medat-physik-fragen"
-              className="flex flex-col items-center gap-2 p-5 rounded-2xl bg-[var(--surface)] dark:bg-[var(--surface)] border border-app-border/50 hover:border-app-border transition-colors shadow-sm text-center"
-            >
-              <span className="text-2xl">⚡</span>
-              <span className="text-sm font-semibold text-app-foreground">BMS Physik</span>
-              <span className="text-xs text-app-muted">1.300+ Fragen</span>
-            </Link>
-            <Link
-              to="/medat-mathematik-fragen"
-              className="flex flex-col items-center gap-2 p-5 rounded-2xl bg-[var(--surface)] dark:bg-[var(--surface)] border border-app-border/50 hover:border-app-border transition-colors shadow-sm text-center"
-            >
-              <span className="text-2xl">📊</span>
-              <span className="text-sm font-semibold text-app-foreground">BMS Mathematik</span>
-              <span className="text-xs text-app-muted">490+ Fragen</span>
-            </Link>
-            <Link
-              to="/challenge"
-              className="flex flex-col items-center gap-2 p-5 rounded-2xl bg-[var(--surface)] dark:bg-[var(--surface)] border border-app-border/50 hover:border-app-border transition-colors shadow-sm text-center"
-            >
-              <span className="text-2xl">🏆</span>
-              <span className="text-sm font-semibold text-app-foreground">Quiz Challenge</span>
-              <span className="text-xs text-app-muted">Teile dein Ergebnis</span>
-            </Link>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            {[
+              {
+                to: "/medat-uebungsfragen",
+                label: "MedAT Übungsfragen",
+                sub: "BMS + KFF kostenlos",
+              },
+              { to: "/medat-guide", label: "MedAT 2026 Guide", sub: "Alles zum Test" },
+              { to: "/faq", label: "Häufige Fragen", sub: "FAQ zum MedAT" },
+              { to: "/medat-biologie-fragen", label: "BMS Biologie", sub: "1.100+ Fragen" },
+              { to: "/medat-chemie-fragen", label: "BMS Chemie", sub: "1.400+ Fragen" },
+              { to: "/medat-physik-fragen", label: "BMS Physik", sub: "1.300+ Fragen" },
+              { to: "/medat-mathematik-fragen", label: "BMS Mathematik", sub: "490+ Fragen" },
+              { to: "/challenge", label: "Quiz Challenge", sub: "Teile dein Ergebnis" },
+            ].map((link) => (
+              <Link
+                key={link.to}
+                to={link.to}
+                className="flex flex-col gap-1 p-4 rounded-xl bg-[var(--surface)] shadow-[var(--shadow-xs)] hover:shadow-[var(--shadow-sm)] transition-shadow text-left"
+              >
+                <span className="text-sm font-medium text-app-foreground">{link.label}</span>
+                <span className="text-xs text-[var(--muted)]">{link.sub}</span>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
@@ -722,15 +657,13 @@ export default function LandingPage() {
                 </li>
               ))}
             </ul>
-            <motion.button
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
+            <button
               onClick={async () => {
                 setGoogleError("");
                 const { error } = await signInWithGoogle();
                 if (error) setGoogleError(error.message);
               }}
-              className="inline-flex items-center justify-center gap-3 text-white font-semibold px-8 py-4 rounded-2xl text-base shadow-sm w-full sm:w-auto transition-colors"
+              className="inline-flex items-center justify-center gap-3 text-white font-semibold px-8 py-4 rounded-xl text-base shadow-[var(--shadow-sm)] w-full sm:w-auto transition-colors hover:opacity-90 cursor-pointer"
               style={{ backgroundColor: NAVY }}
             >
               <svg className="w-5 h-5" viewBox="0 0 24 24">
@@ -752,7 +685,7 @@ export default function LandingPage() {
                 />
               </svg>
               Gratis starten mit Google
-            </motion.button>
+            </button>
             {googleError && <p className="text-sm text-red-500 mt-2">{googleError}</p>}
             <p className="text-xs text-app-muted/70 mt-3">
               Oder{" "}
@@ -780,15 +713,13 @@ export default function LandingPage() {
           <p className="text-primary-200 text-sm mb-8">
             Komplett gratis bis 31. März — danach einmalig €29,90. Kein Abo, kein Risiko.
           </p>
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
-            <Link
-              to="/register"
-              className="inline-flex items-center gap-2 bg-white text-[#1b3ea7] font-semibold px-8 py-4 rounded-2xl text-lg shadow-sm hover:bg-primary-50 transition-colors"
-            >
-              Gratis starten
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-          </motion.div>
+          <Link
+            to="/register"
+            className="inline-flex items-center gap-2 bg-white text-[#1b3ea7] font-semibold px-8 py-4 rounded-xl text-lg shadow-[var(--shadow-sm)] hover:bg-primary-50 transition-colors"
+          >
+            Gratis starten
+            <ArrowRight className="w-5 h-5" />
+          </Link>
         </div>
       </motion.section>
 
