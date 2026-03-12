@@ -36,8 +36,7 @@ const ContentAudit = lazy(() => import("@/pages/ContentAudit"));
 const AdminPreview = lazy(() => import("@/pages/AdminPreview"));
 const AdminDashboard = lazy(() => import("@/pages/AdminDashboard"));
 const AdminTasksPage = lazy(() => import("@/pages/AdminTasksPage"));
-const LoginPage = lazy(() => import("@/pages/LoginPage"));
-const RegisterPage = lazy(() => import("@/pages/RegisterPage"));
+const AuthPage = lazy(() => import("@/pages/AuthPage"));
 const ForgotPasswordPage = lazy(() => import("@/pages/ForgotPasswordPage"));
 const Prognose = lazy(() => import("@/pages/Prognose"));
 const PerformanceOverview = lazy(() => import("@/pages/PerformanceOverview"));
@@ -145,8 +144,8 @@ export default function App() {
         <Routes>
           {/* Public routes */}
           <Route path="/" element={<RootRoute />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/register" element={<RegisterPage />} />
+          <Route path="/login" element={<AuthPage />} />
+          <Route path="/register" element={<Navigate to="/login" replace />} />
           <Route path="/forgot-password" element={<ForgotPasswordPage />} />
           <Route path="/legal" element={<Legal />} />
           <Route path="/impressum" element={<Legal />} />

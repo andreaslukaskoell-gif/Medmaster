@@ -233,6 +233,15 @@ export function useAuth() {
     }
   }
 
+  async function signInWithOtp(email: string) {
+    if (!supabase) return { error: new Error("Supabase nicht konfiguriert") };
+    const { error } = await supabase.auth.signInWithOtp({
+      email,
+      options: { emailRedirectTo: window.location.origin + "/dashboard" },
+    });
+    return { error: error ? new Error(error.message) : null };
+  }
+
   async function resetPassword(email: string) {
     if (!supabase) return { error: new Error("Supabase nicht konfiguriert") };
     const { error } = await supabase.auth.resetPasswordForEmail(email);
@@ -255,6 +264,7 @@ export function useAuth() {
     isPro,
     signUp,
     signIn,
+    signInWithOtp,
     signInWithGoogle,
     signOut,
     deleteAccount,
