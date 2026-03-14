@@ -1,5 +1,5 @@
 import { Cloud } from "lucide-react";
-import { useSyncStatus } from "@/stores/syncStatus";
+import { useSyncStatus } from "@/store/syncStatus";
 
 /**
  * Small, subtle indicator when a sync is in progress (e.g. corner of dashboard).

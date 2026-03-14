@@ -1,7 +1,14 @@
 import { allBmsQuestions } from "@/data/bms/index";
 
-const questionSubjectMap = new Map<string, string>(allBmsQuestions.map((q) => [q.id, q.subject]));
+let questionSubjectMap: Map<string, string> | null = null;
+
+function getMap(): Map<string, string> {
+  if (!questionSubjectMap) {
+    questionSubjectMap = new Map(allBmsQuestions.map((q) => [q.id, q.subject]));
+  }
+  return questionSubjectMap;
+}
 
 export function getQuestionSubject(questionId: string): string | undefined {
-  return questionSubjectMap.get(questionId);
+  return getMap().get(questionId);
 }

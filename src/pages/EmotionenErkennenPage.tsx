@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Eye, BookOpen, Dumbbell, Timer } from "lucide-react";
 import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
-import { useKFFStore } from "@/stores/kffStore";
+import { useKFFStore } from "@/store/kffStore";
 import EmotionenErkennenLernen from "./EmotionenErkennenLernen";
 import EmotionenErkennenUeben from "./EmotionenErkennenUeben";
 import EmotionenErkennenSimulation from "./EmotionenErkennenSimulation";

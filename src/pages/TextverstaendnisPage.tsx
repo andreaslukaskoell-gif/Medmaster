@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FileText, BookOpen, Dumbbell, Timer } from "lucide-react";
 import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
-import { useKFFStore } from "@/stores/kffStore";
+import { useKFFStore } from "@/store/kffStore";
 import TextverstaendnisLernen from "./TextverstaendnisLernen";
 import TextverstaendnisUeben from "./TextverstaendnisUeben";
 import TextverstaendnisSimulation from "./TextverstaendnisSimulation";

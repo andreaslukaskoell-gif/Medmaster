@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { Brain, Hash, Type, Database, Puzzle, Heart, Users, Eye, FileText } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
-import { useKFFStore } from "@/stores/kffStore";
+import { useKFFStore } from "@/store/kffStore";
 import type { KFFSubtestType } from "@/data/kffTypes";
 import { usePageTitle } from "@/hooks/usePageTitle";
 

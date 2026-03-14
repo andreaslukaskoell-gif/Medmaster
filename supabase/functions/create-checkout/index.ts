@@ -9,8 +9,9 @@ const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY")!, {
   apiVersion: "2023-10-16",
 });
 
+const ALLOWED_ORIGIN = Deno.env.get("SITE_URL") || "https://medmaster.at";
 const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Origin": ALLOWED_ORIGIN,
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
@@ -64,7 +65,13 @@ serve(async (req) => {
       });
     }
 
-    const siteUrl = Deno.env.get("SITE_URL") || "http://localhost:5173";
+    const siteUrl = Deno.env.get("SITE_URL");
+    if (!siteUrl) {
+      return new Response(JSON.stringify({ message: "SITE_URL not configured" }), {
+        status: 503,
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
+    }
 
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],

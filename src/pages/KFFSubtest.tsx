@@ -17,7 +17,7 @@ import {
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
-import { useKFFStore } from "@/stores/kffStore";
+import { useKFFStore } from "@/store/kffStore";
 import type { KFFSubtestType } from "@/data/kffTypes";
 
 type TabKey = "lernen" | "ueben" | "simulation";

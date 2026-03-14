@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Brain, BookOpen, Dumbbell, Timer } from "lucide-react";
 import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
-import { useKFFStore } from "@/stores/kffStore";
+import { useKFFStore } from "@/store/kffStore";
 import ImplikationenLernen from "./ImplikationenLernen";
 import ImplikationenUeben from "./ImplikationenUeben";
 import ImplikationenSimulation from "./ImplikationenSimulation";

@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { CloudCheck } from "lucide-react";
-import { useSyncStatus } from "@/stores/syncStatus";
+import { useSyncStatus } from "@/store/syncStatus";
 
 /**
  * Zeigt eine kurze Toast-Meldung, wenn Daten im Hintergrund nachsynchronisiert wurden.

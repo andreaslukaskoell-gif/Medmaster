@@ -1,6 +1,6 @@
 import { supabase } from "./supabase";
 import { setSchemaSkip, isSchemaSkipActive } from "./supabaseSchemaSkip";
-import { useSyncStatus } from "@/stores/syncStatus";
+import { useSyncStatus } from "@/store/syncStatus";
 
 // Avoid circular dependency: useAuth → syncService → adaptiveLearning → data.
 // Load adaptive store only when sync runs (after login).
@@ -459,6 +459,7 @@ async function processOfflineQueue(): Promise<boolean> {
 
 let syncInterval: ReturnType<typeof setInterval> | null = null;
 let onlineHandler: (() => void) | null = null;
+let beforeUnloadHandler: (() => void) | null = null;
 
 export function startAutoSync(userId: string) {
   // Initial pull — fire-and-forget; never block or throw (pull returns { ok }, no throw)
@@ -481,10 +482,11 @@ export function startAutoSync(userId: string) {
     2 * 60 * 1000
   );
 
-  // Push on page unload
-  window.addEventListener("beforeunload", () => {
+  // Push on page unload (named fn so it can be removed)
+  beforeUnloadHandler = () => {
     pushStatsToSupabase(userId);
-  });
+  };
+  window.addEventListener("beforeunload", beforeUnloadHandler);
 }
 
 export function stopAutoSync() {
@@ -495,5 +497,9 @@ export function stopAutoSync() {
   if (onlineHandler) {
     window.removeEventListener("online", onlineHandler);
     onlineHandler = null;
+  }
+  if (beforeUnloadHandler) {
+    window.removeEventListener("beforeunload", beforeUnloadHandler);
+    beforeUnloadHandler = null;
   }
 }

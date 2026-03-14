@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Users, BookOpen, Dumbbell, Timer } from "lucide-react";
 import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
-import { useKFFStore } from "@/stores/kffStore";
+import { useKFFStore } from "@/store/kffStore";
 import SozialesEntscheidenLernen from "./SozialesEntscheidenLernen";
 import SozialesEntscheidenUeben from "./SozialesEntscheidenUeben";
 import SozialesEntscheidenSimulation from "./SozialesEntscheidenSimulation";

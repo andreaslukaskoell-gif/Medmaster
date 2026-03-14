@@ -9,7 +9,7 @@
 
 import { useCallback } from "react";
 import { supabase } from "@/lib/supabase";
-import { useKFFStore } from "@/stores/kffStore";
+import { useKFFStore } from "@/store/kffStore";
 import { useStore } from "@/store/useStore";
 import type { KFFSubtestType, KFFResult, SimulationResult } from "@/data/kffTypes";
 

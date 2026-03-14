@@ -39,7 +39,7 @@
     "reels:render:imp": "node video/render.mjs --comp ImplikationenChallenge",
     "reels:render:fig": "node video/render.mjs --comp FigurenChallenge",
     "preview": "vite preview",
-    "shipit": "git add . && git commit -m '🚀 Auto-deploy from Cursor' && git push"
+    "shipit": "echo 'Use git commands directly' && exit 1"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.3",

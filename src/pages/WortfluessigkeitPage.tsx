@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Type, BookOpen, Dumbbell, Timer, Flame } from "lucide-react";
 import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
-import { useKFFStore } from "@/stores/kffStore";
+import { useKFFStore } from "@/store/kffStore";
 import WortfluessigkeitLernen from "./WortfluessigkeitLernen";
 import WortfluessigkeitUeben from "./WortfluessigkeitUeben";
 import WortfluessigkeitSimulation from "./WortfluessigkeitSimulation";

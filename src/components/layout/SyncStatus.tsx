@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { RefreshCw } from "lucide-react";
-import { useSyncStatus } from "../../stores/syncStatus";
+import { useSyncStatus } from "../../store/syncStatus";
 import { useAuth } from "../../hooks/useAuth";
 import { pushStatsToSupabase } from "../../lib/syncService";
 import { isSchemaSkipActive } from "../../lib/supabaseSchemaSkip";
