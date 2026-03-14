@@ -1,4 +1,5 @@
 import { useState } from "react";
+import DOMPurify from "dompurify";
 import {
   Search,
   StickyNote,
@@ -399,7 +400,7 @@ export default function Notes() {
                         <div
                           className="min-h-[8rem] p-3 rounded-lg border border-[var(--border)] dark:border-gray-700 bg-white dark:bg-gray-800 overflow-y-auto prose-sm"
                           dangerouslySetInnerHTML={{
-                            __html: parseMarkdown(editContent),
+                            __html: DOMPurify.sanitize(parseMarkdown(editContent)),
                           }}
                         />
                       ) : (
@@ -448,7 +449,7 @@ export default function Notes() {
                     <div
                       className="text-sm text-gray-700 dark:text-gray-300"
                       dangerouslySetInnerHTML={{
-                        __html: parseMarkdown(n.content),
+                        __html: DOMPurify.sanitize(parseMarkdown(n.content)),
                       }}
                     />
                   )}

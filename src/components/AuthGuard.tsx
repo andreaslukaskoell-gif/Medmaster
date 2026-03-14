@@ -6,7 +6,7 @@ export function AuthGuard({ children }: { children: ReactNode }) {
   const { isAuthenticated, loading } = useAuth();
 
   // Development: skip auth check so protected pages are directly reachable
-  if (import.meta.env.DEV) {
+  if (import.meta.env.DEV && !import.meta.env.PROD) {
     return <>{children}</>;
   }
 

@@ -53,7 +53,7 @@ export function ContentVisualizer({
             lightbox
           />
           {uk.imageCaption && (
-            <figcaption className="mt-2 text-center text-xs text-[var(--text-[var(--muted)])] italic">
+            <figcaption className="mt-2 text-center text-xs text-[var(--muted)] italic">
               {uk.imageCaption}
             </figcaption>
           )}
