@@ -1,4 +1,3 @@
-import { Check } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { SectionProgressStatus } from "./CollapsibleSection";
 
@@ -6,33 +5,14 @@ export type SectionTOCItem = { id: string; title: string };
 
 type SectionTOCProps = {
   sections: SectionTOCItem[];
-  progress: Record<string, SectionProgressStatus>;
+  /** Kept for API compat — currently unused in minimal TOC. */
+  progress?: Record<string, SectionProgressStatus>;
   currentSectionId: string | null;
   onSelect: (id: string) => void;
-  /** "left" = Amboss-style: narrow, Inhalt, slate-300, active white + accent marker */
+  /** "left" = sidebar-style: narrow, minimal */
   variant?: "default" | "left";
   className?: string;
 };
-
-function ProgressDot({ status }: { status: SectionProgressStatus }) {
-  if (status === "completed") {
-    return (
-      <span className="shrink-0 w-4 h-4 rounded-full bg-emerald-500/20 flex items-center justify-center">
-        <Check className="w-2.5 h-2.5 text-emerald-600 dark:text-emerald-400" strokeWidth={2.5} />
-      </span>
-    );
-  }
-  if (status === "opened") {
-    return (
-      <span className="shrink-0 w-4 h-4 rounded-full border-2 border-[var(--accent)] bg-[var(--accent)]/20 flex items-center justify-center">
-        <span className="w-1 h-1 rounded-full bg-[var(--accent)]" />
-      </span>
-    );
-  }
-  return (
-    <span className="shrink-0 w-4 h-4 rounded-full border-2 border-[var(--muted)] bg-transparent" />
-  );
-}
 
 export function SectionTOC({
   sections,
@@ -49,23 +29,17 @@ export function SectionTOC({
   return (
     <nav
       className={cn(
-        "rounded-xl border border-[var(--border)] p-4",
         "sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto",
-        isLeft ? "w-[240px] min-w-0 shrink-0 bg-[var(--card)] shadow-sm" : "bg-[var(--card)]",
+        isLeft ? "w-[200px] min-w-0 shrink-0" : "",
         className
       )}
       aria-label="Inhaltsverzeichnis"
     >
-      <h3
-        className={cn(
-          "text-xs font-semibold uppercase tracking-wider mb-3 text-[var(--text-primary)]"
-        )}
-      >
+      <h3 className="text-xs font-medium uppercase tracking-wider mb-3 text-[var(--muted)]">
         Inhalt
       </h3>
-      <ul className="space-y-0.5">
+      <ul className="space-y-0.5 border-l border-[var(--border)]">
         {sections.map((section) => {
-          const status = progress[section.id] ?? "unread";
           const isCurrent = currentSectionId === section.id;
           return (
             <li key={section.id}>
@@ -73,24 +47,15 @@ export function SectionTOC({
                 type="button"
                 onClick={() => onSelect(section.id)}
                 className={cn(
-                  "w-full flex items-center gap-2 text-left text-sm transition-colors rounded-md",
-                  "focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] focus-visible:ring-offset-1",
-                  isLeft
-                    ? cn(
-                        "px-2 py-1.5 border-l-4 border-transparent",
-                        "text-[var(--text-primary)] hover:bg-[var(--border)]/50",
-                        isCurrent &&
-                          "border-[var(--accent)] bg-[var(--border)]/50 font-semibold text-[var(--text-primary)]"
-                      )
-                    : cn(
-                        "px-2 py-1.5 rounded-lg text-[var(--text-primary)]",
-                        "hover:bg-[var(--border)]/50",
-                        isCurrent && "bg-[var(--accent)]/10 text-[var(--accent)] font-semibold"
-                      )
+                  "w-full text-left text-[13px] leading-snug transition-colors",
+                  "pl-3 py-1 -ml-px border-l-2",
+                  "focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]",
+                  isCurrent
+                    ? "border-[var(--accent)] text-[var(--text-primary)] font-medium"
+                    : "border-transparent text-[var(--muted)] hover:text-[var(--text-primary)] hover:border-[var(--border)]"
                 )}
               >
-                {!isLeft && <ProgressDot status={status} />}
-                <span className="truncate">{section.title}</span>
+                <span className="line-clamp-2">{section.title}</span>
               </button>
             </li>
           );

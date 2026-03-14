@@ -12,7 +12,6 @@ import {
   Clock,
 } from "lucide-react";
 import { Button } from "../components/ui/button";
-import { Card, CardContent } from "../components/ui/card";
 import { StickyBackButton } from "../components/ui/StickyBackButton";
 import { QuickEdit } from "../components/QuickEdit";
 import { useBreadcrumb } from "@/contexts/BreadcrumbContext";
@@ -23,7 +22,6 @@ import { SelbstTest } from "../components/chapter/SelbstTest";
 import { InteractiveQuiz } from "../components/chapter/InteractiveQuiz";
 import { ContentVisualizer } from "../components/chapter/ContentVisualizer";
 import { ContentErrorBoundary } from "@/components/ContentErrorBoundary";
-import { ChapterSRSBadge } from "@/components/chapter/ChapterSRSBadge";
 import { KnowledgeBridgeSlideOver } from "@/components/content/KnowledgeBridgeSlideOver";
 import { validateUnterkapitel, validateKapitel } from "@/lib/validateChapter";
 import { extractKontrollfragen } from "../utils/parseKontrollfragen";
@@ -346,64 +344,52 @@ export default function BMSUnterkapitel({
   // Defensive checks for chapter and subchapter data
   if (!kapitel || !kapitel.id) {
     return (
-      <div className="w-full max-w-6xl mx-auto space-y-6 p-6">
-        <Card className="bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800">
-          <CardContent className="p-6 text-center">
-            <h3 className="text-lg font-semibold text-red-900 dark:text-red-300 mb-2">
-              Ungültiges Kapitel
-            </h3>
-            <p className="text-sm text-red-800 dark:text-red-400 mb-4">
-              Die Kapitel-Daten konnten nicht geladen werden.
-            </p>
-            <Button onClick={onBack}>Zurück zur Übersicht</Button>
-          </CardContent>
-        </Card>
+      <div className="w-full max-w-4xl mx-auto p-6 text-center">
+        <h3 className="text-lg font-semibold text-red-900 dark:text-red-300 mb-2">
+          Ungültiges Kapitel
+        </h3>
+        <p className="text-sm text-[var(--muted)] mb-4">
+          Die Kapitel-Daten konnten nicht geladen werden.
+        </p>
+        <Button onClick={onBack}>Zurück zur Übersicht</Button>
       </div>
     );
   }
 
-  // Validate index
   if (unterkapitelIndex < 0 || unterkapitelIndex >= unterkapitel.length) {
     return (
-      <div className="w-full max-w-6xl mx-auto space-y-6 p-6">
-        <Card className="bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800">
-          <CardContent className="p-6 text-center">
-            <h3 className="text-lg font-semibold text-red-900 dark:text-red-300 mb-2">
-              Ungültiges Unterkapitel
-            </h3>
-            <p className="text-sm text-red-800 dark:text-red-400 mb-4">
-              Das angeforderte Unterkapitel konnte nicht gefunden werden.
-            </p>
-            <Button onClick={onBack}>Zurück zur Übersicht</Button>
-          </CardContent>
-        </Card>
+      <div className="w-full max-w-4xl mx-auto p-6 text-center">
+        <h3 className="text-lg font-semibold text-red-900 dark:text-red-300 mb-2">
+          Ungültiges Unterkapitel
+        </h3>
+        <p className="text-sm text-[var(--muted)] mb-4">
+          Das angeforderte Unterkapitel konnte nicht gefunden werden.
+        </p>
+        <Button onClick={onBack}>Zurück zur Übersicht</Button>
       </div>
     );
   }
 
-  // Validate subchapter
   if (!uk || !uk.id) {
     return (
-      <div className="w-full max-w-6xl mx-auto space-y-6 p-6">
-        <Card className="bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800">
-          <CardContent className="p-6 text-center">
-            <h3 className="text-lg font-semibold text-red-900 dark:text-red-300 mb-2">
-              Ungültige Unterkapitel-Daten
-            </h3>
-            <p className="text-sm text-red-800 dark:text-red-400 mb-4">
-              Die Unterkapitel-Daten konnten nicht geladen werden.
-            </p>
-            <Button onClick={onBack}>Zurück zur Übersicht</Button>
-          </CardContent>
-        </Card>
+      <div className="w-full max-w-4xl mx-auto p-6 text-center">
+        <h3 className="text-lg font-semibold text-red-900 dark:text-red-300 mb-2">
+          Ungültige Unterkapitel-Daten
+        </h3>
+        <p className="text-sm text-[var(--muted)] mb-4">
+          Die Unterkapitel-Daten konnten nicht geladen werden.
+        </p>
+        <Button onClick={onBack}>Zurück zur Übersicht</Button>
       </div>
     );
   }
 
   // After early returns, uk is guaranteed non-null and uk.id is valid
 
+  const [toolsOpen, setToolsOpen] = useState(false);
+
   return (
-    <div className="w-full max-w-6xl 2xl:max-w-[80rem] mx-auto space-y-6 pb-12 relative px-0">
+    <div className="w-full max-w-4xl mx-auto pb-16 relative px-0">
       {/* Reading progress bar — fixed at top */}
       <div className="fixed top-0 left-0 right-0 z-[200] h-0.5 bg-transparent pointer-events-none">
         <div
@@ -413,110 +399,113 @@ export default function BMSUnterkapitel({
       </div>
       <StickyBackButton onClick={onBack} />
 
-      {/* Top bar */}
-      <div className="flex items-center justify-between">
-        <Button variant="ghost" size="sm" onClick={onBack}>
+      {/* Minimal top bar: back + essential actions */}
+      <div className="flex items-center justify-between mb-8">
+        <Button variant="ghost" size="sm" onClick={onBack} className="text-[var(--muted)]">
           <ChevronLeft className="w-4 h-4 mr-1" />
           {kapitel.title}
         </Button>
-        <div className="flex items-center gap-2">
-          <button
-            onClick={() => setShowNotes(!showNotes)}
-            className={`p-2 rounded-lg border border-transparent dark:border-white/10 cursor-pointer ${showNotes ? "bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700" : "text-[var(--muted)] hover:bg-accent"}`}
-            title="Notizen"
-          >
-            <StickyNote className="w-4 h-4" />
-          </button>
+        <div className="flex items-center gap-1">
           <button
             onClick={() => toggleBookmarkChapter(uk.id)}
-            className={`p-2 rounded-lg border border-transparent dark:border-white/10 cursor-pointer ${isBookmarked ? "bg-[var(--accent)]/10 text-[var(--accent)]" : "text-[var(--muted)] hover:bg-accent"}`}
+            className={`p-2 rounded-lg cursor-pointer transition-colors ${isBookmarked ? "text-[var(--accent)]" : "text-[var(--muted)] hover:text-[var(--text-primary)]"}`}
             title="Lesezeichen"
           >
             <Bookmark className={`w-4 h-4 ${isBookmarked ? "fill-current" : ""}`} />
           </button>
-          <button
-            onClick={() => setBridgeOpen(true)}
-            className="p-2 rounded-lg border border-transparent dark:border-white/10 cursor-pointer text-[var(--muted)] hover:bg-[var(--accent)]/10 hover:text-[var(--accent)]"
-            title="Verknüpfte Themen (Knowledge Bridge)"
-          >
-            <Network className="w-4 h-4" />
-          </button>
-          <button
-            onClick={() => setHinterfragMode(!hinterfragMode)}
-            className={`p-2 rounded-lg border border-transparent dark:border-white/10 cursor-pointer ${hinterfragMode ? "bg-[var(--accent)]/10 text-[var(--accent)]" : "text-[var(--muted)] hover:bg-accent"}`}
-            title="Hinterfrag-Modus: Kernsätze als Frage anzeigen, Antwort bei Klick/Hover (Active Recall)"
-          >
-            <HelpCircle className="w-4 h-4" />
-          </button>
-          <button
-            onClick={() => setQuickReviewMode(!quickReviewMode)}
-            className={`p-2 rounded-lg border border-transparent dark:border-white/10 cursor-pointer ${quickReviewMode ? "bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300" : "text-[var(--muted)] hover:bg-accent"}`}
-            title="Quick Review: Nur Merksätze anzeigen (R)"
-          >
-            <Zap className="w-4 h-4" />
-          </button>
+          <div className="relative">
+            <button
+              onClick={() => setToolsOpen(!toolsOpen)}
+              className="p-2 rounded-lg cursor-pointer text-[var(--muted)] hover:text-[var(--text-primary)] transition-colors"
+              title="Lernwerkzeuge"
+            >
+              <Zap className="w-4 h-4" />
+            </button>
+            {toolsOpen && (
+              <>
+                <div className="fixed inset-0 z-40" onClick={() => setToolsOpen(false)} />
+                <div className="absolute right-0 top-full mt-1 z-50 w-56 rounded-lg border border-[var(--border)] bg-[var(--card)] shadow-lg py-1">
+                  <button
+                    onClick={() => {
+                      setShowNotes(!showNotes);
+                      setToolsOpen(false);
+                    }}
+                    className="w-full flex items-center gap-3 px-3 py-2 text-sm text-[var(--text-primary)] hover:bg-[var(--surface)] transition-colors"
+                  >
+                    <StickyNote className="w-4 h-4 text-[var(--muted)]" />
+                    <span>Notizen {showNotes ? "ausblenden" : "anzeigen"}</span>
+                  </button>
+                  <button
+                    onClick={() => {
+                      setBridgeOpen(true);
+                      setToolsOpen(false);
+                    }}
+                    className="w-full flex items-center gap-3 px-3 py-2 text-sm text-[var(--text-primary)] hover:bg-[var(--surface)] transition-colors"
+                  >
+                    <Network className="w-4 h-4 text-[var(--muted)]" />
+                    <span>Verknüpfte Themen</span>
+                  </button>
+                  <button
+                    onClick={() => {
+                      setHinterfragMode(!hinterfragMode);
+                      setToolsOpen(false);
+                    }}
+                    className="w-full flex items-center gap-3 px-3 py-2 text-sm text-[var(--text-primary)] hover:bg-[var(--surface)] transition-colors"
+                  >
+                    <HelpCircle className="w-4 h-4 text-[var(--muted)]" />
+                    <span>Hinterfrag-Modus {hinterfragMode ? "aus" : "an"}</span>
+                  </button>
+                  <button
+                    onClick={() => {
+                      setQuickReviewMode(!quickReviewMode);
+                      setToolsOpen(false);
+                    }}
+                    className="w-full flex items-center gap-3 px-3 py-2 text-sm text-[var(--text-primary)] hover:bg-[var(--surface)] transition-colors"
+                  >
+                    <Zap className="w-4 h-4 text-[var(--muted)]" />
+                    <span>Quick Review {quickReviewMode ? "aus" : "an"}</span>
+                  </button>
+                </div>
+              </>
+            )}
+          </div>
           <QuickEdit data={uk} storageKey={uk.id} label="Unterkapitel bearbeiten (Dev)" />
         </div>
       </div>
 
-      {/* Progress bar */}
-      <div className="space-y-1">
-        <div className="flex justify-between text-xs text-[var(--muted)]">
-          <span>
-            Unterkapitel {unterkapitelIndex + 1} von {total}
-          </span>
-          <span>
-            {completedCount}/{total} abgeschlossen
-          </span>
-        </div>
-        <div className="w-full bg-[var(--surface)] rounded-full h-2">
-          <div
-            className="bg-[var(--accent)] h-2 rounded-full transition-all"
-            style={{ width: `${(completedCount / total) * 100}%` }}
-          />
-        </div>
-      </div>
-
       <ContentErrorBoundary context={uk.id}>
-        {/* Chapter number + title */}
-        <div>
-          <div className="flex flex-wrap items-center gap-2">
-            <p
-              className="text-sm font-medium"
-              style={{ color: subjectAccentVars[kapitel.subject] ?? "var(--accent)" }}
-            >
-              {kapitel.title} — {unterkapitelIndex + 1}/{total}
-            </p>
-            <ChapterSRSBadge chapterId={kapitel.id} />
-          </div>
-          <div className="flex items-center gap-3 mt-1">
-            <h1 className="text-2xl font-bold text-[var(--text-primary)]">{uk.title}</h1>
-            <span className="flex items-center gap-1 text-xs text-[var(--muted)] shrink-0">
-              <Clock className="w-3 h-3" aria-hidden />
-              Ca. {readingTimeMin} Min Lesezeit
-            </span>
-          </div>
-        </div>
+        {/* Clean header: chapter context + title */}
+        <header className="mb-8">
+          <p
+            className="text-sm font-medium mb-1"
+            style={{ color: subjectAccentVars[kapitel.subject] ?? "var(--accent)" }}
+          >
+            {kapitel.title} · {unterkapitelIndex + 1}/{total}
+          </p>
+          <h1 className="text-2xl font-bold text-[var(--text-primary)] mb-2">{uk.title}</h1>
+          <span className="flex items-center gap-1 text-xs text-[var(--muted)]">
+            <Clock className="w-3 h-3" aria-hidden />
+            Ca. {readingTimeMin} Min Lesezeit
+          </span>
+        </header>
 
         {/* Notes panel */}
         {showNotes && (
-          <Card className="border-yellow-200 dark:border-yellow-800">
-            <CardContent className="p-4 space-y-3">
-              <h3 className="text-sm font-semibold text-yellow-800 dark:text-yellow-300 flex items-center gap-2">
-                <StickyNote className="w-4 h-4" />
-                Meine Notizen
-              </h3>
-              <textarea
-                value={noteText}
-                onChange={(e) => setNoteText(e.target.value)}
-                placeholder="Notizen zu diesem Unterkapitel..."
-                className="w-full h-24 p-3 rounded-lg border border-yellow-200 dark:border-yellow-800 bg-yellow-50 dark:bg-yellow-900/10 text-sm text-[var(--text-primary)] placeholder:text-[var(--muted)] outline-none focus:ring-2 focus:ring-[var(--accent)]/50 focus:border-[var(--accent)] resize-y"
-              />
-              <Button size="sm" onClick={() => setNote(uk.id, noteText)}>
-                Speichern
-              </Button>
-            </CardContent>
-          </Card>
+          <div className="mb-8 p-4 rounded-lg border border-yellow-200 dark:border-yellow-800 bg-yellow-50/50 dark:bg-yellow-900/10">
+            <h3 className="text-sm font-semibold text-yellow-800 dark:text-yellow-300 flex items-center gap-2 mb-3">
+              <StickyNote className="w-4 h-4" />
+              Meine Notizen
+            </h3>
+            <textarea
+              value={noteText}
+              onChange={(e) => setNoteText(e.target.value)}
+              placeholder="Notizen zu diesem Unterkapitel..."
+              className="w-full h-24 p-3 rounded-lg border border-yellow-200 dark:border-yellow-800 bg-white dark:bg-yellow-900/10 text-sm text-[var(--text-primary)] placeholder:text-[var(--muted)] outline-none focus:ring-2 focus:ring-[var(--accent)]/50 focus:border-[var(--accent)] resize-y"
+            />
+            <Button size="sm" onClick={() => setNote(uk.id, noteText)} className="mt-2">
+              Speichern
+            </Button>
+          </div>
         )}
 
         {/* Quick Review Mode: nur Merksätze der Sections */}
@@ -541,6 +530,7 @@ export default function BMSUnterkapitel({
                     </p>
                     <p
                       className="text-sm text-[var(--text-primary)] leading-relaxed"
+                      // Content is from our own chapter data files, not user input
                       dangerouslySetInnerHTML={{
                         __html: (s.merksatz ?? "").replace(
                           /\*\*(.*?)\*\*/g,
@@ -557,76 +547,74 @@ export default function BMSUnterkapitel({
             )}
           </div>
         ) : (
-          /* Main content: im Fluss (relative), kein Overlap mit Header */
+          /* Main content: no Card wrapper, content breathes directly */
           <>
-            <Card className="relative card-interactive">
-              <CardContent className={`relative ${kapitel?.enhancedFormatting ? "p-8" : "p-6"}`}>
-                <ContentErrorBoundary context={`${kapitel?.id ?? "chapter"}-${uk?.id ?? "uk"}`}>
-                  <ContentVisualizer
-                    uk={uk}
-                    subject={kapitel?.subject ?? "biologie"}
-                    chapterId={kapitel?.id}
-                    enhancedFormatting={kapitel?.enhancedFormatting}
-                    hinterfragMode={hinterfragMode}
-                  />
-                </ContentErrorBoundary>
-              </CardContent>
-            </Card>
+            <div className="relative">
+              <ContentErrorBoundary context={`${kapitel?.id ?? "chapter"}-${uk?.id ?? "uk"}`}>
+                <ContentVisualizer
+                  uk={uk}
+                  subject={kapitel?.subject ?? "biologie"}
+                  chapterId={kapitel?.id}
+                  enhancedFormatting={kapitel?.enhancedFormatting}
+                  hinterfragMode={hinterfragMode}
+                />
+              </ContentErrorBoundary>
+            </div>
 
-            {/* Altfrage + Kontrollfragen: gleiche Breite wie Haupttext (1fr-Spalte neben TOC) */}
-            <div className="w-full lg:max-w-[calc(100%-272px)] lg:ml-[272px] min-w-0 space-y-6">
-              {/* Altfrage */}
+            {/* Altfrage + Kontrollfragen: flow naturally after content */}
+            <div className="w-full lg:max-w-[calc(100%-240px)] lg:ml-[240px] min-w-0 space-y-8 mt-8">
+              {/* Altfrage — subtle border-left instead of heavy card */}
               {uk.altfrage && (
-                <Card className="border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-900/10">
-                  <CardContent className="p-5">
-                    <h3 className="text-sm font-semibold text-red-800 dark:text-red-300 flex items-center gap-2 mb-2">
-                      Altfragen-Klassiker
-                    </h3>
-                    {"text" in uk.altfrage ? (
-                      <>
-                        <p className="text-sm font-medium text-red-900 dark:text-red-200 mb-3">
-                          {uk.altfrage.text}
+                <div className="pl-4 border-l-2 border-amber-400 dark:border-amber-600">
+                  <h3 className="text-sm font-semibold text-[var(--text-primary)] mb-2">
+                    Altfragen-Klassiker
+                  </h3>
+                  {"text" in uk.altfrage ? (
+                    <>
+                      <p className="text-sm font-medium text-[var(--text-primary)] mb-3">
+                        {uk.altfrage.text}
+                      </p>
+                      <ul className="space-y-1.5 mb-3">
+                        {uk.altfrage.options.map((opt) => (
+                          <li
+                            key={opt.id}
+                            className="text-sm text-[var(--text-secondary)] flex gap-2"
+                          >
+                            <span className="font-semibold uppercase text-[var(--text-primary)]">
+                              {opt.id})
+                            </span>
+                            <span>{opt.text}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      <details className="group">
+                        <summary className="text-sm text-[var(--accent)] cursor-pointer hover:underline">
+                          Antwort anzeigen
+                        </summary>
+                        <p className="text-sm text-[var(--text-secondary)] mt-2 pl-4 border-l-2 border-[var(--border)]">
+                          <span className="font-semibold text-[var(--text-primary)]">
+                            Richtig: {uk.altfrage.correctOptionId.toUpperCase()}
+                          </span>{" "}
+                          — {uk.altfrage.explanation}
                         </p>
-                        <ul className="space-y-1.5 mb-3">
-                          {uk.altfrage.options.map((opt) => (
-                            <li
-                              key={opt.id}
-                              className="text-sm text-red-800 dark:text-red-300 flex gap-2"
-                            >
-                              <span className="font-semibold uppercase">{opt.id})</span>
-                              <span>{opt.text}</span>
-                            </li>
-                          ))}
-                        </ul>
-                        <details className="group">
-                          <summary className="text-sm text-red-700 dark:text-red-400 cursor-pointer hover:underline">
-                            Antwort anzeigen
-                          </summary>
-                          <p className="text-sm text-red-800 dark:text-red-300 mt-2 pl-4 border-l-2 border-red-300 dark:border-red-700">
-                            <span className="font-semibold">
-                              Richtig: {uk.altfrage.correctOptionId.toUpperCase()}
-                            </span>{" "}
-                            — {uk.altfrage.explanation}
-                          </p>
-                        </details>
-                      </>
-                    ) : (
-                      <>
-                        <p className="text-sm font-medium text-red-900 dark:text-red-200 mb-2">
-                          {uk.altfrage.question}
+                      </details>
+                    </>
+                  ) : (
+                    <>
+                      <p className="text-sm font-medium text-[var(--text-primary)] mb-2">
+                        {uk.altfrage.question}
+                      </p>
+                      <details className="group">
+                        <summary className="text-sm text-[var(--accent)] cursor-pointer hover:underline">
+                          Antwort anzeigen
+                        </summary>
+                        <p className="text-sm text-[var(--text-secondary)] mt-2 pl-4 border-l-2 border-[var(--border)]">
+                          {uk.altfrage.answer}
                         </p>
-                        <details className="group">
-                          <summary className="text-sm text-red-700 dark:text-red-400 cursor-pointer hover:underline">
-                            Antwort anzeigen
-                          </summary>
-                          <p className="text-sm text-red-800 dark:text-red-300 mt-2 pl-4 border-l-2 border-red-300 dark:border-red-700">
-                            {uk.altfrage.answer}
-                          </p>
-                        </details>
-                      </>
-                    )}
-                  </CardContent>
-                </Card>
+                      </details>
+                    </>
+                  )}
+                </div>
               )}
 
               {/* Kontrollfragen / Self-Test */}
@@ -635,15 +623,15 @@ export default function BMSUnterkapitel({
           </>
         )}
 
-        {/* Navigation: Previous / Next (book-like, inkl. benachbarte Kapitel) */}
-        <div className="flex items-center justify-between pt-4 border-t border-[var(--border)]">
+        {/* Navigation: Previous / Next */}
+        <div className="flex items-center justify-between pt-8 mt-12 border-t border-[var(--border)]">
           <Button variant="outline" onClick={handlePrev} disabled={!canGoPrev}>
             <ArrowLeft className="w-4 h-4 mr-1" />
-            {isFirst && onPrevChapter ? "Vorheriges Kapitel" : "Vorheriges Unterkapitel"}
+            {isFirst && onPrevChapter ? "Vorheriges Kapitel" : "Zurück"}
           </Button>
 
           <Button onClick={handleNext}>
-            {isLast && !onNextChapter ? "Kapitel abschließen" : "Nächstes Unterkapitel"}
+            {isLast && !onNextChapter ? "Kapitel abschließen" : "Weiter"}
             {(!isLast || onNextChapter) && <ArrowRight className="w-4 h-4 ml-1" />}
           </Button>
         </div>

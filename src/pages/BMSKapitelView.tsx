@@ -1,18 +1,6 @@
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import {
-  ChevronLeft,
-  CheckCircle2,
-  Clock,
-  BookOpen,
-  ChevronRight,
-  Play,
-  ArrowRight,
-} from "lucide-react";
+import { ChevronLeft, CheckCircle2, ChevronRight, Play, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { useStore } from "@/store/useStore";
 import { useAdaptiveStore } from "@/store/adaptiveLearning";
 import { useLocation } from "react-router-dom";
@@ -21,7 +9,6 @@ import { pathForSubject, pathForChapter } from "@/lib/bmsRoutes";
 import type { Kapitel } from "@/data/bmsKapitel/types";
 import { getKapitelById } from "@/data/bmsKapitel";
 import BMSUnterkapitel from "./BMSUnterkapitel";
-import { ChapterSRSBadge } from "@/components/chapter/ChapterSRSBadge";
 
 interface Props {
   kapitel: Kapitel;
@@ -115,18 +102,14 @@ export default function BMSKapitelView({
   // Defensive checks for chapter data
   if (!kapitel || !kapitel.id) {
     return (
-      <div className="max-w-3xl mx-auto space-y-6 p-6">
-        <Card className="bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800">
-          <CardContent className="p-6 text-center">
-            <h3 className="text-lg font-semibold text-red-900 dark:text-red-300 mb-2">
-              Ungültiges Kapitel
-            </h3>
-            <p className="text-sm text-red-800 dark:text-red-400 mb-4">
-              Die Kapitel-Daten konnten nicht geladen werden.
-            </p>
-            <Button onClick={onBack}>Zurück zur Übersicht</Button>
-          </CardContent>
-        </Card>
+      <div className="max-w-4xl mx-auto p-6 text-center">
+        <h3 className="text-lg font-semibold text-[var(--text-primary)] mb-2">
+          Ungültiges Kapitel
+        </h3>
+        <p className="text-sm text-[var(--muted)] mb-4">
+          Die Kapitel-Daten konnten nicht geladen werden.
+        </p>
+        <Button onClick={onBack}>Zurück zur Übersicht</Button>
       </div>
     );
   }
@@ -172,63 +155,39 @@ export default function BMSKapitelView({
 
   return (
     <div className="max-w-4xl mx-auto space-y-6">
-      <BreadcrumbNav
-        items={[
-          { label: "Dashboard", href: "/" },
-          { label: "BMS", href: "/bms" },
-          { label: subjectLabels[kapitel.subject], href: "#" },
-          { label: kapitel.title },
-        ]}
-      />
-
-      <Button variant="ghost" size="sm" onClick={onBack}>
+      <Button variant="ghost" size="sm" onClick={onBack} className="text-[var(--muted)]">
         <ChevronLeft className="w-4 h-4 mr-1" />
-        Zurück zur Übersicht
+        {subjectLabels[kapitel.subject]}
       </Button>
 
       {/* Chapter header */}
-      <div className="flex items-start gap-4">
-        <div className="text-4xl">{kapitel.icon}</div>
-        <div className="flex-1">
-          <p className="text-sm font-medium text-[var(--accent)]">
-            {subjectLabels[kapitel.subject]}
-          </p>
-          <div className="flex flex-wrap items-center gap-2">
-            <h1 className="text-2xl font-bold text-[var(--text-primary)]">{kapitel.title}</h1>
-            <ChapterSRSBadge chapterId={kapitel.id} />
-          </div>
-          <div className="flex items-center gap-4 mt-2 text-sm text-[var(--muted)]">
-            <span className="flex items-center gap-1">
-              <BookOpen className="w-4 h-4" />
-              {totalUK} Unterkapitel
+      <div>
+        <p className="text-sm font-medium text-[var(--accent)] mb-1">
+          {subjectLabels[kapitel.subject]}
+        </p>
+        <h1 className="text-2xl font-bold text-[var(--text-primary)]">
+          {kapitel.title}
+          {isKapitelDone && (
+            <CheckCircle2 className="inline w-5 h-5 text-emerald-500 ml-2 -mt-0.5" />
+          )}
+        </h1>
+        <div className="flex items-center gap-4 mt-2 text-sm text-[var(--muted)]">
+          <span>{totalUK} Unterkapitel</span>
+          <span>{kapitel.estimatedTime}</span>
+          {completedUK > 0 && (
+            <span className="text-[var(--accent)] font-medium">
+              {completedUK}/{totalUK} abgeschlossen
             </span>
-            <span className="flex items-center gap-1">
-              <Clock className="w-4 h-4" />
-              {kapitel.estimatedTime}
-            </span>
-          </div>
+          )}
         </div>
-        {isKapitelDone && (
-          <Badge variant="success" className="shrink-0">
-            Abgeschlossen
-          </Badge>
+        {totalUK > 0 && (
+          <div className="w-full bg-[var(--border)] rounded-full h-1 mt-3">
+            <div
+              className="bg-[var(--accent)] h-1 rounded-full transition-all duration-300"
+              style={{ width: `${(completedUK / totalUK) * 100}%` }}
+            />
+          </div>
         )}
-      </div>
-
-      {/* Progress */}
-      <div className="space-y-2">
-        <div className="flex justify-between text-sm">
-          <span className="text-[var(--muted)]">Fortschritt</span>
-          <span className="font-medium text-[var(--accent)]">
-            {completedUK}/{totalUK} Unterkapitel
-          </span>
-        </div>
-        <div className="w-full bg-[var(--border)] rounded-full h-2">
-          <div
-            className="bg-[var(--accent)] h-2 rounded-full transition-all duration-300"
-            style={{ width: `${totalUK > 0 ? (completedUK / totalUK) * 100 : 0}%` }}
-          />
-        </div>
       </div>
 
       {/* Start / Continue button */}
@@ -252,68 +211,42 @@ export default function BMSKapitelView({
       <div className="space-y-3">
         <h2 className="text-lg font-semibold text-[var(--text-primary)]">Unterkapitel</h2>
         {unterkapitel.length === 0 ? (
-          <Card className="border-l-[3px] border-l-[var(--accent)]">
-            <CardContent className="p-6 text-center">
-              <p className="text-sm text-[var(--muted)]">Noch keine Unterkapitel vorhanden.</p>
-            </CardContent>
-          </Card>
+          <p className="text-sm text-[var(--muted)] text-center py-8">
+            Noch keine Unterkapitel vorhanden.
+          </p>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 gap-0">
             {unterkapitel.map((uk, index) => {
-              if (!uk || !uk.id) return null; // Skip invalid subchapters
+              if (!uk || !uk.id) return null;
               const isDone = completedChapters.includes(uk.id);
-              const selfTestCount =
-                uk.selfTest && Array.isArray(uk.selfTest) ? uk.selfTest.length : 0;
               return (
-                <motion.div
+                <button
                   key={uk.id}
-                  initial={false}
-                  animate={isDone ? { opacity: 1 } : {}}
-                  transition={{ duration: 0.25 }}
+                  className={`w-full text-left flex items-center gap-3 py-3 px-2 border-b border-[var(--border)]/60 last:border-b-0 hover:bg-[var(--surface)] transition-colors cursor-pointer rounded-sm ${isDone ? "opacity-60" : ""}`}
+                  onClick={() => {
+                    if (typeof sessionStorage !== "undefined") {
+                      sessionStorage.setItem(
+                        `${CHAPTER_SCROLL_KEY}:${kapitel.id}`,
+                        String(window.scrollY)
+                      );
+                    }
+                    setActiveUKIndex(index);
+                  }}
                 >
-                  <Card
-                    className={`hover:shadow-md transition-shadow cursor-pointer border-l-[3px] border-l-[var(--accent)] ${isDone ? "bg-[var(--surface)] opacity-80" : ""}`}
-                    onClick={() => {
-                      if (typeof sessionStorage !== "undefined") {
-                        sessionStorage.setItem(
-                          `${CHAPTER_SCROLL_KEY}:${kapitel.id}`,
-                          String(window.scrollY)
-                        );
-                      }
-                      setActiveUKIndex(index);
-                    }}
+                  {isDone ? (
+                    <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
+                  ) : (
+                    <span className="w-4 h-4 shrink-0 flex items-center justify-center text-xs text-[var(--muted)] font-medium">
+                      {index + 1}
+                    </span>
+                  )}
+                  <span
+                    className={`flex-1 min-w-0 text-sm font-medium ${isDone ? "text-[var(--muted)]" : "text-[var(--text-primary)]"}`}
                   >
-                    <CardContent className="p-4 flex items-center gap-3">
-                      {isDone ? (
-                        <motion.span
-                          initial={{ scale: 0.5, opacity: 0.8 }}
-                          animate={{ scale: 1, opacity: 1 }}
-                          transition={{ type: "spring", stiffness: 400, damping: 20 }}
-                          className="shrink-0"
-                        >
-                          <CheckCircle2 className="w-5 h-5 text-green-500" />
-                        </motion.span>
-                      ) : (
-                        <div className="w-5 h-5 rounded-full border-2 border-[var(--border)] shrink-0 flex items-center justify-center text-xs text-[var(--muted)] font-medium">
-                          {index + 1}
-                        </div>
-                      )}
-                      <div className="flex-1 min-w-0">
-                        <h3
-                          className={`font-medium text-sm ${isDone ? "text-[var(--muted)]" : "text-[var(--text-primary)]"}`}
-                        >
-                          {uk.title || "Untitled Subchapter"}
-                        </h3>
-                        <p className="text-xs text-[var(--muted)] truncate mt-0.5">
-                          {selfTestCount} Selbsttest-Fragen
-                          {uk.altfrage && " · Altfrage"}
-                          {uk.klinischerBezug && " · Klinischer Bezug"}
-                        </p>
-                      </div>
-                      <ChevronRight className="w-4 h-4 text-[var(--muted)] shrink-0" />
-                    </CardContent>
-                  </Card>
-                </motion.div>
+                    {uk.title || "Untitled Subchapter"}
+                  </span>
+                  <ChevronRight className="w-3.5 h-3.5 text-[var(--muted)] shrink-0" />
+                </button>
               );
             })}
           </div>
@@ -336,7 +269,7 @@ export default function BMSKapitelView({
                 <ArrowRight className="w-5 h-5 text-[var(--accent)]" />
                 Verwandte Kapitel
               </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 gap-2">
                 {linkedKapitelList.map((linkedKap) => (
                   <button
                     key={linkedKap.id}

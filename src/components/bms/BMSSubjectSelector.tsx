@@ -5,7 +5,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import type { Kapitel } from "@/data/bmsKapitel/types";
-import { MRSWidget } from "@/components/bms/MRSWidget";
 import { subjects } from "@/data/bmsSubjects";
 import { mergeChaptersWithSupabase, filterBMSKapitel, countUK } from "@/lib/mergeChapters";
 import type { MRSData } from "@/lib/supabaseBMSFragen";
@@ -68,11 +67,7 @@ export function BMSSubjectSelector({
         </div>
       </BlurFade>
 
-      <BlurFade delay={0.05} inView>
-        <MRSWidget mrs={mrs} loading={mrsLoading} fallback={mrsFallback} />
-      </BlurFade>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         {subjects.map((subject, idx) => (
           <SubjectCard
             key={subject.id}

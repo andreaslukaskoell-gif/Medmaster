@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import { useRef, useState, useEffect } from "react";
-import { ChevronRight, ChevronDown, Target, Bookmark, Check } from "lucide-react";
+import { ChevronRight, ChevronDown, Target, Bookmark } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { cn } from "@/lib/utils";
@@ -36,65 +36,38 @@ export type CollapsibleSectionProps = {
 
 const VARIANT_STYLES: Record<
   SectionVariant,
-  { border: string; icon: typeof Target; iconBg: string; iconColor: string; badge?: string }
+  {
+    accentBorder?: string;
+    icon?: typeof Target;
+    iconColor: string;
+    badge?: string;
+    badgeClass?: string;
+  }
 > = {
   default: {
-    border: "border-[var(--border)]",
-    icon: ChevronRight,
-    iconBg: "",
     iconColor: "text-[var(--muted)]",
   },
   medat: {
-    border: "border-l-4 border-l-amber-500 dark:border-l-amber-400 border-[var(--border)]",
+    accentBorder: "border-l-2 border-l-amber-400 dark:border-l-amber-500",
     icon: Target,
-    iconBg: "bg-amber-500/10 dark:bg-amber-500/20",
     iconColor: "text-amber-600 dark:text-amber-400",
     badge: "MedAT-Fokus",
+    badgeClass: "text-amber-700 dark:text-amber-300 bg-amber-50 dark:bg-amber-900/20",
   },
   summary: {
-    border: "border-l-4 border-l-teal-500 dark:border-l-teal-400 border-[var(--border)]",
+    accentBorder: "border-l-2 border-l-teal-400 dark:border-l-teal-500",
     icon: Bookmark,
-    iconBg: "bg-teal-500/10 dark:bg-teal-500/20",
     iconColor: "text-teal-600 dark:text-teal-400",
     badge: "Zusammenfassung",
+    badgeClass: "text-teal-700 dark:text-teal-300 bg-teal-50 dark:bg-teal-900/20",
   },
 };
-
-function ProgressIcon({ status }: { status: SectionProgressStatus }) {
-  if (status === "completed") {
-    return (
-      <span
-        className="shrink-0 flex items-center justify-center w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-600 dark:text-emerald-400"
-        aria-label="Abgeschlossen"
-      >
-        <Check className="w-3.5 h-3.5" strokeWidth={2.5} />
-      </span>
-    );
-  }
-  if (status === "opened") {
-    return (
-      <span
-        className="shrink-0 w-5 h-5 rounded-full border-2 border-[var(--accent)] bg-[var(--accent)]/20 flex items-center justify-center"
-        aria-label="Begonnen"
-      >
-        <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent)]" />
-      </span>
-    );
-  }
-  return (
-    <span
-      className="shrink-0 w-5 h-5 rounded-full border-2 border-[var(--muted)] bg-transparent"
-      aria-label="Ungelesen"
-    />
-  );
-}
 
 export function CollapsibleSection({
   id,
   title,
   children,
   variant = "default",
-  progressStatus = "unread",
   onOpened,
   onCompleted,
   defaultOpen = false,
@@ -110,8 +83,6 @@ export function CollapsibleSection({
   const openedFiredRef = useRef(false);
   const completedFiredRef = useRef(false);
   const styles = VARIANT_STYLES[variant];
-  const IconComponent = styles.icon;
-  const showChevron = variant === "default";
 
   const handleOpenChange = (value: boolean) => {
     if (value && !openedFiredRef.current && onOpened) {
@@ -144,8 +115,8 @@ export function CollapsibleSection({
       open={open}
       onOpenChange={handleOpenChange}
       className={cn(
-        "rounded-none first:rounded-t-lg last:rounded-b-lg border-x border-b first:border-t border-[var(--border)] bg-[var(--card)] overflow-hidden",
-        styles.border,
+        "border-b border-[var(--border)]/60 last:border-b-0",
+        styles.accentBorder,
         className
       )}
     >
@@ -155,8 +126,8 @@ export function CollapsibleSection({
       <CollapsibleTrigger
         asChild
         className={cn(
-          "flex items-center gap-2 w-full text-left px-3 py-2",
-          "hover:bg-[var(--foreground)]/5 transition-colors cursor-pointer",
+          "flex items-center gap-2 w-full text-left py-3 px-1",
+          "hover:bg-[var(--foreground)]/3 transition-colors cursor-pointer rounded-sm",
           "focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] focus-visible:ring-offset-2"
         )}
       >
@@ -167,47 +138,22 @@ export function CollapsibleSection({
           aria-controls={`${id}-content`}
           id={`${id}-trigger`}
         >
-          <ProgressIcon status={progressStatus} />
           <span className="shrink-0 text-[var(--muted)]" aria-hidden>
-            {showChevron ? (
-              open ? (
-                <ChevronDown className="w-5 h-5" />
-              ) : (
-                <ChevronRight className="w-5 h-5" />
-              )
-            ) : (
-              <span
-                className={cn(
-                  "flex items-center justify-center w-8 h-8 rounded-lg",
-                  styles.iconBg,
-                  styles.iconColor
-                )}
-              >
-                <IconComponent className="w-4 h-4" />
-              </span>
-            )}
+            {open ? <ChevronDown className="w-4 h-4" /> : <ChevronRight className="w-4 h-4" />}
           </span>
           <span className="flex-1 min-w-0 flex items-center gap-2">
             {styles.badge && (
               <span
                 className={cn(
                   "shrink-0 text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded",
-                  variant === "medat" &&
-                    "bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300",
-                  variant === "summary" &&
-                    "bg-teal-100 dark:bg-teal-900/30 text-teal-700 dark:text-teal-300"
+                  styles.badgeClass
                 )}
               >
                 {styles.badge}
               </span>
             )}
-            <h2 className="text-base font-semibold text-[var(--text-primary)] truncate">{title}</h2>
+            <h2 className="text-sm font-semibold text-[var(--text-primary)] truncate">{title}</h2>
           </span>
-          {!showChevron && (
-            <span className="shrink-0 text-[var(--muted)]">
-              {open ? <ChevronDown className="w-5 h-5" /> : <ChevronRight className="w-5 h-5" />}
-            </span>
-          )}
         </button>
       </CollapsibleTrigger>
       <CollapsibleContent
@@ -223,10 +169,10 @@ export function CollapsibleSection({
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
-              transition={{ duration: 0.25, ease: [0.25, 0.1, 0.25, 1] }}
+              transition={{ duration: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
               className="overflow-hidden"
             >
-              <div className="px-3 pb-3 pt-0 border-t border-[var(--border)]/50">
+              <div className="pl-6 pb-6 pt-0">
                 {children}
                 {onCompleted && <div ref={sentinelRef} className="h-1 w-full" aria-hidden />}
               </div>

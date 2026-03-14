@@ -15,3 +15,19 @@ export function usePageTitle(pageTitle?: string) {
     };
   }, [pageTitle]);
 }
+
+/**
+ * Adds <meta name="robots" content="noindex, nofollow"> to auth-gated pages.
+ * Defense-in-depth alongside robots.txt.
+ */
+export function useNoIndex() {
+  useEffect(() => {
+    const tag = document.createElement("meta");
+    tag.setAttribute("name", "robots");
+    tag.setAttribute("content", "noindex, nofollow");
+    document.head.appendChild(tag);
+    return () => {
+      document.head.removeChild(tag);
+    };
+  }, []);
+}

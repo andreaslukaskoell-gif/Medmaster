@@ -516,9 +516,12 @@ function ReferralCard() {
     <div className="h-full rounded-xl border border-[var(--border)] bg-[var(--card)] p-5 shadow-sm">
       <div className="flex items-start justify-between gap-4">
         <div className="flex-1">
-          <p className="text-sm font-semibold text-[var(--text-primary)] mb-1">Freunde einladen</p>
+          <p className="text-sm font-semibold text-[var(--text-primary)] mb-1">
+            Lerngruppe starten
+          </p>
           <p className="text-xs text-[var(--muted)] leading-relaxed">
-            Teile MedMaster mit deinen Freunden — gemeinsam lernt es sich besser!
+            Lade Freunde ein und lernt gemeinsam — wer in einer Lerngruppe übt, schneidet im MedAT
+            nachweislich besser ab.
           </p>
         </div>
         <div className="flex gap-2 shrink-0">

@@ -35,6 +35,7 @@ import { useStore } from "@/store/useStore";
 import { useAuth } from "@/hooks/useAuth";
 import { getLevelFromXP, getLevelName, getFeatureUnlockedAtLevel } from "@/lib/progression";
 import { cn } from "@/lib/utils";
+import { useNoIndex } from "@/hooks/usePageTitle";
 import { SIDEBAR_MAIN_ML } from "./sidebarLayout";
 
 /** True when route is a BMS chapter (e.g. /bms/biologie/kap1-zellbiologie). */
@@ -58,6 +59,7 @@ const pageTransition = {
 const INTERLEAVE_CHECK_MS = 60 * 1000; // 1 min
 
 export function AppShell() {
+  useNoIndex(); // All AppShell routes are auth-gated — prevent indexing
   const [mobileOpen, setMobileOpen] = useState(false);
   const [commandPaletteOpen, setCommandPaletteOpen] = useState(false);
   const [cmdPaletteEverOpened, setCmdPaletteEverOpened] = useState(false);

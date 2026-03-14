@@ -83,7 +83,7 @@ export function getSimulationShareText(section: string, score: number, total: nu
 
 export function getReferralShareText(userId?: string): string {
   const link = userId ? `${SITE_URL}?ref=${userId.slice(0, 8)}` : SITE_URL;
-  return `Hey! Ich lerne für den MedAT mit MedMaster — komplett gratis bis Ende März. 4.300+ Fragen, alle 4 Bereiche. Probier's aus:\n👉 ${link}`;
+  return `Hey! Ich bereite mich mit MedMaster auf den MedAT vor — 4.300+ Übungsfragen, KFF-Training, Prüfungssimulation und KI-Lernplan. Komplett gratis. Lass uns zusammen lernen!\n👉 ${link}`;
 }
 
 export function getPrognoseShareText(scorePct: number, bestUni: string | null): string {

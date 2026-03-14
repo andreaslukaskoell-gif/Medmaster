@@ -29,7 +29,6 @@ import {
   type SectionProgressStatus,
 } from "./CollapsibleSection";
 import { SectionTOC } from "./SectionTOC";
-import { Button } from "@/components/ui/button";
 
 const STORAGE_KEY_PROGRESS = (ukId: string) => `medmaster-section-progress-${ukId}`;
 
@@ -220,7 +219,7 @@ function MarkdownContent({
   if (blocks.length === 0) {
     return (
       <div
-        className={`prose prose-slate dark:prose-invert prose-sm max-w-none leading-relaxed text-[var(--text-primary)] ${className}`}
+        className={`prose prose-slate dark:prose-invert prose-sm max-w-none leading-7 text-[var(--text-primary)] prose-headings:mt-6 prose-headings:mb-3 prose-p:my-3 ${className}`}
       >
         <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
           {processedBase}
@@ -232,7 +231,7 @@ function MarkdownContent({
   const segments = processedBase.split(PLACEHOLDER_REGEX);
   return (
     <div
-      className={`prose prose-slate dark:prose-invert prose-sm max-w-none leading-relaxed text-[var(--text-primary)] ${className}`}
+      className={`prose prose-slate dark:prose-invert prose-sm max-w-none leading-7 text-[var(--text-primary)] prose-headings:mt-6 prose-headings:mb-3 prose-p:my-3 ${className}`}
     >
       {segments.map((part, i) => {
         if (i % 2 === 0) {
@@ -298,16 +297,6 @@ export function SubchapterContent({
   hinterfragMode = false,
   keywordLinkEntries,
 }: Props) {
-  const colors = SUBJECT_COLORS[subject] || SUBJECT_COLORS.biologie;
-
-  // Stichworte: nur offiziell hinterlegte aus Kapitel/UK-Daten – keine Auto-Extraktion
-  const topics = useMemo(() => {
-    if (uk.stichworte && Array.isArray(uk.stichworte) && uk.stichworte.length > 0) {
-      return uk.stichworte;
-    }
-    return [];
-  }, [uk.stichworte]);
-
   // Clean content: remove Kontrollfragen (they're rendered separately as interactive quiz)
   const cleanedContent = useMemo(() => {
     if (!uk.content) return "";
@@ -512,7 +501,7 @@ export function SubchapterContent({
     }
   }, [uk.id, sectionProgress]);
 
-  // Open state: only first section open initially; user opens others via header or TOC
+  // Open state: ALL sections open by default — reading flow, not FAQ
   const [openSections, setOpenSections] = useState<Record<string, boolean>>({});
   const openSectionsInitialized = useRef(false);
   const prevUkId = useRef(uk.id);
@@ -525,12 +514,16 @@ export function SubchapterContent({
   }, [uk.id]);
 
   useEffect(() => {
-    if (unifiedSections.length === 0 || !firstSectionId) return;
+    if (unifiedSections.length === 0) return;
     if (openSectionsInitialized.current) return;
     openSectionsInitialized.current = true;
-    const t = setTimeout(() => setOpenSections({ [firstSectionId]: true }), 0);
+    const allOpen = allSectionIds.reduce<Record<string, boolean>>(
+      (acc, id) => ({ ...acc, [id]: true }),
+      {}
+    );
+    const t = setTimeout(() => setOpenSections(allOpen), 0);
     return () => clearTimeout(t);
-  }, [unifiedSections, firstSectionId, allSectionIds]);
+  }, [unifiedSections, allSectionIds]);
 
   const effectiveOpen = useCallback((id: string) => openSections[id] ?? false, [openSections]);
 
@@ -604,16 +597,6 @@ export function SubchapterContent({
     }
   }, [unifiedSections]);
 
-  const expandAll = useCallback(() => {
-    setOpenSections(
-      allSectionIds.reduce<Record<string, boolean>>((acc, id) => ({ ...acc, [id]: true }), {})
-    );
-  }, [allSectionIds]);
-
-  const collapseAll = useCallback(() => {
-    setOpenSections({});
-  }, []);
-
   const tocSections = useMemo(
     () => unifiedSections.map((s) => ({ id: s.id, title: s.title })),
     [unifiedSections]
@@ -621,49 +604,7 @@ export function SubchapterContent({
 
   return (
     <div className="space-y-6 content-section">
-      {topics.length > 0 && (
-        <div className="flex flex-wrap gap-1.5 pb-3 border-b border-[var(--border)]">
-          <span className="text-xs font-semibold text-[var(--text-primary)] uppercase tracking-wide self-center mr-1">
-            Themen:
-          </span>
-          {topics.map((topic) => (
-            <span
-              key={topic}
-              className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${colors.bg} ${colors.text}`}
-            >
-              {topic}
-            </span>
-          ))}
-        </div>
-      )}
-
-      {/* Alle aufklappen / Alle schließen */}
-      <div className="flex flex-wrap items-center gap-3">
-        {allSectionIds.length > 0 && (
-          <>
-            <Button
-              type="button"
-              variant="outline"
-              size="sm"
-              onClick={expandAll}
-              className="text-xs"
-            >
-              Alle aufklappen
-            </Button>
-            <Button
-              type="button"
-              variant="outline"
-              size="sm"
-              onClick={collapseAll}
-              className="text-xs"
-            >
-              Alle schließen
-            </Button>
-          </>
-        )}
-      </div>
-
-      <div className="grid grid-cols-1 lg:grid-cols-[240px_1fr] gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-10">
         <aside className="hidden lg:block min-w-0">
           <SectionTOC
             sections={tocSections}
