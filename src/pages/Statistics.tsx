@@ -338,11 +338,11 @@ export default function Statistics() {
             const avgRate =
               practiced.length > 0
                 ? Math.round(
-                    practiced.reduce((s, x) => s + x.stat!.successRate, 0) / practiced.length
+                    practiced.reduce((s, x) => s + (x.stat?.successRate ?? 0), 0) / practiced.length
                   )
                 : 0;
-            const sicherCount = practiced.filter((x) => x.stat!.confidence === "sicher").length;
-            const unsicherCount = practiced.filter((x) => x.stat!.confidence === "unsicher").length;
+            const sicherCount = practiced.filter((x) => x.stat?.confidence === "sicher").length;
+            const unsicherCount = practiced.filter((x) => x.stat?.confidence === "unsicher").length;
 
             return (
               <div className="space-y-4">
@@ -372,7 +372,7 @@ export default function Statistics() {
                 {practiced.length > 0 && (
                   <div className="space-y-1.5 max-h-80 overflow-y-auto">
                     {practiced
-                      .sort((a, b) => a.stat!.successRate - b.stat!.successRate)
+                      .sort((a, b) => (a.stat?.successRate ?? 0) - (b.stat?.successRate ?? 0))
                       .map(({ sw, stat }) => (
                         <div
                           key={sw.id}
@@ -385,27 +385,27 @@ export default function Statistics() {
                           </div>
                           <span
                             className={`text-[10px] px-1.5 py-0.5 rounded-full font-medium ${
-                              confidenceLabel[stat!.confidence]?.className || ""
+                              confidenceLabel[stat?.confidence ?? ""]?.className || ""
                             }`}
                           >
-                            {confidenceLabel[stat!.confidence]?.text || stat!.confidence}
+                            {confidenceLabel[stat?.confidence ?? ""]?.text || stat?.confidence}
                           </span>
                           <span className="text-[10px] text-[var(--muted)] w-12 text-right">
-                            {stat!.totalAttempts}x
+                            {stat?.totalAttempts ?? 0}x
                           </span>
                           <div className="w-16">
-                            <Progress value={stat!.successRate} className="h-1.5" />
+                            <Progress value={stat?.successRate ?? 0} className="h-1.5" />
                           </div>
                           <span
                             className={`text-xs font-bold w-10 text-right ${
-                              stat!.successRate >= 80
+                              (stat?.successRate ?? 0) >= 80
                                 ? "text-green-600"
-                                : stat!.successRate >= 50
+                                : (stat?.successRate ?? 0) >= 50
                                   ? "text-amber-600"
                                   : "text-red-600"
                             }`}
                           >
-                            {stat!.successRate}%
+                            {stat?.successRate ?? 0}%
                           </span>
                         </div>
                       ))}
