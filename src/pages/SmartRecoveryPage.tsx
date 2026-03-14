@@ -100,24 +100,26 @@ export default function SmartRecoveryPage() {
 
   const handleShowQuestion = () => setStep("question");
   const handleSelect = (optionId: string) => {
-    if (showResult) return;
-    setAnswers((prev) => ({ ...prev, [currentQuestion!.id]: optionId }));
+    if (showResult || !currentQuestion) return;
+    setAnswers((prev) => ({ ...prev, [currentQuestion.id]: optionId }));
   };
   const handleCheck = () => {
+    if (!currentQuestion) return;
     setShowResult(true);
-    const correct = answers[currentQuestion!.id] === currentQuestion!.correctOptionId;
+    const correct = answers[currentQuestion.id] === currentQuestion.correctOptionId;
     setResults((prev) => [...prev, correct]);
     if (correct) playCorrectAnswerSound();
     const swId =
-      getDirectStichwortId(currentQuestion!.id) || getStichwortForQuestion(currentQuestion!.id);
+      getDirectStichwortId(currentQuestion.id) || getStichwortForQuestion(currentQuestion.id);
     if (swId) adaptive.recordAnswer(swId, correct, 30);
-    updateSpacedRepetition(currentQuestion!.id, correct);
+    updateSpacedRepetition(currentQuestion.id, correct);
   };
   const handleNext = () => {
+    if (!currentQuestion) return;
     setShowResult(false);
     setAnswers((prev) => {
       const next = { ...prev };
-      delete next[currentQuestion!.id];
+      delete next[currentQuestion.id];
       return next;
     });
     if (currentIndex < questions.length - 1) {
