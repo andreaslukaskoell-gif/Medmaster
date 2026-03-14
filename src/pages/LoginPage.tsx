@@ -130,7 +130,10 @@ export default function LoginPage() {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <label className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 block">
+                  <label
+                    htmlFor="login-email"
+                    className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 block"
+                  >
                     E-Mail
                   </label>
                   <div className="relative">
@@ -139,6 +142,7 @@ export default function LoginPage() {
                       type="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
+                      id="login-email"
                       placeholder="deine@email.at"
                       required
                       autoFocus
@@ -148,12 +152,16 @@ export default function LoginPage() {
                 </div>
 
                 <div>
-                  <label className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 block">
+                  <label
+                    htmlFor="login-password"
+                    className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 block"
+                  >
                     Passwort
                   </label>
                   <div className="relative">
                     <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[var(--muted)]" />
                     <input
+                      id="login-password"
                       type={showPassword ? "text" : "password"}
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
@@ -165,6 +173,7 @@ export default function LoginPage() {
                       type="button"
                       onClick={() => setShowPassword(!showPassword)}
                       className="absolute right-3 top-1/2 -translate-y-1/2 text-[var(--muted)] hover:text-gray-700 dark:hover:text-gray-300"
+                      aria-label="Passwort anzeigen"
                     >
                       {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
                     </button>

@@ -118,10 +118,11 @@ export function polygonBBox(poly: Polygon): {
 } {
   const pts = poly.points;
   if (pts.length === 0) return { minX: 0, minY: 0, maxX: 0, maxY: 0, width: 0, height: 0 };
-  let minX = pts[0]!.x;
-  let minY = pts[0]!.y;
-  let maxX = pts[0]!.x;
-  let maxY = pts[0]!.y;
+  const first = pts[0] as { x: number; y: number };
+  let minX = first.x;
+  let minY = first.y;
+  let maxX = first.x;
+  let maxY = first.y;
   for (const p of pts) {
     minX = Math.min(minX, p.x);
     minY = Math.min(minY, p.y);
@@ -407,16 +408,18 @@ export function computeSolutionOverlay(
     const pts = piece.points;
     for (let i = 0; i < pts.length; i++) {
       const j = (i + 1) % pts.length;
-      const key = segmentKey(pts[i]!, pts[j]!);
+      const pi = pts[i] as { x: number; y: number };
+      const pj = pts[j] as { x: number; y: number };
+      const key = segmentKey(pi, pj);
       if (targetEdges.has(key) || seen.has(key)) continue;
       seen.add(key);
       // Skip degenerate (zero-length) edges
-      const dx = pts[j]!.x - pts[i]!.x;
-      const dy = pts[j]!.y - pts[i]!.y;
+      const dx = pj.x - pi.x;
+      const dy = pj.y - pi.y;
       if (dx * dx + dy * dy < 1e-6) continue;
       lines.push({
-        from: { x: rd(pts[i]!.x), y: rd(pts[i]!.y) },
-        to: { x: rd(pts[j]!.x), y: rd(pts[j]!.y) },
+        from: { x: rd(pi.x), y: rd(pi.y) },
+        to: { x: rd(pj.x), y: rd(pj.y) },
       });
     }
   }
@@ -1146,8 +1149,8 @@ export function validatePiecesMatchTarget(pieces: Polygon[], target: Polygon): b
 function validatePiecesNoOverlap(pieces: Polygon[]): boolean {
   for (let i = 0; i < pieces.length; i++) {
     for (let j = i + 1; j < pieces.length; j++) {
-      const a = pieces[i]!.points;
-      const b = pieces[j]!.points;
+      const a = (pieces[i] as Polygon).points;
+      const b = (pieces[j] as Polygon).points;
       for (const p of a) {
         if (pointStrictlyInsidePolygon(p, b)) return false;
       }
@@ -1232,10 +1235,12 @@ function pointInPolygon(
   if (n < 3) return false;
   let inside = false;
   for (let i = 0, j = n - 1; i < n; j = i++) {
-    const xi = vertices[i]!.x,
-      yi = vertices[i]!.y;
-    const xj = vertices[j]!.x,
-      yj = vertices[j]!.y;
+    const vi = vertices[i] as { x: number; y: number };
+    const vj = vertices[j] as { x: number; y: number };
+    const xi = vi.x,
+      yi = vi.y;
+    const xj = vj.x,
+      yj = vj.y;
     if (yi > point.y !== yj > point.y && point.x < ((xj - xi) * (point.y - yi)) / (yj - yi) + xi) {
       inside = !inside;
     }

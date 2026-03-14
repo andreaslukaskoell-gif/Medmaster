@@ -158,16 +158,16 @@ function parsePremiseToSetRels(p: string): SetRel[] | null {
   }
   const someNot = /^Einige (.+?) sind keine (.+?)$/i.exec(s);
   if (someNot) {
-    return [{ type: "NOT_ALL", a: someNot[1]!.trim(), b: someNot[2]!.trim() }];
+    return [{ type: "NOT_ALL", a: (someNot[1] ?? "").trim(), b: (someNot[2] ?? "").trim() }];
   }
   const someIn = /^Einige (.+?) sind (.+?)$/i.exec(s);
   if (someIn) {
-    return [{ type: "SOME", a: someIn[1]!.trim(), b: someIn[2]!.trim() }];
+    return [{ type: "SOME", a: (someIn[1] ?? "").trim(), b: (someIn[2] ?? "").trim() }];
   }
   // "Keine X sind Y" → NONE(X,Y)
   const noneAre = /^Keine (.+?) sind (.+?)$/i.exec(s);
   if (noneAre) {
-    return [{ type: "NONE", a: noneAre[1]!.trim(), b: noneAre[2]!.trim() }];
+    return [{ type: "NONE", a: (noneAre[1] ?? "").trim(), b: (noneAre[2] ?? "").trim() }];
   }
   return null;
 }
@@ -642,19 +642,23 @@ export function parseConclusion(
   // WICHTIG: "keine"-Varianten ZUERST prüfen (sonst matcht "sind" vor "sind keine")
   const allNot = /^Alle (.+?) sind keine (.+?)$/i.exec(s);
   if (allNot) {
-    return { type: "all-not", subject: allNot[1]!.trim(), object: allNot[2]!.trim() };
+    return { type: "all-not", subject: (allNot[1] ?? "").trim(), object: (allNot[2] ?? "").trim() };
   }
   const someNot = /^Einige (.+?) sind keine (.+?)$/i.exec(s);
   if (someNot) {
-    return { type: "some-not", subject: someNot[1]!.trim(), object: someNot[2]!.trim() };
+    return {
+      type: "some-not",
+      subject: (someNot[1] ?? "").trim(),
+      object: (someNot[2] ?? "").trim(),
+    };
   }
   const allIn = /^Alle (.+?) sind (.+?)$/i.exec(s);
   if (allIn) {
-    return { type: "all", subject: allIn[1]!.trim(), object: allIn[2]!.trim() };
+    return { type: "all", subject: (allIn[1] ?? "").trim(), object: (allIn[2] ?? "").trim() };
   }
   const someIn = /^Einige (.+?) sind (.+?)$/i.exec(s);
   if (someIn) {
-    return { type: "some", subject: someIn[1]!.trim(), object: someIn[2]!.trim() };
+    return { type: "some", subject: (someIn[1] ?? "").trim(), object: (someIn[2] ?? "").trim() };
   }
   return null;
 }

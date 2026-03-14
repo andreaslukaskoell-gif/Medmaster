@@ -11,9 +11,9 @@ CREATE POLICY "tasks_insert" ON tasks
   FOR INSERT WITH CHECK (
     auth.role() = 'service_role'
     OR EXISTS (
-      SELECT 1 FROM profiles
-      WHERE profiles.id = auth.uid()
-      AND profiles.email IN ('luki@medmaster.at', 'admin@medmaster.at')
+      SELECT 1 FROM auth.users
+      WHERE auth.users.id = auth.uid()
+      AND auth.users.email IN ('luki@medmaster.at', 'admin@medmaster.at')
     )
   );
 
@@ -23,9 +23,9 @@ CREATE POLICY "tasks_update" ON tasks
   FOR UPDATE USING (
     auth.role() = 'service_role'
     OR EXISTS (
-      SELECT 1 FROM profiles
-      WHERE profiles.id = auth.uid()
-      AND profiles.email IN ('luki@medmaster.at', 'admin@medmaster.at')
+      SELECT 1 FROM auth.users
+      WHERE auth.users.id = auth.uid()
+      AND auth.users.email IN ('luki@medmaster.at', 'admin@medmaster.at')
     )
   );
 

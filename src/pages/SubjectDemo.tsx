@@ -435,6 +435,41 @@ export default function SubjectDemo() {
     }
   }, [meta, subjectKey]);
 
+  // FAQPage + Course JSON-LD for SEO
+  useEffect(() => {
+    if (!meta) return;
+    const schemas = [
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: meta.faq.map((f) => ({
+          "@type": "Question",
+          name: f.q,
+          acceptedAnswer: { "@type": "Answer", text: f.a },
+        })),
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        name: `MedAT ${meta.label} Vorbereitung`,
+        description: meta.metaDesc,
+        provider: { "@type": "Organization", name: "MedMaster", url: "https://medmaster.at" },
+        educationalLevel: "Universität",
+        inLanguage: "de",
+        isAccessibleForFree: true,
+        url: `https://medmaster.at/medat-${subjectKey}-fragen`,
+      },
+    ];
+    const scripts = schemas.map((s) => {
+      const el = document.createElement("script");
+      el.type = "application/ld+json";
+      el.textContent = JSON.stringify(s);
+      document.head.appendChild(el);
+      return el;
+    });
+    return () => scripts.forEach((el) => document.head.removeChild(el));
+  }, [meta, subjectKey]);
+
   const dailySeed = useMemo(() => {
     const d = new Date();
     return d.getFullYear() * 10000 + (d.getMonth() + 1) * 100 + d.getDate();

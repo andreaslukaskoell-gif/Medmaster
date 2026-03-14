@@ -65,12 +65,17 @@ function LoadingSpinner() {
   );
 }
 
-/** Scrollt bei jedem Seitenwechsel nach oben. */
+/** Scrollt bei jedem Seitenwechsel nach oben + captures ?ref= param */
 function ScrollToTop() {
-  const { pathname } = useLocation();
+  const { pathname, search } = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
+  useEffect(() => {
+    const params = new URLSearchParams(search);
+    const ref = params.get("ref");
+    if (ref) sessionStorage.setItem("medmaster_ref", ref);
+  }, [search]);
   return null;
 }
 

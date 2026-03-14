@@ -245,6 +245,7 @@ export default function TextverstaendnisUeben() {
             onClick={handlePrevText}
             disabled={textIndex === 0}
             className="p-1.5 rounded-lg text-[var(--muted)] hover:bg-accent disabled:opacity-30 disabled:cursor-not-allowed transition-colors cursor-pointer"
+            aria-label="Vorheriger Text"
           >
             <ChevronLeft className="w-4 h-4" />
           </button>
@@ -252,6 +253,7 @@ export default function TextverstaendnisUeben() {
             onClick={handleNextText}
             disabled={textIndex >= filteredTexts.length - 1}
             className="p-1.5 rounded-lg text-[var(--muted)] hover:bg-accent disabled:opacity-30 disabled:cursor-not-allowed transition-colors cursor-pointer"
+            aria-label="Nächster Text"
           >
             <ChevronRight className="w-4 h-4" />
           </button>

@@ -109,7 +109,7 @@ export default function QuizChallenge() {
   const challengeLink = `https://medmaster.at/challenge?fach=${subject}&seed=${seed}`;
   const shareText = `${config.emoji} MedAT-Challenge: ${score}/${QUESTION_COUNT} (${pct}%) in ${config.label}!\nSchaffst du mehr? Probier's aus:\n👉 ${challengeLink}`;
 
-  // SEO meta
+  // SEO meta + JSON-LD
   useEffect(() => {
     const desc = document.querySelector('meta[name="description"]');
     if (desc) {
@@ -118,6 +118,25 @@ export default function QuizChallenge() {
         `Teste dein MedAT-Wissen! 5 Fragen, 45 Sekunden pro Frage. Fordere deine Freunde heraus auf MedMaster.`
       );
     }
+    const schema = {
+      "@context": "https://schema.org",
+      "@type": "Quiz",
+      name: "MedAT Quiz-Challenge",
+      description:
+        "Teste dein MedAT-Wissen mit 5 Fragen in 45 Sekunden pro Frage. Fordere deine Freunde heraus!",
+      educationalLevel: "Universität",
+      inLanguage: "de",
+      provider: { "@type": "Organization", name: "MedMaster", url: "https://medmaster.at" },
+      isAccessibleForFree: true,
+      url: "https://medmaster.at/challenge",
+    };
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.textContent = JSON.stringify(schema);
+    document.head.appendChild(script);
+    return () => {
+      document.head.removeChild(script);
+    };
   }, []);
 
   // ── INTRO ──────────────────────────────────────────────────────

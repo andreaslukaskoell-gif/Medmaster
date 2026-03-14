@@ -503,10 +503,20 @@ export default function Lernplan() {
                 );
               })()
             ) : (
-              <p className="text-sm text-[var(--muted)]">
-                Noch kein Lernplan. Stelle unten deine Wochenstunden ein und generiere deinen Plan –
-                dann siehst du hier deine Tagesaufgaben.
-              </p>
+              <div className="space-y-3">
+                <p className="text-sm text-[var(--text-primary)] font-medium">
+                  Noch kein Lernplan erstellt
+                </p>
+                <p className="text-sm text-[var(--muted)]">
+                  Stelle unten ein, an wie vielen Tagen und wie lange du pro Tag lernen möchtest.
+                  Klicke dann auf „Lernplan generieren" — du siehst hier sofort deine täglichen
+                  Aufgaben (Kapitel, Fragen, KFF, TV, SEK).
+                </p>
+                <div className="flex items-center gap-2 text-xs text-[var(--muted)]">
+                  <Zap className="w-3.5 h-3.5 text-[var(--accent)]" />
+                  Du kannst den Plan jederzeit anpassen.
+                </div>
+              </div>
             )}
           </CardContent>
         </Card>

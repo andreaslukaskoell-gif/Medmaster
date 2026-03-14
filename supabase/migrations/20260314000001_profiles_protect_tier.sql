@@ -3,6 +3,9 @@
 -- Only service_role (Stripe webhooks) can change the tier.
 -- ============================================================
 
+-- Add subscription_tier column if it doesn't exist yet
+ALTER TABLE profiles ADD COLUMN IF NOT EXISTS subscription_tier text NOT NULL DEFAULT 'starter';
+
 -- Drop existing update policy if any, then create restrictive one
 DROP POLICY IF EXISTS "Users can update own profile" ON profiles;
 CREATE POLICY "Users can update own profile" ON profiles

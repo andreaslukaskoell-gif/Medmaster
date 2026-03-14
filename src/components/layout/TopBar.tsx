@@ -97,6 +97,7 @@ export function TopBar({ menuButtonRef, onMenuToggle, sidebarOpen = false }: Top
             type="button"
             onClick={openCommandPalette}
             className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[var(--foreground)]/[0.04] text-sm text-[var(--muted)] hover:bg-[var(--foreground)]/[0.07] hover:text-[var(--foreground)] transition-colors cursor-pointer"
+            aria-label="Suchen"
           >
             <Search className="w-3.5 h-3.5" />
             <span className="hidden sm:inline text-xs">Suche</span>

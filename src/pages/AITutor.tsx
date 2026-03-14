@@ -141,6 +141,7 @@ export default function AITutor() {
             type="submit"
             disabled={!input.trim() || typing}
             className="shrink-0 w-10 h-10 rounded-xl bg-[var(--accent)] text-white flex items-center justify-center disabled:opacity-50 hover:bg-[var(--accent)]/90 transition-colors cursor-pointer"
+            aria-label="Senden"
           >
             <Send className="w-4 h-4" />
           </button>

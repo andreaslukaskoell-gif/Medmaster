@@ -161,11 +161,20 @@ export function useAuth() {
 
   async function signUp(email: string, password: string, username: string, birthDate?: string) {
     if (!supabase) return { error: new Error("Supabase nicht konfiguriert") };
+    const referredBy = sessionStorage.getItem("medmaster_ref") || null;
     const { error } = await supabase.auth.signUp({
       email,
       password,
-      options: { data: { username, display_name: username, birth_date: birthDate || null } },
+      options: {
+        data: {
+          username,
+          display_name: username,
+          birth_date: birthDate || null,
+          referred_by: referredBy,
+        },
+      },
     });
+    if (!error && referredBy) sessionStorage.removeItem("medmaster_ref");
     return { error };
   }
 

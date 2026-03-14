@@ -7,6 +7,7 @@ import { CalendarDays, ArrowRight, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useStore } from "@/store/useStore";
+import { getMedATDate } from "@/lib/utils";
 
 export default function LernplanChoice() {
   const navigate = useNavigate();
@@ -21,6 +22,14 @@ export default function LernplanChoice() {
   };
 
   const handleLater = () => {
+    // Set a default Lernplan so the Dashboard isn't empty
+    const { setLernplanConfig } = useStore.getState();
+    const medatDate = getMedATDate().toISOString().split("T")[0];
+    setLernplanConfig({
+      medatDate,
+      hoursPerWeek: 7, // ~1h/day, conservative default
+      generatedAt: new Date().toISOString(),
+    });
     completeOnboarding(null);
     navigate("/dashboard", { replace: true });
   };
