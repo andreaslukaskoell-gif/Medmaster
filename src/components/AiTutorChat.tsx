@@ -258,6 +258,7 @@ export function AiTutorChat({ question, userAnswer, onClose }: AiTutorChatProps)
               type="submit"
               disabled={!input.trim() || isTyping}
               className="w-10 h-10 bg-indigo-600 hover:bg-indigo-500 disabled:opacity-40 disabled:hover:bg-indigo-600 rounded-full flex items-center justify-center transition-colors cursor-pointer"
+              aria-label="Senden"
             >
               <Send className="w-4 h-4 text-white" />
             </button>
