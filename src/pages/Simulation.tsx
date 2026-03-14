@@ -25,15 +25,11 @@ import { Badge } from "@/components/ui/badge";
 import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { FloatingQuestionCounter } from "@/components/ui/FloatingQuestionCounter";
 import {
-  allBmsQuestions as newBmsQuestions,
-  getQuestionsBySubject as getNewQuestions,
+  getAllBmsQuestions,
+  getQuestionsBySubject as getBmsQuestionsBySubject,
 } from "@/data/bms/index";
 import { useAdaptiveStore, getStichwortForQuestion } from "@/store/adaptiveLearning";
 import { getDirectStichwortId } from "@/data/questions/index";
-import {
-  bmsQuestions as legacyQuestions,
-  getQuestionsBySubject as getLegacyQuestions,
-} from "@/data/bmsQuestions";
 import { tvTexts } from "@/data/tvData";
 import {
   generateAllergyCards,
@@ -1393,7 +1389,7 @@ export default function Simulation() {
               {formatTime(breakTimeLeft)}
             </div>
             <Button onClick={loadNextSection}>
-              <Play className="w-4 h-4 mr-1" /> Pause ueberspringen
+              <Play className="w-4 h-4 mr-1" /> Pause überspringen
             </Button>
           </CardContent>
         </Card>

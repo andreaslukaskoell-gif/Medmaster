@@ -1,4 +1,4 @@
-import { Check, X } from "lucide-react";
+import { Check, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -6,141 +6,126 @@ import { Badge } from "@/components/ui/badge";
 import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { usePageTitle } from "@/hooks/usePageTitle";
 
-const plans = [
-  {
-    name: "Starter",
-    price: "0",
-    period: "für immer",
-    description: "Perfekt zum Reinschnuppern",
-    highlighted: false,
-    features: [
-      { text: "BMS-Theorie: alle Kapitel lesbar", included: true },
-      { text: "50 BMS-Fragen", included: true },
-      { text: "Strategie-Guides (KFF, TV, SEK)", included: true },
-      { text: "Basis-Statistiken", included: true },
-      { text: "1 Simulationstest", included: true },
-      { text: "KI-adaptives Lernsystem", included: false },
-      { text: "Alle 1.000+ BMS-Fragen", included: false },
-      { text: "Schwachstellen-Trainer", included: false },
-      { text: "KI-Tutor Chat", included: false },
-    ],
-  },
-  {
-    name: "Premium",
-    price: "12,90",
-    period: "pro Monat",
-    description: "Für ernsthaftes MedAT-Training",
-    highlighted: true,
-    features: [
-      { text: "Alles aus Starter", included: true },
-      { text: "Alle 1.000+ BMS-Fragen", included: true },
-      { text: "KI-adaptives Lernsystem", included: true },
-      { text: "Unbegrenzte Simulationen", included: true },
-      { text: "Stichwortlisten-Tracking", included: true },
-      { text: "Schwachstellen-Trainer", included: true },
-      { text: "Spaced Repetition System", included: true },
-      { text: "Detaillierte Leistungsanalyse", included: true },
-      { text: "KI-Tutor Chat", included: false },
-    ],
-  },
-  {
-    name: "Pro",
-    price: "19,90",
-    period: "pro Monat",
-    description: "Maximum Vorbereitung",
-    highlighted: false,
-    features: [
-      { text: "Alles aus Premium", included: true },
-      { text: "KI-Tutor Chat", included: true },
-      { text: "Prüfungstag-Prognose", included: true },
-      { text: "Personalisierter Lernplan", included: true },
-      { text: "Erweiterte Fehleranalyse", included: true },
-      { text: "Prioritäts-Support per E-Mail", included: true },
-      { text: "Frühzugang zu neuen Inhalten", included: true },
-      { text: "Lerngruppen-Feature", included: true },
-      { text: "Geld-zurück-Garantie (30 Tage)", included: true },
-    ],
-  },
+const features = [
+  "4.300+ BMS-Fragen mit Erklärungen",
+  "Alle 173 Lerneinheiten (Theorie)",
+  "Unbegrenzte KFF-Übungen (algorithmisch generiert)",
+  "10 TV-Textsets mit MC-Fragen",
+  "100 SEK-Aufgaben",
+  "Realistische Prüfungssimulation im MedAT-Format",
+  "KI-adaptives Lernsystem",
+  "Spaced Repetition & Schwachstellen-Trainer",
+  "Prüfungstag-Prognose",
+  "Personalisierter Lernplan",
+  "KI-Tutor Chat",
+  "Alle zukünftigen Updates inklusive",
 ];
 
 export default function Pricing() {
   usePageTitle("Preise");
+
+  const isFreePromo = new Date() < new Date("2026-04-01T00:00:00+02:00");
+
   return (
-    <div className="max-w-6xl mx-auto space-y-8">
+    <div className="max-w-3xl mx-auto space-y-8">
       <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "Preise" }]} />
 
-      <div className="text-center">
-        <h1 className="text-3xl font-bold text-[var(--text-primary)]">Wähle deinen Plan</h1>
-        <p className="text-[var(--muted)] mt-2 max-w-lg mx-auto">
-          Investiere in deine Zukunft. Alle Pläne sind jederzeit kündbar.
-        </p>
-        <p className="text-sm text-amber-600 dark:text-amber-400 mt-2">
-          Zahlung (Stripe) wird zum Launch hinzugefügt — Upgrade-Buttons sind vorerst Platzhalter.
+      <div className="text-center space-y-3">
+        <h1 className="text-3xl font-bold text-[var(--text-primary)]">
+          Alles. Ein Preis. Kein Abo.
+        </h1>
+        <p className="text-[var(--muted)] max-w-lg mx-auto">
+          Einmalzahlung — lebenslanger Zugang zu allen Inhalten und Updates.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {plans.map((plan) => (
-          <Card
-            key={plan.name}
-            className={`relative ${plan.highlighted ? "border-2 border-[var(--accent)] shadow-lg md:scale-105" : ""}`}
-          >
-            {plan.highlighted && (
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                <Badge className="bg-[var(--accent)] text-white px-3 py-1">Beliebteste Wahl</Badge>
+      <Card className="border-2 border-[var(--accent)] shadow-lg">
+        <CardContent className="p-8">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
+            <div>
+              <div className="flex items-center gap-3 mb-1">
+                <h2 className="text-2xl font-bold text-[var(--text-primary)]">
+                  MedMaster Komplett
+                </h2>
+                <Badge className="bg-[var(--accent)] text-white">Alle Features</Badge>
               </div>
-            )}
-            <CardContent className="p-6 pt-8">
-              <h3 className="text-xl font-bold text-[var(--text-primary)]">{plan.name}</h3>
-              <p className="text-sm text-[var(--muted)] mb-4">{plan.description}</p>
-
-              <div className="mb-6">
-                <span className="text-4xl font-bold text-[var(--text-primary)]">
-                  {plan.price === "0" ? "Gratis" : `€${plan.price}`}
-                </span>
-                {plan.price !== "0" && (
-                  <span className="text-sm text-[var(--muted)] ml-1">/ {plan.period}</span>
-                )}
-              </div>
-
-              <Button
-                variant={plan.highlighted ? "primary" : "outline"}
-                className="w-full mb-6"
-                size="lg"
-                disabled={plan.price !== "0"}
-                title={plan.price !== "0" ? "Zahlung demnächst verfügbar" : undefined}
-                asChild={plan.price === "0"}
-              >
-                {plan.price === "0" ? <Link to="/register">Kostenlos starten</Link> : "Demnächst"}
-              </Button>
-
-              <div className="space-y-3">
-                {plan.features.map((f, i) => (
-                  <div key={i} className="flex items-start gap-2">
-                    {f.included ? (
-                      <Check className="w-4 h-4 text-green-500 mt-0.5 shrink-0" />
-                    ) : (
-                      <X className="w-4 h-4 text-[var(--muted)]/70 mt-0.5 shrink-0" />
-                    )}
-                    <span
-                      className={`text-sm ${f.included ? "text-[var(--text-primary)]" : "text-[var(--muted)]/70"}`}
-                    >
-                      {f.text}
+              <p className="text-[var(--muted)]">Alles, was du für den MedAT 2026 brauchst</p>
+            </div>
+            <div className="text-right">
+              {isFreePromo ? (
+                <>
+                  <div className="flex items-baseline gap-2 justify-end">
+                    <span className="text-lg text-[var(--muted)] line-through">€29,90</span>
+                    <span className="text-4xl font-bold text-emerald-600 dark:text-emerald-400">
+                      Gratis
                     </span>
                   </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
+                  <p className="text-sm text-emerald-600 dark:text-emerald-400 font-medium">
+                    Bis 31. März 2026
+                  </p>
+                </>
+              ) : (
+                <>
+                  <span className="text-4xl font-bold text-[var(--text-primary)]">€29,90</span>
+                  <p className="text-sm text-[var(--muted)]">Einmalig — kein Abo</p>
+                </>
+              )}
+            </div>
+          </div>
 
-      <div className="text-center text-sm text-[var(--muted)] space-y-2">
-        <p>Alle Preise inkl. MwSt. Jederzeit kündbar.</p>
-        <p>
-          Fragen? Schreib uns an{" "}
-          <span className="text-[var(--accent)] font-medium">support@medmaster.at</span>
-        </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+            {features.map((feature) => (
+              <div key={feature} className="flex items-start gap-2">
+                <Check className="w-4 h-4 text-emerald-500 mt-0.5 shrink-0" />
+                <span className="text-sm text-[var(--text-primary)]">{feature}</span>
+              </div>
+            ))}
+          </div>
+
+          <Button className="w-full py-6 text-base font-semibold" size="lg" asChild>
+            <Link to="/register">
+              {isFreePromo ? "Jetzt gratis starten" : "Jetzt starten"}
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </Link>
+          </Button>
+
+          <div className="mt-4 text-center space-y-1">
+            <p className="text-xs text-[var(--muted)]">
+              Keine Kreditkarte nötig{isFreePromo ? " — komplett gratis bis 31. März" : ""}.
+            </p>
+            <p className="text-xs text-[var(--muted)]">
+              Fragen?{" "}
+              <a
+                href="mailto:support@medmaster.at"
+                className="text-[var(--accent)] font-medium hover:underline"
+              >
+                support@medmaster.at
+              </a>
+            </p>
+          </div>
+        </CardContent>
+      </Card>
+
+      <div className="text-center space-y-4 py-4">
+        <h3 className="text-lg font-semibold text-[var(--text-primary)]">
+          Warum einmalig statt Abo?
+        </h3>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto text-sm">
+          <div className="space-y-1">
+            <p className="font-medium text-[var(--text-primary)]">Kein Stress</p>
+            <p className="text-[var(--muted)]">Kein monatliches Kündigen. Einmal zahlen, fertig.</p>
+          </div>
+          <div className="space-y-1">
+            <p className="font-medium text-[var(--text-primary)]">Faire Preise</p>
+            <p className="text-[var(--muted)]">
+              Abo-Plattformen kosten €100+ im Jahr. MedMaster: einmalig €29,90.
+            </p>
+          </div>
+          <div className="space-y-1">
+            <p className="font-medium text-[var(--text-primary)]">Updates inklusive</p>
+            <p className="text-[var(--muted)]">Neue Fragen und Features kommen automatisch dazu.</p>
+          </div>
+        </div>
       </div>
     </div>
   );

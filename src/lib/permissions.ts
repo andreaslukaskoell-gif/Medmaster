@@ -1,103 +1,92 @@
-type Tier = "starter" | "standard" | "pro";
+// MedMaster uses a simple binary model: free (starter) or paid (premium).
+// During the launch promo (until March 31, 2026), all users get premium access.
 
-interface TierPermissions {
+type Tier = "starter" | "premium";
+
+type FeatureLimits = {
   bms_questions: number | "unlimited";
   bms_chapters: number | "unlimited";
   kff_exercises: number | "unlimited";
   tv_texts: number | "unlimited";
   sek_situations: number | "unlimited";
   simulations: number | "unlimited";
-  flashcards: number | "unlimited";
-  leaderboard: boolean;
+  ai_tutor: boolean;
   weakness_analysis: boolean;
   spaced_repetition: boolean;
-  heatmap: boolean;
-  notes: boolean;
-  duel_mode: boolean;
   advanced_analytics: boolean;
-  priority_support: boolean;
-  early_access: boolean;
-}
+  lernplan: boolean;
+};
 
-const PERMISSIONS: Record<Tier, TierPermissions> = {
+const LIMITS: Record<Tier, FeatureLimits> = {
   starter: {
-    bms_questions: 10,
-    bms_chapters: 2,
-    kff_exercises: 5,
-    tv_texts: 1,
-    sek_situations: 3,
-    simulations: 0,
-    flashcards: 50,
-    leaderboard: false,
+    bms_questions: 50,
+    bms_chapters: 5,
+    kff_exercises: 10,
+    tv_texts: 2,
+    sek_situations: 5,
+    simulations: 1,
+    ai_tutor: false,
     weakness_analysis: false,
     spaced_repetition: false,
-    heatmap: false,
-    notes: false,
-    duel_mode: true,
     advanced_analytics: false,
-    priority_support: false,
-    early_access: false,
+    lernplan: false,
   },
-  standard: {
-    bms_questions: "unlimited",
-    bms_chapters: "unlimited",
-    kff_exercises: "unlimited",
-    tv_texts: "unlimited",
-    sek_situations: "unlimited",
-    simulations: 1,
-    flashcards: "unlimited",
-    leaderboard: true,
-    weakness_analysis: true,
-    spaced_repetition: true,
-    heatmap: true,
-    notes: true,
-    duel_mode: true,
-    advanced_analytics: false,
-    priority_support: false,
-    early_access: false,
-  },
-  pro: {
+  premium: {
     bms_questions: "unlimited",
     bms_chapters: "unlimited",
     kff_exercises: "unlimited",
     tv_texts: "unlimited",
     sek_situations: "unlimited",
     simulations: "unlimited",
-    flashcards: "unlimited",
-    leaderboard: true,
+    ai_tutor: true,
     weakness_analysis: true,
     spaced_repetition: true,
-    heatmap: true,
-    notes: true,
-    duel_mode: true,
     advanced_analytics: true,
-    priority_support: true,
-    early_access: true,
+    lernplan: true,
   },
 };
 
-// In development mode, grant full access (pro tier) regardless of actual tier
-const effectiveTier = (tier: Tier): Tier => (import.meta.env.DEV ? "pro" : tier);
+const PROMO_END = new Date("2026-04-01T00:00:00+02:00");
 
-export function getPermissions(tier: Tier): TierPermissions {
-  return PERMISSIONS[effectiveTier(tier)];
+/** Launch promo: everyone gets premium access until March 31, 2026 */
+export function isPromoActive(): boolean {
+  return new Date() < PROMO_END;
+}
+
+/**
+ * Resolve effective tier: during promo everyone is premium,
+ * in dev mode everyone is premium, otherwise use actual tier.
+ */
+function effectiveTier(tier: Tier): Tier {
+  if (import.meta.env.DEV || isPromoActive()) return "premium";
+  return tier;
+}
+
+/** Map legacy 3-tier values to binary model */
+export function normalizeTier(raw: string | null | undefined): Tier {
+  if (raw === "standard" || raw === "pro" || raw === "premium") return "premium";
+  return "starter";
+}
+
+export function getPermissions(tier: Tier): FeatureLimits {
+  return LIMITS[effectiveTier(tier)];
 }
 
 export function canAccess(
   tier: Tier,
-  feature: keyof TierPermissions
+  feature: keyof FeatureLimits
 ): boolean | number | "unlimited" {
-  return PERMISSIONS[effectiveTier(tier)][feature];
+  return LIMITS[effectiveTier(tier)][feature];
 }
 
-export function getLimit(tier: Tier, feature: keyof TierPermissions): number | null {
-  const val = PERMISSIONS[effectiveTier(tier)][feature];
+export function getLimit(tier: Tier, feature: keyof FeatureLimits): number | null {
+  const val = LIMITS[effectiveTier(tier)][feature];
   if (val === "unlimited" || val === true) return null;
   if (val === false) return 0;
   return val as number;
 }
 
-export function isFeatureLocked(tier: Tier, feature: keyof TierPermissions): boolean {
-  const val = PERMISSIONS[effectiveTier(tier)][feature];
+export function isFeatureLocked(tier: Tier, feature: keyof FeatureLimits): boolean {
+  const val = LIMITS[effectiveTier(tier)][feature];
   return val === false || val === 0;
 }

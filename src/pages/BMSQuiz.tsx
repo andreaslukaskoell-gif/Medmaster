@@ -257,6 +257,94 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
             );
           })()}
 
+        {/* Chapter breakdown + weak areas */}
+        {(() => {
+          const byChapter: Record<string, { correct: number; total: number; totalTime: number }> =
+            {};
+          questions.forEach((q) => {
+            const ch = q.chapter;
+            if (!byChapter[ch]) byChapter[ch] = { correct: 0, total: 0, totalTime: 0 };
+            byChapter[ch].total += 1;
+            byChapter[ch].totalTime += questionTimesRef.current[q.id] ?? 0;
+            if (answers[q.id] === q.correctOptionId) byChapter[ch].correct += 1;
+          });
+          const chapters = Object.entries(byChapter).sort(
+            ([, a], [, b]) => a.correct / a.total - b.correct / b.total
+          );
+          const weakChapters = chapters.filter(([, d]) => d.correct / d.total < 0.5);
+          const totalTime = Object.values(questionTimesRef.current).reduce((a, b) => a + b, 0);
+          const avgTime = questions.length > 0 ? Math.round(totalTime / questions.length) : 0;
+
+          return (
+            <Card>
+              <CardContent className="p-5 space-y-4">
+                {totalTime > 0 && (
+                  <div className="flex items-center gap-4 text-xs text-[var(--muted)]">
+                    <span>
+                      Gesamt: {Math.floor(totalTime / 60)}:{String(totalTime % 60).padStart(2, "0")}{" "}
+                      min
+                    </span>
+                    <span>~{avgTime}s pro Frage</span>
+                  </div>
+                )}
+                <h3 className="text-sm font-semibold text-[var(--text-primary)]">
+                  Ergebnis nach Kapitel
+                </h3>
+                <div className="space-y-2">
+                  {chapters.map(([ch, data]) => {
+                    const chPct = Math.round((data.correct / data.total) * 100);
+                    return (
+                      <div key={ch} className="flex items-center gap-3">
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-center justify-between mb-1">
+                            <span className="text-xs font-medium text-[var(--text-primary)] truncate">
+                              {ch}
+                            </span>
+                            <span
+                              className={`text-xs font-semibold ${
+                                chPct >= 70
+                                  ? "text-emerald-600 dark:text-emerald-400"
+                                  : chPct >= 50
+                                    ? "text-amber-600 dark:text-amber-400"
+                                    : "text-red-600 dark:text-red-400"
+                              }`}
+                            >
+                              {data.correct}/{data.total}
+                            </span>
+                          </div>
+                          <div className="w-full bg-[var(--surface)] rounded-full h-1.5">
+                            <div
+                              className={`h-1.5 rounded-full transition-all ${
+                                chPct >= 70
+                                  ? "bg-emerald-500"
+                                  : chPct >= 50
+                                    ? "bg-amber-500"
+                                    : "bg-red-500"
+                              }`}
+                              style={{ width: `${chPct}%` }}
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+                {weakChapters.length > 0 && (
+                  <div className="bg-amber-50 dark:bg-amber-900/20 rounded-lg p-3">
+                    <p className="text-xs font-semibold text-amber-800 dark:text-amber-300 mb-1">
+                      Empfehlung
+                    </p>
+                    <p className="text-xs text-amber-700 dark:text-amber-400">
+                      Wiederhole {weakChapters.map(([ch]) => ch).join(", ")} — dort hast du noch
+                      Lücken.
+                    </p>
+                  </div>
+                )}
+              </CardContent>
+            </Card>
+          );
+        })()}
+
         <div className="space-y-4">
           {questions.map((q: Question, i: number) => {
             const userAnswer = answers[q.id];

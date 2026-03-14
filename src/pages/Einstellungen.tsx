@@ -65,9 +65,15 @@ export default function Einstellungen() {
           <div className="flex items-center gap-3 px-4 py-3.5">
             <Shield className="w-4 h-4 text-[var(--muted)] shrink-0" />
             <div className="flex-1 min-w-0">
-              <p className="text-sm font-medium text-[var(--foreground)]">Abo-Status</p>
-              <p className="text-xs text-[var(--muted)] capitalize">
-                {profile?.subscription_tier ?? "starter"}
+              <p className="text-sm font-medium text-[var(--foreground)]">Status</p>
+              <p className="text-xs text-[var(--muted)]">
+                {profile?.subscription_tier === "premium" ||
+                profile?.subscription_tier === "standard" ||
+                profile?.subscription_tier === "pro"
+                  ? "Premium"
+                  : new Date() < new Date("2026-04-01T00:00:00+02:00")
+                    ? "Gratis (bis 31. März)"
+                    : "Kostenlos"}
               </p>
             </div>
           </div>

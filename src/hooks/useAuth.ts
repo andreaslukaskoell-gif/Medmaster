@@ -11,7 +11,7 @@ interface Profile {
   avatar_url: string | null;
   medat_type: string;
   test_date: string | null;
-  subscription_tier: "starter" | "standard" | "pro";
+  subscription_tier: "starter" | "standard" | "pro" | "premium";
   subscription_expires_at: string | null;
   xp: number;
   level: number;
@@ -248,10 +248,14 @@ export function useAuth() {
     return { error };
   }
 
-  const tier = profile?.subscription_tier || "starter";
+  const rawTier = profile?.subscription_tier || "starter";
+  // Map legacy 3-tier values to binary model
+  const tier =
+    rawTier === "standard" || rawTier === "pro" || rawTier === "premium"
+      ? ("premium" as const)
+      : ("starter" as const);
   const isAuthenticated = !!user;
-  const isPremium = tier === "standard" || tier === "pro";
-  const isPro = tier === "pro";
+  const isPremium = tier === "premium";
 
   return {
     user,
@@ -261,7 +265,7 @@ export function useAuth() {
     isAuthenticated,
     tier,
     isPremium,
-    isPro,
+    isPro: isPremium, // legacy compat — maps to premium in binary model
     signUp,
     signIn,
     signInWithOtp,
