@@ -1,19 +1,25 @@
+import React from "react";
 import { TrendingUp, Zap } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { getLevelFromXP } from "@/lib/progression";
 
-interface StatCardProps {
+type StatCardProps = {
   xp: number;
   level: number;
   /** Optional label override */
   label?: string;
   className?: string;
-}
+};
 
 /**
  * Displays XP and level in a compact card. Level is derived from XP via progression if not provided.
  */
-export function StatCard({ xp, level, label, className }: StatCardProps) {
+export const StatCard = React.memo(function StatCard({
+  xp,
+  level,
+  label,
+  className,
+}: StatCardProps) {
   const displayLevel = level >= 1 ? level : getLevelFromXP(xp);
 
   return (
@@ -37,4 +43,4 @@ export function StatCard({ xp, level, label, className }: StatCardProps) {
       </div>
     </div>
   );
-}
+});

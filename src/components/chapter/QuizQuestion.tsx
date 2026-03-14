@@ -9,17 +9,21 @@ import { useQuizSessionStore } from "../../store/quizSessionStore";
 const FALLBACK_HINT =
   "Überlege: Welcher Begriff in der Frage ist zentral? Was hast du im Kapitel dazu gelernt?";
 
-interface QuizQuestionProps {
+type QuizQuestionProps = {
   question: SelfTestQuestion;
   questionNumber: number;
   /** (isCorrect, secondTry). Second try = correct after hint; XP 50% when secondTry. */
   onAnswerChange?: (isCorrect: boolean, secondTry?: boolean) => void;
-}
+};
 
 /**
  * Interaktives Quiz: Immediate Feedback, kein Prüfen-Button, Glassmorphism-Feedback, Smart Reveal, Input Lock.
  */
-export function QuizQuestion({ question, questionNumber, onAnswerChange }: QuizQuestionProps) {
+export const QuizQuestion = React.memo(function QuizQuestion({
+  question,
+  questionNumber,
+  onAnswerChange,
+}: QuizQuestionProps) {
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
   const [isAnswered, setIsAnswered] = useState(false);
   const [hintIndex, setHintIndex] = useState(0);
@@ -276,4 +280,4 @@ export function QuizQuestion({ question, questionNumber, onAnswerChange }: QuizQ
       )}
     </motion.div>
   );
-}
+});

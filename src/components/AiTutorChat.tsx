@@ -89,6 +89,14 @@ export function AiTutorChat({ question, userAnswer, onClose }: AiTutorChatProps)
     inputRef.current?.focus();
   }, []);
 
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [onClose]);
+
   const handleSend = () => {
     const text = input.trim();
     if (!text) return;
@@ -115,7 +123,12 @@ export function AiTutorChat({ question, userAnswer, onClose }: AiTutorChatProps)
   ];
 
   return (
-    <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4">
+    <div
+      className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4"
+      role="dialog"
+      aria-modal="true"
+      aria-label="KI-Tutor Chat"
+    >
       {/* Backdrop */}
       <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={onClose} />
 
@@ -137,6 +150,7 @@ export function AiTutorChat({ question, userAnswer, onClose }: AiTutorChatProps)
           <button
             onClick={onClose}
             className="text-[var(--muted)] hover:text-[var(--text-primary)] transition-colors cursor-pointer p-1"
+            aria-label="Schließen"
           >
             <X className="w-5 h-5" />
           </button>

@@ -15,8 +15,7 @@ import { Badge } from "@/components/ui/badge";
 import { Confetti } from "@/components/ui/confetti";
 import { FloatingQuestionCounter } from "@/components/ui/FloatingQuestionCounter";
 import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
-import { getQuestionsBySubject as getNewQuestions } from "@/data/bms/index";
-import { getQuestionsBySubject as getLegacyQuestions, type Question } from "@/data/bmsQuestions";
+import { getQuestionsBySubject, type Question } from "@/data/bms/index";
 import { useStore } from "@/store/useStore";
 import { useSessionTimer } from "@/hooks/useSessionTimer";
 import { useAdaptiveStore, getStichwortForQuestion } from "@/store/adaptiveLearning";
@@ -24,13 +23,6 @@ import { getStrategieTipp, getDirectStichwortId } from "@/data/questions/index";
 import { stripMarkdownAsterisks } from "@/utils/formatExplanation";
 import { ShareResultButton } from "@/components/shared/ShareResultButton";
 import { getQuizShareText } from "@/lib/shareUtils";
-
-// Use new expanded questions if available, fall back to legacy
-function getQuestionsBySubject(subject: string) {
-  const newQ = getNewQuestions(subject);
-  if (newQ.length > 0) return newQ;
-  return getLegacyQuestions(subject);
-}
 
 const subjectColors: Record<string, { bg: string; text: string; label: string }> = {
   biologie: {

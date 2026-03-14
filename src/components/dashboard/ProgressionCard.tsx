@@ -1,3 +1,4 @@
+import React from "react";
 import { Progress } from "@/components/ui/progress";
 import {
   getLevelFromXP,
@@ -8,15 +9,18 @@ import {
 } from "@/lib/progression";
 import { cn } from "@/lib/utils";
 
-interface ProgressionCardProps {
+type ProgressionCardProps = {
   xp: number;
   className?: string;
-}
+};
 
 /**
  * MedPoints (XP) + Fortschrittsbalken zum nächsten Level mit Karrieretitel.
  */
-export function ProgressionCard({ xp, className }: ProgressionCardProps) {
+export const ProgressionCard = React.memo(function ProgressionCard({
+  xp,
+  className,
+}: ProgressionCardProps) {
   const level = getLevelFromXP(xp);
   const progress = getLevelProgressPercent(xp);
   const levelName = getLevelName(level);
@@ -52,4 +56,4 @@ export function ProgressionCard({ xp, className }: ProgressionCardProps) {
       </div>
     </div>
   );
-}
+});

@@ -7,20 +7,26 @@
  *   3. Explanation shown
  *   4. FSRS rating buttons appear
  */
+import React from "react";
 import { CheckCircle2, XCircle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { stripMarkdownAsterisks } from "@/utils/formatExplanation";
 import type { BMSFrage } from "@/lib/supabaseBMSFragen";
 
-interface Props {
+type Props = {
   frage: BMSFrage;
   chosenOption: string | null;
   revealed: boolean;
   onChoose: (key: string) => void;
-}
+};
 
-export function TypAQuestion({ frage, chosenOption, revealed, onChoose }: Props) {
+export const TypAQuestion = React.memo(function TypAQuestion({
+  frage,
+  chosenOption,
+  revealed,
+  onChoose,
+}: Props) {
   const optionen = frage.optionen ?? [];
   const correct = frage.korrekte_option ?? "";
   const isCorrect = chosenOption === correct;
@@ -126,4 +132,4 @@ export function TypAQuestion({ frage, chosenOption, revealed, onChoose }: Props)
       </AnimatePresence>
     </div>
   );
-}
+});

@@ -1,10 +1,11 @@
+import React from "react";
 import { motion } from "framer-motion";
 import { Clock } from "lucide-react";
 import { daysUntilMedAT, getMedATProgressFromJan2026 } from "@/lib/utils";
 
 const TARGET_LABEL = "03.07.2026";
 
-export function MedATCountdown() {
+export const MedATCountdown = React.memo(function MedATCountdown() {
   const days = daysUntilMedAT();
   const { progress } = getMedATProgressFromJan2026();
 
@@ -42,4 +43,4 @@ export function MedATCountdown() {
       </div>
     </div>
   );
-}
+});

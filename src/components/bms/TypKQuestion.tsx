@@ -9,6 +9,7 @@
  * SIMULATION-Modus:
  *   Direkt: 5 Aussagen sichtbar + Kombinationsoptionen A-E auswählen
  */
+import React from "react";
 import { Check, X, AlertCircle, CheckCircle2, XCircle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
@@ -30,7 +31,7 @@ function formatTypKOptionLabel(k: TypKKombination, totalAussagen: number): strin
   return `${mitPunkt.slice(0, -1).join(", ")} und ${mitPunkt[mitPunkt.length - 1]} sind richtig.`;
 }
 
-interface Props {
+type Props = {
   frage: BMSFrage;
   mode: TrainerMode;
   typKPhase: 1 | 2;
@@ -40,9 +41,9 @@ interface Props {
   onJudge: (nr: number, decision: boolean) => void;
   onConfirmPhase1: () => void;
   onChooseCombination: (key: string) => void;
-}
+};
 
-export function TypKQuestion({
+export const TypKQuestion = React.memo(function TypKQuestion({
   frage,
   mode,
   typKPhase,
@@ -270,4 +271,4 @@ export function TypKQuestion({
       </AnimatePresence>
     </div>
   );
-}
+});

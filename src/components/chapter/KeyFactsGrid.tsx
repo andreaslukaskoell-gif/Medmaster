@@ -1,9 +1,11 @@
-interface KeyFactsGridProps {
+import React from "react";
+
+type KeyFactsGridProps = {
   title: string;
   facts: { label: string; value: string }[];
-}
+};
 
-export function KeyFactsGrid({ title, facts }: KeyFactsGridProps) {
+export const KeyFactsGrid = React.memo(function KeyFactsGrid({ title, facts }: KeyFactsGridProps) {
   return (
     <div className="bg-[var(--border)]/30 rounded-xl p-6 border border-[var(--border)] my-8">
       <h3 className="font-bold text-[var(--text-primary)] mb-4 flex items-center gap-2">
@@ -21,4 +23,4 @@ export function KeyFactsGrid({ title, facts }: KeyFactsGridProps) {
       </div>
     </div>
   );
-}
+});
