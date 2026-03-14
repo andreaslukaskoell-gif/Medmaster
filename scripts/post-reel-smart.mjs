@@ -14,6 +14,8 @@
  *   node scripts/post-reel-smart.mjs --comp X    # Force specific composition
  *   node scripts/post-reel-smart.mjs --report    # Full performance report
  *   node scripts/post-reel-smart.mjs --stats     # Post history
+ *   node scripts/post-reel-smart.mjs --digest    # Weekly digest with winner/loser analysis
+ *   node scripts/post-reel-smart.mjs --ci        # CI mode (renders on-demand, outputs to GITHUB_OUTPUT)
  */
 
 import { readFileSync, writeFileSync, existsSync, readdirSync, copyFileSync } from "node:fs";
@@ -145,25 +147,37 @@ async function fetchAllPosts(token) {
 }
 
 async function fetchReelInsights(mediaId, token) {
-  // IG Reels insights: plays, reach, saved, shares, total_interactions, ig_reels_avg_watch_time
-  const metrics = "plays,reach,saved,shares,total_interactions,ig_reels_avg_watch_time,ig_reels_video_view_total_time";
-  try {
-    const res = await fetchWithRetry(
-      `${API}/${mediaId}/insights?metric=${metrics}&access_token=${token}`
-    );
-    const json = await res.json();
-    if (json.error) {
-      // Fallback: some metrics may not be available for older posts
-      return null;
+  // IG Reels insights — try two metric sets (API versions differ on naming)
+  const metricSets = [
+    // v21+ IG Reels metrics
+    "plays,reach,saved,shares,total_interactions,ig_reels_avg_watch_time,ig_reels_video_view_total_time",
+    // Fallback: older/simpler metric names
+    "reach,saved,shares,total_interactions",
+  ];
+
+  for (const metrics of metricSets) {
+    try {
+      const res = await fetchWithRetry(
+        `${API}/${mediaId}/insights?metric=${metrics}&access_token=${token}`
+      );
+      const json = await res.json();
+      if (json.error) {
+        // Log the actual error for debugging (only in non-CI or first attempt)
+        if (metrics === metricSets[0]) {
+          console.log(`    Insights API error for ${mediaId}: ${json.error.message} (code ${json.error.code})`);
+        }
+        continue; // Try next metric set
+      }
+      const result = {};
+      for (const item of json.data || []) {
+        result[item.name] = item.values?.[0]?.value ?? 0;
+      }
+      return result;
+    } catch (err) {
+      console.log(`    Insights fetch error for ${mediaId}: ${err.message}`);
     }
-    const result = {};
-    for (const item of json.data || []) {
-      result[item.name] = item.values?.[0]?.value ?? 0;
-    }
-    return result;
-  } catch {
-    return null;
   }
+  return null;
 }
 
 async function refreshPerformanceData(token) {
@@ -326,8 +340,18 @@ function selectComposition(history, perfAnalysis) {
   // Score-based weight: top performer gets highest weight
   // Trend bonus: improving formats get extra weight
   // Variety penalty: recently posted gets reduced weight
+  // Retirement: 5+ posts and <30% of median → eliminated
   const candidates = rankings
     .filter(r => r.composition !== "Unknown")
+    .filter(r => {
+      // RETIREMENT: if a format has 5+ posts and scores <30% of median, kill it
+      const median = perfAnalysis.overall.median;
+      if (r.count >= 5 && median > 0 && r.avgScore < median * 0.3) {
+        console.log(`  ⛔ Retired: ${r.composition} (${r.avgScore.toFixed(1)} score, ${r.count} posts, <30% of median ${median.toFixed(1)})`);
+        return false;
+      }
+      return true;
+    })
     .map(r => {
       let weight = Math.max(r.avgScore, 0.1); // Floor to avoid zero
 
@@ -735,6 +759,90 @@ function showStats() {
   }
 }
 
+// ── Weekly Digest ───────────────────────────────────────────
+
+function printWeeklyDigest(perfAnalysis, history) {
+  const { rankings, overall } = perfAnalysis;
+  const now = Date.now();
+  const weekAgo = now - 7 * 24 * 60 * 60 * 1000;
+
+  console.log("\n" + "═".repeat(60));
+  console.log("  WEEKLY DIGEST — " + new Date().toISOString().slice(0, 10));
+  console.log("═".repeat(60));
+
+  // This week's posts
+  const weekPosts = history
+    .filter(h => h.success && new Date(h.timestamp).getTime() > weekAgo)
+    .sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+  console.log(`\n  Posted this week: ${weekPosts.length}`);
+
+  if (rankings.length === 0) {
+    console.log("  No performance data yet.\n");
+    return;
+  }
+
+  // Winners: top 3 by score
+  console.log("\n── WINNERS (double down) ────────────────────────");
+  const winners = rankings.slice(0, 3);
+  for (const w of winners) {
+    const trendIcon = w.trend > 1.1 ? "improving" : w.trend < 0.9 ? "declining" : "stable";
+    console.log(`  ${w.composition}: score ${w.avgScore.toFixed(1)}, ${w.avgSaves.toFixed(1)} saves, trend ${trendIcon} (${w.count} posts)`);
+  }
+
+  // Losers: bottom performers
+  const losers = rankings.filter(r => r.count >= 3 && r.avgScore < overall.median * 0.6);
+  if (losers.length > 0) {
+    console.log("\n── LOSERS (reduce or retire) ────────────────────");
+    for (const l of losers) {
+      const pctOfMedian = overall.median > 0 ? ((l.avgScore / overall.median) * 100).toFixed(0) : "?";
+      const retired = l.count >= 5 && overall.median > 0 && l.avgScore < overall.median * 0.3;
+      const status = retired ? "RETIRED" : "reduce";
+      console.log(`  ${l.composition}: score ${l.avgScore.toFixed(1)} (${pctOfMedian}% of median), ${l.count} posts → ${status}`);
+    }
+  }
+
+  // Untested formats
+  const testedComps = new Set(rankings.map(r => r.composition));
+  const untested = Object.keys(COMP_TO_FILE).filter(c => !testedComps.has(c));
+  if (untested.length > 0) {
+    console.log("\n── UNTESTED (need data) ─────────────────────────");
+    for (const u of untested) {
+      console.log(`  ${u}: 0 posts — will be explored`);
+    }
+  }
+
+  // Engagement health
+  console.log("\n── ENGAGEMENT HEALTH ───────────────────────────");
+  const posts = Object.values(perfAnalysis.byComposition).flat();
+  const totalSaves = posts.reduce((s, p) => s + (p.saves || 0), 0);
+  const totalShares = posts.reduce((s, p) => s + (p.shares || 0), 0);
+  const totalComments = posts.reduce((s, p) => s + (p.comments || 0), 0);
+  const totalReach = posts.reduce((s, p) => s + (p.reach || 0), 0);
+
+  if (totalSaves === 0 && totalShares === 0 && totalReach === 0) {
+    console.log("  ⚠️  ALL saves/shares/reach = 0 → Insights API may lack permissions");
+    console.log("  Check: instagram_manage_insights scope on your token");
+    console.log("  Check: Posts need 48h+ to accumulate Insights data");
+  } else {
+    console.log(`  Saves: ${totalSaves} total (${(totalSaves / posts.length).toFixed(1)}/post)`);
+    console.log(`  Shares: ${totalShares} total (${(totalShares / posts.length).toFixed(1)}/post)`);
+    console.log(`  Comments: ${totalComments} total (${(totalComments / posts.length).toFixed(1)}/post)`);
+    console.log(`  Reach: ${totalReach} total (${(totalReach / posts.length).toFixed(0)}/post)`);
+  }
+
+  // Next recommendation
+  console.log("\n── NEXT POST ───────────────────────────────────");
+  const nextComp = selectComposition(history, perfAnalysis);
+  const nextR = rankings.find(r => r.composition === nextComp);
+  if (nextR) {
+    console.log(`  → ${nextComp} (score: ${nextR.avgScore.toFixed(1)}, trend: ${nextR.trend.toFixed(2)})`);
+  } else {
+    console.log(`  → ${nextComp} (untested — exploration)`);
+  }
+
+  console.log("\n" + "═".repeat(60) + "\n");
+}
+
 // ── Main ────────────────────────────────────────────────────
 
 async function main() {
@@ -765,6 +873,12 @@ async function main() {
   if (args.includes("--report")) {
     const history = loadHistory();
     printReport(perfAnalysis, history);
+    return;
+  }
+
+  if (args.includes("--digest")) {
+    const history = loadHistory();
+    printWeeklyDigest(perfAnalysis, history);
     return;
   }
 
@@ -805,6 +919,13 @@ async function main() {
     process.exit(1);
   }
 
+  // CI mode: write selected composition to GITHUB_OUTPUT for downstream steps
+  const isCI = args.includes("--ci");
+  if (isCI && process.env.GITHUB_OUTPUT) {
+    const { appendFileSync } = await import("node:fs");
+    appendFileSync(process.env.GITHUB_OUTPUT, `comp=${comp}\n`);
+  }
+
   try {
     const result = await postReel(comp, token, dry, history, perfCache);
     addToHistory({
@@ -815,6 +936,15 @@ async function main() {
       caption: result.caption?.slice(0, 100),
       ...(result.voiceoverFile && { voiceoverFile: result.voiceoverFile }),
     });
+
+    // Log decision trail for CI debugging
+    if (isCI) {
+      const ranking = perfAnalysis.rankings.find(r => r.composition === comp);
+      console.log(`\n── CI Decision Trail ──`);
+      console.log(`  Selected: ${comp}`);
+      console.log(`  Reason: ${ranking ? `score ${ranking.avgScore.toFixed(1)}, trend ${ranking.trend.toFixed(2)}` : "exploration (untested)"}`);
+      console.log(`  Post ID: ${result.id}`);
+    }
   } catch (err) {
     console.error(`❌ ${err.message}`);
     addToHistory({

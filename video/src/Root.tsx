@@ -9,6 +9,7 @@ import { ImplikationenChallenge } from "./compositions/ImplikationenChallenge";
 import { FigurenChallenge } from "./compositions/FigurenChallenge";
 import { BMSExplainer } from "./compositions/BMSExplainer";
 import { BMSExplainerVoiceover } from "./compositions/BMSExplainerVoiceover";
+import { BlutgruppenExplainer } from "./compositions/BlutgruppenExplainer";
 import { FPS, WIDTH, HEIGHT } from "./shared/brand";
 
 export const RemotionRoot: React.FC = () => {
@@ -191,35 +192,148 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BMSExplainerVoiceover"
         component={BMSExplainerVoiceover}
-        durationInFrames={Math.round(51.7 * FPS)}
+        durationInFrames={Math.round(67.8 * FPS)}
         fps={FPS}
         width={WIDTH}
         height={HEIGHT}
         defaultProps={{
           subject: "Biologie",
-          hook: "Deine Nieren filtern\n1.700 Liter Blut am Tag.",
-          topicTitle: "Niere",
-          imageUrl: "bio-niere.jpg",
-          audioSrc: "niere-voice-only.wav",
+          hook: "Arterien führen sauerstoffreiches\nBlut. Oder?",
+          topicTitle: "Blutkreislauf",
+          imageUrl: "bio-herz-kreislauf.jpg",
+          audioSrc: "blutkreislauf-voice-only.wav",
           images: [
-            { url: "bio-niere.jpg", startFrame: 90, endFrame: 577 },
-            { url: "bio-nephron-blutfluss.jpg", startFrame: 577, endFrame: 1064 },
-            { url: "bio-harnblase.jpg", startFrame: 1064, endFrame: 1551 }
+            { url: "bio-herz-kreislauf.jpg", startFrame: 90, endFrame: 478 },
+            { url: "bio-herz-position.jpg", startFrame: 478, endFrame: 866 },
+            { url: "bio-herz-oberflaeche.jpg", startFrame: 866, endFrame: 1254 },
+            { url: "bio-herzwand.jpg", startFrame: 1254, endFrame: 1642 },
+            { url: "bio-herz-kreislauf.jpg", startFrame: 1642, endFrame: 2034 },
           ],
           subtitles: [
-            { text: "Dein Blut wird jeden Tag komplett gefiltert,\nfast sechzigmal.", startFrame: 0, endFrame: 98 },
-            { text: "Aber wohin geht der ganze Abfall?", startFrame: 106, endFrame: 159 },
-            { text: "Genau. In die Nieren.", startFrame: 175, endFrame: 220 },
-            { text: "Jede Niere enthält etwa\neine Million Nephrone.", startFrame: 244, endFrame: 315 },
-            { text: "Das Nephron ist die\nfunktionelle Einheit der Niere.", startFrame: 323, endFrame: 399 },
-            { text: "Zuerst wird das Blut im Glomerulus filtriert,\nein Netz aus feinen Kapillaren.", startFrame: 415, endFrame: 540 },
-            { text: "Dabei entsteht der Primärharn,\netwa hundertachtzig Liter pro Tag.", startFrame: 556, endFrame: 665 },
-            { text: "Das ist viel zu viel.\nAlso wird im Tubulus das meiste zurückgeholt.", startFrame: 673, endFrame: 780 },
-            { text: "Wasser, Glucose, Aminosäuren, alles,\nwas der Körper noch braucht.", startFrame: 804, endFrame: 945 },
-            { text: "Am Ende bleiben nur ein bis\nzwei Liter Urin übrig.", startFrame: 962, endFrame: 1065 },
-            { text: "Die Niere reguliert auch den Blutdruck,\nüber das Renin-Angiotensin-System.", startFrame: 1073, endFrame: 1196 },
-            { text: "Glomerulus filtert, Tubulus holt zurück.\nVon hundertachtzig auf zwei Liter.", startFrame: 1212, endFrame: 1350 },
-            { text: "Merk dir das. Mehr auf mett,\nmaster, punkt, ah, teh.", startFrame: 1374, endFrame: 1505 }
+            { text: "Arterien führen\nsauerstoffreiches Blut. Oder?", startFrame: 0, endFrame: 90 },
+            {
+              text: "Im MedAT kostet dich genau\ndieser Satz Punkte.",
+              startFrame: 97,
+              endFrame: 188,
+            },
+            { text: "Hier ist warum.", startFrame: 212, endFrame: 241 },
+            {
+              text: "Arterie bedeutet nur eins: Gefäß,\ndas Blut vom Herzen wegtransportiert.",
+              startFrame: 249,
+              endFrame: 391,
+            },
+            { text: "Vene: Gefäß zum Herzen hin.", startFrame: 408, endFrame: 457 },
+            {
+              text: "Sauerstoff? Spielt für die\nDefinition keine Rolle.",
+              startFrame: 465,
+              endFrame: 563,
+            },
+            { text: "Und das ändert alles.", startFrame: 587, endFrame: 625 },
+            {
+              text: "Dein rechter Ventrikel drückt\nsauerstoffarmes Blut in die Lungenarterie.",
+              startFrame: 633,
+              endFrame: 743,
+            },
+            {
+              text: "Ja, Arterie. Aber sauerstoffarm.\nWeil die Definition rein anatomisch ist.",
+              startFrame: 759,
+              endFrame: 915,
+            },
+            {
+              text: "In der Lunge passiert der Gasaustausch.\nCO2 raus, O2 rein.",
+              startFrame: 939,
+              endFrame: 1066,
+            },
+            {
+              text: "Zurück fließt das Blut über die Lungenvenen,\njetzt sauerstoffreich, in den linken Vorhof.",
+              startFrame: 1083,
+              endFrame: 1231,
+            },
+            {
+              text: "Das ist der kleine Kreislauf.\nVom rechten Herz zur Lunge und zurück.",
+              startFrame: 1247,
+              endFrame: 1357,
+            },
+            {
+              text: "Der große Kreislauf startet links.\nLinker Ventrikel, Aorta, ganzer Körper.",
+              startFrame: 1381,
+              endFrame: 1529,
+            },
+            {
+              text: "Zurück über die Hohlvenen\nins rechte Herz.",
+              startFrame: 1546,
+              endFrame: 1616,
+            },
+            {
+              text: "Eine Regel, die dir Punkte sichert:\nArterie heißt weg vom Herzen. Nicht sauerstoffreich.",
+              startFrame: 1633,
+              endFrame: 1785,
+            },
+            {
+              text: "Merk dir das. Alle BMS-Themen aufbereitet auf mett,\nmaster, punkt, ah, teh.",
+              startFrame: 1809,
+              endFrame: 1987,
+            },
+          ],
+        }}
+      />
+      {/* ~47s — Blutgruppen AB0 animated explainer with voice-over */}
+      <Composition
+        id="BlutgruppenExplainer"
+        component={BlutgruppenExplainer}
+        durationInFrames={Math.round(46.6 * FPS)}
+        fps={FPS}
+        width={WIDTH}
+        height={HEIGHT}
+        defaultProps={{
+          audioSrc: "blutgruppen-voice-only.wav",
+          subtitles: [
+            { text: "Blutgruppe A hat\nAnti-A-Antikörper.", startFrame: 0, endFrame: 64 },
+            { text: "Falsch.", startFrame: 71, endFrame: 97 },
+            {
+              text: "Und genau das kreuzen die\nmeisten im MedAT an.",
+              startFrame: 105,
+              endFrame: 188,
+            },
+            {
+              text: "Die Regel ist simpel: Du hast immer\nAntikörper gegen das, was du nicht hast.",
+              startFrame: 212,
+              endFrame: 333,
+            },
+            {
+              text: "Blutgruppe A hat das A-Antigen\nauf den Erythrozyten.",
+              startFrame: 357,
+              endFrame: 450,
+            },
+            { text: "Und Anti-B im Plasma.", startFrame: 457, endFrame: 510 },
+            {
+              text: "Blutgruppe B hat das B-Antigen,\nund Anti-A im Plasma.",
+              startFrame: 527,
+              endFrame: 652,
+            },
+            {
+              text: "AB hat beide Antigene,\nund gar keine Antikörper.",
+              startFrame: 668,
+              endFrame: 757,
+            },
+            { text: "Deshalb ist AB\nder Universalempfänger.", startFrame: 764, endFrame: 840 },
+            { text: "Und Blutgruppe Null?", startFrame: 856, endFrame: 896 },
+            {
+              text: "Keine Antigene. Aber Anti-A\nund Anti-B im Plasma.",
+              startFrame: 903,
+              endFrame: 1017,
+            },
+            {
+              text: "Null kann an alle spenden.\nUniversalspender.",
+              startFrame: 1025,
+              endFrame: 1110,
+            },
+            {
+              text: "Merke: Antigen auf der Zelle, Antikörper\nim Plasma, immer gegeneinander.",
+              startFrame: 1134,
+              endFrame: 1276,
+            },
+            { text: "Speicher dir das.\nmedmaster punkt at.", startFrame: 1292, endFrame: 1353 },
           ],
         }}
       />

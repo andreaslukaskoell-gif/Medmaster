@@ -42,6 +42,11 @@ export type ImplikationenProps = {
   explanation: string;
 };
 
+export type BlutgruppenExplainerProps = {
+  audioSrc: string;
+  subtitles: { text: string; startFrame: number; endFrame: number }[];
+};
+
 export type FigurenPoint = { x: number; y: number };
 export type FigurenPolygon = { points: FigurenPoint[] };
 
