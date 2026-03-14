@@ -44,8 +44,8 @@ export function useAuth() {
       return;
     }
 
-    // Timeout fallback: if auth takes >4s (e.g. Instagram in-app browser), stop loading
-    const authTimeout = setTimeout(() => setLoading(false), 4000);
+    // Timeout fallback: if auth takes >8s (e.g. Instagram in-app browser), stop loading
+    const authTimeout = setTimeout(() => setLoading(false), 8000);
 
     supabase.auth
       .getSession()

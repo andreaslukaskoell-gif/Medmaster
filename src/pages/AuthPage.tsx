@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Mail, ArrowRight, Lock, Eye, EyeOff } from "lucide-react";
+import { Mail, ArrowRight, Lock, Eye, EyeOff, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useAuth } from "@/hooks/useAuth";
@@ -16,9 +16,11 @@ export default function AuthPage() {
   const [loading, setLoading] = useState(false);
   const [googleLoading, setGoogleLoading] = useState(false);
   const [showEmailForm, setShowEmailForm] = useState(false);
+  const [showPasswordForm, setShowPasswordForm] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [isNewUser, setIsNewUser] = useState(false);
-  const { signIn, signUp, signInWithGoogle } = useAuth();
+  const [otpSent, setOtpSent] = useState(false);
+  const { signIn, signUp, signInWithGoogle, signInWithOtp } = useAuth();
   const { setMedATOnboardingComplete } = useStore();
   const navigate = useNavigate();
 
@@ -32,7 +34,21 @@ export default function AuthPage() {
     }
   };
 
-  const handleEmailSubmit = async (e: React.FormEvent) => {
+  const handleMagicLink = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email.trim()) return;
+    setError("");
+    setLoading(true);
+    const { error } = await signInWithOtp(email);
+    setLoading(false);
+    if (error) {
+      setError(translateAuthError(error.message));
+    } else {
+      setOtpSent(true);
+    }
+  };
+
+  const handlePasswordSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
 
@@ -45,12 +61,10 @@ export default function AuthPage() {
     setLoading(true);
 
     if (isNewUser) {
-      // Sign up with email+password (no username/birthdate required)
       const { error } = await signUp(email, password, "", undefined);
       setLoading(false);
       if (error) {
         const msg = error.message ?? String(error);
-        // If already registered, suggest login
         if (msg.includes("already registered") || msg.includes("already been registered")) {
           setError("Diese E-Mail ist bereits registriert. Melde dich stattdessen an.");
           setIsNewUser(false);
@@ -62,12 +76,10 @@ export default function AuthPage() {
         navigate("/dashboard");
       }
     } else {
-      // Sign in with existing credentials
       const { error } = await signIn(email, password);
       setLoading(false);
       if (error) {
-        const msg = error.message ?? String(error);
-        setError(translateAuthError(msg));
+        setError(translateAuthError(error.message ?? String(error)));
       } else {
         setMedATOnboardingComplete();
         navigate("/dashboard");
@@ -84,6 +96,40 @@ export default function AuthPage() {
           <p className="text-sm font-medium text-[var(--text-secondary)]">
             Weiterleitung zu Google...
           </p>
+        </div>
+      </div>
+    );
+  }
+
+  // Magic link sent confirmation
+  if (otpSent) {
+    return (
+      <div className="min-h-screen bg-[var(--background)] flex items-center justify-center p-4">
+        <div className="w-full max-w-md space-y-6">
+          <Card>
+            <CardContent className="p-8 text-center space-y-4">
+              <CheckCircle className="w-12 h-12 text-emerald-500 mx-auto" />
+              <h2 className="text-xl font-bold text-[var(--text-primary)]">Link gesendet!</h2>
+              <p className="text-sm text-[var(--muted)] leading-relaxed">
+                Wir haben dir einen Anmeldelink an{" "}
+                <span className="font-medium text-[var(--text-primary)]">{email}</span> gesendet.
+                Klicke auf den Link in der E-Mail, um dich anzumelden.
+              </p>
+              <p className="text-xs text-[var(--muted)]">
+                Nicht angekommen? Prüfe deinen Spam-Ordner.
+              </p>
+              <button
+                type="button"
+                onClick={() => {
+                  setOtpSent(false);
+                  setEmail("");
+                }}
+                className="text-sm text-[var(--accent)] hover:underline"
+              >
+                Andere E-Mail verwenden
+              </button>
+            </CardContent>
+          </Card>
         </div>
       </div>
     );
@@ -143,7 +189,7 @@ export default function AuthPage() {
               </div>
             </div>
 
-            {/* Email fallback — collapsed by default */}
+            {/* Email fallback — magic link (secondary) */}
             {!showEmailForm ? (
               <button
                 type="button"
@@ -153,61 +199,117 @@ export default function AuthPage() {
                 Mit E-Mail anmelden
               </button>
             ) : (
-              <form onSubmit={handleEmailSubmit} className="space-y-3">
-                <div className="relative">
-                  <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[var(--muted)]" />
-                  <input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="deine@email.at"
-                    required
-                    autoFocus
-                    className="w-full pl-10 pr-4 py-3 rounded-lg border border-[var(--border)] bg-[var(--card)] text-[var(--text-primary)] text-sm outline-none focus:ring-2 focus:ring-[var(--accent)]"
-                  />
-                </div>
+              <div className="space-y-3">
+                {/* Magic link form */}
+                {!showPasswordForm ? (
+                  <>
+                    <form onSubmit={handleMagicLink} className="space-y-3">
+                      <div className="relative">
+                        <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[var(--muted)]" />
+                        <input
+                          type="email"
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
+                          placeholder="deine@email.at"
+                          required
+                          autoFocus
+                          className="w-full pl-10 pr-4 py-3 rounded-lg border border-[var(--border)] bg-[var(--card)] text-[var(--text-primary)] text-sm outline-none focus:ring-2 focus:ring-[var(--accent)]"
+                        />
+                      </div>
 
-                <div className="relative">
-                  <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[var(--muted)]" />
-                  <input
-                    type={showPassword ? "text" : "password"}
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    placeholder={isNewUser ? "Passwort wählen (min. 6 Zeichen)" : "Dein Passwort"}
-                    required
-                    className="w-full pl-10 pr-10 py-3 rounded-lg border border-[var(--border)] bg-[var(--card)] text-[var(--text-primary)] text-sm outline-none focus:ring-2 focus:ring-[var(--accent)]"
-                  />
-                  <button
-                    type="button"
-                    onClick={() => setShowPassword(!showPassword)}
-                    className="absolute right-3 top-1/2 -translate-y-1/2 text-[var(--muted)] hover:text-[var(--text-secondary)]"
-                  >
-                    {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
-                  </button>
-                </div>
-
-                <Button type="submit" className="w-full py-5" disabled={loading}>
-                  {loading ? "Wird verarbeitet..." : isNewUser ? "Konto erstellen" : "Anmelden"}
-                </Button>
-
-                <div className="flex items-center justify-between text-xs">
-                  <button
-                    type="button"
-                    onClick={() => setIsNewUser(!isNewUser)}
-                    className="text-[var(--accent)] hover:underline"
-                  >
-                    {isNewUser ? "Bereits ein Konto? Anmelden" : "Neu hier? Konto erstellen"}
-                  </button>
-                  {!isNewUser && (
-                    <Link
-                      to="/forgot-password"
-                      className="text-[var(--muted)] hover:text-[var(--text-secondary)]"
+                      <Button type="submit" className="w-full py-5" disabled={loading}>
+                        {loading ? "Wird gesendet..." : "Anmeldelink senden"}
+                      </Button>
+                    </form>
+                    <p className="text-center text-xs text-[var(--muted)]">
+                      Wir senden dir einen Link — kein Passwort nötig
+                    </p>
+                    <button
+                      type="button"
+                      onClick={() => setShowPasswordForm(true)}
+                      className="w-full text-xs text-[var(--muted)] hover:text-[var(--text-secondary)] py-1"
                     >
-                      Passwort vergessen?
-                    </Link>
-                  )}
-                </div>
-              </form>
+                      Lieber mit Passwort anmelden?
+                    </button>
+                  </>
+                ) : (
+                  /* Password form — tertiary, demoted */
+                  <>
+                    <form onSubmit={handlePasswordSubmit} className="space-y-3">
+                      <div className="relative">
+                        <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[var(--muted)]" />
+                        <input
+                          type="email"
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
+                          placeholder="deine@email.at"
+                          required
+                          autoFocus
+                          className="w-full pl-10 pr-4 py-3 rounded-lg border border-[var(--border)] bg-[var(--card)] text-[var(--text-primary)] text-sm outline-none focus:ring-2 focus:ring-[var(--accent)]"
+                        />
+                      </div>
+
+                      <div className="relative">
+                        <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[var(--muted)]" />
+                        <input
+                          type={showPassword ? "text" : "password"}
+                          value={password}
+                          onChange={(e) => setPassword(e.target.value)}
+                          placeholder={
+                            isNewUser ? "Passwort wählen (min. 6 Zeichen)" : "Dein Passwort"
+                          }
+                          required
+                          className="w-full pl-10 pr-10 py-3 rounded-lg border border-[var(--border)] bg-[var(--card)] text-[var(--text-primary)] text-sm outline-none focus:ring-2 focus:ring-[var(--accent)]"
+                        />
+                        <button
+                          type="button"
+                          onClick={() => setShowPassword(!showPassword)}
+                          className="absolute right-3 top-1/2 -translate-y-1/2 text-[var(--muted)] hover:text-[var(--text-secondary)]"
+                        >
+                          {showPassword ? (
+                            <EyeOff className="w-4 h-4" />
+                          ) : (
+                            <Eye className="w-4 h-4" />
+                          )}
+                        </button>
+                      </div>
+
+                      <Button type="submit" className="w-full py-5" disabled={loading}>
+                        {loading
+                          ? "Wird verarbeitet..."
+                          : isNewUser
+                            ? "Konto erstellen"
+                            : "Anmelden"}
+                      </Button>
+
+                      <div className="flex items-center justify-between text-xs">
+                        <button
+                          type="button"
+                          onClick={() => setIsNewUser(!isNewUser)}
+                          className="text-[var(--accent)] hover:underline"
+                        >
+                          {isNewUser ? "Bereits ein Konto? Anmelden" : "Neu hier? Konto erstellen"}
+                        </button>
+                        {!isNewUser && (
+                          <Link
+                            to="/forgot-password"
+                            className="text-[var(--muted)] hover:text-[var(--text-secondary)]"
+                          >
+                            Passwort vergessen?
+                          </Link>
+                        )}
+                      </div>
+                    </form>
+                    <button
+                      type="button"
+                      onClick={() => setShowPasswordForm(false)}
+                      className="w-full text-xs text-[var(--muted)] hover:text-[var(--text-secondary)] py-1"
+                    >
+                      Zurück zum Anmeldelink
+                    </button>
+                  </>
+                )}
+              </div>
             )}
 
             <p className="text-center text-xs text-[var(--muted)] leading-relaxed">

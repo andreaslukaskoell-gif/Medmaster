@@ -291,11 +291,11 @@ function LeadCapture({ subject }: { subject: string }) {
           Registriere dich jetzt f{"\u00fc"}r vollen Zugang zu allen Fragen.
         </p>
         <Link
-          to="/register"
+          to="/login"
           className="inline-flex items-center gap-2 mt-4 text-white font-semibold px-6 py-3 rounded-xl"
           style={{ backgroundColor: NAVY }}
         >
-          Kostenlos registrieren <ArrowRight className="w-4 h-4" />
+          Kostenlos starten <ArrowRight className="w-4 h-4" />
         </Link>
       </div>
     );
@@ -506,7 +506,7 @@ export default function SubjectDemo() {
             <span className="text-lg font-bold text-[var(--text-primary)]">MedMaster</span>
           </Link>
           <Link
-            to="/register"
+            to="/login"
             className="inline-flex items-center gap-1.5 text-sm font-semibold text-white px-4 py-2 rounded-xl"
             style={{ backgroundColor: NAVY }}
           >
@@ -608,7 +608,7 @@ export default function SubjectDemo() {
             KFF, Textverst{"\u00e4"}ndnis und SEK.
           </p>
           <Link
-            to="/register"
+            to="/login"
             className="inline-flex items-center gap-2 text-white font-semibold px-8 py-4 rounded-2xl text-base shadow-sm"
             style={{ backgroundColor: NAVY }}
           >

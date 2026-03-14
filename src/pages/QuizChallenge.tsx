@@ -414,7 +414,7 @@ export default function QuizChallenge() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link
-                to="/register"
+                to="/login"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-white font-semibold transition-colors"
                 style={{ backgroundColor: NAVY }}
               >

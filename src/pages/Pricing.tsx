@@ -83,7 +83,7 @@ export default function Pricing() {
           </div>
 
           <Button className="w-full py-6 text-base font-semibold" size="lg" asChild>
-            <Link to="/register">
+            <Link to="/login">
               {isFreePromo ? "Jetzt gratis starten" : "Jetzt starten"}
               <ArrowRight className="w-4 h-4 ml-2" />
             </Link>

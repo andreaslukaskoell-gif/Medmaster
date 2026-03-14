@@ -167,7 +167,7 @@ export default function FAQPage() {
             <span className="text-lg font-bold text-[var(--text-primary)]">MedMaster</span>
           </Link>
           <Link
-            to="/register"
+            to="/login"
             className="inline-flex items-center gap-1.5 text-sm font-semibold text-white px-4 py-2 rounded-xl"
             style={{ backgroundColor: NAVY }}
           >
@@ -222,7 +222,7 @@ export default function FAQPage() {
             <span className="text-xs text-[var(--muted)]">BMS + KFF kostenlos</span>
           </Link>
           <Link
-            to="/register"
+            to="/login"
             className="flex flex-col items-center gap-2 p-6 rounded-2xl bg-[var(--card)] border border-[var(--border)] hover:border-[var(--border)] transition-colors text-center"
           >
             <span className="text-2xl">🚀</span>

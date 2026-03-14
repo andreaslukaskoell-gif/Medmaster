@@ -398,7 +398,7 @@ export default function StichwortlistePublic() {
             <span className="text-lg font-bold text-[var(--text-primary)]">MedMaster</span>
           </Link>
           <Link
-            to="/register"
+            to="/login"
             className="inline-flex items-center gap-1.5 text-sm font-semibold text-white px-4 py-2 rounded-xl"
             style={{ backgroundColor: NAVY }}
           >
@@ -515,7 +515,7 @@ export default function StichwortlistePublic() {
             Stichwort und realistische Prüfungssimulationen — komplett kostenlos.
           </p>
           <Link
-            to="/register"
+            to="/login"
             className="inline-flex items-center gap-2 bg-white font-semibold px-8 py-4 rounded-2xl text-base shadow-sm hover:bg-blue-50 transition-colors"
             style={{ color: NAVY }}
           >

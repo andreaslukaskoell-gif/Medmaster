@@ -87,8 +87,18 @@ function OnboardingGuard() {
 
 function MedATGuard({ children }: { children: ReactNode }) {
   const { hasCompletedMedATOnboarding } = useStore();
+  const { profile, loading } = useAuth();
   const location = useLocation();
-  if (!hasCompletedMedATOnboarding && location.pathname !== "/onboarding/medat") {
+
+  // Server-side check: if profile has a display_name, onboarding is done
+  // This prevents re-triggering onboarding on new devices/cleared localStorage
+  const hasNameInDB = !!profile?.display_name?.trim() || !!profile?.username?.trim();
+  const isComplete = hasCompletedMedATOnboarding || hasNameInDB;
+
+  // Don't redirect while still loading auth/profile
+  if (loading) return null;
+
+  if (!isComplete && location.pathname !== "/onboarding/medat") {
     return <Navigate to="/onboarding/medat" replace />;
   }
   return <>{children}</>;
@@ -150,6 +160,7 @@ export default function App() {
           {/* Public routes */}
           <Route path="/" element={<RootRoute />} />
           <Route path="/login" element={<AuthPage />} />
+          {/* Legacy /register URLs redirect to unified auth page */}
           <Route path="/register" element={<Navigate to="/login" replace />} />
           <Route path="/forgot-password" element={<ForgotPasswordPage />} />
           <Route path="/legal" element={<Legal />} />

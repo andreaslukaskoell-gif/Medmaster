@@ -278,7 +278,7 @@ export default function MedATGuide() {
             <span className="text-lg font-bold text-[var(--text-primary)]">MedMaster</span>
           </Link>
           <Link
-            to="/register"
+            to="/login"
             className="inline-flex items-center gap-1.5 text-sm font-semibold text-white px-4 py-2 rounded-xl"
             style={{ backgroundColor: NAVY }}
           >
@@ -350,7 +350,7 @@ export default function MedATGuide() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
-              to="/register"
+              to="/login"
               className="inline-flex items-center justify-center gap-2 text-white font-semibold px-8 py-4 rounded-2xl text-base shadow-sm"
               style={{ backgroundColor: NAVY }}
             >
