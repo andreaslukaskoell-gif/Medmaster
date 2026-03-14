@@ -63,10 +63,10 @@ const strategies = [
   {
     name: "Aufmerksamkeitslenkung",
     number: 3,
-    color: "bg-indigo-50 dark:bg-indigo-900/15 border-indigo-500",
-    badgeColor: "bg-indigo-500",
-    textColor: "text-indigo-800 dark:text-indigo-300",
-    descColor: "text-indigo-700 dark:text-indigo-400",
+    color: "bg-[var(--accent)]/5 dark:bg-[var(--accent)]/15 border-[var(--accent)]",
+    badgeColor: "bg-[var(--accent)]/90",
+    textColor: "text-[var(--accent)] dark:text-[var(--accent)]/60",
+    descColor: "text-[var(--accent)] dark:text-[var(--accent)]/80",
     when: "IN der Situation",
     description:
       "Die Aufmerksamkeit bewusst von der emotionsauslösenden Situation weg lenken (Ablenkung) oder auf positive Aspekte konzentrieren.",
@@ -334,7 +334,7 @@ function Seite3() {
               &quot;Vor der Anatomie-Prüfung spürt Markus starke Prüfungsangst...&quot;
             </p>
           </div>
-          <div className="bg-[var(--border)]/30 p-4 rounded-lg border-l-4 border-indigo-400">
+          <div className="bg-[var(--border)]/30 p-4 rounded-lg border-l-4 border-[var(--accent)]">
             <p className="text-sm text-[var(--muted)] mb-1">Frage:</p>
             <p className="text-sm font-medium text-[var(--text-secondary)]">
               &quot;Welche Strategie wäre am effektivsten?&quot;

@@ -193,8 +193,8 @@ export default function TextverstaendnisSimulation() {
     return (
       <Card>
         <CardContent className="p-8 space-y-6">
-          <div className="w-16 h-16 bg-indigo-100 dark:bg-indigo-900/30 rounded-2xl flex items-center justify-center mx-auto">
-            <Timer className="w-8 h-8 text-indigo-500" />
+          <div className="w-16 h-16 bg-[var(--accent)]/10 dark:bg-[var(--accent)]/30 rounded-2xl flex items-center justify-center mx-auto">
+            <Timer className="w-8 h-8 text-[var(--accent)]/80" />
           </div>
           <div>
             <h2 className="text-xl font-bold text-[var(--text-primary)] mb-4 text-center">
@@ -227,7 +227,7 @@ export default function TextverstaendnisSimulation() {
             ) : (
               <button
                 onClick={startSimulation}
-                className="px-8 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-semibold transition-colors cursor-pointer"
+                className="px-8 py-3 bg-[var(--accent)] hover:bg-[var(--accent)] text-white rounded-lg font-semibold transition-colors cursor-pointer"
               >
                 Übungstest starten
               </button>
@@ -255,7 +255,7 @@ export default function TextverstaendnisSimulation() {
         <Card>
           <CardContent className="p-6">
             <div className="text-center space-y-4">
-              <div className="w-16 h-16 mx-auto rounded-2xl flex items-center justify-center bg-linear-to-br from-indigo-500 to-purple-600">
+              <div className="w-16 h-16 mx-auto rounded-2xl flex items-center justify-center bg-linear-to-br from-[var(--accent)] to-purple-600">
                 <Trophy className="w-8 h-8 text-white" />
               </div>
               <div>
@@ -265,7 +265,7 @@ export default function TextverstaendnisSimulation() {
                 <p className="text-sm text-[var(--muted)]">
                   {scorePercent}% richtig
                   {best !== null && best === correctCount && (
-                    <span className="block mt-1 font-medium text-indigo-600 dark:text-indigo-400">
+                    <span className="block mt-1 font-medium text-[var(--accent)] dark:text-[var(--accent)]/80">
                       Bester Versuch
                     </span>
                   )}
@@ -361,7 +361,7 @@ export default function TextverstaendnisSimulation() {
                             <button
                               type="button"
                               onClick={() => setHighlightedPassage(fq.q.relevantPassage)}
-                              className="text-xs text-indigo-600 dark:text-indigo-400 hover:underline cursor-pointer flex items-center gap-1"
+                              className="text-xs text-[var(--accent)] dark:text-[var(--accent)]/80 hover:underline cursor-pointer flex items-center gap-1"
                             >
                               <BookOpen className="w-3 h-3" />
                               Textstelle markieren
@@ -378,8 +378,8 @@ export default function TextverstaendnisSimulation() {
         </div>
 
         {highlightedPassage && (
-          <div className="rounded-lg border border-indigo-200 dark:border-indigo-800 bg-indigo-50/50 dark:bg-indigo-900/20 p-3">
-            <p className="text-xs font-medium text-indigo-800 dark:text-indigo-200 mb-1">
+          <div className="rounded-lg border border-[var(--accent)] dark:border-[var(--accent)] bg-[var(--accent)]/5/50 dark:bg-[var(--accent)]/20 p-3">
+            <p className="text-xs font-medium text-[var(--accent)] dark:text-[var(--accent)]/60 mb-1">
               Markierte Textstelle
             </p>
             <p className="text-sm text-[var(--text-secondary)] italic">
@@ -391,7 +391,7 @@ export default function TextverstaendnisSimulation() {
         <div className="flex justify-center">
           <button
             onClick={startSimulation}
-            className="flex items-center gap-2 px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-medium transition-colors cursor-pointer"
+            className="flex items-center gap-2 px-6 py-3 bg-[var(--accent)] hover:bg-[var(--accent)] text-white rounded-lg font-medium transition-colors cursor-pointer"
           >
             <RotateCcw className="w-4 h-4" />
             Übungstest wiederholen
@@ -410,7 +410,7 @@ export default function TextverstaendnisSimulation() {
       <div className="flex items-center justify-between gap-4 py-2 px-3 bg-[var(--border)]/50 rounded-lg sticky top-0 z-10">
         <div className="flex items-center gap-2">
           <Timer
-            className={`w-5 h-5 ${isUrgent ? "text-red-500 animate-pulse" : "text-indigo-500"}`}
+            className={`w-5 h-5 ${isUrgent ? "text-red-500 animate-pulse" : "text-[var(--accent)]/80"}`}
           />
           <span className="text-sm font-medium text-[var(--text-primary)]">Verbleibende Zeit</span>
           <span
@@ -430,7 +430,7 @@ export default function TextverstaendnisSimulation() {
               <div
                 key={i}
                 className={`w-1.5 h-1.5 rounded-full ${
-                  answers[i] !== undefined ? "bg-indigo-500" : "bg-[var(--border)]"
+                  answers[i] !== undefined ? "bg-[var(--accent)]/90" : "bg-[var(--border)]"
                 }`}
                 title={answers[i] !== undefined ? "Beantwortet" : "Unvollständig"}
               />
@@ -515,8 +515,8 @@ export default function TextverstaendnisSimulation() {
                             onClick={() => handleSelectOption(fq.globalIndex, oi)}
                             className={`w-full text-left p-3 rounded-lg border-2 transition-all text-sm cursor-pointer flex items-start gap-2 ${
                               selected === oi
-                                ? "border-indigo-500 bg-indigo-50 dark:bg-indigo-900/20"
-                                : "border-[var(--border)] hover:border-indigo-300 dark:hover:border-indigo-600"
+                                ? "border-[var(--accent)] bg-[var(--accent)]/5 dark:bg-[var(--accent)]/20"
+                                : "border-[var(--border)] hover:border-[var(--accent)] dark:hover:border-[var(--accent)]"
                             }`}
                           >
                             <span className="font-bold text-xs mt-0.5 shrink-0 w-5">
@@ -544,7 +544,7 @@ export default function TextverstaendnisSimulation() {
           </p>
           <button
             onClick={finishSimulation}
-            className="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-semibold transition-colors cursor-pointer disabled:opacity-60"
+            className="px-6 py-3 bg-[var(--accent)] hover:bg-[var(--accent)] text-white rounded-lg font-semibold transition-colors cursor-pointer disabled:opacity-60"
           >
             Abgabe und Auswertung
           </button>

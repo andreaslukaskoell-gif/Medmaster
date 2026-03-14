@@ -121,7 +121,8 @@ const emotionsList = [
   {
     name: "Überraschung",
     category: "neutral",
-    color: "bg-indigo-100 text-indigo-800 dark:bg-indigo-900/30 dark:text-indigo-300",
+    color:
+      "bg-[var(--accent)]/10 text-[var(--accent)] dark:bg-[var(--accent)]/30 dark:text-[var(--accent)]/60",
   },
   {
     name: "Mitleid/Mitgefühl",
@@ -168,7 +169,7 @@ function Seite1() {
               abgesagt.&quot;
             </p>
           </div>
-          <div className="bg-[var(--border)]/30 p-4 rounded-lg border-l-4 border-indigo-400">
+          <div className="bg-[var(--border)]/30 p-4 rounded-lg border-l-4 border-[var(--accent)]">
             <p className="text-sm text-[var(--muted)] mb-1">Frage:</p>
             <p className="text-sm font-medium text-[var(--text-secondary)] mb-2">
               Wie fühlt sich Tanja in dieser Situation? (Für jede Möglichkeit: eher wahrscheinlich

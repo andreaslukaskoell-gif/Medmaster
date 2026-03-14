@@ -112,8 +112,8 @@ const subtests: SubtestCard[] = [
     name: "Textverständnis",
     path: "/kff",
     icon: FileText,
-    color: "text-indigo-600 dark:text-indigo-400",
-    bgColor: "bg-indigo-100 dark:bg-indigo-900/30",
+    color: "text-[var(--accent)] dark:text-[var(--accent)]/80",
+    bgColor: "bg-[var(--accent)]/10 dark:bg-[var(--accent)]/30",
     exerciseCount: 50,
     category: "tv",
     categoryLabel: "TV",
@@ -123,7 +123,7 @@ const subtests: SubtestCard[] = [
 const categoryColors: Record<string, string> = {
   KFF: "bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400",
   SEK: "bg-rose-100 text-rose-700 dark:bg-rose-900/30 dark:text-rose-400",
-  TV: "bg-indigo-100 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-400",
+  TV: "bg-[var(--accent)]/10 text-[var(--accent)] dark:bg-[var(--accent)]/30 dark:text-[var(--accent)]/80",
 };
 
 export default function KFFAcademy() {

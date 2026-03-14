@@ -215,6 +215,7 @@ export default function WortfluessigkeitUeben() {
             onClick={handleShuffle}
             className="text-[var(--muted)] hover:text-gray-700 dark:hover:text-gray-300 cursor-pointer"
             title="Mischen"
+            aria-label="Mischen"
           >
             <Shuffle className="w-4 h-4" />
           </button>
@@ -222,6 +223,7 @@ export default function WortfluessigkeitUeben() {
             onClick={handleReset}
             className="text-[var(--muted)] hover:text-gray-700 dark:hover:text-gray-300 cursor-pointer"
             title="Zurücksetzen"
+            aria-label="Zurücksetzen"
           >
             <RotateCcw className="w-4 h-4" />
           </button>

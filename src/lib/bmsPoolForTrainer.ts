@@ -8,6 +8,14 @@ import {
   getKapitelById,
 } from "@/data/bmsKapitel/index";
 import { getQuestionsBySubject, type Question } from "@/data/bms/index";
+import { biologiePoolQuestions } from "@/data/bms/biologiePool";
+import { chemiePoolQuestions } from "@/data/bms/chemiePool";
+import { physikPoolQuestions } from "@/data/bms/physikPool";
+import { mathematikPoolQuestions } from "@/data/bms/mathematikPool";
+import { biologiePoolTypK } from "@/data/bms/biologiePoolTypK";
+import { chemiePoolTypK } from "@/data/bms/chemiePoolTypK";
+import { physikPoolTypK } from "@/data/bms/physikPoolTypK";
+import { mathematikPoolTypK } from "@/data/bms/mathematikPoolTypK";
 import type { BMSFrage } from "@/lib/supabaseBMSFragen";
 import { filterValidBMSFragen } from "@/lib/supabaseBMSFragen";
 

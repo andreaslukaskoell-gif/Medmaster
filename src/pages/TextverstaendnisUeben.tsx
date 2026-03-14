@@ -178,7 +178,7 @@ export default function TextverstaendnisUeben() {
             }}
             className={`text-xs px-3 py-1.5 rounded-full transition-colors cursor-pointer ${
               difficultyFilter === null
-                ? "bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 font-medium"
+                ? "bg-[var(--accent)]/10 dark:bg-[var(--accent)]/30 text-[var(--accent)] dark:text-[var(--accent)]/60 font-medium"
                 : "text-[var(--muted)] hover:bg-accent"
             }`}
           >
@@ -209,7 +209,7 @@ export default function TextverstaendnisUeben() {
             onClick={handleShuffle}
             className={`flex items-center gap-1 text-xs px-3 py-1.5 rounded-full transition-colors cursor-pointer ${
               shuffled
-                ? "bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600"
+                ? "bg-[var(--accent)]/10 dark:bg-[var(--accent)]/30 text-[var(--accent)]"
                 : "text-[var(--muted)] hover:bg-accent"
             }`}
           >
@@ -229,7 +229,7 @@ export default function TextverstaendnisUeben() {
       {/* Text navigation */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <BookOpen className="w-4 h-4 text-indigo-500" />
+          <BookOpen className="w-4 h-4 text-[var(--accent)]/80" />
           <span className="text-sm font-medium text-[var(--text-primary)]">
             Text {textIndex + 1} von {filteredTexts.length}
           </span>
@@ -285,14 +285,14 @@ export default function TextverstaendnisUeben() {
 
           {/* Ergebnis anzeigen: nur wenn alle beantwortet, noch nicht angezeigt */}
           {allAnswered && !showResultsForText && (
-            <Card className="border-indigo-200 dark:border-indigo-800">
+            <Card className="border-[var(--accent)] dark:border-[var(--accent)]">
               <CardContent className="p-4 text-center">
                 <p className="text-sm text-[var(--muted)] mb-3">
                   Alle Fragen beantwortet. Auswertung anzeigen?
                 </p>
                 <button
                   onClick={handleShowResults}
-                  className="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-sm font-medium transition-colors cursor-pointer"
+                  className="px-5 py-2.5 bg-[var(--accent)] hover:bg-[var(--accent)] text-white rounded-lg text-sm font-medium transition-colors cursor-pointer"
                 >
                   Ergebnis anzeigen
                 </button>
@@ -302,7 +302,7 @@ export default function TextverstaendnisUeben() {
 
           {/* Summary nach Klick auf "Ergebnis anzeigen" */}
           {showResultsBlock && (
-            <Card className="border-indigo-200 dark:border-indigo-800">
+            <Card className="border-[var(--accent)] dark:border-[var(--accent)]">
               <CardContent className="p-4 text-center space-y-3">
                 <p className="text-sm font-semibold text-[var(--text-primary)]">
                   Ergebnis: {correctCount}/{currentText.questions.length} richtig
@@ -322,7 +322,7 @@ export default function TextverstaendnisUeben() {
                 {textIndex < filteredTexts.length - 1 && (
                   <button
                     onClick={handleNextText}
-                    className="flex items-center gap-2 mx-auto px-5 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-sm font-medium transition-colors cursor-pointer"
+                    className="flex items-center gap-2 mx-auto px-5 py-2 bg-[var(--accent)] hover:bg-[var(--accent)] text-white rounded-lg text-sm font-medium transition-colors cursor-pointer"
                   >
                     N&auml;chster Text
                     <ChevronRight className="w-4 h-4" />
@@ -356,7 +356,7 @@ function QuestionCard({
     <Card>
       <CardContent className="p-4 space-y-3">
         <p className="text-sm font-semibold text-[var(--text-primary)]">
-          <span className="text-indigo-500 mr-1.5">F{qIdx + 1}.</span>
+          <span className="text-[var(--accent)]/80 mr-1.5">F{qIdx + 1}.</span>
           {question.question}
         </p>
 
@@ -365,7 +365,7 @@ function QuestionCard({
             const isSelected = selected === optIdx;
             const isCorrect = optIdx === question.correctAnswer;
             let optClass =
-              "border-[var(--border)] hover:border-indigo-300 dark:hover:border-indigo-600";
+              "border-[var(--border)] hover:border-[var(--accent)] dark:hover:border-[var(--accent)]";
 
             if (isResultsView) {
               if (isCorrect) {
@@ -376,7 +376,7 @@ function QuestionCard({
                 optClass = "border-[var(--border)] opacity-60";
               }
             } else if (isSelected) {
-              optClass = "border-indigo-500 bg-indigo-50 dark:bg-indigo-900/20";
+              optClass = "border-[var(--accent)] bg-[var(--accent)]/5 dark:bg-[var(--accent)]/20";
             }
 
             return (
@@ -412,7 +412,7 @@ function QuestionCard({
             {question.relevantPassage && (
               <button
                 onClick={() => onHighlight(question.relevantPassage)}
-                className="text-xs text-indigo-600 dark:text-indigo-400 hover:underline cursor-pointer flex items-center gap-1"
+                className="text-xs text-[var(--accent)] dark:text-[var(--accent)]/80 hover:underline cursor-pointer flex items-center gap-1"
               >
                 <BookOpen className="w-3 h-3" />
                 Relevante Textstelle anzeigen

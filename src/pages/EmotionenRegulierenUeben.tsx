@@ -29,7 +29,7 @@ const strategyColors: Record<string, string> = {
   Situationsauswahl: "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300",
   Situationsmodifikation: "bg-teal-100 text-teal-700 dark:bg-teal-900/30 dark:text-teal-300",
   Aufmerksamkeitslenkung:
-    "bg-indigo-100 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-300",
+    "bg-[var(--accent)]/10 text-[var(--accent)] dark:bg-[var(--accent)]/30 dark:text-[var(--accent)]/60",
   "Kognitive Veränderung": "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300",
   Reaktionsmodulation: "bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300",
 };
@@ -175,6 +175,7 @@ export default function EmotionenRegulierenUeben() {
             onClick={handleReset}
             className="text-[var(--muted)] hover:text-[var(--text-primary)] cursor-pointer"
             title="Zurücksetzen"
+            aria-label="Zurücksetzen"
           >
             <RotateCcw className="w-4 h-4" />
           </button>

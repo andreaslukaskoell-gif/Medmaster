@@ -132,7 +132,9 @@ function relationConflict(r1: SetRel, r2: SetRel): boolean {
 export function isRelationModelConsistent(model: ImplicationRelationModel): boolean {
   for (let i = 0; i < model.relations.length; i++) {
     for (let j = i + 1; j < model.relations.length; j++) {
-      if (relationConflict(model.relations[i]!, model.relations[j]!)) return false;
+      const ri = model.relations[i];
+      const rj = model.relations[j];
+      if (ri && rj && relationConflict(ri, rj)) return false;
     }
   }
   return true;
@@ -145,12 +147,12 @@ function parsePremiseToSetRels(p: string): SetRel[] | null {
   // WICHTIG: "keine"-Varianten ZUERST prüfen, da die allgemeineren Regexe sonst "keine X" als Mengennamen matchen
   const allNone = /^Alle (.+?) sind keine (.+?)$/i.exec(s);
   if (allNone) {
-    return [{ type: "NONE", a: allNone[1]!.trim(), b: allNone[2]!.trim() }];
+    return [{ type: "NONE", a: (allNone[1] ?? "").trim(), b: (allNone[2] ?? "").trim() }];
   }
   const allIn = /^Alle (.+?) sind (.+?)$/i.exec(s);
   if (allIn) {
-    const a = allIn[1]!.trim();
-    const b = allIn[2]!.trim();
+    const a = (allIn[1] ?? "").trim();
+    const b = (allIn[2] ?? "").trim();
     if (a.toLowerCase() === "keine") return null;
     return [{ type: "ALL", a, b }];
   }

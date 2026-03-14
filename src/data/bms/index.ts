@@ -70,24 +70,53 @@ function buildAllBmsQuestions(): Question[] {
   return result;
 }
 
-export const allBmsQuestions: Question[] = buildAllBmsQuestions();
+let _cache: Question[] | null = null;
+
+/** Returns all BMS questions, building and caching on first call. */
+export function getAllBmsQuestions(): Question[] {
+  if (_cache === null) {
+    _cache = buildAllBmsQuestions();
+  }
+  return _cache;
+}
+
+/**
+ * Backward-compatible export — access triggers lazy build via Proxy.
+ * Works with .length, .filter(), spread, for-of, etc.
+ */
+export const allBmsQuestions: Question[] = new Proxy([] as Question[], {
+  get(_target, prop, receiver) {
+    const data = getAllBmsQuestions();
+    const value = Reflect.get(data, prop, receiver);
+    return typeof value === "function" ? value.bind(data) : value;
+  },
+  has(_target, prop) {
+    return prop in getAllBmsQuestions();
+  },
+  ownKeys() {
+    return Reflect.ownKeys(getAllBmsQuestions());
+  },
+  getOwnPropertyDescriptor(_target, prop) {
+    return Object.getOwnPropertyDescriptor(getAllBmsQuestions(), prop);
+  },
+});
 
 export function getQuestionsBySubject(subject: string): Question[] {
-  return allBmsQuestions.filter((q) => q.subject === subject);
+  return getAllBmsQuestions().filter((q) => q.subject === subject);
 }
 
 export function getQuestionsByChapter(chapter: string): Question[] {
-  return allBmsQuestions.filter((q) => q.chapter === chapter);
+  return getAllBmsQuestions().filter((q) => q.chapter === chapter);
 }
 
 export function getQuestionsByDifficulty(difficulty: "leicht" | "mittel" | "schwer"): Question[] {
-  return allBmsQuestions.filter((q) => q.difficulty === difficulty);
+  return getAllBmsQuestions().filter((q) => q.difficulty === difficulty);
 }
 
 export function getQuestionsByTags(tags: string[]): Question[] {
-  return allBmsQuestions.filter((q) => q.tags.some((t) => tags.includes(t)));
+  return getAllBmsQuestions().filter((q) => q.tags.some((t) => tags.includes(t)));
 }
 
 export function getQuestionById(id: string): Question | undefined {
-  return allBmsQuestions.find((q) => q.id === id);
+  return getAllBmsQuestions().find((q) => q.id === id);
 }

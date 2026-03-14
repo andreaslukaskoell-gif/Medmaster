@@ -200,6 +200,7 @@ export default function ZahlenfolgenUeben() {
             onClick={handleReset}
             className="text-[var(--muted)] hover:text-gray-700 dark:hover:text-gray-300 cursor-pointer"
             title="Zur&uuml;cksetzen"
+            aria-label="Zurücksetzen"
           >
             <RotateCcw className="w-4 h-4" />
           </button>

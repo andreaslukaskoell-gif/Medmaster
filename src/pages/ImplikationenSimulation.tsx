@@ -224,7 +224,7 @@ export default function ImplikationenSimulation() {
         <Card>
           <CardContent className="p-6">
             <div className="text-center space-y-4">
-              <div className="w-16 h-16 mx-auto rounded-2xl flex items-center justify-center bg-linear-to-br from-purple-500 to-indigo-600">
+              <div className="w-16 h-16 mx-auto rounded-2xl flex items-center justify-center bg-linear-to-br from-purple-500 to-[var(--accent)]">
                 <Trophy className="w-8 h-8 text-white" />
               </div>
               <div>
@@ -322,7 +322,7 @@ export default function ImplikationenSimulation() {
                           <p className="text-xs text-[var(--muted)] mb-0.5">Aussage 1:</p>
                           <p className="text-sm">&laquo;{result.task.premise1}&raquo;</p>
                         </div>
-                        <div className="bg-[var(--border)]/30 p-3 rounded-lg border-l-4 border-indigo-400">
+                        <div className="bg-[var(--border)]/30 p-3 rounded-lg border-l-4 border-[var(--accent)]">
                           <p className="text-xs text-[var(--muted)] mb-0.5">Aussage 2:</p>
                           <p className="text-sm">&laquo;{result.task.premise2}&raquo;</p>
                         </div>
@@ -438,7 +438,7 @@ export default function ImplikationenSimulation() {
                 &laquo;{currentTask.premise1}&raquo;
               </p>
             </div>
-            <div className="bg-[var(--border)]/30 p-4 rounded-lg border-l-4 border-indigo-400">
+            <div className="bg-[var(--border)]/30 p-4 rounded-lg border-l-4 border-[var(--accent)]">
               <p className="text-sm text-[var(--muted)] mb-1">Aussage 2:</p>
               <p className="text-base font-medium text-[var(--text-primary)]">
                 &laquo;{currentTask.premise2}&raquo;

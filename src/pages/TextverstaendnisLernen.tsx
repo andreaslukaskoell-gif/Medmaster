@@ -19,7 +19,7 @@ function PageIndicator({ current, total }: { current: number; total: number }) {
         <div
           key={i}
           className={`h-1.5 rounded-full transition-all ${
-            i === current ? "w-6 bg-indigo-500" : "w-1.5 bg-[var(--border)]"
+            i === current ? "w-6 bg-[var(--accent)]/90" : "w-1.5 bg-[var(--border)]"
           }`}
         />
       ))}
@@ -29,10 +29,12 @@ function PageIndicator({ current, total }: { current: number; total: number }) {
 
 function Merksatz({ children }: { children: ReactNode }) {
   return (
-    <div className="bg-indigo-50 dark:bg-indigo-900/20 border-l-4 border-indigo-500 p-4 rounded-r-lg">
+    <div className="bg-[var(--accent)]/5 dark:bg-[var(--accent)]/20 border-l-4 border-[var(--accent)] p-4 rounded-r-lg">
       <div className="flex items-start gap-2">
-        <Lightbulb className="w-4 h-4 text-indigo-500 mt-0.5 shrink-0" />
-        <p className="text-sm font-medium text-indigo-800 dark:text-indigo-300">{children}</p>
+        <Lightbulb className="w-4 h-4 text-[var(--accent)]/80 mt-0.5 shrink-0" />
+        <p className="text-sm font-medium text-[var(--accent)] dark:text-[var(--accent)]/60">
+          {children}
+        </p>
       </div>
     </div>
   );
@@ -53,11 +55,13 @@ function Seite1() {
         </p>
       </div>
 
-      <div className="bg-indigo-50 dark:bg-indigo-900/20 border border-indigo-200 dark:border-indigo-800 rounded-lg p-5">
-        <h3 className="font-semibold text-indigo-800 dark:text-indigo-300 mb-3">Aufgabenformat</h3>
-        <ul className="space-y-2 text-sm text-indigo-700 dark:text-indigo-400">
+      <div className="bg-[var(--accent)]/5 dark:bg-[var(--accent)]/20 border border-[var(--accent)] dark:border-[var(--accent)] rounded-lg p-5">
+        <h3 className="font-semibold text-[var(--accent)] dark:text-[var(--accent)]/60 mb-3">
+          Aufgabenformat
+        </h3>
+        <ul className="space-y-2 text-sm text-[var(--accent)] dark:text-[var(--accent)]/80">
           <li className="flex items-start gap-2">
-            <span className="bg-indigo-200 dark:bg-indigo-800 text-indigo-800 dark:text-indigo-200 text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5">
+            <span className="bg-[var(--accent)]/20 dark:bg-[var(--accent)] text-[var(--accent)] dark:text-[var(--accent)]/60 text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5">
               1
             </span>
             <span>
@@ -66,7 +70,7 @@ function Seite1() {
             </span>
           </li>
           <li className="flex items-start gap-2">
-            <span className="bg-indigo-200 dark:bg-indigo-800 text-indigo-800 dark:text-indigo-200 text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5">
+            <span className="bg-[var(--accent)]/20 dark:bg-[var(--accent)] text-[var(--accent)] dark:text-[var(--accent)]/60 text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5">
               2
             </span>
             <span>
@@ -75,7 +79,7 @@ function Seite1() {
             </span>
           </li>
           <li className="flex items-start gap-2">
-            <span className="bg-indigo-200 dark:bg-indigo-800 text-indigo-800 dark:text-indigo-200 text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5">
+            <span className="bg-[var(--accent)]/20 dark:bg-[var(--accent)] text-[var(--accent)] dark:text-[var(--accent)]/60 text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5">
               3
             </span>
             <span>
@@ -83,7 +87,7 @@ function Seite1() {
             </span>
           </li>
           <li className="flex items-start gap-2">
-            <span className="bg-indigo-200 dark:bg-indigo-800 text-indigo-800 dark:text-indigo-200 text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5">
+            <span className="bg-[var(--accent)]/20 dark:bg-[var(--accent)] text-[var(--accent)] dark:text-[var(--accent)]/60 text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5">
               4
             </span>
             <span>
@@ -100,23 +104,23 @@ function Seite1() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="bg-[var(--card)] border border-[var(--border)] rounded-lg p-4">
             <div className="flex items-center gap-2 mb-2">
-              <Search className="w-4 h-4 text-indigo-500" />
+              <Search className="w-4 h-4 text-[var(--accent)]/80" />
               <h4 className="font-semibold text-sm text-[var(--text-primary)]">Detailfragen</h4>
             </div>
             <p className="text-xs text-[var(--muted)] mb-2">Fakten direkt aus dem Text</p>
-            <p className="text-xs text-indigo-600 dark:text-indigo-400 italic">
+            <p className="text-xs text-[var(--accent)] dark:text-[var(--accent)]/80 italic">
               &quot;Laut dem Text, welche Funktion hat...?&quot;
             </p>
           </div>
           <div className="bg-[var(--card)] border border-[var(--border)] rounded-lg p-4">
             <div className="flex items-center gap-2 mb-2">
-              <Target className="w-4 h-4 text-indigo-500" />
+              <Target className="w-4 h-4 text-[var(--accent)]/80" />
               <h4 className="font-semibold text-sm text-[var(--text-primary)]">
                 Verst&auml;ndnisfragen
               </h4>
             </div>
             <p className="text-xs text-[var(--muted)] mb-2">Schlussfolgerungen aus dem Text</p>
-            <p className="text-xs text-indigo-600 dark:text-indigo-400 italic">
+            <p className="text-xs text-[var(--accent)] dark:text-[var(--accent)]/80 italic">
               &quot;Was kann aus dem Text geschlossen werden?&quot;
             </p>
           </div>
@@ -147,7 +151,7 @@ function Seite2() {
       {/* Step 1 */}
       <div className="bg-[var(--card)] border border-[var(--border)] rounded-lg p-5 space-y-3">
         <div className="flex items-center gap-3">
-          <span className="bg-indigo-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
+          <span className="bg-[var(--accent)]/90 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
             1
           </span>
           <h3 className="font-semibold text-[var(--text-primary)]">
@@ -169,10 +173,12 @@ function Seite2() {
           ].map(({ icon: Icon, label, desc }) => (
             <div
               key={label}
-              className="bg-indigo-50 dark:bg-indigo-900/15 rounded-lg p-3 text-center"
+              className="bg-[var(--accent)]/5 dark:bg-[var(--accent)]/15 rounded-lg p-3 text-center"
             >
-              <Icon className="w-4 h-4 text-indigo-500 mx-auto mb-1" />
-              <p className="text-xs font-semibold text-indigo-700 dark:text-indigo-400">{label}</p>
+              <Icon className="w-4 h-4 text-[var(--accent)]/80 mx-auto mb-1" />
+              <p className="text-xs font-semibold text-[var(--accent)] dark:text-[var(--accent)]/80">
+                {label}
+              </p>
               <p className="text-[10px] text-[var(--muted)] mt-0.5">{desc}</p>
             </div>
           ))}
@@ -182,7 +188,7 @@ function Seite2() {
       {/* Step 2 */}
       <div className="bg-[var(--card)] border border-[var(--border)] rounded-lg p-5 space-y-3">
         <div className="flex items-center gap-3">
-          <span className="bg-indigo-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
+          <span className="bg-[var(--accent)]/90 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
             2
           </span>
           <h3 className="font-semibold text-[var(--text-primary)]">Fragen ZUERST lesen</h3>
@@ -192,7 +198,7 @@ function Seite2() {
           wei&szlig;t du, wonach du suchen musst, und liest den Text viel gezielter.
         </p>
         <div className="pl-11 bg-[var(--border)]/30 rounded-lg p-3 text-sm">
-          <p className="text-indigo-600 dark:text-indigo-400">
+          <p className="text-[var(--accent)] dark:text-[var(--accent)]/80">
             <span className="font-bold">Beispiel:</span> Wenn eine Frage nach &quot;dem Zeitpunkt
             der Entdeckung&quot; fragt, achtest du beim Lesen besonders auf Jahreszahlen und
             zeitliche Angaben.
@@ -203,7 +209,7 @@ function Seite2() {
       {/* Step 3 */}
       <div className="bg-[var(--card)] border border-[var(--border)] rounded-lg p-5 space-y-3">
         <div className="flex items-center gap-3">
-          <span className="bg-indigo-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
+          <span className="bg-[var(--accent)]/90 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
             3
           </span>
           <h3 className="font-semibold text-[var(--text-primary)]">Text gezielt lesen</h3>
@@ -228,7 +234,7 @@ function Seite2() {
       {/* Step 4 */}
       <div className="bg-[var(--card)] border border-[var(--border)] rounded-lg p-5 space-y-3">
         <div className="flex items-center gap-3">
-          <span className="bg-indigo-500 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
+          <span className="bg-[var(--accent)]/90 text-white text-sm font-bold w-8 h-8 rounded-lg flex items-center justify-center">
             4
           </span>
           <h3 className="font-semibold text-[var(--text-primary)]">
@@ -322,10 +328,10 @@ function Seite3() {
       </div>
 
       {/* Time management */}
-      <div className="bg-indigo-50 dark:bg-indigo-900/20 border border-indigo-200 dark:border-indigo-800 rounded-lg p-4 space-y-3">
+      <div className="bg-[var(--accent)]/5 dark:bg-[var(--accent)]/20 border border-[var(--accent)] dark:border-[var(--accent)] rounded-lg p-4 space-y-3">
         <div className="flex items-center gap-2">
-          <Clock className="w-5 h-5 text-indigo-500" />
-          <h3 className="font-semibold text-indigo-800 dark:text-indigo-300">
+          <Clock className="w-5 h-5 text-[var(--accent)]/80" />
+          <h3 className="font-semibold text-[var(--accent)] dark:text-[var(--accent)]/60">
             Zeitmanagement (6 Minuten pro Text)
           </h3>
         </div>
@@ -337,7 +343,9 @@ function Seite3() {
             { time: "3:00", label: "Fragen beantworten", desc: "~36 Sek pro Frage" },
           ].map(({ time, label, desc }) => (
             <div key={label} className="bg-[var(--card)] rounded-lg p-3 text-center">
-              <p className="text-lg font-bold text-indigo-600 dark:text-indigo-400">{time}</p>
+              <p className="text-lg font-bold text-[var(--accent)] dark:text-[var(--accent)]/80">
+                {time}
+              </p>
               <p className="text-xs font-semibold text-[var(--text-primary)]">{label}</p>
               <p className="text-[10px] text-[var(--muted)]">{desc}</p>
             </div>
@@ -378,7 +386,7 @@ export default function TextverstaendnisLernen() {
               onClick={() => setCurrentPage(i)}
               className={`text-xs px-3 py-1.5 rounded-full transition-colors cursor-pointer ${
                 i === currentPage
-                  ? "bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 font-medium"
+                  ? "bg-[var(--accent)]/10 dark:bg-[var(--accent)]/30 text-[var(--accent)] dark:text-[var(--accent)]/60 font-medium"
                   : "text-[var(--muted)] hover:bg-[var(--border)]/50"
               }`}
             >
@@ -396,7 +404,7 @@ export default function TextverstaendnisLernen() {
         <button
           onClick={() => setCurrentPage((p) => Math.max(0, p - 1))}
           disabled={currentPage === 0}
-          className="flex items-center gap-1 text-sm font-medium text-indigo-600 dark:text-indigo-400 disabled:opacity-30 disabled:cursor-not-allowed hover:text-indigo-800 dark:hover:text-indigo-300 transition-colors cursor-pointer"
+          className="flex items-center gap-1 text-sm font-medium text-[var(--accent)] dark:text-[var(--accent)]/80 disabled:opacity-30 disabled:cursor-not-allowed hover:text-[var(--accent)] dark:hover:text-[var(--accent)]/60 transition-colors cursor-pointer"
         >
           <ChevronLeft className="w-4 h-4" />
           Zur&uuml;ck
@@ -404,7 +412,7 @@ export default function TextverstaendnisLernen() {
         <button
           onClick={() => setCurrentPage((p) => Math.min(totalPages - 1, p + 1))}
           disabled={currentPage === totalPages - 1}
-          className="flex items-center gap-1 text-sm font-medium text-indigo-600 dark:text-indigo-400 disabled:opacity-30 disabled:cursor-not-allowed hover:text-indigo-800 dark:hover:text-indigo-300 transition-colors cursor-pointer"
+          className="flex items-center gap-1 text-sm font-medium text-[var(--accent)] dark:text-[var(--accent)]/80 disabled:opacity-30 disabled:cursor-not-allowed hover:text-[var(--accent)] dark:hover:text-[var(--accent)]/60 transition-colors cursor-pointer"
         >
           Weiter
           <ChevronRight className="w-4 h-4" />

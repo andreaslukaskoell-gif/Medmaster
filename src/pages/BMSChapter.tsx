@@ -182,9 +182,9 @@ export default function BMSChapter({ chapter, onBack }: Props) {
 
       {/* Summary (legacy fallback) */}
       {!chapter.keyFacts && chapter.summary && chapter.summary.length > 0 && (
-        <Card className="border-indigo-200 dark:border-indigo-800">
+        <Card className="border-[var(--accent)] dark:border-[var(--accent)]">
           <CardContent className="p-5">
-            <h3 className="text-sm font-semibold text-indigo-800 dark:text-indigo-300 flex items-center gap-2 mb-3">
+            <h3 className="text-sm font-semibold text-[var(--accent)] dark:text-[var(--accent)]/60 flex items-center gap-2 mb-3">
               <ListChecks className="w-4 h-4" />
               Zusammenfassung — Key Facts
             </h3>
@@ -192,9 +192,11 @@ export default function BMSChapter({ chapter, onBack }: Props) {
               {chapter.summary.map((point, i) => (
                 <li
                   key={i}
-                  className="text-sm text-indigo-700 dark:text-indigo-400 flex items-start gap-2"
+                  className="text-sm text-[var(--accent)] dark:text-[var(--accent)]/80 flex items-start gap-2"
                 >
-                  <span className="text-indigo-400 dark:text-indigo-600 mt-1 shrink-0">•</span>
+                  <span className="text-[var(--accent)]/80 dark:text-[var(--accent)] mt-1 shrink-0">
+                    •
+                  </span>
                   {point}
                 </li>
               ))}

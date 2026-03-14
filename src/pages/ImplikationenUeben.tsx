@@ -156,6 +156,7 @@ export default function ImplikationenUeben() {
             onClick={handleReset}
             className="text-[var(--muted)] hover:text-[var(--text-primary)] cursor-pointer"
             title="Zurücksetzen"
+            aria-label="Zurücksetzen"
           >
             <RotateCcw className="w-4 h-4" />
           </button>
@@ -189,7 +190,7 @@ export default function ImplikationenUeben() {
                 &laquo;{currentTask.premise1}&raquo;
               </p>
             </div>
-            <div className="bg-[var(--surface)] p-4 rounded-lg border-l-4 border-indigo-400">
+            <div className="bg-[var(--surface)] p-4 rounded-lg border-l-4 border-[var(--accent)]">
               <p className="text-sm text-[var(--muted)] mb-1">Aussage 2:</p>
               <p className="text-base font-medium text-[var(--text-primary)]">
                 &laquo;{currentTask.premise2}&raquo;

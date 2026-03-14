@@ -140,7 +140,7 @@ export default function SenseOrgans() {
             cy="110"
             rx="85"
             ry="75"
-            className="fill-gray-100 dark:fill-gray-700 stroke-gray-600 dark:stroke-gray-400 cursor-pointer transition-all hover:stroke-indigo-500 hover:stroke-2"
+            className="fill-gray-100 dark:fill-gray-700 stroke-gray-600 dark:stroke-gray-400 cursor-pointer transition-all hover:stroke-[var(--accent)] hover:stroke-2"
             strokeWidth="1.5"
             filter="url(#shadow)"
             onMouseEnter={() => setActive(parts.find((p) => p.id === "sclera")!)}
@@ -154,7 +154,7 @@ export default function SenseOrgans() {
             rx="65"
             ry="60"
             fill="url(#eyeGrad)"
-            className="stroke-indigo-300 dark:stroke-indigo-600 cursor-pointer transition-all hover:stroke-indigo-500 hover:stroke-2"
+            className="stroke-[var(--accent)] dark:stroke-[var(--accent)] cursor-pointer transition-all hover:stroke-[var(--accent)] hover:stroke-2"
             strokeWidth="1"
             onMouseEnter={() => setActive(parts.find((p) => p.id === "vitreous")!)}
             onMouseLeave={() => setActive(null)}
@@ -187,7 +187,7 @@ export default function SenseOrgans() {
             cy="110"
             rx="12"
             ry="20"
-            className="fill-indigo-300/60 dark:fill-indigo-500/50 stroke-indigo-600 dark:stroke-indigo-400 cursor-pointer transition-all hover:stroke-indigo-500 hover:stroke-2"
+            className="fill-[var(--accent)]/60 dark:fill-[var(--accent)]/50 stroke-[var(--accent)] dark:stroke-[var(--accent)] cursor-pointer transition-all hover:stroke-[var(--accent)] hover:stroke-2"
             strokeWidth="1.2"
             onMouseEnter={() => setActive(parts.find((p) => p.id === "lens")!)}
             onMouseLeave={() => setActive(null)}

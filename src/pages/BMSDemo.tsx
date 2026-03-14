@@ -301,14 +301,14 @@ function IMPCard({ task, index }: { task: ImplikationTask; index: number }) {
     <div className="bg-[var(--surface)] rounded-2xl border border-[var(--border)] overflow-hidden">
       <div className="p-5 sm:p-6">
         <div className="flex items-start gap-3 mb-4">
-          <span className="shrink-0 w-8 h-8 rounded-xl flex items-center justify-center text-sm font-bold text-white bg-indigo-500">
+          <span className="shrink-0 w-8 h-8 rounded-xl flex items-center justify-center text-sm font-bold text-white bg-[var(--accent)]/90">
             {index + 1}
           </span>
           <div>
             <p className="text-xs text-[var(--muted)] mb-2">
               Welche Schlussfolgerung ist zwingend?
             </p>
-            <div className="space-y-2 p-3 rounded-xl bg-indigo-50 dark:bg-indigo-900/20 border border-indigo-100 dark:border-indigo-800">
+            <div className="space-y-2 p-3 rounded-xl bg-[var(--accent)]/5 dark:bg-[var(--accent)]/20 border border-[var(--accent)] dark:border-[var(--accent)]">
               <p className="text-sm text-[var(--text-primary)] italic">
                 {"\u201E"}
                 {task.premise1}
@@ -626,7 +626,7 @@ export default function BMSDemo() {
           <SectionHeader
             title="Implikationen erkennen"
             subtitle="Leite die logisch zwingende Schlussfolgerung ab"
-            color="bg-indigo-500"
+            color="bg-[var(--accent)]/90"
           />
           <div className="space-y-4">
             {impTasks.map((t, i) => (

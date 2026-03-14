@@ -100,8 +100,8 @@ const subtestConfigs: Record<string, SubtestConfig> = {
     id: "textverständnis",
     name: "Textverständnis",
     icon: FileText,
-    color: "text-indigo-600 dark:text-indigo-400",
-    bgColor: "bg-indigo-100 dark:bg-indigo-900/30",
+    color: "text-[var(--accent)] dark:text-[var(--accent)]/80",
+    bgColor: "bg-[var(--accent)]/10 dark:bg-[var(--accent)]/30",
     category: "TV",
   },
 };

@@ -33,8 +33,8 @@ export default function TextverstaendnisPage() {
 
       {/* Header */}
       <div className="flex items-center gap-4">
-        <div className="w-12 h-12 bg-indigo-100 dark:bg-indigo-900/30 rounded-xl flex items-center justify-center shrink-0">
-          <FileText className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
+        <div className="w-12 h-12 bg-[var(--accent)]/10 dark:bg-[var(--accent)]/30 rounded-xl flex items-center justify-center shrink-0">
+          <FileText className="w-6 h-6 text-[var(--accent)] dark:text-[var(--accent)]/80" />
         </div>
         <div>
           <h1 className="text-2xl font-bold text-[var(--text-primary)]">Textverst&auml;ndnis</h1>

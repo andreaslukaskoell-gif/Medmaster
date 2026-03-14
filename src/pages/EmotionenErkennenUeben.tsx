@@ -110,6 +110,7 @@ export default function EmotionenErkennenUeben() {
             onClick={handleShuffle}
             className="text-muted-foreground hover:text-[var(--text-primary)] cursor-pointer"
             title="Zufällige Reihenfolge"
+            aria-label="Mischen"
           >
             <Shuffle className="w-4 h-4" />
           </button>
@@ -130,6 +131,7 @@ export default function EmotionenErkennenUeben() {
             onClick={handleReset}
             className="text-muted-foreground hover:text-[var(--text-primary)] cursor-pointer"
             title="Zurücksetzen"
+            aria-label="Zurücksetzen"
           >
             <RotateCcw className="w-4 h-4" />
           </button>

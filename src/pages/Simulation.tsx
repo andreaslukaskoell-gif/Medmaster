@@ -66,19 +66,10 @@ import { stripMarkdownAsterisks } from "@/utils/formatExplanation";
 // BMS QUESTION RESOLUTION
 // ============================================================
 
-const bmsQuestions =
-  newBmsQuestions.length > 0
-    ? newBmsQuestions
-    : legacyQuestions.map((q) => ({ ...q, difficulty: "mittel" as const, tags: [] }));
+const bmsQuestions = getAllBmsQuestions();
 
 function getQuestionsBySubject(subject: string) {
-  const newQ = getNewQuestions(subject);
-  if (newQ.length > 0) return newQ;
-  return getLegacyQuestions(subject).map((q) => ({
-    ...q,
-    difficulty: "mittel" as const,
-    tags: [],
-  }));
+  return getBmsQuestionsBySubject(subject);
 }
 
 // ============================================================

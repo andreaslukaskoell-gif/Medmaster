@@ -72,7 +72,7 @@ const BADGE_EARNED_STYLES_BY_ID: Record<string, string> = {
   "erstes-quiz":
     "bg-sky-700 text-sky-50 border-sky-800 shadow-lg shadow-sky-950/30 dark:bg-sky-600 dark:border-sky-500",
   "erstes-kapitel":
-    "bg-indigo-700 text-indigo-50 border-indigo-800 shadow-lg shadow-indigo-950/30 dark:bg-indigo-600 dark:border-indigo-500",
+    "bg-[var(--accent)] text-white border-[var(--accent)] shadow-lg shadow-[var(--accent)]/30 dark:bg-[var(--accent)] dark:border-[var(--accent)]",
   // --- Streaks (warm → heiß) ---
   "streak-3":
     "bg-amber-700 text-amber-50 border-amber-800 shadow-lg shadow-amber-950/30 dark:bg-amber-600 dark:border-amber-500",
@@ -125,7 +125,7 @@ const BADGE_EARNED_STYLES_BY_ID: Record<string, string> = {
   "erstes-kff":
     "bg-fuchsia-700 text-fuchsia-50 border-fuchsia-800 shadow-lg shadow-fuchsia-950/25 dark:bg-fuchsia-600 dark:border-fuchsia-500",
   "erstes-tv":
-    "bg-indigo-600 text-indigo-50 border-indigo-700 shadow-lg shadow-indigo-950/25 dark:bg-indigo-500 dark:border-indigo-400",
+    "bg-[var(--accent)] text-white border-[var(--accent)] shadow-lg shadow-[var(--accent)]/25 dark:bg-[var(--accent)]/90 dark:border-[var(--accent)]",
   "erstes-sek":
     "bg-teal-800 text-teal-50 border-teal-900 shadow-lg shadow-teal-950/30 dark:bg-teal-700 dark:border-teal-600",
   // --- Testteil-Fortschritt ---
@@ -142,7 +142,7 @@ const ICON_EARNED_STYLES: Record<BadgeIconName, string> = {
   HelpCircle:
     "bg-sky-500 text-white border-sky-600 shadow-lg shadow-sky-900/25 dark:bg-sky-600 dark:border-sky-500",
   BookOpen:
-    "bg-indigo-500 text-white border-indigo-600 shadow-lg shadow-indigo-900/25 dark:bg-indigo-600 dark:border-indigo-500",
+    "bg-[var(--accent)]/90 text-white border-[var(--accent)] shadow-lg shadow-[var(--accent)]/25 dark:bg-[var(--accent)] dark:border-[var(--accent)]",
   Flame:
     "bg-orange-500 text-white border-orange-600 shadow-lg shadow-orange-900/30 dark:bg-orange-600 dark:border-orange-500",
   Crown:

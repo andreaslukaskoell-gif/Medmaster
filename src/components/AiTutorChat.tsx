@@ -137,7 +137,7 @@ export function AiTutorChat({ question, userAnswer, onClose }: AiTutorChatProps)
         {/* Header */}
         <div className="flex items-center justify-between px-4 py-3 bg-[var(--card)] border-b border-[var(--border)]">
           <div className="flex items-center gap-2.5">
-            <div className="w-8 h-8 bg-indigo-600 rounded-full flex items-center justify-center">
+            <div className="w-8 h-8 bg-[var(--accent)] rounded-full flex items-center justify-center">
               <Sparkles className="w-4 h-4 text-white" />
             </div>
             <div>
@@ -172,7 +172,7 @@ export function AiTutorChat({ question, userAnswer, onClose }: AiTutorChatProps)
               className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"} gap-2`}
             >
               {msg.role === "ai" && (
-                <div className="w-7 h-7 bg-indigo-600 rounded-full flex items-center justify-center shrink-0 mt-1">
+                <div className="w-7 h-7 bg-[var(--accent)] rounded-full flex items-center justify-center shrink-0 mt-1">
                   <Sparkles className="w-3.5 h-3.5 text-white" />
                 </div>
               )}
@@ -190,7 +190,7 @@ export function AiTutorChat({ question, userAnswer, onClose }: AiTutorChatProps)
 
           {isTyping && (
             <div className="flex justify-start gap-2">
-              <div className="w-7 h-7 bg-indigo-600 rounded-full flex items-center justify-center shrink-0 mt-1">
+              <div className="w-7 h-7 bg-[var(--accent)] rounded-full flex items-center justify-center shrink-0 mt-1">
                 <Sparkles className="w-3.5 h-3.5 text-white" />
               </div>
               <div className="bg-[var(--card)] rounded-2xl rounded-bl-md px-4 py-3">
@@ -251,13 +251,13 @@ export function AiTutorChat({ question, userAnswer, onClose }: AiTutorChatProps)
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="Frag mich etwas..."
-              className="flex-1 bg-[var(--surface)]/20 text-[var(--text-primary)] text-sm rounded-full px-4 py-2.5 outline-none placeholder:text-[var(--muted)] focus:ring-2 focus:ring-indigo-500"
+              className="flex-1 bg-[var(--surface)]/20 text-[var(--text-primary)] text-sm rounded-full px-4 py-2.5 outline-none placeholder:text-[var(--muted)] focus:ring-2 focus:ring-[var(--accent)]"
               disabled={isTyping}
             />
             <button
               type="submit"
               disabled={!input.trim() || isTyping}
-              className="w-10 h-10 bg-indigo-600 hover:bg-indigo-500 disabled:opacity-40 disabled:hover:bg-indigo-600 rounded-full flex items-center justify-center transition-colors cursor-pointer"
+              className="w-10 h-10 bg-[var(--accent)] hover:bg-[var(--accent)]/90 disabled:opacity-40 disabled:hover:bg-[var(--accent)] rounded-full flex items-center justify-center transition-colors cursor-pointer"
               aria-label="Senden"
             >
               <Send className="w-4 h-4 text-white" />
@@ -274,7 +274,7 @@ export function AiTutorButton({ onClick }: { onClick: () => void }) {
   return (
     <button
       onClick={onClick}
-      className="inline-flex items-center gap-1.5 text-xs font-medium text-indigo-600 hover:text-indigo-700 transition-colors cursor-pointer mt-2"
+      className="inline-flex items-center gap-1.5 text-xs font-medium text-[var(--accent)] hover:text-[var(--accent)] transition-colors cursor-pointer mt-2"
     >
       <Sparkles className="w-3.5 h-3.5" />
       Frag die KI

@@ -17,7 +17,7 @@ export default function NotFound() {
         </p>
         <Link
           to="/dashboard"
-          className="inline-flex items-center justify-center bg-indigo-600 hover:bg-indigo-700 text-white font-medium px-6 py-2.5 rounded-lg transition-colors"
+          className="inline-flex items-center justify-center bg-[var(--accent)] hover:bg-[var(--accent)] text-white font-medium px-6 py-2.5 rounded-lg transition-colors"
         >
           Zurück zum Dashboard
         </Link>
