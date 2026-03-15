@@ -25,81 +25,69 @@ export const bioKapOekologie: Kapitel = {
       ],
       content: `## Ökologie: Definition und Grundprinzip
 
-**Ökologie** (griech. oikos = Haus, logos = Lehre) untersucht die **Wechselbeziehungen** zwischen Organismen untereinander und mit ihrer Umwelt. Die zentrale Frage lautet: Welche Faktoren bestimmen, wo eine Art vorkommt, wie groß ihre Population wird und wie verschiedene Arten miteinander interagieren? Diese Fragen betreffen nicht nur Biologie im engeren Sinne — sie sind unmittelbar relevant für Medizin, Epidemiologie und Public Health. Ein Arzt, der versteht, wie Erreger sich in Populationen ausbreiten, wie Umweltbedingungen Gesundheit beeinflussen und wie das menschliche Mikrobiom funktioniert, denkt im Grunde ökologisch.
+**Ökologie** (griech. oikos = Haus, logos = Lehre) untersucht die **Wechselbeziehungen** zwischen Organismen untereinander und mit ihrer Umwelt. Die zentrale Frage lautet: Welche Faktoren bestimmen, wo eine Art vorkommt, wie groß ihre Population wird und wie verschiedene Arten miteinander interagieren?
 
 Die Ökologie gliedert sich in Teilgebiete, die jeweils eine andere **Organisationsebene** betrachten — von der einzelnen Zelle bis zur gesamten Biosphäre.
+
+{{IMAGE}}
 
 ---
 
 ## Die ökologischen Ebenen: Vom Organismus zur Biosphäre
 
-Die Biologie organisiert lebende Systeme in einer Hierarchie, bei der jede Ebene neue Eigenschaften zeigt, die auf der darunterliegenden Ebene nicht existieren (Emergenz). Für die Ökologie sind sechs Ebenen zentral:
+Die Biologie organisiert lebende Systeme in einer Hierarchie, bei der jede Ebene neue Eigenschaften zeigt (Emergenz). Für die Ökologie sind sechs Ebenen zentral:
 
-**1. Organismus (Individuum)**
-Die kleinste ökologische Einheit: ein einzelnes Lebewesen mit seinen physiologischen Anpassungen an die Umwelt. In der Medizin entspricht dies dem **Patienten** — dem Individuum, dessen Physiologie wir untersuchen und behandeln. Die Autoökologie fragt: Wie reagiert dieses Individuum auf Temperatur, pH, Nährstoffe?
+**1. Organismus (Individuum):** Die kleinste ökologische Einheit — ein einzelnes Lebewesen mit seinen physiologischen Anpassungen. Die Autoökologie fragt: Wie reagiert dieses Individuum auf Temperatur, pH, Nährstoffe?
 
-**2. Population**
-Alle Individuen **einer Art** in einem definierten Gebiet, die sich untereinander fortpflanzen können. Populationen haben emergente Eigenschaften wie Populationsdichte, Altersstruktur, Wachstumsrate und genetische Variabilität. Die medizinische Entsprechung ist die **Bevölkerung** — das Untersuchungsobjekt der **Epidemiologie**. Die Populationsökologie nutzt dieselben mathematischen Modelle wie die Infektionsepidemiologie: exponentielles vs. logistisches Wachstum, Kapazitätsgrenze, Mortalitätsraten. Die **Inzidenz** (Neuerkrankungen pro Zeiteinheit) entspricht der Geburtenrate einer Population, die **Prävalenz** (Anteil Erkrankter zu einem Zeitpunkt) der aktuellen Populationsdichte.
+**2. Population:** Alle Individuen **einer Art** in einem definierten Gebiet, die sich untereinander fortpflanzen können. Populationen haben emergente Eigenschaften wie Dichte, Altersstruktur und Wachstumsrate.
 
-**3. Biozönose (Lebensgemeinschaft)**
-Alle **Arten** — Pflanzen, Tiere, Pilze, Bakterien — die gemeinsam einen Lebensraum besiedeln und miteinander interagieren. Die medizinische Parallele ist das **Mikrobiom**: die Gesamtheit aller Mikroorganismen, die einen Körperstandort (Darm, Haut, Mundraum) besiedeln. Genau wie in einer natürlichen Biozönose gibt es im Mikrobiom Konkurrenz um Nährstoffe, Symbiose (z. B. Darmbakterien produzieren Vitamin K für den Wirt) und Parasitismus (pathogene Keime verdrängen Kommensalen). Eine **Dysbiose** (Störung des Mikrobioms) entspricht ökologisch einer gestörten Lebensgemeinschaft — etwa nach Antibiotikatherapie, wenn resistente Keime wie *Clostridioides difficile* die freigewordene Nische besetzen.
+**3. Biozönose (Lebensgemeinschaft):** Alle Arten — Pflanzen, Tiere, Pilze, Bakterien — die gemeinsam einen Lebensraum besiedeln und miteinander interagieren.
 
-**4. Ökosystem**
-**Biozönose + Biotop** (unbelebte Umwelt) als funktionelle Einheit mit Stoff- und Energieflüssen. Ein Krankenhaus ist ein hervorragendes Beispiel für ein künstliches Ökosystem: Das Biotop umfasst Raumtemperatur, Luftfeuchtigkeit, Oberflächen und Desinfektionsmittel; die Biozönose besteht aus Patienten, Personal und Erregern. Nosokomiale Infektionen (Krankenhausinfektionen) entstehen durch die spezifischen Übertragungswege dieses Ökosystems — Kontaktübertragung über Hände, aerogene Übertragung über Tröpfchenkerne, fäkal-orale Route. Hygienemaßnahmen verändern die abiotischen Bedingungen des Biotops, um die Erreger-Biozönose zu kontrollieren.
+**4. Ökosystem:** Biozönose + Biotop (unbelebte Umwelt) als funktionelle Einheit mit Stoff- und Energieflüssen.
 
-**5. Biom**
-Großflächige Lebensraumtypen mit charakteristischer Vegetation und Fauna, bestimmt durch Klima (Temperatur, Niederschlag): Tropischer Regenwald, Savanne, Wüste, Taiga, Tundra. Biome bestimmen die **geographische Epidemiologie**: Malaria konzentriert sich auf tropische Biome (Verbreitung des Vektors *Anopheles*), Borreliose auf temperierte Laubwälder (Habitat der Zecke *Ixodes*). Klimawandel verschiebt Biomgrenzen und damit Verbreitungsgebiete von Krankheitsüberträgern nach Norden.
+**5. Biom:** Großflächige Lebensraumtypen mit charakteristischer Vegetation und Fauna, bestimmt durch Klima: Tropischer Regenwald, Savanne, Wüste, Taiga, Tundra.
 
-**6. Biosphäre**
-Die Gesamtheit aller Ökosysteme der Erde — die dünne Schicht von der Tiefsee bis zur oberen Atmosphäre, in der Leben vorkommt. Globale Gesundheitsfragen wie Pandemien, Antibiotikaresistenz und Klimawandel-bedingte Gesundheitsfolgen sind Phänomene auf Biosphärenebene.
+**6. Biosphäre:** Die Gesamtheit aller Ökosysteme der Erde — die dünne Schicht von der Tiefsee bis zur oberen Atmosphäre, in der Leben vorkommt.
 
-> **Merke:** Die Hierarchie lautet: Organismus → Population → Biozönose → Ökosystem → Biom → Biosphäre. Jede Ebene hat eine medizinische Entsprechung — vom Patienten über die Epidemiologie bis zur globalen Gesundheit.
+> **Merke:** Die Hierarchie lautet: Organismus → Population → Biozönose → Ökosystem → Biom → Biosphäre.
 
 ---
 
 ## Biotop und Biozönose: Die zwei Hälften des Ökosystems
 
-**Biotop** (griech. bios = Leben, topos = Ort) bezeichnet den **unbelebten Lebensraum**: das physikalisch-chemische Milieu aus Boden, Wasser, Klima, Licht und Nährstoffen. Ein Biotop ist z. B. ein Teich, eine Wiese oder — medizinisch gedacht — der Magen mit seinem pH von 1–2, seiner Temperatur von 37 °C und seiner Peristaltik.
+**Biotop** (griech. topos = Ort) bezeichnet den **unbelebten Lebensraum**: das physikalisch-chemische Milieu aus Boden, Wasser, Klima, Licht und Nährstoffen.
 
-**Biozönose** ist die **Lebensgemeinschaft**: alle Lebewesen in diesem Biotop und ihre Wechselwirkungen. Im Magen-Biotop umfasst die Biozönose die Magenepithelzellen, *Helicobacter pylori* (falls vorhanden), säureresistente Laktobazillen und durchreisende Nahrungsorganismen.
+**Biozönose** ist die **Lebensgemeinschaft**: alle Lebewesen in diesem Biotop und ihre Wechselwirkungen.
 
-**Ökosystem = Biotop + Biozönose** in Wechselwirkung. Die Magensäure (Biotop) selektiert, welche Organismen überleben (Biozönose); umgekehrt verändert *H. pylori* durch Urease den lokalen pH (Biotop).
-
-| Begriff | Definition | Medizinisches Beispiel |
-|---------|-----------|----------------------|
-| **Biotop** | Unbelebter Lebensraum (physikalisch-chemisch) | Magen: pH 1–2, 37 °C, Peristaltik |
-| **Biozönose** | Lebensgemeinschaft aller Arten | Magenflora: *H. pylori*, Laktobazillen |
-| **Ökosystem** | Biotop + Biozönose in Wechselwirkung | *H. pylori* verändert pH → Ulkus |
+**Ökosystem = Biotop + Biozönose** in Wechselwirkung — die unbelebte Umgebung formt, welche Arten überleben; die Lebewesen verändern ihrerseits die abiotischen Bedingungen.
 
 > **Merke:** Biotop = unbelebt (Ort). Biozönose = belebt (alle Arten). Ökosystem = beides zusammen in Wechselwirkung.
 
 ---
 
-## Biotisch vs. abiotisch: Klinische Perspektive
+## Biotisch vs. abiotisch
 
 In der Ökologie unterscheidet man zwei Kategorien von Umweltfaktoren:
 
-**Abiotische Faktoren** sind nicht-lebende Einflüsse: Temperatur, pH, Sauerstoffpartialdruck, Osmolarität, Strahlung, Feuchtigkeit. Klinisch bestimmen sie, ob Erreger überleben können (Sterilisation durch Hitze, UV-Desinfektion), und sie beeinflussen direkt die Physiologie des Patienten (Hypothermie, Azidose, Hypoxie).
+**Abiotische Faktoren** sind nicht-lebende Einflüsse: Temperatur, pH, Sauerstoffpartialdruck, Osmolarität, Strahlung, Feuchtigkeit.
 
-**Biotische Faktoren** sind Einflüsse durch andere Lebewesen: Pathogene (Viren, Bakterien, Parasiten), Konkurrenz um Nährstoffe (Tumorzellen vs. gesundes Gewebe um Glukose), Symbiose (Darmbakterien synthetisieren Vitamin K und B₁₂), Prädation (Phagozyten fressen Bakterien — immunologisch betrachtet eine klassische Räuber-Beute-Beziehung).
+**Biotische Faktoren** sind Einflüsse durch andere Lebewesen: Pathogene, Konkurrenz um Ressourcen, Symbiose, Prädation (Räuber-Beute-Beziehungen).
 
-> **Merke:** Abiotische Faktoren = unbelebte Einflüsse (Temperatur, pH, O₂). Biotische Faktoren = Einflüsse durch Lebewesen (Pathogene, Konkurrenz, Symbiose). Beide Kategorien sind klinisch hochrelevant.
+> **Merke:** Abiotisch = unbelebt (Temperatur, pH, O₂). Biotisch = durch Lebewesen (Pathogene, Konkurrenz, Symbiose).
 
 ---
 
 ## Prüfungsrelevante Begriffe im Überblick
 
-Die folgenden Begriffe werden im MedAT/BMS regelmäßig abgefragt — sichere Zuordnung ist entscheidend:
-
 | Begriff | Definition | Beispiel |
 |---------|-----------|----------|
-| **Biotop** | Unbelebter Lebensraum | Teich: Wassertemperatur, pH, O₂-Gehalt |
+| **Biotop** | Unbelebter Lebensraum | Teich: Temperatur, pH, O₂ |
 | **Biozönose** | Lebensgemeinschaft aller Arten | Alle Organismen im Teich |
 | **Ökosystem** | Biotop + Biozönose | Teich als funktionelle Einheit |
 | **Population** | Alle Individuen **einer Art** in einem Gebiet | Alle Frösche im Teich |
 | **Biom** | Großlebensraum mit typischer Vegetation | Tropischer Regenwald, Tundra |
 | **Biosphäre** | Gesamtheit aller Ökosysteme der Erde | Alles Leben auf der Erde |
-| **Abiotisch** | Unbelebte Faktoren | Temperatur, Licht, pH, Wasser |
+| **Abiotisch** | Unbelebte Faktoren | Temperatur, Licht, pH |
 | **Biotisch** | Belebte Faktoren | Konkurrenz, Räuber, Parasiten |
 
 > **Merke:** Ökosystem = Biotop (unbelebt) + Biozönose (belebt). Population = eine Art. Biozönose = alle Arten. Diese Unterscheidungen sind klassische MedAT-Fallenstellungen.`,
@@ -174,20 +162,19 @@ Jeder Organismus kann nur innerhalb bestimmter Grenzen eines Umweltfaktors über
 
 > **Merke:** Die Toleranzkurve zeigt: Optimum (maximale Leistung) → Pessimum (Stressbereich) → Todespunkt (letale Grenze). Die ökologische Amplitude ist die gesamte Toleranzbreite zwischen den beiden Todespunkten.
 
+{{IMAGE}}
+
 ---
 
 ## Menschliche Toleranzkurven: Klinische Anwendung
 
-Das Konzept der Toleranzkurve ist nicht nur für Pflanzen und Tiere relevant — der menschliche Körper folgt exakt demselben Prinzip. Drei Beispiele zeigen dies eindrücklich:
+Der menschliche Körper folgt exakt demselben Prinzip wie jeder andere Organismus: Zu viel oder zu wenig eines Parameters führt vom Optimum ins Pessimum bis zum Todespunkt.
 
-**Körpertemperatur**
-Das Optimum der menschlichen Körperkerntemperatur liegt bei **37,0 °C** (Schwankungsbereich 36,5–37,5 °C). Im Pessimum-Bereich treten bereits klinische Symptome auf: **Hypothermie** (< 35 °C) führt zu Bradykardie (verlangsamter Herzschlag), Bewusstseinsstörungen und Muskelsteifheit; **Hyperthermie** (> 40 °C) verursacht Tachykardie (beschleunigter Herzschlag), Delirium und Organversagen. Die Todespunkte liegen bei etwa **27 °C** (unterer Todespunkt — Kammerflimmern, Herzstillstand) und **42–43 °C** (oberer Todespunkt — Multiorganversagen durch Proteindenaturierung). Die ökologische Amplitude des Menschen für Temperatur ist also nur rund 15 °C breit.
+**Körpertemperatur:** Optimum bei 37,0 °C. Hypothermie (< 35 °C) und Hyperthermie (> 40 °C) sind klinische Pessima; die Todespunkte liegen bei ~27 °C (Herzstillstand) und ~42–43 °C (Proteindenaturierung, Multiorganversagen).
 
-**Blut-pH**
-Das Optimum des arteriellen Blut-pH liegt bei **7,40** (Toleranzbereich 7,35–7,45). Bereits geringe Abweichungen sind pathologisch: **Azidose** (pH < 7,35) stört Enzymfunktionen, reduziert die Herzkontraktilität und kann zu Koma führen; **Alkalose** (pH > 7,45) verursacht neuromuskuläre Übererregbarkeit, Krämpfe und Herzrhythmusstörungen. Die letalen Grenzen liegen bei etwa **pH 6,8** (unterer Todespunkt) und **pH 7,8** (oberer Todespunkt). Die Toleranzbreite beträgt nur 1,0 pH-Einheit — der Mensch ist für den pH-Wert extrem **stenök**.
+**Blut-pH:** Optimum 7,40 (Toleranzbereich 7,35–7,45). Die Toleranzbreite beträgt nur 1,0 pH-Einheit — der Mensch ist für den pH-Wert extrem **stenök**. Letale Grenzen bei pH 6,8 und pH 7,8.
 
-**Sauerstoff**
-Der optimale O₂-Anteil in der Atemluft beträgt **21 %** (atmosphärisch). **Hypoxie** tritt bei < 16 % O₂ auf (Höhenkrankheit, Bewusstlosigkeit bei < 10 %), **Sauerstofftoxizität** bei längerer Exposition gegenüber > 60 % O₂ (Bildung reaktiver Sauerstoffspezies, Schädigung des Lungenepithels, retrolentale Fibroplasie bei Frühgeborenen). Der Mensch ist für O₂ relativ **euryök** (breite Toleranz von ca. 10–60 %), verglichen mit dem extrem engen pH-Bereich.
+**Sauerstoff:** Optimum 21 % O₂. Hypoxie ab < 16 %, Sauerstofftoxizität bei prolongierter Exposition > 60 %. Für O₂ ist der Mensch relativ **euryök** verglichen mit dem engen pH-Bereich.
 
 | Parameter | Optimum | Unteres Pessimum | Oberes Pessimum | Todespunkte |
 |-----------|---------|-------------------|------------------|-------------|
@@ -212,6 +199,8 @@ In der **Ernährungsmedizin** ist das Minimumprinzip allgegenwärtig. Veganer k�
 Im **Schockgeschehen** wird das Prinzip dramatisch sichtbar: Bei einem hypovolämischen Schock (massiver Blutverlust) kann die Lunge optimal ventiliert sein und das Herz kräftig schlagen — doch der **Sauerstofftransport** ist durch das fehlende Blutvolumen limitiert. Sauerstoff wird zum Minimum, und alle Organe leiden unter Ischämie (Minderdurchblutung). Erst die Volumensubstitution (Infusion) beseitigt den limitierenden Faktor.
 
 > **Merke:** Liebigs Minimumgesetz: Das Wachstum wird immer durch den knappsten essenziellen Faktor begrenzt. Klinisch: Vitamin B₁₂ bei Veganern, Eisen bei Schwangeren, Sauerstoff im Schock — erst die Beseitigung des Minimums verbessert den Zustand.
+
+{{DIAGRAM:animal-cell}}
 
 ---
 
@@ -408,6 +397,8 @@ Jeder Krankheitserreger braucht bestimmte Bedingungen, um sich zu vermehren: den
 
 > **Merke:** Nische ≠ Lebensraum. Lebensraum = wo ein Organismus vorkommt. Nische = sämtliche Umweltfaktoren (Temperatur, Nahrung, Konkurrenten, Wirtsgewebe) plus die funktionelle Rolle im System.
 
+{{IMAGE}}
+
 ---
 
 ## Fundamentale und realisierte Nische (Hutchinson, 1957)
@@ -433,6 +424,8 @@ Das Nischen-Konzept erklärt präzise, warum Erreger bestimmte Gewebe befallen u
 3. **Anopheles-Mücke** (Darm und Speicheldrüse): Gametozyten (sexuelle Formen) werden von der Mücke aufgenommen, reifen dort heran und gelangen als Sporozoiten in den nächsten Wirt (Nische 3 — Vektor als Zwischenwirt).
 
 Jede dieser Nischen stellt andere Anforderungen (pH, Nährstoffe, Immunevasion), und Plasmodium hat für jede spezialisierte Oberflächenproteine entwickelt. Die fundamentale Nische des Parasiten ist auf diese drei Kompartimente beschränkt — er kann z. B. nicht auf unbelebten Oberflächen überleben.
+
+{{DIAGRAM:prokaryote-vs-eukaryote}}
 
 **Biofilm als Mikro-Nische — Pseudomonas auf dem Katheter:**
 
@@ -580,22 +573,13 @@ Bei Immunsuppression (z. B. HIV/AIDS mit CD4-T-Zell-Verlust, Chemotherapie-induz
 
 > **Merke:** Intraspezifisch = innerhalb einer Art (stärkste Konkurrenz wegen identischer Nische). Interspezifisch = zwischen Arten. Interferenz = direkt, Ausbeutung = indirekt.
 
----
-
-## Ökologische Nische — Fundamentalnische vs. Realnische
-
-Die **ökologische Nische** ist kein Ort, sondern die Gesamtheit aller Umweltbedingungen und Ressourcen, die eine Art zum Überleben braucht (Hutchinson, 1957). Man unterscheidet:
-
-- **Fundamentalnische:** Der theoretisch nutzbare Bereich ohne Konkurrenz — definiert durch physiologische Toleranzen (Temperatur, pH, Feuchtigkeit, Nahrung).
-- **Realnische:** Der tatsächlich genutzte Bereich **unter Konkurrenzdruck** — stets kleiner als die Fundamentalnische, weil andere Arten einen Teil der Ressourcen beanspruchen.
-
-**Beispiel — Seepocken (Connell, 1961):** *Chthamalus* lebt in der oberen Gezeitenzone, *Balanus* in der unteren. Entfernt man *Balanus*, breitet sich *Chthamalus* nach unten aus → die Fundamentalnische von *Chthamalus* ist größer als die Realnische. *Balanus* verdrängt *Chthamalus* durch Konkurrenz aus der unteren Zone.
-
-> **Merke:** Fundamentalnische = theoretisch möglich (ohne Konkurrenz). Realnische = tatsächlich besetzt (mit Konkurrenz). Realnische ⊂ Fundamentalnische.
+{{IMAGE}}
 
 ---
 
 ## Konkurrenzausschlussprinzip (Gause, 1934)
+
+Die ökologische Nische ist das Schlüsselkonzept hinter Konkurrenz: Zwei Arten, die dieselbe Nische besetzen (gleiche Ressourcen, gleiche Ansprüche), geraten zwangsläufig in Konflikt — das führt zum Konkurrenzausschluss.
 
 Zwei Arten mit **identischer ökologischer Nische** können nicht dauerhaft im selben Habitat koexistieren — eine Art verdrängt die andere. **Koexistenz** ist nur möglich durch **Nischendifferenzierung** (zeitlich, räumlich oder trophisch).
 
@@ -609,6 +593,8 @@ Zwei Arten mit **identischer ökologischer Nische** können nicht dauerhaft im s
 | **Zeitliche Trennung** | Tag- vs. nachtaktive Raubvögel (Habicht vs. Uhu) |
 | **Trophische Trennung** | Korallenriff-Fische: gleicher Lebensraum, aber verschiedene Beuteorganismen |
 | **Character Displacement** | Schnabelgröße zweier Finkenarten weicht stärker voneinander ab, wo sie sympatrisch (im selben Gebiet) vorkommen, als wo sie allopatrisch (getrennt) leben |
+
+{{DIAGRAM:phylogenetic-tree}}
 
 **Competitive Release (Konkurrenzbefeiung):** Verschwindet ein Konkurrent, dehnt die verbleibende Art ihre Realnische zur Fundamentalnische aus. Beispiel: Auf Inseln ohne Konkurrenten besetzen Eidechsenarten breitere Habitate und Nahrungsnischen als auf dem Festland.
 
@@ -855,6 +841,8 @@ Ein **Ökosystem** umfasst alle Lebewesen (Biozönose/biotische Komponente) eine
 
 > **Merke:** Produzenten → Konsumenten I → II → III → Destruenten. Destruenten bauen Detritus ab und schließen den Kreislauf. Nahrungsnetz > Nahrungskette (realistischer, stabiler).
 
+{{IMAGE}}
+
 ---
 
 ## Energiefluss und die 10%-Regel
@@ -904,6 +892,8 @@ Materie zirkuliert in **biogeochemischen Kreisläufen** zwischen biotischen und 
 - Fossile Brennstoffe: ~5.000 GtC (passiv, außer bei Verbrennung)
 
 **Ozeane als Puffer:** Ozeane absorbieren ca. 30% der anthropogenen CO₂-Emissionen → Ozeanversauerung (pH sinkt → Probleme für kalkbildende Organismen wie Korallen, Muscheln, Foraminiferen (kalkschalige Einzeller)).
+
+{{DIAGRAM:cell-cycle}}
 
 ### Stickstoffkreislauf
 
@@ -1129,6 +1119,8 @@ Jede Populationsgröße ändert sich durch vier Prozesse: **Geburten** und **Imm
 
 > **Merke:** ΔN = (Geburten + Immigration) − (Todesfälle + Emigration). Ist ΔN > 0, wächst die Population; ist ΔN < 0, schrumpft sie; bei ΔN = 0 herrscht Gleichgewicht.
 
+{{IMAGE}}
+
 ---
 
 ## Exponentielles Wachstum — die J-Kurve
@@ -1153,6 +1145,8 @@ Grafisch entsteht eine **J-förmige Kurve**, die immer steiler ansteigt. Dieses 
 - **Sepsis:** Bakteriämie mit *E. coli* → fulminanter Verlauf, weil Generationszeit nur 20 min vs. 15–20 h bei *M. tuberculosis* (schleichend)
 
 > **Merke:** Exponentielles Wachstum: N(t) = N₀·e^(rt), J-Kurve, keine Obergrenze. Verdopplungszeit = ln(2)/r. Kommt real nur bei unbegrenzten Ressourcen vor — Bakterienkultur, invasive Spezies, frühe Tumorphase.
+
+{{DIAGRAM:hemoglobin-curve}}
 
 ---
 
@@ -1666,7 +1660,7 @@ Das Komplementsystem ist ein kaskadenartiges System aus ca. 30 Plasmaproteinen, 
       ],
       content: `## Antikörperdiversität — Das Grundproblem
 
-Das menschliche Immunsystem kann Antikörper gegen praktisch jede Substanz bilden — eine unvorstellbare Vielfalt von mehr als 10¹⁰ verschiedenen Antikörperspezifitäten. Das Genom enthält jedoch nur ~20.000 Gene. Wie wird diese Diversität generiert?
+Das menschliche Immunsystem erkennt schätzungsweise mehr als 10¹⁰ verschiedene Antigene — eine Zahl, die das Genom mit seinen ~20.000 Genen unmöglich direkt codieren könnte. Die Lösung liegt in drei sich ergänzenden Mechanismen: **V(D)J-Rekombination** (kombinatorische Vielfalt), **junctionale Diversität** (zufällige Nukleotidinsertionen an Verbindungsstellen) und **somatische Hypermutation** (nachträgliche Feinabstimmung in Keimzentren). Diese Mechanismen zusammen erklären, wie ein begrenztes Genom eine nahezu unbegrenzte Antikörperbibliothek erzeugt.
 
 ---
 

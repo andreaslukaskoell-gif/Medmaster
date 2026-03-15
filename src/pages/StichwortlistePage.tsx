@@ -13,6 +13,7 @@ import {
   Target,
   Play,
 } from "lucide-react";
+import { EmptyState } from "@/components/ui/EmptyState";
 import { Card, CardContent } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
@@ -195,10 +196,10 @@ export default function StichwortlistePage() {
   }, [filteredStichworte]);
 
   return (
-    <div className="max-w-7xl mx-auto space-y-6">
+    <div className="max-w-5xl mx-auto space-y-6">
       <BreadcrumbNav items={[{ label: "BMS", href: "/bms" }, { label: "Stichwortliste" }]} />
 
-      <div>
+      <div className="hero-orbs text-center">
         <h1 className="text-2xl font-bold text-[var(--text-primary)]">
           BMS-Stichwortliste 2025/2026
         </h1>
@@ -208,13 +209,13 @@ export default function StichwortlistePage() {
       </div>
 
       {/* Abdeckungs-Dashboard */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div className="grid grid-cols-4 gap-4 stagger-children">
         {fachStats.map((fs) => {
           const colors = fachColors[fs.fach];
           return (
             <Card
               key={fs.fach}
-              className={`cursor-pointer transition-all hover:shadow-md ${
+              className={`card-glass cursor-pointer transition-all hover:shadow-md ${
                 activeTab === fs.fach
                   ? `ring-2 ring-offset-1 ${colors.border.replace("border-", "ring-")}`
                   : ""
@@ -237,7 +238,7 @@ export default function StichwortlistePage() {
       </div>
 
       {/* Gesamt-Statistik */}
-      <Card>
+      <Card className="card-glass">
         <CardContent className="p-4">
           <div className="flex flex-wrap items-center gap-4 text-sm">
             <div className="flex items-center gap-2">
@@ -269,7 +270,7 @@ export default function StichwortlistePage() {
       </Card>
 
       {/* Tabs + Search + Filter */}
-      <div className="flex flex-col sm:flex-row gap-3">
+      <div className="flex flex-row gap-3">
         <div className="flex gap-1 overflow-x-auto">
           {tabs.map((tab) => (
             <button
@@ -332,11 +333,11 @@ export default function StichwortlistePage() {
                   return (
                     <Card
                       key={sw.id}
-                      className={`border-l-4 ${colors.border} ${
+                      className={`card-glass border-l-4 ${colors.border} ${
                         isWeak ? "ring-1 ring-red-300 dark:ring-red-800" : ""
                       }`}
                     >
-                      <CardContent className="p-3 sm:p-4">
+                      <CardContent className="p-4">
                         <div className="flex items-start justify-between gap-3">
                           <div className="flex-1 min-w-0">
                             <div className="flex items-center gap-2 flex-wrap">
@@ -361,7 +362,7 @@ export default function StichwortlistePage() {
 
                           <div className="flex items-center gap-2 shrink-0">
                             {st.questionCount > 0 && (
-                              <span className="text-xs text-[var(--muted)] hidden sm:inline">
+                              <span className="text-xs text-[var(--muted)]">
                                 {st.questionCount} Fragen
                               </span>
                             )}
@@ -440,10 +441,12 @@ export default function StichwortlistePage() {
         })}
 
         {grouped.length === 0 && (
-          <div className="text-center py-12 text-[var(--muted)]">
-            <Search className="w-8 h-8 mx-auto mb-2 opacity-50" />
-            <p>Keine Stichworte gefunden.</p>
-          </div>
+          <EmptyState
+            icon="brain"
+            title="Noch keine Stichwörter"
+            description="Beantworte Kontrollfragen um deine Stichwortliste aufzubauen."
+            action={{ label: "BMS starten", href: "/bms" }}
+          />
         )}
       </div>
     </div>

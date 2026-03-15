@@ -62,6 +62,7 @@ const KFFDemo = lazy(() => import("@/pages/KFFDemo"));
 const AnalyticsDashboard = lazy(() => import("@/pages/AnalyticsDashboard"));
 const BlogIndex = lazy(() => import("@/pages/BlogIndex"));
 const BlogArticle = lazy(() => import("@/pages/BlogArticle"));
+const PaidLanding = lazy(() => import("@/pages/PaidLanding"));
 
 function LoadingSpinner() {
   return (
@@ -191,6 +192,7 @@ export default function App() {
           <Route path="/medat-kff-ueben" element={<KFFDemo />} />
           <Route path="/blog" element={<BlogIndex />} />
           <Route path="/blog/:slug" element={<BlogArticle />} />
+          <Route path="/lp/medat" element={<PaidLanding />} />
 
           {/* Analytics dashboard — password-protected, no auth needed */}
           <Route path="/admin/analytics" element={<AnalyticsDashboard />} />

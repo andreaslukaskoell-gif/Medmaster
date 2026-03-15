@@ -6,6 +6,7 @@ import { alleKapitel } from "@/data/bmsKapitel";
 import { getLevelFromXP, getLevelProgressPercent } from "@/lib/progression";
 import { StreakFlameIcon } from "@/components/dashboard/StreakFire";
 import { Progress } from "@/components/ui/progress";
+import { EmptyState } from "@/components/ui/EmptyState";
 
 export default function FortschrittPage() {
   usePageTitle("Fortschritt");
@@ -40,6 +41,15 @@ export default function FortschrittPage() {
             Überblick, Schwachstellen, Statistik und Prognose – alles an einem Ort.
           </p>
         </div>
+
+        {xp === 0 && completedChapters.length === 0 && (
+          <EmptyState
+            icon="chart"
+            title="Noch keine Fortschrittsdaten"
+            description="Starte mit dem Lernen um deinen Fortschritt zu verfolgen."
+            action={{ label: "Jetzt lernen", href: "/bms" }}
+          />
+        )}
 
         {/* Quick overview — glass card */}
         <div className="card-glass mb-6 p-5">
@@ -82,7 +92,7 @@ export default function FortschrittPage() {
         </div>
 
         {/* Navigation cards */}
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 gap-4 stagger-children">
           <Link to="/schwachstellen">
             <div className="card-glass p-5 flex items-center gap-4 cursor-pointer hover:shadow-md transition-shadow duration-200">
               <div className="w-12 h-12 rounded-xl bg-[var(--accent)]/15 flex items-center justify-center shrink-0">

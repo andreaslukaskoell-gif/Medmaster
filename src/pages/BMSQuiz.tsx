@@ -187,34 +187,32 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
     const pct = Math.round((score / questions.length) * 100);
 
     return (
-      <div className="max-w-3xl mx-auto space-y-6">
+      <div className="max-w-5xl mx-auto space-y-6">
         <Confetti active={showConfetti} />
         <Button variant="ghost" size="sm" onClick={onBack}>
           <ArrowLeft className="w-4 h-4 mr-1" />
           Zurück zu BMS
         </Button>
 
-        <Card>
-          <CardContent className="p-6 text-center">
-            <div className="text-4xl font-bold text-[var(--accent)]">
-              {score}/{questions.length}
-            </div>
-            <p className="text-[var(--muted)] mt-1">{pct}% richtig</p>
-            <p className="text-sm text-green-600 dark:text-green-400 font-medium mt-2">
-              +{score * 10} XP erhalten
-            </p>
-            {pct >= 90 && <p className="text-sm text-yellow-600 font-bold mt-1">Hervorragend!</p>}
-            <div className="mt-4">
-              <ShareResultButton
-                text={getQuizShareText(
-                  subjectColors[subject]?.label || subject,
-                  score,
-                  questions.length
-                )}
-              />
-            </div>
-          </CardContent>
-        </Card>
+        <div className="card-glass rounded-2xl p-6 text-center">
+          <div className="text-4xl font-bold text-[var(--accent)]">
+            {score}/{questions.length}
+          </div>
+          <p className="text-[var(--muted)] mt-1">{pct}% richtig</p>
+          <p className="text-sm text-green-600 dark:text-green-400 font-medium mt-2">
+            +{score * 10} XP erhalten
+          </p>
+          {pct >= 90 && <p className="text-sm text-yellow-600 font-bold mt-1">Hervorragend!</p>}
+          <div className="mt-4">
+            <ShareResultButton
+              text={getQuizShareText(
+                subjectColors[subject]?.label || subject,
+                score,
+                questions.length
+              )}
+            />
+          </div>
+        </div>
 
         {subject === "gemischt" &&
           (() => {
@@ -226,38 +224,36 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
               if (answers[q.id] === q.correctOptionId) bySubject[s].correct += 1;
             });
             return (
-              <Card>
-                <CardContent className="p-5">
-                  <h3 className="text-sm font-semibold text-[var(--text-primary)] mb-3">
-                    Ergebnis nach Fach
-                  </h3>
-                  <div className="grid grid-cols-2 gap-3">
-                    {Object.entries(bySubject).map(([subj, data]) => {
-                      const c = subjectColors[subj];
-                      const subjPct = Math.round((data.correct / data.total) * 100);
-                      return (
-                        <div key={subj} className={`${c?.bg || ""} rounded-lg p-3`}>
-                          <div className="flex items-center justify-between mb-1">
-                            <span className={`text-sm font-medium ${c?.text || ""}`}>
-                              {c?.label || subj}
-                            </span>
-                            <Badge
-                              variant={
-                                subjPct >= 70 ? "success" : subjPct >= 50 ? "warning" : "danger"
-                              }
-                            >
-                              {subjPct}%
-                            </Badge>
-                          </div>
-                          <p className="text-xs text-[var(--muted)]">
-                            {data.correct}/{data.total} richtig
-                          </p>
+              <div className="card-glass rounded-2xl p-5">
+                <h3 className="text-sm font-semibold text-[var(--text-primary)] mb-3">
+                  Ergebnis nach Fach
+                </h3>
+                <div className="grid grid-cols-2 gap-3 stagger-children">
+                  {Object.entries(bySubject).map(([subj, data]) => {
+                    const c = subjectColors[subj];
+                    const subjPct = Math.round((data.correct / data.total) * 100);
+                    return (
+                      <div key={subj} className={`${c?.bg || ""} rounded-lg p-3`}>
+                        <div className="flex items-center justify-between mb-1">
+                          <span className={`text-sm font-medium ${c?.text || ""}`}>
+                            {c?.label || subj}
+                          </span>
+                          <Badge
+                            variant={
+                              subjPct >= 70 ? "success" : subjPct >= 50 ? "warning" : "danger"
+                            }
+                          >
+                            {subjPct}%
+                          </Badge>
                         </div>
-                      );
-                    })}
-                  </div>
-                </CardContent>
-              </Card>
+                        <p className="text-xs text-[var(--muted)]">
+                          {data.correct}/{data.total} richtig
+                        </p>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
             );
           })()}
 
@@ -280,72 +276,70 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
           const avgTime = questions.length > 0 ? Math.round(totalTime / questions.length) : 0;
 
           return (
-            <Card>
-              <CardContent className="p-5 space-y-4">
-                {totalTime > 0 && (
-                  <div className="flex items-center gap-4 text-xs text-[var(--muted)]">
-                    <span>
-                      Gesamt: {Math.floor(totalTime / 60)}:{String(totalTime % 60).padStart(2, "0")}{" "}
-                      min
-                    </span>
-                    <span>~{avgTime}s pro Frage</span>
-                  </div>
-                )}
-                <h3 className="text-sm font-semibold text-[var(--text-primary)]">
-                  Ergebnis nach Kapitel
-                </h3>
-                <div className="space-y-2">
-                  {chapters.map(([ch, data]) => {
-                    const chPct = Math.round((data.correct / data.total) * 100);
-                    return (
-                      <div key={ch} className="flex items-center gap-3">
-                        <div className="flex-1 min-w-0">
-                          <div className="flex items-center justify-between mb-1">
-                            <span className="text-xs font-medium text-[var(--text-primary)] truncate">
-                              {ch}
-                            </span>
-                            <span
-                              className={`text-xs font-semibold ${
-                                chPct >= 70
-                                  ? "text-emerald-600 dark:text-emerald-400"
-                                  : chPct >= 50
-                                    ? "text-amber-600 dark:text-amber-400"
-                                    : "text-red-600 dark:text-red-400"
-                              }`}
-                            >
-                              {data.correct}/{data.total}
-                            </span>
-                          </div>
-                          <div className="w-full bg-[var(--surface)] rounded-full h-1.5">
-                            <div
-                              className={`h-1.5 rounded-full transition-all ${
-                                chPct >= 70
-                                  ? "bg-emerald-500"
-                                  : chPct >= 50
-                                    ? "bg-amber-500"
-                                    : "bg-red-500"
-                              }`}
-                              style={{ width: `${chPct}%` }}
-                            />
-                          </div>
+            <div className="card-glass rounded-2xl p-5 space-y-4">
+              {totalTime > 0 && (
+                <div className="flex items-center gap-4 text-xs text-[var(--muted)]">
+                  <span>
+                    Gesamt: {Math.floor(totalTime / 60)}:{String(totalTime % 60).padStart(2, "0")}{" "}
+                    min
+                  </span>
+                  <span>~{avgTime}s pro Frage</span>
+                </div>
+              )}
+              <h3 className="text-sm font-semibold text-[var(--text-primary)]">
+                Ergebnis nach Kapitel
+              </h3>
+              <div className="space-y-2">
+                {chapters.map(([ch, data]) => {
+                  const chPct = Math.round((data.correct / data.total) * 100);
+                  return (
+                    <div key={ch} className="flex items-center gap-3">
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center justify-between mb-1">
+                          <span className="text-xs font-medium text-[var(--text-primary)] truncate">
+                            {ch}
+                          </span>
+                          <span
+                            className={`text-xs font-semibold ${
+                              chPct >= 70
+                                ? "text-emerald-600 dark:text-emerald-400"
+                                : chPct >= 50
+                                  ? "text-amber-600 dark:text-amber-400"
+                                  : "text-red-600 dark:text-red-400"
+                            }`}
+                          >
+                            {data.correct}/{data.total}
+                          </span>
+                        </div>
+                        <div className="w-full bg-[var(--surface)] rounded-full h-1.5">
+                          <div
+                            className={`h-1.5 rounded-full transition-all ${
+                              chPct >= 70
+                                ? "bg-emerald-500"
+                                : chPct >= 50
+                                  ? "bg-amber-500"
+                                  : "bg-red-500"
+                            }`}
+                            style={{ width: `${chPct}%` }}
+                          />
                         </div>
                       </div>
-                    );
-                  })}
+                    </div>
+                  );
+                })}
+              </div>
+              {weakChapters.length > 0 && (
+                <div className="bg-amber-50 dark:bg-amber-900/20 rounded-lg p-3">
+                  <p className="text-xs font-semibold text-amber-800 dark:text-amber-300 mb-1">
+                    Empfehlung
+                  </p>
+                  <p className="text-xs text-amber-700 dark:text-amber-400">
+                    Wiederhole {weakChapters.map(([ch]) => ch).join(", ")} — dort hast du noch
+                    Lücken.
+                  </p>
                 </div>
-                {weakChapters.length > 0 && (
-                  <div className="bg-amber-50 dark:bg-amber-900/20 rounded-lg p-3">
-                    <p className="text-xs font-semibold text-amber-800 dark:text-amber-300 mb-1">
-                      Empfehlung
-                    </p>
-                    <p className="text-xs text-amber-700 dark:text-amber-400">
-                      Wiederhole {weakChapters.map(([ch]) => ch).join(", ")} — dort hast du noch
-                      Lücken.
-                    </p>
-                  </div>
-                )}
-              </CardContent>
-            </Card>
+              )}
+            </div>
           );
         })()}
 
@@ -429,7 +423,9 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
         </div>
 
         <div className="flex justify-center pt-4">
-          <Button onClick={onBack}>Zurück zu BMS</Button>
+          <Button variant="premium" onClick={onBack}>
+            Zurück zu BMS
+          </Button>
         </div>
 
         {aiTutorQ && (
@@ -444,13 +440,13 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
   }
 
   return (
-    <div className="max-w-3xl mx-auto space-y-6">
-      <div className="flex items-center justify-between flex-wrap gap-2">
+    <div className="max-w-5xl mx-auto space-y-6">
+      <div className="flex items-center justify-between gap-2">
         <Button variant="ghost" size="sm" onClick={onBack}>
           <ArrowLeft className="w-4 h-4 mr-1" />
           Abbrechen
         </Button>
-        <div className="flex items-center gap-3 flex-wrap">
+        <div className="flex items-center gap-3">
           <Badge variant="info" className="text-xs font-normal">
             An dein Level angepasst
           </Badge>
@@ -467,39 +463,37 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
         </div>
       </div>
 
-      <div className="w-full bg-[var(--surface)] rounded-full h-2">
+      <div className="progress-premium">
         <div
-          className="bg-[var(--accent)] h-2 rounded-full transition-all"
+          className="progress-fill"
           style={{ width: `${((currentIndex + 1) / questions.length) * 100}%` }}
         />
       </div>
 
-      <Card>
-        <CardContent className="p-6">
-          <p className="text-base font-medium text-[var(--text-primary)] mb-6">
-            {currentQuestion.text}
-          </p>
-          <div className="space-y-3">
-            {currentQuestion.options.map((opt, i) => (
-              <button
-                key={opt.id}
-                onClick={() => handleSelect(opt.id)}
-                className={`w-full text-left px-4 py-3 rounded-lg border text-sm transition-colors cursor-pointer ${
-                  answers[currentQuestion.id] === opt.id
-                    ? "border-[var(--accent)] bg-[var(--accent)]/5 dark:bg-[var(--accent)]/10 text-[var(--accent)]"
-                    : "border-[var(--border)] dark:border-[var(--border)] hover:bg-accent text-[var(--text-primary)]"
-                }`}
-              >
-                <span className="font-semibold mr-2">{opt.id.toUpperCase()})</span>
-                {opt.text}
-                <kbd className="float-right text-[10px] bg-[var(--surface)] px-1.5 py-0.5 rounded text-[var(--muted)]">
-                  {i + 1}
-                </kbd>
-              </button>
-            ))}
-          </div>
-        </CardContent>
-      </Card>
+      <div className="card-glass rounded-2xl p-6">
+        <p className="text-base font-medium text-[var(--text-primary)] mb-6">
+          {currentQuestion.text}
+        </p>
+        <div className="space-y-3">
+          {currentQuestion.options.map((opt, i) => (
+            <button
+              key={opt.id}
+              onClick={() => handleSelect(opt.id)}
+              className={`w-full text-left px-4 py-3 rounded-lg border text-sm transition-colors cursor-pointer ${
+                answers[currentQuestion.id] === opt.id
+                  ? "border-[var(--accent)] bg-[var(--accent)]/5 dark:bg-[var(--accent)]/10 text-[var(--accent)]"
+                  : "border-[var(--border)] dark:border-[var(--border)] hover:bg-accent text-[var(--text-primary)]"
+              }`}
+            >
+              <span className="font-semibold mr-2">{opt.id.toUpperCase()})</span>
+              {opt.text}
+              <kbd className="float-right text-[10px] bg-[var(--surface)] px-1.5 py-0.5 rounded text-[var(--muted)]">
+                {i + 1}
+              </kbd>
+            </button>
+          ))}
+        </div>
+      </div>
 
       <div className="flex items-center justify-between">
         <Button

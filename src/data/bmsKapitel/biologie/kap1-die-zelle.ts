@@ -32,19 +32,19 @@ export const bioKap1: Kapitel = {
 
 Kein einzelnes Merkmal allein definiert Leben — erst ihr Zusammenspiel kennzeichnet ein lebendes System:
 
-1. **Stoffwechsel** (Metabolismus): Chemische Reaktionen zum Aufbau (Anabolismus) und Abbau (Katabolismus) körpereigener Stoffe. Treibstoff ist **ATP** (Adenosintriphosphat, die universelle Energiewährung jeder Zelle) — ohne ATP keine Arbeit in der Zelle.
+1. **Stoffwechsel** (Metabolismus): Chemische Reaktionen zum Aufbau (Anabolismus) und Abbau (Katabolismus) körpereigener Stoffe. **ATP** ist die universelle Energiewährung jeder Zelle — ohne ATP keine Arbeit.
 
-2. **Reizbarkeit**: Wahrnehmung von Umweltreizen und gezielte Reaktion — über Rezeptoren, Nervenleitungen und Signalkaskaden (mehrstufige Signalweiterleitungswege). Beispiel: Nervenzelle feuert bei Berührung; Immunzelle reagiert auf ein Pathogen (Krankheitserreger).
+2. **Reizbarkeit**: Wahrnehmung von Umweltreizen und gezielte Reaktion über Rezeptoren, Nervenleitungen und Signalkaskaden. Beispiel: Eine Nervenzelle feuert bei Berührung; eine Immunzelle reagiert auf einen Erreger.
 
-3. **Fortpflanzung**: Weitergabe genetischer Information — sexuell (mit Rekombination, erhöht Vielfalt) oder asexuell (genetisch identische Kopien). Einzigartig für Lebewesen.
+3. **Fortpflanzung**: Weitergabe genetischer Information — sexuell (mit Rekombination) oder asexuell (identische Kopien).
 
-4. **Wachstum und Entwicklung**: Zellvermehrung durch Zellteilung und differentielle Genexpression. Aus einer einzelnen befruchteten Eizelle entstehen mehr als 200 verschiedene Zelltypen.
+4. **Wachstum und Entwicklung**: Zellvermehrung durch Zellteilung und differentielle Genexpression. Aus einer einzigen befruchteten Eizelle entstehen mehr als 200 verschiedene Zelltypen.
 
-5. **Evolution**: Anpassung an die Umwelt über Generationen durch Mutation, Rekombination und natürliche Selektion. Beispiel: Antibiotikaresistenz bei Bakterien entsteht genau so.
+5. **Evolution**: Anpassung über Generationen durch Mutation, Rekombination und natürliche Selektion. Antibiotikaresistenz bei Bakterien ist ein aktuelles Beispiel.
 
-6. **Bewegung**: Aktive Ortsveränderung (Flagellen (Geißeln zur Fortbewegung), Muskelkontraktion) oder interne Bewegung (Vesikelransport, Chromosomenverteilung bei Zellteilung).
+6. **Bewegung**: Aktive Ortsveränderung (Flagellen, Muskelkontraktion) oder interne Bewegung (Vesikeltransport, Chromosomenverteilung bei Zellteilung).
 
-7. **Homöostase**: Aktive Aufrechterhaltung innerer Gleichgewichte (pH, Temperatur, Blutzucker, Osmolarität) trotz schwankender Außenbedingungen — über Regelkreise. Das für die Medizin wichtigste Kennzeichen.
+7. **Homöostase**: Aktive Aufrechterhaltung innerer Gleichgewichte (pH, Temperatur, Blutzucker, Osmolarität) trotz schwankender Außenbedingungen. Das für die Medizin wichtigste Kennzeichen.
 
 > **Merke:** **StReForWaEvoBeHo**: Stoffwechsel – Reizbarkeit – Fortpflanzung – Wachstum – Evolution – Bewegung – Homöostase
 
@@ -92,7 +92,7 @@ Viren zeigen nur einige Kennzeichen des Lebens, andere fehlen vollständig:
 | Reizbarkeit | ✗ | ✓ |
 | Fortpflanzung | ✓ (in Wirtszellen) | ✓ |
 | Wachstum | ✗ | ✓ |
-| Evolution | ✓ (Antigendrift (schrittweise Mutation der Oberflächenproteine), Antigenshifts (plötzlicher Austausch ganzer Gensegmente)) | ✓ |
+| Evolution | ✓ (Antigendrift, Antigenshift) | ✓ |
 | Bewegung | ✗ | ✓ |
 | Zellstruktur | ✗ (keine Zelle, keine Ribosomen) | ✓ |
 
@@ -106,6 +106,7 @@ Viren zeigen nur einige Kennzeichen des Lebens, andere fehlen vollständig:
 
 ## Emergenz und hierarchische Organisation
 
+Das Virus-Beispiel zeigt: Die Kennzeichen des Lebens sind kein beliebiges Beiwerk — sie definieren ein vollständiges System. Dieses System besitzt eine Eigenschaft, die seine Einzelteile nicht haben: **Emergenz**.
 
 {{DIAGRAM:plant-vs-animal-cell}}
 
@@ -308,8 +309,6 @@ Die **Gram-Färbung** ist eine einfache Schnellfärbung zur Unterscheidung von B
 - Beispiele: *E. coli*, *Salmonella*, *Pseudomonas*, *Neisseria meningitidis*
 - Penicillin muss erst äußere Membran überwinden → schlechterer Zugang → häufiger resistent
 
-**Peptidoglykan (Murein):** Ein Netzwerk aus Zuckerketten (N-Acetylglucosamin + N-Acetylmuraminsäure), quervernetzt durch kurze Peptide — es gibt der Bakterienzelle mechanische Festigkeit gegen osmotischen Druck. **LPS** (Lipopolysaccharid) kommt nur bei **Gram-negativen** Bakterien vor (in der äußeren Membran) und wirkt als **Endotoxin** (kann bei Bakteriämie septischen Schock auslösen).
-
 > **Merke:** Gram-positiv (violett) = dicke Peptidoglykanschicht. Gram-negativ (rosa) = dünn + LPS-Außenmembran. LPS → septischer Schock!
 
 ---
@@ -317,7 +316,7 @@ Die **Gram-Färbung** ist eine einfache Schnellfärbung zur Unterscheidung von B
 ## Ribosomen 70S vs. 80S: Grundlage der Antibiotikatherapie
 
 
-Prokaryotische Ribosomen haben den **Sedimentationskoeffizienten** (Maß der Sinkgeschwindigkeit) **70S** (30S + 50S), eukaryotische **80S** (40S + 60S) — die Zahl beschreibt, wie schnell die Partikel in der **Ultrazentrifuge** (Hochgeschwindigkeitszentrifuge zur Trennung) sedimentieren. Wegen dieser **strukturellen Unterschiede** binden bestimmte Antibiotika nur an 70S-Ribosomen und hemmen so gezielt die bakterielle Proteinbiosynthese:
+Der **Sedimentationskoeffizient** beschreibt, wie schnell ein Partikel in der Ultrazentrifuge sedimentiert. Prokaryotische Ribosomen haben den Wert **70S** (30S + 50S-Untereinheit), eukaryotische **80S** (40S + 60S). Wegen dieser strukturellen Unterschiede binden bestimmte Antibiotika selektiv an 70S-Ribosomen und hemmen so gezielt die bakterielle Proteinbiosynthese:
 
 | Antibiotikum | Zielstruktur | Wirkung |
 |---|---|---|
@@ -345,7 +344,7 @@ Die **Endosymbiontentheorie** besagt: Vor ~1,5–2 Milliarden Jahren wurde ein �
 4. **Binäre Fission:** Mitochondrien teilen sich durch binäre Teilung, nicht durch Mitose
 5. **Antibiotika-Empfindlichkeit:** Chloramphenicol hemmt mitochondriale Proteinsynthese (wie bei Bakterien)
 
-**Besonderheiten der mtDNA:** Kodiert nur ~13 Proteine der Atmungskette; maternale Vererbung (Mitochondrien kommen aus dem Eizellzytoplasma); häufige Mutationsstellen → mitochondriale Erkrankungen (MELAS (Schlaganfall-ähnliche Episoden mit Laktatazidose), Leber-Optikusneuropathie (erbliche Sehnervenerkrankung)).
+**Besonderheiten der mtDNA:** Kodiert nur ~13 Proteine der Atmungskette. Die Vererbung ist **maternal** — Mitochondrien stammen ausschließlich aus dem Eizellzytoplasma. Mutationen in der mtDNA führen zu mitochondrialen Erkrankungen wie MELAS (Schlaganfall-ähnliche Episoden mit Laktatazidose) oder LHON (hereditäre Optikusneuropathie).
 
 > **Merke:** Endosymbiontentheorie: 5 Belege = zirkuläre DNA, 70S-Ribosomen, Doppelmembran, binäre Fission, Antibiotika-Empfindlichkeit. mtDNA = maternale Vererbung.
 
@@ -359,12 +358,12 @@ Das **Drei-Domänen-Modell** (Carl Woese, 1977, basierend auf 16S rRNA-Sequenzve
 - **Archaea** (Archäen)
 - **Eukarya** (Eukaryoten)
 
-**Archäen sind Prokaryoten** (kein membranumschlossener Kern), aber biochemisch eigenständig:
-- **Keine Peptidoglykan-Zellwand** → **Penicillin-resistent** (wichtig!)
-- **Ether-Lipide** (Lipide mit Etherbindung statt Esterbindung) statt Ester-Lipide in Zellmembran (stabiler in Extrembedingungen)
-- Genexpressionsapparat ähnelt Eukaryoten (**TATA-Box** (Promotorsequenz für Transkriptionsstart), Transkriptionsfaktoren)
+**Archäen sind Prokaryoten** — kein membranumschlossener Kern — aber biochemisch eigenständig:
+- **Keine Peptidoglykan-Zellwand** → Penicillin wirkt nicht (wichtig für die Klinik!)
+- **Ether-Lipide** statt Ester-Lipide in der Zellmembran — stabiler unter Extrembedingungen
+- Genexpressionsapparat ähnelt Eukaryoten (TATA-Box, Transkriptionsfaktoren)
 
-**Extremophile** (Organismen in Extremlebensräumen)**:** Thermophile (hitzeliebend, bis 121°C), Halophile (salzliebend, gesättigte Salzlösungen), Methanogene (methanbildend, produzieren CH₄ im Darm und Sumpf)
+Viele Archäen sind **Extremophile**: Thermophile (bis 121°C), Halophile (gesättigte Salzlösungen), Methanogene (produzieren CH₄ im Darm und Sumpf).
 
 > **Merke:** Archäen: Prokaryoten-Bau, aber kein Peptidoglykan → Penicillin-resistent. Dritte Domäne neben Bakterien und Eukaryoten.`,
       lernziele: [
@@ -504,9 +503,9 @@ Das **Drei-Domänen-Modell** (Carl Woese, 1977, basierend auf 16S rRNA-Sequenzve
       ],
       content: `## Grundprinzip: Phospholipid-Doppelschicht
 
-**Warum ist die Membran überhaupt eine Barriere — und für wen durchlässig?** Das lässt sich nur beantworten, wenn man weiß, woraus sie besteht. Deshalb zuerst der Aufbau.
+Die Zellmembran ist die Grenze zwischen Zelle und Außenwelt — nicht als starre Wand, sondern als selektive, dynamische Schranke. Ihr Aufbau erklärt direkt, was sie durchlässt und was nicht.
 
-Die Bausteine der Membran heißen **Phospholipide** — Fettmoleküle mit einem wasserfreundlichen „Kopf” und zwei wasserabweisenden „Schwänzen”. **Amphiphil** (griech.: beide Seiten liebend) bedeutet genau das: ein Teil des Moleküls ist wasseranziehend, der andere wasserabweisend.
+Die Bausteine heißen **Phospholipide** — Moleküle mit einem wasserfreundlichen „Kopf” (Phosphatgruppe + Glycerin + polarer Rest) und zwei wasserabweisenden „Schwänzen” (Fettsäureketten). Dieses Doppelgesicht nennt man **amphiphil** (griech.: beide Seiten liebend).
 - **Hydrophiler Kopf**: Phosphatgruppe + Glycerin + polarer Rest (z. B. Cholin) → wasserlöslich
 - **Hydrophobe Schwänze**: zwei **Fettsäureketten** — die hydrophoben Ketten der Phospholipide; längere Kohlenstoffketten, die Fett aufbauen und wasserabweisend wirken
 
@@ -524,7 +523,7 @@ Weil das Innere der Doppelschicht aus Fettschwänzen besteht, ist die Membran **
 
 {{IMAGE}}
 
-**Steroide** (z. B. Cortisol, Vitamin D) sind fettähnliche Moleküle und können die Lipidschicht daher gut durchqueren. Ionen dagegen sind geladen und von einer Wasserschicht umhüllt — der Eintritt in die fettige Membran wäre energetisch sehr ungünstig; dafür braucht die Zelle spezielle **Proteine** (Funktionsmoleküle aus Aminosäuren; Kanäle, Transporter), die im nächsten Abschnitt vorkommen.
+Steroide (z. B. Cortisol, Vitamin D) sind lipophil und passieren die Membran ungehindert. Ionen sind geladen und von einer Wasserhülle umgeben — ihr Durchtritt durch die hydrophobe Zone wäre energetisch viel zu teuer. Dafür braucht die Zelle spezialisierte Membranproteine: Kanäle und Transporter.
 
 > **Merke:** Phospholipide = amphiphil → Bilayer durch Selbstorganisation. Kleine unpolare Moleküle frei; Ionen und große polare Moleküle brauchen Proteine.
 
@@ -551,14 +550,9 @@ Weil das Innere der Doppelschicht aus Fettschwänzen besteht, ist die Membran **
 
 {{DIAGRAM:cell-membrane}}
 
-**Bewegungstypen der Membranlipide** — Phospholipide sind in der Doppelschicht keineswegs fixiert. Sie führen vier charakteristische Bewegungen aus, die sich in Geschwindigkeit und biologischer Bedeutung stark unterscheiden:
+**Lipidbewegung — das Wesentliche:** Phospholipide bewegen sich **lateral** sehr schnell (10⁷-mal/Sekunde Platztausch mit dem Nachbarn — messbar durch FRAP). Den Wechsel von einer Schicht zur anderen (**Flip-Flop**) schaffen sie dagegen kaum allein — der hydrophile Kopf müsste das hydrophobe Innere passieren. Halbwertszeit: Stunden bis Tage. Enzyme beschleunigen das: **Flippasen** (PS nach innen, ATP-abhängig), **Floppasen** (nach außen, ATP-abhängig), **Scramblasen** (bidirektional, ATP-unabhängig → PS-Flip bei Apoptose).
 
-- **Laterale Diffusion**: Seitliche Wanderung innerhalb derselben Membranschicht — mit Abstand die häufigste Bewegung. Ein Phospholipid wechselt dabei ca. 10⁷-mal pro Sekunde den Platz mit seinem Nachbarn. Messbar durch **FRAP** (Fluorescence Recovery After Photobleaching).
-- **Rotation**: Drehung des gesamten Lipidmoleküls um die eigene Längsachse — ebenfalls sehr schnell und energetisch günstig.
-- **Flexion** (Fettsäureketten-Biegung): Die hydrophoben Schwänze biegen und strecken sich ständig durch Rotation um C–C-Bindungen. Diese Bewegung nimmt zum Membraninneren hin zu und trägt wesentlich zur Fluidität bei.
-- **Flip-Flop** (transversale Diffusion): Wechsel eines Lipids von einer Schicht zur anderen — extrem selten (Halbwertszeit: Stunden bis Tage), weil der hydrophile Kopf durch das hydrophobe Membraninnere geschleust werden muss. Beschleunigt durch **Flippasen** (ATP-abhängig, ziehen PS nach innen), **Floppasen** (ATP-abhängig, transportieren nach außen) und **Scramblasen** (ATP-unabhängig, bidirektional, z. B. bei Apoptose → PS-Exposition).
-
-> **Merke:** Cholesterin = Fluiditätspuffer in beide Richtungen. Ungesättigte Fettsäuren → mehr Fluidität; gesättigte → weniger. Laterale Diffusion und Rotation sind schnell und häufig; Flip-Flop ist extrem langsam und benötigt Enzyme (Flippasen, Floppasen, Scramblasen).
+> **Merke:** Cholesterin = Fluiditätspuffer in beide Richtungen. Ungesättigte Fettsäuren → mehr Fluidität; gesättigte → weniger. Laterale Diffusion ist extrem schnell; Flip-Flop ist extrem langsam und benötigt Enzyme.
 
 ---
 
@@ -830,6 +824,8 @@ Substanzen werden **gegen** ihren Gradienten gepumpt. Das zentrale Beispiel: die
 - Ergebnis: hohe Na⁺-Konzentration **außen**, hohe K⁺-Konzentration **innen**
 - Aufbau des **Ruhemembranpotenzials** (~−70 mV, innen negativ gegenüber außen)
 - Niedrige intrazelluläre Na⁺-Konzentration = Grundlage für sekundär aktiven Transport und Aktionspotenzial
+
+{{DIAGRAM:membrane-transport}}
 
 > **Merke:** Na⁺/K⁺-ATPase: 3 Na⁺ raus, 2 K⁺ rein pro 1 ATP — nicht umgekehrt! Sie ist die wichtigste Pumpe der Zelle.
 
@@ -1265,7 +1261,7 @@ Rund 3000 Moleküle passieren jede Kernpore pro Sekunde — ohne diese Schleusen
 - **Freie Diffusion**: Moleküle <40 kDa (Ionen, kleine Proteine, Metabolite)
 - **Aktiver Transport** (>40 kDa): braucht ein “Ticket”
 
-**Kernimport und -export:**
+**Kernimport und -export:** Jeder Stoff, der den Kern betritt oder verlässt, wird kontrolliert — Transkriptionsfaktoren müssen rein, fertige mRNA muss raus, fehlgefaltete Proteine werden nicht eingelassen. Der Transportmechanismus:
 - **NLS** (Nuclear Localization Signal): basische Aminosäuren (Lys, Arg) → wird von **Importin-α** erkannt → Importin-α/β-Komplex trägt Protein durch NPC → im Kern: RanGTP bindet Importin → Cargo-Dissoziation
 - **NES** (Nuclear Export Signal): hydrophobe Sequenz → wird von Exportin (CRM1) gebunden → Export ins Zytoplasma
 - **RanGTPase-Gradient**: RanGTP (Kern) ↔ RanGDP (Zytoplasma) treibt den gerichteten Transport; RanGAP im Zytoplasma hydrolysiert GTP → Zyklus
@@ -1323,7 +1319,7 @@ Das menschliche Genom umfasst 3,2 Milliarden Basenpaare — ausgestreckt ca. **2
 ## Nucleolus: Ribosomenfabrik
 
 
-Der **Nucleolus** ist keine Membranstruktur, sondern ein **Phasenseparations-Kondensatstruktur** (organisiert um rRNA-Gene auf Chromosomen 13, 14, 15, 21, 22).
+Der **Nucleolus** ist der Ort der Ribosomenfabrikation — keine Membranstruktur, sondern ein funktioneller Kondensationspunkt um die ribosomalen RNA-Gene der Chromosomen 13, 14, 15, 21 und 22.
 
 **Funktion:**
 1. RNA-Polymerase I synthetisiert 45S-prä-rRNA → Prozessierung zu 28S, 18S, 5.8S rRNA
@@ -1793,6 +1789,8 @@ Pro Glucose (2 Pyruvat): 2 Acetyl-CoA + 2 CO₂ + 2 NADH
 **Regulation:** PDH-Kinase phosphoryliert und inaktiviert PDH (bei hohem ATP, NADH, Acetyl-CoA). PDH-Phosphatase aktiviert PDH (bei Calcium, Insulin). **Klinisch wichtig:** Thiamin (B1)-Mangel → PDH-Funktionsverlust → Pyruvat akkumuliert → Laktat ↑. Bei Alkoholismus: Wernicke-Enzephalopathie (Thiamin-Mangel → PDH-Defekt → Glukosestoffwechsel im Gehirn zusammengebrochen).
 
 > **Merke:** Brückenschritt = Pyruvat → Acetyl-CoA. Findet in Mitochondrien statt. Thiamin-Mangel → PDH-Defekt → Wernicke-Enzephalopathie!
+
+{{DIAGRAM:double-membrane-organelles}}
 
 ---
 

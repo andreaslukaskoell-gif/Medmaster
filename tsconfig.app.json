@@ -26,5 +26,5 @@
     "noUncheckedSideEffectImports": true
   },
   "include": ["src"],
-  "exclude": ["src/_backup_FEBRUARY_18"]
+  "exclude": ["src/_backup_FEBRUARY_18", "src/**/*.stories.tsx"]
 }

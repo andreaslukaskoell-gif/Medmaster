@@ -38,6 +38,7 @@ import { useNoIndex } from "@/hooks/usePageTitle";
 import { useReferralAttribution } from "@/hooks/useReferralAttribution";
 import { SIDEBAR_MAIN_ML } from "./sidebarLayout";
 import { KeyboardShortcutsOverlay } from "@/components/KeyboardShortcutsOverlay";
+import { OnboardingWizard } from "@/components/OnboardingWizard";
 
 /** True when route is a BMS chapter (e.g. /bms/biologie/kap1-zellbiologie). */
 function isChapterFocusRoute(pathname: string): boolean {
@@ -207,6 +208,7 @@ export function AppShell() {
         </Suspense>
         <Sidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
         <KeyboardShortcutsOverlay />
+        <OnboardingWizard />
         <div
           className={cn(
             "min-h-screen flex flex-col relative z-50 w-full transition-colors duration-200",

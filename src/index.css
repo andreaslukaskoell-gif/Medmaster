@@ -557,11 +557,20 @@ select:focus {
   color: var(--text-secondary);
 }
 
-/* SVG-Container: einheitliche Abstände, optional Caption */
+/* SVG-Container: glass card, optional Caption */
 .content-svg-wrap {
   margin: var(--space-block) 0;
-  padding: 0.5rem 0;
+  padding: 1.5rem;
   overflow: hidden;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 12px;
+}
+.dark .content-svg-wrap {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.06);
 }
 .content-svg-wrap figcaption {
   margin-top: 0.5rem;
@@ -964,4 +973,24 @@ body.dark-body .dashboard-page-bg {
   background: linear-gradient(90deg, transparent, var(--accent), transparent);
   border: none;
   opacity: 0.3;
+}
+
+/* ── Chapter Complete Celebration — animated checkmark ─────────── */
+@keyframes draw-check {
+  from { stroke-dashoffset: 100; }
+  to { stroke-dashoffset: 0; }
+}
+@keyframes draw-circle {
+  from { stroke-dashoffset: 283; }
+  to { stroke-dashoffset: 0; }
+}
+.animate-draw-check {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: draw-check 0.5s ease-out 0.3s forwards;
+}
+.animate-draw-circle {
+  stroke-dasharray: 283;
+  stroke-dashoffset: 283;
+  animation: draw-circle 0.5s ease-out forwards;
 }

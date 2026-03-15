@@ -202,99 +202,94 @@ function SelectionScreen({
       {/* 1. Fach */}
       <div className="card-glass rounded-2xl p-4 space-y-3">
         <p className="text-sm font-semibold text-[var(--text-secondary)]">1. Fach wählen</p>
-          <div className="grid grid-cols-4 gap-2 stagger-children">
-            {BMS_SUBJECTS.map((s) => {
-              const Icon = s.icon;
-              const selected = subjectId === s.id;
-              return (
-                <button
-                  key={s.id}
-                  type="button"
-                  onClick={() => setSubjectId(s.id)}
-                  className={`flex items-center gap-3 px-4 py-3.5 rounded-xl border-2 text-sm font-medium transition-all cursor-pointer text-left ${
-                    selected
-                      ? `${s.borderClass} ${s.bgClass} font-semibold`
-                      : "border-[var(--border)] text-[var(--text-secondary)] hover:border-[var(--muted)]/50 hover:bg-[var(--foreground)]/3"
-                  }`}
+        <div className="grid grid-cols-4 gap-2 stagger-children">
+          {BMS_SUBJECTS.map((s) => {
+            const Icon = s.icon;
+            const selected = subjectId === s.id;
+            return (
+              <button
+                key={s.id}
+                type="button"
+                onClick={() => setSubjectId(s.id)}
+                className={`flex items-center gap-3 px-4 py-3.5 rounded-xl border-2 text-sm font-medium transition-all cursor-pointer text-left ${
+                  selected
+                    ? `${s.borderClass} ${s.bgClass} font-semibold`
+                    : "border-[var(--border)] text-[var(--text-secondary)] hover:border-[var(--muted)]/50 hover:bg-[var(--foreground)]/3"
+                }`}
+              >
+                <div
+                  className={`w-9 h-9 rounded-lg ${s.bgClass} flex items-center justify-center shrink-0`}
                 >
-                  <div
-                    className={`w-9 h-9 rounded-lg ${s.bgClass} flex items-center justify-center shrink-0`}
-                  >
-                    <Icon className={`w-5 h-5 ${s.accentClass}`} />
-                  </div>
-                  <div>
-                    <div className={selected ? "text-[var(--foreground)]" : ""}>{s.label}</div>
-                    <div className="text-[10px] opacity-60">{s.officialCount} Fragen</div>
-                  </div>
-                </button>
-              );
-            })}
-          </div>
-        </CardContent>
-      </Card>
+                  <Icon className={`w-5 h-5 ${s.accentClass}`} />
+                </div>
+                <div>
+                  <div className={selected ? "text-[var(--foreground)]" : ""}>{s.label}</div>
+                  <div className="text-[10px] opacity-60">{s.officialCount} Fragen</div>
+                </div>
+              </button>
+            );
+          })}
+        </div>
+      </div>
 
       {subjectId && (
         <>
           {/* 2. Modus */}
-          <Card>
-            <CardContent className="p-4 space-y-3">
-              <p className="text-sm font-semibold text-[var(--text-secondary)]">2. Modus</p>
-              <div className="grid grid-cols-2 gap-2">
-                <button
-                  type="button"
-                  onClick={() => setMode("einfach")}
-                  className={`px-4 py-3 rounded-xl border text-sm font-medium transition-all cursor-pointer text-left ${
-                    mode === "einfach"
-                      ? "border-emerald-500 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-800 dark:text-emerald-300"
-                      : "border-[var(--border)] text-[var(--muted)] hover:bg-[var(--border)]/50"
-                  }`}
-                >
-                  <div className="font-semibold">Einfach trainieren</div>
-                  <div className="text-xs opacity-70">
-                    So viele wie du willst, am Ende Übersicht + Begründungen
-                  </div>
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setMode("offiziell")}
-                  className={`px-4 py-3 rounded-xl border text-sm font-medium transition-all cursor-pointer text-left ${
-                    mode === "offiziell"
-                      ? "border-emerald-500 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-800 dark:text-emerald-300"
-                      : "border-[var(--border)] text-[var(--muted)] hover:bg-[var(--border)]/50"
-                  }`}
-                >
-                  <div className="font-semibold">Offizielle Simulation</div>
-                  <div className="text-xs opacity-70">
-                    {subject && `${subject.officialCount} Fragen in ${subject.officialMinutes} Min`}
-                  </div>
-                </button>
-              </div>
-            </CardContent>
-          </Card>
+          <div className="card-glass rounded-2xl p-4 space-y-3">
+            <p className="text-sm font-semibold text-[var(--text-secondary)]">2. Modus</p>
+            <div className="grid grid-cols-2 gap-2">
+              <button
+                type="button"
+                onClick={() => setMode("einfach")}
+                className={`px-4 py-3 rounded-xl border text-sm font-medium transition-all cursor-pointer text-left ${
+                  mode === "einfach"
+                    ? "border-emerald-500 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-800 dark:text-emerald-300"
+                    : "border-[var(--border)] text-[var(--muted)] hover:bg-[var(--border)]/50"
+                }`}
+              >
+                <div className="font-semibold">Einfach trainieren</div>
+                <div className="text-xs opacity-70">
+                  So viele wie du willst, am Ende Übersicht + Begründungen
+                </div>
+              </button>
+              <button
+                type="button"
+                onClick={() => setMode("offiziell")}
+                className={`px-4 py-3 rounded-xl border text-sm font-medium transition-all cursor-pointer text-left ${
+                  mode === "offiziell"
+                    ? "border-emerald-500 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-800 dark:text-emerald-300"
+                    : "border-[var(--border)] text-[var(--muted)] hover:bg-[var(--border)]/50"
+                }`}
+              >
+                <div className="font-semibold">Offizielle Simulation</div>
+                <div className="text-xs opacity-70">
+                  {subject && `${subject.officialCount} Fragen in ${subject.officialMinutes} Min`}
+                </div>
+              </button>
+            </div>
+          </div>
 
           {/* Anzahl (nur bei Einfach) */}
           {mode === "einfach" && (
-            <Card>
-              <CardContent className="p-4 space-y-3">
-                <p className="text-sm font-semibold text-[var(--text-secondary)]">Anzahl Fragen</p>
-                <div className="flex flex-wrap gap-2">
-                  {EINFACH_COUNTS.map((n) => (
-                    <button
-                      key={n}
-                      type="button"
-                      onClick={() => setCount(n)}
-                      className={`px-4 py-2 rounded-lg border text-sm font-medium transition-all cursor-pointer ${
-                        count === n
-                          ? "border-emerald-500 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-800 dark:text-emerald-300"
-                          : "border-[var(--border)] hover:bg-[var(--border)]/50"
-                      }`}
-                    >
-                      {n}
-                    </button>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+            <div className="card-glass rounded-2xl p-4 space-y-3">
+              <p className="text-sm font-semibold text-[var(--text-secondary)]">Anzahl Fragen</p>
+              <div className="flex flex-wrap gap-2">
+                {EINFACH_COUNTS.map((n) => (
+                  <button
+                    key={n}
+                    type="button"
+                    onClick={() => setCount(n)}
+                    className={`px-4 py-2 rounded-lg border text-sm font-medium transition-all cursor-pointer ${
+                      count === n
+                        ? "border-emerald-500 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-800 dark:text-emerald-300"
+                        : "border-[var(--border)] hover:bg-[var(--border)]/50"
+                    }`}
+                  >
+                    {n}
+                  </button>
+                ))}
+              </div>
+            </div>
           )}
 
           {/* Start */}
@@ -303,10 +298,7 @@ function SelectionScreen({
               {effectiveCount} Fragen
               {timeLimitMinutes != null && ` · ${timeLimitMinutes} Min Zeitlimit`}
             </p>
-            <Button
-              onClick={handleStart}
-              className="bg-emerald-600 hover:bg-emerald-700 text-white"
-            >
+            <Button onClick={handleStart} variant="premium">
               Starten <ChevronRight className="w-4 h-4 ml-1" />
             </Button>
           </div>
@@ -488,7 +480,7 @@ function QuizScreen({
   };
 
   return (
-    <div className="flex gap-4 max-w-4xl mx-auto">
+    <div className="flex gap-4 max-w-5xl mx-auto">
       <div className="flex-1 min-w-0 space-y-4">
         {showAdaptiveHint && (
           <div className="flex items-center justify-between gap-2 rounded-lg bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 px-3 py-2">
@@ -530,11 +522,8 @@ function QuizScreen({
           </div>
         </div>
 
-        <div className="w-full h-1.5 bg-[var(--border)] rounded-full overflow-hidden">
-          <div
-            className="h-full bg-emerald-500 rounded-full transition-all duration-300"
-            style={{ width: `${Math.round(progress * 100)}%` }}
-          />
+        <div className="progress-premium">
+          <div className="progress-fill" style={{ width: `${Math.round(progress * 100)}%` }} />
         </div>
 
         {isReviewMode && reviewAnswer ? (
@@ -595,7 +584,7 @@ function QuizScreen({
                   size="sm"
                   onClick={() => goToQuestion(idx + 1)}
                   disabled={idx >= fragen.length - 1}
-                  className="bg-emerald-600 hover:bg-emerald-700"
+                  variant="premium"
                 >
                   Weiter →
                 </Button>
@@ -714,49 +703,47 @@ function ResultsScreen({
   const right = answers.filter((a) => a.correct);
 
   return (
-    <div className="max-w-4xl mx-auto space-y-5">
+    <div className="max-w-5xl mx-auto space-y-5">
       <Confetti active={pct >= 80} />
       <Button variant="ghost" size="sm" onClick={onBack}>
         <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
       </Button>
 
-      <Card>
-        <CardContent className="p-6">
-          <div className="text-center mb-5">
-            <div className="w-20 h-20 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center mx-auto mb-4">
-              <Trophy className="w-10 h-10 text-emerald-600 dark:text-emerald-400" />
-            </div>
-            <div className="text-5xl font-bold text-[var(--text-primary)] mb-1">
-              {correct}
-              <span className="text-2xl text-muted-foreground font-normal">/{total}</span>
-            </div>
-            <p className="text-lg text-emerald-600 dark:text-emerald-400 font-semibold">
-              {pct}% richtig
-            </p>
-            {pct >= 90 && <p className="text-sm font-bold text-yellow-600 mt-2">Ausgezeichnet!</p>}
-            {pct >= 70 && pct < 90 && (
-              <p className="text-sm font-bold text-emerald-600 mt-2">Sehr gut!</p>
-            )}
-            {pct < 70 && (
-              <p className="text-sm text-muted-foreground mt-2">Weitermachen – du schaffst das!</p>
-            )}
+      <div className="card-glass rounded-2xl p-6">
+        <div className="text-center mb-5">
+          <div className="w-20 h-20 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center mx-auto mb-4">
+            <Trophy className="w-10 h-10 text-emerald-600 dark:text-emerald-400" />
           </div>
-          <div className="grid grid-cols-3 gap-3 pt-4 border-t border-[var(--border)]">
-            <div className="text-center">
-              <p className="text-2xl font-bold text-emerald-600 dark:text-emerald-400">{correct}</p>
-              <p className="text-xs text-muted-foreground">Richtig</p>
-            </div>
-            <div className="text-center">
-              <p className="text-2xl font-bold text-red-500 dark:text-red-400">{wrong.length}</p>
-              <p className="text-xs text-muted-foreground">Falsch</p>
-            </div>
-            <div className="text-center">
-              <p className="text-2xl font-bold text-[var(--accent)]">+{correct * 5}</p>
-              <p className="text-xs text-muted-foreground">XP</p>
-            </div>
+          <div className="text-5xl font-bold text-[var(--text-primary)] mb-1">
+            {correct}
+            <span className="text-2xl text-muted-foreground font-normal">/{total}</span>
           </div>
-        </CardContent>
-      </Card>
+          <p className="text-lg text-emerald-600 dark:text-emerald-400 font-semibold">
+            {pct}% richtig
+          </p>
+          {pct >= 90 && <p className="text-sm font-bold text-yellow-600 mt-2">Ausgezeichnet!</p>}
+          {pct >= 70 && pct < 90 && (
+            <p className="text-sm font-bold text-emerald-600 mt-2">Sehr gut!</p>
+          )}
+          {pct < 70 && (
+            <p className="text-sm text-muted-foreground mt-2">Weitermachen – du schaffst das!</p>
+          )}
+        </div>
+        <div className="grid grid-cols-3 gap-3 pt-4 border-t border-[var(--border)]">
+          <div className="text-center">
+            <p className="text-2xl font-bold text-emerald-600 dark:text-emerald-400">{correct}</p>
+            <p className="text-xs text-muted-foreground">Richtig</p>
+          </div>
+          <div className="text-center">
+            <p className="text-2xl font-bold text-red-500 dark:text-red-400">{wrong.length}</p>
+            <p className="text-xs text-muted-foreground">Falsch</p>
+          </div>
+          <div className="text-center">
+            <p className="text-2xl font-bold text-[var(--accent)]">+{correct * 5}</p>
+            <p className="text-xs text-muted-foreground">XP</p>
+          </div>
+        </div>
+      </div>
 
       {/* Falsch beantwortet + Begründung */}
       {wrong.length > 0 && (
@@ -932,10 +919,10 @@ function ResultsScreen({
       )}
 
       <div className="flex gap-3 justify-center pb-4">
-        <Button variant="outline" onClick={onRestart}>
+        <Button variant="glass" onClick={onRestart}>
           <RotateCcw className="w-4 h-4 mr-1" /> Nochmal (gleiche Einstellungen)
         </Button>
-        <Button onClick={onBack} className="bg-emerald-600 hover:bg-emerald-700 text-white">
+        <Button onClick={onBack} variant="premium">
           Neue Auswahl
         </Button>
       </div>
@@ -974,7 +961,7 @@ export default function FragenTrainer() {
 
   if (planBms?.length && mixedPlanFragen.length === 0) {
     return (
-      <div className="p-4 pb-24 lg:pb-8 md:p-6">
+      <div className="p-6">
         <Card>
           <CardContent className="p-6 space-y-4">
             <p className="text-[var(--text-secondary)]">
@@ -999,7 +986,7 @@ export default function FragenTrainer() {
   if (planBms?.length && mixedPlanFragen.length > 0) {
     if (planResults != null) {
       return (
-        <div className="p-4 pb-24 lg:pb-8 md:p-6">
+        <div className="p-6">
           <ResultsScreen
             answers={planResults}
             onRestart={() => {
@@ -1015,7 +1002,7 @@ export default function FragenTrainer() {
       );
     }
     return (
-      <div className="p-4 pb-24 lg:pb-8 md:p-6">
+      <div className="p-6">
         <QuizScreen
           subjectId="biologie"
           count={mixedPlanFragen.length}
@@ -1042,7 +1029,7 @@ export default function FragenTrainer() {
   }
 
   return (
-    <div className="p-4 pb-24 lg:pb-8 md:p-6">
+    <div className="p-6">
       {screen === "select" && (
         <SelectionScreen
           userId={userId}

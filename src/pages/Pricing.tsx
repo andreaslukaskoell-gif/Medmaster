@@ -22,7 +22,7 @@ const features = [
   "Prüfungstag-Prognose",
   "Personalisierter Lernplan",
   "KI-Tutor Chat",
-  "Alle zukünftigen Updates inklusive",
+  "Updates bis zum MedAT 2026 inklusive",
 ];
 
 export default function Pricing() {
@@ -44,7 +44,7 @@ export default function Pricing() {
           Alles. Ein Preis. Kein Abo.
         </h1>
         <p className="text-[var(--muted)] max-w-lg mx-auto">
-          Einmalzahlung — lebenslanger Zugang zu allen Inhalten und Updates.
+          Einmalzahlung — voller Zugang zu allen Inhalten und Updates.
         </p>
       </div>
 

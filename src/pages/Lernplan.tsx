@@ -532,7 +532,7 @@ export default function Lernplan() {
       {plan && (
         <div>
           <h2 className="text-lg font-semibold text-[var(--text-primary)] mb-3">Lernphasen</h2>
-          <div className="grid grid-cols-3 gap-4 stagger-children">
+          <div className="grid grid-cols-2 gap-4 stagger-children">
             {plan.phases.map((phase, i) => {
               const pc = phaseConfig[phase.phase as keyof typeof phaseConfig];
               const isActive = plan.activePhase === phase.phase;
@@ -626,11 +626,12 @@ export default function Lernplan() {
           )}
 
           <Button
+            variant={updateFeedback ? "default" : "premium"}
             onClick={handleGenerate}
             className={
               updateFeedback
                 ? "bg-emerald-600 hover:bg-emerald-600 text-white border-emerald-500 transition-colors duration-200"
-                : "active:scale-[0.98] transition-transform duration-100"
+                : ""
             }
           >
             {updateFeedback ? (

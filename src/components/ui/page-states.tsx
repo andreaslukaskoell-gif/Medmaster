@@ -1,7 +1,8 @@
 import type { ReactNode } from "react";
-import { AlertCircle, RefreshCw, Inbox } from "lucide-react";
+import { AlertCircle, RefreshCw } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
+import { EmptyState } from "@/components/ui/EmptyState";
 import { cn } from "@/lib/utils";
 
 type PageLoadingProps = {
@@ -98,22 +99,27 @@ export function PageEmpty({
   icon,
   className,
 }: PageEmptyProps) {
-  return (
-    <div
-      className={cn(
-        "flex flex-col items-center justify-center gap-4 py-12 px-4 text-center text-[var(--muted)]",
-        className
-      )}
-    >
-      <div className="card-glass rounded-2xl p-8 max-w-md mx-auto flex flex-col items-center gap-4">
-        {icon ?? (
-          <div className="rounded-2xl bg-[var(--border)]/50 p-4">
-            <Inbox className="h-8 w-8 text-[var(--muted)]" />
-          </div>
+  // If custom icon or action ReactNode is provided, render legacy layout
+  if (icon || action) {
+    return (
+      <div
+        className={cn(
+          "flex flex-col items-center justify-center gap-4 py-12 px-4 text-center text-[var(--muted)]",
+          className
         )}
-        <p className="text-sm">{message}</p>
-        {action}
+      >
+        <div className="card-glass rounded-2xl p-8 max-w-md mx-auto flex flex-col items-center gap-4">
+          {icon}
+          <p className="text-sm">{message}</p>
+          {action}
+        </div>
       </div>
+    );
+  }
+
+  return (
+    <div className={cn("", className)}>
+      <EmptyState icon="search" title="Nichts gefunden" description={message} />
     </div>
   );
 }

@@ -31,7 +31,7 @@ export function LevelUpOverlay({ level, levelName, feature, onDismiss }: LevelUp
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.2 }}
-          className="fixed inset-0 z-100 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm overflow-hidden"
+          className="fixed inset-0 z-100 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xl overflow-hidden"
           onClick={onDismiss}
           role="dialog"
           aria-modal="true"
@@ -58,7 +58,7 @@ export function LevelUpOverlay({ level, levelName, feature, onDismiss }: LevelUp
             exit={{ scale: 0.95, opacity: 0 }}
             transition={{ type: "spring", stiffness: 400, damping: 28 }}
             onClick={(e) => e.stopPropagation()}
-            className="relative w-full max-w-md rounded-2xl overflow-hidden border-2 border-amber-400/60 dark:border-amber-300/50 bg-linear-to-b from-amber-50 to-violet-50 dark:from-background dark:to-violet-950/50 shadow-2xl shadow-amber-500/20 dark:shadow-violet-500/20"
+            className="relative w-full max-w-md rounded-2xl overflow-hidden border border-amber-400/40 dark:border-amber-300/30 backdrop-blur-xl bg-white/80 dark:bg-[#1e1e1e]/80 shadow-2xl shadow-amber-500/20 dark:shadow-violet-500/20"
           >
             <div className="absolute inset-0 bg-linear-to-br from-amber-200/20 via-transparent to-violet-300/20 dark:from-amber-500/10 dark:to-violet-500/20 pointer-events-none" />
             <div className="relative p-8 text-center">

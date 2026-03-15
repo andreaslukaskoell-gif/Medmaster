@@ -17,11 +17,13 @@ export const bioKapGenetik: Kapitel = {
       stichworte: ["DNA", "Gen", "Chromosom", "Allel", "Locus", "Doppelhelix", "Erbinformation"],
       content: `## DNA: Träger der Erbinformation
 
-**DNA** (Desoxyribonukleinsäure) ist das Molekül, das die genetische Information speichert. Sie besteht aus zwei antiparallel (gegenläufig orientiert) gewundenen Strängen (**Doppelhelix**). Jeder Strang ist aus **Nukleotiden** aufgebaut: Ein Nukleotid enthält den Zucker Desoxyribose (Fünffachzucker ohne Sauerstoff an C2), ein Phosphat und eine von vier **Basen** — **A**denin (A), **T**hymin (T), **G**uanin (G), **C**ytosin (C). Die Basen der beiden Stränge paaren sich nach festen Regeln: A immer mit T (zwei Wasserstoffbrücken), G immer mit C (drei Wasserstoffbrücken). Daraus folgen die **Chargaff-Regeln**: In einem Doppelstrang ist die Menge an A gleich der von T, die von G gleich der von C. Die Abfolge der Basen (die **Sequenz**) codiert die Information für den Aufbau von Proteinen und die Steuerung der Zelle.
+**DNA** (Desoxyribonukleinsäure) ist das Molekül, das die genetische Information speichert. Sie besteht aus zwei antiparallel gewundenen Strängen — der **Doppelhelix**. Jeder Strang ist eine Kette aus **Nukleotiden**: jedes Nukleotid enthält den Zucker Desoxyribose, ein Phosphat und eine von vier **Basen** — Adenin (A), Thymin (T), Guanin (G) oder Cytosin (C).
+
+Die Basen der beiden Stränge paaren sich nach festen Regeln: A immer mit T (zwei Wasserstoffbrücken), G immer mit C (drei Wasserstoffbrücken). Die **Sequenz** der Basen — ihre Reihenfolge entlang des Strangs — ist die eigentliche Erbinformation.
 
 > **Merke:** DNA = Doppelhelix aus Nukleotiden; Basen A, T, G, C; A-T und G-C paaren. Die Sequenz der Basen ist die Erbinformation.
 
-**Chargaff-Regeln (1950):** Erwin Chargaff wies 1950 nach, dass in jeder doppelsträngigen DNA gilt: **%A = %T** und **%G = %C** — eine direkte Folge der komplementären Basenpaarung. Rechenbeispiel: Wenn A = 27 %, dann T = 27 %, und G = C = (100 % − 54 %) / 2 = **23 %**. Daraus folgt auch: A + G = T + C (Purine (Zweiring-Basen: A, G) = Pyrimidine (Einring-Basen: T, C)).
+**Chargaff-Regeln:** In jeder doppelsträngigen DNA gilt: **%A = %T** und **%G = %C** — eine direkte Folge der komplementären Basenpaarung. Rechenbeispiel: Wenn A = 27 %, dann T = 27 %, und G = C = (100 % − 54 %) / 2 = **23 %**. Purine (A, G: Zweiring-Basen) sind stets gleich häufig wie Pyrimidine (T, C: Einring-Basen).
 
 > **Merke:** **Chargaff-Regel:** A = T und G = C (in Prozent). Wenn A = 27 % → T = 27 %, G = C = 23 %.
 
@@ -31,7 +33,9 @@ export const bioKapGenetik: Kapitel = {
 
 ## Gen: funktionelle Einheit auf der DNA
 
-Ein **Gen** ist ein **Abschnitt der DNA**, der die Information für ein bestimmtes Merkmal oder ein Produkt (z. B. ein Protein oder eine RNA) trägt. Gene liegen an festen Orten auf den Chromosomen; dieser Ort heißt **Locus** (Plural: Loci). Beim Menschen gibt es etwa 20.000–25.000 protein codierende Gene, verteilt auf 46 Chromosomen. Ein Gen kann in verschiedenen **Varianten** vorkommen — diese Varianten nennt man **Allele**. Beispiel: Das Gen für die Blütenfarbe bei Erbsen hat ein Allel für „rot” und ein Allel für „weiß”. Ein diploider Organismus trägt pro Gen zwei Allele (eines von jedem Elternteil), die am gleichen Locus auf den beiden **homologen Chromosomen** sitzen.
+Ein **Gen** ist ein Abschnitt der DNA, der die Information für ein bestimmtes Merkmal oder Produkt (z. B. ein Protein oder eine RNA) trägt. Gene liegen an festen Orten auf den Chromosomen; dieser Ort heißt **Locus** (Plural: Loci). Beim Menschen gibt es etwa 20.000–25.000 proteincodierende Gene, verteilt auf 46 Chromosomen.
+
+Ein Gen kann in verschiedenen Varianten vorkommen — diese Varianten nennt man **Allele**. Das Gen für die Blütenfarbe bei Erbsen hat zum Beispiel ein Allel für „rot” und ein Allel für „weiß”. Ein diploider Organismus trägt pro Gen zwei Allele (eines von jedem Elternteil), die am gleichen Locus auf den beiden **homologen Chromosomen** sitzen.
 
 > **Merke:** Gen = DNA-Abschnitt für ein Merkmal/Produkt. Locus = Ort des Gens auf dem Chromosom. Allel = eine von mehreren Varianten eines Gens.
 
@@ -57,7 +61,9 @@ Ein **Chromosom** ist ein langer DNA-Faden, der zusammen mit **Histonen** (Verpa
 ## Zusammenhang für die Vererbung
 
 
-> **Merke:** DNA → Gene (mit Allelen) → auf Chromosomen verpackt. Meiose trennt homologe Chromosomen → je ein Allel pro Gen in der Keimzelle.`,
+> **Merke:** DNA → Gene (mit Allelen) → auf Chromosomen verpackt. Meiose trennt homologe Chromosomen → je ein Allel pro Gen in der Keimzelle.
+
+{{DIAGRAM:dna-helix}}`,
       lernziele: [
         "Den Zusammenhang zwischen DNA, Gen und Chromosom beschreiben.",
         "Gen und Allel unterscheiden und Locus erklären.",
@@ -181,7 +187,9 @@ Ein **Chromosom** ist ein langer DNA-Faden, der zusammen mit **Histonen** (Verpa
 
 {{DIAGRAM:dna-helix}}
 
-Ein metaphasisches (in der Metaphase befindliches) Chromosom (in der Zellteilung sichtbar) besteht aus **zwei Schwesterchromatiden**, die am **Zentromer** zusammenhängen. Das Zentromer ist der Ansatzpunkt für die Spindelfasern; an ihm sitzt der **Kinetochor** (Proteinkomplex). Jede Chromatide hat zwei **Arme**: der **p-Arm** (petit = kurz) und der **q-Arm** (queue = lang). An den Enden der Chromosomen liegen die **Telomere** — repetitive DNA-Sequenzen (beim Menschen TTAGGG), die die Enden schützen und bei jeder Zellteilung etwas kürzer werden (ohne Telomerase (Enzym, das Telomere verlängert)).
+Ein Chromosom in der Metaphase der Zellteilung besteht aus **zwei Schwesterchromatiden**, die am **Zentromer** zusammenhängen. Das Zentromer ist der Ansatzpunkt für die Spindelfasern; an ihm sitzt der **Kinetochor** (Proteinkomplex für die Spindelbindung). Jede Chromatide hat zwei **Arme**: der **p-Arm** (petit = kurz) und der **q-Arm** (queue = lang).
+
+An den Enden der Chromosomen liegen die **Telomere** — repetitive DNA-Sequenzen (beim Menschen TTAGGG), die die Enden vor Abbau schützen. Ohne das Enzym **Telomerase** werden sie bei jeder Zellteilung kürzer.
 
 > **Merke:** Zentromer verbindet die beiden Schwesterchromatiden; p-Arm = kurz, q-Arm = lang; Telomere schützen die Enden.
 
@@ -191,12 +199,14 @@ Ein metaphasisches (in der Metaphase befindliches) Chromosom (in der Zellteilung
 
 ## Chromatinstruktur: Euchromatin und Heterochromatin
 
-DNA liegt im Zellkern nicht nackt vor, sondern ist um **Histonproteine** gewickelt. Die Grundeinheit heißt **Nukleosom**: ~147 bp DNA umwickeln ein Histonoktamer (je 2× H2A, H2B, H3, H4). Zwischen den Nukleosomen verbindet **Linker-DNA** (~50 bp) die Einheiten; Histon H1 stabilisiert die übergeordnete Faltung. Je nach Verpackungsgrad unterscheidet man zwei Chromatinzustände:
+DNA liegt im Zellkern um **Histonproteine** gewickelt. Die Grundeinheit heißt **Nukleosom**: ~147 bp DNA umwickeln ein Histonoktamer (je 2× H2A, H2B, H3, H4). Linker-DNA verbindet die Nukleosomen; Histon H1 stabilisiert die übergeordnete Faltung.
 
-- **Euchromatin**: Locker gepackt, transkriptionell **aktiv** — Gene werden abgelesen. Hell im Elektronenmikroskop, repliziert früh in der S-Phase
+Je nach Verpackungsgrad unterscheidet man zwei Chromatinzustände:
+
+- **Euchromatin**: Locker gepackt, transkriptionell **aktiv** — Gene werden abgelesen. Hell im Elektronenmikroskop, repliziert früh in der S-Phase.
 - **Heterochromatin**: Dicht gepackt, transkriptionell **inaktiv** — Gene sind stillgelegt. Dunkel im EM, repliziert spät. Zwei Subtypen:
-  - **Konstitutives Heterochromatin**: Dauerhaft kondensiert (z. B. Zentromer-Regionen, Telomere). Keine Gene
-  - **Fakultatives Heterochromatin**: Reversibel stillgelegt, kann reaktiviert werden. Beispiel: **Barr-Körperchen** — das inaktivierte zweite X-Chromosom bei Frauen (Lyon-Hypothese)
+  - **Konstitutives Heterochromatin**: Dauerhaft kondensiert (z. B. Zentromer-Regionen, Telomere) — keine Gene.
+  - **Fakultatives Heterochromatin**: Reversibel stillgelegt, kann reaktiviert werden. Beispiel: **Barr-Körperchen** — das inaktivierte zweite X-Chromosom bei Frauen (Lyon-Hypothese).
 
 > **Merke:** Euchromatin = locker, aktiv. Heterochromatin = dicht, inaktiv. Barr-Körperchen = fakultatives Heterochromatin (inaktiviertes X bei XX).
 
@@ -204,12 +214,12 @@ DNA liegt im Zellkern nicht nackt vor, sondern ist um **Histonproteine** gewicke
 
 ## Chromosomen-Banding (G-Banding)
 
-Zur Identifikation einzelner Chromosomen wird die **G-Banding-Technik** (Giemsa-Banding) eingesetzt: Chromosomen werden mit **Trypsin** angedaut (denaturiert AT-reiche Regionen) und anschließend mit **Giemsa-Farbstoff** gefärbt. Daraus entsteht ein charakteristisches **Bandenmuster** aus hellen und dunklen Streifen:
+Zur Identifikation einzelner Chromosomen wird die **G-Banding-Technik** (Giemsa-Banding) eingesetzt: Chromosomen werden mit Trypsin angedaut und mit **Giemsa-Farbstoff** gefärbt. Es entsteht ein charakteristisches **Bandenmuster**:
 
-- **Dunkle Banden** (G-positiv): AT-reich, genarm, spät replizierend, Heterochromatin
-- **Helle Banden** (G-negativ): GC-reich, genreich, früh replizierend, Euchromatin
+- **Dunkle Banden** (G-positiv): AT-reich, genarm, spät replizierend — Heterochromatin.
+- **Helle Banden** (G-negativ): GC-reich, genreich, früh replizierend — Euchromatin.
 
-Jede Bande erhält eine **Nummer** (z. B. 21q22 = Chromosom 21, langer Arm, Region 2, Bande 2). Mit ~400–850 Banden pro haploidem Satz lassen sich Deletionen, Duplikationen und Translokationen ab ~5–10 Mb Größe erkennen. Für feinere Auflösung: **FISH** (Fluoreszenz-in-situ-Hybridisierung) mit fluoreszenzmarkierten DNA-Sonden.
+Jede Bande erhält eine Nummer (z. B. 21q22 = Chromosom 21, langer Arm, Region 2, Bande 2). Mit ~400–850 Banden pro haploidem Satz lassen sich Deletionen, Duplikationen und Translokationen ab ~5–10 Mb erkennen. Für feinere Auflösung kommt **FISH** (Fluoreszenz-in-situ-Hybridisierung) mit markierten DNA-Sonden zum Einsatz.
 
 > **Merke:** G-Banding: Trypsin + Giemsa → Bandenmuster. Dunkle Banden = AT-reich, genarm. Helle Banden = GC-reich, genreich. Nomenklatur: Chromosom → Arm → Region → Bande (z. B. 21q22).
 
@@ -218,7 +228,7 @@ Jede Bande erhält eine **Nummer** (z. B. 21q22 = Chromosom 21, langer Arm, Regi
 ## Autosomen und Gonosomen
 
 
-Beim Menschen gibt es **46 Chromosomen** in jeder Körperzelle (diploider Satz): **22 Paare Autosomen** (Chromosomen 1–22, nicht geschlechtsbestimmend) und **ein Paar Geschlechtschromosomen** (**Gonosomen**): **XX** bei Frauen, **XY** bei Männern. Die Gonosomen bestimmen das genetische Geschlecht: Das **Y-Chromosom** trägt das **SRY-Gen** (Sex-determining Region Y), das die männliche Geschlechtsentwicklung auslöst. Fehlt das Y, entwickelt sich weiblich (z. B. 46,XX oder 45,X).
+Beim Menschen enthält jede Körperzelle **46 Chromosomen**: **22 Paare Autosomen** (Chromosomen 1–22) und **ein Paar Geschlechtschromosomen** (**Gonosomen**) — **XX** bei Frauen, **XY** bei Männern. Das **Y-Chromosom** trägt das **SRY-Gen**, das die männliche Geschlechtsentwicklung auslöst. Fehlt das Y, entwickelt sich der Organismus weiblich.
 
 > **Merke:** 46 Chromosomen = 22 Autosomenpaare + 1 Gonosomenpaar. XX = weiblich, XY = männlich; Geschlecht durch Y-Chromosom (SRY) bestimmt.
 
@@ -800,6 +810,8 @@ Nicht alle Merkmale folgen dem einfachen Mendel-Schema. Drei wichtige Phänomene
 
 Zwei Menschen tragen dieselbe Mutation im BRCA1-Gen. Die eine erkrankt mit 40 an Brustkrebs, die andere bleibt ihr Leben lang gesund. Die Allel-Kombination (der **Genotyp**) ist identisch — das sichtbare Ergebnis (der **Phänotyp**) nicht. Zwischen Genotyp und Phänotyp liegen Dominanzverhältnisse, Wechselwirkungen zwischen Genen und Umwelteinflüsse. Dieses Kapitel zeigt, welche Mechanismen dafür sorgen, dass gleiche Gene zu verschiedenen Ergebnissen führen können.
 
+{{IMAGE}}
+
 ---
 
 ## Genotyp → Phänotyp: Die Grundregel
@@ -1111,6 +1123,8 @@ Die **Sichelzellanämie** vereint mehrere Konzepte dieses Kapitels:
 
 **Autosomal:** Das Gen liegt auf einem der **Autosomen** (Chromosomen 1–22). Beide Geschlechter sind gleich häufig betroffen (Männer und Frauen haben je zwei Kopien jedes Autosoms). **X-chromosomal:** Das Gen liegt auf dem **X-Chromosom**. Männer haben nur **ein** X-Chromosom (**Hemizygotie**) — sie tragen also nur ein Allel für X-chromosomale Gene. Daher manifestieren sich **X-chromosomal rezessive** Merkmale bei Männern häufiger (ein rezessives Allel reicht). Frauen haben zwei X-Chromosomen und können **Konduktorinnen** sein (heterozygot, phänotypisch gesund, geben das Allel weiter).
 
+{{IMAGE}}
+
 ---
 
 ## Autosomal-dominant
@@ -1410,6 +1424,8 @@ Wenn eine **Rh-negative Mutter (dd)** ein **Rh-positives Kind (Dd)** austrägt, 
 **Prävention:** Die **Anti-D-Prophylaxe** (Gabe von Anti-D-Immunglobulin an die Rh-negative Mutter während der Schwangerschaft und nach der Geburt) verhindert die Sensibilisierung, indem sie fetale D-positive Erythrozyten neutralisiert, bevor das mütterliche Immunsystem reagiert.
 
 > **Merke:** Rhesus: D dominant, dd = Rh-negativ (~15 %). Sensibilisierung bei Rh-neg. Mutter + Rh-pos. Kind → Anti-D-Antikörper (IgG) → Morbus haemolyticus neonatorum bei Folgeschwangerschaft. Anti-D-Prophylaxe verhindert Sensibilisierung.
+
+{{DIAGRAM:blood-groups}}
 
 ---
 
@@ -1795,6 +1811,8 @@ Im Kontext der Tumorbiologie: **Onkogene** (GOF in Protoonkogenen, z. B. RAS-Mut
       ],
       content: `## Das Zentraldogma der Molekularbiologie
 
+Jede menschliche Zelle enthält dieselbe DNA — und trotzdem entstehen mehr als 200 verschiedene Zelltypen: Neuronen, Muskelzellen, Leberzellen. Der Unterschied liegt nicht in der DNA selbst, sondern darin, **welche Gene** in welcher Zelle **abgelesen** werden. Diesen Vorgang nennt man **Genexpression**.
+
 Das Zentraldogma beschreibt den gerichteten Informationsfluss in biologischen Systemen: **DNA → RNA → Protein**. Die DNA ist der permanente **Informationsspeicher** im Zellkern. Die **mRNA** (messenger RNA, Boten-RNA) ist eine temporäre **Arbeitskopie** eines bestimmten Gens, die aus dem Zellkern ins Zytoplasma transportiert wird. Das **Protein** ist das funktionelle **Endprodukt**, das Enzyme, Strukturproteine, Transportmoleküle, Rezeptoren oder Signalmoleküle bildet.
 
 **Warum diese Richtung?** Die DNA bleibt geschützt im Zellkern; nur Kopien (mRNA) gelangen ins Zytoplasma. Diese Kopien werden nach Gebrauch abgebaut (Halbwertszeit wenige Minuten bis Stunden). So kann die Zelle die Genexpression **regulieren**: Gene können nach Bedarf ein- und ausgeschaltet werden, ohne die DNA selbst zu verändern.
@@ -2035,6 +2053,8 @@ Krebs entsteht, wenn eine Zelle die Kontrolle über ihr eigenes Wachstum verlier
 
 > **Merke:** Krebs = Akkumulation von 5–7 Mutationen in wachstumskontrollierenden Genen. Nicht eine Mutation, sondern das Zusammenspiel vieler genetischer Treffer macht eine Zelle bösartig.
 
+{{IMAGE}}
+
 ---
 
 ## Proto-Onkogene und Onkogene — das festgeklemmte Gaspedal
@@ -2077,6 +2097,8 @@ Wird ein Proto-Onkogen durch eine Mutation **überaktiviert**, entsteht ein **On
 **Unterschied zu Onkogenen:** Tumorsuppressorgene wirken **rezessiv** — beide Allele müssen ausfallen (loss of function), damit die Bremse versagt.
 
 > **Merke:** Tumorsuppressorgen = Bremse. Beide Kopien müssen ausfallen (rezessiv). p53 = „Guardian of the Genome" — in über der Hälfte aller Tumoren mutiert. Eselsbrücke: Gaspedal klemmt (Onkogen) UND Bremse kaputt (TSG) — dann wird die Zelle zum Tumor.
+
+{{DIAGRAM:mutation-types}}
 
 ---
 
@@ -2349,6 +2371,8 @@ Epigenetische Markierungen werden bei der **Zellteilung** an Tochterzellen weite
 
 > **Merke:** Epigenetik = Steuerung der Genaktivität ohne Änderung der DNA-Sequenz. Mechanismen: DNA-Methylierung und Histonmodifikation. Potenziell reversibel und zelltypspezifisch.
 
+{{IMAGE}}
+
 ---
 
 ## DNA-Methylierung
@@ -2577,6 +2601,8 @@ Frauen haben zwei X-Chromosomen (XX), Männer nur eines (XY). Damit Frauen nicht
 
 Die **Polymerase-Kettenreaktion** (PCR, engl. polymerase chain reaction) ist die wichtigste Methode der modernen Molekularbiologie. Sie erlaubt es, einen bestimmten DNA-Abschnitt innerhalb weniger Stunden **millionenfach zu vervielfältigen** (Amplifikation), selbst wenn nur winzige Mengen Ausgangs-DNA vorhanden sind — etwa aus einem Blutstropfen, einem Haar oder einer archäologischen Probe.
 
+{{IMAGE}}
+
 **Benötigte Komponenten:**
 - **Template-DNA** — der DNA-Abschnitt, der kopiert werden soll
 - **Zwei Primer** (kurze einzelsträngige DNA-Stücke, ~20 Nukleotide) — markieren Anfang und Ende des Zielbereichs
@@ -2619,6 +2645,8 @@ Nach der PCR (oder nach einem Restriktionsverdau) muss man die entstandenen DNA-
 4. Größe der Fragmente durch Vergleich mit einem **Größenstandard** (DNA-Leiter, Marker mit bekannten Fragmentlängen) bestimmen
 
 > **Merke:** Gelelektrophorese trennt DNA-Fragmente nach Größe: kleine Fragmente wandern weit (schnell), große bleiben oben (langsam). DNA wandert zur Anode (+), weil sie negativ geladen ist.
+
+{{DIAGRAM:transcription-translation}}
 
 ---
 
@@ -2873,9 +2901,11 @@ Beim **reproduktiven Klonen** wird ein genetisch identischer Organismus erzeugt.
         "mitochondriale Vererbung",
         "Kopplungsanalyse",
       ],
-      content: `## Stammbaumanalyse — Methodik
+      content: `## Stammbaumanalyse — Kurzreferenz
 
-Die **Stammbaumanalyse** (Pedigree-Analyse) ist das zentrale Werkzeug der Humangenetik, um **Erbgänge** in Familien zu identifizieren. Da kontrollierte Kreuzungsexperimente beim Menschen nicht möglich sind, werden stattdessen bereits vorhandene Familienstammbäume ausgewertet.
+Die Stammbaumanalyse wird in UK „Erbgänge" (bio-4-06) ausführlich erklärt. Hier eine kompakte Referenz der Symbole und Entscheidungsregeln, gefolgt von den **besonderen Erbgängen**, die über die klassischen Mendelschen Muster hinausgehen.
+
+{{DIAGRAM:pedigree-analysis}}
 
 ### Standardsymbole
 
@@ -2891,6 +2921,8 @@ Die **Stammbaumanalyse** (Pedigree-Analyse) ist das zentrale Werkzeug der Humang
 | **Doppellinie** | konsanguine Verbindung (Verwandtenehe) |
 
 > **Merke:** Im Stammbaum gilt: Quadrat = männlich, Kreis = weiblich, ausgefüllt = betroffen, halb ausgefüllt = Konduktor/in. Eine Doppellinie signalisiert Verwandtenehe (erhöhtes Risiko für rezessive Erkrankungen).
+
+{{IMAGE}}
 
 ---
 
@@ -3088,6 +3120,8 @@ Die Kopplungsanalyse wurde historisch genutzt, um **Krankheitsgene zu kartieren*
 
 Die **genetische Beratung** ist ein Informations- und Kommunikationsprozess, bei dem Ratsuchende über **Ursachen, Verlauf und Wiederholungsrisiken** genetischer Erkrankungen aufgeklärt werden. Zentrales Prinzip: die Beratung erfolgt **nicht-direktiv** — der Berater gibt keine Handlungsempfehlung, sondern befähigt die Ratsuchenden zu einer **eigenständigen, informierten Entscheidung**.
 
+{{IMAGE}}
+
 ### Indikationen (Wann wird genetische Beratung empfohlen?)
 
 - **Mütterliches Alter ≥ 35 Jahre** (erhöhtes Risiko für Trisomien, v. a. Trisomie 21)
@@ -3132,6 +3166,8 @@ Die **Pränataldiagnostik** umfasst alle Untersuchungen am ungeborenen Kind **w�
 Invasive Verfahren ermöglichen eine **Karyotypisierung** (Chromosomenanalyse), **FISH** (Fluoreszenz-in-situ-Hybridisierung für schnelle Trisomie-Detektion) und **molekulargenetische** Tests (z. B. auf Mukoviszidose-Mutationen).
 
 > **Merke:** Nicht-invasiv = kein Fehlgeburtsrisiko (Ultraschall, NIPT, Ersttrimester-Screening). Invasiv = direktes Zellmaterial, aber Fehlgeburtsrisiko (Chorionzottenbiopsie ~0,5–1 %, Amniozentese ~0,3–0,5 %). NIPT hat die höchste Detektionsrate für Trisomien unter den nicht-invasiven Verfahren.
+
+{{DIAGRAM:chromosomal-mutations}}
 
 ---
 

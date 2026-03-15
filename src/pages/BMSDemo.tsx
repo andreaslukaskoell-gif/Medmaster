@@ -71,8 +71,8 @@ function BMSQuestionCard({ q, index }: { q: Question; index: number }) {
   };
 
   return (
-    <div className="bg-[var(--surface)] rounded-2xl border border-[var(--border)] overflow-hidden">
-      <div className="p-5 sm:p-6">
+    <div className="card-glass overflow-hidden">
+      <div className="p-6">
         <div className="flex items-start gap-3 mb-4">
           <span
             className="shrink-0 w-8 h-8 rounded-xl flex items-center justify-center text-sm font-bold text-white"
@@ -114,8 +114,8 @@ function ZFCard({ task, index }: { task: SequenceTask; index: number }) {
   };
 
   return (
-    <div className="bg-[var(--surface)] rounded-2xl border border-[var(--border)] overflow-hidden">
-      <div className="p-5 sm:p-6">
+    <div className="card-glass overflow-hidden">
+      <div className="p-6">
         <div className="flex items-start gap-3 mb-4">
           <span className="shrink-0 w-8 h-8 rounded-xl flex items-center justify-center text-sm font-bold text-white bg-amber-500">
             {index + 1}
@@ -198,8 +198,8 @@ function WFCard({ task, index }: { task: WordFluencyTask; index: number }) {
   };
 
   return (
-    <div className="bg-[var(--surface)] rounded-2xl border border-[var(--border)] overflow-hidden">
-      <div className="p-5 sm:p-6">
+    <div className="card-glass overflow-hidden">
+      <div className="p-6">
         <div className="flex items-start gap-3 mb-4">
           <span className="shrink-0 w-8 h-8 rounded-xl flex items-center justify-center text-sm font-bold text-white bg-teal-500">
             {index + 1}
@@ -298,8 +298,8 @@ function IMPCard({ task, index }: { task: ImplikationTask; index: number }) {
   };
 
   return (
-    <div className="bg-[var(--surface)] rounded-2xl border border-[var(--border)] overflow-hidden">
-      <div className="p-5 sm:p-6">
+    <div className="card-glass overflow-hidden">
+      <div className="p-6">
         <div className="flex items-start gap-3 mb-4">
           <span className="shrink-0 w-8 h-8 rounded-xl flex items-center justify-center text-sm font-bold text-white bg-[var(--accent)]/90">
             {index + 1}
@@ -472,7 +472,7 @@ function SectionHeader({
     <div className="mb-6">
       <div className="flex items-center gap-3 mb-2">
         <div className={`w-1.5 h-8 rounded-full ${color}`} />
-        <h2 className="text-xl sm:text-2xl font-bold text-[var(--text-primary)]">{title}</h2>
+        <h2 className="text-2xl font-bold text-[var(--text-primary)]">{title}</h2>
       </div>
       <p className="text-sm text-[var(--muted)] ml-5">{subtitle}</p>
     </div>
@@ -513,7 +513,7 @@ export default function BMSDemo() {
     <div className="min-h-screen bg-[var(--background)]">
       {/* Nav */}
       <nav className="sticky top-0 z-40 bg-[var(--surface)]/90 backdrop-blur-xl border-b border-[var(--border)]/50 shadow-sm">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
+        <div className="max-w-4xl mx-auto px-6 h-14 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
             <div
               className="w-8 h-8 rounded-xl flex items-center justify-center text-white"
@@ -535,8 +535,8 @@ export default function BMSDemo() {
 
       {/* Hero */}
       <header className="bg-[var(--surface)] border-b border-[var(--border)]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-14 text-center">
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-[var(--text-primary)] mb-4">
+        <div className="max-w-4xl mx-auto px-6 py-14 text-center">
+          <h1 className="text-4xl font-extrabold text-[var(--text-primary)] mb-4">
             MedAT-{"\u00dc"}bungsfragen — kostenlos testen
           </h1>
           <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto mb-2">
@@ -548,7 +548,7 @@ export default function BMSDemo() {
         </div>
       </header>
 
-      <main className="max-w-4xl mx-auto px-4 sm:px-6 py-8 space-y-16">
+      <main className="max-w-4xl mx-auto px-6 py-8 space-y-16">
         {/* ── BMS Section ──────────────────────────────── */}
         <section>
           <SectionHeader
@@ -641,7 +641,7 @@ export default function BMSDemo() {
         </section>
 
         {/* ── CTA ──────────────────────────────────────── */}
-        <div className="text-center bg-[var(--surface)] rounded-2xl p-8 sm:p-10 border border-[var(--border)]">
+        <div className="text-center card-glass p-10">
           <h2 className="text-2xl font-bold text-[var(--text-primary)] mb-3">
             Alle {totalCount}+ Fragen kostenlos testen
           </h2>
@@ -661,7 +661,7 @@ export default function BMSDemo() {
 
       {/* Footer */}
       <footer className="py-6 bg-[var(--background)] border-t border-[var(--border)]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <div className="max-w-4xl mx-auto px-6 flex flex-row items-center justify-between gap-3">
           <div className="flex items-center gap-2">
             <GraduationCap className="w-4 h-4 text-[var(--muted)]" />
             <span className="text-sm font-semibold text-[var(--muted)]">MedMaster</span>

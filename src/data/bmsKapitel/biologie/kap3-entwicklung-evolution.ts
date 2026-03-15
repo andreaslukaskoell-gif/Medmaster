@@ -32,6 +32,8 @@ Dieser Befund stützt die Hypothese der **Ursuppe** (engl. *primordial soup*; Op
 
 > **Merke:** Miller-Urey (1953): CH₄ + NH₃ + H₂ + H₂O + elektrische Entladungen → Aminosäuren. Beweist abiotische Entstehung organischer Moleküle — **nicht** die Entstehung von Leben selbst.
 
+{{IMAGE}}
+
 ---
 
 ## RNA-Welt — Das Henne-Ei-Problem lösen
@@ -44,7 +46,11 @@ Das zentrale Paradoxon der Lebensentstehung: Proteine katalysieren die Synthese 
 
 ## Protobionten — Erste Zell-ähnliche Strukturen
 
-Zwischen der Bildung organischer Moleküle und der ersten echten Zelle liegt ein entscheidender Schritt: die Entstehung von **Protobionten**. Protobionten sind abiotische, membranumhüllte Strukturen, die einfache Stoffwechselreaktionen durchführen können, ohne jedoch alle Kriterien des Lebens zu erfüllen. Experimentell wurden verschiedene Modelle realisiert: **Koazervate** (Oparin) — Tröpfchen aus Polymeren, die selektiv Substanzen aufnehmen und enzymatische Reaktionen katalysieren können; **Mikrosphären** (Fox) — proteinhaltige Vesikel, die durch Erhitzen und anschließendes Abkühlen von Aminosäuregemischen entstehen und eine primitive Membran-ähnliche Grenzschicht bilden. Die Bildung von **Lipid-Doppelschichten (Liposomen)** unter präbiotischen Bedingungen zeigt, dass die Selbstorganisation amphiphiler (zugleich wasser- und fettlöslicher) Moleküle zu Membranen ein spontaner physikochemischer Prozess ist. Der Übergang vom Protobionten zur echten Zelle erforderte die Integration von Replikation (RNA), Katalyse und einer selektiv permeablen Membran — ein Prozess, der vermutlich Hunderte Millionen Jahre dauerte.
+Zwischen der Bildung organischer Moleküle und der ersten echten Zelle liegt ein entscheidender Schritt: die Entstehung von **Protobionten** — abiotischen, membranumhüllten Strukturen, die primitive Stoffwechselreaktionen durchführen können, ohne alle Kriterien des Lebens zu erfüllen.
+
+Experimentell wurden drei Modelle realisiert: **Koazervate** (Oparin) sind Polymertröpfchen, die selektiv Substanzen aufnehmen und einfache Reaktionen katalysieren. **Mikrosphären** (Fox) entstehen durch Erhitzen und Abkühlen von Aminosäuregemischen und bilden eine membranähnliche Grenzschicht. **Liposomen** zeigen, dass sich amphiphile Moleküle — also Moleküle mit wasseranziehender und wasserabstoßender Seite — spontan zu Lipid-Doppelschichten zusammenlagern.
+
+Der Übergang zum echten Leben erforderte die Integration von drei Elementen: Replikation (RNA), Katalyse und einer selektiv permeablen Membran. Dieser Prozess dauerte vermutlich Hunderte Millionen Jahre.
 
 > **Merke:** Protobionten: erste membranumhüllte Strukturen mit primitivem Stoffwechsel, aber ohne vollständige Replikation. Koazervate (Oparin), Mikrosphären (Fox) und Liposomen als experimentelle Modelle.
 
@@ -52,15 +58,21 @@ Zwischen der Bildung organischer Moleküle und der ersten echten Zelle liegt ein
 
 ## Endosymbiontentheorie — Belege und Bedeutung
 
-Lynn Margulis' Theorie, die sie 1967 vorlegte und die zunächst stark kritisiert wurde, gilt heute als gesichert. Die Belege sind vielfältig und unabhängig voneinander: Mitochondrien haben ein eigenes ringförmiges Genom mit bakteriellen Merkmalen (keine Histone, kein Splicing (Herausschneiden von Introns aus der prä-mRNA)). Ihre Ribosomen sedimentieren wie bakterielle (70S) und werden durch Antibiotika gehemmt, die auch Bakterien hemmen (z. B. Chloramphenicol, Tetracyclin). Phylogenetische Analysen (stammesgeschichtliche Verwandtschaftsvergleiche) zeigen, dass die mitochondriale 16S-rRNA am engsten mit Alphaproteobakterien (speziell Rickettsiales, einer Ordnung intrazellulärer Bakterien) verwandt ist. Für Chloroplasten gilt analoge Verwandtschaft mit Cyanobakterien. Die Theorie erklärt, warum eukaryotische Zellen so viel komplexer sind als prokaryotische — sie sind im Wesentlichen Chimären.
+Lynn Margulis legte die Theorie 1967 vor — zunächst stark kritisiert, heute durch unabhängige Befunde aus verschiedenen Disziplinen gesichert.
+
+Die stärksten Belege: Mitochondrien besitzen ein eigenes, ringförmiges Genom ohne Histone — typisch für Bakterien, nicht für eukaryotische Zellkerne. Ihre Ribosomen sedimentieren mit 70S wie bakterielle Ribosomen, und Antibiotika wie Chloramphenicol hemmen sie ebenso. Phylogenetische Sequenzvergleiche ordnen die mitochondriale 16S-rRNA den Alphaproteobakterien (Ordnung Rickettsiales) zu; Chloroplasten entsprechend den Cyanobakterien.
+
+Die Theorie erklärt eine fundamentale Frage: Warum sind eukaryotische Zellen so viel komplexer als prokaryotische? Weil sie im Wesentlichen Chimären sind — Zellen, die andere Zellen dauerhaft in sich aufgenommen haben.
 
 > **Merke:** Endosymbiose-Belege: eigenes Genom, 70S-Ribosomen, Antibiotikasensitivität, Doppelmembran, binäre Teilung, phylogenetische Ähnlichkeit zu Bakterien.
+
+{{DIAGRAM:prokaryote-vs-eukaryote}}
 
 ---
 
 ## Klinischer Bezug
 
-Die 70S-Ribosomen der Mitochondrien erklären die mitochondriale Toxizität mancher Antibiotika (z. B. Chloramphenicol hemmt 70S-Ribosomen von Bakterien UND Mitochondrien → aplastische Anämie (Versagen der Blutbildung im Knochenmark) als Nebenwirkung). Mutationen im mitochondrialen Genom (maternal vererbt) verursachen mitochondriale Erkrankungen wie das MELAS-Syndrom (mitochondriale Enzephalomyopathie mit Laktatazidose und schlaganfallähnlichen Episoden).`,
+Die 70S-Ribosomen der Mitochondrien erklären, warum manche Antibiotika mitochondriale Toxizität zeigen: Chloramphenicol hemmt 70S-Ribosomen — sowohl bei Bakterien als auch in Mitochondrien. Die Folge kann eine aplastische Anämie sein, d. h. ein Versagen der Blutbildung im Knochenmark. Mutationen im mitochondrialen Genom, das ausschließlich maternal vererbt wird, verursachen mitochondriale Erkrankungen wie das MELAS-Syndrom.`,
       lernziele: [
         "Das Miller-Urey-Experiment und seine Bedeutung für die chemische Evolution erläutern",
         "Die RNA-Welt-Hypothese und ihre Begründung beschreiben",
@@ -213,11 +225,17 @@ Das Ergebnis dieser vier Bedingungen ist **natürliche Selektion**: Populationen
 
 > **Merke:** Lamarck = Vererbung erworbener Eigenschaften (widerlegt). Darwin = natürliche Selektion: Variation + Erblichkeit + Überproduktion + Differentialreproduktion.
 
+{{IMAGE}}
+
 ---
 
 ## Fitness — Was bedeutet 'Überleben des Tüchtigsten'?
 
-Der Begriff 'Survival of the Fittest' (Spencer, nicht Darwin) wird oft missverstanden. In der Evolutionsbiologie bedeutet Fitness nicht physische Stärke, sondern **reproduktive Fitness**: die Fähigkeit eines Individuums, überlebensfähige, fertile Nachkommen zu erzeugen. Ein schwächliches, aber besonders fertiles Individuum hat höhere Fitness als ein starkes, nicht-reproduktives Individuum. Inklusive Fitness (Hamilton) erweitert das Konzept: Indirekte Fitness durch Verwandtenunterstützung (Altruismus gegenüber genetisch verwandten Individuen). Beispiel: Eine Biene, die zugunsten der Königin auf eigene Reproduktion verzichtet, aber die gemeinsamen Gene durch die Königin weitervererbt (kin selection, Verwandtenselektion). Fitness ist immer relativ zur aktuellen Umwelt — was heute vorteilhaft ist, kann in veränderter Umwelt neutral oder nachteilig sein.
+Der Begriff „Survival of the Fittest" — geprägt von Spencer, nicht Darwin — wird oft missverstanden. In der Evolutionsbiologie bedeutet **Fitness** nicht physische Stärke, sondern **reproduktiven Erfolg**: die Fähigkeit eines Individuums, überlebensfähige, fertile Nachkommen zu erzeugen. Ein schwächliches, aber besonders fertiles Individuum hat höhere Fitness als ein kräftiges, nicht-reproduktives.
+
+Das Konzept der **inklusiven Fitness** (Hamilton) erweitert diese Perspektive: Fitness umfasst auch die indirekte Weitergabe eigener Gene durch Verwandte. Eine Arbeiterbiene verzichtet auf eigene Reproduktion, hilft aber der Königin — die gemeinsame Gene trägt. Diese Verwandtenselektion erklärt scheinbar altruistisches Verhalten.
+
+Wichtig: Fitness ist immer relativ zur aktuellen Umwelt. Was heute vorteilhaft ist, kann in einer veränderten Umwelt neutral oder nachteilig werden.
 
 > **Merke:** **Fitness = Fortpflanzungserfolg** (nicht Körperkraft, nicht Schnelligkeit). Nach Darwin sind die **erfolgreichsten Individuen die mit den meisten fortpflanzungsfähigen Nachkommen**. Inklusive Fitness = eigene + indirekte Reproduktion durch Verwandte (Kin Selection).
 
@@ -225,7 +243,11 @@ Der Begriff 'Survival of the Fittest' (Spencer, nicht Darwin) wird oft missverst
 
 ## Synthetische Evolutionstheorie — Integration der Erkenntnisse
 
-Darwin kannte Mendels Arbeit nicht (obwohl sie 1866 veröffentlicht wurde). Die Neue Synthese der 1930–1950er Jahre integrierte beide: Mutationen im Mendelschen Sinne liefern die genetische Variation, auf der natürliche Selektion wirkt. R.A. Fisher (The Genetical Theory of Natural Selection, 1930) zeigte mathematisch, dass Darwinismus und Mendelsche Genetik kompatibel sind. Theodosius Dobzhansky ('Genetics and the Origin of Species', 1937) verknüpfte Populationsgenetik mit Evolutionsbiologie. Ernst Mayr definierte den biologischen Artbegriff und analysierte Artbildungsmechanismen. Das Ergebnis: Die Synthetische Evolutionstheorie definiert Evolution als Veränderung der Allelfrequenzen in einer Population — eine präzise, quantifizierbare Definition.
+Darwin kannte Mendels Arbeit nicht — obwohl sie bereits 1866 veröffentlicht worden war. Die **Neue Synthese** der 1930–1950er Jahre schloss diese Lücke: Mendelsche Genetik liefert die Mechanik der Vererbung, Darwinsche Selektion wirkt auf die dadurch entstehende Variation.
+
+Die entscheidenden Beiträge: R.A. Fisher zeigte mathematisch die Vereinbarkeit beider Systeme. Theodosius Dobzhansky verknüpfte Populationsgenetik und Evolutionsbiologie. Ernst Mayr formulierte den biologischen Artbegriff.
+
+Das Ergebnis: Evolution wird nun präzise definiert als **Veränderung der Allelfrequenzen in einer Population** — eine quantifizierbare, testbare Aussage.
 
 > **Merke:** Neue Synthese = Darwin (Selektion) + Mendel (Genetik) + Populationsgenetik. Evolution = Veränderung der Allelfrequenzen in Populationen über Zeit.
 
@@ -242,6 +264,8 @@ Natürliche Selektion kann auf Merkmale einer Population auf drei verschiedene W
 **Disruptive Selektion**: Beide Extreme werden bevorzugt, der Mittelwert wird benachteiligt. Die Merkmalsverteilung spaltet sich auf. Beispiel: Schnabelgröße bei Vögeln mit zwei verschiedenen Nahrungsquellen — sehr große Schnäbel (harte Samen) und sehr kleine Schnäbel (Insekten) sind vorteilhaft, mittlere nicht. Disruptive Selektion kann zur **Artaufspaltung** führen.
 
 > **Merke:** Stabilisierend = Mittelwert bleibt (Varianz ↓). Gerichtet = Mittelwert verschiebt sich. Disruptiv = Extreme bevorzugt → kann Artaufspaltung einleiten.
+
+{{DIAGRAM:phylogenetic-tree}}
 
 ---
 
@@ -404,11 +428,19 @@ Evolution bedeutet Veränderung der **Allelfrequenzen** (Häufigkeit von Genvari
 
 > **Merke:** Mutation (Rohstoff, zufällig), Selektion (gerichtet, fitness-abhängig), Gendrift (zufällig, stark in kleinen Populationen), Genfluss (homogenisierend, wirkt Artbildung entgegen).
 
+{{IMAGE}}
+
 ---
 
 ## Flaschenhals-Effekt vs. Gründereffekt
 
-Beide sind Formen des Gendrifts in kleinen Populationen, haben aber verschiedene Ursachen. Der Flaschenhals-Effekt entsteht, wenn eine bestehende große Population durch ein Ereignis (Epidemie, Naturkatastrophe) drastisch reduziert wird — die überlebenden wenigen Individuen repräsentieren nur einen Ausschnitt der ursprünglichen genetischen Vielfalt (genetische Verarmung). Der Gründereffekt tritt auf, wenn eine kleine Gruppe von Individuen eine neue Population kolonisiert — die Allele der Gründer (zufällig, nicht representativ) dominieren die neue Population. Beide können zur Fixierung seltener Allele führen (einschließlich Krankheitsallele) und genetische Vielfalt reduzieren. Das Northern Elephant Seal-Beispiel ist ein Flaschenhals; die Amischen mit hoher Ellis-van-Creveld-Häufigkeit sind ein Gründereffekt-Beispiel.
+Beide sind Sonderformen des Gendrifts, haben aber unterschiedliche Ursachen:
+
+**Flaschenhals-Effekt:** Eine bestehende große Population wird durch ein Ereignis — Epidemie, Naturkatastrophe — drastisch reduziert. Die wenigen Überlebenden repräsentieren nur einen zufälligen Ausschnitt der ursprünglichen genetischen Vielfalt. Beispiel: Nördliche See-Elefanten wurden auf wenige Dutzend Tiere dezimiert; die heutige Population zeigt extrem geringe genetische Diversität.
+
+**Gründereffekt:** Eine kleine Gruppe verlässt die Ursprungspopulation und gründet an einem neuen Ort eine eigene Population. Ihre zufällig mitgebrachten Allele sind in der Folgegeneration überrepräsentiert. Beispiel: Amische in Pennsylvania mit erhöhter Häufigkeit des Ellis-van-Creveld-Syndroms.
+
+Beide Effekte können seltene Krankheitsallele fixieren und die genetische Vielfalt dauerhaft reduzieren.
 
 > **Merke:** Flaschenhals: bestehende Population wird stark reduziert. Gründereffekt: kleine Gruppe gründet neue Population. Beide → Gendrift, genetische Verarmung.
 
@@ -584,156 +616,60 @@ Der Gründereffekt erklärt die erhöhte Häufigkeit bestimmter genetischer Erkr
         "Organogenese",
         "Teratogene",
       ],
-      content: `Aus einer einzigen befruchteten Eizelle entsteht ein Organismus mit über 200 Zelltypen, gegliederten Organsystemen und einem funktionierenden Nervensystem. Die Embryologie erklärt, wie dieser Weg Schritt für Schritt abläuft — und wo er schiefgehen kann.
+      content: `Aus einer einzigen befruchteten Eizelle entsteht ein Organismus mit über 200 Zelltypen und einem funktionierenden Nervensystem. Dieses Kapitel gibt einen Überblick über die Stationen dieser Entwicklung — von der Befruchtung bis zur Fetalperiode. Die einzelnen Stationen werden in den folgenden Unterkapiteln im Detail behandelt.
 
 {{DIAGRAM:cell-cycle}}
 
 ---
 
-## Befruchtung (Tag 0)
+## Die Entwicklungsstationen im Überblick
 
-Die **Befruchtung** (Fertilisation) findet im **Ampullenteil des Eileiters** statt. Das Spermium durchdringt drei Barrieren:
-1. **Corona radiata** (Granulosazellschicht um die Eizelle) — Hyaluronidase aus dem Akrosom löst die Zellverbindungen
-2. **Zona pellucida** (Glykoproteinschicht) — Bindung an ZP3-Rezeptor löst die **Akrosomreaktion** (Freisetzung proteolytischer Enzyme) aus
-3. **Eizellmembran** — Fusion der Zellmembranen von Spermium und Eizelle
+Die Embryonalentwicklung lässt sich in klar abgegrenzte Phasen gliedern:
 
-Sofort nach Verschmelzung erfolgt der **Polyspermieblock** in zwei Stufen:
-- **Schneller Block** (Sekunden): Depolarisation der Eizellmembran verhindert weitere Spermienbindung
-- **Langsamer Block** (Minuten): **Kortikalreaktion** — kortikale Granula verschmelzen mit der Membran, Enzyme modifizieren die Zona pellucida (Zona-Reaktion), sodass kein weiteres Spermium binden kann
+| Phase | Zeitraum | Kernprozess |
+|-------|----------|-------------|
+| **Befruchtung** | Tag 0 | Sperma + Eizelle → Zygote (2n) in der Ampulle des Eileiters |
+| **Furchung & Morula** | Tag 1–4 | Mitotische Teilungen ohne Wachstum; Keim wandert in den Uterus |
+| **Blastozyste & Implantation** | Tag 5–12 | Hohlraumbildung; Einnistung ins Endometrium (Nidation) |
+| **Gastrulation** | Woche 3 | Bildung der drei Keimblätter (Ektoderm, Mesoderm, Endoderm) |
+| **Neurulation** | Woche 3–4 | Neuralrohr (ZNS-Anlage) schließt sich |
+| **Organogenese** | Woche 3–8 | Alle Organsysteme werden angelegt |
+| **Fetalperiode** | Ab Woche 9 | Wachstum und Reifung — keine neuen Organanlagen |
 
-Das Ergebnis: eine diploide **Zygote** (2n = 46) mit mütterlichem und väterlichem Vorkern, die anschließend verschmelzen (Karyogamie).
-
-> **Merke:** Befruchtung = Ampulle des Eileiters. Akrosomreaktion durchbricht Zona pellucida. Polyspermieblock: schnell (elektrisch) + langsam (Kortikalreaktion). Ergebnis: diploide Zygote.
-
----
-
-## Furchung und Morula (Tag 1–4)
-
-Die Zygote beginnt sofort mit **Furchungsteilungen** (mitotische Teilungen ohne Wachstum): Die Zellen (Blastomeren) werden bei jeder Teilung kleiner, das Gesamtvolumen bleibt gleich.
-
-- **Tag 1:** 2-Zell-Stadium
-- **Tag 2:** 4-Zell-Stadium
-- **Tag 3:** 8–16 Zellen → **Morula** (lat. Maulbeere) — kompakter Zellhaufen, noch von der Zona pellucida umgeben
-- Während der Furchung wandert der Keim durch den Eileiter Richtung Uterus
-
-Wichtig: Furchung ist **nicht** dasselbe wie normales Zellwachstum. Die Blastomeren teilen sich, ohne zwischen den Teilungen zu wachsen — das erklärt, warum eine Morula kaum größer ist als die ursprüngliche Zygote.
-
-> **Merke:** Furchung = Teilungen ohne Wachstum (Zellen werden kleiner). Morula = kompakter Zellhaufen (Tag 3–4), noch in der Zona pellucida, auf dem Weg zum Uterus.
+Diese zeitliche Abfolge ist prüfungsrelevant. Merke dir besonders: Das Herz beginnt bereits in **Woche 4 (Tag 22–23)** zu schlagen — nicht erst am Ende der Embryonalperiode.
 
 ---
 
-## Blastocyste und Implantation (Tag 5–12)
+## Die drei Keimblätter — die meistgeprüfte Tabelle
 
-{{DIAGRAM:animal-cell}}
-
-Ab Tag 5 bildet sich im Inneren der Morula ein flüssigkeitsgefüllter Hohlraum (**Blastozoel**) — es entsteht die **Blastocyste** (auch Blastozyste). Sie besteht aus:
-
-- **Trophoblast** (äußere Zellschicht): wird zur **Plazenta** und den Eihäuten; produziert **hCG** (humanes Choriongonadotropin), das den Gelbkörper erhält und die Schwangerschaft sichert
-- **Embryoblast** (innere Zellmasse, ICM): wird zum **Embryo** selbst; differenziert sich weiter in **Epiblast** (Quelle aller drei Keimblätter) und **Hypoblast** (bildet den Dottersack)
-- **Blastozoel**: der flüssigkeitsgefüllte Hohlraum
-
-**Implantation** (Nidation): Ab Tag 6–7 schlüpft die Blastocyste aus der Zona pellucida (**Hatching**) und heftet sich an das Endometrium (Gebärmutterschleimhaut). Der Trophoblast differenziert in **Synzytiotrophoblast** (invasiv, dringt ins Endometrium ein) und **Zytotrophoblast** (Stammzellschicht). Bis Tag 12 ist die Blastocyste vollständig in die Schleimhaut eingebettet.
-
-> **Merke:** Blastocyste: Trophoblast (außen) → Plazenta + hCG; Embryoblast (innen) → Embryo; Blastozoel = Hohlraum. Implantation ab Tag 6–7 durch invasiven Synzytiotrophoblast.
-
----
-
-## Gastrulation — Der wichtigste Tag deines Lebens (Woche 3)
-
-Der Entwicklungsbiologe Lewis Wolpert sagte: *"It is not birth, marriage, or death, but gastrulation which is truly the most important time in your life."* Warum? Weil hier der gesamte Bauplan des Körpers festgelegt wird.
-
-{{DIAGRAM:gastrulation}}
-
-Die **Gastrulation** (Tag 15–21) verwandelt die zweischichtige Keimscheibe (Epiblast + Hypoblast) in einen Embryo mit **drei Keimblättern**:
-
-1. Der **Primitivstreifen** erscheint auf der Oberfläche des Epiblast (definiert die Längsachse und Symmetrie des Embryos)
-2. Epiblastzellen wandern zum Primitivstreifen und stülpen sich ein (**Invagination**)
-3. Eingewanderte Zellen bilden das **Mesoderm** (mittleres Keimblatt) — lagert sich zwischen Epiblast und Hypoblast ein
-4. Ein Teil der Zellen verdrängt den Hypoblast und wird zum **definitiven Endoderm** (inneres Keimblatt)
-5. Die an der Oberfläche verbleibenden Epiblastzellen werden zum **Ektoderm** (äußeres Keimblatt)
-
-Aus dem **Primitivknoten** (am kranialen Ende des Primitivstreifens) entsteht das **Notochord** (Chorda dorsalis) — ein mesodermaler Stab in der Mittellinie, der als **Induktor** die nachfolgende Neurulation auslöst.
-
-> **Merke:** Gastrulation = aus dem Epiblast entstehen alle drei Keimblätter. Primitivstreifen → Invagination → Mesoderm + Endoderm; Oberfläche → Ektoderm. Notochord aus Primitivknoten induziert Neurulation.
-
----
-
-## Die drei Keimblätter und ihre Derivate
-
-Welches Keimblatt welches Organ bildet, ist eine der meistgeprüften Tabellen im MedAT.
+Welches Keimblatt welches Organ bildet, ist eine der meistgeprüften Zuordnungen im MedAT.
 
 | Keimblatt | Position | Wichtige Derivate |
 |-----------|----------|-------------------|
-| **Ektoderm** | außen | **Nervensystem** (Gehirn, Rückenmark, periphere Nerven), Epidermis (Oberhaut), Haare, Nägel, Zahnschmelz, Linse, Innenohr, Nebennierenmark, Hypophysenvorderlappen (Adenohypophyse) |
-| **Mesoderm** | Mitte | **Muskeln** (Skelett-, Herz-, glatte Muskulatur), Knochen, Knorpel, **Niere**, Gonaden (Hoden/Ovar), **Blut** und Blutgefäße, Herz, Milz, Nebennierenrinde, Bindegewebe, Dermis |
-| **Endoderm** | innen | **Epithel des Gastrointestinaltrakts** (Magen, Darm), **Leber**, **Pankreas**, **Lunge** (Alveolarepithel), Schilddrüse, Thymus, Harnblasenepithel |
+| **Ektoderm** | außen | **Nervensystem** (Gehirn, Rückenmark, periphere Nerven), Epidermis, Zahnschmelz, Nebennierenmark (via Neuralleiste) |
+| **Mesoderm** | Mitte | **Muskeln**, Knochen, **Niere**, Gonaden, **Blut** und Blutgefäße, Herz, Dermis |
+| **Endoderm** | innen | **Epithel des Gastrointestinaltrakts**, **Leber**, **Pankreas**, **Lunge** (Alveolarepithel), Schilddrüse |
 
-**Typische Fehlannahmen** — im MedAT gerne als Distraktoren verwendet:
-- Ektoderm ≠ nur Haut! Das gesamte **Nervensystem** stammt aus dem Ektoderm (via Neuralrohr und Neuralleiste)
-- Mesoderm ≠ nur Muskeln! Auch **Niere**, **Blut**, Herz und Gonaden sind mesodermaler Herkunft
-- Endoderm ≠ ganzer Darm! Nur das **Epithel** des Darms ist endodermal; die Muskelschicht der Darmwand stammt aus dem Mesoderm
+**Typische Prüfungsfallen:**
+- Ektoderm ≠ nur Haut — das gesamte **Nervensystem** stammt vom Ektoderm
+- Mesoderm ≠ nur Muskeln — auch **Niere**, Herz und Gonaden sind mesodermalen Ursprungs
+- Endoderm ≠ ganzer Darm — nur das **Epithel** ist endodermal; die Darmmuskulatur stammt vom Mesoderm
 
-> **Merke:** Ektoderm = außen + Nerven; Mesoderm = Mitte (Muskeln, Knochen, Blut, Niere); Endoderm = innen (Darm-Epithel, Lunge, Leber, Pankreas). Eselsbrücke: **E**ktoderm = **E**pidermis + **E**ncephalon (Gehirn).
-
----
-
-## Neurulation (Woche 3–4)
-
-{{DIAGRAM:neurulation}}
-
-Die **Neurulation** ist die Bildung des Neuralrohrs, der Vorstufe des zentralen Nervensystems. Sie wird durch Signale des Notochords induziert.
-
-1. Das Notochord signalisiert dem darüberliegenden Ektoderm → es verdickt sich zur **Neuralplatte**
-2. Die Ränder der Neuralplatte heben sich und bilden **Neuralfalten**, dazwischen entsteht die **Neuralrinne**
-3. Die Neuralfalten nähern sich und verschmelzen → es entsteht das **Neuralrohr** (wird zu Gehirn + Rückenmark)
-4. Beim Ablösen der Neuralfalten wandern Zellen seitlich aus: die **Neuralleistenzellen** (Crista neuralis)
-
-Die **Neuralleiste** ist eine einzigartige Struktur der Wirbeltiere. Neuralleistenzellen wandern durch den Embryo und differenzieren sich zu:
-- **Periphere Neuronen** und Gliazellen (Schwann-Zellen)
-- **Nebennierenmark** (Chromaffine Zellen: Adrenalin, Noradrenalin)
-- **Melanocyten** (Pigmentzellen der Haut)
-- **Odontoblasten** (Dentinbildner der Zähne)
-- **Knorpel und Knochen des Gesichtsschädels** (kranialer Anteil)
-- Teile des Herzens (Septum, Ausstrombahn)
-
-> **Merke:** Neuralplatte → Neuralrinne → Neuralrohr (ZNS). Neuralleistenzellen = wandernde Multitalente: periphere Nerven, Nebennierenmark, Melanocyten, Gesichtsknochen.
+> **Merke:** **E**ktoderm = **E**pidermis + **E**ncephalon; Mesoderm = Muskeln + Knochen + Niere + Blut; Endoderm = Darm-Epithel + Lunge + Leber + Pankreas.
 
 ---
 
-## Organogenese und Zeitplan (Woche 3–8)
+## Kritische Perioden und Teratogene
 
-Ab der dritten Woche beginnt die **Organogenese** (Organbildung). Die wichtigsten Meilensteine:
+**Teratogene** sind Substanzen oder Einflüsse, die Fehlbildungen verursachen. Ihre Wirkung hängt vom **Zeitpunkt der Exposition** ab — jedes Organ hat sein eigenes Zeitfenster maximaler Verletzlichkeit.
 
-| Zeitpunkt | Ereignis |
-|-----------|----------|
-| Woche 3 | Gastrulation, Neurulation beginnt, erstes Blut bildet sich |
-| Woche 4 | Herz schlägt (Tag 22–23!), Neuralrohr schließt sich, Armknospen |
-| Woche 5 | Beinknospen, Handplatten, Augenbläschen |
-| Woche 6 | Finger strahlenförmig, äußeres Ohr beginnt |
-| Woche 8 | Alle Organanlagen vorhanden → ab jetzt **Fetus** (nicht mehr Embryo) |
-| Ab Woche 9 | Fetalperiode: Wachstum und Reifung, kaum neue Organanlagen |
+- **Woche 1–2:** Alles-oder-Nichts-Prinzip (Absterben oder normale Entwicklung dank Totipotenz)
+- **Woche 3–8:** Kritischste Phase — Organogenese; organspezifische Fehlbildungen möglich
+- **Ab Woche 9:** Fetalperiode — Teratogene stören eher Wachstum als Strukturanlage
 
-Die **kritischen Perioden** (Phasen hoher Empfindlichkeit gegenüber Teratogenen) liegen in der Organogenese (Woche 3–8). Jedes Organ hat sein eigenes Zeitfenster maximaler Vulnerabilität:
-- **Neuralrohr**: Woche 3–4 (Schluss bis Tag 28)
-- **Herz**: Woche 3–6
-- **Gliedmaßen**: Woche 4–8
-- **Augen**: Woche 4–8
+Die wichtigsten Teratogene: Folsäuremangel (Neuralrohrdefekte), Alkohol (fetales Alkoholsyndrom), Thalidomid (Phokomelie, Woche 4–8), Rötelnvirus im 1. Trimenon (Gregg-Syndrom: Herz, Auge, Ohr).
 
-> **Merke:** Embryonalperiode = Woche 1–8 (Organanlage). Fetalperiode = ab Woche 9 (Wachstum + Reifung). Kritische Perioden = Woche 3–8 (höchste Teratogenempfindlichkeit).
-
----
-
-## Klinischer Bezug — Teratogene und Fehlbildungen
-
-**Teratogene** (griech. teras = Monster) sind Substanzen oder Einflüsse, die Fehlbildungen verursachen:
-
-- **Folsäuremangel** → **Neuralrohrdefekte**: Spina bifida (offener Rücken — Neuralrohr schließt sich kaudal nicht), Anencephalie (Neuralrohr schließt sich kranial nicht → fehlende Großhirnanlage). Prophylaxe: **0,4 mg Folsäure/Tag** perikonzeptionell
-- **Alkohol** → **Fetales Alkoholsyndrom** (FAS): Mikrocephalie, Wachstumsretardierung, kognitive Defizite, typische Fazies (kurze Lidspalten, flaches Philtrum)
-- **Thalidomid** (Contergan) → **Phokomelie** (Robbengliedrigkeit): fehlende/verkürzte Extremitäten. Historisches Beispiel für die Bedeutung kritischer Perioden — Einnahme in Woche 4–8 war entscheidend
-- **Rötelnvirus** (1. Trimenon) → Gregg-Syndrom: Herzfehler, Katarakt, Taubheit
-- **Diabetes mellitus** der Mutter → kaudales Regressionssyndrom, Herzfehler, Makrosomie
-
-> **Merke:** Kritischste Phase für Teratogene: Woche 3–8. Folsäure schützt vor Neuralrohrdefekten. Alkohol ist das häufigste Teratogen — kein sicherer Schwellenwert bekannt.`,
+> **Merke:** Kritischste Phase: Woche 3–8. Folsäure 0,4 mg/Tag perikonzeptionell schützt vor Neuralrohrdefekten.`,
       lernziele: [
         "Den zeitlichen Ablauf der Embryonalentwicklung (Befruchtung → Furchung → Blastocyste → Gastrulation → Neurulation → Organogenese) beschreiben",
         "Die drei Keimblätter und ihre wichtigsten Derivate zuordnen (Ektoderm, Mesoderm, Endoderm)",
@@ -1093,6 +1029,8 @@ Auch die HIV-Forensik nutzt Phylogenetik: In Gerichtsprozessen wurde anhand vira
       ],
       content: `98,7 % DNA-Übereinstimmung mit Schimpansen — und doch trennen uns aufrechter Gang, Sprache und ein dreifach größeres Gehirn. Die Geschichte der Hominiden ist kein linearer Aufstieg, sondern ein verzweigter Stammbaum mit Sackgassen, Koexistenzen und überraschenden Hybridisierungen.
 
+{{IMAGE}}
+
 ---
 
 ## Primaten-Stammbaum — Vom Halbaffen zum Menschen
@@ -1325,13 +1263,14 @@ Pääbos Paläogenomik (Erbgutanalyse ausgestorbener Arten) verknüpft Hominiden
         "Oozyte",
         "Polkörperchen",
       ],
-      content: `## Voraussetzungen: Meiose und Keimzellen
+      content: `## Gametogenese — Warum braucht es zwei verschiedene Prozesse?
 
+Ohne Keimzellen keine Fortpflanzung. Die **Gametogenese** bezeichnet die Bildung reifer Geschlechtszellen (Gameten) durch Meiose — und sie verläuft bei Mann und Frau grundlegend verschieden. Beim Mann entstehen täglich Millionen Spermien ab der Pubertät, kontinuierlich bis ins hohe Alter. Bei der Frau sind die Eizell-Vorläufer bereits pränatal angelegt — ein Pool, der ein Leben lang nicht erneuert wird. Diese Asymmetrie hat weitreichende Konsequenzen: Sie erklärt, warum das Risiko für chromosomale Fehler mit dem mütterlichen Alter steigt (lange Meiose-Pause in Prophase I), und warum Spermien genetisch frischer Mutation unterliegen als Eizellen.
 
-**Begriffe beim ersten Auftreten:**
-- **Gamet** = reife Keimzelle (Spermium oder Eizelle) mit einfachem Chromosomensatz (n).
-- **Spermatogonium** = diploide Stammzelle der Spermien im Hoden (2n).
-- **Oogonium** = diploide Vorläuferzelle der Eizelle; beim Menschen teilen sich Oogonien nur pränatal, danach entstehen **primäre Oozyten** (2n), die in die Meiose eintreten.
+Wichtige Begriffe:
+- **Gamet** = reife Keimzelle (Spermium oder Eizelle) mit einfachem Chromosomensatz (n)
+- **Spermatogonium** = diploide Stammzelle der Spermien im Hoden (2n)
+- **Oogonium** = diploide Vorläuferzelle der Eizelle; beim Menschen nur pränatal aktiv — danach entstehen **primäre Oozyten** (2n), die in Meiose I eintreten und arretieren
 
 ---
 
@@ -1501,6 +1440,8 @@ Die reife **Eizelle** (n) nach Abschluss der Meiose II und die **Spermien** (n) 
       ],
       content: `## Ort und zeitliche Einordnung
 
+{{IMAGE}}
+
 Nur eine von Millionen Samenzellen schafft es bis zur Eizelle — und der Ort dieses Treffens ist genau festgelegt. Die Befruchtung erfolgt in der **Ampulle des Eileiters** (Tuba uterina) — dem äußeren, weitesten Abschnitt. Die Eizelle wird bei der Ovulation aus dem Ovar freigesetzt, vom Eileiter aufgenommen und wandert langsam in Richtung Uterus; die Spermien bewegen sich vom Scheidenbereich durch Uterus in die Tuben. Das Zusammentreffen und die Fusion finden in der Ampulle statt. Eine Einnistung (Implantation) in der Tube führt zur **Eileiterschwangerschaft** (Extrauteringravidität, Schwangerschaft außerhalb der Gebärmutter) und ist lebensbedrohlich.
 
 ---
@@ -1616,10 +1557,13 @@ Bevor ein Spermium die Eizelle durchdringen kann, muss es **kapazitiert** sein. 
         "hCG",
         "Blastozoel",
       ],
-      content: `## Furchung — Teilungen ohne Wachstum
+      content: `## Von der Zygote zur Einnistung — vier Tage, drei Stadien
+
+Unmittelbar nach der Befruchtung beginnt die Zygote sich zu teilen. In den ersten fünf Tagen durchläuft der Keim drei charakteristische Stadien — Morula, Blastozyste und schließlich Implantation — während er durch den Eileiter in die Gebärmutter wandert. Keine dieser Teilungen ist normales Zellwachstum: Die Zellen werden bei jeder Runde kleiner, bis zwei klar unterschiedliche Zellpopulationen entstehen, die später zu Embryo und Plazenta werden.
+
+## Furchung — Teilungen ohne Wachstum
 
 {{DIAGRAM:stem-cells}}
-
 
 Die Zygote teilt sich in 2, 4, 8, 16, … Zellen. Der kompakte Zellhaufen aus etwa 16–32 Zellen wird **Morula** genannt (Tag 3–4, lateinisch „Maulbeere"). Die Morula wandert weiter im Eileiter in Richtung Uterus.
 
@@ -1736,8 +1680,13 @@ Die **Implantation** (Einnistung) ist das Einbetten der Blastozyste in die **Geb
         "Notochord",
         "Epiblast",
       ],
-      content: `## Voraussetzungen: Zweischichtige Keimscheibe
+      content: `## Gastrulation — wenn der Körperbauplan entsteht
 
+Der Entwicklungsbiologe Lewis Wolpert sagte: *"It is not birth, marriage, or death, but gastrulation which is truly the most important time in your life."* Der Satz ist nicht übertrieben: In der dritten Entwicklungswoche wird aus einer einschichtigen Zellscheibe ein dreischichtiger Embryo mit festgelegten Körperachsen — der Grundriss aller späteren Organe.
+
+Voraussetzung ist die **zweischichtige Keimscheibe**, die sich nach der Implantation gebildet hat: oben der **Epiblast** (zylindrische, hochprismatische Zellen) und unten der **Hypoblast** (platte Zellen, bildet den Dottersack). Alle drei Keimblätter — Ektoderm, Mesoderm und Endoderm — entstehen ausschließlich aus dem **Epiblast**. Der Hypoblast wird dabei verdrängt.
+
+{{IMAGE}}
 
 ---
 
@@ -1914,6 +1863,9 @@ Aus welchem Keimblatt welches Organ entsteht, ist prüfungsrelevant. Die folgend
 
 ## Voraussetzung: Notochord
 
+Die Neurulation beginnt nicht aus dem Nichts — sie wird durch das **Notochord** (Chorda dorsalis) ausgelöst. Das Notochord ist eine stäbchenförmige Mesoderm-Struktur in der Körpermittellinie, die aus dem Primitivknoten der Gastrulation hervorgeht. Es sezerniert Signalmoleküle (darunter Sonic Hedgehog, SHH), die das direkt darüber liegende Ektoderm anweisen, sich zur **Neuralplatte** zu verdicken. Das Notochord selbst ist eine transiente Struktur — beim Erwachsenen bleibt nur der **Nucleus pulposus** jeder Bandscheibe als Überrest erhalten.
+
+> **Merke:** Notochord = transienter Mesoderm-Stab → induziert Neuralplatte → wird zu Nuclei pulposi der Bandscheiben.
 
 ---
 
@@ -1928,6 +1880,8 @@ Aus welchem Keimblatt welches Organ entsteht, ist prüfungsrelevant. Die folgend
 4. **Schließung der Neuroporen:** Der **anteriore Neuroporus** schließt etwa am **Tag 25**, der **posteriore Neuroporus** am **Tag 27**. Bleibt einer der Neuroporen offen, entsteht ein **Neuralrohrdefekt** (z. B. Spina bifida, Anenzephalie).
 
 > **Merke:** Neurulation = Neuralplatte → Neuralrinne → Neuralrohr (ZNS-Anlage). Anteriorer Neuroporus Tag 25, posteriorer Tag 27; offen = Fehlbildung.
+
+{{IMAGE}}
 
 ---
 
@@ -2072,20 +2026,28 @@ Wenn der **posteriore Neuroporus** nicht schließt, kann es zur **Spina bifida**
         "Kritische Perioden",
         "Scheitel-Steiß-Länge",
       ],
-      content: `## Embryonalperiode (Wochen 1–8)
+      content: `## Embryonalperiode (Wochen 1–8) — Organogenese
 
+{{IMAGE}}
 
-Die **Embryonalperiode** umfasst die ersten **8 Wochen** nach der Befruchtung. In dieser Zeit findet die **Organogenese** (Organanlage) statt: Aus den drei Keimblättern (Ektoderm, Mesoderm, Endoderm) entstehen alle primären Organanlagen. Die Entwicklung schreitet cephalo-caudal (vom Kopf zum Schwanz) und proximo-distal (von der Körpermitte zu den Extremitäten) fort. In Woche 3 bilden sich Neuralrohr und Herzschlauch; in Woche 4 beginnt das Herz zu schlagen (der erste funktionelle Schlag erfolgt um Tag 22–23). In Woche 4–8 entstehen Gliedmaßenleisten (Arm- und Beinleisten), Augenlinsengruben, Ohrgrübchen und Gesichtsgaumen. Am Ende der Woche 8 sind alle wesentlichen Organsysteme angelegt, wenn auch noch nicht ausgereift. Das Embryo ist ca. 3 cm groß; die **SSL** (Scheitel-Steiß-Länge, Längenmaß vom Kopf bis zum Gesäß) beträgt am Ende der 8. Woche etwa 3 cm. Während dieser Periode ist der Embryo besonders **vulnerabel** gegenüber teratogenen Noxen.
+Die **Embryonalperiode** umfasst die ersten **8 Wochen** nach der Befruchtung. Sie endet nicht willkürlich, sondern an einem biologisch definierten Punkt: Am Ende von Woche 8 sind alle wesentlichen Organsysteme angelegt — danach beginnt die **Fetalperiode**, die sich auf Wachstum und Reifung konzentriert, nicht auf neue Strukturbildung.
 
----
-
-## Organogenese in der Embryonalperiode
+Die Organogenese schreitet in zwei Richtungen fort: **cephalo-caudal** (vom Kopf zum Schwanz) und **proximo-distal** (von der Körpermitte zu den Extremitäten). In Woche 4 faltet sich der Embryo vom flachen Scheibenstadium zur zylindrischen Körperform — durch diese Faltung entsteht der primitive Darm. Das Herzschlauch-Paar fusioniert, und **das Herz beginnt bereits an Tag 22–23 (Woche 4) zu schlagen** — nicht erst am Ende der Embryonalperiode. Dies ist eine häufige Falschaussage in MC-Fragen.
 
 {{DIAGRAM:heart-anatomy}}
 
-Die Organogenese bezeichnet die Anlage aller Organsysteme während der Wochen 3–8. Sie beginnt mit der Gastrulation (Woche 3) und der Entstehung des Neuralrohrs (Neurulation, Woche 3–4). In Woche 4 faltet sich der Embryo vom flachen Scheibenstadium zur zylindrischen Körperform (laterale und cephalo-caudale Faltung), wodurch der Darm entsteht. Das Herzschlauch-Paar fusioniert und **das Herz beginnt bereits in Woche 4 (Tag 22–23) zu schlagen** — **nicht** erst am Ende der 8. Woche (typische Falschaussage in MC-Fragen!). Die **4.–8. Woche** ist die **kritische Phase**: der Embryo ist gegenüber Teratogenen besonders anfällig. **Aus Ektoderm, Mesoderm und Endoderm entwickeln sich alle Organe** des Embryos. Der Embryo entwickelt sich in der mit Fruchtwasser gefüllten **Amnionhöhle**. Die Gliedmaßenleisten erscheinen in Woche 4 (Arm) und Woche 5 (Bein). Bis Ende Woche 8 sind Finger und Zehen (durch Apoptose zwischen den Strahlungen) sichtbar, Augen und Ohren angelegt, und alle Organsysteme zumindest rudimentär vorhanden. Die SSL (Scheitel-Steiß-Länge) beträgt am Ende der Woche 8 ca. 3 cm; das Gewicht ca. 3 g.
+**Zeitplan der wichtigsten Meilensteine:**
 
-> **Merke:** Embryonalperiode (Wochen 1–8) = Organogenese; Fetalperiode (ab Woche 9) = Wachstum und Reifung.
+| Zeitpunkt | Ereignis |
+|-----------|----------|
+| Woche 3 | Gastrulation, Neurulation beginnt, erste Blutgefäße |
+| Woche 4 | Herz schlägt (Tag 22–23), Neuralrohr schließt sich, Armleisten |
+| Woche 5 | Beinleisten, Handplatten, Augenbläschen |
+| Woche 6 | Finger strahlenförmig sichtbar (Apoptose trennt sie bis Woche 8) |
+| Woche 8 | Alle Organanlagen vorhanden; SSL ca. 3 cm, Gewicht ca. 3 g |
+| Ab Woche 9 | Fetus: Wachstum und Reifung; kaum neue Organanlagen |
+
+> **Merke:** Embryonalperiode (Woche 1–8) = Organanlage; Fetalperiode (ab Woche 9) = Wachstum. Herz schlägt ab Tag 22–23.
 
 ---
 
@@ -2218,6 +2180,9 @@ Thalidomid (Contergan) verursachte in den 1960er Jahren Phokomelie (Flipper-arti
     {
       id: "bio-9-12",
       title: "Embryonalhüllen und Plazenta",
+      imageUrl: "/images/bms/bio-plazenta.svg",
+      imageCaption:
+        "Abb.: Plazentaaufbau mit Chorionzotten und maternalem Blutkreislauf (Wikimedia Commons, CC BY-SA 3.0)",
       stichworte: [
         "Plazenta",
         "Amnion",
@@ -2227,7 +2192,13 @@ Thalidomid (Contergan) verursachte in den 1960er Jahren Phokomelie (Flipper-arti
         "Decidua",
         "Chorionzotten",
       ],
-      content: `## Voraussetzungen: Trophoblast und Eihüllen
+      content: `## Plazenta und Eihüllen — Lebenserhaltung im Mutterleib
+
+Ohne Plazenta kein Fetus: Sie versorgt den heranwachsenden Organismus neun Monate lang mit Sauerstoff und Nährstoffen, entsorgt Abfallprodukte, produziert Hormone und schützt vor mütterlicher Immunabwehr. Gleichzeitig verhindert sie, dass mütterliches und fetales Blut sich mischen — eine Grenzfläche, keine Verbindung.
+
+Die Plazenta geht aus dem **Trophoblasten** hervor — der äußeren Zellschicht der Blastozyste, die bei der Implantation in das Endometrium eindringt. Parallel dazu bilden sich zwei Eihüllen: das **Amnion** (innere Membran, umgibt das Fruchtwasser) und das **Chorion** (äußere Membran, grenzt an die Decidua). Beide entstammen dem fetalen Gewebe, nicht der Mutter.
+
+{{IMAGE}}
 
 ---
 

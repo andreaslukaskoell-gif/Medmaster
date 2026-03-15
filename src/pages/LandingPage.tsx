@@ -130,7 +130,7 @@ function SampleQuestion() {
   const isCorrect = selected === q.correctId;
 
   return (
-    <div className="bg-[var(--surface)] rounded-2xl p-6 sm:p-8 shadow-[var(--shadow-sm)] border border-[var(--border)] max-w-2xl mx-auto">
+    <div className="card-glass p-8 max-w-2xl mx-auto">
       <div className="flex items-center justify-between mb-4">
         <span className={`text-xs font-medium px-2.5 py-1 rounded-lg ${q.badge}`}>{q.subject}</span>
         <span className="text-xs text-[var(--muted)]">Beispielfrage</span>
@@ -187,8 +187,7 @@ function SampleQuestion() {
         <button
           onClick={() => selected && setSubmitted(true)}
           disabled={!selected}
-          className="w-full py-3 rounded-xl text-sm font-semibold text-white transition-colors disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
-          style={{ backgroundColor: NAVY }}
+          className="btn-premium w-full py-3 text-sm disabled:opacity-40 disabled:cursor-not-allowed"
         >
           Antwort prüfen
         </button>
@@ -206,10 +205,9 @@ function SampleQuestion() {
           </div>
           <Link
             to="/login"
-            className="flex items-center justify-center gap-2 w-full py-3 rounded-xl text-sm font-semibold text-white transition-colors cursor-pointer"
-            style={{ backgroundColor: NAVY }}
+            className="btn-premium flex items-center justify-center gap-2 w-full py-3 text-sm"
           >
-            4.300+ Fragen wie diese — jetzt gratis starten
+            4.000+ Fragen wie diese — jetzt gratis starten
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
@@ -249,7 +247,7 @@ const contentDepth = [
     color: "text-blue-600",
     bgColor: "bg-blue-100 dark:bg-blue-900/30",
     items: [
-      "Zahlenfolgen (Generator)",
+      "Zahlenfolgen",
       "Implikationen erkennen",
       "Wortflüssigkeit",
       "Figuren zusammensetzen",
@@ -279,10 +277,10 @@ const contentDepth = [
 ];
 
 const comparisonRows = [
-  { feature: "BMS-Übungsfragen", medmaster: "4.300+", competitor: "500–2.000" },
+  { feature: "BMS-Übungsfragen", medmaster: "4.000+", competitor: "500–2.000" },
   {
     feature: "KFF-Aufgaben",
-    medmaster: "10.000+ (Generator)",
+    medmaster: "10.000+",
     competitor: "Fester Pool (50–200)",
   },
   { feature: "Alle 4 MedAT-Bereiche", medmaster: true, competitor: "Meist nur BMS" },
@@ -290,14 +288,14 @@ const comparisonRows = [
   { feature: "Prüfungssimulation", medmaster: true, competitor: "Teilweise" },
   { feature: "Adaptiver Lernplan", medmaster: true, competitor: false },
   { feature: "Preis", medmaster: "Einmalig €29,90", competitor: "€9–30 / Monat" },
-  { feature: "Zugang", medmaster: "Lebenslang", competitor: "Solange du zahlst" },
+  { feature: "Zugang", medmaster: "Bis zum MedAT 2026", competitor: "Solange du zahlst" },
 ];
 
 export default function LandingPage() {
   usePageMeta({
-    title: "MedAT 2026 Vorbereitung — Bestehe sicher mit 4.300+ Fragen",
+    title: "MedAT 2026 Vorbereitung — Bestehe sicher mit 4.000+ Fragen",
     description:
-      "MedAT 2026 Vorbereitung: 4.300+ BMS-Fragen, 10.000+ KFF-Übungen, 10 TV-Textsets, 100 SEK-Aufgaben. Alle 4 MedAT-Bereiche in einer App. Einmalig €29,90.",
+      "MedAT 2026 Vorbereitung: 4.000+ BMS-Fragen, 10.000+ KFF-Übungen, 10 TV-Textsets, 100 SEK-Aufgaben. Alle 4 MedAT-Bereiche in einer App. Einmalig €29,90.",
     canonical: "https://medmaster.at",
     ogImage: "https://medmaster.at/og-image.png",
   });
@@ -350,8 +348,7 @@ export default function LandingPage() {
   const GoogleBtn = ({ label, className = "" }: { label: string; className?: string }) => (
     <button
       onClick={handleGoogle}
-      className={`inline-flex items-center justify-center gap-3 text-white font-semibold px-8 py-4 rounded-xl text-base shadow-[var(--shadow-sm)] transition-colors hover:opacity-90 cursor-pointer ${className}`}
-      style={{ backgroundColor: NAVY }}
+      className={`inline-flex items-center justify-center gap-3 font-semibold px-8 py-4 text-base cursor-pointer ${className}`}
     >
       <svg className="w-5 h-5" viewBox="0 0 24 24">
         <path
@@ -433,7 +430,7 @@ export default function LandingPage() {
           >
             Bestehe den MedAT 2026.
             <br />
-            4.300+ BMS-Fragen. 10.000+ KFF-Übungen.
+            4.000+ BMS-Fragen. 10.000+ KFF-Übungen.
             <br />
             <span className="text-[var(--accent)]">Eine Plattform. Kein Abo.</span>
           </motion.h1>
@@ -451,7 +448,7 @@ export default function LandingPage() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.35 }}
-            className="flex flex-wrap justify-center gap-4 sm:gap-6 mb-10"
+            className="flex flex-wrap justify-center gap-6 mb-10"
           >
             {[
               { icon: BadgeCheck, text: "MedAT 2026 Format" },
@@ -461,7 +458,7 @@ export default function LandingPage() {
             ].map((badge) => (
               <div
                 key={badge.text}
-                className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-medium text-[var(--muted)]"
+                className="inline-flex items-center gap-1.5 text-sm font-medium text-[var(--muted)]"
               >
                 <badge.icon className="w-4 h-4 text-emerald-500 shrink-0" />
                 {badge.text}
@@ -474,13 +471,13 @@ export default function LandingPage() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+            className="flex flex-row gap-4 justify-center"
           >
-            <GoogleBtn label="Kostenlos ausprobieren" />
+            <GoogleBtn label="Kostenlos ausprobieren" className="btn-premium" />
             <Link
               to="/login"
               onClick={handleLinkClick("hero-email-login")}
-              className="inline-flex items-center justify-center gap-2 bg-[var(--surface)] text-[var(--text-secondary)] font-semibold px-8 py-4 rounded-xl text-base shadow-[var(--shadow-xs)] hover:shadow-[var(--shadow-sm)] transition-shadow border border-[var(--border)]"
+              className="btn-glass inline-flex items-center justify-center gap-2 font-semibold px-8 py-4 text-base"
             >
               Mit E-Mail anmelden
               <ArrowRight className="w-5 h-5" />
@@ -491,19 +488,19 @@ export default function LandingPage() {
       </section>
 
       {/* ─── Product Preview ─── */}
-      <section className="py-16 sm:py-24 bg-[var(--background)]/50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <section className="py-24">
+        <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-3">
               So sieht deine MedAT-Vorbereitung aus
             </h2>
             <p className="text-[var(--text-secondary)] max-w-xl mx-auto">
-              Echte Übungsfragen im Original-MedAT-Format, adaptiver Lernplan und 10.000+
-              KFF-Generatoren.
+              Echte Übungsfragen im Original-MedAT-Format, adaptiver Lernplan und über 10.000
+              KFF-Aufgaben.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-3 gap-6 stagger-children">
             <div>
               <ScreenshotFrame
                 src={SCREENSHOTS.bmsQuiz}
@@ -536,8 +533,8 @@ export default function LandingPage() {
       </section>
 
       {/* ─── Content Depth: Was steckt drin? ─── */}
-      <section className="py-16 sm:py-24">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+      <section className="py-24">
+        <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-14">
             <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-3">
               Alle 4 MedAT-Bereiche. Vollständig.
@@ -548,12 +545,9 @@ export default function LandingPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="grid grid-cols-2 gap-5 stagger-children">
             {contentDepth.map((section) => (
-              <div
-                key={section.section}
-                className="bg-[var(--surface)] rounded-xl p-6 sm:p-8 border border-[var(--border)]"
-              >
+              <div key={section.section} className="card-glass p-8">
                 <div className="flex items-baseline gap-2 mb-4">
                   <h3 className="text-lg font-bold text-[var(--text-primary)]">
                     {section.section}
@@ -587,18 +581,16 @@ export default function LandingPage() {
           </div>
 
           {/* Total stat bar */}
-          <div className="mt-8 bg-[var(--surface)] rounded-xl p-6 border border-[var(--border)]">
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+          <div className="mt-8 card-glass p-6">
+            <div className="grid grid-cols-4 gap-4 text-center">
               {[
-                { value: "4.349", label: "BMS-Fragen" },
+                { value: "4.000+", label: "BMS-Fragen" },
                 { value: "173", label: "Lerneinheiten" },
                 { value: "∞", label: "KFF-Aufgaben" },
                 { value: "220+", label: "SEK+TV Aufgaben" },
               ].map((stat) => (
                 <div key={stat.label}>
-                  <div className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)]">
-                    {stat.value}
-                  </div>
+                  <div className="text-3xl font-bold text-[var(--accent)]">{stat.value}</div>
                   <div className="text-xs text-[var(--muted)] mt-0.5">{stat.label}</div>
                 </div>
               ))}
@@ -608,8 +600,8 @@ export default function LandingPage() {
       </section>
 
       {/* ─── Features ─── */}
-      <section className="py-16 sm:py-24 bg-[var(--background)]/50">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+      <section className="py-24">
+        <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-14">
             <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-3">
               Nicht nur Fragen — ein Lernsystem
@@ -619,7 +611,7 @@ export default function LandingPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-3 gap-5 stagger-children">
             {[
               {
                 title: "Adaptive Fragenauswahl",
@@ -646,10 +638,7 @@ export default function LandingPage() {
                 desc: "173 Lerneinheiten decken die offizielle BMS-Stichwortliste 2026 ab — mit Merksätzen, Diagrammen und Prüfungstipps.",
               },
             ].map((f) => (
-              <div
-                key={f.title}
-                className="p-6 rounded-xl border border-[var(--border)] bg-[var(--surface)]"
-              >
+              <div key={f.title} className="card-glass p-6">
                 <h3 className="text-base font-semibold text-[var(--text-primary)] mb-2">
                   {f.title}
                 </h3>
@@ -661,14 +650,14 @@ export default function LandingPage() {
       </section>
 
       {/* ─── Try it: Interactive sample question ─── */}
-      <section className="py-16 sm:py-24">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+      <section className="py-24">
+        <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-3">
               Probier es aus — eine echte BMS-Frage
             </h2>
             <p className="text-[var(--text-secondary)] max-w-lg mx-auto">
-              So sehen die Fragen in MedMaster aus. 4.300+ davon warten auf dich — mit detaillierten
+              So sehen die Fragen in MedMaster aus. 4.000+ davon warten auf dich — mit detaillierten
               Erklärungen bei jeder Antwort.
             </p>
           </div>
@@ -677,8 +666,8 @@ export default function LandingPage() {
       </section>
 
       {/* ─── Comparison ─── */}
-      <section className="py-16 sm:py-24 bg-[var(--background)]/50">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6">
+      <section className="py-24">
+        <div className="max-w-3xl mx-auto px-6">
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-3">
               Was du woanders bekommst — und was bei MedMaster
@@ -688,7 +677,7 @@ export default function LandingPage() {
               MedMaster deckt alle 4 Bereiche ab — für eine einmalige Zahlung.
             </p>
           </div>
-          <div className="bg-[var(--surface)] rounded-xl border border-[var(--border)] overflow-hidden">
+          <div className="card-glass overflow-hidden">
             <div className="grid grid-cols-3 text-center text-sm font-semibold border-b border-[var(--border)]">
               <div className="p-4 text-[var(--muted)] text-left" />
               <div className="p-4" style={{ color: NAVY }}>
@@ -729,24 +718,24 @@ export default function LandingPage() {
       </section>
 
       {/* ─── Social Proof ─── */}
-      <section className="py-16 sm:py-24">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+      <section className="py-24">
+        <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-3">
               Das sagen MedAT-Kandidierende
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div className="grid grid-cols-3 gap-5 stagger-children">
             {[
               {
                 quote:
-                  "Die KFF-Generatoren sind ein Game-Changer. Man übt nie dieselbe Aufgabe zweimal — das gibt's sonst nirgends.",
+                  "Über 10.000 KFF-Aufgaben — man übt nie dieselbe Aufgabe zweimal. Das gibt's sonst nirgends.",
                 name: "Anna K.",
                 detail: "MedAT 2026 Kandidatin, Wien",
               },
               {
                 quote:
-                  "4.300 BMS-Fragen mit Erklärungen — das ist mehr als jede andere Plattform. Und der adaptive Lernplan zeigt mir genau, wo ich noch schwach bin.",
+                  "4.000+ BMS-Fragen mit Erklärungen — das ist mehr als jede andere Plattform. Und der adaptive Lernplan zeigt mir genau, wo ich noch schwach bin.",
                 name: "Maximilian R.",
                 detail: "MedAT 2026 Kandidat, Graz",
               },
@@ -757,10 +746,7 @@ export default function LandingPage() {
                 detail: "MedAT 2026 Kandidatin, Innsbruck",
               },
             ].map((t) => (
-              <div
-                key={t.name}
-                className="bg-[var(--surface)] rounded-xl p-6 border border-[var(--border)]"
-              >
+              <div key={t.name} className="card-glass p-6">
                 <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-4">
                   &bdquo;{t.quote}&ldquo;
                 </p>
@@ -775,24 +761,24 @@ export default function LandingPage() {
       </section>
 
       {/* ─── Mini FAQ ─── */}
-      <section className="py-16 sm:py-24">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6">
+      <section className="py-24">
+        <div className="max-w-3xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-[var(--text-primary)] text-center mb-10">
             Häufige Fragen
           </h2>
-          <div className="bg-[var(--surface)] rounded-xl border border-[var(--border)] divide-y divide-[var(--border)]">
+          <div className="card-glass divide-y divide-[var(--border)]">
             {[
               {
                 q: "Ist MedMaster aktuell für den MedAT 2026?",
-                a: "Ja. Alle Inhalte basieren auf der offiziellen Stichwortliste 2026. Die 173 Lerneinheiten und 4.300+ Fragen decken den gesamten BMS-Stoff ab. KFF-Aufgaben folgen dem aktuellen MedAT-Format.",
+                a: "Ja. Alle Inhalte basieren auf der offiziellen Stichwortliste 2026. Die 173 Lerneinheiten und 4.000+ Fragen decken den gesamten BMS-Stoff ab. KFF-Aufgaben folgen dem aktuellen MedAT-Format.",
               },
               {
                 q: "Was passiert nach dem 31. März?",
-                a: "Ab 1. April kostet MedMaster einmalig €29,90. Das ist eine einmalige Zahlung — kein Abo. Du behältst lebenslangen Zugang zu allen Inhalten und zukünftigen Updates.",
+                a: "Ab 1. April kostet MedMaster einmalig €29,90. Das ist eine einmalige Zahlung — kein Abo. Du behältst vollen Zugang zu allen Inhalten und Updates bis zum MedAT 2026.",
               },
               {
                 q: "Reicht MedMaster als alleinige Vorbereitung?",
-                a: "MedMaster deckt alle 4 MedAT-Bereiche vollständig ab: 4.300+ BMS-Fragen, 10.000+ KFF-Übungen, 10 TV-Textsets und 100 SEK-Aufgaben. Viele ergänzen mit einem Biologie-Lehrbuch für die Theorie — die Übungskomponente ist komplett.",
+                a: "MedMaster deckt alle 4 MedAT-Bereiche vollständig ab: 4.000+ BMS-Fragen, 10.000+ KFF-Übungen, 10 TV-Textsets und 100 SEK-Aufgaben. Viele ergänzen mit einem Biologie-Lehrbuch für die Theorie — die Übungskomponente ist komplett.",
               },
               {
                 q: "Brauche ich eine App?",
@@ -811,9 +797,9 @@ export default function LandingPage() {
       </section>
 
       {/* ─── Pricing + Countdown ─── */}
-      <section id="preise" className="py-16 sm:py-24 bg-[var(--background)]/50">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6">
-          <div className="bg-[var(--surface)] rounded-xl p-8 sm:p-12 border border-[var(--border)] text-center relative overflow-hidden">
+      <section id="preise" className="py-24">
+        <div className="max-w-3xl mx-auto px-6">
+          <div className="card-glass p-12 text-center relative overflow-hidden">
             <div className="absolute top-0 left-0 right-0 h-1 bg-[var(--accent)]" />
             <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-2">
               Jetzt komplett gratis testen
@@ -823,7 +809,7 @@ export default function LandingPage() {
               <span className="text-[var(--muted)] line-through text-lg">€29,90</span>
             </div>
             <p className="text-sm text-[var(--muted)] mb-6">
-              Ab 1. April: einmalig €29,90 — kein Abo, keine versteckten Kosten, lebenslanger Zugang
+              Ab 1. April: einmalig €29,90 — kein Abo, keine versteckten Kosten
             </p>
 
             {/* Countdown — only here */}
@@ -832,7 +818,7 @@ export default function LandingPage() {
                 <p className="text-xs font-medium text-[var(--muted)] mb-3">
                   Gratis-Zugang endet in:
                 </p>
-                <div className="flex justify-center gap-2 sm:gap-3">
+                <div className="flex justify-center gap-3">
                   {[
                     { value: countdown.days, label: "Tage" },
                     { value: countdown.hours, label: "Std" },
@@ -841,9 +827,9 @@ export default function LandingPage() {
                   ].map((unit) => (
                     <div
                       key={unit.label}
-                      className="flex flex-col items-center bg-[var(--card)] rounded-lg px-3 py-2 sm:px-4 sm:py-3 min-w-[3.5rem] sm:min-w-[4.5rem]"
+                      className="flex flex-col items-center bg-[var(--card)] rounded-lg px-4 py-3 min-w-[4.5rem]"
                     >
-                      <span className="text-xl sm:text-2xl font-bold tabular-nums text-[var(--text-primary)]">
+                      <span className="text-2xl font-bold tabular-nums text-[var(--text-primary)]">
                         {String(unit.value).padStart(2, "0")}
                       </span>
                       <span className="text-[10px] text-[var(--muted)]">{unit.label}</span>
@@ -856,10 +842,10 @@ export default function LandingPage() {
             <ul className="text-left max-w-sm mx-auto mb-8 space-y-2.5">
               {[
                 "Voller Zugang zu allen 4 MedAT-Bereichen",
-                "4.300+ BMS-Fragen mit Erklärungen",
+                "4.000+ BMS-Fragen mit Erklärungen",
                 "10.000+ KFF-Übungen",
                 "173 Lerneinheiten + Prüfungssimulation",
-                "Kein Abo — einmalige Zahlung, lebenslanger Zugang",
+                "Kein Abo — einmalige Zahlung, voller Zugang",
               ].map((feature) => (
                 <li
                   key={feature}
@@ -871,7 +857,7 @@ export default function LandingPage() {
               ))}
             </ul>
 
-            <GoogleBtn label="Gratis starten mit Google" className="w-full sm:w-auto" />
+            <GoogleBtn label="Gratis starten mit Google" className="btn-premium w-auto" />
             {googleError && <p className="text-sm text-red-500 mt-2">{googleError}</p>}
             <p className="text-xs text-[var(--muted)]/70 mt-3">
               Oder{" "}
@@ -884,12 +870,12 @@ export default function LandingPage() {
       </section>
 
       {/* ─── SEO Internal Links ─── */}
-      <section className="py-12 sm:py-16">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <section className="py-16">
+        <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-2xl font-bold text-[var(--text-primary)] text-center mb-8">
             MedAT 2026 Vorbereitung
           </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          <div className="grid grid-cols-4 gap-3 stagger-children">
             {[
               {
                 to: "/medat-uebungsfragen",
@@ -908,7 +894,7 @@ export default function LandingPage() {
               <Link
                 key={link.to}
                 to={link.to}
-                className="flex flex-col gap-1 p-4 rounded-xl bg-[var(--surface)] shadow-[var(--shadow-xs)] hover:shadow-[var(--shadow-sm)] transition-shadow text-left"
+                className="card-glass flex flex-col gap-1 p-4 hover:shadow-[var(--shadow-sm)] transition-shadow text-left"
               >
                 <span className="text-sm font-medium text-[var(--text-primary)]">{link.label}</span>
                 <span className="text-xs text-[var(--muted)]">{link.sub}</span>
@@ -919,8 +905,8 @@ export default function LandingPage() {
       </section>
 
       {/* ─── Final CTA ─── */}
-      <section className="py-16 sm:py-24" style={{ backgroundColor: NAVY }}>
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+      <section className="py-24" style={{ backgroundColor: NAVY }}>
+        <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Bereit für den MedAT 2026?</h2>
           <p className="text-white/80 text-sm mb-8 max-w-lg mx-auto">
             Teste MedMaster jetzt gratis — voller Zugang zu allen Fragen, Lerneinheiten und Übungen.
@@ -938,56 +924,58 @@ export default function LandingPage() {
       </section>
 
       {/* ─── Footer ─── */}
-      <footer className="py-8 bg-[var(--accent)] dark:bg-[var(--accent)]">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <footer className="py-8 border-t border-[var(--border)]">
+        <div className="max-w-6xl mx-auto px-6 flex items-center justify-between gap-4">
           <div className="flex items-center gap-2">
             <Logo variant="icon" size={24} />
-            <span className="text-sm font-semibold text-white/80">MedMaster</span>
+            <span className="text-sm font-semibold text-[var(--text-primary)]">MedMaster</span>
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-6 text-xs text-white/60">
-            <Link to="/medat-guide" className="hover:text-white/80 transition-colors">
+          <div className="flex flex-wrap items-center justify-center gap-6 text-xs text-[var(--muted)]">
+            <Link to="/medat-guide" className="hover:text-[var(--text-primary)] transition-colors">
               MedAT Guide
             </Link>
-            <Link to="/faq" className="hover:text-white/80 transition-colors">
+            <Link to="/faq" className="hover:text-[var(--text-primary)] transition-colors">
               FAQ
             </Link>
-            <Link to="/medat-uebungsfragen" className="hover:text-white/80 transition-colors">
+            <Link
+              to="/medat-uebungsfragen"
+              className="hover:text-[var(--text-primary)] transition-colors"
+            >
               Übungsfragen
             </Link>
-            <Link to="/blog" className="hover:text-white/80 transition-colors">
+            <Link to="/blog" className="hover:text-[var(--text-primary)] transition-colors">
               Lerntipps
             </Link>
-            <Link to="/impressum" className="hover:text-white/80 transition-colors">
+            <Link to="/impressum" className="hover:text-[var(--text-primary)] transition-colors">
               Impressum
             </Link>
-            <Link to="/datenschutz" className="hover:text-white/80 transition-colors">
+            <Link to="/datenschutz" className="hover:text-[var(--text-primary)] transition-colors">
               Datenschutz
             </Link>
-            <Link to="/agb" className="hover:text-white/80 transition-colors">
+            <Link to="/agb" className="hover:text-[var(--text-primary)] transition-colors">
               AGB
             </Link>
           </div>
-          <p className="text-xs text-white/50">© 2026 MedMaster. Alle Rechte vorbehalten.</p>
+          <p className="text-xs text-[var(--muted)]">© 2026 MedMaster. Alle Rechte vorbehalten.</p>
         </div>
       </footer>
 
       {/* ─── Sticky bottom CTA ─── */}
       {showBottomCta && (
         <div className="fixed bottom-0 left-0 right-0 z-50 bg-[var(--surface)]/95 backdrop-blur-sm border-t border-[var(--border)] shadow-[var(--shadow-md)]">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+          <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
             <div>
               <p className="text-sm font-semibold text-[var(--text-primary)]">
                 Bereit für den MedAT 2026?
               </p>
               <p className="text-xs text-[var(--muted)]">
-                4.300+ Fragen · Alle 4 Bereiche · Jetzt gratis
+                4.000+ Fragen · Alle 4 Bereiche · Jetzt gratis
               </p>
             </div>
             <Link
               to="/login"
               onClick={handleLinkClick("sticky-bottom-cta")}
-              className="inline-flex items-center gap-2 text-sm font-semibold text-white px-6 py-2.5 rounded-xl transition-colors hover:opacity-90"
-              style={{ backgroundColor: NAVY }}
+              className="btn-premium inline-flex items-center gap-2 text-sm px-6 py-2.5"
             >
               Kostenlos starten
               <ArrowRight className="w-4 h-4" />

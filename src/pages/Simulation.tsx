@@ -1140,9 +1140,9 @@ export default function Simulation() {
     );
 
     return (
-      <div className="max-w-4xl mx-auto space-y-6">
+      <div className="max-w-5xl mx-auto space-y-6">
         <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "Simulation" }]} />
-        <div>
+        <div className="hero-orbs text-center py-6">
           <h1 className="text-2xl font-bold text-[var(--text-primary)]">Testsimulation</h1>
           <p className="text-[var(--muted)] mt-1">
             Simuliere den MedAT-H unter realistischen Bedingungen.
@@ -1150,209 +1150,197 @@ export default function Simulation() {
         </div>
 
         {/* Full MedAT-H Simulation */}
-        <Card>
-          <CardContent className="p-6 space-y-4">
-            <div className="flex items-center gap-4">
-              <div className="w-14 h-14 bg-orange-100 dark:bg-orange-900/30 rounded-2xl flex items-center justify-center">
-                <Clock className="w-7 h-7 text-orange-600 dark:text-orange-400" />
-              </div>
-              <div>
-                <h2 className="text-lg font-bold text-[var(--text-primary)]">
-                  MedAT-H Vollsimulation
-                </h2>
-                <p className="text-sm text-[var(--muted)]">
-                  Alle 4 Testteile mit exaktem Timing und Pausen
-                </p>
-              </div>
+        <div className="card-glass rounded-2xl p-6 space-y-4">
+          <div className="flex items-center gap-4">
+            <div className="w-14 h-14 bg-orange-100 dark:bg-orange-900/30 rounded-2xl flex items-center justify-center">
+              <Clock className="w-7 h-7 text-orange-600 dark:text-orange-400" />
             </div>
-
-            <div className="space-y-3">
-              {/* BMS */}
-              <div className="bg-[var(--border)]/30 rounded-lg p-3">
-                <div className="flex items-center gap-2 mb-2">
-                  <BookOpen className="w-4 h-4 text-teal-600 dark:text-teal-400" />
-                  <span className="font-semibold text-sm text-[var(--text-primary)]">BMS</span>
-                  <span className="text-xs text-[var(--muted)]">94 Fragen, 75 Min</span>
-                </div>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
-                  {BMS_FULL_SECTIONS.map((sec) => (
-                    <div key={sec.id} className="text-center text-xs text-[var(--muted)]">
-                      {sec.label}: {sec.questionCount}F / {sec.timeLimitMinutes}Min
-                    </div>
-                  ))}
-                </div>
-              </div>
-              {/* TV */}
-              <div className="bg-[var(--border)]/30 rounded-lg p-3">
-                <div className="flex items-center gap-2">
-                  <FileText className="w-4 h-4 text-blue-600 dark:text-blue-400" />
-                  <span className="font-semibold text-sm text-[var(--text-primary)]">
-                    Textverständnis
-                  </span>
-                  <span className="text-xs text-[var(--muted)]">12 Aussagen, 35 Min</span>
-                </div>
-              </div>
-              {/* KFF */}
-              <div className="bg-[var(--border)]/30 rounded-lg p-3">
-                <div className="flex items-center gap-2 mb-2">
-                  <Brain className="w-4 h-4 text-purple-600 dark:text-purple-400" />
-                  <span className="font-semibold text-sm text-[var(--text-primary)]">KFF</span>
-                  <span className="text-xs text-[var(--muted)]">5 Untertests, ~93 Min</span>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-2 text-xs text-[var(--muted)]">
-                  <div>Zahlenfolgen: 10 / 25Min</div>
-                  <div>Gedächtnis: 8Min + 25F / 15Min</div>
-                  <div>Implikationen: 10 / 10Min</div>
-                  <div>Wortflüssigkeit: 20 / 20Min</div>
-                  <div>Figuren: 10 / 15Min</div>
-                </div>
-              </div>
-              {/* SEK */}
-              <div className="bg-[var(--border)]/30 rounded-lg p-3">
-                <div className="flex items-center gap-2 mb-2">
-                  <Heart className="w-4 h-4 text-rose-600 dark:text-rose-400" />
-                  <span className="font-semibold text-sm text-[var(--text-primary)]">SEK</span>
-                  <span className="text-xs text-[var(--muted)]">3 Untertests, 45 Min</span>
-                </div>
-                <div className="grid grid-cols-3 gap-2 text-xs text-[var(--muted)]">
-                  <div>Erkennen: 10 / 15Min</div>
-                  <div>Regulieren: 10 / 15Min</div>
-                  <div>Entscheiden: 10 / 15Min</div>
-                </div>
-              </div>
+            <div>
+              <h2 className="text-lg font-bold text-[var(--text-primary)]">
+                MedAT-H Vollsimulation
+              </h2>
+              <p className="text-sm text-[var(--muted)]">
+                Alle 4 Testteile mit exaktem Timing und Pausen
+              </p>
             </div>
+          </div>
 
-            <div className="bg-orange-50 dark:bg-orange-900/10 rounded-lg p-3 space-y-3">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-sm font-medium text-orange-800 dark:text-orange-300">
-                    Gesamt: {totalFullQuestions} Fragen
-                  </p>
-                  <p className="text-xs text-orange-600 dark:text-orange-400">
-                    ~{totalFullMinutes} Minuten inkl. Pausen
-                  </p>
-                </div>
+          <div className="space-y-3">
+            {/* BMS */}
+            <div className="bg-[var(--border)]/30 rounded-lg p-3">
+              <div className="flex items-center gap-2 mb-2">
+                <BookOpen className="w-4 h-4 text-teal-600 dark:text-teal-400" />
+                <span className="font-semibold text-sm text-[var(--text-primary)]">BMS</span>
+                <span className="text-xs text-[var(--muted)]">94 Fragen, 75 Min</span>
               </div>
-              <div className="grid grid-cols-2 sm:grid-cols-5 gap-2">
-                {[1, 2, 3, 4, 5].map((v) => (
-                  <Button
-                    key={v}
-                    variant={v === 1 ? "primary" : "outline"}
-                    onClick={() => startSimulation("full", undefined, v)}
-                  >
-                    <Play className="w-4 h-4 mr-1" /> Simulation {v}
-                  </Button>
+              <div className="grid grid-cols-4 gap-2">
+                {BMS_FULL_SECTIONS.map((sec) => (
+                  <div key={sec.id} className="text-center text-xs text-[var(--muted)]">
+                    {sec.label}: {sec.questionCount}F / {sec.timeLimitMinutes}Min
+                  </div>
                 ))}
               </div>
             </div>
-          </CardContent>
-        </Card>
+            {/* TV */}
+            <div className="bg-[var(--border)]/30 rounded-lg p-3">
+              <div className="flex items-center gap-2">
+                <FileText className="w-4 h-4 text-blue-600 dark:text-blue-400" />
+                <span className="font-semibold text-sm text-[var(--text-primary)]">
+                  Textverständnis
+                </span>
+                <span className="text-xs text-[var(--muted)]">12 Aussagen, 35 Min</span>
+              </div>
+            </div>
+            {/* KFF */}
+            <div className="bg-[var(--border)]/30 rounded-lg p-3">
+              <div className="flex items-center gap-2 mb-2">
+                <Brain className="w-4 h-4 text-purple-600 dark:text-purple-400" />
+                <span className="font-semibold text-sm text-[var(--text-primary)]">KFF</span>
+                <span className="text-xs text-[var(--muted)]">5 Untertests, ~93 Min</span>
+              </div>
+              <div className="grid grid-cols-3 gap-2 text-xs text-[var(--muted)]">
+                <div>Zahlenfolgen: 10 / 25Min</div>
+                <div>Gedächtnis: 8Min + 25F / 15Min</div>
+                <div>Implikationen: 10 / 10Min</div>
+                <div>Wortflüssigkeit: 20 / 20Min</div>
+                <div>Figuren: 10 / 15Min</div>
+              </div>
+            </div>
+            {/* SEK */}
+            <div className="bg-[var(--border)]/30 rounded-lg p-3">
+              <div className="flex items-center gap-2 mb-2">
+                <Heart className="w-4 h-4 text-rose-600 dark:text-rose-400" />
+                <span className="font-semibold text-sm text-[var(--text-primary)]">SEK</span>
+                <span className="text-xs text-[var(--muted)]">3 Untertests, 45 Min</span>
+              </div>
+              <div className="grid grid-cols-3 gap-2 text-xs text-[var(--muted)]">
+                <div>Erkennen: 10 / 15Min</div>
+                <div>Regulieren: 10 / 15Min</div>
+                <div>Entscheiden: 10 / 15Min</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-orange-50 dark:bg-orange-900/10 rounded-lg p-3 space-y-3">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-sm font-medium text-orange-800 dark:text-orange-300">
+                  Gesamt: {totalFullQuestions} Fragen
+                </p>
+                <p className="text-xs text-orange-600 dark:text-orange-400">
+                  ~{totalFullMinutes} Minuten inkl. Pausen
+                </p>
+              </div>
+            </div>
+            <div className="grid grid-cols-5 gap-2">
+              {[1, 2, 3, 4, 5].map((v) => (
+                <Button
+                  key={v}
+                  variant={v === 1 ? "primary" : "outline"}
+                  onClick={() => startSimulation("full", undefined, v)}
+                >
+                  <Play className="w-4 h-4 mr-1" /> Simulation {v}
+                </Button>
+              ))}
+            </div>
+          </div>
+        </div>
 
         {/* Individual Section Tests */}
         <h2 className="text-lg font-bold text-[var(--text-primary)]">Einzelne Testteile</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-4 gap-4 stagger-children">
           {/* BMS */}
-          <Card>
-            <CardContent className="p-5 space-y-3">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-teal-100 dark:bg-teal-900/30 rounded-xl flex items-center justify-center">
-                  <BookOpen className="w-5 h-5 text-teal-600 dark:text-teal-400" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-[var(--text-primary)]">BMS</h3>
-                  <p className="text-xs text-[var(--muted)]">94 Fragen, 75 Min</p>
-                </div>
+          <div className="card-glass rounded-2xl p-5 space-y-3">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 bg-teal-100 dark:bg-teal-900/30 rounded-xl flex items-center justify-center">
+                <BookOpen className="w-5 h-5 text-teal-600 dark:text-teal-400" />
               </div>
-              <Button className="w-full" onClick={() => startSimulation("bms")}>
-                <Play className="w-4 h-4 mr-1" /> BMS starten
-              </Button>
-            </CardContent>
-          </Card>
+              <div>
+                <h3 className="font-bold text-[var(--text-primary)]">BMS</h3>
+                <p className="text-xs text-[var(--muted)]">94 Fragen, 75 Min</p>
+              </div>
+            </div>
+            <Button variant="premium" className="w-full" onClick={() => startSimulation("bms")}>
+              <Play className="w-4 h-4 mr-1" /> BMS starten
+            </Button>
+          </div>
 
           {/* TV */}
-          <Card>
-            <CardContent className="p-5 space-y-3">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center">
-                  <FileText className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-[var(--text-primary)]">Textverständnis</h3>
-                  <p className="text-xs text-[var(--muted)]">12 Aussagen, 35 Min</p>
-                </div>
+          <div className="card-glass rounded-2xl p-5 space-y-3">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center">
+                <FileText className="w-5 h-5 text-blue-600 dark:text-blue-400" />
               </div>
-              <Button className="w-full" onClick={() => startSimulation("tv")}>
-                <Play className="w-4 h-4 mr-1" /> TV starten
-              </Button>
-            </CardContent>
-          </Card>
+              <div>
+                <h3 className="font-bold text-[var(--text-primary)]">Textverständnis</h3>
+                <p className="text-xs text-[var(--muted)]">12 Aussagen, 35 Min</p>
+              </div>
+            </div>
+            <Button variant="premium" className="w-full" onClick={() => startSimulation("tv")}>
+              <Play className="w-4 h-4 mr-1" /> TV starten
+            </Button>
+          </div>
 
           {/* KFF */}
-          <Card>
-            <CardContent className="p-5 space-y-3">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-purple-100 dark:bg-purple-900/30 rounded-xl flex items-center justify-center">
-                  <Brain className="w-5 h-5 text-purple-600 dark:text-purple-400" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-[var(--text-primary)]">KFF</h3>
-                  <p className="text-xs text-[var(--muted)]">5 Untertests, ~93 Min</p>
-                </div>
+          <div className="card-glass rounded-2xl p-5 space-y-3">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 bg-purple-100 dark:bg-purple-900/30 rounded-xl flex items-center justify-center">
+                <Brain className="w-5 h-5 text-purple-600 dark:text-purple-400" />
               </div>
-              <Button className="w-full" onClick={() => startSimulation("kff")}>
-                <Play className="w-4 h-4 mr-1" /> KFF starten
-              </Button>
-            </CardContent>
-          </Card>
+              <div>
+                <h3 className="font-bold text-[var(--text-primary)]">KFF</h3>
+                <p className="text-xs text-[var(--muted)]">5 Untertests, ~93 Min</p>
+              </div>
+            </div>
+            <Button variant="premium" className="w-full" onClick={() => startSimulation("kff")}>
+              <Play className="w-4 h-4 mr-1" /> KFF starten
+            </Button>
+          </div>
 
           {/* SEK */}
-          <Card>
-            <CardContent className="p-5 space-y-3">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-rose-100 dark:bg-rose-900/30 rounded-xl flex items-center justify-center">
-                  <Heart className="w-5 h-5 text-rose-600 dark:text-rose-400" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-[var(--text-primary)]">SEK</h3>
-                  <p className="text-xs text-[var(--muted)]">3 Untertests, 45 Min</p>
-                </div>
+          <div className="card-glass rounded-2xl p-5 space-y-3">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 bg-rose-100 dark:bg-rose-900/30 rounded-xl flex items-center justify-center">
+                <Heart className="w-5 h-5 text-rose-600 dark:text-rose-400" />
               </div>
-              <Button className="w-full" onClick={() => startSimulation("sek")}>
-                <Play className="w-4 h-4 mr-1" /> SEK starten
-              </Button>
-            </CardContent>
-          </Card>
+              <div>
+                <h3 className="font-bold text-[var(--text-primary)]">SEK</h3>
+                <p className="text-xs text-[var(--muted)]">3 Untertests, 45 Min</p>
+              </div>
+            </div>
+            <Button variant="premium" className="w-full" onClick={() => startSimulation("sek")}>
+              <Play className="w-4 h-4 mr-1" /> SEK starten
+            </Button>
+          </div>
         </div>
 
         {/* BMS Kurztest */}
-        <Card>
-          <CardContent className="p-6 space-y-4">
-            <div className="flex items-center gap-4">
-              <div className="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 rounded-2xl flex items-center justify-center">
-                <Timer className="w-7 h-7 text-blue-600 dark:text-blue-400" />
-              </div>
-              <div>
-                <h2 className="text-lg font-bold text-[var(--text-primary)]">Kurztest (BMS)</h2>
-                <p className="text-sm text-[var(--muted)]">Schnelles Ueben eines einzelnen Fachs</p>
-              </div>
+        <div className="card-glass rounded-2xl p-6 space-y-4">
+          <div className="flex items-center gap-4">
+            <div className="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 rounded-2xl flex items-center justify-center">
+              <Timer className="w-7 h-7 text-blue-600 dark:text-blue-400" />
             </div>
+            <div>
+              <h2 className="text-lg font-bold text-[var(--text-primary)]">Kurztest (BMS)</h2>
+              <p className="text-sm text-[var(--muted)]">Schnelles Ueben eines einzelnen Fachs</p>
+            </div>
+          </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
-              {BMS_KURZTEST_OPTIONS.map((opt) => (
-                <button
-                  key={opt.id}
-                  onClick={() => startSimulation("kurz", opt.id)}
-                  className="bg-[var(--border)]/30 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-lg p-4 text-left transition-colors cursor-pointer border border-transparent hover:border-blue-200 dark:hover:border-blue-800"
-                >
-                  <p className="font-semibold text-[var(--text-primary)]">{opt.label}</p>
-                  <p className="text-xs text-[var(--muted)]">
-                    {opt.questionCount} Fragen / {opt.timeLimitMinutes} Min
-                  </p>
-                </button>
-              ))}
-            </div>
-          </CardContent>
-        </Card>
+          <div className="grid grid-cols-3 gap-3 stagger-children">
+            {BMS_KURZTEST_OPTIONS.map((opt) => (
+              <button
+                key={opt.id}
+                onClick={() => startSimulation("kurz", opt.id)}
+                className="bg-[var(--border)]/30 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-lg p-4 text-left transition-colors cursor-pointer border border-transparent hover:border-blue-200 dark:hover:border-blue-800"
+              >
+                <p className="font-semibold text-[var(--text-primary)]">{opt.label}</p>
+                <p className="text-xs text-[var(--muted)]">
+                  {opt.questionCount} Fragen / {opt.timeLimitMinutes} Min
+                </p>
+              </button>
+            ))}
+          </div>
+        </div>
       </div>
     );
   }
@@ -1368,31 +1356,29 @@ export default function Simulation() {
     const nextGroup = nextSec ? getSectionGroupLabel(nextSec.sectionType) : "";
 
     return (
-      <div className="max-w-3xl mx-auto space-y-6">
-        <Card>
-          <CardContent className="p-8 text-center space-y-6">
-            <div className="w-20 h-20 bg-yellow-100 dark:bg-yellow-900/30 rounded-2xl flex items-center justify-center mx-auto">
-              <Coffee className="w-10 h-10 text-yellow-600 dark:text-yellow-400" />
-            </div>
-            <h2 className="text-xl font-bold text-[var(--text-primary)]">Pause</h2>
-            <p className="text-[var(--muted)]">
-              {currentGroup}: {currentSec.label} abgeschlossen!
-              {nextSec && (
-                <span>
-                  {" "}
-                  Nächster Teil: {nextGroup !== currentGroup ? `${nextGroup} - ` : ""}
-                  {nextSec.label} ({nextSec.questionCount} Fragen, {nextSec.timeLimitMinutes} Min)
-                </span>
-              )}
-            </p>
-            <div className="text-4xl font-mono font-bold text-yellow-600 dark:text-yellow-400">
-              {formatTime(breakTimeLeft)}
-            </div>
-            <Button onClick={loadNextSection}>
-              <Play className="w-4 h-4 mr-1" /> Pause überspringen
-            </Button>
-          </CardContent>
-        </Card>
+      <div className="max-w-5xl mx-auto space-y-6">
+        <div className="card-glass rounded-2xl p-8 text-center space-y-6">
+          <div className="w-20 h-20 bg-yellow-100 dark:bg-yellow-900/30 rounded-2xl flex items-center justify-center mx-auto">
+            <Coffee className="w-10 h-10 text-yellow-600 dark:text-yellow-400" />
+          </div>
+          <h2 className="text-xl font-bold text-[var(--text-primary)]">Pause</h2>
+          <p className="text-[var(--muted)]">
+            {currentGroup}: {currentSec.label} abgeschlossen!
+            {nextSec && (
+              <span>
+                {" "}
+                Nächster Teil: {nextGroup !== currentGroup ? `${nextGroup} - ` : ""}
+                {nextSec.label} ({nextSec.questionCount} Fragen, {nextSec.timeLimitMinutes} Min)
+              </span>
+            )}
+          </p>
+          <div className="text-4xl font-mono font-bold text-yellow-600 dark:text-yellow-400">
+            {formatTime(breakTimeLeft)}
+          </div>
+          <Button variant="premium" onClick={loadNextSection}>
+            <Play className="w-4 h-4 mr-1" /> Pause überspringen
+          </Button>
+        </div>
       </div>
     );
   }
@@ -1403,7 +1389,7 @@ export default function Simulation() {
 
   if (mode === "gedaechtnis-learn") {
     return (
-      <div className="max-w-4xl mx-auto space-y-6">
+      <div className="max-w-5xl mx-auto space-y-6">
         <div className="flex items-center justify-between">
           <div>
             <Badge variant="info">Gedächtnis & Merkfähigkeit</Badge>
@@ -1429,7 +1415,7 @@ export default function Simulation() {
           beantworten müssen.
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 gap-4">
           {allergyCards.map((card, i) => (
             <Card key={card.id}>
               <CardContent className="p-4 space-y-2">
@@ -1475,7 +1461,7 @@ export default function Simulation() {
         </div>
 
         <div className="flex justify-center">
-          <Button onClick={startGedaechtnisQuiz}>
+          <Button variant="premium" onClick={startGedaechtnisQuiz}>
             <Play className="w-4 h-4 mr-1" /> Lernphase beenden & Abfrage starten
           </Button>
         </div>
@@ -1535,7 +1521,7 @@ export default function Simulation() {
     const timeEntries = sectionTimeData;
 
     return (
-      <div className="max-w-3xl mx-auto space-y-6">
+      <div className="max-w-5xl mx-auto space-y-6">
         <BreadcrumbNav
           items={[
             { label: "Dashboard", href: "/" },
@@ -1544,147 +1530,139 @@ export default function Simulation() {
           ]}
         />
 
-        <h1 className="text-2xl font-bold text-[var(--text-primary)]">Simulationsergebnis</h1>
+        <div className="hero-orbs text-center py-4">
+          <h1 className="text-2xl font-bold text-[var(--text-primary)]">Simulationsergebnis</h1>
+        </div>
 
         {/* Overall score */}
-        <Card>
-          <CardContent className="p-6 text-center">
-            <div className="text-5xl font-bold text-[var(--accent)]/60">{totalPct}%</div>
-            <p className="text-lg text-[var(--muted)] mt-1">
-              {totalScore} von {allQuestions.length} richtig
-            </p>
-            <p className="text-sm text-green-600 dark:text-green-400 font-medium mt-2">
-              +{totalScore * 15} XP erhalten
-            </p>
-          </CardContent>
-        </Card>
+        <div className="card-glass rounded-2xl p-6 text-center">
+          <div className="text-5xl font-bold text-[var(--accent)]/60">{totalPct}%</div>
+          <p className="text-lg text-[var(--muted)] mt-1">
+            {totalScore} von {allQuestions.length} richtig
+          </p>
+          <p className="text-sm text-green-600 dark:text-green-400 font-medium mt-2">
+            +{totalScore * 15} XP erhalten
+          </p>
+        </div>
 
         {/* Group breakdown */}
         {groupScores.size > 1 && (
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+          <div className="grid grid-cols-4 gap-3 stagger-children">
             {[...groupScores.entries()].map(([key, data]) => {
               const pct = data.total > 0 ? Math.round((data.score / data.total) * 100) : 0;
               return (
-                <Card key={key}>
-                  <CardContent className="p-4 text-center">
-                    <p className="text-2xl font-bold text-[var(--accent)]/60">{pct}%</p>
-                    <p className="text-sm font-medium text-[var(--text-primary)]">{data.label}</p>
-                    <p className="text-xs text-[var(--muted)]">
-                      {data.score}/{data.total}
-                    </p>
-                  </CardContent>
-                </Card>
+                <div key={key} className="card-glass rounded-2xl p-4 text-center">
+                  <p className="text-2xl font-bold text-[var(--accent)]/60">{pct}%</p>
+                  <p className="text-sm font-medium text-[var(--text-primary)]">{data.label}</p>
+                  <p className="text-xs text-[var(--muted)]">
+                    {data.score}/{data.total}
+                  </p>
+                </div>
               );
             })}
           </div>
         )}
 
         {/* Per-section breakdown */}
-        <Card>
-          <CardContent className="p-5 space-y-3">
-            <h3 className="font-bold text-[var(--text-primary)] flex items-center gap-2">
-              <BarChart3 className="w-4 h-4" /> Detaillierte Aufschlüsselung
-            </h3>
-            {sectionScores.map((s) => (
-              <div
-                key={s.sec.id}
-                className="flex items-center justify-between py-2 border-b border-[var(--border)] last:border-b-0"
-              >
-                <div>
-                  <span className="text-sm font-medium text-[var(--text-primary)]">
-                    {s.sec.label}
-                  </span>
-                  {s.sec.parentGroup && (
-                    <span className="text-xs text-[var(--muted)] ml-2">({s.sec.parentGroup})</span>
-                  )}
-                </div>
-                <div className="flex items-center gap-3">
-                  <span className="text-sm text-[var(--muted)]">
-                    {s.score}/{s.total}
-                  </span>
-                  <div className="w-24 bg-[var(--border)] rounded-full h-2">
-                    <div
-                      className={`h-2 rounded-full ${s.pct >= 70 ? "bg-green-500" : s.pct >= 50 ? "bg-yellow-500" : "bg-red-500"}`}
-                      style={{ width: `${s.pct}%` }}
-                    />
-                  </div>
-                  <span
-                    className={`text-sm font-bold ${s.pct >= 70 ? "text-green-600 dark:text-green-400" : s.pct >= 50 ? "text-yellow-600 dark:text-yellow-400" : "text-red-600 dark:text-red-400"}`}
-                  >
-                    {s.pct}%
-                  </span>
-                </div>
+        <div className="card-glass rounded-2xl p-5 space-y-3">
+          <h3 className="font-bold text-[var(--text-primary)] flex items-center gap-2">
+            <BarChart3 className="w-4 h-4" /> Detaillierte Aufschlüsselung
+          </h3>
+          {sectionScores.map((s) => (
+            <div
+              key={s.sec.id}
+              className="flex items-center justify-between py-2 border-b border-[var(--border)] last:border-b-0"
+            >
+              <div>
+                <span className="text-sm font-medium text-[var(--text-primary)]">
+                  {s.sec.label}
+                </span>
+                {s.sec.parentGroup && (
+                  <span className="text-xs text-[var(--muted)] ml-2">({s.sec.parentGroup})</span>
+                )}
               </div>
-            ))}
-          </CardContent>
-        </Card>
+              <div className="flex items-center gap-3">
+                <span className="text-sm text-[var(--muted)]">
+                  {s.score}/{s.total}
+                </span>
+                <div className="w-24 bg-[var(--border)] rounded-full h-2">
+                  <div
+                    className={`h-2 rounded-full ${s.pct >= 70 ? "bg-green-500" : s.pct >= 50 ? "bg-yellow-500" : "bg-red-500"}`}
+                    style={{ width: `${s.pct}%` }}
+                  />
+                </div>
+                <span
+                  className={`text-sm font-bold ${s.pct >= 70 ? "text-green-600 dark:text-green-400" : s.pct >= 50 ? "text-yellow-600 dark:text-yellow-400" : "text-red-600 dark:text-red-400"}`}
+                >
+                  {s.pct}%
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
 
         {/* Time usage */}
         {timeEntries.length > 0 && (
-          <Card>
-            <CardContent className="p-5 space-y-3">
-              <h3 className="font-bold text-[var(--text-primary)] flex items-center gap-2">
-                <Clock className="w-4 h-4" /> Zeitnutzung
-              </h3>
-              {timeEntries.map((entry) => {
-                const usedPct =
-                  entry.allocated > 0 ? Math.round((entry.used / entry.allocated) * 100) : 0;
-                return (
-                  <div
-                    key={entry.sectionId}
-                    className="flex items-center justify-between py-2 border-b border-[var(--border)] last:border-b-0"
-                  >
-                    <span className="text-sm text-[var(--text-primary)]">{entry.label}</span>
-                    <div className="flex items-center gap-2 text-sm text-[var(--muted)]">
-                      <span>
-                        {formatTime(entry.used)} / {formatTime(entry.allocated)}
-                      </span>
-                      <span
-                        className={`font-medium ${usedPct > 90 ? "text-red-600 dark:text-red-400" : "text-[var(--muted)]"}`}
-                      >
-                        ({usedPct}%)
-                      </span>
-                    </div>
+          <div className="card-glass rounded-2xl p-5 space-y-3">
+            <h3 className="font-bold text-[var(--text-primary)] flex items-center gap-2">
+              <Clock className="w-4 h-4" /> Zeitnutzung
+            </h3>
+            {timeEntries.map((entry) => {
+              const usedPct =
+                entry.allocated > 0 ? Math.round((entry.used / entry.allocated) * 100) : 0;
+              return (
+                <div
+                  key={entry.sectionId}
+                  className="flex items-center justify-between py-2 border-b border-[var(--border)] last:border-b-0"
+                >
+                  <span className="text-sm text-[var(--text-primary)]">{entry.label}</span>
+                  <div className="flex items-center gap-2 text-sm text-[var(--muted)]">
+                    <span>
+                      {formatTime(entry.used)} / {formatTime(entry.allocated)}
+                    </span>
+                    <span
+                      className={`font-medium ${usedPct > 90 ? "text-red-600 dark:text-red-400" : "text-[var(--muted)]"}`}
+                    >
+                      ({usedPct}%)
+                    </span>
                   </div>
-                );
-              })}
-            </CardContent>
-          </Card>
+                </div>
+              );
+            })}
+          </div>
         )}
 
         {/* Weakness analysis */}
         {weakAreas.length > 0 && weakAreas[0].pct < 70 && (
-          <Card className="border-l-4 border-l-amber-500">
-            <CardContent className="p-5 space-y-3">
-              <h3 className="font-bold text-[var(--text-primary)] flex items-center gap-2">
-                <AlertTriangle className="w-4 h-4 text-amber-500" /> Schwächen-Analyse
-              </h3>
-              <p className="text-sm text-[var(--muted)]">
-                Die folgenden Bereiche haben die niedrigsten Ergebnisse. Wir empfehlen, diese Themen
-                gezielt zu wiederholen:
-              </p>
-              <div className="space-y-2">
-                {weakAreas
-                  .filter((a) => a.pct < 70)
-                  .map((area) => (
-                    <div
-                      key={area.sec.id}
-                      className="flex items-center gap-3 bg-amber-50 dark:bg-amber-900/10 rounded-lg p-3"
-                    >
-                      <XCircle className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0" />
-                      <div>
-                        <span className="text-sm font-medium text-[var(--text-primary)]">
-                          {area.sec.label}
-                        </span>
-                        <span className="text-xs text-[var(--muted)] ml-2">
-                          {area.pct}% ({area.score}/{area.total})
-                        </span>
-                      </div>
+          <div className="card-glass rounded-2xl p-5 space-y-3 border-l-4 border-l-amber-500">
+            <h3 className="font-bold text-[var(--text-primary)] flex items-center gap-2">
+              <AlertTriangle className="w-4 h-4 text-amber-500" /> Schwächen-Analyse
+            </h3>
+            <p className="text-sm text-[var(--muted)]">
+              Die folgenden Bereiche haben die niedrigsten Ergebnisse. Wir empfehlen, diese Themen
+              gezielt zu wiederholen:
+            </p>
+            <div className="space-y-2">
+              {weakAreas
+                .filter((a) => a.pct < 70)
+                .map((area) => (
+                  <div
+                    key={area.sec.id}
+                    className="flex items-center gap-3 bg-amber-50 dark:bg-amber-900/10 rounded-lg p-3"
+                  >
+                    <XCircle className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0" />
+                    <div>
+                      <span className="text-sm font-medium text-[var(--text-primary)]">
+                        {area.sec.label}
+                      </span>
+                      <span className="text-xs text-[var(--muted)] ml-2">
+                        {area.pct}% ({area.score}/{area.total})
+                      </span>
                     </div>
-                  ))}
-              </div>
-            </CardContent>
-          </Card>
+                  </div>
+                ))}
+            </div>
+          </div>
         )}
 
         {/* Previous attempts comparison */}
@@ -1700,59 +1678,57 @@ export default function Simulation() {
               : 0;
           const diff = totalPct - lastPct;
           return (
-            <Card>
-              <CardContent className="p-5 space-y-3">
-                <h3 className="font-bold text-[var(--text-primary)] flex items-center gap-2">
-                  <TrendingUp className="w-4 h-4" /> Vergleich mit früheren Versuchen
-                </h3>
-                <div className="flex items-center gap-4 mb-3">
-                  <div className="text-center">
-                    <p className="text-2xl font-bold text-[var(--accent)]/60">{totalPct}%</p>
-                    <p className="text-xs text-[var(--muted)]">Jetzt</p>
-                  </div>
-                  <div
-                    className={`text-center px-3 py-1 rounded-lg ${diff > 0 ? "bg-green-50 dark:bg-green-900/20" : diff < 0 ? "bg-red-50 dark:bg-red-900/20" : "bg-[var(--border)]/30"}`}
+            <div className="card-glass rounded-2xl p-5 space-y-3">
+              <h3 className="font-bold text-[var(--text-primary)] flex items-center gap-2">
+                <TrendingUp className="w-4 h-4" /> Vergleich mit früheren Versuchen
+              </h3>
+              <div className="flex items-center gap-4 mb-3">
+                <div className="text-center">
+                  <p className="text-2xl font-bold text-[var(--accent)]/60">{totalPct}%</p>
+                  <p className="text-xs text-[var(--muted)]">Jetzt</p>
+                </div>
+                <div
+                  className={`text-center px-3 py-1 rounded-lg ${diff > 0 ? "bg-green-50 dark:bg-green-900/20" : diff < 0 ? "bg-red-50 dark:bg-red-900/20" : "bg-[var(--border)]/30"}`}
+                >
+                  <p
+                    className={`text-lg font-bold ${diff > 0 ? "text-green-600 dark:text-green-400" : diff < 0 ? "text-red-600 dark:text-red-400" : "text-[var(--muted)]"}`}
                   >
-                    <p
-                      className={`text-lg font-bold ${diff > 0 ? "text-green-600 dark:text-green-400" : diff < 0 ? "text-red-600 dark:text-red-400" : "text-[var(--muted)]"}`}
-                    >
-                      {diff > 0 ? "+" : ""}
-                      {diff}%
-                    </p>
-                    <p className="text-xs text-[var(--muted)]">vs. letztes Mal</p>
-                  </div>
-                  <div className="text-center">
-                    <p className="text-2xl font-bold text-[var(--muted)]">{lastPct}%</p>
-                    <p className="text-xs text-[var(--muted)]">Letztes Mal</p>
+                    {diff > 0 ? "+" : ""}
+                    {diff}%
+                  </p>
+                  <p className="text-xs text-[var(--muted)]">vs. letztes Mal</p>
+                </div>
+                <div className="text-center">
+                  <p className="text-2xl font-bold text-[var(--muted)]">{lastPct}%</p>
+                  <p className="text-xs text-[var(--muted)]">Letztes Mal</p>
+                </div>
+              </div>
+              {prevSimulations.length > 1 && (
+                <div className="flex items-end gap-1 h-16">
+                  {[...prevSimulations].reverse().map((r) => {
+                    const pct = r.total > 0 ? Math.round((r.score / r.total) * 100) : 0;
+                    return (
+                      <div key={r.id} className="flex-1 flex flex-col items-center gap-0.5">
+                        <div
+                          className="w-full bg-[var(--accent)]/20 dark:bg-[var(--accent)]/80 rounded-t"
+                          style={{ height: `${Math.max(4, (pct / 100) * 48)}px` }}
+                        />
+                        <span className="text-[10px] text-[var(--muted)]">{pct}%</span>
+                      </div>
+                    );
+                  })}
+                  <div className="flex-1 flex flex-col items-center gap-0.5">
+                    <div
+                      className="w-full bg-[var(--accent)]/60 rounded-t"
+                      style={{ height: `${Math.max(4, (totalPct / 100) * 48)}px` }}
+                    />
+                    <span className="text-[10px] font-bold text-[var(--accent)]/30">
+                      {totalPct}%
+                    </span>
                   </div>
                 </div>
-                {prevSimulations.length > 1 && (
-                  <div className="flex items-end gap-1 h-16">
-                    {[...prevSimulations].reverse().map((r) => {
-                      const pct = r.total > 0 ? Math.round((r.score / r.total) * 100) : 0;
-                      return (
-                        <div key={r.id} className="flex-1 flex flex-col items-center gap-0.5">
-                          <div
-                            className="w-full bg-[var(--accent)]/20 dark:bg-[var(--accent)]/80 rounded-t"
-                            style={{ height: `${Math.max(4, (pct / 100) * 48)}px` }}
-                          />
-                          <span className="text-[10px] text-[var(--muted)]">{pct}%</span>
-                        </div>
-                      );
-                    })}
-                    <div className="flex-1 flex flex-col items-center gap-0.5">
-                      <div
-                        className="w-full bg-[var(--accent)]/60 rounded-t"
-                        style={{ height: `${Math.max(4, (totalPct / 100) * 48)}px` }}
-                      />
-                      <span className="text-[10px] font-bold text-[var(--accent)]/30">
-                        {totalPct}%
-                      </span>
-                    </div>
-                  </div>
-                )}
-              </CardContent>
-            </Card>
+              )}
+            </div>
           );
         })()}
 
@@ -1832,10 +1808,10 @@ export default function Simulation() {
         </details>
 
         <div className="flex justify-center gap-3 pb-8">
-          <Button variant="outline" onClick={() => setMode("select")}>
+          <Button variant="glass" onClick={() => setMode("select")}>
             Zurück zur Auswahl
           </Button>
-          <Button onClick={() => startSimulation(simType, undefined, simVariant)}>
+          <Button variant="premium" onClick={() => startSimulation(simType, undefined, simVariant)}>
             Neue Simulation
           </Button>
         </div>
@@ -1944,7 +1920,7 @@ export default function Simulation() {
           <span className="text-2xl font-mono font-bold text-[var(--accent)]/60">?, ?</span>
         </div>
         <p className="text-sm text-[var(--muted)] mb-4">Welche zwei Zahlen folgen als nächstes?</p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div className="grid grid-cols-2 gap-3">
           {q.numOptions?.map((opt, oi) => (
             <button
               key={oi}
@@ -2069,11 +2045,7 @@ export default function Simulation() {
             Puzzleteile
           </p>
           <div className="flex justify-center py-4 bg-[var(--border)]/20 rounded-lg mb-6">
-            <svg
-              viewBox={piecesVB}
-              {...FIGURE_SVG_ASPECT_PROPS}
-              className="w-full max-w-md h-24 sm:h-28"
-            >
+            <svg viewBox={piecesVB} {...FIGURE_SVG_ASPECT_PROPS} className="w-full max-w-md h-28">
               {piecePaths.map((p, i) => (
                 <path key={i} d={p.d} fill={FZ_FILL} stroke="none" transform={p.transform} />
               ))}
@@ -2082,7 +2054,7 @@ export default function Simulation() {
           <p className="text-sm font-medium text-[var(--text-primary)] mb-3">
             Welche Figur entsteht aus den Teilen?
           </p>
-          <div className="grid grid-cols-2 sm:grid-cols-5 gap-3">
+          <div className="grid grid-cols-5 gap-3">
             {aufgabe.options.map((opt, oi) => {
               const label = FZ_OPT_LABELS[oi];
               const selected = answers[q.id] === label;
@@ -2187,7 +2159,7 @@ export default function Simulation() {
   };
 
   return (
-    <div className="max-w-3xl mx-auto space-y-6">
+    <div className="max-w-5xl mx-auto space-y-6">
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
@@ -2213,9 +2185,9 @@ export default function Simulation() {
       </div>
 
       {/* Progress bar */}
-      <div className="w-full bg-[var(--border)] rounded-full h-2">
+      <div className="progress-premium">
         <div
-          className="bg-[var(--accent)] h-2 rounded-full transition-all"
+          className="progress-fill"
           style={{ width: `${((index + 1) / sectionQuestions.length) * 100}%` }}
         />
       </div>

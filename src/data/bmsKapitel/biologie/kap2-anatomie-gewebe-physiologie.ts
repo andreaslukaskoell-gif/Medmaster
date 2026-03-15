@@ -27,16 +27,16 @@ export const bioKapAnatomieGewebe: Kapitel = {
 
 Epithelien kleiden jede Körperoberfläche und jedes Hohlorgan aus — trotz ihrer Vielfalt teilen **alle** Epithelien drei Grundeigenschaften:
 
-1. **Polarität**: Die Zelle hat eine **apikale Seite** (zur Körperhöhle/Oberfläche hin) und eine **basolaterale Seite** (zur Basalmembran/Interstitium (Zwischengewebe)). Transporter sind ungleichmäßig verteilt → **gerichteter Transport** (z.B. SGLT1 apikal, GLUT2 basolateral im Dünndarm)
+1. **Polarität**: Die Zelle hat eine **apikale Seite** (zur Körperhöhle hin) und eine **basolaterale Seite** (zur Basalmembran hin). Transporter sind ungleichmäßig verteilt — das ermöglicht **gerichteten Transport** (z. B. SGLT1 apikal, GLUT2 basolateral im Dünndarm).
 
-2. **Basalmembran**: Das Epithelgewebe ist durch die **Basalmembran** mit dem darunterliegenden Bindegewebe verbunden (Kollagen IV, Laminin (Verankerungsprotein), Proteoglykane). Sie verankert das Epithel und stellt eine weitere selektive Barriere dar. **Prüfungssicher:** Die Verbindung Epithel–Bindegewebe ist die Basalmembran (nicht apikale Fortsätze, nicht Lipid-Doppelschicht, nicht Bürstensaum).
+2. **Basalmembran**: Das Epithel sitzt auf der **Basalmembran**, die es mit dem darunterliegenden Bindegewebe verbindet. Hauptkomponenten: Kollagen IV, Laminin (Verankerungsprotein) und Proteoglykane. Sie verankert das Epithel und wirkt als selektive Barriere.
 
 3. **Avaskulär**: Epithelien haben keine eigenen Blutgefäße — Versorgung erfolgt durch Diffusion aus darunter liegenden Kapillaren. → Hohe Zellerneuerungsrate nötig (Dünndarm alle 3–5 Tage, Haut alle ~2 Wochen)
 
 **Zellkontakte in Epithelien:**
 - **Tight Junctions** (Zonula occludens): Versiegeln apikalen Interzellularspalt; Barriere- und Fence-Funktion (trennen apikale und basolaterale Membranproteine). Aus Claudinen und Occludin (Transmembranproteine).
 - **Desmosomen**: Mechanischer Zusammenhalt (Cadherine + Intermediärfilamente). Knotenförmig, gürtelartig.
-- **Gap Junctions**: Direkter Ionenaustausch zwischen Zellen (Connexine (Kanalproteine)). **Die einzelnen Muskelzellen des Herzens sind elektrisch leitend durch Gap Junctions miteinander verbunden** (nicht durch Tight Junctions, Desmosomen oder Adhärens-Kontakte) — so breitet sich die Erregung koordiniert aus.
+- **Gap Junctions**: Direkter Ionenaustausch zwischen Zellen über Connexin-Kanäle. **Herzmuskelzellen sind über Gap Junctions elektrisch verbunden** — so breitet sich die Erregung koordiniert aus (nicht über Tight Junctions oder Desmosomen).
 - **Hemidesmosomen**: Verankerung an Basalmembran (Integrine + Laminin).
 
 > **Merke:** Tight Junctions = apikal, Barriere + Fence. Desmosomen = mechanisch. Gap Junctions = Ionenaustausch. Hemidesmosomen = Basalmembran-Verankerung.
@@ -232,6 +232,8 @@ Sehne, Knorpel und Knochen sehen völlig verschieden aus, bestehen aber alle aus
 
 > **Merke:** Bindegewebe = Matrix dominiert über Zellen. EZM aus Kollagen (Festigkeit) + Proteoglykane (Wasser/Druck) + Fibronektin (Adhäsion).
 
+{{IMAGE}}
+
 ---
 
 ## Kollagen — Struktur und Typen
@@ -271,6 +273,8 @@ Sehne, Knorpel und Knochen sehen völlig verschieden aus, bestehen aber alle aus
 **Therapeutisch:** Bisphosphonate (Knochenschwund-Hemmer, hemmen Osteoklasten direkt), Denosumab (RANKL-Antikörper).
 
 > **Merke:** OsteoBlast = Baut. OsteoKlast = Klaut (resorbiert). RANKL aktiviert Osteoklasten. Östrogen schützt Knochen.
+
+{{DIAGRAM:stem-cells}}
 
 ---
 
@@ -651,9 +655,7 @@ Kein Troponin! Ca2+ bindet **Calmodulin** -> aktiviert **MLCK** (Myosin-Leichtke
         "Dendrit",
         "Ranvier-Schnürringe",
       ],
-      content: `## Nervengewebe — Neuronen, Gliazellen und Myelinisierung
-
-Das Nervensystem besteht aus zwei grundlegenden Zelltypen: **Neuronen** übertragen elektrochemische Signale; **Gliazellen** übernehmen Stütz-, Schutz- und Versorgungsfunktionen. Beide Populationen sind für die normale Nervenfunktion unentbehrlich.
+      content: `Das Nervensystem besteht aus zwei grundlegenden Zelltypen: **Neuronen** übertragen elektrochemische Signale; **Gliazellen** übernehmen Stütz-, Schutz- und Versorgungsfunktionen. Beide sind für die normale Nervenfunktion unentbehrlich.
 
 ## Aufbau eines Neurons
 
@@ -1145,7 +1147,7 @@ Jedes Rückenmarkssegment versorgt über seinen Spinalnerv ein bestimmtes Hautar
 
 ## Grundprinzip: Transduktion — Reize als elektrische Signale
 
-Ob Licht, Schall oder Geruch — jeder Reiz muss in ein elektrisches Signal übersetzt werden: **Transduktion**. Alle Sinnesorgane folgen demselben Grundprinzip: Ein physikalischer oder chemischer Reiz wird in ein elektrisches Signal umgewandelt. Die Art der Transduktion unterscheidet sich je nach Sinn:
+Ob Licht, Schall oder Geruch — jeder Reiz muss zunächst in ein elektrisches Signal umgewandelt werden. Dieser Vorgang heißt **Transduktion**. Der Mechanismus dahinter unterscheidet sich je nach Sinn:
 
 1. **Photorezeptoren** (Auge): Lichtquanten → Rhodopsin-Aktivierung → G-Protein-Kaskade → cGMP ↓ → Ionenkanäle schließen → **Hyperpolarisation** (atypisch — weil Photorezeptoren im Dunkeln depolarisiert sind!)
 2. **Mechanorezeptoren** (Ohr, Haut): Mechanische Verformung → Mechanosensitive Ionenkanäle öffnen direkt → **Depolarisation**
@@ -2660,6 +2662,8 @@ Der Lymphknoten filtert Lymphe und initiiert Immunantworten. Seine zonale Archit
 
 > **Merke:** **Milz**: rote Pulpa (Ery-Abbau + Thrombozytenspeicher) vs. weiße Pulpa (Immunabwehr). **Splenektomie** = OPSI-Risiko → Impfung + Penicillin! **Thymus**: positive Selektion (MHC-Erkennung) + negative Selektion (Selbsttoleranz) → nur ~5 % der Thymozyten überleben.
 
+{{DIAGRAM:immune-response}}
+
 ---
 
 ## Klinisch: Lymphödem und Sentinel-Lymphknoten
@@ -3728,6 +3732,8 @@ Die Wirbelsäule ist keine gerade Säule, sondern zeigt im Sagittalprofil **vier
       content: `## Spermatogenese und Oogenese — Gametogenese im Vergleich
 
 Ein Mann produziert täglich rund 200 Millionen Spermien, eine Frau reift pro Zyklus nur eine einzige Eizelle — dieser Kontrast prägt die gesamte Fortpflanzungsbiologie. Beide Keimzellentwicklungen nutzen die Meiose, unterscheiden sich aber fundamental in Ergebnis und Zeitplanung:
+
+{{IMAGE}}
 
 | Merkmal | Spermatogenese | Oogenese |
 |---|---|---|

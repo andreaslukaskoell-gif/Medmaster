@@ -54,7 +54,7 @@ function FormelCard({ f }: { f: Formel }) {
   const Icon = cfg.icon;
 
   return (
-    <Card className="group hover:shadow-md transition-shadow">
+    <Card className="card-glass group hover:shadow-md transition-shadow">
       <CardContent className="p-5">
         {/* Header */}
         <div className="flex items-start gap-3 mb-3">
@@ -74,7 +74,7 @@ function FormelCard({ f }: { f: Formel }) {
         </div>
 
         {/* Formel */}
-        <div className="bg-[var(--surface)] rounded-lg px-4 py-3 mb-3">
+        <div className="bg-[var(--surface)]/60 backdrop-blur-sm rounded-lg px-4 py-3 mb-3 border border-[var(--border)]/30">
           <p className="text-lg font-mono font-bold text-[var(--text-primary)] whitespace-pre-line leading-relaxed">
             {f.formel}
           </p>
@@ -151,7 +151,7 @@ export default function Formelsammlung() {
       <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "Formelsammlung" }]} />
 
       {/* Header */}
-      <div>
+      <div className="hero-orbs text-center">
         <h1 className="text-2xl font-bold text-[var(--text-primary)]">Formelsammlung</h1>
         <p className="text-[var(--muted)] mt-1">
           {formeln.length} Formeln für Physik, Chemie und Mathematik
@@ -159,7 +159,7 @@ export default function Formelsammlung() {
       </div>
 
       {/* Search + Filter */}
-      <div className="flex flex-col sm:flex-row gap-3">
+      <div className="flex flex-col gap-3">
         <div className="relative flex-1">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground/70" />
           <input
@@ -196,7 +196,7 @@ export default function Formelsammlung() {
             <h2 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-3">
               {chapter} ({items.length})
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+            <div className="grid grid-cols-2 gap-4 mb-6 stagger-children">
               {items.map((f) => (
                 <FormelCard key={f.id} f={f} />
               ))}

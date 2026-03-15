@@ -13,7 +13,7 @@ export function HotStreakOverlay({ active }: HotStreakOverlayProps) {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
-          className="fixed inset-0 z-90 pointer-events-none"
+          className="fixed inset-0 z-90 pointer-events-none backdrop-blur-xl"
           aria-hidden
         >
           {/* Goldener Schimmer – Rand-Glow */}

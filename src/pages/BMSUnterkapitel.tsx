@@ -1,4 +1,4 @@
-import { useState, useMemo, useRef, useEffect } from "react";
+import { useState, useMemo, useRef, useEffect, useCallback } from "react";
 import { useLocation } from "react-router-dom";
 import {
   ArrowLeft,
@@ -30,6 +30,7 @@ import { useAdaptiveStore } from "../store/adaptiveLearning";
 import type { Kapitel } from "../data/bmsKapitel/types";
 import { trackEvent } from "@/lib/analyticsTracker";
 import { sanitizeHtml } from "@/lib/security";
+import { ChapterCompleteCelebration } from "@/components/ChapterCompleteCelebration";
 
 interface Props {
   kapitel: Kapitel;
@@ -111,6 +112,7 @@ export default function BMSUnterkapitel({
   const [scrollProgress, setScrollProgress] = useState(0);
   const [showScrollRestoredToast, setShowScrollRestoredToast] = useState(false);
   const [toolMenuOpen, setToolMenuOpen] = useState(false);
+  const [showCelebration, setShowCelebration] = useState(false);
   const allCompleteFired = useRef(false);
   const scrollSaveTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const kontrollResultsRef = useRef<{ questionIndex: number; correct: boolean }[]>([]);
@@ -317,8 +319,19 @@ export default function BMSUnterkapitel({
       kontrollResultsRef.current = [];
     }
     handleComplete();
-    setTimeout(() => onBack(), 1200);
+    // Check if completing this UK means the entire chapter is done
+    const newCompletedCount = completedCount + (isCompleted ? 0 : 1);
+    if (newCompletedCount === total) {
+      setShowCelebration(true);
+    } else {
+      setTimeout(() => onBack(), 1200);
+    }
   };
+
+  const handleCelebrationContinue = useCallback(() => {
+    setShowCelebration(false);
+    onBack();
+  }, [onBack]);
 
   // eslint-disable-next-line react-hooks/preserve-manual-memoization -- deps intentionally minimal
   const selfTestBlock = useMemo(() => {
@@ -745,6 +758,15 @@ export default function BMSUnterkapitel({
           </div>
         )}
       </ContentErrorBoundary>
+
+      {showCelebration && (
+        <ChapterCompleteCelebration
+          chapterTitle={kapitel.title}
+          subjectColor={subjectAccentVars[kapitel.subject] ?? "var(--accent)"}
+          xpEarned={50}
+          onContinue={handleCelebrationContinue}
+        />
+      )}
 
       <KnowledgeBridgeSlideOver
         open={bridgeOpen}
