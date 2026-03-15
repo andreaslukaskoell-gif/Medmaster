@@ -116,6 +116,20 @@ export default function SEK() {
       />
     );
 
+  // Compute per-subtest progress
+  const { quizResults } = useStore();
+  const sekStats = (subject: string) => {
+    const results = (quizResults ?? []).filter((r) => r.type === "sek" && r.subject === subject);
+    const total = results.reduce((s, r) => s + r.total, 0);
+    const correct = results.reduce((s, r) => s + r.score, 0);
+    return {
+      sessions: results.length,
+      total,
+      correct,
+      pct: total > 0 ? Math.round((correct / total) * 100) : 0,
+    };
+  };
+
   const subtests = [
     {
       id: "erkennen" as const,
@@ -126,6 +140,7 @@ export default function SEK() {
       tip: "Alle 5 Emotionen müssen korrekt sein — Alles-oder-Nichts",
       taskCount: emotionenErkennenOffiziellAlle.length,
       onStart: () => setView("erkennen-quiz"),
+      stats: sekStats("Emotionen erkennen"),
       uebungId: "sek-emotionen-erkennen" as const,
       instruction: OFFICIAL_EE_INSTRUCTION,
       instructionTitle: "Offizielle Instruktion: Emotionen erkennen",
@@ -140,6 +155,7 @@ export default function SEK() {
       tip: "Strategie mit dem höchsten Expertenwert gewinnt",
       taskCount: emotionenRegulierenOffiziellTasks.length,
       onStart: () => setView("regulieren-quiz"),
+      stats: sekStats("Emotionen regulieren"),
       uebungId: "sek-emotionen-regulieren" as const,
       instruction: OFFICIAL_ER_INSTRUCTION,
       instructionTitle: "Offizielle Instruktion: Emotionen regulieren",
@@ -154,6 +170,7 @@ export default function SEK() {
       tip: "Rangfolge zählt — je näher an der Expertenlösung, desto mehr Punkte",
       taskCount: sozialesEntscheidenTasks.length,
       onStart: () => setView("entscheiden-quiz"),
+      stats: sekStats("Soziales Entscheiden"),
       uebungId: "sek-soziales-entscheiden" as const,
       instruction: OFFICIAL_SE_INSTRUCTION,
       instructionTitle: "Offizielle Instruktion: Soziales Entscheiden",
@@ -229,8 +246,28 @@ export default function SEK() {
                 {/* Format explanation */}
                 <p className="text-sm text-[var(--text-secondary)] mb-1.5">{s.format}</p>
 
-                {/* Scoring tip */}
-                <p className="text-xs text-[var(--muted)] mb-3">Wertung: {s.tip}</p>
+                {/* Scoring tip + Progress */}
+                <div className="flex items-center gap-3 mb-3 text-xs text-[var(--muted)]">
+                  <span>Wertung: {s.tip}</span>
+                  {s.stats.total > 0 && (
+                    <>
+                      <span>·</span>
+                      <span>{s.stats.total} geübt</span>
+                      <span>·</span>
+                      <span
+                        className={
+                          s.stats.pct >= 70
+                            ? "text-emerald-500 font-semibold"
+                            : s.stats.pct >= 40
+                              ? "text-amber-500 font-semibold"
+                              : "text-red-400 font-semibold"
+                        }
+                      >
+                        {s.stats.pct}% richtig
+                      </span>
+                    </>
+                  )}
+                </div>
 
                 {/* Actions */}
                 <div className="flex items-center gap-2">

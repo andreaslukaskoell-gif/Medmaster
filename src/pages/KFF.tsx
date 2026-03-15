@@ -200,6 +200,20 @@ export default function KFF() {
     );
   }
 
+  // Compute per-module progress from quizResults
+  const { quizResults } = useStore();
+  const kffStats = (subject: string) => {
+    const results = (quizResults ?? []).filter((r) => r.type === "kff" && r.subject === subject);
+    const total = results.reduce((s, r) => s + r.total, 0);
+    const correct = results.reduce((s, r) => s + r.score, 0);
+    return {
+      sessions: results.length,
+      total,
+      correct,
+      pct: total > 0 ? Math.round((correct / total) * 100) : 0,
+    };
+  };
+
   const modules = [
     {
       id: "zahlenfolgen" as const,
@@ -211,6 +225,7 @@ export default function KFF() {
       startView: "zahlenfolgen" as KffView,
       icon: "chart",
       color: "#3b82f6",
+      stats: kffStats("Zahlenfolgen"),
     },
     {
       id: "gedaechtnis" as const,
@@ -222,6 +237,7 @@ export default function KFF() {
       startView: "gedaechtnis-setup" as KffView,
       icon: "chart",
       color: "#10b981",
+      stats: kffStats("Gedächtnis"),
     },
     {
       id: "implikationen" as const,
@@ -233,6 +249,7 @@ export default function KFF() {
       startView: "implikationen" as KffView,
       icon: "chart",
       color: "#8b5cf6",
+      stats: kffStats("Implikationen"),
     },
     {
       id: "wortflüssigkeit" as const,
@@ -244,6 +261,7 @@ export default function KFF() {
       startView: "wortflüssigkeit" as KffView,
       icon: "chart",
       color: "#f59e0b",
+      stats: kffStats("Wortflüssigkeit"),
     },
     {
       id: "figuren" as const,
@@ -255,6 +273,7 @@ export default function KFF() {
       startView: "figuren-quiz" as KffView,
       icon: "puzzle",
       color: "#ec4899",
+      stats: kffStats("Figuren zusammensetzen"),
     },
   ];
 
@@ -312,7 +331,24 @@ export default function KFF() {
                   {m.example}
                 </div>
 
-                {/* Actions — simplified to 2 clear options */}
+                {/* Progress + Actions */}
+                {m.stats.total > 0 && (
+                  <div className="flex items-center gap-3 mb-3 text-xs text-[var(--muted)]">
+                    <span>{m.stats.total} Aufgaben geübt</span>
+                    <span>·</span>
+                    <span
+                      className={
+                        m.stats.pct >= 70
+                          ? "text-emerald-500 font-semibold"
+                          : m.stats.pct >= 40
+                            ? "text-amber-500 font-semibold"
+                            : "text-red-400 font-semibold"
+                      }
+                    >
+                      {m.stats.pct}% richtig
+                    </span>
+                  </div>
+                )}
                 <div className="flex items-center gap-2">
                   <Button
                     variant="premium"
