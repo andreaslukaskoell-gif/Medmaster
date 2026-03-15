@@ -134,6 +134,11 @@ function getProps(compId) {
     }
     case "FigurenChallenge":
       return fzData.length > 0 ? pick(fzData) : FIGUREN_FALLBACK;
+    case "BlutgruppenExplainer":
+    case "ProteinstrukturExplainer":
+    case "ImmunantwortExplainer":
+      // Uses defaultProps from Root.tsx (audio + subtitles baked in)
+      return {};
     case "BMSExplainer": {
       // Curated explainer topics — passed via --explainer-json or use default rotation
       if (process.env.EXPLAINER_JSON) {
@@ -214,6 +219,9 @@ const ALL_COMPS = [
   "FigurenChallenge",
   "BMSExplainer",
   "BMSExplainerVoiceover",
+  "BlutgruppenExplainer",
+  "ProteinstrukturExplainer",
+  "ImmunantwortExplainer",
 ];
 
 const COMP_TO_FILE = {
@@ -227,6 +235,9 @@ const COMP_TO_FILE = {
   FigurenChallenge: "figuren-challenge",
   BMSExplainer: "bms-explainer",
   BMSExplainerVoiceover: "bms-explainer-voiceover",
+  BlutgruppenExplainer: "bms-blutgruppen-voiceover",
+  ProteinstrukturExplainer: "bms-proteinstruktur-voiceover",
+  ImmunantwortExplainer: "bms-immunantwort-voiceover",
 };
 
 // ── Parse CLI args ──────────────────────────────────────────

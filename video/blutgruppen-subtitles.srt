@@ -1,0 +1,65 @@
+1
+00:00:00,000 --> 00:00:02,133
+Blutgruppe A hat Anti-A-Antikörper.
+
+2
+00:00:02,367 --> 00:00:03,233
+Falsch.
+
+3
+00:00:03,500 --> 00:00:06,267
+Und genau das kreuzen die
+meisten im MedAT an.
+
+4
+00:00:07,067 --> 00:00:11,100
+Die Regel ist simpel: Du hast immer
+Antikörper gegen das, was du nicht hast.
+
+5
+00:00:11,900 --> 00:00:15,000
+Blutgruppe A hat das A-Antigen
+auf den Erythrozyten.
+
+6
+00:00:15,233 --> 00:00:17,000
+Und Anti-B im Plasma.
+
+7
+00:00:17,567 --> 00:00:21,733
+Blutgruppe B hat das B-Antigen,
+und Anti-A im Plasma.
+
+8
+00:00:22,267 --> 00:00:25,233
+AB hat beide Antigene,
+und gar keine Antikörper.
+
+9
+00:00:25,467 --> 00:00:28,000
+Deshalb ist AB
+der Universalempfänger.
+
+10
+00:00:28,533 --> 00:00:29,867
+Und Blutgruppe Null?
+
+11
+00:00:30,100 --> 00:00:33,900
+Keine Antigene. Aber Anti-A
+und Anti-B im Plasma.
+
+12
+00:00:34,167 --> 00:00:37,000
+Null kann an alle spenden.
+Universalspender.
+
+13
+00:00:37,800 --> 00:00:42,533
+Merke: Antigen auf der Zelle, Antikörper
+im Plasma, immer gegeneinander.
+
+14
+00:00:43,067 --> 00:00:45,100
+Speicher dir das.
+medmaster punkt at.

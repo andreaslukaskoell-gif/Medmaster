@@ -10,6 +10,8 @@ import { FigurenChallenge } from "./compositions/FigurenChallenge";
 import { BMSExplainer } from "./compositions/BMSExplainer";
 import { BMSExplainerVoiceover } from "./compositions/BMSExplainerVoiceover";
 import { BlutgruppenExplainer } from "./compositions/BlutgruppenExplainer";
+import { ProteinstrukturExplainer } from "./compositions/ProteinstrukturExplainer";
+import { ImmunantwortExplainer } from "./compositions/ImmunantwortExplainer";
 import { FPS, WIDTH, HEIGHT } from "./shared/brand";
 
 export const RemotionRoot: React.FC = () => {
@@ -334,6 +336,151 @@ export const RemotionRoot: React.FC = () => {
               endFrame: 1276,
             },
             { text: "Speicher dir das.\nmedmaster punkt at.", startFrame: 1292, endFrame: 1353 },
+          ],
+        }}
+      />
+      {/* ~64s — Proteinstruktur animated explainer with voice-over */}
+      <Composition
+        id="ProteinstrukturExplainer"
+        component={ProteinstrukturExplainer}
+        durationInFrames={Math.round(64.1 * FPS)}
+        fps={FPS}
+        width={WIDTH}
+        height={HEIGHT}
+        defaultProps={{
+          audioSrc: "proteinstruktur-voice-only.wav",
+          subtitles: [
+            { text: "H-Brücken stabilisieren\ndie Tertiärstruktur.", startFrame: 0, endFrame: 78 },
+            { text: "Falsch.", startFrame: 85, endFrame: 110 },
+            {
+              text: "Genau diese Falle kommt im MedAT.\nUnd fast alle tappen rein.",
+              startFrame: 117,
+              endFrame: 226,
+            },
+            {
+              text: "Jede Ebene hat ihre eigene Stabilisierung.\nVier Ebenen. Vier Regeln.",
+              startFrame: 250,
+              endFrame: 385,
+            },
+            {
+              text: "Primärstruktur. Das ist die Aminosäuresequenz,\ndie Reihenfolge der Bausteine.",
+              startFrame: 409,
+              endFrame: 553,
+            },
+            {
+              text: "Gehalten von Peptidbindungen.\nKovalent. Unzerstörbar ohne Enzyme.",
+              startFrame: 561,
+              endFrame: 699,
+            },
+            {
+              text: "Sekundärstruktur. Hier faltet sich\ndas Rückgrat in regelmäßige Muster.",
+              startFrame: 715,
+              endFrame: 840,
+            },
+            {
+              text: "Alpha-Helix und Beta-Faltblatt. Stabilisiert\ndurch H-Brücken im Peptidrückgrat.",
+              startFrame: 848,
+              endFrame: 996,
+            },
+            {
+              text: "Tertiärstruktur. Die gesamte dreidimensionale\nForm einer Polypeptidkette.",
+              startFrame: 1012,
+              endFrame: 1138,
+            },
+            {
+              text: "Stabilisiert durch Seitenketten-Wechselwirkungen.\nHydrophobe Kräfte, Ionenbindungen, und Disulfidbrücken.",
+              startFrame: 1146,
+              endFrame: 1343,
+            },
+            {
+              text: "Quartärstruktur. Mehrere\nKetten lagern sich zusammen.",
+              startFrame: 1360,
+              endFrame: 1460,
+            },
+            {
+              text: "Bestes Beispiel: Hämoglobin, ein\nTetramer aus vier Untereinheiten.",
+              startFrame: 1467,
+              endFrame: 1603,
+            },
+            {
+              text: "Merke: Sequenz, Rückgrat, Seitenketten,\nUntereinheiten. In dieser Reihenfolge.",
+              startFrame: 1620,
+              endFrame: 1791,
+            },
+            { text: "Speicher dir das.\nmedmaster punkt at.", startFrame: 1815, endFrame: 1877 },
+          ],
+        }}
+      />
+      {/* ~63s — Immunantwort animated explainer with voice-over */}
+      <Composition
+        id="ImmunantwortExplainer"
+        component={ImmunantwortExplainer}
+        durationInFrames={Math.round(62.5 * FPS)}
+        fps={FPS}
+        width={WIDTH}
+        height={HEIGHT}
+        defaultProps={{
+          audioSrc: "immunantwort-voice-only.wav",
+          subtitles: [
+            { text: "NK-Zellen gehören zur\nerworbenen Immunität.", startFrame: 0, endFrame: 88 },
+            { text: "Falsch.", startFrame: 96, endFrame: 120 },
+            {
+              text: "NK-Zellen sind angeboren. Und im\nMedAT kostet dich das Punkte.",
+              startFrame: 128,
+              endFrame: 246,
+            },
+            {
+              text: "Dein Immunsystem hat zwei Arme. Angeboren und\nerworben. Verschiedene Zellen, verschiedene Aufgaben.",
+              startFrame: 270,
+              endFrame: 438,
+            },
+            { text: "Angeborene Abwehr.\nSie reagiert sofort.", startFrame: 462, endFrame: 539 },
+            {
+              text: "Haut und Schleimhaut\nsind die erste Barriere.",
+              startFrame: 547,
+              endFrame: 621,
+            },
+            {
+              text: "Makrophagen fressen Erreger\nund präsentieren Antigene.",
+              startFrame: 629,
+              endFrame: 726,
+            },
+            {
+              text: "NK-Zellen töten Zellen, die kein\nMHC-eins mehr zeigen. Missing Self.",
+              startFrame: 743,
+              endFrame: 884,
+            },
+            {
+              text: "Und das Komplementsystem markiert\nund zerstört Pathogene direkt.",
+              startFrame: 901,
+              endFrame: 1008,
+            },
+            {
+              text: "Erworbene Abwehr. Sie braucht\nTage, ist aber hochspezifisch.",
+              startFrame: 1024,
+              endFrame: 1139,
+            },
+            {
+              text: "T-Helferzellen koordinieren alles.\nZytotoxische T-Zellen töten infizierte Zellen.",
+              startFrame: 1147,
+              endFrame: 1308,
+            },
+            {
+              text: "B-Zellen werden zu Plasmazellen\nund produzieren Antikörper.",
+              startFrame: 1325,
+              endFrame: 1435,
+            },
+            {
+              text: "Und Gedächtniszellen sorgen dafür, dass\ndie zweite Antwort schneller kommt.",
+              startFrame: 1451,
+              endFrame: 1563,
+            },
+            {
+              text: "Merke: Angeboren ist schnell, ohne Gedächtnis.\nErworben ist langsam, mit Gedächtnis.",
+              startFrame: 1587,
+              endFrame: 1743,
+            },
+            { text: "Speicher dir das.\nmedmaster punkt at.", startFrame: 1767, endFrame: 1829 },
           ],
         }}
       />
