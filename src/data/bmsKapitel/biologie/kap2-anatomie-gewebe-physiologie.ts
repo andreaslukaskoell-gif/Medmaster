@@ -1296,11 +1296,11 @@ Ob Licht, Schall oder Geruch — jeder Reiz muss zunächst in ein elektrisches S
         {
           question: "Was ist der Unterschied zwischen Stäbchen und Zapfen in der Retina?",
           options: [
-            "Beide sind identisch",
-            "Stäbchen: Skotopisches Sehen (Dämmerung), Rhodopsin (λ_max ~500 nm), ~120 Mio., peripher, hohe Empfindlichkeit (1 Photon), niedrige Auflösung (Konvergenz). Zapfen: Photopisches Sehen (Tageslicht, Farben), 3 Opsine (S-blau ~420 nm, M-grün ~530 nm, L-rot ~560 nm), ~6 Mio., Fovea centralis (~200.000/mm²), niedrige Empfindlichkeit, hohe Auflösung (1:1 Ganglienzelle)",
-            "Nur Stäbchen existieren",
-            "Zapfen sind nur für Nachtsicht",
-            "Stäbchen sind nur in Fovea",
+            "Beide Photorezeptortypen nutzen dasselbe Photopigment (Rhodopsin) und sind gleichmäßig über die Retina verteilt.",
+            "Stäbchen (skotopisch, Rhodopsin, ~120 Mio., peripher, hohe Empfindlichkeit, niedrige Auflösung) dienen dem Dämmerungssehen; Zapfen (photopisch, 3 Opsine S/M/L, ~6 Mio., Fovea centralis, hohe Auflösung 1:1) dem Farbsehen.",
+            "Zapfen reagieren auf einzelne Photonen und ermöglichen das Nachtsehen; Stäbchen dienen ausschließlich dem Farbsehen.",
+            "Stäbchen besitzen drei verschiedene Opsine für Rot, Grün und Blau und sind in der Fovea konzentriert.",
+            "Zapfen und Stäbchen unterscheiden sich nur in ihrer Größe, nicht in Funktion oder Verteilung.",
           ],
           correctIndex: 1,
           explanation:
@@ -1311,11 +1311,11 @@ Ob Licht, Schall oder Geruch — jeder Reiz muss zunächst in ein elektrisches S
         {
           question: "Wie funktioniert die Fototransduktion in Stäbchen?",
           options: [
-            "Fototransduktion benötigt kein Licht",
-            "Licht → Photon trifft Rhodopsin → 11-cis-Retinal → all-trans-Retinal (Photoisomerisierung) → Metarhodopsin II (aktiviert) → Transducin (G-Protein, Gt) → Phosphodiesterase (PDE, ~100 pro Transducin) → cGMP → GMP (cGMP ↓↓↓) → cGMP-gesteuerte Na⁺-Kanäle SCHLIESSEN → HYPERPOLARISATION (~-70 mV, von -40 mV) → Ca²⁺-Kanäle schließen → Glutamat-Freisetzung ↓",
-            "Fototransduktion ist nur in Zapfen",
-            "Fototransduktion führt zu Depolarisation",
-            "Fototransduktion ist nur in Bakterien",
+            "Licht öffnet Na⁺-Kanäle direkt in der Stäbchenmembran, was zur Depolarisation und erhöhter Glutamat-Freisetzung führt.",
+            "Licht aktiviert Rhodopsin → Transducin (G-Protein) → Phosphodiesterase → cGMP ↓ → Na⁺-Kanäle schließen → Hyperpolarisation → Glutamat-Freisetzung ↓.",
+            "Fototransduktion in Stäbchen verläuft über eine direkte Kopplung von Rhodopsin an spannungsgesteuerte Ca²⁺-Kanäle ohne G-Protein.",
+            "11-cis-Retinal isomerisiert zu all-trans-Retinal, was cGMP-Synthese stimuliert und Na⁺-Kanäle öffnet — Stäbchen depolarisieren bei Licht.",
+            "Transducin hemmt die Guanylatzyklase, cGMP steigt an und hält die Na⁺-Kanäle geöffnet, sodass Licht zur Depolarisation führt.",
           ],
           correctIndex: 1,
           explanation:
@@ -1326,11 +1326,11 @@ Ob Licht, Schall oder Geruch — jeder Reiz muss zunächst in ein elektrisches S
         {
           question: "Wie funktioniert die Akkommodation des Auges?",
           options: [
-            "Akkommodation ist nur für Fernsicht",
-            "Naheinstellung (Akkommodation): Ziliarmuskel kontrahiert (Parasympathikus, M3, N. oculomotorius [III]) → Ziliarmuskel-Ring verkleinert → Zonulafasern (Zinn-Fasern) entspannen → Linse wölbt sich (elastische Rückstellkraft) → Brechkraft ↑ (~24 dpt maximal, jung). Ferneinstellung: Ziliarmuskel relaxiert → Zonulafasern gespannt → Linse flach (~20 dpt). Nahakkommodationstrias: Akkommodation + Konvergenz + Miosis",
-            "Akkommodation benötigt Sympathikus",
-            "Akkommodation ist nur in Bakterien",
-            "Linse wird flacher bei Nahsicht",
+            "Bei Nahsicht relaxiert der Ziliarmuskel, die Zonulafasern entspannen sich dadurch und die Linse wird flacher — Brechkraft nimmt ab.",
+            "Naheinstellung: Ziliarmuskel kontrahiert (Parasympathikus, M3) → Zonulafasern entspannen → Linse wölbt sich → Brechkraft ↑. Fernsicht: Ziliarmuskel relaxiert → Zonulafasern gespannt → Linse flach. Nahakkommodationstrias: Akkommodation + Konvergenz + Miosis.",
+            "Der Sympathikus kontrahiert den Ziliarmuskel für die Nahsicht; Parasympathikus entspannt ihn für Fernsicht — Noradrenalin vermittelt Akkommodation.",
+            "Akkommodation erfolgt durch Veränderung des Hornhautkrümmungsradius via Ziliarmuskel; die Linsenform bleibt dabei konstant.",
+            "Zonulafasern kontrahieren aktiv bei Nahsicht und wölben die Linse; bei Fernsicht entspannen sie und die Linse flacht ab.",
           ],
           correctIndex: 1,
           explanation:
@@ -1341,11 +1341,11 @@ Ob Licht, Schall oder Geruch — jeder Reiz muss zunächst in ein elektrisches S
         {
           question: "Wie funktioniert die Schallübertragung im Ohr?",
           options: [
-            "Schallübertragung benötigt keine Gehörknöchelchen",
-            "Schallwellen → Trommelfell schwingt → Gehörknöchelchen (Hammer → Amboss → Steigbügel, Impedanzanpassung ~22-fach [Hebelwirkung + Flächenreduktion: Trommelfell 55 mm² → Oval-Fenster 3.2 mm²]) → Oval-Fenster → Perilymphe (Scala vestibuli) → Wanderwelle auf Basilarmembran (Tonotopie: Basis = hohe Frequenz ~20 kHz, Apex = niedrige Frequenz ~20 Hz) → Stereozilien (Haarzellen) biegen → Tip-Links spannen → K⁺-Kanäle öffnen (Endolymphe K⁺-reich, +80 mV) → Depolarisation → Glutamat → N. cochlearis",
-            "Schallwellen werden direkt zu elektrischen Signalen",
-            "Basilarmembran ist überall gleich",
-            "Endolymphe ist Na⁺-reich",
+            "Schallwellen gelangen direkt durch die Schädelknochen zur Cochlea; die Gehörknöchelchen dienen nur der Schalldämpfung, nicht der Weiterleitung.",
+            "Schallwellen → Trommelfell → Gehörknöchelchen (Impedanzanpassung ~22-fach) → Oval-Fenster → Wanderwelle auf Basilarmembran (Tonotopie: Basis = hohe, Apex = niedrige Frequenzen) → Haarzellen-Depolarisation via K⁺-Einstrom aus K⁺-reicher Endolymphe → Glutamat → N. cochlearis.",
+            "Das Trommelfell überträgt Schall direkt auf die Basilarmembran; die Gehörknöchelchen sind nur bei lauten Geräuschen aktiv und dämpfen die Schwingungen.",
+            "Haarzellen im Corti-Organ depolarisieren durch Na⁺-Einstrom aus der Na⁺-reichen Endolymphe (+80 mV); Tonotopie bedeutet, dass hohe Frequenzen am Apex ankommen.",
+            "Die Impedanzanpassung im Mittelohr reduziert den Schalldruck um Faktor 22, damit die Flüssigkeit im Innenohr nicht überstimuliert wird.",
           ],
           correctIndex: 1,
           explanation:
@@ -1356,11 +1356,11 @@ Ob Licht, Schall oder Geruch — jeder Reiz muss zunächst in ein elektrisches S
         {
           question: "Welche Hautrezeptoren gibt es und was ist ihre Funktion?",
           options: [
-            "Alle Hautrezeptoren sind identisch",
-            "Meissner-Körperchen (Dermis-Papillen, Berührung leicht, schnell adaptierend, 10-50 Hz). Pacini-Körperchen (tiefe Dermis, Vibration, schnell adaptierend, 200-300 Hz). Merkel-Zellen (Epidermis basale, Druck statisch, langsam adaptierend, feine Details). Ruffini-Körperchen (Dermis tief, Dehnung, langsam adaptierend). Freie Nervenendigungen (Epidermis/Dermis, Schmerz/Temperatur, Aδ [schnell, scharf], C-Fasern [langsam, brennend], TRPM8 [Kälte ~25°C], TRPV1 [Wärme ~43°C])",
-            "Nur Meissner-Körperchen existieren",
-            "Pacini-Körperchen sind für Schmerz",
-            "Merkel-Zellen sind nur in Dermis",
+            "Alle Hautrezeptoren sind langsam adaptierend (SA) und reagieren ausschließlich auf Schmerzreize; Temperatursinn wird durch spezifische Zapfen in der Epidermis vermittelt.",
+            "Meissner (Berührung, schnell adaptierend), Pacini (Vibration, schnell adaptierend), Merkel (Druck/Details, langsam adaptierend), Ruffini (Dehnung, langsam adaptierend), freie Nervenendigungen (Schmerz/Temperatur: TRPV1 >43 °C, TRPM8 <25 °C; Aδ = scharf, C-Fasern = brennend).",
+            "Meissner-Körperchen sind für Vibration und Propriozeption zuständig und liegen tief in der Subcutis; Pacini-Körperchen registrieren feine Textur an der Hautoberfläche.",
+            "Ruffini-Körperchen adaptieren schnell und detektieren leichte Berührung; Merkel-Scheiben liegen in der tiefen Dermis und messen Gelenkstellungen.",
+            "Freie Nervenendigungen vermitteln ausschließlich Temperatur; Schmerzsignale werden über Aβ-Fasern (schnell myelinisiert) und Aa-Fasern (unmyelinisiert) weitergeleitet.",
           ],
           correctIndex: 1,
           explanation:

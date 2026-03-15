@@ -1130,6 +1130,8 @@ Das **glatte ER (gER)** hat keine Ribosomen und übernimmt andere Aufgaben als d
 
 **Aufbau:** Beide nutzen das gleiche **Axonem** — die **9+2-Anordnung** aus Mikrotubuli (9 Außendoubletten + 2 zentrale Tubuli). **Dynein-Motorproteine** gleiten unter ATP-Verbrauch an Nachbardoubletten entlang → Biegebewegung.
 
+![Zytoskelett — Mikrotubuli, Aktinfilamente und Intermediärfilamente als strukturelle Grundlage der Zellbewegung](/images/bms/bio-zytoskelett.jpg)
+
 - **Kinozilien**: kurz (5–10 µm), hunderte pro Zelle, koordinierter Schlag → **Flimmerepithel der Atemwege** (Schleimtransport), **Eileiter** (Eitransport)
 - **Geißeln (Flagellen)**: lang (50–70 µm), 1–2 pro Zelle, wellenförmig → **Spermien**
 - **Achtung — Stereozilien** sind KEINE Zilien! Sie bestehen aus **Aktin** (nicht Mikrotubuli), sind unbeweglich und haben keine 9+2-Struktur. Vorkommen: Innenohr (Haarzellen), Nebenhoden.
