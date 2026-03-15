@@ -157,7 +157,7 @@ export default function BMSKapitelView({
     <div className="max-w-4xl mx-auto space-y-6">
       <Button variant="ghost" size="sm" onClick={onBack} className="text-[var(--muted)]">
         <ChevronLeft className="w-4 h-4 mr-1" />
-        {subjectLabels[kapitel.subject]}
+        Zurück
       </Button>
 
       {/* Chapter header */}
@@ -180,7 +180,7 @@ export default function BMSKapitelView({
             </span>
           )}
         </div>
-        {totalUK > 0 && (
+        {completedUK > 0 && (
           <div className="w-full bg-[var(--border)] rounded-full h-1 mt-3">
             <div
               className="bg-[var(--accent)] h-1 rounded-full transition-all duration-300"
@@ -193,23 +193,21 @@ export default function BMSKapitelView({
       {/* Start / Continue button */}
       {!isKapitelDone && firstIncomplete >= 0 && (
         <Button
-          className="w-full"
-          size="lg"
           onClick={() => {
             if (typeof sessionStorage !== "undefined") {
               sessionStorage.setItem(`${CHAPTER_SCROLL_KEY}:${kapitel.id}`, String(window.scrollY));
             }
             setActiveUKIndex(firstIncomplete);
           }}
+          className="gap-2"
         >
-          <Play className="w-4 h-4 mr-2" />
+          <Play className="w-4 h-4" />
           {completedUK === 0 ? "Kapitel starten" : "Fortsetzen"}
         </Button>
       )}
 
       {/* Unterkapitel list */}
-      <div className="space-y-3">
-        <h2 className="text-lg font-semibold text-[var(--text-primary)]">Unterkapitel</h2>
+      <div className="space-y-1">
         {unterkapitel.length === 0 ? (
           <p className="text-sm text-[var(--muted)] text-center py-8">
             Noch keine Unterkapitel vorhanden.
@@ -264,24 +262,22 @@ export default function BMSKapitelView({
           if (linkedKapitelList.length === 0) return null;
 
           return (
-            <div className="space-y-3 mt-8 pt-6 border-t border-[var(--border)]">
-              <h3 className="font-semibold text-[var(--text-primary)] flex items-center gap-2">
-                <ArrowRight className="w-5 h-5 text-[var(--accent)]" />
-                Verwandte Kapitel
-              </h3>
-              <div className="grid grid-cols-1 gap-2">
+            <div className="mt-8 pt-6 border-t border-[var(--border)]">
+              <h3 className="text-sm font-medium text-[var(--muted)] mb-3">Verwandte Kapitel</h3>
+              <div className="space-y-1">
                 {linkedKapitelList.map((linkedKap) => (
                   <button
                     key={linkedKap.id}
                     onClick={() => onGoToChapter?.(linkedKap.id, 0)}
-                    className="text-left p-4 rounded-lg border-l-[3px] border-l-[var(--accent)] bg-[var(--surface)] hover:shadow-md transition-all duration-200"
+                    className="w-full text-left flex items-center gap-3 py-2 px-2 rounded-sm hover:bg-[var(--surface)] transition-colors"
                   >
-                    <div className="font-medium text-[var(--text-primary)]">
+                    <ArrowRight className="w-3.5 h-3.5 text-[var(--muted)] shrink-0" />
+                    <span className="text-sm font-medium text-[var(--text-primary)]">
                       {linkedKap.sequenceTitle || linkedKap.title}
-                    </div>
-                    <div className="text-sm text-[var(--muted)] mt-1">
-                      {linkedKap.subject} • {linkedKap.estimatedTime}
-                    </div>
+                    </span>
+                    <span className="text-xs text-[var(--muted)] ml-auto shrink-0">
+                      {linkedKap.estimatedTime}
+                    </span>
                   </button>
                 ))}
               </div>

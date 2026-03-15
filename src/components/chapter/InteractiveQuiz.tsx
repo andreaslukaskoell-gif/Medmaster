@@ -61,18 +61,14 @@ export function InteractiveQuiz({ questions, onAnswer, onAllComplete }: Interact
   }, [totalAnswered, questions.length, totalCorrect, onAllComplete]);
 
   return (
-    <div className="space-y-6 mt-8">
+    <div className="space-y-5 mt-8">
       {/* Header */}
-      <div className="pb-4 border-b-2 border-[var(--border)]">
-        <h2 className="text-2xl font-bold text-[var(--text-primary)] mb-2">📝 Kontrollfragen</h2>
-        <p className="text-sm text-[var(--text-primary)]">
-          Teste dein Wissen mit diesen Fragen. Wähle eine Antwort und klicke auf "Antwort prüfen"
-          für sofortiges Feedback.
-        </p>
+      <div className="pb-3 border-b border-[var(--border)]">
+        <h2 className="text-lg font-semibold text-[var(--text-primary)]">Kontrollfragen</h2>
         {totalAnswered > 0 && (
-          <div className="mt-3 text-sm font-medium text-[var(--text-primary)]">
-            Fortschritt: {totalCorrect} von {totalAnswered} beantworteten Fragen richtig
-          </div>
+          <p className="text-sm text-[var(--muted)] mt-1">
+            {totalCorrect}/{totalAnswered} richtig
+          </p>
         )}
       </div>
 

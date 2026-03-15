@@ -144,7 +144,9 @@ export default function AuthPage() {
       <div className="w-full max-w-md space-y-6">
         <div className="text-center">
           <h1 className="text-3xl font-bold text-[var(--accent)]">MedMaster</h1>
-          <p className="text-[var(--muted)] mt-2">Deine MedAT-Vorbereitung</p>
+          <p className="text-[var(--muted)] mt-2">
+            4.300+ BMS-Fragen · Unbegrenzte KFF-Übungen · Gratis bis 31. März
+          </p>
         </div>
 
         <Card>

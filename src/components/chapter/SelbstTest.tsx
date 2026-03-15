@@ -289,11 +289,9 @@ export function SelbstTest({ questions, onAnswer, onAllComplete }: SelbstTestPro
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
-          className="card-glass mt-8 rounded-2xl border border-[var(--border)] p-8 shadow-xl"
+          className="mt-8 rounded-lg border border-[var(--border)] p-6"
         >
-          <h3 className="text-2xl font-bold text-[var(--text-primary)] mb-6 tracking-tight">
-            Session abgeschlossen
-          </h3>
+          <h3 className="text-lg font-semibold text-[var(--text-primary)] mb-4">Ergebnis</h3>
           <div className="flex flex-col sm:flex-row sm:items-center gap-8 mb-6">
             <div className="relative flex items-center justify-center w-[100px] h-[100px] shrink-0">
               <svg width={size} height={size} className="transform -rotate-90 absolute inset-0">
@@ -314,7 +312,7 @@ export function SelbstTest({ questions, onAnswer, onAllComplete }: SelbstTestPro
                   stroke="currentColor"
                   strokeWidth={stroke}
                   strokeLinecap="round"
-                  className="text-[#007AFF]"
+                  className="text-[var(--accent)]"
                   strokeDasharray={circumference}
                   initial={{ strokeDashoffset: circumference }}
                   animate={{ strokeDashoffset: offset }}
@@ -331,7 +329,7 @@ export function SelbstTest({ questions, onAnswer, onAllComplete }: SelbstTestPro
                 <strong className="text-[var(--text-primary)]">{questions.length}</strong> Fragen
                 richtig beantwortet.
               </p>
-              <p className="text-base font-medium text-[#007AFF] dark:text-[var(--accent)]/60 mt-2">
+              <p className="text-base font-medium text-[var(--accent)] mt-2">
                 {getMotivationText(pct)}
               </p>
             </div>
@@ -354,10 +352,7 @@ export function SelbstTest({ questions, onAnswer, onAllComplete }: SelbstTestPro
             </div>
           )}
           <div className="flex flex-wrap gap-4">
-            <Button
-              onClick={handleBack}
-              className="btn-med bg-[#007AFF] hover:bg-[#0062cc] text-white"
-            >
+            <Button onClick={handleBack} className="btn-med">
               Zurück zur Übersicht
             </Button>
             {wrongCount > 0 && (
@@ -376,17 +371,13 @@ export function SelbstTest({ questions, onAnswer, onAllComplete }: SelbstTestPro
   }
 
   return (
-    <div className="space-y-6 mt-8">
-      <div className="pb-4 border-b-2 border-[var(--border)]">
-        <h2 className="text-xl font-semibold text-[var(--text-primary)] mb-2">📝 Kontrollfragen</h2>
-        <p className="text-sm text-[var(--text-primary)]">
-          Teste dein Wissen mit diesen Fragen. Wähle eine Antwort und klicke auf "Antwort prüfen"
-          für sofortiges Feedback.
-        </p>
+    <div className="space-y-5 mt-8">
+      <div className="pb-3 border-b border-[var(--border)]">
+        <h2 className="text-lg font-semibold text-[var(--text-primary)]">Kontrollfragen</h2>
         {totalAnswered > 0 && (
-          <div className="mt-3 text-sm font-medium text-[var(--text-primary)]">
-            Fortschritt: {totalCorrect} von {totalAnswered} beantworteten Fragen richtig
-          </div>
+          <p className="text-sm text-[var(--muted)] mt-1">
+            {totalCorrect}/{totalAnswered} richtig
+          </p>
         )}
       </div>
 

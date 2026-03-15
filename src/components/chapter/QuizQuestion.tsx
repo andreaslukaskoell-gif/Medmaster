@@ -79,16 +79,16 @@ export const QuizQuestion = React.memo(function QuizQuestion({
 
   return (
     <motion.div
-      className="bg-[var(--card)]/80 backdrop-blur-md rounded-xl border border-[var(--border)] p-6 shadow-sm dark:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.05)] hover:shadow-md transition-shadow"
-      animate={isWrong ? { x: [0, -8, 8, -8, 8, 0] } : isCorrect ? { scale: [1, 1.02, 1] } : {}}
+      className="rounded-lg border border-[var(--border)] p-5 transition-colors"
+      animate={isWrong ? { x: [0, -6, 6, -6, 0] } : {}}
       data-answered={isAnswered}
-      transition={{ duration: isWrong ? 0.4 : 0.3, ease: "easeOut" }}
+      transition={{ duration: 0.3, ease: "easeOut" }}
     >
       {/* Question */}
       <div className="mb-4">
         <div className="flex items-start gap-3 mb-3">
-          <span className="shrink-0 w-8 h-8 rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 font-bold flex items-center justify-center text-sm">
-            {questionNumber}
+          <span className="shrink-0 text-sm font-medium text-[var(--muted)]">
+            {questionNumber}.
           </span>
           <p className="text-sm font-semibold text-[var(--text-primary)] leading-relaxed flex-1">
             {question.question}
@@ -109,15 +109,15 @@ export const QuizQuestion = React.memo(function QuizQuestion({
                 type="button"
                 onClick={() => handleSelectAnswer(oi)}
                 disabled={isAnswered}
-                className={`w-full min-w-0 text-left px-4 py-3 rounded-xl border-2 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/50
+                className={`w-full min-w-0 text-left px-4 py-2.5 rounded-lg border transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/50
                   ${
                     showAsCorrect
-                      ? "bg-green-500/20 border-green-500 text-green-900 dark:text-green-100 font-medium shadow-[0_0_12px_rgba(34,197,94,0.25)]"
+                      ? "bg-emerald-50 dark:bg-emerald-900/20 border-emerald-400 dark:border-emerald-600 text-[var(--text-primary)] font-medium"
                       : isWrongChosen
-                        ? "bg-red-500/20 border-red-500 text-red-900 dark:text-red-100 shadow-[0_0_12px_rgba(239,68,68,0.2)]"
+                        ? "bg-red-50 dark:bg-red-900/20 border-red-400 dark:border-red-600 text-[var(--text-primary)]"
                         : isAnswered
-                          ? "border-[var(--border)] bg-[var(--border)]/30 text-[var(--muted)] cursor-not-allowed"
-                          : "bg-[var(--card)]/70 border-[var(--border)] hover:border-emerald-400 text-[var(--text-primary)] cursor-pointer"
+                          ? "border-[var(--border)] text-[var(--muted)] cursor-not-allowed"
+                          : "border-[var(--border)] hover:border-[var(--accent)]/50 text-[var(--text-primary)] cursor-pointer"
                   }`}
               >
                 <span className="font-bold mr-3 text-sm shrink-0">
@@ -142,10 +142,10 @@ export const QuizQuestion = React.memo(function QuizQuestion({
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, ease: "easeOut" }}
-          className={`ml-0 sm:ml-11 mt-4 p-4 rounded-lg border-l-4 backdrop-blur-sm ${
+          className={`ml-0 sm:ml-6 mt-4 p-4 rounded-lg border-l-2 ${
             isCorrect
-              ? "bg-green-50/90 dark:bg-green-900/20 border-green-500"
-              : "bg-red-50/90 dark:bg-red-900/20 border-red-500"
+              ? "border-emerald-400 dark:border-emerald-600"
+              : "border-red-400 dark:border-red-600"
           }`}
         >
           <div className="flex items-start gap-3">
@@ -162,7 +162,7 @@ export const QuizQuestion = React.memo(function QuizQuestion({
                     : "text-red-800 dark:text-red-200"
                 }`}
               >
-                {isCorrect ? "✅ Richtig!" : "❌ Falsch"}
+                {isCorrect ? "Richtig" : "Leider falsch"}
               </p>
               {isCorrect && (
                 <>

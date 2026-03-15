@@ -16,31 +16,26 @@ import { cn } from "@/lib/utils";
 
 type Subject = "biologie" | "chemie" | "physik" | "mathematik" | "default";
 
-const SUBJECT_STYLES: Record<Subject, { border: string; bg: string; icon: string }> = {
+const SUBJECT_STYLES: Record<Subject, { border: string; icon: string }> = {
   biologie: {
     border: "border-l-[var(--accent-bio)]",
-    bg: "bg-[#22c55e]/5  dark:bg-[#22c55e]/8",
     icon: "text-[var(--accent-bio)]",
   },
   chemie: {
     border: "border-l-[var(--accent-chem)]",
-    bg: "bg-[#ef4444]/5  dark:bg-[#ef4444]/8",
     icon: "text-[var(--accent-chem)]",
   },
   physik: {
     border: "border-l-[var(--accent-phys)]",
-    bg: "bg-[#3b82f6]/5  dark:bg-[#3b82f6]/8",
     icon: "text-[var(--accent-phys)]",
   },
   mathematik: {
     border: "border-l-[var(--accent-math)]",
-    bg: "bg-[#a855f7]/5  dark:bg-[#a855f7]/8",
     icon: "text-[var(--accent-math)]",
   },
   default: {
-    border: "border-l-[var(--color-primary-500)]",
-    bg: "bg-[#007AFF]/5 dark:bg-[#007AFF]/8",
-    icon: "text-[var(--color-primary-500)]",
+    border: "border-l-[var(--accent)]",
+    icon: "text-[var(--accent)]",
   },
 };
 
@@ -56,9 +51,8 @@ export function Merksatz({ children, subject = "default", className }: MerksatzP
   return (
     <div
       className={cn(
-        "flex gap-3 border-l-[3px] rounded-r-lg px-4 py-3 text-sm leading-relaxed",
+        "flex gap-3 border-l-2 px-4 py-2 text-sm leading-relaxed",
         styles.border,
-        styles.bg,
         className
       )}
     >

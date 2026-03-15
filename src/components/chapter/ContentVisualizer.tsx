@@ -30,7 +30,6 @@ export function ContentVisualizer({
   hinterfragMode = false,
   keywordLinkEntries,
 }: ContentVisualizerProps) {
-  const isDieZelle = enhancedFormatting ?? false;
   if (!uk) {
     return (
       <div className={`space-y-6 ${contentClassName}`}>
@@ -49,7 +48,7 @@ export function ContentVisualizer({
           <ImageWithFallback
             src={uk.imageUrl}
             alt={uk.imageCaption || uk.title}
-            containerClassName="rounded-lg overflow-hidden shadow-sm border border-[var(--border)]"
+            containerClassName="rounded-lg overflow-hidden"
             lightbox
           />
           {uk.imageCaption && (
@@ -65,30 +64,18 @@ export function ContentVisualizer({
         uk={uk}
         subject={subject}
         chapterId={chapterId}
-        enhancedFormatting={enhancedFormatting}
         hinterfragMode={hinterfragMode}
         keywordLinkEntries={keywordLinkEntries}
       />
 
       {/* Quiz – only if data present */}
       {uk?.quiz && uk.quiz.length > 0 && (
-        <div className={isDieZelle ? "mt-8" : ""}>
-          <div className={isDieZelle ? "mb-4 pb-3 border-b-2 border-[var(--border)]" : ""}>
-            <h2
-              className={`${
-                isDieZelle ? "text-2xl font-bold" : "text-xl font-semibold"
-              } text-[var(--text-primary)]`}
-            >
-              {isDieZelle && "📝 "}Quiz
-            </h2>
-          </div>
-          <InteractiveQuiz
-            questions={uk.quiz}
-            unterkapitelId={`${uk.id}-quiz`}
-            onAnswer={() => {}}
-            onAllComplete={() => {}}
-          />
-        </div>
+        <InteractiveQuiz
+          questions={uk.quiz}
+          unterkapitelId={`${uk.id}-quiz`}
+          onAnswer={() => {}}
+          onAllComplete={() => {}}
+        />
       )}
     </div>
   );

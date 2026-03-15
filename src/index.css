@@ -363,67 +363,50 @@ select:focus {
   font-weight: 700;
   margin-top: 0;
   margin-bottom: var(--space-block);
-  color: #020617; /* slate-950 */
+  color: var(--text-primary);
 }
 .prose h2 {
   font-size: 1.35rem;
   font-weight: 600;
   margin-top: 1.75rem;
   margin-bottom: 0.75rem;
-  padding-bottom: 0.35rem;
-  border-bottom: 1px solid var(--border);
-  color: #020617; /* slate-950 */
+  color: var(--text-primary);
 }
 .prose h3 {
   font-size: 1.15rem;
   font-weight: 600;
   margin-top: 1.25rem;
   margin-bottom: 0.5rem;
-  color: #020617;
+  color: var(--text-primary);
 }
 .prose h4 {
   font-size: 1.05rem;
   font-weight: 600;
   margin-top: 1rem;
   margin-bottom: 0.5rem;
-  color: #020617;
+  color: var(--text-primary);
 }
-.text-midnight.dark .prose h1,
-.dark .prose h1,
-.dark .prose h2,
-.dark .prose h3,
-.dark .prose h4 {
-  color: #ffffff;
-}
+/* headings use var(--text-primary) which handles dark mode */
 .prose p,
 .prose li,
 .prose td,
 .prose th {
-  color: #0f172a; /* slate-900: hochkontrast Fließtext wie Lehrbuch */
-}
-.dark .prose p,
-.dark .prose li,
-.dark .prose td,
-.dark .prose th {
-  color: #f1f5f9; /* slate-100 */
+  color: var(--text-primary);
 }
 .dark .prose strong {
-  color: #ffffff;
+  color: var(--text-primary);
 }
-.dark .prose a {
+.prose a {
   color: var(--accent);
 }
-.dark .prose blockquote {
-  color: #e2e8f0; /* slate-200 für Zitate */
+.prose blockquote {
+  color: var(--text-secondary);
 }
 
 /* SVG-Container: einheitliche Abstände, optional Caption */
 .content-svg-wrap {
   margin: var(--space-block) 0;
-  padding: 1rem;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
+  padding: 0.5rem 0;
   overflow: hidden;
 }
 .content-svg-wrap figcaption {

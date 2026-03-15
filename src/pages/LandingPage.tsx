@@ -9,29 +9,16 @@ import {
   XCircle,
   Users,
   BadgeCheck,
-  Infinity,
   BookOpen,
-  Brain,
   Puzzle,
   FileText,
   Heart,
-  BarChart3,
-  Timer,
-  Sparkles,
 } from "lucide-react";
 import { supabase } from "@/lib/supabase";
 import { useAuth } from "@/hooks/useAuth";
 import { usePageMeta } from "@/hooks/usePageMeta";
 
 const NAVY = "#1b3ea7";
-const NAVY_HOVER = "#163286";
-const NAVY_LIGHT = "#3655b2";
-
-const container = {
-  hidden: { opacity: 0 },
-  show: { opacity: 1, transition: { staggerChildren: 0.06 } },
-};
-const item = { hidden: { opacity: 0, y: 16 }, show: { opacity: 1, y: 0 } };
 
 function useCountdown(targetDate: Date) {
   const [now, setNow] = useState(() => new Date());
@@ -374,17 +361,9 @@ export default function LandingPage() {
         className="sticky top-0 z-40 bg-[var(--surface)]/90 dark:bg-[var(--background)]/90 backdrop-blur-xl border-b border-[var(--border)] shadow-sm"
       >
         <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div
-              className="w-9 h-9 rounded-2xl flex items-center justify-center text-white shadow-sm"
-              style={{ backgroundColor: NAVY }}
-            >
-              <GraduationCap className="w-5 h-5" />
-            </div>
-            <span className="text-xl font-bold text-[var(--text-primary)] tracking-tight">
-              MedMaster
-            </span>
-          </div>
+          <span className="text-xl font-bold text-[var(--text-primary)] tracking-tight">
+            MedMaster
+          </span>
           <div className="flex items-center gap-2 sm:gap-3">
             <Link
               to="/login"
@@ -589,89 +568,63 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* ─── Features (specific, not buzzwordy) ─── */}
+      {/* ─── Features ─── */}
       <section className="py-16 sm:py-24 bg-[var(--background)]/50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-14"
-          >
+          <div className="text-center mb-14">
             <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-3">
               Nicht nur Fragen — ein Lernsystem
             </h2>
             <p className="text-[var(--text-secondary)] max-w-xl mx-auto">
               MedMaster merkt, wo du Schwächen hast, und stellt gezielt Aufgaben daraus zusammen.
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div
-            variants={container}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
-          >
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {[
               {
-                icon: Brain,
                 title: "Adaptive Fragenauswahl",
                 desc: "Themen, die du falsch beantwortest, kommen häufiger. Themen, die du beherrschst, seltener. Automatisch.",
               },
               {
-                icon: BarChart3,
                 title: "Fortschritt pro Stichwort",
                 desc: "Jedes der 173 offiziellen Stichwörter wird einzeln getrackt — du siehst genau, wo du stehst.",
               },
               {
-                icon: Infinity,
                 title: "KFF ohne Wiederholungen",
                 desc: "Zahlenfolgen, Implikationen, Wortflüssigkeit und Figuren werden algorithmisch generiert. Kein Auswendiglernen möglich.",
               },
               {
-                icon: Timer,
                 title: "Prüfungssimulation",
                 desc: "Vollständiger MedAT unter echten Bedingungen — Timer, Auswertung, offizielle Zeitlimits pro Testteil.",
               },
               {
-                icon: Sparkles,
                 title: "Detaillierte Erklärungen",
                 desc: "Jede BMS-Frage hat eine ausführliche Erklärung — du lernst aus Fehlern, nicht nur durch Wiederholung.",
               },
               {
-                icon: BookOpen,
                 title: "Theorie nach Stichwortliste",
                 desc: "173 Lerneinheiten decken die offizielle BMS-Stichwortliste 2026 ab — mit Merksätzen, Diagrammen und Prüfungstipps.",
               },
             ].map((f) => (
-              <motion.div
+              <div
                 key={f.title}
-                variants={item}
-                className="bg-[var(--surface)] rounded-2xl p-6 shadow-[var(--shadow-sm)]"
+                className="p-6 rounded-xl border border-[var(--border)] bg-[var(--surface)]"
               >
-                <div className="w-10 h-10 rounded-xl flex items-center justify-center bg-[var(--accent)]/5 dark:bg-[var(--accent)]/10 text-[#1b3ea7] dark:text-[var(--accent)] mb-4">
-                  <f.icon className="w-5 h-5" />
-                </div>
                 <h3 className="text-base font-semibold text-[var(--text-primary)] mb-2">
                   {f.title}
                 </h3>
                 <p className="text-[var(--text-secondary)] text-sm leading-relaxed">{f.desc}</p>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* ─── Try it: Interactive sample question ─── */}
       <section className="py-16 sm:py-24">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-10"
-          >
+          <div className="text-center mb-10">
             <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-3">
               Probier es aus — eine echte BMS-Frage
             </h2>
@@ -679,26 +632,15 @@ export default function LandingPage() {
               So sehen die Fragen in MedMaster aus. 4.300+ davon warten auf dich — mit detaillierten
               Erklärungen bei jeder Antwort.
             </p>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <SampleQuestion />
-          </motion.div>
+          </div>
+          <SampleQuestion />
         </div>
       </section>
 
       {/* ─── Comparison ─── */}
       <section className="py-16 sm:py-24 bg-[var(--background)]/50">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-10"
-          >
+          <div className="text-center mb-10">
             <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-3">
               Was du woanders bekommst — und was bei MedMaster
             </h2>
@@ -706,13 +648,8 @@ export default function LandingPage() {
               Die meisten MedAT-Plattformen decken nur BMS ab und verkaufen monatliche Abos.
               MedMaster deckt alle 4 Bereiche ab — für eine einmalige Zahlung.
             </p>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="bg-[var(--surface)] rounded-2xl shadow-sm border border-[var(--border)] overflow-hidden"
-          >
+          </div>
+          <div className="bg-[var(--surface)] rounded-xl border border-[var(--border)] overflow-hidden">
             <div className="grid grid-cols-3 text-center text-sm font-semibold border-b border-[var(--border)]">
               <div className="p-4 text-[var(--muted)] text-left" />
               <div className="p-4" style={{ color: NAVY }}>
@@ -748,27 +685,17 @@ export default function LandingPage() {
                 </div>
               </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 
-      {/* ─── Mini FAQ (objection handling) ─── */}
+      {/* ─── Mini FAQ ─── */}
       <section className="py-16 sm:py-24">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
-          <motion.h2
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-3xl font-bold text-[var(--text-primary)] text-center mb-10"
-          >
+          <h2 className="text-3xl font-bold text-[var(--text-primary)] text-center mb-10">
             Häufige Fragen
-          </motion.h2>
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="bg-[var(--surface)] rounded-2xl border border-[var(--border)] divide-y divide-[var(--border)]"
-          >
+          </h2>
+          <div className="bg-[var(--surface)] rounded-xl border border-[var(--border)] divide-y divide-[var(--border)]">
             {[
               {
                 q: "Ist MedMaster aktuell für den MedAT 2026?",
@@ -789,7 +716,7 @@ export default function LandingPage() {
             ].map((faq) => (
               <FAQItem key={faq.q} q={faq.q} a={faq.a} />
             ))}
-          </motion.div>
+          </div>
           <p className="text-center mt-4">
             <Link to="/faq" className="text-sm text-[var(--accent)] hover:underline font-medium">
               Alle Fragen ansehen →
@@ -801,12 +728,7 @@ export default function LandingPage() {
       {/* ─── Pricing + Countdown ─── */}
       <section id="preise" className="py-16 sm:py-24 bg-[var(--background)]/50">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="bg-[var(--surface)] dark:bg-[var(--surface)] rounded-2xl p-8 sm:p-12 shadow-sm border border-[var(--border)] text-center relative overflow-hidden"
-          >
+          <div className="bg-[var(--surface)] rounded-xl p-8 sm:p-12 border border-[var(--border)] text-center relative overflow-hidden">
             <div className="absolute top-0 left-0 right-0 h-1 bg-[var(--accent)]" />
             <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-2">
               Jetzt komplett gratis testen
@@ -872,7 +794,7 @@ export default function LandingPage() {
                 mit E-Mail anmelden
               </Link>
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -912,13 +834,7 @@ export default function LandingPage() {
       </section>
 
       {/* ─── Final CTA ─── */}
-      <motion.section
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        className="py-16 sm:py-24 rounded-t-[2rem] sm:rounded-t-[3rem]"
-        style={{ background: `linear-gradient(135deg, ${NAVY}, ${NAVY_HOVER})` }}
-      >
+      <section className="py-16 sm:py-24" style={{ backgroundColor: NAVY }}>
         <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Bereit für den MedAT 2026?</h2>
           <p className="text-white/80 text-sm mb-8 max-w-lg mx-auto">
@@ -927,13 +843,13 @@ export default function LandingPage() {
           </p>
           <Link
             to="/login"
-            className="inline-flex items-center gap-2 bg-white text-[#1b3ea7] font-semibold px-8 py-4 rounded-xl text-lg shadow-[var(--shadow-sm)] hover:bg-white/90 transition-colors"
+            className="inline-flex items-center gap-2 bg-white text-[#1b3ea7] font-semibold px-8 py-4 rounded-xl text-lg hover:bg-white/90 transition-colors"
           >
             Kostenlos starten
             <ArrowRight className="w-5 h-5" />
           </Link>
         </div>
-      </motion.section>
+      </section>
 
       {/* ─── Footer ─── */}
       <footer className="py-8 bg-[var(--accent)] dark:bg-[var(--accent)]">

@@ -309,16 +309,10 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
     <>
       {/* Brand header */}
       <div className="px-4 py-4 flex items-center justify-between border-b border-[var(--border)] bg-[var(--sidebar-bg)]">
-        <div className="flex items-center gap-3 min-w-0">
-          <div className="w-8 h-8 rounded-lg bg-[var(--color-primary-500)] flex items-center justify-center shrink-0">
-            <GraduationCap className="w-4 h-4 text-white" />
-          </div>
-          <div className="min-w-0">
-            <h1 className="text-sm font-semibold text-[var(--foreground)] tracking-tight truncate leading-tight">
-              MedMaster
-            </h1>
-            <p className="text-[10px] text-[var(--muted)] leading-tight">MedAT Lernplattform</p>
-          </div>
+        <div className="flex items-center gap-2 min-w-0">
+          <h1 className="text-base font-bold text-[var(--foreground)] tracking-tight truncate leading-tight">
+            MedMaster
+          </h1>
         </div>
         <button
           ref={closeButtonRef}
@@ -644,9 +638,7 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
             </button>
           </div>
         )}
-        <p className="text-[10px] text-[var(--muted)] text-center pt-2 opacity-50">
-          MedMaster v2.0
-        </p>
+        <p className="text-[10px] text-[var(--muted)] text-center pt-2 opacity-50">medmaster.at</p>
       </div>
     </>
   );

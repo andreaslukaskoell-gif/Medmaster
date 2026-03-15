@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useRef, useEffect } from "react";
+import { useState, useMemo, useRef, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import {
   ArrowLeft,
@@ -12,13 +12,11 @@ import {
   Clock,
 } from "lucide-react";
 import { Button } from "../components/ui/button";
-import { StickyBackButton } from "../components/ui/StickyBackButton";
 import { QuickEdit } from "../components/QuickEdit";
 import { useBreadcrumb } from "@/contexts/BreadcrumbContext";
 import { pathForSubject, pathForChapter } from "@/lib/bmsRoutes";
 import { useStore } from "../store/useStore";
 import { useSessionTimer } from "@/hooks/useSessionTimer";
-import { SelbstTest } from "../components/chapter/SelbstTest";
 import { InteractiveQuiz } from "../components/chapter/InteractiveQuiz";
 import { ContentVisualizer } from "../components/chapter/ContentVisualizer";
 import { ContentErrorBoundary } from "@/components/ContentErrorBoundary";
@@ -313,30 +311,8 @@ export default function BMSUnterkapitel({
     };
 
     return (
-      <div className={kapitel?.enhancedFormatting ? "mt-8" : ""}>
-        {kapitel?.enhancedFormatting ? (
-          <InteractiveQuiz questions={allQuestions} {...kontrollProps} />
-        ) : (
-          <>
-            <div
-              className={
-                kapitel?.enhancedFormatting ? "mb-4 pb-3 border-b-2 border-[var(--border)]" : ""
-              }
-            >
-              <h2
-                className={`${kapitel?.enhancedFormatting ? "text-2xl font-bold" : "text-xl font-semibold"} text-[var(--text-primary)]`}
-              >
-                {kapitel?.enhancedFormatting && "📝 "}Kontrollfragen
-              </h2>
-              {kapitel?.enhancedFormatting && (
-                <p className="text-sm text-[var(--muted)] mt-1">
-                  Teste dein Wissen mit diesen Fragen
-                </p>
-              )}
-            </div>
-            <SelbstTest questions={allQuestions} {...kontrollProps} />
-          </>
-        )}
+      <div>
+        <InteractiveQuiz questions={allQuestions} {...kontrollProps} />
       </div>
     );
   }, [uk?.selfTest, uk?.content, kapitel?.id, uk?.id]); // eslint-disable-line react-hooks/exhaustive-deps
@@ -397,13 +373,12 @@ export default function BMSUnterkapitel({
           style={{ width: `${scrollProgress}%` }}
         />
       </div>
-      <StickyBackButton onClick={onBack} />
 
       {/* Minimal top bar: back + essential actions */}
       <div className="flex items-center justify-between mb-8">
         <Button variant="ghost" size="sm" onClick={onBack} className="text-[var(--muted)]">
           <ChevronLeft className="w-4 h-4 mr-1" />
-          {kapitel.title}
+          Zurück
         </Button>
         <div className="flex items-center gap-1">
           <button
@@ -555,7 +530,6 @@ export default function BMSUnterkapitel({
                   uk={uk}
                   subject={kapitel?.subject ?? "biologie"}
                   chapterId={kapitel?.id}
-                  enhancedFormatting={kapitel?.enhancedFormatting}
                   hinterfragMode={hinterfragMode}
                 />
               </ContentErrorBoundary>
