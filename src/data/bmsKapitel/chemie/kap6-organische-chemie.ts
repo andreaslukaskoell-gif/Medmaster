@@ -57,6 +57,7 @@ Das wichtigste Alkin ist Ethin (Acetylen, C₂H₂), das mit reinem Sauerstoff T
 | Allg. Formel | CₙH₂ₙ₊₂ | CₙH₂ₙ | CₙH₂ₙ₋₂ |
 | Typische Reaktion | Radik. Substitution | Elektrophile Addition | Elektrophile Addition |
 
+{{DIAGRAM:hydrocarbon-types}}
 
 ## Polymerisation
 
@@ -590,6 +591,8 @@ Amine entstehen formal durch schrittweisen Ersatz der Wasserstoffatome im Ammoni
 
 Das freie Elektronenpaar am Stickstoff macht alle Amine zu **Basen** — sie können ein Proton aufnehmen: R–NH₂ + H₂O ⇌ R–NH₃⁺ + OH⁻. Aliphatische Amine (pKb ≈ 3–4) sind stärkere Basen als Ammoniak, weil der +I-Effekt der Alkylgruppen die Elektronendichte am N erhöht. Aromatische Amine wie Anilin (C₆H₅–NH₂) sind dagegen schwächere Basen (pKb ≈ 9,4), weil das Elektronenpaar ins aromatische π-System delokalisiert wird. Biogene Amine spielen eine zentrale Rolle als Neurotransmitter: Dopamin, Serotonin, Histamin und Adrenalin sind allesamt Amine.
 
+{{DIAGRAM:amino-acid-structure}}
+
 ---
 
 ## Grundstruktur der Aminosäuren
@@ -1032,6 +1035,8 @@ Durch **glykosidische Bindung** — eine Acetalbildung zwischen dem anomeren C-A
 Werden viele Monosaccharide zu langen Ketten verknüpft, entstehen **Polysaccharide** — Makromoleküle mit vielfältigen biologischen Funktionen.
 
 **Stärke** ist das pflanzliche Speicher-Polysaccharid und besteht aus zwei Komponenten: **Amylose** (unverzweigte α-1,4-Glucose-Kette, bildet eine Helix) und **Amylopektin** (α-1,4-Kette mit α-1,6-Verzweigungen alle 24–30 Reste). Der Abbau beginnt im Mund durch die Speichelamylase (α-Amylase), die α-1,4-Bindungen spaltet. **Glykogen** ist das tierische Gegenstück — strukturell dem Amylopektin ähnlich, aber dichter verzweigt (α-1,6-Verzweigung alle 8–12 Reste). Die dichtere Verzweigung ermöglicht schnelleren Glucosezugang, was bei plötzlichem Energiebedarf entscheidend ist. Die Leber speichert etwa 150 g Glykogen (Blutglucoseregulation), die Skelettmuskulatur etwa 400 g (lokaler Energiebedarf).
+
+{{DIAGRAM:carbohydrate-types}}
 
 **Cellulose** besteht aus Glucose-Einheiten mit **β-1,4-Verknüpfung** und bildet lange, gestreckte Ketten, die über Wasserstoffbrücken zu stabilen Fibrillen aggregieren. Der menschliche Darm besitzt keine β-Glucosidase (Cellulase) und kann Cellulose nicht spalten — sie dient als unverdaulicher Ballaststoff, der die Darmperistaltik fördert. Wiederkäuer nutzen dafür symbiotische Bakterien im Pansen.
 
@@ -1808,6 +1813,8 @@ Erwin Chargaff entdeckte in den 1950er Jahren die quantitativen Gesetzmäßigkei
 ## DNA-Doppelhelix
 
 Das 1953 von Watson und Crick vorgeschlagene Strukturmodell der **B-DNA** beschreibt eine **rechtsgängige Doppelhelix** aus zwei **antiparallelen** Polynukleotidsträngen — der eine verläuft in 5'→3'-Richtung, der andere in 3'→5'-Richtung. Im Inneren der Helix liegen die komplementären Basenpaare, stabilisiert durch Wasserstoffbrücken und hydrophobe Stapelung (π-π-Stacking). Pro Windung enthält die Helix 10,5 Basenpaare bei einer Ganghöhe von 3,4 nm. Das Zucker-Phosphat-Rückgrat verläuft außen und ist bei physiologischem pH durch die Phosphatgruppen negativ geladen — dies erklärt die Assoziation der DNA mit basischen **Histonproteinen** zur Chromatinstruktur in Eukaryoten.
+
+{{DIAGRAM:dna-structure}}
 
 Die Antiparallelität hat eine wichtige biologische Konsequenz: Da DNA-Polymerasen ausschließlich in 5'→3'-Richtung synthetisieren können, wird an der Replikationsgabel ein Strang kontinuierlich als **Leitstrang** kopiert, während der andere diskontinuierlich als **Folgestrang** in Form kurzer **Okazaki-Fragmente** synthetisiert wird, die anschließend durch die DNA-Ligase verknüpft werden.
 

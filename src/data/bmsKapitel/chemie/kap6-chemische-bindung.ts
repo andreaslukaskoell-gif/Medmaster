@@ -1070,6 +1070,8 @@ Einflussfaktoren:
 
 > **Merke:** Dipol-Dipol-Kräfte wirken zusätzlich zu London-Kräften bei polaren Molekülen. Je größer das permanente Dipolmoment und je niedriger die Temperatur, desto stärker ist die Wechselwirkung. Für unpolare Moleküle spielen sie keine Rolle — dort dominieren ausschließlich London-Kräfte.
 
+{{DIAGRAM:intermolecular-forces}}
+
 Ein Spezialfall ist die **Keesom-Wechselwirkung** (Anziehung zwischen zwei permanenten Dipolen) und die **Debye-Wechselwirkung** (permanenter Dipol erzeugt induzierten Dipol im Nachbarmolekül). Alle drei Beiträge (London + Keesom + Debye) werden zusammen als **Van-der-Waals-Kräfte** bezeichnet, wobei London-Kräfte fast immer den größten Anteil ausmachen.
 
 | Van-der-Waals-Typ | Beteiligte Dipole | Stärke | Beispiel |

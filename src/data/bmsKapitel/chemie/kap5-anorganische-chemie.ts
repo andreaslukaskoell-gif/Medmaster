@@ -54,6 +54,7 @@ Jedes Wassermolekül kann bis zu **vier H-Brücken** ausbilden: zwei als Donor (
 | Oberflächenspannung | 72 mN/m | Kapillarkräfte im Xylem (bis 100 m), Alveolarstabilität |
 | Schmelzwärme | 334 kJ/kg | Eis → Wasser: hoher Energiebedarf für Phasenübergang |
 
+{{DIAGRAM:water-molecule}}
 
 **Hoher Siedepunkt:** 100 °C trotz MW 18 g/mol. H₂S (34 g/mol, keine H-Brücken) siedet bei −60 °C — eine Differenz von 160 °C, die ausschließlich auf das H-Brücken-Netzwerk zurückzuführen ist.
 
@@ -356,6 +357,8 @@ Kohlenstoff (C, Atomnr. 6, Elektronenkonfiguration [He] 2s² 2p²) kann mit sein
 Die C-C-Einfachbindung hat eine Bindungsenergie von ~347 kJ/mol und eine Länge von 154 pm. C=C: ~614 kJ/mol, 134 pm. C≡C: ~839 kJ/mol, 120 pm. Die hohe Stabilität und kinetische Inertheit der C-C-Bindung gegenüber Hydrolyse macht Kohlenstoff zum bevorzugten Gerüstelement des Lebens.
 
 > **Merke:** Kohlenstoff: 4 Valenzelektronen → tetravalent → Katenation + drei Hybridisierungstypen → enorme Strukturvielfalt.
+
+{{DIAGRAM:carbon-hybridization}}
 
 ## Allotrope des Kohlenstoffs
 
@@ -1317,6 +1320,8 @@ Je größer Ka, desto stärker die Säure. Der **pKa = -log Ka** ist praktischer
 - **pKa = 4-10**: schwache Säure
 - **pKa > 10**: sehr schwache Säure
 
+{{DIAGRAM:ph-scale}}
+
 ## pH-Berechnung für schwache Säuren
 
 Für eine schwache Säure HA der Konzentration c0 gilt mit dem Dissoziationsgrad alpha:
@@ -1681,6 +1686,8 @@ Bei der **Komproportionierung** reagieren zwei verschiedene Oxidationsstufen des
 ---
 
 > **Merke:** OIL RIG: Oxidation Is Loss (e- abgeben, OZ steigt); Reduction Is Gain (e- aufnehmen, OZ sinkt). Reduktionsmittel wird selbst oxidiert; Oxidationsmittel wird selbst reduziert.
+
+{{DIAGRAM:redox-overview}}
 
 > **Prüfungstipp:** OZ-Bestimmung ist eine häufige Rechenaufgabe im MedAT. Priorität merken: F immer -1, O fast immer -2 (Peroxide: -1), H meist +1 (Hydride: -1). Summenregel anwenden: alle OZ × Atomanzahl = Gesamtladung.`,
       lernziele: [

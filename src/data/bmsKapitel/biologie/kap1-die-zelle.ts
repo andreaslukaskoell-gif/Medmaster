@@ -551,7 +551,14 @@ Weil das Innere der Doppelschicht aus Fettschwänzen besteht, ist die Membran **
 
 {{DIAGRAM:cell-membrane}}
 
-> **Merke:** Cholesterin = Fluiditätspuffer in beide Richtungen. Ungesättigte Fettsäuren → mehr Fluidität; gesättigte → weniger.
+**Bewegungstypen der Membranlipide** — Phospholipide sind in der Doppelschicht keineswegs fixiert. Sie führen vier charakteristische Bewegungen aus, die sich in Geschwindigkeit und biologischer Bedeutung stark unterscheiden:
+
+- **Laterale Diffusion**: Seitliche Wanderung innerhalb derselben Membranschicht — mit Abstand die häufigste Bewegung. Ein Phospholipid wechselt dabei ca. 10⁷-mal pro Sekunde den Platz mit seinem Nachbarn. Messbar durch **FRAP** (Fluorescence Recovery After Photobleaching).
+- **Rotation**: Drehung des gesamten Lipidmoleküls um die eigene Längsachse — ebenfalls sehr schnell und energetisch günstig.
+- **Flexion** (Fettsäureketten-Biegung): Die hydrophoben Schwänze biegen und strecken sich ständig durch Rotation um C–C-Bindungen. Diese Bewegung nimmt zum Membraninneren hin zu und trägt wesentlich zur Fluidität bei.
+- **Flip-Flop** (transversale Diffusion): Wechsel eines Lipids von einer Schicht zur anderen — extrem selten (Halbwertszeit: Stunden bis Tage), weil der hydrophile Kopf durch das hydrophobe Membraninnere geschleust werden muss. Beschleunigt durch **Flippasen** (ATP-abhängig, ziehen PS nach innen), **Floppasen** (ATP-abhängig, transportieren nach außen) und **Scramblasen** (ATP-unabhängig, bidirektional, z. B. bei Apoptose → PS-Exposition).
+
+> **Merke:** Cholesterin = Fluiditätspuffer in beide Richtungen. Ungesättigte Fettsäuren → mehr Fluidität; gesättigte → weniger. Laterale Diffusion und Rotation sind schnell und häufig; Flip-Flop ist extrem langsam und benötigt Enzyme (Flippasen, Floppasen, Scramblasen).
 
 ---
 
@@ -721,6 +728,25 @@ Ein klinisch wichtiges Beispiel für Glykokalix-Strukturen sind die **ABO-Blutgr
           ],
           difficulty: 2,
           tags: ["glykokalix", "blutgruppenantigene", "zellerkennung"],
+        },
+        {
+          question: "Welche Aussage zu den Bewegungstypen der Membranlipide ist richtig?",
+          options: [
+            "Flip-Flop ist die häufigste Lipidbewegung in der Membran",
+            "Laterale Diffusion erfordert ATP und Flippasen",
+            "Flip-Flop ist extrem selten, weil der hydrophile Kopf das hydrophobe Membraninnere passieren muss",
+            "Rotation findet nur bei ungesättigten Fettsäuren statt",
+            "Flexion der Fettsäureketten nimmt zur Membranoberfläche hin zu",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Flip-Flop (transversale Diffusion) ist die seltenste Lipidbewegung (Halbwertszeit: Stunden bis Tage), weil der polare Kopf die hydrophobe Zone durchqueren muss — eine hohe Energiebarriere. Enzyme wie Flippasen, Floppasen und Scramblasen katalysieren diesen Prozess. Laterale Diffusion (A/B falsch) ist die häufigste Bewegung und braucht kein ATP. Rotation (D falsch) betrifft alle Lipide. Flexion (E falsch) nimmt zum Membraninneren hin zu, nicht zur Oberfläche.",
+          hints: [
+            "Flip-Flop = Wechsel zwischen den Schichten. Was muss dabei durch das hydrophobe Innere?",
+            "Laterale Diffusion ist ca. 10⁷-mal pro Sekunde — extrem häufig.",
+          ],
+          difficulty: 2,
+          tags: ["lipidbewegung", "flip-flop", "laterale-diffusion", "membranfluidität"],
         },
       ],
     },

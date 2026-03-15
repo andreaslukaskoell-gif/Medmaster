@@ -33,6 +33,8 @@ export const chemKapReaktionen: Kapitel = {
       ],
       content: `Jede chemische Reaktion folgt denselben Grundprinzipien: Energie muss investiert werden (Aktivierungsenergie), und am Ende ist die Welt energetisch anders als vorher. Bevor wir die verschiedenen Reaktionstypen katalogisieren, verstehen wir zuerst die drei Grundfragen, die jede Reaktion beantworten muss: **Läuft sie ab? Wie schnell? Und was passiert dabei?**
 
+{{DIAGRAM:reaction-types}}
+
 ## 1. Was treibt Reaktionen an? — Die Gibbs-Energie
 
 Eine chemische Reaktion ist ein Vorgang, bei dem Bindungen zwischen Atomen gebrochen und neu geknüpft werden. Atome werden dabei weder erzeugt noch vernichtet (Massenerhaltung, Lavoisier 1789). Aber warum laufen manche Reaktionen von selbst ab und andere nicht?
@@ -704,6 +706,8 @@ Das Gleichgewicht ist kein statischer Zustand. Isotopen-Tracerexperimente zeigen
 - Gleichgewicht: v_hin = v_rück → Konzentrationen bleiben konstant
 - Je höher E_A, desto länger dauert die Einstellung (Kinetik). Ein Katalysator beschleunigt die Einstellung, ändert aber die Lage nicht.
 
+{{DIAGRAM:equilibrium}}
+
 ## Das Massenwirkungsgesetz (MWG)
 
 Das **Massenwirkungsgesetz** (Guldberg und Waage, 1864) formuliert die quantitative Bedingung für das chemische Gleichgewicht. Für die allgemeine Reaktion:
@@ -1001,6 +1005,8 @@ Wie steuert der Körper den Blut-pH, obwohl ständig Säuren und Basen anfallen?
 Dieses Prinzip ist eines der wichtigsten Konzepte der physikalischen Chemie — es erlaubt qualitative Vorhersagen über die Verschiebung von Gleichgewichten ohne aufwendige Berechnungen.
 
 
+{{DIAGRAM:le-chatelier}}
+
 ## Konzentration als Störgröße
 
 **Erhöhung der Eduktkonzentration:** Das System reagiert durch verstärkte Hinreaktion — mehr Produkte entstehen. Das Gleichgewicht verschiebt sich zur Produktseite.
@@ -1296,6 +1302,8 @@ Die **Enthalpie** H ist eine thermodynamische Zustandsgröße (Zustandsgröße b
 **Endotherme Reaktionen (ΔH > 0):** Das System nimmt Wärme aus der Umgebung auf — die Produkte sind energiereicher als die Edukte. Du spürst das als Abkühlung. Beispiele: Auflösung von NH₄NO₃ in Wasser (Kältepack, ΔH = +25,7 kJ/mol), thermische Zersetzung von CaCO₃ zu CaO + CO₂ (ΔH = +178 kJ/mol), Photosynthese.
 
 {{IMAGE}}
+
+{{DIAGRAM:energy-diagram}}
 
 ### Bildungsenthalpie (ΔH_f°)
 

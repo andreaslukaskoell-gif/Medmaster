@@ -1075,6 +1075,7 @@ const biologieStichworte: Stichwort[] = [
     priorität: "hoch",
     neu2026: true,
     abgedeckt: true,
+    linkedChapterId: "bio-methoden-pcr",
     linkedQuestionTags: ["pcr", "polymerase-kettenreaktion"],
   },
   {
@@ -1092,6 +1093,7 @@ const biologieStichworte: Stichwort[] = [
     priorität: "hoch",
     neu2026: true,
     abgedeckt: true,
+    linkedChapterId: "bio-methoden-sequenzierung",
     linkedQuestionTags: ["sequenzierung", "sanger"],
   },
   {
@@ -1104,6 +1106,7 @@ const biologieStichworte: Stichwort[] = [
     priorität: "mittel",
     neu2026: true,
     abgedeckt: true,
+    linkedChapterId: "bio-methoden-genomanalyse",
     linkedQuestionTags: ["genomanalyse"],
   },
   {
@@ -1116,6 +1119,7 @@ const biologieStichworte: Stichwort[] = [
     priorität: "hoch",
     neu2026: true,
     abgedeckt: true,
+    linkedChapterId: "bio-methoden-fingerabdruck",
     linkedQuestionTags: ["genetischer-fingerabdruck", "str"],
   },
   {
@@ -1135,6 +1139,7 @@ const biologieStichworte: Stichwort[] = [
     priorität: "mittel",
     neu2026: true,
     abgedeckt: true,
+    linkedChapterId: "bio-methoden-gvo",
     linkedQuestionTags: ["gvo", "gentechnik"],
   },
   {
@@ -1147,6 +1152,7 @@ const biologieStichworte: Stichwort[] = [
     priorität: "mittel",
     neu2026: true,
     abgedeckt: true,
+    linkedChapterId: "bio-methoden-klonierung",
     linkedQuestionTags: ["klonierung"],
   },
 
@@ -1168,7 +1174,7 @@ const biologieStichworte: Stichwort[] = [
     priorität: "hoch",
     neu2026: false,
     abgedeckt: true,
-    linkedChapterId: "bio-humgen-stammbaum",
+    linkedChapterId: "bio-4-13",
     linkedQuestionTags: ["stammbaumanalyse", "erbgang"],
   },
   {
@@ -1181,6 +1187,7 @@ const biologieStichworte: Stichwort[] = [
     priorität: "mittel",
     neu2026: false,
     abgedeckt: true,
+    linkedChapterId: "bio-4-14",
     linkedQuestionTags: ["genetische-beratung"],
   },
   {
@@ -1199,6 +1206,7 @@ const biologieStichworte: Stichwort[] = [
     priorität: "hoch",
     neu2026: true,
     abgedeckt: true,
+    linkedChapterId: "bio-4-13",
     linkedQuestionTags: ["erbgänge", "penetranz"],
   },
   {
@@ -1220,6 +1228,7 @@ const biologieStichworte: Stichwort[] = [
     priorität: "hoch",
     neu2026: true,
     abgedeckt: true,
+    linkedChapterId: "bio-4-14",
     linkedQuestionTags: ["pid", "pnd", "pränataldiagnostik"],
   },
 
@@ -1254,6 +1263,7 @@ const biologieStichworte: Stichwort[] = [
     priorität: "mittel",
     neu2026: false,
     abgedeckt: true,
+    linkedChapterId: "bio-evo-endosymbiont",
     linkedQuestionTags: ["endosymbiontentheorie"],
   },
   {
@@ -1273,6 +1283,7 @@ const biologieStichworte: Stichwort[] = [
     priorität: "mittel",
     neu2026: false,
     abgedeckt: true,
+    linkedChapterId: "bio-evo-phylogenetik",
     linkedQuestionTags: ["phylogenetik", "homologie", "stammbaum"],
   },
   {
@@ -1303,6 +1314,7 @@ const biologieStichworte: Stichwort[] = [
     priorität: "mittel",
     neu2026: false,
     abgedeckt: true,
+    linkedChapterId: "bio-evo-artbildung",
     linkedQuestionTags: ["artbildung", "artbegriff", "isolation"],
   },
   {
@@ -1322,6 +1334,7 @@ const biologieStichworte: Stichwort[] = [
     priorität: "hoch",
     neu2026: false,
     abgedeckt: true,
+    linkedChapterId: "bio-evo-faktoren",
     linkedQuestionTags: ["evolutionsfaktoren", "selektion", "gendrift"],
   },
   {
@@ -1341,6 +1354,7 @@ const biologieStichworte: Stichwort[] = [
     priorität: "mittel",
     neu2026: false,
     abgedeckt: true,
+    linkedChapterId: "bio-evo-mensch",
     linkedQuestionTags: ["hominiden", "menschliche-evolution"],
   },
 
@@ -1362,6 +1376,7 @@ const biologieStichworte: Stichwort[] = [
     priorität: "mittel",
     neu2026: false,
     abgedeckt: true,
+    linkedChapterId: "bio-öko-abiotisch",
     linkedQuestionTags: ["abiotische-faktoren", "toleranz"],
   },
   {
@@ -1381,6 +1396,7 @@ const biologieStichworte: Stichwort[] = [
     priorität: "mittel",
     neu2026: false,
     abgedeckt: true,
+    linkedChapterId: "bio-öko-biotisch",
     linkedQuestionTags: ["biotische-faktoren", "symbiose"],
   },
   {
@@ -1399,6 +1415,7 @@ const biologieStichworte: Stichwort[] = [
     priorität: "mittel",
     neu2026: false,
     abgedeckt: true,
+    linkedChapterId: "bio-öko-population",
     linkedQuestionTags: ["population", "populationswachstum"],
   },
   {
@@ -1411,6 +1428,7 @@ const biologieStichworte: Stichwort[] = [
     priorität: "mittel",
     neu2026: false,
     abgedeckt: true,
+    linkedChapterId: "bio-öko-nische",
     linkedQuestionTags: ["oekologische-nische"],
   },
   {
@@ -1431,6 +1449,7 @@ const biologieStichworte: Stichwort[] = [
     priorität: "mittel",
     neu2026: false,
     abgedeckt: true,
+    linkedChapterId: "bio-öko-ökosystem",
     linkedQuestionTags: ["oekosystem", "nahrungskette", "stoffkreislauf"],
   },
   {
@@ -1443,6 +1462,7 @@ const biologieStichworte: Stichwort[] = [
     priorität: "niedrig",
     neu2026: false,
     abgedeckt: true,
+    linkedChapterId: "bio-öko-umweltschutz",
     linkedQuestionTags: ["umweltschutz"],
   },
 
@@ -1464,6 +1484,7 @@ const biologieStichworte: Stichwort[] = [
     priorität: "hoch",
     neu2026: false,
     abgedeckt: true,
+    linkedChapterId: "bio-immun-antikörper",
     linkedQuestionTags: ["antikörper", "immunglobuline"],
   },
   {
@@ -1481,6 +1502,7 @@ const biologieStichworte: Stichwort[] = [
     priorität: "mittel",
     neu2026: false,
     abgedeckt: true,
+    linkedChapterId: "bio-immun-gene",
     linkedQuestionTags: ["antikörper-gene", "somatische-rekombination"],
   },
   {
@@ -1493,6 +1515,7 @@ const biologieStichworte: Stichwort[] = [
     priorität: "hoch",
     neu2026: false,
     abgedeckt: true,
+    linkedChapterId: "bio-immun-blutgruppen",
     linkedQuestionTags: ["blutgruppen-vererbung", "ab0"],
   },
   {
@@ -1511,6 +1534,7 @@ const biologieStichworte: Stichwort[] = [
     priorität: "hoch",
     neu2026: false,
     abgedeckt: true,
+    linkedChapterId: "bio-immun-rhesus",
     linkedQuestionTags: ["rhesusfaktor", "rhesus-inkompatibilität"],
   },
 ];
@@ -1561,6 +1585,7 @@ const chemieStichworte: Stichwort[] = [
     priorität: "hoch",
     neu2026: false,
     abgedeckt: true,
+    linkedChapterId: "ch-intermolekular",
     linkedQuestionTags: ["intermolekulare-wechselwirkungen", "van-der-waals", "wasserstoffbrücke"],
   },
   {
@@ -1711,6 +1736,7 @@ const chemieStichworte: Stichwort[] = [
     priorität: "mittel",
     neu2026: false,
     abgedeckt: true,
+    linkedChapterId: "ch-elemente",
     linkedQuestionTags: ["elemente", "verbindungen", "wasser"],
   },
   {
@@ -1827,6 +1853,7 @@ const physikStichworte: Stichwort[] = [
     priorität: "mittel",
     neu2026: false,
     abgedeckt: true,
+    linkedChapterId: "ph-einheiten",
     linkedQuestionTags: ["einheiten", "größen"],
   },
   {
@@ -2006,6 +2033,7 @@ const mathematikStichworte: Stichwort[] = [
     priorität: "mittel",
     neu2026: false,
     abgedeckt: true,
+    linkedChapterId: "ma-zehnerpotenzen",
     linkedQuestionTags: ["zehnerpotenzen", "präfixe"],
   },
   {
@@ -2068,6 +2096,7 @@ const mathematikStichworte: Stichwort[] = [
     priorität: "mittel",
     neu2026: false,
     abgedeckt: true,
+    linkedChapterId: "ma-einheiten",
     linkedQuestionTags: ["einheiten", "umrechnung"],
   },
   {
@@ -2114,6 +2143,31 @@ const mathematikStichworte: Stichwort[] = [
     abgedeckt: true,
     linkedChapterId: "ma-vektoren",
     linkedQuestionTags: ["vektoren", "skalarprodukt"],
+  },
+  {
+    id: "ma-7-01",
+    fach: "mathematik",
+    kapitel: "Stochastik",
+    kapitelNr: 7,
+    thema: "Stochastik und Statistik",
+    unterthemen: [
+      "Kombinatorik",
+      "Permutationen",
+      "Variationen",
+      "Kombinationen",
+      "Binomialkoeffizient",
+      "Wahrscheinlichkeit",
+      "Bedingte Wahrscheinlichkeit",
+      "Bayes-Theorem",
+      "Normalverteilung",
+      "Sensitivität",
+      "Spezifität",
+    ],
+    priorität: "hoch",
+    neu2026: false,
+    abgedeckt: true,
+    linkedChapterId: "ma-stochastik",
+    linkedQuestionTags: ["kombinatorik", "wahrscheinlichkeit", "bayes"],
   },
 ];
 

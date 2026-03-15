@@ -33,6 +33,8 @@ Die vier Zustandsgrößen im Detail: Der **Druck p** (gemessen in Pascal, bar od
 
 > 💡 **Prüfungstipp:** Die häufigste Fehlerquelle bei Gasrechnungen ist das Vergessen der Kelvin-Umrechnung. Celsius-Werte **niemals** direkt in pV = nRT einsetzen! 27 °C = 300 K, 0 °C = 273 K – diese Werte kommen in fast jeder MedAT-Aufgabe vor.
 
+{{DIAGRAM:gas-laws}}
+
 ## Herleitung aus den historischen Einzelgesetzen
 
 Die ideale Gasgleichung ist kein willkürlich aufgestelltes Gesetz, sondern ergibt sich zwingend aus der Kombination dreier experimentell entdeckter Zusammenhänge.
@@ -331,6 +333,8 @@ Die van-der-Waals-Gleichung (p + a·n²/V²)(V − n·b) = nRT korrigiert beide 
 Materie tritt in vier grundlegenden Aggregatzuständen auf, die sich durch Energie, Anordnung und Beweglichkeit ihrer Teilchen fundamental unterscheiden. Welcher Aggregatzustand vorliegt, hängt von der Bilanz zwischen der **kinetischen Energie der Teilchen** (Wärmebewegung) und der **potentiellen Energie** durch intermolekulare Wechselwirkungen ab.
 
 {{IMAGE}}
+
+{{DIAGRAM:states-of-matter}}
 
 ### Fester Aggregatzustand (solid)
 
@@ -651,6 +655,8 @@ Die sechs Phasenübergänge (Richtung und Name — prüfungssicher):
 | gasförmig → fest | **Resublimieren / Desublimieren** (exotherm) |
 
 {{IMAGE}}
+
+{{DIAGRAM:phase-diagram}}
 
 - **Schmelzen** (fest → flüssig): endotherm, ΔH > 0; Gitterstruktur wird aufgebrochen
 - **Erstarren** (flüssig → fest): exotherm, ΔH < 0; Kristallgitter bildet sich. **Merke:** Von flüssig nach fest heißt immer **Erstarren**, nicht „Sublimieren“ oder „Verdampfen“.

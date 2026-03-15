@@ -2819,5 +2819,429 @@ Beim **reproduktiven Klonen** wird ein genetisch identischer Organismus erzeugt.
           "Die **Taq-Polymerase** stammt aus *Thermus aquaticus*, einem **thermophilen Bakterium** aus heißen Quellen, und ist daher **hitzestabil** (übersteht 95 °C). A ist falsch: 95 °C ist die Denaturierungstemperatur, nicht die Annealing-Temperatur (~55–65 °C). C ist falsch: Nach 10 Zyklen liegen 2¹⁰ = 1024 Kopien vor (nicht 20). D ist falsch: Primer sind essenziell. E ist falsch: Elongation erfolgt bei ~72 °C.",
       },
     },
+
+    // ─── 13. Humangenetik — Stammbaumanalyse und Besondere Erbgänge ──────────
+    {
+      id: "bio-4-13",
+      title: "Humangenetik — Stammbaumanalyse und Besondere Erbgänge",
+      stichworte: [
+        "Stammbaumanalyse",
+        "autosomal-dominant",
+        "autosomal-rezessiv",
+        "X-chromosomal",
+        "Konduktorin",
+        "Kodominanz",
+        "Polygenie",
+        "Pleiotropie",
+        "mitochondriale Vererbung",
+        "Kopplungsanalyse",
+      ],
+      content: `## Stammbaumanalyse — Methodik
+
+Die **Stammbaumanalyse** (Pedigree-Analyse) ist das zentrale Werkzeug der Humangenetik, um **Erbgänge** in Familien zu identifizieren. Da kontrollierte Kreuzungsexperimente beim Menschen nicht möglich sind, werden stattdessen bereits vorhandene Familienstammbäume ausgewertet.
+
+### Standardsymbole
+
+| Symbol | Bedeutung |
+|--------|-----------|
+| **Quadrat** (□) | männlich |
+| **Kreis** (○) | weiblich |
+| **ausgefüllt** (■ / ●) | betroffen (Merkmalsträger) |
+| **halb ausgefüllt** (◐) | Konduktor/in (heterozygot, phänotypisch gesund) |
+| **Raute** (◇) | Geschlecht unbekannt |
+| **horizontale Linie** | Paarung/Partnerschaft |
+| **vertikale Linie** | Eltern-Kind-Beziehung |
+| **Doppellinie** | konsanguine Verbindung (Verwandtenehe) |
+
+> **Merke:** Im Stammbaum gilt: Quadrat = männlich, Kreis = weiblich, ausgefüllt = betroffen, halb ausgefüllt = Konduktor/in. Eine Doppellinie signalisiert Verwandtenehe (erhöhtes Risiko für rezessive Erkrankungen).
+
+---
+
+## Erbgänge erkennen — Entscheidungsbaum
+
+### Autosomal-dominant (AD)
+
+- Merkmal tritt **in jeder Generation** auf (keine Generationensprünge)
+- Betroffene haben mindestens **einen betroffenen Elternteil**
+- Beide Geschlechter **gleich häufig** betroffen
+- Beispiele: **Huntington-Krankheit**, Marfan-Syndrom, Achondroplasie (Kleinwuchs)
+- Genotypen: Aa = betroffen, aa = gesund (ein Allel reicht)
+
+### Autosomal-rezessiv (AR)
+
+- Merkmal kann **Generationen überspringen** (gesunde Eltern → betroffenes Kind)
+- Betroffene sind **homozygot** (aa); heterozygote Eltern (Aa) sind **Konduktoren**
+- Beide Geschlechter gleich häufig betroffen
+- **Konsanguinität** (Verwandtenehe) erhöht die Wahrscheinlichkeit
+- Beispiele: **Mukoviszidose** (Zystische Fibrose), Phenylketonurie (PKU), Sichelzellanämie
+
+### X-chromosomal-rezessiv (XR)
+
+- **Männer** deutlich häufiger betroffen (hemizygot: nur ein X)
+- Betroffene Männer erben das Allel von der **Mutter** (Konduktorin)
+- **Keine Vater-zu-Sohn-Übertragung** (Vater gibt Y, nicht X)
+- Beispiele: **Hämophilie A/B** (Bluterkrankheit), Rot-Grün-Blindheit, Duchenne-Muskeldystrophie
+
+| Erbgang | Generations­sprünge | Geschlechter­verteilung | Konduktoren | Schlüsselhinweis |
+|---------|---------------------|------------------------|-------------|------------------|
+| **AD** | Nein | Gleich | Nein | Jede Generation betroffen |
+| **AR** | Ja | Gleich | Ja (Aa) | Gesunde Eltern → betroffenes Kind |
+| **XR** | Ja | v. a. ♂ | ♀ (X^a X^A) | Keine Vater→Sohn-Übertragung |
+
+> **Merke:** Drei Leitfragen: (1) Generationensprünge? Ja → rezessiv. (2) Geschlechterverteilung? Nur Männer → X-chromosomal. (3) Vater→Sohn? Ja → autosomal, nicht X-gekoppelt.
+
+---
+
+## Besondere Erbgänge
+
+### Kodominanz
+
+Beide Allele werden **gleichzeitig und vollständig** exprimiert. Bekanntestes Beispiel: **ABO-Blutgruppen** — die Allele I^A und I^B sind kodominant (Blutgruppe AB zeigt beide Antigene; Details siehe UK Blutgruppen). Weiteres Beispiel: MN-Blutgruppensystem.
+
+### Unvollständige Dominanz (intermediärer Erbgang)
+
+Der Heterozygote zeigt einen **Zwischenphänotyp**. Beispiel bei Pflanzen: Rot (RR) × Weiß (rr) → Rosa (Rr). Beim Menschen selten in Reinform, aber: **Sichelzellanämie** — Heterozygote (HbA/HbS) zeigen unter Sauerstoffmangel leichte Sichelung (Sichelzellmerkmal), ohne die schwere Krankheit der Homozygoten (HbS/HbS).
+
+### Polygenie
+
+Ein Merkmal wird durch **viele Gene** beeinflusst. Beispiele: **Körpergröße**, Hautfarbe, Intelligenz, Blutdruck. Die Verteilung in der Bevölkerung folgt einer **Normalverteilung** (Gaußkurve). Umweltfaktoren modulieren zusätzlich (**multifaktoriell**).
+
+### Pleiotropie
+
+Ein **einzelnes Gen** beeinflusst **mehrere** scheinbar unabhängige Merkmale. Beispiel: **Mukoviszidose** — das defekte CFTR-Gen (Chloridkanal) verursacht gleichzeitig Lungenprobleme, Pankreasinsuffizienz (unzureichende Enzymproduktion der Bauchspeicheldrüse), Infertilität bei Männern und salzigen Schweiß.
+
+### Mitochondriale Vererbung (maternale Vererbung)
+
+Die **mtDNA** (mitochondriale DNA, ringförmig, ~16.500 bp) wird ausschließlich von der **Mutter** vererbt — Spermien tragen kaum Mitochondrien bei. Merkmale: **alle Kinder** einer betroffenen Mutter sind betroffen, ein betroffener Vater gibt das Merkmal **nicht** weiter. Beispiel: **LHON** (Leber-Hereditäre-Optikus-Neuropathie), MELAS-Syndrom.
+
+---
+
+## Kopplungsanalyse und Rekombination
+
+Gene, die auf **demselben Chromosom** nahe beieinander liegen, werden häufig **gemeinsam vererbt** (genetische Kopplung). Die **Rekombinationsfrequenz** (RF) gibt an, wie oft Crossing-over zwischen zwei Loci stattfindet:
+
+- RF = 0 % → Gene liegen direkt nebeneinander (vollständige Kopplung)
+- RF = 50 % → Gene segregieren unabhängig (wie auf verschiedenen Chromosomen)
+- 1 % RF ≈ 1 **centiMorgan** (cM) Abstand auf der genetischen Karte
+
+Die Kopplungsanalyse wurde historisch genutzt, um **Krankheitsgene zu kartieren** (z. B. Huntington-Gen auf Chromosom 4p16.3).`,
+      lernziele: [
+        "Die Standardsymbole eines Stammbaums benennen und einen Stammbaum lesen.",
+        "Autosomal-dominante, autosomal-rezessive und X-chromosomale Erbgänge anhand eines Stammbaums unterscheiden.",
+        "Kodominanz, Polygenie, Pleiotropie und mitochondriale Vererbung erklären.",
+      ],
+      sections: [],
+      merksätze: [
+        "Generationensprünge → rezessiv; keine Sprünge → dominant. Nur Männer betroffen + keine Vater→Sohn-Übertragung → X-chromosomal.",
+        "Polygenie = viele Gene → ein Merkmal (z. B. Körpergröße). Pleiotropie = ein Gen → viele Merkmale (z. B. Mukoviszidose).",
+      ],
+      selfTest: [
+        {
+          question: "Gesunde Eltern haben ein Kind mit Mukoviszidose. Welcher Erbgang liegt vor?",
+          options: [
+            "Autosomal-dominant",
+            "X-chromosomal-dominant",
+            "Autosomal-rezessiv",
+            "Mitochondrial",
+            "Y-chromosomal",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Wenn **gesunde Eltern** ein betroffenes Kind haben, liegt ein **autosomal-rezessiver** Erbgang vor. Beide Eltern sind heterozygote **Konduktoren** (Aa × Aa → 25 % aa). Mukoviszidose ist das Paradebeispiel für autosomal-rezessive Vererbung.",
+          difficulty: 1,
+          tags: ["erbgang", "autosomal-rezessiv", "mukoviszidose"],
+        },
+        {
+          question: "Welches Merkmal spricht gegen einen X-chromosomal-rezessiven Erbgang?",
+          options: [
+            "Vor allem Männer sind betroffen",
+            "Die Mutter ist Konduktorin",
+            "Ein betroffener Vater gibt das Merkmal an seinen Sohn weiter",
+            "Es gibt Generationensprünge",
+            "Betroffene Männer sind hemizygot",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Beim X-chromosomalen Erbgang gibt der Vater sein **X** an die Töchter und sein **Y** an die Söhne. Daher ist eine **Vater→Sohn-Übertragung** ausgeschlossen — der Sohn erhält das X von der Mutter. Wenn ein betroffener Vater betroffene Söhne hat, spricht das gegen X-Kopplung.",
+          difficulty: 2,
+          tags: ["x-chromosomal", "erbgang", "stammbaum"],
+        },
+        {
+          question: "Was versteht man unter Pleiotropie?",
+          options: [
+            "Viele Gene beeinflussen ein Merkmal",
+            "Ein Gen beeinflusst mehrere scheinbar unabhängige Merkmale",
+            "Beide Allele werden gleichzeitig exprimiert",
+            "Der Heterozygote zeigt einen Zwischenphänotyp",
+            "Gene auf demselben Chromosom werden gemeinsam vererbt",
+          ],
+          correctIndex: 1,
+          explanation:
+            "**Pleiotropie** bedeutet, dass **ein einzelnes Gen** mehrere verschiedene Phänotypen beeinflusst. Beispiel: Das CFTR-Gen bei Mukoviszidose verursacht Lungenprobleme, Pankreasinsuffizienz und Infertilität bei Männern. Antwort A beschreibt **Polygenie** (das Gegenteil).",
+          difficulty: 1,
+          tags: ["pleiotropie", "polygenie", "genetik"],
+        },
+        {
+          question:
+            "Eine Mutter mit einer mitochondrialen Erkrankung bekommt Kinder. Welche Aussage ist richtig?",
+          options: [
+            "Nur die Söhne erben die Erkrankung",
+            "Nur die Töchter erben die Erkrankung",
+            "Alle Kinder erben die mitochondriale DNA von der Mutter",
+            "Die Vererbung folgt den Mendelschen Regeln",
+            "Der Vater bestimmt, ob die Kinder betroffen sind",
+          ],
+          correctIndex: 2,
+          explanation:
+            "**Mitochondriale Vererbung** ist **maternal**: Die mtDNA stammt ausschließlich von der Eizelle. **Alle Kinder** (Söhne und Töchter) einer betroffenen Mutter erben die mtDNA-Mutation. Der Vater trägt seine mtDNA nicht an die Nachkommen weiter.",
+          difficulty: 2,
+          tags: ["mitochondriale vererbung", "mtdna", "maternal"],
+        },
+        {
+          question: "Zwei Genloci haben eine Rekombinationsfrequenz von 5 %. Was bedeutet das?",
+          options: [
+            "Die Gene liegen auf verschiedenen Chromosomen",
+            "Die Gene segregieren vollständig unabhängig",
+            "Die Gene liegen nahe beieinander auf demselben Chromosom (ca. 5 cM Abstand)",
+            "Bei 5 % der Individuen sind beide Gene mutiert",
+            "Die Gene zeigen Kodominanz",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Eine **Rekombinationsfrequenz** von 5 % bedeutet, dass in 5 % der Meiosen ein Crossing-over zwischen den beiden Loci stattfindet. Das entspricht einem Abstand von ca. **5 centiMorgan** (cM) auf der genetischen Karte. Je geringer die RF, desto näher liegen die Gene beieinander und desto stärker sind sie **gekoppelt**.",
+          difficulty: 3,
+          tags: ["kopplung", "rekombination", "centimorgan"],
+        },
+      ],
+      altfrage: {
+        text: "In einem Stammbaum sind ausschließlich Männer von einer Erkrankung betroffen. Die Mütter betroffener Söhne sind phänotypisch gesund. Kein betroffener Vater hat betroffene Söhne. Welcher Erbgang liegt am wahrscheinlichsten vor?",
+        options: [
+          { id: "a", text: "Autosomal-dominant" },
+          { id: "b", text: "Autosomal-rezessiv" },
+          { id: "c", text: "X-chromosomal-rezessiv" },
+          { id: "d", text: "Mitochondrial" },
+          { id: "e", text: "Y-chromosomal" },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "Die drei Schlüsselhinweise sprechen eindeutig für **X-chromosomal-rezessiv**: (1) Ausschließlich **Männer** betroffen (hemizygot, nur ein X). (2) Mütter sind gesunde **Konduktorinnen** (X^A X^a). (3) **Keine Vater→Sohn-Übertragung** — der Vater gibt sein Y an Söhne, nicht sein X. Y-chromosomal wäre möglich, aber dann hätten betroffene Väter immer betroffene Söhne (widerspricht dem Stammbaum).",
+      },
+    },
+
+    // ─── 14. Genetische Diagnostik — PID, PND und Genetische Beratung ────────
+    {
+      id: "bio-4-14",
+      title: "Genetische Diagnostik — PID, PND und Genetische Beratung",
+      stichworte: [
+        "Genetische Beratung",
+        "Pränataldiagnostik",
+        "PND",
+        "Präimplantationsdiagnostik",
+        "PID",
+        "Amniozentese",
+        "Chorionzottenbiopsie",
+        "NIPT",
+        "Ersttrimester-Screening",
+        "nicht-direktive Beratung",
+      ],
+      content: `## Genetische Beratung
+
+Die **genetische Beratung** ist ein Informations- und Kommunikationsprozess, bei dem Ratsuchende über **Ursachen, Verlauf und Wiederholungsrisiken** genetischer Erkrankungen aufgeklärt werden. Zentrales Prinzip: die Beratung erfolgt **nicht-direktiv** — der Berater gibt keine Handlungsempfehlung, sondern befähigt die Ratsuchenden zu einer **eigenständigen, informierten Entscheidung**.
+
+### Indikationen (Wann wird genetische Beratung empfohlen?)
+
+- **Mütterliches Alter ≥ 35 Jahre** (erhöhtes Risiko für Trisomien, v. a. Trisomie 21)
+- **Familiäre Häufung** einer Erbkrankheit (z. B. Mukoviszidose, Huntington)
+- **Konsanguinität** (Verwandtenehe) — erhöhtes Risiko für autosomal-rezessive Erkrankungen
+- **Auffälliger Befund** in der Pränataldiagnostik (z. B. erhöhte Nackentransparenz)
+- **Habitueller Abort** (≥ 3 Fehlgeburten) — mögliche chromosomale Ursache
+- **Kinderwunsch** bei bekannter genetischer Belastung
+
+### Ablauf
+
+1. **Anamnese** — Familienstammbaum (Pedigree) über mindestens 3 Generationen
+2. **Risikoberechnung** — Wiederholungswahrscheinlichkeit nach Mendel oder empirischen Daten
+3. **Aufklärung** — verständliche Erklärung der Erkrankung, Prognose, Handlungsoptionen
+4. **Nicht-direktive Begleitung** — die Entscheidung (z. B. über PND, PID oder Schwangerschaftsabbruch) liegt allein bei den Ratsuchenden
+
+> **Merke:** Genetische Beratung ist **nicht-direktiv**: Information und Risikoaufklärung ja, Handlungsanweisung nein. Indikationen merken: Alter ≥ 35, familiäre Belastung, Konsanguinität, auffällige Befunde, habituelle Aborte.
+
+---
+
+## Pränataldiagnostik (PND)
+
+Die **Pränataldiagnostik** umfasst alle Untersuchungen am ungeborenen Kind **während der Schwangerschaft**. Man unterscheidet **nicht-invasive** und **invasive** Verfahren.
+
+### Nicht-invasive Verfahren
+
+| Verfahren | Zeitpunkt | Was wird untersucht? |
+|-----------|-----------|---------------------|
+| **Ultraschall** | Ab 6. SSW, routinemäßig 3× | Morphologie, Wachstum, Organentwicklung |
+| **Ersttrimester-Screening** | 11.–14. SSW | Nackentransparenz (NT) + Blutmarker (PAPP-A, freies β-hCG) → Risikoberechnung für Trisomie 21/18/13 |
+| **NIPT** (Nicht-invasiver Pränataltest) | Ab 10. SSW | Analyse zellfreier fetaler DNA (cffDNA) im mütterlichen Blut → Trisomie 21/18/13 mit >99 % Detektionsrate |
+| **Triple-Test** | 15.–18. SSW | AFP + β-hCG + Östriol im mütterlichen Blut → Risikoschätzung (geringere Aussagekraft als NIPT, wird zunehmend ersetzt) |
+
+### Invasive Verfahren
+
+| Verfahren | Zeitpunkt | Methode | Risiko |
+|-----------|-----------|---------|--------|
+| **Chorionzottenbiopsie** (CVS) | 10.–12. SSW | Entnahme von Chorionzottengewebe (Plazenta) per Punktion | Fehlgeburtsrisiko ~0,5–1 % |
+| **Amniozentese** (Fruchtwasserpunktion) | 15.–18. SSW | Entnahme von Fruchtwasser mit fetalen Zellen per Nadel | Fehlgeburtsrisiko ~0,3–0,5 % |
+| **Cordozentese** (Nabelschnurpunktion) | Ab 18. SSW | Punktion der Nabelschnurvene unter Ultraschall → fetales Blut | Fehlgeburtsrisiko ~1–2 %; selten, bei speziellen Fragestellungen |
+
+Invasive Verfahren ermöglichen eine **Karyotypisierung** (Chromosomenanalyse), **FISH** (Fluoreszenz-in-situ-Hybridisierung für schnelle Trisomie-Detektion) und **molekulargenetische** Tests (z. B. auf Mukoviszidose-Mutationen).
+
+> **Merke:** Nicht-invasiv = kein Fehlgeburtsrisiko (Ultraschall, NIPT, Ersttrimester-Screening). Invasiv = direktes Zellmaterial, aber Fehlgeburtsrisiko (Chorionzottenbiopsie ~0,5–1 %, Amniozentese ~0,3–0,5 %). NIPT hat die höchste Detektionsrate für Trisomien unter den nicht-invasiven Verfahren.
+
+---
+
+## Präimplantationsdiagnostik (PID)
+
+Die **PID** (Preimplantation Genetic Testing, PGT) untersucht Embryonen **vor der Einnistung** in die Gebärmutter — also im Rahmen einer **In-vitro-Fertilisation** (IVF).
+
+### Ablauf
+
+1. **IVF** — Eizellen werden entnommen und im Labor befruchtet
+2. **Embryokultur** — Entwicklung bis zum **Blastozystenstadium** (Tag 5–6, ca. 100–200 Zellen)
+3. **Biopsie** — Entnahme weniger Zellen aus dem **Trophoblasten** (äußere Zellschicht, wird später Plazenta)
+4. **Genetische Analyse** — je nach Fragestellung:
+   - **PGT-M** (Monogene Erkrankungen): z. B. Mukoviszidose, Huntington
+   - **PGT-SR** (Strukturelle Chromosomenaberrationen): z. B. Translokationen
+   - **PGT-A** (Aneuploidie-Screening): Chromosomenzahl
+5. **Transfer** — nur genetisch unauffällige Embryonen werden übertragen
+
+### Rechtliche Lage in Österreich
+
+Seit dem **Fortpflanzungsmedizinrechts-Änderungsgesetz 2015** (FMedRÄG 2015) ist PID in Österreich unter **strengen Auflagen** erlaubt:
+- Nur bei **schweren Erbkrankheiten** oder nach **mindestens 3 erfolglosen IVF-Versuchen** bzw. **3 Fehlgeburten**
+- Genehmigung durch eine **Ethikkommission** erforderlich
+- Geschlechtsselektion ohne medizinische Indikation ist **verboten**
+
+---
+
+## PND vs. PID — Vergleich
+
+| Kriterium | **PND** | **PID** |
+|-----------|---------|---------|
+| **Zeitpunkt** | Während der Schwangerschaft | Vor der Einnistung (IVF) |
+| **Voraussetzung** | Natürliche/künstliche Schwangerschaft | IVF notwendig |
+| **Untersuchungsmaterial** | Fruchtwasser, Chorionzotten, mütterliches Blut | Trophoblastzellen der Blastozyste |
+| **Konsequenz bei Befund** | Schwangerschaftsabbruch oder Vorbereitung | Nicht-Transfer des Embryos |
+| **Belastung** | Psychisch (Entscheidung in laufender SS) | IVF-Prozedur (hormonell, zeitlich) |
+| **Rechtlich in AT** | Grundsätzlich erlaubt | Seit 2015 unter strengen Auflagen |
+
+---
+
+## Ethische Aspekte (Kurzüberblick)
+
+Die genetische Diagnostik wirft fundamentale Fragen auf, die im MedAT neutral verstanden werden sollten:
+
+- **Recht auf Wissen vs. Recht auf Nichtwissen** — jede Person hat das Recht, das Ergebnis zu erfahren oder nicht
+- **Diskriminierungsverbot** — genetische Daten dürfen nicht zu Benachteiligung führen (Gendiagnostikgesetz)
+- **Selektion** — Kritiker sehen in PID eine Form der Embryonenselektion; Befürworter betonen die Vermeidung schweren Leids
+- **Informierte Einwilligung** (Informed Consent) — Voraussetzung für jede genetische Untersuchung`,
+      lernziele: [
+        "Indikationen und Prinzipien der genetischen Beratung (nicht-direktiv) erklären.",
+        "Invasive und nicht-invasive Verfahren der Pränataldiagnostik benennen und vergleichen.",
+        "Ablauf und rechtliche Rahmenbedingungen der PID in Österreich beschreiben.",
+      ],
+      sections: [],
+      merksätze: [
+        "Genetische Beratung = nicht-direktiv, Indikationen: Alter ≥ 35, familiäre Belastung, Konsanguinität, auffällige Befunde.",
+        "PND = während der Schwangerschaft (invasiv/nicht-invasiv). PID = vor Einnistung (IVF + Blastozystenbiopsie). Österreich: PID seit 2015 unter strengen Auflagen erlaubt.",
+      ],
+      selfTest: [
+        {
+          question: "Was ist das zentrale Prinzip der genetischen Beratung?",
+          options: [
+            "Der Berater empfiehlt den Schwangerschaftsabbruch bei genetischem Befund",
+            "Die Beratung erfolgt nicht-direktiv — die Ratsuchenden treffen die Entscheidung selbst",
+            "Genetische Beratung ist nur bei Konsanguinität vorgeschrieben",
+            "Der Berater entscheidet über die Durchführung einer PID",
+            "Genetische Beratung ersetzt die Pränataldiagnostik",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Das zentrale Prinzip ist die **Nicht-Direktivität**: Der Berater informiert über Risiken, Erkrankungen und Optionen, gibt aber **keine Handlungsanweisung**. Die Entscheidung (z. B. für oder gegen PND/PID) liegt allein bei den Ratsuchenden.",
+          difficulty: 1,
+          tags: ["genetische beratung", "nicht-direktiv"],
+        },
+        {
+          question:
+            "Welches nicht-invasive Verfahren hat die höchste Detektionsrate für Trisomie 21?",
+          options: [
+            "Triple-Test",
+            "Amniozentese",
+            "NIPT (Nicht-invasiver Pränataltest)",
+            "Chorionzottenbiopsie",
+            "Cordozentese",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Der **NIPT** analysiert zellfreie fetale DNA (cffDNA) im mütterlichen Blut und erreicht eine Detektionsrate von **> 99 %** für Trisomie 21 — deutlich höher als der Triple-Test. Amniozentese und Chorionzottenbiopsie sind **invasiv**, nicht nicht-invasiv.",
+          difficulty: 1,
+          tags: ["nipt", "pränataldiagnostik", "trisomie"],
+        },
+        {
+          question:
+            "Bei welchem Verfahren der Pränataldiagnostik ist das Fehlgeburtsrisiko am höchsten?",
+          options: [
+            "Ultraschall",
+            "NIPT",
+            "Amniozentese (0,3–0,5 %)",
+            "Cordozentese (1–2 %)",
+            "Ersttrimester-Screening",
+          ],
+          correctIndex: 3,
+          explanation:
+            "Die **Cordozentese** (Nabelschnurpunktion) hat mit **1–2 %** das höchste Fehlgeburtsrisiko unter den PND-Verfahren. Amniozentese liegt bei 0,3–0,5 %, Chorionzottenbiopsie bei 0,5–1 %. Ultraschall, NIPT und Ersttrimester-Screening sind **nicht-invasiv** und haben kein Fehlgeburtsrisiko.",
+          difficulty: 2,
+          tags: ["cordozentese", "pnd", "fehlgeburtsrisiko"],
+        },
+        {
+          question: "Seit wann ist die Präimplantationsdiagnostik (PID) in Österreich erlaubt?",
+          options: [
+            "Sie ist in Österreich generell verboten",
+            "Seit 2005 ohne Einschränkungen",
+            "Seit 2015 unter strengen Auflagen (FMedRÄG 2015)",
+            "Seit 2020 nur bei Trisomie 21",
+            "Seit 1990 für alle IVF-Behandlungen",
+          ],
+          correctIndex: 2,
+          explanation:
+            "In Österreich ist PID seit dem **Fortpflanzungsmedizinrechts-Änderungsgesetz 2015** (FMedRÄG 2015) unter **strengen Auflagen** erlaubt: nur bei schweren Erbkrankheiten oder nach ≥ 3 erfolglosen IVF-Versuchen/Fehlgeburten, mit Genehmigung einer Ethikkommission.",
+          difficulty: 2,
+          tags: ["pid", "österreich", "fmedrÄg"],
+        },
+        {
+          question: "Was ist der Hauptunterschied zwischen PND und PID?",
+          options: [
+            "PND untersucht die Mutter, PID den Vater",
+            "PND erfolgt während der Schwangerschaft, PID vor der Einnistung des Embryos (IVF)",
+            "PND ist invasiv, PID ist nicht-invasiv",
+            "PND analysiert DNA, PID analysiert Proteine",
+            "PND ist in Österreich verboten, PID erlaubt",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Der Hauptunterschied: **PND** (Pränataldiagnostik) untersucht das ungeborene Kind **während der Schwangerschaft**. **PID** (Präimplantationsdiagnostik) untersucht Embryonen **vor dem Transfer** in die Gebärmutter, also im Rahmen einer **IVF**. Bei PND ist die Schwangerschaft bereits eingetreten, bei PID noch nicht.",
+          difficulty: 1,
+          tags: ["pnd", "pid", "vergleich"],
+        },
+      ],
+      altfrage: {
+        text: "Eine 38-jährige Schwangere möchte eine Chromosomenanalyse ihres ungeborenen Kindes. Welches Verfahren liefert fetale Zellen für eine Karyotypisierung bei geringstem Fehlgeburtsrisiko?",
+        options: [
+          { id: "a", text: "Cordozentese" },
+          { id: "b", text: "Chorionzottenbiopsie" },
+          { id: "c", text: "Amniozentese" },
+          { id: "d", text: "NIPT" },
+          { id: "e", text: "Triple-Test" },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "Für eine vollständige **Karyotypisierung** werden fetale Zellen benötigt — das schließt NIPT (nur cffDNA, keine Zellen) und Triple-Test (nur Blutmarker) aus. Unter den invasiven Verfahren hat die **Amniozentese** mit **0,3–0,5 %** das geringste Fehlgeburtsrisiko (vs. Chorionzottenbiopsie 0,5–1 % und Cordozentese 1–2 %). Sie ist das Standardverfahren für die Karyotypisierung ab der 15. SSW.",
+      },
+    },
   ],
 };

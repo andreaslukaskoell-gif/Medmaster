@@ -1239,5 +1239,262 @@ Vereinfache: log(50) + log(2). *Denkprozess:* Produktregel → log(50 × 2) = lo
       ],
       diagram: "logarithm-function",
     },
+    {
+      id: "ma-5-05",
+      title: "Differentialrechnung & Integralrechnung",
+      stichworte: [
+        "Ableitung",
+        "Differentialquotient",
+        "Differenzenquotient",
+        "Potenzregel",
+        "Summenregel",
+        "Faktorregel",
+        "Kettenregel",
+        "Stammfunktion",
+        "Integral",
+        "Bestimmtes Integral",
+        "Fläche unter der Kurve",
+        "Rotationskörper",
+        "Geschwindigkeit",
+        "Strecke",
+      ],
+      content: `## Ableitung — wie schnell ändert sich etwas?
+
+Du kennst bereits die Steigung einer Geraden: m = Δy/Δx, konstant überall. Bei einer gekrümmten Kurve — etwa einer Wachstumskurve oder einer Konzentrations-Zeit-Kurve — ist die Steigung an jeder Stelle anders. Genau hier setzt die **Differentialrechnung** (Methode zur Berechnung momentaner Änderungsraten) an: Sie liefert die **momentane Änderungsrate** an einem bestimmten Punkt.
+
+{{DIAGRAM:calculus-overview}}
+
+Der Grundgedanke: Man legt eine **Sekante** (Verbindungslinie zweier Kurvenpunkte) durch die Punkte (x, f(x)) und (x + h, f(x + h)). Ihre Steigung ist der **Differenzenquotient**:
+
+**Δy/Δx = [f(x + h) − f(x)] / h**
+
+Lässt man h immer kleiner werden (h → 0), nähert sich die Sekante der **Tangente** (Berührlinie an einem einzigen Punkt). Der Grenzwert ist der **Differentialquotient** — die Ableitung:
+
+**f'(x) = lim(h→0) [f(x + h) − f(x)] / h**
+
+> **Merke:** Ableitung = momentane Änderungsrate = Steigung der Tangente. Die Ableitung beantwortet die Frage: „Wie schnell ändert sich f genau jetzt?" Medizinisch: Wie schnell sinkt die Medikamentenkonzentration zu einem bestimmten Zeitpunkt?
+
+---
+
+## Ableitungsregeln — das Werkzeug
+
+In der Praxis berechnet man Ableitungen nicht über den Grenzwert, sondern mit Regeln:
+
+| Regel | Funktion f(x) | Ableitung f'(x) | Beispiel |
+|---|---|---|---|
+| **Potenzregel** | xⁿ | n·xⁿ⁻¹ | x³ → 3x² |
+| **Konstante** | c | 0 | 7 → 0 |
+| **Faktorregel** | c·g(x) | c·g'(x) | 5x² → 10x |
+| **Summenregel** | g(x) + h(x) | g'(x) + h'(x) | x³ + 2x → 3x² + 2 |
+| **Kettenregel** | g(h(x)) | g'(h(x))·h'(x) | e^(3x) → 3·e^(3x) |
+
+**Ableitungen wichtiger Funktionen:**
+
+| f(x) | f'(x) | MedAT-Kontext |
+|---|---|---|
+| xⁿ | n·xⁿ⁻¹ | Potenzfunktionen, Polynome |
+| eˣ | eˣ | Wachstum, Zerfall |
+| e^(kx) | k·e^(kx) | Pharmakokinetik: C(t) = C₀·e^(−kt) |
+| ln(x) | 1/x | pH-Berechnung, Logarithmen |
+| sin(x) | cos(x) | Schwingungen, EKG-Modellierung |
+| cos(x) | −sin(x) | Schwingungen |
+
+**Beispiel — Pharmakokinetik:**
+C(t) = 200·e^(−0,3t) (Konzentration in mg/L, t in Stunden).
+C'(t) = 200·(−0,3)·e^(−0,3t) = −60·e^(−0,3t).
+Nach 2 h: C'(2) = −60·e^(−0,6) ≈ −60·0,549 ≈ **−32,9 mg/(L·h)**.
+Interpretation: Die Konzentration sinkt zu diesem Zeitpunkt mit ca. 33 mg/L pro Stunde.
+
+---
+
+## Integral — die Umkehrung der Ableitung
+
+Wenn die Ableitung die Frage „Wie schnell ändert sich etwas?" beantwortet, dreht das **Integral** die Frage um: „Wie viel hat sich insgesamt angesammelt?"
+
+Die **Stammfunktion** (auch: unbestimmtes Integral) F(x) einer Funktion f(x) erfüllt: **F'(x) = f(x)**. Man schreibt:
+
+**∫ f(x) dx = F(x) + C**
+
+Die Konstante C (Integrationskonstante) entsteht, weil beim Ableiten jede Konstante wegfällt — man weiß also nicht, welcher Startwert vorlag.
+
+**Grundlegende Integralregeln:**
+
+| f(x) | ∫ f(x) dx | Merkregel |
+|---|---|---|
+| xⁿ (n ≠ −1) | xⁿ⁺¹/(n+1) + C | Potenz um 1 erhöhen, durch neue Potenz teilen |
+| 1/x | ln\|x\| + C | Sonderfall n = −1 |
+| eˣ | eˣ + C | e-Funktion bleibt sich selbst |
+| e^(kx) | (1/k)·e^(kx) + C | Kettenregel rückwärts |
+| sin(x) | −cos(x) + C | Vorzeichen beachten |
+| cos(x) | sin(x) + C | |
+
+> **Merke:** Integration ist die Umkehrung der Differentiation. Ableitung = momentane Rate. Integral = Gesamtmenge über ein Intervall. Kontrollprobe: Die Ableitung der Stammfunktion muss wieder die Ausgangsfunktion ergeben.
+
+---
+
+## Bestimmtes Integral — Fläche unter der Kurve
+
+Das **bestimmte Integral** berechnet die Fläche zwischen dem Graphen von f(x) und der x-Achse im Intervall [a, b]:
+
+**∫ₐᵇ f(x) dx = F(b) − F(a)**
+
+Das ist der **Hauptsatz der Differential- und Integralrechnung**: Man bildet die Stammfunktion, setzt die Grenzen ein und subtrahiert.
+
+**Beispiel — Gesamtdosis:**
+Ein Medikament wird mit variabler Rate r(t) = 12 − 2t (mL/h) infundiert, 0 ≤ t ≤ 4.
+Gesamtvolumen: ∫₀⁴ (12 − 2t) dt = [12t − t²]₀⁴ = (48 − 16) − (0) = **32 mL**.
+
+**Wichtig:** Liegt der Graph unterhalb der x-Achse, liefert das Integral einen negativen Wert. Für die tatsächliche Fläche braucht man ∫|f(x)| dx.
+
+---
+
+## MedAT-relevante Anwendungen
+
+**Geschwindigkeit ↔ Strecke:**
+- Geschwindigkeit v(t) = s'(t) → Ableitung der Strecke
+- Strecke s = ∫ v(t) dt → Integral der Geschwindigkeit
+- Beschleunigung a(t) = v'(t) = s''(t) → zweite Ableitung
+
+**Fläche zwischen Kurven:**
+Die Fläche zwischen zwei Funktionen f(x) und g(x) im Intervall [a, b]: A = ∫ₐᵇ |f(x) − g(x)| dx.
+
+**Rotationskörper** (nur Grundidee): Rotiert man eine Kurve f(x) um die x-Achse, entsteht ein Volumen V = π·∫ₐᵇ [f(x)]² dx. Am MedAT selten geprüft, aber das Prinzip „Integral = Fläche/Volumen" ist zentral.
+
+**Konzentrations-Zeit-Kurve (AUC):**
+In der Pharmakokinetik ist die **AUC** (Area Under the Curve) = ∫₀^∞ C(t) dt das Maß für die Gesamtexposition des Körpers gegenüber einem Medikament. Größere AUC = mehr Wirkstoff insgesamt aufgenommen.
+
+---
+
+## Häufige Fehler am MedAT
+
+- **Potenzregel falsch anwenden:** Bei xⁿ → n·xⁿ⁻¹ den Exponenten um 1 verringern, nicht erhöhen (beim Integrieren umgekehrt!).
+- **Integrationskonstante vergessen:** Beim unbestimmten Integral immer + C schreiben.
+- **Kettenregel vergessen:** (e^(3x))' = 3·e^(3x), nicht e^(3x). Die innere Ableitung muss multipliziert werden.
+- **Vorzeichen bei Flächen:** Fläche ist immer positiv — wenn das Integral negativ ist, liegt der Graph unter der x-Achse.
+- **Ableitung ≠ Steigungsdreieck:** Der Differenzenquotient (Sekante) ist nur eine Näherung; erst der Grenzwert h → 0 liefert die exakte Tangentensteigung.`,
+      lernziele: [
+        "Den Differentialquotienten als Grenzwert des Differenzenquotienten erklären und interpretieren.",
+        "Ableitungsregeln (Potenz-, Summen-, Faktor-, Kettenregel) sicher anwenden.",
+        "Stammfunktionen grundlegender Funktionstypen bestimmen.",
+        "Bestimmte Integrale berechnen und als Fläche unter der Kurve deuten.",
+        "Den Zusammenhang zwischen Ableitung und Integral in medizinischen Kontexten erkennen.",
+      ],
+      sections: [
+        {
+          heading: "Ableitung als momentane Änderungsrate",
+          text: "Die Ableitung f'(x) gibt die momentane Änderungsrate einer Funktion an einem bestimmten Punkt an. Sie entsteht als Grenzwert des Differenzenquotienten: f'(x) = lim(h→0) [f(x+h) − f(x)] / h. Geometrisch entspricht sie der Steigung der Tangente an den Graphen. In der Medizin beschreibt sie z. B. die momentane Änderungsgeschwindigkeit einer Medikamentenkonzentration.",
+          merksatz:
+            "Ableitung = Tangentensteigung = momentane Änderungsrate. Differenzenquotient (Sekante) → Grenzwert → Differentialquotient (Tangente).",
+        },
+        {
+          heading: "Ableitungsregeln",
+          text: "Potenzregel: (xⁿ)' = n·xⁿ⁻¹. Summenregel: (f+g)' = f'+g'. Faktorregel: (c·f)' = c·f'. Kettenregel: [f(g(x))]' = f'(g(x))·g'(x). Die Kettenregel ist besonders wichtig für zusammengesetzte Funktionen wie e^(kx), die in der Pharmakokinetik ständig vorkommen.",
+          merksatz:
+            "Kettenregel nicht vergessen: Äußere Ableitung × innere Ableitung. Bei e^(3x) liefert die innere Ableitung den Faktor 3.",
+        },
+        {
+          heading: "Integral als Umkehrung und Flächenberechnung",
+          text: "Die Stammfunktion F(x) erfüllt F'(x) = f(x). Das bestimmte Integral ∫ₐᵇ f(x) dx = F(b) − F(a) berechnet die Fläche unter der Kurve. In der Pharmakokinetik ist die AUC (Area Under the Curve) ein zentrales Maß für die Gesamtexposition gegenüber einem Wirkstoff.",
+          merksatz:
+            "Integral = Gesamtmenge über ein Intervall. Stammfunktion finden → Grenzen einsetzen → subtrahieren. Kontrollprobe: F'(x) = f(x).",
+        },
+      ],
+      merksätze: [
+        "Ableitung = momentane Änderungsrate = Tangentensteigung. Integral = Gesamtmenge = Fläche unter der Kurve.",
+        "Potenzregel: (xⁿ)' = n·xⁿ⁻¹. Integration umgekehrt: ∫xⁿ dx = xⁿ⁺¹/(n+1) + C.",
+        "Kettenregel: [f(g(x))]' = f'(g(x))·g'(x). Innere Ableitung nicht vergessen!",
+        "Hauptsatz: ∫ₐᵇ f(x) dx = F(b) − F(a). Stammfunktion einsetzen, subtrahieren, fertig.",
+      ],
+      altfrage: {
+        question:
+          "Die Konzentration eines Medikaments im Blut wird durch C(t) = 100·e^(−0,2t) beschrieben (C in mg/L, t in Stunden). Berechnen Sie die momentane Änderungsrate der Konzentration nach 3 Stunden und bestimmen Sie die AUC (Fläche unter der Kurve) von t = 0 bis t = 5.",
+        answer:
+          "Die momentane Änderungsrate ist die Ableitung: C'(t) = 100·(−0,2)·e^(−0,2t) = −20·e^(−0,2t). Nach 3 Stunden: C'(3) = −20·e^(−0,6) ≈ −20·0,549 ≈ −10,98 mg/(L·h). Das Minuszeichen bedeutet, dass die Konzentration sinkt — nach 3 h mit ca. 11 mg/L pro Stunde. Für die AUC: ∫₀⁵ 100·e^(−0,2t) dt = 100·[−1/0,2·e^(−0,2t)]₀⁵ = 100·(−5)·[e^(−1) − e^(0)] = −500·[0,368 − 1] = −500·(−0,632) = 316 mg·h/L. Die AUC von 316 mg·h/L ist ein Maß für die Gesamtexposition des Körpers gegenüber dem Medikament im Zeitraum 0–5 h. In der klinischen Pharmakokinetik dient die AUC zur Beurteilung der Bioverfügbarkeit und zur Dosisanpassung.",
+      },
+      klinischerBezug:
+        "Die Ableitung der Konzentrations-Zeit-Kurve C'(t) beschreibt die momentane Eliminationsgeschwindigkeit eines Medikaments und ist entscheidend für die Dosierungsberechnung. Die AUC (Area Under the Curve, ∫C(t)dt) ist das Standardmaß für die Bioverfügbarkeit eines Arzneimittels und bestimmt, ob eine generische Formulierung als bioäquivalent gilt (AUC-Verhältnis 80–125 %). In der Kardiologie beschreibt die Ableitung der Druck-Volumen-Kurve die momentane Compliance des Herzens, und das Integral der Flusskurve über ein Herzintervall ergibt das Schlagvolumen.",
+      selfTest: [
+        {
+          question: "Was ist die Ableitung von f(x) = 3x⁴ − 2x² + 7?",
+          options: [
+            "f'(x) = 12x³ − 4x",
+            "f'(x) = 12x³ − 4x + 7",
+            "f'(x) = 3x³ − 2x",
+            "f'(x) = 12x⁵ − 4x³",
+            "f'(x) = x⁴ − x²",
+          ],
+          correctIndex: 0,
+          explanation:
+            "Potenzregel auf jeden Term: (3x⁴)' = 3·4·x³ = 12x³. (−2x²)' = −2·2·x = −4x. (7)' = 0 (Konstante fällt weg). Also f'(x) = 12x³ − 4x.",
+          hints: [
+            "Potenzregel: (xⁿ)' = n·xⁿ⁻¹ auf jeden Term anwenden",
+            "Konstanten (hier: 7) verschwinden beim Ableiten",
+          ],
+          difficulty: 1,
+          tags: ["ableitung", "potenzregel"],
+        },
+        {
+          question:
+            "Die Konzentration eines Medikaments folgt C(t) = 50·e^(−0,5t). Wie lautet C'(t)?",
+          options: [
+            "C'(t) = 50·e^(−0,5t)",
+            "C'(t) = −25·e^(−0,5t)",
+            "C'(t) = −0,5·e^(−0,5t)",
+            "C'(t) = 25·e^(0,5t)",
+            "C'(t) = −50·e^(−0,5t)",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Kettenregel: C'(t) = 50·(−0,5)·e^(−0,5t) = −25·e^(−0,5t). Die innere Ableitung von (−0,5t) ist −0,5, multipliziert mit dem äußeren Faktor 50 ergibt −25.",
+          hints: ["Kettenregel: (e^(kx))' = k·e^(kx)", "Innere Ableitung: (−0,5t)' = −0,5"],
+          difficulty: 2,
+          tags: ["ableitung", "kettenregel", "pharmakokinetik"],
+        },
+        {
+          question: "Berechne ∫₁³ 2x dx.",
+          options: ["4", "6", "8", "10", "12"],
+          correctIndex: 2,
+          explanation:
+            "Stammfunktion: F(x) = x². Einsetzen: F(3) − F(1) = 9 − 1 = 8. Alternativ: ∫₁³ 2x dx = [x²]₁³ = 3² − 1² = 9 − 1 = 8.",
+          hints: [
+            "Stammfunktion von 2x ist x² (Potenzregel rückwärts)",
+            "Obere Grenze einsetzen minus untere Grenze einsetzen",
+          ],
+          difficulty: 1,
+          tags: ["integral", "bestimmtes-integral", "potenzregel"],
+        },
+        {
+          question:
+            "Ein Objekt bewegt sich mit v(t) = 6t² − 4t (m/s). Welche Strecke legt es von t = 0 bis t = 2 zurück?",
+          options: ["4 m", "8 m", "12 m", "16 m", "24 m"],
+          correctIndex: 1,
+          explanation:
+            "Strecke = ∫₀² v(t) dt = ∫₀² (6t² − 4t) dt = [2t³ − 2t²]₀² = (2·8 − 2·4) − 0 = 16 − 8 = 8 m. Integration der Geschwindigkeit ergibt die zurückgelegte Strecke.",
+          hints: ["Strecke = Integral der Geschwindigkeit", "∫6t² dt = 2t³ und ∫4t dt = 2t²"],
+          difficulty: 2,
+          tags: ["integral", "geschwindigkeit", "strecke"],
+        },
+        {
+          question: "Welche Stammfunktion gehört zu f(x) = 1/x für x > 0?",
+          options: [
+            "F(x) = x⁰ + C",
+            "F(x) = ln(x) + C",
+            "F(x) = −1/x² + C",
+            "F(x) = x·ln(x) + C",
+            "F(x) = eˣ + C",
+          ],
+          correctIndex: 1,
+          explanation:
+            "∫(1/x) dx = ln|x| + C. Dies ist der Sonderfall der Potenzregel für n = −1: Die Formel xⁿ⁺¹/(n+1) gilt nicht für n = −1 (Division durch 0). Stattdessen ist die Stammfunktion der natürliche Logarithmus.",
+          hints: [
+            "Die Potenzregel xⁿ → xⁿ⁺¹/(n+1) funktioniert nicht für n = −1",
+            "Die Ableitung von ln(x) ist 1/x — also ist ln(x) die Stammfunktion",
+          ],
+          difficulty: 3,
+          tags: ["integral", "stammfunktion", "logarithmus"],
+        },
+      ],
+      diagram: "calculus-overview",
+    },
   ],
 };

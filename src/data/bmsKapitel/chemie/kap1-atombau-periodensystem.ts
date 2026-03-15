@@ -74,6 +74,8 @@ Ernest Rutherford beschoss eine hauchdünne **Goldfolie** (ca. 100 Atomlagen) mi
 
 **Grenzen des Rutherford-Modells:** Es erklärt nicht, warum Elektronen nicht spiralförmig in den Kern stürzen (beschleunigte Ladungen strahlen klassisch Energie ab), und liefert keine Erklärung für **diskrete Spektrallinien** (charakteristische Lichtfarben von angeregten Atomen).
 
+{{DIAGRAM:bohr-model}}
+
 ## Bohrsches Atommodell (1913)
 
 
@@ -1002,6 +1004,8 @@ Wirken zwischen Molekülen mit permanentem Dipolmoment (Maß für die Ladungstre
 **Debye-Wechselwirkungen** (Dipol–induzierter Dipol):
 Ein permanenter Dipol polarisiert ein benachbartes unpolares Molekül. Geringer als London- und Keesom-Kräfte, aber stets vorhanden, wenn polare und unpolare Moleküle benachbart sind. Klinisch relevant bei der Löslichkeit von O₂ in Wasser (polares Wasser induziert Dipol in O₂).
 
+{{DIAGRAM:intermolecular-forces}}
+
 ## Stärkeranking der Wechselwirkungen
 
 | Wechselwirkung | Energie (kJ/mol) | Beispiel |
@@ -1284,6 +1288,8 @@ Materie existiert in drei klassischen Aggregatzuständen, deren Unterschiede auf
 - **Gasförmig:** Teilchen weit voneinander entfernt, schnelle Bewegung (mittlere Geschwindigkeit O₂ bei 25 °C: ~480 m/s). Kein definiertes Volumen oder Form. Hohe Kompressibilität. Ideales Gasgesetz: pV = nRT.
 
 > **Merke:** Plasma (ionisiertes Gas) gilt als 4. Aggregatzustand — klinisch relevant bei der Argon-Plasma-Koagulation (APC), einer endoskopischen Blutstillungsmethode.
+
+{{DIAGRAM:phase-diagram}}
 
 ## Phasenübergänge und Wärmetönung
 
