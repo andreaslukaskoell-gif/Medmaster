@@ -155,7 +155,7 @@ export default function LandingPage() {
       .from("leaderboard_snapshots")
       .select("*", { count: "exact", head: true })
       .then(({ count }) => {
-        if (count && count >= 200) setUserCount(count);
+        if (count && count >= 10) setUserCount(count);
       });
   }, []);
 

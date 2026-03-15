@@ -17,6 +17,8 @@ import {
   Timer,
   Dumbbell,
   BarChart3,
+  MessageCircle,
+  Copy,
 } from "lucide-react";
 import { CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -33,7 +35,13 @@ import { useAuth } from "@/hooks/useAuth";
 import { cn, daysUntilMedAT, getGreetingByTime } from "@/lib/utils";
 import { getDailyGoalFromPlan, getConsecutiveDaysGoalMissed } from "@/lib/dailyGoal";
 import { getTodaysResult } from "@/lib/dailyChallenge";
-import { shareText, getStreakShareText, getReferralShareText } from "@/lib/shareUtils";
+import {
+  shareText,
+  getStreakShareText,
+  getReferralShareText,
+  shareWhatsApp,
+  copyToClipboard,
+} from "@/lib/shareUtils";
 import { getLevelFromXP, XP_PER_LEVEL } from "@/lib/progression";
 import { generateAdaptivePlan } from "@/lib/adaptivePlan";
 import { buildConcreteDailyPlan } from "@/lib/concreteDailyPlan";
@@ -510,46 +518,45 @@ export default function Dashboard() {
 }
 
 function ReferralCard() {
-  const [shared, setShared] = useState(false);
+  const [copied, setCopied] = useState(false);
   const { user } = useAuth();
+  const refLink = user?.id
+    ? `https://medmaster.at?ref=${user.id.slice(0, 8)}`
+    : "https://medmaster.at";
+  const waText = getReferralShareText(user?.id);
+
   return (
     <div className="h-full rounded-xl border border-[var(--border)] bg-[var(--card)] p-5 shadow-sm">
-      <div className="flex items-start justify-between gap-4">
-        <div className="flex-1">
-          <p className="text-sm font-semibold text-[var(--text-primary)] mb-1">
-            Lerngruppe starten
-          </p>
-          <p className="text-xs text-[var(--muted)] leading-relaxed">
-            Lade Freunde ein und lernt gemeinsam — wer in einer Lerngruppe übt, schneidet im MedAT
-            nachweislich besser ab.
-          </p>
-        </div>
-        <div className="flex gap-2 shrink-0">
-          <button
-            type="button"
-            onClick={async () => {
-              await shareText(getReferralShareText(user?.id), "MedMaster empfehlen");
-              setShared(true);
-              setTimeout(() => setShared(false), 3000);
-            }}
-            className={cn(
-              "inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-white transition-colors",
-              shared ? "bg-[var(--success)]" : "bg-[var(--accent)]"
-            )}
-          >
-            {shared ? (
-              <>
-                <CheckCircle2 className="w-4 h-4" />
-                Geteilt!
-              </>
-            ) : (
-              <>
-                <Share2 className="w-4 h-4" />
-                Teilen
-              </>
-            )}
-          </button>
-        </div>
+      <p className="text-sm font-semibold text-[var(--text-primary)] mb-1">Freunde einladen</p>
+      <p className="text-xs text-[var(--muted)] leading-relaxed mb-3">
+        Teile MedMaster mit deiner Lerngruppe — wer gemeinsam übt, schneidet besser ab.
+      </p>
+      <div className="flex gap-2">
+        <button
+          type="button"
+          onClick={() => shareWhatsApp(waText)}
+          className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium bg-[#25D366] text-white hover:bg-[#1ebe57] transition-colors"
+        >
+          <MessageCircle className="w-4 h-4" />
+          WhatsApp
+        </button>
+        <button
+          type="button"
+          onClick={async () => {
+            await copyToClipboard(refLink);
+            setCopied(true);
+            setTimeout(() => setCopied(false), 2500);
+          }}
+          className={cn(
+            "inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium border transition-colors",
+            copied
+              ? "border-emerald-300 text-emerald-600 bg-emerald-50 dark:bg-emerald-900/20"
+              : "border-[var(--border)] text-[var(--text-secondary)] hover:bg-[var(--surface)]"
+          )}
+        >
+          {copied ? <CheckCircle2 className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
+          {copied ? "Kopiert!" : "Link kopieren"}
+        </button>
       </div>
     </div>
   );
