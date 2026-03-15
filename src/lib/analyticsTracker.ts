@@ -91,6 +91,8 @@ function insertEvent(
   } = {}
 ) {
   if (!supabase) return;
+  // Only track on production domain
+  if (location.hostname === "localhost" || location.hostname === "127.0.0.1") return;
   // Skip tracking for admin (flag set when analytics dashboard is unlocked)
   if (localStorage.getItem("mm_admin") === "1") return;
 
