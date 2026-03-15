@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 80" fill="none">
+  <defs>
+    <linearGradient id="icon-bg" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="50%" stop-color="#1b3ea7"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="icon-m" x1="16" y1="16" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e0e7ff"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Icon mark (64x64) -->
+  <g transform="translate(8, 8)">
+    <rect width="64" height="64" rx="14" fill="url(#icon-bg)"/>
+    <rect width="64" height="32" rx="14" fill="white" opacity="0.06"/>
+
+    <!-- M -->
+    <path
+      d="M16 50 L16 18 L25 18 L32 31 L39 18 L48 18 L48 50 L41 50 L41 30 L34 43 L30 43 L23 30 L23 50 Z"
+      fill="url(#icon-m)"
+    />
+
+    <!-- Cross accent -->
+    <g transform="translate(46.5, 14)">
+      <rect x="-1.5" y="-5" width="3" height="10" rx="1" fill="#60a5fa"/>
+      <rect x="-5" y="-1.5" width="10" height="3" rx="1" fill="#60a5fa"/>
+    </g>
+  </g>
+
+  <!-- Wordmark -->
+  <text
+    x="88"
+    y="53"
+    font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif"
+    font-size="36"
+    font-weight="800"
+    letter-spacing="-0.02em"
+    fill="#1e293b"
+  >Med<tspan fill="#1b3ea7">Master</tspan></text>
+</svg>
