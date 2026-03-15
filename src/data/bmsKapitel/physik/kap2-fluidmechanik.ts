@@ -592,6 +592,13 @@ v₂ = v₁ · (A₁/A₂) = 0,3 · (4,5/1,5) = 0,3 · 3 = **0,9 m/s**
 
 Die Geschwindigkeit verdreifacht sich! Bei hochgradiger Stenose (A₂ ≈ 0,5 cm²) erreicht v₂ = 0,3 · 9 = **2,7 m/s** — so schnell, dass die Strömung turbulent wird und **Stenosegeräusche** entstehen (mit dem Stethoskop auskultierbar). Prüfungstipp: Die Duplexsonografie nutzt genau diese Geschwindigkeitserhöhung, um den Stenosegrad zu quantifizieren.
 
+**Klinisch — Stenose vs. Aneurysma (Kontinuitätsgleichung):**
+Die Kontinuitätsgleichung erklärt zwei gegenläufige Pathologien auf einen Schlag:
+- **Stenose** (z. B. Karotisstenose, Aortenklappenstenose): A↓ → v↑. Je enger das Gefäß, desto schneller schießt das Blut hindurch. Die erhöhte Geschwindigkeit erzeugt Scherkräfte auf das Endothel und begünstigt Thrombusablösung.
+- **Aneurysma** (z. B. Bauchaortenaneurysma): A↑ → v↓. Die Strömung verlangsamt sich in der Aussackung, was Wirbelbildung und Thrombusformation begünstigt. Wandständige Thromben (murale Thromben) sind eine typische Komplikation des Aneurysmas.
+
+> **Merke:** Stenose → v↑ → Endothelschäden, Strömungsgeräusche. Aneurysma → v↓ → Stase, Thrombenbildung. Beide Pathologien folgen direkt aus A₁·v₁ = A₂·v₂.
+
 **Klinisch — Gesamtquerschnitt des Kapillarbetts:**
 Die Aorta (A ≈ 4,5 cm²) verzweigt sich in Milliarden Kapillaren mit einem Gesamtquerschnitt von A ≈ 4500 cm². Daraus folgt:
 v_Kapillare = v_Aorta · (A_Aorta / A_Kapillaren) = 0,3 · (4,5/4500) = **0,0003 m/s ≈ 0,3 mm/s**
@@ -621,12 +628,15 @@ Die drei Terme repräsentieren verschiedene Energieformen pro Volumen:
 > **Merke:** Bernoulli = Energieerhaltung für Fluide: p + ½ρv² + ρgh = const. Höhere Geschwindigkeit → niedrigerer statischer Druck. Der Gesamtdruck (statisch + dynamisch + hydrostatisch) bleibt konstant.
 
 **Venturi-Effekt und medizinische Anwendungen:**
-Fließt ein Fluid durch eine Verengung (Venturi-Rohr), nimmt v zu (Kontinuität) und der statische Druck p sinkt (Bernoulli). Dieser lokale Druckabfall kann genutzt werden, um ein zweites Fluid anzusaugen:
-- **Wasserstrahlpumpe:** Unterdruck durch schnelle Wasserströmung saugt Luft/Gas an
-- **Zerstäuber (Vernebler):** Luftstrom erzeugt Unterdruck → Flüssigkeit wird angesaugt und zerstäubt → Aerosoltherapie bei Asthma
-- **Venturi-Maske (O₂-Therapie):** Sauerstoff strömt durch enge Düse → Umgebungsluft wird angesaugt → präzise einstellbare O₂-Konzentration (24–60 %)
+Fließt ein Fluid durch eine Verengung (Venturi-Rohr), nimmt v zu (Kontinuität) und der statische Druck p sinkt (Bernoulli). Dieser lokale Druckabfall kann genutzt werden, um ein zweites Fluid anzusaugen — das ist der **Venturi-Effekt**. Je stärker die Verengung, desto größer der Druckabfall und desto stärker die Ansaugwirkung.
 
-> **Merke:** Venturi-Effekt: Verengung → v↑ → p↓ → Ansaugwirkung. Klinische Anwendungen: Vernebler (Aerosoltherapie), Venturi-Maske (kontrollierte O₂-Gabe), Wasserstrahlpumpe.
+Das Prinzip findet breite Anwendung in der klinischen Medizin:
+
+- **Wasserstrahlpumpe:** Unterdruck durch schnelle Wasserströmung saugt Luft/Gas an — Prinzip wird in Laborabsaugungen genutzt
+- **Zerstäuber (Vernebler):** Druckluft oder Sauerstoff strömt mit hoher Geschwindigkeit durch eine Düse → lokaler Unterdruck saugt Medikamentenlösung aus dem Reservoir an → Flüssigkeit wird in feine Tröpfchen (Aerosol, 1–5 µm) zerstäubt → Inhalationstherapie bei Asthma, COPD, Mukoviszidose. Die Tröpfchengröße bestimmt die Depositionstiefe: <3 µm erreichen die Alveolen, >5 µm lagern sich im Pharynx ab.
+- **Venturi-Maske (O₂-Therapie):** Reiner Sauerstoff strömt durch eine enge, farbcodierte Düse → Umgebungsluft wird durch seitliche Öffnungen angesaugt und beigemischt → präzise einstellbare O₂-Konzentration (24–60 %). Der Vorteil gegenüber einer einfachen Nasenbrille: Die FiO₂ (inspiratorische O₂-Fraktion) ist unabhängig vom Atemminutenvolumen des Patienten konstant. Verschiedene Düsenfarben kodieren verschiedene FiO₂-Werte (z. B. blau = 24 %, weiß = 28 %, gelb = 35 %). Prüfungstipp: Die Venturi-Maske ist das Standardbeispiel für den Venturi-Effekt im MedAT.
+
+> **Merke:** Venturi-Effekt: Verengung → v↑ → p↓ → Ansaugwirkung. Klinische Anwendungen: Vernebler (Aerosoltherapie, Tröpfchengröße bestimmt Depositionsort), Venturi-Maske (konstante FiO₂ unabhängig vom Atemminutenvolumen), Wasserstrahlpumpe.
 
 **Rechenbeispiel — Druckabfall an einer Stenose (Schritt für Schritt):**
 Aorta: v₁ = 0,3 m/s, p₁ = 100 mmHg ≈ 13 333 Pa, ρ_Blut = 1060 kg/m³.
@@ -638,7 +648,7 @@ p₁ + ½ρv₁² = p₂ + ½ρv₂²
 → p₂ = 13 333 + 530 · (−0,72) = 13 333 − 382 Pa
 → Δp = 382 Pa ≈ **2,9 mmHg** → p₂ ≈ **97 mmHg**
 
-Bei hochgradiger Stenose (v₂ = 3 m/s): Δp = ½ · 1060 · (9 − 0,09) ≈ 4728 Pa ≈ **35 mmHg** — klinisch hochrelevant! Solche Druckgradienten werden echokardiografisch gemessen, um den Schweregrad einer Aortenklappenstenose zu bestimmen.
+Bei hochgradiger Stenose (v₂ = 3 m/s): Δp = ½ · 1060 · (9 − 0,09) ≈ 4728 Pa ≈ **35 mmHg** — klinisch hochrelevant! Solche Druckgradienten werden echokardiografisch gemessen, um den Schweregrad einer Aortenklappenstenose zu bestimmen. In der Echokardiografie wird die vereinfachte Bernoulli-Gleichung genutzt: **Δp ≈ 4 · v²** (mit v in m/s und Δp in mmHg) — eine Formel, die sich direkt aus der Bernoulli-Gleichung ableiten lässt, wenn man v₁ ≪ v₂ annimmt.
 
 ---
 
@@ -658,7 +668,7 @@ Die Bernoulli-Gleichung ignoriert Reibung — reale Fluide haben aber eine Visko
 | η | Dynamische Viskosität des Fluids | Pa·s |
 | L | Rohrlänge | m |
 
-Die entscheidende Erkenntnis steckt in **r⁴**: Der Volumenstrom hängt von der **vierten Potenz** des Radius ab! Halbiert sich der Radius, sinkt der Volumenstrom auf 1/16 (= 0,5⁴) des ursprünglichen Wertes.
+Die entscheidende Erkenntnis steckt in **r⁴**: Der Volumenstrom hängt von der **vierten Potenz** des Radius ab! Halbiert sich der Radius, sinkt der Volumenstrom auf 1/16 (= 0,5⁴) des ursprünglichen Wertes. Diese extreme Abhängigkeit hat in der Medizin dramatische Konsequenzen.
 
 > **Merke:** Hagen-Poiseuille: Q = π·Δp·r⁴ / (8·η·L). Der Radius geht mit der **4. Potenz** ein — r halbiert → Q sinkt auf 1/16! Gilt nur für laminare, stationäre Strömung in starren Rohren.
 
@@ -666,21 +676,41 @@ Den **Strömungswiderstand** R_S kann man analog zum elektrischen Widerstand (Oh
 
 **R_S = Δp / Q = (8 · η · L) / (π · r⁴)**
 
-Prüfungstipp: Die Analogie Δp ↔ U (Spannung), Q ↔ I (Strom), R_S ↔ R (Widerstand) wird im MedAT gerne abgefragt.
+Prüfungstipp: Die Analogie Δp ↔ U (Spannung), Q ↔ I (Strom), R_S ↔ R (Widerstand) wird im MedAT gerne abgefragt. Auch Reihen- und Parallelschaltung von Widerständen lässt sich übertragen: Gefäße in Serie (z. B. Arterie → Arteriole → Kapillare) addieren ihre Widerstände (R_ges = R₁ + R₂ + …), parallel geschaltete Gefäße (z. B. Kapillarbett) verringern den Gesamtwiderstand (1/R_ges = 1/R₁ + 1/R₂ + …).
+
+> **Merke:** Strömungswiderstand R_S = 8ηL/(πr⁴), analog zum Ohmschen Gesetz: Δp = R_S · Q. Serienschaltung: R addieren. Parallelschaltung: 1/R addieren. Die Arteriolen liefern den größten Einzelbeitrag zum peripheren Gesamtwiderstand (TPR).
 
 **Klinische Relevanz — warum r⁴ Leben rettet (oder gefährdet):**
 
-- **Arteriosklerose:** Eine 50 %-ige Radiusverengung durch Plaques reduziert den Blutfluss auf (0,5)⁴ = 1/16 ≈ **6 %** des Normalwerts! Der Körper kompensiert durch Blutdruckerhöhung (Δp↑), was das Herz belastet → Hypertonie, Herzinsuffizienz.
-- **Infusionsschlauch:** Ein dünnerer Katheter (z. B. 20 G statt 16 G) hat einen deutlich höheren Strömungswiderstand. Bei Notfalltransfusionen wählt man daher den **größtmöglichen Venenzugang** (großes r → Q ∝ r⁴).
-- **Bronchospasmus:** Verengung der Bronchien (r↓) erhöht den Atemwegswiderstand drastisch (∝ 1/r⁴) → Atemnot bei Asthma.
+- **Arteriosklerose:** Eine 50 %-ige Radiusverengung durch Plaques reduziert den Blutfluss auf (0,5)⁴ = 1/16 ≈ **6 %** des Normalwerts — also ein Flussverlust von **94 %**! Der Körper kompensiert durch Blutdruckerhöhung (Δp↑), was das Herz belastet → Hypertonie, Herzinsuffizienz. Umgekehrt: Bereits eine geringe Weitstellung (z. B. durch Nitroglycerin) erhöht den Fluss drastisch.
+- **Infusionskatheter-Vergleich (Gauge-System):** Venenkatheter werden nach dem Gauge-System klassifiziert — kleinere Gauge-Zahl = größerer Innendurchmesser. Typische maximale Flussraten:
+  - **14 G** (r ≈ 1,0 mm): bis zu **270 ml/min** — Trauma, Massentransfusion
+  - **16 G** (r ≈ 0,8 mm): bis zu **180 ml/min** — OP, Bluttransfusion
+  - **18 G** (r ≈ 0,6 mm): bis zu **90 ml/min** — Standardinfusion
+  - **20 G** (r ≈ 0,45 mm): bis zu **55 ml/min** — pädiatrisch, dünne Venen
+  - **22 G** (r ≈ 0,35 mm): bis zu **31 ml/min** — Kinder, Neugeborene
+  Die Flussraten spiegeln exakt die r⁴-Abhängigkeit wider: 14 G vs. 22 G → (1,0/0,35)⁴ ≈ 67-fache Flussrate bei gleichem Druck!
+- **Bronchospasmus:** Verengung der Bronchien (r↓) erhöht den Atemwegswiderstand drastisch (∝ 1/r⁴) → Atemnot bei Asthma. Bronchodilatatoren (z. B. Salbutamol) wirken, indem sie r geringfügig erhöhen — dank r⁴ reicht schon eine kleine Erweiterung für eine deutliche Widerstandssenkung.
 - **Schlauchklemme:** Wird ein Infusionsschlauch teilweise abgeklemmt, sinkt der effektive Radius → Flussrate sinkt überproportional.
 
-> **Merke:** r⁴-Abhängigkeit klinisch: Arteriosklerose (50 % Stenose → 94 % Flussverlust), Infusionszugang (großes Lumen wählen!), Bronchospasmus (r↓ → Atemwegswiderstand ↑↑↑). Körper kompensiert mit Δp↑ (Blutdruck ↑).
+> **Merke:** r⁴-Abhängigkeit klinisch: Arteriosklerose (50 % Stenose → 94 % Flussverlust), Infusionszugang (14 G liefert bis 67× mehr Fluss als 22 G!), Bronchospasmus (r↓ → Atemwegswiderstand ↑↑↑). Körper kompensiert mit Δp↑ (Blutdruck ↑).
 
 **Rechenbeispiel — Infusionsrate:**
 Zwei Venenkatheter: Katheter A hat r = 0,8 mm, Katheter B hat r = 0,4 mm (halber Radius). Gleiche Länge, gleicher Druck, gleiche Flüssigkeit.
 Q_B / Q_A = (r_B / r_A)⁴ = (0,4/0,8)⁴ = (0,5)⁴ = **1/16 ≈ 6 %**
 Katheter B liefert nur 6 % der Flussrate von Katheter A — daher bei Schock: dickstmöglicher Zugang!
+
+**Rechenbeispiel — Arteriosklerose in Stufen:**
+Wie stark sinkt der Blutfluss bei verschiedenen Stenosegraden (Radiusreduktion)?
+
+| Radiusreduktion | Verbleibender Radius | Q/Q₀ = (r/r₀)⁴ | Flussverlust |
+|-----------------|---------------------|-----------------|--------------|
+| 20 % | 0,8 · r₀ | 0,41 (41 %) | 59 % |
+| 30 % | 0,7 · r₀ | 0,24 (24 %) | 76 % |
+| 50 % | 0,5 · r₀ | 0,0625 (6 %) | 94 % |
+| 70 % | 0,3 · r₀ | 0,0081 (0,8 %) | 99,2 % |
+
+Bereits bei 30 % Radiusreduktion sind drei Viertel des Flusses verloren! Das erklärt, warum selbst „moderate" Arteriosklerose klinisch relevant wird und Angina pectoris (Brustenge bei Belastung) auslösen kann.
 
 ---
 
@@ -688,9 +718,9 @@ Katheter B liefert nur 6 % der Flussrate von Katheter A — daher bei Schock: di
 
 Alle bisherigen Gesetze (Bernoulli, Hagen-Poiseuille) setzen eine geordnete, **laminare** Strömung voraus. Doch ab einer bestimmten Geschwindigkeit bricht die Ordnung zusammen — die Strömung wird **turbulent**. Die **Reynolds-Zahl** Re entscheidet, wann dieser Übergang stattfindet.
 
-**Laminare Strömung** (lat. lamina = Schicht): Die Fluidteilchen bewegen sich in parallelen Schichten. Im Rohr entsteht ein **parabolisches Geschwindigkeitsprofil** — maximal in der Rohrmitte, null an der Wand (Haftbedingung, engl. no-slip condition). Geringer Energieverlust, leise.
+**Laminare Strömung** (lat. lamina = Schicht): Die Fluidteilchen bewegen sich in parallelen Schichten. Im Rohr entsteht ein **parabolisches Geschwindigkeitsprofil** — maximal in der Rohrmitte, null an der Wand (Haftbedingung, engl. no-slip condition). Geringer Energieverlust, leise. Die Geschwindigkeit in der Rohrmitte beträgt exakt das Doppelte der mittleren Geschwindigkeit: v_max = 2·v̄.
 
-**Turbulente Strömung:** Chaotische Wirbel und Fluktuationen. Flaches Geschwindigkeitsprofil (stärker durchmischt). Deutlich höherer Energieverlust, höherer Strömungswiderstand und — klinisch entscheidend — **auskultierbare Geräusche**.
+**Turbulente Strömung:** Chaotische Wirbel und Fluktuationen. Flaches Geschwindigkeitsprofil (stärker durchmischt). Deutlich höherer Energieverlust, höherer Strömungswiderstand und — klinisch entscheidend — **auskultierbare Geräusche**. Prüfungstipp: Bei turbulenter Strömung gilt Hagen-Poiseuille **nicht** mehr — der Druckverlust steigt dann überproportional (∝ v² statt ∝ v).
 
 Die **Reynolds-Zahl** (dimensionslos) quantifiziert das Verhältnis von Trägheitskräften zu Reibungskräften:
 
@@ -706,15 +736,23 @@ Dabei: ρ = Dichte, v = mittlere Geschwindigkeit, d = Rohrdurchmesser, η = dyna
 
 > **Merke:** Re = ρ·v·d/η (dimensionslos). Re < 2300: laminar (parabolisches Profil, leise). Re > 4000: turbulent (Wirbel, Geräusche). Im Übergangsbereich (2300–4000) kann die Strömung kippen.
 
+**Rechenbeispiel — Reynolds-Zahl in der Aorta:**
+ρ_Blut = 1060 kg/m³, v = 0,3 m/s, d = 2,4 cm = 0,024 m, η = 3,5 · 10⁻³ Pa·s.
+Re = (1060 · 0,3 · 0,024) / 0,00035 = 7,63 / 0,0035 ≈ **2180**
+
+Die Aorta liegt also in Ruhe knapp unter der kritischen Schwelle! Bei körperlicher Belastung (v↑) oder Fieber (η↓) überschreitet Re leicht 2300 → turbulente Strömung → auskultierbare Strömungsgeräusche.
+
 **Klinische Bedeutung der Reynolds-Zahl:**
 
 - **Stenose → Strömungsgeräusch:** Bei einer Karotisstenose steigt v (Kontinuität) → Re steigt → Strömung wird turbulent → Stenosegeräusch über der A. carotis (auskultierbar mit Stethoskop). Prüfungstipp: Stenosegeräusche entstehen *distal* der Engstelle, wo die Jet-Strömung auf langsamer fließendes Blut trifft.
 
-- **Anämie → funktionelles Herzgeräusch:** Bei Anämie sinkt die Blutviskosität η (weniger Erythrozyten, weniger innere Reibung) → Re steigt auch ohne anatomische Engstelle → **funktionelles Herzgeräusch** ohne strukturelle Herzkrankheit. Verschwindet nach Therapie der Anämie.
+- **Anämie → funktionelles Herzgeräusch:** Bei Anämie sinkt die Blutviskosität η (weniger Erythrozyten, weniger innere Reibung) → Re steigt auch ohne anatomische Engstelle → **funktionelles Herzgeräusch** ohne strukturelle Herzkrankheit. Verschwindet nach Therapie der Anämie. Auch bei Schwangerschaft (physiologische Hämodilution → η↓) treten funktionelle Herzgeräusche auf.
 
-- **Herzgeräusche bei Fieber/Belastung:** Höhere Herzfrequenz → höheres HZV → v↑ → Re↑ → mögliche Turbulenzen an Klappen. Auch physiologisch bei Kindern und Jugendlichen (akzidentelle Herzgeräusche).
+- **Herzgeräusche bei Fieber/Belastung:** Höhere Herzfrequenz → höheres HZV → v↑ → Re↑ → mögliche Turbulenzen an Klappen. Auch physiologisch bei Kindern und Jugendlichen (akzidentelle Herzgeräusche — harmlos, kein Strukturdefekt).
 
-> **Merke:** Stenosegeräusche: v↑ → Re↑ → turbulent. Funktionelle Herzgeräusche bei Anämie: η↓ → Re↑ → turbulent (ohne Strukturdefekt!). Beide über die Reynolds-Zahl erklärbar.
+- **Korotkoff-Geräusche bei der Blutdruckmessung:** Die Manschette komprimiert die A. brachialis teilweise → Stenose → v↑ → Re↑ → turbulente Strömung → hörbare Korotkoff-Geräusche. Das erste Geräusch markiert den systolischen, das Verschwinden den diastolischen Blutdruck.
+
+> **Merke:** Stenosegeräusche: v↑ → Re↑ → turbulent. Funktionelle Herzgeräusche bei Anämie: η↓ → Re↑ → turbulent (ohne Strukturdefekt!). Korotkoff-Geräusche: Manschette → partielle Stenose → Turbulenzen. Alle über die Reynolds-Zahl erklärbar.
 
 ---
 
@@ -750,10 +788,15 @@ Die vier Gleichungen (Kontinuität, Bernoulli, Hagen-Poiseuille, Reynolds) wirke
 | v Kapillaren | ≈ 0,3 mm/s |
 | Re-Grenze laminar | < 2300 |
 | Re-Grenze turbulent | > 4000 |
+| Re Aorta (Ruhe) | ≈ 2180 (knapp unter Grenze!) |
 | ρ Blut | ≈ 1060 kg/m³ |
 | η Blut (37 °C) | ≈ 3–4 · 10⁻³ Pa·s |
 | HZV | ≈ 5 L/min |
-| Hagen-Poiseuille r-Abhängigkeit | Q ∝ r⁴ |`,
+| Hagen-Poiseuille r-Abhängigkeit | Q ∝ r⁴ |
+| 50 % Radiusstenose → Flussverlust | 94 % |
+| 14 G Katheter max. Fluss | ≈ 270 ml/min |
+| 22 G Katheter max. Fluss | ≈ 31 ml/min |
+| Venturi-Maske FiO₂-Bereich | 24–60 % |`,
 
       lernziele: [
         "Die Kontinuitätsgleichung anwenden und Geschwindigkeitsänderungen bei Querschnittsänderungen berechnen können",
