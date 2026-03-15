@@ -102,9 +102,10 @@ function MedATGuard({ children }: { children: ReactNode }) {
   const { profile, loading } = useAuth();
   const location = useLocation();
 
-  // Server-side check: if profile has a display_name, onboarding is done
+  // Server-side check: if profile has a real display_name (not email), onboarding is done
   // This prevents re-triggering onboarding on new devices/cleared localStorage
-  const hasNameInDB = !!profile?.display_name?.trim() || !!profile?.username?.trim();
+  const uname = profile?.username?.trim();
+  const hasNameInDB = !!profile?.display_name?.trim() || !!(uname && !uname.includes("@"));
   const isComplete = hasCompletedMedATOnboarding || hasNameInDB;
 
   // Don't redirect while still loading auth/profile
@@ -191,6 +192,9 @@ export default function App() {
           <Route path="/blog" element={<BlogIndex />} />
           <Route path="/blog/:slug" element={<BlogArticle />} />
 
+          {/* Analytics dashboard — password-protected, no auth needed */}
+          <Route path="/admin/analytics" element={<AnalyticsDashboard />} />
+
           {/* Protected routes */}
           <Route
             element={
@@ -265,8 +269,6 @@ export default function App() {
                   </AdminGuard>
                 }
               />
-              {/* Analytics dashboard — password-protected, no AdminGuard needed */}
-              <Route path="/admin/analytics" element={<AnalyticsDashboard />} />
               <Route path="/prognose" element={<Prognose />} />
               <Route path="/performance" element={<PerformanceOverview />} />
               <Route path="/fortschritt" element={<FortschrittPage />} />
