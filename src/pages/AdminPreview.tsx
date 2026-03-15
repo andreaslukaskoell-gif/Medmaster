@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ContentVisualizer } from "@/components/chapter/ContentVisualizer";
 import { MerksatzBox } from "@/components/chapter/MerksatzBox";
+import { sanitizeHtml } from "@/lib/security";
 import type { Unterkapitel } from "@/data/bmsKapitel/types";
 
 const DEFAULT_JSON = `{
@@ -174,9 +175,11 @@ export default function AdminPreview() {
                         <p
                           className="text-base text-amber-900 dark:text-amber-200 leading-relaxed"
                           dangerouslySetInnerHTML={{
-                            __html: merksatz.replace(
-                              /\*\*(.*?)\*\*/g,
-                              '<strong class="font-semibold">$1</strong>'
+                            __html: sanitizeHtml(
+                              merksatz.replace(
+                                /\*\*(.*?)\*\*/g,
+                                '<strong class="font-semibold">$1</strong>'
+                              )
                             ),
                           }}
                         />

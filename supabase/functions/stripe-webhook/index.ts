@@ -126,7 +126,7 @@ serve(async (req) => {
     });
   } catch (err) {
     console.error("Webhook error:", err);
-    const msg = err instanceof Error ? err.message : "Unknown";
-    return new Response(`Webhook Error: ${msg}`, { status: 400 });
+    // Don't leak internal error details to the caller
+    return new Response("Webhook processing failed", { status: 400 });
   }
 });

@@ -1,3 +1,5 @@
+import { sanitizeHtml } from "@/lib/security";
+
 interface VergleichsTabelleProps {
   headers: string[];
   rows: string[][];
@@ -31,7 +33,7 @@ export function VergleichsTabelle({ headers, rows }: VergleichsTabelleProps) {
                 <td
                   key={ci}
                   className={`px-4 py-3 ${ci === 0 ? "font-medium text-[var(--text-primary)]" : "text-[var(--text-primary)]"}`}
-                  dangerouslySetInnerHTML={{ __html: cell }}
+                  dangerouslySetInnerHTML={{ __html: sanitizeHtml(cell) }}
                 />
               ))}
             </tr>

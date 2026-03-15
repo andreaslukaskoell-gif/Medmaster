@@ -557,7 +557,7 @@ export default function BMSUnterkapitel({
             </div>
 
             {/* Altfrage + Kontrollfragen */}
-            <div className="w-full lg:max-w-[680px] lg:ml-[268px] min-w-0 space-y-10 mt-12">
+            <div className="w-full max-w-[680px] ml-[268px] min-w-0 space-y-10 mt-12">
               {uk.altfrage && (
                 <div className="rounded-lg border border-amber-200 dark:border-amber-800 bg-amber-50/50 dark:bg-amber-900/10 p-5">
                   <h3 className="text-[13px] font-bold uppercase tracking-wider text-amber-700 dark:text-amber-300 mb-3">

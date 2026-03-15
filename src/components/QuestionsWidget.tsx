@@ -1,4 +1,5 @@
 import React from "react";
+import { sanitizeHtml } from "@/lib/security";
 
 type Props = {
   markdown: string;
@@ -102,7 +103,7 @@ export function QuestionsWidget({ markdown }: Props) {
       <div className="prose max-w-none text-[var(--text-primary)]/80">
         <div
           dangerouslySetInnerHTML={{
-            __html: formatText(markdown, true),
+            __html: sanitizeHtml(formatText(markdown, true)),
           }}
         />
       </div>

@@ -4,6 +4,7 @@
 // A Supabase webhook (or manual check) upgrades the user to premium.
 
 import { track, trackCheckoutStart } from "@/lib/analytics";
+import { validateRedirectUrl } from "@/lib/security";
 
 export const PRICING = {
   oneTime: {
@@ -31,9 +32,16 @@ export function startCheckout(options?: { email?: string; userId?: string }): bo
     return false;
   }
 
+  // Validate payment link domain to prevent open redirect via env var tampering
+  const validated = validateRedirectUrl(PAYMENT_LINK_URL.trim());
+  if (!validated) {
+    console.warn("[Stripe] Payment link URL failed domain validation.");
+    return false;
+  }
+
   trackCheckoutStart();
 
-  const url = new URL(PAYMENT_LINK_URL.trim());
+  const url = new URL(validated);
   if (options?.email) url.searchParams.set("prefilled_email", options.email);
   if (options?.userId) url.searchParams.set("client_reference_id", options.userId);
 

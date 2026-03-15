@@ -1,5 +1,6 @@
 // src/components/chapter/KapitelFortschritt.tsx
 import React, { useState } from "react";
+import { sanitizeHtml } from "@/lib/security";
 import { CheckCircle2 } from "lucide-react";
 import { Button } from "../ui/button";
 
@@ -189,7 +190,7 @@ export function MerksatzBox({ text, type = "merke" }: MerksatzBoxProps) {
       </p>
       <p
         className={`${c.body} mt-1 text-sm leading-relaxed`}
-        dangerouslySetInnerHTML={{ __html: text }}
+        dangerouslySetInnerHTML={{ __html: sanitizeHtml(text) }}
       />
     </div>
   );

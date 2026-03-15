@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useAuth } from "@/hooks/useAuth";
 import { usePageTitle } from "@/hooks/usePageTitle";
+import { useThrottle } from "@/hooks/useThrottle";
 
 export default function ForgotPasswordPage() {
   usePageTitle("Passwort vergessen");
@@ -13,9 +14,12 @@ export default function ForgotPasswordPage() {
   const [success, setSuccess] = useState(false);
   const [loading, setLoading] = useState(false);
   const { resetPassword } = useAuth();
+  // Stricter limit for password reset (3 attempts per minute, 60s cooldown)
+  const { blocked, remainingCooldown, checkThrottle } = useThrottle(3, 60_000, 60_000);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!checkThrottle()) return;
     setError("");
     setLoading(true);
     const { error } = await resetPassword(email);
@@ -52,7 +56,12 @@ export default function ForgotPasswordPage() {
               </div>
             ) : (
               <>
-                {error && (
+                {blocked && (
+                  <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg p-3 text-sm text-amber-700 dark:text-amber-400">
+                    Zu viele Versuche. Bitte warte {remainingCooldown} Sekunden.
+                  </div>
+                )}
+                {error && !blocked && (
                   <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-3 text-sm text-red-700 dark:text-red-400">
                     {error}
                   </div>
@@ -78,7 +87,7 @@ export default function ForgotPasswordPage() {
                       />
                     </div>
                   </div>
-                  <Button type="submit" className="w-full" disabled={loading}>
+                  <Button type="submit" className="w-full" disabled={loading || blocked}>
                     {loading ? "Wird gesendet..." : "Link senden"}
                   </Button>
                 </form>

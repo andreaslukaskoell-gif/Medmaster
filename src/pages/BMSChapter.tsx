@@ -8,6 +8,7 @@ import DiagramSVG from "@/components/diagrams/DiagramSVG";
 import { allBmsQuestions } from "@/data/bms/index";
 import type { Chapter } from "@/data/bmsChapters";
 import { KapitelHeader } from "@/components/chapter/KapitelHeader";
+import { sanitizeHtml } from "@/lib/security";
 import { LernzielBox } from "@/components/chapter/LernzielBox";
 import { MerksatzBox } from "@/components/chapter/MerksatzBox";
 import { KeyFactsGrid } from "@/components/chapter/KeyFactsGrid";
@@ -148,7 +149,7 @@ export default function BMSChapter({ chapter, onBack }: Props) {
                 </h2>
                 <div
                   className="text-base text-[var(--text-primary)] leading-relaxed whitespace-pre-line"
-                  dangerouslySetInnerHTML={{ __html: section.content }}
+                  dangerouslySetInnerHTML={{ __html: sanitizeHtml(section.content) }}
                 />
 
                 {section.vergleichsTabelle && (

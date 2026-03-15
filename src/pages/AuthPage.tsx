@@ -9,6 +9,7 @@ import { usePageTitle } from "@/hooks/usePageTitle";
 import { translateAuthError } from "@/lib/authErrors";
 import { trackSignup, trackLogin } from "@/lib/analytics";
 import { trackEvent, getStoredRef, getStoredUtm } from "@/lib/analyticsTracker";
+import { useThrottle } from "@/hooks/useThrottle";
 
 export default function AuthPage() {
   usePageTitle("Anmelden");
@@ -25,6 +26,7 @@ export default function AuthPage() {
   const { signIn, signUp, signInWithGoogle, signInWithOtp } = useAuth();
   const { setMedATOnboardingComplete } = useStore();
   const navigate = useNavigate();
+  const { blocked, remainingCooldown, checkThrottle } = useThrottle(5, 60_000, 30_000);
 
   const handleGoogle = async () => {
     setError("");
@@ -41,6 +43,7 @@ export default function AuthPage() {
   const handleMagicLink = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email.trim()) return;
+    if (!checkThrottle()) return;
     setError("");
     setLoading(true);
     const { error } = await signInWithOtp(email);
@@ -58,6 +61,7 @@ export default function AuthPage() {
     setError("");
 
     if (!email.trim()) return;
+    if (!checkThrottle()) return;
     if (password.length < 6) {
       setError("Passwort muss mindestens 6 Zeichen haben.");
       return;
@@ -155,7 +159,13 @@ export default function AuthPage() {
 
         <Card>
           <CardContent className="p-6 space-y-5">
-            {error && (
+            {blocked && (
+              <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg p-3 text-sm text-amber-700 dark:text-amber-400">
+                Zu viele Versuche. Bitte warte {remainingCooldown} Sekunden.
+              </div>
+            )}
+
+            {error && !blocked && (
               <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-3 text-sm text-red-700 dark:text-red-400">
                 {error}
               </div>

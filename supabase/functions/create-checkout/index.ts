@@ -89,8 +89,8 @@ serve(async (req) => {
     });
   } catch (err) {
     console.error("Checkout error:", err);
-    const message = err instanceof Error ? err.message : "Interner Fehler";
-    return new Response(JSON.stringify({ message }), {
+    // Don't leak internal error details to the client
+    return new Response(JSON.stringify({ message: "Interner Fehler" }), {
       status: 500,
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });

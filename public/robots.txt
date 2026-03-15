@@ -4,6 +4,14 @@ Disallow: /app/
 Disallow: /dashboard
 Disallow: /onboarding
 Disallow: /admin/
+Disallow: /einstellungen
+Disallow: /statistik
+Disallow: /simulation
+Disallow: /lernplan
+Disallow: /schwachstellen
+Disallow: /prognose
+Disallow: /performance
+Disallow: /fortschritt
 
 # AI Crawlers
 User-agent: GPTBot

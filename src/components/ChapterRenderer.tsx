@@ -3,6 +3,7 @@ import { normalizeChapterContent } from "@/utils/normalizeChapterContent";
 import { parseContentStructure } from "@/lib/contentStructure";
 import { QuestionsWidget } from "@/components/QuestionsWidget";
 import { InteractiveQuiz } from "@/components/chapter/InteractiveQuiz";
+import { sanitizeHtml } from "@/lib/security";
 
 type Props = {
   rawText: string;
@@ -148,7 +149,7 @@ export function ChapterRenderer({ rawText }: Props) {
       <div className="content prose prose-lg max-w-none">
         <div
           dangerouslySetInnerHTML={{
-            __html: formatText(body, true),
+            __html: sanitizeHtml(formatText(body, true)),
           }}
         />
       </div>

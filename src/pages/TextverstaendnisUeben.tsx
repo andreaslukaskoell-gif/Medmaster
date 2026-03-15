@@ -1,4 +1,5 @@
 import { useState, useMemo, useCallback } from "react";
+import { sanitizeHtml } from "@/lib/security";
 import {
   Filter,
   CheckCircle2,
@@ -267,7 +268,7 @@ export default function TextverstaendnisUeben() {
           <h2 className="text-lg font-bold text-[var(--text-primary)] mb-4">{currentText.title}</h2>
           <div
             className="prose prose-sm dark:prose-invert max-w-none text-base leading-relaxed"
-            dangerouslySetInnerHTML={{ __html: textHtml.replace(/\n/g, "<br/>") }}
+            dangerouslySetInnerHTML={{ __html: sanitizeHtml(textHtml.replace(/\n/g, "<br/>")) }}
           />
         </div>
 

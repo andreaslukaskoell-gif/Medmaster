@@ -7,11 +7,6 @@ export function AuthGuard({ children }: { children: ReactNode }) {
   const { isAuthenticated, loading } = useAuth();
   const [timedOut, setTimedOut] = useState(false);
 
-  // Development: skip auth check so protected pages are directly reachable
-  if (import.meta.env.DEV && !import.meta.env.PROD) {
-    return <>{children}</>;
-  }
-
   // Give auth 6s to resolve before showing a retry option (not a redirect)
   useEffect(() => {
     if (!loading) {
@@ -21,6 +16,13 @@ export function AuthGuard({ children }: { children: ReactNode }) {
     const timer = setTimeout(() => setTimedOut(true), 6000);
     return () => clearTimeout(timer);
   }, [loading]);
+
+  // Development: skip auth check so protected pages are directly reachable.
+  // Vite guarantees import.meta.env.DEV === false in production builds,
+  // but we double-check with PROD as a safety net.
+  if (import.meta.env.DEV && !import.meta.env.PROD) {
+    return <>{children}</>;
+  }
 
   if (loading && !timedOut) {
     return (
