@@ -27,15 +27,15 @@ import { updateStichwortProgress } from "../lib/kontrollfragenProgress";
 import { getReviewDaysFromStreak } from "../lib/utils";
 import { useAdaptiveStore } from "../store/adaptiveLearning";
 import type { Kapitel } from "../data/bmsKapitel/types";
+import { trackEvent } from "@/lib/analyticsTracker";
+import { sanitizeHtml } from "@/lib/security";
 
 interface Props {
   kapitel: Kapitel;
   unterkapitelIndex: number;
   onBack: () => void;
   onNavigate: (index: number) => void;
-  /** Go to previous chapter's last Unterkapitel (book-like). */
   onPrevChapter?: () => void;
-  /** Go to next chapter's first Unterkapitel (book-like). */
   onNextChapter?: () => void;
 }
 
@@ -46,7 +46,6 @@ const subjectLabels: Record<string, string> = {
   mathematik: "Mathematik",
 };
 
-/** Thin accent color for subject label — small indicator, OK to keep per-subject. */
 const subjectAccentVars: Record<string, string> = {
   biologie: "var(--accent-bio)",
   chemie: "var(--accent-chem)",
@@ -74,7 +73,11 @@ export default function BMSUnterkapitel({
       : null;
   const ukId = ukFromIndex?.id;
 
-  // BUG-1 fix: useStore called unconditionally at the top level, before any early returns
+  // Track chapter open
+  useEffect(() => {
+    if (ukId) trackEvent("chapter_open", { chapter: kapitelId, subchapter: ukId });
+  }, [ukId, kapitelId]);
+
   const store = useStore();
   const completedChapters = store.completedChapters || [];
   const completeChapter = store.completeChapter || (() => {});
@@ -88,7 +91,6 @@ export default function BMSUnterkapitel({
   const logActivity = store.logActivity ?? (() => {});
   const getMinutes = useSessionTimer();
 
-  // Derive safe values that don't depend on uk being valid yet
   const unterkapitel =
     kapitel?.unterkapitel && Array.isArray(kapitel.unterkapitel) ? kapitel.unterkapitel : [];
   const total = unterkapitel.length;
@@ -97,22 +99,19 @@ export default function BMSUnterkapitel({
       ? unterkapitel[unterkapitelIndex]
       : null;
 
-  // BUG-4 fix: isFirst / isLast declared before the keyboard useEffect that uses them
   const isLast = unterkapitelIndex === total - 1;
   const isFirst = unterkapitelIndex === 0;
 
-  // Additional state — all useState calls unconditionally at top level
   const [noteText, setNoteText] = useState(notes[uk?.id || ""] || "");
   const [showNotes, setShowNotes] = useState(false);
   const [bridgeOpen, setBridgeOpen] = useState(false);
   const [hinterfragMode, setHinterfragMode] = useState(false);
   const [quickReviewMode, setQuickReviewMode] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [stickyVisible, setStickyVisible] = useState(false);
   const allCompleteFired = useRef(false);
-  /** Sammelt Kontrollfragen-Antworten für Einspeisung in Analyse (quizResults). */
   const kontrollResultsRef = useRef<{ questionIndex: number; correct: boolean }[]>([]);
 
-  // Reading time: ~200 words/minute — useMemo unconditionally at top level
   const readingTimeMin = useMemo(() => {
     const text = [uk?.content ?? "", ...(uk?.sections?.map((s) => s.text ?? "") ?? [])].join(" ");
     const words = text.trim().split(/\s+/).filter(Boolean).length;
@@ -141,25 +140,23 @@ export default function BMSUnterkapitel({
     ]);
   }, [kapitel, ukFromIndex?.title, setBreadcrumbs]);
 
-  // Scroll to top whenever the UK changes (navigation between Unterkapitel)
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [ukId]);
 
-  // Reading progress bar tracking
   useEffect(() => {
     const update = () => {
       const el = document.documentElement;
       const scrolled = el.scrollTop || document.body.scrollTop;
-      const total = el.scrollHeight - el.clientHeight;
-      setScrollProgress(total > 0 ? Math.min(100, (scrolled / total) * 100) : 0);
+      const totalHeight = el.scrollHeight - el.clientHeight;
+      setScrollProgress(totalHeight > 0 ? Math.min(100, (scrolled / totalHeight) * 100) : 0);
+      setStickyVisible(scrolled > 200);
     };
     window.addEventListener("scroll", update, { passive: true });
     update();
     return () => window.removeEventListener("scroll", update);
   }, [ukId]);
 
-  // Schema-Validierung beim Laden: Fehler in Konsole loggen (F12), damit du siehst, wo im JSON der Fehler liegt
   useEffect(() => {
     if (!kapitel || !ukFromIndex) return;
     const kRes = validateKapitel(kapitel, `Kapitel ${kapitel.id}`);
@@ -176,11 +173,9 @@ export default function BMSUnterkapitel({
     (u) => u && u.id && completedChapters.includes(u.id)
   ).length;
 
-  // Derived booleans — computed defensively (uk may be null before early returns)
   const isBookmarked = uk ? bookmarks.chapters.includes(uk.id) : false;
   const isCompleted = uk ? completedChapters.includes(uk.id) : false;
 
-  // All event handlers that keyboard useEffect depends on — declared BEFORE the useEffect
   const handleComplete = () => {
     if (!uk || !kapitel) return;
     if (!isCompleted) {
@@ -191,7 +186,7 @@ export default function BMSUnterkapitel({
     const newCompletedCount = completedCount + (isCompleted ? 0 : 1);
     if (newCompletedCount === total) {
       completeChapter(kapitel.id);
-      addXP(50); // +50 XP beim Abschluss des gesamten Kapitels
+      addXP(50);
     }
   };
 
@@ -220,8 +215,6 @@ export default function BMSUnterkapitel({
 
   const canGoPrev = !isFirst || !!onPrevChapter;
 
-  // Keyboard navigation: ← → for prev/next UK, R to toggle Quick Review
-  // BUG-4 fix: isFirst/isLast are now declared above this useEffect
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
       const tag = (e.target as HTMLElement)?.tagName;
@@ -253,7 +246,6 @@ export default function BMSUnterkapitel({
     }
   };
 
-  // useStore selector called unconditionally at top level (not inside handler)
   const updateChapterSRS = useStore((s) => s.updateChapterSRS);
 
   const handleAllKontrollfragenComplete = (correctCount?: number, totalArg?: number) => {
@@ -292,8 +284,7 @@ export default function BMSUnterkapitel({
     setTimeout(() => onBack(), 1200);
   };
 
-  // BUG-3 fix: selfTestBlock useMemo before all early returns, guarded for null uk
-  // eslint-disable-next-line react-hooks/preserve-manual-memoization -- deps intentionally minimal to avoid re-creating block
+  // eslint-disable-next-line react-hooks/preserve-manual-memoization -- deps intentionally minimal
   const selfTestBlock = useMemo(() => {
     if (!uk || !uk.id) return null;
     const questionsFromArray =
@@ -317,7 +308,6 @@ export default function BMSUnterkapitel({
     );
   }, [uk?.selfTest, uk?.content, kapitel?.id, uk?.id]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  // Defensive checks for chapter and subchapter data
   if (!kapitel || !kapitel.id) {
     return (
       <div className="w-full max-w-4xl mx-auto p-6 text-center">
@@ -360,25 +350,66 @@ export default function BMSUnterkapitel({
     );
   }
 
-  // After early returns, uk is guaranteed non-null and uk.id is valid
-
-  const [toolsOpen, setToolsOpen] = useState(false);
+  const nextUk = !isLast ? unterkapitel[unterkapitelIndex + 1] : null;
+  const prevUk = !isFirst ? unterkapitel[unterkapitelIndex - 1] : null;
+  const accentColor = subjectAccentVars[kapitel.subject] ?? "var(--accent)";
 
   return (
-    <div className="w-full max-w-4xl mx-auto pb-16 relative px-0">
-      {/* Reading progress bar — fixed at top */}
-      <div className="fixed top-0 left-0 right-0 z-[200] h-0.5 bg-transparent pointer-events-none">
+    <div className="w-full max-w-5xl mx-auto pb-16 relative px-0">
+      {/* Reading progress bar */}
+      <div className="fixed top-0 left-0 right-0 z-[200] h-[3px] bg-transparent pointer-events-none">
         <div
-          className="h-full transition-all duration-100 bg-[var(--accent)]"
-          style={{ width: `${scrollProgress}%` }}
+          className="h-full transition-all duration-150"
+          style={{ width: `${scrollProgress}%`, backgroundColor: accentColor }}
         />
       </div>
 
-      {/* Minimal top bar: back + essential actions */}
-      <div className="flex items-center justify-between mb-8">
+      {/* Sticky reading header — appears on scroll */}
+      <div
+        className={`fixed top-0 left-0 right-0 z-[190] transition-all duration-200 ${
+          stickyVisible
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 -translate-y-full pointer-events-none"
+        }`}
+      >
+        <div className="bg-[var(--background)]/95 backdrop-blur-sm border-b border-[var(--border)]/60">
+          <div className="max-w-5xl mx-auto px-4 lg:px-6 py-2 flex items-center justify-between gap-4">
+            <button
+              onClick={onBack}
+              className="text-[var(--muted)] hover:text-[var(--text-primary)] transition-colors shrink-0 cursor-pointer"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+            <div className="flex-1 min-w-0 flex items-center gap-3">
+              <span
+                className="w-2 h-2 rounded-full shrink-0"
+                style={{ backgroundColor: accentColor }}
+              />
+              <span className="text-sm font-medium text-[var(--text-primary)] truncate">
+                {uk.title}
+              </span>
+              <span className="text-xs text-[var(--muted)] shrink-0">
+                {unterkapitelIndex + 1}/{total}
+              </span>
+            </div>
+            <div className="flex items-center gap-1 shrink-0">
+              <button
+                onClick={() => toggleBookmarkChapter(uk.id)}
+                className={`p-1.5 rounded-lg cursor-pointer transition-colors ${isBookmarked ? "text-[var(--accent)]" : "text-[var(--muted)] hover:text-[var(--text-primary)]"}`}
+                title="Lesezeichen"
+              >
+                <Bookmark className={`w-4 h-4 ${isBookmarked ? "fill-current" : ""}`} />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Top bar: back + tools */}
+      <div className="flex items-center justify-between mb-10">
         <Button variant="ghost" size="sm" onClick={onBack} className="text-[var(--muted)]">
           <ChevronLeft className="w-4 h-4 mr-1" />
-          Zurück
+          {kapitel.title}
         </Button>
         <div className="flex items-center gap-1">
           <button
@@ -388,85 +419,74 @@ export default function BMSUnterkapitel({
           >
             <Bookmark className={`w-4 h-4 ${isBookmarked ? "fill-current" : ""}`} />
           </button>
-          <div className="relative">
-            <button
-              onClick={() => setToolsOpen(!toolsOpen)}
-              className="p-2 rounded-lg cursor-pointer text-[var(--muted)] hover:text-[var(--text-primary)] transition-colors"
-              title="Lernwerkzeuge"
-            >
-              <Zap className="w-4 h-4" />
-            </button>
-            {toolsOpen && (
-              <>
-                <div className="fixed inset-0 z-40" onClick={() => setToolsOpen(false)} />
-                <div className="absolute right-0 top-full mt-1 z-50 w-56 rounded-lg border border-[var(--border)] bg-[var(--card)] shadow-lg py-1">
-                  <button
-                    onClick={() => {
-                      setShowNotes(!showNotes);
-                      setToolsOpen(false);
-                    }}
-                    className="w-full flex items-center gap-3 px-3 py-2 text-sm text-[var(--text-primary)] hover:bg-[var(--surface)] transition-colors"
-                  >
-                    <StickyNote className="w-4 h-4 text-[var(--muted)]" />
-                    <span>Notizen {showNotes ? "ausblenden" : "anzeigen"}</span>
-                  </button>
-                  <button
-                    onClick={() => {
-                      setBridgeOpen(true);
-                      setToolsOpen(false);
-                    }}
-                    className="w-full flex items-center gap-3 px-3 py-2 text-sm text-[var(--text-primary)] hover:bg-[var(--surface)] transition-colors"
-                  >
-                    <Network className="w-4 h-4 text-[var(--muted)]" />
-                    <span>Verknüpfte Themen</span>
-                  </button>
-                  <button
-                    onClick={() => {
-                      setHinterfragMode(!hinterfragMode);
-                      setToolsOpen(false);
-                    }}
-                    className="w-full flex items-center gap-3 px-3 py-2 text-sm text-[var(--text-primary)] hover:bg-[var(--surface)] transition-colors"
-                  >
-                    <HelpCircle className="w-4 h-4 text-[var(--muted)]" />
-                    <span>Hinterfrag-Modus {hinterfragMode ? "aus" : "an"}</span>
-                  </button>
-                  <button
-                    onClick={() => {
-                      setQuickReviewMode(!quickReviewMode);
-                      setToolsOpen(false);
-                    }}
-                    className="w-full flex items-center gap-3 px-3 py-2 text-sm text-[var(--text-primary)] hover:bg-[var(--surface)] transition-colors"
-                  >
-                    <Zap className="w-4 h-4 text-[var(--muted)]" />
-                    <span>Quick Review {quickReviewMode ? "aus" : "an"}</span>
-                  </button>
-                </div>
-              </>
-            )}
-          </div>
+          <button
+            onClick={() => setShowNotes(!showNotes)}
+            className={`p-2 rounded-lg cursor-pointer transition-colors ${showNotes ? "text-[var(--accent)]" : "text-[var(--muted)] hover:text-[var(--text-primary)]"}`}
+            title="Notizen"
+          >
+            <StickyNote className="w-4 h-4" />
+          </button>
+          <button
+            onClick={() => setBridgeOpen(true)}
+            className="p-2 rounded-lg cursor-pointer text-[var(--muted)] hover:text-[var(--text-primary)] transition-colors"
+            title="Verknüpfte Themen"
+          >
+            <Network className="w-4 h-4" />
+          </button>
+          <button
+            onClick={() => setHinterfragMode(!hinterfragMode)}
+            className={`p-2 rounded-lg cursor-pointer transition-colors ${hinterfragMode ? "text-[var(--accent)]" : "text-[var(--muted)] hover:text-[var(--text-primary)]"}`}
+            title="Hinterfrag-Modus"
+          >
+            <HelpCircle className="w-4 h-4" />
+          </button>
+          <button
+            onClick={() => setQuickReviewMode(!quickReviewMode)}
+            className={`p-2 rounded-lg cursor-pointer transition-colors ${quickReviewMode ? "text-[var(--accent)]" : "text-[var(--muted)] hover:text-[var(--text-primary)]"}`}
+            title="Quick Review (R)"
+          >
+            <Zap className="w-4 h-4" />
+          </button>
           <QuickEdit data={uk} storageKey={uk.id} label="Unterkapitel bearbeiten (Dev)" />
         </div>
       </div>
 
       <ContentErrorBoundary context={uk.id}>
-        {/* Clean header: chapter context + title */}
-        <header className="mb-8">
-          <p
-            className="text-sm font-medium mb-1"
-            style={{ color: subjectAccentVars[kapitel.subject] ?? "var(--accent)" }}
-          >
-            {kapitel.title} · {unterkapitelIndex + 1}/{total}
-          </p>
-          <h1 className="text-2xl font-bold text-[var(--text-primary)] mb-2">{uk.title}</h1>
-          <span className="flex items-center gap-1 text-xs text-[var(--muted)]">
-            <Clock className="w-3 h-3" aria-hidden />
-            Ca. {readingTimeMin} Min Lesezeit
-          </span>
+        {/* Header */}
+        <header className="mb-12">
+          <div className="flex items-center gap-3 mb-4">
+            <span
+              className="text-[11px] font-bold uppercase tracking-widest px-2.5 py-1 rounded"
+              style={{
+                color: accentColor,
+                backgroundColor: `color-mix(in srgb, ${accentColor} 8%, transparent)`,
+              }}
+            >
+              {subjectLabels[kapitel.subject]}
+            </span>
+            <span className="text-sm text-[var(--muted)]">
+              {kapitel.title} &middot; {unterkapitelIndex + 1} von {total}
+            </span>
+          </div>
+          <h1 className="text-3xl font-bold text-[var(--text-primary)] leading-tight mb-3">
+            {uk.title}
+          </h1>
+          <div className="flex items-center gap-4 text-sm text-[var(--muted)]">
+            <span className="flex items-center gap-1.5">
+              <Clock className="w-3.5 h-3.5" aria-hidden />
+              {readingTimeMin} Min Lesezeit
+            </span>
+            {isCompleted && (
+              <span className="text-emerald-600 dark:text-emerald-400 font-medium">
+                Abgeschlossen
+              </span>
+            )}
+          </div>
         </header>
 
         {/* Notes panel */}
         {showNotes && (
-          <div className="mb-8 p-4 rounded-lg border border-yellow-200 dark:border-yellow-800 bg-yellow-50/50 dark:bg-yellow-900/10">
+          <div className="mb-10 p-5 rounded-lg border border-yellow-200 dark:border-yellow-800 bg-yellow-50/50 dark:bg-yellow-900/10">
             <h3 className="text-sm font-semibold text-yellow-800 dark:text-yellow-300 flex items-center gap-2 mb-3">
               <StickyNote className="w-4 h-4" />
               Meine Notizen
@@ -483,7 +503,7 @@ export default function BMSUnterkapitel({
           </div>
         )}
 
-        {/* Quick Review Mode: nur Merksätze der Sections */}
+        {/* Quick Review Mode */}
         {quickReviewMode ? (
           <div className="space-y-3">
             <div className="flex items-center gap-2 py-2 px-3 rounded-lg bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800">
@@ -498,18 +518,20 @@ export default function BMSUnterkapitel({
                 .map((s, i) => (
                   <div
                     key={i}
-                    className="rounded-xl border border-yellow-200 dark:border-yellow-800 bg-yellow-50/60 dark:bg-yellow-900/10 p-4 space-y-1"
+                    className="rounded-lg border-l-4 border-[var(--accent)] bg-[var(--accent)]/5 dark:bg-[var(--accent)]/10 p-4 space-y-1"
                   >
-                    <p className="text-xs font-semibold text-yellow-700 dark:text-yellow-400 uppercase tracking-wide">
+                    <p className="text-xs font-semibold text-[var(--accent)] uppercase tracking-wide">
                       {s.heading}
                     </p>
                     <p
                       className="text-sm text-[var(--text-primary)] leading-relaxed"
                       // Content is from our own chapter data files, not user input
                       dangerouslySetInnerHTML={{
-                        __html: (s.merksatz ?? "").replace(
-                          /\*\*(.*?)\*\*/g,
-                          '<strong class="font-semibold">$1</strong>'
+                        __html: sanitizeHtml(
+                          (s.merksatz ?? "").replace(
+                            /\*\*(.*?)\*\*/g,
+                            '<strong class="font-semibold">$1</strong>'
+                          )
                         ),
                       }}
                     />
@@ -522,7 +544,6 @@ export default function BMSUnterkapitel({
             )}
           </div>
         ) : (
-          /* Main content: no Card wrapper, content breathes directly */
           <>
             <div className="relative">
               <ContentErrorBoundary context={`${kapitel?.id ?? "chapter"}-${uk?.id ?? "uk"}`}>
@@ -535,12 +556,11 @@ export default function BMSUnterkapitel({
               </ContentErrorBoundary>
             </div>
 
-            {/* Altfrage + Kontrollfragen: flow naturally after content */}
-            <div className="w-full lg:max-w-[calc(100%-240px)] lg:ml-[240px] min-w-0 space-y-8 mt-8">
-              {/* Altfrage — subtle border-left instead of heavy card */}
+            {/* Altfrage + Kontrollfragen */}
+            <div className="w-full lg:max-w-[680px] lg:ml-[268px] min-w-0 space-y-10 mt-12">
               {uk.altfrage && (
-                <div className="pl-4 border-l-2 border-amber-400 dark:border-amber-600">
-                  <h3 className="text-sm font-semibold text-[var(--text-primary)] mb-2">
+                <div className="rounded-lg border border-amber-200 dark:border-amber-800 bg-amber-50/50 dark:bg-amber-900/10 p-5">
+                  <h3 className="text-[13px] font-bold uppercase tracking-wider text-amber-700 dark:text-amber-300 mb-3">
                     Altfragen-Klassiker
                   </h3>
                   {"text" in uk.altfrage ? (
@@ -562,10 +582,10 @@ export default function BMSUnterkapitel({
                         ))}
                       </ul>
                       <details className="group">
-                        <summary className="text-sm text-[var(--accent)] cursor-pointer hover:underline">
+                        <summary className="text-sm text-[var(--accent)] cursor-pointer hover:underline font-medium">
                           Antwort anzeigen
                         </summary>
-                        <p className="text-sm text-[var(--text-secondary)] mt-2 pl-4 border-l-2 border-[var(--border)]">
+                        <p className="text-sm text-[var(--text-secondary)] mt-3 pl-4 border-l-2 border-amber-300 dark:border-amber-700">
                           <span className="font-semibold text-[var(--text-primary)]">
                             Richtig: {uk.altfrage.correctOptionId.toUpperCase()}
                           </span>{" "}
@@ -579,10 +599,10 @@ export default function BMSUnterkapitel({
                         {uk.altfrage.question}
                       </p>
                       <details className="group">
-                        <summary className="text-sm text-[var(--accent)] cursor-pointer hover:underline">
+                        <summary className="text-sm text-[var(--accent)] cursor-pointer hover:underline font-medium">
                           Antwort anzeigen
                         </summary>
-                        <p className="text-sm text-[var(--text-secondary)] mt-2 pl-4 border-l-2 border-[var(--border)]">
+                        <p className="text-sm text-[var(--text-secondary)] mt-3 pl-4 border-l-2 border-amber-300 dark:border-amber-700">
                           {uk.altfrage.answer}
                         </p>
                       </details>
@@ -591,26 +611,57 @@ export default function BMSUnterkapitel({
                 </div>
               )}
 
-              {/* Kontrollfragen / Self-Test */}
               {selfTestBlock}
             </div>
           </>
         )}
 
-        {/* Navigation: Previous / Next */}
-        <div className="flex items-center justify-between pt-8 mt-12 border-t border-[var(--border)]">
-          <Button variant="outline" onClick={handlePrev} disabled={!canGoPrev}>
-            <ArrowLeft className="w-4 h-4 mr-1" />
-            {isFirst && onPrevChapter ? "Vorheriges Kapitel" : "Zurück"}
-          </Button>
-
-          <Button onClick={handleNext}>
-            {isLast && !onNextChapter ? "Kapitel abschließen" : "Weiter"}
-            {(!isLast || onNextChapter) && <ArrowRight className="w-4 h-4 ml-1" />}
-          </Button>
+        {/* Navigation: Previous / Next — with preview */}
+        <div className="mt-16 pt-8 border-t border-[var(--border)]">
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              {canGoPrev && (
+                <button
+                  onClick={handlePrev}
+                  className="w-full text-left p-4 rounded-lg border border-[var(--border)] hover:border-[var(--accent)]/30 hover:bg-[var(--surface)] transition-colors group cursor-pointer"
+                >
+                  <div className="flex items-center gap-2 text-sm text-[var(--muted)] mb-1">
+                    <ArrowLeft className="w-3.5 h-3.5" />
+                    <span>{isFirst && onPrevChapter ? "Vorheriges Kapitel" : "Zurück"}</span>
+                  </div>
+                  {prevUk && (
+                    <p className="text-sm font-medium text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors truncate">
+                      {prevUk.title}
+                    </p>
+                  )}
+                </button>
+              )}
+            </div>
+            <div>
+              <button
+                onClick={handleNext}
+                className="w-full text-left p-4 rounded-lg border border-[var(--border)] hover:border-[var(--accent)]/30 hover:bg-[var(--surface)] transition-colors group cursor-pointer"
+              >
+                <div className="flex items-center justify-end gap-2 text-sm text-[var(--muted)] mb-1">
+                  <span>{isLast && !onNextChapter ? "Kapitel abschließen" : "Weiter"}</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </div>
+                {nextUk && (
+                  <p className="text-sm font-medium text-[var(--text-primary)] text-right group-hover:text-[var(--accent)] transition-colors truncate">
+                    {nextUk.title}
+                  </p>
+                )}
+                {isLast && !onNextChapter && (
+                  <p className="text-sm font-medium text-emerald-600 dark:text-emerald-400 text-right">
+                    Kapitel abschließen
+                  </p>
+                )}
+              </button>
+            </div>
+          </div>
         </div>
 
-        {/* Dev-only: Status-Overlay am Seitenende */}
+        {/* Dev-only status */}
         {import.meta.env.DEV && (
           <div className="mt-6 py-3 px-4 rounded-lg bg-[var(--surface)] border border-[var(--border)] text-xs text-[var(--muted)]">
             <div className="flex flex-wrap items-center gap-x-4 gap-y-2">

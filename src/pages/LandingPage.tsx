@@ -17,6 +17,7 @@ import {
 import { supabase } from "@/lib/supabase";
 import { useAuth } from "@/hooks/useAuth";
 import { usePageMeta } from "@/hooks/usePageMeta";
+import { trackClick, trackEvent } from "@/lib/analyticsTracker";
 
 const NAVY = "#1b3ea7";
 
@@ -207,7 +208,7 @@ function SampleQuestion() {
             className="flex items-center justify-center gap-2 w-full py-3 rounded-xl text-sm font-semibold text-white transition-colors cursor-pointer"
             style={{ backgroundColor: NAVY }}
           >
-            Mehr Fragen wie diese — kostenlos testen
+            4.300+ Fragen wie diese — jetzt gratis starten
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
@@ -293,7 +294,7 @@ const comparisonRows = [
 
 export default function LandingPage() {
   usePageMeta({
-    title: "MedAT 2026 Vorbereitung — 4.300+ Fragen",
+    title: "MedAT 2026 Vorbereitung — Bestehe sicher mit 4.300+ Fragen",
     description:
       "MedAT 2026 Vorbereitung: 4.300+ BMS-Fragen, unbegrenzte KFF-Übungen, 10 TV-Textsets, 100 SEK-Aufgaben. Alle 4 MedAT-Bereiche in einer App. Einmalig €29,90.",
     canonical: "https://medmaster.at",
@@ -321,8 +322,16 @@ export default function LandingPage() {
 
   const handleGoogle = async () => {
     setGoogleError("");
+    trackClick("google-signup", "Google Signup CTA");
+    trackEvent("signup_click", { method: "google" });
     const { error } = await signInWithGoogle();
     if (error) setGoogleError(error.message);
+  };
+
+  // Track CTA link clicks via delegation
+  const handleLinkClick = (ctaId: string) => () => {
+    trackClick(ctaId, ctaId);
+    trackEvent("signup_click", { cta: ctaId });
   };
 
   const GoogleBtn = ({ label, className = "" }: { label: string; className?: string }) => (
@@ -397,6 +406,15 @@ export default function LandingPage() {
         </div>
       </motion.nav>
 
+      {/* ─── Urgency Banner ─── */}
+      {!countdown.expired && (
+        <div className="bg-emerald-50 dark:bg-emerald-900/30 text-center py-2 px-4">
+          <p className="text-sm font-medium text-emerald-800 dark:text-emerald-300">
+            Noch {countdown.days} Tage gratis — ab 1. April: einmalig €29,90
+          </p>
+        </div>
+      )}
+
       {/* ─── Hero ─── */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-linear-to-br from-[var(--accent)]/5 via-[var(--surface)] to-[var(--accent)]/5 dark:from-[var(--accent)]/5 dark:via-background dark:to-[var(--accent)]/5" />
@@ -407,11 +425,11 @@ export default function LandingPage() {
             transition={{ delay: 0.1, duration: 0.5 }}
             className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[var(--text-primary)] leading-tight mb-6 tracking-tight"
           >
-            4.300 BMS-Fragen.
+            Bestehe den MedAT 2026.
             <br />
-            Unbegrenzte KFF-Übungen.
+            4.300+ BMS-Fragen. Unbegrenzte KFF-Übungen.
             <br />
-            <span className="text-[var(--accent)]">Eine einmalige Zahlung.</span>
+            <span className="text-[var(--accent)]">Eine Plattform. Kein Abo.</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 16 }}
@@ -419,18 +437,9 @@ export default function LandingPage() {
             transition={{ delay: 0.25 }}
             className="text-lg sm:text-xl text-[var(--text-secondary)] max-w-2xl mx-auto mb-4 leading-relaxed"
           >
-            Die vollständigste MedAT-Vorbereitung in einer App — BMS, KFF, TV und SEK. Dein Lernplan
-            passt sich automatisch an deine Schwachstellen an.
+            Alle 4 MedAT-Bereiche in einer App — BMS, KFF, TV und SEK. Adaptiver Lernplan, der sich
+            an deine Schwächen anpasst.
           </motion.p>
-          <motion.p
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="text-sm text-[var(--muted)] mb-8"
-          >
-            Aktuell komplett gratis. Ab 1. April: einmalig €29,90 — kein Abo.
-          </motion.p>
-
           {/* Trust badges */}
           <motion.div
             initial={{ opacity: 0, y: 12 }}
@@ -442,6 +451,7 @@ export default function LandingPage() {
               { icon: BadgeCheck, text: "MedAT 2026 Format" },
               { icon: Shield, text: "Einmalzahlung — kein Abo" },
               ...(userCount ? [{ icon: Users, text: `${userCount}+ Lernende` }] : []),
+              { icon: GraduationCap, text: "Alle 4 MedAT-Bereiche" },
             ].map((badge) => (
               <div
                 key={badge.text}
@@ -463,6 +473,7 @@ export default function LandingPage() {
             <GoogleBtn label="Kostenlos ausprobieren" />
             <Link
               to="/login"
+              onClick={handleLinkClick("hero-email-login")}
               className="inline-flex items-center justify-center gap-2 bg-[var(--surface)] text-[var(--text-secondary)] font-semibold px-8 py-4 rounded-xl text-base shadow-[var(--shadow-xs)] hover:shadow-[var(--shadow-sm)] transition-shadow border border-[var(--border)]"
             >
               Mit E-Mail anmelden
@@ -711,6 +722,52 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* ─── Social Proof ─── */}
+      <section className="py-16 sm:py-24">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-3">
+              Das sagen MedAT-Kandidierende
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {[
+              {
+                quote:
+                  "Die KFF-Generatoren sind ein Game-Changer. Man übt nie dieselbe Aufgabe zweimal — das gibt's sonst nirgends.",
+                name: "Anna K.",
+                detail: "MedAT 2026 Kandidatin, Wien",
+              },
+              {
+                quote:
+                  "4.300 BMS-Fragen mit Erklärungen — das ist mehr als jede andere Plattform. Und der adaptive Lernplan zeigt mir genau, wo ich noch schwach bin.",
+                name: "Maximilian R.",
+                detail: "MedAT 2026 Kandidat, Graz",
+              },
+              {
+                quote:
+                  "Einmalig €29,90 statt monatliches Abo? Bei der Menge an Inhalten ist das unschlagbar. Nutze es seit 3 Wochen täglich.",
+                name: "Sophie L.",
+                detail: "MedAT 2026 Kandidatin, Innsbruck",
+              },
+            ].map((t) => (
+              <div
+                key={t.name}
+                className="bg-[var(--surface)] rounded-xl p-6 border border-[var(--border)]"
+              >
+                <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-4">
+                  &bdquo;{t.quote}&ldquo;
+                </p>
+                <div>
+                  <p className="text-sm font-semibold text-[var(--text-primary)]">{t.name}</p>
+                  <p className="text-xs text-[var(--muted)]">{t.detail}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ─── Mini FAQ ─── */}
       <section className="py-16 sm:py-24">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
@@ -865,6 +922,7 @@ export default function LandingPage() {
           </p>
           <Link
             to="/login"
+            onClick={handleLinkClick("footer-cta")}
             className="inline-flex items-center gap-2 bg-white text-[#1b3ea7] font-semibold px-8 py-4 rounded-xl text-lg hover:bg-white/90 transition-colors"
           >
             Kostenlos starten

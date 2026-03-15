@@ -8,6 +8,7 @@ import { useStore } from "@/store/useStore";
 import { usePageTitle } from "@/hooks/usePageTitle";
 import { translateAuthError } from "@/lib/authErrors";
 import { trackSignup, trackLogin } from "@/lib/analytics";
+import { trackEvent, getStoredRef, getStoredUtm } from "@/lib/analyticsTracker";
 
 export default function AuthPage() {
   usePageTitle("Anmelden");
@@ -28,6 +29,8 @@ export default function AuthPage() {
   const handleGoogle = async () => {
     setError("");
     setGoogleLoading(true);
+    trackEvent("login_click", { method: "google", ref: getStoredRef(), utm: getStoredUtm() });
+    trackSignup("google");
     const { error } = await signInWithGoogle();
     if (error) {
       setGoogleLoading(false);
@@ -75,6 +78,7 @@ export default function AuthPage() {
         }
       } else {
         trackSignup("email");
+        trackEvent("signup", { method: "email", ref: getStoredRef(), utm: getStoredUtm() });
         setMedATOnboardingComplete();
         navigate("/dashboard");
       }

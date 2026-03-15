@@ -3,6 +3,8 @@ import { supabase } from "@/lib/supabase";
 import { startAutoSync, stopAutoSync, pushStatsToSupabase } from "@/lib/syncService";
 import { startMainSync, stopMainSync } from "@/lib/sync";
 import { identifyUser, resetAnalytics } from "@/lib/analytics";
+import { setTrackerUserId } from "@/lib/analyticsTracker";
+import { sanitizeUrlParam } from "@/lib/security";
 import type { User, Session } from "@supabase/supabase-js";
 
 interface Profile {
@@ -137,6 +139,7 @@ export function useAuth() {
           name: p.display_name,
           tier: p.subscription_tier,
         });
+        setTrackerUserId(userId);
       } else {
         // Neuer User: kein Profil in DB → Standard-Profil für Welcome-State
         const {
@@ -167,7 +170,7 @@ export function useAuth() {
 
   async function signUp(email: string, password: string, username: string, birthDate?: string) {
     if (!supabase) return { error: new Error("Supabase nicht konfiguriert") };
-    const referredBy = sessionStorage.getItem("medmaster_ref") || null;
+    const referredBy = sanitizeUrlParam(sessionStorage.getItem("medmaster_ref"));
     const { error } = await supabase.auth.signUp({
       email,
       password,
@@ -212,6 +215,7 @@ export function useAuth() {
     stopAutoSync();
     stopMainSync();
     resetAnalytics();
+    setTrackerUserId(null);
     if (supabase) await supabase.auth.signOut();
     setUser(null);
     setProfile(null);

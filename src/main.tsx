@@ -7,6 +7,7 @@ import { ErrorBoundary } from "@/components/ErrorBoundary";
 import "@/index.css";
 import App from "@/App";
 import { initAnalytics, captureUtmParams } from "@/lib/analytics";
+import { initTracker, captureTrafficSource } from "@/lib/analyticsTracker";
 
 const dsn = import.meta.env.VITE_SENTRY_DSN;
 if (typeof dsn === "string" && dsn.trim().length > 0) {
@@ -21,6 +22,10 @@ if (typeof dsn === "string" && dsn.trim().length > 0) {
 // Analytics (PostHog) — noop if VITE_POSTHOG_KEY is missing
 initAnalytics();
 captureUtmParams();
+
+// Supabase analytics tracker (always active when Supabase is configured)
+initTracker();
+captureTrafficSource();
 
 const rootEl = document.getElementById("root");
 if (rootEl) {

@@ -14,6 +14,8 @@ import { AppShell } from "@/components/layout/AppShell";
 import { AuthGuard } from "@/components/AuthGuard";
 import { useAuth } from "@/hooks/useAuth";
 import { useStore } from "@/store/useStore";
+import { usePageTracking } from "@/hooks/usePageTracking";
+import { sanitizeUrlParam } from "@/lib/security";
 
 // Lazy-loaded pages — casing must match filenames exactly (Linux/Vercel is case-sensitive)
 const LandingPage = lazy(() => import("@/pages/LandingPage"));
@@ -57,6 +59,7 @@ const MedATGuide = lazy(() => import("@/pages/MedATGuide"));
 const MedATPunkterechner = lazy(() => import("@/pages/MedATPunkterechner"));
 const StichwortlistePublic = lazy(() => import("@/pages/StichwortlistePublic"));
 const KFFDemo = lazy(() => import("@/pages/KFFDemo"));
+const AnalyticsDashboard = lazy(() => import("@/pages/AnalyticsDashboard"));
 
 function LoadingSpinner() {
   return (
@@ -66,19 +69,20 @@ function LoadingSpinner() {
   );
 }
 
-/** Scrollt bei jedem Seitenwechsel nach oben + captures ?ref= and UTM params */
+/** Scrollt bei jedem Seitenwechsel nach oben + captures ?ref= and UTM params + tracks page views */
 function ScrollToTop() {
+  usePageTracking();
   const { pathname, search } = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
   useEffect(() => {
     const params = new URLSearchParams(search);
-    const ref = params.get("ref");
+    const ref = sanitizeUrlParam(params.get("ref"));
     if (ref) sessionStorage.setItem("medmaster_ref", ref);
-    // Persist UTM params for attribution
+    // Persist UTM params for attribution (validated against injection)
     for (const key of ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"]) {
-      const val = params.get(key);
+      const val = sanitizeUrlParam(params.get(key));
       if (val) sessionStorage.setItem(`medmaster_${key}`, val);
     }
   }, [search]);
@@ -111,8 +115,9 @@ function MedATGuard({ children }: { children: ReactNode }) {
 }
 
 function AdminGuard({ children }: { children: React.ReactNode }) {
-  const isDev = import.meta.env.DEV;
-  if (!isDev) {
+  // Admin pages (editor, audit, tasks) are dev-only.
+  // AnalyticsDashboard has its own password gate and is routed separately.
+  if (!import.meta.env.DEV) {
     return <Navigate to="/dashboard" replace />;
   }
   return <>{children}</>;
@@ -256,6 +261,8 @@ export default function App() {
                   </AdminGuard>
                 }
               />
+              {/* Analytics dashboard — password-protected, no AdminGuard needed */}
+              <Route path="/admin/analytics" element={<AnalyticsDashboard />} />
               <Route path="/prognose" element={<Prognose />} />
               <Route path="/performance" element={<PerformanceOverview />} />
               <Route path="/fortschritt" element={<FortschrittPage />} />
