@@ -7,6 +7,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { ShareResultButton } from "@/components/shared/ShareResultButton";
 import { allBmsQuestions } from "@/data/bms/index";
 import type { Question } from "@/data/bms/index";
+import { trackQuizComplete } from "@/lib/analytics";
+import { trackEvent } from "@/lib/analyticsTracker";
 
 const NAVY = "#1b3ea7";
 const QUESTION_COUNT = 5;
@@ -104,6 +106,13 @@ export default function QuizChallenge() {
     [questions, answers]
   );
   const pct = questions.length > 0 ? Math.round((score / questions.length) * 100) : 0;
+
+  // Track quiz completion when results are shown
+  useEffect(() => {
+    if (phase !== "results" || questions.length === 0) return;
+    trackQuizComplete("challenge", score, questions.length);
+    trackEvent("quiz_complete", { section: "challenge", subject, score, total: questions.length });
+  }, [phase]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Generate challenge link with same seed so friends get same questions
   const challengeLink = `https://medmaster.at/challenge?fach=${subject}&seed=${seed}`;

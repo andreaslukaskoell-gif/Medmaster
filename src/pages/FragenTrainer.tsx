@@ -47,6 +47,8 @@ import { usePageTitle } from "@/hooks/usePageTitle";
 import { useAuth } from "@/hooks/useAuth";
 import { useAdaptiveStore } from "@/store/adaptiveLearning";
 import { useLocation, useNavigate } from "react-router-dom";
+import { trackQuizComplete } from "@/lib/analytics";
+import { trackEvent } from "@/lib/analyticsTracker";
 
 // ── Constants ─────────────────────────────────────────────────
 
@@ -1098,6 +1100,13 @@ export default function FragenTrainer() {
             });
             useStore.getState().checkStreak();
             useStore.getState().logActivity(r.length, 0);
+            trackQuizComplete("fragentrainer", score, r.length);
+            trackEvent("quiz_complete", {
+              section: "fragentrainer",
+              subject: subjectLabel,
+              score,
+              total: r.length,
+            });
             setResults(r);
             setScreen("results");
           }}

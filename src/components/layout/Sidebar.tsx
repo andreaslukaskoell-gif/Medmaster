@@ -1,5 +1,5 @@
-import { useRef, useEffect, useState, useMemo } from "react";
-import { NavLink, useLocation, Link as RouterLink } from "react-router-dom";
+import { useRef, useEffect, useState, useMemo, useCallback } from "react";
+import { NavLink, useLocation, useSearchParams, Link as RouterLink } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   LayoutDashboard,
@@ -11,11 +11,11 @@ import {
   BarChart3,
   CalendarDays,
   ListChecks,
-  Menu,
   LogOut,
   Settings,
   ChevronDown,
   ChevronRight,
+  ChevronLeft,
   Microscope,
   FlaskConical,
   Zap,
@@ -23,6 +23,8 @@ import {
   Dumbbell,
   BookMarked,
   Lock,
+  Check,
+  X,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useStore } from "@/store/useStore";
@@ -136,17 +138,12 @@ function NavItemRow({
 
 /* ── Sidebar ────────────────────────────────────────────────────────── */
 
-interface SidebarProps {
-  mobileOpen: boolean;
-  onClose: () => void;
-}
-
-export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
+export function Sidebar({ open, onClose }: { open: boolean; onClose: () => void }) {
   const { user, signOut } = useAuth();
   const location = useLocation();
   const lastPathRef = useRef<HTMLDivElement>(null);
-  const closeButtonRef = useRef<HTMLButtonElement>(null);
 
+  const [searchParams] = useSearchParams();
   const pathname = location.pathname;
   const search = location.search;
 
@@ -206,6 +203,40 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
     return Math.round((completedUK / totalUK) * 100);
   }, [bmsModule, completedChapters]);
 
+  /* ── Contextual chapter nav (when on /bms/:subject/:chapter) ────── */
+  const chapterContext = useMemo(() => {
+    const match = pathname.match(/^\/bms\/([^/]+)\/([^/]+)$/);
+    if (!match || !bmsModule) return null;
+
+    const subjectSlug = match[1] as "biologie" | "chemie" | "physik" | "mathematik";
+    const chapterId = match[2];
+
+    if (!subjectConfig[subjectSlug]) return null;
+
+    const kapitel = bmsModule.getKapitelById(chapterId);
+    if (!kapitel || !kapitel.unterkapitel?.length) return null;
+
+    const currentUkIndex = parseInt(searchParams.get("uk") ?? "0", 10);
+
+    // Subject accent CSS variable
+    const accentMap: Record<string, string> = {
+      biologie: "var(--accent-bio)",
+      chemie: "var(--accent-chem)",
+      physik: "var(--accent-phys)",
+      mathematik: "var(--accent-math)",
+    };
+
+    return {
+      subject: subjectSlug,
+      subjectLabel: subjectConfig[subjectSlug].label,
+      kapitel,
+      chapterId,
+      currentUkIndex,
+      accent: accentMap[subjectSlug] ?? "var(--accent)",
+      overviewPath: `/bms/${subjectSlug}`,
+    };
+  }, [pathname, searchParams, bmsModule]);
+
   const lastPathLabel = useMemo(() => {
     if (!lastPath || lastPath === "/" || lastPath === "/bms") return null;
 
@@ -256,6 +287,25 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
     return "Zuletzt gelesen";
   }, [lastPath, bmsModule]);
 
+  // Close sidebar on Escape key
+  const handleEscape = useCallback(
+    (e: KeyboardEvent) => {
+      if (e.key === "Escape" && open) onClose();
+    },
+    [open, onClose]
+  );
+
+  useEffect(() => {
+    document.addEventListener("keydown", handleEscape);
+    return () => document.removeEventListener("keydown", handleEscape);
+  }, [handleEscape]);
+
+  // Close sidebar on navigation
+  useEffect(() => {
+    if (open) onClose();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pathname]);
+
   const isLastPathActive = lastPath !== null && lastPath !== "/" && pathname === lastPath;
   const filterDue = useMemo(() => new URLSearchParams(search).get("filter") === "due", [search]);
 
@@ -287,52 +337,22 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
     return pathname === to || (to !== "/" && pathname.startsWith(to + "/"));
   };
 
-  useEffect(() => {
-    if (mobileOpen) {
-      requestAnimationFrame(() => closeButtonRef.current?.focus({ preventScroll: true }));
-    }
-  }, [mobileOpen]);
-
-  useEffect(() => {
-    if (!mobileOpen) return;
-    const handler = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose();
-    };
-    window.addEventListener("keydown", handler);
-    return () => window.removeEventListener("keydown", handler);
-  }, [mobileOpen, onClose]);
-
   /* ── Sidebar content ──────────────────────────────────────────────── */
 
   const sidebarContent = (
     <>
       {/* Brand header */}
       <div className="px-4 py-4 flex items-center justify-between border-b border-[var(--border)] bg-[var(--sidebar-bg)]">
-        <div className="flex items-center gap-2 min-w-0">
-          <h1 className="text-base font-bold text-[var(--foreground)] tracking-tight truncate leading-tight">
-            MedMaster
-          </h1>
-        </div>
+        <h1 className="text-base font-bold text-[var(--foreground)] tracking-tight truncate leading-tight">
+          MedMaster
+        </h1>
         <button
-          ref={closeButtonRef}
           type="button"
           onClick={onClose}
+          className="p-1 rounded-lg text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-[var(--foreground)]/5 transition-colors cursor-pointer"
           aria-label="Menü schließen"
-          className="lg:hidden p-1.5 rounded-lg text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-[var(--foreground)]/8 transition-colors cursor-pointer"
         >
-          <motion.span
-            className="inline-flex items-center justify-center"
-            style={{ transformOrigin: "50% 50%" }}
-            initial={false}
-            animate={{ rotate: 90 }}
-            transition={{
-              type: "spring",
-              stiffness: 400,
-              damping: 30,
-            }}
-          >
-            <Menu className="w-5 h-5" />
-          </motion.span>
+          <X className="w-4 h-4" />
         </button>
       </div>
 
@@ -340,7 +360,7 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
       <nav className="flex-1 min-h-0 overflow-y-auto px-3 py-3 space-y-0.5 sidebar-scroll">
         {/* Dashboard – fix oben, visuell hervorgehoben */}
         <div className="mb-3">
-          <NavLink to="/dashboard" end onClick={onClose}>
+          <NavLink to="/dashboard" end>
             {({ isActive: dashboardActive }) => (
               <div
                 className={cn(
@@ -360,7 +380,7 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
         {/* Weiterlernen – schneller Einstieg wenn vorhanden */}
         {lastPathLabel && lastPath && lastPath !== "/" && (
           <div ref={lastPathRef} className="mb-3">
-            <NavLink to={lastPath} end={false} onClick={onClose}>
+            <NavLink to={lastPath} end={false}>
               {({ isActive: active }) => (
                 <div
                   className={cn(
@@ -375,6 +395,76 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
                 </div>
               )}
             </NavLink>
+          </div>
+        )}
+
+        {/* Contextual chapter navigation */}
+        {chapterContext && (
+          <div className="mb-3 pb-3 border-b border-[var(--border)]">
+            {/* Back link */}
+            <RouterLink
+              to={chapterContext.overviewPath}
+              className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-[var(--muted)] hover:text-[var(--foreground)] transition-colors"
+            >
+              <ChevronLeft className="w-3 h-3" />
+              <span>Alle Kapitel</span>
+            </RouterLink>
+
+            {/* Chapter title */}
+            <div className="px-3 py-1.5">
+              <div
+                className="text-[11px] font-semibold uppercase tracking-wide"
+                style={{ color: chapterContext.accent }}
+              >
+                {chapterContext.subjectLabel}
+              </div>
+              <div className="text-sm font-semibold text-[var(--foreground)] mt-0.5 leading-snug">
+                {chapterContext.kapitel.title}
+              </div>
+            </div>
+
+            {/* Unterkapitel list */}
+            <div className="max-h-[min(45vh,360px)] overflow-y-auto mt-1 space-y-0.5 sidebar-scroll">
+              {chapterContext.kapitel.unterkapitel.map((uk, idx) => {
+                const isCurrentUk = idx === chapterContext.currentUkIndex;
+                const isCompleted = completedChapters.includes(uk.id);
+                const href = `${pathForChapter(chapterContext.subject, chapterContext.chapterId)}?uk=${idx}`;
+
+                return (
+                  <RouterLink
+                    key={uk.id}
+                    to={href}
+                    className={cn(
+                      "flex items-center gap-2 px-3 py-1.5 text-xs rounded-md transition-colors",
+                      isCurrentUk
+                        ? "bg-[var(--foreground)]/5 text-[var(--foreground)] font-medium"
+                        : "text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-[var(--foreground)]/3"
+                    )}
+                    style={
+                      isCurrentUk
+                        ? { borderLeft: `2px solid ${chapterContext.accent}` }
+                        : { borderLeft: "2px solid transparent" }
+                    }
+                  >
+                    {isCompleted ? (
+                      <Check className="w-3 h-3 shrink-0 text-emerald-500" />
+                    ) : (
+                      <span
+                        className={cn(
+                          "w-3 h-3 shrink-0 flex items-center justify-center text-[9px] font-medium rounded-full",
+                          isCurrentUk
+                            ? "text-[var(--foreground)]"
+                            : "text-[var(--muted)] opacity-60"
+                        )}
+                      >
+                        {idx + 1}
+                      </span>
+                    )}
+                    <span className="truncate">{uk.title}</span>
+                  </RouterLink>
+                );
+              })}
+            </div>
           </div>
         )}
 
@@ -422,7 +512,7 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
                             : "text-[var(--muted)] hover:text-[var(--foreground)]"
                         )}
                       >
-                        <NavLink to="/bms" end={false} onClick={onClose} className="flex-1 min-w-0">
+                        <NavLink to="/bms" end={false} className="flex-1 min-w-0">
                           <div
                             className={cn(
                               "sidebar-nav-item flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm font-medium cursor-pointer relative",
@@ -483,7 +573,6 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
                                   {filterDue ? (
                                     <RouterLink
                                       to="/bms"
-                                      onClick={onClose}
                                       className="text-xs text-[var(--color-primary-500)] hover:underline"
                                     >
                                       Alle anzeigen
@@ -491,7 +580,6 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
                                   ) : (
                                     <RouterLink
                                       to="/bms?filter=due"
-                                      onClick={onClose}
                                       className="text-xs text-amber-600 dark:text-amber-400 hover:underline"
                                     >
                                       Fällig ({dueChapterIds.length})
@@ -559,7 +647,6 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
                                                   <NavLink
                                                     key={kap.id}
                                                     to={href}
-                                                    onClick={onClose}
                                                     className={cn(
                                                       "sidebar-nav-item block py-1.5 px-2 rounded-md text-xs pl-3",
                                                       chapterActive
@@ -591,7 +678,7 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
 
                 /* Regular nav item: Fortschritt gilt auch auf /schwachstellen, /statistik, /prognose als aktiv */
                 return (
-                  <NavLink key={to} to={to} end={to === "/"} onClick={onClose}>
+                  <NavLink key={to} to={to} end={to === "/"}>
                     {({ isActive: itemActive }) => (
                       <NavItemRow
                         icon={item.icon}
@@ -612,7 +699,7 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
       <div className="px-4 py-3 border-t border-[var(--border)]">
         {user && (
           <div className="space-y-0.5">
-            <NavLink to="/einstellungen" onClick={onClose}>
+            <NavLink to="/einstellungen">
               {({ isActive: settingsActive }) => (
                 <div
                   className={cn(
@@ -644,54 +731,30 @@ export function Sidebar({ mobileOpen, onClose }: SidebarProps) {
 
   return (
     <>
-      {/* Backdrop: nur wenn Sidebar offen und nicht Fokusmodus aktiv */}
-      <AnimatePresence>
-        {mobileOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.18, ease: [0.25, 0.1, 0.25, 1] }}
-            className="lg:hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-100"
-            onClick={onClose}
-            aria-hidden
-          />
+      {/* Backdrop */}
+      <div
+        className={cn(
+          "fixed inset-0 z-[199] bg-black/30 transition-opacity duration-250 ease-in-out",
+          open ? "opacity-100" : "opacity-0 pointer-events-none"
         )}
-      </AnimatePresence>
+        onClick={onClose}
+        aria-hidden="true"
+      />
 
-      {/* Desktop: persistent sidebar (no animation) */}
+      {/* Drawer panel */}
       <aside
         className={cn(
-          "hidden lg:flex fixed left-0 top-0 h-screen flex-col",
-          "w-[180px]",
+          "fixed left-0 top-0 h-screen z-[200] flex flex-col",
+          "w-[280px]",
           "bg-[var(--sidebar-bg)]",
           "border-r border-[var(--border)]",
-          "z-40"
+          "shadow-2xl",
+          "transition-transform duration-250 ease-in-out",
+          open ? "translate-x-0" : "-translate-x-full"
         )}
       >
         {sidebarContent}
       </aside>
-
-      {/* Mobile: animated drawer */}
-      <motion.aside
-        initial={false}
-        animate={{
-          x: mobileOpen ? 0 : "-100%",
-        }}
-        transition={{ duration: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
-        className={cn(
-          "lg:hidden fixed left-0 top-0 h-screen flex flex-col",
-          "w-72 max-w-[85vw]",
-          "bg-[var(--sidebar-bg)] backdrop-blur-sm",
-          "border-r border-[var(--border)]",
-          "z-101"
-        )}
-        role={mobileOpen ? "dialog" : undefined}
-        aria-modal={mobileOpen ? true : undefined}
-        aria-label={mobileOpen ? "Hauptmenü" : undefined}
-      >
-        {sidebarContent}
-      </motion.aside>
     </>
   );
 }

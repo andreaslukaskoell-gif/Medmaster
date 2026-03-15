@@ -83,8 +83,8 @@ export default function AuthPage() {
       } else {
         trackSignup("email");
         trackEvent("signup", { method: "email", ref: getStoredRef(), utm: getStoredUtm() });
-        setMedATOnboardingComplete();
-        navigate("/dashboard");
+        // Don't skip onboarding — let user set their display name first
+        navigate("/medat-onboarding");
       }
     } else {
       const { error } = await signIn(email, password);

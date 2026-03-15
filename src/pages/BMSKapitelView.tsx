@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { ChevronLeft, CheckCircle2, ChevronRight, Play, ArrowRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, CheckCircle2, Clock, Play, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useStore } from "@/store/useStore";
 import { useAdaptiveStore } from "@/store/adaptiveLearning";
@@ -12,14 +12,10 @@ import BMSUnterkapitel from "./BMSUnterkapitel";
 
 interface Props {
   kapitel: Kapitel;
-  /** When set (e.g. from ?uk=0), open this Unterkapitel directly. */
   initialUkIndex?: number;
   onBack: () => void;
-  /** All chapters in current subject (for prev/next chapter navigation). */
   chaptersInSubject?: Kapitel[];
-  /** Index of current chapter in chaptersInSubject. */
   currentChapterIndex?: number;
-  /** Navigate to another chapter's unterkapitel (for book-like next/prev). */
   onGoToChapter?: (chapterId: string, ukIndex: number) => void;
 }
 
@@ -28,6 +24,13 @@ const subjectLabels: Record<string, string> = {
   chemie: "Chemie",
   physik: "Physik",
   mathematik: "Mathematik",
+};
+
+const subjectAccentVars: Record<string, string> = {
+  biologie: "var(--accent-bio)",
+  chemie: "var(--accent-chem)",
+  physik: "var(--accent-phys)",
+  mathematik: "var(--accent-math)",
 };
 
 const CHAPTER_SCROLL_KEY = "bms-chapter-scroll";
@@ -60,7 +63,6 @@ export default function BMSKapitelView({
     ]);
   }, [kapitel, setBreadcrumbs]);
 
-  // URL ?uk= or "Fortsetzen" resume
   useEffect(() => {
     if (
       initialUkIndex !== undefined &&
@@ -84,7 +86,6 @@ export default function BMSKapitelView({
     }
   }, [kapitel?.id, kapitel?.unterkapitel, initialUkIndex]);
 
-  // Scroll restoration: when returning from Unterkapitel, restore list scroll position
   useEffect(() => {
     if (activeUKIndex !== null || !kapitel?.id) return;
     const key = `${CHAPTER_SCROLL_KEY}:${kapitel.id}`;
@@ -99,7 +100,6 @@ export default function BMSKapitelView({
   const { completedChapters: storeCompleted } = useStore();
   const completedChapters = storeCompleted || [];
 
-  // Defensive checks for chapter data
   if (!kapitel || !kapitel.id) {
     return (
       <div className="max-w-4xl mx-auto p-6 text-center">
@@ -121,6 +121,7 @@ export default function BMSKapitelView({
   ).length;
   const totalUK = unterkapitel.length;
   const isKapitelDone = completedChapters.includes(kapitel.id);
+  const progressPct = totalUK > 0 ? Math.round((completedUK / totalUK) * 100) : 0;
 
   const prevChapter = chaptersInSubject[currentChapterIndex - 1];
   const nextChapter = chaptersInSubject[currentChapterIndex + 1];
@@ -148,102 +149,152 @@ export default function BMSKapitelView({
     );
   }
 
-  // Find first incomplete unterkapitel (defensive)
   const firstIncomplete = unterkapitel.findIndex(
     (u) => u && u.id && !completedChapters.includes(u.id)
   );
 
+  const accentColor = subjectAccentVars[kapitel.subject] ?? "var(--accent)";
+
+  const saveScrollAndOpen = (index: number) => {
+    if (typeof sessionStorage !== "undefined") {
+      sessionStorage.setItem(`${CHAPTER_SCROLL_KEY}:${kapitel.id}`, String(window.scrollY));
+    }
+    setActiveUKIndex(index);
+  };
+
   return (
-    <div className="max-w-4xl mx-auto space-y-6">
+    <div className="max-w-3xl mx-auto space-y-8">
       <Button variant="ghost" size="sm" onClick={onBack} className="text-[var(--muted)]">
         <ChevronLeft className="w-4 h-4 mr-1" />
-        Zurück
+        {subjectLabels[kapitel.subject]}
       </Button>
 
       {/* Chapter header */}
       <div>
-        <p className="text-sm font-medium text-[var(--accent)] mb-1">
-          {subjectLabels[kapitel.subject]}
-        </p>
-        <h1 className="text-2xl font-bold text-[var(--text-primary)]">
-          {kapitel.title}
+        <div className="flex items-center gap-3 mb-3">
+          <span
+            className="text-[11px] font-bold uppercase tracking-widest px-2.5 py-1 rounded"
+            style={{
+              color: accentColor,
+              backgroundColor: `color-mix(in srgb, ${accentColor} 12%, transparent)`,
+            }}
+          >
+            {subjectLabels[kapitel.subject]}
+          </span>
           {isKapitelDone && (
-            <CheckCircle2 className="inline w-5 h-5 text-emerald-500 ml-2 -mt-0.5" />
-          )}
-        </h1>
-        <div className="flex items-center gap-4 mt-2 text-sm text-[var(--muted)]">
-          <span>{totalUK} Unterkapitel</span>
-          <span>{kapitel.estimatedTime}</span>
-          {completedUK > 0 && (
-            <span className="text-[var(--accent)] font-medium">
-              {completedUK}/{totalUK} abgeschlossen
+            <span className="flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400">
+              <CheckCircle2 className="w-3.5 h-3.5" />
+              Abgeschlossen
             </span>
           )}
         </div>
-        {completedUK > 0 && (
-          <div className="w-full bg-[var(--border)] rounded-full h-1 mt-3">
+        <h1 className="text-2xl font-bold text-[var(--text-primary)] mb-2">{kapitel.title}</h1>
+        <div className="flex items-center gap-4 text-sm text-[var(--muted)]">
+          <span>{totalUK} Unterkapitel</span>
+          <span className="flex items-center gap-1">
+            <Clock className="w-3.5 h-3.5" />
+            {kapitel.estimatedTime}
+          </span>
+        </div>
+
+        {/* Progress bar */}
+        <div className="mt-4">
+          <div className="flex items-center justify-between text-xs text-[var(--muted)] mb-1.5">
+            <span>
+              {completedUK} von {totalUK} abgeschlossen
+            </span>
+            <span
+              className="font-medium"
+              style={{ color: progressPct > 0 ? accentColor : undefined }}
+            >
+              {progressPct}%
+            </span>
+          </div>
+          <div className="w-full bg-[var(--border)] rounded-full h-1.5">
             <div
-              className="bg-[var(--accent)] h-1 rounded-full transition-all duration-300"
-              style={{ width: `${(completedUK / totalUK) * 100}%` }}
+              className="h-1.5 rounded-full transition-all duration-500"
+              style={{
+                width: `${progressPct}%`,
+                backgroundColor: accentColor,
+              }}
             />
           </div>
-        )}
+        </div>
       </div>
 
       {/* Start / Continue button */}
       {!isKapitelDone && firstIncomplete >= 0 && (
-        <Button
-          onClick={() => {
-            if (typeof sessionStorage !== "undefined") {
-              sessionStorage.setItem(`${CHAPTER_SCROLL_KEY}:${kapitel.id}`, String(window.scrollY));
-            }
-            setActiveUKIndex(firstIncomplete);
-          }}
-          className="gap-2"
-        >
+        <Button onClick={() => saveScrollAndOpen(firstIncomplete)} className="gap-2" size="lg">
           <Play className="w-4 h-4" />
-          {completedUK === 0 ? "Kapitel starten" : "Fortsetzen"}
+          {completedUK === 0
+            ? "Kapitel starten"
+            : `Fortsetzen — ${unterkapitel[firstIncomplete]?.title}`}
         </Button>
       )}
 
       {/* Unterkapitel list */}
-      <div className="space-y-1">
+      <div>
+        <div className="flex items-center gap-3 mb-3">
+          <h2 className="text-xs font-semibold uppercase tracking-wider text-[var(--muted)]">
+            Inhaltsverzeichnis
+          </h2>
+          <div className="flex-1 h-px bg-[var(--border)]/40" />
+        </div>
         {unterkapitel.length === 0 ? (
           <p className="text-sm text-[var(--muted)] text-center py-8">
             Noch keine Unterkapitel vorhanden.
           </p>
         ) : (
-          <div className="grid grid-cols-1 gap-0">
+          <div className="border border-[var(--border)]/40 rounded-xl shadow-[0_1px_3px_rgba(0,0,0,0.04)] divide-y divide-[var(--border)]/30 overflow-hidden">
             {unterkapitel.map((uk, index) => {
               if (!uk || !uk.id) return null;
               const isDone = completedChapters.includes(uk.id);
+              const isCurrent = firstIncomplete === index;
               return (
                 <button
                   key={uk.id}
-                  className={`w-full text-left flex items-center gap-3 py-3 px-2 border-b border-[var(--border)]/60 last:border-b-0 hover:bg-[var(--surface)] transition-colors cursor-pointer rounded-sm ${isDone ? "opacity-60" : ""}`}
-                  onClick={() => {
-                    if (typeof sessionStorage !== "undefined") {
-                      sessionStorage.setItem(
-                        `${CHAPTER_SCROLL_KEY}:${kapitel.id}`,
-                        String(window.scrollY)
-                      );
-                    }
-                    setActiveUKIndex(index);
-                  }}
+                  className={`w-full text-left flex items-center gap-4 py-4 px-5 hover:bg-[var(--surface)] transition-colors cursor-pointer ${
+                    isCurrent ? "bg-[var(--surface)]" : ""
+                  }`}
+                  onClick={() => saveScrollAndOpen(index)}
                 >
+                  {/* Status indicator */}
                   {isDone ? (
-                    <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
+                    <CheckCircle2 className="w-5 h-5 text-emerald-500 shrink-0" />
                   ) : (
-                    <span className="w-4 h-4 shrink-0 flex items-center justify-center text-xs text-[var(--muted)] font-medium">
+                    <span
+                      className={`w-6 h-6 shrink-0 flex items-center justify-center rounded-full text-xs font-semibold border-2 ${
+                        isCurrent
+                          ? "border-current text-[var(--text-primary)]"
+                          : "border-[var(--border)] text-[var(--muted)]"
+                      }`}
+                      style={
+                        isCurrent ? { borderColor: accentColor, color: accentColor } : undefined
+                      }
+                    >
                       {index + 1}
                     </span>
                   )}
+
+                  {/* Title */}
                   <span
-                    className={`flex-1 min-w-0 text-sm font-medium ${isDone ? "text-[var(--muted)]" : "text-[var(--text-primary)]"}`}
+                    className={`flex-1 min-w-0 text-sm font-medium ${
+                      isDone
+                        ? "text-[var(--muted)]"
+                        : isCurrent
+                          ? "text-[var(--text-primary)]"
+                          : "text-[var(--text-primary)]"
+                    }`}
                   >
                     {uk.title || "Untitled Subchapter"}
                   </span>
-                  <ChevronRight className="w-3.5 h-3.5 text-[var(--muted)] shrink-0" />
+
+                  {/* Current indicator */}
+                  {isCurrent && !isDone ? (
+                    <ChevronRight className="w-5 h-5 shrink-0" style={{ color: accentColor }} />
+                  ) : !isDone ? (
+                    <ChevronRight className="w-4 h-4 text-[var(--muted)]/50 shrink-0" />
+                  ) : null}
                 </button>
               );
             })}
@@ -251,7 +302,7 @@ export default function BMSKapitelView({
         )}
       </div>
 
-      {/* Smart-Links to Related Chapters - Phase 4: STRUCT-05 */}
+      {/* Related chapters */}
       {kapitel.linkedChapters &&
         kapitel.linkedChapters.length > 0 &&
         (() => {
@@ -262,14 +313,16 @@ export default function BMSKapitelView({
           if (linkedKapitelList.length === 0) return null;
 
           return (
-            <div className="mt-8 pt-6 border-t border-[var(--border)]">
-              <h3 className="text-sm font-medium text-[var(--muted)] mb-3">Verwandte Kapitel</h3>
+            <div className="pt-6 border-t border-[var(--border)]">
+              <h3 className="text-xs font-semibold uppercase tracking-wider text-[var(--muted)] mb-3">
+                Verwandte Kapitel
+              </h3>
               <div className="space-y-1">
                 {linkedKapitelList.map((linkedKap) => (
                   <button
                     key={linkedKap.id}
                     onClick={() => onGoToChapter?.(linkedKap.id, 0)}
-                    className="w-full text-left flex items-center gap-3 py-2 px-2 rounded-sm hover:bg-[var(--surface)] transition-colors"
+                    className="w-full text-left flex items-center gap-3 py-2.5 px-3 rounded-lg hover:bg-[var(--surface)] transition-colors cursor-pointer"
                   >
                     <ArrowRight className="w-3.5 h-3.5 text-[var(--muted)] shrink-0" />
                     <span className="text-sm font-medium text-[var(--text-primary)]">

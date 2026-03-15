@@ -19,6 +19,7 @@ import {
   BarChart3,
   MessageCircle,
   Copy,
+  Puzzle,
 } from "lucide-react";
 import { CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -27,6 +28,7 @@ import { Heatmap } from "@/components/ui/heatmap";
 import { SyncIndicator } from "@/components/dashboard/SyncIndicator";
 import { StreakFlameIcon } from "@/components/dashboard/StreakFire";
 import { useLevelUpSound } from "@/hooks/useLevelUpSound";
+import { trackEvent } from "@/lib/analyticsTracker";
 import { useStore } from "@/store/useStore";
 import { useAdaptiveStore } from "@/store/adaptiveLearning";
 import { useDashboardProfile } from "@/hooks/useDashboardProfile";
@@ -47,8 +49,9 @@ import { generateAdaptivePlan } from "@/lib/adaptivePlan";
 import { buildConcreteDailyPlan } from "@/lib/concreteDailyPlan";
 import { getPlanAdaptation } from "@/lib/planAdaptation";
 import { getPrognoseSummary } from "@/lib/prognoseScore";
-import { alleKapitel } from "@/data/bmsKapitel";
+import { alleKapitel, getKapitelById, findChapterByUnterkapitelId } from "@/data/bmsKapitel";
 import { useTodayEngine } from "@/hooks/useTodayEngine";
+import { ReferralWidget } from "@/components/shared/ReferralWidget";
 
 const tileMotion = {
   initial: { opacity: 0, y: 16 },
@@ -91,16 +94,17 @@ export default function Dashboard() {
   const flameHasActivity = streakPreview != null ? flameStreak > 0 : hasActivityToday;
   const profile = useDashboardProfile();
   const { user, profile: authProfile } = useAuth();
+  const meta = user?.user_metadata as
+    | { display_name?: string; full_name?: string; name?: string }
+    | undefined;
+  const profileUsername = authProfile?.username?.trim();
   const displayName =
     authProfile?.display_name?.trim() ||
-    authProfile?.username?.trim() ||
-    (
-      user?.user_metadata as { display_name?: string; full_name?: string } | undefined
-    )?.display_name?.trim() ||
-    (
-      user?.user_metadata as { display_name?: string; full_name?: string } | undefined
-    )?.full_name?.trim() ||
-    user?.email?.split("@")[0]?.trim() ||
+    // Only use username if it doesn't look like an email
+    (profileUsername && !profileUsername.includes("@") ? profileUsername : "") ||
+    meta?.display_name?.trim() ||
+    meta?.full_name?.trim() ||
+    meta?.name?.trim() ||
     "";
   const days = daysUntilMedAT();
   const weeksLeft = Math.max(1, Math.floor(days / 7));
@@ -194,6 +198,77 @@ export default function Dashboard() {
     <div className="dashboard-page-bg">
       <div className="max-w-7xl mx-auto px-4 py-4 sm:py-8 pb-28 lg:pb-12">
         <SyncIndicator />
+
+        {/* ─── First-action guidance for new users ─── */}
+        {(quizResults ?? []).length === 0 && (
+          <section className="mb-6" aria-label="Erste Schritte">
+            <h2 className="text-lg font-bold text-[var(--text-primary)] mb-3">
+              Starte jetzt mit deiner MedAT-Vorbereitung
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              {(
+                [
+                  {
+                    to: "/bms",
+                    icon: BookOpen,
+                    title: "BMS-Fragen üben",
+                    desc: "4.300+ Fragen zu Bio, Chemie, Physik & Mathe",
+                    color: "text-emerald-600",
+                    bg: "bg-emerald-100 dark:bg-emerald-900/30",
+                    target: "bms",
+                  },
+                  {
+                    to: "/kff",
+                    icon: Puzzle,
+                    title: "KFF trainieren",
+                    desc: "Zahlenfolgen, Figuren, Implikationen & mehr",
+                    color: "text-blue-600",
+                    bg: "bg-blue-100 dark:bg-blue-900/30",
+                    target: "kff",
+                  },
+                  {
+                    to: "/simulation",
+                    icon: Target,
+                    title: "Simulation starten",
+                    desc: "Vollständiger MedAT unter echten Bedingungen",
+                    color: "text-violet-600",
+                    bg: "bg-violet-100 dark:bg-violet-900/30",
+                    target: "simulation",
+                  },
+                ] as const
+              ).map((card) => (
+                <Link
+                  key={card.target}
+                  to={card.to}
+                  onClick={() => trackEvent("activation_cta_click", { target: card.target })}
+                  className={cn(
+                    cardClass,
+                    "p-5 flex items-start gap-4 group hover:shadow-[var(--shadow-sm)] transition-shadow"
+                  )}
+                >
+                  <div
+                    className={cn(
+                      "w-10 h-10 rounded-xl flex items-center justify-center shrink-0",
+                      card.bg
+                    )}
+                  >
+                    <card.icon className={cn("w-5 h-5", card.color)} />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-sm font-semibold text-[var(--text-primary)]">{card.title}</p>
+                    <p className="text-xs text-[var(--muted)] mt-0.5 leading-relaxed">
+                      {card.desc}
+                    </p>
+                  </div>
+                  <ArrowRight className="w-4 h-4 text-[var(--muted)] shrink-0 mt-1 group-hover:translate-x-0.5 transition-transform" />
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* ─── Weiterlernen card ─── */}
+        <ContinueLearningCard completedChapters={completedChapters} />
 
         <motion.div variants={stagger} initial="initial" animate="animate" className="space-y-6">
           {/* Hero: Begrüßung + Heute im Lernplan */}
@@ -439,7 +514,7 @@ export default function Dashboard() {
               </div>
               <Heatmap />
             </div>
-            <ReferralCard />
+            <ReferralWidget />
           </motion.section>
         </motion.div>
 
@@ -548,5 +623,136 @@ function StreakShareButton({ streak }: { streak: number }) {
         <Share2 className="w-4 h-4" />
       )}
     </button>
+  );
+}
+
+const SUBJECT_ACCENT: Record<string, string> = {
+  biologie: "var(--accent-bio)",
+  chemie: "var(--accent-chem)",
+  physik: "var(--accent-phys)",
+  mathematik: "var(--accent-math)",
+};
+
+const SUBJECT_LABEL: Record<string, string> = {
+  biologie: "Biologie",
+  chemie: "Chemie",
+  physik: "Physik",
+  mathematik: "Mathematik",
+};
+
+function ContinueLearningCard({ completedChapters }: { completedChapters: string[] }) {
+  const lastViewedKapitelId = useAdaptiveStore((s) => s.lastViewedKapitelId);
+  const lastViewedUnterkapitelId = useAdaptiveStore((s) => s.lastViewedUnterkapitelId);
+  const lastPath = useAdaptiveStore((s) => s.lastPath);
+
+  const data = useMemo(() => {
+    if (!lastViewedKapitelId || !lastViewedUnterkapitelId) return null;
+
+    const kapitel = getKapitelById(lastViewedKapitelId);
+    if (!kapitel) return null;
+
+    const ukMatch = findChapterByUnterkapitelId(lastViewedUnterkapitelId);
+    if (!ukMatch) return null;
+
+    const uk =
+      kapitel.unterkapitel[ukMatch.index] ??
+      kapitel.unterkapitel.find((u) => u.id === lastViewedUnterkapitelId);
+    if (!uk) return null;
+
+    const totalUks = kapitel.unterkapitel.length;
+    const doneUks = kapitel.unterkapitel.filter((u) => completedChapters.includes(u.id)).length;
+
+    // Estimate remaining reading time: parse chapter estimatedTime, scale by remaining UKs
+    let remainingMinutes: number | null = null;
+    const timeMatch = kapitel.estimatedTime?.match(/(\d+)/);
+    if (timeMatch) {
+      const totalMinutes = parseInt(timeMatch[1], 10);
+      const remainingUks = totalUks - doneUks;
+      remainingMinutes = Math.max(5, Math.round((totalMinutes / totalUks) * remainingUks));
+    }
+
+    const accent = SUBJECT_ACCENT[kapitel.subject] ?? "var(--accent)";
+    const subjectLabel = SUBJECT_LABEL[kapitel.subject] ?? kapitel.subject;
+
+    // Build link: prefer lastPath if it points to a BMS page, otherwise construct from IDs
+    const link =
+      lastPath && lastPath.startsWith("/bms")
+        ? lastPath
+        : `/bms/${lastViewedKapitelId}/${lastViewedUnterkapitelId}`;
+
+    return {
+      kapitelTitle: kapitel.title,
+      ukTitle: uk.title,
+      subjectLabel,
+      accent,
+      totalUks,
+      doneUks,
+      progressPct: totalUks > 0 ? Math.round((doneUks / totalUks) * 100) : 0,
+      remainingMinutes,
+      link,
+    };
+  }, [lastViewedKapitelId, lastViewedUnterkapitelId, lastPath, completedChapters]);
+
+  if (!data) return null;
+
+  return (
+    <section className="mb-6" aria-label="Weiterlernen">
+      <Link
+        to={data.link}
+        className={cn(
+          "block rounded-xl border bg-[var(--card)] shadow-sm hover:shadow-md transition-shadow",
+          "border-l-4"
+        )}
+        style={{ borderLeftColor: data.accent }}
+        onClick={() =>
+          trackEvent("continue_learning_click", { kapitel: lastViewedKapitelId ?? "" })
+        }
+      >
+        <div className="p-5 flex items-center gap-5">
+          <div
+            className="w-11 h-11 rounded-xl flex items-center justify-center shrink-0"
+            style={{ backgroundColor: `color-mix(in srgb, ${data.accent} 15%, transparent)` }}
+          >
+            <BookOpen className="w-5 h-5" style={{ color: data.accent }} />
+          </div>
+
+          <div className="flex-1 min-w-0">
+            <p className="text-xs font-medium text-[var(--muted)] mb-0.5">
+              Weiterlernen &middot; {data.subjectLabel}
+            </p>
+            <p className="text-sm font-semibold text-[var(--text-primary)] truncate">
+              {data.kapitelTitle}
+            </p>
+            <p className="text-xs text-[var(--text-secondary)] truncate mt-0.5">{data.ukTitle}</p>
+
+            <div className="mt-2.5 flex items-center gap-3">
+              <div className="flex-1 max-w-[200px]">
+                <Progress value={data.progressPct} className="h-1.5 rounded-full" />
+              </div>
+              <span className="text-xs text-[var(--muted)] whitespace-nowrap">
+                {data.doneUks}/{data.totalUks} UKs
+              </span>
+              {data.remainingMinutes != null && (
+                <span className="text-xs text-[var(--muted)] whitespace-nowrap flex items-center gap-1">
+                  <Clock className="w-3 h-3" />
+                  ca. {data.remainingMinutes} min
+                </span>
+              )}
+            </div>
+          </div>
+
+          <span
+            className="shrink-0 inline-flex items-center gap-1.5 text-sm font-semibold px-4 py-2 rounded-lg transition-colors"
+            style={{
+              backgroundColor: `color-mix(in srgb, ${data.accent} 12%, transparent)`,
+              color: data.accent,
+            }}
+          >
+            Fortsetzen
+            <ArrowRight className="w-4 h-4" />
+          </span>
+        </div>
+      </Link>
+    </section>
   );
 }

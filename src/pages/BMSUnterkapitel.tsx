@@ -10,6 +10,7 @@ import {
   HelpCircle,
   Zap,
   Clock,
+  MoreHorizontal,
 } from "lucide-react";
 import { Button } from "../components/ui/button";
 import { QuickEdit } from "../components/QuickEdit";
@@ -108,8 +109,10 @@ export default function BMSUnterkapitel({
   const [hinterfragMode, setHinterfragMode] = useState(false);
   const [quickReviewMode, setQuickReviewMode] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
-  const [stickyVisible, setStickyVisible] = useState(false);
+  const [showScrollRestoredToast, setShowScrollRestoredToast] = useState(false);
+  const [toolMenuOpen, setToolMenuOpen] = useState(false);
   const allCompleteFired = useRef(false);
+  const scrollSaveTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const kontrollResultsRef = useRef<{ questionIndex: number; correct: boolean }[]>([]);
 
   const readingTimeMin = useMemo(() => {
@@ -141,21 +144,52 @@ export default function BMSUnterkapitel({
   }, [kapitel, ukFromIndex?.title, setBreadcrumbs]);
 
   useEffect(() => {
+    const storageKey = ukId ? `medmaster-uk-scroll-${ukId}` : null;
+    const saved = storageKey ? sessionStorage.getItem(storageKey) : null;
+    if (saved) {
+      const y = parseInt(saved, 10);
+      if (y > 0) {
+        // Defer to allow content to render before restoring position
+        requestAnimationFrame(() => {
+          window.scrollTo(0, y);
+          setShowScrollRestoredToast(true);
+        });
+        return;
+      }
+    }
     window.scrollTo(0, 0);
   }, [ukId]);
 
   useEffect(() => {
+    const storageKey = ukId ? `medmaster-uk-scroll-${ukId}` : null;
     const update = () => {
       const el = document.documentElement;
       const scrolled = el.scrollTop || document.body.scrollTop;
       const totalHeight = el.scrollHeight - el.clientHeight;
       setScrollProgress(totalHeight > 0 ? Math.min(100, (scrolled / totalHeight) * 100) : 0);
-      setStickyVisible(scrolled > 200);
+
+      // Debounced scroll position save
+      if (storageKey) {
+        if (scrollSaveTimerRef.current) clearTimeout(scrollSaveTimerRef.current);
+        scrollSaveTimerRef.current = setTimeout(() => {
+          sessionStorage.setItem(storageKey, String(Math.round(scrolled)));
+        }, 500);
+      }
     };
     window.addEventListener("scroll", update, { passive: true });
     update();
-    return () => window.removeEventListener("scroll", update);
+    return () => {
+      window.removeEventListener("scroll", update);
+      if (scrollSaveTimerRef.current) clearTimeout(scrollSaveTimerRef.current);
+    };
   }, [ukId]);
+
+  // Auto-dismiss scroll-restored toast after 3 seconds
+  useEffect(() => {
+    if (!showScrollRestoredToast) return;
+    const t = setTimeout(() => setShowScrollRestoredToast(false), 3000);
+    return () => clearTimeout(t);
+  }, [showScrollRestoredToast]);
 
   useEffect(() => {
     if (!kapitel || !ukFromIndex) return;
@@ -178,6 +212,8 @@ export default function BMSUnterkapitel({
 
   const handleComplete = () => {
     if (!uk || !kapitel) return;
+    // Clear saved scroll position on completion
+    sessionStorage.removeItem(`medmaster-uk-scroll-${uk.id}`);
     if (!isCompleted) {
       completeChapter(uk.id);
       addXP(5);
@@ -356,6 +392,26 @@ export default function BMSUnterkapitel({
 
   return (
     <div className="w-full max-w-5xl mx-auto pb-16 relative px-0">
+      {/* Scroll restored toast */}
+      {showScrollRestoredToast && (
+        <div
+          className="fixed bottom-6 left-1/2 -translate-x-1/2 z-[300] px-4 py-2 rounded-lg text-sm"
+          style={{
+            backgroundColor: "var(--surface)",
+            color: "var(--text-secondary)",
+            boxShadow: "0 2px 8px rgba(0,0,0,0.12)",
+            border: "1px solid var(--border)",
+          }}
+        >
+          <button
+            onClick={() => setShowScrollRestoredToast(false)}
+            className="cursor-pointer bg-transparent border-none p-0 text-inherit"
+          >
+            Zurück zum Lesezeichen &uarr;
+          </button>
+        </div>
+      )}
+
       {/* Reading progress bar */}
       <div className="fixed top-0 left-0 right-0 z-[200] h-[3px] bg-transparent pointer-events-none">
         <div
@@ -364,68 +420,13 @@ export default function BMSUnterkapitel({
         />
       </div>
 
-      {/* Sticky reading header — appears on scroll */}
-      <div
-        className={`fixed top-0 left-0 right-0 z-[190] transition-all duration-200 ${
-          stickyVisible
-            ? "opacity-100 translate-y-0"
-            : "opacity-0 -translate-y-full pointer-events-none"
-        }`}
-      >
-        <div className="bg-[var(--background)]/95 backdrop-blur-sm border-b border-[var(--border)]/60">
-          <div className="max-w-5xl mx-auto px-4 lg:px-6 py-2 flex items-center justify-between gap-4">
-            <button
-              onClick={onBack}
-              className="text-[var(--muted)] hover:text-[var(--text-primary)] transition-colors shrink-0 cursor-pointer"
-            >
-              <ChevronLeft className="w-5 h-5" />
-            </button>
-            <div className="flex-1 min-w-0 flex items-center gap-3">
-              <span
-                className="w-2 h-2 rounded-full shrink-0"
-                style={{ backgroundColor: accentColor }}
-              />
-              <span className="text-sm font-medium text-[var(--text-primary)] truncate">
-                {uk.title}
-              </span>
-              <span className="text-xs text-[var(--muted)] shrink-0">
-                {unterkapitelIndex + 1}/{total}
-              </span>
-            </div>
-            <div className="flex items-center gap-1 shrink-0">
-              <button
-                onClick={() => toggleBookmarkChapter(uk.id)}
-                className={`p-1.5 rounded-lg cursor-pointer transition-colors ${isBookmarked ? "text-[var(--accent)]" : "text-[var(--muted)] hover:text-[var(--text-primary)]"}`}
-                title="Lesezeichen"
-              >
-                <Bookmark className={`w-4 h-4 ${isBookmarked ? "fill-current" : ""}`} />
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Top bar: back + tools */}
-      <div className="flex items-center justify-between mb-10">
+      <div className="flex items-center justify-between mb-6">
         <Button variant="ghost" size="sm" onClick={onBack} className="text-[var(--muted)]">
           <ChevronLeft className="w-4 h-4 mr-1" />
           {kapitel.title}
         </Button>
         <div className="flex items-center gap-1">
-          <button
-            onClick={() => toggleBookmarkChapter(uk.id)}
-            className={`p-2 rounded-lg cursor-pointer transition-colors ${isBookmarked ? "text-[var(--accent)]" : "text-[var(--muted)] hover:text-[var(--text-primary)]"}`}
-            title="Lesezeichen"
-          >
-            <Bookmark className={`w-4 h-4 ${isBookmarked ? "fill-current" : ""}`} />
-          </button>
-          <button
-            onClick={() => setShowNotes(!showNotes)}
-            className={`p-2 rounded-lg cursor-pointer transition-colors ${showNotes ? "text-[var(--accent)]" : "text-[var(--muted)] hover:text-[var(--text-primary)]"}`}
-            title="Notizen"
-          >
-            <StickyNote className="w-4 h-4" />
-          </button>
           <button
             onClick={() => setBridgeOpen(true)}
             className="p-2 rounded-lg cursor-pointer text-[var(--muted)] hover:text-[var(--text-primary)] transition-colors"
@@ -433,30 +434,78 @@ export default function BMSUnterkapitel({
           >
             <Network className="w-4 h-4" />
           </button>
-          <button
-            onClick={() => setHinterfragMode(!hinterfragMode)}
-            className={`p-2 rounded-lg cursor-pointer transition-colors ${hinterfragMode ? "text-[var(--accent)]" : "text-[var(--muted)] hover:text-[var(--text-primary)]"}`}
-            title="Hinterfrag-Modus"
-          >
-            <HelpCircle className="w-4 h-4" />
-          </button>
-          <button
-            onClick={() => setQuickReviewMode(!quickReviewMode)}
-            className={`p-2 rounded-lg cursor-pointer transition-colors ${quickReviewMode ? "text-[var(--accent)]" : "text-[var(--muted)] hover:text-[var(--text-primary)]"}`}
-            title="Quick Review (R)"
-          >
-            <Zap className="w-4 h-4" />
-          </button>
-          <QuickEdit data={uk} storageKey={uk.id} label="Unterkapitel bearbeiten (Dev)" />
+          <div className="relative">
+            <button
+              onClick={() => setToolMenuOpen(!toolMenuOpen)}
+              className="p-2 rounded-lg cursor-pointer text-[var(--muted)] hover:text-[var(--text-primary)] transition-colors"
+              title="Weitere Optionen"
+            >
+              <MoreHorizontal className="w-4 h-4" />
+            </button>
+            {toolMenuOpen && (
+              <>
+                <div className="fixed inset-0 z-40" onClick={() => setToolMenuOpen(false)} />
+                <div className="absolute right-0 top-full mt-1 z-50 min-w-[180px] rounded-lg border border-[var(--border)] bg-[var(--background)] shadow-lg py-1">
+                  <button
+                    onClick={() => {
+                      toggleBookmarkChapter(uk.id);
+                      setToolMenuOpen(false);
+                    }}
+                    className="w-full flex items-center gap-2.5 px-3 py-2 text-sm text-[var(--text-secondary)] hover:bg-[var(--surface)] cursor-pointer transition-colors"
+                  >
+                    <Bookmark
+                      className={`w-4 h-4 ${isBookmarked ? "fill-current text-[var(--accent)]" : ""}`}
+                    />
+                    {isBookmarked ? "Lesezeichen entfernen" : "Lesezeichen setzen"}
+                  </button>
+                  <button
+                    onClick={() => {
+                      setShowNotes(!showNotes);
+                      setToolMenuOpen(false);
+                    }}
+                    className="w-full flex items-center gap-2.5 px-3 py-2 text-sm text-[var(--text-secondary)] hover:bg-[var(--surface)] cursor-pointer transition-colors"
+                  >
+                    <StickyNote className={`w-4 h-4 ${showNotes ? "text-[var(--accent)]" : ""}`} />
+                    Notizen
+                  </button>
+                  <button
+                    onClick={() => {
+                      setHinterfragMode(!hinterfragMode);
+                      setToolMenuOpen(false);
+                    }}
+                    className="w-full flex items-center gap-2.5 px-3 py-2 text-sm text-[var(--text-secondary)] hover:bg-[var(--surface)] cursor-pointer transition-colors"
+                  >
+                    <HelpCircle
+                      className={`w-4 h-4 ${hinterfragMode ? "text-[var(--accent)]" : ""}`}
+                    />
+                    Hinterfrag-Modus
+                  </button>
+                  <button
+                    onClick={() => {
+                      setQuickReviewMode(!quickReviewMode);
+                      setToolMenuOpen(false);
+                    }}
+                    className="w-full flex items-center gap-2.5 px-3 py-2 text-sm text-[var(--text-secondary)] hover:bg-[var(--surface)] cursor-pointer transition-colors"
+                  >
+                    <Zap className={`w-4 h-4 ${quickReviewMode ? "text-[var(--accent)]" : ""}`} />
+                    Quick Review (R)
+                  </button>
+                </div>
+              </>
+            )}
+          </div>
+          {import.meta.env.DEV && (
+            <QuickEdit data={uk} storageKey={uk.id} label="Unterkapitel bearbeiten (Dev)" />
+          )}
         </div>
       </div>
 
       <ContentErrorBoundary context={uk.id}>
         {/* Header */}
-        <header className="mb-12">
-          <div className="flex items-center gap-3 mb-4">
+        <header className="mb-14 mt-2">
+          <div className="flex items-center gap-3 mb-5">
             <span
-              className="text-[11px] font-bold uppercase tracking-widest px-2.5 py-1 rounded"
+              className="text-[10px] font-semibold uppercase tracking-widest px-2 py-0.5 rounded"
               style={{
                 color: accentColor,
                 backgroundColor: `color-mix(in srgb, ${accentColor} 8%, transparent)`,
@@ -464,20 +513,20 @@ export default function BMSUnterkapitel({
             >
               {subjectLabels[kapitel.subject]}
             </span>
-            <span className="text-sm text-[var(--muted)]">
+            <span className="text-xs text-[var(--muted)]">
               {kapitel.title} &middot; {unterkapitelIndex + 1} von {total}
             </span>
           </div>
-          <h1 className="text-3xl font-bold text-[var(--text-primary)] leading-tight mb-3">
+          <h1 className="text-[2rem] font-semibold text-[var(--text-primary)] leading-tight mb-4">
             {uk.title}
           </h1>
-          <div className="flex items-center gap-4 text-sm text-[var(--muted)]">
-            <span className="flex items-center gap-1.5">
-              <Clock className="w-3.5 h-3.5" aria-hidden />
+          <div className="flex items-center gap-4">
+            <span className="flex items-center gap-1.5 text-xs text-[var(--muted)]">
+              <Clock className="w-3 h-3" aria-hidden />
               {readingTimeMin} Min Lesezeit
             </span>
             {isCompleted && (
-              <span className="text-emerald-600 dark:text-emerald-400 font-medium">
+              <span className="text-xs text-emerald-600 dark:text-emerald-400 font-medium">
                 Abgeschlossen
               </span>
             )}
@@ -506,10 +555,11 @@ export default function BMSUnterkapitel({
         {/* Quick Review Mode */}
         {quickReviewMode ? (
           <div className="space-y-3">
-            <div className="flex items-center gap-2 py-2 px-3 rounded-lg bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800">
-              <Zap className="w-4 h-4 text-yellow-600 dark:text-yellow-400 shrink-0" />
-              <p className="text-sm text-yellow-800 dark:text-yellow-300 font-medium">
-                Quick Review — nur Merksätze (R zum Beenden)
+            <div className="flex items-center gap-2 py-2.5 px-4 rounded-lg bg-[var(--surface)] border-l-2 border-[var(--accent)]">
+              <Zap className="w-3.5 h-3.5 text-[var(--muted)] shrink-0" />
+              <p className="text-sm text-[var(--text-secondary)]">
+                Quick Review — nur Merksätze{" "}
+                <span className="text-[var(--muted)]">(R zum Beenden)</span>
               </p>
             </div>
             {uk.sections && uk.sections.length > 0 ? (
@@ -518,7 +568,7 @@ export default function BMSUnterkapitel({
                 .map((s, i) => (
                   <div
                     key={i}
-                    className="rounded-lg border-l-4 border-[var(--accent)] bg-[var(--accent)]/5 dark:bg-[var(--accent)]/10 p-4 space-y-1"
+                    className="rounded-lg border-l-4 border-[var(--accent)] bg-[var(--accent)]/5 dark:bg-[var(--accent)]/15 p-4 space-y-1"
                   >
                     <p className="text-xs font-semibold text-[var(--accent)] uppercase tracking-wide">
                       {s.heading}
@@ -559,7 +609,7 @@ export default function BMSUnterkapitel({
             {/* Altfrage + Kontrollfragen */}
             <div className="w-full max-w-[680px] ml-[268px] min-w-0 space-y-10 mt-12">
               {uk.altfrage && (
-                <div className="rounded-lg border border-amber-200 dark:border-amber-800 bg-amber-50/50 dark:bg-amber-900/10 p-5">
+                <div className="rounded-lg border border-amber-200 dark:border-amber-700/60 bg-amber-50/50 dark:bg-amber-900/20 p-5">
                   <h3 className="text-[13px] font-bold uppercase tracking-wider text-amber-700 dark:text-amber-300 mb-3">
                     Altfragen-Klassiker
                   </h3>
@@ -617,7 +667,7 @@ export default function BMSUnterkapitel({
         )}
 
         {/* Navigation: Previous / Next — with preview */}
-        <div className="mt-16 pt-8 border-t border-[var(--border)]">
+        <div className="mt-20 pt-8 border-t border-[var(--border)]">
           <div className="grid grid-cols-2 gap-4">
             <div>
               {canGoPrev && (

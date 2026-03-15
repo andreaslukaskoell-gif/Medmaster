@@ -56,7 +56,11 @@ export default function Einstellungen() {
             <div className="flex-1 min-w-0">
               <p className="text-sm font-medium text-[var(--foreground)]">Benutzername</p>
               <p className="text-xs text-[var(--muted)] truncate">
-                {profile?.display_name || profile?.username || "—"}
+                {profile?.display_name?.trim() ||
+                  (profile?.username?.trim() && !profile.username.includes("@")
+                    ? profile.username
+                    : null) ||
+                  "—"}
               </p>
             </div>
           </div>

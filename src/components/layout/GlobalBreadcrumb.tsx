@@ -18,7 +18,7 @@ export function GlobalBreadcrumb() {
 
   return (
     <Breadcrumb className="flex-1 min-w-0 basis-0" aria-label="Navigationspfad">
-      <BreadcrumbList className="text-[var(--muted)] text-xs sm:text-sm flex-wrap">
+      <BreadcrumbList className="text-[var(--muted)] text-xs flex-wrap">
         {items.map((item, i) => {
           const isLast = i === items.length - 1;
           return (
@@ -26,20 +26,20 @@ export function GlobalBreadcrumb() {
               {i > 0 && <BreadcrumbSeparator />}
               <BreadcrumbItem>
                 {isLast && !item.href ? (
-                  <BreadcrumbPage className="text-[var(--text-primary)] font-medium truncate max-w-[120px] sm:max-w-[200px]">
+                  <BreadcrumbPage className="text-[var(--text-primary)] font-medium truncate max-w-[240px]">
                     {item.label}
                   </BreadcrumbPage>
                 ) : item.href ? (
                   <BreadcrumbLink asChild>
                     <Link
                       to={item.href}
-                      className="hover:text-[var(--accent)] truncate max-w-[120px] sm:max-w-[200px]"
+                      className="hover:text-[var(--accent)] truncate max-w-[240px]"
                     >
                       {item.label}
                     </Link>
                   </BreadcrumbLink>
                 ) : (
-                  <BreadcrumbPage className="text-[var(--text-primary)] font-medium truncate max-w-[120px] sm:max-w-[200px]">
+                  <BreadcrumbPage className="text-[var(--text-primary)] font-medium truncate max-w-[240px]">
                     {item.label}
                   </BreadcrumbPage>
                 )}

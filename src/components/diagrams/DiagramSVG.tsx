@@ -36,6 +36,9 @@ const Gastrulation = lazy(() => import("./biology/Gastrulation"));
 const Neurulation = lazy(() => import("./biology/Neurulation"));
 const PhotosynthesisZScheme = lazy(() => import("./biology/PhotosynthesisZScheme"));
 const RadiationPenetration = lazy(() => import("./biology/RadiationPenetration"));
+const ChromosomalMutations = lazy(() => import("./biology/ChromosomalMutations"));
+const MutationTypes = lazy(() => import("./biology/MutationTypes"));
+const PhylogeneticTree = lazy(() => import("./biology/PhylogeneticTree"));
 
 // Chemistry
 const AtomicOrbitals = lazy(() => import("./chemistry/AtomicOrbitals"));
@@ -76,6 +79,7 @@ const MicroscopeOptics = lazy(() => import("./physics/MicroscopeOptics"));
 const EndoscopeFiber = lazy(() => import("./physics/EndoscopeFiber"));
 const ThinFilmInterference = lazy(() => import("./physics/ThinFilmInterference"));
 const SIPrefixes = lazy(() => import("./physics/SIPrefixes"));
+const DiffractionSlit = lazy(() => import("./physics/DiffractionSlit"));
 
 // Math
 const CombinatoricsTree = lazy(() => import("./math/CombinatoricsTree"));
@@ -124,6 +128,9 @@ const DIAGRAM_MAP: Record<string, LazyExoticComponent<ComponentType>> = {
   neurulation: Neurulation,
   "photosynthesis-z-scheme": PhotosynthesisZScheme,
   "radiation-penetration": RadiationPenetration,
+  "chromosomal-mutations": ChromosomalMutations,
+  "mutation-types": MutationTypes,
+  "phylogenetic-tree": PhylogeneticTree,
   // Chemistry
   "atomic-orbitals": AtomicOrbitals,
   "covalent-bond": CovalentBond,
@@ -162,6 +169,7 @@ const DIAGRAM_MAP: Record<string, LazyExoticComponent<ComponentType>> = {
   "endoscope-fiber": EndoscopeFiber,
   "thin-film-interference": ThinFilmInterference,
   "si-prefixes": SIPrefixes,
+  "diffraction-slit": DiffractionSlit,
   // Math
   "combinatorics-tree": CombinatoricsTree,
   "coordinate-system": CoordinateSystem,
@@ -271,6 +279,8 @@ const DIAGRAM_CAPTIONS: Record<string, string> = {
     "Dünnschichtinterferenz — Gangunterschied und Farbeffekte an dünnen Schichten.",
   "si-prefixes":
     "SI-Präfixe — Zehnerpotenzen von Femto bis Tera mit medizinisch relevanten Bereichen.",
+  "diffraction-slit":
+    "Einzelspaltbeugung — Intensitätsverteilung mit Zentralmaximum und Minima nach sin(θ) = mλ/b.",
   // Math
   "combinatorics-tree": "Baumdiagramm — Permutationen, Variationen und Kombinationen.",
   "coordinate-system": "Koordinatensystem — Lineare, quadratische und exponentielle Funktionen.",

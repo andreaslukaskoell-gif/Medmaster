@@ -334,6 +334,18 @@ export default function LandingPage() {
     trackEvent("signup_click", { cta: ctaId });
   };
 
+  const [showBottomCta, setShowBottomCta] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPct =
+        window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
+      setShowBottomCta(scrollPct > 0.3);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const GoogleBtn = ({ label, className = "" }: { label: string; className?: string }) => (
     <button
       onClick={handleGoogle}
@@ -948,6 +960,9 @@ export default function LandingPage() {
             <Link to="/medat-uebungsfragen" className="hover:text-white/80 transition-colors">
               Übungsfragen
             </Link>
+            <Link to="/blog" className="hover:text-white/80 transition-colors">
+              Lerntipps
+            </Link>
             <Link to="/impressum" className="hover:text-white/80 transition-colors">
               Impressum
             </Link>
@@ -961,6 +976,31 @@ export default function LandingPage() {
           <p className="text-xs text-white/50">© 2026 MedMaster. Alle Rechte vorbehalten.</p>
         </div>
       </footer>
+
+      {/* ─── Sticky bottom CTA ─── */}
+      {showBottomCta && (
+        <div className="fixed bottom-0 left-0 right-0 z-50 bg-[var(--surface)]/95 backdrop-blur-sm border-t border-[var(--border)] shadow-[var(--shadow-md)]">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+            <div>
+              <p className="text-sm font-semibold text-[var(--text-primary)]">
+                Bereit für den MedAT 2026?
+              </p>
+              <p className="text-xs text-[var(--muted)]">
+                4.300+ Fragen · Alle 4 Bereiche · Jetzt gratis
+              </p>
+            </div>
+            <Link
+              to="/login"
+              onClick={handleLinkClick("sticky-bottom-cta")}
+              className="inline-flex items-center gap-2 text-sm font-semibold text-white px-6 py-2.5 rounded-xl transition-colors hover:opacity-90"
+              style={{ backgroundColor: NAVY }}
+            >
+              Kostenlos starten
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

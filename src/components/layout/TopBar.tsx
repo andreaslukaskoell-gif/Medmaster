@@ -1,25 +1,13 @@
-import type { RefObject } from "react";
-import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
-import { Sun, Moon, Search, Menu, Award } from "lucide-react";
+import { Sun, Moon, Search, Award, Menu } from "lucide-react";
 import { useStore } from "@/store/useStore";
 import { StreakFlameIcon } from "@/components/dashboard/StreakFire";
 import { useIsMounted } from "@/hooks/useIsMounted";
-import { SyncStatus } from "./SyncStatus";
 import { OPEN_COMMAND_PALETTE } from "@/lib/commandPaletteConstants";
 import { getLevelFromXP } from "@/lib/progression";
+import { GlobalBreadcrumb } from "./GlobalBreadcrumb";
 
-import { cn } from "@/lib/utils";
-
-interface TopBarProps {
-  menuButtonRef?: RefObject<HTMLButtonElement | null>;
-  onMenuToggle: () => void;
-  /** Sidebar/Drawer offen (z. B. mobile) → Burger-Icon dreht sich 90°. */
-  sidebarOpen?: boolean;
-}
-
-export function TopBar({ menuButtonRef, onMenuToggle, sidebarOpen = false }: TopBarProps) {
+export function TopBar({ onMenuToggle }: { onMenuToggle?: () => void }) {
   const mounted = useIsMounted();
   const store = useStore();
   const streak = store?.streak ?? 0;
@@ -28,108 +16,65 @@ export function TopBar({ menuButtonRef, onMenuToggle, sidebarOpen = false }: Top
   const lastActiveDate = store?.lastActiveDate ?? "";
   const darkMode = store?.darkMode ?? false;
   const toggleDarkMode = store?.toggleDarkMode ?? (() => {});
-  const showStoreValues = mounted;
   const todayStr = new Date().toISOString().split("T")[0];
   const hasActivityToday = lastActiveDate === todayStr;
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   const openCommandPalette = () => {
     window.dispatchEvent(new CustomEvent(OPEN_COMMAND_PALETTE));
   };
 
   return (
-    <motion.header
-      initial={{ y: -8, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.25, ease: [0.25, 0.1, 0.25, 1] }}
-      className={cn(
-        "sticky top-0 z-[100] flex items-center justify-between gap-3 px-4 sm:px-6 transition-all duration-200",
-        "h-[60px]",
-        "bg-[var(--topbar-bg)] backdrop-blur-sm",
-        "border-b border-[var(--border)]",
-        "transition-[border-color,background-color] duration-200",
-        scrolled && "shadow-[0_1px_0_0_var(--border)]"
-      )}
-    >
-      {/* Left: hamburger + breadcrumb */}
+    <header className="sticky top-0 z-[100] flex items-center justify-between gap-3 px-6 h-12 bg-[var(--topbar-bg)] backdrop-blur-sm border-b border-[var(--border)]/40">
+      {/* Left: menu + breadcrumb */}
       <div className="flex items-center gap-3 min-w-0 flex-1">
-        <button
-          ref={menuButtonRef}
-          type="button"
-          className="p-2 rounded-lg text-[var(--muted)] hover:bg-[var(--border)] hover:text-[var(--foreground)] transition-colors cursor-pointer shrink-0 lg:hidden"
-          onClick={onMenuToggle}
-          aria-label={sidebarOpen ? "Menü schließen" : "Menü öffnen"}
-        >
-          <motion.span
-            className="inline-flex items-center justify-center"
-            style={{ transformOrigin: "50% 50%" }}
-            animate={{ rotate: sidebarOpen ? 90 : 0 }}
-            transition={{
-              type: "spring",
-              stiffness: 400,
-              damping: 30,
-            }}
-          >
-            <Menu className="w-5 h-5" />
-          </motion.span>
-        </button>
-
-        {/* Dashboard link hidden — sidebar has it on lg+, BottomTabBar on mobile */}
-      </div>
-
-      {/* Right: stats + controls */}
-      <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
-        <motion.div
-          initial={false}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.18, ease: [0.25, 0.1, 0.25, 1] }}
-          className="flex items-center gap-1.5 sm:gap-2"
-        >
-          {/* Search */}
+        {onMenuToggle && (
           <button
             type="button"
-            onClick={openCommandPalette}
-            className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[var(--foreground)]/[0.04] text-sm text-[var(--muted)] hover:bg-[var(--foreground)]/[0.07] hover:text-[var(--foreground)] transition-colors cursor-pointer"
-            aria-label="Suchen"
+            onClick={onMenuToggle}
+            className="p-1.5 -ml-1.5 rounded-lg text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-[var(--foreground)]/5 transition-colors cursor-pointer"
+            aria-label="Menü öffnen"
           >
-            <Search className="w-3.5 h-3.5" />
-            <span className="hidden sm:inline text-xs">Suche</span>
-            <kbd className="hidden sm:inline text-[10px] text-[var(--muted)] opacity-60 font-mono">
-              ⌘K
-            </kbd>
+            <Menu className="w-5 h-5" />
           </button>
+        )}
+        <GlobalBreadcrumb />
+      </div>
 
-          {/* Level + Streak group */}
-          <div className="flex items-center gap-0.5 text-xs font-semibold text-[var(--muted)]">
-            <Link
-              to="/fortschritt"
-              className="flex items-center gap-1.5 px-2 py-1.5 rounded-lg hover:bg-[var(--foreground)]/5 hover:text-[var(--foreground)] transition-colors"
-            >
-              <Award className="w-3.5 h-3.5 shrink-0 text-[var(--accent)]" />
-              <span className="min-w-3 text-center">{showStoreValues ? level : "–"}</span>
-            </Link>
-            <div className="flex items-center gap-1.5 px-2 py-1.5 rounded-lg hover:bg-[var(--foreground)]/5 hover:text-[var(--foreground)] transition-colors">
-              <StreakFlameIcon
-                streak={streak ?? 0}
-                hasActivityToday={hasActivityToday}
-                size="inherit"
-                className="w-3.5 h-3.5 shrink-0"
-              />
-              <span className="min-w-3 text-center">{showStoreValues ? (streak ?? 0) : "–"}</span>
-            </div>
+      {/* Right: controls */}
+      <div className="flex items-center gap-3 shrink-0">
+        {/* Search — icon only, tooltip hint */}
+        <button
+          type="button"
+          onClick={openCommandPalette}
+          className="p-2 rounded-lg text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-[var(--foreground)]/5 transition-colors cursor-pointer"
+          aria-label="Suchen (⌘K)"
+          title="Suchen (⌘K)"
+        >
+          <Search className="w-4 h-4" />
+        </button>
+
+        {/* Level + Streak — grouped with divider */}
+        <div className="flex items-center text-xs text-[var(--muted)]">
+          <Link
+            to="/fortschritt"
+            className="flex items-center gap-1.5 px-2 py-1.5 rounded-lg hover:bg-[var(--foreground)]/5 hover:text-[var(--foreground)] transition-colors"
+          >
+            <Award className="w-3.5 h-3.5 shrink-0 text-[var(--accent)]" />
+            <span className="min-w-3 text-center font-medium">{mounted ? level : "–"}</span>
+          </Link>
+          <div className="w-px h-3.5 bg-[var(--border)] mx-0.5" />
+          <div className="flex items-center gap-1.5 px-2 py-1.5 rounded-lg hover:bg-[var(--foreground)]/5 hover:text-[var(--foreground)] transition-colors">
+            <StreakFlameIcon
+              streak={streak}
+              hasActivityToday={hasActivityToday}
+              size="inherit"
+              className="w-3.5 h-3.5 shrink-0"
+            />
+            <span className="min-w-3 text-center font-medium">{mounted ? streak : "–"}</span>
           </div>
+        </div>
 
-          <SyncStatus />
-        </motion.div>
-
-        {/* Dark mode toggle: always visible */}
+        {/* Dark mode toggle */}
         <button
           type="button"
           onClick={toggleDarkMode}
@@ -139,6 +84,6 @@ export function TopBar({ menuButtonRef, onMenuToggle, sidebarOpen = false }: Top
           {darkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
         </button>
       </div>
-    </motion.header>
+    </header>
   );
 }

@@ -46,7 +46,9 @@ export function Leaderboard() {
   // Sync current user's stats to Supabase once on mount
   useEffect(() => {
     if (!supabase || !profile?.id) return;
-    const nickname = profile.display_name || profile.username || "Anonym";
+    const uname = profile.username?.trim();
+    const nickname =
+      profile.display_name?.trim() || (uname && !uname.includes("@") ? uname : null) || "Anonym";
     const level = getLevelFromXP(xp);
     syncUserToLeaderboard(supabase, profile.id, {
       nickname,
@@ -92,7 +94,9 @@ export function Leaderboard() {
   }, [activityLog]);
 
   const currentUserEntry: LeaderboardEntry = useMemo(() => {
-    const nickname = profile?.display_name || profile?.username || "MedATler*in";
+    const un = profile?.username?.trim();
+    const nickname =
+      profile?.display_name?.trim() || (un && !un.includes("@") ? un : null) || "MedATler*in";
     const level = getLevelFromXP(xp);
     const subjectScores: LeaderboardEntry["subjectScores"] = {
       biologie: getFachReadiness("biologie"),

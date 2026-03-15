@@ -3,7 +3,6 @@ import { Outlet, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Sidebar } from "./Sidebar";
 import { TopBar } from "./TopBar";
-import { BottomTabBar } from "./BottomTabBar";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
 import { OPEN_COMMAND_PALETTE } from "@/lib/commandPaletteConstants";
 
@@ -36,6 +35,7 @@ import { useAuth } from "@/hooks/useAuth";
 import { getLevelFromXP, getLevelName, getFeatureUnlockedAtLevel } from "@/lib/progression";
 import { cn } from "@/lib/utils";
 import { useNoIndex } from "@/hooks/usePageTitle";
+import { useReferralAttribution } from "@/hooks/useReferralAttribution";
 import { SIDEBAR_MAIN_ML } from "./sidebarLayout";
 
 /** True when route is a BMS chapter (e.g. /bms/biologie/kap1-zellbiologie). */
@@ -60,12 +60,12 @@ const INTERLEAVE_CHECK_MS = 60 * 1000; // 1 min
 
 export function AppShell() {
   useNoIndex(); // All AppShell routes are auth-gated — prevent indexing
-  const [mobileOpen, setMobileOpen] = useState(false);
+  useReferralAttribution();
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const [commandPaletteOpen, setCommandPaletteOpen] = useState(false);
   const [cmdPaletteEverOpened, setCmdPaletteEverOpened] = useState(false);
   const [interleavingOverlayVisible, setInterleavingOverlayVisible] = useState(false);
   const location = useLocation();
-  const menuButtonRef = useRef<HTMLButtonElement>(null);
   const setPath = useInterleavingStore((s) => s.setPath);
   const snooze = useInterleavingStore((s) => s.snooze);
   const currentArea = useInterleavingStore((s) => s.currentArea);
@@ -158,33 +158,6 @@ export function AppShell() {
     };
   }, []);
 
-  // Unter 1024px (lg): Drawer-Modus; ab lg Sidebar immer sichtbar, Drawer schließen
-  useEffect(() => {
-    const mql = window.matchMedia("(min-width: 1024px)");
-    const handler = () => {
-      if (mql.matches) setMobileOpen(false);
-    };
-    mql.addEventListener("change", handler);
-    return () => mql.removeEventListener("change", handler);
-  }, []);
-
-  // Body-Scroll sperren, wenn mobiler Drawer offen
-  useEffect(() => {
-    if (!mobileOpen) return;
-    const prev = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-    return () => {
-      document.body.style.overflow = prev;
-    };
-  }, [mobileOpen]);
-
-  const closeSidebar = useCallback(() => {
-    setMobileOpen(false);
-    requestAnimationFrame(() => {
-      menuButtonRef.current?.focus({ preventScroll: true });
-    });
-  }, []);
-
   const isChapterRoute = isChapterFocusRoute(location.pathname);
 
   return (
@@ -231,25 +204,21 @@ export function AppShell() {
             onDismiss={() => setPendingBadgeId(null)}
           />
         </Suspense>
-        <Sidebar mobileOpen={mobileOpen} onClose={closeSidebar} />
+        <Sidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
         <div
           className={cn(
             "min-h-screen flex flex-col relative z-50 w-full transition-colors duration-200",
             "bg-[var(--background)]",
-            SIDEBAR_MAIN_ML
+            SIDEBAR_MAIN_ML // now empty — sidebar is overlay
           )}
         >
-          <TopBar
-            menuButtonRef={menuButtonRef}
-            onMenuToggle={() => setMobileOpen(!mobileOpen)}
-            sidebarOpen={mobileOpen}
-          />
+          <TopBar onMenuToggle={() => setSidebarOpen((v) => !v)} />
           <main
             id="main-content"
             tabIndex={-1}
             className={cn(
-              "flex-1 p-4 lg:p-6 pb-8 w-full transition-[max-width,padding-top] duration-200",
-              "pt-14 sm:pt-16",
+              "flex-1 p-6 pb-8 w-full transition-[max-width,padding-top] duration-200",
+              "pt-16",
               isChapterRoute ? "max-w-none mx-auto" : "max-w-7xl mx-auto"
             )}
           >
@@ -269,7 +238,6 @@ export function AppShell() {
               </AnimatePresence>
             </ErrorBoundary>
           </main>
-          <BottomTabBar />
         </div>
       </div>
     </BreadcrumbProvider>

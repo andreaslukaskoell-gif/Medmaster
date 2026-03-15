@@ -5,6 +5,8 @@ import { GraduationCap, Calendar, Clock, BookOpen, ArrowRight, CheckCircle2 } fr
 import { Button } from "@/components/ui/button";
 import { useStore } from "@/store/useStore";
 import { cn } from "@/lib/utils";
+import { trackOnboardingComplete } from "@/lib/analytics";
+import { trackEvent } from "@/lib/analyticsTracker";
 
 type Step = "welcome" | "date" | "time" | "fach" | "done";
 
@@ -477,6 +479,10 @@ export default function Onboarding() {
 
     // Mark onboarding complete (pass null for einstufungsResult — simplified flow)
     completeOnboarding(null);
+
+    // Analytics
+    trackOnboardingComplete();
+    trackEvent("onboarding_complete", { medatDate, hoursPerWeek, weakestSubject: selectedFach });
 
     const timer = setTimeout(() => {
       navigate("/daily", { replace: true });

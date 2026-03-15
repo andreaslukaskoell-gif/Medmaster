@@ -23,23 +23,7 @@ import {
 } from "@/utils/parseHinterfrag";
 import { parseMedATAndSummary, type MedATSections } from "@/utils/parseMedATAndSummary";
 import { splitMarkdownByH2 } from "@/utils/splitMarkdownByH2";
-import {
-  CollapsibleSection,
-  type SectionVariant,
-  type SectionProgressStatus,
-} from "./CollapsibleSection";
 import { SectionTOC } from "./SectionTOC";
-
-const STORAGE_KEY_PROGRESS = (ukId: string) => `medmaster-section-progress-${ukId}`;
-
-/** Single section in the unified accordion (intro, H2, MedAT-Fokus, Zusammenfassung). */
-type Section = {
-  id: string;
-  title: string;
-  content: ReactNode;
-  variant: SectionVariant;
-  defaultOpen?: boolean;
-};
 
 const MEDAT_SECTION_ORDER: { key: keyof MedATSections; label: string }[] = [
   { key: "zentral", label: "Zentral prüfungsrelevant" },
@@ -49,7 +33,7 @@ const MEDAT_SECTION_ORDER: { key: keyof MedATSections; label: string }[] = [
   { key: "zahlen", label: "Prüfungsrelevante Zahlen/Fakten" },
 ];
 
-/** Body content for MedAT-Fokus (used inside CollapsibleSection). */
+/** Body content for MedAT-Fokus section. */
 function MedATFocusBody({ sections }: { sections: MedATSections }) {
   const hasContent = MEDAT_SECTION_ORDER.some(({ key }) => sections[key]?.trim());
   if (!hasContent) return null;
@@ -142,7 +126,7 @@ function buildMarkdownComponents(keywordLinkEntries?: KeywordLinkEntry[]) {
       return <strong>{children}</strong>;
     },
     table: ({ children, ...props }: ComponentProps<"table">) => (
-      <div className="overflow-x-auto my-4">
+      <div className="overflow-x-auto my-6 rounded-lg border border-[var(--border)]">
         <table className="w-full text-sm border-collapse" {...props}>
           {children}
         </table>
@@ -150,7 +134,7 @@ function buildMarkdownComponents(keywordLinkEntries?: KeywordLinkEntry[]) {
     ),
     th: ({ children, ...props }: ComponentProps<"th">) => (
       <th
-        className="text-left p-3 font-semibold text-[var(--text-primary)] border-b-2 border-[var(--border)]"
+        className="text-left p-3 font-semibold text-[var(--text-primary)] bg-[var(--surface)] border-b-2 border-[var(--border)]"
         {...props}
       >
         {children}
@@ -164,14 +148,69 @@ function buildMarkdownComponents(keywordLinkEntries?: KeywordLinkEntry[]) {
         {children}
       </td>
     ),
-    blockquote: ({ children, ...props }: ComponentProps<"blockquote">) => (
-      <blockquote
-        className="border-l-2 border-[var(--accent)]/40 pl-4 pr-2 py-2 my-4 text-[var(--text-secondary)] not-italic"
-        {...props}
-      >
-        {children}
-      </blockquote>
-    ),
+    blockquote: ({ children }: ComponentProps<"blockquote">) => {
+      // Detect Merke blockquotes (start with **Merke:**)
+      const text = getTextContent(children ?? "");
+      const isMerke = text.trimStart().startsWith("Merke:");
+      const isAchtung = text.trimStart().startsWith("Achtung:");
+      const isTipp = text.trimStart().startsWith("Tipp:");
+      const isKlinisch = text.trimStart().startsWith("Klinischer Bezug:");
+
+      if (isMerke) {
+        return (
+          <div className="my-6 rounded-lg border-l-4 border-[var(--accent)] bg-[var(--accent)]/5 dark:bg-[var(--accent)]/15 px-5 py-4">
+            <div className="text-[13px] font-semibold uppercase tracking-wider text-[var(--accent)] mb-1.5">
+              Merke
+            </div>
+            <div className="text-sm text-[var(--text-primary)] leading-relaxed [&>p]:my-0 [&_strong]:font-semibold">
+              {children}
+            </div>
+          </div>
+        );
+      }
+      if (isAchtung) {
+        return (
+          <div className="my-6 rounded-lg border-l-4 border-orange-500 bg-orange-50 dark:bg-orange-900/20 px-5 py-4">
+            <div className="text-[13px] font-semibold uppercase tracking-wider text-orange-700 dark:text-orange-300 mb-1.5">
+              Achtung
+            </div>
+            <div className="text-sm text-[var(--text-primary)] leading-relaxed [&>p]:my-0">
+              {children}
+            </div>
+          </div>
+        );
+      }
+      if (isTipp) {
+        return (
+          <div className="my-6 rounded-lg border-l-4 border-purple-500 bg-purple-50 dark:bg-purple-900/20 px-5 py-4">
+            <div className="text-[13px] font-semibold uppercase tracking-wider text-purple-700 dark:text-purple-300 mb-1.5">
+              Tipp
+            </div>
+            <div className="text-sm text-[var(--text-primary)] leading-relaxed [&>p]:my-0">
+              {children}
+            </div>
+          </div>
+        );
+      }
+      if (isKlinisch) {
+        return (
+          <div className="my-6 rounded-lg border-l-4 border-amber-500 bg-amber-50 dark:bg-amber-900/25 px-5 py-4">
+            <div className="text-[13px] font-semibold uppercase tracking-wider text-amber-700 dark:text-amber-300 mb-1.5">
+              Klinischer Bezug
+            </div>
+            <div className="text-sm text-[var(--text-primary)] leading-relaxed [&>p]:my-0">
+              {children}
+            </div>
+          </div>
+        );
+      }
+
+      return (
+        <blockquote className="border-l-3 border-[var(--accent)]/30 pl-4 pr-2 py-2 my-5 text-[var(--text-secondary)] not-italic">
+          {children}
+        </blockquote>
+      );
+    },
     a: ({ href, title, children }: { href?: string; title?: string; children?: ReactNode }) => {
       if (href?.startsWith("/bms/") && href.length > 8 && title) {
         const isKeyword = isKeywordLinkTitle(title);
@@ -195,7 +234,7 @@ function buildMarkdownComponents(keywordLinkEntries?: KeywordLinkEntry[]) {
   };
 }
 
-/** Renders Markdown content with AMBOSS-style blockquotes, tables, and smart links. */
+/** Renders Markdown content with styled blockquotes, tables, and smart links. */
 function MarkdownContent({
   text,
   className = "",
@@ -222,7 +261,7 @@ function MarkdownContent({
   if (blocks.length === 0) {
     return (
       <div
-        className={`prose prose-slate dark:prose-invert prose-sm max-w-none leading-7 text-[var(--text-primary)] prose-headings:mt-6 prose-headings:mb-3 prose-p:my-3 ${className}`}
+        className={`prose prose-slate dark:prose-invert prose-base max-w-none leading-[1.8] text-[var(--text-primary)] prose-headings:mt-8 prose-headings:mb-4 prose-headings:text-[var(--text-primary)] prose-p:my-4 prose-li:my-1 prose-ul:my-3 prose-ol:my-3 ${className}`}
       >
         <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
           {processedBase}
@@ -234,7 +273,7 @@ function MarkdownContent({
   const segments = processedBase.split(PLACEHOLDER_REGEX);
   return (
     <div
-      className={`prose prose-slate dark:prose-invert prose-sm max-w-none leading-7 text-[var(--text-primary)] prose-headings:mt-6 prose-headings:mb-3 prose-p:my-3 ${className}`}
+      className={`prose prose-slate dark:prose-invert prose-base max-w-none leading-[1.8] text-[var(--text-primary)] prose-headings:mt-8 prose-headings:mb-4 prose-headings:text-[var(--text-primary)] prose-p:my-4 prose-li:my-1 prose-ul:my-3 prose-ol:my-3 ${className}`}
     >
       {segments.map((part, i) => {
         if (i % 2 === 0) {
@@ -260,6 +299,14 @@ function MarkdownContent({
     </div>
   );
 }
+
+/** Unified section for flowing content (intro, H2 sections, MedAT-Fokus, Zusammenfassung). */
+type Section = {
+  id: string;
+  title: string;
+  content: ReactNode;
+  variant: "default" | "medat" | "summary";
+};
 
 interface Props {
   uk: Unterkapitel;
@@ -295,11 +342,10 @@ export function SubchapterContent({
     [segments]
   );
 
-  /** Renders markdown text; injects DiagramSVG when {{DIAGRAM}} or {{DIAGRAM:type}} placeholders present. */
+  /** Renders markdown text; injects DiagramSVG when placeholders present. */
   function renderSectionContent(text: string): ReactNode {
     if (!text.trim()) return null;
 
-    // Split on {{DIAGRAM}}, {{DIAGRAM:specific-type}}, and {{IMAGE}} markers
     const placeholderPattern = /\{\{DIAGRAM(?::([a-z0-9-]+))?\}\}|\{\{IMAGE\}\}/g;
     const hasAnyPlaceholder = placeholderPattern.test(text);
     if (!hasAnyPlaceholder) {
@@ -312,7 +358,6 @@ export function SubchapterContent({
       );
     }
 
-    // Reset lastIndex after test()
     placeholderPattern.lastIndex = 0;
     const parts: ReactNode[] = [];
     let lastIndex = 0;
@@ -336,7 +381,6 @@ export function SubchapterContent({
       }
 
       if (match[0] === "{{IMAGE}}") {
-        // Render the UK imageUrl inline where it fits in the text
         if (uk.imageUrl) {
           parts.push(
             <figure
@@ -360,7 +404,6 @@ export function SubchapterContent({
         }
         lastWasDiagram = false;
       } else {
-        // {{DIAGRAM}} or {{DIAGRAM:type}}
         const diagramType = match[1] || uk.diagram;
         if (diagramType) {
           parts.push(
@@ -390,7 +433,7 @@ export function SubchapterContent({
     return <div className="space-y-4">{parts}</div>;
   }
 
-  // Unified section list: intro + H2 sections + MedAT-Fokus + Zusammenfassung (same order as segments)
+  // Build flat section list: intro + H2 sections + MedAT-Fokus + Zusammenfassung
   const unifiedSections = useMemo((): Section[] => {
     const list: Section[] = [];
     segments.forEach((segment, segIdx) => {
@@ -402,7 +445,6 @@ export function SubchapterContent({
             title: "Einleitung",
             content: renderSectionContent(intro),
             variant: "default",
-            defaultOpen: true,
           });
         }
         sections.forEach((sec) => {
@@ -423,7 +465,7 @@ export function SubchapterContent({
       } else if (segment.type === "summary" && segment.content.trim()) {
         list.push({
           id: "zusammenfassung",
-          title: "Zusammenfassung (ultrakompakt)",
+          title: "Zusammenfassung",
           content: (
             <div className="prose prose-slate dark:prose-invert prose-sm max-w-none prose-ul:my-2 prose-li:my-0.5 text-[var(--text-primary)]">
               <ReactMarkdown remarkPlugins={[remarkGfm]}>{segment.content.trim()}</ReactMarkdown>
@@ -433,7 +475,6 @@ export function SubchapterContent({
         });
       }
     });
-    // If diagram has no placeholder, append to last section so no SVG is outside a section
     if (uk.diagram && !diagramRendered && list.length > 0) {
       const last = list[list.length - 1];
       list[list.length - 1] = {
@@ -453,84 +494,11 @@ export function SubchapterContent({
   }, [segments, uk.diagram, diagramRendered, hinterfragMode, keywordLinkEntries]);
 
   const allSectionIds = useMemo(() => unifiedSections.map((s) => s.id), [unifiedSections]);
-  const firstSectionId = allSectionIds[0] ?? null;
-
-  // Section progress: unread | opened | completed (optional localStorage per subchapter)
-  const [sectionProgress, setSectionProgress] = useState<Record<string, SectionProgressStatus>>(
-    () => {
-      try {
-        const raw = localStorage.getItem(STORAGE_KEY_PROGRESS(uk.id));
-        if (!raw) return {};
-        const parsed = JSON.parse(raw) as Record<string, string>;
-        const next: Record<string, SectionProgressStatus> = {};
-        for (const [id, v] of Object.entries(parsed)) {
-          if (v === "unread" || v === "opened" || v === "completed") next[id] = v;
-        }
-        return next;
-      } catch {
-        return {};
-      }
-    }
-  );
-  useEffect(() => {
-    if (Object.keys(sectionProgress).length === 0) return;
-    try {
-      localStorage.setItem(STORAGE_KEY_PROGRESS(uk.id), JSON.stringify(sectionProgress));
-    } catch {
-      /* ignore */
-    }
-  }, [uk.id, sectionProgress]);
-
-  // Open state: ALL sections open by default — reading flow, not FAQ
-  const [openSections, setOpenSections] = useState<Record<string, boolean>>({});
-  const openSectionsInitialized = useRef(false);
-  const prevUkId = useRef(uk.id);
-
-  useEffect(() => {
-    if (prevUkId.current !== uk.id) {
-      prevUkId.current = uk.id;
-      openSectionsInitialized.current = false;
-    }
-  }, [uk.id]);
-
-  useEffect(() => {
-    if (unifiedSections.length === 0) return;
-    if (openSectionsInitialized.current) return;
-    openSectionsInitialized.current = true;
-    const allOpen = allSectionIds.reduce<Record<string, boolean>>(
-      (acc, id) => ({ ...acc, [id]: true }),
-      {}
-    );
-    const t = setTimeout(() => setOpenSections(allOpen), 0);
-    return () => clearTimeout(t);
-  }, [unifiedSections, allSectionIds]);
-
-  const effectiveOpen = useCallback((id: string) => openSections[id] ?? false, [openSections]);
-
-  const handleSectionOpenChange = useCallback((id: string, open: boolean) => {
-    setOpenSections((prev) => ({ ...prev, [id]: open }));
-  }, []);
-
-  const handleOpened = useCallback((id: string) => {
-    setSectionProgress((prev) =>
-      prev[id] === "unread" || prev[id] === undefined ? { ...prev, [id]: "opened" } : prev
-    );
-  }, []);
-
-  const handleCompleted = useCallback((id: string) => {
-    setSectionProgress((prev) => ({ ...prev, [id]: "completed" }));
-    // Sections only open when user clicks (header or TOC), not auto-open next
-  }, []);
-  const handleTOCSelect = useCallback((id: string) => {
-    setOpenSections((prev) => ({ ...prev, [id]: true }));
-    requestAnimationFrame(() => {
-      document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
-    });
-  }, []);
 
   // Current section for TOC highlight (IntersectionObserver)
   const [currentSectionId, setCurrentSectionId] = useState<string | null>(null);
   const sectionRefsMap = useRef<Record<string, HTMLDivElement | null>>({});
+
   useEffect(() => {
     const map = sectionRefsMap.current;
     const ids = allSectionIds;
@@ -561,19 +529,21 @@ export function SubchapterContent({
     };
   }, [allSectionIds]);
 
+  const handleTOCSelect = useCallback((id: string) => {
+    requestAnimationFrame(() => {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  }, []);
+
   useEffect(() => {
     const hash = window.location.hash.slice(1);
     if (!hash) return;
     const hasSection = unifiedSections.some((s) => s.id === hash);
     if (hasSection) {
-      const t = setTimeout(() => setOpenSections((prev) => ({ ...prev, [hash]: true })), 0);
-      const t2 = setTimeout(() => {
+      const t = setTimeout(() => {
         document.getElementById(hash)?.scrollIntoView({ behavior: "smooth", block: "start" });
       }, 150);
-      return () => {
-        clearTimeout(t);
-        clearTimeout(t2);
-      };
+      return () => clearTimeout(t);
     }
   }, [unifiedSections]);
 
@@ -583,40 +553,73 @@ export function SubchapterContent({
   );
 
   return (
-    <div className="space-y-6 content-section">
-      <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-10">
-        <aside className="hidden lg:block min-w-0">
+    <div className="content-section">
+      <div className="grid grid-cols-[220px_1fr] gap-12">
+        {/* Sticky left TOC */}
+        <aside className="min-w-0">
           <SectionTOC
             sections={tocSections}
-            progress={sectionProgress}
             currentSectionId={currentSectionId}
             onSelect={handleTOCSelect}
             variant="left"
           />
         </aside>
-        <div className="space-y-0 min-w-0 max-w-prose">
+
+        {/* Main content — flowing sections, no accordions */}
+        <div className="min-w-0 max-w-[680px]">
           {unifiedSections.map((section, index) => (
             <div
               key={section.id}
-              className={index === 0 ? undefined : "-mt-px"}
               ref={(el) => {
                 sectionRefsMap.current[section.id] = el;
               }}
               data-section-id={section.id}
             >
-              <CollapsibleSection
-                id={section.id}
-                title={section.title}
-                variant={section.variant}
-                defaultOpen={section.defaultOpen}
-                progressStatus={sectionProgress[section.id] ?? "unread"}
-                onOpened={() => handleOpened(section.id)}
-                onCompleted={() => handleCompleted(section.id)}
-                open={effectiveOpen(section.id)}
-                onOpenChange={(open) => handleSectionOpenChange(section.id, open)}
+              {/* Section anchor for scroll-to */}
+              <div id={section.id} className="scroll-mt-28" aria-hidden />
+
+              {/* Section heading — skip for intro */}
+              {section.title !== "Einleitung" && (
+                <div className={`${index === 0 ? "mt-0" : "mt-12"} mb-6`}>
+                  {section.variant === "medat" ? (
+                    <div className="flex items-center gap-3">
+                      <span className="text-[11px] font-bold uppercase tracking-widest text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-900/25 px-2.5 py-1 rounded">
+                        MedAT-Fokus
+                      </span>
+                      <div className="flex-1 h-px bg-amber-200 dark:bg-amber-800" />
+                    </div>
+                  ) : section.variant === "summary" ? (
+                    <div className="flex items-center gap-3">
+                      <span className="text-[11px] font-bold uppercase tracking-widest text-teal-600 dark:text-teal-400 bg-teal-50 dark:bg-teal-900/25 px-2.5 py-1 rounded">
+                        Zusammenfassung
+                      </span>
+                      <div className="flex-1 h-px bg-teal-200 dark:bg-teal-800" />
+                    </div>
+                  ) : (
+                    <h2 className="text-xl font-bold text-[var(--text-primary)] leading-tight">
+                      {section.title}
+                    </h2>
+                  )}
+                </div>
+              )}
+
+              {/* Section content — flows naturally */}
+              <div
+                className={
+                  section.variant === "medat"
+                    ? "pl-4 border-l-2 border-amber-300 dark:border-amber-700 py-2"
+                    : section.variant === "summary"
+                      ? "pl-4 border-l-2 border-teal-300 dark:border-teal-700 py-2"
+                      : ""
+                }
               >
                 {section.content}
-              </CollapsibleSection>
+              </div>
+
+              {/* Visual separator between major sections */}
+              {index < unifiedSections.length - 1 && section.variant === "default" && (
+                <div className="mt-10 border-b border-[var(--border)]/40 dark:border-[var(--border)]/60" />
+              )}
             </div>
           ))}
         </div>

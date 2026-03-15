@@ -4,47 +4,47 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* ── Design System: Premium Lernplattform (Navy-Basis, AMBOSS-like) ───
- * Light: heller Hintergrund, Navy-Akzente.
- * Dark: Navy als Base, weiche Oberflächen.
+/* ── Design System: Premium Lernplattform (warm, refined, academic) ───
+ * Light: warm paper-tone background, deep indigo accents.
+ * Dark: warm charcoal base, soft surfaces.
  */
 :root {
   /* Base */
-  --background: #f1f5f9;
+  --background: #fafaf8;
   --surface: #ffffff;
   --card: #ffffff;
-  --foreground: #0f172a;
-  --text-primary: #0f172a;
-  --text-secondary: #475569;
-  --border: #e2e8f0;
-  --muted: #64748b;
-  /* Accent (Navy / Primary) */
-  --accent: #1b3ea7;
-  --accent-hover: #163286;
+  --foreground: #1a1a1a;
+  --text-primary: #1a1a1a;
+  --text-secondary: #5c5c5c;
+  --border: #e8e8e4;
+  --muted: #8c8c8c;
+  /* Accent (Deep Indigo / Primary) */
+  --accent: #2d3a8c;
+  --accent-hover: #3d4ca6;
   /* Semantic */
   --success: #0d9488;
   --success-bg: #ccfbf1;
   --warning: #d97706;
   --warning-bg: #fef3c7;
   /* Shell */
-  --sidebar-bg: #ffffff;
-  --topbar-bg: rgba(255, 255, 255, 0.92);
-  --radius: 12px;
-  --radius-lg: 16px;
+  --sidebar-bg: #f5f5f3;
+  --topbar-bg: rgba(250, 250, 248, 0.92);
+  --radius: 10px;
+  --radius-lg: 12px;
   /* Spacing (Luft zwischen Abschnitten) */
   --space-section: 1.5rem;
   --space-block: 1rem;
   /* Transitions */
   --ease-out: 0.15s ease-out;
   --ease-out-slow: 0.2s ease-out;
-  /* Elevation (shadow tokens) */
-  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.04);
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.08);
+  /* Elevation (shadow tokens) — warmer, subtler */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.03);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.07);
   /* Dashboard */
-  --dashboard-bg: #f4f6fa;
-  --dashboard-bg-solid: #f4f6fa;
+  --dashboard-bg: #fafaf8;
+  --dashboard-bg-solid: #fafaf8;
   /* Fach-Akzente (unverändert) */
   --accent-bio: #329556;
   --accent-chem: #c2410c;
@@ -53,50 +53,50 @@
 }
 
 .dark {
-  --background: #0f172a;
-  --surface: #1e293b;
-  --card: #1e293b;
-  --foreground: #f1f5f9; /* slate-100: main text */
-  --text-primary: #f1f5f9; /* slate-100: body/main content */
-  --text-secondary: #cbd5e1; /* slate-300: secondary */
-  --border: #334155;
-  --muted: #94a3b8; /* slate-400: meta, labels */
-  --accent: #3b82f6;
-  --accent-hover: #60a5fa;
+  --background: #141414;
+  --surface: #1e1e1e;
+  --card: #1e1e1e;
+  --foreground: #ededed; /* warm off-white: main text */
+  --text-primary: #ededed; /* warm off-white: body/main content */
+  --text-secondary: #a0a0a0; /* warm medium gray: secondary */
+  --border: #2a2a2a;
+  --muted: #888888; /* warm gray: meta, labels */
+  --accent: #5b8def;
+  --accent-hover: #7aa4f7;
   --success: #2dd4bf;
   --success-bg: rgba(45, 212, 191, 0.15);
   --warning: #f59e0b;
   --warning-bg: rgba(245, 158, 11, 0.15);
-  --sidebar-bg: #0f172a;
-  --topbar-bg: rgba(15, 23, 42, 0.92);
+  --sidebar-bg: #181818;
+  --topbar-bg: rgba(20, 20, 20, 0.92);
   --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.12);
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 2px rgba(0, 0, 0, 0.1);
   --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.16);
   --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.2);
-  --dashboard-bg: #0f172a;
-  --dashboard-bg-solid: #0f172a;
+  --dashboard-bg: #141414;
+  --dashboard-bg-solid: #141414;
 }
 
 @theme {
-  /* Medical UI: Deep Blue primary (Navy) */
-  --color-primary-50: #e8ecf7;
-  --color-primary-100: #c5cee9;
-  --color-primary-200: #8b9dd3;
-  --color-primary-300: #516cbd;
-  --color-primary-400: #3655b2;
-  --color-primary-500: #1b3ea7;
-  --color-primary-600: #163286;
-  --color-primary-700: #102564;
-  --color-primary-800: #0b1943;
-  --color-primary-900: #050c21;
-  --color-primary-950: #030611;
+  /* Premium UI: Deep Indigo primary (warm, academic) */
+  --color-primary-50: #eceef8;
+  --color-primary-100: #cdd2ec;
+  --color-primary-200: #9ba5d9;
+  --color-primary-300: #6978c6;
+  --color-primary-400: #4a59b3;
+  --color-primary-500: #2d3a8c;
+  --color-primary-600: #252f73;
+  --color-primary-700: #1c2459;
+  --color-primary-800: #131840;
+  --color-primary-900: #0a0d26;
+  --color-primary-950: #050713;
 
-  --color-midnight: #0f172a;
-  --color-soft-white: #f8fafc;
-  --color-surface: #f8fafc;
+  --color-midnight: #1a1a1a;
+  --color-soft-white: #fafaf8;
+  --color-surface: #fafaf8;
   --color-card: #ffffff;
-  --color-border: #e2e8f0;
-  --color-muted: #64748b;
+  --color-border: #e8e8e4;
+  --color-muted: #8c8c8c;
 
   --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
@@ -301,25 +301,17 @@ body.dark-body {
   animation: strikethrough-scale 0.4s ease-out forwards;
 }
 
-/* Merksatz / Callout: Accent-Leiste links, Premium-Look */
-.prose blockquote,
+/* Callout boxes — handled by custom blockquote renderer in SubchapterContent */
 .content-callout {
   border-left: 4px solid var(--accent);
   background: var(--surface);
   padding: 1rem 1.25rem;
-  border-radius: 0 var(--radius) var(--radius) 0;
+  border-radius: 0 0.5rem 0.5rem 0;
   font-style: normal;
   color: var(--text-primary);
-  border-color: var(--border);
 }
-.prose blockquote {
-  border-left-color: var(--success);
-  background: var(--success-bg);
-}
-.dark .prose blockquote {
-  border-left-color: var(--success);
-  background: var(--success-bg);
-  color: var(--foreground);
+.dark .content-callout {
+  background: color-mix(in srgb, var(--surface) 80%, var(--accent) 5%);
 }
 
 .content h1:has(+ ol) {
@@ -609,4 +601,49 @@ body.dark-body .dashboard-page-bg {
 
 .streak-flame-wrap.streak-ignite .streak-flame-inner {
   animation: streak-ignite 0.6s ease-out forwards;
+}
+
+/* Blog article prose styling */
+.prose-medmaster {
+  line-height: 1.75;
+  color: var(--text-primary);
+}
+.prose-medmaster p {
+  margin-bottom: 1rem;
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+}
+.prose-medmaster h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+}
+.prose-medmaster h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+.prose-medmaster ul,
+.prose-medmaster ol {
+  margin: 0.75rem 0 1rem 1.25rem;
+  padding: 0;
+}
+.prose-medmaster li {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.375rem;
+  line-height: 1.7;
+}
+.prose-medmaster strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+.prose-medmaster a {
+  color: var(--accent);
+  text-decoration: underline;
 }

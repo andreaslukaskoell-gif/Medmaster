@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import { useStore } from "@/store/useStore";
 import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/lib/supabase";
+import { trackOnboardingComplete } from "@/lib/analytics";
+import { trackEvent } from "@/lib/analyticsTracker";
 
 export default function MedATOnboarding() {
   const [username, setUsername] = useState("");
@@ -14,11 +16,15 @@ export default function MedATOnboarding() {
   const setComplete = useStore((s) => s.setMedATOnboardingComplete);
   const { user, profile } = useAuth();
 
-  // If user already has a display name (e.g. from Google), skip onboarding entirely
+  // If user already has a real display name (e.g. from Google), skip onboarding
   useEffect(() => {
-    const existingName = profile?.display_name?.trim() || profile?.username?.trim();
+    const existingName =
+      profile?.display_name?.trim() ||
+      (profile?.username?.trim() && !profile.username.includes("@") ? profile.username.trim() : "");
     if (existingName) {
       setComplete();
+      trackOnboardingComplete();
+      trackEvent("onboarding_complete");
       navigate("/dashboard", { replace: true });
     }
   }, [profile, setComplete, navigate]);
@@ -40,6 +46,8 @@ export default function MedATOnboarding() {
 
     setSaving(false);
     setComplete();
+    trackOnboardingComplete();
+    trackEvent("onboarding_complete");
     navigate("/dashboard", { replace: true });
   };
 

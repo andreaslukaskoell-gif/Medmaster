@@ -23,6 +23,8 @@ import { getStrategieTipp, getDirectStichwortId } from "@/data/questions/index";
 import { stripMarkdownAsterisks } from "@/utils/formatExplanation";
 import { ShareResultButton } from "@/components/shared/ShareResultButton";
 import { getQuizShareText } from "@/lib/shareUtils";
+import { trackQuizComplete } from "@/lib/analytics";
+import { trackEvent } from "@/lib/analyticsTracker";
 
 const subjectColors: Record<string, { bg: string; text: string; label: string }> = {
   biologie: {
@@ -173,6 +175,8 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
     addXP(score * 10);
     checkStreak();
     logActivity(questions.length, getMinutes());
+    trackQuizComplete("bms", score, questions.length);
+    trackEvent("quiz_complete", { section: "bms", subject, score, total: questions.length });
     setSubmitted(true);
     setCurrentIndex(0);
     if (pct >= 90) setShowConfetti(true);

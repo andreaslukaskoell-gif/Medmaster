@@ -79,7 +79,7 @@ export const QuizQuestion = React.memo(function QuizQuestion({
 
   return (
     <motion.div
-      className="rounded-lg border border-[var(--border)] p-5 transition-colors"
+      className="rounded-xl border-t border-[var(--border)]/40 pt-6 pb-5 px-5 transition-colors first:border-t-0 first:pt-0"
       animate={isWrong ? { x: [0, -6, 6, -6, 0] } : {}}
       data-answered={isAnswered}
       transition={{ duration: 0.3, ease: "easeOut" }}
@@ -109,15 +109,15 @@ export const QuizQuestion = React.memo(function QuizQuestion({
                 type="button"
                 onClick={() => handleSelectAnswer(oi)}
                 disabled={isAnswered}
-                className={`w-full min-w-0 text-left px-4 py-2.5 rounded-lg border transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/50
+                className={`w-full min-w-0 text-left px-4 py-3 rounded-lg border transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/50
                   ${
                     showAsCorrect
                       ? "bg-emerald-50 dark:bg-emerald-900/20 border-emerald-400 dark:border-emerald-600 text-[var(--text-primary)] font-medium"
                       : isWrongChosen
                         ? "bg-red-50 dark:bg-red-900/20 border-red-400 dark:border-red-600 text-[var(--text-primary)]"
                         : isAnswered
-                          ? "border-[var(--border)] text-[var(--muted)] cursor-not-allowed"
-                          : "border-[var(--border)] hover:border-[var(--accent)]/50 text-[var(--text-primary)] cursor-pointer"
+                          ? "border-[var(--border)]/50 text-[var(--muted)] cursor-not-allowed"
+                          : "border-[var(--border)]/60 hover:border-[var(--accent)]/40 hover:bg-[var(--accent)]/[0.03] text-[var(--text-primary)] cursor-pointer shadow-[0_1px_2px_rgba(0,0,0,0.03)]"
                   }`}
               >
                 <span className="font-bold mr-3 text-sm shrink-0">

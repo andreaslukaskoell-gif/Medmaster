@@ -63,10 +63,15 @@ export function InteractiveQuiz({ questions, onAnswer, onAllComplete }: Interact
   return (
     <div className="space-y-5 mt-8">
       {/* Header */}
-      <div className="pb-3 border-b border-[var(--border)]">
-        <h2 className="text-lg font-semibold text-[var(--text-primary)]">Kontrollfragen</h2>
+      <div className="pb-4 mb-2">
+        <div className="flex items-center gap-3 mb-2">
+          <span className="text-[11px] font-bold uppercase tracking-widest text-[var(--accent)] bg-[var(--accent)]/8 dark:bg-[var(--accent)]/12 px-3 py-1.5 rounded-md">
+            Kontrollfragen
+          </span>
+          <div className="flex-1 h-px bg-[var(--border)]" />
+        </div>
         {totalAnswered > 0 && (
-          <p className="text-sm text-[var(--muted)] mt-1">
+          <p className="text-sm text-[var(--muted)]">
             {totalCorrect}/{totalAnswered} richtig
           </p>
         )}
