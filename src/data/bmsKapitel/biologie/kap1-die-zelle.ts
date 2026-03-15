@@ -875,6 +875,12 @@ Na⁺ strömt in die Zelle, während ein anderes Ion **heraus** transportiert wi
       ],
       klinischerBezug:
         "Herzglykoside hemmen Na⁺/K⁺-ATPase → Ca²⁺ ↑ → positiv inotrop. SGLT2-Hemmer blockieren Glucoserückresorption in der Niere → Glucosurie → Blutzuckersenkung bei Typ-2-Diabetes. Isotone Infusion 0,9 % NaCl; hypotone Infusion kann Hämolyse begünstigen.",
+      altfrage: {
+        question:
+          "Herzglykoside (z. B. Digitalis) hemmen die Na⁺/K⁺-ATPase. Über welchen Mechanismus führt das zu einer verstärkten Herzkontraktion?",
+        answer:
+          "Durch Hemmung der Na⁺/K⁺-ATPase steigt die intrazelluläre Na⁺-Konzentration. Dadurch kann der Na⁺/Ca²⁺-Austauscher (NCX), der normalerweise 3 Na⁺ in die Zelle und 1 Ca²⁺ heraus transportiert, weniger effizient arbeiten, weil der Na⁺-Gradient als Antrieb abgeschwächt ist. In der Folge akkumuliert Ca²⁺ intrazellulär. Mehr Ca²⁺ steht für die Aktin-Myosin-Interaktion zur Verfügung, was die Kontraktionskraft des Herzmuskels steigert (positiv inotrop). Dieser Mechanismus verknüpft primär aktiven Transport (Na⁺/K⁺-ATPase) mit sekundär aktivem Transport (NCX) — ein Schlüsselkonzept des Membrantransports.",
+      },
       selfTest: [
         {
           question: "Was passiert mit Erythrozyten in einer hypotonen Lösung?",

@@ -39,15 +39,41 @@ const RadiationPenetration = lazy(() => import("./biology/RadiationPenetration")
 const ChromosomalMutations = lazy(() => import("./biology/ChromosomalMutations"));
 const MutationTypes = lazy(() => import("./biology/MutationTypes"));
 const PhylogeneticTree = lazy(() => import("./biology/PhylogeneticTree"));
+const AntibodyStructure = lazy(() => import("./biology/AntibodyStructure"));
+const CoagulationCascade = lazy(() => import("./biology/CoagulationCascade"));
+const HemoglobinCurve = lazy(() => import("./biology/HemoglobinCurve"));
+const HPAAxis = lazy(() => import("./biology/HPAAxis"));
+const JointTypes = lazy(() => import("./biology/JointTypes"));
+const Reflexbogen = lazy(() => import("./biology/Reflexbogen"));
+const SkeletonOverview = lazy(() => import("./biology/SkeletonOverview"));
 
 // Chemistry
 const AtomicOrbitals = lazy(() => import("./chemistry/AtomicOrbitals"));
+const BohrModel = lazy(() => import("./chemistry/BohrModel"));
 const CovalentBond = lazy(() => import("./chemistry/CovalentBond"));
 const EnzymeSubstrate = lazy(() => import("./chemistry/EnzymeSubstrate"));
 const FunctionalGroups = lazy(() => import("./chemistry/FunctionalGroups"));
 const IonicBond = lazy(() => import("./chemistry/IonicBond"));
 const PeriodicTable = lazy(() => import("./chemistry/PeriodicTable"));
 const PHScale = lazy(() => import("./chemistry/PHScale"));
+const WaterMolecule = lazy(() => import("./chemistry/WaterMolecule"));
+const StatesMatter = lazy(() => import("./chemistry/StatesMatter"));
+const GasLaws = lazy(() => import("./chemistry/GasLaws"));
+const PhaseDiagram = lazy(() => import("./chemistry/PhaseDiagram"));
+const IntermolecularForces = lazy(() => import("./chemistry/IntermolecularForces"));
+const AminoAcidStructure = lazy(() => import("./chemistry/AminoAcidStructure"));
+const CarbohydrateTypes = lazy(() => import("./chemistry/CarbohydrateTypes"));
+const CarbonHybridization = lazy(() => import("./chemistry/CarbonHybridization"));
+const EnergyDiagram = lazy(() => import("./chemistry/EnergyDiagram"));
+const Equilibrium = lazy(() => import("./chemistry/Equilibrium"));
+const ReactionTypes = lazy(() => import("./chemistry/ReactionTypes"));
+const RedoxOverview = lazy(() => import("./chemistry/RedoxOverview"));
+const GalvanicCell = lazy(() => import("./chemistry/GalvanicCell"));
+const Electrolysis = lazy(() => import("./chemistry/Electrolysis"));
+const HydrocarbonTypes = lazy(() => import("./chemistry/HydrocarbonTypes"));
+const LipidStructure = lazy(() => import("./chemistry/LipidStructure"));
+const DNAStructure = lazy(() => import("./chemistry/DNAStructure"));
+const LeChatelierPrinciple = lazy(() => import("./chemistry/LeChatelierPrinciple"));
 
 // Physics
 const CircuitDiagram = lazy(() => import("./physics/CircuitDiagram"));
@@ -92,6 +118,15 @@ const ProbabilityDistribution = lazy(() => import("./math/ProbabilityDistributio
 const QuadraticFunction = lazy(() => import("./math/QuadraticFunction"));
 const UnitCircle = lazy(() => import("./math/UnitCircle"));
 const VectorAddition = lazy(() => import("./math/VectorAddition"));
+const FractionOperations = lazy(() => import("./math/FractionOperations"));
+const ProportionalRelationship = lazy(() => import("./math/ProportionalRelationship"));
+const SIPrefixLadder = lazy(() => import("./math/SIPrefixLadder"));
+const InequalityNumberline = lazy(() => import("./math/InequalityNumberline"));
+const DiscriminantCases = lazy(() => import("./math/DiscriminantCases"));
+const StandardDeviation = lazy(() => import("./math/StandardDeviation"));
+const SensitivitySpecificity = lazy(() => import("./math/SensitivitySpecificity"));
+const EquationBalance = lazy(() => import("./math/EquationBalance"));
+const CalculusOverview = lazy(() => import("./math/CalculusOverview"));
 
 const DIAGRAM_MAP: Record<string, LazyExoticComponent<ComponentType>> = {
   "animal-cell": AnimalCell,
@@ -131,14 +166,40 @@ const DIAGRAM_MAP: Record<string, LazyExoticComponent<ComponentType>> = {
   "chromosomal-mutations": ChromosomalMutations,
   "mutation-types": MutationTypes,
   "phylogenetic-tree": PhylogeneticTree,
+  "antibody-structure": AntibodyStructure,
+  "coagulation-cascade": CoagulationCascade,
+  "hemoglobin-curve": HemoglobinCurve,
+  "hpa-axis": HPAAxis,
+  "joint-types": JointTypes,
+  reflexbogen: Reflexbogen,
+  "skeleton-overview": SkeletonOverview,
   // Chemistry
   "atomic-orbitals": AtomicOrbitals,
+  "bohr-model": BohrModel,
   "covalent-bond": CovalentBond,
   "enzyme-substrate": EnzymeSubstrate,
   "functional-groups": FunctionalGroups,
   "ionic-bond": IonicBond,
   "periodic-table": PeriodicTable,
   "ph-scale": PHScale,
+  "water-molecule": WaterMolecule,
+  "states-of-matter": StatesMatter,
+  "gas-laws": GasLaws,
+  "phase-diagram": PhaseDiagram,
+  "intermolecular-forces": IntermolecularForces,
+  "amino-acid-structure": AminoAcidStructure,
+  "carbohydrate-types": CarbohydrateTypes,
+  "carbon-hybridization": CarbonHybridization,
+  "energy-diagram": EnergyDiagram,
+  equilibrium: Equilibrium,
+  "reaction-types": ReactionTypes,
+  "redox-overview": RedoxOverview,
+  "galvanic-cell": GalvanicCell,
+  electrolysis: Electrolysis,
+  "hydrocarbon-types": HydrocarbonTypes,
+  "lipid-structure": LipidStructure,
+  "dna-structure": DNAStructure,
+  "le-chatelier": LeChatelierPrinciple,
   // Physics
   "circuit-diagram": CircuitDiagram,
   "doppler-effect": DopplerEffect,
@@ -181,6 +242,15 @@ const DIAGRAM_MAP: Record<string, LazyExoticComponent<ComponentType>> = {
   "quadratic-function": QuadraticFunction,
   "unit-circle": UnitCircle,
   "vector-addition": VectorAddition,
+  "fraction-operations": FractionOperations,
+  "proportional-relationship": ProportionalRelationship,
+  "si-prefix-ladder": SIPrefixLadder,
+  "inequality-numberline": InequalityNumberline,
+  "discriminant-cases": DiscriminantCases,
+  "standard-deviation": StandardDeviation,
+  "sensitivity-specificity": SensitivitySpecificity,
+  "equation-balance": EquationBalance,
+  "calculus-overview": CalculusOverview,
 };
 
 /** Short German captions shown below each diagram. */
@@ -228,6 +298,26 @@ const DIAGRAM_CAPTIONS: Record<string, string> = {
     "Z-Schema — Elektronenfluss durch PS II und PS I in der Lichtreaktion.",
   "radiation-penetration":
     "Durchdringungsfähigkeit — Alpha-, Beta- und Gamma-Strahlung im Vergleich.",
+  "chromosomal-mutations":
+    "Chromosomenmutationen — Deletion, Duplikation, Inversion, Translokation und Aneuploidie im Vergleich.",
+  "mutation-types":
+    "Punktmutationen — Substitution (Transition/Transversion), Insertion und Deletion mit Frameshift-Effekt.",
+  "phylogenetic-tree":
+    "Phylogenetischer Baum — Von LUCA über Prokaryoten und Eukaryoten zu Protisten, Pilzen, Pflanzen und Tieren.",
+  "antibody-structure":
+    "Antikörperstruktur (IgG) — Variable Region, konstante Region, Fab/Fc-Fragment, Schwere und leichte Ketten.",
+  "coagulation-cascade":
+    "Gerinnungskaskade — Intrinsischer und extrinsischer Weg konvergieren an Faktor X → Thrombin → Fibrin.",
+  "hemoglobin-curve":
+    "Sauerstoff-Dissoziationskurve — Sigmoidförmige Kurve mit Links-/Rechtsverschiebung durch pH, Temperatur, CO₂ und 2,3-BPG.",
+  "hpa-axis":
+    "HPA-Achse — Hypothalamus (CRH) → Hypophyse (ACTH) → Nebennierenrinde (Cortisol) mit negativem Feedback.",
+  "joint-types":
+    "Gelenktypen — Kugel-, Scharnier-, Sattel-, Dreh-, Eigelenk und planes Gelenk mit Bewegungsachsen.",
+  reflexbogen:
+    "Reflexbogen — Rezeptor → afferente Nervenfaser → Rückenmark (Interneuron) → efferente Nervenfaser → Effektor.",
+  "skeleton-overview":
+    "Skelettübersicht — Schädel, Wirbelsäule, Brustkorb, obere/untere Extremitäten und Becken (206 Knochen).",
   // Chemistry
   "atomic-orbitals": "Atomorbitale — Formen der s-, p- und d-Orbitale.",
   "covalent-bond": "Kovalente Bindung — Elektronenpaarbindung am Beispiel Wasser (H₂O).",
@@ -236,6 +326,43 @@ const DIAGRAM_CAPTIONS: Record<string, string> = {
   "ionic-bond": "Ionenbindung — Elektronenübertragung und Kristallgitter (NaCl).",
   "periodic-table": "Periodensystem der Elemente — Gruppen, Perioden und Trends.",
   "ph-scale": "pH-Skala — Säuren, Basen und Neutralpunkt mit Alltagsbeispielen.",
+  "bohr-model": "Bohr'sches Atommodell — Elektronenschalen K, L, M, N mit Maximalbesetzung (2n²).",
+  "water-molecule":
+    "Wassermolekül — Gewinkelte Geometrie (104,5°), Partialladungen und Wasserstoffbrücken.",
+  "states-of-matter":
+    "Aggregatzustände — Teilchenanordnung in fest, flüssig und gasförmig mit Phasenübergängen.",
+  "gas-laws":
+    "Gasgesetze — Boyle-Mariotte (p·V=const), Gay-Lussac (p/T=const), Charles (V/T=const).",
+  "phase-diagram":
+    "Phasendiagramm — p-T-Diagramm mit Tripelpunkt, kritischem Punkt und Phasengrenzen.",
+  "intermolecular-forces":
+    "Zwischenmolekulare Kräfte — Van-der-Waals, Dipol-Dipol und Wasserstoffbrücken im Vergleich.",
+  "amino-acid-structure":
+    "Aminosäurestruktur — Amino-, Carboxyl- und R-Gruppe am zentralen Cα-Atom; Zwitterion.",
+  "carbohydrate-types":
+    "Kohlenhydrattypen — Monosaccharide (Glucose), Disaccharide (Saccharose), Polysaccharide (Stärke).",
+  "carbon-hybridization":
+    "Kohlenstoff-Hybridisierung — sp³ (Tetraeder, 109,5°), sp² (trigonal-planar, 120°), sp (linear, 180°).",
+  "energy-diagram":
+    "Energiediagramm — Aktivierungsenergie Ea, Übergangszustand und Reaktionsenthalpie ΔH.",
+  equilibrium:
+    "Chemisches Gleichgewicht — Hin-/Rückreaktion, Konzentrations-Zeit-Verlauf und Massenwirkungsgesetz.",
+  "reaction-types":
+    "Reaktionstypen — Synthese (A+B→AB), Analyse, Austausch (einfach/doppelt) und Redox.",
+  "redox-overview":
+    "Redoxreaktionen — Oxidation (OIL: e⁻-Abgabe) und Reduktion (RIG: e⁻-Aufnahme) am Zn/Cu-Beispiel.",
+  "galvanic-cell":
+    "Daniell-Element — Zn-Anode, Cu-Kathode, Salzbrücke und Elektronenfluss (E° = +1,10 V).",
+  electrolysis:
+    "Elektrolyse — Wasseraufspaltung: H₂ an der Kathode, O₂ an der Anode (Volumen 2:1).",
+  "hydrocarbon-types":
+    "Kohlenwasserstofftypen — Alkane (sp³), Alkene (sp², Doppelbindung), Alkine (sp, Dreifachbindung), Aromaten.",
+  "lipid-structure":
+    "Triglycerid-Struktur — Glycerol-Rückgrat mit 3 Fettsäuren (gesättigt vs. ungesättigt) über Esterbindungen.",
+  "dna-structure":
+    "DNA chemischer Aufbau — Phosphat-Desoxyribose-Rückgrat, Basenpaare A–T (2H) / G–C (3H), antiparallel 5'→3'.",
+  "le-chatelier":
+    "Le Chatelier'sches Prinzip — Gleichgewichtsverschiebung bei Störung durch Konzentration, Druck oder Temperatur.",
   // Physics
   "circuit-diagram": "Schaltkreise — Reihen- und Parallelschaltung von Widerständen.",
   "doppler-effect": "Doppler-Effekt — Frequenzverschiebung bei bewegter Quelle.",
@@ -293,6 +420,24 @@ const DIAGRAM_CAPTIONS: Record<string, string> = {
   "quadratic-function": "Quadratische Funktionen — Parabelformen, Scheitelpunkt und Nullstellen.",
   "unit-circle": "Einheitskreis — Sinus, Cosinus und Tangens an wichtigen Winkeln.",
   "vector-addition": "Vektoraddition — Parallelogrammregel und Komponentenzerlegung.",
+  "fraction-operations":
+    "Bruchrechenoperationen — Addition, Subtraktion, Multiplikation und Division mit visueller Darstellung.",
+  "proportional-relationship":
+    "Proportionale Beziehungen — Direkte Proportionalität (Gerade) und indirekte Proportionalität (Hyperbel).",
+  "si-prefix-ladder":
+    "SI-Präfix-Leiter — Von Femto (10⁻¹⁵) bis Tera (10¹²) mit medizinischen Beispielen auf jeder Stufe.",
+  "inequality-numberline":
+    "Ungleichungen und Intervalle — Zahlenstrahl mit offenen/geschlossenen Punkten und Intervallschreibweise.",
+  "discriminant-cases":
+    "Diskriminante — Die drei Fälle D>0 (2 Lösungen), D=0 (Doppelwurzel) und D<0 (keine reelle Lösung).",
+  "standard-deviation":
+    "Normalverteilung — Glockenkurve mit 68-95-99,7-Regel für ±1σ, ±2σ und ±3σ.",
+  "sensitivity-specificity":
+    "Sensitivität und Spezifität — Vierfeldertafel mit TP, FP, FN, TN und den wichtigsten Diagnosekennzahlen.",
+  "equation-balance":
+    "Gleichung lösen — Waage-Modell zeigt Schritt für Schritt, wie 2x + 6 = 14 gelöst wird.",
+  "calculus-overview":
+    "Analysis — f(x), Ableitung f′(x) als Tangentensteigung und Integral ∫f(x)dx als Flächeninhalt.",
 };
 
 export type DiagramType = keyof typeof DIAGRAM_MAP;

@@ -746,8 +746,8 @@ export function Sidebar({ open, onClose }: { open: boolean; onClose: () => void 
         className={cn(
           "fixed left-0 top-0 h-screen z-[200] flex flex-col",
           "w-[280px]",
-          "bg-[var(--sidebar-bg)]",
-          "border-r border-[var(--border)]",
+          "bg-[var(--sidebar-bg)]/95 backdrop-blur-xl",
+          "border-r border-[var(--border)]/50",
           "shadow-2xl",
           "transition-transform duration-250 ease-in-out",
           open ? "translate-x-0" : "-translate-x-full"

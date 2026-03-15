@@ -407,11 +407,41 @@ Beide sind Formen des Gendrifts in kleinen Populationen, haben aber verschiedene
 
 ---
 
-## Hardy-Weinberg-Gleichgewicht und Heterozygotenvorteil
+## Hardy-Weinberg-Gleichgewicht — Die Formel der Nicht-Evolution
 
-Das Hardy-Weinberg-Gesetz beschreibt eine sich nicht verändernde Population — einen Referenzzustand ohne Evolution. Abweichungen zeigen, welche evolutionären Kräfte aktiv sind. Ein wichtiges Abweichungsbeispiel ist der Heterozygotenvorteil (Überdominanz): In Malariaregionen Afrikas sind Sichelzellanämie-Allele (HbS, verformte Erythrozyten durch mutiertes Hämoglobin) in höherer Frequenz vorhanden als durch Mutation allein zu erwarten wäre. Der Grund: Heterozygote (HbA/HbS) sind resistenter gegen schwere Malaria als normale Homozygote (HbA/HbA) — balancierende Selektion hält das Sichelzellallel in der Population. Das Hardy-Weinberg-Gleichgewicht gilt hier nicht, weil Selektion aktiv wirkt (Heterozygotenvorteil). Dies ist ein Beispiel für balancierten Polymorphismus (stabiles Nebeneinander mehrerer Allele).
+Das Hardy-Weinberg-Gesetz beschreibt eine Population, in der **keine Evolution stattfindet** — einen idealen Referenzzustand. Jede Abweichung davon zeigt, dass evolutionäre Kräfte wirken.
 
-> **Merke:** Heterozygotenvorteil: HbA/HbS (Sichelzellträger) widerstandsfähiger gegen Malaria → HbS-Allel bleibt häufig in Malariaregionen (balancierte Selektion).
+**Die Gleichungen:**
+
+Für ein Gen mit zwei Allelen (Häufigkeit **p** für das dominante, **q** für das rezessive Allel) gilt:
+
+- **Allelfrequenzen:** p + q = 1
+- **Genotypfrequenzen:** p² + 2pq + q² = 1
+  - p² = Häufigkeit homozygot dominant (AA)
+  - 2pq = Häufigkeit heterozygot (Aa)
+  - q² = Häufigkeit homozygot rezessiv (aa)
+
+**5 Bedingungen** für Hardy-Weinberg-Gleichgewicht (alle müssen gelten):
+1. **Keine Mutation** (keine neuen Allele)
+2. **Keine Selektion** (alle Genotypen gleich fit)
+3. **Keine Gendrift** (unendlich große Population)
+4. **Kein Genfluss** (keine Migration)
+5. **Zufällige Paarung** (Panmixie)
+
+**Rechenbeispiel (MedAT-typisch):** Albinismus (autosomal-rezessiv) betrifft 1 von 10.000 Personen. Wie häufig sind Überträger?
+- q² = 1/10.000 → q = 1/100 = 0,01
+- p = 1 − q = 0,99
+- Überträgerfrequenz 2pq = 2 × 0,99 × 0,01 = **0,0198 ≈ 1 von 50**
+
+> **Merke:** Hardy-Weinberg: **p² + 2pq + q² = 1**. Rezessiv-homozygot = q². Überträger = 2pq. Aus der Krankheitshäufigkeit (q²) lässt sich die Überträgerfrequenz berechnen — das ist eine klassische MedAT-Rechenaufgabe.
+
+---
+
+## Heterozygotenvorteil — Warum schädliche Allele überleben
+
+Ein wichtiger Sonderfall, der Hardy-Weinberg verletzt: der **Heterozygotenvorteil** (Überdominanz). In Malariaregionen Afrikas ist das Sichelzellanämie-Allel (HbS, verursacht verformte Erythrozyten durch mutiertes Hämoglobin) häufiger als durch Mutation allein zu erwarten. Der Grund: **Heterozygote** (HbA/HbS) sind resistenter gegen schwere Malaria als normale Homozygote (HbA/HbA) — balancierende Selektion hält das Sichelzellallel in der Population. Homozygote HbS/HbS haben Sichelzellanämie (schwere Erkrankung), aber Heterozygote haben einen Überlebensvorteil. Das Hardy-Weinberg-Gleichgewicht gilt hier nicht, weil Selektion aktiv wirkt.
+
+> **Merke:** Heterozygotenvorteil: HbA/HbS (Sichelzellträger) widerstandsfähiger gegen Malaria → HbS-Allel bleibt häufig in Malariaregionen (balancierte Selektion). Weiteres Beispiel: Mukoviszidose-Träger (CF-heterozygot) möglicherweise resistenter gegen Cholera/Typhus.
 
 ---
 

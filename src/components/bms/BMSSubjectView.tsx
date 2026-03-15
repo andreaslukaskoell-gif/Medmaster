@@ -62,7 +62,7 @@ export function BMSSubjectView({
   });
 
   return (
-    <div className="max-w-3xl mx-auto space-y-8">
+    <div className="max-w-3xl mx-auto space-y-10 py-4">
       <div className="flex items-center justify-between">
         <Button variant="ghost" size="sm" onClick={onBack} className="text-[var(--muted)]">
           <ChevronLeft className="w-4 h-4 mr-1" />
@@ -74,42 +74,44 @@ export function BMSSubjectView({
         </Button>
       </div>
 
-      {/* Subject header */}
-      <div>
-        <div className="flex items-center gap-3 mb-3">
+      {/* Subject header — centered premium */}
+      <div className="text-center">
+        <div className="flex items-center justify-center gap-3 mb-4">
           <span
-            className="text-[11px] font-bold uppercase tracking-widest px-2.5 py-1 rounded"
+            className="text-[11px] font-bold uppercase tracking-[0.15em] px-3 py-1 rounded-md"
             style={{
               color: accentColor,
-              backgroundColor: `color-mix(in srgb, ${accentColor} 8%, transparent)`,
+              background: `linear-gradient(135deg, color-mix(in srgb, ${accentColor} 12%, transparent), color-mix(in srgb, ${accentColor} 6%, transparent))`,
             }}
           >
             {subjectData.label}
           </span>
         </div>
-        <h1 className="text-2xl font-bold text-[var(--foreground)] mb-1">{subjectData.label}</h1>
-        <p className="text-sm text-[var(--muted)]">
+        <h1 className="text-3xl font-bold text-[var(--foreground)] tracking-tight mb-2">
+          {subjectData.label}
+        </h1>
+        <p className="text-base text-[var(--muted)]">
           {kapitel.length} Kapitel · {subjectUK} Unterkapitel
         </p>
 
-        {/* Overall progress */}
-        <div className="mt-4">
-          <div className="flex items-center justify-between text-xs text-[var(--muted)] mb-1.5">
+        {/* Overall progress — premium */}
+        <div className="mt-6 max-w-sm mx-auto">
+          <div className="flex items-center justify-between text-xs text-[var(--muted)] mb-2">
             <span>
-              {subjectCompletedUK} von {subjectUK} Unterkapitel abgeschlossen
+              {subjectCompletedUK} von {subjectUK} abgeschlossen
             </span>
             <span
-              className="font-medium"
+              className="font-semibold"
               style={{ color: overallPct > 0 ? accentColor : undefined }}
             >
               {overallPct}%
             </span>
           </div>
-          <div className="w-full bg-[var(--border)] rounded-full h-1.5">
-            <div
-              className="h-1.5 rounded-full transition-all duration-500"
-              style={{ width: `${overallPct}%`, backgroundColor: accentColor }}
-            />
+          <div
+            className="progress-premium"
+            style={{ "--subject-accent": accentColor } as React.CSSProperties}
+          >
+            <div className="progress-fill" style={{ width: `${overallPct}%` }} />
           </div>
         </div>
       </div>
@@ -129,7 +131,7 @@ export function BMSSubjectView({
         <h2 className="text-xs font-semibold uppercase tracking-wider text-[var(--muted)] mb-3">
           Kapitel
         </h2>
-        <div className="border border-[var(--border)]/40 rounded-xl shadow-[0_1px_3px_rgba(0,0,0,0.04)] divide-y divide-[var(--border)]/30 overflow-hidden">
+        <div className="card-glass divide-y divide-[var(--border)]/30 overflow-hidden">
           {kapitel.map((kap, index) => {
             if (!kap || !kap.id || typeof kap.id !== "string" || typeof kap.title !== "string") {
               return null;

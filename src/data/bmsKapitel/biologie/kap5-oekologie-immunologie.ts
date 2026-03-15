@@ -85,24 +85,22 @@ In der Ökologie unterscheidet man zwei Kategorien von Umweltfaktoren:
 
 ---
 
-## Epidemiologische Grundbegriffe als ökologische Parallelen
+## Prüfungsrelevante Begriffe im Überblick
 
-Die Populationsökologie und die Epidemiologie verwenden erstaunlich ähnliche Konzepte:
+Die folgenden Begriffe werden im MedAT/BMS regelmäßig abgefragt — sichere Zuordnung ist entscheidend:
 
-Die **Basisreproduktionszahl R₀** gibt in der Epidemiologie an, wie viele Personen ein Infizierter im Mittel ansteckt, wenn die gesamte Population empfänglich ist. Ökologisch entspricht R₀ der **Nettoreproduktionsrate** einer Population: Wie viele Nachkommen produziert ein Individuum im Durchschnitt? Ist R₀ > 1, wächst die Population (bzw. breitet sich die Epidemie aus); bei R₀ < 1 schrumpft sie (bzw. die Epidemie erlischt). Impfungen senken R₀ unter 1, indem sie den Anteil empfänglicher Individuen in der Population reduzieren — das ökologische Äquivalent wäre eine Verkleinerung des verfügbaren Habitats.
+| Begriff | Definition | Beispiel |
+|---------|-----------|----------|
+| **Biotop** | Unbelebter Lebensraum | Teich: Wassertemperatur, pH, O₂-Gehalt |
+| **Biozönose** | Lebensgemeinschaft aller Arten | Alle Organismen im Teich |
+| **Ökosystem** | Biotop + Biozönose | Teich als funktionelle Einheit |
+| **Population** | Alle Individuen **einer Art** in einem Gebiet | Alle Frösche im Teich |
+| **Biom** | Großlebensraum mit typischer Vegetation | Tropischer Regenwald, Tundra |
+| **Biosphäre** | Gesamtheit aller Ökosysteme der Erde | Alles Leben auf der Erde |
+| **Abiotisch** | Unbelebte Faktoren | Temperatur, Licht, pH, Wasser |
+| **Biotisch** | Belebte Faktoren | Konkurrenz, Räuber, Parasiten |
 
-Die **Kapazitätsgrenze K** beschreibt in der Populationsökologie die maximale Individuenzahl, die ein Habitat dauerhaft tragen kann. In der Infektionsepidemiologie entspricht dies dem Anteil der Population, der maximal gleichzeitig infiziert sein kann (begrenzt durch Immunität, Kontaktrate und Gegenmaßnahmen).
-
-| Ökologischer Begriff | Epidemiologische Entsprechung |
-|---------------------|------------------------------|
-| Nettoreproduktionsrate | Basisreproduktionszahl R₀ |
-| Populationsdichte | Prävalenz (Anteil Erkrankter) |
-| Geburtenrate | Inzidenz (Neuerkrankungen/Zeiteinheit) |
-| Mortalitätsrate | Letalität / Case Fatality Rate |
-| Kapazitätsgrenze K | Maximaler Durchseuchungsgrad |
-| Logistisches Wachstum | Epidemiekurve (SIR-Modell) |
-
-> **Merke:** R₀ > 1 = Population wächst / Epidemie breitet sich aus. R₀ < 1 = Population schrumpft / Epidemie erlischt. Impfungen senken R₀, indem sie empfängliche Individuen aus der Population entfernen.`,
+> **Merke:** Ökosystem = Biotop (unbelebt) + Biozönose (belebt). Population = eine Art. Biozönose = alle Arten. Diese Unterscheidungen sind klassische MedAT-Fallenstellungen.`,
       lernziele: [
         "Ökologie definieren und die Ebenen Organismus, Population, Biozönose, Ökosystem beschreiben.",
         "Biotop und Biozönose unterscheiden und dem Ökosystem zuordnen.",
@@ -2052,12 +2050,11 @@ Die Anti-D-Prophylaxe ist eine der großen Errungenschaften der pränatalen Medi
       ],
       klinischerBezug:
         "Dank universeller Anti-D-Prophylaxe ist der Morbus haemolyticus neonatorum durch Rh-Inkompatibilität in Industrieländern selten geworden. Restrisiken bestehen bei nicht erkannten Sensibilisierungen (z. B. stille fetomaternale Transfusionen frühzeitig) oder bei nicht-D Rh-Antigenen (Kell, Kidd) ohne verfügbare Prophylaxe.",
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question:
-          "Erklären Sie, warum das erste Kind einer Rh-negativen Mutter mit einem Rh-positiven Vater meist nicht vom Morbus haemolyticus neonatorum betroffen ist, das zweite Kind jedoch gefährdet ist.",
+          "Eine Rh-negative Frau bringt ihr zweites Kind zur Welt. Beim ersten Kind wurde keine Anti-D-Prophylaxe verabreicht. Das Neugeborene zeigt Ikterus, Anämie und Hepatosplenomegalie. Welche Aussage zur Pathogenese ist korrekt?",
         answer:
-          "Beim ersten Kind findet die Sensibilisierung der Rh-negativen Mutter erst am Ende der Schwangerschaft oder bei der Geburt statt (fetomaternale Blutung). In dieser ersten Schwangerschaft bildet die Mutter zunächst Anti-D-IgM-Antikörper, die die Plazenta nicht passieren können (zu groß). Das erste Kind ist daher kaum betroffen. Nach der Geburt entwickelt die Mutter IgG-Anti-D-Antikörper (Gedächtnis-B-Zellen). Bei einer zweiten Schwangerschaft mit Rh+ Fetus können diese IgG-Anti-D die Plazenta passieren und fetale Erythrozyten lysieren → Morbus haemolyticus neonatorum.",
+          "Bei der ersten Schwangerschaft mit einem Rh-positiven Kind kam es zur Sensibilisierung der Mutter: Fetale Rh+ Erythrozyten gelangten in die mütterliche Zirkulation, und die Mutter bildete nach initialer IgM-Antwort auch IgG-Anti-D-Antikörper (Gedächtnis-B-Zellen). In der zweiten Schwangerschaft passieren diese mütterlichen IgG-Anti-D-Antikörper über den neonatalen Fc-Rezeptor (FcRn) die Plazenta und binden an das D-Antigen auf den fetalen Erythrozyten. Die markierten Erythrozyten werden durch Komplementaktivierung und antikörperabhängige zelluläre Zytotoxizität (ADCC) lysiert. Die resultierende Hämolyse führt zu Anämie, kompensatorischer extramedullärer Erythropoese (Hepatosplenomegalie) und Hyperbilirubinämie (Ikterus). Eine Anti-D-Prophylaxe in der 28. SSW und innerhalb von 72 h post partum hätte die Sensibilisierung verhindert.",
       },
       selfTest: [
         {

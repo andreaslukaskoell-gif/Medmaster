@@ -24,7 +24,7 @@ export function TopBar({ onMenuToggle }: { onMenuToggle?: () => void }) {
   };
 
   return (
-    <header className="sticky top-0 z-[100] flex items-center justify-between gap-3 px-6 h-12 bg-[var(--topbar-bg)] backdrop-blur-sm border-b border-[var(--border)]/40">
+    <header className="topbar-glass sticky top-0 z-[100] flex items-center justify-between gap-3 px-6 h-12">
       {/* Left: menu + breadcrumb */}
       <div className="flex items-center gap-3 min-w-0 flex-1">
         {onMenuToggle && (

@@ -163,20 +163,20 @@ export default function BMSKapitelView({
   };
 
   return (
-    <div className="max-w-3xl mx-auto space-y-8">
+    <div className="max-w-3xl mx-auto space-y-10 py-4">
       <Button variant="ghost" size="sm" onClick={onBack} className="text-[var(--muted)]">
         <ChevronLeft className="w-4 h-4 mr-1" />
         {subjectLabels[kapitel.subject]}
       </Button>
 
-      {/* Chapter header */}
-      <div>
-        <div className="flex items-center gap-3 mb-3">
+      {/* Chapter header — centered premium */}
+      <div className="text-center">
+        <div className="flex items-center justify-center gap-3 mb-4">
           <span
-            className="text-[11px] font-bold uppercase tracking-widest px-2.5 py-1 rounded"
+            className="text-[11px] font-bold uppercase tracking-[0.15em] px-3 py-1 rounded-md"
             style={{
               color: accentColor,
-              backgroundColor: `color-mix(in srgb, ${accentColor} 12%, transparent)`,
+              background: `linear-gradient(135deg, color-mix(in srgb, ${accentColor} 12%, transparent), color-mix(in srgb, ${accentColor} 6%, transparent))`,
             }}
           >
             {subjectLabels[kapitel.subject]}
@@ -188,10 +188,12 @@ export default function BMSKapitelView({
             </span>
           )}
         </div>
-        <h1 className="text-2xl font-bold text-[var(--text-primary)] mb-2">{kapitel.title}</h1>
-        <div className="flex items-center gap-4 text-sm text-[var(--muted)]">
+        <h1 className="text-3xl font-bold text-[var(--text-primary)] tracking-tight mb-3">
+          {kapitel.title}
+        </h1>
+        <div className="flex items-center justify-center gap-5 text-sm text-[var(--muted)]">
           <span>{totalUK} Unterkapitel</span>
-          <span className="flex items-center gap-1">
+          <span className="flex items-center gap-1.5">
             <Clock className="w-3.5 h-3.5" />
             {kapitel.estimatedTime}
           </span>
@@ -245,7 +247,7 @@ export default function BMSKapitelView({
             Noch keine Unterkapitel vorhanden.
           </p>
         ) : (
-          <div className="border border-[var(--border)]/40 rounded-xl shadow-[0_1px_3px_rgba(0,0,0,0.04)] divide-y divide-[var(--border)]/30 overflow-hidden">
+          <div className="card-glass divide-y divide-[var(--border)]/30 overflow-hidden">
             {unterkapitel.map((uk, index) => {
               if (!uk || !uk.id) return null;
               const isDone = completedChapters.includes(uk.id);

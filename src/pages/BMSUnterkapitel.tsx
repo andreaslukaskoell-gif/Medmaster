@@ -501,36 +501,43 @@ export default function BMSUnterkapitel({
       </div>
 
       <ContentErrorBoundary context={uk.id}>
-        {/* Header */}
-        <header className="mb-14 mt-2">
-          <div className="flex items-center gap-3 mb-5">
+        {/* Header — premium centered */}
+        <header className="mb-16 mt-4 max-w-3xl mx-auto text-center">
+          <div className="flex items-center justify-center gap-3 mb-6">
             <span
-              className="text-[10px] font-semibold uppercase tracking-widest px-2 py-0.5 rounded"
+              className="text-[11px] font-bold uppercase tracking-[0.15em] px-3 py-1 rounded-md"
               style={{
                 color: accentColor,
-                backgroundColor: `color-mix(in srgb, ${accentColor} 8%, transparent)`,
+                background: `linear-gradient(135deg, color-mix(in srgb, ${accentColor} 12%, transparent), color-mix(in srgb, ${accentColor} 6%, transparent))`,
               }}
             >
               {subjectLabels[kapitel.subject]}
             </span>
-            <span className="text-xs text-[var(--muted)]">
+            <span className="text-sm text-[var(--muted)]">
               {kapitel.title} &middot; {unterkapitelIndex + 1} von {total}
             </span>
           </div>
-          <h1 className="text-[2rem] font-semibold text-[var(--text-primary)] leading-tight mb-4">
+          <h1 className="text-[2.5rem] font-bold text-[var(--text-primary)] leading-[1.15] tracking-tight mb-5">
             {uk.title}
           </h1>
-          <div className="flex items-center gap-4">
-            <span className="flex items-center gap-1.5 text-xs text-[var(--muted)]">
-              <Clock className="w-3 h-3" aria-hidden />
+          <div className="flex items-center justify-center gap-5 text-sm text-[var(--muted)]">
+            <span className="flex items-center gap-1.5">
+              <Clock className="w-3.5 h-3.5" aria-hidden />
               {readingTimeMin} Min Lesezeit
             </span>
             {isCompleted && (
-              <span className="text-xs text-emerald-600 dark:text-emerald-400 font-medium">
+              <span className="text-emerald-600 dark:text-emerald-400 font-medium">
                 Abgeschlossen
               </span>
             )}
           </div>
+          {/* Accent underline */}
+          <div
+            className="mx-auto mt-8 h-[3px] w-16 rounded-full"
+            style={{
+              background: `linear-gradient(90deg, ${accentColor}, color-mix(in srgb, ${accentColor} 50%, white))`,
+            }}
+          />
         </header>
 
         {/* Notes panel */}
@@ -609,7 +616,7 @@ export default function BMSUnterkapitel({
             {/* Altfrage + Kontrollfragen */}
             <div className="w-full max-w-[680px] ml-[268px] min-w-0 space-y-10 mt-12">
               {uk.altfrage && (
-                <div className="rounded-lg border border-amber-200 dark:border-amber-700/60 bg-amber-50/50 dark:bg-amber-900/20 p-5">
+                <div className="card-glass p-6 border-l-4 border-l-amber-500">
                   <h3 className="text-[13px] font-bold uppercase tracking-wider text-amber-700 dark:text-amber-300 mb-3">
                     Altfragen-Klassiker
                   </h3>
@@ -666,21 +673,21 @@ export default function BMSUnterkapitel({
           </>
         )}
 
-        {/* Navigation: Previous / Next — with preview */}
-        <div className="mt-20 pt-8 border-t border-[var(--border)]">
-          <div className="grid grid-cols-2 gap-4">
+        {/* Navigation: Previous / Next — premium glass cards */}
+        <div className="mt-24 pt-10 border-t border-[var(--border)]/30">
+          <div className="grid grid-cols-2 gap-5">
             <div>
               {canGoPrev && (
                 <button
                   onClick={handlePrev}
-                  className="w-full text-left p-4 rounded-lg border border-[var(--border)] hover:border-[var(--accent)]/30 hover:bg-[var(--surface)] transition-colors group cursor-pointer"
+                  className="card-glass w-full text-left p-5 transition-all group cursor-pointer hover:shadow-lg hover:-translate-y-0.5"
                 >
-                  <div className="flex items-center gap-2 text-sm text-[var(--muted)] mb-1">
+                  <div className="flex items-center gap-2 text-xs uppercase tracking-wider font-medium text-[var(--muted)] mb-2">
                     <ArrowLeft className="w-3.5 h-3.5" />
                     <span>{isFirst && onPrevChapter ? "Vorheriges Kapitel" : "Zurück"}</span>
                   </div>
                   {prevUk && (
-                    <p className="text-sm font-medium text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors truncate">
+                    <p className="text-base font-semibold text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors truncate">
                       {prevUk.title}
                     </p>
                   )}
@@ -690,19 +697,19 @@ export default function BMSUnterkapitel({
             <div>
               <button
                 onClick={handleNext}
-                className="w-full text-left p-4 rounded-lg border border-[var(--border)] hover:border-[var(--accent)]/30 hover:bg-[var(--surface)] transition-colors group cursor-pointer"
+                className="card-glass w-full text-left p-5 transition-all group cursor-pointer hover:shadow-lg hover:-translate-y-0.5"
               >
-                <div className="flex items-center justify-end gap-2 text-sm text-[var(--muted)] mb-1">
+                <div className="flex items-center justify-end gap-2 text-xs uppercase tracking-wider font-medium text-[var(--muted)] mb-2">
                   <span>{isLast && !onNextChapter ? "Kapitel abschließen" : "Weiter"}</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </div>
                 {nextUk && (
-                  <p className="text-sm font-medium text-[var(--text-primary)] text-right group-hover:text-[var(--accent)] transition-colors truncate">
+                  <p className="text-base font-semibold text-[var(--text-primary)] text-right group-hover:text-[var(--accent)] transition-colors truncate">
                     {nextUk.title}
                   </p>
                 )}
                 {isLast && !onNextChapter && (
-                  <p className="text-sm font-medium text-emerald-600 dark:text-emerald-400 text-right">
+                  <p className="text-base font-semibold text-emerald-600 dark:text-emerald-400 text-right">
                     Kapitel abschließen
                   </p>
                 )}

@@ -32,32 +32,35 @@ export function BMSSubjectSelector({
   onSelectSubject,
 }: BMSSubjectSelectorProps) {
   return (
-    <div className="max-w-4xl mx-auto space-y-8">
+    <div className="max-w-5xl mx-auto space-y-10 py-4">
       {filterParam === "due" && (
-        <div className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-700 text-yellow-800 dark:text-yellow-300 text-sm">
+        <div className="card-glass flex items-center gap-2 px-5 py-3 text-sm text-[var(--warning)]">
           <Clock className="w-4 h-4 shrink-0" />
-          <span>Fällige Kapitel zur Wiederholung</span>
+          <span className="font-medium">Fällige Kapitel zur Wiederholung</span>
         </div>
       )}
 
-      <div>
-        <h1 className="text-2xl font-bold text-[var(--foreground)]">BMS</h1>
-        <p className="text-sm text-[var(--muted)] mt-1">
-          Biomedizinische Grundlagen · {totalUK} Unterkapitel
+      {/* Hero header */}
+      <div className="text-center max-w-2xl mx-auto">
+        <h1 className="text-4xl font-bold text-[var(--foreground)] tracking-tight">
+          Biomedizinische Grundlagen
+        </h1>
+        <p className="text-lg text-[var(--text-secondary)] mt-3">
+          {totalUK} Unterkapitel · 4 Fachgebiete
         </p>
         {totalUK > 0 && (
-          <div className="mt-4">
-            <div className="flex items-center justify-between text-xs text-[var(--muted)] mb-1.5">
+          <div className="mt-6 max-w-sm mx-auto">
+            <div className="flex items-center justify-between text-xs text-[var(--muted)] mb-2">
               <span>
                 {completedUK} von {totalUK} abgeschlossen
               </span>
-              <span className="font-medium text-[var(--accent)]">
+              <span className="font-semibold text-[var(--accent)]">
                 {Math.round((completedUK / totalUK) * 100)}%
               </span>
             </div>
-            <div className="w-full bg-[var(--border)] rounded-full h-1.5">
+            <div className="progress-premium">
               <div
-                className="bg-[var(--accent)] h-1.5 rounded-full transition-all duration-500"
+                className="progress-fill"
                 style={{ width: `${Math.round((completedUK / totalUK) * 100)}%` }}
               />
             </div>
@@ -65,7 +68,7 @@ export function BMSSubjectSelector({
         )}
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div className="grid grid-cols-2 gap-6">
         {subjects.map((subject) => (
           <SubjectCard
             key={subject.id}
@@ -147,29 +150,36 @@ function SubjectCard({
 
   return (
     <div
-      className="group relative rounded-xl border border-[var(--border)]/50 bg-[var(--card)] p-8 pb-6 cursor-pointer overflow-hidden shadow-[0_1px_3px_rgba(0,0,0,0.04)] transition-all duration-200 hover:border-[var(--foreground)]/20 hover:shadow-[0_4px_20px_0_rgba(0,0,0,0.08)] hover:-translate-y-0.5"
+      className="card-subject group cursor-pointer p-8 pb-6"
+      style={{ "--subject-accent": accentColor } as React.CSSProperties}
       onClick={() => onSelect(subject.id)}
     >
       {/* Icon + Title row */}
-      <div className="flex items-start gap-4 mb-4">
+      <div className="flex items-start gap-5 mb-5">
         <div
-          className="w-14 h-14 rounded-2xl flex items-center justify-center shrink-0"
-          style={{ backgroundColor: `${accentColor}14`, color: accentColor }}
+          className="w-14 h-14 rounded-2xl flex items-center justify-center shrink-0 shadow-sm"
+          style={{
+            background: `linear-gradient(135deg, ${accentColor}20, ${accentColor}08)`,
+            color: accentColor,
+          }}
         >
           <subject.icon className="w-7 h-7" />
         </div>
         <div className="flex-1 min-w-0">
           <div className="flex items-center justify-between gap-2">
-            <h2 className="text-lg font-semibold text-[var(--foreground)]">{subject.label}</h2>
+            <h2 className="text-xl font-semibold text-[var(--foreground)]">{subject.label}</h2>
             <span
-              className="text-xs font-medium px-2.5 py-1 rounded-md opacity-60 group-hover:opacity-100 transition-opacity duration-200 shrink-0"
-              style={{ backgroundColor: `${accentColor}18`, color: accentColor }}
+              className="text-xs font-semibold px-3 py-1.5 rounded-lg opacity-70 group-hover:opacity-100 transition-all duration-200 shrink-0 group-hover:shadow-sm"
+              style={{
+                background: `linear-gradient(135deg, ${accentColor}18, ${accentColor}10)`,
+                color: accentColor,
+              }}
             >
               {ctaLabel}
               <ChevronRight className="w-3.5 h-3.5 inline-block ml-0.5 -mt-px" />
             </span>
           </div>
-          <p className="text-sm text-[var(--muted)] mt-0.5 leading-relaxed">
+          <p className="text-sm text-[var(--text-secondary)] mt-1 leading-relaxed">
             {subject.description}
           </p>
         </div>
@@ -190,24 +200,24 @@ function SubjectCard({
         )}
       </div>
 
-      {/* Progress bar */}
+      {/* Progress bar — premium style */}
       {sTotal > 0 && (
         <div className="mt-5">
-          <div className="flex items-center justify-between text-xs mb-1.5">
+          <div className="flex items-center justify-between text-xs mb-2">
             <span className="text-[var(--muted)]">
-              {sDone} von {sTotal} UK abgeschlossen
+              {sDone} von {sTotal} UK
             </span>
-            <span className="font-medium" style={{ color: accentColor }}>
+            <span className="font-semibold" style={{ color: accentColor }}>
               {Math.round(progressPct)}%
             </span>
           </div>
-          <div className="w-full bg-[var(--border)] rounded-full h-2">
+          <div
+            className="progress-premium"
+            style={{ "--subject-accent": accentColor } as React.CSSProperties}
+          >
             <div
-              className="h-2 rounded-full transition-all duration-500"
-              style={{
-                width: `${Math.max(progressPct, progressPct > 0 ? 2 : 0)}%`,
-                backgroundColor: accentColor,
-              }}
+              className="progress-fill"
+              style={{ width: `${Math.max(progressPct, progressPct > 0 ? 2 : 0)}%` }}
             />
           </div>
         </div>
