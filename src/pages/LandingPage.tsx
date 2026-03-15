@@ -21,7 +21,7 @@ import {
 } from "lucide-react";
 import { supabase } from "@/lib/supabase";
 import { useAuth } from "@/hooks/useAuth";
-import { usePageTitle } from "@/hooks/usePageTitle";
+import { usePageMeta } from "@/hooks/usePageMeta";
 
 const NAVY = "#1b3ea7";
 const NAVY_HOVER = "#163286";
@@ -47,20 +47,10 @@ function useCountdown(targetDate: Date) {
   return { days, hours, minutes, seconds, expired: diff === 0 };
 }
 
-/* ── Browser chrome wrapper for screenshots ── */
-function ScreenshotFrame({ title, src, alt }: { title: string; src: string; alt: string }) {
+/* ── Screenshot wrapper ── */
+function ScreenshotFrame({ src, alt }: { title?: string; src: string; alt: string }) {
   return (
-    <div className="rounded-xl overflow-hidden shadow-[var(--shadow-sm)] border border-[var(--border)] bg-[var(--surface)]">
-      <div className="flex items-center gap-2 px-4 py-2.5 border-b border-[var(--border)] bg-[var(--card)]">
-        <div className="flex gap-1.5">
-          <div className="w-2.5 h-2.5 rounded-full bg-red-400/60" />
-          <div className="w-2.5 h-2.5 rounded-full bg-amber-400/60" />
-          <div className="w-2.5 h-2.5 rounded-full bg-emerald-400/60" />
-        </div>
-        <div className="flex-1 text-center text-xs text-[var(--muted)] font-medium truncate">
-          {title}
-        </div>
-      </div>
+    <div className="rounded-xl overflow-hidden shadow-[var(--shadow-md)] bg-[var(--surface)]">
       <img src={src} alt={alt} className="w-full h-auto" loading="lazy" />
     </div>
   );
@@ -313,7 +303,13 @@ const comparisonRows = [
 ];
 
 export default function LandingPage() {
-  usePageTitle();
+  usePageMeta({
+    title: "MedAT 2026 Vorbereitung — 4.300+ Fragen",
+    description:
+      "MedAT 2026 Vorbereitung: 4.300+ BMS-Fragen, unbegrenzte KFF-Übungen, 10 TV-Textsets, 100 SEK-Aufgaben. Alle 4 MedAT-Bereiche in einer App. Einmalig €29,90.",
+    canonical: "https://medmaster.at",
+    ogImage: "https://medmaster.at/og-image.png",
+  });
   const { signInWithGoogle } = useAuth();
 
   const [googleError, setGoogleError] = useState("");
@@ -331,6 +327,8 @@ export default function LandingPage() {
         if (count && count >= 10) setUserCount(count);
       });
   }, []);
+
+  /* Schema.org structured data is in index.html */
 
   const handleGoogle = async () => {
     setGoogleError("");
@@ -420,12 +418,7 @@ export default function LandingPage() {
             <br />
             Unbegrenzte KFF-Übungen.
             <br />
-            <span
-              className="bg-clip-text text-transparent"
-              style={{ backgroundImage: `linear-gradient(135deg, ${NAVY}, ${NAVY_LIGHT})` }}
-            >
-              Eine einmalige Zahlung.
-            </span>
+            <span className="text-[var(--accent)]">Eine einmalige Zahlung.</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 16 }}
@@ -490,12 +483,7 @@ export default function LandingPage() {
       {/* ─── Product Preview ─── */}
       <section className="py-16 sm:py-24 bg-[var(--background)]/50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
+          <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-3">
               So sieht deine MedAT-Vorbereitung aus
             </h2>
@@ -503,58 +491,44 @@ export default function LandingPage() {
               Echte Übungsfragen im Original-MedAT-Format, adaptiver Lernplan und unbegrenzte
               KFF-Generatoren.
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div
-            variants={container}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            className="grid grid-cols-1 lg:grid-cols-3 gap-6"
-          >
-            <motion.div variants={item} className="lg:col-span-1">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div>
               <ScreenshotFrame
-                title="BMS Fragen-Trainer — Biologie"
                 src={SCREENSHOTS.bmsQuiz}
                 alt="BMS-Quiz mit 5 Antwortoptionen im MedAT-Format"
               />
               <p className="text-xs text-[var(--muted)] text-center mt-3">
                 Echte BMS-Fragen mit 5 Optionen (A–E) im Original-MedAT-Format
               </p>
-            </motion.div>
-            <motion.div variants={item} className="lg:col-span-1">
+            </div>
+            <div>
               <ScreenshotFrame
-                title="KFF — 5 Untertests"
                 src={SCREENSHOTS.kffOverview}
                 alt="KFF-Übersicht mit Zahlenfolgen, Gedächtnis, Implikationen, Wortflüssigkeit und Figuren"
               />
               <p className="text-xs text-[var(--muted)] text-center mt-3">
                 5 KFF-Untertests mit unbegrenzten, algorithmisch generierten Aufgaben
               </p>
-            </motion.div>
-            <motion.div variants={item} className="lg:col-span-1">
+            </div>
+            <div>
               <ScreenshotFrame
-                title="MedAT-Simulation — Alle 4 Bereiche"
                 src={SCREENSHOTS.simulation}
                 alt="Vollständige MedAT-Simulation mit Timer und offiziellen Zeitlimits"
               />
               <p className="text-xs text-[var(--muted)] text-center mt-3">
                 Realistische Prüfungssimulation: 211 Fragen, 271 Minuten, echte Zeitlimits
               </p>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* ─── Content Depth: Was steckt drin? ─── */}
       <section className="py-16 sm:py-24">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-14"
-          >
+          <div className="text-center mb-14">
             <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-3">
               Alle 4 MedAT-Bereiche. Vollständig.
             </h2>
@@ -562,33 +536,19 @@ export default function LandingPage() {
               Nicht „ein bisschen von allem" — jeder Testteil ist mit hunderten Aufgaben und Theorie
               abgedeckt.
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div
-            variants={container}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-2 gap-6"
-          >
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {contentDepth.map((section) => (
-              <motion.div
+              <div
                 key={section.section}
-                variants={item}
-                className="bg-[var(--surface)] rounded-2xl p-6 sm:p-8 shadow-[var(--shadow-sm)] border border-[var(--border)]"
+                className="bg-[var(--surface)] rounded-xl p-6 sm:p-8 border border-[var(--border)]"
               >
-                <div className="flex items-center gap-3 mb-4">
-                  <div
-                    className={`w-10 h-10 rounded-xl flex items-center justify-center ${section.bgColor}`}
-                  >
-                    <section.icon className={`w-5 h-5 ${section.color}`} />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-[var(--text-primary)]">
-                      {section.section}
-                    </h3>
-                    <p className="text-xs text-[var(--muted)]">{section.subtitle}</p>
-                  </div>
+                <div className="flex items-baseline gap-2 mb-4">
+                  <h3 className="text-lg font-bold text-[var(--text-primary)]">
+                    {section.section}
+                  </h3>
+                  <span className="text-xs text-[var(--muted)]">{section.subtitle}</span>
                 </div>
                 <ul className="space-y-1.5 mb-3">
                   {section.items.map((i) => (
@@ -596,7 +556,7 @@ export default function LandingPage() {
                       key={i}
                       className="flex items-center gap-2 text-sm text-[var(--text-secondary)]"
                     >
-                      <CheckCircle className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
+                      <span className="w-1 h-1 rounded-full bg-[var(--muted)] shrink-0" />
                       {i}
                     </li>
                   ))}
@@ -604,17 +564,12 @@ export default function LandingPage() {
                 <p className="text-xs text-[var(--muted)] border-t border-[var(--border)] pt-3 mt-3">
                   {section.extra}
                 </p>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
 
           {/* Total stat bar */}
-          <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mt-8 bg-[var(--surface)] rounded-xl p-6 shadow-[var(--shadow-xs)] border border-[var(--border)]"
-          >
+          <div className="mt-8 bg-[var(--surface)] rounded-xl p-6 border border-[var(--border)]">
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
               {[
                 { value: "4.349", label: "BMS-Fragen" },
@@ -630,7 +585,7 @@ export default function LandingPage() {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -940,6 +895,7 @@ export default function LandingPage() {
               { to: "/medat-chemie-fragen", label: "BMS Chemie", sub: "1.400+ Fragen" },
               { to: "/medat-physik-fragen", label: "BMS Physik", sub: "1.300+ Fragen" },
               { to: "/medat-mathematik-fragen", label: "BMS Mathematik", sub: "490+ Fragen" },
+              { to: "/medat-kff-ueben", label: "KFF Training", sub: "Unbegrenzt üben" },
               { to: "/challenge", label: "Quiz Challenge", sub: "Teile dein Ergebnis" },
             ].map((link) => (
               <Link
