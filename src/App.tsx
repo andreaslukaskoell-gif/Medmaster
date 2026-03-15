@@ -56,6 +56,7 @@ const FAQPage = lazy(() => import("@/pages/FAQPage"));
 const MedATGuide = lazy(() => import("@/pages/MedATGuide"));
 const MedATPunkterechner = lazy(() => import("@/pages/MedATPunkterechner"));
 const StichwortlistePublic = lazy(() => import("@/pages/StichwortlistePublic"));
+const KFFDemo = lazy(() => import("@/pages/KFFDemo"));
 
 function LoadingSpinner() {
   return (
@@ -179,6 +180,7 @@ export default function App() {
           <Route path="/medat-guide" element={<MedATGuide />} />
           <Route path="/medat-punkte-rechner" element={<MedATPunkterechner />} />
           <Route path="/bms-stichwortliste-2026" element={<StichwortlistePublic />} />
+          <Route path="/medat-kff-ueben" element={<KFFDemo />} />
 
           {/* Protected routes */}
           <Route
