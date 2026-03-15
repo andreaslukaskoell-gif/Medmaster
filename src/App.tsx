@@ -65,7 +65,7 @@ function LoadingSpinner() {
   );
 }
 
-/** Scrollt bei jedem Seitenwechsel nach oben + captures ?ref= param */
+/** Scrollt bei jedem Seitenwechsel nach oben + captures ?ref= and UTM params */
 function ScrollToTop() {
   const { pathname, search } = useLocation();
   useEffect(() => {
@@ -75,6 +75,11 @@ function ScrollToTop() {
     const params = new URLSearchParams(search);
     const ref = params.get("ref");
     if (ref) sessionStorage.setItem("medmaster_ref", ref);
+    // Persist UTM params for attribution
+    for (const key of ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"]) {
+      const val = params.get(key);
+      if (val) sessionStorage.setItem(`medmaster_${key}`, val);
+    }
   }, [search]);
   return null;
 }

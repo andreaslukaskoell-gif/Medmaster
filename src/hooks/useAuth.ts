@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { supabase } from "@/lib/supabase";
 import { startAutoSync, stopAutoSync, pushStatsToSupabase } from "@/lib/syncService";
 import { startMainSync, stopMainSync } from "@/lib/sync";
+import { identifyUser, resetAnalytics } from "@/lib/analytics";
 import type { User, Session } from "@supabase/supabase-js";
 
 interface Profile {
@@ -131,6 +132,11 @@ export function useAuth() {
           }
         }
         setProfile(p);
+        identifyUser(userId, {
+          email: p.username,
+          name: p.display_name,
+          tier: p.subscription_tier,
+        });
       } else {
         // Neuer User: kein Profil in DB → Standard-Profil für Welcome-State
         const {
@@ -205,6 +211,7 @@ export function useAuth() {
     if (user) await pushStatsToSupabase(user.id);
     stopAutoSync();
     stopMainSync();
+    resetAnalytics();
     if (supabase) await supabase.auth.signOut();
     setUser(null);
     setProfile(null);

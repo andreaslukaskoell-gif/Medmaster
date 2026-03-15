@@ -1,5 +1,9 @@
-// Stripe Pricing Configuration
-// Ersetze PLACEHOLDER-Price-ID durch echte Stripe Price ID wenn Zahlung aktiviert wird.
+// Stripe Payment — uses Stripe Payment Links (no backend required).
+// Create a Payment Link in Stripe Dashboard → paste the URL here.
+// After payment, Stripe redirects to the success URL with ?session_id=.
+// A Supabase webhook (or manual check) upgrades the user to premium.
+
+import { track, trackCheckoutStart } from "@/lib/analytics";
 
 export const PRICING = {
   oneTime: {
@@ -9,12 +13,36 @@ export const PRICING = {
   },
 };
 
+// Replace with your Stripe Payment Link URL from dashboard.stripe.com/payment-links
+const PAYMENT_LINK_URL = import.meta.env.VITE_STRIPE_PAYMENT_LINK as string | undefined;
+
 export function formatPrice(cents: number): string {
   return `€${(cents / 100).toFixed(2).replace(".", ",")}`;
 }
 
-// Platzhalter: Kein Redirect zu Stripe. Wird durch echte Supabase Edge Function + Stripe ersetzt.
-export async function createCheckoutSession(): Promise<string | null> {
-  console.warn("[Stripe] Checkout noch nicht aktiv (Platzhalter).");
-  return null;
+/**
+ * Redirect to Stripe Payment Link.
+ * Pass user email for pre-fill and userId for metadata via query params.
+ * Returns false if payment link is not configured.
+ */
+export function startCheckout(options?: { email?: string; userId?: string }): boolean {
+  if (!PAYMENT_LINK_URL?.trim()) {
+    console.warn("[Stripe] VITE_STRIPE_PAYMENT_LINK not configured.");
+    return false;
+  }
+
+  trackCheckoutStart();
+
+  const url = new URL(PAYMENT_LINK_URL.trim());
+  if (options?.email) url.searchParams.set("prefilled_email", options.email);
+  if (options?.userId) url.searchParams.set("client_reference_id", options.userId);
+
+  track("checkout_redirect", { url: url.origin + url.pathname });
+  window.location.href = url.toString();
+  return true;
+}
+
+/** Check if payment is configured */
+export function isPaymentEnabled(): boolean {
+  return !!PAYMENT_LINK_URL?.trim();
 }

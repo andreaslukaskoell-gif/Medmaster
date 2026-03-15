@@ -6,6 +6,7 @@ import { ErrorBoundary } from "@/components/ErrorBoundary";
 // Single global CSS entry (Tailwind + theme) — do not import index.css elsewhere to avoid HMR loops
 import "@/index.css";
 import App from "@/App";
+import { initAnalytics, captureUtmParams } from "@/lib/analytics";
 
 const dsn = import.meta.env.VITE_SENTRY_DSN;
 if (typeof dsn === "string" && dsn.trim().length > 0) {
@@ -16,6 +17,10 @@ if (typeof dsn === "string" && dsn.trim().length > 0) {
     tracesSampleRate: 0.1,
   });
 }
+
+// Analytics (PostHog) — noop if VITE_POSTHOG_KEY is missing
+initAnalytics();
+captureUtmParams();
 
 const rootEl = document.getElementById("root");
 if (rootEl) {

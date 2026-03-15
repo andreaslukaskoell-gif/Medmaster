@@ -7,6 +7,7 @@ import { useAuth } from "@/hooks/useAuth";
 import { useStore } from "@/store/useStore";
 import { usePageTitle } from "@/hooks/usePageTitle";
 import { translateAuthError } from "@/lib/authErrors";
+import { trackSignup, trackLogin } from "@/lib/analytics";
 
 export default function AuthPage() {
   usePageTitle("Anmelden");
@@ -44,6 +45,7 @@ export default function AuthPage() {
     if (error) {
       setError(translateAuthError(error.message));
     } else {
+      trackLogin("magic_link");
       setOtpSent(true);
     }
   };
@@ -72,6 +74,7 @@ export default function AuthPage() {
           setError(translateAuthError(msg));
         }
       } else {
+        trackSignup("email");
         setMedATOnboardingComplete();
         navigate("/dashboard");
       }
@@ -81,6 +84,7 @@ export default function AuthPage() {
       if (error) {
         setError(translateAuthError(error.message ?? String(error)));
       } else {
+        trackLogin("email");
         setMedATOnboardingComplete();
         navigate("/dashboard");
       }

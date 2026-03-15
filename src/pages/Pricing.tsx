@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Check, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -5,6 +6,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { usePageTitle } from "@/hooks/usePageTitle";
+import { useAuth } from "@/hooks/useAuth";
+import { startCheckout, isPaymentEnabled } from "@/lib/stripe";
+import { trackPricingView } from "@/lib/analytics";
 
 const features = [
   "4.300+ BMS-Fragen mit Erklärungen",
@@ -23,8 +27,13 @@ const features = [
 
 export default function Pricing() {
   usePageTitle("Preise");
+  const { user } = useAuth();
 
   const isFreePromo = new Date() < new Date("2026-04-01T00:00:00+02:00");
+
+  useEffect(() => {
+    trackPricingView();
+  }, []);
 
   return (
     <div className="max-w-3xl mx-auto space-y-8">
@@ -82,12 +91,30 @@ export default function Pricing() {
             ))}
           </div>
 
-          <Button className="w-full py-6 text-base font-semibold" size="lg" asChild>
-            <Link to="/login">
-              {isFreePromo ? "Jetzt gratis starten" : "Jetzt starten"}
+          {isFreePromo ? (
+            <Button className="w-full py-6 text-base font-semibold" size="lg" asChild>
+              <Link to="/login">
+                Jetzt gratis starten
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
+            </Button>
+          ) : isPaymentEnabled() ? (
+            <Button
+              className="w-full py-6 text-base font-semibold"
+              size="lg"
+              onClick={() => startCheckout({ email: user?.email ?? undefined, userId: user?.id })}
+            >
+              Jetzt kaufen — €29,90
               <ArrowRight className="w-4 h-4 ml-2" />
-            </Link>
-          </Button>
+            </Button>
+          ) : (
+            <Button className="w-full py-6 text-base font-semibold" size="lg" asChild>
+              <Link to="/login">
+                Jetzt starten
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
+            </Button>
+          )}
 
           <div className="mt-4 text-center space-y-1">
             <p className="text-xs text-[var(--muted)]">
