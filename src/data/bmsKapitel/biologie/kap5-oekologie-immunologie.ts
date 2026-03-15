@@ -1545,12 +1545,33 @@ Das Komplementsystem ist ein kaskadenartiges System aus ca. 30 Plasmaproteinen, 
       ],
       klinischerBezug:
         "Der serologische Nachweis von IgM vs. IgG ist klinisch essenziell: IgM zeigt eine akute Infektion an (z. B. IgM gegen CMV, EBV, Hepatitis A), IgG zeigt eine abgelaufene Infektion oder Immunität nach Impfung (z. B. Hepatitis-B-Oberflächenantikörper IgG nach Impfung). Bei SARS-CoV-2 werden IgG-Antikörper zur Bestimmung des Immunstatus eingesetzt.",
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Erklären Sie den Unterschied zwischen Fab- und Fc-Fragment eines Antikörpers und deren jeweilige Funktion.",
-        answer:
-          "Das Fab-Fragment (Fragment antigen-binding) enthält die variablen Regionen sowohl der schweren als auch der leichten Kette. Diese variablen Regionen bilden die hochspezifische Antigenbindestelle (CDRs, Complementarity Determining Regions). Die Spezifität des Antikörpers wird durch die Fab-Region bestimmt. Das Fc-Fragment (Fragment crystallizable) enthält die konstanten Regionen der schweren Ketten und vermittelt Effektorfunktionen: Bindung an Fc-Rezeptoren auf Makrophagen und NK-Zellen (Opsonisierung, ADCC), Aktivierung des Komplementsystems (klassischer Weg über C1q), Bindung an die neonatalen Fc-Rezeptoren (Plazentatransfer bei IgG) und Halbwertszeit-Verlängerung (Recycling über FcRn).",
+        text: "Welche Aussage zur Funktion von Fab- und Fc-Fragment eines IgG-Antikörpers ist korrekt?",
+        options: [
+          {
+            id: "a",
+            text: "Das Fc-Fragment bindet das Antigen; das Fab-Fragment vermittelt Effektorfunktionen wie Opsonisierung.",
+          },
+          {
+            id: "b",
+            text: "Beide Fragmente sind für die Antigenbindung zuständig; Effektorfunktionen werden durch die J-Kette übernommen.",
+          },
+          {
+            id: "c",
+            text: "Das Fab-Fragment enthält die variablen Regionen und bindet das Antigen; das Fc-Fragment enthält die konstanten schweren Kettenregionen und vermittelt Effektorfunktionen (Opsonisierung, Komplementaktivierung, Plazentatransfer).",
+          },
+          {
+            id: "d",
+            text: "Das Fab-Fragment aktiviert das Komplementsystem über C1q; das Fc-Fragment bindet das Antigen über CDRs.",
+          },
+          {
+            id: "e",
+            text: "Fab und Fc sind identisch aufgebaut; der Unterschied liegt nur im Glykosylierungsgrad der Ketten.",
+          },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "Das Fab-Fragment (Fragment antigen-binding) enthält die variablen Regionen beider Ketten und bildet die Antigenbindestelle (CDRs). Das Fc-Fragment enthält die konstanten Regionen der schweren Ketten und vermittelt alle Effektorfunktionen: Bindung an Fc-Rezeptoren auf Phagozyten (Opsonisierung), Aktivierung des klassischen Komplementwegs über C1q sowie aktiven Plazentatransfer über FcRn. Option A vertauscht die Funktionen. Option B ist falsch — die J-Kette verbindet IgA/IgM-Polymere, hat aber keine Effektorfunktion. Option D vertauscht ebenfalls Fab und Fc. Option E ist falsch — Fab und Fc unterscheiden sich strukturell fundamental.",
       },
       selfTest: [
         {
@@ -1704,12 +1725,27 @@ Neben der V(D)J-Rekombination und der somatischen Hypermutation verfügt das Imm
       ],
       klinischerBezug:
         "V(D)J-Rekombinationsfehler sind pathologisch relevant: Fehlerhaftes Rearrangement kann Proto-Onkogene in die Nähe aktiver Immungenpromotoren bringen → Lymphome (z. B. t(8;14) bei Burkitt-Lymphom: c-Myc unter IgH-Promotor). Nachweis von klonalen V(D)J-Rearrangements per PCR wird in der Diagnostik von B-Zell-Lymphomen genutzt (Klonalitätsnachweis).",
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Welche drei Hauptquellen der Antikörperdiversität gibt es und wie viele verschiedene Antikörperspezifitäten können theoretisch erzeugt werden?",
-        answer:
-          "1. Kombinatorische Diversität: Zufällige Auswahl der V-, D- und J-Gensegmente für schwere und leichte Ketten sowie deren zufällige Paarung — ergibt bis zu ~18 Millionen Kombinationen. 2. Junctionale Diversität: An den Verbindungsstellen der Segmente werden zufällige Nukleotide (N-Nukleotide durch TdT) eingefügt oder durch Exonukleasen entfernt — erhöht die Diversität auf über 10¹⁰. 3. Somatische Hypermutation: In Keimzentren nach Antigenaktivierung mutieren V-Regionen hochfrequent → Affinitätsreifung. Insgesamt können mehr als 10¹⁰ verschiedene Antikörperspezifitäten erzeugt werden.",
+        text: "Welcher Mechanismus trägt zur Antikörperdiversität bei, indem er zufällige Nukleotide an den Verbindungsstellen der V-, D- und J-Segmente einfügt?",
+        options: [
+          {
+            id: "a",
+            text: "Somatische Hypermutation durch das Enzym AID (Activation-Induced Cytidine Deaminase)",
+          },
+          {
+            id: "b",
+            text: "Kombinatorische Diversität durch zufällige Paarung von schwerer und leichter Kette",
+          },
+          { id: "c", text: "Klassenwechsel (Class-Switch-Rekombination) in aktivierten B-Zellen" },
+          {
+            id: "d",
+            text: "Junctionale Diversität durch das Enzym TdT (Terminal deoxynucleotidyl Transferase)",
+          },
+          { id: "e", text: "Klonale Selektion durch antigenabhängige Expansion der B-Zellen" },
+        ],
+        correctOptionId: "d",
+        explanation:
+          "Die junctionale Diversität entsteht durch das Enzym TdT (Terminal deoxynucleotidyl Transferase), das zufällige N-Nukleotide an den Verbindungsstellen der V-, D- und J-Segmente einfügt. Dadurch entstehen einzigartige CDR3-Sequenzen, die die Antikörperdiversität enorm steigern. Option A beschreibt die somatische Hypermutation, die nach Antigenaktivierung in Keimzentren abläuft und der Affinitätsreifung dient — ein anderer Mechanismus. Option B ist die kombinatorische Diversität durch Segmentauswahl und Kettenpaarung. Option C (Klassenwechsel) ändert die Ig-Klasse, aber nicht die Spezifität. Option E (klonale Selektion) beschreibt die Amplifikation einer B-Zell-Linie, nicht die Erzeugung von Diversität.",
       },
       selfTest: [
         {
@@ -1884,12 +1920,18 @@ In der klinischen Praxis gilt traditionell: Blutgruppe 0 Rh-negativ (0-) als uni
       ],
       klinischerBezug:
         "AB0-Inkompatibilität bei Transfusion führt zur schwerwiegenden akuten hämolytischen Transfusionsreaktion (ABO-Fehltransfusion): innerhalb von Minuten Hämolyse, DIC (disseminierte intravasale Koagulation), Nierenversagen und Schock. Dies ist einer der häufigsten vermeidbaren Transfusionstode. Konsequenz: Strenge Identifikationsverfahren (Bedside-Test, Kreuzprobe) vor jeder Transfusion.",
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Welche Blutgruppen können Eltern mit den Blutgruppen A und B haben, wenn sie ein Kind mit Blutgruppe 0 bekommen?",
-        answer:
-          "Das Kind mit Blutgruppe 0 hat den Genotyp i⁰ i⁰ — es hat je ein i⁰-Allel von jedem Elternteil geerbt. Also müssen beide Elternteile mindestens ein i⁰-Allel tragen. Vater Blutgruppe A: muss den Genotyp I^A i⁰ haben (heterozygot). Mutter Blutgruppe B: muss den Genotyp I^B i⁰ haben (heterozygot). Hätte ein Elternteil den Genotyp I^A I^A (homozygot A) oder I^B I^B (homozygot B), könnte kein i⁰-Allel weitergegeben werden und das Kind könnte keine Blutgruppe 0 haben.",
+        text: "Eltern mit den Blutgruppen A und B haben ein Kind mit Blutgruppe 0. Welche Genotypen müssen die Eltern haben?",
+        options: [
+          { id: "a", text: "Vater I^A I^A und Mutter I^B I^B (beide homozygot)" },
+          { id: "b", text: "Vater I^A I^B und Mutter i⁰ i⁰" },
+          { id: "c", text: "Vater I^A i⁰ und Mutter I^B i⁰ (beide heterozygot)" },
+          { id: "d", text: "Vater i⁰ i⁰ und Mutter I^A I^B" },
+          { id: "e", text: "Vater I^A I^B und Mutter I^A i⁰" },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "Das Kind mit Blutgruppe 0 hat den Genotyp i⁰ i⁰ und muss von jedem Elternteil ein i⁰-Allel erhalten haben. Da der Vater Blutgruppe A hat, muss er heterozygot I^A i⁰ sein (sonst könnte er kein i⁰ weitergeben). Da die Mutter Blutgruppe B hat, muss sie heterozygot I^B i⁰ sein. Option A (beide homozygot) ist falsch — homozygote Eltern können kein i⁰-Allel weitergeben, da sie keines besitzen. Option B beschreibt einen Vater mit AB-Blutgruppe, nicht A. Option D würde einen Vater mit Blutgruppe 0 bedeuten, nicht A. Option E beschreibt eine Mutter mit AB-Blutgruppe, nicht B.",
       },
       selfTest: [
         {
@@ -2058,10 +2100,32 @@ Die Anti-D-Prophylaxe ist eine der großen Errungenschaften der pränatalen Medi
       klinischerBezug:
         "Dank universeller Anti-D-Prophylaxe ist der Morbus haemolyticus neonatorum durch Rh-Inkompatibilität in Industrieländern selten geworden. Restrisiken bestehen bei nicht erkannten Sensibilisierungen (z. B. stille fetomaternale Transfusionen frühzeitig) oder bei nicht-D Rh-Antigenen (Kell, Kidd) ohne verfügbare Prophylaxe.",
       altfrage: {
-        question:
-          "Eine Rh-negative Frau bringt ihr zweites Kind zur Welt. Beim ersten Kind wurde keine Anti-D-Prophylaxe verabreicht. Das Neugeborene zeigt Ikterus, Anämie und Hepatosplenomegalie. Welche Aussage zur Pathogenese ist korrekt?",
-        answer:
-          "Bei der ersten Schwangerschaft mit einem Rh-positiven Kind kam es zur Sensibilisierung der Mutter: Fetale Rh+ Erythrozyten gelangten in die mütterliche Zirkulation, und die Mutter bildete nach initialer IgM-Antwort auch IgG-Anti-D-Antikörper (Gedächtnis-B-Zellen). In der zweiten Schwangerschaft passieren diese mütterlichen IgG-Anti-D-Antikörper über den neonatalen Fc-Rezeptor (FcRn) die Plazenta und binden an das D-Antigen auf den fetalen Erythrozyten. Die markierten Erythrozyten werden durch Komplementaktivierung und antikörperabhängige zelluläre Zytotoxizität (ADCC) lysiert. Die resultierende Hämolyse führt zu Anämie, kompensatorischer extramedullärer Erythropoese (Hepatosplenomegalie) und Hyperbilirubinämie (Ikterus). Eine Anti-D-Prophylaxe in der 28. SSW und innerhalb von 72 h post partum hätte die Sensibilisierung verhindert.",
+        text: "Eine Rh-negative Frau bringt ihr zweites Rh-positives Kind zur Welt. Beim ersten Kind wurde keine Anti-D-Prophylaxe verabreicht. Das Neugeborene zeigt Ikterus, Anämie und Hepatosplenomegalie. Welche Aussage zur Pathogenese ist korrekt?",
+        options: [
+          {
+            id: "a",
+            text: "Beim ersten Kind wurden IgM-Anti-D-Antikörper gebildet, die in der zweiten Schwangerschaft die Plazenta passieren und fetale Erythrozyten lysieren.",
+          },
+          {
+            id: "b",
+            text: "Die Mutter wurde durch die erste Schwangerschaft sensibilisiert; in der zweiten Schwangerschaft passieren IgG-Anti-D-Antikörper über FcRn die Plazenta und führen zur fetalen Hämolyse.",
+          },
+          {
+            id: "c",
+            text: "Das erste Kind sensibilisierte die Mutter; in der zweiten Schwangerschaft werden IgA-Anti-D-Antikörper über Sekretion in das Fruchtwasser übertragen und lysieren fetale Erythrozyten.",
+          },
+          {
+            id: "d",
+            text: "Die Rhesus-Inkompatibilität gefährdet bereits das erste Kind, da die Mutter bereits vor der Schwangerschaft natürliche Anti-D-Antikörper besitzt.",
+          },
+          {
+            id: "e",
+            text: "Die Hepatosplenomegalie entsteht durch Ablagerung von Immunkomplexen in Leber und Milz, nicht durch extramedulläre Erythropoese.",
+          },
+        ],
+        correctOptionId: "b",
+        explanation:
+          "Bei der ersten Schwangerschaft gelangten fetale Rh+ Erythrozyten in die mütterliche Zirkulation (fetomaternale Transfusion), wodurch die Mutter sensibilisiert wurde und Gedächtnis-B-Zellen mit Anti-D bildete. In der zweiten Schwangerschaft werden IgG-Anti-D-Antikörper produziert, die — im Gegensatz zu IgM — über den neonatalen Fc-Rezeptor (FcRn) aktiv die Plazenta passieren. Sie binden an D-Antigene der fetalen Erythrozyten → Hämolyse → Anämie + Hyperbilirubinämie (Ikterus) + kompensatorische extramedulläre Erythropoese (Hepatosplenomegalie). Option A ist falsch: IgM ist zu groß für den Plazentatransport. Option C ist falsch: IgA spielt hier keine Rolle. Option D ist falsch: Rh-negative Personen haben keine natürlichen Anti-D-Antikörper — sie entstehen nur durch Sensibilisierung. Option E ist falsch: Die Hepatosplenomegalie entsteht durch extramedulläre Erythropoese (kompensatorische Blutbildung in Leber und Milz), nicht durch Immunkomplexablagerung.",
       },
       selfTest: [
         {

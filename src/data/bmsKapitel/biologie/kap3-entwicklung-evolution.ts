@@ -32,8 +32,6 @@ Dieser Befund stützt die Hypothese der **Ursuppe** (engl. *primordial soup*; Op
 
 > **Merke:** Miller-Urey (1953): CH₄ + NH₃ + H₂ + H₂O + elektrische Entladungen → Aminosäuren. Beweist abiotische Entstehung organischer Moleküle — **nicht** die Entstehung von Leben selbst.
 
-{{IMAGE}}
-
 ---
 
 ## RNA-Welt — Das Henne-Ei-Problem lösen
@@ -66,6 +64,8 @@ Die Theorie erklärt eine fundamentale Frage: Warum sind eukaryotische Zellen so
 
 > **Merke:** Endosymbiose-Belege: eigenes Genom, 70S-Ribosomen, Antibiotikasensitivität, Doppelmembran, binäre Teilung, phylogenetische Ähnlichkeit zu Bakterien.
 
+{{IMAGE}}
+
 {{DIAGRAM:prokaryote-vs-eukaryote}}
 
 ---
@@ -86,12 +86,27 @@ Die 70S-Ribosomen der Mitochondrien erklären, warum manche Antibiotika mitochon
       ],
       klinischerBezug:
         "Die 70S-Ribosomen der Mitochondrien erklären die mitochondriale Toxizität mancher Antibiotika (z. B. Chloramphenicol hemmt 70S-Ribosomen von Bakterien UND Mitochondrien → aplastische Anämie als Nebenwirkung). Mutationen im mitochondrialen Genom (maternal vererbt) verursachen mitochondriale Erkrankungen wie das MELAS-Syndrom.",
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Nennen Sie drei Belege für die Endosymbiontentheorie (dass Mitochondrien aus Prokaryoten entstanden).",
-        answer:
-          "1. Eigenes ringförmiges DNA-Genom ohne Histone (wie Bakterien). 2. Eigene 70S-Ribosomen (wie Bakterien, nicht 80S wie eukaryotische Cytoplasma-Ribosomen). 3. Doppelmembran (innere Membran entspricht der ehemaligen Bakterienmembran, äußere dem phagozytischen Vesikel). 4. Vermehrung durch binäre Teilung unabhängig vom Zellzyklus. 5. Antibiotika hemmen mitochondriale Ribosomen (wie bei Bakterien). 6. Phylogenetische Ähnlichkeit zu Alphaproteobakterien.",
+        text: "Welches der folgenden Merkmale von Mitochondrien stellt KEINEN Beleg für die Endosymbiontentheorie dar?",
+        options: [
+          { id: "a", text: "Mitochondrien besitzen eigene, zirkuläre DNA ohne Histone." },
+          {
+            id: "b",
+            text: "Mitochondrien vermehren sich durch binäre Teilung unabhängig vom Zellzyklus.",
+          },
+          { id: "c", text: "Mitochondrien sind von einer Doppelmembran umgeben." },
+          {
+            id: "d",
+            text: "Mitochondrien produzieren ATP ausschließlich durch Substratkettenphosphorylierung.",
+          },
+          {
+            id: "e",
+            text: "Mitochondriale Ribosomen sind vom Typ 70S und werden durch Chloramphenicol gehemmt.",
+          },
+        ],
+        correctOptionId: "d",
+        explanation:
+          "ATP-Produktion durch Substratkettenphosphorylierung ist kein spezifischer Beleg für die Endosymbiontentheorie, da dieser Mechanismus in der Glykolyse im Zytoplasma stattfindet und nichts mit der prokaryotischen Herkunft zu tun hat. Alle anderen Optionen – zirkuläre DNA ohne Histone (A), binäre Teilung (B), Doppelmembran (C) und 70S-Ribosomen mit Antibiotika-Empfindlichkeit (E) – sind echte Belege für die Abstammung der Mitochondrien von Alphaproteobakterien.",
       },
       selfTest: [
         {
@@ -225,8 +240,6 @@ Das Ergebnis dieser vier Bedingungen ist **natürliche Selektion**: Populationen
 
 > **Merke:** Lamarck = Vererbung erworbener Eigenschaften (widerlegt). Darwin = natürliche Selektion: Variation + Erblichkeit + Überproduktion + Differentialreproduktion.
 
-{{IMAGE}}
-
 ---
 
 ## Fitness — Was bedeutet 'Überleben des Tüchtigsten'?
@@ -265,7 +278,7 @@ Natürliche Selektion kann auf Merkmale einer Population auf drei verschiedene W
 
 > **Merke:** Stabilisierend = Mittelwert bleibt (Varianz ↓). Gerichtet = Mittelwert verschiebt sich. Disruptiv = Extreme bevorzugt → kann Artaufspaltung einleiten.
 
-{{DIAGRAM:phylogenetic-tree}}
+{{IMAGE}}
 
 ---
 
@@ -285,12 +298,27 @@ Gerichtete Selektion ist in der Medizin hoch relevant: Antibiotika-Einsatz selek
       ],
       klinischerBezug:
         "Gerichtete Selektion ist in der Medizin hoch relevant: Antibiotika-Einsatz selektiert resistente Bakterienstämme (MRSA, multiresistente Tuberkulose). Das Verständnis der Selektionsdynamik ist essenziell für die Entwicklung von Resistenz-Präventionsstrategien (Antibiotic Stewardship, Therapierotation).",
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Was versteht Darwin unter 'natürlicher Selektion'? Erläutern Sie die vier Voraussetzungen.",
-        answer:
-          "Natürliche Selektion setzt vier Bedingungen voraus: (1) Variation: Individuen einer Population unterscheiden sich in vererbbaren Merkmalen. (2) Erblichkeit: Diese Merkmale werden an Nachkommen weitergegeben. (3) Überproduktion: Es werden mehr Individuen geboren als die Umwelt tragen kann (Kampf ums Dasein). (4) Differential-Reproduktion: Individuen mit vorteilhaften Merkmalen überleben und reproduzieren sich häufiger. Das Ergebnis: Vorteilhafte Merkmale nehmen in der Population über Generationen zu — die Population verändert sich (Evolution).",
+        text: "Welche der folgenden Aussagen beschreibt eine NOTWENDIGE Voraussetzung für natürliche Selektion nach Darwin?",
+        options: [
+          { id: "a", text: "Alle Individuen einer Population müssen genetisch identisch sein." },
+          { id: "b", text: "Merkmale müssen zufällig entstehen und dürfen nicht vererbbar sein." },
+          {
+            id: "c",
+            text: "Es werden mehr Nachkommen erzeugt, als die Umwelt langfristig tragen kann (Überproduktion).",
+          },
+          {
+            id: "d",
+            text: "Selektion wirkt ausschließlich auf Mutationen, nicht auf vorhandene Varianten.",
+          },
+          {
+            id: "e",
+            text: "Alle Individuen müssen gleiche Überlebens- und Reproduktionschancen haben.",
+          },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "Überproduktion (mehr Nachkommen als die Umwelt tragen kann) ist eine der vier Kernvoraussetzungen Darwins: Variation, Erblichkeit, Überproduktion und Differentialreproduktion. A ist falsch – Variation ist essenziell. B ist falsch – Vererbbarkeit ist Voraussetzung, nicht Hindernis. D ist falsch – Selektion wirkt auf alle vererbbaren Varianten. E ist das Gegenteil des Selektionsprinzips: unterschiedliche Reproduktionserfolge sind gerade das Ergebnis der Selektion.",
       },
       selfTest: [
         {
@@ -414,8 +442,6 @@ Gerichtete Selektion ist in der Medizin hoch relevant: Antibiotika-Einsatz selek
       ],
       content: `## Die vier Evolutionsfaktoren
 
-{{DIAGRAM:dna-helix}}
-
 Evolution bedeutet Veränderung der **Allelfrequenzen** (Häufigkeit von Genvarianten) in einer Population. Vier Kräfte können diese Veränderung antreiben:
 
 **1. Mutation** (Rohstoff der Evolution): Mutationen schaffen neue Allele durch Änderungen der DNA-Sequenz. Ohne Mutation gäbe es keine Variation und damit keine Evolution — Mutation ist die ultimative Quelle aller genetischen Vielfalt. Einzelne Mutationen sind zufällig und meist neutral oder schädlich; in seltenen Fällen vorteilhaft. Mutation allein verändert Allelfrequenzen sehr langsam (Mutationsrate ca. 10⁻⁵ bis 10⁻⁹ pro Gen und Generation).
@@ -427,8 +453,6 @@ Evolution bedeutet Veränderung der **Allelfrequenzen** (Häufigkeit von Genvari
 **4. Genfluss** (homogenisierend): Genfluss bezeichnet den Transfer von Allelen durch Migration von Individuen zwischen Populationen. Er gleicht Allelfrequenzunterschiede zwischen Populationen aus (**Homogenisierung**) und wirkt damit der Divergenz und Artbildung entgegen. Geografische Isolation unterbricht den Genfluss — das ist der erste Schritt allopatrischer Artbildung.
 
 > **Merke:** Mutation (Rohstoff, zufällig), Selektion (gerichtet, fitness-abhängig), Gendrift (zufällig, stark in kleinen Populationen), Genfluss (homogenisierend, wirkt Artbildung entgegen).
-
-{{IMAGE}}
 
 ---
 
@@ -474,6 +498,8 @@ Für ein Gen mit zwei Allelen (Häufigkeit **p** für das dominante, **q** für 
 
 > **Merke:** Hardy-Weinberg: **p² + 2pq + q² = 1**. Rezessiv-homozygot = q². Überträger = 2pq. Aus der Krankheitshäufigkeit (q²) lässt sich die Überträgerfrequenz berechnen — das ist eine klassische MedAT-Rechenaufgabe.
 
+{{IMAGE}}
+
 ---
 
 ## Heterozygotenvorteil — Warum schädliche Allele überleben
@@ -500,11 +526,24 @@ Der Gründereffekt erklärt die erhöhte Häufigkeit bestimmter genetischer Erkr
       ],
       klinischerBezug:
         "Der Gründereffekt erklärt die erhöhte Häufigkeit bestimmter genetischer Erkrankungen in isolierten Gemeinschaften: Tay-Sachs bei aschkenasischen Juden, Ellis-van-Creveld-Syndrom bei Amischen. In der Pharmakogenetik erklärt der Gründereffekt populationsspezifische Häufigkeiten von Medikamentenmetabolismus-Varianten (z. B. CYP2D6-Allele).",
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question: "Erklären Sie den Unterschied zwischen Flaschenhals-Effekt und Gründereffekt.",
-        answer:
-          "Beide sind Sonderformen des Gendrifts. Der Flaschenhals-Effekt tritt auf, wenn eine große bestehende Population durch ein katastrophales Ereignis (Seuche, Naturkatastrophe) auf wenige Individuen reduziert wird. Die überlebenden Individuen repräsentieren nur einen zufälligen Ausschnitt der ursprünglichen genetischen Variation — Allelfrequenzen ändern sich zufällig, Diversität geht verloren. Der Gründereffekt tritt auf, wenn eine kleine Gruppe von Individuen aus einer großen Population eine neue Population gründet (z. B. auf einer neuen Insel). Die zufälligen Allele der Gründer sind in der neuen Population überrepräsentiert.",
+        text: "Bei den Amischen in Pennsylvania tritt das Ellis-van-Creveld-Syndrom deutlich häufiger auf als in der Allgemeinbevölkerung. Welcher evolutionäre Mechanismus erklärt dies am besten?",
+        options: [
+          { id: "a", text: "Gerichtete natürliche Selektion zugunsten des Krankheits-Allels." },
+          { id: "b", text: "Erhöhte Mutationsrate durch Umwelteinflüsse in dieser Region." },
+          {
+            id: "c",
+            text: "Gründereffekt: Eine kleine Gründerpopulation trug das Allel zufällig in erhöhter Frequenz.",
+          },
+          { id: "d", text: "Genfluss durch Migration von Trägern aus anderen Regionen." },
+          {
+            id: "e",
+            text: "Heterozygotenvorteil (balancierte Selektion) des Ellis-van-Creveld-Allels.",
+          },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "Der Gründereffekt erklärt die erhöhte Häufigkeit: Die Amischen stammen von einer kleinen Gründergruppe ab, die zufällig das Krankheits-Allel in höherer Frequenz trug. Diese zufällige Allelverteilung wurde weitervererbt und durch die Isolation der Gemeinschaft nicht durch Genfluss von außen verdünnt. A ist falsch – das Allel senkt die Fitness. B ist nicht belegt. D ist falsch – Isolation verhindert gerade den Genfluss. E ist falsch – kein Heterozygotenvorteil für dieses Allel bekannt.",
       },
       selfTest: [
         {
@@ -617,8 +656,6 @@ Der Gründereffekt erklärt die erhöhte Häufigkeit bestimmter genetischer Erkr
         "Teratogene",
       ],
       content: `Aus einer einzigen befruchteten Eizelle entsteht ein Organismus mit über 200 Zelltypen und einem funktionierenden Nervensystem. Dieses Kapitel gibt einen Überblick über die Stationen dieser Entwicklung — von der Befruchtung bis zur Fetalperiode. Die einzelnen Stationen werden in den folgenden Unterkapiteln im Detail behandelt.
-
-{{DIAGRAM:cell-cycle}}
 
 ---
 
@@ -905,12 +942,24 @@ Auch die HIV-Forensik nutzt Phylogenetik: In Gerichtsprozessen wurde anhand vira
       ],
       klinischerBezug:
         "Molekulare Phylogenie ist in der Infektionsmedizin essenziell: Phylogenetische Analysen von Virussequenzen (z. B. HIV, SARS-CoV-2) rekonstruieren Ausbreitungswege von Epidemien (Genomic Epidemiology) und identifizieren Ursprungsorte von Pandemien. Bei SARS-CoV-2 konnte die phylogenetische Analyse zeigen, dass das Virus einmalig in Menschen eingetreten ist und sich danach weltweit verbreitet hat.",
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Erklären Sie den Unterschied zwischen homologen und analogen Strukturen und nennen Sie je ein Beispiel.",
-        answer:
-          "Homologe Strukturen sind auf gemeinsame Abstammung zurückzuführen — sie haben denselben evolutionären Ursprung und oft einen ähnlichen Grundbauplan, obwohl die Funktion verschieden sein kann. Beispiel: Arm des Menschen und Vorderflosse des Wals (beide haben Humerus, Radius, Ulna — gemeinsamer Vorfahre). Analoge Strukturen entstanden durch konvergente Evolution unabhängig voneinander als Anpassung an ähnliche Umweltbedingungen — sie haben verschiedenen Ursprung, erfüllen aber dieselbe Funktion. Beispiel: Flügel des Vogels (modifizierter Knochenarm) und Flügel des Insekts (Exoskelett-Ausstülpung).",
+        text: "Der Flügel eines Vogels und der Flügel eines Insekts erfüllen dieselbe Funktion (Fliegen), haben aber völlig unterschiedliche anatomische Strukturen. Wie bezeichnet man dieses Verhältnis?",
+        options: [
+          { id: "a", text: "Homologe Strukturen, da beide dieselbe Funktion erfüllen." },
+          {
+            id: "b",
+            text: "Analoge Strukturen, da sie unabhängig voneinander entstanden sind (konvergente Evolution).",
+          },
+          { id: "c", text: "Rudimentäre Strukturen, da sie evolutionär rückgebildet wurden." },
+          {
+            id: "d",
+            text: "Homologe Strukturen, da Vögel und Insekten denselben gemeinsamen Vorfahren haben.",
+          },
+          { id: "e", text: "Atavismen, da sie an ursprüngliche Vorfahrenmerkmale erinnern." },
+        ],
+        correctOptionId: "b",
+        explanation:
+          "Vogelflügel und Insektenflügel sind analoge Strukturen: Sie haben dieselbe Funktion (Fliegen), aber völlig unterschiedliche evolutionäre Ursprünge und Grundbaupläne – das Ergebnis konvergenter Evolution. Homologe Strukturen (A, D) teilen hingegen denselben evolutionären Ursprung, auch wenn ihre Funktionen verschieden sind (z. B. Arm/Flosse/Flügel bei Wirbeltieren). Vögel und Insekten haben keinen gemeinsamen geflügelten Vorfahren. C und E beschreiben andere evolutionäre Konzepte.",
       },
       selfTest: [
         {
@@ -1144,12 +1193,33 @@ Pääbos Paläogenomik (Erbgutanalyse ausgestorbener Arten) verknüpft Hominiden
       ],
       klinischerBezug:
         "Svante Pääbos Arbeit (Nobelpreis Medizin 2022) zur Paläogenomik der Neanderthaler zeigte, dass bestimmte neanderthalische Allele das COVID-19-Schwereverlaufsrisiko erhöhen (Chromosom 3-Risikohaplotyp). Dies verbindet prähistorische Homininen-Forschung direkt mit klinisch relevanten Fragestellungen der modernen Medizin.",
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Was sagt die Out-of-Africa-Theorie aus und welche genetischen Belege stützen sie?",
-        answer:
-          "Die Out-of-Africa-Theorie besagt, dass Homo sapiens in Afrika entstand (vor ca. 300.000 Jahren) und dann vor ca. 60.000–70.000 Jahren aus Afrika in den Rest der Welt migrierte. Genetische Belege: (1) Maximale genetische Diversität bei afrikanischen Populationen (alle anderen Populationen sind Teilmengen dieser Diversität — Gründereffekt bei Auswanderung). (2) Mitochondriale DNA (maternale Linie) und Y-Chromosom (paternale Linie) konvergieren auf afrikanische Ursprünge (Mitochondrielle Eva, Chromosomaler Adam). (3) 1–4% neanderthalische DNA in Nicht-Afrikanern belegt Hybridisierung nach der afrikanischen Migration.",
+        text: "Welche Aussage zur Out-of-Africa-Theorie und ihrer genetischen Evidenz ist korrekt?",
+        options: [
+          {
+            id: "a",
+            text: "Afrikanische Populationen zeigen die geringste genetische Diversität, weil sie am längsten isoliert waren.",
+          },
+          {
+            id: "b",
+            text: "Neanderthaler-DNA findet sich zu 1–4 % in Nicht-Afrikanern, was auf Hybridisierung nach der Migration aus Afrika hinweist.",
+          },
+          {
+            id: "c",
+            text: "Die mitochondriale DNA (mtDNA) wird paternal (väterlich) vererbt und verweist auf afrikanische Ursprünge.",
+          },
+          {
+            id: "d",
+            text: "Homo sapiens entstand gleichzeitig auf allen Kontinenten durch parallele Evolution (Multiregionale Hypothese).",
+          },
+          {
+            id: "e",
+            text: "Das Y-Chromosom und die mtDNA konvergieren auf europäische Ursprünge des modernen Menschen.",
+          },
+        ],
+        correctOptionId: "b",
+        explanation:
+          "Neanderthaler-DNA von 1–4 % in Nicht-Afrikanern belegt die Hybridisierung zwischen H. sapiens und Neandertalern nach der Migration aus Afrika – ein zentraler genetischer Beleg für Out-of-Africa. A ist falsch – afrikanische Populationen zeigen die HÖCHSTE genetische Diversität (Gründereffekt reduziert Diversität bei Auswanderung). C ist falsch – mtDNA wird maternal vererbt. D widerspricht der Out-of-Africa-Theorie. E ist falsch – beide Linien (Y-Chromosom und mtDNA) konvergieren auf afrikanische Ursprünge.",
       },
       selfTest: [
         {
@@ -1272,11 +1342,11 @@ Wichtige Begriffe:
 - **Spermatogonium** = diploide Stammzelle der Spermien im Hoden (2n)
 - **Oogonium** = diploide Vorläuferzelle der Eizelle; beim Menschen nur pränatal aktiv — danach entstehen **primäre Oozyten** (2n), die in Meiose I eintreten und arretieren
 
+{{DIAGRAM:cell-cycle}}
+
 ---
 
 ## Spermatogenese — Ablauf und Ergebnis
-
-{{DIAGRAM:cell-cycle}}
 
 **Spermatogenese** ist die Bildung reifer Spermien im Hoden. Sie findet in den **Tubuli seminiferi** (Samenkanälchen) statt und läuft ab Pubertät kontinuierlich ab.
 
@@ -1308,8 +1378,6 @@ Wichtige Begriffe:
 ---
 
 ## Bedeutung für die Embryonalentwicklung
-
-{{DIAGRAM:hormonsystem}}
 
 Die reife **Eizelle** (n) nach Abschluss der Meiose II und die **Spermien** (n) sind die Ausgangspunkte der Befruchtung. Die Verschmelzung ihrer Vorkerne ergibt die **Zygote** (2n). Die Geschlechtsbestimmung erfolgt durch das Spermium (X- oder Y-Chromosom). Die zeitliche Abfolge „Gametogenese → Befruchtung → Furchung → …” solltest du sicher beherrschen.`,
       lernziele: [
@@ -1448,8 +1516,6 @@ Nur eine von Millionen Samenzellen schafft es bis zur Eizelle — und der Ort di
 
 ## Voraussetzung: Kapazitation
 
-{{DIAGRAM:menstrual-cycle}}
-
 Bevor ein Spermium die Eizelle durchdringen kann, muss es **kapazitiert** sein. **Kapazitation** ist eine biochemische Reifung, die im weiblichen Genitaltrakt stattfindet (Dauer etwa **7 Stunden**): Unter anderem wird Cholesterin aus der Spermienmembran entfernt und die intrazelluläre Calcium-Konzentration steigt. Dadurch wird die Spermienbewegung verstärkt (**Hyperaktivierung**) und das Spermium wird befähigt, die **Akrosomreaktion** auszulösen. Ohne Kapazitation kann kein Spermium die Eizellhülle durchdringen.
 
 > **Merke:** Kapazitation = Reifung des Spermiums im weiblichen Genitaltrakt (~7 h), Voraussetzung für Akrosomreaktion und Befruchtung.
@@ -1563,8 +1629,6 @@ Unmittelbar nach der Befruchtung beginnt die Zygote sich zu teilen. In den erste
 
 ## Furchung — Teilungen ohne Wachstum
 
-{{DIAGRAM:stem-cells}}
-
 Die Zygote teilt sich in 2, 4, 8, 16, … Zellen. Der kompakte Zellhaufen aus etwa 16–32 Zellen wird **Morula** genannt (Tag 3–4, lateinisch „Maulbeere"). Die Morula wandert weiter im Eileiter in Richtung Uterus.
 
 > **Merke:** Furchung = wiederholte Teilungen der Zygote/Blastomeren **ohne** Wachstum. Morula = kompakter Zellhaufen (Tag 3–4).
@@ -1572,8 +1636,6 @@ Die Zygote teilt sich in 2, 4, 8, 16, … Zellen. Der kompakte Zellhaufen aus et
 ---
 
 ## Blastozyste — Aufbau und Bedeutung
-
-{{DIAGRAM:animal-cell}}
 
 In der Morula bildet sich ein **flüssigkeitsgefüllter Hohlraum** aus (**Blastozoel**). Sobald dieser Hohlraum erkennbar ist und zwei zellulär unterschiedliche Bereiche vorliegen, spricht man von einer **Blastozyste** (Tag 5–6).
 
@@ -2034,8 +2096,6 @@ Die **Embryonalperiode** umfasst die ersten **8 Wochen** nach der Befruchtung. S
 
 Die Organogenese schreitet in zwei Richtungen fort: **cephalo-caudal** (vom Kopf zum Schwanz) und **proximo-distal** (von der Körpermitte zu den Extremitäten). In Woche 4 faltet sich der Embryo vom flachen Scheibenstadium zur zylindrischen Körperform — durch diese Faltung entsteht der primitive Darm. Das Herzschlauch-Paar fusioniert, und **das Herz beginnt bereits an Tag 22–23 (Woche 4) zu schlagen** — nicht erst am Ende der Embryonalperiode. Dies ist eine häufige Falschaussage in MC-Fragen.
 
-{{DIAGRAM:heart-anatomy}}
-
 **Zeitplan der wichtigsten Meilensteine:**
 
 | Zeitpunkt | Ereignis |
@@ -2046,6 +2106,8 @@ Die Organogenese schreitet in zwei Richtungen fort: **cephalo-caudal** (vom Kopf
 | Woche 6 | Finger strahlenförmig sichtbar (Apoptose trennt sie bis Woche 8) |
 | Woche 8 | Alle Organanlagen vorhanden; SSL ca. 3 cm, Gewicht ca. 3 g |
 | Ab Woche 9 | Fetus: Wachstum und Reifung; kaum neue Organanlagen |
+
+{{DIAGRAM:heart-anatomy}}
 
 > **Merke:** Embryonalperiode (Woche 1–8) = Organanlage; Fetalperiode (ab Woche 9) = Wachstum. Herz schlägt ab Tag 22–23.
 
@@ -2085,12 +2147,33 @@ Thalidomid (Contergan) verursachte in den 1960er Jahren Phokomelie (Flipper-arti
       ],
       klinischerBezug:
         "Thalidomid (Contergan) verursachte in den 1960er Jahren Phokomelie (Flipper-artige Extremitäten), wenn es in der kritischen Periode der Extremitätenanlage (Woche 4–8) eingenommen wurde. Dies verdeutlicht, dass kritische Perioden organspezifisch sind und selbst kurze Exposition mit einem Teratogen irreversible Fehlbildungen hervorrufen kann.",
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Was versteht man unter dem 'Alles-oder-Nichts-Prinzip' in der Embryonalentwicklung und für welchen Zeitraum gilt es?",
-        answer:
-          "Das Alles-oder-Nichts-Prinzip gilt für die Präimplantationsphase (Wochen 1–2): Eine teratogene Noxe führt entweder zum Absterben des Embryos (alle/viele Zellen geschädigt) oder – da die frühen Blastomere noch totipotent sind und sich gegenseitig ersetzen können – zu einem vollständig normal weiterentwickelnden Embryo.",
+        text: "Eine Schwangere nimmt in der 2. Woche nach Konzeption ein potenziell teratogenes Medikament ein. Wie ist das Risiko für eine Organfehlbildung beim Kind einzuschätzen?",
+        options: [
+          {
+            id: "a",
+            text: "Sehr hohes Risiko, da die Organogenese in Woche 2 auf ihrem Höhepunkt ist.",
+          },
+          {
+            id: "b",
+            text: "Moderates Risiko für Herzfehlbildungen, da das Herz als erstes Organ angelegt wird.",
+          },
+          {
+            id: "c",
+            text: "Geringes Risiko für Organfehlbildungen – in Woche 1–2 gilt das Alles-oder-Nichts-Prinzip: entweder Fruchttod oder normale Entwicklung.",
+          },
+          {
+            id: "d",
+            text: "Sicheres Risiko für ZNS-Fehlbildungen, da das ZNS besonders früh differenziert.",
+          },
+          {
+            id: "e",
+            text: "Kein Risiko, da Teratogene in der Frühschwangerschaft die Plazentaschranke noch nicht überwinden können.",
+          },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "In den Wochen 1–2 (Präimplantationsphase) gilt das Alles-oder-Nichts-Prinzip: Die Blastomere sind noch totipotent und können geschädigte Schwesterzellen kompensieren. Entweder stirbt der gesamte Embryo (Frühabort), oder er entwickelt sich vollständig normal weiter. Organfehlbildungen entstehen vor allem in der Organogenese (Wochen 3–8, organspezifische kritische Perioden). A und B sind daher falsch. D ist falsch – ZNS-Differenzierung beginnt ab Woche 3. E ist falsch – Teratogene können die Plazentaschranke passieren.",
       },
       selfTest: [
         {
@@ -2259,12 +2342,33 @@ Plazenta praevia (Plazenta liegt über dem inneren Muttermund) kann zu schweren 
       ],
       klinischerBezug:
         "Plazenta praevia (Plazenta liegt über dem inneren Muttermund) kann zu schweren Blutungen sub partu führen und ist eine Indikation für einen Kaiserschnitt. Die Placenta accreta (abnormal tiefe Invasion der Chorionzotten in das Myometrium) führt zu schweren postpartalen Blutungen, da sich die Plazenta nicht spontan löst.",
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Wie viele Arterien und Venen enthält die normale Nabelschnur, und welches Blut (sauerstoffreich/arm) führen sie?",
-        answer:
-          "Die normale Nabelschnur enthält 2 Nabelarterien (führen sauerstoffarmes, CO₂-reiches Blut vom Fötus zur Plazenta) und 1 Nabelvene (führt sauerstoffreiches Blut von der Plazenta zum Fötus). Merkhilfe: AVA.",
+        text: "Die Nabelschnur enthält Blutgefäße, die Fötus und Plazenta verbinden. Welche Aussage zur Nabelschnur ist korrekt?",
+        options: [
+          {
+            id: "a",
+            text: "Die Nabelschnur enthält 1 Arterie (sauerstoffreich, zur Plazenta) und 2 Venen (sauerstoffarm, zum Fötus).",
+          },
+          {
+            id: "b",
+            text: "Die Nabelschnur enthält 2 Arterien (sauerstoffreich, von der Plazenta) und 1 Vene (sauerstoffarm, zur Plazenta).",
+          },
+          {
+            id: "c",
+            text: "Die Nabelschnur enthält 1 Arterie und 1 Vene – die singuläre Nabelarterie ist der Normalfall.",
+          },
+          {
+            id: "d",
+            text: "Die Nabelschnur enthält 2 Arterien (sauerstoffarm, vom Fötus zur Plazenta) und 1 Vene (sauerstoffreich, von der Plazenta zum Fötus).",
+          },
+          {
+            id: "e",
+            text: "Die Nabelschnur enthält 3 Venen; Arterien sind bei normaler Schwangerschaft nicht vorhanden.",
+          },
+        ],
+        correctOptionId: "d",
+        explanation:
+          "Die normale Nabelschnur enthält 2 Nabelarterien (führen sauerstoffarmes, CO₂-reiches Blut vom Fötus zur Plazenta) und 1 Nabelvene (führt sauerstoffreiches, nährstoffreiches Blut von der Plazenta zum Fötus). Merkhilfe: AVA (Arterie-Vene-Arterie). Achtung: Anders als in der systemischen Zirkulation führen hier die Arterien sauerstoffarmes Blut – weil die Richtung (weg vom Fötus) entscheidend ist, nicht der Sauerstoffgehalt. Eine singuläre Nabelarterie (Einarteriennabelschnur) ist ein pathologischer Befund.",
       },
       selfTest: [
         {

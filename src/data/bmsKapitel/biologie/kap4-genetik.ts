@@ -61,9 +61,7 @@ Ein **Chromosom** ist ein langer DNA-Faden, der zusammen mit **Histonen** (Verpa
 ## Zusammenhang für die Vererbung
 
 
-> **Merke:** DNA → Gene (mit Allelen) → auf Chromosomen verpackt. Meiose trennt homologe Chromosomen → je ein Allel pro Gen in der Keimzelle.
-
-{{DIAGRAM:dna-helix}}`,
+> **Merke:** DNA → Gene (mit Allelen) → auf Chromosomen verpackt. Meiose trennt homologe Chromosomen → je ein Allel pro Gen in der Keimzelle.`,
       lernziele: [
         "Den Zusammenhang zwischen DNA, Gen und Chromosom beschreiben.",
         "Gen und Allel unterscheiden und Locus erklären.",
@@ -184,8 +182,6 @@ Ein **Chromosom** ist ein langer DNA-Faden, der zusammen mit **Histonen** (Verpa
         "46,XY",
       ],
       content: `## Aufbau eines Chromosoms
-
-{{DIAGRAM:dna-helix}}
 
 Ein Chromosom in der Metaphase der Zellteilung besteht aus **zwei Schwesterchromatiden**, die am **Zentromer** zusammenhängen. Das Zentromer ist der Ansatzpunkt für die Spindelfasern; an ihm sitzt der **Kinetochor** (Proteinkomplex für die Spindelbindung). Jede Chromatide hat zwei **Arme**: der **p-Arm** (petit = kurz) und der **q-Arm** (queue = lang).
 
@@ -581,8 +577,6 @@ Die Meiose (vorheriges Kapitel) liefert den Mechanismus: Während der Keimzellbi
 
 ## 1. Mendelsche Regel — Uniformitätsregel
 
-{{DIAGRAM:meiosis}}
-
 Kreuzt man zwei **reinerbige (homozygote)** Eltern mit unterschiedlichen Merkmalen, sind alle Nachkommen der **F₁-Generation** (erste Filialgeneration) **uniform** — sie haben denselben Genotyp und denselben Phänotyp.
 
 **Kreuzungsschema (monohybrid):**
@@ -632,7 +626,7 @@ Spaltet die Nachkommenschaft auf, war der Elternteil **heterozygot**.
 
 ## 3. Mendelsche Regel — Unabhängigkeitsregel
 
-{{DIAGRAM:pedigree-analysis}}
+{{DIAGRAM:meiosis}}
 
 Betrachtet man **zwei Merkmale** gleichzeitig (dihybrider Erbgang), werden Gene auf **verschiedenen Chromosomen** unabhängig voneinander vererbt. Die unabhängige Verteilung in der Meiose I (zufällige Orientierung der Bivalente) ist der zelluläre Mechanismus dahinter.
 
@@ -841,8 +835,6 @@ Die **Testkreuzung** klärt, ob ein dominant-phänotypisches Individuum AA oder 
 ---
 
 ## Unvollständige Dominanz (intermediär)
-
-{{DIAGRAM:pedigree-analysis}}
 
 Keines der Allele setzt sich vollständig durch. Der Heterozygote zeigt einen **Mischphänotyp** zwischen den beiden Homozygoten. Klassisches Beispiel: Die **Wunderblume** (*Mirabilis jalapa*) — rote Blüte (AA) × weiße Blüte (aa) ergibt **rosa** Blüten (Aa). Hier „verdünnt" das fehlende Allel die Farbintensität.
 
@@ -1827,9 +1819,6 @@ Das Zentraldogma beschreibt den gerichteten Informationsfluss in biologischen Sy
 
 ## Transkription — von der DNA zur mRNA
 
-
-{{DIAGRAM:dna-helix}}
-
 Die Transkription findet im **Zellkern** statt und wird von der **RNA-Polymerase** (bei Eukaryoten: RNA-Polymerase II für mRNA) katalysiert.
 
 **Ablauf in drei Phasen:**
@@ -1839,6 +1828,8 @@ Die Transkription findet im **Zellkern** statt und wird von der **RNA-Polymerase
 2. **Elongation:** Die RNA-Polymerase liest den **Matrizenstrang** (Vorlagenstrang, 3' → 5') und synthetisiert die mRNA in **5' → 3'-Richtung**. Basenpaarungsregeln: A-U, T-A, G-C, C-G. In der RNA ersetzt **Uracil (U)** das Thymin (T) der DNA. Die mRNA-Sequenz entspricht dem **codogenen Strang** (Sinnstrang) (Nicht-Matrizenstrang), nur mit U statt T.
 
 3. **Termination:** Die RNA-Polymerase erreicht ein **Terminationssignal** und löst sich von der DNA. Die fertige **Prä-mRNA** (pre-mRNA) wird prozessiert.
+
+{{DIAGRAM:dna-helix}}
 
 **mRNA-Prozessierung (bei Eukaryoten):**
 - **5'-Capping:** Methylguanosin-Kappe schützt vor Abbau und unterstützt die Ribosomenbindung
@@ -1911,9 +1902,6 @@ Die Translation benötigt: **mRNA** (Vorlage), **Ribosomen** (Übersetzungsmasch
 ---
 
 ## Zusammenhang mit Genetik und Vererbung
-
-
-{{DIAGRAM:endomembrane-system}}
 
 Die **Allele** eines Gens unterscheiden sich in ihrer **DNA-Sequenz** (z. B. Punktmutation). Unterschiedliche DNA-Sequenz → unterschiedliche mRNA → unterschiedliches Protein (veränderte Aminosäure-Sequenz, veränderte Faltung/Funktion) → unterschiedlicher **Phänotyp**.
 
@@ -2064,6 +2052,9 @@ Krebs entsteht, wenn eine Zelle die Kontrolle über ihr eigenes Wachstum verlier
 Wird ein Proto-Onkogen durch eine Mutation **überaktiviert**, entsteht ein **Onkogen** (griech. onkos = Geschwulst). Das Onkogen sendet dauerhaft Wachstumssignale — wie ein **Gaspedal, das festklemmt**. Die Zelle teilt sich ständig, auch wenn kein Wachstumssignal von außen kommt.
 
 **Aktivierungsmechanismen (gain of function):**
+
+{{DIAGRAM:mutation-types}}
+
 - **Punktmutation:** Ein einziger Basenaustausch macht das Protein dauerhaft aktiv (z. B. RAS)
 - **Genamplifikation:** Das Gen wird vervielfacht → zu viel Protein (z. B. HER2)
 - **Chromosomentranslokation:** Das Gen gerät unter einen starken Promotor oder verschmilzt mit einem anderen Gen → Fusionsprotein (z. B. BCR-ABL bei CML)
@@ -2097,8 +2088,6 @@ Wird ein Proto-Onkogen durch eine Mutation **überaktiviert**, entsteht ein **On
 **Unterschied zu Onkogenen:** Tumorsuppressorgene wirken **rezessiv** — beide Allele müssen ausfallen (loss of function), damit die Bremse versagt.
 
 > **Merke:** Tumorsuppressorgen = Bremse. Beide Kopien müssen ausfallen (rezessiv). p53 = „Guardian of the Genome" — in über der Hälfte aller Tumoren mutiert. Eselsbrücke: Gaspedal klemmt (Onkogen) UND Bremse kaputt (TSG) — dann wird die Zelle zum Tumor.
-
-{{DIAGRAM:mutation-types}}
 
 ---
 
@@ -2168,6 +2157,8 @@ Neben Onkogenen und Tumorsuppressorgenen gibt es eine dritte Gruppe krebsrelevan
 ---
 
 ## Hallmarks of Cancer — die zehn Kennzeichen
+
+{{IMAGE}}
 
 Hanahan und Weinberg definierten sechs (2000), später zehn (2011) **Hallmarks of Cancer** — universelle Eigenschaften, die eine Krebszelle von einer normalen Zelle unterscheiden:
 
@@ -2376,9 +2367,6 @@ Epigenetische Markierungen werden bei der **Zellteilung** an Tochterzellen weite
 ---
 
 ## DNA-Methylierung
-
-
-{{DIAGRAM:transcription-translation}}
 
 Bei der **DNA-Methylierung** wird eine **Methylgruppe (-CH₃)** an die Base **Cytosin** angehängt, und zwar an **CpG-Dinukleotiden** (Cytosin-Guanin-Abfolge). In **Promotorregionen** von Genen liegen oft viele CpG-Dinukleotide gehäuft — sogenannte **CpG-Inseln**.
 
@@ -2645,8 +2633,6 @@ Nach der PCR (oder nach einem Restriktionsverdau) muss man die entstandenen DNA-
 4. Größe der Fragmente durch Vergleich mit einem **Größenstandard** (DNA-Leiter, Marker mit bekannten Fragmentlängen) bestimmen
 
 > **Merke:** Gelelektrophorese trennt DNA-Fragmente nach Größe: kleine Fragmente wandern weit (schnell), große bleiben oben (langsam). DNA wandert zur Anode (+), weil sie negativ geladen ist.
-
-{{DIAGRAM:transcription-translation}}
 
 ---
 
@@ -3165,9 +3151,9 @@ Die **Pränataldiagnostik** umfasst alle Untersuchungen am ungeborenen Kind **w�
 
 Invasive Verfahren ermöglichen eine **Karyotypisierung** (Chromosomenanalyse), **FISH** (Fluoreszenz-in-situ-Hybridisierung für schnelle Trisomie-Detektion) und **molekulargenetische** Tests (z. B. auf Mukoviszidose-Mutationen).
 
-> **Merke:** Nicht-invasiv = kein Fehlgeburtsrisiko (Ultraschall, NIPT, Ersttrimester-Screening). Invasiv = direktes Zellmaterial, aber Fehlgeburtsrisiko (Chorionzottenbiopsie ~0,5–1 %, Amniozentese ~0,3–0,5 %). NIPT hat die höchste Detektionsrate für Trisomien unter den nicht-invasiven Verfahren.
-
 {{DIAGRAM:chromosomal-mutations}}
+
+> **Merke:** Nicht-invasiv = kein Fehlgeburtsrisiko (Ultraschall, NIPT, Ersttrimester-Screening). Invasiv = direktes Zellmaterial, aber Fehlgeburtsrisiko (Chorionzottenbiopsie ~0,5–1 %, Amniozentese ~0,3–0,5 %). NIPT hat die höchste Detektionsrate für Trisomien unter den nicht-invasiven Verfahren.
 
 ---
 

@@ -67,8 +67,6 @@ Epithelien kleiden jede Körperoberfläche und jedes Hohlorgan aus — trotz ihr
 
 ---
 
-{{DIAGRAM:stem-cells}}
-
 ## Drüsenepithelien und Sekretionsarten
 
 
@@ -274,8 +272,6 @@ Sehne, Knorpel und Knochen sehen völlig verschieden aus, bestehen aber alle aus
 
 > **Merke:** OsteoBlast = Baut. OsteoKlast = Klaut (resorbiert). RANKL aktiviert Osteoklasten. Östrogen schützt Knochen.
 
-{{DIAGRAM:stem-cells}}
-
 ---
 
 ## Knorpeltypen im Vergleich
@@ -442,9 +438,7 @@ Sehne, Knorpel und Knochen sehen völlig verschieden aus, bestehen aber alle aus
         "Myosin",
         "Querstreifung",
       ],
-      content: `{{DIAGRAM:sarkomer}}
-
-## Grundprinzip: Die drei Muskeltypen
+      content: `## Grundprinzip: Die drei Muskeltypen
 
 **Um die folgenden Abschnitte einzuordnen:** Zuerst der Überblick — welche Muskeltypen gibt es und wie unterscheiden sie sich?
 
@@ -466,6 +460,7 @@ Sehne, Knorpel und Knochen sehen völlig verschieden aus, bestehen aber alle aus
 
 ## Sarkomerstruktur: Grundprinzip der Querstreifung
 
+{{DIAGRAM:sarkomer}}
 
 **Aufbau (von Z zu Z):**
 - **I-Bande** (hell): Nur Aktin-Dünnfilamente -> **wird bei Kontraktion kürzer**
@@ -675,8 +670,6 @@ Am präsynaptischen Endknöpfchen werden Neurotransmitter (z. B. Glutamat, GABA,
 ---
 
 ## Myelinisierung und saltatorische Erregungsleitung
-
-{{DIAGRAM:synapse}}
 
 Die **Myelinscheide** ist eine mehrlagige Lipid-Protein-Hülle, die um Axone gewickelt ist und als elektrische Isolierung dient. Zwischen den Myelin-Internodien liegen die **Ranvier-Schnürringe** — kurze unmyelinisierte Stellen mit hoher Na⁺-Kanaldichte.
 
@@ -934,6 +927,8 @@ Beide Systeme innervieren dieselben Organe, wirken aber antagonistisch. Die Umsc
 
 ## Synapse — Signalübertragung zwischen Neuronen
 
+{{DIAGRAM:synapse}}
+
 An der chemischen Synapse wird das elektrische Signal in ein chemisches umgewandelt:
 
 1. **Aktionspotential** erreicht das Axonterminal → spannungsgesteuerte **Ca²⁺-Kanäle** öffnen
@@ -976,6 +971,8 @@ An der chemischen Synapse wird das elektrische Signal in ein chemisches umgewand
 
 ## Reflexbogen — Die 5 Glieder
 
+{{DIAGRAM:reflexbogen}}
+
 Reflexe sind unwillkürliche, stereotype Antworten auf einen Reiz. Jeder Reflexbogen besteht aus fünf Gliedern:
 
 1. **Rezeptor** — nimmt den Reiz auf (z. B. Muskelspindel, Nozizeptor)
@@ -983,8 +980,6 @@ Reflexe sind unwillkürliche, stereotype Antworten auf einen Reiz. Jeder Reflexb
 3. **Reflexzentrum** — Verarbeitung im Rückenmark (oder Hirnstamm)
 4. **Efferente Nervenfaser** — leitet zum Effektor (motorisch)
 5. **Effektor** — führt die Antwort aus (Muskel, Drüse)
-
-{{DIAGRAM:reflexbogen}}
 
 **Eigenreflex (monosynaptisch):** Rezeptor und Effektor im selben Organ. **Beispiel Patellarsehnenreflex:** Muskelspindel (Dehnung) → Ia-Faser (~120 m/s) → **direkt** auf α-Motoneuron (1 Synapse, keine Interneurone) → M. quadriceps kontrahiert. Gleichzeitig: reziproke Hemmung des Antagonisten über Ia-Interneuron.
 
@@ -1143,9 +1138,9 @@ Jedes Rückenmarkssegment versorgt über seinen Spinalnerv ein bestimmtes Hautar
         "Epidermis",
         "Dermis",
       ],
-      content: `{{DIAGRAM:sinnesorgane}}
+      content: `## Grundprinzip: Transduktion — Reize als elektrische Signale
 
-## Grundprinzip: Transduktion — Reize als elektrische Signale
+{{DIAGRAM:sinnesorgane}}
 
 Ob Licht, Schall oder Geruch — jeder Reiz muss zunächst in ein elektrisches Signal umgewandelt werden. Dieser Vorgang heißt **Transduktion**. Der Mechanismus dahinter unterscheidet sich je nach Sinn:
 
@@ -1807,6 +1802,8 @@ Das Elektrokardiogramm zeichnet die elektrische Aktivität des Herzens an der K�
 
 ## Großer und kleiner Kreislauf
 
+{{DIAGRAM:blutkreislauf}}
+
 Die beiden Kreisläufe sind **in Serie geschaltet** — das Blut muss zwingend durch beide:
 
 **Kleiner Kreislauf (Lungenkreislauf):**
@@ -1829,8 +1826,6 @@ LV → Aorta → Arterien → Arteriolen → Kapillaren (Stoffaustausch) → Ven
 Die **Windkesselfunktion** der Aorta ist zentral: In der Systole dehnt sich die elastische Aortenwand → speichert kinetische Energie. In der Diastole zieht sie sich zurück → drückt Blut kontinuierlich in die Peripherie. Ergebnis: Der pulsatile Herzauswurf wird in einen gleichmäßigeren peripheren Fluss umgewandelt.
 
 > **Merke:** Kleiner Kreislauf = RV → Lunge → LA (Gasaustausch, niedriger Druck ~25 mmHg). Großer Kreislauf = LV → Körper → RA (Stoffaustausch, hoher Druck ~120 mmHg). In Serie, nicht parallel!
-
-{{DIAGRAM:blutkreislauf}}
 
 ---
 
@@ -2035,6 +2030,8 @@ Normaler Blutdruck: **120/80 mmHg** (systolisch/diastolisch). Hypertonie: ≥140
 
 ## Blutbestandteile — Plasma und zelluläre Elemente
 
+{{DIAGRAM:blutbestandteile}}
+
 Ein Erwachsener besitzt etwa **4–6 Liter Blut** (ca. 7–8 % des Körpergewichts). Nach Zentrifugation trennt sich das Blut in zwei Phasen:
 
 **Blutplasma (~55 %)** ist die zellfreie, gelbliche Flüssigkeit. Es besteht zu ~90 % aus Wasser und enthält gelöste Proteine, Elektrolyte, Glukose, Hormone und Stoffwechselprodukte. Die wichtigsten **Plasmaproteine** sind:
@@ -2047,8 +2044,6 @@ Ein Erwachsener besitzt etwa **4–6 Liter Blut** (ca. 7–8 % des Körpergewich
 **Plasma vs. Serum:** Plasma enthält Fibrinogen (Blut + Antikoagulans → Zentrifugation). Serum ist Plasma *ohne* Fibrinogen (Blut gerinnen lassen → Überstand = Serum).
 
 > **Merke:** Plasma = mit Fibrinogen, Serum = ohne Fibrinogen. Hämatokrit misst nur den Erythrozyten-Anteil (nicht alle Zellen). Albumin → onkotischer Druck, Globuline → Abwehr + Transport.
-
-{{DIAGRAM:blutbestandteile}}
 
 ---
 
@@ -2655,14 +2650,15 @@ Der Lymphknoten filtert Lymphe und initiiert Immunantworten. Seine zonale Archit
 **Splenektomie-Risiko:** Milz filtert **bekapselte Bakterien** (Pneumokokken, Meningokokken, H. influenzae) besonders effektiv. Ohne Milz → **OPSI** (Overwhelming Post-Splenectomy Infection): perakute Sepsis mit hoher Letalität. Prophylaxe: Impfung + Penicillin-Prophylaxe.
 
 **Thymus** (oberes Mediastinum): Reifungsort der T-Zellen aus dem Knochenmark. Größte Aktivität vor der Pubertät, dann Involution:
+
+{{DIAGRAM:immune-response}}
+
 1. **Positive Selektion** (Cortex): T-Zellen, die MHC-I oder MHC-II erkennen, überleben (~3–5 % aller Thymozyten)
 2. **Negative Selektion** (Mark): T-Zellen, die Selbst-Antigene zu stark erkennen → Apoptose (zentrale Toleranz → verhindert Autoimmunität)
 
 **B-Zell-Reifung** erfolgt im Knochenmark: Stammzelle → Pro-B → Prä-B → naive B-Zelle. Zentraltoleranzmechanismus: B-Zellen, deren BCR körpereigene Antigene zu stark binden, werden durch klonale Deletion (Apoptose) oder Rezeptorediting eliminiert, um Autoimmunität zu verhindern.
 
 > **Merke:** **Milz**: rote Pulpa (Ery-Abbau + Thrombozytenspeicher) vs. weiße Pulpa (Immunabwehr). **Splenektomie** = OPSI-Risiko → Impfung + Penicillin! **Thymus**: positive Selektion (MHC-Erkennung) + negative Selektion (Selbsttoleranz) → nur ~5 % der Thymozyten überleben.
-
-{{DIAGRAM:immune-response}}
 
 ---
 
@@ -2784,9 +2780,9 @@ Der Lymphknoten filtert Lymphe und initiiert Immunantworten. Seine zonale Archit
         "Zwerchfell",
         "Bronchien",
       ],
-      content: `{{DIAGRAM:atmungssystem}}
+      content: `## Der Bronchialbaum — von der Trachea zur Alveole
 
-## Der Bronchialbaum — von der Trachea zur Alveole
+{{DIAGRAM:atmungssystem}}
 
 Die Atemluft durchläuft auf ihrem Weg zu den Alveolen eine zunehmend feinere Verzweigung. Die **Trachea** (Luftröhre, ~10–12 cm lang) wird von **16–20 hufeisenförmigen Knorpelspangen** (C-Knorpel, dorsal offen → Paries membranaceus mit glatter Muskulatur) offengehalten. Sie teilt sich an der **Bifurcatio tracheae** (Höhe Th4/5) in die beiden **Hauptbronchien**:
 
@@ -3006,9 +3002,9 @@ Das **Atemzentrum** liegt in der **Medulla oblongata** und im **Pons**. Es gener
         "Peristaltik",
         "Resorption",
       ],
-      content: `{{DIAGRAM:verdauungssystem}}
+      content: `## Verdauungstrakt Organ für Organ — Mund bis Kolon
 
-## Verdauungstrakt Organ für Organ — Mund bis Kolon
+{{DIAGRAM:verdauungssystem}}
 
 Die Verdauung beginnt bereits in der **Mundhöhle**: Mechanische Zerkleinerung (Kauen) und Benetzung mit Speichel (~1–1,5 L/Tag). Die **Speichel-Amylase** (Ptyalin) spaltet Stärke zu Maltose und Dextrinen — die Kohlenhydratverdauung beginnt also im Mund. Der Bolus gelangt über den **Ösophagus** (Speiseröhre, ~25 cm) durch **Peristaltik** (koordinierte Kontraktion: Längsmuskulatur → Ringmuskulatur, gesteuert vom Plexus myentericus = Auerbach) in den Magen. Der untere Ösophagussphinkter (UÖS) verhindert Reflux.
 
@@ -3742,6 +3738,8 @@ Ein Mann produziert täglich rund 200 Millionen Spermien, eine Frau reift pro Zy
 | **Dauer** | ~74 Tage | Monate bis Jahrzehnte |
 | **Ort** | Tubuli seminiferi | Ovar |
 
+{{DIAGRAM:meiosis}}
+
 **Spermatogenese** (Tubuli seminiferi):
 - Spermatogonium (2n) → Mitose → Primäre Spermatozyte (2n) → **Meiose I** → 2× Sekundäre Spermatozyten (n) → **Meiose II** → 4× Spermatiden (n) → Spermiogenese → **4 reife Spermien**
 - **Sertoli-Zellen** (in Tubuli, FSH-abhängig): Ernährung, Blut-Hoden-Schranke, Inhibin (→ FSH ↓), ABP (hält Testosteron-Konzentration lokal hoch)
@@ -3758,8 +3756,6 @@ Ein Mann produziert täglich rund 200 Millionen Spermien, eine Frau reift pro Zy
 **Befruchtung** findet typischerweise im ampullären Teil des Eileiters statt. Die **Akrosom-Reaktion**: Das Akrosom (Vesikel am Spermienkopf) schüttet Hydrolasen aus, die die Zona pellucida (Glykoproteinmatrix der Eizelle) durchdringen. Nach Spermien-Eizell-Fusion löst die **Kortikalreaktion** aus (Cortical Granules verschmelzen mit Oolemma → Zona-Verhärtung → **Polyspermie-Block**). Gleichzeitig wird die Meiose II abgeschlossen und der zweite Polkörper abgeschnürt.
 
 ---
-
-{{DIAGRAM:meiosis}}
 
 ## Menstruationszyklus und Hormonregulation
 

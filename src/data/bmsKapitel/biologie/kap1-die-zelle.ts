@@ -142,11 +142,18 @@ Dieses Phänomen nennt sich **Emergenz** (von lat. *emergere* = hervorkommen): D
       ],
       klinischerBezug:
         "Diabetes mellitus Typ 2 ist die prototypische Homöostase-Störung: Der Blutzuckerregelkreis versagt durch Insulinresistenz und relative Insulininsuffizienz. Die Folge ist chronische Hyperglykämie mit Glykation von Proteinen (HbA1c als Laborparameter), Endothelschäden und Mikroangiopathie. Klinische Konsequenzen: diabetische Retinopathie (häufigste Erblindungsursache im Erwachsenenalter), Nephropathie (häufigste Ursache terminaler Niereninsuffizienz), Polyneuropathie und kardiovaskuläre Erkrankungen. Systembiologisches Denken hat hier zur Entwicklung personalisierter Therapieansätze (CGM, Insulinpumpen, SGLT2-Inhibitoren mit kardioprotektiver Wirkung) geführt.",
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question: "Warum gelten Viren nicht als Lebewesen im klassischen Sinne?",
-        answer:
-          "Viren zeigen zwar Fortpflanzung und Evolution, besitzen aber keinen eigenständigen Stoffwechsel und keine Zellstruktur. Sie sind auf den Stoffwechsel einer Wirtszelle angewiesen, um sich zu replizieren. Da sie nicht alle Kennzeichen des Lebens erfüllen – insbesondere keinen autonomen Metabolismus – werden sie als Grenzfall zwischen belebter und unbelebter Welt betrachtet.",
+        text: "Viren gelten nicht als vollständige Lebewesen. Welche Eigenschaft fehlt ihnen im Vergleich zu echten Lebewesen?",
+        options: [
+          { id: "a", text: "Sie besitzen keine Nukleinsäuren (DNA oder RNA)." },
+          { id: "b", text: "Sie sind nicht zur Fortpflanzung fähig." },
+          { id: "c", text: "Sie haben keinen eigenständigen Stoffwechsel und keine Zellstruktur." },
+          { id: "d", text: "Sie unterliegen keiner evolutionären Veränderung." },
+          { id: "e", text: "Sie können nicht in lebende Wirtszellen eindringen." },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "Viren fehlt der autonome Metabolismus sowie eine Zellstruktur – beides zentrale Kennzeichen des Lebens. Sie besitzen zwar Nukleinsäuren (A falsch) und sind sehr wohl zur Fortpflanzung fähig (B falsch, allerdings nur mit Wirtszelle). Viren evolvieren sogar besonders schnell (D falsch). Das Eindringen in Wirtszellen ist gerade der Mechanismus ihrer Vermehrung (E falsch).",
       },
       selfTest: [
         {
@@ -251,9 +258,9 @@ Dieses Phänomen nennt sich **Emergenz** (von lat. *emergere* = hervorkommen): D
     {
       id: "bio-1-02",
       title: "Prokaryoten vs. Eukaryoten",
-      imageUrl: "/images/bms/bio-zellmembran-phospholipid.jpg",
+      imageUrl: "/images/bms/bio-endosymbiose.svg",
       imageCaption:
-        "Abb.: Phospholipid-Doppelschicht — Grundbaustein aller Zellmembranen (OpenStax, CC BY 4.0)",
+        "Abb.: Endosymbiontentheorie — Ursprung von Mitochondrien und Chloroplasten aus Prokaryoten (CC BY 4.0)",
       stichworte: [
         "Prokaryoten",
         "Eukaryoten",
@@ -383,12 +390,33 @@ Viele Archäen sind **Extremophile**: Thermophile (bis 121°C), Halophile (gesä
       ],
       klinischerBezug:
         "Penicillin hemmt die Synthese der bakteriellen Peptidoglykan-Zellwand (PBP-Hemmung) – menschliche Zellen besitzen keine solche Zellwand und sind daher unempfindlich. Bei Gram-negativen Bakterien muss Penicillin die äußere Membran überwinden (schlechterer Zugang → Resistenzproblem). MRSA (Methicillin-resistenter Staphylococcus aureus) hat ein verändertes PBP2a, an das Beta-Laktame nicht binden. Therapie: Vancomycin, Linezolid, Daptomycin. LPS gram-negativer Bakterien aktiviert TLR4 auf Immunzellen → Cytokinausschüttung → septischer Schock. Therapie: antibiotische Eradikation, hämodynamische Stabilisierung (Noradrenalin), Organschutz.",
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Ein Patient erhält Chloramphenicol. Warum ist dieses Antibiotikum für Prokaryoten toxisch, nicht aber für menschliche Zellen?",
-        answer:
-          "Chloramphenicol bindet spezifisch an die 50S-Untereinheit des prokaryotischen 70S-Ribosoms und blockiert die Peptidyltransferase-Reaktion. Menschliche 80S-Ribosomen (Untereinheiten: 40S + 60S) werden nicht gebunden. Da menschliche Mitochondrien jedoch 70S-Ribosomen besitzen, kann Chloramphenicol in hohen Dosen mitochondriale Toxizität verursachen – besonders in hämatopoetischen Vorläuferzellen (aplastische Anämie als seltene, aber schwere Nebenwirkung).",
+        text: "Chloramphenicol hemmt die Proteinsynthese von Bakterien, nicht aber von menschlichen Körperzellen. Womit ist diese Selektivität zu erklären?",
+        options: [
+          {
+            id: "a",
+            text: "Chloramphenicol kann die Plasmamembran menschlicher Zellen nicht durchdringen.",
+          },
+          {
+            id: "b",
+            text: "Chloramphenicol bindet spezifisch an die 50S-Untereinheit des prokaryotischen 70S-Ribosoms, nicht an das eukaryotische 80S-Ribosom.",
+          },
+          {
+            id: "c",
+            text: "Menschliche Zellen besitzen Enzyme, die Chloramphenicol sofort inaktivieren.",
+          },
+          {
+            id: "d",
+            text: "Bakterien haben keine Mitochondrien, weshalb das Antibiotikum nur auf sie wirkt.",
+          },
+          {
+            id: "e",
+            text: "Chloramphenicol hemmt die Peptidoglykan-Zellwandsynthese, die nur bei Prokaryoten vorkommt.",
+          },
+        ],
+        correctOptionId: "b",
+        explanation:
+          "Chloramphenicol bindet an die 50S-Untereinheit des bakteriellen 70S-Ribosoms und blockiert die Peptidyltransferase-Reaktion. Das eukaryotische 80S-Ribosom (Untereinheiten 40S + 60S) wird nicht gebunden – daher sind menschliche Körperzellen unempfindlich. Achtung: Mitochondrien besitzen ebenfalls 70S-Ribosomen, weshalb hohe Dosen mitochondriale Toxizität (aplastische Anämie) verursachen können. A und C beschreiben nicht den tatsächlichen Mechanismus. D ist biologisch falsch (Mitochondrien-Fehlen erklärt die Selektivität nicht). E beschreibt den Mechanismus von Beta-Laktam-Antibiotika.",
       },
       selfTest: [
         {
@@ -1285,7 +1313,7 @@ Das menschliche Genom umfasst 3,2 Milliarden Basenpaare — ausgestreckt ca. **2
 - **Telomer:** die Endregionen der Chromosomen (repetitive DNA); **schützen die DNA vor Abbau** und verkürzen sich bei jeder Zellteilung (Alterung); Telomerase verlängert sie (Stammzellen, Keimzellen).
 - **Histone:** basische Proteine (reich an Lysin, Arginin), um die die DNA gewickelt ist (Nukleosom); Chromosomen **enthalten basische Proteine** (Histone).
 
-**Wichtig — typische Falschaussage:** „Chromosomen erlauben die freie Kombination der Gene” ist **falsch**. Die **freie Kombination der Gene** erfolgt durch **Crossing-over** und zufällige Verteilung der homologen Chromosomen in der **Meiose**, nicht durch die Chromosomenstruktur selbst. Chromosomen sind die Verpackungsform; die Neukombination ist ein Vorgang der Meiose.
+Die Neukombination der Gene erfolgt durch **Crossing-over** und die zufällige Verteilung homologer Chromosomen während der **Meiose** — nicht durch die Chromosomenstruktur selbst. Chromosomen sind die Verpackungsform der DNA; die genetische Rekombination ist ein aktiver Vorgang der Keimzellbildung.
 
 {{DIAGRAM:dna-helix}}
 
@@ -1363,11 +1391,18 @@ Der **Nucleolus** ist der Ort der Ribosomenfabrikation — keine Membranstruktur
       ],
       klinischerBezug:
         "Progeria (Hutchinson-Gilford-Syndrom): LMNA-Mutation c.1824C>T erzeugt Progerin, das die Kernlamina destabilisiert. Klinisch: vorzeitige Arteriosklerose, Lipodystrophie, Minderwuchs, Alopezie, Tod mit ~13 Jahren. Lonafarnib (Farnesyltransferase-Hemmer) verhindert die Farnesylierung von Progerin und verlängert das Leben um ~2,5 Jahre. HIV nutzt Importin-alpha/beta für den Kerntransport des Preintegrationskomplexes – LEDGF/p75 als Kofaktor der Integration. HIV-Integrase-Hemmer (Dolutegravir) = Standardtherapie. Prominente Nucleoli in Tumorbiopsien = Hinweis auf hohe Proliferationsaktivität, wichtiges histopathologisches Kriterium bei Prostata-, Nierenzell- und Lymphomdiagnose.",
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question: "Warum führt ein defekter Kernporenkomplex zur Katastrophe für die Zelle?",
-        answer:
-          "Der NPC reguliert alle Transportprozesse zwischen Kern und Zytoplasma. Ein defekter NPC würde den Import von Transkriptionsfaktoren, Histonen und DNA-Reparaturproteinen in den Kern blockieren und gleichzeitig den Export von mRNA und Ribosomenuntereinheiten verhindern. Konsequenz: keine Genregulation, keine mRNA-Ausleitung, keine Proteinsynthese, keine DNA-Reparatur. Viren (HIV, HSV) nutzen NPCs aktiv, Arzneistoff-Targets sind Importine.",
+        text: "Welcher der folgenden Stoffe kann den Kernporenkomplex (NPC) durch passive Diffusion passieren, ohne einen aktiven Transportmechanismus zu benötigen?",
+        options: [
+          { id: "a", text: "Ein Protein mit 60 kDa und einem Kernlokalisierungssignal (NLS)." },
+          { id: "b", text: "Eine fertig prozessierte mRNA (ca. 1000 Nukleotide)." },
+          { id: "c", text: "Ein kleines Ionen wie Na⁺ oder ein kleines Molekül unter ~40 kDa." },
+          { id: "d", text: "Eine große ribosomale Untereinheit (60S)." },
+          { id: "e", text: "Histon-Oktamere für die Chromatin-Assemblierung." },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "Kleine Moleküle und Ionen unter ca. 40 kDa können den NPC durch passive Diffusion passieren. Größere Moleküle – darunter Proteine mit NLS (A), mRNAs (B), ribosomale Untereinheiten (D) und Histone (E) – benötigen den aktiven, energieabhängigen Ran-GTPase-Importin/Exportin-Mechanismus. Der NPC ist selektiv: nicht alles, was hineinpasst, darf auch unkontrolliert hindurch.",
       },
       selfTest: [
         {
