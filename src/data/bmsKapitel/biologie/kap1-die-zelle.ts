@@ -108,8 +108,6 @@ Viren zeigen nur einige Kennzeichen des Lebens, andere fehlen vollständig:
 
 Das Virus-Beispiel zeigt: Die Kennzeichen des Lebens sind kein beliebiges Beiwerk — sie definieren ein vollständiges System. Dieses System besitzt eine Eigenschaft, die seine Einzelteile nicht haben: **Emergenz**.
 
-{{DIAGRAM:plant-vs-animal-cell}}
-
 Leben ist hierarchisch aufgebaut — auf jeder Ebene entstehen neue Eigenschaften, die die Ebene darunter nicht hat:
 
 **Atom → Molekül → Organell → Zelle → Gewebe → Organ → Organsystem → Organismus**
@@ -539,6 +537,8 @@ Die Bausteine heißen **Phospholipide** — Moleküle mit einem wasserfreundlich
 
 In wässriger Umgebung ordnen sich Phospholipide spontan an: Köpfe zum Wasser, Schwänze nach innen. So entsteht eine **Doppelschicht (Bilayer)**. Das ist energetisch günstig (hydrophober Effekt) und erklärt, warum sich Membranen von selbst bilden.
 
+![Phospholipid-Doppelschicht der Zellmembran mit hydrophilem Kopf und hydrophoben Schwänzen](/images/bms/bio-zellmembran-phospholipid.jpg)
+
 Weil das Innere der Doppelschicht aus Fettschwänzen besteht, ist die Membran **semipermeabel** (latein.: halbdurchlässig): Sie ist für manche Stoffe durchlässig, für andere nicht. Übersicht:
 
 | Durchlässigkeit | Stoffe | Mechanismus |
@@ -820,6 +820,8 @@ Polare oder geladene Moleküle nutzen Proteine — weiterhin **entlang** des Gra
 
 > **Merke:** Passiv = immer entlang des Gradienten, kein ATP. Ionenkanäle sind schnell, aber nicht sättigbar; Carrier sind langsamer und sättigbar.
 
+![Einfache und erleichterte Diffusion im Vergleich — Konzentrationsgradient treibt den Transport](/images/bms/bio-diffusion.jpg)
+
 {{IMAGE}}
 
 ---
@@ -838,6 +840,8 @@ Polare oder geladene Moleküle nutzen Proteine — weiterhin **entlang** des Gra
 
 **Hämolyse** = Zerfall der Zellmembran (z. B. Erythrozyt platzt); **Krenation** = Schrumpfung der Zelle durch Wasseraustritt. Isotone NaCl-Lösung: **0,9 %** (~290 mosmol/kg) = physiologische Kochsalzlösung (Infusion).
 
+![Osmose — Wasserbewegung durch semipermeable Membran bei unterschiedlichen Konzentrationen](/images/bms/bio-osmose.jpg)
+
 > **Merke:** Osmose = Wassertransport zur höheren Osmolalität. Hypoton → Hämolyse; hyperton → Krenation.
 
 ---
@@ -852,6 +856,8 @@ Substanzen werden **gegen** ihren Gradienten gepumpt. Das zentrale Beispiel: die
 - Ergebnis: hohe Na⁺-Konzentration **außen**, hohe K⁺-Konzentration **innen**
 - Aufbau des **Ruhemembranpotenzials** (~−70 mV, innen negativ gegenüber außen)
 - Niedrige intrazelluläre Na⁺-Konzentration = Grundlage für sekundär aktiven Transport und Aktionspotenzial
+
+![Natrium-Kalium-ATPase — 3 Na⁺ werden gegen 2 K⁺ ausgetauscht unter ATP-Verbrauch](/images/bms/bio-natrium-kalium-pumpe.jpg)
 
 {{DIAGRAM:membrane-transport}}
 
@@ -1032,6 +1038,9 @@ Eine eukaryotische Zelle funktioniert wie eine Fabrik mit spezialisierten Abteil
 Proteine für Membranen, Lysosomen oder den Export (Hormone, Antikörper) durchlaufen eine Fertigungsstraße aus drei Stationen:
 
 **Raues ER (rER)** — Herstellung und Qualitätskontrolle:
+
+![Endoplasmatisches Retikulum — raues ER mit Ribosomen für Proteinbiosynthese](/images/bms/bio-er.jpg)
+
 - Ribosomen auf der ER-Membran → **co-translationale Insertion** (Protein wird während der Synthese ins ER geschleust)
 - **Signalpeptid** am Proteinanfang dirigiert das Ribosom zum ER
 - **N-Glykosylierung**: Zuckerketten an Asparagin-Reste → dient als Qualitätsmerkmal
@@ -1316,6 +1325,8 @@ Das menschliche Genom umfasst 3,2 Milliarden Basenpaare — ausgestreckt ca. **2
 Die Neukombination der Gene erfolgt durch **Crossing-over** und die zufällige Verteilung homologer Chromosomen während der **Meiose** — nicht durch die Chromosomenstruktur selbst. Chromosomen sind die Verpackungsform der DNA; die genetische Rekombination ist ein aktiver Vorgang der Keimzellbildung.
 
 {{DIAGRAM:dna-helix}}
+
+![DNA-Doppelhelix aus Nukleotiden mit Phosphat-Zucker-Rückgrat und Basenpaaren](/images/bms/bio-dna-nukleotide.jpg)
 
 **Hierarchische Verpackung:**
 1. **Nukleosom** (~10 nm): 147 bp DNA um Histon-Oktamer (je 2× H2A, H2B, H3, H4) gewickelt — wie “Perlen auf einer Schnur”
