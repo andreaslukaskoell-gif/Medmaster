@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" font-family="Arial, sans-serif">
+  <rect width="800" height="600" fill="#f8f9fa"/>
+
+  <!-- Title -->
+  <text x="400" y="38" text-anchor="middle" font-size="20" font-weight="bold" fill="#2c3e50">Populationswachstum</text>
+
+  <!-- Plot area boundaries -->
+  <!-- X: 90 to 700, Y: 80 to 470 -->
+
+  <!-- K (Kapazitätsgrenze) dashed line at Y=130 -->
+  <line x1="90" y1="130" x2="700" y2="130" stroke="#555" stroke-width="1.5" stroke-dasharray="10,5"/>
+  <text x="710" y="135" font-size="13" font-weight="bold" fill="#555">K</text>
+  <text x="710" y="152" font-size="11" fill="#555">(Kapazitäts-</text>
+  <text x="710" y="166" font-size="11" fill="#555">grenze)</text>
+
+  <!-- Y axis -->
+  <line x1="90" y1="80" x2="90" y2="475" stroke="#555" stroke-width="2"/>
+  <!-- X axis -->
+  <line x1="90" y1="470" x2="705" y2="470" stroke="#555" stroke-width="2"/>
+
+  <!-- Axis arrow heads -->
+  <polygon points="85,80 90,68 95,80" fill="#555"/>
+  <polygon points="695,465 707,470 695,475" fill="#555"/>
+
+  <!-- Axis labels -->
+  <text x="400" y="510" text-anchor="middle" font-size="14" fill="#555">Zeit</text>
+  <text x="28" y="275" text-anchor="middle" font-size="14" fill="#555" transform="rotate(-90,28,275)">Populationsgröße (N)</text>
+
+  <!-- Y axis ticks and labels -->
+  <line x1="85" y1="470" x2="90" y2="470" stroke="#555" stroke-width="1.5"/>
+  <text x="78" y="474" text-anchor="end" font-size="11" fill="#555">0</text>
+  <line x1="85" y1="130" x2="90" y2="130" stroke="#555" stroke-width="1.5"/>
+  <text x="78" y="134" text-anchor="end" font-size="11" fill="#555">K</text>
+
+  <!-- Exponential (J-curve) in blue -->
+  <!-- Points: start at (90,465), curve steeply upward -->
+  <path d="M 90,465 C 200,460 300,430 380,380 C 440,340 490,270 540,180 C 570,130 590,100 620,75"
+        fill="none" stroke="#1976d2" stroke-width="3"/>
+
+  <!-- Logistic (S-curve) in green -->
+  <!-- Starts slow, accelerates in middle, flattens near K -->
+  <path d="M 90,465 C 150,463 200,458 250,445 C 310,428 350,390 390,340 C 430,285 460,210 490,170 C 520,145 560,133 700,130"
+        fill="none" stroke="#388e3c" stroke-width="3"/>
+
+  <!-- Labels for curves -->
+  <!-- Exponential label -->
+  <rect x="570" y="60" width="120" height="36" rx="6" fill="#e3f2fd" stroke="#1976d2" stroke-width="1.5"/>
+  <text x="630" y="78" text-anchor="middle" font-size="12" font-weight="bold" fill="#1976d2">Exponentielles</text>
+  <text x="630" y="92" text-anchor="middle" font-size="12" font-weight="bold" fill="#1976d2">Wachstum (J)</text>
+
+  <!-- Logistic label -->
+  <rect x="430" y="192" width="120" height="36" rx="6" fill="#e8f5e9" stroke="#388e3c" stroke-width="1.5"/>
+  <text x="490" y="210" text-anchor="middle" font-size="12" font-weight="bold" fill="#388e3c">Logistisches</text>
+  <text x="490" y="224" text-anchor="middle" font-size="12" font-weight="bold" fill="#388e3c">Wachstum (S)</text>
+
+  <!-- Inflection point marker on S-curve (~300,300) -->
+  <circle cx="390" cy="340" r="5" fill="#388e3c"/>
+  <line x1="390" y1="340" x2="355" y2="305" stroke="#388e3c" stroke-width="1.5"/>
+  <text x="285" y="300" font-size="11" fill="#388e3c">Wendepunkt</text>
+  <text x="285" y="315" font-size="11" fill="#388e3c">(N = K/2)</text>
+
+  <!-- Explanation box bottom left -->
+  <rect x="100" y="310" width="230" height="110" rx="8" fill="#fff" stroke="#bdc3c7" stroke-width="1.5"/>
+  <text x="215" y="333" text-anchor="middle" font-size="13" font-weight="bold" fill="#2c3e50">Merke</text>
+  <text x="115" y="352" font-size="11" fill="#555">Exponentiell: unbegrenzte</text>
+  <text x="115" y="367" font-size="11" fill="#555">Ressourcen angenommen</text>
+  <text x="115" y="385" font-size="11" fill="#555">Logistisch: Kapazitätsgrenze K</text>
+  <text x="115" y="400" font-size="11" fill="#555">wirkt durch Konkurrenz,</text>
+  <text x="115" y="415" font-size="11" fill="#555">Nahrungsknappheit etc.</text>
+</svg>

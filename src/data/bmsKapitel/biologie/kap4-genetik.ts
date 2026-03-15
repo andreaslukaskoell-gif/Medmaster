@@ -551,6 +551,7 @@ Der **Zellzyklus** umfasst die Vorbereitung der Zellteilung und die Teilung selb
     {
       id: "bio-4-04",
       title: "Mendelsche Regeln",
+      // TODO: add image (no suitable orphan image available — all Mendel/Punnett images already assigned)
       imageUrl: "",
       imageCaption: "",
       stichworte: [

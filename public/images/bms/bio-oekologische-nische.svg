@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" font-family="Arial, sans-serif">
+  <rect width="800" height="600" fill="#f8f9fa"/>
+
+  <!-- Title -->
+  <text x="400" y="38" text-anchor="middle" font-size="20" font-weight="bold" fill="#2c3e50">Fundamentalnische vs. Realnische</text>
+
+  <!-- Axes -->
+  <!-- X axis -->
+  <line x1="80" y1="460" x2="720" y2="460" stroke="#555" stroke-width="2"/>
+  <!-- Y axis -->
+  <line x1="80" y1="460" x2="80" y2="80" stroke="#555" stroke-width="2"/>
+
+  <!-- Axis labels -->
+  <text x="400" y="500" text-anchor="middle" font-size="14" fill="#555">Umweltfaktor (z.B. Temperatur)</text>
+  <text x="30" y="270" text-anchor="middle" font-size="14" fill="#555" transform="rotate(-90,30,270)">Fitness / Überlebensrate</text>
+
+  <!-- X axis arrow -->
+  <polygon points="720,455 730,460 720,465" fill="#555"/>
+  <!-- Y axis arrow -->
+  <polygon points="75,80 80,70 85,80" fill="#555"/>
+
+  <!-- Fundamentalnische bell curve (dashed, wider, taller) -->
+  <!-- Approximated with a cubic bezier path -->
+  <path d="M 120,460 C 160,460 200,100 400,80 C 600,100 640,460 680,460"
+        fill="rgba(66,165,245,0.15)" stroke="#1976d2" stroke-width="2.5" stroke-dasharray="10,5"/>
+
+  <!-- Realnische bell curve (solid, narrower, shifted slightly) -->
+  <path d="M 200,460 C 240,460 270,170 400,150 C 530,170 560,460 600,460"
+        fill="rgba(76,175,80,0.25)" stroke="#388e3c" stroke-width="2.5"/>
+
+  <!-- Labels for curves -->
+  <!-- Fundamentalnische label -->
+  <text x="130" y="215" font-size="14" font-weight="bold" fill="#1976d2">Fundamental-</text>
+  <text x="130" y="233" font-size="14" font-weight="bold" fill="#1976d2">nische</text>
+  <line x1="200" y1="225" x2="260" y2="200" stroke="#1976d2" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- Realnische label -->
+  <text x="580" y="240" font-size="14" font-weight="bold" fill="#388e3c">Real-</text>
+  <text x="580" y="258" font-size="14" font-weight="bold" fill="#388e3c">nische</text>
+  <line x1="578" y1="248" x2="530" y2="220" stroke="#388e3c" stroke-width="1.5"/>
+
+  <!-- Competition arrow -->
+  <defs>
+    <marker id="arrC" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0,0 10,3.5 0,7" fill="#e74c3c"/>
+    </marker>
+  </defs>
+  <line x1="310" y1="350" x2="358" y2="290" stroke="#e74c3c" stroke-width="2" marker-end="url(#arrC)"/>
+  <rect x="110" y="340" width="200" height="40" rx="6" fill="#fdecea" stroke="#e74c3c" stroke-width="1.5"/>
+  <text x="210" y="357" text-anchor="middle" font-size="12" font-weight="bold" fill="#c62828">Konkurrenz schränkt ein</text>
+  <text x="210" y="373" text-anchor="middle" font-size="11" fill="#c62828">(intersp. Konkurrenz)</text>
+
+  <!-- Explanation box -->
+  <rect x="490" y="340" width="260" height="90" rx="8" fill="#fff" stroke="#bdc3c7" stroke-width="1.5"/>
+  <text x="620" y="363" text-anchor="middle" font-size="13" font-weight="bold" fill="#2c3e50">Erklärung</text>
+  <text x="510" y="382" font-size="11" fill="#555">Fundamentalnische: gesamter potenziell</text>
+  <text x="510" y="397" font-size="11" fill="#555">nutzbarer Habitatraum einer Art</text>
+  <text x="510" y="414" font-size="11" fill="#555">Realnische: tatsächlich genutzter Raum</text>
+  <text x="510" y="429" font-size="11" fill="#555">(durch Konkurrenz eingeschränkt)</text>
+</svg>

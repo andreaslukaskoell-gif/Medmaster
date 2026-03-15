@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" font-family="Arial, sans-serif">
+  <rect width="800" height="600" fill="#f8f9fa"/>
+
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" font-size="20" font-weight="bold" fill="#2c3e50">Ökologische Pyramide — Trophieebenen</text>
+
+  <!-- Level 1: Produzenten (bottom, widest) -->
+  <polygon points="100,500 700,500 635,415 165,415" fill="#4caf50" stroke="#388e3c" stroke-width="1.5"/>
+  <text x="400" y="464" text-anchor="middle" font-size="17" font-weight="bold" fill="#fff">Produzenten</text>
+  <text x="400" y="485" text-anchor="middle" font-size="13" fill="#e8f5e9">(Pflanzen, Algen)</text>
+
+  <!-- Level 2: Primärkonsumenten -->
+  <polygon points="165,410 635,410 570,325 230,325" fill="#42a5f5" stroke="#1976d2" stroke-width="1.5"/>
+  <text x="400" y="375" text-anchor="middle" font-size="16" font-weight="bold" fill="#fff">Primärkonsumenten</text>
+  <text x="400" y="395" text-anchor="middle" font-size="13" fill="#e3f2fd">(Herbivore)</text>
+
+  <!-- Level 3: Sekundärkonsumenten -->
+  <polygon points="230,320 570,320 505,235 295,235" fill="#ffa726" stroke="#f57c00" stroke-width="1.5"/>
+  <text x="400" y="284" text-anchor="middle" font-size="16" font-weight="bold" fill="#fff">Sekundärkonsumenten</text>
+  <text x="400" y="305" text-anchor="middle" font-size="13" fill="#fff3e0">(Karnivore)</text>
+
+  <!-- Level 4: Tertiärkonsumenten (top, smallest) -->
+  <polygon points="295,230 505,230 440,145 360,145" fill="#ef5350" stroke="#c62828" stroke-width="1.5"/>
+  <text x="400" y="192" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">Tertiärkonsumenten</text>
+  <text x="400" y="213" text-anchor="middle" font-size="12" fill="#ffebee">(Spitzenprädatoren)</text>
+
+  <!-- Energy arrow on right -->
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+      <polygon points="0,8 4,0 8,8" fill="#7f8c8d"/>
+    </marker>
+  </defs>
+  <line x1="730" y1="490" x2="730" y2="155" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="750" y="350" text-anchor="middle" font-size="12" fill="#7f8c8d" transform="rotate(90,750,350)">Energie nimmt ab</text>
+
+  <!-- 10% rule box -->
+  <rect x="585" y="510" width="185" height="60" rx="8" fill="#fff" stroke="#bdc3c7" stroke-width="1.5"/>
+  <text x="677" y="533" text-anchor="middle" font-size="13" font-weight="bold" fill="#e74c3c">10%-Regel</text>
+  <text x="677" y="551" text-anchor="middle" font-size="11" fill="#555">Nur ~10% der Energie</text>
+  <text x="677" y="565" text-anchor="middle" font-size="11" fill="#555">gelangt zur nächsten Ebene</text>
+
+  <!-- Left axis label -->
+  <text x="28" y="330" text-anchor="middle" font-size="12" fill="#7f8c8d" transform="rotate(-90,28,330)">Biomasse / Energie</text>
+</svg>

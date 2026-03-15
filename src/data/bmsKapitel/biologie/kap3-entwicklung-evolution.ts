@@ -644,6 +644,7 @@ Der Gründereffekt erklärt die erhöhte Häufigkeit bestimmter genetischer Erkr
     {
       id: "bio-9-05",
       title: "Embryonalentwicklung — Von der Zygote zum Organismus",
+      // TODO: add image (no suitable orphan image available)
       stichworte: [
         "Befruchtung",
         "Furchung",
@@ -841,6 +842,9 @@ Die wichtigsten Teratogene: Folsäuremangel (Neuralrohrdefekte), Alkohol (fetale
     {
       id: "bio-9-03",
       title: "Phylogenetik — Stammbäume, Homologie und Analogie",
+      imageUrl: "/images/bms/bio-stammbaum-analyse.png",
+      imageCaption:
+        "Abb.: Stammbaumanalyse — Symbole und phylogenetische Verwandtschaft (Wikimedia Commons, CC0)",
       stichworte: [
         "Phylogenetik",
         "Stammbäume",
@@ -1324,6 +1328,7 @@ Pääbos Paläogenomik (Erbgutanalyse ausgestorbener Arten) verknüpft Hominiden
     {
       id: "bio-4-00",
       title: "Gametogenese — Spermatogenese und Oogenese",
+      // TODO: add image (no suitable orphan image available)
       stichworte: [
         "Gametogenese",
         "Spermatogenese",
@@ -1613,6 +1618,7 @@ Bevor ein Spermium die Eizelle durchdringen kann, muss es **kapazitiert** sein. 
     {
       id: "bio-4-01b",
       title: "Furchung, Morula, Blastozyste und Implantation",
+      // TODO: add image (no suitable orphan image available)
       stichworte: [
         "Furchung",
         "Morula",

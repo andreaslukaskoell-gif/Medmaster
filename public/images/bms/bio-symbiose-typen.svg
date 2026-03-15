@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" font-family="Arial, sans-serif">
+  <rect width="800" height="600" fill="#f8f9fa"/>
+
+  <!-- Title -->
+  <text x="400" y="38" text-anchor="middle" font-size="20" font-weight="bold" fill="#2c3e50">Formen der Symbiose</text>
+
+  <!-- Column headers -->
+  <text x="230" y="75" text-anchor="middle" font-size="14" font-weight="bold" fill="#555">Organismus A</text>
+  <text x="400" y="75" text-anchor="middle" font-size="14" font-weight="bold" fill="#555">Wechselwirkung</text>
+  <text x="570" y="75" text-anchor="middle" font-size="14" font-weight="bold" fill="#555">Organismus B</text>
+
+  <!-- ─── Row 1: Mutualismus (+/+) ─── -->
+  <rect x="30" y="88" width="740" height="140" rx="10" fill="#e8f5e9" stroke="#4caf50" stroke-width="2"/>
+  <!-- Row label -->
+  <text x="50" y="118" font-size="16" font-weight="bold" fill="#388e3c">Mutualismus</text>
+  <text x="50" y="138" font-size="13" fill="#555">Beide Arten profitieren</text>
+  <text x="50" y="157" font-size="13" fill="#555">Beispiel: Biene &amp; Blüte</text>
+
+  <!-- Org A circle (green) -->
+  <circle cx="230" cy="158" r="42" fill="#4caf50" stroke="#388e3c" stroke-width="2"/>
+  <text x="230" y="154" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">Art A</text>
+  <text x="230" y="172" text-anchor="middle" font-size="20" font-weight="bold" fill="#fff">+</text>
+
+  <!-- Interaction symbol -->
+  <text x="400" y="155" text-anchor="middle" font-size="28" font-weight="bold" fill="#388e3c">(+/+)</text>
+  <text x="400" y="178" text-anchor="middle" font-size="12" fill="#555">gegenseitiger Nutzen</text>
+
+  <!-- Org B circle (green) -->
+  <circle cx="570" cy="158" r="42" fill="#4caf50" stroke="#388e3c" stroke-width="2"/>
+  <text x="570" y="154" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">Art B</text>
+  <text x="570" y="172" text-anchor="middle" font-size="20" font-weight="bold" fill="#fff">+</text>
+
+  <!-- ─── Row 2: Kommensalismus (+/0) ─── -->
+  <rect x="30" y="243" width="740" height="140" rx="10" fill="#e3f2fd" stroke="#90a4ae" stroke-width="2"/>
+  <text x="50" y="273" font-size="16" font-weight="bold" fill="#455a64">Kommensalismus</text>
+  <text x="50" y="293" font-size="13" fill="#555">Eine Art profitiert, die andere nicht</text>
+  <text x="50" y="312" font-size="13" fill="#555">Beispiel: Schmetterlingsfisch &amp; Hai</text>
+
+  <!-- Org A circle (green) -->
+  <circle cx="230" cy="313" r="42" fill="#4caf50" stroke="#388e3c" stroke-width="2"/>
+  <text x="230" y="309" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">Art A</text>
+  <text x="230" y="327" text-anchor="middle" font-size="20" font-weight="bold" fill="#fff">+</text>
+
+  <!-- Interaction symbol -->
+  <text x="400" y="310" text-anchor="middle" font-size="28" font-weight="bold" fill="#455a64">(+/0)</text>
+  <text x="400" y="333" text-anchor="middle" font-size="12" fill="#555">einseitiger Nutzen</text>
+
+  <!-- Org B circle (gray = neutral) -->
+  <circle cx="570" cy="313" r="42" fill="#90a4ae" stroke="#607d8b" stroke-width="2"/>
+  <text x="570" y="309" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">Art B</text>
+  <text x="570" y="327" text-anchor="middle" font-size="20" font-weight="bold" fill="#fff">0</text>
+
+  <!-- ─── Row 3: Parasitismus (+/−) ─── -->
+  <rect x="30" y="398" width="740" height="140" rx="10" fill="#fdecea" stroke="#ef5350" stroke-width="2"/>
+  <text x="50" y="428" font-size="16" font-weight="bold" fill="#c62828">Parasitismus</text>
+  <text x="50" y="448" font-size="13" fill="#555">Eine Art profitiert, die andere leidet</text>
+  <text x="50" y="467" font-size="13" fill="#555">Beispiel: Zecke &amp; Hund</text>
+
+  <!-- Org A circle (green) -->
+  <circle cx="230" cy="468" r="42" fill="#4caf50" stroke="#388e3c" stroke-width="2"/>
+  <text x="230" y="464" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">Art A</text>
+  <text x="230" y="482" text-anchor="middle" font-size="20" font-weight="bold" fill="#fff">+</text>
+
+  <!-- Interaction symbol -->
+  <text x="400" y="465" text-anchor="middle" font-size="28" font-weight="bold" fill="#c62828">(+/−)</text>
+  <text x="400" y="488" text-anchor="middle" font-size="12" fill="#555">einseitiger Schaden</text>
+
+  <!-- Org B circle (red = harmed) -->
+  <circle cx="570" cy="468" r="42" fill="#ef5350" stroke="#c62828" stroke-width="2"/>
+  <text x="570" y="464" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">Art B</text>
+  <text x="570" y="482" text-anchor="middle" font-size="20" font-weight="bold" fill="#fff">−</text>
+
+  <!-- Color legend -->
+  <circle cx="310" cy="563" r="8" fill="#4caf50"/>
+  <text x="324" y="568" font-size="12" fill="#444">Nutzen (+)</text>
+  <circle cx="430" cy="563" r="8" fill="#90a4ae"/>
+  <text x="444" y="568" font-size="12" fill="#444">neutral (0)</text>
+  <circle cx="550" cy="563" r="8" fill="#ef5350"/>
+  <text x="564" y="568" font-size="12" fill="#444">Schaden (−)</text>
+</svg>

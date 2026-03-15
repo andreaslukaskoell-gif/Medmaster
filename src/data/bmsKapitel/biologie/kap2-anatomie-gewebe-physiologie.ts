@@ -3475,6 +3475,7 @@ Der fertige Urin verlässt die Niere über: **Nierenbecken (Pelvis renalis) → 
     {
       id: "bio-3-11",
       title: "Skelettsystem",
+      // TODO: add image (no skelett orphan image available)
       stichworte: [
         "Knochen",
         "Knorpel",
