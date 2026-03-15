@@ -686,6 +686,31 @@ Die **Räuberpopulation hinkt der Beutepopulation zeitlich nach** (Höhepunkt de
         "Mutualismus (+/+), Kommensalismus (+/0), Parasitismus (+/−), Prädation (+/−), Konkurrenz (−/−). Parasit tötet Wirt nicht sofort.",
         "Lotka-Volterra: Räuberpopulation hinkt Beutepopulation zeitlich nach; mittlere Populationsgrößen langfristig konstant.",
       ],
+      altfrage: {
+        text: "Welche Aussage zu ökologischen Wechselwirkungen ist richtig?",
+        options: [
+          { id: "a", text: "Beim Kommensalismus profitieren beide Partner gleichermaßen (+/+)." },
+          {
+            id: "b",
+            text: "Das Konkurrenzausschlussprinzip besagt, dass zwei Arten mit identischer ökologischer Nische dauerhaft koexistieren können.",
+          },
+          {
+            id: "c",
+            text: "Bei Lotka-Volterra-Zyklen erreicht die Räuberpopulation ihren Höhepunkt zeitlich nach der Beutepopulation.",
+          },
+          {
+            id: "d",
+            text: "Parasiten töten ihren Wirt in der Regel sofort, im Gegensatz zu Räubern.",
+          },
+          {
+            id: "e",
+            text: "r-Strategen zeichnen sich durch wenige Nachkommen und intensive Brutpflege aus.",
+          },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "Bei Räuber-Beute-Zyklen (Lotka-Volterra) **hinkt die Räuberpopulation der Beutepopulation zeitlich nach**: Viel Beute → Räuber vermehren sich → Räuber-Höhepunkt folgt zeitverzögert. A ist falsch (Kommensalismus = +/0). B ist falsch (Gause: identische Nische → Ausschluss). D ist vertauscht (Parasit tötet nicht sofort, Räuber tötet Beute). E ist falsch (r-Strategen = viele Nachkommen, wenig Brutpflege).",
+      },
       selfTest: [
         {
           question:

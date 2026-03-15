@@ -1345,6 +1345,28 @@ Die reife **Eizelle** (n) nach Abschluss der Meiose II und die **Spermien** (n) 
         "Spermatogenese: 1 Spermatogonium → Meiose I/II → 4 Spermien (n). Oogenese: 1 Oozyte → 1 Eizelle (n) + 3 Polkörperchen.",
         "Oogenese-Arrests: Prophase I (bis Ovulation), Metaphase II (bis Befruchtung).",
       ],
+      altfrage: {
+        text: "Welche Aussage zur Gametogenese ist richtig?",
+        options: [
+          {
+            id: "a",
+            text: "Aus einer primären Oozyte entstehen vier befruchtungsfähige Eizellen.",
+          },
+          {
+            id: "b",
+            text: "Die Spermatogenese beginnt bereits pränatal und endet mit der Pubertät.",
+          },
+          {
+            id: "c",
+            text: "Die sekundäre Oozyte arretiert in Metaphase II und wird erst bei Befruchtung abgeschlossen.",
+          },
+          { id: "d", text: "Polkörperchen enthalten den Großteil des Zytoplasmas der Oozyte." },
+          { id: "e", text: "Die Meiose I der Oogenese wird bei der Befruchtung abgeschlossen." },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "Nach Abschluss der Meiose I wird die sekundäre Oozyte freigesetzt und arretiert in **Metaphase II**. Erst die Befruchtung durch ein Spermium löst den Arrest und beendet Meiose II → reife Eizelle + 2. Polkörperchen. A ist falsch (1 Eizelle + 3 Polkörperchen). B ist falsch (Spermatogenese beginnt ab Pubertät, kontinuierlich). D ist falsch (Polkörperchen enthalten kaum Zytoplasma). E ist falsch (Meiose I wird bei der Ovulation abgeschlossen).",
+      },
       selfTest: [
         {
           question:
@@ -1951,6 +1973,42 @@ Wenn der **posteriore Neuroporus** nicht schließt, kann es zur **Spina bifida**
           hints: ["Neuralleiste = Ektoderm, nicht Mesoderm.", "Pigmentzellen, Nebennierenmark."],
           difficulty: 1,
           tags: ["neuralleiste", "melanozyten", "nebennierenmark"],
+        },
+        {
+          question:
+            "Welche Fehlbildung kann entstehen, wenn der posteriore Neuroporus nicht schließt?",
+          options: [
+            "Anenzephalie (Fehlen von Großhirnanteilen)",
+            "Spina bifida (offener Rücken)",
+            "Lippen-Kiefer-Gaumenspalte",
+            "Omphalozele (Nabelbruch)",
+            "Herzfehler (Ventrikelseptumdefekt)",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Ein offener posteriorer (hinterer/kaudaler) Neuroporus führt zur Spina bifida (offener Rücken) — einer Fehlbildung im Bereich der kaudalen Wirbelsäule. Bleibt dagegen der anteriore (vordere/kraniale) Neuroporus offen, entsteht Anenzephalie (nicht überlebensfähig). Folsäure-Supplementierung (0,4 mg/Tag präkonzeptionell) senkt das Risiko um ca. 70 %.",
+          hints: ["Posterior = kaudal = Rücken.", "Anterior offen → Anenzephalie."],
+          difficulty: 2,
+          tags: ["spina-bifida", "neuroporus", "neuralrohrdefekt"],
+        },
+        {
+          question: "Warum ist die präkonzeptionelle Folsäure-Einnahme besonders wichtig?",
+          options: [
+            "Folsäure verhindert Frühgeburten in der 36. Woche.",
+            "Der Neuralrohrschluss erfolgt in der 3.–4. Woche — oft bevor die Frau die Schwangerschaft bemerkt.",
+            "Folsäure ist nur vor der Befruchtung wirksam, nicht danach.",
+            "Folsäure schützt ausschließlich vor Anenzephalie, nicht vor Spina bifida.",
+            "Folsäure wird nur pränatal im fetalen Darm resorbiert.",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Der Neuralrohrschluss erfolgt sehr früh (anteriorer Neuroporus Tag 25, posteriorer Tag 27 — also in der 3.–4. Woche). Viele Frauen wissen zu diesem Zeitpunkt noch nicht, dass sie schwanger sind. Daher empfiehlt man die Folsäure-Supplementierung (0,4 mg/Tag) bereits präkonzeptionell (vor der Empfängnis), um das Risiko für Neuralrohrdefekte um ca. 70 % zu senken.",
+          hints: [
+            "Neuralrohrschluss: Tag 25–27.",
+            "Schwangerschaft oft erst in Woche 5–6 bemerkt.",
+          ],
+          difficulty: 2,
+          tags: ["folsäure", "prävention", "neuralrohrdefekt"],
         },
       ],
     },

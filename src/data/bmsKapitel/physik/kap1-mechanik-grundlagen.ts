@@ -384,8 +384,6 @@ Jede Zahl lässt sich schreiben als **a x 10^n**, wobei die **Mantisse** (a) zwi
 
 ## Präfixe bei Flächen und Volumen — die häufigste Fehlerquelle
 
-{{DIAGRAM:volume-conversion}}
-
 Bei Flächen- und Volumeneinheiten muss der Präfix-Exponent mit der Dimension **potenziert** werden:
 
 | Umrechnung | Rechnung | Ergebnis | Häufiger Fehler |
@@ -638,8 +636,6 @@ Zweitens Heparin: Standarddosen werden in Einheiten (IE) oder mg/kg angegeben. I
       ],
       content: `Stell dir vor, du leitest eine Formel her und erhältst als Ergebnis „Meter plus Sekunden". Irgendetwas muss schiefgelaufen sein — Längen und Zeiten zu addieren ist wie Äpfel und Birnen zusammenzählen. Die **Dimensionsanalyse** nutzt genau dieses Prinzip als mächtigstes Werkzeug der Physik: Wenn die Einheiten nicht stimmen, ist die Formel garantiert falsch.
 
-{{DIAGRAM:dimensional-analysis}}
-
 ---
 
 ## Basisdimensionen und das Prinzip der dimensionalen Homogenität
@@ -687,8 +683,6 @@ Dimensionen stimmen nicht überein → Formel ist falsch. Korrekt: [m·v²] = M�
 ---
 
 ## Kettenmultiplikation — sichere Einheitenumrechnung
-
-{{DIAGRAM:unit-conversion-chain}}
 
 Die **Kettenmultiplikation** (Factor-Label-Methode) ist die sicherste Umrechnungsmethode: Man multipliziert mit Umrechnungsfaktoren der Form (neue Einheit / alte Einheit), die jeweils den Wert 1 haben, bis die gewünschte Einheit übrig bleibt.
 

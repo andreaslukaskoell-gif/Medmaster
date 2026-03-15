@@ -1759,312 +1759,97 @@ Die **Lungenalveolen** haben einen Radius von ca. 0,1–0,2 mm; die Gesamtoberfl
     },
 
     // ──────────────────────────────────────────────────────────────
-    // UK ma-3-04  Vektoren und räumliche Geometrie
+    // UK ma-3-04  Vektoren — Überblick und Verweis
+    // Brücke zu Kapitel Vektorrechnung (ma-6-01, ma-6-02)
     // ──────────────────────────────────────────────────────────────
     {
       id: "ma-3-04",
-      title: "Vektoren und räumliche Geometrie",
-      stichworte: [
-        "Vektor",
-        "Betrag",
-        "Skalarprodukt",
-        "Kreuzprodukt",
-        "Orthogonalität",
-        "Ebenengleichung",
-        "Normalenvektor",
-        "Vektoraddition",
-        "Drehmoment",
-        "EKG-Herzachse",
-        "Strahlentherapie",
-        "Biomechanik",
-      ],
-      content: `## Warum Vektoren in der Medizin?
+      title: "Vektoren — Überblick und Verweis",
+      stichworte: ["Vektor", "Skalar", "Betrag", "Richtung", "Vektorrechnung"],
+      content: `## Was sind Vektoren?
 
-Wenn ein Kardiologe die elektrische Herzachse im EKG bestimmt, rechnet er mit Vektoren: Die Amplituden der Ableitungen I und aVF bilden die x- und y-Komponente eines Pfeils, dessen Winkel den Lagetyp verrät. Auch CT-gesteuerte Nadelführungen und Drehmomente an Gelenken sind Vektorprobleme. Die Grundlagen dafür stehen hier.
+Viele physikalische Größen haben nicht nur einen Betrag, sondern auch eine **Richtung**: Kraft, Geschwindigkeit, Verschiebung. Eine einzelne Zahl (Skalar) reicht dafür nicht aus — man braucht einen **Vektor**, also einen Pfeil mit Länge und Richtung. Algebraisch schreibt man ihn als Spalte von Komponenten: **a** = (a₁, a₂, a₃).
+
+Der **Betrag** (die Länge) eines Vektors folgt aus dem Satz des Pythagoras: |**a**| = √(a₁² + a₂² + a₃²). Addition, Subtraktion und Skalierung funktionieren komponentenweise.
 
 ---
 
-## Vektor-Grundlagen (Kurzwiederholung)
+## Warum Vektoren in der Medizin wichtig sind
 
-Ein **Vektor** hat Betrag und Richtung; ein **Skalar** ist nur eine Zahl. In 3D schreibt man **a** = (a₁, a₂, a₃).
-
-- **Betrag (Länge):** |**a**| = √(a₁² + a₂² + a₃²)
-- **Einheitsvektor:** **â** = **a** / |**a**| — gleiche Richtung, Länge 1
-- **Ortsvektor A → B:** **AB** = **b** − **a** = (b₁−a₁, b₂−a₂, b₃−a₃)
-- **Addition:** komponentenweise, geometrisch = Pfeile aneinanderhängen
-- **Skalierung:** c × **a** = (c·a₁, c·a₂, c·a₃); bei c < 0 kehrt die Richtung um
-
-Vertiefung zu Vektorraum, Basis und Koordinatensystemen: siehe Kapitel ma-6-01.
-
-> **Merke:** Zwei Punkte A und B im Raum verbindet der Differenzvektor **AB** = **b** − **a**. Sein Betrag |**AB**| ist der Abstand zwischen den Punkten.
+- **Kräfte in der Biomechanik:** Am Kniegelenk wirken Muskelzug, Bandspannung und Schwerkraft gleichzeitig — jede als Vektor mit eigener Richtung. Die resultierende Belastung ist die Vektorsumme.
+- **EKG-Herzachse:** Die elektrische Erregung des Herzens wird als Summenvektor dargestellt. Aus Ableitung I (x-Komponente) und aVF (y-Komponente) ergibt sich der Lagetyp.
+- **Drehmoment:** Das Drehmoment an Gelenken ist ein Kreuzprodukt aus Hebelarm und Kraft — maximal bei senkrechtem Ansatz.
 
 ---
 
-{{DIAGRAM:vector-addition-parallelogram}}
+## Vollständige Behandlung in Kapitel Vektorrechnung
 
-## Skalarprodukt — Winkel und Orthogonalität
+Die vollständige Vektorrechnung mit Grundoperationen, Einheitsvektoren, linearer Unabhängigkeit, Skalarprodukt und Kreuzprodukt findest du im **Kapitel Vektorrechnung** (ma-6-01 und ma-6-02). Dort werden alle Rechenverfahren, geometrischen Interpretationen und klinischen Anwendungen ausführlich behandelt.
 
-Das Skalarprodukt misst, wie stark zwei Vektoren in dieselbe Richtung zeigen. Es liefert immer eine **Zahl** (keinen Vektor):
-
-**a · b = a₁b₁ + a₂b₂ + a₃b₃ = |a| · |b| · cos θ**
-
-- **a · b = 0** → Vektoren senkrecht (orthogonal), θ = 90°
-- **a · b > 0** → spitzer Winkel (θ < 90°)
-- **a · b < 0** → stumpfer Winkel (θ > 90°)
-
-**Winkel berechnen:** cos θ = (a · b) / (|a| · |b|) → θ = arccos(…)
-
-**Projektion** eines Vektors **a** auf **b**: Die Komponente von **a** in Richtung **b** hat den Betrag (a · b) / |b|. In der Kardiologie wird genau das genutzt, um die EKG-Herzachse auf die einzelnen Ableitungsrichtungen zu projizieren.
-
-> **Merke:** Skalarprodukt = Zahl; Skalarprodukt = 0 ↔ senkrecht. Häufigster Prüfungsfehler: Skalarprodukt mit Kreuzprodukt verwechseln (Zahl vs. Vektor).
-
----
-
-## Kreuzprodukt — Fläche und Drehmoment
-
-Das Kreuzprodukt **a × b** erzeugt einen neuen **Vektor**, der senkrecht auf **a** und **b** steht:
-
-**a × b** = (a₂b₃ − a₃b₂,  a₃b₁ − a₁b₃,  a₁b₂ − a₂b₁)
-
-- **|a × b| = |a| · |b| · sin θ** — gleich der Fläche des aufgespannten Parallelogramms
-- **a × b = 0** → Vektoren parallel (θ = 0° oder 180°)
-- **Antikommutativ:** a × b = −(b × a) — Reihenfolge zählt!
-
-Die Richtung bestimmt die **Rechte-Hand-Regel**: Zeigefinger = **a**, Mittelfinger = **b**, Daumen = **a × b**.
-
-{{DIAGRAM:cross-product-right-hand}}
-
-**Klinische Anwendung — Drehmoment:** Am Gelenk gilt **M** = **r** × **F**. Der Betrag ist |M| = |r| · |F| · sin θ. Maximales Drehmoment entsteht bei θ = 90° (Kraft senkrecht zum Hebelarm, sin 90° = 1).
-
-> **Merke:** Kreuzprodukt = Vektor senkrecht zu beiden Ausgangsvektoren. Kreuzprodukt = 0 ↔ parallel. |a × b| = Parallelogrammfläche; Dreiecksfläche = ½ |a × b|.
-
----
-
-## Rechenbeispiel — EKG-Herzachse als Vektorproblem
-
-**Aufgabe:** Ableitung I zeigt +8 mm, Ableitung aVF zeigt +4 mm. Bestimme den Betrag und Winkel der Herzachse.
-
-**Denkprozess:**
-
-1. Vektor aufstellen: **v** = (I, aVF) = (8, 4).
-2. Betrag: |**v**| = √(8² + 4²) = √(64 + 16) = √80 ≈ **8,9 mm**.
-3. Winkel: φ = arctan(aVF / I) = arctan(4/8) = arctan(0,5) ≈ **26,6°**.
-4. Interpretation: 26,6° liegt zwischen 0° und +90° → **Normaltyp** (Indifferenztyp wäre bei ca. 60°, hier eher Linkstyp-nah).
-
-**Probe:** cos 26,6° ≈ 0,894; sin 26,6° ≈ 0,447. Rückrechnung: 8,9 × 0,894 ≈ 8 ✓; 8,9 × 0,447 ≈ 4 ✓.
-
-> **Merke:** EKG-Herzachse = resultierender Depolarisationsvektor. Ableitung I = x-Komponente, aVF = y-Komponente. Winkel φ = arctan(aVF/I) bestimmt den Lagetyp.
-
----
-
-{{DIAGRAM:ekg-axis-vector}}
-
-## Geraden im Raum
-
-Eine Gerade wird in **Parameterform** beschrieben: **r**(t) = **p** + t · **v**, wobei **p** ein Stützpunkt und **v** der Richtungsvektor ist. Jeder Wert von t liefert einen Punkt auf der Geraden.
-
-Zwei Geraden im 3D-Raum können:
-- **sich schneiden** (gemeinsamer Punkt, verschiedene Richtungen)
-- **parallel** sein (gleiche Richtung, kein gemeinsamer Punkt)
-- **identisch** sein (gleiche Richtung und ein gemeinsamer Punkt)
-- **windschief** sein — weder parallel noch schneidend (nur in 3D möglich)
-
-**Abstand Punkt P von Gerade** (Stützpunkt **p**, Richtung **v**):
-d = |(**P** − **p**) × **v**| / |**v**|
-
-Klinisch: Der Abstand eines Tumorzentrums von einem CT-Nadelweg lässt sich so berechnen — liegt der Tumor nah genug an der geplanten Trajektorie?
-
-> **Merke:** Parameterform einer Geraden: **r** = **p** + t · **v**. Windschiefe Geraden existieren nur im 3D-Raum (2D unmöglich).
-
----
-
-## Rechenbeispiel — Drehmoment am Ellenbogengelenk
-
-**Aufgabe:** Der Bizeps übt F = 300 N unter θ = 80° auf einen Hebelarm von r = 4 cm an.
-
-**Denkprozess:**
-
-1. Einheiten umrechnen: r = 0,04 m.
-2. Formel: |M| = r · F · sin θ = 0,04 · 300 · sin 80°.
-3. sin 80° ≈ 0,985 → |M| = 0,04 × 300 × 0,985 = **11,8 N·m**.
-4. Vergleich: Bei θ = 90° wäre |M| = 12 N·m (Maximum). Bei θ = 30°: |M| = 0,04 × 300 × 0,5 = 6 N·m — die Krafteffizienz halbiert sich bei flachem Ansatzwinkel.
-
----
-
-## Ebenengleichung (vertiefend, Kurzüberblick)
-
-Eine Ebene im Raum lässt sich durch einen Punkt **r₀** und einen **Normalenvektor** **n** beschreiben: **n** · (**r** − **r₀**) = 0, oder in Koordinatenform: n₁x + n₂y + n₃z = d.
-
-Den Normalenvektor aus drei Punkten A, B, C erhält man über das Kreuzprodukt: **n** = (**B** − **A**) × (**C** − **A**). Der Abstand eines Punktes P von der Ebene beträgt |n₁xP + n₂yP + n₃zP − d| / |**n**|.
-
-Im MRT definiert jede Bildschicht eine Ebene; der Normalenvektor legt die Schichtorientierung fest (axial, sagittal, koronal). Weiterführend: siehe Kapitel ma-6-03.
-
----
-
-## Typische Prüfungsfehler
-
-- **Skalar- vs. Kreuzprodukt verwechselt:** Skalarprodukt → Zahl, Kreuzprodukt → Vektor
-- **Orthogonalitätstest:** senkrecht ↔ Skalarprodukt = 0 (nicht Kreuzprodukt = 0!)
-- **Parallelitätstest:** parallel ↔ Kreuzprodukt = 0 (nicht Skalarprodukt = 0!)
-- **Reihenfolge beim Kreuzprodukt:** a × b = −(b × a) — Vorzeichen beachten
-- **Betrag vergessen:** cos θ = (a · b) / (|a| · |b|), nicht einfach a · b
-
----
-
-## Zusammenfassung
-
-| Operation | Ergebnis | Formel | Bedeutung |
-|-----------|----------|--------|-----------|
-| Betrag | Skalar | √(a₁²+a₂²+a₃²) | Länge des Vektors |
-| Skalarprodukt | Skalar | a₁b₁+a₂b₂+a₃b₃ | Winkel, Orthogonalität |
-| Kreuzprodukt | Vektor | (a₂b₃−a₃b₂, …) | Fläche, Drehmoment |
-| Gerade | Parameterform | **p** + t·**v** | Stützpunkt + Richtung |`,
+> **Merke:** Ein Vektor = Betrag + Richtung. Ein Skalar = nur ein Zahlenwert. Für Berechnungen mit Skalarprodukt, Kreuzprodukt und Kraftzerlegung → Kapitel Vektorrechnung.`,
 
       lernziele: [
-        "Betrag, Addition, Subtraktion und Skalierung von Vektoren berechnen.",
-        "Das Skalarprodukt berechnen und zur Bestimmung von Winkeln und Orthogonalität nutzen.",
-        "Das Kreuzprodukt berechnen und seine geometrische Bedeutung (Flächeninhalt, Senkrechter) erklären.",
-        "Die Ebenengleichung aufstellen und den Normalenvektor interpretieren.",
-        "Vektoren in medizinischen Kontexten (EKG-Achse, Strahlentherapie, Biomechanik) erkennen.",
+        "Vektoren als gerichtete Größen von Skalaren abgrenzen können.",
+        "Den Betrag eines Vektors mit dem Satz des Pythagoras berechnen können.",
+        "Die medizinische Relevanz von Vektoren (Kräfte, EKG-Achse, Drehmoment) benennen können.",
       ],
       sections: [
         {
-          heading: "Skalar- und Kreuzprodukt",
-          text: `Skalarprodukt — Beispiel:
-**a** = (1, 2, 3), **b** = (4, −1, 2)
-**a · b** = 1×4 + 2×(−1) + 3×2 = 4 − 2 + 6 = 8
-
-Winkel: cos θ = (**a · b**) / (|**a**| × |**b**|)
-|**a**| = √(1+4+9) = √14; |**b**| = √(16+1+4) = √21
-cos θ = 8 / (√14 × √21) = 8 / √294 ≈ 8/17,15 ≈ 0,467 → θ ≈ 62°
-
-Kreuzprodukt — Beispiel:
-**a** = (1, 0, 0), **b** = (0, 1, 0)
-**a × b** = (0×0−0×1, 0×0−1×0, 1×1−0×0) = (0, 0, 1)
-→ Ergibt den Einheitsvektor in z-Richtung (senkrecht zur xy-Ebene).`,
-          merksatz: "Skalarprodukt = 0 → senkrecht; Kreuzprodukt = 0 → parallel.",
+          heading: "Vektor vs. Skalar",
+          text: "Ein Vektor hat Betrag und Richtung (z. B. Kraft, Geschwindigkeit), ein Skalar nur einen Zahlenwert (z. B. Temperatur, Masse). Vektoren werden als Spaltenvektoren geschrieben, ihr Betrag folgt aus dem Satz des Pythagoras.",
+          merksatz: "Vektor = Betrag + Richtung. Skalar = nur Zahlenwert. Betrag = Pythagoras.",
         },
         {
-          heading: "Ebenengleichung und Normalenvektor",
-          text: `Eine Ebene kann durch drei Punkte oder durch Punkt + Normalenvektor definiert werden.
-
-Normalenform: **n · (r − r₀) = 0**
-
-Beispiel: Ebene durch P₀(1, 2, 3) mit Normalenvektor **n** = (1, −1, 2):
-1×(x−1) + (−1)×(y−2) + 2×(z−3) = 0
-x − 1 − y + 2 + 2z − 6 = 0
-x − y + 2z − 5 = 0
-
-Für drei gegebene Punkte A, B, C berechnet man **n** = (B−A) × (C−A).
-
-Im MRT definiert jede Bildschicht eine Ebene; der Normalenvektor entspricht der Schichtorientierung (axial, sagittal, koronal).`,
+          heading: "Medizinische Anwendungen und Verweis",
+          text: "Vektoren sind zentral in Biomechanik (Kraftzerlegung am Gelenk), Kardiologie (EKG-Herzachse als Summenvektor) und Strahlentherapie (Strahlenrichtungen). Die vollständige Behandlung mit Skalarprodukt, Kreuzprodukt und Rechenbeispielen erfolgt im Kapitel Vektorrechnung (ma-6-01, ma-6-02).",
           merksatz:
-            "Normalenvektor n steht senkrecht auf der Ebene; Ebenengleichung: n₁x + n₂y + n₃z = d (mit d = n × r₀).",
-        },
-        {
-          heading: "Vektoren in der Medizin",
-          text: `EKG-Herzachse: Die resultierende elektrische Herzachse in der Frontalebene wird als Winkelangabe in Grad beschrieben. Bei einem Normaltyp liegt sie zwischen −30° und +90°.
-
-Berechnung aus Ableitungen I und aVF (vereinfacht):
-- Amplitude in I → x-Komponente des Vektors
-- Amplitude in aVF → y-Komponente des Vektors
-- Winkel φ = arctan(aVF/I)
-
-Biomechanik: Das Drehmoment M = r × F (Kreuzprodukt aus Hebelarm r und Kraft F). |M| = |r| × |F| × sin θ. Für maximales Drehmoment: θ = 90° (Kraft senkrecht zum Hebelarm).
-
-Strahlentherapie: Mehrere Strahlenfelder aus verschiedenen Richtungen (Vektoren) können so addiert werden, dass die therapeutische Dosis am Tumorvolumen maximiert und die Belastung des Normalgewebes minimiert wird (IMRT, Stereotaxie).`,
-          merksatz:
-            "Drehmoment M = r × F — maximales Drehmoment wenn Kraft und Hebelarm senkrecht (θ = 90°); |M| = |r| × |F| × sin 90° = |r| × |F|.",
+            "Für Skalarprodukt, Kreuzprodukt und Kraftzerlegung → Kapitel Vektorrechnung (ma-6-01, ma-6-02).",
         },
       ],
       merksätze: [
-        "Betrag eines Vektors: |a| = √(a₁² + a₂² + a₃²).",
-        "Skalarprodukt: a · b = a₁b₁ + a₂b₂ + a₃b₃ = |a|·|b|·cos θ.",
-        "Senkrecht ↔ Skalarprodukt = 0; parallel ↔ Kreuzprodukt = 0.",
-        "Kreuzprodukt a × b ist senkrecht zu beiden Vektoren; |a × b| = |a|×|b|×sin θ.",
-        "|a × b| = Fläche des Parallelogramms, das a und b aufspannen.",
-        "Ebenengleichung: n · (r − r₀) = 0; n ist der Normalenvektor der Ebene.",
-        "EKG-Herzachse = resultierender Depolarisationsvektor; Winkel definiert Lagetyp.",
-        "Strahlentherapie: Strahlengang als Vektor durch Tumor — Summe aus verschiedenen Richtungen.",
-        "Drehmoment M = r × F; maximal wenn Kraft senkrecht zum Hebelarm.",
-        "3D-MRT-Schichten: jede Schichtebene hat einen Normalenvektor (Schichtorientierung).",
+        "Vektor = Betrag + Richtung; Skalar = nur Zahlenwert.",
+        "Betrag eines Vektors: |a| = √(a₁² + a₂² + a₃²) — verallgemeinerter Pythagoras.",
+        "Vollständige Vektorrechnung (Skalarprodukt, Kreuzprodukt, Kraftzerlegung) → Kapitel Vektorrechnung.",
       ],
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
-      altfrage: {
-        question:
-          "Die Vektoren **a** = (2, 1, −1) und **b** = (1, −1, 2) sind gegeben. Berechnen Sie das Skalarprodukt und bestimmen Sie den Winkel zwischen den Vektoren (cos⁻¹ angeben). Sind die Vektoren senkrecht zueinander?",
-        answer:
-          "Das Skalarprodukt berechnet sich komponentenweise: a · b = a₁b₁ + a₂b₂ + a₃b₃ = 2×1 + 1×(−1) + (−1)×2 = 2 − 1 − 2 = −1. Die Beträge der Vektoren: |a| = √(2² + 1² + (−1)²) = √(4 + 1 + 1) = √6; |b| = √(1² + (−1)² + 2²) = √(1 + 1 + 4) = √6. Der Kosinus des Winkels: cos θ = (a · b) / (|a| · |b|) = −1 / (√6 × √6) = −1/6 ≈ −0,167. Der Winkel: θ = arccos(−0,167) ≈ 99,6°. Da das Skalarprodukt −1 ≠ 0 ist, sind die Vektoren nicht senkrecht zueinander; sie schließen einen stumpfen Winkel von ca. 100° ein. Senkrecht wären sie nur, wenn das Skalarprodukt exakt null wäre.",
-      },
       klinischerBezug:
-        "EKG-Herzachse als Vektor (Lagetypen); MRT-Schichtorientierung via Normalenvektoren; Strahlentherapieplanung (Isodosen); Drehmoment in der Biomechanik.",
+        "Biomechanik (Kraftzerlegung am Gelenk); EKG-Herzachse (Summenvektor der Erregungsausbreitung); Drehmoment an Gelenken. Details in Kapitel Vektorrechnung.",
       selfTest: [
         {
-          question: "Welcher Vektor ist der Summenvektor von a = (2, −1, 3) und b = (−1, 4, 2)?",
+          question: "Berechnen Sie den Betrag des Vektors **a** = (3, 4).",
+          options: ["5", "7", "√7", "12", "1"],
+          correctIndex: 0,
+          explanation:
+            "Der Betrag berechnet sich nach dem Satz des Pythagoras: |a| = √(3² + 4²) = √(9 + 16) = √25 = 5. Das 3-4-5-Dreieck ist das bekannteste pythagoräische Tripel.",
+          hints: ["Satz des Pythagoras: |a| = √(a₁² + a₂²).", "Kennen Sie das Tripel 3-4-5?"],
+          tags: ["vektorbetrag", "pythagoras"],
+          difficulty: 1,
+        },
+        {
+          question: "Welche der folgenden Größen ist ein Vektor (nicht ein Skalar)?",
+          options: ["Kraft", "Temperatur", "Masse", "Druck", "Energie"],
+          correctIndex: 0,
+          explanation:
+            "Kraft hat sowohl einen Betrag (z. B. 50 N) als auch eine Richtung (z. B. nach oben) und ist daher ein Vektor. Temperatur, Masse, Druck und Energie sind Skalare — sie haben nur einen Zahlenwert ohne Richtungsinformation.",
+          hints: [
+            "Ein Vektor hat Betrag UND Richtung.",
+            "Welche physikalische Größe braucht eine Richtungsangabe, um vollständig beschrieben zu sein?",
+          ],
+          tags: ["vektor", "skalar", "grundbegriffe"],
+          difficulty: 1,
+        },
+        {
+          question:
+            "Welcher Vektor ist der Summenvektor von **a** = (2, −1, 3) und **b** = (−1, 4, 2)?",
           options: ["(3, −5, 1)", "(1, 3, 5)", "(−2, −4, 6)", "(3, 3, 5)", "(1, −5, 5)"],
           correctIndex: 1,
           explanation:
-            "Vektoren werden komponentenweise addiert: a + b = (2+(−1), (−1)+4, 3+2) = (1, 3, 5). Die Addition erfolgt für jede Koordinate separat: x-Komponente: 2 + (−1) = 1; y-Komponente: −1 + 4 = 3; z-Komponente: 3 + 2 = 5. Das Ergebnis ist der Vektor (1, 3, 5). Vektoraddition entspricht geometrisch dem Aneinanderhängen der Pfeile (Dreiecksregel) oder dem Aufspannen eines Parallelogramms (Parallelogrammregel).",
+            "Vektoren werden komponentenweise addiert: a + b = (2+(−1), (−1)+4, 3+2) = (1, 3, 5). Jede Komponente wird einzeln berechnet.",
           hints: [
-            "Vektoren werden komponentenweise addiert: (a₁+b₁, a₂+b₂, a₃+b₃).",
+            "Komponentenweise addieren: (a₁+b₁, a₂+b₂, a₃+b₃).",
             "x: 2+(−1) = ?; y: −1+4 = ?; z: 3+2 = ?",
           ],
-          tags: ["vektoraddition", "komponentenweise", "vektor"],
+          tags: ["vektoraddition", "komponentenweise"],
           difficulty: 1,
-        },
-        {
-          question: "Welches Skalarprodukt haben die Vektoren a = (3, 0, −2) und b = (1, 5, 3)?",
-          options: ["−3", "0", "3", "9", "−9"],
-          correctIndex: 0,
-          explanation:
-            "Das Skalarprodukt berechnet sich komponentenweise: a · b = a₁b₁ + a₂b₂ + a₃b₃ = 3×1 + 0×5 + (−2)×3 = 3 + 0 − 6 = −3. Das Ergebnis −3 ist ein negativer Skalar, was bedeutet, dass der Winkel zwischen den Vektoren stumpf ist (> 90°). Da das Skalarprodukt ≠ 0, sind die Vektoren nicht senkrecht. Ein Skalarprodukt von 0 würde Orthogonalität bedeuten. Das Skalarprodukt ist immer eine Zahl (Skalar), kein Vektor.",
-          hints: ["a · b = a₁b₁ + a₂b₂ + a₃b₃.", "3×1 = 3; 0×5 = 0; (−2)×3 = −6; Summe?"],
-          tags: ["skalarprodukt", "vektor", "algebra"],
-          difficulty: 1,
-        },
-        {
-          question:
-            "Ein Muskel zieht mit einer Kraft F = 200 N senkrecht an einem Hebelarm der Länge r = 0,05 m (5 cm). Wie groß ist das Drehmoment |M| = |r × F|?",
-          options: ["0,01 N×m", "0,1 N×m", "1 N×m", "10 N×m", "4000 N×m"],
-          correctIndex: 3,
-          explanation:
-            "Das Drehmoment M = r × F. Da die Kraft senkrecht zum Hebelarm wirkt (θ = 90°), gilt sin 90° = 1. Also: |M| = |r| × |F| × sin θ = 0,05 m × 200 N × 1 = 10 N×m. Ein Drehmoment von 10 N×m an einem 5-cm-Hebelarm erfordert 200 N Muskelkraft. In der Biomechanik sind solche Berechnungen wichtig für die Belastungsanalyse von Gelenken (z. B. Kniegelenk beim Strecken, Schultergelenk beim Heben).",
-          hints: [
-            "|M| = |r| × |F| × sin θ; bei senkrechter Kraft ist θ = 90°, sin 90° = 1.",
-            "0,05 m × 200 N = ?",
-          ],
-          tags: ["drehmoment", "kreuzprodukt", "biomechanik"],
-          difficulty: 2,
-        },
-        {
-          question: "Welcher der folgenden Vektoren ist senkrecht zu n = (1, −2, 3)?",
-          options: ["(1, 2, 3)", "(2, −4, 6)", "(6, 3, 0)", "(−3, 1, 1)", "(−1, 2, −3)"],
-          correctIndex: 2,
-          explanation:
-            "Ein Vektor v ist senkrecht zu n, wenn das Skalarprodukt n · v = 0. Testen wir Option C: v = (6, 3, 0): n · v = 1×6 + (−2)×3 + 3×0 = 6 − 6 + 0 = 0 ✓. Die anderen: A: 1×1 + (−2)×2 + 3×3 = 1−4+9 = 6 ≠ 0. B: (2, −4, 6) = 2×(1, −2, 3) = 2n → parallel, nicht senkrecht. D: 1×(−3) + (−2)×1 + 3×1 = −3−2+3 = −2 ≠ 0. E: (−1, 2, −3) = −1×(1, −2, 3) = −n → antiparallel, nicht senkrecht.",
-          hints: [
-            "Senkrecht ↔ Skalarprodukt n · v = 0.",
-            "Berechne n · v für jeden Optionsvektor.",
-          ],
-          tags: ["skalarprodukt", "orthogonalität", "vektor"],
-          difficulty: 2,
-        },
-        {
-          question:
-            "Die EKG-Ableitungen I und aVF zeigen bei einem Patienten Amplituden von +6 mm (I) und +6 mm (aVF). Der Winkel der Herzachse ergibt sich aus arctan(aVF/I). Welchem Lagetyp entspricht ein Winkel von ca. 45°?",
-          options: [
-            "Überdrehter Linkstyp (< −30°)",
-            "Linkstyp (−30° bis 0°)",
-            "Normotyp (0° bis +90°)",
-            "Rechtstyp (+90° bis +120°)",
-            "Überdrehter Rechtstyp (> +120°)",
-          ],
-          correctIndex: 2,
-          explanation:
-            "arctan(6/6) = arctan(1) = 45°. Ein Winkel von 45° liegt im Bereich des Normotyps (0° bis +90°). Die EKG-Herzachse beschreibt den resultierenden elektrischen Depolarisationsvektor in der Frontalebene. Ableitung I entspricht der horizontalen (x-)Komponente, Ableitung aVF der vertikalen (y-)Komponente (nach unten positiv). Bei gleichen positiven Ausschlägen in beiden Ableitungen zeigt der Vektor schräg nach unten rechts — klassisch für den Normaltyp. Klinisch relevant: Linksachsenabweichung bei Linksschenkelblock oder Linksherzhypertrophie; Rechtsachsenabweichung bei Lungenembolie oder Rechtsherzbelastung.",
-          hints: ["arctan(6/6) = arctan(1) = 45°.", "Normotyp: Herzachse zwischen 0° und +90°."],
-          tags: ["ekg", "herzachse", "normotyp"],
-          difficulty: 3,
         },
       ],
     },

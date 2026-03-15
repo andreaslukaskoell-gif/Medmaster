@@ -56,6 +56,26 @@ const RadioactiveDecay = lazy(() => import("./physics/RadioactiveDecay"));
 const TemperatureScales = lazy(() => import("./physics/TemperatureScales"));
 const Thermodynamics = lazy(() => import("./physics/Thermodynamics"));
 const WaveTypes = lazy(() => import("./physics/WaveTypes"));
+const LeverArm = lazy(() => import("./physics/LeverArm"));
+const InclinedPlane = lazy(() => import("./physics/InclinedPlane"));
+const CentripetalForce = lazy(() => import("./physics/CentripetalForce"));
+const HarmonicOscillation = lazy(() => import("./physics/HarmonicOscillation"));
+const MagneticFieldLines = lazy(() => import("./physics/MagneticFieldLines"));
+const KirchhoffLaws = lazy(() => import("./physics/KirchhoffLaws"));
+const SnelliusRefraction = lazy(() => import("./physics/SnelliusRefraction"));
+const DoubleSlit = lazy(() => import("./physics/DoubleSlit"));
+const ContinuityEquation = lazy(() => import("./physics/ContinuityEquation"));
+const LaminarFlowProfile = lazy(() => import("./physics/LaminarFlowProfile"));
+const PhaseDiagramWater = lazy(() => import("./physics/PhaseDiagramWater"));
+const IdealGasLaws = lazy(() => import("./physics/IdealGasLaws"));
+const DampedOscillation = lazy(() => import("./physics/DampedOscillation"));
+const SIUnitsOverview = lazy(() => import("./physics/SIUnitsOverview"));
+const ScalarVectorComparison = lazy(() => import("./physics/ScalarVectorComparison"));
+const CentrifugeBlood = lazy(() => import("./physics/CentrifugeBlood"));
+const MicroscopeOptics = lazy(() => import("./physics/MicroscopeOptics"));
+const EndoscopeFiber = lazy(() => import("./physics/EndoscopeFiber"));
+const ThinFilmInterference = lazy(() => import("./physics/ThinFilmInterference"));
+const SIPrefixes = lazy(() => import("./physics/SIPrefixes"));
 
 // Math
 const CombinatoricsTree = lazy(() => import("./math/CombinatoricsTree"));
@@ -122,6 +142,26 @@ const DIAGRAM_MAP: Record<string, LazyExoticComponent<ComponentType>> = {
   "temperature-scales": TemperatureScales,
   thermodynamics: Thermodynamics,
   "wave-types": WaveTypes,
+  "lever-arm": LeverArm,
+  "inclined-plane": InclinedPlane,
+  "centripetal-force": CentripetalForce,
+  "harmonic-oscillation": HarmonicOscillation,
+  "magnetic-field-lines": MagneticFieldLines,
+  "kirchhoff-laws": KirchhoffLaws,
+  "snellius-refraction": SnelliusRefraction,
+  "double-slit": DoubleSlit,
+  "continuity-equation": ContinuityEquation,
+  "laminar-flow-profile": LaminarFlowProfile,
+  "phase-diagram-water": PhaseDiagramWater,
+  "ideal-gas-laws": IdealGasLaws,
+  "damped-oscillation": DampedOscillation,
+  "si-units-overview": SIUnitsOverview,
+  "scalar-vector-comparison": ScalarVectorComparison,
+  "centrifuge-blood": CentrifugeBlood,
+  "microscope-optics": MicroscopeOptics,
+  "endoscope-fiber": EndoscopeFiber,
+  "thin-film-interference": ThinFilmInterference,
+  "si-prefixes": SIPrefixes,
   // Math
   "combinatorics-tree": CombinatoricsTree,
   "coordinate-system": CoordinateSystem,
@@ -198,6 +238,39 @@ const DIAGRAM_CAPTIONS: Record<string, string> = {
   "temperature-scales": "Temperaturskalen — Celsius, Kelvin und Fahrenheit im Vergleich.",
   thermodynamics: "Thermodynamik — Wärmekraftmaschine und Carnot-Wirkungsgrad.",
   "wave-types": "Wellenarten — Transversal- vs. Longitudinalwellen im Vergleich.",
+  "lever-arm": "Hebelgesetz — Drehmoment, Gleichgewicht und der Unterarm als Hebel.",
+  "inclined-plane": "Schiefe Ebene — Kräftezerlegung in Hangabtriebskraft und Normalkraft.",
+  "centripetal-force":
+    "Zentripetalkraft bei Kreisbewegung — medizinische Anwendung in der Zentrifuge.",
+  "harmonic-oscillation": "Harmonische Schwingung — Sinuswelle, Feder-Masse-System und Kenngrößen.",
+  "magnetic-field-lines":
+    "Magnetische Feldlinien — geschlossene Kurven vom Nord- zum Südpol (außen) und zurück (innen).",
+  "kirchhoff-laws":
+    "Kirchhoff'sche Gesetze — Knotenregel (Stromerhaltung) und Maschenregel (Spannungsbilanz).",
+  "snellius-refraction":
+    "Snellius'sches Brechungsgesetz — Lichtbrechung und Totalreflexion am Medienübergang.",
+  "double-slit": "Doppelspaltexperiment — Interferenzmuster als Beweis der Wellennatur des Lichts.",
+  "continuity-equation":
+    "Kontinuitätsgleichung — Strömungsgeschwindigkeit steigt bei Rohrverengung (Stenose).",
+  "laminar-flow-profile":
+    "Laminares Strömungsprofil — parabolische Geschwindigkeitsverteilung (Hagen-Poiseuille).",
+  "phase-diagram-water":
+    "Phasendiagramm von Wasser — Tripelpunkt, kritischer Punkt und Anomalie der Schmelzkurve.",
+  "ideal-gas-laws": "Ideale Gasgesetze — Boyle-Mariotte, Gay-Lussac und Charles im Überblick.",
+  "damped-oscillation":
+    "Gedämpfte Schwingung — exponentiell abklingende Amplitude im unterdämpften Fall.",
+  "si-units-overview": "Die 7 SI-Basiseinheiten — Größe, Name, Symbol und medizinische Beispiele.",
+  "scalar-vector-comparison":
+    "Skalare vs. Vektoren — Betrag allein vs. Betrag mit Richtungsangabe.",
+  "centrifuge-blood":
+    "Blutzentrifugation — Auftrennung in Plasma, Buffy Coat und Erythrozyten (Hämatokrit).",
+  "microscope-optics": "Zusammengesetztes Mikroskop — Strahlengang durch Objektiv und Okular.",
+  "endoscope-fiber":
+    "Glasfaser-Lichtleiter — Totalreflexion im Kern für endoskopische Bildübertragung.",
+  "thin-film-interference":
+    "Dünnschichtinterferenz — Gangunterschied und Farbeffekte an dünnen Schichten.",
+  "si-prefixes":
+    "SI-Präfixe — Zehnerpotenzen von Femto bis Tera mit medizinisch relevanten Bereichen.",
   // Math
   "combinatorics-tree": "Baumdiagramm — Permutationen, Variationen und Kombinationen.",
   "coordinate-system": "Koordinatensystem — Lineare, quadratische und exponentielle Funktionen.",

@@ -598,11 +598,33 @@ Ein klinisch wichtiges Beispiel für Glykokalix-Strukturen sind die **ABO-Blutgr
       ],
       klinischerBezug:
         "Statine (z.B. Atorvastatin) hemmen die HMG-CoA-Reduktase und senken den Blutcholesterinspiegel. Überschüssiges LDL-Cholesterin oxidiert und wird von Makrophagen als Schaumzellen gespeichert → Atherosklerose → Myokardinfarkt und Schlaganfall. Die ABO-Blutgruppenantigene sind Glykokalix-Strukturen (Kapitel Blut/Immunologie). CFTR-Mutationen (deltaF508) → Mukoviszidose: keine funktionsfähigen Cl⁻-Kanäle in der apikalen Membran von Atemwegs- und Darmepithel → visköser Schleim → chronische Pseudomonas-Infektionen → Lungenversagen.",
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question: "Warum können Ionen wie Na+ und K+ die Lipiddoppelschicht nicht frei passieren?",
-        answer:
-          "Das Innere der Lipiddoppelschicht ist stark hydrophob (Fettsäureketten). Ionen wie Na+ und K+ sind geladen und von einer Hydrathülle aus Wassermolekülen umgeben. Der Übertritt in die hydrophobe Phase würde die Hydrathülle entfernen, was eine hohe Energiebarriere (>40 kJ/mol) darstellt. Deshalb benötigen Ionen spezifische Membranproteine – Ionenkanäle (selektiv, schnell) oder aktive Transporter (gegen Gradienten, ATP-verbrauchend) – um die Membran zu überqueren.",
+        text: "Welche Aussage zum Membrantransport ist richtig?",
+        options: [
+          {
+            id: "a",
+            text: "Die Na⁺/K⁺-ATPase transportiert 2 Na⁺ nach außen und 3 K⁺ nach innen pro ATP.",
+          },
+          {
+            id: "b",
+            text: "Osmose ist der aktive Transport von Wasser gegen den Konzentrationsgradienten.",
+          },
+          {
+            id: "c",
+            text: "SGLT1 ist ein Beispiel für sekundär aktiven Symport: Na⁺ strömt entlang seines Gradienten in die Zelle und nimmt Glucose gegen deren Gradienten mit.",
+          },
+          {
+            id: "d",
+            text: "Erleichterte Diffusion benötigt ATP, da Membranproteine beteiligt sind.",
+          },
+          {
+            id: "e",
+            text: "Ionenkanäle transportieren Substanzen gegen den Konzentrationsgradienten.",
+          },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "SGLT1 im Dünndarm ist ein klassisches Beispiel für sekundär aktiven Symport: Der Na⁺-Gradient (aufgebaut durch die Na⁺/K⁺-ATPase) treibt Na⁺ in die Zelle und nimmt gleichzeitig Glucose gegen deren Gradienten mit. A ist falsch (3 Na⁺ raus, 2 K⁺ rein). B ist falsch (Osmose ist passiv). D ist falsch (erleichterte Diffusion ist passiv, kein ATP). E ist falsch (Ionenkanäle transportieren entlang des Gradienten).",
       },
       selfTest: [
         {
