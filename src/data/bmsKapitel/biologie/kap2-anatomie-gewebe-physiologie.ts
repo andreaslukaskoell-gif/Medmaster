@@ -63,6 +63,8 @@ Epithelien kleiden jede Körperoberfläche und jedes Hohlorgan aus — trotz ihr
 - **Urothel**: Schirmzellen (Umbrella cells) bei leerer Blase gewölbt → bei Dehnung abgeflacht + Uroplakin-Membranen aus Vesikeln eingefaltet → Epithel kann sich verdoppeln ohne zu reißen
 - **Verhorntes Plattenepithel**: 4 Schichten: Stratum basale (Mitose, Stammzellen) → spinosum (Desmosomen) → granulosum (Keratohyalin) → corneum (tote Korneozyten, Keratin)
 
+![Aufbau der Haut mit Epidermis-Schichten und Dermis-Strukturen](/images/bms/bio-haut-aufbau.jpg)
+
 > **Merke:** Pseudostratifiziert ≠ mehrschichtig — alle Zellen berühren Basalmembran! Urothel = Schirmzellen. Trachea = mehrreihiges Flimmerepithel.
 
 ---
@@ -452,6 +454,8 @@ Sehne, Knorpel und Knochen sehen völlig verschieden aus, bestehen aber alle aus
 | Tetanus (Dauerkontraktion) | Möglich | **Unmöglich** (lange Refraktärzeit (Unerregbarkeitsphase)) | Tonisch möglich |
 | Biomarker | CK-MM | **Troponin I/T**, CK-MB | — |
 
+![Herzmuskelgewebe mit Glanzstreifen und einkernigen Kardiomyozyten](/images/bms/bio-herzmuskel.jpg)
+
 > **Merke:** Herzmuskel = quergestreift (wie Skelett) + einkernig + Gap Junctions + kein Tetanus. Glatte Muskulatur = kein Troponin -> Calmodulin stattdessen.
 
 {{IMAGE}}
@@ -498,6 +502,8 @@ Sehne, Knorpel und Knochen sehen völlig verschieden aus, bestehen aber alle aus
 - ATP-Hydrolyse -> Myosinkopf wiederaufgespannt -> neuer Zyklus
 
 **Entspannung:** SERCA (SR-Ca2+-ATPase) pumpt Ca2+ zurück ins SR -> Troponin/Tropomyosin blockiert wieder.
+
+![Muskelkontraktion — Querbrückenzyklus mit Aktin, Myosin und Ca²⁺-Regulation durch Troponin](/images/bms/bio-muskelkontraktion.jpg)
 
 > **Merke:** Ca2+ -> Troponin C -> Tropomyosin weg -> Myosin bindet Aktin -> Kraftschlag. **ATP löst Myosin** (nicht für den Kraftschlag selbst!). Kein ATP = Rigor mortis.
 
@@ -661,6 +667,8 @@ Ein Neuron gliedert sich in vier funktionelle Kompartimente:
 - **Axon**: Langer Einzelfortsatz, der das Aktionspotential vom Soma wegleitet (Output). Entspringt am **Axonhügel**, dem Integrationspunkt für alle afferenten Signale.
 - **Axonhügel (Axon initial segment)**: Bereich mit der höchsten Dichte spannungsgesteuerter Na⁺-Kanäle. Hier entscheidet sich, ob ein Summationspotential die Schwelle (≈ −55 mV) überschreitet und ein Aktionspotential auslöst.
 
+![Verschiedene Neuronentypen — unipolar, bipolar und multipolar mit Dendriten, Soma und Axon](/images/bms/bio-neuron-typen.jpg)
+
 Am präsynaptischen Endknöpfchen werden Neurotransmitter (z. B. Glutamat, GABA, Acetylcholin) in synaptische Vesikel verpackt und durch Exozytose in den synaptischen Spalt freigesetzt.
 
 > **Merke:** Dendriten = Input. Axon = Output. Axonhügel = Entscheidungsstelle (Schwelle ≈ −55 mV). Soma = Proteinsynthese.
@@ -676,6 +684,8 @@ Die **Myelinscheide** ist eine mehrlagige Lipid-Protein-Hülle, die um Axone gew
 **Saltatorische (springende) Erregungsleitung:** Das Aktionspotential wird nicht kontinuierlich entlang des gesamten Axons depolarisiert, sondern springt von Schnürring zu Schnürring. Vorteile:
 1. **Geschwindigkeit**: Myelinisiert 70–120 m/s vs. unmyelinisiert 0,5–2 m/s
 2. **Energieeffizienz**: Na⁺/K⁺-ATPase muss nur an den Schnürringen arbeiten, nicht über die gesamte Axonlänge
+
+![Myelinscheide um Axon mit Ranvier-Schnürringen — Grundlage der saltatorischen Erregungsleitung](/images/bms/bio-myelinscheide.jpg)
 
 ### Myelinbildende Zellen: PNS vs. ZNS
 
@@ -877,6 +887,8 @@ Das PNS wird funktionell unterteilt:
 | **Zwischenhirn (Diencephalon)** | **Thalamus** (sensorische Umschaltstation — außer Geruch!), **Hypothalamus** (Hormonsystem, Temperatur, Hunger, Durst, zirkadiane Rhythmik) |
 | **Hirnstamm** (Mittelhirn, Pons, Medulla oblongata) | Vitalfunktionen (Atmung, Kreislauf, Schutzreflexe), Hirnnervenkerne, Formatio reticularis (Wachheit) |
 
+![Hirnstamm mit Mittelhirn, Pons und Medulla oblongata — Sitz der Vitalfunktionen und Hirnnervenkerne](/images/bms/bio-hirnstamm.jpg)
+
 Das **Großhirn** besitzt vier Lappen: Frontallappen (Motorik, Planung, Persönlichkeit), Parietallappen (Sensorik, räumliche Orientierung), Temporallappen (Hören, Sprachverständnis), Okzipitallappen (Sehen). Motorische und sensorische Bahnen kreuzen zur Gegenseite — eine Läsion links verursacht Ausfälle rechts.
 
 > **Merke:** Thalamus = „Tor zum Bewusstsein" (alle Sinne außer Geruch). Hypothalamus = vegetative Schaltzentrale.
@@ -930,6 +942,8 @@ Beide Systeme innervieren dieselben Organe, wirken aber antagonistisch. Die Umsc
 {{DIAGRAM:synapse}}
 
 An der chemischen Synapse wird das elektrische Signal in ein chemisches umgewandelt:
+
+![Chemische Synapse — Vesikelfreisetzung von Neurotransmittern in den synaptischen Spalt](/images/bms/bio-synapse.jpg)
 
 1. **Aktionspotential** erreicht das Axonterminal → spannungsgesteuerte **Ca²⁺-Kanäle** öffnen
 2. Ca²⁺-Einstrom → **SNARE-Komplex** (Synaptobrevin + Syntaxin + SNAP-25) vermittelt Vesikelfusion
@@ -1192,6 +1206,9 @@ Ob Licht, Schall oder Geruch — jeder Reiz muss zunächst in ein elektrisches S
 
 
 **Anatomische Gliederung (prüfungssicher):**
+
+![Aufbau des Ohres mit Außen-, Mittel- und Innenohr sowie Gehörknöchelchen](/images/bms/bio-ohr.jpg)
+
 - **Außenohr**: Ohrmuschel + **Gehörgang** → sammelt Schall → **Trommelfell** (Membrana tympani). **Das Mittelohr wird vom Gehörgang durch das Trommelfell abgegrenzt.**
 - **Mittelohr** (luftgefüllt, **Paukenhöhle**): **Drei** miteinander verbundene **Gehörknöchelchen** (Hammer → Amboss → Steigbügel) → **Impedanzanpassung**. **Ohrtrompete (Tuba auditiva)** verbindet **Paukenhöhle mit dem Rachen** (Druckausgleich). **Ovales Fenster** verbindet **Mittelohr mit Innenohr** (Steigbügel-Fußplatte) — nicht mit der Ohrtrompete!
 - **Innenohr** (flüssigkeitsgefüllt): **Cochlea** (Hören) + **Vestibularapparat** (Gleichgewicht: **Bogengänge**, Utriculus, Sacculus). **Bogengänge liegen im Innenohr** und dienen dem **Gleichgewicht** (Drehbeschleunigung), **nicht** der Schallweiterleitung — Schallweiterleitung erfolgt über Gehörknöchelchen im Mittelohr.
@@ -1204,6 +1221,8 @@ Ob Licht, Schall oder Geruch — jeder Reiz muss zunächst in ein elektrisches S
 4. Basilarmembran-Bewegung → **Stereozilien** der inneren Haarzellen biegen gegen Tektorialmembran → **Tip-Links** spannen
 5. Mechanosensitive **K⁺-Kanäle öffnen** direkt (kein Second Messenger!) → K⁺ strömt aus Endolymphe ein
 6. **K⁺-reiche Endolymphe** (+80 mV, von Stria vascularis produziert) → starke Treibkraft → Haarzelle **depolarisiert** → Ca²⁺ → **Glutamat** → N. cochlearis (Spiralganglion) → Gehirn
+
+![Cochlea-Querschnitt mit Corti-Organ, Basilarmembran, Haarzellen und Tektorialmembran](/images/bms/bio-cochlea.jpg)
 
 > **Merke:** Impedanzanpassung ~22-fach (ohne Mittelohr → 99,9 % Verlust). Tonotopie: Basis = hohe Frequenzen, Apex = niedrige Frequenzen. Haarzellen: Tip-Links öffnen K⁺-Kanäle → Depolarisation durch K⁺ aus K⁺-reicher Endolymphe (+80 mV).
 
@@ -1451,6 +1470,8 @@ Die Nebenniere (Glandula suprarenalis) sitzt kappenförmig auf der Niere und gli
 
 **Nebennierenrinde — Zonengliederung (Merkspruch: „Salz, Zucker, Sex"):**
 
+![Nebennierenrinde mit Zona glomerulosa, Zona fasciculata und Zona reticularis sowie Nebennierenmark](/images/bms/bio-nebenniere.jpg)
+
 | Zone | Hormon(e) | Klasse | Regulation | Klinische Störung |
 |---|---|---|---|---|
 | **Zona glomerulosa** (außen) | **Aldosteron** | Mineralokortikoid | RAAS (Angiotensin II), K⁺ | Conn-Syndrom (↑) |
@@ -1478,6 +1499,8 @@ Die **Langerhans-Inseln** (1–2 % des Pankreasgewebes, ~1 Million Inseln) entha
 - **α-Zellen** (~15–20 %): produzieren **Glukagon** (blutzuckersteigernd)
 - **δ-Zellen** (~5 %): produzieren **Somatostatin** (hemmt Insulin und Glukagon)
 - **PP-Zellen**: pankreatisches Polypeptid (Verdauungsregulation)
+
+![Langerhans-Inseln des Pankreas mit α-Zellen (Glukagon) und β-Zellen (Insulin) im Zentrum](/images/bms/bio-pankreas.jpg)
 
 **Insulin-Sekretionsmechanismus (β-Zelle):** Glukose → GLUT2-Transporter (insulinunabhängig) → Glykolyse → ATP ↑ → ATP-sensitive K⁺-Kanäle (K_ATP) schließen → Membrandepolarisation → spannungsabhängige Ca²⁺-Kanäle öffnen → Ca²⁺-Einstrom → Exozytose der Insulin-Vesikel. Dieser Mechanismus erklärt, warum **Sulfonylharnstoffe** (z. B. Glibenclamid) bei Typ-2-DM wirken: Sie blockieren K_ATP-Kanäle direkt → Insulin-Freisetzung ↑ (unabhängig von Glukose).
 
@@ -1687,12 +1710,16 @@ Das Herz ist ein muskuläres Hohlorgan (~300 g, faustgroß) im Mediastinum (Mitt
 - **Linker Vorhof (LA)**: Empfängt O₂-reiches Blut über 4 Lungenvenen (Vv. pulmonales)
 - **Linker Ventrikel (LV)**: Pumpt O₂-reiches Blut in die Aorta → Körperkreislauf
 
+![Herzoberfläche mit Koronararterien, Vorhöfen, Ventrikeln und den großen Gefäßen](/images/bms/bio-herz-oberflaeche.jpg)
+
 **Wandschichten** (von innen nach außen):
 1. **Endokard** — Endothel + subendotheliales Bindegewebe (glatte Innenfläche → Thromboseprophylaxe)
 2. **Myokard** — Herzmuskulatur (quergestreifte Muskelzellen mit Gap Junctions = funktionelles Synzytium)
 3. **Epikard** — viszerales Blatt des Perikards (seröse Gleitfläche)
 
 Der **Herzbeutel (Perikard)** umgibt das Herz: Epikard (innen) + parietales Blatt (außen) mit der Perikardhöhle dazwischen (~20–50 mL seröse Flüssigkeit → reibungsarme Herzaktion). Bei einer **Herzbeuteltamponade** füllt sich die Perikardhöhle mit Blut/Flüssigkeit → Kompression → Herzstillstand.
+
+![Herzwandschichten im Querschnitt — Endokard, Myokard und Epikard mit Perikard außen](/images/bms/bio-herzwand.jpg)
 
 **Wanddicke und Druckverhältnisse:**
 Der LV hat eine ~3× dickere Wand (~10–15 mm) als der RV (~3–5 mm), weil er gegen den hohen Systemwiderstand pumpt (~120 mmHg systolisch vs. ~25 mmHg im Lungenkreislauf).
@@ -2068,6 +2095,8 @@ Dieser **Bohr-Effekt** ist physiologisch genial: In metabolisch aktivem Gewebe (
 
 **Erythrozyten-Abbau:** Nach ~120 Tagen werden alte Erythrozyten in der **Milz** (und Leber) durch Makrophagen des RES (retikuloendotheliales System) abgebaut: Hämoglobin → Globin (Aminosäuren) + Häm → **Biliverdin** → **unkonjugiertes Bilirubin** (wasserunlöslich, albumingebunden) → Leber (Konjugation mit Glucuronsäure) → **konjugiertes Bilirubin** → Galle → Darm → **Sterkobilin** (braune Stuhlfarbe) + teilweise Rückresorption → **Urobilin** (gelbe Urinfarbe).
 
+![Erythrozyten-Lebenszyklus — Erythropoese im Knochenmark, Zirkulation (120 Tage) und Abbau in der Milz zu Bilirubin](/images/bms/bio-erythrozyten-lebenszyklus.jpg)
+
 > **Merke:** Hb = Tetramer (2α2β), 4 Häm-Gruppen mit Fe²⁺, kooperative Bindung (sigmoidal). Bohr-Effekt: CO₂↑/pH↓/Temp↑/2,3-BPG↑ → Rechtsverschiebung → O₂-Abgabe ↑. CO bindet 200× stärker als O₂ und verschiebt die Kurve nach links. Abbau: Milz → Bilirubin → Leber → Galle.
 
 {{DIAGRAM:hemoglobin-curve}}
@@ -2075,6 +2104,8 @@ Dieser **Bohr-Effekt** ist physiologisch genial: In metabolisch aktivem Gewebe (
 ---
 
 ## Leukozyten — die Immunzellen im Blut
+
+![Hämatopoese — Differenzierung der pluripotenten Stammzelle im Knochenmark zu myeloischer und lymphoider Linie](/images/bms/bio-haematopoese.jpg)
 
 Vom Erythrozyten-Transport gehen wir nun zu den Abwehrzellen über. Leukozyten (weiße Blutkörperchen) sind mit **4.000–10.000/µL** deutlich seltener als Erythrozyten, aber essenziell für die Immunabwehr. Sie werden nach Morphologie und Funktion in drei Hauptgruppen eingeteilt:
 
@@ -2152,6 +2183,8 @@ Die plasmatische Gerinnung stabilisiert den Thrombozytenpfropf durch ein Fibrinn
 Nach der Wundheilung wird der Thrombus wieder abgebaut: **Plasminogen** → **Plasmin** (durch tPA, tissue plasminogen activator) → spaltet Fibrin → **Fibrinspaltprodukte** (D-Dimere). D-Dimere im Labor ↑ = Hinweis auf Thrombose, Lungenembolie, DIC.
 
 **Klinischer Bezug — DIC (Disseminierte intravasale Gerinnung):** Systemische Gerinnungsaktivierung (z. B. bei Sepsis, Trauma) → massiver Verbrauch von Gerinnungsfaktoren und Thrombozyten → paradoxerweise gleichzeitig Mikrothrombosen *und* Blutungsneigung (Verbrauchskoagulopathie). Labor: PT ↑, PTT ↑, Fibrinogen ↓, D-Dimere ↑↑, Thrombozyten ↓.
+
+![Blutgerinnungskaskade — extrinsischer und intrinsischer Weg mit gemeinsamer Endstrecke, Thrombin und Fibrinbildung](/images/bms/bio-blutgerinnung.jpg)
 
 > **Merke:** Primäre Hämostase = Thrombozyten (vWF → GPIb, Fibrinogen → GPIIb/IIIa). Sekundäre = Gerinnungskaskade: Extrinsisch (TF+VII, Quick/PT), Intrinsisch (XII→IX→X, PTT), Endstrecke (Xa+Va → Thrombin → Fibrin). Vitamin K: Faktoren II, VII, IX, X („1972"). Fibrinolyse: Plasmin → D-Dimere.
 
@@ -2622,6 +2655,8 @@ Ohne funktionierendes Lymphsystem sammelt sich diese Flüssigkeit im Gewebe → 
 
 ## Lymphknoten — Architektur, Immunfunktion und Stationen
 
+![Lymphknoten-Aufbau mit Cortex (B-Zellen), Paracortex (T-Zellen), Medulla (Plasmazellen) und afferenten/efferenten Lymphgefäßen](/images/bms/bio-lymphknoten.jpg)
+
 Der Lymphknoten filtert Lymphe und initiiert Immunantworten. Seine zonale Architektur trennt B- und T-Zell-Areale präzise:
 
 - **Cortex** (Rinde): **B-Zellen** in Follikeln (Primärfollikel: ruhend; Sekundärfollikel mit Keimzentrum: aktiv → Antikörper-Produktion). Hier entsteht die humorale Immunantwort
@@ -2784,12 +2819,16 @@ Der Lymphknoten filtert Lymphe und initiiert Immunantworten. Seine zonale Archit
 
 {{DIAGRAM:atmungssystem}}
 
+![Lunge — Aufbau mit Lungenlappen, Pleura, Hilusstrukturen und Beziehung zum Herz-Kreislauf-System](/images/bms/bio-lunge.jpg)
+
 Die Atemluft durchläuft auf ihrem Weg zu den Alveolen eine zunehmend feinere Verzweigung. Die **Trachea** (Luftröhre, ~10–12 cm lang) wird von **16–20 hufeisenförmigen Knorpelspangen** (C-Knorpel, dorsal offen → Paries membranaceus mit glatter Muskulatur) offengehalten. Sie teilt sich an der **Bifurcatio tracheae** (Höhe Th4/5) in die beiden **Hauptbronchien**:
 
 - **Rechter Hauptbronchus**: Steiler, kürzer, weiter → **Aspiration geht häufiger rechts** (besonders rechter Unterlappen)
 - **Linker Hauptbronchus**: Flacher abgehend (Aortenbogen kreuzt darüber)
 
 Die Bronchien verzweigen sich über ~23 Generationen:
+
+![Trachea und Bronchialbaum — Aufzweigung in Haupt-, Lappen- und Segmentbronchien mit C-Knorpelspangen](/images/bms/bio-trachea.jpg)
 
 | Generation | Struktur | Kennzeichen |
 |---|---|---|
@@ -2806,6 +2845,8 @@ Die Bronchien verzweigen sich über ~23 Generationen:
 ---
 
 ## Surfactant und Alveolarstruktur
+
+![Alveole im Querschnitt — Typ-I- und Typ-II-Pneumozyten, Surfactant, Alveolarmakrophagen und Blut-Luft-Schranke](/images/bms/bio-alveolen.jpg)
 
 **Gasaustausch findet in den Alveolen statt, nicht in den Bronchien.** Die Bronchien leiten die Luft; der eigentliche O₂/CO₂-Austausch erfolgt in den **Alveolen**. Die ~300 Millionen Alveolen sind die funktionellen Einheiten des Gasaustauschs. Ihre Wand besteht aus zwei Pneumozytentypen:
 - **Typ-I-Pneumozyten** (~95 % der Oberfläche): Hauchfein (0,2 µm), ermöglichen den Gasaustausch
@@ -3008,6 +3049,8 @@ Das **Atemzentrum** liegt in der **Medulla oblongata** und im **Pons**. Es gener
 
 Die Verdauung beginnt bereits in der **Mundhöhle**: Mechanische Zerkleinerung (Kauen) und Benetzung mit Speichel (~1–1,5 L/Tag). Die **Speichel-Amylase** (Ptyalin) spaltet Stärke zu Maltose und Dextrinen — die Kohlenhydratverdauung beginnt also im Mund. Der Bolus gelangt über den **Ösophagus** (Speiseröhre, ~25 cm) durch **Peristaltik** (koordinierte Kontraktion: Längsmuskulatur → Ringmuskulatur, gesteuert vom Plexus myentericus = Auerbach) in den Magen. Der untere Ösophagussphinkter (UÖS) verhindert Reflux.
 
+![GI-Trakt-Wandschichten — Mukosa, Submukosa, Muscularis propria und Serosa im Querschnitt](/images/bms/bio-gi-trakt-schichten.jpg)
+
 **Magen-Abschnitte:** Kardia (Eingang) → Fundus (Kuppel, Gasblase) → Corpus (Hauptteil, Beleg- und Hauptzellen) → Antrum (G-Zellen, Gastrin) → Pylorus (Pförtner, reguliert Magenentleerung). Verweildauer: Kohlenhydrate ~1–2 h, Proteine ~3–4 h, Fette ~5–6 h (Fett hemmt Magenentleerung via CCK).
 
 **Dünndarm** (~5–6 m, Hauptort der Verdauung und Resorption):
@@ -3024,6 +3067,8 @@ Die Verdauung beginnt bereits in der **Mundhöhle**: Mechanische Zerkleinerung (
 ---
 
 ## Magen — Sekretion und Regulation
+
+![Magen-Anatomie mit Kardia, Fundus, Corpus, Antrum und Pylorus sowie Belegzellen und Magendrüsen](/images/bms/bio-magen.jpg)
 
 Der Magen produziert täglich bis zu 3 Liter Magensaft mit einem pH von 1–2 — stark genug, um Bakterien abzutöten und Proteine zu denaturieren. Die Magenschleimhaut enthält fünf spezialisierte Zelltypen mit klar definierten Aufgaben:
 
@@ -3061,6 +3106,8 @@ Der Magen produziert täglich bis zu 3 Liter Magensaft mit einem pH von 1–2 �
 ---
 
 ## Resorption im Dünndarm — Mikrovilli und Transporter
+
+![Dünndarm-Zotte mit Mikrovilli, Blutkapillarnetz und zentralem Chylusgefäß — Resorptionsfläche ~200 m²](/images/bms/bio-duenndarm.jpg)
 
 Die enorme Resorptionsfläche des Dünndarms (~200 m²) entsteht durch drei Ebenen der Oberflächenvergrößerung: **Kerckring-Falten** (Plicae circulares, ~3×) → **Zotten** (Villi, ~10×) → **Mikrovilli** (Bürstensaum, ~20×). Jede Zotte enthält ein Blutkapillarnetz und ein zentrales **Lymphgefäß** (Chylusgefäß) für den Fetttransport.
 
@@ -3221,6 +3268,8 @@ Die **Leber** (größte Drüse, ~1,5 kg) hat eine einzigartige doppelte Blutvers
 
 {{DIAGRAM:nephron}}
 
+![Nephron-Blutfluss — afferente und efferente Arteriole, Glomerulus, peritubuläre Kapillaren und Vasa recta](/images/bms/bio-nephron-blutfluss.jpg)
+
 Jede Niere enthält ca. **1 Million Nephrone**. Ein einzelnes Nephron besteht aus:
 
 1. **Nierenkörperchen (Glomerulus + Bowman-Kapsel)** — hier wird filtriert
@@ -3343,6 +3392,8 @@ Die **Renin-Angiotensin-Aldosteron-System (RAAS)**-Kaskade ist der wichtigste la
 ---
 
 ## Ableitende Harnwege
+
+![Harnblase mit Urothel, Detrusormuskel, innerem und äußerem Sphinkter sowie Harnleiter-Einmündungen](/images/bms/bio-harnblase.jpg)
 
 Der fertige Urin verlässt die Niere über: **Nierenbecken (Pelvis renalis) → Harnleiter (Ureter) → Harnblase (Vesica urinaria) → Harnröhre (Urethra)**.
 

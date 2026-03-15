@@ -27,7 +27,7 @@ Die Basen der beiden Stränge paaren sich nach festen Regeln: A immer mit T (zwe
 
 > **Merke:** **Chargaff-Regel:** A = T und G = C (in Prozent). Wenn A = 27 % → T = 27 %, G = C = 23 %.
 
-{{IMAGE}}
+![DNA-Nukleotidaufbau: Zucker, Phosphat und Nukleobase als Bausteine der Doppelhelix](/images/bms/bio-dna-nukleotide.jpg)
 
 ---
 
@@ -1841,6 +1841,8 @@ Die reife mRNA wird dann durch die **Kernporen** ins Zytoplasma exportiert.
 
 > **Merke:** Transkription = DNA → mRNA im Zellkern (RNA-Polymerase). Basen: A, U, G, C (U statt T). Eukaryoten: Capping, Polyadenylierung, Spleißen. Matrizenstrang 3'→5', mRNA wächst 5'→3'.
 
+![Transkription: RNA-Polymerase liest den Matrizenstrang und synthetisiert die komplementäre mRNA](/images/bms/bio-transkription.jpg)
+
 ---
 
 ## Der genetische Code
@@ -1878,6 +1880,8 @@ Die Translation benötigt: **mRNA** (Vorlage), **Ribosomen** (Übersetzungsmasch
 **Polyribosomen (Polysomen):** Mehrere Ribosomen können gleichzeitig dieselbe mRNA ablesen → effiziente Proteinproduktion.
 
 > **Merke:** Translation = mRNA → Protein an Ribosomen im Zytoplasma. tRNA bringt Aminosäuren (Anticodon erkennt Codon). Initiation (AUG) → Elongation (Peptidbindung) → Termination (Stoppcodon). Polypeptid faltet sich zum funktionellen Protein.
+
+![Translation: Ribosom liest mRNA-Codons, tRNA bringt passende Aminosäuren zur Proteinbiosynthese](/images/bms/bio-translation.jpg)
 
 ---
 
