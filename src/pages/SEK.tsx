@@ -121,133 +121,130 @@ export default function SEK() {
       id: "erkennen" as const,
       abbr: "EE",
       title: "Emotionen erkennen",
-      desc: "Lies eine Situation und entscheide: Ist jede der 5 Emotionen wahrscheinlich oder unwahrscheinlich?",
-      meta: `${emotionenErkennenOffiziellAlle.length} Situationen | Alles-oder-Nichts-Wertung`,
+      format:
+        "Du liest eine Situation und bewertest für jede der 5 Emotionen: wahrscheinlich oder unwahrscheinlich?",
+      tip: "Alle 5 Emotionen müssen korrekt sein — Alles-oder-Nichts",
       taskCount: emotionenErkennenOffiziellAlle.length,
-      buttonLabel: "14 Aufgaben",
       onStart: () => setView("erkennen-quiz"),
       uebungId: "sek-emotionen-erkennen" as const,
       instruction: OFFICIAL_EE_INSTRUCTION,
       instructionTitle: "Offizielle Instruktion: Emotionen erkennen",
+      color: "#ec4899",
     },
     {
       id: "regulieren" as const,
       abbr: "ER",
       title: "Emotionen regulieren",
-      desc: "Wähle die beste Bewältigungsstrategie aus 4 Optionen für die beschriebene Situation.",
-      meta: `${emotionenRegulierenOffiziellTasks.length} Szenarien | Prozentuale Wertung`,
+      format:
+        "Eine Person beschreibt eine belastende Situation — du wählst die beste Bewältigungsstrategie (A–D).",
+      tip: "Strategie mit dem höchsten Expertenwert gewinnt",
       taskCount: emotionenRegulierenOffiziellTasks.length,
-      buttonLabel: "12 Aufgaben",
       onStart: () => setView("regulieren-quiz"),
       uebungId: "sek-emotionen-regulieren" as const,
       instruction: OFFICIAL_ER_INSTRUCTION,
       instructionTitle: "Offizielle Instruktion: Emotionen regulieren",
+      color: "#f59e0b",
     },
     {
       id: "entscheiden" as const,
       abbr: "SE",
       title: "Soziales Entscheiden",
-      desc: "Ordne 5 Handlungsoptionen (A-E) nach ihrer Wichtigkeit in einer sozialen Situation.",
-      meta: `${sozialesEntscheidenTasks.length} Situationen | 14 Aufgaben, 21 Min`,
+      format:
+        "Ordne 5 Handlungsoptionen (A–E) von wichtigster zu unwichtigster in einer sozialen Situation.",
+      tip: "Rangfolge zählt — je näher an der Expertenlösung, desto mehr Punkte",
       taskCount: sozialesEntscheidenTasks.length,
-      buttonLabel: "14 Aufgaben",
       onStart: () => setView("entscheiden-quiz"),
       uebungId: "sek-soziales-entscheiden" as const,
       instruction: OFFICIAL_SE_INSTRUCTION,
       instructionTitle: "Offizielle Instruktion: Soziales Entscheiden",
+      color: "#3b82f6",
     },
   ];
 
   return (
-    <div className="max-w-5xl mx-auto space-y-6">
+    <div className="max-w-5xl mx-auto space-y-8">
       <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "SEK" }]} />
 
+      {/* Hero */}
       <div className="hero-orbs text-center">
-        <h1 className="text-2xl font-bold" style={{ color: "var(--foreground)" }}>
-          SEK — Sozial-emotionale Kompetenzen
-        </h1>
-        <p className="text-sm mt-1" style={{ color: "var(--muted)" }}>
-          Trainiere die drei SEK-Untertests: Emotionen erkennen, regulieren und soziales
-          Entscheiden.
+        <div className="flex items-center justify-center gap-3 mb-2">
+          <h1 className="text-2xl font-bold text-[var(--text-primary)]">
+            Sozial-emotionale Kompetenzen
+          </h1>
+          <span className="text-xs font-semibold text-[var(--accent)] bg-[var(--accent)]/10 px-2.5 py-1 rounded-full">
+            20% des MedAT
+          </span>
+        </div>
+        <p className="text-sm text-[var(--muted)] max-w-2xl leading-relaxed">
+          3 Untertests zu Emotionserkennung, Emotionsregulation und sozialem Entscheiden. Basiert
+          auf den 7 Basisemotionen nach Ekman.
         </p>
         {dailyPlanSek != null && dailyPlanSek.length > 0 && (
-          <Badge variant="info" className="mt-2 text-xs font-normal">
+          <div className="text-xs text-[var(--accent)] font-medium mt-2">
             Lernplan heute:{" "}
             {dailyPlanSek
               .map((t) => `${t.label}: ${t.count} ${t.count === 1 ? "Beispiel" : "Beispiele"}`)
               .join(", ")}
-          </Badge>
+          </div>
         )}
       </div>
 
-      {/* Strategy Guide */}
-      <Card className="card-glass">
-        <CardContent className="p-5 flex items-center justify-between gap-4">
-          <div className="flex items-center gap-3">
-            <div
-              className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0"
-              style={{ backgroundColor: "color-mix(in srgb, var(--accent) 15%, transparent)" }}
-            >
-              <BookOpen className="w-5 h-5" style={{ color: "var(--accent)" }} />
-            </div>
-            <div>
-              <h3 className="font-semibold" style={{ color: "var(--foreground)" }}>
-                Strategie-Guide
-              </h3>
-              <p className="text-sm" style={{ color: "var(--muted)" }}>
-                Die 7 Basisemotionen und Strategien für alle 3 Untertests
-              </p>
-            </div>
-          </div>
-          <Button variant="outline" onClick={() => setView("strategy")} className="shrink-0">
-            <BookOpen className="w-4 h-4 mr-2" /> Lesen
-          </Button>
-        </CardContent>
-      </Card>
+      {/* Strategy hint — inline, not a separate card */}
+      <button
+        onClick={() => setView("strategy")}
+        className="w-full flex items-center gap-3 bg-[var(--accent)]/5 border border-[var(--accent)]/15 rounded-xl px-4 py-3 text-left cursor-pointer hover:bg-[var(--accent)]/8 transition-colors"
+      >
+        <BookOpen className="w-4 h-4 text-[var(--accent)] shrink-0" />
+        <span className="text-sm text-[var(--text-secondary)]">
+          <span className="font-semibold text-[var(--text-primary)]">Strategie-Guide:</span> Die 7
+          Basisemotionen und Lösungsstrategien für alle 3 Untertests
+        </span>
+        <span className="text-xs text-[var(--accent)] ml-auto shrink-0">Lesen →</span>
+      </button>
 
       {/* Subtest Cards */}
-      <div className="space-y-6 stagger-children">
+      <div className="space-y-4">
         {subtests.map((s) => (
-          <div key={s.id} className="space-y-2">
-            <Card className="card-glass">
-              <CardContent className="p-6">
-                <div className="flex items-start gap-4">
-                  <div
-                    className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0"
-                    style={{
-                      backgroundColor: "color-mix(in srgb, var(--accent) 15%, transparent)",
-                    }}
+          <div key={s.id} className="card-glass p-5">
+            <div className="flex items-start gap-4">
+              {/* Color bar */}
+              <div
+                className="w-1 self-stretch rounded-full shrink-0"
+                style={{ background: s.color }}
+              />
+
+              <div className="flex-1 min-w-0">
+                {/* Title + abbr */}
+                <div className="flex items-center gap-2 mb-1">
+                  <h3 className="font-semibold text-[var(--text-primary)]">{s.title}</h3>
+                  <span
+                    className="text-[10px] font-bold px-1.5 py-0.5 rounded"
+                    style={{ background: `${s.color}15`, color: s.color }}
                   >
-                    <span className="text-sm font-bold" style={{ color: "var(--accent)" }}>
-                      {s.abbr}
-                    </span>
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <h3 className="text-lg font-semibold" style={{ color: "var(--foreground)" }}>
-                      {s.title}
-                    </h3>
-                    <p className="text-sm mt-1" style={{ color: "var(--muted)" }}>
-                      {s.desc}
-                    </p>
-                    <p className="text-xs mt-2 opacity-70" style={{ color: "var(--muted)" }}>
-                      {s.meta}
-                    </p>
-                  </div>
+                    {s.abbr}
+                  </span>
+                  <span className="text-[10px] text-[var(--muted)]">{s.taskCount} Aufgaben</span>
+                </div>
+
+                {/* Format explanation */}
+                <p className="text-sm text-[var(--text-secondary)] mb-1.5">{s.format}</p>
+
+                {/* Scoring tip */}
+                <p className="text-xs text-[var(--muted)] mb-3">Wertung: {s.tip}</p>
+
+                {/* Actions */}
+                <div className="flex items-center gap-2">
                   <Button
                     variant="premium"
-                    className="shrink-0"
+                    size="sm"
                     onClick={s.onStart}
                     disabled={s.taskCount === 0}
                   >
-                    <Play className="w-4 h-4 mr-1.5" />
-                    {s.taskCount > 0 ? s.buttonLabel : "Daten fehlen"}
+                    <Play className="w-4 h-4 mr-1" /> Üben
                   </Button>
+                  <OfficialInstructionCard title={s.instructionTitle} instruction={s.instruction} />
                 </div>
-              </CardContent>
-            </Card>
-            <div className="grid grid-cols-2 gap-2 pl-2">
-              <UebungsbeschreibungCard id={s.uebungId} collapsible defaultCollapsed />
-              <OfficialInstructionCard title={s.instructionTitle} instruction={s.instruction} />
+              </div>
             </div>
           </div>
         ))}
@@ -328,7 +325,7 @@ function EmotionenErkennenQuiz({
           <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
         </Button>
         <h1 className="text-2xl font-bold text-[var(--text-primary)]">Emotionen erkennen</h1>
-        <div className="grid gap-4 sm:grid-cols-2">
+        <div className="grid gap-4 grid-cols-2">
           <Card
             className={`cursor-pointer border-2 transition-colors ${examMode === "exam" ? "border-[var(--accent)]" : "border-transparent hover:border-[var(--accent)]/30"}`}
             onClick={() => setExamMode("exam")}
@@ -448,11 +445,11 @@ function EmotionenErkennenQuiz({
       {examMode === "exam" && (
         <ExamTimer totalSeconds={eeConfig.timeSeconds} onTimeUp={handleSubmit} />
       )}
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+      <div className="flex items-center justify-between gap-2">
         <Button variant="ghost" size="sm" onClick={onBack}>
           <ArrowLeft className="w-4 h-4 mr-1" /> Abbrechen
         </Button>
-        <div className="flex flex-col sm:flex-row sm:items-center gap-2">
+        <div className="flex items-center gap-2">
           <Badge className="bg-pink-100 dark:bg-pink-900/30 text-pink-700 dark:text-pink-400 w-fit">
             Emotionen erkennen
           </Badge>
@@ -488,7 +485,7 @@ function EmotionenErkennenQuiz({
               return (
                 <div
                   key={e.id}
-                  className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 p-3 rounded-lg border border-[var(--border)]"
+                  className="flex items-center justify-between gap-3 p-3 rounded-lg border border-[var(--border)]"
                 >
                   <span className="text-sm font-medium text-[var(--text-primary)]">
                     ({e.id}) {e.text}
@@ -531,13 +528,13 @@ function EmotionenErkennenQuiz({
           </div>
         </CardContent>
       </Card>
-      <div className="flex flex-col sm:flex-row justify-between gap-2">
+      <div className="flex justify-between gap-2">
         {examMode === "practice" ? (
           <Button
             variant="outline"
             onClick={() => setIndex((i) => i - 1)}
             disabled={index === 0}
-            className="w-full sm:w-auto"
+            className="w-auto"
           >
             <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
           </Button>
@@ -545,15 +542,11 @@ function EmotionenErkennenQuiz({
           <div />
         )}
         {index < questions.length - 1 ? (
-          <Button onClick={() => setIndex((i) => i + 1)} className="w-full sm:w-auto">
+          <Button onClick={() => setIndex((i) => i + 1)} className="w-auto">
             Weiter <ArrowRight className="w-4 h-4 ml-1" />
           </Button>
         ) : (
-          <Button
-            onClick={handleSubmit}
-            disabled={!allQuestionsAnswered}
-            className="w-full sm:w-auto"
-          >
+          <Button onClick={handleSubmit} disabled={!allQuestionsAnswered} className="w-auto">
             <Send className="w-4 h-4 mr-1" /> Auswertung
           </Button>
         )}
@@ -621,7 +614,7 @@ function EmotionenRegulierenQuiz({
           <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
         </Button>
         <h1 className="text-2xl font-bold text-[var(--text-primary)]">Emotionen regulieren</h1>
-        <div className="grid gap-4 sm:grid-cols-2">
+        <div className="grid gap-4 grid-cols-2">
           <Card
             className={`cursor-pointer border-2 transition-colors ${examMode === "exam" ? "border-[var(--accent)]" : "border-transparent hover:border-[var(--accent)]/30"}`}
             onClick={() => setExamMode("exam")}
@@ -743,11 +736,11 @@ function EmotionenRegulierenQuiz({
       {examMode === "exam" && (
         <ExamTimer totalSeconds={erConfig.timeSeconds} onTimeUp={handleSubmit} />
       )}
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+      <div className="flex items-center justify-between gap-2">
         <Button variant="ghost" size="sm" onClick={onBack}>
           <ArrowLeft className="w-4 h-4 mr-1" /> Abbrechen
         </Button>
-        <div className="flex flex-col sm:flex-row sm:items-center gap-2">
+        <div className="flex items-center gap-2">
           <Badge className="bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 w-fit">
             Emotionen regulieren
           </Badge>
@@ -804,13 +797,13 @@ function EmotionenRegulierenQuiz({
           </div>
         </CardContent>
       </Card>
-      <div className="flex flex-col sm:flex-row justify-between gap-2">
+      <div className="flex justify-between gap-2">
         {examMode === "practice" ? (
           <Button
             variant="outline"
             onClick={() => setIndex((i) => i - 1)}
             disabled={index === 0}
-            className="w-full sm:w-auto"
+            className="w-auto"
           >
             <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
           </Button>
@@ -818,11 +811,11 @@ function EmotionenRegulierenQuiz({
           <div />
         )}
         {index < questions.length - 1 ? (
-          <Button onClick={() => setIndex((i) => i + 1)} className="w-full sm:w-auto">
+          <Button onClick={() => setIndex((i) => i + 1)} className="w-auto">
             Weiter <ArrowRight className="w-4 h-4 ml-1" />
           </Button>
         ) : (
-          <Button onClick={handleSubmit} disabled={!allAnswered} className="w-full sm:w-auto">
+          <Button onClick={handleSubmit} disabled={!allAnswered} className="w-auto">
             <Send className="w-4 h-4 mr-1" /> Auswertung
           </Button>
         )}
@@ -925,7 +918,7 @@ function SozialesEntscheidenQuiz({
           <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
         </Button>
         <h1 className="text-2xl font-bold text-[var(--text-primary)]">Soziales Entscheiden</h1>
-        <div className="grid gap-4 sm:grid-cols-2">
+        <div className="grid gap-4 grid-cols-2">
           <Card
             className={`cursor-pointer border-2 transition-colors ${examMode === "exam" ? "border-[var(--accent)]" : "border-transparent hover:border-[var(--accent)]/30"}`}
             onClick={() => setExamMode("exam")}
@@ -1161,11 +1154,11 @@ function SozialesEntscheidenQuiz({
       {examMode === "exam" && (
         <ExamTimer totalSeconds={seConfig.timeSeconds} onTimeUp={handleSubmit} />
       )}
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+      <div className="flex items-center justify-between gap-2">
         <Button variant="ghost" size="sm" onClick={onBack}>
           <ArrowLeft className="w-4 h-4 mr-1" /> Abbrechen
         </Button>
-        <div className="flex flex-col sm:flex-row sm:items-center gap-2">
+        <div className="flex items-center gap-2">
           <Badge className="bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 w-fit">
             Soziales Entscheiden
           </Badge>
@@ -1261,13 +1254,13 @@ function SozialesEntscheidenQuiz({
           </div>
         </CardContent>
       </Card>
-      <div className="flex flex-col sm:flex-row justify-between gap-2">
+      <div className="flex justify-between gap-2">
         {examMode === "practice" ? (
           <Button
             variant="outline"
             onClick={() => setIndex((i) => i - 1)}
             disabled={index === 0}
-            className="w-full sm:w-auto"
+            className="w-auto"
           >
             <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
           </Button>
@@ -1275,15 +1268,11 @@ function SozialesEntscheidenQuiz({
           <div />
         )}
         {index < questions.length - 1 ? (
-          <Button onClick={() => setIndex((i) => i + 1)} className="w-full sm:w-auto">
+          <Button onClick={() => setIndex((i) => i + 1)} className="w-auto">
             Weiter <ArrowRight className="w-4 h-4 ml-1" />
           </Button>
         ) : (
-          <Button
-            onClick={handleSubmit}
-            disabled={!allQuestionsRanked}
-            className="w-full sm:w-auto"
-          >
+          <Button onClick={handleSubmit} disabled={!allQuestionsRanked} className="w-auto">
             <Send className="w-4 h-4 mr-1" /> Auswertung
           </Button>
         )}

@@ -437,7 +437,7 @@ export default function TV() {
     const allAnswered = allSetQuestions.every((q) => mcAnswers[q.id] !== undefined);
 
     return (
-      <div className="max-w-6xl mx-auto space-y-6">
+      <div className="max-w-5xl mx-auto space-y-6">
         <div className="flex items-center justify-between gap-2">
           <Button variant="ghost" size="sm" onClick={() => setView("overview")}>
             <ArrowLeft className="w-4 h-4 mr-1" /> Abbrechen
@@ -709,46 +709,45 @@ export default function TV() {
     <div className="max-w-5xl mx-auto space-y-8">
       <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "TV" }]} />
 
-      {/* Header */}
+      {/* Hero */}
       <div className="hero-orbs text-center">
-        <h1 className="text-2xl font-bold text-[var(--foreground)]">TV — Textverständnis</h1>
-        <p className="text-[var(--muted)] mt-1">
-          5 Texte lesen, Fragen beantworten — wie im echten MedAT.
+        <div className="flex items-center justify-center gap-3 mb-2">
+          <h1 className="text-2xl font-bold text-[var(--text-primary)]">Textverständnis</h1>
+          <span className="text-xs font-semibold text-[var(--accent)] bg-[var(--accent)]/10 px-2.5 py-1 rounded-full">
+            10% des MedAT
+          </span>
+        </div>
+        <p className="text-sm text-[var(--muted)] max-w-2xl leading-relaxed">
+          Du liest 5 Texte und beantwortest danach Multiple-Choice-Fragen dazu. Im MedAT hast du 35
+          Minuten für alle Texte — übe, schnell die Kernaussagen zu erfassen.
         </p>
         {dailyPlanTvTexts != null && dailyPlanTvTexts > 0 && (
-          <p className="text-sm text-[var(--accent)]/60 mt-2 font-medium">
+          <div className="text-xs text-[var(--accent)] font-medium mt-2">
             Lernplan heute: {dailyPlanTvTexts} Text{dailyPlanTvTexts > 1 ? "e" : ""}
-          </p>
+          </div>
         )}
       </div>
 
-      {/* Strategy Guide */}
-      <Card className="card-glass">
-        <CardContent className="p-5 flex items-center justify-between gap-4">
-          <div className="flex items-start gap-3">
-            <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center shrink-0">
-              <BookOpen className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-            </div>
-            <div>
-              <h3 className="font-semibold text-[var(--foreground)]">Strategie-Guide</h3>
-              <p className="text-sm text-[var(--muted)]">
-                Lerne die beste Vorgehensweise für TV-Aufgaben
-              </p>
-            </div>
-          </div>
-          <Button variant="outline" onClick={() => setView("strategy")} className="shrink-0">
-            <BookOpen className="w-4 h-4 mr-2" /> Lesen
-          </Button>
-        </CardContent>
-      </Card>
+      {/* Strategy hint */}
+      <button
+        onClick={() => setView("strategy")}
+        className="w-full flex items-center gap-3 bg-[var(--accent)]/5 border border-[var(--accent)]/15 rounded-xl px-4 py-3 text-left cursor-pointer hover:bg-[var(--accent)]/8 transition-colors"
+      >
+        <BookOpen className="w-4 h-4 text-[var(--accent)] shrink-0" />
+        <span className="text-sm text-[var(--text-secondary)]">
+          <span className="font-semibold text-[var(--text-primary)]">Strategie-Guide:</span>{" "}
+          Lesetechniken, Zeitmanagement und die beste Vorgehensweise für TV
+        </span>
+        <span className="text-xs text-[var(--accent)] ml-auto shrink-0">Lesen →</span>
+      </button>
 
-      {/* MC Text Sets */}
+      {/* MC Text Sets — primary section */}
       {allTextSets.length > 0 && (
         <section className="space-y-4">
           <div>
-            <h2 className="text-lg font-semibold text-[var(--foreground)]">Testsets</h2>
+            <h2 className="text-lg font-semibold text-[var(--text-primary)]">Testsets</h2>
             <p className="text-sm text-[var(--muted)] mt-0.5">
-              Multiple-Choice Sets mit je 5 Texten — wie im echten MedAT
+              Je 5 Texte mit Multiple-Choice-Fragen — das Hauptformat zum Üben
             </p>
           </div>
           <div className="grid grid-cols-2 gap-4 stagger-children">

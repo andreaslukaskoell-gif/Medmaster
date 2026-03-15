@@ -204,130 +204,144 @@ export default function KFF() {
     {
       id: "zahlenfolgen" as const,
       title: "Zahlenfolgen",
-      desc: "Erkenne das Muster und finde die nächste Zahl. Unendlich viele geprüfte Trainingsaufgaben.",
+      format: "Zahlenreihe mit Lücke — erkenne das Muster, finde die nächste Zahl",
+      example: "2, 5, 11, 23, ?",
+      badge: "10.000+",
       strategyKey: "zahlenfolgen" as StrategyKey,
       startView: "zahlenfolgen" as KffView,
-      color: "bg-[var(--accent)]/10",
-      textColor: "text-[var(--accent)]",
-      badge: "10.000+",
+      icon: "chart",
+      color: "#3b82f6",
     },
     {
       id: "gedaechtnis" as const,
-      title: "Gedächtnis & Merkfähigkeit (Allergiepässe)",
-      desc: "Lernphase: Allergieausweise einprägen. Prüfphase: Fragen A–E wie im MedAT.",
+      title: "Gedächtnis & Merkfähigkeit",
+      format: "Allergieausweise einprägen, dann Fragen dazu beantworten (A–E)",
+      example: "8 Ausweise → 25 Min. lernen → 20 Fragen",
+      badge: "MedAT-Format",
       strategyKey: "gedaechtnis" as StrategyKey,
       startView: "gedaechtnis-setup" as KffView,
-      color: "bg-[var(--accent)]/10",
-      textColor: "text-[var(--accent)]",
-      badge: "MedAT-Format",
+      icon: "chart",
+      color: "#10b981",
     },
     {
       id: "implikationen" as const,
       title: "Implikationen erkennen",
-      desc: "Kategorische Syllogismen: Alle/Einige/Kein — finde die korrekte Schlussfolgerung (A-E).",
+      format: "Aus Prämissen (Alle/Einige/Keine) die korrekte Schlussfolgerung wählen",
+      example: "Alle A sind B. Einige B sind C. → ?",
       badge: "10.000+",
       strategyKey: "implikationen" as StrategyKey,
       startView: "implikationen" as KffView,
-      color: "bg-[var(--accent)]/10",
-      textColor: "text-[var(--accent)]",
+      icon: "chart",
+      color: "#8b5cf6",
     },
     {
       id: "wortflüssigkeit" as const,
       title: "Wortflüssigkeit",
-      desc: "Erkenne das Wort aus den vertauschten Buchstaben. Mit welchem Buchstaben beginnt es?",
+      format: "Buchstaben sind vertauscht — finde das richtige Wort und seinen Anfangsbuchstaben",
+      example: "FKARE → FARKE? KRAFE? → Antwort: K",
+      badge: "930+",
       strategyKey: "wortflüssigkeit" as StrategyKey,
       startView: "wortflüssigkeit" as KffView,
-      color: "bg-[var(--accent)]/10",
-      textColor: "text-[var(--accent)]",
-      badge: "930+ Aufgaben",
+      icon: "chart",
+      color: "#f59e0b",
     },
     {
       id: "figuren" as const,
       title: "Figuren zusammensetzen",
-      desc: "Welche Figur entsteht aus den Puzzleteilen? Trainiere räumliches Vorstellungsvermögen.",
+      format: "Puzzleteile im Kopf zusammenfügen — welche Figur entsteht?",
+      example: "3–5 Teile → 1 aus 5 Figuren wählen",
+      badge: "10.000+",
       strategyKey: "figuren" as StrategyKey,
       startView: "figuren-quiz" as KffView,
-      color: "bg-[var(--accent)]/10",
-      textColor: "text-[var(--accent)]",
       icon: "puzzle",
-      badge: "10.000+",
+      color: "#ec4899",
     },
   ];
 
   return (
-    <div className="max-w-5xl mx-auto space-y-6">
+    <div className="max-w-4xl mx-auto space-y-8">
       <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "KFF" }]} />
-      <div className="hero-orbs text-center">
-        <h1 className="text-2xl font-bold text-[var(--text-primary)]">
-          KFF - Kognitive Fähigkeiten
-        </h1>
-        <p className="text-[var(--muted)] mt-1">
-          Trainiere Zahlenfolgen, Gedächtnis, logisches Denken und Wortflüssigkeit.
+
+      {/* Hero */}
+      <div>
+        <div className="flex items-center gap-3 mb-2">
+          <h1 className="text-2xl font-bold text-[var(--text-primary)]">
+            Kognitive Fähigkeiten & Fertigkeiten
+          </h1>
+          <span className="text-xs font-semibold text-[var(--accent)] bg-[var(--accent)]/10 px-2.5 py-1 rounded-full">
+            40% des MedAT
+          </span>
+        </div>
+        <p className="text-sm text-[var(--muted)] max-w-2xl leading-relaxed">
+          5 Aufgabentypen, die logisches Denken, Merkfähigkeit und räumliches Vorstellungsvermögen
+          prüfen. Jeder Untertest wird separat gewertet — trainiere alle regelmäßig.
         </p>
-        <Badge variant="info" className="mt-2 text-xs font-normal">
-          An dein Level angepasst
-        </Badge>
       </div>
-      <div className="grid grid-cols-3 gap-4 stagger-children">
+
+      {/* Module cards */}
+      <div className="space-y-4">
         {modules.map((m) => (
-          <Card key={m.id} className="card-glass">
-            <CardContent className="p-5">
-              <div className="flex items-start gap-3 mb-3">
-                <div
-                  className={`w-10 h-10 ${m.color} rounded-xl flex items-center justify-center shrink-0`}
-                >
-                  {m.icon === "puzzle" ? (
-                    <Puzzle className={`w-5 h-5 ${m.textColor}`} />
-                  ) : (
-                    <BarChart3 className={`w-5 h-5 ${m.textColor}`} />
-                  )}
+          <div
+            key={m.id}
+            className="bg-[var(--surface)] rounded-xl border border-[var(--border)] p-5"
+          >
+            <div className="flex items-start gap-4">
+              {/* Color bar */}
+              <div
+                className="w-1 self-stretch rounded-full shrink-0"
+                style={{ background: m.color }}
+              />
+
+              <div className="flex-1 min-w-0">
+                {/* Title row */}
+                <div className="flex items-center gap-2 mb-1">
+                  <h3 className="font-semibold text-[var(--text-primary)]">{m.title}</h3>
+                  <span
+                    className="text-[10px] font-semibold px-2 py-0.5 rounded-full"
+                    style={{ background: `${m.color}15`, color: m.color }}
+                  >
+                    {m.badge}
+                  </span>
                 </div>
-                <div>
-                  <div className="flex items-center gap-2">
-                    <h3 className="font-semibold text-[var(--text-primary)]">{m.title}</h3>
-                    {m.badge && (
-                      <Badge variant="info" className="text-[10px]">
-                        {m.badge}
-                      </Badge>
-                    )}
-                  </div>
-                  <p className="text-sm text-[var(--muted)] mt-0.5">{m.desc}</p>
+
+                {/* Format explanation */}
+                <p className="text-sm text-[var(--text-secondary)] mb-2">{m.format}</p>
+
+                {/* Example */}
+                <div className="text-xs text-[var(--muted)] bg-[var(--background)] rounded-lg px-3 py-1.5 inline-block font-mono mb-3">
+                  {m.example}
                 </div>
-              </div>
-              <div className="flex gap-2">
-                <Button
-                  variant="outline"
-                  size="sm"
-                  onClick={() => {
-                    setStrategyKey(m.strategyKey);
-                    setView("strategy");
-                  }}
-                >
-                  <BookOpen className="w-4 h-4 mr-1" /> Strategie
-                </Button>
-                <Button variant="outline" size="sm" onClick={() => setView(m.startView)}>
-                  Einrichten
-                </Button>
-                {m.id !== "gedaechtnis" && (
+
+                {/* Actions — simplified to 2 clear options */}
+                <div className="flex items-center gap-2">
                   <Button
                     variant="premium"
                     size="sm"
                     onClick={() => {
-                      autoStartRef.current = true;
-                      setView(m.startView);
+                      if (m.id === "gedaechtnis") {
+                        setView(m.startView);
+                      } else {
+                        autoStartRef.current = true;
+                        setView(m.startView);
+                      }
                     }}
                   >
-                    <Play className="w-4 h-4 mr-1" /> Los
+                    <Play className="w-4 h-4 mr-1" /> Üben
                   </Button>
-                )}
-                {m.id === "gedaechtnis" && (
-                  <Button variant="premium" size="sm" onClick={() => setView(m.startView)}>
-                    <Play className="w-4 h-4 mr-1" /> Starten
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => {
+                      setStrategyKey(m.strategyKey);
+                      setView("strategy");
+                    }}
+                  >
+                    <BookOpen className="w-4 h-4 mr-1" /> Strategie
                   </Button>
-                )}
+                </div>
               </div>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
         ))}
       </div>
     </div>
