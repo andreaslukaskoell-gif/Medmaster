@@ -27,6 +27,21 @@ captureUtmParams();
 initTracker();
 captureTrafficSource();
 
+// Parallax: update --scroll-y on root so .hero-orbs pseudo-elements can use it
+(function initParallax() {
+  let ticking = false;
+  const onScroll = () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        document.documentElement.style.setProperty("--scroll-y", `${window.scrollY}px`);
+        ticking = false;
+      });
+      ticking = true;
+    }
+  };
+  window.addEventListener("scroll", onScroll, { passive: true });
+})();
+
 const rootEl = document.getElementById("root");
 if (rootEl) {
   createRoot(rootEl).render(

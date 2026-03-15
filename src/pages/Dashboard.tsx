@@ -52,6 +52,8 @@ import { getPrognoseSummary } from "@/lib/prognoseScore";
 import { alleKapitel, getKapitelById, findChapterByUnterkapitelId } from "@/data/bmsKapitel";
 import { useTodayEngine } from "@/hooks/useTodayEngine";
 import { ReferralWidget } from "@/components/shared/ReferralWidget";
+import { ScrollReveal } from "@/components/ui/ScrollReveal";
+import { Tooltip } from "@/components/ui/Tooltip";
 
 const tileMotion = {
   initial: { opacity: 0, y: 16 },
@@ -174,15 +176,19 @@ export default function Dashboard() {
   }, [getFachReadiness, unlockedFachMilestones, unlockFachMilestone, faecherIds]);
 
   const cardClass = "card-glass";
-  const bmsProgressPct = useMemo(() => {
+  const { bmsProgressPct, bmsProgressDone, bmsProgressTotal } = useMemo(() => {
     const total = alleKapitel.reduce((s, k) => s + (k?.unterkapitel?.length ?? 0), 0);
-    if (total === 0) return 0;
+    if (total === 0) return { bmsProgressPct: 0, bmsProgressDone: 0, bmsProgressTotal: 0 };
     const done = alleKapitel.reduce(
       (s, k) =>
         s + (k?.unterkapitel?.filter((u) => u?.id && completedChapters.includes(u.id)).length ?? 0),
       0
     );
-    return Math.round((done / total) * 100);
+    return {
+      bmsProgressPct: Math.round((done / total) * 100),
+      bmsProgressDone: done,
+      bmsProgressTotal: total,
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps -- alleKapitel is outer scope
   }, [alleKapitel, completedChapters]);
   const daysThisWeekActive = useMemo(() => {
@@ -365,9 +371,14 @@ export default function Dashboard() {
                     {bmsProgressPct} %
                   </span>
                 </div>
-                <div className="progress-premium">
-                  <div className="progress-fill" style={{ width: `${bmsProgressPct}%` }} />
-                </div>
+                <Tooltip
+                  content={`${bmsProgressDone} von ${bmsProgressTotal} Unterkapitel abgeschlossen`}
+                  position="top"
+                >
+                  <div className="progress-premium w-full">
+                    <div className="progress-fill" style={{ width: `${bmsProgressPct}%` }} />
+                  </div>
+                </Tooltip>
               </div>
             </div>
           </motion.section>
@@ -380,64 +391,71 @@ export default function Dashboard() {
           >
             {/* Daily Challenge Widget */}
             <div aria-label="BMS des Tages">
-              {dailyResult ? (
-                <Link to="/daily">
-                  <div className={cn(cardClass, "relative overflow-hidden")}>
-                    <CardContent className="p-5 flex items-center justify-between gap-4">
-                      <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-xl bg-[var(--success-bg)] flex items-center justify-center shrink-0">
-                          <CheckCircle2 className="w-5 h-5 text-[var(--success)]" />
+              <Tooltip content="Täglich eine neue BMS-Frage" position="top">
+                {dailyResult ? (
+                  <Link to="/daily">
+                    <div className={cn(cardClass, "relative overflow-hidden")}>
+                      <CardContent className="p-5 flex items-center justify-between gap-4">
+                        <div className="flex items-center gap-3">
+                          <div className="w-10 h-10 rounded-xl bg-[var(--success-bg)] flex items-center justify-center shrink-0">
+                            <CheckCircle2 className="w-5 h-5 text-[var(--success)]" />
+                          </div>
+                          <div>
+                            <p className="text-sm font-semibold text-[var(--text-primary)]">
+                              BMS des Tages gelöst!
+                            </p>
+                            <p className="text-xs text-[var(--text-secondary)] flex items-center gap-1 mt-0.5">
+                              <Clock className="w-3 h-3" /> Nächste Frage morgen
+                            </p>
+                          </div>
                         </div>
-                        <div>
-                          <p className="text-sm font-semibold text-[var(--text-primary)]">
-                            BMS des Tages gelöst!
-                          </p>
-                          <p className="text-xs text-[var(--text-secondary)] flex items-center gap-1 mt-0.5">
-                            <Clock className="w-3 h-3" /> Nächste Frage morgen
-                          </p>
+                        <span className="shrink-0 text-xs font-bold text-[var(--success)] bg-[var(--success-bg)] px-2.5 py-1 rounded-full">
+                          +{dailyResult.xpEarned} XP
+                        </span>
+                      </CardContent>
+                    </div>
+                  </Link>
+                ) : (
+                  <Link to="/daily">
+                    <div className={cn(cardClass, "cursor-pointer")}>
+                      <CardContent className="p-5 flex items-center justify-between gap-4">
+                        <div className="flex items-center gap-3">
+                          <div className="w-10 h-10 rounded-xl bg-[var(--accent)]/15 flex items-center justify-center shrink-0">
+                            <Target className="w-5 h-5 text-[var(--accent)]" />
+                          </div>
+                          <div>
+                            <p className="text-sm font-semibold text-[var(--text-primary)]">
+                              BMS des Tages wartet!
+                            </p>
+                            <p className="text-xs text-[var(--muted)] mt-0.5">
+                              Täglich eine Frage — bis zu {XP_PER_LEVEL} XP
+                            </p>
+                          </div>
                         </div>
-                      </div>
-                      <span className="shrink-0 text-xs font-bold text-[var(--success)] bg-[var(--success-bg)] px-2.5 py-1 rounded-full">
-                        +{dailyResult.xpEarned} XP
-                      </span>
-                    </CardContent>
-                  </div>
-                </Link>
-              ) : (
-                <Link to="/daily">
-                  <div className={cn(cardClass, "cursor-pointer")}>
-                    <CardContent className="p-5 flex items-center justify-between gap-4">
-                      <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-xl bg-[var(--accent)]/15 flex items-center justify-center shrink-0">
-                          <Target className="w-5 h-5 text-[var(--accent)]" />
-                        </div>
-                        <div>
-                          <p className="text-sm font-semibold text-[var(--text-primary)]">
-                            BMS des Tages wartet!
-                          </p>
-                          <p className="text-xs text-[var(--muted)] mt-0.5">
-                            Täglich eine Frage — bis zu {XP_PER_LEVEL} XP
-                          </p>
-                        </div>
-                      </div>
-                      <span className="shrink-0 inline-flex items-center gap-1 text-xs font-semibold text-[var(--accent)] bg-[var(--accent)]/10 px-3 py-1.5 rounded-full">
-                        Jetzt starten <ArrowRight className="w-3 h-3" />
-                      </span>
-                    </CardContent>
-                  </div>
-                </Link>
-              )}
+                        <span className="shrink-0 inline-flex items-center gap-1 text-xs font-semibold text-[var(--accent)] bg-[var(--accent)]/10 px-3 py-1.5 rounded-full">
+                          Jetzt starten <ArrowRight className="w-3 h-3" />
+                        </span>
+                      </CardContent>
+                    </div>
+                  </Link>
+                )}
+              </Tooltip>
             </div>
             {/* Streak-Karte */}
             <div className={cn(cardClass, "p-5 flex items-center gap-4")} aria-label="Streak">
-              <div className="w-12 h-12 rounded-xl bg-[var(--accent)]/10 flex items-center justify-center shrink-0">
-                <StreakFlameIcon
-                  streak={flameStreak}
-                  hasActivityToday={flameHasActivity}
-                  size="sm"
-                  className="w-6 h-6"
-                />
-              </div>
+              <Tooltip
+                content={`${flameStreak} ${flameStreak === 1 ? "Tag" : "Tage"} in Folge aktiv`}
+                position="top"
+              >
+                <div className="w-12 h-12 rounded-xl bg-[var(--accent)]/10 flex items-center justify-center shrink-0">
+                  <StreakFlameIcon
+                    streak={flameStreak}
+                    hasActivityToday={flameHasActivity}
+                    size="sm"
+                    className="w-6 h-6"
+                  />
+                </div>
+              </Tooltip>
               <div className="flex-1 min-w-0">
                 <p className="text-2xl font-bold text-[var(--text-primary)]">{flameStreak}</p>
                 <p className="text-sm text-[var(--muted)]">Tage Streak</p>
@@ -447,60 +465,88 @@ export default function Dashboard() {
           </motion.section>
 
           {/* Schnellzugriff + Prognose — side by side on desktop */}
-          <motion.section
-            variants={tileMotion}
-            aria-label="Schnellzugriff"
-            className="grid grid-cols-4 gap-3 stagger-children"
-          >
-            <Link to="/simulation" className={cn(cardClass, "p-4 flex items-center gap-2.5")}>
-              <Timer className="w-4 h-4 text-[var(--muted)] shrink-0" />
-              <span className="text-sm font-medium text-[var(--text-primary)]">Simulation</span>
-            </Link>
-            <Link to="/fragen-trainer" className={cn(cardClass, "p-4 flex items-center gap-2.5")}>
-              <Dumbbell className="w-4 h-4 text-[var(--muted)] shrink-0" />
-              <span className="text-sm font-medium text-[var(--text-primary)]">Fragen-Trainer</span>
-            </Link>
-            <Link to="/fortschritt" className={cn(cardClass, "p-4 flex items-center gap-2.5")}>
-              <BarChart3 className="w-4 h-4 text-[var(--muted)] shrink-0" />
-              <span className="text-sm font-medium text-[var(--text-primary)]">Fortschritt</span>
-            </Link>
-            <Link to="/fortschritt">
-              <div className={cn(cardClass, "h-full p-4 flex items-center gap-2.5")}>
-                <TrendingUp className="w-4 h-4 text-[var(--muted)] shrink-0" />
-                <div className="min-w-0 flex-1">
-                  <p className="text-sm font-medium text-[var(--text-primary)]">Prognose</p>
-                  <p className="text-xs text-[var(--muted)]">
-                    {prognoseSummary.hasEnoughData
-                      ? `${prognoseSummary.totalPct.toFixed(0)}% geschätzt`
-                      : "Ab 20 Fragen verfügbar"}
-                  </p>
-                </div>
-                {prognoseSummary.hasEnoughData && (
-                  <p className="text-xl font-bold text-[var(--accent)] shrink-0">
-                    {prognoseSummary.totalPct.toFixed(0)}%
-                  </p>
-                )}
-              </div>
-            </Link>
-          </motion.section>
+          <ScrollReveal delay={80}>
+            <motion.section
+              variants={tileMotion}
+              aria-label="Schnellzugriff"
+              className="grid grid-cols-4 gap-3 stagger-children"
+            >
+              <Tooltip
+                content="Vollständige MedAT-Simulation unter Prüfungsbedingungen"
+                position="top"
+              >
+                <Link to="/simulation" className={cn(cardClass, "p-4 flex items-center gap-2.5")}>
+                  <Timer className="w-4 h-4 text-[var(--muted)] shrink-0" />
+                  <span className="text-sm font-medium text-[var(--text-primary)]">Simulation</span>
+                </Link>
+              </Tooltip>
+              <Tooltip
+                content="BMS- und KFF-Fragen gezielt nach Fach und Schwierigkeit üben"
+                position="top"
+              >
+                <Link
+                  to="/fragen-trainer"
+                  className={cn(cardClass, "p-4 flex items-center gap-2.5")}
+                >
+                  <Dumbbell className="w-4 h-4 text-[var(--muted)] shrink-0" />
+                  <span className="text-sm font-medium text-[var(--text-primary)]">
+                    Fragen-Trainer
+                  </span>
+                </Link>
+              </Tooltip>
+              <Tooltip content="Lernfortschritt und Statistiken nach Fach anzeigen" position="top">
+                <Link to="/fortschritt" className={cn(cardClass, "p-4 flex items-center gap-2.5")}>
+                  <BarChart3 className="w-4 h-4 text-[var(--muted)] shrink-0" />
+                  <span className="text-sm font-medium text-[var(--text-primary)]">
+                    Fortschritt
+                  </span>
+                </Link>
+              </Tooltip>
+              <Tooltip
+                content="Geschätzte MedAT-Ergebnisquote basierend auf deinen Antworten"
+                position="top"
+              >
+                <Link to="/fortschritt">
+                  <div className={cn(cardClass, "h-full p-4 flex items-center gap-2.5")}>
+                    <TrendingUp className="w-4 h-4 text-[var(--muted)] shrink-0" />
+                    <div className="min-w-0 flex-1">
+                      <p className="text-sm font-medium text-[var(--text-primary)]">Prognose</p>
+                      <p className="text-xs text-[var(--muted)]">
+                        {prognoseSummary.hasEnoughData
+                          ? `${prognoseSummary.totalPct.toFixed(0)}% geschätzt`
+                          : "Ab 20 Fragen verfügbar"}
+                      </p>
+                    </div>
+                    {prognoseSummary.hasEnoughData && (
+                      <p className="text-xl font-bold text-[var(--accent)] shrink-0">
+                        {prognoseSummary.totalPct.toFixed(0)}%
+                      </p>
+                    )}
+                  </div>
+                </Link>
+              </Tooltip>
+            </motion.section>
+          </ScrollReveal>
 
           {/* Wochen-Aktivität + Freunde einladen — side by side on desktop */}
-          <motion.section
-            variants={tileMotion}
-            aria-label="Wochen-Aktivität und Freunde"
-            className="grid grid-cols-2 gap-4"
-          >
-            <div className={cn(cardClass, "p-5")}>
-              <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
-                <p className="text-sm font-medium text-[var(--muted)]">Wochen-Aktivität</p>
-                <p className="text-sm text-[var(--text-primary)]">
-                  Diese Woche an <strong>{daysThisWeekActive}/7</strong> Tagen aktiv
-                </p>
+          <ScrollReveal delay={120}>
+            <motion.section
+              variants={tileMotion}
+              aria-label="Wochen-Aktivität und Freunde"
+              className="grid grid-cols-2 gap-4"
+            >
+              <div className={cn(cardClass, "p-5")}>
+                <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
+                  <p className="text-sm font-medium text-[var(--muted)]">Wochen-Aktivität</p>
+                  <p className="text-sm text-[var(--text-primary)]">
+                    Diese Woche an <strong>{daysThisWeekActive}/7</strong> Tagen aktiv
+                  </p>
+                </div>
+                <Heatmap />
               </div>
-              <Heatmap />
-            </div>
-            <ReferralWidget />
-          </motion.section>
+              <ReferralWidget />
+            </motion.section>
+          </ScrollReveal>
         </motion.div>
 
         {showSmartAdjust && (

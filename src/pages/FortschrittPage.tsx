@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
 import { Target, BarChart3, TrendingUp, Award, ArrowRight } from "lucide-react";
 import { usePageTitle } from "@/hooks/usePageTitle";
 import { useStore } from "@/store/useStore";
@@ -56,11 +57,15 @@ export default function FortschrittPage() {
           <div className="grid grid-cols-4 gap-4 items-center">
             <div>
               <p className="text-xs text-[var(--muted)] uppercase tracking-wide">Level</p>
-              <p className="text-xl font-bold text-[var(--text-primary)]">{level}</p>
+              <p className="text-xl font-bold text-[var(--text-primary)]">
+                <AnimatedCounter value={level} />
+              </p>
             </div>
             <div>
               <p className="text-xs text-[var(--muted)] uppercase tracking-wide">XP</p>
-              <p className="text-xl font-bold text-[var(--text-primary)]">{xp.toLocaleString()}</p>
+              <p className="text-xl font-bold text-[var(--text-primary)]">
+                <AnimatedCounter value={xp} />
+              </p>
             </div>
             <div className="flex items-center gap-2">
               <StreakFlameIcon
@@ -71,12 +76,16 @@ export default function FortschrittPage() {
               />
               <div>
                 <p className="text-xs text-[var(--muted)] uppercase tracking-wide">Streak</p>
-                <p className="text-xl font-bold text-[var(--text-primary)]">{streak} Tage</p>
+                <p className="text-xl font-bold text-[var(--text-primary)]">
+                  <AnimatedCounter value={streak} suffix=" Tage" />
+                </p>
               </div>
             </div>
             <div>
               <p className="text-xs text-[var(--muted)] uppercase tracking-wide">BMS</p>
-              <p className="text-xl font-bold text-[var(--text-primary)]">{bmsProgressPct} %</p>
+              <p className="text-xl font-bold text-[var(--text-primary)]">
+                <AnimatedCounter value={bmsProgressPct} suffix=" %" />
+              </p>
             </div>
           </div>
         </div>

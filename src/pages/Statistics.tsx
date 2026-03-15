@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
 import {
   BarChart,
   Bar,
@@ -89,25 +90,33 @@ export default function Statistics() {
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
         <Card>
           <CardContent className="p-4 text-center">
-            <p className="text-3xl font-bold text-[var(--accent)]">{xp}</p>
+            <p className="text-3xl font-bold text-[var(--accent)]">
+              <AnimatedCounter value={xp} />
+            </p>
             <p className="text-xs text-[var(--muted)]">Gesamt-XP</p>
           </CardContent>
         </Card>
         <Card>
           <CardContent className="p-4 text-center">
-            <p className="text-3xl font-bold text-orange-600">{streak}</p>
+            <p className="text-3xl font-bold text-orange-600">
+              <AnimatedCounter value={streak} />
+            </p>
             <p className="text-xs text-[var(--muted)]">Tage-Streak</p>
           </CardContent>
         </Card>
         <Card>
           <CardContent className="p-4 text-center">
-            <p className="text-3xl font-bold text-blue-600">{totalQuizzes}</p>
+            <p className="text-3xl font-bold text-blue-600">
+              <AnimatedCounter value={totalQuizzes} />
+            </p>
             <p className="text-xs text-[var(--muted)]">Quizze absolviert</p>
           </CardContent>
         </Card>
         <Card>
           <CardContent className="p-4 text-center">
-            <p className="text-3xl font-bold text-green-600">{avgPct}%</p>
+            <p className="text-3xl font-bold text-green-600">
+              <AnimatedCounter value={avgPct} suffix="%" />
+            </p>
             <p className="text-xs text-[var(--muted)]">Durchschnitt</p>
           </CardContent>
         </Card>

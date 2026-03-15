@@ -31,6 +31,7 @@ import type { Kapitel } from "../data/bmsKapitel/types";
 import { trackEvent } from "@/lib/analyticsTracker";
 import { sanitizeHtml } from "@/lib/security";
 import { ChapterCompleteCelebration } from "@/components/ChapterCompleteCelebration";
+import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 interface Props {
   kapitel: Kapitel;
@@ -555,21 +556,23 @@ export default function BMSUnterkapitel({
 
         {/* Notes panel */}
         {showNotes && (
-          <div className="mb-10 p-5 rounded-lg border border-yellow-200 dark:border-yellow-800 bg-yellow-50/50 dark:bg-yellow-900/10">
-            <h3 className="text-sm font-semibold text-yellow-800 dark:text-yellow-300 flex items-center gap-2 mb-3">
-              <StickyNote className="w-4 h-4" />
-              Meine Notizen
-            </h3>
-            <textarea
-              value={noteText}
-              onChange={(e) => setNoteText(e.target.value)}
-              placeholder="Notizen zu diesem Unterkapitel..."
-              className="w-full h-24 p-3 rounded-lg border border-yellow-200 dark:border-yellow-800 bg-white dark:bg-yellow-900/10 text-sm text-[var(--text-primary)] placeholder:text-[var(--muted)] outline-none focus:ring-2 focus:ring-[var(--accent)]/50 focus:border-[var(--accent)] resize-y"
-            />
-            <Button size="sm" onClick={() => setNote(uk.id, noteText)} className="mt-2">
-              Speichern
-            </Button>
-          </div>
+          <ScrollReveal className="mb-10">
+            <div className="p-5 rounded-lg border border-yellow-200 dark:border-yellow-800 bg-yellow-50/50 dark:bg-yellow-900/10">
+              <h3 className="text-sm font-semibold text-yellow-800 dark:text-yellow-300 flex items-center gap-2 mb-3">
+                <StickyNote className="w-4 h-4" />
+                Meine Notizen
+              </h3>
+              <textarea
+                value={noteText}
+                onChange={(e) => setNoteText(e.target.value)}
+                placeholder="Notizen zu diesem Unterkapitel..."
+                className="w-full h-24 p-3 rounded-lg border border-yellow-200 dark:border-yellow-800 bg-white dark:bg-yellow-900/10 text-sm text-[var(--text-primary)] placeholder:text-[var(--muted)] outline-none focus:ring-2 focus:ring-[var(--accent)]/50 focus:border-[var(--accent)] resize-y"
+              />
+              <Button size="sm" onClick={() => setNote(uk.id, noteText)} className="mt-2">
+                Speichern
+              </Button>
+            </div>
+          </ScrollReveal>
         )}
 
         {/* Quick Review Mode */}
@@ -627,109 +630,113 @@ export default function BMSUnterkapitel({
             </div>
 
             {/* Altfrage + Kontrollfragen */}
-            <div className="w-full max-w-[680px] ml-[268px] min-w-0 space-y-10 mt-12">
-              {uk.altfrage && (
-                <div className="card-glass p-6 border-l-4 border-l-amber-500">
-                  <h3 className="text-[13px] font-bold uppercase tracking-wider text-amber-700 dark:text-amber-300 mb-3">
-                    Altfragen-Klassiker
-                  </h3>
-                  {"text" in uk.altfrage ? (
-                    <>
-                      <p className="text-sm font-medium text-[var(--text-primary)] mb-3">
-                        {uk.altfrage.text}
-                      </p>
-                      <ul className="space-y-1.5 mb-3">
-                        {uk.altfrage.options.map((opt) => (
-                          <li
-                            key={opt.id}
-                            className="text-sm text-[var(--text-secondary)] flex gap-2"
-                          >
-                            <span className="font-semibold uppercase text-[var(--text-primary)]">
-                              {opt.id})
-                            </span>
-                            <span>{opt.text}</span>
-                          </li>
-                        ))}
-                      </ul>
-                      <details className="group">
-                        <summary className="text-sm text-[var(--accent)] cursor-pointer hover:underline font-medium">
-                          Antwort anzeigen
-                        </summary>
-                        <p className="text-sm text-[var(--text-secondary)] mt-3 pl-4 border-l-2 border-amber-300 dark:border-amber-700">
-                          <span className="font-semibold text-[var(--text-primary)]">
-                            Richtig: {uk.altfrage.correctOptionId.toUpperCase()}
-                          </span>{" "}
-                          — {uk.altfrage.explanation}
+            <ScrollReveal className="w-full max-w-[680px] ml-[268px] min-w-0 mt-12">
+              <div className="space-y-10">
+                {uk.altfrage && (
+                  <div className="card-glass p-6 border-l-4 border-l-amber-500">
+                    <h3 className="text-[13px] font-bold uppercase tracking-wider text-amber-700 dark:text-amber-300 mb-3">
+                      Altfragen-Klassiker
+                    </h3>
+                    {"text" in uk.altfrage ? (
+                      <>
+                        <p className="text-sm font-medium text-[var(--text-primary)] mb-3">
+                          {uk.altfrage.text}
                         </p>
-                      </details>
-                    </>
-                  ) : (
-                    <>
-                      <p className="text-sm font-medium text-[var(--text-primary)] mb-2">
-                        {uk.altfrage.question}
-                      </p>
-                      <details className="group">
-                        <summary className="text-sm text-[var(--accent)] cursor-pointer hover:underline font-medium">
-                          Antwort anzeigen
-                        </summary>
-                        <p className="text-sm text-[var(--text-secondary)] mt-3 pl-4 border-l-2 border-amber-300 dark:border-amber-700">
-                          {uk.altfrage.answer}
+                        <ul className="space-y-1.5 mb-3">
+                          {uk.altfrage.options.map((opt) => (
+                            <li
+                              key={opt.id}
+                              className="text-sm text-[var(--text-secondary)] flex gap-2"
+                            >
+                              <span className="font-semibold uppercase text-[var(--text-primary)]">
+                                {opt.id})
+                              </span>
+                              <span>{opt.text}</span>
+                            </li>
+                          ))}
+                        </ul>
+                        <details className="group">
+                          <summary className="text-sm text-[var(--accent)] cursor-pointer hover:underline font-medium">
+                            Antwort anzeigen
+                          </summary>
+                          <p className="text-sm text-[var(--text-secondary)] mt-3 pl-4 border-l-2 border-amber-300 dark:border-amber-700">
+                            <span className="font-semibold text-[var(--text-primary)]">
+                              Richtig: {uk.altfrage.correctOptionId.toUpperCase()}
+                            </span>{" "}
+                            — {uk.altfrage.explanation}
+                          </p>
+                        </details>
+                      </>
+                    ) : (
+                      <>
+                        <p className="text-sm font-medium text-[var(--text-primary)] mb-2">
+                          {uk.altfrage.question}
                         </p>
-                      </details>
-                    </>
-                  )}
-                </div>
-              )}
+                        <details className="group">
+                          <summary className="text-sm text-[var(--accent)] cursor-pointer hover:underline font-medium">
+                            Antwort anzeigen
+                          </summary>
+                          <p className="text-sm text-[var(--text-secondary)] mt-3 pl-4 border-l-2 border-amber-300 dark:border-amber-700">
+                            {uk.altfrage.answer}
+                          </p>
+                        </details>
+                      </>
+                    )}
+                  </div>
+                )}
 
-              {selfTestBlock}
-            </div>
+                {selfTestBlock}
+              </div>
+            </ScrollReveal>
           </>
         )}
 
         {/* Navigation: Previous / Next — premium glass cards */}
-        <div className="mt-24 pt-10 border-t border-[var(--border)]/30">
-          <div className="grid grid-cols-2 gap-5">
-            <div>
-              {canGoPrev && (
+        <ScrollReveal delay={100}>
+          <div className="mt-24 pt-10 border-t border-[var(--border)]/30">
+            <div className="grid grid-cols-2 gap-5">
+              <div>
+                {canGoPrev && (
+                  <button
+                    onClick={handlePrev}
+                    className="card-glass w-full text-left p-5 transition-all group cursor-pointer hover:shadow-lg hover:-translate-y-0.5"
+                  >
+                    <div className="flex items-center gap-2 text-xs uppercase tracking-wider font-medium text-[var(--muted)] mb-2">
+                      <ArrowLeft className="w-3.5 h-3.5" />
+                      <span>{isFirst && onPrevChapter ? "Vorheriges Kapitel" : "Zurück"}</span>
+                    </div>
+                    {prevUk && (
+                      <p className="text-base font-semibold text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors truncate">
+                        {prevUk.title}
+                      </p>
+                    )}
+                  </button>
+                )}
+              </div>
+              <div>
                 <button
-                  onClick={handlePrev}
+                  onClick={handleNext}
                   className="card-glass w-full text-left p-5 transition-all group cursor-pointer hover:shadow-lg hover:-translate-y-0.5"
                 >
-                  <div className="flex items-center gap-2 text-xs uppercase tracking-wider font-medium text-[var(--muted)] mb-2">
-                    <ArrowLeft className="w-3.5 h-3.5" />
-                    <span>{isFirst && onPrevChapter ? "Vorheriges Kapitel" : "Zurück"}</span>
+                  <div className="flex items-center justify-end gap-2 text-xs uppercase tracking-wider font-medium text-[var(--muted)] mb-2">
+                    <span>{isLast && !onNextChapter ? "Kapitel abschließen" : "Weiter"}</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
                   </div>
-                  {prevUk && (
-                    <p className="text-base font-semibold text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors truncate">
-                      {prevUk.title}
+                  {nextUk && (
+                    <p className="text-base font-semibold text-[var(--text-primary)] text-right group-hover:text-[var(--accent)] transition-colors truncate">
+                      {nextUk.title}
+                    </p>
+                  )}
+                  {isLast && !onNextChapter && (
+                    <p className="text-base font-semibold text-emerald-600 dark:text-emerald-400 text-right">
+                      Kapitel abschließen
                     </p>
                   )}
                 </button>
-              )}
-            </div>
-            <div>
-              <button
-                onClick={handleNext}
-                className="card-glass w-full text-left p-5 transition-all group cursor-pointer hover:shadow-lg hover:-translate-y-0.5"
-              >
-                <div className="flex items-center justify-end gap-2 text-xs uppercase tracking-wider font-medium text-[var(--muted)] mb-2">
-                  <span>{isLast && !onNextChapter ? "Kapitel abschließen" : "Weiter"}</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </div>
-                {nextUk && (
-                  <p className="text-base font-semibold text-[var(--text-primary)] text-right group-hover:text-[var(--accent)] transition-colors truncate">
-                    {nextUk.title}
-                  </p>
-                )}
-                {isLast && !onNextChapter && (
-                  <p className="text-base font-semibold text-emerald-600 dark:text-emerald-400 text-right">
-                    Kapitel abschließen
-                  </p>
-                )}
-              </button>
+              </div>
             </div>
           </div>
-        </div>
+        </ScrollReveal>
 
         {/* Dev-only status */}
         {import.meta.env.DEV && (

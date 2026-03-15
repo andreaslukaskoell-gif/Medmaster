@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect, useMemo, useRef, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
@@ -335,6 +335,19 @@ export default function LandingPage() {
 
   const [showBottomCta, setShowBottomCta] = useState(false);
 
+  const heroRef = useRef<HTMLElement>(null);
+  const [glowPos, setGlowPos] = useState({ x: -9999, y: -9999 });
+
+  const handleHeroMouseMove = useCallback((e: React.MouseEvent<HTMLElement>) => {
+    const rect = heroRef.current?.getBoundingClientRect();
+    if (!rect) return;
+    setGlowPos({ x: e.clientX - rect.left, y: e.clientY - rect.top });
+  }, []);
+
+  const handleHeroMouseLeave = useCallback(() => {
+    setGlowPos({ x: -9999, y: -9999 });
+  }, []);
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollPct =
@@ -420,7 +433,29 @@ export default function LandingPage() {
       )}
 
       {/* ─── Hero ─── */}
-      <section className="relative overflow-hidden hero-orbs">
+      <section
+        ref={heroRef}
+        className="relative overflow-hidden hero-orbs"
+        onMouseMove={handleHeroMouseMove}
+        onMouseLeave={handleHeroMouseLeave}
+      >
+        {/* Cursor glow — subtle depth effect, GPU-accelerated */}
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div
+            style={{
+              position: "absolute",
+              width: 200,
+              height: 200,
+              borderRadius: "50%",
+              background:
+                "radial-gradient(circle, color-mix(in srgb, var(--accent) 8%, transparent) 0%, transparent 70%)",
+              transform: `translate(${glowPos.x - 100}px, ${glowPos.y - 100}px)`,
+              transition: "transform 0.15s ease-out",
+              willChange: "transform",
+              pointerEvents: "none",
+            }}
+          />
+        </div>
         <div className="relative max-w-6xl mx-auto px-6 pt-20 pb-20 text-center">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -448,21 +483,58 @@ export default function LandingPage() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.35 }}
-            className="flex flex-wrap justify-center gap-6 mb-10"
+            className="flex flex-wrap justify-center gap-2.5 mb-10"
           >
-            {[
-              { icon: BadgeCheck, text: "MedAT 2026 Format" },
-              { icon: Shield, text: "Einmalzahlung — kein Abo" },
-              ...(userCount ? [{ icon: Users, text: `${userCount}+ Lernende` }] : []),
-              { icon: GraduationCap, text: "Alle 4 MedAT-Bereiche" },
-            ].map((badge) => (
-              <div
+            {(
+              [
+                {
+                  icon: BookOpen,
+                  text: "4.300+ Fragen",
+                  cls: "bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-300 ring-1 ring-emerald-200 dark:ring-emerald-800/50",
+                },
+                {
+                  icon: Puzzle,
+                  text: "10.000+ KFF-Übungen",
+                  cls: "bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 ring-1 ring-blue-200 dark:ring-blue-800/50",
+                },
+                {
+                  icon: GraduationCap,
+                  text: "Alle 4 MedAT-Bereiche",
+                  cls: "bg-violet-50 dark:bg-violet-900/20 text-violet-700 dark:text-violet-300 ring-1 ring-violet-200 dark:ring-violet-800/50",
+                },
+                {
+                  icon: BadgeCheck,
+                  text: "Gratis bis 31. März",
+                  cls: "bg-amber-50 dark:bg-amber-900/20 text-amber-700 dark:text-amber-300 ring-1 ring-amber-200 dark:ring-amber-800/50",
+                },
+                ...(userCount
+                  ? [
+                      {
+                        icon: Users,
+                        text: `${userCount}+ Lernende`,
+                        cls: "bg-rose-50 dark:bg-rose-900/20 text-rose-700 dark:text-rose-300 ring-1 ring-rose-200 dark:ring-rose-800/50",
+                      },
+                    ]
+                  : [
+                      {
+                        icon: Shield,
+                        text: "Kein Abo — einmalig €29,90",
+                        cls: "bg-rose-50 dark:bg-rose-900/20 text-rose-700 dark:text-rose-300 ring-1 ring-rose-200 dark:ring-rose-800/50",
+                      },
+                    ]),
+              ] as {
+                icon: React.ComponentType<{ className?: string }>;
+                text: string;
+                cls: string;
+              }[]
+            ).map((badge) => (
+              <span
                 key={badge.text}
-                className="inline-flex items-center gap-1.5 text-sm font-medium text-[var(--muted)]"
+                className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-sm font-medium ${badge.cls}`}
               >
-                <badge.icon className="w-4 h-4 text-emerald-500 shrink-0" />
+                <badge.icon className="w-3.5 h-3.5 shrink-0" />
                 {badge.text}
-              </div>
+              </span>
             ))}
           </motion.div>
 

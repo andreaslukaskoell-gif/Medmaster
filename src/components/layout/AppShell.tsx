@@ -39,6 +39,10 @@ import { useReferralAttribution } from "@/hooks/useReferralAttribution";
 import { SIDEBAR_MAIN_ML } from "./sidebarLayout";
 import { KeyboardShortcutsOverlay } from "@/components/KeyboardShortcutsOverlay";
 import { OnboardingWizard } from "@/components/OnboardingWizard";
+import { XPToast } from "@/components/ui/XPToast";
+import { ScrollToTop } from "@/components/ui/ScrollToTop";
+import { KonamiEasterEgg } from "@/components/ui/KonamiEasterEgg";
+import { useKonamiCode } from "@/hooks/useKonamiCode";
 
 /** True when route is a BMS chapter (e.g. /bms/biologie/kap1-zellbiologie). */
 function isChapterFocusRoute(pathname: string): boolean {
@@ -63,6 +67,7 @@ const INTERLEAVE_CHECK_MS = 60 * 1000; // 1 min
 export function AppShell() {
   useNoIndex(); // All AppShell routes are auth-gated — prevent indexing
   useReferralAttribution();
+  useKonamiCode();
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [commandPaletteOpen, setCommandPaletteOpen] = useState(false);
   const [cmdPaletteEverOpened, setCmdPaletteEverOpened] = useState(false);
@@ -209,6 +214,9 @@ export function AppShell() {
         <Sidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
         <KeyboardShortcutsOverlay />
         <OnboardingWizard />
+        <XPToast />
+        <ScrollToTop />
+        <KonamiEasterEgg />
         <div
           className={cn(
             "min-h-screen flex flex-col relative z-50 w-full transition-colors duration-200",

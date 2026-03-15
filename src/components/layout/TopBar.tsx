@@ -6,6 +6,7 @@ import { useIsMounted } from "@/hooks/useIsMounted";
 import { OPEN_COMMAND_PALETTE } from "@/lib/commandPaletteConstants";
 import { getLevelFromXP } from "@/lib/progression";
 import { GlobalBreadcrumb } from "./GlobalBreadcrumb";
+import { Tooltip } from "@/components/ui/Tooltip";
 
 export function TopBar({ onMenuToggle }: { onMenuToggle?: () => void }) {
   const mounted = useIsMounted();
@@ -42,47 +43,57 @@ export function TopBar({ onMenuToggle }: { onMenuToggle?: () => void }) {
 
       {/* Right: controls */}
       <div className="flex items-center gap-3 shrink-0">
-        {/* Search — icon only, tooltip hint */}
-        <button
-          type="button"
-          onClick={openCommandPalette}
-          className="p-2 rounded-lg text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-[var(--foreground)]/5 transition-colors cursor-pointer"
-          aria-label="Suchen (⌘K)"
-          title="Suchen (⌘K)"
-        >
-          <Search className="w-4 h-4" />
-        </button>
+        {/* Search — icon + keyboard shortcut badge */}
+        <Tooltip content="Suchen (⌘K)" position="bottom">
+          <button
+            type="button"
+            onClick={openCommandPalette}
+            className="flex items-center gap-1.5 px-2 py-1.5 rounded-lg text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-[var(--foreground)]/5 transition-colors cursor-pointer"
+            aria-label="Suchen (⌘K)"
+          >
+            <Search className="w-4 h-4" />
+            <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-[var(--border)] text-[var(--muted)] leading-none select-none">
+              ⌘K
+            </span>
+          </button>
+        </Tooltip>
 
         {/* Level + Streak — grouped with divider */}
         <div className="flex items-center text-xs text-[var(--muted)]">
-          <Link
-            to="/fortschritt"
-            className="flex items-center gap-1.5 px-2 py-1.5 rounded-lg hover:bg-[var(--foreground)]/5 hover:text-[var(--foreground)] transition-colors"
-          >
-            <Award className="w-3.5 h-3.5 shrink-0 text-[var(--accent)]" />
-            <span className="min-w-3 text-center font-medium">{mounted ? level : "–"}</span>
-          </Link>
+          <Tooltip content="Dein Level" position="bottom">
+            <Link
+              to="/fortschritt"
+              className="flex items-center gap-1.5 px-2 py-1.5 rounded-lg hover:bg-[var(--foreground)]/5 hover:text-[var(--foreground)] transition-colors"
+            >
+              <Award className="w-3.5 h-3.5 shrink-0 text-[var(--accent)]" />
+              <span className="min-w-3 text-center font-medium">{mounted ? level : "–"}</span>
+            </Link>
+          </Tooltip>
           <div className="w-px h-3.5 bg-[var(--border)] mx-0.5" />
-          <div className="flex items-center gap-1.5 px-2 py-1.5 rounded-lg hover:bg-[var(--foreground)]/5 hover:text-[var(--foreground)] transition-colors">
-            <StreakFlameIcon
-              streak={streak}
-              hasActivityToday={hasActivityToday}
-              size="inherit"
-              className="w-3.5 h-3.5 shrink-0"
-            />
-            <span className="min-w-3 text-center font-medium">{mounted ? streak : "–"}</span>
-          </div>
+          <Tooltip content="Tage-Streak" position="bottom">
+            <div className="flex items-center gap-1.5 px-2 py-1.5 rounded-lg hover:bg-[var(--foreground)]/5 hover:text-[var(--foreground)] transition-colors">
+              <StreakFlameIcon
+                streak={streak}
+                hasActivityToday={hasActivityToday}
+                size="inherit"
+                className="w-3.5 h-3.5 shrink-0"
+              />
+              <span className="min-w-3 text-center font-medium">{mounted ? streak : "–"}</span>
+            </div>
+          </Tooltip>
         </div>
 
         {/* Dark mode toggle */}
-        <button
-          type="button"
-          onClick={toggleDarkMode}
-          className="p-2 rounded-lg text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-[var(--foreground)]/5 transition-colors cursor-pointer"
-          aria-label={darkMode ? "Hellmodus" : "Darkmodus"}
-        >
-          {darkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
-        </button>
+        <Tooltip content={darkMode ? "Hellmodus" : "Darkmodus"} position="bottom">
+          <button
+            type="button"
+            onClick={toggleDarkMode}
+            className="p-2 rounded-lg text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-[var(--foreground)]/5 transition-colors cursor-pointer"
+            aria-label={darkMode ? "Hellmodus" : "Darkmodus"}
+          >
+            {darkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+          </button>
+        </Tooltip>
       </div>
     </header>
   );

@@ -1,5 +1,6 @@
 import { useMemo } from "react";
 import type { ReactNode } from "react";
+import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
 import { Link } from "react-router-dom";
 import { useStore, type QuizResult } from "@/store/useStore";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
@@ -364,7 +365,8 @@ export default function Prognose() {
         </div>
         <h1 className="text-3xl font-bold text-[var(--text-primary)]">Deine Punkteprognose</h1>
         <p className="text-muted-foreground mt-1">
-          Basierend auf {quizResults.length} Übungsergebnissen ({totalAnswered} Fragen)
+          Basierend auf <AnimatedCounter value={quizResults.length} /> Übungsergebnissen (
+          <AnimatedCounter value={totalAnswered} /> Fragen)
         </p>
       </div>
 

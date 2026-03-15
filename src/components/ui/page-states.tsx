@@ -4,11 +4,19 @@ import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { EmptyState } from "@/components/ui/EmptyState";
 import { cn } from "@/lib/utils";
+import {
+  DashboardSkeleton,
+  BMSSkeleton,
+  QuizSkeleton,
+  ChapterSkeleton,
+} from "@/components/ui/Skeletons";
 
 type PageLoadingProps = {
   message?: string;
   className?: string;
 };
+
+type SkeletonVariant = "dashboard" | "bms" | "quiz" | "chapter" | "default";
 
 export function PageLoading({ message = "Laden...", className }: PageLoadingProps) {
   return (
@@ -26,8 +34,24 @@ export function PageLoading({ message = "Laden...", className }: PageLoadingProp
   );
 }
 
-/** Skeleton placeholder for page loading (cards + lines). Use instead of spinner for BMS/KFF overview. */
-export function PageLoadingSkeleton({ className }: { className?: string }) {
+/**
+ * Skeleton placeholder for page loading.
+ * Pass `variant` to get a layout-accurate shimmer skeleton.
+ * Defaults to the generic skeleton when no variant is specified.
+ */
+export function PageLoadingSkeleton({
+  className,
+  variant = "default",
+}: {
+  className?: string;
+  variant?: SkeletonVariant;
+}) {
+  if (variant === "dashboard") return <DashboardSkeleton className={className} />;
+  if (variant === "bms") return <BMSSkeleton className={className} />;
+  if (variant === "quiz") return <QuizSkeleton className={className} />;
+  if (variant === "chapter") return <ChapterSkeleton className={className} />;
+
+  // Default: generic card + line skeleton
   return (
     <div className={cn("space-y-4 py-6 px-4", className)} role="status" aria-label="Laden">
       <Skeleton className="h-8 w-48 rounded-lg" />

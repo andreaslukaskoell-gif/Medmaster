@@ -1,4 +1,5 @@
 import { lazy, Suspense, useEffect } from "react";
+import { PageLoadingSkeleton } from "@/components/ui/page-states";
 import type { ReactNode } from "react";
 import {
   BrowserRouter,
@@ -217,10 +218,38 @@ export default function App() {
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/today" element={<TodayPage />} />
               <Route path="/onboarding" element={<OnboardingGuard />} />
-              <Route path="/bms" element={<BMS />} />
-              <Route path="/bms/quiz/:fach" element={<BMSQuizWrapper />} />
-              <Route path="/bms/:fach" element={<BMS />} />
-              <Route path="/bms/:fach/:kapitel" element={<BMS />} />
+              <Route
+                path="/bms"
+                element={
+                  <Suspense fallback={<PageLoadingSkeleton variant="bms" />}>
+                    <BMS />
+                  </Suspense>
+                }
+              />
+              <Route
+                path="/bms/quiz/:fach"
+                element={
+                  <Suspense fallback={<PageLoadingSkeleton variant="quiz" />}>
+                    <BMSQuizWrapper />
+                  </Suspense>
+                }
+              />
+              <Route
+                path="/bms/:fach"
+                element={
+                  <Suspense fallback={<PageLoadingSkeleton variant="bms" />}>
+                    <BMS />
+                  </Suspense>
+                }
+              />
+              <Route
+                path="/bms/:fach/:kapitel"
+                element={
+                  <Suspense fallback={<PageLoadingSkeleton variant="chapter" />}>
+                    <BMS />
+                  </Suspense>
+                }
+              />
               <Route path="/kff" element={<KFF />} />
               <Route path="/tv" element={<TV />} />
               <Route path="/sek" element={<SEK />} />

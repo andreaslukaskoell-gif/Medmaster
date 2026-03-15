@@ -622,7 +622,11 @@ export const useStore = create<AppState>()(
         set((s) => {
           const safeAmount = Number.isFinite(amount) ? amount : 0;
           const mult = Number.isFinite(s.xpMultiplier) ? s.xpMultiplier : 1;
-          return { xp: (s.xp ?? 0) + Math.round(safeAmount * mult) };
+          const earned = Math.round(safeAmount * mult);
+          if (earned > 0 && typeof window !== "undefined") {
+            window.dispatchEvent(new CustomEvent("xp-toast", { detail: earned }));
+          }
+          return { xp: (s.xp ?? 0) + earned };
         }),
 
       addXPFromActivity: (params) => {

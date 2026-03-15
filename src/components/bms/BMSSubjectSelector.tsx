@@ -6,6 +6,7 @@ import { mergeChaptersWithSupabase, filterBMSKapitel, countUK } from "@/lib/merg
 import { getQuestionsBySubject } from "@/data/bms/index";
 import type { MRSData } from "@/lib/supabaseBMSFragen";
 import type { MRSFallback } from "@/components/bms/MRSWidget";
+import { Tooltip } from "@/components/ui/Tooltip";
 
 type BMSSubjectSelectorProps = {
   bmsKapitel: Kapitel[];
@@ -211,15 +212,17 @@ function SubjectCard({
               {Math.round(progressPct)}%
             </span>
           </div>
-          <div
-            className="progress-premium"
-            style={{ "--subject-accent": accentColor } as React.CSSProperties}
-          >
+          <Tooltip content={`${sDone} von ${sTotal} Unterkapitel abgeschlossen`} position="top">
             <div
-              className="progress-fill"
-              style={{ width: `${Math.max(progressPct, progressPct > 0 ? 2 : 0)}%` }}
-            />
-          </div>
+              className="progress-premium"
+              style={{ "--subject-accent": accentColor } as React.CSSProperties}
+            >
+              <div
+                className="progress-fill"
+                style={{ width: `${Math.max(progressPct, progressPct > 0 ? 2 : 0)}%` }}
+              />
+            </div>
+          </Tooltip>
         </div>
       )}
     </div>

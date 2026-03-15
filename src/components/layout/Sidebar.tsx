@@ -1,4 +1,5 @@
 import { useRef, useEffect, useState, useMemo, useCallback } from "react";
+import { playClick } from "@/lib/sounds";
 import { NavLink, useLocation, useSearchParams, Link as RouterLink } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -359,7 +360,7 @@ export function Sidebar({ open, onClose }: { open: boolean; onClose: () => void 
       <nav className="flex-1 min-h-0 overflow-y-auto px-3 py-3 space-y-0.5 sidebar-scroll">
         {/* Dashboard – fix oben, visuell hervorgehoben */}
         <div className="mb-3">
-          <NavLink to="/dashboard" end>
+          <NavLink to="/dashboard" end onClick={() => playClick()}>
             {({ isActive: dashboardActive }) => (
               <div
                 className={cn(
@@ -677,7 +678,7 @@ export function Sidebar({ open, onClose }: { open: boolean; onClose: () => void 
 
                 /* Regular nav item: Fortschritt gilt auch auf /schwachstellen, /statistik, /prognose als aktiv */
                 return (
-                  <NavLink key={to} to={to} end={to === "/"}>
+                  <NavLink key={to} to={to} end={to === "/"} onClick={() => playClick()}>
                     {({ isActive: itemActive }) => (
                       <NavItemRow
                         icon={item.icon}

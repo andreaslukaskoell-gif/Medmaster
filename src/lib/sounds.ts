@@ -35,6 +35,56 @@ export function playCorrectAnswerSound(): void {
 }
 
 /**
+ * Subtiler UI-Klick für Navigation und Buttons.
+ */
+export function playClick(): void {
+  try {
+    const ctx = getContext();
+    const now = ctx.currentTime;
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+    osc.frequency.setValueAtTime(600, now);
+    osc.type = "sine";
+    gain.gain.setValueAtTime(0.04, now);
+    gain.gain.exponentialRampToValueAtTime(0.001, now + 0.04);
+    osc.start(now);
+    osc.stop(now + 0.04);
+  } catch {
+    // ignore
+  }
+}
+
+/**
+ * Kurze Celebration-Fanfare bei Kapitelabschluss (drei aufsteigende Töne).
+ */
+export function playStreak(): void {
+  try {
+    const ctx = getContext();
+    const now = ctx.currentTime;
+    const playTone = (freq: number, start: number, duration: number, gainVal: number) => {
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.frequency.setValueAtTime(freq, start);
+      osc.type = "sine";
+      gain.gain.setValueAtTime(0, start);
+      gain.gain.linearRampToValueAtTime(gainVal, start + 0.02);
+      gain.gain.exponentialRampToValueAtTime(0.001, start + duration);
+      osc.start(start);
+      osc.stop(start + duration);
+    };
+    playTone(659.25, now, 0.12, 0.18);
+    playTone(783.99, now + 0.1, 0.15, 0.2);
+    playTone(1046.5, now + 0.22, 0.3, 0.22);
+  } catch {
+    // ignore
+  }
+}
+
+/**
  * Kurze Level-Up Fanfare (zwei Töne, positiv).
  */
 export function playLevelUpSound(): void {
