@@ -66,6 +66,179 @@ function ScreenshotFrame({ title, src, alt }: { title: string; src: string; alt:
   );
 }
 
+/* ── Collapsible FAQ item ── */
+function FAQItem({ q, a }: { q: string; a: string }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="px-6">
+      <button
+        onClick={() => setOpen(!open)}
+        className="w-full flex items-start justify-between gap-4 py-5 text-left cursor-pointer"
+      >
+        <span className="text-sm font-semibold text-[var(--text-primary)] leading-relaxed">
+          {q}
+        </span>
+        <svg
+          className={`w-5 h-5 text-[var(--muted)] shrink-0 mt-0.5 transition-transform ${open ? "rotate-180" : ""}`}
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          strokeWidth={2}
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      {open && <p className="text-sm text-[var(--muted)] leading-relaxed pb-5 -mt-1">{a}</p>}
+    </div>
+  );
+}
+
+/* ── Interactive sample question ── */
+const SAMPLE_QUESTIONS = [
+  {
+    subject: "Biologie",
+    badge: "bg-emerald-100 text-emerald-700",
+    text: "Welche Aussage zur DNA-Replikation ist FALSCH?",
+    options: [
+      { id: "a", text: "Die Replikation verläuft semikonservativ" },
+      { id: "b", text: "Die DNA-Polymerase synthetisiert in 5'→3'-Richtung" },
+      { id: "c", text: "Am Leitstrang erfolgt die Synthese kontinuierlich" },
+      { id: "d", text: "Die Helikase spaltet die Wasserstoffbrücken zwischen den Basen" },
+      { id: "e", text: "Okazaki-Fragmente entstehen am Leitstrang" },
+    ],
+    correctId: "e",
+    explanation:
+      "Okazaki-Fragmente entstehen am Folgestrang (Lagging Strand), nicht am Leitstrang. Am Leitstrang (Leading Strand) verläuft die Synthese kontinuierlich in Richtung der Replikationsgabel.",
+  },
+  {
+    subject: "Chemie",
+    badge: "bg-red-100 text-red-700",
+    text: "Welche Bindungsart hält die Sekundärstruktur (α-Helix, β-Faltblatt) eines Proteins zusammen?",
+    options: [
+      { id: "a", text: "Ionenbindung" },
+      { id: "b", text: "Peptidbindung" },
+      { id: "c", text: "Wasserstoffbrückenbindung" },
+      { id: "d", text: "Disulfidbrücke" },
+      { id: "e", text: "Van-der-Waals-Kräfte" },
+    ],
+    correctId: "c",
+    explanation:
+      "Die Sekundärstruktur wird durch Wasserstoffbrückenbindungen zwischen C=O und N-H Gruppen des Peptidrückgrats stabilisiert. Peptidbindungen bilden die Primärstruktur, Disulfidbrücken die Tertiärstruktur.",
+  },
+  {
+    subject: "Physik",
+    badge: "bg-blue-100 text-blue-700",
+    text: "Ein Körper wird mit 10 m/s senkrecht nach oben geworfen. Welche maximale Höhe erreicht er? (g = 10 m/s²)",
+    options: [
+      { id: "a", text: "2 m" },
+      { id: "b", text: "5 m" },
+      { id: "c", text: "10 m" },
+      { id: "d", text: "15 m" },
+      { id: "e", text: "20 m" },
+    ],
+    correctId: "b",
+    explanation:
+      "Mit v² = 2·g·h → h = v²/(2g) = 100/20 = 5 m. Am höchsten Punkt ist die Geschwindigkeit 0, die gesamte kinetische Energie wurde in potentielle Energie umgewandelt.",
+  },
+];
+
+function SampleQuestion() {
+  const [qIndex] = useState(() => Math.floor(Math.random() * SAMPLE_QUESTIONS.length));
+  const [selected, setSelected] = useState<string | null>(null);
+  const [submitted, setSubmitted] = useState(false);
+
+  const q = SAMPLE_QUESTIONS[qIndex];
+  const isCorrect = selected === q.correctId;
+
+  return (
+    <div className="bg-[var(--surface)] rounded-2xl p-6 sm:p-8 shadow-[var(--shadow-sm)] border border-[var(--border)] max-w-2xl mx-auto">
+      <div className="flex items-center justify-between mb-4">
+        <span className={`text-xs font-medium px-2.5 py-1 rounded-lg ${q.badge}`}>{q.subject}</span>
+        <span className="text-xs text-[var(--muted)]">Beispielfrage</span>
+      </div>
+      <p className="text-base font-semibold text-[var(--text-primary)] leading-relaxed mb-5">
+        {q.text}
+      </p>
+      <div className="space-y-2.5 mb-5">
+        {q.options.map((opt) => {
+          const letter = opt.id.toUpperCase();
+          let style =
+            "border-[var(--border)] text-[var(--text-secondary)] hover:border-[var(--accent)]/40";
+          if (submitted) {
+            if (opt.id === q.correctId)
+              style =
+                "border-emerald-400 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-800 dark:text-emerald-300";
+            else if (opt.id === selected)
+              style = "border-red-400 bg-red-50 dark:bg-red-900/20 text-red-800 dark:text-red-300";
+            else style = "border-[var(--border)] text-[var(--muted)] opacity-60";
+          } else if (opt.id === selected) {
+            style = "border-[var(--accent)] bg-[var(--accent)]/5 text-[var(--text-primary)]";
+          }
+          return (
+            <button
+              key={opt.id}
+              onClick={() => !submitted && setSelected(opt.id)}
+              disabled={submitted}
+              className={`flex items-center gap-3 w-full px-4 py-3 rounded-xl border text-sm text-left transition-colors cursor-pointer disabled:cursor-default ${style}`}
+            >
+              <span
+                className={`w-7 h-7 rounded-lg flex items-center justify-center text-xs font-bold shrink-0 ${
+                  submitted && opt.id === q.correctId
+                    ? "bg-emerald-500 text-white"
+                    : submitted && opt.id === selected
+                      ? "bg-red-400 text-white"
+                      : opt.id === selected
+                        ? "bg-[var(--accent)] text-white"
+                        : "bg-[var(--card)] text-[var(--muted)]"
+                }`}
+              >
+                {submitted && opt.id === q.correctId
+                  ? "✓"
+                  : submitted && opt.id === selected
+                    ? "✗"
+                    : letter}
+              </span>
+              {opt.text}
+            </button>
+          );
+        })}
+      </div>
+
+      {!submitted ? (
+        <button
+          onClick={() => selected && setSubmitted(true)}
+          disabled={!selected}
+          className="w-full py-3 rounded-xl text-sm font-semibold text-white transition-colors disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
+          style={{ backgroundColor: NAVY }}
+        >
+          Antwort prüfen
+        </button>
+      ) : (
+        <div className="space-y-4">
+          <div
+            className={`rounded-xl p-4 text-sm leading-relaxed ${
+              isCorrect
+                ? "bg-emerald-50 dark:bg-emerald-900/20 text-emerald-800 dark:text-emerald-300"
+                : "bg-amber-50 dark:bg-amber-900/20 text-amber-800 dark:text-amber-300"
+            }`}
+          >
+            <p className="font-semibold mb-1">{isCorrect ? "Richtig!" : "Nicht ganz."}</p>
+            <p>{q.explanation}</p>
+          </div>
+          <Link
+            to="/login"
+            className="flex items-center justify-center gap-2 w-full py-3 rounded-xl text-sm font-semibold text-white transition-colors cursor-pointer"
+            style={{ backgroundColor: NAVY }}
+          >
+            Mehr Fragen wie diese — kostenlos testen
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+      )}
+    </div>
+  );
+}
+
 /* ── Screenshot paths ── */
 const SCREENSHOTS = {
   bmsQuiz: "/screenshots/fragen-trainer-bio.png",
@@ -535,8 +708,35 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* ─── Comparison ─── */}
+      {/* ─── Try it: Interactive sample question ─── */}
       <section className="py-16 sm:py-24">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-10"
+          >
+            <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-3">
+              Probier es aus — eine echte BMS-Frage
+            </h2>
+            <p className="text-[var(--text-secondary)] max-w-lg mx-auto">
+              So sehen die Fragen in MedMaster aus. 4.300+ davon warten auf dich — mit detaillierten
+              Erklärungen bei jeder Antwort.
+            </p>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <SampleQuestion />
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ─── Comparison ─── */}
+      <section className="py-16 sm:py-24 bg-[var(--background)]/50">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 12 }}
@@ -594,6 +794,52 @@ export default function LandingPage() {
               </div>
             ))}
           </motion.div>
+        </div>
+      </section>
+
+      {/* ─── Mini FAQ (objection handling) ─── */}
+      <section className="py-16 sm:py-24">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6">
+          <motion.h2
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-3xl font-bold text-[var(--text-primary)] text-center mb-10"
+          >
+            Häufige Fragen
+          </motion.h2>
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="bg-[var(--surface)] rounded-2xl border border-[var(--border)] divide-y divide-[var(--border)]"
+          >
+            {[
+              {
+                q: "Ist MedMaster aktuell für den MedAT 2026?",
+                a: "Ja. Alle Inhalte basieren auf der offiziellen Stichwortliste 2026. Die 173 Lerneinheiten und 4.300+ Fragen decken den gesamten BMS-Stoff ab. KFF-Aufgaben folgen dem aktuellen MedAT-Format.",
+              },
+              {
+                q: "Was passiert nach dem 31. März?",
+                a: "Ab 1. April kostet MedMaster einmalig €29,90. Das ist eine einmalige Zahlung — kein Abo. Du behältst lebenslangen Zugang zu allen Inhalten und zukünftigen Updates.",
+              },
+              {
+                q: "Reicht MedMaster als alleinige Vorbereitung?",
+                a: "MedMaster deckt alle 4 MedAT-Bereiche vollständig ab: 4.300+ BMS-Fragen, unbegrenzte KFF-Übungen, 10 TV-Textsets und 100 SEK-Aufgaben. Viele ergänzen mit einem Biologie-Lehrbuch für die Theorie — die Übungskomponente ist komplett.",
+              },
+              {
+                q: "Brauche ich eine App?",
+                a: "Nein. MedMaster läuft im Browser — auf Desktop, Tablet und Smartphone. Keine Installation nötig. Du kannst es als Web-App auf deinem Homescreen speichern.",
+              },
+            ].map((faq) => (
+              <FAQItem key={faq.q} q={faq.q} a={faq.a} />
+            ))}
+          </motion.div>
+          <p className="text-center mt-4">
+            <Link to="/faq" className="text-sm text-[var(--accent)] hover:underline font-medium">
+              Alle Fragen ansehen →
+            </Link>
+          </p>
         </div>
       </section>
 

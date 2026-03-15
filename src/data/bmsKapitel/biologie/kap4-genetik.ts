@@ -181,11 +181,37 @@ Ein **Chromosom** ist ein langer DNA-Faden, der zusammen mit **Histonen** (Verpa
 
 {{DIAGRAM:dna-helix}}
 
-Ein metaphasisches (in der Metaphase befindliches) Chromosom (in der Zellteilung sichtbar) besteht aus **zwei Schwesterchromatiden**, die am **Zentromer** zusammenhängen. Das Zentromer ist der Ansatzpunkt für die Spindelfasern; an ihm sitzt der **Kinetochor** (Protein komplex). Jede Chromatide hat zwei **Arme**: der **p-Arm** (petit = kurz) und der **q-Arm** (queue = lang). An den Enden der Chromosomen liegen die **Telomere** — repetitive DNA-Sequenzen (beim Menschen TTAGGG), die die Enden schützen und bei jeder Zellteilung etwas kürzer werden (ohne Telomerase (Enzym, das Telomere verlängert)).
+Ein metaphasisches (in der Metaphase befindliches) Chromosom (in der Zellteilung sichtbar) besteht aus **zwei Schwesterchromatiden**, die am **Zentromer** zusammenhängen. Das Zentromer ist der Ansatzpunkt für die Spindelfasern; an ihm sitzt der **Kinetochor** (Proteinkomplex). Jede Chromatide hat zwei **Arme**: der **p-Arm** (petit = kurz) und der **q-Arm** (queue = lang). An den Enden der Chromosomen liegen die **Telomere** — repetitive DNA-Sequenzen (beim Menschen TTAGGG), die die Enden schützen und bei jeder Zellteilung etwas kürzer werden (ohne Telomerase (Enzym, das Telomere verlängert)).
 
 > **Merke:** Zentromer verbindet die beiden Schwesterchromatiden; p-Arm = kurz, q-Arm = lang; Telomere schützen die Enden.
 
 {{IMAGE}}
+
+---
+
+## Chromatinstruktur: Euchromatin und Heterochromatin
+
+DNA liegt im Zellkern nicht nackt vor, sondern ist um **Histonproteine** gewickelt. Die Grundeinheit heißt **Nukleosom**: ~147 bp DNA umwickeln ein Histonoktamer (je 2× H2A, H2B, H3, H4). Zwischen den Nukleosomen verbindet **Linker-DNA** (~50 bp) die Einheiten; Histon H1 stabilisiert die übergeordnete Faltung. Je nach Verpackungsgrad unterscheidet man zwei Chromatinzustände:
+
+- **Euchromatin**: Locker gepackt, transkriptionell **aktiv** — Gene werden abgelesen. Hell im Elektronenmikroskop, repliziert früh in der S-Phase
+- **Heterochromatin**: Dicht gepackt, transkriptionell **inaktiv** — Gene sind stillgelegt. Dunkel im EM, repliziert spät. Zwei Subtypen:
+  - **Konstitutives Heterochromatin**: Dauerhaft kondensiert (z. B. Zentromer-Regionen, Telomere). Keine Gene
+  - **Fakultatives Heterochromatin**: Reversibel stillgelegt, kann reaktiviert werden. Beispiel: **Barr-Körperchen** — das inaktivierte zweite X-Chromosom bei Frauen (Lyon-Hypothese)
+
+> **Merke:** Euchromatin = locker, aktiv. Heterochromatin = dicht, inaktiv. Barr-Körperchen = fakultatives Heterochromatin (inaktiviertes X bei XX).
+
+---
+
+## Chromosomen-Banding (G-Banding)
+
+Zur Identifikation einzelner Chromosomen wird die **G-Banding-Technik** (Giemsa-Banding) eingesetzt: Chromosomen werden mit **Trypsin** angedaut (denaturiert AT-reiche Regionen) und anschließend mit **Giemsa-Farbstoff** gefärbt. Daraus entsteht ein charakteristisches **Bandenmuster** aus hellen und dunklen Streifen:
+
+- **Dunkle Banden** (G-positiv): AT-reich, genarm, spät replizierend, Heterochromatin
+- **Helle Banden** (G-negativ): GC-reich, genreich, früh replizierend, Euchromatin
+
+Jede Bande erhält eine **Nummer** (z. B. 21q22 = Chromosom 21, langer Arm, Region 2, Bande 2). Mit ~400–850 Banden pro haploidem Satz lassen sich Deletionen, Duplikationen und Translokationen ab ~5–10 Mb Größe erkennen. Für feinere Auflösung: **FISH** (Fluoreszenz-in-situ-Hybridisierung) mit fluoreszenzmarkierten DNA-Sonden.
+
+> **Merke:** G-Banding: Trypsin + Giemsa → Bandenmuster. Dunkle Banden = AT-reich, genarm. Helle Banden = GC-reich, genreich. Nomenklatur: Chromosom → Arm → Region → Bande (z. B. 21q22).
 
 ---
 
@@ -198,7 +224,7 @@ Beim Menschen gibt es **46 Chromosomen** in jeder Körperzelle (diploider Satz):
 
 ---
 
-## Karyotyp und Notation
+## Karyotyp, Notation und Karyogramm-Erstellung
 
 
 {{DIAGRAM:mitosis}}
@@ -211,7 +237,28 @@ Der **Karyotyp** ist die geordnete Darstellung aller Chromosomen einer Zelle (na
 - **47,XXY** = Klinefelter-Syndrom (männlich, ein zusätzliches X)
 - **45,X** = Turner-Syndrom (weiblich, ein X fehlt)
 
-> **Merke:** Notation: Zahl, dann Gonosomen, dann Aberration (z. B. +21 für Trisomie 21). 46,XX = weiblich; 46,XY = männlich.`,
+**Karyogramm-Erstellung:** Lymphozyten aus peripherem Blut werden mit **Phytohämagglutinin** (PHA, Mitogen) zur Teilung angeregt → nach ~72 h Zugabe von **Colchicin** (hemmt Spindelapparat, arretiert Zellen in Metaphase) → hypotone Lösung (Zellen schwellen, Chromosomen spreizen) → Fixierung → G-Banding → Mikroskopie → Chromosomen werden digital sortiert und als **Ideogramm** (schematische Karyotyp-Darstellung) angeordnet.
+
+> **Merke:** Karyogramm: Lymphozyten + PHA (Mitose-Induktion) + Colchicin (Metaphase-Arrest) + G-Banding → Chromosomen nach Größe und Zentromerlage ordnen.
+
+---
+
+## Klinische Chromosomenaberrationen
+
+Chromosomenaberrationen (numerisch oder strukturell) verursachen schwerwiegende klinische Syndrome:
+
+| Aberration | Karyotyp | Merkmale |
+|---|---|---|
+| **Trisomie 21** (Down) | 47,XX/XY,+21 | Geistige Retardierung, Epikanthus (Lidfalte), Vierfingerfurche, AV-Kanal (Herzfehler), erhöhtes Leukämie-Risiko. Häufigste Trisomie (~1:700) |
+| **Trisomie 18** (Edwards) | 47,XX/XY,+18 | Schwere Fehlbildungen, Faust mit überkreuzenden Fingern, ~90 % sterben im 1. Lebensjahr |
+| **Trisomie 13** (Pätau) | 47,XX/XY,+13 | Lippen-Kiefer-Gaumenspalte, Holoprosenzephalie, Polydaktylie (überzählige Finger) |
+| **Turner** | 45,X | Weiblich, Kleinwuchs, Schildthorax, Infertilität (Streifengonaden), Aortenisthmusstenose |
+| **Klinefelter** | 47,XXY | Männlich, Hochwuchs, Gynäkomastie (Brustentwicklung), Infertilität, Hypogonadismus |
+| **Triple-X** | 47,XXX | Weiblich, meist klinisch unauffällig, gelegentlich Lernprobleme |
+
+**Ursache numerischer Aberrationen:** Meist **Non-Disjunction** (Nicht-Trennung homologer Chromosomen in Meiose I oder Schwesterchromatiden in Meiose II). Risiko steigt mit mütterlichem Alter (besonders Trisomie 21: ~1:1500 bei 20 Jahren, ~1:100 bei 40 Jahren).
+
+> **Merke:** Non-Disjunction = häufigste Ursache numerischer Aberrationen. Mütterliches Alter ↑ → Trisomie-Risiko ↑. Trisomie 21 häufigste, Turner (45,X) häufigste Monosomie.`,
       lernziele: [
         "Aufbau eines Chromosoms (Zentromer, Arme, Telomere) beschreiben.",
         "Autosomen und Gonosomen unterscheiden und Karyotyp-Notation anwenden.",

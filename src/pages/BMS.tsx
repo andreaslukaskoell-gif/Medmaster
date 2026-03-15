@@ -6,9 +6,7 @@
 import { useState, useEffect, useMemo } from "react";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { usePageTitle } from "@/hooks/usePageTitle";
-import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import type { Kapitel } from "@/data/bmsKapitel/types";
 import BMSKapitelView from "./BMSKapitelView";
 import { printChapterOverview, listAllChapters } from "@/utils/listChapters";
@@ -152,15 +150,12 @@ export default function BMS() {
   useEffect(() => {
     if (supabaseChapters.length === 0) return;
     const subjectId = subjectFromSlug(fachParam);
-    const t = setTimeout(() => {
-      if (subjectId) {
-        setSelectedSubject(subjectId);
-      } else if (fachParam === undefined && kapitelParam === undefined) {
-        setSelectedSubject(null);
-        setActiveKapitel(null);
-      }
-    }, 0);
-    return () => clearTimeout(t);
+    if (subjectId) {
+      setSelectedSubject(subjectId);
+    } else if (fachParam === undefined && kapitelParam === undefined) {
+      setSelectedSubject(null);
+      setActiveKapitel(null);
+    }
   }, [fachParam, kapitelParam, supabaseChapters]);
 
   // Resolve activeKapitel from URL after chapters are ready
@@ -171,8 +166,7 @@ export default function BMS() {
     if (chapterId) {
       const chapter = chaptersForSelectedSubject.find((c) => c.id === chapterId);
       if (chapter) {
-        const t = setTimeout(() => setActiveKapitel(chapter), 0);
-        return () => clearTimeout(t);
+        setActiveKapitel(chapter);
       }
     }
   }, [fachParam, kapitelParam, selectedSubject, chaptersForSelectedSubject]);
@@ -181,8 +175,7 @@ export default function BMS() {
 
   if (error && supabaseChapters.length === 0) {
     return (
-      <div className="max-w-6xl mx-auto p-6">
-        <BreadcrumbNav items={[{ label: "Dashboard", href: "/dashboard" }, { label: "BMS" }]} />
+      <div className="max-w-4xl mx-auto p-6">
         <PageError message={error} onRetry={() => window.location.reload()} />
       </div>
     );
@@ -190,8 +183,7 @@ export default function BMS() {
 
   if (isLoading && supabaseChapters.length === 0) {
     return (
-      <div className="max-w-6xl mx-auto space-y-6 p-6">
-        <BreadcrumbNav items={[{ label: "Dashboard", href: "/dashboard" }, { label: "BMS" }]} />
+      <div className="max-w-4xl mx-auto p-6">
         <PageLoadingSkeleton />
       </div>
     );
@@ -201,15 +193,9 @@ export default function BMS() {
   if (activeKapitel) {
     if (!activeKapitel.id || !activeKapitel.title) {
       return (
-        <div className="max-w-5xl mx-auto space-y-6 p-6">
-          <Card className="bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800">
-            <CardContent className="p-6 text-center">
-              <h3 className="text-lg font-semibold text-red-900 dark:text-red-300 mb-2">
-                Ungültiges Kapitel
-              </h3>
-              <Button onClick={() => setActiveKapitel(null)}>Zurück zur Übersicht</Button>
-            </CardContent>
-          </Card>
+        <div className="max-w-4xl mx-auto p-6 text-center">
+          <p className="text-[var(--muted)] mb-4">Kapitel konnte nicht geladen werden.</p>
+          <Button onClick={() => setActiveKapitel(null)}>Zurück</Button>
         </div>
       );
     }
@@ -253,15 +239,9 @@ export default function BMS() {
     const subjectData = subjects.find((s) => s.id === selectedSubject);
     if (!subjectData) {
       return (
-        <div className="max-w-5xl mx-auto space-y-6 p-6">
-          <Card className="bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800">
-            <CardContent className="p-6 text-center">
-              <h3 className="text-lg font-semibold text-red-900 dark:text-red-300 mb-2">
-                Ungültiges Fach
-              </h3>
-              <Button onClick={() => setSelectedSubject(null)}>Zurück zur Übersicht</Button>
-            </CardContent>
-          </Card>
+        <div className="max-w-4xl mx-auto p-6 text-center">
+          <p className="text-[var(--muted)] mb-4">Fach nicht gefunden.</p>
+          <Button onClick={() => setSelectedSubject(null)}>Zurück</Button>
         </div>
       );
     }

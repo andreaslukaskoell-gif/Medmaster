@@ -933,82 +933,199 @@ Erreicht die Depolarisation das Schwellenpotential (~−55 mV), öffnen sich spa
       title: "Magnetismus und elektromagnetische Induktion",
       stichworte: [
         "Magnetfeld",
+        "Feldlinien",
+        "Permeabilität",
         "Lorentz-Kraft",
         "Biot-Savart",
         "Faraday-Induktion",
         "Lenzsche Regel",
+        "Wirbelströme",
         "Transformator",
+        "Selbstinduktion",
         "Larmor-Frequenz",
         "MRT",
         "Elektromagnetisches Spektrum",
         "Zyklotron",
+        "Massenspektrometrie",
         "TMS",
-        "Selbstinduktion",
+        "Hall-Effekt",
       ],
       content: `## Grundlagen des Magnetismus
 
-Die MRT-Bildgebung, das stärkste diagnostische Werkzeug der modernen Medizin, basiert vollständig auf Magnetismus und elektromagnetischer Induktion. Magnetismus entsteht durch bewegte elektrische Ladungen (elektrische Ströme). Es gibt keine magnetischen Monopole (im Gegensatz zu elektrischen Ladungen): Magnete haben immer einen Nord- und einen Südpol. Das **Magnetfeld B** [Tesla, T] ist eine Vektorgröße.
+Die MRT-Bildgebung, das stärkste diagnostische Werkzeug der modernen Medizin, basiert vollständig auf Magnetismus und elektromagnetischer Induktion. Magnetismus entsteht durch bewegte elektrische Ladungen — jeder elektrische Strom erzeugt ein Magnetfeld und umgekehrt. Diese Kopplung durchzieht die gesamte Medizintechnik: vom EKG-Ableitsystem über Induktionsherde in der Sterilisation bis zur MRT-Diagnostik.
 
-**Magnetische Materialien:**
-- **Diamagnetisch** (μᵣ < 1): schwach abstoßend (Wasser, organisches Gewebe) — Grund, warum Körper vom MRT-Feld kaum beeinflusst wird
-- **Paramagnetisch** (μᵣ > 1): schwach anziehend (Aluminium, Gadolinium als MRT-Kontrastmittel)
-- **Ferromagnetisch** (μᵣ ≫ 1): stark anziehend (Eisen, Nickel, Cobalt) — Gefahr für metallische Implantate im MRT
+### Magnetfeld und Feldlinien
 
-> **Merke:** Magnetfeldlinien sind immer geschlossen (keine Monopole). B-Feld-Einheit: 1 Tesla = 1 V·s/m².
+Das **Magnetfeld B** [Tesla, T] ist eine Vektorgröße, die Richtung und Stärke der magnetischen Wirkung beschreibt. Magnetische **Feldlinien** verlaufen außerhalb eines Magneten vom Nord- zum Südpol und schließen sich im Inneren — sie sind **immer geschlossen**. Dieser fundamentale Unterschied zum elektrischen Feld (offene Feldlinien von + nach −) bedeutet: Es gibt keine magnetischen Monopole. Jeder Magnet besitzt stets Nord- und Südpol. Zerbricht man einen Stabmagneten, entstehen zwei vollständige Magnete — keine isolierten Pole.
 
-Das **Biot-Savart-Gesetz** beschreibt das Magnetfeld eines stromdurchflossenen Leiters. Für einen geraden, langen Leiter mit Strom I im Abstand r: **B = μ₀·I / (2π·r)**, wobei μ₀ = 4π × 10⁻⁷ T·m/A die magnetische Feldkonstante (Permeabilität des Vakuums) ist. Magnetfeldlinien bilden geschlossene Kreise um den Leiter (Rechte-Hand-Regel: Daumen in Stromrichtung → Finger zeigen in Richtung B).
+> **Merke:** Magnetfeldlinien sind immer geschlossen (keine Monopole). Im Gegensatz zu elektrischen Feldlinien haben sie keinen Anfang und kein Ende. B-Feld-Einheit: 1 Tesla = 1 V·s/m² = 1 kg/(A·s²).
 
-Für eine **Spule (Solenoid)** mit n Windungen pro Meter bei Strom I: **B = μ₀·μᵣ·n·I** (im Innern homogen). Mit einem ferromagnetischen Kern (μᵣ ≫ 1, z. B. Eisen: μᵣ ≈ 1000–100.000) wird das Feld enorm verstärkt. MRT-Magnete: supraleitende Solenoide mit B₀ = 1,5–7 T.
+**Feldstärken in der Praxis:**
+- Erdmagnetfeld: ~50 µT (0,00005 T)
+- Kühlschrankmagnet: ~5 mT
+- MRT klinisch: 1,5–3 T (Forschung: 7–11,7 T)
+- Stärkste Labormagnete: ~45 T
+
+{{DIAGRAM:magnetic-field-lines}}
+
+### Magnetische Materialien und Permeabilität
+
+Die **relative Permeabilität μᵣ** beschreibt, wie stark ein Material das Magnetfeld verstärkt oder abschwächt im Vergleich zum Vakuum. Die magnetische Feldkonstante (Permeabilität des Vakuums) ist μ₀ = 4π × 10⁻⁷ T·m/A. In einem Material gilt: **B = μ₀ · μᵣ · H**, wobei H die magnetische Feldstärke [A/m] ist.
+
+- **Diamagnetisch** (μᵣ < 1, minimal kleiner als 1): schwach feldabstoßend (Wasser, organisches Gewebe, Kupfer, Bismut) — Körpergewebe ist diamagnetisch, weshalb es vom MRT-Feld praktisch unbeeinflusst bleibt
+- **Paramagnetisch** (μᵣ > 1, minimal größer als 1): schwach feldverstärkend (Aluminium, Sauerstoff, Gadolinium als MRT-Kontrastmittel — Gd³⁺ verkürzt T₁ im umliegenden Gewebe)
+- **Ferromagnetisch** (μᵣ ≫ 1, bis ~100.000): stark feldverstärkend (Eisen, Nickel, Cobalt) — **Gefahr für metallische Implantate im MRT** (Projektileffekt, Erhitzung, Artefakte)
+
+> **Merke:** Ferromagnetische Gegenstände werden im MRT zu lebensgefährlichen Projektilen. Vor jeder MRT-Untersuchung: Metallscreening (Implantate, Piercings, Schrauben). Gadolinium-Kontrastmittel wirkt paramagnetisch und verkürzt die T₁-Relaxationszeit.
+
+### Biot-Savart-Gesetz: Magnetfeld stromdurchflossener Leiter
+
+Das **Biot-Savart-Gesetz** beschreibt quantitativ das Magnetfeld eines stromdurchflossenen Leiters. Für einen geraden, langen Leiter mit Strom I im Abstand r:
+
+**B = μ₀ · I / (2π · r)**
+
+Die Magnetfeldlinien bilden geschlossene Kreise um den Leiter. Die Richtung bestimmt die **Rechte-Hand-Regel**: Daumen in Stromrichtung → Finger zeigen in Richtung der Feldlinien (B).
+
+Für eine **Spule (Solenoid)** mit n Windungen pro Meter bei Strom I:
+
+**B = μ₀ · μᵣ · n · I** (im Innern nahezu homogen)
+
+Mit einem ferromagnetischen Kern (μᵣ ≫ 1, z. B. Eisen: μᵣ ≈ 1000–100.000) wird das Feld enorm verstärkt — Prinzip des Elektromagneten. MRT-Hauptmagnete sind supraleitende Solenoide (Niob-Titan-Legierung, gekühlt auf 4 K mit flüssigem Helium), die Felder von B₀ = 1,5–7 T erzeugen — 30.000- bis 140.000-mal stärker als das Erdmagnetfeld.
+
+> **Merke:** Gerader Leiter: B = μ₀·I/(2π·r) — Feld nimmt mit 1/r ab. Solenoid: B = μ₀·μᵣ·n·I — homogen im Innern. Rechte-Hand-Regel für die Feldrichtung.
+
+---
 
 ## Lorentz-Kraft
 
-Ein geladenes Teilchen, das sich durch ein Magnetfeld bewegt, wird seitlich abgelenkt — senkrecht sowohl zur Bewegungsrichtung als auch zum Feld. Diese Ablenkung ist die **Lorentz-Kraft**. Entscheidend: Die Kraft wirkt weder bremsend noch beschleunigend, sondern lenkt nur ab — wie eine Leitplanke, die ein Auto umlenkt, ohne es zu bremsen.
+Ein geladenes Teilchen, das sich durch ein Magnetfeld bewegt, wird seitlich abgelenkt — senkrecht sowohl zur Bewegungsrichtung als auch zum Feld. Diese Ablenkung ist die **Lorentz-Kraft**. Entscheidend: Die Kraft verrichtet keine Arbeit (ändert nicht den Betrag der Geschwindigkeit), sondern lenkt nur ab — wie eine Leitplanke, die ein Auto umlenkt, ohne es zu bremsen.
 
 Eine bewegte Ladung q mit Geschwindigkeit v in einem Magnetfeld B erfährt:
 
 **F = q · (v × B)** [N]
 
-Die Kraft steht senkrecht auf v und auf B — sie verrichtet keine Arbeit, ändert aber die Richtung der Ladung. Folge: In einem homogenen Magnetfeld bewegt sich eine Ladung auf einer **Kreisbahn** (Zyklotronbewegung): Zentripetalkraft = Lorentz-Kraft → **r = m·v / (q·B)** (Zyklotronradius). Für schwerere Teilchen oder schnellere: größerer Radius.
+Der Betrag: **|F| = q · v · B · sin θ**, wobei θ der Winkel zwischen v und B ist. Maximale Kraft bei θ = 90° (senkrechte Bewegung zum Feld), keine Kraft bei θ = 0° (Bewegung parallel zum Feld). Die Richtung der Kraft bestimmt die **Rechte-Hand-Regel** (bzw. Drei-Finger-Regel): Zeigefinger → v, Mittelfinger → B, Daumen → F (für positive Ladungen; bei negativen Ladungen umgekehrt).
 
-Medizinische Anwendungen der Lorentz-Kraft: **Massenspektrometrie** (Ionen auf Kreisbahnen → Massenbestimmung); **Zyklotron** (Protonenbeschleunigung für PET-Isotope wie ¹⁸F); Lorentz-Kraft auf Gradientenspulen im MRT erzeugt das charakteristische Klopfen.
+### Kreisbahn im Magnetfeld
 
-## Faradaysches Induktionsgesetz
+In einem homogenen Magnetfeld bewegt sich eine Ladung, die senkrecht zum Feld eintritt, auf einer **Kreisbahn** (Zyklotronbewegung). Gleichgewicht zwischen Lorentz-Kraft und Zentripetalkraft ergibt den **Zyklotronradius**:
 
-Ändert sich der magnetische Fluss Φ = B·A·cos(α) durch eine Leiterschleife zeitlich, wird eine **Spannung (EMK) induziert**:
+**r = m · v / (q · B)**
 
-**ε = −N · dΦ/dt = −N · d(B·A·cos α)/dt** [V]
+Schwerere oder schnellere Teilchen → größerer Radius. Stärkeres Feld oder höhere Ladung → kleinerer Radius. Die **Umlauffrequenz (Zyklotronfrequenz)** f = q·B/(2π·m) ist geschwindigkeitsunabhängig — das ermöglicht die Beschleunigung im Zyklotron.
 
-Das negative Vorzeichen folgt aus der **Lenzschen Regel**: Die induzierte Spannung ist so gerichtet, dass der induzierte Strom der Flussänderung entgegenwirkt (Energieerhaltung). Anwendungen: **Transformator**: Wandelt Wechselspannungen um via elektromagnetischer Induktion. Transformationsformel: **U₁/U₂ = N₁/N₂** (Windungszahlverhältnis = Spannungsverhältnis). Bei idealem Transformator gilt zudem P₁ = P₂ → I₁/I₂ = N₂/N₁. Medizinisch: Trenntransformatoren in OP-Sälen (galvanische Trennung, Schutz vor Stromschlag); **Induktionskochplatte** (Wirbelströme); **Generator** (mechanische → elektrische Energie); **MRT** (empfangende Spulen messen induzierte Spannungen durch präzedierende Protonenspins).
+> **Merke:** Die Lorentz-Kraft lenkt geladene Teilchen im Magnetfeld auf Kreisbahnen ab, ohne sie zu bremsen (keine Arbeit, nur Richtungsänderung). Zyklotronradius r = m·v/(q·B) — je schwerer oder schneller, desto größerer Kreis.
 
-## Selbstinduktion und Induktivität
+### Klinische Anwendungen der Lorentz-Kraft
 
-Eine Spule mit Induktivität **L** [Henry, H] widersteht Stromänderungen durch Selbstinduktion: ε = −L · dI/dt. Gespeicherte Energie: **W = ½·L·I²**. MRT-Gradientenspulen erzeugen ortsabhängige Felder durch schnell schaltende Ströme — die dabei induzierten Wirbelströme begrenzen die Schaltgeschwindigkeit und erzeugen das charakteristische Klopfen des MRT.
+- **Massenspektrometrie:** Ionen verschiedener Masse werden im Magnetfeld auf unterschiedlich große Kreisbahnen gelenkt → Massenbestimmung über r = m·v/(q·B). Standardmethode in der klinischen Labordiagnostik (Toxikologie, Neugeborenenscreening, Proteomik).
+- **Zyklotron:** Protonen werden in einem Magnetfeld auf spiralförmigen Bahnen beschleunigt. Die geschwindigkeitsunabhängige Zyklotronfrequenz erlaubt wiederholte Beschleunigung durch ein Wechselfeld. Anwendung: Produktion kurzlebiger PET-Isotope (¹⁸F, ¹¹C, ¹³N).
+- **MRT-Gradientenspulen:** Beim schnellen Schalten der Gradientenströme erfährt jeder stromführende Leiter im starken B₀-Feld eine Lorentz-Kraft → Vibrationen → das charakteristische Klopfgeräusch im MRT (~60–120 dB, Gehörschutz nötig).
+- **Hall-Effekt:** Strom in einem Leiter wird durch das Magnetfeld quer abgelenkt → messbare Spannung. Genutzt in magnetischen Durchflusssensoren für Blutpumpen und Infusionssysteme.
 
-Die elektromagnetische Induktion zeigt, dass sich verändernde Felder neue Felder erzeugen — genau dieses Prinzip erklärt, wie elektromagnetische Wellen entstehen und sich ausbreiten:
+> **Prüfungstipp:** Bei Massenspektrometrie-Aufgaben: r = m·v/(q·B) umstellen. Typische Frage: „Welches Ion hat den größeren Radius?" — das schwerere bei gleicher Ladung und Geschwindigkeit.
+
+---
+
+## Elektromagnetische Induktion
+
+### Faradaysches Induktionsgesetz
+
+Michael Faraday entdeckte 1831 das Gegenstück zur magnetischen Wirkung elektrischer Ströme: Ein zeitlich veränderlicher magnetischer Fluss durch eine Leiterschleife erzeugt eine elektrische Spannung. Der **magnetische Fluss** Φ = B · A · cos α [Weber, Wb = V·s] erfasst, „wie viele Feldlinien" eine Fläche A durchsetzen (α = Winkel zwischen B und Flächennormale).
+
+**ε = −N · dΦ/dt = −N · d(B · A · cos α)/dt** [V]
+
+Drei Wege, den Fluss zu ändern und Spannung zu induzieren:
+1. **B ändern** (z. B. Magnet nähern/entfernen) — Prinzip des Generators und der MRT-Signaldetektion
+2. **A ändern** (z. B. Leiterschleife verformen) — Prinzip des Mikrofons
+3. **α ändern** (z. B. Schleife im Feld drehen) — Prinzip des Wechselstromgenerators
+
+### Lenzsche Regel
+
+Das negative Vorzeichen folgt aus der **Lenzschen Regel**: Die induzierte Spannung ist stets so gerichtet, dass der induzierte Strom ein Magnetfeld erzeugt, das der ursprünglichen Flussänderung **entgegenwirkt**. Physikalisch ist das eine direkte Konsequenz der Energieerhaltung — wäre der induzierte Strom gleichsinnig, würde sich das System selbst verstärken und unbegrenzt Energie erzeugen.
+
+> **Merke:** Faraday: ε = −N·dΦ/dt — jede Flussänderung induziert eine Spannung. Lenz: Der induzierte Strom wirkt seiner Ursache entgegen (Energieerhaltung). Drei Wege zur Induktion: B, A oder α zeitlich ändern.
+
+**Klinische Anwendung — EKG-Ableitung und Störsignale:** EKG-Elektroden messen primär elektrische Potentiale (keine Induktion). Jedoch können wechselnde Magnetfelder (z. B. bei MRT-kompatiblem Monitoring) in den Ableitkabeln Störspannungen induzieren (Faraday). Deshalb werden EKG-Kabel im MRT verdrillt und kurz gehalten — das minimiert die effektive Schleifenfläche A und damit den induzierten Störfluss.
+
+**Wirbelströme:** Wenn sich ein leitfähiger Körper (z. B. Metallplatte) in einem wechselnden Magnetfeld befindet, werden in ihm kreisförmige Ströme (Wirbelströme) induziert. Diese erzeugen nach Lenz ein Gegenfeld und dissipieren Energie als Joulesche Wärme. Anwendung: **Induktionsherd** — ein Wechselstrom (~25 kHz) in der Spule unter dem Kochfeld erzeugt ein wechselndes Magnetfeld, das Wirbelströme im ferromagnetischen Topfboden induziert → der Topf selbst wird heiß, die Platte bleibt kühl. In der Medizin: induktive Erwärmung bei der Hyperthermiebehandlung von Tumoren.
+
+---
+
+## Selbstinduktion und Transformator
+
+### Selbstinduktion
+
+Ändert sich der Strom durch eine Spule, ändert sich auch deren eigenes Magnetfeld — und damit der eigene magnetische Fluss. Nach Faraday induziert das eine Gegenspannung in der Spule selbst:
+
+**ε = −L · dI/dt** [V]
+
+Die **Induktivität L** [Henry, H] ist ein Maß dafür, wie stark sich eine Spule gegen Stromänderungen wehrt. In der Spule gespeicherte magnetische Energie: **W = ½ · L · I²**. MRT-Gradientenspulen haben L im Bereich von Hunderten µH; das schnelle Schalten (dI/dt bis ~200 A/ms) erzeugt kurzzeitig hohe Gegenspannungen und induziert Wirbelströme im umliegenden Material — Ursache für das charakteristische Klopfen und eine Begrenzung der Bildakquisitionsgeschwindigkeit.
+
+> **Merke:** Selbstinduktion: ε = −L·dI/dt — eine Spule widersetzt sich jeder Stromänderung. Gespeicherte Energie: W = ½·L·I². Die Induktivität L hängt von Windungszahl, Geometrie und Kernmaterial ab.
+
+### Transformator
+
+Der **Transformator** wandelt Wechselspannungen um und nutzt dabei ausschließlich elektromagnetische Induktion (kein direkter elektrischer Kontakt). Zwei Spulen (Primär: N₁ Windungen; Sekundär: N₂) teilen einen gemeinsamen Eisenkern, der den magnetischen Fluss koppelt.
+
+**Transformationsformel: U₁/U₂ = N₁/N₂**
+
+Bei idealem Transformator (verlustfrei) gilt Leistungserhaltung: P₁ = P₂, also **I₁/I₂ = N₂/N₁** — wird die Spannung hochgesetzt, sinkt der Strom proportional.
+
+**Transformatortypen:**
+- **Aufwärtstransformator** (N₂ > N₁): Spannungserhöhung, z. B. Röntgenröhre (40–150 kV aus 230 V Netz)
+- **Abwärtstransformator** (N₂ < N₁): Spannungsreduktion, z. B. Netzteile medizinischer Geräte
+- **Trenntransformator** (N₁ = N₂): galvanische Trennung ohne Spannungsänderung — Standard in OP-Sälen zum Schutz vor Stromschlag (Patient hat keinen leitenden Bezug zur Erde)
+
+> **Merke:** Transformator: U₁/U₂ = N₁/N₂. Leistungserhaltung: P₁ = P₂ → I₁/I₂ = N₂/N₁. Medizinisch wichtig: Trenntransformator im OP (galvanische Trennung), Hochspannungstransformator in der Röntgenröhre.
+
+---
 
 ## Elektromagnetische Wellen und das EM-Spektrum
 
-Sich zeitlich ändernde elektrische Felder erzeugen Magnetfelder (Maxwell-Gleichungen) und umgekehrt. Elektromagnetische Wellen breiten sich im Vakuum mit Lichtgeschwindigkeit c = 3 × 10⁸ m/s aus: **c = λ · f** und **c = 1/√(ε₀·μ₀)**.
+Die elektromagnetische Induktion zeigt: Sich ändernde Magnetfelder erzeugen elektrische Felder und umgekehrt. James Clerk Maxwell erkannte, dass sich diese wechselseitige Erzeugung als Welle im Raum ausbreitet — **elektromagnetische Wellen**. Sie benötigen kein Medium und breiten sich im Vakuum mit Lichtgeschwindigkeit aus:
 
-Das **elektromagnetische Spektrum**: Radiowellen (MRT, ~64–300 MHz); Mikrowellen (Diathermie); Infrarot (Wärme); Sichtbares Licht (400–700 nm); UV (Desinfektion, Vitamin-D-Synthese); Röntgen (Diagnostik, 0,01–10 nm); Gamma (PET, Szintigraphie).
+**c = λ · f = 3 × 10⁸ m/s** und **c = 1/√(ε₀ · μ₀)**
 
-| EM-Bereich | Wellenlänge | Medizinische Anwendung |
-|---|---|---|
-| Radiowellen | >1 m | MRT (HF-Pulse) |
-| Mikrowellen | 1 mm–1 m | Diathermie, Mikrowellen-Ablation |
-| Infrarot | 780 nm–1 mm | Thermografie, Wärmelampen |
-| Sichtbar | 380–780 nm | Endoskopie, Laser-OP, OCT |
-| UV | 10–380 nm | Desinfektion, Phototherapie, LASIK (193 nm) |
-| Röntgen | 0,01–10 nm | Röntgen, CT |
-| Gamma | <0,01 nm | PET, Szintigraphie, Strahlentherapie |
+Die Energie eines Photons (Lichtquant) hängt nur von der Frequenz ab: **E = h · f** (h = 6,626 × 10⁻³⁴ J·s, Plancksches Wirkungsquantum). Höhere Frequenz = kürzere Wellenlänge = mehr Energie pro Photon.
 
-**MRT im Detail:** Ein statisches Feld B₀ polarisiert Protonenspins. HF-Pulse (Larmor-Frequenz: f_L = γ·B₀/2π, für ¹H: γ/2π = 42,58 MHz/T) kippen die Magnetisierung. Nach dem Puls präzedieren und relaxieren die Spins — die Präzession (Kreiselbewegung der Spins um B₀) induziert via Faraday eine Spannung in der Empfangsspule (das MRT-Signal). Gradientenspulen kodieren den Ort.
+{{DIAGRAM:em-spectrum}}
+
+### Das EM-Spektrum: Von Radio bis Gamma
+
+| EM-Bereich | Wellenlänge | Frequenz | Energie/Photon | Medizinische Anwendung |
+|---|---|---|---|---|
+| Radiowellen | >1 m | <300 MHz | <1,2 µeV | MRT (HF-Pulse, 64–300 MHz) |
+| Mikrowellen | 1 mm–1 m | 300 MHz–300 GHz | µeV–meV | Diathermie, Mikrowellenablation |
+| Infrarot | 780 nm–1 mm | 300 GHz–385 THz | meV–1,6 eV | Thermografie, Wärmelampen, IR-Laser |
+| Sichtbar | 380–780 nm | 385–790 THz | 1,6–3,3 eV | Endoskopie, Laser-OP, OCT, Phototherapie |
+| UV | 10–380 nm | 790 THz–30 PHz | 3,3–124 eV | Desinfektion, Phototherapie, LASIK (193 nm) |
+| Röntgen | 0,01–10 nm | 30 PHz–30 EHz | 124 eV–124 keV | Röntgendiagnostik, CT |
+| Gamma | <0,01 nm | >30 EHz | >124 keV | PET, Szintigraphie, Strahlentherapie |
+
+**Ionisierende vs. nicht-ionisierende Strahlung:** Ab UV-C (Wellenlänge <280 nm, Energie >4,4 eV) reicht die Photonenenergie aus, um Elektronen aus Atomen zu lösen → **ionisierende Strahlung** (UV-C, Röntgen, Gamma). Diese kann DNA-Schäden verursachen. Radiowellen, Mikrowellen, IR und sichtbares Licht sind nicht-ionisierend — deshalb ist MRT (Radiowellen) im Gegensatz zu CT (Röntgen) strahlungsfrei.
+
+> **Merke:** c = λ·f = 3×10⁸ m/s für alle EM-Wellen im Vakuum. E = h·f — höhere Frequenz = mehr Energie. Ionisierend ab UV-C/Röntgen. MRT nutzt Radiowellen (nicht-ionisierend), CT nutzt Röntgen (ionisierend).
+
+---
+
+## MRT im Detail
+
+Ein statisches Feld B₀ polarisiert die Kernspins von Wasserstoffprotonen (¹H). HF-Pulse bei der **Larmor-Frequenz** f_L = γ·B₀/2π (für ¹H: γ/2π = 42,58 MHz/T) kippen die Magnetisierung. Nach dem Puls präzedieren die Spins — diese Präzession (Kreiselbewegung der Spins um B₀) induziert via Faraday eine Wechselspannung in der Empfangsspule. Gradientenspulen kodieren den Ort.
 
 Stell dir die Protonen wie Kreisel vor, die nach dem HF-Puls synchron rotieren. T₁ misst, wie schnell sie in ihre Ausgangslage zurückkippen. T₂ misst, wie schnell sie aus dem Takt geraten:
 
-Die **T₁-Relaxation** (Spin-Gitter) beschreibt, wie schnell die Längsmagnetisierung M_z zur Gleichgewichtslage zurückkehrt — die Spins geben Energie an das umgebende Gewebe (Gitter) ab. Die **T₂-Relaxation** (Spin-Spin) beschreibt, wie schnell die Quermagnetisierung M_xy zerfällt — benachbarte Spins beeinflussen sich gegenseitig und dephasieren. Beide Zeiten hängen von der molekularen Umgebung ab: Wasser hat lange T₁ und T₂ (freie Bewegung), Fett hat kurze T₁ (effiziente Energieabgabe). Diese gewebespezifischen Unterschiede erzeugen den diagnostischen Bildkontrast.
+Die **T₁-Relaxation** (Spin-Gitter) beschreibt die Rückkehr der Längsmagnetisierung M_z zum Gleichgewicht — Spins geben Energie an das umgebende Gewebe (Gitter) ab. Die **T₂-Relaxation** (Spin-Spin) beschreibt den Zerfall der Quermagnetisierung M_xy — benachbarte Spins beeinflussen sich gegenseitig und dephasieren. Wasser hat lange T₁ und T₂ (freie Molekülbewegung), Fett hat kurze T₁ (effiziente Energieabgabe an das Gitter). Diese gewebespezifischen Unterschiede erzeugen den diagnostischen Bildkontrast.
 
-> **Prüfungstipp:** Die Larmor-Frequenz f_L = (γ/2π)·B₀ mit γ/2π = 42,58 MHz/T für Protonen ist eine beliebte MedAT-Rechenaufgabe. Bei 1,5 T ergibt sich 64 MHz, bei 3 T ca. 128 MHz. Merke: Verdopplung des Feldes = Verdopplung der Frequenz (linearer Zusammenhang).
+> **Prüfungstipp:** Die Larmor-Frequenz f_L = (γ/2π)·B₀ mit γ/2π = 42,58 MHz/T für Protonen ist eine beliebte MedAT-Rechenaufgabe. Bei 1,5 T: 64 MHz, bei 3 T: 128 MHz. Verdopplung des Feldes = Verdopplung der Frequenz (linearer Zusammenhang).
+
+---
+
+## Biomagnetismus
+
+Biologische Ströme (Aktionspotentiale, Herzstrom) erzeugen extrem schwache Magnetfelder: Herz ~10⁻¹⁰ T (MCG, Magnetkardiographie), Gehirn ~10⁻¹³ T (MEG, Magnetenzephalographie). Gemessen mit **SQUID-Sensoren** (superconducting quantum interference devices) bei 4 K. MCG und MEG sind strahlungsfrei und zeitlich hochauflösend (<1 ms). **Transkranielle Magnetstimulation (TMS)**: Ein kurzer, starker Magnetfeldpuls (dB/dt ≈ 10⁴ T/s) induziert nach Faraday ein elektrisches Feld im Kortex (~200 V/m), das Neuronen depolarisiert — nicht-invasiv, therapeutisch bei Depression (rTMS).
+
+---
 
 ## Rechenbeispiele
 
@@ -1019,58 +1136,76 @@ Bei 3 T: f_L = 42,58 × 3 = **127,74 MHz** (UHF-Bereich).
 Bei 7 T: f_L = 42,58 × 7 = **298,06 MHz** — höheres SNR, aber stärkere HF-Absorption (SAR-Limit).
 
 **Beispiel 2 — Zyklotron: Protonenenergie für PET-Isotop ¹⁸F:**
-Zyklotron B = 1,2 T, Austrittsradius r = 0,4 m. Protonengeschwindigkeit: v = q·B·r/m = (1,6×10⁻¹⁹ · 1,2 · 0,4) / 1,67×10⁻²⁷ = 7,68×10⁻²⁰ / 1,67×10⁻²⁷ ≈ **4,6×10⁷ m/s** (≈ 15 % c).
-Kinetische Energie: E_kin = ½mv² = ½ · 1,67×10⁻²⁷ · (4,6×10⁷)² ≈ 1,77×10⁻¹² J ≈ **11 MeV** — ausreichend für ¹⁸O(p,n)¹⁸F-Reaktion (Schwelle ~2,6 MeV).
+Zyklotron B = 1,2 T, Austrittsradius r = 0,4 m. Protonengeschwindigkeit: v = q·B·r/m = (1,6×10⁻¹⁹ · 1,2 · 0,4) / 1,67×10⁻²⁷ ≈ **4,6×10⁷ m/s** (≈ 15 % c).
+Kinetische Energie: E_kin = ½mv² ≈ 1,77×10⁻¹² J ≈ **11 MeV** — ausreichend für ¹⁸O(p,n)¹⁸F-Reaktion (Schwelle ~2,6 MeV).
 
-**Beispiel 3 — TMS (transkranielle Magnetstimulation): induzierte Feldstärke im Kortex:**
+**Beispiel 3 — Transformator mit Verlust:**
+Primär: 230 V, 500 Windungen. Sekundär: 1000 Windungen, Wirkungsgrad η = 95 %.
+Ideale Sekundärspannung: U₂ = 230 × 1000/500 = 460 V. Reale Sekundärleistung: P₂ = η · P₁ = 0,95 · P₁. Der Verlust (5 %) geht als Joulesche Wärme im Kern (Wirbelströme, Hysterese) und in den Wicklungen verloren.
+
+**Beispiel 4 — TMS: induzierte Feldstärke im Kortex:**
 TMS-Spule erzeugt dB/dt = 10⁴ T/s über einer Fläche A ≈ 25 cm² = 25×10⁻⁴ m².
-Induzierte EMK (einzelne Windung): |ε| = A · dB/dt = 25×10⁻⁴ · 10⁴ = **25 V**.
-Induzierte Feldstärke im Gewebe (Radius ~2 cm): E ≈ ε/(2π·r) = 25/(2π·0,02) ≈ **200 V/m**.
-Schwelle für Neuronendepolarisation: ~1–2 V/m → TMS ist 100× über der Schwelle.`,
+Induzierte EMK: |ε| = A · dB/dt = 25×10⁻⁴ · 10⁴ = **25 V**.
+Induzierte Feldstärke im Gewebe (Radius ~2 cm): E ≈ ε/(2π·r) = 25/(2π·0,02) ≈ **200 V/m** — 100× über der Neuronenschwelle.`,
 
       lernziele: [
-        "Das Magnetfeld eines geraden Leiters und einer Spule berechnen",
+        "Magnetfeldlinien, Permeabilität und magnetische Materialien (dia-/para-/ferromagnetisch) erklären",
+        "Das Magnetfeld eines geraden Leiters (Biot-Savart) und einer Spule (Solenoid) berechnen",
         "Die Lorentz-Kraft auf bewegte Ladungen beschreiben und den Zyklotronradius berechnen",
         "Das Faradaysche Induktionsgesetz und die Lenzsche Regel erklären und anwenden",
-        "Das Prinzip der MRT-Bildgebung physikalisch auf Magnetfeld, Larmor-Präzession und Induktion zurückführen",
+        "Selbstinduktion, Induktivität und Transformator beschreiben und berechnen",
         "Das elektromagnetische Spektrum und medizinische Anwendungen verschiedener Frequenzbereiche nennen",
+        "Das Prinzip der MRT-Bildgebung physikalisch auf Magnetfeld, Larmor-Präzession und Induktion zurückführen",
       ],
       sections: [
         {
-          heading: "Magnetfeld und Lorentz-Kraft",
-          text: "Magnetfeld B [T] entsteht durch bewegte Ladungen/Ströme. Biot-Savart: B = μ₀·I/(2π·r) für geraden Leiter. Solenoid: B = μ₀·μᵣ·n·I. Lorentz-Kraft: F = q·v×B — senkrecht auf v und B, keine Arbeit. Kreisbahn: r = m·v/(q·B). Anwendungen: Massenspektrometrie (r → Masse), Zyklotron (PET-Isotope), MRT (B₀ = 1,5–7 T).",
+          heading: "Magnetische Grundbegriffe",
+          text: "Magnetfeld B [T] entsteht durch bewegte Ladungen/Ströme. Feldlinien immer geschlossen (keine Monopole), vom Nord- zum Südpol außen. Permeabilität μᵣ: diamagnetisch (<1, Wasser), paramagnetisch (>1, Gadolinium-KM), ferromagnetisch (≫1, Eisen — MRT-Gefahr). Biot-Savart: B = μ₀·I/(2π·r) für geraden Leiter. Solenoid: B = μ₀·μᵣ·n·I (homogen im Innern). MRT-Magnete: supraleitende Solenoide, 1,5–7 T.",
           merksatz:
-            "Die Lorentz-Kraft lenkt geladene Teilchen im Magnetfeld auf Kreisbahnen ab — je schwerer oder schneller das Teilchen, desto größer der Radius (r = m·v/(q·B)).",
+            "Magnetfeldlinien sind immer geschlossen — keine Monopole. Ferromagnetische Materialien (Eisen, Nickel, Cobalt) werden im MRT zu gefährlichen Projektilen.",
         },
         {
-          heading: "Elektromagnetische Induktion",
-          text: "Faraday: ε = −N·dΦ/dt. Lenzsche Regel: induzierter Strom wirkt der Flussänderung entgegen. Transformator: U₁/U₂ = N₁/N₂. Generator: mechanische → elektrische Energie. MRT: präzedierende Protonenspins induzieren Signal in Empfangsspule (Faraday). Gradientenspulen schalten schnell → Wirbelströme → Klopfen. Selbstinduktion L: ε = −L·dI/dt; W = ½·L·I².",
-          merksatz: "Faraday: ε = −N·dΦ/dt. Lenz: induzierter Strom hemmt seine Ursache.",
+          heading: "Lorentz-Kraft und Anwendungen",
+          text: "F = q·v×B — senkrecht auf v und B, keine Arbeit (nur Ablenkung). Kreisbahn: r = m·v/(q·B). Zyklotronfrequenz f = q·B/(2π·m) geschwindigkeitsunabhängig. Anwendungen: Massenspektrometrie (r → Masse), Zyklotron (PET-Isotope ¹⁸F), MRT-Klopfen (Lorentz-Kraft auf Gradientenspulen), Hall-Effekt (Durchflusssensoren).",
+          merksatz:
+            "Die Lorentz-Kraft lenkt geladene Teilchen im Magnetfeld auf Kreisbahnen ab — r = m·v/(q·B). Schwerere/schnellere Teilchen → größerer Radius.",
         },
         {
-          heading: "MRT und elektromagnetisches Spektrum",
-          text: "MRT: B₀ polarisiert ¹H-Spins. Larmor-Frequenz: f_L = γ·B₀/2π (bei 1,5 T: ~64 MHz). HF-Puls kippt Magnetisierung. Relaxation (T₁, T₂) gewebespezifisch → Bildkontrast. Gradientenspulen: Ortscodierung. EM-Spektrum: Radiowellen (MRT) → Mikrowellen → IR → sichtbar → UV → Röntgen → Gamma. Alle breiten sich mit c = 3×10⁸ m/s aus (c = λ·f).",
+          heading: "Elektromagnetische Induktion und Transformator",
+          text: "Faraday: ε = −N·dΦ/dt (Φ = B·A·cos α). Lenz: induzierter Strom wirkt der Flussänderung entgegen (Energieerhaltung). Drei Induktionswege: B, A oder α zeitlich ändern. Wirbelströme: kreisförmige Induktionsströme in Leitern → Wärme (Induktionsherd, Hyperthermie). Selbstinduktion: ε = −L·dI/dt, W = ½·L·I². Transformator: U₁/U₂ = N₁/N₂; Trenntransformator im OP (galvanische Trennung).",
           merksatz:
-            "c = λ·f = 3×10⁸ m/s. Larmor: f_L = γ·B₀/2π. MRT bei 1,5 T: f ≈ 64 MHz (Radiowelle).",
+            "Faraday: ε = −N·dΦ/dt. Lenz: induzierter Strom hemmt seine Ursache. Transformator: U₁/U₂ = N₁/N₂.",
+        },
+        {
+          heading: "EM-Spektrum und MRT",
+          text: "c = λ·f = 3×10⁸ m/s; E = h·f. Spektrum: Radio (MRT) → Mikrowellen → IR → sichtbar → UV → Röntgen → Gamma. Ionisierend ab UV-C/Röntgen. MRT: B₀ polarisiert ¹H-Spins, HF-Puls bei Larmor-Frequenz f_L = γ·B₀/2π (1,5 T: ~64 MHz). T₁/T₂-Relaxation gewebespezifisch → Bildkontrast. Gradientenspulen: Ortscodierung.",
+          merksatz:
+            "c = λ·f = 3×10⁸ m/s. E = h·f. Larmor: f_L = γ·B₀/2π. MRT bei 1,5 T: f ≈ 64 MHz (Radiowelle, nicht-ionisierend).",
         },
         {
           heading: "Biomagnetismus und klinische Anwendungen",
-          text: "Biologische Ströme erzeugen schwache Magnetfelder: Das Herz erzeugt ~10⁻¹⁰ T (MCG, Magnetkardiographie), das Gehirn ~10⁻¹³ T (MEG, Magnetenzephalographie). Gemessen mit SQUID-Sensoren (superconducting quantum interference devices) bei 4 K. MCG/MEG sind strahlungsfrei und zeitlich hochauflösend. Transkranielle Magnetstimulation (TMS): Kurze starke Magnetfeldpulse (Faraday-Induktion) depolarisieren kortikale Neuronen nicht-invasiv — therapeutisch bei Depression.",
+          text: "Biologische Ströme erzeugen schwache Magnetfelder: Herz ~10⁻¹⁰ T (MCG), Gehirn ~10⁻¹³ T (MEG). Messung mit SQUID-Sensoren bei 4 K. TMS: Magnetpuls (dB/dt ≈ 10⁴ T/s) induziert (Faraday) ~200 V/m im Kortex → Neuronendepolarisation. Therapeutisch bei Depression (rTMS). Strahlungsfrei, nicht-invasiv.",
           merksatz:
-            "MEG: ~10⁻¹³ T (Gehirn). MCG: ~10⁻¹⁰ T (Herz). Messung mit SQUID-Sensoren. TMS: Magnetpuls → Nervenreiz.",
+            "MEG: ~10⁻¹³ T (Gehirn). MCG: ~10⁻¹⁰ T (Herz). TMS: Magnetpuls → Faraday-Induktion → Nervenreiz.",
         },
       ],
       merksätze: [
+        "Magnetfeldlinien sind immer geschlossen — keine Monopole. Zerbricht man einen Magneten, entstehen zwei vollständige Magnete.",
+        "Permeabilität μᵣ: diamagnetisch (<1, Wasser/Gewebe), paramagnetisch (>1, Gadolinium-KM), ferromagnetisch (≫1, Eisen — MRT-Projektilgefahr).",
         "Magnetfeld gerader Leiter: B = μ₀·I/(2π·r). Rechte-Hand-Regel für Richtung.",
-        "Solenoid: B = μ₀·μᵣ·n·I — im Innern homogen.",
-        "Die Lorentz-Kraft lenkt bewegte Ladungen quer ab, ohne sie zu bremsen — deshalb Kreisbahnen im Magnetfeld.",
-        "Schwerere oder schnellere Teilchen beschreiben größere Kreise im Magnetfeld (r = m·v/(q·B)) — so trennt das Massenspektrometer Ionen nach Masse.",
-        "Faraday: ε = −N·dΦ/dt — Flussänderung induziert Spannung.",
+        "Solenoid: B = μ₀·μᵣ·n·I — im Innern homogen. MRT-Magnete: supraleitende Solenoide (1,5–7 T).",
+        "Die Lorentz-Kraft F = q·(v×B) lenkt bewegte Ladungen quer ab, ohne sie zu bremsen — deshalb Kreisbahnen.",
+        "Zyklotronradius r = m·v/(q·B). Zyklotronfrequenz f = q·B/(2π·m) ist geschwindigkeitsunabhängig.",
+        "Massenspektrometrie: Schwerere Ionen → größerer Radius bei gleicher Geschwindigkeit und Ladung.",
+        "Faraday: ε = −N·dΦ/dt — drei Wege zur Induktion: B, A oder α zeitlich ändern.",
         "Lenzsche Regel: induzierter Strom wirkt Ursache entgegen (Energieerhaltung).",
+        "Wirbelströme: Induktionsströme in leitfähigen Körpern → Joulesche Wärme. Anwendung: Induktionsherd, Hyperthermie.",
         "Selbstinduktion: ε = −L·dI/dt. Energie: W = ½·L·I².",
-        "c = λ·f = 3×10⁸ m/s — gilt für alle EM-Wellen im Vakuum.",
-        "Larmor-Frequenz: f_L = γ·B₀/2π — bei 1,5 T für ¹H: ~64 MHz.",
-        "TMS: Magnetfeldpuls induziert (Faraday) Strom im Kortex → Neuronenreizung.",
+        "Transformator: U₁/U₂ = N₁/N₂. Leistungserhaltung: P₁ = P₂ → I₁/I₂ = N₂/N₁.",
+        "Trenntransformator im OP: galvanische Trennung zum Patientenschutz.",
+        "c = λ·f = 3×10⁸ m/s. Photonenenergie: E = h·f — ionisierend ab UV-C/Röntgen.",
+        "Larmor-Frequenz: f_L = γ·B₀/2π — bei 1,5 T für ¹H: ~64 MHz. Verdopplung B₀ = Verdopplung f.",
+        "TMS: Magnetfeldpuls induziert (Faraday) ~200 V/m im Kortex → Neuronenreizung.",
       ],
       // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
@@ -1170,6 +1305,84 @@ Schwelle für Neuronendepolarisation: ~1–2 V/m → TMS ist 100× über der Sch
           ],
           difficulty: 2,
           tags: ["tms", "faraday", "neurostimulation"],
+        },
+        {
+          question: "Welche Aussage über magnetische Feldlinien ist richtig?",
+          options: [
+            "Magnetische Feldlinien beginnen am Nordpol und enden am Südpol — sie sind offen",
+            "Magnetische Feldlinien sind immer geschlossen und verlaufen außen von Nord nach Süd, innen von Süd nach Nord",
+            "Magnetische Feldlinien verlaufen nur innerhalb von ferromagnetischen Materialien",
+            "Die Dichte der Feldlinien hat keinen Zusammenhang mit der Feldstärke",
+            "Magnetische Monopole existieren in supraleitenden Materialien",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Magnetische Feldlinien sind immer geschlossen — das ist der fundamentale Unterschied zu elektrischen Feldlinien. Außerhalb des Magneten verlaufen sie vom Nord- zum Südpol, innerhalb schließen sie sich vom Süd- zum Nordpol. Es gibt keine magnetischen Monopole (kein isolierter Nord- oder Südpol). Die Dichte der Feldlinien repräsentiert die Feldstärke: enge Linien = starkes Feld.",
+          hints: [
+            "Gibt es magnetische Monopole? Was passiert, wenn man einen Magneten zerbricht?",
+            "Magnetfeldlinien haben keinen Anfang und kein Ende — sie sind geschlossene Schleifen.",
+          ],
+          difficulty: 1,
+          tags: ["magnetfeldlinien", "monopole", "grundlagen"],
+        },
+        {
+          question:
+            "Gadolinium wird als MRT-Kontrastmittel eingesetzt. Welche magnetische Eigenschaft von Gadolinium ist dafür verantwortlich?",
+          options: [
+            "Diamagnetisch — es schwächt das lokale Magnetfeld ab",
+            "Ferromagnetisch — es verstärkt das Magnetfeld um den Faktor 1000",
+            "Paramagnetisch — es verkürzt die T₁-Relaxationszeit im umliegenden Gewebe",
+            "Supraleitend — es leitet den Strom verlustfrei",
+            "Antiferromagnetisch — es hebt das externe Feld lokal auf",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Gadolinium (Gd³⁺) ist paramagnetisch (μᵣ geringfügig > 1) und verkürzt die T₁-Relaxationszeit in seiner Umgebung. In T₁-gewichteten MRT-Bildern erscheinen Gewebe mit Kontrastmittelanreicherung (z. B. Tumoren mit gestörter Blut-Hirn-Schranke) dadurch heller. Gadolinium ist nicht ferromagnetisch und erzeugt daher keine gefährlichen Projektileffekte im MRT-Scanner.",
+          hints: [
+            "Ferromagnetische Stoffe wären im MRT gefährlich (Projektileffekt). Kontrastmittel müssen sicher sein.",
+            "Paramagnetische Ionen beeinflussen die Relaxationszeiten der umgebenden Protonen.",
+          ],
+          difficulty: 2,
+          tags: ["gadolinium", "mrt-kontrastmittel", "paramagnetismus"],
+        },
+        {
+          question: "Welche der folgenden Aussagen über die Lenzsche Regel ist falsch?",
+          options: [
+            "Sie ist eine direkte Folge der Energieerhaltung",
+            "Der induzierte Strom erzeugt ein Magnetfeld, das der Flussänderung entgegenwirkt",
+            "Sie erklärt das negative Vorzeichen im Faradayschen Induktionsgesetz",
+            "Der induzierte Strom verstärkt die ursprüngliche Flussänderung, um maximale Spannung zu erzeugen",
+            "Sie gilt für alle Induktionsvorgänge — auch Selbstinduktion",
+          ],
+          correctIndex: 3,
+          explanation:
+            "Die falsche Aussage ist D: Der induzierte Strom wirkt der Flussänderung immer entgegen (nicht verstärkend). Würde er die Flussänderung verstärken, wäre das ein Perpetuum mobile — unbegrenzte Energieerzeugung ohne externe Quelle. Die Lenzsche Regel ist eine direkte Konsequenz der Energieerhaltung und erklärt das Minuszeichen in ε = −N·dΦ/dt.",
+          hints: [
+            "Was wäre, wenn der induzierte Strom die Ursache verstärken würde? Könnte man dann Energie aus dem Nichts erzeugen?",
+            "Energieerhaltung verbietet Selbstverstärkung — deshalb das Minuszeichen bei Faraday.",
+          ],
+          difficulty: 1,
+          tags: ["lenz", "induktion", "energieerhaltung"],
+        },
+        {
+          question:
+            "Ein Induktionsherd funktioniert durch Wirbelströme. Warum wird der Topfboden heiß, aber die Glaskeramikplatte bleibt relativ kühl?",
+          options: [
+            "Die Glaskeramik hat eine höhere Wärmekapazität als Metall",
+            "Wirbelströme entstehen nur in elektrisch leitfähigen Materialien — Glaskeramik ist ein Isolator",
+            "Die Glaskeramik reflektiert das Magnetfeld vollständig",
+            "Der Topfboden absorbiert die Mikrowellenstrahlung des Herdes",
+            "Die Glaskeramik ist supraleitend und hat keinen Widerstand",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Wirbelströme (induzierte Kreisströme nach Faraday) können nur in elektrisch leitfähigen Materialien fließen. Die Wechselstromspule unter der Glaskeramik erzeugt ein wechselndes Magnetfeld. Dieses induziert Wirbelströme im ferromagnetischen/leitfähigen Topfboden (Eisen, Stahl). Die Wirbelströme erzeugen Joulesche Wärme (P = I²·R) direkt im Topf. Die Glaskeramikplatte ist ein elektrischer Isolator — keine Wirbelströme, keine direkte Erhitzung. Sie wird nur durch Wärmeleitung vom heißen Topf sekundär erwärmt.",
+          hints: [
+            "Was braucht man für einen elektrischen Strom? Freie Ladungsträger. Hat Glaskeramik diese?",
+            "Faraday induziert eine Spannung — aber Strom fließt nur, wenn das Material leitet.",
+          ],
+          difficulty: 2,
+          tags: ["wirbelströme", "induktion", "induktionsherd"],
         },
       ],
     },

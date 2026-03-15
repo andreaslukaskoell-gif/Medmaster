@@ -37,37 +37,28 @@ export function useBMSChapters(selectedSubject: string | null, completedChapters
   const [error, setError] = useState<string | null>(null);
   const [supabaseChapters, setSupabaseChapters] = useState<Kapitel[]>([]);
 
-  // Initialize loading
-  useEffect(() => {
-    const t = setTimeout(() => setIsLoading(false), 0);
-    return () => clearTimeout(t);
-  }, []);
-
   // SWR: cache first, then Supabase
   useEffect(() => {
-    const t = setTimeout(() => {
-      setIsLoading(true);
-      setError(null);
-      loadBMSChaptersSWR(
-        (chapters, source) => {
-          setSupabaseChapters(chapters);
-          setIsLoading(false);
-          if (import.meta.env.DEV) {
-            console.log(
-              source === "cache"
-                ? "Showing cached chapters (revalidating in background)"
-                : `Loaded ${chapters.length} chapters from Supabase`
-            );
-          }
-        },
-        (err) => {
-          setError(err);
-          setIsLoading(false);
-        },
-        () => {}
-      );
-    }, 0);
-    return () => clearTimeout(t);
+    setIsLoading(true);
+    setError(null);
+    loadBMSChaptersSWR(
+      (chapters, source) => {
+        setSupabaseChapters(chapters);
+        setIsLoading(false);
+        if (import.meta.env.DEV) {
+          console.log(
+            source === "cache"
+              ? "Showing cached chapters (revalidating in background)"
+              : `Loaded ${chapters.length} chapters from Supabase`
+          );
+        }
+      },
+      (err) => {
+        setError(err);
+        setIsLoading(false);
+      },
+      () => {}
+    );
   }, []);
 
   // Merged chapters for selected subject

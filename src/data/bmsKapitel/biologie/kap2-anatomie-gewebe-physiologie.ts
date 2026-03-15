@@ -2582,9 +2582,40 @@ Die Immunisierung nutzt das Prinzip der erworbenen Immunität gezielt aus — en
       imageUrl: "/images/bms/bio-lymphsystem.jpg",
       imageCaption: "Abb.: Lymphatisches System mit Lymphknoten und -gefäßen (OpenStax, CC BY 4.0)",
       stichworte: ["Lymphknoten", "Milz", "Thymus", "Lymphe", "Lymphgefäße", "Lymphozytenreifung"],
-      content: `## Lymphknoten — Architektur und Immunfunktion
+      content: `## Lymphgefäße — vom Kapillarnetz zum Ductus thoracicus
 
-**Um das lymphatische System einzuordnen,** beginnen wir mit dem **Lymphknoten** — Filter und Ort der Immunantwort. Der Lymphknoten filtert Lymphe und initiiert Immunantworten. Seine zonale Architektur trennt B- und T-Zell-Areale präzise:
+Das lymphatische Gefäßsystem beginnt blind im Gewebe und transportiert interstitielle Flüssigkeit zurück ins venöse Blut. Die Hierarchie der Lymphgefäße:
+
+- **Lymphkapillaren**: Blind endende, hochpermeable Gefäße ohne Basalmembran. Überlappende Endothelzellen wirken als Einlassventile — bei steigendem Gewebedruck öffnen sie sich, bei sinkendem Druck schließen sie. Aufnahme von Proteinen, Zelltrümmern und Krankheitserregern aus dem Interstitium
+- **Präkollektoren**: Erste Klappen erscheinen, leiten Lymphe zu den Kollektoren
+- **Lymphkollektoren**: Besitzen **Klappen** (Rückflussschutz) und eine Wand aus glatter Muskulatur. Der Abschnitt zwischen zwei Klappen heißt **Lymphangion** — er kontrahiert autonom (~5–10×/min) und pumpt die Lymphe vorwärts
+- **Lymphstämme**: Große Sammelgefäße (Trunci lumbales, intestinales, bronchomediastinales, subclavii, jugulares)
+- **Ductus thoracicus** (ca. 38–45 cm): Sammelt ~75 % der Körperlymphe (beide Beine, linker Arm, linke Thoraxhälfte, Abdomen). Entspringt aus der **Cisterna chyli** (Lendenzisterne, auf Höhe L1–L2) und mündet in den **linken Venenwinkel** (Confluens V. jugularis interna sinistra + V. subclavia sinistra)
+- **Ductus lymphaticus dexter**: Drainiert ~25 % (rechter Arm, rechte Thoraxhälfte, rechte Kopfhälfte) → rechter Venenwinkel
+
+> **Merke:** Lymphkapillaren (blind, keine Basalmembran) → Kollektoren (Klappen + glatte Muskulatur) → Lymphstämme → Ductus thoracicus (75 %, linker Venenwinkel) + Ductus lymphaticus dexter (25 %, rechts).
+
+{{IMAGE}}
+
+---
+
+## Lymphbildung — Starling-Kräfte und Flüssigkeitsgleichgewicht
+
+Die Lymphe entsteht als Ultrafiltrat des Blutplasmas in den Blutkapillaren. Ob Flüssigkeit filtriert oder reabsorbiert wird, bestimmen die **Starling-Kräfte**:
+
+- **Hydrostatischer Kapillardruck** (Pc, ~32 mmHg arteriell, ~15 mmHg venös): Presst Flüssigkeit **aus** der Kapillare
+- **Kolloidosmotischer Druck des Plasmas** (πc, ~25 mmHg): Zieht Flüssigkeit **in** die Kapillare zurück (Albumin!)
+- **Netto**: Am arteriellen Ende überwiegt Filtration, am venösen Ende Reabsorption. ~10 % des Filtrats (~2–4 L/Tag) wird **nicht** reabsorbiert → **Lymphe**
+
+Ohne funktionierendes Lymphsystem sammelt sich diese Flüssigkeit im Gewebe → **Ödem**. Aus dem Darm transportieren Chylomikronen-beladene Lymphgefäße (**Chylusgefäße**, Vasa lactea) resorbierte Lipide direkt ins Blut, unter Umgehung der Leber-Erstpassage.
+
+> **Merke:** Starling-Kräfte: Hydrostatischer Druck (Filtration) vs. kolloidosmotischer Druck (Reabsorption). ~10 % des Kapillarfiltrats → Lymphe. Albumin-Mangel → πc ↓ → Ödem.
+
+---
+
+## Lymphknoten — Architektur, Immunfunktion und Stationen
+
+Der Lymphknoten filtert Lymphe und initiiert Immunantworten. Seine zonale Architektur trennt B- und T-Zell-Areale präzise:
 
 - **Cortex** (Rinde): **B-Zellen** in Follikeln (Primärfollikel: ruhend; Sekundärfollikel mit Keimzentrum: aktiv → Antikörper-Produktion). Hier entsteht die humorale Immunantwort
 - **Paracortex**: **T-Zellen** (CD4⁺ und CD8⁺) + dendritische Zellen. Hier werden T-Zellen via MHC-Antigen-Präsentation aktiviert → zelluläre Immunantwort
@@ -2592,9 +2623,17 @@ Die Immunisierung nutzt das Prinzip der erworbenen Immunität gezielt aus — en
 
 **Lymphfluss:** Lymphe tritt über **mehrere afferente Gefäße** ein (Randsinus → Cortex → Paracortex → Marksinus) und verlässt den Knoten über **ein efferentes Gefäß** am Hilus.
 
-> **Merke:** Lymphknoten-Architektur: **Cortex** = B-Zellen (Follikel, Antikörper), **Paracortex** = T-Zellen + dendritische Zellen (zelluläre Immunität), **Mark** = Plasmazellen (Sekretion). Afferenz: mehrere Gefäße. Efferenz: ein Gefäß.
+**Wichtige Lymphknotenstationen:**
 
-{{IMAGE}}
+| Station | Drainagegebiet | Klinische Relevanz |
+|---|---|---|
+| **Zervikal** (Hals) | Kopf, Hals, Schilddrüse | Geschwollen bei Tonsillitis, Lymphomen, Kopf-Hals-Tumoren |
+| **Axillär** (Achsel) | Obere Extremität, Brust, Thoraxwand | **Sentinel-LK beim Mammakarzinom** — erster Lymphknoten im Abflussgebiet |
+| **Inguinal** (Leiste) | Untere Extremität, äußeres Genitale, Gesäß | Geschwollen bei Infektionen der Beine, STIs |
+| **Mediastinal** | Lunge, Ösophagus | Vergrößert bei Lungenkarzinom, Sarkoidose |
+| **Mesenterial** | Darm | Morbus Crohn, Lymphome |
+
+> **Merke:** Lymphknoten-Architektur: **Cortex** = B-Zellen (Follikel, Antikörper), **Paracortex** = T-Zellen + dendritische Zellen (zelluläre Immunität), **Mark** = Plasmazellen (Sekretion). Sentinel-LK = erster LK im Tumorabfluss → Biopsie für Staging.
 
 ---
 
@@ -2613,12 +2652,16 @@ Die Immunisierung nutzt das Prinzip der erworbenen Immunität gezielt aus — en
 
 ---
 
-## Lymphgefäße und Lymphtransport im Detail
+## Klinisch: Lymphödem und Sentinel-Lymphknoten
 
+**Lymphödem** entsteht bei gestörtem Lymphabfluss — Flüssigkeit sammelt sich im Interstitium und ist typischerweise **nicht eindrückbar** (im Gegensatz zum kardialen Ödem). Zwei Formen:
 
-Der **Ductus thoracicus** (ca. 38-45 cm lang) sammelt die Lymphe aus etwa 75 % des Körpers (beide Beine, linker Arm, linke Thoraxhälfte, Abdomen) und mündet in den linken Venenwinkel (Confluens der V. jugularis interna sinistra und V. subclavia sinistra). Der rechte **Ductus lymphaticus dexter** drainiert den rechten Arm, die rechte Thoraxhälfte und die rechte Kopfhälfte. Aus dem Darm transportieren Chylomikronen-beladene Lymphgefäße (Chylusgefäße, Vasa lactea) resorbierte Lipide direkt ins Blut, unter Umgehung der Leber-Erstpassage.
+- **Primäres Lymphödem**: Angeborene Fehlanlage der Lymphgefäße (z. B. Milroy-Syndrom, autosomal-dominant, Mutation im VEGFR-3-Gen)
+- **Sekundäres Lymphödem**: Erworbene Abflussbehinderung — häufigste Ursachen: Tumorinfiltration, chirurgische Lymphknotenentfernung (z. B. axilläre Dissektion bei Mammakarzinom), Bestrahlung, Infektionen (Filariose durch Wuchereria bancrofti → Elephantiasis, tropisch)
 
-> **Merke:** Ductus thoracicus = 75 % der Körperlymphe → linker Venenwinkel. Lymphangion-Pumpe + Klappen + Muskelpumpe treiben den Lymphfluss an.`,
+**Sentinel-Lymphknoten-Biopsie:** Der Sentinel-LK (Wächter-Lymphknoten) ist der **erste** Lymphknoten im Abflussgebiet eines Tumors. Technik: Radioaktiver Tracer oder Farbstoff (Patentblau) wird peritumoral injiziert → erster angefärbter LK wird biopsiert. Ist er tumorfrei, sind nachgeschaltete LK mit hoher Wahrscheinlichkeit ebenfalls frei → ausgedehnte Lymphknotendissektion kann vermieden werden.
+
+> **Merke:** Lymphödem: primär (angeboren) vs. sekundär (Tumor, OP, Bestrahlung). Sentinel-LK = erster LK im Abfluss → Biopsie entscheidet über Ausmaß der Operation.`,
       lernziele: [
         "Die drei Hauptfunktionen des lymphatischen Systems (Flüssigkeitsrücktransport, Immunabwehr, Fetttransport) beschreiben.",
         "Den Aufbau und die Filterleistung eines Lymphknotens (Cortex, Paracortex, Mark) erklären.",
@@ -2729,39 +2772,104 @@ Der **Ductus thoracicus** (ca. 38-45 cm lang) sammelt die Lymphe aus etwa 75 % d
       ],
       content: `{{DIAGRAM:atmungssystem}}
 
-## Surfactant und Alveolarstruktur
+## Der Bronchialbaum — von der Trachea zur Alveole
 
-**Um die Atmung zu verstehen,** beginnen wir mit dem **Gasaustauschort** — den Alveolen — und dem Surfactant. **Gasaustausch findet in den Alveolen statt, nicht in den Bronchien.** Die Bronchien leiten die Luft; der eigentliche O₂/CO₂-Austausch erfolgt in den **Alveolen**. Sauerstoff wird im Blut an **Hämoglobin der Erythrozyten** gebunden; ein Teil des CO₂ wird ebenfalls an Hämoglobin gebunden (als Carbaminohämoglobin). Mit jedem Atemzug wird **nicht** die gesamte Luftmenge erneuert (Totraum, Residualvolumen).
+Die Atemluft durchläuft auf ihrem Weg zu den Alveolen eine zunehmend feinere Verzweigung. Die **Trachea** (Luftröhre, ~10–12 cm lang) wird von **16–20 hufeisenförmigen Knorpelspangen** (C-Knorpel, dorsal offen → Paries membranaceus mit glatter Muskulatur) offengehalten. Sie teilt sich an der **Bifurcatio tracheae** (Höhe Th4/5) in die beiden **Hauptbronchien**:
 
-Die ~300 Millionen Alveolen sind die funktionellen Einheiten des Gasaustauschs. Ihre Wand besteht aus zwei Pneumozytentypen:
-- **Typ-I-Pneumozyten** (~95 % der Oberfläche): Hauchfein (0,2 µm), ermöglichen den Gasaustausch
-- **Typ-II-Pneumozyten** (~5 % der Oberfläche): Kubische Zellen, produzieren **Surfactant** (Dipalmitoylphosphatidylcholin/DPPC, ~90 % Phospholipide)
+- **Rechter Hauptbronchus**: Steiler, kürzer, weiter → **Aspiration geht häufiger rechts** (besonders rechter Unterlappen)
+- **Linker Hauptbronchus**: Flacher abgehend (Aortenbogen kreuzt darüber)
 
-**Surfactant-Funktion:** Senkt die Oberflächenspannung an der Luft-Flüssigkeits-Grenze. Nach dem **Laplace-Gesetz** (P = 2T/r) würden kleine Alveolen kollabieren, weil höherer Druck als in großen. Surfactant verhindert das durch Spannungsreduktion → Alveolen bleiben offen.
+Die Bronchien verzweigen sich über ~23 Generationen:
 
-**Klinisch — RDS (Neonatales Atemnotsyndrom):** Frühgeborene (<28 SSW) haben unreife Typ-II-Pneumozyten → Surfactant-Mangel → Atelektase → Hypoxie. Prophylaxe: Betamethason/Dexamethason (Mutter antenatal → Lungenreifung ↑). Therapie: Surfactant-Instillation.
+| Generation | Struktur | Kennzeichen |
+|---|---|---|
+| 0–1 | Hauptbronchien | Knorpelspangen, Flimmerepithel |
+| 2–4 | Lappen-/Segmentbronchien | Knorpelplatten, glatte Muskulatur |
+| 5–16 | Bronchiolen | **Kein Knorpel** mehr, glatte Muskulatur (Asthma!), Clara-Zellen (Surfactant-ähnliches Sekret) |
+| 17–19 | Respiratorische Bronchiolen | Erste Alveolen in der Wand → Gasaustausch beginnt |
+| 20–23 | Ductus alveolares → Alveolen | ~300 Mio. Alveolen, ~80–140 m² Gasaustauschfläche |
 
-> **Merke:** **Surfactant**: Typ-II-Pneumozyten, DPPC (~90 % Phospholipide) → Oberflächenspannung ↓ → Alveolarkollaps (Atelektase) verhindert. **RDS** bei Frühgeborenen: Surfactant-Mangel → Betamethason antenatal (Prophylaxe).
+> **Merke:** Trachea → Hauptbronchien → Lappen-/Segmentbronchien (Knorpel) → Bronchiolen (kein Knorpel, glatte Muskulatur) → Alveolen. Aspiration: rechter Unterlappen (steiler Bronchus). ~23 Generationen bis zur Alveole.
 
 {{IMAGE}}
 
 ---
 
-## Atemmechanik, Gasaustausch und Atemregulation
+## Surfactant und Alveolarstruktur
 
+**Gasaustausch findet in den Alveolen statt, nicht in den Bronchien.** Die Bronchien leiten die Luft; der eigentliche O₂/CO₂-Austausch erfolgt in den **Alveolen**. Die ~300 Millionen Alveolen sind die funktionellen Einheiten des Gasaustauschs. Ihre Wand besteht aus zwei Pneumozytentypen:
+- **Typ-I-Pneumozyten** (~95 % der Oberfläche): Hauchfein (0,2 µm), ermöglichen den Gasaustausch
+- **Typ-II-Pneumozyten** (~5 % der Oberfläche): Kubische Zellen, produzieren **Surfactant** (Dipalmitoylphosphatidylcholin/DPPC, ~90 % Phospholipide)
 
-**Gasaustausch durch Diffusion:**
+Zusätzlich befinden sich **Alveolarmakrophagen** (Staubzellen) im Alveolarraum — sie phagozytieren inhalierte Partikel und Erreger (erste Verteidigungslinie der Lunge).
+
+Die **Blut-Luft-Schranke** ist nur ~0,5 µm dünn und besteht aus drei Schichten: Alveolarepithel (Typ-I-Pneumozyt) → fusionierte Basalmembran → Kapillarendothel. Diese extreme Dünnheit ermöglicht schnelle Diffusion.
+
+**Surfactant-Funktion:** Senkt die Oberflächenspannung an der Luft-Flüssigkeits-Grenze. Nach dem **Laplace-Gesetz** (P = 2T/r) würden kleine Alveolen kollabieren, weil höherer Druck als in großen. Surfactant verhindert das durch Spannungsreduktion → Alveolen bleiben offen.
+
+**Klinisch — RDS (Neonatales Atemnotsyndrom):** Frühgeborene (<28 SSW) haben unreife Typ-II-Pneumozyten → Surfactant-Mangel → Atelektase → Hypoxie. Prophylaxe: Betamethason/Dexamethason (Mutter antenatal → Lungenreifung ↑). Therapie: Surfactant-Instillation.
+
+> **Merke:** **Surfactant**: Typ-II-Pneumozyten, DPPC (~90 % Phospholipide) → Oberflächenspannung ↓ → Alveolarkollaps (Atelektase) verhindert. **Blut-Luft-Schranke**: ~0,5 µm (Alveolarepithel + Basalmembran + Kapillarendothel).
+
+---
+
+## Gasaustausch — Fick'sches Diffusionsgesetz und Partialdrücke
+
+Der Gasaustausch in der Lunge folgt dem **Fick'schen Diffusionsgesetz**: Die Diffusionsrate ist proportional zur **Austauschfläche** (A), zum **Partialdruckgradienten** (ΔP) und zur **Löslichkeit** des Gases, aber umgekehrt proportional zur **Diffusionsstrecke** (d):
+
+**V̇ = D × A × ΔP / d** (D = Diffusionskoeffizient, abhängig von Löslichkeit und Molekülgröße)
+
+**Partialdrücke und Gasaustausch:**
 - **O₂**: Alveolär ~100 mmHg → venöses Blut ~40 mmHg → **Gradient 60 mmHg** → O₂ diffundiert ins Blut
-- **CO₂**: Venöses Blut ~46 mmHg → Alveolen ~40 mmHg → **Gradient 6 mmHg** (klein!) → aber CO₂ diffundiert ~20× schneller (höhere Löslichkeit)
+- **CO₂**: Venöses Blut ~46 mmHg → Alveolen ~40 mmHg → **Gradient 6 mmHg** (klein!) → aber CO₂ diffundiert ~20× schneller (höhere Löslichkeit in Wasser/Membranen)
 
-**CO₂-Transport** im Blut:
-- **70 % Bikarbonat** (HCO₃⁻): Carboanhydrase in Erythrozyten: CO₂ + H₂O ⇌ H₂CO₃ ⇌ H⁺ + HCO₃⁻. Chlorid-Shift (Cl⁻ rein, HCO₃⁻ raus). **Haldane-Effekt**: Desoxy-Hb bindet mehr CO₂
-- **23 % Carbaminohämoglobin**: CO₂ an Globin-Aminogruppen
-- **7 % gelöst** im Plasma (bestimmt pCO₂)
+Die Äquilibrierung (Angleichung der Partialdrücke) ist normalerweise nach ~0,25 s abgeschlossen — das Blut passiert die Lungenkapillare in ~0,75 s, es bleibt also eine **Diffusionsreserve** (wichtig bei Belastung, wenn die Passagezeit sinkt).
 
-**Atemregulation:** Zentrale Chemorezeptoren (Medulla oblongata) reagieren auf CO₂/pH → **Hauptantrieb**. Periphere Chemorezeptoren (Karotiskörper) reagieren auf O₂ (erst bei pO₂ <60 mmHg relevant). **COPD-Vorsicht**: Bei chronischer CO₂-Retention → Anpassung der CO₂-Sensitivität → O₂ wird Hauptantrieb → unkontrollierte O₂-Gabe kann Apnoe auslösen!
+> **Merke:** Fick: V̇ ∝ A × ΔP / d. O₂-Gradient: 60 mmHg (100 → 40). CO₂-Gradient: nur 6 mmHg, aber 20× diffusibler. Äquilibrierung nach ~0,25 s (Reserve: 0,5 s).
 
-> **Merke:** **CO₂-Transport**: 70 % Bikarbonat (Carboanhydrase, Chlorid-Shift), 23 % Carbamino-Hb, 7 % gelöst. **Haldane-Effekt**: Desoxy-Hb bindet mehr CO₂. **Atemantrieb**: primär CO₂/pH (zentral), O₂ erst bei pO₂ <60 mmHg (peripher).`,
+---
+
+## O₂-Transport — Hämoglobin-Bindungskurve und Bohr-Effekt
+
+Sauerstoff wird zu **98 %** an **Hämoglobin** (Hb) gebunden transportiert, nur ~2 % physikalisch gelöst. Hb ist ein **Tetramer** (2α + 2β-Ketten), jede Untereinheit trägt eine **Häm-Gruppe** mit Fe²⁺ → maximal **4 O₂ pro Hb**. Die O₂-Bindungskurve ist **sigmoidal** (S-förmig) — Folge der **kooperativen Bindung**: Bindung des ersten O₂ erleichtert die Bindung der weiteren.
+
+**Bohr-Effekt — pH-abhängige O₂-Abgabe:**
+
+| Bedingung | Kurvenverschiebung | O₂-Affinität | Physiologisch |
+|---|---|---|---|
+| pH ↓, pCO₂ ↑, Temp ↑, 2,3-BPG ↑ | **Rechts** | ↓ (O₂ wird leichter abgegeben) | Aktives Gewebe (Muskel) |
+| pH ↑, pCO₂ ↓, Temp ↓, 2,3-BPG ↓ | **Links** | ↑ (O₂ wird fester gebunden) | Lunge, fetales Hb (HbF) |
+
+**2,3-Bisphosphoglycerat (2,3-BPG):** Entsteht in Erythrozyten aus dem Glykolyse-Intermediat. Bindet in die Zentralhöhle des Desoxy-Hb → stabilisiert T-Form (tense, niedrige Affinität). Bei chronischer Hypoxie (Höhenadaptation, Anämie) steigt 2,3-BPG → mehr O₂ ans Gewebe.
+
+> **Merke:** Hb bindet kooperativ 4× O₂ (sigmoidale Kurve). **Bohr-Effekt**: pH ↓ / CO₂ ↑ / Temp ↑ → Rechtsverschiebung → O₂-Abgabe ↑ im Gewebe. **Fetales HbF** hat höhere O₂-Affinität als HbA (Linksverschiebung) → entzieht mütterlichem Blut O₂.
+
+---
+
+## CO₂-Transport und Haldane-Effekt
+
+**CO₂-Transport** im Blut erfolgt über drei Wege:
+- **70 % Bikarbonat** (HCO₃⁻): Carboanhydrase in Erythrozyten: CO₂ + H₂O ⇌ H₂CO₃ ⇌ H⁺ + HCO₃⁻. **Chlorid-Shift** (Hamburger-Shift): HCO₃⁻ verlässt den Erythrozyten über den Cl⁻/HCO₃⁻-Austauscher (Band-3-Protein) → Cl⁻ strömt im Gegenzug ein → Ladungsausgleich
+- **23 % Carbaminohämoglobin**: CO₂ bindet an Aminogruppen der Globinketten (nicht an Häm!)
+- **7 % gelöst** im Plasma (bestimmt pCO₂, gemessen in der BGA)
+
+**Haldane-Effekt:** Desoxygeniertes Hb bindet **mehr CO₂** (und mehr H⁺) als oxygeniertes Hb. Im Gewebe: O₂ ab → Desoxy-Hb → CO₂-Aufnahme ↑. In der Lunge: O₂ an → Oxy-Hb → CO₂-Abgabe ↑. Bohr- und Haldane-Effekt sind physiologisch gekoppelt und optimieren den Gastransport.
+
+> **Merke:** **CO₂-Transport**: 70 % Bikarbonat (Carboanhydrase, Chlorid-Shift), 23 % Carbamino-Hb, 7 % gelöst. **Haldane-Effekt**: Desoxy-Hb bindet mehr CO₂ (im Gewebe) → Oxy-Hb gibt CO₂ ab (in der Lunge).
+
+---
+
+## Atemregulation — Atemzentrum und Chemorezeptoren
+
+Das **Atemzentrum** liegt in der **Medulla oblongata** und im **Pons**. Es generiert den Atemrhythmus autonom (Prä-Bötzinger-Komplex) und wird durch Chemorezeptoren moduliert:
+
+- **Zentrale Chemorezeptoren** (Medulla oblongata): Reagieren auf **H⁺-Ionen im Liquor** (CO₂ diffundiert über die Blut-Hirn-Schranke → Carboanhydrase → H⁺ ↑). **Wichtigster Atemantrieb!** Steigt pCO₂ → Ventilation ↑
+- **Periphere Chemorezeptoren** (Glomus caroticum an Karotis-Bifurkation + Glomera aortica): Reagieren auf **pO₂ ↓** (erst bei pO₂ <60 mmHg relevant!), pH ↓ und pCO₂ ↑. Schnelle Antwort (~Sekunden)
+- **Hering-Breuer-Reflex**: Dehnungsrezeptoren in der Lunge → bei Überdehnung → Inspiration wird reflektorisch beendet (Schutzmechanismus)
+
+**COPD-Vorsicht:** Bei chronischer CO₂-Retention → zentrale Chemorezeptoren adaptieren (Sollwert verschoben) → **O₂-Mangel** wird zum Hauptantrieb (periphere Chemorezeptoren) → unkontrollierte O₂-Gabe kann den letzten Atemantrieb nehmen → **Apnoe!** Daher: O₂-Ziel bei COPD-Patienten: SpO₂ 88–92 %.
+
+> **Merke:** **Hauptatemantrieb**: pCO₂/pH (zentral, Medulla). **Hypoxischer Antrieb**: pO₂ <60 mmHg (peripher, Glomus caroticum). Bei COPD: CO₂-Adaptation → O₂ wird Hauptantrieb → vorsichtige O₂-Gabe (Ziel SpO₂ 88–92 %).`,
       lernziele: [
         "Die Funktion von Surfactant (Typ-II-Pneumozyten, DPPC) und seine Bedeutung zur Verhinderung von Atelektase erklären.",
         "Die Mechanismen der aktiven Inspiration (Diaphragma, Mm. intercostales externi) und passiven Exspiration beschreiben.",
@@ -2886,6 +2994,25 @@ Die ~300 Millionen Alveolen sind die funktionellen Einheiten des Gasaustauschs. 
       ],
       content: `{{DIAGRAM:verdauungssystem}}
 
+## Verdauungstrakt Organ für Organ — Mund bis Kolon
+
+Die Verdauung beginnt bereits in der **Mundhöhle**: Mechanische Zerkleinerung (Kauen) und Benetzung mit Speichel (~1–1,5 L/Tag). Die **Speichel-Amylase** (Ptyalin) spaltet Stärke zu Maltose und Dextrinen — die Kohlenhydratverdauung beginnt also im Mund. Der Bolus gelangt über den **Ösophagus** (Speiseröhre, ~25 cm) durch **Peristaltik** (koordinierte Kontraktion: Längsmuskulatur → Ringmuskulatur, gesteuert vom Plexus myentericus = Auerbach) in den Magen. Der untere Ösophagussphinkter (UÖS) verhindert Reflux.
+
+**Magen-Abschnitte:** Kardia (Eingang) → Fundus (Kuppel, Gasblase) → Corpus (Hauptteil, Beleg- und Hauptzellen) → Antrum (G-Zellen, Gastrin) → Pylorus (Pförtner, reguliert Magenentleerung). Verweildauer: Kohlenhydrate ~1–2 h, Proteine ~3–4 h, Fette ~5–6 h (Fett hemmt Magenentleerung via CCK).
+
+**Dünndarm** (~5–6 m, Hauptort der Verdauung und Resorption):
+- **Duodenum** (~25 cm, C-förmig): Einmündung von Ductus choledochus (Galle) + Ductus pancreaticus (Pankreassaft) an der **Papilla Vateri**. Hier: Neutralisation des sauren Chymus (HCO₃⁻), Fettemulgierung (Gallensalze), Enzymaktivierung
+- **Jejunum** (~2,5 m): Hauptresorptionsort — Kerckring-Falten (Plicae circulares) hier am ausgeprägtesten. Glukose, Aminosäuren, Fette, Eisen (Fe²⁺, DMT1), fettlösliche Vitamine
+- **Ileum** (~3 m): Resorption von **Vitamin B₁₂** (nur hier, benötigt IF) und **Gallensalzen** (enterohepatischer Kreislauf, ~95 % der Gallensalze werden recycelt). Peyer-Plaques (GALT, Immunfunktion)
+
+**Kolon** (~1,5 m): Wasserrückresorption (~1,5 L/Tag), Elektrolyte (Na⁺, Cl⁻), Eindickung des Stuhls. Bakterielle Fermentation unverdaulicher Kohlenhydrate → kurzkettige Fettsäuren (Butyrat = Energiequelle der Kolonozyten). Haustrierung (Einschnürungen), keine Zotten.
+
+> **Merke:** Mund (Amylase, mechanisch) → Ösophagus (Peristaltik) → Magen (HCl, Pepsin) → Duodenum (Galle + Pankreas) → Jejunum (Hauptresorption) → Ileum (B₁₂, Gallensalze) → Kolon (Wasser, Bakterien). Fett bremst die Magenentleerung.
+
+{{IMAGE}}
+
+---
+
 ## Magen — Sekretion und Regulation
 
 Der Magen produziert täglich bis zu 3 Liter Magensaft mit einem pH von 1–2 — stark genug, um Bakterien abzutöten und Proteine zu denaturieren. Die Magenschleimhaut enthält fünf spezialisierte Zelltypen mit klar definierten Aufgaben:
@@ -2898,37 +3025,62 @@ Der Magen produziert täglich bis zu 3 Liter Magensaft mit einem pH von 1–2 �
 | **G-Zellen** (Antrum) | **Gastrin** | Peptide, Dehnung, ACh |
 | **D-Zellen** | **Somatostatin** (hemmt Gastrin + HCl) | niedriger pH, Fette |
 
-**HCl-Synthese** (Belegzellen): H⁺/K⁺-ATPase (Protonenpumpe) pumpt H⁺ gegen Gradient. Carboanhydrase liefert H⁺ aus CO₂ + H₂O. **Protonenpumpenhemmer** (PPI, z.B. Omeprazol) blockieren die H⁺/K⁺-ATPase irreversibel → HCl ↓ → Ulkustherapie. **Peristaltik** bezeichnet die koordinierte Kontraktion der Längsmuskulatur gefolgt von Ringmuskulatur — so wird der Bolus oral → aboral transportiert. Gesteuert wird sie vom enterischen Nervensystem (Plexus myentericus = Auerbach, Plexus submucosus = Meissner).
+**HCl-Synthese** (Belegzellen): H⁺/K⁺-ATPase (Protonenpumpe) pumpt H⁺ gegen Gradient. Carboanhydrase liefert H⁺ aus CO₂ + H₂O. **Protonenpumpenhemmer** (PPI, z.B. Omeprazol) blockieren die H⁺/K⁺-ATPase irreversibel → HCl ↓ → Ulkustherapie.
 
-**Aktivierungskaskade im Pankreas:** Trypsinogen wird im Dünndarm durch **Enterokinase** (= Enteropeptidase, auf Bürstensaum-Enterozyten) → Trypsin aktiviert. Trypsin aktiviert dann alle anderen Pankreasenzyme (Chymotrypsinogen, Proelastase, Phospholipase A₂). Gefährlich: Trypsin-Aktivierung schon im Pankreas → **akute Pankreatitis** (Autodigestion).
-
-> **Merke:** **Magenzellen**: Belegzellen = HCl + IF, Hauptzellen = Pepsinogen, Nebenzellen = Mukus, G-Zellen = Gastrin (↑HCl), D-Zellen = Somatostatin (↓HCl). **Trypsinogen → Trypsin** via Enterokinase (Dünndarm) → aktiviert alle anderen Pankreas-Proenzyme.
-
-{{IMAGE}}
+> **Merke:** **Magenzellen**: Belegzellen = HCl + IF, Hauptzellen = Pepsinogen, Nebenzellen = Mukus, G-Zellen = Gastrin (↑HCl), D-Zellen = Somatostatin (↓HCl). PPI blockieren H⁺/K⁺-ATPase.
 
 ---
 
-## Dünndarm-Resorption und Leber-Funktionen
+## Verdauungsenzyme — Kohlenhydrate, Proteine, Fette
 
+| Substrat | Enzym | Herkunft | Produkt |
+|---|---|---|---|
+| Stärke | **Speichel-Amylase** (Ptyalin) | Mundhöhle | Maltose, Dextrine |
+| Stärke | **Pankreas-Amylase** | Pankreas | Maltose, Dextrine |
+| Maltose/Laktose/Saccharose | **Bürstensaumenzyme** (Maltase, Laktase, Sucrase) | Duodenum/Jejunum | Monosaccharide (Glukose, Galaktose, Fruktose) |
+| Proteine | **Pepsin** (aus Pepsinogen) | Magen (pH <3) | Polypeptide |
+| Proteine | **Trypsin**, Chymotrypsin, Elastase | Pankreas | Oligopeptide |
+| Oligopeptide | Carboxypeptidase, Aminopeptidase | Pankreas / Bürstensaum | Aminosäuren, Di-/Tripeptide |
+| Triglyzeride | **Pankreas-Lipase** (+ Colipase) | Pankreas | Fettsäuren + 2-Monoglyzeride |
+| Fett-Emulgierung | **Gallensalze** | Leber/Gallenblase | Mizellen |
+
+**Aktivierungskaskade im Pankreas:** Trypsinogen wird im Dünndarm durch **Enterokinase** (= Enteropeptidase, auf Bürstensaum-Enterozyten) → Trypsin aktiviert. Trypsin aktiviert dann alle anderen Pankreasenzyme (Chymotrypsinogen, Proelastase, Phospholipase A₂). Gefährlich: Trypsin-Aktivierung schon im Pankreas → **akute Pankreatitis** (Autodigestion). Schutz: **Trypsin-Inhibitor** (SPINK1) im Pankreassekret.
+
+> **Merke:** Stärke: Amylase (Mund + Pankreas) → Maltase (Bürstensaum) → Glukose. Proteine: Pepsin (Magen) → Trypsin/Chymotrypsin (Pankreas). Fette: Lipase + Gallensalze → Fettsäuren. **Trypsinogen → Trypsin** via Enterokinase → Schlüsselenzym, aktiviert alle anderen.
+
+---
+
+## Resorption im Dünndarm — Mikrovilli und Transporter
+
+Die enorme Resorptionsfläche des Dünndarms (~200 m²) entsteht durch drei Ebenen der Oberflächenvergrößerung: **Kerckring-Falten** (Plicae circulares, ~3×) → **Zotten** (Villi, ~10×) → **Mikrovilli** (Bürstensaum, ~20×). Jede Zotte enthält ein Blutkapillarnetz und ein zentrales **Lymphgefäß** (Chylusgefäß) für den Fetttransport.
 
 | Nährstoff | Transporter | Besonderheit |
 |---|---|---|
-| Glukose/Galaktose | **SGLT1** (apikal, Na⁺-gekoppelt) | GLUT2 basolateral → Pfortader |
-| Fruktose | GLUT5 (apikal) | passiv |
-| Aminosäuren | Na⁺-gekoppelte AA-Transporter | Pfortader |
-| **Fette** | Mizellen → Enterozyt → **Chylomikronen** | **Lymphe** (Ductus thoracicus) → **nicht Pfortader**! |
-| Vitamin B₁₂ | Cubam-Rezeptor (**IF notwendig**) | Nur Ileum (terminales) |
+| Glukose/Galaktose | **SGLT1** (apikal, Na⁺-gekoppelt, sekundär-aktiv) | GLUT2 basolateral → Pfortader |
+| Fruktose | GLUT5 (apikal) | Erleichterte Diffusion (passiv) |
+| Aminosäuren | Na⁺-gekoppelte AA-Transporter, PepT1 (Di-/Tripeptide) | Pfortader |
+| **Fette** | Mizellen → passive Diffusion → Enterozyt → **Chylomikronen** (Triglyzeride + ApoB-48) | **Lymphe** (Ductus thoracicus) → **nicht Pfortader**! |
+| Eisen | **DMT1** (Fe²⁺, Duodenum) | Häm-Eisen besser resorbierbar als Nicht-Häm |
+| Vitamin B₁₂ | **Cubam-Rezeptor** (IF-B₁₂-Komplex) | **Nur terminales Ileum** |
+
+> **Merke:** Oberflächenvergrößerung: Falten × Zotten × Mikrovilli = ~200 m². Glukose: SGLT1 (aktiv). Fette: Mizellen → Chylomikronen → **Lymphe** (nicht Pfortader!). B₁₂: nur Ileum + IF. Eisen: DMT1, Duodenum.
+
+---
+
+## Leber, Galle und Pankreas — Drüsenfunktionen und Pfortaderkreislauf
+
+Die **Leber** (größte Drüse, ~1,5 kg) hat eine einzigartige doppelte Blutversorgung: **A. hepatica** (~25 %, sauerstoffreich) und **V. portae** (~75 %, nährstoffreich). Die **Pfortader** (V. portae) sammelt venöses Blut aus Magen, Darm, Milz und Pankreas → Leber → Verarbeitung, bevor Nährstoffe in den systemischen Kreislauf gelangen (**First-Pass-Effekt**, auch für Medikamente!). Leberläppchen sind die funktionellen Einheiten: Hepatozyten radiär um eine Zentralvene angeordnet, dazwischen Sinusoide mit Kupffer-Zellen (Lebermakrophagen).
+
+**Galleproduktion:** ~500–1000 mL/Tag. Gallensalze (aus Cholesterin) emulgieren Fette → Mizellenbildung → Fettresorption. **Enterohepatischer Kreislauf**: ~95 % der Gallensalze werden im terminalen Ileum rückresorbiert → Pfortader → Leber → erneute Sekretion. Speicherung und Konzentrierung in der **Gallenblase** (5–10×). Auslöser der Gallenblasenkontraktion: **CCK** (Cholezystokinin, freigesetzt bei Fett/Protein im Duodenum).
+
+**Exokrines Pankreas:** ~1,5 L Pankreassaft/Tag (pH ~8, HCO₃⁻-reich → neutralisiert Magensäure). Reguliert durch **Sekretin** (HCO₃⁻-Sekretion ↑) und **CCK** (Enzymsekretion ↑).
 
 **Bilirubin-Stoffwechsel** (wichtig für Ikterus-Typen):
 - Hämoglobin → Häm → **Biliverdin → Bilirubin unkonjugiert** (lipophil, albumin-gebunden, toxisch)
 - Leber: UDP-Glukuronosyltransferase (**UGT1A1**) konjugiert → **Bilirubin-Diglukuronid** (wasserlöslich)
 - → Galle → Darm → bakteriell → **Sterkobilin** (Stuhl braun) + Urobilinogen → Urin: **Urobilin** (gelb)
 
-> **Merke:** **Bilirubin-Weg**: Hb → unkonjugiertes Bilirubin (Milz, albumin-gebunden) → Leber (UGT1A1, Glukuronidierung) → konjugiert (wasserlöslich) → Galle → Sterkobilin (Stuhl braun) + Urobilin (Urin gelb). **Fett-Transport**: Mizellen → Chylomikronen → **Lymphe** (nicht Pfortader!).
-
----
-
-## Dickdarm`,
+> **Merke:** **Pfortader**: sammelt Blut aus GIT → Leber (First-Pass). **Galle**: Gallensalze emulgieren Fette, 95 % enterohepatisch recycelt. **Bilirubin-Weg**: Hb → unkonjugiert (albumin-gebunden) → Leber (UGT1A1) → konjugiert → Galle → Sterkobilin (Stuhl braun) + Urobilin (Urin gelb).`,
       lernziele: [
         "Die Funktion der Magenzellen (Beleg-, Haupt-, Nebenzellen, G-Zellen, D-Zellen) und deren Sekrete benennen und erklären.",
         "Die wichtigsten Pankreasenzyme und deren Aktivierungskaskade (Trypsinogen → Trypsin via Enterokinase) darstellen.",

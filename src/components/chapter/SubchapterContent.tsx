@@ -143,27 +143,30 @@ function buildMarkdownComponents(keywordLinkEntries?: KeywordLinkEntry[]) {
     },
     table: ({ children, ...props }: ComponentProps<"table">) => (
       <div className="overflow-x-auto my-4">
-        <table className="w-full text-sm border-collapse border border-[var(--border)]" {...props}>
+        <table className="w-full text-sm border-collapse" {...props}>
           {children}
         </table>
       </div>
     ),
     th: ({ children, ...props }: ComponentProps<"th">) => (
       <th
-        className="text-left p-3 font-bold text-[var(--text-primary)] bg-[var(--surface)] border border-[var(--border)]"
+        className="text-left p-3 font-semibold text-[var(--text-primary)] border-b-2 border-[var(--border)]"
         {...props}
       >
         {children}
       </th>
     ),
     td: ({ children, ...props }: ComponentProps<"td">) => (
-      <td className="p-3 text-[var(--text-secondary)] border border-[var(--border)]" {...props}>
+      <td
+        className="p-3 text-[var(--text-secondary)] border-b border-[var(--border)]/60"
+        {...props}
+      >
         {children}
       </td>
     ),
     blockquote: ({ children, ...props }: ComponentProps<"blockquote">) => (
       <blockquote
-        className="bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-400 dark:border-blue-600 pl-4 pr-4 py-3 my-4 rounded-r-lg not-italic"
+        className="border-l-2 border-[var(--accent)]/40 pl-4 pr-2 py-2 my-4 text-[var(--text-secondary)] not-italic"
         {...props}
       >
         {children}
@@ -258,29 +261,6 @@ function MarkdownContent({
   );
 }
 
-const SUBJECT_COLORS: Record<string, { border: string; text: string; bg: string }> = {
-  biologie: {
-    border: "border-emerald-500",
-    text: "text-emerald-700 dark:text-emerald-400",
-    bg: "bg-emerald-50 dark:bg-emerald-900/20",
-  },
-  chemie: {
-    border: "border-red-500",
-    text: "text-red-700 dark:text-red-400",
-    bg: "bg-red-50 dark:bg-red-900/20",
-  },
-  physik: {
-    border: "border-blue-500",
-    text: "text-blue-700 dark:text-blue-400",
-    bg: "bg-blue-50 dark:bg-blue-900/20",
-  },
-  mathematik: {
-    border: "border-violet-500",
-    text: "text-violet-700 dark:text-violet-400",
-    bg: "bg-violet-50 dark:bg-violet-900/20",
-  },
-};
-
 interface Props {
   uk: Unterkapitel;
   subject: string;
@@ -366,7 +346,7 @@ export function SubchapterContent({
               <ImageWithFallback
                 src={uk.imageUrl}
                 alt={uk.imageCaption || uk.title}
-                containerClassName="rounded-lg overflow-hidden shadow-sm border border-[var(--border)]"
+                containerClassName="rounded-lg overflow-hidden"
                 lightbox
               />
               {uk.imageCaption && (

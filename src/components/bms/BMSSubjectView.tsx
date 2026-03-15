@@ -27,26 +27,16 @@ export function BMSSubjectView({
 
   if (kapitel.length === 0) {
     return (
-      <div className="max-w-5xl mx-auto p-6">
-        <BreadcrumbNav
-          items={[
-            { label: "Dashboard", href: "/dashboard" },
-            { label: "BMS", href: "/bms" },
-            { label: subjectData.label },
-          ]}
-        />
-        <div className="flex items-center gap-4 flex-wrap mt-4">
-          <Button variant="ghost" size="sm" onClick={onBack}>
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Zurück zu Fächern
-          </Button>
-        </div>
-        <div className="mt-6 text-center p-8">
+      <div className="max-w-4xl mx-auto p-6">
+        <Button variant="ghost" size="sm" onClick={onBack} className="text-[var(--muted)] mb-4">
+          <ArrowLeft className="w-4 h-4 mr-1" />
+          BMS
+        </Button>
+        <div className="text-center py-12">
           <p className="text-[var(--muted)] mb-4">
             In diesem Fach sind noch keine Kapitel vorhanden.
           </p>
-          <Button variant="outline" className="gap-2" onClick={onBack}>
-            <BookOpen className="w-4 h-4" />
+          <Button variant="outline" onClick={onBack}>
             Anderes Fach wählen
           </Button>
         </div>

@@ -550,126 +550,232 @@ Auch bei Erwachsenen kann Surfactant-Mangel auftreten: Bei schwerem **ARDS** (Ac
         "laminare Strömung",
         "turbulente Strömung",
         "Reynolds-Zahl",
+        "Hagen-Poiseuille",
         "Stenose",
         "Aneurysma",
         "Strömungsgeräusche",
         "Volumenstrom",
+        "Strömungswiderstand",
+        "Infusionsschlauch",
+        "Arteriosklerose",
+        "Herzgeräusche",
       ],
       content: `## Ideale Fluide und Volumenstrom
 
-Der **Volumenstrom** Q = A · v beschreibt das Fluidvolumen, das pro Zeiteinheit durch einen Querschnitt fließt (Einheit: m³/s). Dabei ist A die Querschnittsfläche und v die mittlere Strömungsgeschwindigkeit.
+Blut fließt, Infusionen tropfen, Kontrastmittel wird injiziert — die Physik strömender Fluide begegnet Medizinerinnen und Medizinern täglich. Um diese Phänomene quantitativ zu beschreiben, startet man mit einem vereinfachten Modell: dem **idealen Fluid**. Es ist inkompressibel (konstante Dichte ρ), reibungsfrei (keine innere Reibung/Viskosität) und die Strömung ist stationär (zeitlich unveränderlich). Reale Fluide — insbesondere Blut — weichen von diesem Ideal ab, doch die grundlegenden Gesetze liefern erstaunlich gute Näherungen.
 
-> **Merke:** Volumenstrom Q = A · v (Einheit: m³/s). Für ein ideales Fluid: inkompressibel, reibungsfrei, stationär.
+Der **Volumenstrom** (auch Durchflussrate) Q beschreibt, welches Fluidvolumen pro Zeiteinheit durch einen Querschnitt strömt:
+
+**Q = A · v** (Einheit: m³/s)
+
+Dabei ist A die Querschnittsfläche des Rohres (oder Gefäßes) und v die mittlere Strömungsgeschwindigkeit. In der Klinik begegnet man dem Volumenstrom z. B. als Herzzeitvolumen (HZV ≈ 5 L/min ≈ 8,3 · 10⁻⁵ m³/s) oder als Infusionsrate (ml/h).
+
+> **Merke:** Volumenstrom Q = A · v (Einheit: m³/s). Ideales Fluid: inkompressibel, reibungsfrei, stationär. Das HZV (ca. 5 L/min) ist der Volumenstrom des Herzens.
 
 ---
 
 ## Kontinuitätsgleichung
 
-Was links in ein Rohr hineinfließt, muss rechts herauskommen — wird das Rohr enger, muss das Fluid schneller werden. Mathematisch formuliert:
+Was links in ein Rohr hineinfließt, muss rechts herauskommen — Masse geht nicht verloren. Wird das Rohr enger, muss das Fluid schneller strömen, damit derselbe Volumenstrom erhalten bleibt. Diese Massenerhaltung für inkompressible Fluide heißt **Kontinuitätsgleichung**:
 
 **A₁ · v₁ = A₂ · v₂ = const**
 
-**Konsequenz:** Verengt sich ein Rohr (A₂ < A₁), so muss die Strömungsgeschwindigkeit **zunehmen** (v₂ > v₁) -- und umgekehrt.
+{{DIAGRAM:continuity-equation}}
 
-**Rechenbeispiel -- Aortenstenose:**
-Die Aorta hat einen Querschnitt A1 ca. 4,5 cm2 = 4,5 x 10-4 m2 und die mittlere Blutgeschwindigkeit beträgt v1 ca. 0,3 m/s. Bei einer Stenose verengt sich der Querschnitt auf A2 ca. 1,5 cm2 = 1,5 x 10-4 m2.
-v2 = v1 * (A1/A2) = 0,3 * (4,5/1,5) = 0,3 * 3 = **0,9 m/s**
+**Konsequenz:** Verengt sich ein Rohr (A₂ < A₁), nimmt die Strömungsgeschwindigkeit **zu** (v₂ > v₁). Erweitert sich das Rohr, wird die Strömung langsamer.
 
-Die Geschwindigkeit verdreifacht sich an der Stenose! Bei stärkerer Verengung kann v2 so groß werden, dass die Strömung turbulent wird -> **Strömungsgeräusche** (auskultierbar).
+> **Merke:** Kontinuitätsgleichung: A₁·v₁ = A₂·v₂. Engere Stelle → höhere Geschwindigkeit. Weitere Stelle → niedrigere Geschwindigkeit. Gilt für jedes inkompressible Fluid.
 
-**Klinisch -- Gesamtquerschnitt des Kapillarbetts:**
-Die Aorta (A ca. 4,5 cm2) verzweigt sich in Milliarden Kapillaren mit Gesamtquerschnitt A ca. 4500 cm2 -> v_Kapillare = v_Aorta * (A_Aorta/A_Kapillaren) = 0,3 * (4,5/4500) = **0,0003 m/s ca. 0,3 mm/s**. Diese extrem langsame Strömung ermöglicht den **Stoffaustausch** in den Kapillaren!
+**Rechenbeispiel — Aortenstenose:**
+Die Aorta hat einen Querschnitt A₁ ≈ 4,5 cm² und eine mittlere Blutgeschwindigkeit v₁ ≈ 0,3 m/s. Bei einer Stenose verengt sich der Querschnitt auf A₂ ≈ 1,5 cm².
+v₂ = v₁ · (A₁/A₂) = 0,3 · (4,5/1,5) = 0,3 · 3 = **0,9 m/s**
 
-> **Merke:** Kontinuitätsgleichung: A₁·v₁ = A₂·v₂ — was links reinfließt, kommt rechts raus. Engere Stelle → höhere Geschwindigkeit. Kapillarbett: riesiger Gesamtquerschnitt → extrem langsame Strömung → optimaler Stoffaustausch.
+Die Geschwindigkeit verdreifacht sich! Bei hochgradiger Stenose (A₂ ≈ 0,5 cm²) erreicht v₂ = 0,3 · 9 = **2,7 m/s** — so schnell, dass die Strömung turbulent wird und **Stenosegeräusche** entstehen (mit dem Stethoskop auskultierbar). Prüfungstipp: Die Duplexsonografie nutzt genau diese Geschwindigkeitserhöhung, um den Stenosegrad zu quantifizieren.
+
+**Klinisch — Gesamtquerschnitt des Kapillarbetts:**
+Die Aorta (A ≈ 4,5 cm²) verzweigt sich in Milliarden Kapillaren mit einem Gesamtquerschnitt von A ≈ 4500 cm². Daraus folgt:
+v_Kapillare = v_Aorta · (A_Aorta / A_Kapillaren) = 0,3 · (4,5/4500) = **0,0003 m/s ≈ 0,3 mm/s**
+
+Diese extrem langsame Strömung ist kein Defekt, sondern biologisch essentiell: Nur bei so geringer Geschwindigkeit bleibt genug Kontaktzeit für den **Stoffaustausch** (O₂, CO₂, Glukose, Harnstoff) zwischen Blut und Gewebe.
+
+> **Merke:** Kapillarbett: Gesamtquerschnitt ca. 1000× größer als Aorta → v sinkt auf 1/1000 (≈ 0,3 mm/s) → optimaler Stoffaustausch. Die Einzelkapillare ist zwar eng, aber der *Gesamt*querschnitt aller Kapillaren ist riesig.
 
 ---
 
 ## Bernoulli-Gleichung
 
-Die Bernoulli-Gleichung ist nichts anderes als Energieerhaltung für strömende Fluide: Kinetische Energie (Geschwindigkeit) + potentielle Energie (Höhe) + Druckenergie = konstant. Wenn die Geschwindigkeit steigt, MUSS der Druck sinken — wie bei einem Gartenschlauch, wenn du den Daumen draufhältst.
+Die Bernoulli-Gleichung (Energieerhaltung der Strömungslehre) verknüpft Druck, Geschwindigkeit und Höhe entlang einer Stromlinie. Wenn an einer Stelle die Geschwindigkeit steigt, muss der Druck sinken — genau wie beim Gartenschlauch, wenn man den Daumen auf die Öffnung drückt.
 
 **p + ½·ρ·v² + ρ·g·h = const**
 
-Die drei Terme:
-- **p** = statischer Druck (der "normale" Druck, den man mit einem Manometer misst)
-- **½·ρ·v²** = dynamischer Druck (Staudruck; entsteht durch die Bewegung)
-- **ρ·g·h** = hydrostatischer Druck (Schweredruck; Einfluss der Höhe)
+Die drei Terme repräsentieren verschiedene Energieformen pro Volumen:
 
-**Kernaussage:** Wo die Geschwindigkeit v zunimmt, sinkt der statische Druck p -- und umgekehrt!
+| Term | Name | Bedeutung |
+|------|------|-----------|
+| p | Statischer Druck | "Normaler" Druck, messbar mit Manometer |
+| ½·ρ·v² | Dynamischer Druck (Staudruck) | Kinetische Energie pro Volumen |
+| ρ·g·h | Hydrostatischer Druck | Potentielle Energie pro Volumen (Höheneinfluss) |
 
-**Venturi-Effekt:** Fließt ein Fluid durch eine Verengung (Venturi-Rohr), nimmt v zu (Kontinuität) und p sinkt (Bernoulli). Dieser Druckabfall kann genutzt werden, um ein zweites Fluid anzusaugen (Prinzip der Wasserstrahlpumpe, Zerstäuber).
+**Kernaussage:** Wo v zunimmt, sinkt p — und umgekehrt! Das gilt streng nur für ideale Fluide auf einer Stromlinie.
 
-**Rechenbeispiel -- Druckabfall an einer Stenose (Schritt für Schritt):**
-Aorta: v₁ = 0,3 m/s, p₁ = 100 mmHg ≈ 13 333 Pa. Stenose: v₂ = 0,9 m/s (aus Kontinuität: A₁/A₂ = 3 → v₂ = 3·v₁).
-Bernoulli bei gleicher Höhe (h₁ = h₂): p₁ + ½ρv₁² = p₂ + ½ρv₂²
-→ p₂ = p₁ + ½ρ(v₁² − v₂²) = p₁ + ½ · 1060 · (0,09 − 0,81)
-→ p₂ = 13 333 + ½ · 1060 · (−0,72) = 13 333 − 382 Pa
-→ Δp = 382 Pa ≈ **2,9 mmHg** → p₂ ≈ **97 mmHg**.
-Bei stärkerer Stenose (v₂ = 3 m/s): Δp = ½ · 1060 · (9 − 0,09) ≈ 4728 Pa ≈ **35 mmHg** — klinisch hochrelevant!
+> **Merke:** Bernoulli = Energieerhaltung für Fluide: p + ½ρv² + ρgh = const. Höhere Geschwindigkeit → niedrigerer statischer Druck. Der Gesamtdruck (statisch + dynamisch + hydrostatisch) bleibt konstant.
 
-> **Merke:** Bernoulli = Energieerhaltung für Fluide: p + ½ρv² + ρgh = const. Höhere Geschwindigkeit → niedrigerer statischer Druck (Venturi-Effekt). Der dynamische Druck ½ρv² beschreibt die kinetische Energie des Fluids pro Volumen.
+**Venturi-Effekt und medizinische Anwendungen:**
+Fließt ein Fluid durch eine Verengung (Venturi-Rohr), nimmt v zu (Kontinuität) und der statische Druck p sinkt (Bernoulli). Dieser lokale Druckabfall kann genutzt werden, um ein zweites Fluid anzusaugen:
+- **Wasserstrahlpumpe:** Unterdruck durch schnelle Wasserströmung saugt Luft/Gas an
+- **Zerstäuber (Vernebler):** Luftstrom erzeugt Unterdruck → Flüssigkeit wird angesaugt und zerstäubt → Aerosoltherapie bei Asthma
+- **Venturi-Maske (O₂-Therapie):** Sauerstoff strömt durch enge Düse → Umgebungsluft wird angesaugt → präzise einstellbare O₂-Konzentration (24–60 %)
 
----
+> **Merke:** Venturi-Effekt: Verengung → v↑ → p↓ → Ansaugwirkung. Klinische Anwendungen: Vernebler (Aerosoltherapie), Venturi-Maske (kontrollierte O₂-Gabe), Wasserstrahlpumpe.
 
-## Laminare vs. turbulente Strömung
+**Rechenbeispiel — Druckabfall an einer Stenose (Schritt für Schritt):**
+Aorta: v₁ = 0,3 m/s, p₁ = 100 mmHg ≈ 13 333 Pa, ρ_Blut = 1060 kg/m³.
+Stenose: v₂ = 0,9 m/s (aus Kontinuität: A₁/A₂ = 3 → v₂ = 3·v₁).
 
-Die Bernoulli-Gleichung setzt ideale, reibungsfreie Strömung voraus. Aber wann ist eine Strömung geordnet (laminar) und wann chaotisch (turbulent)? Die Reynolds-Zahl gibt die Antwort:
+Bernoulli bei gleicher Höhe (h₁ = h₂ → ρgh-Terme heben sich auf):
+p₁ + ½ρv₁² = p₂ + ½ρv₂²
+→ p₂ = p₁ + ½ρ(v₁² − v₂²) = 13 333 + ½ · 1060 · (0,09 − 0,81)
+→ p₂ = 13 333 + 530 · (−0,72) = 13 333 − 382 Pa
+→ Δp = 382 Pa ≈ **2,9 mmHg** → p₂ ≈ **97 mmHg**
 
-**Laminare Strömung:** Die Fluidteilchen bewegen sich in parallelen Schichten (lat. Laminae, Blättchen); die Strömung ist geordnet und vorhersagbar. Im Rohr entsteht ein **parabolisches Geschwindigkeitsprofil** -- maximal in der Mitte, null an der Wand (Haftbedingung).
-
-**Turbulente Strömung:** Die Fluidteilchen bewegen sich chaotisch mit Wirbeln und Fluktuationen. Höherer Energieverlust, höherer Strömungswiderstand, **auskultierbare Geräusche** (Strömungsgeräusche, Stenosegeräusche).
-
-Die **Reynolds-Zahl** Re (dimensionslos) entscheidet, welche Strömungsform vorliegt:
-
-**Re = (rho * v * d) / eta**
-
-Dabei ist d der Rohrdurchmesser und eta die dynamische Viskosität.
-
-| Reynolds-Zahl | Strömungsform |
-|---------------|---------------|
-| Re < 2300 | **laminar** |
-| 2300 < Re < 4000 | Übergangsbereich |
-| Re > 4000 | **turbulent** |
-
-**Klinisch relevant:** Normalerweise ist die Blutströmung in den meisten Gefäßen **laminar**. Bei Stenosen steigt v -> Re steigt -> Übergang zu **turbulenter** Strömung -> **Strömungsgeräusche** (z. B. Karotisstenose). Auch bei Anämie (Blutarmut, niedrige Viskosität eta) steigt Re und kann zu funktionellen Herzgeräuchen führen.
-
-> **Merke:** Re = rho*v*d/eta. Re < 2300: laminar (geordnet, parabolisches Profil). Re > 4000: turbulent (chaotisch, Geräusche). Stenose -> v steigt -> Re steigt -> turbulent -> auskultierbare Geräusche.
+Bei hochgradiger Stenose (v₂ = 3 m/s): Δp = ½ · 1060 · (9 − 0,09) ≈ 4728 Pa ≈ **35 mmHg** — klinisch hochrelevant! Solche Druckgradienten werden echokardiografisch gemessen, um den Schweregrad einer Aortenklappenstenose zu bestimmen.
 
 ---
 
-## Klinische Anwendungen: Stenose und Aneurysma
+## Hagen-Poiseuille-Gesetz: Reale Strömung im Rohr
 
-**Stenose (Verengung):**
-- A sinkt -> v steigt (Kontinuität)
-- p sinkt an der Engstelle (Bernoulli)
-- Re steigt -> turbulente Strömung -> **Stenosegeräusche**
-- Beispiel: Karotisstenose (Verengung der Halsschlagader) -> Strömungsgeräusch über der A. carotis
+{{DIAGRAM:laminar-flow-profile}}
 
-**Aneurysma (Aussackung):**
-- A steigt -> v sinkt (Kontinuität)
-- p steigt in der Aussackung (Bernoulli)
-- Die Wandspannung τ_W = p·r/(2d_Wand) steigt mit dem Radius (Laplace!) — Hinweis: σ wird in diesem Kapitel für die Oberflächenspannung verwendet; für die Wandspannung nutzen wir τ_W zur Unterscheidung
-- **Teufelskreis**: Aussackung -> höherer Druck -> Wand dehnt sich weiter -> noch größere Aussackung -> **Ruptur** (Gefäßriss)
+Die Bernoulli-Gleichung ignoriert Reibung — reale Fluide haben aber eine Viskosität η (innere Reibung). Das **Hagen-Poiseuille-Gesetz** beschreibt die laminare Strömung eines viskosen Fluids durch ein zylindrisches Rohr und ist für die Medizin besonders relevant:
 
-> **Merke:** Stenose: A sinkt -> v steigt -> p sinkt -> turbulent -> Geräusche. Aneurysma: A steigt -> v sinkt -> p steigt -> Wandspannung steigt -> Rupturrisiko! Beide erklärbar durch Kontinuität + Bernoulli.`,
+**Q = (π · Δp · r⁴) / (8 · η · L)**
+
+| Größe | Bedeutung | Einheit |
+|-------|-----------|---------|
+| Q | Volumenstrom | m³/s |
+| Δp | Druckdifferenz zwischen Rohranfang und -ende | Pa |
+| r | Innenradius des Rohres | m |
+| η | Dynamische Viskosität des Fluids | Pa·s |
+| L | Rohrlänge | m |
+
+Die entscheidende Erkenntnis steckt in **r⁴**: Der Volumenstrom hängt von der **vierten Potenz** des Radius ab! Halbiert sich der Radius, sinkt der Volumenstrom auf 1/16 (= 0,5⁴) des ursprünglichen Wertes.
+
+> **Merke:** Hagen-Poiseuille: Q = π·Δp·r⁴ / (8·η·L). Der Radius geht mit der **4. Potenz** ein — r halbiert → Q sinkt auf 1/16! Gilt nur für laminare, stationäre Strömung in starren Rohren.
+
+Den **Strömungswiderstand** R_S kann man analog zum elektrischen Widerstand (Ohmsches Gesetz) definieren:
+
+**R_S = Δp / Q = (8 · η · L) / (π · r⁴)**
+
+Prüfungstipp: Die Analogie Δp ↔ U (Spannung), Q ↔ I (Strom), R_S ↔ R (Widerstand) wird im MedAT gerne abgefragt.
+
+**Klinische Relevanz — warum r⁴ Leben rettet (oder gefährdet):**
+
+- **Arteriosklerose:** Eine 50 %-ige Radiusverengung durch Plaques reduziert den Blutfluss auf (0,5)⁴ = 1/16 ≈ **6 %** des Normalwerts! Der Körper kompensiert durch Blutdruckerhöhung (Δp↑), was das Herz belastet → Hypertonie, Herzinsuffizienz.
+- **Infusionsschlauch:** Ein dünnerer Katheter (z. B. 20 G statt 16 G) hat einen deutlich höheren Strömungswiderstand. Bei Notfalltransfusionen wählt man daher den **größtmöglichen Venenzugang** (großes r → Q ∝ r⁴).
+- **Bronchospasmus:** Verengung der Bronchien (r↓) erhöht den Atemwegswiderstand drastisch (∝ 1/r⁴) → Atemnot bei Asthma.
+- **Schlauchklemme:** Wird ein Infusionsschlauch teilweise abgeklemmt, sinkt der effektive Radius → Flussrate sinkt überproportional.
+
+> **Merke:** r⁴-Abhängigkeit klinisch: Arteriosklerose (50 % Stenose → 94 % Flussverlust), Infusionszugang (großes Lumen wählen!), Bronchospasmus (r↓ → Atemwegswiderstand ↑↑↑). Körper kompensiert mit Δp↑ (Blutdruck ↑).
+
+**Rechenbeispiel — Infusionsrate:**
+Zwei Venenkatheter: Katheter A hat r = 0,8 mm, Katheter B hat r = 0,4 mm (halber Radius). Gleiche Länge, gleicher Druck, gleiche Flüssigkeit.
+Q_B / Q_A = (r_B / r_A)⁴ = (0,4/0,8)⁴ = (0,5)⁴ = **1/16 ≈ 6 %**
+Katheter B liefert nur 6 % der Flussrate von Katheter A — daher bei Schock: dickstmöglicher Zugang!
+
+---
+
+## Laminare vs. turbulente Strömung und Reynolds-Zahl
+
+Alle bisherigen Gesetze (Bernoulli, Hagen-Poiseuille) setzen eine geordnete, **laminare** Strömung voraus. Doch ab einer bestimmten Geschwindigkeit bricht die Ordnung zusammen — die Strömung wird **turbulent**. Die **Reynolds-Zahl** Re entscheidet, wann dieser Übergang stattfindet.
+
+**Laminare Strömung** (lat. lamina = Schicht): Die Fluidteilchen bewegen sich in parallelen Schichten. Im Rohr entsteht ein **parabolisches Geschwindigkeitsprofil** — maximal in der Rohrmitte, null an der Wand (Haftbedingung, engl. no-slip condition). Geringer Energieverlust, leise.
+
+**Turbulente Strömung:** Chaotische Wirbel und Fluktuationen. Flaches Geschwindigkeitsprofil (stärker durchmischt). Deutlich höherer Energieverlust, höherer Strömungswiderstand und — klinisch entscheidend — **auskultierbare Geräusche**.
+
+Die **Reynolds-Zahl** (dimensionslos) quantifiziert das Verhältnis von Trägheitskräften zu Reibungskräften:
+
+**Re = (ρ · v · d) / η**
+
+Dabei: ρ = Dichte, v = mittlere Geschwindigkeit, d = Rohrdurchmesser, η = dynamische Viskosität.
+
+| Reynolds-Zahl | Strömungsform | Klinisches Beispiel |
+|---------------|---------------|---------------------|
+| Re < 2300 | **laminar** | Normale Blutströmung in peripheren Gefäßen |
+| 2300 < Re < 4000 | Übergangsbereich | Gefäßverzweigungen (Bifurkationen) |
+| Re > 4000 | **turbulent** | Aorta bei Belastung, Karotisstenose |
+
+> **Merke:** Re = ρ·v·d/η (dimensionslos). Re < 2300: laminar (parabolisches Profil, leise). Re > 4000: turbulent (Wirbel, Geräusche). Im Übergangsbereich (2300–4000) kann die Strömung kippen.
+
+**Klinische Bedeutung der Reynolds-Zahl:**
+
+- **Stenose → Strömungsgeräusch:** Bei einer Karotisstenose steigt v (Kontinuität) → Re steigt → Strömung wird turbulent → Stenosegeräusch über der A. carotis (auskultierbar mit Stethoskop). Prüfungstipp: Stenosegeräusche entstehen *distal* der Engstelle, wo die Jet-Strömung auf langsamer fließendes Blut trifft.
+
+- **Anämie → funktionelles Herzgeräusch:** Bei Anämie sinkt die Blutviskosität η (weniger Erythrozyten, weniger innere Reibung) → Re steigt auch ohne anatomische Engstelle → **funktionelles Herzgeräusch** ohne strukturelle Herzkrankheit. Verschwindet nach Therapie der Anämie.
+
+- **Herzgeräusche bei Fieber/Belastung:** Höhere Herzfrequenz → höheres HZV → v↑ → Re↑ → mögliche Turbulenzen an Klappen. Auch physiologisch bei Kindern und Jugendlichen (akzidentelle Herzgeräusche).
+
+> **Merke:** Stenosegeräusche: v↑ → Re↑ → turbulent. Funktionelle Herzgeräusche bei Anämie: η↓ → Re↑ → turbulent (ohne Strukturdefekt!). Beide über die Reynolds-Zahl erklärbar.
+
+---
+
+## Klinische Synthese: Stenose und Aneurysma
+
+Die vier Gleichungen (Kontinuität, Bernoulli, Hagen-Poiseuille, Reynolds) wirken bei pathologischen Gefäßveränderungen zusammen:
+
+**Stenose (Gefäßverengung, z. B. Karotisstenose, Aortenklappenstenose):**
+- A↓ → v↑ (Kontinuität)
+- v↑ → p↓ an der Engstelle (Bernoulli)
+- r↓ → R_S ↑↑↑ (Hagen-Poiseuille, r⁴!)
+- v↑ → Re↑ → turbulente Strömung → **Stenosegeräusche** (auskultierbar)
+- Klinisch: Karotisstenose → Strömungsgeräusch über A. carotis → Duplexsonografie → ggf. Stent/OP
+
+**Aneurysma (Gefäßaussackung, z. B. Bauchaortenaneurysma):**
+- A↑ → v↓ (Kontinuität)
+- v↓ → p↑ in der Aussackung (Bernoulli)
+- Wandspannung τ_W = p · r / (2 · d_Wand) steigt mit r (Laplace-Gesetz!)
+- **Teufelskreis:** Aussackung → p↑ + r↑ → Wandspannung ↑↑ → Wand dehnt sich weiter → größere Aussackung → **Ruptur** (lebensbedrohlich)
+- Prüfungstipp: Doppelter Durchmesser = vierfache Querschnittsfläche (A ∝ d²) → v sinkt auf ¼ → deutlicher Druckanstieg.
+
+> **Merke:** Stenose: A↓ → v↑ → p↓ → Re↑ → turbulent → Geräusche. Aneurysma: A↑ → v↓ → p↑ → Wandspannung ↑ (Laplace) → Teufelskreis → Rupturrisiko. Alle vier Gleichungen (Kontinuität, Bernoulli, Hagen-Poiseuille, Reynolds) spielen zusammen.
+
+---
+
+## Prüfungsrelevante Zahlen
+
+| Größe | Wert |
+|-------|------|
+| Querschnitt Aorta | ≈ 4,5 cm² |
+| Gesamtquerschnitt Kapillaren | ≈ 4500 cm² (1000× Aorta) |
+| v Aorta | ≈ 0,3 m/s (30 cm/s) |
+| v Kapillaren | ≈ 0,3 mm/s |
+| Re-Grenze laminar | < 2300 |
+| Re-Grenze turbulent | > 4000 |
+| ρ Blut | ≈ 1060 kg/m³ |
+| η Blut (37 °C) | ≈ 3–4 · 10⁻³ Pa·s |
+| HZV | ≈ 5 L/min |
+| Hagen-Poiseuille r-Abhängigkeit | Q ∝ r⁴ |`,
 
       lernziele: [
         "Die Kontinuitätsgleichung anwenden und Geschwindigkeitsänderungen bei Querschnittsänderungen berechnen können",
         "Die Bernoulli-Gleichung auf Strömungsprobleme anwenden und den Venturi-Effekt erklären können",
+        "Das Hagen-Poiseuille-Gesetz anwenden und die klinische Bedeutung der r⁴-Abhängigkeit erklären können",
         "Laminare und turbulente Strömung unterscheiden und die Reynolds-Zahl berechnen können",
-        "Stenose und Aneurysma mit Kontinuität und Bernoulli physikalisch erklären können",
+        "Stenose und Aneurysma mit allen vier Strömungsgesetzen physikalisch erklären können",
       ],
 
       merksätze: [
         "Kontinuitätsgleichung: A₁·v₁ = A₂·v₂ — Verengung → höhere Geschwindigkeit",
         "Bernoulli: p + ½ρv² + ρgh = const — höhere Geschwindigkeit → niedrigerer statischer Druck",
+        "Venturi-Effekt: Verengung → v↑ → p↓ → Ansaugwirkung (Vernebler, Venturi-Maske)",
+        "Hagen-Poiseuille: Q = π·Δp·r⁴/(8·η·L) — Radius halbiert → Fluss auf 1/16!",
         "Reynolds-Zahl Re = ρ·v·d/η — dimensionslos; Re < 2300 laminar, Re > 4000 turbulent",
         "Stenose: v↑ → p↓ → turbulent → Geräusche; Aneurysma: v↓ → p↑ → Wandspannung↑ → Rupturrisiko",
         "Kapillarbett: riesiger Gesamtquerschnitt → extrem langsame Strömung (0,3 mm/s) → optimaler Stoffaustausch",
+        "Anämie → η↓ → Re↑ → funktionelle Herzgeräusche ohne Strukturdefekt",
       ],
 
       klinischerBezug:
-        "Die Kontinuitätsgleichung erklärt, warum die Blutströmung in den Kapillaren (Gesamtquerschnitt ≈ 4500 cm²) extrem langsam ist (≈ 0,3 mm/s) — optimal für den Stoffaustausch. Bei einer Karotisstenose steigt die Blutgeschwindigkeit an der Engstelle, die Strömung wird turbulent und verursacht auskultierbare Geräusche. Die Duplexsonografie nutzt den Doppler-Effekt, um die Blutgeschwindigkeit an Stenosen zu messen und den Stenosegrad zu bestimmen. Aneurysmen (z. B. Bauchaortenaneurysma) sind lebensgefährlich: Der erhöhte Wanddruck und die zunehmende Wandspannung (Laplace) können zur Ruptur führen — ein chirurgischer Notfall mit hoher Mortalität.",
+        "Die Kontinuitätsgleichung erklärt, warum die Blutströmung in den Kapillaren (Gesamtquerschnitt ≈ 4500 cm²) extrem langsam ist (≈ 0,3 mm/s) — optimal für den Stoffaustausch. Bei einer Karotisstenose steigt die Blutgeschwindigkeit an der Engstelle, die Strömung wird turbulent und verursacht auskultierbare Geräusche. Die Duplexsonografie nutzt den Doppler-Effekt, um die Blutgeschwindigkeit an Stenosen zu messen und den Stenosegrad zu bestimmen. Das Hagen-Poiseuille-Gesetz erklärt, warum bei Arteriosklerose bereits eine 50 %-ige Radiusverengung den Blutfluss auf 6 % reduziert — der Körper kompensiert mit Blutdruckerhöhung (Hypertonie). In der Notfallmedizin wählt man den größtmöglichen Venenzugang (Q ∝ r⁴). Bei Anämie sinkt die Blutviskosität, die Reynolds-Zahl steigt und es entstehen funktionelle Herzgeräusche ohne strukturelle Herzkrankheit. Aneurysmen (z. B. Bauchaortenaneurysma) sind lebensgefährlich: Der erhöhte Wanddruck und die zunehmende Wandspannung (Laplace) können zur Ruptur führen — ein chirurgischer Notfall mit hoher Mortalität.",
 
       altfrage: {
         question:
@@ -771,6 +877,46 @@ Dabei ist d der Rohrdurchmesser und eta die dynamische Viskosität.
           ],
           difficulty: 3,
           tags: ["aneurysma", "bernoulli", "kontinuität", "laplace"],
+        },
+        {
+          question:
+            "Nach dem Hagen-Poiseuille-Gesetz: Was passiert mit dem Volumenstrom Q, wenn sich der Gefäßradius durch Arteriosklerose halbiert (bei sonst gleichen Bedingungen)?",
+          options: [
+            "Q sinkt auf die Hälfte (1/2)",
+            "Q sinkt auf ein Viertel (1/4)",
+            "Q sinkt auf ein Achtel (1/8)",
+            "Q sinkt auf ein Sechzehntel (1/16)",
+            "Q bleibt gleich, nur die Geschwindigkeit ändert sich",
+          ],
+          correctIndex: 3,
+          explanation:
+            "Hagen-Poiseuille: Q = π·Δp·r⁴ / (8·η·L). Da Q ∝ r⁴, gilt: Halbierung des Radius → Q_neu = (r/2)⁴ · Q_alt = (1/16) · Q_alt. Der Volumenstrom sinkt auf nur 6,25 % des Ausgangswertes! Das erklärt, warum bereits moderate Gefäßverengungen durch Arteriosklerose zu massiven Durchblutungsstörungen führen. Der Körper kompensiert durch Blutdruckerhöhung (Δp↑).",
+          hints: [
+            "Hagen-Poiseuille: Q hängt von r⁴ ab — nicht von r² oder r!",
+            "(1/2)⁴ = 1/16. Das ist die dramatische r⁴-Abhängigkeit.",
+          ],
+          difficulty: 2,
+          tags: ["hagen-poiseuille", "arteriosklerose", "strömungswiderstand"],
+        },
+        {
+          question:
+            "Welche Aussage zu funktionellen Herzgeräuschen bei Anämie ist physikalisch korrekt?",
+          options: [
+            "Die Blutviskosität steigt bei Anämie, was Turbulenzen verursacht",
+            "Die Reynolds-Zahl sinkt bei Anämie, da weniger Erythrozyten vorhanden sind",
+            "Die verminderte Blutviskosität erhöht die Reynolds-Zahl, was Turbulenzen begünstigt",
+            "Anämie verursacht Stenosen, die zu Herzgeräuschen führen",
+            "Herzgeräusche bei Anämie haben keine physikalische Erklärung",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Bei Anämie sinkt die Zahl der Erythrozyten → die Blutviskosität η sinkt. Da Re = ρ·v·d/η und η im Nenner steht, steigt die Reynolds-Zahl. Der kritische Wert für den laminar-turbulenten Übergang wird leichter überschritten → Turbulenzen → auskultierbare Geräusche, obwohl keine strukturelle Herzkrankheit vorliegt (= funktionelles Herzgeräusch). Nach Behandlung der Anämie verschwinden die Geräusche.",
+          hints: [
+            "Re = ρ·v·d/η — was passiert mit Re, wenn η sinkt?",
+            "Anämie = weniger Erythrozyten → dünnflüssigeres Blut → η↓.",
+          ],
+          difficulty: 3,
+          tags: ["reynolds", "anämie", "herzgeräusch", "viskosität"],
         },
       ],
     },

@@ -1143,19 +1143,23 @@ Das entspricht dem typischen HU-Bereich von Fett (−100 bis −50 HU). Knochen 
         "Annihilation",
         "Fluordesoxyglukose FDG",
         "SPECT-Szintigraphie",
-        "MRT Kernspinresonanz",
-        "Larmorfrequenz",
-        "T1-Relaxation",
-        "T2-Relaxation",
-        "Gadolinium Kontrastmittel",
+        "Strahlentherapie",
+        "Teletherapie",
+        "Brachytherapie",
+        "Linearbeschleuniger",
+        "Energiedosis Gray",
+        "Äquivalentdosis Sievert",
+        "Wichtungsfaktor",
         "Photoelektrischer Effekt",
+        "Compton-Effekt",
         "Welle-Teilchen-Dualismus",
+        "de-Broglie-Wellenlänge",
+        "Doppelspaltexperiment",
         "Warburg-Effekt",
       ],
       content: `## PET – Positronen-Emissions-Tomographie
 
-
-
+{{DIAGRAM:radioactive-decay}}
 
 
 Bei der PET wird ein β⁺-strahlendes Radiopharmakon injiziert. Das emittierte Positron bewegt sich kurz durch das Gewebe (wenige mm) und trifft auf ein Elektron. Es kommt zur **Paarvernichtung (Annihilation)**:
@@ -1164,15 +1168,19 @@ Bei der PET wird ein β⁺-strahlendes Radiopharmakon injiziert. Das emittierte 
 
 Das PET-Gerät detektiert diese **Koinzidenzpaare** (zwei Photonen gleichzeitig, innerhalb eines Zeitfensters von ~10 ns). Entlang der Verbindungslinie dieser Koinzidenzen (line of response, LOR) liegt das Annihilationsereignis. Aus vielen LOR wird ein 3D-Bild rekonstruiert.
 
-**¹⁸F-FDG (Fluordesoxyglukose):** ¹⁸F (T½=110 min) ist an Desoxyglukose gebunden. FDG wird wie Glukose in Zellen aufgenommen (via GLUT-1/GLUT-3-Transporter) und durch Hexokinase zu FDG-6-Phosphat phosphoryliert, aber dann nicht weiter metabolisiert (fehlende 2-OH-Gruppe blockiert Phosphoglukose-Isomerase) → Akkumulation in Zellen mit hohem Glukoseumsatz (**metabolic trapping**). Tumorzellen (**Warburg-Effekt**: aerobe Glykolyse trotz O₂-Angebot), Entzündungsherde (aktivierte Makrophagen) und bestimmte Hirnareale reichern FDG an → hohe Signalintensität im PET-Bild.
+**¹⁸F-FDG (Fluordesoxyglukose):** ¹⁸F (T½ = 110 min) ist an Desoxyglukose gebunden. FDG wird wie Glukose in Zellen aufgenommen (via GLUT-1/GLUT-3-Transporter) und durch Hexokinase zu FDG-6-Phosphat phosphoryliert, aber dann nicht weiter metabolisiert (fehlende 2-OH-Gruppe blockiert Phosphoglukose-Isomerase) → Akkumulation in Zellen mit hohem Glukoseumsatz (**metabolic trapping**). Tumorzellen (**Warburg-Effekt**: aerobe Glykolyse trotz O₂-Angebot), Entzündungsherde (aktivierte Makrophagen) und bestimmte Hirnareale reichern FDG an → hohe Signalintensität im PET-Bild.
 
 > **Merke:** FDG-PET zeigt Stoffwechselaktivität, nicht Anatomie – deshalb Kombination mit CT oder MRT (PET/CT, PET/MRT) für präzise Lokalisation.
 
 Hauptanwendungen: Tumorstaging, Metastasensuche, Therapiekontrolle (Ansprechen auf Chemotherapie), kardiologische Vitalitätsdiagnostik (hibernating myocardium), neurologische Diagnostik (Alzheimer-Demenz: temporoparietales Defizit, Epilepsieherd-Lokalisation).
 
+---
+
 ## SPECT – Single Photon Emission Computed Tomography
 
 SPECT nutzt γ-Strahler (meist ⁹⁹ᵐTc, 140 keV) und eine rotierende **Gammakamera** mit einem **Kollimator** aus Blei (lässt nur annähernd parallele Photonen passieren → Ortsinformation). Aus Projektionen bei verschiedenen Winkeln (typisch 64–128 Winkel über 360°) wird ein 3D-Bild rekonstruiert (gefilterte Rückprojektion oder iterative Algorithmen).
+
+**⁹⁹ᵐTc** ist das meistverwendete Radionuklid in der Nuklearmedizin: T½ = 6,01 h (ideal für Bildgebung – lang genug für Untersuchung, kurz genug für geringe Strahlenbelastung), reiner γ-Strahler (140 keV, optimal für Gammakamera-Detektion), wird im ⁹⁹Mo/⁹⁹ᵐTc-Generator vor Ort erzeugt (Molybdän-Kuh). Das "m" steht für **metastabil**: ein angeregter Kernzustand, der unter Emission eines γ-Quants in den Grundzustand ⁹⁹Tc übergeht (isomerer Übergang, keine Teilchenemission).
 
 | Eigenschaft | PET | SPECT |
 |------------|-----|-------|
@@ -1183,102 +1191,180 @@ SPECT nutzt γ-Strahler (meist ⁹⁹ᵐTc, 140 keV) und eine rotierende **Gamma
 | Kosten | Hoch | Niedriger |
 | Verfügbarkeit | Spezialisiert | Weit verbreitet |
 
-SPECT/CT kombiniert funktionelle und anatomische Information. Klinische Anwendungen: Skelettszintigraphie (Metastasen), Myokardperfusion (⁹⁹ᵐTc-MIBI), Schilddrüsenszintigraphie, Hirnperfusion.
+> **Merke:** PET detektiert zwei 511-keV-Photonen in Koinzidenz (kein Kollimator nötig, hohe Sensitivität). SPECT braucht einen Bleikollimator zur Richtungsselektion – das kostet Sensitivität, ist aber günstiger und breiter verfügbar.
 
-## MRT – Magnetresonanztomographie
+SPECT/CT kombiniert funktionelle und anatomische Information. Klinische Anwendungen: Skelettszintigraphie (Knochenmetastasen mit ⁹⁹ᵐTc-MDP), Myokardperfusion (⁹⁹ᵐTc-MIBI, Nachweis ischämischer Areale unter Belastung), Schilddrüsenszintigraphie (⁹⁹ᵐTc-Pertechnetat, heiße vs. kalte Knoten), Hirnperfusion (Epilepsiediagnostik).
 
-Während PET und SPECT auf radioaktiven Tracern basieren und damit funktionelle Stoffwechselinformation liefern, verfolgt die MRT einen grundlegend anderen Ansatz: Sie nutzt die magnetischen Eigenschaften körpereigener Wasserstoffkerne und kommt vollständig ohne ionisierende Strahlung aus.
+---
 
-Das **Kernspinresonanz-Prinzip (NMR)** beruht auf den magnetischen Eigenschaften von Atomkernen mit ungerader Protonen- oder Neutronenzahl. ¹H (Proton) ist der wichtigste Kern in der klinischen MRT (abundant in biologischem Gewebe).
+## Strahlentherapie
 
-Im starken äußeren Magnetfeld B₀ (1,5–3 Tesla in klinischen Geräten) orientieren sich Protonenspins parallel oder antiparallel zu B₀ und **präzedieren** mit der **Larmorfrequenz**:
+{{DIAGRAM:radiation-penetration}}
 
-> **f = γ · B₀** (γ_H = 42,58 MHz/T)
+Ionisierende Strahlung zerstört Tumorzellen, indem sie DNA-Doppelstrangbrüche erzeugt, die proliferierende Zellen nicht mehr reparieren können. Zwei Grundprinzipien:
 
-Bei B₀ = 1,5 T: f = 42,58 × 1,5 ≈ 63,9 MHz (Radiofrequenz). Ein RF-Puls genau dieser Frequenz versetzt die Längsmagnetisierung in die Transversalebene (Resonanz). Nach dem Puls relaxiert das System:
+**Teletherapie (Fernbestrahlung):** Die Strahlenquelle befindet sich außerhalb des Körpers. Der **medizinische Linearbeschleuniger (LINAC)** beschleunigt Elektronen auf 4–25 MeV und lenkt sie auf ein Wolfram-Target, wo hochenergetische **Bremsstrahlung** (Röntgenphotonen) entsteht. Der Strahl wird durch einen Multileaf-Kollimator (MLC) mit 80–160 individuell positionierbaren Wolframlamellen millimetergenau an die Tumorkontur angepasst. Moderne Techniken: **IMRT** (intensitätsmodulierte Radiotherapie, variable Fluenzprofile pro Feld), **VMAT** (Volumetric Modulated Arc Therapy, rotierende Bestrahlung mit gleichzeitiger MLC- und Dosisleistungsanpassung), **Stereotaxie** (hohe Einzeldosen auf kleine Volumina, < 5 Fraktionen, z. B. bei Hirnmetastasen). Prüfungstipp: Der LINAC hat die ⁶⁰Co-Teletherapie (Gammaknife ausgenommen) weitgehend abgelöst, weil er schärfere Dosisgradienten und flexiblere Energien liefert.
 
-- **T1-Relaxation** (Längsrelaxation): Rückkehr der Längsmagnetisierung zu M₀; abhängig von Wechselwirkungen Proton–Umgebung (Spin-Gitter). Fett hat eine kurze T1-Zeit, weil seine großen Moleküle mit ähnlicher Frequenz wie die Larmor-Frequenz rotieren — sie geben die Energie schnell an die Umgebung ab. Deshalb: Fett hell in T1-Bild.
-- **T2-Relaxation** (Querrelaxation): Zerfall der Transversalmagnetisierung durch Dephasierung (Spin-Spin-Relaxation). Wasser hat eine lange T2-Zeit, weil seine kleinen, schnell beweglichen Moleküle die Phasenkohärenz der Protonenspins länger bewahren — lokale Feldinhomogenitäten werden „herausgemittelt". Deshalb: Wasser hell in T2-Bild.
+**Brachytherapie (Nahbestrahlung):** Radioaktive Quellen (z. B. ¹⁹²Ir, ¹²⁵I, ¹³⁷Cs) werden direkt in oder an den Tumor gebracht. Der Dosisabfall folgt näherungsweise dem **Abstandsquadratgesetz** (D ∝ 1/r²): Verdopplung des Abstands → Vierteldosis. Dadurch wird umliegendes Gewebe geschont. Einsatzgebiete: Zervixkarzinom (intrakavitär), Prostatakarzinom (Seeds mit ¹²⁵I), Ösophaguskarzinom (intraluminal).
 
-Durch Schaltung von **Gradientenfeldern** (zusätzliche, ortsabhängige Magnetfelder, typisch 10–80 mT/m) wird die Ortsabhängigkeit der Larmorfrequenz erzeugt → Ortskodierung in drei Dimensionen (Schichtselektion, Frequenzkodierung, Phasenkodierung).
+> **Merke:** Teletherapie = Strahlenquelle außen (LINAC, Bremsstrahlung). Brachytherapie = Quelle im/am Tumor (1/r²-Abfall schont Umgebung). Wirkprinzip: DNA-Doppelstrangbrüche in Tumorzellen.
 
-**Kontrastmittel:** Gadolinium (Gd³⁺, paramagnetisch, 7 ungepaarte Elektronen) verkürzt T1 → Gewebe mit KM-Aufnahme erscheint in T1-Sequenzen heller (Enhancement). Cave: **Nephrogene systemische Fibrose (NSF)** bei schwerer Niereninsuffizienz (eGFR < 30 mL/min) → eGFR prüfen! Der Mechanismus: Bei eingeschränkter Nierenfunktion verweilt der Gd-Chelatkomplex länger im Körper, Gd³⁺ kann sich vom Chelator lösen (Transmetallierung), und freies Gd³⁺ lagert sich in Haut, Bindegewebe und inneren Organen ab → fibrotische Umbauprozesse mit Hautverhärtung, Gelenkkontrakturen und potenziell letalem Verlauf.
+**Fraktionierung:** Die Gesamtdosis wird in Einzelfraktionen (typisch 1,8–2 Gy/Tag, 5×/Woche) aufgeteilt. Zwischen den Fraktionen reparieren gesunde Zellen subletale DNA-Schäden effizienter als Tumorzellen (**4 R der Strahlenbiologie**: Repair, Redistribution, Reoxygenierung, Repopulation). Hypofraktionierung (wenige Fraktionen mit hoher Einzeldosis) wird bei stereotaktischer Bestrahlung eingesetzt.
 
-> **Merke:** T1-gewichtet: Fett hell, Wasser dunkel, KM-Enhancement. T2-gewichtet: Wasser hell, Fett dunkel. Eselsbrücke: "Wasser = Weiß in T2".
+---
 
-**Vorteile der MRT:** Keine ionisierende Strahlung, exzellenter Weichteilkontrast, multiplanare Bildgebung (axial, sagittal, koronar ohne Umlagerung), funktionelle Bildgebung (fMRT, Diffusions-MRT). **Kontraindikationen:** Ferromagnetische Implantate, Herzschrittmacher (älterer Generation), Cochlea-Implantate, metallische Fremdkörper (v.a. intraokular). Klaustrophobie als relative Kontraindikation.
+## Dosimetrie
+
+Drei Dosisgrößen sind prüfungsrelevant:
+
+**1. Energiedosis D (Gray, Gy):** Absorbierte Energie pro Masse: **D = ΔE/Δm** [J/kg = Gy]. 1 Gy = 1 J/kg. Die Energiedosis beschreibt die physikalisch im Gewebe deponierte Energie, sagt aber nichts über die biologische Wirkung.
+
+**2. Äquivalentdosis H (Sievert, Sv):** Berücksichtigt die unterschiedliche biologische Wirksamkeit verschiedener Strahlungsarten: **H = w_R · D** [Sv]. Der **Strahlungs-Wichtungsfaktor w_R** ist dimensionslos:
+
+| Strahlung | w_R |
+|-----------|-----|
+| Photonen (γ, Röntgen) | 1 |
+| Elektronen (β) | 1 |
+| Protonen | 2 |
+| Alpha-Teilchen | 20 |
+| Neutronen (energieabhängig) | 5–20 |
+
+**3. Effektive Dosis E (Sievert, Sv):** Gewichtet zusätzlich die Empfindlichkeit verschiedener Organe: **E = Σ w_T · H_T**. Gewebewichtungsfaktoren w_T: Gonaden 0,08; Knochenmark 0,12; Lunge 0,12; Magen 0,12; Brust 0,12; Schilddrüse 0,04; Haut 0,01. Alle w_T summieren sich auf 1,0.
+
+> **Merke:** Gray (Gy) = physikalische Dosis (Energie/Masse). Sievert (Sv) = biologisch gewichtete Dosis (H = w_R · D). Alpha-Strahlung: w_R = 20 (20× biologisch wirksamer als Photonen bei gleicher Energiedosis).
+
+**Typische Dosiswerte:** Natürliche Hintergrundstrahlung: ~2,1 mSv/Jahr (Österreich). Röntgen-Thorax: ~0,02 mSv. CT-Abdomen: ~10 mSv. Strahlentherapie-Gesamtdosis (kurativer Tumor): 50–70 Gy. Letale Ganzkörperdosis (LD₅₀/₆₀): ~4 Sv.
+
+---
 
 ## Photoelektrischer Effekt
 
-Neben den bildgebenden Verfahren basiert ein weiteres fundamentales Prinzip der modernen Physik auf der Wechselwirkung von Licht und Materie:
+Der **äußere Photoelektrische Effekt** (Einstein, 1905, Nobelpreis 1921) beschreibt das Herauslösen von Elektronen aus einer **Metalloberfläche** beim Einfall von Licht:
 
-Im Gegensatz zum inneren Photoeffekt (Röntgenabsorption im Gewebe, → UK 03) beschreibt der **äußere Photoelektrische Effekt** (Einstein, 1905) das Herauslösen von Elektronen aus einer **Metalloberfläche** beim Einfall von Licht, wenn die Photonenenergie eine minimale Schwelle überschreitet:
+> **E_kin = hf − φ** (φ = Austrittsarbeit des Metalls, materialabhängig)
 
-> **E_kin = hf − φ** (φ = Austrittsarbeit des Metalls)
+Emission tritt nur auf, wenn hf ≥ φ, d. h. f ≥ f_Grenz = φ/h. Unterhalb der Grenzfrequenz wird kein Elektron emittiert – egal wie intensiv das Licht ist. Oberhalb steigt die kinetische Energie der Elektronen linear mit f. Die Intensität beeinflusst nur die Anzahl der emittierten Elektronen (Photonenzahl), nicht ihre Energie. Dieses Verhalten widerspricht der klassischen Wellentheorie (die eine intensitätsabhängige Emission vorhersagen würde) und war ein zentraler Beweis für die Quantennatur des Lichts.
 
-Emission tritt nur auf, wenn hf ≥ φ, d.h. f ≥ f_Grenz = φ/h. Unterhalb der Grenzfrequenz wird kein Elektron emittiert – egal wie intensiv das Licht ist. Oberhalb steigt die kinetische Energie der Elektronen linear mit f. Die Intensität beeinflusst nur die Anzahl der Elektronen, nicht ihre Energie.
+> **Merke:** Photoeffekt: E_kin = hf − φ. Kein Elektron unter der Grenzfrequenz, egal bei welcher Intensität. Die Frequenz bestimmt die Energie, die Intensität die Anzahl der Elektronen.
 
-**Bedeutung:** Belegte den Teilchencharakter des Lichtes (Photonen) und war ein zentraler Beweis für den Welle-Teilchen-Dualismus. Einstein erhielt dafür 1921 den Nobelpreis. In der medizinischen Bildgebung ist der Photoeffekt der dominierende Wechselwirkungsmechanismus für Röntgenphotonen niedriger Energie in dichtem Gewebe (Z⁴-Abhängigkeit).
+**Innerer Photoeffekt (medizinisch relevant):** In der Röntgendiagnostik ist der Photoeffekt der dominierende Absorptionsmechanismus bei niedrigen Photonenenergien (< 100 keV) in Geweben mit hoher Ordnungszahl Z. Die Absorptionswahrscheinlichkeit steigt mit **Z⁴/E³** – deshalb absorbiert Knochen (Ca, Z = 20) viel mehr Röntgenstrahlung als Weichgewebe (C, N, O, Z = 6–8). Dieser Kontrastmechanismus erzeugt das klassische Röntgenbild. In **Bildverstärkern** (Fluoroskopie) wandelt eine CsI-Schicht Röntgenphotonen über den inneren Photoeffekt in Licht um.
+
+---
+
+## Compton-Effekt
+
+{{DIAGRAM:em-spectrum}}
+
+Bei höheren Photonenenergien (100 keV – 10 MeV, typisch für Strahlentherapie) dominiert der **Compton-Effekt** (Arthur Compton, 1923, Nobelpreis 1927): Ein Photon stößt mit einem schwach gebundenen (quasi-freien) Hüllenelektron zusammen. Das Photon wird gestreut und verliert dabei Energie; das Elektron wird herausgeschlagen (Compton-Elektron, Rückstoßelektron).
+
+Die **Wellenlängenänderung** des gestreuten Photons hängt nur vom Streuwinkel θ ab:
+
+> **Δλ = λ' − λ = (h/m_e·c) · (1 − cos θ)**
+
+Der Faktor h/(m_e·c) = 2,43 pm heißt **Compton-Wellenlänge des Elektrons**. Maximale Wellenlängenänderung bei θ = 180° (Rückstreuung): Δλ_max = 2 × 2,43 pm = 4,86 pm. Der Energieübertrag auf das Elektron ist maximal bei Rückstreuung und steigt mit der Primärenergie des Photons.
+
+**Medizinische Relevanz:** Compton-Streuung ist **Z-unabhängig** (nur Elektronendichte zählt) – im Gegensatz zum Photoeffekt (Z⁴). Deshalb verschwindet der Knochen-Weichteil-Kontrast bei hohen Energien. In der Strahlentherapie (MeV-Bereich) ist Compton-Streuung der Hauptmechanismus der Dosisdeposition. Gestreute Photonen erzeugen Streustrahlung – ein Strahlenschutzproblem (Bleischürzen, Abstand).
+
+> **Merke:** Compton-Effekt: Photon stößt quasi-freies Elektron, wird gestreut (Δλ = h/(m_e·c) · (1−cos θ)). Dominiert bei 100 keV–10 MeV. Z-unabhängig, daher kein Gewebekontrast – relevant für Strahlentherapie und Streustrahlung.
+
+| Wechselwirkung | Energiebereich | Z-Abhängigkeit | Klinische Relevanz |
+|---------------|---------------|----------------|-------------------|
+| Photoeffekt | < 100 keV | ∝ Z⁴/E³ | Röntgendiagnostik (Kontrast) |
+| Compton-Effekt | 100 keV–10 MeV | Z-unabhängig | Strahlentherapie (Dosisdeposition) |
+| Paarbildung | > 1,022 MeV | ∝ Z² | Hochenergietherapie, PET-Physik |
+
+---
+
+## Welle-Teilchen-Dualismus
+
+Der Photoeffekt und der Compton-Effekt zeigen den Teilchencharakter des Lichts. Beugung und Interferenz zeigen seinen Wellencharakter. Beide Aspekte sind gleichberechtigt – das ist der **Welle-Teilchen-Dualismus**.
+
+**De-Broglie-Hypothese (1924):** Nicht nur Licht, sondern **jedes Teilchen mit Impuls p** besitzt eine zugehörige Wellenlänge:
+
+> **λ = h/p = h/(m·v)**
+
+Für ein Elektron (m = 9,11 × 10⁻³¹ kg) bei v = 10⁶ m/s: λ = 6,63 × 10⁻³⁴/(9,11 × 10⁻³¹ × 10⁶) = 0,73 nm – im Bereich atomarer Abstände, daher beobachtbar. Für ein Tennisball (58 g, 50 m/s): λ = 6,63 × 10⁻³⁴/(0,058 × 50) = 2,3 × 10⁻³⁴ m – undetektierbar klein. Materiewellen sind nur für subatomare Teilchen relevant.
+
+**Doppelspaltexperiment:** Elektronen (oder Photonen) werden einzeln auf einen Doppelspalt geschossen. Auf dem Detektorschirm entsteht nach vielen Einzelereignissen ein **Interferenzmuster** – typisch für Wellen. Verschließt man einen Spalt, verschwindet das Muster. Beobachtet man, durch welchen Spalt das Teilchen geht (**Welcher-Weg-Information**), verschwindet das Interferenzmuster ebenfalls – die Beobachtung zerstört die Welleneigenschaften. Dieses Experiment ist der überzeugendste Beweis für den Dualismus: Einzelne Teilchen verhalten sich wie Wellen, solange man nicht misst.
+
+> **Merke:** De Broglie: λ = h/p = h/(m·v). Jedes Teilchen hat Welleneigenschaften, aber nur bei atomaren Massen ist λ groß genug für Beugung. Das Doppelspaltexperiment zeigt Interferenz einzelner Teilchen – Beobachtung zerstört das Wellenmuster.
+
+**Medizinische Anwendung:** Das **Elektronenmikroskop** nutzt die de-Broglie-Wellenlänge beschleunigter Elektronen (bei 100 kV: λ ≈ 0,004 nm → Auflösung weit unter Lichtmikroskop-Grenze von ~200 nm). TEM (Transmissionselektronenmikroskop) und REM (Rasterelektronenmikroskop) ermöglichen die Darstellung von Viren, Zellorganellen und molekularen Strukturen.
+
+---
 
 ## Rechenbeispiele
 
-**Beispiel 1 — Larmorfrequenz bei verschiedenen Feldstärken:**
-γ_H = 42,58 MHz/T. Bei B₀ = 1,5 T: f = 42,58 × 1,5 = 63,87 MHz. Bei B₀ = 3,0 T: f = 42,58 × 3,0 = 127,74 MHz. Bei Ultra-Hochfeld 7 T (Forschung): f = 42,58 × 7 = 298,06 MHz. Je stärker das Feld, desto höher die Larmorfrequenz und desto besser das Signal-Rausch-Verhältnis.
+**Beispiel 1 — Annihilationsenergie bei PET:**
+Ruhemasse Elektron = Ruhemasse Positron = 0,511 MeV/c². Gesamte Ruheenergie: E = 2 × 0,511 = 1,022 MeV. Da das Positron beim Zusammentreffen nahezu ruht (thermalisiert), werden genau 2 Photonen mit je E = 0,511 MeV = 511 keV emittiert. Wellenlänge: λ = hc/E = 1240 eV·nm / (511 000 eV) = 0,00243 nm = 2,43 pm (harte Gamma-Strahlung).
 
-**Beispiel 2 — Annihilationsenergie bei PET:**
-Ruhemasse Elektron = Ruhemasse Positron = 0,511 MeV/c². Gesamte Ruheenergie: E = 2 × 0,511 = 1,022 MeV. Da Positron beim Zusammentreffen nahezu ruht (thermalisiert), werden genau 2 Photonen mit je E = 0,511 MeV = 511 keV emittiert. Wellenlänge: λ = hc/E = 1240 eV·nm / (511 000 eV) = 0,00243 nm = 2,43 pm (harte Gamma-Strahlung).
+**Beispiel 2 — Äquivalentdosis bei verschiedenen Strahlungsarten:**
+Ein Gewebe absorbiert eine Energiedosis von D = 0,5 Gy. Äquivalentdosis bei Photonen (w_R = 1): H = 1 × 0,5 = 0,5 Sv. Bei Alpha-Strahlung (w_R = 20): H = 20 × 0,5 = 10 Sv. Die gleiche physikalische Dosis erzeugt bei Alpha-Strahlung eine 20-fach höhere biologische Wirkung.
 
 **Beispiel 3 — Photoelektrischer Effekt (Grenzfrequenz):**
 Austrittsarbeit von Zink: φ = 4,3 eV = 4,3 × 1,602 × 10⁻¹⁹ J = 6,89 × 10⁻¹⁹ J.
-Grenzfrequenz: f₀ = φ/h = 6,89 × 10⁻¹⁹ / 6,626 × 10⁻³⁴ = 1,04 × 10¹⁵ Hz. Grenzwellenlänge: λ₀ = c/f₀ = 3 × 10⁸ / 1,04 × 10¹⁵ = 289 nm (UV). Sichtbares Licht (400–700 nm) hat zu niedrige Frequenz → kein Photoeffekt an Zink. UV-Licht (< 289 nm) löst Elektronen aus.`,
+Grenzfrequenz: f₀ = φ/h = 6,89 × 10⁻¹⁹ / 6,626 × 10⁻³⁴ = 1,04 × 10¹⁵ Hz. Grenzwellenlänge: λ₀ = c/f₀ = 3 × 10⁸ / 1,04 × 10¹⁵ = 289 nm (UV). Sichtbares Licht (400–700 nm) hat zu niedrige Frequenz → kein Photoeffekt an Zink.
+
+**Beispiel 4 — De-Broglie-Wellenlänge:**
+Elektron mit E_kin = 150 eV: p = √(2·m_e·E_kin) = √(2 × 9,11 × 10⁻³¹ × 150 × 1,6 × 10⁻¹⁹) = 6,61 × 10⁻²⁴ kg·m/s. λ = h/p = 6,63 × 10⁻³⁴ / 6,61 × 10⁻²⁴ = 0,1 nm = 1 Å – vergleichbar mit atomaren Gitterabständen, daher Elektronenbeugung beobachtbar.
+
+**Beispiel 5 — Compton-Streuung:**
+Photon mit λ = 0,071 nm wird unter θ = 90° gestreut. Δλ = (h/m_e·c)(1 − cos 90°) = 2,43 pm × 1 = 2,43 pm. λ' = 0,071 + 0,00243 = 0,0734 nm. Energieänderung: E = hc/λ = 17,5 keV → E' = hc/λ' = 16,9 keV → Energieübertrag auf Elektron: 0,6 keV.`,
       lernziele: [
         "Das Prinzip der Paarvernichtung und Koinzidenzdetektion beim PET erklären und ¹⁸F-FDG-Akkumulation begründen.",
         "SPECT und PET hinsichtlich verwendeter Radionuklide, Detektionsprinzip und Auflösung vergleichen.",
-        "Die Larmorfrequenz f = γ·B₀ berechnen und T1- sowie T2-Relaxation unterscheiden.",
-        "Den photoelektrischen Effekt und die Grenzfrequenzbedingung hf ≥ φ erklären.",
-        "Die Kontraindikationen der MRT und den Unterschied zu ionisierenden Verfahren kennen.",
+        "Teletherapie (LINAC) und Brachytherapie (1/r²-Abfall) unterscheiden und die Fraktionierung begründen.",
+        "Energiedosis (Gy), Äquivalentdosis (Sv) und Wichtungsfaktoren (w_R, w_T) berechnen und zuordnen.",
+        "Den photoelektrischen Effekt (E_kin = hf − φ) und den Compton-Effekt (Δλ-Formel) erklären.",
+        "De-Broglie-Wellenlänge berechnen und das Doppelspaltexperiment als Beweis des Welle-Teilchen-Dualismus erläutern.",
       ],
       sections: [
         {
           heading: "PET und SPECT: Funktionsprinzipien",
-          text: "PET: β⁺-Strahler → Positron + Elektron → Annihilation → 2 × 511-keV-Photonen in 180°. Koinzidenzdetektion definiert die line of response; hohe Sensitivität und quantitative Auswertung. FDG (¹⁸F): Glukoseanalogon, reichert sich in stoffwechselaktiven Zellen an (Tumor, Entzündung, Gehirn). SPECT: γ-Strahler (⁹⁹ᵐTc) + Gammakamera + Kollimator; günstiger, weiter verbreitet, etwas geringere Auflösung als PET.",
+          text: "PET: β⁺-Strahler → Positron + Elektron → Annihilation → 2 × 511-keV-Photonen in 180°. Koinzidenzdetektion definiert die line of response; hohe Sensitivität und quantitative Auswertung. FDG (¹⁸F): Glukoseanalogon, reichert sich in stoffwechselaktiven Zellen an (Tumor, Entzündung, Gehirn). SPECT: γ-Strahler (⁹⁹ᵐTc, T½ = 6 h) + Gammakamera + Bleikollimator; günstiger, weiter verbreitet, etwas geringere Auflösung als PET.",
           merksatz:
             "PET: β⁺ → Annihilation → 2×511 keV (180°) → Koinzidenz. SPECT: γ-Strahler + Gammakamera + Kollimator.",
         },
         {
-          heading: "MRT: Kernspinresonanz und Relaxation",
-          text: "¹H im Magnetfeld B₀ präzediert mit Larmorfrequenz f = γ·B₀ (γ_H = 42,58 MHz/T). RF-Puls bei f_Larmor kippt Magnetisierung in Transversalebene. T1: Längsmagnetisierung erholt sich (Spin-Gitter-Relaxation). T2: Transversalmagnetisierung zerfällt (Spin-Spin-Dephasierung). Fett kurzes T1 (hell T1-Bild); Wasser langes T2 (hell T2-Bild). Gadolinium-KM verkürzt T1 → Enhancement. Keine ionisierende Strahlung – Vorteil gegenüber CT/Röntgen.",
+          heading: "Strahlentherapie und Dosimetrie",
+          text: "Teletherapie: LINAC erzeugt Bremsstrahlung (4–25 MeV), MLC formt den Strahl tumorkonform. Brachytherapie: radioaktive Quellen direkt am Tumor, Dosisabfall ∝ 1/r². Fraktionierung (1,8–2 Gy/Tag) nutzt bessere DNA-Reparatur gesunder Zellen. Energiedosis D = ΔE/Δm [Gy], Äquivalentdosis H = w_R · D [Sv]. Alpha: w_R = 20, Photonen/Elektronen: w_R = 1. Effektive Dosis: E = Σ w_T · H_T.",
           merksatz:
-            "Larmor: f = 42,58 MHz/T × B₀. T1: Längsrelaxation (Fett hell). T2: Querrelaxation (Wasser hell). MRT = keine ionisierende Strahlung.",
+            "Gy = physikalische Dosis (J/kg). Sv = biologisch gewichtete Dosis (H = w_R · D). Alpha: w_R = 20.",
         },
         {
-          heading: "Photoelektrischer Effekt und Welle-Teilchen-Dualismus",
-          text: "Licht schlägt Elektronen aus Metall nur wenn hf ≥ φ (Austrittsarbeit). Unterhalb der Grenzfrequenz kein Effekt – unabhängig von der Intensität. E_kin = hf − φ. Beweis für Teilchennatur des Lichtes (Photonen). Welle-Teilchen-Dualismus: Licht verhält sich je nach Experiment als Welle (Beugung, Interferenz) oder Teilchen (Photoeffekt, Compton-Effekt). De-Broglie: auch Materie hat Welleneigenschaften (λ = h/p).",
+          heading: "Photoeffekt und Compton-Effekt",
+          text: "Photoeffekt: E_kin = hf − φ; Emission nur bei f ≥ φ/h; Absorption ∝ Z⁴/E³ (Röntgenkontrast). Compton-Effekt: Photon-Elektron-Stoß, Δλ = h/(m_e·c)·(1−cos θ); Z-unabhängig, dominiert bei 100 keV–10 MeV (Strahlentherapie). Paarbildung ab > 1,022 MeV.",
           merksatz:
-            "Photoeffekt: E_kin = hf − φ; Emission nur wenn f ≥ f_Grenz = φ/h. Belegt Photonennatur des Lichts.",
+            "Photoeffekt: E_kin = hf − φ, ∝ Z⁴. Compton: Δλ = 2,43 pm · (1−cos θ), Z-unabhängig.",
+        },
+        {
+          heading: "Welle-Teilchen-Dualismus",
+          text: "De Broglie (1924): λ = h/p = h/(m·v) – jedes Teilchen hat eine Wellenlänge, aber nur bei atomaren Massen ist sie messbar. Doppelspaltexperiment: Einzelne Elektronen erzeugen Interferenzmuster; Welcher-Weg-Messung zerstört es. Elektronenmikroskop: λ ≈ 0,004 nm bei 100 kV → Auflösung weit unter Lichtmikroskop.",
+          merksatz:
+            "De Broglie: λ = h/(m·v). Doppelspalt: Einzelne Teilchen interferieren – Beobachtung zerstört das Muster.",
         },
       ],
       merksätze: [
         "PET: β⁺-Strahler → Annihilation → 2 Gamma-Photonen je 511 keV unter 180°; Koinzidenzdetektion.",
-        "¹⁸F-FDG: Desoxyglukose akkumuliert in Hochumsatz-Zellen (Tumor, Hirn); T½=110 min.",
-        "SPECT: γ-Strahler (⁹⁹ᵐTc) + Gammakamera mit Blei-Kollimator; 3D-Rekonstruktion aus Projektionen.",
-        "MRT: ¹H im B₀-Feld präzediert mit Larmorfrequenz f = γ·B₀ (γ_H = 42,58 MHz/T).",
-        "Bei B₀ = 1,5 T: f_Larmor ≈ 64 MHz; bei 3,0 T: f ≈ 128 MHz.",
-        "T1-Relaxation: Längsmagnetisierung erholt sich; Fett hat kurzes T1 → hell im T1-Bild.",
-        "T2-Relaxation: Transversalmagnetisierung zerfällt durch Dephasierung; Wasser hat langes T2 → hell im T2-Bild.",
-        "Gadolinium-KM: paramagnetisch, verkürzt T1 → Gewebe mit KM erscheint in T1 heller (Enhancement).",
-        "Photoelektrischer Effekt: E_kin = hf − φ; Grenzfrequenz f_Grenz = φ/h; kein Elektron unter Grenzfrequenz.",
-        "MRT: keine ionisierende Strahlung; Kontraindikationen: ferromagnetische Implantate, alte Herzschrittmacher.",
+        "¹⁸F-FDG: Desoxyglukose akkumuliert in Hochumsatz-Zellen (Tumor, Hirn); T½ = 110 min.",
+        "SPECT: ⁹⁹ᵐTc (T½ = 6 h, 140 keV) + Gammakamera mit Blei-Kollimator; günstiger als PET.",
+        "Teletherapie: LINAC → Bremsstrahlung, MLC-geformt. Brachytherapie: Quelle am Tumor, D ∝ 1/r².",
+        "Fraktionierung: 1,8–2 Gy/Tag, 5×/Woche; gesunde Zellen reparieren besser als Tumorzellen (4 R).",
+        "Gray (Gy) = J/kg (physikalisch). Sievert (Sv) = w_R · Gy (biologisch). Alpha: w_R = 20.",
+        "Photoeffekt: E_kin = hf − φ; Grenzfrequenz f_Grenz = φ/h; Absorption ∝ Z⁴/E³.",
+        "Compton-Effekt: Δλ = h/(m_e·c) · (1 − cos θ); Compton-Wellenlänge = 2,43 pm; Z-unabhängig.",
+        "De Broglie: λ = h/p = h/(m·v); relevant für Elektronen (nm-Bereich), nicht für makroskopische Objekte.",
+        "Doppelspaltexperiment: Einzelne Teilchen erzeugen Interferenzmuster – Beweis für Welle-Teilchen-Dualismus.",
       ],
       // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
         question:
-          "Beschreiben Sie das Prinzip der PET und erklären Sie, wie ¹⁸F-FDG zur Tumordiagnostik eingesetzt wird.",
+          "Erklären Sie den Unterschied zwischen Energiedosis und Äquivalentdosis. Warum ist Alpha-Strahlung bei gleicher Energiedosis biologisch viel wirksamer als Gamma-Strahlung?",
         answer:
-          "Die Positronen-Emissions-Tomographie (PET) ist ein nuklearmedizinisches Schnittbildverfahren, das auf dem β⁺-Zerfall radioaktiver Nuklide beruht. Das häufigste Radiopharmakon ist ¹⁸F-Fluordesoxyglukose (¹⁸F-FDG). ¹⁸F zerfällt mit einer Halbwertszeit von 110 Minuten unter Emission eines Positrons (β⁺-Zerfall). Das Positron bewegt sich wenige Millimeter durch Gewebe, bis es auf ein Elektron trifft und mit diesem annihiliert (Paarvernichtung): e⁺ + e⁻ → 2 Gammaphotonen mit je 511 keV, die sich unter exakt 180° voneinander wegbewegen (Impulserhaltung). Der PET-Scanner enthält einen Ring von Szintillationsdetektoren, die Koinzidenzereignisse registrieren: Werden zwei 511-keV-Photonen innerhalb eines kurzen Zeitfensters (~10 ns) auf gegenüberliegenden Detektoren registriert, liegt das Annihilationsereignis auf der Verbindungslinie (Line of Response, LOR). Aus hunderttausenden solcher LOR wird mittels tomographischer Rekonstruktionsalgorithmen ein dreidimensionales Bild der Nuklidverteilung berechnet. FDG wird wie normale Glukose über GLUT-Transporter in Zellen aufgenommen und von Hexokinase phosphoryliert, aber nicht weiter metabolisiert (da die 2-OH-Gruppe fehlt). In Zellen mit hohem Glukosestoffwechsel – Tumorzellen (Warburg-Effekt), aktive Entzündungsherde, Hirngewebe – akkumuliert FDG. Klinische Anwendungen: Tumorstaging (Lokalisation von Primärtumor und Metastasen), Therapiekontrolle (Ansprechen auf Chemotherapie), Suche nach unbekanntem Primärtumor (CUP-Syndrom), kardiologische Vitalitätsdiagnostik (Nachweis hibernating myocardium), neurologisch-psychiatrische Diagnostik (Alzheimer-Demenz, Epilepsieherd-Lokalisation). Meist wird PET mit CT oder MRT kombiniert (PET/CT, PET/MRT), um funktionelle und anatomische Information zu fusionieren.",
+          "Die Energiedosis D (Einheit Gray, 1 Gy = 1 J/kg) beschreibt die physikalisch im Gewebe absorbierte Energie pro Masse. Sie sagt jedoch nichts über die biologische Wirkung aus, da verschiedene Strahlungsarten bei gleicher Energiedosis unterschiedlich starke Schäden verursachen. Die Äquivalentdosis H (Einheit Sievert, Sv) berücksichtigt dies: H = w_R · D, wobei w_R der Strahlungs-Wichtungsfaktor ist. Für Photonen und Elektronen ist w_R = 1, für Alpha-Teilchen w_R = 20. Alpha-Teilchen haben eine extrem hohe Ionisierungsdichte (hoher LET = linearer Energietransfer), da sie zweifach positiv geladen und relativ schwer sind (4 u). Auf kürzester Strecke (< 0,1 mm in Gewebe) erzeugen sie tausende Ionisationsereignisse und verursachen gehäuft DNA-Doppelstrangbrüche in enger räumlicher Nähe (Cluster-Schäden), die von der Zelle kaum repariert werden können. Gamma-Photonen hingegen ionisieren dünn verteilt (niedriger LET), sodass die DNA-Schäden räumlich verstreut und meist reparabel sind. Bei einer Energiedosis von 0,5 Gy ergibt sich für Gamma-Strahlung eine Äquivalentdosis von 0,5 Sv, für Alpha-Strahlung aber 10 Sv – die 20-fache biologische Wirksamkeit.",
       },
       klinischerBezug:
-        "¹⁸F-FDG-PET/CT: Goldstandard für Tumorstaging, Therapiekontrolle. MRT: kein Strahlenrisiko, bester Weichteilkontrast – bevorzugt bei Kinder, Gehirn, Gelenke, Becken. SPECT/CT mit ⁹⁹ᵐTc: Skelettszintigraphie, Myokardperfusion, Schilddrüsenszintigraphie.",
+        "¹⁸F-FDG-PET/CT: Goldstandard für Tumorstaging, Therapiekontrolle. SPECT/CT mit ⁹⁹ᵐTc: Skelettszintigraphie, Myokardperfusion, Schilddrüsenszintigraphie. Strahlentherapie: LINAC-basierte IMRT/VMAT bei soliden Tumoren, Brachytherapie bei Zervix-/Prostatakarzinom. Dosimetrie: Strahlenschutzgrenzwerte (effektive Dosis 20 mSv/Jahr beruflich, 1 mSv/Jahr Bevölkerung).",
       selfTest: [
         {
           question:
@@ -1292,7 +1378,7 @@ Grenzfrequenz: f₀ = φ/h = 6,89 × 10⁻¹⁹ / 6,626 × 10⁻³⁴ = 1,04 × 
           ],
           correctIndex: 2,
           explanation:
-            "Bei der Paarvernichtung (Annihilation) treffen ein Positron und ein Elektron aufeinander. Die Gesamtenergie wird nach E = mc² vollständig in Strahlungsenergie umgewandelt. Die Ruhemasse eines Elektrons beträgt m_e = 9,109×10⁻³¹ kg, entsprechend einer Ruheenergie von m_e·c² ≈ 0,511 MeV = 511 keV. Da Positron und Elektron jeweils 511 keV Ruhemasse haben, entstehen zwei Photonen mit je 511 keV (der Impuls des Positrons ist vor der Annihilation klein, daher sind die Photonen nahezu exakt antiparallel). Der konstante Wert 511 keV ist charakteristisch für alle Paarvernichtungsereignisse und erlaubt eine eindeutige Identifikation im Detektor.",
+            "Bei der Paarvernichtung (Annihilation) treffen ein Positron und ein Elektron aufeinander. Die Gesamtenergie wird nach E = mc² vollständig in Strahlungsenergie umgewandelt. Die Ruhemasse eines Elektrons beträgt m_e = 9,109×10⁻³¹ kg, entsprechend einer Ruheenergie von m_e·c² ≈ 0,511 MeV = 511 keV. Da Positron und Elektron jeweils 511 keV Ruhemasse haben, entstehen zwei Photonen mit je 511 keV. Der konstante Wert 511 keV ist charakteristisch für alle Paarvernichtungsereignisse.",
           hints: [
             "Annihilation: e⁺ + e⁻ → 2γ. Die Energie der Photonen kommt aus der Ruhemasse beider Teilchen: E = m_e·c².",
             "m_e·c² = 0,511 MeV = 511 keV. Da zwei Teilchen annihilieren, entstehen zwei Photonen mit je 511 keV.",
@@ -1311,27 +1397,13 @@ Grenzfrequenz: f₀ = φ/h = 6,89 × 10⁻¹⁹ / 6,626 × 10⁻³⁴ = 1,04 × 
           ],
           correctIndex: 1,
           explanation:
-            "Der Warburg-Effekt (Otto Warburg, 1924) beschreibt die bevorzugte Nutzung aerober Glykolyse durch Tumorzellen, selbst bei ausreichend Sauerstoff. Tumorzellen überexprimieren Glukose-Transporter (GLUT1, GLUT3) und Hexokinase, nehmen daher vermehrt Glukose (und FDG) auf. Nach Aufnahme wird FDG von der Hexokinase zu FDG-6-Phosphat phosphoryliert. Da die 2-Hydroxylgruppe der natürlichen Glukose bei FDG durch Fluor ersetzt ist, kann das Enzym Phosphoglukose-Isomerase FDG-6-Phosphat nicht weiter umwandeln. FDG-6-Phosphat ist auch zu polar, um die Zellmembran zu verlassen und akkumuliert intrazellulär. In normalen Zellen mit niedrigerem Glukoseumsatz ist die Anreicherung geringer, was den Tumorkontrast im PET-Bild erzeugt.",
+            "Der Warburg-Effekt beschreibt die bevorzugte Nutzung aerober Glykolyse durch Tumorzellen. Tumorzellen überexprimieren GLUT1/GLUT3 und Hexokinase, nehmen vermehrt FDG auf. FDG wird zu FDG-6-Phosphat phosphoryliert, aber wegen der fehlenden 2-OH-Gruppe nicht weiter metabolisiert (metabolic trapping). In normalen Zellen mit niedrigerem Glukoseumsatz ist die Anreicherung geringer → Tumorkontrast im PET-Bild.",
           hints: [
-            'FDG = Desoxyglukose. "Desoxy" bedeutet: eine OH-Gruppe fehlt. Was passiert nach der Phosphorylierung durch Hexokinase?',
-            "Tumorzellen: Warburg-Effekt = hoher Glukosestoffwechsel. FDG: wird aufgenommen, aber metabolisch blockiert → Akkumulation.",
+            "FDG = Desoxyglukose. Die fehlende OH-Gruppe blockiert den weiteren Abbau nach der Phosphorylierung.",
+            "Tumorzellen: Warburg-Effekt = hoher Glukosestoffwechsel. FDG wird aufgenommen, aber metabolisch blockiert → Akkumulation.",
           ],
           tags: ["fdg", "warburg-effekt", "tumorstoffwechsel"],
           difficulty: 2,
-        },
-        {
-          question:
-            "Ein MRT-Gerät arbeitet mit einem Magnetfeld B₀ = 3,0 Tesla. Welche Larmorfrequenz haben die ¹H-Protonen? (γ_H = 42,58 MHz/T)",
-          options: ["42,58 MHz", "63,87 MHz", "85,16 MHz", "127,74 MHz", "212,9 MHz"],
-          correctIndex: 3,
-          explanation:
-            "f = γ_H · B₀ = 42,58 MHz/T × 3,0 T = 127,74 MHz ≈ 127,7 MHz. Diese Frequenz liegt im UKW-Bereich (FM-Radio: 87–108 MHz – etwas höher). Zum Vergleich: bei 1,5 T (das häufigste klinische MRT) beträgt f ≈ 64 MHz. Der RF-Puls (Hochfrequenzpuls) muss exakt die Larmorfrequenz haben, um Resonanz zu erzeugen und die Magnetisierung in die Transversalebene zu kippen. Die Larmorfrequenz hängt linear von B₀ ab; daher benötigen 3-Tesla-Geräte andere RF-Frequenzen als 1,5-Tesla-Geräte.",
-          hints: [
-            "Larmorgleichung: f = γ·B₀. Einsetzen: γ_H = 42,58 MHz/T, B₀ = 3,0 T.",
-            "Einheiten: MHz/T × T = MHz.",
-          ],
-          tags: ["larmor-frequenz", "mrt", "kernspinresonanz"],
-          difficulty: 1,
         },
         {
           question: "Welche Aussage zum photoelektrischen Effekt ist korrekt?",
@@ -1344,33 +1416,80 @@ Grenzfrequenz: f₀ = φ/h = 6,89 × 10⁻¹⁹ / 6,626 × 10⁻³⁴ = 1,04 × 
           ],
           correctIndex: 2,
           explanation:
-            'Der photoelektrische Effekt zeigt, dass Licht gequantelt (in Photonen) vorliegt. Ein Photon muss mindestens die Austrittsarbeit φ des Metalls aufbringen, um ein Elektron herauszuschlagen. Da E_Photon = hf, muss gelten: hf ≥ φ, also f ≥ f_Grenz = φ/h. Unterhalb dieser Grenzfrequenz werden keinerlei Elektronen emittiert – egal wie intensiv das Licht ist (viele Photonen niedriger Energie können nicht "aufaddiert" werden). Die kinetische Energie der emittierten Elektronen beträgt E_kin = hf − φ und hängt nur von der Frequenz (nicht der Intensität) ab. Die Intensität beeinflusst lediglich die Anzahl der Elektronen pro Zeiteinheit (bei f > f_Grenz). Dieser Befund ist nur durch das Photonen-Modell erklärbar, nicht durch die Wellentheorie.',
+            "Ein Photon muss mindestens die Austrittsarbeit φ aufbringen: hf ≥ φ, also f ≥ f_Grenz = φ/h. Unterhalb der Grenzfrequenz keine Emission – egal wie intensiv das Licht. Die kinetische Energie ist E_kin = hf − φ (frequenzabhängig, nicht intensitätsabhängig). Die Intensität beeinflusst nur die Anzahl der Elektronen pro Zeiteinheit. Dieser Befund ist nur durch das Photonen-Modell erklärbar.",
           hints: [
-            "Klassische Wellentheorie würde sagen: Mehr Intensität → mehr Energie → irgendwann Emission. Was beobachtet man wirklich?",
-            "Photoeffekt: E_kin = hf − φ. Emission nur wenn hf ≥ φ. Intensität beeinflusst die Anzahl, nicht die Energie der Elektronen.",
+            "Klassische Wellentheorie: Mehr Intensität → mehr Energie → irgendwann Emission. Was beobachtet man wirklich?",
+            "Photoeffekt: E_kin = hf − φ. Intensität beeinflusst die Anzahl, nicht die Energie der Elektronen.",
           ],
           tags: ["photoeffekt", "grenzfrequenz", "photon"],
           difficulty: 2,
         },
         {
           question:
-            "Bei einer PET-Aufnahme werden gleichzeitig zwei Detektoren A und B auf gegenüberliegenden Seiten aktiviert. Was bedeutet dieses Koinzidenzsignal für die Lokalisierung des Ereignisses?",
+            "Ein Gewebe wird mit Alpha-Strahlung bestrahlt und absorbiert eine Energiedosis von 0,2 Gy. Wie groß ist die Äquivalentdosis? (w_R für Alpha = 20)",
+          options: ["0,2 Sv", "0,4 Sv", "2,0 Sv", "4,0 Sv", "20 Sv"],
+          correctIndex: 3,
+          explanation:
+            "Die Äquivalentdosis H = w_R · D. Für Alpha-Strahlung ist w_R = 20. Also: H = 20 × 0,2 Gy = 4,0 Sv. Die hohe biologische Wirksamkeit von Alpha-Strahlung (w_R = 20) liegt an der extrem hohen Ionisierungsdichte (hoher LET): Auf kürzester Strecke werden viele DNA-Doppelstrangbrüche erzeugt, die kaum reparabel sind. Zum Vergleich: Photonen (w_R = 1) bei gleicher Energiedosis ergäben nur H = 0,2 Sv.",
+          hints: [
+            "Äquivalentdosis H = w_R · D. Einheiten: Sv = dimensionslos × Gy.",
+            "Alpha-Teilchen: w_R = 20 (höchster Wichtungsfaktor aller Strahlungsarten).",
+          ],
+          tags: ["dosimetrie", "äquivalentdosis", "wichtungsfaktor"],
+          difficulty: 1,
+        },
+        {
+          question: "Welche Aussage zum Compton-Effekt ist FALSCH?",
           options: [
-            "Das Annihilationsereignis hat irgendwo im Scanner stattgefunden",
-            "Das Ereignis liegt auf der Verbindungslinie zwischen Detektor A und B (line of response)",
-            "Das Ereignis liegt genau in der Mitte zwischen A und B",
-            "Es wurden zwei verschiedene Radionuklide aktiviert",
-            "Das Signal zeigt an, dass eine Fehldetektion vorliegt",
+            "Ein Photon überträgt bei der Streuung Energie auf ein Elektron",
+            "Die Wellenlängenänderung des gestreuten Photons hängt vom Streuwinkel ab",
+            "Die Absorptionswahrscheinlichkeit steigt stark mit der Ordnungszahl Z des Gewebes",
+            "Der Compton-Effekt dominiert bei Photonenenergien von 100 keV bis 10 MeV",
+            "Maximale Energieübertragung erfolgt bei Rückstreuung (θ = 180°)",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Der Compton-Effekt ist Z-unabhängig – er hängt nur von der Elektronendichte ab, nicht von der Ordnungszahl. Das unterscheidet ihn fundamental vom Photoeffekt, dessen Absorptionswahrscheinlichkeit mit Z⁴ steigt. Deshalb verschwindet der Knochen-Weichteil-Kontrast bei hohen Photonenenergien (Strahlentherapie-Bereich), wo Compton-Streuung dominiert. Alle anderen Aussagen sind korrekt: Δλ = h/(m_e·c) · (1 − cos θ), max bei θ = 180°.",
+          hints: [
+            "Vergleiche Photoeffekt (∝ Z⁴) mit Compton-Effekt. Bei welchem spielt die Ordnungszahl keine Rolle?",
+            "Compton: quasi-freie Elektronen – nur deren Dichte zählt, nicht die Kernladung.",
+          ],
+          tags: ["compton-effekt", "streuung", "z-abhängigkeit"],
+          difficulty: 2,
+        },
+        {
+          question:
+            "Ein Elektron wird auf eine kinetische Energie von 150 eV beschleunigt. Welche de-Broglie-Wellenlänge hat es ungefähr? (h = 6,63×10⁻³⁴ J·s, m_e = 9,11×10⁻³¹ kg, 1 eV = 1,6×10⁻¹⁹ J)",
+          options: ["0,001 nm", "0,01 nm", "0,1 nm", "1,0 nm", "10 nm"],
+          correctIndex: 2,
+          explanation:
+            "p = √(2·m_e·E_kin) = √(2 × 9,11×10⁻³¹ × 150 × 1,6×10⁻¹⁹) = √(4,37×10⁻⁴⁷) ≈ 6,61×10⁻²⁴ kg·m/s. λ = h/p = 6,63×10⁻³⁴ / 6,61×10⁻²⁴ ≈ 1,0×10⁻¹⁰ m = 0,1 nm. Diese Wellenlänge liegt im Bereich atomarer Gitterabstände (typisch 0,1–0,5 nm), weshalb Elektronenbeugung an Kristallgittern beobachtet werden kann (Davisson-Germer-Experiment, 1927).",
+          hints: [
+            "De Broglie: λ = h/p. Für kinetische Energie: p = √(2·m·E_kin).",
+            "Erst p berechnen, dann λ = h/p. Achte auf konsistente Einheiten (eV → Joule).",
+          ],
+          tags: ["de-broglie", "materiewellen", "wellenlänge"],
+          difficulty: 2,
+        },
+        {
+          question:
+            "Worin liegt der Hauptunterschied zwischen Teletherapie und Brachytherapie in der Strahlenbehandlung?",
+          options: [
+            "Teletherapie verwendet Alpha-Strahlung, Brachytherapie Gamma-Strahlung",
+            "Bei der Teletherapie liegt die Strahlenquelle außerhalb des Körpers (LINAC), bei der Brachytherapie wird sie direkt in/an den Tumor gebracht",
+            "Teletherapie ist nur für Hauttumoren geeignet, Brachytherapie für tiefe Tumoren",
+            "Brachytherapie verwendet höhere Gesamtdosen als Teletherapie",
+            "Teletherapie nutzt radioaktive Quellen, Brachytherapie einen Linearbeschleuniger",
           ],
           correctIndex: 1,
           explanation:
-            "Bei der PET-Koinzidenzdetektion gilt: Wenn zwei Detektoren innerhalb eines kurzen Zeitfensters (typisch 3–15 ns) gleichzeitig ein 511-keV-Photon registrieren, muss die Paarvernichtung auf der Verbindungslinie dieser beiden Detektoren stattgefunden haben (line of response, LOR). Da die beiden Annihilationsphotonen unter 180° emittiert werden und sich mit Lichtgeschwindigkeit bewegen, kommen sie quasi gleichzeitig an (kleine Zeitdifferenz erlaubt TOF-PET: time-of-flight, bestimmt genaueren Ort auf der LOR). Aus Hunderttausenden von LOR unterschiedlicher Winkel und Positionen wird mittels tomographischer Algorithmen (gefilterte Rückprojektion, OSEM) die 3D-Verteilung des Radionuklids rekonstruiert. Der Vorteil gegenüber SPECT: kein mechanischer Kollimator nötig → höhere Sensitivität.",
+            "Teletherapie (tele = fern): Die Strahlenquelle (meist ein Linearbeschleuniger, LINAC) befindet sich außerhalb des Körpers. Elektronen werden auf 4–25 MeV beschleunigt und erzeugen am Wolfram-Target Bremsstrahlung. Brachytherapie (brachy = nah): Radioaktive Quellen (¹⁹²Ir, ¹²⁵I, ¹³⁷Cs) werden direkt in oder an den Tumor platziert. Der Dosisabfall folgt dem Abstandsquadratgesetz (D ∝ 1/r²), wodurch umliegendes Gewebe geschont wird. Typische Indikationen: Zervix-, Prostata-, Ösophaguskarzinom.",
           hints: [
-            "Zwei 511-keV-Photonen entstehen unter 180°. Wenn beide gleichzeitig auf gegenüberliegenden Detektoren ankommen…",
-            "Das Ereignis liegt irgendwo auf der geraden Linie zwischen den beiden Detektoren – das ist die LOR.",
+            "Tele = fern (Fernseher), brachy = nah. Das beschreibt den Abstand der Strahlenquelle zum Tumor.",
+            "LINAC = Linearbeschleuniger → externe Quelle. Brachytherapie: radioaktive Seeds/Drähte im Tumor.",
           ],
-          tags: ["pet", "koinzidenzdetektion", "lor"],
-          difficulty: 2,
+          tags: ["strahlentherapie", "teletherapie", "brachytherapie"],
+          difficulty: 1,
         },
       ],
     },
