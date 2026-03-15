@@ -91,6 +91,8 @@ function insertEvent(
   } = {}
 ) {
   if (!supabase) return;
+  // Skip tracking for admin (flag set when analytics dashboard is unlocked)
+  if (localStorage.getItem("mm_admin") === "1") return;
 
   const row = {
     event_name: eventName,

@@ -23,6 +23,7 @@ function PasswordGate({ onUnlock }: { onUnlock: () => void }) {
     const hash = await sha256(pw);
     if (hash === PASS_HASH) {
       sessionStorage.setItem(SESSION_KEY, "1");
+      localStorage.setItem("mm_admin", "1");
       onUnlock();
     } else {
       setWrong(true);
