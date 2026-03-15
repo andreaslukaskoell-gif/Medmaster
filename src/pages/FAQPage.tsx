@@ -78,8 +78,8 @@ const FAQ_ITEMS: { q: string; a: string; category: string }[] = [
   // MedMaster
   {
     category: "MedMaster",
-    q: "Ist MedMaster wirklich kostenlos?",
-    a: "Ja. Alle 4.300+ Fragen, alle 4 Testbereiche, das KI-Lernsystem und alle Features sind komplett kostenlos. Es gibt kein Abo, keine versteckten Kosten und keine Premium-Version.",
+    q: "Was kostet MedMaster?",
+    a: "Bis 31. März 2026 ist MedMaster komplett gratis — voller Zugang zu allen 4.300+ Fragen, allen 4 Testbereichen und allen Features. Ab 1. April kostet der Zugang einmalig €29,90 — kein Abo, keine versteckten Kosten, lebenslanger Zugang.",
   },
   {
     category: "MedMaster",
@@ -99,7 +99,7 @@ const FAQ_ITEMS: { q: string; a: string; category: string }[] = [
   {
     category: "MedMaster",
     q: "Wie unterscheidet sich MedMaster von anderen MedAT-Kursen?",
-    a: "MedMaster ist komplett kostenlos und bietet mehr Übungsfragen (4.300+) als die meisten kostenpflichtigen Anbieter. Zusätzlich: KI-adaptives Lernen, algorithmisch generierte KFF-Aufgaben, Prüfungstag-Prognose und alle 4 Testbereiche in einer App.",
+    a: "MedMaster bietet mehr Übungsfragen (4.300+) als die meisten kostenpflichtigen Anbieter. Dazu: KI-adaptives Lernen, algorithmisch generierte KFF-Aufgaben (unbegrenzt), Prüfungstag-Prognose und alle 4 MedAT-Testbereiche in einer App — für eine einmalige Zahlung statt monatlichem Abo.",
   },
 ];
 
@@ -131,7 +131,7 @@ export default function FAQPage() {
     description:
       "Antworten auf die häufigsten Fragen zum MedAT 2026: Testaufbau, BMS, KFF, Vorbereitung, Anmeldung und MedMaster. Alles was du wissen musst.",
     canonical: "https://medmaster.at/faq",
-    ogImage: "https://medmaster.at/og-image.svg",
+    ogImage: "https://medmaster.at/og-image.png",
   });
 
   useEffect(() => {

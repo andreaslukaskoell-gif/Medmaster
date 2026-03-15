@@ -126,7 +126,7 @@ export default function MedATPunkterechner() {
     description:
       "Berechne deinen MedAT-Score online: BMS (40%), KFF (40%), TV (10%) und SEK (10%) eingeben und sofort deinen gewichteten Gesamtprozentsatz sehen. Kostenloser MedAT Punkterechner 2026.",
     canonical: "https://medmaster.at/medat-punkte-rechner",
-    ogImage: "https://medmaster.at/og-image.svg",
+    ogImage: "https://medmaster.at/og-image.png",
     ogType: "website",
   });
 

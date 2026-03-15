@@ -57,6 +57,7 @@ marketing/reels/*.mp4
 
 # Temp screenshots
 *.png
+!public/og-*.png
 
 # Planning artifacts
 .planning/

@@ -1,6 +1,6 @@
 import { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
-import { usePageTitle } from "@/hooks/usePageTitle";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import {
   GraduationCap,
   ArrowRight,
@@ -481,7 +481,12 @@ function SectionHeader({
 
 // ── Main Page ─────────────────────────────────────────────────
 export default function BMSDemo() {
-  usePageTitle("MedAT \u00dcbungsfragen kostenlos");
+  usePageMeta({
+    title: "MedAT Übungsfragen kostenlos",
+    description:
+      "4.300+ MedAT BMS-Übungsfragen und KFF-Aufgaben kostenlos üben — Biologie, Chemie, Physik, Mathematik, Zahlenfolgen, Implikationen und Wortflüssigkeit. Ohne Anmeldung.",
+    canonical: "https://medmaster.at/medat-uebungsfragen",
+  });
   const [activeTab, setActiveTab] = useState<string>("biologie");
 
   const dailySeed = useMemo(() => {

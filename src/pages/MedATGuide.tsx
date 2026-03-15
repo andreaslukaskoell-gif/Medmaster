@@ -208,7 +208,7 @@ export default function MedATGuide() {
     description:
       "Kompletter MedAT 2026 Guide: Testaufbau, BMS, KFF, TV, SEK erklärt. Vorbereitungsstrategie, Tipps und kostenlose Übungsfragen. Von MedAT-Absolventen.",
     canonical: "https://medmaster.at/medat-guide",
-    ogImage: "https://medmaster.at/og-image.svg",
+    ogImage: "https://medmaster.at/og-image.png",
     ogType: "article",
   });
 

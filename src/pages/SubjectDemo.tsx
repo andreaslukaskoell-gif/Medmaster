@@ -1,6 +1,6 @@
 import { useState, useMemo, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import { usePageTitle } from "@/hooks/usePageTitle";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import {
   GraduationCap,
   ArrowRight,
@@ -45,7 +45,7 @@ const SUBJECT_META: Record<
     metaTitle: "MedAT Biologie \u00dcbungsfragen kostenlos | MedMaster",
     metaDesc:
       "1.100+ MedAT Biologie Fragen: Zellbiologie, Genetik, Humanbiologie, Evolution. T\u00e4glich neue Aufgaben \u2014 kostenlos und ohne Anmeldung \u00fcben.",
-    ogImage: "/og-biologie.svg",
+    ogImage: "/og-biologie.png",
     topics: [
       "Zellbiologie",
       "Genetik",
@@ -80,7 +80,7 @@ const SUBJECT_META: Record<
     metaTitle: "MedAT Chemie \u00dcbungsfragen kostenlos | MedMaster",
     metaDesc:
       "1.400+ MedAT Chemie Fragen: Allgemeine Chemie, Organische Chemie, Biochemie. T\u00e4glich neue Aufgaben \u2014 kostenlos und ohne Anmeldung.",
-    ogImage: "/og-chemie.svg",
+    ogImage: "/og-chemie.png",
     topics: [
       "Allgemeine Chemie",
       "Organische Chemie",
@@ -115,7 +115,7 @@ const SUBJECT_META: Record<
     metaTitle: "MedAT Physik \u00dcbungsfragen kostenlos | MedMaster",
     metaDesc:
       "1.300+ MedAT Physik Fragen: Mechanik, Thermodynamik, Elektrizit\u00e4t, Optik, Akustik. T\u00e4glich neue Aufgaben \u2014 kostenlos \u00fcben.",
-    ogImage: "/og-physik.svg",
+    ogImage: "/og-physik.png",
     topics: ["Mechanik", "Thermodynamik", "Elektrizit\u00e4t", "Optik", "Akustik", "Atomphysik"],
     faq: [
       {
@@ -143,7 +143,7 @@ const SUBJECT_META: Record<
     metaTitle: "MedAT Mathematik \u00dcbungsfragen kostenlos | MedMaster",
     metaDesc:
       "490+ MedAT Mathematik Fragen: Algebra, Stochastik, Gleichungen, Einheiten. T\u00e4glich neue Aufgaben \u2014 kostenlos und ohne Anmeldung.",
-    ogImage: "/og-mathematik.svg",
+    ogImage: "/og-mathematik.png",
     topics: [
       "Algebra",
       "Stochastik",
@@ -405,35 +405,12 @@ export default function SubjectDemo() {
   const subjectKey = (subject || "biologie") as SubjectKey;
   const meta = SUBJECT_META[subjectKey];
 
-  usePageTitle(meta?.metaTitle ?? "MedAT Übungsfragen");
-
-  useEffect(() => {
-    if (!meta) return;
-    let descTag = document.querySelector('meta[name="description"]');
-    if (!descTag) {
-      descTag = document.createElement("meta");
-      descTag.setAttribute("name", "description");
-      document.head.appendChild(descTag);
-    }
-    descTag.setAttribute("content", meta.metaDesc);
-
-    const ogTags: Record<string, string> = {
-      "og:title": meta.metaTitle,
-      "og:description": meta.metaDesc,
-      "og:type": "website",
-      "og:url": `https://medmaster.at/medat-${subjectKey}-fragen`,
-      "og:image": `https://medmaster.at${meta.ogImage}`,
-    };
-    for (const [prop, content] of Object.entries(ogTags)) {
-      let tag = document.querySelector(`meta[property="${prop}"]`);
-      if (!tag) {
-        tag = document.createElement("meta");
-        tag.setAttribute("property", prop);
-        document.head.appendChild(tag);
-      }
-      tag.setAttribute("content", content);
-    }
-  }, [meta, subjectKey]);
+  usePageMeta({
+    title: meta?.metaTitle ?? "MedAT Übungsfragen",
+    description: meta?.metaDesc ?? "MedAT Übungsfragen kostenlos üben auf MedMaster.",
+    canonical: `https://medmaster.at/medat-${subjectKey}-fragen`,
+    ogImage: meta ? `https://medmaster.at${meta.ogImage}` : undefined,
+  });
 
   // FAQPage + Course JSON-LD for SEO
   useEffect(() => {
