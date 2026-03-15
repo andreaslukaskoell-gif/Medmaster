@@ -132,7 +132,7 @@ function ZFCard({ task, index }: { task: SequenceTask; index: number }) {
       </div>
       <div className="space-y-2">
         {task.options.map((opt, i) => {
-          const isCorrect = opt === task.answer;
+          const isCorrect = opt.key === task.correctOptionId;
           const isSelected = i === selected;
           let style = "border-[var(--border)] hover:border-[var(--border)] cursor-pointer";
           if (revealed) {
@@ -153,7 +153,9 @@ function ZFCard({ task, index }: { task: SequenceTask; index: number }) {
               <span className="shrink-0 w-7 h-7 rounded-lg flex items-center justify-center text-xs font-bold bg-[var(--background)] text-[var(--text-secondary)]">
                 {OPTION_LABELS[i]}
               </span>
-              <span className="text-sm font-mono text-[var(--text-primary)]">{opt}</span>
+              <span className="text-sm font-mono text-[var(--text-primary)]">
+                {opt.text ?? (opt.value ? opt.value.join(", ") : "")}
+              </span>
               {revealed && isCorrect && (
                 <CheckCircle2 className="w-5 h-5 text-emerald-500 ml-auto shrink-0" />
               )}
@@ -180,7 +182,7 @@ function ZFCard({ task, index }: { task: SequenceTask; index: number }) {
 function IMPCard({ task, index }: { task: ImplikationTask; index: number }) {
   const [selected, setSelected] = useState<number | null>(null);
   const [revealed, setRevealed] = useState(false);
-  const correctIdx = task.options.findIndex((o) => o === task.correctAnswer);
+  const correctIdx = task.correctAnswer;
   const handleSelect = (i: number) => {
     if (revealed) return;
     setSelected(i);
@@ -189,7 +191,7 @@ function IMPCard({ task, index }: { task: ImplikationTask; index: number }) {
   return (
     <QuizCard index={index} color="bg-purple-500">
       <div className="mb-4 space-y-1">
-        {task.premises.map((p, i) => (
+        {[task.premise1, task.premise2].map((p, i) => (
           <p key={i} className="text-sm text-[var(--text-primary)]">
             {p}
           </p>
