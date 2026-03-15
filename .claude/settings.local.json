@@ -386,7 +386,27 @@
       "Bash(bash:*)",
       "Bash(du:*)",
       "Bash(sort:*)",
-      "Bash(sed:*)"
+      "Bash(sed:*)",
+      "mcp__plugin_claude-mem_mcp-search__save_memory",
+      "mcp__plugin_playwright_playwright__browser_close",
+      "Bash(set:*)",
+      "mcp__plugin_playwright_playwright__browser_tabs",
+      "Bash(node_modules/.bin/vite build:*)",
+      "Bash(cd:*)",
+      "Bash(kill:*)",
+      "Bash(for dir:*)",
+      "Read(//Users/Luki/medmaster/src/data/bmsKapitel/$dir/**)",
+      "Bash(which tmux:*)",
+      "Bash(find:*)",
+      "Bash(echo:*)",
+      "Bash(npm audit:*)",
+      "Bash(npm rm:*)",
+      "Bash(tsc:*)",
+      "Bash(./node_modules/.bin/tsc -b 2>&1 | head -10; echo \"EXIT:$?\")",
+      "WebFetch(domain:www.kenhub.com)",
+      "WebFetch(domain:www.medicalgraphics.de)",
+      "Bash(for f:*)",
+      "Read(//Users/Luki/medmaster/**)"
     ]
   }
 }

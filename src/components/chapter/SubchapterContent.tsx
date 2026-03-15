@@ -126,7 +126,7 @@ function buildMarkdownComponents(keywordLinkEntries?: KeywordLinkEntry[]) {
       return <strong>{children}</strong>;
     },
     table: ({ children, ...props }: ComponentProps<"table">) => (
-      <div className="overflow-x-auto my-6 rounded-lg border border-[var(--border)]">
+      <div className="overflow-x-auto my-6 rounded-lg border border-[var(--border)] card-glass overflow-hidden">
         <table className="w-full text-sm border-collapse" {...props}>
           {children}
         </table>
@@ -134,7 +134,7 @@ function buildMarkdownComponents(keywordLinkEntries?: KeywordLinkEntry[]) {
     ),
     th: ({ children, ...props }: ComponentProps<"th">) => (
       <th
-        className="text-left p-3 font-semibold text-[var(--text-primary)] bg-[var(--surface)] border-b-2 border-[var(--border)]"
+        className="text-left p-3 font-semibold text-[var(--text-primary)] bg-white/50 dark:bg-white/5 border-b-2 border-[var(--border)]"
         {...props}
       >
         {children}
@@ -158,7 +158,7 @@ function buildMarkdownComponents(keywordLinkEntries?: KeywordLinkEntry[]) {
 
       if (isMerke) {
         return (
-          <div className="my-6 rounded-lg border-l-4 border-[var(--accent)] bg-[var(--accent)]/5 dark:bg-[var(--accent)]/15 px-5 py-4">
+          <div className="my-6 rounded-lg border-l-4 border-[var(--accent)] bg-white/40 dark:bg-white/5 backdrop-blur-sm shadow-sm px-5 py-4">
             <div className="text-[13px] font-semibold uppercase tracking-wider text-[var(--accent)] mb-1.5">
               Merke
             </div>
@@ -170,7 +170,7 @@ function buildMarkdownComponents(keywordLinkEntries?: KeywordLinkEntry[]) {
       }
       if (isAchtung) {
         return (
-          <div className="my-6 rounded-lg border-l-4 border-orange-500 bg-orange-50 dark:bg-orange-900/20 px-5 py-4">
+          <div className="my-6 rounded-lg border-l-4 border-orange-500 bg-white/40 dark:bg-white/5 backdrop-blur-sm shadow-sm px-5 py-4">
             <div className="text-[13px] font-semibold uppercase tracking-wider text-orange-700 dark:text-orange-300 mb-1.5">
               Achtung
             </div>
@@ -182,7 +182,7 @@ function buildMarkdownComponents(keywordLinkEntries?: KeywordLinkEntry[]) {
       }
       if (isTipp) {
         return (
-          <div className="my-6 rounded-lg border-l-4 border-purple-500 bg-purple-50 dark:bg-purple-900/20 px-5 py-4">
+          <div className="my-6 rounded-lg border-l-4 border-purple-500 bg-white/40 dark:bg-white/5 backdrop-blur-sm shadow-sm px-5 py-4">
             <div className="text-[13px] font-semibold uppercase tracking-wider text-purple-700 dark:text-purple-300 mb-1.5">
               Tipp
             </div>
@@ -194,7 +194,7 @@ function buildMarkdownComponents(keywordLinkEntries?: KeywordLinkEntry[]) {
       }
       if (isKlinisch) {
         return (
-          <div className="my-6 rounded-lg border-l-4 border-amber-500 bg-amber-50 dark:bg-amber-900/25 px-5 py-4">
+          <div className="my-6 rounded-lg border-l-4 border-amber-500 bg-white/40 dark:bg-white/5 backdrop-blur-sm shadow-sm px-5 py-4">
             <div className="text-[13px] font-semibold uppercase tracking-wider text-amber-700 dark:text-amber-300 mb-1.5">
               Klinischer Bezug
             </div>
@@ -566,7 +566,7 @@ export function SubchapterContent({
         </aside>
 
         {/* Main content — flowing sections, no accordions */}
-        <div className="min-w-0 max-w-[680px]">
+        <div className="min-w-0 max-w-[720px]">
           {unifiedSections.map((section, index) => (
             <div
               key={section.id}
@@ -580,7 +580,7 @@ export function SubchapterContent({
 
               {/* Section heading — skip for intro */}
               {section.title !== "Einleitung" && (
-                <div className={`${index === 0 ? "mt-0" : "mt-12"} mb-6`}>
+                <div className={`${index === 0 ? "mt-0" : "mt-16"} mb-6`}>
                   {section.variant === "medat" ? (
                     <div className="flex items-center gap-3">
                       <span className="text-[11px] font-bold uppercase tracking-widest text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-900/25 px-2.5 py-1 rounded">
@@ -596,7 +596,7 @@ export function SubchapterContent({
                       <div className="flex-1 h-px bg-teal-200 dark:bg-teal-800" />
                     </div>
                   ) : (
-                    <h2 className="text-xl font-bold text-[var(--text-primary)] leading-tight">
+                    <h2 className="text-2xl font-bold text-[var(--text-primary)] leading-tight">
                       {section.title}
                     </h2>
                   )}
@@ -618,7 +618,7 @@ export function SubchapterContent({
 
               {/* Visual separator between major sections */}
               {index < unifiedSections.length - 1 && section.variant === "default" && (
-                <div className="mt-10 border-b border-[var(--border)]/40 dark:border-[var(--border)]/60" />
+                <div className="divider-gradient mt-10" />
               )}
             </div>
           ))}

@@ -23,7 +23,7 @@ import {
 } from "lucide-react";
 import { CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Progress } from "@/components/ui/progress";
+// Progress replaced with .progress-premium CSS class
 import { Heatmap } from "@/components/ui/heatmap";
 import { SyncIndicator } from "@/components/dashboard/SyncIndicator";
 import { StreakFlameIcon } from "@/components/dashboard/StreakFire";
@@ -173,7 +173,7 @@ export default function Dashboard() {
     });
   }, [getFachReadiness, unlockedFachMilestones, unlockFachMilestone, faecherIds]);
 
-  const cardClass = "rounded-xl border border-[var(--border)] bg-[var(--card)]";
+  const cardClass = "card-glass";
   const bmsProgressPct = useMemo(() => {
     const total = alleKapitel.reduce((s, k) => s + (k?.unterkapitel?.length ?? 0), 0);
     if (total === 0) return 0;
@@ -195,17 +195,20 @@ export default function Dashboard() {
   }, [firstActivityTimeByDay]);
 
   return (
-    <div className="dashboard-page-bg">
-      <div className="max-w-7xl mx-auto px-4 py-4 sm:py-8 pb-28 lg:pb-12">
+    <div className="min-h-screen">
+      <div className="max-w-5xl mx-auto px-4 py-8 pb-12">
         <SyncIndicator />
 
         {/* ─── First-action guidance for new users ─── */}
         {(quizResults ?? []).length === 0 && (
-          <section className="mb-6" aria-label="Erste Schritte">
-            <h2 className="text-lg font-bold text-[var(--text-primary)] mb-3">
+          <section className="mb-6 hero-orbs" aria-label="Erste Schritte">
+            <h2 className="text-2xl font-bold text-[var(--text-primary)] mb-1 text-center">
               Starte jetzt mit deiner MedAT-Vorbereitung
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <p className="text-sm text-[var(--muted)] text-center mb-4">
+              Waehle einen Bereich und leg direkt los.
+            </p>
+            <div className="grid grid-cols-3 gap-3 stagger-children">
               {(
                 [
                   {
@@ -241,10 +244,7 @@ export default function Dashboard() {
                   key={card.target}
                   to={card.to}
                   onClick={() => trackEvent("activation_cta_click", { target: card.target })}
-                  className={cn(
-                    cardClass,
-                    "p-5 flex items-start gap-4 group hover:shadow-[var(--shadow-sm)] transition-shadow"
-                  )}
+                  className="card-glass p-5 flex items-start gap-4 group hover:shadow-md transition-shadow"
                 >
                   <div
                     className={cn(
@@ -273,16 +273,11 @@ export default function Dashboard() {
         <motion.div variants={stagger} initial="initial" animate="animate" className="space-y-6">
           {/* Hero: Begrüßung + Heute im Lernplan */}
           <motion.section variants={tileMotion} aria-label="Start" className="space-y-4">
-            <div
-              className={cn(
-                cardClass,
-                "p-5 sm:p-8 border-l-4 border-l-[var(--accent)] bg-[var(--card)] shadow-md"
-              )}
-            >
+            <div className="card-glass p-8 shadow-md">
               <div className="flex flex-col gap-5">
                 <div>
                   <div className="flex items-start justify-between gap-3">
-                    <h1 className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)] tracking-tight">
+                    <h1 className="text-4xl font-bold text-[var(--text-primary)] tracking-tight">
                       {displayName ? `${getGreetingByTime()}, ${displayName}` : getGreetingByTime()}
                     </h1>
                     {days > 0 && (
@@ -370,7 +365,9 @@ export default function Dashboard() {
                     {bmsProgressPct} %
                   </span>
                 </div>
-                <Progress value={bmsProgressPct} className="h-2 rounded-full" />
+                <div className="progress-premium">
+                  <div className="progress-fill" style={{ width: `${bmsProgressPct}%` }} />
+                </div>
               </div>
             </div>
           </motion.section>
@@ -379,14 +376,14 @@ export default function Dashboard() {
           <motion.section
             variants={tileMotion}
             aria-label="Daily und Streak"
-            className="grid grid-cols-1 sm:grid-cols-2 gap-4"
+            className="grid grid-cols-2 gap-4"
           >
             {/* Daily Challenge Widget */}
-            <div className="sm:col-span-1" aria-label="BMS des Tages">
+            <div aria-label="BMS des Tages">
               {dailyResult ? (
                 <Link to="/daily">
                   <div className={cn(cardClass, "relative overflow-hidden")}>
-                    <CardContent className="p-4 sm:p-5 flex items-center justify-between gap-4">
+                    <CardContent className="p-5 flex items-center justify-between gap-4">
                       <div className="flex items-center gap-3">
                         <div className="w-10 h-10 rounded-xl bg-[var(--success-bg)] flex items-center justify-center shrink-0">
                           <CheckCircle2 className="w-5 h-5 text-[var(--success)]" />
@@ -409,7 +406,7 @@ export default function Dashboard() {
               ) : (
                 <Link to="/daily">
                   <div className={cn(cardClass, "cursor-pointer")}>
-                    <CardContent className="p-4 sm:p-5 flex items-center justify-between gap-4">
+                    <CardContent className="p-5 flex items-center justify-between gap-4">
                       <div className="flex items-center gap-3">
                         <div className="w-10 h-10 rounded-xl bg-[var(--accent)]/15 flex items-center justify-center shrink-0">
                           <Target className="w-5 h-5 text-[var(--accent)]" />
@@ -432,10 +429,7 @@ export default function Dashboard() {
               )}
             </div>
             {/* Streak-Karte */}
-            <div
-              className={cn(cardClass, "p-4 sm:p-5 flex items-center gap-4")}
-              aria-label="Streak"
-            >
+            <div className={cn(cardClass, "p-5 flex items-center gap-4")} aria-label="Streak">
               <div className="w-12 h-12 rounded-xl bg-[var(--accent)]/10 flex items-center justify-center shrink-0">
                 <StreakFlameIcon
                   streak={flameStreak}
@@ -456,31 +450,22 @@ export default function Dashboard() {
           <motion.section
             variants={tileMotion}
             aria-label="Schnellzugriff"
-            className="grid grid-cols-1 lg:grid-cols-4 gap-3"
+            className="grid grid-cols-4 gap-3 stagger-children"
           >
-            <Link
-              to="/simulation"
-              className={cn(cardClass, "p-3 lg:p-4 flex items-center gap-2.5")}
-            >
+            <Link to="/simulation" className={cn(cardClass, "p-4 flex items-center gap-2.5")}>
               <Timer className="w-4 h-4 text-[var(--muted)] shrink-0" />
               <span className="text-sm font-medium text-[var(--text-primary)]">Simulation</span>
             </Link>
-            <Link
-              to="/fragen-trainer"
-              className={cn(cardClass, "p-3 lg:p-4 flex items-center gap-2.5")}
-            >
+            <Link to="/fragen-trainer" className={cn(cardClass, "p-4 flex items-center gap-2.5")}>
               <Dumbbell className="w-4 h-4 text-[var(--muted)] shrink-0" />
               <span className="text-sm font-medium text-[var(--text-primary)]">Fragen-Trainer</span>
             </Link>
-            <Link
-              to="/fortschritt"
-              className={cn(cardClass, "p-3 lg:p-4 flex items-center gap-2.5")}
-            >
+            <Link to="/fortschritt" className={cn(cardClass, "p-4 flex items-center gap-2.5")}>
               <BarChart3 className="w-4 h-4 text-[var(--muted)] shrink-0" />
               <span className="text-sm font-medium text-[var(--text-primary)]">Fortschritt</span>
             </Link>
             <Link to="/fortschritt">
-              <div className={cn(cardClass, "h-full p-3 lg:p-4 flex items-center gap-2.5")}>
+              <div className={cn(cardClass, "h-full p-4 flex items-center gap-2.5")}>
                 <TrendingUp className="w-4 h-4 text-[var(--muted)] shrink-0" />
                 <div className="min-w-0 flex-1">
                   <p className="text-sm font-medium text-[var(--text-primary)]">Prognose</p>
@@ -503,7 +488,7 @@ export default function Dashboard() {
           <motion.section
             variants={tileMotion}
             aria-label="Wochen-Aktivität und Freunde"
-            className="grid grid-cols-1 lg:grid-cols-2 gap-4"
+            className="grid grid-cols-2 gap-4"
           >
             <div className={cn(cardClass, "p-5")}>
               <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
@@ -526,7 +511,7 @@ export default function Dashboard() {
             aria-labelledby="smart-adjust-title"
           >
             <div
-              className="relative w-full max-w-md rounded-2xl border border-[var(--border)] bg-[var(--card)]/95 backdrop-blur-md shadow-xl p-6"
+              className="relative w-full max-w-md card-glass shadow-xl p-6"
               onClick={(e) => e.stopPropagation()}
             >
               <h2
@@ -567,7 +552,7 @@ function ReferralCard() {
   const waText = getReferralShareText(user?.id);
 
   return (
-    <div className="h-full rounded-xl border border-[var(--border)] bg-[var(--card)] p-5 shadow-sm">
+    <div className="h-full card-glass p-5">
       <p className="text-sm font-semibold text-[var(--text-primary)] mb-1">Freunde einladen</p>
       <p className="text-xs text-[var(--muted)] leading-relaxed mb-3">
         Teile MedMaster mit deiner Lerngruppe — wer gemeinsam übt, schneidet besser ab.
@@ -699,10 +684,7 @@ function ContinueLearningCard({ completedChapters }: { completedChapters: string
     <section className="mb-6" aria-label="Weiterlernen">
       <Link
         to={data.link}
-        className={cn(
-          "block rounded-xl border bg-[var(--card)] shadow-sm hover:shadow-md transition-shadow",
-          "border-l-4"
-        )}
+        className="block card-glass shadow-sm hover:shadow-md transition-shadow border-l-4"
         style={{ borderLeftColor: data.accent }}
         onClick={() =>
           trackEvent("continue_learning_click", { kapitel: lastViewedKapitelId ?? "" })
@@ -726,8 +708,11 @@ function ContinueLearningCard({ completedChapters }: { completedChapters: string
             <p className="text-xs text-[var(--text-secondary)] truncate mt-0.5">{data.ukTitle}</p>
 
             <div className="mt-2.5 flex items-center gap-3">
-              <div className="flex-1 max-w-[200px]">
-                <Progress value={data.progressPct} className="h-1.5 rounded-full" />
+              <div
+                className="flex-1 max-w-[200px] progress-premium"
+                style={{ "--subject-accent": data.accent } as React.CSSProperties}
+              >
+                <div className="progress-fill" style={{ width: `${data.progressPct}%` }} />
               </div>
               <span className="text-xs text-[var(--muted)] whitespace-nowrap">
                 {data.doneUks}/{data.totalUks} UKs

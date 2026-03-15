@@ -27,6 +27,7 @@ import {
   X,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Logo } from "@/components/brand/Logo";
 import { useStore } from "@/store/useStore";
 import { useAuth } from "@/hooks/useAuth";
 import { useAdaptiveStore } from "@/store/adaptiveLearning";
@@ -343,9 +344,7 @@ export function Sidebar({ open, onClose }: { open: boolean; onClose: () => void 
     <>
       {/* Brand header */}
       <div className="px-4 py-4 flex items-center justify-between border-b border-[var(--border)] bg-[var(--sidebar-bg)]">
-        <h1 className="text-base font-bold text-[var(--foreground)] tracking-tight truncate leading-tight">
-          MedMaster
-        </h1>
+        <Logo variant="full" size={22} />
         <button
           type="button"
           onClick={onClose}

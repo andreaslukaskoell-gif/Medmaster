@@ -57,7 +57,7 @@ const FAQ_ITEMS: { q: string; a: string; category: string }[] = [
   {
     category: "KFF",
     q: "Kann man KFF trainieren?",
-    a: "Ja! KFF-Aufgaben sind trainierbar. MedMaster generiert algorithmisch unbegrenzt viele Übungsaufgaben für Zahlenfolgen, Wortflüssigkeit und Implikationen. Für Figuren und Merkfähigkeit gibt es ebenfalls umfangreiche Übungsmöglichkeiten.",
+    a: "Ja! KFF-Aufgaben sind trainierbar. MedMaster generiert algorithmisch 10.000+ Übungsaufgaben für Zahlenfolgen, Wortflüssigkeit und Implikationen. Für Figuren und Merkfähigkeit gibt es ebenfalls umfangreiche Übungsmöglichkeiten.",
   },
   // Vorbereitung
   {
@@ -99,7 +99,7 @@ const FAQ_ITEMS: { q: string; a: string; category: string }[] = [
   {
     category: "MedMaster",
     q: "Wie unterscheidet sich MedMaster von anderen MedAT-Kursen?",
-    a: "MedMaster bietet mehr Übungsfragen (4.300+) als die meisten kostenpflichtigen Anbieter. Dazu: KI-adaptives Lernen, algorithmisch generierte KFF-Aufgaben (unbegrenzt), Prüfungstag-Prognose und alle 4 MedAT-Testbereiche in einer App — für eine einmalige Zahlung statt monatlichem Abo.",
+    a: "MedMaster bietet mehr Übungsfragen (4.300+) als die meisten kostenpflichtigen Anbieter. Dazu: KI-adaptives Lernen, algorithmisch generierte KFF-Aufgaben (10.000+), Prüfungstag-Prognose und alle 4 MedAT-Testbereiche in einer App — für eine einmalige Zahlung statt monatlichem Abo.",
   },
 ];
 

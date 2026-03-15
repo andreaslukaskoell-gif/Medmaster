@@ -100,8 +100,7 @@ export default function BlogIndex() {
             Bereit für den MedAT? Jetzt gratis starten
           </h2>
           <p className="text-sm text-[var(--text-secondary)] mb-4 max-w-md mx-auto">
-            4.300+ BMS-Fragen, unbegrenzte KFF-Übungen, Prüfungssimulation — alles in einer
-            Plattform.
+            4.300+ BMS-Fragen, 10.000+ KFF-Übungen, Prüfungssimulation — alles in einer Plattform.
           </p>
           <Link
             to="/login"

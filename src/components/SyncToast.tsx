@@ -24,7 +24,7 @@ export function SyncToast() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
           transition={{ duration: 0.2 }}
-          className="fixed bottom-6 left-1/2 -translate-x-1/2 z-100 flex items-center gap-2 rounded-xl border border-[var(--border)] bg-[var(--card)] shadow-lg px-4 py-2.5 text-sm text-[var(--text-primary)]"
+          className="fixed bottom-6 left-1/2 -translate-x-1/2 z-100 flex items-center gap-2 rounded-xl border border-white/20 backdrop-blur-xl bg-white/80 dark:bg-[#1e1e1e]/80 shadow-lg px-4 py-2.5 text-sm text-[var(--text-primary)]"
           role="status"
           aria-live="polite"
         >

@@ -162,7 +162,7 @@ export default function SEK() {
     <div className="max-w-5xl mx-auto space-y-6">
       <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "SEK" }]} />
 
-      <div>
+      <div className="hero-orbs text-center">
         <h1 className="text-2xl font-bold" style={{ color: "var(--foreground)" }}>
           SEK — Sozial-emotionale Kompetenzen
         </h1>
@@ -181,8 +181,8 @@ export default function SEK() {
       </div>
 
       {/* Strategy Guide */}
-      <Card>
-        <CardContent className="p-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+      <Card className="card-glass">
+        <CardContent className="p-5 flex items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <div
               className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0"
@@ -199,23 +199,19 @@ export default function SEK() {
               </p>
             </div>
           </div>
-          <Button
-            variant="outline"
-            onClick={() => setView("strategy")}
-            className="w-full sm:w-auto"
-          >
+          <Button variant="outline" onClick={() => setView("strategy")} className="shrink-0">
             <BookOpen className="w-4 h-4 mr-2" /> Lesen
           </Button>
         </CardContent>
       </Card>
 
       {/* Subtest Cards */}
-      <div className="space-y-6">
+      <div className="space-y-6 stagger-children">
         {subtests.map((s) => (
           <div key={s.id} className="space-y-2">
-            <Card>
+            <Card className="card-glass">
               <CardContent className="p-6">
-                <div className="flex flex-col sm:flex-row sm:items-start gap-4">
+                <div className="flex items-start gap-4">
                   <div
                     className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0"
                     style={{
@@ -238,7 +234,8 @@ export default function SEK() {
                     </p>
                   </div>
                   <Button
-                    className="w-full sm:w-auto shrink-0"
+                    variant="premium"
+                    className="shrink-0"
                     onClick={s.onStart}
                     disabled={s.taskCount === 0}
                   >
@@ -248,7 +245,7 @@ export default function SEK() {
                 </div>
               </CardContent>
             </Card>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pl-2">
+            <div className="grid grid-cols-2 gap-2 pl-2">
               <UebungsbeschreibungCard id={s.uebungId} collapsible defaultCollapsed />
               <OfficialInstructionCard title={s.instructionTitle} instruction={s.instruction} />
             </div>

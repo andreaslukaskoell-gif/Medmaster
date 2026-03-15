@@ -437,12 +437,12 @@ export default function TV() {
     const allAnswered = allSetQuestions.every((q) => mcAnswers[q.id] !== undefined);
 
     return (
-      <div className="max-w-3xl lg:max-w-6xl mx-auto space-y-6">
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
+      <div className="max-w-6xl mx-auto space-y-6">
+        <div className="flex items-center justify-between gap-2">
           <Button variant="ghost" size="sm" onClick={() => setView("overview")}>
             <ArrowLeft className="w-4 h-4 mr-1" /> Abbrechen
           </Button>
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2">
+          <div className="flex items-center gap-2">
             <Badge variant="info">
               Text {textIndex + 1}/{currentSet.texts.length}
             </Badge>
@@ -477,9 +477,9 @@ export default function TV() {
         </div>
 
         {/* Split-pane: text (sticky on desktop) + questions side by side */}
-        <div className="lg:grid lg:grid-cols-2 lg:gap-6 space-y-4 lg:space-y-0">
+        <div className="grid grid-cols-2 gap-6">
           {/* Text content — sticky on desktop */}
-          <div className="lg:sticky lg:top-20 lg:self-start lg:max-h-[calc(100vh-6rem)] lg:overflow-y-auto lg:pr-2">
+          <div className="sticky top-20 self-start max-h-[calc(100vh-6rem)] overflow-y-auto pr-2">
             <Card>
               <CardHeader>
                 <CardTitle className="text-[var(--text-primary)] text-base">
@@ -524,21 +524,20 @@ export default function TV() {
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row justify-between gap-2">
+        <div className="flex justify-between gap-2">
           <Button
             variant="outline"
             onClick={() => setTextIndex((i) => i - 1)}
             disabled={textIndex === 0}
-            className="w-full sm:w-auto"
           >
             <ArrowLeft className="w-4 h-4 mr-1" /> Voriger
           </Button>
           {textIndex < currentSet.texts.length - 1 ? (
-            <Button onClick={() => setTextIndex((i) => i + 1)} className="w-full sm:w-auto">
+            <Button onClick={() => setTextIndex((i) => i + 1)}>
               Nächster <ArrowRight className="w-4 h-4 ml-1" />
             </Button>
           ) : (
-            <Button onClick={handleSubmitSet} disabled={!allAnswered} className="w-full sm:w-auto">
+            <Button variant="premium" onClick={handleSubmitSet} disabled={!allAnswered}>
               <Send className="w-4 h-4 mr-1" /> Auswertung
             </Button>
           )}
@@ -711,7 +710,7 @@ export default function TV() {
       <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "TV" }]} />
 
       {/* Header */}
-      <div>
+      <div className="hero-orbs text-center">
         <h1 className="text-2xl font-bold text-[var(--foreground)]">TV — Textverständnis</h1>
         <p className="text-[var(--muted)] mt-1">
           5 Texte lesen, Fragen beantworten — wie im echten MedAT.
@@ -724,8 +723,8 @@ export default function TV() {
       </div>
 
       {/* Strategy Guide */}
-      <Card className="border-[var(--border)]">
-        <CardContent className="p-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+      <Card className="card-glass">
+        <CardContent className="p-5 flex items-center justify-between gap-4">
           <div className="flex items-start gap-3">
             <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center shrink-0">
               <BookOpen className="w-5 h-5 text-blue-600 dark:text-blue-400" />
@@ -737,11 +736,7 @@ export default function TV() {
               </p>
             </div>
           </div>
-          <Button
-            variant="outline"
-            onClick={() => setView("strategy")}
-            className="w-full sm:w-auto shrink-0"
-          >
+          <Button variant="outline" onClick={() => setView("strategy")} className="shrink-0">
             <BookOpen className="w-4 h-4 mr-2" /> Lesen
           </Button>
         </CardContent>
@@ -756,14 +751,11 @@ export default function TV() {
               Multiple-Choice Sets mit je 5 Texten — wie im echten MedAT
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-4 stagger-children">
             {allTextSets.map((set, i) => {
               const totalQ = set.texts.reduce((sum, t) => sum + t.questions.length, 0);
               return (
-                <Card
-                  key={set.id}
-                  className="border-[var(--border)] hover:shadow-md transition-shadow"
-                >
+                <Card key={set.id} className="card-glass">
                   <CardContent className="p-5">
                     <div className="flex items-start gap-3 mb-3">
                       <div className="w-10 h-10 bg-[var(--card)] border border-[var(--border)] rounded-xl flex items-center justify-center shrink-0">
@@ -785,7 +777,12 @@ export default function TV() {
                         </p>
                       </div>
                     </div>
-                    <Button size="sm" className="w-full" onClick={() => handleStartSet(i)}>
+                    <Button
+                      variant="premium"
+                      size="sm"
+                      className="w-full"
+                      onClick={() => handleStartSet(i)}
+                    >
                       <Play className="w-4 h-4 mr-1" /> Starten
                     </Button>
                   </CardContent>
@@ -814,9 +811,9 @@ export default function TV() {
           title="Offizielle Instruktion: Textverständnis"
           instruction={OFFICIAL_TV_INSTRUCTION}
         />
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 gap-4 stagger-children">
           {tvOffiziellTexte.map((t, i) => (
-            <Card key={t.id} className="border-[var(--border)] hover:shadow-md transition-shadow">
+            <Card key={t.id} className="card-glass">
               <CardContent className="p-5">
                 <div className="flex items-start gap-3 mb-3">
                   <div className="w-10 h-10 bg-purple-100 dark:bg-purple-900/30 rounded-xl flex items-center justify-center shrink-0">
@@ -838,7 +835,12 @@ export default function TV() {
                     </p>
                   </div>
                 </div>
-                <Button size="sm" className="w-full" onClick={() => handleStartAussagen(i)}>
+                <Button
+                  variant="premium"
+                  size="sm"
+                  className="w-full"
+                  onClick={() => handleStartAussagen(i)}
+                >
                   <Play className="w-4 h-4 mr-1" /> Starten
                 </Button>
               </CardContent>
@@ -857,8 +859,8 @@ export default function TV() {
         </div>
         <div className="space-y-3">
           {displayedLegacyTexts.map((t, i) => (
-            <Card key={t.id} className="border-[var(--border)] hover:shadow-md transition-shadow">
-              <CardContent className="p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+            <Card key={t.id} className="card-glass">
+              <CardContent className="p-4 flex items-center justify-between gap-3">
                 <div className="flex items-center gap-3 flex-1 min-w-0">
                   <div className="w-8 h-8 bg-[var(--card)] border border-[var(--border)] rounded-lg flex items-center justify-center shrink-0">
                     <span className="text-xs font-semibold text-[var(--muted)]">{i + 1}</span>
@@ -873,9 +875,10 @@ export default function TV() {
                   </div>
                 </div>
                 <Button
+                  variant="premium"
                   size="sm"
                   onClick={() => handleStartLegacy(i)}
-                  className="w-full sm:w-auto shrink-0"
+                  className="shrink-0"
                 >
                   <Play className="w-4 h-4 mr-1" /> Starten
                 </Button>

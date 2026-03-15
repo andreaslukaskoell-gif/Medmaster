@@ -191,24 +191,18 @@ function SelectionScreen({
   };
 
   return (
-    <div className="max-w-4xl mx-auto space-y-5">
-      <div className="flex items-center gap-3">
-        <div className="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center">
-          <Dumbbell className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
-        </div>
-        <div>
-          <h1 className="text-xl font-bold text-[var(--text-primary)]">Fragen-Trainer</h1>
-          <p className="text-sm text-muted-foreground">
-            BMS: Fach wählen, dann trainieren oder offizielle Zeitvorgabe
-          </p>
-        </div>
+    <div className="max-w-5xl mx-auto space-y-5">
+      <div className="hero-orbs text-center py-6">
+        <h1 className="text-2xl font-bold text-[var(--text-primary)]">Fragen-Trainer</h1>
+        <p className="text-sm text-muted-foreground mt-1">
+          BMS: Fach wählen, dann trainieren oder offizielle Zeitvorgabe
+        </p>
       </div>
 
       {/* 1. Fach */}
-      <Card>
-        <CardContent className="p-4 space-y-3">
-          <p className="text-sm font-semibold text-[var(--text-secondary)]">1. Fach wählen</p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
+      <div className="card-glass rounded-2xl p-4 space-y-3">
+        <p className="text-sm font-semibold text-[var(--text-secondary)]">1. Fach wählen</p>
+          <div className="grid grid-cols-4 gap-2 stagger-children">
             {BMS_SUBJECTS.map((s) => {
               const Icon = s.icon;
               const selected = subjectId === s.id;

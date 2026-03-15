@@ -32,7 +32,7 @@ export function BMSSubjectSelector({
   onSelectSubject,
 }: BMSSubjectSelectorProps) {
   return (
-    <div className="max-w-5xl mx-auto space-y-10 py-4">
+    <div className="max-w-5xl mx-auto space-y-14 py-4">
       {filterParam === "due" && (
         <div className="card-glass flex items-center gap-2 px-5 py-3 text-sm text-[var(--warning)]">
           <Clock className="w-4 h-4 shrink-0" />
@@ -41,11 +41,11 @@ export function BMSSubjectSelector({
       )}
 
       {/* Hero header */}
-      <div className="text-center max-w-2xl mx-auto">
-        <h1 className="text-4xl font-bold text-[var(--foreground)] tracking-tight">
+      <div className="text-center max-w-2xl mx-auto hero-orbs">
+        <h1 className="text-5xl font-bold text-[var(--foreground)] tracking-tight">
           Biomedizinische Grundlagen
         </h1>
-        <p className="text-lg text-[var(--text-secondary)] mt-3">
+        <p className="text-xl text-[var(--text-secondary)] mt-3">
           {totalUK} Unterkapitel · 4 Fachgebiete
         </p>
         {totalUK > 0 && (
@@ -68,7 +68,7 @@ export function BMSSubjectSelector({
         )}
       </div>
 
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid grid-cols-2 gap-8 stagger-children">
         {subjects.map((subject) => (
           <SubjectCard
             key={subject.id}
@@ -157,17 +157,17 @@ function SubjectCard({
       {/* Icon + Title row */}
       <div className="flex items-start gap-5 mb-5">
         <div
-          className="w-14 h-14 rounded-2xl flex items-center justify-center shrink-0 shadow-sm"
+          className="w-16 h-16 rounded-2xl flex items-center justify-center shrink-0 shadow-sm"
           style={{
             background: `linear-gradient(135deg, ${accentColor}20, ${accentColor}08)`,
             color: accentColor,
           }}
         >
-          <subject.icon className="w-7 h-7" />
+          <subject.icon className="w-8 h-8" />
         </div>
         <div className="flex-1 min-w-0">
           <div className="flex items-center justify-between gap-2">
-            <h2 className="text-xl font-semibold text-[var(--foreground)]">{subject.label}</h2>
+            <h2 className="text-2xl font-semibold text-[var(--foreground)]">{subject.label}</h2>
             <span
               className="text-xs font-semibold px-3 py-1.5 rounded-lg opacity-70 group-hover:opacity-100 transition-all duration-200 shrink-0 group-hover:shadow-sm"
               style={{

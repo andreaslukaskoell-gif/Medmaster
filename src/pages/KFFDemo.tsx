@@ -69,7 +69,7 @@ const FAQ = [
   },
   {
     q: "Kann man KFF trainieren?",
-    a: "Ja! KFF-Aufgaben sind trainierbar. Je mehr du übst, desto schneller erkennst du Muster bei Zahlenfolgen, wirst sicherer bei logischen Schlüssen und verbesserst dein räumliches Denken. MedMaster generiert algorithmisch unbegrenzt viele Aufgaben.",
+    a: "Ja! KFF-Aufgaben sind trainierbar. Je mehr du übst, desto schneller erkennst du Muster bei Zahlenfolgen, wirst sicherer bei logischen Schlüssen und verbesserst dein räumliches Denken. MedMaster generiert algorithmisch 10.000+ verschiedene Aufgaben.",
   },
   {
     q: "Wie viel Zeit hat man für KFF im MedAT?",
@@ -77,7 +77,7 @@ const FAQ = [
   },
   {
     q: "Wie werden KFF-Aufgaben auf MedMaster generiert?",
-    a: "MedMaster nutzt algorithmische Generatoren mit Validierung: Jede Aufgabe wird automatisch auf Eindeutigkeit und Lösbarkeit geprüft. Das heißt: unbegrenzt viele Aufgaben, nie Wiederholungen, immer exakt eine richtige Lösung.",
+    a: "MedMaster nutzt algorithmische Generatoren mit Validierung: Jede Aufgabe wird automatisch auf Eindeutigkeit und Lösbarkeit geprüft. Das heißt: 10.000+ verschiedene Aufgaben, nie Wiederholungen, immer exakt eine richtige Lösung.",
   },
 ];
 
@@ -340,7 +340,7 @@ export default function KFFDemo() {
   usePageMeta({
     title: "MedAT KFF Training kostenlos",
     description:
-      "KFF-Aufgaben kostenlos üben: Zahlenfolgen, Implikationen, Wortflüssigkeit, Figuren, Gedächtnis. Unbegrenzte algorithmische Aufgaben — ohne Anmeldung.",
+      "KFF-Aufgaben kostenlos üben: Zahlenfolgen, Implikationen, Wortflüssigkeit, Figuren, Gedächtnis. 10.000+ algorithmische Aufgaben — ohne Anmeldung.",
     canonical: "https://medmaster.at/medat-kff-ueben",
     ogImage: "https://medmaster.at/og-image.png",
   });
@@ -388,7 +388,7 @@ export default function KFFDemo() {
             Zahlenfolgen, Implikationen und Wortflüssigkeit: teste dein KFF-Level ohne Anmeldung.
           </p>
           <p className="text-sm text-[var(--muted)]">
-            Jeden Tag neue Aufgaben. Unbegrenzt viele auf MedMaster verfügbar.
+            Jeden Tag neue Aufgaben. 10.000+ auf MedMaster verfügbar.
           </p>
         </div>
       </header>
@@ -458,10 +458,10 @@ export default function KFFDemo() {
         <section className="text-center py-8">
           <div className="bg-[var(--surface)] rounded-2xl border border-[var(--border)] p-8 sm:p-12">
             <h2 className="text-2xl font-bold text-[var(--text-primary)] mb-3">
-              Unbegrenzt KFF üben — kostenlos
+              10.000+ KFF-Aufgaben — kostenlos
             </h2>
             <p className="text-sm text-[var(--muted)] max-w-md mx-auto mb-6">
-              MedMaster generiert algorithmisch unbegrenzt Aufgaben für alle 5 KFF-Untertests. Kein
+              MedMaster generiert algorithmisch 10.000+ Aufgaben für alle 5 KFF-Untertests. Kein
               Auswendiglernen, keine Wiederholungen.
             </p>
             <Link

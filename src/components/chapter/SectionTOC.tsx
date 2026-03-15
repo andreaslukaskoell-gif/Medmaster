@@ -25,7 +25,7 @@ export function SectionTOC({
   return (
     <nav
       className={cn(
-        "sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto",
+        "sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto card-glass p-4",
         isLeft ? "w-[220px] min-w-0 shrink-0" : "",
         className
       )}

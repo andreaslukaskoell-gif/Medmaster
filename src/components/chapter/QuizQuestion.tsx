@@ -117,7 +117,7 @@ export const QuizQuestion = React.memo(function QuizQuestion({
                         ? "bg-red-50 dark:bg-red-900/20 border-red-400 dark:border-red-600 text-[var(--text-primary)]"
                         : isAnswered
                           ? "border-[var(--border)]/50 text-[var(--muted)] cursor-not-allowed"
-                          : "border-[var(--border)]/60 hover:border-[var(--accent)]/40 hover:bg-[var(--accent)]/[0.03] text-[var(--text-primary)] cursor-pointer shadow-[0_1px_2px_rgba(0,0,0,0.03)]"
+                          : "border-[var(--border)]/60 backdrop-blur-sm bg-white/50 dark:bg-white/5 hover:bg-white/80 dark:hover:bg-white/10 hover:border-[var(--accent)]/40 text-[var(--text-primary)] cursor-pointer shadow-sm"
                   }`}
               >
                 <span className="font-bold mr-3 text-sm shrink-0">

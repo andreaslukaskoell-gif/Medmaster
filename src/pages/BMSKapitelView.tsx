@@ -163,14 +163,14 @@ export default function BMSKapitelView({
   };
 
   return (
-    <div className="max-w-3xl mx-auto space-y-10 py-4">
+    <div className="max-w-3xl mx-auto space-y-12 py-4">
       <Button variant="ghost" size="sm" onClick={onBack} className="text-[var(--muted)]">
         <ChevronLeft className="w-4 h-4 mr-1" />
         {subjectLabels[kapitel.subject]}
       </Button>
 
       {/* Chapter header — centered premium */}
-      <div className="text-center">
+      <div className="text-center hero-orbs">
         <div className="flex items-center justify-center gap-3 mb-4">
           <span
             className="text-[11px] font-bold uppercase tracking-[0.15em] px-3 py-1 rounded-md"
@@ -188,7 +188,7 @@ export default function BMSKapitelView({
             </span>
           )}
         </div>
-        <h1 className="text-3xl font-bold text-[var(--text-primary)] tracking-tight mb-3">
+        <h1 className="text-4xl font-bold text-[var(--text-primary)] tracking-tight mb-3">
           {kapitel.title}
         </h1>
         <div className="flex items-center justify-center gap-5 text-sm text-[var(--muted)]">
@@ -226,7 +226,12 @@ export default function BMSKapitelView({
 
       {/* Start / Continue button */}
       {!isKapitelDone && firstIncomplete >= 0 && (
-        <Button onClick={() => saveScrollAndOpen(firstIncomplete)} className="gap-2" size="lg">
+        <Button
+          onClick={() => saveScrollAndOpen(firstIncomplete)}
+          className="gap-2"
+          variant="premium"
+          size="lg"
+        >
           <Play className="w-4 h-4" />
           {completedUK === 0
             ? "Kapitel starten"

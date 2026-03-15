@@ -203,6 +203,8 @@ Sekretionsmechanismen exokriner Drüsen:
     {
       id: "bio-2-02",
       title: "Binde- und Stützgewebe — Kollagen, Knochen und Knorpel",
+      imageUrl: "/images/bms/bio-bindegewebe-typen.jpg",
+      imageCaption: "Abb.: Bindegewebetypen im Überblick (OpenStax/Wikimedia Commons, CC BY 3.0)",
       stichworte: [
         "Knochen",
         "Knorpel",
@@ -895,6 +897,8 @@ Im Querschnitt zeigt das Rückenmark eine charakteristische Schmetterlingsform:
 
 > **Merke:** Vorderhorn = motorisch, Hinterhorn = sensorisch, Seitenhorn = vegetativ (nur T1–L2).
 
+{{IMAGE}}
+
 ---
 
 ## Autonomes Nervensystem — Sympathikus vs. Parasympathikus
@@ -1497,6 +1501,8 @@ Die **Langerhans-Inseln** (1–2 % des Pankreasgewebes, ~1 Million Inseln) entha
 
 > **Merke:** Insulin (β-Zellen, postprandial): GLUT4 ↑ (Muskel/Fett), Glykogensynthese ↑, Lipolyse ↓ → Blutzucker ↓. Glukagon (α-Zellen, Fasten): Glykogenolyse ↑, Glukoneogenese ↑ → Blutzucker ↑. Insulinsekretion ist ATP- und Ca²⁺-abhängig (K_ATP-Kanal-Mechanismus). Typ 1 = absoluter Mangel (autoimmun), Typ 2 = relativer Mangel + Resistenz.
 
+{{IMAGE}}
+
 ---
 
 ## Kalziumregulation: PTH, Calcitonin und Vitamin D
@@ -1670,6 +1676,8 @@ Dieses Schema ist auf **jede Hormonachse** übertragbar: CRH-ACTH-Cortisol, GnRH
       content: `## Das Herz — Aufbau, Erregung und Kreislauf
 
 Ein 70-jähriger Patient kollabiert beim Einkaufen. Das EKG zeigt eine ST-Hebung in den Ableitungen II, III und aVF — ein akuter Hinterwandinfarkt. Innerhalb von 60 Minuten muss die verschlossene rechte Koronararterie mittels PCI (perkutane Koronarintervention) eröffnet werden, sonst stirbt Herzmuskelgewebe unwiederbringlich ab. Um solche Notfälle zu verstehen, brauchen wir ein solides Fundament: den Aufbau des Herzens, seine elektrische Erregung und die Kreislaufphysiologie.
+
+{{IMAGE}}
 
 ---
 
@@ -2322,6 +2330,8 @@ Die Immunabwehr gliedert sich in zwei eng verzahnte Systeme: die **angeborene (u
 | Humorale Faktoren | Komplement, Interferone, Lysozym | Antikörper (Ig) |
 
 > **Merke:** Angeboren = schnell, unspezifisch, kein Gedächtnis. Erworben = langsam (klonale Expansion braucht Tage), hochspezifisch, Gedächtnisbildung. Beide Systeme arbeiten zusammen — dendritische Zellen sind die Brücke.
+
+{{IMAGE}}
 
 ---
 
@@ -3205,6 +3215,8 @@ Die **Leber** (größte Drüse, ~1,5 kg) hat eine einzigartige doppelte Blutvers
       ],
       content: `Die Niere ist weit mehr als ein Ausscheidungsorgan — sie reguliert Wasserhaushalt, Elektrolyte, Säure-Basen-Gleichgewicht und Blutdruck. Wer Nierenphysiologie versteht, versteht auch, warum Diuretika wirken, warum Diabetiker Proteinurie entwickeln und warum ACE-Hemmer Husten verursachen.
 
+{{IMAGE}}
+
 ## Das Nephron — funktionelle Einheit der Niere
 
 {{DIAGRAM:nephron}}
@@ -3701,6 +3713,8 @@ Die Wirbelsäule ist keine gerade Säule, sondern zeigt im Sagittalprofil **vier
     {
       id: "bio-3-12",
       title: "Fortpflanzungssystem",
+      imageUrl: "/images/bms/bio-fortpflanzungssystem.svg",
+      imageCaption: "Abb.: Weibliches Fortpflanzungssystem (Wikimedia Commons, Public Domain)",
       stichworte: [
         "Spermatogenese",
         "Oogenese",

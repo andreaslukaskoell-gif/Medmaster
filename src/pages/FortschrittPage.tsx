@@ -6,10 +6,6 @@ import { alleKapitel } from "@/data/bmsKapitel";
 import { getLevelFromXP, getLevelProgressPercent } from "@/lib/progression";
 import { StreakFlameIcon } from "@/components/dashboard/StreakFire";
 import { Progress } from "@/components/ui/progress";
-import { cn } from "@/lib/utils";
-
-const cardClass =
-  "rounded-xl border border-[var(--border)] bg-[var(--card)] shadow-sm hover:shadow-md transition-all duration-200 p-5 flex items-center gap-4";
 
 export default function FortschrittPage() {
   usePageTitle("Fortschritt");
@@ -36,53 +32,59 @@ export default function FortschrittPage() {
 
   return (
     <div className="min-h-screen bg-[var(--dashboard-bg)]">
-      <div className="max-w-6xl mx-auto px-4 py-6 sm:py-8 pb-24 lg:pb-12">
-        <h1 className="text-2xl font-bold text-[var(--text-primary)] mb-2">Fortschritt</h1>
-        <p className="text-[var(--muted)] mb-6">
-          Überblick, Schwachstellen, Statistik und Prognose – alles an einem Ort.
-        </p>
+      <div className="max-w-5xl mx-auto px-4 py-8 pb-12">
+        {/* Hero title with orbs */}
+        <div className="hero-orbs text-center mb-10">
+          <h1 className="text-3xl font-bold text-[var(--text-primary)] mb-2">Fortschritt</h1>
+          <p className="text-[var(--muted)]">
+            Überblick, Schwachstellen, Statistik und Prognose – alles an einem Ort.
+          </p>
+        </div>
 
-        {/* Kurz-Überblick */}
-        <div
-          className={cn(
-            cardClass,
-            "mb-6 border-l-4 border-l-[var(--accent)] grid grid-cols-2 sm:grid-cols-4 gap-4"
-          )}
-        >
-          <div>
-            <p className="text-xs text-[var(--muted)] uppercase tracking-wide">Level</p>
-            <p className="text-xl font-bold text-[var(--text-primary)]">{level}</p>
-          </div>
-          <div>
-            <p className="text-xs text-[var(--muted)] uppercase tracking-wide">XP</p>
-            <p className="text-xl font-bold text-[var(--text-primary)]">{xp.toLocaleString()}</p>
-          </div>
-          <div className="flex items-center gap-2">
-            <StreakFlameIcon
-              streak={streak}
-              hasActivityToday={hasActivityToday}
-              size="sm"
-              className="w-5 h-5 text-[var(--accent)]"
-            />
+        {/* Quick overview — glass card */}
+        <div className="card-glass mb-6 p-5">
+          <div className="grid grid-cols-4 gap-4 items-center">
             <div>
-              <p className="text-xs text-[var(--muted)] uppercase tracking-wide">Streak</p>
-              <p className="text-xl font-bold text-[var(--text-primary)]">{streak} Tage</p>
+              <p className="text-xs text-[var(--muted)] uppercase tracking-wide">Level</p>
+              <p className="text-xl font-bold text-[var(--text-primary)]">{level}</p>
+            </div>
+            <div>
+              <p className="text-xs text-[var(--muted)] uppercase tracking-wide">XP</p>
+              <p className="text-xl font-bold text-[var(--text-primary)]">{xp.toLocaleString()}</p>
+            </div>
+            <div className="flex items-center gap-2">
+              <StreakFlameIcon
+                streak={streak}
+                hasActivityToday={hasActivityToday}
+                size="sm"
+                className="w-5 h-5 text-[var(--accent)]"
+              />
+              <div>
+                <p className="text-xs text-[var(--muted)] uppercase tracking-wide">Streak</p>
+                <p className="text-xl font-bold text-[var(--text-primary)]">{streak} Tage</p>
+              </div>
+            </div>
+            <div>
+              <p className="text-xs text-[var(--muted)] uppercase tracking-wide">BMS</p>
+              <p className="text-xl font-bold text-[var(--text-primary)]">{bmsProgressPct} %</p>
             </div>
           </div>
-          <div>
-            <p className="text-xs text-[var(--muted)] uppercase tracking-wide">BMS</p>
-            <p className="text-xl font-bold text-[var(--text-primary)]">{bmsProgressPct} %</p>
-          </div>
-        </div>
-        <div className="mb-2">
-          <Progress value={levelProgress} className="h-2 rounded-full max-w-xs" />
-          <p className="text-xs text-[var(--muted)] mt-1">Fortschritt im aktuellen Level</p>
         </div>
 
-        {/* Tab-ähnliche Sektionen: Links zu den bestehenden Seiten */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {/* Level progress bar */}
+        <div className="mb-8">
+          <Progress
+            value={levelProgress}
+            className="h-2.5 rounded-full max-w-xs bg-[var(--border)]/40"
+            barClassName="bg-linear-to-r from-[var(--accent)] to-[var(--accent-bio,#329556)] shadow-[0_0_8px_var(--accent)]"
+          />
+          <p className="text-xs text-[var(--muted)] mt-1.5">Fortschritt im aktuellen Level</p>
+        </div>
+
+        {/* Navigation cards */}
+        <div className="grid grid-cols-4 gap-4">
           <Link to="/schwachstellen">
-            <div className={cn(cardClass, "border-l-4 border-l-[var(--accent)] cursor-pointer")}>
+            <div className="card-glass p-5 flex items-center gap-4 cursor-pointer hover:shadow-md transition-shadow duration-200">
               <div className="w-12 h-12 rounded-xl bg-[var(--accent)]/15 flex items-center justify-center shrink-0">
                 <Target className="w-6 h-6 text-[var(--accent)]" />
               </div>
@@ -94,7 +96,7 @@ export default function FortschrittPage() {
             </div>
           </Link>
           <Link to="/statistik">
-            <div className={cn(cardClass, "cursor-pointer")}>
+            <div className="card-glass p-5 flex items-center gap-4 cursor-pointer hover:shadow-md transition-shadow duration-200">
               <div className="w-12 h-12 rounded-xl bg-[var(--foreground)]/10 flex items-center justify-center shrink-0">
                 <BarChart3 className="w-6 h-6 text-[var(--muted)]" />
               </div>
@@ -106,7 +108,7 @@ export default function FortschrittPage() {
             </div>
           </Link>
           <Link to="/prognose">
-            <div className={cn(cardClass, "cursor-pointer")}>
+            <div className="card-glass p-5 flex items-center gap-4 cursor-pointer hover:shadow-md transition-shadow duration-200">
               <div className="w-12 h-12 rounded-xl bg-[var(--foreground)]/10 flex items-center justify-center shrink-0">
                 <TrendingUp className="w-6 h-6 text-[var(--muted)]" />
               </div>
@@ -118,7 +120,7 @@ export default function FortschrittPage() {
             </div>
           </Link>
           <Link to="/performance">
-            <div className={cn(cardClass, "cursor-pointer")}>
+            <div className="card-glass p-5 flex items-center gap-4 cursor-pointer hover:shadow-md transition-shadow duration-200">
               <div className="w-12 h-12 rounded-xl bg-[var(--accent)]/15 flex items-center justify-center shrink-0">
                 <Award className="w-6 h-6 text-[var(--accent)]" />
               </div>

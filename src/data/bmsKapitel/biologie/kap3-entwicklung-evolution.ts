@@ -10,6 +10,9 @@ export const bioKapEntwicklung: Kapitel = {
     {
       id: "bio-9-01",
       title: "Entstehung des Lebens und Endosymbiontentheorie",
+      imageUrl: "/images/bms/bio-endosymbiose.svg",
+      imageCaption:
+        "Abb.: Endosymbiontentheorie — Entstehung von Mitochondrien und Chloroplasten (Wikimedia Commons, CC BY-SA 4.0)",
       stichworte: [
         "Chemische Evolution",
         "Miller-Experiment",
@@ -183,6 +186,9 @@ Die 70S-Ribosomen der Mitochondrien erklären die mitochondriale Toxizität manc
     {
       id: "bio-9-04",
       title: "Evolutionstheorie — Darwin, Selektion und Synthetische Theorie",
+      imageUrl: "/images/bms/bio-selektionstypen.svg",
+      imageCaption:
+        "Abb.: Stabilisierende, gerichtete und disruptive Selektion im Vergleich (Wikimedia Commons, CC BY-SA 4.0)",
       stichworte: [
         "Darwin",
         "Lamarck",
@@ -226,8 +232,6 @@ Darwin kannte Mendels Arbeit nicht (obwohl sie 1866 veröffentlicht wurde). Die 
 ---
 
 ## Die drei Selektionsarten
-
-{{DIAGRAM:dna-helix}}
 
 Natürliche Selektion kann auf Merkmale einer Population auf drei verschiedene Weisen wirken:
 
@@ -372,6 +376,9 @@ Gerichtete Selektion ist in der Medizin hoch relevant: Antibiotika-Einsatz selek
     {
       id: "bio-9-06",
       title: "Evolutionsfaktoren — Mutation, Drift und Hardy-Weinberg",
+      imageUrl: "/images/bms/bio-hardy-weinberg.svg",
+      imageCaption:
+        "Abb.: Hardy-Weinberg-Gleichgewicht — Genotypfrequenzen (Wikimedia Commons, CC BY-SA 3.0)",
       stichworte: [
         "Mutation",
         "Selektion",
@@ -1073,6 +1080,8 @@ Auch die HIV-Forensik nutzt Phylogenetik: In Gerichtsprozessen wurde anhand vira
     {
       id: "bio-9-07",
       title: "Entwicklung des Menschen — Hominiden",
+      imageUrl: "/images/bms/bio-hominiden-evolution.svg",
+      imageCaption: "Abb.: Stammbaum der Hominiden-Evolution (Wikimedia Commons, CC BY-SA 4.0)",
       stichworte: [
         "Hominiden",
         "Australopithecus",
@@ -1083,8 +1092,6 @@ Auch die HIV-Forensik nutzt Phylogenetik: In Gerichtsprozessen wurde anhand vira
         "Aufrechter Gang",
       ],
       content: `98,7 % DNA-Übereinstimmung mit Schimpansen — und doch trennen uns aufrechter Gang, Sprache und ein dreifach größeres Gehirn. Die Geschichte der Hominiden ist kein linearer Aufstieg, sondern ein verzweigter Stammbaum mit Sackgassen, Koexistenzen und überraschenden Hybridisierungen.
-
-{{DIAGRAM:dna-helix}}
 
 ---
 
@@ -1479,6 +1486,9 @@ Die reife **Eizelle** (n) nach Abschluss der Meiose II und die **Spermien** (n) 
     {
       id: "bio-4-01e",
       title: "Befruchtung",
+      imageUrl: "/images/bms/bio-befruchtung.png",
+      imageCaption:
+        "Abb.: Befruchtung — Verschmelzung von Spermium und Eizelle zur Zygote (Wikimedia Commons, CC0)",
       stichworte: [
         "Befruchtung",
         "Ampulle",
@@ -1713,6 +1723,9 @@ Die **Implantation** (Einnistung) ist das Einbetten der Blastozyste in die **Geb
     {
       id: "bio-9-10",
       title: "Gastrulation und die drei Keimblätter",
+      imageUrl: "/images/bms/bio-gastrulation.png",
+      imageCaption:
+        "Abb.: Gastrulation — Bildung der drei Keimblätter (Wikimedia Commons, Public Domain)",
       stichworte: [
         "Gastrulation",
         "Ektoderm",
@@ -1884,6 +1897,9 @@ Aus welchem Keimblatt welches Organ entsteht, ist prüfungsrelevant. Die folgend
     {
       id: "bio-4-02n",
       title: "Neurulation und Neuralleiste",
+      imageUrl: "/images/bms/bio-neurulation.svg",
+      imageCaption:
+        "Abb.: Neurulation — Neuralrohrbildung und Neuralleistenzellen (Wikimedia Commons, Public Domain)",
       stichworte: [
         "Neurulation",
         "Neuralrohr",
@@ -2045,6 +2061,9 @@ Wenn der **posteriore Neuroporus** nicht schließt, kann es zur **Spina bifida**
     {
       id: "bio-9-11",
       title: "Organogenese, Embryo vs. Fetus und kritische Phasen",
+      imageUrl: "/images/bms/bio-organogenese.jpg",
+      imageCaption:
+        "Abb.: Vergleichende Embryonalentwicklung bei Wirbeltieren (Wikimedia Commons, Public Domain)",
       stichworte: [
         "Embryonalperiode",
         "Organogenese",

@@ -102,6 +102,41 @@ Wenn wir mehr Übungsaufgaben (Zahlenfolgen, Implikationen, Wortflüssigkeit) ge
 - Skip Karteikarten-related tasks (user preference)
 - Don't add `npm run` prefix to format/lint in hooks (use direct binary)
 
+## Learning UX Design Principles
+
+MedMaster is a premium MedAT/BMS learning product. All learning area work must follow these principles:
+
+### Content Architecture
+- Content flows naturally — never hide learning content behind accordions or collapsibles
+- Sections separated by visual hierarchy (headings + spacing), not interactive toggles
+- Left sticky TOC for navigation on desktop, always visible
+- Each page has a clear reading path: header → content → quiz → navigation
+
+### Visual Hierarchy
+- Subject accent colors used consistently: badges, progress bars, current indicators, sticky header
+- Typography hierarchy: title (3xl) > section heading (xl) > body (base) with generous leading (1.8)
+- Callout boxes (Merke, Achtung, Tipp, Klinisch) use border-left-4 + subtle background + uppercase label
+- Section separators: border-b between major sections, mt-12 spacing between H2 sections
+
+### Navigation & Progress
+- Sticky reading header appears on scroll (subject dot + title + position)
+- Next/prev navigation shows preview of upcoming content title
+- Progress bars always visible with percentage labels
+- "Fortsetzen" buttons show the title of the next incomplete item
+- Numbered circles for items in lists, accent-colored for current position
+
+### Desktop-Only
+- No mobile layouts, no responsive breakpoints for small screens
+- Sidebar always visible at 240px width
+- No hamburger menu, no bottom tab bar, no mobile drawer
+- Optimize for desktop browser reading experience
+
+### Component Patterns
+- Learning tools (bookmark, notes, hinterfrag, quick review) exposed as inline icon buttons, not hidden in dropdowns
+- Subject badges use `color-mix(in srgb, accentColor 8%, transparent)` for background
+- "Weiter" badges mark current position in lists
+- Bordered card containers for list items (chapters, subchapters)
+
 ## Supabase
 
 - Project: medmaster (Austrian region)

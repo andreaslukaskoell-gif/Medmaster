@@ -755,8 +755,9 @@ Ein klinisch wichtiges Beispiel für Glykokalix-Strukturen sind die **ABO-Blutgr
     {
       id: "bio-1-04",
       title: "Membrantransport — passiv und aktiv",
-      imageUrl: "/images/bms/bio-diffusion.jpg",
-      imageCaption: "Abb.: Diffusion durch eine semipermeable Membran (OpenStax, CC BY 4.0)",
+      imageUrl: "/images/bms/bio-membrantransport.svg",
+      imageCaption:
+        "Abb.: Passiver und aktiver Membrantransport im Vergleich (Wikimedia Commons, CC BY-SA 4.0)",
       stichworte: [
         "Passiver Transport",
         "Einfache Diffusion",
@@ -1899,6 +1900,8 @@ Der Citratzyklus ist nicht nur katabol (abbauend), sondern auch **anabol** (aufb
 | **Gesamtnetto** | | | | **~30–32 ATP** |
 
 *(Ältere Lehrbücher: 36–38 ATP; neuere Berechnungen: 30–32 ATP durch realistischere P/O-Verhältnisse)*
+
+> **Prüfungstipp:** Im MedAT werden oft **36–38 ATP** als richtige Antwort gewertet (klassische Lehrbuchzahl). Wenn in einer Prüfungsfrage nur „ca. 36 ATP" oder „ca. 38 ATP" als Option steht (nicht 30–32), ist das die erwartete Antwort. Merke dir beide Werte — und wähle den, der als Option angeboten wird.
 
 ---
 

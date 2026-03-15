@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Mail, ArrowRight, Lock, Eye, EyeOff, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+
 import { useAuth } from "@/hooks/useAuth";
 import { useStore } from "@/store/useStore";
 import { usePageTitle } from "@/hooks/usePageTitle";
@@ -102,8 +102,8 @@ export default function AuthPage() {
   // Google redirect loading state
   if (googleLoading) {
     return (
-      <div className="min-h-screen bg-[var(--background)] flex items-center justify-center p-4">
-        <div className="text-center space-y-4">
+      <div className="hero-orbs min-h-screen bg-[var(--background)] flex items-center justify-center p-4">
+        <div className="card-glass rounded-2xl p-8 text-center space-y-4">
           <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-[var(--accent)] mx-auto" />
           <p className="text-sm font-medium text-[var(--text-secondary)]">
             Weiterleitung zu Google...
@@ -116,10 +116,10 @@ export default function AuthPage() {
   // Magic link sent confirmation
   if (otpSent) {
     return (
-      <div className="min-h-screen bg-[var(--background)] flex items-center justify-center p-4">
+      <div className="hero-orbs min-h-screen bg-[var(--background)] flex items-center justify-center p-4">
         <div className="w-full max-w-md space-y-6">
-          <Card>
-            <CardContent className="p-8 text-center space-y-4">
+          <div className="card-glass rounded-2xl">
+            <div className="p-8 text-center space-y-4">
               <CheckCircle className="w-12 h-12 text-emerald-500 mx-auto" />
               <h2 className="text-xl font-bold text-[var(--text-primary)]">Link gesendet!</h2>
               <p className="text-sm text-[var(--muted)] leading-relaxed">
@@ -140,25 +140,25 @@ export default function AuthPage() {
               >
                 Andere E-Mail verwenden
               </button>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-[var(--background)] flex items-center justify-center p-4">
+    <div className="hero-orbs min-h-screen bg-[var(--background)] flex items-center justify-center p-4">
       <div className="w-full max-w-md space-y-6">
         <div className="text-center">
-          <h1 className="text-3xl font-bold text-[var(--accent)]">MedMaster</h1>
+          <h1 className="font-serif text-3xl font-bold text-[var(--accent)]">MedMaster</h1>
           <p className="text-[var(--muted)] mt-2">
-            4.300+ BMS-Fragen · Unbegrenzte KFF-Übungen · Gratis bis 31. März
+            4.300+ BMS-Fragen · 10.000+ KFF-Übungen · Gratis bis 31. März
           </p>
         </div>
 
-        <Card>
-          <CardContent className="p-6 space-y-5">
+        <div className="card-glass rounded-2xl">
+          <div className="p-6 space-y-5">
             {blocked && (
               <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg p-3 text-sm text-amber-700 dark:text-amber-400">
                 Zu viele Versuche. Bitte warte {remainingCooldown} Sekunden.
@@ -172,7 +172,11 @@ export default function AuthPage() {
             )}
 
             {/* Google — primary CTA */}
-            <Button className="w-full py-6 text-base font-semibold" onClick={handleGoogle}>
+            <Button
+              variant="premium"
+              className="w-full py-6 text-base font-semibold"
+              onClick={handleGoogle}
+            >
               <svg className="w-5 h-5 mr-3" viewBox="0 0 24 24">
                 <path
                   fill="currentColor"
@@ -205,7 +209,7 @@ export default function AuthPage() {
                 <div className="w-full border-t border-[var(--border)]" />
               </div>
               <div className="relative flex justify-center text-xs">
-                <span className="bg-[var(--card)] px-2 text-[var(--muted)]">oder</span>
+                <span className="bg-[var(--background)] px-2 text-[var(--muted)]">oder</span>
               </div>
             </div>
 
@@ -347,8 +351,8 @@ export default function AuthPage() {
               </Link>
               .
             </p>
-          </CardContent>
-        </Card>
+          </div>
+        </div>
 
         <p className="text-center text-xs text-[var(--muted)]">
           <Link to="/impressum" className="hover:underline">

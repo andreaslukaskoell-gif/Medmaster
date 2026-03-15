@@ -128,7 +128,7 @@ const SECTIONS: { id: string; title: string; content: ContentBlock[] }[] = [
       },
       {
         bold: "3 Monate vorher:",
-        rest: " KFF-Training starten. Zahlenfolgen, Wortflüssigkeit und Implikationen täglich üben. MedMaster generiert unbegrenzt neue Aufgaben. SEK-Strategien lernen.",
+        rest: " KFF-Training starten. Zahlenfolgen, Wortflüssigkeit und Implikationen täglich üben. MedMaster generiert 10.000+ verschiedene Aufgaben. SEK-Strategien lernen.",
       },
       {
         bold: "1 Monat vorher:",

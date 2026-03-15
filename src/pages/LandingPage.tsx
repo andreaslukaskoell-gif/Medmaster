@@ -18,6 +18,7 @@ import { supabase } from "@/lib/supabase";
 import { useAuth } from "@/hooks/useAuth";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { trackClick, trackEvent } from "@/lib/analyticsTracker";
+import { Logo } from "@/components/brand/Logo";
 
 const NAVY = "#1b3ea7";
 
@@ -254,7 +255,7 @@ const contentDepth = [
       "Figuren zusammensetzen",
       "Gedächtnis & Merkfähigkeit",
     ],
-    extra: "Unbegrenzte Aufgaben — algorithmisch generiert, nie Wiederholungen",
+    extra: "10.000+ Aufgaben — algorithmisch generiert, nie Wiederholungen",
     demoLink: "/medat-kff-ueben",
   },
   {
@@ -281,7 +282,7 @@ const comparisonRows = [
   { feature: "BMS-Übungsfragen", medmaster: "4.300+", competitor: "500–2.000" },
   {
     feature: "KFF-Aufgaben",
-    medmaster: "Unbegrenzt (Generator)",
+    medmaster: "10.000+ (Generator)",
     competitor: "Fester Pool (50–200)",
   },
   { feature: "Alle 4 MedAT-Bereiche", medmaster: true, competitor: "Meist nur BMS" },
@@ -296,7 +297,7 @@ export default function LandingPage() {
   usePageMeta({
     title: "MedAT 2026 Vorbereitung — Bestehe sicher mit 4.300+ Fragen",
     description:
-      "MedAT 2026 Vorbereitung: 4.300+ BMS-Fragen, unbegrenzte KFF-Übungen, 10 TV-Textsets, 100 SEK-Aufgaben. Alle 4 MedAT-Bereiche in einer App. Einmalig €29,90.",
+      "MedAT 2026 Vorbereitung: 4.300+ BMS-Fragen, 10.000+ KFF-Übungen, 10 TV-Textsets, 100 SEK-Aufgaben. Alle 4 MedAT-Bereiche in einer App. Einmalig €29,90.",
     canonical: "https://medmaster.at",
     ogImage: "https://medmaster.at/og-image.png",
   });
@@ -375,7 +376,7 @@ export default function LandingPage() {
   );
 
   return (
-    <div className="min-h-screen bg-[var(--surface)] dark:bg-[var(--background)]">
+    <div className="min-h-screen">
       {/* ─── Nav ─── */}
       <motion.nav
         initial={{ y: -20, opacity: 0 }}
@@ -383,33 +384,27 @@ export default function LandingPage() {
         transition={{ duration: 0.4, ease: "easeOut" }}
         className="sticky top-0 z-40 bg-[var(--surface)]/90 dark:bg-[var(--background)]/90 backdrop-blur-xl border-b border-[var(--border)] shadow-sm"
       >
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-          <span className="text-xl font-bold text-[var(--text-primary)] tracking-tight">
-            MedMaster
-          </span>
-          <div className="flex items-center gap-2 sm:gap-3">
+        <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+          <Logo variant="full" size={28} />
+          <div className="flex items-center gap-3">
             <Link
               to="/medat-kff-ueben"
-              className="text-sm font-medium text-[var(--muted)] hover:text-[var(--text-primary)] transition-colors px-3 py-2 rounded-xl hover:bg-[var(--card)] hidden sm:inline-flex"
+              className="text-sm font-medium text-[var(--muted)] hover:text-[var(--text-primary)] transition-colors px-3 py-2 rounded-xl hover:bg-[var(--card)]"
             >
               KFF Demo
             </Link>
             <Link
               to="/medat-uebungsfragen"
-              className="text-sm font-medium text-[var(--muted)] hover:text-[var(--text-primary)] transition-colors px-3 py-2 rounded-xl hover:bg-[var(--card)] hidden sm:inline-flex"
+              className="text-sm font-medium text-[var(--muted)] hover:text-[var(--text-primary)] transition-colors px-3 py-2 rounded-xl hover:bg-[var(--card)]"
             >
               BMS Demo
             </Link>
-            <Link
-              to="/login"
-              className="text-sm font-medium text-[var(--muted)] hover:text-[var(--text-primary)] transition-colors px-3 py-2 rounded-xl hover:bg-[var(--card)]"
-            >
+            <Link to="/login" className="btn-glass text-sm font-medium px-3 py-2">
               Anmelden
             </Link>
             <Link
               to="/login"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-white px-5 py-2.5 rounded-xl shadow-[var(--shadow-sm)] transition-colors hover:opacity-90"
-              style={{ backgroundColor: NAVY }}
+              className="btn-premium inline-flex items-center gap-2 text-sm px-5 py-2.5"
             >
               Kostenlos testen
               <ArrowRight className="w-4 h-4" />
@@ -428,18 +423,17 @@ export default function LandingPage() {
       )}
 
       {/* ─── Hero ─── */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-linear-to-br from-[var(--accent)]/5 via-[var(--surface)] to-[var(--accent)]/5 dark:from-[var(--accent)]/5 dark:via-background dark:to-[var(--accent)]/5" />
-        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 pt-16 sm:pt-20 pb-16 sm:pb-20 text-center">
+      <section className="relative overflow-hidden hero-orbs">
+        <div className="relative max-w-6xl mx-auto px-6 pt-20 pb-20 text-center">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1, duration: 0.5 }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[var(--text-primary)] leading-tight mb-6 tracking-tight"
+            className="text-7xl font-extrabold text-[var(--text-primary)] leading-tight mb-6 tracking-tight"
           >
             Bestehe den MedAT 2026.
             <br />
-            4.300+ BMS-Fragen. Unbegrenzte KFF-Übungen.
+            4.300+ BMS-Fragen. 10.000+ KFF-Übungen.
             <br />
             <span className="text-[var(--accent)]">Eine Plattform. Kein Abo.</span>
           </motion.h1>
@@ -447,7 +441,7 @@ export default function LandingPage() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.25 }}
-            className="text-lg sm:text-xl text-[var(--text-secondary)] max-w-2xl mx-auto mb-4 leading-relaxed"
+            className="text-xl text-[var(--text-secondary)] max-w-2xl mx-auto mb-4 leading-relaxed"
           >
             Alle 4 MedAT-Bereiche in einer App — BMS, KFF, TV und SEK. Adaptiver Lernplan, der sich
             an deine Schwächen anpasst.
@@ -504,7 +498,7 @@ export default function LandingPage() {
               So sieht deine MedAT-Vorbereitung aus
             </h2>
             <p className="text-[var(--text-secondary)] max-w-xl mx-auto">
-              Echte Übungsfragen im Original-MedAT-Format, adaptiver Lernplan und unbegrenzte
+              Echte Übungsfragen im Original-MedAT-Format, adaptiver Lernplan und 10.000+
               KFF-Generatoren.
             </p>
           </div>
@@ -525,7 +519,7 @@ export default function LandingPage() {
                 alt="KFF-Übersicht mit Zahlenfolgen, Gedächtnis, Implikationen, Wortflüssigkeit und Figuren"
               />
               <p className="text-xs text-[var(--muted)] text-center mt-3">
-                5 KFF-Untertests mit unbegrenzten, algorithmisch generierten Aufgaben
+                5 KFF-Untertests mit 10.000+ algorithmisch generierten Aufgaben
               </p>
             </div>
             <div>
@@ -798,7 +792,7 @@ export default function LandingPage() {
               },
               {
                 q: "Reicht MedMaster als alleinige Vorbereitung?",
-                a: "MedMaster deckt alle 4 MedAT-Bereiche vollständig ab: 4.300+ BMS-Fragen, unbegrenzte KFF-Übungen, 10 TV-Textsets und 100 SEK-Aufgaben. Viele ergänzen mit einem Biologie-Lehrbuch für die Theorie — die Übungskomponente ist komplett.",
+                a: "MedMaster deckt alle 4 MedAT-Bereiche vollständig ab: 4.300+ BMS-Fragen, 10.000+ KFF-Übungen, 10 TV-Textsets und 100 SEK-Aufgaben. Viele ergänzen mit einem Biologie-Lehrbuch für die Theorie — die Übungskomponente ist komplett.",
               },
               {
                 q: "Brauche ich eine App?",
@@ -863,7 +857,7 @@ export default function LandingPage() {
               {[
                 "Voller Zugang zu allen 4 MedAT-Bereichen",
                 "4.300+ BMS-Fragen mit Erklärungen",
-                "Unbegrenzte KFF-Übungen",
+                "10.000+ KFF-Übungen",
                 "173 Lerneinheiten + Prüfungssimulation",
                 "Kein Abo — einmalige Zahlung, lebenslanger Zugang",
               ].map((feature) => (
@@ -908,7 +902,7 @@ export default function LandingPage() {
               { to: "/medat-chemie-fragen", label: "BMS Chemie", sub: "1.400+ Fragen" },
               { to: "/medat-physik-fragen", label: "BMS Physik", sub: "1.300+ Fragen" },
               { to: "/medat-mathematik-fragen", label: "BMS Mathematik", sub: "490+ Fragen" },
-              { to: "/medat-kff-ueben", label: "KFF Training", sub: "Unbegrenzt üben" },
+              { to: "/medat-kff-ueben", label: "KFF Training", sub: "10.000+ Aufgaben" },
               { to: "/challenge", label: "Quiz Challenge", sub: "Teile dein Ergebnis" },
             ].map((link) => (
               <Link
@@ -947,7 +941,7 @@ export default function LandingPage() {
       <footer className="py-8 bg-[var(--accent)] dark:bg-[var(--accent)]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
-            <GraduationCap className="w-5 h-5 text-white/70" />
+            <Logo variant="icon" size={24} />
             <span className="text-sm font-semibold text-white/80">MedMaster</span>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-6 text-xs text-white/60">

@@ -13,7 +13,7 @@ import { trackPricingView } from "@/lib/analytics";
 const features = [
   "4.300+ BMS-Fragen mit Erklärungen",
   "Alle 173 Lerneinheiten (Theorie)",
-  "Unbegrenzte KFF-Übungen (algorithmisch generiert)",
+  "10.000+ KFF-Übungen (algorithmisch generiert)",
   "10 TV-Textsets mit MC-Fragen",
   "100 SEK-Aufgaben",
   "Realistische Prüfungssimulation im MedAT-Format",

@@ -12,6 +12,8 @@ export const bioKapOekologie: Kapitel = {
     {
       id: "bio-10-01",
       title: "Ökologie: Grundbegriffe und Ebenen",
+      imageUrl: "/images/bms/bio-oekologische-pyramide.svg",
+      imageCaption: "Abb.: Ökologische Pyramide — Trophieebenen (Wikimedia Commons, CC BY-SA 4.0)",
       stichworte: [
         "Ökologie",
         "Biotop",
@@ -146,6 +148,9 @@ Die folgenden Begriffe werden im MedAT/BMS regelmäßig abgefragt — sichere Zu
     {
       id: "bio-10-02",
       title: "Umweltfaktoren: abiotisch, biotisch, Toleranzkurve",
+      imageUrl: "/images/bms/bio-oekologische-pyramide.svg",
+      imageCaption:
+        "Abb.: Ökologische Ebenen und abiotische Faktoren (Wikimedia Commons, CC BY-SA 4.0)",
       stichworte: [
         "Abiotische Faktoren",
         "Biotische Faktoren",
@@ -381,6 +386,9 @@ Klinische Parallele: Der **Mensch** ist dank **Thermoregulation** (Schwitzen, Va
     {
       id: "bio-10-03",
       title: "Ökologische Nische vs. Lebensraum",
+      imageUrl: "/images/bms/bio-oekologische-nische.svg",
+      imageCaption:
+        "Abb.: Konkurrenzausschluss bei Seepocken — Fundamentale vs. realisierte Nische (Wikimedia Commons, CC BY-SA 4.0)",
       stichworte: [
         "Ökologische Nische",
         "Lebensraum",
@@ -403,8 +411,6 @@ Jeder Krankheitserreger braucht bestimmte Bedingungen, um sich zu vermehren: den
 ---
 
 ## Fundamentale und realisierte Nische (Hutchinson, 1957)
-
-{{DIAGRAM:plant-vs-animal-cell}}
 
 G. Evelyn Hutchinson definierte die Nische als **n-dimensionalen Hyperraum**: Jede relevante Umweltvariable (Temperatur, Feuchtigkeit, pH, Nährstoffverfügbarkeit) bildet eine Achse; der Bereich, in dem eine Art überleben und sich fortpflanzen kann, spannt die **fundamentale Nische** auf. Das ist das theoretische Maximum — begrenzt nur durch die physiologischen Toleranzen des Organismus.
 
@@ -548,6 +554,9 @@ Bei Immunsuppression (z. B. HIV/AIDS mit CD4-T-Zell-Verlust, Chemotherapie-induz
     {
       id: "bio-10-04",
       title: "Konkurrenz & Symbiose",
+      imageUrl: "/images/bms/bio-symbiose-typen.svg",
+      imageCaption:
+        "Abb.: Symbioseformen — Mutualismus, Kommensalismus, Parasitismus (Wikimedia Commons, CC BY-SA 4.0)",
       stichworte: [
         "Konkurrenz",
         "intraspezifisch",
@@ -812,6 +821,9 @@ Die **Räuberpopulation hinkt der Beutepopulation zeitlich nach** (Höhepunkt de
     {
       id: "bio-10-05",
       title: "Ökosysteme — Nahrungsketten, Stoffkreisläufe & Energiefluss",
+      imageUrl: "/images/bms/bio-nahrungsnetz.svg",
+      imageCaption:
+        "Abb.: Nahrungsnetz mit Produzenten, Konsumenten und Destruenten (Wikimedia Commons, CC0)",
       stichworte: [
         "Nahrungskette",
         "Nahrungsnetz",
@@ -1092,6 +1104,9 @@ Bestimmte Schadstoffe werden **nicht abgebaut** und reichern sich entlang der Na
     {
       id: "bio-10-06",
       title: "Populationsdynamik",
+      imageUrl: "/images/bms/bio-populationswachstum.svg",
+      imageCaption:
+        "Abb.: Logistisches Populationswachstum mit Kapazitätsgrenze K (Wikimedia Commons, CC BY-SA 4.0)",
       stichworte: [
         "Populationswachstum",
         "exponentiell",
@@ -1269,8 +1284,6 @@ In den meisten Ökosystemen wirken beide Mechanismen gleichzeitig, wobei je nach
 ---
 
 ## Bakterielles Wachstum — Die vier Phasen
-
-{{DIAGRAM:plant-vs-animal-cell}}
 
 Bakterienwachstum in geschlossener Kultur (Blutkultur, Nährmedium) durchläuft vier Phasen, die alle bisherigen Konzepte vereinen:
 
@@ -1807,8 +1820,8 @@ Neben der V(D)J-Rekombination und der somatischen Hypermutation verfügt das Imm
     {
       id: "bio-11-03",
       title: "Blutgruppen-Vererbung — AB0-System und Kodominanz",
-      imageUrl: "/images/bms/bio-blutgerinnung.jpg",
-      imageCaption: "Abb.: Blutgerinnung und Plättchenaggregation (OpenStax, CC BY 4.0)",
+      imageUrl: "/images/bms/bio-blutgruppen.jpg",
+      imageCaption: "Abb.: AB0-Blutgruppen — Antigene und Antikörper (OpenStax, CC BY 4.0)",
       stichworte: ["AB0-Vererbung", "Genotypen", "Phänotypen", "Kodominanz", "Multiple Allele"],
       content: `## AB0-Blutgruppensystem — Genetische Grundlagen
 

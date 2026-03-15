@@ -29,9 +29,9 @@ export default function Einstellungen() {
   };
 
   return (
-    <div className="max-w-2xl mx-auto px-4 py-8 space-y-8">
+    <div className="max-w-3xl mx-auto px-4 py-8 space-y-8">
       <div>
-        <h1 className="text-2xl font-bold text-[var(--foreground)]">Einstellungen</h1>
+        <h1 className="font-serif text-2xl font-bold text-[var(--foreground)]">Einstellungen</h1>
         <p className="text-sm text-[var(--muted)] mt-1">Konto, Darstellung und mehr</p>
       </div>
 
@@ -40,7 +40,7 @@ export default function Einstellungen() {
         <h2 className="text-xs font-semibold uppercase tracking-widest text-[var(--muted)]">
           Konto
         </h2>
-        <div className="rounded-xl border border-[var(--border)] bg-[var(--card)] divide-y divide-[var(--border)]">
+        <div className="card-glass rounded-xl divide-y divide-[var(--border)]">
           {/* E-Mail */}
           <div className="flex items-center gap-3 px-4 py-3.5">
             <Mail className="w-4 h-4 text-[var(--muted)] shrink-0" />
@@ -89,7 +89,7 @@ export default function Einstellungen() {
         <h2 className="text-xs font-semibold uppercase tracking-widest text-[var(--muted)]">
           Darstellung
         </h2>
-        <div className="rounded-xl border border-[var(--border)] bg-[var(--card)] divide-y divide-[var(--border)]">
+        <div className="card-glass rounded-xl divide-y divide-[var(--border)]">
           {/* Dark Mode */}
           <div className="flex items-center gap-3 px-4 py-3.5">
             {darkMode ? (
@@ -125,7 +125,7 @@ export default function Einstellungen() {
         <h2 className="text-xs font-semibold uppercase tracking-widest text-[var(--muted)]">
           Rechtliches
         </h2>
-        <div className="rounded-xl border border-[var(--border)] bg-[var(--card)] divide-y divide-[var(--border)]">
+        <div className="card-glass rounded-xl divide-y divide-[var(--border)]">
           <Link
             to="/impressum"
             className="flex items-center gap-3 px-4 py-3.5 hover:bg-[var(--foreground)]/5 transition-colors"
@@ -158,7 +158,7 @@ export default function Einstellungen() {
         <h2 className="text-xs font-semibold uppercase tracking-widest text-[var(--muted)]">
           Aktionen
         </h2>
-        <div className="rounded-xl border border-[var(--border)] bg-[var(--card)] divide-y divide-[var(--border)]">
+        <div className="card-glass rounded-xl divide-y divide-[var(--border)]">
           {/* Abmelden */}
           <button
             type="button"

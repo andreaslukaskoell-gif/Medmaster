@@ -203,10 +203,10 @@ export function CommandPalette({ open, onClose }: CommandPaletteProps) {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.15 }}
-        className="fixed inset-0 z-100 flex items-start justify-center pt-[12vh] sm:pt-[18vh] px-4"
+        className="fixed inset-0 z-100 flex items-start justify-center pt-[18vh] px-4"
         onClick={onClose}
       >
-        <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" />
+        <div className="absolute inset-0 bg-black/40 backdrop-blur-xl" />
         <motion.div
           initial={{ opacity: 0, scale: 0.97, y: -8 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -230,7 +230,7 @@ export function CommandPalette({ open, onClose }: CommandPaletteProps) {
               className="flex-1 bg-transparent text-sm outline-none text-[var(--text-primary)] placeholder:text-[var(--muted)]"
               aria-label="Suche"
             />
-            <kbd className="hidden sm:inline text-[10px] bg-[var(--border)] text-[var(--muted)] px-2 py-1 rounded">
+            <kbd className="text-[10px] bg-[var(--border)] text-[var(--muted)] px-2 py-1 rounded">
               Esc
             </kbd>
           </div>

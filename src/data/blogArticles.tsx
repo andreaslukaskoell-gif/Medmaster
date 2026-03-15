@@ -145,7 +145,7 @@ export const blogArticles: BlogArticle[] = [
           jede Aufgabe ist neu, und du trainierst echtes Mustererkennen statt Gedächtnis.
         </p>
 
-        <CTA text="Unbegrenzte Zahlenfolgen üben — algorithmisch generiert, nie Wiederholungen." />
+        <CTA text="10.000+ Zahlenfolgen üben — algorithmisch generiert, nie Wiederholungen." />
       </>
     ),
   },

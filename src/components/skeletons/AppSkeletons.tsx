@@ -105,7 +105,10 @@ export function RadarHexagonSkeleton({
 
   return (
     <div
-      className={cn("rounded-xl overflow-hidden bg-[var(--surface)] skeleton-shimmer", className)}
+      className={cn(
+        "rounded-xl overflow-hidden bg-[var(--surface)]/50 backdrop-blur-sm skeleton-shimmer",
+        className
+      )}
       style={{ width: "100%", height }}
       aria-hidden
     >

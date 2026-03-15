@@ -62,20 +62,20 @@ export function BMSSubjectView({
   });
 
   return (
-    <div className="max-w-3xl mx-auto space-y-10 py-4">
+    <div className="max-w-3xl mx-auto space-y-12 py-4">
       <div className="flex items-center justify-between">
         <Button variant="ghost" size="sm" onClick={onBack} className="text-[var(--muted)]">
           <ChevronLeft className="w-4 h-4 mr-1" />
           BMS
         </Button>
-        <Button variant="outline" size="sm" onClick={onStartQuiz} className="gap-2">
+        <Button variant="glass" size="sm" onClick={onStartQuiz} className="gap-2">
           <Play className="w-4 h-4" />
           Quiz starten
         </Button>
       </div>
 
       {/* Subject header — centered premium */}
-      <div className="text-center">
+      <div className="text-center hero-orbs">
         <div className="flex items-center justify-center gap-3 mb-4">
           <span
             className="text-[11px] font-bold uppercase tracking-[0.15em] px-3 py-1 rounded-md"
@@ -87,10 +87,10 @@ export function BMSSubjectView({
             {subjectData.label}
           </span>
         </div>
-        <h1 className="text-3xl font-bold text-[var(--foreground)] tracking-tight mb-2">
+        <h1 className="text-4xl font-bold text-[var(--foreground)] tracking-tight mb-2">
           {subjectData.label}
         </h1>
-        <p className="text-base text-[var(--muted)]">
+        <p className="text-lg text-[var(--muted)]">
           {kapitel.length} Kapitel · {subjectUK} Unterkapitel
         </p>
 
@@ -118,7 +118,12 @@ export function BMSSubjectView({
 
       {/* Continue button */}
       {firstIncompleteChapter && (
-        <Button onClick={() => onSelectChapter(firstIncompleteChapter)} className="gap-2" size="lg">
+        <Button
+          onClick={() => onSelectChapter(firstIncompleteChapter)}
+          className="gap-2"
+          variant="premium"
+          size="lg"
+        >
           <Play className="w-4 h-4" />
           {subjectCompletedUK === 0
             ? "Lernen starten"

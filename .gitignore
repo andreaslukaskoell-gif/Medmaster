@@ -36,6 +36,9 @@ dist-ssr
 .claude/package.json
 .claude/settings.json
 
+# Storybook build output
+storybook-static
+
 # Remotion temp data
 video/.data/
 

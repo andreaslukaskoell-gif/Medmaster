@@ -5,7 +5,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 
 function CardSkeleton() {
   return (
-    <div className="rounded-lg border border-[var(--border)] overflow-hidden">
+    <div className="card-glass overflow-hidden">
       <Skeleton className="h-32 w-full rounded-none" />
       <div className="p-4 space-y-2">
         <Skeleton className="h-5 w-3/4" />

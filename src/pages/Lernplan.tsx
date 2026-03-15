@@ -160,9 +160,15 @@ export default function Lernplan() {
     <div className="max-w-5xl mx-auto space-y-6">
       <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "Lernplan" }]} />
 
+      {/* Hero */}
+      <div className="hero-orbs text-center">
+        <h1 className="text-2xl font-bold text-[var(--text-primary)]">Lernplan</h1>
+        <p className="text-[var(--muted)] mt-1">Dein persönlicher Weg zum MedAT</p>
+      </div>
+
       {/* 1. Heutiger Lernplan – ganz oben */}
       <div ref={todayPlanRef}>
-        <Card className="border-2 border-[var(--accent)]/20 dark:border-[var(--accent)]/30">
+        <Card className="card-glass border-2 border-[var(--accent)]/20 dark:border-[var(--accent)]/30">
           <CardHeader className="pb-2">
             <CardTitle className="flex items-center gap-2 text-base">
               <CalendarDays className="w-4 h-4 text-[var(--accent)]" />
@@ -526,12 +532,15 @@ export default function Lernplan() {
       {plan && (
         <div>
           <h2 className="text-lg font-semibold text-[var(--text-primary)] mb-3">Lernphasen</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-3 gap-4 stagger-children">
             {plan.phases.map((phase, i) => {
               const pc = phaseConfig[phase.phase as keyof typeof phaseConfig];
               const isActive = plan.activePhase === phase.phase;
               return (
-                <Card key={i} className={isActive ? "ring-2 ring-[var(--accent)]" : ""}>
+                <Card
+                  key={i}
+                  className={`card-glass ${isActive ? "ring-2 ring-[var(--accent)]" : ""}`}
+                >
                   <CardContent className="p-4">
                     <div className="flex items-center gap-2 mb-2">
                       <Badge variant={pc.badge}>{pc.label}</Badge>
@@ -548,7 +557,7 @@ export default function Lernplan() {
       )}
 
       {/* 3. Lernplan-Einstellungen – zum Anpassen */}
-      <Card>
+      <Card className="card-glass">
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <Clock className="w-5 h-5 text-[var(--accent)]" />

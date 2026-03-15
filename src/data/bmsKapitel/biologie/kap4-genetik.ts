@@ -545,9 +545,8 @@ Der **Zellzyklus** umfasst die Vorbereitung der Zellteilung und die Teilung selb
     {
       id: "bio-4-04",
       title: "Mendelsche Regeln",
-      imageUrl: "/images/bms/bio-zellzyklus.jpg",
-      imageCaption:
-        "Abb.: Kreuzungsschema nach Mendel — Vererbung über Generationen (OpenStax, CC BY 4.0)",
+      imageUrl: "",
+      imageCaption: "",
       stichworte: [
         "Uniformitätsregel",
         "Spaltungsregel",
@@ -775,6 +774,9 @@ Nicht alle Merkmale folgen dem einfachen Mendel-Schema. Drei wichtige Phänomene
     {
       id: "bio-4-05",
       title: "Genotyp, Phänotyp und Dominanzverhältnisse",
+      imageUrl: "/images/bms/bio-dominanz-kodominanz.svg",
+      imageCaption:
+        "Abb.: Kodominanz und unvollständige Dominanz (Wikimedia Commons, CC BY-SA 4.0)",
       stichworte: [
         "Genotyp",
         "Phänotyp",
@@ -1093,6 +1095,9 @@ Die **Sichelzellanämie** vereint mehrere Konzepte dieses Kapitels:
     {
       id: "bio-4-06",
       title: "Erbgänge: autosomal und X-chromosomal",
+      imageUrl: "/images/bms/bio-erbgang-autosomal.svg",
+      imageCaption:
+        "Abb.: Stammbaum eines autosomal-rezessiven Erbgangs (Wikimedia Commons, CC BY 2.5)",
       stichworte: [
         "autosomal",
         "X-chromosomal",
@@ -1330,9 +1335,9 @@ Das kranke Allel ist **dominant** auf dem X-Chromosom. **Kranker Vater (X^A Y):*
     {
       id: "bio-4-07",
       title: "Blutgruppen: AB0-System",
-      imageUrl: "/images/bms/bio-blutgruppen.jpg",
+      imageUrl: "/images/bms/bio-blutgruppen-abo.svg",
       imageCaption:
-        "Abb.: AB0-Blutgruppensystem mit Antigenen und Antikörpern (OpenStax, CC BY 4.0)",
+        "Abb.: AB0-Blutgruppensystem — Antigene auf Erythrozyten (Wikimedia Commons, Public Domain)",
       stichworte: ["AB0", "Blutgruppe", "kodominant", "I^A", "I^B", "i", "Antigen", "Rhesus"],
       content: `## Multiple Allelie und das AB0-System
 
@@ -1866,6 +1871,27 @@ Die Translation benötigt: **mRNA** (Vorlage), **Ribosomen** (Übersetzungsmasch
 
 ---
 
+## Transkription vs. Translation — Vergleich
+
+| Merkmal | **Transkription** | **Translation** |
+|---------|-------------------|-----------------|
+| **Ziel** | DNA → mRNA kopieren | mRNA → Protein übersetzen |
+| **Ort** | Zellkern | Zytoplasma (Ribosomen) |
+| **Enzym** | RNA-Polymerase II | Ribosom (rRNA = Ribozym) |
+| **Vorlage** | DNA (Matrizenstrang, 3'→5') | mRNA (5'→3') |
+| **Produkt** | prä-mRNA → reife mRNA | Polypeptid → Protein |
+| **Bausteine** | Ribonukleotide (A, U, G, C) | Aminosäuren (20 Stück) |
+| **Startpunkt** | Promotor (TATA-Box) | Startcodon AUG |
+| **Endpunkt** | Terminatorsequenz | Stoppcodon (UAA, UAG, UGA) |
+| **Richtung** | 5'→3' (mRNA wächst) | N→C-Terminus (Peptid wächst) |
+| **Adapter** | Keiner (direkte Kopie) | tRNA (Anticodon → Aminosäure) |
+
+**Prokaryoten vs. Eukaryoten:** Bei Prokaryoten laufen Transkription und Translation **gleichzeitig** ab (gekoppelt, da kein Kern). Bei Eukaryoten wird die prä-mRNA im Kern erst prozessiert (Spleißen, 5'-Cap, Poly-A) und dann ins Zytoplasma exportiert.
+
+> **Merke:** Transkription = Kern, RNA-Polymerase, DNA→mRNA. Translation = Zytoplasma, Ribosomen, mRNA→Protein. Prokaryoten: beides gleichzeitig (kein Kern). Eukaryoten: räumlich getrennt → RNA-Prozessierung möglich.
+
+---
+
 ## Zusammenhang mit Genetik und Vererbung
 
 
@@ -1984,6 +2010,9 @@ Vererbung bedeutet: Die DNA (Allele) wird über Keimzellen (Meiose) von Generati
     {
       id: "bio-4-10",
       title: "Tumorgenetik",
+      imageUrl: "/images/bms/bio-tumorgenetik-hallmarks.svg",
+      imageCaption:
+        "Abb.: Hallmarks of Cancer nach Hanahan & Weinberg (Wikimedia Commons, CC BY-SA 3.0)",
       stichworte: [
         "Tumorgenetik",
         "Onkogen",
@@ -2294,6 +2323,9 @@ Das Verständnis der Tumorgenetik hat die Krebstherapie revolutioniert — Medik
     {
       id: "bio-4-11",
       title: "Epigenetik",
+      imageUrl: "/images/bms/bio-epigenetik.png",
+      imageCaption:
+        "Abb.: Epigenetische Mechanismen — DNA-Methylierung und Histonmodifikation (NIH/Wikimedia Commons, Public Domain)",
       stichworte: [
         "Epigenetik",
         "DNA-Methylierung",
@@ -2519,6 +2551,9 @@ Frauen haben zwei X-Chromosomen (XX), Männer nur eines (XY). Damit Frauen nicht
     {
       id: "bio-4-12",
       title: "Methoden der Genetik & Gentechnik",
+      imageUrl: "/images/bms/bio-pcr-gentechnik.svg",
+      imageCaption:
+        "Abb.: Polymerase-Kettenreaktion (PCR) — Denaturierung, Annealing, Elongation (Wikimedia Commons, CC BY-SA 4.0)",
       stichworte: [
         "PCR",
         "Polymerase-Kettenreaktion",
@@ -2824,6 +2859,8 @@ Beim **reproduktiven Klonen** wird ein genetisch identischer Organismus erzeugt.
     {
       id: "bio-4-13",
       title: "Humangenetik — Stammbaumanalyse und Besondere Erbgänge",
+      imageUrl: "/images/bms/bio-stammbaum-analyse.png",
+      imageCaption: "Abb.: Stammbaumanalyse — Symbole und Erbgang-Muster (Wikimedia Commons, CC0)",
       stichworte: [
         "Stammbaumanalyse",
         "autosomal-dominant",
@@ -3032,6 +3069,9 @@ Die Kopplungsanalyse wurde historisch genutzt, um **Krankheitsgene zu kartieren*
     {
       id: "bio-4-14",
       title: "Genetische Diagnostik — PID, PND und Genetische Beratung",
+      imageUrl: "/images/bms/bio-amniozentese.png",
+      imageCaption:
+        "Abb.: Amniozentese — Fruchtwasserpunktion zur pränatalen Diagnostik (Wikimedia Commons, CC BY-SA 4.0)",
       stichworte: [
         "Genetische Beratung",
         "Pränataldiagnostik",

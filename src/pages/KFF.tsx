@@ -209,7 +209,7 @@ export default function KFF() {
       startView: "zahlenfolgen" as KffView,
       color: "bg-[var(--accent)]/10",
       textColor: "text-[var(--accent)]",
-      badge: "Unbegrenzt",
+      badge: "10.000+",
     },
     {
       id: "gedaechtnis" as const,
@@ -225,7 +225,7 @@ export default function KFF() {
       id: "implikationen" as const,
       title: "Implikationen erkennen",
       desc: "Kategorische Syllogismen: Alle/Einige/Kein — finde die korrekte Schlussfolgerung (A-E).",
-      badge: "Unbegrenzt",
+      badge: "10.000+",
       strategyKey: "implikationen" as StrategyKey,
       startView: "implikationen" as KffView,
       color: "bg-[var(--accent)]/10",
@@ -250,14 +250,14 @@ export default function KFF() {
       color: "bg-[var(--accent)]/10",
       textColor: "text-[var(--accent)]",
       icon: "puzzle",
-      badge: "Unbegrenzt",
+      badge: "10.000+",
     },
   ];
 
   return (
     <div className="max-w-5xl mx-auto space-y-6">
       <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "KFF" }]} />
-      <div>
+      <div className="hero-orbs text-center">
         <h1 className="text-2xl font-bold text-[var(--text-primary)]">
           KFF - Kognitive Fähigkeiten
         </h1>
@@ -268,9 +268,9 @@ export default function KFF() {
           An dein Level angepasst
         </Badge>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+      <div className="grid grid-cols-3 gap-4 stagger-children">
         {modules.map((m) => (
-          <Card key={m.id}>
+          <Card key={m.id} className="card-glass">
             <CardContent className="p-5">
               <div className="flex items-start gap-3 mb-3">
                 <div
@@ -310,6 +310,7 @@ export default function KFF() {
                 </Button>
                 {m.id !== "gedaechtnis" && (
                   <Button
+                    variant="premium"
                     size="sm"
                     onClick={() => {
                       autoStartRef.current = true;
@@ -320,7 +321,7 @@ export default function KFF() {
                   </Button>
                 )}
                 {m.id === "gedaechtnis" && (
-                  <Button size="sm" onClick={() => setView(m.startView)}>
+                  <Button variant="premium" size="sm" onClick={() => setView(m.startView)}>
                     <Play className="w-4 h-4 mr-1" /> Starten
                   </Button>
                 )}

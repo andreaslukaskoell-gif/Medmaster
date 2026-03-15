@@ -11,9 +11,8 @@ export const chemKapAnorganisch: Kapitel = {
     {
       id: "ch-9-01",
       title: "Wasser — Eigenschaften und biologische Bedeutung",
-      imageUrl: "/images/bms/ch-phospholipid.jpg",
-      imageCaption:
-        "Abb.: Phospholipide in wässriger Umgebung — hydrophile und hydrophobe Wechselwirkungen (OpenStax, CC BY 4.0)",
+      imageUrl: "",
+      imageCaption: "",
       stichworte: [
         "Dipolmoment",
         "Wasserstoffbrücken",

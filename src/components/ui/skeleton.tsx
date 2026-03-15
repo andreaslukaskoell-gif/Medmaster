@@ -6,7 +6,7 @@ function Skeleton({ className, ...props }: ComponentProps<"div">) {
     <div
       data-slot="skeleton"
       className={cn(
-        "relative overflow-hidden rounded-md bg-[var(--border)]",
+        "relative overflow-hidden rounded-md bg-[var(--border)]/30 backdrop-blur-sm",
         // Shimmer sweep
         "before:absolute before:inset-0 before:-translate-x-full before:animate-[shimmer_1.5s_infinite]",
         "before:bg-linear-to-r before:from-transparent before:via-white/40 dark:before:via-white/10 before:to-transparent",
