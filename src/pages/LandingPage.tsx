@@ -238,6 +238,7 @@ const contentDepth = [
       "494 Mathematik-Fragen",
     ],
     extra: "173 Lerneinheiten nach offizieller Stichwortliste 2026",
+    demoLink: "/medat-uebungsfragen",
   },
   {
     icon: Puzzle,
@@ -253,6 +254,7 @@ const contentDepth = [
       "Gedächtnis & Merkfähigkeit",
     ],
     extra: "Unbegrenzte Aufgaben — algorithmisch generiert, nie Wiederholungen",
+    demoLink: "/medat-kff-ueben",
   },
   {
     icon: FileText,
@@ -365,6 +367,18 @@ export default function LandingPage() {
             MedMaster
           </span>
           <div className="flex items-center gap-2 sm:gap-3">
+            <Link
+              to="/medat-kff-ueben"
+              className="text-sm font-medium text-[var(--muted)] hover:text-[var(--text-primary)] transition-colors px-3 py-2 rounded-xl hover:bg-[var(--card)] hidden sm:inline-flex"
+            >
+              KFF Demo
+            </Link>
+            <Link
+              to="/medat-uebungsfragen"
+              className="text-sm font-medium text-[var(--muted)] hover:text-[var(--text-primary)] transition-colors px-3 py-2 rounded-xl hover:bg-[var(--card)] hidden sm:inline-flex"
+            >
+              BMS Demo
+            </Link>
             <Link
               to="/login"
               className="text-sm font-medium text-[var(--muted)] hover:text-[var(--text-primary)] transition-colors px-3 py-2 rounded-xl hover:bg-[var(--card)]"
@@ -540,9 +554,17 @@ export default function LandingPage() {
                     </li>
                   ))}
                 </ul>
-                <p className="text-xs text-[var(--muted)] border-t border-[var(--border)] pt-3 mt-3">
-                  {section.extra}
-                </p>
+                <div className="flex items-center justify-between border-t border-[var(--border)] pt-3 mt-3">
+                  <p className="text-xs text-[var(--muted)]">{section.extra}</p>
+                  {section.demoLink && (
+                    <Link
+                      to={section.demoLink}
+                      className="text-xs font-medium text-[var(--accent)] hover:underline shrink-0 ml-3"
+                    >
+                      Demo →
+                    </Link>
+                  )}
+                </div>
               </div>
             ))}
           </div>

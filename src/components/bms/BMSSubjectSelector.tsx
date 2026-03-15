@@ -1,6 +1,5 @@
 import { useMemo } from "react";
 import { ChevronRight, Clock } from "lucide-react";
-import { BlurFade } from "@/components/ui/blur-fade";
 import type { Kapitel } from "@/data/bmsKapitel/types";
 import { subjects } from "@/data/bmsSubjects";
 import { mergeChaptersWithSupabase, filterBMSKapitel, countUK } from "@/lib/mergeChapters";
@@ -32,7 +31,7 @@ export function BMSSubjectSelector({
   onSelectSubject,
 }: BMSSubjectSelectorProps) {
   return (
-    <div className="max-w-4xl mx-auto space-y-8 px-6 py-8">
+    <div className="max-w-4xl mx-auto space-y-8">
       {filterParam === "due" && (
         <div className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-700 text-yellow-800 dark:text-yellow-300 text-sm">
           <Clock className="w-4 h-4 shrink-0" />
@@ -53,11 +52,10 @@ export function BMSSubjectSelector({
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-        {subjects.map((subject, idx) => (
+        {subjects.map((subject) => (
           <SubjectCard
             key={subject.id}
             subject={subject}
-            idx={idx}
             supabaseChapters={supabaseChapters}
             completedChapters={completedChapters}
             getKapitelBySubject={getKapitelBySubject}
@@ -73,7 +71,6 @@ export function BMSSubjectSelector({
 
 type SubjectCardProps = {
   subject: (typeof subjects)[number];
-  idx: number;
   supabaseChapters: Kapitel[];
   completedChapters: string[];
   getKapitelBySubject: (subject: string) => Kapitel[];
@@ -82,7 +79,6 @@ type SubjectCardProps = {
 
 function SubjectCard({
   subject,
-  idx,
   supabaseChapters,
   completedChapters,
   getKapitelBySubject,
@@ -111,56 +107,45 @@ function SubjectCard({
   const accentColor = accentVars[subject.id] ?? "var(--accent)";
 
   return (
-    <BlurFade delay={0.1 + idx * 0.05} inView>
-      <div
-        className="group relative rounded-lg border border-[var(--border)] bg-[var(--card)] p-6 cursor-pointer overflow-hidden transition-all duration-200 hover:border-[var(--foreground)]/20 hover:shadow-[0_2px_12px_0_rgba(0,0,0,0.08)]"
-        style={{ borderLeftWidth: "3px", borderLeftColor: accentColor }}
-        onClick={() => onSelect(subject.id)}
-      >
-        <div className="flex items-start gap-4">
-          <div
-            className="w-10 h-10 rounded-lg flex items-center justify-center shrink-0 transition-transform duration-200 group-hover:scale-105"
-            style={{ backgroundColor: `${accentColor}18`, color: accentColor }}
-          >
-            <subject.icon className="w-5 h-5" />
+    <div
+      className="group relative rounded-lg border border-[var(--border)] bg-[var(--card)] p-6 cursor-pointer overflow-hidden transition-all duration-200 hover:border-[var(--foreground)]/20 hover:shadow-[0_2px_12px_0_rgba(0,0,0,0.08)]"
+      style={{ borderLeftWidth: "3px", borderLeftColor: accentColor }}
+      onClick={() => onSelect(subject.id)}
+    >
+      <div className="flex items-start gap-4">
+        <div
+          className="w-10 h-10 rounded-lg flex items-center justify-center shrink-0"
+          style={{ backgroundColor: `${accentColor}18`, color: accentColor }}
+        >
+          <subject.icon className="w-5 h-5" />
+        </div>
+        <div className="flex-1 min-w-0">
+          <div className="flex items-center justify-between gap-2 mb-0.5">
+            <h2 className="text-base font-semibold text-[var(--foreground)]">{subject.label}</h2>
+            <ChevronRight className="w-4 h-4 text-[var(--muted)] shrink-0" />
           </div>
-
-          <div className="flex-1 min-w-0">
-            <div className="flex items-center justify-between gap-2 mb-0.5">
-              <h2 className="text-base font-semibold text-[var(--foreground)]">{subject.label}</h2>
-              <ChevronRight className="w-4 h-4 text-[var(--muted)] shrink-0 transition-transform duration-200 group-hover:translate-x-0.5" />
-            </div>
-
-            <p className="text-xs text-[var(--muted)] mb-3 leading-relaxed">
-              {subject.description}
-            </p>
-
-            <div className="flex items-center gap-3 text-xs text-[var(--muted)] mb-2.5">
-              <span>{sBmsKapitel.length} Kapitel</span>
-              {sTotal > 0 && (
-                <>
-                  <span>·</span>
-                  <span style={{ color: accentColor }} className="font-medium">
-                    {sDone}/{sTotal} UK
-                  </span>
-                </>
-              )}
-            </div>
-
+          <p className="text-xs text-[var(--muted)] mb-3 leading-relaxed">{subject.description}</p>
+          <div className="flex items-center gap-3 text-xs text-[var(--muted)]">
+            <span>{sBmsKapitel.length} Kapitel</span>
             {sTotal > 0 && (
-              <div className="w-full bg-[var(--border)] rounded-full h-1.5">
-                <div
-                  className="h-1.5 rounded-full transition-all duration-500"
-                  style={{
-                    width: `${progressPct}%`,
-                    backgroundColor: accentColor,
-                  }}
-                />
-              </div>
+              <>
+                <span>·</span>
+                <span style={{ color: accentColor }} className="font-medium">
+                  {sDone}/{sTotal} UK
+                </span>
+              </>
             )}
           </div>
+          {sTotal > 0 && progressPct > 0 && (
+            <div className="w-full bg-[var(--border)] rounded-full h-1 mt-2.5">
+              <div
+                className="h-1 rounded-full transition-all duration-500"
+                style={{ width: `${progressPct}%`, backgroundColor: accentColor }}
+              />
+            </div>
+          )}
         </div>
       </div>
-    </BlurFade>
+    </div>
   );
 }

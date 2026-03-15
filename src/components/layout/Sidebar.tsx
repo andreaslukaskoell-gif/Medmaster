@@ -9,7 +9,6 @@ import {
   Heart,
   Timer,
   BarChart3,
-  GraduationCap,
   CalendarDays,
   ListChecks,
   Menu,

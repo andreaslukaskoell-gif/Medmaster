@@ -155,15 +155,9 @@ body.dark-body .card-glass {
   border-color: var(--border);
 }
 
-/* Button hover: subtle scale + shadow */
-.btn-med:hover {
-  transform: scale(1.02);
-  box-shadow: 0 4px 14px rgba(0, 122, 255, 0.25);
-}
+/* Button hover */
 .btn-med {
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+  transition: background-color 0.15s ease;
 }
 
 /* Progress bar fill animation */

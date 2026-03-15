@@ -27,7 +27,7 @@ export function BMSSubjectView({
 
   if (kapitel.length === 0) {
     return (
-      <div className="max-w-4xl mx-auto p-6">
+      <div className="max-w-4xl mx-auto">
         <Button variant="ghost" size="sm" onClick={onBack} className="text-[var(--muted)] mb-4">
           <ArrowLeft className="w-4 h-4 mr-1" />
           BMS
@@ -47,7 +47,7 @@ export function BMSSubjectView({
   const { total: subjectUK, completed: subjectCompletedUK } = countUK(kapitel, completedChapters);
 
   return (
-    <div className="max-w-4xl mx-auto space-y-6 p-6">
+    <div className="max-w-4xl mx-auto space-y-6">
       <div className="flex items-center justify-between">
         <Button variant="ghost" size="sm" onClick={onBack} className="text-[var(--muted)]">
           <ArrowLeft className="w-4 h-4 mr-1" />

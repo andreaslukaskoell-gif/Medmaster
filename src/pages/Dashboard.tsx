@@ -169,8 +169,7 @@ export default function Dashboard() {
     });
   }, [getFachReadiness, unlockedFachMilestones, unlockFachMilestone, faecherIds]);
 
-  const cardClass =
-    "rounded-xl border border-[var(--border)] bg-[var(--card)] shadow-sm hover:shadow-md transition-all duration-200";
+  const cardClass = "rounded-xl border border-[var(--border)] bg-[var(--card)]";
   const bmsProgressPct = useMemo(() => {
     const total = alleKapitel.reduce((s, k) => s + (k?.unterkapitel?.length ?? 0), 0);
     if (total === 0) return 0;
@@ -311,12 +310,7 @@ export default function Dashboard() {
             <div className="sm:col-span-1" aria-label="BMS des Tages">
               {dailyResult ? (
                 <Link to="/daily">
-                  <div
-                    className={cn(
-                      cardClass,
-                      "relative overflow-hidden border-l-4 border-[var(--success)]"
-                    )}
-                  >
+                  <div className={cn(cardClass, "relative overflow-hidden")}>
                     <CardContent className="p-4 sm:p-5 flex items-center justify-between gap-4">
                       <div className="flex items-center gap-3">
                         <div className="w-10 h-10 rounded-xl bg-[var(--success-bg)] flex items-center justify-center shrink-0">
@@ -339,9 +333,7 @@ export default function Dashboard() {
                 </Link>
               ) : (
                 <Link to="/daily">
-                  <div
-                    className={cn(cardClass, "border-l-4 border-[var(--accent)] cursor-pointer")}
-                  >
+                  <div className={cn(cardClass, "cursor-pointer")}>
                     <CardContent className="p-4 sm:p-5 flex items-center justify-between gap-4">
                       <div className="flex items-center gap-3">
                         <div className="w-10 h-10 rounded-xl bg-[var(--accent)]/15 flex items-center justify-center shrink-0">
@@ -366,10 +358,7 @@ export default function Dashboard() {
             </div>
             {/* Streak-Karte */}
             <div
-              className={cn(
-                cardClass,
-                "p-4 sm:p-5 flex items-center gap-4 border-l-4 border-l-[var(--accent)]"
-              )}
+              className={cn(cardClass, "p-4 sm:p-5 flex items-center gap-4")}
               aria-label="Streak"
             >
               <div className="w-12 h-12 rounded-xl bg-[var(--accent)]/10 flex items-center justify-center shrink-0">
@@ -396,51 +385,28 @@ export default function Dashboard() {
           >
             <Link
               to="/simulation"
-              className={cn(
-                cardClass,
-                "p-3 lg:p-4 flex items-center lg:flex-col gap-3 lg:gap-2 lg:text-center"
-              )}
+              className={cn(cardClass, "p-3 lg:p-4 flex items-center gap-2.5")}
             >
-              <div className="w-9 h-9 rounded-lg bg-[var(--accent)]/10 flex items-center justify-center shrink-0">
-                <Timer className="w-4.5 h-4.5 text-[var(--accent)]" />
-              </div>
-              <span className="text-sm lg:text-xs font-medium text-[var(--text-primary)]">
-                Simulation
-              </span>
+              <Timer className="w-4 h-4 text-[var(--muted)] shrink-0" />
+              <span className="text-sm font-medium text-[var(--text-primary)]">Simulation</span>
             </Link>
             <Link
               to="/fragen-trainer"
-              className={cn(
-                cardClass,
-                "p-3 lg:p-4 flex items-center lg:flex-col gap-3 lg:gap-2 lg:text-center"
-              )}
+              className={cn(cardClass, "p-3 lg:p-4 flex items-center gap-2.5")}
             >
-              <div className="w-9 h-9 rounded-lg bg-[var(--accent)]/10 flex items-center justify-center shrink-0">
-                <Dumbbell className="w-4.5 h-4.5 text-[var(--accent)]" />
-              </div>
-              <span className="text-sm lg:text-xs font-medium text-[var(--text-primary)]">
-                Fragen-Trainer
-              </span>
+              <Dumbbell className="w-4 h-4 text-[var(--muted)] shrink-0" />
+              <span className="text-sm font-medium text-[var(--text-primary)]">Fragen-Trainer</span>
             </Link>
             <Link
               to="/fortschritt"
-              className={cn(
-                cardClass,
-                "p-3 lg:p-4 flex items-center lg:flex-col gap-3 lg:gap-2 lg:text-center"
-              )}
+              className={cn(cardClass, "p-3 lg:p-4 flex items-center gap-2.5")}
             >
-              <div className="w-9 h-9 rounded-lg bg-[var(--accent)]/10 flex items-center justify-center shrink-0">
-                <BarChart3 className="w-4.5 h-4.5 text-[var(--accent)]" />
-              </div>
-              <span className="text-sm lg:text-xs font-medium text-[var(--text-primary)]">
-                Fortschritt
-              </span>
+              <BarChart3 className="w-4 h-4 text-[var(--muted)] shrink-0" />
+              <span className="text-sm font-medium text-[var(--text-primary)]">Fortschritt</span>
             </Link>
             <Link to="/fortschritt">
-              <div className={cn(cardClass, "h-full p-3 lg:p-4 flex items-center gap-3")}>
-                <div className="w-9 h-9 rounded-lg bg-[var(--accent)]/10 flex items-center justify-center shrink-0">
-                  <TrendingUp className="w-4.5 h-4.5 text-[var(--accent)]" />
-                </div>
+              <div className={cn(cardClass, "h-full p-3 lg:p-4 flex items-center gap-2.5")}>
+                <TrendingUp className="w-4 h-4 text-[var(--muted)] shrink-0" />
                 <div className="min-w-0 flex-1">
                   <p className="text-sm font-medium text-[var(--text-primary)]">Prognose</p>
                   <p className="text-xs text-[var(--muted)]">
@@ -464,7 +430,7 @@ export default function Dashboard() {
             aria-label="Wochen-Aktivität und Freunde"
             className="grid grid-cols-1 lg:grid-cols-2 gap-4"
           >
-            <div className={cn(cardClass, "p-5 border-l-4 border-l-[var(--accent)]")}>
+            <div className={cn(cardClass, "p-5")}>
               <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
                 <p className="text-sm font-medium text-[var(--muted)]">Wochen-Aktivität</p>
                 <p className="text-sm text-[var(--text-primary)]">
