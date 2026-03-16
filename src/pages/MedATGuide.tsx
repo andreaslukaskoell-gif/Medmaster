@@ -2,10 +2,86 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { GraduationCap, ArrowRight } from "lucide-react";
+import { blogArticles } from "@/data/blogArticles";
 
 const NAVY = "#1b3ea7";
 
 type ContentBlock = string | { bold: string; rest: string };
+
+/** Map section IDs to relevant blog article slugs */
+const SECTION_ARTICLES: Record<string, string[]> = {
+  bms: [
+    "medat-bms-fehler",
+    "bms-biologie-wichtigste-themen",
+    "medat-biologie-zellbiologie",
+    "medat-biologie-genetik",
+    "bms-chemie-lernen",
+    "medat-physik-mechanik",
+    "medat-mathematik-tipps",
+  ],
+  kff: [
+    "medat-kff-tipps",
+    "kff-zahlenfolgen-tipps",
+    "medat-wortfluessigkeit-ueben",
+    "medat-implikationen-tipps",
+    "medat-figuren-zusammensetzen",
+    "medat-gedaechtnis-merkfaehigkeit",
+  ],
+  tv: ["medat-textverstaendnis-strategien"],
+  sek: ["medat-sek-tipps"],
+  vorbereitung: [
+    "medat-lernplan-3-monate",
+    "medat-simulation-wichtig",
+    "medat-zeitmanagement",
+    "medat-2026-aenderungen",
+    "medat-anmeldung-2026",
+    "medat-buecher-empfehlungen",
+    "medizinstudium-oesterreich",
+  ],
+  tipps: [
+    "medat-punkte-berechnen",
+    "medat-schwierigkeitsgrad",
+    "medat-motivation-durchhalten",
+    "medat-stressbewaeltigung",
+    "medat-erfahrungsbericht",
+    "medat-lerngruppe",
+    "medat-vs-ham-nat",
+  ],
+};
+
+const articlesBySlug = new Map(blogArticles.map((a) => [a.slug, a]));
+
+function RelatedArticles({ sectionId }: { sectionId: string }) {
+  const slugs = SECTION_ARTICLES[sectionId];
+  if (!slugs || slugs.length === 0) return null;
+  const articles = slugs
+    .map((s) => articlesBySlug.get(s))
+    .filter((a): a is NonNullable<typeof a> => !!a);
+  if (articles.length === 0) return null;
+
+  return (
+    <div className="mt-6 pt-5 border-t border-[var(--border)]/50">
+      <h3 className="text-xs font-bold uppercase tracking-wide text-[var(--muted)] mb-3">
+        Weiterführende Artikel
+      </h3>
+      <ul className="space-y-1.5">
+        {articles.map((a) => (
+          <li key={a.slug}>
+            <Link
+              to={`/blog/${a.slug}`}
+              className="group flex items-center gap-2 text-sm text-blue-600 dark:text-blue-400 hover:underline"
+            >
+              <span className="text-blue-400 dark:text-blue-500 group-hover:translate-x-0.5 transition-transform">
+                →
+              </span>
+              {a.title}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
 
 const SECTIONS: { id: string; title: string; content: ContentBlock[] }[] = [
   {
@@ -336,6 +412,7 @@ export default function MedATGuide() {
                 <ContentParagraph key={i} block={block} />
               ))}
             </div>
+            <RelatedArticles sectionId={s.id} />
           </section>
         ))}
 

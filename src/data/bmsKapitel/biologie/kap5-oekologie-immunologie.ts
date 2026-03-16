@@ -933,6 +933,8 @@ Stickstoff (N) ist essentiell für Aminosäuren, Nucleotide und Chlorophyll. Obw
 
 > **Merke:** N₂-Fixierung (Rhizobien) → Ammonifikation → Nitrifikation (NH₄⁺→NO₂⁻→NO₃⁻) → Assimilation → Denitrifikation (→N₂). Kreislauf geschlossen.
 
+![Stickstoffkreislauf — N₂-Fixierung, Nitrifikation und Denitrifikation](/images/bms/bio-stickstoffkreislauf.svg)
+
 ### Phosphorkreislauf
 
 Phosphor hat **kein gasförmiges Reservoir** — er zirkuliert nur zwischen terrestrischen, aquatischen und geologischen Reservoiren. Phosphor ist oft der **limitierende Nährstoff** in Süßwasser-Ökosystemen.
@@ -940,6 +942,8 @@ Phosphor hat **kein gasförmiges Reservoir** — er zirkuliert nur zwischen terr
 **Kreislauf:** Gestein → Verwitterung → Phosphat im Boden → Pflanzenaufnahme → organisches P in Biomasse → Mineralisation durch Destruenten → Phosphat → Auswaschung ins Gewässer → Sedimentation im Meeresboden.
 
 **Eutrophierung:** Überschuss von Phosphat (aus Düngemitteln, Waschmitteln, Kläranlagenabwässern) in Gewässern → übermäßiges Algenwachstum (Algenblüte) → Algentod → Abbau durch Bakterien → Sauerstoffzehrung → Hypoxie (Sauerstoffmangel)/Anoxie (völliger Sauerstoffentzug) → Fischsterben.
+
+![Phosphorkreislauf — Gestein, Verwitterung, Boden, Pflanzen, Tiere und Sedimentation](/images/bms/bio-phosphorkreislauf.png)
 
 ### Wasserkreislauf
 
@@ -950,6 +954,8 @@ Phosphor hat **kein gasförmiges Reservoir** — er zirkuliert nur zwischen terr
 - **Oberflächenabfluss:** Flüsse, Bäche → Meere
 
 Entwaldung reduziert Transpiration → verändert regionale Niederschlagsmuster (v.a. Amazonas-Regenwald: ca. 50% des Niederschlags kommt aus der Vegetation selbst durch Evapotranspiration (Verdunstung von Boden und Pflanzen)).
+
+![Wasserkreislauf — Verdunstung, Kondensation, Niederschlag, Abfluss und Grundwasser](/images/bms/bio-wasserkreislauf.svg)
 
 ---
 
@@ -1473,6 +1479,26 @@ Bakterienwachstum in geschlossener Kultur (Blutkultur, Nährmedium) durchläuft 
             "Aussagen 1, 2, 4 und 5 sind korrekt. Bei N = K/2 liegt der Wendepunkt der logistischen Kurve mit maximaler absoluter Wachstumsrate (1). Intraspezifische Konkurrenz wird bei hoher Dichte stärker (dichteabhängig, 2). Die Räuberkurve folgt der Beutekurve zeitverzögert (4). H = 1 − 1/R₀ ist die Formel für die Herdenimmunitätsschwelle (5). Aussage 3 ist falsch: r-Strategen haben VIELE Nachkommen, kurze Generationszeit und WENIG Brutpflege — K-Strategen sind das Gegenteil.",
           difficulty: 3,
           tags: ["typ-k", "populationsdynamik", "logistisch", "lotka-volterra", "herdenimmunität"],
+        },
+        {
+          question:
+            "E. coli teilt sich unter optimalen Bedingungen alle 20 Minuten. Sie starten mit 1.000 Bakterien. Wie viele sind es nach 2 Stunden?",
+          options: ["6.000", "12.000", "32.000", "64.000", "128.000"],
+          correctIndex: 3,
+          explanation:
+            "Rechnung: 2 Stunden = 120 Minuten. Bei 20 min Verdopplungszeit: 120 / 20 = 6 Verdopplungen. N = 1.000 × 2⁶ = 1.000 × 64 = **64.000**. Typische Fehler: 6.000 (×6 statt 2⁶), 12.000 (×12), 32.000 (2⁵ statt 2⁶). Merke: Exponentielle Verdopplung, nicht lineare Multiplikation!",
+          difficulty: 2,
+          tags: ["typ-m", "rechenfrage", "verdopplungszeit", "exponentielles-wachstum"],
+        },
+        {
+          question:
+            "Windpocken haben eine Basisreproduktionszahl R₀ = 12. Wie hoch muss die Durchimpfungsrate mindestens sein, um Herdenimmunität zu erreichen?",
+          options: ["Etwa 83,3 %", "Etwa 91,7 %", "Etwa 75,0 %", "Etwa 88,0 %", "Etwa 95,0 %"],
+          correctIndex: 1,
+          explanation:
+            "Herdenimmunitätsschwelle H = 1 − 1/R₀ = 1 − 1/12 = 11/12 ≈ **91,7 %**. Typischer Fehler: 83,3 % (1/R₀ statt 1 − 1/R₀ berechnet, also den Kehrwert genommen) oder 75 % (mit R₀ = 4 gerechnet statt 12).",
+          difficulty: 2,
+          tags: ["typ-m", "rechenfrage", "herdenimmunität", "r-null", "epidemiologie"],
         },
       ],
       altfrage: {

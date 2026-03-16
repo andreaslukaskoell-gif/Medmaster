@@ -467,6 +467,21 @@ Beide Formen können zu **sexuellem Dimorphismus** (Geschlechtsunterschied in Gr
           difficulty: 2,
           tags: ["typ-k", "evolution", "darwin", "selektion", "synthetische-theorie"],
         },
+        {
+          question: "Welche der folgenden Aussagen über Evolutionsmechanismen ist FALSCH?",
+          options: [
+            "Natürliche Selektion wirkt auf den Phänotyp eines Individuums, verändert aber die Allelfrequenzen in der Population",
+            "Konvergente Evolution führt zu analogen Strukturen bei nicht näher verwandten Arten (z. B. Flügel von Fledermaus und Insekt)",
+            "Homologe Organe haben den gleichen Grundbauplan und weisen auf gemeinsame Abstammung hin",
+            "Stabilisierende Selektion bevorzugt die Extremwerte eines Merkmals und eliminiert den Durchschnitt",
+            "Koevolution beschreibt die wechselseitige Anpassung zweier Arten aneinander (z. B. Blüte und Bestäuber)",
+          ],
+          correctIndex: 3,
+          explanation:
+            "Aussage D ist falsch. Stabilisierende Selektion bevorzugt den Mittelwert (Durchschnitt) eines Merkmals und selektiert GEGEN die Extremwerte — sie verringert die Varianz. Beispiel: Geburtsgewicht beim Menschen (zu leicht und zu schwer = erhöhte Sterblichkeit, Durchschnitt ~3,5 kg optimal). Disruptive Selektion bevorzugt dagegen die Extreme. Die übrigen Aussagen sind korrekt.",
+          difficulty: 2,
+          tags: ["falsch-aussage", "evolution", "selektion", "stabilisierende selektion"],
+        },
       ],
     },
     {
@@ -700,6 +715,42 @@ Der Gründereffekt erklärt die erhöhte Häufigkeit bestimmter genetischer Erkr
             "Aussagen 1, 3 und 4 sind korrekt. Hardy-Weinberg setzt u. a. eine unendlich große Population voraus (1). Der Flaschenhals-Effekt reduziert genetische Vielfalt drastisch (3). Genfluss homogenisiert Populationen und wirkt gegen Artbildung (4). Aussage 2 ist falsch: Gendrift ist in kleinen Populationen stärker. Aussage 5 ist falsch: Selektion ist die einzige gerichtete Kraft, Mutation ist zufällig.",
           difficulty: 3,
           tags: ["typ-k", "hardy-weinberg", "gendrift", "genfluss", "evolutionsfaktoren"],
+        },
+        {
+          question:
+            "In einer Population sind 16 % der Individuen homozygot rezessiv (aa) für ein bestimmtes Merkmal. Wie groß ist die Heterozygotenfrequenz (2pq) nach Hardy-Weinberg?",
+          options: ["24 %", "36 %", "48 %", "40 %", "32 %"],
+          correctIndex: 2,
+          explanation:
+            "Rechnung: q² = 0,16 → q = √0,16 = 0,4. Da p + q = 1: p = 1 − 0,4 = 0,6. Heterozygotenfrequenz 2pq = 2 × 0,6 × 0,4 = 0,48 = 48 %. Typische Fehler: 24 % (nur pq ohne ×2), 36 % (p² berechnet statt 2pq), 40 % (q mit p verwechselt: 2 × 0,4 × 0,5).",
+          difficulty: 2,
+          tags: ["typ-m", "rechenfrage", "hardy-weinberg", "heterozygotenfrequenz"],
+        },
+        {
+          question:
+            "Die Allelfrequenz für das Sichelzellallel (HbS) beträgt in einer westafrikanischen Population q = 0,1. Wie viel Prozent der Population sind heterozygote Überträger (HbA/HbS)?",
+          options: ["1 %", "9 %", "10 %", "18 %", "81 %"],
+          correctIndex: 3,
+          explanation:
+            "Rechnung: p = 1 − q = 1 − 0,1 = 0,9. Heterozygotenfrequenz 2pq = 2 × 0,9 × 0,1 = 0,18 = 18 %. Typische Fehler: 1 % (q² = homozygot rezessiv, nicht heterozygot), 9 % (pq ohne ×2), 81 % (p² = homozygot dominant), 10 % (nur q angegeben).",
+          difficulty: 2,
+          tags: ["typ-m", "rechenfrage", "hardy-weinberg", "sichelzellanämie"],
+        },
+        {
+          question:
+            "Welche der folgenden Aussagen über das Hardy-Weinberg-Gleichgewicht ist FALSCH?",
+          options: [
+            "Das Hardy-Weinberg-Gleichgewicht setzt eine unendlich große, panmiktische Population ohne Selektion voraus",
+            "Die Formel lautet p² + 2pq + q² = 1, wobei p und q die Allelfrequenzen darstellen",
+            "Gendrift ist in großen Populationen stärker wirksam als in kleinen und stört das Gleichgewicht",
+            "Der Flaschenhals-Effekt kann die genetische Vielfalt einer Population drastisch reduzieren",
+            "Genfluss zwischen Populationen kann das Hardy-Weinberg-Gleichgewicht stören, da er Allelfrequenzen verändert",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Aussage C ist falsch. Gendrift ist in KLEINEN Populationen stärker wirksam, nicht in großen. In kleinen Populationen haben zufällige Schwankungen der Allelfrequenzen einen größeren Effekt (z. B. Flaschenhals-Effekt, Gründereffekt). In großen Populationen mitteln sich Zufallseffekte aus. Dies ist eine klassische MedAT-Falle — Gendrift und Populationsgröße stehen in umgekehrtem Verhältnis. Die übrigen Aussagen sind korrekt.",
+          difficulty: 2,
+          tags: ["falsch-aussage", "hardy-weinberg", "gendrift", "populationsgenetik"],
         },
       ],
     },
@@ -2187,6 +2238,22 @@ Wenn der **posteriore Neuroporus** nicht schließt, kann es zur **Spina bifida**
             "Aussagen 1, 3 und 4 sind korrekt. Das Notochord induziert die Neuralplatte aus dem Ektoderm (1). Aus der Neuralleiste entstehen Melanozyten, sensorische/autonome Ganglien und das Nebennierenmark (3). Der anteriore Neuroporus schließt sich an Tag 25, der posteriore an Tag 27 (4). Aussage 2 ist falsch: Neuralleistenzellen stammen vom Ektoderm, nicht vom Mesoderm. Aussage 5 ist falsch: Folsäure senkt das Risiko für Neuralrohrdefekte um ca. 70 %.",
           difficulty: 3,
           tags: ["typ-k", "neurulation", "neuralleiste", "notochord", "folsäure"],
+        },
+        {
+          question:
+            "Welche der folgenden Aussagen über die Gastrulation und Keimblätter ist FALSCH?",
+          options: [
+            "Während der Gastrulation entsteht aus der zweiblättrigen Keimscheibe eine dreiblättrige Struktur mit Ektoderm, Mesoderm und Entoderm",
+            "Das Nervensystem (Gehirn und Rückenmark) entwickelt sich aus dem Ektoderm",
+            "Neuralleistenzellen stammen vom Mesoderm ab und bilden unter anderem Melanozyten und das Nebennierenmark",
+            "Das Notochord (Chorda dorsalis) induziert die Bildung der Neuralplatte im darüberliegenden Ektoderm",
+            "Aus dem Mesoderm entstehen Skelettmuskulatur, Knochen, Nieren und das Herz-Kreislauf-System",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Aussage C ist falsch. Neuralleistenzellen stammen vom EKTODERM, nicht vom Mesoderm. Sie lösen sich am Rand der Neuralfalten vom Neuroektoderm ab und wandern durch den Embryo. Obwohl sie mesenchymale Eigenschaften annehmen, ist ihr Ursprung ektodermal. Neuralleistenzellen bilden u. a. Melanozyten, periphere Ganglien, Nebennierenmark, Odontoblasten und Teile des kraniofazialen Skeletts. Die übrigen Aussagen sind korrekt.",
+          difficulty: 3,
+          tags: ["falsch-aussage", "gastrulation", "keimblätter", "neuralleiste"],
         },
       ],
     },

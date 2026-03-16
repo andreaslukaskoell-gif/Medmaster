@@ -1939,4 +1939,246 @@ export const blogArticles: BlogArticle[] = [
       </>
     ),
   },
+
+  // ─── FAQ-style articles (People Also Ask) ───────────────────────────
+
+  {
+    slug: "wann-ist-medat-2026",
+    title: "Wann ist der MedAT 2026? Termin, Uhrzeit und Ablauf",
+    excerpt:
+      "Alle Infos zum MedAT-Termin 2026: Wann findet der Test statt, wie lange dauert er und wann muss man sich anmelden?",
+    topic: "Strategie",
+    readingTime: 2,
+    publishDate: "2026-03-16",
+    content: (
+      <>
+        <h2>Wann ist der MedAT 2026?</h2>
+        <p>
+          Der MedAT 2026 findet voraussichtlich <strong>Anfang Juli 2026</strong> statt. Den exakten
+          Termin geben die Medizinischen Universitäten Wien, Graz, Innsbruck und Linz gemeinsam
+          bekannt — in der Regel im Jänner oder Februar des Testjahres. Der MedAT wird an einem
+          einzigen Tag durchgeführt, gleichzeitig an allen vier Standorten.
+        </p>
+
+        <h2>Anmeldefrist und Vorlaufzeit</h2>
+        <p>
+          Die Anmeldung öffnet erfahrungsgemäß im <strong>März</strong> und endet im{" "}
+          <strong>April</strong>. Die Anmeldung erfolgt ausschließlich online über die Website der
+          jeweiligen MedUni. Achtung: Die Plätze sind pro Standort begrenzt, also melde dich so früh
+          wie möglich an. Eine Ummeldung zwischen Standorten ist nach Anmeldeschluss nicht mehr
+          möglich.
+        </p>
+
+        <h2>Ablauf am Testtag</h2>
+        <p>
+          Der gesamte MedAT dauert ca. <strong>8 Stunden</strong> (inkl. Pausen). Der Tag beginnt
+          meist um 8:00 Uhr mit der Registrierung. Die Testteile: BMS (ca. 70 Min.), TV (ca. 90 Min.
+          inkl. Lernphase), KFF (ca. 75 Min.) und SEK (ca. 40 Min.). Zwischen den Teilen gibt es
+          kurze Pausen. Plane den ganzen Tag ein und bring Verpflegung mit.
+        </p>
+
+        <CTA text="Starte jetzt mit der Vorbereitung — über 4.300 BMS-Fragen und alle KFF-Untertests warten auf dich." />
+      </>
+    ),
+  },
+  {
+    slug: "medat-bestehensgrenze",
+    title: "Welche Punktzahl braucht man beim MedAT? Bestehensgrenze 2026",
+    excerpt:
+      "Gibt es eine feste Bestehensgrenze beim MedAT? Was du über Rangplätze, Prozentpunkte und die Zulassung wissen musst.",
+    topic: "Strategie",
+    readingTime: 2,
+    publishDate: "2026-03-16",
+    content: (
+      <>
+        <h2>Welche Punktzahl braucht man beim MedAT?</h2>
+        <p>
+          Es gibt beim MedAT <strong>keine feste Bestehensgrenze</strong>. Ob du einen Studienplatz
+          bekommst, hängt ausschließlich von deinem <strong>Rangplatz</strong> ab — also davon, wie
+          gut du im Vergleich zu allen anderen Teilnehmenden abschneidest. Es ist ein
+          Auswahlverfahren, kein klassischer Bestehen/Nicht-bestehen-Test.
+        </p>
+
+        <h2>Erfahrungswerte nach Standort</h2>
+        <p>
+          Die benötigte Gesamtpunktzahl variiert jedes Jahr je nach Leistung der Teilnehmenden. Als
+          grobe Orientierung aus vergangenen Jahren: In <strong>Wien</strong> brauchte man ca. 85 %
+          der maximalen Punktzahl, in <strong>Graz</strong> ca. 80 % und in{" "}
+          <strong>Innsbruck</strong> ca. 78 %. In Linz lag die Grenze ähnlich wie in Graz. Diese
+          Werte schwanken — nimm sie als Richtwert, nicht als Garantie.
+        </p>
+
+        <h2>Wie setzt sich die Punktzahl zusammen?</h2>
+        <p>
+          Der MedAT besteht aus vier Testteilen mit unterschiedlicher Gewichtung: BMS (40 %), KFF
+          (40 %), TV (10 %) und SEK (10 %). Da BMS und KFF zusammen 80 % der Gesamtwertung
+          ausmachen, solltest du dort deine Stärken ausspielen. Innerhalb jedes Testteils wird die
+          Rohpunktzahl in einen standardisierten Wert umgerechnet.
+        </p>
+
+        <CTA text="Trainiere gezielt BMS und KFF — die beiden Testteile, die 80 % deiner MedAT-Note ausmachen." />
+      </>
+    ),
+  },
+  {
+    slug: "medat-wie-oft-wiederholen",
+    title: "Wie oft kann man den MedAT wiederholen?",
+    excerpt:
+      "Du hast den MedAT nicht geschafft? Kein Problem — so oft darfst du antreten und das sind deine Chancen beim nächsten Versuch.",
+    topic: "Strategie",
+    readingTime: 2,
+    publishDate: "2026-03-16",
+    content: (
+      <>
+        <h2>Wie oft kann man den MedAT wiederholen?</h2>
+        <p>
+          Du kannst den MedAT <strong>beliebig oft wiederholen</strong> — es gibt keine
+          Versuchsbeschränkung. Der Test findet einmal pro Jahr statt (in der Regel Anfang Juli). Du
+          kannst dich jedes Jahr neu anmelden, unabhängig davon, wie oft du bereits teilgenommen
+          hast. Frühere Ergebnisse werden nicht angerechnet und auch nicht negativ bewertet.
+        </p>
+
+        <h2>Wie realistisch ist es beim 2. oder 3. Versuch?</h2>
+        <p>
+          Sehr realistisch. Erfahrungsgemäß schaffen viele Kandidierende den MedAT erst beim zweiten
+          oder dritten Anlauf. Wiederholende haben sogar einen Vorteil: Sie kennen den Ablauf,
+          wissen wo ihre Schwächen liegen und können gezielter üben. Laut Erfahrungsberichten
+          verbessern sich die meisten Teilnehmenden beim zweiten Antritt um 5-15 Prozentpunkte.
+        </p>
+
+        <h2>Was sollte ich zwischen den Versuchen tun?</h2>
+        <p>
+          Analysiere dein Ergebnis genau: Wo hast du Punkte verloren? Fokussiere dich auf deine
+          schwächsten Testteile. Nutze die Monate dazwischen für regelmäßiges, aktives Üben mit
+          Übungsfragen statt nur passivem Lesen. Besonders KFF-Untertests (Zahlenfolgen,
+          Wortflüssigkeit, Implikationen) lassen sich durch Training stark verbessern.
+        </p>
+
+        <CTA text="Starte deine Vorbereitung mit über 4.300 Übungsfragen und allen KFF-Untertests — jetzt gratis testen." />
+      </>
+    ),
+  },
+  {
+    slug: "medat-ohne-kurs-bestehen",
+    title: "Kann man den MedAT ohne Kurs bestehen?",
+    excerpt:
+      "Brauchst du einen teuren Vorbereitungskurs für den MedAT oder geht es auch ohne? Die ehrliche Antwort.",
+    topic: "Strategie",
+    readingTime: 2,
+    publishDate: "2026-03-16",
+    content: (
+      <>
+        <h2>Kann man den MedAT ohne Kurs bestehen?</h2>
+        <p>
+          <strong>Ja, absolut.</strong> Viele erfolgreiche MedAT-Teilnehmende haben ohne einen
+          kommerziellen Vorbereitungskurs bestanden. Entscheidend ist nicht, ob du einen Kurs
+          besuchst, sondern ob du <strong>systematisch, regelmäßig und aktiv</strong> lernst. Ein
+          Kurs kann Struktur geben, ersetzt aber nie die eigenständige Übungsarbeit.
+        </p>
+
+        <h2>Was braucht man statt eines Kurses?</h2>
+        <p>
+          Drei Dinge sind wichtig: Erstens, <strong>gute Materialien</strong> — ein Lehrbuch pro
+          BMS-Fach und eine Online-Plattform mit umfangreicher Fragendatenbank. Zweitens, ein{" "}
+          <strong>realistischer Lernplan</strong> über mindestens 3 Monate. Drittens, regelmäßiges{" "}
+          <strong>aktives Üben</strong> mit Multiple-Choice-Fragen statt nur passivem Lesen. Wer
+          1.000+ Übungsfragen durcharbeitet, ist besser vorbereitet als jemand, der nur einen Kurs
+          besucht hat.
+        </p>
+
+        <h2>Wann lohnt sich ein Kurs trotzdem?</h2>
+        <p>
+          Ein Kurs kann sinnvoll sein, wenn du Schwierigkeiten hast, dich alleine zu motivieren,
+          oder wenn du den MedAT bereits einmal ohne Erfolg versucht hast und eine neue
+          Herangehensweise brauchst. Aber: Kein Kurs für 500-1.500 € ist nötig, um den MedAT zu
+          bestehen. Die besten Ergebnisse erzielen Kandidierende, die eigenständig und konsequent
+          üben.
+        </p>
+
+        <CTA text="Über 4.300 BMS-Fragen und alle KFF-Untertests — deine Alternative zum teuren Vorbereitungskurs." />
+      </>
+    ),
+  },
+  {
+    slug: "medat-welche-buecher",
+    title: "Welche Bücher für den MedAT? Die wichtigsten Materialien",
+    excerpt:
+      "Die besten Bücher und Lernmaterialien für die MedAT-Vorbereitung 2026 — sortiert nach Testteil und Fach.",
+    topic: "BMS",
+    readingTime: 2,
+    publishDate: "2026-03-16",
+    content: (
+      <>
+        <h2>Welche Bücher braucht man für den MedAT?</h2>
+        <p>
+          Für die BMS-Vorbereitung brauchst du <strong>ein solides Lehrbuch pro Fach</strong>: Für
+          Biologie eignen sich der Campbell oder Purves (Kurzversion reicht), für Chemie ein
+          Grundlagen-Lehrbuch wie Mortimer oder Chemie-Basics, für Physik eine gute Formelsammlung
+          mit Erklärungen, und für Mathematik reicht ein Oberstufen-Buch. Ergänzend dazu brauchst du
+          eine <strong>Online-Fragensammlung mit 4.000+ Übungsfragen</strong> im MedAT-Format.
+        </p>
+
+        <h2>Offizielle Materialien nicht vergessen</h2>
+        <p>
+          Die MedUnis veröffentlichen jedes Jahr <strong>offizielle Beispielhefte</strong> (sog.
+          Informationsbroschüren) für alle Testteile — diese sind kostenlos und absolut
+          prüfungsrelevant. Dazu kommt die <strong>offizielle Stichwortliste</strong>, die genau
+          vorgibt, welche BMS-Themen geprüft werden können. Beides findest du auf den Websites der
+          MedUnis. Arbeite die Stichwortliste systematisch ab.
+        </p>
+
+        <h2>Online-Plattformen als Ergänzung</h2>
+        <p>
+          Bücher allein reichen nicht — du musst das Gelernte aktiv anwenden. Eine gute
+          Online-Plattform bietet dir tausende Übungsfragen im echten MedAT-Format (5 Optionen, eine
+          richtig), KFF-Training (Zahlenfolgen, Implikationen, Wortflüssigkeit, Figuren
+          zusammensetzen) und Prüfungssimulationen unter Zeitdruck. So trainierst du nicht nur
+          Wissen, sondern auch Geschwindigkeit und Stressresistenz.
+        </p>
+
+        <CTA text="Über 4.300 BMS-Fragen, alle KFF-Untertests und realistische Prüfungssimulationen — jetzt gratis starten." />
+      </>
+    ),
+  },
+  {
+    slug: "medat-bms-gewichtung",
+    title: "Wie viel zählt der BMS beim MedAT? Gewichtung aller Testteile",
+    excerpt:
+      "BMS, KFF, TV, SEK — so sind die MedAT-Testteile gewichtet und so solltest du deine Lernzeit verteilen.",
+    topic: "BMS",
+    readingTime: 2,
+    publishDate: "2026-03-16",
+    content: (
+      <>
+        <h2>Wie viel zählt der BMS beim MedAT?</h2>
+        <p>
+          Der BMS (Basiskenntnistest Medizinische Studien) zählt <strong>40 %</strong> der
+          MedAT-Gesamtwertung. Damit ist er gemeinsam mit dem KFF der gewichtigste Testteil. Die
+          vollständige Gewichtung: <strong>BMS 40 %, KFF 40 %, TV 10 %, SEK 10 %</strong>. Das
+          bedeutet: BMS und KFF machen zusammen 80 % deiner Note aus — hier entscheidet sich dein
+          Studienplatz.
+        </p>
+
+        <h2>Was bedeutet das für die Vorbereitung?</h2>
+        <p>
+          Du solltest deine Lernzeit grob an der Gewichtung orientieren. Investiere den Großteil in{" "}
+          <strong>BMS</strong> (Biologie, Chemie, Physik, Mathematik) und <strong>KFF</strong>{" "}
+          (Zahlenfolgen, Figuren zusammensetzen, Wortflüssigkeit, Implikationen, Gedächtnis und
+          Merkfähigkeit). TV und SEK sind zwar nicht unwichtig, aber mit jeweils nur 10 % Gewichtung
+          sollten sie nicht den Schwerpunkt deiner Vorbereitung bilden.
+        </p>
+
+        <h2>BMS-Fächer im Detail</h2>
+        <p>
+          Innerhalb des BMS werden Biologie, Chemie, Physik und Mathematik geprüft — jeweils als
+          Multiple-Choice mit 5 Antwortoptionen (eine richtig). Die Fragen orientieren sich an der
+          offiziellen Stichwortliste der MedUnis. Erfahrungsgemäß sind Biologie und Chemie
+          umfangreicher, während Physik und Mathematik weniger Fragen haben, aber oft als
+          schwieriger empfunden werden.
+        </p>
+
+        <CTA text="Trainiere alle vier BMS-Fächer mit über 4.300 Übungsfragen im echten MedAT-Format." />
+      </>
+    ),
+  },
 ];

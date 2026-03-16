@@ -18,10 +18,12 @@ const TOPIC_COLORS: Record<string, string> = {
 
 export default function BlogIndex() {
   usePageMeta({
-    title: "MedAT 2026 Lerntipps & Strategien",
+    title: "MedAT Lerntipps & Strategien",
+    ogTitle: "MedAT Lerntipps & Strategien | MedMaster Blog",
     description:
-      "Lerntipps, Strategien und Expertenwissen für deine MedAT 2026 Vorbereitung. BMS-Fehler vermeiden, KFF trainieren, Lernplan erstellen.",
+      "30+ Artikel zu MedAT-Vorbereitung, BMS-Tipps, KFF-Training und Prüfungsstrategien. Kostenlos.",
     canonical: "https://medmaster.at/blog",
+    ogImage: "https://medmaster.at/og-image.png",
   });
 
   const [nlEmail, setNlEmail] = useState("");

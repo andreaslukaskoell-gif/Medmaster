@@ -23,7 +23,9 @@ CC BY-SA: bio-membrantransport.svg, bio-endosymbiose.svg, bio-selektionstypen.sv
 bio-hardy-weinberg.svg, bio-hominiden-evolution.svg, bio-plazenta.svg,
 bio-zellatmung.svg, bio-dominanz-kodominanz.svg, bio-tumorgenetik-hallmarks.svg,
 bio-pcr-gentechnik.svg, bio-amniozentese.png, bio-oekologische-pyramide.svg,
-bio-oekologische-nische.svg, bio-symbiose-typen.svg, bio-populationswachstum.svg
+bio-oekologische-nische.svg, bio-symbiose-typen.svg, bio-populationswachstum.svg,
+bio-stickstoffkreislauf.svg (Cicle del nitrogen de.svg, Johann Dréo/Burkhard),
+bio-wasserkreislauf.svg (Water cycle diagram.svg), bio-phosphorkreislauf.png (Bonniemf)
 
 CC BY: bio-bindegewebe-typen.jpg (OpenStax), bio-erbgang-autosomal.svg
 

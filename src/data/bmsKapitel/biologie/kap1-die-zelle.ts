@@ -267,6 +267,21 @@ Dieses Phänomen nennt sich **Emergenz** (von lat. *emergere* = hervorkommen): D
           difficulty: 2,
           tags: ["typ-k", "kennzeichen des lebens", "homöostase", "rückkopplung"],
         },
+        {
+          question: "Welche der folgenden Aussagen über die Kennzeichen des Lebens ist FALSCH?",
+          options: [
+            "Alle Lebewesen besitzen einen Stoffwechsel, der Energie aus der Umgebung aufnimmt und umwandelt",
+            "Fortpflanzung ist ein Kennzeichen des Lebens, das sowohl ungeschlechtlich als auch geschlechtlich erfolgen kann",
+            "Homöostase bedeutet, dass lebende Systeme aktiv ein inneres Gleichgewicht aufrechterhalten",
+            "Positive Rückkopplung ist der häufigste Mechanismus zur Aufrechterhaltung der Homöostase",
+            "Evolution durch natürliche Selektion ermöglicht die Anpassung von Populationen an veränderte Umweltbedingungen",
+          ],
+          correctIndex: 3,
+          explanation:
+            "Aussage D ist falsch. Negative Rückkopplung (nicht positive) ist der häufigste Mechanismus der Homöostase — der Effekt wirkt dem Auslöser entgegen und stabilisiert den Sollwert (z. B. Thermoregulation, Blutzuckerregulation). Positive Rückkopplung verstärkt die Abweichung und kommt nur in Sonderfällen vor (z. B. Blutgerinnung, Geburtswehen). Die übrigen Aussagen sind korrekt.",
+          difficulty: 2,
+          tags: ["falsch-aussage", "kennzeichen des lebens", "homöostase"],
+        },
       ],
     },
 
@@ -824,6 +839,21 @@ Ein klinisch wichtiges Beispiel für Glykokalix-Strukturen sind die **ABO-Blutgr
           difficulty: 3,
           tags: ["typ-k", "zellmembran", "flüssig-mosaik-modell", "cholesterin"],
         },
+        {
+          question: "Welche der folgenden Aussagen über die Zellmembran ist FALSCH?",
+          options: [
+            "Cholesterin erhöht die Membranfluidität bei niedrigen Temperaturen, indem es die Kristallisation der Fettsäureketten verhindert",
+            "Integrale Membranproteine können die Lipiddoppelschicht vollständig durchspannen (Transmembranproteine)",
+            "Die Glykokalyx befindet sich auf der extrazellulären Seite der Membran und dient der Zellerkennung",
+            "Ungesättigte Fettsäuren in den Phospholipiden verringern die Membranfluidität, weil ihre Knicke die Packung verdichten",
+            "Laterale Diffusion ist die häufigste Bewegungsform der Membranlipide",
+          ],
+          correctIndex: 3,
+          explanation:
+            "Aussage D ist falsch. Ungesättigte Fettsäuren erhöhen die Membranfluidität (nicht verringern), weil ihre cis-Doppelbindungen Knicke erzeugen, die eine dichte Packung verhindern. Dadurch entsteht mehr Raum zwischen den Lipiden und die Membran wird fluider. Gesättigte Fettsäuren dagegen packen dicht und machen die Membran starrer. Die übrigen Aussagen sind korrekt.",
+          difficulty: 2,
+          tags: ["falsch-aussage", "zellmembran", "membranfluidität"],
+        },
       ],
     },
 
@@ -1082,6 +1112,16 @@ Na⁺ strömt in die Zelle, während ein anderes Ion **heraus** transportiert wi
             "Aussagen 1, 3 und 4 sind korrekt. Aussage 2 ist falsch — Osmose ist ein passiver Prozess (Wasser folgt dem osmotischen Gradienten ohne Energieaufwand). Aussage 5 ist falsch — Aquaporine sind spezifische Wasserkanäle, nicht Glucosetransporter (GLUT-Transporter transportieren Glucose).",
           difficulty: 2,
           tags: ["typ-k", "membrantransport", "osmose", "na-k-atpase"],
+        },
+        {
+          question:
+            "Eine Lösung enthält 0,1 mol/L NaCl. NaCl dissoziiert vollständig in Na⁺ und Cl⁻. Welche Osmolarität hat die Lösung?",
+          options: ["50 mosmol/L", "100 mosmol/L", "200 mosmol/L", "400 mosmol/L", "150 mosmol/L"],
+          correctIndex: 2,
+          explanation:
+            "Rechnung: NaCl dissoziiert in 2 Teilchen (Na⁺ + Cl⁻). Osmolarität = Molarität × Anzahl Teilchen = 0,1 mol/L × 2 = 0,2 osmol/L = 200 mosmol/L. Typische Fehler: 100 mosmol/L (Dissoziation vergessen), 400 mosmol/L (×4 statt ×2), 50 mosmol/L (÷2 statt ×2).",
+          difficulty: 2,
+          tags: ["typ-m", "rechenfrage", "osmolarität", "membrantransport"],
         },
       ],
     },
@@ -1366,6 +1406,21 @@ Das **glatte ER (gER)** hat keine Ribosomen und übernimmt andere Aufgaben als d
             "Aussagen 1, 3 und 4 sind korrekt. Aussage 2 ist falsch — Lysosomen haben einen sauren pH von ca. 4,5 (nicht neutral), der für die sauren Hydrolasen optimal ist. Aussage 5 ist falsch — Peroxisomen sind von einer einfachen Membran umgeben (Doppelmembran haben Mitochondrien und der Zellkern).",
           difficulty: 2,
           tags: ["typ-k", "organellen", "lysosomen", "mitochondrien", "golgi"],
+        },
+        {
+          question: "Welche der folgenden Aussagen über Zellorganellen ist FALSCH?",
+          options: [
+            "Mitochondrien besitzen eine Doppelmembran und eigene ringförmige DNA",
+            "Das raue ER ist mit Ribosomen besetzt und synthetisiert sekretorische Proteine",
+            "Lysosomen enthalten saure Hydrolasen und haben einen pH-Wert von ca. 4,5",
+            "Peroxisomen bauen Fettsäuren durch β-Oxidation ab und sind von einer Doppelmembran umgeben",
+            "Der Golgi-Apparat modifiziert und sortiert Proteine, die vom ER kommen",
+          ],
+          correctIndex: 3,
+          explanation:
+            "Aussage D ist falsch. Peroxisomen sind von einer einfachen (Einzel-)Membran umgeben, nicht von einer Doppelmembran. Doppelmembranen besitzen nur Mitochondrien, Chloroplasten und der Zellkern. Peroxisomen bauen zwar tatsächlich sehr langkettige Fettsäuren (>C22) durch β-Oxidation ab, aber die Aussage über die Doppelmembran ist der typische MedAT-Fehler. Die übrigen Aussagen sind korrekt.",
+          difficulty: 2,
+          tags: ["falsch-aussage", "organellen", "peroxisomen", "doppelmembran"],
         },
       ],
       altfrage: {
@@ -1922,6 +1977,21 @@ Die Schwesterchromatiden trennen sich in jeder haploiden Zelle. Ergebnis: **4 ha
           difficulty: 3,
           tags: ["typ-k", "zellteilung", "meiose", "mitose", "non-disjunction"],
         },
+        {
+          question: "Welche der folgenden Aussagen über die Zellteilung ist FALSCH?",
+          options: [
+            "Crossing-over in der Prophase I der Meiose erhöht die genetische Variabilität",
+            "In der Anaphase der Mitose werden Schwesterchromatiden getrennt",
+            "Nach der Meiose II entstehen haploide Zellen mit Ein-Chromatid-Chromosomen",
+            "Non-disjunction in der Meiose I führt dazu, dass nur 2 der 4 resultierenden Keimzellen betroffen sind",
+            "Der Spindelapparat besteht aus Mikrotubuli und ist für die Chromosomentrennung verantwortlich",
+          ],
+          correctIndex: 3,
+          explanation:
+            "Aussage D ist falsch. Non-disjunction in der Meiose I betrifft alle 4 resultierenden Keimzellen — 2 Zellen erhalten ein Chromosom zu viel, 2 Zellen eines zu wenig. Nur bei Non-disjunction in der Meiose II sind lediglich 2 der 4 Keimzellen betroffen (die anderen 2 sind normal). Diese Unterscheidung ist eine klassische MedAT-Falle. Die übrigen Aussagen sind korrekt.",
+          difficulty: 3,
+          tags: ["falsch-aussage", "zellteilung", "non-disjunction", "meiose"],
+        },
       ],
       altfrage: {
         text: "Eine Zelle in der Metaphase I der Meiose unterscheidet sich von einer Zelle in der Metaphase der Mitose dadurch, dass...",
@@ -2303,6 +2373,31 @@ Pyruvat + NADH → Laktat + NAD⁺ [Laktat-Dehydrogenase (LDH)]
             "Aussagen 1, 3 und 4 sind korrekt. Aussage 2 ist falsch — FADH₂ speist Elektronen in Komplex II (nicht Komplex I) ein; NADH speist in Komplex I ein. Aussage 5 ist falsch — im Citratzyklus entstehen pro Acetyl-CoA 3 NADH (nicht 4), dazu 1 FADH₂ und 1 GTP.",
           difficulty: 3,
           tags: ["typ-k", "energiestoffwechsel", "glykolyse", "atmungskette", "citratzyklus"],
+        },
+        {
+          question:
+            "Wie viele ATP-Moleküle werden bei der vollständigen aeroben Oxidation von 1 Mol Glucose maximal gewonnen? (Moderne Bilanz mit P/O-Verhältnissen: NADH ≈ 2,5 ATP, FADH₂ ≈ 1,5 ATP)",
+          options: ["2 ATP", "12 ATP", "30–32 ATP", "36–38 ATP", "40 ATP"],
+          correctIndex: 2,
+          explanation:
+            "Rechnung: Glykolyse: 2 ATP (netto) + 2 NADH (× 2,5 = 5 ATP). Pyruvat-DH: 2 NADH (× 2,5 = 5 ATP). Citratzyklus (×2): 2 GTP (≈ 2 ATP) + 6 NADH (× 2,5 = 15 ATP) + 2 FADH₂ (× 1,5 = 3 ATP). Summe: 2 + 5 + 5 + 2 + 15 + 3 = 32 ATP (maximal). Je nach Shuttle-System für zytosolisches NADH: 30–32 ATP. Ältere Lehrbücher nennen 36–38 ATP (mit alten P/O-Werten 3 bzw. 2). 2 ATP = nur Glykolyse (anaerob). 12 ATP = zu niedrig.",
+          difficulty: 2,
+          tags: ["typ-m", "rechenfrage", "atp-bilanz", "energiestoffwechsel"],
+        },
+        {
+          question: "Welche der folgenden Aussagen über den Energiestoffwechsel ist FALSCH?",
+          options: [
+            "Die Glykolyse findet im Zytoplasma statt und benötigt keinen Sauerstoff",
+            "NADH aus der Glykolyse speist seine Elektronen direkt in Komplex I der Atmungskette ein",
+            "Der Citratzyklus findet in der mitochondrialen Matrix statt",
+            "Die ATP-Synthase wird durch den Protonengradienten über der inneren Mitochondrienmembran angetrieben",
+            "Cyanid blockiert Komplex IV der Atmungskette und verhindert so die Elektronenübertragung auf O₂",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Aussage B ist falsch. NADH aus der Glykolyse entsteht im Zytoplasma und kann die innere Mitochondrienmembran nicht direkt passieren. Es muss über Shuttle-Systeme (Malat-Aspartat-Shuttle → NADH → Komplex I, oder Glycerin-3-Phosphat-Shuttle → FADH₂ → Komplex II) in die Mitochondrien übertragen werden. Nur mitochondriales NADH speist direkt in Komplex I ein. Die übrigen Aussagen sind korrekt.",
+          difficulty: 3,
+          tags: ["falsch-aussage", "energiestoffwechsel", "atmungskette", "shuttle-systeme"],
         },
       ],
       altfrage: {

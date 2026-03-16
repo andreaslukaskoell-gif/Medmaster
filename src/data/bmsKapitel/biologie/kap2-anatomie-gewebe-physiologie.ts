@@ -226,6 +226,21 @@ Sekretionsmechanismen exokriner Drüsen:
           difficulty: 2,
           tags: ["typ-k", "epithelgewebe", "tight junctions", "urothel"],
         },
+        {
+          question: "Welche der folgenden Aussagen über Epithelgewebe ist FALSCH?",
+          options: [
+            "Epithelien sind avaskulär und werden durch Diffusion aus dem darunterliegenden Bindegewebe ernährt",
+            "Tight Junctions bilden eine parazellulär dichte Barriere und haben eine Fence-Funktion zur Aufrechterhaltung der Zellpolarität",
+            "Mehrreihiges Flimmerepithel ist mehrschichtig, da die Zellkerne auf verschiedenen Höhen liegen und nicht alle Zellen die Basalmembran berühren",
+            "Gap Junctions bestehen aus Connexin-Proteinen und ermöglichen den direkten Austausch von Ionen und kleinen Molekülen zwischen Nachbarzellen",
+            "Das Urothel (Übergangsepithel) der Harnblase kann sich bei Füllung dehnen, wobei die Schirmzellen an der Oberfläche abflachen",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Aussage C ist falsch. Mehrreihiges (pseudostratifiziertes) Flimmerepithel ist einschichtig — ALLE Zellen berühren die Basalmembran, nur die Kerne liegen auf unterschiedlichen Höhen, was den Eindruck von Mehrschichtigkeit erweckt. Echte Mehrschichtigkeit bedeutet, dass innere Zellen keinen Basalmembrankontakt haben. Dies ist eine klassische MedAT-Falle. Die übrigen Aussagen sind korrekt.",
+          difficulty: 2,
+          tags: ["falsch-aussage", "epithelgewebe", "mehrreihiges epithel"],
+        },
       ],
     },
     {
@@ -729,6 +744,21 @@ Kein Troponin! Ca2+ bindet **Calmodulin** -> aktiviert **MLCK** (Myosin-Leichtke
             "Aussagen 1, 2, 3 und 5 sind korrekt. Aussage 4 ist falsch — Ca²⁺ bindet an Troponin C (nicht Myosin), wodurch Tropomyosin die Bindungsstellen auf Aktin freigibt und der Myosinkopf an Aktin binden kann. Der Herzmuskel kann keinen Tetanus entwickeln, weil die absolute Refraktärzeit fast so lang ist wie die Kontraktion.",
           difficulty: 3,
           tags: ["typ-k", "muskelgewebe", "sarkomer", "herzmuskel", "kontraktion"],
+        },
+        {
+          question: "Welche der folgenden Aussagen über Muskelgewebe ist FALSCH?",
+          options: [
+            "Skelettmuskulatur kann tetanisch kontrahieren, da die Refraktärzeit kürzer ist als die Kontraktionsdauer",
+            "Die A-Bande im Sarkomer bleibt bei der Kontraktion konstant, während I-Bande und H-Zone kürzer werden",
+            "Herzmuskelzellen sind über Gap Junctions in den Glanzstreifen (Disci intercalares) elektrisch gekoppelt",
+            "Calcium bindet bei der Kontraktion direkt an den Myosinkopf und löst dadurch den Kraftschlag aus",
+            "ATP wird benötigt, um den Myosinkopf nach dem Kraftschlag von Aktin zu lösen (Totenstarre = ATP-Mangel)",
+          ],
+          correctIndex: 3,
+          explanation:
+            "Aussage D ist falsch. Calcium bindet nicht an Myosin, sondern an Troponin C. Dadurch verschiebt sich Tropomyosin und gibt die Bindungsstellen auf Aktin frei, sodass der Myosinkopf an Aktin andocken kann. Der Kraftschlag wird durch die Konformationsänderung des Myosinkopfes ausgelöst (ADP + Pi-Freisetzung). Dies ist ein häufiger MedAT-Fehler — Ca2+ steuert die Kontraktion über Troponin, nicht über Myosin. Die übrigen Aussagen sind korrekt.",
+          difficulty: 2,
+          tags: ["falsch-aussage", "muskelgewebe", "kontraktion", "troponin"],
         },
       ],
     },
@@ -2241,6 +2271,21 @@ Normaler Blutdruck: **120/80 mmHg** (systolisch/diastolisch). Hypertonie: ≥140
           difficulty: 2,
           tags: ["arterien", "venen", "kapillaren"],
         },
+        {
+          question: "Welche der folgenden Aussagen über das Herz-Kreislauf-System ist FALSCH?",
+          options: [
+            "Der Sinusknoten liegt im rechten Vorhof und ist der primäre Schrittmacher des Herzens mit einer Frequenz von 60–80/min",
+            "Der linke Ventrikel hat eine dickere Wand als der rechte, da er gegen den höheren Systemwiderstand pumpen muss",
+            "Lungenarterien führen sauerstoffreiches Blut von der Lunge zum linken Vorhof",
+            "Die AV-Klappen (Trikuspidal- und Mitralklappe) verhindern den Rückfluss von Blut aus den Ventrikeln in die Vorhöfe",
+            "Der Frank-Starling-Mechanismus beschreibt, dass erhöhte Vordehnung zu stärkerer Kontraktion führt",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Aussage C ist falsch. Lungenarterien führen sauerstoffARMES Blut vom rechten Ventrikel zur Lunge — nicht sauerstoffreiches Blut. Sauerstoffreiches Blut fließt über die Lungenvenen von der Lunge zum linken Vorhof. Die Verwechslung von Lungenarterien (O2-arm) und Lungenvenen (O2-reich) ist eine der häufigsten MedAT-Fallen, da hier die Begriffe Arterie/Vene nicht dem O2-Gehalt entsprechen, sondern der Flussrichtung (Arterie = vom Herzen weg, Vene = zum Herzen hin). Die übrigen Aussagen sind korrekt.",
+          difficulty: 2,
+          tags: ["falsch-aussage", "herz-kreislauf", "lungenkreislauf"],
+        },
       ],
 
       merksätze: [
@@ -2557,6 +2602,21 @@ Das Rhesus-System wird durch das **D-Antigen** definiert: **Rh+ (~85 %)** = D-An
             "**Richtig (C):** Das AB0-System basiert auf **Antigenen** (auf Erythrozyten) und **Antikörpern** (im Plasma):\n\n| Blutgruppe | Antigene | Antikörper | Transfusion möglich von |\n|------------|----------|------------|------------------------|\n| **A** | A | Anti-B | A, 0 |\n| **B** | B | Anti-A | B, 0 |\n| **AB** | A + B | Keine | A, B, AB, 0 (**Universalempfänger**) |\n| **0** | Keine | Anti-A + Anti-B | nur 0 (aber **Universalspender**) |\n\n⭐ **Wichtig:**\n- **AB** hat **keine Antikörper** → kann alle Blutgruppen empfangen (Universalempfänger)\n- **0** hat **keine Antigene** → kann an alle Blutgruppen gespendet werden (Universalspender)\n\n**Falsch (A):** Blutgruppe A hat **Antigen A** (nicht B) auf Erythrozyten und **Anti-B** (nicht Anti-A) im Plasma. (A gegen B, B gegen A).\n\n**Falsch (B):** Blutgruppe **AB** (nicht 0) ist der Universalempfänger (keine Antikörper). Blutgruppe 0 hat **Anti-A + Anti-B** im Plasma und ist der **Universalspender** (keine Antigene auf Erythrozyten).\n\n**Falsch (D):** AB0-Antikörper sind **natürlich vorhanden** (ohne vorherige Sensibilisierung) ab dem 6. Lebensmonat. Grund: Kreuzreaktivität mit ähnlichen Antigenen auf Bakterien (intestinale Flora). Im Gegensatz dazu entstehen **Rhesus-Antikörper** erst nach Sensibilisierung.\n\n**Falsch (E):** Bei inkompatiblen Transfusionen (z. B. B-Blut an A-Empfänger → Anti-B bindet B-Antigene) kommt es zu einer **akuten hämolytischen Transfusionsreaktion**:\n- Hämolyse (intravaskulär, IgM-vermittelt)\n- **Symptome:** Fieber, Schüttelfrost, Rückenschmerzen, Dyspnoe, Hypotonie, Schock\n- **Komplikationen:** Nierenversagen (Hb-Zylinder), DIC (Disseminierte intravasale Gerinnung)\n- **Notfall!**",
           difficulty: 2,
           tags: ["ab0-system", "blutgruppen", "antigene"],
+        },
+        {
+          question: "Welche der folgenden Aussagen über das Blut ist FALSCH?",
+          options: [
+            "Erythrozyten sind kernlose, bikonkave Scheiben mit einer Lebensdauer von ca. 120 Tagen",
+            "Die Linksverschiebung im Differentialblutbild zeigt vermehrt unreife stabkernige Neutrophile und deutet auf eine akute bakterielle Infektion hin",
+            "AB0-Antikörper entstehen erst nach vorheriger Sensibilisierung durch Transfusion oder Kontakt mit Fremdblut",
+            "Thrombozyten stammen von Megakaryozyten im Knochenmark ab und haben eine Lebensdauer von ca. 10 Tagen",
+            "Der Bohr-Effekt beschreibt, dass erhöhtes CO₂ und erniedrigter pH die O₂-Abgabe des Hämoglobins im Gewebe fördern",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Aussage C ist falsch. AB0-Antikörper (Anti-A, Anti-B) sind natürlich vorhanden — sie entstehen OHNE vorherige Sensibilisierung ab dem 6. Lebensmonat durch Kreuzreaktivität mit bakteriellen Antigenen der Darmflora (sog. irreguläre Isoagglutinine). Im Gegensatz dazu entstehen Rhesus-Antikörper (Anti-D) erst NACH Sensibilisierung (Transfusion oder Schwangerschaft). Diese Unterscheidung ist prüfungsrelevant. Die übrigen Aussagen sind korrekt.",
+          difficulty: 3,
+          tags: ["falsch-aussage", "blut", "ab0-system", "antikörper"],
         },
       ],
 
@@ -3345,6 +3405,21 @@ Das **Atemzentrum** liegt in der **Medulla oblongata** und im **Pons**. Es gener
             "**Richtig (B):** CO₂-Transport im Blut erfolgt über **3 Mechanismen**:\n\n**1. Bikarbonat (HCO₃⁻) — ~70% (wichtigster Mechanismus):**\n- In Erythrozyten: CO₂ + H₂O ⇌ H₂CO₃ ⇌ H⁺ + HCO₃⁻ (katalysiert durch **Carboanhydrase**)\n- **HCO₃⁻** diffundiert aus Erythrozyten ins Plasma\n- **Chlorid-Shift:** Cl⁻ diffundiert ins Erythrozyt (Cl⁻/HCO₃⁻-Austauscher), um Ladungsausgleich zu wahren\n\n**2. Carbaminohämoglobin — ~23%:**\n- CO₂ bindet direkt an **Aminogruppen der Globin-Ketten** (nicht an Häm-Gruppe!)\n- Formel: Hb-NH₂ + CO₂ ⇌ Hb-NH-COO⁻ + H⁺\n\n**3. Physikalisch gelöst — ~7%:**\n- CO₂ gelöst im Plasma (bestimmt pCO₂)\n\n**Falsch (A):** Nur ~7% (nicht 70%) des CO₂ werden physikalisch gelöst transportiert. ~70% werden als **HCO₃⁻** transportiert.\n\n**Falsch (C):** Carboanhydrase katalysiert die Reaktion **in Erythrozyten** (nicht Alveolen), um CO₂ → HCO₃⁻ umzuwandeln (Transport). In der Lunge läuft die Reaktion **rückwärts** (HCO₃⁻ → CO₂), um CO₂ abzuatmen.\n\n**Falsch (D):** Der **Chlorid-Shift** (Hamburger-Shift) beschreibt den Austausch von **Cl⁻** (ins Erythrozyt) gegen **HCO₃⁻** (aus Erythrozyt), **nicht** Na⁺ gegen Cl⁻. Zweck: Ladungsausgleich.\n\n**Falsch (E):** **Haldane-Effekt:** **Umgekehrt!** **Desoxygeniertes Hb** bindet **mehr CO₂** (und mehr H⁺) als oxygeniertes Hb.\n- **Gewebe:** O₂ ↓ → Hb desaturiert → CO₂-Bindung ↑ (fördert CO₂-Aufnahme)\n- **Lunge:** O₂ ↑ → Hb saturiert → CO₂-Abgabe ↑ (erleichtert CO₂-Elimination)",
           difficulty: 3,
           tags: ["co2-transport", "bikarbonat", "carboanhydrase"],
+        },
+        {
+          question: "Welche der folgenden Aussagen über das Atmungssystem ist FALSCH?",
+          options: [
+            "Surfactant wird von Typ-II-Pneumozyten produziert und senkt die Oberflächenspannung in den Alveolen",
+            "Der wichtigste Atemantrieb sind die zentralen Chemorezeptoren in der Medulla, die auf pCO₂-Erhöhung im Liquor reagieren",
+            "Typ-I-Pneumozyten produzieren Surfactant und sind für den Gasaustausch verantwortlich",
+            "Die Inspiration erfolgt aktiv durch Kontraktion von Diaphragma und äußeren Interkostalmuskeln",
+            "Bei obstruktiven Lungenerkrankungen (COPD, Asthma) ist der Tiffeneau-Index (FEV1/FVC) erniedrigt (<70%)",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Aussage C ist falsch. Typ-I-Pneumozyten sind für den Gasaustausch zuständig (extrem flach, ~95% der Alveolaroberfläche), produzieren aber KEIN Surfactant. Surfactant wird ausschließlich von Typ-II-Pneumozyten produziert. Die Verwechslung der beiden Pneumozyten-Typen ist eine typische MedAT-Falle. Typ II sind kubisch, machen ~5% der Oberfläche aus und sind die Stammzellen der Alveolen. Die übrigen Aussagen sind korrekt.",
+          difficulty: 2,
+          tags: ["falsch-aussage", "atmung", "pneumozyten", "surfactant"],
         },
       ],
 

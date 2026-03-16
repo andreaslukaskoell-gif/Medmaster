@@ -30,6 +30,19 @@ function setCanonical(href: string) {
   link.href = href;
 }
 
+function setHreflang(hreflang: string, href: string) {
+  let link = document.querySelector(
+    `link[rel="alternate"][hreflang="${hreflang}"]`
+  ) as HTMLLinkElement | null;
+  if (!link) {
+    link = document.createElement("link");
+    link.setAttribute("rel", "alternate");
+    link.setAttribute("hreflang", hreflang);
+    document.head.appendChild(link);
+  }
+  link.href = href;
+}
+
 export function usePageMeta(meta: PageMeta) {
   useEffect(() => {
     const prevTitle = document.title;
@@ -37,7 +50,12 @@ export function usePageMeta(meta: PageMeta) {
 
     setMetaTag("name", "description", meta.description);
 
-    if (meta.canonical) setCanonical(meta.canonical);
+    if (meta.canonical) {
+      setCanonical(meta.canonical);
+      setHreflang("de-AT", meta.canonical);
+      setHreflang("de", meta.canonical);
+      setHreflang("x-default", meta.canonical);
+    }
 
     const ogTitle = meta.ogTitle ?? meta.title;
     const ogDesc = meta.ogDescription ?? meta.description;

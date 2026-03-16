@@ -24,6 +24,8 @@ export default function BlogArticle() {
     description: article?.excerpt ?? "",
     canonical: article ? `https://medmaster.at/blog/${article.slug}` : undefined,
     ogType: "article",
+    ogImage: "https://medmaster.at/og-image.png",
+    ogTitle: article ? `${article.title} | MedMaster` : undefined,
   });
 
   useEffect(() => {
@@ -32,12 +34,12 @@ export default function BlogArticle() {
     }
   }, [article]);
 
-  // JSON-LD structured data
+  // JSON-LD structured data (Article + BreadcrumbList)
   useEffect(() => {
     if (!article) return;
-    const script = document.createElement("script");
-    script.type = "application/ld+json";
-    script.text = JSON.stringify({
+    const articleScript = document.createElement("script");
+    articleScript.type = "application/ld+json";
+    articleScript.text = JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Article",
       headline: article.title,
@@ -55,9 +57,29 @@ export default function BlogArticle() {
       },
       mainEntityOfPage: `https://medmaster.at/blog/${article.slug}`,
     });
-    document.head.appendChild(script);
+    document.head.appendChild(articleScript);
+
+    const breadcrumbScript = document.createElement("script");
+    breadcrumbScript.type = "application/ld+json";
+    breadcrumbScript.text = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "MedMaster", item: "https://medmaster.at" },
+        { "@type": "ListItem", position: 2, name: "Blog", item: "https://medmaster.at/blog" },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: article.title,
+          item: `https://medmaster.at/blog/${article.slug}`,
+        },
+      ],
+    });
+    document.head.appendChild(breadcrumbScript);
+
     return () => {
-      document.head.removeChild(script);
+      document.head.removeChild(articleScript);
+      document.head.removeChild(breadcrumbScript);
     };
   }, [article]);
 
@@ -101,6 +123,25 @@ export default function BlogArticle() {
 
       {/* Article */}
       <main className="max-w-3xl mx-auto px-4 sm:px-6 pt-8 pb-16">
+        {/* Breadcrumb */}
+        <nav aria-label="Breadcrumb" className="mb-4 text-xs text-[var(--muted)]">
+          <ol className="flex items-center gap-1">
+            <li>
+              <Link to="/" className="hover:text-[var(--text-primary)] transition-colors">
+                MedMaster
+              </Link>
+            </li>
+            <li aria-hidden="true">›</li>
+            <li>
+              <Link to="/blog" className="hover:text-[var(--text-primary)] transition-colors">
+                Blog
+              </Link>
+            </li>
+            <li aria-hidden="true">›</li>
+            <li className="text-[var(--text-secondary)] truncate max-w-[300px]">{article.title}</li>
+          </ol>
+        </nav>
+
         {/* Back link */}
         <Link
           to="/blog"

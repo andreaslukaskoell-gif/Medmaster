@@ -168,6 +168,16 @@ Ein **Chromosom** ist ein langer DNA-Faden, der zusammen mit **Histonen** (Verpa
           difficulty: 2,
           tags: ["typ-k", "dna-struktur", "chargaff", "histone", "basenpaarung"],
         },
+        {
+          question:
+            "In einer DNA-Probe beträgt der Adenin-Anteil 22 %. Wie hoch ist der Guanin-Anteil?",
+          options: ["22 %", "28 %", "44 %", "56 %", "11 %"],
+          correctIndex: 1,
+          explanation:
+            "Nach den **Chargaff-Regeln** gilt: A = T und G = C. Wenn A = 22 %, dann T = 22 %. Zusammen: A + T = 44 %. Der Rest entfällt auf G + C = 100 % − 44 % = 56 %. Da G = C, ist **G = 56 % / 2 = 28 %**. Typischer Rechenfehler: 22 % (A mit G verwechselt) oder 11 % (56 % durch 4 statt 2 geteilt).",
+          difficulty: 2,
+          tags: ["typ-m", "rechenfrage", "chargaff", "basenpaarung"],
+        },
       ],
       altfrage: {
         text: "In einer DNA-Probe beträgt der Adenin-Anteil 32 %. Wie hoch ist der Guanin-Anteil?",
@@ -568,6 +578,21 @@ Der **Zellzyklus** umfasst die Vorbereitung der Zellteilung und die Teilung selb
           difficulty: 2,
           tags: ["typ-k", "meiose", "crossing-over", "nicht-disjunktion", "zellzyklus"],
         },
+        {
+          question: "Welche der folgenden Aussagen über den Zellzyklus ist FALSCH?",
+          options: [
+            "Die S-Phase der Interphase dient der DNA-Replikation, sodass jedes Chromosom danach aus zwei Schwesterchromatiden besteht",
+            "Der G1/S-Checkpoint wird durch Cyclin D/CDK4 kontrolliert und prüft, ob die Zelle für die DNA-Replikation bereit ist",
+            "Die DNA-Replikation findet in der M-Phase (Mitose) statt, um sicherzustellen, dass die Chromosomen korrekt aufgeteilt werden",
+            "p53 (Tumorsuppressor) kann den Zellzyklus am G1/S-Checkpoint arretieren, wenn DNA-Schäden vorliegen",
+            "Die G2-Phase dient der Vorbereitung auf die Mitose und der Kontrolle, ob die DNA-Replikation fehlerfrei abgeschlossen wurde",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Aussage C ist falsch. Die DNA-Replikation findet in der S-Phase der INTERPHASE statt, NICHT in der M-Phase. In der M-Phase (Mitose) werden die bereits replizierten Chromosomen auf die Tochterzellen verteilt. Die Verwechslung von S-Phase und M-Phase ist ein häufiger Fehler im MedAT. Die übrigen Aussagen sind korrekt.",
+          difficulty: 2,
+          tags: ["falsch-aussage", "zellzyklus", "s-phase", "dna-replikation"],
+        },
       ],
       altfrage: {
         text: "In welcher Phase der Meiose findet das Crossing-over statt?",
@@ -813,6 +838,16 @@ Nicht alle Merkmale folgen dem einfachen Mendel-Schema. Drei wichtige Phänomene
             "Aussagen 1, 3 und 4 sind korrekt. Die 1. Mendelsche Regel (Uniformitätsregel) besagt, dass alle F₁-Nachkommen reinerbiger Eltern uniform sind (1). Die 3. Regel gilt nur bei unabhängig vererbten Genen (3). Das dihybride Phänotyp-Verhältnis ist 9:3:3:1 (4). Aussage 2 ist falsch: 1:2:1 ist das Genotyp-Verhältnis, das Phänotyp-Verhältnis ist 3:1. Aussage 5 ist falsch: P(aa) bei Aa × Aa = 1/4 = 25 %, nicht 50 %.",
           difficulty: 2,
           tags: ["typ-k", "mendel", "spaltungsregel", "unabhängigkeitsregel", "dihybrid"],
+        },
+        {
+          question:
+            "Beide Eltern sind heterozygot für Mukoviszidose (Aa × Aa). Wie groß ist die Wahrscheinlichkeit, dass von 3 Kindern mindestens eines erkrankt (aa)?",
+          options: ["25,0 %", "42,2 %", "57,8 %", "75,0 %", "31,6 %"],
+          correctIndex: 2,
+          explanation:
+            "Schritt 1: P(ein Kind erkrankt) = P(aa) = 1/4 = 25 %. Schritt 2: P(ein Kind NICHT erkrankt) = 3/4 = 75 %. Schritt 3: P(keines von 3 Kindern erkrankt) = (3/4)³ = 27/64 ≈ 42,2 %. Schritt 4: P(mindestens eines erkrankt) = 1 − 27/64 = 37/64 ≈ **57,8 %**. Typischer Fehler: 25 % (Wahrscheinlichkeit nur für 1 Kind) oder 75 % (Gegenwahrscheinlichkeit für 1 Kind statt für 3).",
+          difficulty: 3,
+          tags: ["typ-m", "rechenfrage", "mendel", "wahrscheinlichkeit", "mukoviszidose"],
         },
       ],
       altfrage: {
@@ -1376,6 +1411,21 @@ Das kranke Allel ist **dominant** auf dem X-Chromosom. **Kranker Vater (X^A Y):*
           difficulty: 1,
           tags: ["stammbaum", "symbole", "konsanguinität"],
         },
+        {
+          question: "Welche der folgenden Aussagen über Erbgänge ist FALSCH?",
+          options: [
+            "Bei autosomal-rezessiven Erkrankungen sind häufig gesunde Eltern Überträger (heterozygot)",
+            "X-chromosomal rezessive Erkrankungen betreffen überwiegend Männer, da sie nur ein X-Chromosom besitzen",
+            "Bei autosomal-dominanten Erbgängen sind typischerweise beide Geschlechter gleich häufig betroffen",
+            "Bei X-chromosomal rezessiven Erkrankungen kann ein betroffener Vater die Krankheit direkt an seinen Sohn weitergeben",
+            "Konsanguinität (Verwandtenehe) erhöht das Risiko für autosomal-rezessive Erkrankungen",
+          ],
+          correctIndex: 3,
+          explanation:
+            "Aussage D ist falsch. Ein betroffener Vater (X^a Y) gibt sein X-Chromosom an seine TÖCHTER weiter (die dann Konduktorinnen sind), aber sein Y-Chromosom an seine Söhne. Daher kann ein Vater eine X-chromosomal rezessive Erkrankung NIE direkt an seinen Sohn vererben. Das typische Muster ist das Diagonal-Muster: betroffener Großvater -> Konduktorin-Tochter -> betroffener Enkel. Die übrigen Aussagen sind korrekt.",
+          difficulty: 2,
+          tags: ["falsch-aussage", "erbgänge", "x-chromosomal", "vererbung"],
+        },
       ],
       altfrage: {
         text: "Ein Paar bekommt eine Tochter mit Hämophilie A (X-chromosomal rezessiv). Was lässt sich über die Eltern sagen?",
@@ -1564,6 +1614,16 @@ Ein seltener Sonderfall: Menschen mit dem **Bombay-Phänotyp** (h/h) können das
             "Es gibt **6 Genotypen**: I^A I^A, I^A i, I^B I^B, I^B i, I^A I^B, ii. Diese ergeben **4 Phänotypen** (Blutgruppen): A, B, AB, 0. Der Unterschied zwischen Genotyp- und Phänotyp-Anzahl ist typisch bei Dominanz.",
           difficulty: 1,
           tags: ["ab0", "genotyp", "phänotyp"],
+        },
+        {
+          question:
+            "Eine Mutter hat Blutgruppe A (heterozygot: I^A i), der Vater hat Blutgruppe B (heterozygot: I^B i). Mit welcher Wahrscheinlichkeit hat ein Kind Blutgruppe 0?",
+          options: ["0 %", "25 %", "50 %", "75 %", "12,5 %"],
+          correctIndex: 1,
+          explanation:
+            "Punnett-Quadrat: Mutter gibt I^A oder i, Vater gibt I^B oder i. Vier gleich wahrscheinliche Kombinationen: I^A I^B (AB), I^A i (A), I^B i (B), ii (0). P(Blutgruppe 0) = P(ii) = **1/4 = 25 %**. Typischer Fehler: 0 % (vergessen, dass beide Eltern auch i weitergeben können) oder 50 % (nur den rezessiven Erbgang betrachtet).",
+          difficulty: 2,
+          tags: ["typ-m", "rechenfrage", "blutgruppe", "ab0", "punnett"],
         },
       ],
       altfrage: {
@@ -2088,6 +2148,21 @@ Vererbung bedeutet: Die DNA (Allele) wird über Keimzellen (Meiose) von Generati
             "Aussagen 1, 3 und 4 sind korrekt. Das Zentraldogma beschreibt DNA → RNA → Protein (1). Introns werden beim Spleißen entfernt, Exons bleiben in der reifen mRNA (3). AUG codiert für Methionin und dient als Startcodon (4). Aussage 2 ist falsch: Die Transkription findet bei Eukaryoten im Zellkern statt, nicht im Zytoplasma. Aussage 5 ist falsch: Die RNA-Polymerase benötigt keinen Primer — im Gegensatz zur DNA-Polymerase.",
           difficulty: 2,
           tags: ["typ-k", "genexpression", "transkription", "spleißen", "zentraldogma"],
+        },
+        {
+          question: "Welche der folgenden Aussagen über die Genexpression ist FALSCH?",
+          options: [
+            "Die Transkription wird bei Eukaryoten durch RNA-Polymerase II katalysiert und findet im Zellkern statt",
+            "Beim Spleißen werden Introns durch das Spleißosom entfernt und Exons zur reifen mRNA verbunden",
+            "Die RNA-Polymerase benötigt wie die DNA-Polymerase einen RNA-Primer, um die Transkription zu starten",
+            "Alternatives Spleißen ermöglicht es, aus einem Gen verschiedene mRNA-Varianten und damit verschiedene Proteine herzustellen",
+            "Die 5'-Cap-Struktur und der 3'-Poly-A-Schwanz schützen die mRNA vor Abbau und fördern den Export aus dem Zellkern",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Aussage C ist falsch. Die RNA-Polymerase benötigt KEINEN Primer — sie kann die Transkription de novo starten, indem sie direkt an den Promotor (z. B. TATA-Box bei Eukaryoten) bindet. Im Gegensatz dazu benötigt die DNA-Polymerase immer einen RNA-Primer (Primase synthetisiert diesen). Dies ist ein wichtiger Unterschied zwischen Replikation und Transkription. Die übrigen Aussagen sind korrekt.",
+          difficulty: 2,
+          tags: ["falsch-aussage", "genexpression", "transkription", "rna-polymerase"],
         },
       ],
       altfrage: {
