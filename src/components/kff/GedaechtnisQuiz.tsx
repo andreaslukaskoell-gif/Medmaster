@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState } from "react";
 import {
   ArrowLeft,
   ArrowRight,
@@ -34,8 +34,12 @@ import { useEffect } from "react";
 // GEDAECHTNIS & MERKFAEHIGKEIT (Allergiepässe) – MedAT 1:1
 // ==========================================
 
-let _currentGmPasses: AllergyPass[] = [];
-let _currentGmQuestions: GedaechtnisQuestion[] = [];
+// Persistent session object — const reference to mutable object survives React
+// re-renders and is more robust than top-level `let` reassignment.
+const _gmSession = {
+  passes: [] as AllergyPass[],
+  questions: [] as GedaechtnisQuestion[],
+};
 
 function AllergyPassCard({ pass }: { pass: AllergyPass }) {
   const initials = pass.name
@@ -124,16 +128,16 @@ export function GedaechtnisSetup({ onLearn, onBack }: { onLearn: () => void; onB
       const set = await getOneMerkfahigkeitSet();
       const seenIds = getKffSeenIdsForDomain("Gedächtnis");
       if (set && set.passes.length > 0 && set.questions.length > 0) {
-        _currentGmPasses = set.passes;
-        _currentGmQuestions = preferUnseen(set.questions, set.questions.length, seenIds);
+        _gmSession.passes = set.passes;
+        _gmSession.questions = preferUnseen(set.questions, set.questions.length, seenIds);
         onLearn();
       } else {
         const passes = generateAllergyPasses(8);
         const raw = generateGedaechtnisQuestionsFromPasses(passes, 25);
         const questions = filterValidGedaechtnisQuestions(raw);
         if (questions.length > 0) {
-          _currentGmPasses = passes;
-          _currentGmQuestions = preferUnseen(questions, questions.length, seenIds);
+          _gmSession.passes = passes;
+          _gmSession.questions = preferUnseen(questions, questions.length, seenIds);
           onLearn();
         } else {
           setDbError("Keine gültigen Fragen generiert. Bitte später erneut versuchen.");
@@ -147,11 +151,11 @@ export function GedaechtnisSetup({ onLearn, onBack }: { onLearn: () => void; onB
   };
 
   const startTraining = () => {
-    _currentGmPasses = generateAllergyPasses(passCount);
-    const raw = generateGedaechtnisQuestionsFromPasses(_currentGmPasses, 25);
-    _currentGmQuestions = filterValidGedaechtnisQuestions(raw);
-    if (_currentGmQuestions.length < raw.length && import.meta.env?.DEV) {
-      logPoolWarning("gedaechtnis", _currentGmQuestions.length, "Training");
+    _gmSession.passes = generateAllergyPasses(passCount);
+    const raw = generateGedaechtnisQuestionsFromPasses(_gmSession.passes, 25);
+    _gmSession.questions = filterValidGedaechtnisQuestions(raw);
+    if (_gmSession.questions.length < raw.length && import.meta.env?.DEV) {
+      logPoolWarning("gedaechtnis", _gmSession.questions.length, "Training");
     }
     onLearn();
   };
@@ -222,7 +226,7 @@ export function GedaechtnisLearn({ onStart, onBack }: { onStart: () => void; onB
   const [learnMinutes, setLearnMinutes] = useState(8);
   const [secondsLeft, setSecondsLeft] = useState(learnMinutes * 60);
   const [started, setStarted] = useState(false);
-  const passes = useMemo(() => _currentGmPasses, []);
+  const passes = _gmSession.passes;
   useEffect(() => {
     if (!started || secondsLeft <= 0) return;
     const t = setInterval(() => setSecondsLeft((s) => s - 1), 1000);
@@ -436,7 +440,7 @@ export function GedaechtnisInterferenz({
 }
 
 export function GedaechtnisQuiz({ onBack }: { onBack: () => void }) {
-  const questions = useMemo(() => _currentGmQuestions, []);
+  const questions = _gmSession.questions;
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [submitted, setSubmitted] = useState(false);
@@ -545,8 +549,12 @@ export function GedaechtnisQuiz({ onBack }: { onBack: () => void }) {
           </CardContent>
         </Card>
         {questions.map((qu, i) => {
-          const correct = answers[qu.id] === qu.correctIndex;
-          const selectedOpt = qu.options[answers[qu.id] ?? -1];
+          const userIndex = answers[qu.id];
+          const correct = userIndex === qu.correctIndex;
+          const wasAnswered = userIndex !== undefined;
+          const selectedOpt = wasAnswered ? qu.options[userIndex] : undefined;
+          const correctLetter = String.fromCharCode(65 + qu.correctIndex);
+          const correctOpt = qu.options[qu.correctIndex];
           return (
             <Card
               key={qu.id}
@@ -559,17 +567,24 @@ export function GedaechtnisQuiz({ onBack }: { onBack: () => void }) {
                   ) : (
                     <XCircle className="w-5 h-5 text-red-500" />
                   )}
-                  <span className="font-medium text-sm">
+                  <span className="font-medium text-sm text-[var(--text-primary)]">
                     {i + 1}. {qu.question}
                   </span>
                 </div>
-                {!correct && selectedOpt !== undefined && (
+                {!correct && wasAnswered && selectedOpt !== undefined && (
                   <p className="text-sm text-red-600 dark:text-red-400 ml-7">
-                    Deine Antwort: {selectedOpt}
+                    Deine Antwort: {String.fromCharCode(65 + userIndex)}) {selectedOpt}
                   </p>
                 )}
-                <p className="text-sm text-green-700 dark:text-green-400 ml-7">
-                  Richtig: {qu.options[qu.correctIndex]}
+                {!correct && !wasAnswered && (
+                  <p className="text-sm text-red-600 dark:text-red-400 ml-7 italic">
+                    Nicht beantwortet
+                  </p>
+                )}
+                <p
+                  className={`text-sm ml-7 ${correct ? "text-green-700 dark:text-green-400" : "text-green-700 dark:text-green-400 font-medium"}`}
+                >
+                  Richtig: {correctLetter}) {correctOpt}
                 </p>
               </CardContent>
             </Card>

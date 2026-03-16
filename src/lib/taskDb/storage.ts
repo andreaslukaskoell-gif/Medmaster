@@ -2,11 +2,59 @@
  * Task-DB Storage: Alle Aufgaben in Supabase (tasks-Tabelle).
  * Wenn Supabase verfügbar ist, wird ausschließlich die Datenbank genutzt (kein localStorage).
  * Nur ohne Supabase (z. B. lokale Umgebung): Fallback auf localStorage.
+ *
+ * Resilience: If the `tasks` table doesn't exist in Supabase (404/42P01),
+ * we log ONE warning and fall back to localStorage for the rest of the session.
+ * This prevents 100+ console errors when the migration hasn't been run yet.
  */
 import { supabase } from "@/lib/supabase";
 import type { Task, TaskDomain, TaskFilters, TaskInsert } from "./types";
 
 const TASKS_LOCAL_KEY = "medmaster_tasks_fallback";
+
+/**
+ * Once set to true, all Supabase calls are skipped for the rest of the session.
+ * This prevents 100+ console errors when the `tasks` table hasn't been created yet.
+ */
+let supabaseTasksUnavailable = false;
+let warnedOnce = false;
+
+function markUnavailable(): void {
+  supabaseTasksUnavailable = true;
+  if (!warnedOnce) {
+    warnedOnce = true;
+    console.warn(
+      "[TaskDB] Supabase `tasks` table unavailable — using local generation only. " +
+        "To enable persistence, run the migration: supabase/migrations/20260225000000_tasks_table.sql"
+    );
+  }
+}
+
+function handleSupabaseError(error: { code?: string; message?: string } | null): boolean {
+  if (!error) return false;
+  const code = error.code ?? "";
+  const msg = error.message ?? "";
+  // 42P01 = relation does not exist, PGRST* = PostgREST errors for missing/inaccessible tables
+  if (
+    code === "42P01" ||
+    code === "PGRST116" ||
+    code === "PGRST204" ||
+    code === "PGRST301" ||
+    code === "404" ||
+    msg.includes("does not exist") ||
+    msg.includes("relation") ||
+    msg.includes("404")
+  ) {
+    markUnavailable();
+    return true;
+  }
+  return false;
+}
+
+/** Check if we should attempt Supabase calls */
+function useSupabase(): boolean {
+  return !!supabase && !supabaseTasksUnavailable;
+}
 
 function rowToTask(row: {
   id: string;
@@ -84,8 +132,11 @@ const localStore = {
 };
 
 export async function getTaskById(id: string): Promise<Task | null> {
-  if (supabase) {
-    const { data, error } = await supabase.from("tasks").select("*").eq("id", id).single();
+  if (useSupabase()) {
+    const { data, error } = await supabase!.from("tasks").select("*").eq("id", id).single();
+    if (handleSupabaseError(error)) {
+      return localStore.get().find((t) => t.id === id) ?? null;
+    }
     if (!error && data) return rowToTask(data as Parameters<typeof rowToTask>[0]);
     return null;
   }
@@ -97,13 +148,18 @@ export async function getTasksByIds(ids: string[]): Promise<Task[]> {
   if (ids.length === 0) return [];
   const seen = new Set(ids);
   const unique = [...seen];
-  if (supabase) {
-    const { data, error } = await supabase
+  if (useSupabase()) {
+    const { data, error } = await supabase!
       .from("tasks")
       .select("*")
       .in("id", unique)
       .is("invalid_reason", null)
       .eq("validated", true);
+    if (handleSupabaseError(error)) {
+      return localStore
+        .get()
+        .filter((t) => unique.includes(t.id) && !t.invalidReason && t.validated);
+    }
     if (!error && data) return (data as Parameters<typeof rowToTask>[0][]).map(rowToTask);
     return [];
   }
@@ -122,8 +178,8 @@ export async function getTasksByDomain(filters: TaskFilters): Promise<Task[]> {
     offset = 0,
   } = filters;
 
-  if (supabase) {
-    let q = supabase
+  if (useSupabase()) {
+    let q = supabase!
       .from("tasks")
       .select("*")
       .eq("domain", domain)
@@ -136,8 +192,12 @@ export async function getTasksByDomain(filters: TaskFilters): Promise<Task[]> {
     if (minDifficulty != null) q = q.gte("difficulty", minDifficulty);
     if (maxDifficulty != null) q = q.lte("difficulty", maxDifficulty);
     const { data, error } = await q;
-    if (!error && data) return (data as Parameters<typeof rowToTask>[0][]).map(rowToTask);
-    return [];
+    if (handleSupabaseError(error)) {
+      // Fall through to localStore below
+    } else {
+      if (!error && data) return (data as Parameters<typeof rowToTask>[0][]).map(rowToTask);
+      return [];
+    }
   }
 
   let list = localStore.get().filter((t) => t.domain === domain && !t.invalidReason);
@@ -172,17 +232,30 @@ export async function saveTask(task: TaskInsert): Promise<void> {
     ...task,
     createdAt: task.createdAt ?? new Date().toISOString(),
   };
-  if (supabase) {
-    await supabase.from("tasks").upsert(taskToRow(t) as never, { onConflict: "id" });
+  if (useSupabase()) {
+    const { error } = await supabase!
+      .from("tasks")
+      .upsert(taskToRow(t) as never, { onConflict: "id" });
+    if (handleSupabaseError(error)) {
+      localStore.add(t);
+      return;
+    }
     return;
   }
   localStore.add(t);
 }
 
 export async function markTaskInvalid(id: string, reason: string): Promise<void> {
-  if (supabase) {
-    await supabase.from("tasks").update({ invalid_reason: reason, validated: false }).eq("id", id);
-    return;
+  if (useSupabase()) {
+    const { error } = await supabase!
+      .from("tasks")
+      .update({ invalid_reason: reason, validated: false })
+      .eq("id", id);
+    if (handleSupabaseError(error)) {
+      // Fall through to localStore
+    } else {
+      return;
+    }
   }
   const list = localStore.get();
   const task = list.find((t) => t.id === id);
@@ -197,15 +270,19 @@ export async function getTaskCountByDomain(
   domain: TaskDomain,
   validatedOnly = true
 ): Promise<number> {
-  if (supabase) {
-    let q = supabase
+  if (useSupabase()) {
+    let q = supabase!
       .from("tasks")
       .select("id", { count: "exact", head: true })
       .eq("domain", domain)
       .is("invalid_reason", null);
     if (validatedOnly) q = q.eq("validated", true);
-    const { count } = await q;
-    return count ?? 0;
+    const { count, error } = await q;
+    if (handleSupabaseError(error)) {
+      // Fall through to localStore
+    } else {
+      return count ?? 0;
+    }
   }
   let list = localStore.get().filter((t) => t.domain === domain && !t.invalidReason);
   if (validatedOnly) list = list.filter((t) => t.validated);
@@ -218,8 +295,8 @@ export async function getTaskCountInBand(
   minDiff: number,
   maxDiff: number
 ): Promise<number> {
-  if (supabase) {
-    const { count } = await supabase
+  if (useSupabase()) {
+    const { count, error } = await supabase!
       .from("tasks")
       .select("id", { count: "exact", head: true })
       .eq("domain", domain)
@@ -227,7 +304,11 @@ export async function getTaskCountInBand(
       .is("invalid_reason", null)
       .gte("difficulty", minDiff)
       .lte("difficulty", maxDiff);
-    return count ?? 0;
+    if (handleSupabaseError(error)) {
+      // Fall through to localStore
+    } else {
+      return count ?? 0;
+    }
   }
   const list = localStore
     .get()
@@ -244,8 +325,8 @@ export async function getTaskCountInBand(
 
 /** Lädt alle Tasks eines Merkfähigkeit-Sets (gleiche setId in data). */
 export async function getTasksBySetId(setId: string): Promise<Task[]> {
-  if (supabase) {
-    const { data, error } = await supabase
+  if (useSupabase()) {
+    const { data, error } = await supabase!
       .from("tasks")
       .select("*")
       .eq("domain", "kff-merkfähigkeit")
@@ -253,7 +334,11 @@ export async function getTasksBySetId(setId: string): Promise<Task[]> {
       .eq("validated", true)
       .contains("data", { setId })
       .order("id");
-    if (!error && data) return (data as Parameters<typeof rowToTask>[0][]).map(rowToTask);
+    if (handleSupabaseError(error)) {
+      // Fall through to localStore
+    } else if (!error && data) {
+      return (data as Parameters<typeof rowToTask>[0][]).map(rowToTask);
+    }
   }
   const list = localStore.get().filter((t) => {
     if (t.domain !== "kff-merkfähigkeit" || t.invalidReason || !t.validated) return false;

@@ -10,7 +10,10 @@ import { ExamTimer } from "@/components/shared/ExamTimer";
 import { type ExamMode, EXAM_CONFIG } from "@/data/examConfig";
 import { generateWordFluencyTask } from "@/data/kffGenerators";
 import { type WordFluencyTask } from "@/data/kffWortfluessigkeitMedAT";
-import { WF_TRAINING_POOL_1000 } from "@/data/kffWortfluessigkeit1000";
+import { WF_TRAINING_POOL_1000 as _WF_RAW_POOL } from "@/data/kffWortfluessigkeit1000";
+
+/** MedAT uses 7+ letter words; filter out trivially short ones */
+const WF_TRAINING_POOL_1000 = _WF_RAW_POOL.filter((t) => t.solutionWord.length >= 5);
 import { filterValidWordFluencyTasks, logPoolWarning } from "@/data/kffValidation";
 import { getTasksForUserWithWeakness, taskToData } from "@/lib/taskDb";
 import { useStore } from "@/store/useStore";

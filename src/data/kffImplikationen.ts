@@ -1702,6 +1702,69 @@ const SYLLOGISM_PATTERNS: SyllogismPattern[] = [
     difficulty: 2,
     rulesApplied: [4, 5],
   },
+  // Difficulty 2: Cesare (Figure II) — Keine B sind C + Alle A sind C → Keine A sind B
+  {
+    quantifier1: "Keine",
+    quantifier2: "Alle",
+    structure: "reverse",
+    conclusion: { quantifier: "Keine", direction: "AC" },
+    difficulty: 2,
+    rulesApplied: [4],
+  },
+  // Difficulty 2: Festino (Figure II) — Keine B sind C + Einige A sind C → Einige A sind keine B
+  {
+    quantifier1: "Keine",
+    quantifier2: "Einige",
+    structure: "reverse",
+    conclusion: { quantifier: "Einige", direction: "AC" },
+    difficulty: 2,
+    rulesApplied: [4, 5],
+  },
+  // Difficulty 2: Datisi (Figure III) — Alle B sind C + Einige B sind A → Einige A sind C
+  {
+    quantifier1: "Alle",
+    quantifier2: "Einige",
+    structure: "reverse",
+    conclusion: { quantifier: "Einige", direction: "CA" },
+    difficulty: 2,
+    rulesApplied: [5],
+  },
+  // Difficulty 2: Disamis (Figure III) — Einige B sind C + Alle B sind A → Einige A sind C
+  {
+    quantifier1: "Einige",
+    quantifier2: "Alle",
+    structure: "reverse",
+    conclusion: { quantifier: "Einige", direction: "CA" },
+    difficulty: 2,
+    rulesApplied: [5],
+  },
+  // Difficulty 3: Baroco (Figure II) — Alle C sind B + Einige A sind keine B → Einige A sind keine C
+  {
+    quantifier1: "Alle",
+    quantifier2: "Einige",
+    structure: "chain",
+    conclusion: { quantifier: "Einige", direction: "AC" },
+    difficulty: 3,
+    rulesApplied: [5],
+  },
+  // Difficulty 3: Bocardo (Figure III) — Einige B sind keine C + Alle B sind A → Einige A sind keine C
+  {
+    quantifier1: "Einige",
+    quantifier2: "Alle",
+    structure: "reverse",
+    conclusion: { quantifier: "Einige", direction: "CA" },
+    difficulty: 3,
+    rulesApplied: [5],
+  },
+  // Difficulty 3: Camestres (Figure II) — Alle C sind B + Keine A sind B → Keine A sind C
+  {
+    quantifier1: "Alle",
+    quantifier2: "Keine",
+    structure: "reverse",
+    conclusion: { quantifier: "Keine", direction: "AC" },
+    difficulty: 3,
+    rulesApplied: [4],
+  },
   // Difficulty 3: No valid conclusion (E)
   {
     quantifier1: "Einige",
@@ -1734,6 +1797,24 @@ const SYLLOGISM_PATTERNS: SyllogismPattern[] = [
     conclusion: null,
     difficulty: 3,
     rulesApplied: [2],
+  },
+  // Difficulty 3: "Keine" + "Einige" chain → E (particular + negative, no definite conclusion)
+  {
+    quantifier1: "Keine",
+    quantifier2: "Einige",
+    structure: "chain",
+    conclusion: null,
+    difficulty: 3,
+    rulesApplied: [1, 2],
+  },
+  // Difficulty 3: "Einige" + "Keine" with non-linking middle → E
+  {
+    quantifier1: "Einige",
+    quantifier2: "Keine",
+    structure: "reverse",
+    conclusion: null,
+    difficulty: 3,
+    rulesApplied: [1, 2],
   },
 ];
 
