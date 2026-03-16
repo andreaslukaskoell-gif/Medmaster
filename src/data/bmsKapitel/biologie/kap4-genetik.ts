@@ -152,6 +152,22 @@ Ein **Chromosom** ist ein langer DNA-Faden, der zusammen mit **Histonen** (Verpa
           difficulty: 1,
           tags: ["basenpaarung", "dna", "chargaff"],
         },
+        {
+          question:
+            "Welche Aussagen zur DNA-Struktur und Genetik sind richtig?\n\n1. Die DNA besteht aus zwei antiparallel verlaufenden Strängen in einer Doppelhelix.\n2. Adenin paart mit Guanin über drei Wasserstoffbrücken.\n3. Die Chargaff-Regeln besagen, dass in der DNA der Anteil von Adenin dem von Thymin entspricht (A = T).\n4. Der Mensch hat etwa 20.000–25.000 proteincodierende Gene.\n5. Histone sind RNA-Moleküle, die die DNA stabilisieren.",
+          options: [
+            "Nur 1 und 2",
+            "Nur 2, 4 und 5",
+            "Nur 1, 3 und 4",
+            "Nur 3 und 5",
+            "Alle Aussagen",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Aussagen 1, 3 und 4 sind korrekt. Die DNA-Doppelhelix besteht aus zwei antiparallelen Strängen (1). Nach Chargaff gilt A = T und G = C (3). Der Mensch hat ca. 20.000–25.000 proteincodierende Gene (4). Aussage 2 ist falsch: Adenin paart mit Thymin (2 H-Brücken), Guanin paart mit Cytosin (3 H-Brücken). Aussage 5 ist falsch: Histone sind Proteine, nicht RNA-Moleküle.",
+          difficulty: 2,
+          tags: ["typ-k", "dna-struktur", "chargaff", "histone", "basenpaarung"],
+        },
       ],
       altfrage: {
         text: "In einer DNA-Probe beträgt der Adenin-Anteil 32 %. Wie hoch ist der Guanin-Anteil?",
@@ -536,6 +552,22 @@ Der **Zellzyklus** umfasst die Vorbereitung der Zellteilung und die Teilung selb
           difficulty: 1,
           tags: ["mitose", "meiose", "vergleich"],
         },
+        {
+          question:
+            "Welche Aussagen zu Zellzyklus und Meiose sind richtig?\n\n1. Crossing-over findet in der Prophase I der Meiose statt und erhöht die genetische Vielfalt.\n2. Am Ende der Meiose entstehen vier haploide Tochterzellen.\n3. In der Anaphase I werden die Schwesterchromatiden getrennt.\n4. Das Risiko für Nicht-Disjunktion steigt mit dem mütterlichen Alter.\n5. Die DNA-Replikation findet in der M-Phase des Zellzyklus statt.",
+          options: [
+            "Nur 1 und 3",
+            "Nur 1, 2 und 4",
+            "Nur 2, 3 und 5",
+            "Nur 3, 4 und 5",
+            "Alle Aussagen",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Aussagen 1, 2 und 4 sind korrekt. Crossing-over findet in der Prophase I statt (Pachytän) und führt zu Rekombination (1). Die Meiose erzeugt vier haploide Zellen (2). Nicht-Disjunktion steigt mit dem mütterlichen Alter (4). Aussage 3 ist falsch: In der Anaphase I werden die homologen Chromosomen getrennt, die Schwesterchromatiden erst in der Anaphase II. Aussage 5 ist falsch: Die DNA-Replikation findet in der S-Phase der Interphase statt, nicht in der M-Phase.",
+          difficulty: 2,
+          tags: ["typ-k", "meiose", "crossing-over", "nicht-disjunktion", "zellzyklus"],
+        },
       ],
       altfrage: {
         text: "In welcher Phase der Meiose findet das Crossing-over statt?",
@@ -765,6 +797,22 @@ Nicht alle Merkmale folgen dem einfachen Mendel-Schema. Drei wichtige Phänomene
             "Bei unabhängigen Genen gilt die **Produktregel**: P(rr) = 1/4 und P(gg) = 1/4. P(rrgg) = 1/4 × 1/4 = **1/16**. Im 4×4-Punnett-Quadrat (16 Felder) gibt es genau 1 Feld mit rrgg.",
           difficulty: 2,
           tags: ["produktregel", "dihybrid", "wahrscheinlichkeit"],
+        },
+        {
+          question:
+            "Welche Aussagen zu den Mendelschen Regeln sind richtig?\n\n1. Die 1. Mendelsche Regel besagt, dass alle F₁-Nachkommen reinerbiger Eltern uniform sind.\n2. Das Phänotyp-Verhältnis in F₂ bei dominant-rezessivem monohybriden Erbgang beträgt 1:2:1.\n3. Die 3. Mendelsche Regel (Unabhängigkeitsregel) setzt voraus, dass die Gene auf verschiedenen Chromosomen liegen oder nicht gekoppelt sind.\n4. Bei einem dihybriden Erbgang (RrGg × RrGg) beträgt das Phänotyp-Verhältnis 9:3:3:1.\n5. Die Wahrscheinlichkeit für den Genotyp aa bei Aa × Aa beträgt 50 %.",
+          options: [
+            "Nur 1 und 2",
+            "Nur 1, 3 und 4",
+            "Nur 2, 4 und 5",
+            "Nur 3 und 5",
+            "Alle Aussagen",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Aussagen 1, 3 und 4 sind korrekt. Die 1. Mendelsche Regel (Uniformitätsregel) besagt, dass alle F₁-Nachkommen reinerbiger Eltern uniform sind (1). Die 3. Regel gilt nur bei unabhängig vererbten Genen (3). Das dihybride Phänotyp-Verhältnis ist 9:3:3:1 (4). Aussage 2 ist falsch: 1:2:1 ist das Genotyp-Verhältnis, das Phänotyp-Verhältnis ist 3:1. Aussage 5 ist falsch: P(aa) bei Aa × Aa = 1/4 = 25 %, nicht 50 %.",
+          difficulty: 2,
+          tags: ["typ-k", "mendel", "spaltungsregel", "unabhängigkeitsregel", "dihybrid"],
         },
       ],
       altfrage: {
@@ -1784,6 +1832,22 @@ Im Kontext der Tumorbiologie: **Onkogene** (GOF in Protoonkogenen, z. B. RAS-Mut
           difficulty: 2,
           tags: ["translokation", "chromosomenmutation", "balanciert"],
         },
+        {
+          question:
+            "Welche Aussagen zu Mutationstypen sind richtig?\n\n1. Eine Nonsense-Mutation erzeugt ein vorzeitiges Stopp-Codon und führt zu einem verkürzten Protein.\n2. Eine Frameshift-Mutation entsteht durch Insertion oder Deletion von Basen, deren Anzahl durch 3 teilbar ist.\n3. Trisomie 21 entsteht typischerweise durch Nicht-Disjunktion in der Meiose.\n4. Das Cri-du-chat-Syndrom wird durch eine Deletion am kurzen Arm von Chromosom 5 verursacht.\n5. Bei einer balancierten Translokation geht immer Chromosomenmaterial verloren.",
+          options: [
+            "Nur 1 und 2",
+            "Nur 1, 3 und 4",
+            "Nur 2, 3 und 5",
+            "Nur 3 und 4",
+            "Alle Aussagen",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Aussagen 1, 3 und 4 sind korrekt. Nonsense-Mutationen erzeugen ein Stopp-Codon → verkürztes Protein (1). Trisomie 21 entsteht durch Nicht-Disjunktion in der Meiose (3). Cri-du-chat wird durch eine 5p-Deletion verursacht (4). Aussage 2 ist falsch: Frameshift entsteht, wenn die Basenzahl NICHT durch 3 teilbar ist. Aussage 5 ist falsch: Bei einer balancierten Translokation geht kein Material verloren, der Träger ist oft phänotypisch unauffällig.",
+          difficulty: 3,
+          tags: ["typ-k", "mutationen", "nonsense", "trisomie", "chromosomenmutation"],
+        },
       ],
       altfrage: {
         text: "Welche Mutation führt zu einer Verschiebung des Leserasters (Frameshift)?",
@@ -2008,6 +2072,22 @@ Vererbung bedeutet: Die DNA (Allele) wird über Keimzellen (Meiose) von Generati
             "Die **Reverse Transkriptase** (z. B. bei Retroviren wie HIV) schreibt RNA in DNA um — das ist eine bekannte Ausnahme vom klassischen Zentraldogma (DNA → RNA → Protein). Proteine werden jedoch nie in Nukleinsäuren rückübersetzt.",
           difficulty: 2,
           tags: ["zentraldogma", "reverse transkriptase", "retrovirus"],
+        },
+        {
+          question:
+            "Welche Aussagen zur Genexpression sind richtig?\n\n1. Das Zentraldogma beschreibt den Informationsfluss DNA → RNA → Protein.\n2. Die Transkription findet bei Eukaryoten im Zytoplasma statt.\n3. Beim Spleißen werden Introns aus der prä-mRNA entfernt und Exons zur reifen mRNA verbunden.\n4. Das Startcodon AUG codiert für die Aminosäure Methionin.\n5. Die RNA-Polymerase benötigt wie die DNA-Polymerase einen Primer.",
+          options: [
+            "Nur 1 und 2",
+            "Nur 2, 4 und 5",
+            "Nur 1, 3 und 4",
+            "Nur 3 und 5",
+            "Alle Aussagen",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Aussagen 1, 3 und 4 sind korrekt. Das Zentraldogma beschreibt DNA → RNA → Protein (1). Introns werden beim Spleißen entfernt, Exons bleiben in der reifen mRNA (3). AUG codiert für Methionin und dient als Startcodon (4). Aussage 2 ist falsch: Die Transkription findet bei Eukaryoten im Zellkern statt, nicht im Zytoplasma. Aussage 5 ist falsch: Die RNA-Polymerase benötigt keinen Primer — im Gegensatz zur DNA-Polymerase.",
+          difficulty: 2,
+          tags: ["typ-k", "genexpression", "transkription", "spleißen", "zentraldogma"],
         },
       ],
       altfrage: {

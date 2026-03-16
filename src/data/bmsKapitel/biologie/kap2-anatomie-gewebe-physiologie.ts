@@ -210,6 +210,22 @@ Sekretionsmechanismen exokriner Drüsen:
           difficulty: 3,
           tags: ["holokrin", "talgdrüsen", "sekretionsmechanismus"],
         },
+        {
+          question:
+            "Welche der folgenden Aussagen über Epithelgewebe sind richtig?\n\n1. Tight Junctions versiegeln den apikalen Interzellularspalt und haben eine Fence-Funktion\n2. Gap Junctions ermöglichen direkten Ionenaustausch zwischen Zellen über Connexin-Kanäle\n3. Das Urothel der Harnblase ist ein einschichtiges Zylinderepithel\n4. Epithelien sind avaskulär und werden durch Diffusion ernährt\n5. Mehrreihiges Flimmerepithel ist mehrschichtig — nicht alle Zellen berühren die Basalmembran",
+          options: [
+            "Nur 1, 2 und 4",
+            "Nur 1 und 4",
+            "Nur 2, 3 und 5",
+            "Nur 1, 2 und 3",
+            "Alle Aussagen sind richtig",
+          ],
+          correctIndex: 0,
+          explanation:
+            "Aussagen 1, 2 und 4 sind korrekt. Aussage 3 ist falsch — das Urothel (Übergangsepithel) mit Schirmzellen ist ein eigener Epitheltyp, kein Zylinderepithel. Aussage 5 ist falsch — mehrreihiges (pseudostratifiziertes) Epithel ist einschichtig: Alle Zellen berühren die Basalmembran, nur die Kerne liegen auf verschiedenen Höhen.",
+          difficulty: 2,
+          tags: ["typ-k", "epithelgewebe", "tight junctions", "urothel"],
+        },
       ],
     },
     {
@@ -447,6 +463,22 @@ Sehne, Knorpel und Knochen sehen völlig verschieden aus, bestehen aber alle aus
           difficulty: 2,
           tags: ["knorpel", "avaskularität", "heilung"],
         },
+        {
+          question:
+            "Welche der folgenden Aussagen über Binde- und Stützgewebe sind richtig?\n\n1. Kollagen Typ I ist der häufigste Kollagentyp und kommt in Knochen und Sehnen vor\n2. Osteoklasten stammen aus der mesenchymalen Zelllinie und bauen Knochenmatrix auf\n3. Vitamin C ist essentiell für die Hydroxylierung von Prolin und Lysin bei der Kollagensynthese\n4. Knorpel ist avaskulär, was seine schlechte Regeneration erklärt\n5. Osteoblasten bauen Knochen auf und stammen aus mesenchymalen Stammzellen",
+          options: [
+            "Nur 1, 3 und 5",
+            "Nur 1, 2 und 4",
+            "Nur 2, 3 und 4",
+            "Nur 1, 3, 4 und 5",
+            "Alle Aussagen sind richtig",
+          ],
+          correctIndex: 3,
+          explanation:
+            "Aussagen 1, 3, 4 und 5 sind korrekt. Aussage 2 ist falsch — Osteoklasten stammen aus der hämatopoetischen Zelllinie (Monozyten/Makrophagen-Vorläufer) und bauen Knochen ab (nicht auf). Osteoblasten (mesenchymal) bauen Knochen auf.",
+          difficulty: 2,
+          tags: ["typ-k", "bindegewebe", "knochen", "kollagen", "osteoklasten"],
+        },
       ],
     },
     {
@@ -682,6 +714,22 @@ Kein Troponin! Ca2+ bindet **Calmodulin** -> aktiviert **MLCK** (Myosin-Leichtke
           difficulty: 1,
           tags: ["troponin", "herzinfarkt", "kardiomyozyten"],
         },
+        {
+          question:
+            "Welche der folgenden Aussagen über Muskelgewebe sind richtig?\n\n1. Bei der Kontraktion werden I-Bande und H-Zone kürzer, die A-Bande bleibt konstant\n2. Herzmuskelzellen sind über Gap Junctions in Glanzstreifen elektrisch gekoppelt\n3. Skelettmuskulatur kann tetanisch kontrahieren, Herzmuskulatur nicht\n4. Ca²⁺ bindet an Myosin und löst dadurch den Kraftschlag aus\n5. ATP wird für das Lösen des Myosinkopfes von Aktin benötigt",
+          options: [
+            "Nur 1, 2 und 5",
+            "Nur 1, 2, 3 und 5",
+            "Nur 2, 3 und 4",
+            "Nur 1, 3 und 4",
+            "Alle Aussagen sind richtig",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Aussagen 1, 2, 3 und 5 sind korrekt. Aussage 4 ist falsch — Ca²⁺ bindet an Troponin C (nicht Myosin), wodurch Tropomyosin die Bindungsstellen auf Aktin freigibt und der Myosinkopf an Aktin binden kann. Der Herzmuskel kann keinen Tetanus entwickeln, weil die absolute Refraktärzeit fast so lang ist wie die Kontraktion.",
+          difficulty: 3,
+          tags: ["typ-k", "muskelgewebe", "sarkomer", "herzmuskel", "kontraktion"],
+        },
       ],
     },
     {
@@ -772,12 +820,33 @@ Gliazellen überwiegen numerisch: ca. 10:1 gegenüber Neuronen im ZNS. Sie teile
         "Saltatorische Leitung: Aktionspotential springt von Ranvier-Schnürring zu Schnürring — 100× schneller als kontinuierlich.",
         "Astrozyten: Blut-Hirn-Schranke, K⁺-Puffer, Glutamat-Reuptake; Mikroglia = Makrophagen des ZNS.",
       ],
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Worin unterscheiden sich Schwann-Zellen und Oligodendrozyten hinsichtlich Anzahl der myelinisierten Axonsegmente?",
-        answer:
-          "Eine Schwann-Zelle myelinisiert genau ein Axonsegment (zwischen zwei Ranvier-Schnürringen) eines einzigen Axons. Ein Oligodendrozyt kann hingegen bis zu 50 Axonsegmente verschiedener Axone gleichzeitig myelinisieren.",
+        text: "Welche Aussage über Schwann-Zellen und Oligodendrozyten ist korrekt?",
+        options: [
+          {
+            id: "a",
+            text: "Schwann-Zellen myelinisieren bis zu 50 Axonsegmente verschiedener Axone gleichzeitig.",
+          },
+          {
+            id: "b",
+            text: "Oligodendrozyten kommen ausschließlich im peripheren Nervensystem (PNS) vor.",
+          },
+          {
+            id: "c",
+            text: "Eine Schwann-Zelle myelinisiert genau ein Axonsegment eines einzigen Axons, während ein Oligodendrozyt bis zu 50 Axonsegmente verschiedener Axone gleichzeitig myelinisieren kann.",
+          },
+          {
+            id: "d",
+            text: "Schwann-Zellen und Oligodendrozyten myelinisieren jeweils identisch viele Axonsegmente.",
+          },
+          {
+            id: "e",
+            text: "Oligodendrozyten myelinisieren genau ein Axonsegment und kommen nur im PNS vor.",
+          },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "Schwann-Zellen (PNS) myelinisieren genau ein Internodium (Segment zwischen zwei Ranvier-Schnürringen) eines einzigen Axons. Oligodendrozyten (ZNS) können hingegen bis zu 50 Axonsegmente verschiedener Axone gleichzeitig umhüllen. Bei MS werden Oligodendrozyten zerstört — ZNS-Regeneration ist limitiert, da Schwann-Zellen dort nicht vorkommen.",
       },
       klinischerBezug:
         "Bei Multipler Sklerose (MS) zerstören autoreaktive T-Zellen die Oligodendrozyten und Myelinscheiden im ZNS. Die resultierende Demyelinisierung verlangsamt oder blockiert die Impulsleitung und führt zu wechselnden neurologischen Ausfällen (Sehstörungen, Paresen, Sensibilitätsstörungen). Da ZNS-Regeneration limitiert ist, kommt es mit der Zeit zu dauerhaften Defiziten.",
@@ -877,6 +946,22 @@ Gliazellen überwiegen numerisch: ca. 10:1 gegenüber Neuronen im ZNS. Sie teile
           ],
           difficulty: 3,
           tags: ["astrozyten", "blut-hirn-schranke", "tight junctions"],
+        },
+        {
+          question:
+            "Welche der folgenden Aussagen über Nervengewebe sind richtig?\n\n1. Oligodendrozyten myelinisieren Axone im ZNS, Schwann-Zellen im PNS\n2. Ein Oligodendrozyt kann bis zu 50 Axonsegmente verschiedener Axone myelinisieren\n3. Mikroglia sind die Makrophagen des ZNS und phagozytieren Pathogene\n4. Das Aktionspotential wird typischerweise am Dendritenstamm initiiert\n5. Bei Multipler Sklerose werden Schwann-Zellen im PNS zerstört",
+          options: [
+            "Nur 1, 2 und 3",
+            "Nur 1 und 3",
+            "Nur 2, 4 und 5",
+            "Nur 1, 3 und 5",
+            "Alle Aussagen sind richtig",
+          ],
+          correctIndex: 0,
+          explanation:
+            "Aussagen 1, 2 und 3 sind korrekt. Aussage 4 ist falsch — das Aktionspotential wird am Axonhügel (Axon Initial Segment) initiiert, nicht am Dendritenstamm. Aussage 5 ist falsch — bei Multipler Sklerose werden Oligodendrozyten im ZNS zerstört (nicht Schwann-Zellen im PNS).",
+          difficulty: 2,
+          tags: ["typ-k", "nervengewebe", "gliazellen", "myelinisierung", "multiple sklerose"],
         },
       ],
     },

@@ -2288,6 +2288,22 @@ Pyruvat + NADH → Laktat + NAD⁺ [Laktat-Dehydrogenase (LDH)]
           difficulty: 2,
           tags: ["chemiosmose", "mitchell", "atp-synthase", "protonengradient"],
         },
+        {
+          question:
+            "Welche der folgenden Aussagen über den Energiestoffwechsel sind richtig?\n\n1. Die Glykolyse findet im Zytoplasma statt und liefert netto 2 ATP pro Glucose\n2. FADH₂ speist Elektronen in Komplex I der Atmungskette ein\n3. PFK-1 ist das wichtigste Regulationsenzym der Glykolyse und wird durch ATP gehemmt\n4. Cyanid blockiert Komplex IV und verhindert die Nutzung von O₂ als Elektronenakzeptor\n5. Im Citratzyklus entstehen pro Acetyl-CoA insgesamt 4 NADH",
+          options: [
+            "Nur 1 und 3",
+            "Nur 1, 3 und 4",
+            "Nur 2, 4 und 5",
+            "Nur 1, 2 und 4",
+            "Alle Aussagen sind richtig",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Aussagen 1, 3 und 4 sind korrekt. Aussage 2 ist falsch — FADH₂ speist Elektronen in Komplex II (nicht Komplex I) ein; NADH speist in Komplex I ein. Aussage 5 ist falsch — im Citratzyklus entstehen pro Acetyl-CoA 3 NADH (nicht 4), dazu 1 FADH₂ und 1 GTP.",
+          difficulty: 3,
+          tags: ["typ-k", "energiestoffwechsel", "glykolyse", "atmungskette", "citratzyklus"],
+        },
       ],
       altfrage: {
         text: "Welche Aussage zum Citratzyklus (Krebszyklus) ist korrekt?",

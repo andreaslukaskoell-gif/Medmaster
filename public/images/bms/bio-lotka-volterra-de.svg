@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 320" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <marker id="arrowX" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#333"/>
+    </marker>
+    <marker id="arrowY" markerWidth="6" markerHeight="8" refX="3" refY="0" orient="auto">
+      <path d="M0,8 L3,0 L6,8" fill="#333"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="500" height="320" fill="#fafafa" rx="6"/>
+
+  <!-- Title -->
+  <text x="250" y="24" text-anchor="middle" font-size="14" font-weight="bold" fill="#222">Lotka-Volterra-Modell: Rauber-Beute-Oszillation</text>
+
+  <!-- Axes -->
+  <line x1="60" y1="260" x2="470" y2="260" stroke="#333" stroke-width="1.5" marker-end="url(#arrowX)"/>
+  <line x1="60" y1="260" x2="60" y2="32" stroke="#333" stroke-width="1.5" marker-end="url(#arrowY)"/>
+
+  <!-- Axis labels -->
+  <text x="265" y="290" text-anchor="middle" font-size="12" fill="#333">Zeit</text>
+  <text x="18" y="150" text-anchor="middle" font-size="12" fill="#333" transform="rotate(-90,18,150)">Populationsgrosse</text>
+
+  <!-- K line (dashed) -->
+  <line x1="60" y1="90" x2="460" y2="90" stroke="#999" stroke-width="1" stroke-dasharray="6,4"/>
+  <text x="464" y="86" font-size="10" fill="#777">K (Beute)</text>
+
+  <!-- Beute curve (green, leading) - 3 cycles over ~400px, period ~133px -->
+  <path d="M60,150
+    C73,100 86,65 100,70
+    C114,75 127,110 140,150
+    C153,190 166,220 180,215
+    C194,210 207,175 220,150
+    C233,100 246,65 260,70
+    C274,75 287,110 300,150
+    C313,190 326,220 340,215
+    C354,210 367,175 380,150
+    C393,100 406,65 420,70
+    C434,75 447,110 460,150"
+    fill="none" stroke="#2e8b57" stroke-width="2.5"/>
+
+  <!-- Rauber curve (red, lagging ~30px behind) - phase-shifted -->
+  <path d="M60,170
+    C73,155 86,120 100,100
+    C114,80 127,85 140,110
+    C153,135 166,175 180,195
+    C194,215 207,210 220,190
+    C233,155 246,120 260,100
+    C274,80 287,85 300,110
+    C313,135 326,175 340,195
+    C354,215 367,210 380,190
+    C393,155 406,120 420,100
+    C434,80 447,85 460,110"
+    fill="none" stroke="#c0392b" stroke-width="2.5"/>
+
+  <!-- Y-axis ticks -->
+  <line x1="56" y1="90" x2="60" y2="90" stroke="#333" stroke-width="1"/>
+  <line x1="56" y1="150" x2="60" y2="150" stroke="#333" stroke-width="1"/>
+  <line x1="56" y1="210" x2="60" y2="210" stroke="#333" stroke-width="1"/>
+
+  <!-- Phase shift annotations -->
+  <!-- Arrow showing delay between prey max and predator max -->
+  <line x1="100" y1="55" x2="100" y2="48" stroke="#2e8b57" stroke-width="1"/>
+  <line x1="100" y1="48" x2="130" y2="48" stroke="#888" stroke-width="1" stroke-dasharray="3,2"/>
+  <line x1="130" y1="48" x2="130" y2="55" stroke="#c0392b" stroke-width="1"/>
+  <text x="115" y="44" text-anchor="middle" font-size="8" fill="#666">Verzog.</text>
+
+  <!-- Legend -->
+  <rect x="150" y="298" width="200" height="20" rx="4" fill="white" stroke="#ddd" stroke-width="0.5"/>
+  <line x1="160" y1="308" x2="185" y2="308" stroke="#2e8b57" stroke-width="2.5"/>
+  <text x="190" y="312" font-size="11" fill="#333">Beute</text>
+  <line x1="250" y1="308" x2="275" y2="308" stroke="#c0392b" stroke-width="2.5"/>
+  <text x="280" y="312" font-size="11" fill="#333">Rauber</text>
+
+  <!-- Cycle labels on x-axis -->
+  <text x="140" y="275" text-anchor="middle" font-size="9" fill="#888">Zyklus 1</text>
+  <text x="300" y="275" text-anchor="middle" font-size="9" fill="#888">Zyklus 2</text>
+  <text x="420" y="275" text-anchor="middle" font-size="9" fill="#888">Zyklus 3</text>
+</svg>

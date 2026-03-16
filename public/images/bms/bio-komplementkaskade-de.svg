@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 350" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#555"/>
+    </marker>
+    <marker id="arrRed" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#c0392b"/>
+    </marker>
+    <marker id="arrOrange" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#e67e22"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="550" height="350" fill="#fafafa" rx="6"/>
+
+  <!-- Title -->
+  <text x="275" y="22" text-anchor="middle" font-size="13" font-weight="bold" fill="#222">Komplementkaskade — Drei Aktivierungswege</text>
+
+  <!-- === Three activation pathways (top row) === -->
+
+  <!-- Klassisch -->
+  <rect x="30" y="40" width="130" height="44" rx="6" fill="#3498db" opacity="0.15" stroke="#3498db" stroke-width="1.2"/>
+  <text x="95" y="57" text-anchor="middle" font-size="11" font-weight="bold" fill="#2471a3">Klassischer Weg</text>
+  <text x="95" y="73" text-anchor="middle" font-size="9" fill="#555">Antikorper-Antigen</text>
+
+  <!-- Lektin -->
+  <rect x="210" y="40" width="130" height="44" rx="6" fill="#27ae60" opacity="0.15" stroke="#27ae60" stroke-width="1.2"/>
+  <text x="275" y="57" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e8449">Lektinweg</text>
+  <text x="275" y="73" text-anchor="middle" font-size="9" fill="#555">MBL + Mannose</text>
+
+  <!-- Alternativ -->
+  <rect x="390" y="40" width="130" height="44" rx="6" fill="#8e44ad" opacity="0.15" stroke="#8e44ad" stroke-width="1.2"/>
+  <text x="455" y="57" text-anchor="middle" font-size="11" font-weight="bold" fill="#6c3483">Alternativer Weg</text>
+  <text x="455" y="73" text-anchor="middle" font-size="9" fill="#555">Spontan (C3-Tickover)</text>
+
+  <!-- Arrows from 3 pathways down to C3-Konvertase -->
+  <line x1="95" y1="84" x2="275" y2="110" stroke="#555" stroke-width="1.2" marker-end="url(#arr)"/>
+  <line x1="275" y1="84" x2="275" y2="110" stroke="#555" stroke-width="1.2" marker-end="url(#arr)"/>
+  <line x1="455" y1="84" x2="275" y2="110" stroke="#555" stroke-width="1.2" marker-end="url(#arr)"/>
+
+  <!-- C3-Konvertase -->
+  <rect x="210" y="114" width="130" height="32" rx="6" fill="#f39c12" opacity="0.2" stroke="#f39c12" stroke-width="1.2"/>
+  <text x="275" y="135" text-anchor="middle" font-size="12" font-weight="bold" fill="#b7770d">C3-Konvertase</text>
+
+  <!-- Arrow down to C3 split -->
+  <line x1="275" y1="146" x2="275" y2="166" stroke="#555" stroke-width="1.2" marker-end="url(#arr)"/>
+
+  <!-- C3 -->
+  <rect x="242" y="168" width="66" height="28" rx="14" fill="#f5b041" stroke="#e67e22" stroke-width="1"/>
+  <text x="275" y="187" text-anchor="middle" font-size="12" font-weight="bold" fill="#7d4e14">C3</text>
+
+  <!-- Split arrows from C3 -->
+  <!-- C3a left -->
+  <line x1="242" y1="182" x2="155" y2="210" stroke="#e67e22" stroke-width="1.2" marker-end="url(#arrOrange)"/>
+  <!-- C3b right/down -->
+  <line x1="308" y1="182" x2="308" y2="215" stroke="#555" stroke-width="1.2" marker-end="url(#arr)"/>
+
+  <!-- C3a box -->
+  <rect x="80" y="208" width="80" height="26" rx="5" fill="#fadbd8" stroke="#e74c3c" stroke-width="1"/>
+  <text x="120" y="225" text-anchor="middle" font-size="10" font-weight="bold" fill="#c0392b">C3a</text>
+
+  <!-- C3a effect -->
+  <line x1="120" y1="234" x2="120" y2="254" stroke="#c0392b" stroke-width="1" marker-end="url(#arrRed)"/>
+  <rect x="55" y="256" width="130" height="22" rx="4" fill="#fadbd8" stroke="#e74c3c" stroke-width="0.8"/>
+  <text x="120" y="271" text-anchor="middle" font-size="9" fill="#922b21">Anaphylatoxin (Entzundung)</text>
+
+  <!-- C3b box -->
+  <rect x="275" y="216" width="66" height="26" rx="5" fill="#d5f5e3" stroke="#27ae60" stroke-width="1"/>
+  <text x="308" y="233" text-anchor="middle" font-size="10" font-weight="bold" fill="#1e8449">C3b</text>
+
+  <!-- C3b side effect: Opsonisierung -->
+  <line x1="341" y1="229" x2="395" y2="229" stroke="#27ae60" stroke-width="1" stroke-dasharray="4,2" marker-end="url(#arr)"/>
+  <text x="445" y="233" text-anchor="middle" font-size="9" fill="#1e8449">Opsonisierung</text>
+
+  <!-- Arrow C3b down to C5-Konvertase -->
+  <line x1="308" y1="242" x2="308" y2="260" stroke="#555" stroke-width="1.2" marker-end="url(#arr)"/>
+
+  <!-- C5-Konvertase -->
+  <rect x="248" y="262" width="120" height="28" rx="6" fill="#aed6f1" stroke="#2980b9" stroke-width="1"/>
+  <text x="308" y="280" text-anchor="middle" font-size="11" font-weight="bold" fill="#1a5276">C5-Konvertase</text>
+
+  <!-- Arrow down to C5 -->
+  <line x1="308" y1="290" x2="308" y2="306" stroke="#555" stroke-width="1.2" marker-end="url(#arr)"/>
+
+  <!-- C5 split -->
+  <!-- C5a left -->
+  <line x1="290" y1="310" x2="210" y2="310" stroke="#e67e22" stroke-width="1.2" marker-end="url(#arrOrange)"/>
+
+  <!-- C5a box -->
+  <rect x="140" y="300" width="70" height="22" rx="5" fill="#fadbd8" stroke="#e74c3c" stroke-width="1"/>
+  <text x="175" y="315" text-anchor="middle" font-size="10" font-weight="bold" fill="#c0392b">C5a</text>
+
+  <!-- C5a label -->
+  <text x="175" y="336" text-anchor="middle" font-size="8" fill="#922b21">Anaphylatoxin</text>
+
+  <!-- C5b right -->
+  <line x1="326" y1="310" x2="370" y2="310" stroke="#555" stroke-width="1.2" marker-end="url(#arr)"/>
+
+  <!-- MAC -->
+  <rect x="372" y="296" width="145" height="34" rx="6" fill="#2c3e50" opacity="0.12" stroke="#2c3e50" stroke-width="1.2"/>
+  <text x="444" y="310" text-anchor="middle" font-size="10" font-weight="bold" fill="#2c3e50">MAC (C5b–C9)</text>
+  <text x="444" y="324" text-anchor="middle" font-size="9" fill="#555">→ Zelllyse</text>
+</svg>

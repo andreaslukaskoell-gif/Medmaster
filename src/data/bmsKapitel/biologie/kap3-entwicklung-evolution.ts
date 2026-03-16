@@ -2172,6 +2172,22 @@ Wenn der **posteriore Neuroporus** nicht schließt, kann es zur **Spina bifida**
           difficulty: 2,
           tags: ["folsäure", "prävention", "neuralrohrdefekt"],
         },
+        {
+          question:
+            "Welche Aussagen zur Neurulation und Neuralleiste sind richtig?\n\n1. Das Notochord (Chorda dorsalis) induziert die Bildung der Neuralplatte aus dem Ektoderm.\n2. Neuralleistenzellen stammen vom Mesoderm ab.\n3. Aus der Neuralleiste entstehen unter anderem Melanozyten, sensorische Ganglien und das Nebennierenmark.\n4. Der anteriore Neuroporus schließt sich etwa an Tag 25, der posteriore an Tag 27.\n5. Folsäure-Supplementierung hat keinen nachgewiesenen Einfluss auf Neuralrohrdefekte.",
+          options: [
+            "Nur 1 und 5",
+            "Nur 2 und 4",
+            "Nur 1, 3 und 4",
+            "Nur 2, 3 und 5",
+            "Alle Aussagen",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Aussagen 1, 3 und 4 sind korrekt. Das Notochord induziert die Neuralplatte aus dem Ektoderm (1). Aus der Neuralleiste entstehen Melanozyten, sensorische/autonome Ganglien und das Nebennierenmark (3). Der anteriore Neuroporus schließt sich an Tag 25, der posteriore an Tag 27 (4). Aussage 2 ist falsch: Neuralleistenzellen stammen vom Ektoderm, nicht vom Mesoderm. Aussage 5 ist falsch: Folsäure senkt das Risiko für Neuralrohrdefekte um ca. 70 %.",
+          difficulty: 3,
+          tags: ["typ-k", "neurulation", "neuralleiste", "notochord", "folsäure"],
+        },
       ],
     },
     {
