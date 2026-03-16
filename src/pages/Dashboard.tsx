@@ -1,4 +1,5 @@
 import { useMemo, useEffect, useState } from "react";
+import { PostSignupReferral } from "@/components/growth/PostSignupReferral";
 import { Link, useSearchParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
@@ -204,6 +205,9 @@ export default function Dashboard() {
     <div className="min-h-screen">
       <div className="max-w-5xl mx-auto px-4 py-8 pb-12">
         <SyncIndicator />
+
+        {/* ─── Referral nudge for new users ─── */}
+        <PostSignupReferral />
 
         {/* ─── First-action guidance for new users ─── */}
         {(quizResults ?? []).length === 0 && (

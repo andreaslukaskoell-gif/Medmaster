@@ -18,6 +18,15 @@ import { supabase } from "@/lib/supabase";
 import { useAuth } from "@/hooks/useAuth";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { trackClick, trackEvent } from "@/lib/analyticsTracker";
+import {
+  initScrollDepthTracking,
+  resetScrollDepth,
+  initSectionVisibility,
+  startPageTimer,
+  logPageTime,
+  trackConversion,
+} from "@/lib/growthTracking";
+import { ExitIntentCapture } from "@/components/growth/ExitIntentCapture";
 import { Logo } from "@/components/brand/Logo";
 
 const NAVY = "#1b3ea7";
@@ -323,6 +332,7 @@ export default function LandingPage() {
     setGoogleError("");
     trackClick("google-signup", "Google Signup CTA");
     trackEvent("signup_click", { method: "google" });
+    trackConversion("signup_started", { method: "google", source: "landing" });
     const { error } = await signInWithGoogle();
     if (error) setGoogleError(error.message);
   };
@@ -331,6 +341,7 @@ export default function LandingPage() {
   const handleLinkClick = (ctaId: string) => () => {
     trackClick(ctaId, ctaId);
     trackEvent("signup_click", { cta: ctaId });
+    trackConversion("signup_started", { cta: ctaId, source: "landing" });
   };
 
   const [showBottomCta, setShowBottomCta] = useState(false);
@@ -356,6 +367,33 @@ export default function LandingPage() {
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Growth tracking: scroll depth, section visibility, time on page
+  useEffect(() => {
+    startPageTimer();
+    const cleanupScroll = initScrollDepthTracking();
+    // Delay section observer to let DOM render
+    const timer = setTimeout(() => {
+      initSectionVisibility([
+        "lp-hero",
+        "lp-preview",
+        "lp-content",
+        "lp-features",
+        "lp-sample",
+        "lp-comparison",
+        "lp-social",
+        "lp-faq",
+        "lp-pricing",
+        "lp-final-cta",
+      ]);
+    }, 500);
+    return () => {
+      logPageTime("/");
+      resetScrollDepth();
+      cleanupScroll?.();
+      clearTimeout(timer);
+    };
   }, []);
 
   const GoogleBtn = ({ label, className = "" }: { label: string; className?: string }) => (
@@ -434,6 +472,7 @@ export default function LandingPage() {
 
       {/* ─── Hero ─── */}
       <section
+        id="lp-hero"
         ref={heroRef}
         className="relative overflow-hidden hero-orbs"
         onMouseMove={handleHeroMouseMove}
@@ -560,7 +599,7 @@ export default function LandingPage() {
       </section>
 
       {/* ─── Product Preview ─── */}
-      <section className="py-24">
+      <section id="lp-preview" className="py-24">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-3">
@@ -605,7 +644,7 @@ export default function LandingPage() {
       </section>
 
       {/* ─── Content Depth: Was steckt drin? ─── */}
-      <section className="py-24">
+      <section id="lp-content" className="py-24">
         <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-14">
             <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-3">
@@ -672,7 +711,7 @@ export default function LandingPage() {
       </section>
 
       {/* ─── Features ─── */}
-      <section className="py-24">
+      <section id="lp-features" className="py-24">
         <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-14">
             <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-3">
@@ -722,7 +761,7 @@ export default function LandingPage() {
       </section>
 
       {/* ─── Try it: Interactive sample question ─── */}
-      <section className="py-24">
+      <section id="lp-sample" className="py-24">
         <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-3">
@@ -738,7 +777,7 @@ export default function LandingPage() {
       </section>
 
       {/* ─── Comparison ─── */}
-      <section className="py-24">
+      <section id="lp-comparison" className="py-24">
         <div className="max-w-3xl mx-auto px-6">
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-3">
@@ -790,7 +829,7 @@ export default function LandingPage() {
       </section>
 
       {/* ─── Social Proof ─── */}
-      <section className="py-24">
+      <section id="lp-social" className="py-24">
         <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-3">
@@ -833,7 +872,7 @@ export default function LandingPage() {
       </section>
 
       {/* ─── Mini FAQ ─── */}
-      <section className="py-24">
+      <section id="lp-faq" className="py-24">
         <div className="max-w-3xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-[var(--text-primary)] text-center mb-10">
             Häufige Fragen
@@ -869,7 +908,7 @@ export default function LandingPage() {
       </section>
 
       {/* ─── Pricing + Countdown ─── */}
-      <section id="preise" className="py-24">
+      <section id="lp-pricing" className="py-24">
         <div className="max-w-3xl mx-auto px-6">
           <div className="card-glass p-12 text-center relative overflow-hidden">
             <div className="absolute top-0 left-0 right-0 h-1 bg-[var(--accent)]" />
@@ -977,7 +1016,7 @@ export default function LandingPage() {
       </section>
 
       {/* ─── Final CTA ─── */}
-      <section className="py-24" style={{ backgroundColor: NAVY }}>
+      <section id="lp-final-cta" className="py-24" style={{ backgroundColor: NAVY }}>
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Bereit für den MedAT 2026?</h2>
           <p className="text-white/80 text-sm mb-8 max-w-lg mx-auto">
@@ -1031,6 +1070,9 @@ export default function LandingPage() {
           <p className="text-xs text-[var(--muted)]">© 2026 MedMaster. Alle Rechte vorbehalten.</p>
         </div>
       </footer>
+
+      {/* ─── Exit Intent Lead Capture ─── */}
+      <ExitIntentCapture />
 
       {/* ─── Sticky bottom CTA ─── */}
       {showBottomCta && (

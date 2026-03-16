@@ -8,6 +8,7 @@ import "@/index.css";
 import App from "@/App";
 import { initAnalytics, captureUtmParams } from "@/lib/analytics";
 import { initTracker, captureTrafficSource } from "@/lib/analyticsTracker";
+import { initMetaPixel, initGtag } from "@/lib/growthTracking";
 
 const dsn = import.meta.env.VITE_SENTRY_DSN;
 if (typeof dsn === "string" && dsn.trim().length > 0) {
@@ -26,6 +27,10 @@ captureUtmParams();
 // Supabase analytics tracker (always active when Supabase is configured)
 initTracker();
 captureTrafficSource();
+
+// Growth tracking — Meta Pixel + Google Ads (noop if env vars missing)
+initMetaPixel();
+initGtag();
 
 // Parallax: update --scroll-y on root so .hero-orbs pseudo-elements can use it
 (function initParallax() {

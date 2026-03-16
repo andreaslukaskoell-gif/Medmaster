@@ -1,21 +1,44 @@
-import { useState } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, CheckCircle, XCircle, BookOpen, Zap, BarChart3 } from "lucide-react";
+import { motion } from "framer-motion";
+import { ArrowRight, BookOpen, Zap, BarChart3, Clock, Users, Shield, Star } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { trackClick, trackEvent } from "@/lib/analyticsTracker";
+import {
+  initScrollDepthTracking,
+  resetScrollDepth,
+  startPageTimer,
+  logPageTime,
+  trackConversion,
+} from "@/lib/growthTracking";
+import { ExitIntentCapture } from "@/components/growth/ExitIntentCapture";
 import { Logo } from "@/components/brand/Logo";
+import { supabase } from "@/lib/supabase";
 
 const NAVY = "#1b3ea7";
 
-/* ── Sample question (inline, single) ── */
+/* ── Countdown ── */
+function useCountdown(targetDate: Date) {
+  const [now, setNow] = useState(() => new Date());
+  useEffect(() => {
+    const id = setInterval(() => setNow(new Date()), 1000);
+    return () => clearInterval(id);
+  }, []);
+  const diff = Math.max(0, targetDate.getTime() - now.getTime());
+  return {
+    days: Math.floor(diff / 86400000),
+    expired: diff === 0,
+  };
+}
+
+/* ── Sample question ── */
 const SAMPLE_Q = {
   subject: "Biologie",
-  badge: "bg-emerald-100 text-emerald-700",
   text: "Welche Aussage zur DNA-Replikation ist FALSCH?",
   options: [
     { id: "a", text: "Die Replikation verläuft semikonservativ" },
-    { id: "b", text: "Die DNA-Polymerase synthetisiert in 5'→3'-Richtung" },
+    { id: "b", text: "Die DNA-Polymerase synthetisiert in 5'\u21923'-Richtung" },
     { id: "c", text: "Am Leitstrang erfolgt die Synthese kontinuierlich" },
     { id: "d", text: "Die Helikase spaltet die Wasserstoffbrücken" },
     { id: "e", text: "Okazaki-Fragmente entstehen am Leitstrang" },
@@ -25,71 +48,69 @@ const SAMPLE_Q = {
     "Okazaki-Fragmente entstehen am Folgestrang, nicht am Leitstrang. Am Leitstrang verläuft die Synthese kontinuierlich.",
 };
 
-/* ── Comparison (compact, honest) ── */
-const COMPARE = [
-  { feature: "BMS-Fragen", us: "4.000+", them: "500–2.000" },
-  { feature: "KFF-Aufgaben", us: "10.000+", them: "50–200 fixe" },
-  { feature: "Alle 4 MedAT-Bereiche", us: true, them: false },
-  { feature: "Adaptiver Lernplan", us: true, them: false },
-  { feature: "Preis", us: "Einmalig €29,90", them: "€9–30 / Monat" },
-  { feature: "Zugang", us: "Bis zum MedAT 2026", them: "Solange du zahlst" },
-];
-
-function SampleQuestion() {
+function SampleQuestion({ onSignupClick }: { onSignupClick: () => void }) {
   const [selected, setSelected] = useState<string | null>(null);
   const [submitted, setSubmitted] = useState(false);
   const q = SAMPLE_Q;
   const isCorrect = selected === q.correctId;
 
   return (
-    <div className="card-glass p-8 max-w-2xl mx-auto">
-      <div className="flex items-center justify-between mb-4">
-        <span className={`text-xs font-medium px-2.5 py-1 rounded-lg ${q.badge}`}>{q.subject}</span>
-        <span className="text-xs text-[var(--muted)]">Beispielfrage</span>
+    <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-10 max-w-2xl mx-auto shadow-[var(--shadow-sm)]">
+      <div className="flex items-center justify-between mb-6">
+        <span className="text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full bg-[var(--accent)]/8 text-[var(--accent)]">
+          {q.subject}
+        </span>
+        <span className="text-xs text-[var(--muted)] tracking-wide">1 von 4.000+</span>
       </div>
-      <p className="text-base font-semibold text-[var(--text-primary)] leading-relaxed mb-5">
+      <p className="text-lg font-semibold text-[var(--text-primary)] leading-relaxed mb-7">
         {q.text}
       </p>
-      <div className="space-y-2.5 mb-5">
+      <div className="space-y-3 mb-7">
         {q.options.map((opt) => {
           const letter = opt.id.toUpperCase();
-          let style =
-            "border-[var(--border)] text-[var(--text-secondary)] hover:border-[var(--accent)]/40";
+          let ring = "border-[var(--border)] hover:border-[var(--accent)]/30";
+          let bg = "";
+          let text = "text-[var(--text-secondary)]";
+          let letterStyle = "bg-[var(--card)] text-[var(--muted)]";
+
           if (submitted) {
-            if (opt.id === q.correctId)
-              style =
-                "border-emerald-400 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-800 dark:text-emerald-300";
-            else if (opt.id === selected)
-              style = "border-red-400 bg-red-50 dark:bg-red-900/20 text-red-800 dark:text-red-300";
-            else style = "border-[var(--border)] text-[var(--muted)] opacity-60";
+            if (opt.id === q.correctId) {
+              ring = "border-emerald-300 dark:border-emerald-700";
+              bg = "bg-emerald-50/60 dark:bg-emerald-900/15";
+              text = "text-emerald-800 dark:text-emerald-300";
+              letterStyle = "bg-emerald-500 text-white";
+            } else if (opt.id === selected) {
+              ring = "border-red-300 dark:border-red-700";
+              bg = "bg-red-50/60 dark:bg-red-900/15";
+              text = "text-red-700 dark:text-red-300";
+              letterStyle = "bg-red-400 text-white";
+            } else {
+              text = "text-[var(--muted)] opacity-50";
+            }
           } else if (opt.id === selected) {
-            style = "border-[var(--accent)] bg-[var(--accent)]/5 text-[var(--text-primary)]";
+            ring = "border-[var(--accent)]";
+            bg = "bg-[var(--accent)]/4";
+            text = "text-[var(--text-primary)]";
+            letterStyle = "bg-[var(--accent)] text-white";
           }
+
           return (
             <button
               key={opt.id}
               onClick={() => !submitted && setSelected(opt.id)}
               disabled={submitted}
-              className={`flex items-center gap-3 w-full px-4 py-3 rounded-xl border text-sm text-left transition-colors cursor-pointer disabled:cursor-default ${style}`}
+              className={`flex items-center gap-4 w-full px-5 py-4 rounded-xl border text-sm text-left transition-all duration-200 cursor-pointer disabled:cursor-default ${ring} ${bg} ${text}`}
             >
               <span
-                className={`w-7 h-7 rounded-lg flex items-center justify-center text-xs font-bold shrink-0 ${
-                  submitted && opt.id === q.correctId
-                    ? "bg-emerald-500 text-white"
-                    : submitted && opt.id === selected
-                      ? "bg-red-400 text-white"
-                      : opt.id === selected
-                        ? "bg-[var(--accent)] text-white"
-                        : "bg-[var(--card)] text-[var(--muted)]"
-                }`}
+                className={`w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold shrink-0 transition-colors ${letterStyle}`}
               >
                 {submitted && opt.id === q.correctId
-                  ? "✓"
+                  ? "\u2713"
                   : submitted && opt.id === selected
-                    ? "✗"
+                    ? "\u2717"
                     : letter}
               </span>
-              {opt.text}
+              <span className="leading-snug">{opt.text}</span>
             </button>
           );
         })}
@@ -99,31 +120,32 @@ function SampleQuestion() {
         <button
           onClick={() => selected && setSubmitted(true)}
           disabled={!selected}
-          className="btn-premium w-full py-3 text-sm disabled:opacity-40 disabled:cursor-not-allowed"
+          className="btn-premium w-full py-4 text-sm font-semibold disabled:opacity-30 disabled:cursor-not-allowed rounded-xl"
         >
           Antwort prüfen
         </button>
       ) : (
-        <div className="space-y-4">
+        <div className="space-y-5">
           <div
-            className={`rounded-xl p-4 text-sm leading-relaxed ${
+            className={`rounded-xl p-5 text-sm leading-relaxed ${
               isCorrect
-                ? "bg-emerald-50 dark:bg-emerald-900/20 text-emerald-800 dark:text-emerald-300"
-                : "bg-amber-50 dark:bg-amber-900/20 text-amber-800 dark:text-amber-300"
+                ? "bg-emerald-50 dark:bg-emerald-900/15 text-emerald-800 dark:text-emerald-200 border border-emerald-200 dark:border-emerald-800/40"
+                : "bg-amber-50 dark:bg-amber-900/15 text-amber-800 dark:text-amber-200 border border-amber-200 dark:border-amber-800/40"
             }`}
           >
-            <p className="font-semibold mb-1">{isCorrect ? "Richtig!" : "Nicht ganz."}</p>
-            <p>{q.explanation}</p>
+            <p className="font-semibold mb-1.5">{isCorrect ? "Richtig." : "Nicht ganz."}</p>
+            <p className="leading-relaxed">{q.explanation}</p>
           </div>
           <Link
             to="/login"
             onClick={() => {
               trackClick("demo-q-cta", "Post-question CTA");
               trackEvent("signup_click", { cta: "demo-question", source: "paid-lp" });
+              onSignupClick();
             }}
-            className="btn-premium flex items-center justify-center gap-2 w-full py-3 text-sm"
+            className="btn-premium flex items-center justify-center gap-2.5 w-full py-4 text-sm font-semibold rounded-xl"
           >
-            Über 4.000 Fragen wie diese — jetzt gratis starten
+            Über 4.000 weitere Fragen warten
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
@@ -132,22 +154,49 @@ function SampleQuestion() {
   );
 }
 
+// ─────────────────────────────────────────────────────────────────────────────
+
 export default function PaidLanding() {
   usePageMeta({
-    title: "MedAT 2026 Vorbereitung — 4.000+ BMS-Fragen, 10.000+ KFF-Aufgaben | MedMaster",
+    title: "MedAT 2026 Vorbereitung \u2014 4.000+ BMS-Fragen, alle 4 Bereiche | MedMaster",
     description:
-      "Bestehe den MedAT 2026 mit System. 4.000+ BMS-Fragen, 10.000+ KFF-Aufgaben, TV, SEK — alle 4 Bereiche in einer Plattform. Einmalig €29,90.",
+      "Bestehe den MedAT 2026: 4.000+ BMS-Fragen mit Erkl\u00e4rungen, 10.000+ KFF-Aufgaben, Pr\u00fcfungssimulation. Alle 4 Bereiche, einmalig \u20ac29,90.",
     canonical: "https://medmaster.at/lp/medat",
     ogImage: "https://medmaster.at/og-image.png",
   });
 
   const { signInWithGoogle } = useAuth();
   const [googleError, setGoogleError] = useState("");
+  const [userCount, setUserCount] = useState<number | null>(null);
+
+  const deadline = useMemo(() => new Date("2026-03-31T23:59:59+02:00"), []);
+  const countdown = useCountdown(deadline);
+
+  useEffect(() => {
+    if (!supabase) return;
+    supabase
+      .from("leaderboard_snapshots")
+      .select("*", { count: "exact", head: true })
+      .then(({ count }) => {
+        if (count && count >= 10) setUserCount(count);
+      });
+  }, []);
+
+  useEffect(() => {
+    startPageTimer();
+    const cleanupScroll = initScrollDepthTracking();
+    return () => {
+      logPageTime("/lp/medat");
+      resetScrollDepth();
+      cleanupScroll?.();
+    };
+  }, []);
 
   const handleGoogle = async () => {
     setGoogleError("");
     trackClick("lp-google-signup", "Paid LP Google CTA");
     trackEvent("signup_click", { method: "google", source: "paid-lp" });
+    trackConversion("signup_started", { method: "google", source: "paid-lp" });
     const { error } = await signInWithGoogle();
     if (error) setGoogleError(error.message);
   };
@@ -155,12 +204,13 @@ export default function PaidLanding() {
   const handleEmailClick = () => {
     trackClick("lp-email-signup", "Paid LP Email CTA");
     trackEvent("signup_click", { method: "email", source: "paid-lp" });
+    trackConversion("signup_started", { method: "email", source: "paid-lp" });
   };
 
   const GoogleBtn = ({ label, className = "" }: { label: string; className?: string }) => (
     <button
       onClick={handleGoogle}
-      className={`inline-flex items-center justify-center gap-3 font-semibold px-8 py-4 text-base cursor-pointer ${className}`}
+      className={`inline-flex items-center justify-center gap-3 font-semibold px-10 py-4.5 text-base cursor-pointer transition-all duration-200 ${className}`}
     >
       <svg className="w-5 h-5" viewBox="0 0 24 24">
         <path
@@ -184,233 +234,411 @@ export default function PaidLanding() {
     </button>
   );
 
+  const fade = {
+    initial: { opacity: 0, y: 24 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: true, margin: "-60px" },
+    transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] as const },
+  };
+
   return (
     <div className="min-h-screen bg-[var(--background)]">
-      {/* ─── Minimal header — logo only, no navigation ─── */}
-      <header className="sticky top-0 z-40 bg-[var(--surface)]/90 backdrop-blur-xl border-b border-[var(--border)]">
-        <div className="max-w-4xl mx-auto px-6 h-14 flex items-center justify-between">
-          <Logo variant="full" size={24} />
+      {/* ─── Header ─── */}
+      <header className="sticky top-0 z-40 bg-[var(--surface)]/80 backdrop-blur-2xl border-b border-[var(--border)]/50">
+        <div className="max-w-4xl mx-auto px-8 h-16 flex items-center justify-between">
+          <Logo variant="full" size={26} />
           <Link
             to="/login"
             onClick={handleEmailClick}
-            className="text-sm font-medium text-[var(--accent)] hover:underline"
+            className="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors"
           >
             Anmelden
           </Link>
         </div>
       </header>
 
-      {/* ─── Hero ─── */}
-      <section className="pt-16 pb-12">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <p className="text-sm font-semibold tracking-wide uppercase mb-4" style={{ color: NAVY }}>
-            Schluss mit planlosem Lernen
+      {/* ─── Urgency bar ─── */}
+      {!countdown.expired && (
+        <div className="text-center py-3 px-4" style={{ backgroundColor: NAVY }}>
+          <p className="text-sm font-medium text-white/90 tracking-wide">
+            Noch {countdown.days} Tage komplett gratis verfügbar
           </p>
-          <h1 className="text-5xl font-extrabold text-[var(--text-primary)] leading-tight tracking-tight mb-5">
-            Du willst Medizin studieren.
-            <br />
-            <span style={{ color: NAVY }}>Wir bringen dich durch den MedAT.</span>
-          </h1>
-          <p className="text-lg text-[var(--text-secondary)] max-w-xl mx-auto mb-8 leading-relaxed">
-            4.000+ BMS-Fragen. Über 10.000 KFF-Aufgaben. TV und SEK inklusive. Alle 4 MedAT-Bereiche
-            — eine Plattform, einmalig €29,90.
-          </p>
+        </div>
+      )}
 
-          {/* Primary CTA */}
-          <div className="flex flex-col items-center gap-3 mb-4">
+      {/* ─── Hero ─── */}
+      <section className="pt-24 pb-20 hero-orbs">
+        <div className="max-w-3xl mx-auto px-8 text-center">
+          <motion.p
+            {...fade}
+            className="text-sm font-semibold tracking-widest uppercase mb-6"
+            style={{ color: NAVY }}
+          >
+            MedAT 2026 Vorbereitung
+          </motion.p>
+          <motion.h1
+            {...fade}
+            transition={{ ...fade.transition, delay: 0.1 }}
+            className="text-6xl font-extrabold text-[var(--text-primary)] leading-[1.1] tracking-tight mb-8"
+          >
+            17.000 Kandidaten.
+            <br />
+            1.900 Plätze.
+            <br />
+            <span className="text-[var(--accent)]">Bist du vorbereitet?</span>
+          </motion.h1>
+          <motion.p
+            {...fade}
+            transition={{ ...fade.transition, delay: 0.2 }}
+            className="text-xl text-[var(--text-secondary)] max-w-lg mx-auto mb-12 leading-relaxed"
+          >
+            Der Unterschied zwischen Zusage und Absage sind oft wenige Punkte. MedMaster gibt dir
+            die Werkzeuge, die diesen Unterschied machen.
+          </motion.p>
+
+          {/* CTA */}
+          <motion.div
+            {...fade}
+            transition={{ ...fade.transition, delay: 0.3 }}
+            className="flex flex-col items-center gap-4 mb-6"
+          >
             <GoogleBtn
-              label="Kostenlos starten mit Google"
-              className="btn-premium rounded-xl text-white shadow-lg"
+              label="Kostenlos starten"
+              className="btn-premium rounded-2xl shadow-xl hover:shadow-2xl hover:scale-[1.02]"
             />
             <Link
               to="/login"
               onClick={handleEmailClick}
-              className="text-sm text-[var(--muted)] hover:text-[var(--text-primary)] transition-colors"
+              className="text-sm text-[var(--muted)] hover:text-[var(--accent)] transition-colors font-medium"
             >
-              Oder mit E-Mail registrieren →
+              Mit E-Mail registrieren
             </Link>
-          </div>
+          </motion.div>
           {googleError && <p className="text-sm text-red-500 mt-2">{googleError}</p>}
-          <p className="text-xs text-[var(--muted)] mt-3">
-            Kein Abo · Keine Kreditkarte · Sofort loslegen
-          </p>
+          <motion.p
+            {...fade}
+            transition={{ ...fade.transition, delay: 0.35 }}
+            className="text-xs text-[var(--muted)]/60 tracking-wide"
+          >
+            Keine Kreditkarte &middot; Jederzeit kündbar &middot; 1 Klick mit Google
+          </motion.p>
         </div>
       </section>
 
-      {/* ─── Trust numbers ─── */}
-      <section className="pb-16">
-        <div className="max-w-3xl mx-auto px-6">
-          <div className="grid grid-cols-3 gap-4">
+      {/* ─── Numbers ─── */}
+      <section className="py-20 border-y border-[var(--border)]/50">
+        <div className="max-w-4xl mx-auto px-8">
+          <motion.div {...fade} className="grid grid-cols-4 gap-8">
             {[
-              { number: "4.000+", label: "BMS-Fragen", sub: "mit Erklärungen" },
-              { number: "10.000+", label: "KFF-Aufgaben", sub: "alle 5 Untertests" },
-              { number: "€29,90", label: "einmalig", sub: "kein Abo, kein Haken" },
-            ].map((stat) => (
-              <div key={stat.label} className="card-glass p-5 text-center">
-                <div className="text-2xl font-extrabold mb-1" style={{ color: NAVY }}>
-                  {stat.number}
+              { value: "4.000+", label: "BMS-Fragen", sub: "mit Erklärungen" },
+              { value: "10.000+", label: "KFF-Aufgaben", sub: "algorithmisch generiert" },
+              { value: "173", label: "Lerneinheiten", sub: "offizielle Stichwortliste" },
+              { value: "5", label: "Testsimulationen", sub: "echte Zeitlimits" },
+            ].map((s) => (
+              <div key={s.label} className="text-center">
+                <div
+                  className="text-4xl font-extrabold tracking-tight mb-2"
+                  style={{ color: NAVY }}
+                >
+                  {s.value}
                 </div>
-                <div className="text-sm font-semibold text-[var(--text-primary)]">{stat.label}</div>
-                <div className="text-xs text-[var(--muted)]">{stat.sub}</div>
+                <div className="text-sm font-semibold text-[var(--text-primary)] mb-0.5">
+                  {s.label}
+                </div>
+                <div className="text-xs text-[var(--muted)]">{s.sub}</div>
               </div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* ─── Screenshot ─── */}
-      <section className="pb-16">
-        <div className="max-w-3xl mx-auto px-6">
-          <div className="card-glass overflow-hidden">
-            <img
-              src="/screenshots/fragen-trainer-bio.png"
-              alt="MedMaster BMS-Fragentrainer"
-              className="w-full"
-              loading="lazy"
-            />
-          </div>
+      {/* ─── The problem ─── */}
+      <section className="py-24">
+        <div className="max-w-3xl mx-auto px-8">
+          <motion.div {...fade} className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-4">
+              Wie sich die meisten vorbereiten — und warum es nicht reicht
+            </h2>
+          </motion.div>
+          <motion.div {...fade} className="grid grid-cols-2 gap-6">
+            <div className="rounded-2xl border border-[var(--border)] p-8">
+              <div className="w-10 h-10 rounded-xl bg-[var(--card)] flex items-center justify-center mb-5">
+                <span className="text-lg text-[var(--muted)]">&times;</span>
+              </div>
+              <h3 className="text-base font-bold text-[var(--text-primary)] mb-4">
+                Planlos lernen
+              </h3>
+              <ul className="space-y-3 text-sm text-[var(--text-secondary)] leading-relaxed">
+                <li>Lehrbuch von vorne bis hinten durchlesen</li>
+                <li>50 Altfragen auswendig können</li>
+                <li>Schwächen ignorieren, Stärken wiederholen</li>
+                <li>Am Prüfungstag überrascht werden</li>
+              </ul>
+            </div>
+            <div
+              className="rounded-2xl border-2 p-8"
+              style={{ borderColor: `color-mix(in srgb, ${NAVY} 30%, transparent)` }}
+            >
+              <div
+                className="w-10 h-10 rounded-xl flex items-center justify-center mb-5"
+                style={{ backgroundColor: `color-mix(in srgb, ${NAVY} 10%, transparent)` }}
+              >
+                <span className="text-lg" style={{ color: NAVY }}>
+                  &rarr;
+                </span>
+              </div>
+              <h3 className="text-base font-bold text-[var(--text-primary)] mb-4">
+                Systematisch mit MedMaster
+              </h3>
+              <ul className="space-y-3 text-sm text-[var(--text-secondary)] leading-relaxed">
+                <li>4.000+ Fragen im echten MedAT-Format üben</li>
+                <li>Schwächen werden automatisch erkannt</li>
+                <li>Gezielte Wiederholung statt Zufall</li>
+                <li>Fortschritt pro Stichwort sichtbar</li>
+              </ul>
+            </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* ─── Pain point callout ─── */}
-      <section className="pb-16">
-        <div className="max-w-3xl mx-auto px-6">
-          <div className="rounded-2xl border border-amber-200 dark:border-amber-800 bg-amber-50/50 dark:bg-amber-900/10 p-8 text-center">
-            <p className="text-lg font-bold text-[var(--text-primary)] mb-2">
-              17.000 Kandidaten. 1.900 Plätze.
+      {/* ─── Features ─── */}
+      <section className="py-24 border-t border-[var(--border)]/50">
+        <div className="max-w-4xl mx-auto px-8">
+          <motion.div {...fade} className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-4">
+              Kein Fragenpool. Ein Lernsystem.
+            </h2>
+            <p className="text-base text-[var(--text-secondary)] max-w-lg mx-auto">
+              MedMaster erkennt, wo du Schwächen hast, und trainiert gezielt diese Bereiche.
             </p>
-            <p className="text-sm text-[var(--text-secondary)] max-w-lg mx-auto leading-relaxed">
-              Über 88 % werden abgelehnt. Der Unterschied zwischen Zusage und Absage sind oft wenige
-              Punkte. Wer planlos lernt, verschenkt sie.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* ─── 3 Features — compact ─── */}
-      <section className="pb-16">
-        <div className="max-w-3xl mx-auto px-6">
-          <div className="grid grid-cols-3 gap-4">
+          </motion.div>
+          <motion.div {...fade} className="grid grid-cols-3 gap-6">
             {[
               {
                 icon: BookOpen,
                 title: "Alle 4 MedAT-Bereiche",
-                desc: "BMS, KFF, Textverständnis und SEK — komplett abgedeckt, nicht nur ein Teilbereich.",
+                desc: "BMS, KFF, Textverständnis, SEK. Vollständig abgedeckt — nicht nur ein Teilbereich.",
               },
               {
                 icon: Zap,
-                title: "Erkennt deine Schwächen",
-                desc: "Adaptiver Lernplan analysiert deine Fehler und stellt gezielt Aufgaben daraus zusammen.",
+                title: "Adaptiv, nicht zufällig",
+                desc: "Was du falsch beantwortest, kommt wieder. Was du kannst, wird seltener. Dein Lernplan passt sich an.",
               },
               {
                 icon: BarChart3,
                 title: "Echte Prüfungssimulation",
-                desc: "Vollständiger MedAT-Probelauf mit Zeitlimit und detaillierter Auswertung.",
+                desc: "5 vollständige Testsimulationen unter echten Bedingungen — offizielle Zeitlimits pro Testteil. Wenn du hier bestehst, bist du bereit.",
               },
             ].map((f) => (
-              <div key={f.title} className="card-glass p-5">
-                <f.icon className="w-8 h-8 mb-3" style={{ color: NAVY }} />
-                <h3 className="text-sm font-bold text-[var(--text-primary)] mb-1.5">{f.title}</h3>
-                <p className="text-xs text-[var(--muted)] leading-relaxed">{f.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ─── Comparison table (compact) ─── */}
-      <section className="pb-16">
-        <div className="max-w-3xl mx-auto px-6">
-          <h2 className="text-2xl font-bold text-[var(--text-primary)] text-center mb-2">
-            Ehrlicher Vergleich
-          </h2>
-          <p className="text-sm text-[var(--muted)] text-center mb-6">
-            Die meisten Plattformen verkaufen dir ein Abo für einen Bruchteil des Stoffs.
-          </p>
-          <div className="card-glass overflow-hidden">
-            <div className="grid grid-cols-3 text-center text-sm font-semibold border-b border-[var(--border)]">
-              <div className="p-3 text-left" />
-              <div className="p-3" style={{ color: NAVY }}>
-                MedMaster
-              </div>
-              <div className="p-3 text-[var(--muted)]">Alternativen</div>
-            </div>
-            {COMPARE.map((row, i) => (
               <div
-                key={row.feature}
-                className={`grid grid-cols-3 text-center text-sm ${i < COMPARE.length - 1 ? "border-b border-[var(--border)]" : ""}`}
+                key={f.title}
+                className="rounded-2xl border border-[var(--border)] p-8 hover:shadow-[var(--shadow-sm)] transition-shadow"
               >
-                <div className="p-3 text-[var(--text-primary)] text-left font-medium text-xs">
-                  {row.feature}
+                <div
+                  className="w-12 h-12 rounded-xl flex items-center justify-center mb-5"
+                  style={{ backgroundColor: `color-mix(in srgb, ${NAVY} 8%, transparent)` }}
+                >
+                  <f.icon className="w-6 h-6" style={{ color: NAVY }} />
                 </div>
-                <div className="p-3 flex items-center justify-center">
-                  {row.us === true ? (
-                    <CheckCircle className="w-5 h-5 text-emerald-500" />
-                  ) : (
-                    <span className="font-semibold text-[var(--text-primary)] text-xs">
-                      {row.us}
-                    </span>
-                  )}
-                </div>
-                <div className="p-3 flex items-center justify-center">
-                  {row.them === false ? (
-                    <XCircle className="w-5 h-5 text-red-400" />
-                  ) : (
-                    <span className="text-[var(--muted)] text-xs">{row.them}</span>
-                  )}
-                </div>
+                <h3 className="text-base font-bold text-[var(--text-primary)] mb-2">{f.title}</h3>
+                <p className="text-sm text-[var(--muted)] leading-relaxed">{f.desc}</p>
               </div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* ─── Interactive demo question ─── */}
-      <section className="pb-16">
-        <div className="max-w-3xl mx-auto px-6">
-          <h2 className="text-2xl font-bold text-[var(--text-primary)] text-center mb-2">
-            Kannst du diese Frage beantworten?
-          </h2>
-          <p className="text-sm text-[var(--muted)] text-center mb-6">
-            So sehen die Fragen in MedMaster aus. Über 4.000 davon — mit Erklärung bei jeder
-            Antwort.
-          </p>
-          <SampleQuestion />
+      {/* ─── Demo question ─── */}
+      <section className="py-24 border-t border-[var(--border)]/50">
+        <div className="max-w-3xl mx-auto px-8">
+          <motion.div {...fade} className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-4">
+              Eine Frage. Weißt du die Antwort?
+            </h2>
+            <p className="text-base text-[var(--text-secondary)] max-w-md mx-auto">
+              So sehen die Fragen in MedMaster aus. Originalformat, detaillierte Erklärung bei jeder
+              Antwort.
+            </p>
+          </motion.div>
+          <motion.div {...fade}>
+            <SampleQuestion
+              onSignupClick={() =>
+                trackConversion("signup_started", { cta: "demo-question", source: "paid-lp" })
+              }
+            />
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ─── Mid CTA ─── */}
+      <section className="py-24 border-t border-[var(--border)]/50">
+        <div className="max-w-3xl mx-auto px-8">
+          <motion.div
+            {...fade}
+            className="rounded-2xl p-12 text-center"
+            style={{
+              background: `linear-gradient(135deg, color-mix(in srgb, ${NAVY} 4%, transparent), color-mix(in srgb, ${NAVY} 8%, transparent))`,
+              border: `1px solid color-mix(in srgb, ${NAVY} 12%, transparent)`,
+            }}
+          >
+            <Clock className="w-7 h-7 mx-auto mb-5" style={{ color: NAVY }} />
+            <h3 className="text-2xl font-bold text-[var(--text-primary)] mb-3">
+              {countdown.expired
+                ? "Einmalig €29,90. Kein Abo."
+                : `Noch ${countdown.days} Tage komplett gratis.`}
+            </h3>
+            <p className="text-sm text-[var(--text-secondary)] mb-8 max-w-md mx-auto leading-relaxed">
+              {countdown.expired
+                ? "Jederzeit kündbar. Voller Zugang zu allen Fragen, Lerneinheiten und der Prüfungssimulation."
+                : "Wer jetzt startet, lernt bis April gratis — und hat einen Vorsprung gegenüber allen, die noch warten."}
+            </p>
+            <GoogleBtn
+              label="Kostenlos starten"
+              className="btn-premium rounded-2xl shadow-xl hover:shadow-2xl hover:scale-[1.02]"
+            />
+            {googleError && <p className="text-sm text-red-500 mt-3">{googleError}</p>}
+            <p className="text-xs text-[var(--muted)] mt-4">
+              <Link
+                to="/login"
+                onClick={handleEmailClick}
+                className="underline hover:text-[var(--text-secondary)]"
+              >
+                Mit E-Mail anmelden
+              </Link>
+              {" \u00b7 "}Keine Kreditkarte{" \u00b7 "}Jederzeit kündbar
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ─── Trust badges ─── */}
+      <section className="py-16 border-t border-[var(--border)]/50">
+        <div className="max-w-3xl mx-auto px-8">
+          <motion.div {...fade} className="flex flex-wrap justify-center gap-3">
+            {(
+              [
+                { icon: BookOpen, text: "4.000+ BMS-Fragen" },
+                { icon: Zap, text: "10.000+ KFF-Aufgaben" },
+                { icon: Star, text: "Alle 4 MedAT-Bereiche" },
+                { icon: Shield, text: "Jederzeit kündbar" },
+                ...(userCount ? [{ icon: Users, text: `${userCount}+ lernen bereits` }] : []),
+              ] as { icon: React.ComponentType<{ className?: string }>; text: string }[]
+            ).map((b) => (
+              <span
+                key={b.text}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium text-[var(--text-secondary)] bg-[var(--card)] border border-[var(--border)]"
+              >
+                <b.icon className="w-4 h-4 text-[var(--muted)]" />
+                {b.text}
+              </span>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ─── FAQ ─── */}
+      <section className="py-24 border-t border-[var(--border)]/50">
+        <div className="max-w-2xl mx-auto px-8">
+          <motion.h2
+            {...fade}
+            className="text-3xl font-bold text-[var(--text-primary)] text-center mb-12"
+          >
+            Häufige Fragen
+          </motion.h2>
+          <motion.div {...fade} className="divide-y divide-[var(--border)]">
+            {[
+              {
+                q: "Ist das aktuell für den MedAT 2026?",
+                a: "Ja, vollständig. Alle Inhalte basieren auf der offiziellen Stichwortliste 2026 der Medizinischen Universitäten. Die 173 Lerneinheiten decken jedes einzelne Stichwort ab — von Zellbiologie über organische Chemie bis Stochastik. Die über 4.000 BMS-Fragen sind im originalen MedAT-Format (A\u2013E, genau eine richtige Antwort) und werden laufend aktualisiert.",
+              },
+              {
+                q: "Kann ich jederzeit kündigen?",
+                a: "Ja, ohne Wenn und Aber. Es gibt kein Abo, keine automatische Verlängerung und keine Kündigungsfrist. Du kannst deinen Account jederzeit in den Einstellungen löschen \u2014 mit einem Klick. Bis 31. März ist der volle Zugang komplett gratis, danach fällt eine einmalige Zahlung von \u20ac29,90 an. Keine versteckten Kosten, kein Kleingedrucktes.",
+              },
+              {
+                q: "Reicht MedMaster als Vorbereitung?",
+                a: "MedMaster deckt alle 4 MedAT-Bereiche vollständig ab: BMS (Biologie, Chemie, Physik, Mathematik), KFF (Zahlenfolgen, Implikationen, Wortflüssigkeit, Figuren, Gedächtnis), Textverständnis und SEK. Für den BMS-Teil empfehlen viele Kandidierende ergänzend ein Biologie-Lehrbuch wie den Campbell für die Tiefe der Theorie. Die gesamte Übungs- und Simulationskomponente ist aber komplett abgedeckt \u2014 inklusive adaptivem Lernplan, der deine Schwächen gezielt trainiert.",
+              },
+              {
+                q: "Was passiert nach dem 31. März?",
+                a: "Ab 1. April kostet MedMaster einmalig \u20ac29,90. Das ist eine einmalige Zahlung \u2014 kein monatliches Abo, keine wiederkehrenden Kosten. Du behältst vollen Zugang zu allen Fragen, Lerneinheiten, der Prüfungssimulation und allen zukünftigen Updates bis zum MedAT 2026. Wer sich jetzt registriert, lernt bis dahin komplett gratis.",
+              },
+            ].map((faq) => (
+              <FAQItem key={faq.q} q={faq.q} a={faq.a} />
+            ))}
+          </motion.div>
         </div>
       </section>
 
       {/* ─── Final CTA ─── */}
-      <section className="py-16" style={{ backgroundColor: NAVY }}>
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-white mb-3">
-            Jeder Tag ohne Vorbereitung ist ein Tag weniger bis zum MedAT.
+      <section className="py-28" style={{ backgroundColor: NAVY }}>
+        <div className="max-w-3xl mx-auto px-8 text-center">
+          <h2 className="text-4xl font-extrabold text-white mb-5 leading-tight tracking-tight">
+            Der MedAT wartet nicht.
+            <br />
+            Deine Konkurrenz auch nicht.
           </h2>
-          <p className="text-white/70 text-sm mb-8 max-w-md mx-auto">
-            4.000+ BMS-Fragen, 10.000+ KFF-Aufgaben, TV und SEK — alles in einer Plattform. Kein
-            Abo, keine Kreditkarte.
+          <p className="text-white/60 text-base mb-10 max-w-md mx-auto leading-relaxed">
+            4.000+ Fragen. Alle 4 Bereiche. Adaptives Lernsystem. Jederzeit kündbar.
           </p>
           <GoogleBtn
             label="Jetzt kostenlos starten"
-            className="bg-white text-[var(--text-primary)] rounded-xl shadow-lg hover:bg-gray-50 transition-colors"
+            className="bg-white text-[var(--text-primary)] rounded-2xl shadow-xl hover:bg-gray-50 hover:shadow-2xl hover:scale-[1.02] transition-all duration-200"
           />
-          <p className="text-xs text-white/50 mt-4">Einmalig €29,90 nach der Testphase</p>
+          <p className="text-xs text-white/40 mt-5 tracking-wide">
+            <Link to="/login" onClick={handleEmailClick} className="underline hover:text-white/60">
+              Mit E-Mail anmelden
+            </Link>
+            {" \u00b7 "}Keine Kreditkarte nötig
+          </p>
         </div>
       </section>
 
-      {/* ─── Minimal footer — legal only ─── */}
-      <footer className="py-6 border-t border-[var(--border)]">
-        <div className="max-w-3xl mx-auto px-6 flex items-center justify-between text-xs text-[var(--muted)]">
-          <span>© 2026 MedMaster</span>
-          <div className="flex gap-4">
+      {/* ─── Footer ─── */}
+      <footer className="py-8 border-t border-[var(--border)]">
+        <div className="max-w-4xl mx-auto px-8 flex items-center justify-between text-xs text-[var(--muted)]">
+          <span>&copy; 2026 MedMaster</span>
+          <div className="flex gap-6">
             <Link to="/impressum" className="hover:text-[var(--text-primary)] transition-colors">
               Impressum
             </Link>
             <Link to="/datenschutz" className="hover:text-[var(--text-primary)] transition-colors">
               Datenschutz
             </Link>
+            <Link to="/agb" className="hover:text-[var(--text-primary)] transition-colors">
+              AGB
+            </Link>
           </div>
         </div>
       </footer>
+
+      <ExitIntentCapture />
+    </div>
+  );
+}
+
+function FAQItem({ q, a }: { q: string; a: string }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div>
+      <button
+        onClick={() => setOpen(!open)}
+        className="w-full flex items-start justify-between gap-6 py-6 text-left cursor-pointer"
+      >
+        <span className="text-base font-semibold text-[var(--text-primary)] leading-relaxed">
+          {q}
+        </span>
+        <svg
+          className={`w-5 h-5 text-[var(--muted)] shrink-0 mt-1 transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          strokeWidth={2}
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      {open && <p className="text-sm text-[var(--muted)] leading-relaxed pb-6 -mt-2 pr-12">{a}</p>}
     </div>
   );
 }

@@ -7,6 +7,7 @@ import { useStore } from "@/store/useStore";
 import { cn } from "@/lib/utils";
 import { trackOnboardingComplete } from "@/lib/analytics";
 import { trackEvent } from "@/lib/analyticsTracker";
+import { trackConversion } from "@/lib/growthTracking";
 
 type Step = "welcome" | "date" | "time" | "fach" | "done";
 
@@ -483,6 +484,11 @@ export default function Onboarding() {
     // Analytics
     trackOnboardingComplete();
     trackEvent("onboarding_complete", { medatDate, hoursPerWeek, weakestSubject: selectedFach });
+    trackConversion("onboarding_completed", {
+      medatDate,
+      hoursPerWeek,
+      weakestSubject: selectedFach,
+    });
 
     const timer = setTimeout(() => {
       navigate("/daily", { replace: true });
