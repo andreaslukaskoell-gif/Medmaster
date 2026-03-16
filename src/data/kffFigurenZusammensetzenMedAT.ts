@@ -1306,10 +1306,8 @@ export function validateFigurenTask(task: FigureAssembleTask, skipGeometric = fa
 /** Formfamilien: Distraktoren kommen bevorzugt aus derselben Familie. */
 const SHAPE_FAMILIES: Record<string, Polygon[]> = {
   circles: [QUARTER_CIRCLE, HALF_CIRCLE, THREE_QUARTER_CIRCLE, FULL_CIRCLE],
-  quads: [SQUARE, RHOMBUS, PARALLELOGRAM, TRAPEZ],
-  polygons: [PENTAGON, HEXAGON, HEPTAGON, OCTAGON],
-  triangle: [TRIANGLE],
-  lshape: [L_SHAPE],
+  quads: [SQUARE, RHOMBUS, PARALLELOGRAM, TRAPEZ, L_SHAPE],
+  polygons: [PENTAGON, HEXAGON, HEPTAGON, OCTAGON, TRIANGLE],
 };
 
 /** Findet die Familie einer Form. */
@@ -1360,10 +1358,8 @@ function buildDistractors(
   // Rund bleibt bei rund, eckig bei eckig — kein Mischen.
   const neighborMap: Record<string, string[]> = {
     circles: [],
-    quads: ["polygons", "triangle", "lshape"],
-    polygons: ["quads", "triangle", "lshape"],
-    triangle: ["quads", "polygons", "lshape"],
-    lshape: ["quads", "polygons", "triangle"],
+    quads: ["polygons"],
+    polygons: ["quads"],
   };
   const neighborFamilies = neighborMap[family] ?? [];
   const neighbors: Polygon[] = [];
