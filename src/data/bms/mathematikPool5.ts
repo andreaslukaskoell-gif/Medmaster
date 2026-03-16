@@ -184,9 +184,9 @@ export const mathematikPool5: Question[] = [
     "ma-pool-5-015",
     "mathe-kap2",
     "Berechne die Seitenlänge eines Quadrats, dessen Diagonale 10 cm beträgt.",
-    ["5 cm", "5√2 cm", "10/√2 cm", "10√2 cm", "√10 cm"],
+    ["5 cm", "5√2 cm", "10√3 cm", "10√2 cm", "√10 cm"],
     1,
-    "In einem Quadrat mit Seite a gilt: Diagonale d = a√2. Also a = d/√2 = 10/√2 = 5√2 cm. (Option C ist äquivalent, aber B ist die vereinfachte Form.)",
+    "In einem Quadrat mit Seite a gilt: Diagonale d = a√2. Also a = d/√2 = 10/√2 = 10√2/2 = 5√2 cm.",
     "mittel",
     ["Quadrat", "Diagonale", "Pythagoras"]
   ),

@@ -1624,6 +1624,8 @@ Die reife **Eizelle** (n) nach Abschluss der Meiose II und die **Spermien** (n) 
           tags: ["oogenese", "meiose-ii", "befruchtung"],
         },
       ],
+      klinischerBezug:
+        "Störungen der Gametogenese sind eine häufige Ursache für Infertilität: Azoospermie (fehlende Spermien im Ejakulat) kann durch Sertoli-Cell-Only-Syndrom oder Meiose-Arrest bedingt sein. Bei der Frau führt die altersbedingte Abnahme der Oozytenqualität (lange Prophase-I-Pause → erhöhtes Risiko für Non-Disjunction) zu steigenden Trisomie-21-Raten ab dem 35. Lebensjahr. In der Reproduktionsmedizin (IVF/ICSI) werden diese Prozesse therapeutisch genutzt — in Österreich geregelt durch das Fortpflanzungsmedizingesetz.",
     },
     {
       id: "bio-4-01e",
@@ -2082,6 +2084,8 @@ Aus welchem Keimblatt welches Organ entsteht, ist prüfungsrelevant. Die folgend
           tags: ["typ-k", "gastrulation", "keimblätter", "ektoderm", "mesoderm", "endoderm"],
         },
       ],
+      klinischerBezug:
+        "Fehlbildungen der Keimblattdifferenzierung haben schwerwiegende klinische Konsequenzen: Ein persistierender Primitivstreifen kann zu sakrokokzygealen Teratomen führen (häufigster kongenitaler Tumor bei Neugeborenen). Fehler in der Notochord-Induktion verursachen Neuralrohrdefekte wie Spina bifida oder Anenzephalie — in Österreich wird daher perikonzeptionell Folsäure-Supplementierung (400 µg/Tag) empfohlen. Kenntnisse der Keimblattderivate sind klinisch essenziell: Ein Tumor aus Schilddrüsengewebe, Darmepithel und Knochen (Teratom) enthält Derivate aller drei Keimblätter.",
     },
     {
       id: "bio-4-02n",

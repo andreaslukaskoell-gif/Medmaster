@@ -579,16 +579,6 @@ export const chemiePool6: Question[] = [
     []
   ),
   q(
-    "ch-pool-294",
-    "chem-kap2",
-    "Die Einheit der Stoffmenge n ist:",
-    ["Gramm", "Liter", "Mol", "Teilchen", "Mol/Liter"],
-    2,
-    "Stoffmenge n in Mol [mol]. 1 mol = 6,022·10²³ Teilchen.",
-    "leicht",
-    []
-  ),
-  q(
     "ch-pool-295",
     "chem-kap3",
     "Welche Aussage zu Metallen ist falsch?",
@@ -639,10 +629,10 @@ export const chemiePool6: Question[] = [
   q(
     "ch-pool-298",
     "chem-kap6",
-    "Was ist ein Ammid?",
+    "Was ist ein Amid?",
     ["R−OH", "R−NH₂", "R−CONH₂", "R−CHO", "R−COOH"],
     2,
-    "Amid (Amid): R−CONH₂ (Carbonsäurederivat, N gebunden an Carbonyl-C). Amin: R−NH₂.",
+    "Amid: R−CONH₂ (Carbonsäurederivat, N gebunden an Carbonyl-C). Amin: R−NH₂.",
     "leicht",
     []
   ),
@@ -653,22 +643,6 @@ export const chemiePool6: Question[] = [
     ["1–7", "1–18 (IUPAC)", "nur 0–8", "A und B", "nach Buchstaben"],
     1,
     "IUPAC: Gruppen 1–18. Ältere Notation: römische Ziffern I–VIII mit A/B für Haupt-/Nebengruppen.",
-    "leicht",
-    []
-  ),
-  q(
-    "ch-pool-300",
-    "chem-kap2",
-    "Welche Aussage zur Dichteanomalie des Wassers ist richtig?",
-    [
-      "Wasser hat bei 0 °C die größte Dichte.",
-      "Eis ist dichter als flüssiges Wasser.",
-      "Wasser hat bei 4 °C die größte Dichte.",
-      "Die Dichte von Wasser ist konstant.",
-      "Wasser gefriert bei 4 °C.",
-    ],
-    2,
-    "Dichtemaximum bei 4 °C. Eis (0 °C) ist weniger dicht → schwimmt.",
     "leicht",
     []
   ),

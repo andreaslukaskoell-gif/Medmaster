@@ -619,10 +619,16 @@ export const chemiePool5: Question[] = [
   q(
     "ch-pool-249",
     "chem-kap1",
-    "Die Schalen (Hauptenergieniveaus) werden mit welchem Buchstaben bezeichnet?",
-    ["s, p, d, f", "K, L, M, N", "n = 1, 2, 3, …", "α, β, γ", "A, B, C"],
-    2,
-    "Hauptquantenzahl n = 1, 2, 3, … (Schalen). K, L, M sind historische Bezeichnungen. s, p, d, f sind Orbitale.",
+    "Die Hauptquantenzahl n beschreibt welche Eigenschaft eines Elektrons?",
+    [
+      "Den Spin",
+      "Das Energieniveau (Schale)",
+      "Die Orbitform",
+      "Die magnetische Orientierung",
+      "Die Elektronegativität",
+    ],
+    1,
+    "Die Hauptquantenzahl n bestimmt das Energieniveau (Schale) des Elektrons. n = 1 → K-Schale, n = 2 → L-Schale usw.",
     "mittel",
     []
   ),

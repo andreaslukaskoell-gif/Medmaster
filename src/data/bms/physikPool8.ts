@@ -349,8 +349,8 @@ export const physikPool8: Question[] = [
     [
       "der Halbwertszeit",
       "der Anzahl N der noch vorhandenen Kerne",
-      "der Masse nicht",
-      "B ist richtig",
+      "der Masse des Atoms",
+      "dem Quadrat der Halbwertszeit",
       "der Temperatur",
     ],
     3,

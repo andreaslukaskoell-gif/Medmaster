@@ -259,7 +259,7 @@ export const physikPool3: Question[] = [
     [
       "kg·m/s²",
       "kg·m/s (Impuls, Bewegungsgröße)",
-      "N·s (einfaches Verhältnis der Größen)",
+      "N·s",
       "B und C sind richtig",
       "J (Joule, Energie)",
     ],

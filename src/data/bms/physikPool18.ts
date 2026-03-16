@@ -629,7 +629,7 @@ export const physikPool18: Question[] = [
     "ph-pool-18-054",
     KAP[3],
     "Die Lorentzkraft auf eine Ladung q, die sich mit v in einem Magnetfeld B bewegt, ist proportional zu:",
-    ["q·B (einfaches Verhältnis der Größen)", "q·v·B", "q/v·B", "q + v + B", "nur B"],
+    ["q·B", "q·v·B", "q/v·B", "q + v + B", "nur B"],
     1,
     "F = q·(v×B); |F| ∝ q·v·B·sin(α).",
     "mittel",

@@ -345,16 +345,6 @@ export const chemiePool3: Question[] = [
     ["Schmelzpunkt", "Leitfähigkeit", "NaCl"]
   ),
   q(
-    "ch-pool-127",
-    "chem-kap6",
-    "Benzol (C₆H₆) gehört zu den:",
-    ["Alkanen", "Alkenen", "Alkinen", "Aromaten", "Alkoholen"],
-    3,
-    "Benzol ist ein Aromat (6 π-Elektronen, Hückel-Regel 4n+2 mit n=1), kein Alken. Delokalisierte π-Elektronen im Ring.",
-    "leicht",
-    ["Benzol", "Aromat"]
-  ),
-  q(
     "ch-pool-128",
     "chem-kap1",
     "Die maximale Besetzung der s-, p-, d- und f-Orbitale mit Elektronen beträgt:",

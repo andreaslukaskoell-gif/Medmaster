@@ -462,11 +462,11 @@ export const mathematikPool4: Question[] = [
       "f⁻¹(x) = (x + 6)/2",
       "f⁻¹(x) = (x − 6)/2",
       "f⁻¹(x) = 2x + 6",
-      "f⁻¹(x) = x/2 + 3",
+      "f⁻¹(x) = x/2 − 3",
       "f⁻¹(x) = −2x + 6",
     ],
     0,
-    "y = 2x − 6 ⇒ x = (y + 6)/2. Also f⁻¹(x) = (x + 6)/2. (Option D ist äquivalent: x/2 + 3 = (x + 6)/2.)",
+    "y = 2x − 6 ⇒ x = (y + 6)/2. Also f⁻¹(x) = (x + 6)/2.",
     "leicht",
     ["Umkehrfunktion"]
   ),

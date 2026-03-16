@@ -711,7 +711,7 @@ export const physikPool1: Question[] = [
     "Der Doppler-Effekt beschreibt:",
     [
       "die Beugung von Wellen an Hindernissen.",
-      "die Änderung der wahrgenommenen Frequenz",
+      "die Änderung der wahrgenommenen Frequenz bei Relativbewegung.",
       "die Reflexion von Schall an Grenzflächen.",
       "die Dispersion von Licht in Prismen.",
       "stehende Wellen in Resonatoren.",
