@@ -1,5 +1,5 @@
 /**
- * Biologie Pool — „Was ist falsch?" (Typ A) pro Thema.
+ * Biologie Pool — \"Was ist falsch?" (Typ A) pro Thema.
  * Stoff aus bmsKapitel/biologie.
  * 30 Fragen: Kap1 (6), Kap2 (8), Kap3 (5), Kap4 (6), Kap5 (5).
  */

@@ -57,7 +57,7 @@ export const physikPool1: Question[] = [
       "Er ist die Massenzunahme der Atome bei relativ hohen Geschwindigkeiten.",
     ],
     3,
-    "Der Massendefekt ist die Differenz: (Summe der Ruhemassen der Nukleonen) minus (tatsächliche Kernmasse). Die Bindungsenergie entspricht dieser „fehlenden“ Masse (E = Δm · c²).",
+    "Der Massendefekt ist die Differenz: (Summe der Ruhemassen der Nukleonen) minus (tatsächliche Kernmasse). Die Bindungsenergie entspricht dieser \"fehlenden\" Masse (E = Δm · c²).",
     "mittel",
     ["Massendefekt", "Atomphysik", "Kernphysik"]
   ),
@@ -126,7 +126,7 @@ export const physikPool1: Question[] = [
   q(
     "ph-pool-008",
     "phys-kap1",
-    "Was versteht man in der Physik unter „abgeleitete Größen“?",
+    "Was versteht man in der Physik unter \"abgeleitete Größen\"?",
     [
       "Veraltete physikalische Begriffe (z.B. Permeabilität statt Dielektrizitätskonstante).",
       "Physikalische Größen, die keine SI-Einheiten besitzen.",
@@ -343,7 +343,7 @@ export const physikPool1: Question[] = [
       "Strom mal Zeit.",
     ],
     0,
-    "Spannung U = W/Q (Arbeit pro Ladung), Einheit Volt = J/C. Sie beschreibt die „Antriebsstärke“ für den Stromfluss.",
+    "Spannung U = W/Q (Arbeit pro Ladung), Einheit Volt = J/C. Sie beschreibt die \"Antriebsstärke\" für den Stromfluss.",
     "mittel",
     ["Spannung", "Elektrizität", "Definition"]
   ),
@@ -533,7 +533,7 @@ export const physikPool1: Question[] = [
       "Kalorien und Joule sind umrechenbar (1 cal = 4,184 J).",
     ],
     2,
-    "Joule (J) = Energie; Watt (W) = Leistung = J/s. Verschiedene Größen — man „rechnet“ nicht Joule in Watt um.",
+    "Joule (J) = Energie; Watt (W) = Leistung = J/s. Verschiedene Größen — man \"rechnet\" nicht Joule in Watt um.",
     "mittel",
     ["Joule", "Watt", "Einheiten"]
   ),

@@ -1,7 +1,7 @@
 /**
- * Physik BMS-Fragenpool (1000+ Fragen, MedAT Single Choice + Typ K + „Was ist falsch?“).
+ * Physik BMS-Fragenpool (1000+ Fragen, MedAT Single Choice + Typ K + \"Was ist falsch?\").
  * Nur Stoff aus bmsKapitel/physik.
- * Platzhalter („Welche der folgenden Aussagen zur Physik trifft zu?“) werden ausgefiltert.
+ * Platzhalter (\"Welche der folgenden Aussagen zur Physik trifft zu?\") werden ausgefiltert.
  */
 import type { Question } from "./index";
 import { physikPool1 } from "./physikPool1";

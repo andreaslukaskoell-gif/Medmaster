@@ -119,7 +119,7 @@ export const physikPoolOffiziellStyle: Question[] = [
       "2. und 4. sind richtig.",
     ],
     1,
-    "J = N·m (Arbeit); 1 eV ≈ 1,6·10⁻¹⁹ J; 1 cal ≈ 4,18 J. Watt (W) ist Leistung, keine Energie – man rechnet Joule nicht „in Watt“ um.",
+    "J = N·m (Arbeit); 1 eV ≈ 1,6·10⁻¹⁹ J; 1 cal ≈ 4,18 J. Watt (W) ist Leistung, keine Energie – man rechnet Joule nicht \"in Watt\" um.",
     "mittel",
     ["Einheiten", "Joule", "Energie"]
   ),

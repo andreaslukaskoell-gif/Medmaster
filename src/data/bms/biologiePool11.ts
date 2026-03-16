@@ -242,7 +242,7 @@ export const biologiePool11: Question[] = [
     ["Stoffwechsel", "Glykolyse"]
   ),
   q(
-    “bio-pool-11-018”,
+    "bio-pool-11-018",
     "bio-kap2",
     "Welches Hormon stimuliert die Kontraktion der Gebärmutter bei der Geburt?",
     ["Östrogen", "Prolactin", "Oxytocin", "Progesteron", "FSH"],
@@ -470,7 +470,7 @@ export const biologiePool11: Question[] = [
   q(
     "bio-pool-11-034",
     "bio-kap5",
-    "Was versteht man unter „Prädatoren“?",
+    "Was versteht man unter \"Prädatoren\"?",
     ["Pflanzenfresser", "Räuber (Beutegreifer)", "Aasfresser", "Parasiten", "Destruenten"],
     1,
     "Prädatoren (Räuber) erbeuten andere Tiere. Herbivoren = Pflanzenfresser. Destruenten = Zersetzer.",
@@ -508,22 +508,6 @@ export const biologiePool11: Question[] = [
     ["Verdauung", "Dünndarm"]
   ),
   q(
-    "bio-pool-11-038",
-    "bio-kap1",
-    "Welche Aussage über Mitochondrien trifft zu?",
-    [
-      "Sie haben keine eigene DNA",
-      "Sie sind von einer einfachen Membran umgeben",
-      "Sie sind der Hauptort der ATP-Produktion (aerob)",
-      "Sie kommen nur in Pflanzen vor",
-      "Sie synthetisieren Proteine für den Export",
-    ],
-    2,
-    "Mitochondrien haben Doppelmembran und eigene DNA und sind der Ort der oxidativen Phosphorylierung (ATP-Produktion).",
-    "leicht",
-    ["Zelle", "Mitochondrien"]
-  ),
-  q(
     "bio-pool-11-039",
     "bio-kap5",
     "Welche Aussage zu Antikörpern trifft zu?",
@@ -552,7 +536,7 @@ export const biologiePool11: Question[] = [
   q(
     "bio-pool-11-041",
     "bio-kap4",
-    "Was bedeutet „homozygot“?",
+    "Was bedeutet \"homozygot\"?",
     [
       "Zwei gleiche Allele an einem Genort",
       "Zwei verschiedene Allele an einem Genort",
@@ -690,7 +674,7 @@ export const biologiePool11: Question[] = [
   q(
     "bio-pool-11-050",
     "bio-kap5",
-    "Was versteht man unter „Symbiose“?",
+    "Was versteht man unter \"Symbiose\"?",
     [
       "Nur Räuber-Beute-Beziehung (Prädation) zwischen zwei Arten",
       "Längerfristige Wechselbeziehung zwischen Arten zum gegenseitigen Vorteil",

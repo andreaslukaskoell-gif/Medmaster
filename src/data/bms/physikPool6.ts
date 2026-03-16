@@ -210,7 +210,7 @@ export const physikPool6: Question[] = [
       "spielt keine Rolle",
     ],
     1,
-    "Kühlschrank: Arbeit wird zugeführt, Wärme von kalt nach warm „gepumpt“ → 2. Hauptsatz erfüllt (abgeschlossenes System: Gesamtentropie nimmt zu).",
+    "Kühlschrank: Arbeit wird zugeführt, Wärme von kalt nach warm \"gepumpt\" → 2. Hauptsatz erfüllt (abgeschlossenes System: Gesamtentropie nimmt zu).",
     "mittel",
     ["Kühlschrank", "2. Hauptsatz"]
   ),
@@ -492,7 +492,7 @@ export const physikPool6: Question[] = [
     "Eine Wärmepumpe heizt ein Haus. Sie entzieht der Umgebung Wärme und gibt sie (mit Antriebsarbeit) an das Haus ab. Der Wirkungsgrad (COP) kann … 1 sein.",
     ["kleiner als", "größer als", "nur gleich", "nie", "immer"],
     1,
-    "COP = Q_ab/W_zu > 1 möglich (Wärmepumpe „vervielfacht“ die Antriebsarbeit).",
+    "COP = Q_ab/W_zu > 1 möglich (Wärmepumpe \"vervielfacht\" die Antriebsarbeit).",
     "mittel",
     ["Wärmepumpe", "COP"]
   ),

@@ -20,7 +20,7 @@ export const mathematikPoolTypK: BMSFrage[] = [
         text: "10⁻³ bedeutet 0,001; der Exponent ist negativ, die Zahl positiv.",
         korrekt: true,
       },
-      { nr: 3, text: "Das Präfix „pico“ (p) steht für 10⁻⁹.", korrekt: false },
+      { nr: 3, text: "Das Präfix \"pico\" (p) steht für 10⁻⁹.", korrekt: false },
       { nr: 4, text: "10⁰ = 1.", korrekt: true },
       {
         nr: 5,
@@ -108,7 +108,7 @@ export const mathematikPoolTypK: BMSFrage[] = [
     aussagen: [
       { nr: 1, text: "1 mmol/L = 10⁻³ mol/L.", korrekt: true },
       { nr: 2, text: "15 μmol/L = 1,5·10⁻⁵ mol/L.", korrekt: true },
-      { nr: 3, text: "Das Präfix „Mikro“ (μ) entspricht 10⁻⁹.", korrekt: false },
+      { nr: 3, text: "Das Präfix \"Mikro\" (μ) entspricht 10⁻⁹.", korrekt: false },
       { nr: 4, text: "Bei der Verdünnung gilt c₁·V₁ = c₂·V₂.", korrekt: true },
       { nr: 5, text: "1 Liter = 1 dm³.", korrekt: true },
     ],

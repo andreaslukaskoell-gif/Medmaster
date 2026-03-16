@@ -1,6 +1,6 @@
 /**
- * Biology BMS question pool (500+ Fragen) inkl. „Was ist falsch?“ pro Thema.
- * Platzhalter („Biologie Pool-Frage N: Welche Aussage ist zutreffend?“) werden
+ * Biology BMS question pool (500+ Fragen) inkl. \"Was ist falsch?\" pro Thema.
+ * Platzhalter (\"Biologie Pool-Frage N: Welche Aussage ist zutreffend?\") werden
  * ausgefiltert, damit im Fragen-Trainer nur echte Fragen erscheinen.
  */
 import type { Question } from "./index";

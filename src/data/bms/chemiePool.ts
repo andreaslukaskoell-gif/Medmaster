@@ -1,7 +1,7 @@
 /**
- * Chemie BMS-Fragenpool (1000+ Fragen, MedAT Single Choice + Typ K + „Was ist falsch?“).
+ * Chemie BMS-Fragenpool (1000+ Fragen, MedAT Single Choice + Typ K + \"Was ist falsch?\").
  * Nur Stoff aus bmsKapitel/chemie.
- * Platzhalter („Chemie Pool-Frage N.“ / „Chemie-Frage N:“) werden ausgefiltert.
+ * Platzhalter (\"Chemie Pool-Frage N.\" / \"Chemie-Frage N:\") werden ausgefiltert.
  */
 import type { Question } from "./index";
 import { chemiePool1 } from "./chemiePool1";

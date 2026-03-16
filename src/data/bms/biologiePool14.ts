@@ -124,16 +124,6 @@ export const biologiePool14: Question[] = [
     ["Verdauung", "FALSCH"]
   ),
   q(
-    "bio-pool-14-011",
-    "bio-kap1",
-    "Welches Organell ist der Ort der Proteinbiosynthese?",
-    ["Zellkern", "Ribosom", "Lysosom", "Golgi-Apparat", "Mitochondrium"],
-    1,
-    "Ribosomen sind die Orte der Translation (Proteinbiosynthese).",
-    "leicht",
-    ["Zelle", "Ribosomen"]
-  ),
-  q(
     "bio-pool-14-012",
     "bio-kap2",
     "Welcher Teil des Auges bricht das Licht und ermöglicht die Fokussierung?",
@@ -348,7 +338,7 @@ export const biologiePool14: Question[] = [
     ["Mitose", "Zellteilung"]
   ),
   q(
-    “bio-pool-14-040”,
+    "bio-pool-14-040",
     "bio-kap2",
     "Welches Hormon stimuliert die Kontraktion der Gebärmutter?",
     ["Prolactin", "Oxytocin", "Progesteron", "FSH", "Östrogen"],

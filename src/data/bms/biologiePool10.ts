@@ -172,7 +172,7 @@ export const biologiePool10: Question[] = [
   q(
     "bio-pool-10-013",
     "bio-kap5",
-    "Was versteht man unter der „ökologischen Amplitude“ einer Art?",
+    "Was versteht man unter der \"ökologischen Amplitude\" einer Art?",
     [
       "Die maximale Körpergröße der Art",
       "Der Toleranzbereich gegenüber einem Umweltfaktor",
@@ -249,7 +249,7 @@ export const biologiePool10: Question[] = [
       "Die Niere ist an der Regulation des Blutdrucks beteiligt (Renin-Angiotensin-Aldosteron-System)",
     ],
     3,
-    "Die Nieren liegen retroperitoneal (hinter dem Bauchfell), also nicht „vollständig innerhalb der Bauchhöhle“ – sie sind außerhalb des Peritonealraums (D falsch).",
+    "Die Nieren liegen retroperitoneal (hinter dem Bauchfell), also nicht \"vollständig innerhalb der Bauchhöhle\" – sie sind außerhalb des Peritonealraums (D falsch).",
     "mittel",
     ["Niere", "FALSCH"]
   ),
@@ -350,7 +350,7 @@ export const biologiePool10: Question[] = [
   q(
     "bio-pool-10-029",
     "bio-kap5",
-    "Was beschreibt die den „Karyotyp”?",
+    "Was beschreibt die den \"Karyotyp\"?",
     [
       "Die Gesamtheit aller Gene einer Zelle",
       "Die geordnete Darstellung der Chromosomen einer Zelle",
@@ -588,7 +588,7 @@ export const biologiePool10: Question[] = [
   q(
     "bio-pool-10-045",
     "bio-kap5",
-    "Was versteht man unter „Biodiversität“?",
+    "Was versteht man unter \"Biodiversität\"?",
     [
       "Nur die Anzahl der Arten in einem Gebiet",
       "Die Vielfalt der Gene, Arten und Ökosysteme",

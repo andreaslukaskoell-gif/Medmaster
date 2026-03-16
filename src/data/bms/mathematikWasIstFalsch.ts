@@ -1,5 +1,5 @@
 /**
- * Mathematik Pool — „Was ist falsch?" (Typ A: eine Aussage ist falsch, diese auswählen).
+ * Mathematik Pool — \"Was ist falsch?" (Typ A: eine Aussage ist falsch, diese auswählen).
  * 60 Fragen, 10 pro Kapitel (kap1–kap3, kap5–kap7).
  * Schwierigkeit: 24 leicht / 24 mittel / 12 schwer.
  */

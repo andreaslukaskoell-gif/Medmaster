@@ -1,5 +1,5 @@
 /**
- * Mathematik-Pool — 1000+ Fragen (MedAT-Style, Single Choice) inkl. offizielle Beispiele und „Was ist falsch?“.
+ * Mathematik-Pool — 1000+ Fragen (MedAT-Style, Single Choice) inkl. offizielle Beispiele und \"Was ist falsch?\".
  * Platzhalter aus Pool6 werden ausgefiltert.
  */
 import type { Question } from "./index";

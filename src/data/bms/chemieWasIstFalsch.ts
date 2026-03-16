@@ -1,5 +1,5 @@
 /**
- * Chemie Pool — „Was ist falsch?" (Typ A: eine Aussage ist falsch, diese auswählen).
+ * Chemie Pool — \"Was ist falsch?" (Typ A: eine Aussage ist falsch, diese auswählen).
  * Stoff aus bmsKapitel/chemie.
  * 60 Fragen, 10 pro Kapitel: chem-kap1, chem-kap2, chem-kap-stoech, chem-kap4, chem-kap5, chem-kap6/chem-kap3.
  */

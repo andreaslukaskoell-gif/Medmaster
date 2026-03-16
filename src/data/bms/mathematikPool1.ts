@@ -137,7 +137,7 @@ export const mathematikPool1: Question[] = [
   q(
     "ma-pool-009",
     "mathe-kap1",
-    "Für welche Zahl steht das Präfix „pico“?",
+    "Für welche Zahl steht das Präfix \"pico\"?",
     ["10⁻⁹", "10⁻¹²", "10⁻¹⁸", "10⁻⁶", "10⁻¹⁵"],
     1,
     "Pico (p) = 10⁻¹². Nano = 10⁻⁹, Mikro = 10⁻⁶, Femto = 10⁻¹⁵, Atto = 10⁻¹⁸.",

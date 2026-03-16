@@ -1,5 +1,5 @@
 /**
- * Physik Pool — „Was ist falsch?" (Typ A: eine Aussage ist falsch, diese auswählen).
+ * Physik Pool — \"Was ist falsch?" (Typ A: eine Aussage ist falsch, diese auswählen).
  * Stoff aus bmsKapitel/physik.
  * 60 Fragen: je 10 pro Kapitelbereich (kap1–kap5, kap7).
  * Schwierigkeit: 24 leicht, 24 mittel, 12 schwer.

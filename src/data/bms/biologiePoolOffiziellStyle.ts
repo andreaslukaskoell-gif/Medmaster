@@ -1,6 +1,6 @@
 /**
  * Biologie BMS Pool — im Stil und in der Tiefe der offiziellen MedAT-Biologie-Fragen.
- * Formate: Typ A (Single Choice), „Welche Aussage ist FALSCH?“ / „trifft NICHT zu?“ (eine falsche Option), gleiche Themenbreite.
+ * Formate: Typ A (Single Choice), \"Welche Aussage ist FALSCH?\" / \"trifft NICHT zu?\" (eine falsche Option), gleiche Themenbreite.
  * Stoff aus bmsKapitel/biologie.
  */
 import type { Question } from "./index";
@@ -303,7 +303,7 @@ export const biologiePoolOffiziellStyle: Question[] = [
     "leicht",
     ["DNA", "Basenpaarung", "rechenfrage"]
   ),
-  // —— „Welche Aussage ist FALSCH?“ / „trifft NICHT zu?“ ——
+  // —— \"Welche Aussage ist FALSCH?\" / \"trifft NICHT zu?\" ——
   q(
     "bio-off-021",
     "bio-kap2",
@@ -360,7 +360,7 @@ export const biologiePoolOffiziellStyle: Question[] = [
       "Membranen von Zellorganellen zeigen den gleichen Grundaufbau wie die Plasmamembran der Zelle.",
       "Zellmembranen bestehen aus einer Doppelschicht aus Lipiden mit hydrophoben und hydrophilen Anteilen.",
       "Über Transportproteine der Zellmembran werden Sauerstoffmoleküle in das Zellinnere transportiert.",
-      "Das heute gültige Membranmodell wird als „Flüssig-Mosaik-Modell“ bezeichnet.",
+      "Das heute gültige Membranmodell wird als \"Flüssig-Mosaik-Modell\" bezeichnet.",
       "Proteine können in die Zellmembran eingelagert oder an die Zellmembran angelagert sein.",
     ],
     2,
@@ -435,7 +435,7 @@ export const biologiePoolOffiziellStyle: Question[] = [
   q(
     "bio-off-030",
     "bio-kap5",
-    "Wie wird eine „ökologische Nische“ in der Ökologie definiert?",
+    "Wie wird eine \"ökologische Nische\" in der Ökologie definiert?",
     [
       "kaum belebter Lebensraum, der für die meisten Lebewesen nicht bewohnbar ist",
       "Bereich eines Umweltfaktors (z. B. Temperatur), innerhalb dessen eine Art gedeihen kann",

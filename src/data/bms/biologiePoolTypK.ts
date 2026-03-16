@@ -1,6 +1,6 @@
 /**
  * Biology BMS pool — Typ K (Kombinationsaufgaben) for FragenTrainer.
- * MedAT-Format: Stamm „Welche Aussagen zu X ist/sind zutreffend?“ → 4 Teilaussagen (1.–4.) → Antworten A–E als Kombinationen („Alle sind richtig.“, „1. und 3. sind richtig.“, „2. ist richtig.“ usw.).
+ * MedAT-Format: Stamm \"Welche Aussagen zu X ist/sind zutreffend?\" → 4 Teilaussagen (1.–4.) → Antworten A–E als Kombinationen (\"Alle sind richtig.\", \"1. und 3. sind richtig.\", \"2. ist richtig.\" usw.).
  * Mind. 40: Basis 000–008 + Extra 009–040.
  */
 import type { BMSFrage } from "@/lib/supabaseBMSFragen";
@@ -91,7 +91,7 @@ export const biologiePoolTypK: BMSFrage[] = [
     fach: "biologie",
     uk_id: "bio-1-01",
     stamm:
-      "Welche der folgenden Aussagen zum Thema „Kennzeichen des Lebens und Homöostase“ sind richtig?",
+      "Welche der folgenden Aussagen zum Thema \"Kennzeichen des Lebens und Homöostase\" sind richtig?",
     aussagen: [
       {
         nr: 1,
