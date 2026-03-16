@@ -73,9 +73,10 @@ export function trackMetaCustom(event: string, data?: Record<string, unknown>) {
 
 // ── Google Ads / GA4 ────────────────────────────────────────────────────────
 
-const GTAG_ID = import.meta.env.VITE_GTAG_ID as string | undefined;
+const GTAG_ID = (import.meta.env.VITE_GTAG_ID as string | undefined) || "AW-18020022525";
 // Conversion labels from Google Ads → Tools → Conversions → Tag setup
-const GTAG_CONV_SIGNUP = import.meta.env.VITE_GTAG_CONV_SIGNUP as string | undefined;
+const GTAG_CONV_SIGNUP =
+  (import.meta.env.VITE_GTAG_CONV_SIGNUP as string | undefined) || "qK1CCKr-yYkcEP3xzpBD";
 const GTAG_CONV_CHECKOUT = import.meta.env.VITE_GTAG_CONV_CHECKOUT as string | undefined;
 
 let gtagReady = false;
