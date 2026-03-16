@@ -71,6 +71,8 @@ Die Steigung m = Δy/Δx = (y₂ − y₁)/(x₂ − x₁) gibt die **Änderungs
 | Parallel | m₁ = m₂ | Gleiche Änderungsrate, verschiedener Start |
 | Senkrecht | m₁ × m₂ = −1 | 90°-Winkel zwischen Geraden |
 
+{{DIAGRAM:coordinate-system}}
+
 ---
 
 ## Gerade aufstellen — Schritt für Schritt
@@ -100,6 +102,8 @@ Denkprozess: “Ich lese zwei markante Punkte ab (z. B. Achsenschnittpunkte), be
 - **Horizontale Gerade** (f(x) = b, m = 0): konstanter Wert — z. B. gleichbleibender Blutzuckerspiegel.
 - **Ursprungsgerade** (f(x) = mx, b = 0): direkte Proportionalität — z. B. Dosis = 10 mg/kg × Körpergewicht. Doppeltes Gewicht → doppelte Dosis.
 - **Vertikale Gerade** (x = a): keine Funktion, weil einem x-Wert unendlich viele y-Werte zugeordnet wären.
+
+{{DIAGRAM:proportional-relationship}}
 
 ---
 

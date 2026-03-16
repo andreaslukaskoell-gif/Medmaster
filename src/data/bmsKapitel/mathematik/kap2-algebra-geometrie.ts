@@ -354,6 +354,8 @@ Da Wurzeln Potenzen mit gebrochenem Exponenten sind (n-te Wurzel aus a = a hoch 
 
 ## Logarithmus — Definition als Umkehrung
 
+{{DIAGRAM:logarithm-function}}
+
 Der Logarithmus beantwortet genau eine Frage: **„Auf welche Potenz muss ich die Basis erheben, um x zu erhalten?"**
 
 **Definition:** log_b(x) = y bedeutet b hoch y = x. Der Logarithmus „entpackt" den Exponenten.
@@ -368,6 +370,8 @@ Beispiel: lg(1000) = 3, weil 10³ = 1000. ln(e²) = 2. log₂(8) = 3, weil 2³ =
 ---
 
 ## Warum braucht die Medizin Logarithmen? — Das pH-Motiv
+
+{{DIAGRAM:ph-scale}}
 
 Die H⁺-Konzentration im Körper reicht von 10⁻¹⁴ mol/L (starke Lauge) bis 10⁰ mol/L (konzentrierte Säure) — das sind **14 Größenordnungen**. Auf einer linearen Skala wäre der physiologische Bereich (pH 7,35–7,45) ein unsichtbarer Punkt. Die logarithmische Skala staucht diese riesige Spanne auf übersichtliche Zahlen von 0 bis 14.
 
@@ -628,7 +632,9 @@ Patient mit [HCO₃⁻] = 12 mmol/L und pCO₂ = 40 mmHg. pH = 6,1 + lg(12/1,2) 
         "Vieta-Satz",
         "Diskriminante",
       ],
-      content: `**Idee:** Binomische Formeln fassen (a±b)² und (a+b)(a−b) in feste Muster; **der mittlere Term 2ab** wird oft vergessen. Quadratische Gleichungen: **Diskriminante D** entscheidet über Anzahl der Lösungen; **Scheitelpunkt** einer Parabel = Optimum; **Vieta** liefert aus Summe und Produkt der Lösungen die Koeffizienten.
+      content: `Die Körperoberfläche, die Wurfparabel eines Medikamentspiegels, die Bremsweg-Formel — quadratische Zusammenhänge begegnen dir im MedAT häufiger als du denkst.
+
+**Idee:** Binomische Formeln fassen (a±b)² und (a+b)(a−b) in feste Muster; **der mittlere Term 2ab** wird oft vergessen. Quadratische Gleichungen: **Diskriminante D** entscheidet über Anzahl der Lösungen; **Scheitelpunkt** einer Parabel = Optimum; **Vieta** liefert aus Summe und Produkt der Lösungen die Koeffizienten.
 
 **Verfahren — Schrittfolge:** (1) **Binome:** (a+b)² = a²+2ab+b²; (a−b)² = a²−2ab+b²; (a+b)(a−b) = a²−b². (2) **Quadratische Gleichung:** D = b²−4ac; x = (−b±√D)/(2a); D>0: 2 Lösungen, D=0: 1, D<0: keine. (3) **Scheitelpunkt:** x_S = −b/(2a), y_S = f(x_S). (4) **Vieta** (x²+px+q=0): x₁+x₂ = −p, x₁×x₂ = q.
 
@@ -710,6 +716,8 @@ Mit der dritten binomischen Formel lassen sich Nenner rationalisieren (Wurzeln a
 Beispiel: 1 / (Wurzel aus 3 − 1). Erweitern mit (Wurzel aus 3 + 1):
 = (Wurzel aus 3 + 1) / ((Wurzel aus 3 − 1)(Wurzel aus 3 + 1)) = (Wurzel aus 3 + 1) / (3 − 1) = (Wurzel aus 3 + 1) / 2.
 
+{{DIAGRAM:quadratic-function}}
+
 ## Scheitelpunktform und quadratisches Ergänzen
 
 Jede quadratische Funktion f(x) = ax² + bx + c lässt sich durch quadratisches Ergänzen in die Scheitelpunktform umschreiben:
@@ -732,6 +740,8 @@ Beispiel: f(x) = x² − 6x + 11.
 Schritt 1: x² − 6x = (x − 3)² − 9.
 Schritt 2: f(x) = (x − 3)² − 9 + 11 = (x − 3)² + 2.
 Scheitelpunkt: (3, 2). Da a = 1 > 0 ist das Minimum der Funktion gleich 2, erreicht bei x = 3.
+
+{{DIAGRAM:discriminant-cases}}
 
 ## Vieta'sche Formeln
 
@@ -823,7 +833,7 @@ Wirksamkeit E(d) = − 0,5 d² + 10d − 12 (d = Dosis in mg). Scheitelpunkt: d_
             "(a − b)² = a² − 2ab + b² mit a=3x und b=4.",
             "(3x)² = 9x²; 2 × (3x) × 4 = 24x; 4² = 16.",
           ],
-          difficulty: 2,
+          difficulty: 1,
           tags: ["binomische-formel", "quadrat", "algebra"],
         },
         {
@@ -868,7 +878,7 @@ Wirksamkeit E(d) = − 0,5 d² + 10d − 12 (d = Dosis in mg). Scheitelpunkt: d_
             "Summe der Lösungen = − 2 + 5 = 3 = − p, also p = ?",
             "Produkt = − 2 × 5 = − 10 = q. Gleichung: x² + px + q = 0.",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["vieta", "quadratische-gleichung", "algebra"],
         },
         {
@@ -1512,8 +1522,7 @@ Die **Aortenklappenöffnungsfläche** (normal ~3–4 cm²) wird per Echokardiogr
 
 ## Quader
 
-
-
+{{DIAGRAM:geometric-shapes}}
 
 
 Ein Quader mit Länge l, Breite b und Höhe h (bzw. Kanten a, b, c):
@@ -1579,6 +1588,8 @@ Für Tumor-Volumetrie und Organvermessung wird häufig das Ellipsoid-Modell genu
 wobei a, b, c die drei orthogonalen Durchmesser sind (gemessen im Ultraschall oder MRT).
 
 Das Ellipsoid kann auch als „gestauchte Kugel" verstanden werden: Sind alle drei Durchmesser gleich (a = b = c = d), ergibt sich V = (π/6) × d³ = (4/3) × π × (d/2)³ — die Kugelformel.
+
+{{DIAGRAM:coordinate-system}}
 
 ## Klinischer Kontext
 
@@ -1772,6 +1783,8 @@ Viele physikalische Größen haben nicht nur einen Betrag, sondern auch eine **R
 
 Der **Betrag** (die Länge) eines Vektors folgt aus dem Satz des Pythagoras: |**a**| = √(a₁² + a₂² + a₃²). Addition, Subtraktion und Skalierung funktionieren komponentenweise.
 
+{{DIAGRAM:vector-addition}}
+
 ---
 
 ## Warum Vektoren in der Medizin wichtig sind
@@ -1781,6 +1794,8 @@ Der **Betrag** (die Länge) eines Vektors folgt aus dem Satz des Pythagoras: |**
 - **Drehmoment:** Das Drehmoment an Gelenken ist ein Kreuzprodukt aus Hebelarm und Kraft — maximal bei senkrechtem Ansatz.
 
 ---
+
+{{DIAGRAM:coordinate-system}}
 
 ## Vollständige Behandlung in Kapitel Vektorrechnung
 

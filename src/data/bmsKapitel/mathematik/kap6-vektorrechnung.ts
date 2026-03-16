@@ -370,6 +370,8 @@ $\\vec{a} \\cdot \\vec{b} = 3 \\cdot 1 + (-2) \\cdot 4 + 1 \\cdot (-2) = 3 - 8 -
 
 Das negative Ergebnis verrät sofort: Die Vektoren zeigen eher in entgegengesetzte Richtungen (stumpfer Winkel).
 
+{{DIAGRAM:vector-addition}}
+
 ---
 
 ## Was das Vorzeichen verrät
@@ -402,6 +404,8 @@ $$\\cos \\theta = \\frac{\\vec{a} \\cdot \\vec{b}}{|\\vec{a}| \\cdot |\\vec{b}|}
 - Skalarprodukt: $1 \\cdot 1 + 0 \\cdot 1 = 1$
 - Beträge: $|\\vec{a}| = 1$, $|\\vec{b}| = \\sqrt{2}$
 - $\\cos \\theta = \\frac{1}{\\sqrt{2}} = \\frac{\\sqrt{2}}{2} \\Rightarrow \\theta = 45°$
+
+{{DIAGRAM:coordinate-system}}
 
 ---
 

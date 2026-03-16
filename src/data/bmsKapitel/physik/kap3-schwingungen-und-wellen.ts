@@ -407,10 +407,7 @@ Eine Infusionspumpe enthält eine federgelagerte Kolbenmasse von m = 50 g. Die F
         "Akustische Impedanz",
         "Medienwechsel",
       ],
-      content: `
-
-
-
+      content: `Ein Klecks Ultraschallgel zwischen Schallkopf und Haut — und plötzlich wird ein Fetus sichtbar. Wellen transportieren Energie ohne Materie, und genau das macht sie zum wichtigsten diagnostischen Werkzeug der Medizin.
 
 Eine Welle ist die räumliche und zeitliche Ausbreitung einer Schwingung. Wellen transportieren **Energie, aber keine Materie** -- die Teilchen des Mediums führen nur lokale Schwingungen aus, während die Störung weiterwandert. Dieser fundamentale Unterschied zu Teilchen ist entscheidend: Ein Korken auf einer Wasserwelle bewegt sich vertikal auf und ab, wandert aber nicht horizontal mit der Welle mit.
 
@@ -463,6 +460,8 @@ Schallgeschwindigkeiten:
 > **Merke:** Schall in dichteren/steiferen Medien ist schneller. Die Schallgeschwindigkeit in Luft steigt um ca. 0,6 m/s pro °C Temperaturerhöhung.
 
 Der Hörbereich des Menschen liegt bei **20 Hz bis 20 kHz**. Infraschall (< 20 Hz) wird z. B. von Elefanten zur Kommunikation genutzt. Ultraschall (> 20 kHz) wird von Fledermäusen zur Echolokation und in der Medizin zur Bildgebung eingesetzt. Mit dem Alter nimmt die obere Hörgrenze ab (Presbyakusis, altersbedingter Hörverlust): 60-Jährige hören typischerweise nur noch bis ~12 kHz.
+
+{{DIAGRAM:doppler-effect}}
 
 ## Elektromagnetische Wellen
 

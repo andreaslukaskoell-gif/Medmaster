@@ -25,13 +25,14 @@ export const chemKapMaterie: Kapitel = {
         "Kinetische Gastheorie",
         "Kompressibilitätsfaktor",
       ],
+      imageUrl: "/images/bms/ch-chemische-reaktionen.jpg",
       content: `## Die Ideale Gasgleichung
 
 Kaum eine Gleichung begegnet angehenden Medizinerinnen und Medizinern so häufig wie **pV = nRT**. Sie verknüpft vier messbare Zustandsgrößen eines Gases in einer einzigen, eleganten Beziehung und bildet damit das Fundament der physikalischen Chemie der Gase. Ob Beatmungsmedizin, Blutgasanalyse oder Tauchphysiologie – wer diese Gleichung sicher beherrscht, versteht die physikalischen Grundlagen zahlreicher klinischer Situationen.
 
 Die vier Zustandsgrößen im Detail: Der **Druck p** (gemessen in Pascal, bar oder mmHg) beschreibt die Kraft pro Fläche, die Gasteilchen durch ihre Wandstöße erzeugen. Das **Volumen V** (in Litern oder Kubikmetern) gibt den Raum an, den das Gas einnimmt. Die **Stoffmenge n** (in Mol) zählt die Teilchen in Vielfachen der Avogadro-Zahl (N_A = 6,022 × 10²³ mol⁻¹). Die **absolute Temperatur T** muss stets in Kelvin angegeben werden: K = °C + 273,15. Die **universelle Gaskonstante R** = 8,314 J/(mol·K) verbindet alle Größen miteinander. In der Einheit L·bar/(mol·K) beträgt sie 0,08314 – dieser Wert ist für Aufgaben mit Druck in bar und Volumen in Litern besonders praktisch.
 
-> 💡 **Prüfungstipp:** Die häufigste Fehlerquelle bei Gasrechnungen ist das Vergessen der Kelvin-Umrechnung. Celsius-Werte **niemals** direkt in pV = nRT einsetzen! 27 °C = 300 K, 0 °C = 273 K – diese Werte kommen in fast jeder MedAT-Aufgabe vor.
+> **Prüfungstipp:** Die häufigste Fehlerquelle bei Gasrechnungen ist das Vergessen der Kelvin-Umrechnung. Celsius-Werte **niemals** direkt in pV = nRT einsetzen! 27 °C = 300 K, 0 °C = 273 K – diese Werte kommen in fast jeder MedAT-Aufgabe vor.
 
 {{DIAGRAM:gas-laws}}
 
@@ -47,7 +48,7 @@ Das **Gesetz von Avogadro** (1811) fügt die Stoffmenge hinzu: Bei gleichem Druc
 
 Kombiniert man alle drei Gesetze, erhält man: p·V/(n·T) = R = const, also **pV = nRT**.
 
-> 💡 **Prüfungstipp:** Ein beliebter MedAT-Sonderfall: Werden bei konstanter Stoffmenge sowohl V als auch T (in Kelvin) verdoppelt, bleibt der Druck **unverändert**, denn p = nR·(2T)/(2V) = nRT/V. Solche „Kompensationsfragen” tauchen regelmäßig auf.
+> **Prüfungstipp:** Ein beliebter MedAT-Sonderfall: Werden bei konstanter Stoffmenge sowohl V als auch T (in Kelvin) verdoppelt, bleibt der Druck **unverändert**, denn p = nR·(2T)/(2V) = nRT/V. Solche „Kompensationsfragen” tauchen regelmäßig auf.
 
 ## Umrechnungen und Standardbedingungen
 
@@ -71,7 +72,7 @@ Johannes Diderik van der Waals stellte 1873 eine korrigierte Zustandsgleichung a
 
 Der Parameter **a** (in L²·bar/mol²) korrigiert den Druck nach oben: Die intermolekularen Anziehungskräfte verringern die Wucht der Wandstöße, sodass der gemessene Druck niedriger ist als der „ideale” Druck. Der Parameter **b** (in L/mol) korrigiert das Volumen nach unten: Das tatsächlich für die Gasbewegung verfügbare Volumen ist kleiner als V, da die Moleküle selbst Raum beanspruchen (Kovolumen). Wasser zeigt mit a = 5,537 und b = 0,03049 eine starke Abweichung vom Idealverhalten (starke Dipol-Dipol-Kräfte und Wasserstoffbrücken), während Helium mit a = 0,0346 und b = 0,0238 nahezu ideal bleibt.
 
-> 💡 **Prüfungstipp:** Merkhilfe für die Van-der-Waals-Parameter: **a = Anziehung** (korrigiert Druck), **b = Braucht Platz** (korrigiert Volumen). In MedAT-Fragen wird oft gefragt, welcher Parameter was korrigiert.
+> **Prüfungstipp:** Merkhilfe für die Van-der-Waals-Parameter: **a = Anziehung** (korrigiert Druck), **b = Braucht Platz** (korrigiert Volumen). In MedAT-Fragen wird oft gefragt, welcher Parameter was korrigiert.
 
 ## Rechenbeispiel: Gasvolumen nach Temperatur- und Druckänderung
 
@@ -168,7 +169,7 @@ Die van-der-Waals-Gleichung (p + a·n²/V²)(V − n·b) = nRT korrigiert beide 
         {
           question:
             "Ein ideales Gas bei 27 °C und 2 bar hat ein Volumen von 5 L. Auf welches Volumen ändert es sich, wenn der Druck auf 4 bar steigt und die Temperatur auf 127 °C erhöht wird?",
-          options: ["D) 6,67 L", "B) 2,50 L", "C) 4,17 L", "A) 3,33 L", "E) 1,25 L"],
+          options: ["6,67 L", "2,50 L", "4,17 L", "3,33 L", "1,25 L"],
           correctIndex: 3,
           explanation:
             "Kombinierte Gasgleichung: p₁V₁/T₁ = p₂V₂/T₂. T₁ = 27 + 273 = 300 K, T₂ = 127 + 273 = 400 K. V₂ = V₁ × (p₁/p₂) × (T₂/T₁) = 5 × (2/4) × (400/300) = 5 × 0,5 × 1,333 = 3,33 L. Der Druckanstieg von 2→4 bar halbiert das Volumen (Boyle-Mariotte), die Temperaturerhöhung von 300→400 K vergrößert es um Faktor 4/3 (Charles). Netto: 5 × 0,5 × 4/3 = 3,33 L. Merke: Celsius NIEMALS direkt in die Gasformel einsetzen – immer zuerst in Kelvin umrechnen!",
@@ -182,11 +183,11 @@ Die van-der-Waals-Gleichung (p + a·n²/V²)(V − n·b) = nRT korrigiert beide 
         {
           question: "Welches der folgenden Gase weicht am stärksten vom idealen Verhalten ab?",
           options: [
-            "A) Helium (He) bei 100 °C und 1 bar",
-            "B) Stickstoff (N₂) bei 25 °C und 1 bar",
-            "E) Wasserstoff (H₂) bei 50 °C und 2 bar",
-            "D) Argon (Ar) bei 0 °C und 1 bar",
-            "C) Wasserdampf (H₂O) bei 200 °C und 100 bar",
+            "Helium (He) bei 100 °C und 1 bar",
+            "Stickstoff (N₂) bei 25 °C und 1 bar",
+            "Wasserstoff (H₂) bei 50 °C und 2 bar",
+            "Argon (Ar) bei 0 °C und 1 bar",
+            "Wasserdampf (H₂O) bei 200 °C und 100 bar",
           ],
           correctIndex: 4,
           explanation:
@@ -201,11 +202,11 @@ Die van-der-Waals-Gleichung (p + a·n²/V²)(V − n·b) = nRT korrigiert beide 
         {
           question: "Was ist der korrekte Wert der universellen Gaskonstante R?",
           options: [
-            "A) 8,314 J/(mol·K)",
-            "B) 6,022 × 10²³ J/(mol·K)",
-            "C) 1,381 × 10⁻²³ J/K",
-            "D) 9,81 m/s²",
-            "E) 22,4 J/(mol·K)",
+            "8,314 J/(mol·K)",
+            "6,022 × 10²³ J/(mol·K)",
+            "1,381 × 10⁻²³ J/K",
+            "9,81 m/s²",
+            "22,4 J/(mol·K)",
           ],
           correctIndex: 0,
           explanation:
@@ -220,7 +221,7 @@ Die van-der-Waals-Gleichung (p + a·n²/V²)(V − n·b) = nRT korrigiert beide 
         {
           question:
             "Wie viele Gramm CO₂ (M = 44 g/mol) befinden sich in einem 10-L-Behälter bei 0 °C und 2 bar?",
-          options: ["B) 44,0 g", "A) 39,3 g", "C) 19,6 g", "D) 88,0 g", "E) 22,0 g"],
+          options: ["44,0 g", "39,3 g", "19,6 g", "88,0 g", "22,0 g"],
           correctIndex: 1,
           explanation:
             "Mit pV = nRT: n = pV/(RT). Einheiten L·bar: n = (2 bar × 10 L) / (0,08314 L·bar/(mol·K) × 273,15 K) = 20 / 22,71 = 0,881 mol. Masse: m = n × M = 0,881 mol × 44 g/mol = 38,8 g ≈ 39,3 g. Probe: Bei STP (1 bar, 0 °C) passen in 10 L genau 10/22,4 = 0,446 mol. Bei 2 bar (doppelter Druck) doppelt so viel: 0,892 mol → 39,3 g. Merke: 0 °C = 273,15 K – immer in Kelvin umrechnen!",
@@ -234,11 +235,11 @@ Die van-der-Waals-Gleichung (p + a·n²/V²)(V − n·b) = nRT korrigiert beide 
         {
           question: "Welche Aussage zu Avogadros Gesetz ist korrekt?",
           options: [
-            "C) Das molare Volumen hängt bei STP von der Molmasse des Gases ab.",
-            "B) Schwerere Gase enthalten bei STP mehr Mol als leichtere Gase im gleichen Volumen.",
-            "A) Bei gleichem Druck und gleicher Temperatur enthalten gleiche Gasvolumina gleich viele Teilchen, unabhängig von der Molmasse.",
-            "D) Avogadros Gesetz gilt nur für einatomige Edelgase.",
-            "E) 1 mol eines idealen Gases belegt bei STP stets 11,2 L.",
+            "Das molare Volumen hängt bei STP von der Molmasse des Gases ab.",
+            "Schwerere Gase enthalten bei STP mehr Mol als leichtere Gase im gleichen Volumen.",
+            "Bei gleichem Druck und gleicher Temperatur enthalten gleiche Gasvolumina gleich viele Teilchen, unabhängig von der Molmasse.",
+            "Avogadros Gesetz gilt nur für einatomige Edelgase.",
+            "1 mol eines idealen Gases belegt bei STP stets 11,2 L.",
           ],
           correctIndex: 2,
           explanation:
@@ -254,11 +255,11 @@ Die van-der-Waals-Gleichung (p + a·n²/V²)(V − n·b) = nRT korrigiert beide 
           question:
             "In der van-der-Waals-Gleichung (p + an²/V²)(V − nb) = nRT: Was korrigiert der Parameter b?",
           options: [
-            "D) Den Druck bei hoher Teilchendichte",
-            "B) Die intermolekularen Anziehungskräfte zwischen den Molekülen",
-            "C) Die Temperaturabhängigkeit der Wechselwirkungen",
-            "A) Das Eigenvolumen der Gasmoleküle (Kovolumen)",
-            "E) Die Abweichung der Molmasse vom idealen Wert",
+            "Den Druck bei hoher Teilchendichte",
+            "Die intermolekularen Anziehungskräfte zwischen den Molekülen",
+            "Die Temperaturabhängigkeit der Wechselwirkungen",
+            "Das Eigenvolumen der Gasmoleküle (Kovolumen)",
+            "Die Abweichung der Molmasse vom idealen Wert",
           ],
           correctIndex: 3,
           explanation:
@@ -274,11 +275,11 @@ Die van-der-Waals-Gleichung (p + a·n²/V²)(V − n·b) = nRT korrigiert beide 
           question:
             "Ein Taucher atmet bei 30 m Wassertiefe (Gesamtdruck ca. 4 bar) Luft. Wie ändert sich das Volumen einer 1-L-Luftblase beim Aufstieg zur Oberfläche (1 bar, T = const)?",
           options: [
-            "E) Sie wird 3-mal größer (3 L)",
-            "B) Sie bleibt gleich groß (1 L)",
-            "C) Sie wird 2-mal größer (2 L)",
-            "D) Sie wird 0,25-mal kleiner (0,25 L)",
-            "A) Sie wird 4-mal größer (4 L)",
+            "Sie wird 3-mal größer (3 L)",
+            "Sie bleibt gleich groß (1 L)",
+            "Sie wird 2-mal größer (2 L)",
+            "Sie wird 0,25-mal kleiner (0,25 L)",
+            "Sie wird 4-mal größer (4 L)",
           ],
           correctIndex: 4,
           explanation:
@@ -293,7 +294,7 @@ Die van-der-Waals-Gleichung (p + a·n²/V²)(V − n·b) = nRT korrigiert beide 
         {
           question:
             "Welchen Wert hat die quadratische Mittelgeschwindigkeit v_rms von N₂ (M = 0,028 kg/mol) bei 300 K? (R = 8,314 J/(mol·K))",
-          options: ["A) ≈ 517 m/s", "B) ≈ 184 m/s", "C) ≈ 1034 m/s", "D) ≈ 299 m/s", "E) ≈ 89 m/s"],
+          options: ["≈ 517 m/s", "≈ 184 m/s", "≈ 1034 m/s", "≈ 299 m/s", "≈ 89 m/s"],
           correctIndex: 0,
           explanation:
             "v_rms = √(3RT/M) aus der kinetischen Gastheorie. Mit R = 8,314 J/(mol·K), T = 300 K, M = 0,028 kg/mol: v_rms = √(3 × 8,314 × 300 / 0,028) = √(7482,6 / 0,028) = √(267.236) ≈ 517 m/s. Gasmoleküle bewegen sich bei Raumtemperatur mit über 500 m/s (ca. 1,5-fache Schallgeschwindigkeit)! Schwerere Gase sind langsamer: CO₂ (M = 0,044 kg/mol) hat v_rms ≈ 411 m/s bei 300 K. Diese hohen Geschwindigkeiten erklären die schnelle makroskopische Gasdiffusion. Merke: M muss in kg/mol eingesetzt werden!",
@@ -330,7 +331,7 @@ Die van-der-Waals-Gleichung (p + a·n²/V²)(V − n·b) = nRT korrigiert beide 
       ],
       content: `## Die vier Aggregatzustände der Materie
 
-Materie tritt in vier grundlegenden Aggregatzuständen auf, die sich durch Energie, Anordnung und Beweglichkeit ihrer Teilchen fundamental unterscheiden. Welcher Aggregatzustand vorliegt, hängt von der Bilanz zwischen der **kinetischen Energie der Teilchen** (Wärmebewegung) und der **potentiellen Energie** durch intermolekulare Wechselwirkungen ab.
+Warum platzen Wasserleitungen im Winter, aber Seen frieren nie ganz durch? Warum kühlt Schweiß die Haut, obwohl er warm aus den Poren tritt? Die Antworten stecken in den Aggregatzuständen und den Kräften zwischen den Teilchen. Materie tritt in vier grundlegenden Aggregatzuständen auf, die sich durch Energie, Anordnung und Beweglichkeit ihrer Teilchen fundamental unterscheiden. Welcher Aggregatzustand vorliegt, hängt von der Bilanz zwischen der **kinetischen Energie der Teilchen** (Wärmebewegung) und der **potentiellen Energie** durch intermolekulare Wechselwirkungen ab.
 
 {{IMAGE}}
 
@@ -625,6 +626,8 @@ Nicht alle Feststoffe sind kristallin. **Amorphe Feststoffe** (Glas, viele Kunst
     {
       id: "ch-4-02",
       title: "Phasenübergänge – Energetik und Bedingungen",
+      imageUrl: "/images/bms/ch-aggregatzustaende.jpg",
+      imageCaption: "Abb.: Phasenübergänge und Heizkurve von Wasser",
       stichworte: [
         "Phasenübergänge",
         "Schmelzenthalpie",
@@ -640,6 +643,8 @@ Nicht alle Feststoffe sind kristallin. **Amorphe Feststoffe** (Glas, viele Kunst
         "Thermoregulation",
       ],
       content: `## Phasenübergänge: Überblick und Nomenklatur
+
+Eine Verbrühung durch 100 °C heißen Wasserdampf ist deutlich schwerer als durch 100 °C heißes Wasser — obwohl die Temperatur identisch ist. Der Grund: Beim Kondensieren gibt der Dampf seine gesamte Verdampfungsenthalpie (2257 J/g) an die Haut ab, bevor das flüssige Wasser überhaupt zu kühlen beginnt. Dieses Beispiel zeigt, dass Phasenübergänge gewaltige Energiemengen umsetzen, ohne die Temperatur zu ändern.
 
 Phasenübergänge sind Zustandsänderungen zwischen den Aggregatzuständen, die bei definierten Temperatur-Druck-Bedingungen stattfinden. Sie sind stets mit einer Enthalpieänderung (Wärmeänderung bei konstantem Druck) verbunden (latente Wärme), die **nicht** zur Temperaturänderung, sondern zur Änderung der Molekülanordnung und der intermolekularen Abstände verwendet wird. Auf einer **Heizkurve** (Temperatur gegen Zeit bei konstanter Wärmezufuhr) erscheinen Phasenübergänge als **Plateaus** – die Temperatur bleibt konstant, obwohl weiterhin Energie zugeführt wird.
 

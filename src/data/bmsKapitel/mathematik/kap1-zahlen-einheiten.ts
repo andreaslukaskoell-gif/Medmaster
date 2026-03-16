@@ -41,6 +41,8 @@ Unter einer **Zehnerpotenz** versteht man einen Ausdruck 10ⁿ, bei dem die Zahl
 
 > **Merke:** **10ⁿ** (n positiv) = 1 mit **n Nullen** dahinter. Der **Exponent** ist die Hochzahl und bestimmt die **Größenordnung** (die „Macht von Zehn") der Zahl.
 
+{{DIAGRAM:si-prefix-ladder}}
+
 ---
 
 ## Negative Exponenten und der Sonderfall 10⁰
@@ -75,6 +77,8 @@ Unter einer **Zehnerpotenz** versteht man einen Ausdruck 10ⁿ, bei dem die Zahl
 **Kurz:** Multiplikation → Exponenten **addieren**. Division → Exponenten **subtrahieren**. Potenzieren → Exponenten **multiplizieren**. Wurzel → Exponent **halbieren**. Für die Basis 10 ist jede Potenz eine klar benennbare **Größenordnung** (Tausend, Million, Millionstel usw.).
 
 > **Merke:** Multiplikation → Exponenten **addieren** | Division → Exponenten **subtrahieren** | Potenzieren → Exponenten **multiplizieren** | Wurzel → Exponent halbieren. **Nicht** vertauschen (z. B. bei Multiplikation niemals Exponenten multiplizieren!).
+
+{{DIAGRAM:equation-balance}}
 
 ---
 
@@ -354,6 +358,8 @@ Für die Medizin sind die Bereiche von **Femto (10⁻¹⁵)** bis **Tera (10¹²
 
 > **Merke:** **Dreierschritte:** Jede Präfix-Stufe = Faktor **1.000** (10³) zur Nachbarstufe. Klein→groß: f → p → n → µ → m → [Basis] → k → M → G → T.
 
+{{DIAGRAM:si-prefix-ladder}}
+
 ## Medizinisch relevante Präfixe im Detail
 
 ### Milli (m) — 10⁻³
@@ -427,6 +433,8 @@ Die Umrechnung erfolgt durch Multiplikation oder Division mit der entsprechenden
 Beispiel aus der Praxis: Ein Arzt verordnet 0,025 mg Levothyroxin. Apothekenpräparate sind in µg beschriftet: 0,025 mg × 1.000 µg/mg = 25 µg. Das entspricht einer Tablette "Euthyrox 25 µg".
 
 > **Merke:** **Kleinere Einheit → größere Zahl; größere Einheit → kleinere Zahl.** Eselsbrücke: "Wer kleiner misst, zählt mehr." Systematisch: Ausgangs- und Zieleinheit als Zehnerpotenz schreiben, Verhältnis bilden.
+
+{{DIAGRAM:proportional-relationship}}
 
 ---
 
@@ -784,9 +792,13 @@ Der dekadische Logarithmus (log₁₀) ist die Umkehrfunktion der Zehnerpotenz �
 - log(a / b) = log(a) − log(b)
 - log(aⁿ) = n × log(a)
 
+{{DIAGRAM:logarithm-function}}
+
 **pH-Wert als Logarithmus:** pH = −log₁₀([H⁺]), wobei [H⁺] in mol/L. Das bedeutet: Bei [H⁺] = 10⁻⁷ mol/L ist pH = 7 (neutrales Wasser). Eine Änderung des pH um 1 entspricht einer zehnfachen Änderung der H⁺-Konzentration. pH 6 hat zehnmal mehr H⁺ als pH 7, pH 5 hat hundertmal mehr H⁺ als pH 7.
 
 > **Merke:** **pH = −log₁₀([H⁺]).** 1 pH-Einheit Unterschied = **Faktor 10** in der H⁺-Konzentration. Physiologisch pH 7,4 ↔ [H⁺] ≈ 40 nmol/L.
+
+{{DIAGRAM:ph-scale}}
 
 ---
 
@@ -1076,6 +1088,8 @@ Allgemeine Regel: Wenn 1 Einheit₁ = k × Einheit₂, dann gilt 1 Einheit₁² 
 
 > **Merke:** Fläche: Umrechnungsfaktor **quadrieren**! 1 m² = 100² cm² = 10.000 cm². Das ist der häufigste MedAT-Fehler — nicht 100 cm², sondern 10.000 cm²!
 
+{{DIAGRAM:geometric-shapes}}
+
 Vollständige Flächenumrechnungen:
 - 1 km² = 10⁶ m² = 100 ha (Hektar)
 - 1 ha = 10.000 m² = 10⁴ m²
@@ -1114,6 +1128,8 @@ Klinisch relevante Volumina:
 - Tagesharnmenge: ~1.500 mL; Perspiratio insensibilis: ~700 mL/Tag
 
 > **Merke:** 1 L = 1 dm³ = 1.000 mL = 1.000 cm³; **1 mL = 1 cm³** (exakte Gleichheit!); 1 dL = 100 mL (relevant für g/dL-Laborwerte). Volumen: Faktor **kubieren**!
+
+{{DIAGRAM:coordinate-system}}
 
 ---
 
@@ -1381,6 +1397,8 @@ Der erste, scharfe Schmerz bei Verletzung wird über A-delta-Fasern (5–30 m/s)
 
 > **Merke:** **km/h → m/s:** durch **3,6**; **m/s → km/h:** × **3,6**. Merkhilfe: 36 km/h = 10 m/s; 72 km/h = 20 m/s.
 
+{{DIAGRAM:coordinate-system}}
+
 ---
 
 ## Gleichförmige Bewegung
@@ -1394,6 +1412,8 @@ Beispiel: Blut in der Aorta (v ≈ 0,5 m/s im Mittel) legt pro Minute zurück:
 s = 0,5 m/s × 60 s = 30 m!
 
 Die Kreislaufzeit beträgt beim Gesunden ~1 Minute.
+
+{{DIAGRAM:proportional-relationship}}
 
 ---
 
@@ -1631,6 +1651,8 @@ Die sieben **Grundgrößen** und ihre **SI-Einheiten**:
 
 > **Merke:** Es gibt genau **7 SI-Grundeinheiten**: m, kg, s, A, K, mol, cd. kg ist die einzige Grundeinheit MIT Vorsilbe. Temperatur in Kelvin (kein °-Symbol!): T[K] = T[°C] + 273.
 
+{{DIAGRAM:si-prefix-ladder}}
+
 Wichtige Besonderheiten:
 
 Masse: Die SI-Grundeinheit ist Kilogramm (kg), NICHT Gramm! Das ist historisch ungewöhnlich — kg ist die einzige Grundeinheit mit Vorsilbe. Massenleiter: 1 kg = 1.000 g; 1 g = 1.000 mg; 1 mg = 1.000 μg; 1 μg = 1.000 ng.
@@ -1652,6 +1674,8 @@ Die **elektrischen Einheiten** bauen aufeinander auf: **Coulomb (C)** = A×s ist
 In der **Strahlenmedizin** zählt **Becquerel (Bq)** = 1/s die Zerfallsereignisse pro Sekunde (Szintigraphie). Die absorbierte Strahlendosis wird in **Gray (Gy)** = J/kg gemessen (Strahlentherapie: 60–70 Gy), die biologische Wirkung auf den Menschen in **Sievert (Sv)** = J/kg × Wichtungsfaktor (Strahlenschutz).
 
 > **Merke:** Die zentrale Ableitungskette: **N** (kg×m/s²) → **Pa** = N/m² → **J** = N×m → **W** = J/s. Wer diese Kette beherrscht, kann fast jede MedAT-Physikaufgabe mit Einheiten lösen.
+
+{{DIAGRAM:equation-balance}}
 
 ---
 

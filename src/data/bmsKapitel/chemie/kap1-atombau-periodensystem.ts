@@ -686,6 +686,9 @@ Die Elektronenkonfiguration verrät direkt, ob ein Stoff magnetisch ist:
     {
       id: "ch-1-04",
       title: "Massenzahl, Atommasse und Mol-Konzept",
+      imageUrl: "/images/bms/ch-chemische-reaktionen.jpg",
+      imageCaption:
+        "Abb.: Stöchiometrie und Mol-Konzept bei chemischen Reaktionen (OpenStax, CC BY 4.0)",
       stichworte: [
         "Atommasse",
         "Mol",
@@ -698,7 +701,7 @@ Die Elektronenkonfiguration verrät direkt, ob ein Stoff magnetisch ist:
         "Infusionslösung",
         "Laborwerte",
       ],
-      content: `Das Mol verbindet die unsichtbare Welt der Atome mit der wägbaren Welt des Labors — eine Brücke, die jede Dosisberechnung und jede Infusion möglich macht.
+      content: `Eine Aspirin-Tablette enthält exakt 2,78 × 10²¹ Moleküle Acetylsalicylsäure — aber wie wiegt man Teilchen, die man nicht sehen kann? Das Mol verbindet die unsichtbare Welt der Atome mit der wägbaren Welt des Labors — eine Brücke, die jede Dosisberechnung und jede Infusion möglich macht.
 
 {{IMAGE}}
 
@@ -734,6 +737,8 @@ Für Moleküle: M(Molekül) = Summe der molaren Massen aller Atome.
 - M(NaCl) = 22,990 + 35,453 = 58,443 g/mol
 - M(Glukose C6H12O6) = 6 mal 12,011 + 12 mal 1,008 + 6 mal 15,999 = 180,159 g/mol
 - M(NaOH) = 22,990 + 15,999 + 1,008 = 39,997 g/mol
+
+{{DIAGRAM:atomic-orbitals}}
 
 ## Avogadro-Konstante und Mol
 
@@ -975,6 +980,9 @@ C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O (vollständige Oxidation von Gluk
     {
       id: "ch-2-01",
       title: "Intermolekulare Wechselwirkungen",
+      imageUrl: "/images/bms/ch-wasserstoffbruecken.jpg",
+      imageCaption:
+        "Abb.: Wasserstoffbrückenbindungen als wichtigste intermolekulare Wechselwirkung (OpenStax, CC BY 4.0)",
       stichworte: [
         "Van-der-Waals-Kräfte",
         "London-Dispersion",
@@ -987,7 +995,9 @@ C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O (vollständige Oxidation von Gluk
         "Denaturierung",
         "Polarisierbarkeit",
       ],
-      content: `Warum siedet Wasser erst bei 100 °C, obwohl es nur 18 g/mol wiegt? Die Antwort liegt in den zwischenmolekularen Kräften — sie entscheiden über Siedepunkte, Löslichkeiten und die gesamte Biochemie.
+      content: `> Dieses Kapitel gibt einen Überblick über intermolekulare Wechselwirkungen — die ausführliche Behandlung mit biologischen Beispielen und Bindungstypen folgt in Kapitel 6 (Chemische Bindung, UK ch-6-03).
+
+Warum siedet Wasser erst bei 100 °C, obwohl es nur 18 g/mol wiegt? Die Antwort liegt in den zwischenmolekularen Kräften — sie entscheiden über Siedepunkte, Löslichkeiten und die gesamte Biochemie.
 
 ## Van-der-Waals-Kräfte
 
@@ -1264,6 +1274,8 @@ In **Proteinen** stabilisieren H-Brücken die Sekundärstruktur: In der α-Helix
     {
       id: "ch-2-03",
       title: "Aggregatzustände, Phasenübergänge und Kolloidchemie",
+      imageUrl: "/images/bms/ch-aggregatzustaende.jpg",
+      imageCaption: "Abb.: Aggregatzustände und Phasenübergänge (OpenStax, CC BY 4.0)",
       stichworte: [
         "Aggregatzustand",
         "Phasenübergang",
@@ -1905,6 +1917,8 @@ Halb- und vollgefüllte d-Schalen sind besonders stabil — die ausführliche Er
 
 Die Kernladung, die ein Außenelektron tatsächlich "spürt", ist kleiner als die Gesamtladung — innere Elektronen schirmen den Kern ab, wie eine Menschenmenge zwischen dir und einem Lautsprecher. Je mehr Leute (innere Elektronen) dazwischen stehen, desto leiser (schwächer) kommt das Signal (die Anziehung) an.
 
+{{DIAGRAM:periodic-table}}
+
 Alle periodischen Trends lassen sich auf diese **effektive Kernladung** (Z_eff) zurückführen. Ein Valenzelektron spürt nicht die volle Kernladung Z, weil innere Elektronen die Kernladung teilweise abschirmen:
 
 **Z_eff = Z − σ** (σ nach Slater: gleiche Schale ≈0,35; nächstinnere ≈0,85; alle weiter innen ≈1,0)
@@ -2181,6 +2195,8 @@ Trend: In der Periode↑; in der Gruppe↓. Höchste EN: Fluor (oben rechts im P
     {
       id: "ch-5-03",
       title: "Wichtige Elementgruppen",
+      imageUrl: "/images/bms/ch-periodensystem.jpg",
+      imageCaption: "Abb.: Periodensystem mit hervorgehobenen Elementgruppen (OpenStax, CC BY 4.0)",
       stichworte: [
         "Alkalimetalle",
         "Erdalkalimetalle",
@@ -2195,6 +2211,8 @@ Trend: In der Periode↑; in der Gruppe↓. Höchste EN: Fluor (oben rechts im P
         "Schilddrüse",
       ],
       content: `Von Natrium im Blutplasma über Calcium in den Knochen bis Eisen im Hämoglobin — die Elementgruppen des PSE spiegeln sich direkt in der Physiologie des menschlichen Körpers wider.
+
+{{DIAGRAM:periodic-table}}
 
 ## Alkalimetalle (Gruppe 1): Die reaktivsten Metalle
 
@@ -2211,6 +2229,8 @@ Trend: In der Periode↑; in der Gruppe↓. Höchste EN: Fluor (oben rechts im P
 - **K⁺**: Hauptkation des Intrazellularraums (~150 mmol/L intrazellulär vs. ~4,5 mmol/L extrazellulär). Hypokaliämie (<3,5 mmol/L) → Herzrhythmusstörungen (verlängertes QT, Torsades de pointes), Muskelschwäche. Hyperkaliämie (>5,5 mmol/L) → lebensbedrohliche Herzarrhythmie.
 - **Li⁺**: Therapeutisch bei bipolaren Störungen (Li₂CO₃, therapeutischer Bereich 0,6–1,2 mmol/L). Hemmt Inositolmonophosphatase und GSK-3β. Enger therapeutischer Index.
 
+Nachdem wir die reaktivsten Metalle des PSE kennengelernt haben, wenden wir uns den Erdalkalimetallen zu — sie sind ebenfalls essentiell, aber deutlich stabiler und spielen vor allem als Strukturbildner und Enzymkofaktoren eine zentrale Rolle.
+
 ## Erdalkalimetalle (Gruppe 2): Strukturbildner und Cofaktoren
 
 **Elemente**: Be (Z=4), Mg (Z=12), Ca (Z=20), Sr (Z=38), Ba (Z=56), Ra (Z=88; radioaktiv).
@@ -2222,6 +2242,8 @@ Trend: In der Periode↑; in der Gruppe↓. Höchste EN: Fluor (oben rechts im P
 - **Mg²⁺**: Cofaktor von >300 Enzymen; alle ATP-abhängigen Reaktionen benötigen Mg-ATP-Komplex. Hypomagnesämie → Tetanie, Herzrhythmusstörungen, begleitende Hypokaliämie. MgSO₄ i.v.: Therapie der Präeklampsie und Torsades de pointes.
 - **BaSO₄**: Ksp ≈ 1,1×10⁻¹⁰ → unlöslich → nicht resorbiert → sicheres Röntgenkontrastmittel für GI-Trakt. Lösliche Ba²⁺-Salze: blockieren K⁺-Kanäle → hochgiftig.
 - **²²³Ra-Dichlorid** (Xofigo): Zytostatikum bei Prostatakarzinom-Knochenmetastasen — wie Ca²⁺ in Knochen eingebaut, α-Strahler.
+
+Von den Metallen wechseln wir nun zu den Nichtmetallen: Die Halogene stehen am gegenüberliegenden Ende des PSE und sind als starke Oxidationsmittel die natürlichen Reaktionspartner der Alkali- und Erdalkalimetalle.
 
 ## Halogene (Gruppe 17): Salzbildner mit hoher Reaktivität
 
@@ -2235,6 +2257,8 @@ Trend: In der Periode↑; in der Gruppe↓. Höchste EN: Fluor (oben rechts im P
 - **I**: Essentiell für T3 (Triiodthyronin, 3 I-Atome) und T4 (Thyroxin, 4 I-Atome). Jodaufnahme durch NIS-Symporter → Jodierung von Thyreoglobulin durch TPO → T3/T4. Jodmangel → Hypothyreose, Struma, Kretinismus (irreversible geistige Behinderung, häufigste vermeidbare Ursache weltweit). ¹³¹I: Beta-Emitter, Therapie von Schilddrüsenkarzinomen und Hyperthyreose.
 - **Fluorierte Arzneistoffe**: Fluorochinolone (Ciprofloxacin, hemmt Topoisomerase II/IV), 5-Fluoruracil (hemmt Thymidylatsynthase → kein dTTP → Tumorzell-Apoptose), Fluticason, Fluoxetin (SSRI), Isofluran (Narkotikum).
 
+Während Halogene nur ein Elektron zur Edelgaskonfiguration benötigen, haben die Edelgase diese bereits erreicht — und genau das macht sie chemisch nahezu reaktionslos.
+
 ## Edelgase (Gruppe 18): Inertheit als Leitprinzip
 
 **Elemente**: He (Z=2), Ne (Z=10), Ar (Z=18), Kr (Z=36), Xe (Z=54), Rn (Z=86; radioaktiv).
@@ -2246,6 +2270,8 @@ Trend: In der Periode↑; in der Gruppe↓. Höchste EN: Fluor (oben rechts im P
 - **Ar**: Schutzgas beim Schweißen. Argon-Plasma-Koagulation (APC): endoskopische Blutstillung durch ionisiertes Ar-Plasma.
 - **Xe**: Als Vollnarkotikum zugelassen (Europa). NMDA-Rezeptor-Antagonist → Narkosewirkung. Kein Metabolismus (vollständig abgeatmet), exzellente kardiovaskuläre Stabilität, schnelle Aufwachphase. Hyperpolarisiertes ¹²⁹Xe: Lungen-MRT (Ventilationsbildgebung ohne ionisierende Strahlung).
 - **Rn**: α-Strahler, natürliches Zerfallsprodukt von Ra. Akkumulation in Häusern → zweithäufigste Ursache für Lungenkrebs (nach Rauchen).
+
+Abseits der Hauptgruppen bilden die Übergangsmetalle das Rückgrat der biologischen Redoxchemie — ihre variablen Oxidationsstufen machen sie zu unverzichtbaren Katalysatoren in Enzymen und Transportproteinen.
 
 ## Übergangsmetalle (Gruppen 3–12): Redox-Akteure in der Biologie
 

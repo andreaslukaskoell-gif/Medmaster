@@ -27,7 +27,9 @@ export const physKap7: Kapitel = {
         "Absorptionsspektrum",
         "Plancksches Wirkungsquantum",
       ],
-      content: `## Entwicklung der Atommodelle
+      content: `Der Clip am Finger misst Sauerstoff, ohne einen Tropfen Blut zu brauchen — Pulsoximetrie funktioniert, weil jedes Atom nur ganz bestimmte Lichtfarben absorbiert.
+
+## Entwicklung der Atommodelle
 
 Das **Thomsonsche Modell** (1904) stellte sich das Atom als eine gleichförmig positive Ladungsverteilung vor, in der Elektronen wie Rosinen in einem Kuchen eingebettet sind (“Plum-Pudding-Modell”). Es konnte keine diskreten Spektrallinien erklären und sagte keine Rückstreuung geladener Teilchen voraus.
 
@@ -67,6 +69,8 @@ Die **Heisenbergsche Unschärferelation** setzt dem gleichzeitigen Wissen über 
 
 > **Merke:** Vier Quantenzahlen (n, l, mₗ, mₛ) beschreiben jeden Elektronenzustand. Pauli: Maximal 2 Elektronen pro Orbital (entgegengesetzter Spin). Heisenberg: Δx·Δp ≥ ℏ/2.
 
+{{DIAGRAM:em-spectrum}}
+
 ## Emission und Absorption – Spektrallinien
 
 Wenn ein Elektron von einer höheren Schale (n₂) auf eine niedrigere (n₁) fällt, wird ein **Photon** emittiert:
@@ -96,6 +100,8 @@ Für **Wasserstoff** liefern Übergänge zur n = 2-Schale die **Balmer-Serie** (
 | Paschen | 3 | IR | 820–1875 nm |
 
 > **Merke:** Die Balmer-Serie (Übergänge auf n = 2) ist die einzige Wasserstoff-Serie im sichtbaren Bereich – MedAT-Klassiker!
+
+{{DIAGRAM:radioactive-decay}}
 
 ## Spektrophotometrie – Lambert-Beer-Gesetz
 
@@ -283,7 +289,9 @@ Grundzustand n=1: E₁ = −13,6 eV. Ionisation (n→∞): E_∞ = 0 eV. Ionisie
         "Technetium-99m",
         "C-14-Datierung",
       ],
-      content: `{{DIAGRAM:radioactive-decay}}
+      content: `Jedes Atom hat eine innere Uhr — zerfällt es, sendet es Strahlung aus, die Tumore zerstören oder Krebsherde sichtbar machen kann. Kernphysik ist klinischer Alltag.
+
+{{DIAGRAM:radioactive-decay}}
 
 ## Alpha-Strahlung (α)
 
@@ -394,6 +402,8 @@ Gamma-Strahlung ist hochenergetische **elektromagnetische Strahlung** (Photonen,
 - **Wechselwirkungen:** Photoeffekt (< 100 keV, ∝ Z⁴), Compton-Effekt (100 keV–10 MeV), Paarbildung (> 1,022 MeV)
 
 > **Merke:** γ-Strahlung ändert weder Ordnungs- noch Massenzahl. Sie begleitet oft α- oder β-Zerfall als Folgeprozess. Abschirmung durch Blei oder Beton (exponentielle Schwächung). Klinisch: ⁹⁹ᵐTc (140 keV γ) ist der Goldstandard der nuklearmedizinischen Diagnostik.
+
+{{DIAGRAM:radiation-penetration}}
 
 | Strahlung | Teilchen | Ladung | Abschirmung | Z-Änderung | A-Änderung | w_R | LET |
 |-----------|----------|--------|-------------|------------|------------|-----|-----|
@@ -871,6 +881,8 @@ Die CT nutzt Röntgenstrahlung, um Querschnittsbilder (Schnittbilder) des Körpe
 
 > **Merke:** CT = viele Röntgenaufnahmen aus verschiedenen Winkeln → computerberechnetes Schnittbild. HU-Skala: Wasser = 0, Luft = −1000, Knochen = +200 bis +3000. Typische Dosis: CT Abdomen ~10 mSv.
 
+{{DIAGRAM:radiation-penetration}}
+
 ## Röntgenabsorption im Gewebe
 
 Röntgenphotonen werden durch drei Wechselwirkungen geschwächt:
@@ -887,6 +899,8 @@ Die **Schwächung** eines monoenergetischen Röntgenstrahls folgt dem exponentie
 μ = linearer Schwächungskoeffizient [cm⁻¹], abhängig von Photonenenergie und Material. Dichtes Material (hohe Ordnungszahl, hohe Dichte) → großes μ → starke Abschwächung. Knochen (Ca, Z=20) absorbiert mehr als Weichgewebe; Blei (Z=82) ist optimales Abschirmmaterial.
 
 Die **Halbwertsschichtdicke** (HVL = Half Value Layer) ist die Materialdicke, die die Intensität auf die Hälfte reduziert: HVL = ln2/μ.
+
+{{DIAGRAM:em-spectrum}}
 
 ## Biologische Strahlenwirkung
 

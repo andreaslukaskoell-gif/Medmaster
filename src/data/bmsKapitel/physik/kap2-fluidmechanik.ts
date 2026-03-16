@@ -35,6 +35,8 @@ Die SI-Einheit ist das **Pascal** (1 Pa = 1 N/m² = 1 kg·m⁻¹·s⁻²). Ein P
 
 ---
 
+{{DIAGRAM:laminar-flow-profile}}
+
 ## Hydrostatischer Druck (Schweredruck)
 
 Stellt man sich eine ruhende Flüssigkeitssäule vor, so lastet auf jeder Schicht das Gewicht aller darüber liegenden Schichten. Daraus folgt die fundamentale Beziehung der Hydrostatik:
@@ -70,6 +72,8 @@ Das erscheint paradox, weil die Gewichtskraft der Flüssigkeit in den drei Gefä
 > 💡 **Prüfungstipp:** Im MedAT taucht das Paradoxon gern als Verständnisfrage auf: „In welchem Gefäß ist der Bodendruck am größten?" — Die Antwort ist immer: **In allen gleich**, sofern Dichte und Füllhöhe identisch sind.
 
 ---
+
+{{DIAGRAM:continuity-equation}}
 
 ## Pascalsches Prinzip
 
@@ -248,6 +252,8 @@ Warum schwimmt ein tonnenschweres Stahlschiff, aber ein winziger Stein sinkt? Wa
 
 ---
 
+{{DIAGRAM:continuity-equation}}
+
 ## Auftrieb — das Archimedische Prinzip
 
 Die Grundidee ist verblüffend einfach: Ein Objekt in einer Flüssigkeit fühlt sich leichter an, weil das Fluid mit einer Kraft zurückdrückt, die genau dem Gewicht des verdrängten Fluids entspricht. Diese nach oben gerichtete Kraft heißt **Auftriebskraft** F_A.
@@ -339,6 +345,8 @@ Die Steighöhe berechnet sich aus: **h = 2σ · cos θ / (ρ · g · r)** — je
 > **Merke:** Kapillarität: Adhäsion > Kohäsion → konkaver Meniskus → Flüssigkeit steigt (Wasser in Glas). Kohäsion > Adhäsion → konvexer Meniskus → Flüssigkeit sinkt (Quecksilber in Glas). Je enger das Rohr, desto stärker der Effekt.
 
 ---
+
+{{DIAGRAM:laminar-flow-profile}}
 
 ## Laplace-Gesetz — warum kleine Blasen gefährlicher sind
 

@@ -11,6 +11,7 @@ export const chemKapStoech: Kapitel = {
     {
       id: "ch-3s-01",
       title: "Mol-Konzept & Avogadro",
+      imageUrl: "/images/bms/ch-chemische-reaktionen.jpg",
       stichworte: [
         "Mol",
         "Avogadro-Zahl",
@@ -31,7 +32,9 @@ Man kann sich das Mol als gigantische Zähleinheit vorstellen — ähnlich wie e
 
 > **Merke:** 1 Mol = 6,022 × 10²³ Teilchen. Die Avogadro-Zahl N_A verbindet die makroskopische Welt (Gramm) mit der atomaren Welt (Teilchen).
 
-> 💡 **Prüfungstipp:** Der MedAT fragt häufig nach der exakten Definition des Mols. Merke dir: Seit 2019 ist N_A eine **festgelegte Zahl** (nicht mehr über ¹²C definiert, sondern umgekehrt). Die Antwort „6,022 × 10²³" muss sitzen — sie kommt in fast jeder Stöchiometrie-Aufgabe vor.
+{{DIAGRAM:water-molecule}}
+
+> **Prüfungstipp:** Der MedAT fragt häufig nach der exakten Definition des Mols. Merke dir: Seit 2019 ist N_A eine **festgelegte Zahl** (nicht mehr über ¹²C definiert, sondern umgekehrt). Die Antwort „6,022 × 10²³" muss sitzen — sie kommt in fast jeder Stöchiometrie-Aufgabe vor.
 
 ---
 
@@ -45,7 +48,7 @@ In der Biochemie und Molekularbiologie begegnet man anstelle von g/mol häufig d
 
 > **Merke:** M(Stoff) = Summe aller Atommassen aus dem PSE. 1 Da = 1 g/mol. Glucose: 180 g/mol, NaCl: 58,4 g/mol, H₂O: 18 g/mol — diese Werte auswendig kennen!
 
-> 💡 **Prüfungstipp:** Bei MedAT-Rechenaufgaben wird die molare Masse oft in der Angabe mitgeliefert. Trotzdem solltest du M(H₂O) = 18, M(Glucose) = 180 und M(NaCl) = 58,4 auswendig parat haben — das spart wertvolle Sekunden. Rechne die Summenformel-Masse immer systematisch: erst alle C-Atome, dann H, dann O, dann den Rest.
+> **Prüfungstipp:** Bei MedAT-Rechenaufgaben wird die molare Masse oft in der Angabe mitgeliefert. Trotzdem solltest du M(H₂O) = 18, M(Glucose) = 180 und M(NaCl) = 58,4 auswendig parat haben — das spart wertvolle Sekunden. Rechne die Summenformel-Masse immer systematisch: erst alle C-Atome, dann H, dann O, dann den Rest.
 
 ---
 
@@ -80,7 +83,7 @@ Diese Glucose-Infusion ist ein Standardpräparat auf jeder Station: Sie liefert 
 
 > **Merke:** Rechenweg immer: Masse (g) → Stoffmenge (mol) über n = m/M → Teilchenanzahl (N) über N = n × N_A. Einheiten konsequent umrechnen (mg → g)!
 
-> 💡 **Prüfungstipp:** Der häufigste Fehler bei Mol-Aufgaben im MedAT: Die Masse wird in **mg** angegeben, aber nicht in **g** umgerechnet, bevor man n = m/M anwendet. Ergebnis: Faktor 1000 daneben. Schreibe als ersten Schritt immer „mg → g" hin!
+> **Prüfungstipp:** Der häufigste Fehler bei Mol-Aufgaben im MedAT: Die Masse wird in **mg** angegeben, aber nicht in **g** umgerechnet, bevor man n = m/M anwendet. Ergebnis: Faktor 1000 daneben. Schreibe als ersten Schritt immer „mg → g" hin!
 
 ---
 
@@ -108,7 +111,7 @@ Dieses Konzept macht das PSE zu einem universellen Nachschlagewerk für stöchio
       selfTest: [
         {
           question: "Wie viel Mol Glucose (M = 180 g/mol) sind in 36 g Glucose enthalten?",
-          options: ["A) 0,1 mol", "D) 1,0 mol", "C) 0,5 mol", "B) 0,2 mol", "E) 5,0 mol"],
+          options: ["0,1 mol", "1,0 mol", "0,5 mol", "0,2 mol", "5,0 mol"],
           correctIndex: 3,
           explanation:
             "n = m/M = 36 g / 180 g/mol = 0,2 mol. Die molare Masse von Glucose beträgt 180 g/mol (6×12 + 12×1 + 6×16). 36 g sind genau ein Fünftel von 180 g, also 0,2 mol.",
@@ -121,13 +124,7 @@ Dieses Konzept macht das PSE zu einem universellen Nachschlagewerk für stöchio
         },
         {
           question: "Wie viele Wassermoleküle (M = 18 g/mol) sind in 9 g Wasser enthalten?",
-          options: [
-            "E) 3,01 × 10²²",
-            "B) 6,02 × 10²³",
-            "C) 1,20 × 10²⁴",
-            "D) 9,03 × 10²³",
-            "A) 3,01 × 10²³",
-          ],
+          options: ["3,01 × 10²²", "6,02 × 10²³", "1,20 × 10²⁴", "9,03 × 10²³", "3,01 × 10²³"],
           correctIndex: 4,
           explanation:
             "n = m/M = 9/18 = 0,5 mol. N = n × N_A = 0,5 × 6,022 × 10²³ = 3,01 × 10²³ Moleküle. 9 g Wasser sind ein halbes Mol, also die Hälfte der Avogadro-Zahl.",
@@ -141,7 +138,7 @@ Dieses Konzept macht das PSE zu einem universellen Nachschlagewerk für stöchio
         {
           question:
             "Welche molare Masse hat Calciumcarbonat CaCO₃ (Ca = 40, C = 12, O = 16 g/mol)?",
-          options: ["C) 100 g/mol", "B) 84 g/mol", "A) 68 g/mol", "D) 116 g/mol", "E) 44 g/mol"],
+          options: ["100 g/mol", "84 g/mol", "68 g/mol", "116 g/mol", "44 g/mol"],
           correctIndex: 0,
           explanation:
             "M(CaCO₃) = 40 + 12 + 3 × 16 = 40 + 12 + 48 = 100 g/mol. Option E (44 g/mol) ist die Molmasse von CO₂. Häufiger Fehler: Nur CO₃ berechnen (12 + 48 = 60) und Ca vergessen.",
@@ -155,7 +152,7 @@ Dieses Konzept macht das PSE zu einem universellen Nachschlagewerk für stöchio
         {
           question:
             "Ein Patient erhält 500 mg Paracetamol (M = 151 g/mol). Welche Stoffmenge entspricht das?",
-          options: ["A) 0,33 mol", "C) 3,31 mmol", "B) 3,31 mol", "D) 33,1 mmol", "E) 0,033 mmol"],
+          options: ["0,33 mol", "3,31 mmol", "3,31 mol", "33,1 mmol", "0,033 mmol"],
           correctIndex: 1,
           explanation:
             "Erst mg in g umrechnen: 500 mg = 0,500 g. Dann n = m/M = 0,500/151 = 0,00331 mol = 3,31 mmol. Typische Falle: mg nicht in g umgerechnet → Faktor 1000 daneben.",
@@ -169,11 +166,11 @@ Dieses Konzept macht das PSE zu einem universellen Nachschlagewerk für stöchio
         {
           question: "Welche Aussage zum Mol-Konzept ist FALSCH?",
           options: [
-            "A) 1 Mol H₂O enthält 2 Mol Wasserstoffatome und 1 Mol Sauerstoffatome.",
-            "B) Die Avogadro-Zahl beträgt 6,022 × 10²³ mol⁻¹.",
-            "C) 1 Mol eines Stoffes wiegt immer exakt 1 Gramm.",
-            "D) 1 Dalton entspricht numerisch 1 g/mol.",
-            "E) Die molare Masse von CO₂ beträgt 44 g/mol.",
+            "1 Mol H₂O enthält 2 Mol Wasserstoffatome und 1 Mol Sauerstoffatome.",
+            "Die Avogadro-Zahl beträgt 6,022 × 10²³ mol⁻¹.",
+            "1 Mol eines Stoffes wiegt immer exakt 1 Gramm.",
+            "1 Dalton entspricht numerisch 1 g/mol.",
+            "Die molare Masse von CO₂ beträgt 44 g/mol.",
           ],
           correctIndex: 2,
           explanation:
@@ -192,6 +189,7 @@ Dieses Konzept macht das PSE zu einem universellen Nachschlagewerk für stöchio
     {
       id: "ch-3s-02",
       title: "Stöchiometrie & Reaktionsgleichungen",
+      imageUrl: "/images/bms/ch-chemische-reaktionen.jpg",
       stichworte: [
         "Reaktionsgleichung",
         "Ausgleichen",
@@ -214,7 +212,9 @@ Ein entscheidender Punkt wird dabei oft übersehen: Die Koeffizienten 1, 2, 1, 2
 
 > **Merke:** Stöchiometrische Koeffizienten geben Molverhältnisse an, nicht Massenverhältnisse! 1 mol CH₄ (16 g) + 2 mol O₂ (64 g) → 1 mol CO₂ (44 g) + 2 mol H₂O (36 g). Massenerhaltung: 80 g = 80 g ✓
 
-> 💡 **Prüfungstipp:** Im MedAT wird häufig gefragt, ob eine Gleichung korrekt ausgeglichen ist. Prüfe **jedes Element einzeln** — ein einziges nicht-stimmendes Element macht die ganze Gleichung falsch. Beginne immer mit dem komplexesten Molekül.
+{{DIAGRAM:reaction-types}}
+
+> **Prüfungstipp:** Im MedAT wird häufig gefragt, ob eine Gleichung korrekt ausgeglichen ist. Prüfe **jedes Element einzeln** — ein einziges nicht-stimmendes Element macht die ganze Gleichung falsch. Beginne immer mit dem komplexesten Molekül.
 
 ---
 
@@ -246,7 +246,7 @@ Dieses Beispiel ist zugleich biologisch bedeutsam: Die Gleichung beschreibt die 
 
 > **Merke:** Stöchiometrisches Rechnen: g → mol (÷M) → Koeffizientenverhältnis → mol → g (×M). Die Koeffizienten sind das Herzstück!
 
-> 💡 **Prüfungstipp:** Bei MedAT-Stöchiometrie-Aufgaben schreibe dir den Vierschritt als Gerüst auf: m → n → Verhältnis → n → m. Viele Prüflinge vergessen den mittleren Schritt (Koeffizientenverhältnis) und rechnen direkt von Edukt-Mol auf Produkt-Masse. Das geht nur dann, wenn das Verhältnis 1:1 beträgt!
+> **Prüfungstipp:** Bei MedAT-Stöchiometrie-Aufgaben schreibe dir den Vierschritt als Gerüst auf: m → n → Verhältnis → n → m. Viele Prüflinge vergessen den mittleren Schritt (Koeffizientenverhältnis) und rechnen direkt von Edukt-Mol auf Produkt-Masse. Das geht nur dann, wenn das Verhältnis 1:1 beträgt!
 
 ---
 
@@ -279,7 +279,7 @@ Die Stöchiometrie chemischer Reaktionen lässt sich auch auf den Stoffwechsel a
 
 Bei der vollständigen Oxidation von 1 mol Glucose (180 g) entstehen 6 mol CO₂ (264 g) und 6 mol H₂O. Das Verhältnis von produziertem CO₂ zu verbrauchtem O₂ heißt **respiratorischer Quotient (RQ)**: Für Kohlenhydrate beträgt RQ = 6/6 = 1,0, für Fette sinkt er auf etwa 0,7 (Fettsäuren benötigen mehr O₂ pro erzeugtem CO₂). Klinisch wird der RQ über indirekte Kalorimetrie bestimmt und gibt Aufschluss über den aktuellen Substratmix der Energiegewinnung eines Patienten.
 
-> 💡 **Prüfungstipp:** Der RQ wird im MedAT gerne als Verknüpfung zwischen Stöchiometrie und Physiologie gefragt. Merke: RQ = 1,0 (Kohlenhydrate), RQ ≈ 0,7 (Fette), RQ ≈ 0,8 (Proteine). Ein gemischter RQ von 0,85 entspricht einer normalen Mischkost.`,
+> **Prüfungstipp:** Der RQ wird im MedAT gerne als Verknüpfung zwischen Stöchiometrie und Physiologie gefragt. Merke: RQ = 1,0 (Kohlenhydrate), RQ ≈ 0,7 (Fette), RQ ≈ 0,8 (Proteine). Ein gemischter RQ von 0,85 entspricht einer normalen Mischkost.`,
       merksätze: [
         "Stöchiometrische Koeffizienten sind Molverhältnisse, nicht Massenverhältnisse!",
         "Rechenweg: g → mol (÷M) → Koeffizientenverhältnis → mol → g (×M).",
@@ -301,11 +301,11 @@ Bei der vollständigen Oxidation von 1 mol Glucose (180 g) entstehen 6 mol CO₂
           question:
             "Wie lautet die korrekt ausgeglichene Gleichung für die Verbrennung von Ethanol C₂H₅OH?",
           options: [
-            "D) 2 C₂H₅OH + 5 O₂ → 4 CO₂ + 6 H₂O",
-            "B) C₂H₅OH + 2 O₂ → 2 CO₂ + 2 H₂O",
-            "C) C₂H₅OH + O₂ → CO₂ + H₂O",
-            "A) C₂H₅OH + 3 O₂ → 2 CO₂ + 3 H₂O",
-            "E) C₂H₅OH + 3 O₂ → 2 CO₂ + 2 H₂O",
+            "2 C₂H₅OH + 5 O₂ → 4 CO₂ + 6 H₂O",
+            "C₂H₅OH + 2 O₂ → 2 CO₂ + 2 H₂O",
+            "C₂H₅OH + O₂ → CO₂ + H₂O",
+            "C₂H₅OH + 3 O₂ → 2 CO₂ + 3 H₂O",
+            "C₂H₅OH + 3 O₂ → 2 CO₂ + 2 H₂O",
           ],
           correctIndex: 3,
           explanation:
@@ -320,7 +320,7 @@ Bei der vollständigen Oxidation von 1 mol Glucose (180 g) entstehen 6 mol CO₂
         {
           question:
             "Bei der Reaktion 2 Al + 3 Cl₂ → 2 AlCl₃: Wie viel Gramm AlCl₃ (M = 133,5 g/mol) entstehen aus 5,4 g Aluminium (M = 27 g/mol)?",
-          options: ["A) 13,35 g", "E) 66,75 g", "C) 40,05 g", "D) 53,4 g", "B) 26,7 g"],
+          options: ["13,35 g", "66,75 g", "40,05 g", "53,4 g", "26,7 g"],
           correctIndex: 4,
           explanation:
             "n(Al) = 5,4/27 = 0,2 mol. Verhältnis: 2 mol Al → 2 mol AlCl₃ (1:1). n(AlCl₃) = 0,2 mol. m(AlCl₃) = 0,2 × 133,5 = 26,7 g. Das Koeffizientenverhältnis Al:AlCl₃ = 2:2 = 1:1 vereinfacht die Rechnung.",
@@ -335,11 +335,11 @@ Bei der vollständigen Oxidation von 1 mol Glucose (180 g) entstehen 6 mol CO₂
           question:
             "4 g H₂ (M = 2) und 32 g O₂ (M = 32) reagieren: 2 H₂ + O₂ → 2 H₂O. Welche Aussage ist korrekt?",
           options: [
-            "C) Beide Reagenzien sind exakt im stöchiometrischen Verhältnis; es entstehen 36 g H₂O.",
-            "B) H₂ ist limitierend; es entstehen 36 g H₂O.",
-            "A) O₂ ist limitierend; es entstehen 18 g H₂O.",
-            "D) O₂ ist limitierend; es entstehen 36 g H₂O.",
-            "E) H₂ ist limitierend; es entstehen 18 g H₂O.",
+            "Beide Reagenzien sind exakt im stöchiometrischen Verhältnis; es entstehen 36 g H₂O.",
+            "H₂ ist limitierend; es entstehen 36 g H₂O.",
+            "O₂ ist limitierend; es entstehen 18 g H₂O.",
+            "O₂ ist limitierend; es entstehen 36 g H₂O.",
+            "H₂ ist limitierend; es entstehen 18 g H₂O.",
           ],
           correctIndex: 0,
           explanation:
@@ -355,11 +355,11 @@ Bei der vollständigen Oxidation von 1 mol Glucose (180 g) entstehen 6 mol CO₂
           question:
             "Was versteht man unter dem respiratorischen Quotienten (RQ) und welchen Wert hat er für reine Kohlenhydratverbrennung?",
           options: [
-            "B) RQ = O₂ verbraucht / CO₂ produziert; RQ = 1,0",
-            "A) RQ = CO₂ produziert / O₂ verbraucht; RQ = 1,0",
-            "C) RQ = CO₂ produziert / O₂ verbraucht; RQ = 0,7",
-            "D) RQ = CO₂ / N₂; RQ = 0,8",
-            "E) RQ = O₂ / CO₂; RQ = 0,7",
+            "RQ = O₂ verbraucht / CO₂ produziert; RQ = 1,0",
+            "RQ = CO₂ produziert / O₂ verbraucht; RQ = 1,0",
+            "RQ = CO₂ produziert / O₂ verbraucht; RQ = 0,7",
+            "RQ = CO₂ / N₂; RQ = 0,8",
+            "RQ = O₂ / CO₂; RQ = 0,7",
           ],
           correctIndex: 1,
           explanation:
@@ -374,11 +374,11 @@ Bei der vollständigen Oxidation von 1 mol Glucose (180 g) entstehen 6 mol CO₂
         {
           question: "Welche der folgenden Reaktionsgleichungen ist NICHT korrekt ausgeglichen?",
           options: [
-            "A) 2 H₂ + O₂ → 2 H₂O",
-            "B) N₂ + 3 H₂ → 2 NH₃",
-            "D) Fe + O₂ → Fe₂O₃",
-            "C) CaCO₃ → CaO + CO₂",
-            "E) CH₄ + 2 O₂ → CO₂ + 2 H₂O",
+            "2 H₂ + O₂ → 2 H₂O",
+            "N₂ + 3 H₂ → 2 NH₃",
+            "Fe + O₂ → Fe₂O₃",
+            "CaCO₃ → CaO + CO₂",
+            "CH₄ + 2 O₂ → CO₂ + 2 H₂O",
           ],
           correctIndex: 2,
           explanation:
@@ -625,7 +625,7 @@ K_sp bestimmt, ob Calciumoxalat (CaC₂O₄) und Calciumphosphat im Urin ausfall
         {
           question:
             "Wie viel Gramm NaCl (M = 58,44 g/mol) sind in 500 mL einer 0,9 %igen NaCl-Lösung (ρ ≈ 1 g/mL) enthalten?",
-          options: ["A) 0,9 g", "D) 45 g", "C) 9,0 g", "B) 4,5 g", "E) 0,45 g"],
+          options: ["0,9 g", "45 g", "9,0 g", "4,5 g", "0,45 g"],
           correctIndex: 3,
           explanation:
             "0,9 % bedeutet: 0,9 g NaCl pro 100 g Lösung. Bei 500 mL (≈ 500 g bei ρ ≈ 1): m = 0,9 × 500/100 = 4,5 g NaCl. Häufiger Fehler: 0,9 % von 500 mL nicht korrekt berechnen.",
@@ -639,13 +639,7 @@ K_sp bestimmt, ob Calciumoxalat (CaC₂O₄) und Calciumphosphat im Urin ausfall
         {
           question:
             "Welche Molarität hat eine Lösung, in der 4 g NaOH (M = 40 g/mol) in 500 mL Wasser gelöst sind?",
-          options: [
-            "A) 0,1 mol/L",
-            "E) 2,0 mol/L",
-            "C) 0,4 mol/L",
-            "D) 0,05 mol/L",
-            "B) 0,2 mol/L",
-          ],
+          options: ["0,1 mol/L", "2,0 mol/L", "0,4 mol/L", "0,05 mol/L", "0,2 mol/L"],
           correctIndex: 4,
           explanation:
             "n(NaOH) = m/M = 4/40 = 0,1 mol. V = 500 mL = 0,5 L. c = n/V = 0,1/0,5 = 0,2 mol/L. Häufiger Fehler: Volumen nicht in Liter umrechnen (→ Faktor 1000 daneben).",
@@ -659,7 +653,7 @@ K_sp bestimmt, ob Calciumoxalat (CaC₂O₄) und Calciumphosphat im Urin ausfall
         {
           question:
             "Aus 200 mL einer 5 mol/L HCl-Lösung soll eine 0,5 mol/L Lösung hergestellt werden. Welches Endvolumen ist nötig?",
-          options: ["C) 2000 mL", "B) 1000 mL", "A) 500 mL", "D) 250 mL", "E) 100 mL"],
+          options: ["2000 mL", "1000 mL", "500 mL", "250 mL", "100 mL"],
           correctIndex: 0,
           explanation:
             "c₁V₁ = c₂V₂ → V₂ = c₁V₁/c₂ = 5 × 200 / 0,5 = 2000 mL = 2 L. Die Lösung muss 10-fach verdünnt werden (5/0,5 = 10), also von 200 mL auf 2000 mL auffüllen.",
@@ -674,11 +668,11 @@ K_sp bestimmt, ob Calciumoxalat (CaC₂O₄) und Calciumphosphat im Urin ausfall
           question:
             "Für das schwer lösliche Salz AgCl (K_sp = 1,8 × 10⁻¹⁰) gilt AgCl ⇌ Ag⁺ + Cl⁻. Welche Sättigungskonzentration hat Ag⁺?",
           options: [
-            "B) 1,8 × 10⁻¹⁰ mol/L",
-            "A) 1,34 × 10⁻⁵ mol/L",
-            "C) 9,0 × 10⁻⁶ mol/L",
-            "D) 1,8 × 10⁻⁵ mol/L",
-            "E) 4,24 × 10⁻³ mol/L",
+            "1,8 × 10⁻¹⁰ mol/L",
+            "1,34 × 10⁻⁵ mol/L",
+            "9,0 × 10⁻⁶ mol/L",
+            "1,8 × 10⁻⁵ mol/L",
+            "4,24 × 10⁻³ mol/L",
           ],
           correctIndex: 1,
           explanation:
@@ -693,13 +687,7 @@ K_sp bestimmt, ob Calciumoxalat (CaC₂O₄) und Calciumphosphat im Urin ausfall
         {
           question:
             "Ein Blutglucosewert wird mit 126 mg/dL gemessen. Wie viel ist das in mmol/L? (M_Glucose = 180 g/mol)",
-          options: [
-            "A) 5,0 mmol/L",
-            "C) 12,6 mmol/L",
-            "B) 7,0 mmol/L",
-            "D) 2,27 mmol/L",
-            "E) 22,7 mmol/L",
-          ],
+          options: ["5,0 mmol/L", "12,6 mmol/L", "7,0 mmol/L", "2,27 mmol/L", "22,7 mmol/L"],
           correctIndex: 2,
           explanation:
             "126 mg/dL = 1260 mg/L = 1,26 g/L. n = m/M = 1,26/180 = 0,007 mol/L = 7,0 mmol/L. Schnellformel: mmol/L = mg/dL ÷ 18 = 126/18 = 7,0 mmol/L. Wert > 7,0 nüchtern = Diabetes-Diagnose!",

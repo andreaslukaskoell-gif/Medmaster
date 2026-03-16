@@ -14,6 +14,8 @@ export const chemKapOrganisch: Kapitel = {
     {
       id: "ch-12-01",
       title: "Kohlenwasserstoffe — Alkane, Alkene, Alkine",
+      imageUrl: "/images/bms/ch-kovalente-bindung.jpg",
+      imageCaption: "Abb.: Kovalente Bindungen in organischen Molekülen (OpenStax, CC BY 4.0)",
       content: `## Alkane — gesättigte Kohlenwasserstoffe
 
 Die organische Chemie beschäftigt sich mit Verbindungen des Kohlenstoffs, und die einfachsten unter ihnen sind die Alkane. Ihre allgemeine Formel lautet CₙH₂ₙ₊₂. In einem Alkan sind sämtliche Kohlenstoffatome über Einfachbindungen miteinander verknüpft — ausschließlich σ-Bindungen, die durch frontale Orbitalüberlappung entstehen. Da keine weiteren Bindungspartner mehr aufgenommen werden können, bezeichnet man Alkane als gesättigt. Jedes C-Atom ist sp³-hybridisiert, was eine tetraederförmige Geometrie mit einem Bindungswinkel von 109,5° zur Folge hat.
@@ -704,6 +706,8 @@ Die Synthese am Ribosom verläuft stets vom **N-Terminus zum C-Terminus** (die m
 
 > **Merke:** Peptidbindung = Kondensation (–H₂O) zwischen –COOH und –NH₂. Planar durch Mesomerie, partieller Doppelbindungscharakter, trans-Konfiguration. Synthese: N→C.
 
+![Peptidbindung zwischen zwei Aminosäuren](/images/bms/ch-peptidbindung.jpg)
+
 ---
 
 ## Proteinstruktur — vier hierarchische Ebenen
@@ -725,6 +729,8 @@ Die räumliche Organisation von Proteinen gliedert sich in vier Ebenen, die aufe
 **Quartärstruktur** — Zusammenlagerung mehrerer Polypeptidketten (Untereinheiten) zu einem funktionellen Komplex. Bekanntestes Beispiel: **Hämoglobin** (α₂β₂-Tetramer).
 
 > **Merke:** Primär = Sequenz. Sekundär = H-Brücken im Rückgrat (α-Helix, β-Faltblatt). Tertiär = Seitenketten-WW + Disulfidbrücken. Quartär = Untereinheiten.
+
+![Die vier Ebenen der Proteinstruktur](/images/bms/ch-proteinstruktur.jpg)
 
 ---
 
@@ -1399,6 +1405,8 @@ Der entscheidende Punkt: Phospholipide sind **amphipathisch** — polarer Kopf (
 Warum bilden Phospholipide einen Bilayer und keine Mizellen? Phospholipide haben **zwei** Schwänze (zylindrische Geometrie) → Bilayer. Detergenzien/Seifen haben **einen** Schwanz (Kegelform) → Mizellen.
 
 > **Merke:** Phospholipid = 2 Schwänze → Bilayer (Membran). Seife/Detergens = 1 Schwanz → Mizelle. Triglycerid = 3 Schwänze, kein polarer Kopf → Fetttröpfchen (kein Bilayer).
+
+![Aufbau eines Phospholipids mit polarem Kopf und zwei Fettsäureschwänzen](/images/bms/ch-phospholipid.jpg)
 
 ---
 

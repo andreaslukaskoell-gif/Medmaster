@@ -675,6 +675,9 @@ Die **Halbwertszeit t₁/₂** ist die Zeit, in der die Konzentration auf die H�
     {
       id: "ch-8-02",
       title: "Chemisches Gleichgewicht und Massenwirkungsgesetz",
+      imageUrl: "/images/bms/ch-chemische-reaktionen.jpg",
+      imageCaption: "Abb.: Chemisches Gleichgewicht und Massenwirkungsgesetz (OpenStax, CC BY 4.0)",
+      diagram: "equilibrium",
       stichworte: [
         "Dynamisches Gleichgewicht",
         "Massenwirkungsgesetz",
@@ -996,6 +999,9 @@ Wäre die Reaktion endotherm (ΔH > 0), würde K_c mit steigender Temperatur zun
     {
       id: "ch-8-03",
       title: "Le Chatelier-Prinzip — Störung des Gleichgewichts",
+      imageUrl: "/images/bms/ch-chemische-reaktionen.jpg",
+      imageCaption:
+        "Abb.: Le Chatelier-Prinzip und Gleichgewichtsverschiebung (OpenStax, CC BY 4.0)",
       content: `## Das Prinzip von Le Chatelier
 
 Wie steuert der Körper den Blut-pH, obwohl ständig Säuren und Basen anfallen? Die Antwort liefert das Prinzip von Le Chatelier. Das **Prinzip von Le Chatelier** (auch: Prinzip des kleinsten Zwangs, 1884) lautet:

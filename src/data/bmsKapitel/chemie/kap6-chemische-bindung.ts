@@ -27,7 +27,9 @@ export const chemKap6: Kapitel = {
         "Coulombsches Gesetz",
         "NaCl-Gitter",
       ],
-      content: `## Entstehung der Ionenbindung
+      content: `Kochsalz schmilzt erst bei 801 °C — eine enorme Stabilität, die sich allein durch die elektrostatische Anziehung zwischen Na⁺ und Cl⁻ erklärt.
+
+## Entstehung der Ionenbindung
 
 Die **Ionenbindung** (heteropolare Bindung) entsteht durch vollständige **Elektronenübertragung** von einem Metall auf ein Nichtmetall. Treibende Kraft ist das Bestreben beider Atome, die stabile Edelgaskonfiguration zu erreichen (Oktettregel). Metalle haben niedrige Ionisierungsenergien und geben Elektronen leicht ab; Nichtmetalle besitzen hohe Elektronenaffinitäten (Energiegewinn bei Elektronenaufnahme) und nehmen Elektronen bereitwillig auf. Die Elektronegativitätsdifferenz (Delta-EN) zwischen den Bindungspartnern beträgt typischerweise > 1,7 auf der Pauling-Skala.
 

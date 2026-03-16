@@ -11,8 +11,8 @@ export const chemKapAnorganisch: Kapitel = {
     {
       id: "ch-9-01",
       title: "Wasser — Eigenschaften und biologische Bedeutung",
-      imageUrl: "",
-      imageCaption: "",
+      imageUrl: "/images/bms/ch-wasserstoffbruecken.jpg",
+      imageCaption: "Wasserstoffbrückenbindungen im Wasser",
       stichworte: [
         "Dipolmoment",
         "Wasserstoffbrücken",
@@ -340,6 +340,8 @@ Die Dichteanomalie (Maximum bei 4 °C) lässt Eis schwimmen (9 % weniger dicht) 
         "Das Bicarbonat-Puffersystem und Henderson-Hasselbalch berechnen und interpretieren können",
         "Acetyl-CoA als zentrale metabolische Schnittstelle benennen",
       ],
+      imageUrl: "/images/bms/ch-kovalente-bindung.jpg",
+      imageCaption: "Kovalente Bindungen des Kohlenstoffs",
       content: `## Kohlenstoff — das Element des Lebens
 
 
@@ -613,6 +615,8 @@ Das Bicarbonat-Puffersystem (pKa = 6,1) hält arteriellen Blut-pH bei 7,40: pH =
         "Salpeter- und Schwefelsäure als Industriesäuren und ihre Reaktionen darstellen",
         "Die medizinische Bedeutung von Iod (Schilddrüse), Chlor (Desinfektion) und Fluor (Kariesprophylaxe) erläutern",
       ],
+      imageUrl: "/images/bms/ch-periodensystem.jpg",
+      imageCaption: "Periodensystem mit Hauptgruppen-Elementen",
       content: `## Stickstoff (N) — das häufigste Atmosphärengas
 
 
@@ -650,7 +654,7 @@ Stickstoff macht **78 % der Erdatmosphäre** aus und ist damit das häufigste Ga
 
 ---
 
-Wie Stickstoff ist auch Schwefel ein Nichtmetall mit vielfältiger Biochemie:
+Von der Atmosphäre in die Aminosäuren: Wie Stickstoff ist auch Schwefel ein essenzielles Bioelement — allerdings mit völlig anderer Chemie.
 
 ## Schwefel (S) — das Bio-Element
 
@@ -685,10 +689,11 @@ Disulfidbrücken stabilisieren die Tertiär- und Quartärstruktur von Proteinen 
 
 ---
 
-Die Halogene (Gruppe 17) sind die reaktivsten Nichtmetalle — jedes hat eine spezifische medizinische Bedeutung:
+Von den Chalkogenen zu den Halogenen: Die Elemente der Gruppe 17 gehören zu den reaktivsten überhaupt — und spielen in der Medizin eine überraschend vielfältige Rolle.
 
 ## Halogene — Gruppe 17
 
+{{DIAGRAM:periodic-table}}
 
 Die Halogene (F, Cl, Br, I) sind starke Oxidationsmittel mit abnehmender Oxidationskraft von oben nach unten:
 
@@ -1021,7 +1026,7 @@ Wichtige Lewis-Säure-Base-Reaktion: BF3 + :NH3 --> F3B<-NH3 (Addukt; Lewis-S. +
 
 ## Das Ionenprodukt des Wassers (Kw) und die Autoprotolyse
 
-Wasser ist ein Amphoproton – es kann selbst mit sich selbst reagieren:
+Wasser ist ein Ampholyt – es kann selbst mit sich selbst reagieren:
 
 H₂O + H₂O ⇌ H₃O⁺ + OH⁻
 
@@ -1276,6 +1281,8 @@ Der Blut-pH des Menschen liegt im Normbereich bei **7,35–7,45**. Eine Abweichu
     {
       id: "ch-10-02",
       title: "Starke und schwache Säuren/Basen – Ka, Kb, pKa",
+      imageUrl: "/images/bms/ch-ph-skala.jpg",
+      imageCaption: "Abb.: pH-Skala mit Beispielen starker und schwacher Säuren/Basen",
       stichworte: [
         "Starke Säure vollständige Dissoziation",
         "Schwache Säure Gleichgewicht",
@@ -1633,6 +1640,8 @@ Die **Magensäure** (HCl, pH ~ 1-2) ist die einzige starke Säure im Körper und
         "Vitamin C Antioxidans",
         "Redox-Gleichung ausgleichen",
       ],
+      imageUrl: "/images/bms/ch-chemische-reaktionen.jpg",
+      imageCaption: "Chemische Reaktionen — Elektronentransfer bei Redox",
       content: `## Definitionen: OIL RIG
 
 
@@ -1677,6 +1686,8 @@ Oxidationszahlen (OZ) sind formale, hypothetische Ladungen, die einem Atom zugew
 - Gesamt: MnO4- + 8H+ + 5Fe2+ -> Mn2+ + 5Fe3+ + 4H2O
 
 ## Disproportionierung und Komproportionierung
+
+Ein Spezialfall entsteht, wenn ein und dasselbe Element gleichzeitig oxidiert und reduziert wird:
 
 Bei der **Disproportionierung** reagiert ein Element gleichzeitig als Oxidans und Reduktans: 2H2O2 -> 2H2O + O2. O hat in H2O2 OZ = -1; im Produkt H2O hat O OZ = -2 (Reduktion) und in O2 hat O OZ = 0 (Oxidation).
 

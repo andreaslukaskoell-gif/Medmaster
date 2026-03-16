@@ -27,8 +27,7 @@ export const physKap4: Kapitel = {
         "Ausdehnungskoeffizient",
         "Absoluter Nullpunkt",
       ],
-      content: `
-
+      content: `Zwei Grad Fieber können Enzyme zum Stillstand bringen, ein Grad Hypothermie den Herzrhythmus stören — Temperatur ist die unterschätzte Vitalgröße der Medizin.
 
 ## Temperaturskalen
 
@@ -76,6 +75,8 @@ Für Flächen gilt entsprechend β ≈ 2α, für Volumina γ ≈ 3α.
 - Zahnfüllungen müssen einen ähnlichen α wie Zahnschmelz haben, um Rissbildung zu verhindern
 
 **Anomalie des Wassers:** Die **Dichte des Wassers ist bei 4 °C am größten** (nicht bei 0 °C). Von 0 °C bis 4 °C schrumpft Wasser beim Erwärmen (Dichte steigt), darüber dehnt es sich normal aus. Die Ursache liegt in den Wasserstoffbrückenbindungen: Unter 4 °C bilden sich zunehmend eisähnliche, hexagonale Strukturen, die ein größeres Volumen einnehmen. **Deswegen frieren Seen im Winter von oben zu** (nicht von unten): Das dichtere 4 °C-Wasser sinkt nach unten, kälteres Wasser und Eis bleiben oben – das 4 °C-Wasser am Grund schützt Wasserorganismen.
+
+{{DIAGRAM:thermodynamics}}
 
 ## Wärme und Wärmekapazität
 
@@ -335,6 +336,8 @@ Wärme kann auf drei physikalisch grundverschiedene Arten transportiert werden: 
 
 ---
 
+{{DIAGRAM:temperature-scales}}
+
 ## Wärmeleitung (Konduktion)
 
 Bei der Wärmeleitung wird thermische Energie durch direkte Wechselwirkung benachbarter Teilchen weitergegeben — Molekül stößt Molekül an, ohne dass Materie insgesamt transportiert wird. Deshalb funktioniert Wärmeleitung auch in Festkörpern, wo die Teilchen ortsfest schwingen.
@@ -424,6 +427,8 @@ Zum Vergleich: Die Sonnenoberfläche (T ≈ 5778 K) strahlt bei λ_max ≈ 500 n
 > **Merke:** Stefan-Boltzmann: P = σ · ε · A · T⁴ — die vierte Potenz macht kleine Temperaturänderungen wirksam. Wien: λ_max = b/T — der Mensch strahlt bei ~9 μm (Infrarot), die Sonne bei ~500 nm (sichtbar). Strahlung braucht kein Medium und macht ~50 % des Ruhewärmeverlusts aus.
 
 ---
+
+{{DIAGRAM:thermodynamics}}
 
 ## Thermoregulation
 
@@ -790,6 +795,8 @@ Beim absoluten Nullpunkt (T = 0 K = −273,15 °C) hat ein perfekter Kristall di
 Der absolute Nullpunkt ist prinzipiell nicht erreichbar (Nernst-Theorem) — man kann ihm nur asymptotisch näherkommen.
 
 ---
+
+{{DIAGRAM:ideal-gas-laws}}
 
 ## Carnot-Wirkungsgrad: Die theoretische Obergrenze
 

@@ -559,6 +559,8 @@ V\u2081 = (5 \u00d7 100) / 20 = **25 mL** Stammlösung + 75 mL Lösungsmittel.
 
 ---
 
+{{DIAGRAM:equation-balance}}
+
 ## Zusammengesetzter Dreisatz
 
 Manchmal ändern sich **zwei Größen gleichzeitig**. Der zusammengesetzte Dreisatz löst dies schrittweise: Erst eine Variable (direkt oder indirekt), dann die andere.
@@ -793,6 +795,8 @@ Die Kettenmethode ist die **fehlersicherste** Umrechnungsmethode, weil sich fals
 > **Merke:** Kettenmethode: Umrechnungsfaktoren als Brüche schreiben, ungewollte Einheiten kürzen sich weg. Nie raten, ob multiplizieren oder dividieren -- die Einheiten zeigen es!
 
 ---
+
+{{DIAGRAM:proportional-relationship}}
 
 ## Klinisch wichtige Umrechnungen
 

@@ -573,6 +573,8 @@ P(beide rot) = P(1. rot) × P(2. rot | 1. rot) = 4/10 × 3/9 = 12/90 = **2/15 �
 
 Baumdiagramme visualisieren mehrstufige Zufallsexperimente. Sie sind besonders hilfreich bei Aufgaben mit bedingten Wahrscheinlichkeiten und mehrstufigem Ziehen.
 
+{{DIAGRAM:combinatorics-tree}}
+
 **Pfadregel 1 (Pfad-Wahrscheinlichkeit):** Wahrscheinlichkeit eines Pfades = Produkt der Kantenwahrscheinlichkeiten entlang des Pfades.
 
 **Pfadregel 2 (Ereignis-Wahrscheinlichkeit):** Wahrscheinlichkeit eines Ereignisses = Summe der Wahrscheinlichkeiten aller Pfade, die zu diesem Ereignis führen.
@@ -630,6 +632,8 @@ Dabei ist:
 
 **Erwartungswert:** μ = n × p (mittlere Anzahl Erfolge)
 **Standardabweichung:** σ = √(n × p × (1−p))
+
+{{DIAGRAM:probability-distribution}}
 
 Beispiel: Ein Gen-Test hat 90% Treffsicherheit (p = 0,9). Bei 4 unabhängigen Tests: wie wahrscheinlich sind genau 3 korrekte Ergebnisse?
 
@@ -932,6 +936,8 @@ Ergebnis: Bei einem positiven Test ist die Person nur mit ca. 49% Wahrscheinlich
 
 > **Merke:** Bayes-Theorem zeigt: Ein positiver Test bedeutet nicht "krank". Bei niedriger Prävalenz ist der PPV erschreckend niedrig. Das ist der häufigste Irrtum beim Lesen von Testergebnissen — klinisch hochrelevant!
 
+{{DIAGRAM:probability-distribution}}
+
 **Schritt-für-Schritt: Bayes-Formel anwenden (Rezept für Klausur):**
 
 1. **Identifiziere die Größen:** Prävalenz P(K), Sensitivität P(T+|K), Spezifität P(T−|K̄).
@@ -974,6 +980,8 @@ Beispiel: n = 10.000 Personen, Prävalenz 5%, Sensitivität 90%, Spezifität 95%
 **Schritt 3:** PPV = TP / (TP + FP) = 450 / (450 + 475) = 450 / 925 ≈ 48,6%
 
 Das entspricht exakt dem Bayes-Ergebnis — aber visuell viel klarer!
+
+{{DIAGRAM:sensitivity-specificity}}
 
 > **Merke:** Bei MedAT-Aufgaben zu Sensitivität/Spezifität immer zuerst die Vierfeldertafel aufstellen — das verhindert Verwechslungen und macht das Ergebnis sofort sichtbar.
 

@@ -422,6 +422,8 @@ Bei Flächen- und Volumeneinheiten muss der Präfix-Exponent mit der Dimension *
 
 ---
 
+{{DIAGRAM:si-units-overview}}
+
 ## Signifikante Stellen und Rundung
 
 **Signifikante Stellen** (Ziffern mit Informationsgehalt) bestimmen die Präzision einer Messung:
@@ -638,6 +640,8 @@ Zweitens Heparin: Standarddosen werden in Einheiten (IE) oder mg/kg angegeben. I
 
 ---
 
+{{DIAGRAM:si-units-overview}}
+
 ## Basisdimensionen und das Prinzip der dimensionalen Homogenität
 
 Die **Dimension** einer Größe beschreibt ihre physikalische Natur — unabhängig von Zahlenwert oder konkreter Einheit. Die sieben **Basisdimensionen** entsprechen den SI-Basisgrößen:
@@ -714,6 +718,8 @@ Die **Kettenmultiplikation** (Factor-Label-Methode) ist die sicherste Umrechnung
 | | 1 g Fett ≈ 37 kJ (9 kcal) | Fett liefert 2x mehr! |
 
 ---
+
+{{DIAGRAM:scalar-vector-comparison}}
 
 ## Dimensionslose Größen
 
@@ -945,8 +951,7 @@ Die Dimensionsanalyse ist ein doppelt nützliches Werkzeug: als Formelprüfung u
         "gleichförmige Bewegung",
         "Vektoren",
       ],
-      content: `
-
+      content: `Bei einem Auffahrunfall mit 50 km/h wirkt das 25-fache der Erdanziehung auf den Kopf — warum ein Airbag Millisekunden entscheidet, erklärt Newtons zweites Gesetz.
 
 ## Newtonsche Gesetze und Kinematik
 
@@ -957,6 +962,8 @@ Die klassische Mechanik ist das Fundament der Physik und beschreibt, wie sich K�
 {{DIAGRAM:newton-forces}}
 
 ## Kinematik: Bewegung ohne Kräfte
+
+{{DIAGRAM:inclined-plane}}
 
 Die **Kinematik** (Bewegungslehre) beschreibt Bewegungen rein mathematisch — **ohne** nach der Ursache zu fragen. Grundgrößen sind **Ort** (s), **Zeit** (t), **Geschwindigkeit** (v = Weg pro Zeit) und **Beschleunigung** (a = Änderung der Geschwindigkeit pro Zeit).
 
@@ -1190,6 +1197,8 @@ Warum fühlt sich Halten dann anstrengend an? Weil die Muskelfasern ständig kon
 
 ---
 
+{{DIAGRAM:newton-forces}}
+
 ## Von der Intuition zur Formel: Energieerhaltung
 
 Stell dir einen Ball vor, der einen Hügel hinunterrollt. Oben steht er still — voller „gespeicherter" Energie durch seine Höhe. Beim Rollen wird er immer schneller. Woher kommt die Geschwindigkeit? Die Lageenergie (Höhe) wandelt sich in Bewegungsenergie um. Am Fuß des Hügels ist die gesamte Höhenenergie in Bewegung übergegangen. Genau das beschreibt der Energieerhaltungssatz.
@@ -1255,6 +1264,8 @@ Die Einheit ist Watt (W = J/s). Ein Mensch kann kurzfristig etwa 1000 W leisten 
 **Wirkungsgrad** η = P_nutz / P_ges × 100 %. Der menschliche Körper hat beim Laufen einen Wirkungsgrad von ca. 20–25 % — der Rest wird als Wärme abgegeben. In biologischen Systemen: chemische Energie (ATP) → mechanische Arbeit (Muskelkontraktion) + Wärme.
 
 ---
+
+{{DIAGRAM:inclined-plane}}
 
 ## Federkraft und elastische Energie
 
