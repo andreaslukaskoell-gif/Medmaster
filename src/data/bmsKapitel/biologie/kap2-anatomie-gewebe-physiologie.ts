@@ -100,11 +100,21 @@ Sekretionsmechanismen exokriner Drüsen:
         "Klassifikation nach Form (Platten, kubisch, zylindrisch) UND Schichtung (ein- vs. mehrschichtig).",
         "Tight Junctions versiegeln apikal; Desmosomen halten mechanisch zusammen.",
       ],
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question: "Welches Epithel kleidet die Trachea aus und welche Funktion erfüllt es?",
-        answer:
-          "Mehrreihiges (pseudostratifiziertes) Flimmerepithel mit Kinozilien und Becherzellen. Die Kinozilien transportieren Schleimfilm mit eingeschlossenen Fremdpartikeln rachenwärts (mukoziliäre Clearance).",
+        text: "Welches Epithel kleidet die Trachea aus?",
+        options: [
+          { id: "a", text: "Einschichtiges Plattenepithel." },
+          { id: "b", text: "Mehrschichtiges verhorntes Plattenepithel." },
+          {
+            id: "c",
+            text: "Mehrreihiges (pseudostratifiziertes) Flimmerepithel mit Kinozilien und Becherzellen.",
+          },
+          { id: "d", text: "Übergangsepithel (Urothel)." },
+          { id: "e", text: "Einschichtiges hochprismatisches Epithel ohne Zilien." },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "Die Trachea ist von mehrreihigem Flimmerepithel (pseudostratifiziert) ausgekleidet. Kinozilien transportieren den Schleimfilm mit Fremdpartikeln rachenwärts (mukoziliäre Clearance). Becherzellen produzieren den schützenden Schleim.",
       },
       klinischerBezug:
         "Bei Kartagener-Syndrom (Primäre Ziliendyskinesie) sind die Dynein-Arme der Kinozilien defekt — Betroffene leiden unter chronischer Bronchitis, Bronchiektasen, Infertilität und häufig Situs inversus. Karzinome entstehen zu ca. 85 % aus entartetem Epithelgewebe.",
@@ -323,11 +333,21 @@ Sehne, Knorpel und Knochen sehen völlig verschieden aus, bestehen aber alle aus
         "Osteoblasten (aufbauend, mesenchymal) vs. Osteoklasten (abbauend, hämatopoetisch, RANKL).",
         "Knorpel ist avaskulär — daher schlechte Heilung; Knochen hat Blutgefäße und heilt gut.",
       ],
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question: "Welche Zellen bauen Knochen ab, und aus welcher Zelllinie stammen sie?",
-        answer:
-          "Osteoklasten bauen Knochen ab. Sie entstammen der hämatopoetischen Linie (Monozyten/Makrophagen-Vorläufer). Sie sind mehrkernig und resorbieren Knochenmatrix durch Säure (HCl) und Kathepsin K in der Howship-Lakune.",
+        text: "Welche Zellen sind für den Knochenabbau verantwortlich?",
+        options: [
+          { id: "a", text: "Osteoblasten — sie stammen aus mesenchymalen Stammzellen." },
+          { id: "b", text: "Osteozyten — sie stammen aus eingemauerten Osteoblasten." },
+          {
+            id: "c",
+            text: "Osteoklasten — sie stammen aus der hämatopoetischen Linie (Monozyten/Makrophagen-Vorläufer).",
+          },
+          { id: "d", text: "Chondroblasten — sie stammen aus dem Perichondrium." },
+          { id: "e", text: "Fibroblasten — sie stammen aus dem Mesenchym." },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "Osteoklasten bauen Knochen ab. Sie entstammen der hämatopoetischen Linie (Monozyten/Makrophagen-Vorläufer), sind mehrkernig und resorbieren Knochenmatrix durch HCl und Kathepsin K in der Howship-Lakune. Osteoblasten hingegen bauen Knochen auf.",
       },
       klinischerBezug:
         "Osteoporose entsteht durch Ungleichgewicht zugunsten der Osteoklasten, häufig durch Östrogenmangel nach der Menopause. Therapeutisch werden Bisphosphonate (hemmen Osteoklasten) oder RANKL-Antikörper (Denosumab) eingesetzt. Bei Skorbut (Vitamin-C-Mangel) ist die Kollagensynthese gestört — Knochen, Zahnfleisch und Gefäßwände werden brüchig.",
@@ -536,12 +556,33 @@ Kein Troponin! Ca2+ bindet **Calmodulin** -> aktiviert **MLCK** (Myosin-Leichtke
         "Ca²⁺ → Troponin C → Tropomyosin weg → Myosin bindet Aktin → Kraftschlag nach ATP-Hydrolyse.",
         "Herzmuskel: quergestreift, einkernig, Gap Junctions in Glanzstreifen, kein Tetanus möglich.",
       ],
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Warum kann der Herzmuskel im Gegensatz zur Skelettmuskulatur keinen Tetanus entwickeln?",
-        answer:
-          "Das Herzmyokard hat eine sehr lange absolute Refraktärzeit (ca. 200–300 ms), die fast so lang ist wie die mechanische Kontraktion. Dadurch kann kein neues Aktionspotential ausgelöst werden, bevor sich der Herzmuskel nicht vollständig erschlafft hat — tetanische Dauerkontrak­tion wäre für die Pumpfunktion fatal.",
+        text: "Warum kann der Herzmuskel im Gegensatz zur Skelettmuskulatur keinen Tetanus entwickeln?",
+        options: [
+          {
+            id: "a",
+            text: "Weil der Herzmuskel keine Sarkomere besitzt.",
+          },
+          {
+            id: "b",
+            text: "Weil die absolute Refraktärzeit des Herzmuskels fast so lang wie die Kontraktion ist — ein neues AP kann erst nach Erschlaffung ausgelöst werden.",
+          },
+          {
+            id: "c",
+            text: "Weil der Herzmuskel glatte Muskulatur ist und nicht willkürlich stimuliert werden kann.",
+          },
+          {
+            id: "d",
+            text: "Weil Gap Junctions in Glanzstreifen die Erregungsausbreitung verlangsamen.",
+          },
+          {
+            id: "e",
+            text: "Weil der Herzmuskel kein Troponin-C enthält und daher nicht auf Ca²⁺ reagiert.",
+          },
+        ],
+        correctOptionId: "b",
+        explanation:
+          "Das Herzmyokard hat eine sehr lange absolute Refraktärzeit (ca. 200–300 ms), die fast so lang ist wie die mechanische Kontraktion. Dadurch kann kein neues Aktionspotential ausgelöst werden, bevor der Herzmuskel erschlafft ist — Tetanus wäre für die Pumpfunktion fatal.",
       },
       klinischerBezug:
         "Kardiales Troponin I und T (herzspezifische Isoformen) werden bei Herzinfarkt (Myokardinfarkt) aus geschädigten Kardiomyozyten freigesetzt und sind die sensitivsten und spezifischsten Marker für myokardialen Schaden. Erhöhte Troponin-Spiegel sind innerhalb von 3–6 Stunden nach Infarkt nachweisbar.",

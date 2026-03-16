@@ -210,6 +210,16 @@ Die 70S-Ribosomen der Mitochondrien erklären, warum manche Antibiotika mitochon
           difficulty: 1,
           tags: ["miller-urey", "experiment", "organische-moleküle", "chemische-evolution"],
         },
+        {
+          question:
+            "Welche Aussagen zur Endosymbiontentheorie sind richtig?\n\n1. Mitochondrien besitzen ein eigenes, ringförmiges Genom ohne Histone.\n2. Die Ribosomen der Mitochondrien sedimentieren mit 80S wie eukaryotische Ribosomen.\n3. Chloroplasten stammen laut Endosymbiontentheorie von Cyanobakterien ab.\n4. Die Endosymbiontentheorie wurde von Charles Darwin formuliert.\n5. Mitochondrien vermehren sich durch binäre Teilung unabhängig vom Zellzyklus.",
+          options: ["Nur 1 und 2", "Nur 2 und 4", "Nur 1, 3 und 5", "Nur 3 und 4", "Alle Aussagen"],
+          correctIndex: 2,
+          explanation:
+            "Aussagen 1, 3 und 5 sind korrekt. Mitochondrien haben ein eigenes ringförmiges Genom ohne Histone (1), Chloroplasten stammen von Cyanobakterien ab (3), und Mitochondrien teilen sich durch binäre Teilung (5). Aussage 2 ist falsch: Mitochondriale Ribosomen sind 70S (wie bei Bakterien), nicht 80S. Aussage 4 ist falsch: Die Endosymbiontentheorie wurde von Lynn Margulis (1967) formuliert, nicht von Darwin.",
+          difficulty: 2,
+          tags: ["typ-k", "endosymbiose", "mitochondrien", "chloroplasten"],
+        },
       ],
     },
     {
@@ -440,6 +450,22 @@ Beide Formen können zu **sexuellem Dimorphismus** (Geschlechtsunterschied in Gr
           ],
           difficulty: 2,
           tags: ["sexuelle-selektion", "intrasexuell", "intersexuell", "dimorphismus"],
+        },
+        {
+          question:
+            "Welche Aussagen zur Evolutionstheorie sind richtig?\n\n1. Lamarck postulierte die Vererbung erworbener Eigenschaften — diese Theorie ist widerlegt.\n2. Darwin formulierte die natürliche Selektion auf Basis von Variation, Erblichkeit, Überproduktion und Differentialreproduktion.\n3. Stabilisierende Selektion bevorzugt die Extremwerte eines Merkmals.\n4. Die Synthetische Evolutionstheorie integriert Darwins Selektion mit der Mendelschen Genetik.\n5. Fitness in der Evolutionsbiologie bedeutet primär physische Stärke und Ausdauer.",
+          options: [
+            "Nur 1 und 3",
+            "Nur 2, 3 und 5",
+            "Nur 1, 2 und 4",
+            "Nur 3, 4 und 5",
+            "Alle Aussagen",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Aussagen 1, 2 und 4 sind korrekt. Lamarck postulierte die Vererbung erworbener Eigenschaften (widerlegt, 1). Darwin formulierte die natürliche Selektion mit vier Kernprinzipien (2). Die Synthetische Evolutionstheorie vereint Darwin und Mendel (4). Aussage 3 ist falsch: Stabilisierende Selektion bevorzugt den Mittelwert und selektiert gegen Extreme. Aussage 5 ist falsch: Fitness bedeutet reproduktiven Erfolg, nicht physische Stärke.",
+          difficulty: 2,
+          tags: ["typ-k", "evolution", "darwin", "selektion", "synthetische-theorie"],
         },
       ],
     },

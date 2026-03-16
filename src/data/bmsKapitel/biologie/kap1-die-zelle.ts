@@ -251,6 +251,22 @@ Dieses Phänomen nennt sich **Emergenz** (von lat. *emergere* = hervorkommen): D
           difficulty: 2,
           tags: ["viren", "stoffwechsel", "kennzeichen des lebens"],
         },
+        {
+          question:
+            "Welche der folgenden Aussagen über die Kennzeichen des Lebens und Homöostase sind richtig?\n\n1. Negative Rückkopplung stabilisiert den Sollwert, indem der Effekt dem Auslöser entgegenwirkt\n2. Positive Rückkopplung ist der häufigste Mechanismus der Homöostase\n3. Viren besitzen Fortpflanzung und Evolution, aber keinen eigenständigen Stoffwechsel\n4. Emergenz bedeutet, dass auf höherer Organisationsebene neue Eigenschaften entstehen\n5. Die Blutgerinnung ist ein Beispiel für negative Rückkopplung",
+          options: [
+            "Nur 1 und 3",
+            "Nur 1, 3 und 4",
+            "Nur 2, 4 und 5",
+            "Nur 1, 2 und 4",
+            "Alle Aussagen sind richtig",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Aussagen 1, 3 und 4 sind korrekt. Aussage 2 ist falsch — negative (nicht positive) Rückkopplung ist der häufigste Homöostase-Mechanismus. Aussage 5 ist falsch — Blutgerinnung ist ein klassisches Beispiel für positive Rückkopplung (Thrombin aktiviert weiteres Thrombin).",
+          difficulty: 2,
+          tags: ["typ-k", "kennzeichen des lebens", "homöostase", "rückkopplung"],
+        },
       ],
     },
 
@@ -510,6 +526,22 @@ Viele Archäen sind **Extremophile**: Thermophile (bis 121°C), Halophile (gesä
           ],
           difficulty: 2,
           tags: ["archäen", "drei-domänen-modell", "carl woese"],
+        },
+        {
+          question:
+            "Welche der folgenden Aussagen über Prokaryoten und Eukaryoten sind richtig?\n\n1. Prokaryoten besitzen 70S-Ribosomen, Eukaryoten 80S-Ribosomen\n2. Archäen haben Ether-Lipide in ihrer Zellmembran statt Ester-Lipide\n3. Bakterien besitzen einen membranumschlossenen Zellkern\n4. Die Endosymbiontentheorie erklärt den Ursprung von Mitochondrien und Chloroplasten\n5. Prokaryoten haben eine lineare DNA wie Eukaryoten",
+          options: [
+            "Nur 1 und 4",
+            "Nur 1, 2 und 4",
+            "Nur 2, 3 und 5",
+            "Nur 1, 2 und 3",
+            "Alle Aussagen sind richtig",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Aussagen 1, 2 und 4 sind korrekt. Aussage 3 ist falsch — Prokaryoten besitzen per Definition keinen membranumschlossenen Zellkern (das unterscheidet sie von Eukaryoten). Aussage 5 ist falsch — Prokaryoten haben typischerweise eine zirkuläre DNA (Bakterienchromosom), nicht linear wie Eukaryoten.",
+          difficulty: 2,
+          tags: ["typ-k", "prokaryoten", "eukaryoten", "endosymbiontentheorie"],
         },
       ],
     },
@@ -776,6 +808,22 @@ Ein klinisch wichtiges Beispiel für Glykokalix-Strukturen sind die **ABO-Blutgr
           difficulty: 2,
           tags: ["lipidbewegung", "flip-flop", "laterale-diffusion", "membranfluidität"],
         },
+        {
+          question:
+            "Welche der folgenden Aussagen über die Zellmembran sind richtig?\n\n1. Cholesterin puffert die Membranfluidität — bei hohen Temperaturen versteift es, bei niedrigen verhindert es Erstarren\n2. Glykoproteine und Glykolipide der Glykokalyx befinden sich auf der zytosolischen Seite der Membran\n3. Integrale Membranproteine durchspannen die Lipiddoppelschicht mit hydrophoben Transmembrandomänen\n4. Flip-Flop ist die häufigste Bewegungsform von Membranlipiden\n5. Das Flüssig-Mosaik-Modell beschreibt die Membran als fluide Lipiddoppelschicht mit lateral beweglichen Proteinen",
+          options: [
+            "Nur 1 und 5",
+            "Nur 1, 3 und 5",
+            "Nur 2, 3 und 4",
+            "Nur 3 und 5",
+            "Alle Aussagen sind richtig",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Aussagen 1, 3 und 5 sind korrekt. Aussage 2 ist falsch — die Glykokalyx befindet sich auf der extrazellulären Seite der Membran (nicht zytosolisch). Aussage 4 ist falsch — Flip-Flop (transversale Diffusion) ist die seltenste Lipidbewegung; laterale Diffusion ist die häufigste.",
+          difficulty: 3,
+          tags: ["typ-k", "zellmembran", "flüssig-mosaik-modell", "cholesterin"],
+        },
       ],
     },
 
@@ -913,10 +961,29 @@ Na⁺ strömt in die Zelle, während ein anderes Ion **heraus** transportiert wi
       klinischerBezug:
         "Herzglykoside hemmen Na⁺/K⁺-ATPase → Ca²⁺ ↑ → positiv inotrop. SGLT2-Hemmer blockieren Glucoserückresorption in der Niere → Glucosurie → Blutzuckersenkung bei Typ-2-Diabetes. Isotone Infusion 0,9 % NaCl; hypotone Infusion kann Hämolyse begünstigen.",
       altfrage: {
-        question:
-          "Herzglykoside (z. B. Digitalis) hemmen die Na⁺/K⁺-ATPase. Über welchen Mechanismus führt das zu einer verstärkten Herzkontraktion?",
-        answer:
-          "Durch Hemmung der Na⁺/K⁺-ATPase steigt die intrazelluläre Na⁺-Konzentration. Dadurch kann der Na⁺/Ca²⁺-Austauscher (NCX), der normalerweise 3 Na⁺ in die Zelle und 1 Ca²⁺ heraus transportiert, weniger effizient arbeiten, weil der Na⁺-Gradient als Antrieb abgeschwächt ist. In der Folge akkumuliert Ca²⁺ intrazellulär. Mehr Ca²⁺ steht für die Aktin-Myosin-Interaktion zur Verfügung, was die Kontraktionskraft des Herzmuskels steigert (positiv inotrop). Dieser Mechanismus verknüpft primär aktiven Transport (Na⁺/K⁺-ATPase) mit sekundär aktivem Transport (NCX) — ein Schlüsselkonzept des Membrantransports.",
+        text: "Herzglykoside (z. B. Digitalis) hemmen die Na⁺/K⁺-ATPase. Über welchen Mechanismus führt das zu einer verstärkten Herzkontraktion?",
+        options: [
+          {
+            id: "a",
+            text: "Direkte Aktivierung spannungsabhängiger Ca²⁺-Kanäle in der Zellmembran.",
+          },
+          {
+            id: "b",
+            text: "Hemmung der Na⁺/K⁺-ATPase → intrazelluläres Na⁺ ↑ → Na⁺/Ca²⁺-Austauscher (NCX) arbeitet weniger effizient → Ca²⁺ akkumuliert intrazellulär → stärkere Kontraktion.",
+          },
+          { id: "c", text: "Vermehrte Freisetzung von Adrenalin aus den Nebennieren." },
+          {
+            id: "d",
+            text: "Blockade von K⁺-Kanälen mit verlängertem Aktionspotential und erhöhtem Ca²⁺-Einstrom.",
+          },
+          {
+            id: "e",
+            text: "Steigerung der ATP-Produktion in den Mitochondrien der Kardiomyozyten.",
+          },
+        ],
+        correctOptionId: "b",
+        explanation:
+          "Durch Hemmung der Na⁺/K⁺-ATPase steigt die intrazelluläre Na⁺-Konzentration. Der Na⁺/Ca²⁺-Austauscher (NCX) kann weniger effizient arbeiten, da der Na⁺-Gradient als Antrieb abgeschwächt ist. Ca²⁺ akkumuliert intrazellulär → mehr Ca²⁺ für die Aktin-Myosin-Interaktion → positiv inotrop.",
       },
       selfTest: [
         {
@@ -999,6 +1066,22 @@ Na⁺ strömt in die Zelle, während ein anderes Ion **heraus** transportiert wi
           hints: ["Blutplasma ~290 mosmol/kg. Welcher NaCl-Gehalt führt dazu?"],
           difficulty: 1,
           tags: ["tonizität", "infusion", "0,9%"],
+        },
+        {
+          question:
+            "Welche der folgenden Aussagen über Membrantransport sind richtig?\n\n1. Die Na⁺/K⁺-ATPase transportiert 3 Na⁺ nach außen und 2 K⁺ nach innen pro ATP\n2. Osmose ist ein aktiver Transportprozess, der ATP benötigt\n3. Erythrozyten in hypotoner Lösung schwellen und können hämolysieren\n4. SGLT1 im Dünndarm ist ein Beispiel für sekundär aktiven Symport\n5. Aquaporine transportieren Glucose passiv durch die Membran",
+          options: [
+            "Nur 1 und 3",
+            "Nur 1, 3 und 4",
+            "Nur 2, 4 und 5",
+            "Nur 1, 2 und 3",
+            "Alle Aussagen sind richtig",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Aussagen 1, 3 und 4 sind korrekt. Aussage 2 ist falsch — Osmose ist ein passiver Prozess (Wasser folgt dem osmotischen Gradienten ohne Energieaufwand). Aussage 5 ist falsch — Aquaporine sind spezifische Wasserkanäle, nicht Glucosetransporter (GLUT-Transporter transportieren Glucose).",
+          difficulty: 2,
+          tags: ["typ-k", "membrantransport", "osmose", "na-k-atpase"],
         },
       ],
     },
@@ -1268,11 +1351,35 @@ Das **glatte ER (gER)** hat keine Ribosomen und übernimmt andere Aufgaben als d
           difficulty: 2 as const,
           tags: ["Zilien", "Zytoskelett"],
         },
+        {
+          question:
+            "Welche der folgenden Aussagen über Zellorganellen sind richtig?\n\n1. Das raue ER synthetisiert sekretorische Proteine mithilfe membrangebundener Ribosomen\n2. Lysosomen haben einen pH von ca. 7,4 (neutral) für optimale Enzymaktivität\n3. Mitochondrien besitzen eigene zirkuläre DNA und 70S-Ribosomen\n4. Der Golgi-Apparat sortiert Proteine mithilfe von Mannose-6-Phosphat (M6P) zum Lysosom\n5. Peroxisomen sind von einer Doppelmembran umgeben",
+          options: [
+            "Nur 1, 2 und 4",
+            "Nur 1, 3 und 4",
+            "Nur 2, 3 und 5",
+            "Nur 1 und 3",
+            "Alle Aussagen sind richtig",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Aussagen 1, 3 und 4 sind korrekt. Aussage 2 ist falsch — Lysosomen haben einen sauren pH von ca. 4,5 (nicht neutral), der für die sauren Hydrolasen optimal ist. Aussage 5 ist falsch — Peroxisomen sind von einer einfachen Membran umgeben (Doppelmembran haben Mitochondrien und der Zellkern).",
+          difficulty: 2,
+          tags: ["typ-k", "organellen", "lysosomen", "mitochondrien", "golgi"],
+        },
       ],
       altfrage: {
-        question: "Wo findet die β-Oxidation langer Fettsäuren (>C22) statt?",
-        answer:
-          "Correct answer: Peroxisomen. Very Long Chain Fatty Acids (VLCFA >C22) werden ausschließlich in Peroxisomen durch β-Oxidation abgebaut. Mitochondrien können nur Fettsäuren bis C20 oxidieren. Ein Defekt des ABCD1-Transporters verhindert den VLCFA-Import in Peroxisomen → Adrenoleukodystrophie (ALD).",
+        text: "Wo findet die β-Oxidation sehr langkettiger Fettsäuren (>C22, VLCFA) statt?",
+        options: [
+          { id: "a", text: "In der mitochondrialen Matrix nach Carnitin-Shuttle." },
+          { id: "b", text: "Im glatten endoplasmatischen Retikulum (sER)." },
+          { id: "c", text: "In den Peroxisomen." },
+          { id: "d", text: "Im Zytoplasma durch zytosolische Lipasen." },
+          { id: "e", text: "In den Lysosomen durch saure Lipasen." },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "VLCFA (>C22) werden ausschließlich in Peroxisomen durch β-Oxidation abgebaut. Mitochondrien können nur Fettsäuren bis ~C20 oxidieren. Ein Defekt des ABCD1-Transporters verhindert den VLCFA-Import in Peroxisomen → Adrenoleukodystrophie (ALD).",
       },
     },
 
@@ -1785,10 +1892,32 @@ Die Schwesterchromatiden trennen sich in jeder haploiden Zelle. Ergebnis: **4 ha
         },
       ],
       altfrage: {
-        question:
-          "Eine Zelle in der Metaphase I der Meiose unterscheidet sich von einer Zelle in der Metaphase der Mitose dadurch, dass...",
-        answer:
-          "Correct answer: ...in der Metaphase I Bivalente (Tetraden aus 4 Chromatiden) an der Äquatorialplatte ausgerichtet sind. In der Mitose-Metaphase richten sich Einzelchromosomen (mit 2 Schwesterchromatiden) an der Äquatorialplatte aus. In der Meiose-I-Metaphase richten sich Bivalente aus (= 2 homologe Chromosomen, je mit 2 Schwesterchromatiden = 4 Chromatiden pro Bivalent, auch 'Tetrade' genannt). Crossing-over fand bereits in der Prophase I statt — nicht in der Metaphase.",
+        text: "Eine Zelle in der Metaphase I der Meiose unterscheidet sich von einer Zelle in der Metaphase der Mitose dadurch, dass...",
+        options: [
+          {
+            id: "a",
+            text: "...in der Metaphase I Schwesterchromatiden einzeln an der Äquatorialplatte ausgerichtet sind.",
+          },
+          {
+            id: "b",
+            text: "...in der Metaphase I Bivalente (Tetraden aus je 4 Chromatiden) an der Äquatorialplatte ausgerichtet sind.",
+          },
+          {
+            id: "c",
+            text: "...in der Metaphase I das Crossing-over stattfindet.",
+          },
+          {
+            id: "d",
+            text: "...in der Metaphase I nur haploide Chromosomensätze vorliegen.",
+          },
+          {
+            id: "e",
+            text: "...in der Metaphase I die Kernhülle bereits vollständig aufgelöst ist, in der Mitose jedoch nicht.",
+          },
+        ],
+        correctOptionId: "b",
+        explanation:
+          "In der Meiose-I-Metaphase richten sich Bivalente (= 2 homologe Chromosomen, je mit 2 Schwesterchromatiden = 4 Chromatiden, auch 'Tetrade') an der Äquatorialplatte aus. In der Mitose-Metaphase sind es Einzelchromosomen mit 2 Schwesterchromatiden. Crossing-over fand bereits in der Prophase I statt.",
       },
       klinischerBezug:
         "Trisomie 21 (Down-Syndrom): Non-disjunction in Meiose I (häufiger) oder II → Eizelle mit 2× Chromosom 21 → Trisomie 47,XX/XY,+21. Häufigste chromosomale Ursache geistiger Behinderung. Risiko bei Mutter >35 J.: ~1:350, bei >45 J.: ~1:20. Zusätzlich: Herzfehler (ASD/VSD, ~40%), Leukämierisiko erhöht, Alzheimer-Risiko (Chr. 21 trägt APP-Gen). Turner-Syndrom (45,X0): meist Non-disjunction im väterlichen Spermium. Klinefelter (47,XXY): Non-disjunction maternal oder paternal. Krebsentstehung durch Checkpoint-Defekte: TP53 (kodiert p53, 'Wächter des Genoms') ist in ~50% aller menschlichen Tumoren mutiert — ohne p53 kein Zellzyklus-Arrest nach DNA-Schäden → Tumorzellen akkumulieren weitere Mutationen.",
@@ -2129,9 +2258,32 @@ Pyruvat + NADH → Laktat + NAD⁺ [Laktat-Dehydrogenase (LDH)]
         },
       ],
       altfrage: {
-        question: "Welche Aussage zum Citratzyklus (Krebszyklus) ist korrekt?",
-        answer:
-          "Correct answer: Im Citratzyklus wird pro Acetyl-CoA: 3 NADH, 1 FADH₂, 1 GTP und 2 CO₂ produziert. Der Citratzyklus findet in der Mitochondrien-Matrix statt (A falsch — innere Membran = Atmungskette). Pro Acetyl-CoA-Durchgang werden 3 NADH, 1 FADH₂, 1 GTP (via Substratkettenphosphorylierung) und 2 CO₂ erzeugt (B korrekt). Die ATP-Synthese erfolgt in der Atmungskette (oxidative Phosphorylierung), nicht direkt im Citratzyklus (C falsch). Succinat-Dehydrogenase ist gleichzeitig Citratzyklus-Enzym und Komplex II der Atmungskette (D falsch). Ohne O₂ stoppt die Atmungskette → NAD⁺/FAD können nicht regeneriert werden → Citratzyklus kommt zum Stillstand (E falsch).",
+        text: "Welche Aussage zum Citratzyklus (Krebszyklus) ist korrekt?",
+        options: [
+          {
+            id: "a",
+            text: "Der Citratzyklus findet an der inneren Mitochondrienmembran statt.",
+          },
+          {
+            id: "b",
+            text: "Pro Acetyl-CoA-Durchgang werden 3 NADH, 1 FADH₂, 1 GTP und 2 CO₂ produziert.",
+          },
+          {
+            id: "c",
+            text: "Der Citratzyklus produziert direkt den Großteil des zellulären ATP.",
+          },
+          {
+            id: "d",
+            text: "Succinat-Dehydrogenase ist ausschließlich ein Enzym der Atmungskette, nicht des Citratzyklus.",
+          },
+          {
+            id: "e",
+            text: "Der Citratzyklus kann auch ohne Sauerstoff unverändert weiterlaufen.",
+          },
+        ],
+        correctOptionId: "b",
+        explanation:
+          "Der Citratzyklus findet in der Mitochondrien-Matrix statt (nicht an der inneren Membran). Pro Acetyl-CoA: 3 NADH, 1 FADH₂, 1 GTP (Substratkettenphosphorylierung) und 2 CO₂. Succinat-Dehydrogenase ist gleichzeitig Citratzyklus-Enzym und Komplex II. Ohne O₂ stoppt die Atmungskette → NAD⁺/FAD nicht regenerierbar → Citratzyklus stoppt.",
       },
       klinischerBezug:
         "Laktatazidose: Anstieg des Blutlaktats >2 mmol/L bei Gewebehypoxie (Sepsis, kardiogener Schock, CO-Vergiftung) oder Medikamenten (Metformin → schwache Komplex-I-Hemmung → Laktat). Serum-Laktat ist ein Prognosemarker. Wernicke-Enzephalopathie: B1-Mangel (Alkoholismus, Hyperemesis gravidarum, parenterale Ernährung ohne B1) → PDH-Defekt → Gehirn kann Glucose nicht mehr aerob verwerten → Ophthalmoplegie, Ataxie, Bewusstseinsänderung. Sofort IV Thiamin! Cyanidvergiftung (Industrieunfall, Rauchgas): Blockade Komplex IV → keine ATP-Synthese → Gewebehypoxie trotz normaler O₂-Sättigung (Venenblut kirschrot!). Antidot: Hydroxocobalamin. MELAS-Syndrom: mitochondriale Myopathie, Laktatazidose, Schlaganfall-ähnliche Episoden — mtDNA-Mutation → Atmungskettendefekt → Laktatazidose + Neurodegeneration.",
