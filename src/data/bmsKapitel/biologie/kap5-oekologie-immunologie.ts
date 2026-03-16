@@ -897,6 +897,8 @@ Materie zirkuliert in **biogeochemischen Kreisläufen** zwischen biotischen und 
 
 **Ozeane als Puffer:** Ozeane absorbieren ca. 30% der anthropogenen CO₂-Emissionen → Ozeanversauerung (pH sinkt → Probleme für kalkbildende Organismen wie Korallen, Muscheln, Foraminiferen (kalkschalige Einzeller)).
 
+![Kohlenstoffkreislauf — CO₂-Fixierung durch Photosynthese und Freisetzung durch Zellatmung und Verbrennung](/images/bms/bio-kohlenstoffkreislauf-de.svg)
+
 ### Stickstoffkreislauf
 
 Stickstoff (N) ist essentiell für Aminosäuren, Nucleotide und Chlorophyll. Obwohl N₂ 78% der Atmosphäre ausmacht, kann er von den meisten Organismen nicht direkt genutzt werden.
@@ -1297,6 +1299,8 @@ Bakterienwachstum in geschlossener Kultur (Blutkultur, Nährmedium) durchläuft 
 | Absterben | < Absterben | Irrelevant | Spontanheilung / Immunabwehr |
 
 > **Merke:** 4 Phasen: Lag → Exponentiell → Stationär → Absterben. Beta-Laktame wirken nur in der Exponentialphase (Zellwandsynthese nur bei Teilung). Persisterzellen in der stationären Phase überleben Antibiotika → Rückfälle.
+
+![Bakterienwachstumskurve — Lag-, Log-, stationäre und Absterbephase](/images/bms/bio-bakterienwachstum-de.svg)
 
 ---
 
@@ -1701,6 +1705,14 @@ Die V(D)J-Rekombination wird durch den RAG1/RAG2-Komplex (Recombination Activati
 Die Affinitätsreifung findet in Keimzentren der sekundären Lymphorgane (Lymphknoten, Milz) statt. Aktivierte B-Zellen proliferieren intensiv (Zentroblasten) und akkumulieren somatische Mutationen in den V-Regionen ihrer Antikörpergene (somatische Hypermutation durch das Enzym AID, Activation-Induced Cytidine Deaminase). Die mutierten B-Zellen (Zentrozyten) konkurrieren um begrenzte Antigendepots auf follikulären dendritischen Zellen. Nur B-Zellen mit höherer Affinität erhalten Überlebenssignale von follikulären T-Helfer-Zellen (Tfh). Zellen mit geringerer Affinität sterben durch Apoptose. Ergebnis: progressive Selektion von B-Zellen mit immer höherer Antigenaffinität über mehrere Wochen.
 
 > **Merke:** Affinitätsreifung: B-Zellen in Keimzentren → somatische Hypermutation (AID) → Selektion auf höhere Affinität → IgG der Sekundärantwort hat höhere Affinität.
+
+---
+
+## Klonale Selektion — ein Antigen wählt seinen Klon
+
+Nach der **klonalen Selektionstheorie** (Burnet, 1957) trägt jede reife B-Zelle nur **einen** Antikörpertyp (einen einzigartigen BCR, erzeugt durch V(D)J-Rekombination). Trifft ein Antigen auf die B-Zelle mit dem komplementären BCR, wird genau diese Zelle aktiviert → **klonale Expansion**: Die selektierte B-Zelle vermehrt sich massiv und differenziert zu **Plasmazellen** (sezernieren lösliche Antikörper) und **Gedächtniszellen** (ermöglichen die schnellere, stärkere Sekundärantwort). Alle anderen, nicht-stimulierten Klone bleiben inaktiv. Das Antigen „erfindet" also keinen neuen Antikörper, sondern **selektiert** aus einer bereits vorhandenen Bibliothek.
+
+> **Merke:** Klonale Selektion: 1 B-Zelle = 1 Antikörpertyp. Antigen selektiert passenden Klon → klonale Expansion → Plasmazellen + Gedächtniszellen.
 
 ---
 

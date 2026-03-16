@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 400" font-family="system-ui, -apple-system, sans-serif">
+  <defs>
+    <marker id="arrowGreen" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#2d6a4f"/>
+    </marker>
+    <marker id="arrowBrown" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#6b4226"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#b5351b"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#1b6b9e"/>
+    </marker>
+    <marker id="arrowGray" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#555"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="550" height="400" rx="12" fill="#f8f6f0"/>
+
+  <!-- Title -->
+  <text x="275" y="28" text-anchor="middle" font-size="15" font-weight="700" fill="#333">Kohlenstoffkreislauf</text>
+
+  <!-- Atmosphäre CO₂ -->
+  <rect x="175" y="42" width="200" height="40" rx="20" fill="#d4edda" stroke="#2d6a4f" stroke-width="1.5"/>
+  <text x="275" y="67" text-anchor="middle" font-size="13" font-weight="600" fill="#2d6a4f">Atmosphäre (CO₂)</text>
+
+  <!-- Produzenten / Pflanzen -->
+  <rect x="60" y="150" width="150" height="44" rx="10" fill="#b7e4c7" stroke="#2d6a4f" stroke-width="1.5"/>
+  <text x="135" y="169" text-anchor="middle" font-size="11.5" font-weight="600" fill="#1b4332">Produzenten</text>
+  <text x="135" y="184" text-anchor="middle" font-size="10" fill="#2d6a4f">(Pflanzen, Algen)</text>
+
+  <!-- Konsumenten -->
+  <rect x="310" y="150" width="150" height="44" rx="10" fill="#ffe8cc" stroke="#6b4226" stroke-width="1.5"/>
+  <text x="385" y="169" text-anchor="middle" font-size="11.5" font-weight="600" fill="#6b4226">Konsumenten</text>
+  <text x="385" y="184" text-anchor="middle" font-size="10" fill="#6b4226">(Tiere, Menschen)</text>
+
+  <!-- Destruenten -->
+  <rect x="310" y="250" width="150" height="44" rx="10" fill="#e6d5c3" stroke="#6b4226" stroke-width="1.5"/>
+  <text x="385" y="269" text-anchor="middle" font-size="11.5" font-weight="600" fill="#6b4226">Destruenten</text>
+  <text x="385" y="284" text-anchor="middle" font-size="10" fill="#6b4226">(Pilze, Bakterien)</text>
+
+  <!-- Fossile Brennstoffe -->
+  <rect x="60" y="310" width="150" height="44" rx="10" fill="#d4c4b0" stroke="#555" stroke-width="1.5"/>
+  <text x="135" y="329" text-anchor="middle" font-size="11.5" font-weight="600" fill="#333">Fossile Brennstoffe</text>
+  <text x="135" y="344" text-anchor="middle" font-size="10" fill="#555">(Kohle, Erdöl, Erdgas)</text>
+
+  <!-- Ozeane -->
+  <rect x="370" y="340" width="140" height="44" rx="10" fill="#cce5ff" stroke="#1b6b9e" stroke-width="1.5"/>
+  <text x="440" y="359" text-anchor="middle" font-size="11.5" font-weight="600" fill="#1b6b9e">Ozeane</text>
+  <text x="440" y="374" text-anchor="middle" font-size="10" fill="#1b6b9e">(CO₂-Senke)</text>
+
+  <!-- Pfeil: Atmosphäre → Produzenten (Photosynthese) -->
+  <line x1="215" y1="82" x2="150" y2="146" stroke="#2d6a4f" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <text x="145" y="112" font-size="9.5" fill="#2d6a4f" font-weight="600" transform="rotate(-32,145,112)">Photosynthese</text>
+
+  <!-- Pfeil: Produzenten → Atmosphäre (Zellatmung) -->
+  <line x1="120" y1="150" x2="200" y2="88" stroke="#b5351b" stroke-width="1.5" marker-end="url(#arrowRed)" stroke-dasharray="5,3"/>
+  <text x="115" y="105" font-size="9" fill="#b5351b">Zellatmung</text>
+
+  <!-- Pfeil: Konsumenten → Atmosphäre (Zellatmung) -->
+  <line x1="370" y1="150" x2="335" y2="88" stroke="#b5351b" stroke-width="1.5" marker-end="url(#arrowRed)" stroke-dasharray="5,3"/>
+  <text x="365" y="112" font-size="9" fill="#b5351b">Zellatmung</text>
+
+  <!-- Pfeil: Produzenten → Konsumenten (Nahrung) -->
+  <line x1="210" y1="172" x2="306" y2="172" stroke="#6b4226" stroke-width="1.5" marker-end="url(#arrowBrown)"/>
+  <text x="258" y="165" text-anchor="middle" font-size="9" fill="#6b4226">Nahrung</text>
+
+  <!-- Pfeil: Konsumenten → Destruenten (Abfall/Tod) -->
+  <line x1="385" y1="194" x2="385" y2="246" stroke="#6b4226" stroke-width="1.5" marker-end="url(#arrowBrown)"/>
+  <text x="400" y="224" font-size="9" fill="#6b4226">Detritus</text>
+
+  <!-- Pfeil: Produzenten → Destruenten -->
+  <line x1="170" y1="194" x2="325" y2="260" stroke="#6b4226" stroke-width="1.2" marker-end="url(#arrowBrown)" stroke-dasharray="4,3"/>
+  <text x="220" y="240" font-size="9" fill="#6b4226">Abgestorbene Biomasse</text>
+
+  <!-- Pfeil: Destruenten → Atmosphäre (Verwesung/CO₂) -->
+  <line x1="460" y1="252" x2="490" y2="120" stroke="#b5351b" stroke-width="1.5" marker-end="url(#arrowRed)" stroke-dasharray="5,3"/>
+  <path d="M490,120 Q500,80 375,70" stroke="#b5351b" stroke-width="1.5" fill="none" marker-end="url(#arrowRed)" stroke-dasharray="5,3"/>
+  <text x="492" y="180" font-size="9" fill="#b5351b" font-weight="500">Verwesung</text>
+
+  <!-- Pfeil: Fossile Brennstoffe → Atmosphäre (Verbrennung) -->
+  <line x1="100" y1="310" x2="60" y2="200" stroke="#b5351b" stroke-width="2" marker-end="url(#arrowRed)"/>
+  <path d="M60,200 Q30,120 175,65" stroke="#b5351b" stroke-width="2" fill="none" marker-end="url(#arrowRed)"/>
+  <text x="22" y="250" font-size="9.5" fill="#b5351b" font-weight="600" transform="rotate(-70,22,250)">Verbrennung</text>
+
+  <!-- Pfeil: Produzenten → Fossile Brennstoffe (Sedimentation) -->
+  <line x1="135" y1="194" x2="135" y2="306" stroke="#555" stroke-width="1.2" marker-end="url(#arrowGray)" stroke-dasharray="3,3"/>
+  <text x="90" y="260" font-size="8.5" fill="#555">Sedimentation</text>
+  <text x="90" y="272" font-size="8.5" fill="#555">(Mio. Jahre)</text>
+
+  <!-- Pfeil: Atmosphäre → Ozeane (CO₂-Aufnahme) -->
+  <line x1="375" y1="72" x2="460" y2="336" stroke="#1b6b9e" stroke-width="1.5" marker-end="url(#arrowBlue)" stroke-dasharray="5,3"/>
+  <text x="438" y="310" font-size="9" fill="#1b6b9e" font-weight="500">CO₂-Aufnahme</text>
+  <text x="438" y="322" font-size="8" fill="#1b6b9e">(~30 % anthropogen)</text>
+</svg>

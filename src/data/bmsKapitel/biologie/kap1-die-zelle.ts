@@ -1605,8 +1605,9 @@ Die Meiose erzeugt aus einer Keimzelle **4 genetisch verschiedene haploide Zelle
 
 **Prophase I** (die längste Phase — hier passiert das Entscheidende):
 - Homologe Chromosomen (eines vom Vater, eines von der Mutter) lagern sich zusammen und bilden **Bivalente** (= Tetraden: 4 Chromatiden insgesamt)
+- Im **Pachytän**-Stadium der Prophase I lagern sich die homologen Chromosomen eng aneinander. Der **Synaptonemalcomplex** (ein leiterartiger Proteinkomplex) hält sie über die gesamte Länge zusammen und ermöglicht präzises Crossing-over. Nach dem Austausch löst sich der Komplex auf.
 - **Crossing-over:** Homologe Chromosomen tauschen Stücke untereinander aus → neue Allel-Kombinationen entstehen. **Deshalb sind Geschwister verschieden**, obwohl sie dieselben Eltern haben!
-- Sichtbar werden die Austauchstellen als **Chiasmata** (physische Kreuzungspunkte)
+- Sichtbar werden die Austauschstellen als **Chiasmata** (physische Kreuzungspunkte, dort wo der Synaptonemalcomplex Crossing-over ermöglicht hat)
 
 **Metaphase I:** Die **Bivalente** (nicht einzelne Chromosomen wie bei der Mitose!) richten sich an der Metaphasenplatte aus. Welches Chromosom nach welchem Pol wandert, ist **zufällig** → bei 23 Chromosomenpaaren: 2²³ = **8,4 Millionen** verschiedene Kombinationen (zusätzlich zum Crossing-over).
 
@@ -1644,6 +1645,8 @@ Die Schwesterchromatiden trennen sich in jeder haploiden Zelle. Ergebnis: **4 ha
 | Funktion | Wachstum, Reparatur | Gametenbildung |
 
 > **Merke:** Mitose = 1 Teilung → 2 identische Zellen. Meiose = 2 Teilungen → 4 verschiedene Zellen. Der Schlüssel: Meiose I trennt Homologe!
+
+![Mitose vs. Meiose — Vergleich der Zellteilungstypen mit Chromosomenverteilung](/images/bms/bio-mitose-meiose-de.svg)
 
 ---
 
@@ -1907,6 +1910,8 @@ Drei Enzyme regulieren den Durchsatz — alle werden durch den **Energiestatus**
 **Logik der Regulation:** Hohe NADH/ATP-Spiegel signalisieren "genug Energie" → Zyklus bremst. Niedriges Energieniveau (hohes ADP/AMP) und Ca²⁺ (Muskelkontraktion!) → Zyklus beschleunigt. Calcium ist besonders im Muskel wichtig: Bei Kontraktion steigt Ca²⁺ → Citratzyklus und ATP-Produktion werden hochgefahren, genau wenn der Muskel Energie braucht.
 
 > **Merke:** Drei Schrittmacher: Citrat-Synthase (1), Isocitrat-DH (3), α-Ketoglutarat-DH (4). Alle gehemmt durch NADH/ATP (Energie da → bremsen). Isocitrat-DH und α-Ketoglutarat-DH werden durch Ca²⁺ aktiviert (Muskelarbeit → mehr ATP nötig).
+
+![Energiestoffwechsel — Glykolyse, Citratzyklus und Atmungskette im Überblick](/images/bms/bio-energiestoffwechsel-de.svg)
 
 ---
 

@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 400" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <linearGradient id="glyBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dbeafe"/>
+      <stop offset="100%" stop-color="#bfdbfe"/>
+    </linearGradient>
+    <linearGradient id="ctcBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d1fae5"/>
+      <stop offset="100%" stop-color="#a7f3d0"/>
+    </linearGradient>
+    <linearGradient id="atcBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffedd5"/>
+      <stop offset="100%" stop-color="#fed7aa"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Title -->
+  <text x="350" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#1e293b">Zellatmung — Von Glucose zu ATP</text>
+
+  <!-- ═══ GLYKOLYSE ═══ -->
+  <rect x="16" y="44" width="200" height="340" rx="12" fill="url(#glyBg)" stroke="#3b82f6" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="16" y="44" width="200" height="32" rx="12" fill="#3b82f6"/>
+  <rect x="16" y="64" width="200" height="12" fill="#3b82f6"/>
+  <text x="116" y="66" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">GLYKOLYSE</text>
+
+  <!-- Location -->
+  <text x="116" y="94" text-anchor="middle" font-size="10" fill="#1e40af" font-style="italic">Ort: Zytoplasma</text>
+
+  <!-- Glucose box -->
+  <rect x="46" y="108" width="140" height="30" rx="6" fill="#fff" stroke="#3b82f6" stroke-width="1"/>
+  <text x="116" y="128" text-anchor="middle" font-size="12" font-weight="600" fill="#1e40af">Glucose (C₆)</text>
+
+  <!-- Arrow down -->
+  <line x1="116" y1="138" x2="116" y2="168" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrowBlue)"/>
+  <text x="152" y="158" font-size="9" fill="#64748b">−2 ATP</text>
+
+  <!-- Intermediate -->
+  <text x="116" y="180" text-anchor="middle" font-size="10" fill="#475569">10 Enzymschritte</text>
+
+  <!-- Arrow down -->
+  <line x1="116" y1="186" x2="116" y2="216" stroke="#3b82f6" stroke-width="2"/>
+
+  <!-- Pyruvat box -->
+  <rect x="46" y="218" width="140" height="30" rx="6" fill="#fff" stroke="#3b82f6" stroke-width="1"/>
+  <text x="116" y="238" text-anchor="middle" font-size="12" font-weight="600" fill="#1e40af">2 Pyruvat (C₃)</text>
+
+  <!-- Bilanz -->
+  <rect x="36" y="264" width="160" height="54" rx="6" fill="#eff6ff" stroke="#93c5fd" stroke-width="1"/>
+  <text x="116" y="280" text-anchor="middle" font-size="10" font-weight="700" fill="#1e40af">Bilanz (netto):</text>
+  <text x="116" y="296" text-anchor="middle" font-size="10" fill="#1e40af">2 ATP</text>
+  <text x="116" y="310" text-anchor="middle" font-size="10" fill="#1e40af">2 NADH</text>
+
+  <!-- Key enzyme -->
+  <text x="116" y="340" text-anchor="middle" font-size="9" fill="#64748b">Schlüsselenzym:</text>
+  <text x="116" y="354" text-anchor="middle" font-size="9" font-weight="600" fill="#64748b">PFK-1</text>
+
+  <!-- ═══ CITRATZYKLUS ═══ -->
+  <rect x="250" y="44" width="200" height="340" rx="12" fill="url(#ctcBg)" stroke="#10b981" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="250" y="44" width="200" height="32" rx="12" fill="#10b981"/>
+  <rect x="250" y="64" width="200" height="12" fill="#10b981"/>
+  <text x="350" y="66" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">CITRATZYKLUS</text>
+
+  <!-- Location -->
+  <text x="350" y="94" text-anchor="middle" font-size="10" fill="#065f46" font-style="italic">Ort: Mitochondrien-Matrix</text>
+
+  <!-- Acetyl-CoA box -->
+  <rect x="280" y="108" width="140" height="30" rx="6" fill="#fff" stroke="#10b981" stroke-width="1"/>
+  <text x="350" y="128" text-anchor="middle" font-size="12" font-weight="600" fill="#065f46">Acetyl-CoA (C₂)</text>
+
+  <!-- Cycle circle -->
+  <circle cx="350" cy="195" r="36" fill="none" stroke="#10b981" stroke-width="2" stroke-dasharray="6 3"/>
+  <text x="350" y="192" text-anchor="middle" font-size="9" fill="#065f46">8 Schritte</text>
+  <text x="350" y="204" text-anchor="middle" font-size="9" fill="#065f46">pro Runde</text>
+
+  <!-- Arrow from Acetyl-CoA to cycle -->
+  <line x1="350" y1="138" x2="350" y2="158" stroke="#10b981" stroke-width="2"/>
+
+  <!-- CO2 out -->
+  <text x="410" y="178" font-size="10" fill="#6b7280">→ 2 CO₂</text>
+
+  <!-- Bilanz -->
+  <rect x="270" y="248" width="160" height="74" rx="6" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="1"/>
+  <text x="350" y="264" text-anchor="middle" font-size="10" font-weight="700" fill="#065f46">Bilanz (pro Runde):</text>
+  <text x="350" y="280" text-anchor="middle" font-size="10" fill="#065f46">3 NADH</text>
+  <text x="350" y="294" text-anchor="middle" font-size="10" fill="#065f46">1 FADH₂</text>
+  <text x="350" y="308" text-anchor="middle" font-size="10" fill="#065f46">1 GTP ≈ 1 ATP</text>
+
+  <!-- Key enzyme -->
+  <text x="350" y="340" text-anchor="middle" font-size="9" fill="#64748b">Schrittmacher:</text>
+  <text x="350" y="354" text-anchor="middle" font-size="9" font-weight="600" fill="#64748b">Isocitrat-DH</text>
+  <text x="350" y="368" text-anchor="middle" font-size="9" fill="#64748b">× 2 Durchgänge/Glucose</text>
+
+  <!-- ═══ ATMUNGSKETTE ═══ -->
+  <rect x="484" y="44" width="200" height="340" rx="12" fill="url(#atcBg)" stroke="#f59e0b" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="484" y="44" width="200" height="32" rx="12" fill="#f59e0b"/>
+  <rect x="484" y="64" width="200" height="12" fill="#f59e0b"/>
+  <text x="584" y="66" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">ATMUNGSKETTE</text>
+
+  <!-- Location -->
+  <text x="584" y="94" text-anchor="middle" font-size="10" fill="#92400e" font-style="italic">Ort: Innere Membran</text>
+
+  <!-- NADH/FADH2 input -->
+  <rect x="514" y="108" width="140" height="30" rx="6" fill="#fff" stroke="#f59e0b" stroke-width="1"/>
+  <text x="584" y="122" text-anchor="middle" font-size="11" font-weight="600" fill="#92400e">10 NADH + 2 FADH₂</text>
+  <text x="584" y="134" text-anchor="middle" font-size="9" fill="#92400e">(pro Glucose)</text>
+
+  <!-- Complexes -->
+  <rect x="504" y="152" width="40" height="24" rx="4" fill="#fbbf24" stroke="#d97706" stroke-width="1"/>
+  <text x="524" y="168" text-anchor="middle" font-size="8" font-weight="600" fill="#78350f">I</text>
+
+  <rect x="550" y="152" width="40" height="24" rx="4" fill="#fbbf24" stroke="#d97706" stroke-width="1"/>
+  <text x="570" y="168" text-anchor="middle" font-size="8" font-weight="600" fill="#78350f">II</text>
+
+  <rect x="596" y="152" width="40" height="24" rx="4" fill="#fbbf24" stroke="#d97706" stroke-width="1"/>
+  <text x="616" y="168" text-anchor="middle" font-size="8" font-weight="600" fill="#78350f">III</text>
+
+  <rect x="642" y="152" width="40" height="24" rx="4" fill="#fbbf24" stroke="#d97706" stroke-width="1"/>
+  <text x="662" y="168" text-anchor="middle" font-size="8" font-weight="600" fill="#78350f">IV</text>
+
+  <text x="584" y="192" text-anchor="middle" font-size="9" fill="#92400e">Komplexe I–IV: e⁻-Transport</text>
+  <text x="584" y="204" text-anchor="middle" font-size="9" fill="#92400e">→ H⁺-Gradient aufbauen</text>
+
+  <!-- ATP Synthase -->
+  <rect x="524" y="216" width="120" height="28" rx="6" fill="#fff" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="584" y="234" text-anchor="middle" font-size="11" font-weight="700" fill="#92400e">ATP-Synthase (V)</text>
+
+  <!-- Final electron acceptor -->
+  <text x="584" y="262" text-anchor="middle" font-size="10" fill="#6b7280">O₂ + H⁺ → H₂O</text>
+  <text x="584" y="274" text-anchor="middle" font-size="9" fill="#6b7280">(finaler e⁻-Akzeptor)</text>
+
+  <!-- Bilanz -->
+  <rect x="504" y="286" width="160" height="44" rx="6" fill="#fff7ed" stroke="#fdba74" stroke-width="1"/>
+  <text x="584" y="302" text-anchor="middle" font-size="10" font-weight="700" fill="#92400e">Bilanz (gesamt):</text>
+  <text x="584" y="318" text-anchor="middle" font-size="13" font-weight="700" fill="#c2410c">~30–32 ATP</text>
+
+  <!-- Inhibitors -->
+  <text x="584" y="348" text-anchor="middle" font-size="9" fill="#dc2626">Hemmer: Cyanid (IV),</text>
+  <text x="584" y="360" text-anchor="middle" font-size="9" fill="#dc2626">Rotenon (I), Oligomycin (V)</text>
+
+  <!-- ═══ CONNECTING ARROWS ═══ -->
+  <defs>
+    <marker id="arrowBlue" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#3b82f6"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#10b981"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#f59e0b"/>
+    </marker>
+  </defs>
+
+  <!-- Glykolyse → Citratzyklus -->
+  <path d="M216,233 L250,233" stroke="#3b82f6" stroke-width="2.5" marker-end="url(#arrowGreen)" fill="none"/>
+  <text x="233" y="222" text-anchor="middle" font-size="8" fill="#475569">Pyruvat</text>
+  <text x="233" y="246" text-anchor="middle" font-size="8" fill="#475569">→ Acetyl-CoA</text>
+
+  <!-- Citratzyklus → Atmungskette -->
+  <path d="M450,280 L484,280" stroke="#10b981" stroke-width="2.5" marker-end="url(#arrowOrange)" fill="none"/>
+  <text x="467" y="270" text-anchor="middle" font-size="8" fill="#475569">NADH</text>
+  <text x="467" y="294" text-anchor="middle" font-size="8" fill="#475569">FADH₂</text>
+</svg>

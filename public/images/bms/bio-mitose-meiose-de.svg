@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <linearGradient id="mitBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dbeafe"/>
+      <stop offset="100%" stop-color="#eff6ff"/>
+    </linearGradient>
+    <linearGradient id="meiBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ede9fe"/>
+      <stop offset="100%" stop-color="#f5f3ff"/>
+    </linearGradient>
+    <filter id="shd">
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <!-- Title -->
+  <text x="300" y="24" text-anchor="middle" font-size="16" font-weight="700" fill="#1e293b">Mitose vs. Meiose — Vergleich der Zellteilung</text>
+
+  <!-- ════ MITOSE (left column) ════ -->
+  <rect x="16" y="38" width="272" height="400" rx="12" fill="url(#mitBg)" stroke="#3b82f6" stroke-width="1.5" filter="url(#shd)"/>
+  <rect x="16" y="38" width="272" height="30" rx="12" fill="#3b82f6"/>
+  <rect x="16" y="56" width="272" height="12" fill="#3b82f6"/>
+  <text x="152" y="59" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">MITOSE</text>
+
+  <!-- Mother cell -->
+  <ellipse cx="152" cy="100" rx="40" ry="22" fill="#bfdbfe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="152" y="96" text-anchor="middle" font-size="10" font-weight="600" fill="#1e40af">Mutterzelle</text>
+  <text x="152" y="108" text-anchor="middle" font-size="9" font-weight="700" fill="#1e40af">2n = 46</text>
+  <!-- Chromosomes in mother -->
+  <line x1="138" y1="90" x2="138" y2="100" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="144" y1="90" x2="144" y2="100" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="160" y1="90" x2="160" y2="100" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="166" y1="90" x2="166" y2="100" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Arrow -->
+  <line x1="152" y1="122" x2="152" y2="142" stroke="#3b82f6" stroke-width="1.5"/>
+  <polygon points="148,142 152,150 156,142" fill="#3b82f6"/>
+
+  <!-- Prophase -->
+  <rect x="52" y="152" width="200" height="24" rx="5" fill="#93c5fd" stroke="#3b82f6" stroke-width="1"/>
+  <text x="152" y="168" text-anchor="middle" font-size="10" font-weight="600" fill="#1e3a8a">Prophase: Chromosomen kondensieren</text>
+
+  <!-- Metaphase -->
+  <rect x="52" y="182" width="200" height="24" rx="5" fill="#93c5fd" stroke="#3b82f6" stroke-width="1"/>
+  <text x="152" y="198" text-anchor="middle" font-size="10" font-weight="600" fill="#1e3a8a">Metaphase: Äquatorialplatte</text>
+
+  <!-- Anaphase -->
+  <rect x="52" y="212" width="200" height="32" rx="5" fill="#60a5fa" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="152" y="226" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">Anaphase: Schwesterchromatiden</text>
+  <text x="152" y="238" text-anchor="middle" font-size="9" fill="#eff6ff">trennen sich</text>
+
+  <!-- Telophase -->
+  <rect x="52" y="250" width="200" height="24" rx="5" fill="#93c5fd" stroke="#3b82f6" stroke-width="1"/>
+  <text x="152" y="266" text-anchor="middle" font-size="10" font-weight="600" fill="#1e3a8a">Telophase + Zytokinese</text>
+
+  <!-- Arrow to result -->
+  <line x1="152" y1="274" x2="152" y2="296" stroke="#3b82f6" stroke-width="1.5"/>
+  <polygon points="148,296 152,304 156,296" fill="#3b82f6"/>
+
+  <!-- Result: 2 identical daughter cells -->
+  <text x="152" y="318" text-anchor="middle" font-size="10" font-weight="700" fill="#1e40af">1 Teilung</text>
+
+  <ellipse cx="106" cy="360" rx="34" ry="20" fill="#bfdbfe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="106" y="357" text-anchor="middle" font-size="9" font-weight="600" fill="#1e40af">2n = 46</text>
+  <text x="106" y="369" text-anchor="middle" font-size="8" fill="#1e40af">identisch</text>
+
+  <ellipse cx="198" cy="360" rx="34" ry="20" fill="#bfdbfe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="198" y="357" text-anchor="middle" font-size="9" font-weight="600" fill="#1e40af">2n = 46</text>
+  <text x="198" y="369" text-anchor="middle" font-size="8" fill="#1e40af">identisch</text>
+
+  <!-- Mitose summary -->
+  <rect x="42" y="392" width="220" height="28" rx="6" fill="#eff6ff" stroke="#93c5fd" stroke-width="1"/>
+  <text x="152" y="410" text-anchor="middle" font-size="10" font-weight="700" fill="#1e40af">= 2 identische Tochterzellen (2n)</text>
+
+  <!-- ════ MEIOSE (right column) ════ -->
+  <rect x="312" y="38" width="272" height="400" rx="12" fill="url(#meiBg)" stroke="#7c3aed" stroke-width="1.5" filter="url(#shd)"/>
+  <rect x="312" y="38" width="272" height="30" rx="12" fill="#7c3aed"/>
+  <rect x="312" y="56" width="272" height="12" fill="#7c3aed"/>
+  <text x="448" y="59" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">MEIOSE</text>
+
+  <!-- Mother cell -->
+  <ellipse cx="448" cy="100" rx="40" ry="22" fill="#ddd6fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="448" y="96" text-anchor="middle" font-size="10" font-weight="600" fill="#5b21b6">Keimzelle</text>
+  <text x="448" y="108" text-anchor="middle" font-size="9" font-weight="700" fill="#5b21b6">2n = 46</text>
+  <!-- Chromosomes -->
+  <line x1="434" y1="90" x2="434" y2="100" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="440" y1="90" x2="440" y2="100" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="456" y1="90" x2="456" y2="100" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="462" y1="90" x2="462" y2="100" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Arrow -->
+  <line x1="448" y1="122" x2="448" y2="138" stroke="#7c3aed" stroke-width="1.5"/>
+  <polygon points="444,138 448,146 452,138" fill="#7c3aed"/>
+
+  <!-- Meiose I label -->
+  <text x="556" y="160" font-size="10" font-weight="700" fill="#7c3aed" transform="rotate(90,556,160)">MEIOSE I</text>
+
+  <!-- Prophase I with crossing over -->
+  <rect x="340" y="148" width="192" height="28" rx="5" fill="#c4b5fd" stroke="#7c3aed" stroke-width="1"/>
+  <text x="436" y="160" text-anchor="middle" font-size="9" font-weight="600" fill="#4c1d95">Prophase I: Bivalente bilden sich</text>
+  <text x="436" y="172" text-anchor="middle" font-size="8" font-weight="700" fill="#dc2626">★ Crossing-over!</text>
+
+  <!-- Anaphase I -->
+  <rect x="340" y="182" width="192" height="28" rx="5" fill="#a78bfa" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="436" y="194" text-anchor="middle" font-size="9" font-weight="700" fill="#fff">Anaphase I: Homologe trennen</text>
+  <text x="436" y="206" text-anchor="middle" font-size="8" fill="#f5f3ff">sich (2n → n) — Reduktion!</text>
+
+  <!-- Arrow to Meiose I result -->
+  <line x1="448" y1="210" x2="448" y2="224" stroke="#7c3aed" stroke-width="1.5"/>
+  <polygon points="444,224 448,232 452,224" fill="#7c3aed"/>
+
+  <!-- 2 intermediate cells -->
+  <ellipse cx="400" cy="252" rx="28" ry="14" fill="#ddd6fe" stroke="#7c3aed" stroke-width="1"/>
+  <text x="400" y="256" text-anchor="middle" font-size="8" font-weight="600" fill="#5b21b6">n = 23</text>
+
+  <ellipse cx="496" cy="252" rx="28" ry="14" fill="#ddd6fe" stroke="#7c3aed" stroke-width="1"/>
+  <text x="496" y="256" text-anchor="middle" font-size="8" font-weight="600" fill="#5b21b6">n = 23</text>
+
+  <!-- Meiose II label -->
+  <text x="556" y="290" font-size="10" font-weight="700" fill="#7c3aed" transform="rotate(90,556,290)">MEIOSE II</text>
+
+  <!-- Meiose II box -->
+  <rect x="340" y="278" width="192" height="24" rx="5" fill="#c4b5fd" stroke="#7c3aed" stroke-width="1"/>
+  <text x="436" y="294" text-anchor="middle" font-size="9" font-weight="600" fill="#4c1d95">Anaphase II: Schwesterchromatiden</text>
+
+  <!-- Arrows down -->
+  <line x1="400" y1="266" x2="400" y2="278" stroke="#7c3aed" stroke-width="1"/>
+  <line x1="496" y1="266" x2="496" y2="278" stroke="#7c3aed" stroke-width="1"/>
+
+  <!-- Arrow to final result -->
+  <line x1="448" y1="302" x2="448" y2="316" stroke="#7c3aed" stroke-width="1.5"/>
+  <polygon points="444,316 448,324 452,316" fill="#7c3aed"/>
+
+  <text x="448" y="338" text-anchor="middle" font-size="10" font-weight="700" fill="#5b21b6">2 Teilungen</text>
+
+  <!-- 4 daughter cells -->
+  <ellipse cx="348" cy="370" rx="24" ry="14" fill="#ddd6fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="348" y="374" text-anchor="middle" font-size="7" font-weight="700" fill="#5b21b6">n=23</text>
+
+  <ellipse cx="414" cy="370" rx="24" ry="14" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="414" y="374" text-anchor="middle" font-size="7" font-weight="700" fill="#5b21b6">n=23</text>
+
+  <ellipse cx="482" cy="370" rx="24" ry="14" fill="#ddd6fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="482" y="374" text-anchor="middle" font-size="7" font-weight="700" fill="#5b21b6">n=23</text>
+
+  <ellipse cx="548" cy="370" rx="24" ry="14" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="548" y="374" text-anchor="middle" font-size="7" font-weight="700" fill="#5b21b6">n=23</text>
+
+  <!-- Different symbol -->
+  <text x="381" y="388" text-anchor="middle" font-size="8" fill="#6b7280">≠</text>
+  <text x="448" y="388" text-anchor="middle" font-size="8" fill="#6b7280">≠</text>
+  <text x="515" y="388" text-anchor="middle" font-size="8" fill="#6b7280">≠</text>
+
+  <!-- Meiose summary -->
+  <rect x="332" y="396" width="228" height="28" rx="6" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="1"/>
+  <text x="446" y="414" text-anchor="middle" font-size="10" font-weight="700" fill="#5b21b6">= 4 verschiedene Tochterzellen (n)</text>
+
+  <!-- ════ LEGEND ════ -->
+  <line x1="300" y1="430" x2="300" y2="430" stroke="none"/>
+  <line x1="80" y1="444" x2="90" y2="444" stroke="#ef4444" stroke-width="3" stroke-linecap="round"/>
+  <text x="95" y="448" font-size="9" fill="#475569">= mütterliches Chromosom</text>
+  <line x1="280" y1="444" x2="290" y2="444" stroke="#2563eb" stroke-width="3" stroke-linecap="round"/>
+  <text x="295" y="448" font-size="9" fill="#475569">= väterliches Chromosom</text>
+  <text x="470" y="448" font-size="9" font-weight="700" fill="#dc2626">★ = Crossing-over (nur Meiose!)</text>
+</svg>
