@@ -228,6 +228,192 @@ function SampleQuestion() {
   );
 }
 
+/* ── Daily question pool (one per weekday, cycles weekly) ── */
+const DAILY_QUESTIONS = [
+  {
+    // Monday – Bio: Zellorganellen
+    subject: "Biologie",
+    badge: "bg-emerald-100 text-emerald-700",
+    text: "Welches Zellorganell ist der Hauptort der ATP-Synthese in eukaryotischen Zellen?",
+    options: [
+      { id: "a", text: "Zellkern" },
+      { id: "b", text: "Endoplasmatisches Retikulum" },
+      { id: "c", text: "Mitochondrium" },
+      { id: "d", text: "Golgi-Apparat" },
+      { id: "e", text: "Lysosom" },
+    ],
+    correctId: "c",
+    explanation:
+      'Mitochondrien sind die "Kraftwerke der Zelle". In der inneren Mitochondrienmembran findet die oxidative Phosphorylierung statt, bei der der Gro\u00dfteil des ATPs gebildet wird (bis zu 34 ATP pro Glukose).',
+  },
+  {
+    // Tuesday – Chemie: pH-Wert
+    subject: "Chemie",
+    badge: "bg-red-100 text-red-700",
+    text: "Eine w\u00e4ssrige L\u00f6sung hat eine Hydroxidionen-Konzentration von 10\u207b\u00b3 mol/L. Welchen pH-Wert hat die L\u00f6sung bei 25\u00a0\u00b0C?",
+    options: [
+      { id: "a", text: "3" },
+      { id: "b", text: "7" },
+      { id: "c", text: "9" },
+      { id: "d", text: "11" },
+      { id: "e", text: "14" },
+    ],
+    correctId: "d",
+    explanation:
+      "pOH = \u2212log(10\u207b\u00b3) = 3. Bei 25\u00a0\u00b0C gilt pH + pOH = 14, also pH = 14 \u2212 3 = 11. Die L\u00f6sung ist basisch, da die OH\u207b-Konzentration \u00fcber 10\u207b\u2077 mol/L liegt.",
+  },
+  {
+    // Wednesday – Physik: Energieerhaltung
+    subject: "Physik",
+    badge: "bg-blue-100 text-blue-700",
+    text: "Ein 2\u00a0kg schwerer Ball f\u00e4llt aus 5\u00a0m H\u00f6he. Welche kinetische Energie hat er unmittelbar vor dem Aufprall? (g\u00a0=\u00a010\u00a0m/s\u00b2, Luftwiderstand vernachl\u00e4ssigt)",
+    options: [
+      { id: "a", text: "10 J" },
+      { id: "b", text: "20 J" },
+      { id: "c", text: "50 J" },
+      { id: "d", text: "100 J" },
+      { id: "e", text: "200 J" },
+    ],
+    correctId: "d",
+    explanation:
+      "Nach dem Energieerhaltungssatz wird die potentielle Energie vollst\u00e4ndig in kinetische Energie umgewandelt: E_kin = E_pot = m\u00b7g\u00b7h = 2\u00a0kg \u00d7 10\u00a0m/s\u00b2 \u00d7 5\u00a0m = 100\u00a0J.",
+  },
+  {
+    // Thursday – Mathe: Wahrscheinlichkeit
+    subject: "Mathematik",
+    badge: "bg-violet-100 text-violet-700",
+    text: "Aus einem Kartenspiel mit 52 Karten werden nacheinander 2 Karten ohne Zur\u00fccklegen gezogen. Wie gro\u00df ist die Wahrscheinlichkeit, dass beide Karten Asse sind?",
+    options: [
+      { id: "a", text: "1/169" },
+      { id: "b", text: "1/221" },
+      { id: "c", text: "1/256" },
+      { id: "d", text: "1/13" },
+      { id: "e", text: "1/52" },
+    ],
+    correctId: "b",
+    explanation:
+      "P(1. Ass) = 4/52 = 1/13. P(2. Ass | 1. Ass) = 3/51 = 1/17. P(beide Asse) = 1/13 \u00d7 1/17 = 1/221. Ohne Zur\u00fccklegen \u00e4ndert sich die Wahrscheinlichkeit beim zweiten Zug.",
+  },
+  {
+    // Friday/Weekend – Bio: Genetik
+    subject: "Biologie",
+    badge: "bg-emerald-100 text-emerald-700",
+    text: "Ein Gen f\u00fcr Blutgruppe zeigt Kodominanz (I\u1d2c und I\u1d2e) und Dominanz \u00fcber i. Welche Blutgruppe hat ein Mensch mit dem Genotyp I\u1d2ci?",
+    options: [
+      { id: "a", text: "Blutgruppe A" },
+      { id: "b", text: "Blutgruppe B" },
+      { id: "c", text: "Blutgruppe AB" },
+      { id: "d", text: "Blutgruppe 0" },
+      { id: "e", text: "Nicht bestimmbar ohne weitere Informationen" },
+    ],
+    correctId: "a",
+    explanation:
+      "I\u1d2c ist dominant \u00fcber i, daher ist der Ph\u00e4notyp Blutgruppe A. Blutgruppe AB entsteht nur bei I\u1d2cI\u1d2e (Kodominanz), Blutgruppe 0 nur bei ii (homozygot rezessiv).",
+  },
+];
+
+function getDailyQuestionIndex(): number {
+  const now = new Date();
+  const day = now.getDay(); // 0=Sun, 1=Mon, ..., 6=Sat
+  // Mon=0, Tue=1, Wed=2, Thu=3, Fri/Sat/Sun=4
+  if (day === 0 || day === 5 || day === 6) return 4;
+  return day - 1;
+}
+
+function DailyQuestion() {
+  const [selected, setSelected] = useState<string | null>(null);
+  const [submitted, setSubmitted] = useState(false);
+
+  const q = DAILY_QUESTIONS[getDailyQuestionIndex()];
+  const isCorrect = selected === q.correctId;
+
+  return (
+    <div className="card-glass p-8 max-w-2xl mx-auto">
+      <div className="flex items-center justify-between mb-4">
+        <span className={`text-xs font-medium px-2.5 py-1 rounded-lg ${q.badge}`}>{q.subject}</span>
+        <span className="text-xs text-[var(--muted)]">Tagesfrage</span>
+      </div>
+      <p className="text-base font-semibold text-[var(--text-primary)] leading-relaxed mb-5">
+        {q.text}
+      </p>
+      <div className="space-y-2.5 mb-5">
+        {q.options.map((opt) => {
+          const letter = opt.id.toUpperCase();
+          let style =
+            "border-[var(--border)] text-[var(--text-secondary)] hover:border-[var(--accent)]/40";
+          if (submitted) {
+            if (opt.id === q.correctId)
+              style =
+                "border-emerald-400 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-800 dark:text-emerald-300";
+            else if (opt.id === selected)
+              style = "border-red-400 bg-red-50 dark:bg-red-900/20 text-red-800 dark:text-red-300";
+            else style = "border-[var(--border)] text-[var(--muted)] opacity-60";
+          } else if (opt.id === selected) {
+            style = "border-[var(--accent)] bg-[var(--accent)]/5 text-[var(--text-primary)]";
+          }
+          return (
+            <button
+              key={opt.id}
+              onClick={() => !submitted && setSelected(opt.id)}
+              disabled={submitted}
+              className={`flex items-center gap-3 w-full px-4 py-3 rounded-xl border text-sm text-left transition-colors cursor-pointer disabled:cursor-default ${style}`}
+            >
+              <span
+                className={`w-7 h-7 rounded-lg flex items-center justify-center text-xs font-bold shrink-0 ${
+                  submitted && opt.id === q.correctId
+                    ? "bg-emerald-500 text-white"
+                    : submitted && opt.id === selected
+                      ? "bg-red-400 text-white"
+                      : opt.id === selected
+                        ? "bg-[var(--accent)] text-white"
+                        : "bg-[var(--card)] text-[var(--muted)]"
+                }`}
+              >
+                {submitted && opt.id === q.correctId
+                  ? "\u2713"
+                  : submitted && opt.id === selected
+                    ? "\u2717"
+                    : letter}
+              </span>
+              {opt.text}
+            </button>
+          );
+        })}
+      </div>
+
+      {!submitted ? (
+        <button
+          onClick={() => selected && setSubmitted(true)}
+          disabled={!selected}
+          className="btn-premium w-full py-3 text-sm disabled:opacity-40 disabled:cursor-not-allowed"
+        >
+          Antwort pr\u00fcfen
+        </button>
+      ) : (
+        <div className="space-y-4">
+          <div
+            className={`rounded-xl p-4 text-sm leading-relaxed ${
+              isCorrect
+                ? "bg-emerald-50 dark:bg-emerald-900/20 text-emerald-800 dark:text-emerald-300"
+                : "bg-amber-50 dark:bg-amber-900/20 text-amber-800 dark:text-amber-300"
+            }`}
+          >
+            <p className="font-semibold mb-1">{isCorrect ? "Richtig!" : "Nicht ganz."}</p>
+            <p>{q.explanation}</p>
+          </div>
+          <Link
+            to="/login"
+            className="btn-premium flex items-center justify-center gap-2 w-full py-3 text-sm"
+          >
+            \u00dcber 4.000 weitere Fragen \u2014 Jetzt starten
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+      )}
+    </div>
+  );
+}
+
 /* ── Screenshot paths ── */
 const SCREENSHOTS = {
   bmsQuiz: "/screenshots/fragen-trainer-bio.png",
@@ -763,6 +949,21 @@ export default function LandingPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ─── Daily MedAT question ─── */}
+      <section id="lp-daily" className="py-24">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-3">
+              Tägliche MedAT-Frage
+            </h2>
+            <p className="text-[var(--text-secondary)] max-w-lg mx-auto">
+              Jeden Tag eine neue Frage — teste dein Wissen
+            </p>
+          </div>
+          <DailyQuestion />
         </div>
       </section>
 

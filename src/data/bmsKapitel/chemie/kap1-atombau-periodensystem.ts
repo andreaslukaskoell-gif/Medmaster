@@ -738,8 +738,6 @@ Für Moleküle: M(Molekül) = Summe der molaren Massen aller Atome.
 - M(Glukose C6H12O6) = 6 mal 12,011 + 12 mal 1,008 + 6 mal 15,999 = 180,159 g/mol
 - M(NaOH) = 22,990 + 15,999 + 1,008 = 39,997 g/mol
 
-{{DIAGRAM:atomic-orbitals}}
-
 ## Avogadro-Konstante und Mol
 
 Die **Avogadro-Konstante** Na = 6,022 mal 10 hoch 23 pro mol gibt die Anzahl der Teilchen (Atome, Moleküle, Ionen) in einem Mol an.

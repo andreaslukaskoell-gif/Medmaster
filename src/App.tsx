@@ -65,6 +65,7 @@ const BlogIndex = lazy(() => import("@/pages/BlogIndex"));
 const BlogArticle = lazy(() => import("@/pages/BlogArticle"));
 const PaidLanding = lazy(() => import("@/pages/PaidLanding"));
 const PaidLandingBMS = lazy(() => import("@/pages/PaidLandingBMS"));
+const MedATCountdown = lazy(() => import("@/pages/MedATCountdown"));
 
 function LoadingSpinner() {
   return (
@@ -196,6 +197,7 @@ export default function App() {
           <Route path="/blog/:slug" element={<BlogArticle />} />
           <Route path="/lp/medat" element={<PaidLanding />} />
           <Route path="/lp/bms" element={<PaidLandingBMS />} />
+          <Route path="/medat-countdown" element={<MedATCountdown />} />
 
           {/* Analytics dashboard — password-protected, no auth needed */}
           <Route path="/admin/analytics" element={<AnalyticsDashboard />} />

@@ -116,7 +116,15 @@ export default function QuizChallenge() {
 
   // Generate challenge link with same seed so friends get same questions
   const challengeLink = `https://medmaster.at/challenge?fach=${subject}&seed=${seed}`;
-  const shareText = `${config.emoji} MedAT-Challenge: ${score}/${QUESTION_COUNT} (${pct}%) in ${config.label}!\nSchaffst du mehr? Probier's aus:\n👉 ${challengeLink}`;
+  const shareWhatsAppText = `Ich hab gerade ${score}/${QUESTION_COUNT} beim MedMaster Quiz geschafft! Teste dich auch: ${challengeLink}`;
+  const shareGenericText = `${config.emoji} MedAT-Challenge: ${score}/${QUESTION_COUNT} (${pct}%) in ${config.label}!\nSchaffst du mehr? Probier's aus:\n👉 ${challengeLink}`;
+
+  const handleShareTrack = useCallback(
+    (method: string) => {
+      trackEvent("challenge_share", { method, score, total: QUESTION_COUNT, pct, subject });
+    },
+    [score, pct, subject]
+  );
 
   // SEO meta + JSON-LD
   useEffect(() => {
@@ -365,11 +373,21 @@ export default function QuizChallenge() {
             </div>
 
             {/* Share */}
-            <div className="pt-2 space-y-3">
-              <p className="text-sm font-semibold text-[var(--text-primary)]">
-                Fordere deine Freunde heraus!
-              </p>
-              <ShareResultButton text={shareText} />
+            <div className="pt-4 space-y-4">
+              <div className="bg-[var(--surface)] rounded-xl p-4 space-y-3">
+                <p className="text-sm font-bold text-[var(--text-primary)]">
+                  Fordere deine Freunde heraus!
+                </p>
+                <p className="text-xs text-[var(--muted)]">
+                  Teile dein Ergebnis — deine Freunde bekommen die gleichen Fragen.
+                </p>
+                <ShareResultButton
+                  text={shareGenericText}
+                  whatsAppText={shareWhatsAppText}
+                  challengeLink={challengeLink}
+                  onShare={handleShareTrack}
+                />
+              </div>
             </div>
           </CardContent>
         </Card>

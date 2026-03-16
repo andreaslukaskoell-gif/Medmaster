@@ -24,7 +24,7 @@ export const physKap3: Kapitel = {
         "Energieerhaltung",
         "Schwingungsenergie",
       ],
-      content: `Jeder Herzschlag auf dem EKG-Monitor zeigt eine periodische Schwingung — die regelmäßige Wiederholung der P-Welle, des QRS-Komplexes und der T-Welle folgt denselben physikalischen Gesetzmäßigkeiten wie ein schwingendes Pendel. Auch der Atemzyklus (Ein- und Ausatmen) und die Vibration der Stimmlippen bei der Phonation sind periodische Schwingungen. In diesem Kapitel lernst du die mathematischen Grundlagen, die hinter all diesen Phänomenen stecken.
+      content: `Jeder Herzschlag auf dem EKG-Monitor zeigt eine periodische Schwingung — die regelmäßige Wiederholung der P-Welle, des QRS-Komplexes und der T-Welle folgt denselben physikalischen Gesetzmäßigkeiten wie ein schwingendes Pendel. Auch der Atemzyklus (Ein- und Ausatmen) und die Vibration der Stimmlippen bei der Phonation sind periodische Schwingungen — und sie alle gehorchen denselben mathematischen Grundlagen.
 
 ---
 
