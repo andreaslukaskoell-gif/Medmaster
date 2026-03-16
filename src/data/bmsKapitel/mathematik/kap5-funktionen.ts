@@ -24,9 +24,7 @@ export const mathKap5: Kapitel = {
         "Infusionsrate",
         "Kalibrierkurve",
       ],
-      content: `## Was ist eine lineare Funktion?
-
-Stell dir vor, du misst den Blutalkoholspiegel eines Patienten stündlich: 1,2 ‰ → 1,05 ‰ → 0,9 ‰ → 0,75 ‰. In jeder Stunde sinkt der Wert um exakt 0,15 ‰. Trägst du diese Werte in ein Diagramm ein, liegen alle Punkte auf einer **geraden Linie**. Genau das macht eine lineare Funktion aus: **konstante Änderungsrate**. Egal wo auf der Geraden du hinschaust — der Anstieg (oder Abfall) pro Einheit ist immer gleich.
+      content: `Stell dir vor, du misst den Blutalkoholspiegel eines Patienten stündlich: 1,2 ‰ → 1,05 ‰ → 0,9 ‰ → 0,75 ‰. In jeder Stunde sinkt der Wert um exakt 0,15 ‰. Trägst du diese Werte in ein Diagramm ein, liegen alle Punkte auf einer **geraden Linie**. Genau das macht eine lineare Funktion aus: **konstante Änderungsrate**. Egal wo auf der Geraden du hinschaust — der Anstieg (oder Abfall) pro Einheit ist immer gleich.
 
 Die mathematische Form: **f(x) = mx + b**. Dabei ist m die **Steigung** (Änderungsrate) und b der **y-Achsenabschnitt** (Startwert bei x = 0). Aber wichtiger als die Formel ist das Erkennen: Siehst du in einem Graphen eine Gerade, weißt du sofort — hier ändert sich etwas mit konstanter Geschwindigkeit.
 
@@ -315,9 +313,7 @@ g₁: y = 3x − 2. Senkrechte durch P(6|1): m₂ = −1/3 (weil 3 × (−1/3) =
         "Pharmakokinetik",
         "Radioaktiver Zerfall",
       ],
-      content: `## Warum der Bremsweg quadratisch wächst
-
-Ein Auto fährt 50 km/h — Bremsweg 12,5 m. Doppelte Geschwindigkeit, 100 km/h — Bremsweg nicht 25 m, sondern **50 m**. Vierfach. Das ist kein Zufall, sondern das Wesen der **quadratischen Funktion** (Funktion, bei der die Variable im Quadrat steht): Kleine Änderungen im Input erzeugen überproportional große Änderungen im Output. In der Medizin begegnet dir das ständig — vom Gefäßquerschnitt A = \u03C0r\u00B2 bis zur optimalen Medikamentendosis.
+      content: `Ein Auto fährt 50 km/h — Bremsweg 12,5 m. Doppelte Geschwindigkeit, 100 km/h — Bremsweg nicht 25 m, sondern **50 m**. Vierfach. Das ist kein Zufall, sondern das Wesen der **quadratischen Funktion** (Funktion, bei der die Variable im Quadrat steht): Kleine Änderungen im Input erzeugen überproportional große Änderungen im Output. In der Medizin begegnet dir das ständig — vom Gefäßquerschnitt A = \u03C0r\u00B2 bis zur optimalen Medikamentendosis.
 
 > **Merke:** Quadratisch erkennen: Wird der Anstieg oder Abfall **selbst immer steiler** (statt konstant zu bleiben)? Dann ist der Zusammenhang quadratisch, nicht linear. Der Graph ist eine **Parabel** statt einer Geraden.
 
@@ -640,9 +636,7 @@ Minimum bei t = a/(2b) — das ist xs = \u2212(\u2212a)/(2b). Typische Falle: Ni
         "Radioaktiver Zerfall",
         "Steady State",
       ],
-      content: `## Warum Exponentialfunktionen in der Medizin allgegenwärtig sind
-
-Radioaktiver Zerfall in der Nuklearmedizin, Medikamentenabbau im Blut, Bakterienvermehrung bei einer Sepsis — all diese Prozesse folgen **demselben mathematischen Prinzip**: Die Änderungsrate ist proportional zum aktuellen Bestand. Dieses eine Prinzip erzeugt die Exponentialfunktion, und wer sie versteht, kann Dosierungsintervalle berechnen, Strahlenschutzzeiten abschätzen und Infektionsverläufe vorhersagen.
+      content: `Radioaktiver Zerfall in der Nuklearmedizin, Medikamentenabbau im Blut, Bakterienvermehrung bei einer Sepsis — all diese Prozesse folgen **demselben mathematischen Prinzip**: Die Änderungsrate ist proportional zum aktuellen Bestand. Dieses eine Prinzip erzeugt die Exponentialfunktion, und wer sie versteht, kann Dosierungsintervalle berechnen, Strahlenschutzzeiten abschätzen und Infektionsverläufe vorhersagen.
 
 ---
 
@@ -951,9 +945,7 @@ Medikament mit T½ = 8 h wird alle 8 h gegeben. Wann ist Steady State erreicht?
         "Produktregel",
         "Quotientenregel",
       ],
-      content: `## pH 7,1 vs. 7,4 — wie viel saurer ist das eigentlich?
-
-Die Antwort: **doppelt so viel H⁺-Ionen.** Ein Unterschied von 0,3 pH-Einheiten klingt harmlos, bedeutet aber eine Verdoppelung der Protonenkonzentration — und eine lebensbedrohliche Azidose. Dass sich hinter winzigen Zahlenverschiebungen gewaltige Konzentrationsunterschiede verbergen, liegt am **Logarithmus**: der mathematischen Funktion, die aus Potenzierungen wieder handhabbare Zahlen macht. Ohne Logarithmen gäbe es keinen pH-Wert, keine Dezibel-Skala und keine Halbwertszeitberechnung.
+      content: `pH 7,1 vs. 7,4 -- wie viel saurer ist das eigentlich? Die Antwort: **doppelt so viel H⁺-Ionen.** Ein Unterschied von 0,3 pH-Einheiten klingt harmlos, bedeutet aber eine Verdoppelung der Protonenkonzentration — und eine lebensbedrohliche Azidose. Dass sich hinter winzigen Zahlenverschiebungen gewaltige Konzentrationsunterschiede verbergen, liegt am **Logarithmus**: der mathematischen Funktion, die aus Potenzierungen wieder handhabbare Zahlen macht. Ohne Logarithmen gäbe es keinen pH-Wert, keine Dezibel-Skala und keine Halbwertszeitberechnung.
 
 ---
 
@@ -1262,9 +1254,7 @@ Vereinfache: log(50) + log(2). *Denkprozess:* Produktregel → log(50 × 2) = lo
         "Geschwindigkeit",
         "Strecke",
       ],
-      content: `## Ableitung — wie schnell ändert sich etwas?
-
-Du kennst bereits die Steigung einer Geraden: m = Δy/Δx, konstant überall. Bei einer gekrümmten Kurve — etwa einer Wachstumskurve oder einer Konzentrations-Zeit-Kurve — ist die Steigung an jeder Stelle anders. Genau hier setzt die **Differentialrechnung** (Methode zur Berechnung momentaner Änderungsraten) an: Sie liefert die **momentane Änderungsrate** an einem bestimmten Punkt.
+      content: `Du kennst bereits die Steigung einer Geraden: m = Δy/Δx, konstant überall. Bei einer gekrümmten Kurve — etwa einer Wachstumskurve oder einer Konzentrations-Zeit-Kurve — ist die Steigung an jeder Stelle anders. Genau hier setzt die **Differentialrechnung** (Methode zur Berechnung momentaner Änderungsraten) an: Sie liefert die **momentane Änderungsrate** an einem bestimmten Punkt.
 
 {{DIAGRAM:calculus-overview}}
 

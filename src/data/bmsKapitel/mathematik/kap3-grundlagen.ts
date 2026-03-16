@@ -24,9 +24,11 @@ export const mathKapGrundlagen: Kapitel = {
         "Termumformung",
         "Bruchdivision",
       ],
-      content: `## Warum Bruchrechnung in der Medizin unverzichtbar ist
+      content: `Jede Medikamentendosierung ist ein Bruch: 500 mg Wirkstoff in 250 mL Trägerlösung ergibt 2 mg/mL.
 
-Jede Medikamentendosierung ist ein Bruch: 500 mg Wirkstoff in 250 mL Trägerlösung ergibt 2 mg/mL. Wer Brüche sicher beherrscht, vermeidet Dosierungsfehler -- die häufigste vermeidbare Komplikation im Krankenhaus.
+## Warum Bruchrechnung in der Medizin unverzichtbar ist
+
+Wer Brüche sicher beherrscht, vermeidet Dosierungsfehler -- die häufigste vermeidbare Komplikation im Krankenhaus.
 
 Ein Bruch a/b beschreibt den Quotienten aus **Zähler** a und **Nenner** b (b \u2260 0). Jeder Bruch ist eine rationale Zahl (Verhältniszahl). Zwei Brüche heißen **gleichwertig**, wenn sie sich durch Erweitern oder Kürzen ineinander überführen lassen: 2/4 = 1/2.
 
@@ -271,9 +273,9 @@ Ein **Doppelbruch** ist ein Bruch im Bruch -- in der Klinik allgegenwärtig bei 
         "NaCl 0,9%",
         "Blutalkoholkonzentration",
       ],
-      content: `## Die eine Formel, die alles löst: P = G \u00d7 p/100
+      content: `Laborwerte, Studienauswertungen, Lösungskonzentrationen -- Prozentrechnung begegnet Medizinern täglich. Die gute Nachricht: Eine einzige Formel reicht für alle Aufgaben.
 
-Laborwerte, Studienauswertungen, Lösungskonzentrationen -- Prozentrechnung begegnet Medizinern täglich. Die gute Nachricht: Eine einzige Formel reicht für alle Aufgaben.
+## Die eine Formel, die alles löst: P = G \u00d7 p/100
 
 Prozent bedeutet \u201evon Hundert\u201c. Der Prozentsatz p gibt an, wie viele Teile von je 100 Teilen des Grundwerts G gemeint sind. Die Formel **P = G \u00d7 p/100** verbindet drei Größen:
 
@@ -504,9 +506,11 @@ In der Epidemiologie sind drei Kennzahlen zentral -- alle basieren auf Prozentre
         "mg/kg",
         "mL/h",
       ],
-      content: `## Der Dreisatz -- das Schweizer Taschenmesser der klinischen Mathematik
+      content: `Ob Medikamentendosierung (mg/kg), Infusionsrate (mL/h) oder Verdünnung -- fast jede klinische Berechnung lässt sich auf einen Dreisatz zurückführen.
 
-Ob Medikamentendosierung (mg/kg), Infusionsrate (mL/h) oder Verdünnung -- fast jede klinische Berechnung lässt sich auf einen Dreisatz zurückführen. Die zentrale Frage: Steigen beide Größen **gemeinsam** (direkt) oder **gegenläufig** (indirekt)?
+## Der Dreisatz -- das Schweizer Taschenmesser der klinischen Mathematik
+
+Die zentrale Frage: Steigen beide Größen **gemeinsam** (direkt) oder **gegenläufig** (indirekt)?
 
 ---
 
@@ -742,9 +746,9 @@ Glucose 5 % und Glucose 20 % sollen zu 500 mL Glucose 8 % gemischt werden:
         "Glucose",
         "mL/min L/h",
       ],
-      content: `## Faktor-1000-Fehler töten -- warum Einheiten lebenswichtig sind
+      content: `Die Verwechslung von mg und \u00b5g (Faktor 1000) gehört weltweit zu den häufigsten tödlichen Medikationsfehlern. Wer SI-Präfixe und die Kettenmethode beherrscht, eliminiert diese Fehlerquelle vollständig.
 
-Die Verwechslung von mg und \u00b5g (Faktor 1000) gehört weltweit zu den häufigsten tödlichen Medikationsfehlern. Wer SI-Präfixe und die Kettenmethode beherrscht, eliminiert diese Fehlerquelle vollständig.
+## Faktor-1000-Fehler töten -- warum Einheiten lebenswichtig sind
 
 ---
 

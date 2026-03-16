@@ -1727,9 +1727,9 @@ Brechkraft der Linse: D = 1/f = 1/0,20 m = **5 dpt**.`,
         "Wellenlänge",
         "Superposition",
       ],
-      content: `## Seifenblasen, Entspiegelung, OCT — Licht als Welle
+      content: `Warum schimmern Seifenblasen in Regenbogenfarben? Warum zeigt eine dünne Ölschicht auf einer Pfütze bunte Ringe? Und wie kann ein Augenarzt die Netzhaut schichtweise in Mikrometerauflösung darstellen? Die Antwort auf all diese Fragen liegt in der **Wellenoptik**: Licht ist eine transversale elektromagnetische Welle, deren Wellenberge und -täler sich gegenseitig verstärken oder auslöschen können. Diese Überlagerung — zusammen mit Beugung und Polarisation — erklärt Phänomene, die das Strahlenmodell der geometrischen Optik nicht fassen kann.
 
-Warum schimmern Seifenblasen in Regenbogenfarben? Warum zeigt eine dünne Ölschicht auf einer Pfütze bunte Ringe? Und wie kann ein Augenarzt die Netzhaut schichtweise in Mikrometerauflösung darstellen? Die Antwort auf all diese Fragen liegt in der **Wellenoptik**: Licht ist eine transversale elektromagnetische Welle, deren Wellenberge und -täler sich gegenseitig verstärken oder auslöschen können. Diese Überlagerung — zusammen mit Beugung und Polarisation — erklärt Phänomene, die das Strahlenmodell der geometrischen Optik nicht fassen kann.
+## Seifenblasen, Entspiegelung, OCT — Licht als Welle
 
 Zur Erinnerung: Licht breitet sich mit c ≈ 3 × 10⁸ m/s im Vakuum aus. Die Wellenlänge bestimmt die Farbe (380 nm violett bis 780 nm rot), und es gilt **c = λ · f**. Im Medium sinkt die Geschwindigkeit (v = c/n), die Wellenlänge wird kürzer (λ_Medium = λ₀/n), aber die **Frequenz bleibt immer gleich** — ein klassischer Prüfungspunkt.
 

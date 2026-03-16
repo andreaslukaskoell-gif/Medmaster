@@ -1451,12 +1451,9 @@ Klinisches Beispiel: Bei einem Sturz auf den Kopf (Schädel-Hirn-Trauma) trifft 
         "hydrostatischer Druck",
         "Auftrieb",
       ],
-      content: `
-
+      content: `Wer schon einmal eine schwere Tür mit einem Finger am äußersten Rand geöffnet hat, kennt das Prinzip: Nicht die Kraft allein entscheidet, sondern **wo** sie ansetzt. Genau dieses Hebelgesetz nutzt der menschliche Körper in jedem Gelenk — und genau deshalb reißen Sehnen, wenn die Biomechanik an ihre Grenzen kommt. Orthopädie, Unfallchirurgie und Rehabilitationsmedizin beruhen auf den Gesetzen der Statik.
 
 ## Statik, Druck und Hebelmechanik
-
-Wer schon einmal eine schwere Tür mit einem Finger am äußersten Rand geöffnet hat, kennt das Prinzip: Nicht die Kraft allein entscheidet, sondern **wo** sie ansetzt. Genau dieses Hebelgesetz nutzt der menschliche Körper in jedem Gelenk — und genau deshalb reißen Sehnen, wenn die Biomechanik an ihre Grenzen kommt. Orthopädie, Unfallchirurgie und Rehabilitationsmedizin beruhen auf den Gesetzen der Statik.
 
 ---
 

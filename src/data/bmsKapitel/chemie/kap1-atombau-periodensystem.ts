@@ -31,9 +31,9 @@ export const chemKapAtom: Kapitel = {
         "Massenzahl",
         "Ordnungszahl",
       ],
-      content: `## Demokrit und Dalton — die Anfänge
+      content: `Die Vorstellung vom „unteilbaren Teilchen” reicht über 2000 Jahre zurück — und jedes Atommodell, das folgte, kam der Wahrheit ein Stück näher.
 
-Die Vorstellung vom „unteilbaren Teilchen” reicht über 2000 Jahre zurück — und jedes Atommodell, das folgte, kam der Wahrheit ein Stück näher.
+## Demokrit und Dalton — die Anfänge
 
 Bereits ca. 400 v. Chr. postulierte der griechische Philosoph **Demokrit** unteilbare Teilchen (griech. *átomos* = unteilbar). Wissenschaftlich wurde die Atomtheorie erst durch **John Dalton** (1808) begründet: Elemente bestehen aus identischen, unteilbaren Atomen; verschiedene Elemente haben verschiedene Atommassen; chemische Reaktionen sind Umlagerungen von Atomen — keine Erzeugung oder Vernichtung.
 

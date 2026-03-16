@@ -585,9 +585,9 @@ Amine sind als Neurotransmitter und Signalmoleküle von zentraler klinischer Bed
       imageUrl: "/images/bms/ch-aminosaeure.jpg",
       imageCaption:
         "Abb.: Grundstruktur einer Aminosäure mit funktionellen Gruppen (OpenStax, CC BY 4.0)",
-      content: `## Amine — Stickstoffbasen der organischen Chemie
+      content: `Aminosäuren sind die Bausteine aller Proteine — und damit die molekulare Grundlage des Lebens.
 
-Aminosäuren sind die Bausteine aller Proteine — und damit die molekulare Grundlage des Lebens. Ihre Chemie zu verstehen ist Voraussetzung für Biochemie, Pharmakologie und klinische Medizin. Bevor wir die Aminosäuren selbst betrachten, lohnt ein kurzer Blick auf die funktionelle Gruppe, die ihnen den Namen gibt: die **Aminogruppe (–NH₂)**.
+## Amine — Stickstoffbasen der organischen Chemie Ihre Chemie zu verstehen ist Voraussetzung für Biochemie, Pharmakologie und klinische Medizin. Bevor wir die Aminosäuren selbst betrachten, lohnt ein kurzer Blick auf die funktionelle Gruppe, die ihnen den Namen gibt: die **Aminogruppe (–NH₂)**.
 
 Amine entstehen formal durch schrittweisen Ersatz der Wasserstoffatome im Ammoniak (NH₃) durch organische Reste. Je nach Zahl der Substituenten am Stickstoff unterscheidet man:
 
@@ -1297,9 +1297,9 @@ Die **Blutgruppenantigene** des AB0-Systems sind Kohlenhydratstrukturen auf der 
         "Trans-Fettsäuren",
         "Dyslipidemien",
       ],
-      content: `## Was Lipide eigentlich sind
+      content: `Fette machen krank, Cholesterin verstopft Arterien, Butter ist Gift — so klingt es in Schlagzeilen.
 
-Fette machen krank, Cholesterin verstopft Arterien, Butter ist Gift — so klingt es in Schlagzeilen. Die biochemische Realität ist komplexer und faszinierender: Lipide bilden Zellmembranen, speichern Energie effizienter als jeder andere Makronährstoff, isolieren Nervenfasern, tragen Signale zwischen Zellen und sind Ausgangsstoff für Hormone. Ohne Lipide gäbe es kein Cortisol, kein Testosteron, kein Vitamin D. Wer Lipidchemie versteht, versteht Ernährung, Atherosklerose und Pharmakologie.
+## Was Lipide eigentlich sind Die biochemische Realität ist komplexer und faszinierender: Lipide bilden Zellmembranen, speichern Energie effizienter als jeder andere Makronährstoff, isolieren Nervenfasern, tragen Signale zwischen Zellen und sind Ausgangsstoff für Hormone. Ohne Lipide gäbe es kein Cortisol, kein Testosteron, kein Vitamin D. Wer Lipidchemie versteht, versteht Ernährung, Atherosklerose und Pharmakologie.
 
 Chemisch sind Lipide **keine einheitliche Stoffklasse** wie Kohlenhydrate oder Proteine. Was sie verbindet, ist eine physikalische Eigenschaft: Sie lösen sich gut in organischen Lösungsmitteln (Chloroform, Ether, Benzol), aber schlecht in Wasser. Diese Hydrophobie entsteht durch ihre langen Kohlenwasserstoffketten oder kondensierten Ringsysteme mit wenigen polaren Gruppen.
 

@@ -248,9 +248,9 @@ Bei einem echten Blutdruck von 132/88 mmHg würde man 144/100 mmHg messen — un
         "Laplace-Gesetz",
         "Atelektase",
       ],
-      content: `## Zwei Kräfte, die das Verhalten von Objekten in Fluiden bestimmen
+      content: `Warum schwimmt ein tonnenschweres Stahlschiff, aber ein winziger Stein sinkt? Warum bilden Wassertropfen Kugeln, und warum kollabieren die kleinsten Lungenbläschen ohne einen speziellen Schutzfilm? Hinter beidem stecken zwei fundamentale Phänomene: **Auftrieb** (bestimmt, ob ein Objekt schwimmt oder sinkt) und **Oberflächenspannung** (bestimmt, wie sich Flüssigkeitsoberflächen verhalten). Beide sind für die Medizin unmittelbar relevant — vom Hydrotherapie-Bad bis zur Neugeborenen-Intensivstation.
 
-Warum schwimmt ein tonnenschweres Stahlschiff, aber ein winziger Stein sinkt? Warum bilden Wassertropfen Kugeln, und warum kollabieren die kleinsten Lungenbläschen ohne einen speziellen Schutzfilm? Hinter beidem stecken zwei fundamentale Phänomene: **Auftrieb** (bestimmt, ob ein Objekt schwimmt oder sinkt) und **Oberflächenspannung** (bestimmt, wie sich Flüssigkeitsoberflächen verhalten). Beide sind für die Medizin unmittelbar relevant — vom Hydrotherapie-Bad bis zur Neugeborenen-Intensivstation.
+## Zwei Kräfte, die das Verhalten von Objekten in Fluiden bestimmen
 
 ---
 

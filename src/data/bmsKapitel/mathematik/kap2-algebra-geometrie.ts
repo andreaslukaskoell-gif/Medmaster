@@ -25,9 +25,7 @@ export const mathKapAlgebra: Kapitel = {
         "Dosierungsberechnung",
         "Verdünnungsformel",
       ],
-      content: `## Wie viel NaCl für 500 mL einer 0,9%-Lösung?
-
-Physiologische Kochsalzlösung (NaCl 0,9 %) gehört zu den häufigsten Infusionen im Krankenhaus. Die Frage „Wie viel Gramm NaCl brauche ich für 500 mL?" ist nichts anderes als eine **lineare Gleichung**: 0,009 × 500 = x → x = 4,5 g. Gleichungen lösen heißt: eine unbekannte Größe systematisch isolieren — und genau das trainiert dieses Kapitel.
+      content: `Wie viel Gramm NaCl braucht man für 500 mL einer 0,9 %-Lösung? Physiologische Kochsalzlösung gehört zu den häufigsten Infusionen im Krankenhaus, und die Antwort ist nichts anderes als eine **lineare Gleichung**: 0,009 × 500 = x → x = 4,5 g. Gleichungen lösen heißt: eine unbekannte Größe systematisch isolieren — und genau das trainiert dieses Kapitel.
 
 ---
 
@@ -1781,9 +1779,11 @@ Die **Lungenalveolen** haben einen Radius von ca. 0,1–0,2 mm; die Gesamtoberfl
       id: "ma-3-04",
       title: "Vektoren — Überblick und Verweis",
       stichworte: ["Vektor", "Skalar", "Betrag", "Richtung", "Vektorrechnung"],
-      content: `## Was sind Vektoren?
+      content: `Viele physikalische Größen haben nicht nur einen Betrag, sondern auch eine **Richtung**: Kraft, Geschwindigkeit, Verschiebung.
 
-Viele physikalische Größen haben nicht nur einen Betrag, sondern auch eine **Richtung**: Kraft, Geschwindigkeit, Verschiebung. Eine einzelne Zahl (Skalar) reicht dafür nicht aus — man braucht einen **Vektor**, also einen Pfeil mit Länge und Richtung. Algebraisch schreibt man ihn als Spalte von Komponenten: **a** = (a₁, a₂, a₃).
+## Was sind Vektoren?
+
+Eine einzelne Zahl (ein **Skalar**) reicht dafür nicht aus — man braucht einen **Vektor**, also einen Pfeil mit Länge und Richtung. Algebraisch schreibt man ihn als Spalte von Komponenten: **a** = (a₁, a₂, a₃).
 
 Der **Betrag** (die Länge) eines Vektors folgt aus dem Satz des Pythagoras: |**a**| = √(a₁² + a₂² + a₃²). Addition, Subtraktion und Skalierung funktionieren komponentenweise.
 

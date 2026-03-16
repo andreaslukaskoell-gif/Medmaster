@@ -12,6 +12,8 @@ export const chemKapStoech: Kapitel = {
       id: "ch-3s-01",
       title: "Mol-Konzept & Avogadro",
       imageUrl: "/images/bms/ch-chemische-reaktionen.jpg",
+      imageCaption:
+        "Abb.: Mol-Konzept und Avogadro-Zahl bei chemischen Reaktionen (OpenStax, CC BY 4.0)",
       stichworte: [
         "Mol",
         "Avogadro-Zahl",
@@ -24,9 +26,9 @@ export const chemKapStoech: Kapitel = {
         "Dalton",
         "Atommasse",
       ],
-      content: `## Das Mol — die SI-Einheit der Stoffmenge
+      content: `Jede Tablette, jede Infusion, jeder Laborwert beruht auf einer einzigen Frage: Wie viele Teilchen sind in dieser Probe?
 
-Jede Tablette, jede Infusion, jeder Laborwert beruht auf einer einzigen Frage: Wie viele Teilchen sind in dieser Probe? Die Antwort liefert die **Stoffmenge n** mit der Einheit Mol. Seit der SI-Reform von 2019 ist das Mol über eine exakte Zahl definiert: **1 Mol = exakt 6,022 140 76 × 10²³ Teilchen**. Diese Zahl heißt **Avogadro-Zahl N_A** und bildet die Brücke zwischen der makroskopischen Welt, in der wir in Gramm und Litern messen, und der atomaren Welt, in der einzelne Atome und Moleküle existieren.
+## Das Mol — die SI-Einheit der Stoffmenge Die Antwort liefert die **Stoffmenge n** mit der Einheit Mol. Seit der SI-Reform von 2019 ist das Mol über eine exakte Zahl definiert: **1 Mol = exakt 6,022 140 76 × 10²³ Teilchen**. Diese Zahl heißt **Avogadro-Zahl N_A** und bildet die Brücke zwischen der makroskopischen Welt, in der wir in Gramm und Litern messen, und der atomaren Welt, in der einzelne Atome und Moleküle existieren.
 
 Man kann sich das Mol als gigantische Zähleinheit vorstellen — ähnlich wie ein Dutzend 12 Stück bedeutet, nur dass die Avogadro-Zahl unfassbar viel größer ist. Historisch wurde N_A so gewählt, dass 1 Mol Kohlenstoff-12-Atome exakt 12 g wiegt. Damit ergibt sich ein eleganter Zusammenhang: Die Zahlenwerte der atomaren Massen im Periodensystem entsprechen direkt den Massen in Gramm pro Mol.
 
@@ -190,6 +192,8 @@ Dieses Konzept macht das PSE zu einem universellen Nachschlagewerk für stöchio
       id: "ch-3s-02",
       title: "Stöchiometrie & Reaktionsgleichungen",
       imageUrl: "/images/bms/ch-chemische-reaktionen.jpg",
+      imageCaption:
+        "Abb.: Stöchiometrie und Massenerhaltung bei chemischen Reaktionen (OpenStax, CC BY 4.0)",
       stichworte: [
         "Reaktionsgleichung",
         "Ausgleichen",
@@ -417,9 +421,9 @@ Bei der vollständigen Oxidation von 1 mol Glucose (180 g) entstehen 6 mol CO₂
         "Osmolarität",
         "Normalität",
       ],
-      content: `## Konzentration — die Sprache der Klinik
+      content: `Ein Patient kommt mit Bewusstseinstrübung in die Notaufnahme.
 
-Ein Patient kommt mit Bewusstseinstrübung in die Notaufnahme. Das Labor meldet: Blutglucose 350 mg/dL, Natrium 128 mmol/L, Serumosmolalität 310 mosmol/kg. Drei Werte, drei Einheiten — und jede davon muss das Notfallteam sofort interpretieren können. Konzentrationsangaben sind die gemeinsame Sprache zwischen Labor, Apotheke und Station. Wer sie sicher beherrscht, versteht Infusionspläne, Dosierungen und Laborergebnisse auf einen Blick.
+## Konzentration — die Sprache der Klinik Das Labor meldet: Blutglucose 350 mg/dL, Natrium 128 mmol/L, Serumosmolalität 310 mosmol/kg. Drei Werte, drei Einheiten — und jede davon muss das Notfallteam sofort interpretieren können. Konzentrationsangaben sind die gemeinsame Sprache zwischen Labor, Apotheke und Station. Wer sie sicher beherrscht, versteht Infusionspläne, Dosierungen und Laborergebnisse auf einen Blick.
 
 ---
 
