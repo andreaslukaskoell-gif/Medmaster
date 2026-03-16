@@ -28,6 +28,7 @@ import {
   trackConversion,
 } from "@/lib/growthTracking";
 import { ExitIntentCapture } from "@/components/growth/ExitIntentCapture";
+import { ReturningVisitorBanner } from "@/components/growth/ReturningVisitorBanner";
 import { Logo } from "@/components/brand/Logo";
 import { blogArticles } from "@/data/blogArticles";
 
@@ -462,6 +463,9 @@ export default function LandingPage() {
           </div>
         </div>
       </motion.nav>
+
+      {/* ─── Returning Visitor Banner ─── */}
+      <ReturningVisitorBanner />
 
       {/* ─── Urgency Banner ─── */}
       {!countdown.expired && (

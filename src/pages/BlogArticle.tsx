@@ -1,6 +1,6 @@
 import { useParams, Link, Navigate } from "react-router-dom";
 import { ArrowLeft, ArrowRight, Clock, GraduationCap } from "lucide-react";
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { trackEvent } from "@/lib/analyticsTracker";
 import { blogArticles } from "@/data/blogArticles";
@@ -59,6 +59,14 @@ export default function BlogArticle() {
     return () => {
       document.head.removeChild(script);
     };
+  }, [article]);
+
+  const relatedArticles = useMemo(() => {
+    if (!article) return [];
+    const others = blogArticles.filter((a) => a.slug !== article.slug);
+    // Shuffle and pick 3
+    const shuffled = [...others].sort(() => Math.random() - 0.5);
+    return shuffled.slice(0, 3);
   }, [article]);
 
   if (!article) {
@@ -161,6 +169,37 @@ export default function BlogArticle() {
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
+
+        {/* Related Articles */}
+        {relatedArticles.length > 0 && (
+          <div className="mt-14">
+            <h2 className="text-lg font-bold text-[var(--text-primary)] mb-6">
+              Das könnte dich auch interessieren
+            </h2>
+            <div className="grid grid-cols-3 gap-4">
+              {relatedArticles.map((related) => (
+                <Link
+                  key={related.slug}
+                  to={`/blog/${related.slug}`}
+                  className="group rounded-xl border border-[var(--border)] bg-[var(--card)] p-5 transition-all hover:border-[var(--accent)]/40 hover:shadow-[var(--shadow-sm)]"
+                >
+                  <span
+                    className={`inline-block text-xs font-medium px-2.5 py-1 rounded-lg mb-3 ${TOPIC_COLORS[related.topic] ?? "bg-gray-100 text-gray-700"}`}
+                  >
+                    {related.topic}
+                  </span>
+                  <h3 className="text-sm font-semibold text-[var(--text-primary)] leading-snug mb-2 group-hover:text-[var(--accent)] transition-colors line-clamp-2">
+                    {related.title}
+                  </h3>
+                  <span className="flex items-center gap-1 text-xs text-[var(--muted)]">
+                    <Clock className="w-3 h-3" />
+                    {related.readingTime} Min
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
       </main>
 
       {/* Footer */}

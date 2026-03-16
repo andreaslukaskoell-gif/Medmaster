@@ -192,6 +192,55 @@ export default function PaidLanding() {
     };
   }, []);
 
+  /* ── FAQ JSON-LD structured data ── */
+  useEffect(() => {
+    const faqData = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Ist das aktuell für den MedAT 2026?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Ja, vollständig. Alle Inhalte basieren auf der offiziellen Stichwortliste 2026 der Medizinischen Universitäten. Die 173 Lerneinheiten decken jedes einzelne Stichwort ab — von Zellbiologie über organische Chemie bis Stochastik. Die über 4.000 BMS-Fragen sind im originalen MedAT-Format (A–E, genau eine richtige Antwort) und werden laufend aktualisiert.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Kann ich jederzeit kündigen?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Ja, ohne Wenn und Aber. Es gibt kein Abo, keine automatische Verlängerung und keine Kündigungsfrist. Du kannst deinen Account jederzeit in den Einstellungen löschen — mit einem Klick. Bis 31. März ist der volle Zugang komplett gratis, danach fällt eine einmalige Zahlung von €29,90 an. Keine versteckten Kosten, kein Kleingedrucktes.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Reicht MedMaster als Vorbereitung?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "MedMaster deckt alle 4 MedAT-Bereiche vollständig ab: BMS (Biologie, Chemie, Physik, Mathematik), KFF (Zahlenfolgen, Implikationen, Wortflüssigkeit, Figuren, Gedächtnis), Textverständnis und SEK. Für den BMS-Teil empfehlen viele Kandidierende ergänzend ein Biologie-Lehrbuch wie den Campbell für die Tiefe der Theorie. Die gesamte Übungs- und Simulationskomponente ist aber komplett abgedeckt — inklusive adaptivem Lernplan, der deine Schwächen gezielt trainiert.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Was passiert nach dem 31. März?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Ab 1. April kostet MedMaster einmalig €29,90. Das ist eine einmalige Zahlung — kein monatliches Abo, keine wiederkehrenden Kosten. Du behältst vollen Zugang zu allen Fragen, Lerneinheiten, der Prüfungssimulation und allen zukünftigen Updates bis zum MedAT 2026. Wer sich jetzt registriert, lernt bis dahin komplett gratis.",
+          },
+        },
+      ],
+    };
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.textContent = JSON.stringify(faqData);
+    document.head.appendChild(script);
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
+
   const handleGoogle = async () => {
     setGoogleError("");
     trackClick("lp-google-signup", "Paid LP Google CTA");

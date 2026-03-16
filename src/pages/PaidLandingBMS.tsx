@@ -191,6 +191,63 @@ export default function PaidLandingBMS() {
     };
   }, []);
 
+  /* ── FAQ JSON-LD structured data ── */
+  useEffect(() => {
+    const faqData = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Deckt MedMaster die gesamte BMS-Stichwortliste 2026 ab?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Ja, vollständig. Die 173 Lerneinheiten decken jedes einzelne Stichwort der offiziellen BMS-Liste ab — von Zellbiologie und DNA-Replikation über das Periodensystem und Stöchiometrie bis zu Mechanik, Optik, Trigonometrie und Stochastik. Die über 4.000 BMS-Fragen sind im originalen MedAT-Format (A–E, genau eine richtige Antwort) und werden laufend aktualisiert.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Wie viele BMS-Fragen gibt es pro Fach?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Aktuell: ca. 1.100 Biologie-Fragen, 1.400 Chemie-Fragen, 1.300 Physik-Fragen und 500 Mathematik-Fragen. Jede Frage hat fünf Optionen (A–E) und eine ausführliche Erklärung. Die Schwierigkeitsgrade (leicht, mittel, schwer) sind gleichmäßig verteilt und bilden das echte MedAT-Niveau ab.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Reicht MedMaster für die BMS-Vorbereitung?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "MedMaster deckt den gesamten BMS-Teil vollständig ab: alle Stichwörter, Tausende Übungsfragen, adaptives Lernen und Fortschrittskontrolle pro Thema. Für die Vertiefung in Biologie empfehlen viele ergänzend ein Lehrbuch wie den Campbell. Die Übungs- und Lernkomponente ist aber komplett abgedeckt — inklusive adaptivem Lernplan, der deine Schwächen gezielt trainiert.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Was passiert nach dem 31. März?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Ab 1. April kostet MedMaster einmalig €29,90. Das ist eine einmalige Zahlung — kein monatliches Abo, keine wiederkehrenden Kosten. Du behältst vollen Zugang zu allen BMS-Fragen, Lerneinheiten und der Prüfungssimulation bis zum MedAT 2026. Wer sich jetzt registriert, lernt bis dahin komplett gratis.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Kann ich jederzeit kündigen?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Ja, ohne Wenn und Aber. Es gibt kein Abo, keine automatische Verlängerung und keine Kündigungsfrist. Du kannst deinen Account jederzeit in den Einstellungen löschen — mit einem Klick.",
+          },
+        },
+      ],
+    };
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.textContent = JSON.stringify(faqData);
+    document.head.appendChild(script);
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
+
   const handleGoogle = async () => {
     setGoogleError("");
     trackClick("lp-bms-google-signup", "Paid LP BMS Google CTA");

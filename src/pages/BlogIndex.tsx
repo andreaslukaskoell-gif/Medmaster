@@ -3,7 +3,8 @@ import { ArrowRight, Clock, GraduationCap } from "lucide-react";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { trackEvent } from "@/lib/analyticsTracker";
 import { blogArticles } from "@/data/blogArticles";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { supabase } from "@/lib/supabase";
 
 const NAVY = "#1b3ea7";
 
@@ -23,9 +24,42 @@ export default function BlogIndex() {
     canonical: "https://medmaster.at/blog",
   });
 
+  const [nlEmail, setNlEmail] = useState("");
+  const [nlState, setNlState] = useState<"idle" | "loading" | "done" | "error">("idle");
+
   useEffect(() => {
     trackEvent("blog_view", { page: "index" });
   }, []);
+
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const trimmed = nlEmail.trim().toLowerCase();
+    if (!trimmed || nlState === "loading") return;
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmed)) {
+      setNlState("error");
+      return;
+    }
+    setNlState("loading");
+    try {
+      if (supabase) {
+        await supabase.from("leads").upsert(
+          {
+            email: trimmed,
+            source: "newsletter",
+            utm_source: sessionStorage.getItem("mm_utm")
+              ? JSON.parse(sessionStorage.getItem("mm_utm")!).utm_source
+              : null,
+            created_at: new Date().toISOString(),
+          },
+          { onConflict: "email" }
+        );
+      }
+      trackEvent("newsletter_signup", { source: "blog_index" });
+      setNlState("done");
+    } catch {
+      setNlState("error");
+    }
+  };
 
   return (
     <div className="min-h-screen bg-[var(--surface)] dark:bg-[var(--background)]">
@@ -63,6 +97,48 @@ export default function BlogIndex() {
           KFF.
         </p>
       </header>
+
+      {/* Newsletter signup */}
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 mb-8">
+        <div className="bg-[var(--surface)] border border-[var(--border)] border-l-4 border-l-[var(--accent)] rounded-xl px-6 py-5 flex flex-col sm:flex-row items-start sm:items-center gap-4 shadow-sm backdrop-blur-sm">
+          {nlState === "done" ? (
+            <p className="text-sm font-medium text-emerald-600 dark:text-emerald-400">
+              Angemeldet — du bekommst bald Post!
+            </p>
+          ) : (
+            <>
+              <div className="flex-1 min-w-0">
+                <p className="text-sm font-semibold text-[var(--text-primary)]">
+                  MedAT-Lerntipps direkt in dein Postfach
+                </p>
+                <p className="text-xs text-[var(--muted)] mt-0.5">
+                  Neue Artikel, Strategien und Übungstipps — kostenlos, kein Spam.
+                </p>
+              </div>
+              <form onSubmit={handleNewsletterSubmit} className="flex items-center gap-2 shrink-0">
+                <input
+                  type="email"
+                  placeholder="deine@email.at"
+                  value={nlEmail}
+                  onChange={(e) => {
+                    setNlEmail(e.target.value);
+                    if (nlState === "error") setNlState("idle");
+                  }}
+                  className={`w-52 text-sm px-3 py-2 rounded-lg border bg-[var(--background)] text-[var(--text-primary)] placeholder:text-[var(--muted)] outline-none focus:ring-2 focus:ring-[var(--accent)]/40 ${nlState === "error" ? "border-red-400" : "border-[var(--border)]"}`}
+                />
+                <button
+                  type="submit"
+                  disabled={nlState === "loading"}
+                  className="text-sm font-semibold text-white px-4 py-2 rounded-lg transition-colors hover:opacity-90 disabled:opacity-60"
+                  style={{ backgroundColor: NAVY }}
+                >
+                  {nlState === "loading" ? "..." : "Anmelden"}
+                </button>
+              </form>
+            </>
+          )}
+        </div>
+      </div>
 
       {/* Article grid */}
       <main className="max-w-4xl mx-auto px-4 sm:px-6 pb-16">
