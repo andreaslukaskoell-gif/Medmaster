@@ -63,7 +63,7 @@ export default function KFF() {
   const [view, setView] = useState<KffView>(initialView);
   const [strategyKey, setStrategyKey] = useState<StrategyKey>("zahlenfolgen");
   const { user, loading: isLoading } = useAuth();
-  const { kffDomainIntroSeen, markKffDomainIntroSeen } = useStore();
+  const { kffDomainIntroSeen, markKffDomainIntroSeen, quizResults } = useStore();
   const [authTimedOut, setAuthTimedOut] = useState(false);
   const autoStartRef = useRef(false);
 
@@ -210,7 +210,6 @@ export default function KFF() {
   }
 
   // Compute per-module progress from quizResults
-  const { quizResults } = useStore();
   const kffStats = (subject: string) => {
     const results = (quizResults ?? []).filter((r) => r.type === "kff" && r.subject === subject);
     const total = results.reduce((s, r) => s + r.total, 0);
@@ -240,7 +239,7 @@ export default function KFF() {
       id: "gedaechtnis" as const,
       title: "Gedächtnis & Merkfähigkeit",
       format: "Allergieausweise einprägen, dann Fragen dazu beantworten (A–E)",
-      example: "8 Ausweise → 25 Min. lernen → 20 Fragen",
+      example: "8 Ausweise → 8 Min. lernen → 25 Fragen",
       badge: "MedAT-Format",
       strategyKey: "gedaechtnis" as StrategyKey,
       startView: "gedaechtnis-setup" as KffView,
