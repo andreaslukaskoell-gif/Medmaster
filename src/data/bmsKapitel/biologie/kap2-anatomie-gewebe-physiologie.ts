@@ -3482,11 +3482,33 @@ Die **Leber** (größte Drüse, ~1,5 kg) hat eine einzigartige doppelte Blutvers
         "Die Hauptfunktionen der Leber (Entgiftung, Harnstoffzyklus, Gerinnungsfaktor-Synthese, Galleproduktion, Bilirubin-Konjugation) beschreiben.",
       ],
       sections: [],
-      // TODO: echte MedAT-Altfrage prüfen - aktuell Übungsformat
       altfrage: {
-        question: "Welches Enzym spaltet Stärke und wo beginnt die Kohlenhydratverdauung?",
-        answer:
-          "Die Kohlenhydratverdauung beginnt im Mund durch die Speichel-Amylase (Ptyalin), die Stärke in Maltose und Dextrine spaltet. Im Duodenum setzt die Pankreas-Amylase fort. Bürstensaum-Enzyme (Maltase, Lactase, Sucrase) spalten Disaccharide zu Monosacchariden, die dann resorbiert werden.",
+        text: "Welche Aussage über die Kohlenhydratverdauung ist korrekt?",
+        options: [
+          {
+            id: "a",
+            text: "Die Kohlenhydratverdauung beginnt erst im Magen durch die Wirkung von Pepsin auf Stärke.",
+          },
+          {
+            id: "b",
+            text: "Die Speichel-Amylase (Ptyalin) spaltet Stärke im Mund zu Maltose und Dextrinen. Im Duodenum setzt die Pankreas-Amylase fort. Bürstensaum-Enzyme (Maltase, Lactase, Sucrase) spalten Disaccharide zu resorbierbaren Monosacchariden.",
+          },
+          {
+            id: "c",
+            text: "Lactase spaltet Saccharose in Glukose und Fruktose, während Sucrase Laktose spaltet.",
+          },
+          {
+            id: "d",
+            text: "Die Pankreas-Amylase spaltet Stärke direkt zu Monosacchariden ohne Zwischenstufe.",
+          },
+          {
+            id: "e",
+            text: "Bürstensaum-Enzyme befinden sich ausschließlich im Magen und spalten Polysaccharide.",
+          },
+        ],
+        correctOptionId: "b",
+        explanation:
+          "Die Kohlenhydratverdauung beginnt im Mund: Speichel-Amylase (Ptyalin) spaltet Stärke zu Maltose und Dextrinen (wird im sauren Magen-pH inaktiviert). Im Duodenum übernimmt die Pankreas-Amylase. Bürstensaum-Enzyme der Enterozyten: Maltase (Maltose → 2 Glukose), Lactase (Laktose → Glukose + Galaktose), Sucrase (Saccharose → Glukose + Fruktose). Resorption via SGLT1 (apikal, aktiv) und GLUT2 (basolateral).",
       },
       selfTest: [
         {
@@ -3761,11 +3783,30 @@ Der fertige Urin verlässt die Niere über: **Nierenbecken (Pelvis renalis) → 
         "Die RAAS-Kaskade (Renin → Angiotensin II → Aldosteron/ADH) und die Angriffspunkte von ACE-Hemmern, AT₁-Blockern und Aldosteron-Antagonisten erläutern.",
       ],
       sections: [],
-      // TODO: echte MedAT-Altfrage prüfen - aktuell Übungsformat
       altfrage: {
-        question: "Wie funktioniert das Gegenstromprinzip in der Henle-Schleife?",
-        answer:
-          "Absteigender Schenkel: wasserdurchlässig → Wasser wird osmotisch abgegeben → Harn konzentriert. Aufsteigender Schenkel: wasserundurchlässig, NaCl aktiv resorbiert → Harn verdünnt, Interstitium hyperosmolar. Erzeugt kortikomedullären Gradienten.",
+        text: "Welche Aussage über das Gegenstromprinzip in der Henle-Schleife ist korrekt?",
+        options: [
+          {
+            id: "a",
+            text: "Der absteigende Schenkel ist wasserundurchlässig und resorbiert aktiv NaCl.",
+          },
+          {
+            id: "b",
+            text: "Der aufsteigende Schenkel ist wasserdurchlässig und gibt Wasser osmotisch ab.",
+          },
+          {
+            id: "c",
+            text: "Der absteigende Schenkel ist wasserdurchlässig (Wasser folgt osmotisch → Harn konzentriert), der aufsteigende ist wasserundurchlässig und resorbiert NaCl aktiv (NKCC2) → Harn verdünnt, Interstitium hyperosmolar → kortikopapillärer Gradient.",
+          },
+          {
+            id: "d",
+            text: "Beide Schenkel resorbieren gleichzeitig Wasser und NaCl in gleichen Mengen.",
+          },
+          { id: "e", text: "Das Gegenstromprinzip findet im proximalen Tubulus statt." },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "Absteigender Schenkel: wasserdurchlässig (Aquaporin-1), NaCl-undurchlässig → Wasser folgt osmotischem Gradienten → Harn konzentriert. Aufsteigender Schenkel: wasserundurchlässig, NKCC2 resorbiert Na⁺/K⁺/2Cl⁻ aktiv → Harn verdünnt, Interstitium hyperosmolar. So entsteht der kortikopapilläre Gradient (300 → 1200 mOsm/kg). Schleifendiuretika (Furosemid) hemmen NKCC2.",
       },
       selfTest: [
         {
@@ -4000,12 +4041,33 @@ Die Wirbelsäule ist keine gerade Säule, sondern zeigt im Sagittalprofil **vier
         "Die Pathophysiologie der Osteoporose (Östrogenmangel, Knochenumbau) und die wichtigsten Therapieoptionen (Bisphosphonate, Denosumab) erläutern.",
       ],
       sections: [],
-      // TODO: echte MedAT-Altfrage prüfen - aktuell Übungsformat
       altfrage: {
-        question:
-          "Erklären Sie das Knochen-Remodeling und die Regulation durch Parathormon und Calcitonin.",
-        answer:
-          "Osteoblasten (Aufbau: Kollagen I, Mineralisierung mit Ca²⁺/PO₄³⁻) und Osteoklasten (Abbau: mehrkernig, H⁺ + Proteasen, Monozyten-Ursprung) bauen Knochen ständig um. PTH: aktiviert Osteoklasten → Ca²⁺ ins Blut ↑. Calcitonin: hemmt Osteoklasten → Ca²⁺ ins Blut ↓. Vitamin D3: fördert Ca²⁺-Resorption im Darm. Klinisch: Osteoporose = Abbau > Aufbau → Frakturrisiko ↑.",
+        text: "Welche Aussage über das Knochen-Remodeling und die Calciumregulation ist korrekt?",
+        options: [
+          {
+            id: "a",
+            text: "PTH (Parathormon) hemmt Osteoklasten und senkt den Blut-Calciumspiegel.",
+          },
+          {
+            id: "b",
+            text: "Calcitonin aktiviert Osteoklasten und steigert die Calciumfreisetzung aus dem Knochen.",
+          },
+          {
+            id: "c",
+            text: "Osteoblasten bauen Knochen auf (Kollagen I, Mineralisierung), Osteoklasten bauen ab (mehrkernig, H⁺/Proteasen). PTH aktiviert Osteoklasten → Ca²⁺ ↑. Calcitonin hemmt Osteoklasten → Ca²⁺ ↓. Vitamin D₃ fördert die intestinale Ca²⁺-Resorption.",
+          },
+          {
+            id: "d",
+            text: "Vitamin D₃ hemmt die Calciumresorption im Darm und fördert die renale Calciumausscheidung.",
+          },
+          {
+            id: "e",
+            text: "Osteoklasten synthetisieren Kollagen Typ I und sind für die Knochenmineralisierung verantwortlich.",
+          },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "Knochen wird ständig umgebaut: Osteoblasten (mesenchymaler Ursprung) synthetisieren Kollagen I und mineralisieren (Ca²⁺/PO₄³⁻ → Hydroxylapatit). Osteoklasten (Monozyten-Ursprung, mehrkernig) resorbieren Knochen durch H⁺-Sekretion und Proteasen. PTH (bei Ca²⁺ ↓) → Osteoklasten-Aktivierung → Ca²⁺ ins Blut ↑. Calcitonin (C-Zellen, bei Ca²⁺ ↑) → Osteoklasten-Hemmung → Ca²⁺ ↓. Vitamin D₃ → intestinale Ca²⁺-Resorption ↑. Osteoporose: Abbau > Aufbau → Frakturrisiko ↑.",
       },
       selfTest: [
         {

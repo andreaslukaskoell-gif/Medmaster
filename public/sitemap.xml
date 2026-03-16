@@ -38,4 +38,15 @@
   <url><loc>https://medmaster.at/impressum</loc><priority>0.3</priority></url>
   <url><loc>https://medmaster.at/datenschutz</loc><priority>0.3</priority></url>
   <url><loc>https://medmaster.at/agb</loc><priority>0.3</priority></url>
+  <url><loc>https://medmaster.at/lp/bms</loc><lastmod>2026-03-16</lastmod><priority>0.9</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://medmaster.at/blog/medat-anmeldung-2026</loc><lastmod>2026-03-16</lastmod><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://medmaster.at/blog/medat-biologie-genetik</loc><lastmod>2026-03-16</lastmod><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://medmaster.at/blog/medat-mathematik-tipps</loc><lastmod>2026-03-16</lastmod><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://medmaster.at/blog/medat-wortfluessigkeit-ueben</loc><lastmod>2026-03-16</lastmod><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://medmaster.at/blog/medat-implikationen-tipps</loc><lastmod>2026-03-16</lastmod><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://medmaster.at/blog/medat-figuren-zusammensetzen</loc><lastmod>2026-03-16</lastmod><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://medmaster.at/blog/medat-gedaechtnis-merkfaehigkeit</loc><lastmod>2026-03-16</lastmod><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://medmaster.at/blog/medizinstudium-oesterreich</loc><lastmod>2026-03-16</lastmod><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://medmaster.at/blog/medat-buecher-empfehlungen</loc><lastmod>2026-03-16</lastmod><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://medmaster.at/downloads/medat-10-fehler.html</loc><lastmod>2026-03-16</lastmod><priority>0.5</priority><changefreq>monthly</changefreq></url>
 </urlset>

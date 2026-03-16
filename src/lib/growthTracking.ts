@@ -17,37 +17,21 @@ const META_PIXEL_ID = import.meta.env.VITE_META_PIXEL_ID as string | undefined;
 
 let metaPixelReady = false;
 
-/** Load Meta Pixel script and initialize. Call once on app start. */
+/**
+ * Detect Meta Pixel loaded from index.html (the recommended approach).
+ * When the pixel ID is ready, uncomment the script block in index.html —
+ * this function will detect window.fbq and enable conversion tracking.
+ * Call once on app start.
+ */
 export function initMetaPixel() {
-  if (!META_PIXEL_ID?.trim()) return;
   if (typeof window === "undefined") return;
   if (location.hostname === "localhost" || location.hostname === "127.0.0.1") return;
 
-  // Standard Meta Pixel base code
+  // Detect pixel already loaded via index.html script tag
   const f = window as unknown as Record<string, unknown>;
-  if (f.fbq) return; // already loaded
-
-  const n = (f.fbq = function (...args: unknown[]) {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    (n as any).callMethod
-      ? // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        (n as any).callMethod.apply(n, args)
-      : // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        (n as any).queue.push(args);
-  }) as unknown as Record<string, unknown>;
-  n.push = n;
-  n.loaded = true;
-  n.version = "2.0";
-  n.queue = [];
-
-  const script = document.createElement("script");
-  script.async = true;
-  script.src = "https://connect.facebook.net/en_US/fbevents.js";
-  document.head.appendChild(script);
-
-  fbq("init", META_PIXEL_ID.trim());
-  fbq("track", "PageView");
-  metaPixelReady = true;
+  if (typeof f.fbq === "function") {
+    metaPixelReady = true;
+  }
 }
 
 /** Fire a Meta Pixel standard or custom event. */
