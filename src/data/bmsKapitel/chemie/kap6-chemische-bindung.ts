@@ -415,7 +415,9 @@ Die Folgen für die Eigenschaften sind gravierend: MgO schmilzt erst bei 2852 °
         "Dipolmoment",
         "Resonanz",
       ],
-      content: `## Grundprinzip der kovalenten Bindung
+      content: `Während bei der Ionenbindung Elektronen vollständig übertragen werden, gibt es eine zweite fundamentale Bindungsart: die kovalente Bindung, bei der Atome Elektronenpaare gemeinsam nutzen. Sie ist der häufigste Bindungstyp in der organischen Chemie und in biologischen Molekülen.
+
+## Grundprinzip der kovalenten Bindung
 
 Zwei Wasserstoffatome teilen sich ein Elektronenpaar — und bilden damit die einfachste kovalente Bindung überhaupt. Die **kovalente Bindung** (homöopolare oder Elektronenpaar-Bindung) entsteht durch **gemeinsame Nutzung von Elektronenpaaren** zwischen Atomen ähnlicher oder gleicher Elektronegativität. Im Gegensatz zur Ionenbindung werden Elektronen nicht übertragen, sondern geteilt. Die bindenden Elektronen halten sich bevorzugt im Bereich zwischen den Atomkernen auf und senken dort die potenzielle Energie des Systems. Der Energiegewinn durch die Bindungsbildung beträgt typischerweise 150–1000 kJ/mol.
 
@@ -985,8 +987,9 @@ Die biologischen Folgen sind enorm: Wasser ist das universelle Lösungsmittel f�
         "Ion-Dipol",
         "Kollagen",
       ],
-      content: `## Überblick: Zwischenmolekulare Kräfte
+      content: `Ionenbindung und kovalente Bindung halten Atome innerhalb eines Moleküls zusammen. Doch was entscheidet, ob ein Stoff bei Raumtemperatur fest, flüssig oder gasförmig ist? Dafür sind die schwächeren Kräfte zwischen den Molekülen verantwortlich — die intermolekularen Wechselwirkungen.
 
+## Überblick: Zwischenmolekulare Kräfte
 
 Warum siedet Wasser erst bei 100 °C, obwohl es leichter ist als H₂S (Sdp. −60 °C)? Die Antwort liegt in den **intermolekularen Wechselwirkungen** — Kräfte zwischen Molekülen, die Aggregatszustand, Siedepunkt, Löslichkeit und Viskosität bestimmen. In der Biologie sind sie ebenso fundamental: Sie halten die DNA-Doppelhelix zusammen, falten Proteine und ermöglichen Enzym-Substrat-Erkennung.
 

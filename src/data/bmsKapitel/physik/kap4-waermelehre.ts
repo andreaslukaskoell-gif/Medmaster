@@ -331,7 +331,8 @@ Q = 70 · 3500 · 3 = 735.000 J = 735 kJ ≈ 176 kcal. Diese Energiemenge muss d
         "Wiensches Verschiebungsgesetz",
         "Gegenstrom-Wärmeaustausch",
       ],
-      content: `
+      content: `Warum fühlt sich ein Metallgriff kalt an, obwohl er dieselbe Raumtemperatur hat wie ein Holzgriff? Die Antwort liegt in der Art, wie Wärme transportiert wird.
+
 Wärme kann auf drei physikalisch grundverschiedene Arten transportiert werden: durch **Wärmeleitung** (Konduktion), **Konvektion** und **Wärmestrahlung**. Im menschlichen Körper wirken alle drei Mechanismen gleichzeitig — ihr Zusammenspiel bestimmt, ob wir frieren, schwitzen oder eine stabile Kerntemperatur halten. Die Physik dahinter ist direkt prüfungsrelevant, weil sie Thermoregulation, Fieber, Hypothermie und viele klinische Verfahren erklärt.
 
 ---

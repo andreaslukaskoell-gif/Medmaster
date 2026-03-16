@@ -313,7 +313,7 @@ Ordnungszahl sinkt um 2 (zwei Positionen nach links im PSE), Massenzahl sinkt um
 **Eigenschaften:**
 - Reichweite: 3–7 cm in Luft, < 0,1 mm in Gewebe (≈ 40 μm, Dicke der Epidermis)
 - Abschirmung: Blatt Papier oder Hornhaut der Haut genügt
-- Ionisierungsdichte: sehr hoch (≈ 10⁵ Ionenpaare/cm in Luft) — höchster **LET** (linearer Energietransfer) aller Strahlungsarten
+- Ionisierungsdichte: sehr hoch (≈ 10⁵ Ionenpaare/cm in Luft) — höchster **LET** (linearer Energietransfer, abgegebene Energie pro Wegstrecke im Gewebe) aller Strahlungsarten
 - Äußerlich: ungefährlich (wird von der toten Hautschicht gestoppt)
 - Innerlich (Inhalation, Ingestion): extrem gefährlich wegen hoher lokaler Energieabgabe
 - Biologische Wirksamkeit: erzeugt **clustered DNA damage** — mehrere Doppelstrangbrüche auf engem Raum, kaum reparierbar
@@ -844,7 +844,9 @@ Das bedeutet: Schon 1 Mikrogramm ¹³¹I hat eine therapeutisch relevante Aktivi
         "Hounsfield-Einheiten",
         "Sauerstoffeffekt OER",
       ],
-      content: `## Entstehung von Röntgenstrahlung
+      content: `Ein konventionelles Röntgenbild entsteht in Sekundenbruchteilen und zeigt Knochenbrüche, Lungenentzündungen oder verschluckte Fremdkörper. Die Physik hinter dieser Alltagstechnik reicht von der Elektronenbeschleunigung bis zur Wechselwirkung von Photonen mit Gewebe.
+
+## Entstehung von Röntgenstrahlung
 
 In einer **Röntgenröhre** werden Elektronen aus einer Glühkathode emittiert und durch eine Hochspannung (typisch 30–150 kV) zur Anode (meist Wolfram) beschleunigt. Beim Auftreffen auf die Anode entstehen zwei Arten von Röntgenstrahlung:
 
@@ -1171,7 +1173,9 @@ Das entspricht dem typischen HU-Bereich von Fett (−100 bis −50 HU). Knochen 
         "Doppelspaltexperiment",
         "Warburg-Effekt",
       ],
-      content: `## PET – Positronen-Emissions-Tomographie
+      content: `Ein Zucker-Molekül, markiert mit einem radioaktiven Fluoratom, macht Tumorzellen sichtbar, noch bevor sie im CT erkennbar sind. Dieses Prinzip heißt PET — und es nutzt Antimaterie.
+
+## PET – Positronen-Emissions-Tomographie
 
 {{DIAGRAM:radioactive-decay}}
 

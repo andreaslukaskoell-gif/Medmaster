@@ -393,7 +393,9 @@ Klinisch relevant:
         "Geschwindigkeitskonstante",
         "Enzymkinetik",
       ],
-      content: `## Reaktionsgeschwindigkeit
+      content: `Ob eine Reaktion thermodynamisch möglich ist, sagt noch nichts darüber aus, wie schnell sie abläuft. Die Reaktionskinetik beantwortet genau diese Frage — und ist damit die Grundlage für das Verständnis von Enzymwirkung, Medikamentenabbau und Haltbarkeit.
+
+## Reaktionsgeschwindigkeit
 
 Warum baut die Leber Alkohol mit konstanter Rate ab, während Medikamente exponentiell aus dem Blut verschwinden? Die Antwort liegt in der Reaktionskinetik. Die **Reaktionsgeschwindigkeit v** beschreibt, wie schnell sich Konzentrationen mit der Zeit ändern:
 
@@ -690,7 +692,9 @@ Die **Halbwertszeit t₁/₂** ist die Zeit, in der die Konzentration auf die H�
         "Michaelis-Konstante",
         "Guldberg-Waage",
       ],
-      content: `## Das dynamische Gleichgewicht
+      content: `Viele chemische Reaktionen laufen nicht bis zur vollständigen Umsetzung der Edukte, sondern stellen sich auf einen Gleichgewichtszustand ein. Dieses Konzept erklärt, warum Puffer funktionieren, wie der Körper den Blut-pH reguliert und weshalb Enzyme ihre Substrate nie vollständig umsetzen.
+
+## Das dynamische Gleichgewicht
 
 Sauerstoffabgabe im Gewebe, Pufferwirkung im Blut, Enzym-Substrat-Bindung — all diese Prozesse beruhen auf chemischen Gleichgewichten. Viele chemische Reaktionen sind reversibel: Die Produkte können wieder zu Edukten zurückreagieren. Man schreibt dies mit einem Doppelpfeil:
 
@@ -1002,7 +1006,9 @@ Wäre die Reaktion endotherm (ΔH > 0), würde K_c mit steigender Temperatur zun
       imageUrl: "/images/bms/ch-chemische-reaktionen.jpg",
       imageCaption:
         "Abb.: Le Chatelier-Prinzip und Gleichgewichtsverschiebung (OpenStax, CC BY 4.0)",
-      content: `## Das Prinzip von Le Chatelier
+      content: `Wenn ein chemisches Gleichgewicht einmal eingestellt ist, bleibt es nicht zwingend dort stehen. Temperatur, Druck und Konzentrationsänderungen können das Gleichgewicht verschieben — und genau dieses Verhalten beschreibt eines der nützlichsten Prinzipien der Chemie.
+
+## Das Prinzip von Le Chatelier
 
 Wie steuert der Körper den Blut-pH, obwohl ständig Säuren und Basen anfallen? Die Antwort liefert das Prinzip von Le Chatelier. Das **Prinzip von Le Chatelier** (auch: Prinzip des kleinsten Zwangs, 1884) lautet:
 
@@ -1297,7 +1303,9 @@ Eisenkatalysator: Der Katalysator beeinflusst weder die Gleichgewichtslage noch 
         "Delta-H",
         "Delta-S",
       ],
-      content: `## Enthalpie (ΔH) — Wärme bei konstantem Druck
+      content: `Die Thermodynamik beantwortet die grundlegendste Frage der Chemie: Warum laufen manche Reaktionen von selbst ab, andere aber nicht? Drei Größen — Enthalpie, Entropie und Gibbs-Energie — bilden zusammen das Werkzeug, das jede Reaktion thermodynamisch einordnet.
+
+## Enthalpie (ΔH) — Wärme bei konstantem Druck
 
 Warum kühlt ein Kältepack, obwohl kein Strom fließt? Warum kann dein Körper aus einfachen Aminosäuren riesige Proteine aufbauen, obwohl das thermodynamisch „bergauf" geht? Drei Größen liefern die Antwort: Enthalpie, Entropie und Gibbs-Energie. Wer sie versteht, versteht die Triebkraft hinter jeder Reaktion — von der Verbrennung im Bunsenbrenner bis zur ATP-Synthese in der Mitochondrienmembran.
 

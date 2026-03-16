@@ -16,7 +16,9 @@ export const chemKapOrganisch: Kapitel = {
       title: "Kohlenwasserstoffe — Alkane, Alkene, Alkine",
       imageUrl: "/images/bms/ch-kovalente-bindung.jpg",
       imageCaption: "Abb.: Kovalente Bindungen in organischen Molekülen (OpenStax, CC BY 4.0)",
-      content: `## Alkane — gesättigte Kohlenwasserstoffe
+      content: `Kohlenwasserstoffe sind die einfachsten organischen Verbindungen — sie bestehen ausschließlich aus Kohlenstoff und Wasserstoff. Ihre Struktur und Nomenklatur bilden das Fundament, auf dem die gesamte organische Chemie aufbaut.
+
+## Alkane — gesättigte Kohlenwasserstoffe
 
 Die organische Chemie beschäftigt sich mit Verbindungen des Kohlenstoffs, und die einfachsten unter ihnen sind die Alkane. Ihre allgemeine Formel lautet CₙH₂ₙ₊₂. In einem Alkan sind sämtliche Kohlenstoffatome über Einfachbindungen miteinander verknüpft — ausschließlich σ-Bindungen, die durch frontale Orbitalüberlappung entstehen. Da keine weiteren Bindungspartner mehr aufgenommen werden können, bezeichnet man Alkane als gesättigt. Jedes C-Atom ist sp³-hybridisiert, was eine tetraederförmige Geometrie mit einem Bindungswinkel von 109,5° zur Folge hat.
 
@@ -319,7 +321,9 @@ In der Atemgasanalytik gelten Kohlenwasserstoffe wie Ethan und Pentan als Biomar
       title: "Funktionelle Gruppen der Organik",
       imageUrl: "/images/bms/ch-dehydratation-hydrolyse.jpg",
       imageCaption: "Abb.: Dehydratation und Hydrolyse organischer Moleküle (OpenStax, CC BY 4.0)",
-      content: `## Alkohole (−OH, Hydroxylgruppe)
+      content: `Funktionelle Gruppen bestimmen die chemischen Eigenschaften organischer Moleküle. In diesem Unterkapitel lernst du die wichtigsten Gruppen kennen — von Alkoholen über Aldehyde und Ketone bis zu Carbonsäuren und Estern — und ihre Bedeutung für Biochemie und Pharmakologie.
+
+## Alkohole (−OH, Hydroxylgruppe)
 
 {{DIAGRAM:functional-groups}}
 
@@ -591,7 +595,7 @@ Amine entstehen formal durch schrittweisen Ersatz der Wasserstoffatome im Ammoni
 - **Sekundäre Amine** (R₂NH): zwei Reste, z. B. Dimethylamin ((CH₃)₂NH)
 - **Tertiäre Amine** (R₃N): drei Reste, z. B. Trimethylamin ((CH₃)₃N)
 
-Das freie Elektronenpaar am Stickstoff macht alle Amine zu **Basen** — sie können ein Proton aufnehmen: R–NH₂ + H₂O ⇌ R–NH₃⁺ + OH⁻. Aliphatische Amine (pKb ≈ 3–4) sind stärkere Basen als Ammoniak, weil der +I-Effekt der Alkylgruppen die Elektronendichte am N erhöht. Aromatische Amine wie Anilin (C₆H₅–NH₂) sind dagegen schwächere Basen (pKb ≈ 9,4), weil das Elektronenpaar ins aromatische π-System delokalisiert wird. Biogene Amine spielen eine zentrale Rolle als Neurotransmitter: Dopamin, Serotonin, Histamin und Adrenalin sind allesamt Amine.
+Das freie Elektronenpaar am Stickstoff macht alle Amine zu **Basen** — sie können ein Proton aufnehmen: R–NH₂ + H₂O ⇌ R–NH₃⁺ + OH⁻. Aliphatische Amine (nicht-aromatische, kettenförmige Amine; pKb ≈ 3–4) sind stärkere Basen als Ammoniak, weil der +I-Effekt (induktiver Elektronenschub durch Alkylgruppen) die Elektronendichte am N erhöht. Aromatische Amine wie Anilin (C₆H₅–NH₂) sind dagegen schwächere Basen (pKb ≈ 9,4), weil das Elektronenpaar ins aromatische π-System delokalisiert wird. Biogene Amine spielen eine zentrale Rolle als Neurotransmitter: Dopamin, Serotonin, Histamin und Adrenalin sind allesamt Amine.
 
 {{DIAGRAM:amino-acid-structure}}
 
@@ -1016,7 +1020,9 @@ Beispiele: ACE-Hemmer (kompetitiv), Statine (kompetitiv an HMG-CoA-Reduktase), P
       title: "Kohlenhydrate — Mono-, Di- und Polysaccharide",
       imageUrl: "/images/bms/ch-kohlenhydrate.jpg",
       imageCaption: "Abb.: Mono-, Di- und Polysaccharide im Vergleich (OpenStax, CC BY 4.0)",
-      content: `## Monosaccharide — die einfachsten Zucker
+      content: `Kohlenhydrate liefern den Großteil der Energie für den menschlichen Stoffwechsel und sind zentrale Bausteine von Zellwänden, Glykoproteinen und Nukleinsäuren. Ihre Chemie reicht von einfachen Zuckern bis zu riesigen Polysacchariden.
+
+## Monosaccharide — die einfachsten Zucker
 
 Kohlenhydrate gehören neben Lipiden und Proteinen zu den drei Hauptgruppen der Biomoleküle. Ihre allgemeine Summenformel Cₙ(H₂O)ₙ erklärt den historischen Namen „Kohlen-Hydrate", obwohl es sich chemisch nicht um Hydrate des Kohlenstoffs handelt. Die einfachsten Vertreter sind die **Monosaccharide** — Polyhydroxyaldehyde (Aldosen) oder Polyhydroxyketone (Ketosen), die sich nicht weiter hydrolysieren lassen.
 
@@ -1804,7 +1810,9 @@ Gehirn, Herzmuskel und Skelettmuskel können Ketonkörper als alternatives Subst
         "DNA-Reparatur",
         "Phosphodiesterbindung",
       ],
-      content: `## Nukleotid-Aufbau
+      content: `DNA und RNA speichern und übermitteln die genetische Information aller Lebewesen. Ihre Chemie — vom Nukleotid-Baustein bis zur Doppelhelix — ist Voraussetzung für das Verständnis von Genetik, Molekularbiologie und moderner Diagnostik (z. B. PCR).
+
+## Nukleotid-Aufbau
 
 Die Erbinformation jedes Lebewesens ist in Nukleinsäuren gespeichert — langen Kettenmolekülen, deren Grundbausteine die **Nukleotide** sind. Jedes Nukleotid besteht aus drei Komponenten: einer **Stickstoffbase** (Purin oder Pyrimidin), einem **Pentosezucker** (Ribose bei RNA, 2'-Desoxyribose bei DNA — letzterer fehlt die OH-Gruppe an C2') und einer oder mehreren **Phosphatgruppen**. Ohne Phosphat spricht man von einem **Nukleosid** (Base + Zucker), mit Phosphat von einem **Nukleotid**. **ATP** (Adenosin-Triphosphat), das universelle Energietransportmolekül der Zelle, ist nichts anderes als ein Nukleotid mit drei Phosphatresten — die Hydrolyse der β-γ-Phosphorsäureanhydridbindung setzt ΔG°' ≈ −30,5 kJ/mol frei.
 

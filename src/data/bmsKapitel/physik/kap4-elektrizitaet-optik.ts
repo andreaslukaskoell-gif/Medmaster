@@ -25,7 +25,9 @@ export const physKapElektrizitaet: Kapitel = {
         "Membranpotential",
         "Gelelektrophorese",
       ],
-      content: `## Elektrische Ladung
+      content: `Warum hält ein Salzgitter zusammen, warum strömen Ionen durch Kanäle, und wie entsteht das EKG-Signal? Hinter all dem stehen elektrische Kräfte — die stärkste der vier Grundkräfte auf atomarer Skala.
+
+## Elektrische Ladung
 
 Jede Wechselwirkung in Chemie und Biologie geht letztlich auf elektrische Ladungen zurück. Elektrische Ladung ist eine fundamentale, unveränderliche Eigenschaft der Materie. Es gibt genau zwei Arten: **positive Ladung** (getragen von Protonen) und **negative Ladung** (getragen von Elektronen). Das Grundprinzip der Elektrostatik lautet: Gleichnamige Ladungen stoßen sich ab, ungleichnamige Ladungen ziehen sich an.
 
@@ -277,7 +279,9 @@ Das Membranpotential (−70 mV über ~7 nm Membrandicke) entspricht einem elektr
         "BIA",
         "Wechselstromwiderstand",
       ],
-      content: `## Elektrischer Strom
+      content: `Vom Aktionspotential in der Nervenzelle bis zum Stromstoß eines Defibrillators — fließende Ladungen bestimmen, wie Signale weitergegeben und Therapien durchgeführt werden.
+
+## Elektrischer Strom
 
 Ohne Stromfluss keine Nervenleitung, kein EKG, keine Defibrillation. **Elektrischer Strom I** ist der gerichtete Fluss elektrischer Ladungsträger. Die Stromstärke ist definiert als die pro Zeiteinheit durch einen Querschnitt fließende Ladung:
 
@@ -594,7 +598,9 @@ Stromweg ist entscheidend: Hand-zu-Hand-Pfad (durch Thorax/Herz) ist lebensgefä
         "Wheatstone-Brücke",
         "Spannungsteiler",
       ],
-      content: `## Grundlegende Schaltungstypen
+      content: `Ob Defibrillator, EKG-Ableitung oder Zellmembran — elektrische Schaltungen bestimmen, wie Ströme verteilt und Signale gefiltert werden. Zwei Grundprinzipien reichen aus, um all diese Systeme zu verstehen.
+
+## Grundlegende Schaltungstypen
 
 Ein Defibrillator rettet Leben, indem er einen Kondensator in Millisekunden über den Thorax entlädt. Ein EKG misst Herzströme über präzise Spannungsteiler. Die Zellmembran filtert Signale wie ein RC-Glied. Hinter all diesen Anwendungen stehen zwei einfache Grundprinzipien: Reihen- und Parallelschaltung.
 
@@ -958,7 +964,9 @@ Erreicht die Depolarisation das Schwellenpotential (~−55 mV), öffnen sich spa
         "TMS",
         "Hall-Effekt",
       ],
-      content: `## Grundlagen des Magnetismus
+      content: `Magnetfelder durchdringen den Körper, ohne Gewebe zu schädigen — das macht sie zum idealen Werkzeug für die bildgebende Diagnostik. Die Physik dahinter beginnt bei einer simplen Beobachtung: Wo Strom fließt, entsteht ein Magnetfeld.
+
+## Grundlagen des Magnetismus
 
 Die MRT-Bildgebung, das stärkste diagnostische Werkzeug der modernen Medizin, basiert vollständig auf Magnetismus und elektromagnetischer Induktion. Magnetismus entsteht durch bewegte elektrische Ladungen — jeder elektrische Strom erzeugt ein Magnetfeld und umgekehrt. Diese Kopplung durchzieht die gesamte Medizintechnik: vom EKG-Ableitsystem über Induktionsherde in der Sterilisation bis zur MRT-Diagnostik.
 
@@ -1451,7 +1459,9 @@ F = q·v·B = 1,6×10⁻¹⁹ × 0,5 × 3 = **2,4×10⁻¹⁹ N**. Dieser winzig
         "Brechkraft",
         "Dioptrie",
       ],
-      content: `## Reflexionsgesetz
+      content: `Warum leuchtet ein Endoskop um Ecken, und wie korrigiert eine Brille unscharfes Sehen? Beide Antworten führen auf zwei grundlegende Wellenphänomene zurück: Reflexion und Brechung.
+
+## Reflexionsgesetz
 
 Endoskopie, Brillen, Laserchirurgie — die gesamte medizinische Optik baut auf zwei Grundgesetzen auf: Reflexion und Brechung. Wenn Licht auf eine glatte Oberfläche trifft, wird es reflektiert. Das **Reflexionsgesetz** lautet:
 
@@ -2058,7 +2068,9 @@ Eine nur 96 nm dicke MgF₂-Schicht eliminiert die Reflexion bei 530 nm nahezu v
         "CCD-Sensor",
         "Glasfaser",
       ],
-      content: `## Optische Instrumente und Mikroskopie
+      content: `Vom einfachen Vergrößerungsglas bis zum Elektronenmikroskop — optische Instrumente erweitern das menschliche Sehvermögen um Größenordnungen. Für die Medizin sind sie unverzichtbar.
+
+## Optische Instrumente und Mikroskopie
 
 Ein Pathologe beugt sich über das Lichtmikroskop und mustert eine Gewebeprobe aus einer Magenbiopsie — 400-fache Vergrößerung, H&E-Färbung, verdächtige Zellkerne. Gleichzeitig nutzt der Gastroenterologe ein Videoendoskop, um die nächste Läsion per Glasfaserlicht auszuleuchten. Beide Instrumente folgen denselben physikalischen Grundprinzipien: Brechung, Vergrößerung und Auflösungsgrenzen.
 
@@ -2365,7 +2377,9 @@ Kinetische Energie: E = eU = 1,6·10⁻¹⁴ J. Impuls: p = √(2mE) = √(2 · 
         "Brillenrezept",
         "Dioptrie",
       ],
-      content: `## Anatomie und Optik des normalen Auges
+      content: `Kurzsichtigkeit, Weitsichtigkeit, Grauer Star — fast jeder Mensch hat im Laufe seines Lebens mit optischen Fehlfunktionen des Auges zu tun. Die Physik dahinter ist überraschend einfach.
+
+## Anatomie und Optik des normalen Auges
 
 Das menschliche Auge ist ein optisches Hochleistungssystem mit ~60 Dioptrien Brechkraft — und ein MedAT-Dauerbrenner. Es besteht optisch aus mehreren brechenden Flächen:
 - **Hornhaut (Kornea)**: liefert etwa 2/3 der gesamten Brechkraft (~43 dpt). Ihre stark gewölbte Vorderfläche ist der Hauptbrechungsort.

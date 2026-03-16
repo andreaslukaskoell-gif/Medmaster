@@ -202,7 +202,9 @@ Dieses Konzept macht das PSE zu einem universellen Nachschlagewerk für stöchio
         "Neutralisation",
         "Verbrennungsreaktion",
       ],
-      content: `## Chemische Reaktionsgleichungen
+      content: `Wer das Mol-Konzept beherrscht, kann den nächsten Schritt gehen: chemische Reaktionen quantitativ beschreiben. Dafür braucht man ausgeglichene Reaktionsgleichungen — sie zeigen, in welchen Verhältnissen Stoffe miteinander reagieren.
+
+## Chemische Reaktionsgleichungen
 
 Antoine Lavoisier formulierte 1789 ein Prinzip, das die gesamte quantitative Chemie trägt: **Bei einer chemischen Reaktion geht kein Atom verloren und keines kommt hinzu.** Dieses Gesetz der Massenerhaltung hat eine unmittelbare Konsequenz für chemische Gleichungen — auf beiden Seiten des Reaktionspfeils muss exakt die gleiche Anzahl jeder Atomsorte stehen. Eine Gleichung, die diese Bedingung erfüllt, heißt **ausgeglichen**.
 

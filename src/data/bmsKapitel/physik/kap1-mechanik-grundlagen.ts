@@ -1178,12 +1178,9 @@ Klinisches Beispiel 3 — Injektion und Venenpunktion: Um eine Kanüle in eine V
         "Kraftstoß",
         "Herzarbeit",
       ],
-      content: `
-
+      content: `Ein Sturz aus zwei Metern Höhe setzt über 1000 Joule Energie frei — genug, um Knochen zu brechen. Woher kommt diese Energie, und warum kann sie nicht einfach verschwinden? Die Antwort sind Erhaltungssätze.
 
 ## Erhaltungssätze — Energie, Impuls, Drehimpuls
-
-
 
 Erhaltungssätze gehören zu den tiefsten Prinzipien der Physik. Sie besagen, dass bestimmte physikalische Größen in einem **abgeschlossenen System** (kein Austausch mit der Umgebung) konstant bleiben — unabhängig von den internen Vorgängen. Die drei wichtigsten Erhaltungssätze der Mechanik sind: Energieerhaltung, Impulserhaltung und Drehimpulserhaltung.
 
@@ -1281,11 +1278,13 @@ Der Drehimpuls ist das rotatorische Gegenstück zum linearen Impuls. Er beschrei
 
 **L = I · ω**
 
+Der Drehimpuls eines rotierenden Körpers ist das Produkt aus seinem Trägheitsmoment und seiner Winkelgeschwindigkeit — je mehr Masse weit von der Achse entfernt liegt und je schneller die Drehung, desto größer der Drehimpuls.
+
 Dabei ist I das **Trägheitsmoment** (Widerstand gegen Drehbeschleunigung, Einheit: kg·m²) und ω die **Winkelgeschwindigkeit** (rad/s). Das Trägheitsmoment hängt nicht nur von der Masse ab, sondern entscheidend davon, wie weit die Masse von der Drehachse entfernt ist (I = Σmᵢ·rᵢ²).
 
 **Drehimpulserhaltung** erklärt den berühmten Pirouetteneffekt: Eine Eiskunstläuferin dreht sich langsam mit ausgestreckten Armen. Dann zieht sie die Arme eng an den Körper — ihr Trägheitsmoment I sinkt dramatisch (die Masse rückt näher an die Drehachse). Da der Drehimpuls L = I·ω erhalten bleiben muss und I kleiner wird, muss ω proportional steigen. Das Ergebnis: Sie dreht sich plötzlich viel schneller, ohne zusätzlichen Antrieb. Streckt sie die Arme wieder aus, wird sie sofort langsamer. Die zusätzliche Rotationsenergie stammt aus der Muskelarbeit gegen die Zentrifugalkraft beim Einziehen der Arme.
 
-**Rotationsenergie:** E_rot = ½·I·ω² — analog zur kinetischen Energie ½·m·v².
+**Rotationsenergie:** E_rot = ½·I·ω² — die Bewegungsenergie eines rotierenden Körpers, analog zur kinetischen Energie ½·m·v² bei geradliniger Bewegung.
 
 > **Merke:** Die Energieerhaltung ist das universellste Prinzip der Physik — Energie kann weder erzeugt noch zerstört, sondern nur umgewandelt werden.
 

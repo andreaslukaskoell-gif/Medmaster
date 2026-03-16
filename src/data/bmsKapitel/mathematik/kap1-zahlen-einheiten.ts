@@ -25,7 +25,9 @@ export const mathKapZahlen: Kapitel = {
         "medizinische Größenordnungen",
         "pH-Wert Exponenten",
       ],
-      content: `## Grunddefinition und positive Exponenten
+      content: `Medikamentendosen im Nanogrammbereich, Zellzahlen in Billionenhöhe, Virusgrößen im Millionstel-Millimeter-Bereich — ohne Zehnerpotenzen wären diese Werte weder handhabbar noch vergleichbar. Für den MedAT ist sicheres Rechnen mit Zehnerpotenzen Pflicht.
+
+## Grunddefinition und positive Exponenten
 
 Unter einer **Zehnerpotenz** versteht man einen Ausdruck 10ⁿ, bei dem die Zahl 10 genau **n-mal** mit sich selbst multipliziert wird. Die Zahl **n** heißt **Exponent** (Hochzahl) und gibt an, wie oft die 10 als Faktor vorkommt.
 
@@ -342,7 +344,9 @@ Zusammenfassend ermöglichen Zehnerpotenzen das schnelle Abschätzen von Verhäl
         "Präfix-Umrechnung",
         "Dosierungsfehler",
       ],
-      content: `## Die Systematik der SI-Präfixe
+      content: `Ob Milligramm auf dem Rezept oder Nanomol im Laborbefund — SI-Präfixe sind die Kurzsprache der Medizin. Eine Verwechslung von mg und µg bedeutet Faktor 1000 Unterschied und kann letal enden.
+
+## Die Systematik der SI-Präfixe
 
 **Um Präfixe sicher zu nutzen,** brauchst du zuerst die **Systematik**: Welche Zeichen gibt es, und in welcher Reihenfolge? **Dafür** die Grundregel.
 
@@ -691,7 +695,9 @@ Patientensicherheit: Die WHO und die Joint Commission listen "dangerous abbrevia
         "Avogadro-Zahl",
         "Halbwertszeit",
       ],
-      content: `## Definition und Normalform
+      content: `Im Labor, in der Pharmakologie und in der Zellbiologie arbeitet man ständig mit Zahlen, die entweder winzig klein oder riesig groß sind. Die wissenschaftliche Notation bringt sie alle in ein einheitliches, vergleichbares Format.
+
+## Definition und Normalform
 
 **Um mit der wissenschaftlichen Notation zu rechnen,** brauchst du zuerst die **Definition** und die **normalisierte Form**. **Dafür** die feste Konvention.
 
@@ -1048,7 +1054,9 @@ Klinisch bedeutsam: Der arteriell gemessene pH liegt im Blut strikt bei 7,35–7
         "Alveolenfläche",
         "Deziliter",
       ],
-      content: `## Längeneinheiten — Die vollständige Hierarchie
+      content: `Vom Nanometer eines Virus bis zum Meter des Patienten — Längeneinheiten sicher umzurechnen gehört zum klinischen Alltag und wird im MedAT regelmäßig geprüft.
+
+## Längeneinheiten — Die vollständige Hierarchie
 
 **Um Längen sicher umzurechnen,** brauchst du die **metrische Hierarchie**. **Dafür** die Grundregel: Jede **Längeneinheit** unterscheidet sich von der nächsten um den **Faktor 10**.
 
@@ -1340,7 +1348,9 @@ Lösung: 1 dL = 100 mL = 0,1 L → 1 L = 10 dL → 14 g/dL × 10 = 140 g/L. Dies
         "Sexagesimalsystem",
         "Traumamechanismus",
       ],
-      content: `## Zeiteinheiten — Das nicht-dezimale System
+      content: `Halbwertszeiten in Stunden, Infusionsdauer in Minuten, EKG-Intervalle in Millisekunden — Zeiteinheiten folgen einem eigenen, nicht-dezimalen System, das beim Umrechnen besondere Aufmerksamkeit erfordert.
+
+## Zeiteinheiten — Das nicht-dezimale System
 
 **Um Zeitintervalle sicher umzurechnen,** brauchst du das **60er-System**. **Anders** als Länge oder Masse folgen Zeiteinheiten keinem Dezimalsystem. **Dafür** die festen Umrechnungen.
 
@@ -1633,7 +1643,9 @@ Lösung: v = √(2 × g × h) = √(2 × 10 × 3) = √60 ≈ 7,7 m/s = 7,7 × 3
         "Dimensionsanalyse",
         "abgeleitete Einheiten",
       ],
-      content: `## Die sieben SI-Grundeinheiten
+      content: `Meter, Kilogramm, Sekunde — das SI-System (Système International d'Unités, das international verbindliche Einheitensystem) bildet das Fundament aller physikalischen und medizinischen Messungen. Wer die Grundeinheiten und ihre abgeleiteten Größen kennt, kann jede Einheitenumrechnung im MedAT systematisch lösen.
+
+## Die sieben SI-Grundeinheiten
 
 **Um das SI-System zu nutzen,** starten wir mit den **sieben Grundeinheiten**. **Sie sind so gewählt,** dass sich alle anderen physikalischen Einheiten daraus ableiten lassen.
 

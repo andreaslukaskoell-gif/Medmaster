@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { CheckCircle2, XCircle, RotateCcw, Lightbulb, BookOpen } from "lucide-react";
 import type { SelfTestQuestion } from "../../data/bmsKapitel/types";
-import { stripMarkdownAsterisks } from "../../utils/formatExplanation";
+import { stripMarkdownAsterisks, stripLatex } from "../../utils/formatExplanation";
 import { playCorrectAnswerSound } from "../../lib/sounds";
 import { useQuizSessionStore } from "../../store/quizSessionStore";
 import { CorrectBurst, WrongShake, StreakConfetti } from "../ui/AnswerFeedback";
@@ -121,7 +121,7 @@ export const QuizQuestion = React.memo(function QuizQuestion({
               {questionNumber}.
             </span>
             <p className="text-sm font-semibold text-[var(--text-primary)] leading-relaxed flex-1">
-              {question.question}
+              {stripLatex(question.question)}
             </p>
           </div>
 
@@ -158,7 +158,7 @@ export const QuizQuestion = React.memo(function QuizQuestion({
                     <span className="font-bold mr-3 text-sm shrink-0">
                       {String.fromCharCode(65 + oi)})
                     </span>
-                    <span className="text-sm break-words">{option}</span>
+                    <span className="text-sm break-words">{stripLatex(option)}</span>
                     {showAsCorrect && (
                       <CheckCircle2 className="w-5 h-5 text-green-600 dark:text-green-400 float-right mt-0.5 shrink-0" />
                     )}

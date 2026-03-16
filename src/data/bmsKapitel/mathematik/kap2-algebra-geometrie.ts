@@ -634,7 +634,7 @@ Patient mit [HCO₃⁻] = 12 mmol/L und pCO₂ = 40 mmHg. pH = 6,1 + lg(12/1,2) 
       ],
       content: `Die Körperoberfläche, die Wurfparabel eines Medikamentspiegels, die Bremsweg-Formel — quadratische Zusammenhänge begegnen dir im MedAT häufiger als du denkst.
 
-**Idee:** Binomische Formeln fassen (a±b)² und (a+b)(a−b) in feste Muster; **der mittlere Term 2ab** wird oft vergessen. Quadratische Gleichungen: **Diskriminante D** entscheidet über Anzahl der Lösungen; **Scheitelpunkt** einer Parabel = Optimum; **Vieta** liefert aus Summe und Produkt der Lösungen die Koeffizienten.
+**Idee:** Binomische Formeln fassen (a±b)² und (a+b)(a−b) in feste Muster; **der mittlere Term 2ab** wird oft vergessen. Quadratische Gleichungen: **Diskriminante D** (der Wert b²−4ac unter der Wurzel, der die Anzahl der Lösungen bestimmt) entscheidet über Anzahl der Lösungen; **Scheitelpunkt** einer Parabel = Optimum; **Vieta** liefert aus Summe und Produkt der Lösungen die Koeffizienten.
 
 **Verfahren — Schrittfolge:** (1) **Binome:** (a+b)² = a²+2ab+b²; (a−b)² = a²−2ab+b²; (a+b)(a−b) = a²−b². (2) **Quadratische Gleichung:** D = b²−4ac; x = (−b±√D)/(2a); D>0: 2 Lösungen, D=0: 1, D<0: keine. (3) **Scheitelpunkt:** x_S = −b/(2a), y_S = f(x_S). (4) **Vieta** (x²+px+q=0): x₁+x₂ = −p, x₁×x₂ = q.
 
@@ -762,7 +762,7 @@ Die Vieta'schen Formeln ermöglichen auch die Prüfung von Ergebnissen: Summe un
 
 ## Rechenbeispiele
 
-**Beispiel 1 — BSA-Berechnung (Körperoberfläche nach Mosteller):**
+**Beispiel 1 — BSA-Berechnung (BSA = Body Surface Area, Körperoberfläche; nach Mosteller):**
 BSA = Wurzel aus (Größe [cm] × Gewicht [kg] / 3600). Patient: 180 cm, 75 kg. BSA = Wurzel aus (180 × 75 / 3600) = Wurzel aus (13500/3600) = Wurzel aus 3,75 = **1,94 m²**. Zytostatikum 150 mg/m²: Dosis = 150 × 1,94 = **291 mg**.
 
 **Beispiel 2 — Wundfläche und Skalierung (dritte binomische Formel):**
@@ -915,7 +915,9 @@ Wirksamkeit E(d) = − 0,5 d² + 10d − 12 (d = Dosis in mg). Scheitelpunkt: d_
         "Winkelfunktion",
         "Umrechnung Grad Bogenmaß",
       ],
-      content: `## Sinus, Kosinus und Tangens am rechtwinkligen Dreieck
+      content: `Kraftzerlegung in der Biomechanik, Vektorkomponenten bei EKG-Ableitungen, Winkelberechnungen am Skelett — Trigonometrie (die Lehre von den Beziehungen zwischen Winkeln und Seitenlängen in Dreiecken) ist die mathematische Grundlage hinter all diesen Anwendungen.
+
+## Sinus, Kosinus und Tangens am rechtwinkligen Dreieck
 
 **Idee:** In jedem rechtwinkligen Dreieck stehen die Seitenlängen in einem festen Verhältnis zueinander, das nur vom Winkel abhängt — nicht von der Größe des Dreiecks. Dieses Verhältnis beschreiben die drei trigonometrischen Funktionen Sinus, Kosinus und Tangens.
 
@@ -1512,7 +1514,9 @@ Die **Aortenklappenöffnungsfläche** (normal ~3–4 cm²) wird per Echokardiogr
         "Tumorvolummetrie",
         "Oberfläche-Volumen-Verhältnis",
       ],
-      content: `**Idee:** Volumen V = „Rauminhalt", Oberfläche O = „Hüllfläche". **Quader:** V = a×b×c (nicht 2(ab+ac+bc) — das ist O!). **Kugel:** V = (4/3)πr³, O = 4πr². **Zylinder:** V = πr²h, Mantel = 2πrh. **O/V-Verhältnis** bei Kugel = 3/r (kleine Körper = großes O/V).
+      content: `Infusionsbeutel, Spritzenvolumen, Tumorgrößen in der Bildgebung — dreidimensionale Berechnungen gehören zum medizinischen Alltag. Das Verhältnis von Oberfläche zu Volumen (O/V) erklärt zudem, warum Nanopartikel reaktiver sind als große Kristalle und warum Frühgeborene schneller auskühlen.
+
+**Idee:** Volumen V = „Rauminhalt", Oberfläche O = „Hüllfläche". **Quader:** V = a×b×c (nicht 2(ab+ac+bc) — das ist O!). **Kugel:** V = (4/3)πr³, O = 4πr². **Zylinder:** V = πr²h, Mantel = 2πrh. **O/V-Verhältnis** bei Kugel = 3/r (kleine Körper = großes O/V).
 
 **Verfahren — Schrittfolge:** (1) **Quader/Würfel:** V = a×b×c, O = 2(ab+ac+bc); Würfel V = a³, O = 6a². (2) **Zylinder:** V = πr²h, O = 2πr²+2πrh. (3) **Kugel:** V = (4/3)πr³, O = 4πr². (4) **Kegel:** V = (1/3)πr²h. (5) **Ellipsoid:** V ≈ (4/3)πabc (Herz).
 

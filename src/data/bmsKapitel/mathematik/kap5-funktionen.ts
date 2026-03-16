@@ -667,7 +667,7 @@ Jeder Parameter hat eine klare Bedeutung:
 - **Definitionsbereich**: D = ℝ (alle reellen Zahlen)
 - **Wertebereich**: W = (0, ∞) — stets positiv, keine Nullstellen
 - **y-Achsenabschnitt**: f(0) = a (da e⁰ = 1)
-- **Horizontale Asymptote**: y = 0 (für x → −∞ bei Wachstum, für x → +∞ bei Zerfall)
+- **Horizontale Asymptote** (Grenzlinie, der sich die Kurve beliebig nähert, sie aber nie erreicht): y = 0 (für x → −∞ bei Wachstum, für x → +∞ bei Zerfall)
 - **Besondere Eigenschaft**: (eˣ)' = eˣ — die e-Funktion ist ihre eigene Ableitung
 
 ---

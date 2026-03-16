@@ -23,7 +23,9 @@ export const physKapFluid: Kapitel = {
         "Herzhöhe",
         "hydraulische Presse",
       ],
-      content: `## Druck — der zentrale Begriff der Fluidmechanik
+      content: `Blutdruck, Hirnwasser, Beatmungsdruck — in der Medizin sind ruhende Flüssigkeiten allgegenwärtig. Ihre Physik lässt sich auf ein einziges Konzept zurückführen: **Druck**.
+
+## Druck — der zentrale Begriff der Fluidmechanik
 
 Jeder, der schon einmal tief getaucht ist, kennt das Druckgefühl auf den Ohren. Dieses alltägliche Phänomen führt direkt zum physikalischen Kernbegriff der Hydrostatik: dem **Druck**. Physikalisch ist Druck definiert als Kraft pro Fläche:
 
@@ -568,7 +570,9 @@ Auch bei Erwachsenen kann Surfactant-Mangel auftreten: Bei schwerem **ARDS** (Ac
         "Arteriosklerose",
         "Herzgeräusche",
       ],
-      content: `## Ideale Fluide und Volumenstrom
+      content: `Warum beschleunigt Blut an einer Stenose, und weshalb bilden sich Thromben in Aneurysmen? Die Antworten liefern vier Gleichungen, die gemeinsam das Strömungsverhalten in Gefäßen und Schläuchen beschreiben.
+
+## Ideale Fluide und Volumenstrom
 
 Blut fließt, Infusionen tropfen, Kontrastmittel wird injiziert — die Physik strömender Fluide begegnet Medizinerinnen und Medizinern täglich. Um diese Phänomene quantitativ zu beschreiben, startet man mit einem vereinfachten Modell: dem **idealen Fluid**. Es ist inkompressibel (konstante Dichte ρ), reibungsfrei (keine innere Reibung/Viskosität) und die Strömung ist stationär (zeitlich unveränderlich). Reale Fluide — insbesondere Blut — weichen von diesem Ideal ab, doch die grundlegenden Gesetze liefern erstaunlich gute Näherungen.
 

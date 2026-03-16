@@ -79,7 +79,7 @@ Die beiden klassischen Beispiele harmonischer Schwingungen unterscheiden sich fu
 
 **T = 2π · √(m/k)**
 
-Größere Masse → längere Periodendauer; steifere Feder (größeres k) → kürzere Periodendauer. Die Amplitude beeinflusst T nicht (**Isochronie**).
+Größere Masse → längere Periodendauer; steifere Feder (größeres k) → kürzere Periodendauer. Die Amplitude beeinflusst T nicht (**Isochronie**, Unabhängigkeit der Periodendauer von der Amplitude).
 
 **Fadenpendel** — Eine Masse an einem Faden der Länge l (Kleinwinkelnäherung sin θ ≈ θ für Winkel < 5°):
 
@@ -788,6 +788,8 @@ Die **Brechkraft des Auges** (~60 Dioptrien) entsteht hauptsächlich an der Horn
 Geht Licht vom optisch dichteren ins dünnere Medium (n₁ > n₂), wird es vom Lot weggebrochen. Mit steigendem Einfallswinkel wächst der Brechungswinkel, bis er 90° erreicht — der Strahl streift die Grenzfläche. Der zugehörige Einfallswinkel heißt **Grenzwinkel der Totalreflexion** α_G:
 
 **sin(α_G) = n₂ / n₁**
+
+Der Grenzwinkel ergibt sich aus dem Verhältnis der Brechungsindizes: Je dichter das erste Medium im Vergleich zum zweiten, desto kleiner der Grenzwinkel und desto leichter tritt Totalreflexion ein.
 
 Für alle Winkel α > α_G wird das Licht **vollständig reflektiert** — es dringt kein Strahl mehr ins zweite Medium. Dieses Phänomen heißt **Totalreflexion**.
 

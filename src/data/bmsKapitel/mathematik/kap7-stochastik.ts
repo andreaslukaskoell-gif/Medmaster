@@ -435,9 +435,11 @@ V(62,8) = 62⁸ ≈ **2,18 × 10¹⁴**. Nur Kleinbuchstaben: 26⁸ ≈ 2,09 × 
         "Baumdiagramm",
         "Binomialverteilung",
       ],
-      content: `## Grundbegriffe
+      content: `Wie wahrscheinlich ist ein falsch-positives Laborergebnis? Wie hoch ist das Risiko, dass mindestens eines von 20 Routinelabor-Ergebnissen zufällig auffällig ist? Wahrscheinlichkeitsrechnung liefert die Werkzeuge, um solche Fragen exakt zu beantworten.
 
-Das **Laplace-Experiment** ist ein Zufallsexperiment, bei dem alle möglichen Ergebnisse gleich wahrscheinlich sind (z.B. fairer Würfel, faire Münze).
+## Grundbegriffe
+
+Das **Laplace-Experiment** ist ein Zufallsexperiment, bei dem alle möglichen Ergebnisse **gleich wahrscheinlich** sind (z.B. fairer Würfel, faire Münze).
 
 - **Ergebnisraum Ω** (Omega): Menge aller möglichen Ergebnisse
   - Fairer Würfel: Ω = {1, 2, 3, 4, 5, 6}, |Ω| = 6
@@ -631,7 +633,7 @@ Dabei ist:
 - C(n,k) = Binomialkoeffizient (Anzahl der Wege)
 
 **Erwartungswert:** μ = n × p (mittlere Anzahl Erfolge)
-**Standardabweichung:** σ = √(n × p × (1−p))
+**Standardabweichung** (mittlere Streuung der Werte um den Erwartungswert)**:** σ = √(n × p × (1−p))
 
 {{DIAGRAM:probability-distribution}}
 
@@ -847,7 +849,9 @@ P(X=3) = 56 × 0,0507 × 0,0992 ≈ **0,281 ≈ 28,1%**. Erwartungswert: μ = 8 
         "Prävalenz",
         "Positiver prädiktiver Wert",
       ],
-      content: `## Bedingte Wahrscheinlichkeit
+      content: `Ein HIV-Schnelltest ist positiv — wie wahrscheinlich ist der Patient tatsächlich infiziert? Die Antwort hängt entscheidend von der Vortestwahrscheinlichkeit (Prävalenz) ab und erfordert das Bayes-Theorem. Dieses Kapitel liefert das Werkzeug, um solche diagnostischen Fragen korrekt zu beantworten.
+
+## Bedingte Wahrscheinlichkeit
 
 Die **bedingte Wahrscheinlichkeit** P(A|B) (sprich: "Wahrscheinlichkeit von A gegeben B") beschreibt die Wahrscheinlichkeit, dass A eintritt, unter der Voraussetzung, dass B bereits eingetreten ist.
 
@@ -874,7 +878,7 @@ P(A ∩ B) = P(A|B) × P(B) = P(B|A) × P(A)
 In einer Studie mit 500 Patienten: 100 haben Diabetes (D), 400 nicht. Von den 100 Diabetikern haben 60 einen HbA1c > 6,5% (H+). Von den 400 Nicht-Diabetikern haben 20 einen HbA1c > 6,5%.
 
 P(H+|D) = 60/100 = **0,60 = 60%** (Sensitivität des HbA1c-Tests für Diabetes).
-P(D|H+) = 60/(60+20) = 60/80 = **0,75 = 75%** (PPV — wer von den Positiven hat wirklich Diabetes).
+P(D|H+) = 60/(60+20) = 60/80 = **0,75 = 75%** (PPV, positiver prädiktiver Wert — wer von den Positiven hat wirklich Diabetes).
 
 Hier gilt: P(H+|D) = 60% ≠ P(D|H+) = 75%. Die Richtung der Bedingung ändert das Ergebnis fundamental.
 
@@ -899,8 +903,8 @@ P(A) = P(A|B1) × P(B1) + P(A|B2) × P(B2) + ... + P(A|Bn) × P(Bn)
 
 **Medizinisches Beispiel (Prävalenz und Test):**
 
-Krankheit K mit Prävalenz P(K) = 5% = 0,05.
-Test hat Sensitivität (richtig positiv) P(T+|K) = 0,90 und Spezifität P(T−|K̄) = 0,95.
+Krankheit K mit Prävalenz (Anteil der Erkrankten in der Bevölkerung) P(K) = 5% = 0,05.
+Test hat Sensitivität (Trefferquote bei Kranken) P(T+|K) = 0,90 und Spezifität (Trefferquote bei Gesunden) P(T−|K̄) = 0,95.
 Also P(T+|K̄) = 1 − 0,95 = 0,05 (falsch positiv).
 
 Totale Wahrscheinlichkeit für positiven Test:
