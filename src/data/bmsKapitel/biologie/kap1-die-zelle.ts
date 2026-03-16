@@ -1627,6 +1627,22 @@ Der **Nucleolus** ist der Ort der Ribosomenfabrikation — keine Membranstruktur
           difficulty: 3,
           tags: ["kernlokalisierungssignal", "nls", "kernimport"],
         },
+        {
+          question:
+            "Welche der folgenden Aussagen über den Zellkern sind richtig?\n\n1. Der Nucleolus ist der Ort der rRNA-Synthese und Ribosomen-Assemblierung\n2. Euchromatin ist stark verdichtet und transkriptionell inaktiv\n3. Die äußere Kernmembran ist mit dem rauen ER verbunden\n4. Kleine Moleküle unter ~40 kDa können frei durch Kernporen diffundieren\n5. Das Barr-Körperchen ist ein Beispiel für Euchromatin",
+          options: [
+            "Nur 1, 3 und 4",
+            "Nur 1, 2 und 5",
+            "Nur 2 und 3",
+            "Nur 1 und 4",
+            "Alle Aussagen sind richtig",
+          ],
+          correctIndex: 0,
+          explanation:
+            "Aussagen 1, 3 und 4 sind korrekt. Aussage 2 ist falsch — Euchromatin ist wenig verdichtet und transkriptionell aktiv; Heterochromatin ist stark verdichtet und inaktiv. Aussage 5 ist falsch — das Barr-Körperchen (inaktives X-Chromosom) ist ein Beispiel für Heterochromatin, nicht Euchromatin.",
+          difficulty: 2,
+          tags: ["typ-k", "zellkern", "chromatin", "nucleolus", "kernporen"],
+        },
       ],
     },
 
@@ -1889,6 +1905,22 @@ Die Schwesterchromatiden trennen sich in jeder haploiden Zelle. Ergebnis: **4 ha
           ],
           difficulty: 3,
           tags: ["g1-s-checkpoint", "cyclin-d", "cdk4", "rb", "e2f"],
+        },
+        {
+          question:
+            "Welche der folgenden Aussagen über Zellteilung sind richtig?\n\n1. In der Anaphase I der Meiose trennen sich homologe Chromosomen, nicht Schwesterchromatiden\n2. Crossing-over findet in der Prophase I statt und erzeugt neue Allelkombinationen\n3. Nach der Mitose entstehen 4 genetisch verschiedene Tochterzellen\n4. Non-disjunction in Meiose I betrifft alle 4 resultierenden Keimzellen\n5. Cyclin B/CDK1 kontrolliert den G1/S-Checkpoint des Zellzyklus",
+          options: [
+            "Nur 1 und 2",
+            "Nur 1, 2 und 4",
+            "Nur 2, 3 und 5",
+            "Nur 1, 4 und 5",
+            "Alle Aussagen sind richtig",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Aussagen 1, 2 und 4 sind korrekt. Aussage 3 ist falsch — nach der Mitose entstehen 2 genetisch identische Tochterzellen (4 genetisch verschiedene Zellen entstehen nach der Meiose). Aussage 5 ist falsch — Cyclin B/CDK1 kontrolliert den G2/M-Checkpoint; der G1/S-Checkpoint wird durch Cyclin D/CDK4 kontrolliert.",
+          difficulty: 3,
+          tags: ["typ-k", "zellteilung", "meiose", "mitose", "non-disjunction"],
         },
       ],
       altfrage: {

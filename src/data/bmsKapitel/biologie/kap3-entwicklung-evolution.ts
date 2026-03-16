@@ -685,6 +685,22 @@ Der Gründereffekt erklärt die erhöhte Häufigkeit bestimmter genetischer Erkr
           difficulty: 2,
           tags: ["genfluss", "migration", "homogenisierung", "artbildung"],
         },
+        {
+          question:
+            "Welche Aussagen zum Hardy-Weinberg-Gleichgewicht und zu Evolutionsfaktoren sind richtig?\n\n1. Das Hardy-Weinberg-Gleichgewicht setzt unter anderem eine unendlich große Population voraus.\n2. Gendrift ist in großen Populationen stärker als in kleinen.\n3. Der Flaschenhals-Effekt reduziert die genetische Vielfalt durch drastische Populationsverkleinerung.\n4. Genfluss homogenisiert Populationen genetisch und wirkt der Artbildung entgegen.\n5. Mutation ist die einzige gerichtete Kraft unter den Evolutionsfaktoren.",
+          options: [
+            "Nur 1 und 2",
+            "Nur 2 und 5",
+            "Nur 1, 3 und 4",
+            "Nur 3, 4 und 5",
+            "Alle Aussagen",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Aussagen 1, 3 und 4 sind korrekt. Hardy-Weinberg setzt u. a. eine unendlich große Population voraus (1). Der Flaschenhals-Effekt reduziert genetische Vielfalt drastisch (3). Genfluss homogenisiert Populationen und wirkt gegen Artbildung (4). Aussage 2 ist falsch: Gendrift ist in kleinen Populationen stärker. Aussage 5 ist falsch: Selektion ist die einzige gerichtete Kraft, Mutation ist zufällig.",
+          difficulty: 3,
+          tags: ["typ-k", "hardy-weinberg", "gendrift", "genfluss", "evolutionsfaktoren"],
+        },
       ],
     },
     {
@@ -1968,6 +1984,22 @@ Aus welchem Keimblatt welches Organ entsteht, ist prüfungsrelevant. Die folgend
           ],
           difficulty: 2,
           tags: ["somiten", "sklerotom", "myotom"],
+        },
+        {
+          question:
+            "Welche Aussagen zur Gastrulation und den Keimblättern sind richtig?\n\n1. Während der Gastrulation entstehen aus dem Epiblast die drei Keimblätter Ektoderm, Mesoderm und Endoderm.\n2. Das Nervensystem stammt vom Endoderm ab.\n3. Muskeln, Knochen und Nieren sind mesodermalen Ursprungs.\n4. Die Gastrulation findet in der dritten Entwicklungswoche statt.\n5. Das Epithel des Gastrointestinaltrakts und die Darmmuskulatur stammen beide vom Endoderm ab.",
+          options: [
+            "Nur 1 und 2",
+            "Nur 2 und 5",
+            "Nur 1, 3 und 4",
+            "Nur 1, 4 und 5",
+            "Alle Aussagen",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Aussagen 1, 3 und 4 sind korrekt. Alle drei Keimblätter entstehen aus dem Epiblast via Primitivstreifen (1). Muskeln, Knochen und Nieren sind mesodermale Derivate (3). Die Gastrulation erfolgt in Woche 3 (4). Aussage 2 ist falsch: Das Nervensystem stammt vom Ektoderm, nicht vom Endoderm. Aussage 5 ist falsch: Nur das Epithel des Darms ist endodermal, die Darmmuskulatur stammt vom Mesoderm.",
+          difficulty: 2,
+          tags: ["typ-k", "gastrulation", "keimblätter", "ektoderm", "mesoderm", "endoderm"],
         },
       ],
     },
