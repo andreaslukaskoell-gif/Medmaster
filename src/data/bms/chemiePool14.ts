@@ -94,22 +94,6 @@ export const chemiePool14: Question[] = [
     ["Alkane", "Butan"]
   ),
   q(
-    "ch-pool-14-007",
-    KAP[0],
-    "Die Massenzahl A eines Isotops ist definiert als:",
-    [
-      "nur Protonenzahl",
-      "Protonenzahl + Neutronenzahl",
-      "nur Neutronenzahl",
-      "Elektronenzahl",
-      "Ordnungszahl",
-    ],
-    1,
-    "A = Z + N (Protonen + Neutronen). Sie steht links oben beim Elementsymbol.",
-    "leicht",
-    ["Massenzahl", "Isotop"]
-  ),
-  q(
     "ch-pool-14-008",
     KAP[1],
     "Welcher Aggregatzustand hat Wasser bei 120 °C und Normaldruck?",

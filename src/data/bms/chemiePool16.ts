@@ -42,16 +42,6 @@ export const chemiePool16: Question[] = [
     ["Neutronen", "Natrium"]
   ),
   q(
-    "ch-pool-16-002",
-    KAP[1],
-    "Die Einheit der Gaskonstante R ist:",
-    ["J · mol", "J/(mol · K)", "mol/(J · K)", "Pa · L", "K/J"],
-    1,
-    "Aus pV = nRT folgt R = pV/(nT) → J/(mol·K).",
-    "mittel",
-    ["Gaskonstante"]
-  ),
-  q(
     "ch-pool-16-003",
     KAP[2],
     "Welche Verbindung hat eine hohe Schmelztemperatur und leitet in Schmelze den Strom?",
@@ -196,16 +186,6 @@ export const chemiePool16: Question[] = [
     ["Dipol", "Geometrie"]
   ),
   q(
-    "ch-pool-16-016",
-    KAP[3],
-    "Ein Reduktionsmittel wird bei der Reaktion:",
-    ["reduziert", "oxidiert", "nicht verändert", "neutralisiert", "zersetzt"],
-    1,
-    "Reduktionsmittel gibt Elektronen ab → wird oxidiert. Oxidationsmittel wird reduziert.",
-    "mittel",
-    ["Reduktionsmittel", "Redox"]
-  ),
-  q(
     "ch-pool-16-017",
     KAP[4],
     "Der pH einer Pufferlösung aus Essigsäure und Acetat liegt in der Nähe von:",
@@ -308,16 +288,6 @@ export const chemiePool16: Question[] = [
     "Die 3. Periode hat 8 Elemente (Na bis Ar). Ab 4. Periode mit Nebengruppen mehr.",
     "leicht",
     ["Periode", "Periodensystem"]
-  ),
-  q(
-    "ch-pool-16-026",
-    KAP[1],
-    "Ein ideales Gas hat bei 0 °C und 1 bar ein molares Volumen von etwa:",
-    ["22,4 L/mol", "8,31 L/mol", "0,082 L/mol", "1 L/mol", "6,02 L/mol"],
-    0,
-    "Unter Standardbedingungen: V_m ≈ 22,4 L/mol.",
-    "leicht",
-    ["molares Volumen", "STP"]
   ),
   q(
     "ch-pool-16-027",

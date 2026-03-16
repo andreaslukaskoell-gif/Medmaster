@@ -42,22 +42,6 @@ export const chemiePool12: Question[] = [
     ["Isotop", "Atombau"]
   ),
   q(
-    "ch-pool-12-002",
-    KAP[1],
-    "Was beschreibt das Gesetz von Charles?",
-    [
-      "p·V = const bei T = const",
-      "V/T = const bei p = const",
-      "p/T = const bei V = const",
-      "V·n = const",
-      "p+V = const",
-    ],
-    1,
-    "Charles: Bei konstantem Druck ist das Volumen proportional zur Temperatur (in Kelvin): V/T = const.",
-    "mittel",
-    ["Gasgesetze", "Charles"]
-  ),
-  q(
     "ch-pool-12-003",
     KAP[2],
     "Welche Verbindung enthält vorwiegend Ionenbindungen?",
@@ -68,22 +52,6 @@ export const chemiePool12: Question[] = [
     ["Ionenbindung"]
   ),
   q(
-    "ch-pool-12-004",
-    KAP[3],
-    "Was ist ein Reduktionsmittel?",
-    [
-      "Ein Stoff, der Elektronen aufnimmt",
-      "Ein Stoff, der Elektronen abgibt",
-      "Ein Katalysator",
-      "Ein Säure-Base-Partner",
-      "Ein Komplexbildner",
-    ],
-    1,
-    "Reduktionsmittel gibt Elektronen ab (wird oxidiert). Oxidationsmittel nimmt Elektronen auf.",
-    "mittel",
-    ["Redox", "Reduktionsmittel"]
-  ),
-  q(
     "ch-pool-12-005",
     KAP[4],
     "Welcher pH-Wert entspricht [H₃O⁺] = 10⁻¹¹ mol/L?",
@@ -92,16 +60,6 @@ export const chemiePool12: Question[] = [
     "pH = −log₁₀(10⁻¹¹) = 11. Die Lösung ist basisch.",
     "leicht",
     ["pH"]
-  ),
-  q(
-    "ch-pool-12-006",
-    KAP[5],
-    "Welche Summenformel haben Alkene?",
-    ["CₙH₂ₙ₊₂", "CₙH₂ₙ", "CₙH₂ₙ₋₂", "CₙHₙ", "CₙH₂ₙO"],
-    1,
-    "Alkene: mindestens eine C=C-Doppelbindung, CₙH₂ₙ. Alkane: CₙH₂ₙ₊₂; Alkine: CₙH₂ₙ₋₂.",
-    "leicht",
-    ["Alkene", "Summenformel"]
   ),
   q(
     "ch-pool-12-007",
@@ -120,16 +78,6 @@ export const chemiePool12: Question[] = [
     ["Quantenzahlen", "Orbital"]
   ),
   q(
-    "ch-pool-12-008",
-    KAP[1],
-    "Bei welcher Temperatur hat Wasser seine maximale Dichte?",
-    ["0 °C", "4 °C", "10 °C", "25 °C", "100 °C"],
-    1,
-    "Dichteanomalie des Wassers: Dichtemaximum bei 4 °C.",
-    "leicht",
-    ["Wasser", "Dichte"]
-  ),
-  q(
     "ch-pool-12-009",
     KAP[2],
     "Wasserstoffbrücken treten typischerweise auf zwischen:",
@@ -138,16 +86,6 @@ export const chemiePool12: Question[] = [
     "Wasserstoffbrücken: H an elektronegativem Atom (O, N, F) gebunden, Wechselwirkung mit anderem O/N/F.",
     "mittel",
     ["Wasserstoffbrücken"]
-  ),
-  q(
-    "ch-pool-12-010",
-    KAP[3],
-    "Bei exothermer Reaktion ist ΔH:",
-    ["positiv", "negativ", "null", "immer gleich ΔG", "unbestimmt"],
-    1,
-    "Exotherm = Wärme wird abgegeben → ΔH < 0. Endotherm → ΔH > 0.",
-    "leicht",
-    ["Enthalpie"]
   ),
   q(
     "ch-pool-12-011",
@@ -176,16 +114,6 @@ export const chemiePool12: Question[] = [
     ["Alkohol", "tertiär"]
   ),
   q(
-    "ch-pool-12-013",
-    KAP[0],
-    "Das Mol ist die Einheit für:",
-    ["Masse", "Stoffmenge", "Konzentration", "Druck", "Temperatur"],
-    1,
-    "Ein Mol (mol) ist die SI-Basiseinheit der Stoffmenge; 1 mol enthält N_A Teilchen.",
-    "leicht",
-    ["Mol", "Stoffmenge"]
-  ),
-  q(
     "ch-pool-12-015",
     KAP[2],
     "Welche Elektronegativitätsdifferenz deutet auf eine Ionenbindung hin?",
@@ -194,22 +122,6 @@ export const chemiePool12: Question[] = [
     "Große EN-Differenz → Elektronenübergang → Ionenbindung. Ähnliche EN → kovalente Bindung.",
     "mittel",
     ["Elektronegativität", "Ionenbindung"]
-  ),
-  q(
-    "ch-pool-12-016",
-    KAP[3],
-    "Die Aktivierungsenergie einer Reaktion:",
-    [
-      "wird vom Katalysator nicht verändert",
-      "wird vom Katalysator herabgesetzt",
-      "bestimmt die Gleichgewichtslage",
-      "ist immer negativ",
-      "ist unabhängig von der Temperatur",
-    ],
-    1,
-    "Ein Katalysator senkt die Aktivierungsenergie und beschleunigt so die Reaktion; die Gleichgewichtslage ändert sich nicht.",
-    "mittel",
-    ["Aktivierungsenergie", "Katalysator"]
   ),
   q(
     "ch-pool-12-017",
@@ -242,22 +154,6 @@ export const chemiePool12: Question[] = [
     ["Schale", "Atombau"]
   ),
   q(
-    "ch-pool-12-020",
-    KAP[1],
-    "Die ideale Gasgleichung pV = nRT gilt in guter Näherung bei:",
-    [
-      "hohem Druck und tiefer Temperatur (starke intermolekulare Kräfte)",
-      "niedrigem Druck, hoher Temperatur",
-      "immer, unabhängig von Druck und Temperatur des Systems",
-      "nur für Edelgase, da sie einatomig und kugelförmig sind",
-      "nur für O₂, da es ein Diradikal mit besonderen Eigenschaften ist",
-    ],
-    1,
-    "Reale Gase weichen bei hohem Druck und tiefer Temperatur ab; bei niedrigem p und hohem T verhalten sie sich annähernd ideal.",
-    "mittel",
-    ["ideales Gas"]
-  ),
-  q(
     "ch-pool-12-021",
     KAP[2],
     "Welche Bindung ist am ehesten unpolar?",
@@ -276,32 +172,6 @@ export const chemiePool12: Question[] = [
     "pH + pOH = 14 (25 °C). pOH = 14 − 4 = 10.",
     "leicht",
     ["pH", "pOH"]
-  ),
-  q(
-    "ch-pool-12-024",
-    KAP[5],
-    "Benzol (C₆H₆) ist ein:",
-    ["Alkan", "Alken", "Alkin", "Aromat", "Alkohol"],
-    3,
-    "Benzol hat 6 π-Elektronen im Ring (Hückel-Regel 4n+2, n=1) → aromatisch.",
-    "mittel",
-    ["Benzol", "Aromat"]
-  ),
-  q(
-    "ch-pool-12-025",
-    KAP[0],
-    "Die Ordnungszahl Z eines Elements entspricht:",
-    [
-      "der Neutronenzahl",
-      "der Protonenzahl im Kern",
-      "der Massenzahl",
-      "der Elektronenzahl in der äußersten Schale",
-      "der Atommasse",
-    ],
-    1,
-    "Z = Anzahl der Protonen im Kern; sie definiert das Element. In neutralen Atomen auch Anzahl der Elektronen.",
-    "leicht",
-    ["Ordnungszahl"]
   ),
   q(
     "ch-pool-12-027",
@@ -334,16 +204,6 @@ export const chemiePool12: Question[] = [
     "Druckerhöhung begünstigt die Seite mit weniger Gasmol. Rechts: 2 Mol NH₃; links: 4 Mol → Verschiebung nach rechts.",
     "mittel",
     ["Le Chatelier", "Druck"]
-  ),
-  q(
-    "ch-pool-12-029",
-    KAP[4],
-    "Welche Säure ist eine schwache Säure?",
-    ["HCl", "HNO₃", "Essigsäure", "H₂SO₄ (1. Stufe)", "HClO₄"],
-    2,
-    "Essigsäure (CH₃COOH) ist eine schwache Säure; in Wasser nur teilweise dissoziiert. HCl, HNO₃, HClO₄ sind stark.",
-    "mittel",
-    ["Säuren", "schwach"]
   ),
   q(
     "ch-pool-12-030",
@@ -436,32 +296,6 @@ export const chemiePool12: Question[] = [
     ["Alkohol", "Ethanol"]
   ),
   q(
-    "ch-pool-12-037",
-    KAP[0],
-    "Isotope desselben Elements haben:",
-    [
-      "verschiedene Ordnungszahlen und damit verschiedene Elemente",
-      "gleiche Protonenzahl, verschiedene Neutronenzahl",
-      "gleiche Massenzahl, aber verschiedene Ordnungszahl (Isobare)",
-      "keine Neutronen, nur Protonen und Elektronen im Aufbau",
-      "verschiedene Elektronenzahl bei gleicher Kernladungszahl",
-    ],
-    1,
-    "Isotope: gleiche Z (Protonenzahl), verschiedene N (Neutronenzahl) → verschiedene Massenzahl A.",
-    "leicht",
-    ["Isotop"]
-  ),
-  q(
-    "ch-pool-12-038",
-    KAP[1],
-    "Das molare Volumen eines idealen Gases bei 0 °C und 1,013 bar beträgt etwa:",
-    ["22,4 L/mol", "8,314 L/mol", "1 L/mol", "0,082 L/mol", "6,022 L/mol"],
-    0,
-    "Unter Standardbedingungen (STP): V_m ≈ 22,4 L/mol für ideale Gase.",
-    "leicht",
-    ["molares Volumen", "STP"]
-  ),
-  q(
     "ch-pool-12-039",
     KAP[2],
     "Van-der-Waals-Kräfte sind:",
@@ -504,22 +338,6 @@ export const chemiePool12: Question[] = [
     ["Ester", "Veresterung"]
   ),
   q(
-    "ch-pool-12-043",
-    KAP[0],
-    "Die Anzahl der Protonen im Kern eines Atoms bestimmt:",
-    [
-      "die Massenzahl",
-      "das Element (Ordnungszahl Z)",
-      "nur die Neutronenzahl",
-      "die Schalenstruktur",
-      "die Isotopie",
-    ],
-    1,
-    "Ordnungszahl Z = Protonenzahl definiert das Element. Massenzahl A = Z + N.",
-    "leicht",
-    ["Ordnungszahl", "Element"]
-  ),
-  q(
     "ch-pool-12-044",
     KAP[1],
     "Nach dem Gesetz von Gay-Lussac gilt bei konstantem Volumen:",
@@ -528,22 +346,6 @@ export const chemiePool12: Question[] = [
     "Gay-Lussac: Bei konstantem Volumen ist der Druck proportional zur absoluten Temperatur: p/T = const.",
     "mittel",
     ["Gay-Lussac", "Gasgesetze"]
-  ),
-  q(
-    "ch-pool-12-045",
-    KAP[2],
-    "Welche Aussage zur Oktettregel trifft zu?",
-    [
-      "Alle Atome haben stets genau 8 Außenelektronen in der Valenzschale",
-      "Viele Atome streben 8 Außenelektronen (Edelgaskonfiguration) an",
-      "Es gibt keine Ausnahmen von dieser Regel (auch nicht bei H oder He)",
-      "Wasserstoff hat 8 Außenelektronen, genau wie die übrigen Elemente",
-      "Metalle haben immer 8 Valenzelektronen in ihrer äußersten Schale",
-    ],
-    1,
-    "Oktettregel: Viele Atome erreichen 8 Außenelektronen. Ausnahmen: H (2), B, erweiterte Oktette.",
-    "leicht",
-    ["Oktettregel"]
   ),
   q(
     "ch-pool-12-046",
@@ -610,47 +412,5 @@ export const chemiePool12: Question[] = [
     "In NO₃⁻: O jeweils −2, Summe −1 → N + 3·(−2) = −1 ⇒ N = +5.",
     "mittel",
     ["Oxidationszahl", "Nitrat"]
-  ),
-  q(
-    "ch-pool-12-054",
-    KAP[5],
-    "Eine Aldehydgruppe hat die Formel:",
-    ["−COOH", "−OH", "−CHO", "−NH₂", "−O−"],
-    2,
-    "Aldehyd: −CHO (Carbonyl am Ende der Kette). Carbonsäure: −COOH, Alkohol: −OH.",
-    "leicht",
-    ["Aldehyd", "funktionelle Gruppe"]
-  ),
-  q(
-    "ch-pool-12-055",
-    KAP[0],
-    "Die Massenzahl A ist:",
-    [
-      "gleich der Ordnungszahl",
-      "Protonen + Neutronen",
-      "nur Neutronen",
-      "Elektronenzahl",
-      "immer 12",
-    ],
-    1,
-    "A = Massenzahl = Z + N (Protonen + Neutronen). Nuklid: ᴬ_Z X.",
-    "leicht",
-    ["Massenzahl"]
-  ),
-  q(
-    "ch-pool-12-057",
-    KAP[2],
-    "Eine metallische Bindung entsteht durch:",
-    [
-      "Elektronenpaare zwischen benachbarten Atomen (kovalente Bindung)",
-      "delokalisierte Valenzelektronen (Elektronengas)",
-      "reine Ionen in einem geordneten Kristallgitter (Ionenbindung)",
-      "nur Wasserstoffbrücken zwischen polaren Metallmolekülen",
-      "nur van-der-Waals-Kräfte zwischen neutralen Metallatomen",
-    ],
-    1,
-    "Metallbindung: positive Atomrümpfe in einem „See“ delokalisierter Valenzelektronen → Leitfähigkeit, Verformbarkeit.",
-    "mittel",
-    ["Metallbindung"]
   ),
 ];

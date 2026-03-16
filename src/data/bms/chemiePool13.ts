@@ -42,16 +42,6 @@ export const chemiePool13: Question[] = [
     ["Ordnungszahl", "Kohlenstoff"]
   ),
   q(
-    "ch-pool-13-002",
-    KAP[1],
-    "Nach dem Gesetz von Boyle gilt bei konstanter Temperatur:",
-    ["V/T = const", "p · V = const", "p/T = const", "V · n = const", "p + V = const"],
-    1,
-    "Boyle-Mariotte: Bei konstanter Temperatur ist der Druck umgekehrt proportional zum Volumen: p · V = const.",
-    "mittel",
-    ["Boyle", "Gasgesetze"]
-  ),
-  q(
     "ch-pool-13-003",
     KAP[2],
     "Welche Bindung liegt in Fluor (F₂) vor?",
@@ -108,22 +98,6 @@ export const chemiePool13: Question[] = [
     ["Quantenzahlen", "Atombau"]
   ),
   q(
-    "ch-pool-13-008",
-    KAP[1],
-    "Kondensieren ist der Übergang:",
-    [
-      "fest → flüssig",
-      "flüssig → gasförmig",
-      "gasförmig → flüssig",
-      "fest → gasförmig",
-      "gasförmig → fest",
-    ],
-    2,
-    "Kondensieren = gasförmig → flüssig (z. B. Wasserdampf zu Tropfen).",
-    "leicht",
-    ["Kondensieren", "Phasenübergang"]
-  ),
-  q(
     "ch-pool-13-009",
     KAP[2],
     "Welche Verbindung hat die größte Elektronegativitätsdifferenz zwischen den Bindungspartnern?",
@@ -132,22 +106,6 @@ export const chemiePool13: Question[] = [
     "NaCl: Metall (niedrige EN) + Nichtmetall (hohe EN) → sehr große EN-Differenz, Ionenbindung.",
     "mittel",
     ["Elektronegativität", "Ionenbindung"]
-  ),
-  q(
-    "ch-pool-13-010",
-    KAP[3],
-    "Ein Katalysator ändert:",
-    [
-      "die Gleichgewichtslage",
-      "die Aktivierungsenergie",
-      "ΔH der Reaktion",
-      "die Produktzusammensetzung",
-      "die Reaktionsrichtung",
-    ],
-    1,
-    "Katalysator senkt die Aktivierungsenergie; ΔH, Gleichgewicht und Stöchiometrie bleiben unverändert.",
-    "mittel",
-    ["Katalysator", "Aktivierungsenergie"]
   ),
   q(
     "ch-pool-13-011",
@@ -174,38 +132,6 @@ export const chemiePool13: Question[] = [
     "Methanol ist ein Alkohol mit Hydroxylgruppe −OH. Summenformel CH₃OH.",
     "leicht",
     ["Alkohol", "Methanol"]
-  ),
-  q(
-    "ch-pool-13-013",
-    KAP[0],
-    "Die Avogadro-Konstante N_A gibt an:",
-    [
-      "Masse pro Mol (molare Masse in g/mol)",
-      "Anzahl der Teilchen pro Mol",
-      "Volumen pro Mol (molares Volumen in L/mol)",
-      "Druck bei STP (Standardbedingungen, 1 bar)",
-      "Temperatur bei Normalbedingungen (273,15 K)",
-    ],
-    1,
-    "N_A ≈ 6,022·10²³ mol⁻¹: Ein Mol enthält N_A Teilchen (Atome, Moleküle, Ionen).",
-    "leicht",
-    ["Avogadro", "Stoffmenge"]
-  ),
-  q(
-    "ch-pool-13-014",
-    KAP[1],
-    "Sublimieren ist der Übergang:",
-    [
-      "flüssig → gasförmig",
-      "gasförmig → fest",
-      "fest → gasförmig",
-      "fest → flüssig",
-      "gasförmig → flüssig",
-    ],
-    2,
-    "Sublimieren = fest → gasförmig (z. B. Trockeneis, Iod). Resublimieren = gasförmig → fest.",
-    "leicht",
-    ["Sublimation", "Phasenübergang"]
   ),
   q(
     "ch-pool-13-015",
@@ -506,16 +432,6 @@ export const chemiePool13: Question[] = [
     ["Elektronegativität", "Erdalkalimetalle"]
   ),
   q(
-    "ch-pool-13-044",
-    KAP[1],
-    "Die allgemeine Gasgleichung pV = nRT enthält die Gaskonstante R. Ihre Einheit ist:",
-    ["J/(mol·K)", "mol/L", "Pa·L", "K/mol", "J·mol"],
-    0,
-    "R ≈ 8,314 J/(mol·K). Aus pV = nRT folgt [R] = (Pa·m³)/(mol·K) = J/(mol·K).",
-    "mittel",
-    ["Gaskonstante", "R"]
-  ),
-  q(
     "ch-pool-13-045",
     KAP[2],
     "Ein Dipolmoment entsteht, wenn:",
@@ -662,22 +578,6 @@ export const chemiePool13: Question[] = [
     ["Dichte"]
   ),
   q(
-    "ch-pool-13-057",
-    KAP[2],
-    "In einem Metall sind die Valenzelektronen:",
-    [
-      "an einzelne Atome gebunden",
-      "delokalisiert („Elektronengas“)",
-      "nur in Form von Ionen",
-      "nicht vorhanden",
-      "nur in der Oberfläche",
-    ],
-    1,
-    "Metallbindung: positive Atomrümpfe + delokalisiertes Elektronengas → gute Leitfähigkeit und Verformbarkeit.",
-    "mittel",
-    ["Metallbindung"]
-  ),
-  q(
     "ch-pool-13-058",
     KAP[3],
     "Bei der Reaktion A + B ⇌ C + D liegt ein Gleichgewicht vor, wenn:",
@@ -692,16 +592,6 @@ export const chemiePool13: Question[] = [
     "Gleichgewicht: Geschwindigkeit der Hinreaktion = Geschwindigkeit der Rückreaktion; Konzentrationen bleiben konstant.",
     "mittel",
     ["Gleichgewicht", "Reaktionsgeschwindigkeit"]
-  ),
-  q(
-    "ch-pool-13-059",
-    KAP[4],
-    "Welches Element gehört zu den Edelgasen?",
-    ["Stickstoff", "Sauerstoff", "Chlor", "Helium", "Kohlenstoff"],
-    3,
-    "Edelgase: Gruppe 18 – He, Ne, Ar, Kr, Xe, Rn. Helium hat die geringste Dichte unter den Edelgasen.",
-    "leicht",
-    ["Edelgas", "Helium"]
   ),
   q(
     "ch-pool-13-060",

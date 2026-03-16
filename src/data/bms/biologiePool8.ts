@@ -33,58 +33,6 @@ function q(
 
 export const biologiePool8: Question[] = [
   q(
-    "bio-pool-8-002",
-    "bio-kap2",
-    "Welche Zellkontakte ermöglichen Ionenfluss zwischen Herzmuskelzellen?",
-    ["Tight Junctions", "Desmosomen", "Gap Junctions", "Hemidesmosomen", "Adherens Junctions"],
-    2,
-    "Gap Junctions (Connexine) ermöglichen direkten Ionenaustausch; die Erregung breitet sich so koordiniert im Herzen aus.",
-    "mittel",
-    ["Zellkontakte", "Herz", "Kap2"]
-  ),
-  q(
-    "bio-pool-8-004",
-    "bio-kap1",
-    "Welche Aussage zu positiver Rückkopplung trifft zu?",
-    [
-      "Sie stabilisiert den Sollwert wie die Blutzuckerregulation.",
-      "Sie verstärkt den auslösenden Reiz.",
-      "Sie ist der Hauptmechanismus der Homöostase.",
-      "Sie wirkt dem Auslöser entgegen.",
-      "Sie kommt nur bei pathologischen Zuständen und Krankheiten vor.",
-    ],
-    1,
-    "Positive Rückkopplung verstärkt den Reiz (Blutgerinnung, Wehen, Aktionspotential). Negative stabilisiert (Homöostase).",
-    "mittel",
-    ["Rückkopplung", "Kap1"]
-  ),
-  q(
-    "bio-pool-8-005",
-    "bio-kap5",
-    "Ökosystem = …",
-    [
-      "nur die Pflanzen",
-      "Biotop + Biozönose",
-      "nur die Tiere",
-      "nur der unbelebte Lebensraum",
-      "eine einzelne Art (Spezies) als taxonomische Grundeinheit der Biologie",
-    ],
-    1,
-    "Ökosystem = Biotop (unbelebter Lebensraum) + Biozönose (Lebensgemeinschaft aller Arten).",
-    "leicht",
-    ["Ökologie", "Kap5"]
-  ),
-  q(
-    "bio-pool-8-006",
-    "bio-kap2",
-    "Welche Sekretionsart liegt bei Talgdrüsen vor?",
-    ["Merokrin", "Apokrin", "Holokrin", "Endokrin", "Parakrin"],
-    2,
-    "Talgdrüsen sezernieren holokrin: Die ganze Zelle zerfällt und wird zum Sekret.",
-    "mittel",
-    ["Sekretion", "Kap2"]
-  ),
-  q(
     "bio-pool-8-007",
     "bio-kap4",
     "Was versteht man unter dem Locus eines Gens?",
@@ -109,16 +57,6 @@ export const biologiePool8: Question[] = [
     "Die Eizelle liefert immer X; das Spermium liefert X oder Y → Geschlecht wird durch das Spermium bestimmt.",
     "leicht",
     ["Vererbung", "Geschlecht", "Kap3"]
-  ),
-  q(
-    "bio-pool-8-009",
-    "bio-kap1",
-    "Welche Hierarchieebene folgt direkt auf „Gewebe“?",
-    ["Zelle", "Organell", "Organ", "Organsystem", "Molekül"],
-    2,
-    "Atom → Molekül → Organell → Zelle → Gewebe → Organ → Organsystem → Organismus.",
-    "leicht",
-    ["Hierarchie", "Kap1"]
   ),
   q(
     "bio-pool-8-010",
@@ -259,32 +197,6 @@ export const biologiePool8: Question[] = [
     ["DNA", "Chargaff", "Kap4"]
   ),
   q(
-    "bio-pool-8-019",
-    "bio-kap5",
-    "Abiotische Faktoren sind …",
-    [
-      "alle Lebewesen",
-      "unbelebte Umweltfaktoren (Licht, Temperatur, Wasser)",
-      "nur die Pflanzen",
-      "nur die Tiere",
-      "die Nahrungskette",
-    ],
-    1,
-    "Abiotisch = unbelebt. Biotisch = belebt (Konkurrenz, Räuber-Beute).",
-    "leicht",
-    ["Ökologie", "Kap5"]
-  ),
-  q(
-    "bio-pool-8-021",
-    "bio-kap1",
-    "Welches Organell ist für die Proteinbiosynthese (Translation) zentral?",
-    ["Mitochondrium", "Ribosom", "Lysosom", "Golgi-Apparat", "Peroxisom"],
-    1,
-    "Ribosomen führen die Translation durch (mRNA → Protein); sie liegen frei im Zytosol oder am rauen ER.",
-    "leicht",
-    ["Ribosomen (Translationsmaschinen aus rRNA und Protein)", "Proteinbiosynthese", "Kap1"]
-  ),
-  q(
     "bio-pool-8-022",
     "bio-kap4",
     "Ein Codon besteht aus wie vielen Nukleotiden?",
@@ -320,17 +232,7 @@ export const biologiePool8: Question[] = [
     "schwer",
     ["Epithel", "Kap2"]
   ),
-  q(
-    "bio-pool-8-025",
-    "bio-kap5",
-    "In einer Nahrungskette: Primärkonsumenten ernähren sich von …",
-    ["Produzenten", "Sekundärkonsumenten", "Destruenten", "abiotischen Faktoren", "Saprobionten"],
-    0,
-    "Primärkonsumenten = Pflanzenfresser; Sekundärkonsumenten fressen Primärkonsumenten.",
-    "leicht",
-    ["Ökologie", "Nahrungskette", "Kap5"]
-  ),
-  // Weitere 25 echte Fragen (Kap1–5)
+  // Weitere echte Fragen (Kap1–5)
   q(
     "bio-pool-8-026",
     "bio-kap1",
@@ -340,22 +242,6 @@ export const biologiePool8: Question[] = [
     "Fortpflanzung = Weitergabe genetischer Information.",
     "leicht",
     ["Kennzeichen des Lebens", "Kap1"]
-  ),
-  q(
-    "bio-pool-8-027",
-    "bio-kap4",
-    "Mitose führt zu …",
-    [
-      "haploiden Tochterzellen mit reduziertem Chromosomensatz (n)",
-      "genetisch identischen diploiden Tochterzellen",
-      "Keimzellen",
-      "reduziertem Chromosomensatz",
-      "Crossing-over",
-    ],
-    1,
-    "Mitose: Eine Zelle teilt sich in zwei genetisch identische Tochterzellen (beide diploid). Meiose führt zu haploiden Keimzellen.",
-    "mittel",
-    ["Mitose", "Kap4"]
   ),
   q(
     "bio-pool-8-028",
@@ -420,38 +306,6 @@ export const biologiePool8: Question[] = [
     ["Knorpel", "Kap2"]
   ),
   q(
-    "bio-pool-8-033",
-    "bio-kap5",
-    "Destruenten (Zersetzer) bauen ab …",
-    [
-      "nur lebende Beute",
-      "totes organisches Material",
-      "nur anorganische Stoffe",
-      "nur Wasser",
-      "nur Licht",
-    ],
-    1,
-    "Destruenten (Pilze, Bakterien) zersetzen totes organisches Material und führen Nährstoffe dem Kreislauf wieder zu.",
-    "leicht",
-    ["Ökologie", "Kap5"]
-  ),
-  q(
-    "bio-pool-8-034",
-    "bio-kap1",
-    "Welche Aussage zu Mitochondrien trifft zu?",
-    [
-      "Sie haben keine eigene DNA.",
-      "Sie enthalten die Atmungskette und produzieren ATP.",
-      "Sie sind nur in Pflanzenzellen vorhanden.",
-      "Sie synthetisieren alle Proteine der Zelle.",
-      "Sie haben keine Membran.",
-    ],
-    1,
-    "Mitochondrien haben eine eigene DNA (Endosymbiontentheorie), innere und äußere Membran, Atmungskette, ATP-Synthase.",
-    "mittel",
-    ["Mitochondrien", "Kap1"]
-  ),
-  q(
     "bio-pool-8-035",
     "bio-kap4",
     "Bei einem dihybriden Erbgang AaBb × AaBb: Wie viele der 16 Nachkommen sind reinerbig (homozygot) für beide Merkmale?",
@@ -482,46 +336,16 @@ export const biologiePool8: Question[] = [
     "bio-kap3",
     "Wo findet die Einnistung der Blastozyste beim Menschen statt?",
     [
-      "Im Eileiter (Tuba uterina) am Ort der Befruchtung der Oozyte",
+      "Im Eileiter (Tuba uterina)",
       "In der Gebärmutterschleimhaut (Endometrium)",
-      "Im Ovar (Eierstock) am Ort der Follikelreifung und Ovulation",
-      "In der Vagina (Scheide) als muskulärer Geburtskanal und Kopulationsorgan",
-      "Im Gebärmutterhals (Zervix uteri) mit Zervikalschleim als Barriere",
+      "Im Ovar (Eierstock)",
+      "In der Vagina (Scheide)",
+      "Im Gebärmutterhals (Zervix uteri)",
     ],
     1,
     "Die Einnistung (Implantation) erfolgt in der Uterusschleimhaut (Endometrium). Die Befruchtung im Eileiter.",
     "leicht",
     ["Entwicklung", "Kap3"]
-  ),
-  q(
-    "bio-pool-8-038",
-    "bio-kap1",
-    "Lysosomen enthalten …",
-    ["DNA", "Katalase", "hydrolytische Enzyme", "Chlorophyll", "Ribosomen"],
-    2,
-    "Lysosomen enthalten hydrolytische Enzyme (Proteasen, Lipasen, Nukleasen) für den Abbau von Makromolekülen; sie haben einen sauren pH.",
-    "mittel",
-    ["Lysosomen", "Kap1"]
-  ),
-  q(
-    "bio-pool-8-039",
-    "bio-kap5",
-    "Trophische Ebene 1 in einem Ökosystem sind in der Regel …",
-    ["Konsumenten", "Produzenten", "Destruenten", "Sekundärkonsumenten", "Tertiärkonsumenten"],
-    1,
-    "Produzenten (z. B. Pflanzen) bilden die erste trophische Ebene; dann Primär-, Sekundär-, Tertiärkonsumenten.",
-    "leicht",
-    ["Ökologie", "Kap5"]
-  ),
-  q(
-    "bio-pool-8-040",
-    "bio-kap4",
-    "Die RNA enthält die Base Uracil (U) anstelle von …",
-    ["Adenin", "Guanin", "Thymin", "Cytosin", "keiner Base"],
-    2,
-    "In der RNA wird Thymin (T) durch Uracil (U) ersetzt; U paart mit A.",
-    "leicht",
-    ["RNA", "Kap4"]
   ),
   q(
     "bio-pool-8-041",
@@ -540,26 +364,6 @@ export const biologiePool8: Question[] = [
     ["Epithel", "Darm", "Kap2"]
   ),
   q(
-    "bio-pool-8-042",
-    "bio-kap1",
-    "Negative Rückkopplung ist entscheidend für …",
-    ["Blutgerinnung", "Homöostase", "Wehen", "Aktionspotential", "Alles-oder-Nichts-Reaktionen"],
-    1,
-    "Negative Rückkopplung stabilisiert Sollwerte (Homöostase). Positive Rückkopplung verstärkt (Blutgerinnung, Wehen).",
-    "mittel",
-    ["Homöostase", "Kap1"]
-  ),
-  q(
-    "bio-pool-8-043",
-    "bio-kap4",
-    "Während der Meiose kommt es zur Rekombination (Crossing-over) in …",
-    ["Metaphase II", "Anaphase I", "Prophase I", "Telophase I", "Metaphase I"],
-    2,
-    "Crossing-over erfolgt in der Prophase I, wenn die homologen Chromosomen gepaart sind.",
-    "mittel",
-    ["Meiose", "Kap4"]
-  ),
-  q(
     "bio-pool-8-044",
     "bio-kap3",
     "Aus der Oozyte entstehen bei der Meiose …",
@@ -574,22 +378,6 @@ export const biologiePool8: Question[] = [
     "Bei der Oogenese entstehen aus einer Oozyte eine reife Eizelle und Polkörperchen (abgestoßene Zellkerne).",
     "mittel",
     ["Oogenese", "Kap3"]
-  ),
-  q(
-    "bio-pool-8-045",
-    "bio-kap5",
-    "Der Biotop ist …",
-    [
-      "die Lebensgemeinschaft aller Arten",
-      "der unbelebte Lebensraum",
-      "eine Population",
-      "ein Ökosystem",
-      "ein Nahrungsnetz",
-    ],
-    1,
-    "Biotop = unbelebter Lebensraum (Boden, Wasser, Klima). Biozönose = Lebensgemeinschaft. Ökosystem = Biotop + Biozönose.",
-    "leicht",
-    ["Ökologie", "Kap5"]
   ),
   q(
     "bio-pool-8-046",

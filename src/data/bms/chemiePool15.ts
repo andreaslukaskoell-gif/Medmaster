@@ -244,22 +244,6 @@ export const chemiePool15: Question[] = [
     ["Orbital", "Schale"]
   ),
   q(
-    "ch-pool-15-021",
-    KAP[2],
-    "Welche Aussage zur metallischen Bindung trifft zu?",
-    [
-      "Valenzelektronen sind lokal gebunden",
-      "Valenzelektronen sind delokalisiert",
-      "Es gibt nur Ionen",
-      "Es gibt nur kovalente Bindungen",
-      "Metalle sind nicht leitfähig",
-    ],
-    1,
-    "Metallbindung: delokalisiertes Elektronengas aus Valenzelektronen → elektrische und thermische Leitfähigkeit.",
-    "mittel",
-    ["Metallbindung"]
-  ),
-  q(
     "ch-pool-15-022",
     KAP[3],
     "Bei der Reaktion A + B → C handelt es sich um eine:",
@@ -698,16 +682,6 @@ export const chemiePool15: Question[] = [
     "Katalysator geht unverändert aus der Reaktion hervor; er beschleunigt, wird aber nicht verbraucht.",
     "leicht",
     ["Katalysator"]
-  ),
-  q(
-    "ch-pool-15-059",
-    KAP[4],
-    "Welches Metall gehört zu den Erdalkalimetallen?",
-    ["Natrium", "Kalium", "Magnesium", "Aluminium", "Eisen"],
-    2,
-    "Erdalkalimetalle: Gruppe 2 – Be, Mg, Ca, Sr, Ba, Ra. Na, K = Alkalimetalle (Gruppe 1).",
-    "leicht",
-    ["Erdalkalimetalle", "Magnesium"]
   ),
   q(
     "ch-pool-15-060",

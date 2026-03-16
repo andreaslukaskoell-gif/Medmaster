@@ -165,16 +165,6 @@ export const mathematikPool15: Question[] = [
     ["Geometrie", "Würfel", "Diagonale"]
   ),
   q(
-    "ma-pool-15-013",
-    "mathe-kap2",
-    "Vereinfachen Sie: (2x + 3)² − (2x − 3)².",
-    ["0", "12x", "24x", "18", "4x² + 9"],
-    2,
-    "Mit a = 2x, b = 3: (a+b)² − (a−b)² = 4ab = 4·2x·3 = 24x. Alternative: Ausmultiplizieren ergibt (4x²+12x+9)−(4x²−12x+9) = 24x.",
-    "mittel",
-    ["Algebra", "binomische Formeln", "rechenfrage"]
-  ),
-  q(
     "ma-pool-15-014",
     "mathe-kap2",
     "Ein Dreieck hat die Eckpunkte A(0,0), B(6,0) und C(3,4). Die Fläche beträgt:",

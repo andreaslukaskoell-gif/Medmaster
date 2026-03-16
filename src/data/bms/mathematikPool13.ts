@@ -227,32 +227,6 @@ export const mathematikPool13: Question[] = [
     ["quadratische Gleichung", "Vieta"]
   ),
   q(
-    "ma-pool-13-018",
-    "mathe-kap2",
-    "Der Innenwinkel eines regelmäßigen Sechsecks beträgt:",
-    ["90°", "108°", "120°", "135°", "150°"],
-    2,
-    "Innenwinkel = (n−2)·180°/n = (6−2)·180°/6 = 720°/6 = 120°.",
-    "mittel",
-    ["Geometrie", "Polygon", "Innenwinkel"]
-  ),
-  q(
-    "ma-pool-13-019",
-    "mathe-kap2",
-    "Welche Aussage über die binomischen Formeln ist falsch?",
-    [
-      "(a + b)² = a² + 2ab + b²",
-      "(a − b)² = a² − 2ab + b²",
-      "(a + b)(a − b) = a² − b²",
-      "(a + b)³ = a³ + 3a²b + 3ab² + b³",
-      "(a − b)² = a² + 2ab − b²",
-    ],
-    4,
-    "(a − b)² = a² − 2ab + b² (nicht +2ab − b²). Vorzeichen: Der mittlere Term ist −2ab, und b² ist stets positiv.",
-    "leicht",
-    ["Algebra", "binomische Formeln", "Falsch-Aussage"]
-  ),
-  q(
     "ma-pool-13-020",
     "mathe-kap2",
     "Ein Hohlzylinder hat Außenradius R = 5 cm, Innenradius r = 3 cm und Höhe h = 10 cm. Das Materialvolumen beträgt (π ≈ 3,14):",

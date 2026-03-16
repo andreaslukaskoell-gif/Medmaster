@@ -39,22 +39,6 @@ export const chemiePool5: Question[] = [
     []
   ),
   q(
-    "ch-pool-202",
-    "chem-kap2",
-    "Was beschreibt die Zustandsgleichung pV = nRT?",
-    [
-      "Nur Flüssigkeiten",
-      "Ideales Gas",
-      "Reale Gase nur bei tiefem Druck",
-      "Festkörper",
-      "Nur bei 0 °C",
-    ],
-    1,
-    "Ideale Gasgleichung für ideale Gase. Reale Gase weichen bei hohem p und niedrigem T ab.",
-    "leicht",
-    []
-  ),
-  q(
     "ch-pool-203",
     "chem-kap3",
     "Welche Bindung ist rein kovalent (am wenigsten polar)?",
@@ -85,16 +69,6 @@ export const chemiePool5: Question[] = [
     []
   ),
   q(
-    "ch-pool-206",
-    "chem-kap6",
-    "Was ist die funktionelle Gruppe eines Aldehyds?",
-    ["−OH", "−COOH", "−CHO", "−NH₂", "−O−"],
-    2,
-    "Aldehyd: −CHO (Carbonyl am Ende der Kette). Keton: −CO− in der Kette.",
-    "leicht",
-    []
-  ),
-  q(
     "ch-pool-207",
     "chem-kap1",
     "Welches Element hat die kleinste Atommasse?",
@@ -111,22 +85,6 @@ export const chemiePool5: Question[] = [
     ["0 °C", "25 °C", "50 °C", "100 °C", "373 °C"],
     3,
     "Wasser siedet bei 1 bar (Normdruck) bei 100 °C (373,15 K).",
-    "leicht",
-    []
-  ),
-  q(
-    "ch-pool-209",
-    "chem-kap3",
-    "Welche Aussage zu NaCl in Wasser trifft zu?",
-    [
-      "Es bleibt als Molekül gelöst.",
-      "Es dissoziiert zu Na⁺ und Cl⁻.",
-      "Es bildet H₂.",
-      "Es reagiert mit H₂O zu NaOH.",
-      "Es sinkt ungelöst zu Boden.",
-    ],
-    1,
-    "NaCl dissoziiert in Wasser vollständig zu Na⁺(aq) und Cl⁻(aq).",
     "leicht",
     []
   ),
@@ -249,16 +207,6 @@ export const chemiePool5: Question[] = [
     []
   ),
   q(
-    "ch-pool-220",
-    "chem-kap2",
-    "Die Dichte von Eis ist im Vergleich zu flüssigem Wasser:",
-    ["höher", "gleich", "niedriger", "doppelt so hoch", "temperaturabhängig gleich"],
-    2,
-    "Eis ist weniger dicht (ca. 0,92 g/cm³) als Wasser → Eis schwimmt.",
-    "leicht",
-    []
-  ),
-  q(
     "ch-pool-221",
     "chem-kap3",
     "Welche Aussage zu Dipolmomenten ist richtig?",
@@ -371,16 +319,6 @@ export const chemiePool5: Question[] = [
     []
   ),
   q(
-    "ch-pool-231",
-    "chem-kap1",
-    "Welches Metall ist ein Alkalimetall?",
-    ["Magnesium", "Calcium", "Natrium", "Eisen", "Kupfer"],
-    2,
-    "Alkalimetalle = Gruppe 1: Li, Na, K, Rb, Cs, Fr. Magnesium und Calcium sind Erdalkalimetalle.",
-    "leicht",
-    []
-  ),
-  q(
     "ch-pool-232",
     "chem-kap2",
     "Die spezifische Wärmekapazität von Wasser ist:",
@@ -455,22 +393,6 @@ export const chemiePool5: Question[] = [
     []
   ),
   q(
-    "ch-pool-237",
-    "chem-kap1",
-    "Die Anzahl der Protonen im Kern bestimmt:",
-    [
-      "die Massenzahl",
-      "die Isotopenverteilung",
-      "die Ordnungszahl und das Element",
-      "nur die Neutronenzahl",
-      "die Elektronenaffinität",
-    ],
-    2,
-    "Anzahl Protonen = Ordnungszahl Z = Identität des Elements. Massenzahl A = Protonen + Neutronen.",
-    "leicht",
-    []
-  ),
-  q(
     "ch-pool-238",
     "chem-kap2",
     "Welche Phase hat den geringsten Ordnungsgrad?",
@@ -513,26 +435,6 @@ export const chemiePool5: Question[] = [
     ["Lackmus", "Phenolphthalein", "Bromthymolblau", "Methylorange", "Universalindikator"],
     1,
     "Phenolphthalein: farblos in Säure, pink/rot in Base (pH-Bereich ca. 8–10).",
-    "leicht",
-    []
-  ),
-  q(
-    "ch-pool-242",
-    "chem-kap6",
-    "Welche Verbindung ist ein Aromat?",
-    ["Cyclohexan", "Cyclohexen", "Benzol", "Hexan", "Hexen"],
-    2,
-    "Benzol (C₆H₆) ist ein Aromat (6 π-Elektronen, Hückel). Cyclohexan ist ein gesättigter Ring (Alkan).",
-    "leicht",
-    []
-  ),
-  q(
-    "ch-pool-243",
-    "chem-kap1",
-    "Welches Element ist ein Edelgas?",
-    ["Chlor", "Stickstoff", "Helium", "Sauerstoff", "Fluor"],
-    2,
-    "Edelgase = Gruppe 18: He, Ne, Ar, Kr, Xe, Rn. Helium hat voll besetzte Schale (1s²).",
     "leicht",
     []
   ),

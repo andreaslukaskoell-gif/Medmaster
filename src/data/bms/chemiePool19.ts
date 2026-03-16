@@ -244,16 +244,6 @@ export const chemiePool19: Question[] = [
     ["Bromaddition", "Alken"]
   ),
   q(
-    "ch-pool-19-019",
-    KAP[0],
-    "Die Anzahl der Protonen in einem Atom entspricht bei einem neutralen Atom der Anzahl der:",
-    ["Neutronen", "Elektronen", "Kernladung", "Massenzahl", "Orbitale"],
-    1,
-    "Neutral: Anzahl Elektronen = Anzahl Protonen = Z. Auch: Kernladungszahl = Protonenzahl.",
-    "leicht",
-    ["neutrales Atom", "Elektronen"]
-  ),
-  q(
     "ch-pool-19-020",
     KAP[1],
     "Der Partialdruck eines Gases in einem Gemisch ist nach Dalton:",
@@ -326,16 +316,6 @@ export const chemiePool19: Question[] = [
     "Aldehyde werden zu Carbonsäuren oxidiert (z. B. KMnO₄, Tollens, Kaliumdichromat).",
     "mittel",
     ["Aldehyd", "Oxidation"]
-  ),
-  q(
-    "ch-pool-19-025",
-    KAP[0],
-    "Welche Hauptgruppe enthält die Halogene?",
-    ["Gruppe 1", "Gruppe 2", "Gruppe 16", "Gruppe 17", "Gruppe 18"],
-    3,
-    "Halogene: F, Cl, Br, I, At – Gruppe 17 (7 Valenzelektronen).",
-    "leicht",
-    ["Halogene", "Periodensystem"]
   ),
   q(
     "ch-pool-19-026",
@@ -642,22 +622,6 @@ export const chemiePool19: Question[] = [
     "K: n=1, L: n=2, M: n=3, N: n=4.",
     "leicht",
     ["Schale", "Hauptquantenzahl"]
-  ),
-  q(
-    "ch-pool-19-050",
-    KAP[1],
-    "Die ideale Gasgleichung gilt in guter Näherung bei:",
-    [
-      "hohem Druck, tiefer Temperatur",
-      "niedrigem Druck, hoher Temperatur",
-      "immer",
-      "nur für Flüssigkeiten",
-      "nur für Feststoffe",
-    ],
-    1,
-    "Reale Gase weichen bei hohem p und niedrigem T ab (Eigenvolumen, Wechselwirkungen).",
-    "mittel",
-    ["ideales Gas"]
   ),
   q(
     "ch-pool-19-051",

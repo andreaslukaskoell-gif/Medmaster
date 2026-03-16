@@ -46,64 +46,6 @@ export const chemiePool11: Question[] = [
     ["Rutherford", "Atommodell", "Kap1"]
   ),
   q(
-    "ch-pool-11-002",
-    "chem-kap1",
-    "Ordnungszahl Z eines Elements gibt an …",
-    [
-      "die Neutronenzahl (Differenz aus Massenzahl und Ordnungszahl)",
-      "die Massenzahl (Summe aus Protonen und Neutronen im Kern)",
-      "die Protonenzahl (und definiert das Element)",
-      "die Elektronenzahl in der äußersten Schale (Valenzelektronen)",
-      "die Anzahl der besetzten Schalen in der Elektronenhülle",
-    ],
-    2,
-    "Z = Protonenzahl = Ordnungszahl; sie definiert das Element. A = Massenzahl = Z + N (Neutronen).",
-    "leicht",
-    ["Ordnungszahl", "Kap1"]
-  ),
-  q(
-    "ch-pool-11-003",
-    "chem-kap1",
-    "Isotope sind Atome …",
-    [
-      "verschiedener Elemente mit unterschiedlicher Ordnungszahl Z",
-      "gleichen Elements (gleiche Z) mit unterschiedlicher Neutronenzahl N",
-      "mit gleicher Massenzahl, aber verschiedener Ordnungszahl (Isobare)",
-      "ohne Neutronen im Kern (reiner Protonenaufbau)",
-      "nur mit einem einzelnen Proton im Atomkern (Wasserstoff)",
-    ],
-    1,
-    "Isotope: gleiche Ordnungszahl Z, verschiedene Neutronenzahl N (z. B. ¹²C, ¹³C, ¹⁴C).",
-    "leicht",
-    ["Isotop", "Kap1"]
-  ),
-  q(
-    "ch-pool-11-004",
-    "chem-kap2",
-    "Kondensieren ist der Übergang …",
-    [
-      "flüssig → gasförmig",
-      "gasförmig → flüssig",
-      "fest → gasförmig",
-      "fest → flüssig",
-      "flüssig → fest",
-    ],
-    1,
-    "Kondensieren = gasförmig → flüssig. Verdampfen = flüssig → gasförmig; Sublimieren = fest → gasförmig.",
-    "leicht",
-    ["Aggregatzustand", "Kap2"]
-  ),
-  q(
-    "ch-pool-11-005",
-    "chem-kap3",
-    "Welche Verbindung ist typisch ionisch aufgebaut?",
-    ["H₂O", "CH₄", "NaCl", "CO₂", "NH₃"],
-    2,
-    "NaCl: Metall + Nichtmetall, große Elektronegativitätsdifferenz → Ionenbindung. H₂O, CH₄, CO₂, NH₃ sind molekular/kovalent.",
-    "leicht",
-    ["Ionenbindung", "Kap3"]
-  ),
-  q(
     "ch-pool-11-006",
     "chem-kap5",
     "Eine Lösung mit pH = 7 ist …",
@@ -112,26 +54,6 @@ export const chemiePool11: Question[] = [
     "pH = 7 = neutral ([H₃O⁺] = [OH⁻]). pH < 7 = sauer, pH > 7 = basisch.",
     "leicht",
     ["pH", "Kap5"]
-  ),
-  q(
-    "ch-pool-11-007",
-    "chem-kap1",
-    "Die Avogadro-Konstante N_A hat den Wert ungefähr …",
-    ["6,022 · 10²³ mol⁻¹", "6,022 · 10⁻²³ mol", "22,4 L/mol", "8,314 J/(mol·K)", "1 mol/L"],
-    0,
-    "N_A ≈ 6,022 · 10²³ mol⁻¹. Ein Mol enthält N_A Teilchen. 22,4 L/mol = molares Volumen bei STP.",
-    "leicht",
-    ["Avogadro", "Mol", "Kap1"]
-  ),
-  q(
-    "ch-pool-11-008",
-    "chem-kap6",
-    "Alkane haben die allgemeine Summenformel …",
-    ["CₙH₂ₙ", "CₙH₂ₙ₊₂", "CₙH₂ₙ₋₂", "CₙHₙ", "CₙH₂ₙO"],
-    1,
-    "Alkane: nur C–C- und C–H-Einfachbindungen, CₙH₂ₙ₊₂. Alkene: CₙH₂ₙ; Alkine: CₙH₂ₙ₋₂.",
-    "leicht",
-    ["Alkane", "Kap6"]
   ),
   q(
     "ch-pool-11-009",
@@ -144,16 +66,6 @@ export const chemiePool11: Question[] = [
     ["pH", "Kap5"]
   ),
   q(
-    "ch-pool-11-010",
-    "chem-kap4",
-    "Bei einer exothermen Reaktion ist die Reaktionsenthalpie ΔH …",
-    ["positiv", "negativ", "null", "immer gleich ΔG", "unabhängig von T"],
-    1,
-    "Exotherm = Wärme wird abgegeben → ΔH < 0. Endotherm = Wärme wird aufgenommen → ΔH > 0.",
-    "leicht",
-    ["Enthalpie", "Kap4"]
-  ),
-  q(
     "ch-pool-11-011",
     "chem-kap1",
     "Im Bohr-Modell ist die maximale Elektronenzahl pro Schale (K, L, M, …) gegeben durch …",
@@ -162,36 +74,6 @@ export const chemiePool11: Question[] = [
     "Maximale Elektronenzahl pro Schale: 2n². K (n=1): 2; L (n=2): 8; M (n=3): 18; N (n=4): 32.",
     "mittel",
     ["Bohr", "Schale", "Kap1"]
-  ),
-  q(
-    "ch-pool-11-012",
-    "chem-kap3",
-    "Die Elektronegativität nimmt im Periodensystem innerhalb einer Periode von links nach rechts …",
-    ["ab", "zu", "bleibt gleich", "zuerst ab, dann zu", "ist immer 0"],
-    1,
-    "In einer Periode: EN nimmt von links nach rechts zu (mehr Protonen, kleinere Radien). In einer Gruppe: EN nimmt nach unten ab.",
-    "leicht",
-    ["Elektronegativität", "PSE", "Kap1"]
-  ),
-  q(
-    "ch-pool-11-013",
-    "chem-kap2",
-    "Das ideale Gasgesetz lautet …",
-    ["p · V = const", "p · V = n · R · T", "V / T = const", "nur p · T = const", "V = n / p"],
-    1,
-    "Ideales Gas: p · V = n · R · T (R = 8,314 J/(mol·K)). Boyle: p·V=const bei T=const; Charles: V/T=const bei p=const.",
-    "mittel",
-    ["Gasgesetz", "Kap2"]
-  ),
-  q(
-    "ch-pool-11-014",
-    "chem-kap6",
-    "Welcher Bindungswinkel liegt bei sp³-hybridisiertem Kohlenstoff vor?",
-    ["90°", "109,5°", "120°", "180°", "60°"],
-    1,
-    "sp³ → tetraedrische Geometrie, Bindungswinkel 109,5°. sp² → 120° (trigonal planar); sp → 180° (linear).",
-    "leicht",
-    ["Hybridisierung", "Kap6"]
   ),
   q(
     "ch-pool-11-015",
@@ -236,32 +118,6 @@ export const chemiePool11: Question[] = [
     ["kovalente Bindung", "Kap3"]
   ),
   q(
-    "ch-pool-11-018",
-    "chem-kap1",
-    "Die Massenzahl A eines Atoms ist …",
-    [
-      "gleich der Ordnungszahl Z",
-      "A = Z + N (Protonen + Neutronen)",
-      "nur die Neutronenzahl",
-      "die Elektronenzahl",
-      "immer 12",
-    ],
-    1,
-    "A = Massenzahl = Z + N. Z = Protonenzahl, N = Neutronenzahl. Nuklidnotation: ᴬ_Z X.",
-    "leicht",
-    ["Massenzahl", "Kap1"]
-  ),
-  q(
-    "ch-pool-11-019",
-    "chem-kap5",
-    "Welche Säure ist eine starke Säure in wässriger Lösung?",
-    ["Essigsäure", "Salpetersäure (HNO₃)", "Kohlensäure", "Phosphorsäure", "Blausäure"],
-    1,
-    "Starke Säuren: HCl, HBr, HI, HNO₃, H₂SO₄ (1. Protolyse), HClO₄. Essigsäure, H₂CO₃, H₃PO₄ sind schwach.",
-    "mittel",
-    ["Säuren", "Kap5"]
-  ),
-  q(
     "ch-pool-11-020",
     "chem-kap6",
     "Alkene haben mindestens …",
@@ -278,22 +134,6 @@ export const chemiePool11: Question[] = [
     ["Alkene", "Kap6"]
   ),
   q(
-    "ch-pool-11-021",
-    "chem-kap2",
-    "Sublimieren ist der Übergang …",
-    [
-      "flüssig → gasförmig",
-      "gasförmig → flüssig",
-      "fest → gasförmig",
-      "fest → flüssig",
-      "flüssig → fest",
-    ],
-    2,
-    "Sublimieren = fest → gasförmig (z. B. Iod, Trockeneis). Resublimieren = gasförmig → fest.",
-    "leicht",
-    ["Aggregatzustand", "Kap2"]
-  ),
-  q(
     "ch-pool-11-022",
     "chem-kap4",
     "Das Ionenprodukt des Wassers K_w bei 25 °C beträgt …",
@@ -302,22 +142,6 @@ export const chemiePool11: Question[] = [
     "K_w = [H₃O⁺] · [OH⁻] = 10⁻¹⁴ bei 25 °C. In reinem Wasser: [H₃O⁺] = [OH⁻] = 10⁻⁷ mol/L.",
     "mittel",
     ["K_w", "Autoprotolyse", "Kap5"]
-  ),
-  q(
-    "ch-pool-11-023",
-    "chem-kap3",
-    "Die Oktettregel besagt, dass viele Atome in Verbindungen …",
-    [
-      "6 Außenelektronen anstreben (Sextett-Regel)",
-      "8 Außenelektronen (Edelgaskonfiguration) anstreben",
-      "10 Elektronen in der äußeren Schale anordnen",
-      "keine Elektronen abgeben oder aufnehmen können",
-      "nur 2 Elektronen (wie Helium) in der Valenzschale haben",
-    ],
-    1,
-    "Oktettregel: Viele Atome erreichen 8 Außenelektronen (Edelgaskonfiguration). Ausnahmen: H (2), B, erweiterte Oktette.",
-    "leicht",
-    ["Oktettregel", "Kap3"]
   ),
   q(
     "ch-pool-11-024",
@@ -360,16 +184,6 @@ export const chemiePool11: Question[] = [
     "AgCl (Silberchlorid) ist in Wasser schwer löslich und fällt aus. Metathese = Austausch der Ionenpartner.",
     "mittel",
     ["Metathese", "Kap4"]
-  ),
-  q(
-    "ch-pool-11-027",
-    "chem-kap2",
-    "Nach dem Gesetz von Boyle-Mariotte gilt bei konstanter Temperatur …",
-    ["V / T = const", "p · V = const", "p / V = const", "n · R = const", "p + V = const"],
-    1,
-    "Boyle-Mariotte: Bei T = const ist p · V = const. Druckerhöhung → Volumenabnahme.",
-    "leicht",
-    ["Boyle", "Gasgesetze", "Kap2"]
   ),
   q(
     "ch-pool-11-028",

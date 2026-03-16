@@ -324,16 +324,6 @@ export const chemiePool17: Question[] = [
     ["Löslichkeit", "AgCl"]
   ),
   q(
-    "ch-pool-17-030",
-    KAP[5],
-    "Die funktionelle Gruppe eines Aldehyds ist:",
-    ["−OH", "−COOH", "−CHO", "−CO−", "−NH₂"],
-    2,
-    "Aldehyd: −CHO (Carbonyl am Ende der Kette). Keton: −CO− in der Kette.",
-    "leicht",
-    ["Aldehyd", "funktionelle Gruppe"]
-  ),
-  q(
     "ch-pool-17-031",
     KAP[0],
     "Ein Atom mit 17 Protonen ist:",

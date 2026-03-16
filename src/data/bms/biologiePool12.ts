@@ -44,11 +44,11 @@ export const biologiePool12: Question[] = [
     "bio-kap2",
     "Welches Vitamin ist für die Blutgerinnung wichtig?",
     [
-      "Vitamin A (Retinol) für Sehfunktion und Zelldifferenzierung",
+      "Vitamin A (Retinol)",
       "Vitamin C",
-      "Vitamin D (Calciferol) für den Calcium- und Phosphatstoffwechsel",
+      "Vitamin D (Calciferol)",
       "Vitamin K",
-      "Vitamin B12 (Cobalamin) für die Erythropoese und Nervenfunktion",
+      "Vitamin B12 (Cobalamin)",
     ],
     3,
     "Vitamin K ist Kofaktor für die Synthese von Gerinnungsfaktoren (z. B. Prothrombin) in der Leber.",
@@ -118,7 +118,7 @@ export const biologiePool12: Question[] = [
     "bio-kap4",
     "Was ist ein Intron?",
     [
-      "Ein codierender Abschnitt der DNA (Exon), der in der reifen mRNA verbleibt",
+      "Ein codierender Abschnitt der DNA (Exon)",
       "Ein nicht codierender Abschnitt, der bei der RNA-Verarbeitung entfernt wird",
       "Ein Protein",
       "Eine tRNA",
@@ -160,7 +160,7 @@ export const biologiePool12: Question[] = [
     "bio-kap5",
     "Was ist ein Antigen?",
     [
-      "Ein Antikörper (Immunglobulin) der humoralen Immunabwehr",
+      "Ein Antikörper (Immunglobulin)",
       "Eine Substanz, die eine spezifische Immunantwort auslösen kann",
       "Ein Hormon",
       "Ein Enzym",
@@ -192,16 +192,6 @@ export const biologiePool12: Question[] = [
     ["Skelett", "Schädel"]
   ),
   q(
-    "bio-pool-12-014",
-    "bio-kap4",
-    "Wie viele Chromosomen hat eine menschliche Keimzelle (haploid)?",
-    ["46", "23", "92", "22", "44"],
-    1,
-    "Keimzellen (Spermien, Eizellen) sind haploid: 23 Chromosomen.",
-    "leicht",
-    ["Genetik", "Chromosomen"]
-  ),
-  q(
     "bio-pool-12-015",
     "bio-kap2",
     "Welches Hormon stimuliert die Schilddrüse?",
@@ -216,7 +206,7 @@ export const biologiePool12: Question[] = [
     "bio-kap1",
     "Was ist das Hauptprodukt des Citratzyklus (pro Durchlauf)?",
     [
-      "Glukose (Traubenzucker) als Hexose-Monosaccharid",
+      "Glukose (Traubenzucker)",
       "Pyruvat als Endprodukt der Glykolyse im Zytosol",
       "NADH, FADH2, GTP",
       "Laktat als Endprodukt der anaeroben Glykolyse",
@@ -228,23 +218,7 @@ export const biologiePool12: Question[] = [
     ["Stoffwechsel", "Citratzyklus"]
   ),
   q(
-    "bio-pool-12-017",
-    "bio-kap5",
-    "Was versteht man unter „Biotop“?",
-    [
-      "Die Lebensgemeinschaft",
-      "Der unbelebte Lebensraum",
-      "Eine Art (Spezies) als Fortpflanzungsgemeinschaft im Genpool",
-      "Eine Nahrungskette",
-      "Ein Individuum",
-    ],
-    1,
-    "Biotop = unbelebter Lebensraum (Boden, Wasser, Klima). Biozönose = Lebensgemeinschaft.",
-    "leicht",
-    ["Ökologie", "Biotop (unbelebter Lebensraum mit spezifischen abiotischen Bedingungen)"]
-  ),
-  q(
-    "bio-pool-12-019",
+    “bio-pool-12-019”,
     "bio-kap4",
     "Was ist eine Punktmutation?",
     [
@@ -333,7 +307,7 @@ export const biologiePool12: Question[] = [
     "Was ist eine Nahrungskette?",
     [
       "Die Gesamtheit aller Arten in einem Biotop",
-      "Eine lineare Abfolge von Nahrungsbeziehungen (wer frisst wen)",
+      "Eine lineare Abfolge von Nahrungsbeziehungen",
       "Ein Biotop",
       "Eine Population",
       "Ein Ökosystem",
@@ -399,7 +373,7 @@ export const biologiePool12: Question[] = [
     "bio-pool-12-033",
     "bio-kap5",
     "Was sind Destruenten?",
-    ["Produzenten", "Konsumenten", "Zersetzer (Pilze, Bakterien)", "Räuber", "Pflanzenfresser"],
+    ["Produzenten", "Konsumenten", "Zersetzer", "Räuber", "Pflanzenfresser"],
     2,
     "Destruenten (Zersetzer) bauen tote organische Substanz ab und setzen Nährstoffe frei.",
     "leicht",
@@ -429,13 +403,7 @@ export const biologiePool12: Question[] = [
     "bio-pool-12-036",
     "bio-kap1",
     "Welches Vitamin ist ein Antioxidans und wichtig für das Bindegewebe?",
-    [
-      "Vitamin A (Retinol) für Sehfunktion und Zelldifferenzierung",
-      "Vitamin B1",
-      "Vitamin C",
-      "Vitamin D (Calciferol) für den Calcium- und Phosphatstoffwechsel",
-      "Vitamin K",
-    ],
+    ["Vitamin A (Retinol)", "Vitamin B1", "Vitamin C", "Vitamin D (Calciferol)", "Vitamin K"],
     2,
     "Vitamin C ist u. a. Kofaktor für die Kollagensynthese und wirkt als Antioxidans.",
     "leicht",
@@ -498,7 +466,7 @@ export const biologiePool12: Question[] = [
     "bio-kap5",
     "Was versteht man unter „ökologischer Nische“?",
     [
-      "Der konkrete Lebensort (Habitat) als geografischer Standort einer Art",
+      "Der konkrete Lebensort (Habitat)",
       "Die Gesamtheit der abiotischen und biotischen Faktoren, die eine Art nutzt bzw. erfordert",
       "Eine Nahrungskette",
       "Ein Biotop",
@@ -576,7 +544,7 @@ export const biologiePool12: Question[] = [
     "bio-kap5",
     "Was sind natürliche Killerzellen?",
     [
-      "B-Lymphozyten (knochenmarksgereift, Antikörperproduktion)",
+      "B-Lymphozyten",
       "T-Lymphozyten",
       "Lymphozyten der unspezifischen Abwehr, die virusinfizierte Zellen abtöten können",
       "Erythrozyten",
@@ -608,9 +576,9 @@ export const biologiePool12: Question[] = [
     "bio-kap2",
     "Welcher Gehirnbereich ist wichtig für die Regulation von Atmung und Kreislauf?",
     [
-      "Großhirnrinde (Cortex cerebri) als Sitz höherer kognitiver Funktionen",
-      "Kleinhirn (Cerebellum) als Koordinationszentrum für Motorik und Gleichgewicht",
-      "Hirnstamm (Medulla oblongata, Pons)",
+      "Großhirnrinde (Cortex cerebri)",
+      "Kleinhirn (Cerebellum)",
+      "Hirnstamm",
       "Thalamus als Umschaltstation sensorischer Bahnen",
       "Hypothalamus als übergeordnetes Steuerungszentrum des Hormonsystems",
     ],
@@ -635,7 +603,7 @@ export const biologiePool12: Question[] = [
     "Was ist ein Produzent in einem Ökosystem?",
     [
       "Ein Tier",
-      "Ein Organismus, der aus anorganischen Stoffen organische Substanz aufbaut (z. B. Pflanzen)",
+      "Ein Organismus, der aus anorganischen Stoffen organische Substanz aufbaut",
       "Ein Pilz",
       "Ein Zersetzer für die Mineralisierung",
       "Ein Räuber",

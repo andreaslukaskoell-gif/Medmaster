@@ -36,16 +36,6 @@ export const mathematikPool11: Question[] = [
   // ─── mathe-kap1: Zahlen, Mengen, Einheiten (10 Fragen) ───
 
   q(
-    "ma-pool-11-001",
-    "mathe-kap1",
-    "Welche der folgenden Zahlen ist irrational?",
-    ["3/7", "0,125", "√2", "−4", "0,333..."],
-    2,
-    "√2 ist irrational, da 2 keine Quadratzahl ist. 3/7, 0,125 und 0,333... = 1/3 sind rational, −4 ist ganzzahlig.",
-    "leicht",
-    ["Zahlenmengen", "irrationale Zahlen"]
-  ),
-  q(
     "ma-pool-11-002",
     "mathe-kap1",
     "Eine Labormessung ergibt 0,000 045 g. In wissenschaftlicher Notation ist das:",
@@ -151,22 +141,6 @@ export const mathematikPool11: Question[] = [
   // ─── mathe-kap2: Algebra, Gleichungen, Geometrie (10 Fragen) ───
 
   q(
-    "ma-pool-11-011",
-    "mathe-kap2",
-    "Lösen Sie die quadratische Gleichung x² − 5x + 6 = 0. Die Lösungen sind:",
-    [
-      "x = 1 und x = 6",
-      "x = 2 und x = 3",
-      "x = −2 und x = −3",
-      "x = −1 und x = 6",
-      "x = 1 und x = −6",
-    ],
-    1,
-    "x² − 5x + 6 = (x − 2)(x − 3) = 0. Also x₁ = 2 und x₂ = 3. Probe: 2² − 5·2 + 6 = 0 ✓, 3² − 5·3 + 6 = 0 ✓.",
-    "leicht",
-    ["quadratische Gleichung", "Faktorisierung"]
-  ),
-  q(
     "ma-pool-11-012",
     "mathe-kap2",
     "Der Umfang eines Kreises beträgt 31,4 cm (π ≈ 3,14). Berechnen Sie die Fläche dieses Kreises.",
@@ -185,16 +159,6 @@ export const mathematikPool11: Question[] = [
     "(a² − b²) = (a + b)(a − b). Division durch (a + b) ergibt (a − b).",
     "leicht",
     ["Algebra", "binomische Formeln", "Faktorisierung"]
-  ),
-  q(
-    "ma-pool-11-014",
-    "mathe-kap2",
-    "Ein rechtwinkliges Dreieck hat die Katheten a = 5 cm und b = 12 cm. Wie lang ist die Hypotenuse?",
-    ["13 cm", "15 cm", "17 cm", "11 cm", "14 cm"],
-    0,
-    "Pythagoras: c = √(a² + b²) = √(25 + 144) = √169 = 13 cm.",
-    "leicht",
-    ["Geometrie", "Pythagoras", "rechenfrage"]
   ),
   q(
     "ma-pool-11-015",
@@ -322,16 +286,6 @@ export const mathematikPool11: Question[] = [
     ["Potenzgesetze", "binomische Formeln", "Falsch-Aussage"]
   ),
   q(
-    "ma-pool-11-026",
-    "mathe-kap3",
-    "Berechnen Sie: √(50) + √(18) − √(8).",
-    ["5√2", "6√2", "7√2", "8√2", "4√2"],
-    1,
-    "√50 = 5√2, √18 = 3√2, √8 = 2√2. Ergebnis: 5√2 + 3√2 − 2√2 = 6√2.",
-    "mittel",
-    ["Wurzeln", "Vereinfachung", "rechenfrage"]
-  ),
-  q(
     "ma-pool-11-027",
     "mathe-kap3",
     "Ein Kapital von 2000 € wird 3 Jahre mit 5 % p.a. (Zinseszins) angelegt. Wie hoch ist das Endkapital?",
@@ -351,27 +305,6 @@ export const mathematikPool11: Question[] = [
     "mittel",
     ["Logarithmus", "rechenfrage"]
   ),
-  q(
-    "ma-pool-11-029",
-    "mathe-kap3",
-    "Ein Wert steigt von 80 auf 100. Die prozentuale Zunahme beträgt:",
-    ["20 %", "25 %", "80 %", "125 %", "15 %"],
-    1,
-    "Zunahme = (100 − 80)/80 × 100 % = 20/80 × 100 % = 25 %.",
-    "leicht",
-    ["Prozentrechnung", "rechenfrage"]
-  ),
-  q(
-    "ma-pool-11-030",
-    "mathe-kap3",
-    "Welchen Wert hat (27)^(2/3)?",
-    ["3", "6", "9", "18", "27"],
-    2,
-    "27^(2/3) = (27^(1/3))² = 3² = 9. Die dritte Wurzel aus 27 ist 3, quadriert ergibt 9.",
-    "mittel",
-    ["Potenzgesetze", "Wurzeln", "rechenfrage"]
-  ),
-
   // ─── mathe-kap5: Funktionen (10 Fragen) ───
 
   q(
@@ -627,16 +560,6 @@ export const mathematikPool11: Question[] = [
     ["Erwartungswert", "rechenfrage"]
   ),
   q(
-    "ma-pool-11-055",
-    "mathe-kap7",
-    "Wie viele verschiedene Anordnungen gibt es für die Buchstaben des Wortes AAB?",
-    ["2", "3", "4", "6", "8"],
-    1,
-    "3!/2! = 6/2 = 3. Die Anordnungen sind: AAB, ABA, BAA.",
-    "leicht",
-    ["Kombinatorik", "Permutation mit Wiederholung", "rechenfrage"]
-  ),
-  q(
     "ma-pool-11-056",
     "mathe-kap7",
     "Eine Urne enthält 4 rote und 6 blaue Kugeln. Es werden nacheinander 2 Kugeln ohne Zurücklegen gezogen. Wie groß ist die Wahrscheinlichkeit, dass beide rot sind?",
@@ -681,15 +604,5 @@ export const mathematikPool11: Question[] = [
     "P(10,4) = 10 × 9 × 8 × 7 = 5040. (Permutation ohne Wiederholung, 10 Ziffern, 4 Plätze.)",
     "mittel",
     ["Kombinatorik", "Permutation", "rechenfrage"]
-  ),
-  q(
-    "ma-pool-11-060",
-    "mathe-kap7",
-    "Die Varianz einer Zufallsvariable X mit E(X) = 3 und E(X²) = 11 beträgt:",
-    ["2", "8", "3", "14", "5"],
-    0,
-    "Var(X) = E(X²) − [E(X)]² = 11 − 9 = 2.",
-    "schwer",
-    ["Varianz", "Erwartungswert", "rechenfrage"]
   ),
 ];

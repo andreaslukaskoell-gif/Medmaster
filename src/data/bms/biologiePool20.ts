@@ -112,7 +112,7 @@ export const biologiePool20: Question[] = [
     "Ein Patient mit einer Blutgasanalyse zeigt: pH 7,28, pCO₂ 60 mmHg, HCO₃⁻ 27 mmol/l. Welche Störung liegt vor?",
     [
       "Metabolische Azidose mit respiratorischer Kompensation",
-      "Respiratorische Azidose (unvollständig kompensiert)",
+      "Respiratorische Azidose",
       "Metabolische Alkalose mit respiratorischer Kompensation",
       "Respiratorische Alkalose (dekompensiert)",
       "Gemischte metabolisch-respiratorische Alkalose",
@@ -160,7 +160,7 @@ export const biologiePool20: Question[] = [
     "Welche Aussage zur Skelettmuskelkontraktion ist FALSCH?",
     [
       "Calcium wird aus dem sarkoplasmatischen Retikulum freigesetzt und bindet an Troponin C",
-      "ATP wird für das Lösen der Myosinköpfe vom Aktin benötigt (Totenstarre = ATP-Mangel)",
+      "ATP wird für das Lösen der Myosinköpfe vom Aktin benötigt",
       "Die I-Bande und die H-Zone werden bei der Kontraktion kürzer",
       "Die A-Bande wird bei der Kontraktion kürzer, weil sich die Myosinfilamente verkürzen",
       "Acetylcholin bindet an nikotinische Rezeptoren an der motorischen Endplatte",
@@ -175,7 +175,7 @@ export const biologiePool20: Question[] = [
     "bio-kap2",
     "Ein Patient hat einen Hämatokrit von 65 % und eine stark erhöhte Erythrozytenzahl. Welche Differenzialdiagnose ist am wahrscheinlichsten, wenn gleichzeitig der Erythropoietin-Spiegel erniedrigt ist?",
     [
-      "Sekundäre Polyzythämie durch chronische Hypoxie (z. B. Höhenaufenthalt)",
+      "Sekundäre Polyzythämie durch chronische Hypoxie",
       "Polycythaemia vera",
       "Eisenmangelanämie mit kompensatorischer EPO-Erhöhung",
       "Dehydratation mit relativem Hämatokrit-Anstieg",
@@ -240,7 +240,7 @@ export const biologiePool20: Question[] = [
     "bio-pool-20-014",
     "bio-kap4",
     "Bei einem autosomal-rezessiven Erbgang sind beide Eltern heterozygot (Aa × Aa). Mit welcher Wahrscheinlichkeit ist ein phänotypisch gesundes Kind Träger (heterozygot)?",
-    ["1/4 (25 %)", "1/2 (50 %)", "2/3 (ca. 67 %)", "3/4 (75 %)", "1/3 (ca. 33 %)"],
+    ["1/4 (25 %)", "1/2 (50 %)", "2/3", "3/4 (75 %)", "1/3"],
     2,
     "Aa × Aa → 1/4 AA, 2/4 Aa, 1/4 aa. Phänotypisch gesund sind AA + Aa = 3/4. Davon sind 2/4 Aa, also 2/3 der gesunden Kinder sind Träger. Bedingungswahrscheinlichkeit: P(Aa | gesund) = (2/4) / (3/4) = 2/3.",
     "schwer",
@@ -250,13 +250,7 @@ export const biologiePool20: Question[] = [
     "bio-pool-20-015",
     "bio-kap4",
     "Ein Gen zeigt unvollständige Dominanz. Werden zwei heterozygote Organismen (Rr) gekreuzt, welches Phänotypenverhältnis ergibt sich in der F2?",
-    [
-      "3:1 (dominant : rezessiv)",
-      "1:2:1",
-      "1:1 (dominant : rezessiv)",
-      "9:3:3:1 (dihybrid)",
-      "2:1",
-    ],
+    ["3:1", "1:2:1", "1:1", "9:3:3:1 (dihybrid)", "2:1"],
     1,
     "Bei unvollständiger Dominanz zeigt der Heterozygote einen intermediären Phänotyp. Rr × Rr → 1 RR : 2 Rr : 1 rr, und alle drei Genotypen sind phänotypisch unterscheidbar → 1:2:1 Phänotypenverhältnis.",
     "schwer",
@@ -284,7 +278,7 @@ export const biologiePool20: Question[] = [
     "Bei der Meiose I kommt es zum Crossing-over. In welcher Phase findet dies statt, und welche Konsequenz hat es?",
     [
       "Metaphase I — Homologe ordnen sich an der Äquatorialplatte und tauschen Chromosomenstücke aus",
-      "Prophase I (Pachytän) — Nicht-Schwesterchromatiden homologer Chromosomen rekombinieren, was die genetische Vielfalt erhöht",
+      "Prophase I (Pachytän)",
       "Anaphase I — Die Schwesterchromatiden werden getrennt und dabei rekombiniert",
       "Prophase II — Crossing-over findet erst in der zweiten meiotischen Teilung statt",
       "Telophase I — Rekombination erfolgt während der Kernhüllenbildung",
@@ -421,7 +415,7 @@ export const biologiePool20: Question[] = [
     [
       "Jeder naive B-Lymphozyt trägt einen einzigartigen B-Zell-Rezeptor (membranständiges IgM/IgD)",
       "Bei Antigenkontakt wird der passende B-Zell-Klon selektiv aktiviert und vermehrt sich",
-      "Aus aktivierten B-Zellen entstehen Plasmazellen (Antikörpersekretion) und Gedächtniszellen",
+      "Aus aktivierten B-Zellen entstehen Plasmazellen (Antikörpersekretion)",
       "Die klonale Selektion bewirkt, dass ein B-Lymphozyt mehrere verschiedene Antikörperspezifitäten gleichzeitig produziert",
       "Die somatische Hypermutation in Keimzentren erhöht die Antikörperaffinität (Affinitätsreifung)",
     ],
@@ -455,7 +449,7 @@ export const biologiePool20: Question[] = [
     "bio-kap5",
     "Bei einer Autoimmunerkrankung greift das Immunsystem körpereigene Strukturen an. Welcher Mechanismus der Selbsttoleranz ist bei Autoimmunerkrankungen typischerweise gestört?",
     [
-      "Klonale Deletion autoreaktiver T-Zellen im Thymus (zentrale Toleranz)",
+      "Klonale Deletion autoreaktiver T-Zellen im Thymus",
       "Komplementaktivierung über den alternativen Weg",
       "Antigenpräsentation über MHC-II auf Erythrozyten",
       "Opsonisierung durch C-reaktives Protein",

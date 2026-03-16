@@ -426,22 +426,6 @@ export const chemiePool20: Question[] = [
     ["Elektronegativität"]
   ),
   q(
-    "ch-pool-20-034",
-    KAP[3],
-    "Ein Katalysator ändert die Aktivierungsenergie und:",
-    [
-      "die Gleichgewichtslage",
-      "die Reaktionsenthalpie ΔH",
-      "nicht die Gleichgewichtskonstante K",
-      "die Stöchiometrie",
-      "die Produktzusammensetzung",
-    ],
-    2,
-    "Katalysator senkt E_A, ändert aber nicht K, ΔH oder Stöchiometrie.",
-    "mittel",
-    ["Katalysator"]
-  ),
-  q(
     "ch-pool-20-035",
     KAP[4],
     "Welches Salz ist gut wasserlöslich?",
@@ -678,16 +662,6 @@ export const chemiePool20: Question[] = [
     "Sekundärer Alkohol → Oxidation (z. B. K₂Cr₂O₇, KMnO₄) → Keton.",
     "mittel",
     ["Keton", "Oxidation"]
-  ),
-  q(
-    "ch-pool-20-055",
-    KAP[0],
-    "Welche Gruppe des PSE enthält die Erdalkalimetalle?",
-    ["Gruppe 1", "Gruppe 2", "Gruppe 17", "Gruppe 18", "Gruppe 16"],
-    1,
-    "Erdalkalimetalle: Be, Mg, Ca, Sr, Ba, Ra – Gruppe 2.",
-    "leicht",
-    ["Erdalkalimetalle", "Periodensystem"]
   ),
   q(
     "ch-pool-20-056",

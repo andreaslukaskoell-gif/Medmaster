@@ -345,22 +345,6 @@ export const chemiePool6: Question[] = [
     []
   ),
   q(
-    "ch-pool-276",
-    "chem-kap2",
-    "Die Schmelzenthalpie ist die Energie, die beim Übergang benötigt wird:",
-    [
-      "flüssig → gasförmig",
-      "fest → flüssig",
-      "gasförmig → flüssig",
-      "fest → gasförmig",
-      "flüssig → fest",
-    ],
-    1,
-    "Schmelzen: fest → flüssig. Die Schmelzenthalpie muss zugeführt werden. Erstarren setzt sie frei.",
-    "leicht",
-    []
-  ),
-  q(
     "ch-pool-277",
     "chem-kap3",
     "Welche Verbindung ist am ehesten in Wasser unlöslich?",
@@ -565,16 +549,6 @@ export const chemiePool6: Question[] = [
     ["Ethan", "Ethen", "Ethin", "Benzol", "Cyclohexan"],
     2,
     "Ethin C₂H₂ hat C≡C (Dreifachbindung). Ethan: nur Einfachbindungen, Ethen: C=C.",
-    "leicht",
-    []
-  ),
-  q(
-    "ch-pool-293",
-    "chem-kap1",
-    "Welches Metall ist ein Erdalkalimetall?",
-    ["Natrium", "Kalium", "Magnesium", "Aluminium", "Eisen"],
-    2,
-    "Erdalkalimetalle = Gruppe 2: Be, Mg, Ca, Sr, Ba, Ra. Natrium und Kalium sind Alkalimetalle.",
     "leicht",
     []
   ),

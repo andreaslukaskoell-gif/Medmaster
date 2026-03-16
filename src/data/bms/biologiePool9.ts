@@ -33,16 +33,6 @@ function q(
 
 export const biologiePool9: Question[] = [
   q(
-    "bio-pool-9-001",
-    "bio-kap1",
-    "Welche Zellorganelle enthält die eigene DNA (Endosymbiontentheorie)?",
-    ["Ribosom", "Lysosom", "Mitochondrium", "Golgi-Apparat", "Peroxisom"],
-    2,
-    "Mitochondrien haben eigene DNA und Doppelmembran – Hinweis auf endosymbiotischen Ursprung.",
-    "mittel",
-    ["Mitochondrien", "Kap1"]
-  ),
-  q(
     "bio-pool-9-002",
     "bio-kap2",
     "Welches Epithel ermöglicht die mukoziliäre Clearance in den Atemwegen?",
@@ -62,27 +52,11 @@ export const biologiePool9: Question[] = [
     "bio-pool-9-003",
     "bio-kap4",
     "Welche Basenpaarung kommt in der RNA vor?",
-    ["A–T", "A–U", "G–T (Purin-Pyrimidin, mismatch)", "nur G–C", "A–G (Purin-Purin-Paarung)"],
+    ["A–T", "A–U", "G–T", "nur G–C", "A–G (Purin-Purin-Paarung)"],
     1,
     "In der RNA paart Uracil (U) mit Adenin (A); Thymin (T) kommt in der DNA vor.",
     "leicht",
     ["RNA", "Kap4"]
-  ),
-  q(
-    "bio-pool-9-004",
-    "bio-kap5",
-    "Ein Ökosystem umfasst …",
-    [
-      "nur die Pflanzen",
-      "nur die Tiere",
-      "Biotop und Biozönose",
-      "nur abiotische Faktoren ohne Organismen",
-      "eine einzelne Population",
-    ],
-    2,
-    "Ökosystem = Biotop (unbelebter Lebensraum) + Biozönose (alle Lebewesen).",
-    "leicht",
-    ["Ökologie", "Kap5"]
   ),
   q(
     "bio-pool-9-005",
@@ -101,32 +75,6 @@ export const biologiePool9: Question[] = [
     ["Diabetes", "Kap1"]
   ),
   q(
-    "bio-pool-9-006",
-    "bio-kap2",
-    "Merokrine Sekretion erfolgt durch …",
-    [
-      "Abschnürung der ganzen Zelle",
-      "Exozytose (ohne Zellverlust)",
-      "Abschnürung der Zellspitze",
-      "nur in Talgdrüsen",
-      "nur in endokrinen Drüsen",
-    ],
-    1,
-    "Merokrin = Exozytose. Apokrin = Abschnürung; Holokrin = ganze Zelle.",
-    "mittel",
-    ["Sekretion", "Kap2"]
-  ),
-  q(
-    "bio-pool-9-007",
-    "bio-kap4",
-    "Wie viele Tochterzellen entstehen bei der Meiose aus einer Ausgangszelle?",
-    ["1", "2", "3", "4", "8"],
-    3,
-    "Meiose: 1. Teilung → 2 Zellen, 2. Teilung → 4 haploide Tochterzellen.",
-    "leicht",
-    ["Meiose", "Kap4"]
-  ),
-  q(
     "bio-pool-9-008",
     "bio-kap3",
     "Das Geschlechtschromosom in der menschlichen Eizelle ist immer …",
@@ -135,74 +83,6 @@ export const biologiePool9: Question[] = [
     "Die Eizelle enthält immer ein X-Chromosom. Das Spermium liefert X oder Y → Geschlecht wird durch das Spermium bestimmt.",
     "leicht",
     ["Vererbung", "Kap3"]
-  ),
-  q(
-    "bio-pool-9-009",
-    "bio-kap1",
-    "Welche Aussage zu Viren trifft zu?",
-    [
-      "Viren haben Ribosomen.",
-      "Viren sind obligat intrazelluläre Parasiten.",
-      "Viren haben einen eigenen Stoffwechsel.",
-      "Antibiotika wirken zuverlässig gegen Viren.",
-      "Viren bestehen aus Zellen.",
-    ],
-    1,
-    "Viren sind obligat intrazellulär: Sie können sich nur in Wirtszellen vermehren und haben keinen eigenständigen Stoffwechsel.",
-    "mittel",
-    ["Viren", "Kap1"]
-  ),
-  q(
-    "bio-pool-9-010",
-    "bio-kap2",
-    "Welche Schicht der Epidermis liegt direkt auf der Basalmembran?",
-    [
-      "Stratum corneum",
-      "Stratum granulosum",
-      "Stratum spinosum",
-      "Stratum basale",
-      "Stratum lucidum",
-    ],
-    3,
-    "Stratum basale (Basalzellschicht) grenzt an die Basalmembran und enthält die teilungsaktiven Keratinozyten.",
-    "leicht",
-    ["Epidermis (mehrschichtiges verhorntes Plattenepithel der Haut)", "Kap2"]
-  ),
-  q(
-    "bio-pool-9-011",
-    "bio-kap4",
-    "Ein Genotyp aa bedeutet …",
-    ["homozygot dominant", "heterozygot", "homozygot rezessiv", "hemizygot", "diploid"],
-    2,
-    "aa = beide Allele rezessiv = homozygotes rezessiv. AA = homozygot dominant; Aa = heterozygot.",
-    "leicht",
-    ["Genetik", "Kap4"]
-  ),
-  q(
-    "bio-pool-9-012",
-    "bio-kap5",
-    "Sekundärkonsumenten ernähren sich von …",
-    [
-      "Produzenten",
-      "Primärkonsumenten",
-      "Destruenten",
-      "abiotischen Faktoren",
-      "mineralischen Nährstoffen",
-    ],
-    1,
-    "Sekundärkonsumenten = Fleischfresser, die Primärkonsumenten (Pflanzenfresser) fressen.",
-    "leicht",
-    ["Ökologie", "Kap5"]
-  ),
-  q(
-    "bio-pool-9-013",
-    "bio-kap1",
-    "Die Glykolyse liefert pro Glukosemolekül netto …",
-    ["2 ATP", "30 ATP", "38 ATP", "6 ATP", "1 ATP"],
-    0,
-    "Glykolyse: 1 Glukose → 2 Pyruvat, netto 2 ATP. Der Großteil des ATP kommt aus der Atmungskette.",
-    "schwer",
-    ["Stoffwechsel", "Kap1"]
   ),
   q(
     "bio-pool-9-014",
@@ -215,54 +95,6 @@ export const biologiePool9: Question[] = [
     ["Bindegewebe (mesenchymale Zellen in extrazellulärer Matrix)", "Kap2"]
   ),
   q(
-    "bio-pool-9-015",
-    "bio-kap4",
-    "Bei der Mitose entstehen aus einer diploiden Zelle …",
-    [
-      "zwei haploide Zellen",
-      "zwei diploide Zellen",
-      "vier haploide Zellen",
-      "eine diploide Zelle",
-      "vier diploide Zellen",
-    ],
-    1,
-    "Mitose: Eine Zelle → zwei genetisch identische Tochterzellen, beide diploid. Meiose → vier haploide Zellen.",
-    "leicht",
-    ["Mitose", "Kap4"]
-  ),
-  q(
-    "bio-pool-9-016",
-    "bio-kap3",
-    "Östrogen wird vor allem gebildet in …",
-    [
-      "der Hypophyse",
-      "dem Ovar (Follikel)",
-      "der Schilddrüse",
-      "der Bauchspeicheldrüse",
-      "der Nebennierenrinde",
-    ],
-    1,
-    "Östrogen wird in den Ovarialfollikeln gebildet; FSH stimuliert die Follikelreifung.",
-    "mittel",
-    ["Hormone (Signalmoleküle des endokrinen Systems für die Fernwirkung)", "Kap3"]
-  ),
-  q(
-    "bio-pool-9-017",
-    "bio-kap1",
-    "Welche Eigenschaft haben alle Epithelien gemeinsam?",
-    [
-      "Sie sind stark durchblutet",
-      "Sie sind polar (apikal/basolateral) und auf Basalmembran",
-      "Sie enthalten nur eine einzige Zellschicht (einschichtiges Epithel)",
-      "Sie sezernieren immer",
-      "Sie haben keine Zellkontakte",
-    ],
-    1,
-    "Epithelien: Polarität, auf Basalmembran, avaskulär. Sie können ein- oder mehrschichtig sein.",
-    "mittel",
-    ["Epithel", "Kap2"]
-  ),
-  q(
     "bio-pool-9-018",
     "bio-kap4",
     "Die DNA-Doppelhelix wurde von wem beschrieben?",
@@ -271,42 +103,6 @@ export const biologiePool9: Question[] = [
     "Watson und Crick (1953) beschrieben die Doppelhelix-Struktur der DNA mit Basenpaarung A–T und G–C.",
     "leicht",
     ["DNA", "Kap4"]
-  ),
-  q(
-    "bio-pool-9-019",
-    "bio-kap5",
-    "Autotrophe Organismen …",
-    [
-      "ernähren sich von anderen Organismen (heterotrophe Ernährungsweise)",
-      "bauen organische Stoffe aus anorganischen auf (z. B. Photosynthese)",
-      "zersetzen nur totes organisches Material (saprophytische Ernährungsweise)",
-      "sind nur Destruenten",
-      "nehmen nur fertige organische Stoffe auf (chemoheterotrophe Ernährung)",
-    ],
-    1,
-    "Autotroph = Selbsternährung. Heterotroph = Ernährung von anderen.",
-    "leicht",
-    ["Ökologie", "Kap5"]
-  ),
-  q(
-    "bio-pool-9-021",
-    "bio-kap1",
-    "Welches Organell ist für den Abbau von H₂O₂ zuständig?",
-    ["Ribosom", "Lysosom", "Peroxisom", "Golgi-Apparat", "ER"],
-    2,
-    "Peroxisomen enthalten Katalase und bauen Wasserstoffperoxid zu Wasser und Sauerstoff ab.",
-    "leicht",
-    ["Peroxisom", "Kap1"]
-  ),
-  q(
-    "bio-pool-9-022",
-    "bio-kap4",
-    "Reife menschliche Erythrozyten haben …",
-    ["einen Zellkern", "keinen Zellkern", "Mitochondrien", "Zellorganellen", "DNA im Zytoplasma"],
-    1,
-    "Reife Erythrozyten sind kernlos, um mehr Platz für Hämoglobin zu haben.",
-    "leicht",
-    ["Erythrozyten (bikonkave, kernlose rote Blutkörperchen)", "Kap2"]
   ),
   q(
     "bio-pool-9-023",
@@ -332,8 +128,8 @@ export const biologiePool9: Question[] = [
       "nur die Destruenten im Ökosystem",
       "den Energie- und Stofffluss von Produzenten zu Konsumenten",
       "nur abiotische Faktoren ohne Organismen",
-      "eine einzelne Art (Spezies) als taxonomische Grundeinheit der Biologie",
-      "nur die Biotope (unbelebte Lebensräume) ohne biotische Komponenten",
+      "eine einzelne Art (Spezies)",
+      "nur die Biotope ohne biotische Komponenten",
     ],
     1,
     "Nahrungskette = gerichteter Energie- und Stofffluss: Produzent → Primärkonsument → Sekundärkonsument → …",
@@ -373,22 +169,6 @@ export const biologiePool9: Question[] = [
     ["Genetik", "Kap4"]
   ),
   q(
-    "bio-pool-9-027",
-    "bio-kap1",
-    "Homöostase bezieht sich auf …",
-    [
-      "nur die Temperatur",
-      "die aktive Aufrechterhaltung innerer Konstanten",
-      "nur den Blutzucker (Glukosespiegel) als einzelnen regulierten Parameter",
-      "nur den pH-Wert (Säure-Basen-Gleichgewicht) im Blut und Gewebe",
-      "die positive Rückkopplung",
-    ],
-    1,
-    "Homöostase = Aufrechterhaltung innerer Gleichgewichte über negative Rückkopplung.",
-    "mittel",
-    ["Homöostase", "Kap1"]
-  ),
-  q(
     "bio-pool-9-028",
     "bio-kap2",
     "Osteoklasten …",
@@ -405,16 +185,6 @@ export const biologiePool9: Question[] = [
     ["Knochen", "Kap2"]
   ),
   q(
-    "bio-pool-9-029",
-    "bio-kap4",
-    "Wie viele Chromosomen hat ein menschliches Spermium?",
-    ["46", "23", "92", "22", "44"],
-    1,
-    "Keimzellen sind haploid: 23 Chromosomen (ein Satz).",
-    "leicht",
-    ["Meiose", "Kap4"]
-  ),
-  q(
     "bio-pool-9-030",
     "bio-kap5",
     "Biotische Faktoren sind …",
@@ -422,133 +192,13 @@ export const biologiePool9: Question[] = [
       "Licht und Temperatur",
       "von Lebewesen ausgehende Einflüsse",
       "nur Wasser",
-      "nur der Boden (Edaphon) als abiotisches Substrat für terrestrische Organismen",
+      "nur der Boden (Edaphon)",
       "nur anorganische Nährstoffe",
     ],
     1,
     "Biotisch = durch Lebewesen (Konkurrenz, Symbiose, Räuber-Beute). Abiotisch = unbelebt (Licht, Temperatur, pH).",
     "leicht",
     ["Ökologie", "Kap5"]
-  ),
-  q(
-    "bio-pool-9-031",
-    "bio-kap1",
-    "Welche Aussage zu Ribosomen trifft zu?",
-    [
-      "Sie haben eine Doppelmembran.",
-      "Sie sind an der Proteinbiosynthese (Translation) beteiligt.",
-      "Sie kommen nur im Zellkern vor.",
-      "Sie enthalten DNA.",
-      "Sie bauen H₂O₂ ab.",
-    ],
-    1,
-    "Ribosomen (rRNA + Proteine) führen die Translation durch; sie liegen im Zytosol und am rauen ER.",
-    "leicht",
-    ["Ribosomen", "Kap1"]
-  ),
-  q(
-    "bio-pool-9-032",
-    "bio-kap2",
-    "Welches Epithel hat Kinozilien (Flimmerhärchen)?",
-    ["Urothel", "Flimmerepithel (z. B. Trachea)", "Epidermis", "Darmepithel", "Alveolarepithel"],
-    1,
-    "Flimmerepithel (Trachea, Bronchien, Eileiter) hat Kinozilien für den Schleimtransport.",
-    "leicht",
-    ["Epithel", "Kap2"]
-  ),
-  q(
-    "bio-pool-9-033",
-    "bio-kap4",
-    "Bei dominant-rezessivem Erbgang: Ein heterozygoter Phänotyp (Aa) zeigt …",
-    [
-      "das rezessive Merkmal",
-      "das dominante Merkmal",
-      "ein mittleres Merkmal",
-      "kein Merkmal",
-      "beide Merkmale gleichzeitig",
-    ],
-    1,
-    "Bei dominant-rezessiv setzt sich das dominante Allel phänotypisch durch.",
-    "leicht",
-    ["Vererbung", "Kap4"]
-  ),
-  q(
-    "bio-pool-9-034",
-    "bio-kap3",
-    "Wo wird Progesteron nach dem Eisprung gebildet?",
-    [
-      "Im Follikel",
-      "Im Gelbkörper (Corpus luteum)",
-      "In der Hypophyse",
-      "In der Gebärmutter",
-      "In der Schilddrüse",
-    ],
-    1,
-    "Der Gelbkörper entsteht aus dem gesprungenen Follikel und produziert Progesteron (und Östrogen).",
-    "mittel",
-    ["Hormone (Signalmoleküle des endokrinen Systems für die Fernwirkung)", "Kap3"]
-  ),
-  q(
-    "bio-pool-9-035",
-    "bio-kap1",
-    "Emergenz bedeutet in der Biologie …",
-    [
-      "Reduktion auf Einzelteile",
-      "dass neue Eigenschaften auf höherer Ebene entstehen, die aus den Teilen nicht vorhersagbar sind",
-      "nur Vererbung",
-      "nur Stoffwechsel",
-      "nur Bewegung",
-    ],
-    1,
-    "Emergenz: Das Ganze ist mehr als die Summe der Teile.",
-    "mittel",
-    ["Emergenz", "Kap1"]
-  ),
-  q(
-    "bio-pool-9-036",
-    "bio-kap2",
-    "Welche Zellkontakte liegen am apikalen Ende von Epithelzellen und versiegeln den Spalt?",
-    ["Desmosomen", "Gap Junctions", "Tight Junctions", "Hemidesmosomen", "Adherens Junctions"],
-    2,
-    "Tight Junctions (Zonula occludens) liegen apikal und bilden eine Barriere zwischen apikalem und basolateralem Bereich.",
-    "mittel",
-    ["Zellkontakte", "Kap2"]
-  ),
-  q(
-    "bio-pool-9-037",
-    "bio-kap4",
-    "Die Meiose dient der Bildung von …",
-    ["Körperzellen", "Keimzellen (Gameten)", "Blutzellen", "nur Eizellen", "nur Spermien"],
-    1,
-    "Meiose reduziert den Chromosomensatz und erzeugt Keimzellen (Eizellen, Spermien). Mitose erzeugt Körperzellen.",
-    "leicht",
-    ["Meiose", "Kap4"]
-  ),
-  q(
-    "bio-pool-9-038",
-    "bio-kap5",
-    "Destruenten (Zersetzer) setzen totes organisches Material um in …",
-    [
-      "nur CO₂",
-      "wieder verfügbare Nährstoffe (Mineralisierung)",
-      "nur Wasser",
-      "nur Sauerstoff",
-      "nur Stickstoffgas",
-    ],
-    1,
-    "Destruenten (Pilze, Bakterien) mineralisieren totes Material und führen Nährstoffe dem Ökosystem wieder zu.",
-    "mittel",
-    ["Ökologie", "Kap5"]
-  ),
-  q(
-    "bio-pool-9-039",
-    "bio-kap1",
-    "Welche Base kommt in der DNA nicht vor?",
-    ["Adenin", "Thymin", "Guanin", "Cytosin", "Uracil"],
-    4,
-    "DNA enthält A, T, G, C. RNA enthält Uracil (U) anstelle von Thymin.",
-    "leicht",
-    ["DNA", "Kap4"]
   ),
   q(
     "bio-pool-9-040",
@@ -588,10 +238,10 @@ export const biologiePool9: Question[] = [
     "Zwei homologe Chromosomen tragen …",
     [
       "immer identische Allele",
-      "die gleichen Genorte (Loci), oft verschiedene Allele",
+      "die gleichen Genorte (Loci)",
       "keine Gene",
       "nur ein Gen",
-      "nur Geschlechtsgene (ausschließlich geschlechtsdeterminierende Genorte)",
+      "nur Geschlechtsgene",
     ],
     1,
     "Homologe Chromosomen: gleiche Gene an gleichen Loci, aber oft unterschiedliche Allele.",
@@ -599,72 +249,14 @@ export const biologiePool9: Question[] = [
     ["Chromosomen", "Kap4"]
   ),
   q(
-    "bio-pool-9-043",
-    "bio-kap1",
-    "Positive Rückkopplung findet sich bei …",
-    [
-      "Blutzuckerregulation",
-      "Körpertemperatur-Regelkreis",
-      "Blutgerinnung und Wehen",
-      "pH-Regulation",
-      "Osmoregulation",
-    ],
-    2,
-    "Positive Rückkopplung verstärkt den Reiz (Blutgerinnung, Wehen, Aktionspotential). Blutzucker, Temperatur, pH = negative Rückkopplung.",
-    "mittel",
-    ["Rückkopplung", "Kap1"]
-  ),
-  q(
-    "bio-pool-9-044",
-    "bio-kap2",
-    "Welches Gewebe bildet die äußerste Schicht der Haut (Epidermis)?",
-    [
-      "Bindegewebe",
-      "Mehrschichtiges verhorntes Plattenepithel",
-      "Muskelgewebe",
-      "Nervengewebe",
-      "Fettgewebe",
-    ],
-    1,
-    "Epidermis = mehrschichtiges verhorntes Plattenepithel.",
-    "leicht",
-    ["Haut", "Kap2"]
-  ),
-  q(
-    "bio-pool-9-045",
-    "bio-kap5",
-    "Primärkonsumenten in einem Ökosystem sind …",
-    ["Produzenten", "Pflanzenfresser", "Fleischfresser", "Destruenten", "nur Bakterien"],
-    1,
-    "Primärkonsumenten = Pflanzenfresser. Sekundärkonsumenten = Fleischfresser.",
-    "leicht",
-    ["Ökologie", "Kap5"]
-  ),
-  q(
     "bio-pool-9-046",
     "bio-kap4",
     "Ein Nukleotid der DNA enthält …",
-    [
-      "nur eine Base",
-      "Zucker (Desoxyribose), Phosphat und eine Base",
-      "nur Phosphat",
-      "nur Zucker",
-      "keine Base",
-    ],
+    ["nur eine Base", "Zucker (Desoxyribose)", "nur Phosphat", "nur Zucker", "keine Base"],
     1,
     "Nukleotid = Desoxyribose + Phosphat + Base.",
     "leicht",
     ["DNA", "Kap4"]
-  ),
-  q(
-    "bio-pool-9-047",
-    "bio-kap1",
-    "Welches Organell enthält hydrolytische Enzyme und hat einen sauren pH?",
-    ["Ribosom", "Lysosom", "Peroxisom", "Mitochondrium", "Golgi-Apparat"],
-    1,
-    "Lysosomen: hydrolytische Enzyme (Proteasen, Lipasen), saurer pH, Abbau von Makromolekülen und Zellbestandteilen.",
-    "mittel",
-    ["Lysosomen", "Kap1"]
   ),
   q(
     "bio-pool-9-048",
@@ -672,7 +264,7 @@ export const biologiePool9: Question[] = [
     "Apokrine Sekretion bedeutet …",
     [
       "Exozytose ohne Zellverlust",
-      "Abschnürung des apikalen Zellpols (mit Zytoplasma)",
+      "Abschnürung des apikalen Zellpols",
       "Die ganze Zelle wird zum Sekret",
       "Nur endokrine Hormonsekretion ins Blut",
       "Nur in Talgdrüsen",
@@ -697,15 +289,5 @@ export const biologiePool9: Question[] = [
     "Der LH-Peak löst den Eisprung aus. FSH stimuliert die Follikelreifung.",
     "mittel",
     ["Hormone (Signalmoleküle des endokrinen Systems für die Fernwirkung)", "Kap3"]
-  ),
-  q(
-    "bio-pool-9-050",
-    "bio-kap5",
-    "Die Gesamtheit aller Individuen einer Art in einem Gebiet bezeichnet man als …",
-    ["Biozönose", "Biotop", "Population", "Ökosystem", "Lebensgemeinschaft"],
-    2,
-    "Population = Individuen einer Art in einem räumlich abgrenzbaren Gebiet. Biozönose = alle Arten zusammen.",
-    "leicht",
-    ["Ökologie", "Kap5"]
   ),
 ];

@@ -32,22 +32,6 @@ const KAP = ["chem-kap1", "chem-kap2", "chem-kap3", "chem-kap4", "chem-kap5", "c
 
 export const chemiePool21: Question[] = [
   q(
-    "ch-pool-21-001",
-    KAP[0],
-    "Die Ordnungszahl Z im Periodensystem gibt an:",
-    [
-      "die Massenzahl",
-      "die Protonenzahl im Kern",
-      "die Neutronenzahl",
-      "die Elektronenzahl in der äußersten Schale",
-      "die Atommasse",
-    ],
-    1,
-    "Z = Anzahl der Protonen im Kern; definiert das Element. In neutralen Atomen auch Anzahl der Elektronen.",
-    "leicht",
-    ["Ordnungszahl"]
-  ),
-  q(
     "ch-pool-21-002",
     KAP[1],
     "Die Einheit Liter (L) gehört zu:",
@@ -580,22 +564,6 @@ export const chemiePool21: Question[] = [
     "Z = 8 = Sauerstoff (O).",
     "leicht",
     ["Sauerstoff", "Ordnungszahl"]
-  ),
-  q(
-    "ch-pool-21-050",
-    KAP[1],
-    "Die allgemeine Gasgleichung pV = nRT gilt für:",
-    [
-      "nur Flüssigkeiten bei Normaldruck und Raumtemperatur (20 °C)",
-      "ideale Gase (in guter Näherung bei niedrigem p, hohem T)",
-      "nur Feststoffe (regelmäßige Kristallgitterstruktur, fixe Positionen)",
-      "nur reale Gase bei hohem Druck (starke intermolekulare Kräfte)",
-      "nur bei genau 0 °C und 1 bar (Normalbedingung, STP-Standard)",
-    ],
-    1,
-    "pV = nRT beschreibt ideale Gase; gute Näherung bei niedrigem Druck und nicht zu tiefer Temperatur.",
-    "mittel",
-    ["ideales Gas"]
   ),
   q(
     "ch-pool-21-051",

@@ -75,16 +75,6 @@ export const chemiePool3: Question[] = [
     ["Addition", "Alken", "Brom"]
   ),
   q(
-    "ch-pool-105",
-    "chem-kap2",
-    "Welche Einheit hat die Gaskonstante R in J/(mol·K)?",
-    ["Pa", "L/mol", "J/(mol·K)", "mol/L", "K"],
-    2,
-    "R = 8,314 J/(mol·K). Andere Einheiten: 0,08314 L·bar/(mol·K), 0,08206 L·atm/(mol·K).",
-    "leicht",
-    ["Gaskonstante", "Einheit"]
-  ),
-  q(
     "ch-pool-106",
     "chem-kap4",
     "Ein Oxidationsmittel:",
@@ -199,42 +189,6 @@ export const chemiePool3: Question[] = [
     ["Gitterenergie", "Born-Haber"]
   ),
   q(
-    "ch-pool-115",
-    "chem-kap6",
-    "Welche Hybridisierung hat Kohlenstoff in Methan (CH₄)?",
-    ["sp", "sp²", "sp³", "sp³d", "unhybridisiert"],
-    2,
-    "Methan: nur Einfachbindungen, tetraedrische Geometrie → sp³-Hybridisierung, Bindungswinkel 109,5°.",
-    "leicht",
-    ["Methan", "sp3", "Hybridisierung"]
-  ),
-  q(
-    "ch-pool-116",
-    "chem-kap1",
-    "Isotope haben die gleiche:",
-    ["Massenzahl", "Neutronenzahl", "Ordnungszahl", "Atommasse", "Kernladung und Neutronenzahl"],
-    2,
-    "Isotope: gleiche Ordnungszahl Z (Protonenzahl), unterschiedliche Massenzahl A (Neutronenzahl variiert).",
-    "leicht",
-    ["Isotop", "Ordnungszahl"]
-  ),
-  q(
-    "ch-pool-117",
-    "chem-kap2",
-    "Erstarren ist der Übergang:",
-    [
-      "flüssig → fest",
-      "fest → flüssig",
-      "gasförmig → flüssig",
-      "fest → gasförmig",
-      "flüssig → gasförmig",
-    ],
-    0,
-    "Erstarren (Gefrieren) = flüssig → fest. Schmelzen = fest → flüssig.",
-    "leicht",
-    ["Erstarren", "Phasenübergang"]
-  ),
-  q(
     "ch-pool-118",
     "chem-kap4",
     "Bei einer endothermen Reaktion:",
@@ -293,22 +247,6 @@ export const chemiePool3: Question[] = [
     ["Alkohol", "primär"]
   ),
   q(
-    "ch-pool-123",
-    "chem-kap2",
-    "Bei Boyle-Mariotte wird vorausgesetzt:",
-    [
-      "V und T konstant",
-      "p und T konstant",
-      "n und T konstant",
-      "n und p konstant",
-      "nur n konstant",
-    ],
-    2,
-    "Boyle-Mariotte: Bei konstanter Temperatur T und konstanter Stoffmenge n ist p · V = konstant.",
-    "leicht",
-    ["Boyle-Mariotte", "Gasgesetze"]
-  ),
-  q(
     "ch-pool-124",
     "chem-kap4",
     "Die Oxidationszahl von Sauerstoff in den meisten Verbindungen ist:",
@@ -317,22 +255,6 @@ export const chemiePool3: Question[] = [
     "Sauerstoff hat in den meisten Oxiden und Verbindungen die Oxidationszahl −2. Ausnahmen: Peroxide (O₂²⁻: −1), OF₂ (+2).",
     "leicht",
     ["Oxidationszahl", "Sauerstoff"]
-  ),
-  q(
-    "ch-pool-125",
-    "chem-kap5",
-    "Ein Puffer enthält typischerweise:",
-    [
-      "nur eine starke Säure (vollständig dissoziiert)",
-      "ein konjugiertes Säure-Base-Paar",
-      "nur Wasser (reines Lösungsmittel ohne Pufferwirkung)",
-      "keine Ionen (rein molekulare Zusammensetzung der Lösung)",
-      "nur Basen (Protonenakzeptoren ohne konjugierte Säure)",
-    ],
-    1,
-    "Puffer = konjugiertes Säure-Base-Paar (z. B. HCO₃⁻/CO₂, H₂PO₄⁻/HPO₄²⁻). Sie können H⁺ abfangen oder abgeben und halten den pH relativ konstant.",
-    "mittel",
-    ["Puffer", "konjugiertes Paar"]
   ),
   q(
     "ch-pool-126",
@@ -359,16 +281,6 @@ export const chemiePool3: Question[] = [
     "s: 2 Elektronen, p: 6 (3 Orbitale), d: 10 (5 Orbitale), f: 14 (7 Orbitale). Jeweils 2 Elektronen pro Orbital.",
     "leicht",
     ["Orbitale", "Besetzung"]
-  ),
-  q(
-    "ch-pool-129",
-    "chem-kap2",
-    "Welche Temperatur in °C entspricht 373 K?",
-    ["0 °C", "100 °C", "273 °C", "373 °C", "−100 °C"],
-    1,
-    "T(°C) = T(K) − 273,15. 373 K − 273,15 ≈ 100 °C (Siedepunkt von Wasser bei 1 atm).",
-    "leicht",
-    ["Kelvin", "Celsius"]
   ),
   q(
     "ch-pool-130",
@@ -589,22 +501,6 @@ export const chemiePool3: Question[] = [
     "Die Periodennummer entspricht der Anzahl der besetzten Elektronenschalen (Hauptquantenzahl n) bei den Elementen dieser Periode.",
     "leicht",
     ["Periode", "Periodensystem"]
-  ),
-  q(
-    "ch-pool-147",
-    "chem-kap2",
-    "Resublimieren ist der Übergang:",
-    [
-      "gasförmig → fest",
-      "fest → gasförmig",
-      "flüssig → fest",
-      "fest → flüssig",
-      "flüssig → gasförmig",
-    ],
-    0,
-    "Resublimieren = gasförmig → fest (z. B. Iod-Dampf zu Iod-Kristallen). Sublimieren = fest → gasförmig.",
-    "leicht",
-    ["Resublimieren", "Phasenübergang"]
   ),
   q(
     "ch-pool-148",

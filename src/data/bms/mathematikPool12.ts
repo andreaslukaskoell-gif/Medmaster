@@ -369,16 +369,6 @@ export const mathematikPool12: Question[] = [
   // ─── mathe-kap5: Funktionen (10 Fragen) ───
 
   q(
-    "ma-pool-12-031",
-    "mathe-kap5",
-    "Die Steigung der Geraden durch P(1, 3) und Q(4, 9) beträgt:",
-    ["1", "2", "3", "6", "1/2"],
-    1,
-    "m = (9 − 3)/(4 − 1) = 6/3 = 2.",
-    "leicht",
-    ["lineare Funktion", "Steigung", "rechenfrage"]
-  ),
-  q(
     "ma-pool-12-032",
     "mathe-kap5",
     "Bestimmen Sie die Nullstellen von f(x) = x² − x − 6.",
@@ -393,16 +383,6 @@ export const mathematikPool12: Question[] = [
     "x² − x − 6 = (x − 3)(x + 2) = 0. x₁ = 3, x₂ = −2.",
     "leicht",
     ["quadratische Funktion", "Nullstellen"]
-  ),
-  q(
-    "ma-pool-12-033",
-    "mathe-kap5",
-    "Die Ableitung von f(x) = sin(3x) ist:",
-    ["cos(3x)", "3cos(3x)", "−3cos(3x)", "sin(3x)/3", "3sin(3x)"],
-    1,
-    "Kettenregel: f'(x) = cos(3x) · 3 = 3cos(3x).",
-    "mittel",
-    ["Ableitung", "Trigonometrie", "Kettenregel"]
   ),
   q(
     "ma-pool-12-034",

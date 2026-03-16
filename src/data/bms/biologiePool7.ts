@@ -32,7 +32,7 @@ function q(
 }
 
 export const biologiePool7: Question[] = [
-  // —— Kap1: Kennzeichen des Lebens, Homöostase, Viren, Emergenz ——
+  // —— Kap1: Kennzeichen des Lebens, Homöostase ——
   q(
     "bio-pool-7-003",
     "bio-kap1",
@@ -48,38 +48,6 @@ export const biologiePool7: Question[] = [
     "Negative Rückkopplung: Effekt wirkt dem Auslöser entgegen. Positive Rückkopplung verstärkt (Blutgerinnung, Wehen).",
     "mittel",
     ["Homöostase", "Rückkopplung", "Kap1"]
-  ),
-  q(
-    "bio-pool-7-004",
-    "bio-kap1",
-    "Welches Beispiel beschreibt positive Rückkopplung?",
-    [
-      "Blutzuckerregulation durch Insulin",
-      "Körpertemperatur-Regelkreis durch Schwitzen",
-      "Blutgerinnung",
-      "pH-Regulation des Bluts",
-      "Osmoregulation in der Niere",
-    ],
-    2,
-    "Positive Rückkopplung verstärkt den Reiz (Blutgerinnung, Wehen, Aktionspotential). Blutzucker, Temperatur und pH werden durch negative Rückkopplung stabilisiert.",
-    "mittel",
-    ["Rückkopplung", "Kap1"]
-  ),
-  q(
-    "bio-pool-7-005",
-    "bio-kap1",
-    "Was ist Emergenz in der Biologie?",
-    [
-      "Die Reduktion komplexer biologischer Systeme auf ihre molekularen Einzelteile.",
-      "Die Entstehung neuer Eigenschaften auf höherer Organisationsebene, die aus den Teilen nicht vorhersagbar sind.",
-      "Die Vererbung phänotypischer Merkmale über aufeinanderfolgende Generationen.",
-      "Der Stoffwechsel einer einzelnen Zelle als Gesamtheit biochemischer Reaktionen.",
-      "Die Bewegung von Ionen und kleinen Molekülen durch die Zellmembran.",
-    ],
-    1,
-    "Emergenz: Das Ganze ist mehr als die Summe der Teile.",
-    "mittel",
-    ["Emergenz", "Systembiologie", "Kap1"]
   ),
   q(
     "bio-pool-7-006",
@@ -130,7 +98,7 @@ export const biologiePool7: Question[] = [
     [
       "nur Stoffwechsel und Fortpflanzung.",
       "Stoffwechsel, Reizbarkeit, Fortpflanzung, Wachstum, Evolution, Bewegung, Homöostase.",
-      "Kristallisation und Osmose (rein physikalisch-chemische Prozesse).",
+      "Kristallisation und Osmose.",
       "nur Homöostase und Bewegung.",
       "Zellwand und Chloroplasten.",
     ],
@@ -139,104 +107,14 @@ export const biologiePool7: Question[] = [
     "leicht",
     ["Kennzeichen des Lebens", "Kap1"]
   ),
-  // —— Kap2: Epithelien, Zellkontakte, Sekretion ——
-  q(
-    "bio-pool-7-012",
-    "bio-kap2",
-    "Welche Funktion haben Tight Junctions (Zonula occludens) in Epithelien?",
-    [
-      "Ionenaustausch zwischen benachbarten Zellen.",
-      "Versiegelung des apikalen Interzellularspalts; Barriere- und Fence-Funktion.",
-      "Verankerung der Zelle an der Basalmembran.",
-      "Mechanischer Zusammenhalt durch Cadherine.",
-      "Transport von Vesikeln zur apikalen Membran.",
-    ],
-    1,
-    "Tight Junctions liegen apikal, versiegeln den Spalt und trennen apikale von basolateraler Membrandomäne (Fence).",
-    "mittel",
-    ["Zellkontakte", "Epithel", "Kap2"]
-  ),
-  q(
-    "bio-pool-7-013",
-    "bio-kap2",
-    "Wo wird holokrin sezerniert?",
-    [
-      "Schweißdrüsen",
-      "Pankreas (Bauchspeicheldrüse) mit exo- und endokriner Funktion",
-      "Talgdrüsen (Glandulae sebaceae)",
-      "Speicheldrüsen",
-      "Becherzellen im Darm",
-    ],
-    2,
-    "Holokrin: Die ganze Zelle zerfällt und wird zum Sekret. Typisches Beispiel: Talgdrüsen. Merokrin = Exozytose (häufigste Form); apokrin = Abschnürung der Zellspitze.",
-    "mittel",
-    ["Sekretion", "Epithel", "Kap2"]
-  ),
-  q(
-    "bio-pool-7-014",
-    "bio-kap2",
-    "Was kennzeichnet pseudostratifiziertes Epithel?",
-    [
-      "Es besteht aus mehreren Zellschichten ohne Kontakt zur Basalmembran.",
-      "Alle Zellen berühren die Basalmembran; die Kerne liegen auf unterschiedlichen Höhen.",
-      "Es kommt nur in der Haut vor.",
-      "Es enthält keine Tight Junctions und besitzt keine Barrierefunktion.",
-      "Es ist immer verhornt (Keratinisierung) wie in der Epidermis.",
-    ],
-    1,
-    "Pseudostratifiziert = mehrreihig: Alle Zellen berühren die Basalmembran, wirkt mehrschichtig durch die Kerne auf verschiedenen Höhen.",
-    "mittel",
-    ["Epithel", "Kap2"]
-  ),
-  q(
-    "bio-pool-7-015",
-    "bio-kap2",
-    "Welche Zellkontakte ermöglichen den Ionenaustausch zwischen Herzmuskelzellen?",
-    ["Tight Junctions", "Desmosomen", "Gap Junctions", "Hemidesmosomen", "Adherens Junctions"],
-    2,
-    "Gap Junctions (Connexine) ermöglichen direkten Ionenaustausch; so breitet sich die Erregung im Herzen koordiniert aus.",
-    "mittel",
-    ["Zellkontakte", "Herz", "Kap2"]
-  ),
-  q(
-    "bio-pool-7-017",
-    "bio-kap2",
-    "Welche Eigenschaft trifft auf alle Epithelien zu?",
-    [
-      "Sie sind stark vascularisiert.",
-      "Sie sind polar (apikal/basolateral) und sitzen auf einer Basalmembran.",
-      "Sie enthalten keine Zellkontakte.",
-      "Sie kommen nur in der Haut vor.",
-      "Sie sezernieren immer Hormone.",
-    ],
-    1,
-    "Epithelien sind polar, avaskulär und auf der Basalmembran verankert; Versorgung durch Diffusion aus dem darunter liegenden Bindegewebe.",
-    "mittel",
-    ["Epithel", "Kap2"]
-  ),
-  q(
-    "bio-pool-7-018",
-    "bio-kap2",
-    "Merokrine Sekretion bedeutet …",
-    [
-      "Die ganze Zelle wird zum Sekret (z. B. Talgdrüsen).",
-      "Exozytose ohne Zellverlust.",
-      "Abschnürung des apikalen Zellpols (z. B. Milchfett).",
-      "Nur endokrine Drüsen sezernieren merokrin.",
-      "Die Zelle stirbt bei der Sekretion.",
-    ],
-    1,
-    "Merokrin = Exozytose, häufigste Form (Schweißdrüsen, Pankreas, Speicheldrüsen). Apokrin = Abschnürung; Holokrin = ganze Zelle = Sekret.",
-    "mittel",
-    ["Sekretion", "Kap2"]
-  ),
+  // —— Kap2: Epithelien, Zellkontakte ——
   q(
     "bio-pool-7-019",
     "bio-kap2",
     "Was ist die Basalmembran?",
     [
       "Die apikale Zellmembran des Epithels mit Mikrovilli oder Kinozilien.",
-      "Die Verbindung zwischen Epithel und darunter liegendem Bindegewebe (Kollagen IV, Laminin).",
+      "Die Verbindung zwischen Epithel und darunter liegendem Bindegewebe.",
       "Eine Schicht aus Korneozyten in der Epidermis.",
       "Die Membran der Mitochondrien.",
       "Der Raum zwischen zwei Epithelzellen.",
@@ -346,7 +224,7 @@ export const biologiePool7: Question[] = [
       "Zwei identische Chromosomenkopien nach der DNA-Replikation, am Zentromer verbunden.",
       "Die beiden antiparallelen Stränge der DNA-Doppelhelix.",
       "Chromosomen in der Interphase.",
-      "Die Geschlechtschromosomen X und Y (Gonosomen, geschlechtsbestimmend).",
+      "Die Geschlechtschromosomen X und Y.",
     ],
     1,
     "Nach der Replikation besteht jedes Chromosom aus zwei identischen Schwesterchromatiden, die am Zentromer zusammenhängen.",
@@ -400,52 +278,16 @@ export const biologiePool7: Question[] = [
     "bio-kap3",
     "Wo findet die Befruchtung der Eizelle beim Menschen typischerweise statt?",
     [
-      "Im Ovar (Eierstock) am Ort der Follikelreifung und Ovulation",
+      "Im Ovar (Eierstock)",
       "In der Gebärmutter",
-      "Im Eileiter (Tuba uterina) am Ort der Befruchtung der Oozyte",
-      "In der Vagina (Scheide) als muskulärer Geburtskanal und Kopulationsorgan",
-      "Im Gebärmutterhals (Zervix uteri) mit Zervikalschleim als Barriere",
+      "Im Eileiter (Tuba uterina)",
+      "In der Vagina (Scheide)",
+      "Im Gebärmutterhals (Zervix uteri)",
     ],
     2,
     "Die Befruchtung erfolgt im Eileiter (Tuba uterina); die Einnistung dann in der Gebärmutter.",
     "leicht",
     ["Befruchtung (Syngamie der Gameten im Eileiter bei der Konzeption)", "Reproduktion", "Kap3"]
-  ),
-  q(
-    "bio-pool-7-037",
-    "bio-kap1",
-    "Welche Organelle ist für den Abbau von Wasserstoffperoxid (H₂O₂) zuständig?",
-    ["Ribosom", "Lysosom", "Peroxisom", "Golgi-Apparat", "Endoplasmatisches Retikulum"],
-    2,
-    "Peroxisomen enthalten Katalase und bauen H₂O₂ zu Wasser und Sauerstoff ab.",
-    "leicht",
-    ["Organellen", "Peroxisom", "Kap1"]
-  ),
-  q(
-    "bio-pool-7-038",
-    "bio-kap1",
-    "In welchem Zellkompartiment findet die oxidative Phosphorylierung (Atmungskette) statt?",
-    [
-      "Zytosol",
-      "Mitochondrienmatrix",
-      "Intermembranraum",
-      "Innere Mitochondrienmembran",
-      "Kernmembran",
-    ],
-    3,
-    "Die Atmungskette (Komplexe I–IV, ATP-Synthase) sitzt an der inneren Mitochondrienmembran.",
-    "mittel",
-    ["Mitochondrien", "ATP", "Kap1"]
-  ),
-  q(
-    "bio-pool-7-040",
-    "bio-kap4",
-    "Bei einem heterozygoten Träger (Aa) und homozygot rezessivem Partner (aa): Wie groß ist die Wahrscheinlichkeit für ein homozygotes rezessives Kind (aa)?",
-    ["0 %", "25 %", "50 %", "75 %", "100 %"],
-    2,
-    "Aa × aa → je 50 % Aa und aa. Ein homozygotes rezessives Kind hat 50 % Wahrscheinlichkeit.",
-    "mittel",
-    ["Vererbung", "Kap4"]
   ),
   q(
     "bio-pool-7-044",
@@ -462,26 +304,6 @@ export const biologiePool7: Question[] = [
     "Desmosomen: mechanischer Zusammenhalt (Cadherine + Intermediärfilamente). Tight Junctions = Barriere; Gap Junctions = Ionen.",
     "mittel",
     ["Zellkontakte", "Kap2"]
-  ),
-  q(
-    "bio-pool-7-045",
-    "bio-kap4",
-    "Wie viele Chromosomen hat eine menschliche Keimzelle nach der Meiose?",
-    ["23", "46", "92", "22", "44"],
-    0,
-    "Keimzellen sind haploid: 23 Chromosomen.",
-    "leicht",
-    ["Meiose", "Keimzelle", "Kap4"]
-  ),
-  q(
-    "bio-pool-7-046",
-    "bio-kap1",
-    "Welche der folgenden Strukturen hat keine eigene Membran?",
-    ["Mitochondrium", "Lysosom", "Ribosom", "Zellkern", "Peroxisom"],
-    2,
-    "Ribosomen bestehen aus rRNA und Proteinen und haben keine umgebende Membran.",
-    "leicht",
-    ["Organellen", "Kap1"]
   ),
   q(
     "bio-pool-7-047",
@@ -508,21 +330,5 @@ export const biologiePool7: Question[] = [
     "Crossing-over erfolgt in der Prophase I der Meiose.",
     "mittel",
     ["Meiose", "Crossing-over", "Kap4"]
-  ),
-  q(
-    "bio-pool-7-049",
-    "bio-kap1",
-    "Welches Kennzeichen des Lebens fehlt Viren am entscheidendsten für die Einstufung als Lebewesen?",
-    [
-      "Fortpflanzung",
-      "Evolution",
-      "Eigenständiger Stoffwechsel",
-      "Reizbarkeit (Irritabilität) als Reaktion auf Umweltreize",
-      "Bewegung",
-    ],
-    2,
-    "Viren haben keinen eigenständigen Stoffwechsel; sie sind auf die Wirtszelle angewiesen.",
-    "mittel",
-    ["Viren", "Kennzeichen des Lebens", "Kap1"]
   ),
 ];

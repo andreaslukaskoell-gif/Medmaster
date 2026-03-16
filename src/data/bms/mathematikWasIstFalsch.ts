@@ -33,22 +33,6 @@ function wif(
 export const mathematikWasIstFalsch: Question[] = [
   // ─── mathe-kap1: Zahlen, Mengen, Einheiten (10 Fragen) ────────────────────
   wif(
-    "ma-wif-001",
-    "mathe-kap1",
-    "Welche der folgenden Aussagen zu Zahlenmengen ist FALSCH?",
-    [
-      "Jede reelle Zahl ist auch eine rationale Zahl.",
-      "Jede natürliche Zahl ist auch eine ganze Zahl.",
-      "Jede ganze Zahl ist auch eine rationale Zahl.",
-      "Jede rationale Zahl lässt sich als Bruch zweier ganzer Zahlen darstellen.",
-      "Die Menge der natürlichen Zahlen ist eine Teilmenge der reellen Zahlen.",
-    ],
-    0,
-    "Option A ist falsch. Nicht jede reelle Zahl ist rational — irrationale Zahlen wie √2 oder π gehören zu ℝ, aber nicht zu ℚ.",
-    "leicht",
-    ["zahlenmengen"]
-  ),
-  wif(
     "ma-wif-002",
     "mathe-kap1",
     "Welche der folgenden Aussagen zu SI-Einheiten ist FALSCH?",
@@ -371,54 +355,6 @@ export const mathematikWasIstFalsch: Question[] = [
     "Option D ist falsch. Bei gleichnamigen Brüchen werden nur die Zähler addiert: a/b + c/b = (a + c)/b. Der Nenner wird nicht verdoppelt.",
     "leicht",
     ["Bruchrechnung"]
-  ),
-  wif(
-    "ma-wif-022",
-    "mathe-kap3",
-    "Welche der folgenden Aussagen zu Potenzgesetzen ist FALSCH?",
-    [
-      "aⁿ · aᵐ = aⁿ⁺ᵐ.",
-      "aⁿ / aᵐ = aⁿ⁻ᵐ (a ≠ 0).",
-      "(aⁿ)ᵐ = aⁿ·ᵐ.",
-      "a⁻ⁿ = 1/aⁿ (a ≠ 0).",
-      "(a · b)ⁿ = aⁿ + bⁿ.",
-    ],
-    4,
-    "Option E ist falsch. Es gilt (a · b)ⁿ = aⁿ · bⁿ (Multiplikation, nicht Addition). Der Fehler aⁿ + bⁿ ist eine häufige Verwechslung.",
-    "leicht",
-    ["Potenzgesetze"]
-  ),
-  wif(
-    "ma-wif-023",
-    "mathe-kap3",
-    "Welche der folgenden Aussagen zu Wurzeln ist FALSCH?",
-    [
-      "√(a + b) = √a + √b für a, b ≥ 0.",
-      "√(a · b) = √a · √b für a, b ≥ 0.",
-      "√(a/b) = √a / √b für a ≥ 0, b > 0.",
-      "ⁿ√a = a^(1/n).",
-      "√(a²) = |a| für alle reellen a.",
-    ],
-    0,
-    "Option A ist falsch. Die Wurzel ist nicht additiv: √(a + b) ≠ √a + √b. Gegenbeispiel: √(9 + 16) = √25 = 5, aber √9 + √16 = 3 + 4 = 7.",
-    "leicht",
-    ["Wurzeln"]
-  ),
-  wif(
-    "ma-wif-024",
-    "mathe-kap3",
-    "Welche der folgenden Aussagen zu Logarithmen ist FALSCH?",
-    [
-      "log(a · b) = log a + log b.",
-      "log(a + b) = log a + log b.",
-      "log(a/b) = log a − log b.",
-      "log(aⁿ) = n · log a.",
-      "log 1 = 0 (für jede Basis > 0, ≠ 1).",
-    ],
-    1,
-    "Option B ist falsch. log(a + b) ≠ log a + log b. Das Logarithmengesetz gilt nur für Produkte: log(a · b) = log a + log b. Es gibt keine einfache Formel für log(a + b).",
-    "mittel",
-    ["Logarithmen"]
   ),
   wif(
     "ma-wif-025",

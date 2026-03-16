@@ -84,7 +84,7 @@ export const biologiePool21: Question[] = [
     "In welcher Phase des Zellzyklus findet die DNA-Replikation statt, und welches Enzym entfernt die RNA-Primer?",
     [
       "G1-Phase; DNA-Polymerase I",
-      "S-Phase; RNase H und DNA-Polymerase I (bei Prokaryoten) bzw. FEN1/RNase H (bei Eukaryoten)",
+      "S-Phase; RNase H und DNA-Polymerase I bzw. FEN1/RNase H",
       "G2-Phase; Primase",
       "M-Phase; Topoisomerase II",
       "S-Phase; RNA-Polymerase II",
@@ -119,7 +119,7 @@ export const biologiePool21: Question[] = [
     [
       "Er beschreibt die Abnahme der Kontraktionskraft bei zunehmendem venösen Rückstrom",
       "Er besagt, dass die Herzfrequenz proportional zum Blutdruck steigt",
-      "Er besagt, dass eine erhöhte Vordehnung der Ventrikelmuskulatur (erhöhte Vorlast) zu einer stärkeren Kontraktion führt",
+      "Er besagt, dass eine erhöhte Vordehnung der Ventrikelmuskulatur zu einer stärkeren Kontraktion führt",
       "Er funktioniert nur unter Einfluss des Sympathikus und erfordert Adrenalin",
       "Er beschreibt den Einfluss des Vagustonus auf die Herzfrequenz",
     ],
@@ -183,7 +183,7 @@ export const biologiePool21: Question[] = [
     [
       "Er kann nur Blut der Gruppe AB erhalten, da er Anti-A und Anti-B Antikörper besitzt",
       "Er ist Universalspender und kann an alle Blutgruppen spenden",
-      "Er besitzt keine regulären Anti-A und Anti-B Antikörper (Isoagglutinine) und ist daher Universalempfänger",
+      "Er besitzt keine regulären Anti-A und Anti-B Antikörper (Isoagglutinine)",
       "Er benötigt zwingend Rhesus-negatives Blut, um eine Transfusionsreaktion zu vermeiden",
       "Die Blutgruppe AB ist die häufigste Blutgruppe in Europa",
     ],
@@ -214,7 +214,7 @@ export const biologiePool21: Question[] = [
     "Welche Aussage zur Blut-Hirn-Schranke (BHS) ist FALSCH?",
     [
       "Die BHS wird hauptsächlich durch Tight Junctions zwischen den Endothelzellen der Hirnkapillaren gebildet",
-      "Lipophile Substanzen und kleine Gase (O₂, CO₂) können die BHS per Diffusion passieren",
+      "Lipophile Substanzen und kleine Gase können die BHS per Diffusion passieren",
       "Glucose wird durch spezifische GLUT1-Transporter über die BHS transportiert",
       "Astrozyten (Gliazellen) umhüllen die Kapillaren mit Endfüßchen und tragen zur BHS-Funktion bei",
       "Alle Bereiche des Gehirns besitzen eine gleich starke Blut-Hirn-Schranke ohne Ausnahmen",
@@ -230,7 +230,7 @@ export const biologiePool21: Question[] = [
     "bio-pool-21-013",
     "bio-kap4",
     "Bei einem X-chromosomal rezessiven Erbgang ist die Mutter Konduktorin (X^A X^a) und der Vater gesund (X^A Y). Mit welcher Wahrscheinlichkeit ist ein Sohn betroffen?",
-    ["0 %", "25 % (jedes vierte Kind)", "50 % (jeder zweite Sohn)", "75 %", "100 % (alle Söhne)"],
+    ["0 %", "25 %", "50 %", "75 %", "100 %"],
     2,
     "Konduktorin X^A X^a × gesunder Vater X^A Y: Söhne erhalten ihr X von der Mutter. 50 % der Söhne erhalten X^a → betroffen. 50 % erhalten X^A → gesund. Töchter: 50 % Konduktorinnen (X^A X^a), 50 % gesund (X^A X^A). Kein Sohn erhält ein X vom Vater.",
     "schwer",
@@ -242,7 +242,7 @@ export const biologiePool21: Question[] = [
     "Welche Aussage zum genetischen Code ist FALSCH?",
     [
       "Der genetische Code ist degeneriert (redundant): mehrere Codons können für dieselbe Aminosäure kodieren",
-      "Der genetische Code ist universell — mit wenigen Ausnahmen (z. B. Mitochondrien) gilt er für alle Lebewesen",
+      "Der genetische Code ist universell — mit wenigen Ausnahmen gilt er für alle Lebewesen",
       "Das Startcodon AUG kodiert für Methionin und initiiert die Translation",
       "Der genetische Code ist überlappend: ein Nukleotid kann Teil von zwei benachbarten Codons sein",
       "Es gibt drei Stoppcodons: UAA, UAG und UGA",
@@ -271,7 +271,7 @@ export const biologiePool21: Question[] = [
       "Die Denaturierung erfolgt bei ca. 95 °C, wobei die DNA-Doppelstränge getrennt werden",
       "PCR benötigt keine Primer, da die Taq-Polymerase die Startstelle selbst erkennt",
       "Nach 10 Zyklen liegen theoretisch ca. 100 Kopien der Zielsequenz vor",
-      "Die Taq-Polymerase hat eine Korrekturlesefunktion (Proofreading) mit 3'→5'-Exonuklease-Aktivität",
+      "Die Taq-Polymerase hat eine Korrekturlesefunktion (Proofreading)",
     ],
     1,
     "PCR-Schritte: 1) Denaturierung bei ~95 °C (Strangtrennung), 2) Annealing bei ~55–65 °C (Primerbindung), 3) Elongation bei ~72 °C (Taq-Polymerase verlängert). Nach n Zyklen: 2^n Kopien. 10 Zyklen → 2^10 = 1024 Kopien. Taq hat KEINE Korrekturlesefunktion.",
@@ -283,7 +283,7 @@ export const biologiePool21: Question[] = [
     "bio-kap4",
     "Welche Aussage zu Tumorsuppressorgenen und Onkogenen ist korrekt?",
     [
-      "Tumorsuppressorgene müssen aktiviert werden (Gain-of-Function), damit Krebs entsteht",
+      "Tumorsuppressorgene müssen aktiviert werden (Gain-of-Function)",
       "Onkogene entstehen durch Inaktivierung von Protoonkogenen",
       "Bei Tumorsuppressorgenen müssen nach Knudsons Two-Hit-Hypothese beide Allele inaktiviert werden",
       "p53 ist ein Onkogen, das das Zellwachstum fördert",
@@ -344,8 +344,8 @@ export const biologiePool21: Question[] = [
     "Welche Aussage zur Plazenta ist FALSCH?",
     [
       "Die Plazenta ermöglicht den Gasaustausch zwischen mütterlichem und fetalem Blut",
-      "Mütterliches und fetales Blut mischen sich in der Plazenta direkt (offener Kreislauf)",
-      "Die Plazenta produziert hCG (humanes Choriongonadotropin), das den Gelbkörper erhält",
+      "Mütterliches und fetales Blut mischen sich in der Plazenta direkt",
+      "Die Plazenta produziert hCG (humanes Choriongonadotropin)",
       "Nährstoffe und Abfallprodukte werden über die Plazentaschranke ausgetauscht",
       "Die Plazenta hat sowohl einen maternalen als auch einen fetalen Anteil",
     ],

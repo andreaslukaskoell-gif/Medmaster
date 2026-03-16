@@ -326,22 +326,6 @@ export const mathematikPool14: Question[] = [
     ["Prozentrechnung", "Exponentialzerfall", "rechenfrage"]
   ),
   q(
-    "ma-pool-14-027",
-    "mathe-kap3",
-    "Welche Aussage über Wurzeln ist falsch?",
-    [
-      "√(a × b) = √a × √b für a, b ≥ 0",
-      "√(a/b) = √a / √b für a ≥ 0, b > 0",
-      "√(a + b) = √a + √b für a, b ≥ 0",
-      "√(a²) = |a|",
-      "(√a)² = a für a ≥ 0",
-    ],
-    2,
-    "√(a + b) ≠ √a + √b. Gegenbeispiel: √(9 + 16) = √25 = 5, aber √9 + √16 = 3 + 4 = 7.",
-    "leicht",
-    ["Wurzeln", "Falsch-Aussage"]
-  ),
-  q(
     "ma-pool-14-028",
     "mathe-kap3",
     "In einer Prüfung bestehen 70 % der Kandidaten. Von den Durchgefallenen bestehen beim zweiten Versuch 60 %. Wie viel Prozent bestehen insgesamt nach maximal 2 Versuchen?",
@@ -524,16 +508,6 @@ export const mathematikPool14: Question[] = [
     "AB = B − A = (4−2, 3−1, 2−0) = (2, 2, 2). (Auch (1,1,1) als vereinfachte Form wäre parallel, aber der direkte Vektor ist (2,2,2).)",
     "leicht",
     ["Vektoren", "Richtungsvektor", "Gerade"]
-  ),
-  q(
-    "ma-pool-14-044",
-    "mathe-kap6",
-    "Berechnen Sie |a × b| mit a = (1, 0, 0) und b = (1, 1, 0).",
-    ["0", "1", "√2", "2", "√3"],
-    1,
-    "a × b = (0·0−0·1, 0·1−1·0, 1·1−0·1) = (0, 0, 1). |a × b| = 1.",
-    "schwer",
-    ["Vektoren", "Kreuzprodukt", "Betrag", "rechenfrage"]
   ),
   q(
     "ma-pool-14-045",

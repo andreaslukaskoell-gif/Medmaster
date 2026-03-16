@@ -123,16 +123,6 @@ export const chemiePool4: Question[] = [
     ["Ionisierungsenergie"]
   ),
   q(
-    "ch-pool-158",
-    "chem-kap2",
-    "Welche Phase hat die höchste Dichte bei Wasser (unter 100 °C)?",
-    ["Eis bei 0 °C", "Wasser bei 0 °C", "Wasser bei 4 °C", "Wasser bei 25 °C", "Dampf bei 100 °C"],
-    2,
-    "Dichtemaximum bei 4 °C. Eis ist weniger dicht als flüssiges Wasser.",
-    "leicht",
-    ["Wasser", "Dichte"]
-  ),
-  q(
     "ch-pool-159",
     "chem-kap3",
     "Die Elektronegativitätsdifferenz ΔEN zwischen zwei Atomen ist ein Maß für:",
@@ -195,16 +185,6 @@ export const chemiePool4: Question[] = [
     ["Valenzelektronen", "Stickstoff"]
   ),
   q(
-    "ch-pool-164",
-    "chem-kap2",
-    "Die Einheit der Stoffmenge ist:",
-    ["Gramm", "Liter", "Mol", "Kelvin", "Pascal"],
-    2,
-    "Stoffmenge n in Mol [mol]. 1 mol = 6,022·10²³ Teilchen.",
-    "leicht",
-    ["Stoffmenge", "Mol"]
-  ),
-  q(
     "ch-pool-165",
     "chem-kap3",
     "Welche Verbindung hat die höchste Schmelztemperatur?",
@@ -245,16 +225,6 @@ export const chemiePool4: Question[] = [
     ["Alkan", "Hexan"]
   ),
   q(
-    "ch-pool-169",
-    "chem-kap1",
-    "Welches Element ist ein Halogen?",
-    ["Sauerstoff", "Stickstoff", "Chlor", "Kohlenstoff", "Schwefel"],
-    2,
-    "Halogene = Gruppe 17: F, Cl, Br, I, At. Chlor ist ein Halogen.",
-    "leicht",
-    ["Halogen", "Chlor"]
-  ),
-  q(
     "ch-pool-170",
     "chem-kap2",
     "Die Dichte ρ eines idealen Gases ist (M = molare Masse):",
@@ -279,32 +249,6 @@ export const chemiePool4: Question[] = [
     "Ionenbindung: elektrostatische Anziehung zwischen Kationen und Anionen, ungerichtet (Gitter). Kovalente Bindung kann gerichtet sein.",
     "mittel",
     ["Ionenbindung"]
-  ),
-  q(
-    "ch-pool-172",
-    "chem-kap4",
-    "Ein Katalysator erhöht die Reaktionsgeschwindigkeit, indem er:",
-    [
-      "die Aktivierungsenergie senkt",
-      "die Reaktionsenthalpie vergrößert",
-      "das Gleichgewicht verschiebt",
-      "die Produkte stabilisiert",
-      "die Edukte verbraucht",
-    ],
-    0,
-    "Katalysator senkt die Aktivierungsenergie E_A (alternativer Reaktionsweg). ΔH und Gleichgewichtslage bleiben unverändert.",
-    "leicht",
-    ["Katalysator", "Aktivierungsenergie"]
-  ),
-  q(
-    "ch-pool-173",
-    "chem-kap5",
-    "Welche Formel beschreibt den Zusammenhang zwischen pH und pOH bei 25 °C?",
-    ["pH = pOH", "pH + pOH = 14", "pH − pOH = 7", "pH · pOH = 14", "pH = 14 − pOH"],
-    1,
-    "K_w = [H₃O⁺][OH⁻] = 10⁻¹⁴ → −log[H₃O⁺] − log[OH⁻] = 14 → pH + pOH = 14.",
-    "leicht",
-    ["pH", "pOH"]
   ),
   q(
     "ch-pool-174",
@@ -351,32 +295,6 @@ export const chemiePool4: Question[] = [
     "London-Dispersionskräfte (temporäre Dipole) wirken zwischen allen Molekülen; bei großen/apolaren Molekülen oft dominierend.",
     "leicht",
     ["London-Kräfte"]
-  ),
-  q(
-    "ch-pool-178",
-    "chem-kap4",
-    "Bei einer Redoxreaktion ändert sich die Oxidationszahl von:",
-    [
-      "mindestens einem Atom",
-      "keinem Atom",
-      "allen Atomen gleich",
-      "nur den Kationen",
-      "nur den Anionen",
-    ],
-    0,
-    "Redox: Mindestens ein Atom wird oxidiert (OZ steigt) und mindestens eines reduziert (OZ sinkt). Elektronenübertragung.",
-    "leicht",
-    ["Redox", "Oxidationszahl"]
-  ),
-  q(
-    "ch-pool-179",
-    "chem-kap5",
-    "Welche Säure ist in Wasser eine schwache Säure?",
-    ["HCl", "HNO₃", "Essigsäure (CH₃COOH)", "H₂SO₄", "HBr"],
-    2,
-    "Essigsäure ist eine schwache Säure (nur teilweise dissoziiert). HCl, HNO₃, H₂SO₄ (1. Stufe), HBr sind stark.",
-    "mittel",
-    ["schwache Säure", "Essigsäure"]
   ),
   q(
     "ch-pool-180",
@@ -445,22 +363,6 @@ export const chemiePool4: Question[] = [
     "Temperaturerhöhung erhöht die Geschwindigkeit (mehr Teilchen mit ausreichender Energie). Katalysator beschleunigt ebenfalls.",
     "leicht",
     ["Reaktionsgeschwindigkeit", "Temperatur"]
-  ),
-  q(
-    "ch-pool-185",
-    "chem-kap5",
-    "Ein Puffer besteht typischerweise aus:",
-    [
-      "nur Wasser (reines Lösungsmittel ohne Pufferwirkung)",
-      "starker Säure und starker Base (vollständige Dissoziation)",
-      "schwacher Säure und ihrer konjugierten Base",
-      "nur Salzen (Ionenverbindungen ohne Säure-Base-Charakter)",
-      "nur Basen (Protonenakzeptoren ohne konjugierte Säure)",
-    ],
-    2,
-    "Puffer = schwache Säure + konjugierte Base (oder umgekehrt), z. B. H₂CO₃/HCO₃⁻, H₂PO₄⁻/HPO₄²⁻.",
-    "mittel",
-    ["Puffer", "schwache Säure"]
   ),
   q(
     "ch-pool-186",

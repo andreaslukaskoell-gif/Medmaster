@@ -29,16 +29,6 @@ function q(
 
 export const chemiePool2: Question[] = [
   q(
-    "ch-pool-052",
-    "chem-kap3",
-    "Welche Verbindung ist ein typischer Vertreter der Ionenbindung?",
-    ["H₂O", "CH₄", "NaCl", "CO₂", "NH₃"],
-    2,
-    "NaCl: Metall (Na) + Nichtmetall (Cl), große EN-Differenz, Ionenkristall. H₂O, CH₄, CO₂, NH₃ sind molekular/kovalent.",
-    "leicht",
-    ["Ionenbindung", "NaCl"]
-  ),
-  q(
     "ch-pool-053",
     "chem-kap4",
     "Bei der Metathese NaCl + AgNO₃ → AgCl↓ + NaNO₃ entsteht ein Niederschlag, weil:",
@@ -55,16 +45,6 @@ export const chemiePool2: Question[] = [
     ["Metathese", "Fällung", "Löslichkeit"]
   ),
   q(
-    "ch-pool-054",
-    "chem-kap6",
-    "Welcher Bindungswinkel liegt bei sp³-hybridisierten Kohlenstoffatomen vor?",
-    ["90°", "109,5°", "120°", "180°", "60°"],
-    1,
-    "sp³-Hybridisierung → tetraedrische Geometrie, Bindungswinkel 109,5°. sp² → 120°, sp → 180°.",
-    "leicht",
-    ["Hybridisierung", "Bindungswinkel"]
-  ),
-  q(
     "ch-pool-055",
     "chem-kap1",
     "Die Avogadro-Konstante N_A hat den Wert etwa:",
@@ -79,22 +59,6 @@ export const chemiePool2: Question[] = [
     "N_A ≈ 6,022 · 10²³ mol⁻¹. Ein Mol enthält N_A Teilchen. 22,4 L/mol ist das molare Volumen bei STP.",
     "leicht",
     ["Avogadro", "Mol"]
-  ),
-  q(
-    "ch-pool-056",
-    "chem-kap2",
-    "Kondensieren bezeichnet den Übergang:",
-    [
-      "flüssig → gasförmig",
-      "gasförmig → flüssig",
-      "fest → gasförmig",
-      "fest → flüssig",
-      "flüssig → fest",
-    ],
-    1,
-    "Kondensieren = gasförmig → flüssig (z. B. Wasserdampf zu Tropfen). Verdampfen = flüssig → gasförmig.",
-    "leicht",
-    ["Kondensieren", "Phasenübergang"]
   ),
   q(
     "ch-pool-057",
@@ -131,16 +95,6 @@ export const chemiePool2: Question[] = [
     "Oktettregel: Viele Atome erreichen in Verbindungen 8 Außenelektronen (Edelgaskonfiguration). Ausnahmen: H (2), manche erweitern das Oktett.",
     "leicht",
     ["Oktettregel", "Edelgaskonfiguration"]
-  ),
-  q(
-    "ch-pool-060",
-    "chem-kap6",
-    "Alkene haben die allgemeine Summenformel:",
-    ["CₙH₂ₙ₊₂", "CₙH₂ₙ", "CₙH₂ₙ₋₂", "CₙHₙ", "CₙH₂ₙ₊₁"],
-    1,
-    "Alkene: mindestens eine C=C-Doppelbindung, CₙH₂ₙ. Alkane: CₙH₂ₙ₊₂. Alkine: CₙH₂ₙ₋₂.",
-    "leicht",
-    ["Alkene", "Summenformel"]
   ),
   q(
     "ch-pool-061",
@@ -209,16 +163,6 @@ export const chemiePool2: Question[] = [
     ["tertiäres C-Atom", "Alkane"]
   ),
   q(
-    "ch-pool-067",
-    "chem-kap1",
-    "Die Anzahl der Protonen im Kern entspricht bei einem neutralen Atom der Anzahl:",
-    ["der Neutronen", "der Elektronen in der Hülle", "der Nukleonen", "der Schalen", "der Isotope"],
-    1,
-    "Bei einem neutralen Atom: Anzahl Protonen (Z) = Anzahl Elektronen. Die Neutronenzahl kann variieren (Isotope).",
-    "leicht",
-    ["Protonen", "Elektronen", "neutral"]
-  ),
-  q(
     "ch-pool-068",
     "chem-kap5",
     "Welcher Wert hat pH + pOH in wässriger Lösung bei 25 °C?",
@@ -227,22 +171,6 @@ export const chemiePool2: Question[] = [
     "pH + pOH = 14 (bei 25 °C), weil [H₃O⁺][OH⁻] = 10⁻¹⁴ und −log([H₃O⁺]) − log([OH⁻]) = −log(10⁻¹⁴) = 14.",
     "leicht",
     ["pH", "pOH"]
-  ),
-  q(
-    "ch-pool-069",
-    "chem-kap2",
-    "Schmelzen ist der Übergang:",
-    [
-      "fest → flüssig",
-      "flüssig → fest",
-      "flüssig → gasförmig",
-      "gasförmig → flüssig",
-      "fest → gasförmig",
-    ],
-    0,
-    "Schmelzen = fest → flüssig. Erstarren/Gefrieren = flüssig → fest.",
-    "leicht",
-    ["Schmelzen", "Phasenübergang"]
   ),
   q(
     "ch-pool-070",
@@ -511,22 +439,6 @@ export const chemiePool2: Question[] = [
     "Nach IUPAC: Gruppen 1–18. Traditionell: Hauptgruppen 1–8 (mit römischen Ziffern I–VIII). Die Nebengruppen liegen dazwischen.",
     "leicht",
     ["Periodensystem", "Hauptgruppen"]
-  ),
-  q(
-    "ch-pool-093",
-    "chem-kap2",
-    "Verdampfen ist der Übergang:",
-    [
-      "fest → flüssig",
-      "flüssig → gasförmig",
-      "gasförmig → flüssig",
-      "fest → gasförmig",
-      "flüssig → fest",
-    ],
-    1,
-    "Verdampfen (bzw. Sieden beim Siedepunkt) = flüssig → gasförmig. Kondensieren = gasförmig → flüssig.",
-    "leicht",
-    ["Verdampfen", "Phasenübergang"]
   ),
   q(
     "ch-pool-094",
