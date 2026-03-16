@@ -2,7 +2,19 @@ import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import { alleStichworteListe } from "@/data/stichwortliste";
 import type { Question } from "@/data/bms";
-import { getDirectStichwortId } from "@/data/questions/index";
+
+// Lazy-load getDirectStichwortId to avoid pulling in 20 question part files
+let _getDirectStichwortId: ((id: string) => string | undefined) | null = null;
+async function loadDirectStichwortId(): Promise<(id: string) => string | undefined> {
+  if (!_getDirectStichwortId) {
+    const mod = await import("@/data/questions/index");
+    _getDirectStichwortId = mod.getDirectStichwortId;
+  }
+  return _getDirectStichwortId;
+}
+function getDirectStichwortIdSync(id: string): string | undefined {
+  return _getDirectStichwortId?.(id);
+}
 
 // Lazy-load BMS questions to keep them out of the initial bundle
 let _allBmsQuestions: Question[] | null = null;
@@ -30,6 +42,7 @@ if (typeof window !== "undefined") {
       : (cb: () => void) => setTimeout(cb, 200);
   idle(() => {
     loadBmsQuestions();
+    loadDirectStichwortId();
   });
 }
 
@@ -126,7 +139,7 @@ interface AdaptiveState {
 
 function questionToStichwortId(q: Question): string | null {
   // Fast path: direct mapping for new Stichwort-Fragen
-  const direct = getDirectStichwortId(q.id);
+  const direct = getDirectStichwortIdSync(q.id);
   if (direct) return direct;
 
   // Fallback: tag matching for legacy questions

@@ -38,6 +38,9 @@ export default defineConfig({
             if (id.includes("mathematik")) return "bms-questions-math";
             return "bms-questions";
           }
+          // Stichwort questions — heavy data, lazy-load only
+          if (id.includes("src/data/questions/")) return "stichwort-questions";
+          if (id.includes("src/data/stichworteData")) return "stichwort-questions";
           // BMS chapter data — split by subject for better caching
           if (id.includes("src/data/bmsKapitel")) {
             if (id.includes("/biologie/")) return "bms-biologie";
