@@ -395,4 +395,398 @@ export const blogArticles: BlogArticle[] = [
       </>
     ),
   },
+  {
+    slug: "medat-punkte-berechnen",
+    title: "MedAT Punkte berechnen: So funktioniert der Punkteschlüssel",
+    excerpt:
+      "Wie werden MedAT-Punkte berechnet? Wir erklären den Punkteschlüssel, die Gewichtung der Testteile und welche Punktzahl du realistisch brauchst.",
+    topic: "Strategie",
+    readingTime: 5,
+    publishDate: "2026-03-16",
+    content: (
+      <>
+        <p>
+          Eine der häufigsten Fragen von MedAT-Kandidierenden: „Wie viele Punkte brauche ich?" Die
+          Antwort hängt vom Punkteschlüssel ab — und der ist komplexer, als viele denken. Hier
+          erfährst du, wie die Berechnung funktioniert, wie die einzelnen Testteile gewichtet werden
+          und welche Punktzahl erfahrungsgemäß für einen Studienplatz reicht.
+        </p>
+
+        <h2>Die Gewichtung der vier Testteile</h2>
+        <p>
+          Der MedAT besteht aus vier Bereichen mit unterschiedlicher Gewichtung: BMS
+          (Basiskenntnistest) zählt 40 %, TV (Textverständnis) 10 %, KFF (Kognitive Fähigkeiten und
+          Fertigkeiten) 40 % und SEK (Sozial-emotionale Kompetenzen) 10 %. Das bedeutet: BMS und KFF
+          zusammen machen 80 % deines Gesamtergebnisses aus. Wer hier stark ist, hat die besten
+          Chancen.
+        </p>
+
+        <h2>Wie die Rohpunkte berechnet werden</h2>
+        <p>
+          Im BMS gibt es für jede richtige Antwort einen Punkt, falsche Antworten werden nicht
+          abgezogen. Bei 40 BMS-Fragen (je 10 pro Fach) sind also maximal 40 Rohpunkte möglich. Im
+          KFF werden die fünf Untertests (Zahlenfolgen, Figuren zusammensetzen, Wortflüssigkeit,
+          Gedächtnis und Merkfähigkeit, Implikationen erkennen) einzeln gewertet. Im TV gibt es
+          Punkte pro richtig beantworteter Frage. Die Rohpunkte jedes Testteils werden anschließend
+          in Prozentwerte umgerechnet und mit der jeweiligen Gewichtung multipliziert.
+        </p>
+
+        <h2>Welche Punktzahl reicht für einen Studienplatz?</h2>
+        <p>
+          Der MedAT ist ein Ranking-Test: Es gibt keine fixe Bestehensgrenze, sondern du
+          konkurrierst mit allen anderen Teilnehmenden. In den letzten Jahren lag der Cutoff für
+          einen Studienplatz in Wien bei ca. 75-82 % der Gesamtpunkte, in Graz und Innsbruck etwas
+          niedriger. Plane also mindestens 80 % als Ziel ein — das lässt Puffer für schwankende
+          Schwierigkeitsgrade.
+        </p>
+
+        <h2>Strategische Konsequenzen</h2>
+        <p>
+          Da BMS und KFF jeweils 40 % zählen, lohnt es sich, beide Bereiche gleichmäßig zu
+          trainieren. Ein häufiger Fehler: Kandidierende investieren 90 % ihrer Zeit in BMS und
+          vernachlässigen KFF. Dabei sind KFF-Punkte oft leichter zu steigern, weil die Untertests
+          durch Übung schnell besser werden. TV und SEK solltest du nicht ignorieren — 20 %
+          Gewichtung können bei knappem Ranking den Unterschied machen.
+        </p>
+
+        <CTA text="MedMaster zeigt dir nach jeder Übung deine simulierte Gesamtpunktzahl — damit du weißt, wo du stehst." />
+      </>
+    ),
+  },
+  {
+    slug: "medat-kff-tipps",
+    title: "KFF-Training: So verbesserst du dich in allen 5 Untertests",
+    excerpt:
+      "Die KFF-Sektion zählt 40 % im MedAT. Mit gezieltem Training in allen 5 Untertests kannst du deine Punkte systematisch steigern.",
+    topic: "KFF",
+    readingTime: 6,
+    publishDate: "2026-03-16",
+    content: (
+      <>
+        <p>
+          Die Sektion „Kognitive Fähigkeiten und Fertigkeiten" (KFF) ist mit 40 % Gewichtung genauso
+          wichtig wie der BMS — wird aber von vielen Kandidierenden unterschätzt. Der große Vorteil:
+          KFF-Fähigkeiten lassen sich durch systematisches Training deutlich verbessern. Hier sind
+          konkrete Tipps für jeden der fünf Untertests.
+        </p>
+
+        <h2>1. Zahlenfolgen (ZF)</h2>
+        <p>
+          Bilde immer zuerst die Differenzenreihe. Wenn die Differenzen kein Muster zeigen, prüfe
+          auf Faktoren (×2, ×3) oder verschachtelte Folgen (jede zweite Zahl bildet eine eigene
+          Reihe). Trainiere täglich 10-15 Aufgaben mit Timer — 25 Sekunden pro Aufgabe ist das Ziel.
+          Erkennst du nach 15 Sekunden kein Muster, überspringe und komm später zurück.
+        </p>
+
+        <h2>2. Figuren zusammensetzen (FZ)</h2>
+        <p>
+          Du siehst Teilstücke und musst erkennen, welche Gesamtfigur sie bilden. Strategie: Suche
+          zuerst die größte Teilfigur und prüfe, zu welchen Optionen sie passen könnte. Achte auf
+          markante Ecken und Kanten — sie schränken die Möglichkeiten schnell ein. Übung mit
+          verschiedenen Schwierigkeitsgraden ist entscheidend.
+        </p>
+
+        <h2>3. Wortflüssigkeit (WF)</h2>
+        <p>
+          Du bekommst Buchstaben und musst das Wort finden, das sich daraus bilden lässt. Tipp:
+          Beginne nicht mit dem ersten Buchstaben, sondern suche nach häufigen
+          Buchstabenkombinationen (SCH, CH, EI, AU, ER, EN). Trainiere mit einem breiten Wortschatz
+          — je mehr Wörter du kennst, desto schneller erkennst du die Lösung.
+        </p>
+
+        <h2>4. Implikationen erkennen (IE)</h2>
+        <p>
+          Hier musst du aus Prämissen logische Schlüsse ziehen. Merke dir die Grundregeln: „Alle A
+          sind B" bedeutet nicht „Alle B sind A". Zeichne bei komplexen Aufgaben Venn-Diagramme —
+          das macht abstrakte Logik visuell greifbar. Übe besonders mit Aufgaben, bei denen die
+          Antwort „Keine Schlussfolgerung ist zwingend" lautet — das wird oft übersehen.
+        </p>
+
+        <h2>5. Gedächtnis und Merkfähigkeit (GM)</h2>
+        <p>
+          Du musst dir Fakten über fiktive Personen merken (Alter, Beruf, Hobbys etc.) und später
+          Fragen dazu beantworten. Nutze Merktechniken: Verbinde jede Person mit einem mentalen Bild
+          oder einer Geschichte. Je absurder die Verknüpfung, desto besser bleibt sie haften.
+          Trainiere regelmäßig mit verschiedenen Profilmengen (8, 10, 12 Personen).
+        </p>
+
+        <h2>Der wichtigste Tipp: Täglich üben</h2>
+        <p>
+          KFF-Fähigkeiten bauen sich langsam auf — 15-30 Minuten täglich über Wochen bringt mehr als
+          3 Stunden am Stück kurz vor dem Test. Beginne mindestens 8 Wochen vor dem MedAT mit
+          regelmäßigem KFF-Training.
+        </p>
+
+        <CTA text="Alle 5 KFF-Untertests mit algorithmisch generierten Aufgaben trainieren — nie Wiederholungen." />
+      </>
+    ),
+  },
+  {
+    slug: "medat-schwierigkeitsgrad",
+    title: "Wie schwer ist der MedAT wirklich? Zahlen und Fakten",
+    excerpt:
+      "Alle reden davon, wie schwer der MedAT ist — aber wie sehen die tatsächlichen Zahlen aus? Ein nüchterner Blick auf Teilnehmerzahlen, Erfolgsquoten und Schwierigkeitsgrad.",
+    topic: "Strategie",
+    readingTime: 5,
+    publishDate: "2026-03-16",
+    content: (
+      <>
+        <p>
+          Der MedAT gilt als einer der härtesten Aufnahmetests im deutschsprachigen Raum. Aber ist
+          er wirklich so schwer, wie alle sagen? In diesem Artikel schauen wir uns die konkreten
+          Zahlen an — Teilnehmerquoten, Aufnahmeraten und was der Test tatsächlich von dir verlangt.
+        </p>
+
+        <h2>Die Zahlen: Wie viele schaffen es?</h2>
+        <p>
+          Jedes Jahr treten rund 12.000-16.000 Personen zum MedAT an. Die öffentlichen Universitäten
+          in Wien, Graz, Innsbruck und Linz vergeben zusammen etwa 1.850 Studienplätze für
+          Humanmedizin. Das ergibt eine Aufnahmequote von ca. 12-15 %. In Wien, dem beliebtesten
+          Standort, liegt die Quote noch niedriger — oft unter 10 %. Zum Vergleich: An deutschen
+          Unis mit NC liegt die Zulassungsquote über den ZV (Zentrales Vergabeverfahren) bei etwa 20
+          %.
+        </p>
+
+        <h2>Was macht den MedAT schwer?</h2>
+        <p>
+          Es ist weniger die Schwierigkeit einzelner Fragen, sondern die Kombination aus Breite und
+          Zeitdruck. Der BMS verlangt Wissen in vier naturwissenschaftlichen Fächern auf
+          Maturaniveau. Die KFF-Sektion testet kognitive Fähigkeiten unter extremem Zeitdruck
+          (teilweise 25 Sekunden pro Aufgabe). Dazu kommen Textverständnis und sozial-emotionale
+          Kompetenzen. Diese Vielfalt macht eine gezielte Vorbereitung unverzichtbar.
+        </p>
+
+        <h2>Ist der Stoff schwer?</h2>
+        <p>
+          Das BMS-Niveau liegt grundsätzlich auf Matura- bzw. Abiturniveau — also kein
+          Universitätsstoff. Aber: Die Fragen sind tricky. Sie testen nicht nur, ob du ein Thema
+          kennst, sondern ob du es wirklich verstanden hast. Ablenkungsoptionen (Distraktoren) sind
+          so formuliert, dass oberflächliches Wissen nicht reicht. Wer den Stoff nur auswendig
+          lernt, fällt auf die falschen Antworten rein.
+        </p>
+
+        <h2>Wie lange muss man lernen?</h2>
+        <p>
+          Die meisten erfolgreichen Kandidierenden berichten von 3-6 Monaten Vorbereitung bei
+          täglich 3-5 Stunden Lernzeit. Das entspricht etwa 300-600 Stunden Gesamtaufwand. Wer
+          bereits eine naturwissenschaftliche Matura hat, braucht tendenziell weniger Zeit. Wer aus
+          einem anderen Bereich kommt, sollte mehr einplanen.
+        </p>
+
+        <h2>Die gute Nachricht</h2>
+        <p>
+          Der MedAT ist trainierbar. Anders als reine Intelligenztests belohnt er systematische
+          Vorbereitung. KFF-Fähigkeiten verbessern sich nachweislich durch Übung, BMS-Wissen lässt
+          sich aufbauen und Textverständnis-Strategien sind erlernbar. Wer früh anfängt,
+          strukturiert lernt und genug Übungsfragen durcharbeitet, hat realistische Chancen —
+          unabhängig vom Ausgangsniveau.
+        </p>
+
+        <CTA text="Strukturiert vorbereiten: 4.300+ BMS-Fragen, KFF-Training und Prüfungssimulation in einer App." />
+      </>
+    ),
+  },
+  {
+    slug: "bms-chemie-lernen",
+    title: "BMS Chemie: Die 8 wichtigsten Themen für den MedAT",
+    excerpt:
+      "Chemie ist für viele MedAT-Kandidierende das schwierigste BMS-Fach. Diese 8 Themen sind besonders prüfungsrelevant — und so gehst du sie an.",
+    topic: "BMS",
+    readingTime: 5,
+    publishDate: "2026-03-16",
+    content: (
+      <>
+        <p>
+          Chemie gilt unter MedAT-Kandidierenden als das anspruchsvollste BMS-Fach. Der Stoff reicht
+          vom Atombau bis zur Organischen Chemie — und die Fragen erfordern echtes Verständnis,
+          nicht nur Auswendiglernen. Hier sind die 8 wichtigsten Themen, die du für den MedAT
+          beherrschen musst.
+        </p>
+
+        <h2>1. Atombau und Periodensystem</h2>
+        <p>
+          Elektronenkonfiguration, Ordnungszahl, Massenzahl, Isotope, Aufbau des PSE, Periodentrends
+          (Elektronegativität, Ionisierungsenergie, Atomradius). Das Fundament für alles Weitere —
+          ohne das geht nichts.
+        </p>
+
+        <h2>2. Chemische Bindung</h2>
+        <p>
+          Ionenbindung, kovalente Bindung, metallische Bindung, Van-der-Waals-Kräfte,
+          Wasserstoffbrückenbindung. Entscheidend: Wann welche Bindung entsteht und wie sie
+          Stoffeigenschaften beeinflusst. VSEPR-Modell und Lewis-Formeln werden regelmäßig geprüft.
+        </p>
+
+        <h2>3. Stöchiometrie</h2>
+        <p>
+          Mol-Berechnungen, molare Masse, Reaktionsgleichungen ausgleichen,
+          Stoffmengen-Verhältnisse. Hier wird oft gerechnet — übe konkrete Aufgaben, nicht nur die
+          Theorie. Typische Falle: Einheiten vergessen oder die Gleichung nicht korrekt
+          ausbalancieren.
+        </p>
+
+        <h2>4. Säuren, Basen und pH-Wert</h2>
+        <p>
+          Brønsted-Definition, pH- und pOH-Berechnung, starke vs. schwache Säuren, Puffersysteme,
+          Neutralisation. Rechenaufgaben zum pH-Wert kommen fast jedes Jahr. Merke: pH = −log[H₃O⁺]
+          und die Beziehung pH + pOH = 14.
+        </p>
+
+        <h2>5. Redoxreaktionen</h2>
+        <p>
+          Oxidation, Reduktion, Oxidationszahlen bestimmen, Redoxgleichungen aufstellen,
+          elektrochemische Spannungsreihe, Galvanische Zellen. Das Bestimmen von Oxidationszahlen
+          ist eine Kernkompetenz, die du sicher beherrschen musst.
+        </p>
+
+        <h2>6. Organische Chemie</h2>
+        <p>
+          Funktionelle Gruppen (Alkohol, Aldehyd, Keton, Carbonsäure, Ester, Amin, Amid),
+          Nomenklatur, Isomerie, Reaktionstypen (Substitution, Addition, Elimination). Besonders
+          wichtig: funktionelle Gruppen erkennen und benennen.
+        </p>
+
+        <h2>7. Chemisches Gleichgewicht</h2>
+        <p>
+          Gleichgewichtskonstante, Le-Chatelier-Prinzip, Einfluss von Temperatur/Druck/Konzentration
+          auf das Gleichgewicht. Das Le-Chatelier-Prinzip ist ein absoluter Prüfungsklassiker.
+        </p>
+
+        <h2>8. Lösungen und Konzentrationen</h2>
+        <p>
+          Löslichkeit, Massenkonzentration, Stoffmengenkonzentration (Molarität), Verdünnungsregel,
+          Löslichkeitsprodukt. Auch hier wird regelmäßig gerechnet — Umrechnungen zwischen
+          verschiedenen Konzentrationsangaben musst du im Schlaf können.
+        </p>
+
+        <CTA text="Alle 8 Chemie-Themen abgedeckt: 1.400+ Chemie-Fragen mit Schritt-für-Schritt-Erklärungen." />
+      </>
+    ),
+  },
+  {
+    slug: "medat-2026-aenderungen",
+    title: "MedAT 2026: Was sich ändert und wie du dich vorbereitest",
+    excerpt:
+      "Der MedAT wird regelmäßig angepasst. Hier erfährst du, was sich 2026 ändert und wie du deine Vorbereitung darauf ausrichtest.",
+    topic: "Strategie",
+    readingTime: 4,
+    publishDate: "2026-03-16",
+    content: (
+      <>
+        <p>
+          Jedes Jahr passen die Medizinischen Universitäten den MedAT leicht an. Für 2026 gibt es
+          einige relevante Neuerungen, die deine Vorbereitung beeinflussen können. Hier ist ein
+          Überblick über die wichtigsten Änderungen und was sie für dich bedeuten.
+        </p>
+
+        <h2>Grundstruktur bleibt stabil</h2>
+        <p>
+          Die vier Testbereiche — BMS (40 %), KFF (40 %), TV (10 %) und SEK (10 %) — bleiben
+          bestehen. Auch das Format mit Multiple-Choice-Fragen (5 Optionen, eine richtige Antwort)
+          ändert sich nicht. Wer sich bereits vorbereitet hat, muss also nicht bei null anfangen.
+          Die bewährten Strategien funktionieren weiterhin.
+        </p>
+
+        <h2>Aktualisierte Stichwortliste</h2>
+        <p>
+          Die offizielle BMS-Stichwortliste wird jährlich aktualisiert. Achte unbedingt auf die
+          neueste Version auf der Website der Medizinischen Universität. Vergleiche sie mit der
+          Vorjahresversion: Wurden Themen hinzugefügt oder entfernt? Neue Stichwörter bedeuten neue
+          Fragetypen — und alte, gestrichene Themen kannst du getrost weglassen. Die Stichwortliste
+          ist dein wichtigstes Orientierungsdokument.
+        </p>
+
+        <h2>KFF: Gleiche 5 Untertests, neue Aufgabentypen</h2>
+        <p>
+          Die fünf KFF-Untertests (Zahlenfolgen, Figuren zusammensetzen, Wortflüssigkeit,
+          Implikationen erkennen, Gedächtnis und Merkfähigkeit) bleiben gleich. Allerdings variieren
+          die konkreten Aufgabenformate leicht von Jahr zu Jahr. Deshalb ist es wichtig, mit
+          vielfältigen Aufgaben zu trainieren und sich nicht auf einen festen Pool zu verlassen.
+          Algorithmisch generierte Aufgaben bieten hier einen klaren Vorteil.
+        </p>
+
+        <h2>Termine und Anmeldung 2026</h2>
+        <p>
+          Der MedAT findet traditionell Anfang Juli statt. Die Anmeldung öffnet üblicherweise im
+          März und schließt Anfang April — verpasse diese Frist nicht, eine Nachmeldung ist nicht
+          möglich. Prüfe die offiziellen Websites der MedUnis regelmäßig für aktuelle
+          Terminbekanntgaben. Wähle deinen bevorzugten Standort (Wien, Graz, Innsbruck oder Linz)
+          strategisch — die Aufnahmequoten unterscheiden sich.
+        </p>
+
+        <h2>Was du jetzt tun solltest</h2>
+        <p>
+          Beginne jetzt mit der Vorbereitung, falls du es noch nicht getan hast. Drei Monate
+          strukturiertes Lernen sind das Minimum. Lade die aktuelle Stichwortliste herunter,
+          erstelle einen Lernplan und starte mit BMS-Theorie und täglichem KFF-Training. Je früher
+          du anfängst, desto gelassener gehst du in den Testtag.
+        </p>
+
+        <CTA text="MedMaster ist für den MedAT 2026 optimiert: Aktuelle Inhalte, alle Testbereiche, adaptive Übungen." />
+      </>
+    ),
+  },
+  {
+    slug: "medat-zeitmanagement",
+    title: "Zeitmanagement im MedAT: So teilst du deine Zeit richtig ein",
+    excerpt:
+      "Viele MedAT-Teilnehmende scheitern nicht am Wissen, sondern am Zeitmanagement. Hier erfährst du, wie viel Zeit du pro Testteil und Aufgabe hast — und wie du sie optimal nutzt.",
+    topic: "Strategie",
+    readingTime: 5,
+    publishDate: "2026-03-16",
+    content: (
+      <>
+        <p>
+          Zeitdruck ist der unsichtbare Gegner im MedAT. Viele Kandidierende wüssten die richtige
+          Antwort — wenn sie nur genug Zeit hätten. Das Problem: Der MedAT gibt dir bewusst weniger
+          Zeit, als du bräuchtest, um jede Frage in Ruhe zu durchdenken. Gutes Zeitmanagement ist
+          deshalb genauso wichtig wie gutes Fachwissen.
+        </p>
+
+        <h2>Die Zeitlimits im Überblick</h2>
+        <p>
+          Der BMS dauert insgesamt 75 Minuten für 40 Fragen — das sind knapp 113 Sekunden pro Frage.
+          Im KFF variieren die Zeiten stark: Zahlenfolgen erlauben ca. 25 Sekunden pro Aufgabe,
+          Gedächtnis und Merkfähigkeit hat eine feste Einpräge- und Abfragephase, Figuren
+          zusammensetzen gibt ca. 35 Sekunden pro Aufgabe. Im TV hast du etwa 12,5 Minuten pro
+          Textset (Text lesen + Fragen beantworten). Insgesamt dauert der MedAT über 4 Stunden.
+        </p>
+
+        <h2>Strategie 1: Die 80/20-Regel anwenden</h2>
+        <p>
+          Nicht alle Fragen sind gleich schwer. Beantworte zuerst die Fragen, bei denen du dir
+          sicher bist — das sind oft 60-70 % der Aufgaben. Dann gehe die unsicheren Fragen durch und
+          versuche, durch Ausschlussverfahren die richtige Antwort zu finden. Aufgaben, bei denen du
+          gar keinen Ansatz hast, beantwortest du zuletzt durch begründetes Raten. Da es keinen
+          Punktabzug für falsche Antworten gibt, solltest du niemals eine Frage leer lassen.
+        </p>
+
+        <h2>Strategie 2: Zeitanker setzen</h2>
+        <p>
+          Teile den BMS mental in 4 Blöcke à 10 Fragen ein. Nach jeweils 10 Fragen sollten ca. 18
+          Minuten vergangen sein. Wenn du deutlich darüber liegst, beschleunige. Wenn du drunter
+          liegst, nutze die Zeitreserve für schwierige Fragen am Ende. Diese Zeitanker verhindern,
+          dass du dich an einzelnen Fragen festbeißt und am Ende in Panik gerätst.
+        </p>
+
+        <h2>Strategie 3: Markieren und Zurückkommen</h2>
+        <p>
+          Im MedAT kannst du innerhalb eines Testteils Fragen überspringen und später zurückkommen.
+          Nutze das aktiv: Wenn du nach 30 Sekunden keinen klaren Lösungsweg siehst, markiere die
+          Frage und geh weiter. Am Ende hast du oft noch 5-10 Minuten für die markierten Fragen —
+          und manchmal kommt die Lösung, wenn der Druck weg ist.
+        </p>
+
+        <h2>In der Vorbereitung trainieren</h2>
+        <p>
+          Zeitmanagement lernst du nicht aus Büchern, sondern durch Praxis. Übe von Anfang an mit
+          Timer. Starte großzügig (z.B. 2 Minuten pro BMS-Frage) und reduziere die Zeit schrittweise
+          auf das echte Zeitlimit. Mache regelmäßig vollständige Prüfungssimulationen unter
+          realistischen Bedingungen — nur so entwickelst du ein Gefühl für das richtige Tempo.
+        </p>
+
+        <CTA text="MedMaster hat integrierte Timer in jedem Testteil — trainiere von Anfang an unter realistischem Zeitdruck." />
+      </>
+    ),
+  },
 ];
