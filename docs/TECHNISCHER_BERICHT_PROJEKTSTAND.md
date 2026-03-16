@@ -34,7 +34,7 @@ src/
 │   ├── flashcards.ts, flashcards_expanded*.ts
 │   ├── stichwortliste.ts
 │   ├── sekData.ts
-│   ├── figurenGenerator.ts (Schlauchfiguren)
+│   ├── kffFigurenZusammensetzenMedAT.ts (Figuren zusammensetzen)
 │   └── formeln.ts, chapters/, questions/
 ├── lib/                  # bmsStorage, supabase, supabaseBMS, utils, stripe
 ├── store/                # useStore, adaptiveLearning
@@ -64,7 +64,7 @@ src/
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------ |
 | Strategie & Basis  | `data/kffData.ts`                                                                                                                                                                    | Strategie-Guides, Implikationen, große TS-Objekte                  |
 | Subtest-spezifisch | `kffWortfluessigkeit.ts`, `kffZahlenfolgen.ts`, `kffImplikationen.ts`, `kffTextverstaendnis.ts`, `kffEmotionenErkennen.ts`, `kffEmotionenRegulieren.ts`, `kffSozialesEntscheiden.ts` | Wörter, Aufgaben, Szenarien                                        |
-| Figuren            | `data/figurenGenerator.ts`                                                                                                                                                           | Schlauchfiguren-Aufgaben (`figurenAufgaben`)                       |
+| Figuren            | `data/kffFigurenZusammensetzenMedAT.ts`                                                                                                                                              | Polygon-basierte Figuren-Aufgaben (Figuren zusammensetzen)         |
 | Generatoren        | `data/kffGenerators.ts`                                                                                                                                                              | Generierte Aufgaben (Zahlenfolgen, Wortflüssigkeit, Gedächtnis, …) |
 
 Alles **hart in TypeScript**; keine separaten JSON/MD-Dateien für KFF.

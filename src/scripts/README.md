@@ -64,7 +64,7 @@ Env wie bei seedDatabase: `VITE_SUPABASE_URL` (oder `SUPABASE_URL`) und `SUPABAS
 
 ## seedDatabase.ts – Datenbank einmalig befüllen
 
-Lädt **BMS-Kapitel** aus den TypeScript-Daten (`data/bmsKapitel`) und **KFF-Aufgaben** aus den KFF-Dateien (z. B. `kffWortfluessigkeit.ts`, `kffZahlenfolgen.ts`, `figurenGenerator.ts` usw.) und schreibt sie in Supabase:
+Lädt **BMS-Kapitel** aus den TypeScript-Daten (`data/bmsKapitel`) und **KFF-Aufgaben** aus den KFF-Dateien (z. B. `kffWortfluessigkeit.ts`, `kffZahlenfolgen.ts`, `kffFigurenZusammensetzenMedAT.ts` usw.) und schreibt sie in Supabase:
 
 - **bms_chapters** und **bms_subchapters**
 - **kff_tasks** (Tabelle laut Migration 002; Kategorien: wortfluessigkeit, zahlenfolgen, implikationen, figuren, emotionen-erkennen, emotionen-regulieren, soziales-entscheiden, textverstaendnis)
