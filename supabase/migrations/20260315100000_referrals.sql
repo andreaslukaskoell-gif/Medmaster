@@ -39,10 +39,9 @@ RETURNS TABLE(referrer_id uuid, display_name text, referral_count bigint)
 LANGUAGE sql
 STABLE
 AS $$
-  SELECT r.referrer_id, p.display_name, COUNT(*) as referral_count
+  SELECT r.referrer_id, r.referrer_id::text as display_name, COUNT(*) as referral_count
   FROM referrals r
-  LEFT JOIN profiles p ON p.id = r.referrer_id
-  GROUP BY r.referrer_id, p.display_name
+  GROUP BY r.referrer_id
   ORDER BY referral_count DESC
   LIMIT lim;
 $$;
