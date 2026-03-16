@@ -2760,12 +2760,30 @@ Die Immunisierung nutzt das Prinzip der erworbenen Immunität gezielt aus — en
         "Aktive vs. passive Immunisierung sowie den IgE-vermittelten Allergietyp-I-Mechanismus (Sensibilisierung → Re-Exposition → Histaminfreisetzung → Anaphylaxie, Therapie: Adrenalin) erklären.",
       ],
       sections: [],
-      // TODO: echte MedAT-Altfrage prüfen - aktuell Übungsformat
       altfrage: {
-        question:
-          "Was ist der Unterschied zwischen zytotoxischen T-Zellen (CD8⁺) und T-Helferzellen (CD4⁺)?",
-        answer:
-          "CD8⁺-T-Zellen (zytotoxisch) erkennen via MHC I körpereigene, virusbefallene oder entartete Zellen und töten sie durch Perforin/Granzyme. CD4⁺-T-Helferzellen erkennen extrazelluläre Antigene via MHC II auf APCs und koordinieren die Immunantwort: Th1 (IFN-γ → Makrophagen-Aktivierung) und Th2 (IL-4/-5 → IgE-Produktion, Allergien).",
+        text: "Welche Aussage über CD8⁺- und CD4⁺-T-Zellen ist korrekt?",
+        options: [
+          {
+            id: "a",
+            text: "CD4⁺-T-Zellen erkennen Antigene über MHC I und töten infizierte Zellen direkt durch Perforin.",
+          },
+          {
+            id: "b",
+            text: "CD8⁺-T-Zellen (zytotoxisch) erkennen via MHC I virusbefallene/entartete Zellen und töten sie durch Perforin/Granzyme. CD4⁺-T-Helferzellen erkennen Antigene via MHC II auf APCs und koordinieren die Immunantwort (Th1: IFN-γ; Th2: IL-4/IL-5).",
+          },
+          {
+            id: "c",
+            text: "CD8⁺-T-Zellen erkennen ausschließlich extrazelluläre Bakterien und präsentieren diese über MHC II.",
+          },
+          { id: "d", text: "Th1- und Th2-Zellen sind Subtypen der CD8⁺-T-Zellen." },
+          {
+            id: "e",
+            text: "CD4⁺-T-Zellen zerstören virusinfizierte Zellen durch Phagozytose ohne Antigen-Präsentation.",
+          },
+        ],
+        correctOptionId: "b",
+        explanation:
+          "CD8⁺-T-Zellen (zytotoxisch) erkennen intrazelluläre Antigene über MHC I (alle kernhaltigen Zellen) und induzieren Apoptose via Perforin/Granzyme. CD4⁺-T-Helferzellen erkennen extrazelluläre Antigene über MHC II (APCs) und koordinieren: Th1 (IFN-γ → Makrophagen) vs. Th2 (IL-4/IL-5 → B-Zell-Aktivierung, IgE).",
       },
       selfTest: [
         {
@@ -2962,11 +2980,33 @@ Der Lymphknoten filtert Lymphe und initiiert Immunantworten. Seine zonale Archit
         "Das Konzept der zentralen Toleranz und deren Bedeutung für die Autoimmunprävention darlegen.",
       ],
       sections: [],
-      // TODO: echte MedAT-Altfrage prüfen - aktuell Übungsformat
       altfrage: {
-        question: "Welche Aufgaben hat der Thymus bei der T-Zell-Reifung?",
-        answer:
-          "Im Thymus reifen T-Lymphozyten aus dem Knochenmark. Positive Selektion: Nur T-Zellen, die MHC erkennen können, überleben. Negative Selektion: T-Zellen, die zu stark an körpereigene Antigene binden, werden durch Apoptose eliminiert (zentrale Toleranz). Nur ~2-5% überleben. Klinisch: DiGeorge-Syndrom = Thymusaplasie → schwerer T-Zell-Mangel.",
+        text: "Welche Aussage über die T-Zell-Reifung im Thymus ist korrekt?",
+        options: [
+          {
+            id: "a",
+            text: "Im Thymus reifen B-Lymphozyten, die dann Antikörper gegen Pathogene produzieren.",
+          },
+          {
+            id: "b",
+            text: "Bei der negativen Selektion überleben T-Zellen, die körpereigene Antigene besonders stark erkennen.",
+          },
+          {
+            id: "c",
+            text: "Im Thymus durchlaufen T-Zellen positive Selektion (MHC-Erkennung) und negative Selektion (Elimination autoreaktiver Zellen). Nur ~2–5 % überleben. Bei DiGeorge-Syndrom (Thymusaplasie) resultiert ein schwerer T-Zell-Mangel.",
+          },
+          {
+            id: "d",
+            text: "Etwa 95 % aller T-Zellen überleben die Thymus-Selektion und gelangen in die Peripherie.",
+          },
+          {
+            id: "e",
+            text: "Die positive Selektion eliminiert T-Zellen, die MHC-Moleküle erkennen können.",
+          },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "T-Lymphozyten-Vorläufer wandern vom Knochenmark in den Thymus. Positive Selektion (Kortex): Nur T-Zellen, die MHC erkennen, überleben. Negative Selektion (Medulla): T-Zellen mit zu starker Bindung an Selbst-Antigene werden durch Apoptose eliminiert (zentrale Toleranz). Nur ~2–5 % überleben beide Selektionsschritte. DiGeorge-Syndrom (22q11-Deletion) = Thymusaplasie → schwerer T-Zell-Immundefekt.",
       },
       selfTest: [
         {
@@ -3201,11 +3241,33 @@ Das **Atemzentrum** liegt in der **Medulla oblongata** und im **Pons**. Es gener
         "Die wichtigsten Atemantriebe (zentraler CO₂/pH-Sensor, peripherer O₂-Sensor) und ihre klinische Relevanz bei COPD darstellen.",
       ],
       sections: [],
-      // TODO: echte MedAT-Altfrage prüfen - aktuell Übungsformat
       altfrage: {
-        question: "Was beschreibt der Bohr-Effekt und welche klinische Bedeutung hat er?",
-        answer:
-          "Der Bohr-Effekt beschreibt die pH-abhängige O₂-Affinität des Hämoglobins: Niedriger pH (Azidose, im Gewebe) → O₂-Bindungskurve verschiebt nach rechts → erleichterte O₂-Abgabe. Hoher pH (Lunge) → Kurve nach links → erleichterte O₂-Aufnahme. Klinisch relevant bei Azidose (mehr O₂-Abgabe) und Hyperventilation.",
+        text: "Welche Aussage über den Bohr-Effekt ist korrekt?",
+        options: [
+          {
+            id: "a",
+            text: "Der Bohr-Effekt beschreibt die temperaturabhängige O₂-Bindung des Myoglobins.",
+          },
+          {
+            id: "b",
+            text: "Bei niedrigem pH verschiebt sich die O₂-Bindungskurve nach links und erleichtert die O₂-Aufnahme.",
+          },
+          {
+            id: "c",
+            text: "Der Bohr-Effekt beschreibt die pH-abhängige O₂-Affinität des Hämoglobins: Niedriger pH → Rechtsverschiebung → erleichterte O₂-Abgabe im Gewebe; hoher pH → Linksverschiebung → erleichterte O₂-Aufnahme in der Lunge.",
+          },
+          {
+            id: "d",
+            text: "Der Bohr-Effekt tritt nur bei fetalen Erythrozyten auf und ist beim Erwachsenen nicht relevant.",
+          },
+          {
+            id: "e",
+            text: "Hyperventilation verstärkt den Bohr-Effekt und fördert die O₂-Abgabe an das Gewebe.",
+          },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "Der Bohr-Effekt: pH ↓ (CO₂ ↑, Laktat) → Hb-Konformationsänderung → O₂-Affinität ↓ → Rechtsverschiebung → erleichterte O₂-Abgabe im stoffwechselaktiven Gewebe. In der Lunge: pH ↑ → Linksverschiebung → erleichterte O₂-Aufnahme. Hyperventilation → pH ↑ → Linksverschiebung → O₂ wird schlechter abgegeben.",
       },
       selfTest: [
         {

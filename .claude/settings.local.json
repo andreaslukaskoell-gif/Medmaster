@@ -406,7 +406,13 @@
       "WebFetch(domain:www.kenhub.com)",
       "WebFetch(domain:www.medicalgraphics.de)",
       "Bash(for f:*)",
-      "Read(//Users/Luki/medmaster/**)"
+      "Read(//Users/Luki/medmaster/**)",
+      "mcp__plugin_playwright_playwright__browser_wait_for",
+      "Bash(for id:*)",
+      "Read(//Users/Luki/.claude/projects/-Users-Luki-medmaster/eeca8453-0d8d-4c38-bcbb-f14ec9fc51b1/subagents/**)",
+      "mcp__plugin_playwright_playwright__browser_fill_form",
+      "mcp__plugin_playwright_playwright__browser_type",
+      "Bash(dig:*)"
     ]
   }
 }
