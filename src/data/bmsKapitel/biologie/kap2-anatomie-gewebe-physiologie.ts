@@ -4242,11 +4242,33 @@ Ein Mann produziert täglich rund 200 Millionen Spermien, eine Frau reift pro Zy
         "Die Rolle von hCG bei der Schwangerschaftserhaltung (Corpus luteum → Progesteron) und die Funktion der Plazenta erläutern.",
       ],
       sections: [],
-      // TODO: echte MedAT-Altfrage prüfen - aktuell Übungsformat
       altfrage: {
-        question: "Beschreiben Sie den Menstruationszyklus und seinen Auslöser für die Ovulation.",
-        answer:
-          "Follikelphase (Tag 1-14): FSH → Follikelreifung → Östrogen ↑ → LH-Surge (positive Rückkopplung, Tag ~14) → Ovulation. Lutealphase (Tag 15-28): Corpus luteum → Progesteron + Östrogen. Ohne Befruchtung: Corpus luteum degeneriert → Hormonabfall → Menstruation. Mit Befruchtung: hCG erhält Corpus luteum → Progesteron für Schwangerschaftserhaltung.",
+        text: "Welche Aussage über den Menstruationszyklus und die Ovulation ist korrekt?",
+        options: [
+          {
+            id: "a",
+            text: "Der LH-Peak wird durch sinkende Östrogenspiegel in der späten Follikelphase ausgelöst.",
+          },
+          {
+            id: "b",
+            text: "In der Follikelphase stimuliert FSH die Follikelreifung → Östrogen ↑. Hohe Östrogenspiegel lösen den LH-Surge aus (positive Rückkopplung) → Ovulation (Tag ~14). Das Corpus luteum produziert danach Progesteron.",
+          },
+          {
+            id: "c",
+            text: "Das Corpus luteum produziert in der Follikelphase FSH und löst die Menstruation aus.",
+          },
+          {
+            id: "d",
+            text: "Progesteron ist das dominante Hormon der Follikelphase, Östrogen das der Lutealphase.",
+          },
+          {
+            id: "e",
+            text: "hCG wird von der Hypophyse produziert und hemmt die Corpus-luteum-Funktion.",
+          },
+        ],
+        correctOptionId: "b",
+        explanation:
+          "Follikelphase (Tag 1–14): FSH → Follikelreifung → Östrogen ↑. Hohe Östrogenspiegel → positive Rückkopplung → LH-Surge → Ovulation (Tag ~14). Lutealphase (Tag 15–28): Corpus luteum → Progesteron → Endometrium sekretorisch. Ohne Befruchtung: Corpus luteum degeneriert → Hormonabfall → Menstruation. Mit Befruchtung: Trophoblast → hCG → erhält Corpus luteum → Progesteron für Schwangerschaft.",
       },
       selfTest: [
         {
