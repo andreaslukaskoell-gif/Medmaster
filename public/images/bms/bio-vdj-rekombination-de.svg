@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" font-family="'Segoe UI', Arial, sans-serif">
+  <!-- Background -->
+  <rect width="600" height="300" fill="#fafafa" rx="6"/>
+
+  <!-- Title -->
+  <text x="300" y="22" text-anchor="middle" font-size="13" font-weight="bold" fill="#222">V(D)J-Rekombination der schweren Kette</text>
+
+  <!-- === Row 1: Keimbahn-DNA === -->
+  <text x="30" y="55" font-size="10" font-weight="bold" fill="#555">Keimbahn-DNA</text>
+
+  <!-- DNA backbone line -->
+  <line x1="30" y1="72" x2="570" y2="72" stroke="#bbb" stroke-width="2"/>
+
+  <!-- V segments (blue) -->
+  <rect x="35" y="62" width="22" height="20" rx="3" fill="#3498db" opacity="0.85"/>
+  <text x="46" y="76" text-anchor="middle" font-size="8" fill="white" font-weight="bold">V1</text>
+  <rect x="62" y="62" width="22" height="20" rx="3" fill="#3498db" opacity="0.85"/>
+  <text x="73" y="76" text-anchor="middle" font-size="8" fill="white" font-weight="bold">V2</text>
+  <rect x="89" y="62" width="22" height="20" rx="3" fill="#3498db" opacity="0.85"/>
+  <text x="100" y="76" text-anchor="middle" font-size="8" fill="white" font-weight="bold">V3</text>
+  <text x="120" y="76" font-size="10" fill="#3498db">...</text>
+  <rect x="135" y="62" width="28" height="20" rx="3" fill="#3498db" opacity="0.85"/>
+  <text x="149" y="76" text-anchor="middle" font-size="7" fill="white" font-weight="bold">V40</text>
+
+  <!-- Separator -->
+  <text x="172" y="76" font-size="12" fill="#999">|</text>
+
+  <!-- D segments (green) -->
+  <rect x="185" y="62" width="22" height="20" rx="3" fill="#27ae60" opacity="0.85"/>
+  <text x="196" y="76" text-anchor="middle" font-size="8" fill="white" font-weight="bold">D1</text>
+  <rect x="212" y="62" width="22" height="20" rx="3" fill="#27ae60" opacity="0.85"/>
+  <text x="223" y="76" text-anchor="middle" font-size="8" fill="white" font-weight="bold">D2</text>
+  <text x="243" y="76" font-size="10" fill="#27ae60">...</text>
+  <rect x="258" y="62" width="28" height="20" rx="3" fill="#27ae60" opacity="0.85"/>
+  <text x="272" y="76" text-anchor="middle" font-size="7" fill="white" font-weight="bold">D25</text>
+
+  <!-- Separator -->
+  <text x="295" y="76" font-size="12" fill="#999">|</text>
+
+  <!-- J segments (orange) -->
+  <rect x="308" y="62" width="22" height="20" rx="3" fill="#e67e22" opacity="0.85"/>
+  <text x="319" y="76" text-anchor="middle" font-size="8" fill="white" font-weight="bold">J1</text>
+  <rect x="335" y="62" width="22" height="20" rx="3" fill="#e67e22" opacity="0.85"/>
+  <text x="346" y="76" text-anchor="middle" font-size="8" fill="white" font-weight="bold">J2</text>
+  <text x="366" y="76" font-size="10" fill="#e67e22">...</text>
+  <rect x="380" y="62" width="22" height="20" rx="3" fill="#e67e22" opacity="0.85"/>
+  <text x="391" y="76" text-anchor="middle" font-size="8" fill="white" font-weight="bold">J6</text>
+
+  <!-- Separator -->
+  <text x="412" y="76" font-size="12" fill="#999">|</text>
+
+  <!-- C segment (red) -->
+  <rect x="425" y="62" width="50" height="20" rx="3" fill="#c0392b" opacity="0.85"/>
+  <text x="450" y="76" text-anchor="middle" font-size="9" fill="white" font-weight="bold">C</text>
+
+  <!-- RSS label -->
+  <text x="520" y="76" font-size="8" fill="#999">(RSS-Signale)</text>
+
+  <!-- === Arrow 1: RAG1/RAG2 === -->
+  <line x1="300" y1="90" x2="300" y2="120" stroke="#8e44ad" stroke-width="1.5" marker-end="url(#arrPurple)"/>
+  <defs>
+    <marker id="arrPurple" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#8e44ad"/>
+    </marker>
+    <marker id="arrGray" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#555"/>
+    </marker>
+  </defs>
+  <rect x="215" y="96" width="170" height="18" rx="4" fill="#f4ecf7" stroke="#8e44ad" stroke-width="0.8"/>
+  <text x="300" y="109" text-anchor="middle" font-size="9" font-weight="bold" fill="#6c3483">RAG1/RAG2 + RSS-Erkennung</text>
+
+  <!-- === Row 2: Rekombinierte DNA === -->
+  <text x="30" y="138" font-size="10" font-weight="bold" fill="#555">Rekombinierte DNA</text>
+
+  <!-- DNA backbone -->
+  <line x1="150" y1="155" x2="430" y2="155" stroke="#bbb" stroke-width="2"/>
+
+  <!-- Selected segments with highlight -->
+  <rect x="155" y="145" width="55" height="20" rx="3" fill="#3498db" stroke="#2471a3" stroke-width="1.5"/>
+  <text x="182" y="159" text-anchor="middle" font-size="10" fill="white" font-weight="bold">V3</text>
+
+  <text x="215" y="159" font-size="10" fill="#888">-</text>
+
+  <rect x="225" y="145" width="55" height="20" rx="3" fill="#27ae60" stroke="#1e8449" stroke-width="1.5"/>
+  <text x="252" y="159" text-anchor="middle" font-size="10" fill="white" font-weight="bold">D2</text>
+
+  <text x="285" y="159" font-size="10" fill="#888">-</text>
+
+  <rect x="295" y="145" width="55" height="20" rx="3" fill="#e67e22" stroke="#d35400" stroke-width="1.5"/>
+  <text x="322" y="159" text-anchor="middle" font-size="10" fill="white" font-weight="bold">J5</text>
+
+  <text x="355" y="159" font-size="10" fill="#888">-</text>
+
+  <rect x="365" y="145" width="55" height="20" rx="3" fill="#c0392b" stroke="#a93226" stroke-width="1.5"/>
+  <text x="392" y="159" text-anchor="middle" font-size="10" fill="white" font-weight="bold">C</text>
+
+  <!-- N-nucleotide labels -->
+  <text x="220" y="176" text-anchor="middle" font-size="7" fill="#8e44ad">N</text>
+  <text x="290" y="176" text-anchor="middle" font-size="7" fill="#8e44ad">N</text>
+  <text x="255" y="185" text-anchor="middle" font-size="7" fill="#8e44ad" font-style="italic">(N-Nukleotide durch TdT)</text>
+
+  <!-- === Arrow 2: Transkription + Spleissen === -->
+  <line x1="300" y1="192" x2="300" y2="218" stroke="#555" stroke-width="1.5" marker-end="url(#arrGray)"/>
+  <rect x="215" y="198" width="170" height="18" rx="4" fill="#eaf2f8" stroke="#2980b9" stroke-width="0.8"/>
+  <text x="300" y="211" text-anchor="middle" font-size="9" font-weight="bold" fill="#1a5276">Transkription + Spleissen</text>
+
+  <!-- === Row 3: mRNA and Protein === -->
+  <text x="105" y="238" font-size="10" font-weight="bold" fill="#555">mRNA</text>
+
+  <!-- mRNA wavy line -->
+  <rect x="150" y="228" width="130" height="18" rx="9" fill="#aed6f1" stroke="#2980b9" stroke-width="1"/>
+  <text x="215" y="241" text-anchor="middle" font-size="9" fill="#1a5276">V3-D2-J5-C</text>
+
+  <!-- Arrow to protein -->
+  <line x1="285" y1="237" x2="330" y2="237" stroke="#555" stroke-width="1.2" marker-end="url(#arrGray)"/>
+  <text x="307" y="250" text-anchor="middle" font-size="7" fill="#888">Translation</text>
+
+  <!-- Y-shaped antibody -->
+  <g transform="translate(380,215)">
+    <!-- Left arm -->
+    <line x1="0" y1="30" x2="-25" y2="5" stroke="#2c3e50" stroke-width="3" stroke-linecap="round"/>
+    <!-- Right arm -->
+    <line x1="0" y1="30" x2="25" y2="5" stroke="#2c3e50" stroke-width="3" stroke-linecap="round"/>
+    <!-- Stem -->
+    <line x1="0" y1="30" x2="0" y2="55" stroke="#2c3e50" stroke-width="3" stroke-linecap="round"/>
+    <!-- Binding sites -->
+    <circle cx="-25" cy="5" r="4" fill="#3498db" stroke="#2c3e50" stroke-width="1"/>
+    <circle cx="25" cy="5" r="4" fill="#3498db" stroke="#2c3e50" stroke-width="1"/>
+    <!-- Fc label -->
+    <text x="12" y="50" font-size="8" fill="#888">Fc</text>
+    <!-- Fab labels -->
+    <text x="-40" y="8" font-size="8" fill="#3498db">Fab</text>
+    <text x="32" y="8" font-size="8" fill="#3498db">Fab</text>
+  </g>
+  <text x="380" y="280" text-anchor="middle" font-size="9" fill="#555">Antikorper</text>
+
+  <!-- === Bottom: Diversity calculation === -->
+  <rect x="30" y="286" width="320" height="12" rx="0" fill="none"/>
+  <text x="35" y="296" font-size="10" fill="#333" font-weight="bold">Kombinatorische Vielfalt: 40 x 25 x 6 = 6 000 Moglichkeiten</text>
+  <text x="370" y="296" font-size="8" fill="#888">(+ junctionale Diversitat = &gt;10&#xB9;&#xB9;)</text>
+</svg>

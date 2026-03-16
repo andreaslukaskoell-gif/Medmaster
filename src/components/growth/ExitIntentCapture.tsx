@@ -137,11 +137,20 @@ export function ExitIntentCapture() {
                 <div className="text-center space-y-4">
                   <CheckCircle className="w-12 h-12 text-emerald-500 mx-auto" />
                   <h3 className="text-xl font-bold text-[var(--text-primary)]">
-                    Perfekt, wir melden uns!
+                    Perfekt, hier ist dein Guide!
                   </h3>
                   <p className="text-sm text-[var(--text-secondary)]">
-                    Du bekommst die 10 häufigsten MedAT-Fehler + Tipps direkt per E-Mail.
+                    Hier ist dein Guide — klick zum Öffnen:
                   </p>
+                  <a
+                    href="/downloads/medat-10-fehler.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-premium inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold w-full"
+                  >
+                    10 MedAT-Fehler öffnen
+                    <ArrowRight className="w-4 h-4" />
+                  </a>
                   <p className="text-xs text-[var(--muted)]">
                     Oder starte jetzt direkt:{" "}
                     <a href="/login" className="text-[var(--accent)] font-medium hover:underline">

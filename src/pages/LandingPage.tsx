@@ -13,6 +13,7 @@ import {
   Puzzle,
   FileText,
   Heart,
+  Clock,
 } from "lucide-react";
 import { supabase } from "@/lib/supabase";
 import { useAuth } from "@/hooks/useAuth";
@@ -28,6 +29,7 @@ import {
 } from "@/lib/growthTracking";
 import { ExitIntentCapture } from "@/components/growth/ExitIntentCapture";
 import { Logo } from "@/components/brand/Logo";
+import { blogArticles } from "@/data/blogArticles";
 
 const NAVY = "#1b3ea7";
 
@@ -976,6 +978,67 @@ export default function LandingPage() {
                 mit E-Mail anmelden
               </Link>
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── Neueste Artikel ─── */}
+      <section className="py-20">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-2xl font-bold text-[var(--text-primary)] text-center mb-3">
+            Lerntipps f&uuml;r den MedAT 2026
+          </h2>
+          <p className="text-sm text-[var(--muted)] text-center mb-10 max-w-xl mx-auto">
+            Evidenzbasierte Strategien, Fehleranalysen und Lernhacks f&uuml;r deine
+            MedAT-Vorbereitung.
+          </p>
+          <div className="grid grid-cols-3 gap-6 stagger-children">
+            {blogArticles.slice(0, 3).map((article) => (
+              <Link
+                key={article.slug}
+                to={`/blog/${article.slug}`}
+                className="card-glass flex flex-col gap-4 p-6 hover:shadow-[var(--shadow-md)] transition-shadow group"
+              >
+                <span
+                  className="self-start text-[10px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full"
+                  style={{
+                    backgroundColor: `color-mix(in srgb, ${NAVY} 10%, transparent)`,
+                    color: NAVY,
+                  }}
+                >
+                  {article.topic}
+                </span>
+                <h3 className="text-base font-semibold text-[var(--text-primary)] leading-snug line-clamp-2">
+                  {article.title}
+                </h3>
+                <p className="text-sm text-[var(--muted)] leading-relaxed line-clamp-3 flex-1">
+                  {article.excerpt}
+                </p>
+                <div className="flex items-center justify-between pt-2 border-t border-[var(--border)]">
+                  <span className="flex items-center gap-1.5 text-xs text-[var(--muted)]">
+                    <Clock className="w-3.5 h-3.5" />
+                    {article.readingTime} Min. Lesezeit
+                  </span>
+                  <span
+                    className="text-xs font-semibold group-hover:gap-2 transition-all inline-flex items-center gap-1"
+                    style={{ color: NAVY }}
+                  >
+                    Weiterlesen
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+          <div className="text-center mt-8">
+            <Link
+              to="/blog"
+              className="inline-flex items-center gap-2 text-sm font-semibold transition-colors hover:opacity-80"
+              style={{ color: NAVY }}
+            >
+              Alle Artikel ansehen
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         </div>
       </section>

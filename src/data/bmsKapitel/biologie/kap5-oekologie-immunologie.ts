@@ -343,6 +343,22 @@ Klinische Parallele: Der **Mensch** ist dank **Thermoregulation** (Schwitzen, Va
           difficulty: 2,
           tags: ["shelford", "toleranzgesetz", "liebig"],
         },
+        {
+          question:
+            "Welche Aussagen zu Toleranzkurven und ökologischen Faktoren sind richtig?\n\n1. Stenöke Arten haben einen engen Toleranzbereich und eignen sich als Bioindikatoren.\n2. Nach Liebigs Minimumgesetz begrenzt der im Überfluss vorhandene Faktor das Wachstum.\n3. Shelfords Toleranzgesetz berücksichtigt sowohl das Minimum als auch das Maximum eines Umweltfaktors.\n4. Euryöke Arten (Generalisten) haben einen breiten Toleranzbereich.\n5. Die Brennnessel ist ein Bioindikator für stickstoffarme Böden.",
+          options: [
+            "Nur 1 und 2",
+            "Nur 1, 3 und 4",
+            "Nur 2, 4 und 5",
+            "Nur 3 und 5",
+            "Alle Aussagen",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Aussagen 1, 3 und 4 sind korrekt. Stenöke Arten haben enge Toleranz und sind gute Bioindikatoren (1). Shelford erweitert Liebig um das Maximum als limitierenden Faktor (3). Euryöke Arten haben breite Toleranz (4). Aussage 2 ist falsch: Nach Liebig begrenzt der im MINIMUM vorhandene Faktor das Wachstum. Aussage 5 ist falsch: Die Brennnessel zeigt stickstoffREICHE Böden an (Ellenberg N8–N9).",
+          difficulty: 2,
+          tags: ["typ-k", "toleranzkurve", "liebig", "shelford", "bioindikator"],
+        },
       ],
       altfrage: {
         text: "Welche Aussage zu Umweltfaktoren und Toleranzkurven ist richtig?",
@@ -1237,6 +1253,8 @@ Das klassische Beispiel: der **Luchs-Schneehase-Zyklus** in Kanada mit ca. 10-Ja
 
 > **Merke:** Lotka-Volterra: Räuber- und Beutepopulation schwingen zeitversetzt. Räuber hinkt Beute nach. Immunologisch: Pathogen (Beute) ↔ Immunzelle (Räuber). Chronische Infektionen = oszillierendes System.
 
+![Lotka-Volterra-Modell — Räuberpopulation folgt der Beutepopulation zeitverzögert](/images/bms/bio-lotka-volterra-de.svg)
+
 ---
 
 ## Epidemiologische Parallele: R₀ und Herdenimmunität
@@ -1535,7 +1553,9 @@ IgM ist das erste Immunglobulin, das bei einer Immunantwort produziert wird (Pri
 
 Das Komplementsystem ist ein kaskadenartiges System aus ca. 30 Plasmaproteinen, das bei der Abwehr von Pathogenen hilft. Der klassische Weg wird durch Antigen-Antikörper-Komplexe aktiviert: C1q bindet an Fc-Regionen von IgG oder IgM, die an Antigen gebunden sind. Aktiviertes C1 spaltet C4 und C2 → C3-Konvertase → spaltet massenhaft C3 → C3b-Ablagerung auf Pathogenoberfläche (Opsonin für Phagozytose) → C5-Konvertase → C5b → C6, C7, C8, C9 assemblieren den Membrane Attack Complex (MAC) → Lochbildung in bakterieller Membran → osmotische Lyse. Nebenprodukte: C3a und C5a sind Anaphylatoxine → Mastzell-Degranulation, Gefäßerweiterung, Neutrophilenrekrutierung (Entzündung).
 
-> **Merke:** Komplementklassischer Weg: Ag-Ak-Komplex → C1q → C3-Konvertase → C3b (Opsonin) → MAC (Lyse). C3a/C5a = Anaphylatoxine (entzündungsfördernde Spaltprodukte).`,
+> **Merke:** Komplementklassischer Weg: Ag-Ak-Komplex → C1q → C3-Konvertase → C3b (Opsonin) → MAC (Lyse). C3a/C5a = Anaphylatoxine (entzündungsfördernde Spaltprodukte).
+
+![Komplementkaskade — Drei Aktivierungswege konvergieren auf C3 und den Membranangriffskomplex](/images/bms/bio-komplementkaskade-de.svg)`,
       lernziele: [
         "Den Aufbau eines IgG-Antikörpers (schwere/leichte Ketten, Fab/Fc, Disulfidbrücken) beschreiben",
         "Die fünf Immunglobulin-Klassen und ihre jeweiligen Hauptfunktionen nennen",
@@ -1695,6 +1715,8 @@ Das menschliche Immunsystem erkennt schätzungsweise mehr als 10¹⁰ verschiede
 Die V(D)J-Rekombination wird durch den RAG1/RAG2-Komplex (Recombination Activating Gene) katalysiert. RAG1/RAG2 erkennen konservierte Rekombinationssignalsequenzen (RSS) neben den V-, D- und J-Segmenten. Die Rekombination erfolgt durch: (1) Bindung von RAG an RSS beider Segmente; (2) DNA-Doppelstrangbrüche; (3) Ligation durch die allgemeine DNA-Reparaturmaschinerie (NHEJ). Während des Ligationsschritts werden durch TdT (Terminal deoxynucleotidyl Transferase) zufällige Nukleotide (N-Nukleotide) an die Schnittstellen eingefügt — dies ist eine enorme Quelle junctionaler Diversität, da die Insertion in einem zufälligen Leseraster erfolgt (kann Frameshift verursachen → nicht-produktive Rearrangements). Nur Rearrangements im richtigen Leseraster führen zu funktionalem Antikörperprotein (produktiv).
 
 > **Merke:** V(D)J-Rekombination: RAG1/RAG2 schneidet, NHEJ ligiert, TdT fügt N-Nukleotide ein → junctionale Diversität. Nur produktive Rearrangements → B-Zelle überlebt.
+
+![V(D)J-Rekombination — RAG1/RAG2 wählt je ein V-, D- und J-Segment zur Rekombination aus](/images/bms/bio-vdj-rekombination-de.svg)
 
 {{IMAGE}}
 

@@ -1178,11 +1178,30 @@ Jedes Rückenmarkssegment versorgt über seinen Spinalnerv ein bestimmtes Hautar
         "Aktionspotential: −70 mV → Schwelle −55 mV → Na⁺ rein (+40 mV) → K⁺ raus → Repolarisation. Alles-oder-Nichts.",
         "Reflexbogen: Rezeptor → Afferenz → Reflexzentrum → Efferenz → Effektor. Eigenreflex = 1 Synapse, Fremdreflex = mehrere.",
       ],
-      // TODO: echte MedAT-Altfrage prüfen - aktuell Übungsformat
       altfrage: {
-        question: "Was versteht man unter dem Ruhepotenzial einer Nervenzelle?",
-        answer:
-          "Das Ruhepotenzial (~-70 mV) entsteht durch ungleiche Ionenverteilung und die Na⁺/K⁺-ATPase (3 Na⁺ raus, 2 K⁺ rein). K⁺-Leckkanäle → K⁺ diffundiert nach außen → Innenseite negativ. Die Nernst-Gleichung beschreibt das Gleichgewichtspotenzial für einzelne Ionen.",
+        text: "Welche Aussage über das Ruhepotenzial einer Nervenzelle ist korrekt?",
+        options: [
+          {
+            id: "a",
+            text: "Das Ruhepotenzial beträgt ca. +70 mV, da die Innenseite der Membran positiv geladen ist.",
+          },
+          {
+            id: "b",
+            text: "Das Ruhepotenzial (~−70 mV) entsteht durch die Na⁺/K⁺-ATPase (3 Na⁺ raus, 2 K⁺ rein) und K⁺-Leckkanäle, die K⁺ nach außen diffundieren lassen — die Innenseite wird negativ.",
+          },
+          {
+            id: "c",
+            text: "Na⁺-Leckkanäle sind hauptverantwortlich für das Ruhepotenzial, da Na⁺ nach außen strömt.",
+          },
+          {
+            id: "d",
+            text: "Die Na⁺/K⁺-ATPase transportiert 2 Na⁺ nach außen und 3 K⁺ nach innen.",
+          },
+          { id: "e", text: "Das Ruhepotenzial ist in allen Zelltypen identisch bei genau −90 mV." },
+        ],
+        correctOptionId: "b",
+        explanation:
+          "Das Ruhepotenzial (~−70 mV) entsteht primär durch K⁺-Leckkanäle: K⁺ diffundiert entlang seines Konzentrationsgradienten nach außen → Innenseite wird negativ. Die Na⁺/K⁺-ATPase (3 Na⁺ raus, 2 K⁺ rein) hält die Ionengradienten aufrecht. Die Nernst-Gleichung beschreibt das Gleichgewichtspotenzial einzelner Ionen (E_K ≈ −90 mV, E_Na ≈ +60 mV).",
       },
       selfTest: [
         {

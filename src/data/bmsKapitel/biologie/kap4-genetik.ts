@@ -2409,6 +2409,22 @@ Das Verständnis der Tumorgenetik hat die Krebstherapie revolutioniert — Medik
           difficulty: 2,
           tags: ["imatinib", "bcr-abl", "cml", "targeted-therapy"],
         },
+        {
+          question:
+            "Welche Aussagen zur Tumorgenetik sind richtig?\n\n1. Proto-Onkogene sind normale Gene, die durch Gain-of-function-Mutationen zu Onkogenen werden.\n2. Tumorsuppressorgene folgen der Two-Hit-Hypothese — beide Allele müssen inaktiviert werden.\n3. p53 ist in weniger als 10 % aller menschlichen Tumoren mutiert.\n4. Das Vogelstein-Modell beschreibt die schrittweise Karzinogenese im Dickdarm (APC → KRAS → SMAD4 → TP53).\n5. Ein einzelnes mutiertes Allel eines Onkogens reicht aus, um die Zellteilung dauerhaft zu stimulieren (dominant).",
+          options: [
+            "Nur 1 und 3",
+            "Nur 2 und 4",
+            "Nur 1, 2, 4 und 5",
+            "Nur 3, 4 und 5",
+            "Alle Aussagen",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Aussagen 1, 2, 4 und 5 sind korrekt. Proto-Onkogene werden durch Gain-of-function zu Onkogenen (1). Die Two-Hit-Hypothese gilt für Tumorsuppressorgene (2). Vogelstein beschreibt APC → KRAS → SMAD4 → TP53 (4). Onkogene wirken dominant — ein mutiertes Allel reicht (5). Aussage 3 ist falsch: p53 (TP53) ist in über 50 % aller menschlichen Tumoren mutiert und wird als 'Guardian of the Genome' bezeichnet.",
+          difficulty: 3,
+          tags: ["typ-k", "tumorgenetik", "onkogen", "tumorsuppressor", "vogelstein"],
+        },
       ],
       altfrage: {
         text: "Welche Aussage zur Tumorgenetik ist richtig?",
