@@ -1721,6 +1721,22 @@ Das Komplementsystem ist ein kaskadenartiges System aus ca. 30 Plasmaproteinen, 
           difficulty: 1,
           tags: ["iga", "schleimhaut", "sekrete", "muttermilch"],
         },
+        {
+          question:
+            "Welche Aussagen zu Antikörpern und Immunglobulinklassen sind richtig?\n\n1. IgG besteht aus zwei schweren und zwei leichten Ketten, verbunden durch Disulfidbrücken.\n2. IgM ist das erste Immunglobulin bei einer Primärantwort und zeigt eine akute Infektion an.\n3. IgA schützt vor allem Schleimhäute und kommt in Sekreten wie Muttermilch vor.\n4. IgE ist das einzige Immunglobulin, das die Plazentaschranke überwinden kann.\n5. Opsonisierung bezeichnet die Markierung von Erregern durch IgG zur Förderung der Phagozytose.",
+          options: [
+            "Nur 1 und 4",
+            "Nur 2, 3 und 4",
+            "Nur 1, 2, 3 und 5",
+            "Nur 1 und 5",
+            "Alle Aussagen",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Aussagen 1, 2, 3 und 5 sind korrekt. IgG hat die klassische Y-Struktur mit 2 schweren + 2 leichten Ketten (1). IgM erscheint als erstes bei der Primärantwort (2). IgA ist das dominante Sekret-Immunglobulin (3). IgG ist das wichtigste Opsonin (5). Aussage 4 ist falsch: IgG (nicht IgE) ist das einzige Immunglobulin, das über FcRn-Rezeptoren aktiv durch die Plazenta transportiert wird.",
+          difficulty: 2,
+          tags: ["typ-k", "antikörper", "immunglobuline", "igg", "igm", "iga"],
+        },
       ],
     },
     {
@@ -2096,6 +2112,22 @@ In der klinischen Praxis gilt traditionell: Blutgruppe 0 Rh-negativ (0-) als uni
           ],
           difficulty: 3,
           tags: ["blutgruppe-0", "genotyp-ausschluss", "vaterschaftstest", "punnett"],
+        },
+        {
+          question:
+            "Welche Aussagen zum AB0-Blutgruppensystem sind richtig?\n\n1. Personen mit Blutgruppe A haben Anti-B-Antikörper im Serum.\n2. I^A und I^B zeigen Kodominanz — bei Genotyp I^A I^B werden beide Antigene exprimiert.\n3. Blutgruppe 0 hat sowohl A- als auch B-Antigene auf den Erythrozyten.\n4. Eltern mit Genotyp I^A I^B (Vater) und i⁰ i⁰ (Mutter) können nur Kinder mit Blutgruppe A oder B bekommen.\n5. Blutgruppe 0 ist der universelle Spender, weil 0-Erythrozyten keine A- oder B-Antigene tragen.",
+          options: [
+            "Nur 1 und 3",
+            "Nur 1, 2, 4 und 5",
+            "Nur 2, 3 und 4",
+            "Nur 1, 4 und 5",
+            "Alle Aussagen",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Aussagen 1, 2, 4 und 5 sind korrekt. Personen mit Blutgruppe A bilden Anti-B (1). I^A und I^B sind kodominant (2). Vater AB gibt I^A oder I^B, Mutter 0 gibt i⁰ → Kinder sind A oder B (4). 0-Erythrozyten haben keine A/B-Antigene und werden daher nicht angegriffen (5). Aussage 3 ist falsch: Blutgruppe 0 (Genotyp i⁰ i⁰) hat KEINE A- oder B-Antigene — nur das unmodifizierte H-Antigen.",
+          difficulty: 2,
+          tags: ["typ-k", "blutgruppen", "ab0-system", "kodominanz", "transfusion"],
         },
       ],
     },

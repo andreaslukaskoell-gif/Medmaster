@@ -1309,4 +1309,634 @@ export const blogArticles: BlogArticle[] = [
       </>
     ),
   },
+  {
+    slug: "medat-anmeldung-2026",
+    title: "MedAT 2026 Anmeldung: Fristen, Ablauf und Tipps",
+    excerpt:
+      "Die Anmeldung zum MedAT 2026 steht bevor. Hier findest du alle Fristen, den genauen Ablauf und Tipps, damit nichts schiefgeht.",
+    topic: "Strategie",
+    readingTime: 4,
+    publishDate: "2026-03-16",
+    content: (
+      <>
+        <p>
+          Die Anmeldung zum MedAT ist der erste und wichtigste Schritt auf dem Weg zum
+          Medizinstudienplatz in Österreich. Jedes Jahr scheitern Kandidierende nicht am Test
+          selbst, sondern an verpassten Fristen oder Formfehlern bei der Registrierung. Damit dir
+          das nicht passiert, findest du hier alle wichtigen Informationen zur MedAT-Anmeldung 2026.
+        </p>
+
+        <h2>Fristen und Zeitplan</h2>
+        <p>
+          Die Anmeldung zum MedAT erfolgt ausschließlich online über die Webseite der jeweiligen
+          Medizinischen Universität. Der Anmeldezeitraum beginnt üblicherweise Anfang März und endet
+          Ende März — das Fenster ist also nur rund vier Wochen offen. Der Testtag selbst findet
+          traditionell Anfang Juli statt. Wichtig: Nach Ablauf der Frist ist keine Nachmeldung mehr
+          möglich, auch nicht mit ärztlichem Attest oder besonderen Gründen. Trag dir den
+          Anmeldezeitraum sofort in den Kalender ein.
+        </p>
+
+        <h2>Welche Uni wählen?</h2>
+        <p>
+          Du kannst dich an einer der vier Medizinischen Universitäten anmelden: Wien, Graz,
+          Innsbruck oder Linz. Du darfst dich nur an einer Uni bewerben — eine Mehrfachanmeldung ist
+          nicht erlaubt. Die Wahl hängt von deinem Wohnort, deinen Präferenzen und der
+          Kontingentregelung ab. EU-Bürger fallen ins EU-Kontingent (75 % der Plätze),
+          Nicht-EU-Bürger ins Drittstaaten-Kontingent (20 %), und ein kleines Kontingent (5 %) ist
+          für Österreicher reserviert. Informiere dich vorab über die genaue Platzzahl an deiner
+          Wunsch-Uni.
+        </p>
+
+        <h2>Was du für die Anmeldung brauchst</h2>
+        <p>
+          Halte folgende Unterlagen bereit: gültiger Lichtbildausweis (Reisepass oder
+          Personalausweis), Passfoto in digitaler Form, und die Kostenbeitragszahlung (derzeit 110
+          €). Die Zahlung muss innerhalb der Anmeldefrist eingehen — überweise nicht am letzten Tag,
+          da Banküberweisungen 1-2 Werktage dauern können. Manche Unis akzeptieren auch Kreditkarte
+          oder Sofortüberweisung. Lies die Anleitung auf der Uni-Webseite genau durch und prüfe nach
+          dem Absenden, ob du eine Bestätigungsmail erhalten hast.
+        </p>
+
+        <h2>Häufige Fehler bei der Anmeldung</h2>
+        <p>
+          Die drei häufigsten Fehler: zu spät anmelden (letzter Tag, technische Probleme),
+          Zahlungseingang nach Fristende (Überweisung zu spät losgeschickt) und falsche persönliche
+          Daten (Name muss exakt mit dem Ausweis übereinstimmen). Melde dich am besten in der ersten
+          Woche des Anmeldezeitraums an. So hast du genug Puffer, falls etwas schiefgeht. Und
+          kontrolliere alle Angaben doppelt — ein Tippfehler im Namen kann am Testtag Probleme
+          verursachen.
+        </p>
+
+        <h2>Nach der Anmeldung: Vorbereitung starten</h2>
+        <p>
+          Sobald die Anmeldung bestätigt ist, beginnt die eigentliche Arbeit. Du hast ab März rund
+          vier Monate bis zum Test. Das reicht, wenn du einen strukturierten Lernplan hast und
+          konsequent dranbleibst. Starte mit BMS-Grundlagen und beginne parallel das KFF-Training —
+          kognitive Fähigkeiten bauen sich nur langsam auf und brauchen tägliches Üben. Warte nicht
+          bis Mai, um mit dem Lernen anzufangen.
+        </p>
+
+        <CTA text="Starte deine MedAT-Vorbereitung jetzt — mit über 4.300 Übungsfragen und strukturierten Lernplänen." />
+      </>
+    ),
+  },
+  {
+    slug: "medat-biologie-genetik",
+    title: "BMS Biologie: Genetik und Vererbung kompakt erklärt",
+    excerpt:
+      "Genetik ist eines der wichtigsten BMS-Themen im MedAT. Hier bekommst du die Grundlagen kompakt erklärt — von Mendel bis Epigenetik.",
+    topic: "BMS",
+    readingTime: 5,
+    publishDate: "2026-03-16",
+    content: (
+      <>
+        <p>
+          Genetik und Vererbung gehören zu den am häufigsten geprüften Themen im BMS-Teil des MedAT.
+          Von den Mendelschen Regeln über DNA-Replikation bis hin zu Mutationen — du musst die
+          Grundlagen sicher beherrschen. Dieser Artikel fasst die wichtigsten Konzepte zusammen, die
+          du für den Test kennen musst.
+        </p>
+
+        <h2>DNA-Aufbau und Replikation</h2>
+        <p>
+          Die DNA besteht aus zwei antiparallelen Strängen, die eine Doppelhelix bilden. Jeder
+          Strang ist eine Kette aus Nukleotiden, bestehend aus Desoxyribose, Phosphatgruppe und
+          einer der vier Basen: Adenin (A), Thymin (T), Guanin (G) und Cytosin (C). Die
+          komplementäre Basenpaarung (A-T, G-C) ist die Grundlage der Replikation. Die
+          DNA-Replikation verläuft semikonservativ: Jeder neue Doppelstrang enthält einen alten und
+          einen neuen Strang. Wichtige Enzyme: Helicase (Entwindung), DNA-Polymerase (Synthese,
+          5'→3'-Richtung), Ligase (Verknüpfung der Okazaki-Fragmente am Folgestrang). Diese Details
+          werden im MedAT regelmäßig abgefragt.
+        </p>
+
+        <h2>Mendelsche Regeln</h2>
+        <p>
+          Mendels drei Regeln bilden das Fundament der Vererbungslehre. Die Uniformitätsregel:
+          Kreuzt man zwei reinerbige (homozygote) Eltern, sind alle Nachkommen der F1-Generation
+          gleichförmig. Die Spaltungsregel: In der F2-Generation spalten sich die Merkmale im
+          Verhältnis 3:1 (dominant-rezessiv) bzw. 1:2:1 (Genotyp). Die Unabhängigkeitsregel:
+          Verschiedene Merkmale werden unabhängig voneinander vererbt — sofern die Gene auf
+          verschiedenen Chromosomen liegen. Typische MedAT-Fragen: Kreuzungsschemata berechnen,
+          Genotyp-Verhältnisse bestimmen, Erbgänge identifizieren.
+        </p>
+
+        <h2>Mutationen und ihre Folgen</h2>
+        <p>
+          Mutationen sind dauerhafte Veränderungen der DNA-Sequenz. Punktmutationen betreffen
+          einzelne Basenpaare: stumme Mutationen (keine Aminosäure-Änderung), Missense-Mutationen
+          (andere Aminosäure) und Nonsense-Mutationen (vorzeitiges Stoppcodon).
+          Chromosomenmutationen betreffen größere Abschnitte: Deletion, Duplikation, Inversion,
+          Translokation. Genommutationen verändern die Chromosomenzahl (z. B. Trisomie 21). Für den
+          MedAT musst du die Mutationstypen unterscheiden und ihre Auswirkungen auf das Protein
+          einschätzen können.
+        </p>
+
+        <h2>Epigenetik und Genregulation</h2>
+        <p>
+          Nicht nur die DNA-Sequenz bestimmt, welche Eigenschaften ausgeprägt werden — auch die
+          Genregulation spielt eine entscheidende Rolle. Epigenetische Mechanismen wie
+          DNA-Methylierung und Histon-Modifikation können Gene an- oder abschalten, ohne die Sequenz
+          zu verändern. Diese Veränderungen können sogar an die nächste Generation weitergegeben
+          werden. Für den MedAT reicht ein grundlegendes Verständnis: Was ist Epigenetik, wie
+          funktioniert Methylierung, und warum haben eineiige Zwillinge trotz identischer DNA
+          manchmal unterschiedliche Merkmale?
+        </p>
+
+        <h2>Prüfungstipps für Genetik</h2>
+        <p>
+          Zeichne Kreuzungsschemata immer auf — auch wenn es im Kopf schneller geht. Fehler
+          passieren bei Genetik-Aufgaben meistens durch Flüchtigkeit, nicht durch fehlendes Wissen.
+          Lerne die Chargaff-Regeln (A=T, G=C, Purine=Pyrimidine) und übe das Berechnen von
+          Basenverteilungen. Verstehe den Unterschied zwischen Genotyp und Phänotyp. Und merke dir:
+          Autosomal-rezessive Erbgänge überspringen Generationen, X-chromosomale betreffen häufiger
+          Männer. Diese Muster werden im MedAT immer wieder abgefragt.
+        </p>
+
+        <CTA text="Über 1.100 Biologie-Fragen inklusive Genetik, Vererbung und Mutationen — jetzt üben." />
+      </>
+    ),
+  },
+  {
+    slug: "medat-mathematik-tipps",
+    title: "BMS Mathematik: Die wichtigsten Formeln und Rechentypen",
+    excerpt:
+      "Mathematik im MedAT ist machbar — wenn du die richtigen Formeln kennst und Kopfrechnen übst. Hier sind die wichtigsten Rechentypen.",
+    topic: "BMS",
+    readingTime: 4,
+    publishDate: "2026-03-16",
+    content: (
+      <>
+        <p>
+          Mathematik ist für viele MedAT-Kandidierende ein Angstfach. Dabei ist der Mathe-Teil im
+          BMS gut machbar, wenn du die Grundlagen sicher beherrschst. Du brauchst keinen
+          Taschenrechner — die Aufgaben sind so gestaltet, dass Kopfrechnen ausreicht. Hier sind die
+          Rechentypen und Formeln, die du kennen musst.
+        </p>
+
+        <h2>Prozentrechnung und Dreisatz</h2>
+        <p>
+          Prozentrechnung kommt fast garantiert im MedAT vor. Die Grundformel: Prozentwert =
+          Grundwert × Prozentsatz / 100. Typische Aufgaben: Preisänderungen berechnen,
+          Konzentrationen umrechnen, Anteile bestimmen. Der Dreisatz ist dein Werkzeug für
+          proportionale Zusammenhänge: Wenn 5 Tabletten 200 mg Wirkstoff enthalten, wie viel
+          enthalten 3? Übe diese Aufgabentypen, bis sie automatisch laufen. Im Test hast du keine
+          Zeit für langes Nachdenken.
+        </p>
+
+        <h2>Gleichungen und Umformungen</h2>
+        <p>
+          Lineare Gleichungen (ax + b = c) und quadratische Gleichungen (ax² + bx + c = 0) musst du
+          sicher lösen können. Für quadratische Gleichungen: Lösungsformel x = (-b ± √(b² - 4ac)) /
+          (2a). Wichtig ist auch das Umstellen von Formeln — besonders bei physikalisch-chemischen
+          Zusammenhängen. Beispiel: c = n/V nach n umstellen → n = c · V. Übe das Umstellen mit
+          verschiedenen BMS-Formeln aus Chemie und Physik, dann schlägst du zwei Fliegen mit einer
+          Klappe.
+        </p>
+
+        <h2>Potenz- und Logarithmengesetze</h2>
+        <p>
+          Potenzgesetze: a^m · a^n = a^(m+n), (a^m)^n = a^(m·n), a^0 = 1. Negative Exponenten:
+          a^(-n) = 1/a^n. Wurzeln: √a = a^(1/2). Diese Regeln brauchst du ständig — in Chemie
+          (pH-Berechnung), Physik (Einheitenumrechnung) und Mathe selbst. Logarithmen: log(a·b) =
+          log(a) + log(b), log(a/b) = log(a) - log(b), log(a^n) = n·log(a). Für den MedAT besonders
+          wichtig: pH = -log[H⁺]. Wenn du die Logarithmengesetze verstehst, sind pH-Aufgaben in
+          Chemie ein Geschenk.
+        </p>
+
+        <h2>Wahrscheinlichkeit und Statistik</h2>
+        <p>
+          Grundlegende Wahrscheinlichkeitsrechnung wird im MedAT geprüft. Wahrscheinlichkeit =
+          günstige Ergebnisse / mögliche Ergebnisse. Unabhängige Ereignisse multiplizieren: P(A und
+          B) = P(A) · P(B). Sich ausschließende Ereignisse addieren: P(A oder B) = P(A) + P(B).
+          Bedingte Wahrscheinlichkeit kommt seltener vor, aber Grundwissen schadet nicht.
+          Kombinatorik: Fakultät (n!), Binomialkoeffizient (n über k). Typische Aufgabe: Wie viele
+          Möglichkeiten gibt es, 3 aus 10 Personen auszuwählen?
+        </p>
+
+        <h2>Kopfrechnen trainieren</h2>
+        <p>
+          Im MedAT gibt es keinen Taschenrechner. Du musst also schnell und sicher im Kopf rechnen
+          können. Übe täglich 10 Minuten: Multipliziere zweistellige Zahlen, teile durch
+          einstellige, berechne Quadratzahlen bis 20. Lerne Tricks: 15 % von 80 = 10 % + 5 % = 8 + 4
+          = 12. Bruchrechnung: 3/4 + 2/3 = 9/12 + 8/12 = 17/12. Je schneller du rechnest, desto mehr
+          Zeit bleibt für die schwierigen Fragen.
+        </p>
+
+        <CTA text="Über 490 Mathematik-Fragen mit Schritt-für-Schritt-Lösungen — übe Kopfrechnen unter MedAT-Bedingungen." />
+      </>
+    ),
+  },
+  {
+    slug: "medat-wortfluessigkeit-ueben",
+    title: "Wortflüssigkeit im MedAT: So trainierst du den KFF-Untertest",
+    excerpt:
+      "Wortflüssigkeit ist der schnellste KFF-Untertest — und mit der richtigen Strategie gut trainierbar. Hier erfährst du, wie.",
+    topic: "KFF",
+    readingTime: 4,
+    publishDate: "2026-03-16",
+    content: (
+      <>
+        <p>
+          Der Untertest Wortflüssigkeit im MedAT-KFF verlangt, dass du aus vorgegebenen Buchstaben
+          ein sinnvolles deutsches Wort bildest. Du bekommst ein Wort und musst entscheiden, welcher
+          Buchstabe (aus den Optionen A-D) zusammen mit den übrigen Buchstaben ein neues Wort
+          ergibt. Der Zeitdruck ist enorm — aber mit der richtigen Technik lässt sich dieser
+          Untertest effektiv trainieren.
+        </p>
+
+        <h2>Was genau wird geprüft?</h2>
+        <p>
+          Du siehst ein Ausgangswort und vier Buchstaben-Optionen (A-D) plus eine Strichoption (kein
+          passender Buchstabe). Du musst herausfinden, welcher Buchstabe zu den Buchstaben des
+          Ausgangsworts hinzugefügt werden kann, um ein neues deutsches Wort zu bilden. Dabei dürfen
+          die Buchstaben beliebig umgestellt werden — es geht also um Anagramme. Die Schwierigkeit
+          liegt darin, unter Zeitdruck die richtige Kombination zu erkennen. Pro Aufgabe hast du nur
+          wenige Sekunden.
+        </p>
+
+        <h2>Strategie: Systematisch statt raten</h2>
+        <p>
+          Der größte Fehler: wild Buchstaben kombinieren und hoffen, dass ein Wort herausspringt.
+          Besser: Gehe die Optionen systematisch durch. Nimm Option A, kombiniere den Buchstaben mit
+          dem Ausgangswort und überlege, ob dir ein bekanntes Wort einfällt. Wenn nicht, weiter zu
+          B. Mit Übung erkennst du Muster schneller — bestimmte Buchstabenkombinationen kommen
+          häufig vor (SCH, CH, ST, EI, AU). Trainiere dein Gehirn darauf, diese Cluster sofort zu
+          erkennen.
+        </p>
+
+        <h2>Trainingsmethoden</h2>
+        <p>
+          Tägliches Üben ist bei Wortflüssigkeit wichtiger als Intensivtraining. 10-15 Minuten pro
+          Tag über 6-8 Wochen sind effektiver als ein ganzes Wochenende kurz vor dem Test. Nutze
+          Übungsaufgaben mit Timer und setze dich bewusst unter Zeitdruck. Lies viel — je größer
+          dein Wortschatz, desto schneller erkennst du Lösungen. Spiele wie Scrabble oder Worträtsel
+          helfen ebenfalls, dein Buchstaben-Bewusstsein zu schärfen.
+        </p>
+
+        <h2>Typische Fallen und wie du sie vermeidest</h2>
+        <p>
+          Häufiger Fehler: Du findest ein Wort, das passt, und wählst es sofort — ohne zu prüfen, ob
+          alle Buchstaben verwendet werden. Im MedAT müssen alle Buchstaben im neuen Wort vorkommen.
+          Weiterer Fehler: Bei der Strichoption (kein Buchstabe passt) zu lange zögern. Wenn du nach
+          10 Sekunden keine Lösung siehst, wähle den Strich und geh weiter. Lieber eine Aufgabe
+          auslassen als drei Aufgaben durch Grübeln verlieren.
+        </p>
+
+        <CTA text="Trainiere Wortflüssigkeit mit hunderten Übungsaufgaben — inklusive Timer und Schwierigkeitsstufen." />
+      </>
+    ),
+  },
+  {
+    slug: "medat-implikationen-tipps",
+    title: "Implikationen erkennen: Logisches Denken für den MedAT",
+    excerpt:
+      "Der KFF-Untertest Implikationen prüft formale Logik. Mit diesen Strategien erkennst du gültige Schlussfolgerungen schnell und sicher.",
+    topic: "KFF",
+    readingTime: 5,
+    publishDate: "2026-03-16",
+    content: (
+      <>
+        <p>
+          Der Untertest „Implikationen erkennen" im MedAT-KFF ist für viele Kandidierende der
+          schwierigste KFF-Teil. Du bekommst Prämissen (Aussagen) und musst entscheiden, welche
+          Schlussfolgerung logisch zwingend daraus folgt. Das klingt abstrakt — ist aber mit der
+          richtigen Methode gut lernbar. Hier erfährst du, wie formale Logik im MedAT funktioniert
+          und wie du dich vorbereitest.
+        </p>
+
+        <h2>Was wird geprüft?</h2>
+        <p>
+          Du erhältst zwei Prämissen wie „Alle Ärzte sind Akademiker" und „Einige Akademiker sind
+          Sportler". Dann musst du aus fünf Optionen die einzige zwingend korrekte Schlussfolgerung
+          wählen. Option E lautet immer „Keine der Schlussfolgerungen ist zwingend" — und ist
+          häufiger richtig als du denkst. Der Schlüssel: Es geht nicht darum, was wahrscheinlich
+          oder plausibel klingt, sondern was logisch zwingend aus den Prämissen folgt. „Zwingend"
+          bedeutet: Es gibt keine Möglichkeit, dass die Prämissen wahr und die Schlussfolgerung
+          falsch ist.
+        </p>
+
+        <h2>Die wichtigsten logischen Muster</h2>
+        <p>
+          Lerne die Quantoren: „Alle" (universell), „Einige" (existenziell), „Keine" (universelle
+          Negation). Aus „Alle A sind B" und „Alle B sind C" folgt zwingend „Alle A sind C". Aber:
+          Aus „Alle A sind B" und „Einige B sind C" folgt nicht „Alle A sind C" — nur „Einige A
+          könnten C sein", und selbst das ist nicht zwingend. Häufige Falle: Die Umkehrung. Aus
+          „Alle Hunde sind Tiere" folgt nicht „Alle Tiere sind Hunde". Klingt offensichtlich, aber
+          unter Zeitdruck passiert genau dieser Fehler.
+        </p>
+
+        <h2>Venn-Diagramme als Werkzeug</h2>
+        <p>
+          Zeichne für jede Aufgabe ein Venn-Diagramm. Kreise repräsentieren die Mengen aus den
+          Prämissen. „Alle A sind B" = Kreis A liegt komplett innerhalb von Kreis B. „Einige A sind
+          B" = Kreise überlappen teilweise. „Kein A ist B" = Kreise berühren sich nicht. Prüfe dann
+          jede Option: Ist sie in allen möglichen Konfigurationen der Kreise wahr? Nur dann ist sie
+          zwingend. Diese visuelle Methode ist langsamer als reines Denken, aber deutlich sicherer —
+          besonders am Anfang.
+        </p>
+
+        <h2>Option E nicht fürchten</h2>
+        <p>
+          Viele Kandidierende wählen Option E (keine Schlussfolgerung ist zwingend) zu selten, weil
+          es sich anfühlt wie „ich weiß es nicht". Aber E ist eine echte Antwort und in vielen
+          Aufgaben die richtige. Wenn keine der Optionen A-D logisch zwingend folgt — also wenn du
+          ein Gegenbeispiel konstruieren kannst — ist E korrekt. Trainiere gezielt Aufgaben, bei
+          denen E richtig ist, damit du ein Gefühl dafür entwickelst.
+        </p>
+
+        <h2>Trainingsempfehlung</h2>
+        <p>
+          Beginne mit einfachen Syllogismen und steigere die Komplexität. Übe täglich 10-15 Minuten
+          unter Zeitdruck. Analysiere jeden Fehler: Warum hast du die falsche Option gewählt? War es
+          ein Umkehrfehler, ein Quantorenproblem oder hast du E nicht in Betracht gezogen? Nach 4-6
+          Wochen täglichem Training wirst du die Muster automatisch erkennen — und Implikationen
+          werden vom Angstuntertest zum Punktelieferanten.
+        </p>
+
+        <CTA text="Übe Implikationen mit über 40 offiziellen und hunderten generierten Aufgaben — mit Erklärungen für jede Lösung." />
+      </>
+    ),
+  },
+  {
+    slug: "medat-figuren-zusammensetzen",
+    title: "Figuren zusammensetzen im MedAT: Strategien und Übungen",
+    excerpt:
+      "Beim KFF-Untertest Figuren zusammensetzen musst du Teilstücke einer Figur erkennen. Diese Strategien helfen dir, schneller und sicherer zu werden.",
+    topic: "KFF",
+    readingTime: 4,
+    publishDate: "2026-03-16",
+    content: (
+      <>
+        <p>
+          Der Untertest „Figuren zusammensetzen" im MedAT-KFF testet dein räumliches
+          Vorstellungsvermögen. Du siehst eine Zielfigur und mehrere Teilstücke — und musst
+          entscheiden, welche Kombination von Teilen die Figur exakt ergibt. Der Zeitdruck ist hoch,
+          und die Distraktoren sind geschickt gewählt. Mit den richtigen Strategien kannst du diesen
+          Untertest aber systematisch trainieren.
+        </p>
+
+        <h2>So funktioniert der Untertest</h2>
+        <p>
+          Du bekommst eine geometrische Figur (das Ziel) und fünf Antwortmöglichkeiten (A-E), die
+          jeweils aus mehreren Teilstücken bestehen. Genau eine Antwort enthält die Teile, die
+          zusammengesetzt exakt die Zielfigur ergeben. Die Teile dürfen gedreht, aber nicht
+          gespiegelt werden. Wichtig: Alle Teile einer Option müssen verwendet werden, und sie
+          dürfen sich nicht überlappen. Die Schwierigkeit liegt darin, unter Zeitdruck das räumliche
+          Puzzle zu lösen.
+        </p>
+
+        <h2>Strategie 1: Markante Kanten suchen</h2>
+        <p>
+          Suche in der Zielfigur nach markanten Kanten, Ecken oder Einbuchtungen. Dann prüfe, welche
+          Antwortoptionen Teile mit passenden Kanten enthalten. Wenn die Zielfigur eine spitze Ecke
+          rechts oben hat, muss mindestens ein Teil in der richtigen Antwort diese Ecke abbilden.
+          Diese Methode hilft dir, schnell offensichtlich falsche Optionen auszuschließen — oft
+          kannst du zwei oder drei Optionen sofort eliminieren.
+        </p>
+
+        <h2>Strategie 2: Flächenvergleich</h2>
+        <p>
+          Schätze die Gesamtfläche der Zielfigur und vergleiche sie mit der Summe der Teile in jeder
+          Option. Wenn eine Option offensichtlich zu wenig oder zu viel Fläche hat, scheidet sie
+          aus. Das klingt unpräzise, funktioniert aber erstaunlich gut als erster Filter. Besonders
+          bei komplexen Figuren spart dir dieser Schritt wertvolle Sekunden, weil du dich nur noch
+          auf die verbleibenden Optionen konzentrieren musst.
+        </p>
+
+        <h2>Strategie 3: Ausschlussprinzip</h2>
+        <p>
+          Oft ist es schneller, falsche Optionen zu eliminieren, als die richtige zu finden. Suche
+          nach Teilen, die definitiv nicht in die Zielfigur passen: zu groß, falsche Form,
+          unmögliche Winkel. Wenn du drei Optionen ausschließen kannst, hast du nur noch zwei
+          Kandidaten — und eine 50:50-Chance, selbst wenn du dir nicht ganz sicher bist. In einem
+          Test mit Zeitdruck ist das eine effektive Strategie.
+        </p>
+
+        <h2>Trainingstipps</h2>
+        <p>
+          Übe täglich 10-15 Minuten mit verschiedenen Schwierigkeitsstufen. Beginne ohne Zeitdruck
+          und steigere das Tempo schrittweise. Analysiere deine Fehler: Hast du eine Kante
+          übersehen? Eine Drehung falsch eingeschätzt? Räumliches Vorstellungsvermögen verbessert
+          sich durch regelmäßiges Training messbar — Studien zeigen Verbesserungen von 20-30 % nach
+          4-6 Wochen. Puzzles, Tangram und ähnliche Spiele helfen ebenfalls, dein räumliches Denken
+          zu schärfen.
+        </p>
+
+        <CTA text="Trainiere Figuren zusammensetzen mit automatisch generierten Aufgaben in drei Schwierigkeitsstufen." />
+      </>
+    ),
+  },
+  {
+    slug: "medat-gedaechtnis-merkfaehigkeit",
+    title: "Gedächtnis und Merkfähigkeit: So trainierst du für den MedAT",
+    excerpt:
+      "Der KFF-Untertest Gedächtnis und Merkfähigkeit verlangt, dass du dir Profile einprägst. Mit diesen Techniken merkst du dir alles.",
+    topic: "KFF",
+    readingTime: 4,
+    publishDate: "2026-03-16",
+    content: (
+      <>
+        <p>
+          Im KFF-Untertest „Gedächtnis und Merkfähigkeit" bekommst du Steckbriefe fiktiver Personen
+          mit Informationen wie Name, Alter, Beruf, Lieblingsfarbe und Hobby. Nach einer
+          Einprägephase musst du Fragen zu den Profilen beantworten — ohne sie nochmal zu sehen. Das
+          klingt wie ein reines Gedächtnisspiel, ist aber mit den richtigen Techniken systematisch
+          trainierbar.
+        </p>
+
+        <h2>Was du dir merken musst</h2>
+        <p>
+          Jedes Profil enthält typischerweise 6-8 Informationen: Vorname, Nachname, Alter, Beruf,
+          Wohnort, Lieblingsfarbe, Hobby und manchmal weitere Details. Du bekommst mehrere Profile
+          gleichzeitig und hast eine begrenzte Zeit, dir alles einzuprägen. Die Fragen danach können
+          sich auf jedes Detail beziehen: „Wie alt ist Frau Müller?", „Welchen Beruf hat die Person
+          mit dem Hobby Schwimmen?" oder „Welche Lieblingsfarbe hat der 34-Jährige?"
+        </p>
+
+        <h2>Technik 1: Die Loci-Methode</h2>
+        <p>
+          Die Loci-Methode (auch Gedächtnispalast genannt) ist die effektivste Technik für
+          strukturierte Informationen. Stelle dir einen Weg vor, den du gut kennst — zum Beispiel
+          deinen Schulweg oder deine Wohnung. Platziere jede Person an einem Ort entlang dieses
+          Weges. Verknüpfe die Informationen mit dem Ort durch bildhafte Assoziationen: Der Bäcker
+          Müller steht in deiner Küche und backt blaue Brötchen (Lieblingsfarbe: blau). Je absurder
+          das Bild, desto besser bleibt es hängen.
+        </p>
+
+        <h2>Technik 2: Geschichten bilden</h2>
+        <p>
+          Verbinde die Informationen einer Person zu einer kleinen Geschichte. Statt dir isoliert
+          „Name: Weber, Alter: 28, Beruf: Lehrerin, Hobby: Tennis" zu merken, forme daraus: „Die
+          28-jährige Lehrerin Weber webt (Name!) ein Tennisnetz für ihre Schüler." Die Geschichte
+          verbindet die Einzelinformationen zu einem zusammenhängenden Bild, das dein Gehirn viel
+          leichter speichert als eine lose Liste von Fakten.
+        </p>
+
+        <h2>Technik 3: Verknüpfungen zwischen Profilen</h2>
+        <p>
+          Suche nach Verbindungen zwischen den Profilen. Sind zwei Personen gleich alt? Hat jemand
+          den gleichen Beruf wie der Nachname einer anderen Person vermuten lässt? Solche
+          Querverbindungen helfen dir, die Profile nicht isoliert, sondern als Netzwerk zu
+          speichern. Wenn du weißt, dass „der Älteste Tennis spielt" und „die Jüngste im gleichen
+          Ort wohnt wie der Bäcker", hast du mehrere Zugangswege zur selben Information.
+        </p>
+
+        <h2>Trainingsplan</h2>
+        <p>
+          Beginne mit 3-4 Profilen und steigere dich auf 8-10. Übe anfangs ohne Zeitdruck und
+          verkürze die Einprägephase schrittweise. Wichtig: Übe auch das Abrufen — nicht nur das
+          Einprägen. Stelle dir selbst Fragen und kontrolliere die Antworten. Tägliches Training von
+          10 Minuten über 6 Wochen bringt mehr als stundenlanges Üben kurz vor dem Test. Dein
+          Gedächtnis ist ein Muskel — trainiere ihn regelmäßig, und er wird stärker.
+        </p>
+
+        <CTA text="Trainiere Gedächtnis und Merkfähigkeit mit realistischen Profilen — genau wie im echten MedAT." />
+      </>
+    ),
+  },
+  {
+    slug: "medizinstudium-oesterreich",
+    title: "Medizinstudium in Österreich: Voraussetzungen, Unis und Aufnahme",
+    excerpt:
+      "Du willst in Österreich Medizin studieren? Hier findest du alles über Voraussetzungen, Universitäten, den MedAT und das Aufnahmeverfahren.",
+    topic: "Strategie",
+    readingTime: 5,
+    publishDate: "2026-03-16",
+    content: (
+      <>
+        <p>
+          Medizin ist das beliebteste Studium in Österreich — und eines der schwierigsten, um einen
+          Platz zu bekommen. Jedes Jahr bewerben sich über 15.000 Kandidierende auf rund 1.850
+          Studienplätze. Der einzige Weg zum Platz führt über den MedAT, den Medizinischen
+          Aufnahmetest. Hier erfährst du alles, was du über das Medizinstudium in Österreich wissen
+          musst.
+        </p>
+
+        <h2>Die vier Medizinischen Universitäten</h2>
+        <p>
+          In Österreich bieten vier Universitäten das Studium der Humanmedizin an: die Medizinische
+          Universität Wien (ca. 740 Plätze), die Medizinische Universität Graz (ca. 370 Plätze), die
+          Medizinische Universität Innsbruck (ca. 410 Plätze) und die Johannes Kepler Universität
+          Linz (ca. 310 Plätze, Kooperation mit Graz). Jede Uni hat ihren eigenen Charakter: Wien
+          ist die größte und forschungsstärkste, Innsbruck punktet mit kleinen Gruppen, Graz mit
+          klinischer Praxis und Linz als jüngster Standort mit moderner Ausstattung. Du darfst dich
+          nur an einer Uni bewerben.
+        </p>
+
+        <h2>Voraussetzungen für die Bewerbung</h2>
+        <p>
+          Die einzige formale Voraussetzung ist die allgemeine Universitätsreife — also Matura,
+          Abitur oder ein gleichwertiger Abschluss. Einen Numerus Clausus wie in Deutschland gibt es
+          nicht. Dein Notendurchschnitt spielt keine Rolle — ausschließlich dein MedAT-Ergebnis
+          entscheidet über die Zulassung. Das macht den MedAT gleichzeitig fair und anspruchsvoll:
+          Jeder hat die gleiche Chance, unabhängig von der Schulnote. EU-Bürger bewerben sich im
+          EU-Kontingent (75 % der Plätze), Nicht-EU-Bürger im Drittstaaten-Kontingent (20 %).
+        </p>
+
+        <h2>Der MedAT: Aufbau und Gewichtung</h2>
+        <p>
+          Der MedAT besteht aus vier Teilen: BMS (Basiskenntnistest Medizinische Studien, 40 %), KFF
+          (Kognitive Fähigkeiten und Fertigkeiten, 40 %), TV (Textverständnis, 10 %) und SEK
+          (Sozial-emotionale Kompetenzen, 10 %). Der BMS prüft Schulwissen in Biologie, Chemie,
+          Physik und Mathematik. Der KFF-Teil umfasst Zahlenfolgen, Wortflüssigkeit, Implikationen,
+          Figuren zusammensetzen und Gedächtnis. Die Vorbereitung sollte beide Schwerpunkte
+          gleichwertig behandeln — wer nur BMS lernt, verschenkt die Hälfte der Punkte.
+        </p>
+
+        <h2>Aufnahmequoten und Chancen</h2>
+        <p>
+          Die Aufnahmequote liegt bei etwa 12-15 %, variiert aber je nach Standort und Kontingent.
+          Das klingt hart, aber der MedAT ist fair: Wer sich strukturiert vorbereitet, hat
+          realistische Chancen. Statistisch schaffen es viele Kandidierende beim zweiten oder
+          dritten Versuch — Wiederholung ist unbegrenzt möglich. Viele erfolgreiche Studierende
+          berichten, dass 3-6 Monate konzentrierte Vorbereitung der Schlüssel waren. Frühzeitig
+          anfangen, regelmäßig üben und Simulationen machen — das ist die bewährte Formel.
+        </p>
+
+        <h2>Studienablauf und Dauer</h2>
+        <p>
+          Das Medizinstudium in Österreich dauert 12 Semester (6 Jahre) und gliedert sich in drei
+          Abschnitte. Die ersten Semester sind vorklinisch (Anatomie, Physiologie, Biochemie),
+          danach folgt die klinische Ausbildung mit Famulaturen und dem Klinisch-Praktischen Jahr
+          (KPJ) am Ende. Der Abschluss ist der Dr. med. univ. — ein akademischer Grad, der in
+          Österreich direkt nach dem Studium verliehen wird. Danach beginnt die Facharztausbildung
+          (je nach Fach 6-9 Jahre). Der Weg ist lang, aber er beginnt mit einem einzigen Tag: dem
+          MedAT.
+        </p>
+
+        <CTA text="Bereite dich optimal auf den MedAT vor — mit MedMaster deckst du alle Testbereiche ab." />
+      </>
+    ),
+  },
+  {
+    slug: "medat-buecher-empfehlungen",
+    title: "MedAT Bücher 2026: Die besten Lernmaterialien im Vergleich",
+    excerpt:
+      "Welche Bücher und Lernmaterialien lohnen sich für die MedAT-Vorbereitung 2026? Ein ehrlicher Vergleich der beliebtesten Ressourcen.",
+    topic: "Strategie",
+    readingTime: 5,
+    publishDate: "2026-03-16",
+    content: (
+      <>
+        <p>
+          Die Auswahl an MedAT-Vorbereitungsmaterialien ist groß — und unübersichtlich. Bücher,
+          Online-Plattformen, Kurse, Skripten: Was lohnt sich wirklich? Und wofür solltest du kein
+          Geld ausgeben? Hier ist ein ehrlicher Überblick über die beliebtesten Lernmaterialien für
+          den MedAT 2026, basierend auf Erfahrungsberichten erfolgreicher Kandidierender.
+        </p>
+
+        <h2>BMS-Bücher: Schulwissen auffrischen</h2>
+        <p>
+          Für den BMS-Teil brauchst du solide Grundlagenbücher in Biologie, Chemie, Physik und
+          Mathematik. Beliebte Optionen sind die „MedAT-Vorbereitung"-Reihe verschiedener Verlage
+          sowie allgemeine Schulbücher auf Maturaniveau. Wichtig: Kauf nicht fünf Bücher pro Fach.
+          Ein gutes Buch pro Fach reicht — ergänzt durch Übungsfragen. Der häufigste Fehler ist, zu
+          viel zu lesen und zu wenig zu üben. Ein Buch, das du durcharbeitest und dessen Fragen du
+          löst, ist wertvoller als drei Bücher, die du nur überfliegst.
+        </p>
+
+        <h2>KFF-Materialien: Übung schlägt Theorie</h2>
+        <p>
+          Für den KFF-Teil sind Bücher weniger wichtig als Übungsmaterial. Zahlenfolgen,
+          Implikationen, Wortflüssigkeit und Figuren zusammensetzen lernst du nicht durch Lesen,
+          sondern durch Machen. Die offiziellen Beispielhefte der Medizinischen Universitäten sind
+          Pflicht — sie zeigen dir das exakte Format und den Schwierigkeitsgrad. Darüber hinaus
+          brauchst du eine Quelle für hunderte Übungsaufgaben unter Zeitdruck. Bücher mit statischen
+          Aufgabensammlungen sind hier limitiert, weil du die Aufgaben nach ein paar Durchgängen
+          auswendig kennst.
+        </p>
+
+        <h2>Online-Plattformen vs. Bücher</h2>
+        <p>
+          Online-Plattformen haben gegenüber Büchern klare Vorteile: adaptive Schwierigkeit (du übst
+          gezielt deine Schwachstellen), unbegrenzte Aufgaben (besonders wichtig für KFF),
+          Fortschrittstracking und Prüfungssimulationen unter echten Bedingungen. Bücher haben dafür
+          den Vorteil, dass du offline arbeiten kannst und keine Bildschirmzeit brauchst. Die beste
+          Strategie: Bücher für die BMS-Theorie, eine Online-Plattform für Übungsfragen und
+          KFF-Training. So kombinierst du die Stärken beider Formate.
+        </p>
+
+        <h2>Vorbereitungskurse: Lohnt sich das?</h2>
+        <p>
+          Kostenpflichtige Vorbereitungskurse kosten zwischen 200 und 1.500 Euro. Manche
+          Kandidierende schwören darauf, andere halten sie für reine Geldverschwendung. Die Wahrheit
+          liegt dazwischen: Ein guter Kurs kann dir Struktur geben, wenn du dich alleine schwer
+          motivieren kannst. Aber kein Kurs ersetzt eigenständiges Lernen und Üben. Wenn du
+          diszipliniert bist und einen eigenen Lernplan erstellen kannst, brauchst du keinen Kurs.
+          Wenn du Struktur und Gruppendynamik brauchst, kann ein Kurs den Unterschied machen.
+        </p>
+
+        <h2>Unsere Empfehlung</h2>
+        <p>
+          Investiere klug: Ein gutes BMS-Buch pro Fach (insgesamt ca. 80-120 €), die offiziellen
+          Beispielhefte (kostenlos), und eine Online-Plattform mit umfangreicher Fragendatenbank und
+          KFF-Übungen. Verzichte auf teure Komplettpakete, die mehr versprechen als sie halten. Und
+          denk daran: Das beste Material nützt nichts, wenn du es nicht regelmäßig und aktiv nutzt.
+          Lieber wenig Material gründlich durcharbeiten als viel Material oberflächlich überfliegen.
+        </p>
+
+        <CTA text="Über 4.300 BMS-Fragen, alle KFF-Untertests und Prüfungssimulationen — teste MedMaster jetzt gratis." />
+      </>
+    ),
+  },
 ];

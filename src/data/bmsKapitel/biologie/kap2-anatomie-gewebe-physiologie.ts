@@ -2137,12 +2137,33 @@ Normaler Blutdruck: **120/80 mmHg** (systolisch/diastolisch). Hypertonie: ≥140
         "Die kurzfristige Blutdruckregulation (Barorezeptor-Reflex) und die langfristige Regulation (RAAS: Renin → Angiotensin II → Aldosteron) erklären und die Formel Blutdruck = HZV × TPR anwenden.",
       ],
       sections: [],
-      // TODO: echte MedAT-Altfrage prüfen - aktuell Übungsformat
       altfrage: {
-        question:
-          "Beschreiben Sie den Ablauf der Erregungsleitung am Herzen vom Sinusknoten bis zur Kammerkontraktion.",
-        answer:
-          "Sinusknoten (60-80/min, primärer Schrittmacher) → AV-Knoten (Verzögerung ~0,1s → Vorhöfe haben Zeit zu kontrahieren) → His-Bündel → Tawara-Schenkel → Purkinje-Fasern → Kammermuskulatur. Der AV-Knoten ist die einzige elektrische Verbindung zwischen Vorhöfen und Kammern.",
+        text: "Welche Aussage über die Erregungsleitung am Herzen ist korrekt?",
+        options: [
+          {
+            id: "a",
+            text: "Der AV-Knoten ist der primäre Schrittmacher des Herzens mit einer Eigenfrequenz von 60–80/min.",
+          },
+          {
+            id: "b",
+            text: "Die Erregung verläuft: Sinusknoten (60–80/min) → AV-Knoten (Verzögerung ~0,1 s) → His-Bündel → Tawara-Schenkel → Purkinje-Fasern → Kammermuskulatur.",
+          },
+          {
+            id: "c",
+            text: "Die Purkinje-Fasern leiten die Erregung von den Kammern zurück zu den Vorhöfen.",
+          },
+          {
+            id: "d",
+            text: "Zwischen Vorhöfen und Kammern bestehen multiple elektrische Verbindungen neben dem AV-Knoten.",
+          },
+          {
+            id: "e",
+            text: "Die AV-Verzögerung ist klinisch irrelevant und dient keinem physiologischen Zweck.",
+          },
+        ],
+        correctOptionId: "b",
+        explanation:
+          "Der Sinusknoten (SA-Knoten) ist der primäre Schrittmacher (60–80/min). Die Erregung wird am AV-Knoten um ~0,1 s verzögert, damit die Vorhöfe vor den Kammern kontrahieren. Dann geht es über His-Bündel → Tawara-Schenkel → Purkinje-Fasern zur Kammermuskulatur. Der AV-Knoten ist die einzige elektrische Verbindung zwischen Vorhöfen und Kammern (Herzskelett isoliert).",
       },
       selfTest: [
         {
@@ -2432,11 +2453,33 @@ Das Rhesus-System wird durch das **D-Antigen** definiert: **Rh+ (~85 %)** = D-An
         "Den Erythrozyten-Abbauweg (Hämoglobin → Bilirubin → Leber → Galle) beschreiben und die häufigsten Anämieformen (Eisenmangel, B12/Folsäure, hämolytisch) nach Laborbefund unterscheiden.",
       ],
       sections: [],
-      // TODO: echte MedAT-Altfrage prüfen - aktuell Übungsformat
       altfrage: {
-        question: "Aus welchen Bestandteilen setzt sich Blut zusammen?",
-        answer:
-          "Plasma (~55%): Wasser, Proteine (Albumin, Globuline, Fibrinogen), Elektrolyte, Hormone. Zelluläre Bestandteile (~45%): Erythrozyten (O₂-Transport, kein Kern), Leukozyten (Immunabwehr) und Thrombozyten (Hämostase, Zellkernlos). Hämatokrit = Anteil zellulärer Bestandteile am Gesamtblutvolumen.",
+        text: "Welche Aussage über die Zusammensetzung des Blutes ist korrekt?",
+        options: [
+          {
+            id: "a",
+            text: "Plasma macht etwa 45 % des Blutvolumens aus, die zellulären Bestandteile etwa 55 %.",
+          },
+          {
+            id: "b",
+            text: "Plasma (~55 %) enthält Wasser, Proteine (Albumin, Globuline, Fibrinogen) und Elektrolyte. Zelluläre Bestandteile (~45 %): Erythrozyten, Leukozyten und Thrombozyten. Der Hämatokrit gibt den Anteil der Erythrozyten am Gesamtblutvolumen an.",
+          },
+          {
+            id: "c",
+            text: "Erythrozyten besitzen einen Zellkern und Mitochondrien, um Sauerstoff effizient zu transportieren.",
+          },
+          {
+            id: "d",
+            text: "Thrombozyten sind kernhaltige Zellen, die aus Lymphozyten im Thymus entstehen.",
+          },
+          {
+            id: "e",
+            text: "Der Hämatokrit beschreibt den prozentualen Anteil der Leukozyten am Blutvolumen.",
+          },
+        ],
+        correctOptionId: "b",
+        explanation:
+          "Blut besteht aus Plasma (~55 %, Wasser + Proteine + Elektrolyte + Hormone) und zellulären Bestandteilen (~45 %): Erythrozyten (kernlos, O₂-Transport via Hämoglobin), Leukozyten (Immunabwehr) und Thrombozyten (kernlose Fragmente von Megakaryozyten, Hämostase). Der Hämatokrit (Hkt) gibt den Volumenanteil der Erythrozyten an (Männer ~45 %, Frauen ~42 %).",
       },
       selfTest: [
         {
