@@ -200,7 +200,7 @@ export default function FAQPage() {
         ))}
 
         {/* Internal links */}
-        <section className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <Link
             to="/medat-guide"
             className="flex flex-col items-center gap-2 p-6 rounded-2xl bg-[var(--card)] border border-[var(--border)] hover:border-[var(--border)] transition-colors text-center"
@@ -230,6 +230,16 @@ export default function FAQPage() {
               Kostenlos starten
             </span>
             <span className="text-xs text-[var(--muted)]">4.300+ Fragen</span>
+          </Link>
+          <Link
+            to="/lp/medat"
+            className="flex flex-col items-center gap-2 p-6 rounded-2xl bg-[var(--card)] border border-[var(--border)] hover:border-[var(--border)] transition-colors text-center"
+          >
+            <span className="text-2xl">🎯</span>
+            <span className="text-sm font-semibold text-[var(--text-primary)]">
+              MedAT Vorbereitung starten
+            </span>
+            <span className="text-xs text-[var(--muted)]">Kostenlos testen</span>
           </Link>
         </section>
       </main>

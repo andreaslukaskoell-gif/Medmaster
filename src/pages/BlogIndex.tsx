@@ -94,8 +94,30 @@ export default function BlogIndex() {
           ))}
         </div>
 
+        {/* Internal Links */}
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <Link
+            to="/medat-uebungsfragen"
+            className="group bg-[var(--surface)] rounded-xl p-6 border border-[var(--border)] hover:shadow-[var(--shadow-sm)] transition-shadow text-center"
+          >
+            <span className="text-sm font-semibold text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors">
+              MedAT Übungsfragen
+            </span>
+            <p className="text-xs text-[var(--muted)] mt-1">BMS + KFF kostenlos testen</p>
+          </Link>
+          <Link
+            to="/medat-kff-ueben"
+            className="group bg-[var(--surface)] rounded-xl p-6 border border-[var(--border)] hover:shadow-[var(--shadow-sm)] transition-shadow text-center"
+          >
+            <span className="text-sm font-semibold text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors">
+              KFF Training
+            </span>
+            <p className="text-xs text-[var(--muted)] mt-1">10.000+ Aufgaben</p>
+          </Link>
+        </div>
+
         {/* Bottom CTA */}
-        <div className="mt-12 text-center p-8 rounded-xl bg-[var(--accent)]/5 border border-[var(--accent)]/20">
+        <div className="mt-8 text-center p-8 rounded-xl bg-[var(--accent)]/5 border border-[var(--accent)]/20">
           <h2 className="text-xl font-bold text-[var(--text-primary)] mb-2">
             Bereit für den MedAT? Jetzt gratis starten
           </h2>

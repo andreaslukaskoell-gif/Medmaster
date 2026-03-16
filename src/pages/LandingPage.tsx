@@ -1001,6 +1001,7 @@ export default function LandingPage() {
               { to: "/medat-mathematik-fragen", label: "BMS Mathematik", sub: "490+ Fragen" },
               { to: "/medat-kff-ueben", label: "KFF Training", sub: "10.000+ Aufgaben" },
               { to: "/challenge", label: "Quiz Challenge", sub: "Teile dein Ergebnis" },
+              { to: "/blog", label: "Lerntipps & Strategien", sub: "13+ Artikel" },
             ].map((link) => (
               <Link
                 key={link.to}

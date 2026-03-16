@@ -789,4 +789,524 @@ export const blogArticles: BlogArticle[] = [
       </>
     ),
   },
+  {
+    slug: "medat-biologie-zellbiologie",
+    title: "BMS Biologie: Zellbiologie kompakt — alles was du wissen musst",
+    excerpt:
+      "Zellbiologie ist das Fundament der BMS-Biologie. Organellen, Membrantransport, Zellteilung — hier bekommst du den kompletten Überblick.",
+    topic: "BMS",
+    readingTime: 5,
+    publishDate: "2026-03-16",
+    content: (
+      <>
+        <p>
+          Zellbiologie ist das meistgeprüfte Thema im BMS-Biologie-Teil des MedAT. Kein Wunder: Die
+          Zelle ist die Grundeinheit des Lebens, und fast jedes andere Biologiethema baut darauf
+          auf. Wer Zellbiologie nicht versteht, wird auch bei Genetik, Immunologie und Stoffwechsel
+          Probleme haben. Hier ist dein kompakter Überblick über alles Prüfungsrelevante.
+        </p>
+
+        <h2>Prokaryoten vs. Eukaryoten</h2>
+        <p>
+          Die grundlegendste Unterscheidung: Prokaryotische Zellen (Bakterien, Archaeen) haben
+          keinen Zellkern — ihre DNA liegt frei im Zytoplasma als Nukleoid vor. Eukaryotische Zellen
+          (Pflanzen, Tiere, Pilze) besitzen einen membranumschlossenen Zellkern und zahlreiche
+          Organellen. Im MedAT wird regelmäßig nach Unterschieden gefragt — lerne sie als Tabelle
+          auswendig: Zellkern, Ribosomengröße (70S vs. 80S), Zellwand, Organellen.
+        </p>
+
+        <h2>Die wichtigsten Zellorganellen</h2>
+        <p>
+          Jede Organelle hat eine spezifische Funktion, die du kennen musst: Mitochondrien
+          (Zellatmung, ATP-Produktion), Endoplasmatisches Retikulum (raues ER: Proteinsynthese,
+          glattes ER: Lipidsynthese), Golgi-Apparat (Proteinmodifikation und -sortierung), Lysosomen
+          (intrazellulärer Abbau), Ribosomen (Translation). Bei Pflanzenzellen kommen Chloroplasten
+          (Photosynthese), Zellwand und Vakuole hinzu. Typische MedAT-Falle: Mitochondrien und
+          Chloroplasten haben eine Doppelmembran — andere Organellen nicht.
+        </p>
+
+        <h2>Membrantransport verstehen</h2>
+        <p>
+          Die Zellmembran besteht aus einer Phospholipid-Doppelschicht (Flüssig-Mosaik-Modell).
+          Kleine, unpolare Moleküle diffundieren frei hindurch (passive Diffusion). Ionen und polare
+          Moleküle brauchen Transportproteine: Kanalproteine (passiv, mit Konzentrationsgefälle)
+          oder Carrier (aktiv, gegen das Gefälle, ATP-abhängig). Endozytose und Exozytose
+          transportieren große Moleküle in Vesikeln. Im MedAT wird besonders gerne nach dem
+          Unterschied zwischen passivem und aktivem Transport gefragt.
+        </p>
+
+        <h2>Zellteilung: Mitose und Meiose</h2>
+        <p>
+          Mitose erzeugt zwei genetisch identische Tochterzellen (Wachstum, Reparatur). Die Phasen:
+          Prophase, Metaphase, Anaphase, Telophase. Meiose erzeugt vier genetisch verschiedene
+          Keimzellen mit halbem Chromosomensatz — entscheidend für geschlechtliche Fortpflanzung.
+          Crossing-over in der Meiose I sorgt für genetische Vielfalt. Häufige Prüfungsfrage: In
+          welcher Phase liegt welcher Chromosomensatz vor (2n vs. n)?
+        </p>
+
+        <h2>So lernst du Zellbiologie effektiv</h2>
+        <p>
+          Zeichne die Zelle mit allen Organellen selbst — das verankert das Wissen besser als reines
+          Lesen. Übe mit MC-Fragen, die Funktionszuordnungen abfragen („Welche Organelle ist für X
+          verantwortlich?"). Vergleiche systematisch: Pflanzenzelle vs. Tierzelle, Mitose vs.
+          Meiose, passiver vs. aktiver Transport. Diese Vergleiche sind MedAT-Klassiker.
+        </p>
+
+        <CTA text="1.100+ Biologie-Fragen inkl. Zellbiologie — mit detaillierten Erklärungen zu jeder Antwort." />
+      </>
+    ),
+  },
+  {
+    slug: "medat-physik-mechanik",
+    title: "BMS Physik: Mechanik-Grundlagen für den MedAT",
+    excerpt:
+      "Mechanik ist das wichtigste Physik-Thema im MedAT. Kräfte, Energie, Impuls — diese Grundlagen musst du beherrschen.",
+    topic: "BMS",
+    readingTime: 5,
+    publishDate: "2026-03-16",
+    content: (
+      <>
+        <p>
+          Physik ist für viele MedAT-Kandidierende ein Angstfach. Die gute Nachricht: Der
+          BMS-Physik-Teil konzentriert sich auf Grundlagen — und Mechanik ist das mit Abstand
+          wichtigste Teilgebiet. Wer die Mechanik-Basics sicher beherrscht, hat bereits einen großen
+          Teil der Physik-Punkte in der Tasche.
+        </p>
+
+        <h2>Kräfte und Newtonsche Gesetze</h2>
+        <p>
+          Die drei Newtonschen Gesetze sind das Fundament der Mechanik. Erstes Gesetz (Trägheit):
+          Ein Körper bleibt in Ruhe oder gleichförmiger Bewegung, solange keine resultierende Kraft
+          wirkt. Zweites Gesetz: F = m · a — Kraft ist Masse mal Beschleunigung. Drittes Gesetz
+          (actio = reactio): Kräfte treten immer paarweise auf. Im MedAT werden häufig
+          Rechenaufgaben zu F = m · a gestellt. Vergiss nie die Einheiten: Kraft in Newton (N = kg ·
+          m/s²).
+        </p>
+
+        <h2>Energie und Arbeit</h2>
+        <p>
+          Arbeit ist Kraft mal Weg (W = F · s · cos α). Kinetische Energie: E_kin = ½ · m · v².
+          Potenzielle Energie: E_pot = m · g · h. Der Energieerhaltungssatz besagt: In einem
+          abgeschlossenen System bleibt die Gesamtenergie konstant. Typische MedAT-Aufgabe: Ein
+          Gegenstand fällt aus Höhe h — berechne die Geschwindigkeit beim Aufprall (E_pot = E_kin
+          umstellen). Diese Aufgaben sind reine Formelanwendung, wenn du die Formeln kennst.
+        </p>
+
+        <h2>Gleichförmige und beschleunigte Bewegung</h2>
+        <p>
+          Gleichförmige Bewegung: v = s/t (konstante Geschwindigkeit). Gleichmäßig beschleunigte
+          Bewegung: s = ½ · a · t², v = a · t. Freier Fall: a = g ≈ 9,81 m/s². Waagerechter Wurf:
+          horizontale Komponente gleichförmig, vertikale Komponente beschleunigt. Im MedAT werden
+          diese Formeln direkt abgefragt — übe das Einsetzen und Umstellen unter Zeitdruck.
+        </p>
+
+        <h2>Impuls und Drehmoment</h2>
+        <p>
+          Impuls p = m · v. Impulserhaltungssatz bei Stößen: Der Gesamtimpuls bleibt erhalten.
+          Unterscheide elastischen Stoß (kinetische Energie bleibt erhalten) und inelastischen Stoß
+          (Körper verbinden sich). Drehmoment M = F · r (Kraft mal Hebelarm) — relevant für
+          Hebelgesetze. Im MedAT kommt besonders der Hebel regelmäßig vor: Wann ist ein System im
+          Gleichgewicht? Wenn die Summe der Drehmomente null ist.
+        </p>
+
+        <h2>Prüfungstipps für Mechanik</h2>
+        <p>
+          Lerne die Formeln nicht nur auswendig, sondern übe das Umstellen und Einsetzen. Im MedAT
+          hast du keinen Taschenrechner — die Zahlen sind bewusst einfach gewählt (g ≈ 10 m/s²). Übe
+          Kopfrechnen mit runden Werten. Achte immer auf Einheiten: Wenn die Einheit nicht stimmt,
+          ist die Rechnung falsch. Und denk dran: Keine Formelsammlung im Test — du musst alles im
+          Kopf haben.
+        </p>
+
+        <CTA text="1.300+ Physik-Fragen mit Schritt-für-Schritt-Lösungen — auch Mechanik-Rechenaufgaben." />
+      </>
+    ),
+  },
+  {
+    slug: "medat-motivation-durchhalten",
+    title: "MedAT-Vorbereitung: So bleibst du motiviert bis zum Testtag",
+    excerpt:
+      "Monate langes Lernen zehrt an der Motivation. Diese Strategien helfen dir, dranzubleiben — auch wenn es schwer wird.",
+    topic: "Motivation",
+    readingTime: 4,
+    publishDate: "2026-03-16",
+    content: (
+      <>
+        <p>
+          Die MedAT-Vorbereitung dauert Monate. Am Anfang ist die Motivation hoch — endlich geht es
+          los, du hast einen Plan, das Ziel ist klar. Aber nach ein paar Wochen kommt der Einbruch:
+          Der Stoff scheint endlos, der Fortschritt unsichtbar, und der Testtag ist noch weit weg.
+          So überwindest du das Motivationstief.
+        </p>
+
+        <h2>Setz dir Wochenziele statt Tagesziele</h2>
+        <p>
+          Tagesziele erzeugen Druck: Wenn du einen Tag verpasst, fühlst du dich sofort im Rückstand.
+          Wochenziele sind flexibler — du kannst einen schlechten Tag durch einen guten ausgleichen.
+          Beispiel: „Diese Woche schaffe ich 200 BMS-Fragen und 3 KFF-Einheiten" statt „Jeden Tag 30
+          Fragen". Das reduziert Stress und gibt dir Kontrolle zurück.
+        </p>
+
+        <h2>Fortschritt sichtbar machen</h2>
+        <p>
+          Nichts motiviert mehr als sichtbarer Fortschritt. Führe eine einfache Statistik: Wie viele
+          Fragen hast du diese Woche richtig beantwortet? Wie hat sich deine Trefferquote
+          entwickelt? Welche Themen hast du abgedeckt? Selbst wenn der Fortschritt langsam ist — er
+          ist da. Und wenn du siehst, dass deine Quote von 55 % auf 70 % gestiegen ist, weißt du,
+          dass sich das Lernen lohnt.
+        </p>
+
+        <h2>Belohnungen einbauen</h2>
+        <p>
+          Plane bewusst Belohnungen nach erreichten Meilensteinen ein. Nach einer abgeschlossenen
+          Simulation: Lieblingsessen. Nach einer komplett durchgearbeiteten Woche: ein freier
+          Nachmittag. Das klingt simpel, aber dein Gehirn braucht positive Verstärkung. Ohne
+          Belohnungen wird Lernen zu einer endlosen Pflicht — mit Belohnungen zu einem Spiel mit
+          Etappenzielen.
+        </p>
+
+        <h2>Kontakt zu anderen Kandidierenden</h2>
+        <p>
+          Tausche dich mit anderen MedAT-Kandidierenden aus — in Foren, WhatsApp-Gruppen oder
+          Lerngruppen. Zu wissen, dass andere denselben Kampf kämpfen, hilft enorm. Ihr könnt euch
+          gegenseitig motivieren, Tipps austauschen und euch an schlechten Tagen aufbauen. Aber
+          Vorsicht: Vergleiche dich nicht zu viel. Jeder lernt in seinem eigenen Tempo.
+        </p>
+
+        <h2>An dein Warum erinnern</h2>
+        <p>
+          Wenn die Motivation am Tiefpunkt ist, erinnere dich daran, warum du das machst. Du willst
+          Medizin studieren. Du willst Menschen helfen. Du willst diesen einen Tag bestehen, um dir
+          einen Lebenstraum zu erfüllen. Schreib dein „Warum" auf einen Zettel und kleb ihn an
+          deinen Schreibtisch. An den härtesten Tagen ist dieses Warum das Einzige, was dich am
+          Lernen hält — und das reicht.
+        </p>
+
+        <CTA text="MedMaster zeigt dir deinen Lernfortschritt in Echtzeit — damit du siehst, wie weit du schon gekommen bist." />
+      </>
+    ),
+  },
+  {
+    slug: "medat-vs-ham-nat",
+    title: "MedAT vs. HAM-NAT: Was sind die Unterschiede?",
+    excerpt:
+      "Beide Tests entscheiden über den Medizinstudienplatz — aber sie unterscheiden sich grundlegend. Ein Vergleich für alle, die sich bewerben wollen.",
+    topic: "Strategie",
+    readingTime: 5,
+    publishDate: "2026-03-16",
+    content: (
+      <>
+        <p>
+          Wer im deutschsprachigen Raum Medizin studieren will, steht oft vor der Wahl: MedAT in
+          Österreich oder HAM-NAT in Deutschland? Beide Tests entscheiden über die Zulassung, aber
+          sie unterscheiden sich in Aufbau, Inhalt und Vorbereitung erheblich. Hier ist ein
+          ehrlicher Vergleich, der dir bei der Entscheidung hilft.
+        </p>
+
+        <h2>Aufbau und Testbereiche</h2>
+        <p>
+          Der MedAT besteht aus vier Teilen: BMS (Naturwissenschaften, 40 %), KFF (Kognitive
+          Fähigkeiten, 40 %), TV (Textverständnis, 10 %) und SEK (Sozial-emotionale Kompetenzen, 10
+          %). Der HAM-NAT konzentriert sich stärker auf Naturwissenschaften: Biologie, Chemie,
+          Physik und Mathematik machen den Kern aus. Kognitive Tests wie beim MedAT-KFF gibt es im
+          HAM-NAT nicht — dafür ist der naturwissenschaftliche Teil anspruchsvoller und geht teils
+          über Abiturniveau hinaus.
+        </p>
+
+        <h2>Schwierigkeitsgrad und Niveau</h2>
+        <p>
+          Der BMS im MedAT prüft auf Maturaniveau — also Schulstoff. Der HAM-NAT kann auch Themen
+          beinhalten, die im Schulunterricht nur oberflächlich behandelt werden (z. B. Biochemie,
+          Molekularbiologie). Dafür hat der MedAT mit der KFF-Sektion eine Komponente, die nicht
+          durch Faktenwissen allein lösbar ist, sondern kognitive Fähigkeiten unter Zeitdruck
+          testet. Beide Tests sind auf ihre Art anspruchsvoll — der MedAT ist breiter, der HAM-NAT
+          tiefer.
+        </p>
+
+        <h2>Vorbereitung und Zeitaufwand</h2>
+        <p>
+          Für den MedAT solltest du 3-6 Monate einplanen und sowohl Naturwissenschaften als auch KFF
+          trainieren. Für den HAM-NAT reichen vielen Kandidierenden 2-4 Monate, da der Fokus enger
+          ist. Allerdings: Wer keine starke naturwissenschaftliche Vorbildung hat, braucht beim
+          HAM-NAT mehr Zeit für die Theorie. Beim MedAT ist tägliches KFF-Training über Wochen
+          nötig, da sich kognitive Fähigkeiten nur langsam aufbauen.
+        </p>
+
+        <h2>Aufnahmequoten im Vergleich</h2>
+        <p>
+          Der MedAT hat eine Aufnahmequote von ca. 12-15 %. Beim HAM-NAT variiert die Quote je nach
+          Standort stark: Hamburg nimmt etwa 15 % über den HAM-NAT auf, andere Unis nutzen andere
+          Verfahren (TMS, Auswahlgespräche). Ein wichtiger Unterschied: Den MedAT kannst du beliebig
+          oft wiederholen, den HAM-NAT ebenfalls — aber die Termine überschneiden sich manchmal, was
+          eine Doppelbewerbung erschwert.
+        </p>
+
+        <h2>Welcher Test passt zu dir?</h2>
+        <p>
+          Wenn du in Österreich studieren willst, führt kein Weg am MedAT vorbei. Wenn du flexibel
+          bist: Der MedAT belohnt vielseitige Vorbereitung (Wissen + kognitive Skills), der HAM-NAT
+          belohnt tiefes naturwissenschaftliches Verständnis. Viele Kandidierende melden sich für
+          beide Tests an und maximieren so ihre Chancen. Achte dabei auf die Termine — und bereite
+          dich primär auf den Test vor, der dir eher liegt.
+        </p>
+
+        <CTA text="MedMaster deckt alle MedAT-Bereiche ab: BMS, KFF, TV und SEK — optimal auf den österreichischen Test zugeschnitten." />
+      </>
+    ),
+  },
+  {
+    slug: "medat-sek-tipps",
+    title: "SEK im MedAT: Emotionen erkennen, regulieren und entscheiden",
+    excerpt:
+      "Die SEK-Sektion zählt 10 % im MedAT — und wird oft vernachlässigt. Dabei sind die Punkte mit der richtigen Strategie leicht zu holen.",
+    topic: "Strategie",
+    readingTime: 5,
+    publishDate: "2026-03-16",
+    content: (
+      <>
+        <p>
+          Die Sektion „Sozial-emotionale Kompetenzen" (SEK) macht 10 % des MedAT aus. Das klingt
+          wenig, kann aber bei einem knappen Ranking über Platz oder Warteliste entscheiden. Der SEK
+          besteht aus drei Untertests: Emotionen erkennen, Emotionen regulieren und Soziales
+          Entscheiden. Hier erfährst du, was dich erwartet und wie du dich vorbereitest.
+        </p>
+
+        <h2>Emotionen erkennen (EE)</h2>
+        <p>
+          Du siehst Fotos von Gesichtern und musst die gezeigte Emotion identifizieren. Die sechs
+          Basisemotionen nach Ekman sind: Freude, Trauer, Wut, Angst, Ekel und Überraschung. Achte
+          besonders auf die Augenpartie — sie ist der zuverlässigste Indikator. Typische
+          Verwechslung: Angst und Überraschung sehen ähnlich aus (weit geöffnete Augen), aber bei
+          Angst sind die Augenbrauen zusammengezogen, bei Überraschung angehoben. Übe mit vielen
+          verschiedenen Gesichtern, um ein Gefühl für feine Unterschiede zu entwickeln.
+        </p>
+
+        <h2>Emotionen regulieren (ER)</h2>
+        <p>
+          Du liest eine belastende Situation und wählst die hilfreichste Strategie zur
+          Emotionsregulation. Der Trick: Es geht nicht darum, was du persönlich tun würdest, sondern
+          was psychologisch am effektivsten ist. Bewährte Strategien sind Neubewertung (die
+          Situation aus einem anderen Blickwinkel sehen), soziale Unterstützung suchen und
+          problemorientiertes Handeln. Vermeidung und Unterdrückung sind fast immer die falschen
+          Antworten. Wenn eine Option „die Situation ignorieren" oder „die Gefühle unterdrücken"
+          vorschlägt, ist sie mit hoher Wahrscheinlichkeit falsch.
+        </p>
+
+        <h2>Soziales Entscheiden (SE)</h2>
+        <p>
+          Du bekommst ein ethisches Dilemma aus dem medizinischen Alltag und musst die angemessenste
+          Handlung wählen. Orientiere dich an medizinethischen Grundprinzipien: Patientenautonomie
+          respektieren, Schaden vermeiden (non-maleficence), Wohl des Patienten fördern
+          (beneficence) und Gerechtigkeit wahren. Die richtige Antwort ist meist die, die alle
+          Beteiligten berücksichtigt und einen Kompromiss findet — nicht die extremste Position in
+          eine Richtung.
+        </p>
+
+        <h2>Vorbereitung: Wenig Aufwand, guter Ertrag</h2>
+        <p>
+          SEK ist der Testteil, bei dem du mit dem geringsten Zeitaufwand die meisten Punkte holen
+          kannst. Zwei bis drei Wochen vor dem Test reichen aus, wenn du die Grundprinzipien
+          verstanden hast. Übe mit Beispielaufgaben, lerne die Basisemotionen und ihre
+          Mikroexpressionen, und mache dich mit den ethischen Prinzipien vertraut. Anders als beim
+          BMS geht es hier nicht um Faktenwissen, sondern um Mustererkennung und gesunden
+          Menschenverstand — ergänzt durch psychologisches Grundwissen.
+        </p>
+
+        <CTA text="100 SEK-Übungsaufgaben in allen drei Untertests — trainiere Emotionen erkennen, regulieren und entscheiden." />
+      </>
+    ),
+  },
+  {
+    slug: "medat-lerngruppe",
+    title: "Alleine oder in der Lerngruppe? So lernst du am effektivsten",
+    excerpt:
+      "Lerngruppe oder Solo-Vorbereitung? Beides hat Vor- und Nachteile. Hier erfährst du, welche Strategie für den MedAT besser funktioniert.",
+    topic: "Strategie",
+    readingTime: 4,
+    publishDate: "2026-03-16",
+    content: (
+      <>
+        <p>
+          Eine der häufigsten Fragen unter MedAT-Kandidierenden: Soll ich alleine lernen oder in
+          einer Lerngruppe? Die ehrliche Antwort: Es kommt darauf an. Beides hat klare Stärken und
+          Schwächen — und die beste Strategie kombiniert beide Ansätze. Hier ist ein praxisnaher
+          Vergleich.
+        </p>
+
+        <h2>Vorteile des Alleinlernens</h2>
+        <p>
+          Du bestimmst Tempo, Thema und Zeitplan selbst. Kein Warten auf langsamere
+          Gruppenmitglieder, keine Diskussionen über irrelevante Themen. Besonders bei BMS-Theorie
+          ist konzentriertes Einzellernen oft effektiver: Du liest, markierst, beantwortest Fragen
+          und wiederholst Schwachstellen — alles in deinem eigenen Rhythmus. Studien zeigen, dass
+          tiefes Verständnis am besten entsteht, wenn du dich ohne Ablenkung mit dem Stoff
+          auseinandersetzt.
+        </p>
+
+        <h2>Vorteile der Lerngruppe</h2>
+        <p>
+          Lerngruppen glänzen beim Erklären und Diskutieren. Wenn du einem anderen ein Thema
+          erklärst, merkst du sofort, ob du es wirklich verstanden hast. Außerdem decken andere
+          Perspektiven Wissenslücken auf, die dir alleine nicht auffallen würden. Für KFF-Training
+          kann eine Gruppe motivierend sein: gemeinsam Zahlenfolgen lösen, sich gegenseitig
+          Implikationen stellen oder Merkfähigkeit testen. Und nicht zuletzt: Die soziale Komponente
+          hilft gegen das Motivationstief, das fast jeden irgendwann trifft.
+        </p>
+
+        <h2>Wann Lerngruppen nicht funktionieren</h2>
+        <p>
+          Eine schlechte Lerngruppe ist schlimmer als gar keine. Warnsignale: Zu viel Gerede, zu
+          wenig Lernen. Unterschiedliches Leistungsniveau, sodass einige sich langweilen und andere
+          nicht mitkommen. Mehr als 4 Personen — dann wird es unproduktiv. Keine klare Agenda für
+          jedes Treffen. Wenn du nach einem Lerngruppentreffen das Gefühl hast, weniger geschafft zu
+          haben als alleine, ist die Gruppe ein Problem, keine Lösung.
+        </p>
+
+        <h2>Die optimale Kombination</h2>
+        <p>
+          Nutze beide Formate für das, was sie am besten können. Alleine: BMS-Theorie lernen,
+          Übungsfragen durcharbeiten, Schwachstellen gezielt wiederholen, KFF mit Timer üben.
+          Lerngruppe: Komplexe Themen diskutieren, gegenseitig Fragen stellen, Simulationen
+          nachbesprechen, Motivation aufrechterhalten. Ein bewährter Rhythmus: 80 % der Lernzeit
+          alleine, 20 % in der Gruppe. Triff dich ein- bis zweimal pro Woche mit 2-3 Leuten, die auf
+          einem ähnlichen Niveau sind.
+        </p>
+
+        <CTA text="MedMaster ist dein digitaler Lernpartner: 4.300+ Fragen, adaptiver Lernplan und Fortschrittstracking." />
+      </>
+    ),
+  },
+  {
+    slug: "medat-stressbewaeltigung",
+    title: "Prüfungsangst beim MedAT: 5 Techniken gegen Stress",
+    excerpt:
+      "Prüfungsangst kann deine Leistung massiv beeinträchtigen. Diese 5 Techniken helfen dir, am Testtag ruhig und fokussiert zu bleiben.",
+    topic: "Motivation",
+    readingTime: 4,
+    publishDate: "2026-03-16",
+    content: (
+      <>
+        <p>
+          Du hast monatelang gelernt, kennst den Stoff, hast hunderte Übungsfragen gemacht — und
+          trotzdem hast du Angst vor dem MedAT. Das ist normal. Prüfungsangst betrifft bis zu 40 %
+          aller Studierenden und kann die Leistung um 10-20 % drücken. Die gute Nachricht: Stress
+          ist managebar. Hier sind fünf evidenzbasierte Techniken, die am Testtag funktionieren.
+        </p>
+
+        <h2>1. Die 4-7-8-Atemtechnik</h2>
+        <p>
+          Wenn du Panik spürst, atme durch die Nase ein (4 Sekunden zählen), halte den Atem (7
+          Sekunden) und atme langsam durch den Mund aus (8 Sekunden). Wiederhole das 3-4 Mal. Diese
+          Technik aktiviert den Parasympathikus und senkt Herzfrequenz und Cortisolspiegel messbar
+          innerhalb von 60 Sekunden. Übe die Technik vorher zu Hause, damit sie am Testtag
+          automatisch funktioniert.
+        </p>
+
+        <h2>2. Gedanken umformulieren</h2>
+        <p>
+          Statt „Ich schaffe das nicht" denke „Ich habe mich vorbereitet und gebe mein Bestes". Das
+          klingt banal, aber kognitive Umstrukturierung ist eine der wirksamsten Techniken gegen
+          Prüfungsangst. Dein Gehirn reagiert auf negative Selbstgespräche mit Stresshormonen — auf
+          neutrale oder positive mit Ruhe. Formuliere vor dem Test 2-3 realistische, positive Sätze
+          und wiederhole sie bei Bedarf.
+        </p>
+
+        <h2>3. Progressive Muskelentspannung</h2>
+        <p>
+          Spanne einzelne Muskelgruppen für 5 Sekunden fest an und lass dann locker: Hände zu
+          Fäusten ballen, Schultern hochziehen, Zehen krümmen. Die anschließende Entspannung ist
+          intensiver als der Normalzustand und löst körperliche Anspannung, die du unter Stress oft
+          gar nicht bemerkst. Mache das in der Pause zwischen den Testteilen — es dauert nur 2
+          Minuten und hilft merklich.
+        </p>
+
+        <h2>4. Simulationen als Desensibilisierung</h2>
+        <p>
+          Die effektivste Langzeitstrategie gegen Prüfungsangst: Wiederholte Exposition. Je öfter du
+          unter echten Prüfungsbedingungen übst (Timer, keine Unterbrechung, kein Nachschlagen),
+          desto normaler wird die Situation. Nach der dritten oder vierten Simulation sinkt der
+          Stresslevel deutlich. Der Testtag fühlt sich dann an wie „noch eine Simulation" — nicht
+          wie ein einmaliges Schicksalsereignis.
+        </p>
+
+        <h2>5. Am Vorabend richtig abschalten</h2>
+        <p>
+          Lerne am Tag vor dem MedAT nicht mehr. Kein „noch schnell die Formeln wiederholen" um
+          Mitternacht. Was du bis dahin nicht kannst, lernst du in einer Nacht nicht mehr.
+          Stattdessen: Leichtes Abendessen, ein Spaziergang, früh ins Bett. Schlaf ist der stärkste
+          Leistungsverstärker — 7-8 Stunden Schlaf verbessern Konzentration und Gedächtnis mehr als
+          jede Last-Minute-Lerneinheit.
+        </p>
+
+        <CTA text="MedMaster bietet vollständige Prüfungssimulationen — übe unter echten Bedingungen und reduziere Prüfungsangst." />
+      </>
+    ),
+  },
+  {
+    slug: "medat-erfahrungsbericht",
+    title: "MedAT Erfahrungsbericht: Was ich beim ersten Mal falsch gemacht habe",
+    excerpt:
+      "Ein ehrlicher Erfahrungsbericht über den ersten MedAT-Versuch: Was gut lief, was schiefging und was du daraus lernen kannst.",
+    topic: "Motivation",
+    readingTime: 5,
+    publishDate: "2026-03-16",
+    content: (
+      <>
+        <p>
+          Mein erster MedAT war ein Desaster. Nicht weil ich dumm war oder zu wenig gelernt hatte —
+          sondern weil ich falsch gelernt hatte. Ich teile meine Erfahrung, damit du dieselben
+          Fehler vermeiden kannst. Spoiler: Beim zweiten Versuch hat es geklappt.
+        </p>
+
+        <h2>Fehler 1: Ich habe nur gelesen, nie geübt</h2>
+        <p>
+          Ich hatte drei dicke Bücher und habe sie brav durchgearbeitet. Markiert, zusammengefasst,
+          Karteikarten geschrieben. Was ich nicht gemacht habe: MC-Fragen unter Zeitdruck
+          beantworten. Am Testtag war ich geschockt, wie anders sich echte Prüfungsfragen anfühlen.
+          Die Distraktoren sind so formuliert, dass sie plausibel klingen — und wenn du nie geübt
+          hast, zwischen richtiger Antwort und gut klingendem Unsinn zu unterscheiden, fällst du
+          darauf rein. Mein Tipp: Mindestens 50 % deiner Lernzeit sollten auf aktives Üben mit
+          Fragen entfallen.
+        </p>
+
+        <h2>Fehler 2: KFF komplett unterschätzt</h2>
+        <p>
+          Ich wusste, dass KFF 40 % zählt. Trotzdem habe ich nur 10 % meiner Lernzeit dafür
+          aufgewendet. Ich dachte: „Logisches Denken kann ich doch." Falsch. Im Testteil
+          Zahlenfolgen hatte ich panisch auf Zahlen gestarrt, ohne System. Bei Implikationen habe
+          ich geraten. Bei Figuren zusammensetzen war die Zeit vorbei, bevor ich die Hälfte
+          geschafft hatte. KFF ist trainierbar — aber nur, wenn du wochenlang täglich übst. 15
+          Minuten am Tag über 8 Wochen hätten gereicht. Stattdessen habe ich am Abend vorher ein
+          paar Beispielaufgaben gemacht.
+        </p>
+
+        <h2>Fehler 3: Keine einzige Simulation gemacht</h2>
+        <p>
+          Ich hatte nie 4 Stunden am Stück unter Prüfungsbedingungen geübt. Am Testtag war ich nach
+          dem BMS mental erschöpft — und dann kamen noch drei Testteile. Ab dem TV konnte ich mich
+          kaum noch konzentrieren. Im KFF habe ich dumme Flüchtigkeitsfehler gemacht, die mir in
+          Ruhe nie passiert wären. Eine einzige vollständige Simulation hätte mich auf diesen
+          Erschöpfungseffekt vorbereitet. Mache mindestens drei Simulationen vor dem echten Test.
+        </p>
+
+        <h2>Was ich beim zweiten Mal anders gemacht habe</h2>
+        <p>
+          Ich habe 4 Monate vor dem Test angefangen. Jeden Tag: 90 Minuten BMS-Fragen (nicht lesen,
+          sondern lösen), 30 Minuten KFF-Training, und am Wochenende eine Simulation. Ich habe meine
+          Fehler analysiert und Schwachstellen gezielt nachgearbeitet. Das Ergebnis: Von Rang 2.800
+          beim ersten Versuch auf Rang 380 beim zweiten. Gleicher Kopf, bessere Strategie.
+        </p>
+
+        <h2>Mein wichtigster Rat</h2>
+        <p>
+          Lerne nicht mehr, lerne smarter. Der MedAT testet nicht, wer am meisten Stunden investiert
+          hat, sondern wer am effektivsten gelernt hat. Übe aktiv mit Fragen, trainiere KFF täglich,
+          mache Simulationen und analysiere deine Fehler. Wenn du das konsequent machst, hast du
+          bessere Chancen als jemand, der doppelt so viel Zeit mit passivem Lesen verbringt.
+        </p>
+
+        <CTA text="Lerne smarter, nicht härter: MedMaster bietet adaptive Übungen, die sich an deine Schwächen anpassen." />
+      </>
+    ),
+  },
 ];
