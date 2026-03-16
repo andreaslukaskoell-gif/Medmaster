@@ -24,7 +24,9 @@ export const bioKapEntwicklung: Kapitel = {
         "Chloroplasten",
         "Lynn Margulis",
       ],
-      content: `## Miller-Urey-Experiment — Abiotische Synthese organischer Moleküle
+      content: `Von der Entstehung des Lebens über die Embryonalentwicklung bis zur Evolution des Menschen — dieses Kapitel deckt die biologischen Grundlagen ab, die im BMS regelmäßig geprüft werden.
+
+## Miller-Urey-Experiment — Abiotische Synthese organischer Moleküle
 
 Stanley Miller und Harold Urey simulierten 1953 die Bedingungen der frühen Erde: Sie mischten **CH₄ (Methan), NH₃ (Ammoniak), H₂ (Wasserstoff)** und **H₂O (Wasserdampf)** — die damals angenommenen Bestandteile der Uratmosphäre — in einem geschlossenen Kolben und erzeugten durch elektrische Entladungen Blitze. Nach wenigen Tagen enthielt die Lösung diverse **Aminosäuren** sowie weitere organische Verbindungen (Blausäure, Formaldehyd, Zuckervorstufen). Das Experiment bewies erstmals, dass organische Bausteine des Lebens **ohne Lebewesen** aus anorganischen Vorstufen entstehen können — **abiotische Synthese**.
 
@@ -225,7 +227,9 @@ Die 70S-Ribosomen der Mitochondrien erklären, warum manche Antibiotika mitochon
         "Überproduktion",
         "Fitness",
       ],
-      content: `## Darwins 4 Kernprinzipien und Lamarck im Vergleich
+      content: `Wie entsteht die Vielfalt des Lebens? Darwins Evolutionstheorie erklärt, warum sich Arten verändern — und wie natürliche Selektion als treibende Kraft wirkt.
+
+## Darwins 4 Kernprinzipien und Lamarck im Vergleich
 
 Bevor Darwin die **natürliche Selektion** formulierte, war die Theorie von **Jean-Baptiste de Lamarck** (1744–1829) einflussreich: Lamarck glaubte, dass Merkmale durch Gebrauch oder Nichtgebrauch verändert werden (*use and disuse*) und diese erworbenen Merkmale an Nachkommen weitergegeben werden. Beispiel: Giraffen strecken den Hals und vererben einen längeren Hals. Lamarcks Theorie ist **widerlegt** — erworbene Körperveränderungen werden nicht ins Erbmaterial übertragen.
 
@@ -284,7 +288,21 @@ Natürliche Selektion kann auf Merkmale einer Population auf drei verschiedene W
 
 ## Klinischer Bezug
 
-Gerichtete Selektion ist in der Medizin hoch relevant: Antibiotika-Einsatz selektiert resistente Bakterienstämme (MRSA, multiresistente Tuberkulose). Das Verständnis der Selektionsdynamik ist essenziell für die Entwicklung von Resistenz-Präventionsstrategien (Antibiotic Stewardship (rationaler Antibiotikaeinsatz), Therapierotation).`,
+Gerichtete Selektion ist in der Medizin hoch relevant: Antibiotika-Einsatz selektiert resistente Bakterienstämme (MRSA, multiresistente Tuberkulose). Das Verständnis der Selektionsdynamik ist essenziell für die Entwicklung von Resistenz-Präventionsstrategien (Antibiotic Stewardship (rationaler Antibiotikaeinsatz), Therapierotation).
+
+---
+
+## Sexuelle Selektion
+
+Neben der natürlichen Selektion wirkt die **sexuelle Selektion** als eigenständige Kraft auf die Merkmalsverteilung. Darwin unterschied zwei Formen:
+
+- **Intrasexuelle Selektion**: Konkurrenz zwischen Individuen **desselben Geschlechts** um Paarungsmöglichkeiten. Beispiel: Hirschmännchen kämpfen mit ihrem Geweih — der Sieger paart sich. Ergebnis: Waffen (Geweihe, Hörner, Stoßzähne).
+
+- **Intersexuelle Selektion**: Wahl eines Paarungspartners **durch das andere Geschlecht**. Beispiel: Pfauenweibchen bevorzugen Männchen mit besonders auffälligem Schwanzgefieder. Ergebnis: Schmuck (Gefieder, Gesang, Farbmuster).
+
+Beide Formen können zu **sexuellem Dimorphismus** (Geschlechtsunterschied in Größe, Farbe oder Merkmalen) führen. Sexuelle Selektion erklärt Merkmale, die für das Überleben nachteilig sind (Pfauenschwanz erhöht Prädationsrisiko), aber den Fortpflanzungserfolg steigern.
+
+> **Merke:** Intrasexuell = Konkurrenz innerhalb eines Geschlechts (Kampf). Intersexuell = Partnerwahl durch das andere Geschlecht (Schmuck). Beide → sexueller Dimorphismus.`,
       lernziele: [
         "Darwins vier Kernprinzipien der natürlichen Selektion nennen und erläutern",
         "Die drei Selektionsarten (stabilisierend, gerichtet, disruptiv) unterscheiden und mit Beispielen belegen",
@@ -440,7 +458,9 @@ Gerichtete Selektion ist in der Medizin hoch relevant: Antibiotika-Einsatz selek
         "Allelfrequenz",
         "Flaschenhalseffekt",
       ],
-      content: `## Die vier Evolutionsfaktoren
+      content: `Was treibt Evolution konkret an? Vier Faktoren verändern die genetische Zusammensetzung von Populationen — und das Hardy-Weinberg-Gleichgewicht beschreibt den Idealfall ohne Evolution.
+
+## Die vier Evolutionsfaktoren
 
 Evolution bedeutet Veränderung der **Allelfrequenzen** (Häufigkeit von Genvarianten) in einer Population. Vier Kräfte können diese Veränderung antreiben:
 
@@ -644,7 +664,9 @@ Der Gründereffekt erklärt die erhöhte Häufigkeit bestimmter genetischer Erkr
     {
       id: "bio-9-05",
       title: "Embryonalentwicklung — Von der Zygote zum Organismus",
-      // TODO: add image (no suitable orphan image available)
+      imageUrl: "/images/bms/bio-embryogenese-de.svg",
+      imageCaption:
+        "Abb.: Embryonalentwicklung — Von der Zygote über Morula und Blastozyste bis zur Implantation",
       stichworte: [
         "Befruchtung",
         "Furchung",
@@ -675,6 +697,8 @@ Die Embryonalentwicklung lässt sich in klar abgegrenzte Phasen gliedern:
 | **Fetalperiode** | Ab Woche 9 | Wachstum und Reifung — keine neuen Organanlagen |
 
 Diese zeitliche Abfolge ist prüfungsrelevant. Merke dir besonders: Das Herz beginnt bereits in **Woche 4 (Tag 22–23)** zu schlagen — nicht erst am Ende der Embryonalperiode.
+
+{{IMAGE}}
 
 ---
 
@@ -890,6 +914,8 @@ Zentral ist die Unterscheidung von Gruppentypen: Ein **Clade (Klade)** ist eine 
 Für die Merkmalsanalyse im Stammbaum unterscheidet man: **Apomorphie** (abgeleitetes, neu entstandenes Merkmal — z. B. Federn bei Vögeln) vs. **Plesiomorphie** (ursprüngliches, vom Vorfahren geerbtes Merkmal — z. B. vier Extremitäten bei Tetrapoden). Nur geteilte Apomorphien (**Syn**apomorphien) zeigen echte Verwandtschaft an, während geteilte Plesiomorphien (**Sym**plesiomorphien) keine Aussage über enge Verwandtschaft erlauben.
 
 > **Merke:** Clade = monophyletisch = Vorfahre + ALLE Nachkommen. Synapomorphie = geteiltes abgeleitetes Merkmal → zeigt Verwandtschaft. Plesiomorphie = ursprüngliches Merkmal → keine Verwandtschaftsaussage.
+
+{{IMAGE}}
 
 ---
 
@@ -1328,7 +1354,9 @@ Pääbos Paläogenomik (Erbgutanalyse ausgestorbener Arten) verknüpft Hominiden
     {
       id: "bio-4-00",
       title: "Gametogenese — Spermatogenese und Oogenese",
-      // TODO: add image (no suitable orphan image available)
+      imageUrl: "/images/bms/bio-spermatogenese-de.svg",
+      imageCaption:
+        "Abb.: Spermatogenese und Oogenese im Vergleich — 4 Spermien vs. 1 Eizelle + Polkörper",
       stichworte: [
         "Gametogenese",
         "Spermatogenese",
@@ -1342,12 +1370,14 @@ Pääbos Paläogenomik (Erbgutanalyse ausgestorbener Arten) verknüpft Hominiden
 
 Ohne Keimzellen keine Fortpflanzung. Die **Gametogenese** bezeichnet die Bildung reifer Geschlechtszellen (Gameten) durch Meiose — und sie verläuft bei Mann und Frau grundlegend verschieden. Beim Mann entstehen täglich Millionen Spermien ab der Pubertät, kontinuierlich bis ins hohe Alter. Bei der Frau sind die Eizell-Vorläufer bereits pränatal angelegt — ein Pool, der ein Leben lang nicht erneuert wird. Diese Asymmetrie hat weitreichende Konsequenzen: Sie erklärt, warum das Risiko für chromosomale Fehler mit dem mütterlichen Alter steigt (lange Meiose-Pause in Prophase I), und warum Spermien genetisch frischer Mutation unterliegen als Eizellen.
 
+{{IMAGE}}
+
 Wichtige Begriffe:
 - **Gamet** = reife Keimzelle (Spermium oder Eizelle) mit einfachem Chromosomensatz (n)
 - **Spermatogonium** = diploide Stammzelle der Spermien im Hoden (2n)
 - **Oogonium** = diploide Vorläuferzelle der Eizelle; beim Menschen nur pränatal aktiv — danach entstehen **primäre Oozyten** (2n), die in Meiose I eintreten und arretieren
 
-{{DIAGRAM:cell-cycle}}
+{{DIAGRAM:meiosis}}
 
 ---
 
@@ -1618,7 +1648,9 @@ Bevor ein Spermium die Eizelle durchdringen kann, muss es **kapazitiert** sein. 
     {
       id: "bio-4-01b",
       title: "Furchung, Morula, Blastozyste und Implantation",
-      // TODO: add image (no suitable orphan image available)
+      imageUrl: "/images/bms/bio-blastozyste-de.svg",
+      imageCaption:
+        "Abb.: Blastozyste (Tag 5-6) — Trophoblast, Embryoblast und Blastozoel mit Zona pellucida",
       stichworte: [
         "Furchung",
         "Morula",
@@ -1632,6 +1664,8 @@ Bevor ein Spermium die Eizelle durchdringen kann, muss es **kapazitiert** sein. 
       content: `## Von der Zygote zur Einnistung — vier Tage, drei Stadien
 
 Unmittelbar nach der Befruchtung beginnt die Zygote sich zu teilen. In den ersten fünf Tagen durchläuft der Keim drei charakteristische Stadien — Morula, Blastozyste und schließlich Implantation — während er durch den Eileiter in die Gebärmutter wandert. Keine dieser Teilungen ist normales Zellwachstum: Die Zellen werden bei jeder Runde kleiner, bis zwei klar unterschiedliche Zellpopulationen entstehen, die später zu Embryo und Plazenta werden.
+
+{{IMAGE}}
 
 ## Furchung — Teilungen ohne Wachstum
 
@@ -1927,7 +1961,9 @@ Aus welchem Keimblatt welches Organ entsteht, ist prüfungsrelevant. Die folgend
         "Anenzephalie",
         "Folsäure",
       ],
-      content: `{{DIAGRAM:neurulation}}
+      content: `Wie entsteht aus einer flachen Zellscheibe das zentrale Nervensystem? Die Neurulation (Bildung des Neuralrohrs aus dem Ektoderm) ist der entscheidende Schritt — und Fehler in diesem Prozess haben schwerwiegende klinische Konsequenzen.
+
+{{DIAGRAM:neurulation}}
 
 ## Voraussetzung: Notochord
 
@@ -2094,7 +2130,9 @@ Wenn der **posteriore Neuroporus** nicht schließt, kann es zur **Spina bifida**
         "Kritische Perioden",
         "Scheitel-Steiß-Länge",
       ],
-      content: `## Embryonalperiode (Wochen 1–8) — Organogenese
+      content: `Nach der Gastrulation und Neurulation beginnt die Organogenese — die Phase, in der alle Organsysteme angelegt werden. Fehler in dieser kritischen Zeit können schwere Fehlbildungen verursachen.
+
+## Embryonalperiode (Wochen 1–8) — Organogenese
 
 {{IMAGE}}
 

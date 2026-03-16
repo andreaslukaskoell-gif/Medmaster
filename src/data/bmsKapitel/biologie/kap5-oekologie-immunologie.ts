@@ -23,13 +23,13 @@ export const bioKapOekologie: Kapitel = {
         "Organismus",
         "Lebensgemeinschaft",
       ],
-      content: `## Ökologie: Definition und Grundprinzip
+      content: `Ökologie und Immunologie verbinden zwei BMS-Schwerpunkte: das Zusammenspiel von Organismen mit ihrer Umwelt und die Abwehr von Krankheitserregern.
+
+## Ökologie: Definition und Grundprinzip
 
 **Ökologie** (griech. oikos = Haus, logos = Lehre) untersucht die **Wechselbeziehungen** zwischen Organismen untereinander und mit ihrer Umwelt. Die zentrale Frage lautet: Welche Faktoren bestimmen, wo eine Art vorkommt, wie groß ihre Population wird und wie verschiedene Arten miteinander interagieren?
 
 Die Ökologie gliedert sich in Teilgebiete, die jeweils eine andere **Organisationsebene** betrachten — von der einzelnen Zelle bis zur gesamten Biosphäre.
-
-{{IMAGE}}
 
 ---
 
@@ -50,6 +50,8 @@ Die Biologie organisiert lebende Systeme in einer Hierarchie, bei der jede Ebene
 **6. Biosphäre:** Die Gesamtheit aller Ökosysteme der Erde — die dünne Schicht von der Tiefsee bis zur oberen Atmosphäre, in der Leben vorkommt.
 
 > **Merke:** Die Hierarchie lautet: Organismus → Population → Biozönose → Ökosystem → Biom → Biosphäre.
+
+{{IMAGE}}
 
 ---
 
@@ -136,9 +138,9 @@ In der Ökologie unterscheidet man zwei Kategorien von Umweltfaktoren:
     {
       id: "bio-10-02",
       title: "Umweltfaktoren: abiotisch, biotisch, Toleranzkurve",
-      imageUrl: "/images/bms/bio-oekologische-pyramide.svg",
+      imageUrl: "/images/bms/bio-toleranzkurve.svg",
       imageCaption:
-        "Abb.: Ökologische Ebenen und abiotische Faktoren (Wikimedia Commons, CC BY-SA 4.0)",
+        "Abb.: Toleranzkurve — Optimum, Pessimum, letale Grenzen und ökologische Amplitude",
       stichworte: [
         "Abiotische Faktoren",
         "Biotische Faktoren",
@@ -151,7 +153,9 @@ In der Ökologie unterscheidet man zwei Kategorien von Umweltfaktoren:
         "Shelford",
         "Bioindikator",
       ],
-      content: `## Die Toleranzkurve: Grundmodell der Ökophysiologie
+      content: `Wie reagieren Organismen auf konkrete Umweltfaktoren? Die Toleranzkurve liefert dazu das zentrale Modell.
+
+## Die Toleranzkurve: Grundmodell der Ökophysiologie
 
 Jeder Organismus kann nur innerhalb bestimmter Grenzen eines Umweltfaktors überleben. Die **Toleranzkurve** beschreibt diesen Zusammenhang graphisch: Auf der x-Achse steht die Intensität eines abiotischen Faktors (z. B. Temperatur), auf der y-Achse die Leistungsfähigkeit des Organismus (Wachstum, Reproduktion, Enzymaktivität). Die resultierende Kurve hat die Form einer **Glockenkurve** mit folgenden Zonen:
 
@@ -199,8 +203,6 @@ In der **Ernährungsmedizin** ist das Minimumprinzip allgegenwärtig. Veganer k�
 Im **Schockgeschehen** wird das Prinzip dramatisch sichtbar: Bei einem hypovolämischen Schock (massiver Blutverlust) kann die Lunge optimal ventiliert sein und das Herz kräftig schlagen — doch der **Sauerstofftransport** ist durch das fehlende Blutvolumen limitiert. Sauerstoff wird zum Minimum, und alle Organe leiden unter Ischämie (Minderdurchblutung). Erst die Volumensubstitution (Infusion) beseitigt den limitierenden Faktor.
 
 > **Merke:** Liebigs Minimumgesetz: Das Wachstum wird immer durch den knappsten essenziellen Faktor begrenzt. Klinisch: Vitamin B₁₂ bei Veganern, Eisen bei Schwangeren, Sauerstoff im Schock — erst die Beseitigung des Minimums verbessert den Zustand.
-
-{{DIAGRAM:animal-cell}}
 
 ---
 
@@ -386,7 +388,9 @@ Klinische Parallele: Der **Mensch** ist dank **Thermoregulation** (Schwitzen, Va
         "Realisierte Nische",
         "Nischendifferenzierung",
       ],
-      content: `## Nische vs. Lebensraum — warum der Unterschied klinisch relevant ist
+      content: `Wo lebt ein Organismus, und was braucht er zum Überleben? Die Unterscheidung zwischen Lebensraum und ökologischer Nische ist ein BMS-Klassiker — und klinisch direkt anwendbar.
+
+## Nische vs. Lebensraum — warum der Unterschied klinisch relevant ist
 
 Jeder Krankheitserreger braucht bestimmte Bedingungen, um sich zu vermehren: den richtigen Wirt, das richtige Gewebe, den passenden pH-Wert, bestimmte Nährstoffe. Genau diese Gesamtheit aller Lebensbedingungen nennt die Ökologie eine **ökologische Nische**. Der rein physische Aufenthaltsort — etwa “Dünndarm” oder “Erythrozyt” — ist dagegen nur der **Lebensraum (Habitat)**.
 
@@ -424,8 +428,6 @@ Das Nischen-Konzept erklärt präzise, warum Erreger bestimmte Gewebe befallen u
 3. **Anopheles-Mücke** (Darm und Speicheldrüse): Gametozyten (sexuelle Formen) werden von der Mücke aufgenommen, reifen dort heran und gelangen als Sporozoiten in den nächsten Wirt (Nische 3 — Vektor als Zwischenwirt).
 
 Jede dieser Nischen stellt andere Anforderungen (pH, Nährstoffe, Immunevasion), und Plasmodium hat für jede spezialisierte Oberflächenproteine entwickelt. Die fundamentale Nische des Parasiten ist auf diese drei Kompartimente beschränkt — er kann z. B. nicht auf unbelebten Oberflächen überleben.
-
-{{DIAGRAM:prokaryote-vs-eukaryote}}
 
 **Biofilm als Mikro-Nische — Pseudomonas auf dem Katheter:**
 
@@ -562,7 +564,9 @@ Bei Immunsuppression (z. B. HIV/AIDS mit CD4-T-Zell-Verlust, Chemotherapie-induz
         "Prädation",
         "Räuber-Beute",
       ],
-      content: `## Konkurrenz: intraspezifisch und interspezifisch
+      content: `Organismen leben nicht isoliert — sie konkurrieren um Ressourcen, gehen Partnerschaften ein oder nutzen einander aus. Hier die wichtigsten Formen biotischer Wechselwirkungen.
+
+## Konkurrenz: intraspezifisch und interspezifisch
 
 **Konkurrenz** entsteht, wenn Individuen dieselbe begrenzte Ressource benötigen.
 
@@ -594,17 +598,15 @@ Zwei Arten mit **identischer ökologischer Nische** können nicht dauerhaft im s
 | **Trophische Trennung** | Korallenriff-Fische: gleicher Lebensraum, aber verschiedene Beuteorganismen |
 | **Character Displacement** | Schnabelgröße zweier Finkenarten weicht stärker voneinander ab, wo sie sympatrisch (im selben Gebiet) vorkommen, als wo sie allopatrisch (getrennt) leben |
 
-{{DIAGRAM:phylogenetic-tree}}
-
 **Competitive Release (Konkurrenzbefeiung):** Verschwindet ein Konkurrent, dehnt die verbleibende Art ihre Realnische zur Fundamentalnische aus. Beispiel: Auf Inseln ohne Konkurrenten besetzen Eidechsenarten breitere Habitate und Nahrungsnischen als auf dem Festland.
 
 > **Merke:** Gause: Identische Nische → eine Art verdrängt die andere. Koexistenz nur durch Nischendifferenzierung (räumlich, zeitlich, trophisch). Character Displacement = Unterschiede verstärken sich bei Sympatrie.
 
 ---
 
-## r- und K-Strategen — Zwei Überlebensstrategien
+## r- und K-Strategen — Kurzübersicht
 
-Arten unterscheiden sich fundamental in ihrer Fortpflanzungsstrategie, je nachdem ob sie unter dichteunabhängigen (instabile Umwelt) oder dichteabhängigen (stabile, gesättigte Umwelt) Selektionsdrücken leben:
+Arten unterscheiden sich in ihrer Fortpflanzungsstrategie (ausführlich → UK Populationsdynamik):
 
 | Merkmal | **r-Strategen** | **K-Strategen** |
 |---|---|---|
@@ -821,7 +823,9 @@ Die **Räuberpopulation hinkt der Beutepopulation zeitlich nach** (Höhepunkt de
         "Wasserkreislauf",
         "Trophieebenen",
       ],
-      content: `## Ökosystem-Ebenen und Trophiestruktur
+      content: `Wie fließen Energie und Materie durch ein Ökosystem? Nahrungsketten, Stoffkreisläufe und die 10%-Regel beantworten diese prüfungsrelevante Frage.
+
+## Ökosystem-Ebenen und Trophiestruktur
 
 Ein **Ökosystem** umfasst alle Lebewesen (Biozönose/biotische Komponente) eines Gebiets und ihre Wechselwirkungen mit der abiotischen Umwelt (Biotop). Ökosysteme sind offen für Energie- und Materieflüsse.
 
@@ -892,8 +896,6 @@ Materie zirkuliert in **biogeochemischen Kreisläufen** zwischen biotischen und 
 - Fossile Brennstoffe: ~5.000 GtC (passiv, außer bei Verbrennung)
 
 **Ozeane als Puffer:** Ozeane absorbieren ca. 30% der anthropogenen CO₂-Emissionen → Ozeanversauerung (pH sinkt → Probleme für kalkbildende Organismen wie Korallen, Muscheln, Foraminiferen (kalkschalige Einzeller)).
-
-{{DIAGRAM:cell-cycle}}
 
 ### Stickstoffkreislauf
 
@@ -1145,8 +1147,6 @@ Grafisch entsteht eine **J-förmige Kurve**, die immer steiler ansteigt. Dieses 
 - **Sepsis:** Bakteriämie mit *E. coli* → fulminanter Verlauf, weil Generationszeit nur 20 min vs. 15–20 h bei *M. tuberculosis* (schleichend)
 
 > **Merke:** Exponentielles Wachstum: N(t) = N₀·e^(rt), J-Kurve, keine Obergrenze. Verdopplungszeit = ln(2)/r. Kommt real nur bei unbegrenzten Ressourcen vor — Bakterienkultur, invasive Spezies, frühe Tumorphase.
-
-{{DIAGRAM:hemoglobin-curve}}
 
 ---
 
@@ -1456,8 +1456,9 @@ Bakterienwachstum in geschlossener Kultur (Blutkultur, Nährmedium) durchläuft 
     {
       id: "bio-11-01",
       title: "Antikörper — Aufbau, Klassen und Effektorfunktionen",
-      imageUrl: "/images/bms/bio-antigen-praesentation.jpg",
-      imageCaption: "Abb.: Antigenpräsentation durch MHC-Moleküle (OpenStax, CC BY 4.0)",
+      imageUrl: "/images/bms/bio-immunantwort.jpg",
+      imageCaption:
+        "Abb.: Humorale Immunantwort — Antikörperproduktion durch B-Zellen (OpenStax, CC BY 4.0)",
       stichworte: [
         "IgG",
         "IgA",
@@ -1469,7 +1470,9 @@ Bakterienwachstum in geschlossener Kultur (Blutkultur, Nährmedium) durchläuft 
         "Opsonisierung",
         "Neutralisierung",
       ],
-      content: `## IgG-Grundstruktur — Fab und Fc
+      content: `Mit dem Wechsel zur Immunologie steht die körpereigene Abwehr im Mittelpunkt. Antikörper (Immunglobuline) sind die zentralen Effektormoleküle der humoralen Immunantwort — ihr Aufbau und ihre Klassen gehören zum MedAT-Kernstoff.
+
+## IgG-Grundstruktur — Fab und Fc
 
 {{DIAGRAM:immune-response}}
 
@@ -1501,8 +1504,6 @@ Ein **Antikörper (Immunglobulin, Ig)** ist ein Y-förmiges Glykoprotein (Protei
 
 ## Immunglobulin-Klassen (Isotypen)
 
-{{DIAGRAM:blood-groups}}
-
 Das Immunsystem produziert fünf Klassen von Immunglobulinen (Isotypen), die sich in Struktur, Vorkommen und Funktion unterscheiden.
 
 > **Merke:** Ig-Klassen: IgG (häufig, plazentagängig), IgA (Sekrete), IgM (Primär, Pentamer), IgE (Allergie), IgD (B-Zell-Signal).
@@ -1527,8 +1528,6 @@ IgM ist das erste Immunglobulin, das bei einer Immunantwort produziert wird (Pri
 ---
 
 ## Komplementsystem — Der klassische Aktivierungsweg
-
-{{DIAGRAM:blutbestandteile}}
 
 Das Komplementsystem ist ein kaskadenartiges System aus ca. 30 Plasmaproteinen, das bei der Abwehr von Pathogenen hilft. Der klassische Weg wird durch Antigen-Antikörper-Komplexe aktiviert: C1q bindet an Fc-Regionen von IgG oder IgM, die an Antigen gebunden sind. Aktiviertes C1 spaltet C4 und C2 → C3-Konvertase → spaltet massenhaft C3 → C3b-Ablagerung auf Pathogenoberfläche (Opsonin für Phagozytose) → C5-Konvertase → C5b → C6, C7, C8, C9 assemblieren den Membrane Attack Complex (MAC) → Lochbildung in bakterieller Membran → osmotische Lyse. Nebenprodukte: C3a und C5a sind Anaphylatoxine → Mastzell-Degranulation, Gefäßerweiterung, Neutrophilenrekrutierung (Entzündung).
 
@@ -1679,15 +1678,15 @@ Das Komplementsystem ist ein kaskadenartiges System aus ca. 30 Plasmaproteinen, 
         "Klonale Selektion",
         "Affinitätsreifung",
       ],
-      content: `## Antikörperdiversität — Das Grundproblem
+      content: `Wie schafft es das Immunsystem, Milliarden verschiedener Antigene zu erkennen, obwohl das Genom nur ~20.000 Gene hat? Die Antwort liegt in der V(D)J-Rekombination — einem einzigartigen genetischen Mechanismus.
+
+## Antikörperdiversität — Das Grundproblem
 
 Das menschliche Immunsystem erkennt schätzungsweise mehr als 10¹⁰ verschiedene Antigene — eine Zahl, die das Genom mit seinen ~20.000 Genen unmöglich direkt codieren könnte. Die Lösung liegt in drei sich ergänzenden Mechanismen: **V(D)J-Rekombination** (kombinatorische Vielfalt), **junctionale Diversität** (zufällige Nukleotidinsertionen an Verbindungsstellen) und **somatische Hypermutation** (nachträgliche Feinabstimmung in Keimzentren). Diese Mechanismen zusammen erklären, wie ein begrenztes Genom eine nahezu unbegrenzte Antikörperbibliothek erzeugt.
 
 ---
 
 ## V(D)J-Rekombination — Molekularer Mechanismus
-
-{{DIAGRAM:dna-helix}}
 
 Die V(D)J-Rekombination wird durch den RAG1/RAG2-Komplex (Recombination Activating Gene) katalysiert. RAG1/RAG2 erkennen konservierte Rekombinationssignalsequenzen (RSS) neben den V-, D- und J-Segmenten. Die Rekombination erfolgt durch: (1) Bindung von RAG an RSS beider Segmente; (2) DNA-Doppelstrangbrüche; (3) Ligation durch die allgemeine DNA-Reparaturmaschinerie (NHEJ). Während des Ligationsschritts werden durch TdT (Terminal deoxynucleotidyl Transferase) zufällige Nukleotide (N-Nukleotide) an die Schnittstellen eingefügt — dies ist eine enorme Quelle junctionaler Diversität, da die Insertion in einem zufälligen Leseraster erfolgt (kann Frameshift verursachen → nicht-produktive Rearrangements). Nur Rearrangements im richtigen Leseraster führen zu funktionalem Antikörperprotein (produktiv).
 
@@ -1706,8 +1705,6 @@ Die Affinitätsreifung findet in Keimzentren der sekundären Lymphorgane (Lymphk
 ---
 
 ## Klassenwechsel (Isotyp-Switch) — Funktionelle Anpassung
-
-{{DIAGRAM:transcription-translation}}
 
 Neben der V(D)J-Rekombination und der somatischen Hypermutation verfügt das Immunsystem über einen dritten Mechanismus zur Antikörperanpassung: den Klassenwechsel (Class Switch Recombination, CSR). Dabei wird die konstante Region der schweren Kette ausgetauscht, ohne die Antigenbindestelle zu verändern — die Spezifität bleibt erhalten, aber die Effektorfunktion ändert sich. Der Klassenwechsel wird durch Zytokine gesteuert: IL-4 induziert den Switch zu IgE (relevant bei Allergien und Parasitenabwehr), IFN-gamma fördert den Switch zu IgG (Opsonierung, Komplementaktivierung), TGF-beta fördert IgA (Schleimhautimmunität). Auch der Klassenwechsel erfordert das Enzym AID (Activation-Induced Cytidine Deaminase), das DNA-Brüche in den Switch-Regionen erzeugt. Fehlerhafte CSR kann ebenso wie fehlerhafte V(D)J-Rekombination zu chromosomalen Translokationen und damit zu Lymphomen beitragen.
 
@@ -1853,7 +1850,9 @@ Neben der V(D)J-Rekombination und der somatischen Hypermutation verfügt das Imm
       imageUrl: "/images/bms/bio-blutgruppen.jpg",
       imageCaption: "Abb.: AB0-Blutgruppen — Antigene und Antikörper (OpenStax, CC BY 4.0)",
       stichworte: ["AB0-Vererbung", "Genotypen", "Phänotypen", "Kodominanz", "Multiple Allele"],
-      content: `## AB0-Blutgruppensystem — Genetische Grundlagen
+      content: `Das AB0-System verbindet Immunologie mit Genetik: Kohlenhydrat-Antigene auf Erythrozyten bestimmen Blutgruppe und Transfusionskompatibilität — ein Paradebeispiel für Kodominanz und multiple Allelie.
+
+## AB0-Blutgruppensystem — Genetische Grundlagen
 
 {{DIAGRAM:blood-groups}}
 
@@ -2046,7 +2045,9 @@ In der klinischen Praxis gilt traditionell: Blutgruppe 0 Rh-negativ (0-) als uni
         "Morbus haemolyticus neonatorum",
         "Anti-D-Prophylaxe",
       ],
-      content: `## Rhesusfaktor — Definition
+      content: `Neben dem AB0-System ist der Rhesusfaktor das klinisch wichtigste Blutgruppenmerkmal — vor allem wegen der Rhesus-Inkompatibilität in der Schwangerschaft.
+
+## Rhesusfaktor — Definition
 
 {{DIAGRAM:blood-groups}}
 

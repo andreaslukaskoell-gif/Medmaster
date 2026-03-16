@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" font-family="system-ui, sans-serif">
+  <rect width="700" height="360" fill="#f8fafc" rx="8"/>
+  <text x="350" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#1e293b">Embryonalentwicklung — Von der Zygote zum Embryo</text>
+
+  <!-- Timeline arrow -->
+  <line x1="30" y1="180" x2="680" y2="180" stroke="#cbd5e1" stroke-width="2"/>
+  <polygon points="680,180 670,175 670,185" fill="#cbd5e1"/>
+
+  <!-- Stage 1: Zygote (Tag 0) -->
+  <g transform="translate(60,100)">
+    <circle cx="0" cy="0" r="28" fill="#fde68a" stroke="#f59e0b" stroke-width="2"/>
+    <circle cx="0" cy="0" r="8" fill="#f59e0b" opacity="0.5"/>
+    <text x="0" y="4" text-anchor="middle" font-size="8" font-weight="600" fill="#92400e">2n</text>
+    <text x="0" y="45" text-anchor="middle" font-size="12" font-weight="700" fill="#334155">Zygote</text>
+    <text x="0" y="59" text-anchor="middle" font-size="9" fill="#64748b">Tag 0</text>
+    <text x="0" y="72" text-anchor="middle" font-size="8" fill="#94a3b8">Befruchtung</text>
+  </g>
+
+  <!-- Arrow -->
+  <path d="M 95,100 L 125,100" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#arrowE)"/>
+  <text x="110" y="90" text-anchor="middle" font-size="8" fill="#94a3b8">Furchung</text>
+
+  <!-- Stage 2: 2-Zell (Tag 1) -->
+  <g transform="translate(160,100)">
+    <circle cx="-10" cy="0" r="16" fill="#fed7aa" stroke="#f97316" stroke-width="1.5"/>
+    <circle cx="10" cy="0" r="16" fill="#fed7aa" stroke="#f97316" stroke-width="1.5"/>
+    <text x="0" y="35" text-anchor="middle" font-size="11" font-weight="600" fill="#334155">2-Zell</text>
+    <text x="0" y="49" text-anchor="middle" font-size="9" fill="#64748b">Tag 1</text>
+  </g>
+
+  <!-- Arrow -->
+  <path d="M 195,100 L 220,100" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#arrowE)"/>
+
+  <!-- Stage 3: 4-Zell (Tag 2) -->
+  <g transform="translate(255,100)">
+    <circle cx="-10" cy="-10" r="12" fill="#fecaca" stroke="#ef4444" stroke-width="1.5"/>
+    <circle cx="10" cy="-10" r="12" fill="#fecaca" stroke="#ef4444" stroke-width="1.5"/>
+    <circle cx="-10" cy="10" r="12" fill="#fecaca" stroke="#ef4444" stroke-width="1.5"/>
+    <circle cx="10" cy="10" r="12" fill="#fecaca" stroke="#ef4444" stroke-width="1.5"/>
+    <text x="0" y="40" text-anchor="middle" font-size="11" font-weight="600" fill="#334155">4-Zell</text>
+    <text x="0" y="54" text-anchor="middle" font-size="9" fill="#64748b">Tag 2</text>
+  </g>
+
+  <!-- Arrow -->
+  <path d="M 290,100 L 315,100" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#arrowE)"/>
+
+  <!-- Stage 4: Morula (Tag 3-4) -->
+  <g transform="translate(355,100)">
+    <circle cx="0" cy="0" r="28" fill="#fecdd3" stroke="#f43f5e" stroke-width="2"/>
+    <circle cx="-8" cy="-10" r="7" fill="#fda4af" stroke="#e11d48" stroke-width="0.8"/>
+    <circle cx="6" cy="-8" r="7" fill="#fda4af" stroke="#e11d48" stroke-width="0.8"/>
+    <circle cx="-4" cy="5" r="7" fill="#fda4af" stroke="#e11d48" stroke-width="0.8"/>
+    <circle cx="10" cy="6" r="7" fill="#fda4af" stroke="#e11d48" stroke-width="0.8"/>
+    <circle cx="-12" cy="4" r="6" fill="#fda4af" stroke="#e11d48" stroke-width="0.8"/>
+    <circle cx="0" cy="-2" r="6" fill="#fda4af" stroke="#e11d48" stroke-width="0.8"/>
+    <circle cx="-6" cy="14" r="6" fill="#fda4af" stroke="#e11d48" stroke-width="0.8"/>
+    <circle cx="8" cy="14" r="6" fill="#fda4af" stroke="#e11d48" stroke-width="0.8"/>
+    <text x="0" y="46" text-anchor="middle" font-size="12" font-weight="700" fill="#334155">Morula</text>
+    <text x="0" y="60" text-anchor="middle" font-size="9" fill="#64748b">Tag 3-4</text>
+    <text x="0" y="73" text-anchor="middle" font-size="8" fill="#94a3b8">16-32 Zellen</text>
+  </g>
+
+  <!-- Arrow -->
+  <path d="M 390,100 L 420,100" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#arrowE)"/>
+
+  <!-- Stage 5: Blastozyste (Tag 5-6) -->
+  <g transform="translate(470,100)">
+    <ellipse cx="0" cy="0" rx="32" ry="28" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+    <!-- Trophoblast ring suggestion -->
+    <ellipse cx="0" cy="0" rx="30" ry="26" fill="none" stroke="#93c5fd" stroke-width="3" stroke-dasharray="3,2"/>
+    <!-- ICM -->
+    <circle cx="-12" cy="-6" r="8" fill="#a78bfa" stroke="#7c3aed" stroke-width="1"/>
+    <circle cx="-4" cy="4" r="7" fill="#a78bfa" stroke="#7c3aed" stroke-width="1"/>
+    <circle cx="-14" cy="6" r="6" fill="#a78bfa" stroke="#7c3aed" stroke-width="1"/>
+    <text x="0" y="46" text-anchor="middle" font-size="12" font-weight="700" fill="#334155">Blastozyste</text>
+    <text x="0" y="60" text-anchor="middle" font-size="9" fill="#64748b">Tag 5-6</text>
+  </g>
+
+  <!-- Arrow -->
+  <path d="M 510,100 L 540,100" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#arrowE)"/>
+
+  <!-- Stage 6: Implantation (Tag 6-7) -->
+  <g transform="translate(590,90)">
+    <!-- Endometrium -->
+    <rect x="-40" y="10" width="80" height="30" fill="#fecdd3" stroke="#f43f5e" stroke-width="1.5" rx="4"/>
+    <text x="0" y="30" text-anchor="middle" font-size="8" fill="#9f1239">Endometrium</text>
+    <!-- Blastozyste implanting -->
+    <ellipse cx="0" cy="-5" rx="22" ry="18" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+    <circle cx="-6" cy="-8" r="5" fill="#a78bfa" stroke="#7c3aed" stroke-width="0.8"/>
+    <circle cx="-2" cy="-2" r="4" fill="#a78bfa" stroke="#7c3aed" stroke-width="0.8"/>
+    <!-- Invasion arrows -->
+    <line x1="-8" y1="12" x2="-8" y2="18" stroke="#7c3aed" stroke-width="1"/>
+    <line x1="0" y1="13" x2="0" y2="18" stroke="#7c3aed" stroke-width="1"/>
+    <line x1="8" y1="12" x2="8" y2="18" stroke="#7c3aed" stroke-width="1"/>
+    <text x="0" y="58" text-anchor="middle" font-size="11" font-weight="700" fill="#334155">Implantation</text>
+    <text x="0" y="72" text-anchor="middle" font-size="9" fill="#64748b">Tag 6-7</text>
+    <text x="0" y="85" text-anchor="middle" font-size="8" fill="#94a3b8">Nidation</text>
+  </g>
+
+  <!-- Bottom info boxes -->
+  <rect x="30" y="260" width="200" height="55" fill="#dbeafe" fill-opacity="0.5" rx="6" stroke="#93c5fd"/>
+  <text x="130" y="280" text-anchor="middle" font-size="10" font-weight="600" fill="#1d4ed8">Furchungsteilungen</text>
+  <text x="130" y="294" text-anchor="middle" font-size="9" fill="#334155">Zellen werden kleiner (kein Wachstum)</text>
+  <text x="130" y="307" text-anchor="middle" font-size="9" fill="#334155">Gesamtgröße bleibt gleich (Zona pellucida)</text>
+
+  <rect x="250" y="260" width="200" height="55" fill="#f3e8ff" fill-opacity="0.5" rx="6" stroke="#c4b5fd"/>
+  <text x="350" y="280" text-anchor="middle" font-size="10" font-weight="600" fill="#7c3aed">Differenzierung</text>
+  <text x="350" y="294" text-anchor="middle" font-size="9" fill="#334155">Trophoblast → Plazenta</text>
+  <text x="350" y="307" text-anchor="middle" font-size="9" fill="#334155">Embryoblast → Embryo (Epiblast + Hypoblast)</text>
+
+  <rect x="470" y="260" width="200" height="55" fill="#fce7f3" fill-opacity="0.5" rx="6" stroke="#f9a8d4"/>
+  <text x="570" y="280" text-anchor="middle" font-size="10" font-weight="600" fill="#be185d">hCG-Produktion</text>
+  <text x="570" y="294" text-anchor="middle" font-size="9" fill="#334155">Trophoblast sezerniert hCG</text>
+  <text x="570" y="307" text-anchor="middle" font-size="9" fill="#334155">→ Corpus luteum bleibt aktiv</text>
+
+  <!-- Timeline labels -->
+  <text x="350" y="210" text-anchor="middle" font-size="10" fill="#94a3b8">Wanderung durch den Eileiter → Uterus</text>
+  <line x1="50" y1="195" x2="540" y2="195" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <defs>
+    <marker id="arrowE" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+</svg>

@@ -23,7 +23,9 @@ export const bioKapAnatomieGewebe: Kapitel = {
         "Flimmerepithel",
         "Apikale Polarität",
       ],
-      content: `## Grundprinzip: Eigenschaften aller Epithelien
+      content: `Gewebe bilden die Bausteine aller Organe — ihre Kenntnis ist für den BMS-Teil unverzichtbar. Dieses Kapitel behandelt die vier Grundgewebearten (Epithel-, Binde-, Muskel- und Nervengewebe) sowie die wichtigsten Organsysteme des Menschen.
+
+## Grundprinzip: Eigenschaften aller Epithelien
 
 Epithelien kleiden jede Körperoberfläche und jedes Hohlorgan aus — trotz ihrer Vielfalt teilen **alle** Epithelien drei Grundeigenschaften:
 
@@ -215,7 +217,9 @@ Sekretionsmechanismen exokriner Drüsen:
         "Fibroblasten",
         "Straffes Bindegewebe",
       ],
-      content: `## Grundprinzip: Die Extrazelluläre Matrix (EZM)
+      content: `Binde- und Stützgewebe geben dem Körper Form, Halt und mechanische Belastbarkeit — ihr gemeinsames Prinzip ist die Extrazelluläre Matrix.
+
+## Grundprinzip: Die Extrazelluläre Matrix (EZM)
 
 Sehne, Knorpel und Knochen sehen völlig verschieden aus, bestehen aber alle aus demselben Prinzip: Viel **mehr Matrix als Zellen**. Die **EZM** (der Raum zwischen den Zellen, gefüllt mit Fasern und Proteoglykanen) besteht aus:
 
@@ -407,7 +411,7 @@ Sehne, Knorpel und Knochen sehen völlig verschieden aus, bestehen aber alle aus
         {
           question: "Warum heilt Knorpel nach Verletzungen so schlecht?",
           options: [
-            "Chondrozyten sind posimitotisch und können sich nicht teilen.",
+            "Chondrozyten sind postmitotisch und können sich nicht teilen.",
             "Knorpel enthält keine Grundsubstanz.",
             "Knorpel ist avaskulär — ohne Blutgefäße können Reparaturzellen und Nährstoffe schlecht einwandern.",
             "Knorpel besitzt zu viele Osteoklasten, die neu gebildetes Gewebe sofort abbauen.",
@@ -457,8 +461,6 @@ Sehne, Knorpel und Knochen sehen völlig verschieden aus, bestehen aber alle aus
 ![Herzmuskelgewebe mit Glanzstreifen und einkernigen Kardiomyozyten](/images/bms/bio-herzmuskel.jpg)
 
 > **Merke:** Herzmuskel = quergestreift (wie Skelett) + einkernig + Gap Junctions + kein Tetanus. Glatte Muskulatur = kein Troponin -> Calmodulin stattdessen.
-
-{{IMAGE}}
 
 ---
 
@@ -1152,7 +1154,9 @@ Jedes Rückenmarkssegment versorgt über seinen Spinalnerv ein bestimmtes Hautar
         "Epidermis",
         "Dermis",
       ],
-      content: `## Grundprinzip: Transduktion — Reize als elektrische Signale
+      content: `Ob Licht, Schall oder Geruch — jeder Sinnesreiz muss in ein elektrisches Signal umgewandelt werden, bevor das Gehirn ihn verarbeiten kann.
+
+## Grundprinzip: Transduktion — Reize als elektrische Signale
 
 {{DIAGRAM:sinnesorgane}}
 
@@ -1490,7 +1494,7 @@ Die Nebenniere (Glandula suprarenalis) sitzt kappenförmig auf der Niere und gli
 
 ## Pankreas und Blutzuckerregulation
 
-{{DIAGRAM:menstrual-cycle}}
+{{DIAGRAM:hormone-system}}
 
 Die **Langerhans-Inseln** (1–2 % des Pankreasgewebes, ~1 Million Inseln) enthalten die endokrinen Zellen des Pankreas. Die exokrine Funktion (Verdauungsenzyme) wird hier nicht behandelt.
 
@@ -1679,7 +1683,7 @@ Dieses Schema ist auf **jede Hormonachse** übertragbar: CRH-ACTH-Cortisol, GnRH
     },
     {
       id: "bio-3-04",
-      title: "Herz Kreislauf",
+      title: "Herz-Kreislauf-System",
       imageUrl: "/images/bms/bio-herz-kreislauf.jpg",
       imageCaption:
         "Abb.: Herz-Kreislauf-System mit großem und kleinem Kreislauf (OpenStax, CC BY 4.0)",
@@ -2622,7 +2626,9 @@ Die Immunisierung nutzt das Prinzip der erworbenen Immunität gezielt aus — en
       imageUrl: "/images/bms/bio-lymphsystem.jpg",
       imageCaption: "Abb.: Lymphatisches System mit Lymphknoten und -gefäßen (OpenStax, CC BY 4.0)",
       stichworte: ["Lymphknoten", "Milz", "Thymus", "Lymphe", "Lymphgefäße", "Lymphozytenreifung"],
-      content: `## Lymphgefäße — vom Kapillarnetz zum Ductus thoracicus
+      content: `Neben dem Blutkreislauf durchzieht ein zweites Gefäßsystem den Körper: das lymphatische System. Es transportiert überschüssige Gewebsflüssigkeit zurück, spielt eine zentrale Rolle in der Immunabwehr und leitet resorbierte Fette aus dem Darm.
+
+## Lymphgefäße — vom Kapillarnetz zum Ductus thoracicus
 
 Das lymphatische Gefäßsystem beginnt blind im Gewebe und transportiert interstitielle Flüssigkeit zurück ins venöse Blut. Die Hierarchie der Lymphgefäße:
 
@@ -2815,7 +2821,9 @@ Der Lymphknoten filtert Lymphe und initiiert Immunantworten. Seine zonale Archit
         "Zwerchfell",
         "Bronchien",
       ],
-      content: `## Der Bronchialbaum — von der Trachea zur Alveole
+      content: `Jede Zelle benötigt Sauerstoff und muss CO₂ abgeben — das Atmungssystem stellt sicher, dass dieser Gasaustausch kontinuierlich abläuft.
+
+## Der Bronchialbaum — von der Trachea zur Alveole
 
 {{DIAGRAM:atmungssystem}}
 
@@ -3043,7 +3051,9 @@ Das **Atemzentrum** liegt in der **Medulla oblongata** und im **Pons**. Es gener
         "Peristaltik",
         "Resorption",
       ],
-      content: `## Verdauungstrakt Organ für Organ — Mund bis Kolon
+      content: `Nahrung muss mechanisch zerkleinert, chemisch gespalten und als Nährstoff resorbiert werden — genau das leistet der Verdauungstrakt in einer koordinierten Abfolge von Organen.
+
+## Verdauungstrakt Organ für Organ — Mund bis Kolon
 
 {{DIAGRAM:verdauungssystem}}
 
@@ -3526,7 +3536,9 @@ Der fertige Urin verlässt die Niere über: **Nierenbecken (Pelvis renalis) → 
     {
       id: "bio-3-11",
       title: "Skelettsystem",
-      // TODO: add image (no skelett orphan image available)
+      imageUrl: "/images/bms/bio-skelett.svg",
+      imageCaption:
+        "Abb.: Menschliches Skelett — Vorderansicht mit Bezeichnung der wichtigsten Knochen (Wikimedia Commons, Public Domain)",
       stichworte: [
         "Knochen",
         "Knorpel",
@@ -3541,6 +3553,8 @@ Der fertige Urin verlässt die Niere über: **Nierenbecken (Pelvis renalis) → 
 Eine 68-jährige Patientin stürzt beim Einkaufen und erleidet eine Schenkelhalsfraktur — obwohl sie nur aus dem Stand gefallen ist. Die Diagnose: **Osteoporose** mit massiv reduzierter Knochendichte. Warum brechen manche Knochen bei Bagatelltrauma? Die Antwort liegt im Zusammenspiel von Skelettanatomie, Knochenumbau und hormoneller Regulation.
 
 Die Grundlagen zu Knochengewebe (Osteoblasten, Osteoklasten, RANKL/OPG), Knorpeltypen und Kollagen sind in **bio-2-02 (Binde- und Stützgewebe)** behandelt. Hier liegt der Fokus auf dem **Skelett als Organsystem**: Gliederung, Gelenktypen, Ossifikation und Wirbelsäule.
+
+{{IMAGE}}
 
 ---
 
@@ -3777,7 +3791,9 @@ Die Wirbelsäule ist keine gerade Säule, sondern zeigt im Sagittalprofil **vier
         "Progesteron",
         "Befruchtung",
       ],
-      content: `## Spermatogenese und Oogenese — Gametogenese im Vergleich
+      content: `Das Fortpflanzungssystem verbindet Anatomie, Endokrinologie und Genetik — von der Keimzellbildung über den Menstruationszyklus bis zur Befruchtung.
+
+## Spermatogenese und Oogenese — Gametogenese im Vergleich
 
 Ein Mann produziert täglich rund 200 Millionen Spermien, eine Frau reift pro Zyklus nur eine einzige Eizelle — dieser Kontrast prägt die gesamte Fortpflanzungsbiologie. Beide Keimzellentwicklungen nutzen die Meiose, unterscheiden sich aber fundamental in Ergebnis und Zeitplanung:
 

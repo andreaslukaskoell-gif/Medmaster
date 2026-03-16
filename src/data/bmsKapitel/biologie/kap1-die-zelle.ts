@@ -28,7 +28,9 @@ export const bioKap1: Kapitel = {
         "Systembiologie",
         "Negative Rückkopplung",
       ],
-      content: `## Die sieben Kennzeichen des Lebens
+      content: `Die Zelle ist die kleinste funktionelle Einheit des Lebens — und damit die Grundlage für fast jede BMS-Frage in Biologie. Dieses Kapitel behandelt den Aufbau eukaryotischer und prokaryotischer Zellen, ihre Organellen, den Membrantransport, die Zellteilung und den Energiestoffwechsel.
+
+## Die sieben Kennzeichen des Lebens
 
 Kein einzelnes Merkmal allein definiert Leben — erst ihr Zusammenspiel kennzeichnet ein lebendes System:
 
@@ -49,8 +51,6 @@ Kein einzelnes Merkmal allein definiert Leben — erst ihr Zusammenspiel kennzei
 > **Merke:** **StReForWaEvoBeHo**: Stoffwechsel – Reizbarkeit – Fortpflanzung – Wachstum – Evolution – Bewegung – Homöostase
 
 {{DIAGRAM:animal-cell}}
-
-{{IMAGE}}
 
 ---
 
@@ -78,6 +78,8 @@ Homöostase bedeutet: Der Körper hält Parameter wie Blutzucker, Körpertempera
 **Klinisch — Homöostasestörung:** Diabetes mellitus Typ 2: Insulinresistenz → der Regelkreis versagt → chronische Hyperglykämie (dauerhaft erhöhter Blutzucker) → Proteinglykation (Zuckeranlagerung an Proteine; HbA1c als Laborparameter) → Gefäßschäden → Retinopathie (Netzhautschädigung), Nephropathie (Nierenschädigung), Neuropathie (Nervenschädigung).
 
 > **Merke:** Negative Rückkopplung = stabilisiert (Homöostase). Positive Rückkopplung = verstärkt für Alles-oder-Nichts-Effekte (Blutgerinnung, Wehen, Aktionspotential).
+
+{{IMAGE}}
 
 ---
 
@@ -272,7 +274,9 @@ Dieses Phänomen nennt sich **Emergenz** (von lat. *emergere* = hervorkommen): D
         "Kompartimentierung",
         "Antibiotika-Zielstrukturen",
       ],
-      content: `## Grundstruktur im Vergleich
+      content: `Alle Zellen lassen sich in zwei Grundtypen einteilen — Prokaryoten und Eukaryoten. Der zentrale Unterschied bestimmt, wie komplex eine Zelle organisiert sein kann.
+
+## Grundstruktur im Vergleich
 
 Das definierendste Merkmal: Prokaryoten haben **keinen membranumschlossenen Zellkern**. Ihre DNA liegt als zirkuläres Chromosom frei im **Nukleoid** (ein definierter Bereich im Zytoplasma ohne Kernhülle). Eukaryoten haben echte Kerne mit Doppelmembran, Kernporen und linear verpackter DNA an Histonen (Verpackungsproteinen).
 
@@ -527,7 +531,9 @@ Viele Archäen sind **Extremophile**: Thermophile (bis 121°C), Halophile (gesä
         "Lipid-Rafts",
         "CFTR",
       ],
-      content: `## Grundprinzip: Phospholipid-Doppelschicht
+      content: `Die Zellmembran entscheidet, was in die Zelle gelangt und was sie verlässt — ihr Aufbau ist die Grundlage für Transportprozesse, Signalübertragung und Zellidentität.
+
+## Grundprinzip: Phospholipid-Doppelschicht
 
 Die Zellmembran ist die Grenze zwischen Zelle und Außenwelt — nicht als starre Wand, sondern als selektive, dynamische Schranke. Ihr Aufbau erklärt direkt, was sie durchlässt und was nicht.
 
@@ -578,7 +584,7 @@ Steroide (z. B. Cortisol, Vitamin D) sind lipophil und passieren die Membran ung
 
 {{DIAGRAM:cell-membrane}}
 
-**Lipidbewegung — das Wesentliche:** Phospholipide bewegen sich **lateral** sehr schnell (10⁷-mal/Sekunde Platztausch mit dem Nachbarn — messbar durch FRAP). Den Wechsel von einer Schicht zur anderen (**Flip-Flop**) schaffen sie dagegen kaum allein — der hydrophile Kopf müsste das hydrophobe Innere passieren. Halbwertszeit: Stunden bis Tage. Enzyme beschleunigen das: **Flippasen** (PS nach innen, ATP-abhängig), **Floppasen** (nach außen, ATP-abhängig), **Scramblasen** (bidirektional, ATP-unabhängig → PS-Flip bei Apoptose).
+**Lipidbewegung — das Wesentliche:** Phospholipide bewegen sich **lateral** sehr schnell (10⁷-mal/Sekunde Platztausch mit dem Nachbarn — messbar durch FRAP (Fluorescence Recovery After Photobleaching, eine Methode zur Messung der Membranfluidität)). Den Wechsel von einer Schicht zur anderen (**Flip-Flop**) schaffen sie dagegen kaum allein — der hydrophile Kopf müsste das hydrophobe Innere passieren. Halbwertszeit: Stunden bis Tage. Enzyme beschleunigen das: **Flippasen** (PS nach innen, ATP-abhängig), **Floppasen** (nach außen, ATP-abhängig), **Scramblasen** (bidirektional, ATP-unabhängig → PS-Flip bei Apoptose).
 
 > **Merke:** Cholesterin = Fluiditätspuffer in beide Richtungen. Ungesättigte Fettsäuren → mehr Fluidität; gesättigte → weniger. Laterale Diffusion ist extrem schnell; Flip-Flop ist extrem langsam und benötigt Enzyme.
 
@@ -792,7 +798,9 @@ Ein klinisch wichtiges Beispiel für Glykokalix-Strukturen sind die **ABO-Blutgr
         "SGLT",
         "Herzglykoside",
       ],
-      content: `## Überblick — Passiv vs. Aktiv
+      content: `Nachdem der Membranaufbau klar ist, stellt sich die zentrale Frage: Wie gelangen Stoffe durch diese Barriere? Passiver und aktiver Transport sind die beiden Grundprinzipien.
+
+## Überblick — Passiv vs. Aktiv
 
 Jeder Transport durch die Zellmembran lässt sich in zwei Kategorien einteilen:
 
@@ -821,8 +829,6 @@ Polare oder geladene Moleküle nutzen Proteine — weiterhin **entlang** des Gra
 > **Merke:** Passiv = immer entlang des Gradienten, kein ATP. Ionenkanäle sind schnell, aber nicht sättigbar; Carrier sind langsamer und sättigbar.
 
 ![Einfache und erleichterte Diffusion im Vergleich — Konzentrationsgradient treibt den Transport](/images/bms/bio-diffusion.jpg)
-
-{{IMAGE}}
 
 ---
 
@@ -1023,7 +1029,9 @@ Na⁺ strömt in die Zelle, während ein anderes Ion **heraus** transportiert wi
         "Dynein",
         "Kartagener-Syndrom",
       ],
-      content: `## Rundgang durch die Zelle
+      content: `Innerhalb der Zellmembran arbeiten spezialisierte Organellen zusammen — ihre Funktionen und Fehlfunktionen sind BMS-Dauerbrenner.
+
+## Rundgang durch die Zelle
 
 Eine eukaryotische Zelle funktioniert wie eine Fabrik mit spezialisierten Abteilungen. Jedes Organell hat eine klar definierte Aufgabe — von der Proteinherstellung über Energiegewinnung bis zur Müllentsorgung. Die meisten Krankheiten lassen sich auf Fehlfunktionen einzelner Organellen zurückführen. Wer versteht, **wer was macht**, versteht Zellbiologie.
 
@@ -1287,7 +1295,9 @@ Das **glatte ER (gER)** hat keine Ribosomen und übernimmt andere Aufgaben als d
         "Barr-Körper",
         "NLS/NES-Transport",
       ],
-      content: `## Kernhülle und Kernporen: die selektive Schleuse
+      content: `Der Zellkern schützt die DNA und steuert die Genexpression — sein Aufbau erklärt, wie Information zwischen Kern und Zytoplasma fließt.
+
+## Kernhülle und Kernporen: die selektive Schleuse
 
 Rund 3000 Moleküle passieren jede Kernpore pro Sekunde — ohne diese Schleusen wäre keine Genregulation möglich. Der Zellkern ist von einer **Doppelmembran** (Kernhülle) umhüllt:
 - **Äußere Kernmembran**: direkt verbunden mit dem rauen ER (trägt ebenfalls Ribosomen)
@@ -1531,7 +1541,9 @@ Der **Nucleolus** ist der Ort der Ribosomenfabrikation — keine Membranstruktur
         "Cycline",
         "Trisomie",
       ],
-      content: `## Der Zellzyklus — Überblick
+      content: `Zellteilung ist die Grundlage für Wachstum, Erneuerung und Fortpflanzung — Mitose für Körperzellen, Meiose für Keimzellen. Die Unterschiede zwischen beiden sind MedAT-Klassiker.
+
+## Der Zellzyklus — Überblick
 
 Bevor sich eine Zelle teilen kann, muss sie sich vorbereiten: wachsen, ihre DNA verdoppeln und alles auf Fehler prüfen. Dieser Ablauf heißt **Zellzyklus** und besteht aus der **Interphase** (G1 → S → G2) und der **M-Phase** (Mitose + Zytokinese).
 
@@ -1797,7 +1809,9 @@ Die Schwesterchromatiden trennen sich in jeder haploiden Zelle. Ergebnis: **4 ha
         "Chemiosmose",
         "Anaerober Stoffwechsel",
       ],
-      content: `## Glykolyse — Der erste Schritt
+      content: `Wie gewinnt die Zelle Energie aus Nährstoffen? Glykolyse, Citratzyklus und Atmungskette bilden zusammen den zentralen Stoffwechselweg — von Glucose bis ATP.
+
+## Glykolyse — Der erste Schritt
 
 Jede Zelle braucht ATP — und der erste Schritt zur Energiegewinnung ist die **Glykolyse**. Sie ist eine Sequenz von 10 enzymatischen Reaktionen im **Zytoplasma**, die Glucose (C₆) in 2 Pyruvat (C₃) spaltet. Sie ist sowohl aerob als auch anaerob möglich und liefert sofort verfügbares ATP.
 
@@ -1854,7 +1868,7 @@ Der Citratzyklus findet in der **Mitochondrienmatrix** statt und oxidiert Acetyl
 | 2 | Citrat → **Isocitrat** | Aconitase | 6→6 | — | Isomerisierung über cis-Aconitat (Zwischenprodukt) |
 | 3 | Isocitrat → **α-Ketoglutarat** + CO₂ | **Isocitrat-DH** | 6→5 | **1 NADH** | Oxidative Decarboxylierung; Schrittmacher! |
 | 4 | α-Ketoglutarat → **Succinyl-CoA** + CO₂ | **α-Ketoglutarat-DH** | 5→4 | **1 NADH** | Thiamin (B₁)-abhängig; mechanistisch analog zu PDH |
-| 5 | Succinyl-CoA → **Succinat** | Succinyl-CoA-Synthetase | 4→4 | **1 GTP** | Substratkettenphosphorylierung (GTP ≈ ATP) |
+| 5 | Succinyl-CoA → **Succinat** | Succinyl-CoA-Synthetase | 4→4 | **1 GTP** | Substratkettenphosphorylierung (direkte ATP/GTP-Bildung durch Übertragung einer Phosphatgruppe vom Substrat, ohne Atmungskette; GTP ≈ ATP) |
 | 6 | Succinat → **Fumarat** | **Succinat-DH (Komplex II)** | 4→4 | **1 FADH₂** | Einziges Membranenzym des Zyklus; direkt in innerer Mitochondrienmembran verankert |
 | 7 | Fumarat → **L-Malat** | Fumarase | 4→4 | — | Hydratisierung (H₂O-Addition) |
 | 8 | L-Malat → **Oxalacetat** | Malat-DH | 4→4 | **1 NADH** | Gleichgewicht liegt auf Seite von Malat; wird durch raschen Oxalacetat-Verbrauch (Schritt 1) vorangetrieben |

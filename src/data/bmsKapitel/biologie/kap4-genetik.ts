@@ -15,7 +15,9 @@ export const bioKapGenetik: Kapitel = {
       imageCaption:
         "Abb.: DNA-Doppelhelix mit Basenpaaren und Zucker-Phosphat-Rückgrat (OpenStax, CC BY 4.0)",
       stichworte: ["DNA", "Gen", "Chromosom", "Allel", "Locus", "Doppelhelix", "Erbinformation"],
-      content: `## DNA: Träger der Erbinformation
+      content: `Genetik bildet das Fundament der modernen Biologie — von der DNA-Struktur über Vererbungsregeln bis zur Gentechnik ist dieses Thema ein Schwerpunkt im BMS.
+
+## DNA: Träger der Erbinformation
 
 **DNA** (Desoxyribonukleinsäure) ist das Molekül, das die genetische Information speichert. Sie besteht aus zwei antiparallel gewundenen Strängen — der **Doppelhelix**. Jeder Strang ist eine Kette aus **Nukleotiden**: jedes Nukleotid enthält den Zucker Desoxyribose, ein Phosphat und eine von vier **Basen** — Adenin (A), Thymin (T), Guanin (G) oder Cytosin (C).
 
@@ -26,6 +28,8 @@ Die Basen der beiden Stränge paaren sich nach festen Regeln: A immer mit T (zwe
 **Chargaff-Regeln:** In jeder doppelsträngigen DNA gilt: **%A = %T** und **%G = %C** — eine direkte Folge der komplementären Basenpaarung. Rechenbeispiel: Wenn A = 27 %, dann T = 27 %, und G = C = (100 % − 54 %) / 2 = **23 %**. Purine (A, G: Zweiring-Basen) sind stets gleich häufig wie Pyrimidine (T, C: Einring-Basen).
 
 > **Merke:** **Chargaff-Regel:** A = T und G = C (in Prozent). Wenn A = 27 % → T = 27 %, G = C = 23 %.
+
+{{IMAGE}}
 
 ![DNA-Nukleotidaufbau: Zucker, Phosphat und Nukleobase als Bausteine der Doppelhelix](/images/bms/bio-dna-nukleotide.jpg)
 
@@ -181,7 +185,9 @@ Ein **Chromosom** ist ein langer DNA-Faden, der zusammen mit **Histonen** (Verpa
         "46,XX",
         "46,XY",
       ],
-      content: `## Aufbau eines Chromosoms
+      content: `Chromosomen sind die Verpackungseinheiten der DNA — ihr Aufbau bestimmt, wie Gene organisiert und bei der Zellteilung verteilt werden.
+
+## Aufbau eines Chromosoms
 
 Ein Chromosom in der Metaphase der Zellteilung besteht aus **zwei Schwesterchromatiden**, die am **Zentromer** zusammenhängen. Das Zentromer ist der Ansatzpunkt für die Spindelfasern; an ihm sitzt der **Kinetochor** (Proteinkomplex für die Spindelbindung). Jede Chromatide hat zwei **Arme**: der **p-Arm** (petit = kurz) und der **q-Arm** (queue = lang).
 
@@ -231,9 +237,6 @@ Beim Menschen enthält jede Körperzelle **46 Chromosomen**: **22 Paare Autosome
 ---
 
 ## Karyotyp, Notation und Karyogramm-Erstellung
-
-
-{{DIAGRAM:mitosis}}
 
 Der **Karyotyp** ist die geordnete Darstellung aller Chromosomen einer Zelle (nach Größe, Zentromerlage, Färbemuster). Er wird in der **Metaphase** der Mitose erstellt (Chromosomen sind dann maximal kondensiert). Die **Karyotyp-Notation** gibt zuerst die **Chromosomenzahl**, dann die **Gonosomen** und bei Abweichungen die **Aberration** (chromosomale Abweichung) an:
 
@@ -377,11 +380,13 @@ Chromosomenaberrationen (numerisch oder strukturell) verursachen schwerwiegende 
         "haploid",
         "diploid",
       ],
-      content: `## Zellzyklus und Chromosomenzahl
+      content: `Damit Zellen sich teilen können, muss die DNA zuverlässig kopiert und verteilt werden. Der Zellzyklus regelt diesen Ablauf — Mitose für Körperzellen, Meiose für Keimzellen.
+
+## Zellzyklus und Chromosomenzahl
 
 {{DIAGRAM:cell-cycle}}
 
-Der **Zellzyklus** umfasst die Vorbereitung der Zellteilung und die Teilung selbst. In der **S-Phase** wird die DNA verdoppelt; danach hat jede Chromosom zwei Schwesterchromatiden. **Diploid (2n)** bedeutet: zwei Chromosomensätze (beim Menschen 2n = 46). **Haploid (n)** bedeutet: ein Chromosomensatz (beim Menschen n = 23). Körperzellen sind diploid; Keimzellen müssen haploid sein, damit nach der Befruchtung (Eizelle + Spermium) wieder 2n = 46 entsteht.
+Der **Zellzyklus** umfasst die Vorbereitung der Zellteilung und die Teilung selbst. In der **S-Phase** wird die DNA verdoppelt; danach hat jedes Chromosom zwei Schwesterchromatiden. **Diploid (2n)** bedeutet: zwei Chromosomensätze (beim Menschen 2n = 46). **Haploid (n)** bedeutet: ein Chromosomensatz (beim Menschen n = 23). Körperzellen sind diploid; Keimzellen müssen haploid sein, damit nach der Befruchtung (Eizelle + Spermium) wieder 2n = 46 entsteht.
 
 > **Merke:** Diploid (2n) = zwei Sätze; haploid (n) = ein Satz. Mensch: 2n = 46 in Körperzellen, n = 23 in Keimzellen.
 
@@ -407,7 +412,7 @@ Der **Zellzyklus** umfasst die Vorbereitung der Zellteilung und die Teilung selb
 
 **Meiose** dient der Bildung von **Keimzellen** (Gameten). Sie besteht aus **zwei aufeinanderfolgenden Teilungen** (Meiose I und Meiose II), wobei nur vor der ersten Teilung die DNA verdoppelt wird.
 
-**Meiose I:** Die **homologen Chromosomen** paaren sich (jedes Chromosom hat bereits zwei Schwesterchromatiden). In der **Prophase I** kann **Crossing-over** stattfinden: Homologe Chromosomen tauschen Stücke aus → **Rekombination** (neue Allelkombinationen). In der Anaphase I werden die **homologen Chromosomen** getrennt (nicht die Schwesterchromatiden!) — jede Tochterzelle erhält je ein Chromosom jedes Paars. Ergebnis: zwei Zellen mit je **haploidem** Chromosomensatz (n), aber jede Chromosom hat noch zwei Chromatiden.
+**Meiose I:** Die **homologen Chromosomen** paaren sich (jedes Chromosom hat bereits zwei Schwesterchromatiden). In der **Prophase I** kann **Crossing-over** stattfinden: Homologe Chromosomen tauschen Stücke aus → **Rekombination** (neue Allelkombinationen). In der Anaphase I werden die **homologen Chromosomen** getrennt (nicht die Schwesterchromatiden!) — jede Tochterzelle erhält je ein Chromosom jedes Paars. Ergebnis: zwei Zellen mit je **haploidem** Chromosomensatz (n), aber jedes Chromosom hat noch zwei Chromatiden.
 
 **Meiose II:** In beiden Zellen werden die **Schwesterchromatiden** getrennt (ähnlich wie in der Mitose). Ergebnis: **vier Keimzellen** (bei Spermien) bzw. eine Eizelle plus Polkörper (kleine, funktionslose Restzellen) (bei Eizellen), alle **haploid (n)**.
 
@@ -551,9 +556,9 @@ Der **Zellzyklus** umfasst die Vorbereitung der Zellteilung und die Teilung selb
     {
       id: "bio-4-04",
       title: "Mendelsche Regeln",
-      // TODO: add image (no suitable orphan image available — all Mendel/Punnett images already assigned)
-      imageUrl: "",
-      imageCaption: "",
+      imageUrl: "/images/bms/bio-mendel-kreuzung-f2.svg",
+      imageCaption:
+        "Abb.: Kreuzungsschema eines dominant-rezessiven Erbgangs — F₂-Generation mit 3:1-Aufspaltung (Wikimedia Commons, CC0)",
       stichworte: [
         "Uniformitätsregel",
         "Spaltungsregel",
@@ -573,6 +578,8 @@ Der **Zellzyklus** umfasst die Vorbereitung der Zellteilung und die Teilung selb
 Beide Eltern sind gesund. Kein Familienmitglied war je auffällig. Trotzdem wird jedes vierte Kind mit **Mukoviszidose** (zystische Fibrose) geboren — einer schweren Lungenerkrankung. Die Erklärung liegt in drei Regeln, die der Augustinermönch Gregor Mendel 1865 an Erbsenpflanzen entdeckte. Sie gelten unverändert für den Menschen und sind die Grundlage jeder genetischen Beratung.
 
 Die Meiose (vorheriges Kapitel) liefert den Mechanismus: Während der Keimzellbildung werden die Allele auf die Gameten verteilt. Mendels Regeln beschreiben, **welche Kombinationen** dabei entstehen und in **welchen Verhältnissen** sie in der nächsten Generation auftreten.
+
+{{IMAGE}}
 
 ---
 
@@ -1112,7 +1119,9 @@ Die **Sichelzellanämie** vereint mehrere Konzepte dieses Kapitels:
         "autosomal dominant",
         "autosomal rezessiv",
       ],
-      content: `## Autosomal vs. X-chromosomal
+      content: `Ob eine Krankheit Männer und Frauen gleich betrifft oder geschlechtsspezifisch auftritt, hängt davon ab, ob das Gen autosomal oder X-chromosomal liegt — ein MedAT-Klassiker.
+
+## Autosomal vs. X-chromosomal
 
 **Autosomal:** Das Gen liegt auf einem der **Autosomen** (Chromosomen 1–22). Beide Geschlechter sind gleich häufig betroffen (Männer und Frauen haben je zwei Kopien jedes Autosoms). **X-chromosomal:** Das Gen liegt auf dem **X-Chromosom**. Männer haben nur **ein** X-Chromosom (**Hemizygotie**) — sie tragen also nur ein Allel für X-chromosomale Gene. Daher manifestieren sich **X-chromosomal rezessive** Merkmale bei Männern häufiger (ein rezessives Allel reicht). Frauen haben zwei X-Chromosomen und können **Konduktorinnen** sein (heterozygot, phänotypisch gesund, geben das Allel weiter).
 
@@ -1346,7 +1355,9 @@ Das kranke Allel ist **dominant** auf dem X-Chromosom. **Kranker Vater (X^A Y):*
       imageCaption:
         "Abb.: AB0-Blutgruppensystem — Antigene auf Erythrozyten (Wikimedia Commons, Public Domain)",
       stichworte: ["AB0", "Blutgruppe", "kodominant", "I^A", "I^B", "i", "Antigen", "Rhesus"],
-      content: `## Multiple Allelie und das AB0-System
+      content: `Das AB0-Blutgruppensystem ist ein Musterbeispiel für Kodominanz und multiple Allele an einem einzigen Genort — und eine der beliebtesten MedAT-Aufgaben.
+
+## Multiple Allelie und das AB0-System
 
 Im Gegensatz zu einfachen Erbgängen mit nur zwei Allelen besitzt das AB0-System **drei Allele** an einem einzigen Genort auf Chromosom 9: **I^A**, **I^B** und **i**. Das Gen codiert für eine Glycosyltransferase (Enzym, das Zucker überträgt), die Zuckerreste an ein Vorläuferantigen (H-Antigen) auf der Erythrozytenoberfläche (Oberfläche der roten Blutkörperchen) anhängt:
 
@@ -1527,7 +1538,8 @@ Ein seltener Sonderfall: Menschen mit dem **Bombay-Phänotyp** (h/h) können das
       id: "bio-4-08",
       title: "Mutationen",
       imageUrl: "/images/bms/bio-dna-replikation.jpg",
-      imageCaption: "Abb.: DNA-Replikation mit Leit- und Folgestrang (OpenStax, CC BY 4.0)",
+      imageCaption:
+        "Abb.: DNA-Replikation — Fehler bei der Replikation sind eine Hauptquelle von Mutationen (OpenStax, CC BY 4.0)",
       stichworte: [
         "Genmutation",
         "Chromosomenmutation",
@@ -1540,6 +1552,8 @@ Ein seltener Sonderfall: Menschen mit dem **Bombay-Phänotyp** (h/h) können das
       content: `## Eine einzige Base verändert ein Leben
 
 Ein Austausch von Adenin gegen Thymin im β-Globin-Gen — sechs Buchstaben im drei Milliarden Buchstaben langen menschlichen Genom — reicht aus, um aus normalen runden Erythrozyten sichelförmige, starre Zellen zu machen. Die **Sichelzellanämie** zeigt eindrücklich: Mutationen können auf der kleinsten Ebene auftreten und trotzdem das gesamte Organsystem betreffen. Dieses Kapitel ordnet Mutationen systematisch nach drei Ebenen (Gen, Chromosom, Genom), erklärt ihre Ursachen und stellt die wichtigsten DNA-Reparaturmechanismen vor.
+
+{{IMAGE}}
 
 ---
 
@@ -1824,7 +1838,7 @@ Die Transkription findet im **Zellkern** statt und wird von der **RNA-Polymerase
 
 **Ablauf in drei Phasen:**
 
-1. **Initiation:** Die RNA-Polymerase bindet an die **Promotorregion** (spezifische DNA-Sequenz vor dem Gen, z. B. TATA-Box (AT-reiche Erkennungssequenz)). Transkriptionsfaktoren helfen bei der Erkennung und Bindung. Der DNA-Doppelstrang wird lokal entmolgen (Transkriptionsblase).
+1. **Initiation:** Die RNA-Polymerase bindet an die **Promotorregion** (spezifische DNA-Sequenz vor dem Gen, z. B. TATA-Box (AT-reiche Erkennungssequenz)). Transkriptionsfaktoren helfen bei der Erkennung und Bindung. Der DNA-Doppelstrang wird lokal entwunden (Transkriptionsblase).
 
 2. **Elongation:** Die RNA-Polymerase liest den **Matrizenstrang** (Vorlagenstrang, 3' → 5') und synthetisiert die mRNA in **5' → 3'-Richtung**. Basenpaarungsregeln: A-U, T-A, G-C, C-G. In der RNA ersetzt **Uracil (U)** das Thymin (T) der DNA. Die mRNA-Sequenz entspricht dem **codogenen Strang** (Sinnstrang) (Nicht-Matrizenstrang), nur mit U statt T.
 
@@ -2590,7 +2604,9 @@ Frauen haben zwei X-Chromosomen (XX), Männer nur eines (XY). Damit Frauen nicht
         "Primer",
         "GVO",
       ],
-      content: `## PCR — DNA millionenfach kopieren
+      content: `Moderne Genetik beruht auf Methoden, die es erlauben, DNA zu kopieren, zu schneiden, zu lesen und gezielt zu verändern — die wichtigsten Werkzeuge im Überblick.
+
+## PCR — DNA millionenfach kopieren
 
 Die **Polymerase-Kettenreaktion** (PCR, engl. polymerase chain reaction) ist die wichtigste Methode der modernen Molekularbiologie. Sie erlaubt es, einen bestimmten DNA-Abschnitt innerhalb weniger Stunden **millionenfach zu vervielfältigen** (Amplifikation), selbst wenn nur winzige Mengen Ausgangs-DNA vorhanden sind — etwa aus einem Blutstropfen, einem Haar oder einer archäologischen Probe.
 
@@ -3107,7 +3123,9 @@ Die Kopplungsanalyse wurde historisch genutzt, um **Krankheitsgene zu kartieren*
         "Ersttrimester-Screening",
         "nicht-direktive Beratung",
       ],
-      content: `## Genetische Beratung
+      content: `Genetische Diagnostik verbindet molekularbiologisches Wissen mit klinischer Praxis — von der Beratung über pränatale Tests bis zur Präimplantationsdiagnostik.
+
+## Genetische Beratung
 
 Die **genetische Beratung** ist ein Informations- und Kommunikationsprozess, bei dem Ratsuchende über **Ursachen, Verlauf und Wiederholungsrisiken** genetischer Erkrankungen aufgeklärt werden. Zentrales Prinzip: die Beratung erfolgt **nicht-direktiv** — der Berater gibt keine Handlungsempfehlung, sondern befähigt die Ratsuchenden zu einer **eigenständigen, informierten Entscheidung**.
 
