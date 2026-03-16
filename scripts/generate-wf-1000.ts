@@ -91,20 +91,16 @@ function pickSmartDistractors(
   count: number
 ): string[] {
   const confusing = CONFUSING_LETTERS[correctFirst] ?? [];
-  const externalConfusing = confusing.filter((l) => !wordLetterSet.has(l));
-  const internalConfusing = confusing.filter((l) => wordLetterSet.has(l) && l !== correctFirst);
-  const otherWordLetters = [...wordLetterSet].filter(
-    (l) => l !== correctFirst && !confusing.includes(l)
+  // Priority 1: letters in the word that are visually/phonetically confusing with the correct answer
+  const internalConfusing = shuffle(
+    confusing.filter((l) => wordLetterSet.has(l) && l !== correctFirst)
   );
-  const otherExternal = ALL_LETTERS.filter(
-    (l) => l !== correctFirst && !wordLetterSet.has(l) && !confusing.includes(l)
+  // Priority 2: other letters in the word (non-confusing)
+  const otherWordLetters = shuffle(
+    [...wordLetterSet].filter((l) => l !== correctFirst && !confusing.includes(l))
   );
-  const pool = [
-    ...shuffle(externalConfusing),
-    ...shuffle(internalConfusing),
-    ...shuffle(otherWordLetters),
-    ...shuffle(otherExternal),
-  ];
+  // Only word-internal letters — no external fallback (validator v3 requires it)
+  const pool = [...internalConfusing, ...otherWordLetters];
   const used = new Set<string>([correctFirst]);
   const result: string[] = [];
   for (const l of pool) {
@@ -123,7 +119,9 @@ function makeTaskFromWord(
 ): WordFluencyTask | null {
   const solution = word.toUpperCase();
   const wordLetterSet = new Set(solution.split(""));
-  if (wordLetterSet.size < 2) return null;
+  // Need at least 5 distinct letters: 1 correct + 3 distractors from word (+ "-" as 5th option)
+  // With useNone=true we need 4 distractors, so 5 distinct minimum
+  if (wordLetterSet.size < 5) return null;
   const letters = shuffleDet(solution.split(""), seed);
   const correctFirst = solution[0]!;
 
@@ -1042,13 +1040,36 @@ while (allTasks.length < TARGET && retryCount < maxRetries) {
 }
 console.log(`After random fill: ${allTasks.length} (retries: ${retryCount})`);
 
-// Step 6: Cap at TARGET with balanced difficulty (~333 each)
-const CAP_PER_DIFF = Math.floor(TARGET / 3);
+// Step 6: Cap at TARGET with balanced difficulty (~333 each), redistributing shortfalls
 const byDiff: Record<number, WordFluencyTask[]> = { 1: [], 2: [], 3: [] };
 for (const t of allTasks) byDiff[t.difficulty].push(t);
 for (const d of [1, 2, 3]) {
   byDiff[d].sort((a, b) => a.solutionWord.localeCompare(b.solutionWord));
-  byDiff[d] = byDiff[d].slice(0, d === 3 ? TARGET - 2 * CAP_PER_DIFF : CAP_PER_DIFF);
+}
+// First pass: each difficulty gets at most floor(TARGET/3)
+const baseCap = Math.floor(TARGET / 3);
+let remaining = TARGET;
+for (const d of [1, 2, 3]) {
+  const take = Math.min(byDiff[d].length, baseCap);
+  byDiff[d] = byDiff[d].slice(0, take);
+  remaining -= take;
+}
+// Second pass: distribute remaining slots to difficulties that have surplus
+if (remaining > 0) {
+  // Reload full pools sorted
+  const byDiffFull: Record<number, WordFluencyTask[]> = { 1: [], 2: [], 3: [] };
+  for (const t of allTasks) byDiffFull[t.difficulty].push(t);
+  for (const d of [1, 2, 3]) {
+    byDiffFull[d].sort((a, b) => a.solutionWord.localeCompare(b.solutionWord));
+  }
+  for (const d of [2, 3, 1]) {
+    if (remaining <= 0) break;
+    const extra = Math.min(remaining, byDiffFull[d].length - byDiff[d].length);
+    if (extra > 0) {
+      byDiff[d] = byDiffFull[d].slice(0, byDiff[d].length + extra);
+      remaining -= extra;
+    }
+  }
 }
 const capped = [...byDiff[1], ...byDiff[2], ...byDiff[3]];
 allTasks.length = 0;
