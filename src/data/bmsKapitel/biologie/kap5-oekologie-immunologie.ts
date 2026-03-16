@@ -359,6 +359,22 @@ Klinische Parallele: Der **Mensch** ist dank **Thermoregulation** (Schwitzen, Va
           difficulty: 2,
           tags: ["typ-k", "toleranzkurve", "liebig", "shelford", "bioindikator"],
         },
+        {
+          question:
+            "Welche der folgenden Aussagen über Toleranzkurven und ökologische Faktoren ist FALSCH?",
+          options: [
+            "Euryöke Arten haben einen breiten Toleranzbereich und können in verschiedenen Habitaten überleben",
+            "Stenöke Arten haben einen engen Toleranzbereich und eignen sich daher gut als Bioindikatoren",
+            "Nach Liebigs Minimumgesetz begrenzt der im Überfluss vorhandene Faktor das Wachstum am stärksten",
+            "Shelfords Toleranzgesetz erweitert Liebig, indem auch ein Zuviel eines Faktors limitierend wirken kann",
+            "Das Optimum einer Toleranzkurve bezeichnet den Bereich, in dem ein Organismus die höchste Leistungsfähigkeit zeigt",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Aussage C ist falsch. Nach Liebigs Minimumgesetz begrenzt der im MINIMUM (nicht Überfluss) vorhandene Faktor das Wachstum. Der Faktor, der am knappsten ist, bestimmt die Wachstumsgrenze — selbst wenn alle anderen Faktoren optimal sind. Die Verwechslung von Minimum und Maximum ist eine klassische MedAT-Falle. Shelford erweitert dieses Prinzip, indem auch ein Zuviel (Maximum) limitierend sein kann. Die übrigen Aussagen sind korrekt.",
+          difficulty: 2,
+          tags: ["falsch-aussage", "toleranzkurve", "liebig", "minimumgesetz"],
+        },
       ],
       altfrage: {
         text: "Welche Aussage zu Umweltfaktoren und Toleranzkurven ist richtig?",
@@ -1130,6 +1146,21 @@ Bestimmte Schadstoffe werden **nicht abgebaut** und reichern sich entlang der Na
           difficulty: 2,
           tags: ["typ-k", "ökosystem", "stoffkreislauf", "biomagnifikation", "10-prozent-regel"],
         },
+        {
+          question: "Welche der folgenden Aussagen über Ökosysteme und Stoffkreisläufe ist FALSCH?",
+          options: [
+            "Produzenten (autotrophe Organismen) bilden die Basis jeder Nahrungskette und fixieren Sonnenenergie durch Photosynthese",
+            "Die 10%-Regel besagt, dass bei jedem Trophieebenen-Übergang ca. 10% der Energie weitergegeben werden",
+            "Der Phosphorkreislauf besitzt wie der Kohlenstoff- und Stickstoffkreislauf ein großes gasförmiges Reservoir in der Atmosphäre",
+            "Destruenten (Zersetzer) bauen tote organische Substanz ab und remineralisieren Nährstoffe für die Produzenten",
+            "Biomagnifikation führt dazu, dass lipophile Schadstoffe wie DDT oder Methylquecksilber in höheren Trophieebenen stärker konzentriert sind",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Aussage C ist falsch. Der Phosphorkreislauf hat KEIN gasförmiges Reservoir in der Atmosphäre — das ist sein entscheidender Unterschied zum Kohlenstoff- und Stickstoffkreislauf. Phosphor zirkuliert ausschließlich über Gestein, Boden, Wasser und Lebewesen (sedimentärer Kreislauf). Dies macht Phosphor zum häufigsten limitierenden Nährstoff in Süßwasserökosystemen. Die übrigen Aussagen sind korrekt.",
+          difficulty: 2,
+          tags: ["falsch-aussage", "ökosystem", "phosphorkreislauf", "stoffkreislauf"],
+        },
       ],
     },
 
@@ -1763,6 +1794,21 @@ Das Komplementsystem ist ein kaskadenartiges System aus ca. 30 Plasmaproteinen, 
           difficulty: 2,
           tags: ["typ-k", "antikörper", "immunglobuline", "igg", "igm", "iga"],
         },
+        {
+          question: "Welche der folgenden Aussagen über Antikörper (Immunglobuline) ist FALSCH?",
+          options: [
+            "IgM ist das erste Immunglobulin bei einer Erstinfektion (Primärantwort) und liegt als Pentamer im Blut vor",
+            "IgG ist das häufigste Immunglobulin im Blut und kann über FcRn-Rezeptoren die Plazenta passieren",
+            "IgE ist für die Abwehr von Parasiten und für allergische Typ-I-Reaktionen (Soforttyp) verantwortlich",
+            "IgA kommt hauptsächlich im Blutserum vor und spielt keine Rolle auf Schleimhäuten",
+            "Opsonisierung durch IgG markiert Erreger und erleichtert deren Phagozytose durch Makrophagen",
+          ],
+          correctIndex: 3,
+          explanation:
+            "Aussage D ist falsch. IgA ist das dominante Immunglobulin auf SCHLEIMHÄUTEN und in Sekreten (Speichel, Muttermilch, Darminhalt, Tränenflüssigkeit). Als sekretorisches IgA (sIgA-Dimer) bildet es die erste Verteidigungslinie gegen Pathogene an Schleimhautoberflächen (immune exclusion). IgA im Serum liegt als Monomer vor. Die Behauptung, IgA spiele keine Rolle auf Schleimhäuten, ist das genaue Gegenteil der Realität. Die übrigen Aussagen sind korrekt.",
+          difficulty: 2,
+          tags: ["falsch-aussage", "antikörper", "iga", "immunglobuline"],
+        },
       ],
     },
     {
@@ -2360,6 +2406,21 @@ Die Anti-D-Prophylaxe ist eine der großen Errungenschaften der pränatalen Medi
             "igg-anti-d",
             "mehrfachschwangerschaft",
           ],
+        },
+        {
+          question: "Welche der folgenden Aussagen über den Rhesusfaktor ist FALSCH?",
+          options: [
+            "Rh-negative Personen (~15% der Bevölkerung) besitzen kein D-Antigen auf ihren Erythrozyten",
+            "Anti-D-Antikörper entstehen bei Rh-negativen Personen erst nach Sensibilisierung (Transfusion oder Schwangerschaft), nicht natürlich",
+            "Bei der ersten Schwangerschaft einer Rh-negativen Mutter mit einem Rh-positiven Kind kommt es bereits zu einer schweren Hämolyse des Kindes",
+            "IgG-Anti-D-Antikörper können die Plazenta passieren und fetale Rh-positive Erythrozyten zerstören (Morbus haemolyticus neonatorum)",
+            "Die Anti-D-Prophylaxe nach der Geburt verhindert die Sensibilisierung der Mutter, indem fetale Rh+ Erythrozyten eliminiert werden, bevor eine Immunantwort entsteht",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Aussage C ist falsch. Bei der ERSTEN Schwangerschaft kommt es in der Regel NICHT zu einer schweren Hämolyse, da die Sensibilisierung erst bei der Geburt stattfindet (fetomaternale Transfusion). Die mütterlichen Anti-D-IgG-Antikörper werden erst nach der Sensibilisierung gebildet und sind bei der ersten Schwangerschaft noch nicht (oder kaum) vorhanden. Erst ab der ZWEITEN Schwangerschaft mit einem Rh+ Kind droht die Gefahr, da dann bereits IgG-Anti-D im mütterlichen Blut zirkuliert. Die übrigen Aussagen sind korrekt.",
+          difficulty: 2,
+          tags: ["falsch-aussage", "rhesusfaktor", "sensibilisierung", "morbus-haemolyticus"],
         },
       ],
     },

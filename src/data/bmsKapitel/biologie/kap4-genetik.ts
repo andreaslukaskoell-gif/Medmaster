@@ -2500,6 +2500,21 @@ Das Verständnis der Tumorgenetik hat die Krebstherapie revolutioniert — Medik
           difficulty: 3,
           tags: ["typ-k", "tumorgenetik", "onkogen", "tumorsuppressor", "vogelstein"],
         },
+        {
+          question: "Welche der folgenden Aussagen über die Tumorgenetik ist FALSCH?",
+          options: [
+            "Proto-Onkogene sind normale zelluläre Gene, die durch Gain-of-function-Mutationen zu Onkogenen werden können",
+            "Tumorsuppressorgene wirken rezessiv — nach der Two-Hit-Hypothese müssen beide Allele inaktiviert werden",
+            "p53 ist ein Onkogen, das bei Aktivierung die Zellteilung fördert und in über 50% aller Tumoren überaktiv ist",
+            "Das Philadelphia-Chromosom (BCR-ABL-Fusionsgen) ist charakteristisch für die chronisch-myeloische Leukämie (CML)",
+            "Angiogenese (Neubildung von Blutgefäßen) ist eine der Hallmarks of Cancer und versorgt den Tumor mit Nährstoffen",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Aussage C ist falsch. p53 ist KEIN Onkogen, sondern ein Tumorsuppressorgen (TP53) — der 'Wächter des Genoms'. p53 hemmt die Zellteilung, induziert DNA-Reparatur oder Apoptose bei irreparablen Schäden. In über 50% aller Tumoren ist p53 INAKTIVIERT (Loss-of-function-Mutation), nicht überaktiv. Die Verwechslung von Onkogenen (Gain-of-function, dominant) und Tumorsuppressorgenen (Loss-of-function, rezessiv) ist ein klassischer MedAT-Fehler. Die übrigen Aussagen sind korrekt.",
+          difficulty: 2,
+          tags: ["falsch-aussage", "tumorgenetik", "p53", "tumorsuppressor"],
+        },
       ],
       altfrage: {
         text: "Welche Aussage zur Tumorgenetik ist richtig?",
