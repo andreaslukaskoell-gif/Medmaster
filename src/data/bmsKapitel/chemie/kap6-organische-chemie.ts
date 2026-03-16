@@ -16,7 +16,7 @@ export const chemKapOrganisch: Kapitel = {
       title: "Kohlenwasserstoffe — Alkane, Alkene, Alkine",
       imageUrl: "/images/bms/ch-kovalente-bindung.jpg",
       imageCaption: "Abb.: Kovalente Bindungen in organischen Molekülen (OpenStax, CC BY 4.0)",
-      content: `Kohlenwasserstoffe sind die einfachsten organischen Verbindungen — sie bestehen ausschließlich aus Kohlenstoff und Wasserstoff. Ihre Struktur und Nomenklatur bilden das Fundament, auf dem die gesamte organische Chemie aufbaut.
+      content: `Ein einziges Kohlenstoffatom kann vier stabile Bindungen eingehen — und genau diese Vielseitigkeit macht Kohlenstoff zum Baustein aller Biomoleküle, von der Glucose im Blut bis zum Cholesterin in der Zellmembran. Die organische Chemie beginnt bei den einfachsten Kohlenstoffverbindungen: den Kohlenwasserstoffen.
 
 ## Alkane — gesättigte Kohlenwasserstoffe
 
@@ -180,12 +180,33 @@ In der Atemgasanalytik gelten Kohlenwasserstoffe wie Ethan und Pentan als Biomar
         "Ethin (Acetylen, C₂H₂) = einfachstes Alkin; sp-hybridisiert, lineares Molekül.",
         "IUPAC: Längste Kette → Stammname; Endung -an/-en/-in; Substituenten + Position; funktionelle Gruppe bestimmt Suffix.",
       ],
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Erklären Sie die radikalische Halogenierung von Methan und beschreiben Sie die drei Phasen der Kettenreaktion.",
-        answer:
-          "Die radikalische Halogenierung ist eine Substitutionsreaktion, bei der ein Wasserstoffatom eines Alkans durch ein Halogenatom ersetzt wird. Sie wird durch UV-Licht oder hohe Temperaturen initiiert und läuft als Kettenreaktion in drei Phasen ab. In der Startphase (Initiation) wird die Halogenmolekülbindung homolytisch gespalten: Cl₂ → 2 Cl•. Dabei entstehen hochreaktive Chlorradikale. In der Fortpflanzungsphase (Propagation) reagiert das Chlorradikal mit Methan: Cl• + CH₄ → •CH₃ + HCl (ein neues Methylradikal entsteht). Dann: •CH₃ + Cl₂ → CH₃Cl + Cl• (ein neues Chlorradikal regeneriert). Diese zwei Schritte wiederholen sich tausende Male, weshalb aus einem Cl•-Radikal viele Produktmoleküle entstehen. In der Abbruchphase (Termination) rekombinieren zwei Radikale miteinander: Cl• + Cl• → Cl₂; •CH₃ + Cl• → CH₃Cl; •CH₃ + •CH₃ → C₂H₆. Da Methan vier gleichwertige H-Atome hat, entsteht zunächst nur Chlormethan. Bei Überschuss an Cl₂ können auch Di-, Tri- und Tetrachlormethan entstehen (stufenweise Substitution). Die Reaktion ist für Alkane typisch, weil sie keine reaktiven π-Elektronen besitzen.",
+        text: "Welche Aussage zur radikalischen Halogenierung von Methan ist richtig?",
+        options: [
+          {
+            id: "a",
+            text: "Die Initiation erfolgt durch heterolytische Spaltung von Cl₂ in Cl⁺ und Cl⁻.",
+          },
+          {
+            id: "b",
+            text: "In der Propagation regeneriert sich das Chlorradikal, weshalb die Reaktion als Kettenreaktion abläuft.",
+          },
+          {
+            id: "c",
+            text: "Die Termination erzeugt neue Radikale und hält die Reaktion aufrecht.",
+          },
+          {
+            id: "d",
+            text: "UV-Licht wird benötigt, um die C–H-Bindung im Methan heterolytisch zu spalten.",
+          },
+          {
+            id: "e",
+            text: "Es entsteht ausschließlich CH₃Cl, da Mehrfachsubstitution nicht möglich ist.",
+          },
+        ],
+        correctOptionId: "b",
+        explanation:
+          "In der Propagation: Cl• + CH₄ → •CH₃ + HCl, dann •CH₃ + Cl₂ → CH₃Cl + Cl•. Das Cl•-Radikal wird regeneriert → Kettenreaktion.",
       },
       klinischerBezug:
         "Ethan und Pentan im Ausatemluft gelten als Biomarker für oxidativen Stress (Lipidperoxidation). Ethanol wird hepatisch über Acetaldehyd zur Essigsäure (Acetat) abgebaut; der Acetaldehyd ist für den Kater-Effekt verantwortlich.",
@@ -307,6 +328,16 @@ In der Atemgasanalytik gelten Kohlenwasserstoffe wie Ethan und Pentan als Biomar
           ],
           difficulty: 3,
           tags: ["markovnikov", "hbr-addition", "carbokation"],
+        },
+        {
+          question:
+            "Welche Aussagen sind richtig?\n\n1. Alkane reagieren bevorzugt über radikalische Substitution unter UV-Licht.\n2. Die Markovnikov-Regel besagt, dass bei der Addition von HX an ein Alken das H an das C-Atom mit den wenigsten H-Atomen addiert.\n3. Der Bromwassertest dient zum Nachweis von C=C-Doppelbindungen durch Entfärbung.\n4. Alkene sind sp²-hybridisiert und haben trigonal-planare Geometrie an der Doppelbindung.\n5. Die allgemeine Summenformel der Alkane lautet CₙH₂ₙ₊₂.",
+          options: ["Nur 1 und 2", "Nur 3 und 4", "Nur 1, 3, 4 und 5", "Nur 2, 3 und 5", "Alle"],
+          correctIndex: 2,
+          explanation:
+            "Aussagen 1, 3, 4 und 5 sind korrekt: Alkane zeigen typischerweise radikalische Substitution unter UV (1). Bromwasser entfärbt sich durch elektrophile Addition an die Doppelbindung (3). sp²-Hybridisierung bei Alkenen ergibt trigonal-planare Geometrie mit 120°-Winkeln (4). CₙH₂ₙ₊₂ ist die allgemeine Alkan-Formel (5). Aussage 2 ist falsch — die Markovnikov-Regel besagt das Gegenteil: H addiert an das C-Atom mit den MEISTEN H-Atomen (das 'Reiche wird reicher'), nicht an das mit den wenigsten.",
+          difficulty: 2,
+          tags: ["typ-k", "kohlenwasserstoffe", "funktionelle-gruppen"],
         },
       ],
     },
@@ -439,12 +470,18 @@ Amine sind als Neurotransmitter und Signalmoleküle von zentraler klinischer Bed
         "Verseifung = basische Esterspaltung: Fett + NaOH → Glycerin + Fettsäure-Natriumsalze (Seife).",
         "Amphotere Verbindungen tragen sowohl -NH₂ als auch -COOH: Aminosäuren sind amphoter.",
       ],
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Beschreiben Sie die Oxidationsreihe der Alkohole von der Alkanstufe bis zur Carbonsäure. Welche biochemische Reaktionskette entspricht dem Abbau von Ethanol im menschlichen Körper?",
-        answer:
-          "Die Oxidationsreihe organischer Sauerstoffverbindungen verläuft stufenweise. Ausgehend vom Alkan steigt der Oxidationsgrad: Alkan (C-H-Bindungen) → Alkohol (Zugabe einer OH-Gruppe, Oxidation des C-Atoms von -2 auf -1) → Aldehyd (primärer Alkohol verliert ein H, C-Oxidation von -1 auf 0, Produkt: R-CHO) → Carbonsäure (weiterer Oxidationsschritt, C-Oxidation von 0 auf +1, Produkt: R-COOH) → Kohlendioxid (maximale Oxidation +4). Für sekundäre Alkohole endet die Oxidation beim Keton (R-CO-R'), da kein weiteres H am Carbonyl-C vorhanden ist. Der biochemische Ethanolabbau folgt genau dieser Stufenfolge: Ethanol (CH₃-CH₂-OH, primärer Alkohol) wird durch das Enzym Alkohol-Dehydrogenase (ADH) mit NAD⁺ als Elektronenakzeptor zu Acetaldehyd (CH₃-CHO, Ethanal) oxidiert. Acetaldehyd ist das toxische Zwischenprodukt, das für viele Symptome des Katers verantwortlich ist. Im zweiten Schritt oxidiert die Aldehyd-Dehydrogenase (ALDH) den Acetaldehyd zu Essigsäure (Acetat, CH₃-COO⁻). Das Acetat kann in den Citratzyklus eingeschleust werden (als Acetyl-CoA) und vollständig zu CO₂ und Wasser verbrannt werden. Genetische Varianten der ALDH (besonders ALDH2*2 in Ostasien) führen zur Ansammlung von Acetaldehyd und verursachen die Flush-Reaktion (Rötung, Übelkeit).",
+        text: "In welcher Reihenfolge wird Ethanol im menschlichen Körper abgebaut?",
+        options: [
+          { id: "a", text: "Ethanol → Essigsäure → Acetaldehyd → CO₂" },
+          { id: "b", text: "Ethanol → Acetaldehyd → Essigsäure (Acetat) → Acetyl-CoA" },
+          { id: "c", text: "Ethanol → Aceton → Acetoacetat → CO₂" },
+          { id: "d", text: "Ethanol → Formaldehyd → Ameisensäure → CO₂" },
+          { id: "e", text: "Ethanol → Glycerin → Fettsäuren → CO₂" },
+        ],
+        correctOptionId: "b",
+        explanation:
+          "Ethanol → Acetaldehyd (ADH) → Acetat (ALDH) → Acetyl-CoA → Citratzyklus. Option D beschreibt den Methanol-Abbau.",
       },
       klinischerBezug:
         "Ketonkörper (β-Hydroxybutyrat, Acetoacetat, Aceton) bei Diabetes/Fasten: Acetongeruch, Ketoazidose. Methanol-Vergiftung: Formaldehyd-Metabolit schädigt Retina. Aspirin = Acetylsalicylsäure (Ester).",
@@ -850,12 +887,27 @@ Beispiele: ACE-Hemmer (kompetitiv), Statine (kompetitiv an HMG-CoA-Reduktase), P
         "PKU: Phenylalanin-Hydroxylase-Defekt → Phe akkumuliert, Tyrosin fehlt → Neugeborenenscreening.",
         "Biomarker: Troponin = Herzinfarkt; GPT/ALT = Leberschaden; LDH = unspezifisch.",
       ],
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Erläutern Sie den Zusammenhang zwischen Primärstruktur und den höheren Strukturebenen eines Proteins am Beispiel der Sichelzellanämie.",
-        answer:
-          "Die Primärstruktur eines Proteins ist die lineare Abfolge der Aminosäuren, die durch Peptidbindungen verknüpft sind. Sie wird direkt durch die DNA-Sequenz kodiert und legt alle übergeordneten Strukturen fest, da sie die chemischen Eigenschaften der Seitenketten bestimmt, die für Faltung und Funktion verantwortlich sind. Bei der Sichelzellanämie ist dies exemplarisch zu sehen: Eine einzige Punktmutation im β-Globin-Gen führt zum Austausch der hydrophilen, negativ geladenen Glutaminsäure an Position 6 durch die hydrophobe, ungeladene Aminosäure Valin (Glu6Val). Dieser Austausch verändert die Tertiärstruktur geringfügig, hat aber dramatische Konsequenzen für die Quartärstruktur: Desoxy-HbS-Moleküle polymerisieren, da die hydrophobe Val-Seitenkette in eine komplementäre hydrophobe Tasche eines benachbarten Moleküls passt. Die langen HbS-Polymere verformen Erythrozyten zu sichelförmigen Zellen, die Kapillaren verstopfen und vorzeitig hämolysieren. Dieses Beispiel zeigt, dass die gesamte Funktion eines Proteins – von der atomaren Struktur bis zum klinischen Krankheitsbild – in der Primärstruktur kodiert ist und ein einziger Aminosäureaustausch diese gesamte Kaskade verändern kann.",
+        text: "Welche Aussage zur Sichelzellanämie ist richtig?",
+        options: [
+          { id: "a", text: "Eine Insertion in der β-Globin-mRNA führt zum Funktionsverlust." },
+          {
+            id: "b",
+            text: "Der Austausch Glu6Val im β-Globin verändert die Quartärstruktur: Desoxy-HbS polymerisiert.",
+          },
+          { id: "c", text: "Die Sekundärstruktur des Hämoglobins ist bei HbS völlig zerstört." },
+          {
+            id: "d",
+            text: "Sichelzellen entstehen durch einen Defekt der Erythrozytenmembran, nicht des Hämoglobins.",
+          },
+          {
+            id: "e",
+            text: "HbS bindet Sauerstoff stärker als HbA und gibt ihn im Gewebe nicht ab.",
+          },
+        ],
+        correctOptionId: "b",
+        explanation:
+          "Glu→Val an Position 6 der β-Kette: hydrophobe Val-Seitenkette ermöglicht HbS-Polymerisation bei Desoxigenierung → Sichelform der Erythrozyten.",
       },
       klinischerBezug:
         "Troponin, CK-MB und LDH als Serummarker bei Myokardinfarkt; PKU-Screening bei Neugeborenen; Sichelzellanämie als Modell für Struktur-Funktions-Beziehung.",
@@ -1012,6 +1064,21 @@ Beispiele: ACE-Hemmer (kompetitiv), Statine (kompetitiv an HMG-CoA-Reduktase), P
           tags: ["histidin", "puffer", "enzymkatalyse", "imidazol"],
           difficulty: 2,
         },
+        {
+          question: "Welche Aussage über Aminosäuren und Proteine ist FALSCH?",
+          options: [
+            "Glycin ist die einzige proteinogene Aminosäure ohne Stereozentrum, da R = H ist.",
+            "Aminosäuren liegen bei physiologischem pH als Zwitterionen vor (NH₃⁺ und COO⁻).",
+            "Disulfidbrücken zwischen Cystein-Resten stabilisieren die Tertiärstruktur von Proteinen.",
+            "Alle 20 proteinogenen Aminosäuren sind essenziell und müssen über die Nahrung aufgenommen werden.",
+            "Histidin ist aufgrund seines pKs von ~6,0 ein effektiver Puffer bei physiologischem pH.",
+          ],
+          correctIndex: 3,
+          explanation:
+            "Aussage D ist FALSCH: Nicht alle 20 proteinogenen Aminosäuren sind essenziell. Nur 8 (bei Erwachsenen) bzw. 10 (bei Kindern) Aminosäuren sind essenziell und müssen über die Nahrung aufgenommen werden (z. B. Valin, Leucin, Isoleucin, Phenylalanin, Tryptophan, Methionin, Threonin, Lysin). Die übrigen kann der Körper selbst synthetisieren (nicht-essenzielle Aminosäuren wie Alanin, Glycin, Serin). Alle anderen Aussagen sind korrekt.",
+          difficulty: 2,
+          tags: ["falsch-aussage", "aminosäuren", "essenzielle-aminosäuren"],
+        },
       ],
     },
 
@@ -1131,12 +1198,21 @@ Die **Blutgruppenantigene** des AB0-Systems sind Kohlenhydratstrukturen auf der 
         "Laktoseintoleranz: Laktasemangel → Gal+Glc werden nicht freigesetzt → Diarrhö, Blähungen.",
         "Ribose (RNA) = Pentose mit OH am C2; Desoxyribose (DNA) = Pentose ohne OH am C2.",
       ],
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Erklären Sie den Unterschied zwischen Amylose, Amylopektin und Glykogen in Bezug auf Struktur und physiologische Bedeutung.",
-        answer:
-          "Amylose, Amylopektin und Glykogen sind alle Glucosepolymere aus α-D-Glucose, unterscheiden sich aber erheblich in ihrer Verzweigungsstruktur und ihrer biologischen Funktion. Amylose ist ein lineares Polymer aus α-1,4-glykosidisch verknüpfter D-Glucose, das in wässriger Lösung eine Helixstruktur annimmt. In dieser Helix werden Jodmoleküle eingelagert, was zu der charakteristischen blau-violetten Färbung beim Stärke-Iod-Nachweis führt. Amylopektin dagegen ist ein verzweigtes Molekül: Es hat ebenfalls ein α-1,4-verknüpftes Grundgerüst, aber zusätzlich α-1,6-glykosidische Verzweigungspunkte etwa alle 20–25 Glucosereste. Beide zusammen bilden die Stärke in Pflanzen als Reservekohlenhydrat. Glykogen ist das funktionelle Analogon in Tier und Mensch und wird vor allem in der Leber (Regulierung des Blutglukosespiegels) und im Skelettmuskel (lokale Energiereserve) gespeichert. Es ähnelt dem Amylopektin strukturell, ist aber noch stärker verzweigt: Die α-1,6-Verzweigungen treten bereits alle 8–12 Glucosereste auf. Diese hohe Verzweigungsdichte hat eine entscheidende physiologische Bedeutung: Sie erzeugt viele nicht-reduzierende Enden, an denen Glykogen-Phosphorylase gleichzeitig Glucosereste abspalten kann, was eine sehr schnelle Mobilisierung von Glucose ermöglicht — wichtig für plötzlichen Energiebedarf (z.B. Flucht, intensive körperliche Belastung).",
+        text: "Was unterscheidet Glykogen strukturell von Amylopektin?",
+        options: [
+          { id: "a", text: "Glykogen enthält β-1,4-Bindungen statt α-1,4-Bindungen." },
+          { id: "b", text: "Glykogen ist linear und unverzweigt, Amylopektin ist verzweigt." },
+          {
+            id: "c",
+            text: "Glykogen hat α-1,6-Verzweigungen alle 8–12 Reste, Amylopektin alle 20–25 Reste.",
+          },
+          { id: "d", text: "Amylopektin ist stärker verzweigt als Glykogen." },
+          { id: "e", text: "Glykogen besteht aus Fructose, Amylopektin aus Glucose." },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "Glykogen: α-1,6-Verzweigung alle 8–12 Reste (stärker verzweigt → viele nicht-reduzierende Enden → schnelle Glucose-Mobilisierung). Amylopektin: alle 20–25 Reste.",
       },
       klinischerBezug:
         "HbA1c als Therapiemonitor bei Diabetes mellitus; Laktoseintoleranz durch Laktasemangel; Glykogenspeicherkrankheiten bei Enzymdefekten des Glykogenabbaus.",
@@ -1629,9 +1705,20 @@ Gehirn, Herzmuskel und Skelettmuskel können Ketonkörper als alternatives Subst
         "Ketonkörper: Acetoacetat, β-Hydroxybutyrat, Aceton — bei Fasten/Typ-1-Diabetes aus überschüssigem Acetyl-CoA.",
       ],
       altfrage: {
-        question: "Welche der folgenden Aussagen über Eicosanoide ist richtig?",
-        answer:
-          "Eicosanoide (Prostaglandine, Thromboxane, Leukotriene) werden aus Arachidonsäure (C20:4, ω-6) gebildet, die durch Phospholipase A₂ aus Membranphospholipiden freigesetzt wird. Der COX-Weg liefert Prostaglandine (PGE₂: Entzündung, Schmerz, Fieber) und Thromboxane (TXA₂: Thrombozytenaggregation); der LOX-Weg liefert Leukotriene (LTB₄: Chemotaxis, LTC₄/D₄: Bronchokonstriktion). Aspirin hemmt COX irreversibel durch Acetylierung eines Serin-Rests. Da Thrombozyten keinen Zellkern haben, können sie kein neues COX-Enzym nachsynthetisieren → die Hemmung hält für die gesamte Plättchenlebensdauer (7–10 Tage). Dies erklärt die Wirkung von niedrigdosiertem Aspirin (100 mg/Tag) als Thrombozytenaggregationshemmer in der Sekundärprävention kardiovaskulärer Ereignisse. Glucocorticoide (Cortison) hemmen dagegen die Phospholipase A₂ indirekt (über Lipocortin-Induktion) und blockieren damit den gesamten Eicosanoid-Weg — stärker antiinflammatorisch, aber auch mehr Nebenwirkungen.",
+        text: "Welche der folgenden Aussagen über Eicosanoide ist richtig?",
+        options: [
+          { id: "a", text: "Leukotriene werden über den COX-Weg aus Arachidonsäure gebildet." },
+          { id: "b", text: "Aspirin hemmt die Phospholipase A₂ irreversibel." },
+          {
+            id: "c",
+            text: "Thromboxan A₂ fördert die Thrombozytenaggregation und wird über den COX-Weg gebildet.",
+          },
+          { id: "d", text: "Prostaglandine werden ausschließlich in der Leber synthetisiert." },
+          { id: "e", text: "Glucocorticoide hemmen selektiv den LOX-Weg, nicht den COX-Weg." },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "Arachidonsäure → COX → Prostaglandine + Thromboxane; → LOX → Leukotriene. TXA₂ fördert Thrombozytenaggregation. Aspirin hemmt COX (nicht PLA₂).",
       },
       klinischerBezug:
         "Atherosklerose (oxLDL → Schaumzellen → Plaque). Familiäre Hypercholesterinämie (LDLR-Mutation). Statine (HMG-CoA-Reduktase-Hemmung → LDL↓). Aspirin (COX-Hemmung → Thrombozytenaggregation↓). Trans-Fettsäuren (atherogen). Ketoazidose bei Typ-1-Diabetes. Sphingolipidosen (M. Gaucher, M. Tay-Sachs). Omega-3-FS (antiinflammatorisch, Triglyceride↓).",
@@ -1934,12 +2021,27 @@ DNA wird ständig durch UV-Strahlung, reaktive Sauerstoffspezies (ROS) und Repli
         "DNA-Methylierung an CpG: epigenetische Regulation ohne Sequenzänderung; Promotor-Methylierung → Gen-Silencing.",
         "GC-reiche DNA hat höhere Schmelztemperatur (3 H-Brücken pro GC vs. 2 bei AT).",
       ],
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Erläutern Sie das Wirkprinzip von Aciclovir als Virostatikum und erklären Sie, warum es selektiv virusbefallene Zellen betrifft.",
-        answer:
-          "Aciclovir (Acycloguanosin) ist ein Guanosin-Analogon und eines der wichtigsten Virostatika zur Behandlung von Herpesvirus-Infektionen (HSV-1, HSV-2, VZV). Sein Wirkprinzip basiert auf einem mehrstufigen Aktivierungsprozess kombiniert mit dem Kettenabbruch-Mechanismus. Im ersten Schritt wird Aciclovir von der virusspezifischen Thymidinkinase (TK) phosphoryliert zu Aciclovir-Monophosphat. Dies ist der Schlüsselschritt für die Selektivität: Herpesviren codieren ihre eigene TK, die eine viel höhere Affinität für Aciclovir hat als die zelluläre Thymidinkinase des Wirts. In nicht-infizierten Zellen findet diese erste Phosphorylierung kaum statt. In einem zweiten und dritten Schritt wird Aciclovir-Monophosphat durch zelluläre Kinasen zu Aciclovir-Triphosphat phosphoryliert. Dieses wird von der viralen DNA-Polymerase als falsches Substrat in den wachsenden DNA-Strang eingebaut. Da Aciclovir keine 3'-Hydroxylgruppe am Zuckeranalogon besitzt (der Zuckerring ist 'offen', es fehlt C3' und damit die 3'-OH-Gruppe), kann das nächste Nukleotid nicht an die 3'-Position angehängt werden — der DNA-Strang bricht ab. Die virale Replikation wird so effektiv unterbunden, während gesunde, nicht-infizierte Zellen kaum betroffen sind.",
+        text: "Warum wirkt Aciclovir selektiv gegen Herpesviren und nicht gegen gesunde Zellen?",
+        options: [
+          {
+            id: "a",
+            text: "Aciclovir hemmt die zelluläre RNA-Polymerase, die nur in infizierten Zellen aktiv ist.",
+          },
+          {
+            id: "b",
+            text: "Die virale Thymidinkinase phosphoryliert Aciclovir bevorzugt — in gesunden Zellen fehlt dieser Aktivierungsschritt.",
+          },
+          {
+            id: "c",
+            text: "Aciclovir wird nur von infizierten Zellen aufgenommen, da sie einen speziellen Transporter exprimieren.",
+          },
+          { id: "d", text: "Gesunde Zellen bauen Aciclovir sofort ab, infizierte Zellen nicht." },
+          { id: "e", text: "Aciclovir blockiert die Fusion von Herpesviren mit der Zellmembran." },
+        ],
+        correctOptionId: "b",
+        explanation:
+          "Virale Thymidinkinase hat hohe Affinität für Aciclovir → Phosphorylierung → Einbau in virale DNA → Kettenabbruch (fehlendes 3'-OH). Gesunde Zellen phosphorylieren Aciclovir kaum.",
       },
       klinischerBezug:
         "Aciclovir (Herpes), Tenofovir (HIV), Remdesivir (COVID-19) als Nukleosid-Analoga mit Kettenabbruchmechanismus; DNA-Methylierung in Krebsentstehung; Chargaff-Regeln für forensische DNA-Analyse.",

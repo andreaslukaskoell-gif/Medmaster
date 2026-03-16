@@ -191,12 +191,24 @@ Die **Ordnungszahl Z** (Protonenzahl) gibt an, wie viele Protonen im Kern sitzen
         "Rutherford-Schluss: Wenn der Kern die Größe einer Murmel hätte, wäre das Atom so groß wie ein Fußballstadion.",
       ],
 
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Beschreiben Sie den Rutherford-Streuversuch und erläutern Sie, welche Schlussfolgerungen daraus über den Atombau gezogen wurden. Gehen Sie auch auf die Grenzen des Rutherford-Modells ein.",
-        answer:
-          "Ernest Rutherford beschoss 1911 eine extrem dünne Goldfolie (ca. 100 Atomlagen) mit einem gebündelten Strom von Alphateilchen (⁴He²⁺-Ionen, doppelt positiv geladen). Um die Folie herum waren Szintillationsdetektoren angebracht, um den Auftreffpunkt der Teilchen zu registrieren. Das überraschende Ergebnis war dreiteilig: (1) Die überwiegende Mehrheit der Teilchen (>99 %) durchquerte die Folie nahezu unabgelenkt. (2) Ein kleiner Anteil wurde unter großen Winkeln abgelenkt. (3) Einzelne Teilchen wurden fast direkt zurückgeworfen. Aus diesem Befund schloss Rutherford, dass die positive Ladung und fast die gesamte Masse des Atoms in einem äußerst kleinen, dichten Bereich – dem Atomkern – konzentriert sein müssen. Der Rest des Atoms ist nahezu leerer Raum, der nur von der Elektronenhülle ausgefüllt wird. Der Kerndurchmesser beträgt etwa 10⁻¹⁵ m, der Atomdurchmesser etwa 10⁻¹⁰ m – ein Verhältnis von 1 : 100 000. Grenzen des Rutherford-Modells: Das Modell konnte nicht erklären, warum die Elektronen nicht spiralförmig in den Kern stürzen (beschleunigte Ladungen strahlen klassisch elektromagnetisch Energie ab) und lieferte keine Erklärung für diskrete Spektrallinien. Diese Probleme wurden erst durch das Bohrsche Atommodell und schließlich das quantenmechanische Modell gelöst.",
+        text: "Welche Schlussfolgerung zog Rutherford aus seinem Streuversuch mit Alphateilchen an einer Goldfolie?",
+        options: [
+          { id: "a", text: "Elektronen bewegen sich auf festen Bahnen um den Kern" },
+          {
+            id: "b",
+            text: "Die positive Ladung und nahezu die gesamte Masse des Atoms sind in einem sehr kleinen Kern konzentriert",
+          },
+          {
+            id: "c",
+            text: "Atome bestehen aus gleichmäßig verteilter positiver Ladung mit eingebetteten Elektronen",
+          },
+          { id: "d", text: "Neutronen bilden den Hauptanteil der Atommasse" },
+          { id: "e", text: "Elektronen befinden sich in Orbitalen mit definierten Quantenzahlen" },
+        ],
+        correctOptionId: "b",
+        explanation:
+          "Rutherford schloss aus der Rückstreuung einzelner Alphateilchen, dass die positive Ladung und fast die gesamte Masse in einem winzigen Kern (ca. 10⁻¹⁵ m) konzentriert sind, während der Rest des Atoms (ca. 10⁻¹⁰ m) nahezu leerer Raum ist. Option A beschreibt das Bohr-Modell, C das Thomson-Modell, E das quantenmechanische Modell.",
       },
 
       klinischerBezug:
@@ -328,6 +340,16 @@ Die **Ordnungszahl Z** (Protonenzahl) gibt an, wie viele Protonen im Kern sitzen
           ],
           tags: ["ordnungszahl", "ionenladung", "anion"],
           difficulty: 3,
+        },
+        {
+          question:
+            "Welche Aussagen sind richtig?\n\n1. Im Bohr-Modell bewegen sich Elektronen auf festen Kreisbahnen mit quantisierten Energien.\n2. Im Orbitalmodell beschreiben Orbitale den exakten Aufenthaltsort eines Elektrons.\n3. Die Hauptquantenzahl n bestimmt die Schale und den mittleren Abstand des Elektrons vom Kern.\n4. Rutherford entdeckte, dass Elektronen in einer positiv geladenen Kugel eingebettet sind.\n5. Im Thomson-Modell sind Elektronen in einer diffusen positiven Ladungswolke eingebettet.",
+          options: ["Nur 1 und 3", "Nur 2 und 4", "Nur 1, 3 und 5", "Nur 2, 3 und 4", "Alle"],
+          correctIndex: 2,
+          explanation:
+            "Aussagen 1, 3 und 5 sind korrekt: Bohr postulierte diskrete Kreisbahnen mit quantisierten Energieniveaus (1). Die Hauptquantenzahl n bestimmt die Schale und den mittleren Kernabstand (3). Das Thomson-Modell ('Rosinenkuchen') beschreibt Elektronen in einer positiven Ladungswolke (5). Aussage 2 ist falsch — Orbitale beschreiben Aufenthaltswahrscheinlichkeiten (|ψ|²), nicht den exakten Ort. Aussage 4 ist falsch — das beschreibt Thomsons Modell, nicht Rutherfords; Rutherford entdeckte den kompakten, positiven Atomkern.",
+          difficulty: 2,
+          tags: ["typ-k", "atommodelle", "quantenzahlen"],
         },
       ],
     },
@@ -545,12 +567,18 @@ Die Elektronenkonfiguration verrät direkt, ob ein Stoff magnetisch ist:
         "Zinkfinger-Proteine: Zn koordiniert 4 Cysteine/Histidine → DNA-bindende Domäne von Transkriptionsfaktoren.",
       ],
 
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Erklären Sie das Pauliprinzip und die Hundsche Regel. Schreiben Sie die Elektronenkonfiguration für Eisen (Fe, Z = 26) und erläutern Sie, warum Eisen als Spurenelement für den Sauerstofftransport im Blut essenziell ist.",
-        answer:
-          "Das Pauliprinzip (Wolfgang Pauli, 1925) besagt, dass in einem Atom keine zwei Elektronen in allen vier Quantenzahlen (n, l, mₗ, mₛ) übereinstimmen dürfen. Praktisch bedeutet dies, dass jedes Orbital maximal zwei Elektronen aufnehmen kann, die dann entgegengesetzte Spins (+½ und −½) haben müssen. Die Hundsche Regel regelt die Besetzung entarteter (gleichenergetischer) Orbitale einer Unterschale: Diese werden zunächst einzeln mit parallelem Spin besetzt, bevor eine Doppelbesetzung beginnt. Dadurch wird die elektrostatische Abstoßung zwischen Elektronen minimiert und die Gesamtenergie gesenkt. Die Elektronenkonfiguration von Eisen (Z = 26) ergibt sich nach dem Aufbauprinzip: [Ar]3d⁶4s². Das bedeutet, nach dem Argon-Rumpf ([Ar] = [Ne]3s²3p⁶3d⁰) werden die Orbitale in der Reihenfolge 4s (zuerst, wegen niedrigerer n+l-Summe) und dann 3d gefüllt. Die sechs 3d-Elektronen verteilen sich nach der Hundschen Regel auf die fünf 3d-Orbitale: zunächst fünf einfach besetzt (↑), das sechste beginnt die Paarung. Biologisch ist Eisen essenziell für Hämoglobin: Das Fe²⁺-Ion im Zentrum des Häm-Rings koordiniert O₂ reversibel. Nur Fe²⁺ (nicht Fe³⁺) kann O₂ binden. Die variablen Oxidationsstufen (Fe²⁺/Fe³⁺) sind durch die unvollständige 3d-Schale möglich, was Eisen auch für die Elektronentransportkette (Zytochrome) und antioxidative Enzyme (Katalase, Peroxidasen) unverzichtbar macht.",
+        text: "Welche Elektronenkonfiguration hat Eisen (Fe, Z = 26) im Grundzustand?",
+        options: [
+          { id: "a", text: "[Ar] 3d⁸" },
+          { id: "b", text: "[Ar] 3d⁶ 4s²" },
+          { id: "c", text: "[Ar] 3d⁵ 4s² 4p¹" },
+          { id: "d", text: "[Ar] 4s² 4p⁶" },
+          { id: "e", text: "[Ar] 3d⁴ 4s² 4p²" },
+        ],
+        correctOptionId: "b",
+        explanation:
+          "Nach dem Aufbauprinzip werden zuerst 4s (niedrigere n+l-Summe), dann 3d besetzt: [Ar] 3d⁶ 4s². Die 6 d-Elektronen verteilen sich nach der Hundschen Regel: 5 einfach besetzt, 1 gepaart. Option A ignoriert 4s; C und E besetzen 4p fälschlich vor Auffüllung von 3d.",
       },
 
       klinischerBezug:
@@ -674,6 +702,21 @@ Die Elektronenkonfiguration verrät direkt, ob ein Stoff magnetisch ist:
           tags: ["pauliprinzip", "spin", "quantenzahlen"],
           difficulty: 2,
         },
+        {
+          question: "Welche Aussage über die Elektronenkonfiguration ist FALSCH?",
+          options: [
+            "Die Hundsche Regel besagt, dass entartete Orbitale zuerst einfach mit parallelem Spin besetzt werden.",
+            "Das Aufbauprinzip füllt Orbitale in der Reihenfolge steigender Energie auf.",
+            "Das 4s-Orbital wird vor dem 3d-Orbital aufgefüllt, aber bei der Ionisierung von Übergangsmetallen werden zuerst die 3d-Elektronen entfernt.",
+            "Kupfer hat die Konfiguration [Ar]3d¹⁰4s¹ statt [Ar]3d⁹4s², weil die vollgefüllte d-Schale besonders stabil ist.",
+            "Nach dem Pauli-Prinzip können sich maximal 2 Elektronen mit entgegengesetztem Spin in einem Orbital befinden.",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Aussage C ist FALSCH: Bei der Ionisierung von Übergangsmetallen werden zuerst die 4s-Elektronen entfernt (nicht die 3d-Elektronen), obwohl 4s vor 3d aufgefüllt wird. Beispiel: Fe → Fe²⁺ verliert beide 4s-Elektronen ([Ar]3d⁶4s² → [Ar]3d⁶). Alle anderen Aussagen sind korrekt: A beschreibt die Hundsche Regel, B das Aufbauprinzip, D die Kupfer-Ausnahme, E das Pauli-Prinzip.",
+          difficulty: 2,
+          tags: ["falsch-aussage", "elektronenkonfiguration", "ionisierung"],
+        },
       ],
       diagram: "atomic-orbitals",
     },
@@ -743,6 +786,8 @@ Für Moleküle: M(Molekül) = Summe der molaren Massen aller Atome.
 Die **Avogadro-Konstante** Na = 6,022 mal 10 hoch 23 pro mol gibt die Anzahl der Teilchen (Atome, Moleküle, Ionen) in einem Mol an.
 
 **Definition Mol:** 1 Mol ist die Stoffmenge, die genauso viele Formeleinheiten enthält wie Atome in 12 g C-12 enthalten sind (= Na Teilchen).
+
+{{DIAGRAM:periodic-table}}
 
 ## Das Mol-Konzept -- zentrale Formeln
 
@@ -849,12 +894,18 @@ C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O (vollständige Oxidation von Gluk
         "Stöchiometrie: Koeffizienten in Reaktionsgleichungen = Mol-Verhältnisse der Stoffe.",
       ],
 
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Erläutern Sie das Mol-Konzept und die Bedeutung der Avogadro-Konstante. Berechnen Sie, wie viele Mol Glukose (C₆H₁₂O₆, M = 180 g/mol) in einem Liter Blutserum enthalten sind, wenn die Glukosekonzentration 5 mmol/L beträgt, und geben Sie die Masse in mg an.",
-        answer:
-          "Das Mol ist die SI-Einheit der Stoffmenge. 1 Mol einer Substanz enthält genau Nₐ = 6,022 × 10²³ Formeleinheiten (Atome, Moleküle, Ionen). Die Avogadro-Konstante Nₐ = 6,022 × 10²³ mol⁻¹ gibt an, wie viele Teilchen in einem Mol enthalten sind. Der Wert wurde historisch so gewählt, dass die molare Masse M [g/mol] numerisch gleich der relativen Atommasse Aᵣ [u] ist. Das hat den praktischen Vorteil: 1 Mol ¹²C hat die Masse 12 g; 1 Mol H₂O = 18,015 g; 1 Mol NaCl = 58,44 g. Das Mol verbindet die submikroskopische Welt der Atome (in u gemessen) mit der wägbaren Welt der Chemiker (in Gramm). Die zentrale Formel lautet: n = m/M, wobei n die Stoffmenge in mol, m die Masse in g und M die molare Masse in g/mol ist. Für die Glukose-Berechnung: Gegeben: c = 5 mmol/L = 0,005 mol/L; V = 1 L. n = c × V = 0,005 mol/L × 1 L = 0,005 mol = 5 mmol. Masse: m = n × M = 0,005 mol × 180 g/mol = 0,9 g = 900 mg. Im klinischen Labor werden Glukosewerte routinemäßig in mmol/L angegeben (Normalbereich: 3,9–6,1 mmol/L nüchtern). Ein Wert von 5 mmol/L entspricht also ca. 900 mg Glukose pro Liter Serum, was dem umgerechneten Wert von 90 mg/dL in der älteren Einheit entspricht.",
+        text: "Wie viel Gramm Glukose (M = 180 g/mol) sind in 1 L Blutserum mit einer Konzentration von 5 mmol/L enthalten?",
+        options: [
+          { id: "a", text: "0,09 g" },
+          { id: "b", text: "0,9 g" },
+          { id: "c", text: "9 g" },
+          { id: "d", text: "90 g" },
+          { id: "e", text: "0,005 g" },
+        ],
+        correctOptionId: "b",
+        explanation:
+          "m = n × M = 0,005 mol × 180 g/mol = 0,9 g (= 900 mg). Die Konzentration 5 mmol/L = 0,005 mol/L; bei V = 1 L ergibt sich n = 0,005 mol. Option A verwechselt mmol mit μmol, Option C multipliziert falsch mit 10.",
       },
 
       klinischerBezug:
@@ -1112,17 +1163,18 @@ Proteinfaltung und -funktion basieren auf einem Netzwerk aus H-Brücken, hydroph
         "PCR-Denaturierungsschritt (94 °C) bricht H-Brücken zwischen DNA-Strängen auf.",
       ],
 
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Erläutern Sie die Wasserstoffbrückenbindung am Beispiel des Wassers und der DNA. Erklären Sie dabei die strukturellen Voraussetzungen, typische Energiewerte und klinisch relevante Konsequenzen.",
-        answer: `Eine Wasserstoffbrückenbindung entsteht, wenn ein Wasserstoffatom, das an ein stark elektronegatives Atom X (N, O oder F) gebunden ist, mit dem freien Elektronenpaar eines weiteren elektronegativen Atoms Y (ebenfalls N, O oder F) wechselwirkt. Das H-Atom ist durch die Elektronegativität von X elektropositiv polarisiert und wird daher elektrostatisch von Y angezogen. Die Bindungsenergie liegt bei 10–40 kJ/mol, also deutlich geringer als kovalente Bindungen (~350 kJ/mol für C–C), aber erheblich stärker als gewöhnliche van-der-Waals-Kräfte.
-
-Im **Wasser** kann jedes Molekül bis zu vier H-Brücken ausbilden: zwei als Donor (über die zwei O–H-Bindungen) und zwei als Akzeptor (über die zwei freien Elektronenpaare des Sauerstoffs). Dieses dichte Netzwerk erklärt die anomal hohe Siedetemperatur (100 °C statt der nach Molmasse erwarteten ca. −80 °C), die hohe Verdampfungswärme, die Oberflächenspannung sowie die Anomalie des Wassers (Dichtemaximum bei 4 °C wegen H-Brücken-Geometrie im Eis).
-
-In der **DNA-Doppelhelix** halten H-Brücken die beiden antiparallelen Stränge zusammen: Adenin–Thymin bildet 2 H-Brücken, Guanin–Cytosin bildet 3 H-Brücken. GC-reiche DNA-Abschnitte sind daher thermisch stabiler. Diese Eigenschaft wird bei der **PCR (Polymerase-Kettenreaktion)** ausgenutzt: Im Denaturierungsschritt (94–98 °C) werden alle H-Brücken zwischen den Basenpaaren aufgebrochen, die kovalenten Phosphodiesterbindungen der Stränge bleiben intakt. Beim Abkühlen lagern sich komplementäre Primer spezifisch an (Annealing).
-
-In **Proteinen** stabilisieren H-Brücken die Sekundärstruktur: In der α-Helix verbindet jede NH-Gruppe einer Aminosäure mit der C=O-Gruppe der viertfolgenden Aminosäure (i → i+4). Im β-Faltblatt bilden parallele oder antiparallele Stränge H-Brücken untereinander. Denaturierung (Hitze, Harnstoff, pH-Extreme) zerstört dieses Netzwerk irreversibel oder reversibel, was den Funktionsverlust von Enzymen erklärt.`,
+        text: "Wie viele Wasserstoffbrücken kann ein einzelnes Wassermolekül maximal ausbilden?",
+        options: [
+          { id: "a", text: "1" },
+          { id: "b", text: "2" },
+          { id: "c", text: "3" },
+          { id: "d", text: "4" },
+          { id: "e", text: "6" },
+        ],
+        correctOptionId: "d",
+        explanation:
+          "Wasser kann bis zu 4 H-Brücken bilden: 2 als Donor (über die zwei O-H-Bindungen) und 2 als Akzeptor (über die zwei freien Elektronenpaare des Sauerstoffs). Dieses dichte Netzwerk erklärt den anomal hohen Siedepunkt (100 °C statt ca. -80 °C nach Molmasse).",
       },
 
       klinischerBezug:
@@ -1432,17 +1484,18 @@ Neben den klassischen Aggregatzuständen gibt es fein verteilte Systeme, die wed
         "Surfactant (DPPC) senkt Alveolären-Oberflächenspannung; Mangel → Atemnotsyndrom (RDS) bei Frühgeborenen.",
       ],
 
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Erklären Sie den Tyndall-Effekt und die Brownsche Bewegung in kolloidalen Systemen. Erläutern Sie dann die klinische Bedeutung der kolloidalen Eigenschaften des Blutes am Beispiel des onkotischen Drucks und kolloidaler Infusionslösungen.",
-        answer: `Der **Tyndall-Effekt** bezeichnet die Streuung von Licht durch kolloidale Partikel (Durchmesser 1 nm–1 μm). Wenn ein Lichtstrahl ein kolloidales System passiert, wird er an den Partikeloberflächen nach allen Seiten gestreut (Rayleigh-Streuung für Partikel < λ; Mie-Streuung für größere). Der Lichtstrahl wird dadurch seitlich sichtbar, obwohl das Kolloid optisch klar oder leicht opaleszent erscheint. In echten Lösungen (Partikel <1 nm, z. B. NaCl, Glukose) ist der Effekt nicht sichtbar, weil die gelösten Teilchen viel kleiner als die Lichtwellenlänge sind. Suspensionen (>1 μm) trüben das Licht diffus. Der Tyndall-Effekt ist damit ein einfaches diagnostisches Kriterium zur Unterscheidung echter Lösungen von Kolloiden.
-
-Die **Brownsche Bewegung** ist die stochastische Zitterbewegung kolloidaler Partikel infolge der unregelmäßigen thermischen Stöße der Lösungsmittelmoleküle (Wärmeenergie ~kBT ≈ 0,026 eV bei Raumtemperatur). Da kolloidale Partikel klein genug sind, um durch diese Stöße signifikant aus ihrer Position bewegt zu werden, sedimentieren sie nicht unter dem Einfluss der Schwerkraft. Diese Eigenschaft ist entscheidend für die Stabilität kolloidaler Systeme. Große Teilchen (>1 μm, Suspensionen) haben genug Masse, um trotz Brownscher Bewegung zu sedimentieren.
-
-**Klinische Bedeutung kolloidaler Blut-Eigenschaften:** Plasma enthält kolloidale Proteine — vor allem Albumin (Molmasse ~66 kDa, Durchmesser ~7 nm), aber auch Fibrinogen, Globuline und Gerinnungsfaktoren. Diese Proteine können die Kapillarmembran (Porendurchmesser <2 nm effektiv für Proteine) nicht passieren und erzeugen dadurch den **onkotischen (kolloidosmotischen) Druck** von ca. 25–28 mmHg. Dieser Druck hält Wasser im Gefäßlumen, indem er dem nach außen filtrierenden hydrostatischen Druck entgegenwirkt (Starling-Gleichgewicht).
-
-**Kolloidale Infusionslösungen** (HAES, Gelatine, Humanalbumin) nutzen dasselbe Prinzip: Die großen Makromoleküle (Hydroxyethylstärke: >100 kDa; Gelatine: ~30 kDa; Albumin: 66 kDa) bleiben nach intravenöser Gabe im Gefäßlumen und erhöhen den onkotischen Druck, was das intravasale Volumen länger aufrechterhält als kristalloide Lösungen (NaCl, Ringer). Bei hypoosmolarem Schock (z. B. nach schwerem Blutverlust) ist dies klinisch vorteilhaft. HAES ist seit 2013 bei kritisch kranken und Sepsis-Patienten aufgrund von Nierenschäden eingeschränkt; Humanalbumin wird bei Leberzirrhose mit spontaner bakterieller Peritonitis und hepatorenalem Syndrom eingesetzt.`,
+        text: "Welches Phänomen dient zur Unterscheidung kolloidaler Lösungen von echten Lösungen?",
+        options: [
+          { id: "a", text: "Brownsche Bewegung" },
+          { id: "b", text: "Osmose" },
+          { id: "c", text: "Tyndall-Effekt" },
+          { id: "d", text: "Elektrophorese" },
+          { id: "e", text: "Dialyse" },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "Der Tyndall-Effekt (Lichtstreuung an kolloidalen Partikeln, 1 nm - 1 μm) macht einen Lichtstrahl seitlich sichtbar. In echten Lösungen (Partikel < 1 nm) tritt dieser Effekt nicht auf. Brownsche Bewegung zeigen beide Systeme; Osmose und Dialyse sind Transportphänomene.",
       },
 
       klinischerBezug:
@@ -1730,12 +1783,18 @@ Halb- und vollgefüllte d-Schalen sind besonders stabil — die ausführliche Er
       klinischerBezug:
         "Die Position im PSE bestimmt die biologische Rolle: Gruppe 1 (Na+, K+) sind die dominanten Elektrolyte für Membranpotenzial und Erregungsleitung; Gruppe 2 (Ca2+, Mg2+) sind Cofaktoren und Strukturelemente des Knochens; Halbmetalle (Si, Ge) ermöglichen moderne Medizintechnik (MRT-Elektronik); As (Halbmetall) ist als Trisenox (As2O3) ein zugelassenes Therapeutikum bei akuter Promyelozyten-Leukämie, wo es das Onkoprotein PML-RARalpha degradiert und Apoptose in Leukämiezellen induziert.",
 
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Erklären Sie, warum Mendelejews Periodensystem trotz Orientierung an der Atommasse so erfolgreich war, und wo es Schwächen zeigte. Welches moderne Prinzip löste das Problem?",
-        answer:
-          "Mendelejews Erfolg beruhte auf der empirischen Beobachtung, dass chemische Eigenschaften sich periodisch mit steigender Atommasse wiederholen. Da Atommasse und Kernladungszahl für die meisten Elemente in derselben Reihenfolge wachsen, funktionierte sein System für den Großteil des PSE korrekt. Schwächen zeigten sich bei Elementpaaren, bei denen die Reihenfolge nach Atommasse der Reihenfolge nach Eigenschaften widersprach: Argon (Atommasse 39,9) müsste nach Atommasse nach Kalium (39,1) stehen - nach Eigenschaften gehört Ar aber zu den Edelgasen (Gruppe 18) und K zu den Alkalimetallen (Gruppe 1). Ebenso problematisch: Tellur/Jod und Cobalt/Nickel. Mendelejew vermutete Messfehler. Henry Moseley klärte 1913 durch Röntgenspektroskopie, dass die charakteristischen Röntgenfrequenzen der Elemente von der Protonenzahl Z (Kernladungszahl) abhängen. Z ist das korrekte Ordnungsprinzip: Ar hat Z=18, K hat Z=19 - die richtige Reihenfolge, ohne Anomalie. Das moderne PSE nach Kernladungszahl ist quantenmechanisch begründet: Z bestimmt die Elektronenkonfiguration (Aufbauprinzip), diese bestimmt die chemischen Eigenschaften. Damit wurden alle scheinbaren Anomalien aufgelöst, und Mendelejews Lücken erwiesen sich als korrekte Vorhersagen unentdeckter Elemente (Gallium, Scandium, Germanium).",
+        text: "Nach welchem Ordnungsprinzip ist das moderne Periodensystem aufgebaut?",
+        options: [
+          { id: "a", text: "Nach steigender Atommasse" },
+          { id: "b", text: "Nach steigender Kernladungszahl (Ordnungszahl Z)" },
+          { id: "c", text: "Nach steigender Elektronegativität" },
+          { id: "d", text: "Nach steigendem Atomradius" },
+          { id: "e", text: "Nach steigender Ionisierungsenergie" },
+        ],
+        correctOptionId: "b",
+        explanation:
+          "Moseley zeigte 1913, dass die Kernladungszahl Z (Protonenzahl) das korrekte Ordnungsprinzip ist. Z bestimmt die Elektronenkonfiguration und damit die chemischen Eigenschaften. Option A war Mendelejews Ansatz, der bei Paaren wie Ar/K versagte.",
       },
 
       selfTest: [
@@ -2025,12 +2084,21 @@ Trend: In der Periode↑; in der Gruppe↓. Höchste EN: Fluor (oben rechts im P
       klinischerBezug:
         "Die EN-Theorie erklärt, warum Fluor so häufig in Arzneistoffen eingesetzt wird: C-F-Bindungen (ΔEN=1,45) sind stark polar aber metabolisch stabil, weil CYP450 C-F-Bindungen (~485 kJ/mol) kaum angreift → verlängerte Halbwertszeit und verbesserte Bioverfügbarkeit. Fluorierte Arzneistoffe: Fluorochinolone (Antibiotika), 5-Fluoruracil (Zytostatikum), Fluticason (Kortikosteroid), Fluoxetin (SSRI). Die O-H-Bindung im Wasser (ΔEN=1,24, polar kovalent) begründet die Wasserstoffbrückenbildung — die physikalische Grundlage des einzigartigen biologischen Lösungsmittels Wasser.",
 
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Erklären Sie alle vier periodischen Haupttrends anhand der effektiven Kernladung Z_eff, und erläutern Sie die IE-Ausnahmen IE₁(B)<IE₁(Be) und IE₁(O)<IE₁(N).",
-        answer:
-          "Alle Trends lassen sich auf Z_eff = Z − σ zurückführen. In einer Periode: Z steigt um 1, σ bleibt nahezu konstant (Elektronen gleicher Schale schirmen mit σ≈0,35 kaum ab) → Z_eff steigt → (1) Atomradius sinkt (stärkere Coulomb-Anziehung), (2) IE steigt (Elektronen schwerer zu entfernen), (3) EA steigt (weiteres Elektron stärker angezogen), (4) EN steigt (Bindungselektronen stärker angezogen). In einer Gruppe: Z steigt, aber vollständige neue Schalen schirmen mit σ≈1,0 ab → Z_eff bleibt ähnlich, aber räumlicher Abstand der Valenzelektronen wächst mit n² → (1) Radius steigt, (2) IE sinkt, (3) EA sinkt, (4) EN sinkt. IE-Ausnahmen: (1) IE₁(B)<IE₁(Be): Beryllium hat volles 2s² (besonders stabil). Bors 5. Elektron befindet sich im energiereicheren 2p-Orbital, das trotz höherem Z leichter ionisiert wird. (2) IE₁(O)<IE₁(N): N hat halbgefülltes 2p³ — alle drei p-Orbitale einfach besetzt mit parallelem Spin → maximale Austauschenergie (Hund), besonders stabil. O hat 2p⁴ — das 4. Elektron muss in ein bereits besetztes Orbital (Pairing Penalty: Coulomb-Abstoßung antiparalleler Elektronen im selben Orbital) → dieses Elektron leichter zu entfernen. IE₁(O)=1314 < IE₁(N)=1402 kJ/mol trotz Z(O)>Z(N). Analoge Ausnahmen in Periode 3: IE(Al)<IE(Mg) und IE(S)<IE(P).",
+        text: "Warum ist die erste Ionisierungsenergie von Sauerstoff (1314 kJ/mol) niedriger als die von Stickstoff (1402 kJ/mol), obwohl Sauerstoff eine höhere Kernladungszahl hat?",
+        options: [
+          { id: "a", text: "Sauerstoff hat einen größeren Atomradius als Stickstoff" },
+          { id: "b", text: "Stickstoff hat eine höhere effektive Kernladung" },
+          {
+            id: "c",
+            text: "Stickstoffs halbgefüllte 2p³-Konfiguration ist besonders stabil, während bei Sauerstoff die Elektronen-Paarungsenergie im 2p⁴-Orbital die IE senkt",
+          },
+          { id: "d", text: "Sauerstoff hat eine höhere Elektronenaffinität" },
+          { id: "e", text: "Die Abschirmung durch die 2s-Elektronen ist bei Sauerstoff stärker" },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "Stickstoff hat halbgefülltes 2p³ (3 Orbitale je einfach besetzt, paralleler Spin) mit maximaler Austauschenergie (Hund). Bei Sauerstoff (2p⁴) muss ein 4. Elektron gepaart werden (Coulomb-Abstoßung im selben Orbital), was die IE senkt.",
       },
 
       selfTest: [
@@ -2340,12 +2408,18 @@ Unvollständig gefüllte d-Orbitale → variable Oxidationsstufen, Komplexbildun
       klinischerBezug:
         'Calcium (Gruppe 2) hat drei kritische Rollen: strukturelle Funktion als Hydroxyapatit (99% des Körper-Ca), Second-Messenger-Rolle (Ca²⁺-Calmodulin aktiviert u.a. Myosin-Leichtketten-Kinase → glatte Muskelkontraktion, eNOS → NO-Synthese), und Auslöser der Skelettmuskelkontraktion (Ca²⁺ bindet Troponin-C → Aktomyosin-Querbrückenzyklus). Hypokalzämie → Tetanie, Chvostek-Zeichen, Trousseau-Zeichen, verlängertes QT. Hyperkalzämie → "Stones, Bones, Groans, Psychic Moans". Jod (Gruppe 17) ist für T3/T4 essentiell; Jodmangel betrifft weltweit über 2 Milliarden Menschen und ist die häufigste vermeidbare Ursache geistiger Behinderung (Kretinismus).',
 
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Erklären Sie die medizinische Bedeutung von Jod (Gruppe 17) und Calcium (Gruppe 2) und zeigen Sie auf, welche klinischen Syndrome bei Mangel oder Überschuss auftreten.",
-        answer:
-          'Jod (I, Z=53, Gruppe 17) ist ein essentielles Spurenelement für die Schilddrüsenfunktion. Es wird über den Natrium-Jodid-Symporter (NIS) aktiv in Thyreozyten aufgenommen (gegen einen 20–40-fachen Konzentrationsgradienten, sekundär aktiv über Na⁺-Gradient). Thyreoperoxidase (TPO) oxidiert Jodid und jodiert Tyrosinreste des Thyreoglobulins → Monoiodtyrosin (MIT) und Diiodtyrosin (DIT). Kopplung: MIT+DIT→T3 (Triiodthyronin, 3 I-Atome, biologisch aktiv); DIT+DIT→T4 (Thyroxin, 4 I-Atome, Prohormon). T4 wird peripher durch Deiodinasen zu T3 konvertiert. Jodmangel → Hypothyreose mit kompensatorischer TSH-Erhöhung → Schilddrüsenhyperplasie (Struma). Bei kongenitaler Hypothyreose (Jodmangel pränatal und im ersten Lebensjahr) → Kretinismus: schwere irreversible geistige Behinderung (IQ-Verlust 10–15 Punkte im Durchschnitt), Kleinwuchs, Taubstummheit, spastische Diplegie. Kretinismus ist die häufigste vermeidbare Ursache geistiger Behinderung weltweit — Prävention durch Jodierung von Speisesalz. ¹³¹I (Beta-Emitter, HWZ 8 Tage): selektive Aufnahme in Schilddrüsengewebe → Therapie von Schilddrüsenkarzinomen und Hyperthyreose. Calcium (Ca, Z=20, Gruppe 2) ist das häufigste Metall im Körper (~1 kg). 99% als Hydroxyapatit in Knochen und Zähnen (Strukturfunktion + Ca-Reservoir). Extraossäres Ca: Plasma 2,2–2,6 mmol/L (50% ionisiert Ca²⁺ biologisch aktiv; 40% an Albumin gebunden; 10% komplexiert). PTH (Parathyreoidhormon) erhöht Ca²⁺ durch Knochenresorption (Osteoklasten), renale Rückresorption und Aktivierung von Calcitriol (1,25-(OH)₂-Vitamin-D → steigert intestinale Ca-Absorption). Calcitonin senkt Ca²⁺ (hemmt Osteoklasten). Hypokalzämie (<2,0 mmol/L): erhöhte neuromuskuläre Erregbarkeit → Tetanie (Pfötchenstellung), Chvostek-Zeichen (Fazialisschlag → Gesichtsmuskelzucken), Trousseau-Zeichen (Blutdruckmanschette 3 min → Karpopedalspasmen), Laryngospasmus (lebensbedrohlich!), verlängertes QT-Intervall im EKG. Ursachen: Hypoparathyreoidismus (postoperativ), Vitamin-D-Mangel, Hypomagnesämie. Hyperkalzämie (>2,75 mmol/L): "Stones, Bones, Groans, Psychic Moans" — Nierensteine (Ca-Oxalat, Ca-Phosphat), Osteolyse/Knochenschmerzen, Nausea, Obstipation, Polyurie/Polydipsie (Ca²⁺ hemmt ADH-Wirkung), Bewusstseinstrübung, Depression. Häufigste Ursachen: primärer Hyperparathyreoidismus (Nebenschilddrüsenadenom) und maligne Erkrankungen (osteolytische Metastasen, ektope PTHrP-Sekretion).',
+        text: "Welche klinische Folge hat ein schwerer Jodmangel während der fetalen Entwicklung?",
+        options: [
+          { id: "a", text: "Hyperkalzämie" },
+          { id: "b", text: "Rachitis" },
+          { id: "c", text: "Kretinismus mit irreversibler geistiger Retardierung" },
+          { id: "d", text: "Hämochromatose" },
+          { id: "e", text: "Morbus Basedow" },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "Schwerer fetaler Jodmangel führt zu kongenitaler Hypothyreose (Kretinismus): irreversible geistige Behinderung, Kleinwuchs, Taubheit. Prävention durch jodiertes Speisesalz. Rachitis entsteht durch Vitamin-D-Mangel, Morbus Basedow ist eine Autoimmun-Hyperthyreose.",
       },
 
       selfTest: [

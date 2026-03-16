@@ -179,6 +179,8 @@ Ein **Chromosom** ist ein langer DNA-Faden, der zusammen mit **Histonen** (Verpa
           tags: ["typ-m", "rechenfrage", "chargaff", "basenpaarung"],
         },
       ],
+      klinischerBezug:
+        "Die DNA-Struktur ist Grundlage moderner Diagnostik: PCR (Polymerase-Kettenreaktion) nutzt die komplementäre Basenpaarung zur Vervielfältigung kleinster DNA-Mengen und ist unverzichtbar in der Infektionsdiagnostik (z. B. SARS-CoV-2-Nachweis) und Forensik. Mutationen in einzelnen Genen können schwere Erbkrankheiten verursachen — die Kenntnis von Genstruktur und Allelen ist Voraussetzung für genetische Beratung und Therapieplanung, etwa bei Mukoviszidose (CFTR-Gen auf Chromosom 7).",
       altfrage: {
         text: "In einer DNA-Probe beträgt der Adenin-Anteil 32 %. Wie hoch ist der Guanin-Anteil?",
         options: [
@@ -374,6 +376,8 @@ Chromosomenaberrationen (numerisch oder strukturell) verursachen schwerwiegende 
           tags: ["karyotyp", "metaphase", "zellzyklus"],
         },
       ],
+      klinischerBezug:
+        "Die Karyotypisierung ist ein zentrales Werkzeug der klinischen Zytogenetik. Numerische Chromosomenaberrationen wie Trisomie 21 (Down-Syndrom) oder 47,XXY (Klinefelter-Syndrom) werden routinemäßig in der Pränataldiagnostik erkannt. In Österreich wird Schwangeren ab 35 Jahren eine Chromosomenanalyse angeboten — die korrekte Interpretation des Karyotyps ist daher klinischer Alltag in Gynäkologie und Humangenetik.",
       altfrage: {
         text: "Der Karyotyp 47,XXY entspricht welchem Syndrom?",
         options: [
@@ -594,6 +598,8 @@ Der **Zellzyklus** umfasst die Vorbereitung der Zellteilung und die Teilung selb
           tags: ["falsch-aussage", "zellzyklus", "s-phase", "dna-replikation"],
         },
       ],
+      klinischerBezug:
+        "Fehler bei Mitose und Meiose haben direkte klinische Konsequenzen. Unkontrollierte Mitose ist das Kennzeichen von Krebs — Zytostatika wie Vincristin oder Taxane greifen gezielt in die Spindelbildung ein. Meiosefehler (Non-Disjunction) führen zu Aneuploidien wie Trisomie 21 oder Turner-Syndrom, die in der humangenetischen Beratung und Pränataldiagnostik eine zentrale Rolle spielen.",
       altfrage: {
         text: "In welcher Phase der Meiose findet das Crossing-over statt?",
         options: [
@@ -850,6 +856,8 @@ Nicht alle Merkmale folgen dem einfachen Mendel-Schema. Drei wichtige Phänomene
           tags: ["typ-m", "rechenfrage", "mendel", "wahrscheinlichkeit", "mukoviszidose"],
         },
       ],
+      klinischerBezug:
+        "Die Mendelschen Regeln sind das Fundament der genetischen Beratung. In der klinischen Praxis berechnen Humangenetiker mit Kreuzungsschemata die Wiederholungswahrscheinlichkeit für autosomal-rezessive Erkrankungen wie Mukoviszidose (1:25 Heterozygotenfrequenz in Österreich) oder Phenylketonurie. Das Verständnis von Spaltungsverhältnissen ist essenziell, um Eltern bei der Familienplanung evidenzbasiert zu beraten.",
       altfrage: {
         text: "Zwei heterozygote Eltern (Aa) bekommen vier Kinder. Wie hoch ist die Wahrscheinlichkeit, dass ein einzelnes Kind den homozygot rezessiven Genotyp (aa) hat?",
         options: [
@@ -1171,6 +1179,8 @@ Die **Sichelzellanämie** vereint mehrere Konzepte dieses Kapitels:
           tags: ["epistasie", "labrador", "geninteraktion"],
         },
       ],
+      klinischerBezug:
+        "Dominanzverhältnisse bestimmen, wie sich Erbkrankheiten klinisch manifestieren. Intermediäre Vererbung erklärt z. B. die Sichelzellanämie: Heterozygote (HbAS) zeigen unter Normalbedingungen kaum Symptome, sind aber Malaria-resistenter (Heterozygotenvorteil). Kodominanz ist klinisch relevant beim AB0-Blutgruppensystem — Blutgruppe AB exprimiert beide Antigene, was für Transfusionsmedizin entscheidend ist.",
       altfrage: {
         text: "Bei der Kreuzung zweier heterozygot roter Blumen (Rr x Rr) einer Pflanze mit intermediärem Erbgang treten in der F₂-Generation weiße Blumen auf. Welchen Genotyp haben diese?",
         options: [
@@ -1427,6 +1437,8 @@ Das kranke Allel ist **dominant** auf dem X-Chromosom. **Kranker Vater (X^A Y):*
           tags: ["falsch-aussage", "erbgänge", "x-chromosomal", "vererbung"],
         },
       ],
+      klinischerBezug:
+        "Das Erkennen von Erbgängen ist Kernkompetenz in der Humangenetik. X-chromosomal rezessive Erkrankungen wie Hämophilie A und Duchenne-Muskeldystrophie betreffen fast ausschließlich Jungen — Konduktorinnen-Diagnostik und Stammbaumanalyse sind in der genetischen Beratung essenziell. Autosomal-dominante Erkrankungen wie Chorea Huntington oder Marfan-Syndrom erfordern prädiktive Gentests mit umfassender psychosozialer Betreuung gemäß dem österreichischen Gentechnikgesetz (GTG).",
       altfrage: {
         text: "Ein Paar bekommt eine Tochter mit Hämophilie A (X-chromosomal rezessiv). Was lässt sich über die Eltern sagen?",
         options: [
@@ -1626,6 +1638,8 @@ Ein seltener Sonderfall: Menschen mit dem **Bombay-Phänotyp** (h/h) können das
           tags: ["typ-m", "rechenfrage", "blutgruppe", "ab0", "punnett"],
         },
       ],
+      klinischerBezug:
+        "Das AB0-System und der Rhesusfaktor sind in der Transfusionsmedizin lebenswichtig: Fehltransfusionen können zu hämolytischen Reaktionen mit Schock und Nierenversagen führen. In der Geburtshilfe ist die Rhesus-Inkompatibilität (Rh-negative Mutter, Rh-positives Kind) ein Klassiker — die Anti-D-Prophylaxe in der 28. SSW und nach der Geburt verhindert den Morbus haemolyticus neonatorum. In Österreich wird die Blutgruppenbestimmung bei jeder Mutter-Kind-Pass-Untersuchung durchgeführt.",
       altfrage: {
         text: "Eine Mutter hat die Blutgruppe A (Genotyp I^A i), der Vater hat Blutgruppe B (Genotyp I^B i). Welche Blutgruppe kann bei den Kindern NICHT auftreten?",
         options: [
@@ -1909,6 +1923,8 @@ Im Kontext der Tumorbiologie: **Onkogene** (GOF in Protoonkogenen, z. B. RAS-Mut
           tags: ["typ-k", "mutationen", "nonsense", "trisomie", "chromosomenmutation"],
         },
       ],
+      klinischerBezug:
+        "Mutationen sind die molekulare Grundlage zahlreicher Erkrankungen. Punktmutationen im BRCA1/BRCA2-Gen erhöhen das Brust- und Ovarialkarzinomrisiko drastisch — in Österreich wird bei familiärer Häufung ein genetisches Panel-Screening angeboten. Frameshift-Mutationen im CFTR-Gen (z. B. deltaF508) verursachen Mukoviszidose, die häufigste autosomal-rezessive Erkrankung in Europa. Pharmakogenetische Tests (z. B. CYP2D6-Genotypisierung) nutzen Mutationswissen, um Medikamentendosierungen individuell anzupassen.",
       altfrage: {
         text: "Welche Mutation führt zu einer Verschiebung des Leserasters (Frameshift)?",
         options: [
@@ -2165,6 +2181,8 @@ Vererbung bedeutet: Die DNA (Allele) wird über Keimzellen (Meiose) von Generati
           tags: ["falsch-aussage", "genexpression", "transkription", "rna-polymerase"],
         },
       ],
+      klinischerBezug:
+        "Die Genexpression ist Angriffspunkt zahlreicher Medikamente. Antibiotika wie Rifampicin hemmen die bakterielle RNA-Polymerase gezielt, ohne die eukaryotische zu beeinträchtigen — ein Schlüsselprinzip der Infektiologie. In der Onkologie setzen Spleißmodifikatoren (z. B. Nusinersen bei spinaler Muskelatrophie) und mRNA-basierte Impfstoffe (COVID-19) direkt an der Genexpression an. RT-PCR-Diagnostik (Reverse Transkriptase-PCR) nutzt die Umschrift von mRNA in cDNA zur Quantifizierung der Genaktivität in Tumorproben.",
       altfrage: {
         text: "Welche Aussage zur Genexpression ist richtig?",
         options: [
@@ -2516,6 +2534,8 @@ Das Verständnis der Tumorgenetik hat die Krebstherapie revolutioniert — Medik
           tags: ["falsch-aussage", "tumorgenetik", "p53", "tumorsuppressor"],
         },
       ],
+      klinischerBezug:
+        "Tumorgenetik ist die Grundlage der modernen Onkologie. Gezielte Therapien (Targeted Therapy) wie Imatinib bei chronisch myeloischer Leukämie (BCR-ABL-Fusionsgen) oder Trastuzumab bei HER2-positivem Mammakarzinom basieren auf der Kenntnis von Onkogenen und Tumorsuppressorgenen. In Österreich werden Tumorboards an Comprehensive Cancer Centers routinemäßig molekulare Profile (z. B. p53-Status, KRAS-Mutationen) zur Therapieentscheidung herangezogen. Das Zwei-Treffer-Modell nach Knudson erklärt die Entstehung familiärer Tumorsyndrome wie dem Retinoblastom.",
       altfrage: {
         text: "Welche Aussage zur Tumorgenetik ist richtig?",
         options: [
@@ -2741,6 +2761,8 @@ Frauen haben zwei X-Chromosomen (XX), Männer nur eines (XY). Damit Frauen nicht
           tags: ["epigenetik", "mutation", "reversibel"],
         },
       ],
+      klinischerBezug:
+        "Epigenetische Veränderungen spielen eine zentrale Rolle in der Krebsentstehung — Hypermethylierung von Tumorsuppressorgen-Promotoren (z. B. BRCA1, MLH1) kann deren Inaktivierung verursachen. Epigenetische Therapien wie DNMT-Inhibitoren (Azacitidin, Decitabin) sind in der Hämatologie bei myelodysplastischen Syndromen zugelassen. Imprinting-Störungen verursachen klinische Syndrome wie Prader-Willi (väterliches Allel auf 15q11 fehlt) und Angelman (mütterliches Allel betroffen) — beide werden in der Neuropädiatrie diagnostiziert.",
       altfrage: {
         text: "Welche Aussage zur Epigenetik ist richtig?",
         options: [
@@ -3058,6 +3080,8 @@ Beim **reproduktiven Klonen** wird ein genetisch identischer Organismus erzeugt.
           tags: ["pcr", "rechenfrage", "amplifikation"],
         },
       ],
+      klinischerBezug:
+        "PCR und Gelelektrophorese sind Standardmethoden in der klinischen Diagnostik — von der Erregeridentifikation (z. B. SARS-CoV-2, Tuberkulose) bis zur forensischen Medizin. CRISPR-Cas9 hat die Gentherapie revolutioniert: Erste klinische Anwendungen (z. B. Exagamglogene autotemcel bei Sichelzellanämie, 2023 in der EU zugelassen) zeigen das therapeutische Potenzial. In Österreich regelt das Gentechnikgesetz (GTG) den Umgang mit genetisch veränderten Organismen und Gentherapie streng.",
       altfrage: {
         text: "Welche Aussage zur Polymerase-Kettenreaktion (PCR) ist richtig?",
         options: [
@@ -3275,6 +3299,8 @@ Die Kopplungsanalyse wurde historisch genutzt, um **Krankheitsgene zu kartieren*
           tags: ["kopplung", "rekombination", "centimorgan"],
         },
       ],
+      klinischerBezug:
+        "Stammbaumanalysen sind das wichtigste Werkzeug der genetischen Beratung, um Erbgänge zu identifizieren und Wiederholungsrisiken zu berechnen. Kopplungsanalysen und LOD-Scores waren historisch entscheidend für die Kartierung von Krankheitsgenen (z. B. BRCA1 auf Chromosom 17). In der klinischen Praxis werden Stammbäume über mindestens drei Generationen erhoben — dies ist in Österreich Voraussetzung für die Überweisung an ein humangenetisches Institut und die Kostenübernahme genetischer Tests durch die Sozialversicherung.",
       altfrage: {
         text: "In einem Stammbaum sind ausschließlich Männer von einer Erkrankung betroffen. Die Mütter betroffener Söhne sind phänotypisch gesund. Kein betroffener Vater hat betroffene Söhne. Welcher Erbgang liegt am wahrscheinlichsten vor?",
         options: [
@@ -3500,6 +3526,8 @@ Die genetische Diagnostik wirft fundamentale Fragen auf, die im MedAT neutral ve
           tags: ["pnd", "pid", "vergleich"],
         },
       ],
+      klinischerBezug:
+        "Genetische Diagnostik ist in Österreich streng reguliert: Die Präimplantationsdiagnostik (PID) wurde erst 2015 durch eine Novelle des Fortpflanzungsmedizingesetzes (FMedG) unter strengen Auflagen erlaubt — nur bei schweren Erbkrankheiten oder wiederholtem Implantationsversagen. Der nicht-invasive Pränataltest (NIPT) hat die Pränataldiagnostik revolutioniert und wird zunehmend als Erstlinien-Screening für Trisomien eingesetzt. Genetische Beratung vor und nach diagnostischen Tests ist in Österreich gemäß GTG verpflichtend und wird an universitären humangenetischen Instituten (z. B. Wien, Innsbruck, Graz) durchgeführt.",
       altfrage: {
         text: "Eine 38-jährige Schwangere möchte eine Chromosomenanalyse ihres ungeborenen Kindes. Welches Verfahren liefert fetale Zellen für eine Karyotypisierung bei geringstem Fehlgeburtsrisiko?",
         options: [

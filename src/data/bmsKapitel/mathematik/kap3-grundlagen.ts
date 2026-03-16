@@ -10,6 +10,9 @@ export const mathKapGrundlagen: Kapitel = {
     {
       id: "ma-grund-01",
       title: "Bruchrechnung & Termumformung",
+      imageUrl: "/images/bms/ch-chemische-reaktionen.jpg",
+      imageCaption:
+        "Abb.: Dosierungsberechnung als Bruchrechnung in der Pharmakologie (OpenStax, CC BY 4.0)",
       stichworte: [
         "Bruchrechnung",
         "Erweitern",
@@ -24,11 +27,11 @@ export const mathKapGrundlagen: Kapitel = {
         "Termumformung",
         "Bruchdivision",
       ],
-      content: `Jede Medikamentendosierung ist ein Bruch: 500 mg Wirkstoff in 250 mL Trägerlösung ergibt 2 mg/mL.
+      content: `Ein Zehnfach-Dosierungsfehler bei Heparin, eine falsch berechnete Infusionsrate, ein verwechseltes Komma bei Insulin — Bruchrechnung rettet im klinischen Alltag buchstäblich Leben. Jede Medikamentendosierung ist im Kern ein Bruch: 500 mg Wirkstoff in 250 mL Trägerlösung ergibt 2 mg/mL.
 
 ## Warum Bruchrechnung in der Medizin unverzichtbar ist
 
-Wer Brüche sicher beherrscht, vermeidet Dosierungsfehler -- die häufigste vermeidbare Komplikation im Krankenhaus.
+Wer Brüche sicher beherrscht, vermeidet Dosierungsfehler — die häufigste vermeidbare Komplikation im Krankenhaus.
 
 Ein Bruch a/b beschreibt den Quotienten aus **Zähler** a und **Nenner** b (b \u2260 0). Jeder Bruch ist eine rationale Zahl (Verhältniszahl). Zwei Brüche heißen **gleichwertig**, wenn sie sich durch Erweitern oder Kürzen ineinander überführen lassen: 2/4 = 1/2.
 
@@ -248,17 +251,37 @@ Ein **Doppelbruch** ist ein Bruch im Bruch -- in der Klinik allgegenwärtig bei 
           difficulty: 3,
           tags: ["doppelbruch", "kehrwert", "vereinfachung"],
         },
+        {
+          question:
+            "Welche Aussagen über Bruch- und Prozentrechnung sind richtig?\n\n1. Beim Kürzen werden Zähler und Nenner durch denselben Faktor dividiert.\n2. 3/4 + 1/4 = 4/8.\n3. Der Kehrwert von 2/5 ist 5/2.\n4. 25 % entsprechen dem Bruch 1/4.\n5. (a/b) ÷ (c/d) = (a/b) × (c/d).",
+          options: ["Nur 1 und 3", "Nur 2 und 5", "Nur 1, 3 und 4", "Nur 1, 4 und 5", "Alle"],
+          correctIndex: 2,
+          explanation:
+            "Aussagen 1, 3 und 4 sind korrekt. Aussage 1: Kürzen = Zähler und Nenner durch den ggT teilen ✓. Aussage 2 ist falsch: 3/4 + 1/4 = 4/4 = 1, nicht 4/8 — bei gleichem Nenner werden nur die Zähler addiert, der Nenner bleibt. Aussage 3: Kehrwert = Zähler und Nenner tauschen ✓. Aussage 4: 25/100 = 1/4 ✓. Aussage 5 ist falsch: Division durch einen Bruch = Multiplikation mit dem Kehrwert: (a/b) ÷ (c/d) = (a/b) × (d/c), nicht × (c/d).",
+          difficulty: 2,
+          tags: ["typ-k", "bruchrechnung", "prozentrechnung"],
+        },
       ],
       altfrage: {
-        question:
-          "Ein Medikament liegt in einer Konzentration von 2/5 mg/mL vor. Ein Patient soll 3/4 mg erhalten. Berechnen Sie das benötigte Volumen. Anschließend wird die Lösung 1:8 verdünnt. Welche Konzentration hat die verdünnte Lösung?",
-        answer:
-          "Volumen = Dosis / Konzentration = (3/4) / (2/5) = (3/4) × (5/2) = 15/8 = 1,875 mL. Division durch einen Bruch = Multiplikation mit dem Kehrwert. Verdünnung 1:8 bedeutet: neue Konzentration = (2/5) / 8 = 2/40 = 1/20 mg/mL = 0,05 mg/mL. Probe Volumen: 1,875 mL × 0,4 mg/mL = 0,75 mg = 3/4 mg ✓. Bruchrechnung ist die Grundlage jeder Dosierungsberechnung — Zähler und Nenner korrekt zu identifizieren verhindert Faktor-Fehler.",
+        text: "Was ergibt (3/4) ÷ (2/5)?",
+        options: [
+          { id: "a", text: "6/20" },
+          { id: "b", text: "15/8" },
+          { id: "c", text: "8/15" },
+          { id: "d", text: "5/8" },
+          { id: "e", text: "3/10" },
+        ],
+        correctOptionId: "b",
+        explanation:
+          "Division durch einen Bruch = Multiplikation mit dem Kehrwert: (3/4) ÷ (2/5) = (3/4) × (5/2) = 15/8 = 1,875. Typischer Fehler: Zähler mit Zähler und Nenner mit Nenner multiplizieren.",
       },
     },
     {
       id: "ma-grund-02",
       title: "Prozentrechnung",
+      imageUrl: "/images/bms/bio-blut-zusammensetzung.jpg",
+      imageCaption:
+        "Abb.: Blutbestandteile in Prozent — Hämatokrit und Plasmaanteil (OpenStax, CC BY 4.0)",
       stichworte: [
         "Prozentrechnung",
         "Grundwert",
@@ -480,18 +503,42 @@ In der Epidemiologie sind drei Kennzahlen zentral -- alle basieren auf Prozentre
           difficulty: 3,
           tags: ["prozentrechnung", "rrr", "studienauswertung"],
         },
+        {
+          question: "Welche Aussage über Prozentrechnung ist FALSCH?",
+          options: [
+            "+50 % und danach −50 % ergibt den Ausgangswert",
+            "16 % von 450 = 72",
+            "1 ‰ = 0,1 %",
+            "Die ARR (absolute Risikoreduktion) wird in Prozentpunkten angegeben",
+            "NaCl 0,9 % bedeutet 0,9 g pro 100 mL",
+          ],
+          correctIndex: 0,
+          explanation:
+            "Aussage A ist falsch: 100 → +50 % → 150 → −50 % → 75, nicht 100. Das ist die Asymmetrie-Falle der Prozentrechnung — der Grundwert ändert sich nach der ersten Änderung, und 50 % von 150 sind 75, nicht 50. Alle anderen Aussagen stimmen: 72/450 = 16/100 = 16 % (B), 1 ‰ = 0,001 = 0,1 % (C), ARR ist die absolute Differenz zweier Raten in Prozentpunkten (D), 0,9 % (w/v) = 0,9 g/100 mL (E).",
+          difficulty: 2,
+          tags: ["falsch-aussage", "prozentrechnung", "asymmetrie"],
+        },
       ],
       altfrage: {
-        question:
-          "In einer klinischen Studie mit 800 Teilnehmern erhalten 480 ein neues Medikament, der Rest ein Placebo. In der Medikamentengruppe treten bei 96 Patienten Nebenwirkungen auf, in der Placebogruppe bei 48. Berechnen Sie die Nebenwirkungsrate in beiden Gruppen und die absolute Risikodifferenz in Prozentpunkten.",
-        answer:
-          "Medikamentengruppe: 96/480 × 100 = 20 %. Placebogruppe: 48/320 × 100 = 15 %. Absolute Risikodifferenz = 20 % − 15 % = 5 Prozentpunkte. Die relative Risikoerhöhung beträgt (20 − 15)/15 × 100 = 33,3 %. Wichtig: 5 Prozentpunkte (absolute Differenz) und 33,3 % relative Erhöhung beschreiben denselben Sachverhalt aus unterschiedlicher Perspektive. Im MedAT wird gezielt nach dem Unterschied zwischen Prozentpunkten und prozentualer Änderung gefragt.",
+        text: "Ein Preis steigt um 25 % und fällt danach um 20 %. Wie verhält sich der Endpreis zum Ausgangspreis?",
+        options: [
+          { id: "a", text: "Er ist gleich geblieben" },
+          { id: "b", text: "Er ist um 5 % gestiegen" },
+          { id: "c", text: "Er ist um 5 % gesunken" },
+          { id: "d", text: "Er ist um 1 % gestiegen" },
+          { id: "e", text: "Er ist um 1 % gesunken" },
+        ],
+        correctOptionId: "a",
+        explanation:
+          "100 → +25 % → 125 → −20 % → 125 × 0,8 = 100. Der Endpreis entspricht dem Ausgangspreis. Achtung: +25 % und −25 % ergeben NICHT den Ausgangswert (100 → 125 → 93,75).",
       },
       diagram: "percent-fractions",
     },
     {
       id: "ma-grund-03",
       title: "Dreisatz & Proportionen",
+      imageUrl: "/images/bms/ch-loesungen.jpg",
+      imageCaption: "Abb.: Dreisatz bei Infusionsberechnungen (OpenStax, CC BY 4.0)",
       stichworte: [
         "Dreisatz",
         "Direkter Dreisatz",
@@ -722,15 +769,24 @@ Glucose 5 % und Glucose 20 % sollen zu 500 mL Glucose 8 % gemischt werden:
         },
       ],
       altfrage: {
-        question:
-          "Ein Antibiotikum wird mit 15 mg/kg dosiert. Die Infusionslösung enthält 1,2 g in 100 mL. Ein Patient wiegt 80 kg und soll die Dosis über 30 Minuten erhalten. Berechnen Sie die Gesamtdosis, das benötigte Volumen und die Infusionsrate in mL/h.",
-        answer:
-          "Gesamtdosis = 15 mg/kg × 80 kg = 1200 mg. Konzentration = 1,2 g / 100 mL = 1200 mg / 100 mL = 12 mg/mL. Benötigtes Volumen = 1200 mg / 12 mg/mL = 100 mL. Infusionszeit = 30 min = 0,5 h. Rate = 100 mL / 0,5 h = 200 mL/h. Zusammengesetzter Dreisatz: Erst Gewicht (direkter Dreisatz), dann Konzentration (indirekter Dreisatz), dann Zeitumrechnung. Probe: 200 mL/h × 0,5 h = 100 mL × 12 mg/mL = 1200 mg ✓.",
+        text: "Ein Medikament wird mit 10 mg/kg dosiert. Wie viel mg erhält ein 60 kg schwerer Patient?",
+        options: [
+          { id: "a", text: "60 mg" },
+          { id: "b", text: "600 mg" },
+          { id: "c", text: "6 mg" },
+          { id: "d", text: "6000 mg" },
+          { id: "e", text: "100 mg" },
+        ],
+        correctOptionId: "b",
+        explanation:
+          "Direkter Dreisatz: 10 mg/kg × 60 kg = 600 mg. Die Dosis ist direkt proportional zum Körpergewicht.",
       },
     },
     {
       id: "ma-grund-04",
       title: "Einheitenumrechnung & Größenordnungen",
+      imageUrl: "/images/bms/bio-pankreas.jpg",
+      imageCaption: "Abb.: Laborwerte umrechnen — mg/dL vs. mmol/L (OpenStax, CC BY 4.0)",
       stichworte: [
         "SI-Präfixe",
         "Nano",
@@ -987,10 +1043,17 @@ Diese Werte sollte man auswendig kennen, um Rechenfehler sofort zu erkennen:
         },
       ],
       altfrage: {
-        question:
-          "Ein Perfusor enthält Adrenalin 3 mg in 50 mL NaCl. Die Verordnung lautet: 0,05 µg/kg/min für einen 60 kg schweren Patienten. Berechnen Sie die Laufrate in mL/h. Geben Sie die Konzentration auch in µg/mL an.",
-        answer:
-          "Konzentration = 3 mg / 50 mL = 0,06 mg/mL = 60 µg/mL (1 mg = 1000 µg). Dosis pro Minute = 0,05 µg/kg/min × 60 kg = 3 µg/min. Rate in mL/min = 3 µg/min ÷ 60 µg/mL = 0,05 mL/min. Rate in mL/h = 0,05 × 60 = 3 mL/h. Kettenmethode: µg/min ÷ µg/mL = mL/min; die Einheit µg kürzt sich. Dann mL/min × 60 min/h = mL/h. Einheitenumrechnung mg → µg (× 1000) ist der kritische Schritt — ein Faktor-1000-Fehler wäre lebensgefährlich.",
+        text: "Wie viele Mikrogramm (µg) sind 0,5 mg?",
+        options: [
+          { id: "a", text: "5 µg" },
+          { id: "b", text: "50 µg" },
+          { id: "c", text: "500 µg" },
+          { id: "d", text: "5000 µg" },
+          { id: "e", text: "0,5 µg" },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "1 mg = 1000 µg, also 0,5 mg = 0,5 × 1000 = 500 µg. Diese Umrechnung ist bei Perfusor-Dosierungen kritisch -- ein Faktor-1000-Fehler kann lebensbedrohlich sein.",
       },
     },
   ],

@@ -13,6 +13,8 @@ export const physKap7: Kapitel = {
     {
       id: "ph-7-01",
       title: "Atommodelle und Spektroskopie",
+      imageUrl: "/images/bms/ch-atommodell.jpg",
+      imageCaption: "Abb.: Atommodelle von Dalton bis zum Orbitalmodell (OpenStax, CC BY 4.0)",
       stichworte: [
         "Atommodelle",
         "Bohrsches Modell",
@@ -168,12 +170,18 @@ Grundzustand n=1: E₁ = −13,6 eV. Ionisation (n→∞): E_∞ = 0 eV. Ionisie
         "Emissionsspektrum: helle Linien = charakteristische Wellenlängen bei Elektronenübergängen nach unten.",
         "SpO₂-Normwert: ≥ 95 %; < 90 % = klinische Hypoxämie.",
       ],
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Erläutern Sie das Bohrsche Atommodell und erklären Sie, wie Spektrallinien entstehen. Gehen Sie dabei auf die Photonenenergie ein.",
-        answer:
-          'Das Bohrsche Atommodell (1913) postuliert, dass Elektronen in Wasserstoffatomen nur auf bestimmten, diskreten Kreisbahnen um den Kern umlaufen dürfen, ohne dabei Energie abzustrahlen. Diese Bahnen sind durch die Hauptquantenzahl n = 1, 2, 3, ... charakterisiert. Die zugehörigen Energieniveaus für Wasserstoff berechnen sich nach Eₙ = −13,6 eV/n². Die innerste Bahn (n=1, Grundzustand) hat die niedrigste Energie (−13,6 eV), höhere Bahnen sind energiereicher (weniger negativ). Wenn ein Elektron von einer höheren Schale n₂ auf eine niedrigere Schale n₁ fällt (n₂ > n₁), gibt es die Energiedifferenz ΔE = Eₙ₂ − Eₙ₁ in Form eines Photons ab. Die Frequenz dieses Photons ergibt sich aus E = hf, also f = ΔE/h, mit dem Planckschen Wirkungsquantum h = 6,626 × 10⁻³⁴ J·s. Da es nur diskrete Energieniveaus gibt, können auch nur diskrete Photonenfrequenzen (und damit Wellenlängen λ = c/f) emittiert werden – dies erscheint als Linienspektrum. Umgekehrt können Atome im Grundzustand Photonen mit genau dieser Energie absorbieren und das Elektron auf eine höhere Schale heben (Absorptionsspektrum). Die Balmer-Serie für Wasserstoff umfasst alle Übergänge auf n=2: Hα (656 nm, rot), Hβ (486 nm, blau-grün) und weitere Linien im sichtbaren Bereich. Diese Linienspektren dienen als eindeutiger "Fingerabdruck" jedes Elements und werden in der Spektralanalyse zur Identifikation von Elementen genutzt.',
+        text: "Die Energie des Grundzustands (n=1) im Wasserstoffatom beträgt -13,6 eV. Welche Energie hat die Schale n=2?",
+        options: [
+          { id: "a", text: "-27,2 eV" },
+          { id: "b", text: "-6,8 eV" },
+          { id: "c", text: "-3,4 eV" },
+          { id: "d", text: "-1,5 eV" },
+          { id: "e", text: "-0,85 eV" },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "E_n = -13,6 eV / n². Für n=2: E₂ = -13,6/4 = -3,4 eV. Option b wäre -13,6/2 (falsches Gesetz: /n statt /n²). Beim Übergang n=2 → n=1 wird ein Photon mit 10,2 eV emittiert.",
       },
       klinischerBezug:
         "Pulsoximetrie (SpO₂): nutzt unterschiedliche Absorption von Hb (660 nm) und HbO₂ (940 nm). Lambert-Beer-Gesetz ist Grundlage aller photometrischen Laboranalysen (Hämoglobin, Bilirubin, Glucose-Oxidase-Tests).",
@@ -275,6 +283,8 @@ Grundzustand n=1: E₁ = −13,6 eV. Ionisation (n→∞): E_∞ = 0 eV. Ionisie
     {
       id: "ph-7-02",
       title: "Radioaktivität – Strahlenarten und Zerfallsgesetze",
+      imageUrl: "/images/bms/ch-elektronenschalen.jpg",
+      imageCaption: "Abb.: Kernzerfall und Strahlenarten (OpenStax, CC BY 4.0)",
       stichworte: [
         "Alpha-Strahlung",
         "Beta-Strahlung",
@@ -678,12 +688,18 @@ Das bedeutet: Schon 1 Mikrogramm ¹³¹I hat eine therapeutisch relevante Aktivi
         "Massendefekt: Die fehlende Kernmasse = Bindungsenergie (E = Δm·c²). Maximum bei ⁵⁶Fe → Fusion (leicht) und Spaltung (schwer) setzen Energie frei.",
         "Uran-Radium-Reihe (²³⁸U → ²²²Rn → ²⁰⁶Pb): Radon = Nr. 2 Lungenkrebsursache nach Rauchen.",
       ],
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Beschreiben Sie die drei Arten radioaktiver Strahlung und erklären Sie das Zerfallsgesetz. Welche Bedeutung haben diese Kenntnisse für die Medizin?",
-        answer:
-          "Die drei klassischen Strahlungsarten unterscheiden sich grundlegend in Teilchenart, Ladung und Durchdringungsvermögen. Alpha-Strahlung besteht aus Helium-4-Kernen (2 Protonen, 2 Neutronen, Ladung +2e), hat eine Reichweite von nur wenigen Zentimetern in Luft und wird von einem Blatt Papier oder der Epidermis gestoppt. Bei α-Zerfall sinkt die Ordnungszahl um 2 und die Massenzahl um 4. Beta-minus-Strahlung besteht aus Elektronen, die entstehen, wenn im Kern ein Neutron zu einem Proton, einem Elektron und einem Antineutrino zerfällt. Die Reichweite beträgt einige Meter in Luft; Aluminium (ca. 3 mm) reicht zur Abschirmung. Die Ordnungszahl steigt um 1, die Massenzahl bleibt konstant. Gamma-Strahlung ist hochenergetische elektromagnetische Strahlung, die beim Übergang angeregter Kerne in den Grundzustand entsteht; sie ändert weder A noch Z, hat aber die höchste Durchdringungsfähigkeit und erfordert Blei- oder Betonabschirmung. Radioaktiver Zerfall folgt dem Exponentialgesetz N(t) = N₀·e^(−λt) mit Halbwertszeit T½ = ln2/λ. Medizinisch bedeutsam: ⁹⁹ᵐTc als reiner γ-Strahler mit T½=6h für Szintigraphie (niedrige Strahlendosis, ideal für Bildgebung); ¹³¹I mit T½=8d für Schilddrüsentherapie (β⁻-Strahlung zerstört lokales Gewebe); ¹⁸F für PET (β⁺-Strahlung erzeugt Vernichtungsstrahlung). Die Dosimetrie unterscheidet Energiedosis (Gray: absorbierte Energie pro Masse) und Äquivalentdosis (Sievert: biologische Wirksamkeit).",
+        text: "Ein Radionuklid hat eine Halbwertszeit von 8 Tagen. Welcher Anteil der ursprünglichen Aktivität ist nach 24 Tagen noch vorhanden?",
+        options: [
+          { id: "a", text: "1/2" },
+          { id: "b", text: "1/4" },
+          { id: "c", text: "1/8" },
+          { id: "d", text: "1/16" },
+          { id: "e", text: "1/3" },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "24 Tage / 8 Tage = 3 Halbwertszeiten. Nach 3 HWZ: (1/2)³ = 1/8 der Ausgangsaktivität. Beispiel: ¹³¹I (T½ = 8 d) in der Schilddrüsentherapie.",
       },
       klinischerBezug:
         "⁹⁹ᵐTc-Szintigraphie (Knochen, Herz, Lunge, Niere): T½=6h minimiert Strahlendosis. ¹³¹I-Therapie bei Schilddrüsenkarzinom. ¹⁸F-FDG-PET: Tumordiagnostik und Therapiekontrolle via erhöhtem Glukosestoffwechsel.",
@@ -817,6 +833,20 @@ Das bedeutet: Schon 1 Mikrogramm ¹³¹I hat eine therapeutisch relevante Aktivi
           tags: ["effektive-halbwertszeit", "jod-131", "schilddrüse"],
           difficulty: 3,
         },
+        {
+          question:
+            "Welche Aussagen sind richtig?\n\n1. Beim Alpha-Zerfall verringert sich die Massenzahl um 4 und die Ordnungszahl um 2.\n2. Beim Beta-minus-Zerfall steigt die Ordnungszahl um 1, die Massenzahl bleibt gleich.\n3. Gamma-Strahlung ändert weder Massen- noch Ordnungszahl des Kerns.\n4. Alpha-Strahlung hat eine höhere Reichweite in Luft als Beta-Strahlung.\n5. Die Halbwertszeit eines Radionuklids ist unabhängig von äußeren Bedingungen wie Druck und Temperatur.",
+          options: ["Nur 1 und 3", "Nur 2 und 4", "Nur 1, 2, 3 und 5", "Nur 2, 3 und 4", "Alle"],
+          correctIndex: 2,
+          explanation:
+            "Aussage 1 ist richtig (α-Zerfall: A → A−4, Z → Z−2, da ein ⁴He-Kern emittiert wird). Aussage 2 ist richtig (β⁻: Neutron → Proton + Elektron + Antineutrino, Z+1, A gleich). Aussage 3 ist richtig (γ-Strahlung ist nur Energieabgabe eines angeregten Kerns, keine Kernumwandlung). Aussage 4 ist falsch — Alpha-Strahlung hat wegen ihrer großen Masse und Ladung eine sehr kurze Reichweite in Luft (wenige cm), während Beta-Strahlung mehrere Meter weit reicht. Aussage 5 ist richtig (Kernzerfall ist ein quantenmechanischer Prozess, unabhängig von Temperatur, Druck oder chemischer Bindung). Richtig sind 1, 2, 3 und 5.",
+          hints: [
+            "Welche Strahlenart hat die größere Reichweite: schwere α-Teilchen oder leichte β-Teilchen?",
+            "Alpha-Teilchen ionisieren stark, verlieren schnell Energie → kurze Reichweite.",
+          ],
+          tags: ["typ-k", "radioaktivität", "strahlenarten", "zerfall"],
+          difficulty: 2,
+        },
       ],
     },
 
@@ -826,6 +856,8 @@ Das bedeutet: Schon 1 Mikrogramm ¹³¹I hat eine therapeutisch relevante Aktivi
     {
       id: "ph-7-03",
       title: "Röntgenstrahlung und Strahlenwirkung",
+      imageUrl: "/images/bms/bio-hirnstamm.jpg",
+      imageCaption: "Abb.: Röntgen- und CT-Bildgebung des Gehirns (OpenStax, CC BY 4.0)",
       stichworte: [
         "Röntgenröhre",
         "Bremsstrahlung",
@@ -1050,12 +1082,18 @@ Das entspricht dem typischen HU-Bereich von Fett (−100 bis −50 HU). Knochen 
         "Deterministische Effekte: Schwellendosis (Erythem ~2 Gy, Katarakt ~0,5 Gy, ARS ~1 Gy).",
         "ALARA: Abstand (I ∝ 1/r²), Zeit (D = Ḋ·t), Abschirmung. Grenzwerte: 20 mSv/a (Beruf), 1 mSv/a (Bevölkerung).",
       ],
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Erläutern Sie die Entstehung von Röntgenstrahlung und beschreiben Sie deren biologische Wirkung auf lebendes Gewebe.",
-        answer:
-          "Röntgenstrahlung entsteht in der Röntgenröhre durch Beschleunigung von Elektronen (aus einer Glühkathode) mittels einer Hochspannung von typisch 30–150 kV auf eine Wolfram-Anode. Beim Auftreffen entstehen zwei Strahlungsarten: Bremsstrahlung mit einem kontinuierlichen Energiespektrum (maximale Photonenenergie E_max = eU, wobei e die Elementarladung und U die Beschleunigungsspannung sind) und charakteristische Strahlung in Form diskreter Linien, die entstehen, wenn stoßbedingt freie Schalenplätze in der inneren Elektronenhülle durch äußere Elektronen aufgefüllt werden. Die biologische Wirkung ionisierender Strahlung auf Gewebe lässt sich in direkte und indirekte Wirkung unterteilen. Bei der direkten Wirkung treffen Strahlungsquanten unmittelbar auf DNA-Moleküle und ionisieren diese (Strangbrüche, Basenmodifikationen). Die indirekte Wirkung – quantitativ bedeutsamer (ca. 70 %) – beruht auf der Radiolyse von Wasser: H₂O + Strahlung → OH•-Radikale + H• + e⁻_aq. Diese hochreaktiven Spezies greifen ihrerseits DNA und Proteine an. Die kritischsten DNA-Läsionen sind Doppelstrangbrüche (DSB), da beide Matrizenstränge beschädigt sind und fehlerhafte Reparatur zu Chromosomenaberrationen führen kann. Bezüglich Strahlenempfindlichkeit gilt das Bergonié-Tribondeau-Gesetz: sich teilende Zellen sind vulnerabler. Strahlenwirkungen werden in stochastische (kein Schwellenwert, z.B. Krebsentstehung) und deterministische (Schwellendosis, z.B. akutes Strahlensyndrom) eingeteilt. Schutzmaßnahmen folgen dem ALARA-Prinzip.",
+        text: "Welcher Mechanismus verursacht den Großteil (~70 %) der biologischen Strahlenschäden durch Röntgenstrahlung?",
+        options: [
+          { id: "a", text: "Direkte Ionisation der DNA" },
+          { id: "b", text: "Erwärmung des Gewebes" },
+          { id: "c", text: "Indirekte Wirkung über Radiolyse von Wasser (OH-Radikale)" },
+          { id: "d", text: "Photoelektrischer Effekt an Knochenkalzium" },
+          { id: "e", text: "Magnetfeldwirkung auf Ionenkanäle" },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "Ca. 70 % der Strahlenschäden entstehen indirekt: Strahlung spaltet Wasser in hochreaktive OH-Radikale, die DNA und Proteine angreifen. Direkte DNA-Ionisation macht nur ca. 30 % aus.",
       },
       klinischerBezug:
         "Röntgen Thorax ≈ 0,02–0,1 mSv; CT Abdomen ≈ 10 mSv. Strahlentherapie nutzt gezielte Doppelstrangbrüche zur Tumorzellzerstörung. Strahlenschutzkontrolle via Dosimeter im klinischen Betrieb.",
@@ -1145,6 +1183,26 @@ Das entspricht dem typischen HU-Bereich von Fett (−100 bis −50 HU). Knochen 
           tags: ["abstandsgesetz", "strahlenschutz", "dosisleistung"],
           difficulty: 2,
         },
+        {
+          question:
+            "Welche der folgenden Aussagen zu Röntgenstrahlung und Strahlenwirkung ist FALSCH?",
+          options: [
+            "Bremsstrahlung entsteht durch Abbremsung von Elektronen im Coulomb-Feld der Anodenatome und ergibt ein kontinuierliches Spektrum.",
+            "Knochen erscheinen im Röntgenbild hell, weil sie einen hohen Schwächungskoeffizienten haben.",
+            "Die maximale Photonenenergie der Bremsstrahlung ist unabhängig von der Beschleunigungsspannung.",
+            "Doppelstrangbrüche der DNA sind die gefährlichsten ionisierenden Strahlenschäden.",
+            "Die Strahlungsintensität nimmt mit dem Quadrat des Abstands von der Quelle ab.",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Die maximale Photonenenergie der Bremsstrahlung ist direkt proportional zur Beschleunigungsspannung: E_max = e·U. Bei U = 100 kV beträgt E_max = 100 keV. Je höher die Spannung, desto energiereicher die Röntgenstrahlung. Alle anderen Aussagen sind korrekt: Bremsstrahlung = kontinuierliches Spektrum durch Elektronenabbremsung, Knochen (Ca, Z=20) absorbieren stark, DSB sind am schwersten reparierbar, und das Abstandsgesetz gilt (I ∝ 1/r²).",
+          hints: [
+            "Wie hängt die maximale Photonenenergie mit der Beschleunigungsspannung zusammen?",
+            "E_max = e·U — je höher U, desto höher E_max.",
+          ],
+          tags: ["falsch-aussage", "röntgen", "bremsstrahlung"],
+          difficulty: 2,
+        },
       ],
     },
 
@@ -1154,6 +1212,8 @@ Das entspricht dem typischen HU-Bereich von Fett (−100 bis −50 HU). Knochen 
     {
       id: "ph-7-04",
       title: "Nuklearmedizin und Quantenphänomene",
+      imageUrl: "/images/bms/ch-chemische-reaktionen.jpg",
+      imageCaption: "Abb.: Nuklearmedizinische Bildgebung mit Radiotracern (OpenStax, CC BY 4.0)",
       stichworte: [
         "PET-Scan",
         "Annihilation",
@@ -1400,12 +1460,18 @@ Photon mit λ = 0,071 nm wird unter θ = 90° gestreut. Δλ = (h/m_e·c)(1 − 
         "De Broglie: λ = h/p = h/(m·v); relevant für Elektronen (nm-Bereich), nicht für makroskopische Objekte.",
         "Doppelspaltexperiment: Einzelne Teilchen erzeugen Interferenzmuster – Beweis für Welle-Teilchen-Dualismus.",
       ],
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Erklären Sie den Unterschied zwischen Energiedosis und Äquivalentdosis. Warum ist Alpha-Strahlung bei gleicher Energiedosis biologisch viel wirksamer als Gamma-Strahlung?",
-        answer:
-          "Die Energiedosis D (Einheit Gray, 1 Gy = 1 J/kg) beschreibt die physikalisch im Gewebe absorbierte Energie pro Masse. Sie sagt jedoch nichts über die biologische Wirkung aus, da verschiedene Strahlungsarten bei gleicher Energiedosis unterschiedlich starke Schäden verursachen. Die Äquivalentdosis H (Einheit Sievert, Sv) berücksichtigt dies: H = w_R · D, wobei w_R der Strahlungs-Wichtungsfaktor ist. Für Photonen und Elektronen ist w_R = 1, für Alpha-Teilchen w_R = 20. Alpha-Teilchen haben eine extrem hohe Ionisierungsdichte (hoher LET = linearer Energietransfer), da sie zweifach positiv geladen und relativ schwer sind (4 u). Auf kürzester Strecke (< 0,1 mm in Gewebe) erzeugen sie tausende Ionisationsereignisse und verursachen gehäuft DNA-Doppelstrangbrüche in enger räumlicher Nähe (Cluster-Schäden), die von der Zelle kaum repariert werden können. Gamma-Photonen hingegen ionisieren dünn verteilt (niedriger LET), sodass die DNA-Schäden räumlich verstreut und meist reparabel sind. Bei einer Energiedosis von 0,5 Gy ergibt sich für Gamma-Strahlung eine Äquivalentdosis von 0,5 Sv, für Alpha-Strahlung aber 10 Sv – die 20-fache biologische Wirksamkeit.",
+        text: "Eine Person ist einer Energiedosis von 0,5 Gy ausgesetzt. Wie hoch ist die Äquivalentdosis bei Alpha-Strahlung (w_R = 20)?",
+        options: [
+          { id: "a", text: "0,5 Sv" },
+          { id: "b", text: "0,025 Sv" },
+          { id: "c", text: "10 Sv" },
+          { id: "d", text: "20 Sv" },
+          { id: "e", text: "100 Sv" },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "H = w_R × D = 20 × 0,5 Gy = 10 Sv. Alpha-Strahlung hat w_R = 20 wegen hoher Ionisierungsdichte (LET). Gamma: w_R = 1, also nur 0,5 Sv bei gleicher Dosis.",
       },
       klinischerBezug:
         "¹⁸F-FDG-PET/CT: Goldstandard für Tumorstaging, Therapiekontrolle. SPECT/CT mit ⁹⁹ᵐTc: Skelettszintigraphie, Myokardperfusion, Schilddrüsenszintigraphie. Strahlentherapie: LINAC-basierte IMRT/VMAT bei soliden Tumoren, Brachytherapie bei Zervix-/Prostatakarzinom. Dosimetrie: Strahlenschutzgrenzwerte (effektive Dosis 20 mSv/Jahr beruflich, 1 mSv/Jahr Bevölkerung).",

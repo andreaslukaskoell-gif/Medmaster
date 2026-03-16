@@ -75,7 +75,7 @@ export const biologiePool5: Question[] = [
       "Das Schlagvolumen beträgt in Ruhe ca. 70 ml.",
     ],
     3,
-    "Die Taschenklappen (Aorten- und Pulmonalklappe) öffnen sich während der Systole, wenn der Kammerdruck den arteriellen Druck übersteigt. Während der Diastole sind sie geschlossen, um den Rückfluss in die Kammern zu verhindern.",
+    "Die Taschenklappen öffnen sich während der Systole, wenn der Kammerdruck den arteriellen Druck übersteigt. Während der Diastole sind sie geschlossen, um den Rückfluss in die Kammern zu verhindern.",
     "leicht",
     ["herzaktion", "herzklappen", "falsch-aussage"]
   ),
@@ -139,7 +139,7 @@ export const biologiePool5: Question[] = [
       "Heparin wirkt als Antikoagulans durch Verstärkung von Antithrombin.",
     ],
     3,
-    "Der Gewebefaktor (Tissue Factor, Faktor III) löst die EXTRINSISCHE Gerinnungskaskade aus. Die intrinsische Kaskade wird durch Kontaktaktivierung (Faktor XII an negativ geladenen Oberflächen) initiiert.",
+    "Der Gewebefaktor löst die EXTRINSISCHE Gerinnungskaskade aus. Die intrinsische Kaskade wird durch Kontaktaktivierung initiiert.",
     "mittel",
     ["blutgerinnung", "gerinnungskaskade", "falsch-aussage"]
   ),
@@ -214,7 +214,7 @@ export const biologiePool5: Question[] = [
       "Der Harndrang beginnt ab ca. 200–350 ml Füllvolumen.",
     ],
     3,
-    "Der INNERE Sphinkter besteht aus GLATTER Muskulatur und wird unwillkürlich gesteuert. Nur der ÄUSSERE Sphinkter (M. sphincter urethrae externus) besteht aus quergestreifter Muskulatur und ist willkürlich kontrollierbar.",
+    "Der INNERE Sphinkter besteht aus GLATTER Muskulatur und wird unwillkürlich gesteuert. Nur der ÄUSSERE Sphinkter besteht aus quergestreifter Muskulatur und ist willkürlich kontrollierbar.",
     "mittel",
     ["harnblase", "sphinkter", "falsch-aussage"]
   ),
@@ -231,7 +231,7 @@ export const biologiePool5: Question[] = [
       "Hepatozyten können Glykogen speichern und bei Bedarf Glucose freisetzen.",
     ],
     3,
-    "Die Leber erhält ihr Blut über ZWEI Gefäße: die Arteria hepatica (ca. 25 %, sauerstoffreich) und die Vena portae/Pfortader (ca. 75 %, nährstoffreich). Die duale Blutversorgung ist ein klassisches Prüfungsthema.",
+    "Die Leber erhält ihr Blut über ZWEI Gefäße: die Arteria hepatica und die Vena portae/Pfortader. Die duale Blutversorgung ist ein klassisches Prüfungsthema.",
     "leicht",
     ["leber", "blutversorgung", "falsch-aussage"]
   ),
@@ -328,7 +328,7 @@ export const biologiePool5: Question[] = [
       "Serotonin wird hauptsächlich im Darm synthetisiert.",
     ],
     3,
-    "Dopamin wird NICHT ausschließlich im Nebennierenmark produziert. Es wird vor allem in dopaminergen Neuronen des ZNS synthetisiert (Substantia nigra, ventrales Tegmentum). Im Nebennierenmark ist es vor allem Vorstufe von Noradrenalin und Adrenalin.",
+    "Dopamin wird NICHT ausschließlich im Nebennierenmark produziert. Es wird vor allem in dopaminergen Neuronen des ZNS synthetisiert. Im Nebennierenmark ist es vor allem Vorstufe von Noradrenalin und Adrenalin.",
     "mittel",
     ["neurotransmitter", "dopamin", "falsch-aussage"]
   ),
@@ -360,7 +360,7 @@ export const biologiePool5: Question[] = [
       "Acetylcholinesterase baut Acetylcholin im synaptischen Spalt ab.",
     ],
     3,
-    "Die chemische synaptische Übertragung ist UNIDIREKTIONAL (von prä- nach postsynaptisch). Nur elektrische Synapsen (Gap Junctions) können bidirektional übertragen. Die Richtung ergibt sich aus der Lage der Vesikel in der Präsynapse.",
+    "Die chemische synaptische Übertragung ist UNIDIREKTIONAL. Nur elektrische Synapsen (Gap Junctions) können bidirektional übertragen. Die Richtung ergibt sich aus der Lage der Vesikel in der Präsynapse.",
     "leicht",
     ["synapse", "übertragung", "falsch-aussage"]
   ),
@@ -425,7 +425,7 @@ export const biologiePool5: Question[] = [
       "Es gibt in der Regel vier Nebenschilddrüsen.",
     ],
     3,
-    "PTH FÖRDERT die Vitamin-D-Aktivierung in der Niere (Umwandlung von 25-OH-Vitamin-D zu 1,25-(OH)₂-Vitamin-D durch die 1α-Hydroxylase). Aktives Vitamin D steigert dann die intestinale Calciumresorption.",
+    "PTH FÖRDERT die Vitamin-D-Aktivierung in der Niere₂-Vitamin-D durch die 1α-Hydroxylase). Aktives Vitamin D steigert dann die intestinale Calciumresorption.",
     "mittel",
     ["nebenschilddrüse", "parathormon", "falsch-aussage"]
   ),
@@ -441,7 +441,7 @@ export const biologiePool5: Question[] = [
       "FSH – Adenohypophyse",
     ],
     3,
-    "Wachstumshormon (GH, Somatotropin) wird in der ADENOHYPOPHYSE (Vorderlappen) produziert, nicht in der Neurohypophyse. Die Neurohypophyse speichert und sezerniert nur Oxytocin und ADH (im Hypothalamus gebildet).",
+    "Wachstumshormon (GH, Somatotropin) wird in der ADENOHYPOPHYSE (Vorderlappen) produziert, nicht in der Neurohypophyse. Die Neurohypophyse speichert und sezerniert nur Oxytocin und ADH.",
     "mittel",
     ["hypophyse", "hormone", "falsch-aussage"]
   ),
@@ -458,7 +458,7 @@ export const biologiePool5: Question[] = [
       "Der Intrinsic Factor ist für die Vitamin-B12-Resorption notwendig.",
     ],
     3,
-    "Im Magen findet nur der BEGINN der Proteinverdauung statt (Pepsin spaltet Proteine zu Polypeptiden). Die vollständige Verdauung zu Aminosäuren erfolgt im Dünndarm durch Trypsin, Chymotrypsin und Peptidasen.",
+    "Im Magen findet nur der BEGINN der Proteinverdauung statt. Die vollständige Verdauung zu Aminosäuren erfolgt im Dünndarm durch Trypsin, Chymotrypsin und Peptidasen.",
     "leicht",
     ["magen", "proteinverdauung", "falsch-aussage"]
   ),
@@ -523,7 +523,7 @@ export const biologiePool5: Question[] = [
       "Die Atemfrequenz wird durch das Atemzentrum in der Medulla oblongata gesteuert.",
     ],
     3,
-    "Die Ruhige Exspiration ist ein PASSIVER Vorgang: Die Lunge wird nicht aktiv zusammengezogen, sondern zieht sich durch ihre elastischen Rückstellkräfte zusammen, wenn die Atemmuskeln erschlaffen. Nur die forcierte Exspiration ist aktiv (Interkostal- und Bauchmuskeln).",
+    "Die Ruhige Exspiration ist ein PASSIVER Vorgang: Die Lunge wird nicht aktiv zusammengezogen, sondern zieht sich durch ihre elastischen Rückstellkräfte zusammen, wenn die Atemmuskeln erschlaffen. Nur die forcierte Exspiration ist aktiv.",
     "leicht",
     ["atmung", "exspiration", "falsch-aussage"]
   ),
@@ -539,7 +539,7 @@ export const biologiePool5: Question[] = [
       "Jedes Hämoglobinmolekül kann maximal 4 O₂-Moleküle binden.",
     ],
     3,
-    "CO₂ SENKT die Sauerstoffaffinität des Hämoglobins (Rechtsverschiebung der O₂-Bindungskurve). Dies ist Teil des Bohr-Effekts: erhöhtes CO₂ und erniedrigter pH im Gewebe fördern die O₂-Abgabe, was physiologisch sinnvoll ist.",
+    "CO₂ SENKT die Sauerstoffaffinität des Hämoglobins. Dies ist Teil des Bohr-Effekts: erhöhtes CO₂ und erniedrigter pH im Gewebe fördern die O₂-Abgabe, was physiologisch sinnvoll ist.",
     "mittel",
     ["sauerstofftransport", "bohr-effekt", "falsch-aussage"]
   ),
@@ -588,7 +588,7 @@ export const biologiePool5: Question[] = [
       "Die angeborene Immunabwehr bildet ein immunologisches Gedächtnis.",
     ],
     4,
-    "Die angeborene (unspezifische) Immunabwehr bildet KEIN immunologisches Gedächtnis. Das immunologische Gedächtnis ist eine Eigenschaft der ADAPTIVEN Immunabwehr (B- und T-Gedächtniszellen).",
+    "Die angeborene (unspezifische) Immunabwehr bildet KEIN immunologisches Gedächtnis. Das immunologische Gedächtnis ist eine Eigenschaft der ADAPTIVEN Immunabwehr.",
     "leicht",
     ["angeborene immunität", "gedächtnis", "falsch-aussage"]
   ),
@@ -631,7 +631,7 @@ export const biologiePool5: Question[] = [
     [
       "MHC-I-Moleküle finden sich auf fast allen kernhaltigen Zellen.",
       "MHC-II-Moleküle finden sich vor allem auf antigenpräsentierenden Zellen.",
-      "MHC-I präsentiert intrazelluläre Peptide (z. B. virale Proteine).",
+      "MHC-I präsentiert intrazelluläre Peptide.",
       "MHC-II präsentiert extrazelluläre Antigene nach Phagozytose.",
       "MHC-I-Moleküle werden von CD4⁺-T-Zellen erkannt.",
     ],
@@ -717,7 +717,7 @@ export const biologiePool5: Question[] = [
       "BSE (Rinderwahnsinn) ist eine Prionenerkrankung.",
     ],
     3,
-    "Prionen sind extrem resistent gegen normale Sterilisationsverfahren (Autoklavieren bei 121 °C reicht nicht). Sie erfordern spezielle Dekontaminationsmaßnahmen wie NaOH (1 M, 1 Stunde) oder Autoklavieren bei 134 °C für 18 Minuten.",
+    "Prionen sind extrem resistent gegen normale Sterilisationsverfahren. Sie erfordern spezielle Dekontaminationsmaßnahmen wie NaOH oder Autoklavieren bei 134 °C für 18 Minuten.",
     "schwer",
     ["prionen", "sterilisation", "falsch-aussage"]
   ),
@@ -831,7 +831,7 @@ export const biologiePool5: Question[] = [
       "Immunsuppressive Therapie kann die GvHD abschwächen.",
     ],
     3,
-    "GvHD tritt vor allem auf, wenn der Empfänger IMMUNSUPPRIMIERT ist (z. B. nach Chemotherapie vor Knochenmarktransplantation). Die immunkompetenten Spender-T-Zellen im Transplantat können dann das geschwächte Empfängergewebe ungehindert angreifen.",
+    "GvHD tritt vor allem auf, wenn der Empfänger IMMUNSUPPRIMIERT ist. Die immunkompetenten Spender-T-Zellen im Transplantat können dann das geschwächte Empfängergewebe ungehindert angreifen.",
     "schwer",
     ["gvhd", "transplantation", "falsch-aussage"]
   ),
@@ -880,7 +880,7 @@ export const biologiePool5: Question[] = [
       "Chemokine locken Immunzellen zum Infektionsort (Chemotaxis).",
     ],
     3,
-    "Zytokine wirken NICHT ausschließlich systemisch. Sie wirken vor allem PARAKRIN (auf Nachbarzellen) und AUTOKRIN (auf die produzierende Zelle selbst). Nur in hohen Konzentrationen wirken manche Zytokine auch endokrin (z. B. IL-6, TNF-α bei Sepsis).",
+    "Zytokine wirken NICHT ausschließlich systemisch. Sie wirken vor allem PARAKRIN (auf Nachbarzellen) und AUTOKRIN. Nur in hohen Konzentrationen wirken manche Zytokine auch endokrin.",
     "schwer",
     ["zytokine", "wirkungsweise", "falsch-aussage"]
   ),
@@ -993,7 +993,7 @@ export const biologiePool5: Question[] = [
       "Die Lymphe fließt über den Ductus thoracicus direkt ins arterielle System.",
     ],
     4,
-    "Die Lymphe fließt über den Ductus thoracicus in das VENÖSE System (Venenwinkel, Zusammenfluss von V. jugularis interna und V. subclavia links), nicht in das arterielle System.",
+    "Die Lymphe fließt über den Ductus thoracicus in das VENÖSE System, nicht in das arterielle System.",
     "schwer",
     ["lymphsystem", "ductus thoracicus", "falsch-aussage"]
   ),
@@ -1010,7 +1010,7 @@ export const biologiePool5: Question[] = [
       "Antiretrovirale Therapie (ART) kann die Viruslast unter die Nachweisgrenze senken.",
     ],
     3,
-    "HIV wird NICHT durch Tröpfcheninfektion übertragen. Die Übertragungswege sind: ungeschützter Geschlechtsverkehr, Blut-zu-Blut-Kontakt (z. B. kontaminierte Nadeln), vertikale Übertragung (Mutter → Kind). HIV ist im Alltag nicht durch Tröpfchen, Händeschütteln oder gemeinsames Essen übertragbar.",
+    "HIV wird NICHT durch Tröpfcheninfektion übertragen. Die Übertragungswege sind: ungeschützter Geschlechtsverkehr, Blut-zu-Blut-Kontakt, vertikale Übertragung (Mutter → Kind). HIV ist im Alltag nicht durch Tröpfchen, Händeschütteln oder gemeinsames Essen übertragbar.",
     "mittel",
     ["hiv", "aids", "übertragung", "falsch-aussage"]
   ),
@@ -1058,7 +1058,7 @@ export const biologiePool5: Question[] = [
       "Die Blut-Hirn-Schranke ist im Bereich der zirkumventrikulären Organe besonders stark ausgeprägt.",
     ],
     4,
-    "In den zirkumventrikulären Organen (z. B. Area postrema, Eminentia mediana) ist die Blut-Hirn-Schranke DURCHLÄSSIG (fenestriertes Endothel), nicht besonders stark ausgeprägt. Dies ermöglicht z. B. die Hormonfreisetzung ins Blut und die Detektion von Toxinen.",
+    "In den zirkumventrikulären Organen ist die Blut-Hirn-Schranke DURCHLÄSSIG (fenestriertes Endothel), nicht besonders stark ausgeprägt. Dies ermöglicht z. B. die Hormonfreisetzung ins Blut und die Detektion von Toxinen.",
     "schwer",
     ["blut-hirn-schranke", "zirkumventrikulär", "falsch-aussage"]
   ),
@@ -1138,7 +1138,7 @@ export const biologiePool5: Question[] = [
       "Anti-D-Antikörper sind natürlicherweise im Blut Rh-negativer Personen vorhanden.",
     ],
     4,
-    "Anti-D-Antikörper sind NICHT natürlicherweise vorhanden. Sie werden erst nach Sensibilisierung gebildet (z. B. nach Rh-inkompatiler Transfusion oder Schwangerschaft). Im Gegensatz dazu sind Anti-A- und Anti-B-Antikörper (Isoagglutinine) natürlich vorhandene Antikörper.",
+    "Anti-D-Antikörper sind NICHT natürlicherweise vorhanden. Sie werden erst nach Sensibilisierung gebildet. Im Gegensatz dazu sind Anti-A- und Anti-B-Antikörper (Isoagglutinine) natürlich vorhandene Antikörper.",
     "schwer",
     ["bluttransfusion", "rhesusfaktor", "falsch-aussage"]
   ),

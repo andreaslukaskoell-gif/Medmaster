@@ -27,23 +27,4 @@ function q(
   };
 }
 
-export const chemiePool7: Question[] = (() => {
-  const ch = ["chem-kap1", "chem-kap2", "chem-kap3", "chem-kap4", "chem-kap5", "chem-kap6"];
-  const out: Question[] = [];
-  for (let i = 301; i <= 350; i++) {
-    const c = ch[(i - 301) % 6];
-    out.push(
-      q(
-        `ch-pool-${i}`,
-        c,
-        `Chemie-Frage ${i}: Welche Aussage trifft zu?`,
-        ["Option A", "Option B", "Option C", "Option D", "Option E"],
-        (i % 5) as 0 | 1 | 2 | 3 | 4,
-        `Erklärung zur Frage ${i}. Aus dem Stoff von ${c}.`,
-        i % 3 === 0 ? "leicht" : i % 3 === 1 ? "mittel" : "schwer",
-        []
-      )
-    );
-  }
-  return out;
-})();
+export const chemiePool7: Question[] = [];

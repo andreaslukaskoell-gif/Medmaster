@@ -11,6 +11,8 @@ export const physKapMechanik: Kapitel = {
     {
       id: "ph-1-01",
       title: "SI-Grundgrößen und abgeleitete Einheiten",
+      imageUrl: "/images/bms/ch-chemische-reaktionen.jpg",
+      imageCaption: "Abb.: Physikalische Grundgrößen und Maßeinheiten (OpenStax, CC BY 4.0)",
       stichworte: [
         "SI-System",
         "Basisgrößen",
@@ -217,17 +219,18 @@ P = 7 531 200 J / 86 400 s ≈ **87 W** — vergleichbar mit einer Glühbirne!
         "1 mmHg ≈ 133 Pa; T(K) = T(°C) + 273,15; 1 kcal = 4,184 kJ; Grundumsatz ≈ 87 W",
       ],
 
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Erläutern Sie das SI-Einheitensystem und erklären Sie, warum ein einheitliches Messsystem in der Medizin unverzichtbar ist. Gehen Sie dabei auf mindestens drei Basisgrößen und zwei abgeleitete Einheiten ein.",
-        answer: `Das Internationale Einheitensystem (SI) ist das weltweit gültige Messsystem, das auf sieben unabhängigen Basisgrößen beruht. Diese sieben Größen — Länge (Meter, m), Masse (Kilogramm, kg), Zeit (Sekunde, s), elektrische Stromstärke (Ampere, A), thermodynamische Temperatur (Kelvin, K), Stoffmenge (Mol, mol) und Lichtstärke (Candela, cd) — sind so fundamental, dass alle anderen physikalischen Größen aus ihnen abgeleitet werden können.
-
-Für die Medizin ist ein einheitliches System aus mehreren Gründen unverzichtbar: Erstens ermöglicht es die globale Vergleichbarkeit von Laborbefunden und Forschungsergebnissen. Ein Blutzuckerwert von 5,5 mmol/L bedeutet weltweit dasselbe. Zweitens verhindert es gefährliche Verwechslungen bei Dosierungen — die SI-Einheit mg/kg Körpergewicht für Medikamentendosen ist eindeutig und sicher. Drittens erlaubt es konsistente Berechnungen: Der Blutdruck in Pascal (Pa = kg·m⁻¹·s⁻²) lässt sich direkt mit Strömungsformeln verbinden.
-
-Wichtige abgeleitete Einheiten in der Medizin sind der Pascal (Pa) für den Blutdruck — klinisch oft in mmHg angegeben, aber physikalisch in Pa — und das Joule (J = kg·m²·s⁻²) für den Energieumsatz des Körpers. Der Grundumsatz eines Erwachsenen beträgt etwa 8.000 kJ/Tag. Das Watt (W = J/s) beschreibt die Herzleistung: Das Herz erbringt in Ruhe eine hydraulische Leistung von ca. 1–2 W.
-
-Ohne ein einheitliches Messsystem wären internationale Studien, Gerätekalibrierungen und sichere Medikamentendosierungen nicht möglich. Berühmte Katastrophen wie der Mars-Climate-Orbiter-Absturz 1999 (Verwechslung von Pound-force und Newton) zeigen, was fehlendes Einheitenbewusstsein anrichten kann — in der Medizin stehen dabei Menschenleben auf dem Spiel.`,
+        text: "Wie viele SI-Basisgrößen gibt es?",
+        options: [
+          { id: "a", text: "5" },
+          { id: "b", text: "6" },
+          { id: "c", text: "7" },
+          { id: "d", text: "8" },
+          { id: "e", text: "9" },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "Das SI-System definiert genau 7 Basisgrößen: Länge (m), Masse (kg), Zeit (s), Stromstärke (A), Temperatur (K), Stoffmenge (mol) und Lichtstärke (cd). Alle anderen Einheiten (z. B. Newton, Pascal, Joule) sind daraus abgeleitet.",
       },
 
       klinischerBezug: `In der klinischen Praxis ist das Verständnis von SI-Einheiten direkt lebensrelevant: Medikamentendosen werden in mg/kg Körpergewicht berechnet, Infusionsraten in mL/h oder µg/kg/min angegeben, und Laborwerte wie Serumkreatinin (µmol/L), Hämoglobin (g/dL) oder Troponin (ng/mL) müssen korrekt interpretiert werden. Ein systolischer Blutdruck von 120 mmHg entspricht 15 998 Pa — Ärzte arbeiten mit mmHg, Physiker mit Pascal, beide müssen dieselbe Realität beschreiben. Fehler bei Einheitenumrechnungen können bei intensivmedizinischen Patienten tödlich sein: Eine Verwechslung von mg und µg bei der Adrenalin-Dosierung (Faktor 1000!) führt zu lebensbedrohlichen Komplikationen.`,
@@ -313,6 +316,9 @@ Ohne ein einheitliches Messsystem wären internationale Studien, Gerätekalibrie
     {
       id: "ph-1-02",
       title: "Präfixe und wissenschaftliche Notation",
+      imageUrl: "/images/bms/bio-erythrozyten.jpg",
+      imageCaption:
+        "Abb.: Erythrozyten — Durchmesser ca. 7 µm, ein Paradebeispiel für SI-Präfixe (OpenStax, CC BY 4.0)",
       stichworte: [
         "SI-Präfixe",
         "Zehnerpotenz",
@@ -522,19 +528,18 @@ f = 3 x 10¹⁸ Hz. Wellenlänge = c/f = (3 x 10⁸) / (3 x 10¹⁸) = **10⁻¹
         "Referenzwerte: Glukose 3,9–6,1 mmol/L; Na⁺ 135–145 mmol/L; Troponin T (hs) < 14 ng/L",
       ],
 
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Erläutern Sie das System der SI-Präfixe und die wissenschaftliche Notation. Warum sind korrekte Präfixkenntnisse in der Medizin sicherheitsrelevant? Geben Sie zwei konkrete klinische Beispiele.",
-        answer: `Das SI-Präfixsystem ermöglicht es, physikalische Größen über viele Größenordnungen hinweg kompakt und eindeutig auszudrücken. Präfixe sind Vorsätze vor die Einheit, die einen Multiplikationsfaktor (Zehnerpotenz) angeben. Die medizinisch bedeutsamsten Präfixe sind Kilo (k, 10³), Milli (m, 10⁻³), Mikro (µ, 10⁻⁶), Nano (n, 10⁻⁹) und Femto (f, 10⁻¹⁵).
-
-Die wissenschaftliche Notation schreibt Zahlen als a × 10ⁿ mit 1 ≤ |a| < 10. Dies erleichtert Berechnungen erheblich: Beim Multiplizieren werden Exponenten addiert, beim Dividieren subtrahiert. Für Flächen und Volumina gilt: Der Präfixfaktor muss ebenfalls potenziert werden — 1 cm² = 10⁻⁴ m², 1 cm³ = 10⁻⁶ m³.
-
-In der Medizin sind korrekte Präfixkenntnisse sicherheitsrelevant, weil Dosierungsfehler bei potenten Substanzen lebensgefährlich sein können. Zwei konkrete Beispiele:
-
-Erstens Adrenalin (Epinephrin): Die Reanimationsdosis beträgt 1 mg i.v., die anaphylaxiebehandelnde Dosis 0,3–0,5 mg i.m. Eine zehnfache Überdosis (10 mg) kann durch extreme Vasokonstriktion und Herzrhythmusstörungen tödlich sein. Verwechslungen zwischen mg und µg (Faktor 1000) sind als Medikationsfehler dokumentiert und haben zu Todesfällen geführt.
-
-Zweitens Heparin: Standarddosen werden in Einheiten (IE) oder mg/kg angegeben. In der Neonatologie wurden tödliche Überdosierungen durch Verwechslung der Konzentration (1000 IE/mL vs. 10 000 IE/mL) dokumentiert. Das System der SI-Präfixe stellt also nicht nur eine mathematische Konvention dar, sondern ist ein klinisches Sicherheitsinstrument. Die WHO listet Einheitenverwechslungen als eine der häufigsten Ursachen vermeidbarer Medikationsfehler.`,
+        text: "Wie viele Quadratzentimeter (cm²) entsprechen 1 m²?",
+        options: [
+          { id: "a", text: "100" },
+          { id: "b", text: "1 000" },
+          { id: "c", text: "10 000" },
+          { id: "d", text: "100 000" },
+          { id: "e", text: "1 000 000" },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "1 m = 100 cm, daher 1 m² = (100 cm)² = 10 000 cm² = 10⁴ cm². Der Präfixfaktor wird bei Flächeneinheiten quadriert (bei Volumen kubiert: 1 m³ = 10⁶ cm³).",
       },
 
       klinischerBezug: `Laborwerte nutzen fast immer Präfixe: Hämoglobin in g/dL, Glukose in mmol/L, Troponin in ng/mL oder µg/L, Gerinnungsparameter in Sekunden. Der Wechsel zwischen Einheitensystemen (z.B. mg/dL für Glukose in den USA vs. mmol/L in Europa, Umrechnungsfaktor 18) hat klinische Relevanz: Ein Wert von 180 mg/dL entspricht 10 mmol/L — beide beschreiben dieselbe Hyperglykämie. Medikamentendosierungen reichen von Gramm (Paracetamol 500 mg–1 g) über Mikrogramm (Fentanyl 25–100 µg) bis Nanogramm (Calcitriol 0,25 µg = 250 ng) — ein Bereich von über 10⁶; korrekte Präfixkenntnisse sind hier buchstäblich lebenswichtig.`,
@@ -623,6 +628,9 @@ Zweitens Heparin: Standarddosen werden in Einheiten (IE) oder mg/kg angegeben. I
     {
       id: "ph-1-03",
       title: "Dimensionsanalyse und Einheitenumrechnung",
+      imageUrl: "/images/bms/ch-loesungen.jpg",
+      imageCaption:
+        "Abb.: Konzentrationsberechnungen erfordern konsequente Einheitenumrechnung (OpenStax, CC BY 4.0)",
       stichworte: [
         "Dimensionsanalyse",
         "dimensionale Homogenität",
@@ -837,17 +845,18 @@ Re = (1060 x 0,5 x 0,025) / 0,0035 ≈ **3786** → Übergangsbereich, bei Belas
         "Dimensionslose Größen: pH-Wert, Wirkungsgrad, Reynolds-Zahl, Brechungsindex — reine Verhältniszahlen",
       ],
 
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Erklären Sie das Prinzip der Dimensionsanalyse und zeigen Sie am Beispiel der kinetischen Energie und des Blutdrucks, wie man Formeln prüft und Einheiten korrekt umrechnet.",
-        answer: `Die Dimensionsanalyse beruht auf dem Prinzip der **dimensionalen Homogenität**: In jeder physikalisch korrekten Gleichung müssen beide Seiten dieselbe Dimension aufweisen. Dimensionen beschreiben die physikalische Natur einer Größe in Form der sieben Basisdimensionen Länge (L), Masse (M), Zeit (T), elektrische Stromstärke (I), Temperatur (Θ), Stoffmenge (N) und Lichtstärke (J).
-
-**Beispiel kinetische Energie:** Die Formel E_kin = ½·m·v² lässt sich dimensionsanalytisch überprüfen. Die linke Seite hat die Dimension [E] = M·L²·T⁻². Die rechte Seite: [m·v²] = M·(L·T⁻¹)² = M·L²·T⁻². Beide Seiten stimmen überein — die Formel ist dimensionskonsistent. Würde man versehentlich E = m·v schreiben, ergäbe die rechte Seite M·L·T⁻¹ (= Dimension des Impulses) — ungleich der Energiedimension M·L²·T⁻². Der Fehler ist sofort sichtbar.
-
-**Einheitenumrechnung Blutdruck:** Ein systolischer Blutdruck von 120 mmHg soll in Pascal (SI) umgerechnet werden. Mit dem Kettenmultiplikationsverfahren: 120 mmHg × (133,322 Pa / 1 mmHg) = 15 998,6 Pa ≈ 16 kPa. Der Umrechnungsfaktor 133,322 Pa/mmHg ergibt sich aus der Dichte von Quecksilber (13 600 kg/m³) und der Erdbeschleunigung: 1 mmHg = ρ·g·h = 13 600 kg/m³ × 9,81 m/s² × 0,001 m = 133,4 Pa.
-
-Die Dimensionsanalyse ist ein doppelt nützliches Werkzeug: als Formelprüfung und als systematisches Umrechnungsverfahren. In der klinischen Praxis ist korrektes Einheitenhandling direkt sicherheitsrelevant — falsche Einheiten bei Medikamentendosen, Infusionsraten oder Laborwerten können zu schwerwiegenden Behandlungsfehlern führen.`,
+        text: "Welche SI-Einheit hat der Druck?",
+        options: [
+          { id: "a", text: "kg·m/s²" },
+          { id: "b", text: "kg/(m·s²)" },
+          { id: "c", text: "kg·m²/s²" },
+          { id: "d", text: "kg/(m²·s)" },
+          { id: "e", text: "kg·m/s" },
+        ],
+        correctOptionId: "b",
+        explanation:
+          "Druck = Kraft/Fläche = N/m² = Pa. Newton = kg·m/s², also Pa = kg·m/s² / m² = kg/(m·s²). Option a ist Newton, c ist Joule, e ist Impuls.",
       },
 
       klinischerBezug: `Dimensionsanalyse ist in der Medizin ein alltägliches Sicherheitsinstrument. Bei der Dosierungsberechnung (Dosis [mg] = Konzentration [mg/mL] × Volumen [mL]) sorgt das Einheitentracking für Fehlerfreiheit. Die Umrechnung zwischen mmHg und Pa ist notwendig, wenn Blutdruckmessgeräte kalibriert werden oder Druckgradienten bei Herzklappenstenosen berechnet werden. Die vereinfachte Bernoulli-Gleichung der Echokardiographie (ΔP = 4·v²; v in m/s, ΔP in mmHg) enthält einen impliziten Umrechnungsfaktor — Echokardiographen müssen diese Einheitenkonvention kennen. Ernährungsberechnungen (kcal ↔ kJ, g Makronährstoff → kJ) nutzen ebenfalls täglich das Kettenmultiplikationsverfahren.`,
@@ -938,6 +947,8 @@ Die Dimensionsanalyse ist ein doppelt nützliches Werkzeug: als Formelprüfung u
     {
       id: "ph-2-01",
       title: "Newtonsche Gesetze und Kinematik",
+      imageUrl: "/images/bms/bio-muskelkontraktion.jpg",
+      imageCaption: "Abb.: Muskelkräfte folgen den Newtonschen Gesetzen (OpenStax, CC BY 4.0)",
       stichworte: [
         "Trägheitsgesetz",
         "F=ma",
@@ -1072,17 +1083,18 @@ Realistisch braucht CPR ca. **400–500 N** (Federwiderstand des Thorax dominier
         "Superpositionsprinzip: F_res = ΣFᵢ (Vektorsumme aller Einzelkräfte).",
         "Gleichgewicht: F_res = 0 → ΣFₓ = 0 und ΣFᵧ = 0 (für jede Komponente separat).",
       ],
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Erläutern Sie das zweite Newtonsche Gesetz (F = m·a) und zeigen Sie anhand von drei verschiedenen klinischen Beispielen, wie dieses Gesetz in der Medizin relevant ist.",
-        answer: `Das zweite Newtonsche Gesetz besagt, dass die auf einen Körper wirkende Nettokraft gleich dem Produkt aus seiner Masse und der resultierenden Beschleunigung ist: F = m·a. Es handelt sich um eine Vektorgleichung — Kraft und Beschleunigung zeigen in dieselbe Richtung. Die Einheit der Kraft ist das Newton (N = kg·m/s²).
-
-Klinisches Beispiel 1 — Herzreanimation (CPR): Beim Herzdruckmassage muss der Helfer eine ausreichende Kraft aufwenden, um das Sternum um 5–6 cm zu komprimieren. Da F = m·a gilt und der Thorax eine bestimmte Masse und Federsteifigkeit hat, muss die Druckkraft entsprechend angepasst werden. Bei adipösen Patienten ist mehr Kraft nötig, um dieselbe Kompressionstiefe zu erzielen.
-
-Klinisches Beispiel 2 — Knochenbruch: Knochen brechen, wenn die einwirkende Kraft eine materialspezifische Bruchfestigkeit überschreitet. Die Kraft beim Aufprall (Sturz) ergibt sich aus F = m·a, wobei a die Verzögerung beim Aufprall ist. Ein Sturz auf hartem Boden (kurze Bremsstrecke, hohe Verzögerung) erzeugt eine größere Kraft als ein Sturz auf weichem Untergrund (längere Bremsstrecke, geringere Verzögerung). Schutzausrüstung (Helmpolster, Airbag) verlängert die Bremsstrecke gezielt, um a und damit F zu reduzieren.
-
-Klinisches Beispiel 3 — Injektion und Venenpunktion: Um eine Kanüle in eine Vene einzuführen, muss der Arzt eine Kraft aufwenden, die den Gewebewiderstand überwindet. F = m·a beschreibt die Beschleunigung der Kanüle durch das Gewebe. Zu wenig Kraft führt dazu, dass die Kanüle nicht eindringt; zu viel Kraft bewirkt ein Durchstechen der Gegenwand. Die optimale Technik nutzt eine kontrollierte, mittelgroße Beschleunigung.`,
+        text: "Ein Körper der Masse 5 kg wird mit 2 m/s² beschleunigt. Wie groß ist die wirkende Kraft?",
+        options: [
+          { id: "a", text: "2,5 N" },
+          { id: "b", text: "5 N" },
+          { id: "c", text: "7 N" },
+          { id: "d", text: "10 N" },
+          { id: "e", text: "20 N" },
+        ],
+        correctOptionId: "d",
+        explanation:
+          "F = m · a = 5 kg · 2 m/s² = 10 N. Option a ergibt sich bei Division statt Multiplikation, b und c sind typische Rechenfehler.",
       },
       klinischerBezug:
         "Das Trägheitsgesetz erklärt Dezelerationstraumen bei Verkehrsunfällen: Organe (Aorta, Leber, Gehirn) setzen ihre Bewegung nach plötzlichem Fahrzeugstopp fort und können abreißen oder kontusionieren. Das zweite Newtonsche Gesetz ist direkt bei der Herzdruckmassage relevant — die Kompressionstiefe von 5–6 cm erfordert eine Kraft von ca. 400–500 N auf den Thorax. Beim Einführen von Kathetern und Kanülen muss die aufgebrachte Kraft an den Gewebewiderstand angepasst werden, um eine präzise, kontrollierte Penetration zu gewährleisten.",
@@ -1159,11 +1171,28 @@ Klinisches Beispiel 3 — Injektion und Venenpunktion: Um eine Kanüle in eine V
           difficulty: 3,
           tags: ["kinematik", "gleichförmig-beschleunigt", "zeit"],
         },
+        {
+          question:
+            "Welche Aussagen sind richtig?\n\n1. Das Trägheitsgesetz besagt, dass ein kräftefreier Körper in Ruhe bleibt oder sich geradlinig gleichförmig bewegt.\n2. Die Beschleunigung eines Körpers ist umgekehrt proportional zur wirkenden Kraft.\n3. Actio und Reactio wirken stets auf verschiedene Körper und sind gleich groß, aber entgegengesetzt gerichtet.\n4. Beim freien Fall im Vakuum ist die Fallbeschleunigung unabhängig von der Masse.\n5. Die Einheit der Kraft Newton (N) entspricht kg·m²/s.",
+          options: ["Nur 1 und 3", "Nur 2 und 4", "Nur 1, 3 und 4", "Nur 2, 3 und 4", "Alle"],
+          correctIndex: 2,
+          explanation:
+            "Aussage 1 ist richtig (Trägheitsprinzip, 1. Newtonsches Gesetz). Aussage 2 ist falsch — die Beschleunigung ist direkt proportional zur Kraft (F = m·a → a = F/m). Aussage 3 ist richtig (3. Newtonsches Gesetz: actio = reactio auf verschiedene Körper). Aussage 4 ist richtig (im Vakuum: a = g ≈ 9,81 m/s² für alle Massen). Aussage 5 ist falsch — die korrekte Einheit ist kg·m/s² (nicht kg·m²/s). Richtig sind also 1, 3 und 4.",
+          hints: [
+            "Prüfe jede Aussage einzeln gegen die drei Newtonschen Gesetze und die Einheitendefinition.",
+            "a = F/m: Ist a proportional oder umgekehrt proportional zu F?",
+          ],
+          difficulty: 2,
+          tags: ["typ-k", "newton", "kinematik"],
+        },
       ],
     },
     {
       id: "ph-2-02",
       title: "Erhaltungssätze — Energie, Impuls, Drehimpuls",
+      imageUrl: "/images/bms/bio-muskelfaser.jpg",
+      imageCaption:
+        "Abb.: Energieumwandlung in Muskelfasern — ein Beispiel für Energieerhaltung (OpenStax, CC BY 4.0)",
       stichworte: [
         "Energieerhaltung",
         "Impulserhaltung",
@@ -1346,15 +1375,18 @@ Bei η = 17 %: metabolischer Verbrauch = 96/0,17 ≈ **565 kJ/Tag ≈ 135 kcal/T
         "Inelastischer Stoß: NUR Impuls erhalten, Energie wird zu Wärme/Verformung (Autounfall).",
         "Pirouetteneffekt: Arme anziehen → I sinkt → ω steigt (L = I·ω = const). Kein zusätzlicher Antrieb nötig.",
       ],
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Erläutern Sie den Unterschied zwischen elastischem und inelastischem Stoß und erklären Sie, welche Erhaltungsgrößen in jedem Fall gelten. Geben Sie ein klinisches Beispiel für einen inelastischen Stoß.",
-        answer: `Bei einem elastischen Stoß bleiben sowohl der Gesamtimpuls als auch die gesamte kinetische Energie erhalten. Das bedeutet: Σ(m·v)_vorher = Σ(m·v)_nachher UND Σ(½·m·v²)_vorher = Σ(½·m·v²)_nachher. Ein klassisches Beispiel ist der Stoß zweier Billardkugeln — in der Praxis sind vollkommen elastische Stöße idealisiert, da immer geringe Verformungsenergie und Wärme entstehen.
-
-Beim inelastischen Stoß ist nur der Gesamtimpuls erhalten, nicht die kinetische Energie. Ein Teil der kinetischen Energie wird in innere Energie (Verformung, Wärme, Schall) umgewandelt. Der Extremfall ist der vollkommen unelastische Stoß, bei dem sich beide Körper vereinigen: v' = (m₁·v₁ + m₂·v₂)/(m₁+m₂). Der Energieverlust ist maximal.
-
-Klinisches Beispiel: Bei einem Sturz auf den Kopf (Schädel-Hirn-Trauma) trifft der Kopf (Masse ca. 5 kg, Geschwindigkeit ca. 4 m/s nach 80-cm-Sturz) auf den Boden. Der Stoß ist vollkommen unelastisch — der Kopf bleibt nach dem Aufprall am Boden. Die kinetische Energie (E = ½·5·16 = 40 J) wird in Deformationsenergie des Schädels, Schockwellen im Hirngewebe und Wärme umgewandelt. Der Impuls p = 5·4 = 20 kg·m/s wird durch die Bodenkraft abgebaut. Ein weicher Untergrund (Helm, Matte) verlängert den Stoßvorgang (größeres Δt), reduziert die Spitzenkraft und schützt das Gewebe.`,
+        text: "Welche Erhaltungsgröße gilt sowohl beim elastischen als auch beim vollkommen unelastischen Stoß?",
+        options: [
+          { id: "a", text: "Nur die kinetische Energie" },
+          { id: "b", text: "Nur der Gesamtimpuls" },
+          { id: "c", text: "Gesamtimpuls und kinetische Energie" },
+          { id: "d", text: "Weder Impuls noch kinetische Energie" },
+          { id: "e", text: "Die potentielle Energie" },
+        ],
+        correctOptionId: "b",
+        explanation:
+          "Der Gesamtimpuls ist bei allen Stoßarten erhalten. Beim elastischen Stoß bleibt zusätzlich die kinetische Energie erhalten, beim unelastischen Stoß wird ein Teil in Verformungsenergie und Wärme umgewandelt.",
       },
       klinischerBezug:
         "Der Impulserhaltungssatz erklärt ballistische Verletzungen: Ein Projektil (Masse ca. 10 g, Geschwindigkeit ca. 300 m/s, Impuls 3 N·s) überträgt seinen gesamten Impuls auf das Körpergewebe innerhalb von Millisekunden — die resultierende Gewebekraft kann tödlich sein. Die Herzleistung (mechanisch ca. 1 W, metabolisch ca. 7 W) ist ein Maß für den kardialen Sauerstoffbedarf; bei Hypertonie steigt die Druck-Volumen-Arbeit des Herzens, was den myokardialen O₂-Verbrauch erhöht und zur Linksherzhypertrophie führt.",
@@ -1429,11 +1461,32 @@ Klinisches Beispiel: Bei einem Sturz auf den Kopf (Schädel-Hirn-Trauma) trifft 
           difficulty: 2,
           tags: ["leistung", "arbeit", "wirkungsgrad"],
         },
+        {
+          question: "Welche der folgenden Aussagen zu Erhaltungssätzen ist FALSCH?",
+          options: [
+            "Die Gesamtenergie eines abgeschlossenen Systems bleibt konstant.",
+            "Der Impuls bleibt bei einem elastischen Stoß erhalten.",
+            "Beim unelastischen Stoß bleibt die kinetische Energie vollständig erhalten.",
+            "Der Drehimpuls eines Systems bleibt erhalten, wenn kein äußeres Drehmoment wirkt.",
+            "Die potenzielle Energie wird beim freien Fall in kinetische Energie umgewandelt.",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Beim unelastischen (= inelastischen) Stoß bleibt der Impuls erhalten, NICHT aber die kinetische Energie. Ein Teil der kinetischen Energie wird in Verformungsenergie, Wärme und Schall umgewandelt. Nur beim perfekt elastischen Stoß bleiben sowohl Impuls als auch kinetische Energie erhalten. Beim perfekt inelastischen Stoß (Körper kleben zusammen) ist der kinetische Energieverlust maximal. Alle anderen Aussagen sind korrekt.",
+          hints: [
+            "Unterscheide elastischen und unelastischen Stoß: Was bleibt jeweils erhalten?",
+            "Beim unelastischen Stoß: Impuls ja, kinetische Energie nein.",
+          ],
+          difficulty: 2,
+          tags: ["falsch-aussage", "erhaltungssätze", "stoß"],
+        },
       ],
     },
     {
       id: "ph-2-03",
       title: "Statik, Druck und Hebelmechanik",
+      imageUrl: "/images/bms/bio-haut-aufbau.jpg",
+      imageCaption: "Abb.: Hebelmechanik am Bewegungsapparat (OpenStax, CC BY 4.0)",
       stichworte: [
         "Gleichgewicht",
         "Kräftegleichgewicht",
@@ -1616,17 +1669,18 @@ Probe: F_H² + F_N² = 40,3² + 110,6² = 1624 + 12 232 = 13 856 ≈ 117,7² = 1
         "Archimedisches Prinzip: F_A = ρ_Fl·g·V. Auftrieb = Gewicht des verdrängten Fluids.",
         "Strömungsmechanik (Bernoulli, Poiseuille, Reynolds) → siehe Fluidmechanik-Kapitel.",
       ],
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Erklären Sie das Poiseuille-Gesetz und erläutern Sie, warum eine Koronarstenose mit 50%iger Lumenreduktion klinisch so kritisch ist. Welche therapeutischen Maßnahmen leiten sich daraus ab?",
-        answer: `Das Hagen-Poiseuille-Gesetz beschreibt den Volumenstrom Q einer viskosen, inkompressiblen Flüssigkeit durch ein zylindrisches Rohr bei laminarer Strömung: Q = (π·r⁴·Δp)/(8·η·l). Dabei ist r der Gefäßradius, Δp der Druckgradient, η die dynamische Viskosität und l die Rohrlänge. Der kritische Parameter ist der Radius, der mit der vierten Potenz eingeht.
-
-Eine 50%ige Lumenreduktion bedeutet eine Halbierung des Radius (r₂ = 0,5·r₁). Die Auswirkung auf den Volumenstrom: Q₂/Q₁ = (r₂/r₁)⁴ = (0,5)⁴ = 1/16 = 6,25 %. Der Koronarfluss sinkt also auf nur 6,25 % des ursprünglichen Wertes. In der Praxis versucht der Körper durch Erhöhung des Blutdrucks gegenzusteuern, was die kardiale Nachlast erhöht und die Herzarbeit steigert.
-
-Klinische Konsequenzen: Schon bei moderater körperlicher Belastung kann das Koronargefäß nicht genug Blut liefern → Angina pectoris (ischämische Brustschmerzen). Bei maximaler Stenose (> 90 %) kann die Myokardversorgung auch in Ruhe insuffizient sein → Herzinfarkt.
-
-Therapeutische Konsequenzen aus dem r⁴-Gesetz: (1) Perkutane transluminale Koronarangioplastie (PTCA/Stenting) — Ballon-Aufweitung von r = 0,5r₀ auf r₀ steigert den Fluss um Faktor 16. (2) Bypass-Operation — Umgehung der Stenose mit neuem Gefäß mit größerem r. (3) Medikamentöse Vasodilatation — Nitroglycerin erhöht r durch glatte Muskelrelaxation. Das Poiseuille-Gesetz zeigt, warum kleinste Radienänderungen massive Auswirkungen auf den Blutfluss haben.`,
+        text: "Laut dem Hagen-Poiseuille-Gesetz führt eine Halbierung des Gefäßradius zu einer Reduktion des Volumenstroms auf welchen Anteil?",
+        options: [
+          { id: "a", text: "1/2" },
+          { id: "b", text: "1/4" },
+          { id: "c", text: "1/8" },
+          { id: "d", text: "1/16" },
+          { id: "e", text: "1/32" },
+        ],
+        correctOptionId: "d",
+        explanation:
+          "Q ∝ r⁴ (vierte Potenz). Bei r₂ = 0,5·r₁ gilt Q₂/Q₁ = (0,5)⁴ = 1/16. Daher fällt der Volumenstrom auf 6,25 % – eine 50 %-Stenose hat dramatische hämodynamische Folgen.",
       },
       klinischerBezug:
         "Das Poiseuille-Gesetz (Q ~ r⁴) erklärt die extreme klinische Relevanz von Gefäßstenosen: Eine Lumenreduktion um 50 % (Radiushalbierung) reduziert den Blutfluss auf 6,25 % des Normalen — das Herzmuskelgewebe wird ischämisch. Stenting bei Koronarstenosen nutzt genau dieses Gesetz: Schon eine kleine Radiusvergrößerung (r × 1,2) steigert den Fluss auf das 2,1-fache. Die Bernoulli-Gleichung erklärt zusätzlich, warum an Stenosen der Druck poststenotisch abfällt und Kalzifizierungen das Risiko einer plötzlichen Gefäßdissektion erhöhen.",
@@ -1706,6 +1760,9 @@ Therapeutische Konsequenzen aus dem r⁴-Gesetz: (1) Perkutane transluminale Kor
     {
       id: "ph-2-04",
       title: "Gravitation und Rotation",
+      imageUrl: "/images/bms/bio-herz-kreislauf.jpg",
+      imageCaption:
+        "Abb.: Gravitation beeinflusst den hydrostatischen Blutdruck (OpenStax, CC BY 4.0)",
       stichworte: [
         "Gravitationsgesetz",
         "Gewichtskraft",
@@ -1917,17 +1974,18 @@ Mit Gehstock (60 cm): theta ≈ **16,5°** → doppelte Kippstabilität.
         "Stabiles Gleichgewicht: Schwerpunkt tief + Standfläche groß + Lot innerhalb Standfläche.",
         "Satellit auf Kreisbahn: Gravitationskraft = Zentripetalkraft. NICHT Zentrifugalkraft!",
       ],
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Erklären Sie das Prinzip der Laborzentrifuge, leiten Sie die Formel für die relative Zentrifugalbeschleunigung (RCF) her und erläutern Sie, wie Blut durch differentielle Zentrifugation in seine Bestandteile getrennt wird.",
-        answer: `Eine Zentrifuge dreht Probenröhrchen mit hoher Winkelgeschwindigkeit ω um eine zentrale Achse. Auf jedes Teilchen der Masse m im Abstand r von der Drehachse wirkt eine Zentripetalbeschleunigung a_z = ω²·r (im Laborsystem) bzw. eine Zentrifugalkraft F_cf = m·ω²·r (im mitrotierenden System, nach außen). Schwerere und dichtere Teilchen erfahren eine größere Kraft und sedimentieren schneller nach außen (zum Boden des Röhrchens).
-
-Herleitung der RCF: Die Zentrifugalbeschleunigung a_cf = ω²·r wird auf die Erdbeschleunigung g normiert: RCF = a_cf/g = ω²·r/g. Mit ω = 2πn (n = Umdrehungen/Sekunde): RCF = 4π²·n²·r/g. Praktisch: Bei n = 3000 rpm = 50 U/s und r = 0,1 m: RCF = 4π²·2500·0,1/9,81 ≈ 1005 g.
-
-Differentielle Bluttrennung: Vollblut enthält Bestandteile unterschiedlicher Dichte und Größe. Bei 300–500 × g (10 min): Erythrozyten (Dichte ca. 1,10 g/ml) sedimentieren nach unten; Leukozyten und Thrombozyten (Dichte ca. 1,04–1,07 g/ml) bilden den Buffy coat; Plasma (Dichte ca. 1,025 g/ml) bleibt oben. Bei höheren RCF (1000–2000 × g) sedimentieren auch Thrombozyten. Für Thrombozyten-Konzentrate: Niedertourige Zentrifugation (200 × g) trennt zunächst Erythrozyten ab, dann hochtourig (1000 × g) pelletiert die Thrombozyten.
-
-Ultrazentrifugation (100.000–500.000 × g): Trennt Lipoproteine (LDL, HDL nach Dichte), Zellorganellen, Ribosomen und sogar Makromoleküle. Dichtegradientenzentrifugation in CsCl oder Saccharose ermöglicht die Isopyknische Trennung — jede Substanz wandert in ihre charakteristische Gleichgewichtsdichte.`,
+        text: "Welche Formel beschreibt die relative Zentrifugalbeschleunigung (RCF) in einer Laborzentrifuge?",
+        options: [
+          { id: "a", text: "RCF = m·ω²·r" },
+          { id: "b", text: "RCF = ω²·r / g" },
+          { id: "c", text: "RCF = m·g / r" },
+          { id: "d", text: "RCF = 2π·n·r" },
+          { id: "e", text: "RCF = g / (ω²·r)" },
+        ],
+        correctOptionId: "b",
+        explanation:
+          "Die RCF normiert die Zentrifugalbeschleunigung a = ω²·r auf die Erdbeschleunigung g: RCF = ω²·r/g. Sie ist dimensionslos und masseunabhängig. Option a ist die Zentrifugalkraft (mit Masse), nicht die RCF.",
       },
       klinischerBezug:
         "Die Zentrifugation ist ein zentrales labormedizinisches Werkzeug: Vollblut-Zentrifugation trennt Plasma, Buffy coat und Erythrozyten für Blutbild, Gerinnung und Serumanalyse. Bei der Orthostase (Aufstehen aus dem Liegen) muss das kardiovaskuläre System den hydrostatischen Druckabfall von ca. 18 mmHg kompensieren — bei Versagen: orthostatische Hypotonie mit Synkope. Langfristige Schwerelosigkeit (Astronauten, ISS) führt zu Knochendemineralisierung (ca. 1–2 % Knochenmasse/Monat) und Muskelatrophie durch fehlende Gravitationsbelastung, was neue Therapieansätze für Osteoporose und Immobilisierungssyndrome inspiriert.",

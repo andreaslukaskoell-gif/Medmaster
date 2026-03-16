@@ -12,6 +12,8 @@ export const mathKapStochastik: Kapitel = {
     {
       id: "ma-7-01",
       title: "Kombinatorik — Permutationen, Variationen, Kombinationen",
+      imageUrl: "/images/bms/bio-dna-replikation.jpg",
+      imageCaption: "Abb.: DNA-Codons — 4³ = 64 Kombinationen aus drei Basen (OpenStax, CC BY 4.0)",
       stichworte: [
         "Permutation",
         "Kombination",
@@ -412,10 +414,17 @@ V(62,8) = 62⁸ ≈ **2,18 × 10¹⁴**. Nur Kleinbuchstaben: 26⁸ ≈ 2,09 × 
         },
       ],
       altfrage: {
-        question:
-          "In einer Notaufnahme sollen 6 Ärzte so auf 6 Behandlungsräume aufgeteilt werden, dass jeder Arzt genau einen Raum übernimmt. (a) Wie viele Möglichkeiten gibt es? (b) Zwei der Ärzte (Dr. A und Dr. B) wollen auf keinen Fall benachbarte Räume (Räume 1&2, 2&3, 3&4, 4&5, 5&6). Wie viele Anordnungen erfüllen diese Bedingung?",
-        answer:
-          "Teil (a): Alle 6 Ärzte auf 6 Räume anordnen → Permutation P(6) = 6! = 720. Teil (b): Günstige Fälle = Gesamt − Ungünstige. Ungünstige Fälle (A und B benachbart): Es gibt 5 Paare benachbarter Räume. A und B können in 2 Reihenfolgen diese Räume besetzen (AB oder BA), die restlichen 4 Ärzte auf 4 verbleibende Räume: 4! = 24 Wege. Ungünstig = 5 × 2 × 24 = 240. Günstig = 720 − 240 = 480. Komplementstrategie: Gesamtmenge berechnen, Verbotenes abziehen — die effizienteste Methode bei Ausschlussbedingungen.",
+        text: "Auf wie viele Arten können 5 Patienten in einer Warteschlange angeordnet werden?",
+        options: [
+          { id: "a", text: "25" },
+          { id: "b", text: "60" },
+          { id: "c", text: "120" },
+          { id: "d", text: "720" },
+          { id: "e", text: "5" },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "Permutation: 5! = 5 × 4 × 3 × 2 × 1 = 120 Anordnungen. Fakultät gibt die Anzahl möglicher Reihenfolgen von n Objekten an.",
       },
       klinischerBezug:
         "Die Kombinatorik ist die Grundlage für die Berechnung von Wahrscheinlichkeiten in klinischen Studien. Die Anzahl möglicher Genotypen in der Genetik (Kombinationen von Allelen), die Bewertung von Testergebnissen (Sensitivität/Spezifität basiert auf Vierfeldertafeln) und die Randomisierung in klinischen Studien nutzen kombinatorische Prinzipien. Im österreichischen MedAT erscheinen Kombinatorikaufgaben regelmäßig im BMS-Mathematik-Teil.",
@@ -425,6 +434,9 @@ V(62,8) = 62⁸ ≈ **2,18 × 10¹⁴**. Nur Kleinbuchstaben: 26⁸ ≈ 2,09 × 
     {
       id: "ma-7-02",
       title: "Grundlagen der Wahrscheinlichkeitsrechnung",
+      imageUrl: "/images/bms/bio-homologe-chromosomen.jpg",
+      imageCaption:
+        "Abb.: Mendelsche Spaltung — Wahrscheinlichkeit bei Erbgängen (OpenStax, CC BY 4.0)",
       stichworte: [
         "Laplace-Experiment",
         "Ergebnisraum",
@@ -827,12 +839,28 @@ P(X=3) = 56 × 0,0507 × 0,0992 ≈ **0,281 ≈ 28,1%**. Erwartungswert: μ = 8 
           difficulty: 2,
           tags: ["unabhängigkeit", "definition", "wahrscheinlichkeit"],
         },
+        {
+          question:
+            "Welche Aussagen über Wahrscheinlichkeitsregeln sind richtig?\n\n1. P(A oder B) = P(A) + P(B) gilt immer.\n2. P(A und B) = P(A) × P(B) gilt bei unabhängigen Ereignissen.\n3. P(nicht A) = 1 − P(A).\n4. Der Erwartungswert einer Binomialverteilung ist μ = n × p.\n5. P(mind. 1 Treffer) = 1 − P(kein Treffer).",
+          options: ["Nur 1 und 3", "Nur 2 und 4", "Nur 2, 3, 4 und 5", "Nur 1, 2 und 3", "Alle"],
+          correctIndex: 2,
+          explanation:
+            "Aussagen 2, 3, 4 und 5 sind korrekt. Aussage 1 ist falsch: P(A oder B) = P(A) + P(B) gilt nur bei disjunkten (sich ausschließenden) Ereignissen. Im Allgemeinen gilt P(A ∪ B) = P(A) + P(B) − P(A ∩ B) — die Schnittmenge muss abgezogen werden, um Doppelzählung zu vermeiden. Aussage 2: Multiplikationsregel bei Unabhängigkeit ✓. Aussage 3: Komplement-Regel ✓. Aussage 4: Binomialverteilung B(n,p): μ = n × p ✓. Aussage 5: Komplement-Strategie für 'mindestens eins' ✓.",
+          difficulty: 2,
+          tags: ["typ-k", "wahrscheinlichkeitsregeln", "stochastik"],
+        },
       ],
       altfrage: {
-        question:
-          "In einem Genetik-Labor werden 3 unabhängige PCR-Tests auf ein Gendefekt-Allel durchgeführt. Jeder Test erkennt das Allel mit Wahrscheinlichkeit p = 0,8 (und übersieht es mit 0,2). (a) Wie wahrscheinlich ist es, dass alle 3 Tests positiv ausfallen? (b) Wie wahrscheinlich ist es, dass mindestens 1 Test positiv ausfällt? (c) Was ist der Erwartungswert für die Anzahl positiver Tests?",
-        answer:
-          "Teil (a): Unabhängige Ereignisse, alle positiv: P(alle 3 positiv) = 0,8 × 0,8 × 0,8 = 0,8^3 = 0,512 = 51,2%. Teil (b): Komplement-Strategie: P(mind. 1 positiv) = 1 − P(kein einziger positiv) = 1 − 0,2^3 = 1 − 0,008 = 0,992 = 99,2%. Teil (c): Binomialverteilung B(3, 0,8): Erwartungswert μ = n × p = 3 × 0,8 = 2,4. Im Schnitt werden also 2,4 der 3 Tests positiv ausfallen. Kontrolle: P(X=0)=0,008, P(X=1)=3×0,8×0,04=0,096, P(X=2)=3×0,64×0,2=0,384, P(X=3)=0,512. Summe: 0,008+0,096+0,384+0,512=1. Korrekt.",
+        text: "3 unabhängige PCR-Tests werden durchgeführt (je p = 0,8). Wie wahrscheinlich ist mindestens 1 positives Ergebnis?",
+        options: [
+          { id: "a", text: "0,512 (51,2 %)" },
+          { id: "b", text: "0,800 (80,0 %)" },
+          { id: "c", text: "0,992 (99,2 %)" },
+          { id: "d", text: "0,960 (96,0 %)" },
+          { id: "e", text: "0,384 (38,4 %)" },
+        ],
+        correctOptionId: "c",
+        explanation: "P(mind. 1 positiv) = 1 − P(keiner positiv) = 1 − 0,2³ = 1 − 0,008 = 0,992.",
       },
       klinischerBezug:
         "Wahrscheinlichkeitsrechnung ist das Fundament der diagnostischen Medizin. P(Diagnose | Symptom) — also die Wahrscheinlichkeit einer Diagnose gegeben einem Symptom — kann nur mit den Regeln der Wahrscheinlichkeitsrechnung und dem Bayes-Theorem berechnet werden. Klinisch relevant: Bei seltenen Erkrankungen (niedrige Prävalenz) ist selbst bei hoher Treffsicherheit eines Tests die Wahrscheinlichkeit einer echten Erkrankung nach positivem Test überraschend niedrig.",
@@ -841,6 +869,9 @@ P(X=3) = 56 × 0,0507 × 0,0992 ≈ **0,281 ≈ 28,1%**. Erwartungswert: μ = 8 
     {
       id: "ma-7-03",
       title: "Bedingte Wahrscheinlichkeit & Bayes-Theorem",
+      imageUrl: "/images/bms/bio-blut-zusammensetzung.jpg",
+      imageCaption:
+        "Abb.: Diagnostische Tests — PPV und Prävalenz im klinischen Kontext (OpenStax, CC BY 4.0)",
       stichworte: [
         "Bedingte Wahrscheinlichkeit",
         "Bayes-Theorem",
@@ -1282,12 +1313,34 @@ Sensitivität ist eine Testeigenschaft (unabhängig von der Prävalenz). PPV hä
           difficulty: 2,
           tags: ["ppv", "prävalenz", "screening", "klinisch"],
         },
+        {
+          question: "Welche Aussage über bedingte Wahrscheinlichkeit und Bayes ist FALSCH?",
+          options: [
+            "P(krank | Test+) = P(Test+ | krank), da die Reihenfolge egal ist",
+            "Sensitivität = P(Test+ | krank) = TP/(TP+FN)",
+            "Der PPV hängt von der Prävalenz ab",
+            "Bei niedriger Prävalenz kann der PPV trotz hoher Spezifität niedrig sein",
+            "NPV = TN/(TN+FN)",
+          ],
+          correctIndex: 0,
+          explanation:
+            "Aussage A ist falsch: P(krank | Test+) ≠ P(Test+ | krank). Das ist genau der Kern des Bayes-Theorems — bedingte Wahrscheinlichkeiten sind nicht symmetrisch. P(Test+ | krank) ist die Sensitivität, P(krank | Test+) ist der PPV. Ein Test mit 95 % Sensitivität bedeutet nicht, dass ein positiver Test 95 % Wahrscheinlichkeit für die Krankheit anzeigt. Alle anderen Aussagen sind korrekt: Sens = TP/(TP+FN) (B), PPV ist prävalenzabhängig (C), das Bayes-Paradox bei niedriger Prävalenz (D), NPV = TN/(TN+FN) (E).",
+          difficulty: 2,
+          tags: ["falsch-aussage", "bayes", "bedingte-wahrscheinlichkeit"],
+        },
       ],
       altfrage: {
-        question:
-          "In einer österreichischen Studie zur Früherkennung einer genetischen Erkrankung (Prävalenz 0,5%) wird ein neuer Test mit Sensitivität 92% und Spezifität 96% eingesetzt. (a) Berechnen Sie den PPV mit einer Vierfeldertafel für n = 100.000 Personen. (b) Interpretieren Sie das Ergebnis klinisch. (c) Welche Maßnahme würde den PPV am stärksten erhöhen?",
-        answer:
-          "Teil (a): n=100.000. Krank: 500. Nicht krank: 99.500. TP = 500 × 0,92 = 460. FN = 40. FP = 99.500 × 0,04 = 3.980. TN = 95.520. Positiv gesamt = 460 + 3.980 = 4.440. PPV = 460 / 4.440 = 0,1036 ≈ 10,4%. Teil (b): Klinisch bedeutet das: Von 100 Personen mit positivem Test sind nur etwa 10 tatsächlich krank — 90 erhalten ein falsch positives Ergebnis. Das verursacht unnötige Angst, kostspielige Folgeuntersuchungen und eventuell unnötige Behandlungen. Teil (c): Erhöhung der Prävalenz in der Teststichprobe durch Vorselektion (Screening nur bei Risikogruppen, z.B. Familienanamnese). Bei Prävalenz 10% (Risikogruppe) würde PPV auf ~72% steigen. Alternativ: Spezifität erhöhen (weniger FP), hat bei seltenen Erkrankungen den stärksten Effekt auf PPV.",
+        text: "Ein Screening-Test hat Sensitivität 92 % und Spezifität 96 %. Die Erkrankung hat eine Prävalenz von 0,5 %. Wie hoch ist der PPV (positiv prädiktiver Wert) ungefähr?",
+        options: [
+          { id: "a", text: "Etwa 92 %" },
+          { id: "b", text: "Etwa 50 %" },
+          { id: "c", text: "Etwa 10 %" },
+          { id: "d", text: "Etwa 96 %" },
+          { id: "e", text: "Etwa 75 %" },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "Bei 100.000 Personen: 500 krank, TP = 460, FP = 3.980. PPV = 460/4.440 ≈ 10,4 %. Bei niedriger Prävalenz ist der PPV trotz guter Testgüte niedrig.",
       },
       klinischerBezug:
         "Das Bayes-Theorem ist das mathematische Fundament der evidenzbasierten Medizin. Jede Diagnose ist ein Bayes-Update: die Vortestwahrscheinlichkeit (Prior = Prävalenz in dieser Population) wird durch Testergebnisse zur Nachtestwahrscheinlichkeit (Posterior = PPV/NPV). Klinisch gilt: Sens/Spez sind Eigenschaften des Tests; PPV/NPV sind Eigenschaften des Tests UND der Population. Deshalb gelten Screeningtests nur in spezifischen Bevölkerungsgruppen mit bekanntem Risiko.",
@@ -1296,6 +1349,8 @@ Sensitivität ist eine Testeigenschaft (unabhängig von der Prävalenz). PPV hä
     {
       id: "ma-7-04",
       title: "Normalverteilung, Sensitivität & Spezifität",
+      imageUrl: "/images/bms/bio-haematopoese.jpg",
+      imageCaption: "Abb.: Normalverteilung klinischer Laborwerte (OpenStax, CC BY 4.0)",
       stichworte: [
         "Normalverteilung",
         "Glockenform",
@@ -1850,10 +1905,17 @@ Jeder zweite Gesunde hat mindestens einen "auffälligen" Wert — das ist kein F
         },
       ],
       altfrage: {
-        question:
-          "In einer klinischen Studie wird ein neuer Biomarker für Herzinfarkt getestet. Von 200 Herzinfarkt-Patienten liefert der Test bei 176 ein positives Ergebnis. Von 300 herzgesunden Kontrollpersonen liefert der Test bei 30 ein positives Ergebnis. (a) Berechnen Sie Sensitivität und Spezifität. (b) Berechnen Sie PPV und NPV. (c) Wenn dieser Test in einer Notaufnahme mit angenommener Herzinfarkthäufigkeit von 15% eingesetzt wird, wie interpretieren Sie den PPV im klinischen Kontext?",
-        answer:
-          "Teil (a): TP=176, FN=24, FP=30, TN=270. Sensitivität = 176/(176+24) = 176/200 = 88%. Spezifität = 270/(270+30) = 270/300 = 90%. Teil (b): PPV = 176/(176+30) = 176/206 ≈ 85,4%. NPV = 270/(270+24) = 270/294 ≈ 91,8%. Diese PPV/NPV-Werte gelten für die Stichprobenprävalenz (200/500 = 40%). Teil (c): In der Notaufnahme mit Prävalenz 15% (niedrigere Vortestwahrscheinlichkeit): PPV sinkt. Mit Vierfeldertafel für n=1000: Krank=150, TP=132, FN=18. Gesund=850, FP=85, TN=765. PPV = 132/(132+85) = 132/217 ≈ 60,8%. Klinisch: 6 von 10 positiv Getesteten in der Notaufnahme haben tatsächlich einen Herzinfarkt — solide, aber Bestätigungsdiagnostik (EKG, Troponin) ist essenziell. NPV = 765/(765+18) = 765/783 ≈ 97,7% — ein negatives Ergebnis schließt Herzinfarkt mit hoher Sicherheit aus.",
+        text: "Ein Herzinfarkt-Biomarker hat Sensitivität 88 % und Spezifität 90 %. Von 200 Infarkt-Patienten sind 176 positiv, von 300 Gesunden sind 30 positiv. Wie hoch ist die Spezifität?",
+        options: [
+          { id: "a", text: "88 %" },
+          { id: "b", text: "90 %" },
+          { id: "c", text: "85 %" },
+          { id: "d", text: "92 %" },
+          { id: "e", text: "95 %" },
+        ],
+        correctOptionId: "b",
+        explanation:
+          "Spezifität = TN/(TN+FP) = 270/(270+30) = 270/300 = 90 %. Sensitivität = TP/(TP+FN) = 176/200 = 88 %.",
       },
       diagram: "probability-distribution",
       klinischerBezug:

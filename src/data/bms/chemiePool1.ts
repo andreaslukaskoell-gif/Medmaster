@@ -29,22 +29,6 @@ function q(
 
 export const chemiePool1: Question[] = [
   q(
-    "ch-pool-001",
-    "chem-kap6",
-    "Welche der gezeigten funktionellen Gruppen ist/sind richtig bezeichnet?\n\n1. Carbonsäure\n2. Ether\n3. Amin\n4. Alkin",
-    [
-      "2. und 4. sind richtig.",
-      "1. und 3. sind richtig.",
-      "Alle sind richtig.",
-      "1., 2. und 3. sind richtig.",
-      "4. ist richtig.",
-    ],
-    1,
-    "Carbonsäure (−COOH) und Amin (−NH₂) sind korrekt bezeichnet. Ether (C−O−C) und Alkin (C≡C) müssen anhand der gezeigten Struktur geprüft werden; typischerweise sind 1. und 3. sicher richtig.",
-    "mittel",
-    ["funktionelle Gruppen", "organische Chemie"]
-  ),
-  q(
     "ch-pool-002",
     "chem-kap5",
     "Welche Konzentration an Hydroniumionen enthält eine Lösung mit einem pH-Wert von 3?",
@@ -153,16 +137,6 @@ export const chemiePool1: Question[] = [
     "Licht zeigt Wellen-Teilchen-Dualismus: Es kann als elektromagnetische Welle (Wellenlänge λ, Frequenz ν) und als Photon (E = hν) beschrieben werden. Energiereichere Photonen haben kleinere Wellenlänge (E = hc/λ). Die Lichtteilchen heißen Photonen, nicht Protonen.",
     "mittel",
     ["Licht", "Photon", "Atombau"]
-  ),
-  q(
-    "ch-pool-010",
-    "chem-kap2",
-    "Die Lichtgeschwindigkeit im Vakuum beträgt etwa:",
-    ["300 000 km/s", "300 000 km/h", "300 km/h", "300 km/s", "300 000 m/s"],
-    0,
-    "Die Lichtgeschwindigkeit im Vakuum ist c ≈ 3·10⁸ m/s = 300 000 km/s. 300 000 m/s wären nur 300 km/s und damit zu klein; km/h wäre nochmals um Faktor 3600 kleiner.",
-    "leicht",
-    ["Lichtgeschwindigkeit", "Konstanten"]
   ),
   q(
     "ch-pool-011",

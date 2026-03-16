@@ -50,7 +50,14 @@ export const blogArticles: BlogArticle[] = [
         <p>
           Der BMS-Stoff umfasst vier Fächer: Biologie, Chemie, Physik und Mathematik. Viele
           unterschätzen den Umfang und beginnen erst 4-6 Wochen vor dem Test. Das reicht nicht.
-          Plane mindestens 3 Monate ein — idealerweise mehr.
+          Plane mindestens{" "}
+          <Link
+            to="/blog/medat-lernplan-3-monate"
+            className="text-[#1b3ea7] underline hover:opacity-80"
+          >
+            3 Monate
+          </Link>{" "}
+          ein — idealerweise mehr.
         </p>
 
         <h2>2. Nur Theorie lesen, kaum Fragen üben</h2>
@@ -65,7 +72,14 @@ export const blogArticles: BlogArticle[] = [
         <p>
           Es ist verlockend, die Themen zu wiederholen, die man schon kann — das fühlt sich gut an.
           Aber Punkte holst du dort, wo du dich verbesserst. Identifiziere deine schwächsten Themen
-          (z.B. Genetik, Stöchiometrie, Optik) und investiere dort überproportional Zeit.
+          (z.B.{" "}
+          <Link
+            to="/blog/bms-biologie-wichtigste-themen"
+            className="text-[#1b3ea7] underline hover:opacity-80"
+          >
+            Genetik
+          </Link>
+          , Stöchiometrie, Optik) und investiere dort überproportional Zeit.
         </p>
 
         <h2>4. Die offizielle Stichwortliste ignorieren</h2>
@@ -78,8 +92,14 @@ export const blogArticles: BlogArticle[] = [
         <h2>5. Keine Prüfungssimulationen machen</h2>
         <p>
           Der MedAT hat strenge Zeitlimits. Wer nie unter echten Bedingungen übt, wird am Testtag
-          von Zeitdruck überrascht. Mach mindestens 3-4 vollständige Simulationen mit Timer vor dem
-          echten Test.
+          von Zeitdruck überrascht. Mach mindestens 3-4 vollständige{" "}
+          <Link
+            to="/blog/medat-simulation-wichtig"
+            className="text-[#1b3ea7] underline hover:opacity-80"
+          >
+            Prüfungssimulationen
+          </Link>{" "}
+          mit Timer vor dem echten Test.
         </p>
 
         <CTA text="Mit MedMaster alle 5 Fehler vermeiden: 4.300+ BMS-Fragen, adaptiver Lernplan und Prüfungssimulation." />
@@ -97,9 +117,13 @@ export const blogArticles: BlogArticle[] = [
     content: (
       <>
         <p>
-          Zahlenfolgen sind einer von fünf KFF-Untertests im MedAT. Du bekommst eine Folge von
-          Zahlen und musst das nächste Glied bestimmen. Klingt simpel — aber unter Zeitdruck mit
-          komplexen Mustern wird es schnell knifflig. Hier sind bewährte Strategien.
+          Zahlenfolgen sind einer von fünf{" "}
+          <Link to="/blog/medat-kff-tipps" className="text-[#1b3ea7] underline hover:opacity-80">
+            KFF-Untertests
+          </Link>{" "}
+          im MedAT. Du bekommst eine Folge von Zahlen und musst das nächste Glied bestimmen. Klingt
+          simpel — aber unter Zeitdruck mit komplexen Mustern wird es schnell knifflig. Hier sind
+          bewährte Strategien.
         </p>
 
         <h2>Die 4 häufigsten Muster erkennen</h2>
@@ -131,7 +155,15 @@ export const blogArticles: BlogArticle[] = [
           Differenzen — das funktioniert bei quadratischen Mustern.
         </p>
 
-        <h2>Zeitmanagement: 25 Sekunden pro Aufgabe</h2>
+        <h2>
+          <Link
+            to="/blog/medat-zeitmanagement"
+            className="text-[#1b3ea7] underline hover:opacity-80"
+          >
+            Zeitmanagement
+          </Link>
+          : 25 Sekunden pro Aufgabe
+        </h2>
         <p>
           Im MedAT hast du ca. 25 Sekunden pro Zahlenfolge. Trainiere mit Timer. Wenn du nach 15
           Sekunden kein Muster erkennst, überspringe die Aufgabe und komm später zurück. Eine
@@ -169,24 +201,40 @@ export const blogArticles: BlogArticle[] = [
         <p>
           Widme 70 % deiner Lernzeit dem BMS. Arbeite die offizielle Stichwortliste systematisch
           durch — Biologie und Chemie zuerst, da sie den größten Stoffumfang haben. Parallel:
-          täglich 15-20 Minuten KFF üben (Zahlenfolgen, Implikationen, Wortflüssigkeit). Das
-          trainiert kognitive Fähigkeiten, die sich nur langsam aufbauen.
+          täglich 15-20 Minuten{" "}
+          <Link to="/blog/medat-kff-tipps" className="text-[#1b3ea7] underline hover:opacity-80">
+            KFF üben
+          </Link>{" "}
+          (Zahlenfolgen, Implikationen, Wortflüssigkeit). Das trainiert kognitive Fähigkeiten, die
+          sich nur langsam aufbauen.
         </p>
 
         <h2>Monat 2: Vertiefen + Fragen üben</h2>
         <p>
           Wechsle von reiner Theorie zu aktivem Üben. Ziel: mindestens 50-80 BMS-Fragen pro Tag.
           Analysiere jede falsche Antwort und wiederhole das zugrundeliegende Thema. Steigere die
-          KFF-Intensität auf 30 Minuten täglich. Starte mit TV-Übungen: 2-3 Textsets pro Woche
-          bearbeiten und Strategien verfeinern.
+          KFF-Intensität auf 30 Minuten täglich. Starte mit{" "}
+          <Link
+            to="/blog/medat-textverstaendnis-strategien"
+            className="text-[#1b3ea7] underline hover:opacity-80"
+          >
+            TV-Übungen
+          </Link>
+          : 2-3 Textsets pro Woche bearbeiten und Strategien verfeinern.
         </p>
 
         <h2>Monat 3: Simulation + Feinschliff</h2>
         <p>
-          Mache in den letzten 4 Wochen mindestens 3 vollständige Prüfungssimulationen unter echten
-          Bedingungen (Timer, keine Pausen, keine Hilfsmittel). Analysiere nach jeder Simulation
-          deine Schwächen und arbeite sie gezielt auf. Die letzte Woche: nur noch Wiederholung und
-          leichte Übungen — kein neuer Stoff mehr.
+          Mache in den letzten 4 Wochen mindestens 3 vollständige{" "}
+          <Link
+            to="/blog/medat-simulation-wichtig"
+            className="text-[#1b3ea7] underline hover:opacity-80"
+          >
+            Prüfungssimulationen
+          </Link>{" "}
+          unter echten Bedingungen (Timer, keine Pausen, keine Hilfsmittel). Analysiere nach jeder
+          Simulation deine Schwächen und arbeite sie gezielt auf. Die letzte Woche: nur noch
+          Wiederholung und leichte Übungen — kein neuer Stoff mehr.
         </p>
 
         <h2>Tägliche Routine (ca. 4-5 Stunden)</h2>
@@ -219,17 +267,37 @@ export const blogArticles: BlogArticle[] = [
       <>
         <p>
           Biologie ist das umfangreichste BMS-Fach. Die offizielle Stichwortliste umfasst dutzende
-          Themen — aber nicht alle sind gleich wichtig. Basierend auf der Analyse vergangener
-          MedAT-Prüfungen sind diese 10 Themen besonders häufig vertreten.
+          Themen — aber nicht alle sind gleich wichtig. Vermeide die{" "}
+          <Link to="/blog/medat-bms-fehler" className="text-[#1b3ea7] underline hover:opacity-80">
+            häufigsten BMS-Fehler
+          </Link>{" "}
+          und konzentriere dich auf die Themen, die basierend auf der Analyse vergangener
+          MedAT-Prüfungen besonders häufig vertreten sind.
         </p>
 
-        <h2>1. Zellbiologie</h2>
+        <h2>
+          1.{" "}
+          <Link
+            to="/blog/medat-biologie-zellbiologie"
+            className="text-[#1b3ea7] underline hover:opacity-80"
+          >
+            Zellbiologie
+          </Link>
+        </h2>
         <p>
           Aufbau der Zelle, Organellen und ihre Funktionen, Unterschied pro- und eukaryotische
           Zellen. Kommt praktisch in jeder Prüfung vor.
         </p>
 
-        <h2>2. Genetik und Vererbung</h2>
+        <h2>
+          2.{" "}
+          <Link
+            to="/blog/medat-biologie-genetik"
+            className="text-[#1b3ea7] underline hover:opacity-80"
+          >
+            Genetik und Vererbung
+          </Link>
+        </h2>
         <p>
           Mendelsche Regeln, Genotyp/Phänotyp, Erbgänge (autosomal-dominant, -rezessiv,
           X-chromosomal), Kreuzungsschemata. Ein Klassiker im BMS.
@@ -299,7 +367,14 @@ export const blogArticles: BlogArticle[] = [
         <p>
           Der Textverständnis-Teil (TV) des MedAT prüft, ob du komplexe Texte schnell erfassen und
           Fragen dazu beantworten kannst. Viele Kandidierende vernachlässigen TV, weil sie denken
-          „Lesen kann ich ja". Aber gezieltes Training kann dein Ergebnis um 20-30 % verbessern.
+          „Lesen kann ich ja". Aber gezieltes Training — idealerweise in einer{" "}
+          <Link
+            to="/blog/medat-simulation-wichtig"
+            className="text-[#1b3ea7] underline hover:opacity-80"
+          >
+            vollständigen Prüfungssimulation
+          </Link>{" "}
+          — kann dein Ergebnis um 20-30 % verbessern.
         </p>
 
         <h2>1. Fragen zuerst lesen</h2>
@@ -330,7 +405,16 @@ export const blogArticles: BlogArticle[] = [
           für die richtige Antwort deutlich höher.
         </p>
 
-        <h2>5. Zeitmanagement: Nicht festbeißen</h2>
+        <h2>
+          5.{" "}
+          <Link
+            to="/blog/medat-zeitmanagement"
+            className="text-[#1b3ea7] underline hover:opacity-80"
+          >
+            Zeitmanagement
+          </Link>
+          : Nicht festbeißen
+        </h2>
         <p>
           Du hast begrenzte Zeit pro Textset. Wenn eine Frage zu schwierig ist, markiere sie und
           komm später zurück. Beantworte zuerst die Fragen, bei denen du dir sicher bist — das
@@ -361,16 +445,25 @@ export const blogArticles: BlogArticle[] = [
         <h2>Der MedAT ist ein Marathon, kein Sprint</h2>
         <p>
           Der Test dauert über 4 Stunden und umfasst 211 Aufgaben in 4 verschiedenen Bereichen. Das
-          erfordert nicht nur Wissen, sondern auch Ausdauer, Konzentration und Zeitmanagement. Diese
-          Fähigkeiten trainierst du nur in der Simulation.
+          erfordert nicht nur Wissen, sondern auch Ausdauer, Konzentration und{" "}
+          <Link
+            to="/blog/medat-zeitmanagement"
+            className="text-[#1b3ea7] underline hover:opacity-80"
+          >
+            Zeitmanagement
+          </Link>
+          . Diese Fähigkeiten trainierst du nur in der Simulation.
         </p>
 
         <h2>Zeitdruck realistisch erleben</h2>
         <p>
           Im BMS hast du ca. 75 Sekunden pro Frage. Das klingt viel, aber bei schwierigen Fragen
-          wird es knapp. In der KFF-Sektion hast du teilweise nur 25 Sekunden pro Aufgabe. Wer
-          diesen Druck vorher nicht erlebt hat, verliert am Testtag wertvolle Minuten durch Panik
-          oder zu langes Grübeln.
+          wird es knapp. In der{" "}
+          <Link to="/blog/medat-kff-tipps" className="text-[#1b3ea7] underline hover:opacity-80">
+            KFF-Sektion
+          </Link>{" "}
+          hast du teilweise nur 25 Sekunden pro Aufgabe. Wer diesen Druck vorher nicht erlebt hat,
+          verliert am Testtag wertvolle Minuten durch Panik oder zu langes Grübeln.
         </p>
 
         <h2>Schwächen unter Druck erkennen</h2>
@@ -388,7 +481,14 @@ export const blogArticles: BlogArticle[] = [
         </ul>
         <p>
           Wichtig: Analysiere nach jeder Simulation deine Ergebnisse. Welche Themen waren schwach?
-          Wo hast du Zeit verloren? Nutze die verbleibende Zeit, um genau diese Lücken zu schließen.
+          Wo hast du Zeit verloren? Integriere die Simulationen in deinen{" "}
+          <Link
+            to="/blog/medat-lernplan-3-monate"
+            className="text-[#1b3ea7] underline hover:opacity-80"
+          >
+            Lernplan
+          </Link>
+          , um genau diese Lücken zu schließen.
         </p>
 
         <CTA text="Vollständige MedAT-Simulation: 211 Fragen, 271 Minuten, echte Zeitlimits pro Testteil." />
@@ -425,10 +525,14 @@ export const blogArticles: BlogArticle[] = [
         <p>
           Im BMS gibt es für jede richtige Antwort einen Punkt, falsche Antworten werden nicht
           abgezogen. Bei 40 BMS-Fragen (je 10 pro Fach) sind also maximal 40 Rohpunkte möglich. Im
-          KFF werden die fünf Untertests (Zahlenfolgen, Figuren zusammensetzen, Wortflüssigkeit,
-          Gedächtnis und Merkfähigkeit, Implikationen erkennen) einzeln gewertet. Im TV gibt es
-          Punkte pro richtig beantworteter Frage. Die Rohpunkte jedes Testteils werden anschließend
-          in Prozentwerte umgerechnet und mit der jeweiligen Gewichtung multipliziert.
+          KFF werden die{" "}
+          <Link to="/blog/medat-kff-tipps" className="text-[#1b3ea7] underline hover:opacity-80">
+            fünf Untertests
+          </Link>{" "}
+          (Zahlenfolgen, Figuren zusammensetzen, Wortflüssigkeit, Gedächtnis und Merkfähigkeit,
+          Implikationen erkennen) einzeln gewertet. Im TV gibt es Punkte pro richtig beantworteter
+          Frage. Die Rohpunkte jedes Testteils werden anschließend in Prozentwerte umgerechnet und
+          mit der jeweiligen Gewichtung multipliziert.
         </p>
 
         <h2>Welche Punktzahl reicht für einen Studienplatz?</h2>
@@ -443,10 +547,14 @@ export const blogArticles: BlogArticle[] = [
         <h2>Strategische Konsequenzen</h2>
         <p>
           Da BMS und KFF jeweils 40 % zählen, lohnt es sich, beide Bereiche gleichmäßig zu
-          trainieren. Ein häufiger Fehler: Kandidierende investieren 90 % ihrer Zeit in BMS und
-          vernachlässigen KFF. Dabei sind KFF-Punkte oft leichter zu steigern, weil die Untertests
-          durch Übung schnell besser werden. TV und SEK solltest du nicht ignorieren — 20 %
-          Gewichtung können bei knappem Ranking den Unterschied machen.
+          trainieren. Ein{" "}
+          <Link to="/blog/medat-bms-fehler" className="text-[#1b3ea7] underline hover:opacity-80">
+            häufiger Fehler
+          </Link>
+          : Kandidierende investieren 90 % ihrer Zeit in BMS und vernachlässigen KFF. Dabei sind
+          KFF-Punkte oft leichter zu steigern, weil die Untertests durch Übung schnell besser
+          werden. TV und SEK solltest du nicht ignorieren — 20 % Gewichtung können bei knappem
+          Ranking den Unterschied machen.
         </p>
 
         <CTA text="MedMaster zeigt dir nach jeder Übung deine simulierte Gesamtpunktzahl — damit du weißt, wo du stehst." />
@@ -470,7 +578,15 @@ export const blogArticles: BlogArticle[] = [
           konkrete Tipps für jeden der fünf Untertests.
         </p>
 
-        <h2>1. Zahlenfolgen (ZF)</h2>
+        <h2>
+          1.{" "}
+          <Link
+            to="/blog/kff-zahlenfolgen-tipps"
+            className="text-[#1b3ea7] underline hover:opacity-80"
+          >
+            Zahlenfolgen (ZF)
+          </Link>
+        </h2>
         <p>
           Bilde immer zuerst die Differenzenreihe. Wenn die Differenzen kein Muster zeigen, prüfe
           auf Faktoren (×2, ×3) oder verschachtelte Folgen (jede zweite Zahl bildet eine eigene
@@ -486,7 +602,15 @@ export const blogArticles: BlogArticle[] = [
           verschiedenen Schwierigkeitsgraden ist entscheidend.
         </p>
 
-        <h2>3. Wortflüssigkeit (WF)</h2>
+        <h2>
+          3.{" "}
+          <Link
+            to="/blog/medat-wortfluessigkeit-ueben"
+            className="text-[#1b3ea7] underline hover:opacity-80"
+          >
+            Wortflüssigkeit (WF)
+          </Link>
+        </h2>
         <p>
           Du bekommst Buchstaben und musst das Wort finden, das sich daraus bilden lässt. Tipp:
           Beginne nicht mit dem ersten Buchstaben, sondern suche nach häufigen

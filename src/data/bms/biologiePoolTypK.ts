@@ -283,8 +283,7 @@ export const biologiePoolTypK: BMSFrage[] = [
       { key: "E", nummern: [1, 2, 3, 4, 5] },
     ],
     korrekte_option: "A",
-    erklaerung:
-      "Richtig sind 1–4. Das Geschlecht wird durch das Spermium (X oder Y) bestimmt (5 falsch).",
+    erklaerung: "Richtig sind 1–4. Das Geschlecht wird durch das Spermium bestimmt (5 falsch).",
     schwierigkeit: 2,
     fsrs: null,
   },
@@ -364,7 +363,7 @@ export const biologiePoolTypK: BMSFrage[] = [
     ],
     korrekte_option: "A",
     erklaerung:
-      "Richtig sind 1–4. Die Biozönose umfasst alle Lebewesen (Pflanzen, Tiere, Pilze, Mikroorganismen), nicht nur Pflanzen (5 falsch).",
+      "Richtig sind 1–4. Die Biozönose umfasst alle Lebewesen, nicht nur Pflanzen (5 falsch).",
     schwierigkeit: 1,
     fsrs: null,
   },

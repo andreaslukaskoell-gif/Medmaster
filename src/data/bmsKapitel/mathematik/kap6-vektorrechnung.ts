@@ -13,6 +13,9 @@ export const mathKap6: Kapitel = {
     {
       id: "ma-6-01",
       title: "Vektoren — Grundbegriffe und Operationen",
+      imageUrl: "/images/bms/bio-muskelkontraktion.jpg",
+      imageCaption:
+        "Abb.: Kraftvektoren bei Muskelkontraktion — Richtung und Betrag (OpenStax, CC BY 4.0)",
       stichworte: [
         "Vektor",
         "Skalar",
@@ -214,10 +217,17 @@ $$\\vec{v} = r \\cdot \\begin{pmatrix} \\cos\\alpha \\\\ \\sin\\alpha \\end{pmat
         "Linear abhängig = parallel (2D) oder koplanar (3D). Unabhängig = verschiedene Richtungen.",
       ],
       altfrage: {
-        question:
-          "Eine Muskelkraft von $\\vec{F} = (30, 40)$ N greift am Knie an. Die Unterschenkelachse zeigt in x-Richtung. Berechnen Sie die Kompressionskraft entlang der Achse und die Scherkraft senkrecht dazu.",
-        answer:
-          "Der Betrag der Kraft ist $|\\vec{F}| = \\sqrt{30^2+40^2} = \\sqrt{900+1600} = \\sqrt{2500} = 50$ N. Die **Kompressionskomponente** entlang der Achse $(1,0)$ ist die x-Komponente: $F_{\\parallel} = 30$ N. Die **Scherkomponente** senkrecht dazu: $F_{\\perp} = \\sqrt{|\\vec{F}|^2 - F_{\\parallel}^2} = \\sqrt{2500 - 900} = 40$ N. Die Scherkraft belastet Bänder und Menisken und ist klinisch oft der limitierende Faktor. Diese Zerlegung nutzt die Vektorkomponenten direkt — die Kraft wird in einen Anteil parallel und einen Anteil senkrecht zur Gelenkachse aufgeteilt.",
+        text: "Ein Vektor hat die Komponenten (3, 4). Wie groß ist sein Betrag?",
+        options: [
+          { id: "a", text: "5" },
+          { id: "b", text: "7" },
+          { id: "c", text: "12" },
+          { id: "d", text: "√7" },
+          { id: "e", text: "25" },
+        ],
+        correctOptionId: "a",
+        explanation:
+          "|v| = √(3² + 4²) = √(9 + 16) = √25 = 5. Das 3-4-5-Dreieck ist das bekannteste pythagoräische Tripel und sollte sofort erkannt werden.",
       },
       klinischerBezug:
         "Biomechanik: Kraftzerlegung in Kompression und Scherkraft am Gelenk; EKG-Herzachse als Summenvektor der Erregungsausbreitung (Cabrera-Kreis); Doppler-Sonographie: Blutflussvektor entlang Schallstrahlrichtung.",
@@ -323,6 +333,16 @@ $$\\vec{v} = r \\cdot \\begin{pmatrix} \\cos\\alpha \\\\ \\sin\\alpha \\end{pmat
           tags: ["vektorkomponenten", "trigonometrie", "winkel"],
           difficulty: 3,
         },
+        {
+          question:
+            "Welche Aussagen über Vektoroperationen sind richtig?\n\n1. Der Betrag von (3, 4) ist 5.\n2. Vektoraddition ist nicht kommutativ.\n3. Der Einheitsvektor hat den Betrag 1.\n4. Parallele Vektoren sind immer gleich lang.\n5. Der Verbindungsvektor von A nach B ist B − A.",
+          options: ["Nur 1 und 3", "Nur 2 und 4", "Nur 1, 3 und 5", "Nur 1, 4 und 5", "Alle"],
+          correctIndex: 2,
+          explanation:
+            "Aussagen 1, 3 und 5 sind korrekt. Aussage 1: |(3,4)| = √(9+16) = √25 = 5 (pythagoräisches Tripel) ✓. Aussage 2 ist falsch: Vektoraddition ist kommutativ: a + b = b + a ✓. Aussage 3: Der Einheitsvektor ê = v/|v| hat per Definition Betrag 1 ✓. Aussage 4 ist falsch: Parallele Vektoren haben die gleiche Richtung, aber nicht notwendig die gleiche Länge — z. B. (1,2) und (3,6) sind parallel, aber |( 1,2)| = √5 ≠ |(3,6)| = 3√5. Aussage 5: Verbindungsvektor AB = rB − rA = Ziel minus Start ✓.",
+          difficulty: 2,
+          tags: ["typ-k", "vektoroperationen", "vektorrechnung"],
+        },
       ],
       diagram: "vector-addition",
     },
@@ -336,6 +356,9 @@ $$\\vec{v} = r \\cdot \\begin{pmatrix} \\cos\\alpha \\\\ \\sin\\alpha \\end{pmat
     {
       id: "ma-6-02",
       title: "Skalarprodukt und Kreuzprodukt",
+      imageUrl: "/images/bms/bio-muskelfaser.jpg",
+      imageCaption:
+        "Abb.: Drehmoment am Gelenk — Kreuzprodukt in der Biomechanik (OpenStax, CC BY 4.0)",
       stichworte: [
         "Skalarprodukt",
         "Kreuzprodukt",
@@ -536,10 +559,17 @@ Die **Lorentz-Kraft** $\\vec{F} = q(\\vec{v} \\times \\vec{B})$ wirkt auf gelade
         "Drehmoment M = r×F: maximal bei 90° (sin 90° = 1), null bei paralleler Kraft.",
       ],
       altfrage: {
-        question:
-          "Der Bizeps übt eine Kraft $\\vec{F} = (0, 120, 0)$ N am Unterarm aus. Der Hebelarm ist $\\vec{r} = (0{,}05, 0, 0)$ m. Berechnen Sie das Drehmoment. Warum ist es bei 90° Beugung maximal?",
-        answer:
-          "Das Drehmoment berechnet sich als Kreuzprodukt: $\\vec{M} = \\vec{r} \\times \\vec{F}$. Komponentenweise: $\\vec{M} = (0 \\cdot 0 - 0 \\cdot 0,\\; 0 \\cdot 0 - 0{,}05 \\cdot 0,\\; 0{,}05 \\cdot 120 - 0 \\cdot 0) = (0, 0, 6)$ Nm. Der Betrag ist $|\\vec{M}| = 6$ Nm. Alternativ: $|\\vec{M}| = |\\vec{r}| \\cdot |\\vec{F}| \\cdot \\sin\\theta = 0{,}05 \\cdot 120 \\cdot \\sin(90°) = 6$ Nm. Das Drehmoment ist bei 90° maximal, weil $\\sin(90°) = 1$ — Hebelarm und Kraft stehen senkrecht aufeinander, und die gesamte Kraft wirkt als Drehelement. Bei kleinerem oder größerem Winkel wäre $\\sin\\theta < 1$, und ein Teil der Kraft würde als Kompression statt als Drehung wirken.",
+        text: "Das Skalarprodukt zweier Vektoren ist 0. Was bedeutet das?",
+        options: [
+          { id: "a", text: "Die Vektoren sind parallel" },
+          { id: "b", text: "Die Vektoren stehen senkrecht aufeinander" },
+          { id: "c", text: "Beide Vektoren haben Betrag 0" },
+          { id: "d", text: "Die Vektoren zeigen in dieselbe Richtung" },
+          { id: "e", text: "Die Vektoren haben gleichen Betrag" },
+        ],
+        correctOptionId: "b",
+        explanation:
+          "Skalarprodukt = |a|×|b|×cos θ = 0. Da cos 90° = 0, stehen die Vektoren senkrecht (orthogonal) aufeinander. Dies ist DER Schnelltest für Orthogonalität.",
       },
       klinischerBezug:
         "Drehmoment M = r×F an Gelenken (Bizeps bei 90° maximal); Lorentz-Kraft F = q(v×B) für MRT-Sicherheit; mechanische Arbeit W = F·s (Skalarprodukt); Projektion zerlegt Muskelkräfte in Kompressions- und Scherkraft.",
@@ -651,6 +681,21 @@ Die **Lorentz-Kraft** $\\vec{F} = q(\\vec{v} \\times \\vec{B})$ wirkt auf gelade
           ],
           tags: ["winkel", "skalarprodukt", "kosinus"],
           difficulty: 3,
+        },
+        {
+          question: "Welche Aussage über Skalarprodukt und Kreuzprodukt ist FALSCH?",
+          options: [
+            "Das Kreuzprodukt ist kommutativ: $\\vec{a} \\times \\vec{b} = \\vec{b} \\times \\vec{a}$",
+            "Skalarprodukt = 0 bedeutet Orthogonalität",
+            "Das Kreuzprodukt liefert einen Vektor, der senkrecht auf beiden Ausgangsvektoren steht",
+            "Mechanische Arbeit W = $\\vec{F} \\cdot \\vec{s}$ nutzt das Skalarprodukt",
+            "$\\cos(90°) = 0$, daher ist das Skalarprodukt senkrechter Vektoren null",
+          ],
+          correctIndex: 0,
+          explanation:
+            "Aussage A ist falsch: Das Kreuzprodukt ist antikommutativ: $\\vec{a} \\times \\vec{b} = -(\\vec{b} \\times \\vec{a})$. Das Vertauschen der Reihenfolge dreht das Vorzeichen um. Alle anderen Aussagen sind korrekt: Skalarprodukt = 0 ist der Schnelltest für Orthogonalität (B), das Kreuzprodukt steht senkrecht auf beiden Vektoren (C), mechanische Arbeit ist ein Skalarprodukt (D), und cos(90°) = 0 erklärt, warum orthogonale Vektoren Skalarprodukt 0 haben (E).",
+          difficulty: 2,
+          tags: ["falsch-aussage", "skalarprodukt", "kreuzprodukt"],
         },
       ],
     },

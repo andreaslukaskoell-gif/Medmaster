@@ -33,10 +33,10 @@ export const biologiePool20: Question[] = [
   q(
     "bio-pool-20-001",
     "bio-kap1",
-    "Beim vollständigen aeroben Abbau eines Moleküls Glucose werden theoretisch maximal wie viele ATP gewonnen (inklusive Glykolyse, Citratzyklus und oxidative Phosphorylierung)?",
+    "Beim vollständigen aeroben Abbau eines Moleküls Glucose werden theoretisch maximal wie viele ATP gewonnen?",
     ["2 ATP", "4 ATP", "30–32 ATP", "36–38 ATP", "40 ATP"],
     2,
-    "Nach aktueller Berechnung liefert die vollständige aerobe Oxidation von Glucose 30–32 ATP (nicht die ältere Schätzung von 36–38). Die Differenz ergibt sich aus dem Protonengradient-basierten Wirkungsgrad der ATP-Synthase und den Shuttle-Systemen (Malat-Aspartat vs. Glycerophosphat).",
+    "Nach aktueller Berechnung liefert die vollständige aerobe Oxidation von Glucose 30–32 ATP. Die Differenz ergibt sich aus dem Protonengradient-basierten Wirkungsgrad der ATP-Synthase und den Shuttle-Systemen (Malat-Aspartat vs. Glycerophosphat).",
     "schwer",
     ["Energiestoffwechsel", "ATP", "Glykolyse", "Citratzyklus"]
   ),
@@ -68,7 +68,7 @@ export const biologiePool20: Question[] = [
       "Die Doppelmembran entsteht durch Fusion zweier ER-Zisternen während der Zellteilung",
     ],
     1,
-    "Die beschriebenen Merkmale (Doppelmembran, ringförmige DNA, 70S-Ribosomen) passen auf Mitochondrien. Laut Endosymbiontentheorie stammen sie von einem aufgenommenen aeroben Prokaryoten ab. Die meisten mitochondrialen Proteine werden jedoch vom Kerngenom kodiert und importiert.",
+    "Die beschriebenen Merkmale passen auf Mitochondrien. Laut Endosymbiontentheorie stammen sie von einem aufgenommenen aeroben Prokaryoten ab. Die meisten mitochondrialen Proteine werden jedoch vom Kerngenom kodiert und importiert.",
     "schwer",
     ["Endosymbiontentheorie", "Mitochondrien", "Evolution"]
   ),
@@ -77,7 +77,7 @@ export const biologiePool20: Question[] = [
     "bio-kap1",
     "Welche der folgenden Aussagen über den Unterschied zwischen aktivem und passivem Transport ist FALSCH?",
     [
-      "Osmose ist ein Beispiel für passiven Transport (Wasser entlang des Konzentrationsgradienten)",
+      "Osmose ist ein Beispiel für passiven Transport",
       "Die Na⁺/K⁺-ATPase transportiert 3 Na⁺ nach außen und 2 K⁺ nach innen pro ATP",
       "Erleichterte Diffusion benötigt zwar Carrier-Proteine, aber keine Energie in Form von ATP",
       "Sekundär aktiver Transport nutzt den Gradienten eines Ions, um ein anderes Molekül gegen seinen Gradienten zu transportieren",
@@ -166,7 +166,7 @@ export const biologiePool20: Question[] = [
       "Acetylcholin bindet an nikotinische Rezeptoren an der motorischen Endplatte",
     ],
     3,
-    "Die A-Bande (Bereich der Myosinfilamente) bleibt bei der Kontraktion GLEICH lang, da sich die Myosinfilamente nicht verkürzen. Nur die I-Bande und H-Zone werden kürzer, weil die Aktinfilamente über die Myosinfilamente gleiten (Gleitfilamenttheorie).",
+    "Die A-Bande bleibt bei der Kontraktion GLEICH lang, da sich die Myosinfilamente nicht verkürzen. Nur die I-Bande und H-Zone werden kürzer, weil die Aktinfilamente über die Myosinfilamente gleiten (Gleitfilamenttheorie).",
     "schwer",
     ["Muskulatur", "Gleitfilamenttheorie", "Kontraktion"]
   ),
@@ -176,7 +176,7 @@ export const biologiePool20: Question[] = [
     "Ein Patient hat einen Hämatokrit von 65 % und eine stark erhöhte Erythrozytenzahl. Welche Differenzialdiagnose ist am wahrscheinlichsten, wenn gleichzeitig der Erythropoietin-Spiegel erniedrigt ist?",
     [
       "Sekundäre Polyzythämie durch chronische Hypoxie (z. B. Höhenaufenthalt)",
-      "Polycythaemia vera (primäre, EPO-unabhängige klonale Erkrankung)",
+      "Polycythaemia vera",
       "Eisenmangelanämie mit kompensatorischer EPO-Erhöhung",
       "Dehydratation mit relativem Hämatokrit-Anstieg",
       "Renale Polyzythämie durch EPO-produzierenden Tumor",
@@ -207,14 +207,14 @@ export const biologiePool20: Question[] = [
     "bio-kap2",
     "Welcher der folgenden Reflexe ist ein MONOsynaptischer Reflex?",
     [
-      "Fremdreflex (z. B. Wegziehreflex bei Schmerz)",
+      "Fremdreflex",
       "Patellarsehnenreflex (Kniesehnenreflex)",
       "Pupillenreflex bei Lichteinfall",
       "Hustenreflex bei Fremdkörper in der Trachea",
-      "Kreuzextensorreflex (kontralaterale Streckung bei ipsilateraler Beugung)",
+      "Kreuzextensorreflex",
     ],
     1,
-    "Der Patellarsehnenreflex ist der klassische monosynaptische Eigenreflex: Afferente Ia-Faser → direkte Synapse auf Alpha-Motoneuron → Kontraktion des M. quadriceps. Alle anderen genannten Reflexe sind polysynaptisch (Fremdreflexe mit Interneuronen).",
+    "Der Patellarsehnenreflex ist der klassische monosynaptische Eigenreflex: Afferente Ia-Faser → direkte Synapse auf Alpha-Motoneuron → Kontraktion des M. quadriceps. Alle anderen genannten Reflexe sind polysynaptisch.",
     "schwer",
     ["Neurologie", "Reflexe", "Motorik"]
   ),
@@ -252,10 +252,10 @@ export const biologiePool20: Question[] = [
     "Ein Gen zeigt unvollständige Dominanz. Werden zwei heterozygote Organismen (Rr) gekreuzt, welches Phänotypenverhältnis ergibt sich in der F2?",
     [
       "3:1 (dominant : rezessiv)",
-      "1:2:1 (homozygot dominant : heterozygot : homozygot rezessiv)",
+      "1:2:1",
       "1:1 (dominant : rezessiv)",
       "9:3:3:1 (dihybrid)",
-      "2:1 (wie bei Letalfaktoren)",
+      "2:1",
     ],
     1,
     "Bei unvollständiger Dominanz zeigt der Heterozygote einen intermediären Phänotyp. Rr × Rr → 1 RR : 2 Rr : 1 rr, und alle drei Genotypen sind phänotypisch unterscheidbar → 1:2:1 Phänotypenverhältnis.",
@@ -301,12 +301,12 @@ export const biologiePool20: Question[] = [
     [
       "Eine Missense-Mutation führt immer zu einem vollständigen Funktionsverlust des Proteins",
       "Aufgrund der Wobble-Hypothese betreffen Missense-Mutationen meist die dritte Codon-Position",
-      "Eine konservative Missense-Mutation (Austausch durch ähnliche Aminosäure) kann funktionell toleriert werden",
+      "Eine konservative Missense-Mutation kann funktionell toleriert werden",
       "Missense-Mutationen sind identisch mit Nonsense-Mutationen",
       "Missense-Mutationen können nur in Exons auftreten und betreffen nie regulatorische Regionen",
     ],
     2,
-    "Eine konservative Missense-Mutation tauscht eine Aminosäure gegen eine chemisch ähnliche aus (z. B. Leucin → Isoleucin) und kann daher die Proteinfunktion erhalten. Nicht-konservative Missense-Mutationen (z. B. Sichelzellanämie: Glu → Val) können schwerwiegend sein. Wobble-Basenpaarung betrifft die dritte Position, die aber oft stille Mutationen ergibt.",
+    "Eine konservative Missense-Mutation tauscht eine Aminosäure gegen eine chemisch ähnliche aus und kann daher die Proteinfunktion erhalten. Nicht-konservative Missense-Mutationen können schwerwiegend sein. Wobble-Basenpaarung betrifft die dritte Position, die aber oft stille Mutationen ergibt.",
     "schwer",
     ["Mutationen", "Genetik", "Proteinbiosynthese"]
   ),
@@ -331,7 +331,7 @@ export const biologiePool20: Question[] = [
       "Zufällige Paarung (Panmixie) in einer großen Population ohne Mutation, Selektion oder Migration",
       "Genfluss durch Immigration von Individuen mit anderen Allelfrequenzen",
       "Genetischer Flaschenhals durch eine Naturkatastrophe",
-      "Assortative Paarung (phänotypisch ähnliche Partner werden bevorzugt)",
+      "Assortative Paarung",
     ],
     1,
     "Das Hardy-Weinberg-Gleichgewicht setzt voraus: große Population, Panmixie, keine Selektion, keine Mutation, keine Migration. Nur Option B erfüllt alle diese Bedingungen. Alle anderen Optionen verletzen mindestens eine Voraussetzung.",
@@ -366,7 +366,7 @@ export const biologiePool20: Question[] = [
       "Frequenzabhängige Selektion",
     ],
     2,
-    "Stabilisierende Selektion bevorzugt den Durchschnittsphänotyp und selektiert gegen Extreme. Beispiel: Geburtsgewicht beim Menschen (zu leicht und zu schwer sind nachteilig). Sie reduziert die phänotypische Varianz, verschiebt aber nicht den Mittelwert.",
+    "Stabilisierende Selektion bevorzugt den Durchschnittsphänotyp und selektiert gegen Extreme. Beispiel: Geburtsgewicht beim Menschen. Sie reduziert die phänotypische Varianz, verschiebt aber nicht den Mittelwert.",
     "schwer",
     ["Selektion", "Evolution", "Populationsgenetik"]
   ),
@@ -446,7 +446,7 @@ export const biologiePool20: Question[] = [
     "Welcher Immunglobulin-Isotyp kann als einziger die Plazentaschranke überwinden und dem Neugeborenen passiven Nestschutz verleihen?",
     ["IgA", "IgM", "IgG", "IgE", "IgD"],
     2,
-    "IgG ist das einzige Immunglobulin, das die Plazenta (via neonatalen Fc-Rezeptor, FcRn) passieren kann. Es verleiht dem Neugeborenen passiven Nestschutz für die ersten Lebensmonate. IgA wird über die Muttermilch übertragen (Schleimhautschutz).",
+    "IgG ist das einzige Immunglobulin, das die Plazenta passieren kann. Es verleiht dem Neugeborenen passiven Nestschutz für die ersten Lebensmonate. IgA wird über die Muttermilch übertragen (Schleimhautschutz).",
     "schwer",
     ["Immunologie", "Immunglobuline", "IgG"]
   ),
@@ -462,7 +462,7 @@ export const biologiePool20: Question[] = [
       "Phagozytose durch neutrophile Granulozyten",
     ],
     0,
-    "Zentrale Toleranz: Im Thymus werden T-Zellen, die stark auf Selbstantigene reagieren, durch negative Selektion (klonale Deletion) eliminiert. Bei Autoimmunerkrankungen ist dieser Mechanismus und/oder die periphere Toleranz (z. B. regulatorische T-Zellen) gestört.",
+    "Zentrale Toleranz: Im Thymus werden T-Zellen, die stark auf Selbstantigene reagieren, durch negative Selektion (klonale Deletion) eliminiert. Bei Autoimmunerkrankungen ist dieser Mechanismus und/oder die periphere Toleranz gestört.",
     "schwer",
     ["Immunologie", "Autoimmunität", "Toleranz"]
   ),
@@ -478,7 +478,7 @@ export const biologiePool20: Question[] = [
       "Nischendifferenzierung verhindert Koexistenz und führt immer zum Ausschluss beider Arten",
     ],
     1,
-    "Das Gause-Prinzip (kompetitiver Ausschluss): Zwei Arten mit identischer ökologischer Nische können nicht dauerhaft koexistieren. Eine Art wird die andere verdrängen. Nischendifferenzierung (Aufteilung der Ressourcen) ermöglicht hingegen Koexistenz.",
+    "Das Gause-Prinzip (kompetitiver Ausschluss): Zwei Arten mit identischer ökologischer Nische können nicht dauerhaft koexistieren. Eine Art wird die andere verdrängen. Nischendifferenzierung ermöglicht hingegen Koexistenz.",
     "schwer",
     ["Ökologie", "Kompetitiver Ausschluss", "Gause-Prinzip"]
   ),

@@ -304,7 +304,7 @@ export const chemiePool5: Question[] = [
     "ch-pool-224",
     "chem-kap6",
     "Welche Verbindung enthält eine Doppelbindung zwischen zwei C-Atomen?",
-    ["Ethan", "Ethen", "Ethan", "Methan", "Propan"],
+    ["Ethan", "Ethen", "Propen", "Methan", "Propan"],
     1,
     "Ethen C₂H₄ hat C=C. Ethan C₂H₆ nur Einfachbindungen.",
     "leicht",

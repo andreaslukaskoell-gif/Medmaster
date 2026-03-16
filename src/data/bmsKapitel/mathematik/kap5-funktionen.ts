@@ -10,6 +10,9 @@ export const mathKap5: Kapitel = {
     {
       id: "ma-5-01",
       title: "Lineare Funktionen",
+      imageUrl: "/images/bms/bio-blutzucker-regulation.jpg",
+      imageCaption:
+        "Abb.: Linearer Alkoholabbau — konstante Abbaurate als lineare Funktion (OpenStax, CC BY 4.0)",
       stichworte: [
         "Lineare Funktion",
         "Steigung",
@@ -212,12 +215,18 @@ g₁: y = 3x − 2. Senkrechte durch P(6|1): m₂ = −1/3 (weil 3 × (−1/3) =
         "Schnittpunkt zweier Geraden: Gleichsetzen → nach x auflösen → y einsetzen.",
         "Linear ≠ proportional: f(x) = 2x + 3 ist linear, aber nicht proportional (b ≠ 0).",
       ],
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Erklären Sie, wie man die Gleichung einer Geraden aus zwei gegebenen Punkten bestimmt, und erläutern Sie die Bedeutung von Steigung und y-Achsenabschnitt für den Graphen.",
-        answer:
-          "Um die Geradengleichung f(x) = mx + b aus zwei Punkten P₁(x₁|y₁) und P₂(x₂|y₂) zu bestimmen, berechnet man zunächst die Steigung m als Differenzenquotient: m = (y₂ − y₁)/(x₂ − x₁). Die Steigung beschreibt die Änderungsrate der Funktion: Für jede Einheit, um die x zunimmt, ändert sich y um den Wert m. Eine positive Steigung bedeutet eine von links nach rechts steigende Gerade, eine negative Steigung eine fallende Gerade. Anschließend setzt man einen der Punkte, etwa P₁, in die Geradengleichung ein und löst nach b auf: b = y₁ − m×x₁. Der y-Achsenabschnitt b gibt an, wo die Gerade die y-Achse schneidet (d.h. den Funktionswert bei x = 0). In der Medizin ist das Verständnis dieser Parameter entscheidend: Bei Kalibrierkurven im Labor entspricht b einem Offset (Nullpunktfehler des Geräts) und m der Sensitivität (wie stark das Signal auf Konzentrationsänderungen anspricht). Eine Gerade mit b = 0 beschreibt direkte Proportionalität, wie sie bei der Berechnung von Infusionsdosierungen auftritt, bei denen die verabreichte Menge direkt proportional zur Körpermasse des Patienten ist.",
+        text: "Eine Gerade verläuft durch P₁(2|1) und P₂(6|9). Welche Steigung hat sie?",
+        options: [
+          { id: "a", text: "m = 1" },
+          { id: "b", text: "m = 2" },
+          { id: "c", text: "m = 4" },
+          { id: "d", text: "m = 0,5" },
+          { id: "e", text: "m = 8" },
+        ],
+        correctOptionId: "b",
+        explanation:
+          "m = (y₂ − y₁)/(x₂ − x₁) = (9 − 1)/(6 − 2) = 8/4 = 2. Die Steigung gibt an, um wie viel y pro Einheit x zunimmt.",
       },
       klinischerBezug:
         "Das Lambert-Beer-Gesetz (A = ε×c×d) ist eine lineare Funktion der Konzentration und bildet die Grundlage der Photometrie in der klinischen Labordiagnostik zur Bestimmung von Hämoglobin, Bilirubin und vielen anderen Laborparametern. Infusionsraten (z. B. ml/h = Dosis in mg/kg/h × Körpergewicht / Konzentration) folgen linearen Zusammenhängen und erfordern exakte Berechnungen, um Über- oder Unterdosierungen zu vermeiden. Im linearen Bereich von Dosis-Wirkungskurven lässt sich die therapeutische Dosis direkt proportional zur gewünschten Wirkungsstärke berechnen.",
@@ -292,11 +301,29 @@ g₁: y = 3x − 2. Senkrechte durch P(6|1): m₂ = −1/3 (weil 3 × (−1/3) =
           difficulty: 3,
           tags: ["dosierung", "lineare-funktion", "klinisch"],
         },
+        {
+          question: "Welche Aussage über lineare Funktionen ist FALSCH?",
+          options: [
+            "Eine Gerade mit Steigung m = 0 verläuft senkrecht zur x-Achse",
+            "Die Steigung m = Δy/Δx gibt die Änderungsrate an",
+            "Zwei parallele Geraden haben die gleiche Steigung",
+            "Der y-Achsenabschnitt ist der Funktionswert an der Stelle x = 0",
+            "Eine negative Steigung bedeutet: y sinkt bei steigendem x",
+          ],
+          correctIndex: 0,
+          explanation:
+            "Aussage A ist falsch: Eine Gerade mit Steigung m = 0 verläuft horizontal (parallel zur x-Achse), nicht senkrecht. Eine senkrechte Gerade (parallel zur y-Achse) hat keine definierte Steigung (m → ∞). Alle anderen Aussagen sind korrekt: Steigung = Änderungsrate (B), parallele Geraden haben gleiche Steigung (C), f(0) = b ist der y-Achsenabschnitt (D), negative Steigung bedeutet fallende Funktion (E).",
+          difficulty: 1,
+          tags: ["falsch-aussage", "lineare-funktionen", "steigung"],
+        },
       ],
     },
     {
       id: "ma-5-02",
       title: "Quadratische & Exponentialfunktionen",
+      imageUrl: "/images/bms/bio-calcium-regulation.jpg",
+      imageCaption:
+        "Abb.: Parabolische Wurfbahn und biologische Regulationskurven (OpenStax, CC BY 4.0)",
       stichworte: [
         "Quadratische Funktion",
         "Parabel",
@@ -520,12 +547,18 @@ Minimum bei t = a/(2b) — das ist xs = \u2212(\u2212a)/(2b). Typische Falle: Ni
         "E = ½mv²: doppelte Geschwindigkeit → vierfache Energie → vierfacher Bremsweg.",
         "A = πr²: halber Radius → ¼ Fläche. Hagen-Poiseuille: halber Radius → 16× Widerstand.",
       ],
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Erklären Sie die Bedeutung der Diskriminante einer quadratischen Gleichung und beschreiben Sie, wie Sie die Nullstellen einer Parabel grafisch und rechnerisch bestimmen.",
-        answer:
-          "Die Diskriminante D = b² − 4ac ist der Term unter der Wurzel in der Mitternachtsformel x₁₂ = (−b ± √D)/(2a). Sie entscheidet über die Anzahl der reellen Nullstellen: Ist D > 0, hat die quadratische Funktion zwei verschiedene reelle Nullstellen, und die Parabel schneidet die x-Achse an zwei Stellen. Ist D = 0, gibt es genau eine Nullstelle (Doppelwurzel), und der Scheitelpunkt liegt genau auf der x-Achse. Ist D < 0, gibt es keine reellen Nullstellen, d. h. die Parabel verläuft entweder vollständig oberhalb (a > 0) oder vollständig unterhalb (a < 0) der x-Achse. Grafisch lassen sich Nullstellen als Schnittpunkte des Graphen mit der x-Achse ablesen. Rechnerisch nutzt man die Mitternachtsformel oder – bei normierten Gleichungen – die pq-Formel x₁₂ = −p/2 ± √((p/2)² − q). Eine Alternative ist die Faktorisierung: Kennt man eine Nullstelle x₁, lässt sich f(x) als a(x − x₁)(x − x₂) schreiben, wobei x₂ durch Vieta (x₁×x₂ = c/a) bestimmt wird. In medizinischen Anwendungen, etwa beim Berechnen der maximalen Konzentration oder optimalen Dosierung in einfachen quadratischen Modellen, ist die Kenntnis des Scheitelpunkts (nicht der Nullstellen) oft das eigentliche Ziel.",
+        text: "Welche Lösungen hat die Gleichung x² − 8x + 15 = 0?",
+        options: [
+          { id: "a", text: "x = 3 und x = 5" },
+          { id: "b", text: "x = −3 und x = −5" },
+          { id: "c", text: "x = 1 und x = 15" },
+          { id: "d", text: "x = 4 und x = 4" },
+          { id: "e", text: "keine reellen Lösungen" },
+        ],
+        correctOptionId: "a",
+        explanation:
+          "Vieta: Summe = 8, Produkt = 15. Die Zahlen 3 und 5 erfüllen beides: 3+5=8 und 3×5=15. Probe: 9−24+15=0 und 25−40+15=0.",
       },
       klinischerBezug:
         "Die kinetische Energie eines Blutpartikels E = ½mv² ist quadratisch in der Strömungsgeschwindigkeit v, was erklärt, warum Turbulenzen und Scherkräfte bei Stenosen mit zunehmendem Schweregrad überproportional ansteigen. Der Querschnitt eines Blutgefäßes A = πr² hängt quadratisch vom Radius ab: Eine Halbierung des Radius (z. B. durch Arteriosklerose) reduziert die Querschnittsfläche auf ein Viertel und erhöht den Strömungswiderstand nach Hagen-Poiseuille auf das 16-Fache. In Zwei-Kompartiment-Pharmakokinetikmodellen erscheinen biexponentielle Kurven, deren frühes Abklingverhalten durch quadratische Näherungen beschrieben werden kann.",
@@ -622,6 +655,8 @@ Minimum bei t = a/(2b) — das ist xs = \u2212(\u2212a)/(2b). Typische Falle: Ni
     {
       id: "ma-5-03",
       title: "Exponentialfunktionen",
+      imageUrl: "/images/bms/bio-bakterienwachstum-de.svg",
+      imageCaption: "Abb.: Bakterielles Wachstum — exponentielles Wachstum in der Mikrobiologie",
       stichworte: [
         "Exponentialfunktion",
         "Eulersche Zahl",
@@ -838,12 +873,18 @@ Medikament mit T½ = 8 h wird alle 8 h gegeben. Wann ist Steady State erreicht?
         "Steady State: nach 4–5 Halbwertszeiten bei regelmäßiger Dosierung.",
         "Verdopplungszeit = T½ = ln(2)/k (Formel identisch, Kontext verschieden).",
       ],
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Erläutern Sie das Konzept der Halbwertszeit eines Medikaments und erklären Sie, wie die pharmakokinetische Gleichung C(t) = C₀ × e^(−kt) klinisch interpretiert wird.",
-        answer:
-          "Die Halbwertszeit T½ eines Medikaments ist die Zeit, nach der die Plasmakonzentration auf die Hälfte des vorherigen Wertes gesunken ist. Sie ergibt sich mathematisch aus der Bedingung C₀/2 = C₀ × e^(−k×T½), woraus nach Kürzen durch C₀ folgt: ln(1/2) = −k×T½, also T½ = ln(2)/k ≈ 0,693/k. Die Halbwertszeit ist eine Eigenschaft des Medikament-Körper-Systems und unabhängig von der Dosis: Unabhängig davon, ob 1 mg oder 1 g gegeben wurde, sinkt die Konzentration in jeder Halbwertszeit um 50 %. Die pharmakokinetische Gleichung C(t) = C₀ × e^(−kt) beschreibt den monoexponentiellen Konzentrationsabfall, der für die Kinetik erster Ordnung charakteristisch ist. Dies bedeutet: Die Eliminationsrate (dC/dt = −k×C) ist stets proportional zur aktuellen Konzentration — eine hohe Konzentration wird schnell abgebaut, eine niedrige langsam. Nach einer Halbwertszeit sind 50 % übrig, nach zwei 25 %, nach drei 12,5 %, nach vier 6,25 %, nach fünf ca. 3 %. In der klinischen Praxis gilt nach 4–5 Halbwertszeiten ein Medikament als praktisch vollständig eliminiert. Beim Aufbau eines Steady State bei regelmäßiger Einnahme gilt dieselbe Faustregel: Nach 4–5 Halbwertszeiten ist die Gleichgewichtskonzentration erreicht.",
+        text: "Ein Medikament hat eine Halbwertszeit von 4 Stunden. Wie viel Prozent der Ausgangsdosis sind nach 12 Stunden noch im Körper?",
+        options: [
+          { id: "a", text: "50 %" },
+          { id: "b", text: "25 %" },
+          { id: "c", text: "12,5 %" },
+          { id: "d", text: "6,25 %" },
+          { id: "e", text: "3 %" },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "12 h / 4 h = 3 Halbwertszeiten. Nach jeder HWZ halbiert sich die Menge: 100 % → 50 % → 25 % → 12,5 %. Nach 3 HWZ sind (1/2)³ = 1/8 = 12,5 % übrig.",
       },
       klinischerBezug:
         "Penicillin hat eine Halbwertszeit von ca. 30–60 min und muss daher mehrmals täglich gegeben werden, während Amiodaron mit T½ ≈ 40–55 Tagen noch Wochen nach Absetzen wirksam bleibt und zahlreiche Wechselwirkungen verursachen kann. Die pharmakokinetische Gleichung C(t) = C₀×e^(−kt) ist die mathematische Grundlage für die Berechnung von Dosierungsintervallen, Aufsättigungsdosen und der Zeit bis zur vollständigen Medikamentenelimination vor Operationen. Radioaktive Isotope in der Nuklearmedizin (z. B. Technetium-99m mit T½ ≈ 6 h) unterliegen derselben Exponentialkinetik, was die Berechnung optimaler Bildgebungszeitpunkte ermöglicht.",
@@ -925,12 +966,25 @@ Medikament mit T½ = 8 h wird alle 8 h gegeben. Wann ist Steady State erreicht?
           difficulty: 3,
           tags: ["exponentialfunktion", "monotonie", "falsch-aussage"],
         },
+        {
+          question:
+            "Welche Aussagen über Funktionstypen und ihre Eigenschaften sind richtig?\n\n1. Eine Exponentialfunktion f(x) = a · bˣ (b > 1) ist streng monoton steigend.\n2. Die Halbwertszeit berechnet sich als T½ = ln(2)/k.\n3. Jede quadratische Funktion hat genau zwei Nullstellen.\n4. Eine lineare Funktion hat die Steigung m = Δy/Δx.\n5. e⁰ = 1.",
+          options: ["Nur 1 und 4", "Nur 2 und 5", "Nur 1, 2, 4 und 5", "Nur 1, 3 und 5", "Alle"],
+          correctIndex: 2,
+          explanation:
+            "Aussagen 1, 2, 4 und 5 sind korrekt. Aussage 1: Bei b > 1 und a > 0 wächst die Exponentialfunktion streng monoton ✓. Aussage 2: T½ = ln(2)/k folgt aus e^(−kT½) = ½ ✓. Aussage 3 ist falsch: Quadratische Funktionen können 0, 1 oder 2 Nullstellen haben — abhängig von der Diskriminante D = b² − 4ac. Aussage 4: Die Steigung einer Geraden ist der Quotient aus Höhen- und Längenunterschied ✓. Aussage 5: e⁰ = 1 gilt allgemein für a⁰ = 1 (a ≠ 0) ✓.",
+          difficulty: 2,
+          tags: ["typ-k", "funktionstypen", "eigenschaften"],
+        },
       ],
       diagram: "exponential-function",
     },
     {
       id: "ma-5-04",
       title: "Logarithmusfunktionen",
+      imageUrl: "/images/bms/ch-ph-skala.jpg",
+      imageCaption:
+        "Abb.: pH = \u2212log[H\u207A] \u2014 die Logarithmusfunktion in der Chemie (OpenStax, CC BY 4.0)",
       stichworte: [
         "Logarithmus",
         "Natürlicher Logarithmus",
@@ -1143,12 +1197,18 @@ Vereinfache: log(50) + log(2). *Denkprozess:* Produktregel → log(50 × 2) = lo
         "Basiswechsel: log_b(x) = ln(x)/ln(b).",
         "Henderson-Hasselbalch: pH = pKₐ + log([A⁻]/[HA]).",
       ],
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Erklären Sie die Definition des pH-Wertes mithilfe des Logarithmus, und beschreiben Sie, warum eine pH-Änderung um 1 Einheit klinisch bedeutsam ist.",
-        answer:
-          "Der pH-Wert ist definiert als der negative dekadische Logarithmus der Wasserstoffionenkonzentration: pH = −log₁₀([H⁺]). Diese Definition nutzt den Logarithmus, weil [H⁺] im physiologischen Bereich sehr kleine Werte annimmt (ca. 10⁻⁷ mol/L im Neutralbereich), die ohne Logarithmus schwer handhabbar wären. Der negative Logarithmus macht aus diesen kleinen Zahlen positive, anschauliche Werte: Bei [H⁺] = 10⁻⁷ mol/L ergibt sich pH = −(−7) = 7. Da die Logarithmusfunktion die Umkehrung der Exponentialfunktion ist, entspricht eine pH-Änderung um genau 1 Einheit einer 10-fachen Änderung der [H⁺]: Eine pH-Senkung von 7,4 auf 6,4 bedeutet eine 10-fach höhere Protonenkonzentration. In der Klinik ist das von enormer Bedeutung: Der physiologische Blut-pH liegt bei 7,35–7,45. Eine pH-Senkung auf 7,0 (Azidose) entspricht bereits einer mehr als doppelt so hohen [H⁺] und führt zu Herzrhythmusstörungen, Vasodilatation und Bewusstseinstrübung. Ein pH unter 6,8 oder über 7,8 ist meist mit dem Leben nicht vereinbar. Der Logarithmus komprimiert also eine riesige Spanne von [H⁺]-Werten (von 10⁻¹ bis 10⁻¹⁴ mol/L) auf eine handhabbare Skala von pH 1 bis 14.",
+        text: "Welchen pH-Wert hat eine Lösung mit [H⁺] = 10⁻³ mol/L?",
+        options: [
+          { id: "a", text: "pH = −3" },
+          { id: "b", text: "pH = 3" },
+          { id: "c", text: "pH = 0,3" },
+          { id: "d", text: "pH = 7" },
+          { id: "e", text: "pH = 11" },
+        ],
+        correctOptionId: "b",
+        explanation:
+          "pH = −log₁₀([H⁺]) = −log₁₀(10⁻³) = −(−3) = 3. Eine Lösung mit pH 3 ist stark sauer (vergleichbar mit Essig). Merke: Der Exponent wird durch den negativen Logarithmus positiv.",
       },
       klinischerBezug:
         "Der arterielle Blut-pH (7,35–7,45) wird über das Bikarbonat-Puffersystem reguliert, das der Henderson-Hasselbalch-Gleichung pH = 6,1 + log([HCO₃⁻]/0,03×pCO₂) folgt; kleinste Abweichungen sind diagnostisch entscheidend für respiratorische vs. metabolische Azidose oder Alkalose. Der pKₐ-Wert eines Medikaments bestimmt über die Henderson-Hasselbalch-Gleichung, welcher Anteil bei gegebenem pH ionisiert ist — ionisierte Formen können Zellmembranen nicht passieren, was für die Resorption, Verteilung und tubuläre Rückresorption von Arzneimitteln entscheidend ist (Ion-Trapping-Phänomen). Semilogarithmische Konzentrations-Zeit-Kurven sind in der klinischen Pharmakologie Standard zur Berechnung von Eliminationshalbwertszeit, Clearance und Verteilungsvolumen aus Blutspiegelmessungen.",
@@ -1238,6 +1298,9 @@ Vereinfache: log(50) + log(2). *Denkprozess:* Produktregel → log(50 × 2) = lo
     {
       id: "ma-5-05",
       title: "Differentialrechnung & Integralrechnung",
+      imageUrl: "/images/bms/bio-herz-oberflaeche.jpg",
+      imageCaption:
+        "Abb.: Herzfrequenzänderung — Ableitung als momentane Änderungsrate (OpenStax, CC BY 4.0)",
       stichworte: [
         "Ableitung",
         "Differentialquotient",
@@ -1400,10 +1463,17 @@ In der Pharmakokinetik ist die **AUC** (Area Under the Curve) = ∫₀^∞ C(t) 
         "Hauptsatz: ∫ₐᵇ f(x) dx = F(b) − F(a). Stammfunktion einsetzen, subtrahieren, fertig.",
       ],
       altfrage: {
-        question:
-          "Die Konzentration eines Medikaments im Blut wird durch C(t) = 100·e^(−0,2t) beschrieben (C in mg/L, t in Stunden). Berechnen Sie die momentane Änderungsrate der Konzentration nach 3 Stunden und bestimmen Sie die AUC (Fläche unter der Kurve) von t = 0 bis t = 5.",
-        answer:
-          "Die momentane Änderungsrate ist die Ableitung: C'(t) = 100·(−0,2)·e^(−0,2t) = −20·e^(−0,2t). Nach 3 Stunden: C'(3) = −20·e^(−0,6) ≈ −20·0,549 ≈ −10,98 mg/(L·h). Das Minuszeichen bedeutet, dass die Konzentration sinkt — nach 3 h mit ca. 11 mg/L pro Stunde. Für die AUC: ∫₀⁵ 100·e^(−0,2t) dt = 100·[−1/0,2·e^(−0,2t)]₀⁵ = 100·(−5)·[e^(−1) − e^(0)] = −500·[0,368 − 1] = −500·(−0,632) = 316 mg·h/L. Die AUC von 316 mg·h/L ist ein Maß für die Gesamtexposition des Körpers gegenüber dem Medikament im Zeitraum 0–5 h. In der klinischen Pharmakokinetik dient die AUC zur Beurteilung der Bioverfügbarkeit und zur Dosisanpassung.",
+        text: "Was ist die Ableitung von f(x) = 5x³ − 2x + 4?",
+        options: [
+          { id: "a", text: "f'(x) = 15x² − 2" },
+          { id: "b", text: "f'(x) = 15x² − 2x" },
+          { id: "c", text: "f'(x) = 5x² − 2" },
+          { id: "d", text: "f'(x) = 15x³ − 2" },
+          { id: "e", text: "f'(x) = 15x² + 4" },
+        ],
+        correctOptionId: "a",
+        explanation:
+          "Potenzregel: (xⁿ)' = n×xⁿ⁻¹. Also: (5x³)' = 15x², (−2x)' = −2, (4)' = 0. Ergebnis: f'(x) = 15x² − 2. Konstanten fallen beim Ableiten weg.",
       },
       klinischerBezug:
         "Die Ableitung der Konzentrations-Zeit-Kurve C'(t) beschreibt die momentane Eliminationsgeschwindigkeit eines Medikaments und ist entscheidend für die Dosierungsberechnung. Die AUC (Area Under the Curve, ∫C(t)dt) ist das Standardmaß für die Bioverfügbarkeit eines Arzneimittels und bestimmt, ob eine generische Formulierung als bioäquivalent gilt (AUC-Verhältnis 80–125 %). In der Kardiologie beschreibt die Ableitung der Druck-Volumen-Kurve die momentane Compliance des Herzens, und das Integral der Flusskurve über ein Herzintervall ergibt das Schlagvolumen.",

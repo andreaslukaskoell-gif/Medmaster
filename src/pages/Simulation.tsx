@@ -32,11 +32,11 @@ import { useAdaptiveStore, getStichwortForQuestion } from "@/store/adaptiveLearn
 import { getDirectStichwortId } from "@/data/questions/index";
 import { tvTexts } from "@/data/tvData";
 import {
-  generateAllergyCards,
-  generateMemoryQuestions,
+  generateAllergyPasses,
+  generateGedaechtnisQuestionsFromPasses,
   generateWortflüssigkeitSet,
 } from "@/data/kffGenerators";
-import type { AllergyCard } from "@/data/kffGenerators";
+import type { AllergyPass } from "@/data/kffGedaechtnisMedAT";
 import { OFFICIAL_ZF_EXAMPLES, generateSequenceTaskSet } from "@/data/kffZahlenfolgenMedAT";
 import { OFFICIAL_IMPLICATION_EXAMPLES, implikationenTasks } from "@/data/kffImplikationen";
 import {
@@ -211,7 +211,7 @@ const KFF_FULL_SECTIONS: SimSection[] = [
     label: "Zahlenfolgen",
     sectionType: "kff-zahlenfolgen",
     questionCount: 10,
-    timeLimitMinutes: 25,
+    timeLimitMinutes: 15,
     parentGroup: "KFF",
   },
   {
@@ -227,8 +227,8 @@ const KFF_FULL_SECTIONS: SimSection[] = [
     id: "kff-fig",
     label: "Figuren zusammensetzen",
     sectionType: "kff-figuren",
-    questionCount: 10,
-    timeLimitMinutes: 15,
+    questionCount: 15,
+    timeLimitMinutes: 20,
     parentGroup: "KFF",
   },
   {
@@ -243,7 +243,7 @@ const KFF_FULL_SECTIONS: SimSection[] = [
     id: "kff-wf",
     label: "Wortflüssigkeit",
     sectionType: "kff-wortfluessigkeit",
-    questionCount: 20,
+    questionCount: 15,
     timeLimitMinutes: 20,
     parentGroup: "KFF",
   },
@@ -262,24 +262,24 @@ const SEK_FULL_SECTIONS: SimSection[] = [
     id: "sek-erk",
     label: "Emotionen erkennen",
     sectionType: "sek-erkennen",
-    questionCount: 10,
-    timeLimitMinutes: 15,
+    questionCount: 14,
+    timeLimitMinutes: 21,
     parentGroup: "SEK",
   },
   {
     id: "sek-reg",
     label: "Emotionen regulieren",
     sectionType: "sek-regulieren",
-    questionCount: 10,
-    timeLimitMinutes: 15,
+    questionCount: 12,
+    timeLimitMinutes: 18,
     parentGroup: "SEK",
   },
   {
     id: "sek-ent",
     label: "Soziales Entscheiden",
     sectionType: "sek-entscheiden",
-    questionCount: 10,
-    timeLimitMinutes: 15,
+    questionCount: 14,
+    timeLimitMinutes: 21,
     parentGroup: "SEK",
   },
 ];
@@ -442,20 +442,20 @@ function generateZahlenfolgenQuestions(section: SimSection, variant?: number): U
 /** Reserviert für künftige Gedächtnis-Sektion in der Simulation. */
 // eslint-disable-next-line @typescript-eslint/no-unused-vars -- kept for future use
 function _generateGedaechtnisQuestions(section: SimSection): {
-  cards: AllergyCard[];
+  cards: AllergyPass[];
   questions: UnifiedQuestion[];
 } {
-  const cards = generateAllergyCards(8);
-  const memQ = generateMemoryQuestions(cards, section.questionCount);
-  const questions = memQ.map((q) => ({
+  const passes = generateAllergyPasses(8);
+  const gmQ = generateGedaechtnisQuestionsFromPasses(passes, section.questionCount);
+  const questions = gmQ.map((q) => ({
     id: q.id,
     sectionId: section.id,
     sectionType: "kff-gedaechtnis" as SectionType,
-    memText: q.text,
+    memText: q.question,
     memOptions: q.options,
-    memCorrect: q.correctAnswer,
+    memCorrect: q.options[q.correctIndex],
   }));
-  return { cards, questions };
+  return { cards: passes, questions };
 }
 
 function generateImplikationenQuestions(section: SimSection): UnifiedQuestion[] {
@@ -580,8 +580,8 @@ function generateSekQuestions(section: SimSection): UnifiedQuestion[] {
 function generateQuestionsForSection(
   section: SimSection,
   variant?: number,
-  existingGedaechtnisCards?: AllergyCard[]
-): { questions: UnifiedQuestion[]; cards?: AllergyCard[] } {
+  existingGedaechtnisPasses?: AllergyPass[]
+): { questions: UnifiedQuestion[]; cards?: AllergyPass[] } {
   switch (section.sectionType) {
     case "bms":
       return { questions: generateBmsQuestions(section, variant) };
@@ -590,19 +590,19 @@ function generateQuestionsForSection(
     case "kff-zahlenfolgen":
       return { questions: generateZahlenfolgenQuestions(section, variant) };
     case "kff-gedaechtnis-learn": {
-      const cards = generateAllergyCards(8);
-      return { questions: [], cards };
+      const passes = generateAllergyPasses(8);
+      return { questions: [], cards: passes };
     }
     case "kff-gedaechtnis": {
-      const cards = existingGedaechtnisCards ?? [];
-      const memQ = generateMemoryQuestions(cards, section.questionCount);
-      const questions = memQ.map((q) => ({
+      const passes = existingGedaechtnisPasses ?? [];
+      const gmQ = generateGedaechtnisQuestionsFromPasses(passes, section.questionCount);
+      const questions = gmQ.map((q) => ({
         id: q.id,
         sectionId: section.id,
         sectionType: "kff-gedaechtnis" as SectionType,
-        memText: q.text,
+        memText: q.question,
         memOptions: q.options,
-        memCorrect: q.correctAnswer,
+        memCorrect: q.options[q.correctIndex],
       }));
       return { questions };
     }
@@ -770,7 +770,7 @@ export default function Simulation() {
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [timeLeft, setTimeLeft] = useState(0);
   const [breakTimeLeft, setBreakTimeLeft] = useState(0);
-  const [allergyCards, setAllergyCards] = useState<AllergyCard[]>([]);
+  const [allergyCards, setAllergyCards] = useState<AllergyPass[]>([]);
   const [learnTimeLeft, setLearnTimeLeft] = useState(0);
   const [sectionTimeData, setSectionTimeData] = useState<SectionTimeData[]>([]);
   const [sectionStartTime, setSectionStartTime] = useState(0);
@@ -839,7 +839,7 @@ export default function Simulation() {
 
       // Pre-generate questions for all sections
       const questionMap = new Map<string, UnifiedQuestion[]>();
-      let cardsForGedaechtnis: AllergyCard[] = [];
+      let cardsForGedaechtnis: AllergyPass[] = [];
 
       for (const sec of secs) {
         const result = generateQuestionsForSection(
@@ -1416,48 +1416,93 @@ export default function Simulation() {
         </div>
 
         <div className="grid grid-cols-2 gap-4">
-          {allergyCards.map((card, i) => (
-            <Card key={card.id}>
-              <CardContent className="p-4 space-y-2">
-                <div className="flex items-center justify-between">
-                  <h3 className="font-bold text-[var(--text-primary)]">{card.name}</h3>
-                  <Badge variant="default">#{i + 1}</Badge>
-                </div>
-                <div className="grid grid-cols-2 gap-x-4 gap-y-1 text-sm">
-                  <div>
-                    <span className="text-[var(--muted)]">Geburtsdatum:</span>
-                  </div>
-                  <div className="text-[var(--text-primary)]">{card.geburtsdatum}</div>
-                  <div>
-                    <span className="text-[var(--muted)]">Blutgruppe:</span>
-                  </div>
-                  <div className="font-semibold text-red-600 dark:text-red-400">
-                    {card.blutgruppe}
-                  </div>
-                  <div>
-                    <span className="text-[var(--muted)]">Ausweisnr.:</span>
-                  </div>
-                  <div className="text-[var(--text-primary)]">{card.ausweisnummer}</div>
-                  <div>
-                    <span className="text-[var(--muted)]">Land:</span>
-                  </div>
-                  <div className="text-[var(--text-primary)]">{card.land}</div>
-                  <div>
-                    <span className="text-[var(--muted)]">Medikamente:</span>
-                  </div>
-                  <div className="text-[var(--text-primary)]">
-                    {card.medikamente ? "Ja" : "Nein"}
-                  </div>
-                </div>
-                <div>
-                  <span className="text-sm text-[var(--muted)]">Allergien: </span>
-                  <span className="text-sm font-medium text-orange-700 dark:text-orange-400">
-                    {card.allergien.join(", ")}
+          {allergyCards.map((pass) => {
+            const initials = pass.name
+              .split(/\s+/)
+              .map((p) => p[0])
+              .join("")
+              .toUpperCase()
+              .slice(0, 2);
+            return (
+              <div
+                key={pass.id}
+                className="rounded-2xl border border-[var(--border)] bg-[var(--border)]/50 shadow-md overflow-hidden"
+              >
+                <div className="flex items-center justify-between px-4 py-2 border-b-2 border-red-500 bg-[var(--card)]">
+                  <span className="text-base font-bold tracking-wide text-[var(--text-secondary)]">
+                    ALLERGIEAUSWEIS
                   </span>
+                  <span className="text-red-500 text-xl font-bold">+</span>
                 </div>
-              </CardContent>
-            </Card>
-          ))}
+                <div className="flex p-3 gap-3 bg-[var(--card)]">
+                  <div className="w-24 h-28 shrink-0 rounded border border-[var(--border)] overflow-hidden bg-[var(--border)]">
+                    {pass.photo ? (
+                      <img
+                        src={pass.photo}
+                        alt=""
+                        className="w-full h-full object-cover"
+                        onError={(e) => {
+                          (e.target as HTMLImageElement).style.display = "none";
+                        }}
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center text-[var(--muted)] text-xl font-bold">
+                        {initials}
+                      </div>
+                    )}
+                  </div>
+                  <div className="flex-1 text-sm space-y-0.5">
+                    <div>
+                      <span className="font-semibold text-red-600 dark:text-red-400">Name:</span>{" "}
+                      <span className="text-[var(--text-primary)]">{pass.name.toUpperCase()}</span>
+                    </div>
+                    <div>
+                      <span className="font-semibold text-red-600 dark:text-red-400">
+                        Geburtstag:
+                      </span>{" "}
+                      <span className="text-[var(--text-primary)]">{pass.birthdate}</span>
+                    </div>
+                    <div>
+                      <span className="font-semibold text-red-600 dark:text-red-400">
+                        Medikamenteneinnahme:
+                      </span>{" "}
+                      <span className="text-[var(--text-primary)]">
+                        {pass.medications ? "Ja" : "Nein"}
+                      </span>
+                    </div>
+                    <div>
+                      <span className="font-semibold text-red-600 dark:text-red-400">
+                        Blutgruppe:
+                      </span>{" "}
+                      <span className="text-[var(--text-primary)]">{pass.bloodGroup}</span>
+                    </div>
+                    <div>
+                      <span className="font-semibold text-red-600 dark:text-red-400">
+                        Bekannte Allergien:
+                      </span>{" "}
+                      <span className="text-[var(--text-primary)]">
+                        {pass.allergies.join(", ")}
+                      </span>
+                    </div>
+                    <div>
+                      <span className="font-semibold text-red-600 dark:text-red-400">
+                        Ausweisnummer:
+                      </span>{" "}
+                      <span className="font-mono text-[var(--text-primary)]">
+                        {pass.passportNumber}
+                      </span>
+                    </div>
+                    <div>
+                      <span className="font-semibold text-red-600 dark:text-red-400">
+                        Ausstellungsland:
+                      </span>{" "}
+                      <span className="text-[var(--text-primary)]">{pass.country}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
 
         <div className="flex justify-center">

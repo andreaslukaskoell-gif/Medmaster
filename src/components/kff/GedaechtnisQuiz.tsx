@@ -18,6 +18,7 @@ import {
   generateAllergyPasses,
   generateGedaechtnisQuestionsFromPasses,
 } from "@/data/kffGenerators";
+import { generateSequenceTaskSet, type SequenceTask } from "@/data/kffZahlenfolgenMedAT";
 import { type AllergyPass, type GedaechtnisQuestion } from "@/data/kffGedaechtnisMedAT";
 import { filterValidGedaechtnisQuestions, logPoolWarning } from "@/data/kffValidation";
 import { getOneMerkfahigkeitSet } from "@/lib/taskDb";
@@ -284,6 +285,152 @@ export function GedaechtnisLearn({ onStart, onBack }: { onStart: () => void; onB
           <Play className="w-5 h-5 mr-2" /> Zur Prüfphase
         </Button>
       </div>
+    </div>
+  );
+}
+
+// ==========================================
+// INTERFERENZ-PHASE (optional, between learn & quiz)
+// ==========================================
+
+export function GedaechtnisInterferenz({
+  onComplete,
+  onSkip,
+}: {
+  onComplete: () => void;
+  onSkip: () => void;
+}) {
+  const [started, setStarted] = useState(false);
+  const [tasks] = useState<SequenceTask[]>(() => generateSequenceTaskSet(5, Date.now()));
+  const [taskIndex, setTaskIndex] = useState(0);
+  const [selected, setSelected] = useState<string | null>(null);
+  const [answered, setAnswered] = useState(false);
+
+  const task = tasks[taskIndex];
+
+  if (!started) {
+    return (
+      <div className="max-w-2xl mx-auto space-y-6 mt-8">
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-lg">Kurzinterferenz</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+              Im echten MedAT folgen jetzt ca. 35 Minuten andere Untertests, bevor die Prüfphase zur
+              Merkfähigkeit beginnt. Um das zu simulieren, löse jetzt ein paar Aufgaben aus einem
+              anderen Bereich.
+            </p>
+            <div className="flex flex-col gap-3 sm:flex-row">
+              <Button size="lg" onClick={() => setStarted(true)}>
+                <Play className="w-5 h-5 mr-2" /> 5 Zahlenfolgen lösen
+              </Button>
+              <Button size="lg" variant="outline" onClick={onSkip}>
+                Direkt zur Prüfphase
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+    );
+  }
+
+  if (!task) {
+    onComplete();
+    return null;
+  }
+
+  const handleSelect = (key: string) => {
+    if (answered) return;
+    setSelected(key);
+    setAnswered(true);
+  };
+
+  const handleNext = () => {
+    if (taskIndex + 1 >= tasks.length) {
+      onComplete();
+    } else {
+      setTaskIndex((i) => i + 1);
+      setSelected(null);
+      setAnswered(false);
+    }
+  };
+
+  return (
+    <div className="max-w-2xl mx-auto space-y-6 mt-8">
+      <div className="flex items-center justify-between">
+        <Badge variant="warning">Kurzinterferenz</Badge>
+        <span className="text-sm text-[var(--muted)]">
+          Zahlenfolge {taskIndex + 1} von {tasks.length}
+        </span>
+      </div>
+      <div className="w-full bg-[var(--border)] rounded-full h-2">
+        <div
+          className="bg-[var(--accent)] h-2 rounded-full transition-all"
+          style={{ width: `${((taskIndex + 1) / tasks.length) * 100}%` }}
+        />
+      </div>
+      <Card>
+        <CardContent className="p-6">
+          {/* Sequence display */}
+          <div className="flex flex-wrap gap-2 justify-center mb-6">
+            {task.sequence.map((val, i) => (
+              <div
+                key={i}
+                className={`w-14 h-14 flex items-center justify-center rounded-lg border text-sm font-mono font-semibold ${
+                  val === "?"
+                    ? "border-[var(--accent)] bg-[var(--accent)]/10 text-[var(--accent)]"
+                    : "border-[var(--border)] bg-[var(--background)] text-[var(--text-primary)]"
+                }`}
+              >
+                {val === "?" ? "?" : val}
+              </div>
+            ))}
+          </div>
+          {/* Options */}
+          <div className="space-y-2">
+            {task.options.map((opt) => {
+              const isCorrect = opt.key === task.correctOptionId;
+              const isSelected = selected === opt.key;
+              let cls =
+                "w-full text-left px-4 py-3 rounded-lg border text-sm transition-colors flex items-center gap-2";
+              if (!answered) {
+                cls += " cursor-pointer border-[var(--border)] hover:bg-[var(--border)]/50";
+              } else if (isCorrect) {
+                cls += " border-green-500 bg-green-500/10 text-green-700 dark:text-green-400";
+              } else if (isSelected && !isCorrect) {
+                cls += " border-red-500 bg-red-500/10 text-red-700 dark:text-red-400";
+              } else {
+                cls += " border-[var(--border)] opacity-60";
+              }
+              const label = opt.value
+                ? `${opt.value[0]}, ${opt.value[1]}`
+                : (opt.text ?? "Keine der genannten");
+              return (
+                <button key={opt.key} onClick={() => handleSelect(opt.key)} className={cls}>
+                  <span className="font-semibold shrink-0">{opt.key})</span>
+                  {label}
+                </button>
+              );
+            })}
+          </div>
+        </CardContent>
+      </Card>
+      {answered && (
+        <div className="flex justify-end">
+          <Button onClick={handleNext}>
+            {taskIndex + 1 >= tasks.length ? (
+              <>
+                Weiter zur Prüfphase <ArrowRight className="w-4 h-4 ml-1" />
+              </>
+            ) : (
+              <>
+                Nächste Zahlenfolge <ArrowRight className="w-4 h-4 ml-1" />
+              </>
+            )}
+          </Button>
+        </div>
+      )}
     </div>
   );
 }

@@ -499,17 +499,19 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
                             y1={line.from.y}
                             x2={line.to.x}
                             y2={line.to.y}
-                            stroke="#0e7490"
-                            strokeWidth="2.5"
+                            stroke="#666"
+                            strokeWidth="1.5"
                             strokeLinecap="round"
-                            strokeDasharray="6 3"
+                            strokeDasharray="4 3"
                           />
                         ))}
                       </svg>
                     </div>
                   </div>
                   <p className="text-[11px] text-[var(--muted)] mt-1.5 ml-1">
-                    Die gestrichelten Linien zeigen, wo die Teile zusammenstoßen.
+                    {q.solutionOverlay?.lines.length
+                      ? "Die gestrichelten Linien zeigen, wo die Teile zusammenstoßen."
+                      : "Teile zusammengesetzt = Zielfigur"}
                   </p>
                 </div>
                 {/* Answer comparison: correct vs user's choice — side by side, larger */}

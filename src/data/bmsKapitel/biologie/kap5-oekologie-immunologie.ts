@@ -134,6 +134,8 @@ In der Ökologie unterscheidet man zwei Kategorien von Umweltfaktoren:
         explanation:
           "Ein **Ökosystem** ist die funktionelle Einheit aus **Biotop** (unbelebter Lebensraum: Boden, Wasser, Klima) und **Biozönose** (Lebensgemeinschaft aller Arten). A und B sind vertauscht. D beschreibt die Biozönose, nicht die Population (= eine Art). E ist falsch: die Biosphäre umfasst alle Biome.",
       },
+      klinischerBezug:
+        "Die ökologischen Organisationsebenen sind grundlegend für die Epidemiologie: Populationen definieren Risikogruppen, Biozönosen bestimmen Infektionsketten zwischen Wirt und Vektor (z. B. Zecke → Borrelia → Mensch). Der Ökosystemansatz erklärt, warum Habitatzerstörung Zoonosen fördert — wenn Wildtiere in menschliche Siedlungen vordringen, steigt das Risiko für Spillover-Ereignisse (z. B. SARS-CoV-2, Ebola). In der Umweltmedizin wird die Biosphäre als Ganzes betrachtet, etwa bei der Ausbreitung von Antibiotikaresistenzen über Boden- und Wasserökosysteme.",
     },
     {
       id: "bio-10-02",
@@ -404,6 +406,8 @@ Klinische Parallele: Der **Mensch** ist dank **Thermoregulation** (Schwitzen, Va
         explanation:
           "**Euryök** = breiter Toleranzbereich (griech. eurys = weit); **stenök** = enger Toleranzbereich. A ist falsch: abiotisch = unbelebt (Temperatur, pH, Licht). B ist vertauscht (stenök = eng). C ist falsch: Liebig sagt, der im **Minimum** vorhandene Faktor limitiert. E ist falsch: Shelford erweitert Liebig um das Maximum.",
       },
+      klinischerBezug:
+        "Toleranzkurven und Liebigs Minimumgesetz sind direkt auf die Humanphysiologie übertragbar: Die Körpertemperatur hat ein enges Optimum (36,5–37,5 °C), und bereits geringe Abweichungen (Hypothermie < 35 °C, Hyperthermie > 40 °C) sind lebensbedrohlich — der Mensch ist bezüglich Temperatur stenotherm. In der Arbeitsmedizin bestimmen Toleranzgrenzen für Lärm, UV-Strahlung und Schadstoffkonzentrationen (MAK-Werte) die Grenzwerte am Arbeitsplatz. Liebigs Prinzip gilt auch für Mikronährstoffe: Eisenmangel limitiert die Erythropoese unabhängig davon, ob alle anderen Nährstoffe ausreichend vorhanden sind.",
     },
 
     {
@@ -576,6 +580,8 @@ Bei Immunsuppression (z. B. HIV/AIDS mit CD4-T-Zell-Verlust, Chemotherapie-induz
         explanation:
           "Die **fundamentale Nische** umfasst alle Bedingungen, unter denen eine Art theoretisch leben könnte. Die **realisierte Nische** ist der tatsächlich genutzte Bereich — sie ist durch Konkurrenz, Prädation und andere biotische Faktoren oft kleiner als die fundamentale Nische. Connells Seepocken-Experiment belegt dies: Ohne *Balanus* dehnte *Chthamalus* seinen Bereich aus.",
       },
+      klinischerBezug:
+        "Das Nischenkonzept ist zentral für die medizinische Mikrobiologie: Die Darmflora (Mikrobiom) besetzt ökologische Nischen im Gastrointestinaltrakt und verhindert durch Konkurrenzausschluss die Besiedelung durch pathogene Keime (Kolonisationsresistenz). Eine Antibiotikatherapie zerstört diese Nischenbesetzung und ermöglicht opportunistischen Erregern wie Clostridioides difficile die Ausbreitung — klinisch als pseudomembranöse Kolitis. Auch Tumorzellen lassen sich ökologisch als invasive Art beschreiben, die eine neue Nische im Gewebe erschließt (Tumormikroenvironment).",
     },
 
     {
@@ -836,6 +842,8 @@ Die **Räuberpopulation hinkt der Beutepopulation zeitlich nach** (Höhepunkt de
           tags: ["r-strategen", "k-strategen", "überlebenskurve"],
         },
       ],
+      klinischerBezug:
+        "Parasitismus ist eines der wichtigsten Themen der Tropenmedizin und Infektiologie. Endoparasiten wie Plasmodium (Malaria), Schistosoma (Bilharziose) und Bandwürmer (Taenia) verursachen weltweit Millionen Erkrankungen. Ektoparasiten wie Zecken übertragen Borrelia burgdorferi (Lyme-Borreliose) und FSME-Viren. Die Wirt-Parasit-Koevolution erklärt, warum manche Parasiten milde Verläufe zeigen (lange Koevolution) und neu übergesprungene Erreger (Zoonosen) oft besonders virulent sind. Mutualistische Symbiosen sind klinisch ebenso relevant: Die Darmflora (Kommensalismus bis Mutualismus) beeinflusst Immunentwicklung, Vitaminproduktion (Vitamin K, B12) und psychische Gesundheit (Darm-Hirn-Achse).",
     },
 
     {
@@ -1560,6 +1568,8 @@ Bakterienwachstum in geschlossener Kultur (Blutkultur, Nährmedium) durchläuft 
         explanation:
           "Die **Kapazitätsgrenze K** (carrying capacity) ist die maximale Populationsgröße, die ein Lebensraum mit seinen Ressourcen dauerhaft tragen kann. Beim logistischen Wachstum nähert sich die Population asymptotisch K an (A ist falsch). B und E sind vertauscht: K-Strategen = wenige Nachkommen, viel Brutpflege; r-Strategen = viele Nachkommen, wenig Brutpflege. D ist falsch: Exponentielles Wachstum tritt nur kurzzeitig auf (z. B. neue Habitate).",
       },
+      klinischerBezug:
+        "Populationsdynamische Modelle sind essenziell für die Epidemiologie: Das exponentielle Wachstum beschreibt die Anfangsphase einer Epidemie (ungehemmte Ausbreitung), während die logistische Kurve den Verlauf mit zunehmender Herdenimmunität modelliert — die Kapazitätsgrenze K entspricht hier dem Anteil der empfänglichen Bevölkerung. Die Basisreproduktionszahl R₀ (mittlere Anzahl Sekundärinfektionen pro Indexfall) bestimmt, ob eine Infektion exponentiell wächst (R₀ > 1) oder erlischt (R₀ < 1). Dichteabhängige Regulation zeigt sich klinisch bei nosokomialen Infektionen: Überbelegung von Krankenhausstationen erhöht die Übertragungsrate von MRSA und anderen Krankenhauskeimen überproportional.",
     },
 
     // === from kap11-immunologie ===

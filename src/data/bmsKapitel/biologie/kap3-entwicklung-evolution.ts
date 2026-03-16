@@ -839,10 +839,17 @@ Die wichtigsten Teratogene: Folsäuremangel (Neuralrohrdefekte), Alkohol (fetale
       klinischerBezug:
         "Neuralrohrdefekte (Spina bifida, Anencephalie) durch Folsäuremangel — Prophylaxe mit 0,4 mg/Tag. Fetales Alkoholsyndrom: häufigstes Teratogen. Thalidomid (Contergan): Phokomelie bei Einnahme in Woche 4–8. Röteln im 1. Trimenon: Gregg-Syndrom (Herz, Auge, Ohr).",
       altfrage: {
-        question:
-          "Ordne die drei Keimblätter ihren wichtigsten Derivaten zu und nenne je ein klinisches Beispiel für eine Fehlbildung.",
-        answer:
-          "Ektoderm: Nervensystem (Gehirn, Rückenmark), Epidermis, Zahnschmelz — Fehlbildung: Anencephalie/Spina bifida (Neuralrohrdefekt). Mesoderm: Muskeln, Knochen, Herz, Niere, Blut, Gonaden — Fehlbildung: Ventrikelseptumdefekt (häufigster angeborener Herzfehler). Endoderm: Darmepithel, Lunge, Leber, Pankreas, Schilddrüse — Fehlbildung: Ösophagusatresie (Speiseröhrenfehlbildung, oft mit Trachealfistel).",
+        text: "Welche Zuordnung von Keimblatt und Derivat ist korrekt?",
+        options: [
+          { id: "a", text: "Ektoderm → Herzmuskulatur" },
+          { id: "b", text: "Mesoderm → Darmepithel" },
+          { id: "c", text: "Endoderm → Epidermis und Zahnschmelz" },
+          { id: "d", text: "Ektoderm → Nervensystem, Epidermis, Zahnschmelz" },
+          { id: "e", text: "Endoderm → Skelettmuskulatur und Knochen" },
+        ],
+        correctOptionId: "d",
+        explanation:
+          "Aus dem Ektoderm entstehen Nervensystem (Gehirn, Rückenmark), Epidermis und Zahnschmelz. Mesoderm liefert Muskeln, Knochen, Herz und Niere; Endoderm bildet Darmepithel, Lunge, Leber und Pankreas.",
       },
       selfTest: [
         {
@@ -1682,10 +1689,17 @@ Bevor ein Spermium die Eizelle durchdringen kann, muss es **kapazitiert** sein. 
       klinischerBezug:
         "Eileiterschwangerschaft (Extrauteringravidität): Implantation in der Tube statt im Uterus; Risiko Tubarruptur, Blutung; Diagnostik u. a. hCG-Verlauf.",
       altfrage: {
-        question:
-          "Welche Reaktion der Eizelle verhindert unmittelbar nach der Befruchtung die Polyspermie?",
-        answer:
-          "Die Kortikalreaktion: Kortikale Granula der Eizelle setzen nach Ca²⁺-Anstieg ihren Inhalt in den perivitellinen Spalt frei und verändern die Zona pellucida (Zona-Reaktion), sodass keine weiteren Spermien eindringen können.",
+        text: "Welche Reaktion der Eizelle verhindert unmittelbar nach der Befruchtung die Polyspermie?",
+        options: [
+          { id: "a", text: "Die Akrosomreaktion des Spermiums" },
+          { id: "b", text: "Die Kortikalreaktion mit Veränderung der Zona pellucida" },
+          { id: "c", text: "Die Kapazitation der Spermien im Eileiter" },
+          { id: "d", text: "Die Auflösung der Corona radiata" },
+          { id: "e", text: "Die Kontraktion des Eileiters" },
+        ],
+        correctOptionId: "b",
+        explanation:
+          "Bei der Kortikalreaktion setzen kortikale Granula nach Ca²⁺-Anstieg ihren Inhalt frei und verändern die Zona pellucida (Zona-Reaktion), sodass keine weiteren Spermien eindringen können.",
       },
       selfTest: [
         {
@@ -1806,10 +1820,17 @@ Die **Implantation** (Einnistung) ist das Einbetten der Blastozyste in die **Geb
       klinischerBezug:
         "Extrauteringravidität (v. a. Eileiter): Implantation außerhalb des Uterus; Risiko Tubarruptur, Blutung; Diagnostik u. a. hCG-Verlauf.",
       altfrage: {
-        question:
-          "Welche Struktur der Blastozyste entwickelt sich zur Plazenta und produziert hCG?",
-        answer:
-          "Der Trophoblast (äußere Zellschicht der Blastozyste) entwickelt sich zur Plazenta und produziert hCG; der Embryoblast (innere Zellmasse) wird zum Embryo.",
+        text: "Welche Struktur der Blastozyste entwickelt sich zur Plazenta und produziert hCG?",
+        options: [
+          { id: "a", text: "Der Embryoblast (innere Zellmasse)" },
+          { id: "b", text: "Die Zona pellucida" },
+          { id: "c", text: "Der Trophoblast (äußere Zellschicht)" },
+          { id: "d", text: "Die Blastozystenhöhle (Blastozoel)" },
+          { id: "e", text: "Der Dottersack" },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "Der Trophoblast (äußere Zellschicht der Blastozyste) entwickelt sich zur Plazenta und produziert hCG. Der Embryoblast (innere Zellmasse) wird zum Embryo.",
       },
       selfTest: [
         {
@@ -1941,9 +1962,17 @@ Aus welchem Keimblatt welches Organ entsteht, ist prüfungsrelevant. Die folgend
       ],
       diagram: "gastrulation",
       altfrage: {
-        question: "Aus welchem Keimblatt entstehen Skelett, Muskulatur, Herz und Nieren?",
-        answer:
-          "Aus dem Mesoderm (mittleres Keimblatt). Es entstehen u. a. Skelett, Muskulatur, Herz, Nieren, Gonaden, Bindegewebe und Blut.",
+        text: "Aus welchem Keimblatt entstehen Skelett, Muskulatur, Herz und Nieren?",
+        options: [
+          { id: "a", text: "Ektoderm" },
+          { id: "b", text: "Endoderm" },
+          { id: "c", text: "Mesoderm" },
+          { id: "d", text: "Neuralleiste" },
+          { id: "e", text: "Trophoblast" },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "Aus dem Mesoderm (mittleres Keimblatt) entstehen Skelett, Muskulatur, Herz, Nieren, Gonaden, Bindegewebe und Blut.",
       },
       selfTest: [
         {

@@ -148,15 +148,18 @@ Der **hydrophobe Effekt** ist primär entropisch getrieben: Apolare Moleküle in
         "Wasser ist amphoter: wirkt je nach Partner als Säure oder Base",
         "Hydrophober Effekt: thermodynamisch getrieben durch Entropiegewinn bei Aggregation apolarer Gruppen",
       ],
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Erläutern Sie die außergewöhnlichen physikalischen Eigenschaften des Wassers und begründen Sie diese auf molekularer Ebene. Gehen Sie auf Siedepunkt, Wärmekapazität, Dichteanomalie und Oberflächenspannung sowie deren biologische Bedeutung ein.",
-        answer: `Alle außergewöhnlichen Eigenschaften des Wassers lassen sich auf seinen Dipolcharakter und das ausgedehnte H-Brücken-Netzwerk zurückführen. Der gewinkelte Bindungswinkel von 104,5° und ΔEN = 1,24 erzeugen ein Dipolmoment von 1,85 D. Jedes Molekül bildet bis zu vier H-Brücken (~20 kJ/mol): zwei als Donor und zwei als Akzeptor.
-
-Der hohe Siedepunkt von 100 °C (H₂S siedet bei −60 °C!) erfordert das Aufbrechen des H-Brücken-Netzwerks beim Verdampfen — Verdampfungsenthalpie ~2430 kJ/kg bei 37 °C ermöglicht effiziente Kühlung durch Schweiß. Die hohe Wärmekapazität (4182 J/kg·K) stabilisiert die Körpertemperatur bei Wärmeproduktion.
-
-Die Dichteanomalie (Maximum bei 4 °C) lässt Eis schwimmen (9 % weniger dicht) — Seen frieren von der Oberfläche, das 4 °C-Wasser am Boden bleibt flüssig, aquatische Organismen überleben den Winter. Die hohe Oberflächenspannung (72 mN/m) ermöglicht Kapillarkräfte im Pflanzenstamm (100 m Höhe) und schützt Lungenalveolen — Surfactant (DPPC) senkt γ, um den Alveolarkollaps beim Ausatmen zu verhindern.`,
+        text: "Welcher Bindungswinkel liegt im Wassermolekül vor?",
+        options: [
+          { id: "a", text: "90°" },
+          { id: "b", text: "104,5°" },
+          { id: "c", text: "109,5°" },
+          { id: "d", text: "120°" },
+          { id: "e", text: "180°" },
+        ],
+        correctOptionId: "b",
+        explanation:
+          "Wasser hat einen Bindungswinkel von 104,5° (kleiner als der ideale Tetraederwinkel 109,5°, da die zwei freien Elektronenpaare am sp³-hybridisierten Sauerstoff die Bindungswinkel zusammendrücken). Dies erzeugt ein Dipolmoment von 1,85 D und ermöglicht das H-Brücken-Netzwerk.",
       },
       klinischerBezug:
         "Der Wassergehalt des menschlichen Körpers (60–70 % des Körpergewichts) ist Medium für Elektrolyttransport, pH-Regulation und Temperaturhomöostase. Dehydratation um 2 % des Körpergewichts reduziert kognitive Leistung messbar; Hyponatriämie (Überwässerung ohne Elektrolyte) führt zu Hirnödem. In der Pharmazie bestimmt der Hydratationszustand die Bioverfügbarkeit wasserlöslicher Arzneimittel und die renale Clearance.",
@@ -317,6 +320,21 @@ Die Dichteanomalie (Maximum bei 4 °C) lässt Eis schwimmen (9 % weniger dicht) 
           difficulty: 2,
           tags: ["kapillarkräfte", "kohäsion", "adhäsion"],
         },
+        {
+          question: "Welche Aussage über Wasser ist FALSCH?",
+          options: [
+            "Wasser hat einen Bindungswinkel von 104,5° aufgrund der Abstoßung durch die zwei freien Elektronenpaare am Sauerstoff.",
+            "Die hohe Verdampfungsenthalpie von Wasser (~2430 kJ/kg bei 37 °C) ermöglicht effektive Kühlung durch Schweiß.",
+            "Wasser hat seinen Siedepunkt bei 100 °C, weil die kovalenten O-H-Bindungen beim Sieden gebrochen werden müssen.",
+            "Die Dichteanomalie des Wassers (Maximum bei 4 °C) bewirkt, dass Eis auf Wasser schwimmt.",
+            "Die hohe Wärmekapazität von Wasser (4182 J/kg·K) stabilisiert die Körpertemperatur.",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Aussage C ist FALSCH: Beim Sieden von Wasser werden NICHT die kovalenten O-H-Bindungen gebrochen (diese haben eine Bindungsenergie von ~463 kJ/mol), sondern die intermolekularen Wasserstoffbrückenbindungen (~20 kJ/mol pro H-Brücke). Die kovalenten Bindungen bleiben intakt — das Wasser verdampft als H₂O-Moleküle, nicht als getrennte Atome. Alle anderen Aussagen sind korrekt.",
+          difficulty: 2,
+          tags: ["falsch-aussage", "wasser", "siedepunkt"],
+        },
       ],
     },
     {
@@ -448,15 +466,18 @@ Metabolisch zentrale Kohlenstoffverbindungen:
         "Fullerene (C₆₀): sphärische Käfige — potenzielle Drug-Delivery-Systeme in der Nanomedizin",
         "Acetyl-CoA: zentrale metabolische Schnittstelle — Glykolyse, β-Oxidation und Zitratzyklus",
       ],
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Erläutern Sie die Rolle von CO₂ im menschlichen Blut: Transport, chemische Gleichgewichte und Bedeutung für die pH-Regulation.",
-        answer: `CO₂ entsteht als Hauptprodukt der aeroben Zellatmung (oxidative Decarboxylierungen im Zitratzyklus). Im Gewebe diffundiert CO₂ in Erythrozyten, wo Carboanhydrase (kcat ~10⁶ s⁻¹) es blitzschnell zu HCO₃⁻ umwandelt: CO₂ + H₂O → H₂CO₃ → HCO₃⁻ + H⁺. Das HCO₃⁻ wird via Chloride-Shift (Band-3-Protein, Anionenaustauscher) ins Plasma transportiert. Transport: ~70 % als HCO₃⁻, ~23 % als Carbaminohämoglobin, ~7 % physikalisch gelöst.
-
-In der Lunge kehrt der Prozess um: niedriger alveolarer pCO₂ lässt CO₂ aus dem Blut in die Alveole diffundieren; Carboanhydrase katalysiert HCO₃⁻ + H⁺ → CO₂ + H₂O, und CO₂ wird ausgeatmet.
-
-Das Bicarbonat-Puffersystem (pKa = 6,1) hält arteriellen Blut-pH bei 7,40: pH = 6,1 + log(24 mmol/L / 1,2 mmol/L) = 7,4. Bei COPD (Hypoventilation) steigt pCO₂ → respiratorische Azidose; renale Kompensation durch erhöhte HCO₃⁻-Rückresorption (Tage). Bei diabetischer Ketoazidose sinkt HCO₃⁻ → metabolische Azidose; Kompensation durch Hyperventilation (Kussmaul-Atmung) → CO₂ ↓ → pH ↑.`,
+        text: "In welcher Form wird CO₂ hauptsächlich im Blut transportiert?",
+        options: [
+          { id: "a", text: "Physikalisch gelöst im Plasma (~70 %)" },
+          { id: "b", text: "Als Bicarbonat (HCO₃⁻) (~70 %)" },
+          { id: "c", text: "Gebunden an Hämoglobin als Carbaminohämoglobin (~70 %)" },
+          { id: "d", text: "Als Kohlensäure (H₂CO₃) (~70 %)" },
+          { id: "e", text: "Als CO₂-Albumin-Komplex (~70 %)" },
+        ],
+        correctOptionId: "b",
+        explanation:
+          "Ca. 70 % des CO₂ werden als HCO₃⁻ transportiert (Carboanhydrase in Erythrozyten: CO₂ + H₂O → HCO₃⁻ + H⁺), ca. 23 % als Carbaminohämoglobin und nur ca. 7 % physikalisch gelöst.",
       },
       klinischerBezug:
         "CO-Vergiftung durch defekte Heizungen ist häufiger Vergiftungsnotfall; charakteristisches Kirschrot der Haut (HbCO) ist ein Spätzeichen — Diagnose durch Co-Oximetrie im arteriellen Blutgastest. Das Bicarbonat-Puffersystem ist Grundlage der Blutgasanalyse (pH, pCO₂, HCO₃⁻) zur Diagnose von Azidosen/Alkalosen bei kritisch kranken Patienten. Carboanhydrase-Hemmer wie Acetazolamid (Diamox) erhöhen HCO₃⁻-Ausscheidung — Einsatz bei Glaukom, Höhenkrankheit und als mildes Diuretikum.",
@@ -759,19 +780,18 @@ Die Halogene (F, Cl, Br, I) sind starke Oxidationsmittel mit abnehmender Oxidati
         "I⁻: essenziell für T₃ (3 I) und T₄ (4 I) — Iodmangel → Struma (Kropf)",
         "Königswasser: 3 HCl + 1 HNO₃ → löst Au und Pt (einzige Säuremischung dafür)",
       ],
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Erläutern Sie die Bedeutung von Iod für den menschlichen Körper. Gehen Sie auf Aufnahme, Biochemie der Schilddrüsenhormon-Synthese sowie Folgen von Iodmangel und -überversorgung ein.",
-        answer: `Iod (I, Atomnr. 53) ist ein essenzielles Spurenelement und das einzige Halogen, das der Körper in nennenswerten Mengen benötigt. Empfohlene Tagesdosis: 150–200 μg (Erwachsene), 230–260 μg (Schwangerschaft). Aufnahme als Iodid (I⁻) hauptsächlich über Meeresfrüchte, iodiertes Speisesalz und Milchprodukte.
-
-In der Schilddrüse: I⁻ wird durch den Na⁺/I⁻-Symporter (NIS) aktiv konzentriert (bis 30–40× Blutkonzentration). Thyreoperoxidase (TPO) oxidiert I⁻ zu I₂ (mit H₂O₂): 2 I⁻ + H₂O₂ → I₂ + 2 OH⁻. Reaktive Iodspezies iodieren Tyrosinreste in Thyreoglobulin → Monoiodtyrosin (MIT, 1 I) und Diiodtyrosin (DIT, 2 I). TPO koppelt dann: MIT + DIT → T₃ (Trijodthyronin, 3 I, biologisch aktiv); DIT + DIT → T₄ (Thyroxin, 4 I, Prohormon). T₄ wird peripher durch Deiodinasen zu T₃ oder reverse-T₃ (inaktiv) umgewandelt.
-
-Wirkungen: T₃/T₄ regulieren Grundumsatz (thermogene Wirkung, Na⁺/K⁺-ATPase-Hochregulation), Wachstum und Differenzierung (besonders fetale Gehirnentwicklung), Herzfrequenz und Stoffwechsel.
-
-Iodmangel: T₃/T₄ sinken → TSH-Anstieg → Struma (diffuse Schilddrüsenhyperplasie). Bei schwerem fetalem Mangel: Kretinismus (irreversible geistige Retardierung, Taubheit, Wachstumsstörung).
-
-Iodüberversorgung: Jod-Basedow-Phänomen (Hyperthyreose bei vorbestehender Struma); Wolff-Chaikoff-Effekt (transiente Hemmung der Hormonsynthese). Hochdosiertes Kaliumiodid bei Nuklearunfällen: blockiert Aufnahme von radioaktivem ¹³¹I.`,
+        text: "Wie viele Iodatome enthält das biologisch aktive Schilddrüsenhormon T₃ (Triiodthyronin)?",
+        options: [
+          { id: "a", text: "1" },
+          { id: "b", text: "2" },
+          { id: "c", text: "3" },
+          { id: "d", text: "4" },
+          { id: "e", text: "5" },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "T₃ (Triiodthyronin) enthält 3 Iodatome und ist das biologisch aktive Hormon. T₄ (Thyroxin, 4 Iodatome) ist das Prohormon, das peripher durch Deiodinasen zu T₃ konvertiert wird. T₃ entsteht aus der Kopplung von MIT (1 I) + DIT (2 I).",
       },
       klinischerBezug:
         "Schilddrüsenhormone (T₃, T₄) regulieren den Grundumsatz des gesamten Körpers; ihre Synthese ist iodabhängig. Hypothyreose (Iodmangel, Hashimoto) wird mit L-Thyroxin (T₄) substituiert. Propylthiouracil und Methimazol hemmen TPO und damit die Hormonsynthese (Hyperthyreose-Therapie). Nitroglyzerin (Glycerintrinitrat), das älteste Antiangina-Mittel, wird enzymatisch zu NO metabolisiert — es erweitert Koronargefäße und senkt die kardiale Vorlast durch venöse Dilatation.",
@@ -1117,12 +1137,18 @@ Der Blut-pH des Menschen liegt im Normbereich bei **7,35–7,45**. Eine Abweichu
         "Blut-pH normal: 7,35–7,45. Azidose: < 7,35; Alkalose: > 7,45.",
         "Kw ist temperaturabhängig – bei 37 °C liegt der Neutralpunkt bei pH ≈ 6,8, nicht bei 7,0.",
       ],
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Erläutern Sie die drei historischen Säure-Base-Definitionen (Arrhenius, Brønsted-Lowry, Lewis) und erklären Sie, warum die Lewis-Definition die allgemeinste ist. Geben Sie für jede Definition ein Beispiel.",
-        answer:
-          "Die Arrhenius-Definition (1884) ist die engste: Säuren liefern in Wasser H⁺-Ionen (z. B. HCl → H⁺ + Cl⁻), Basen liefern OH⁻-Ionen (z. B. NaOH → Na⁺ + OH⁻). Diese Definition ist auf wässrige Systeme beschränkt und kann nicht erklären, warum NH₃ basisch reagiert.\n\nBrønsted und Lowry (1923) erweiterten das Konzept auf Protonenübertragungen: Säure = Protonendonor, Base = Protonenakzeptor. Die Definition gilt auch in nicht-wässrigen Medien. Beispiel: NH₃ + H₂O ⇌ NH₄⁺ + OH⁻ – Wasser ist hier die Säure (gibt H⁺ ab), NH₃ die Base (nimmt H⁺ auf). Jede Säure hat eine korrespondierende Base, die aus ihr durch Protonenabgabe entsteht.\n\nLewis (1923) formulierte die allgemeinste Definition über Elektronenpaare: Lewis-Säure = Elektronenpaarakzeptor, Lewis-Base = Elektronenpaardonor. Beispiel: BF₃ (Lewis-Säure, hat leeres Orbital) + NH₃ (Lewis-Base, hat freies Elektronenpaar) → Addukt F₃B←NH₃. Diese Definition umfasst Reaktionen ganz ohne H⁺-Beteiligung, z. B. Metallkomplexe. Alle Brønsted-Säuren sind auch Lewis-Säuren (H⁺ ist ein Elektronenpaarakzeptor), aber nicht alle Lewis-Säuren sind Brønsted-Säuren (BF₃ hat kein abzugebendes Proton).",
+        text: "Was ist eine Brønsted-Base?",
+        options: [
+          { id: "a", text: "Ein Stoff, der OH⁻-Ionen in Wasser freisetzt" },
+          { id: "b", text: "Ein Elektronenpaarakzeptor" },
+          { id: "c", text: "Ein Protonenakzeptor" },
+          { id: "d", text: "Ein Stoff mit pH > 7" },
+          { id: "e", text: "Ein Elektronenpaardonor" },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "Nach Brønsted-Lowry ist eine Base ein Protonenakzeptor (nimmt H⁺ auf). Option A beschreibt die engere Arrhenius-Definition. Option E beschreibt eine Lewis-Base. Die Lewis-Definition ist die allgemeinste (umfasst auch Reaktionen ohne H⁺).",
       },
       klinischerBezug:
         "Der Blut-pH von 7,35–7,45 muss präzise aufrechterhalten werden, da Enzyme und Membranproteine pH-sensitiv sind; bereits pH-Abweichungen von ±0,1 Einheiten können schwerwiegende physiologische Folgen haben. Im Säure-Base-Haushalt des Körpers spielen alle drei Definitionen eine Rolle: Brønsted-Konzept für Puffersysteme (HCO₃⁻/H₂CO₃), Lewis-Konzept für Metallionen-Komplexe (Hämoglobin-Fe²⁺ als Lewis-Säure, das O₂ als Lewis-Base bindet).",
@@ -1279,6 +1305,16 @@ Der Blut-pH des Menschen liegt im Normbereich bei **7,35–7,45**. Eine Abweichu
           ],
           difficulty: 2,
           tags: ["ph-logarithmus", "faktor-10", "konzentration"],
+        },
+        {
+          question:
+            "Welche Aussagen sind richtig?\n\n1. Der pKs-Wert einer Säure ist umso kleiner, je stärker die Säure ist.\n2. In einem korrespondierenden Säure-Base-Paar unterscheiden sich Säure und Base um genau ein Proton.\n3. Das Ionenprodukt des Wassers Kw ist temperaturunabhängig und beträgt immer 10⁻¹⁴ mol²/L².\n4. HCO₃⁻ ist ein Ampholyt, da es sowohl als Säure als auch als Base reagieren kann.\n5. Der pH-Wert einer 0,01 mol/L HCl-Lösung beträgt 2.",
+          options: ["Nur 1 und 3", "Nur 2 und 5", "Nur 1, 2, 4 und 5", "Nur 3, 4 und 5", "Alle"],
+          correctIndex: 2,
+          explanation:
+            "Aussagen 1, 2, 4 und 5 sind korrekt: pKs = −log Ks; je stärker die Säure, desto größer Ks, desto kleiner pKs (1). Korrespondierende Paare unterscheiden sich um H⁺ (2). HCO₃⁻ kann H⁺ abgeben (→ CO₃²⁻) oder aufnehmen (→ H₂CO₃), ist also amphoter (4). HCl ist eine starke Säure: pH = −log(0,01) = 2 (5). Aussage 3 ist falsch — Kw ist temperaturabhängig: Bei 37 °C beträgt Kw ≈ 2,4 × 10⁻¹⁴, bei 25 °C 10⁻¹⁴. Die Autoprotolyse ist endotherm, daher steigt Kw mit der Temperatur.",
+          difficulty: 2,
+          tags: ["typ-k", "ph", "pks"],
         },
       ],
       diagram: "ph-scale",
@@ -1486,12 +1522,18 @@ Die **Magensäure** (HCl, pH ~ 1-2) ist die einzige starke Säure im Körper und
         "H₂CO₃: pKa1 ≈ 6,35; pKa2 ≈ 10,33 – Basis des Blutpuffers.",
         "Am Halbäquivalenzpunkt einer Titration: pH = pKa der schwachen Säure.",
       ],
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Erklären Sie den Begriff der Säurekonstante Ka und des pKa-Werts. Wie berechnet man den pH-Wert einer 0,1 mol/L Essigsäure-Lösung (pKa = 4,75)? Warum unterscheidet sich dieser pH-Wert von dem einer 0,1 mol/L Salzsäure-Lösung?",
-        answer:
-          "Die Säurekonstante Ka beschreibt das Gleichgewicht der Protonenabgabe einer schwachen Säure HA in Wasser: Ka = [H₃O⁺][A⁻]/[HA]. Je größer Ka, desto weiter liegt das Gleichgewicht auf der rechten Seite (stärkere Dissoziation, stärkere Säure). Der pKa = −log Ka ist ein praktischer logarithmischer Maßstab: Kleinerer pKa = stärkere Säure.\n\nFür Essigsäure (pKa = 4,75, Ka ≈ 1,78 × 10⁻⁵):\nMit der Näherungsformel für schwache Säuren: [H₃O⁺] = √(Ka · c₀) = √(1,78 × 10⁻⁵ × 0,1) = √(1,78 × 10⁻⁶) ≈ 1,33 × 10⁻³ mol/L. pH ≈ −log(1,33 × 10⁻³) ≈ 2,87.\n\nFür Salzsäure (starke Säure, vollständige Dissoziation): [H₃O⁺] = c₀ = 0,1 mol/L → pH = 1.\n\nDer Unterschied: Salzsäure dissoziiert vollständig (alle HCl-Moleküle liefern H₃O⁺), Essigsäure nur zu ca. 1,3 % (nur wenige CH₃COOH-Moleküle dissoziieren). Obwohl beide die gleiche Ausgangskonzentration haben, ist der pH der Essigsäure fast 2 Einheiten höher – ein Faktor 100 in der H₃O⁺-Konzentration. Dies verdeutlicht: Konzentration ≠ Säurestärke.",
+        text: "Welchen pH-Wert hat eine 0,1 mol/L Salzsäure-Lösung (starke Säure, vollständige Dissoziation)?",
+        options: [
+          { id: "a", text: "pH = 0" },
+          { id: "b", text: "pH = 1" },
+          { id: "c", text: "pH = 2" },
+          { id: "d", text: "pH = 2,87" },
+          { id: "e", text: "pH = 7" },
+        ],
+        correctOptionId: "b",
+        explanation:
+          "HCl dissoziiert vollständig: [H₃O⁺] = c₀ = 0,1 mol/L. pH = −log(0,1) = 1. Option D (2,87) wäre der pH einer schwachen Säure wie 0,1 mol/L Essigsäure (pKa = 4,75), die nur partiell dissoziiert.",
       },
       klinischerBezug:
         "Im Blut sind fast alle biologisch aktiven Säure-Base-Paare schwache Säuren: CO₂/HCO₃⁻ (pKa ≈ 6,1), H₂PO₄⁻/HPO₄²⁻ (pKa ≈ 7,2) und Histidinreste in Proteinen (pKa ≈ 6). Ihre partiellen Dissoziationsgleichgewichte erlauben das Abpuffern von H⁺-Veränderungen. Starke Säuren wie HCl (Magensäure, pH ≈ 1–2) dissoziieren vollständig und würden ohne Schutzschicht das Gewebe zerstören.",
@@ -1752,12 +1794,18 @@ Bei der **Komproportionierung** reagieren zwei verschiedene Oxidationsstufen des
         "NADH und FADH₂ sind die wichtigsten biologischen Reduktionsmittel (Atmungskette)",
         "Stärkstes Oxidationsmittel: F₂; stärkstes Reduktionsmittel: Li (nach elektrochemischer Spannungsreihe)",
       ],
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Erläutern Sie das Konzept der Oxidationszahlen: Wie werden sie bestimmt, und welche Bedeutung haben sie für das Erkennen von Redox-Reaktionen? Geben Sie zwei Beispiele aus der anorganischen Chemie.",
-        answer:
-          "Oxidationszahlen (OZ) sind formale Ladungen, die Atomen in Verbindungen zugewiesen werden, als wären alle Bindungen vollständig ionisch — auch in kovalenten Molekülen. Sie sind ein Buchführungsinstrument, um Elektronenverschiebungen zu verfolgen, aber keine echten Ladungen. Die Bestimmung folgt einer Prioritätsreihenfolge: (1) Reine Elemente haben OZ = 0; (2) einatomige Ionen haben OZ = Ionenladung; (3) F ist immer −1; (4) O ist meist −2 (Ausnahmen: Peroxide −1, OF₂ +2); (5) H ist meist +1 (Ausnahme: Metallhydride −1); (6) die Summe aller OZ × Atomanzahl ergibt die Gesamtladung. Für das Erkennen von Redox-Reaktionen gilt: Erhöht sich die OZ eines Atoms von Edukt zu Produkt, wurde es oxidiert; sinkt sie, wurde es reduziert. Beispiel 1: In der Reaktion Zn + CuSO₄ → ZnSO₄ + Cu steigt OZ(Zn) von 0 auf +2 (Oxidation) und sinkt OZ(Cu) von +2 auf 0 (Reduktion) — eine klassische Galvanische Reaktion. Beispiel 2: In KMnO₄ hat Mn OZ = +7; in MnSO₄ (saures Medium) hat Mn OZ = +2 — eine Reduktion um 5 Einheiten, also 5 Elektronen pro Mn aufgenommen. Anhand der OZ-Änderungen lässt sich sofort ablesen, welches Teilchen oxidiert und welches reduziert wird, und wie viele Elektronen übertragen werden — Grundlage für die stöchiometrische Auswertung von Redox-Titrationen.",
+        text: "Welche Oxidationszahl hat Mangan in KMnO₄?",
+        options: [
+          { id: "a", text: "+2" },
+          { id: "b", text: "+4" },
+          { id: "c", text: "+5" },
+          { id: "d", text: "+6" },
+          { id: "e", text: "+7" },
+        ],
+        correctOptionId: "e",
+        explanation:
+          "In KMnO₄: K hat +1, jedes O hat −2 (4 × −2 = −8). Gesamtladung = 0, also +1 + x + (−8) = 0 → x = +7. In saurer Lösung wird Mn von +7 auf +2 reduziert (5 Elektronen aufgenommen).",
       },
       klinischerBezug:
         "Redox-Reaktionen sind die Grundlage der zellulären Energiegewinnung: In der mitochondrialen Atmungskette werden Elektronen von NADH und FADH₂ schrittweise auf O₂ übertragen, wobei ein Protonengradient für die ATP-Synthese aufgebaut wird. Die unkontrollierte Oxidation körpereigener Moleküle durch reaktive Sauerstoffspezies (ROS) führt zu oxidativem Stress, der mit Arteriosklerose, Krebs und Neurodegeneration assoziiert ist. Antioxidantien wie Vitamin C (Ascorbinsäure) und Vitamin E wirken als Reduktionsmittel und neutralisieren ROS durch Elektronenabgabe.",
@@ -2110,12 +2158,18 @@ Alle elektrochemischen Systeme basieren auf demselben Prinzip: Elektronentransfe
         "Brennstoffzelle: H₂ + ½O₂ → H₂O, direkter Energiegewinn ohne Verbrennung",
         "Blei-Akkumulator: Pb/PbO₂ in H₂SO₄, E°Zelle ≈ 2 V pro Zelle (6 V = 3 Zellen in Serie)",
       ],
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Beschreiben Sie Aufbau und Funktionsweise eines Daniell-Elements. Wie wird die Zellspannung berechnet, und wie hängt sie mit der freien Enthalpie zusammen?",
-        answer:
-          "Das Daniell-Element ist eine galvanische Zelle bestehend aus zwei Halbzellen: einer Zinkelektrode in ZnSO₄-Lösung (Anode) und einer Kupferelektrode in CuSO₄-Lösung (Kathode), verbunden durch eine Salzbrücke (z. B. KCl-Lösung in Agar-Gel). An der Anode wird Zink oxidiert: Zn → Zn²⁺ + 2e⁻ (E° = −0,76 V). An der Kathode wird Kupfer reduziert: Cu²⁺ + 2e⁻ → Cu (E° = +0,34 V). Elektronen fließen im äußeren Stromkreis von der Zink-Anode zur Kupfer-Kathode. Die Salzbrücke gleicht die entstehenden Ladungsunterschiede aus: Anionen wandern zur Anode, Kationen zur Kathode. Die Standardzellspannung berechnet sich als E°Zelle = E°Kathode − E°Anode = 0,34 − (−0,76) = +1,10 V. Der positive Wert bestätigt die Spontanität. Der Zusammenhang zur freien Enthalpie lautet: ΔG° = −n · F · E°Zelle. Mit n = 2 (zwei Elektronen) und F = 96485 C/mol ergibt sich ΔG° = −2 × 96485 × 1,10 = −212268 J/mol ≈ −212 kJ/mol. Der negative ΔG°-Wert bestätigt, dass die Reaktion spontan und exergon ist. Je größer E°Zelle, desto mehr elektrische Arbeit kann gewonnen werden.",
+        text: "Wie berechnet sich die Standardzellspannung E° eines Daniell-Elements (Zn/Cu)?",
+        options: [
+          { id: "a", text: "E° = E°(Anode) + E°(Kathode) = −0,76 + 0,34 = −0,42 V" },
+          { id: "b", text: "E° = E°(Kathode) − E°(Anode) = 0,34 − (−0,76) = +1,10 V" },
+          { id: "c", text: "E° = E°(Anode) − E°(Kathode) = −0,76 − 0,34 = −1,10 V" },
+          { id: "d", text: "E° = E°(Kathode) × E°(Anode) = 0,34 × (−0,76) = −0,26 V" },
+          { id: "e", text: "E° = |E°(Anode)| + |E°(Kathode)| = 0,76 + 0,34 = +1,10 V" },
+        ],
+        correctOptionId: "b",
+        explanation:
+          "E°(Zelle) = E°(Kathode) − E°(Anode) = 0,34 V − (−0,76 V) = +1,10 V. Ein positiver Wert bedeutet spontane Reaktion. Die Formel ΔG° = −nFE° verknüpft Zellspannung mit freier Enthalpie.",
       },
       klinischerBezug:
         "Herzschrittmacher und implantierbare Defibrillatoren nutzen Lithium-Iodid-Primärbatterien (Lebensdauer 5–10 Jahre) oder Lithium-Ionen-Akkus, deren elektrochemische Stabilität und hohe Energiedichte lebenserhaltend sind. Die elektrochemische Grundlage von Membranpotenzialem in Nervenzellen (Na⁺/K⁺-Gradient) folgt denselben thermodynamischen Prinzipien wie galvanische Zellen — die Nernst-Gleichung beschreibt beide. In der klinischen Diagnostik wird die Blutgas-Analyse mit potentiometrischen pH- und pO₂-Elektroden durchgeführt, die auf Standardelektrodenpotenzial-Prinzipien basieren.",

@@ -11,6 +11,9 @@ export const mathKapZahlen: Kapitel = {
     {
       id: "ma-1-01",
       title: "Zehnerpotenzen — Schreibweise und Rechenregeln",
+      imageUrl: "/images/bms/bio-erythrozyten.jpg",
+      imageCaption:
+        "Abb.: Erythrozyten unter dem Mikroskop — Durchmesser ca. 7 µm (OpenStax, CC BY 4.0)",
       stichworte: [
         "Zehnerpotenzen",
         "Exponenten",
@@ -183,19 +186,18 @@ Ein Virus (10⁻⁷ m) ist etwa **10-mal** kleiner als eine Bakterienzelle (10�
         "Normalisierte Form: Vorfaktor zwischen 1 (inklusiv) und 10 (exklusiv), z. B. 1,2 × 10³.",
         "Im Blut: ~5 × 10¹² Erythrozyten/L — ohne Zehnerpotenzen nicht handhabbar.",
       ],
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Erklären Sie, warum Zehnerpotenzen in der Medizin unverzichtbar sind, und beschreiben Sie an drei konkreten medizinischen Beispielen, wie Größenordnungen durch die Exponenten verglichen werden.",
-        answer: `Zehnerpotenzen sind in der Medizin unverzichtbar, weil biologische und chemische Größen über einen Bereich von mehr als 30 Größenordnungen variieren — von subatomaren Abständen (10⁻¹⁵ m, Atomkernradius) bis zu makroskopischen Maßstäben. Ohne eine kompakte Exponentialschreibweise würden Zahlen mit Dutzenden von Nullen die Kommunikation und Berechnung unmöglich machen.
-
-**Beispiel 1 — Ionenkonzentrationen:** Im Blutplasma beträgt die Natriumkonzentration ca. 140 × 10⁻³ mol/L = 1,4 × 10⁻¹ mol/L, während die Calciumkonzentration bei etwa 2,5 × 10⁻³ mol/L liegt. Das Verhältnis Na⁺ zu Ca²⁺ ergibt sich durch Subtraktion der Exponenten: (−1) − (−3) = 2, also Faktor 10² = 56. Klinisch bedeutsam ist, dass selbst kleine Verschiebungen in diesen Konzentrationen (z. B. Hypokalkämie: Ca²⁺ < 2 × 10⁻³ mol/L) zu Tetanie oder kardialen Arrhythmien führen.
-
-**Beispiel 2 — Pharmakologie:** Die therapeutische Konzentration von Digoxin im Serum liegt bei 0,5–2 × 10⁻⁹ g/mL (Nanogrammbereich). Die toxische Konzentration beginnt bei >2 × 10⁻⁹ g/mL. Das therapeutische Fenster ist also extrem schmal — ein Faktor von ca. 4. Das erklärt, warum Digoxin engmaschiges Monitoring erfordert.
-
-**Beispiel 3 — Zellbiologie:** Menschliche Zellen haben einen Durchmesser von ca. 10–100 µm = 10⁻⁵ bis 10⁻⁴ m. Viren messen ca. 20–300 nm = 2 × 10⁻⁸ bis 3 × 10⁻⁷ m. Das Verhältnis Zelle zu Virus beträgt 10⁻⁵ / 10⁻⁷ = 10² = Faktor 100 — eine Zelle ist mindestens 100-mal größer als ein typisches Virus. Dieses Verhältnis erklärt, warum Viren problemlos in Zellen eindringen und sich dort vervielfältigen können.
-
-Zusammenfassend ermöglichen Zehnerpotenzen das schnelle Abschätzen von Verhältnissen durch bloße Subtraktion der Exponenten, was in der klinischen Entscheidungsfindung und im wissenschaftlichen Denken unverzichtbar ist.`,
+        text: "Welches Ergebnis liefert die Berechnung 10⁵ × 10⁻³?",
+        options: [
+          { id: "a", text: "10²" },
+          { id: "b", text: "10⁸" },
+          { id: "c", text: "10⁻¹⁵" },
+          { id: "d", text: "10¹⁵" },
+          { id: "e", text: "10⁻²" },
+        ],
+        correctOptionId: "a",
+        explanation:
+          "Bei Multiplikation gleicher Basis werden die Exponenten addiert: 10⁵ × 10⁻³ = 10^(5+(−3)) = 10². Häufiger Fehler: Exponenten multiplizieren (5 × (−3) = −15) statt addieren.",
       },
       klinischerBezug:
         "Medikamentendosen werden oft im Nanogramm- (10⁻⁹ g) oder Mikrogrammbereich (10⁻⁶ g) angegeben; eine Verwechslung der Exponenten um nur eine Stelle entspricht einem Zehnfachfehler in der Dosis — klinisch potentiell letal. Der pH-Wert des Blutes (7,35–7,45) basiert auf dem negativen dekadischen Logarithmus der H⁺-Konzentration: Ein pH-Abfall von 7,4 auf 6,4 entspricht einer zehnfachen Zunahme der H⁺-Ionen-Konzentration (von ~40 × 10⁻⁹ mol/L auf ~400 × 10⁻⁹ mol/L).",
@@ -325,11 +327,24 @@ Zusammenfassend ermöglichen Zehnerpotenzen das schnelle Abschätzen von Verhäl
           difficulty: 2,
           tags: ["größenordnung", "mikroskop", "zehnerpotenz"],
         },
+        {
+          question:
+            "Welche Aussagen über SI-Präfixe und Zehnerpotenzen sind richtig?\n\n1. Milli (m) entspricht 10⁻³.\n2. Mega (M) entspricht 10⁹.\n3. 10⁴ × 10⁻² = 10².\n4. Nano (n) liegt drei Stufen unter Milli.\n5. 10⁰ = 1 gilt für jede Basis außer 0.",
+          options: ["Nur 1 und 3", "Nur 2 und 4", "Nur 1, 3 und 5", "Nur 2, 3 und 4", "Alle"],
+          correctIndex: 2,
+          explanation:
+            "Aussagen 1, 3 und 5 sind korrekt. Aussage 1: Milli = 10⁻³ ✓. Aussage 2 ist falsch: Mega = 10⁶, nicht 10⁹ (das wäre Giga). Aussage 3: Bei Multiplikation gleicher Basis werden Exponenten addiert: 10⁴ × 10⁻² = 10^(4−2) = 10² ✓. Aussage 4 ist falsch: Nano = 10⁻⁹ liegt drei Stufen unter der Basiseinheit (10⁰), nicht unter Milli — von Milli (10⁻³) zu Nano (10⁻⁹) sind es zwei Stufen (Milli → Mikro → Nano). Aussage 5: a⁰ = 1 für alle a ≠ 0 ✓.",
+          difficulty: 2,
+          tags: ["typ-k", "si-praefixe", "zehnerpotenzen"],
+        },
       ],
     },
     {
       id: "ma-1-02",
       title: "SI-Präfixe von Femto bis Tera",
+      imageUrl: "/images/bms/ch-loesungen.jpg",
+      imageCaption:
+        "Abb.: Konzentrationsangaben in mmol/L und µmol/L — SI-Präfixe im Laboralltag (OpenStax, CC BY 4.0)",
       stichworte: [
         "SI-Präfixe",
         "Milli",
@@ -528,21 +543,18 @@ Lösung: 0,01 µg/mL = 10 ng/mL (da 1 µg = 1.000 ng → 0,01 × 1.000 = 10). Al
         "Steroidhormone im Nanomol-Bereich (nmol/L); Peptidhormone oft im Picomol-Bereich (pmol/L).",
         "Radioaktivität: MBq (Megabecquerel = 10⁶ Zerfälle/s) in der Nuklearmedizin.",
       ],
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Erläutern Sie das System der SI-Präfixe und erklären Sie anhand von vier medizinischen Beispielen, warum die korrekte Verwendung von Präfixen in der klinischen Praxis eine Patientensicherheitsfrage ist.",
-        answer: `Das System der SI-Präfixe ist eine standardisierte, international verbindliche Erweiterung des metrischen Einheitensystems. Präfixe werden der jeweiligen Basiseinheit (g, m, L, mol, s) vorangestellt und stehen für Zehnerpotenzen in Dreierschritten (10³). Von klein nach groß: Femto (10⁻¹⁵), Piko (10⁻¹²), Nano (10⁻⁹), Mikro (10⁻⁶), Milli (10⁻³), Basis (10⁰), Kilo (10³), Mega (10⁶), Giga (10⁹), Tera (10¹²). Die Dreierstruktur erlaubt Umrechnungen durch einfache Multiplikation oder Division mit 1.000.
-
-**Beispiel 1 — Opioid-Analgetika:** Fentanyl wird in µg/kg dosiert (z. B. 1–2 µg/kg i.v. zur Anästhesie), Morphin hingegen in mg/kg (0,05–0,1 mg/kg). Eine Verwechslung von µg und mg bei Fentanyl (Faktor 1.000) würde bei einem 70-kg-Patienten aus einer korrekten Dosis von 100 µg eine versehentliche Dosis von 100 mg machen — eine Dosis, die akut atemlähmend und letal ist. Fentanyl-Überdosierungen durch Dosierungseinheitenfehler sind in der Literatur dokumentiert.
-
-**Beispiel 2 — Schilddrüsenhormone:** L-Thyroxin (T4) wird in µg dosiert, typischerweise 25–200 µg/Tag. Ältere Beipackzettel listeten manchmal mg-Dosierungen (0,025–0,2 mg), was rechnerisch identisch ist, aber bei flüchtigem Lesen zu Verwechslungen führte. Heute ist die µg-Angabe Standard. Eine 1.000-fache Überdosierung würde eine thyreotoxische Krise auslösen.
-
-**Beispiel 3 — Elektrolytkonzentrationen:** Kalium (K⁺) im Serum hat einen Normwert von 3,5–5,0 mmol/L. Hyperkaliämie (>6,5 mmol/L) kann Kammerflimmern auslösen. Eine gedankliche Verwechslung mit mol/L (Faktor 1.000 größer) oder µmol/L (Faktor 1.000 kleiner) würde falsche klinische Schlüsse ziehen — z. B. eine lebensbedrohliche Hyperkaliämie übersehen.
-
-**Beispiel 4 — MCV (Mean Corpuscular Volume):** Das mittlere Erythrozytenvolumen wird in Femtoliter (fL = 10⁻¹⁵ L) angegeben, Normwert 80–96 fL. Bei makrozytärer Anämie (z. B. Vitamin-B12-Mangel) steigt es auf >100 fL, bei mikrozytärer Anämie (z. B. Eisenmangel) sinkt es auf <80 fL. Das Femtoliter als Einheit zeigt, wie winzig einzelne Zellen sind — und dass selbst im klinischen Alltag 10⁻¹⁵-Größen vorkommen.
-
-Patientensicherheit: Die WHO und die Joint Commission listen "dangerous abbreviations and dose designations" explizit auf. Das µ-Zeichen für Mikro wird handschriftlich oft als m (Milli) gelesen. Deshalb empfehlen Sicherheitsorganisationen "mcg" statt "µg". Das korrekte Verständnis und die sorgfältige Kommunikation von Präfixen ist eine direkte Patientenschutzmaßnahme.`,
+        text: "Wie viele Mikrogramm (µg) entsprechen 0,25 mg?",
+        options: [
+          { id: "a", text: "0,25 µg" },
+          { id: "b", text: "2,5 µg" },
+          { id: "c", text: "25 µg" },
+          { id: "d", text: "250 µg" },
+          { id: "e", text: "2500 µg" },
+        ],
+        correctOptionId: "d",
+        explanation:
+          "1 mg = 1000 µg, also 0,25 mg = 0,25 × 1000 = 250 µg. SI-Präfixe unterscheiden sich jeweils um den Faktor 1000 (Milli → Mikro). Eine Verwechslung um eine Präfixstufe bedeutet einen 1000-fachen Dosierungsfehler.",
       },
       klinischerBezug:
         "Laborwerte für Steroidhormone (Testosteron: nmol/L), Peptidhormone (Insulin: pmol/L) und Vitamine (Vitamin D: nmol/L) verwenden unterschiedliche Präfixe — ein direkter Vergleich von Konzentrationen verschiedener Substanzen erfordert deshalb stets die Umrechnung auf eine gemeinsame Zehnerpotenz. Medikamentenverwechslungen zwischen mg und µg sind unter den häufigsten schwerwiegenden Medikationsfehlern in Krankenhäusern; internationale Patientensicherheitsinitiativen listen die korrekte Präfixverwendung ausdrücklich als Sicherheitsmaßnahme.",
@@ -683,6 +695,9 @@ Patientensicherheit: Die WHO und die Joint Commission listen "dangerous abbrevia
     {
       id: "ma-1-03",
       title: "Wissenschaftliche Notation — Umrechnen und Rechnen",
+      imageUrl: "/images/bms/bio-dna-nukleotide.jpg",
+      imageCaption:
+        "Abb.: DNA-Moleküle — Avogadro-Zahl 6,022 × 10²³ als Beispiel wissenschaftlicher Notation (OpenStax, CC BY 4.0)",
       stichworte: [
         "Wissenschaftliche Notation",
         "Exponentialschreibweise",
@@ -874,26 +889,18 @@ Der dekadische Logarithmus (log₁₀) ist die Umkehrfunktion der Zehnerpotenz �
         "Eine pH-Einheit Unterschied = zehnfacher Unterschied in der H⁺-Konzentration.",
         "Avogadro: 6,022 × 10²³ Teilchen pro Mol — die Brücke von Mol zu Teilchenzahl.",
       ],
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Erklären Sie das Konzept der wissenschaftlichen Notation und demonstrieren Sie an einem medizinischen Rechenbeispiel die vollständige Durchführung einer Multiplikation sowie einer Addition in dieser Notation. Erläutern Sie außerdem, warum der pH-Wert als Logarithmus definiert ist.",
-        answer: `Die wissenschaftliche Notation ist eine Standarddarstellung von Zahlen als Produkt a × 10ⁿ, wobei der Vorfaktor a im Bereich 1 ≤ a < 10 liegt und n eine ganze Zahl ist. Diese Notation hat zwei Vorteile: (1) Sie komprimiert beliebig große oder kleine Zahlen auf eine handhabbare Form; (2) Sie macht die Größenordnung einer Zahl sofort ablesbar — der Exponent n gibt die Größenordnung direkt an.
-
-**Umrechnung:** Große Zahlen (> 10) erhalten positive Exponenten, weil das Komma nach links wandert: 45.000 = 4,5 × 10⁴ (4 Stellen nach links). Kleine Zahlen (< 1) erhalten negative Exponenten, weil das Komma nach rechts wandert: 0,0032 = 3,2 × 10⁻³ (3 Stellen nach rechts).
-
-**Medizinisches Rechenbeispiel — Multiplikation:** Eine Infusion enthält Dopamin in einer Konzentration von 3,2 × 10⁻³ g/mL. Bei einer Infusionsrate von 2,5 × 10¹ mL/h, wie viel Gramm Dopamin erhält der Patient pro Stunde?
-Masse/h = (3,2 × 10⁻³ g/mL) × (2,5 × 10¹ mL/h)
-Vorfaktoren: 3,2 × 2,5 = 8,0
-Exponenten: (−3) + 1 = −2
-Ergebnis: 8,0 × 10⁻² g/h = 0,08 g/h = 80 mg/h.
-
-**Medizinisches Rechenbeispiel — Addition:** Das Gesamthämoglobin eines Patienten setzt sich aus HbA₁ (3,8 × 10⁻² mol/L) und HbA₂ (9,0 × 10⁻⁴ mol/L) zusammen. Gesamthämoglobin?
-Angleichen: 3,8 × 10⁻² + 0,09 × 10⁻² = 3,89 × 10⁻² mol/L ≈ 3,9 × 10⁻² mol/L.
-
-**Warum pH als Logarithmus?** Die H⁺-Konzentration in biologischen Flüssigkeiten variiert von pH 1 (Magensäure: [H⁺] = 10⁻¹ mol/L) bis pH 8 (Bauchspeichel: [H⁺] = 10⁻⁸ mol/L) — ein Bereich von 7 Größenordnungen (Faktor 10⁷ = 10.000.000). Eine lineare Skala wäre für diese Variationsbreite unhandlich. Der Logarithmus komprimiert diesen riesigen Bereich auf die Skala 0–14.
-
-Klinisch bedeutsam: Der arteriell gemessene pH liegt im Blut strikt bei 7,35–7,45. Eine Abweichung von nur 0,1 pH-Einheiten bedeutet eine 26 %ige Änderung der H⁺-Konzentration (da 10⁰˒¹ ≈ 1,26). Bei pH 6,8 — nur 0,6 Einheiten unter dem Normwert — ist die H⁺-Konzentration bereits 4-fach erhöht; dies ist mit dem Leben kaum vereinbar. Der Logarithmus macht diese feine, aber vitale Regulation numerisch greifbar.`,
+        text: "Welches Ergebnis liefert (2,0 × 10⁻³) × (4,0 × 10²)?",
+        options: [
+          { id: "a", text: "8,0 × 10⁻⁶" },
+          { id: "b", text: "8,0 × 10⁻¹" },
+          { id: "c", text: "8,0 × 10⁵" },
+          { id: "d", text: "6,0 × 10⁻¹" },
+          { id: "e", text: "8,0 × 10¹" },
+        ],
+        correctOptionId: "b",
+        explanation:
+          "Vorfaktoren multiplizieren: 2,0 × 4,0 = 8,0. Exponenten addieren: (−3) + 2 = −1. Ergebnis: 8,0 × 10⁻¹ = 0,8. Typischer Rechenfehler: Exponenten multiplizieren statt addieren.",
       },
       klinischerBezug:
         "Der pH-Wert des arteriellen Blutes (Normwert 7,35–7,45) ist ein negativer Logarithmus der H⁺-Konzentration; eine Abweichung um 0,3 pH-Einheiten entspricht einer Verdoppelung bzw. Halbierung der H⁺-Konzentration — klinisch der Unterschied zwischen kompensierter Azidose und lebensbedrohlichem Ungleichgewicht. Pharmakokinetische Berechnungen (Serumhalbwertszeit, Clearance, Bioverfügbarkeit) verwenden durchgehend die wissenschaftliche Notation, da Plasmawirkstoffkonzentrationen von 10⁻⁹ bis 10⁻⁴ mol/L reichen und ohne Exponentialschreibweise nicht handhabbar wären.",
@@ -1040,6 +1047,9 @@ Klinisch bedeutsam: Der arteriell gemessene pH liegt im Blut strikt bei 7,35–7
     {
       id: "ma-4-01",
       title: "Länge, Fläche und Volumen — Umrechnung",
+      imageUrl: "/images/bms/bio-niere.jpg",
+      imageCaption:
+        "Abb.: Organvolumen und Flächenberechnung in der medizinischen Diagnostik (OpenStax, CC BY 4.0)",
       stichworte: [
         "Längeneinheiten",
         "Flächeneinheiten",
@@ -1226,12 +1236,18 @@ Lösung: 1 dL = 100 mL = 0,1 L → 1 L = 10 dL → 14 g/dL × 10 = 140 g/L. Dies
         "Körperoberfläche Erwachsener: ~1,73 m² (Mosteller-Formel)",
         "1 mm² = 10⁶ μm² (NICHT 10³ — Faktor quadrieren!)",
       ],
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Eine quadratische Wundfläche hat eine Kantenlänge von 3 cm. Berechnen Sie die Wundfläche in mm². Erklären Sie das Prinzip der Flächenumrechnung und nennen Sie ein klinisches Beispiel, bei dem Flächenberechnungen relevant sind.",
-        answer:
-          "Berechnung: Schritt 1: Fläche in cm²: A = 3 cm × 3 cm = 9 cm². Schritt 2: Umrechnung cm² → mm²: Da 1 cm = 10 mm, gilt für Flächen 1 cm² = (10 mm)² = 100 mm² — der Faktor wird quadriert! Daher: 9 cm² × 100 mm²/cm² = 900 mm². Alternativ direkt in mm rechnen: 3 cm = 30 mm → A = 30 mm × 30 mm = 900 mm². Ergebnis: 900 mm². Prinzip: Bei Flächenumrechnungen wird der Längenfaktor quadriert (k → k²). Klinisches Beispiel: In der Verbrennungsmedizin wird die verbrannte Körperoberfläche (KOF) nach der Neuner-Regel geschätzt. Ab 15–20 % verbrannter KOF droht hypovolämischer Schock durch Plasmaverlust. Volumentherapie nach Parkland-Formel: 4 mL × kg Körpergewicht × % verbrannte KOF in den ersten 24 Stunden. Bei 70 kg und 20 % verbrannter KOF: 4 × 70 × 20 = 5.600 mL in 24 h. Die KOF-Berechnung nach Mosteller: BSA = √(Größe[cm] × Gewicht[kg] / 3.600) liefert die absolute Fläche in m² für präzise Dosierungen.",
+        text: "Eine quadratische Wundfläche hat eine Kantenlänge von 3 cm. Wie groß ist die Fläche in mm²?",
+        options: [
+          { id: "a", text: "30 mm²" },
+          { id: "b", text: "90 mm²" },
+          { id: "c", text: "300 mm²" },
+          { id: "d", text: "900 mm²" },
+          { id: "e", text: "9000 mm²" },
+        ],
+        correctOptionId: "d",
+        explanation:
+          "3 cm = 30 mm. Fläche = 30 mm × 30 mm = 900 mm². Alternativ: 9 cm² × 100 mm²/cm² = 900 mm². Bei Flächenumrechnungen wird der Längenfaktor quadriert (10² = 100).",
       },
       klinischerBezug:
         "In der Onkologie wird die Körperoberfläche (BSA) für Chemotherapiedosierungen genutzt: Dosierung [mg] = Dosis [mg/m²] × BSA [m²]. Die Darmoberfläche von ~250 m² ermöglicht die Resorption von täglich ~8–9 L Flüssigkeit; bei Resektion großer Dünndarmanteile (Kurzdarmsyndrom) ist die verbleibende Resorptionsfläche direkt lebensrelevant. Die Alveolenfläche von ~70–140 m² erlaubt Gasaustausch von 250 mL O₂/min in Ruhe und bis 3.500 mL O₂/min bei Maximalbelastung — dies erklärt, warum schon kleine Atelektasen (kollabierte Bezirke) messbare Oxygenierungsstörungen verursachen.",
@@ -1334,6 +1350,8 @@ Lösung: 1 dL = 100 mL = 0,1 L → 1 L = 10 dL → 14 g/dL × 10 = 140 g/L. Dies
     {
       id: "ma-4-02",
       title: "Zeit, Geschwindigkeit, Beschleunigung",
+      imageUrl: "/images/bms/bio-herz-kreislauf.jpg",
+      imageCaption: "Abb.: Blutflussgeschwindigkeit im Kreislaufsystem (OpenStax, CC BY 4.0)",
       stichworte: [
         "Zeiteinheiten",
         "Geschwindigkeit",
@@ -1513,12 +1531,18 @@ Lösung: v = √(2 × g × h) = √(2 × 10 × 3) = √60 ≈ 7,7 m/s = 7,7 × 3
         "NLG A-alpha ~70 m/s; C-Fasern ~1 m/s; erster Schmerz schnell, Dauerschmerz langsam",
         "Gleichmäßig beschleunigt: 3 Formeln — v = v₀+at; s = v₀t+½at²; v² = v₀²+2as",
       ],
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Ein Rettungswagen fährt mit 90 km/h zu einem Notfallpatienten 3 km entfernt. Wie viele Sekunden braucht er? Erklären Sie außerdem, warum die Nervenleitgeschwindigkeit klinisch wichtig ist, und nennen Sie zwei Fasertypen mit unterschiedlichen Leitgeschwindigkeiten.",
-        answer:
-          "Berechnung: Umrechnung: 90 km/h = 90/3,6 = 25 m/s. Weg s = 3 km = 3.000 m. Zeit: t = s/v = 3.000 m / 25 m/s = 120 s = 2 Minuten. Der Rettungswagen braucht exakt 2 Minuten. Nervenleitgeschwindigkeit (NLG): Die NLG gibt an, wie schnell ein Aktionspotenzial eine Nervenfaser entlangläuft. Sie hängt vom Myelinisierungsgrad und dem Faserdurchmesser ab: myelinisierte Fasern leiten durch saltatorische Erregungsleitung (Sprünge zwischen Ranvier-Schnürringen) wesentlich schneller als unmyelinisierte. Klinische Bedeutung: Die NLG-Messung (Elektroneurographie) unterscheidet demyelinisierende Neuropathien (verlangsamte NLG, z.B. Guillain-Barré-Syndrom — autoimmune Demyelinisierung, NLG teils unter 20 m/s) von axonalen Neuropathien (reduzierte Amplitude, normale NLG, z.B. toxische Neuropathie). Zwei Fasertypen: (1) A-alpha-Fasern (motorisch, stark myelinisiert): 60–80 m/s — schnelle Muskelsteuerung und Propriozeption. (2) C-Fasern (Schmerz, vegetativ, unmyelinisiert): 0,5–2 m/s — langsamer, dumpfer Dauerschmerz. Der 40-fache Geschwindigkeitsunterschied erklärt das zeitliche Muster der Schmerzwahrnehmung nach einer Verletzung: zuerst scharfer Sofortschmerz über A-delta, dann anhaltender Dauerschmerz über C-Fasern.",
+        text: "Ein Rettungswagen fährt mit 90 km/h zu einem 3 km entfernten Einsatzort. Wie lange braucht er?",
+        options: [
+          { id: "a", text: "1 min" },
+          { id: "b", text: "2 min" },
+          { id: "c", text: "3 min" },
+          { id: "d", text: "5 min" },
+          { id: "e", text: "20 s" },
+        ],
+        correctOptionId: "b",
+        explanation:
+          "90 km/h = 90/3,6 = 25 m/s. Weg = 3000 m. Zeit t = s/v = 3000/25 = 120 s = 2 min. Alternativ: 90 km in 60 min, also 3 km in 60 × 3/90 = 2 min.",
       },
       klinischerBezug:
         "Die Nervenleitgeschwindigkeit (NLG) ist eine zentrale diagnostische Größe in der Neurologie. Bei der diabetischen Polyneuropathie kommt es zu Demyelinisierung und axonaler Degeneration — messbar als Verlangsamung der NLG unter 40 m/s. In der Notfallmedizin hilft das Verständnis der Kinematik, Verletzungsmuster vorherzusagen: Ein Sturz aus 5 m Höhe erzeugt eine Aufprallgeschwindigkeit von ~10 m/s = 36 km/h, ausreichend für Wirbelsäulen- und Organverletzungen. Kinetische Energie E = ½mv² steigt quadratisch mit der Geschwindigkeit — Verdopplung der Geschwindigkeit bedeutet vierfache Energie und vierfaches Verletzungsrisiko.",
@@ -1624,11 +1648,29 @@ Lösung: v = √(2 × g × h) = √(2 × 10 × 3) = √60 ≈ 7,7 m/s = 7,7 × 3
           difficulty: 2,
           tags: ["nervenleitgeschwindigkeit", "neurologie", "zeiteinheiten"],
         },
+        {
+          question: "Welche Aussage über Längen-, Flächen- und Volumeneinheiten ist FALSCH?",
+          options: [
+            "1 m² = 100 cm²",
+            "1 mL = 1 cm³",
+            "1 dm³ = 1 L",
+            "1 m³ = 1.000.000 cm³",
+            "1 cm = 10 mm",
+          ],
+          correctIndex: 0,
+          explanation:
+            "Aussage A ist falsch: 1 m = 100 cm, daher 1 m² = (100 cm)² = 10.000 cm², nicht 100 cm². Bei Flächeneinheiten muss der Umrechnungsfaktor quadriert werden — das Vergessen dieser Quadrierung ist der häufigste MedAT-Fehler bei Einheitenumrechnungen. Alle anderen Aussagen sind korrekt: 1 mL = 1 cm³ (Definition), 1 dm³ = 1 L (Definition), 1 m³ = 10⁶ cm³ (Faktor kubiert: 100³), 1 cm = 10 mm.",
+          difficulty: 2,
+          tags: ["falsch-aussage", "einheiten", "flaechenumrechnung"],
+        },
       ],
     },
     {
       id: "ma-4-03",
       title: "SI-System — Grundeinheiten und abgeleitete Größen",
+      imageUrl: "/images/bms/ch-periodensystem.jpg",
+      imageCaption:
+        "Abb.: Das Periodensystem — Grundlage für SI-Einheiten und Stoffmengen (OpenStax, CC BY 4.0)",
       stichworte: [
         "SI-Grundeinheiten",
         "Meter",
@@ -1796,12 +1838,18 @@ Lösung: 100 mg/dL = 1.000 mg/L = 1 g/L. Molarität = 1 g/L ÷ 180 g/mol = 0,005
         "Herzleistung Ruhe: ~1 W (linkes Herz); Grundumsatz Mensch: ~80–100 W",
         "1 Gy = 1 J/kg (Strahlendosis); 1 Sv = 1 J/kg × Wichtungsfaktor",
       ],
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Ein Patient hat einen systolischen Blutdruck von 160 mmHg. Drücken Sie diesen Wert in Pascal aus und berechnen Sie die Herzleistung (Watt) des linken Herzens, wenn HZV = 5 L/min und MAP = 110 mmHg. Kommentieren Sie klinisch. (1 mmHg = 133 Pa)",
-        answer:
-          "Teil 1: Systolischer Blutdruck in Pascal: 160 mmHg × 133 Pa/mmHg = 21.280 Pa ≈ 21,3 kPa. Normwert: <120 mmHg = <15.960 Pa. 160 mmHg entspricht arteriellem Hypertonus Grad II (ESC-Leitlinie: Grad I 140–159; Grad II 160–179; Grad III ≥180 mmHg). Teil 2: Herzleistungsberechnung: MAP = 110 mmHg × 133 Pa/mmHg = 14.630 Pa. HZV = 5 L/min = 5.000 mL/min = 5 × 10⁻³ m³ / 60 s = 8,33 × 10⁻⁵ m³/s. Herzleistung P = MAP × HZV = 14.630 Pa × 8,33 × 10⁻⁵ m³/s = 1,22 W. Dimensionskontrolle: [Pa] × [m³/s] = [N/m²] × [m³/s] = [N×m/s] = [J/s] = [W] ✓. Klinischer Kommentar: ~1,2 W für das linke Herz entspricht ~20 % mehr als beim Normotonus (MAP ~100 mmHg → ~1,0 W). Chronische Hypertonie erhöht dauerhaft die kardiale Nachlast (Afterload). Über Jahre führt dies zu linksventrikulärer Hypertrophie (LVH, Wand >1,2 cm) und schließlich diastolischer Herzinsuffizienz. Echokardiographisch: verdickte Wand, eingeschränktes E/A-Verhältnis. Therapie: ACE-Hemmer/ARB, Kalziumantagonisten, Diuretika gemäß ESC-Leitlinien.",
+        text: "Ein Blutdruck von 120 mmHg soll in Pascal umgerechnet werden. Welches Ergebnis ist korrekt? (1 mmHg = 133 Pa)",
+        options: [
+          { id: "a", text: "1596 Pa" },
+          { id: "b", text: "15.960 Pa" },
+          { id: "c", text: "159.600 Pa" },
+          { id: "d", text: "1,33 Pa" },
+          { id: "e", text: "0,9 Pa" },
+        ],
+        correctOptionId: "b",
+        explanation:
+          "120 mmHg × 133 Pa/mmHg = 15.960 Pa = 15,96 kPa. Die Umrechnung ist eine einfache Multiplikation. Merke: 1 atm = 760 mmHg = 101.325 Pa.",
       },
       klinischerBezug:
         "Die Herzarbeit (Joule) und Herzleistung (Watt) sind physikalische Maße der Pumpfunktion. In 70 Lebensjahren bei 70 Schlägen/min und Herzschlagvolumen 70 mL leistet das Herz eine Gesamtarbeit von ~3 × 10⁹ J. Strahlenschutz: Die Äquivalentdosis in Sievert (Sv) gibt die biologische Strahlenwirkung an. Ein Röntgen-Thorax liefert ~0,02 mSv; CT-Abdomen ~10–15 mSv; natürliche Jahreshintergrunddosis ~2,1 mSv in Österreich; Strahlenschutz-Grenze für beruflich Strahlenexponierte 20 mSv/Jahr nach österreichischem Strahlenschutzgesetz (§ 42 StrSchG 2020).",

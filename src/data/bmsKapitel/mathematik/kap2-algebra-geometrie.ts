@@ -11,6 +11,9 @@ export const mathKapAlgebra: Kapitel = {
     {
       id: "ma-2-01",
       title: "Gleichungen und Ungleichungen",
+      imageUrl: "/images/bms/ch-loesungen.jpg",
+      imageCaption:
+        "Abb.: Verdünnungsberechnungen als lineare Gleichungen im Labor (OpenStax, CC BY 4.0)",
       stichworte: [
         "Lineare Gleichung",
         "Äquivalenzumformung",
@@ -206,12 +209,18 @@ Substitution: V_A = 500 − V_B → 0,05(500 − V_B) + 0,20 V_B = 40 → 25 + 0
         "Probe immer durchführen: Lösung einsetzen und Gleichung überprüfen.",
         "Doppelte Ungleichung: alle Operationen auf alle drei Teile anwenden.",
       ],
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Ein Intensivpatient (80 kg) soll mit Noradrenalin behandelt werden. Die Laufrate beträgt 0,1 µg/kg/min. Eine Fertigspritze enthält 4 mg Noradrenalin in 40 mL NaCl. Berechnen Sie die nötige Infusionsrate in mL/h. Wie lange reicht eine Fertigspritze?",
-        answer:
-          "Schritt 1 — Dosierung: 0,1 µg/kg/min × 80 kg = 8 µg/min. Schritt 2 — Konzentration der Spritze: 4 mg in 40 mL = 4000 µg in 40 mL = 100 µg/mL. Schritt 3 — Volumenrate: 8 µg/min geteilt durch 100 µg/mL = 0,08 mL/min. Umrechnung: 0,08 × 60 = 4,8 mL/h. Schritt 4 — Laufzeit: 40 mL geteilt durch 4,8 mL/h ergibt ungefähr 8,33 h, also rund 8 Stunden 20 Minuten. Jeder Schritt ist eine lineare Gleichung in einer Unbekannten. Im klinischen Alltag müssen diese Berechnungen rasch und fehlerfrei ausgeführt werden, da Fehler bei vasoaktiven Substanzen lebensbedrohliche Folgen haben können. Die Formalisierung als Gleichungskette reduziert die Fehlerrate erheblich und ermöglicht systematische Plausibilitätsprüfung.",
+        text: "Welche Lösungen hat die Gleichung 3x + 12 = 0?",
+        options: [
+          { id: "a", text: "x = 4" },
+          { id: "b", text: "x = −4" },
+          { id: "c", text: "x = 3" },
+          { id: "d", text: "x = −3" },
+          { id: "e", text: "x = 12" },
+        ],
+        correctOptionId: "b",
+        explanation:
+          "3x + 12 = 0 → 3x = −12 → x = −12/3 = −4. Häufiger Fehler: Vorzeichen vergessen und x = 4 erhalten.",
       },
       klinischerBezug:
         "In der Anästhesie und Intensivmedizin werden Infusionsraten vasoaktiver Medikamente wie Noradrenalin, Dobutamin und Propofol über lineare Gleichungen berechnet. Die Verdünnungsformel c1V1 = c2V2 wird täglich bei der Zubereitung von Chemotherapeutika, Antibiotika-Infusionen und Notfallmedikamenten angewendet. Fehler bei diesen Berechnungen sind eine häufige Ursache von Medikationsfehlern im Krankenhaus und können zu lebensbedrohlichen Über- oder Unterdosierungen führen.",
@@ -286,11 +295,24 @@ Substitution: V_A = 500 − V_B → 0,05(500 − V_B) + 0,20 V_B = 40 → 25 + 0
           difficulty: 2,
           tags: ["dosierung", "morphin", "gleichung"],
         },
+        {
+          question:
+            "Welche Aussagen über Gleichungstypen und Lösungsverfahren sind richtig?\n\n1. Eine lineare Gleichung hat höchstens eine Lösung.\n2. Die Mitternachtsformel gilt nur für normierte quadratische Gleichungen (a = 1).\n3. Vieta'sche Formeln erlauben die Probe: x₁ + x₂ = −b/a und x₁ × x₂ = c/a.\n4. Die Diskriminante D = b² − 4ac bestimmt die Anzahl der reellen Lösungen.\n5. Jede quadratische Gleichung hat genau zwei verschiedene reelle Lösungen.",
+          options: ["Nur 1 und 3", "Nur 2 und 4", "Nur 1, 3 und 4", "Nur 2, 3 und 5", "Alle"],
+          correctIndex: 2,
+          explanation:
+            "Aussagen 1, 3 und 4 sind korrekt. Aussage 1: Eine lineare Gleichung ax + b = 0 (a ≠ 0) hat genau eine Lösung x = −b/a ✓. Aussage 2 ist falsch: Die Mitternachtsformel x = (−b ± √D)/(2a) gilt für alle quadratischen Gleichungen ax² + bx + c = 0 — die pq-Formel ist die Version für a = 1. Aussage 3: Vieta liefert Summe und Produkt der Nullstellen ✓. Aussage 4: D > 0 → zwei Lösungen, D = 0 → eine, D < 0 → keine reelle ✓. Aussage 5 ist falsch: Bei D = 0 gibt es nur eine Doppellösung, bei D < 0 keine reelle Lösung.",
+          difficulty: 2,
+          tags: ["typ-k", "gleichungen", "loesungsverfahren"],
+        },
       ],
     },
     {
       id: "ma-2-04",
       title: "Potenzgesetze & Logarithmen",
+      imageUrl: "/images/bms/ch-ph-skala.jpg",
+      imageCaption:
+        "Abb.: Die pH-Skala — logarithmische Darstellung der H\u207A-Konzentration (OpenStax, CC BY 4.0)",
       stichworte: [
         "Potenzgesetz",
         "Wurzelgesetz",
@@ -523,10 +545,17 @@ Patient mit [HCO₃⁻] = 12 mmol/L und pCO₂ = 40 mmHg. pH = 6,1 + lg(12/1,2) 
         "Wissenschaftliche Notation: a × 10 hoch n mit 1 ≤ a < 10.",
       ],
       altfrage: {
-        question:
-          "Der arterielle Blut-pH eines Patienten sinkt von 7,40 auf 6,80. (a) Um welchen Faktor hat sich die H⁺-Konzentration geändert? (b) Berechnen Sie die H⁺-Konzentration bei beiden pH-Werten. (c) Erklären Sie mithilfe der Henderson-Hasselbalch-Gleichung, welche Änderung des HCO₃⁻/CO₂-Verhältnisses diesen pH-Shift verursachen könnte.",
-        answer:
-          "Teil a: ΔpH = 7,40 − 6,80 = 0,60 = 2 × 0,30. Da pH-Abfall um 0,30 eine Verdopplung von [H⁺] bedeutet (lg 2 ≈ 0,30), entspricht 0,60 einer Vervierfachung. Alternativ: Faktor = 10^(ΔpH) = 10^0,60 ≈ 4. Teil b: Bei pH 7,40: [H⁺] = 10⁻⁷·⁴⁰ ≈ 3,98 × 10⁻⁸ mol/L ≈ 40 nmol/L. Bei pH 6,80: [H⁺] = 10⁻⁶·⁸⁰ ≈ 1,58 × 10⁻⁷ mol/L ≈ 158 nmol/L. Verhältnis: 158/40 ≈ 4 ✓. Teil c: Henderson-Hasselbalch: pH = 6,1 + lg([HCO₃⁻]/(0,03×pCO₂)). Normal: lg(20) = 1,30 → pH 7,40. Für pH 6,80: 6,80 = 6,1 + lg(R), also lg(R) = 0,70, R = 10^0,70 ≈ 5. Das Verhältnis ist von 20:1 auf 5:1 gefallen — z. B. durch HCO₃⁻-Verlust bei metabolischer Azidose oder CO₂-Anstieg bei respiratorischer Azidose.",
+        text: "Der Blut-pH sinkt von 7,4 auf 7,1. Um welchen Faktor steigt die H⁺-Konzentration? (lg 2 ≈ 0,3)",
+        options: [
+          { id: "a", text: "Faktor 2" },
+          { id: "b", text: "Faktor 3" },
+          { id: "c", text: "Faktor 4" },
+          { id: "d", text: "Faktor 10" },
+          { id: "e", text: "Faktor 1,3" },
+        ],
+        correctOptionId: "a",
+        explanation:
+          "pH-Abfall um 0,3 entspricht einer Verdopplung der H⁺-Konzentration, da 10^0,3 ≈ 2. Merke: pH sinkt um 0,3 → [H⁺] × 2; um 1,0 → [H⁺] × 10.",
       },
       klinischerBezug:
         "Pharmakokinetik: Halbwertszeit bestimmt Dosierungsintervall (5 HWZ = ausgewaschen). pH = −lg[H⁺]: Arteriell 7,35–7,45 entspricht 35–45 nmol/L H⁺; pH-Abfall um 0,3 = Verdopplung der [H⁺] — lebensbedrohlich. Henderson-Hasselbalch erklärt metabolische und respiratorische Azidose/Alkalose über das HCO₃⁻/CO₂-Verhältnis. Dezibel: Lärmschwerhörigkeit ab 85 dB Dauerbelastung; jede Verdopplung der Schallintensität = +3 dB.",
@@ -613,11 +642,28 @@ Patient mit [HCO₃⁻] = 12 mmol/L und pCO₂ = 40 mmHg. pH = 6,1 + lg(12/1,2) 
           difficulty: 2,
           tags: ["logarithmus", "rechenregeln", "falsch-aussage"],
         },
+        {
+          question: "Welche Aussage über Potenzgesetze und Logarithmen ist FALSCH?",
+          options: [
+            "a⁰ = 1 für alle a ∈ ℝ",
+            "a⁻ⁿ = 1/aⁿ (für a ≠ 0)",
+            "lg(a × b) = lg(a) + lg(b)",
+            "(aⁿ)ᵐ = a^(n × m)",
+            "pH sinkt um 0,3 → [H⁺] verdoppelt sich",
+          ],
+          correctIndex: 0,
+          explanation:
+            "Aussage A ist falsch: a⁰ = 1 gilt nur für a ≠ 0. Für a = 0 ist 0⁰ nicht definiert (bzw. in manchen Konventionen als 1 gesetzt, aber mathematisch nicht allgemeingültig). Alle anderen Aussagen stimmen: a⁻ⁿ = 1/aⁿ ist korrekt für a ≠ 0 (B). Die Produktregel des Logarithmus (C) und die Potenz-einer-Potenz-Regel (D) sind korrekte Rechengesetze. Die pH-Faustregel (E) folgt aus lg(2) ≈ 0,3.",
+          difficulty: 2,
+          tags: ["falsch-aussage", "potenzgesetze", "logarithmen"],
+        },
       ],
     },
     {
       id: "ma-2-03",
       title: "Quadratische Gleichungen und binomische Formeln",
+      imageUrl: "/images/bms/ch-chemische-reaktionen.jpg",
+      imageCaption: "Abb.: Reaktionskinetik und quadratische Zusammenhänge (OpenStax, CC BY 4.0)",
       stichworte: [
         "Binomische Formeln",
         "Quadratische Ergänzung",
@@ -805,12 +851,18 @@ Wirksamkeit E(d) = − 0,5 d² + 10d − 12 (d = Dosis in mg). Scheitelpunkt: d_
         "Mentale Arithmetik: 97 × 103 = (100 − 3)(100 + 3) = 10000 − 9 = 9991.",
         "Diskriminante D > 0: Parabel schneidet x-Achse zweimal. D = 0: berührt x-Achse. D < 0: schneidet nicht.",
       ],
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Eine kreisförmige Wundfläche vergrößert sich täglich. Am Morgen hat der Wundrand Radius (x+3) cm, am Abend Radius (x+7) cm. Die Abend-Fläche beträgt das 4-Fache der Morgen-Fläche. Bestimmen Sie x und die Radien. Welche Beziehung zwischen Radius und Fläche liegt vor?",
-        answer:
-          "Kreisfläche A = pi × r². Morgens: A1 = pi × (x+3)². Abends: A2 = pi × (x+7)². Bedingung: A2 = 4 × A1. Einsetzen: pi × (x+7)² = 4 × pi × (x+3)². Kürze pi: (x+7)² = 4 × (x+3)². Wurzel ziehen: x+7 = 2(x+3) oder x+7 = − 2(x+3). Fall 1: x+7 = 2x+6, also x = 1. Fall 2: x+7 = − 2x − 6, also 3x = − 13, x = − 13/3 (ergibt negativen Radius, ausgeschlossen). Lösung: x = 1. Radius morgens: 4 cm. Radius abends: 8 cm. Probe: A1 = pi × 16, A2 = pi × 64 = 4 × pi × 16. Korrekt. Der Zusammenhang zwischen Radius und Fläche ist quadratisch: Bei Verdopplung des Radius vervierfacht sich die Fläche. Dies ist keine lineare Proportionalität, sondern eine quadratische Beziehung.",
+        text: "Was ergibt (2x + 5)²?",
+        options: [
+          { id: "a", text: "4x² + 25" },
+          { id: "b", text: "4x² + 10x + 25" },
+          { id: "c", text: "4x² + 20x + 25" },
+          { id: "d", text: "2x² + 20x + 25" },
+          { id: "e", text: "4x² + 20x + 10" },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "Erste binomische Formel: (a+b)² = a² + 2ab + b². Hier a = 2x, b = 5: (2x)² + 2×2x×5 + 5² = 4x² + 20x + 25. Typischer Fehler: den Mischterm 2ab vergessen.",
       },
       klinischerBezug:
         "Quadratische Zusammenhänge finden sich in der Medizin bei der Berechnung der Körperoberfläche BSA, die für Chemotherapiedosierungen entscheidend ist: BSA in m² ist ungefähr gleich der Wurzel aus (Größe in cm × Gewicht in kg geteilt durch 3600). Zytostatikadosen werden auf die BSA bezogen, um individuelle Unterschiede in der Körpergröße zu berücksichtigen. Die dritte binomische Formel erscheint bei der Rationalisierung von Wurzelausdrücken in Berechnungen zur Schallausbreitung und beim Berechnen von Gefäßwiderständen.",
@@ -899,6 +951,9 @@ Wirksamkeit E(d) = − 0,5 d² + 10d − 12 (d = Dosis in mg). Scheitelpunkt: d_
     {
       id: "ma-2-05",
       title: "Trigonometrie-Grundlagen",
+      imageUrl: "/images/bms/bio-muskelkontraktion.jpg",
+      imageCaption:
+        "Abb.: Kraftzerlegung am Gelenk — trigonometrische Funktionen in der Biomechanik (OpenStax, CC BY 4.0)",
       stichworte: [
         "Sinus",
         "Kosinus",
@@ -1075,10 +1130,17 @@ Probe: √(433² + 250²) = √(187489 + 62500) = √249989 ≈ 500 N ✓
       klinischerBezug:
         "Kräftezerlegung in der Orthopädie (Muskelzug am Knochen); Drehmoment an Gelenken (M = r × F × sin θ); EKG-Herzachse als Vektorwinkel; Strahlentherapie-Winkelplanung; Optik (Brechungsgesetz: n₁ sin θ₁ = n₂ sin θ₂).",
       altfrage: {
-        question:
-          "Ein Rettungshubschrauber fliegt in 200 m Höhe auf ein Krankenhaus zu. Der Pilot misst den Tiefenwinkel zum Landeplatz als 30°. Welche horizontale Entfernung hat der Hubschrauber noch zum Landeplatz? (tan 30° ≈ 0,577; sin 30° = 0,5; cos 30° ≈ 0,866)",
-        answer:
-          "tan α = Gegenkathete / Ankathete. Hier ist die Höhe (200 m) die Gegenkathete und die horizontale Entfernung die Ankathete. tan 30° = 200 / x → x = 200 / tan 30° = 200 / 0,577 ≈ 346 m. Probe: tan 30° = 200/346 ≈ 0,578 ≈ 0,577 ✓. Alternativ über sin/cos: Hypotenuse = 200 / sin 30° = 400 m; horizontale Entfernung = 400 × cos 30° = 400 × 0,866 = 346,4 m. Die trigonometrischen Funktionen verknüpfen Winkel und Seitenverhältnisse im rechtwinkligen Dreieck — SOH-CAH-TOA.",
+        text: "In einem rechtwinkligen Dreieck ist die Gegenkathete 5 cm und die Hypotenuse 10 cm. Welchen Wert hat sin α?",
+        options: [
+          { id: "a", text: "0,25" },
+          { id: "b", text: "0,5" },
+          { id: "c", text: "1,0" },
+          { id: "d", text: "2,0" },
+          { id: "e", text: "0,87" },
+        ],
+        correctOptionId: "b",
+        explanation:
+          "sin α = Gegenkathete / Hypotenuse = 5/10 = 0,5. Das entspricht α = 30°. SOH-CAH-TOA: Sin = Opposite/Hypotenuse.",
       },
       selfTest: [
         {
@@ -1156,6 +1218,9 @@ Probe: √(433² + 250²) = √(187489 + 62500) = √249989 ≈ 500 N ✓
     {
       id: "ma-3-01",
       title: "Ebene Figuren — Flächen und Umfang",
+      imageUrl: "/images/bms/bio-epidermis-schichten.jpg",
+      imageCaption:
+        "Abb.: Flächenberechnung von Hautarealen für Verbrennungsgrade (OpenStax, CC BY 4.0)",
       stichworte: [
         "Rechteck",
         "Dreieck",
@@ -1396,10 +1461,17 @@ Die **Aortenklappenöffnungsfläche** (normal ~3–4 cm²) wird per Echokardiogr
         "KOF (Mosteller): √(kg × cm / 3600) ≈ 1,7–1,9 m² bei Erwachsenen.",
       ],
       altfrage: {
-        question:
-          "Ein Dreieck hat die Seitenlängen a = 5 cm, b = 7 cm und c = 8 cm. Berechnen Sie die Fläche des Dreiecks mithilfe der Heronschen Formel.",
-        answer:
-          "Zuerst wird der Halbumfang s bestimmt: s = (a + b + c) / 2 = (5 + 7 + 8) / 2 = 20 / 2 = 10 cm. Dann werden die Differenzen berechnet: s − a = 10 − 5 = 5 cm, s − b = 10 − 7 = 3 cm, s − c = 10 − 8 = 2 cm. Die Heronsche Formel lautet: A = √(s × (s−a) × (s−b) × (s−c)) = √(10 × 5 × 3 × 2) = √300. Da 300 = 100 × 3, ergibt sich A = 10 × √3 ≈ 10 × 1,732 ≈ 17,32 cm².",
+        text: "Ein Kreis hat den Radius 5 cm. Wie groß ist seine Fläche? (π ≈ 3,14)",
+        options: [
+          { id: "a", text: "31,4 cm²" },
+          { id: "b", text: "78,5 cm²" },
+          { id: "c", text: "50 cm²" },
+          { id: "d", text: "157 cm²" },
+          { id: "e", text: "25 cm²" },
+        ],
+        correctOptionId: "b",
+        explanation:
+          "A = π × r² = 3,14 × 25 = 78,5 cm². Häufiger Fehler: Umfang statt Fläche berechnen (2πr = 31,4 cm) oder r nicht quadrieren.",
       },
       klinischerBezug:
         "KOF-basierte Chemotherapie-Dosierung (DuBois/Mosteller); Neuner-Regel bei Verbrennungen; Aortenklappenöffnungsfläche als OP-Kriterium; Wundflächenbestimmung für Hauttransplantate.",
@@ -1498,6 +1570,8 @@ Die **Aortenklappenöffnungsfläche** (normal ~3–4 cm²) wird per Echokardiogr
     {
       id: "ma-3-02",
       title: "Körper — Volumen und Oberfläche",
+      imageUrl: "/images/bms/bio-lunge.jpg",
+      imageCaption: "Abb.: Lungenvolumen — Berechnung von Atemvolumina (OpenStax, CC BY 4.0)",
       stichworte: [
         "Quader",
         "Würfel",
@@ -1682,12 +1756,18 @@ Die **Lungenalveolen** haben einen Radius von ca. 0,1–0,2 mm; die Gesamtoberfl
         "Harnblasenvolumen (US): V = 0,52×a×b×c; Restharn > 100 ml ist klinisch relevant.",
         "RECIST-Tumorvolumen: Ellipsoid-Näherung ermöglicht Verlaufskontrolle unter Therapie.",
       ],
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Erläutern Sie, warum das Hagen-Poiseuille-Gesetz für das Verständnis von Gefäßstenosen klinisch von zentraler Bedeutung ist. Gehen Sie auf die mathematische r⁴-Abhängigkeit ein.",
-        answer:
-          "Das Hagen-Poiseuille-Gesetz beschreibt den laminaren Volumenstrom durch ein zylindrisches Rohr: V̇ = (π × r⁴ × ΔP) / (8 × η × l). Der Volumenstrom ist proportional zur vierten Potenz des Radius r. Diese r⁴-Abhängigkeit hat dramatische klinische Konsequenzen: Wird der Gefäßradius durch eine atherosklerotische Plaque halbiert, reduziert sich der Blutfluss auf (1/2)⁴ = 1/16 des Ausgangswertes — also auf etwa 6 % — bei gleichem Druckgradienten. Umgekehrt bedeutet eine Verdoppelung des Radius (z. B. nach PTCA) einen 16-fach erhöhten Fluss. In der klinischen Praxis wird die Stenose oft als prozentualer Durchmesserverlust angegeben. Eine hämodynamisch signifikante Stenose liegt üblicherweise bei > 50 % Lumenreduktion vor. Bei 70 % Stenose (Radius auf 30 % reduziert) fällt der Fluss auf 0,3⁴ ≈ 0,008, also unter 1 % des Normwerts. Dies erklärt, warum hochgradige Koronarstenosen zu Angina pectoris und Myokardinfarkt führen und warum eine Revaskularisierung (Stent, Bypass) den Fluss drastisch verbessert.",
+        text: "Ein Zylinder hat Radius 3 cm und Höhe 10 cm. Wie groß ist sein Volumen? (π ≈ 3,14)",
+        options: [
+          { id: "a", text: "90 cm³" },
+          { id: "b", text: "188,4 cm³" },
+          { id: "c", text: "282,6 cm³" },
+          { id: "d", text: "314 cm³" },
+          { id: "e", text: "94,2 cm³" },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "V = π × r² × h = 3,14 × 9 × 10 = 282,6 cm³. Typischer Fehler: r statt r² einsetzen (V = π×3×10 = 94,2 — falsch).",
       },
       klinischerBezug:
         "Tumorvolummetrie (Ellipsoid-Formel); Harnblasen-Restharn (Ultraschall); Hagen-Poiseuille r⁴-Abhängigkeit bei Koronarstenosen und Arteriosklerose.",
@@ -1778,6 +1858,8 @@ Die **Lungenalveolen** haben einen Radius von ca. 0,1–0,2 mm; die Gesamtoberfl
     {
       id: "ma-3-04",
       title: "Vektoren — Überblick und Verweis",
+      imageUrl: "/images/bms/bio-muskelfaser.jpg",
+      imageCaption: "Abb.: Kraftvektoren am Bewegungsapparat (OpenStax, CC BY 4.0)",
       stichworte: ["Vektor", "Skalar", "Betrag", "Richtung", "Vektorrechnung"],
       content: `Viele physikalische Größen haben nicht nur einen Betrag, sondern auch eine **Richtung**: Kraft, Geschwindigkeit, Verschiebung.
 

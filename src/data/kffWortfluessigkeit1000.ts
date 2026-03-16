@@ -10,7 +10,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["E", "U", "A", "O", "-"],
     correctIndex: 2,
     solutionWord: "ABWEHR",
-    explanation: "Das Wort lautet „ABWEHR“ und beginnt mit „A“.",
+    explanation:
+      "Erkennbar an der Vorsilbe AB-. Die Buchstaben ergeben das Wort „ABWEHR“ (Anfangsbuchstabe „A“).",
     difficulty: 1,
   },
   {
@@ -19,7 +20,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["O", "A", "E", "U", "-"],
     correctIndex: 1,
     solutionWord: "ACHSE",
-    explanation: "Das Wort lautet „ACHSE“ und beginnt mit „A“.",
+    explanation: "Die Buchstaben ergeben das Wort „ACHSE“ (Anfangsbuchstabe „A“).",
     difficulty: 1,
   },
   {
@@ -29,7 +30,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "ALGE",
     explanation:
-      "Das Lösungswort lautet „ALGE“ (Anfangsbuchstabe „A“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „ALGE“ (Anfangsbuchstabe „A“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 1,
   },
   {
@@ -38,7 +39,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["E", "U", "O", "A", "-"],
     correctIndex: 3,
     solutionWord: "AMPEL",
-    explanation: "Das Wort lautet „AMPEL“ und beginnt mit „A“.",
+    explanation: "Die Buchstaben ergeben das Wort „AMPEL“ (Anfangsbuchstabe „A“).",
     difficulty: 1,
   },
   {
@@ -47,7 +48,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["A", "U", "E", "O", "-"],
     correctIndex: 0,
     solutionWord: "ANKER",
-    explanation: "Das Wort lautet „ANKER“ und beginnt mit „A“.",
+    explanation:
+      "Erkennbar an der Vorsilbe AN-. Die Buchstaben ergeben das Wort „ANKER“ (Anfangsbuchstabe „A“).",
     difficulty: 1,
   },
   {
@@ -56,7 +58,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["U", "E", "A", "H", "-"],
     correctIndex: 2,
     solutionWord: "AORTA",
-    explanation: 'Das Wort lautet „AORTA" und beginnt mit „A".',
+    explanation: "Die Buchstaben ergeben das Wort „AORTA“ (Anfangsbuchstabe „A“).",
     difficulty: 1,
   },
   {
@@ -65,7 +67,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["O", "U", "A", "E", "-"],
     correctIndex: 2,
     solutionWord: "APFEL",
-    explanation: "Das Wort lautet „APFEL“ und beginnt mit „A“.",
+    explanation: "Die Buchstaben ergeben das Wort „APFEL“ (Anfangsbuchstabe „A“).",
     difficulty: 1,
   },
   {
@@ -74,7 +76,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["O", "U", "H", "A", "-"],
     correctIndex: 3,
     solutionWord: "ARZT",
-    explanation: 'Das Wort lautet „ARZT" und beginnt mit „A".',
+    explanation: "Die Buchstaben ergeben das Wort „ARZT“ (Anfangsbuchstabe „A“).",
     difficulty: 1,
   },
   {
@@ -83,7 +85,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["A", "E", "U", "O", "-"],
     correctIndex: 0,
     solutionWord: "AUGE",
-    explanation: "Das Wort lautet „AUGE“ und beginnt mit „A“.",
+    explanation: "Die Buchstaben ergeben das Wort „AUGE“ (Anfangsbuchstabe „A“).",
     difficulty: 1,
   },
   {
@@ -92,7 +94,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "B", "R", "D", "-"],
     correctIndex: 1,
     solutionWord: "BACH",
-    explanation: "Das Wort lautet „BACH“ und beginnt mit „B“.",
+    explanation: "Die Buchstaben ergeben das Wort „BACH“ (Anfangsbuchstabe „B“).",
     difficulty: 1,
   },
   {
@@ -101,7 +103,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["R", "D", "B", "P", "-"],
     correctIndex: 2,
     solutionWord: "BALKEN",
-    explanation: "Das Wort lautet „BALKEN“ und beginnt mit „B“.",
+    explanation: "Die Buchstaben ergeben das Wort „BALKEN“ (Anfangsbuchstabe „B“).",
     difficulty: 1,
   },
   {
@@ -110,7 +112,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "R", "B", "P", "-"],
     correctIndex: 2,
     solutionWord: "BALL",
-    explanation: 'Das Wort lautet „BALL" und beginnt mit „B".',
+    explanation: "Die Buchstaben ergeben das Wort „BALL“ (Anfangsbuchstabe „B“).",
     difficulty: 1,
   },
   {
@@ -119,7 +121,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "B", "D", "R", "-"],
     correctIndex: 1,
     solutionWord: "BANK",
-    explanation: "Das Wort lautet „BANK“ und beginnt mit „B“.",
+    explanation: "Die Buchstaben ergeben das Wort „BANK“ (Anfangsbuchstabe „B“).",
     difficulty: 1,
   },
   {
@@ -128,7 +130,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "R", "B", "G", "-"],
     correctIndex: 2,
     solutionWord: "BAUM",
-    explanation: 'Das Wort lautet „BAUM" und beginnt mit „B".',
+    explanation: "Die Buchstaben ergeben das Wort „BAUM“ (Anfangsbuchstabe „B“).",
     difficulty: 1,
   },
   {
@@ -137,7 +139,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "B", "D", "R", "-"],
     correctIndex: 1,
     solutionWord: "BELAG",
-    explanation: "Das Wort lautet „BELAG“ und beginnt mit „B“.",
+    explanation:
+      "Erkennbar an der Vorsilbe BE-. Die Buchstaben ergeben das Wort „BELAG“ (Anfangsbuchstabe „B“).",
     difficulty: 1,
   },
   {
@@ -146,7 +149,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "B", "G", "P", "-"],
     correctIndex: 1,
     solutionWord: "BERG",
-    explanation: 'Das Wort lautet „BERG" und beginnt mit „B".',
+    explanation: "Die Buchstaben ergeben das Wort „BERG“ (Anfangsbuchstabe „B“).",
     difficulty: 1,
   },
   {
@@ -155,7 +158,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "B", "D", "R", "-"],
     correctIndex: 1,
     solutionWord: "BETT",
-    explanation: "Das Wort lautet „BETT“ und beginnt mit „B“.",
+    explanation: "Die Buchstaben ergeben das Wort „BETT“ (Anfangsbuchstabe „B“).",
     difficulty: 1,
   },
   {
@@ -165,7 +168,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "BEUTEL",
     explanation:
-      "Das Lösungswort lautet „BEUTEL“ (Anfangsbuchstabe „B“), der nicht unter A–D angeboten wird.",
+      "Erkennbar an der Vorsilbe BE-. Das Lösungswort lautet „BEUTEL“ (Anfangsbuchstabe „B“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 1,
   },
   {
@@ -174,7 +177,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "B", "R", "G", "-"],
     correctIndex: 1,
     solutionWord: "BILD",
-    explanation: 'Das Wort lautet „BILD" und beginnt mit „B".',
+    explanation: "Die Buchstaben ergeben das Wort „BILD“ (Anfangsbuchstabe „B“).",
     difficulty: 1,
   },
   {
@@ -183,7 +186,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "B", "R", "D", "-"],
     correctIndex: 1,
     solutionWord: "BINSE",
-    explanation: "Das Wort lautet „BINSE“ und beginnt mit „B“.",
+    explanation: "Die Buchstaben ergeben das Wort „BINSE“ (Anfangsbuchstabe „B“).",
     difficulty: 1,
   },
   {
@@ -192,7 +195,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "D", "P", "B", "-"],
     correctIndex: 3,
     solutionWord: "BIRNE",
-    explanation: 'Das Wort lautet „BIRNE" und beginnt mit „B".',
+    explanation: "Die Buchstaben ergeben das Wort „BIRNE“ (Anfangsbuchstabe „B“).",
     difficulty: 1,
   },
   {
@@ -202,7 +205,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "BLATT",
     explanation:
-      "Das Lösungswort lautet „BLATT“ (Anfangsbuchstabe „B“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „BLATT“ (Anfangsbuchstabe „B“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 1,
   },
   {
@@ -211,7 +214,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["R", "B", "P", "D", "-"],
     correctIndex: 1,
     solutionWord: "BLAU",
-    explanation: "Das Wort lautet „BLAU“ und beginnt mit „B“.",
+    explanation: "Die Buchstaben ergeben das Wort „BLAU“ (Anfangsbuchstabe „B“).",
     difficulty: 1,
   },
   {
@@ -220,7 +223,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["B", "D", "R", "P", "-"],
     correctIndex: 0,
     solutionWord: "BLITZ",
-    explanation: "Das Wort lautet „BLITZ“ und beginnt mit „B“.",
+    explanation: "Die Buchstaben ergeben das Wort „BLITZ“ (Anfangsbuchstabe „B“).",
     difficulty: 1,
   },
   {
@@ -230,7 +233,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "BLOCK",
     explanation:
-      "Das Lösungswort lautet „BLOCK“ (Anfangsbuchstabe „B“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „BLOCK“ (Anfangsbuchstabe „B“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 1,
   },
   {
@@ -239,7 +242,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "D", "B", "R", "-"],
     correctIndex: 2,
     solutionWord: "BLUME",
-    explanation: 'Das Wort lautet „BLUME" und beginnt mit „B".',
+    explanation: "Die Buchstaben ergeben das Wort „BLUME“ (Anfangsbuchstabe „B“).",
     difficulty: 1,
   },
   {
@@ -248,7 +251,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "P", "R", "B", "-"],
     correctIndex: 3,
     solutionWord: "BLUMENSTRAUSS",
-    explanation: "Das Wort lautet „BLUMENSTRAUSS“ und beginnt mit „B“.",
+    explanation: "Die Buchstaben ergeben das Wort „BLUMENSTRAUSS“ (Anfangsbuchstabe „B“).",
     difficulty: 1,
   },
   {
@@ -257,7 +260,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "G", "B", "R", "-"],
     correctIndex: 2,
     solutionWord: "BLUT",
-    explanation: 'Das Wort lautet „BLUT" und beginnt mit „B".',
+    explanation: "Die Buchstaben ergeben das Wort „BLUT“ (Anfangsbuchstabe „B“).",
     difficulty: 1,
   },
   {
@@ -266,7 +269,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "B", "P", "R", "-"],
     correctIndex: 1,
     solutionWord: "BODEN",
-    explanation: "Das Wort lautet „BODEN“ und beginnt mit „B“.",
+    explanation: "Die Buchstaben ergeben das Wort „BODEN“ (Anfangsbuchstabe „B“).",
     difficulty: 1,
   },
   {
@@ -275,7 +278,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["R", "D", "B", "P", "-"],
     correctIndex: 2,
     solutionWord: "BOOT",
-    explanation: "Das Wort lautet „BOOT“ und beginnt mit „B“.",
+    explanation: "Die Buchstaben ergeben das Wort „BOOT“ (Anfangsbuchstabe „B“).",
     difficulty: 1,
   },
   {
@@ -284,7 +287,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["R", "D", "P", "B", "-"],
     correctIndex: 3,
     solutionWord: "BORKE",
-    explanation: "Das Wort lautet „BORKE“ und beginnt mit „B“.",
+    explanation: "Die Buchstaben ergeben das Wort „BORKE“ (Anfangsbuchstabe „B“).",
     difficulty: 1,
   },
   {
@@ -293,7 +296,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["R", "P", "D", "B", "-"],
     correctIndex: 3,
     solutionWord: "BRATEN",
-    explanation: "Das Wort lautet „BRATEN“ und beginnt mit „B“.",
+    explanation: "Die Buchstaben ergeben das Wort „BRATEN“ (Anfangsbuchstabe „B“).",
     difficulty: 1,
   },
   {
@@ -302,7 +305,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "B", "D", "P", "-"],
     correctIndex: 1,
     solutionWord: "BRIEF",
-    explanation: 'Das Wort lautet „BRIEF" und beginnt mit „B".',
+    explanation: "Die Buchstaben ergeben das Wort „BRIEF“ (Anfangsbuchstabe „B“).",
     difficulty: 1,
   },
   {
@@ -311,7 +314,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "B", "R", "D", "-"],
     correctIndex: 1,
     solutionWord: "BRISE",
-    explanation: "Das Wort lautet „BRISE“ und beginnt mit „B“.",
+    explanation: "Die Buchstaben ergeben das Wort „BRISE“ (Anfangsbuchstabe „B“).",
     difficulty: 1,
   },
   {
@@ -320,7 +323,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "G", "D", "B", "-"],
     correctIndex: 3,
     solutionWord: "BROT",
-    explanation: 'Das Wort lautet „BROT" und beginnt mit „B".',
+    explanation: "Die Buchstaben ergeben das Wort „BROT“ (Anfangsbuchstabe „B“).",
     difficulty: 1,
   },
   {
@@ -329,7 +332,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "B", "D", "P", "-"],
     correctIndex: 1,
     solutionWord: "BRUCH",
-    explanation: 'Das Wort lautet „BRUCH" und beginnt mit „B".',
+    explanation: "Die Buchstaben ergeben das Wort „BRUCH“ (Anfangsbuchstabe „B“).",
     difficulty: 1,
   },
   {
@@ -338,7 +341,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["R", "B", "D", "P", "-"],
     correctIndex: 1,
     solutionWord: "BRUNNEN",
-    explanation: "Das Wort lautet „BRUNNEN“ und beginnt mit „B“.",
+    explanation: "Die Buchstaben ergeben das Wort „BRUNNEN“ (Anfangsbuchstabe „B“).",
     difficulty: 1,
   },
   {
@@ -347,7 +350,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["R", "B", "P", "D", "-"],
     correctIndex: 1,
     solutionWord: "BUCH",
-    explanation: "Das Wort lautet „BUCH“ und beginnt mit „B“.",
+    explanation: "Die Buchstaben ergeben das Wort „BUCH“ (Anfangsbuchstabe „B“).",
     difficulty: 1,
   },
   {
@@ -356,7 +359,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "B", "R", "P", "-"],
     correctIndex: 1,
     solutionWord: "BUCHT",
-    explanation: "Das Wort lautet „BUCHT“ und beginnt mit „B“.",
+    explanation: "Die Buchstaben ergeben das Wort „BUCHT“ (Anfangsbuchstabe „B“).",
     difficulty: 1,
   },
   {
@@ -365,7 +368,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "D", "B", "R", "-"],
     correctIndex: 2,
     solutionWord: "BUTTER",
-    explanation: "Das Wort lautet „BUTTER“ und beginnt mit „B“.",
+    explanation: "Die Buchstaben ergeben das Wort „BUTTER“ (Anfangsbuchstabe „B“).",
     difficulty: 1,
   },
   {
@@ -374,7 +377,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["T", "D", "G", "P", "-"],
     correctIndex: 1,
     solutionWord: "DACH",
-    explanation: 'Das Wort lautet „DACH" und beginnt mit „D".',
+    explanation: "Die Buchstaben ergeben das Wort „DACH“ (Anfangsbuchstabe „D“).",
     difficulty: 1,
   },
   {
@@ -383,7 +386,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["T", "P", "B", "D", "-"],
     correctIndex: 3,
     solutionWord: "DAMM",
-    explanation: "Das Wort lautet „DAMM“ und beginnt mit „D“.",
+    explanation: "Die Buchstaben ergeben das Wort „DAMM“ (Anfangsbuchstabe „D“).",
     difficulty: 1,
   },
   {
@@ -392,7 +395,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "P", "B", "T", "-"],
     correctIndex: 0,
     solutionWord: "DAMPF",
-    explanation: "Das Wort lautet „DAMPF“ und beginnt mit „D“.",
+    explanation: "Die Buchstaben ergeben das Wort „DAMPF“ (Anfangsbuchstabe „D“).",
     difficulty: 1,
   },
   {
@@ -401,7 +404,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["B", "P", "D", "T", "-"],
     correctIndex: 2,
     solutionWord: "DARM",
-    explanation: "Das Wort lautet „DARM“ und beginnt mit „D“.",
+    explanation: "Die Buchstaben ergeben das Wort „DARM“ (Anfangsbuchstabe „D“).",
     difficulty: 1,
   },
   {
@@ -410,7 +413,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "P", "T", "B", "-"],
     correctIndex: 0,
     solutionWord: "DECKE",
-    explanation: "Das Wort lautet „DECKE“ und beginnt mit „D“.",
+    explanation: "Die Buchstaben ergeben das Wort „DECKE“ (Anfangsbuchstabe „D“).",
     difficulty: 1,
   },
   {
@@ -419,7 +422,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "T", "B", "D", "-"],
     correctIndex: 3,
     solutionWord: "DEICH",
-    explanation: "Das Wort lautet „DEICH“ und beginnt mit „D“.",
+    explanation: "Die Buchstaben ergeben das Wort „DEICH“ (Anfangsbuchstabe „D“).",
     difficulty: 1,
   },
   {
@@ -428,7 +431,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["B", "T", "D", "P", "-"],
     correctIndex: 2,
     solutionWord: "DIELE",
-    explanation: "Das Wort lautet „DIELE“ und beginnt mit „D“.",
+    explanation: "Die Buchstaben ergeben das Wort „DIELE“ (Anfangsbuchstabe „D“).",
     difficulty: 1,
   },
   {
@@ -438,7 +441,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "DIENST",
     explanation:
-      "Das Lösungswort lautet „DIENST“ (Anfangsbuchstabe „D“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „DIENST“ (Anfangsbuchstabe „D“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 1,
   },
   {
@@ -447,7 +450,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "B", "T", "P", "-"],
     correctIndex: 0,
     solutionWord: "DOLCH",
-    explanation: "Das Wort lautet „DOLCH“ und beginnt mit „D“.",
+    explanation: "Die Buchstaben ergeben das Wort „DOLCH“ (Anfangsbuchstabe „D“).",
     difficulty: 1,
   },
   {
@@ -456,7 +459,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["T", "D", "P", "B", "-"],
     correctIndex: 1,
     solutionWord: "DONNER",
-    explanation: "Das Wort lautet „DONNER“ und beginnt mit „D“.",
+    explanation: "Die Buchstaben ergeben das Wort „DONNER“ (Anfangsbuchstabe „D“).",
     difficulty: 1,
   },
   {
@@ -465,7 +468,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "T", "B", "D", "-"],
     correctIndex: 3,
     solutionWord: "DORF",
-    explanation: "Das Wort lautet „DORF“ und beginnt mit „D“.",
+    explanation: "Die Buchstaben ergeben das Wort „DORF“ (Anfangsbuchstabe „D“).",
     difficulty: 1,
   },
   {
@@ -474,7 +477,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "P", "T", "B", "-"],
     correctIndex: 0,
     solutionWord: "DOSE",
-    explanation: "Das Wort lautet „DOSE“ und beginnt mit „D“.",
+    explanation: "Die Buchstaben ergeben das Wort „DOSE“ (Anfangsbuchstabe „D“).",
     difficulty: 1,
   },
   {
@@ -483,7 +486,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "B", "T", "P", "-"],
     correctIndex: 0,
     solutionWord: "DOSIS",
-    explanation: "Das Wort lautet „DOSIS“ und beginnt mit „D“.",
+    explanation: "Die Buchstaben ergeben das Wort „DOSIS“ (Anfangsbuchstabe „D“).",
     difficulty: 1,
   },
   {
@@ -492,7 +495,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "B", "P", "D", "-"],
     correctIndex: 3,
     solutionWord: "DRAHT",
-    explanation: 'Das Wort lautet „DRAHT" und beginnt mit „D".',
+    explanation: "Die Buchstaben ergeben das Wort „DRAHT“ (Anfangsbuchstabe „D“).",
     difficulty: 1,
   },
   {
@@ -502,7 +505,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "DREI",
     explanation:
-      "Das Lösungswort lautet „DREI“ (Anfangsbuchstabe „D“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „DREI“ (Anfangsbuchstabe „D“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 1,
   },
   {
@@ -512,7 +515,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "DRUCK",
     explanation:
-      "Das Lösungswort lautet „DRUCK“ (Anfangsbuchstabe „D“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „DRUCK“ (Anfangsbuchstabe „D“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 1,
   },
   {
@@ -521,7 +524,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "B", "P", "T", "-"],
     correctIndex: 0,
     solutionWord: "DUNST",
-    explanation: "Das Wort lautet „DUNST“ und beginnt mit „D“.",
+    explanation: "Die Buchstaben ergeben das Wort „DUNST“ (Anfangsbuchstabe „D“).",
     difficulty: 1,
   },
   {
@@ -530,7 +533,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["E", "A", "O", "I", "-"],
     correctIndex: 0,
     solutionWord: "EIBE",
-    explanation: "Das Wort lautet „EIBE“ und beginnt mit „E“.",
+    explanation: "Die Buchstaben ergeben das Wort „EIBE“ (Anfangsbuchstabe „E“).",
     difficulty: 1,
   },
   {
@@ -540,7 +543,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "EIMER",
     explanation:
-      "Das Lösungswort lautet „EIMER“ (Anfangsbuchstabe „E“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „EIMER“ (Anfangsbuchstabe „E“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 1,
   },
   {
@@ -550,7 +553,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "EINS",
     explanation:
-      "Das Lösungswort lautet „EINS“ (Anfangsbuchstabe „E“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „EINS“ (Anfangsbuchstabe „E“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 1,
   },
   {
@@ -559,7 +562,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["E", "A", "O", "I", "-"],
     correctIndex: 0,
     solutionWord: "ELCH",
-    explanation: "Das Wort lautet „ELCH“ und beginnt mit „E“.",
+    explanation: "Die Buchstaben ergeben das Wort „ELCH“ (Anfangsbuchstabe „E“).",
     difficulty: 1,
   },
   {
@@ -568,7 +571,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["E", "I", "A", "O", "-"],
     correctIndex: 0,
     solutionWord: "ERDE",
-    explanation: "Das Wort lautet „ERDE“ und beginnt mit „E“.",
+    explanation: "Die Buchstaben ergeben das Wort „ERDE“ (Anfangsbuchstabe „E“).",
     difficulty: 1,
   },
   {
@@ -577,7 +580,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["O", "E", "I", "A", "-"],
     correctIndex: 1,
     solutionWord: "ERNTE",
-    explanation: "Das Wort lautet „ERNTE“ und beginnt mit „E“.",
+    explanation:
+      "Erkennbar an der Vorsilbe ER-. Die Buchstaben ergeben das Wort „ERNTE“ (Anfangsbuchstabe „E“).",
     difficulty: 1,
   },
   {
@@ -586,7 +590,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["A", "E", "O", "I", "-"],
     correctIndex: 1,
     solutionWord: "ESSIG",
-    explanation: "Das Wort lautet „ESSIG“ und beginnt mit „E“.",
+    explanation: "Die Buchstaben ergeben das Wort „ESSIG“ (Anfangsbuchstabe „E“).",
     difficulty: 1,
   },
   {
@@ -596,7 +600,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "FACKEL",
     explanation:
-      "Das Lösungswort lautet „FACKEL“ (Anfangsbuchstabe „F“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „FACKEL“ (Anfangsbuchstabe „F“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 1,
   },
   {
@@ -605,7 +609,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["V", "F", "P", "T", "-"],
     correctIndex: 1,
     solutionWord: "FADEN",
-    explanation: "Das Wort lautet „FADEN“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FADEN“ (Anfangsbuchstabe „F“).",
     difficulty: 1,
   },
   {
@@ -614,7 +618,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["F", "V", "T", "P", "-"],
     correctIndex: 0,
     solutionWord: "FALKE",
-    explanation: "Das Wort lautet „FALKE“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FALKE“ (Anfangsbuchstabe „F“).",
     difficulty: 1,
   },
   {
@@ -623,7 +627,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["V", "P", "F", "T", "-"],
     correctIndex: 2,
     solutionWord: "FALL",
-    explanation: "Das Wort lautet „FALL“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FALL“ (Anfangsbuchstabe „F“).",
     difficulty: 1,
   },
   {
@@ -632,7 +636,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["F", "V", "P", "T", "-"],
     correctIndex: 0,
     solutionWord: "FALTE",
-    explanation: "Das Wort lautet „FALTE“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FALTE“ (Anfangsbuchstabe „F“).",
     difficulty: 1,
   },
   {
@@ -641,7 +645,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "T", "P", "F", "-"],
     correctIndex: 3,
     solutionWord: "FARBE",
-    explanation: 'Das Wort lautet „FARBE" und beginnt mit „F".',
+    explanation: "Die Buchstaben ergeben das Wort „FARBE“ (Anfangsbuchstabe „F“).",
     difficulty: 1,
   },
   {
@@ -651,7 +655,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "FARN",
     explanation:
-      "Das Lösungswort lautet „FARN“ (Anfangsbuchstabe „F“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „FARN“ (Anfangsbuchstabe „F“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 1,
   },
   {
@@ -660,7 +664,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["F", "V", "P", "T", "-"],
     correctIndex: 0,
     solutionWord: "FASER",
-    explanation: "Das Wort lautet „FASER“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FASER“ (Anfangsbuchstabe „F“).",
     difficulty: 1,
   },
   {
@@ -669,7 +673,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "T", "F", "V", "-"],
     correctIndex: 2,
     solutionWord: "FEDER",
-    explanation: 'Das Wort lautet „FEDER" und beginnt mit „F".',
+    explanation: "Die Buchstaben ergeben das Wort „FEDER“ (Anfangsbuchstabe „F“).",
     difficulty: 1,
   },
   {
@@ -678,7 +682,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["V", "F", "T", "P", "-"],
     correctIndex: 1,
     solutionWord: "FELD",
-    explanation: "Das Wort lautet „FELD“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FELD“ (Anfangsbuchstabe „F“).",
     difficulty: 1,
   },
   {
@@ -687,7 +691,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["V", "F", "T", "P", "-"],
     correctIndex: 1,
     solutionWord: "FELGE",
-    explanation: "Das Wort lautet „FELGE“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FELGE“ (Anfangsbuchstabe „F“).",
     difficulty: 1,
   },
   {
@@ -696,7 +700,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["V", "P", "T", "F", "-"],
     correctIndex: 3,
     solutionWord: "FELS",
-    explanation: "Das Wort lautet „FELS“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FELS“ (Anfangsbuchstabe „F“).",
     difficulty: 1,
   },
   {
@@ -705,7 +709,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["V", "F", "T", "P", "-"],
     correctIndex: 1,
     solutionWord: "FEUER",
-    explanation: "Das Wort lautet „FEUER“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FEUER“ (Anfangsbuchstabe „F“).",
     difficulty: 1,
   },
   {
@@ -714,7 +718,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["F", "V", "T", "P", "-"],
     correctIndex: 0,
     solutionWord: "FIGUR",
-    explanation: "Das Wort lautet „FIGUR“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FIGUR“ (Anfangsbuchstabe „F“).",
     difficulty: 1,
   },
   {
@@ -723,7 +727,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "F", "V", "T", "-"],
     correctIndex: 1,
     solutionWord: "FILM",
-    explanation: "Das Wort lautet „FILM“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FILM“ (Anfangsbuchstabe „F“).",
     difficulty: 1,
   },
   {
@@ -732,7 +736,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "T", "F", "V", "-"],
     correctIndex: 2,
     solutionWord: "FISCH",
-    explanation: "Das Wort lautet „FISCH“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FISCH“ (Anfangsbuchstabe „F“).",
     difficulty: 1,
   },
   {
@@ -741,7 +745,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["T", "F", "V", "P", "-"],
     correctIndex: 1,
     solutionWord: "FLAGGE",
-    explanation: "Das Wort lautet „FLAGGE“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FLAGGE“ (Anfangsbuchstabe „F“).",
     difficulty: 1,
   },
   {
@@ -750,7 +754,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["V", "F", "P", "T", "-"],
     correctIndex: 1,
     solutionWord: "FLECK",
-    explanation: "Das Wort lautet „FLECK“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FLECK“ (Anfangsbuchstabe „F“).",
     difficulty: 1,
   },
   {
@@ -759,7 +763,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["F", "P", "T", "V", "-"],
     correctIndex: 0,
     solutionWord: "FLIESE",
-    explanation: "Das Wort lautet „FLIESE“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FLIESE“ (Anfangsbuchstabe „F“).",
     difficulty: 1,
   },
   {
@@ -768,7 +772,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "F", "T", "V", "-"],
     correctIndex: 1,
     solutionWord: "FLINTE",
-    explanation: "Das Wort lautet „FLINTE“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FLINTE“ (Anfangsbuchstabe „F“).",
     difficulty: 1,
   },
   {
@@ -777,7 +781,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "T", "F", "V", "-"],
     correctIndex: 2,
     solutionWord: "FLORA",
-    explanation: 'Das Wort lautet „FLORA" und beginnt mit „F".',
+    explanation: "Die Buchstaben ergeben das Wort „FLORA“ (Anfangsbuchstabe „F“).",
     difficulty: 1,
   },
   {
@@ -786,7 +790,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["T", "F", "V", "P", "-"],
     correctIndex: 1,
     solutionWord: "FLUSS",
-    explanation: "Das Wort lautet „FLUSS“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FLUSS“ (Anfangsbuchstabe „F“).",
     difficulty: 1,
   },
   {
@@ -796,7 +800,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "FORM",
     explanation:
-      "Das Lösungswort lautet „FORM“ (Anfangsbuchstabe „F“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „FORM“ (Anfangsbuchstabe „F“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 1,
   },
   {
@@ -805,7 +809,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["F", "V", "T", "P", "-"],
     correctIndex: 0,
     solutionWord: "FORMEN",
-    explanation: "Das Wort lautet „FORMEN“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FORMEN“ (Anfangsbuchstabe „F“).",
     difficulty: 1,
   },
   {
@@ -814,7 +818,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["T", "V", "P", "F", "-"],
     correctIndex: 3,
     solutionWord: "FRACHT",
-    explanation: "Das Wort lautet „FRACHT“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FRACHT“ (Anfangsbuchstabe „F“).",
     difficulty: 1,
   },
   {
@@ -823,7 +827,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["T", "P", "F", "V", "-"],
     correctIndex: 2,
     solutionWord: "FREI",
-    explanation: "Das Wort lautet „FREI“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FREI“ (Anfangsbuchstabe „F“).",
     difficulty: 1,
   },
   {
@@ -832,7 +836,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "T", "V", "F", "-"],
     correctIndex: 3,
     solutionWord: "FROST",
-    explanation: "Das Wort lautet „FROST“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FROST“ (Anfangsbuchstabe „F“).",
     difficulty: 1,
   },
   {
@@ -841,7 +845,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["V", "P", "T", "F", "-"],
     correctIndex: 3,
     solutionWord: "FUGE",
-    explanation: "Das Wort lautet „FUGE“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FUGE“ (Anfangsbuchstabe „F“).",
     difficulty: 1,
   },
   {
@@ -850,7 +854,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["V", "H", "F", "T", "-"],
     correctIndex: 2,
     solutionWord: "FUSS",
-    explanation: 'Das Wort lautet „FUSS" und beginnt mit „F".',
+    explanation: "Die Buchstaben ergeben das Wort „FUSS“ (Anfangsbuchstabe „F“).",
     difficulty: 1,
   },
   {
@@ -859,7 +863,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["C", "G", "K", "D", "-"],
     correctIndex: 1,
     solutionWord: "GABEL",
-    explanation: 'Das Wort lautet „GABEL" und beginnt mit „G".',
+    explanation: "Die Buchstaben ergeben das Wort „GABEL“ (Anfangsbuchstabe „G“).",
     difficulty: 1,
   },
   {
@@ -868,7 +872,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["C", "G", "K", "J", "-"],
     correctIndex: 1,
     solutionWord: "GANS",
-    explanation: "Das Wort lautet „GANS“ und beginnt mit „G“.",
+    explanation: "Die Buchstaben ergeben das Wort „GANS“ (Anfangsbuchstabe „G“).",
     difficulty: 1,
   },
   {
@@ -877,7 +881,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "K", "C", "J", "-"],
     correctIndex: 0,
     solutionWord: "GANZ",
-    explanation: "Das Wort lautet „GANZ“ und beginnt mit „G“.",
+    explanation: "Die Buchstaben ergeben das Wort „GANZ“ (Anfangsbuchstabe „G“).",
     difficulty: 1,
   },
   {
@@ -886,7 +890,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "J", "K", "C", "-"],
     correctIndex: 0,
     solutionWord: "GAST",
-    explanation: "Das Wort lautet „GAST“ und beginnt mit „G“.",
+    explanation: "Die Buchstaben ergeben das Wort „GAST“ (Anfangsbuchstabe „G“).",
     difficulty: 1,
   },
   {
@@ -895,7 +899,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["C", "J", "K", "G", "-"],
     correctIndex: 3,
     solutionWord: "GEHALT",
-    explanation: "Das Wort lautet „GEHALT“ und beginnt mit „G“.",
+    explanation:
+      "Erkennbar an der Vorsilbe GE-. Die Buchstaben ergeben das Wort „GEHALT“ (Anfangsbuchstabe „G“).",
     difficulty: 1,
   },
   {
@@ -905,7 +910,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "GEIGE",
     explanation:
-      "Das Lösungswort lautet „GEIGE“ (Anfangsbuchstabe „G“), der nicht unter A–D angeboten wird.",
+      "Erkennbar an der Vorsilbe GE-. Das Lösungswort lautet „GEIGE“ (Anfangsbuchstabe „G“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 1,
   },
   {
@@ -914,7 +919,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "D", "B", "G", "-"],
     correctIndex: 3,
     solutionWord: "GEIST",
-    explanation: 'Das Wort lautet „GEIST" und beginnt mit „G".',
+    explanation:
+      "Erkennbar an der Vorsilbe GE-. Die Buchstaben ergeben das Wort „GEIST“ (Anfangsbuchstabe „G“).",
     difficulty: 1,
   },
   {
@@ -923,7 +929,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["J", "K", "G", "C", "-"],
     correctIndex: 2,
     solutionWord: "GELB",
-    explanation: "Das Wort lautet „GELB“ und beginnt mit „G“.",
+    explanation: "Die Buchstaben ergeben das Wort „GELB“ (Anfangsbuchstabe „G“).",
     difficulty: 1,
   },
   {
@@ -932,7 +938,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["B", "C", "K", "G", "-"],
     correctIndex: 3,
     solutionWord: "GELD",
-    explanation: 'Das Wort lautet „GELD" und beginnt mit „G".',
+    explanation: "Die Buchstaben ergeben das Wort „GELD“ (Anfangsbuchstabe „G“).",
     difficulty: 1,
   },
   {
@@ -941,7 +947,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "C", "J", "K", "-"],
     correctIndex: 0,
     solutionWord: "GERSTE",
-    explanation: "Das Wort lautet „GERSTE“ und beginnt mit „G“.",
+    explanation:
+      "Erkennbar an der Vorsilbe GE-. Die Buchstaben ergeben das Wort „GERSTE“ (Anfangsbuchstabe „G“).",
     difficulty: 1,
   },
   {
@@ -950,7 +957,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["C", "J", "G", "K", "-"],
     correctIndex: 2,
     solutionWord: "GERUCH",
-    explanation: "Das Wort lautet „GERUCH“ und beginnt mit „G“.",
+    explanation:
+      "Erkennbar an der Vorsilbe GE-. Die Buchstaben ergeben das Wort „GERUCH“ (Anfangsbuchstabe „G“).",
     difficulty: 1,
   },
   {
@@ -959,7 +967,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["C", "J", "G", "K", "-"],
     correctIndex: 2,
     solutionWord: "GESCHENK",
-    explanation: "Das Wort lautet „GESCHENK“ und beginnt mit „G“.",
+    explanation:
+      "Erkennbar an der Vorsilbe GE-. Die Buchstaben ergeben das Wort „GESCHENK“ (Anfangsbuchstabe „G“).",
     difficulty: 1,
   },
   {
@@ -968,7 +977,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["J", "K", "G", "C", "-"],
     correctIndex: 2,
     solutionWord: "GEWEBE",
-    explanation: "Das Wort lautet „GEWEBE“ und beginnt mit „G“.",
+    explanation:
+      "Erkennbar an der Vorsilbe GE-. Die Buchstaben ergeben das Wort „GEWEBE“ (Anfangsbuchstabe „G“).",
     difficulty: 1,
   },
   {
@@ -977,7 +987,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["J", "C", "K", "G", "-"],
     correctIndex: 3,
     solutionWord: "GITTER",
-    explanation: "Das Wort lautet „GITTER“ und beginnt mit „G“.",
+    explanation: "Die Buchstaben ergeben das Wort „GITTER“ (Anfangsbuchstabe „G“).",
     difficulty: 1,
   },
   {
@@ -986,7 +996,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "C", "J", "K", "-"],
     correctIndex: 0,
     solutionWord: "GLAS",
-    explanation: "Das Wort lautet „GLAS“ und beginnt mit „G“.",
+    explanation: "Die Buchstaben ergeben das Wort „GLAS“ (Anfangsbuchstabe „G“).",
     difficulty: 1,
   },
   {
@@ -995,7 +1005,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "K", "C", "J", "-"],
     correctIndex: 0,
     solutionWord: "GLEIS",
-    explanation: "Das Wort lautet „GLEIS“ und beginnt mit „G“.",
+    explanation: "Die Buchstaben ergeben das Wort „GLEIS“ (Anfangsbuchstabe „G“).",
     difficulty: 1,
   },
   {
@@ -1004,7 +1014,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["J", "K", "C", "G", "-"],
     correctIndex: 3,
     solutionWord: "GLOCKE",
-    explanation: "Das Wort lautet „GLOCKE“ und beginnt mit „G“.",
+    explanation: "Die Buchstaben ergeben das Wort „GLOCKE“ (Anfangsbuchstabe „G“).",
     difficulty: 1,
   },
   {
@@ -1013,7 +1023,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "B", "C", "G", "-"],
     correctIndex: 3,
     solutionWord: "GOLD",
-    explanation: 'Das Wort lautet „GOLD" und beginnt mit „G".',
+    explanation: "Die Buchstaben ergeben das Wort „GOLD“ (Anfangsbuchstabe „G“).",
     difficulty: 1,
   },
   {
@@ -1023,7 +1033,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "GRAB",
     explanation:
-      "Das Lösungswort lautet „GRAB“ (Anfangsbuchstabe „G“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „GRAB“ (Anfangsbuchstabe „G“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 1,
   },
   {
@@ -1032,7 +1042,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["C", "K", "J", "G", "-"],
     correctIndex: 3,
     solutionWord: "GRANIT",
-    explanation: "Das Wort lautet „GRANIT“ und beginnt mit „G“.",
+    explanation: "Die Buchstaben ergeben das Wort „GRANIT“ (Anfangsbuchstabe „G“).",
     difficulty: 1,
   },
   {
@@ -1041,7 +1051,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["C", "J", "G", "K", "-"],
     correctIndex: 2,
     solutionWord: "GRAU",
-    explanation: "Das Wort lautet „GRAU“ und beginnt mit „G“.",
+    explanation: "Die Buchstaben ergeben das Wort „GRAU“ (Anfangsbuchstabe „G“).",
     difficulty: 1,
   },
   {
@@ -1050,7 +1060,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["J", "G", "C", "K", "-"],
     correctIndex: 1,
     solutionWord: "GROTTE",
-    explanation: "Das Wort lautet „GROTTE“ und beginnt mit „G“.",
+    explanation: "Die Buchstaben ergeben das Wort „GROTTE“ (Anfangsbuchstabe „G“).",
     difficulty: 1,
   },
   {
@@ -1059,7 +1069,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["J", "C", "G", "K", "-"],
     correctIndex: 2,
     solutionWord: "GRUBE",
-    explanation: "Das Wort lautet „GRUBE“ und beginnt mit „G“.",
+    explanation: "Die Buchstaben ergeben das Wort „GRUBE“ (Anfangsbuchstabe „G“).",
     difficulty: 1,
   },
   {
@@ -1068,7 +1078,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["J", "C", "G", "K", "-"],
     correctIndex: 2,
     solutionWord: "GRUN",
-    explanation: "Das Wort lautet „GRUN“ und beginnt mit „G“.",
+    explanation: "Die Buchstaben ergeben das Wort „GRUN“ (Anfangsbuchstabe „G“).",
     difficulty: 1,
   },
   {
@@ -1077,7 +1087,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["B", "C", "K", "G", "-"],
     correctIndex: 3,
     solutionWord: "GRUND",
-    explanation: 'Das Wort lautet „GRUND" und beginnt mit „G".',
+    explanation: "Die Buchstaben ergeben das Wort „GRUND“ (Anfangsbuchstabe „G“).",
     difficulty: 1,
   },
   {
@@ -1087,7 +1097,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "GURT",
     explanation:
-      "Das Lösungswort lautet „GURT“ (Anfangsbuchstabe „G“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „GURT“ (Anfangsbuchstabe „G“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 1,
   },
   {
@@ -1096,7 +1106,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["N", "H", "M", "K", "-"],
     correctIndex: 1,
     solutionWord: "HAFEN",
-    explanation: "Das Wort lautet „HAFEN“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HAFEN“ (Anfangsbuchstabe „H“).",
     difficulty: 1,
   },
   {
@@ -1106,7 +1116,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "HAGEL",
     explanation:
-      "Das Lösungswort lautet „HAGEL“ (Anfangsbuchstabe „H“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „HAGEL“ (Anfangsbuchstabe „H“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 1,
   },
   {
@@ -1115,7 +1125,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["N", "A", "H", "M", "-"],
     correctIndex: 2,
     solutionWord: "HAKEN",
-    explanation: 'Das Wort lautet „HAKEN" und beginnt mit „H".',
+    explanation: "Die Buchstaben ergeben das Wort „HAKEN“ (Anfangsbuchstabe „H“).",
     difficulty: 1,
   },
   {
@@ -1125,7 +1135,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "HALDE",
     explanation:
-      "Das Lösungswort lautet „HALDE“ (Anfangsbuchstabe „H“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „HALDE“ (Anfangsbuchstabe „H“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 1,
   },
   {
@@ -1134,7 +1144,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "H", "M", "N", "-"],
     correctIndex: 1,
     solutionWord: "HALM",
-    explanation: "Das Wort lautet „HALM“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HALM“ (Anfangsbuchstabe „H“).",
     difficulty: 1,
   },
   {
@@ -1143,7 +1153,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "M", "A", "H", "-"],
     correctIndex: 3,
     solutionWord: "HAND",
-    explanation: 'Das Wort lautet „HAND" und beginnt mit „H".',
+    explanation: "Die Buchstaben ergeben das Wort „HAND“ (Anfangsbuchstabe „H“).",
     difficulty: 1,
   },
   {
@@ -1152,7 +1162,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "K", "N", "M", "-"],
     correctIndex: 0,
     solutionWord: "HANDTUCH",
-    explanation: "Das Wort lautet „HANDTUCH“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HANDTUCH“ (Anfangsbuchstabe „H“).",
     difficulty: 1,
   },
   {
@@ -1161,7 +1171,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "K", "N", "M", "-"],
     correctIndex: 0,
     solutionWord: "HANDY",
-    explanation: "Das Wort lautet „HANDY“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HANDY“ (Anfangsbuchstabe „H“).",
     difficulty: 1,
   },
   {
@@ -1170,7 +1180,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "K", "M", "N", "-"],
     correctIndex: 0,
     solutionWord: "HANF",
-    explanation: "Das Wort lautet „HANF“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HANF“ (Anfangsbuchstabe „H“).",
     difficulty: 1,
   },
   {
@@ -1179,7 +1189,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["N", "K", "M", "H", "-"],
     correctIndex: 3,
     solutionWord: "HARFE",
-    explanation: "Das Wort lautet „HARFE“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HARFE“ (Anfangsbuchstabe „H“).",
     difficulty: 1,
   },
   {
@@ -1188,7 +1198,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["N", "H", "K", "M", "-"],
     correctIndex: 1,
     solutionWord: "HARKE",
-    explanation: "Das Wort lautet „HARKE“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HARKE“ (Anfangsbuchstabe „H“).",
     difficulty: 1,
   },
   {
@@ -1197,7 +1207,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["M", "N", "K", "H", "-"],
     correctIndex: 3,
     solutionWord: "HARZ",
-    explanation: "Das Wort lautet „HARZ“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HARZ“ (Anfangsbuchstabe „H“).",
     difficulty: 1,
   },
   {
@@ -1206,7 +1216,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["N", "K", "H", "M", "-"],
     correctIndex: 2,
     solutionWord: "HAUPT",
-    explanation: "Das Wort lautet „HAUPT“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HAUPT“ (Anfangsbuchstabe „H“).",
     difficulty: 1,
   },
   {
@@ -1215,7 +1225,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["M", "K", "N", "H", "-"],
     correctIndex: 3,
     solutionWord: "HAUS",
-    explanation: 'Das Wort lautet „HAUS" und beginnt mit „H".',
+    explanation: "Die Buchstaben ergeben das Wort „HAUS“ (Anfangsbuchstabe „H“).",
     difficulty: 1,
   },
   {
@@ -1224,7 +1234,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["N", "H", "M", "K", "-"],
     correctIndex: 1,
     solutionWord: "HAUSTIER",
-    explanation: "Das Wort lautet „HAUSTIER“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HAUSTIER“ (Anfangsbuchstabe „H“).",
     difficulty: 1,
   },
   {
@@ -1233,7 +1243,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["M", "N", "H", "K", "-"],
     correctIndex: 2,
     solutionWord: "HAUT",
-    explanation: 'Das Wort lautet „HAUT" und beginnt mit „H".',
+    explanation: "Die Buchstaben ergeben das Wort „HAUT“ (Anfangsbuchstabe „H“).",
     difficulty: 1,
   },
   {
@@ -1242,7 +1252,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "K", "N", "M", "-"],
     correctIndex: 0,
     solutionWord: "HEBEL",
-    explanation: "Das Wort lautet „HEBEL“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HEBEL“ (Anfangsbuchstabe „H“).",
     difficulty: 1,
   },
   {
@@ -1251,7 +1261,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "N", "M", "H", "-"],
     correctIndex: 3,
     solutionWord: "HECKE",
-    explanation: "Das Wort lautet „HECKE“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HECKE“ (Anfangsbuchstabe „H“).",
     difficulty: 1,
   },
   {
@@ -1260,7 +1270,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "M", "N", "K", "-"],
     correctIndex: 0,
     solutionWord: "HEFT",
-    explanation: "Das Wort lautet „HEFT“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HEFT“ (Anfangsbuchstabe „H“).",
     difficulty: 1,
   },
   {
@@ -1269,7 +1279,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["N", "K", "H", "M", "-"],
     correctIndex: 2,
     solutionWord: "HEIDE",
-    explanation: "Das Wort lautet „HEIDE“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HEIDE“ (Anfangsbuchstabe „H“).",
     difficulty: 1,
   },
   {
@@ -1279,7 +1289,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "HELGA",
     explanation:
-      "Das Lösungswort lautet „HELGA“ (Anfangsbuchstabe „H“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „HELGA“ (Anfangsbuchstabe „H“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 1,
   },
   {
@@ -1289,7 +1299,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "HELM",
     explanation:
-      "Das Lösungswort lautet „HELM“ (Anfangsbuchstabe „H“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „HELM“ (Anfangsbuchstabe „H“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 1,
   },
   {
@@ -1298,7 +1308,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "M", "K", "N", "-"],
     correctIndex: 0,
     solutionWord: "HEMD",
-    explanation: "Das Wort lautet „HEMD“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HEMD“ (Anfangsbuchstabe „H“).",
     difficulty: 1,
   },
   {
@@ -1307,7 +1317,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "K", "M", "N", "-"],
     correctIndex: 0,
     solutionWord: "HERBST",
-    explanation: "Das Wort lautet „HERBST“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HERBST“ (Anfangsbuchstabe „H“).",
     difficulty: 1,
   },
   {
@@ -1316,7 +1326,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "H", "M", "N", "-"],
     correctIndex: 1,
     solutionWord: "HERD",
-    explanation: "Das Wort lautet „HERD“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HERD“ (Anfangsbuchstabe „H“).",
     difficulty: 1,
   },
   {
@@ -1325,7 +1335,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["A", "K", "N", "H", "-"],
     correctIndex: 3,
     solutionWord: "HERZ",
-    explanation: 'Das Wort lautet „HERZ" und beginnt mit „H".',
+    explanation: "Die Buchstaben ergeben das Wort „HERZ“ (Anfangsbuchstabe „H“).",
     difficulty: 1,
   },
   {
@@ -1334,7 +1344,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "M", "N", "H", "-"],
     correctIndex: 3,
     solutionWord: "HILFE",
-    explanation: "Das Wort lautet „HILFE“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HILFE“ (Anfangsbuchstabe „H“).",
     difficulty: 1,
   },
   {
@@ -1343,7 +1353,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "N", "H", "M", "-"],
     correctIndex: 2,
     solutionWord: "HONIG",
-    explanation: "Das Wort lautet „HONIG“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HONIG“ (Anfangsbuchstabe „H“).",
     difficulty: 1,
   },
   {
@@ -1352,7 +1362,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["N", "M", "K", "H", "-"],
     correctIndex: 3,
     solutionWord: "HOSE",
-    explanation: "Das Wort lautet „HOSE“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HOSE“ (Anfangsbuchstabe „H“).",
     difficulty: 1,
   },
   {
@@ -1361,7 +1371,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["M", "N", "K", "H", "-"],
     correctIndex: 3,
     solutionWord: "HOTEL",
-    explanation: "Das Wort lautet „HOTEL“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HOTEL“ (Anfangsbuchstabe „H“).",
     difficulty: 1,
   },
   {
@@ -1370,7 +1380,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["M", "A", "H", "K", "-"],
     correctIndex: 2,
     solutionWord: "HUND",
-    explanation: 'Das Wort lautet „HUND" und beginnt mit „H".',
+    explanation: "Die Buchstaben ergeben das Wort „HUND“ (Anfangsbuchstabe „H“).",
     difficulty: 1,
   },
   {
@@ -1380,7 +1390,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "IGEL",
     explanation:
-      "Das Lösungswort lautet „IGEL“ (Anfangsbuchstabe „I“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „IGEL“ (Anfangsbuchstabe „I“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 1,
   },
   {
@@ -1390,7 +1400,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "ILTIS",
     explanation:
-      "Das Lösungswort lautet „ILTIS“ (Anfangsbuchstabe „I“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „ILTIS“ (Anfangsbuchstabe „I“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 1,
   },
   {
@@ -1399,7 +1409,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["L", "J", "I", "E", "-"],
     correctIndex: 2,
     solutionWord: "INSEL",
-    explanation: "Das Wort lautet „INSEL“ und beginnt mit „I“.",
+    explanation: "Die Buchstaben ergeben das Wort „INSEL“ (Anfangsbuchstabe „I“).",
     difficulty: 1,
   },
   {
@@ -1408,7 +1418,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "I", "J", "Y", "-"],
     correctIndex: 2,
     solutionWord: "JACKE",
-    explanation: "Das Wort lautet „JACKE“ und beginnt mit „J“.",
+    explanation: "Die Buchstaben ergeben das Wort „JACKE“ (Anfangsbuchstabe „J“).",
     difficulty: 1,
   },
   {
@@ -1418,7 +1428,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "JADE",
     explanation:
-      "Das Lösungswort lautet „JADE“ (Anfangsbuchstabe „J“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „JADE“ (Anfangsbuchstabe „J“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 1,
   },
   {
@@ -1428,7 +1438,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "JOCH",
     explanation:
-      "Das Lösungswort lautet „JOCH“ (Anfangsbuchstabe „J“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „JOCH“ (Anfangsbuchstabe „J“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 1,
   },
   {
@@ -1437,7 +1447,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["Y", "G", "I", "J", "-"],
     correctIndex: 3,
     solutionWord: "JUBEL",
-    explanation: "Das Wort lautet „JUBEL“ und beginnt mit „J“.",
+    explanation: "Die Buchstaben ergeben das Wort „JUBEL“ (Anfangsbuchstabe „J“).",
     difficulty: 1,
   },
   {
@@ -1446,7 +1456,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["Y", "G", "J", "I", "-"],
     correctIndex: 2,
     solutionWord: "JUNGE",
-    explanation: "Das Wort lautet „JUNGE“ und beginnt mit „J“.",
+    explanation: "Die Buchstaben ergeben das Wort „JUNGE“ (Anfangsbuchstabe „J“).",
     difficulty: 1,
   },
   {
@@ -1455,7 +1465,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "H", "K", "C", "-"],
     correctIndex: 2,
     solutionWord: "KABEL",
-    explanation: "Das Wort lautet „KABEL“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KABEL“ (Anfangsbuchstabe „K“).",
     difficulty: 1,
   },
   {
@@ -1464,7 +1474,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "C", "H", "G", "-"],
     correctIndex: 0,
     solutionWord: "KAHN",
-    explanation: "Das Wort lautet „KAHN“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KAHN“ (Anfangsbuchstabe „K“).",
     difficulty: 1,
   },
   {
@@ -1473,7 +1483,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "K", "H", "C", "-"],
     correctIndex: 1,
     solutionWord: "KALB",
-    explanation: "Das Wort lautet „KALB“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KALB“ (Anfangsbuchstabe „K“).",
     difficulty: 1,
   },
   {
@@ -1482,7 +1492,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["C", "G", "K", "H", "-"],
     correctIndex: 2,
     solutionWord: "KALTE",
-    explanation: "Das Wort lautet „KALTE“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KALTE“ (Anfangsbuchstabe „K“).",
     difficulty: 1,
   },
   {
@@ -1491,7 +1501,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "H", "G", "C", "-"],
     correctIndex: 0,
     solutionWord: "KAMEL",
-    explanation: "Das Wort lautet „KAMEL“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KAMEL“ (Anfangsbuchstabe „K“).",
     difficulty: 1,
   },
   {
@@ -1500,7 +1510,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "C", "H", "K", "-"],
     correctIndex: 3,
     solutionWord: "KANAL",
-    explanation: "Das Wort lautet „KANAL“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KANAL“ (Anfangsbuchstabe „K“).",
     difficulty: 1,
   },
   {
@@ -1509,7 +1519,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "H", "C", "G", "-"],
     correctIndex: 0,
     solutionWord: "KANNE",
-    explanation: "Das Wort lautet „KANNE“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KANNE“ (Anfangsbuchstabe „K“).",
     difficulty: 1,
   },
   {
@@ -1518,7 +1528,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "C", "K", "G", "-"],
     correctIndex: 2,
     solutionWord: "KANTE",
-    explanation: "Das Wort lautet „KANTE“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KANTE“ (Anfangsbuchstabe „K“).",
     difficulty: 1,
   },
   {
@@ -1527,7 +1537,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "C", "G", "H", "-"],
     correctIndex: 0,
     solutionWord: "KAPPE",
-    explanation: "Das Wort lautet „KAPPE“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KAPPE“ (Anfangsbuchstabe „K“).",
     difficulty: 1,
   },
   {
@@ -1536,7 +1546,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["C", "Q", "K", "X", "-"],
     correctIndex: 2,
     solutionWord: "KARTE",
-    explanation: 'Das Wort lautet „KARTE" und beginnt mit „K".',
+    explanation: "Die Buchstaben ergeben das Wort „KARTE“ (Anfangsbuchstabe „K“).",
     difficulty: 1,
   },
   {
@@ -1545,7 +1555,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "Q", "X", "K", "-"],
     correctIndex: 3,
     solutionWord: "KATZE",
-    explanation: 'Das Wort lautet „KATZE" und beginnt mit „K".',
+    explanation: "Die Buchstaben ergeben das Wort „KATZE“ (Anfangsbuchstabe „K“).",
     difficulty: 1,
   },
   {
@@ -1554,7 +1564,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "K", "H", "C", "-"],
     correctIndex: 1,
     solutionWord: "KEIL",
-    explanation: "Das Wort lautet „KEIL“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KEIL“ (Anfangsbuchstabe „K“).",
     difficulty: 1,
   },
   {
@@ -1563,7 +1573,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "G", "H", "C", "-"],
     correctIndex: 0,
     solutionWord: "KELCH",
-    explanation: "Das Wort lautet „KELCH“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KELCH“ (Anfangsbuchstabe „K“).",
     difficulty: 1,
   },
   {
@@ -1572,7 +1582,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["C", "G", "H", "K", "-"],
     correctIndex: 3,
     solutionWord: "KERN",
-    explanation: "Das Wort lautet „KERN“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KERN“ (Anfangsbuchstabe „K“).",
     difficulty: 1,
   },
   {
@@ -1581,7 +1591,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["Q", "K", "X", "G", "-"],
     correctIndex: 1,
     solutionWord: "KERZE",
-    explanation: 'Das Wort lautet „KERZE" und beginnt mit „K".',
+    explanation: "Die Buchstaben ergeben das Wort „KERZE“ (Anfangsbuchstabe „K“).",
     difficulty: 1,
   },
   {
@@ -1590,7 +1600,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "C", "H", "K", "-"],
     correctIndex: 3,
     solutionWord: "KETTE",
-    explanation: "Das Wort lautet „KETTE“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KETTE“ (Anfangsbuchstabe „K“).",
     difficulty: 1,
   },
   {
@@ -1600,7 +1610,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "KIES",
     explanation:
-      "Das Lösungswort lautet „KIES“ (Anfangsbuchstabe „K“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „KIES“ (Anfangsbuchstabe „K“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 1,
   },
   {
@@ -1609,7 +1619,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["C", "G", "K", "H", "-"],
     correctIndex: 2,
     solutionWord: "KISTE",
-    explanation: "Das Wort lautet „KISTE“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KISTE“ (Anfangsbuchstabe „K“).",
     difficulty: 1,
   },
   {
@@ -1618,7 +1628,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "C", "G", "K", "-"],
     correctIndex: 3,
     solutionWord: "KITT",
-    explanation: "Das Wort lautet „KITT“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KITT“ (Anfangsbuchstabe „K“).",
     difficulty: 1,
   },
   {
@@ -1627,7 +1637,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "K", "C", "G", "-"],
     correctIndex: 1,
     solutionWord: "KLANG",
-    explanation: "Das Wort lautet „KLANG“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KLANG“ (Anfangsbuchstabe „K“).",
     difficulty: 1,
   },
   {
@@ -1636,7 +1646,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "C", "H", "G", "-"],
     correctIndex: 0,
     solutionWord: "KLEID",
-    explanation: "Das Wort lautet „KLEID“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KLEID“ (Anfangsbuchstabe „K“).",
     difficulty: 1,
   },
   {
@@ -1645,7 +1655,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["C", "G", "K", "H", "-"],
     correctIndex: 2,
     solutionWord: "KLINGE",
-    explanation: "Das Wort lautet „KLINGE“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KLINGE“ (Anfangsbuchstabe „K“).",
     difficulty: 1,
   },
   {
@@ -1654,7 +1664,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "C", "H", "G", "-"],
     correctIndex: 0,
     solutionWord: "KLOTZ",
-    explanation: "Das Wort lautet „KLOTZ“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KLOTZ“ (Anfangsbuchstabe „K“).",
     difficulty: 1,
   },
   {
@@ -1663,7 +1673,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "K", "G", "C", "-"],
     correctIndex: 1,
     solutionWord: "KLUFT",
-    explanation: "Das Wort lautet „KLUFT“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KLUFT“ (Anfangsbuchstabe „K“).",
     difficulty: 1,
   },
   {
@@ -1673,7 +1683,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "KNABE",
     explanation:
-      "Das Lösungswort lautet „KNABE“ (Anfangsbuchstabe „K“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „KNABE“ (Anfangsbuchstabe „K“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 1,
   },
   {
@@ -1682,7 +1692,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "C", "K", "G", "-"],
     correctIndex: 2,
     solutionWord: "KNALL",
-    explanation: "Das Wort lautet „KNALL“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KNALL“ (Anfangsbuchstabe „K“).",
     difficulty: 1,
   },
   {
@@ -1691,7 +1701,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "C", "H", "G", "-"],
     correctIndex: 0,
     solutionWord: "KNAUF",
-    explanation: "Das Wort lautet „KNAUF“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KNAUF“ (Anfangsbuchstabe „K“).",
     difficulty: 1,
   },
   {
@@ -1700,7 +1710,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "Q", "X", "K", "-"],
     correctIndex: 3,
     solutionWord: "KNIE",
-    explanation: 'Das Wort lautet „KNIE" und beginnt mit „K".',
+    explanation: "Die Buchstaben ergeben das Wort „KNIE“ (Anfangsbuchstabe „K“).",
     difficulty: 1,
   },
   {
@@ -1709,7 +1719,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["C", "K", "X", "Q", "-"],
     correctIndex: 1,
     solutionWord: "KNOPF",
-    explanation: 'Das Wort lautet „KNOPF" und beginnt mit „K".',
+    explanation: "Die Buchstaben ergeben das Wort „KNOPF“ (Anfangsbuchstabe „K“).",
     difficulty: 1,
   },
   {
@@ -1718,7 +1728,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "H", "K", "C", "-"],
     correctIndex: 2,
     solutionWord: "KOHL",
-    explanation: "Das Wort lautet „KOHL“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KOHL“ (Anfangsbuchstabe „K“).",
     difficulty: 1,
   },
   {
@@ -1727,7 +1737,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["Q", "K", "C", "X", "-"],
     correctIndex: 1,
     solutionWord: "KOHLE",
-    explanation: 'Das Wort lautet „KOHLE" und beginnt mit „K".',
+    explanation: "Die Buchstaben ergeben das Wort „KOHLE“ (Anfangsbuchstabe „K“).",
     difficulty: 1,
   },
   {
@@ -1736,7 +1746,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "H", "G", "C", "-"],
     correctIndex: 0,
     solutionWord: "KOPF",
-    explanation: "Das Wort lautet „KOPF“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KOPF“ (Anfangsbuchstabe „K“).",
     difficulty: 1,
   },
   {
@@ -1745,7 +1755,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "C", "H", "K", "-"],
     correctIndex: 3,
     solutionWord: "KORB",
-    explanation: "Das Wort lautet „KORB“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KORB“ (Anfangsbuchstabe „K“).",
     difficulty: 1,
   },
   {
@@ -1754,7 +1764,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "G", "C", "K", "-"],
     correctIndex: 3,
     solutionWord: "KORKEN",
-    explanation: "Das Wort lautet „KORKEN“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KORKEN“ (Anfangsbuchstabe „K“).",
     difficulty: 1,
   },
   {
@@ -1763,7 +1773,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "C", "G", "K", "-"],
     correctIndex: 3,
     solutionWord: "KORN",
-    explanation: "Das Wort lautet „KORN“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KORN“ (Anfangsbuchstabe „K“).",
     difficulty: 1,
   },
   {
@@ -1772,7 +1782,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["X", "K", "G", "Q", "-"],
     correctIndex: 1,
     solutionWord: "KRAFT",
-    explanation: 'Das Wort lautet „KRAFT" und beginnt mit „K".',
+    explanation: "Die Buchstaben ergeben das Wort „KRAFT“ (Anfangsbuchstabe „K“).",
     difficulty: 1,
   },
   {
@@ -1781,7 +1791,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["Q", "X", "G", "K", "-"],
     correctIndex: 3,
     solutionWord: "KREBS",
-    explanation: 'Das Wort lautet „KREBS" und beginnt mit „K".',
+    explanation: "Die Buchstaben ergeben das Wort „KREBS“ (Anfangsbuchstabe „K“).",
     difficulty: 1,
   },
   {
@@ -1791,7 +1801,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "KREIDE",
     explanation:
-      "Das Lösungswort lautet „KREIDE“ (Anfangsbuchstabe „K“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „KREIDE“ (Anfangsbuchstabe „K“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 1,
   },
   {
@@ -1800,7 +1810,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "G", "C", "H", "-"],
     correctIndex: 0,
     solutionWord: "KREIS",
-    explanation: "Das Wort lautet „KREIS“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KREIS“ (Anfangsbuchstabe „K“).",
     difficulty: 1,
   },
   {
@@ -1809,7 +1819,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["C", "K", "H", "G", "-"],
     correctIndex: 1,
     solutionWord: "KREUZ",
-    explanation: "Das Wort lautet „KREUZ“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KREUZ“ (Anfangsbuchstabe „K“).",
     difficulty: 1,
   },
   {
@@ -1818,7 +1828,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "C", "H", "K", "-"],
     correctIndex: 3,
     solutionWord: "KRONE",
-    explanation: "Das Wort lautet „KRONE“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KRONE“ (Anfangsbuchstabe „K“).",
     difficulty: 1,
   },
   {
@@ -1827,7 +1837,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "K", "H", "C", "-"],
     correctIndex: 1,
     solutionWord: "KRUG",
-    explanation: "Das Wort lautet „KRUG“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KRUG“ (Anfangsbuchstabe „K“).",
     difficulty: 1,
   },
   {
@@ -1836,7 +1846,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "G", "K", "C", "-"],
     correctIndex: 2,
     solutionWord: "KUCHEN",
-    explanation: "Das Wort lautet „KUCHEN“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KUCHEN“ (Anfangsbuchstabe „K“).",
     difficulty: 1,
   },
   {
@@ -1845,7 +1855,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "K", "C", "H", "-"],
     correctIndex: 1,
     solutionWord: "KUGEL",
-    explanation: "Das Wort lautet „KUGEL“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KUGEL“ (Anfangsbuchstabe „K“).",
     difficulty: 1,
   },
   {
@@ -1854,7 +1864,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "H", "C", "G", "-"],
     correctIndex: 0,
     solutionWord: "KUNST",
-    explanation: "Das Wort lautet „KUNST“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KUNST“ (Anfangsbuchstabe „K“).",
     difficulty: 1,
   },
   {
@@ -1863,7 +1873,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["C", "G", "K", "H", "-"],
     correctIndex: 2,
     solutionWord: "KURVE",
-    explanation: "Das Wort lautet „KURVE“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KURVE“ (Anfangsbuchstabe „K“).",
     difficulty: 1,
   },
   {
@@ -1872,7 +1882,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["I", "T", "L", "R", "-"],
     correctIndex: 2,
     solutionWord: "LACHS",
-    explanation: "Das Wort lautet „LACHS“ und beginnt mit „L“.",
+    explanation: "Die Buchstaben ergeben das Wort „LACHS“ (Anfangsbuchstabe „L“).",
     difficulty: 1,
   },
   {
@@ -1881,7 +1891,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["T", "L", "R", "I", "-"],
     correctIndex: 1,
     solutionWord: "LACK",
-    explanation: "Das Wort lautet „LACK“ und beginnt mit „L“.",
+    explanation: "Die Buchstaben ergeben das Wort „LACK“ (Anfangsbuchstabe „L“).",
     difficulty: 1,
   },
   {
@@ -1890,7 +1900,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["I", "T", "R", "L", "-"],
     correctIndex: 3,
     solutionWord: "LADEN",
-    explanation: "Das Wort lautet „LADEN“ und beginnt mit „L“.",
+    explanation: "Die Buchstaben ergeben das Wort „LADEN“ (Anfangsbuchstabe „L“).",
     difficulty: 1,
   },
   {
@@ -1899,7 +1909,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["T", "I", "R", "L", "-"],
     correctIndex: 3,
     solutionWord: "LAIB",
-    explanation: "Das Wort lautet „LAIB“ und beginnt mit „L“.",
+    explanation: "Die Buchstaben ergeben das Wort „LAIB“ (Anfangsbuchstabe „L“).",
     difficulty: 1,
   },
   {
@@ -1908,7 +1918,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["J", "I", "T", "L", "-"],
     correctIndex: 3,
     solutionWord: "LAMPE",
-    explanation: 'Das Wort lautet „LAMPE" und beginnt mit „L".',
+    explanation: "Die Buchstaben ergeben das Wort „LAMPE“ (Anfangsbuchstabe „L“).",
     difficulty: 1,
   },
   {
@@ -1917,7 +1927,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["I", "T", "L", "R", "-"],
     correctIndex: 2,
     solutionWord: "LATTE",
-    explanation: "Das Wort lautet „LATTE“ und beginnt mit „L“.",
+    explanation: "Die Buchstaben ergeben das Wort „LATTE“ (Anfangsbuchstabe „L“).",
     difficulty: 1,
   },
   {
@@ -1926,7 +1936,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["R", "T", "L", "I", "-"],
     correctIndex: 2,
     solutionWord: "LAUB",
-    explanation: "Das Wort lautet „LAUB“ und beginnt mit „L“.",
+    explanation: "Die Buchstaben ergeben das Wort „LAUB“ (Anfangsbuchstabe „L“).",
     difficulty: 1,
   },
   {
@@ -1935,7 +1945,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["L", "T", "I", "R", "-"],
     correctIndex: 0,
     solutionWord: "LAUGE",
-    explanation: "Das Wort lautet „LAUGE“ und beginnt mit „L“.",
+    explanation: "Die Buchstaben ergeben das Wort „LAUGE“ (Anfangsbuchstabe „L“).",
     difficulty: 1,
   },
   {
@@ -1944,7 +1954,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["T", "I", "R", "L", "-"],
     correctIndex: 3,
     solutionWord: "LAUNE",
-    explanation: "Das Wort lautet „LAUNE“ und beginnt mit „L“.",
+    explanation: "Die Buchstaben ergeben das Wort „LAUNE“ (Anfangsbuchstabe „L“).",
     difficulty: 1,
   },
   {
@@ -1954,7 +1964,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "LAUS",
     explanation:
-      "Das Lösungswort lautet „LAUS“ (Anfangsbuchstabe „L“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „LAUS“ (Anfangsbuchstabe „L“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 1,
   },
   {
@@ -1963,7 +1973,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["L", "R", "I", "T", "-"],
     correctIndex: 0,
     solutionWord: "LAWINE",
-    explanation: "Das Wort lautet „LAWINE“ und beginnt mit „L“.",
+    explanation: "Die Buchstaben ergeben das Wort „LAWINE“ (Anfangsbuchstabe „L“).",
     difficulty: 1,
   },
   {
@@ -1972,7 +1982,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["T", "J", "I", "L", "-"],
     correctIndex: 3,
     solutionWord: "LEBER",
-    explanation: 'Das Wort lautet „LEBER" und beginnt mit „L".',
+    explanation: "Die Buchstaben ergeben das Wort „LEBER“ (Anfangsbuchstabe „L“).",
     difficulty: 1,
   },
   {
@@ -1982,7 +1992,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "LEHM",
     explanation:
-      "Das Lösungswort lautet „LEHM“ (Anfangsbuchstabe „L“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „LEHM“ (Anfangsbuchstabe „L“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 1,
   },
   {
@@ -1991,7 +2001,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["R", "L", "T", "I", "-"],
     correctIndex: 1,
     solutionWord: "LEHRE",
-    explanation: "Das Wort lautet „LEHRE“ und beginnt mit „L“.",
+    explanation: "Die Buchstaben ergeben das Wort „LEHRE“ (Anfangsbuchstabe „L“).",
     difficulty: 1,
   },
   {
@@ -2000,7 +2010,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["I", "T", "R", "L", "-"],
     correctIndex: 3,
     solutionWord: "LEIM",
-    explanation: "Das Wort lautet „LEIM“ und beginnt mit „L“.",
+    explanation: "Die Buchstaben ergeben das Wort „LEIM“ (Anfangsbuchstabe „L“).",
     difficulty: 1,
   },
   {
@@ -2009,7 +2019,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["I", "R", "L", "T", "-"],
     correctIndex: 2,
     solutionWord: "LEISE",
-    explanation: "Das Wort lautet „LEISE“ und beginnt mit „L“.",
+    explanation: "Die Buchstaben ergeben das Wort „LEISE“ (Anfangsbuchstabe „L“).",
     difficulty: 1,
   },
   {
@@ -2018,7 +2028,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["T", "I", "L", "R", "-"],
     correctIndex: 2,
     solutionWord: "LEISTE",
-    explanation: "Das Wort lautet „LEISTE“ und beginnt mit „L“.",
+    explanation: "Die Buchstaben ergeben das Wort „LEISTE“ (Anfangsbuchstabe „L“).",
     difficulty: 1,
   },
   {
@@ -2027,7 +2037,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["T", "I", "R", "L", "-"],
     correctIndex: 3,
     solutionWord: "LEITER",
-    explanation: "Das Wort lautet „LEITER“ und beginnt mit „L“.",
+    explanation: "Die Buchstaben ergeben das Wort „LEITER“ (Anfangsbuchstabe „L“).",
     difficulty: 1,
   },
   {
@@ -2036,7 +2046,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["I", "L", "R", "T", "-"],
     correctIndex: 1,
     solutionWord: "LICHT",
-    explanation: "Das Wort lautet „LICHT“ und beginnt mit „L“.",
+    explanation: "Die Buchstaben ergeben das Wort „LICHT“ (Anfangsbuchstabe „L“).",
     difficulty: 1,
   },
   {
@@ -2046,7 +2056,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "LIEBE",
     explanation:
-      "Das Lösungswort lautet „LIEBE“ (Anfangsbuchstabe „L“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „LIEBE“ (Anfangsbuchstabe „L“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 1,
   },
   {
@@ -2055,7 +2065,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["T", "I", "L", "R", "-"],
     correctIndex: 2,
     solutionWord: "LILIE",
-    explanation: "Das Wort lautet „LILIE“ und beginnt mit „L“.",
+    explanation: "Die Buchstaben ergeben das Wort „LILIE“ (Anfangsbuchstabe „L“).",
     difficulty: 1,
   },
   {
@@ -2064,7 +2074,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["T", "R", "L", "I", "-"],
     correctIndex: 2,
     solutionWord: "LIMIT",
-    explanation: "Das Wort lautet „LIMIT“ und beginnt mit „L“.",
+    explanation: "Die Buchstaben ergeben das Wort „LIMIT“ (Anfangsbuchstabe „L“).",
     difficulty: 1,
   },
   {
@@ -2073,7 +2083,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["L", "R", "T", "I", "-"],
     correctIndex: 0,
     solutionWord: "LOEB",
-    explanation: "Das Wort lautet „LOEB“ und beginnt mit „L“.",
+    explanation: "Die Buchstaben ergeben das Wort „LOEB“ (Anfangsbuchstabe „L“).",
     difficulty: 1,
   },
   {
@@ -2082,7 +2092,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["L", "I", "R", "T", "-"],
     correctIndex: 0,
     solutionWord: "LOGIK",
-    explanation: "Das Wort lautet „LOGIK“ und beginnt mit „L“.",
+    explanation: "Die Buchstaben ergeben das Wort „LOGIK“ (Anfangsbuchstabe „L“).",
     difficulty: 1,
   },
   {
@@ -2092,7 +2102,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "LOHN",
     explanation:
-      "Das Lösungswort lautet „LOHN“ (Anfangsbuchstabe „L“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „LOHN“ (Anfangsbuchstabe „L“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 1,
   },
   {
@@ -2101,7 +2111,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["I", "R", "L", "T", "-"],
     correctIndex: 2,
     solutionWord: "LOTUS",
-    explanation: "Das Wort lautet „LOTUS“ und beginnt mit „L“.",
+    explanation: "Die Buchstaben ergeben das Wort „LOTUS“ (Anfangsbuchstabe „L“).",
     difficulty: 1,
   },
   {
@@ -2110,7 +2120,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["I", "J", "L", "T", "-"],
     correctIndex: 2,
     solutionWord: "LUNGE",
-    explanation: 'Das Wort lautet „LUNGE" und beginnt mit „L".',
+    explanation: "Die Buchstaben ergeben das Wort „LUNGE“ (Anfangsbuchstabe „L“).",
     difficulty: 1,
   },
   {
@@ -2119,7 +2129,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["T", "R", "I", "L", "-"],
     correctIndex: 3,
     solutionWord: "LUPE",
-    explanation: "Das Wort lautet „LUPE“ und beginnt mit „L“.",
+    explanation: "Die Buchstaben ergeben das Wort „LUPE“ (Anfangsbuchstabe „L“).",
     difficulty: 1,
   },
   {
@@ -2128,7 +2138,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["M", "N", "W", "H", "-"],
     correctIndex: 0,
     solutionWord: "MACHT",
-    explanation: "Das Wort lautet „MACHT“ und beginnt mit „M“.",
+    explanation: "Die Buchstaben ergeben das Wort „MACHT“ (Anfangsbuchstabe „M“).",
     difficulty: 1,
   },
   {
@@ -2137,7 +2147,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "N", "M", "W", "-"],
     correctIndex: 2,
     solutionWord: "MAGEN",
-    explanation: "Das Wort lautet „MAGEN“ und beginnt mit „M“.",
+    explanation: "Die Buchstaben ergeben das Wort „MAGEN“ (Anfangsbuchstabe „M“).",
     difficulty: 1,
   },
   {
@@ -2146,7 +2156,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "N", "W", "M", "-"],
     correctIndex: 3,
     solutionWord: "MAIS",
-    explanation: "Das Wort lautet „MAIS“ und beginnt mit „M“.",
+    explanation: "Die Buchstaben ergeben das Wort „MAIS“ (Anfangsbuchstabe „M“).",
     difficulty: 1,
   },
   {
@@ -2155,7 +2165,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["N", "W", "H", "M", "-"],
     correctIndex: 3,
     solutionWord: "MALZ",
-    explanation: "Das Wort lautet „MALZ“ und beginnt mit „M“.",
+    explanation: "Die Buchstaben ergeben das Wort „MALZ“ (Anfangsbuchstabe „M“).",
     difficulty: 1,
   },
   {
@@ -2164,7 +2174,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["N", "M", "W", "H", "-"],
     correctIndex: 1,
     solutionWord: "MARKE",
-    explanation: "Das Wort lautet „MARKE“ und beginnt mit „M“.",
+    explanation: "Die Buchstaben ergeben das Wort „MARKE“ (Anfangsbuchstabe „M“).",
     difficulty: 1,
   },
   {
@@ -2173,7 +2183,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["N", "M", "W", "H", "-"],
     correctIndex: 1,
     solutionWord: "MARKT",
-    explanation: "Das Wort lautet „MARKT“ und beginnt mit „M“.",
+    explanation: "Die Buchstaben ergeben das Wort „MARKT“ (Anfangsbuchstabe „M“).",
     difficulty: 1,
   },
   {
@@ -2183,7 +2193,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "MARSCH",
     explanation:
-      "Das Lösungswort lautet „MARSCH“ (Anfangsbuchstabe „M“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „MARSCH“ (Anfangsbuchstabe „M“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 1,
   },
   {
@@ -2192,7 +2202,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["W", "N", "M", "H", "-"],
     correctIndex: 2,
     solutionWord: "MASKE",
-    explanation: "Das Wort lautet „MASKE“ und beginnt mit „M“.",
+    explanation: "Die Buchstaben ergeben das Wort „MASKE“ (Anfangsbuchstabe „M“).",
     difficulty: 1,
   },
   {
@@ -2201,7 +2211,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["M", "W", "N", "H", "-"],
     correctIndex: 0,
     solutionWord: "MAST",
-    explanation: "Das Wort lautet „MAST“ und beginnt mit „M“.",
+    explanation: "Die Buchstaben ergeben das Wort „MAST“ (Anfangsbuchstabe „M“).",
     difficulty: 1,
   },
   {
@@ -2211,7 +2221,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "MATTE",
     explanation:
-      "Das Lösungswort lautet „MATTE“ (Anfangsbuchstabe „M“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „MATTE“ (Anfangsbuchstabe „M“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 1,
   },
   {
@@ -2220,7 +2230,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["N", "M", "W", "H", "-"],
     correctIndex: 1,
     solutionWord: "MAUER",
-    explanation: "Das Wort lautet „MAUER“ und beginnt mit „M“.",
+    explanation: "Die Buchstaben ergeben das Wort „MAUER“ (Anfangsbuchstabe „M“).",
     difficulty: 1,
   },
   {
@@ -2229,7 +2239,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["W", "R", "H", "M", "-"],
     correctIndex: 3,
     solutionWord: "MAUS",
-    explanation: 'Das Wort lautet „MAUS" und beginnt mit „M".',
+    explanation: "Die Buchstaben ergeben das Wort „MAUS“ (Anfangsbuchstabe „M“).",
     difficulty: 1,
   },
   {
@@ -2238,7 +2248,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["N", "H", "M", "W", "-"],
     correctIndex: 2,
     solutionWord: "MEER",
-    explanation: "Das Wort lautet „MEER“ und beginnt mit „M“.",
+    explanation: "Die Buchstaben ergeben das Wort „MEER“ (Anfangsbuchstabe „M“).",
     difficulty: 1,
   },
   {
@@ -2247,7 +2257,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["N", "H", "M", "W", "-"],
     correctIndex: 2,
     solutionWord: "MEILE",
-    explanation: "Das Wort lautet „MEILE“ und beginnt mit „M“.",
+    explanation: "Die Buchstaben ergeben das Wort „MEILE“ (Anfangsbuchstabe „M“).",
     difficulty: 1,
   },
   {
@@ -2256,7 +2266,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["W", "N", "M", "R", "-"],
     correctIndex: 2,
     solutionWord: "MILCH",
-    explanation: 'Das Wort lautet „MILCH" und beginnt mit „M".',
+    explanation: "Die Buchstaben ergeben das Wort „MILCH“ (Anfangsbuchstabe „M“).",
     difficulty: 1,
   },
   {
@@ -2266,7 +2276,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "MINZE",
     explanation:
-      "Das Lösungswort lautet „MINZE“ (Anfangsbuchstabe „M“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „MINZE“ (Anfangsbuchstabe „M“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 1,
   },
   {
@@ -2276,7 +2286,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "MITTE",
     explanation:
-      "Das Lösungswort lautet „MITTE“ (Anfangsbuchstabe „M“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „MITTE“ (Anfangsbuchstabe „M“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 1,
   },
   {
@@ -2285,7 +2295,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["W", "H", "N", "M", "-"],
     correctIndex: 3,
     solutionWord: "MOLCH",
-    explanation: "Das Wort lautet „MOLCH“ und beginnt mit „M“.",
+    explanation: "Die Buchstaben ergeben das Wort „MOLCH“ (Anfangsbuchstabe „M“).",
     difficulty: 1,
   },
   {
@@ -2294,7 +2304,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["R", "H", "W", "M", "-"],
     correctIndex: 3,
     solutionWord: "MOND",
-    explanation: 'Das Wort lautet „MOND" und beginnt mit „M".',
+    explanation: "Die Buchstaben ergeben das Wort „MOND“ (Anfangsbuchstabe „M“).",
     difficulty: 1,
   },
   {
@@ -2303,7 +2313,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["N", "W", "M", "H", "-"],
     correctIndex: 2,
     solutionWord: "MOOS",
-    explanation: "Das Wort lautet „MOOS“ und beginnt mit „M“.",
+    explanation: "Die Buchstaben ergeben das Wort „MOOS“ (Anfangsbuchstabe „M“).",
     difficulty: 1,
   },
   {
@@ -2312,7 +2322,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["M", "W", "N", "H", "-"],
     correctIndex: 0,
     solutionWord: "MORAL",
-    explanation: "Das Wort lautet „MORAL“ und beginnt mit „M“.",
+    explanation: "Die Buchstaben ergeben das Wort „MORAL“ (Anfangsbuchstabe „M“).",
     difficulty: 1,
   },
   {
@@ -2321,7 +2331,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["N", "H", "M", "W", "-"],
     correctIndex: 2,
     solutionWord: "MORD",
-    explanation: "Das Wort lautet „MORD“ und beginnt mit „M“.",
+    explanation: "Die Buchstaben ergeben das Wort „MORD“ (Anfangsbuchstabe „M“).",
     difficulty: 1,
   },
   {
@@ -2330,7 +2340,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["N", "H", "W", "M", "-"],
     correctIndex: 3,
     solutionWord: "MORGEN",
-    explanation: "Das Wort lautet „MORGEN“ und beginnt mit „M“.",
+    explanation: "Die Buchstaben ergeben das Wort „MORGEN“ (Anfangsbuchstabe „M“).",
     difficulty: 1,
   },
   {
@@ -2340,7 +2350,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "MULCH",
     explanation:
-      "Das Lösungswort lautet „MULCH“ (Anfangsbuchstabe „M“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „MULCH“ (Anfangsbuchstabe „M“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 1,
   },
   {
@@ -2349,7 +2359,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["N", "H", "W", "M", "-"],
     correctIndex: 3,
     solutionWord: "MULDE",
-    explanation: "Das Wort lautet „MULDE“ und beginnt mit „M“.",
+    explanation: "Die Buchstaben ergeben das Wort „MULDE“ (Anfangsbuchstabe „M“).",
     difficulty: 1,
   },
   {
@@ -2358,7 +2368,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["N", "H", "M", "R", "-"],
     correctIndex: 0,
     solutionWord: "NABEL",
-    explanation: "Das Wort lautet „NABEL“ und beginnt mit „N“.",
+    explanation: "Die Buchstaben ergeben das Wort „NABEL“ (Anfangsbuchstabe „N“).",
     difficulty: 1,
   },
   {
@@ -2367,7 +2377,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["W", "H", "R", "N", "-"],
     correctIndex: 3,
     solutionWord: "NADEL",
-    explanation: 'Das Wort lautet „NADEL" und beginnt mit „N".',
+    explanation: "Die Buchstaben ergeben das Wort „NADEL“ (Anfangsbuchstabe „N“).",
     difficulty: 1,
   },
   {
@@ -2376,7 +2386,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["M", "N", "R", "H", "-"],
     correctIndex: 1,
     solutionWord: "NAGEL",
-    explanation: "Das Wort lautet „NAGEL“ und beginnt mit „N“.",
+    explanation: "Die Buchstaben ergeben das Wort „NAGEL“ (Anfangsbuchstabe „N“).",
     difficulty: 1,
   },
   {
@@ -2385,7 +2395,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["N", "H", "M", "R", "-"],
     correctIndex: 0,
     solutionWord: "NARBE",
-    explanation: "Das Wort lautet „NARBE“ und beginnt mit „N“.",
+    explanation: "Die Buchstaben ergeben das Wort „NARBE“ (Anfangsbuchstabe „N“).",
     difficulty: 1,
   },
   {
@@ -2394,7 +2404,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["W", "R", "M", "N", "-"],
     correctIndex: 3,
     solutionWord: "NASE",
-    explanation: 'Das Wort lautet „NASE" und beginnt mit „N".',
+    explanation: "Die Buchstaben ergeben das Wort „NASE“ (Anfangsbuchstabe „N“).",
     difficulty: 1,
   },
   {
@@ -2404,7 +2414,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "NEBEL",
     explanation:
-      "Das Lösungswort lautet „NEBEL“ (Anfangsbuchstabe „N“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „NEBEL“ (Anfangsbuchstabe „N“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 1,
   },
   {
@@ -2414,7 +2424,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "NEFFE",
     explanation:
-      "Das Lösungswort lautet „NEFFE“ (Anfangsbuchstabe „N“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „NEFFE“ (Anfangsbuchstabe „N“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 1,
   },
   {
@@ -2423,7 +2433,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["R", "M", "H", "N", "-"],
     correctIndex: 3,
     solutionWord: "NELKE",
-    explanation: "Das Wort lautet „NELKE“ und beginnt mit „N“.",
+    explanation: "Die Buchstaben ergeben das Wort „NELKE“ (Anfangsbuchstabe „N“).",
     difficulty: 1,
   },
   {
@@ -2432,7 +2442,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "R", "N", "M", "-"],
     correctIndex: 2,
     solutionWord: "NERZ",
-    explanation: "Das Wort lautet „NERZ“ und beginnt mit „N“.",
+    explanation: "Die Buchstaben ergeben das Wort „NERZ“ (Anfangsbuchstabe „N“).",
     difficulty: 1,
   },
   {
@@ -2441,7 +2451,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["M", "H", "R", "N", "-"],
     correctIndex: 3,
     solutionWord: "NEST",
-    explanation: "Das Wort lautet „NEST“ und beginnt mit „N“.",
+    explanation: "Die Buchstaben ergeben das Wort „NEST“ (Anfangsbuchstabe „N“).",
     difficulty: 1,
   },
   {
@@ -2450,7 +2460,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["N", "M", "H", "R", "-"],
     correctIndex: 0,
     solutionWord: "NETZ",
-    explanation: "Das Wort lautet „NETZ“ und beginnt mit „N“.",
+    explanation: "Die Buchstaben ergeben das Wort „NETZ“ (Anfangsbuchstabe „N“).",
     difficulty: 1,
   },
   {
@@ -2459,7 +2469,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["W", "M", "H", "N", "-"],
     correctIndex: 3,
     solutionWord: "NIERE",
-    explanation: 'Das Wort lautet „NIERE" und beginnt mit „N".',
+    explanation: "Die Buchstaben ergeben das Wort „NIERE“ (Anfangsbuchstabe „N“).",
     difficulty: 1,
   },
   {
@@ -2468,7 +2478,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["N", "H", "R", "M", "-"],
     correctIndex: 0,
     solutionWord: "NISCHE",
-    explanation: "Das Wort lautet „NISCHE“ und beginnt mit „N“.",
+    explanation: "Die Buchstaben ergeben das Wort „NISCHE“ (Anfangsbuchstabe „N“).",
     difficulty: 1,
   },
   {
@@ -2477,7 +2487,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["M", "N", "H", "R", "-"],
     correctIndex: 1,
     solutionWord: "NOTE",
-    explanation: "Das Wort lautet „NOTE“ und beginnt mit „N“.",
+    explanation: "Die Buchstaben ergeben das Wort „NOTE“ (Anfangsbuchstabe „N“).",
     difficulty: 1,
   },
   {
@@ -2486,7 +2496,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["M", "R", "H", "N", "-"],
     correctIndex: 3,
     solutionWord: "NUDEL",
-    explanation: "Das Wort lautet „NUDEL“ und beginnt mit „N“.",
+    explanation: "Die Buchstaben ergeben das Wort „NUDEL“ (Anfangsbuchstabe „N“).",
     difficulty: 1,
   },
   {
@@ -2495,7 +2505,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["O", "Q", "U", "A", "-"],
     correctIndex: 0,
     solutionWord: "OBST",
-    explanation: "Das Wort lautet „OBST“ und beginnt mit „O“.",
+    explanation: "Die Buchstaben ergeben das Wort „OBST“ (Anfangsbuchstabe „O“).",
     difficulty: 1,
   },
   {
@@ -2505,7 +2515,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "OCKER",
     explanation:
-      "Das Lösungswort lautet „OCKER“ (Anfangsbuchstabe „O“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „OCKER“ (Anfangsbuchstabe „O“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 1,
   },
   {
@@ -2514,7 +2524,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["Q", "U", "A", "O", "-"],
     correctIndex: 3,
     solutionWord: "OFEN",
-    explanation: 'Das Wort lautet „OFEN" und beginnt mit „O".',
+    explanation: "Die Buchstaben ergeben das Wort „OFEN“ (Anfangsbuchstabe „O“).",
     difficulty: 1,
   },
   {
@@ -2523,7 +2533,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["O", "U", "A", "Q", "-"],
     correctIndex: 0,
     solutionWord: "OLIVE",
-    explanation: "Das Wort lautet „OLIVE“ und beginnt mit „O“.",
+    explanation: "Die Buchstaben ergeben das Wort „OLIVE“ (Anfangsbuchstabe „O“).",
     difficulty: 1,
   },
   {
@@ -2532,7 +2542,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["U", "Q", "O", "E", "-"],
     correctIndex: 2,
     solutionWord: "ORGAN",
-    explanation: 'Das Wort lautet „ORGAN" und beginnt mit „O".',
+    explanation: "Die Buchstaben ergeben das Wort „ORGAN“ (Anfangsbuchstabe „O“).",
     difficulty: 1,
   },
   {
@@ -2541,7 +2551,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["A", "Q", "O", "U", "-"],
     correctIndex: 2,
     solutionWord: "ORGEL",
-    explanation: "Das Wort lautet „ORGEL“ und beginnt mit „O“.",
+    explanation: "Die Buchstaben ergeben das Wort „ORGEL“ (Anfangsbuchstabe „O“).",
     difficulty: 1,
   },
   {
@@ -2550,7 +2560,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["B", "Q", "P", "D", "-"],
     correctIndex: 2,
     solutionWord: "PACHT",
-    explanation: "Das Wort lautet „PACHT“ und beginnt mit „P“.",
+    explanation: "Die Buchstaben ergeben das Wort „PACHT“ (Anfangsbuchstabe „P“).",
     difficulty: 1,
   },
   {
@@ -2559,7 +2569,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "B", "Q", "D", "-"],
     correctIndex: 0,
     solutionWord: "PAKET",
-    explanation: "Das Wort lautet „PAKET“ und beginnt mit „P“.",
+    explanation: "Die Buchstaben ergeben das Wort „PAKET“ (Anfangsbuchstabe „P“).",
     difficulty: 1,
   },
   {
@@ -2568,7 +2578,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "P", "B", "Q", "-"],
     correctIndex: 1,
     solutionWord: "PALME",
-    explanation: "Das Wort lautet „PALME“ und beginnt mit „P“.",
+    explanation: "Die Buchstaben ergeben das Wort „PALME“ (Anfangsbuchstabe „P“).",
     difficulty: 1,
   },
   {
@@ -2577,7 +2587,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "P", "B", "Q", "-"],
     correctIndex: 1,
     solutionWord: "PAPIER",
-    explanation: "Das Wort lautet „PAPIER“ und beginnt mit „P“.",
+    explanation: "Die Buchstaben ergeben das Wort „PAPIER“ (Anfangsbuchstabe „P“).",
     difficulty: 1,
   },
   {
@@ -2586,7 +2596,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["Q", "B", "P", "D", "-"],
     correctIndex: 2,
     solutionWord: "PASTE",
-    explanation: "Das Wort lautet „PASTE“ und beginnt mit „P“.",
+    explanation: "Die Buchstaben ergeben das Wort „PASTE“ (Anfangsbuchstabe „P“).",
     difficulty: 1,
   },
   {
@@ -2596,7 +2606,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "PECH",
     explanation:
-      "Das Lösungswort lautet „PECH“ (Anfangsbuchstabe „P“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „PECH“ (Anfangsbuchstabe „P“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 1,
   },
   {
@@ -2605,7 +2615,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "P", "Q", "B", "-"],
     correctIndex: 1,
     solutionWord: "PELIKAN",
-    explanation: "Das Wort lautet „PELIKAN“ und beginnt mit „P“.",
+    explanation: "Die Buchstaben ergeben das Wort „PELIKAN“ (Anfangsbuchstabe „P“).",
     difficulty: 1,
   },
   {
@@ -2614,7 +2624,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["Q", "B", "P", "D", "-"],
     correctIndex: 2,
     solutionWord: "PELZ",
-    explanation: "Das Wort lautet „PELZ“ und beginnt mit „P“.",
+    explanation: "Die Buchstaben ergeben das Wort „PELZ“ (Anfangsbuchstabe „P“).",
     difficulty: 1,
   },
   {
@@ -2623,7 +2633,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["Q", "D", "P", "B", "-"],
     correctIndex: 2,
     solutionWord: "PERLE",
-    explanation: "Das Wort lautet „PERLE“ und beginnt mit „P“.",
+    explanation: "Die Buchstaben ergeben das Wort „PERLE“ (Anfangsbuchstabe „P“).",
     difficulty: 1,
   },
   {
@@ -2632,7 +2642,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "P", "Q", "B", "-"],
     correctIndex: 1,
     solutionWord: "PEST",
-    explanation: "Das Wort lautet „PEST“ und beginnt mit „P“.",
+    explanation: "Die Buchstaben ergeben das Wort „PEST“ (Anfangsbuchstabe „P“).",
     difficulty: 1,
   },
   {
@@ -2641,7 +2651,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "Q", "B", "P", "-"],
     correctIndex: 3,
     solutionWord: "PFAD",
-    explanation: "Das Wort lautet „PFAD“ und beginnt mit „P“.",
+    explanation: "Die Buchstaben ergeben das Wort „PFAD“ (Anfangsbuchstabe „P“).",
     difficulty: 1,
   },
   {
@@ -2650,7 +2660,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["B", "Q", "D", "P", "-"],
     correctIndex: 3,
     solutionWord: "PFAND",
-    explanation: "Das Wort lautet „PFAND“ und beginnt mit „P“.",
+    explanation: "Die Buchstaben ergeben das Wort „PFAND“ (Anfangsbuchstabe „P“).",
     difficulty: 1,
   },
   {
@@ -2659,7 +2669,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["Q", "B", "P", "D", "-"],
     correctIndex: 2,
     solutionWord: "PFEFFER",
-    explanation: "Das Wort lautet „PFEFFER“ und beginnt mit „P“.",
+    explanation: "Die Buchstaben ergeben das Wort „PFEFFER“ (Anfangsbuchstabe „P“).",
     difficulty: 1,
   },
   {
@@ -2668,7 +2678,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["Q", "B", "D", "P", "-"],
     correctIndex: 3,
     solutionWord: "PFEIL",
-    explanation: "Das Wort lautet „PFEIL“ und beginnt mit „P“.",
+    explanation: "Die Buchstaben ergeben das Wort „PFEIL“ (Anfangsbuchstabe „P“).",
     difficulty: 1,
   },
   {
@@ -2677,7 +2687,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["F", "B", "P", "T", "-"],
     correctIndex: 2,
     solutionWord: "PFERD",
-    explanation: 'Das Wort lautet „PFERD" und beginnt mit „P".',
+    explanation: "Die Buchstaben ergeben das Wort „PFERD“ (Anfangsbuchstabe „P“).",
     difficulty: 1,
   },
   {
@@ -2686,7 +2696,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "Q", "B", "D", "-"],
     correctIndex: 0,
     solutionWord: "PFLASTER",
-    explanation: "Das Wort lautet „PFLASTER“ und beginnt mit „P“.",
+    explanation: "Die Buchstaben ergeben das Wort „PFLASTER“ (Anfangsbuchstabe „P“).",
     difficulty: 1,
   },
   {
@@ -2695,7 +2705,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "B", "Q", "P", "-"],
     correctIndex: 3,
     solutionWord: "PHASE",
-    explanation: "Das Wort lautet „PHASE“ und beginnt mit „P“.",
+    explanation: "Die Buchstaben ergeben das Wort „PHASE“ (Anfangsbuchstabe „P“).",
     difficulty: 1,
   },
   {
@@ -2704,7 +2714,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "D", "B", "Q", "-"],
     correctIndex: 0,
     solutionWord: "PIER",
-    explanation: "Das Wort lautet „PIER“ und beginnt mit „P“.",
+    explanation: "Die Buchstaben ergeben das Wort „PIER“ (Anfangsbuchstabe „P“).",
     difficulty: 1,
   },
   {
@@ -2713,7 +2723,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "P", "Q", "B", "-"],
     correctIndex: 1,
     solutionWord: "PILOT",
-    explanation: "Das Wort lautet „PILOT“ und beginnt mit „P“.",
+    explanation: "Die Buchstaben ergeben das Wort „PILOT“ (Anfangsbuchstabe „P“).",
     difficulty: 1,
   },
   {
@@ -2722,7 +2732,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "B", "P", "Q", "-"],
     correctIndex: 2,
     solutionWord: "PILS",
-    explanation: "Das Wort lautet „PILS“ und beginnt mit „P“.",
+    explanation: "Die Buchstaben ergeben das Wort „PILS“ (Anfangsbuchstabe „P“).",
     difficulty: 1,
   },
   {
@@ -2731,7 +2741,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "B", "P", "Q", "-"],
     correctIndex: 2,
     solutionWord: "PILZ",
-    explanation: "Das Wort lautet „PILZ“ und beginnt mit „P“.",
+    explanation: "Die Buchstaben ergeben das Wort „PILZ“ (Anfangsbuchstabe „P“).",
     difficulty: 1,
   },
   {
@@ -2740,7 +2750,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "Q", "D", "B", "-"],
     correctIndex: 0,
     solutionWord: "PINSEL",
-    explanation: "Das Wort lautet „PINSEL“ und beginnt mit „P“.",
+    explanation: "Die Buchstaben ergeben das Wort „PINSEL“ (Anfangsbuchstabe „P“).",
     difficulty: 1,
   },
   {
@@ -2749,7 +2759,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["B", "D", "P", "Q", "-"],
     correctIndex: 2,
     solutionWord: "PLASMA",
-    explanation: "Das Wort lautet „PLASMA“ und beginnt mit „P“.",
+    explanation: "Die Buchstaben ergeben das Wort „PLASMA“ (Anfangsbuchstabe „P“).",
     difficulty: 1,
   },
   {
@@ -2758,7 +2768,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["Q", "B", "D", "P", "-"],
     correctIndex: 3,
     solutionWord: "PLATZ",
-    explanation: "Das Wort lautet „PLATZ“ und beginnt mit „P“.",
+    explanation: "Die Buchstaben ergeben das Wort „PLATZ“ (Anfangsbuchstabe „P“).",
     difficulty: 1,
   },
   {
@@ -2768,7 +2778,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "PORE",
     explanation:
-      "Das Lösungswort lautet „PORE“ (Anfangsbuchstabe „P“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „PORE“ (Anfangsbuchstabe „P“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 1,
   },
   {
@@ -2777,7 +2787,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["B", "D", "P", "Q", "-"],
     correctIndex: 2,
     solutionWord: "PREIS",
-    explanation: "Das Wort lautet „PREIS“ und beginnt mit „P“.",
+    explanation: "Die Buchstaben ergeben das Wort „PREIS“ (Anfangsbuchstabe „P“).",
     difficulty: 1,
   },
   {
@@ -2786,7 +2796,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "P", "B", "Q", "-"],
     correctIndex: 1,
     solutionWord: "PRISE",
-    explanation: "Das Wort lautet „PRISE“ und beginnt mit „P“.",
+    explanation: "Die Buchstaben ergeben das Wort „PRISE“ (Anfangsbuchstabe „P“).",
     difficulty: 1,
   },
   {
@@ -2795,7 +2805,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "Q", "P", "B", "-"],
     correctIndex: 2,
     solutionWord: "PROBE",
-    explanation: "Das Wort lautet „PROBE“ und beginnt mit „P“.",
+    explanation: "Die Buchstaben ergeben das Wort „PROBE“ (Anfangsbuchstabe „P“).",
     difficulty: 1,
   },
   {
@@ -2804,7 +2814,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["Q", "D", "B", "P", "-"],
     correctIndex: 3,
     solutionWord: "PULS",
-    explanation: "Das Wort lautet „PULS“ und beginnt mit „P“.",
+    explanation: "Die Buchstaben ergeben das Wort „PULS“ (Anfangsbuchstabe „P“).",
     difficulty: 1,
   },
   {
@@ -2813,7 +2823,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "P", "Q", "B", "-"],
     correctIndex: 1,
     solutionWord: "PUNKT",
-    explanation: "Das Wort lautet „PUNKT“ und beginnt mit „P“.",
+    explanation: "Die Buchstaben ergeben das Wort „PUNKT“ (Anfangsbuchstabe „P“).",
     difficulty: 1,
   },
   {
@@ -2822,7 +2832,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "B", "P", "Q", "-"],
     correctIndex: 2,
     solutionWord: "PUPPE",
-    explanation: "Das Wort lautet „PUPPE“ und beginnt mit „P“.",
+    explanation: "Die Buchstaben ergeben das Wort „PUPPE“ (Anfangsbuchstabe „P“).",
     difficulty: 1,
   },
   {
@@ -2831,7 +2841,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["O", "Q", "G", "P", "-"],
     correctIndex: 1,
     solutionWord: "QUALM",
-    explanation: "Das Wort lautet „QUALM“ und beginnt mit „Q“.",
+    explanation: "Die Buchstaben ergeben das Wort „QUALM“ (Anfangsbuchstabe „Q“).",
     difficulty: 1,
   },
   {
@@ -2840,7 +2850,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["Q", "O", "G", "P", "-"],
     correctIndex: 0,
     solutionWord: "QUARZ",
-    explanation: "Das Wort lautet „QUARZ“ und beginnt mit „Q“.",
+    explanation: "Die Buchstaben ergeben das Wort „QUARZ“ (Anfangsbuchstabe „Q“).",
     difficulty: 1,
   },
   {
@@ -2850,7 +2860,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "RAMPE",
     explanation:
-      "Das Lösungswort lautet „RAMPE“ (Anfangsbuchstabe „R“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „RAMPE“ (Anfangsbuchstabe „R“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 1,
   },
   {
@@ -2859,7 +2869,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["N", "B", "R", "L", "-"],
     correctIndex: 2,
     solutionWord: "RAND",
-    explanation: "Das Wort lautet „RAND“ und beginnt mit „R“.",
+    explanation: "Die Buchstaben ergeben das Wort „RAND“ (Anfangsbuchstabe „R“).",
     difficulty: 1,
   },
   {
@@ -2868,7 +2878,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["R", "L", "N", "B", "-"],
     correctIndex: 0,
     solutionWord: "RANKE",
-    explanation: "Das Wort lautet „RANKE“ und beginnt mit „R“.",
+    explanation: "Die Buchstaben ergeben das Wort „RANKE“ (Anfangsbuchstabe „R“).",
     difficulty: 1,
   },
   {
@@ -2877,7 +2887,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["L", "R", "B", "N", "-"],
     correctIndex: 1,
     solutionWord: "RATTE",
-    explanation: "Das Wort lautet „RATTE“ und beginnt mit „R“.",
+    explanation: "Die Buchstaben ergeben das Wort „RATTE“ (Anfangsbuchstabe „R“).",
     difficulty: 1,
   },
   {
@@ -2886,7 +2896,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["N", "L", "R", "B", "-"],
     correctIndex: 2,
     solutionWord: "RAUB",
-    explanation: "Das Wort lautet „RAUB“ und beginnt mit „R“.",
+    explanation: "Die Buchstaben ergeben das Wort „RAUB“ (Anfangsbuchstabe „R“).",
     difficulty: 1,
   },
   {
@@ -2895,7 +2905,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["N", "L", "R", "B", "-"],
     correctIndex: 2,
     solutionWord: "RECK",
-    explanation: "Das Wort lautet „RECK“ und beginnt mit „R“.",
+    explanation: "Die Buchstaben ergeben das Wort „RECK“ (Anfangsbuchstabe „R“).",
     difficulty: 1,
   },
   {
@@ -2904,7 +2914,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["N", "L", "R", "B", "-"],
     correctIndex: 2,
     solutionWord: "REDE",
-    explanation: "Das Wort lautet „REDE“ und beginnt mit „R“.",
+    explanation: "Die Buchstaben ergeben das Wort „REDE“ (Anfangsbuchstabe „R“).",
     difficulty: 1,
   },
   {
@@ -2913,7 +2923,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["B", "L", "N", "R", "-"],
     correctIndex: 3,
     solutionWord: "REFLEX",
-    explanation: "Das Wort lautet „REFLEX“ und beginnt mit „R“.",
+    explanation: "Die Buchstaben ergeben das Wort „REFLEX“ (Anfangsbuchstabe „R“).",
     difficulty: 1,
   },
   {
@@ -2922,7 +2932,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["B", "R", "L", "N", "-"],
     correctIndex: 1,
     solutionWord: "REGAL",
-    explanation: "Das Wort lautet „REGAL“ und beginnt mit „R“.",
+    explanation: "Die Buchstaben ergeben das Wort „REGAL“ (Anfangsbuchstabe „R“).",
     difficulty: 1,
   },
   {
@@ -2931,7 +2941,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "K", "B", "R", "-"],
     correctIndex: 3,
     solutionWord: "REGEN",
-    explanation: 'Das Wort lautet „REGEN" und beginnt mit „R".',
+    explanation: "Die Buchstaben ergeben das Wort „REGEN“ (Anfangsbuchstabe „R“).",
     difficulty: 1,
   },
   {
@@ -2941,7 +2951,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "REIF",
     explanation:
-      "Das Lösungswort lautet „REIF“ (Anfangsbuchstabe „R“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „REIF“ (Anfangsbuchstabe „R“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 1,
   },
   {
@@ -2950,7 +2960,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["B", "L", "N", "R", "-"],
     correctIndex: 3,
     solutionWord: "REIHE",
-    explanation: "Das Wort lautet „REIHE“ und beginnt mit „R“.",
+    explanation: "Die Buchstaben ergeben das Wort „REIHE“ (Anfangsbuchstabe „R“).",
     difficulty: 1,
   },
   {
@@ -2959,7 +2969,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "N", "R", "P", "-"],
     correctIndex: 2,
     solutionWord: "REIS",
-    explanation: 'Das Wort lautet „REIS" und beginnt mit „R".',
+    explanation: "Die Buchstaben ergeben das Wort „REIS“ (Anfangsbuchstabe „R“).",
     difficulty: 1,
   },
   {
@@ -2968,7 +2978,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["R", "N", "L", "B", "-"],
     correctIndex: 0,
     solutionWord: "RENTE",
-    explanation: "Das Wort lautet „RENTE“ und beginnt mit „R“.",
+    explanation: "Die Buchstaben ergeben das Wort „RENTE“ (Anfangsbuchstabe „R“).",
     difficulty: 1,
   },
   {
@@ -2977,7 +2987,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["R", "L", "N", "B", "-"],
     correctIndex: 0,
     solutionWord: "RIFF",
-    explanation: "Das Wort lautet „RIFF“ und beginnt mit „R“.",
+    explanation: "Die Buchstaben ergeben das Wort „RIFF“ (Anfangsbuchstabe „R“).",
     difficulty: 1,
   },
   {
@@ -2987,7 +2997,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "RINDE",
     explanation:
-      "Das Lösungswort lautet „RINDE“ (Anfangsbuchstabe „R“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „RINDE“ (Anfangsbuchstabe „R“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 1,
   },
   {
@@ -2996,7 +3006,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["B", "P", "K", "R", "-"],
     correctIndex: 3,
     solutionWord: "RING",
-    explanation: 'Das Wort lautet „RING" und beginnt mit „R".',
+    explanation: "Die Buchstaben ergeben das Wort „RING“ (Anfangsbuchstabe „R“).",
     difficulty: 1,
   },
   {
@@ -3005,7 +3015,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["B", "L", "R", "N", "-"],
     correctIndex: 2,
     solutionWord: "ROCK",
-    explanation: "Das Wort lautet „ROCK“ und beginnt mit „R“.",
+    explanation: "Die Buchstaben ergeben das Wort „ROCK“ (Anfangsbuchstabe „R“).",
     difficulty: 1,
   },
   {
@@ -3014,7 +3024,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["B", "L", "N", "R", "-"],
     correctIndex: 3,
     solutionWord: "ROGGEN",
-    explanation: "Das Wort lautet „ROGGEN“ und beginnt mit „R“.",
+    explanation: "Die Buchstaben ergeben das Wort „ROGGEN“ (Anfangsbuchstabe „R“).",
     difficulty: 1,
   },
   {
@@ -3024,7 +3034,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "ROHR",
     explanation:
-      "Das Lösungswort lautet „ROHR“ (Anfangsbuchstabe „R“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „ROHR“ (Anfangsbuchstabe „R“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 1,
   },
   {
@@ -3033,7 +3043,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["E", "A", "U", "O", "-"],
     correctIndex: 1,
     solutionWord: "ABGRUND",
-    explanation: "Das Wort lautet „ABGRUND“ und beginnt mit „A“.",
+    explanation:
+      "Erkennbar an der Vorsilbe AB-. Die Buchstaben ergeben das Wort „ABGRUND“ (Anfangsbuchstabe „A“).",
     difficulty: 2,
   },
   {
@@ -3042,7 +3053,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["A", "U", "O", "E", "-"],
     correctIndex: 0,
     solutionWord: "ABLENKUNG",
-    explanation: "Das Wort lautet „ABLENKUNG“ und beginnt mit „A“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „ABLENKUNG“ (Anfangsbuchstabe „A“).",
     difficulty: 2,
   },
   {
@@ -3051,7 +3063,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["O", "U", "E", "A", "-"],
     correctIndex: 3,
     solutionWord: "ACKERLAND",
-    explanation: "Das Wort lautet „ACKERLAND“ und beginnt mit „A“.",
+    explanation: "Die Buchstaben ergeben das Wort „ACKERLAND“ (Anfangsbuchstabe „A“).",
     difficulty: 2,
   },
   {
@@ -3060,7 +3072,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["A", "O", "E", "U", "-"],
     correctIndex: 0,
     solutionWord: "AMEISENHAUFEN",
-    explanation: "Das Wort lautet „AMEISENHAUFEN“ und beginnt mit „A“.",
+    explanation: "Die Buchstaben ergeben das Wort „AMEISENHAUFEN“ (Anfangsbuchstabe „A“).",
     difficulty: 2,
   },
   {
@@ -3069,7 +3081,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "A", "O", "U", "-"],
     correctIndex: 1,
     solutionWord: "AMPERE",
-    explanation: 'Das Wort lautet „AMPERE" und beginnt mit „A".',
+    explanation: "Die Buchstaben ergeben das Wort „AMPERE“ (Anfangsbuchstabe „A“).",
     difficulty: 2,
   },
   {
@@ -3078,7 +3090,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["O", "A", "E", "U", "-"],
     correctIndex: 1,
     solutionWord: "ANBIETERIN",
-    explanation: "Das Wort lautet „ANBIETERIN“ und beginnt mit „A“.",
+    explanation:
+      "Erkennbar an der Vorsilbe AN-. Die Buchstaben ergeben das Wort „ANBIETERIN“ (Anfangsbuchstabe „A“).",
     difficulty: 2,
   },
   {
@@ -3088,7 +3101,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "ANGRIFF",
     explanation:
-      "Das Lösungswort lautet „ANGRIFF“ (Anfangsbuchstabe „A“), der nicht unter A–D angeboten wird.",
+      "Erkennbar an der Vorsilbe AN-. Das Lösungswort lautet „ANGRIFF“ (Anfangsbuchstabe „A“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 2,
   },
   {
@@ -3097,7 +3110,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["U", "A", "E", "O", "-"],
     correctIndex: 1,
     solutionWord: "ANTIGEN",
-    explanation: "Das Wort lautet „ANTIGEN“ und beginnt mit „A“.",
+    explanation:
+      "Erkennbar an der Vorsilbe AN-. Die Buchstaben ergeben das Wort „ANTIGEN“ (Anfangsbuchstabe „A“).",
     difficulty: 2,
   },
   {
@@ -3106,7 +3120,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["O", "U", "E", "A", "-"],
     correctIndex: 3,
     solutionWord: "ANTWORT",
-    explanation: "Das Wort lautet „ANTWORT“ und beginnt mit „A“.",
+    explanation:
+      "Erkennbar an der Vorsilbe AN-. Die Buchstaben ergeben das Wort „ANTWORT“ (Anfangsbuchstabe „A“).",
     difficulty: 2,
   },
   {
@@ -3115,7 +3130,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["U", "E", "O", "A", "-"],
     correctIndex: 3,
     solutionWord: "APOTHEKE",
-    explanation: "Das Wort lautet „APOTHEKE“ und beginnt mit „A“.",
+    explanation: "Die Buchstaben ergeben das Wort „APOTHEKE“ (Anfangsbuchstabe „A“).",
     difficulty: 2,
   },
   {
@@ -3124,7 +3139,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["O", "E", "U", "A", "-"],
     correctIndex: 3,
     solutionWord: "ARMBANDUHR",
-    explanation: "Das Wort lautet „ARMBANDUHR“ und beginnt mit „A“.",
+    explanation: "Die Buchstaben ergeben das Wort „ARMBANDUHR“ (Anfangsbuchstabe „A“).",
     difficulty: 2,
   },
   {
@@ -3133,7 +3148,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["A", "E", "O", "U", "-"],
     correctIndex: 0,
     solutionWord: "ARMLEUCHTER",
-    explanation: "Das Wort lautet „ARMLEUCHTER“ und beginnt mit „A“.",
+    explanation: "Die Buchstaben ergeben das Wort „ARMLEUCHTER“ (Anfangsbuchstabe „A“).",
     difficulty: 2,
   },
   {
@@ -3142,7 +3157,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["U", "E", "O", "A", "-"],
     correctIndex: 3,
     solutionWord: "ARTERIE",
-    explanation: "Das Wort lautet „ARTERIE“ und beginnt mit „A“.",
+    explanation: "Die Buchstaben ergeben das Wort „ARTERIE“ (Anfangsbuchstabe „A“).",
     difficulty: 2,
   },
   {
@@ -3151,7 +3166,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["O", "A", "E", "U", "-"],
     correctIndex: 1,
     solutionWord: "AUFGABE",
-    explanation: "Das Wort lautet „AUFGABE“ und beginnt mit „A“.",
+    explanation:
+      "Erkennbar an der Vorsilbe AUF-. Die Buchstaben ergeben das Wort „AUFGABE“ (Anfangsbuchstabe „A“).",
     difficulty: 2,
   },
   {
@@ -3160,7 +3176,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["A", "E", "U", "O", "-"],
     correctIndex: 0,
     solutionWord: "AUFWAND",
-    explanation: "Das Wort lautet „AUFWAND“ und beginnt mit „A“.",
+    explanation:
+      "Erkennbar an der Vorsilbe AUF-. Die Buchstaben ergeben das Wort „AUFWAND“ (Anfangsbuchstabe „A“).",
     difficulty: 2,
   },
   {
@@ -3169,7 +3186,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["U", "A", "E", "O", "-"],
     correctIndex: 1,
     solutionWord: "AUSGANG",
-    explanation: "Das Wort lautet „AUSGANG“ und beginnt mit „A“.",
+    explanation:
+      "Erkennbar an der Vorsilbe AUS-. Die Buchstaben ergeben das Wort „AUSGANG“ (Anfangsbuchstabe „A“).",
     difficulty: 2,
   },
   {
@@ -3178,7 +3196,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["O", "E", "A", "U", "-"],
     correctIndex: 2,
     solutionWord: "AUSREDE",
-    explanation: "Das Wort lautet „AUSREDE“ und beginnt mit „A“.",
+    explanation:
+      "Erkennbar an der Vorsilbe AUS-. Die Buchstaben ergeben das Wort „AUSREDE“ (Anfangsbuchstabe „A“).",
     difficulty: 2,
   },
   {
@@ -3188,7 +3207,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "AUSWAHL",
     explanation:
-      "Das Lösungswort lautet „AUSWAHL“ (Anfangsbuchstabe „A“), der nicht unter A–D angeboten wird.",
+      "Erkennbar an der Vorsilbe AUS-. Das Lösungswort lautet „AUSWAHL“ (Anfangsbuchstabe „A“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 2,
   },
   {
@@ -3197,7 +3216,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["A", "U", "O", "E", "-"],
     correctIndex: 0,
     solutionWord: "AUTOBAHN",
-    explanation: "Das Wort lautet „AUTOBAHN“ und beginnt mit „A“.",
+    explanation: "Die Buchstaben ergeben das Wort „AUTOBAHN“ (Anfangsbuchstabe „A“).",
     difficulty: 2,
   },
   {
@@ -3206,7 +3225,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "D", "R", "B", "-"],
     correctIndex: 3,
     solutionWord: "BACHFORELLE",
-    explanation: "Das Wort lautet „BACHFORELLE“ und beginnt mit „B“.",
+    explanation: "Die Buchstaben ergeben das Wort „BACHFORELLE“ (Anfangsbuchstabe „B“).",
     difficulty: 2,
   },
   {
@@ -3215,7 +3234,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "B", "R", "P", "-"],
     correctIndex: 1,
     solutionWord: "BACKBLECH",
-    explanation: "Das Wort lautet „BACKBLECH“ und beginnt mit „B“.",
+    explanation: "Die Buchstaben ergeben das Wort „BACKBLECH“ (Anfangsbuchstabe „B“).",
     difficulty: 2,
   },
   {
@@ -3224,7 +3243,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["B", "R", "D", "P", "-"],
     correctIndex: 0,
     solutionWord: "BACKOFEN",
-    explanation: "Das Wort lautet „BACKOFEN“ und beginnt mit „B“.",
+    explanation: "Die Buchstaben ergeben das Wort „BACKOFEN“ (Anfangsbuchstabe „B“).",
     difficulty: 2,
   },
   {
@@ -3233,7 +3252,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "P", "B", "R", "-"],
     correctIndex: 2,
     solutionWord: "BACKSTEIN",
-    explanation: "Das Wort lautet „BACKSTEIN“ und beginnt mit „B“.",
+    explanation: "Die Buchstaben ergeben das Wort „BACKSTEIN“ (Anfangsbuchstabe „B“).",
     difficulty: 2,
   },
   {
@@ -3242,7 +3261,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "R", "D", "B", "-"],
     correctIndex: 3,
     solutionWord: "BADEWANNE",
-    explanation: "Das Wort lautet „BADEWANNE“ und beginnt mit „B“.",
+    explanation: "Die Buchstaben ergeben das Wort „BADEWANNE“ (Anfangsbuchstabe „B“).",
     difficulty: 2,
   },
   {
@@ -3251,7 +3270,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "R", "D", "B", "-"],
     correctIndex: 3,
     solutionWord: "BALKON",
-    explanation: 'Das Wort lautet „BALKON" und beginnt mit „B".',
+    explanation: "Die Buchstaben ergeben das Wort „BALKON“ (Anfangsbuchstabe „B“).",
     difficulty: 2,
   },
   {
@@ -3260,7 +3279,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "P", "R", "B", "-"],
     correctIndex: 3,
     solutionWord: "BAUERNHOF",
-    explanation: "Das Wort lautet „BAUERNHOF“ und beginnt mit „B“.",
+    explanation: "Die Buchstaben ergeben das Wort „BAUERNHOF“ (Anfangsbuchstabe „B“).",
     difficulty: 2,
   },
   {
@@ -3269,7 +3288,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "R", "P", "B", "-"],
     correctIndex: 3,
     solutionWord: "BAUMKRONE",
-    explanation: "Das Wort lautet „BAUMKRONE“ und beginnt mit „B“.",
+    explanation: "Die Buchstaben ergeben das Wort „BAUMKRONE“ (Anfangsbuchstabe „B“).",
     difficulty: 2,
   },
   {
@@ -3278,7 +3297,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "P", "R", "B", "-"],
     correctIndex: 3,
     solutionWord: "BAUMSTAMM",
-    explanation: "Das Wort lautet „BAUMSTAMM“ und beginnt mit „B“.",
+    explanation: "Die Buchstaben ergeben das Wort „BAUMSTAMM“ (Anfangsbuchstabe „B“).",
     difficulty: 2,
   },
   {
@@ -3287,7 +3306,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "B", "P", "R", "-"],
     correctIndex: 1,
     solutionWord: "BAUSTEIN",
-    explanation: "Das Wort lautet „BAUSTEIN“ und beginnt mit „B“.",
+    explanation: "Die Buchstaben ergeben das Wort „BAUSTEIN“ (Anfangsbuchstabe „B“).",
     difficulty: 2,
   },
   {
@@ -3296,7 +3315,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "G", "D", "B", "-"],
     correctIndex: 3,
     solutionWord: "BECHER",
-    explanation: 'Das Wort lautet „BECHER" und beginnt mit „B".',
+    explanation:
+      "Erkennbar an der Vorsilbe BE-. Die Buchstaben ergeben das Wort „BECHER“ (Anfangsbuchstabe „B“).",
     difficulty: 2,
   },
   {
@@ -3305,7 +3325,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "B", "R", "D", "-"],
     correctIndex: 1,
     solutionWord: "BEDACHT",
-    explanation: "Das Wort lautet „BEDACHT“ und beginnt mit „B“.",
+    explanation:
+      "Erkennbar an der Vorsilbe BE-. Die Buchstaben ergeben das Wort „BEDACHT“ (Anfangsbuchstabe „B“).",
     difficulty: 2,
   },
   {
@@ -3314,7 +3335,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "R", "P", "B", "-"],
     correctIndex: 3,
     solutionWord: "BEISPIEL",
-    explanation: "Das Wort lautet „BEISPIEL“ und beginnt mit „B“.",
+    explanation:
+      "Erkennbar an der Vorsilbe BE-. Die Buchstaben ergeben das Wort „BEISPIEL“ (Anfangsbuchstabe „B“).",
     difficulty: 2,
   },
   {
@@ -3323,7 +3345,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "D", "B", "R", "-"],
     correctIndex: 2,
     solutionWord: "BEISTAND",
-    explanation: "Das Wort lautet „BEISTAND“ und beginnt mit „B“.",
+    explanation:
+      "Erkennbar an der Vorsilbe BE-. Die Buchstaben ergeben das Wort „BEISTAND“ (Anfangsbuchstabe „B“).",
     difficulty: 2,
   },
   {
@@ -3332,7 +3355,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "P", "R", "B", "-"],
     correctIndex: 3,
     solutionWord: "BEREICH",
-    explanation: "Das Wort lautet „BEREICH“ und beginnt mit „B“.",
+    explanation:
+      "Erkennbar an der Vorsilbe BE-. Die Buchstaben ergeben das Wort „BEREICH“ (Anfangsbuchstabe „B“).",
     difficulty: 2,
   },
   {
@@ -3342,7 +3366,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "BERGLAUF",
     explanation:
-      "Das Lösungswort lautet „BERGLAUF“ (Anfangsbuchstabe „B“), der nicht unter A–D angeboten wird.",
+      "Erkennbar an der Vorsilbe BE-. Das Lösungswort lautet „BERGLAUF“ (Anfangsbuchstabe „B“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 2,
   },
   {
@@ -3351,7 +3375,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["B", "P", "R", "D", "-"],
     correctIndex: 0,
     solutionWord: "BERGSTEIGER",
-    explanation: "Das Wort lautet „BERGSTEIGER“ und beginnt mit „B“.",
+    explanation:
+      "Erkennbar an der Vorsilbe BE-. Die Buchstaben ergeben das Wort „BERGSTEIGER“ (Anfangsbuchstabe „B“).",
     difficulty: 2,
   },
   {
@@ -3360,7 +3385,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["B", "R", "P", "D", "-"],
     correctIndex: 0,
     solutionWord: "BERGWERK",
-    explanation: "Das Wort lautet „BERGWERK“ und beginnt mit „B“.",
+    explanation:
+      "Erkennbar an der Vorsilbe BE-. Die Buchstaben ergeben das Wort „BERGWERK“ (Anfangsbuchstabe „B“).",
     difficulty: 2,
   },
   {
@@ -3369,7 +3395,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "B", "P", "R", "-"],
     correctIndex: 1,
     solutionWord: "BERGZIEGE",
-    explanation: "Das Wort lautet „BERGZIEGE“ und beginnt mit „B“.",
+    explanation:
+      "Erkennbar an der Vorsilbe BE-. Die Buchstaben ergeben das Wort „BERGZIEGE“ (Anfangsbuchstabe „B“).",
     difficulty: 2,
   },
   {
@@ -3378,7 +3405,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "R", "P", "B", "-"],
     correctIndex: 3,
     solutionWord: "BESTECK",
-    explanation: "Das Wort lautet „BESTECK“ und beginnt mit „B“.",
+    explanation:
+      "Erkennbar an der Vorsilbe BE-. Die Buchstaben ergeben das Wort „BESTECK“ (Anfangsbuchstabe „B“).",
     difficulty: 2,
   },
   {
@@ -3388,7 +3416,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "BETRIEB",
     explanation:
-      "Das Lösungswort lautet „BETRIEB“ (Anfangsbuchstabe „B“), der nicht unter A–D angeboten wird.",
+      "Erkennbar an der Vorsilbe BE-. Das Lösungswort lautet „BETRIEB“ (Anfangsbuchstabe „B“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 2,
   },
   {
@@ -3397,7 +3425,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["R", "P", "D", "B", "-"],
     correctIndex: 3,
     solutionWord: "BIEGUNG",
-    explanation: "Das Wort lautet „BIEGUNG“ und beginnt mit „B“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „BIEGUNG“ (Anfangsbuchstabe „B“).",
     difficulty: 2,
   },
   {
@@ -3407,7 +3436,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "BIENENSTOCK",
     explanation:
-      "Das Lösungswort lautet „BIENENSTOCK“ (Anfangsbuchstabe „B“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „BIENENSTOCK“ (Anfangsbuchstabe „B“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 2,
   },
   {
@@ -3416,7 +3445,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["B", "D", "P", "R", "-"],
     correctIndex: 0,
     solutionWord: "BILDHAUER",
-    explanation: "Das Wort lautet „BILDHAUER“ und beginnt mit „B“.",
+    explanation: "Die Buchstaben ergeben das Wort „BILDHAUER“ (Anfangsbuchstabe „B“).",
     difficulty: 2,
   },
   {
@@ -3426,7 +3455,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "BILDSCHIRM",
     explanation:
-      "Das Lösungswort lautet „BILDSCHIRM“ (Anfangsbuchstabe „B“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „BILDSCHIRM“ (Anfangsbuchstabe „B“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 2,
   },
   {
@@ -3435,7 +3464,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["R", "P", "G", "B", "-"],
     correctIndex: 3,
     solutionWord: "BILDUNG",
-    explanation: 'Das Wort lautet „BILDUNG" und beginnt mit „B".',
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „BILDUNG“ (Anfangsbuchstabe „B“).",
     difficulty: 2,
   },
   {
@@ -3444,7 +3474,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "B", "R", "G", "-"],
     correctIndex: 1,
     solutionWord: "BINDER",
-    explanation: 'Das Wort lautet „BINDER" und beginnt mit „B".',
+    explanation: "Die Buchstaben ergeben das Wort „BINDER“ (Anfangsbuchstabe „B“).",
     difficulty: 2,
   },
   {
@@ -3453,7 +3483,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "R", "B", "D", "-"],
     correctIndex: 2,
     solutionWord: "BINDUNG",
-    explanation: "Das Wort lautet „BINDUNG“ und beginnt mit „B“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „BINDUNG“ (Anfangsbuchstabe „B“).",
     difficulty: 2,
   },
   {
@@ -3462,7 +3493,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "B", "R", "D", "-"],
     correctIndex: 1,
     solutionWord: "BIRKENHOLZ",
-    explanation: "Das Wort lautet „BIRKENHOLZ“ und beginnt mit „B“.",
+    explanation: "Die Buchstaben ergeben das Wort „BIRKENHOLZ“ (Anfangsbuchstabe „B“).",
     difficulty: 2,
   },
   {
@@ -3471,7 +3502,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["R", "B", "P", "D", "-"],
     correctIndex: 1,
     solutionWord: "BLEICHE",
-    explanation: "Das Wort lautet „BLEICHE“ und beginnt mit „B“.",
+    explanation: "Die Buchstaben ergeben das Wort „BLEICHE“ (Anfangsbuchstabe „B“).",
     difficulty: 2,
   },
   {
@@ -3480,7 +3511,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["B", "P", "R", "D", "-"],
     correctIndex: 0,
     solutionWord: "BLICKFANG",
-    explanation: "Das Wort lautet „BLICKFANG“ und beginnt mit „B“.",
+    explanation: "Die Buchstaben ergeben das Wort „BLICKFANG“ (Anfangsbuchstabe „B“).",
     difficulty: 2,
   },
   {
@@ -3489,7 +3520,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["R", "D", "P", "B", "-"],
     correctIndex: 3,
     solutionWord: "BLUMENTOPF",
-    explanation: "Das Wort lautet „BLUMENTOPF“ und beginnt mit „B“.",
+    explanation: "Die Buchstaben ergeben das Wort „BLUMENTOPF“ (Anfangsbuchstabe „B“).",
     difficulty: 2,
   },
   {
@@ -3498,7 +3529,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["B", "R", "D", "P", "-"],
     correctIndex: 0,
     solutionWord: "BLUMENVASE",
-    explanation: "Das Wort lautet „BLUMENVASE“ und beginnt mit „B“.",
+    explanation: "Die Buchstaben ergeben das Wort „BLUMENVASE“ (Anfangsbuchstabe „B“).",
     difficulty: 2,
   },
   {
@@ -3507,7 +3538,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "B", "R", "P", "-"],
     correctIndex: 1,
     solutionWord: "BLUTBILD",
-    explanation: "Das Wort lautet „BLUTBILD“ und beginnt mit „B“.",
+    explanation: "Die Buchstaben ergeben das Wort „BLUTBILD“ (Anfangsbuchstabe „B“).",
     difficulty: 2,
   },
   {
@@ -3517,7 +3548,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "BRANCHE",
     explanation:
-      "Das Lösungswort lautet „BRANCHE“ (Anfangsbuchstabe „B“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „BRANCHE“ (Anfangsbuchstabe „B“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 2,
   },
   {
@@ -3526,7 +3557,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["R", "P", "D", "B", "-"],
     correctIndex: 3,
     solutionWord: "BREITMAUL",
-    explanation: "Das Wort lautet „BREITMAUL“ und beginnt mit „B“.",
+    explanation: "Die Buchstaben ergeben das Wort „BREITMAUL“ (Anfangsbuchstabe „B“).",
     difficulty: 2,
   },
   {
@@ -3535,7 +3566,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "D", "B", "G", "-"],
     correctIndex: 2,
     solutionWord: "BREMSE",
-    explanation: 'Das Wort lautet „BREMSE" und beginnt mit „B".',
+    explanation: "Die Buchstaben ergeben das Wort „BREMSE“ (Anfangsbuchstabe „B“).",
     difficulty: 2,
   },
   {
@@ -3544,7 +3575,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["B", "P", "D", "R", "-"],
     correctIndex: 0,
     solutionWord: "BRENNNESSEL",
-    explanation: "Das Wort lautet „BRENNNESSEL“ und beginnt mit „B“.",
+    explanation: "Die Buchstaben ergeben das Wort „BRENNNESSEL“ (Anfangsbuchstabe „B“).",
     difficulty: 2,
   },
   {
@@ -3553,7 +3584,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "R", "D", "B", "-"],
     correctIndex: 3,
     solutionWord: "BRIEFMARKE",
-    explanation: "Das Wort lautet „BRIEFMARKE“ und beginnt mit „B“.",
+    explanation: "Die Buchstaben ergeben das Wort „BRIEFMARKE“ (Anfangsbuchstabe „B“).",
     difficulty: 2,
   },
   {
@@ -3562,7 +3593,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "D", "P", "B", "-"],
     correctIndex: 3,
     solutionWord: "BRILLE",
-    explanation: 'Das Wort lautet „BRILLE" und beginnt mit „B".',
+    explanation: "Die Buchstaben ergeben das Wort „BRILLE“ (Anfangsbuchstabe „B“).",
     difficulty: 2,
   },
   {
@@ -3571,7 +3602,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "P", "R", "B", "-"],
     correctIndex: 3,
     solutionWord: "BROTKRUSTE",
-    explanation: "Das Wort lautet „BROTKRUSTE“ und beginnt mit „B“.",
+    explanation: "Die Buchstaben ergeben das Wort „BROTKRUSTE“ (Anfangsbuchstabe „B“).",
     difficulty: 2,
   },
   {
@@ -3580,7 +3611,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["B", "P", "D", "R", "-"],
     correctIndex: 0,
     solutionWord: "BROTMESSER",
-    explanation: "Das Wort lautet „BROTMESSER“ und beginnt mit „B“.",
+    explanation: "Die Buchstaben ergeben das Wort „BROTMESSER“ (Anfangsbuchstabe „B“).",
     difficulty: 2,
   },
   {
@@ -3589,7 +3620,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["R", "P", "B", "G", "-"],
     correctIndex: 2,
     solutionWord: "BRUDER",
-    explanation: 'Das Wort lautet „BRUDER" und beginnt mit „B".',
+    explanation: "Die Buchstaben ergeben das Wort „BRUDER“ (Anfangsbuchstabe „B“).",
     difficulty: 2,
   },
   {
@@ -3598,7 +3629,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "R", "B", "D", "-"],
     correctIndex: 2,
     solutionWord: "BRUNNENWASSER",
-    explanation: "Das Wort lautet „BRUNNENWASSER“ und beginnt mit „B“.",
+    explanation: "Die Buchstaben ergeben das Wort „BRUNNENWASSER“ (Anfangsbuchstabe „B“).",
     difficulty: 2,
   },
   {
@@ -3607,7 +3638,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["R", "B", "P", "D", "-"],
     correctIndex: 1,
     solutionWord: "BRUNSTZEIT",
-    explanation: "Das Wort lautet „BRUNSTZEIT“ und beginnt mit „B“.",
+    explanation: "Die Buchstaben ergeben das Wort „BRUNSTZEIT“ (Anfangsbuchstabe „B“).",
     difficulty: 2,
   },
   {
@@ -3617,7 +3648,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "BUCHHANDEL",
     explanation:
-      "Das Lösungswort lautet „BUCHHANDEL“ (Anfangsbuchstabe „B“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „BUCHHANDEL“ (Anfangsbuchstabe „B“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 2,
   },
   {
@@ -3626,7 +3657,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "B", "P", "R", "-"],
     correctIndex: 1,
     solutionWord: "BURGFRIED",
-    explanation: "Das Wort lautet „BURGFRIED“ und beginnt mit „B“.",
+    explanation: "Die Buchstaben ergeben das Wort „BURGFRIED“ (Anfangsbuchstabe „B“).",
     difficulty: 2,
   },
   {
@@ -3635,7 +3666,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["Z", "S", "C", "G", "-"],
     correctIndex: 2,
     solutionWord: "CHANCE",
-    explanation: 'Das Wort lautet „CHANCE" und beginnt mit „C".',
+    explanation: "Die Buchstaben ergeben das Wort „CHANCE“ (Anfangsbuchstabe „C“).",
     difficulty: 2,
   },
   {
@@ -3644,7 +3675,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["S", "K", "C", "G", "-"],
     correctIndex: 2,
     solutionWord: "CHEMIKER",
-    explanation: "Das Wort lautet „CHEMIKER“ und beginnt mit „C“.",
+    explanation: "Die Buchstaben ergeben das Wort „CHEMIKER“ (Anfangsbuchstabe „C“).",
     difficulty: 2,
   },
   {
@@ -3653,7 +3684,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "C", "G", "S", "-"],
     correctIndex: 1,
     solutionWord: "CHIRURG",
-    explanation: "Das Wort lautet „CHIRURG“ und beginnt mit „C“.",
+    explanation: "Die Buchstaben ergeben das Wort „CHIRURG“ (Anfangsbuchstabe „C“).",
     difficulty: 2,
   },
   {
@@ -3662,7 +3693,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["S", "C", "K", "G", "-"],
     correctIndex: 1,
     solutionWord: "CHRONIK",
-    explanation: "Das Wort lautet „CHRONIK“ und beginnt mit „C“.",
+    explanation: "Die Buchstaben ergeben das Wort „CHRONIK“ (Anfangsbuchstabe „C“).",
     difficulty: 2,
   },
   {
@@ -3671,7 +3702,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["B", "P", "D", "T", "-"],
     correctIndex: 2,
     solutionWord: "DACHBODEN",
-    explanation: "Das Wort lautet „DACHBODEN“ und beginnt mit „D“.",
+    explanation: "Die Buchstaben ergeben das Wort „DACHBODEN“ (Anfangsbuchstabe „D“).",
     difficulty: 2,
   },
   {
@@ -3680,7 +3711,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "P", "B", "T", "-"],
     correctIndex: 0,
     solutionWord: "DACHRINNE",
-    explanation: "Das Wort lautet „DACHRINNE“ und beginnt mit „D“.",
+    explanation: "Die Buchstaben ergeben das Wort „DACHRINNE“ (Anfangsbuchstabe „D“).",
     difficulty: 2,
   },
   {
@@ -3689,7 +3720,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "T", "P", "B", "-"],
     correctIndex: 0,
     solutionWord: "DACHSBAU",
-    explanation: "Das Wort lautet „DACHSBAU“ und beginnt mit „D“.",
+    explanation: "Die Buchstaben ergeben das Wort „DACHSBAU“ (Anfangsbuchstabe „D“).",
     difficulty: 2,
   },
   {
@@ -3698,7 +3729,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["B", "D", "T", "P", "-"],
     correctIndex: 1,
     solutionWord: "DACHSTUHL",
-    explanation: "Das Wort lautet „DACHSTUHL“ und beginnt mit „D“.",
+    explanation: "Die Buchstaben ergeben das Wort „DACHSTUHL“ (Anfangsbuchstabe „D“).",
     difficulty: 2,
   },
   {
@@ -3707,7 +3738,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["B", "D", "P", "T", "-"],
     correctIndex: 1,
     solutionWord: "DAMPFBAD",
-    explanation: "Das Wort lautet „DAMPFBAD“ und beginnt mit „D“.",
+    explanation: "Die Buchstaben ergeben das Wort „DAMPFBAD“ (Anfangsbuchstabe „D“).",
     difficulty: 2,
   },
   {
@@ -3716,7 +3747,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "P", "T", "B", "-"],
     correctIndex: 0,
     solutionWord: "DAMPFER",
-    explanation: "Das Wort lautet „DAMPFER“ und beginnt mit „D“.",
+    explanation: "Die Buchstaben ergeben das Wort „DAMPFER“ (Anfangsbuchstabe „D“).",
     difficulty: 2,
   },
   {
@@ -3725,7 +3756,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "B", "T", "P", "-"],
     correctIndex: 0,
     solutionWord: "DAMPFSCHIFF",
-    explanation: "Das Wort lautet „DAMPFSCHIFF“ und beginnt mit „D“.",
+    explanation: "Die Buchstaben ergeben das Wort „DAMPFSCHIFF“ (Anfangsbuchstabe „D“).",
     difficulty: 2,
   },
   {
@@ -3734,7 +3765,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "D", "T", "B", "-"],
     correctIndex: 1,
     solutionWord: "DAUERLUFT",
-    explanation: "Das Wort lautet „DAUERLUFT“ und beginnt mit „D“.",
+    explanation: "Die Buchstaben ergeben das Wort „DAUERLUFT“ (Anfangsbuchstabe „D“).",
     difficulty: 2,
   },
   {
@@ -3743,7 +3774,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["T", "P", "D", "B", "-"],
     correctIndex: 2,
     solutionWord: "DECKBLATT",
-    explanation: "Das Wort lautet „DECKBLATT“ und beginnt mit „D“.",
+    explanation: "Die Buchstaben ergeben das Wort „DECKBLATT“ (Anfangsbuchstabe „D“).",
     difficulty: 2,
   },
   {
@@ -3752,7 +3783,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "T", "B", "D", "-"],
     correctIndex: 3,
     solutionWord: "DECKEL",
-    explanation: 'Das Wort lautet „DECKEL" und beginnt mit „D".',
+    explanation: "Die Buchstaben ergeben das Wort „DECKEL“ (Anfangsbuchstabe „D“).",
     difficulty: 2,
   },
   {
@@ -3761,7 +3792,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["T", "P", "D", "B", "-"],
     correctIndex: 2,
     solutionWord: "DENKMAL",
-    explanation: "Das Wort lautet „DENKMAL“ und beginnt mit „D“.",
+    explanation: "Die Buchstaben ergeben das Wort „DENKMAL“ (Anfangsbuchstabe „D“).",
     difficulty: 2,
   },
   {
@@ -3770,7 +3801,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["B", "P", "D", "T", "-"],
     correctIndex: 2,
     solutionWord: "DICHTER",
-    explanation: "Das Wort lautet „DICHTER“ und beginnt mit „D“.",
+    explanation: "Die Buchstaben ergeben das Wort „DICHTER“ (Anfangsbuchstabe „D“).",
     difficulty: 2,
   },
   {
@@ -3779,7 +3810,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "B", "D", "T", "-"],
     correctIndex: 2,
     solutionWord: "DICHTUNG",
-    explanation: "Das Wort lautet „DICHTUNG“ und beginnt mit „D“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „DICHTUNG“ (Anfangsbuchstabe „D“).",
     difficulty: 2,
   },
   {
@@ -3789,7 +3821,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "DORFPLATZ",
     explanation:
-      "Das Lösungswort lautet „DORFPLATZ“ (Anfangsbuchstabe „D“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „DORFPLATZ“ (Anfangsbuchstabe „D“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 2,
   },
   {
@@ -3799,7 +3831,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "DORFSCHULE",
     explanation:
-      "Das Lösungswort lautet „DORFSCHULE“ (Anfangsbuchstabe „D“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „DORFSCHULE“ (Anfangsbuchstabe „D“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 2,
   },
   {
@@ -3809,7 +3841,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "DREHMOMENT",
     explanation:
-      "Das Lösungswort lautet „DREHMOMENT“ (Anfangsbuchstabe „D“), der nicht unter A–D angeboten wird.",
+      "Erkennbar an der Endung -MENT. Das Lösungswort lautet „DREHMOMENT“ (Anfangsbuchstabe „D“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 2,
   },
   {
@@ -3818,7 +3850,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "P", "T", "B", "-"],
     correctIndex: 0,
     solutionWord: "DROHUNG",
-    explanation: "Das Wort lautet „DROHUNG“ und beginnt mit „D“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „DROHUNG“ (Anfangsbuchstabe „D“).",
     difficulty: 2,
   },
   {
@@ -3828,7 +3861,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "DRUCKER",
     explanation:
-      "Das Lösungswort lautet „DRUCKER“ (Anfangsbuchstabe „D“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „DRUCKER“ (Anfangsbuchstabe „D“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 2,
   },
   {
@@ -3837,7 +3870,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["O", "A", "I", "E", "-"],
     correctIndex: 3,
     solutionWord: "EFEURANKE",
-    explanation: "Das Wort lautet „EFEURANKE“ und beginnt mit „E“.",
+    explanation: "Die Buchstaben ergeben das Wort „EFEURANKE“ (Anfangsbuchstabe „E“).",
     difficulty: 2,
   },
   {
@@ -3846,7 +3879,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["O", "E", "I", "A", "-"],
     correctIndex: 1,
     solutionWord: "EIGENTUM",
-    explanation: "Das Wort lautet „EIGENTUM“ und beginnt mit „E“.",
+    explanation: "Die Buchstaben ergeben das Wort „EIGENTUM“ (Anfangsbuchstabe „E“).",
     difficulty: 2,
   },
   {
@@ -3855,7 +3888,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["E", "A", "O", "I", "-"],
     correctIndex: 0,
     solutionWord: "EINBAND",
-    explanation: "Das Wort lautet „EINBAND“ und beginnt mit „E“.",
+    explanation:
+      "Erkennbar an der Vorsilbe EIN-. Die Buchstaben ergeben das Wort „EINBAND“ (Anfangsbuchstabe „E“).",
     difficulty: 2,
   },
   {
@@ -3864,7 +3898,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["I", "E", "O", "A", "-"],
     correctIndex: 1,
     solutionWord: "EINBRUCH",
-    explanation: "Das Wort lautet „EINBRUCH“ und beginnt mit „E“.",
+    explanation:
+      "Erkennbar an der Vorsilbe EIN-. Die Buchstaben ergeben das Wort „EINBRUCH“ (Anfangsbuchstabe „E“).",
     difficulty: 2,
   },
   {
@@ -3873,7 +3908,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["A", "O", "I", "E", "-"],
     correctIndex: 3,
     solutionWord: "EINSCHLAG",
-    explanation: "Das Wort lautet „EINSCHLAG“ und beginnt mit „E“.",
+    explanation:
+      "Erkennbar an der Vorsilbe EIN-. Die Buchstaben ergeben das Wort „EINSCHLAG“ (Anfangsbuchstabe „E“).",
     difficulty: 2,
   },
   {
@@ -3882,7 +3918,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["O", "A", "E", "I", "-"],
     correctIndex: 2,
     solutionWord: "EINWAND",
-    explanation: "Das Wort lautet „EINWAND“ und beginnt mit „E“.",
+    explanation:
+      "Erkennbar an der Vorsilbe EIN-. Die Buchstaben ergeben das Wort „EINWAND“ (Anfangsbuchstabe „E“).",
     difficulty: 2,
   },
   {
@@ -3891,7 +3928,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["I", "E", "A", "O", "-"],
     correctIndex: 1,
     solutionWord: "EISBERG",
-    explanation: "Das Wort lautet „EISBERG“ und beginnt mit „E“.",
+    explanation: "Die Buchstaben ergeben das Wort „EISBERG“ (Anfangsbuchstabe „E“).",
     difficulty: 2,
   },
   {
@@ -3900,7 +3937,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["O", "I", "E", "A", "-"],
     correctIndex: 2,
     solutionWord: "EISSCHILD",
-    explanation: "Das Wort lautet „EISSCHILD“ und beginnt mit „E“.",
+    explanation: "Die Buchstaben ergeben das Wort „EISSCHILD“ (Anfangsbuchstabe „E“).",
     difficulty: 2,
   },
   {
@@ -3910,7 +3947,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "EISVOGEL",
     explanation:
-      "Das Lösungswort lautet „EISVOGEL“ (Anfangsbuchstabe „E“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „EISVOGEL“ (Anfangsbuchstabe „E“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 2,
   },
   {
@@ -3919,7 +3956,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["O", "A", "E", "I", "-"],
     correctIndex: 2,
     solutionWord: "ELEKTRO",
-    explanation: "Das Wort lautet „ELEKTRO“ und beginnt mit „E“.",
+    explanation: "Die Buchstaben ergeben das Wort „ELEKTRO“ (Anfangsbuchstabe „E“).",
     difficulty: 2,
   },
   {
@@ -3928,7 +3965,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["E", "I", "A", "O", "-"],
     correctIndex: 0,
     solutionWord: "ELEMENT",
-    explanation: "Das Wort lautet „ELEMENT“ und beginnt mit „E“.",
+    explanation:
+      "Erkennbar an der Endung -MENT. Die Buchstaben ergeben das Wort „ELEMENT“ (Anfangsbuchstabe „E“).",
     difficulty: 2,
   },
   {
@@ -3937,7 +3975,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["O", "A", "E", "I", "-"],
     correctIndex: 2,
     solutionWord: "ENDLAGER",
-    explanation: "Das Wort lautet „ENDLAGER“ und beginnt mit „E“.",
+    explanation: "Die Buchstaben ergeben das Wort „ENDLAGER“ (Anfangsbuchstabe „E“).",
     difficulty: 2,
   },
   {
@@ -3946,7 +3984,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["E", "A", "O", "I", "-"],
     correctIndex: 0,
     solutionWord: "ENTWURF",
-    explanation: "Das Wort lautet „ENTWURF“ und beginnt mit „E“.",
+    explanation:
+      "Erkennbar an der Vorsilbe ENT-. Die Buchstaben ergeben das Wort „ENTWURF“ (Anfangsbuchstabe „E“).",
     difficulty: 2,
   },
   {
@@ -3955,7 +3994,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["E", "I", "O", "A", "-"],
     correctIndex: 0,
     solutionWord: "ENZYM",
-    explanation: "Das Wort lautet „ENZYM“ und beginnt mit „E“.",
+    explanation: "Die Buchstaben ergeben das Wort „ENZYM“ (Anfangsbuchstabe „E“).",
     difficulty: 2,
   },
   {
@@ -3964,7 +4003,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["E", "I", "O", "A", "-"],
     correctIndex: 0,
     solutionWord: "ERDBEBEN",
-    explanation: "Das Wort lautet „ERDBEBEN“ und beginnt mit „E“.",
+    explanation:
+      "Erkennbar an der Vorsilbe ER-. Die Buchstaben ergeben das Wort „ERDBEBEN“ (Anfangsbuchstabe „E“).",
     difficulty: 2,
   },
   {
@@ -3973,7 +4013,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["I", "A", "E", "O", "-"],
     correctIndex: 2,
     solutionWord: "ERDBEERE",
-    explanation: "Das Wort lautet „ERDBEERE“ und beginnt mit „E“.",
+    explanation:
+      "Erkennbar an der Vorsilbe ER-. Die Buchstaben ergeben das Wort „ERDBEERE“ (Anfangsbuchstabe „E“).",
     difficulty: 2,
   },
   {
@@ -3982,7 +4023,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["I", "E", "A", "O", "-"],
     correctIndex: 1,
     solutionWord: "ERDBODEN",
-    explanation: "Das Wort lautet „ERDBODEN“ und beginnt mit „E“.",
+    explanation:
+      "Erkennbar an der Vorsilbe ER-. Die Buchstaben ergeben das Wort „ERDBODEN“ (Anfangsbuchstabe „E“).",
     difficulty: 2,
   },
   {
@@ -3991,7 +4033,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["O", "E", "A", "I", "-"],
     correctIndex: 1,
     solutionWord: "ERDKUNDE",
-    explanation: "Das Wort lautet „ERDKUNDE“ und beginnt mit „E“.",
+    explanation:
+      "Erkennbar an der Vorsilbe ER-. Die Buchstaben ergeben das Wort „ERDKUNDE“ (Anfangsbuchstabe „E“).",
     difficulty: 2,
   },
   {
@@ -4000,7 +4043,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["E", "O", "I", "A", "-"],
     correctIndex: 0,
     solutionWord: "ERHOLUNG",
-    explanation: "Das Wort lautet „ERHOLUNG“ und beginnt mit „E“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „ERHOLUNG“ (Anfangsbuchstabe „E“).",
     difficulty: 2,
   },
   {
@@ -4009,7 +4053,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["I", "E", "A", "O", "-"],
     correctIndex: 1,
     solutionWord: "ERKENNUNG",
-    explanation: "Das Wort lautet „ERKENNUNG“ und beginnt mit „E“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „ERKENNUNG“ (Anfangsbuchstabe „E“).",
     difficulty: 2,
   },
   {
@@ -4018,7 +4063,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["A", "E", "O", "I", "-"],
     correctIndex: 1,
     solutionWord: "ERLEBEN",
-    explanation: "Das Wort lautet „ERLEBEN“ und beginnt mit „E“.",
+    explanation:
+      "Erkennbar an der Vorsilbe ER-. Die Buchstaben ergeben das Wort „ERLEBEN“ (Anfangsbuchstabe „E“).",
     difficulty: 2,
   },
   {
@@ -4027,7 +4073,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["E", "O", "A", "I", "-"],
     correctIndex: 0,
     solutionWord: "ERNTEZEIT",
-    explanation: "Das Wort lautet „ERNTEZEIT“ und beginnt mit „E“.",
+    explanation:
+      "Erkennbar an der Vorsilbe ER-. Die Buchstaben ergeben das Wort „ERNTEZEIT“ (Anfangsbuchstabe „E“).",
     difficulty: 2,
   },
   {
@@ -4036,7 +4083,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["O", "E", "A", "I", "-"],
     correctIndex: 1,
     solutionWord: "ERREGER",
-    explanation: "Das Wort lautet „ERREGER“ und beginnt mit „E“.",
+    explanation:
+      "Erkennbar an der Vorsilbe ER-. Die Buchstaben ergeben das Wort „ERREGER“ (Anfangsbuchstabe „E“).",
     difficulty: 2,
   },
   {
@@ -4045,7 +4093,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["V", "P", "F", "T", "-"],
     correctIndex: 2,
     solutionWord: "FAHRKARTE",
-    explanation: "Das Wort lautet „FAHRKARTE“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FAHRKARTE“ (Anfangsbuchstabe „F“).",
     difficulty: 2,
   },
   {
@@ -4054,7 +4102,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "F", "V", "T", "-"],
     correctIndex: 1,
     solutionWord: "FAHRPLAN",
-    explanation: "Das Wort lautet „FAHRPLAN“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FAHRPLAN“ (Anfangsbuchstabe „F“).",
     difficulty: 2,
   },
   {
@@ -4063,7 +4111,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "F", "T", "V", "-"],
     correctIndex: 1,
     solutionWord: "FAHRSCHEIN",
-    explanation: "Das Wort lautet „FAHRSCHEIN“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FAHRSCHEIN“ (Anfangsbuchstabe „F“).",
     difficulty: 2,
   },
   {
@@ -4072,7 +4120,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["F", "V", "T", "P", "-"],
     correctIndex: 0,
     solutionWord: "FAHRSTUHL",
-    explanation: "Das Wort lautet „FAHRSTUHL“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FAHRSTUHL“ (Anfangsbuchstabe „F“).",
     difficulty: 2,
   },
   {
@@ -4081,7 +4129,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "F", "T", "V", "-"],
     correctIndex: 1,
     solutionWord: "FALTUNG",
-    explanation: "Das Wort lautet „FALTUNG“ und beginnt mit „F“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „FALTUNG“ (Anfangsbuchstabe „F“).",
     difficulty: 2,
   },
   {
@@ -4091,7 +4140,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "FASCHING",
     explanation:
-      "Das Lösungswort lautet „FASCHING“ (Anfangsbuchstabe „F“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „FASCHING“ (Anfangsbuchstabe „F“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 2,
   },
   {
@@ -4100,7 +4149,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["V", "T", "P", "F", "-"],
     correctIndex: 3,
     solutionWord: "FELDSTEIN",
-    explanation: "Das Wort lautet „FELDSTEIN“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FELDSTEIN“ (Anfangsbuchstabe „F“).",
     difficulty: 2,
   },
   {
@@ -4109,7 +4158,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["T", "F", "P", "V", "-"],
     correctIndex: 1,
     solutionWord: "FELDWEG",
-    explanation: "Das Wort lautet „FELDWEG“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FELDWEG“ (Anfangsbuchstabe „F“).",
     difficulty: 2,
   },
   {
@@ -4118,7 +4167,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "T", "F", "V", "-"],
     correctIndex: 2,
     solutionWord: "FELSEN",
-    explanation: 'Das Wort lautet „FELSEN" und beginnt mit „F".',
+    explanation: "Die Buchstaben ergeben das Wort „FELSEN“ (Anfangsbuchstabe „F“).",
     difficulty: 2,
   },
   {
@@ -4127,7 +4176,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["T", "P", "F", "V", "-"],
     correctIndex: 2,
     solutionWord: "FELSWAND",
-    explanation: "Das Wort lautet „FELSWAND“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FELSWAND“ (Anfangsbuchstabe „F“).",
     difficulty: 2,
   },
   {
@@ -4136,7 +4185,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["V", "P", "F", "H", "-"],
     correctIndex: 2,
     solutionWord: "FENSTER",
-    explanation: 'Das Wort lautet „FENSTER" und beginnt mit „F".',
+    explanation: "Die Buchstaben ergeben das Wort „FENSTER“ (Anfangsbuchstabe „F“).",
     difficulty: 2,
   },
   {
@@ -4145,7 +4194,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["F", "V", "P", "T", "-"],
     correctIndex: 0,
     solutionWord: "FENSTERBRETT",
-    explanation: "Das Wort lautet „FENSTERBRETT“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FENSTERBRETT“ (Anfangsbuchstabe „F“).",
     difficulty: 2,
   },
   {
@@ -4154,7 +4203,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["T", "F", "V", "P", "-"],
     correctIndex: 1,
     solutionWord: "FERNSEHER",
-    explanation: "Das Wort lautet „FERNSEHER“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FERNSEHER“ (Anfangsbuchstabe „F“).",
     difficulty: 2,
   },
   {
@@ -4163,7 +4212,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["T", "P", "F", "V", "-"],
     correctIndex: 2,
     solutionWord: "FESTUNG",
-    explanation: "Das Wort lautet „FESTUNG“ und beginnt mit „F“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „FESTUNG“ (Anfangsbuchstabe „F“).",
     difficulty: 2,
   },
   {
@@ -4172,7 +4222,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["T", "H", "V", "F", "-"],
     correctIndex: 3,
     solutionWord: "FIEBER",
-    explanation: 'Das Wort lautet „FIEBER" und beginnt mit „F".',
+    explanation: "Die Buchstaben ergeben das Wort „FIEBER“ (Anfangsbuchstabe „F“).",
     difficulty: 2,
   },
   {
@@ -4181,7 +4231,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["T", "H", "V", "F", "-"],
     correctIndex: 3,
     solutionWord: "FINGER",
-    explanation: 'Das Wort lautet „FINGER" und beginnt mit „F".',
+    explanation: "Die Buchstaben ergeben das Wort „FINGER“ (Anfangsbuchstabe „F“).",
     difficulty: 2,
   },
   {
@@ -4190,7 +4240,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["T", "F", "P", "V", "-"],
     correctIndex: 1,
     solutionWord: "FINGERSPITZE",
-    explanation: "Das Wort lautet „FINGERSPITZE“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FINGERSPITZE“ (Anfangsbuchstabe „F“).",
     difficulty: 2,
   },
   {
@@ -4199,7 +4249,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "F", "T", "V", "-"],
     correctIndex: 1,
     solutionWord: "FISCHREIHER",
-    explanation: "Das Wort lautet „FISCHREIHER“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FISCHREIHER“ (Anfangsbuchstabe „F“).",
     difficulty: 2,
   },
   {
@@ -4208,7 +4258,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "T", "V", "F", "-"],
     correctIndex: 3,
     solutionWord: "FISCHTEICH",
-    explanation: "Das Wort lautet „FISCHTEICH“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FISCHTEICH“ (Anfangsbuchstabe „F“).",
     difficulty: 2,
   },
   {
@@ -4217,7 +4267,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["V", "T", "P", "F", "-"],
     correctIndex: 3,
     solutionWord: "FLASCHE",
-    explanation: 'Das Wort lautet „FLASCHE" und beginnt mit „F".',
+    explanation: "Die Buchstaben ergeben das Wort „FLASCHE“ (Anfangsbuchstabe „F“).",
     difficulty: 2,
   },
   {
@@ -4226,7 +4276,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["V", "F", "T", "P", "-"],
     correctIndex: 1,
     solutionWord: "FLECHTE",
-    explanation: "Das Wort lautet „FLECHTE“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FLECHTE“ (Anfangsbuchstabe „F“).",
     difficulty: 2,
   },
   {
@@ -4235,7 +4285,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["T", "H", "V", "F", "-"],
     correctIndex: 3,
     solutionWord: "FLIEGE",
-    explanation: 'Das Wort lautet „FLIEGE" und beginnt mit „F".',
+    explanation: "Die Buchstaben ergeben das Wort „FLIEGE“ (Anfangsbuchstabe „F“).",
     difficulty: 2,
   },
   {
@@ -4244,7 +4294,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "F", "T", "V", "-"],
     correctIndex: 1,
     solutionWord: "FLUGBLATT",
-    explanation: "Das Wort lautet „FLUGBLATT“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FLUGBLATT“ (Anfangsbuchstabe „F“).",
     difficulty: 2,
   },
   {
@@ -4253,7 +4303,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "F", "T", "V", "-"],
     correctIndex: 1,
     solutionWord: "FLUGHAFEN",
-    explanation: "Das Wort lautet „FLUGHAFEN“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FLUGHAFEN“ (Anfangsbuchstabe „F“).",
     difficulty: 2,
   },
   {
@@ -4262,7 +4312,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["F", "T", "V", "P", "-"],
     correctIndex: 0,
     solutionWord: "FLUGLINIE",
-    explanation: "Das Wort lautet „FLUGLINIE“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FLUGLINIE“ (Anfangsbuchstabe „F“).",
     difficulty: 2,
   },
   {
@@ -4271,7 +4321,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["F", "T", "P", "V", "-"],
     correctIndex: 0,
     solutionWord: "FLUSSBETT",
-    explanation: "Das Wort lautet „FLUSSBETT“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FLUSSBETT“ (Anfangsbuchstabe „F“).",
     difficulty: 2,
   },
   {
@@ -4280,7 +4330,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["F", "P", "T", "V", "-"],
     correctIndex: 0,
     solutionWord: "FLUTWELLE",
-    explanation: "Das Wort lautet „FLUTWELLE“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FLUTWELLE“ (Anfangsbuchstabe „F“).",
     difficulty: 2,
   },
   {
@@ -4289,7 +4339,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["F", "T", "V", "P", "-"],
     correctIndex: 0,
     solutionWord: "FORELLE",
-    explanation: "Das Wort lautet „FORELLE“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FORELLE“ (Anfangsbuchstabe „F“).",
     difficulty: 2,
   },
   {
@@ -4298,7 +4348,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["F", "T", "V", "P", "-"],
     correctIndex: 0,
     solutionWord: "FORELLENZUCHT",
-    explanation: "Das Wort lautet „FORELLENZUCHT“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FORELLENZUCHT“ (Anfangsbuchstabe „F“).",
     difficulty: 2,
   },
   {
@@ -4307,7 +4357,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "T", "P", "F", "-"],
     correctIndex: 3,
     solutionWord: "FORMEL",
-    explanation: 'Das Wort lautet „FORMEL" und beginnt mit „F".',
+    explanation: "Die Buchstaben ergeben das Wort „FORMEL“ (Anfangsbuchstabe „F“).",
     difficulty: 2,
   },
   {
@@ -4316,7 +4366,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["F", "P", "V", "T", "-"],
     correctIndex: 0,
     solutionWord: "FORSCHER",
-    explanation: "Das Wort lautet „FORSCHER“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FORSCHER“ (Anfangsbuchstabe „F“).",
     difficulty: 2,
   },
   {
@@ -4325,7 +4375,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["T", "V", "F", "P", "-"],
     correctIndex: 2,
     solutionWord: "FREIHEIT",
-    explanation: "Das Wort lautet „FREIHEIT“ und beginnt mit „F“.",
+    explanation:
+      "Erkennbar an der Endung -HEIT. Die Buchstaben ergeben das Wort „FREIHEIT“ (Anfangsbuchstabe „F“).",
     difficulty: 2,
   },
   {
@@ -4335,7 +4386,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "FREMDWORT",
     explanation:
-      "Das Lösungswort lautet „FREMDWORT“ (Anfangsbuchstabe „F“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „FREMDWORT“ (Anfangsbuchstabe „F“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 2,
   },
   {
@@ -4344,7 +4395,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["V", "F", "T", "P", "-"],
     correctIndex: 1,
     solutionWord: "FREUNDSCHAFT",
-    explanation: "Das Wort lautet „FREUNDSCHAFT“ und beginnt mit „F“.",
+    explanation:
+      "Erkennbar an der Endung -SCHAFT. Die Buchstaben ergeben das Wort „FREUNDSCHAFT“ (Anfangsbuchstabe „F“).",
     difficulty: 2,
   },
   {
@@ -4353,7 +4405,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["V", "T", "P", "F", "-"],
     correctIndex: 3,
     solutionWord: "FRIEDHOF",
-    explanation: "Das Wort lautet „FRIEDHOF“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FRIEDHOF“ (Anfangsbuchstabe „F“).",
     difficulty: 2,
   },
   {
@@ -4362,7 +4414,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "H", "V", "F", "-"],
     correctIndex: 3,
     solutionWord: "FRUCHT",
-    explanation: 'Das Wort lautet „FRUCHT" und beginnt mit „F".',
+    explanation: "Die Buchstaben ergeben das Wort „FRUCHT“ (Anfangsbuchstabe „F“).",
     difficulty: 2,
   },
   {
@@ -4371,7 +4423,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["V", "P", "F", "T", "-"],
     correctIndex: 2,
     solutionWord: "FUCHSBAU",
-    explanation: "Das Wort lautet „FUCHSBAU“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FUCHSBAU“ (Anfangsbuchstabe „F“).",
     difficulty: 2,
   },
   {
@@ -4380,7 +4432,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["V", "F", "T", "P", "-"],
     correctIndex: 1,
     solutionWord: "FUTTERSTELLE",
-    explanation: "Das Wort lautet „FUTTERSTELLE“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FUTTERSTELLE“ (Anfangsbuchstabe „F“).",
     difficulty: 2,
   },
   {
@@ -4389,7 +4441,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["J", "G", "K", "C", "-"],
     correctIndex: 1,
     solutionWord: "GARDEROBE",
-    explanation: "Das Wort lautet „GARDEROBE“ und beginnt mit „G“.",
+    explanation: "Die Buchstaben ergeben das Wort „GARDEROBE“ (Anfangsbuchstabe „G“).",
     difficulty: 2,
   },
   {
@@ -4398,7 +4450,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "B", "G", "D", "-"],
     correctIndex: 2,
     solutionWord: "GARTEN",
-    explanation: 'Das Wort lautet „GARTEN" und beginnt mit „G".',
+    explanation: "Die Buchstaben ergeben das Wort „GARTEN“ (Anfangsbuchstabe „G“).",
     difficulty: 2,
   },
   {
@@ -4407,7 +4459,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["J", "G", "K", "C", "-"],
     correctIndex: 1,
     solutionWord: "GARTENBAU",
-    explanation: "Das Wort lautet „GARTENBAU“ und beginnt mit „G“.",
+    explanation: "Die Buchstaben ergeben das Wort „GARTENBAU“ (Anfangsbuchstabe „G“).",
     difficulty: 2,
   },
   {
@@ -4417,7 +4469,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "GARTENLAUBE",
     explanation:
-      "Das Lösungswort lautet „GARTENLAUBE“ (Anfangsbuchstabe „G“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „GARTENLAUBE“ (Anfangsbuchstabe „G“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 2,
   },
   {
@@ -4426,7 +4478,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "C", "K", "J", "-"],
     correctIndex: 0,
     solutionWord: "GARTENZAUN",
-    explanation: "Das Wort lautet „GARTENZAUN“ und beginnt mit „G“.",
+    explanation: "Die Buchstaben ergeben das Wort „GARTENZAUN“ (Anfangsbuchstabe „G“).",
     difficulty: 2,
   },
   {
@@ -4435,7 +4487,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "C", "J", "K", "-"],
     correctIndex: 0,
     solutionWord: "GEBIRGE",
-    explanation: "Das Wort lautet „GEBIRGE“ und beginnt mit „G“.",
+    explanation:
+      "Erkennbar an der Vorsilbe GE-. Die Buchstaben ergeben das Wort „GEBIRGE“ (Anfangsbuchstabe „G“).",
     difficulty: 2,
   },
   {
@@ -4444,7 +4497,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "J", "C", "G", "-"],
     correctIndex: 3,
     solutionWord: "GEDANKE",
-    explanation: "Das Wort lautet „GEDANKE“ und beginnt mit „G“.",
+    explanation:
+      "Erkennbar an der Vorsilbe GE-. Die Buchstaben ergeben das Wort „GEDANKE“ (Anfangsbuchstabe „G“).",
     difficulty: 2,
   },
   {
@@ -4454,7 +4508,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "GEDICHT",
     explanation:
-      "Das Lösungswort lautet „GEDICHT“ (Anfangsbuchstabe „G“), der nicht unter A–D angeboten wird.",
+      "Erkennbar an der Vorsilbe GE-. Das Lösungswort lautet „GEDICHT“ (Anfangsbuchstabe „G“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 2,
   },
   {
@@ -4463,7 +4517,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["J", "C", "G", "K", "-"],
     correctIndex: 2,
     solutionWord: "GELDBEUTEL",
-    explanation: "Das Wort lautet „GELDBEUTEL“ und beginnt mit „G“.",
+    explanation:
+      "Erkennbar an der Vorsilbe GE-. Die Buchstaben ergeben das Wort „GELDBEUTEL“ (Anfangsbuchstabe „G“).",
     difficulty: 2,
   },
   {
@@ -4472,7 +4527,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "B", "C", "G", "-"],
     correctIndex: 3,
     solutionWord: "GELENK",
-    explanation: 'Das Wort lautet „GELENK" und beginnt mit „G".',
+    explanation:
+      "Erkennbar an der Vorsilbe GE-. Die Buchstaben ergeben das Wort „GELENK“ (Anfangsbuchstabe „G“).",
     difficulty: 2,
   },
   {
@@ -4482,7 +4538,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "GELTUNG",
     explanation:
-      "Das Lösungswort lautet „GELTUNG“ (Anfangsbuchstabe „G“), der nicht unter A–D angeboten wird.",
+      "Erkennbar an der Endung -UNG. Das Lösungswort lautet „GELTUNG“ (Anfangsbuchstabe „G“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 2,
   },
   {
@@ -4491,7 +4547,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "K", "J", "C", "-"],
     correctIndex: 0,
     solutionWord: "GENEHMIGUNG",
-    explanation: "Das Wort lautet „GENEHMIGUNG“ und beginnt mit „G“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „GENEHMIGUNG“ (Anfangsbuchstabe „G“).",
     difficulty: 2,
   },
   {
@@ -4500,7 +4557,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["C", "G", "K", "J", "-"],
     correctIndex: 1,
     solutionWord: "GEWERBE",
-    explanation: "Das Wort lautet „GEWERBE“ und beginnt mit „G“.",
+    explanation:
+      "Erkennbar an der Vorsilbe GE-. Die Buchstaben ergeben das Wort „GEWERBE“ (Anfangsbuchstabe „G“).",
     difficulty: 2,
   },
   {
@@ -4509,7 +4567,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["C", "J", "G", "K", "-"],
     correctIndex: 2,
     solutionWord: "GEWITTER",
-    explanation: "Das Wort lautet „GEWITTER“ und beginnt mit „G“.",
+    explanation:
+      "Erkennbar an der Vorsilbe GE-. Die Buchstaben ergeben das Wort „GEWITTER“ (Anfangsbuchstabe „G“).",
     difficulty: 2,
   },
   {
@@ -4518,7 +4577,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "C", "J", "K", "-"],
     correctIndex: 0,
     solutionWord: "GIESSKANNE",
-    explanation: "Das Wort lautet „GIESSKANNE“ und beginnt mit „G“.",
+    explanation: "Die Buchstaben ergeben das Wort „GIESSKANNE“ (Anfangsbuchstabe „G“).",
     difficulty: 2,
   },
   {
@@ -4527,7 +4586,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["C", "K", "G", "J", "-"],
     correctIndex: 2,
     solutionWord: "GIPFEL",
-    explanation: "Das Wort lautet „GIPFEL“ und beginnt mit „G“.",
+    explanation: "Die Buchstaben ergeben das Wort „GIPFEL“ (Anfangsbuchstabe „G“).",
     difficulty: 2,
   },
   {
@@ -4536,7 +4595,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "C", "J", "G", "-"],
     correctIndex: 3,
     solutionWord: "GIPSBEIN",
-    explanation: "Das Wort lautet „GIPSBEIN“ und beginnt mit „G“.",
+    explanation: "Die Buchstaben ergeben das Wort „GIPSBEIN“ (Anfangsbuchstabe „G“).",
     difficulty: 2,
   },
   {
@@ -4545,7 +4604,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "J", "C", "K", "-"],
     correctIndex: 0,
     solutionWord: "GOLDFISCH",
-    explanation: "Das Wort lautet „GOLDFISCH“ und beginnt mit „G“.",
+    explanation: "Die Buchstaben ergeben das Wort „GOLDFISCH“ (Anfangsbuchstabe „G“).",
     difficulty: 2,
   },
   {
@@ -4554,7 +4613,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "G", "J", "C", "-"],
     correctIndex: 1,
     solutionWord: "GONDEL",
-    explanation: "Das Wort lautet „GONDEL“ und beginnt mit „G“.",
+    explanation: "Die Buchstaben ergeben das Wort „GONDEL“ (Anfangsbuchstabe „G“).",
     difficulty: 2,
   },
   {
@@ -4563,7 +4622,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "K", "J", "C", "-"],
     correctIndex: 0,
     solutionWord: "GRABEN",
-    explanation: "Das Wort lautet „GRABEN“ und beginnt mit „G“.",
+    explanation: "Die Buchstaben ergeben das Wort „GRABEN“ (Anfangsbuchstabe „G“).",
     difficulty: 2,
   },
   {
@@ -4572,7 +4631,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "C", "K", "J", "-"],
     correctIndex: 0,
     solutionWord: "GRAFIK",
-    explanation: "Das Wort lautet „GRAFIK“ und beginnt mit „G“.",
+    explanation: "Die Buchstaben ergeben das Wort „GRAFIK“ (Anfangsbuchstabe „G“).",
     difficulty: 2,
   },
   {
@@ -4581,7 +4640,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "C", "K", "J", "-"],
     correctIndex: 0,
     solutionWord: "GRENZWERT",
-    explanation: "Das Wort lautet „GRENZWERT“ und beginnt mit „G“.",
+    explanation: "Die Buchstaben ergeben das Wort „GRENZWERT“ (Anfangsbuchstabe „G“).",
     difficulty: 2,
   },
   {
@@ -4590,7 +4649,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "G", "C", "J", "-"],
     correctIndex: 1,
     solutionWord: "GRUNDRISS",
-    explanation: "Das Wort lautet „GRUNDRISS“ und beginnt mit „G“.",
+    explanation: "Die Buchstaben ergeben das Wort „GRUNDRISS“ (Anfangsbuchstabe „G“).",
     difficulty: 2,
   },
   {
@@ -4599,7 +4658,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "C", "J", "K", "-"],
     correctIndex: 0,
     solutionWord: "GRUNDSATZ",
-    explanation: "Das Wort lautet „GRUNDSATZ“ und beginnt mit „G“.",
+    explanation: "Die Buchstaben ergeben das Wort „GRUNDSATZ“ (Anfangsbuchstabe „G“).",
     difficulty: 2,
   },
   {
@@ -4608,7 +4667,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "K", "J", "C", "-"],
     correctIndex: 0,
     solutionWord: "GRUNDSCHULE",
-    explanation: "Das Wort lautet „GRUNDSCHULE“ und beginnt mit „G“.",
+    explanation: "Die Buchstaben ergeben das Wort „GRUNDSCHULE“ (Anfangsbuchstabe „G“).",
     difficulty: 2,
   },
   {
@@ -4617,7 +4676,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "K", "C", "J", "-"],
     correctIndex: 0,
     solutionWord: "GRUNDTON",
-    explanation: "Das Wort lautet „GRUNDTON“ und beginnt mit „G“.",
+    explanation: "Die Buchstaben ergeben das Wort „GRUNDTON“ (Anfangsbuchstabe „G“).",
     difficulty: 2,
   },
   {
@@ -4626,7 +4685,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["J", "C", "K", "G", "-"],
     correctIndex: 3,
     solutionWord: "GUMMI",
-    explanation: "Das Wort lautet „GUMMI“ und beginnt mit „G“.",
+    explanation: "Die Buchstaben ergeben das Wort „GUMMI“ (Anfangsbuchstabe „G“).",
     difficulty: 2,
   },
   {
@@ -4635,7 +4694,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "K", "M", "N", "-"],
     correctIndex: 0,
     solutionWord: "HAFTPFLICHT",
-    explanation: "Das Wort lautet „HAFTPFLICHT“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HAFTPFLICHT“ (Anfangsbuchstabe „H“).",
     difficulty: 2,
   },
   {
@@ -4644,7 +4703,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["N", "M", "K", "H", "-"],
     correctIndex: 3,
     solutionWord: "HALBJAHR",
-    explanation: "Das Wort lautet „HALBJAHR“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HALBJAHR“ (Anfangsbuchstabe „H“).",
     difficulty: 2,
   },
   {
@@ -4654,7 +4713,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "HALBMOND",
     explanation:
-      "Das Lösungswort lautet „HALBMOND“ (Anfangsbuchstabe „H“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „HALBMOND“ (Anfangsbuchstabe „H“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 2,
   },
   {
@@ -4663,7 +4722,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "H", "M", "N", "-"],
     correctIndex: 1,
     solutionWord: "HALSKETTE",
-    explanation: "Das Wort lautet „HALSKETTE“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HALSKETTE“ (Anfangsbuchstabe „H“).",
     difficulty: 2,
   },
   {
@@ -4672,7 +4731,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["N", "H", "K", "M", "-"],
     correctIndex: 1,
     solutionWord: "HALTUNG",
-    explanation: "Das Wort lautet „HALTUNG“ und beginnt mit „H“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „HALTUNG“ (Anfangsbuchstabe „H“).",
     difficulty: 2,
   },
   {
@@ -4681,7 +4741,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["N", "M", "H", "K", "-"],
     correctIndex: 2,
     solutionWord: "HANDLUNG",
-    explanation: "Das Wort lautet „HANDLUNG“ und beginnt mit „H“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „HANDLUNG“ (Anfangsbuchstabe „H“).",
     difficulty: 2,
   },
   {
@@ -4690,7 +4751,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["N", "K", "H", "M", "-"],
     correctIndex: 2,
     solutionWord: "HANDSCHRIFT",
-    explanation: "Das Wort lautet „HANDSCHRIFT“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HANDSCHRIFT“ (Anfangsbuchstabe „H“).",
     difficulty: 2,
   },
   {
@@ -4699,7 +4760,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["M", "N", "H", "K", "-"],
     correctIndex: 2,
     solutionWord: "HANDTASCHE",
-    explanation: "Das Wort lautet „HANDTASCHE“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HANDTASCHE“ (Anfangsbuchstabe „H“).",
     difficulty: 2,
   },
   {
@@ -4708,7 +4769,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "M", "N", "H", "-"],
     correctIndex: 3,
     solutionWord: "HANDWERK",
-    explanation: "Das Wort lautet „HANDWERK“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HANDWERK“ (Anfangsbuchstabe „H“).",
     difficulty: 2,
   },
   {
@@ -4717,7 +4778,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["M", "N", "H", "K", "-"],
     correctIndex: 2,
     solutionWord: "HARMONIE",
-    explanation: "Das Wort lautet „HARMONIE“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HARMONIE“ (Anfangsbuchstabe „H“).",
     difficulty: 2,
   },
   {
@@ -4726,7 +4787,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["M", "H", "K", "N", "-"],
     correctIndex: 1,
     solutionWord: "HASENBAU",
-    explanation: "Das Wort lautet „HASENBAU“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HASENBAU“ (Anfangsbuchstabe „H“).",
     difficulty: 2,
   },
   {
@@ -4735,7 +4796,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["M", "N", "H", "K", "-"],
     correctIndex: 2,
     solutionWord: "HAUSFLUR",
-    explanation: "Das Wort lautet „HAUSFLUR“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HAUSFLUR“ (Anfangsbuchstabe „H“).",
     difficulty: 2,
   },
   {
@@ -4744,7 +4805,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["M", "N", "H", "K", "-"],
     correctIndex: 2,
     solutionWord: "HAUSHALT",
-    explanation: "Das Wort lautet „HAUSHALT“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HAUSHALT“ (Anfangsbuchstabe „H“).",
     difficulty: 2,
   },
   {
@@ -4753,7 +4814,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["N", "K", "H", "M", "-"],
     correctIndex: 2,
     solutionWord: "HEILPFLANZE",
-    explanation: "Das Wort lautet „HEILPFLANZE“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HEILPFLANZE“ (Anfangsbuchstabe „H“).",
     difficulty: 2,
   },
   {
@@ -4762,7 +4823,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["A", "M", "K", "H", "-"],
     correctIndex: 3,
     solutionWord: "HEILUNG",
-    explanation: 'Das Wort lautet „HEILUNG" und beginnt mit „H".',
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „HEILUNG“ (Anfangsbuchstabe „H“).",
     difficulty: 2,
   },
   {
@@ -4771,7 +4833,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "N", "M", "K", "-"],
     correctIndex: 0,
     solutionWord: "HEIZKRAFT",
-    explanation: "Das Wort lautet „HEIZKRAFT“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HEIZKRAFT“ (Anfangsbuchstabe „H“).",
     difficulty: 2,
   },
   {
@@ -4780,7 +4842,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "H", "M", "N", "-"],
     correctIndex: 1,
     solutionWord: "HERZBLUT",
-    explanation: "Das Wort lautet „HERZBLUT“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HERZBLUT“ (Anfangsbuchstabe „H“).",
     difficulty: 2,
   },
   {
@@ -4789,7 +4851,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["M", "N", "H", "K", "-"],
     correctIndex: 2,
     solutionWord: "HEUBALLEN",
-    explanation: "Das Wort lautet „HEUBALLEN“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HEUBALLEN“ (Anfangsbuchstabe „H“).",
     difficulty: 2,
   },
   {
@@ -4798,7 +4860,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "K", "M", "N", "-"],
     correctIndex: 0,
     solutionWord: "HINWEIS",
-    explanation: "Das Wort lautet „HINWEIS“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HINWEIS“ (Anfangsbuchstabe „H“).",
     difficulty: 2,
   },
   {
@@ -4807,7 +4869,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["N", "H", "M", "K", "-"],
     correctIndex: 1,
     solutionWord: "HOCHSCHULE",
-    explanation: "Das Wort lautet „HOCHSCHULE“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HOCHSCHULE“ (Anfangsbuchstabe „H“).",
     difficulty: 2,
   },
   {
@@ -4816,7 +4878,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["N", "H", "M", "K", "-"],
     correctIndex: 1,
     solutionWord: "HOFEINFAHRT",
-    explanation: "Das Wort lautet „HOFEINFAHRT“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HOFEINFAHRT“ (Anfangsbuchstabe „H“).",
     difficulty: 2,
   },
   {
@@ -4825,7 +4887,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "N", "H", "M", "-"],
     correctIndex: 2,
     solutionWord: "HOLZWERK",
-    explanation: "Das Wort lautet „HOLZWERK“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HOLZWERK“ (Anfangsbuchstabe „H“).",
     difficulty: 2,
   },
   {
@@ -4834,7 +4896,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["M", "H", "N", "K", "-"],
     correctIndex: 1,
     solutionWord: "HORIZONT",
-    explanation: "Das Wort lautet „HORIZONT“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HORIZONT“ (Anfangsbuchstabe „H“).",
     difficulty: 2,
   },
   {
@@ -4843,7 +4905,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["N", "H", "M", "K", "-"],
     correctIndex: 1,
     solutionWord: "HORMON",
-    explanation: "Das Wort lautet „HORMON“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HORMON“ (Anfangsbuchstabe „H“).",
     difficulty: 2,
   },
   {
@@ -4852,7 +4914,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "H", "M", "N", "-"],
     correctIndex: 1,
     solutionWord: "HUNDERT",
-    explanation: "Das Wort lautet „HUNDERT“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HUNDERT“ (Anfangsbuchstabe „H“).",
     difficulty: 2,
   },
   {
@@ -4861,7 +4923,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["I", "E", "L", "J", "-"],
     correctIndex: 0,
     solutionWord: "IMPFUNG",
-    explanation: "Das Wort lautet „IMPFUNG“ und beginnt mit „I“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „IMPFUNG“ (Anfangsbuchstabe „I“).",
     difficulty: 2,
   },
   {
@@ -4870,7 +4933,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["J", "I", "L", "E", "-"],
     correctIndex: 1,
     solutionWord: "INDUSTRIE",
-    explanation: "Das Wort lautet „INDUSTRIE“ und beginnt mit „I“.",
+    explanation: "Die Buchstaben ergeben das Wort „INDUSTRIE“ (Anfangsbuchstabe „I“).",
     difficulty: 2,
   },
   {
@@ -4879,7 +4942,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["L", "J", "I", "E", "-"],
     correctIndex: 2,
     solutionWord: "INHABER",
-    explanation: "Das Wort lautet „INHABER“ und beginnt mit „I“.",
+    explanation: "Die Buchstaben ergeben das Wort „INHABER“ (Anfangsbuchstabe „I“).",
     difficulty: 2,
   },
   {
@@ -4888,7 +4951,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["L", "I", "J", "E", "-"],
     correctIndex: 1,
     solutionWord: "INSEKT",
-    explanation: "Das Wort lautet „INSEKT“ und beginnt mit „I“.",
+    explanation: "Die Buchstaben ergeben das Wort „INSEKT“ (Anfangsbuchstabe „I“).",
     difficulty: 2,
   },
   {
@@ -4897,7 +4960,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["I", "J", "Y", "G", "-"],
     correctIndex: 1,
     solutionWord: "JAHRGANG",
-    explanation: "Das Wort lautet „JAHRGANG“ und beginnt mit „J“.",
+    explanation: "Die Buchstaben ergeben das Wort „JAHRGANG“ (Anfangsbuchstabe „J“).",
     difficulty: 2,
   },
   {
@@ -4906,7 +4969,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "H", "K", "C", "-"],
     correctIndex: 2,
     solutionWord: "KACHELOFEN",
-    explanation: "Das Wort lautet „KACHELOFEN“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KACHELOFEN“ (Anfangsbuchstabe „K“).",
     difficulty: 2,
   },
   {
@@ -4915,7 +4978,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["X", "C", "K", "Q", "-"],
     correctIndex: 2,
     solutionWord: "KAFFEE",
-    explanation: 'Das Wort lautet „KAFFEE" und beginnt mit „K".',
+    explanation: "Die Buchstaben ergeben das Wort „KAFFEE“ (Anfangsbuchstabe „K“).",
     difficulty: 2,
   },
   {
@@ -4924,7 +4987,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["C", "G", "K", "H", "-"],
     correctIndex: 2,
     solutionWord: "KAFFEEKANNE",
-    explanation: "Das Wort lautet „KAFFEEKANNE“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KAFFEEKANNE“ (Anfangsbuchstabe „K“).",
     difficulty: 2,
   },
   {
@@ -4933,7 +4996,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "H", "K", "C", "-"],
     correctIndex: 2,
     solutionWord: "KALTBLUT",
-    explanation: "Das Wort lautet „KALTBLUT“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KALTBLUT“ (Anfangsbuchstabe „K“).",
     difficulty: 2,
   },
   {
@@ -4942,7 +5005,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "G", "K", "C", "-"],
     correctIndex: 2,
     solutionWord: "KALTLUFT",
-    explanation: "Das Wort lautet „KALTLUFT“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KALTLUFT“ (Anfangsbuchstabe „K“).",
     difficulty: 2,
   },
   {
@@ -4951,7 +5014,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["C", "H", "K", "G", "-"],
     correctIndex: 2,
     solutionWord: "KALTSTART",
-    explanation: "Das Wort lautet „KALTSTART“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KALTSTART“ (Anfangsbuchstabe „K“).",
     difficulty: 2,
   },
   {
@@ -4961,7 +5024,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "KAPITAL",
     explanation:
-      "Das Lösungswort lautet „KAPITAL“ (Anfangsbuchstabe „K“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „KAPITAL“ (Anfangsbuchstabe „K“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 2,
   },
   {
@@ -4970,7 +5033,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "H", "C", "K", "-"],
     correctIndex: 3,
     solutionWord: "KAPITEL",
-    explanation: "Das Wort lautet „KAPITEL“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KAPITEL“ (Anfangsbuchstabe „K“).",
     difficulty: 2,
   },
   {
@@ -4979,7 +5042,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["X", "Q", "C", "K", "-"],
     correctIndex: 3,
     solutionWord: "KAPSEL",
-    explanation: 'Das Wort lautet „KAPSEL" und beginnt mit „K".',
+    explanation: "Die Buchstaben ergeben das Wort „KAPSEL“ (Anfangsbuchstabe „K“).",
     difficulty: 2,
   },
   {
@@ -4988,7 +5051,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "G", "K", "C", "-"],
     correctIndex: 2,
     solutionWord: "KARPFENTEICH",
-    explanation: "Das Wort lautet „KARPFENTEICH“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KARPFENTEICH“ (Anfangsbuchstabe „K“).",
     difficulty: 2,
   },
   {
@@ -4997,7 +5060,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "H", "K", "C", "-"],
     correctIndex: 2,
     solutionWord: "KASTANIE",
-    explanation: "Das Wort lautet „KASTANIE“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KASTANIE“ (Anfangsbuchstabe „K“).",
     difficulty: 2,
   },
   {
@@ -5006,7 +5069,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["Q", "K", "C", "X", "-"],
     correctIndex: 1,
     solutionWord: "KELLER",
-    explanation: 'Das Wort lautet „KELLER" und beginnt mit „K".',
+    explanation: "Die Buchstaben ergeben das Wort „KELLER“ (Anfangsbuchstabe „K“).",
     difficulty: 2,
   },
   {
@@ -5015,7 +5078,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "H", "C", "K", "-"],
     correctIndex: 3,
     solutionWord: "KERAMIK",
-    explanation: "Das Wort lautet „KERAMIK“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KERAMIK“ (Anfangsbuchstabe „K“).",
     difficulty: 2,
   },
   {
@@ -5024,7 +5087,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "C", "H", "K", "-"],
     correctIndex: 3,
     solutionWord: "KIEFERNHARZ",
-    explanation: "Das Wort lautet „KIEFERNHARZ“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KIEFERNHARZ“ (Anfangsbuchstabe „K“).",
     difficulty: 2,
   },
   {
@@ -5033,7 +5096,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["Q", "X", "G", "K", "-"],
     correctIndex: 3,
     solutionWord: "KIRCHE",
-    explanation: 'Das Wort lautet „KIRCHE" und beginnt mit „K".',
+    explanation: "Die Buchstaben ergeben das Wort „KIRCHE“ (Anfangsbuchstabe „K“).",
     difficulty: 2,
   },
   {
@@ -5042,7 +5105,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "G", "C", "H", "-"],
     correctIndex: 0,
     solutionWord: "KIRCHPLATZ",
-    explanation: "Das Wort lautet „KIRCHPLATZ“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KIRCHPLATZ“ (Anfangsbuchstabe „K“).",
     difficulty: 2,
   },
   {
@@ -5051,7 +5114,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "K", "C", "G", "-"],
     correctIndex: 1,
     solutionWord: "KIRCHTURM",
-    explanation: "Das Wort lautet „KIRCHTURM“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KIRCHTURM“ (Anfangsbuchstabe „K“).",
     difficulty: 2,
   },
   {
@@ -5060,7 +5123,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["X", "Q", "K", "G", "-"],
     correctIndex: 2,
     solutionWord: "KISSEN",
-    explanation: 'Das Wort lautet „KISSEN" und beginnt mit „K".',
+    explanation: "Die Buchstaben ergeben das Wort „KISSEN“ (Anfangsbuchstabe „K“).",
     difficulty: 2,
   },
   {
@@ -5069,7 +5132,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "G", "C", "K", "-"],
     correctIndex: 3,
     solutionWord: "KLAMMER",
-    explanation: "Das Wort lautet „KLAMMER“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KLAMMER“ (Anfangsbuchstabe „K“).",
     difficulty: 2,
   },
   {
@@ -5079,7 +5142,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "KLAUSUR",
     explanation:
-      "Das Lösungswort lautet „KLAUSUR“ (Anfangsbuchstabe „K“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „KLAUSUR“ (Anfangsbuchstabe „K“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 2,
   },
   {
@@ -5088,7 +5151,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "K", "C", "G", "-"],
     correctIndex: 1,
     solutionWord: "KLETTERPFLANZE",
-    explanation: "Das Wort lautet „KLETTERPFLANZE“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KLETTERPFLANZE“ (Anfangsbuchstabe „K“).",
     difficulty: 2,
   },
   {
@@ -5098,7 +5161,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "KLINIK",
     explanation:
-      "Das Lösungswort lautet „KLINIK“ (Anfangsbuchstabe „K“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „KLINIK“ (Anfangsbuchstabe „K“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 2,
   },
   {
@@ -5107,7 +5170,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "C", "H", "G", "-"],
     correctIndex: 0,
     solutionWord: "KLOSTER",
-    explanation: "Das Wort lautet „KLOSTER“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KLOSTER“ (Anfangsbuchstabe „K“).",
     difficulty: 2,
   },
   {
@@ -5116,7 +5179,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["X", "K", "G", "Q", "-"],
     correctIndex: 1,
     solutionWord: "KNOCHEN",
-    explanation: 'Das Wort lautet „KNOCHEN" und beginnt mit „K".',
+    explanation: "Die Buchstaben ergeben das Wort „KNOCHEN“ (Anfangsbuchstabe „K“).",
     difficulty: 2,
   },
   {
@@ -5125,7 +5188,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["C", "K", "G", "H", "-"],
     correctIndex: 1,
     solutionWord: "KNORPEL",
-    explanation: "Das Wort lautet „KNORPEL“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KNORPEL“ (Anfangsbuchstabe „K“).",
     difficulty: 2,
   },
   {
@@ -5134,7 +5197,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "K", "C", "G", "-"],
     correctIndex: 1,
     solutionWord: "KOCHBUCH",
-    explanation: "Das Wort lautet „KOCHBUCH“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KOCHBUCH“ (Anfangsbuchstabe „K“).",
     difficulty: 2,
   },
   {
@@ -5143,7 +5206,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["C", "Q", "K", "X", "-"],
     correctIndex: 2,
     solutionWord: "KOLBEN",
-    explanation: 'Das Wort lautet „KOLBEN" und beginnt mit „K".',
+    explanation: "Die Buchstaben ergeben das Wort „KOLBEN“ (Anfangsbuchstabe „K“).",
     difficulty: 2,
   },
   {
@@ -5152,7 +5215,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "H", "C", "K", "-"],
     correctIndex: 3,
     solutionWord: "KOMPLEX",
-    explanation: "Das Wort lautet „KOMPLEX“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KOMPLEX“ (Anfangsbuchstabe „K“).",
     difficulty: 2,
   },
   {
@@ -5161,7 +5224,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["C", "G", "H", "K", "-"],
     correctIndex: 3,
     solutionWord: "KONFLIKT",
-    explanation: "Das Wort lautet „KONFLIKT“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KONFLIKT“ (Anfangsbuchstabe „K“).",
     difficulty: 2,
   },
   {
@@ -5170,7 +5233,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "C", "K", "G", "-"],
     correctIndex: 2,
     solutionWord: "KONSOLE",
-    explanation: "Das Wort lautet „KONSOLE“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KONSOLE“ (Anfangsbuchstabe „K“).",
     difficulty: 2,
   },
   {
@@ -5179,7 +5242,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "H", "C", "K", "-"],
     correctIndex: 3,
     solutionWord: "KONTAKT",
-    explanation: "Das Wort lautet „KONTAKT“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KONTAKT“ (Anfangsbuchstabe „K“).",
     difficulty: 2,
   },
   {
@@ -5189,7 +5252,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "KONTRAST",
     explanation:
-      "Das Lösungswort lautet „KONTRAST“ (Anfangsbuchstabe „K“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „KONTRAST“ (Anfangsbuchstabe „K“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 2,
   },
   {
@@ -5198,7 +5261,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "C", "G", "H", "-"],
     correctIndex: 0,
     solutionWord: "KONZEPT",
-    explanation: "Das Wort lautet „KONZEPT“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KONZEPT“ (Anfangsbuchstabe „K“).",
     difficulty: 2,
   },
   {
@@ -5207,7 +5270,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["C", "K", "H", "G", "-"],
     correctIndex: 1,
     solutionWord: "KORALLE",
-    explanation: "Das Wort lautet „KORALLE“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KORALLE“ (Anfangsbuchstabe „K“).",
     difficulty: 2,
   },
   {
@@ -5216,7 +5279,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "H", "G", "C", "-"],
     correctIndex: 0,
     solutionWord: "KORNBLUME",
-    explanation: "Das Wort lautet „KORNBLUME“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KORNBLUME“ (Anfangsbuchstabe „K“).",
     difficulty: 2,
   },
   {
@@ -5225,7 +5288,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["C", "G", "H", "K", "-"],
     correctIndex: 3,
     solutionWord: "KORNFELD",
-    explanation: "Das Wort lautet „KORNFELD“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KORNFELD“ (Anfangsbuchstabe „K“).",
     difficulty: 2,
   },
   {
@@ -5234,7 +5297,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "H", "K", "C", "-"],
     correctIndex: 2,
     solutionWord: "KOSTEN",
-    explanation: "Das Wort lautet „KOSTEN“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KOSTEN“ (Anfangsbuchstabe „K“).",
     difficulty: 2,
   },
   {
@@ -5244,7 +5307,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "KREUZER",
     explanation:
-      "Das Lösungswort lautet „KREUZER“ (Anfangsbuchstabe „K“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „KREUZER“ (Anfangsbuchstabe „K“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 2,
   },
   {
@@ -5253,7 +5316,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "H", "C", "G", "-"],
     correctIndex: 0,
     solutionWord: "KRISTALL",
-    explanation: "Das Wort lautet „KRISTALL“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KRISTALL“ (Anfangsbuchstabe „K“).",
     difficulty: 2,
   },
   {
@@ -5262,7 +5325,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["C", "K", "G", "H", "-"],
     correctIndex: 1,
     solutionWord: "KRONLEUCHTER",
-    explanation: "Das Wort lautet „KRONLEUCHTER“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KRONLEUCHTER“ (Anfangsbuchstabe „K“).",
     difficulty: 2,
   },
   {
@@ -5271,7 +5334,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["C", "K", "H", "G", "-"],
     correctIndex: 1,
     solutionWord: "KUNSTWERK",
-    explanation: "Das Wort lautet „KUNSTWERK“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KUNSTWERK“ (Anfangsbuchstabe „K“).",
     difficulty: 2,
   },
   {
@@ -5280,7 +5343,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "G", "C", "H", "-"],
     correctIndex: 0,
     solutionWord: "KUPFERDRAHT",
-    explanation: "Das Wort lautet „KUPFERDRAHT“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KUPFERDRAHT“ (Anfangsbuchstabe „K“).",
     difficulty: 2,
   },
   {
@@ -5289,7 +5352,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "H", "G", "C", "-"],
     correctIndex: 0,
     solutionWord: "KUPPLUNG",
-    explanation: "Das Wort lautet „KUPPLUNG“ und beginnt mit „K“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „KUPPLUNG“ (Anfangsbuchstabe „K“).",
     difficulty: 2,
   },
   {
@@ -5298,7 +5362,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["R", "T", "I", "L", "-"],
     correctIndex: 3,
     solutionWord: "LANDKARTE",
-    explanation: "Das Wort lautet „LANDKARTE“ und beginnt mit „L“.",
+    explanation: "Die Buchstaben ergeben das Wort „LANDKARTE“ (Anfangsbuchstabe „L“).",
     difficulty: 2,
   },
   {
@@ -5307,7 +5371,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["T", "R", "I", "L", "-"],
     correctIndex: 3,
     solutionWord: "LATERNE",
-    explanation: "Das Wort lautet „LATERNE“ und beginnt mit „L“.",
+    explanation: "Die Buchstaben ergeben das Wort „LATERNE“ (Anfangsbuchstabe „L“).",
     difficulty: 2,
   },
   {
@@ -5317,7 +5381,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "LAUBFROSCH",
     explanation:
-      "Das Lösungswort lautet „LAUBFROSCH“ (Anfangsbuchstabe „L“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „LAUBFROSCH“ (Anfangsbuchstabe „L“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 2,
   },
   {
@@ -5327,7 +5391,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "LAUBWALD",
     explanation:
-      "Das Lösungswort lautet „LAUBWALD“ (Anfangsbuchstabe „L“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „LAUBWALD“ (Anfangsbuchstabe „L“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 2,
   },
   {
@@ -5336,7 +5400,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["I", "L", "R", "T", "-"],
     correctIndex: 1,
     solutionWord: "LAUFWERK",
-    explanation: "Das Wort lautet „LAUFWERK“ und beginnt mit „L“.",
+    explanation: "Die Buchstaben ergeben das Wort „LAUFWERK“ (Anfangsbuchstabe „L“).",
     difficulty: 2,
   },
   {
@@ -5346,7 +5410,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "LAUTSPRECHER",
     explanation:
-      "Das Lösungswort lautet „LAUTSPRECHER“ (Anfangsbuchstabe „L“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „LAUTSPRECHER“ (Anfangsbuchstabe „L“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 2,
   },
   {
@@ -5356,7 +5420,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "LEBENSRAUM",
     explanation:
-      "Das Lösungswort lautet „LEBENSRAUM“ (Anfangsbuchstabe „L“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „LEBENSRAUM“ (Anfangsbuchstabe „L“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 2,
   },
   {
@@ -5365,7 +5429,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["I", "T", "R", "L", "-"],
     correctIndex: 3,
     solutionWord: "LEHRAMT",
-    explanation: "Das Wort lautet „LEHRAMT“ und beginnt mit „L“.",
+    explanation: "Die Buchstaben ergeben das Wort „LEHRAMT“ (Anfangsbuchstabe „L“).",
     difficulty: 2,
   },
   {
@@ -5374,7 +5438,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["R", "T", "I", "L", "-"],
     correctIndex: 3,
     solutionWord: "LEISTUNG",
-    explanation: "Das Wort lautet „LEISTUNG“ und beginnt mit „L“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „LEISTUNG“ (Anfangsbuchstabe „L“).",
     difficulty: 2,
   },
   {
@@ -5384,7 +5449,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "LEITBILD",
     explanation:
-      "Das Lösungswort lautet „LEITBILD“ (Anfangsbuchstabe „L“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „LEITBILD“ (Anfangsbuchstabe „L“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 2,
   },
   {
@@ -5394,7 +5459,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "LEITMOTIV",
     explanation:
-      "Das Lösungswort lautet „LEITMOTIV“ (Anfangsbuchstabe „L“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „LEITMOTIV“ (Anfangsbuchstabe „L“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 2,
   },
   {
@@ -5403,7 +5468,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["I", "L", "T", "R", "-"],
     correctIndex: 1,
     solutionWord: "LENKRAD",
-    explanation: "Das Wort lautet „LENKRAD“ und beginnt mit „L“.",
+    explanation: "Die Buchstaben ergeben das Wort „LENKRAD“ (Anfangsbuchstabe „L“).",
     difficulty: 2,
   },
   {
@@ -5412,7 +5477,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["I", "T", "L", "R", "-"],
     correctIndex: 2,
     solutionWord: "LERCHENNEST",
-    explanation: "Das Wort lautet „LERCHENNEST“ und beginnt mit „L“.",
+    explanation: "Die Buchstaben ergeben das Wort „LERCHENNEST“ (Anfangsbuchstabe „L“).",
     difficulty: 2,
   },
   {
@@ -5421,7 +5486,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["L", "I", "T", "R", "-"],
     correctIndex: 0,
     solutionWord: "LEUCHTTURM",
-    explanation: "Das Wort lautet „LEUCHTTURM“ und beginnt mit „L“.",
+    explanation: "Die Buchstaben ergeben das Wort „LEUCHTTURM“ (Anfangsbuchstabe „L“).",
     difficulty: 2,
   },
   {
@@ -5430,7 +5495,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["T", "R", "I", "L", "-"],
     correctIndex: 3,
     solutionWord: "LEXIKON",
-    explanation: "Das Wort lautet „LEXIKON“ und beginnt mit „L“.",
+    explanation: "Die Buchstaben ergeben das Wort „LEXIKON“ (Anfangsbuchstabe „L“).",
     difficulty: 2,
   },
   {
@@ -5439,7 +5504,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["I", "R", "T", "L", "-"],
     correctIndex: 3,
     solutionWord: "LICHTBILD",
-    explanation: "Das Wort lautet „LICHTBILD“ und beginnt mit „L“.",
+    explanation: "Die Buchstaben ergeben das Wort „LICHTBILD“ (Anfangsbuchstabe „L“).",
     difficulty: 2,
   },
   {
@@ -5448,7 +5513,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["L", "I", "R", "T", "-"],
     correctIndex: 0,
     solutionWord: "LICHTUNG",
-    explanation: "Das Wort lautet „LICHTUNG“ und beginnt mit „L“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „LICHTUNG“ (Anfangsbuchstabe „L“).",
     difficulty: 2,
   },
   {
@@ -5458,7 +5524,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "LIEDGUT",
     explanation:
-      "Das Lösungswort lautet „LIEDGUT“ (Anfangsbuchstabe „L“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „LIEDGUT“ (Anfangsbuchstabe „L“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 2,
   },
   {
@@ -5467,7 +5533,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["T", "E", "J", "L", "-"],
     correctIndex: 3,
     solutionWord: "LIPPEN",
-    explanation: 'Das Wort lautet „LIPPEN" und beginnt mit „L".',
+    explanation: "Die Buchstaben ergeben das Wort „LIPPEN“ (Anfangsbuchstabe „L“).",
     difficulty: 2,
   },
   {
@@ -5476,7 +5542,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["T", "J", "I", "L", "-"],
     correctIndex: 3,
     solutionWord: "LOESUNG",
-    explanation: 'Das Wort lautet „LOESUNG" und beginnt mit „L".',
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „LOESUNG“ (Anfangsbuchstabe „L“).",
     difficulty: 2,
   },
   {
@@ -5485,7 +5552,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["L", "R", "T", "I", "-"],
     correctIndex: 0,
     solutionWord: "LOKOMOTIVE",
-    explanation: "Das Wort lautet „LOKOMOTIVE“ und beginnt mit „L“.",
+    explanation: "Die Buchstaben ergeben das Wort „LOKOMOTIVE“ (Anfangsbuchstabe „L“).",
     difficulty: 2,
   },
   {
@@ -5494,7 +5561,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "M", "W", "N", "-"],
     correctIndex: 1,
     solutionWord: "MACHWERK",
-    explanation: "Das Wort lautet „MACHWERK“ und beginnt mit „M“.",
+    explanation: "Die Buchstaben ergeben das Wort „MACHWERK“ (Anfangsbuchstabe „M“).",
     difficulty: 2,
   },
   {
@@ -5503,7 +5570,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "R", "M", "W", "-"],
     correctIndex: 2,
     solutionWord: "MAGNET",
-    explanation: 'Das Wort lautet „MAGNET" und beginnt mit „M".',
+    explanation: "Die Buchstaben ergeben das Wort „MAGNET“ (Anfangsbuchstabe „M“).",
     difficulty: 2,
   },
   {
@@ -5512,7 +5579,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "N", "W", "M", "-"],
     correctIndex: 3,
     solutionWord: "MAHLZEIT",
-    explanation: "Das Wort lautet „MAHLZEIT“ und beginnt mit „M“.",
+    explanation: "Die Buchstaben ergeben das Wort „MAHLZEIT“ (Anfangsbuchstabe „M“).",
     difficulty: 2,
   },
   {
@@ -5521,7 +5588,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["R", "M", "H", "W", "-"],
     correctIndex: 1,
     solutionWord: "MANTEL",
-    explanation: 'Das Wort lautet „MANTEL" und beginnt mit „M".',
+    explanation: "Die Buchstaben ergeben das Wort „MANTEL“ (Anfangsbuchstabe „M“).",
     difficulty: 2,
   },
   {
@@ -5530,7 +5597,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["M", "W", "H", "N", "-"],
     correctIndex: 0,
     solutionWord: "MARKSTEIN",
-    explanation: "Das Wort lautet „MARKSTEIN“ und beginnt mit „M“.",
+    explanation: "Die Buchstaben ergeben das Wort „MARKSTEIN“ (Anfangsbuchstabe „M“).",
     difficulty: 2,
   },
   {
@@ -5539,7 +5606,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "M", "W", "N", "-"],
     correctIndex: 1,
     solutionWord: "MARKTPLATZ",
-    explanation: "Das Wort lautet „MARKTPLATZ“ und beginnt mit „M“.",
+    explanation: "Die Buchstaben ergeben das Wort „MARKTPLATZ“ (Anfangsbuchstabe „M“).",
     difficulty: 2,
   },
   {
@@ -5548,7 +5615,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "M", "N", "W", "-"],
     correctIndex: 1,
     solutionWord: "MEISTERWERK",
-    explanation: "Das Wort lautet „MEISTERWERK“ und beginnt mit „M“.",
+    explanation: "Die Buchstaben ergeben das Wort „MEISTERWERK“ (Anfangsbuchstabe „M“).",
     difficulty: 2,
   },
   {
@@ -5557,7 +5624,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["W", "H", "N", "M", "-"],
     correctIndex: 3,
     solutionWord: "MELDUNG",
-    explanation: "Das Wort lautet „MELDUNG“ und beginnt mit „M“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „MELDUNG“ (Anfangsbuchstabe „M“).",
     difficulty: 2,
   },
   {
@@ -5566,7 +5634,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["W", "H", "M", "N", "-"],
     correctIndex: 2,
     solutionWord: "MERKBLATT",
-    explanation: "Das Wort lautet „MERKBLATT“ und beginnt mit „M“.",
+    explanation: "Die Buchstaben ergeben das Wort „MERKBLATT“ (Anfangsbuchstabe „M“).",
     difficulty: 2,
   },
   {
@@ -5575,7 +5643,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "W", "N", "M", "-"],
     correctIndex: 3,
     solutionWord: "MESSER",
-    explanation: 'Das Wort lautet „MESSER" und beginnt mit „M".',
+    explanation: "Die Buchstaben ergeben das Wort „MESSER“ (Anfangsbuchstabe „M“).",
     difficulty: 2,
   },
   {
@@ -5584,7 +5652,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["W", "M", "N", "H", "-"],
     correctIndex: 1,
     solutionWord: "MESSWERT",
-    explanation: "Das Wort lautet „MESSWERT“ und beginnt mit „M“.",
+    explanation: "Die Buchstaben ergeben das Wort „MESSWERT“ (Anfangsbuchstabe „M“).",
     difficulty: 2,
   },
   {
@@ -5594,7 +5662,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "MILCHKANNE",
     explanation:
-      "Das Lösungswort lautet „MILCHKANNE“ (Anfangsbuchstabe „M“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „MILCHKANNE“ (Anfangsbuchstabe „M“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 2,
   },
   {
@@ -5604,7 +5672,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "MINERAL",
     explanation:
-      "Das Lösungswort lautet „MINERAL“ (Anfangsbuchstabe „M“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „MINERAL“ (Anfangsbuchstabe „M“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 2,
   },
   {
@@ -5613,7 +5681,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["W", "M", "H", "N", "-"],
     correctIndex: 1,
     solutionWord: "MISCHUNG",
-    explanation: "Das Wort lautet „MISCHUNG“ und beginnt mit „M“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „MISCHUNG“ (Anfangsbuchstabe „M“).",
     difficulty: 2,
   },
   {
@@ -5622,7 +5691,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["M", "W", "N", "H", "-"],
     correctIndex: 0,
     solutionWord: "MISTKAEFER",
-    explanation: "Das Wort lautet „MISTKAEFER“ und beginnt mit „M“.",
+    explanation: "Die Buchstaben ergeben das Wort „MISTKAEFER“ (Anfangsbuchstabe „M“).",
     difficulty: 2,
   },
   {
@@ -5631,7 +5700,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["M", "N", "H", "W", "-"],
     correctIndex: 0,
     solutionWord: "MITGLIED",
-    explanation: "Das Wort lautet „MITGLIED“ und beginnt mit „M“.",
+    explanation: "Die Buchstaben ergeben das Wort „MITGLIED“ (Anfangsbuchstabe „M“).",
     difficulty: 2,
   },
   {
@@ -5640,7 +5709,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["N", "W", "H", "M", "-"],
     correctIndex: 3,
     solutionWord: "MOHNBLUME",
-    explanation: "Das Wort lautet „MOHNBLUME“ und beginnt mit „M“.",
+    explanation: "Die Buchstaben ergeben das Wort „MOHNBLUME“ (Anfangsbuchstabe „M“).",
     difficulty: 2,
   },
   {
@@ -5649,7 +5718,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["N", "M", "W", "H", "-"],
     correctIndex: 1,
     solutionWord: "MOOSFLECHTE",
-    explanation: "Das Wort lautet „MOOSFLECHTE“ und beginnt mit „M“.",
+    explanation: "Die Buchstaben ergeben das Wort „MOOSFLECHTE“ (Anfangsbuchstabe „M“).",
     difficulty: 2,
   },
   {
@@ -5658,7 +5727,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["W", "M", "R", "H", "-"],
     correctIndex: 1,
     solutionWord: "MUSKEL",
-    explanation: 'Das Wort lautet „MUSKEL" und beginnt mit „M".',
+    explanation: "Die Buchstaben ergeben das Wort „MUSKEL“ (Anfangsbuchstabe „M“).",
     difficulty: 2,
   },
   {
@@ -5667,7 +5736,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["W", "N", "H", "M", "-"],
     correctIndex: 3,
     solutionWord: "MUTTER",
-    explanation: 'Das Wort lautet „MUTTER" und beginnt mit „M".',
+    explanation: "Die Buchstaben ergeben das Wort „MUTTER“ (Anfangsbuchstabe „M“).",
     difficulty: 2,
   },
   {
@@ -5676,7 +5745,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["M", "N", "H", "R", "-"],
     correctIndex: 1,
     solutionWord: "NACHRICHT",
-    explanation: "Das Wort lautet „NACHRICHT“ und beginnt mit „N“.",
+    explanation: "Die Buchstaben ergeben das Wort „NACHRICHT“ (Anfangsbuchstabe „N“).",
     difficulty: 2,
   },
   {
@@ -5685,7 +5754,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["M", "R", "H", "N", "-"],
     correctIndex: 3,
     solutionWord: "NACHRICHTEN",
-    explanation: "Das Wort lautet „NACHRICHTEN“ und beginnt mit „N“.",
+    explanation: "Die Buchstaben ergeben das Wort „NACHRICHTEN“ (Anfangsbuchstabe „N“).",
     difficulty: 2,
   },
   {
@@ -5694,7 +5763,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["R", "M", "N", "H", "-"],
     correctIndex: 2,
     solutionWord: "NACHTEIL",
-    explanation: "Das Wort lautet „NACHTEIL“ und beginnt mit „N“.",
+    explanation: "Die Buchstaben ergeben das Wort „NACHTEIL“ (Anfangsbuchstabe „N“).",
     difficulty: 2,
   },
   {
@@ -5703,7 +5772,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "R", "M", "N", "-"],
     correctIndex: 3,
     solutionWord: "NACHTFALTER",
-    explanation: "Das Wort lautet „NACHTFALTER“ und beginnt mit „N“.",
+    explanation: "Die Buchstaben ergeben das Wort „NACHTFALTER“ (Anfangsbuchstabe „N“).",
     difficulty: 2,
   },
   {
@@ -5713,7 +5782,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "NACHTRUHE",
     explanation:
-      "Das Lösungswort lautet „NACHTRUHE“ (Anfangsbuchstabe „N“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „NACHTRUHE“ (Anfangsbuchstabe „N“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 2,
   },
   {
@@ -5722,7 +5791,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "M", "N", "R", "-"],
     correctIndex: 2,
     solutionWord: "NACHWEIS",
-    explanation: "Das Wort lautet „NACHWEIS“ und beginnt mit „N“.",
+    explanation: "Die Buchstaben ergeben das Wort „NACHWEIS“ (Anfangsbuchstabe „N“).",
     difficulty: 2,
   },
   {
@@ -5731,7 +5800,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["M", "R", "N", "H", "-"],
     correctIndex: 2,
     solutionWord: "NADELBAUM",
-    explanation: "Das Wort lautet „NADELBAUM“ und beginnt mit „N“.",
+    explanation: "Die Buchstaben ergeben das Wort „NADELBAUM“ (Anfangsbuchstabe „N“).",
     difficulty: 2,
   },
   {
@@ -5740,7 +5809,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["W", "M", "R", "N", "-"],
     correctIndex: 3,
     solutionWord: "NAHRUNG",
-    explanation: 'Das Wort lautet „NAHRUNG" und beginnt mit „N".',
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „NAHRUNG“ (Anfangsbuchstabe „N“).",
     difficulty: 2,
   },
   {
@@ -5749,7 +5819,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["M", "H", "W", "N", "-"],
     correctIndex: 3,
     solutionWord: "NARBEN",
-    explanation: 'Das Wort lautet „NARBEN" und beginnt mit „N".',
+    explanation: "Die Buchstaben ergeben das Wort „NARBEN“ (Anfangsbuchstabe „N“).",
     difficulty: 2,
   },
   {
@@ -5758,7 +5828,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "N", "R", "M", "-"],
     correctIndex: 1,
     solutionWord: "NATURSCHUTZ",
-    explanation: "Das Wort lautet „NATURSCHUTZ“ und beginnt mit „N“.",
+    explanation: "Die Buchstaben ergeben das Wort „NATURSCHUTZ“ (Anfangsbuchstabe „N“).",
     difficulty: 2,
   },
   {
@@ -5767,7 +5837,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["M", "N", "H", "R", "-"],
     correctIndex: 1,
     solutionWord: "NETZWERK",
-    explanation: "Das Wort lautet „NETZWERK“ und beginnt mit „N“.",
+    explanation: "Die Buchstaben ergeben das Wort „NETZWERK“ (Anfangsbuchstabe „N“).",
     difficulty: 2,
   },
   {
@@ -5777,7 +5847,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "NEULING",
     explanation:
-      "Das Lösungswort lautet „NEULING“ (Anfangsbuchstabe „N“), der nicht unter A–D angeboten wird.",
+      "Erkennbar an der Endung -LING. Das Lösungswort lautet „NEULING“ (Anfangsbuchstabe „N“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 2,
   },
   {
@@ -5786,7 +5856,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "W", "M", "N", "-"],
     correctIndex: 3,
     solutionWord: "NEUTRON",
-    explanation: 'Das Wort lautet „NEUTRON" und beginnt mit „N".',
+    explanation: "Die Buchstaben ergeben das Wort „NEUTRON“ (Anfangsbuchstabe „N“).",
     difficulty: 2,
   },
   {
@@ -5795,7 +5865,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["R", "M", "H", "N", "-"],
     correctIndex: 3,
     solutionWord: "NORDPOL",
-    explanation: "Das Wort lautet „NORDPOL“ und beginnt mit „N“.",
+    explanation: "Die Buchstaben ergeben das Wort „NORDPOL“ (Anfangsbuchstabe „N“).",
     difficulty: 2,
   },
   {
@@ -5804,7 +5874,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["O", "A", "U", "Q", "-"],
     correctIndex: 0,
     solutionWord: "OBHUT",
-    explanation: "Das Wort lautet „OBHUT“ und beginnt mit „O“.",
+    explanation: "Die Buchstaben ergeben das Wort „OBHUT“ (Anfangsbuchstabe „O“).",
     difficulty: 2,
   },
   {
@@ -5814,7 +5884,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "OBSTKORB",
     explanation:
-      "Das Lösungswort lautet „OBSTKORB“ (Anfangsbuchstabe „O“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „OBSTKORB“ (Anfangsbuchstabe „O“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 2,
   },
   {
@@ -5823,7 +5893,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["Q", "O", "A", "U", "-"],
     correctIndex: 1,
     solutionWord: "OELGEMALDE",
-    explanation: "Das Wort lautet „OELGEMALDE“ und beginnt mit „O“.",
+    explanation: "Die Buchstaben ergeben das Wort „OELGEMALDE“ (Anfangsbuchstabe „O“).",
     difficulty: 2,
   },
   {
@@ -5832,7 +5902,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["U", "Q", "O", "A", "-"],
     correctIndex: 2,
     solutionWord: "ORDNER",
-    explanation: 'Das Wort lautet „ORDNER" und beginnt mit „O".',
+    explanation: "Die Buchstaben ergeben das Wort „ORDNER“ (Anfangsbuchstabe „O“).",
     difficulty: 2,
   },
   {
@@ -5841,7 +5911,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["A", "O", "U", "Q", "-"],
     correctIndex: 1,
     solutionWord: "ORDNUNG",
-    explanation: "Das Wort lautet „ORDNUNG“ und beginnt mit „O“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „ORDNUNG“ (Anfangsbuchstabe „O“).",
     difficulty: 2,
   },
   {
@@ -5851,7 +5922,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "ORTSKERN",
     explanation:
-      "Das Lösungswort lautet „ORTSKERN“ (Anfangsbuchstabe „O“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „ORTSKERN“ (Anfangsbuchstabe „O“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 2,
   },
   {
@@ -5860,7 +5931,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["B", "D", "P", "Q", "-"],
     correctIndex: 2,
     solutionWord: "PACKUNG",
-    explanation: "Das Wort lautet „PACKUNG“ und beginnt mit „P“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „PACKUNG“ (Anfangsbuchstabe „P“).",
     difficulty: 2,
   },
   {
@@ -5869,7 +5941,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "Q", "B", "D", "-"],
     correctIndex: 0,
     solutionWord: "PARASIT",
-    explanation: "Das Wort lautet „PARASIT“ und beginnt mit „P“.",
+    explanation: "Die Buchstaben ergeben das Wort „PARASIT“ (Anfangsbuchstabe „P“).",
     difficulty: 2,
   },
   {
@@ -5878,7 +5950,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["F", "B", "D", "P", "-"],
     correctIndex: 3,
     solutionWord: "PATIENT",
-    explanation: 'Das Wort lautet „PATIENT" und beginnt mit „P".',
+    explanation: "Die Buchstaben ergeben das Wort „PATIENT“ (Anfangsbuchstabe „P“).",
     difficulty: 2,
   },
   {
@@ -5887,7 +5959,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["F", "T", "B", "P", "-"],
     correctIndex: 3,
     solutionWord: "PENDEL",
-    explanation: 'Das Wort lautet „PENDEL" und beginnt mit „P".',
+    explanation: "Die Buchstaben ergeben das Wort „PENDEL“ (Anfangsbuchstabe „P“).",
     difficulty: 2,
   },
   {
@@ -5896,7 +5968,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["Q", "D", "B", "P", "-"],
     correctIndex: 3,
     solutionWord: "PFEFFERSTREUER",
-    explanation: "Das Wort lautet „PFEFFERSTREUER“ und beginnt mit „P“.",
+    explanation: "Die Buchstaben ergeben das Wort „PFEFFERSTREUER“ (Anfangsbuchstabe „P“).",
     difficulty: 2,
   },
   {
@@ -5905,7 +5977,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "T", "B", "P", "-"],
     correctIndex: 3,
     solutionWord: "PFEIFE",
-    explanation: 'Das Wort lautet „PFEIFE" und beginnt mit „P".',
+    explanation: "Die Buchstaben ergeben das Wort „PFEIFE“ (Anfangsbuchstabe „P“).",
     difficulty: 2,
   },
   {
@@ -5914,7 +5986,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "D", "Q", "B", "-"],
     correctIndex: 0,
     solutionWord: "PFLANZENWELT",
-    explanation: "Das Wort lautet „PFLANZENWELT“ und beginnt mit „P“.",
+    explanation: "Die Buchstaben ergeben das Wort „PFLANZENWELT“ (Anfangsbuchstabe „P“).",
     difficulty: 2,
   },
   {
@@ -5924,7 +5996,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "PFLAUME",
     explanation:
-      "Das Lösungswort lautet „PFLAUME“ (Anfangsbuchstabe „P“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „PFLAUME“ (Anfangsbuchstabe „P“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 2,
   },
   {
@@ -5933,7 +6005,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["T", "B", "D", "P", "-"],
     correctIndex: 3,
     solutionWord: "PFLEGE",
-    explanation: 'Das Wort lautet „PFLEGE" und beginnt mit „P".',
+    explanation: "Die Buchstaben ergeben das Wort „PFLEGE“ (Anfangsbuchstabe „P“).",
     difficulty: 2,
   },
   {
@@ -5942,7 +6014,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["B", "T", "D", "P", "-"],
     correctIndex: 3,
     solutionWord: "PFLICHT",
-    explanation: 'Das Wort lautet „PFLICHT" und beginnt mit „P".',
+    explanation: "Die Buchstaben ergeben das Wort „PFLICHT“ (Anfangsbuchstabe „P“).",
     difficulty: 2,
   },
   {
@@ -5951,7 +6023,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["Q", "B", "P", "D", "-"],
     correctIndex: 2,
     solutionWord: "PLANWERT",
-    explanation: "Das Wort lautet „PLANWERT“ und beginnt mit „P“.",
+    explanation: "Die Buchstaben ergeben das Wort „PLANWERT“ (Anfangsbuchstabe „P“).",
     difficulty: 2,
   },
   {
@@ -5960,7 +6032,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "F", "B", "P", "-"],
     correctIndex: 3,
     solutionWord: "PLATTE",
-    explanation: 'Das Wort lautet „PLATTE" und beginnt mit „P".',
+    explanation: "Die Buchstaben ergeben das Wort „PLATTE“ (Anfangsbuchstabe „P“).",
     difficulty: 2,
   },
   {
@@ -5969,7 +6041,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "B", "Q", "P", "-"],
     correctIndex: 3,
     solutionWord: "PLATZREGEN",
-    explanation: "Das Wort lautet „PLATZREGEN“ und beginnt mit „P“.",
+    explanation: "Die Buchstaben ergeben das Wort „PLATZREGEN“ (Anfangsbuchstabe „P“).",
     difficulty: 2,
   },
   {
@@ -5979,7 +6051,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "POSTFACH",
     explanation:
-      "Das Lösungswort lautet „POSTFACH“ (Anfangsbuchstabe „P“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „POSTFACH“ (Anfangsbuchstabe „P“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 2,
   },
   {
@@ -5988,7 +6060,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "D", "B", "Q", "-"],
     correctIndex: 0,
     solutionWord: "PRACHTBAU",
-    explanation: "Das Wort lautet „PRACHTBAU“ und beginnt mit „P“.",
+    explanation: "Die Buchstaben ergeben das Wort „PRACHTBAU“ (Anfangsbuchstabe „P“).",
     difficulty: 2,
   },
   {
@@ -5997,7 +6069,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["B", "D", "Q", "P", "-"],
     correctIndex: 3,
     solutionWord: "PRAXIS",
-    explanation: "Das Wort lautet „PRAXIS“ und beginnt mit „P“.",
+    explanation: "Die Buchstaben ergeben das Wort „PRAXIS“ (Anfangsbuchstabe „P“).",
     difficulty: 2,
   },
   {
@@ -6006,7 +6078,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "D", "Q", "B", "-"],
     correctIndex: 0,
     solutionWord: "PROBLEM",
-    explanation: "Das Wort lautet „PROBLEM“ und beginnt mit „P“.",
+    explanation: "Die Buchstaben ergeben das Wort „PROBLEM“ (Anfangsbuchstabe „P“).",
     difficulty: 2,
   },
   {
@@ -6015,7 +6087,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["B", "F", "P", "D", "-"],
     correctIndex: 2,
     solutionWord: "PROTEIN",
-    explanation: 'Das Wort lautet „PROTEIN" und beginnt mit „P".',
+    explanation: "Die Buchstaben ergeben das Wort „PROTEIN“ (Anfangsbuchstabe „P“).",
     difficulty: 2,
   },
   {
@@ -6024,7 +6096,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["Q", "D", "B", "P", "-"],
     correctIndex: 3,
     solutionWord: "PROZESS",
-    explanation: "Das Wort lautet „PROZESS“ und beginnt mit „P“.",
+    explanation: "Die Buchstaben ergeben das Wort „PROZESS“ (Anfangsbuchstabe „P“).",
     difficulty: 2,
   },
   {
@@ -6033,7 +6105,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "B", "R", "K", "-"],
     correctIndex: 2,
     solutionWord: "RAHMEN",
-    explanation: 'Das Wort lautet „RAHMEN" und beginnt mit „R".',
+    explanation: "Die Buchstaben ergeben das Wort „RAHMEN“ (Anfangsbuchstabe „R“).",
     difficulty: 2,
   },
   {
@@ -6042,7 +6114,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["N", "B", "R", "L", "-"],
     correctIndex: 2,
     solutionWord: "RATGEBER",
-    explanation: "Das Wort lautet „RATGEBER“ und beginnt mit „R“.",
+    explanation: "Die Buchstaben ergeben das Wort „RATGEBER“ (Anfangsbuchstabe „R“).",
     difficulty: 2,
   },
   {
@@ -6051,7 +6123,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["R", "L", "B", "N", "-"],
     correctIndex: 0,
     solutionWord: "RATHAUS",
-    explanation: "Das Wort lautet „RATHAUS“ und beginnt mit „R“.",
+    explanation: "Die Buchstaben ergeben das Wort „RATHAUS“ (Anfangsbuchstabe „R“).",
     difficulty: 2,
   },
   {
@@ -6060,7 +6132,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["O", "A", "U", "E", "-"],
     correctIndex: 1,
     solutionWord: "ABENDESSEN",
-    explanation: "Das Wort lautet „ABENDESSEN“ und beginnt mit „A“.",
+    explanation:
+      "Erkennbar an der Vorsilbe AB-. Die Buchstaben ergeben das Wort „ABENDESSEN“ (Anfangsbuchstabe „A“).",
     difficulty: 3,
   },
   {
@@ -6069,7 +6142,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["U", "A", "O", "E", "-"],
     correctIndex: 1,
     solutionWord: "ABENTEUER",
-    explanation: "Das Wort lautet „ABENTEUER“ und beginnt mit „A“.",
+    explanation:
+      "Erkennbar an der Vorsilbe AB-. Die Buchstaben ergeben das Wort „ABENTEUER“ (Anfangsbuchstabe „A“).",
     difficulty: 3,
   },
   {
@@ -6078,7 +6152,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["O", "A", "E", "U", "-"],
     correctIndex: 1,
     solutionWord: "ABFALLKORB",
-    explanation: "Das Wort lautet „ABFALLKORB“ und beginnt mit „A“.",
+    explanation:
+      "Erkennbar an der Vorsilbe AB-. Die Buchstaben ergeben das Wort „ABFALLKORB“ (Anfangsbuchstabe „A“).",
     difficulty: 3,
   },
   {
@@ -6087,7 +6162,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["O", "E", "U", "A", "-"],
     correctIndex: 3,
     solutionWord: "ABFLUGHALLE",
-    explanation: "Das Wort lautet „ABFLUGHALLE“ und beginnt mit „A“.",
+    explanation:
+      "Erkennbar an der Vorsilbe AB-. Die Buchstaben ergeben das Wort „ABFLUGHALLE“ (Anfangsbuchstabe „A“).",
     difficulty: 3,
   },
   {
@@ -6096,7 +6172,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["O", "A", "U", "E", "-"],
     correctIndex: 1,
     solutionWord: "ABLAGERUNG",
-    explanation: "Das Wort lautet „ABLAGERUNG“ und beginnt mit „A“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „ABLAGERUNG“ (Anfangsbuchstabe „A“).",
     difficulty: 3,
   },
   {
@@ -6105,7 +6182,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["U", "A", "O", "E", "-"],
     correctIndex: 1,
     solutionWord: "ABRECHNUNG",
-    explanation: "Das Wort lautet „ABRECHNUNG“ und beginnt mit „A“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „ABRECHNUNG“ (Anfangsbuchstabe „A“).",
     difficulty: 3,
   },
   {
@@ -6114,7 +6192,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["O", "E", "U", "A", "-"],
     correctIndex: 3,
     solutionWord: "ABSTIMMUNG",
-    explanation: "Das Wort lautet „ABSTIMMUNG“ und beginnt mit „A“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „ABSTIMMUNG“ (Anfangsbuchstabe „A“).",
     difficulty: 3,
   },
   {
@@ -6123,7 +6202,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["E", "H", "O", "A", "-"],
     correctIndex: 3,
     solutionWord: "ALGORITHMUS",
-    explanation: 'Das Wort lautet „ALGORITHMUS" und beginnt mit „A".',
+    explanation: "Die Buchstaben ergeben das Wort „ALGORITHMUS“ (Anfangsbuchstabe „A“).",
     difficulty: 3,
   },
   {
@@ -6132,7 +6211,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["U", "O", "E", "A", "-"],
     correctIndex: 3,
     solutionWord: "ALTERSHEIM",
-    explanation: "Das Wort lautet „ALTERSHEIM“ und beginnt mit „A“.",
+    explanation: "Die Buchstaben ergeben das Wort „ALTERSHEIM“ (Anfangsbuchstabe „A“).",
     difficulty: 3,
   },
   {
@@ -6141,7 +6220,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["U", "E", "O", "A", "-"],
     correctIndex: 3,
     solutionWord: "ALTPAPIER",
-    explanation: "Das Wort lautet „ALTPAPIER“ und beginnt mit „A“.",
+    explanation: "Die Buchstaben ergeben das Wort „ALTPAPIER“ (Anfangsbuchstabe „A“).",
     difficulty: 3,
   },
   {
@@ -6150,7 +6229,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["O", "A", "U", "H", "-"],
     correctIndex: 1,
     solutionWord: "AMINOSAEURE",
-    explanation: 'Das Wort lautet „AMINOSAEURE" und beginnt mit „A".',
+    explanation: "Die Buchstaben ergeben das Wort „AMINOSAEURE“ (Anfangsbuchstabe „A“).",
     difficulty: 3,
   },
   {
@@ -6159,7 +6238,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["U", "O", "A", "H", "-"],
     correctIndex: 2,
     solutionWord: "AMPLITUDE",
-    explanation: 'Das Wort lautet „AMPLITUDE" und beginnt mit „A".',
+    explanation: "Die Buchstaben ergeben das Wort „AMPLITUDE“ (Anfangsbuchstabe „A“).",
     difficulty: 3,
   },
   {
@@ -6168,7 +6247,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "U", "O", "A", "-"],
     correctIndex: 3,
     solutionWord: "ANATOMIE",
-    explanation: 'Das Wort lautet „ANATOMIE" und beginnt mit „A".',
+    explanation:
+      "Erkennbar an der Vorsilbe AN-. Die Buchstaben ergeben das Wort „ANATOMIE“ (Anfangsbuchstabe „A“).",
     difficulty: 3,
   },
   {
@@ -6177,7 +6257,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["A", "E", "O", "U", "-"],
     correctIndex: 0,
     solutionWord: "ANGEHOERIGE",
-    explanation: "Das Wort lautet „ANGEHOERIGE“ und beginnt mit „A“.",
+    explanation:
+      "Erkennbar an der Vorsilbe AN-. Die Buchstaben ergeben das Wort „ANGEHOERIGE“ (Anfangsbuchstabe „A“).",
     difficulty: 3,
   },
   {
@@ -6186,7 +6267,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["O", "U", "A", "E", "-"],
     correctIndex: 2,
     solutionWord: "ANKERPUNKT",
-    explanation: "Das Wort lautet „ANKERPUNKT“ und beginnt mit „A“.",
+    explanation:
+      "Erkennbar an der Vorsilbe AN-. Die Buchstaben ergeben das Wort „ANKERPUNKT“ (Anfangsbuchstabe „A“).",
     difficulty: 3,
   },
   {
@@ -6196,7 +6278,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "ANSCHAUUNG",
     explanation:
-      "Das Lösungswort lautet „ANSCHAUUNG“ (Anfangsbuchstabe „A“), der nicht unter A–D angeboten wird.",
+      "Erkennbar an der Endung -UNG. Das Lösungswort lautet „ANSCHAUUNG“ (Anfangsbuchstabe „A“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 3,
   },
   {
@@ -6205,7 +6287,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["U", "H", "E", "A", "-"],
     correctIndex: 3,
     solutionWord: "ANTIBIOTIKA",
-    explanation: 'Das Wort lautet „ANTIBIOTIKA" und beginnt mit „A".',
+    explanation:
+      "Erkennbar an der Vorsilbe AN-. Die Buchstaben ergeben das Wort „ANTIBIOTIKA“ (Anfangsbuchstabe „A“).",
     difficulty: 3,
   },
   {
@@ -6214,7 +6297,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["A", "E", "O", "U", "-"],
     correctIndex: 0,
     solutionWord: "ARBEITGEBER",
-    explanation: "Das Wort lautet „ARBEITGEBER“ und beginnt mit „A“.",
+    explanation: "Die Buchstaben ergeben das Wort „ARBEITGEBER“ (Anfangsbuchstabe „A“).",
     difficulty: 3,
   },
   {
@@ -6223,7 +6306,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["A", "U", "O", "E", "-"],
     correctIndex: 0,
     solutionWord: "ARBEITNEHMER",
-    explanation: "Das Wort lautet „ARBEITNEHMER“ und beginnt mit „A“.",
+    explanation: "Die Buchstaben ergeben das Wort „ARBEITNEHMER“ (Anfangsbuchstabe „A“).",
     difficulty: 3,
   },
   {
@@ -6258,7 +6341,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "ARBEITSLOSENVERSICHERUNG",
     explanation:
-      "Das Lösungswort lautet „ARBEITSLOSENVERSICHERUNG“ (Anfangsbuchstabe „A“), der nicht unter A–D angeboten wird.",
+      "Erkennbar an der Endung -UNG. Das Lösungswort lautet „ARBEITSLOSENVERSICHERUNG“ (Anfangsbuchstabe „A“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 3,
   },
   {
@@ -6267,7 +6350,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["E", "O", "U", "A", "-"],
     correctIndex: 3,
     solutionWord: "ARBEITSPLATZ",
-    explanation: "Das Wort lautet „ARBEITSPLATZ“ und beginnt mit „A“.",
+    explanation: "Die Buchstaben ergeben das Wort „ARBEITSPLATZ“ (Anfangsbuchstabe „A“).",
     difficulty: 3,
   },
   {
@@ -6276,7 +6359,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["U", "E", "A", "O", "-"],
     correctIndex: 2,
     solutionWord: "ARBEITSVERTRAG",
-    explanation: "Das Wort lautet „ARBEITSVERTRAG“ und beginnt mit „A“.",
+    explanation: "Die Buchstaben ergeben das Wort „ARBEITSVERTRAG“ (Anfangsbuchstabe „A“).",
     difficulty: 3,
   },
   {
@@ -6285,7 +6368,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["E", "O", "U", "A", "-"],
     correctIndex: 3,
     solutionWord: "ARTENSCHUTZ",
-    explanation: "Das Wort lautet „ARTENSCHUTZ“ und beginnt mit „A“.",
+    explanation: "Die Buchstaben ergeben das Wort „ARTENSCHUTZ“ (Anfangsbuchstabe „A“).",
     difficulty: 3,
   },
   {
@@ -6313,7 +6396,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["E", "U", "A", "O", "-"],
     correctIndex: 2,
     solutionWord: "ARZNEIMITTELGESETZ",
-    explanation: "Das Wort lautet „ARZNEIMITTELGESETZ“ und beginnt mit „A“.",
+    explanation: "Die Buchstaben ergeben das Wort „ARZNEIMITTELGESETZ“ (Anfangsbuchstabe „A“).",
     difficulty: 3,
   },
   {
@@ -6322,7 +6405,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["E", "U", "A", "O", "-"],
     correctIndex: 2,
     solutionWord: "ARZTPRAXIS",
-    explanation: "Das Wort lautet „ARZTPRAXIS“ und beginnt mit „A“.",
+    explanation: "Die Buchstaben ergeben das Wort „ARZTPRAXIS“ (Anfangsbuchstabe „A“).",
     difficulty: 3,
   },
   {
@@ -6332,7 +6415,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "AUFERSTEHUNG",
     explanation:
-      "Das Lösungswort lautet „AUFERSTEHUNG“ (Anfangsbuchstabe „A“), der nicht unter A–D angeboten wird.",
+      "Erkennbar an der Endung -UNG. Das Lösungswort lautet „AUFERSTEHUNG“ (Anfangsbuchstabe „A“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 3,
   },
   {
@@ -6341,7 +6424,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["U", "A", "O", "E", "-"],
     correctIndex: 1,
     solutionWord: "AUFGABENSTELLUNG",
-    explanation: "Das Wort lautet „AUFGABENSTELLUNG“ und beginnt mit „A“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „AUFGABENSTELLUNG“ (Anfangsbuchstabe „A“).",
     difficulty: 3,
   },
   {
@@ -6351,7 +6435,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "AUFSTELLUNG",
     explanation:
-      "Das Lösungswort lautet „AUFSTELLUNG“ (Anfangsbuchstabe „A“), der nicht unter A–D angeboten wird.",
+      "Erkennbar an der Endung -UNG. Das Lösungswort lautet „AUFSTELLUNG“ (Anfangsbuchstabe „A“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 3,
   },
   {
@@ -6360,7 +6444,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["O", "E", "A", "U", "-"],
     correctIndex: 2,
     solutionWord: "AUSBILDUNG",
-    explanation: "Das Wort lautet „AUSBILDUNG“ und beginnt mit „A“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „AUSBILDUNG“ (Anfangsbuchstabe „A“).",
     difficulty: 3,
   },
   {
@@ -6369,7 +6454,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["U", "E", "A", "O", "-"],
     correctIndex: 2,
     solutionWord: "AUSDEHNUNG",
-    explanation: "Das Wort lautet „AUSDEHNUNG“ und beginnt mit „A“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „AUSDEHNUNG“ (Anfangsbuchstabe „A“).",
     difficulty: 3,
   },
   {
@@ -6378,7 +6464,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["U", "O", "E", "A", "-"],
     correctIndex: 3,
     solutionWord: "AUSSTELLUNG",
-    explanation: "Das Wort lautet „AUSSTELLUNG“ und beginnt mit „A“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „AUSSTELLUNG“ (Anfangsbuchstabe „A“).",
     difficulty: 3,
   },
   {
@@ -6387,7 +6474,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["U", "E", "A", "O", "-"],
     correctIndex: 2,
     solutionWord: "AUTOBAHNAUFFAHRT",
-    explanation: "Das Wort lautet „AUTOBAHNAUFFAHRT“ und beginnt mit „A“.",
+    explanation: "Die Buchstaben ergeben das Wort „AUTOBAHNAUFFAHRT“ (Anfangsbuchstabe „A“).",
     difficulty: 3,
   },
   {
@@ -6396,7 +6483,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["B", "R", "D", "P", "-"],
     correctIndex: 0,
     solutionWord: "BACKPULVER",
-    explanation: "Das Wort lautet „BACKPULVER“ und beginnt mit „B“.",
+    explanation: "Die Buchstaben ergeben das Wort „BACKPULVER“ (Anfangsbuchstabe „B“).",
     difficulty: 3,
   },
   {
@@ -6405,7 +6492,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "B", "R", "D", "-"],
     correctIndex: 1,
     solutionWord: "BAHNSTEIG",
-    explanation: "Das Wort lautet „BAHNSTEIG“ und beginnt mit „B“.",
+    explanation: "Die Buchstaben ergeben das Wort „BAHNSTEIG“ (Anfangsbuchstabe „B“).",
     difficulty: 3,
   },
   {
@@ -6414,7 +6501,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "P", "B", "R", "-"],
     correctIndex: 2,
     solutionWord: "BAUANLEITUNG",
-    explanation: "Das Wort lautet „BAUANLEITUNG“ und beginnt mit „B“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „BAUANLEITUNG“ (Anfangsbuchstabe „B“).",
     difficulty: 3,
   },
   {
@@ -6423,7 +6511,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["R", "D", "B", "P", "-"],
     correctIndex: 2,
     solutionWord: "BAUMSCHULE",
-    explanation: "Das Wort lautet „BAUMSCHULE“ und beginnt mit „B“.",
+    explanation: "Die Buchstaben ergeben das Wort „BAUMSCHULE“ (Anfangsbuchstabe „B“).",
     difficulty: 3,
   },
   {
@@ -6433,7 +6521,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "BEARBEITUNG",
     explanation:
-      "Das Lösungswort lautet „BEARBEITUNG“ (Anfangsbuchstabe „B“), der nicht unter A–D angeboten wird.",
+      "Erkennbar an der Endung -UNG. Das Lösungswort lautet „BEARBEITUNG“ (Anfangsbuchstabe „B“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 3,
   },
   {
@@ -6442,7 +6530,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["R", "D", "P", "B", "-"],
     correctIndex: 3,
     solutionWord: "BEFRAGUNG",
-    explanation: "Das Wort lautet „BEFRAGUNG“ und beginnt mit „B“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „BEFRAGUNG“ (Anfangsbuchstabe „B“).",
     difficulty: 3,
   },
   {
@@ -6451,7 +6540,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["R", "P", "G", "B", "-"],
     correctIndex: 3,
     solutionWord: "BEHANDLUNG",
-    explanation: 'Das Wort lautet „BEHANDLUNG" und beginnt mit „B".',
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „BEHANDLUNG“ (Anfangsbuchstabe „B“).",
     difficulty: 3,
   },
   {
@@ -6460,7 +6550,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["R", "P", "D", "B", "-"],
     correctIndex: 3,
     solutionWord: "BEKLEIDUNG",
-    explanation: "Das Wort lautet „BEKLEIDUNG“ und beginnt mit „B“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „BEKLEIDUNG“ (Anfangsbuchstabe „B“).",
     difficulty: 3,
   },
   {
@@ -6469,7 +6560,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "P", "R", "B", "-"],
     correctIndex: 3,
     solutionWord: "BELASTUNG",
-    explanation: "Das Wort lautet „BELASTUNG“ und beginnt mit „B“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „BELASTUNG“ (Anfangsbuchstabe „B“).",
     difficulty: 3,
   },
   {
@@ -6478,7 +6570,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["R", "D", "P", "B", "-"],
     correctIndex: 3,
     solutionWord: "BELEUCHTUNG",
-    explanation: "Das Wort lautet „BELEUCHTUNG“ und beginnt mit „B“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „BELEUCHTUNG“ (Anfangsbuchstabe „B“).",
     difficulty: 3,
   },
   {
@@ -6487,7 +6580,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "R", "B", "P", "-"],
     correctIndex: 2,
     solutionWord: "BERGLANDSCHAFT",
-    explanation: "Das Wort lautet „BERGLANDSCHAFT“ und beginnt mit „B“.",
+    explanation:
+      "Erkennbar an der Endung -SCHAFT. Die Buchstaben ergeben das Wort „BERGLANDSCHAFT“ (Anfangsbuchstabe „B“).",
     difficulty: 3,
   },
   {
@@ -6496,7 +6590,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "R", "B", "D", "-"],
     correctIndex: 2,
     solutionWord: "BERUFSAUSBILDUNG",
-    explanation: "Das Wort lautet „BERUFSAUSBILDUNG“ und beginnt mit „B“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „BERUFSAUSBILDUNG“ (Anfangsbuchstabe „B“).",
     difficulty: 3,
   },
   {
@@ -6505,7 +6600,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "D", "B", "R", "-"],
     correctIndex: 2,
     solutionWord: "BERUFSERFAHRUNG",
-    explanation: "Das Wort lautet „BERUFSERFAHRUNG“ und beginnt mit „B“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „BERUFSERFAHRUNG“ (Anfangsbuchstabe „B“).",
     difficulty: 3,
   },
   {
@@ -6515,7 +6611,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "BERUFSWAHL",
     explanation:
-      "Das Lösungswort lautet „BERUFSWAHL“ (Anfangsbuchstabe „B“), der nicht unter A–D angeboten wird.",
+      "Erkennbar an der Vorsilbe BE-. Das Lösungswort lautet „BERUFSWAHL“ (Anfangsbuchstabe „B“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 3,
   },
   {
@@ -6543,7 +6639,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["R", "D", "B", "P", "-"],
     correctIndex: 2,
     solutionWord: "BERUFUNGSVERFAHREN",
-    explanation: "Das Wort lautet „BERUFUNGSVERFAHREN“ und beginnt mit „B“.",
+    explanation:
+      "Erkennbar an der Vorsilbe BE-. Die Buchstaben ergeben das Wort „BERUFUNGSVERFAHREN“ (Anfangsbuchstabe „B“).",
     difficulty: 3,
   },
   {
@@ -6552,7 +6649,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "D", "B", "R", "-"],
     correctIndex: 2,
     solutionWord: "BESCHREIBUNG",
-    explanation: "Das Wort lautet „BESCHREIBUNG“ und beginnt mit „B“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „BESCHREIBUNG“ (Anfangsbuchstabe „B“).",
     difficulty: 3,
   },
   {
@@ -6581,7 +6679,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "R", "D", "B", "-"],
     correctIndex: 3,
     solutionWord: "BESCHWERDEVERFAHREN",
-    explanation: "Das Wort lautet „BESCHWERDEVERFAHREN“ und beginnt mit „B“.",
+    explanation:
+      "Erkennbar an der Vorsilbe BE-. Die Buchstaben ergeben das Wort „BESCHWERDEVERFAHREN“ (Anfangsbuchstabe „B“).",
     difficulty: 3,
   },
   {
@@ -6590,7 +6689,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "R", "D", "B", "-"],
     correctIndex: 3,
     solutionWord: "BESICHTIGUNG",
-    explanation: "Das Wort lautet „BESICHTIGUNG“ und beginnt mit „B“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „BESICHTIGUNG“ (Anfangsbuchstabe „B“).",
     difficulty: 3,
   },
   {
@@ -6599,7 +6699,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "B", "R", "D", "-"],
     correctIndex: 1,
     solutionWord: "BESTANDTEIL",
-    explanation: "Das Wort lautet „BESTANDTEIL“ und beginnt mit „B“.",
+    explanation:
+      "Erkennbar an der Vorsilbe BE-. Die Buchstaben ergeben das Wort „BESTANDTEIL“ (Anfangsbuchstabe „B“).",
     difficulty: 3,
   },
   {
@@ -6608,7 +6709,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["R", "P", "D", "B", "-"],
     correctIndex: 3,
     solutionWord: "BESTRAHLUNG",
-    explanation: "Das Wort lautet „BESTRAHLUNG“ und beginnt mit „B“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „BESTRAHLUNG“ (Anfangsbuchstabe „B“).",
     difficulty: 3,
   },
   {
@@ -6617,7 +6719,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["R", "B", "D", "P", "-"],
     correctIndex: 1,
     solutionWord: "BETRIEBSSYSTEM",
-    explanation: "Das Wort lautet „BETRIEBSSYSTEM“ und beginnt mit „B“.",
+    explanation:
+      "Erkennbar an der Vorsilbe BE-. Die Buchstaben ergeben das Wort „BETRIEBSSYSTEM“ (Anfangsbuchstabe „B“).",
     difficulty: 3,
   },
   {
@@ -6647,7 +6750,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "BETRIEBSVERSAMMLUNG",
     explanation:
-      "Das Lösungswort lautet „BETRIEBSVERSAMMLUNG“ (Anfangsbuchstabe „B“), der nicht unter A–D angeboten wird.",
+      "Erkennbar an der Endung -UNG. Das Lösungswort lautet „BETRIEBSVERSAMMLUNG“ (Anfangsbuchstabe „B“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 3,
   },
   {
@@ -6656,7 +6759,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["B", "D", "R", "P", "-"],
     correctIndex: 0,
     solutionWord: "BEWEISAUFNAHME",
-    explanation: "Das Wort lautet „BEWEISAUFNAHME“ und beginnt mit „B“.",
+    explanation:
+      "Erkennbar an der Vorsilbe BE-. Die Buchstaben ergeben das Wort „BEWEISAUFNAHME“ (Anfangsbuchstabe „B“).",
     difficulty: 3,
   },
   {
@@ -6666,7 +6770,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "BEWUNDERUNG",
     explanation:
-      "Das Lösungswort lautet „BEWUNDERUNG“ (Anfangsbuchstabe „B“), der nicht unter A–D angeboten wird.",
+      "Erkennbar an der Endung -UNG. Das Lösungswort lautet „BEWUNDERUNG“ (Anfangsbuchstabe „B“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 3,
   },
   {
@@ -6675,7 +6779,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "R", "G", "B", "-"],
     correctIndex: 3,
     solutionWord: "BIBLIOTHEK",
-    explanation: 'Das Wort lautet „BIBLIOTHEK" und beginnt mit „B".',
+    explanation: "Die Buchstaben ergeben das Wort „BIBLIOTHEK“ (Anfangsbuchstabe „B“).",
     difficulty: 3,
   },
   {
@@ -6684,7 +6788,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["R", "P", "B", "D", "-"],
     correctIndex: 2,
     solutionWord: "BILDVERARBEITUNG",
-    explanation: "Das Wort lautet „BILDVERARBEITUNG“ und beginnt mit „B“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „BILDVERARBEITUNG“ (Anfangsbuchstabe „B“).",
     difficulty: 3,
   },
   {
@@ -6693,7 +6798,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "P", "B", "R", "-"],
     correctIndex: 2,
     solutionWord: "BINDEGEWEBE",
-    explanation: 'Das Wort lautet „BINDEGEWEBE" und beginnt mit „B".',
+    explanation: "Die Buchstaben ergeben das Wort „BINDEGEWEBE“ (Anfangsbuchstabe „B“).",
     difficulty: 3,
   },
   {
@@ -6702,7 +6807,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "R", "B", "G", "-"],
     correctIndex: 2,
     solutionWord: "BIOCHEMIE",
-    explanation: 'Das Wort lautet „BIOCHEMIE" und beginnt mit „B".',
+    explanation: "Die Buchstaben ergeben das Wort „BIOCHEMIE“ (Anfangsbuchstabe „B“).",
     difficulty: 3,
   },
   {
@@ -6711,7 +6816,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["B", "D", "R", "P", "-"],
     correctIndex: 0,
     solutionWord: "BLICKFELD",
-    explanation: "Das Wort lautet „BLICKFELD“ und beginnt mit „B“.",
+    explanation: "Die Buchstaben ergeben das Wort „BLICKFELD“ (Anfangsbuchstabe „B“).",
     difficulty: 3,
   },
   {
@@ -6720,7 +6825,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "R", "B", "D", "-"],
     correctIndex: 2,
     solutionWord: "BLICKWINKEL",
-    explanation: "Das Wort lautet „BLICKWINKEL“ und beginnt mit „B“.",
+    explanation: "Die Buchstaben ergeben das Wort „BLICKWINKEL“ (Anfangsbuchstabe „B“).",
     difficulty: 3,
   },
   {
@@ -6729,7 +6834,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "R", "B", "P", "-"],
     correctIndex: 2,
     solutionWord: "BLITZABLEITER",
-    explanation: "Das Wort lautet „BLITZABLEITER“ und beginnt mit „B“.",
+    explanation: "Die Buchstaben ergeben das Wort „BLITZABLEITER“ (Anfangsbuchstabe „B“).",
     difficulty: 3,
   },
   {
@@ -6738,7 +6843,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "R", "G", "B", "-"],
     correctIndex: 3,
     solutionWord: "BLUTDRUCK",
-    explanation: 'Das Wort lautet „BLUTDRUCK" und beginnt mit „B".',
+    explanation: "Die Buchstaben ergeben das Wort „BLUTDRUCK“ (Anfangsbuchstabe „B“).",
     difficulty: 3,
   },
   {
@@ -6747,7 +6852,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "P", "B", "R", "-"],
     correctIndex: 2,
     solutionWord: "BLUTDRUCKMESSUNG",
-    explanation: "Das Wort lautet „BLUTDRUCKMESSUNG“ und beginnt mit „B“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „BLUTDRUCKMESSUNG“ (Anfangsbuchstabe „B“).",
     difficulty: 3,
   },
   {
@@ -6757,7 +6863,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "BLUTKREISLAUF",
     explanation:
-      "Das Lösungswort lautet „BLUTKREISLAUF“ (Anfangsbuchstabe „B“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „BLUTKREISLAUF“ (Anfangsbuchstabe „B“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 3,
   },
   {
@@ -6766,7 +6872,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "P", "G", "B", "-"],
     correctIndex: 3,
     solutionWord: "BLUTZUCKER",
-    explanation: 'Das Wort lautet „BLUTZUCKER" und beginnt mit „B".',
+    explanation: "Die Buchstaben ergeben das Wort „BLUTZUCKER“ (Anfangsbuchstabe „B“).",
     difficulty: 3,
   },
   {
@@ -6776,7 +6882,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "BREMSKLOTZ",
     explanation:
-      "Das Lösungswort lautet „BREMSKLOTZ“ (Anfangsbuchstabe „B“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „BREMSKLOTZ“ (Anfangsbuchstabe „B“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 3,
   },
   {
@@ -6785,7 +6891,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["B", "R", "P", "D", "-"],
     correctIndex: 0,
     solutionWord: "BRENNHOLZ",
-    explanation: "Das Wort lautet „BRENNHOLZ“ und beginnt mit „B“.",
+    explanation: "Die Buchstaben ergeben das Wort „BRENNHOLZ“ (Anfangsbuchstabe „B“).",
     difficulty: 3,
   },
   {
@@ -6794,7 +6900,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "B", "P", "R", "-"],
     correctIndex: 1,
     solutionWord: "BRENNSTOFF",
-    explanation: "Das Wort lautet „BRENNSTOFF“ und beginnt mit „B“.",
+    explanation: "Die Buchstaben ergeben das Wort „BRENNSTOFF“ (Anfangsbuchstabe „B“).",
     difficulty: 3,
   },
   {
@@ -6804,7 +6910,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "BRENNWERT",
     explanation:
-      "Das Lösungswort lautet „BRENNWERT“ (Anfangsbuchstabe „B“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „BRENNWERT“ (Anfangsbuchstabe „B“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 3,
   },
   {
@@ -6813,7 +6919,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["R", "B", "P", "D", "-"],
     correctIndex: 1,
     solutionWord: "BRIEFKASTEN",
-    explanation: "Das Wort lautet „BRIEFKASTEN“ und beginnt mit „B“.",
+    explanation: "Die Buchstaben ergeben das Wort „BRIEFKASTEN“ (Anfangsbuchstabe „B“).",
     difficulty: 3,
   },
   {
@@ -6822,7 +6928,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "B", "R", "P", "-"],
     correctIndex: 1,
     solutionWord: "BRUCHSTELLE",
-    explanation: "Das Wort lautet „BRUCHSTELLE“ und beginnt mit „B“.",
+    explanation: "Die Buchstaben ergeben das Wort „BRUCHSTELLE“ (Anfangsbuchstabe „B“).",
     difficulty: 3,
   },
   {
@@ -6850,7 +6956,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["B", "R", "D", "P", "-"],
     correctIndex: 0,
     solutionWord: "BUCHDRUCKVERFAHREN",
-    explanation: "Das Wort lautet „BUCHDRUCKVERFAHREN“ und beginnt mit „B“.",
+    explanation: "Die Buchstaben ergeben das Wort „BUCHDRUCKVERFAHREN“ (Anfangsbuchstabe „B“).",
     difficulty: 3,
   },
   {
@@ -6860,7 +6966,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "BUCHHALTUNG",
     explanation:
-      "Das Lösungswort lautet „BUCHHALTUNG“ (Anfangsbuchstabe „B“), der nicht unter A–D angeboten wird.",
+      "Erkennbar an der Endung -UNG. Das Lösungswort lautet „BUCHHALTUNG“ (Anfangsbuchstabe „B“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 3,
   },
   {
@@ -6869,7 +6975,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["B", "P", "D", "R", "-"],
     correctIndex: 0,
     solutionWord: "BUCHHANDLUNG",
-    explanation: "Das Wort lautet „BUCHHANDLUNG“ und beginnt mit „B“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „BUCHHANDLUNG“ (Anfangsbuchstabe „B“).",
     difficulty: 3,
   },
   {
@@ -6878,7 +6985,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "R", "B", "D", "-"],
     correctIndex: 2,
     solutionWord: "BUNDESKANZLER",
-    explanation: "Das Wort lautet „BUNDESKANZLER“ und beginnt mit „B“.",
+    explanation: "Die Buchstaben ergeben das Wort „BUNDESKANZLER“ (Anfangsbuchstabe „B“).",
     difficulty: 3,
   },
   {
@@ -6887,7 +6994,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["R", "D", "B", "P", "-"],
     correctIndex: 2,
     solutionWord: "BUNDESSTRASSE",
-    explanation: "Das Wort lautet „BUNDESSTRASSE“ und beginnt mit „B“.",
+    explanation: "Die Buchstaben ergeben das Wort „BUNDESSTRASSE“ (Anfangsbuchstabe „B“).",
     difficulty: 3,
   },
   {
@@ -6921,7 +7028,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "R", "B", "P", "-"],
     correctIndex: 2,
     solutionWord: "BUNDESVERFASSUNGSGERICHT",
-    explanation: "Das Wort lautet „BUNDESVERFASSUNGSGERICHT“ und beginnt mit „B“.",
+    explanation:
+      "Die Buchstaben ergeben das Wort „BUNDESVERFASSUNGSGERICHT“ (Anfangsbuchstabe „B“).",
     difficulty: 3,
   },
   {
@@ -6930,7 +7038,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["C", "K", "S", "G", "-"],
     correctIndex: 0,
     solutionWord: "CHEMIELABOR",
-    explanation: "Das Wort lautet „CHEMIELABOR“ und beginnt mit „C“.",
+    explanation: "Die Buchstaben ergeben das Wort „CHEMIELABOR“ (Anfangsbuchstabe „C“).",
     difficulty: 3,
   },
   {
@@ -6939,7 +7047,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "Z", "C", "S", "-"],
     correctIndex: 2,
     solutionWord: "CHIRURGIE",
-    explanation: 'Das Wort lautet „CHIRURGIE" und beginnt mit „C".',
+    explanation: "Die Buchstaben ergeben das Wort „CHIRURGIE“ (Anfangsbuchstabe „C“).",
     difficulty: 3,
   },
   {
@@ -6948,7 +7056,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "G", "Z", "C", "-"],
     correctIndex: 3,
     solutionWord: "CHOLESTERIN",
-    explanation: 'Das Wort lautet „CHOLESTERIN" und beginnt mit „C".',
+    explanation: "Die Buchstaben ergeben das Wort „CHOLESTERIN“ (Anfangsbuchstabe „C“).",
     difficulty: 3,
   },
   {
@@ -6957,7 +7065,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["Z", "C", "K", "G", "-"],
     correctIndex: 1,
     solutionWord: "CHROMOSOM",
-    explanation: 'Das Wort lautet „CHROMOSOM" und beginnt mit „C".',
+    explanation: "Die Buchstaben ergeben das Wort „CHROMOSOM“ (Anfangsbuchstabe „C“).",
     difficulty: 3,
   },
   {
@@ -6987,7 +7095,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "COMPUTERTOMOGRAPHIE",
     explanation:
-      "Das Lösungswort lautet „COMPUTERTOMOGRAPHIE“ (Anfangsbuchstabe „C“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „COMPUTERTOMOGRAPHIE“ (Anfangsbuchstabe „C“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 3,
   },
   {
@@ -6997,7 +7105,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "DACHGESCHOSS",
     explanation:
-      "Das Lösungswort lautet „DACHGESCHOSS“ (Anfangsbuchstabe „D“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „DACHGESCHOSS“ (Anfangsbuchstabe „D“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 3,
   },
   {
@@ -7007,7 +7115,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "DAMPFDRUCK",
     explanation:
-      "Das Lösungswort lautet „DAMPFDRUCK“ (Anfangsbuchstabe „D“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „DAMPFDRUCK“ (Anfangsbuchstabe „D“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 3,
   },
   {
@@ -7016,7 +7124,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "P", "T", "B", "-"],
     correctIndex: 0,
     solutionWord: "DAMPFMASCHINE",
-    explanation: "Das Wort lautet „DAMPFMASCHINE“ und beginnt mit „D“.",
+    explanation: "Die Buchstaben ergeben das Wort „DAMPFMASCHINE“ (Anfangsbuchstabe „D“).",
     difficulty: 3,
   },
   {
@@ -7026,7 +7134,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "DAMPFNUDEL",
     explanation:
-      "Das Lösungswort lautet „DAMPFNUDEL“ (Anfangsbuchstabe „D“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „DAMPFNUDEL“ (Anfangsbuchstabe „D“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 3,
   },
   {
@@ -7035,7 +7143,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["T", "B", "D", "P", "-"],
     correctIndex: 2,
     solutionWord: "DAMPFWALZE",
-    explanation: "Das Wort lautet „DAMPFWALZE“ und beginnt mit „D“.",
+    explanation: "Die Buchstaben ergeben das Wort „DAMPFWALZE“ (Anfangsbuchstabe „D“).",
     difficulty: 3,
   },
   {
@@ -7044,7 +7152,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "T", "D", "B", "-"],
     correctIndex: 2,
     solutionWord: "DARSTELLUNG",
-    explanation: "Das Wort lautet „DARSTELLUNG“ und beginnt mit „D“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „DARSTELLUNG“ (Anfangsbuchstabe „D“).",
     difficulty: 3,
   },
   {
@@ -7053,7 +7162,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["T", "D", "B", "P", "-"],
     correctIndex: 1,
     solutionWord: "DATENBANK",
-    explanation: "Das Wort lautet „DATENBANK“ und beginnt mit „D“.",
+    explanation: "Die Buchstaben ergeben das Wort „DATENBANK“ (Anfangsbuchstabe „D“).",
     difficulty: 3,
   },
   {
@@ -7062,7 +7171,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["B", "P", "T", "D", "-"],
     correctIndex: 3,
     solutionWord: "DATENSCHUTZGESETZ",
-    explanation: "Das Wort lautet „DATENSCHUTZGESETZ“ und beginnt mit „D“.",
+    explanation: "Die Buchstaben ergeben das Wort „DATENSCHUTZGESETZ“ (Anfangsbuchstabe „D“).",
     difficulty: 3,
   },
   {
@@ -7072,7 +7181,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "DATENVERARBEITUNG",
     explanation:
-      "Das Lösungswort lautet „DATENVERARBEITUNG“ (Anfangsbuchstabe „D“), der nicht unter A–D angeboten wird.",
+      "Erkennbar an der Endung -UNG. Das Lösungswort lautet „DATENVERARBEITUNG“ (Anfangsbuchstabe „D“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 3,
   },
   {
@@ -7081,7 +7190,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "T", "D", "B", "-"],
     correctIndex: 2,
     solutionWord: "DERMATOLOGIE",
-    explanation: "Das Wort lautet „DERMATOLOGIE“ und beginnt mit „D“.",
+    explanation: "Die Buchstaben ergeben das Wort „DERMATOLOGIE“ (Anfangsbuchstabe „D“).",
     difficulty: 3,
   },
   {
@@ -7090,7 +7199,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["B", "T", "D", "P", "-"],
     correctIndex: 2,
     solutionWord: "DIAGNOSE",
-    explanation: 'Das Wort lautet „DIAGNOSE" und beginnt mit „D".',
+    explanation: "Die Buchstaben ergeben das Wort „DIAGNOSE“ (Anfangsbuchstabe „D“).",
     difficulty: 3,
   },
   {
@@ -7099,7 +7208,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["B", "D", "P", "T", "-"],
     correctIndex: 1,
     solutionWord: "DIENSTLEISTUNG",
-    explanation: "Das Wort lautet „DIENSTLEISTUNG“ und beginnt mit „D“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „DIENSTLEISTUNG“ (Anfangsbuchstabe „D“).",
     difficulty: 3,
   },
   {
@@ -7108,7 +7218,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "B", "D", "T", "-"],
     correctIndex: 2,
     solutionWord: "DIMENSION",
-    explanation: 'Das Wort lautet „DIMENSION" und beginnt mit „D".',
+    explanation: "Die Buchstaben ergeben das Wort „DIMENSION“ (Anfangsbuchstabe „D“).",
     difficulty: 3,
   },
   {
@@ -7117,7 +7227,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "D", "T", "B", "-"],
     correctIndex: 1,
     solutionWord: "DREHPUNKT",
-    explanation: "Das Wort lautet „DREHPUNKT“ und beginnt mit „D“.",
+    explanation: "Die Buchstaben ergeben das Wort „DREHPUNKT“ (Anfangsbuchstabe „D“).",
     difficulty: 3,
   },
   {
@@ -7126,7 +7236,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["B", "D", "T", "P", "-"],
     correctIndex: 1,
     solutionWord: "DRUCKLUFT",
-    explanation: "Das Wort lautet „DRUCKLUFT“ und beginnt mit „D“.",
+    explanation: "Die Buchstaben ergeben das Wort „DRUCKLUFT“ (Anfangsbuchstabe „D“).",
     difficulty: 3,
   },
   {
@@ -7135,7 +7245,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["T", "B", "D", "P", "-"],
     correctIndex: 2,
     solutionWord: "DRUCKSACHE",
-    explanation: "Das Wort lautet „DRUCKSACHE“ und beginnt mit „D“.",
+    explanation: "Die Buchstaben ergeben das Wort „DRUCKSACHE“ (Anfangsbuchstabe „D“).",
     difficulty: 3,
   },
   {
@@ -7144,7 +7254,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["T", "B", "P", "D", "-"],
     correctIndex: 3,
     solutionWord: "DURCHBRUCH",
-    explanation: "Das Wort lautet „DURCHBRUCH“ und beginnt mit „D“.",
+    explanation: "Die Buchstaben ergeben das Wort „DURCHBRUCH“ (Anfangsbuchstabe „D“).",
     difficulty: 3,
   },
   {
@@ -7153,7 +7263,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["B", "T", "D", "P", "-"],
     correctIndex: 2,
     solutionWord: "DURCHSCHNITT",
-    explanation: "Das Wort lautet „DURCHSCHNITT“ und beginnt mit „D“.",
+    explanation: "Die Buchstaben ergeben das Wort „DURCHSCHNITT“ (Anfangsbuchstabe „D“).",
     difficulty: 3,
   },
   {
@@ -7162,7 +7272,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["O", "I", "A", "E", "-"],
     correctIndex: 3,
     solutionWord: "EHRENAMT",
-    explanation: "Das Wort lautet „EHRENAMT“ und beginnt mit „E“.",
+    explanation: "Die Buchstaben ergeben das Wort „EHRENAMT“ (Anfangsbuchstabe „E“).",
     difficulty: 3,
   },
   {
@@ -7171,7 +7281,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["I", "E", "A", "O", "-"],
     correctIndex: 1,
     solutionWord: "EINBAHNSTRASSE",
-    explanation: "Das Wort lautet „EINBAHNSTRASSE“ und beginnt mit „E“.",
+    explanation:
+      "Erkennbar an der Vorsilbe EIN-. Die Buchstaben ergeben das Wort „EINBAHNSTRASSE“ (Anfangsbuchstabe „E“).",
     difficulty: 3,
   },
   {
@@ -7180,7 +7291,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["A", "O", "I", "E", "-"],
     correctIndex: 3,
     solutionWord: "EINKAUFSLISTE",
-    explanation: "Das Wort lautet „EINKAUFSLISTE“ und beginnt mit „E“.",
+    explanation:
+      "Erkennbar an der Vorsilbe EIN-. Die Buchstaben ergeben das Wort „EINKAUFSLISTE“ (Anfangsbuchstabe „E“).",
     difficulty: 3,
   },
   {
@@ -7189,7 +7301,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["O", "I", "E", "A", "-"],
     correctIndex: 2,
     solutionWord: "EINRICHTUNG",
-    explanation: "Das Wort lautet „EINRICHTUNG“ und beginnt mit „E“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „EINRICHTUNG“ (Anfangsbuchstabe „E“).",
     difficulty: 3,
   },
   {
@@ -7198,7 +7311,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["I", "A", "E", "O", "-"],
     correctIndex: 2,
     solutionWord: "EINZELHANDEL",
-    explanation: "Das Wort lautet „EINZELHANDEL“ und beginnt mit „E“.",
+    explanation:
+      "Erkennbar an der Vorsilbe EIN-. Die Buchstaben ergeben das Wort „EINZELHANDEL“ (Anfangsbuchstabe „E“).",
     difficulty: 3,
   },
   {
@@ -7207,7 +7321,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["E", "A", "I", "O", "-"],
     correctIndex: 0,
     solutionWord: "EISENBAHNLINIE",
-    explanation: "Das Wort lautet „EISENBAHNLINIE“ und beginnt mit „E“.",
+    explanation: "Die Buchstaben ergeben das Wort „EISENBAHNLINIE“ (Anfangsbuchstabe „E“).",
     difficulty: 3,
   },
   {
@@ -7217,7 +7331,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "EISENWERK",
     explanation:
-      "Das Lösungswort lautet „EISENWERK“ (Anfangsbuchstabe „E“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „EISENWERK“ (Anfangsbuchstabe „E“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 3,
   },
   {
@@ -7226,7 +7340,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["U", "O", "I", "E", "-"],
     correctIndex: 3,
     solutionWord: "ELEKTRIZITAET",
-    explanation: 'Das Wort lautet „ELEKTRIZITAET" und beginnt mit „E".',
+    explanation: "Die Buchstaben ergeben das Wort „ELEKTRIZITAET“ (Anfangsbuchstabe „E“).",
     difficulty: 3,
   },
   {
@@ -7235,7 +7349,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["A", "I", "O", "E", "-"],
     correctIndex: 3,
     solutionWord: "ELEKTROTECHNIK",
-    explanation: "Das Wort lautet „ELEKTROTECHNIK“ und beginnt mit „E“.",
+    explanation: "Die Buchstaben ergeben das Wort „ELEKTROTECHNIK“ (Anfangsbuchstabe „E“).",
     difficulty: 3,
   },
   {
@@ -7244,7 +7358,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["A", "E", "I", "O", "-"],
     correctIndex: 1,
     solutionWord: "ELTERNZEITGESETZ",
-    explanation: "Das Wort lautet „ELTERNZEITGESETZ“ und beginnt mit „E“.",
+    explanation: "Die Buchstaben ergeben das Wort „ELTERNZEITGESETZ“ (Anfangsbuchstabe „E“).",
     difficulty: 3,
   },
   {
@@ -7253,7 +7367,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["I", "O", "A", "E", "-"],
     correctIndex: 3,
     solutionWord: "EMPFINDUNG",
-    explanation: "Das Wort lautet „EMPFINDUNG“ und beginnt mit „E“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „EMPFINDUNG“ (Anfangsbuchstabe „E“).",
     difficulty: 3,
   },
   {
@@ -7263,7 +7378,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "ENDOKRINOLOGIE",
     explanation:
-      "Das Lösungswort lautet „ENDOKRINOLOGIE“ (Anfangsbuchstabe „E“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „ENDOKRINOLOGIE“ (Anfangsbuchstabe „E“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 3,
   },
   {
@@ -7272,7 +7387,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["U", "I", "O", "E", "-"],
     correctIndex: 3,
     solutionWord: "ENDOPLASMA",
-    explanation: 'Das Wort lautet „ENDOPLASMA" und beginnt mit „E".',
+    explanation: "Die Buchstaben ergeben das Wort „ENDOPLASMA“ (Anfangsbuchstabe „E“).",
     difficulty: 3,
   },
   {
@@ -7281,7 +7396,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["E", "O", "I", "A", "-"],
     correctIndex: 0,
     solutionWord: "ENDSTATION",
-    explanation: "Das Wort lautet „ENDSTATION“ und beginnt mit „E“.",
+    explanation:
+      "Erkennbar an der Endung -TION. Die Buchstaben ergeben das Wort „ENDSTATION“ (Anfangsbuchstabe „E“).",
     difficulty: 3,
   },
   {
@@ -7313,7 +7429,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["I", "A", "O", "E", "-"],
     correctIndex: 3,
     solutionWord: "ENERGIESPEICHERTECHNIK",
-    explanation: "Das Wort lautet „ENERGIESPEICHERTECHNIK“ und beginnt mit „E“.",
+    explanation: "Die Buchstaben ergeben das Wort „ENERGIESPEICHERTECHNIK“ (Anfangsbuchstabe „E“).",
     difficulty: 3,
   },
   {
@@ -7322,7 +7438,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["I", "E", "A", "O", "-"],
     correctIndex: 1,
     solutionWord: "ENERGIEVERSORGUNG",
-    explanation: "Das Wort lautet „ENERGIEVERSORGUNG“ und beginnt mit „E“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „ENERGIEVERSORGUNG“ (Anfangsbuchstabe „E“).",
     difficulty: 3,
   },
   {
@@ -7331,7 +7448,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["E", "I", "O", "A", "-"],
     correctIndex: 0,
     solutionWord: "ENTDECKUNG",
-    explanation: "Das Wort lautet „ENTDECKUNG“ und beginnt mit „E“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „ENTDECKUNG“ (Anfangsbuchstabe „E“).",
     difficulty: 3,
   },
   {
@@ -7340,7 +7458,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["O", "A", "I", "E", "-"],
     correctIndex: 3,
     solutionWord: "ENTSORGUNG",
-    explanation: "Das Wort lautet „ENTSORGUNG“ und beginnt mit „E“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „ENTSORGUNG“ (Anfangsbuchstabe „E“).",
     difficulty: 3,
   },
   {
@@ -7349,7 +7468,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["O", "A", "E", "I", "-"],
     correctIndex: 2,
     solutionWord: "ENTSPANNUNG",
-    explanation: "Das Wort lautet „ENTSPANNUNG“ und beginnt mit „E“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „ENTSPANNUNG“ (Anfangsbuchstabe „E“).",
     difficulty: 3,
   },
   {
@@ -7359,7 +7479,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "ENTWICKLUNG",
     explanation:
-      "Das Lösungswort lautet „ENTWICKLUNG“ (Anfangsbuchstabe „E“), der nicht unter A–D angeboten wird.",
+      "Erkennbar an der Endung -UNG. Das Lösungswort lautet „ENTWICKLUNG“ (Anfangsbuchstabe „E“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 3,
   },
   {
@@ -7390,7 +7510,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["O", "E", "I", "A", "-"],
     correctIndex: 1,
     solutionWord: "ENTWICKLUNGSABTEILUNG",
-    explanation: "Das Wort lautet „ENTWICKLUNGSABTEILUNG“ und beginnt mit „E“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „ENTWICKLUNGSABTEILUNG“ (Anfangsbuchstabe „E“).",
     difficulty: 3,
   },
   {
@@ -7399,7 +7520,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["E", "A", "I", "O", "-"],
     correctIndex: 0,
     solutionWord: "EPIDEMIOLOGIE",
-    explanation: "Das Wort lautet „EPIDEMIOLOGIE“ und beginnt mit „E“.",
+    explanation: "Die Buchstaben ergeben das Wort „EPIDEMIOLOGIE“ (Anfangsbuchstabe „E“).",
     difficulty: 3,
   },
   {
@@ -7408,7 +7529,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["I", "E", "A", "O", "-"],
     correctIndex: 1,
     solutionWord: "ERDBEBENMESSUNG",
-    explanation: "Das Wort lautet „ERDBEBENMESSUNG“ und beginnt mit „E“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „ERDBEBENMESSUNG“ (Anfangsbuchstabe „E“).",
     difficulty: 3,
   },
   {
@@ -7417,7 +7539,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["I", "A", "O", "E", "-"],
     correctIndex: 3,
     solutionWord: "ERDGESCHOSS",
-    explanation: "Das Wort lautet „ERDGESCHOSS“ und beginnt mit „E“.",
+    explanation:
+      "Erkennbar an der Vorsilbe ER-. Die Buchstaben ergeben das Wort „ERDGESCHOSS“ (Anfangsbuchstabe „E“).",
     difficulty: 3,
   },
   {
@@ -7426,7 +7549,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["I", "E", "A", "O", "-"],
     correctIndex: 1,
     solutionWord: "ERDKRUSTE",
-    explanation: "Das Wort lautet „ERDKRUSTE“ und beginnt mit „E“.",
+    explanation:
+      "Erkennbar an der Vorsilbe ER-. Die Buchstaben ergeben das Wort „ERDKRUSTE“ (Anfangsbuchstabe „E“).",
     difficulty: 3,
   },
   {
@@ -7435,7 +7559,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["E", "I", "O", "A", "-"],
     correctIndex: 0,
     solutionWord: "ERDMAGNETFELD",
-    explanation: "Das Wort lautet „ERDMAGNETFELD“ und beginnt mit „E“.",
+    explanation:
+      "Erkennbar an der Vorsilbe ER-. Die Buchstaben ergeben das Wort „ERDMAGNETFELD“ (Anfangsbuchstabe „E“).",
     difficulty: 3,
   },
   {
@@ -7444,7 +7569,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["I", "A", "E", "O", "-"],
     correctIndex: 2,
     solutionWord: "ERFRISCHUNG",
-    explanation: "Das Wort lautet „ERFRISCHUNG“ und beginnt mit „E“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „ERFRISCHUNG“ (Anfangsbuchstabe „E“).",
     difficulty: 3,
   },
   {
@@ -7453,7 +7579,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["I", "A", "O", "E", "-"],
     correctIndex: 3,
     solutionWord: "ERGEBNISSE",
-    explanation: "Das Wort lautet „ERGEBNISSE“ und beginnt mit „E“.",
+    explanation:
+      "Erkennbar an der Vorsilbe ER-. Die Buchstaben ergeben das Wort „ERGEBNISSE“ (Anfangsbuchstabe „E“).",
     difficulty: 3,
   },
   {
@@ -7462,7 +7589,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["O", "E", "I", "A", "-"],
     correctIndex: 1,
     solutionWord: "ERKRANKUNG",
-    explanation: "Das Wort lautet „ERKRANKUNG“ und beginnt mit „E“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „ERKRANKUNG“ (Anfangsbuchstabe „E“).",
     difficulty: 3,
   },
   {
@@ -7492,7 +7620,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["I", "E", "A", "O", "-"],
     correctIndex: 1,
     solutionWord: "ERMITTLUNGSVERFAHREN",
-    explanation: "Das Wort lautet „ERMITTLUNGSVERFAHREN“ und beginnt mit „E“.",
+    explanation:
+      "Erkennbar an der Vorsilbe ER-. Die Buchstaben ergeben das Wort „ERMITTLUNGSVERFAHREN“ (Anfangsbuchstabe „E“).",
     difficulty: 3,
   },
   {
@@ -7501,7 +7630,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["O", "I", "A", "E", "-"],
     correctIndex: 3,
     solutionWord: "ERSCHEINUNG",
-    explanation: "Das Wort lautet „ERSCHEINUNG“ und beginnt mit „E“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „ERSCHEINUNG“ (Anfangsbuchstabe „E“).",
     difficulty: 3,
   },
   {
@@ -7529,7 +7659,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["I", "E", "A", "O", "-"],
     correctIndex: 1,
     solutionWord: "ERWACHSENENBILDUNG",
-    explanation: "Das Wort lautet „ERWACHSENENBILDUNG“ und beginnt mit „E“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „ERWACHSENENBILDUNG“ (Anfangsbuchstabe „E“).",
     difficulty: 3,
   },
   {
@@ -7538,7 +7669,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["U", "O", "E", "A", "-"],
     correctIndex: 2,
     solutionWord: "EVOLUTION",
-    explanation: 'Das Wort lautet „EVOLUTION" und beginnt mit „E".',
+    explanation:
+      "Erkennbar an der Endung -TION. Die Buchstaben ergeben das Wort „EVOLUTION“ (Anfangsbuchstabe „E“).",
     difficulty: 3,
   },
   {
@@ -7547,7 +7679,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["O", "A", "E", "U", "-"],
     correctIndex: 2,
     solutionWord: "EXPERIMENT",
-    explanation: 'Das Wort lautet „EXPERIMENT" und beginnt mit „E".',
+    explanation:
+      "Erkennbar an der Endung -MENT. Die Buchstaben ergeben das Wort „EXPERIMENT“ (Anfangsbuchstabe „E“).",
     difficulty: 3,
   },
   {
@@ -7556,7 +7689,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["F", "T", "V", "P", "-"],
     correctIndex: 0,
     solutionWord: "FAHRERLAUBNIS",
-    explanation: "Das Wort lautet „FAHRERLAUBNIS“ und beginnt mit „F“.",
+    explanation:
+      "Erkennbar an der Endung -NIS. Die Buchstaben ergeben das Wort „FAHRERLAUBNIS“ (Anfangsbuchstabe „F“).",
     difficulty: 3,
   },
   {
@@ -7565,7 +7699,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "F", "T", "V", "-"],
     correctIndex: 1,
     solutionWord: "FAHRRADSCHLOSS",
-    explanation: "Das Wort lautet „FAHRRADSCHLOSS“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FAHRRADSCHLOSS“ (Anfangsbuchstabe „F“).",
     difficulty: 3,
   },
   {
@@ -7574,7 +7708,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["V", "T", "P", "F", "-"],
     correctIndex: 3,
     solutionWord: "FAMILIENBERATUNG",
-    explanation: "Das Wort lautet „FAMILIENBERATUNG“ und beginnt mit „F“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „FAMILIENBERATUNG“ (Anfangsbuchstabe „F“).",
     difficulty: 3,
   },
   {
@@ -7583,7 +7718,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["T", "F", "P", "V", "-"],
     correctIndex: 1,
     solutionWord: "FARBMISCHUNG",
-    explanation: "Das Wort lautet „FARBMISCHUNG“ und beginnt mit „F“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „FARBMISCHUNG“ (Anfangsbuchstabe „F“).",
     difficulty: 3,
   },
   {
@@ -7592,7 +7728,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "T", "V", "F", "-"],
     correctIndex: 3,
     solutionWord: "FEINSTAUB",
-    explanation: "Das Wort lautet „FEINSTAUB“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FEINSTAUB“ (Anfangsbuchstabe „F“).",
     difficulty: 3,
   },
   {
@@ -7601,7 +7737,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "V", "F", "T", "-"],
     correctIndex: 2,
     solutionWord: "FEINSTAUBFILTER",
-    explanation: "Das Wort lautet „FEINSTAUBFILTER“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FEINSTAUBFILTER“ (Anfangsbuchstabe „F“).",
     difficulty: 3,
   },
   {
@@ -7610,7 +7746,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["F", "P", "V", "T", "-"],
     correctIndex: 0,
     solutionWord: "FELDBEGRENZUNG",
-    explanation: "Das Wort lautet „FELDBEGRENZUNG“ und beginnt mit „F“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „FELDBEGRENZUNG“ (Anfangsbuchstabe „F“).",
     difficulty: 3,
   },
   {
@@ -7619,7 +7756,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["T", "P", "V", "F", "-"],
     correctIndex: 3,
     solutionWord: "FELDSALAT",
-    explanation: "Das Wort lautet „FELDSALAT“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FELDSALAT“ (Anfangsbuchstabe „F“).",
     difficulty: 3,
   },
   {
@@ -7628,7 +7765,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["V", "P", "T", "F", "-"],
     correctIndex: 3,
     solutionWord: "FERNBEDIENUNG",
-    explanation: "Das Wort lautet „FERNBEDIENUNG“ und beginnt mit „F“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „FERNBEDIENUNG“ (Anfangsbuchstabe „F“).",
     difficulty: 3,
   },
   {
@@ -7637,7 +7775,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["T", "V", "F", "P", "-"],
     correctIndex: 2,
     solutionWord: "FERNSPRECHER",
-    explanation: "Das Wort lautet „FERNSPRECHER“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FERNSPRECHER“ (Anfangsbuchstabe „F“).",
     difficulty: 3,
   },
   {
@@ -7646,7 +7784,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["F", "T", "P", "V", "-"],
     correctIndex: 0,
     solutionWord: "FESTSTELLUNG",
-    explanation: "Das Wort lautet „FESTSTELLUNG“ und beginnt mit „F“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „FESTSTELLUNG“ (Anfangsbuchstabe „F“).",
     difficulty: 3,
   },
   {
@@ -7655,7 +7794,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["V", "T", "P", "F", "-"],
     correctIndex: 3,
     solutionWord: "FEUERWACHE",
-    explanation: "Das Wort lautet „FEUERWACHE“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FEUERWACHE“ (Anfangsbuchstabe „F“).",
     difficulty: 3,
   },
   {
@@ -7664,7 +7803,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["T", "V", "P", "F", "-"],
     correctIndex: 3,
     solutionWord: "FEUERWEHRMANN",
-    explanation: "Das Wort lautet „FEUERWEHRMANN“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FEUERWEHRMANN“ (Anfangsbuchstabe „F“).",
     difficulty: 3,
   },
   {
@@ -7673,7 +7812,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["F", "T", "P", "V", "-"],
     correctIndex: 0,
     solutionWord: "FEUERWEHRWAGEN",
-    explanation: "Das Wort lautet „FEUERWEHRWAGEN“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FEUERWEHRWAGEN“ (Anfangsbuchstabe „F“).",
     difficulty: 3,
   },
   {
@@ -7682,7 +7821,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["V", "T", "F", "P", "-"],
     correctIndex: 2,
     solutionWord: "FLUGVERKEHR",
-    explanation: "Das Wort lautet „FLUGVERKEHR“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FLUGVERKEHR“ (Anfangsbuchstabe „F“).",
     difficulty: 3,
   },
   {
@@ -7691,7 +7830,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["V", "T", "P", "F", "-"],
     correctIndex: 3,
     solutionWord: "FORSCHUNG",
-    explanation: 'Das Wort lautet „FORSCHUNG" und beginnt mit „F".',
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „FORSCHUNG“ (Anfangsbuchstabe „F“).",
     difficulty: 3,
   },
   {
@@ -7700,7 +7840,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "F", "T", "V", "-"],
     correctIndex: 1,
     solutionWord: "FORSCHUNGSARBEIT",
-    explanation: "Das Wort lautet „FORSCHUNGSARBEIT“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FORSCHUNGSARBEIT“ (Anfangsbuchstabe „F“).",
     difficulty: 3,
   },
   {
@@ -7709,7 +7849,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "T", "F", "V", "-"],
     correctIndex: 2,
     solutionWord: "FORSCHUNGSLABOR",
-    explanation: "Das Wort lautet „FORSCHUNGSLABOR“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FORSCHUNGSLABOR“ (Anfangsbuchstabe „F“).",
     difficulty: 3,
   },
   {
@@ -7718,7 +7858,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "F", "V", "T", "-"],
     correctIndex: 1,
     solutionWord: "FORSCHUNGSZENTRUM",
-    explanation: "Das Wort lautet „FORSCHUNGSZENTRUM“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FORSCHUNGSZENTRUM“ (Anfangsbuchstabe „F“).",
     difficulty: 3,
   },
   {
@@ -7727,7 +7867,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "V", "F", "T", "-"],
     correctIndex: 2,
     solutionWord: "FORSTWIRTSCHAFT",
-    explanation: "Das Wort lautet „FORSTWIRTSCHAFT“ und beginnt mit „F“.",
+    explanation:
+      "Erkennbar an der Endung -SCHAFT. Die Buchstaben ergeben das Wort „FORSTWIRTSCHAFT“ (Anfangsbuchstabe „F“).",
     difficulty: 3,
   },
   {
@@ -7736,7 +7877,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["F", "P", "V", "T", "-"],
     correctIndex: 0,
     solutionWord: "FORTPFLANZUNG",
-    explanation: "Das Wort lautet „FORTPFLANZUNG“ und beginnt mit „F“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „FORTPFLANZUNG“ (Anfangsbuchstabe „F“).",
     difficulty: 3,
   },
   {
@@ -7745,7 +7887,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["V", "P", "F", "T", "-"],
     correctIndex: 2,
     solutionWord: "FORTSCHRITT",
-    explanation: "Das Wort lautet „FORTSCHRITT“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FORTSCHRITT“ (Anfangsbuchstabe „F“).",
     difficulty: 3,
   },
   {
@@ -7754,7 +7896,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["V", "T", "P", "F", "-"],
     correctIndex: 3,
     solutionWord: "FRACHTGUT",
-    explanation: "Das Wort lautet „FRACHTGUT“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FRACHTGUT“ (Anfangsbuchstabe „F“).",
     difficulty: 3,
   },
   {
@@ -7763,7 +7905,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["V", "T", "H", "F", "-"],
     correctIndex: 3,
     solutionWord: "FREQUENZ",
-    explanation: 'Das Wort lautet „FREQUENZ" und beginnt mit „F".',
+    explanation: "Die Buchstaben ergeben das Wort „FREQUENZ“ (Anfangsbuchstabe „F“).",
     difficulty: 3,
   },
   {
@@ -7772,7 +7914,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["T", "V", "F", "P", "-"],
     correctIndex: 2,
     solutionWord: "FRIEDENSVERTRAG",
-    explanation: "Das Wort lautet „FRIEDENSVERTRAG“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FRIEDENSVERTRAG“ (Anfangsbuchstabe „F“).",
     difficulty: 3,
   },
   {
@@ -7781,7 +7923,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "V", "F", "T", "-"],
     correctIndex: 2,
     solutionWord: "FRUCHTBARKEIT",
-    explanation: "Das Wort lautet „FRUCHTBARKEIT“ und beginnt mit „F“.",
+    explanation:
+      "Erkennbar an der Endung -KEIT. Die Buchstaben ergeben das Wort „FRUCHTBARKEIT“ (Anfangsbuchstabe „F“).",
     difficulty: 3,
   },
   {
@@ -7790,7 +7933,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["F", "P", "T", "V", "-"],
     correctIndex: 0,
     solutionWord: "FRUEHSTUECK",
-    explanation: "Das Wort lautet „FRUEHSTUECK“ und beginnt mit „F“.",
+    explanation: "Die Buchstaben ergeben das Wort „FRUEHSTUECK“ (Anfangsbuchstabe „F“).",
     difficulty: 3,
   },
   {
@@ -7800,7 +7943,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "FUNDAMENT",
     explanation:
-      "Das Lösungswort lautet „FUNDAMENT“ (Anfangsbuchstabe „F“), der nicht unter A–D angeboten wird.",
+      "Erkennbar an der Endung -MENT. Das Lösungswort lautet „FUNDAMENT“ (Anfangsbuchstabe „F“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 3,
   },
   {
@@ -7809,7 +7952,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "B", "K", "G", "-"],
     correctIndex: 3,
     solutionWord: "GANGLION",
-    explanation: 'Das Wort lautet „GANGLION" und beginnt mit „G".',
+    explanation: "Die Buchstaben ergeben das Wort „GANGLION“ (Anfangsbuchstabe „G“).",
     difficulty: 3,
   },
   {
@@ -7818,7 +7961,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "K", "J", "C", "-"],
     correctIndex: 0,
     solutionWord: "GARDINENSTANGE",
-    explanation: "Das Wort lautet „GARDINENSTANGE“ und beginnt mit „G“.",
+    explanation: "Die Buchstaben ergeben das Wort „GARDINENSTANGE“ (Anfangsbuchstabe „G“).",
     difficulty: 3,
   },
   {
@@ -7827,7 +7970,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["J", "G", "K", "C", "-"],
     correctIndex: 1,
     solutionWord: "GARTENHAUS",
-    explanation: "Das Wort lautet „GARTENHAUS“ und beginnt mit „G“.",
+    explanation: "Die Buchstaben ergeben das Wort „GARTENHAUS“ (Anfangsbuchstabe „G“).",
     difficulty: 3,
   },
   {
@@ -7836,7 +7979,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "C", "G", "J", "-"],
     correctIndex: 2,
     solutionWord: "GASTFREUNDSCHAFT",
-    explanation: "Das Wort lautet „GASTFREUNDSCHAFT“ und beginnt mit „G“.",
+    explanation:
+      "Erkennbar an der Endung -SCHAFT. Die Buchstaben ergeben das Wort „GASTFREUNDSCHAFT“ (Anfangsbuchstabe „G“).",
     difficulty: 3,
   },
   {
@@ -7845,7 +7989,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["J", "G", "C", "K", "-"],
     correctIndex: 1,
     solutionWord: "GASTGEBER",
-    explanation: "Das Wort lautet „GASTGEBER“ und beginnt mit „G“.",
+    explanation: "Die Buchstaben ergeben das Wort „GASTGEBER“ (Anfangsbuchstabe „G“).",
     difficulty: 3,
   },
   {
@@ -7854,7 +7998,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "K", "C", "J", "-"],
     correctIndex: 0,
     solutionWord: "GASTSTAETTE",
-    explanation: "Das Wort lautet „GASTSTAETTE“ und beginnt mit „G“.",
+    explanation: "Die Buchstaben ergeben das Wort „GASTSTAETTE“ (Anfangsbuchstabe „G“).",
     difficulty: 3,
   },
   {
@@ -7863,7 +8007,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["J", "K", "C", "G", "-"],
     correctIndex: 3,
     solutionWord: "GEBIRGSLANDSCHAFT",
-    explanation: "Das Wort lautet „GEBIRGSLANDSCHAFT“ und beginnt mit „G“.",
+    explanation:
+      "Erkennbar an der Endung -SCHAFT. Die Buchstaben ergeben das Wort „GEBIRGSLANDSCHAFT“ (Anfangsbuchstabe „G“).",
     difficulty: 3,
   },
   {
@@ -7872,7 +8017,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["C", "J", "G", "K", "-"],
     correctIndex: 2,
     solutionWord: "GEBURTSTAG",
-    explanation: "Das Wort lautet „GEBURTSTAG“ und beginnt mit „G“.",
+    explanation:
+      "Erkennbar an der Vorsilbe GE-. Die Buchstaben ergeben das Wort „GEBURTSTAG“ (Anfangsbuchstabe „G“).",
     difficulty: 3,
   },
   {
@@ -7881,7 +8027,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "C", "J", "G", "-"],
     correctIndex: 3,
     solutionWord: "GEGENVERKEHR",
-    explanation: "Das Wort lautet „GEGENVERKEHR“ und beginnt mit „G“.",
+    explanation:
+      "Erkennbar an der Vorsilbe GE-. Die Buchstaben ergeben das Wort „GEGENVERKEHR“ (Anfangsbuchstabe „G“).",
     difficulty: 3,
   },
   {
@@ -7910,7 +8057,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "C", "J", "G", "-"],
     correctIndex: 3,
     solutionWord: "GEISTESWISSENSCHAFT",
-    explanation: "Das Wort lautet „GEISTESWISSENSCHAFT“ und beginnt mit „G“.",
+    explanation:
+      "Erkennbar an der Endung -SCHAFT. Die Buchstaben ergeben das Wort „GEISTESWISSENSCHAFT“ (Anfangsbuchstabe „G“).",
     difficulty: 3,
   },
   {
@@ -7919,7 +8067,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "B", "K", "G", "-"],
     correctIndex: 3,
     solutionWord: "GEOGRAPHIE",
-    explanation: 'Das Wort lautet „GEOGRAPHIE" und beginnt mit „G".',
+    explanation:
+      "Erkennbar an der Vorsilbe GE-. Die Buchstaben ergeben das Wort „GEOGRAPHIE“ (Anfangsbuchstabe „G“).",
     difficulty: 3,
   },
   {
@@ -7928,7 +8077,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "J", "C", "G", "-"],
     correctIndex: 3,
     solutionWord: "GERICHTSURTEIL",
-    explanation: "Das Wort lautet „GERICHTSURTEIL“ und beginnt mit „G“.",
+    explanation:
+      "Erkennbar an der Vorsilbe GE-. Die Buchstaben ergeben das Wort „GERICHTSURTEIL“ (Anfangsbuchstabe „G“).",
     difficulty: 3,
   },
   {
@@ -7957,7 +8107,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "J", "C", "G", "-"],
     correctIndex: 3,
     solutionWord: "GERICHTSVERHANDLUNG",
-    explanation: "Das Wort lautet „GERICHTSVERHANDLUNG“ und beginnt mit „G“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „GERICHTSVERHANDLUNG“ (Anfangsbuchstabe „G“).",
     difficulty: 3,
   },
   {
@@ -7966,7 +8117,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["C", "K", "J", "G", "-"],
     correctIndex: 3,
     solutionWord: "GESAMTSCHULE",
-    explanation: "Das Wort lautet „GESAMTSCHULE“ und beginnt mit „G“.",
+    explanation:
+      "Erkennbar an der Vorsilbe GE-. Die Buchstaben ergeben das Wort „GESAMTSCHULE“ (Anfangsbuchstabe „G“).",
     difficulty: 3,
   },
   {
@@ -7975,7 +8127,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "C", "K", "J", "-"],
     correctIndex: 0,
     solutionWord: "GESCHWINDIGKEIT",
-    explanation: "Das Wort lautet „GESCHWINDIGKEIT“ und beginnt mit „G“.",
+    explanation:
+      "Erkennbar an der Endung -KEIT. Die Buchstaben ergeben das Wort „GESCHWINDIGKEIT“ (Anfangsbuchstabe „G“).",
     difficulty: 3,
   },
   {
@@ -8011,7 +8164,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "C", "G", "J", "-"],
     correctIndex: 2,
     solutionWord: "GESCHWINDIGKEITSBEGRENZUNG",
-    explanation: "Das Wort lautet „GESCHWINDIGKEITSBEGRENZUNG“ und beginnt mit „G“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „GESCHWINDIGKEITSBEGRENZUNG“ (Anfangsbuchstabe „G“).",
     difficulty: 3,
   },
   {
@@ -8020,7 +8174,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "C", "G", "J", "-"],
     correctIndex: 2,
     solutionWord: "GESICHTSPUNKT",
-    explanation: "Das Wort lautet „GESICHTSPUNKT“ und beginnt mit „G“.",
+    explanation:
+      "Erkennbar an der Vorsilbe GE-. Die Buchstaben ergeben das Wort „GESICHTSPUNKT“ (Anfangsbuchstabe „G“).",
     difficulty: 3,
   },
   {
@@ -8049,7 +8204,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "K", "J", "C", "-"],
     correctIndex: 0,
     solutionWord: "GESUNDHEITSMINISTER",
-    explanation: "Das Wort lautet „GESUNDHEITSMINISTER“ und beginnt mit „G“.",
+    explanation:
+      "Erkennbar an der Vorsilbe GE-. Die Buchstaben ergeben das Wort „GESUNDHEITSMINISTER“ (Anfangsbuchstabe „G“).",
     difficulty: 3,
   },
   {
@@ -8058,7 +8214,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "G", "C", "J", "-"],
     correctIndex: 1,
     solutionWord: "GESUNDHEITSWESEN",
-    explanation: "Das Wort lautet „GESUNDHEITSWESEN“ und beginnt mit „G“.",
+    explanation:
+      "Erkennbar an der Vorsilbe GE-. Die Buchstaben ergeben das Wort „GESUNDHEITSWESEN“ (Anfangsbuchstabe „G“).",
     difficulty: 3,
   },
   {
@@ -8067,7 +8224,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "J", "C", "G", "-"],
     correctIndex: 3,
     solutionWord: "GEWERKSCHAFTSBUND",
-    explanation: "Das Wort lautet „GEWERKSCHAFTSBUND“ und beginnt mit „G“.",
+    explanation:
+      "Erkennbar an der Vorsilbe GE-. Die Buchstaben ergeben das Wort „GEWERKSCHAFTSBUND“ (Anfangsbuchstabe „G“).",
     difficulty: 3,
   },
   {
@@ -8076,7 +8234,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["J", "G", "K", "C", "-"],
     correctIndex: 1,
     solutionWord: "GEWINNBETEILIGUNG",
-    explanation: "Das Wort lautet „GEWINNBETEILIGUNG“ und beginnt mit „G“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „GEWINNBETEILIGUNG“ (Anfangsbuchstabe „G“).",
     difficulty: 3,
   },
   {
@@ -8085,7 +8244,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["C", "K", "G", "J", "-"],
     correctIndex: 2,
     solutionWord: "GEWITTERWARNUNG",
-    explanation: "Das Wort lautet „GEWITTERWARNUNG“ und beginnt mit „G“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „GEWITTERWARNUNG“ (Anfangsbuchstabe „G“).",
     difficulty: 3,
   },
   {
@@ -8094,7 +8254,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["B", "K", "D", "G", "-"],
     correctIndex: 3,
     solutionWord: "GLEICHGEWICHT",
-    explanation: 'Das Wort lautet „GLEICHGEWICHT" und beginnt mit „G".',
+    explanation: "Die Buchstaben ergeben das Wort „GLEICHGEWICHT“ (Anfangsbuchstabe „G“).",
     difficulty: 3,
   },
   {
@@ -8104,7 +8264,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "GLEICHSTROM",
     explanation:
-      "Das Lösungswort lautet „GLEICHSTROM“ (Anfangsbuchstabe „G“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „GLEICHSTROM“ (Anfangsbuchstabe „G“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 3,
   },
   {
@@ -8113,7 +8273,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "B", "G", "D", "-"],
     correctIndex: 2,
     solutionWord: "GLEICHUNG",
-    explanation: 'Das Wort lautet „GLEICHUNG" und beginnt mit „G".',
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „GLEICHUNG“ (Anfangsbuchstabe „G“).",
     difficulty: 3,
   },
   {
@@ -8122,7 +8283,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "K", "J", "C", "-"],
     correctIndex: 0,
     solutionWord: "GRUNDGESETZ",
-    explanation: "Das Wort lautet „GRUNDGESETZ“ und beginnt mit „G“.",
+    explanation: "Die Buchstaben ergeben das Wort „GRUNDGESETZ“ (Anfangsbuchstabe „G“).",
     difficulty: 3,
   },
   {
@@ -8131,7 +8292,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["C", "G", "K", "J", "-"],
     correctIndex: 1,
     solutionWord: "GRUNDLAGE",
-    explanation: "Das Wort lautet „GRUNDLAGE“ und beginnt mit „G“.",
+    explanation: "Die Buchstaben ergeben das Wort „GRUNDLAGE“ (Anfangsbuchstabe „G“).",
     difficulty: 3,
   },
   {
@@ -8140,7 +8301,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["C", "J", "G", "K", "-"],
     correctIndex: 2,
     solutionWord: "GRUNDSTEIN",
-    explanation: "Das Wort lautet „GRUNDSTEIN“ und beginnt mit „G“.",
+    explanation: "Die Buchstaben ergeben das Wort „GRUNDSTEIN“ (Anfangsbuchstabe „G“).",
     difficulty: 3,
   },
   {
@@ -8149,7 +8310,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "G", "C", "J", "-"],
     correctIndex: 1,
     solutionWord: "GRUNDWASSER",
-    explanation: "Das Wort lautet „GRUNDWASSER“ und beginnt mit „G“.",
+    explanation: "Die Buchstaben ergeben das Wort „GRUNDWASSER“ (Anfangsbuchstabe „G“).",
     difficulty: 3,
   },
   {
@@ -8158,7 +8319,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["C", "G", "J", "K", "-"],
     correctIndex: 1,
     solutionWord: "GUTACHTERSTELLE",
-    explanation: "Das Wort lautet „GUTACHTERSTELLE“ und beginnt mit „G“.",
+    explanation: "Die Buchstaben ergeben das Wort „GUTACHTERSTELLE“ (Anfangsbuchstabe „G“).",
     difficulty: 3,
   },
   {
@@ -8167,7 +8328,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "M", "N", "K", "-"],
     correctIndex: 0,
     solutionWord: "HAFENARBEITER",
-    explanation: "Das Wort lautet „HAFENARBEITER“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HAFENARBEITER“ (Anfangsbuchstabe „H“).",
     difficulty: 3,
   },
   {
@@ -8176,7 +8337,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["N", "M", "K", "H", "-"],
     correctIndex: 3,
     solutionWord: "HANDARBEIT",
-    explanation: "Das Wort lautet „HANDARBEIT“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HANDARBEIT“ (Anfangsbuchstabe „H“).",
     difficulty: 3,
   },
   {
@@ -8185,7 +8346,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "N", "K", "M", "-"],
     correctIndex: 0,
     solutionWord: "HANDELSPARTNER",
-    explanation: "Das Wort lautet „HANDELSPARTNER“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HANDELSPARTNER“ (Anfangsbuchstabe „H“).",
     difficulty: 3,
   },
   {
@@ -8194,7 +8355,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "M", "H", "N", "-"],
     correctIndex: 2,
     solutionWord: "HANDELSRECHT",
-    explanation: "Das Wort lautet „HANDELSRECHT“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HANDELSRECHT“ (Anfangsbuchstabe „H“).",
     difficulty: 3,
   },
   {
@@ -8203,7 +8364,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "K", "M", "N", "-"],
     correctIndex: 0,
     solutionWord: "HANDELSREGISTER",
-    explanation: "Das Wort lautet „HANDELSREGISTER“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HANDELSREGISTER“ (Anfangsbuchstabe „H“).",
     difficulty: 3,
   },
   {
@@ -8212,7 +8373,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "N", "H", "M", "-"],
     correctIndex: 2,
     solutionWord: "HANDELSWARE",
-    explanation: "Das Wort lautet „HANDELSWARE“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HANDELSWARE“ (Anfangsbuchstabe „H“).",
     difficulty: 3,
   },
   {
@@ -8221,7 +8382,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["N", "H", "M", "K", "-"],
     correctIndex: 1,
     solutionWord: "HANDGELENK",
-    explanation: "Das Wort lautet „HANDGELENK“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HANDGELENK“ (Anfangsbuchstabe „H“).",
     difficulty: 3,
   },
   {
@@ -8230,7 +8391,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["N", "M", "K", "H", "-"],
     correctIndex: 3,
     solutionWord: "HANDLUNGSFADEN",
-    explanation: "Das Wort lautet „HANDLUNGSFADEN“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HANDLUNGSFADEN“ (Anfangsbuchstabe „H“).",
     difficulty: 3,
   },
   {
@@ -8239,7 +8400,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["M", "N", "H", "K", "-"],
     correctIndex: 2,
     solutionWord: "HANDWERKSBETRIEB",
-    explanation: "Das Wort lautet „HANDWERKSBETRIEB“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HANDWERKSBETRIEB“ (Anfangsbuchstabe „H“).",
     difficulty: 3,
   },
   {
@@ -8248,7 +8409,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["N", "H", "M", "K", "-"],
     correctIndex: 1,
     solutionWord: "HAUPTBAHNHOF",
-    explanation: "Das Wort lautet „HAUPTBAHNHOF“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HAUPTBAHNHOF“ (Anfangsbuchstabe „H“).",
     difficulty: 3,
   },
   {
@@ -8257,7 +8418,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "M", "K", "N", "-"],
     correctIndex: 0,
     solutionWord: "HAUPTFIGUR",
-    explanation: "Das Wort lautet „HAUPTFIGUR“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HAUPTFIGUR“ (Anfangsbuchstabe „H“).",
     difficulty: 3,
   },
   {
@@ -8266,7 +8427,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["M", "H", "N", "K", "-"],
     correctIndex: 1,
     solutionWord: "HAUSHALTSGELD",
-    explanation: "Das Wort lautet „HAUSHALTSGELD“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HAUSHALTSGELD“ (Anfangsbuchstabe „H“).",
     difficulty: 3,
   },
   {
@@ -8299,7 +8460,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["M", "K", "N", "H", "-"],
     correctIndex: 3,
     solutionWord: "HAUSSTAUBMILBENALLERGIE",
-    explanation: "Das Wort lautet „HAUSSTAUBMILBENALLERGIE“ und beginnt mit „H“.",
+    explanation:
+      "Die Buchstaben ergeben das Wort „HAUSSTAUBMILBENALLERGIE“ (Anfangsbuchstabe „H“).",
     difficulty: 3,
   },
   {
@@ -8308,7 +8470,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["N", "M", "H", "K", "-"],
     correctIndex: 2,
     solutionWord: "HEILPRAKTIKER",
-    explanation: "Das Wort lautet „HEILPRAKTIKER“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HEILPRAKTIKER“ (Anfangsbuchstabe „H“).",
     difficulty: 3,
   },
   {
@@ -8317,7 +8479,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "N", "M", "K", "-"],
     correctIndex: 0,
     solutionWord: "HEILQUELLE",
-    explanation: "Das Wort lautet „HEILQUELLE“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HEILQUELLE“ (Anfangsbuchstabe „H“).",
     difficulty: 3,
   },
   {
@@ -8326,7 +8488,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["M", "K", "H", "N", "-"],
     correctIndex: 2,
     solutionWord: "HERAUSFORDERUNG",
-    explanation: "Das Wort lautet „HERAUSFORDERUNG“ und beginnt mit „H“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „HERAUSFORDERUNG“ (Anfangsbuchstabe „H“).",
     difficulty: 3,
   },
   {
@@ -8335,7 +8498,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "K", "N", "M", "-"],
     correctIndex: 0,
     solutionWord: "HERZFREQUENZ",
-    explanation: "Das Wort lautet „HERZFREQUENZ“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HERZFREQUENZ“ (Anfangsbuchstabe „H“).",
     difficulty: 3,
   },
   {
@@ -8344,7 +8507,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["M", "K", "N", "H", "-"],
     correctIndex: 3,
     solutionWord: "HERZSCHRITTMACHER",
-    explanation: "Das Wort lautet „HERZSCHRITTMACHER“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HERZSCHRITTMACHER“ (Anfangsbuchstabe „H“).",
     difficulty: 3,
   },
   {
@@ -8353,7 +8516,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["M", "N", "H", "K", "-"],
     correctIndex: 2,
     solutionWord: "HINTERGRUND",
-    explanation: "Das Wort lautet „HINTERGRUND“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HINTERGRUND“ (Anfangsbuchstabe „H“).",
     difficulty: 3,
   },
   {
@@ -8362,7 +8525,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["M", "K", "N", "H", "-"],
     correctIndex: 3,
     solutionWord: "HISTOLOGIE",
-    explanation: "Das Wort lautet „HISTOLOGIE“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HISTOLOGIE“ (Anfangsbuchstabe „H“).",
     difficulty: 3,
   },
   {
@@ -8390,7 +8553,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "N", "M", "K", "-"],
     correctIndex: 0,
     solutionWord: "HOCHSCHULABSCHLUSS",
-    explanation: "Das Wort lautet „HOCHSCHULABSCHLUSS“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HOCHSCHULABSCHLUSS“ (Anfangsbuchstabe „H“).",
     difficulty: 3,
   },
   {
@@ -8399,7 +8562,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "N", "K", "M", "-"],
     correctIndex: 0,
     solutionWord: "HOCHWASSERSCHUTZ",
-    explanation: "Das Wort lautet „HOCHWASSERSCHUTZ“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HOCHWASSERSCHUTZ“ (Anfangsbuchstabe „H“).",
     difficulty: 3,
   },
   {
@@ -8408,7 +8571,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["M", "H", "K", "N", "-"],
     correctIndex: 1,
     solutionWord: "HOLZFAELLER",
-    explanation: "Das Wort lautet „HOLZFAELLER“ und beginnt mit „H“.",
+    explanation: "Die Buchstaben ergeben das Wort „HOLZFAELLER“ (Anfangsbuchstabe „H“).",
     difficulty: 3,
   },
   {
@@ -8417,7 +8580,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["N", "A", "K", "H", "-"],
     correctIndex: 3,
     solutionWord: "HYPOTHESE",
-    explanation: 'Das Wort lautet „HYPOTHESE" und beginnt mit „H".',
+    explanation: "Die Buchstaben ergeben das Wort „HYPOTHESE“ (Anfangsbuchstabe „H“).",
     difficulty: 3,
   },
   {
@@ -8426,7 +8589,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["J", "E", "I", "L", "-"],
     correctIndex: 2,
     solutionWord: "IMMUNOLOGIE",
-    explanation: "Das Wort lautet „IMMUNOLOGIE“ und beginnt mit „I“.",
+    explanation: "Die Buchstaben ergeben das Wort „IMMUNOLOGIE“ (Anfangsbuchstabe „I“).",
     difficulty: 3,
   },
   {
@@ -8435,7 +8598,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["T", "L", "I", "J", "-"],
     correctIndex: 2,
     solutionWord: "IMMUNSYSTEM",
-    explanation: 'Das Wort lautet „IMMUNSYSTEM" und beginnt mit „I".',
+    explanation: "Die Buchstaben ergeben das Wort „IMMUNSYSTEM“ (Anfangsbuchstabe „I“).",
     difficulty: 3,
   },
   {
@@ -8444,7 +8607,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["I", "L", "E", "J", "-"],
     correctIndex: 0,
     solutionWord: "INDUSTRIEGEBIET",
-    explanation: "Das Wort lautet „INDUSTRIEGEBIET“ und beginnt mit „I“.",
+    explanation: "Die Buchstaben ergeben das Wort „INDUSTRIEGEBIET“ (Anfangsbuchstabe „I“).",
     difficulty: 3,
   },
   {
@@ -8453,7 +8616,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["J", "L", "T", "I", "-"],
     correctIndex: 3,
     solutionWord: "INFEKTION",
-    explanation: 'Das Wort lautet „INFEKTION" und beginnt mit „I".',
+    explanation:
+      "Erkennbar an der Endung -TION. Die Buchstaben ergeben das Wort „INFEKTION“ (Anfangsbuchstabe „I“).",
     difficulty: 3,
   },
   {
@@ -8482,7 +8646,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["L", "E", "I", "J", "-"],
     correctIndex: 2,
     solutionWord: "INFORMATIONSTECHNIK",
-    explanation: "Das Wort lautet „INFORMATIONSTECHNIK“ und beginnt mit „I“.",
+    explanation: "Die Buchstaben ergeben das Wort „INFORMATIONSTECHNIK“ (Anfangsbuchstabe „I“).",
     difficulty: 3,
   },
   {
@@ -8491,7 +8655,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["J", "I", "E", "L", "-"],
     correctIndex: 1,
     solutionWord: "INGENIEURWESEN",
-    explanation: "Das Wort lautet „INGENIEURWESEN“ und beginnt mit „I“.",
+    explanation: "Die Buchstaben ergeben das Wort „INGENIEURWESEN“ (Anfangsbuchstabe „I“).",
     difficulty: 3,
   },
   {
@@ -8500,7 +8664,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["I", "L", "J", "E", "-"],
     correctIndex: 0,
     solutionWord: "INNENSTADT",
-    explanation: "Das Wort lautet „INNENSTADT“ und beginnt mit „I“.",
+    explanation: "Die Buchstaben ergeben das Wort „INNENSTADT“ (Anfangsbuchstabe „I“).",
     difficulty: 3,
   },
   {
@@ -8509,7 +8673,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["L", "I", "T", "J", "-"],
     correctIndex: 1,
     solutionWord: "INSTRUMENT",
-    explanation: 'Das Wort lautet „INSTRUMENT" und beginnt mit „I".',
+    explanation:
+      "Erkennbar an der Endung -MENT. Die Buchstaben ergeben das Wort „INSTRUMENT“ (Anfangsbuchstabe „I“).",
     difficulty: 3,
   },
   {
@@ -8518,7 +8683,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["E", "J", "I", "L", "-"],
     correctIndex: 2,
     solutionWord: "INTENSIVSTATION",
-    explanation: "Das Wort lautet „INTENSIVSTATION“ und beginnt mit „I“.",
+    explanation:
+      "Erkennbar an der Endung -TION. Die Buchstaben ergeben das Wort „INTENSIVSTATION“ (Anfangsbuchstabe „I“).",
     difficulty: 3,
   },
   {
@@ -8528,7 +8694,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "JAGDSCHEIN",
     explanation:
-      "Das Lösungswort lautet „JAGDSCHEIN“ (Anfangsbuchstabe „J“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „JAGDSCHEIN“ (Anfangsbuchstabe „J“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 3,
   },
   {
@@ -8537,7 +8703,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["J", "I", "G", "Y", "-"],
     correctIndex: 0,
     solutionWord: "JAHRESABSCHLUSS",
-    explanation: "Das Wort lautet „JAHRESABSCHLUSS“ und beginnt mit „J“.",
+    explanation: "Die Buchstaben ergeben das Wort „JAHRESABSCHLUSS“ (Anfangsbuchstabe „J“).",
     difficulty: 3,
   },
   {
@@ -8546,7 +8712,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["J", "G", "Y", "I", "-"],
     correctIndex: 0,
     solutionWord: "JAHRESZAHL",
-    explanation: "Das Wort lautet „JAHRESZAHL“ und beginnt mit „J“.",
+    explanation: "Die Buchstaben ergeben das Wort „JAHRESZAHL“ (Anfangsbuchstabe „J“).",
     difficulty: 3,
   },
   {
@@ -8555,7 +8721,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["J", "Y", "I", "G", "-"],
     correctIndex: 0,
     solutionWord: "JUGENDHERBERGE",
-    explanation: "Das Wort lautet „JUGENDHERBERGE“ und beginnt mit „J“.",
+    explanation: "Die Buchstaben ergeben das Wort „JUGENDHERBERGE“ (Anfangsbuchstabe „J“).",
     difficulty: 3,
   },
   {
@@ -8583,7 +8749,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["Y", "I", "J", "G", "-"],
     correctIndex: 2,
     solutionWord: "JUGENDSCHUTZGESETZ",
-    explanation: "Das Wort lautet „JUGENDSCHUTZGESETZ“ und beginnt mit „J“.",
+    explanation: "Die Buchstaben ergeben das Wort „JUGENDSCHUTZGESETZ“ (Anfangsbuchstabe „J“).",
     difficulty: 3,
   },
   {
@@ -8592,7 +8758,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "C", "G", "H", "-"],
     correctIndex: 0,
     solutionWord: "KALENDERBLATT",
-    explanation: "Das Wort lautet „KALENDERBLATT“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KALENDERBLATT“ (Anfangsbuchstabe „K“).",
     difficulty: 3,
   },
   {
@@ -8602,7 +8768,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "KALTFRONT",
     explanation:
-      "Das Lösungswort lautet „KALTFRONT“ (Anfangsbuchstabe „K“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „KALTFRONT“ (Anfangsbuchstabe „K“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 3,
   },
   {
@@ -8611,7 +8777,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "C", "K", "H", "-"],
     correctIndex: 2,
     solutionWord: "KALTSCHWEISS",
-    explanation: "Das Wort lautet „KALTSCHWEISS“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KALTSCHWEISS“ (Anfangsbuchstabe „K“).",
     difficulty: 3,
   },
   {
@@ -8620,7 +8786,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["C", "G", "K", "H", "-"],
     correctIndex: 2,
     solutionWord: "KAPELLMEISTER",
-    explanation: "Das Wort lautet „KAPELLMEISTER“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KAPELLMEISTER“ (Anfangsbuchstabe „K“).",
     difficulty: 3,
   },
   {
@@ -8629,7 +8795,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["X", "C", "Q", "K", "-"],
     correctIndex: 3,
     solutionWord: "KARDIOLOGIE",
-    explanation: 'Das Wort lautet „KARDIOLOGIE" und beginnt mit „K".',
+    explanation: "Die Buchstaben ergeben das Wort „KARDIOLOGIE“ (Anfangsbuchstabe „K“).",
     difficulty: 3,
   },
   {
@@ -8638,7 +8804,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "C", "H", "K", "-"],
     correctIndex: 3,
     solutionWord: "KERNKRAFTWERK",
-    explanation: "Das Wort lautet „KERNKRAFTWERK“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KERNKRAFTWERK“ (Anfangsbuchstabe „K“).",
     difficulty: 3,
   },
   {
@@ -8647,7 +8813,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "C", "H", "G", "-"],
     correctIndex: 0,
     solutionWord: "KERNSPALTUNG",
-    explanation: "Das Wort lautet „KERNSPALTUNG“ und beginnt mit „K“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „KERNSPALTUNG“ (Anfangsbuchstabe „K“).",
     difficulty: 3,
   },
   {
@@ -8656,7 +8823,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "C", "H", "K", "-"],
     correctIndex: 3,
     solutionWord: "KIESGRUBE",
-    explanation: "Das Wort lautet „KIESGRUBE“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KIESGRUBE“ (Anfangsbuchstabe „K“).",
     difficulty: 3,
   },
   {
@@ -8665,7 +8832,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "G", "C", "H", "-"],
     correctIndex: 0,
     solutionWord: "KINDERGELDANTRAG",
-    explanation: "Das Wort lautet „KINDERGELDANTRAG“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KINDERGELDANTRAG“ (Anfangsbuchstabe „K“).",
     difficulty: 3,
   },
   {
@@ -8674,7 +8841,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "H", "C", "K", "-"],
     correctIndex: 3,
     solutionWord: "KINDERSPIELPLATZ",
-    explanation: "Das Wort lautet „KINDERSPIELPLATZ“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KINDERSPIELPLATZ“ (Anfangsbuchstabe „K“).",
     difficulty: 3,
   },
   {
@@ -8683,7 +8850,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "K", "C", "H", "-"],
     correctIndex: 1,
     solutionWord: "KIRCHTURMSPITZE",
-    explanation: "Das Wort lautet „KIRCHTURMSPITZE“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KIRCHTURMSPITZE“ (Anfangsbuchstabe „K“).",
     difficulty: 3,
   },
   {
@@ -8693,7 +8860,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "KLEIDERSCHRANK",
     explanation:
-      "Das Lösungswort lautet „KLEIDERSCHRANK“ (Anfangsbuchstabe „K“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „KLEIDERSCHRANK“ (Anfangsbuchstabe „K“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 3,
   },
   {
@@ -8702,7 +8869,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["C", "G", "H", "K", "-"],
     correctIndex: 3,
     solutionWord: "KLETTERPARK",
-    explanation: "Das Wort lautet „KLETTERPARK“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KLETTERPARK“ (Anfangsbuchstabe „K“).",
     difficulty: 3,
   },
   {
@@ -8734,7 +8901,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "K", "C", "G", "-"],
     correctIndex: 1,
     solutionWord: "KNOCHENBRUCHBEHANDLUNG",
-    explanation: "Das Wort lautet „KNOCHENBRUCHBEHANDLUNG“ und beginnt mit „K“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „KNOCHENBRUCHBEHANDLUNG“ (Anfangsbuchstabe „K“).",
     difficulty: 3,
   },
   {
@@ -8743,7 +8911,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "C", "G", "K", "-"],
     correctIndex: 3,
     solutionWord: "KOHLEKRAFTWERK",
-    explanation: "Das Wort lautet „KOHLEKRAFTWERK“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KOHLEKRAFTWERK“ (Anfangsbuchstabe „K“).",
     difficulty: 3,
   },
   {
@@ -8752,7 +8920,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["Q", "X", "G", "K", "-"],
     correctIndex: 3,
     solutionWord: "KOHLENSTOFF",
-    explanation: 'Das Wort lautet „KOHLENSTOFF" und beginnt mit „K".',
+    explanation: "Die Buchstaben ergeben das Wort „KOHLENSTOFF“ (Anfangsbuchstabe „K“).",
     difficulty: 3,
   },
   {
@@ -8761,7 +8929,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["X", "Q", "K", "G", "-"],
     correctIndex: 2,
     solutionWord: "KRANKENHAUS",
-    explanation: 'Das Wort lautet „KRANKENHAUS" und beginnt mit „K".',
+    explanation: "Die Buchstaben ergeben das Wort „KRANKENHAUS“ (Anfangsbuchstabe „K“).",
     difficulty: 3,
   },
   {
@@ -8792,7 +8960,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "C", "G", "H", "-"],
     correctIndex: 0,
     solutionWord: "KRANKENHAUSAUFENTHALT",
-    explanation: "Das Wort lautet „KRANKENHAUSAUFENTHALT“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KRANKENHAUSAUFENTHALT“ (Anfangsbuchstabe „K“).",
     difficulty: 3,
   },
   {
@@ -8801,7 +8969,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "H", "C", "G", "-"],
     correctIndex: 0,
     solutionWord: "KRANKENPFLEGER",
-    explanation: "Das Wort lautet „KRANKENPFLEGER“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KRANKENPFLEGER“ (Anfangsbuchstabe „K“).",
     difficulty: 3,
   },
   {
@@ -8810,7 +8978,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "C", "H", "G", "-"],
     correctIndex: 0,
     solutionWord: "KRANKENSCHWESTER",
-    explanation: "Das Wort lautet „KRANKENSCHWESTER“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KRANKENSCHWESTER“ (Anfangsbuchstabe „K“).",
     difficulty: 3,
   },
   {
@@ -8839,7 +9007,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "K", "G", "C", "-"],
     correctIndex: 1,
     solutionWord: "KRANKENVERSICHERUNG",
-    explanation: "Das Wort lautet „KRANKENVERSICHERUNG“ und beginnt mit „K“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „KRANKENVERSICHERUNG“ (Anfangsbuchstabe „K“).",
     difficulty: 3,
   },
   {
@@ -8848,7 +9017,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["X", "Q", "C", "K", "-"],
     correctIndex: 3,
     solutionWord: "KRANKHEIT",
-    explanation: 'Das Wort lautet „KRANKHEIT" und beginnt mit „K".',
+    explanation:
+      "Erkennbar an der Endung -HEIT. Die Buchstaben ergeben das Wort „KRANKHEIT“ (Anfangsbuchstabe „K“).",
     difficulty: 3,
   },
   {
@@ -8857,7 +9027,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["X", "G", "Q", "K", "-"],
     correctIndex: 3,
     solutionWord: "KREISLAUF",
-    explanation: 'Das Wort lautet „KREISLAUF" und beginnt mit „K".',
+    explanation: "Die Buchstaben ergeben das Wort „KREISLAUF“ (Anfangsbuchstabe „K“).",
     difficulty: 3,
   },
   {
@@ -8867,7 +9037,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "KREISVERKEHR",
     explanation:
-      "Das Lösungswort lautet „KREISVERKEHR“ (Anfangsbuchstabe „K“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „KREISVERKEHR“ (Anfangsbuchstabe „K“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 3,
   },
   {
@@ -8876,7 +9046,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["K", "H", "G", "C", "-"],
     correctIndex: 0,
     solutionWord: "KRISTALLGITTER",
-    explanation: "Das Wort lautet „KRISTALLGITTER“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KRISTALLGITTER“ (Anfangsbuchstabe „K“).",
     difficulty: 3,
   },
   {
@@ -8905,7 +9075,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["G", "C", "H", "K", "-"],
     correctIndex: 3,
     solutionWord: "KUNDENZUFRIEDENHEIT",
-    explanation: "Das Wort lautet „KUNDENZUFRIEDENHEIT“ und beginnt mit „K“.",
+    explanation:
+      "Erkennbar an der Endung -HEIT. Die Buchstaben ergeben das Wort „KUNDENZUFRIEDENHEIT“ (Anfangsbuchstabe „K“).",
     difficulty: 3,
   },
   {
@@ -8914,7 +9085,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["C", "K", "H", "G", "-"],
     correctIndex: 1,
     solutionWord: "KUNSTSTOFF",
-    explanation: "Das Wort lautet „KUNSTSTOFF“ und beginnt mit „K“.",
+    explanation: "Die Buchstaben ergeben das Wort „KUNSTSTOFF“ (Anfangsbuchstabe „K“).",
     difficulty: 3,
   },
   {
@@ -8924,7 +9095,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "KURZSTRECKE",
     explanation:
-      "Das Lösungswort lautet „KURZSTRECKE“ (Anfangsbuchstabe „K“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „KURZSTRECKE“ (Anfangsbuchstabe „K“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 3,
   },
   {
@@ -8933,7 +9104,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["T", "L", "R", "I", "-"],
     correctIndex: 1,
     solutionWord: "LABORUNTERSUCHUNG",
-    explanation: "Das Wort lautet „LABORUNTERSUCHUNG“ und beginnt mit „L“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „LABORUNTERSUCHUNG“ (Anfangsbuchstabe „L“).",
     difficulty: 3,
   },
   {
@@ -8942,7 +9114,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["R", "I", "L", "T", "-"],
     correctIndex: 2,
     solutionWord: "LAGERBESTAND",
-    explanation: "Das Wort lautet „LAGERBESTAND“ und beginnt mit „L“.",
+    explanation: "Die Buchstaben ergeben das Wort „LAGERBESTAND“ (Anfangsbuchstabe „L“).",
     difficulty: 3,
   },
   {
@@ -8951,7 +9123,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["I", "T", "L", "R", "-"],
     correctIndex: 2,
     solutionWord: "LAGERVERWALTUNG",
-    explanation: "Das Wort lautet „LAGERVERWALTUNG“ und beginnt mit „L“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „LAGERVERWALTUNG“ (Anfangsbuchstabe „L“).",
     difficulty: 3,
   },
   {
@@ -8960,7 +9133,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["T", "I", "R", "L", "-"],
     correctIndex: 3,
     solutionWord: "LAMPENSCHIRM",
-    explanation: "Das Wort lautet „LAMPENSCHIRM“ und beginnt mit „L“.",
+    explanation: "Die Buchstaben ergeben das Wort „LAMPENSCHIRM“ (Anfangsbuchstabe „L“).",
     difficulty: 3,
   },
   {
@@ -8969,7 +9142,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["R", "I", "T", "L", "-"],
     correctIndex: 3,
     solutionWord: "LANDSCHAFT",
-    explanation: "Das Wort lautet „LANDSCHAFT“ und beginnt mit „L“.",
+    explanation:
+      "Erkennbar an der Endung -SCHAFT. Die Buchstaben ergeben das Wort „LANDSCHAFT“ (Anfangsbuchstabe „L“).",
     difficulty: 3,
   },
   {
@@ -8978,7 +9152,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["I", "T", "L", "R", "-"],
     correctIndex: 2,
     solutionWord: "LANDWIRTSCHAFT",
-    explanation: "Das Wort lautet „LANDWIRTSCHAFT“ und beginnt mit „L“.",
+    explanation:
+      "Erkennbar an der Endung -SCHAFT. Die Buchstaben ergeben das Wort „LANDWIRTSCHAFT“ (Anfangsbuchstabe „L“).",
     difficulty: 3,
   },
   {
@@ -9010,7 +9185,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["I", "L", "R", "T", "-"],
     correctIndex: 1,
     solutionWord: "LANDWIRTSCHAFTSBETRIEB",
-    explanation: "Das Wort lautet „LANDWIRTSCHAFTSBETRIEB“ und beginnt mit „L“.",
+    explanation: "Die Buchstaben ergeben das Wort „LANDWIRTSCHAFTSBETRIEB“ (Anfangsbuchstabe „L“).",
     difficulty: 3,
   },
   {
@@ -9019,7 +9194,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["R", "I", "T", "L", "-"],
     correctIndex: 3,
     solutionWord: "LASTSCHRIFT",
-    explanation: "Das Wort lautet „LASTSCHRIFT“ und beginnt mit „L“.",
+    explanation: "Die Buchstaben ergeben das Wort „LASTSCHRIFT“ (Anfangsbuchstabe „L“).",
     difficulty: 3,
   },
   {
@@ -9028,7 +9203,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["T", "I", "L", "R", "-"],
     correctIndex: 2,
     solutionWord: "LAUFRICHTUNG",
-    explanation: "Das Wort lautet „LAUFRICHTUNG“ und beginnt mit „L“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „LAUFRICHTUNG“ (Anfangsbuchstabe „L“).",
     difficulty: 3,
   },
   {
@@ -9037,7 +9213,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["I", "L", "R", "T", "-"],
     correctIndex: 1,
     solutionWord: "LEBENSLAUF",
-    explanation: "Das Wort lautet „LEBENSLAUF“ und beginnt mit „L“.",
+    explanation: "Die Buchstaben ergeben das Wort „LEBENSLAUF“ (Anfangsbuchstabe „L“).",
     difficulty: 3,
   },
   {
@@ -9046,7 +9222,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["T", "L", "I", "R", "-"],
     correctIndex: 1,
     solutionWord: "LEBENSMITTEL",
-    explanation: "Das Wort lautet „LEBENSMITTEL“ und beginnt mit „L“.",
+    explanation: "Die Buchstaben ergeben das Wort „LEBENSMITTEL“ (Anfangsbuchstabe „L“).",
     difficulty: 3,
   },
   {
@@ -9055,7 +9231,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["I", "L", "R", "T", "-"],
     correctIndex: 1,
     solutionWord: "LEHRVERANSTALTUNG",
-    explanation: "Das Wort lautet „LEHRVERANSTALTUNG“ und beginnt mit „L“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „LEHRVERANSTALTUNG“ (Anfangsbuchstabe „L“).",
     difficulty: 3,
   },
   {
@@ -9064,7 +9241,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["T", "R", "L", "I", "-"],
     correctIndex: 2,
     solutionWord: "LEITFAEHIGKEIT",
-    explanation: "Das Wort lautet „LEITFAEHIGKEIT“ und beginnt mit „L“.",
+    explanation:
+      "Erkennbar an der Endung -KEIT. Die Buchstaben ergeben das Wort „LEITFAEHIGKEIT“ (Anfangsbuchstabe „L“).",
     difficulty: 3,
   },
   {
@@ -9073,7 +9251,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["R", "L", "I", "T", "-"],
     correctIndex: 1,
     solutionWord: "LERNMETHODE",
-    explanation: "Das Wort lautet „LERNMETHODE“ und beginnt mit „L“.",
+    explanation: "Die Buchstaben ergeben das Wort „LERNMETHODE“ (Anfangsbuchstabe „L“).",
     difficulty: 3,
   },
   {
@@ -9103,7 +9281,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["I", "L", "T", "R", "-"],
     correctIndex: 1,
     solutionWord: "LICHTGESCHWINDIGKEIT",
-    explanation: "Das Wort lautet „LICHTGESCHWINDIGKEIT“ und beginnt mit „L“.",
+    explanation:
+      "Erkennbar an der Endung -KEIT. Die Buchstaben ergeben das Wort „LICHTGESCHWINDIGKEIT“ (Anfangsbuchstabe „L“).",
     difficulty: 3,
   },
   {
@@ -9112,7 +9291,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["L", "I", "R", "T", "-"],
     correctIndex: 0,
     solutionWord: "LICHTQUELLE",
-    explanation: "Das Wort lautet „LICHTQUELLE“ und beginnt mit „L“.",
+    explanation: "Die Buchstaben ergeben das Wort „LICHTQUELLE“ (Anfangsbuchstabe „L“).",
     difficulty: 3,
   },
   {
@@ -9121,7 +9300,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["L", "R", "T", "I", "-"],
     correctIndex: 0,
     solutionWord: "LICHTSTRAHL",
-    explanation: "Das Wort lautet „LICHTSTRAHL“ und beginnt mit „L“.",
+    explanation: "Die Buchstaben ergeben das Wort „LICHTSTRAHL“ (Anfangsbuchstabe „L“).",
     difficulty: 3,
   },
   {
@@ -9150,7 +9329,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["L", "R", "T", "I", "-"],
     correctIndex: 0,
     solutionWord: "LIEFERKETTENPROBLEM",
-    explanation: "Das Wort lautet „LIEFERKETTENPROBLEM“ und beginnt mit „L“.",
+    explanation: "Die Buchstaben ergeben das Wort „LIEFERKETTENPROBLEM“ (Anfangsbuchstabe „L“).",
     difficulty: 3,
   },
   {
@@ -9159,7 +9338,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["I", "L", "R", "T", "-"],
     correctIndex: 1,
     solutionWord: "LUFTFEUCHTIGKEIT",
-    explanation: "Das Wort lautet „LUFTFEUCHTIGKEIT“ und beginnt mit „L“.",
+    explanation:
+      "Erkennbar an der Endung -KEIT. Die Buchstaben ergeben das Wort „LUFTFEUCHTIGKEIT“ (Anfangsbuchstabe „L“).",
     difficulty: 3,
   },
   {
@@ -9169,7 +9349,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "LUFTSCHICHT",
     explanation:
-      "Das Lösungswort lautet „LUFTSCHICHT“ (Anfangsbuchstabe „L“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „LUFTSCHICHT“ (Anfangsbuchstabe „L“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 3,
   },
   {
@@ -9178,7 +9358,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["R", "M", "H", "W", "-"],
     correctIndex: 1,
     solutionWord: "MAGNETFELD",
-    explanation: 'Das Wort lautet „MAGNETFELD" und beginnt mit „M".',
+    explanation: "Die Buchstaben ergeben das Wort „MAGNETFELD“ (Anfangsbuchstabe „M“).",
     difficulty: 3,
   },
   {
@@ -9213,7 +9393,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "M", "W", "N", "-"],
     correctIndex: 1,
     solutionWord: "MAGNETRESONANZTOMOGRAPHIE",
-    explanation: "Das Wort lautet „MAGNETRESONANZTOMOGRAPHIE“ und beginnt mit „M“.",
+    explanation:
+      "Die Buchstaben ergeben das Wort „MAGNETRESONANZTOMOGRAPHIE“ (Anfangsbuchstabe „M“).",
     difficulty: 3,
   },
   {
@@ -9242,7 +9423,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["M", "H", "W", "N", "-"],
     correctIndex: 0,
     solutionWord: "MARKENREGISTRIERUNG",
-    explanation: "Das Wort lautet „MARKENREGISTRIERUNG“ und beginnt mit „M“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „MARKENREGISTRIERUNG“ (Anfangsbuchstabe „M“).",
     difficulty: 3,
   },
   {
@@ -9251,7 +9433,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["W", "N", "M", "H", "-"],
     correctIndex: 2,
     solutionWord: "MARKTFORSCHUNG",
-    explanation: "Das Wort lautet „MARKTFORSCHUNG“ und beginnt mit „M“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „MARKTFORSCHUNG“ (Anfangsbuchstabe „M“).",
     difficulty: 3,
   },
   {
@@ -9260,7 +9443,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["W", "N", "M", "R", "-"],
     correctIndex: 2,
     solutionWord: "MATHEMATIK",
-    explanation: 'Das Wort lautet „MATHEMATIK" und beginnt mit „M".',
+    explanation: "Die Buchstaben ergeben das Wort „MATHEMATIK“ (Anfangsbuchstabe „M“).",
     difficulty: 3,
   },
   {
@@ -9270,7 +9453,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "MAUERWERK",
     explanation:
-      "Das Lösungswort lautet „MAUERWERK“ (Anfangsbuchstabe „M“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „MAUERWERK“ (Anfangsbuchstabe „M“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 3,
   },
   {
@@ -9298,7 +9481,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["W", "N", "M", "H", "-"],
     correctIndex: 2,
     solutionWord: "MEDIENWISSENSCHAFT",
-    explanation: "Das Wort lautet „MEDIENWISSENSCHAFT“ und beginnt mit „M“.",
+    explanation:
+      "Erkennbar an der Endung -SCHAFT. Die Buchstaben ergeben das Wort „MEDIENWISSENSCHAFT“ (Anfangsbuchstabe „M“).",
     difficulty: 3,
   },
   {
@@ -9307,7 +9491,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["W", "H", "M", "R", "-"],
     correctIndex: 2,
     solutionWord: "MEDIKAMENT",
-    explanation: 'Das Wort lautet „MEDIKAMENT" und beginnt mit „M".',
+    explanation:
+      "Erkennbar an der Endung -MENT. Die Buchstaben ergeben das Wort „MEDIKAMENT“ (Anfangsbuchstabe „M“).",
     difficulty: 3,
   },
   {
@@ -9316,7 +9501,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["N", "M", "H", "W", "-"],
     correctIndex: 1,
     solutionWord: "MEDIKAMENTENPLAN",
-    explanation: "Das Wort lautet „MEDIKAMENTENPLAN“ und beginnt mit „M“.",
+    explanation: "Die Buchstaben ergeben das Wort „MEDIKAMENTENPLAN“ (Anfangsbuchstabe „M“).",
     difficulty: 3,
   },
   {
@@ -9325,7 +9510,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["N", "W", "M", "R", "-"],
     correctIndex: 2,
     solutionWord: "METABOLISMUS",
-    explanation: 'Das Wort lautet „METABOLISMUS" und beginnt mit „M".',
+    explanation: "Die Buchstaben ergeben das Wort „METABOLISMUS“ (Anfangsbuchstabe „M“).",
     difficulty: 3,
   },
   {
@@ -9334,7 +9519,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["N", "M", "W", "H", "-"],
     correctIndex: 1,
     solutionWord: "MIKROBIOLOGIE",
-    explanation: "Das Wort lautet „MIKROBIOLOGIE“ und beginnt mit „M“.",
+    explanation: "Die Buchstaben ergeben das Wort „MIKROBIOLOGIE“ (Anfangsbuchstabe „M“).",
     difficulty: 3,
   },
   {
@@ -9343,7 +9528,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["N", "M", "H", "W", "-"],
     correctIndex: 1,
     solutionWord: "MILCHSTRASSE",
-    explanation: "Das Wort lautet „MILCHSTRASSE“ und beginnt mit „M“.",
+    explanation: "Die Buchstaben ergeben das Wort „MILCHSTRASSE“ (Anfangsbuchstabe „M“).",
     difficulty: 3,
   },
   {
@@ -9352,7 +9537,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["M", "W", "H", "N", "-"],
     correctIndex: 0,
     solutionWord: "MINDESTLOHN",
-    explanation: "Das Wort lautet „MINDESTLOHN“ und beginnt mit „M“.",
+    explanation: "Die Buchstaben ergeben das Wort „MINDESTLOHN“ (Anfangsbuchstabe „M“).",
     difficulty: 3,
   },
   {
@@ -9361,7 +9546,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "W", "N", "M", "-"],
     correctIndex: 3,
     solutionWord: "MITTERNACHT",
-    explanation: "Das Wort lautet „MITTERNACHT“ und beginnt mit „M“.",
+    explanation: "Die Buchstaben ergeben das Wort „MITTERNACHT“ (Anfangsbuchstabe „M“).",
     difficulty: 3,
   },
   {
@@ -9370,7 +9555,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "W", "R", "M", "-"],
     correctIndex: 3,
     solutionWord: "MOLEKUEL",
-    explanation: 'Das Wort lautet „MOLEKUEL" und beginnt mit „M".',
+    explanation: "Die Buchstaben ergeben das Wort „MOLEKUEL“ (Anfangsbuchstabe „M“).",
     difficulty: 3,
   },
   {
@@ -9379,7 +9564,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["W", "N", "M", "H", "-"],
     correctIndex: 2,
     solutionWord: "MONDSCHEIN",
-    explanation: "Das Wort lautet „MONDSCHEIN“ und beginnt mit „M“.",
+    explanation: "Die Buchstaben ergeben das Wort „MONDSCHEIN“ (Anfangsbuchstabe „M“).",
     difficulty: 3,
   },
   {
@@ -9388,7 +9573,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["N", "M", "W", "H", "-"],
     correctIndex: 1,
     solutionWord: "MUNDSCHUTZ",
-    explanation: "Das Wort lautet „MUNDSCHUTZ“ und beginnt mit „M“.",
+    explanation: "Die Buchstaben ergeben das Wort „MUNDSCHUTZ“ (Anfangsbuchstabe „M“).",
     difficulty: 3,
   },
   {
@@ -9397,7 +9582,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["W", "H", "M", "R", "-"],
     correctIndex: 2,
     solutionWord: "MUTATION",
-    explanation: 'Das Wort lautet „MUTATION" und beginnt mit „M".',
+    explanation:
+      "Erkennbar an der Endung -TION. Die Buchstaben ergeben das Wort „MUTATION“ (Anfangsbuchstabe „M“).",
     difficulty: 3,
   },
   {
@@ -9425,7 +9611,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["W", "H", "N", "M", "-"],
     correctIndex: 3,
     solutionWord: "MUTTERSCHUTZGESETZ",
-    explanation: "Das Wort lautet „MUTTERSCHUTZGESETZ“ und beginnt mit „M“.",
+    explanation: "Die Buchstaben ergeben das Wort „MUTTERSCHUTZGESETZ“ (Anfangsbuchstabe „M“).",
     difficulty: 3,
   },
   {
@@ -9434,7 +9620,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["M", "H", "N", "R", "-"],
     correctIndex: 2,
     solutionWord: "NACHBARSCHAFT",
-    explanation: "Das Wort lautet „NACHBARSCHAFT“ und beginnt mit „N“.",
+    explanation:
+      "Erkennbar an der Endung -SCHAFT. Die Buchstaben ergeben das Wort „NACHBARSCHAFT“ (Anfangsbuchstabe „N“).",
     difficulty: 3,
   },
   {
@@ -9443,7 +9630,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["R", "N", "H", "M", "-"],
     correctIndex: 1,
     solutionWord: "NACHMITTAGSKAFFEE",
-    explanation: "Das Wort lautet „NACHMITTAGSKAFFEE“ und beginnt mit „N“.",
+    explanation: "Die Buchstaben ergeben das Wort „NACHMITTAGSKAFFEE“ (Anfangsbuchstabe „N“).",
     difficulty: 3,
   },
   {
@@ -9452,7 +9639,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["N", "M", "R", "H", "-"],
     correctIndex: 0,
     solutionWord: "NACHRICHTENDIENST",
-    explanation: "Das Wort lautet „NACHRICHTENDIENST“ und beginnt mit „N“.",
+    explanation: "Die Buchstaben ergeben das Wort „NACHRICHTENDIENST“ (Anfangsbuchstabe „N“).",
     difficulty: 3,
   },
   {
@@ -9461,7 +9648,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["R", "N", "H", "M", "-"],
     correctIndex: 1,
     solutionWord: "NACHTSCHICHT",
-    explanation: "Das Wort lautet „NACHTSCHICHT“ und beginnt mit „N“.",
+    explanation: "Die Buchstaben ergeben das Wort „NACHTSCHICHT“ (Anfangsbuchstabe „N“).",
     difficulty: 3,
   },
   {
@@ -9470,7 +9657,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["N", "H", "R", "M", "-"],
     correctIndex: 0,
     solutionWord: "NACHTWACHE",
-    explanation: "Das Wort lautet „NACHTWACHE“ und beginnt mit „N“.",
+    explanation: "Die Buchstaben ergeben das Wort „NACHTWACHE“ (Anfangsbuchstabe „N“).",
     difficulty: 3,
   },
   {
@@ -9479,7 +9666,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["M", "H", "R", "N", "-"],
     correctIndex: 3,
     solutionWord: "NATURSCHUTZGEBIET",
-    explanation: "Das Wort lautet „NATURSCHUTZGEBIET“ und beginnt mit „N“.",
+    explanation: "Die Buchstaben ergeben das Wort „NATURSCHUTZGEBIET“ (Anfangsbuchstabe „N“).",
     difficulty: 3,
   },
   {
@@ -9488,7 +9675,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["R", "N", "M", "H", "-"],
     correctIndex: 1,
     solutionWord: "NATURWISSENSCHAFT",
-    explanation: "Das Wort lautet „NATURWISSENSCHAFT“ und beginnt mit „N“.",
+    explanation:
+      "Erkennbar an der Endung -SCHAFT. Die Buchstaben ergeben das Wort „NATURWISSENSCHAFT“ (Anfangsbuchstabe „N“).",
     difficulty: 3,
   },
   {
@@ -9498,7 +9686,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "NEBENWIRKUNGEN",
     explanation:
-      "Das Lösungswort lautet „NEBENWIRKUNGEN“ (Anfangsbuchstabe „N“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „NEBENWIRKUNGEN“ (Anfangsbuchstabe „N“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 3,
   },
   {
@@ -9507,7 +9695,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["N", "M", "R", "H", "-"],
     correctIndex: 0,
     solutionWord: "NEPHROLOGIE",
-    explanation: "Das Wort lautet „NEPHROLOGIE“ und beginnt mit „N“.",
+    explanation: "Die Buchstaben ergeben das Wort „NEPHROLOGIE“ (Anfangsbuchstabe „N“).",
     difficulty: 3,
   },
   {
@@ -9516,7 +9704,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["R", "H", "N", "W", "-"],
     correctIndex: 2,
     solutionWord: "NERVENSYSTEM",
-    explanation: 'Das Wort lautet „NERVENSYSTEM" und beginnt mit „N".',
+    explanation: "Die Buchstaben ergeben das Wort „NERVENSYSTEM“ (Anfangsbuchstabe „N“).",
     difficulty: 3,
   },
   {
@@ -9525,7 +9713,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["H", "M", "N", "W", "-"],
     correctIndex: 2,
     solutionWord: "NEUROLOGIE",
-    explanation: 'Das Wort lautet „NEUROLOGIE" und beginnt mit „N".',
+    explanation: "Die Buchstaben ergeben das Wort „NEUROLOGIE“ (Anfangsbuchstabe „N“).",
     difficulty: 3,
   },
   {
@@ -9534,7 +9722,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["N", "R", "H", "M", "-"],
     correctIndex: 0,
     solutionWord: "NIEDERSCHLAG",
-    explanation: "Das Wort lautet „NIEDERSCHLAG“ und beginnt mit „N“.",
+    explanation: "Die Buchstaben ergeben das Wort „NIEDERSCHLAG“ (Anfangsbuchstabe „N“).",
     difficulty: 3,
   },
   {
@@ -9562,7 +9750,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["N", "M", "R", "H", "-"],
     correctIndex: 0,
     solutionWord: "NIEDERSCHLAGSMENGE",
-    explanation: "Das Wort lautet „NIEDERSCHLAGSMENGE“ und beginnt mit „N“.",
+    explanation: "Die Buchstaben ergeben das Wort „NIEDERSCHLAGSMENGE“ (Anfangsbuchstabe „N“).",
     difficulty: 3,
   },
   {
@@ -9571,7 +9759,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["R", "H", "N", "M", "-"],
     correctIndex: 2,
     solutionWord: "NOTAUFNAHME",
-    explanation: "Das Wort lautet „NOTAUFNAHME“ und beginnt mit „N“.",
+    explanation: "Die Buchstaben ergeben das Wort „NOTAUFNAHME“ (Anfangsbuchstabe „N“).",
     difficulty: 3,
   },
   {
@@ -9581,7 +9769,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "NUSSBAUM",
     explanation:
-      "Das Lösungswort lautet „NUSSBAUM“ (Anfangsbuchstabe „N“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „NUSSBAUM“ (Anfangsbuchstabe „N“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 3,
   },
   {
@@ -9590,7 +9778,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["A", "U", "O", "Q", "-"],
     correctIndex: 2,
     solutionWord: "OBERFLAECHE",
-    explanation: "Das Wort lautet „OBERFLAECHE“ und beginnt mit „O“.",
+    explanation: "Die Buchstaben ergeben das Wort „OBERFLAECHE“ (Anfangsbuchstabe „O“).",
     difficulty: 3,
   },
   {
@@ -9600,7 +9788,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "OBSTGARTEN",
     explanation:
-      "Das Lösungswort lautet „OBSTGARTEN“ (Anfangsbuchstabe „O“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „OBSTGARTEN“ (Anfangsbuchstabe „O“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 3,
   },
   {
@@ -9609,7 +9797,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["A", "U", "Q", "O", "-"],
     correctIndex: 3,
     solutionWord: "ONKOLOGIE",
-    explanation: "Das Wort lautet „ONKOLOGIE“ und beginnt mit „O“.",
+    explanation: "Die Buchstaben ergeben das Wort „ONKOLOGIE“ (Anfangsbuchstabe „O“).",
     difficulty: 3,
   },
   {
@@ -9618,7 +9806,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["Q", "U", "E", "O", "-"],
     correctIndex: 3,
     solutionWord: "OPERATION",
-    explanation: 'Das Wort lautet „OPERATION" und beginnt mit „O".',
+    explanation:
+      "Erkennbar an der Endung -TION. Die Buchstaben ergeben das Wort „OPERATION“ (Anfangsbuchstabe „O“).",
     difficulty: 3,
   },
   {
@@ -9627,7 +9816,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["O", "U", "Q", "A", "-"],
     correctIndex: 0,
     solutionWord: "OPERATIONSSAAL",
-    explanation: "Das Wort lautet „OPERATIONSSAAL“ und beginnt mit „O“.",
+    explanation: "Die Buchstaben ergeben das Wort „OPERATIONSSAAL“ (Anfangsbuchstabe „O“).",
     difficulty: 3,
   },
   {
@@ -9636,7 +9825,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["Q", "E", "A", "O", "-"],
     correctIndex: 3,
     solutionWord: "ORGANISMUS",
-    explanation: 'Das Wort lautet „ORGANISMUS" und beginnt mit „O".',
+    explanation: "Die Buchstaben ergeben das Wort „ORGANISMUS“ (Anfangsbuchstabe „O“).",
     difficulty: 3,
   },
   {
@@ -9667,7 +9856,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "ORGANTRANSPLANTATION",
     explanation:
-      "Das Lösungswort lautet „ORGANTRANSPLANTATION“ (Anfangsbuchstabe „O“), der nicht unter A–D angeboten wird.",
+      "Erkennbar an der Endung -TION. Das Lösungswort lautet „ORGANTRANSPLANTATION“ (Anfangsbuchstabe „O“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 3,
   },
   {
@@ -9676,7 +9865,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["Q", "U", "E", "O", "-"],
     correctIndex: 3,
     solutionWord: "ORTHOPAEDIE",
-    explanation: 'Das Wort lautet „ORTHOPAEDIE" und beginnt mit „O".',
+    explanation: "Die Buchstaben ergeben das Wort „ORTHOPAEDIE“ (Anfangsbuchstabe „O“).",
     difficulty: 3,
   },
   {
@@ -9685,7 +9874,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["U", "A", "O", "Q", "-"],
     correctIndex: 2,
     solutionWord: "ORTSCHAFT",
-    explanation: "Das Wort lautet „ORTSCHAFT“ und beginnt mit „O“.",
+    explanation:
+      "Erkennbar an der Endung -SCHAFT. Die Buchstaben ergeben das Wort „ORTSCHAFT“ (Anfangsbuchstabe „O“).",
     difficulty: 3,
   },
   {
@@ -9694,7 +9884,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "Q", "D", "B", "-"],
     correctIndex: 0,
     solutionWord: "PALMENBLATT",
-    explanation: "Das Wort lautet „PALMENBLATT“ und beginnt mit „P“.",
+    explanation: "Die Buchstaben ergeben das Wort „PALMENBLATT“ (Anfangsbuchstabe „P“).",
     difficulty: 3,
   },
   {
@@ -9703,7 +9893,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["B", "D", "F", "P", "-"],
     correctIndex: 3,
     solutionWord: "PARAMETER",
-    explanation: 'Das Wort lautet „PARAMETER" und beginnt mit „P".',
+    explanation: "Die Buchstaben ergeben das Wort „PARAMETER“ (Anfangsbuchstabe „P“).",
     difficulty: 3,
   },
   {
@@ -9712,7 +9902,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "B", "Q", "P", "-"],
     correctIndex: 3,
     solutionWord: "PARKANLAGE",
-    explanation: "Das Wort lautet „PARKANLAGE“ und beginnt mit „P“.",
+    explanation: "Die Buchstaben ergeben das Wort „PARKANLAGE“ (Anfangsbuchstabe „P“).",
     difficulty: 3,
   },
   {
@@ -9722,7 +9912,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "PARKPLATZMANGEL",
     explanation:
-      "Das Lösungswort lautet „PARKPLATZMANGEL“ (Anfangsbuchstabe „P“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „PARKPLATZMANGEL“ (Anfangsbuchstabe „P“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 3,
   },
   {
@@ -9731,7 +9921,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["P", "Q", "D", "B", "-"],
     correctIndex: 0,
     solutionWord: "PARKPLATZSUCHE",
-    explanation: "Das Wort lautet „PARKPLATZSUCHE“ und beginnt mit „P“.",
+    explanation: "Die Buchstaben ergeben das Wort „PARKPLATZSUCHE“ (Anfangsbuchstabe „P“).",
     difficulty: 3,
   },
   {
@@ -9741,7 +9931,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     correctIndex: 4,
     solutionWord: "PARKVERBOT",
     explanation:
-      "Das Lösungswort lautet „PARKVERBOT“ (Anfangsbuchstabe „P“), der nicht unter A–D angeboten wird.",
+      "Das Lösungswort lautet „PARKVERBOT“ (Anfangsbuchstabe „P“), der nicht unter A–D angeboten wird. Daher ist E richtig.",
     difficulty: 3,
   },
   {
@@ -9750,7 +9940,8 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["B", "Q", "P", "D", "-"],
     correctIndex: 2,
     solutionWord: "PATENTANMELDUNG",
-    explanation: "Das Wort lautet „PATENTANMELDUNG“ und beginnt mit „P“.",
+    explanation:
+      "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „PATENTANMELDUNG“ (Anfangsbuchstabe „P“).",
     difficulty: 3,
   },
   {
@@ -9759,7 +9950,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["B", "F", "P", "D", "-"],
     correctIndex: 2,
     solutionWord: "PATHOLOGIE",
-    explanation: 'Das Wort lautet „PATHOLOGIE" und beginnt mit „P".',
+    explanation: "Die Buchstaben ergeben das Wort „PATHOLOGIE“ (Anfangsbuchstabe „P“).",
     difficulty: 3,
   },
   {
@@ -9768,7 +9959,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "B", "P", "Q", "-"],
     correctIndex: 2,
     solutionWord: "PFERDESPORT",
-    explanation: "Das Wort lautet „PFERDESPORT“ und beginnt mit „P“.",
+    explanation: "Die Buchstaben ergeben das Wort „PFERDESPORT“ (Anfangsbuchstabe „P“).",
     difficulty: 3,
   },
   {
@@ -9777,7 +9968,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "Q", "P", "B", "-"],
     correctIndex: 2,
     solutionWord: "PFINGSTROSE",
-    explanation: "Das Wort lautet „PFINGSTROSE“ und beginnt mit „P“.",
+    explanation: "Die Buchstaben ergeben das Wort „PFINGSTROSE“ (Anfangsbuchstabe „P“).",
     difficulty: 3,
   },
   {
@@ -9786,7 +9977,7 @@ export const WF_TRAINING_POOL_1000: WordFluencyTask[] = [
     options: ["D", "Q", "P", "B", "-"],
     correctIndex: 2,
     solutionWord: "PFLANZENSCHUTZ",
-    explanation: "Das Wort lautet „PFLANZENSCHUTZ“ und beginnt mit „P“.",
+    explanation: "Die Buchstaben ergeben das Wort „PFLANZENSCHUTZ“ (Anfangsbuchstabe „P“).",
     difficulty: 3,
   },
 ];

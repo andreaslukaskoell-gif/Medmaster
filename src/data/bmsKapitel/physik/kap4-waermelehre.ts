@@ -13,6 +13,9 @@ export const physKap4: Kapitel = {
     {
       id: "ph-4-01",
       title: "Temperatur und Wärme",
+      imageUrl: "/images/bms/bio-blutzucker-regulation.jpg",
+      imageCaption:
+        "Abb.: Thermoregulation — Temperaturhomöostase als Regelkreis (OpenStax, CC BY 4.0)",
       stichworte: [
         "Temperatur",
         "Wärme",
@@ -190,12 +193,18 @@ Q = 70 · 3500 · 3 = 735.000 J = 735 kJ ≈ 176 kcal. Diese Energiemenge muss d
         "Fieber beginnt bei >38 °C, klinisch kritisch ab 40 °C (Hyperthermie).",
       ],
 
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Erläutern Sie den Begriff der spezifischen Wärmekapazität und erklären Sie, warum die hohe Wärmekapazität des Wassers für biologische Systeme von besonderer Bedeutung ist.",
-        answer:
-          "Die spezifische Wärmekapazität c eines Stoffes gibt die Energiemenge an, die benötigt wird, um 1 kg dieses Stoffes um 1 K (bzw. 1 °C) zu erwärmen. Sie ist eine intrinsische Materialeigenschaft und hat die Einheit J/(kg·K). Die Beziehung lautet Q = m · c · ΔT. Wasser besitzt mit c ≈ 4180 J/(kg·K) die höchste spezifische Wärmekapazität aller gängigen Flüssigkeiten. Diese außergewöhnliche Eigenschaft hat mehrere biologische Konsequenzen: Erstens fungiert der menschliche Körper (ca. 60 % Wasser) als hervorragender Wärmepuffer. Durch Stoffwechselprozesse entsteht kontinuierlich Wärme; die hohe Wärmekapazität verhindert, dass die Körpertemperatur dabei stark schwankt. Zweitens ermöglicht Wasser als Lösungsmittel eine gleichmäßige Wärmeverteilung im Organismus über Blutkreislauf und Lymphe. Drittens schützt die hohe Wärmekapazität aquatische Ökosysteme: Gewässer erwärmen und kühlen viel langsamer als die Luft, sodass Temperaturextreme abgepuffert werden. Viertens ist Verdunstungskühlung (Schwitzen) effektiv, weil pro Gramm Wasser ≈ 2440 J Verdampfungswärme abgeführt werden. Insgesamt ermöglicht die hohe Wärmekapazität des Wassers die thermische Homöostase, die Voraussetzung für stabiles Enzymfunktionieren und damit für das Leben.",
+        text: "Wie viel Energie wird benötigt, um 2 kg Wasser (c = 4180 J/(kg·K)) von 20 °C auf 37 °C zu erwärmen?",
+        options: [
+          { id: "a", text: "8 360 J" },
+          { id: "b", text: "71 060 J" },
+          { id: "c", text: "142 120 J" },
+          { id: "d", text: "309 320 J" },
+          { id: "e", text: "15 466 J" },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "Q = m·c·ΔT = 2 kg × 4180 J/(kg·K) × 17 K = 142 120 J ≈ 142 kJ. Option a vergisst den Faktor 17 (ΔT), Option b rechnet nur mit 1 kg.",
       },
 
       klinischerBezug:
@@ -308,6 +317,20 @@ Q = 70 · 3500 · 3 = 735.000 J = 735 kJ ≈ 176 kcal. Diese Energiemenge muss d
           tags: ["wärmekapazität", "wasser", "spezifisch"],
           difficulty: 1,
         },
+        {
+          question:
+            "Welche Aussagen sind richtig?\n\n1. Die Kelvin-Skala beginnt beim absoluten Nullpunkt (0 K = −273,15 °C).\n2. Die spezifische Wärmekapazität von Wasser ist mit ca. 4180 J/(kg·K) außergewöhnlich hoch.\n3. Eis hat eine höhere spezifische Wärmekapazität als flüssiges Wasser.\n4. Die Celsius- und Kelvin-Skala haben gleich große Gradschritte.\n5. Die Wärmedehnung eines Stabes hängt von Ausdehnungskoeffizient, Anfangslänge und Temperaturdifferenz ab.",
+          options: ["Nur 1 und 2", "Nur 3 und 5", "Nur 1, 2, 4 und 5", "Nur 2, 3 und 4", "Alle"],
+          correctIndex: 2,
+          explanation:
+            "Aussage 1 ist richtig (0 K = −273,15 °C, absoluter Nullpunkt). Aussage 2 ist richtig (Wasser hat eine der höchsten spezifischen Wärmekapazitäten). Aussage 3 ist falsch — Eis hat nur c ≈ 2090 J/(kg·K), etwa halb so viel wie flüssiges Wasser (4180). Aussage 4 ist richtig (ΔT in K = ΔT in °C, gleiche Intervallgröße). Aussage 5 ist richtig (ΔL = α · L₀ · ΔT). Richtig sind 1, 2, 4 und 5.",
+          hints: [
+            "Vergleiche die spezifische Wärmekapazität von Eis und flüssigem Wasser.",
+            "c_Eis ≈ 2090 J/(kg·K), c_Wasser ≈ 4180 J/(kg·K).",
+          ],
+          tags: ["typ-k", "temperatur", "wärmekapazität"],
+          difficulty: 2,
+        },
       ],
     },
 
@@ -317,6 +340,9 @@ Q = 70 · 3500 · 3 = 735.000 J = 735 kJ ≈ 176 kcal. Diese Energiemenge muss d
     {
       id: "ph-4-02",
       title: "Wärmeübertragung",
+      imageUrl: "/images/bms/bio-haut-aufbau.jpg",
+      imageCaption:
+        "Abb.: Die Haut als Wärmeaustauscher — Konvektion und Strahlung (OpenStax, CC BY 4.0)",
       stichworte: [
         "Wärmeleitung",
         "Konvektion",
@@ -563,12 +589,18 @@ Ein Läufer schwitzt 1,5 L/h. Verdampfungswärme: 1,5 × 2400 kJ = 3600 kJ/h = *
         "Frühgeborene: hohes Oberfläche/Volumen-Verhältnis → rasche Wärmeverluste → Inkubator nötig.",
       ],
 
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Beschreiben Sie die drei Mechanismen der Wärmeübertragung und erläutern Sie, wie der menschliche Organismus diese zur Thermoregulation nutzt.",
-        answer:
-          "Wärmeübertragung erfolgt durch Wärmeleitung (Konduktion), Konvektion und Strahlung. Bei der Wärmeleitung (Fouriersches Gesetz: Q̇ = λ·A·ΔT/d) fließt Energie durch direkten Teilchenkontakt; Körperfett wirkt als Isolator (λ ≈ 0,2 W/(m·K)), Blut als Wärmeleiter. Bei der Konvektion transportiert ein strömendes Medium die Wärme; der Blutkreislauf ist das körpereigene Konvektionssystem: Blut nimmt im Kern (Leber, Muskeln) Wärme auf und gibt sie an der Haut ab. Wärmestrahlung (Stefan-Boltzmann: P = σ·ε·A·T⁴) stellt im Ruhezustand den größten Wärmeverlust dar (≈50 %). Die Thermoregulation wird vom Hypothalamus koordiniert: Bei Überhitzung → Vasodilatation in der Haut (erhöht Konvektion und Strahlung) + Schweißproduktion (Verdunstungskühlung, ≈2440 J/g). Bei Unterkühlung → Vasokonstriktion (reduziert periphere Wärmeabgabe) + Muskelzittern (metabolische Wärmeerzeugung). Fieber entsteht durch pyrogene Substanzen (z. B. bakterielles Lipopolysaccharid, Interleukin-1), die über Prostaglandin E₂ den hypothalamischen Sollwert erhöhen. Antipyretika wie Paracetamol hemmen die COX-Enzyme und senken so die Prostaglandinsynthese.",
+        text: "Welcher Mechanismus der Wärmeabgabe stellt beim ruhenden Menschen den größten Anteil dar?",
+        options: [
+          { id: "a", text: "Wärmeleitung (Konduktion)" },
+          { id: "b", text: "Konvektion" },
+          { id: "c", text: "Verdunstung (Schwitzen)" },
+          { id: "d", text: "Wärmestrahlung (Radiation)" },
+          { id: "e", text: "Atemluft" },
+        ],
+        correctOptionId: "d",
+        explanation:
+          "Im Ruhezustand wird ca. 50 % der Körperwärme über Infrarotstrahlung (Stefan-Boltzmann: P = σ·ε·A·T⁴) abgegeben. Bei körperlicher Belastung dominiert dagegen die Verdunstungskühlung (Schweiß: ≈ 2440 J/g).",
       },
 
       klinischerBezug:
@@ -677,6 +709,9 @@ Ein Läufer schwitzt 1,5 L/h. Verdampfungswärme: 1,5 × 2400 kJ = 3600 kJ/h = *
     {
       id: "ph-4-03",
       title: "Thermodynamische Hauptsätze",
+      imageUrl: "/images/bms/bio-mitochondrium.jpg",
+      imageCaption:
+        "Abb.: Mitochondrien — Wärmeproduktion und Energieumwandlung (OpenStax, CC BY 4.0)",
       stichworte: [
         "Erster Hauptsatz",
         "Zweiter Hauptsatz",
@@ -945,10 +980,23 @@ Q_warm = 1200 J, W = 400 J → Q_kalt = 1200 − 400 = 800 J.
       ],
 
       altfrage: {
-        question:
-          "Erläutern Sie den zweiten Hauptsatz der Thermodynamik und diskutieren Sie, ob lebende Systeme diesen scheinbar verletzen.",
-        answer:
-          "Der zweite Hauptsatz lässt sich auf drei äquivalente Weisen formulieren: (1) Wärme fließt spontan nur von warm nach kalt (Clausius). (2) Keine zyklisch arbeitende Maschine kann Wärme vollständig in Arbeit umwandeln (Kelvin-Planck). (3) Die Gesamtentropie eines abgeschlossenen Systems nimmt bei irreversiblen Prozessen zu (ΔS_gesamt ≥ 0). Entropie S misst die Anzahl der Mikrozustände: S = k_B · ln(W). Lebewesen scheinen dem zu widersprechen, da sie aus einfachen Molekülen hochstrukturierte Proteine und DNA aufbauen — scheinbar eine Entropieabnahme. Dies ist kein Widerspruch, weil Lebewesen offene Systeme sind: Sie nehmen niedrigentropische Nahrung auf und geben hochentropische Wärme und Abfallprodukte ab. Die Entropie der Umgebung steigt stärker als die Entropie im Organismus sinkt → die Gesamtentropie nimmt zu. ATP-Hydrolyse (ΔG° = −30,5 kJ/mol) koppelt endergonische Reaktionen an exergonische und macht so nicht-spontane Prozesse thermodynamisch möglich.",
+        text: "Welche Aussage zum zweiten Hauptsatz der Thermodynamik ist richtig?",
+        options: [
+          {
+            id: "a",
+            text: "Wärme kann spontan von einem kalten auf einen warmen Körper übergehen.",
+          },
+          { id: "b", text: "Lebewesen verletzen den zweiten Hauptsatz, da sie Ordnung aufbauen." },
+          {
+            id: "c",
+            text: "Die Gesamtentropie eines abgeschlossenen Systems kann bei irreversiblen Prozessen nur zunehmen.",
+          },
+          { id: "d", text: "Eine Wärmekraftmaschine kann Wärme vollständig in Arbeit umwandeln." },
+          { id: "e", text: "Entropie hat die Einheit Joule." },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "ΔS_gesamt ≥ 0 für irreversible Prozesse. Lebewesen sind offene Systeme: Ihre lokale Entropieabnahme wird durch Entropiezunahme der Umgebung überkompensiert. Entropie hat die Einheit J/K.",
       },
 
       klinischerBezug:
@@ -1059,6 +1107,26 @@ Q_warm = 1200 J, W = 400 J → Q_kalt = 1200 − 400 = 800 J.
           tags: ["wärmekraftmaschine", "wirkungsgrad", "thermodynamik"],
           difficulty: 2,
         },
+        {
+          question:
+            "Welche der folgenden Aussagen zu den Hauptsätzen der Thermodynamik ist FALSCH?",
+          options: [
+            "Der erste Hauptsatz besagt, dass die Gesamtenergie eines abgeschlossenen Systems konstant bleibt.",
+            "Bei einer isochoren Erwärmung geht die gesamte zugeführte Wärme in die Erhöhung der inneren Energie.",
+            "Der Carnot-Wirkungsgrad kann in der Praxis überschritten werden, wenn die Maschine reibungsfrei arbeitet.",
+            "In einem abgeschlossenen System kann die Gesamtentropie nie abnehmen.",
+            "Lebewesen verletzen den zweiten Hauptsatz nicht, da sie offene Systeme sind und Entropie exportieren.",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Der Carnot-Wirkungsgrad η = 1 − T_kalt/T_warm ist der theoretisch maximal erreichbare Wirkungsgrad für eine Wärmekraftmaschine zwischen zwei Temperaturniveaus. Er kann NIEMALS überschritten werden — auch nicht bei reibungsfreiem Betrieb. Reibungsfreiheit ist bereits eine Voraussetzung des Carnot-Prozesses; reale Maschinen erreichen stets weniger. Eine Überschreitung würde den zweiten Hauptsatz verletzen. Alle anderen Aussagen sind korrekt.",
+          hints: [
+            "Ist der Carnot-Wirkungsgrad eine theoretische Obergrenze oder ein erreichbarer Wert?",
+            "Der zweite Hauptsatz setzt eine absolute Grenze — keine Maschine kann effizienter sein.",
+          ],
+          tags: ["falsch-aussage", "thermodynamik", "carnot"],
+          difficulty: 2,
+        },
       ],
     },
 
@@ -1068,6 +1136,8 @@ Q_warm = 1200 J, W = 400 J → Q_kalt = 1200 − 400 = 800 J.
     {
       id: "ph-4-04",
       title: "Phasenübergänge und Ideales Gas",
+      imageUrl: "/images/bms/ch-aggregatzustaende.jpg",
+      imageCaption: "Abb.: Aggregatzustände und Phasenübergänge (OpenStax, CC BY 4.0)",
       stichworte: [
         "Ideales Gasgesetz",
         "Phasendiagramm",
@@ -1308,12 +1378,18 @@ Bei hoher Luftfeuchtigkeit (>80 %) ist die Luft wasserdampfgesättigt → Verdun
         "Verdunstungskühlung: ~2430 kJ/kg bei 37 °C — effektivster Kühlmechanismus. Hohe Luftfeuchtigkeit blockiert Verdunstung.",
       ],
 
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Erläutern Sie das Henry-Gesetz und erklären Sie seine Bedeutung für die Entstehung und Behandlung der Taucherkrankheit (Dekompressionskrankheit).",
-        answer:
-          "Das Henry-Gesetz beschreibt die Löslichkeit von Gasen in Flüssigkeiten: c = k_H · p, wobei c die Konzentration des gelösten Gases, k_H die Henry-Konstante (stoff- und temperaturabhängig) und p der Partialdruck des Gases über der Flüssigkeit ist. Je höher der Gasdruck, desto mehr Gas löst sich in der Flüssigkeit. Beim Tauchen in größere Tiefen steigt der Umgebungsdruck proportional zur Wassertiefe (p ≈ p_0 + ρ·g·h; pro 10 m Tiefe ≈ +1 atm). Durch das Henry-Gesetz löst sich daher mehr Stickstoff (N₂) aus der Atemluft im Blut und in den Geweben. Steigt der Taucher nun zu schnell auf, sinkt der Außendruck rasch ab. Der N₂ kann nicht schnell genug über die Lunge abgeatmet werden und bildet Gasblasen in Blutgefäßen, Gelenken und Geweben — analog zu einer geöffneten Sprudelflasche. Diese Blasen verursachen Schmerzen (Bends), Embolien, neurologische Ausfälle und können tödlich sein. Therapie: Sofortige Rückführung in die Überdruckkammer (Rekompression), damit die Blasen sich wieder auflösen. Anschließend langsames, kontrolliertes Druckabsenken mit Dekompressionsstopps nach standardisierten Tauchtabellen, damit N₂ kontrolliert ausatembar ist. Prophylaxe: Tauchen mit Helium-Sauerstoff-Gemisch (Heliox) statt Stickstoff, da He weniger im Gewebe löslich ist und schneller ausatembar ist.",
+        text: "Laut dem Henry-Gesetz (c = k_H · p) verdoppelt sich der Umgebungsdruck beim Tauchen in 10 m Tiefe. Was passiert mit der Stickstoff-Löslichkeit im Blut?",
+        options: [
+          { id: "a", text: "Sie halbiert sich." },
+          { id: "b", text: "Sie bleibt gleich." },
+          { id: "c", text: "Sie verdoppelt sich." },
+          { id: "d", text: "Sie vervierfacht sich." },
+          { id: "e", text: "Sie hängt nur von der Temperatur ab, nicht vom Druck." },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "c = k_H · p: Die Gaslöslichkeit ist direkt proportional zum Partialdruck. Doppelter Druck = doppelte N₂-Löslichkeit. Zu schnelles Auftauchen führt zur Blasenbildung (Taucherkrankheit).",
       },
 
       klinischerBezug:

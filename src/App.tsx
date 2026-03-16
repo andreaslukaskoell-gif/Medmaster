@@ -17,6 +17,7 @@ import { useAuth } from "@/hooks/useAuth";
 import { useStore } from "@/store/useStore";
 import { usePageTracking } from "@/hooks/usePageTracking";
 import { sanitizeUrlParam } from "@/lib/security";
+import { FloatingCTA } from "@/components/growth/FloatingCTA";
 
 // Lazy-loaded pages — casing must match filenames exactly (Linux/Vercel is case-sensitive)
 const LandingPage = lazy(() => import("@/pages/LandingPage"));
@@ -173,6 +174,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <FloatingCTA />
       <Suspense fallback={<LoadingSpinner />}>
         <Routes>
           {/* Public routes */}

@@ -42,7 +42,7 @@ export const biologiePool21: Question[] = [
       "Sauerstoff wird nicht mehr verbraucht",
     ],
     2,
-    "Entkoppler (z. B. 2,4-DNP, Thermogenin in braunem Fettgewebe) dissipieren den Protonengradienten als Wärme. Elektronen fließen weiter (O₂ wird verbraucht), aber die ATP-Synthase kann ohne Gradienten kein ATP produzieren. Die Zelle schaltet auf verstärkte Glykolyse um.",
+    "Entkoppler dissipieren den Protonengradienten als Wärme. Elektronen fließen weiter, aber die ATP-Synthase kann ohne Gradienten kein ATP produzieren. Die Zelle schaltet auf verstärkte Glykolyse um.",
     "schwer",
     ["Atmungskette", "Entkopplung", "Mitochondrien"]
   ),
@@ -106,7 +106,7 @@ export const biologiePool21: Question[] = [
       "Die Na⁺/K⁺-ATPase verhindert jegliche osmotische Wasserverschiebung",
     ],
     2,
-    "Im hypotonischen Medium ist die Solut-Konzentration außen geringer als innen. Wasser strömt osmotisch in die Zelle. Tierische Zellen ohne stützende Zellwand können anschwellen und platzen (Lyse/Hämolyse bei Erythrozyten). Pflanzenzellen werden turgeszent, die Zellwand verhindert Lyse.",
+    "Im hypotonischen Medium ist die Solut-Konzentration außen geringer als innen. Wasser strömt osmotisch in die Zelle. Tierische Zellen ohne stützende Zellwand können anschwellen und platzen. Pflanzenzellen werden turgeszent, die Zellwand verhindert Lyse.",
     "schwer",
     ["Osmose", "Hypotonisch", "Zellmembran"]
   ),
@@ -140,7 +140,7 @@ export const biologiePool21: Question[] = [
       "TSH normal, fT3/fT4 stark erniedrigt",
     ],
     1,
-    "Bei primärer Hypothyreose (Ursache in der Schilddrüse selbst, z. B. Hashimoto) sind fT3/fT4 erniedrigt. Durch den fehlenden negativen Feedback steigt TSH (Hypophyse kompensiert). Bei sekundärer Hypothyreose (Hypophysendefizit) wäre TSH ebenfalls niedrig.",
+    "Bei primärer Hypothyreose sind fT3/fT4 erniedrigt. Durch den fehlenden negativen Feedback steigt TSH (Hypophyse kompensiert). Bei sekundärer Hypothyreose (Hypophysendefizit) wäre TSH ebenfalls niedrig.",
     "schwer",
     ["Schilddrüse", "Hypothyreose", "Hormone", "Feedback"]
   ),
@@ -167,12 +167,12 @@ export const biologiePool21: Question[] = [
     [
       "Im Glomerulus wird das Blut durch den Filtrationsdruckunterschied ultrafiltriert (Primärharn)",
       "Täglich werden ca. 180 Liter Primärharn gebildet, davon werden ca. 99 % rückresorbiert",
-      "Glucose wird im proximalen Tubulus vollständig rückresorbiert (bei normaler Blutglucose)",
+      "Glucose wird im proximalen Tubulus vollständig rückresorbiert",
       "ADH (Vasopressin) wirkt am proximalen Tubulus und erhöht dort die Wasserpermeabilität",
       "Bei Diabetes mellitus kann Glucose im Urin erscheinen, wenn die Nierenschwelle überschritten wird",
     ],
     3,
-    "ADH (antidiuretisches Hormon/Vasopressin) wirkt am SAMMELROHR (und distalen Tubulus), nicht am proximalen Tubulus. Es bewirkt dort den Einbau von Aquaporin-2-Kanälen und erhöht die Wasserrückresorption. Der proximale Tubulus resorbiert Wasser konstitutiv (ca. 65 %).",
+    "ADH (antidiuretisches Hormon/Vasopressin) wirkt am SAMMELROHR, nicht am proximalen Tubulus. Es bewirkt dort den Einbau von Aquaporin-2-Kanälen und erhöht die Wasserrückresorption. Der proximale Tubulus resorbiert Wasser konstitutiv (ca. 65 %).",
     "schwer",
     ["Niere", "ADH", "Filtration", "Rückresorption"]
   ),
@@ -220,7 +220,7 @@ export const biologiePool21: Question[] = [
       "Alle Bereiche des Gehirns besitzen eine gleich starke Blut-Hirn-Schranke ohne Ausnahmen",
     ],
     4,
-    "Nicht alle Hirnbereiche haben eine gleich starke BHS. Die zirkumventrikulären Organe (z. B. Area postrema, Eminentia mediana, Neurohypophyse) besitzen eine durchlässige BHS, um Blutparameter direkt zu detektieren (z. B. Osmolarität, Hormone, Toxine für den Brechreflex).",
+    "Nicht alle Hirnbereiche haben eine gleich starke BHS. Die zirkumventrikulären Organe besitzen eine durchlässige BHS, um Blutparameter direkt zu detektieren.",
     "schwer",
     ["Blut-Hirn-Schranke", "ZNS", "Neuroanatomie"]
   ),
@@ -230,13 +230,7 @@ export const biologiePool21: Question[] = [
     "bio-pool-21-013",
     "bio-kap4",
     "Bei einem X-chromosomal rezessiven Erbgang ist die Mutter Konduktorin (X^A X^a) und der Vater gesund (X^A Y). Mit welcher Wahrscheinlichkeit ist ein Sohn betroffen?",
-    [
-      "0 % (kein Sohn kann betroffen sein)",
-      "25 % (jedes vierte Kind)",
-      "50 % (jeder zweite Sohn)",
-      "75 %",
-      "100 % (alle Söhne)",
-    ],
+    ["0 %", "25 % (jedes vierte Kind)", "50 % (jeder zweite Sohn)", "75 %", "100 % (alle Söhne)"],
     2,
     "Konduktorin X^A X^a × gesunder Vater X^A Y: Söhne erhalten ihr X von der Mutter. 50 % der Söhne erhalten X^a → betroffen. 50 % erhalten X^A → gesund. Töchter: 50 % Konduktorinnen (X^A X^a), 50 % gesund (X^A X^A). Kein Sohn erhält ein X vom Vater.",
     "schwer",
@@ -254,7 +248,7 @@ export const biologiePool21: Question[] = [
       "Es gibt drei Stoppcodons: UAA, UAG und UGA",
     ],
     3,
-    "Der genetische Code ist NICHT überlappend: Jedes Nukleotid gehört zu genau einem Codon (bei normaler Translation). Der Code wird komma-frei und in einem festen Leseraster (Reading Frame) abgelesen. Eine Frameshift-Mutation verschiebt dieses Raster.",
+    "Der genetische Code ist NICHT überlappend: Jedes Nukleotid gehört zu genau einem Codon. Der Code wird komma-frei und in einem festen Leseraster (Reading Frame) abgelesen. Eine Frameshift-Mutation verschiebt dieses Raster.",
     "schwer",
     ["Genetischer Code", "Translation", "Codons"]
   ),
@@ -296,7 +290,7 @@ export const biologiePool21: Question[] = [
       "Retinoblastom (Rb) ist ein Proto-Onkogen, das bei Aktivierung zu Krebs führt",
     ],
     2,
-    "Knudsons Two-Hit-Hypothese: Tumorsuppressorgene (z. B. Rb, p53) sind rezessiv — beide Allele müssen inaktiviert werden (Loss-of-Function). Onkogene entstehen durch Aktivierung (Gain-of-Function) von Protoonkogenen (z. B. Punktmutation, Amplifikation, Translokation). p53 ist ein Tumorsuppressorgen.",
+    "Knudsons Two-Hit-Hypothese: Tumorsuppressorgene sind rezessiv — beide Allele müssen inaktiviert werden (Loss-of-Function). Onkogene entstehen durch Aktivierung (Gain-of-Function) von Protoonkogenen. p53 ist ein Tumorsuppressorgen.",
     "schwer",
     ["Onkogene", "Tumorsuppressorgene", "Krebsgenetik"]
   ),
@@ -314,7 +308,7 @@ export const biologiePool21: Question[] = [
       "Sympatrische Artbildung widerspricht dem biologischen Artkonzept vollständig",
     ],
     1,
-    "Sympatrische Artbildung erfolgt OHNE geografische Isolation im selben Verbreitungsgebiet. Häufigster Mechanismus: Polyploidisierung (besonders bei Pflanzen), z. B. Allopolyploidie nach Hybridisierung. Auch ökologische Nischendifferenzierung oder sexuelle Selektion können beteiligt sein.",
+    "Sympatrische Artbildung erfolgt OHNE geografische Isolation im selben Verbreitungsgebiet. Häufigster Mechanismus: Polyploidisierung, z. B. Allopolyploidie nach Hybridisierung. Auch ökologische Nischendifferenzierung oder sexuelle Selektion können beteiligt sein.",
     "schwer",
     ["Sympatrische Artbildung", "Polyploidie", "Speziation"]
   ),
@@ -331,7 +325,7 @@ export const biologiePool21: Question[] = [
   q(
     "bio-pool-21-020",
     "bio-kap3",
-    "Welche Struktur ist ein Beispiel für Homologie (und nicht Analogie)?",
+    "Welche Struktur ist ein Beispiel für Homologie?",
     [
       "Flügel eines Vogels und Flügel eines Schmetterlings",
       "Arm des Menschen und Vorderflosse eines Wals",
@@ -340,7 +334,7 @@ export const biologiePool21: Question[] = [
       "Stromlinienform eines Hais und eines Delfins",
     ],
     1,
-    "Homologe Strukturen haben einen gemeinsamen Bauplan (gleiche embryonale Herkunft), aber können unterschiedliche Funktionen haben. Arm des Menschen und Vorderflosse des Wals teilen den gleichen Knochenaufbau (Humerus, Radius, Ulna). Flügel von Vogel und Insekt sind analog (konvergente Evolution, verschiedener Bauplan).",
+    "Homologe Strukturen haben einen gemeinsamen Bauplan (gleiche embryonale Herkunft), aber können unterschiedliche Funktionen haben. Arm des Menschen und Vorderflosse des Wals teilen den gleichen Knochenaufbau (Humerus, Radius, Ulna). Flügel von Vogel und Insekt sind analog.",
     "schwer",
     ["Homologie", "Analogie", "Vergleichende Anatomie"]
   ),
@@ -372,7 +366,7 @@ export const biologiePool21: Question[] = [
       "Balancierte Selektion durch Heterozygotenvorteil",
     ],
     2,
-    "Disruptive Selektion bevorzugt beide Extreme und selektiert gegen den Durchschnittswert. Beispiel: Schnabelgröße bei Darwinfinken (große und kleine Samen, aber keine mittleren verfügbar). Sie kann zur sympatrischen Artbildung beitragen.",
+    "Disruptive Selektion bevorzugt beide Extreme und selektiert gegen den Durchschnittswert. Beispiel: Schnabelgröße bei Darwinfinken. Sie kann zur sympatrischen Artbildung beitragen.",
     "schwer",
     ["Selektion", "Disruptive Selektion", "Evolution"]
   ),
@@ -388,7 +382,7 @@ export const biologiePool21: Question[] = [
       "Rudimentäre Organe kommen nur bei Wirbeltieren vor",
     ],
     1,
-    "Rudimente sind zurückgebildete Organe, die bei Vorfahren eine Funktion hatten (z. B. Steißbein als Rest des Schwanzes, Appendix als reduzierter Blinddarm, Nickhaut als rudimentäres drittes Augenlid). Sie sind Homologien und Belege für gemeinsame Abstammung (divergente, nicht konvergente Evolution).",
+    "Rudimente sind zurückgebildete Organe, die bei Vorfahren eine Funktion hatten. Sie sind Homologien und Belege für gemeinsame Abstammung.",
     "schwer",
     ["Rudimente", "Evolution", "Homologie"]
   ),
@@ -398,13 +392,13 @@ export const biologiePool21: Question[] = [
     "Welche Aussage zur Neurulation in der Embryonalentwicklung ist korrekt?",
     [
       "Die Neuralplatte bildet sich aus dem Endoderm unter Einfluss der Chorda dorsalis",
-      "Die Neuralrinne schließt sich zum Neuralrohr, aus dem ZNS (Gehirn und Rückenmark) entsteht",
+      "Die Neuralrinne schließt sich zum Neuralrohr, aus dem ZNS entsteht",
       "Neuralleistenzellen stammen vom Mesoderm ab und bilden nur Knorpelgewebe",
       "Die Neurulation findet erst im dritten Schwangerschaftstrimester statt",
       "Folsäuremangel hat keinen Einfluss auf den Neuralrohrschluss",
     ],
     1,
-    "Neurulation: Ektoderm verdickt sich zur Neuralplatte → Neuralrinne → Neuralrohr (schließt sich ca. Tag 22–28). Daraus entstehen Gehirn und Rückenmark. Neuralleistenzellen (Ektoderm!) bilden PNS, Melanozyten, Nebennieremark u. a. Folsäure ist kritisch für den Neuralrohrschluss (Mangel → Spina bifida).",
+    "Neurulation: Ektoderm verdickt sich zur Neuralplatte → Neuralrinne → Neuralrohr. Daraus entstehen Gehirn und Rückenmark. Neuralleistenzellen (Ektoderm!) bilden PNS, Melanozyten, Nebennieremark u. a. Folsäure ist kritisch für den Neuralrohrschluss.",
     "schwer",
     ["Neurulation", "Embryologie", "Neuralrohr"]
   ),
@@ -420,7 +414,7 @@ export const biologiePool21: Question[] = [
       "Adaptive Radiation erfordert konstante Umweltbedingungen ohne neue ökologische Nischen",
     ],
     1,
-    "Adaptive Radiation: Eine Stammart diversifiziert sich schnell in viele neue Arten, die verschiedene ökologische Nischen besetzen. Klassische Beispiele: Darwinfinken (Galapagos), Buntbarsche (Ostafrikanische Seen), Lemuren (Madagaskar). Auslöser sind oft unbesetzte Nischen (z. B. Inseln, nach Massenaussterben).",
+    "Adaptive Radiation: Eine Stammart diversifiziert sich schnell in viele neue Arten, die verschiedene ökologische Nischen besetzen. Klassische Beispiele: Darwinfinken (Galapagos), Buntbarsche (Ostafrikanische Seen), Lemuren (Madagaskar). Auslöser sind oft unbesetzte Nischen.",
     "schwer",
     ["Adaptive Radiation", "Evolution", "Artbildung"]
   ),
@@ -438,7 +432,7 @@ export const biologiePool21: Question[] = [
       "T-Helferzellen (CD4⁺) erkennen Antigene über MHC-I-Moleküle",
     ],
     2,
-    "MHC-I: auf allen kernhaltigen Zellen, präsentiert endogene Peptide (z. B. virale Proteine) → erkannt von CD8⁺ zytotoxischen T-Zellen. MHC-II: auf professionellen APCs (dendritische Zellen, Makrophagen, B-Zellen), präsentiert exogene Peptide → erkannt von CD4⁺ T-Helferzellen.",
+    "MHC-I: auf allen kernhaltigen Zellen, präsentiert endogene Peptide → erkannt von CD8⁺ zytotoxischen T-Zellen. MHC-II: auf professionellen APCs, präsentiert exogene Peptide → erkannt von CD4⁺ T-Helferzellen.",
     "schwer",
     ["MHC", "Antigenpräsentation", "Immunologie"]
   ),
@@ -447,7 +441,7 @@ export const biologiePool21: Question[] = [
     "bio-kap5",
     "Welche Aussage zum Komplementsystem ist FALSCH?",
     [
-      "Der klassische Weg wird durch Antikörper-Antigen-Komplexe (IgG oder IgM) aktiviert",
+      "Der klassische Weg wird durch Antikörper-Antigen-Komplexe aktiviert",
       "Der alternative Weg wird direkt durch mikrobielle Oberflächen ohne Antikörper aktiviert",
       "Der Membranangriffskomplex (MAC) bildet Poren in der Zellmembran von Pathogenen",
       "C3a und C5a sind Anaphylatoxine, die Entzündungsreaktionen und Chemotaxis vermitteln",
@@ -495,14 +489,14 @@ export const biologiePool21: Question[] = [
     "bio-kap5",
     "Welche Aussage zum Stickstoffkreislauf ist FALSCH?",
     [
-      "Stickstofffixierende Bakterien (z. B. Rhizobium in Leguminosen-Wurzelknöllchen) wandeln N₂ in Ammonium (NH₄⁺) um",
+      "Stickstofffixierende Bakterien wandeln N₂ in Ammonium (NH₄⁺) um",
       "Nitrifikation ist die Oxidation von Ammonium zu Nitrit und dann zu Nitrat durch Nitrifizierer",
       "Denitrifikation wandelt Nitrat unter anaeroben Bedingungen zurück zu N₂",
       "Pflanzen können atmosphärischen Stickstoff (N₂) direkt über ihre Wurzeln aufnehmen und assimilieren",
       "Ammonifikation ist der Abbau organischer Stickstoffverbindungen zu Ammonium durch Destruenten",
     ],
     3,
-    "Pflanzen können N₂ NICHT direkt aufnehmen. Sie benötigen fixierten Stickstoff in Form von NH₄⁺ (Ammonium) oder NO₃⁻ (Nitrat). Nur bestimmte Prokaryoten (z. B. Rhizobium, Azotobacter, Cyanobakterien) besitzen das Enzym Nitrogenase zur N₂-Fixierung.",
+    "Pflanzen können N₂ NICHT direkt aufnehmen. Sie benötigen fixierten Stickstoff in Form von NH₄⁺ (Ammonium) oder NO₃⁻ (Nitrat). Nur bestimmte Prokaryoten besitzen das Enzym Nitrogenase zur N₂-Fixierung.",
     "schwer",
     ["Stickstoffkreislauf", "Ökologie", "Biogeochemie"]
   ),

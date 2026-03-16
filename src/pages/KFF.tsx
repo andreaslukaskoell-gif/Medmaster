@@ -15,6 +15,7 @@ import { ZahlenfolgenQuiz } from "@/components/kff/ZahlenfolgenQuiz";
 import {
   GedaechtnisSetup,
   GedaechtnisLearn,
+  GedaechtnisInterferenz,
   GedaechtnisQuiz,
 } from "@/components/kff/GedaechtnisQuiz";
 import { ImplikationenQuiz } from "@/components/kff/ImplikationenQuiz";
@@ -28,6 +29,7 @@ type KffView =
   | "zahlenfolgen"
   | "gedaechtnis-setup"
   | "gedaechtnis-learn"
+  | "gedaechtnis-interferenz"
   | "gedaechtnis-quiz"
   | "implikationen"
   | "wortflüssigkeit"
@@ -153,8 +155,15 @@ export default function KFF() {
   if (view === "gedaechtnis-learn")
     return (
       <GedaechtnisLearn
-        onStart={() => setView("gedaechtnis-quiz")}
+        onStart={() => setView("gedaechtnis-interferenz")}
         onBack={() => setView("gedaechtnis-setup")}
+      />
+    );
+  if (view === "gedaechtnis-interferenz")
+    return (
+      <GedaechtnisInterferenz
+        onComplete={() => setView("gedaechtnis-quiz")}
+        onSkip={() => setView("gedaechtnis-quiz")}
       />
     );
   if (view === "gedaechtnis-quiz") return <GedaechtnisQuiz onBack={() => setView("overview")} />;

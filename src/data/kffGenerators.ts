@@ -1051,6 +1051,67 @@ export function generateGedaechtnisQuestionsFromPasses(
   return questions;
 }
 
+// --- WORTFLÜSSIGKEIT: Erklärungstext ---
+
+/** Common German word endings for explanation hints. */
+const WF_ENDINGS: [string, string][] = [
+  ["UNG", "-UNG"],
+  ["HEIT", "-HEIT"],
+  ["KEIT", "-KEIT"],
+  ["TION", "-TION"],
+  ["SCHAFT", "-SCHAFT"],
+  ["NIS", "-NIS"],
+  ["TUR", "-TUR"],
+  ["MENT", "-MENT"],
+  ["LING", "-LING"],
+];
+
+const WF_PREFIXES: [string, string][] = [
+  ["VER", "VER-"],
+  ["BE", "BE-"],
+  ["GE", "GE-"],
+  ["ENT", "ENT-"],
+  ["ZER", "ZER-"],
+  ["ER", "ER-"],
+  ["AUF", "AUF-"],
+  ["AUS", "AUS-"],
+  ["EIN", "EIN-"],
+  ["AN", "AN-"],
+  ["AB", "AB-"],
+];
+
+/** Builds a strategy-teaching explanation for a WF task. */
+function buildWfExplanation(word: string, correctFirst: string, isNoneCorrect: boolean): string {
+  const upper = word.toUpperCase();
+  // Find recognizable ending
+  let endingHint = "";
+  for (const [suffix, label] of WF_ENDINGS) {
+    if (upper.endsWith(suffix)) {
+      endingHint = `Erkennbar an der Endung ${label}. `;
+      break;
+    }
+  }
+  // Find recognizable prefix
+  let prefixHint = "";
+  if (!endingHint) {
+    for (const [prefix, label] of WF_PREFIXES) {
+      if (upper.startsWith(prefix) && upper.length > prefix.length + 2) {
+        prefixHint = `Erkennbar an der Vorsilbe ${label}. `;
+        break;
+      }
+    }
+  }
+  const hint = endingHint || prefixHint;
+
+  if (isNoneCorrect) {
+    return `${hint}Das Lösungswort lautet „${word}" (Anfangsbuchstabe „${correctFirst}"), der nicht unter A–D angeboten wird. Daher ist E richtig.`;
+  }
+  if (hint) {
+    return `${hint}Die Buchstaben ergeben das Wort „${word}" (Anfangsbuchstabe „${correctFirst}").`;
+  }
+  return `Die Buchstaben ergeben das Wort „${word}" (Anfangsbuchstabe „${correctFirst}").`;
+}
+
 // --- WORTFLÜSSIGKEIT-GENERATOR ---
 
 export interface WortflüssigkeitQuestion {
@@ -1672,8 +1733,11 @@ const CONFUSING_LETTERS: Record<string, string[]> = {
 
 /**
  * Selects distractor letters for WF options.
- * Official IB WF 26: ALL option letters (A-D) must come from the given letter set.
- * Priority: 1. confusing word letters, 2. other word letters, 3. external fallback (only if word has <5 unique letters).
+ * Official IB WF 26: ALL option letters (A-D) must come from the word's letter set.
+ * No external letters allowed — students must not be able to eliminate options
+ * by checking if a letter appears in the given set.
+ * Priority: 1. confusing word letters, 2. other word letters.
+ * If not enough word-internal letters exist, returns fewer distractors (caller should retry with a different word).
  */
 function pickSmartDistractors(
   correctFirst: string,
@@ -1685,14 +1749,13 @@ function pickSmartDistractors(
   const internalConfusing = shuffle(
     confusing.filter((l) => wordLetterSet.has(l) && l !== correctFirst)
   );
-  // Priority 2: other letters in the word
+  // Priority 2: other letters in the word (non-confusing)
   const otherWordLetters = shuffle(
     [...wordLetterSet].filter((l) => l !== correctFirst && !confusing.includes(l))
   );
-  // Priority 3: external fallback only if word has fewer unique letters than needed
-  const externalFallback = shuffle(confusing.filter((l) => !wordLetterSet.has(l)));
 
-  const pool = [...internalConfusing, ...otherWordLetters, ...externalFallback];
+  // Only word-internal letters — no external fallback
+  const pool = [...internalConfusing, ...otherWordLetters];
 
   const result: string[] = [];
   const used = new Set<string>([correctFirst]);
@@ -2219,8 +2282,8 @@ function findAllWordsFromLetters(letters: string[], lexicon: string[]): string[]
 }
 
 /**
- * Validator Wortflüssigkeit v2: Genau 1 Wort aus dem Lexikon bildbar, Lösung stimmt.
- * Options can now include letters NOT in the word (realistic MedAT distractors).
+ * Validator Wortflüssigkeit v3: Genau 1 Wort aus dem Lexikon bildbar, Lösung stimmt.
+ * All option letters A-D must come from the word's letter set (official MedAT format).
  * Qualitäts-Gate: keine Mehrdeutigkeit, keine falsche Lösung, keine Duplikat-Optionen.
  * @param lexiconOverride Wenn gesetzt (z. B. [solutionWord] bei Lexikon-Aufgaben), wird nur dieses Lexikon verwendet.
  */
@@ -2249,6 +2312,11 @@ export function validateWordFluencyTask(
   }
   const optSet = new Set(task.options.slice(0, 4));
   if (optSet.size !== 4) return false;
+  // Official MedAT: all option letters A-D must come from the word's letter set
+  const letterSet = new Set(task.letters.map((l) => l.toUpperCase()));
+  for (let i = 0; i < 4; i++) {
+    if (!letterSet.has(task.options[i]!)) return false;
+  }
   return true;
 }
 
@@ -2271,8 +2339,8 @@ export function assertNotOfficialLikeWordFluency(task: WordFluencyTask): boolean
 }
 
 /**
- * Erzeugt genau eine WordFluencyTask aus einem Lexikon-Wort (deterministisch, v2).
- * Uses smart distractors mixing word-internal and word-external letters.
+ * Erzeugt genau eine WordFluencyTask aus einem Lexikon-Wort (deterministisch, v3).
+ * All option letters come from the word's letter set (official MedAT format).
  */
 export function generateWordFluencyTaskFromWord(
   word: WortfluessigkeitWord
@@ -2282,26 +2350,22 @@ export function generateWordFluencyTaskFromWord(
   if (officialWords.has(solution)) return null;
 
   const wordLetterSet = new Set(solution.split(""));
-  if (wordLetterSet.size < 2) return null;
+  // Need at least 5 distinct letters (1 correct + 4 potential distractors from word)
+  // so we can always fill 3 distractors without external letters
+  if (wordLetterSet.size < 5) return null;
 
   const letters = shuffleWithSeed(solution.split(""), word.id);
   const correctFirst = solution[0]!;
 
-  // Use seeded shuffle for determinism, but with smart distractor pool
+  // Only word-internal letters — official MedAT format requires all options from the letter set
   const confusing = CONFUSING_LETTERS[correctFirst] ?? [];
-  const externalConfusing = confusing.filter((l) => !wordLetterSet.has(l));
   const internalConfusing = confusing.filter((l) => wordLetterSet.has(l) && l !== correctFirst);
   const otherWordLetters = [...wordLetterSet].filter(
     (l) => l !== correctFirst && !confusing.includes(l)
   );
-  const otherExternal = ALL_LETTERS.filter(
-    (l) => l !== correctFirst && !wordLetterSet.has(l) && !confusing.includes(l)
-  );
   const distractorPool = [
-    ...shuffleWithSeed(externalConfusing, word.id + "-ec"),
     ...shuffleWithSeed(internalConfusing, word.id + "-ic"),
     ...shuffleWithSeed(otherWordLetters, word.id + "-ow"),
-    ...shuffleWithSeed(otherExternal, word.id + "-oe"),
   ];
   const distractors: string[] = [];
   const used = new Set<string>([correctFirst]);
@@ -2325,7 +2389,7 @@ export function generateWordFluencyTaskFromWord(
     options,
     correctIndex,
     solutionWord: solution,
-    explanation: `Das Wort lautet „${solution}" und beginnt mit „${correctFirst}".`,
+    explanation: buildWfExplanation(solution, correctFirst, false),
     difficulty: word.difficulty,
   };
 
@@ -2347,9 +2411,9 @@ export function generateAllWordFluencyTasksFromLexicon(): WordFluencyTask[] {
 }
 
 /**
- * Generiert eine Wortflüssigkeit-Trainingsaufgabe (v2).
- * Distractors now use pickSmartDistractors: mix of confusing external letters + word letters.
- * Min distinct letters lowered from 5→3 (external distractors fill the gap).
+ * Generiert eine Wortflüssigkeit-Trainingsaufgabe (v3).
+ * All option letters A-D come from the word's letter set (official MedAT format).
+ * Min distinct letters: 5 (1 correct + 4 distractors from word).
  */
 export function generateWordFluencyTask(difficulty: 1 | 2 | 3): WordFluencyTask {
   // Official IB WF 26: words are 7-10 letters — borrow from diff 2 if diff 1 has none
@@ -2366,7 +2430,7 @@ export function generateWordFluencyTask(difficulty: 1 | 2 | 3): WordFluencyTask 
   for (let attempt = 0; attempt < WF_MAX_RETRIES; attempt++) {
     const word = allowed[randInt(0, allowed.length - 1)].toUpperCase();
     const wordLetterSet = new Set(word.split(""));
-    if (wordLetterSet.size < 3) continue;
+    if (wordLetterSet.size < 5) continue;
     const shuffled = shuffle(word.split(""));
     const correctFirst = word[0];
     const useNone = Math.random() < 0.15;
@@ -2392,9 +2456,7 @@ export function generateWordFluencyTask(difficulty: 1 | 2 | 3): WordFluencyTask 
       options,
       correctIndex,
       solutionWord: word,
-      explanation: useNone
-        ? `Das Lösungswort lautet „${word}" (Anfangsbuchstabe „${correctFirst}"), der nicht unter A–D angeboten wird.`
-        : `Das Wort lautet „${word}" und beginnt mit „${correctFirst}".`,
+      explanation: buildWfExplanation(word, correctFirst, useNone),
       difficulty,
     };
 
@@ -2408,9 +2470,9 @@ export function generateWordFluencyTask(difficulty: 1 | 2 | 3): WordFluencyTask 
 
 function generateWordFluencyTaskFallback(difficulty: 1 | 2 | 3): WordFluencyTask {
   const pool = TRAINING_WF_WORDS[difficulty];
-  // Official IB WF 26: minimum 7 letters + at least 3 distinct
+  // Official IB WF 26: minimum 7 letters + at least 5 distinct (all options from word letters)
   const withEnoughLetters = pool.filter(
-    (w) => w.length >= 7 && new Set(w.toUpperCase().split("")).size >= 3
+    (w) => w.length >= 7 && new Set(w.toUpperCase().split("")).size >= 5
   );
   const usePool = withEnoughLetters.length > 0 ? withEnoughLetters : pool;
   for (let tryCount = 0; tryCount < 10; tryCount++) {
@@ -2427,7 +2489,7 @@ function generateWordFluencyTaskFallback(difficulty: 1 | 2 | 3): WordFluencyTask
       options,
       correctIndex: mixed.indexOf(correctFirst),
       solutionWord: word,
-      explanation: `Das Wort lautet „${word}" und beginnt mit „${correctFirst}".`,
+      explanation: buildWfExplanation(word, correctFirst, false),
       difficulty,
     };
     if (validateWordFluencyTask(task)) return task;
@@ -2445,7 +2507,7 @@ function generateWordFluencyTaskFallback(difficulty: 1 | 2 | 3): WordFluencyTask
     options,
     correctIndex: mixed.indexOf(correctFirst),
     solutionWord: word,
-    explanation: `Das Wort lautet „${word}" und beginnt mit „${correctFirst}".`,
+    explanation: buildWfExplanation(word, correctFirst, false),
     difficulty,
   };
 }

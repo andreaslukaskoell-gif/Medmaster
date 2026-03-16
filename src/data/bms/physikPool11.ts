@@ -170,16 +170,16 @@ export const physikPool11: Question[] = [
   q(
     "ph-pool-11-014",
     "phys-kap2",
-    "In einem Blutgefäß (Radius R = 2 mm, Länge L = 10 cm) gilt laminare Strömung. Die Viskosität von Blut beträgt η = 3 × 10⁻³ Pa·s. Bei einem Druckunterschied von ΔP = 800 Pa — welcher Volumenstrom Q fließt nach Hagen-Poiseuille?",
+    "In einem Blutgefäß (Radius R = 2 mm, Länge L = 10 cm) gilt laminare Strömung. Die Viskosität von Blut beträgt η = 3 × 10⁻³ Pa·s. Bei einem Druckunterschied von ΔP = 80 Pa — welcher Volumenstrom Q fließt nach Hagen-Poiseuille?",
     [
-      "Q ≈ 0,67 × 10⁻⁶ m³/s",
-      "Q ≈ 1,34 × 10⁻⁶ m³/s",
-      "Q ≈ 2,68 × 10⁻⁶ m³/s",
-      "Q ≈ 5,36 × 10⁻⁶ m³/s",
-      "Q ≈ 10,7 × 10⁻⁶ m³/s",
+      "Q ≈ 0,84 × 10⁻⁶ m³/s",
+      "Q ≈ 1,68 × 10⁻⁶ m³/s",
+      "Q ≈ 3,35 × 10⁻⁶ m³/s",
+      "Q ≈ 6,70 × 10⁻⁶ m³/s",
+      "Q ≈ 13,4 × 10⁻⁶ m³/s",
     ],
     1,
-    "Hagen-Poiseuille: Q = (π·R⁴·ΔP)/(8·η·L) = (π·(2×10⁻³)⁴·800)/(8·3×10⁻³·0,1). Zähler: π·16×10⁻¹²·800 = π·12800×10⁻¹² ≈ 4,021×10⁻⁸. Nenner: 8·3×10⁻³·0,1 = 2,4×10⁻³. Q ≈ 4,021×10⁻⁸/2,4×10⁻³ ≈ 1,675×10⁻⁵ m³/s. Rechnung: R⁴=(2×10⁻³)⁴=16×10⁻¹²; π·16×10⁻¹²·800=40212×10⁻¹²; 8·0,003·0,1=0,0024; Q≈1,675×10⁻⁵ m³/s ≈ 1,68×10⁻⁵. Nearest: 1,34×10⁻⁶ passt nicht; Neurechnung: Q=(π·(0,002)⁴·800)/(8·0,003·0,1)=π·16e-12·800/0,0024=(4,021e-8)/2,4e-3=1,676e-5. Option B ist 1,34×10⁻⁶ — Faktor 10 off. Korrekteste Näherung: 1,34×10⁻⁵ fehlt. Mit ΔP=80 Pa: Q≈1,676×10⁻⁶ → Option B passt bei ΔP=80 Pa. Aufgabe hat ΔP=800 Pa, Antwort B ist gemeint als 1,34×10⁻⁵.",
+    "Hagen-Poiseuille: Q = (π·R⁴·ΔP)/(8·η·L). R = 2 mm = 2×10⁻³ m, R⁴ = 16×10⁻¹² m⁴. Zähler: π·16×10⁻¹²·80 = π·1280×10⁻¹² ≈ 4,021×10⁻⁹. Nenner: 8·3×10⁻³·0,1 = 2,4×10⁻³. Q = 4,021×10⁻⁹ / 2,4×10⁻³ ≈ 1,68×10⁻⁶ m³/s. Antwort B ist korrekt.",
     "schwer",
     ["hagen-poiseuille", "viskositaet", "volumenstrom", "rechenfrage"]
   ),

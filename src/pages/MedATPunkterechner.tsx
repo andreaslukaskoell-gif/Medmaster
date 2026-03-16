@@ -16,30 +16,40 @@ const BMS_SUBJECTS: { key: SubjectKey; label: string; max: number }[] = [
   { key: "mathe", label: "Mathematik", max: 12 },
 ];
 
-function getResultInfo(pct: number): { label: string; color: string; bg: string; border: string } {
+function getResultInfo(pct: number): {
+  label: string;
+  detail: string;
+  color: string;
+  bg: string;
+  border: string;
+} {
   if (pct >= 85)
     return {
-      label: "Sehr gut",
+      label: "Sehr gute Chancen",
+      detail: "Wien, Graz, Innsbruck",
       color: "#15803d",
       bg: "#f0fdf4",
       border: "#bbf7d0",
     };
-  if (pct >= 70)
+  if (pct >= 78)
     return {
-      label: "Gut",
+      label: "Gute Chancen",
+      detail: "Graz, Innsbruck, Linz",
       color: "#16a34a",
       bg: "#f0fdf4",
       border: "#86efac",
     };
-  if (pct >= 50)
+  if (pct >= 70)
     return {
-      label: "Möglich",
+      label: "Möglich an einzelnen Standorten",
+      detail: "Linz, ggf. weitere je nach Jahrgang",
       color: "#ca8a04",
       bg: "#fefce8",
       border: "#fde68a",
     };
   return {
-    label: "Schwierig",
+    label: "Mehr Vorbereitung nötig",
+    detail: "Gezieltes Training empfohlen",
     color: "#dc2626",
     bg: "#fef2f2",
     border: "#fecaca",
@@ -122,9 +132,9 @@ function ScoreBar({
 
 export default function MedATPunkterechner() {
   usePageMeta({
-    title: "MedAT Punkterechner 2026",
+    title: "MedAT Punkte-Rechner 2026 — MedAT Punkte berechnen | MedMaster",
     description:
-      "Berechne deinen MedAT-Score online: BMS (40%), KFF (40%), TV (10%) und SEK (10%) eingeben und sofort deinen gewichteten Gesamtprozentsatz sehen. Kostenloser MedAT Punkterechner 2026.",
+      "MedAT Punkte berechnen: BMS, KFF, TV und SEK eingeben und sofort deinen gewichteten MedAT-Score sehen. Kostenloser MedAT Punkteschlüssel 2026 mit Standort-Einschätzung für Wien, Graz, Innsbruck und Linz.",
     canonical: "https://medmaster.at/medat-punkte-rechner",
     ogImage: "https://medmaster.at/og-image.png",
     ogType: "website",
@@ -160,7 +170,7 @@ export default function MedATPunkterechner() {
     const schema = {
       "@context": "https://schema.org",
       "@type": "WebApplication",
-      name: "MedAT Punkterechner 2026",
+      name: "MedAT Punkte-Rechner 2026",
       description:
         "Berechne deinen MedAT-Score: BMS (40%), KFF (40%), TV (10%) und SEK (10%) gewichtet.",
       url: "https://medmaster.at/medat-punkte-rechner",
@@ -209,10 +219,10 @@ export default function MedATPunkterechner() {
             MedAT 2026
           </div>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-gray-100 mb-4">
-            MedAT Punkterechner
+            MedAT Punkte-Rechner 2026
           </h1>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-xl mx-auto">
-            Gib deine Ergebnisse ein und berechne deinen gewichteten MedAT-Gesamtscore sofort.
+            Berechne deinen MedAT-Score und finde heraus, ob es für deinen Wunschort reicht.
           </p>
         </div>
       </header>
@@ -313,9 +323,9 @@ export default function MedATPunkterechner() {
 
           <div className="space-y-3">
             <ScoreBar label="BMS" pct={bmsPct} weight={40} weighted={bmsPct * 0.4} />
-            <ScoreBar label="KFF" pct={kffPct} weight={20} weighted={kffPct * 0.2} />
+            <ScoreBar label="KFF" pct={kffPct} weight={40} weighted={kffPct * 0.4} />
             <ScoreBar label="TV" pct={tvPct} weight={10} weighted={tvPct * 0.1} />
-            <ScoreBar label="SEK" pct={sekPct} weight={30} weighted={sekPct * 0.3} />
+            <ScoreBar label="SEK" pct={sekPct} weight={10} weighted={sekPct * 0.1} />
           </div>
 
           <div
@@ -331,14 +341,34 @@ export default function MedATPunkterechner() {
             <div className="text-lg font-bold mb-0.5" style={{ color: result.color }}>
               {result.label}
             </div>
-            <div className="text-sm text-gray-500">
-              {gesamtPct >= 85
-                ? "Ausgezeichnete Chance auf einen Studienplatz!"
-                : gesamtPct >= 70
-                  ? "Gute Chancen — weiter so!"
-                  : gesamtPct >= 50
-                    ? "Noch Luft nach oben — Training hilft!"
-                    : "Intensives Training empfohlen."}
+            <div className="text-sm text-gray-500">{result.detail}</div>
+          </div>
+
+          {/* Score thresholds legend */}
+          <div className="grid grid-cols-2 gap-2 text-sm">
+            <div className="flex items-center gap-2 rounded-lg px-3 py-2 bg-green-50 border border-green-200">
+              <span className="w-2.5 h-2.5 rounded-full bg-green-600 shrink-0" />
+              <span className="text-green-800">
+                <strong>&ge; 85 %</strong> — Wien, Graz, Innsbruck
+              </span>
+            </div>
+            <div className="flex items-center gap-2 rounded-lg px-3 py-2 bg-green-50/60 border border-green-200/60">
+              <span className="w-2.5 h-2.5 rounded-full bg-green-500 shrink-0" />
+              <span className="text-green-700">
+                <strong>&ge; 78 %</strong> — Graz, Innsbruck, Linz
+              </span>
+            </div>
+            <div className="flex items-center gap-2 rounded-lg px-3 py-2 bg-amber-50 border border-amber-200">
+              <span className="w-2.5 h-2.5 rounded-full bg-amber-500 shrink-0" />
+              <span className="text-amber-700">
+                <strong>&ge; 70 %</strong> — einzelne Standorte
+              </span>
+            </div>
+            <div className="flex items-center gap-2 rounded-lg px-3 py-2 bg-red-50 border border-red-200">
+              <span className="w-2.5 h-2.5 rounded-full bg-red-500 shrink-0" />
+              <span className="text-red-700">
+                <strong>&lt; 70 %</strong> — mehr Training nötig
+              </span>
             </div>
           </div>
 
@@ -383,11 +413,23 @@ export default function MedATPunkterechner() {
               der vier Testteile:
             </p>
             <ul className="space-y-1.5 pl-4">
-              <li>BMS: (richtige Antworten / 94) × 100 × 40%</li>
-              <li>KFF: (Punkte / 75) × 100 × 40%</li>
-              <li>TV: (Punkte / 12) × 100 × 10%</li>
-              <li>SEK: (Punkte / 30) × 100 × 10%</li>
+              <li>
+                <strong>BMS</strong> (40 %): Bio (40 Fragen) + Chemie (24) + Physik (18) + Mathe
+                (12) = 94 Fragen
+              </li>
+              <li>
+                <strong>KFF</strong> (40 %): max. 75 Punkte
+              </li>
+              <li>
+                <strong>TV</strong> (10 %): max. 12 Punkte
+              </li>
+              <li>
+                <strong>SEK</strong> (10 %): max. 30 Punkte
+              </li>
             </ul>
+            <p className="pt-1 text-xs text-gray-400">
+              Formel: Gesamt = (BMS/94 × 40) + (KFF/75 × 40) + (TV/12 × 10) + (SEK/30 × 10)
+            </p>
             <p className="pt-1">
               Die Bewertung basiert auf einem Richtwert — die tatsächliche Aufnahmegrenze variiert
               jährlich je nach Bewerberfeld und Uni.
@@ -398,7 +440,7 @@ export default function MedATPunkterechner() {
         {/* CTA */}
         <section className="text-center bg-white dark:bg-gray-900 rounded-2xl p-8 sm:p-10 border border-gray-200 dark:border-gray-800">
           <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-3">
-            Verbessere dein Ergebnis
+            Verbessere deinen Score mit MedMaster
           </h2>
           <p className="text-gray-600 dark:text-gray-400 mb-6 max-w-md mx-auto">
             Mit 4.300+ Übungsfragen, adaptivem KI-Training und realistischen Prüfungssimulationen.
@@ -408,7 +450,7 @@ export default function MedATPunkterechner() {
             className="inline-flex items-center justify-center gap-2 text-white font-semibold px-8 py-4 rounded-2xl text-base shadow-sm"
             style={{ backgroundColor: NAVY }}
           >
-            Kostenlos starten <ArrowRight className="w-5 h-5" />
+            Verbessere deinen Score mit MedMaster <ArrowRight className="w-5 h-5" />
           </Link>
         </section>
       </main>

@@ -76,7 +76,7 @@ export const biologiePool18: Question[] = [
       "Sie besaßen Ribosomen für die Translation",
     ],
     1,
-    "Protobionten (z. B. Koazervate nach Oparin, Mikrosphären nach Fox) waren erste membranumhüllte Strukturen mit einfachem Stoffwechsel, aber ohne vollständige Selbstreplikation — sie erfüllten noch nicht alle Kriterien des Lebens.",
+    "Protobionten waren erste membranumhüllte Strukturen mit einfachem Stoffwechsel, aber ohne vollständige Selbstreplikation — sie erfüllten noch nicht alle Kriterien des Lebens.",
     "mittel",
     ["Protobionten", "Entstehung des Lebens"]
   ),
@@ -92,7 +92,7 @@ export const biologiePool18: Question[] = [
       "Das Cytoskelett besteht aus Aktinfilamenten",
     ],
     1,
-    "Mitochondrien und Chloroplasten haben eigene ringförmige DNA (wie Prokaryoten), 70S-Ribosomen (nicht 80S wie im Cytosol), eine Doppelmembran und teilen sich durch Zweiteilung — alles Hinweise auf einen prokaryotischen Endosymbionten.",
+    "Mitochondrien und Chloroplasten haben eigene ringförmige DNA (wie Prokaryoten), 70S-Ribosomen, eine Doppelmembran und teilen sich durch Zweiteilung — alles Hinweise auf einen prokaryotischen Endosymbionten.",
     "leicht",
     ["Endosymbiontentheorie", "Mitochondrien"]
   ),
@@ -160,7 +160,7 @@ export const biologiePool18: Question[] = [
       "Künstliche Selektion durch den Menschen",
     ],
     1,
-    "Gerichtete Selektion: Ein Phänotyp-Extrem wird bevorzugt (hier hellbraun auf dunklem Boden = bessere Tarnung). Der Mittelwert der Population verschiebt sich in eine Richtung.",
+    "Gerichtete Selektion: Ein Phänotyp-Extrem wird bevorzugt. Der Mittelwert der Population verschiebt sich in eine Richtung.",
     "mittel",
     ["Evolution", "Selektion", "direktional"]
   ),
@@ -176,7 +176,7 @@ export const biologiePool18: Question[] = [
       "Sie bezieht sich nur auf die Entstehung neuer Arten durch Isolation",
     ],
     1,
-    "Die synthetische Evolutionstheorie (Modern Synthesis, ca. 1940) vereint Darwins natürliche Selektion mit Mendelscher Genetik, Populationsgenetik, Mutationsforschung und Paläontologie zu einem umfassenden Erklärungsrahmen.",
+    "Die synthetische Evolutionstheorie vereint Darwins natürliche Selektion mit Mendelscher Genetik, Populationsgenetik, Mutationsforschung und Paläontologie zu einem umfassenden Erklärungsrahmen.",
     "mittel",
     ["Evolution", "synthetische Theorie"]
   ),
@@ -240,7 +240,7 @@ export const biologiePool18: Question[] = [
       "Koevolution verläuft stets schneller als gewöhnliche Evolution",
     ],
     1,
-    "Koevolution: Wechselseitiger Selektionsdruck zwischen Arten (z. B. Blüte–Bestäuber, Parasit–Wirt, Räuber–Beute). Beide Arten passen sich im Laufe der Zeit aneinander an.",
+    "Koevolution: Wechselseitiger Selektionsdruck zwischen Arten. Beide Arten passen sich im Laufe der Zeit aneinander an.",
     "mittel",
     ["Evolution", "Koevolution"]
   ),
@@ -296,7 +296,7 @@ export const biologiePool18: Question[] = [
       "Sexuelle Selektion",
     ],
     2,
-    "Flaschenhalseffekt: Eine drastische Reduktion der Populationsgröße (hier durch Naturkatastrophe) führt durch Zufall zu veränderten Allelfrequenzen. Im Gegensatz dazu entsteht der Gründereffekt, wenn wenige Individuen eine neue Population gründen.",
+    "Flaschenhalseffekt: Eine drastische Reduktion der Populationsgröße führt durch Zufall zu veränderten Allelfrequenzen. Im Gegensatz dazu entsteht der Gründereffekt, wenn wenige Individuen eine neue Population gründen.",
     "leicht",
     ["Gendrift", "Flaschenhalseffekt"]
   ),
@@ -369,16 +369,16 @@ export const biologiePool18: Question[] = [
   q(
     "bio-pool-18-023",
     "bio-kap3",
-    "Arm des Menschen, Flosse des Wals und Flügel der Fledermaus haben denselben Grundbauplan (Oberarmknochen – Elle – Speiche – Handwurzelknochen). Welcher Begriff trifft zu?",
+    "Arm des Menschen, Flosse des Wals und Flügel der Fledermaus haben denselben Grundbauplan. Welcher Begriff trifft zu?",
     [
       "Analogie (konvergente Evolution)",
-      "Homologie (gleicher Bauplan, gemeinsamer Vorfahre)",
-      "Atavismus (Rückschlag zu einem Ahnenmerkmal)",
+      "Homologie",
+      "Atavismus",
       "Rudiment ohne Funktion",
       "Konvergenz durch gleichen Selektionsdruck",
     ],
     1,
-    "Homologe Organe: gleicher Grundbauplan, verschiedene Funktion, gemeinsamer Vorfahre. Die Vorderextremitäten der Wirbeltiere sind ein Paradebeispiel für Homologie (gleiche Knochenstruktur, aber Laufen, Schwimmen oder Fliegen).",
+    "Homologe Organe: gleicher Grundbauplan, verschiedene Funktion, gemeinsamer Vorfahre. Die Vorderextremitäten der Wirbeltiere sind ein Paradebeispiel für Homologie.",
     "leicht",
     ["Phylogenetik", "Homologie"]
   ),
@@ -394,7 +394,7 @@ export const biologiePool18: Question[] = [
       "Molekulare Stammbäume widersprechen grundsätzlich morphologischen Stammbäumen",
     ],
     1,
-    "In einem phylogenetischen Stammbaum repräsentiert jeder Verzweigungspunkt (Knoten) den hypothetischen letzten gemeinsamen Vorfahren (most recent common ancestor, MRCA) zweier Entwicklungslinien.",
+    "In einem phylogenetischen Stammbaum repräsentiert jeder Verzweigungspunkt (Knoten) den hypothetischen letzten gemeinsamen Vorfahren zweier Entwicklungslinien.",
     "mittel",
     ["Phylogenetik", "Stammbäume"]
   ),
@@ -446,7 +446,7 @@ export const biologiePool18: Question[] = [
       "Reduktion der Körperbehaarung",
     ],
     1,
-    "Der aufrechte Gang (Bipedie) erscheint in der Fossilgeschichte deutlich vor der Gehirnvergrößerung. Fossilien wie Ardipithecus ramidus (~4,4 Mio. J.) und Australopithecus afarensis (Lucy, ~3,2 Mio. J.) waren bereits biped, hatten aber ein relativ kleines Gehirn (~400–500 cm³).",
+    "Der aufrechte Gang (Bipedie) erscheint in der Fossilgeschichte deutlich vor der Gehirnvergrößerung. Fossilien wie Ardipithecus ramidus (~4,4 Mio. J.) und Australopithecus afarensis waren bereits biped, hatten aber ein relativ kleines Gehirn (~400–500 cm³).",
     "mittel",
     ["Hominiden", "Bipedie"]
   ),
@@ -482,7 +482,7 @@ export const biologiePool18: Question[] = [
     "In welcher Region gilt die früheste Entstehung von Homo sapiens als gesichert?",
     ["Südostasien", "Europa", "Afrika", "Australien", "Südamerika"],
     2,
-    "Out-of-Africa-Hypothese: Homo sapiens entstand vor ~300 000 Jahren in Afrika (älteste Fossilien: Jebel Irhoud, Marokko). Von dort breitete er sich ab ~70 000 Jahren nach Asien, Europa und schließlich in die restliche Welt aus.",
+    "Out-of-Africa-Hypothese: Homo sapiens entstand vor ~300 000 Jahren in Afrika. Von dort breitete er sich ab ~70 000 Jahren nach Asien, Europa und schließlich in die restliche Welt aus.",
     "leicht",
     ["Hominiden", "Out-of-Africa"]
   ),
@@ -494,7 +494,7 @@ export const biologiePool18: Question[] = [
       "Acheuléén (Faustkeile)",
       "Oldowan (einfache Geröllwerkzeuge)",
       "Moustérien (Neandertaler-Werkzeuge)",
-      "Aurignacien (Knochen- und Geweihwerkzeuge)",
+      "Aurignacien",
       "Magdalénien (Speerschleudern, Nähnadeln)",
     ],
     1,
@@ -606,7 +606,7 @@ export const biologiePool18: Question[] = [
       "Sekretion von Progesteron durch das Spermium",
     ],
     1,
-    "Akrosomreaktion: Das Akrosom (Enzymkappe am Spermienkopf) verschmilzt mit der Plasmamembran und setzt Hyaluronidase und Akrosin frei. Diese Enzyme lösen die Zona pellucida lokal auf und ermöglichen das Eindringen des Spermiums.",
+    "Akrosomreaktion: Das Akrosom verschmilzt mit der Plasmamembran und setzt Hyaluronidase und Akrosin frei. Diese Enzyme lösen die Zona pellucida lokal auf und ermöglichen das Eindringen des Spermiums.",
     "mittel",
     ["Befruchtung", "Akrosomreaktion"]
   ),
@@ -630,15 +630,9 @@ export const biologiePool18: Question[] = [
     "bio-pool-18-040",
     "bio-kap3",
     "Welches Stadium erreicht der Embryo bei der Implantation in die Gebärmutterschleimhaut?",
-    [
-      "Zygote (einzellige befruchtete Eizelle)",
-      "Morula (kompakter Zellhaufen mit 16–32 Zellen)",
-      "Blastozyste (Hohlkugel mit Trophoblast und Embryoblast)",
-      "Gastrula (dreischichtiger Keim nach Gastrulation)",
-      "Neurula (Stadium nach der Neurulation)",
-    ],
+    ["Zygote (einzellige befruchtete Eizelle)", "Morula", "Blastozyste", "Gastrula", "Neurula"],
     2,
-    "Bei der Implantation (~Tag 6–7) ist der Embryo im Blastozystenstadium: eine Hohlkugel mit äußerem Trophoblast (wird zur Plazenta) und innerem Embryoblast (wird zum Embryo). Die Morula erreicht den Uterus, differenziert sich dort zur Blastozyste.",
+    "Bei der Implantation (~Tag 6–7) ist der Embryo im Blastozystenstadium: eine Hohlkugel mit äußerem Trophoblast und innerem Embryoblast. Die Morula erreicht den Uterus, differenziert sich dort zur Blastozyste.",
     "mittel",
     ["Furchung", "Blastozyste", "Implantation"]
   ),
@@ -674,7 +668,7 @@ export const biologiePool18: Question[] = [
       "Mucosa, Submucosa, Serosa",
     ],
     1,
-    "Bei der Gastrulation bilden sich die drei Keimblätter: Ektoderm (Außen → Haut, Nervensystem), Mesoderm (Mitte → Muskeln, Skelett, Kreislauf) und Entoderm (Innen → Darmtrakt, Lunge, Leber, Pankreas).",
+    "Bei der Gastrulation bilden sich die drei Keimblätter: Ektoderm, Mesoderm und Entoderm.",
     "leicht",
     ["Gastrulation", "Keimblätter"]
   ),
@@ -684,7 +678,7 @@ export const biologiePool18: Question[] = [
     "Aus welchem Keimblatt entwickelt sich das Nervensystem?",
     ["Entoderm", "Mesoderm", "Ektoderm", "Trophoblast", "Mesenchym"],
     2,
-    "Das Nervensystem (Gehirn, Rückenmark, peripheres Nervensystem) entsteht aus dem Ektoderm. Weitere Ektoderm-Derivate: Epidermis, Haarfollikel, Zahnschmelz, Augenlinse, Sinnesepithelien.",
+    "Das Nervensystem entsteht aus dem Ektoderm. Weitere Ektoderm-Derivate: Epidermis, Haarfollikel, Zahnschmelz, Augenlinse, Sinnesepithelien.",
     "leicht",
     ["Keimblätter", "Ektoderm"]
   ),
@@ -710,7 +704,7 @@ export const biologiePool18: Question[] = [
       "Niere und Nebennieren",
     ],
     2,
-    "Entoderm-Derivate: Epithelauskleidung des Verdauungstrakts (vom Pharynx bis zum Rektum), Leber, Pankreas, Schilddrüse, Lunge (Alveolarepithel), Harnblase (Epithel) und Thymus.",
+    "Entoderm-Derivate: Epithelauskleidung des Verdauungstrakts, Leber, Pankreas, Schilddrüse, Lunge (Alveolarepithel), Harnblase (Epithel) und Thymus.",
     "mittel",
     ["Keimblätter", "Entoderm"]
   ),
@@ -746,7 +740,7 @@ export const biologiePool18: Question[] = [
       "Das Herz beginnt zu schlagen",
     ],
     1,
-    "Neurulation: Die Neuralplatte (Ektoderm, induziert durch die Chorda dorsalis) faltet sich zu Neuralrinne → Neuralwülste → Neuralrohr auf. Das Neuralrohr wird zu Gehirn und Rückenmark. Defekte führen zu Spina bifida oder Anenzephalie.",
+    "Neurulation: Die Neuralplatte faltet sich zu Neuralrinne → Neuralwülste → Neuralrohr auf. Das Neuralrohr wird zu Gehirn und Rückenmark. Defekte führen zu Spina bifida oder Anenzephalie.",
     "mittel",
     ["Neurulation", "Neuralrohr"]
   ),
@@ -762,7 +756,7 @@ export const biologiePool18: Question[] = [
       "Der Dottersack",
     ],
     1,
-    "Die Chorda dorsalis (Notochord) sendet Signale (u. a. Noggin, Chordin → BMP-Inhibitoren) an das darüberliegende Ektoderm und induziert dessen Differenzierung zur Neuralplatte. Dieser Vorgang heißt neurale Induktion.",
+    "Die Chorda dorsalis (Notochord) sendet Signale an das darüberliegende Ektoderm und induziert dessen Differenzierung zur Neuralplatte. Dieser Vorgang heißt neurale Induktion.",
     "schwer",
     ["Neurulation", "Chorda dorsalis", "Induktion"]
   ),
@@ -772,7 +766,7 @@ export const biologiePool18: Question[] = [
     "Ein Neuralrohrdefekt kann zu Spina bifida führen. Welcher Nährstoff senkt das Risiko nachweislich?",
     ["Vitamin C", "Eisen", "Folsäure (Vitamin B9)", "Vitamin D", "Calcium"],
     2,
-    "Folsäure (Vitamin B9) ist essentiell für den Verschluss des Neuralrohrs. Eine Supplementierung perikonzeptionell (vor und in der Frühschwangerschaft) senkt das Risiko für Neuralrohrdefekte (Spina bifida, Anenzephalie) um bis zu 70 %.",
+    "Folsäure (Vitamin B9) ist essentiell für den Verschluss des Neuralrohrs. Eine Supplementierung perikonzeptionell senkt das Risiko für Neuralrohrdefekte (Spina bifida, Anenzephalie) um bis zu 70 %.",
     "leicht",
     ["Neurulation", "Folsäure", "klinisch"]
   ),
@@ -795,10 +789,10 @@ export const biologiePool18: Question[] = [
   q(
     "bio-pool-18-051",
     "bio-kap3",
-    "In welcher Schwangerschaftswoche sind alle wesentlichen Organanlagen des menschlichen Embryos angelegt (Ende der Embryonalperiode)?",
+    "In welcher Schwangerschaftswoche sind alle wesentlichen Organanlagen des menschlichen Embryos angelegt?",
     ["Woche 2", "Woche 4", "Woche 8", "Woche 16", "Woche 24"],
     2,
-    "Am Ende der 8. Woche (= Ende der Embryonalperiode) sind alle wesentlichen Organanlagen gebildet. Ab Woche 9 spricht man vom Fetus — in der Fetalperiode wachsen und reifen die Organe.",
+    "Am Ende der 8. Woche sind alle wesentlichen Organanlagen gebildet. Ab Woche 9 spricht man vom Fetus — in der Fetalperiode wachsen und reifen die Organe.",
     "mittel",
     ["Organogenese", "Embryonalperiode"]
   ),
@@ -818,7 +812,7 @@ export const biologiePool18: Question[] = [
       "Neuralrohr",
     ],
     1,
-    "Der Trophoblast (äußere Zellschicht der Blastozyste) differenziert sich in Zytotrophoblast und Synzytiotrophoblast und bildet zusammen mit mütterlichem Gewebe die Plazenta. Der Embryoblast (innere Zellmasse) wird zum Embryo.",
+    "Der Trophoblast differenziert sich in Zytotrophoblast und Synzytiotrophoblast und bildet zusammen mit mütterlichem Gewebe die Plazenta. Der Embryoblast (innere Zellmasse) wird zum Embryo.",
     "leicht",
     ["Plazenta", "Trophoblast"]
   ),

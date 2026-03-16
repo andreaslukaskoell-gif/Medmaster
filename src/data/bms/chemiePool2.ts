@@ -29,22 +29,6 @@ function q(
 
 export const chemiePool2: Question[] = [
   q(
-    "ch-pool-051",
-    "chem-kap5",
-    "Welche Formel beschreibt das Ionenprodukt des Wassers?",
-    [
-      "K_w = [H⁺][OH⁻] (ohne Berücksichtigung von H₃O⁺)",
-      "K_w = [H₃O⁺] + [OH⁻] (Summe statt Produkt der Konzentrationen)",
-      "K_w = [H₃O⁺] · [OH⁻] = 10⁻¹⁴ (25 °C)",
-      "K_w = pH + pOH (Summe der negativen Logarithmen)",
-      "K_w = 10⁻⁷ (entspricht nur der Konzentration von H₃O⁺)",
-    ],
-    2,
-    "K_w = [H₃O⁺] · [OH⁻] = 10⁻¹⁴ bei 25 °C. In reinem Wasser gilt [H₃O⁺] = [OH⁻] = 10⁻⁷ mol/L.",
-    "leicht",
-    ["K_w", "Autoprotolyse"]
-  ),
-  q(
     "ch-pool-052",
     "chem-kap3",
     "Welche Verbindung ist ein typischer Vertreter der Ionenbindung?",
@@ -323,16 +307,6 @@ export const chemiePool2: Question[] = [
     ["Elektronegativität", "Fluor"]
   ),
   q(
-    "ch-pool-075",
-    "chem-kap2",
-    "Bei konstanter Stoffmenge und konstantem Druck gilt nach Charles:",
-    ["p · V = const", "V / T = const", "p / T = const", "V · n = const", "T · p = const"],
-    1,
-    "Charles: Bei p = const und n = const ist V/T = const. Volumen steigt proportional zur absoluten Temperatur.",
-    "leicht",
-    ["Charles", "Gasgesetze"]
-  ),
-  q(
     "ch-pool-076",
     "chem-kap4",
     "Bei der Synthesereaktion:",
@@ -587,16 +561,6 @@ export const chemiePool2: Question[] = [
     ["kovalente Bindung", "Elektronenpaar"]
   ),
   q(
-    "ch-pool-096",
-    "chem-kap6",
-    "Ein primäres C-Atom ist an wie viele weitere C-Atome gebunden?",
-    ["0", "1", "2", "3", "4"],
-    1,
-    "Primär: 1 C-Nachbar (z. B. Endstand einer Kette). Sekundär: 2, tertiär: 3, quartär: 4 C-Nachbarn.",
-    "leicht",
-    ["primäres C-Atom", "Alkane"]
-  ),
-  q(
     "ch-pool-097",
     "chem-kap5",
     "Welche Aussage zu Basen ist richtig?",
@@ -621,22 +585,6 @@ export const chemiePool2: Question[] = [
     "c = λ · ν (Lichtgeschwindigkeit = Wellenlänge × Frequenz), also λ = c/ν. Je größer die Frequenz, desto kleiner die Wellenlänge.",
     "leicht",
     ["Wellenlänge", "Frequenz", "Licht"]
-  ),
-  q(
-    "ch-pool-099",
-    "chem-kap2",
-    "Welche Aussage zu Wasser ist richtig?",
-    [
-      "Wasser hat bei 4 °C seine minimale Dichte.",
-      "Eis ist dichter als flüssiges Wasser.",
-      "Wasser hat bei 4 °C seine maximale Dichte.",
-      "Wasser gefriert bei 4 °C.",
-      "Die Dichte von Wasser ist temperaturunabhängig.",
-    ],
-    2,
-    "Dichteanomalie: Wasser hat bei 4 °C das Dichtemaximum. Eis (0 °C) ist weniger dicht und schwimmt.",
-    "leicht",
-    ["Wasser", "Dichteanomalie"]
   ),
   q(
     "ch-pool-100",

@@ -65,15 +65,37 @@ export default function KFFStrategyView({ strategyKey, onBack, onContinue, conti
       {testType === "verbal-fluency" && <WortfluessigkeitSilben />}
       {testType === "memory" && <MerkfaehigkeitProfil />}
 
+      {/* Zeitbudget */}
+      <div className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-800/50">
+        <span className="text-blue-700 dark:text-blue-300 text-sm font-semibold">Zeitbudget:</span>
+        <span className="text-sm text-blue-900 dark:text-blue-100">{strategy.timePerTask}</span>
+      </div>
+
       <Card className="border-amber-200 dark:border-amber-800/50 bg-amber-50/50 dark:bg-amber-950/30">
         <CardContent className="p-6 space-y-3">
           <h2 className="text-sm font-semibold uppercase tracking-wider text-amber-800 dark:text-amber-200">
             Typische Fallen
           </h2>
-          <ul className="list-disc list-inside space-y-1 text-sm text-amber-900 dark:text-amber-100">
+          <ul className="list-disc list-inside space-y-2 text-sm text-amber-900 dark:text-amber-100">
             {strategy.pitfalls.map((pitfall, i) => (
               <li key={i} className="pl-1">
                 {pitfall}
+              </li>
+            ))}
+          </ul>
+        </CardContent>
+      </Card>
+
+      {/* Prüfungstipps */}
+      <Card className="border-emerald-200 dark:border-emerald-800/50 bg-emerald-50/50 dark:bg-emerald-950/30">
+        <CardContent className="p-6 space-y-3">
+          <h2 className="text-sm font-semibold uppercase tracking-wider text-emerald-800 dark:text-emerald-200">
+            Prüfungstipps
+          </h2>
+          <ul className="list-disc list-inside space-y-2 text-sm text-emerald-900 dark:text-emerald-100">
+            {strategy.examTips.map((tip, i) => (
+              <li key={i} className="pl-1">
+                {tip}
               </li>
             ))}
           </ul>

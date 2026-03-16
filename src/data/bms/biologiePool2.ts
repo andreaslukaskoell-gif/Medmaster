@@ -100,7 +100,7 @@ export const biologiePool2: Question[] = [
       "Er phosphoryliert ausschließlich Kernproteine.",
     ],
     1,
-    "Der Golgi-Apparat ist die zentrale Sortier- und Modifikationsstation der Zelle. Er glykosyliert Proteine weiter (O-Glykosylierung, Trimming von N-Glykanen), sulfatiert und phosphoryliert sie und verpackt sie in Transportvesikel für ihren Bestimmungsort.",
+    "Der Golgi-Apparat ist die zentrale Sortier- und Modifikationsstation der Zelle. Er glykosyliert Proteine weiter, sulfatiert und phosphoryliert sie und verpackt sie in Transportvesikel für ihren Bestimmungsort.",
     "mittel",
     ["golgi", "proteinmodifikation", "glykosylierung"]
   ),
@@ -148,7 +148,7 @@ export const biologiePool2: Question[] = [
       "Aktiver und passiver Transport nutzen dieselben Membranproteine.",
     ],
     2,
-    "Aktiver Transport verbraucht metabolische Energie (primär: ATP-Hydrolyse; sekundär: Ionengradient), um Moleküle entgegen ihrem Konzentrationsgradienten zu transportieren. Passiver Transport hingegen erfolgt ohne Energieverbrauch entlang des Gradienten.",
+    "Aktiver Transport verbraucht metabolische Energie, um Moleküle entgegen ihrem Konzentrationsgradienten zu transportieren. Passiver Transport hingegen erfolgt ohne Energieverbrauch entlang des Gradienten.",
     "leicht",
     ["transport", "aktiv", "passiv", "atp"]
   ),
@@ -175,8 +175,8 @@ export const biologiePool2: Question[] = [
     [
       "Raues endoplasmatisches Retikulum",
       "Peroxisom",
-      "Lysosom (Verdauungsorganell mit sauren Hydrolasen im Zytoplasma)",
-      "Golgi-Apparat (Zisternenstapel für posttranslationale Modifikation)",
+      "Lysosom",
+      "Golgi-Apparat",
       "Glattes endoplasmatisches Retikulum",
     ],
     2,
@@ -196,7 +196,7 @@ export const biologiePool2: Question[] = [
       "2 Pyruvat, 2 GTP, 4 NADH",
     ],
     0,
-    "Die Glykolyse liefert netto 2 Pyruvat, 2 ATP (4 erzeugt minus 2 investiert) und 2 NADH pro Molekül Glucose. Die 38 ATP beziehen sich auf die gesamte aerobe Oxidation inklusive Citratzyklus und Atmungskette.",
+    "Die Glykolyse liefert netto 2 Pyruvat, 2 ATP und 2 NADH pro Molekül Glucose. Die 38 ATP beziehen sich auf die gesamte aerobe Oxidation inklusive Citratzyklus und Atmungskette.",
     "mittel",
     ["glykolyse", "atp", "pyruvat"]
   ),
@@ -244,7 +244,7 @@ export const biologiePool2: Question[] = [
       "Die Membran besteht aus einer einzelnen Phospholipidschicht mit eingelagerten Kohlenhydraten.",
     ],
     1,
-    "Das Flüssig-Mosaik-Modell (Singer und Nicolson, 1972) beschreibt die Zellmembran als fluide Lipiddoppelschicht, in der Phospholipide und Proteine lateral diffundieren können. Cholesterin moduliert die Fluidität und kommt in beiden Schichten vor.",
+    "Das Flüssig-Mosaik-Modell beschreibt die Zellmembran als fluide Lipiddoppelschicht, in der Phospholipide und Proteine lateral diffundieren können. Cholesterin moduliert die Fluidität und kommt in beiden Schichten vor.",
     "leicht",
     ["zellmembran", "flüssig-mosaik-modell", "phospholipide"]
   ),
@@ -287,10 +287,10 @@ export const biologiePool2: Question[] = [
     "bio-kap2",
     "Welche Zellen des Magens produzieren Salzsäure (HCl)?",
     [
-      "Hauptzellen (Pepsinogen-produzierende Drüsenzellen des Magenfundus)",
+      "Hauptzellen",
       "Belegzellen (Parietalzellen)",
-      "Nebenzellen (schleimproduzierende Zellen zum Schutz der Magenmukosa)",
-      "G-Zellen (gastrinsezernierende endokrine Zellen des Antrums)",
+      "Nebenzellen",
+      "G-Zellen",
       "Enterochromaffine Zellen (histamin-/serotoninproduzierende Darmzellen)",
     ],
     1,
@@ -317,7 +317,7 @@ export const biologiePool2: Question[] = [
   q(
     "bio-pool-119",
     "bio-kap2",
-    "Ein Patient hat eine Schädigung des N. recurrens (Ast des N. vagus). Welche Funktion ist am wahrscheinlichsten beeinträchtigt?",
+    "Ein Patient hat eine Schädigung des N. recurrens. Welche Funktion ist am wahrscheinlichsten beeinträchtigt?",
     [
       "Schluckreflex im Ösophagus",
       "Stimmbandbewegung im Kehlkopf",
@@ -326,7 +326,7 @@ export const biologiePool2: Question[] = [
       "Speichelsekretion der Parotis",
     ],
     1,
-    "Der N. laryngeus recurrens innerviert die meisten Kehlkopfmuskeln (bis auf den M. cricothyroideus). Eine Schädigung führt zu Heiserkeit oder Stimmbandlähmung. Das Zwerchfell wird vom N. phrenicus innerviert.",
+    "Der N. laryngeus recurrens innerviert die meisten Kehlkopfmuskeln. Eine Schädigung führt zu Heiserkeit oder Stimmbandlähmung. Das Zwerchfell wird vom N. phrenicus innerviert.",
     "schwer",
     ["nervus recurrens", "kehlkopf", "vagus"]
   ),
@@ -335,11 +335,11 @@ export const biologiePool2: Question[] = [
     "bio-kap2",
     "Welches Hormon wird vom Hypophysenhinterlappen (Neurohypophyse) freigesetzt und steigert die Wasserrückresorption in den Sammelrohren der Niere?",
     [
-      "Aldosteron (Mineralocorticoid der NNR für die Na+/K+-Regulation)",
+      "Aldosteron",
       "Atriales natriuretisches Peptid (ANP)",
       "Antidiuretisches Hormon (ADH, Vasopressin)",
-      "Renin (Protease aus dem juxtaglomerulären Apparat der Niere)",
-      "Erythropoetin (EPO, Glykoproteinhormon der Niere für die Erythropoese)",
+      "Renin",
+      "Erythropoetin",
     ],
     2,
     "ADH (Vasopressin) wird im Hypothalamus synthetisiert und über die Neurohypophyse freigesetzt. Es fördert den Einbau von Aquaporin-2 in die Sammelrohre und steigert so die Wasserrückresorption. Aldosteron stammt aus der Nebennierenrinde.",
@@ -367,11 +367,11 @@ export const biologiePool2: Question[] = [
     "bio-kap2",
     "Welches Epithel kleidet die Harnblase aus?",
     [
-      "Einschichtiges Plattenepithel (z. B. in Alveolen und Perikard)",
+      "Einschichtiges Plattenepithel",
       "Mehrreihiges Flimmerepithel",
       "Übergangsepithel (Urothel)",
       "Mehrschichtiges verhorntes Plattenepithel",
-      "Einschichtiges Zylinderepithel (hochprismatisch, z. B. im Magen und Darm)",
+      "Einschichtiges Zylinderepithel",
     ],
     2,
     "Die Harnblase wird von Übergangsepithel (Urothel) ausgekleidet, das sich bei Dehnung flacher stellt und bei Entleerung dicker wird. Das mehrreihige Flimmerepithel findet sich in den Atemwegen.",
@@ -390,7 +390,7 @@ export const biologiePool2: Question[] = [
       "Lysozym und Defensine",
     ],
     1,
-    "Das exokrine Pankreas sezerniert Trypsinogen (aktiviert zu Trypsin), Lipase, Amylase und weitere Enzyme (Chymotrypsin, Elastase, Carboxypeptidasen) in das Duodenum. Pepsin stammt aus dem Magen, Gallensalze aus der Leber.",
+    "Das exokrine Pankreas sezerniert Trypsinogen, Lipase, Amylase und weitere Enzyme (Chymotrypsin, Elastase, Carboxypeptidasen) in das Duodenum. Pepsin stammt aus dem Magen, Gallensalze aus der Leber.",
     "leicht",
     ["pankreas", "verdauung", "enzyme"]
   ),
@@ -438,7 +438,7 @@ export const biologiePool2: Question[] = [
       "T-Tubuli spielen keine Rolle bei der elektromechanischen Kopplung.",
     ],
     0,
-    "Das Sarkomer ist die kleinste kontraktile Einheit der quergestreiften Muskulatur, begrenzt durch zwei Z-Scheiben. Myosin bildet die dicken, Aktin die dünnen Filamente. Calcium ist essenziell für die Kontraktion (Bindung an Troponin C).",
+    "Das Sarkomer ist die kleinste kontraktile Einheit der quergestreiften Muskulatur, begrenzt durch zwei Z-Scheiben. Myosin bildet die dicken, Aktin die dünnen Filamente. Calcium ist essenziell für die Kontraktion.",
     "mittel",
     ["skelettmuskulatur", "sarkomer", "kontraktion"]
   ),
@@ -488,7 +488,7 @@ export const biologiePool2: Question[] = [
       "Nur sexuelle Selektion führt zu evolutionärem Wandel.",
     ],
     1,
-    "Nach Darwin überleben und reproduzieren sich diejenigen Individuen häufiger, deren erbliche Merkmale in der jeweiligen Umwelt vorteilhaft sind ('survival of the fittest'). Mutationen treten zufällig auf, nicht gezielt. Selektion wirkt primär auf Individuen.",
+    "Nach Darwin überleben und reproduzieren sich diejenigen Individuen häufiger, deren erbliche Merkmale in der jeweiligen Umwelt vorteilhaft sind. Mutationen treten zufällig auf, nicht gezielt. Selektion wirkt primär auf Individuen.",
     "leicht",
     ["darwin", "selektion", "evolution"]
   ),
@@ -504,7 +504,7 @@ export const biologiePool2: Question[] = [
       "Homologe Organe kommen ausschließlich bei eng verwandten Arten vor.",
     ],
     1,
-    "Homologe Organe teilen denselben embryonalen Grundbauplan (z. B. Pentadaktylie bei Wirbeltieren), können aber unterschiedliche Funktionen erfüllen (Arm, Flosse, Flügel). Sie belegen gemeinsame Abstammung (Divergenz), nicht Konvergenz.",
+    "Homologe Organe teilen denselben embryonalen Grundbauplan, können aber unterschiedliche Funktionen erfüllen (Arm, Flosse, Flügel). Sie belegen gemeinsame Abstammung (Divergenz), nicht Konvergenz.",
     "leicht",
     ["homologie", "evolution", "vergleichende anatomie"]
   ),
@@ -626,7 +626,7 @@ export const biologiePool2: Question[] = [
       "Sie entstehen durch Konvergenz, nicht durch gemeinsame Abstammung.",
     ],
     2,
-    "Rudimentäre Organe (z. B. Steißbein, Blinddarm-Wurmfortsatz beim Menschen, Beckenknochen bei Walen) sind Rückbildungen ehemals funktionsfähiger Strukturen. Sie sind ein wichtiger Beleg für die Evolution und gemeinsame Abstammung.",
+    "Rudimentäre Organe sind Rückbildungen ehemals funktionsfähiger Strukturen. Sie sind ein wichtiger Beleg für die Evolution und gemeinsame Abstammung.",
     "leicht",
     ["rudimentäre organe", "evolution", "homologie"]
   ),
@@ -782,7 +782,7 @@ export const biologiePool2: Question[] = [
       "Deletion",
     ],
     2,
-    "Eine Missense-Mutation verändert ein Codon so, dass eine andere Aminosäure eingebaut wird. Eine Nonsense-Mutation erzeugt ein Stoppcodon, eine stille Mutation ändert die Aminosäure nicht (Degeneration des genetischen Codes).",
+    "Eine Missense-Mutation verändert ein Codon so, dass eine andere Aminosäure eingebaut wird. Eine Nonsense-Mutation erzeugt ein Stoppcodon, eine stille Mutation ändert die Aminosäure nicht.",
     "mittel",
     ["mutation", "missense", "punktmutation"]
   ),
@@ -830,7 +830,7 @@ export const biologiePool2: Question[] = [
       "Jede menschliche Zelle enthält stets 23 Chromosomen.",
     ],
     0,
-    "Der diploide menschliche Karyotyp umfasst 46 Chromosomen: 22 Paare Autosomen und 1 Paar Gonosomen (XX bei Frauen, XY bei Männern). Haploide Keimzellen enthalten 23 Chromosomen.",
+    "Der diploide menschliche Karyotyp umfasst 46 Chromosomen: 22 Paare Autosomen und 1 Paar Gonosomen. Haploide Keimzellen enthalten 23 Chromosomen.",
     "leicht",
     ["karyotyp", "chromosomen", "gonosomen"]
   ),
@@ -888,7 +888,7 @@ export const biologiePool2: Question[] = [
       "Chromosomentranslokation",
     ],
     1,
-    "DNA-Methylierung (v. a. an CpG-Dinukleotiden) ist ein klassischer epigenetischer Mechanismus. Methylierte Promotorregionen führen typischerweise zur Genabschaltung. Punktmutationen, Deletionen und Translokationen verändern die DNA-Sequenz selbst.",
+    "DNA-Methylierung ist ein klassischer epigenetischer Mechanismus. Methylierte Promotorregionen führen typischerweise zur Genabschaltung. Punktmutationen, Deletionen und Translokationen verändern die DNA-Sequenz selbst.",
     "mittel",
     ["epigenetik", "methylierung", "genexpression"]
   ),
@@ -915,7 +915,7 @@ export const biologiePool2: Question[] = [
     "bio-kap5",
     "Welche Zellen des Immunsystems sind für die Produktion von Antikörpern verantwortlich?",
     [
-      "Makrophagen (phagozytierende Antigenpräsentierende Zellen des Immunsystems)",
+      "Makrophagen",
       "T-Helferzellen (CD4-positiv, Zytokinfreisetzung)",
       "Natürliche Killerzellen (NK-Zellen)",
       "Plasmazellen (differenzierte B-Lymphozyten)",
@@ -938,7 +938,7 @@ export const biologiePool2: Question[] = [
       "Er ist ausschließlich für die Abstoßung von Transplantaten relevant.",
     ],
     2,
-    "MHC-I-Moleküle finden sich auf fast allen kernhaltigen Zellen. Sie präsentieren Peptidfragmente intrazellulärer Proteine (z. B. virale Proteine) an CD8⁺-zytotoxische T-Zellen. MHC-II ist auf professionelle antigenpräsentierende Zellen beschränkt.",
+    "MHC-I-Moleküle finden sich auf fast allen kernhaltigen Zellen. Sie präsentieren Peptidfragmente intrazellulärer Proteine an CD8⁺-zytotoxische T-Zellen. MHC-II ist auf professionelle antigenpräsentierende Zellen beschränkt.",
     "mittel",
     ["mhc", "antigenpräsentation", "zytotoxische t-zellen"]
   ),
@@ -947,11 +947,11 @@ export const biologiePool2: Question[] = [
     "bio-kap5",
     "Welche Struktur ist bei gramnegativen Bakterien vorhanden, fehlt aber bei grampositiven?",
     [
-      "Zellwand aus Peptidoglykan (Murein-Schicht bei allen Bakterien)",
+      "Zellwand aus Peptidoglykan",
       "Äußere Membran mit Lipopolysacchariden (LPS)",
       "Ribosomen (70S) als prokaryotische Translationsmaschinen im Zytoplasma",
       "Zirkuläre DNA (Nukleoid) als chromosomale Erbinformation im Zytoplasma",
-      "Zellmembran (Zytoplasmamembran als Permeabilitätsbarriere aller Zellen)",
+      "Zellmembran",
     ],
     1,
     "Gramnegative Bakterien besitzen eine äußere Membran mit Lipopolysacchariden (LPS, Endotoxin), die bei grampositiven Bakterien fehlt. Grampositive Bakterien haben stattdessen eine dicke Peptidoglykanschicht. Beide besitzen 70S-Ribosomen und eine Zellmembran.",
@@ -986,7 +986,7 @@ export const biologiePool2: Question[] = [
       "Viren können Bakterien infizieren (Bakteriophagen).",
     ],
     3,
-    "Nicht alle Viren besitzen eine Lipidhülle. Unbehüllte Viren (z. B. Noroviren, Adenoviren) haben lediglich ein Kapsid aus Proteinen. Behüllte Viren (z. B. Influenza, HIV) tragen zusätzlich eine Lipidmembran aus der Wirtszellmembran.",
+    "Nicht alle Viren besitzen eine Lipidhülle. Unbehüllte Viren haben lediglich ein Kapsid aus Proteinen. Behüllte Viren tragen zusätzlich eine Lipidmembran aus der Wirtszellmembran.",
     "leicht",
     ["viren", "hülle", "kapsid"]
   ),
@@ -1044,7 +1044,7 @@ export const biologiePool2: Question[] = [
       "Komplementfaktoren werden in den T-Zellen synthetisiert.",
     ],
     1,
-    "Das Komplementsystem ist ein kaskadenartiges System aus über 30 Plasmaproteinen (hauptsächlich in der Leber synthetisiert). Es kann über drei Wege aktiviert werden (klassisch, alternativ, Lektin) und führt zu Opsonierung, Entzündung und Membranangriffskomplex (MAC).",
+    "Das Komplementsystem ist ein kaskadenartiges System aus über 30 Plasmaproteinen. Es kann über drei Wege aktiviert werden (klassisch, alternativ, Lektin) und führt zu Opsonierung, Entzündung und Membranangriffskomplex (MAC).",
     "mittel",
     ["komplement", "mac", "angeborene immunität"]
   ),
@@ -1083,10 +1083,10 @@ export const biologiePool2: Question[] = [
       "Meiose und Crossing-over",
       "Konjugation über Pili mit Plasmidtransfer",
       "Endosymbiose",
-      "Apoptose (programmierter Zelltod ohne Entzündungsreaktion)",
+      "Apoptose",
     ],
     2,
-    "Konjugation ist ein horizontaler Gentransfermechanismus, bei dem Bakterien über einen Sexpilus Plasmide (z. B. mit Resistenzgenen) direkt an andere Bakterien weitergeben. Weitere Mechanismen sind Transformation (freie DNA) und Transduktion (über Phagen).",
+    "Konjugation ist ein horizontaler Gentransfermechanismus, bei dem Bakterien über einen Sexpilus Plasmide direkt an andere Bakterien weitergeben. Weitere Mechanismen sind Transformation (freie DNA) und Transduktion (über Phagen).",
     "mittel",
     ["konjugation", "antibiotikaresistenz", "plasmid"]
   ),
@@ -1102,7 +1102,7 @@ export const biologiePool2: Question[] = [
       "Sie wird nur bei bereits bestehender Infektion durchgeführt.",
     ],
     1,
-    "Bei der aktiven Immunisierung wird das Immunsystem mit einem Antigen (abgeschwächter/abgetöteter Erreger oder Antigenkomponente) konfrontiert. Es bildet eigene Antikörper und Gedächtniszellen, was einen lang anhaltenden Schutz bietet. Die passive Immunisierung injiziert fertige Antikörper.",
+    "Bei der aktiven Immunisierung wird das Immunsystem mit einem Antigen konfrontiert. Es bildet eigene Antikörper und Gedächtniszellen, was einen lang anhaltenden Schutz bietet. Die passive Immunisierung injiziert fertige Antikörper.",
     "leicht",
     ["aktive immunisierung", "gedächtniszellen", "impfung"]
   ),

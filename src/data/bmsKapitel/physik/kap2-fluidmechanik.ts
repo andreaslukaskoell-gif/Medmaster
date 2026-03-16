@@ -11,6 +11,8 @@ export const physKapFluid: Kapitel = {
     {
       id: "ph-fluid-01",
       title: "Hydrostatik: Druck in ruhenden Fluiden",
+      imageUrl: "/images/bms/bio-herz-kreislauf.jpg",
+      imageCaption: "Abb.: Blutdruck als Anwendung der Hydrostatik (OpenStax, CC BY 4.0)",
       stichworte: [
         "Hydrostatischer Druck",
         "Schweredruck",
@@ -135,10 +137,29 @@ Bei einem echten Blutdruck von 132/88 mmHg würde man 144/100 mmHg messen — un
         "In der Klinik ist der hydrostatische Druck direkt relevant: Die Blutdruckmessung muss auf Herzhöhe erfolgen, da jeder Zentimeter Höhendifferenz das Ergebnis um ca. 0,8 mmHg verfälscht. Bei bettlägerigen Patienten muss die Manschettenposition angepasst werden. Im Stehen ist der venöse Druck in den Beinen deutlich erhöht (ca. 90 mmHg am Knöchel), was zu Ödemen und Varizen beiträgt. Bei Aszites (Flüssigkeitsansammlung im Bauchraum) wirkt der Druck nach dem Pascalschen Prinzip allseitig auf die Organe und kann das Zwerchfell hochdrücken — mit Einschränkung der Atmung.",
 
       altfrage: {
-        question:
-          "Welche Aussage zum hydrostatischen Druck ist richtig?\n\nA) Der hydrostatische Druck ist proportional zum Volumen der Flüssigkeit im Gefäß.\nB) Der Bodendruck in einem Gefäß hängt von der Form des Gefäßes ab.\nC) Der hydrostatische Druck in einer ruhenden Flüssigkeit steigt linear mit der Tiefe und ist unabhängig von der Gefäßform.\nD) Das Pascalsche Prinzip gilt nur für ideale Gase, nicht für Flüssigkeiten.\nE) Der hydrostatische Druck ist umgekehrt proportional zur Dichte der Flüssigkeit.",
-        answer:
-          "Richtig ist C. Der hydrostatische Druck berechnet sich nach p = ρ·g·h und hängt nur von der Dichte ρ, der Erdbeschleunigung g und der Tiefe h ab — nicht von der Gefäßform oder dem Gesamtvolumen (Hydrostatisches Paradoxon). A ist falsch, da das Volumen keine Rolle spielt. B ist falsch (Hydrostatisches Paradoxon). D ist falsch, das Pascalsche Prinzip gilt gerade für Flüssigkeiten. E ist falsch, der Druck ist direkt proportional (nicht umgekehrt proportional) zur Dichte.",
+        text: "Welche Aussage zum hydrostatischen Druck ist richtig?",
+        options: [
+          {
+            id: "a",
+            text: "Der hydrostatische Druck ist proportional zum Volumen der Flüssigkeit im Gefäß.",
+          },
+          { id: "b", text: "Der Bodendruck in einem Gefäß hängt von der Form des Gefäßes ab." },
+          {
+            id: "c",
+            text: "Der hydrostatische Druck steigt linear mit der Tiefe und ist unabhängig von der Gefäßform.",
+          },
+          {
+            id: "d",
+            text: "Das Pascalsche Prinzip gilt nur für ideale Gase, nicht für Flüssigkeiten.",
+          },
+          {
+            id: "e",
+            text: "Der hydrostatische Druck ist umgekehrt proportional zur Dichte der Flüssigkeit.",
+          },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "p = ρ·g·h – der Druck hängt nur von Dichte, Erdbeschleunigung und Tiefe ab (hydrostatisches Paradoxon). Volumen und Gefäßform sind irrelevant.",
       },
 
       selfTest: [
@@ -229,6 +250,20 @@ Bei einem echten Blutdruck von 132/88 mmHg würde man 144/100 mmHg messen — un
           difficulty: 2,
           tags: ["pascal", "energieerhaltung", "hydraulische-presse"],
         },
+        {
+          question:
+            "Welche Aussagen sind richtig?\n\n1. Der hydrostatische Druck hängt von der Tiefe, der Dichte und der Erdbeschleunigung ab.\n2. Das Pascalsche Prinzip gilt nur für kompressible Flüssigkeiten.\n3. Der Bodendruck in einem Gefäß hängt nicht von der Gefäßform ab (hydrostatisches Paradoxon).\n4. In kommunizierenden Röhren mit gleicher Flüssigkeit stehen die Spiegel auf gleicher Höhe.\n5. Der hydrostatische Druck wirkt nur in vertikaler Richtung nach unten.",
+          options: ["Nur 1 und 3", "Nur 2 und 4", "Nur 1, 3 und 4", "Nur 2, 3 und 4", "Alle"],
+          correctIndex: 2,
+          explanation:
+            "Aussage 1 ist richtig (p = ρ·g·h). Aussage 2 ist falsch — das Pascalsche Prinzip gilt für inkompressible Flüssigkeiten. Aussage 3 ist richtig (hydrostatisches Paradoxon: p = ρ·g·h ist formunabhängig). Aussage 4 ist richtig (kommunizierende Röhren: gleiche Flüssigkeit → gleiche Spiegelhöhe). Aussage 5 ist falsch — der hydrostatische Druck wirkt allseitig (isotrop), also in alle Richtungen gleich. Richtig sind 1, 3 und 4.",
+          hints: [
+            "Prüfe jede Aussage: Gilt das Pascalsche Prinzip für kompressible oder inkompressible Fluide?",
+            "In welche Richtung(en) wirkt der hydrostatische Druck?",
+          ],
+          difficulty: 2,
+          tags: ["typ-k", "hydrostatik", "pascal"],
+        },
       ],
     },
 
@@ -236,6 +271,9 @@ Bei einem echten Blutdruck von 132/88 mmHg würde man 144/100 mmHg messen — un
     {
       id: "ph-fluid-02",
       title: "Auftrieb & Oberflächenspannung",
+      imageUrl: "/images/bms/bio-alveolen.jpg",
+      imageCaption:
+        "Abb.: Oberflächenspannung in Alveolen — Surfactant verhindert den Kollaps (OpenStax, CC BY 4.0)",
       stichworte: [
         "Archimedisches Prinzip",
         "Auftriebskraft",
@@ -426,10 +464,17 @@ Auch bei Erwachsenen kann Surfactant-Mangel auftreten: Bei schwerem **ARDS** (Ac
         "Das Archimedische Prinzip erklärt die Hydrotherapie: Im Wasser ist die Gewichtsbelastung geringer (Auftrieb), was Rehabilitation erleichtert. Das Laplace-Gesetz ist klinisch hochrelevant für die Lungenfunktion: Surfactant-Mangel bei Frühgeborenen (< 35. SSW) führt zum Infant Respiratory Distress Syndrome (IRDS) mit Atelektase. Therapie: Surfactant-Substitution über Tubus und CPAP-Beatmung. Auch bei Erwachsenen kann Surfactant-Mangel (z. B. bei ARDS nach Pneumonie) zum Alveolarkollaps führen. Die Oberflächenspannung spielt zudem bei der Tränenfilm-Stabilität und der Benetzung von Kontaktlinsen eine Rolle.",
 
       altfrage: {
-        question:
-          "Ein Holzblock (ρ = 600 kg/m³, V = 0,1 m³) schwimmt in Wasser (ρ = 1000 kg/m³). Welcher Anteil des Blocks ragt über die Wasseroberfläche?\n\nA) 60 % des Volumens ragen heraus.\nB) 40 % des Volumens ragen heraus.\nC) 10 % des Volumens ragen heraus.\nD) Der Block sinkt vollständig unter.\nE) 50 % des Volumens ragen heraus.",
-        answer:
-          "Richtig ist B. Beim Schwimmen gilt: Die Auftriebskraft gleicht die Gewichtskraft aus (F_A = F_G). Das eingetauchte Volumen beträgt V_ein = V · (ρ_Körper / ρ_Fluid) = 0,1 m³ · (600/1000) = 0,06 m³ = 60 % des Gesamtvolumens. Somit ragen 40 % über die Oberfläche. A ist falsch (verwechselt eingetauchten und herausragenden Anteil). C und E sind rechnerisch falsch. D ist falsch, da ρ_Holz < ρ_Wasser — der Körper schwimmt.",
+        text: "Ein Holzblock (ρ = 600 kg/m³) schwimmt in Wasser (ρ = 1000 kg/m³). Welcher Anteil des Volumens ragt über die Wasseroberfläche?",
+        options: [
+          { id: "a", text: "60 %" },
+          { id: "b", text: "40 %" },
+          { id: "c", text: "10 %" },
+          { id: "d", text: "Der Block sinkt vollständig unter." },
+          { id: "e", text: "50 %" },
+        ],
+        correctOptionId: "b",
+        explanation:
+          "Eingetauchter Anteil = ρ_Körper/ρ_Fluid = 600/1000 = 60 %. Somit ragen 40 % heraus. Typischer Fehler: Verwechslung von eingetauchtem und herausragendem Anteil (Option a).",
       },
 
       selfTest: [
@@ -553,6 +598,9 @@ Auch bei Erwachsenen kann Surfactant-Mangel auftreten: Bei schwerem **ARDS** (Ac
     {
       id: "ph-fluid-03",
       title: "Strömende Fluide: Kontinuität & Bernoulli",
+      imageUrl: "/images/bms/bio-nephron-blutfluss.jpg",
+      imageCaption:
+        "Abb.: Blutfluss im Nephron — Kontinuitätsgleichung in der Niere (OpenStax, CC BY 4.0)",
       stichworte: [
         "Kontinuitätsgleichung",
         "Bernoulli-Gleichung",
@@ -833,10 +881,17 @@ Die vier Gleichungen (Kontinuität, Bernoulli, Hagen-Poiseuille, Reynolds) wirke
         "Die Kontinuitätsgleichung erklärt, warum die Blutströmung in den Kapillaren (Gesamtquerschnitt ≈ 4500 cm²) extrem langsam ist (≈ 0,3 mm/s) — optimal für den Stoffaustausch. Bei einer Karotisstenose steigt die Blutgeschwindigkeit an der Engstelle, die Strömung wird turbulent und verursacht auskultierbare Geräusche. Die Duplexsonografie nutzt den Doppler-Effekt, um die Blutgeschwindigkeit an Stenosen zu messen und den Stenosegrad zu bestimmen. Das Hagen-Poiseuille-Gesetz erklärt, warum bei Arteriosklerose bereits eine 50 %-ige Radiusverengung den Blutfluss auf 6 % reduziert — der Körper kompensiert mit Blutdruckerhöhung (Hypertonie). In der Notfallmedizin wählt man den größtmöglichen Venenzugang (Q ∝ r⁴). Bei Anämie sinkt die Blutviskosität, die Reynolds-Zahl steigt und es entstehen funktionelle Herzgeräusche ohne strukturelle Herzkrankheit. Aneurysmen (z. B. Bauchaortenaneurysma) sind lebensgefährlich: Der erhöhte Wanddruck und die zunehmende Wandspannung (Laplace) können zur Ruptur führen — ein chirurgischer Notfall mit hoher Mortalität.",
 
       altfrage: {
-        question:
-          "Blut strömt mit 30 cm/s durch die Aorta (Querschnitt: 5 cm²). Der Gesamtquerschnitt der Kapillaren beträgt 4500 cm². Welche Aussage zur Strömungsgeschwindigkeit in den Kapillaren ist richtig?\n\nA) Die Geschwindigkeit in den Kapillaren beträgt ca. 0,033 cm/s.\nB) Die Geschwindigkeit bleibt gleich, da der Blutdruck konstant ist.\nC) Die Geschwindigkeit steigt, weil die Kapillaren enger sind als die Aorta.\nD) Die Geschwindigkeit lässt sich ohne Kenntnis der Viskosität nicht berechnen.\nE) Die Geschwindigkeit in den Kapillaren beträgt ca. 3 cm/s.",
-        answer:
-          "Richtig ist A. Nach der Kontinuitätsgleichung (A₁·v₁ = A₂·v₂) gilt: v_Kapillaren = v_Aorta · (A_Aorta / A_Kapillaren) = 30 cm/s · (5 / 4500) = 0,033 cm/s ≈ 0,3 mm/s. Der riesige Gesamtquerschnitt der Kapillaren führt zu extrem langsamer Strömung — ideal für den Stoffaustausch. B ist falsch (der Druck ist nicht konstant). C verwechselt Einzelquerschnitt mit Gesamtquerschnitt. D ist falsch, die Kontinuitätsgleichung benötigt keine Viskosität. E ist um den Faktor 100 zu groß.",
+        text: "Blut strömt mit 30 cm/s durch die Aorta (Querschnitt: 5 cm²). Der Gesamtquerschnitt der Kapillaren beträgt 4500 cm². Wie groß ist die Strömungsgeschwindigkeit in den Kapillaren?",
+        options: [
+          { id: "a", text: "0,033 cm/s" },
+          { id: "b", text: "0,33 cm/s" },
+          { id: "c", text: "3 cm/s" },
+          { id: "d", text: "30 cm/s" },
+          { id: "e", text: "270 000 cm/s" },
+        ],
+        correctOptionId: "a",
+        explanation:
+          "Kontinuitätsgleichung: A₁·v₁ = A₂·v₂ → v = 30 · 5/4500 = 0,033 cm/s ≈ 0,3 mm/s. Der große Gesamtquerschnitt der Kapillaren sorgt für extrem langsame Strömung – ideal für den Stoffaustausch.",
       },
 
       selfTest: [
@@ -972,6 +1027,25 @@ Die vier Gleichungen (Kontinuität, Bernoulli, Hagen-Poiseuille, Reynolds) wirke
           ],
           difficulty: 3,
           tags: ["reynolds", "anämie", "herzgeräusch", "viskosität"],
+        },
+        {
+          question: "Welche der folgenden Aussagen zur Strömungsmechanik ist FALSCH?",
+          options: [
+            "Die Kontinuitätsgleichung besagt, dass der Volumenstrom in einem Rohr konstant bleibt.",
+            "Nach der Bernoulli-Gleichung sinkt der statische Druck an Stellen hoher Strömungsgeschwindigkeit.",
+            "Die Bernoulli-Gleichung gilt auch für turbulente, reibungsbehaftete Strömungen.",
+            "Die Reynolds-Zahl bestimmt, ob eine Strömung laminar oder turbulent ist.",
+            "Nach Hagen-Poiseuille hängt der Volumenstrom von der vierten Potenz des Radius ab.",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Die Bernoulli-Gleichung gilt nur für ideale Fluide: reibungsfrei (viskositätsfrei), inkompressibel, stationär und laminar. Für turbulente, reibungsbehaftete Strömungen ist sie nicht anwendbar — hier müssen Verlustterme (z. B. durch Viskosität) berücksichtigt werden. Alle anderen Aussagen sind korrekt: Kontinuitätsgleichung (A₁v₁ = A₂v₂), Venturi-Effekt, Reynolds-Zahl als Kriterium für laminar/turbulent, und Hagen-Poiseuille (Q ∝ r⁴).",
+          hints: [
+            "Unter welchen Bedingungen gilt die Bernoulli-Gleichung? Ideal oder real?",
+            "Turbulenz und Reibung führen zu Energieverlusten, die Bernoulli nicht berücksichtigt.",
+          ],
+          difficulty: 2,
+          tags: ["falsch-aussage", "bernoulli", "strömung"],
         },
       ],
     },

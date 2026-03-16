@@ -105,10 +105,16 @@ Dieses Konzept macht das PSE zu einem universellen Nachschlagewerk für stöchio
         "In der Klinik werden Medikamentendosen in mg oder g angegeben, Laborwerte jedoch oft in mmol/L (z. B. Glucose: 3,9–5,5 mmol/L nüchtern). Das Mol-Konzept ist unentbehrlich für die Umrechnung zwischen Masse- und Stoffmengenkonzentration. Infusionslösungen (z. B. Glucose 5 %, NaCl 0,9 %) werden über n = m/M auf ihren molaren Gehalt berechnet, um isotone Bedingungen sicherzustellen.",
 
       altfrage: {
-        question:
-          "Wie viele Moleküle Glucose sind in 0,5 mol Glucose enthalten? (N_A = 6,022 × 10²³ mol⁻¹)\n\nA) 3,011 × 10²³\nB) 6,022 × 10²³\nC) 1,204 × 10²⁴\nD) 3,011 × 10²²\nE) 6,022 × 10²²",
-        answer:
-          "Richtige Antwort: A) 3,011 × 10²³\n\nDie Teilchenanzahl N berechnet sich aus N = n × N_A. Mit n = 0,5 mol und N_A = 6,022 × 10²³ mol⁻¹ ergibt sich: N = 0,5 × 6,022 × 10²³ = 3,011 × 10²³ Moleküle. Option B entspräche 1 mol, Option C entspräche 2 mol. Die Avogadro-Konstante N_A ist definiert als die Anzahl der Teilchen in genau 1 mol eines Stoffes — sie verknüpft die makroskopische Stoffmenge mit der Teilchenzahl auf atomarer Ebene.",
+        text: "Wie viele Moleküle Glucose sind in 0,5 mol Glucose enthalten? (N_A = 6,022 × 10²³ mol⁻¹)",
+        options: [
+          { id: "a", text: "3,011 × 10²³" },
+          { id: "b", text: "6,022 × 10²³" },
+          { id: "c", text: "1,204 × 10²⁴" },
+          { id: "d", text: "3,011 × 10²²" },
+          { id: "e", text: "6,022 × 10²²" },
+        ],
+        correctOptionId: "a",
+        explanation: "N = n × N_A = 0,5 × 6,022 × 10²³ = 3,011 × 10²³ Moleküle.",
       },
       selfTest: [
         {
@@ -183,6 +189,16 @@ Dieses Konzept macht das PSE zu einem universellen Nachschlagewerk für stöchio
           ],
           difficulty: 2,
           tags: ["mol-konzept", "falsch-aussage", "molare-masse"],
+        },
+        {
+          question:
+            "Welche Aussagen sind richtig?\n\n1. 1 Mol eines Stoffes enthält immer 6,022 × 10²³ Teilchen (Avogadro-Zahl).\n2. Die molare Masse von NaCl beträgt 58,5 g/mol (Na = 23, Cl = 35,5).\n3. Die Stoffmenge n berechnet sich aus n = M/m (Molare Masse geteilt durch Masse).\n4. 1 Dalton entspricht numerisch 1 g/mol.\n5. In 1 Mol H₂O sind 2 Mol Wasserstoffatome und 1 Mol Sauerstoffatome enthalten.",
+          options: ["Nur 1 und 2", "Nur 3 und 4", "Nur 1, 2, 4 und 5", "Nur 2, 3 und 5", "Alle"],
+          correctIndex: 2,
+          explanation:
+            "Aussagen 1, 2, 4 und 5 sind korrekt: Die Avogadro-Konstante beträgt 6,022 × 10²³ mol⁻¹ (1). M(NaCl) = 23 + 35,5 = 58,5 g/mol (2). 1 Da = 1 g/mol (4). 1 Mol H₂O enthält 2 Mol H-Atome und 1 Mol O-Atome gemäß Summenformel (5). Aussage 3 ist falsch — die korrekte Formel lautet n = m/M (Masse geteilt durch molare Masse), nicht umgekehrt. Diese Verwechslung ist ein häufiger MedAT-Fehler.",
+          difficulty: 2,
+          tags: ["typ-k", "mol", "avogadro"],
         },
       ],
     },
@@ -297,10 +313,17 @@ Bei der vollständigen Oxidation von 1 mol Glucose (180 g) entstehen 6 mol CO₂
         "Stöchiometrische Berechnungen sind in der Pharmazie (Wirkstoff-Synthese, Dosierung) und Klinik allgegenwärtig. Antacida neutralisieren Magensäure in definiertem Molverhältnis. Der respiratorische Quotient (RQ) — das stöchiometrische Verhältnis CO₂/O₂ — gibt Auskunft über den Substratmix der Energiegewinnung (RQ = 1,0 für KH, 0,7 für Fette). In der Dialyse wird die Harnstoff-Clearance stöchiometrisch aus der Dialysatmenge berechnet.",
 
       altfrage: {
-        question:
-          "Für die vollständige Verbrennung von Methan gilt: CH₄ + 2 O₂ → CO₂ + 2 H₂O. Wie viel Mol O₂ werden benötigt, um 3 mol CH₄ vollständig zu verbrennen?\n\nA) 2 mol\nB) 3 mol\nC) 4 mol\nD) 6 mol\nE) 8 mol",
-        answer:
-          "Richtige Antwort: D) 6 mol\n\nLaut der ausgeglichenen Reaktionsgleichung reagiert 1 mol CH₄ mit 2 mol O₂. Die Koeffizienten geben das Molverhältnis der Reaktionspartner an. Für 3 mol CH₄ werden daher 3 × 2 = 6 mol O₂ benötigt. Das stöchiometrische Rechnen mit Molverhältnissen ist die Grundlage jeder quantitativen Chemie — von der Synthese eines Arzneistoffs bis zur Berechnung der benötigten Sauerstoffmenge bei der Zellatmung.",
+        text: "Für die vollständige Verbrennung von Methan gilt: CH₄ + 2 O₂ → CO₂ + 2 H₂O. Wie viel Mol O₂ werden benötigt, um 3 mol CH₄ vollständig zu verbrennen?",
+        options: [
+          { id: "a", text: "2 mol" },
+          { id: "b", text: "3 mol" },
+          { id: "c", text: "4 mol" },
+          { id: "d", text: "6 mol" },
+          { id: "e", text: "8 mol" },
+        ],
+        correctOptionId: "d",
+        explanation:
+          "Laut Reaktionsgleichung reagiert 1 mol CH₄ mit 2 mol O₂. Für 3 mol CH₄: 3 × 2 = 6 mol O₂.",
       },
       selfTest: [
         {
@@ -395,6 +418,21 @@ Bei der vollständigen Oxidation von 1 mol Glucose (180 g) entstehen 6 mol CO₂
           ],
           difficulty: 1,
           tags: ["ausgleichen", "atombilanzen", "fehlersuche"],
+        },
+        {
+          question: "Welche Aussage über Stöchiometrie ist FALSCH?",
+          options: [
+            "Die Koeffizienten in einer ausgeglichenen Reaktionsgleichung geben die Molverhältnisse der Stoffe an.",
+            "Das Gesetz der Massenerhaltung besagt, dass die Gesamtmasse der Produkte gleich der Gesamtmasse der Edukte ist.",
+            "Das limitierende Reagenz bestimmt die maximale Produktmenge einer Reaktion.",
+            "Der respiratorische Quotient (RQ) für reine Fettverbrennung beträgt 1,0.",
+            "Bei der Verbrennung von Glucose (C₆H₁₂O₆) entstehen CO₂ und H₂O im Molverhältnis 1:1.",
+          ],
+          correctIndex: 3,
+          explanation:
+            "Aussage D ist FALSCH: Der respiratorische Quotient für reine Fettverbrennung beträgt ca. 0,7 (nicht 1,0). RQ = 1,0 gilt für reine Kohlenhydratverbrennung (z. B. Glucose: 6 CO₂ / 6 O₂ = 1,0). Fette benötigen mehr Sauerstoff pro produziertem CO₂, da sie weniger Sauerstoff im Molekül enthalten. Alle anderen Aussagen sind korrekt.",
+          difficulty: 2,
+          tags: ["falsch-aussage", "stöchiometrie", "rq"],
         },
       ],
     },
@@ -622,10 +660,16 @@ K_sp bestimmt, ob Calciumoxalat (CaC₂O₄) und Calciumphosphat im Urin ausfall
         "Konzentrationsangaben sind im klinischen Alltag allgegenwärtig: Blutglucose (mg/dL oder mmol/L), Elektrolyte (mmol/L), Infusionslösungen (% oder g/L). Physiologische Kochsalzlösung (NaCl 0,9 %) ist isoton zum Blutplasma und die meistverwendete Infusionslösung. Laborwerte in verschiedenen Einheitensystemen (SI vs. konventionell) müssen sicher umgerechnet werden. Das Löslichkeitsprodukt erklärt die Bildung von Nierensteinen (CaOx, CaP) und Gallensteinen (Cholesterol). Die Verdünnungsformel wird täglich in Apotheke und auf Station für Medikamenten- und Infusionszubereitungen angewendet.",
 
       altfrage: {
-        question:
-          "Welche Konzentration hat eine Lösung, die durch Auflösen von 5,85 g NaCl (M = 58,5 g/mol) in Wasser auf ein Gesamtvolumen von 500 mL hergestellt wird?\n\nA) 0,01 mol/L\nB) 0,1 mol/L\nC) 0,2 mol/L\nD) 1,0 mol/L\nE) 0,5 mol/L",
-        answer:
-          "Richtige Antwort: C) 0,2 mol/L\n\nZuerst wird die Stoffmenge berechnet: n = m/M = 5,85 g / 58,5 g/mol = 0,1 mol. Die Molarität (Stoffmengenkonzentration) ist c = n/V. Das Volumen muss in Liter umgerechnet werden: 500 mL = 0,5 L. Damit: c = 0,1 mol / 0,5 L = 0,2 mol/L. Ein häufiger Fehler ist, das Volumen nicht in Liter umzurechnen (was fälschlich 0,1/500 = 0,0002 mol/L ergeben würde). Die Molarität c = n/V ist die in der Chemie und Klinik am häufigsten verwendete Konzentrationsangabe.",
+        text: "Welche Konzentration hat eine Lösung, die durch Auflösen von 5,85 g NaCl (M = 58,5 g/mol) in Wasser auf ein Gesamtvolumen von 500 mL hergestellt wird?",
+        options: [
+          { id: "a", text: "0,01 mol/L" },
+          { id: "b", text: "0,1 mol/L" },
+          { id: "c", text: "0,2 mol/L" },
+          { id: "d", text: "1,0 mol/L" },
+          { id: "e", text: "0,5 mol/L" },
+        ],
+        correctOptionId: "c",
+        explanation: "n = m/M = 5,85/58,5 = 0,1 mol. c = n/V = 0,1 mol / 0,5 L = 0,2 mol/L.",
       },
       selfTest: [
         {

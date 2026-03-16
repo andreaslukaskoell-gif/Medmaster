@@ -10,6 +10,8 @@ export const physKap3: Kapitel = {
     {
       id: "ph-3-01",
       title: "Harmonische Schwingungen",
+      imageUrl: "/images/bms/bio-herz-oberflaeche.jpg",
+      imageCaption: "Abb.: Herzrhythmus als periodische Schwingung im EKG (OpenStax, CC BY 4.0)",
       stichworte: [
         "Harmonische Schwingung",
         "Amplitude",
@@ -211,12 +213,18 @@ Eine Infusionspumpe enthält eine federgelagerte Kolbenmasse von m = 50 g. Die F
         "MRT nutzt Resonanz gezielt: Protonen werden exakt mit der Larmorfrequenz angeregt → maximale Energieabsorption.",
       ],
 
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Erläutern Sie das Konzept der harmonischen Schwingung und vergleichen Sie Fadenpendel und Federpendel hinsichtlich der Einflussgrössen auf die Periodendauer. Gehen Sie dabei auf die Energieumwandlung ein.",
-        answer:
-          "Eine harmonische Schwingung ist eine periodische Bewegung, bei der die Rückstellkraft proportional zur Auslenkung ist (F = −kx). Die Auslenkung folgt einer Kosinusfunktion x(t) = A·cos(ωt+φ). Beim Fadenpendel gilt T = 2π√(l/g): Die Periodendauer hängt nur von der Länge l und der Erdbeschleunigung g ab, nicht von Masse oder Amplitude (für kleine Winkel). Verdoppelt man die Länge, steigt T um √2. Beim Federpendel gilt T = 2π√(m/k): Eine grössere Masse verlängert T, eine steifere Feder verkürzt T; auch hier ist die Amplitude bedeutungslos (Isochronie). In beiden Systemen pendelt Energie zwischen kinetischer (maximal in Ruhelage) und potentieller Form (maximal bei maximaler Auslenkung). Die Gesamtenergie E = ½·k·A² bleibt bei ungedämpfter Schwingung konstant. Bei gedämpften Schwingungen wird Energie durch Reibung dissipiert, die Amplitude nimmt exponentiell ab. Bei Resonanz (Anregungsfrequenz = Eigenfrequenz) ist die Energieübertragung maximal.",
+        text: "Die Periodendauer eines Fadenpendels wird verdoppelt. Um welchen Faktor muss die Pendellänge verändert werden?",
+        options: [
+          { id: "a", text: "Verdoppelt" },
+          { id: "b", text: "Vervierfacht" },
+          { id: "c", text: "Ver√2-facht" },
+          { id: "d", text: "Halbiert" },
+          { id: "e", text: "Verachtfacht" },
+        ],
+        correctOptionId: "b",
+        explanation:
+          "T = 2π√(l/g), also T ∝ √l. Für doppeltes T muss l vervierfacht werden, da (2T)² = 4T² → l muss um Faktor 4 steigen.",
       },
 
       klinischerBezug:
@@ -394,6 +402,9 @@ Eine Infusionspumpe enthält eine federgelagerte Kolbenmasse von m = 50 g. Die F
     {
       id: "ph-3-02",
       title: "Wellen — Grundgrößen und Typen",
+      imageUrl: "/images/bms/bio-cochlea.jpg",
+      imageCaption:
+        "Abb.: Die Cochlea wandelt Schallwellen in Nervenimpulse um (OpenStax, CC BY 4.0)",
       stichworte: [
         "Wellengleichung",
         "Wellenlänge",
@@ -576,12 +587,27 @@ R = ((6,3 - 1,63)/(6,3 + 1,63))^2 x 10^12 / 10^12 = (4,67/7,93)^2 ungefähr 0,34
         "EM-Spektrum: Radio → Mikrowelle → IR → Sichtbar → UV → Röntgen → Gamma.",
       ],
 
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Vergleichen Sie Schallwellen und elektromagnetische Wellen hinsichtlich ihrer physikalischen Natur, Ausbreitungsbedingungen und Geschwindigkeit. Erläutern Sie, welche dieser Welleneigenschaften für den medizinischen Ultraschall und die Magnetresonanztomographie relevant sind.",
-        answer:
-          "Schallwellen sind mechanische Longitudinalwellen: Die Teilchen des Mediums schwingen parallel zur Ausbreitungsrichtung. Sie können sich nur in Materie ausbreiten (Gasen, Flüssigkeiten, Festkörpern) – im Vakuum ist keine Schallübertragung möglich. Die Schallgeschwindigkeit beträgt in Luft ≈ 340 m/s, in Wasser ≈ 1480 m/s und in Gewebe ≈ 1540 m/s; sie steigt mit zunehmender Elastizität und Dichte des Mediums. Elektromagnetische Wellen sind Transversalwellen aus gekoppelten elektrischen und magnetischen Feldern; sie benötigen kein Medium und breiten sich im Vakuum mit c = 3×10⁸ m/s aus. Beide Wellenarten zeigen Reflexion, Beugung und Interferenz. In der Sonographie nutzt man Ultraschall (2–20 MHz): hohe Frequenz → kurze Wellenlänge → gute Ortsauflösung, aber begrenzte Eindringtiefe. Die Laufzeitmessung reflektierter Echos ergibt Tifeninformationen (Impuls-Echo-Verfahren, Auflösung ≈ 1 mm). Die MRT nutzt keine Schallwellen, sondern Radiowellen im MHz-Bereich (Larmorfrequenz), um Kernspinresonanz von Wasserstoffkernen zu erzeugen. Kurz: Schall = mechanisch, braucht Medium; Licht/Radiowellen = elektromagnetisch, brauchen kein Medium.",
+        text: "Welche Aussage zu Schall- und elektromagnetischen Wellen ist richtig?",
+        options: [
+          { id: "a", text: "Schallwellen breiten sich im Vakuum schneller aus als in Luft." },
+          {
+            id: "b",
+            text: "Elektromagnetische Wellen benötigen immer ein Medium zur Ausbreitung.",
+          },
+          {
+            id: "c",
+            text: "Schallwellen sind Longitudinalwellen und benötigen ein Medium; EM-Wellen sind Transversalwellen und breiten sich auch im Vakuum aus.",
+          },
+          {
+            id: "d",
+            text: "Schallwellen sind Transversalwellen, EM-Wellen sind Longitudinalwellen.",
+          },
+          { id: "e", text: "Beide Wellenarten haben im Vakuum dieselbe Geschwindigkeit." },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "Schall ist eine mechanische Longitudinalwelle (braucht Medium, c_Luft ≈ 340 m/s). EM-Wellen sind transversal, brauchen kein Medium und breiten sich mit c = 3×10⁸ m/s aus.",
       },
 
       klinischerBezug:
@@ -706,11 +732,27 @@ R = ((6,3 - 1,63)/(6,3 + 1,63))^2 x 10^12 / 10^12 = (4,67/7,93)^2 ungefähr 0,34
           difficulty: 2,
           tags: ["em-wellen", "licht", "wellenlänge"],
         },
+        {
+          question:
+            "Welche Aussagen sind richtig?\n\n1. Schallwellen sind Longitudinalwellen und benötigen ein materielles Medium zur Ausbreitung.\n2. Elektromagnetische Wellen können sich im Vakuum ausbreiten.\n3. Ultraschall hat eine höhere Frequenz als hörbarer Schall und daher eine kürzere Wellenlänge.\n4. Die Schallgeschwindigkeit in Wasser ist niedriger als in Luft.\n5. Beim Medienwechsel bleibt die Frequenz einer Welle konstant, die Wellenlänge ändert sich.",
+          options: ["Nur 1 und 3", "Nur 2 und 4", "Nur 1, 2, 3 und 5", "Nur 2, 3 und 4", "Alle"],
+          correctIndex: 2,
+          explanation:
+            "Aussage 1 ist richtig (Schall = mechanische Longitudinalwelle, braucht Medium). Aussage 2 ist richtig (EM-Wellen breiten sich im Vakuum mit c aus). Aussage 3 ist richtig (Ultraschall > 20 kHz, λ = c/f → höhere f → kürzere λ). Aussage 4 ist falsch — die Schallgeschwindigkeit in Wasser (~1480 m/s) ist deutlich höher als in Luft (~340 m/s). Aussage 5 ist richtig (Frequenz wird von der Quelle bestimmt, Wellenlänge passt sich an das Medium an). Richtig sind 1, 2, 3 und 5.",
+          hints: [
+            "In welchem Medium ist die Schallgeschwindigkeit höher: Wasser oder Luft?",
+            "Welche Wellengröße bleibt beim Medienwechsel konstant?",
+          ],
+          difficulty: 2,
+          tags: ["typ-k", "wellen", "schall", "ultraschall"],
+        },
       ],
     },
     {
       id: "ph-3-03",
       title: "Wellenphänomene",
+      imageUrl: "/images/bms/bio-auge.jpg",
+      imageCaption: "Abb.: Lichtbrechung und -beugung im Auge (OpenStax, CC BY 4.0)",
       stichworte: [
         "Interferenz",
         "Superpositionsprinzip",
@@ -900,12 +942,18 @@ Ein Taucher, der von unten flach zur Oberfläche blickt (Winkel > 48,8°), sieht
         "Brechung: Snellius n₁·sin α₁ = n₂·sin α₂; Richtungsänderung beim Medienwechsel.",
       ],
 
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Erläutern Sie den Doppler-Effekt und seine Anwendung in der medizinischen Diagnostik. Beschreiben Sie dabei auch, wie Interferenzphänomene in der Medizintechnik genutzt werden.",
-        answer:
-          "Der Doppler-Effekt beschreibt die scheinbare Frequenzverschiebung, die entsteht, wenn sich Schallquelle und Beobachter relativ zueinander bewegen. Bei Annäherung steigt die wahrgenommene Frequenz, bei Entfernung sinkt sie. Die Formel lautet f_obs = f_Q · (c ± v_Beob)/(c ∓ v_Q). In der Doppler-Sonographie sendet ein Schallkopf Ultraschall (1–10 MHz) auf Blutgefässe. Bewegte Erythrozyten reflektieren den Schall mit einer Frequenzverschiebung Δf proportional zur Flussgeschwindigkeit und dem Winkel zwischen Schallstrahl und Blutgefäss. Aus Δf = 2·f₀·v·cos θ/c berechnet man die Flussgeschwindigkeit v. Das Vorzeichen von Δf zeigt die Flussrichtung an – dies ermöglicht die Diagnose von Stenosen (erhöhte Flussgeschwindigkeit) und Thrombosen (fehlendes Signal). Interferenzphänomene spielen bei stehenden Wellen in Körperhöhlen, bei Beugung am Trommelfell und bei konstruktiver Interferenz in Hohlraumresonatoren (Lungen-Perkussion) eine Rolle. Destruktive Interferenz wird in Noise-Cancelling-Geräten und zur Dämpfungsoptimierung in medizinischen Schallkopf-Designs genutzt.",
+        text: "Bei der Doppler-Sonographie bewegen sich Erythrozyten auf den Schallkopf zu. Wie verändert sich die Frequenz des reflektierten Ultraschalls?",
+        options: [
+          { id: "a", text: "Die Frequenz sinkt." },
+          { id: "b", text: "Die Frequenz steigt." },
+          { id: "c", text: "Die Frequenz bleibt gleich, nur die Amplitude ändert sich." },
+          { id: "d", text: "Die Frequenz verdoppelt sich exakt." },
+          { id: "e", text: "Die Frequenzänderung hängt nicht von der Bewegungsrichtung ab." },
+        ],
+        correctOptionId: "b",
+        explanation:
+          "Doppler-Effekt: Bei Annäherung steigt die wahrgenommene Frequenz (Δf = 2·f₀·v·cosθ/c). Die Frequenzverschiebung zeigt Flussrichtung und -geschwindigkeit an – Grundlage der Doppler-Sonographie zur Stenosediagnostik.",
       },
 
       klinischerBezug:
@@ -1026,6 +1074,25 @@ Ein Taucher, der von unten flach zur Oberfläche blickt (Winkel > 48,8°), sieht
           ],
           difficulty: 2,
           tags: ["doppler-sonographie", "blutfluss", "ultraschall"],
+        },
+        {
+          question: "Welche der folgenden Aussagen zu Wellenphänomenen ist FALSCH?",
+          options: [
+            "Bei destruktiver Interferenz zweier gleich großer Amplituden ist die resultierende Amplitude null.",
+            "Beugung tritt am stärksten auf, wenn die Hindernisbreite in der Größenordnung der Wellenlänge liegt.",
+            "Der Doppler-Effekt bewirkt eine Frequenzerhöhung, wenn sich Quelle und Beobachter voneinander entfernen.",
+            "Stehende Wellen entstehen durch Überlagerung zweier gegenläufiger Wellen gleicher Frequenz und Amplitude.",
+            "Die Doppler-Sonographie misst die Frequenzverschiebung reflektierter Ultraschallwellen zur Bestimmung der Blutflussgeschwindigkeit.",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Wenn sich Quelle und Beobachter voneinander entfernen, tritt eine Frequenzerniedrigung auf (Rotverschiebung), nicht eine Frequenzerhöhung. Die Frequenz steigt nur, wenn sich Quelle und Beobachter aufeinander zubewegen (Blauverschiebung). Alle anderen Aussagen sind korrekt: destruktive Interferenz bei Gangunterschied λ/2, Beugung bei d ≈ λ, stehende Wellen durch gegenläufige Überlagerung, und die Doppler-Sonographie nutzt Δf zur Geschwindigkeitsbestimmung.",
+          hints: [
+            "Was passiert mit der Frequenz beim Doppler-Effekt, wenn sich Quelle und Beobachter entfernen?",
+            "Denke an den Rettungswagen: Ton wird tiefer, wenn er sich entfernt.",
+          ],
+          difficulty: 2,
+          tags: ["falsch-aussage", "doppler", "wellenphänomene"],
         },
       ],
     },

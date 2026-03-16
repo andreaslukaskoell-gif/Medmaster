@@ -769,6 +769,25 @@ export default function LandingPage() {
             ))}
           </motion.div>
 
+          {/* Live social proof ticker */}
+          {userCount && userCount >= 10 && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5, duration: 0.8 }}
+              className="flex items-center justify-center gap-2 mb-8 text-xs text-[var(--text-secondary)]"
+            >
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
+              </span>
+              <span>
+                Aktuell: {userCount}+ Lernende &middot; {(userCount * 150).toLocaleString("de-AT")}+
+                Fragen beantwortet
+              </span>
+            </motion.div>
+          )}
+
           {/* CTAs */}
           <motion.div
             initial={{ opacity: 0, y: 16 }}

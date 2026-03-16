@@ -224,12 +224,18 @@ Klinisch relevant:
         "Enzymkatalyse: Substrat bindet im aktiven Zentrum → Enzym-Substrat-Komplex → Produkt + freies Enzym.",
       ],
 
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Was ist der Unterschied zwischen einer exothermen und einer endothermen Reaktion, und warum reicht die Reaktionsenthalpie ΔH allein nicht aus, um die Spontaneität zu beurteilen?",
-        answer:
-          "Bei einer exothermen Reaktion ist die Reaktionsenthalpie ΔH negativ: Die Produkte besitzen weniger innere Energie als die Edukte, und die überschüssige Energie wird als Wärme an die Umgebung abgegeben. Beispiele sind Verbrennungsreaktionen oder die ATP-Hydrolyse. Bei endothermen Reaktionen ist ΔH positiv — Energie muss zugeführt werden, wie bei der Photosynthese oder der thermischen Zersetzung von Calciumcarbonat. ΔH allein reicht zur Beurteilung der Spontaneität nicht aus, weil auch die Entropie ΔS eine Rolle spielt. Die maßgebliche Größe ist die Gibbs-Energie: ΔG = ΔH − T·ΔS. Nur wenn ΔG < 0 ist, läuft die Reaktion unter den gegebenen Bedingungen spontan ab (exergon). Eine exotherme Reaktion mit stark negativer Entropieänderung kann bei hoher Temperatur endergon werden. Umgekehrt kann eine endotherme Reaktion mit großem Entropiegewinn (z. B. Auflösen von NH₄NO₃ in Wasser) spontan sein, wenn der T·ΔS-Term die Enthalpie überwiegt. Im biologischen Kontext koppelt die Zelle exergone Reaktionen (ATP-Hydrolyse) an endergone Prozesse (Biosynthesen, aktiver Transport), um thermodynamisch ungünstige Reaktionen anzutreiben.",
+        text: "Welche Aussage zur Gibbs-Energie (ΔG = ΔH − T·ΔS) ist richtig?",
+        options: [
+          { id: "a", text: "Eine Reaktion läuft spontan ab, wenn ΔG > 0" },
+          { id: "b", text: "Exotherme Reaktionen sind immer spontan" },
+          { id: "c", text: "Eine Reaktion ist spontan (exergon), wenn ΔG < 0" },
+          { id: "d", text: "Die Entropie ΔS hat keinen Einfluss auf die Spontaneität" },
+          { id: "e", text: "Endotherme Reaktionen können niemals spontan ablaufen" },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "Eine Reaktion läuft spontan ab, wenn ΔG < 0 (exergon). ΔH allein reicht nicht: Endotherme Reaktionen mit großem Entropiegewinn (z. B. NH₄NO₃ lösen) können spontan sein, wenn T·ΔS den positiven ΔH-Term überwiegt.",
       },
 
       klinischerBezug:
@@ -369,6 +375,16 @@ Klinisch relevant:
           ],
           tags: ["enzymkatalyse", "katalase", "zersetzung"],
           difficulty: 3,
+        },
+        {
+          question:
+            "Welche Aussagen sind richtig?\n\n1. Bei einer Redoxreaktion werden Elektronen von einem Reaktionspartner auf einen anderen übertragen.\n2. Das Oxidationsmittel wird selbst oxidiert.\n3. Eine Säure-Base-Reaktion nach Brønsted ist durch H⁺-Übertragung charakterisiert.\n4. Katalysatoren senken die Aktivierungsenergie und verschieben das chemische Gleichgewicht zugunsten der Produkte.\n5. Bei einer exothermen Reaktion ist ΔH < 0.",
+          options: ["Nur 1 und 2", "Nur 2 und 4", "Nur 1, 3 und 5", "Nur 1, 2 und 3", "Alle"],
+          correctIndex: 2,
+          explanation:
+            "Aussagen 1, 3 und 5 sind korrekt: Redoxreaktionen beinhalten Elektronentransfer (1). Brønsted-Säure-Base-Reaktionen sind durch Protonenübertragung definiert (3). Exotherme Reaktionen haben ΔH < 0 (5). Aussage 2 ist falsch — das Oxidationsmittel wird selbst reduziert (es nimmt Elektronen auf). Aussage 4 ist falsch — Katalysatoren senken zwar E_A, verschieben aber NICHT das Gleichgewicht; sie beschleunigen Hin- und Rückreaktion gleichermaßen.",
+          difficulty: 2,
+          tags: ["typ-k", "redox", "säure-base"],
         },
       ],
     },
@@ -531,12 +547,21 @@ Die **Halbwertszeit t₁/₂** ist die Zeit, in der die Konzentration auf die H�
         "Fieber +2 °C erhöht biochemische Reaktionsgeschwindigkeiten um ~20–35 % (RGT-Prinzip).",
       ],
 
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Was ist die Michaelis-Menten-Konstante Kₘ, wie wird sie bestimmt, und welche klinische Bedeutung hat sie?",
-        answer:
-          "Die Michaelis-Menten-Konstante Kₘ ist definiert als die Substratkonzentration [S], bei der die Enzymgeschwindigkeit genau die Hälfte der Maximalgeschwindigkeit vₘₐₓ beträgt: v = vₘₐₓ/2. Sie ist ein Maß für die Affinität des Enzyms zu seinem Substrat — ein kleines Kₘ bedeutet, dass das Enzym bereits bei niedrigen Substratkonzentrationen nahezu gesättigt ist (hohe Affinität), ein großes Kₘ bedeutet, dass hohe Konzentrationen benötigt werden. Experimentell wird Kₘ über Messreihen verschiedener Substratkonzentrationen ermittelt und im Lineweaver-Burk-Doppelreziprokplot (1/v gegen 1/[S]) als −1/Kₘ am x-Achsenabschnitt abgelesen. Klinisch ist Kₘ bei der Pharmakologie relevant: Enzyme, die Medikamente metabolisieren (z. B. CYP450-Enzyme), haben charakteristische Kₘ-Werte; kompetitive Hemmstoffe erhöhen den apparenten Kₘ-Wert, ohne vₘₐₓ zu senken. Das ist bei der Entwicklung von Enzymhemmern (z. B. ACE-Hemmer, Statine) zentral. Auch bei erblichen Enzymdefekten (z. B. Phenylketonurie: PAH-Mangel) verändert sich Kₘ oder vₘₐₓ und bestimmt den Schweregrad der Erkrankung.",
+        text: "Was beschreibt die Michaelis-Menten-Konstante Kₘ?",
+        options: [
+          { id: "a", text: "Die maximale Reaktionsgeschwindigkeit vₘₐₓ" },
+          {
+            id: "b",
+            text: "Die Substratkonzentration, bei der die Reaktionsgeschwindigkeit vₘₐₓ/2 beträgt",
+          },
+          { id: "c", text: "Die Gleichgewichtskonstante der Gesamtreaktion" },
+          { id: "d", text: "Die Aktivierungsenergie der enzymatischen Reaktion" },
+          { id: "e", text: "Die Anzahl der aktiven Zentren pro Enzymmolekül" },
+        ],
+        correctOptionId: "b",
+        explanation:
+          "Kₘ ist die Substratkonzentration [S], bei der v = vₘₐₓ/2. Ein kleines Kₘ bedeutet hohe Affinität (Sättigung schon bei niedrigen [S]). Kompetitive Hemmstoffe erhöhen den apparenten Kₘ, ohne vₘₐₓ zu verändern.",
       },
 
       klinischerBezug:
@@ -665,6 +690,21 @@ Die **Halbwertszeit t₁/₂** ist die Zeit, in der die Konzentration auf die H�
           ],
           tags: ["halbwertszeit", "erste-ordnung", "pharmakokinetik"],
           difficulty: 2,
+        },
+        {
+          question: "Welche Aussage über Reaktionskinetik ist FALSCH?",
+          options: [
+            "Die RGT-Regel besagt, dass eine Temperaturerhöhung um 10 °C die Reaktionsgeschwindigkeit verdoppelt bis verdreifacht.",
+            "Die Halbwertszeit einer Reaktion 1. Ordnung ist konzentrationsunabhängig: t₁/₂ = ln 2 / k.",
+            "In der Arrhenius-Gleichung k = A·e^(−E_A/RT) führt eine Senkung von E_A zu einem kleineren k-Wert.",
+            "Bei der Michaelis-Menten-Kinetik gilt: Wenn [S] ≫ Kₘ, dann ist v ≈ vₘₐₓ (Sättigungskinetik, 0. Ordnung).",
+            "Der Ethanolabbau folgt bei üblichen Blutalkoholspiegeln einer Kinetik 0. Ordnung, weil die Enzyme ADH und ALDH gesättigt sind.",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Aussage C ist FALSCH: In der Arrhenius-Gleichung k = A·e^(−E_A/RT) steht E_A mit negativem Vorzeichen im Exponenten. Eine Senkung von E_A macht den Exponenten weniger negativ, was zu einem GRÖSSEREN e-Wert und damit einem GRÖSSEREN k führt — nicht einem kleineren. Genau das ist der Effekt eines Katalysators: E_A sinkt → k steigt → Reaktion wird schneller. Alle anderen Aussagen sind korrekt.",
+          difficulty: 2,
+          tags: ["falsch-aussage", "kinetik", "arrhenius"],
         },
       ],
       diagram: "enzyme-substrate",
@@ -823,19 +863,18 @@ Das Massenwirkungsgesetz beschreibt die O₂-Bindung an Hämoglobin: Hb + O₂ �
         "Hämoglobin-O₂-Bindung folgt MWG: pO₂ steuert die Lage des Gleichgewichts.",
       ],
 
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Formulieren Sie das Massenwirkungsgesetz für die Reaktion N₂(g) + 3H₂(g) ⇌ 2NH₃(g) und erläutern Sie, was ein K_c von 6×10² bei 500 °C über die Lage des Gleichgewichts aussagt. Wie ändert sich K_c, wenn die Reaktion endotherm wäre?",
-        answer: `Das Massenwirkungsgesetz für N₂ + 3H₂ ⇌ 2NH₃ lautet:
-
-K_c = [NH₃]² / ([N₂]·[H₂]³)
-
-Ein K_c von 6×10² (= 600) ist deutlich größer als 1. Das bedeutet, im Gleichgewicht liegen die Konzentrationen auf der Produktseite (NH₃) deutlich höher als auf der Eduktseite. Das Gleichgewicht ist stark zu den Produkten hin verschoben — die Ammoniaksynthese ist thermodynamisch günstig bei 500 °C.
-
-Allerdings sagt K_c nichts über die Reaktionsgeschwindigkeit aus: Der Kompromiss bei 500 °C ist nötig, weil bei niedrigerer Temperatur die Reaktion zwar ein noch günstigeres Gleichgewicht hat, aber kinetisch zu langsam abläuft. Der Eisenkatalysator senkt die Aktivierungsenergie und ermöglicht vernünftige Reaktionsgeschwindigkeiten.
-
-Wäre die Reaktion endotherm (ΔH > 0), würde K_c mit steigender Temperatur zunehmen (Van't-Hoff-Gleichung). Das Gleichgewicht läge bei höherer Temperatur weiter auf Produktseite — im Gegensatz zur exothermen Realreaktion, bei der K_c mit steigender Temperatur sinkt.`,
+        text: "Wie lautet der korrekte Ausdruck für die Gleichgewichtskonstante K_c der Reaktion N₂(g) + 3 H₂(g) ⇌ 2 NH₃(g)?",
+        options: [
+          { id: "a", text: "K_c = [N₂]·[H₂]³ / [NH₃]²" },
+          { id: "b", text: "K_c = [NH₃]² / ([N₂]·[H₂]³)" },
+          { id: "c", text: "K_c = [NH₃] / ([N₂]·[H₂])" },
+          { id: "d", text: "K_c = 2[NH₃] / ([N₂] + 3[H₂])" },
+          { id: "e", text: "K_c = [N₂]·[H₂] / [NH₃]" },
+        ],
+        correctOptionId: "b",
+        explanation:
+          "Das Massenwirkungsgesetz setzt Produkte in den Zähler und Edukte in den Nenner, jeweils potenziert mit den stöchiometrischen Koeffizienten: K_c = [NH₃]² / ([N₂]·[H₂]³). Option A ist der Kehrwert (K der Rückreaktion).",
       },
 
       klinischerBezug:
@@ -1125,15 +1164,21 @@ CO₂ + H₂O ⇌ H₂CO₃ ⇌ H⁺ + HCO₃⁻
         "Blutpuffer (CO₂/HCO₃⁻) funktioniert nach Le Chatelier: pH-Stabilisierung.",
       ],
 
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Erläutern Sie anhand der Reaktion N₂(g) + 3H₂(g) ⇌ 2NH₃(g) (ΔH = −92 kJ/mol), wie sich Druckerhöhung, Temperaturerhöhung und Zugabe eines Eisenkatalysators jeweils auf die Gleichgewichtslage und K_c auswirken.",
-        answer: `Druckerhöhung: Die Reaktion hat Δn = 2 − (1+3) = −2. Nach Le Chatelier verschiebt sich das Gleichgewicht bei Druckerhöhung zur Seite mit weniger Gasmolekülen — also zur Produktseite (NH₃). Q sinkt kurz unter K_c, das System reagiert durch mehr NH₃-Bildung bis Q = K_c. K_c selbst ändert sich nicht durch Druckänderungen.
-
-Temperaturerhöhung: Da die Reaktion exotherm ist (ΔH < 0), ist Wärme quasi ein Produkt. Temperaturerhöhung → Gleichgewicht verschiebt sich zu den Edukten (Le Chatelier). K_c sinkt mit steigender Temperatur. Daher wird beim Haber-Bosch-Verfahren trotz exothermer Reaktion eine moderate Temperatur von 400–500 °C gewählt — ein Kompromiss zwischen Thermodynamik und Kinetik.
-
-Eisenkatalysator: Der Katalysator beeinflusst weder die Gleichgewichtslage noch K_c. Er senkt lediglich die Aktivierungsenergie der Hinreaktion (und proportional auch der Rückreaktion, so dass K_c unverändert bleibt). Das Gleichgewicht wird schneller erreicht — in der Industrie erreicht man damit wirtschaftliche Ausbeuten in akzeptabler Zeit.`,
+        text: "Wie wirkt sich ein Katalysator auf das chemische Gleichgewicht aus?",
+        options: [
+          { id: "a", text: "Er verschiebt das Gleichgewicht auf die Produktseite" },
+          { id: "b", text: "Er erhöht die Gleichgewichtskonstante K_c" },
+          { id: "c", text: "Er beschleunigt die Hinreaktion, aber nicht die Rückreaktion" },
+          {
+            id: "d",
+            text: "Er beschleunigt die Gleichgewichtseinstellung, ohne K_c oder die Gleichgewichtslage zu ändern",
+          },
+          { id: "e", text: "Er senkt die Reaktionsenthalpie ΔH" },
+        ],
+        correctOptionId: "d",
+        explanation:
+          "Ein Katalysator senkt die Aktivierungsenergie von Hin- und Rückreaktion gleichermaßen. Er ändert weder K_c noch die Gleichgewichtslage, sondern beschleunigt nur die Einstellung des Gleichgewichts. Beim Haber-Bosch-Verfahren ermöglicht der Fe-Katalysator wirtschaftliche Ausbeuten.",
       },
 
       klinischerBezug:
@@ -1591,20 +1636,17 @@ Thermodynamisch erklärt: Bei höherem T steigt T·ΔS → ΔG wird für exergon
       ],
 
       altfrage: {
-        question:
-          "Für die Reaktion N₂O₄(g) → 2 NO₂(g) gilt: ΔH° = +57,2 kJ/mol und ΔS° = +175,8 J/(mol·K). Berechnen Sie ΔG° bei 25°C und bei 50°C und beurteilen Sie die Spontaneität.",
-        answer: `Bei 25°C (298 K):
-ΔG° = ΔH° − T·ΔS° = 57,2 kJ − 298 K · 0,1758 kJ/K = 57,2 − 52,4 = +4,8 kJ/mol
-ΔG° > 0 → nicht spontan bei 25°C.
-
-Bei 50°C (323 K):
-ΔG° = 57,2 − 323 · 0,1758 = 57,2 − 56,8 = +0,4 kJ/mol
-Immer noch knapp nicht spontan, aber fast im Gleichgewicht.
-
-Umkehrtemperatur: T* = ΔH/ΔS = 57200/175,8 ≈ 325 K ≈ 52°C.
-Ab ca. 52°C ist ΔG < 0 → die Dissoziation von N₂O₄ wird spontan.
-
-Dies ist ein Fall 4 (ΔH > 0, ΔS > 0): endotherm mit Entropiezunahme → bei hohen Temperaturen spontan. Die Entropie steigt, weil aus 1 Gasmolekül 2 werden. Der T·ΔS-Term wächst mit der Temperatur und überwiegt schließlich den positiven ΔH-Term.`,
+        text: "Eine Reaktion hat ΔH° = +57,2 kJ/mol und ΔS° = +175,8 J/(mol·K). Bei welcher Temperatur wird sie spontan?",
+        options: [
+          { id: "a", text: "Bei allen Temperaturen" },
+          { id: "b", text: "Bei keiner Temperatur" },
+          { id: "c", text: "Unterhalb von ca. 52 °C" },
+          { id: "d", text: "Oberhalb von ca. 52 °C (325 K)" },
+          { id: "e", text: "Nur bei 0 °C" },
+        ],
+        correctOptionId: "d",
+        explanation:
+          "Bei ΔH > 0 und ΔS > 0 wird ΔG = ΔH − T·ΔS negativ, sobald T·ΔS > ΔH. Die Umkehrtemperatur T* = ΔH/ΔS = 57200/175,8 ≈ 325 K ≈ 52 °C. Oberhalb davon ist die Reaktion spontan (exergon).",
       },
 
       klinischerBezug:

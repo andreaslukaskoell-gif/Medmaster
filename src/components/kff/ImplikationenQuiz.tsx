@@ -9,7 +9,11 @@ import { stripMarkdownAsterisks } from "@/utils/formatExplanation";
 import { ExamTimer } from "@/components/shared/ExamTimer";
 import { type ExamMode, EXAM_CONFIG } from "@/data/examConfig";
 import { generateImplicationTrainingTask } from "@/data/kffGenerators";
-import { implikationenTasks, type ImplikationTask } from "@/data/kffImplikationen";
+import {
+  implikationenTasks,
+  generateImplicationTaskSet,
+  type ImplikationTask,
+} from "@/data/kffImplikationen";
 import { filterValidImplikationTasks, logPoolWarning } from "@/data/kffValidation";
 import { getTasksForUserWithWeakness, taskToData } from "@/lib/taskDb";
 import { useStore } from "@/store/useStore";
@@ -86,15 +90,32 @@ export function ImplikationenQuiz({
       );
       const raw = tasks.map((t) => taskToData<ImplikationTask>(t));
       let valid = filterValidImplikationTasks(raw);
-      if (valid.length === 0) {
+      if (valid.length < questionCount) {
+        // Supplement with generated tasks from the new syllogism-based generator
+        const needed = questionCount - valid.length;
+        const generatedSet = generateImplicationTaskSet(needed);
+        const existingIds = new Set(valid.map((t) => t.id));
+        const supplement = filterValidImplikationTasks(
+          generatedSet.filter((t) => !existingIds.has(t.id))
+        );
+        valid = [...valid, ...supplement];
+        if (import.meta.env?.DEV && supplement.length > 0)
+          logPoolWarning("implikationen", valid.length, "Supplement (generateImplicationTaskSet)");
+      }
+      if (valid.length < questionCount) {
+        // Legacy fallback: old generator from kffGenerators
         const levels: [1, 2, 3] = [1, 2, 3];
         const generated: ImplikationTask[] = [];
-        for (let i = 0; i < questionCount; i++) {
+        const existingIds = new Set(valid.map((t) => t.id));
+        for (let i = 0; i < questionCount - valid.length; i++) {
           const t = generateImplicationTrainingTask(difficultyForIndex(i, levels));
           t.id = t.id ?? `imp-client-${Date.now()}-${i}`;
-          generated.push(t);
+          if (!existingIds.has(t.id)) {
+            existingIds.add(t.id);
+            generated.push(t);
+          }
         }
-        valid = shuffleSlice(filterValidImplikationTasks(generated), questionCount);
+        valid = [...valid, ...filterValidImplikationTasks(generated)];
         if (valid.length === 0) {
           const combined = [
             ...OFFICIAL_IMPLICATION_EXAMPLES,
@@ -105,7 +126,7 @@ export function ImplikationenQuiz({
           valid = shuffleSlice(filterValidImplikationTasks(combined), questionCount);
         }
         if (import.meta.env?.DEV)
-          logPoolWarning("implikationen", valid.length, "Fallback (generiert)");
+          logPoolWarning("implikationen", valid.length, "Fallback (legacy generator)");
       }
       const seenIds = getKffSeenIdsForDomain("Implikationen");
       setQuestions(preferUnseen(valid, questionCount, seenIds));
@@ -224,12 +245,27 @@ export function ImplikationenQuiz({
                   const raw = tasks.map((t) => taskToData<ImplikationTask>(t));
                   let valid = filterValidImplikationTasks(raw);
                   if (valid.length < count) {
+                    // Supplement with generated tasks from syllogism-based generator
+                    const needed = count - valid.length;
+                    const generatedSet = generateImplicationTaskSet(needed);
+                    const existingIds = new Set(valid.map((t) => t.id));
+                    const supplement = filterValidImplikationTasks(
+                      generatedSet.filter((t) => !existingIds.has(t.id))
+                    );
+                    valid = [...valid, ...supplement];
+                  }
+                  if (valid.length < count) {
+                    // Legacy fallback: old generator
                     const levels: [1, 2, 3] = [1, 2, 3];
                     const generated: ImplikationTask[] = [];
+                    const existingIds = new Set(valid.map((t) => t.id));
                     for (let i = 0; i < count - valid.length; i++) {
                       const t = generateImplicationTrainingTask(difficultyForIndex(i, levels));
                       t.id = t.id ?? `imp-exam-${Date.now()}-${i}`;
-                      generated.push(t);
+                      if (!existingIds.has(t.id)) {
+                        existingIds.add(t.id);
+                        generated.push(t);
+                      }
                     }
                     valid = [...valid, ...filterValidImplikationTasks(generated)];
                   }
@@ -252,19 +288,24 @@ export function ImplikationenQuiz({
                   setAnswers({});
                   setPhase("quiz");
                 } catch {
-                  const levels: [1, 2, 3] = [1, 2, 3];
-                  const generated: ImplikationTask[] = [];
-                  for (let i = 0; i < EXAM_CONFIG.implikationen.questions; i++) {
-                    const t = generateImplicationTrainingTask(difficultyForIndex(i, levels));
-                    t.id = t.id ?? `imp-exam-${Date.now()}-${i}`;
-                    generated.push(t);
+                  const count = EXAM_CONFIG.implikationen.questions;
+                  // Primary fallback: new syllogism-based generator
+                  let fallback = filterValidImplikationTasks(generateImplicationTaskSet(count));
+                  if (fallback.length < count) {
+                    // Secondary fallback: legacy generator
+                    const levels: [1, 2, 3] = [1, 2, 3];
+                    const existingIds = new Set(fallback.map((t) => t.id));
+                    for (let i = 0; i < count - fallback.length; i++) {
+                      const t = generateImplicationTrainingTask(difficultyForIndex(i, levels));
+                      t.id = t.id ?? `imp-exam-${Date.now()}-${i}`;
+                      if (!existingIds.has(t.id)) {
+                        existingIds.add(t.id);
+                        fallback.push(t);
+                      }
+                    }
+                    fallback = filterValidImplikationTasks(fallback);
                   }
-                  setQuestions(
-                    filterValidImplikationTasks(generated).slice(
-                      0,
-                      EXAM_CONFIG.implikationen.questions
-                    )
-                  );
+                  setQuestions(fallback.slice(0, count));
                   setMode("training");
                   setIndex(0);
                   setAnswers({});

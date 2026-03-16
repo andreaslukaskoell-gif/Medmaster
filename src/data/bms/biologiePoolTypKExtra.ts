@@ -232,7 +232,7 @@ export const biologiePoolTypKExtra: BMSFrage[] = [
     ],
     korrekte_option: "C",
     erklaerung:
-      "Richtig sind 1, 2, 4 und 5. Kodominanz bedeutet, dass beide Allele gleichzeitig im Phänotyp sichtbar sind (z. B. Blutgruppe AB) — nicht Dominanz eines über das andere (3 falsch).",
+      "Richtig sind 1, 2, 4 und 5. Kodominanz bedeutet, dass beide Allele gleichzeitig im Phänotyp sichtbar sind — nicht Dominanz eines über das andere (3 falsch).",
     schwierigkeit: 2,
     fsrs: null,
   },
@@ -462,7 +462,7 @@ export const biologiePoolTypKExtra: BMSFrage[] = [
     ],
     korrekte_option: "C",
     erklaerung:
-      "Richtig sind 1, 3, 4 und 5. Genetische Drift ist in kleinen Populationen am stärksten (Flaschenhalseffekt und Gründereffekt) (2 falsch).",
+      "Richtig sind 1, 3, 4 und 5. Genetische Drift ist in kleinen Populationen am stärksten (2 falsch).",
     schwierigkeit: 3,
     fsrs: null,
   },
@@ -692,7 +692,7 @@ export const biologiePoolTypKExtra: BMSFrage[] = [
     ],
     korrekte_option: "A",
     erklaerung:
-      "Richtig sind 1, 2 und 5. Kupffer-Zellen sind residente Makrophagen der Leber (keine Endothelzellen, kein Kollagen) (3 falsch). Sauerstoffreiches Blut kommt über die A. hepatica; die Pfortader bringt nährstoffreiches, aber sauerstoffärmeres Blut aus dem Darm (4 falsch).",
+      "Richtig sind 1, 2 und 5. Kupffer-Zellen sind residente Makrophagen der Leber (3 falsch). Sauerstoffreiches Blut kommt über die A. hepatica; die Pfortader bringt nährstoffreiches, aber sauerstoffärmeres Blut aus dem Darm (4 falsch).",
     schwierigkeit: 3,
     fsrs: null,
   },

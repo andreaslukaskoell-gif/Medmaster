@@ -28,6 +28,16 @@ export default function BlogIndex() {
 
   const [nlEmail, setNlEmail] = useState("");
   const [nlState, setNlState] = useState<"idle" | "loading" | "done" | "error">("idle");
+  const [activeTopic, setActiveTopic] = useState<string>("Alle");
+
+  const topicCounts = blogArticles.reduce<Record<string, number>>((acc, a) => {
+    acc[a.topic] = (acc[a.topic] ?? 0) + 1;
+    return acc;
+  }, {});
+  const topics = Object.keys(topicCounts).sort();
+
+  const filteredArticles =
+    activeTopic === "Alle" ? blogArticles : blogArticles.filter((a) => a.topic === activeTopic);
 
   useEffect(() => {
     trackEvent("blog_view", { page: "index" });
@@ -142,10 +152,46 @@ export default function BlogIndex() {
         </div>
       </div>
 
+      {/* Topic filter */}
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 mb-6">
+        <div className="flex flex-wrap items-center gap-2">
+          <button
+            onClick={() => setActiveTopic("Alle")}
+            className={`text-xs font-medium px-3 py-1.5 rounded-full border transition-colors ${
+              activeTopic === "Alle"
+                ? "text-white border-transparent"
+                : "text-[var(--text-secondary)] border-[var(--border)] bg-[var(--surface)] hover:border-[var(--accent)]/40"
+            }`}
+            style={activeTopic === "Alle" ? { backgroundColor: NAVY } : undefined}
+          >
+            Alle ({blogArticles.length})
+          </button>
+          {topics.map((topic) => (
+            <button
+              key={topic}
+              onClick={() => setActiveTopic(topic)}
+              className={`text-xs font-medium px-3 py-1.5 rounded-full border transition-colors ${
+                activeTopic === topic
+                  ? "text-white border-transparent"
+                  : "text-[var(--text-secondary)] border-[var(--border)] bg-[var(--surface)] hover:border-[var(--accent)]/40"
+              }`}
+              style={activeTopic === topic ? { backgroundColor: NAVY } : undefined}
+            >
+              {topic} ({topicCounts[topic]})
+            </button>
+          ))}
+        </div>
+      </div>
+
       {/* Article grid */}
       <main className="max-w-4xl mx-auto px-4 sm:px-6 pb-16">
+        {activeTopic !== "Alle" && (
+          <p className="text-sm text-[var(--muted)] mb-4">
+            {filteredArticles.length} Artikel zu {activeTopic}
+          </p>
+        )}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-          {blogArticles.map((article) => (
+          {filteredArticles.map((article) => (
             <Link
               key={article.slug}
               to={`/blog/${article.slug}`}

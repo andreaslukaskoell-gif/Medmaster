@@ -293,16 +293,6 @@ export const chemiePool3: Question[] = [
     ["Alkohol", "primär"]
   ),
   q(
-    "ch-pool-122",
-    "chem-kap1",
-    "Die Frequenz ν einer Welle und ihre Wellenlänge λ sind verknüpft durch (c = Lichtgeschwindigkeit):",
-    ["ν = λ", "ν · λ = c", "ν = c + λ", "ν = c − λ", "ν/λ = 1"],
-    1,
-    "c = λ · ν, also ν · λ = c. Hohe Frequenz → kleine Wellenlänge.",
-    "leicht",
-    ["Frequenz", "Wellenlänge"]
-  ),
-  q(
     "ch-pool-123",
     "chem-kap2",
     "Bei Boyle-Mariotte wird vorausgesetzt:",

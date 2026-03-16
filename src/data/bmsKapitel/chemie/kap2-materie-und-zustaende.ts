@@ -155,15 +155,18 @@ Die **Maxwell-Boltzmann-Verteilung** beschreibt, wie die Geschwindigkeiten der e
         "Reales Gas weicht bei hohem Druck (Z > 1) und tiefer Temperatur (Z < 1) vom Idealverhalten ab.",
         "Van-der-Waals: (p + an²/V²)(V − nb) = nRT – a korrigiert Anziehung, b korrigiert Eigenvolumen.",
       ],
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Erläutern Sie die ideale Gasgleichung pV = nRT und erklären Sie, unter welchen Bedingungen reale Gase davon abweichen. Welche Korrekturen nimmt die van-der-Waals-Gleichung vor?",
-        answer: `Die ideale Gasgleichung pV = nRT verknüpft Druck (p), Volumen (V), Stoffmenge (n), universelle Gaskonstante (R = 8,314 J/(mol·K)) und absolute Temperatur (T in Kelvin). Sie entstand durch Kombination der Gesetze von Boyle-Mariotte (pV = const bei T = const), Charles (V/T = const bei p = const) und Avogadro (V/n = const bei p, T = const). Das Modell setzt voraus: (1) Gasteilchen sind punktförmig (kein Eigenvolumen), (2) keine intermolekularen Wechselwirkungen.
-
-Reale Gase weichen besonders bei hohem Druck und tiefer Temperatur vom Idealverhalten ab. Bei hohem Druck wird das Eigenvolumen der Moleküle relevant – das freie Volumen ist kleiner als angenommen, der Kompressibilitätsfaktor Z = pV/(nRT) steigt über 1. Bei tiefer Temperatur überwiegen van-der-Waals-Anziehungskräfte (London-Dispersion, Dipol-Dipol-Wechselwirkungen), die den effektiven Wanddruck verringern – Z sinkt unter 1.
-
-Die van-der-Waals-Gleichung (p + a·n²/V²)(V − n·b) = nRT korrigiert beide Effekte: Der Term a·n²/V² addiert zum gemessenen Druck, um den durch Anziehungskräfte verringerten Wandstoß-Druck zu kompensieren. Der Term nb subtrahiert das Kovolumen der Moleküle vom Gesamtvolumen (V − nb = freies Volumen). Die substanzspezifischen Konstanten a und b spiegeln Polarität und Molekülgröße wider: H₂O (a = 5,537, stark polar) weicht viel stärker ab als He (a = 0,0346, kaum Wechselwirkungen). Nahe dem Kondensationspunkt versagt die van-der-Waals-Gleichung ebenfalls.`,
+        text: "Unter welchen Bedingungen weichen reale Gase am stärksten vom Idealverhalten ab?",
+        options: [
+          { id: "a", text: "Bei niedrigem Druck und hoher Temperatur" },
+          { id: "b", text: "Bei hohem Druck und tiefer Temperatur" },
+          { id: "c", text: "Bei niedrigem Druck und tiefer Temperatur" },
+          { id: "d", text: "Bei hohem Druck und hoher Temperatur" },
+          { id: "e", text: "Reale Gase verhalten sich immer ideal" },
+        ],
+        correctOptionId: "b",
+        explanation:
+          "Bei hohem Druck wird das Eigenvolumen der Moleküle relevant (Z > 1), bei tiefer Temperatur überwiegen intermolekulare Anziehungskräfte (Z < 1). Unter diesen Bedingungen versagt das ideale Gasgesetz pV = nRT. Die van-der-Waals-Gleichung korrigiert beide Effekte.",
       },
       klinischerBezug:
         "In der Anästhesiologie werden volatile Anästhetika (Sevofluran, Desfluran) als Gase dosiert; ihre Partialdruck-Verhältnisse im Blut folgen realen Gasgesetzen und bestimmen die Narkosetiefe (Blut-Gas-Löslichkeitskoeffizient). In der Pneumologie gilt: Der alveoläre Gasdruck ist die Summe der Partialdrücke von O₂ (≈13 kPa), CO₂ (≈5,3 kPa), N₂ und H₂O-Dampf bei 37 °C; Abweichungen zeigen pulmonale Erkrankungen an. Bei der Dekompressionserkrankung dehnen sich nach Boyle-Mariotte beim schnellen Auftauchen N₂-Blasen aus dem Blut aus und blockieren Gefäße.",
@@ -306,6 +309,16 @@ Die van-der-Waals-Gleichung (p + a·n²/V²)(V − n·b) = nRT korrigiert beide 
           ],
           difficulty: 3,
           tags: ["v-rms", "kinetische-gastheorie", "rechnen"],
+        },
+        {
+          question:
+            "Welche Aussagen sind richtig?\n\n1. Das ideale Gasgesetz pV = nRT gilt exakt für alle realen Gase bei beliebigen Bedingungen.\n2. Bei konstantem Druck und konstanter Temperatur enthalten gleiche Volumina verschiedener idealer Gase gleich viele Teilchen (Avogadro).\n3. Die van-der-Waals-Gleichung korrigiert das ideale Gasgesetz um das Eigenvolumen der Moleküle (b) und intermolekulare Anziehungskräfte (a).\n4. Das molare Volumen bei STP (0 °C, 1 bar) beträgt 11,2 L/mol.\n5. Die RMS-Geschwindigkeit eines Gases steigt mit zunehmender Temperatur.",
+          options: ["Nur 1 und 4", "Nur 2 und 5", "Nur 2, 3 und 5", "Nur 1, 3 und 4", "Alle"],
+          correctIndex: 2,
+          explanation:
+            "Aussagen 2, 3 und 5 sind korrekt: Avogadros Gesetz (2) besagt gleiche Teilchenzahl bei gleichem Volumen, Druck und Temperatur. Die van-der-Waals-Gleichung (3) korrigiert tatsächlich mit a (Anziehung) und b (Eigenvolumen). Die RMS-Geschwindigkeit (5) ist proportional zu √T, steigt also mit der Temperatur. Aussage 1 ist falsch — das ideale Gasgesetz gilt nur näherungsweise für reale Gase, besonders bei niedrigem Druck und hoher Temperatur. Aussage 4 ist falsch — das molare Volumen bei STP beträgt 22,4 L/mol, nicht 11,2 L/mol.",
+          difficulty: 2,
+          tags: ["typ-k", "gasgesetze", "avogadro"],
         },
       ],
     },
@@ -458,12 +471,18 @@ Nicht alle Feststoffe sind kristallin. **Amorphe Feststoffe** (Glas, viele Kunst
       ],
       klinischerBezug:
         "Die Viskosität des Blutes wird durch den Hämatokrit und die Plasmaproteine bestimmt. Bei Erkrankungen wie Polyzythämia vera oder multiplem Myelom (Paraproteinämie) steigt die Blutviskosität stark an, erhöht den peripheren Widerstand und kann zu Thrombosen, Schlaganfall und Herzversagen führen – Hyperviskositätssyndrom. Kryoprotektiva (z.B. Glycerin, DMSO) schützen bei der Kryokonservierung von Stammzellen vor der durch Eiskristallbildung bedingten Zellzerstörung, indem sie H-Brücken mit Wasser eingehen und die Kristallisation hemmen.",
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Erklären Sie mechanistisch, warum Wasser bei 4°C seine maximale Dichte hat und welche biologischen Konsequenzen die Dichteanomalie hat.",
-        answer:
-          "Die Dichteanomalie des Wassers hat ihre Ursache in der Konkurrenz zwischen thermischer Bewegung und Wasserstoffbrücken-Netzwerkbildung. Bei hohen Temperaturen ist das H-Brücken-Netzwerk unvollständig und dynamisch, die Moleküle sind relativ eng gepackt. Beim Abkühlen nimmt die kinetische Energie ab, das H-Brücken-Netzwerk wird vollständiger – die Packungsdichte steigt zunächst (Dichte nimmt zu). Unterhalb von 4°C beginnt die Ausbildung der hexagonalen Eiskristallstruktur, die trotz maximaler H-Brücken-Verknüpfung (4 H-Brücken pro Molekül) ein offenes Gitter mit Hohlräumen bildet – die Dichte nimmt wieder ab. Im Eis liegt die Dichte bei 0,917 g/cm³, also rund 8% unter der des flüssigen Wassers. Biologische Konsequenzen: (1) In Gewässern sinkt das dichtere 4°C-Wasser auf den Grund, an der Oberfläche gefriert das kältere, leichtere Wasser zu Eis. Die Eisdecke isoliert thermisch – aquatische Organismen überleben bei ca. 4°C. Ohne diese Anomalie würden Seen vollständig durchgefrieren. (2) Die Ausdehnung beim Gefrieren (ca. 9%) führt zu Frostsprengung in Gesteinsspalten und zum Platzen von Wasserleitungen. (3) In lebenden Zellen bilden Eiskristalle scharfkantige Strukturen, die Zellmembranen zerstören – relevant bei Erfrierungen und in der Kryokonservierung, wo Kryoprotektiva (Glycerin, DMSO) die Kristallisation hemmen.",
+        text: "Bei welcher Temperatur hat flüssiges Wasser seine maximale Dichte?",
+        options: [
+          { id: "a", text: "0 °C" },
+          { id: "b", text: "4 °C" },
+          { id: "c", text: "20 °C" },
+          { id: "d", text: "−4 °C" },
+          { id: "e", text: "100 °C" },
+        ],
+        correctOptionId: "b",
+        explanation:
+          "Wasser hat bei 4 °C seine maximale Dichte. Unterhalb von 4 °C beginnt die Ausbildung der hexagonalen Eiskristallstruktur mit Hohlräumen, die Dichte sinkt wieder. Diese Anomalie bewirkt, dass Eis schwimmt und Seen von oben zufrieren.",
       },
       selfTest: [
         {
@@ -622,6 +641,21 @@ Nicht alle Feststoffe sind kristallin. **Amorphe Feststoffe** (Glas, viele Kunst
           ],
           difficulty: 3,
           tags: ["viskosität", "multiples-myelom", "hyperviskosität"],
+        },
+        {
+          question: "Welche Aussage über Aggregatzustände und intermolekulare Kräfte ist FALSCH?",
+          options: [
+            "Im festen Zustand führen Teilchen nur Gitterschwingungen um ihre Gleichgewichtslage aus.",
+            "London-Dispersionskräfte wirken ausschließlich zwischen polaren Molekülen und sind bei unpolaren Molekülen vernachlässigbar.",
+            "Wasser hat bei 3,98 °C seine maximale Dichte (Dichteanomalie).",
+            "Ionenkristalle haben hohe Schmelzpunkte aufgrund starker elektrostatischer Anziehung zwischen Kationen und Anionen.",
+            "Wasserstoffbrückenbindungen erfordern ein H-Atom, das an N, O oder F gebunden ist.",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Aussage B ist FALSCH: London-Dispersionskräfte wirken zwischen ALLEN Atomen und Molekülen — auch zwischen unpolaren. Sie entstehen durch instantane induzierte Dipole durch Elektronenfluktuationen und sind bei großen, polarisierbaren Molekülen (z. B. I₂, langkettige Alkane) sogar die dominante intermolekulare Kraft. Alle anderen Aussagen sind korrekt.",
+          difficulty: 2,
+          tags: ["falsch-aussage", "aggregatzustände", "london-kräfte"],
         },
       ],
     },
@@ -798,12 +832,18 @@ Damit lässt sich berechnen, bei welcher Temperatur eine Flüssigkeit unter gege
       ],
       klinischerBezug:
         "Die Kryoskopie (Messung der Gefrierpunktserniedrigung) ist eine Standardmethode zur Bestimmung der Plasmaosmolalität. Eine erhöhte Osmolalitätslücke (gemessen minus berechnet > 10 mosmol/kg) ist ein wichtiger diagnostischer Hinweis auf eine Vergiftung mit osmotisch aktiven Substanzen wie Methanol oder Ethylenglykol (Frostschutzmittel) – beide lebensbedrohlich. Die hohe Verdampfungsenthalpie des Wassers (2257 J/g) ist physiologisch zentral für die Thermoregulation durch Schwitzen; anticholinerge Medikamente, die die Schweißsekretion hemmen, können bei körperlicher Belastung oder hohen Umgebungstemperaturen zu gefährlicher Hyperthermie führen.",
-      // TODO: echte MedAT-Altfrage prüfen – aktuell Übungsformat
       altfrage: {
-        question:
-          "Ein Patient trinkt versehentlich Frostschutzmittel (Ethylenglykol). Wie kann man dies laborchemisch durch Messung der Gefrierpunktserniedrigung erkennen, und warum ist der Van't-Hoff-Faktor bei der Interpretation zu beachten?",
-        answer:
-          "Ethylenglykol (Ethandiol, C₂H₆O₂, M = 62 g/mol) ist ein nicht-elektrolytischer, organischer Alkohol (i = 1 – er dissoziiert nicht in Ionen). Im Blutplasma erhöht er die Osmolalität, da jedes gelöste Molekül als ein Osmolyt zählt. Klinische Erkennung durch Osmolalitätslücke: Die gemessene Plasma-Osmolalität (durch Kryoskopie) übersteigt die berechnete Osmolalität (aus Na⁺, Glucose, Harnstoff) deutlich. Die Differenz – die Osmolalitätslücke – ist erhöht (>10 mosmol/kg, bei Vergiftung oft >30–50 mosmol/kg). Van't-Hoff-Faktor: Ethylenglykol ist kein Elektrolyt (i = 1), erzeugt also pro Mol nur eine Teilcheneinheit. NaCl hingegen ergibt i = 2 (Na⁺ + Cl⁻), was eine doppelt so starke Gefrierpunktserniedrigung pro Mol verursacht. Bei der Interpretation muss daher die Art des Gelösten berücksichtigt werden. Ethylenglykol wird zu toxischen Metaboliten (Glykolsäure, Oxalsäure → Hyperoxalurie, Nierenversagen durch Calciumoxalat-Kristalle) abgebaut. Therapie: Fomepizol oder Ethanol hemmen die Alkoholdehydrogenase kompetitiv und verhindern die Bildung der toxischen Metabolite. Frühzeitige Diagnose ist lebenswichtig.",
+        text: "Welcher Van't-Hoff-Faktor (i) gilt für NaCl in wässriger Lösung?",
+        options: [
+          { id: "a", text: "i = 1" },
+          { id: "b", text: "i = 2" },
+          { id: "c", text: "i = 3" },
+          { id: "d", text: "i = 0,5" },
+          { id: "e", text: "i = 4" },
+        ],
+        correctOptionId: "b",
+        explanation:
+          "NaCl dissoziiert vollständig in Na⁺ und Cl⁻, also 2 Teilchen pro Formeleinheit (i = 2). Nicht-Elektrolyte wie Ethylenglykol haben i = 1. CaCl₂ hat i = 3. Der Van't-Hoff-Faktor bestimmt die Stärke kolligativer Eigenschaften (Gefrierpunktserniedrigung, osmotischer Druck).",
       },
       selfTest: [
         {

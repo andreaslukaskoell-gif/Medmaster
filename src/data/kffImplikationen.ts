@@ -20,7 +20,7 @@
 // - Genau 5 Optionen, correctAnswer 0–4, explanation sachlich, rulesApplied [1–5]
 // - Grammatik: Durchgehend "Alle / Einige / Kein"; keine Mehrdeutigkeit (kein "könnte", "manchmal", "eventuell").
 // - Logik: Genau 1 zwingend richtige Antwort; alle anderen formal widerlegbar; Euler-Diagramm aus Relationsmodell.
-// - Vorbild: MedAT 2026 PDF „Implikationen erkennen“ (medizinstudieren.at)
+// - Vorbild: MedAT 2026 PDF 'Implikationen erkennen' (medizinstudieren.at)
 //
 // Offizielle Beispiele werden nie verändert; Übungsaufgaben und Generator
 // orientieren sich an diesem Format.
@@ -1570,3 +1570,356 @@ export function rebalanceEAnswerRate(tasks: ImplikationTask[], maxERate = 0.22):
 export const implikationenTasks: ImplikationTask[] = rebalanceEAnswerRate(
   getValidImplikationenTasks()
 );
+
+// =============================================================================
+// GENERATOR: Dynamische Implikations-Aufgaben
+// =============================================================================
+
+const NOUN_POOLS = {
+  animals: [
+    "Hunde",
+    "Katzen",
+    "Vögel",
+    "Fische",
+    "Pferde",
+    "Adler",
+    "Wale",
+    "Delfine",
+    "Elefanten",
+    "Tiger",
+    "Löwen",
+    "Bären",
+    "Haie",
+    "Schlangen",
+    "Schildkröten",
+    "Pinguine",
+    "Falken",
+    "Raben",
+    "Eidechsen",
+    "Frösche",
+  ],
+  people: [
+    "Ärzte",
+    "Studenten",
+    "Lehrer",
+    "Sportler",
+    "Musiker",
+    "Forscher",
+    "Ingenieure",
+    "Piloten",
+    "Architekten",
+    "Journalisten",
+    "Richter",
+    "Diplomaten",
+    "Köche",
+    "Chirurgen",
+    "Biologen",
+    "Physiker",
+    "Mathematiker",
+    "Künstler",
+  ],
+  things: [
+    "Planeten",
+    "Sterne",
+    "Metalle",
+    "Kristalle",
+    "Inseln",
+    "Vulkane",
+    "Diamanten",
+    "Moleküle",
+    "Fossilien",
+    "Satelliten",
+    "Minerale",
+    "Gesteine",
+    "Kometen",
+    "Galaxien",
+    "Atome",
+    "Zellen",
+    "Bakterien",
+    "Pilze",
+  ],
+};
+
+type SyllogismPattern = {
+  quantifier1: "Alle" | "Einige" | "Keine";
+  quantifier2: "Alle" | "Einige" | "Keine";
+  /** "chain" = A→B, B→C; "reverse" = A→B, C→B */
+  structure: "chain" | "reverse";
+  /** If null, correctAnswer = 4 (E). Otherwise: quantifier of correct conclusion and direction. */
+  conclusion: { quantifier: "Alle" | "Einige" | "Keine"; direction: "AC" | "CA" } | null;
+  difficulty: 1 | 2 | 3;
+  rulesApplied: number[];
+};
+
+const SYLLOGISM_PATTERNS: SyllogismPattern[] = [
+  // Difficulty 1: Clear patterns
+  {
+    quantifier1: "Alle",
+    quantifier2: "Alle",
+    structure: "chain",
+    conclusion: { quantifier: "Alle", direction: "AC" },
+    difficulty: 1,
+    rulesApplied: [3],
+  },
+  {
+    quantifier1: "Alle",
+    quantifier2: "Keine",
+    structure: "chain",
+    conclusion: { quantifier: "Keine", direction: "AC" },
+    difficulty: 1,
+    rulesApplied: [4],
+  },
+  // Difficulty 2: Mixed quantifiers
+  {
+    quantifier1: "Alle",
+    quantifier2: "Einige",
+    structure: "chain",
+    conclusion: { quantifier: "Einige", direction: "CA" },
+    difficulty: 2,
+    rulesApplied: [5],
+  },
+  {
+    quantifier1: "Einige",
+    quantifier2: "Alle",
+    structure: "chain",
+    conclusion: { quantifier: "Einige", direction: "AC" },
+    difficulty: 2,
+    rulesApplied: [5],
+  },
+  {
+    quantifier1: "Alle",
+    quantifier2: "Keine",
+    structure: "reverse",
+    conclusion: { quantifier: "Keine", direction: "AC" },
+    difficulty: 2,
+    rulesApplied: [4],
+  },
+  {
+    quantifier1: "Einige",
+    quantifier2: "Keine",
+    structure: "chain",
+    conclusion: { quantifier: "Einige", direction: "AC" },
+    difficulty: 2,
+    rulesApplied: [4, 5],
+  },
+  // Difficulty 3: No valid conclusion (E)
+  {
+    quantifier1: "Einige",
+    quantifier2: "Einige",
+    structure: "chain",
+    conclusion: null,
+    difficulty: 3,
+    rulesApplied: [1],
+  },
+  {
+    quantifier1: "Keine",
+    quantifier2: "Keine",
+    structure: "chain",
+    conclusion: null,
+    difficulty: 3,
+    rulesApplied: [2],
+  },
+  {
+    quantifier1: "Einige",
+    quantifier2: "Einige",
+    structure: "reverse",
+    conclusion: null,
+    difficulty: 3,
+    rulesApplied: [1],
+  },
+  {
+    quantifier1: "Keine",
+    quantifier2: "Keine",
+    structure: "reverse",
+    conclusion: null,
+    difficulty: 3,
+    rulesApplied: [2],
+  },
+];
+
+function pickRandom<T>(arr: T[]): T {
+  return arr[Math.floor(Math.random() * arr.length)];
+}
+
+function pick3UniqueNouns(): [string, string, string] {
+  const allNouns = [...NOUN_POOLS.animals, ...NOUN_POOLS.people, ...NOUN_POOLS.things];
+  const shuffled = allNouns.sort(() => Math.random() - 0.5);
+  return [shuffled[0], shuffled[1], shuffled[2]];
+}
+
+function buildPremiseText(
+  quantifier: "Alle" | "Einige" | "Keine",
+  subject: string,
+  predicate: string
+): string {
+  if (quantifier === "Keine") return `Keine ${subject} sind ${predicate}.`;
+  return `${quantifier} ${subject} sind ${predicate}.`;
+}
+
+function buildConclusionText(
+  quantifier: "Alle" | "Einige" | "Keine",
+  subject: string,
+  predicate: string
+): string {
+  if (quantifier === "Keine") return `Keine ${subject} sind ${predicate}.`;
+  return `${quantifier} ${subject} sind ${predicate}.`;
+}
+
+function buildExplanationForPattern(
+  pattern: SyllogismPattern,
+  A: string,
+  B: string,
+  C: string
+): string {
+  const ruleTexts: Record<number, string> = {
+    1: "Zwei 'einige'-Praemissen ergeben keinen zwingenden Schluss (Regel 1).",
+    2: "Zwei 'keine'-Praemissen ergeben keinen zwingenden Schluss (Regel 2).",
+    3: "Kein 'keine' in den Praemissen -> Schluss darf kein 'keine' enthalten (Regel 3).",
+    4: "Ein 'keine' in einer Praemisse -> Schluss muss 'keine' enthalten (Regel 4).",
+    5: "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5).",
+  };
+  const rules = pattern.rulesApplied.map((r) => ruleTexts[r]).join(" ");
+  if (!pattern.conclusion) {
+    return `${rules} Aus den Prämissen über ${A}, ${B} und ${C} lässt sich keine zwingende Schlussfolgerung ableiten. E ist korrekt.`;
+  }
+  const { quantifier, direction } = pattern.conclusion;
+  const [subj, pred] = direction === "AC" ? [A, C] : [C, A];
+  return `${rules} Im Euler-Diagramm folgt zwingend: ${quantifier} ${subj} sind ${pred}.`;
+}
+
+/**
+ * Generiert eine einzelne Implikations-Aufgabe mit der angegebenen Schwierigkeit.
+ * Nutzt die bestehende Validierung, um logische Korrektheit zu garantieren.
+ * Gibt null zurück, wenn nach 20 Versuchen keine valide Aufgabe entsteht.
+ */
+export function generateImplicationTask(difficulty: 1 | 2 | 3): ImplikationTask | null {
+  const patterns = SYLLOGISM_PATTERNS.filter((p) => p.difficulty === difficulty);
+  if (patterns.length === 0) return null;
+
+  for (let attempt = 0; attempt < 20; attempt++) {
+    const pattern = pickRandom(patterns);
+    const [A, B, C] = pick3UniqueNouns();
+
+    // Build premises based on structure
+    let premise1: string;
+    let premise2: string;
+    if (pattern.structure === "chain") {
+      premise1 = buildPremiseText(pattern.quantifier1, A, B);
+      premise2 = buildPremiseText(pattern.quantifier2, B, C);
+    } else {
+      premise1 = buildPremiseText(pattern.quantifier1, A, B);
+      premise2 = buildPremiseText(pattern.quantifier2, C, B);
+    }
+
+    // Build correct conclusion
+    let correctText: string;
+    if (pattern.conclusion) {
+      const { quantifier, direction } = pattern.conclusion;
+      const [subj, pred] = direction === "AC" ? [A, C] : [C, A];
+      correctText = buildConclusionText(quantifier, subj, pred);
+    } else {
+      correctText = ""; // E is correct
+    }
+
+    // Build distractors (wrong conclusions)
+    const quantifiers: ("Alle" | "Einige" | "Keine")[] = ["Alle", "Einige", "Keine"];
+    const allConclusions: string[] = [];
+    for (const q of quantifiers) {
+      allConclusions.push(buildConclusionText(q, A, C));
+      allConclusions.push(buildConclusionText(q, C, A));
+    }
+    const wrongOptions = allConclusions.filter((c) => c !== correctText);
+    const shuffledWrong = wrongOptions.sort(() => Math.random() - 0.5);
+
+    let options: [string, string, string, string, string];
+    let correctAnswer: number;
+
+    if (!pattern.conclusion) {
+      // E is correct — fill A–D with wrong conclusions
+      options = [
+        shuffledWrong[0],
+        shuffledWrong[1],
+        shuffledWrong[2],
+        shuffledWrong[3],
+        "Keine der Schlussfolgerungen ist richtig.",
+      ];
+      correctAnswer = 4;
+    } else {
+      // Place correct answer at random position 0–3
+      const wrongPick = shuffledWrong.slice(0, 3);
+      const abcd = [correctText, ...wrongPick].sort(() => Math.random() - 0.5);
+      options = [abcd[0], abcd[1], abcd[2], abcd[3], "Keine der Schlussfolgerungen ist richtig."];
+      correctAnswer = abcd.indexOf(correctText);
+    }
+
+    const task: ImplikationTask = {
+      id: `imp-gen-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+      premise1,
+      premise2,
+      options,
+      correctAnswer,
+      explanation: buildExplanationForPattern(pattern, A, B, C),
+      difficulty,
+      rulesApplied: pattern.rulesApplied,
+    };
+
+    if (validateImplikationTask(task)) return task;
+  }
+  return null;
+}
+
+/**
+ * Generiert ein Set von Implikations-Aufgaben. Bei fehlender Schwierigkeit: ausgewogen gemischt.
+ * Füllt mit statischen Aufgaben auf, wenn der Generator nicht genug erzeugt.
+ */
+export function generateImplicationTaskSet(
+  count: number,
+  difficulty?: 1 | 2 | 3
+): ImplikationTask[] {
+  const result: ImplikationTask[] = [];
+  const usedIds = new Set<string>();
+
+  if (difficulty) {
+    for (let i = 0; i < count * 3 && result.length < count; i++) {
+      const task = generateImplicationTask(difficulty);
+      if (task && !usedIds.has(task.id)) {
+        usedIds.add(task.id);
+        result.push(task);
+      }
+    }
+  } else {
+    // Balanced mix: ~33% each difficulty
+    const perDiff = Math.ceil(count / 3);
+    for (const d of [1, 2, 3] as const) {
+      const target = d === 3 ? count - result.length : perDiff;
+      for (
+        let i = 0;
+        i < target * 3 && result.filter((t) => t.difficulty === d).length < target;
+        i++
+      ) {
+        const task = generateImplicationTask(d);
+        if (task && !usedIds.has(task.id)) {
+          usedIds.add(task.id);
+          result.push(task);
+        }
+      }
+    }
+  }
+
+  // Fill with static tasks if generator didn't produce enough
+  if (result.length < count) {
+    const staticPool = difficulty
+      ? implikationenTasks.filter((t) => t.difficulty === difficulty)
+      : implikationenTasks;
+    const shuffled = [...staticPool].sort(() => Math.random() - 0.5);
+    for (const t of shuffled) {
+      if (result.length >= count) break;
+      if (!usedIds.has(t.id)) {
+        usedIds.add(t.id);
+        result.push(t);
+      }
+    }
+  }
+
+  return result.sort(() => Math.random() - 0.5).slice(0, count);
+}
