@@ -1108,6 +1108,22 @@ Bestimmte Schadstoffe werden **nicht abgebaut** und reichern sich entlang der Na
           difficulty: 2,
           tags: ["biomagnifikation", "methylquecksilber", "minamata", "lipophil"],
         },
+        {
+          question:
+            "Welche Aussagen zu Ökosystemen und Stoffkreisläufen sind richtig?\n\n1. Die 10%-Regel besagt, dass bei jedem trophischen Schritt ca. 10 % der Energie an die nächste Ebene weitergegeben wird.\n2. Die Netto-Primärproduktion (NPP) ist die Brutto-Primärproduktion (GPP) minus die Atmung der Produzenten.\n3. Der Phosphorkreislauf hat ein großes gasförmiges Reservoir in der Atmosphäre.\n4. N₂-Fixierung wird durch Rhizobium-Bakterien in Leguminosen-Wurzelknöllchen durchgeführt.\n5. Biomagnifikation beschreibt die Abnahme von Schadstoffkonzentrationen entlang der Nahrungskette.",
+          options: [
+            "Nur 1 und 3",
+            "Nur 1, 2 und 4",
+            "Nur 2, 3 und 5",
+            "Nur 4 und 5",
+            "Alle Aussagen",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Aussagen 1, 2 und 4 sind korrekt. Pro trophischem Schritt werden ca. 10 % der Energie weitergegeben (1). NPP = GPP − autotrophe Respiration (2). Rhizobium fixiert N₂ in Leguminosen (4). Aussage 3 ist falsch: Der Phosphorkreislauf hat KEIN gasförmiges Reservoir — das unterscheidet ihn vom C- und N-Kreislauf. Aussage 5 ist falsch: Biomagnifikation beschreibt die ZUNAHME von Schadstoffkonzentrationen entlang der Nahrungskette.",
+          difficulty: 2,
+          tags: ["typ-k", "ökosystem", "stoffkreislauf", "biomagnifikation", "10-prozent-regel"],
+        },
       ],
     },
 
@@ -1441,6 +1457,22 @@ Bakterienwachstum in geschlossener Kultur (Blutkultur, Nährmedium) durchläuft 
             "r-Strategen maximieren die Reproduktionsrate: viele Nachkommen, kurze Generationszeit, minimale Brutpflege. Sie besiedeln instabile/neue Habitate. K-Strategen (Option A) sind das Gegenteil.",
           difficulty: 1,
           tags: ["r-strategen", "k-strategen", "lebensstrategien"],
+        },
+        {
+          question:
+            "Welche Aussagen zur Populationsdynamik sind richtig?\n\n1. Im logistischen Wachstumsmodell ist die Wachstumsrate bei N = K/2 maximal.\n2. Intraspezifische Konkurrenz ist ein dichteabhängiger Regulationsfaktor.\n3. r-Strategen investieren viel in Brutpflege und haben wenige Nachkommen.\n4. Im Lotka-Volterra-Modell ist die Räuberpopulation phasenverschoben zur Beutepopulation.\n5. Die Herdenimmunitätsschwelle berechnet sich als H = 1 − 1/R₀.",
+          options: [
+            "Nur 1 und 3",
+            "Nur 2, 3 und 5",
+            "Nur 1, 2, 4 und 5",
+            "Nur 3 und 4",
+            "Alle Aussagen",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Aussagen 1, 2, 4 und 5 sind korrekt. Bei N = K/2 liegt der Wendepunkt der logistischen Kurve mit maximaler absoluter Wachstumsrate (1). Intraspezifische Konkurrenz wird bei hoher Dichte stärker (dichteabhängig, 2). Die Räuberkurve folgt der Beutekurve zeitverzögert (4). H = 1 − 1/R₀ ist die Formel für die Herdenimmunitätsschwelle (5). Aussage 3 ist falsch: r-Strategen haben VIELE Nachkommen, kurze Generationszeit und WENIG Brutpflege — K-Strategen sind das Gegenteil.",
+          difficulty: 3,
+          tags: ["typ-k", "populationsdynamik", "logistisch", "lotka-volterra", "herdenimmunität"],
         },
       ],
       altfrage: {

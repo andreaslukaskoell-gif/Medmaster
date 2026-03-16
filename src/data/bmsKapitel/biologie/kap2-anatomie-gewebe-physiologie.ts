@@ -1447,11 +1447,33 @@ Das **Riechepithel** sitzt in der oberen Nasenmuschel (Regio olfactoria, ~5 cm²
         "**Akkommodation** (Naheinstellung): **Ziliarmuskel kontrahiert** (Parasympathikus, M3, N. oculomotorius [III]) → Ziliarmuskel-Ring verkleinert → **Zonulafasern entspannen** → Linse **wölbt sich** (elastische Rückstellkraft) → Brechkraft ↑ (~24 dpt maximal). **Nahakkommodationstrias:** Akkommodation + Konvergenz (M. rectus medialis) + **Miosis** (M. sphincter pupillae, M3, Tiefenschärfe ↑).",
         "**Corti-Organ** (Hören): Schallwellen → Trommelfell → Gehörknöchelchen (Impedanzanpassung ~22-fach) → Oval-Fenster → Perilymphe → **Basilarmembran** (Tonotopie: Basis = hohe Frequenz ~20 kHz, Apex = niedrige Frequenz ~20 Hz) → **Haarzellen** (Stereozilien biegen, **Tip-Links** spannen) → **K⁺-Kanäle öffnen** (Endolymphe K⁺-reich, +80 mV) → Depolarisation → **Glutamat** → N. cochlearis.",
       ],
-      // TODO: echte MedAT-Altfrage prüfen - aktuell Übungsformat
       altfrage: {
-        question: "Was ist der Unterschied zwischen Stäbchen und Zapfen in der Netzhaut?",
-        answer:
-          "Stäbchen: ~120 Mio., hochsensitiv, Hell-/Dunkel-Sehen (skotopisches Sehen), 1 Pigment (Rhodopsin), in der Peripherie. Zapfen: ~6 Mio., 3 Typen (S/M/L für blau/grün/rot), Farbsehen und Sehschärfe, konzentriert in der Fovea (photopisches Sehen). Dunkeladaptation dauert ~30 min durch Rhodopsin-Regeneration.",
+        text: "Welche Aussage über Stäbchen und Zapfen der Netzhaut ist korrekt?",
+        options: [
+          {
+            id: "a",
+            text: "Zapfen sind mit ~120 Mio. deutlich häufiger als Stäbchen und in der Peripherie der Retina konzentriert.",
+          },
+          {
+            id: "b",
+            text: "Stäbchen enthalten drei verschiedene Opsine (S, M, L) und ermöglichen das Farbsehen.",
+          },
+          {
+            id: "c",
+            text: "Stäbchen (~120 Mio., Rhodopsin, peripher) dienen dem skotopischen Sehen; Zapfen (~6 Mio., 3 Opsine S/M/L, Fovea) ermöglichen Farbsehen und hohe Sehschärfe.",
+          },
+          {
+            id: "d",
+            text: "Die Dunkeladaptation dauert nur wenige Sekunden, da Rhodopsin sofort regeneriert wird.",
+          },
+          {
+            id: "e",
+            text: "Stäbchen und Zapfen sind gleichmäßig über die gesamte Retina verteilt und funktionell identisch.",
+          },
+        ],
+        correctOptionId: "c",
+        explanation:
+          "Stäbchen (~120 Mio., peripher) enthalten Rhodopsin und dienen dem skotopischen (Dämmerungs-)Sehen mit hoher Empfindlichkeit. Zapfen (~6 Mio., Fovea centralis) besitzen drei Opsine (S ~420 nm, M ~530 nm, L ~560 nm) und ermöglichen photopisches Sehen (Farbe + Sehschärfe). Dunkeladaptation dauert ~30 min (Rhodopsin-Regeneration).",
       },
       selfTest: [
         {
@@ -1735,11 +1757,30 @@ Dieses Schema ist auf **jede Hormonachse** übertragbar: CRH-ACTH-Cortisol, GnRH
         "Den Insulin-Sekretionsmechanismus (GLUT2, ATP-K⁺-Kanal, Ca²⁺, Exozytose) und die antagonistischen Wirkungen von Insulin (GLUT4, Glykogensynthese ↑) und Glukagon (Glykogenolyse ↑, Glukoneogenese ↑) auf den Blutzucker erklären.",
       ],
       sections: [],
-      // TODO: echte MedAT-Altfrage prüfen - aktuell Übungsformat
       altfrage: {
-        question: "Welche Hormone produziert die Schilddrüse und was bewirken sie?",
-        answer:
-          "T3 (Triiodthyronin, biologisch aktiver) und T4 (Thyroxin, Prohormon). Wirkung: Grundumsatzsteigerung, Thermogenese, Wachstum/Entwicklung. Regulation: TRH (Hypothalamus) → TSH (Hypophyse) → T3/T4 → negative Rückkopplung auf TRH und TSH.",
+        text: "Welche Aussage über die Schilddrüsenhormone T₃ und T₄ ist korrekt?",
+        options: [
+          {
+            id: "a",
+            text: "T₄ (Thyroxin) ist biologisch aktiver als T₃ und wirkt direkt ohne periphere Konversion.",
+          },
+          {
+            id: "b",
+            text: "T₃ ist biologisch aktiver als T₄. Beide steigern den Grundumsatz und die Thermogenese. Die Regulation erfolgt über TRH → TSH → T₃/T₄ mit negativer Rückkopplung.",
+          },
+          {
+            id: "c",
+            text: "TSH wird im Hypothalamus gebildet und stimuliert direkt die Jodaufnahme in der Schilddrüse.",
+          },
+          { id: "d", text: "T₃ und T₄ hemmen den Grundumsatz und senken die Körpertemperatur." },
+          {
+            id: "e",
+            text: "Die Schilddrüse produziert ausschließlich Calcitonin, nicht T₃ oder T₄.",
+          },
+        ],
+        correctOptionId: "b",
+        explanation:
+          "T₃ (Triiodthyronin) ist 3–5× potenter als T₄ (Thyroxin, Prohormon). T₄ wird peripher durch Dejodasen zu T₃ konvertiert. Wirkungen: Grundumsatz ↑, Thermogenese ↑, Wachstum/Entwicklung. Regulation: TRH (Hypothalamus) → TSH (Hypophyse) → T₃/T₄ → negative Rückkopplung auf TRH und TSH.",
       },
       selfTest: [
         {
