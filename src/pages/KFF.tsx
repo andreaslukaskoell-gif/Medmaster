@@ -41,6 +41,7 @@ const QUICK_START_VIEWS: Record<string, KffView> = {
   implikationen: "implikationen",
   gedaechtnis: "gedaechtnis-setup",
   wortfluessigkeit: "wortflüssigkeit",
+  figuren: "figuren-quiz",
 };
 
 export default function KFF() {
@@ -55,10 +56,10 @@ export default function KFF() {
 
   const startParam = searchParams.get("start");
   const initialView: KffView =
-    planZfCount > 0 || planImpCount > 0
-      ? "zahlenfolgen"
-      : startParam && QUICK_START_VIEWS[startParam]
-        ? QUICK_START_VIEWS[startParam]
+    startParam && QUICK_START_VIEWS[startParam]
+      ? QUICK_START_VIEWS[startParam]
+      : planZfCount > 0 || planImpCount > 0
+        ? "zahlenfolgen"
         : "overview";
   const [view, setView] = useState<KffView>(initialView);
   const [strategyKey, setStrategyKey] = useState<StrategyKey>("zahlenfolgen");
