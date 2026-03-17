@@ -8,6 +8,7 @@
  * This prevents 100+ console errors when the migration hasn't been run yet.
  */
 import { supabase } from "@/lib/supabase";
+import { isSchemaSkipActive, setSchemaSkip } from "@/lib/supabaseSchemaSkip";
 import type { Task, TaskDomain, TaskFilters, TaskInsert } from "./types";
 
 const TASKS_LOCAL_KEY = "medmaster_tasks_fallback";
@@ -21,6 +22,7 @@ let warnedOnce = false;
 
 function markUnavailable(): void {
   supabaseTasksUnavailable = true;
+  setSchemaSkip(); // propagate to global schema-skip so other systems also stop
   if (!warnedOnce) {
     warnedOnce = true;
     console.warn(
@@ -30,10 +32,13 @@ function markUnavailable(): void {
   }
 }
 
-function handleSupabaseError(error: { code?: string; message?: string } | null): boolean {
+function handleSupabaseError(
+  error: { code?: string; message?: string; status?: number } | null
+): boolean {
   if (!error) return false;
   const code = error.code ?? "";
   const msg = error.message ?? "";
+  const status = (error as { status?: number }).status ?? 0;
   // 42P01 = relation does not exist, PGRST* = PostgREST errors for missing/inaccessible tables
   if (
     code === "42P01" ||
@@ -41,6 +46,7 @@ function handleSupabaseError(error: { code?: string; message?: string } | null):
     code === "PGRST204" ||
     code === "PGRST301" ||
     code === "404" ||
+    status === 404 ||
     msg.includes("does not exist") ||
     msg.includes("relation") ||
     msg.includes("404")
@@ -53,7 +59,13 @@ function handleSupabaseError(error: { code?: string; message?: string } | null):
 
 /** Check if we should attempt Supabase calls */
 function useSupabase(): boolean {
-  return !!supabase && !supabaseTasksUnavailable;
+  if (!supabase || supabaseTasksUnavailable) return false;
+  // If the main sync already detected missing tables, skip without another 404
+  if (isSchemaSkipActive()) {
+    markUnavailable();
+    return false;
+  }
+  return true;
 }
 
 function rowToTask(row: {
