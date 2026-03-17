@@ -38,6 +38,9 @@ function useCountdown(targetDate: Date) {
   const diff = Math.max(0, targetDate.getTime() - now.getTime());
   return {
     days: Math.floor(diff / 86400000),
+    hours: Math.floor((diff % 86400000) / 3600000),
+    minutes: Math.floor((diff % 3600000) / 60000),
+    seconds: Math.floor((diff % 60000) / 1000),
     expired: diff === 0,
   };
 }
@@ -316,8 +319,20 @@ export default function PaidLandingBMS() {
       {/* ─── Urgency bar ─── */}
       {!countdown.expired && (
         <div className="text-center py-3 px-4" style={{ backgroundColor: NAVY }}>
-          <p className="text-sm font-medium text-white/90 tracking-wide">
-            Noch {countdown.days} Tage komplett gratis verfügbar
+          <p className="text-sm font-medium text-white/90 tracking-wide flex items-center justify-center gap-3">
+            <span>Gratis-Zugang endet in</span>
+            <span className="inline-flex gap-1.5 font-mono tabular-nums">
+              <span className="bg-white/15 rounded px-1.5 py-0.5">{countdown.days}d</span>
+              <span className="bg-white/15 rounded px-1.5 py-0.5">
+                {String(countdown.hours).padStart(2, "0")}h
+              </span>
+              <span className="bg-white/15 rounded px-1.5 py-0.5">
+                {String(countdown.minutes).padStart(2, "0")}m
+              </span>
+              <span className="bg-white/15 rounded px-1.5 py-0.5">
+                {String(countdown.seconds).padStart(2, "0")}s
+              </span>
+            </span>
           </p>
         </div>
       )}
@@ -608,9 +623,18 @@ export default function PaidLandingBMS() {
           >
             <Clock className="w-7 h-7 mx-auto mb-5" style={{ color: NAVY }} />
             <h3 className="text-2xl font-bold text-[var(--text-primary)] mb-3">
-              {countdown.expired
-                ? "Einmalig €29,90. Kein Abo."
-                : `Noch ${countdown.days} Tage komplett gratis.`}
+              {countdown.expired ? (
+                "Einmalig €29,90. Kein Abo."
+              ) : (
+                <>
+                  Gratis-Zugang endet in{" "}
+                  <span className="font-mono tabular-nums">
+                    {countdown.days}d {String(countdown.hours).padStart(2, "0")}h{" "}
+                    {String(countdown.minutes).padStart(2, "0")}m{" "}
+                    {String(countdown.seconds).padStart(2, "0")}s
+                  </span>
+                </>
+              )}
             </h3>
             <p className="text-sm text-[var(--text-secondary)] mb-8 max-w-md mx-auto leading-relaxed">
               {countdown.expired
