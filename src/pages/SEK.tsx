@@ -21,7 +21,6 @@ import { FloatingQuestionCounter } from "@/components/ui/FloatingQuestionCounter
 import { usePageTitle } from "@/hooks/usePageTitle";
 import StrategyGuideView from "@/components/shared/StrategyGuideView";
 import { sekStrategyGuide } from "@/data/sekData";
-import { UebungsbeschreibungCard } from "@/components/shared/UebungsbeschreibungCard";
 import { OfficialInstructionCard } from "@/components/shared/OfficialInstructionCard";
 import { OFFICIAL_EE_INSTRUCTION } from "@/data/emotionenErkennenOffiziell";
 import { OFFICIAL_ER_INSTRUCTION, OFFICIAL_SE_INSTRUCTION } from "@/data/sekDataNew";
@@ -66,6 +65,7 @@ export default function SEK() {
     | undefined;
 
   const [view, setView] = useState<SekView>("overview");
+  const { quizResults } = useStore();
 
   const hasTasks =
     emotionenErkennenOffiziellAlle.length > 0 ||
@@ -117,7 +117,6 @@ export default function SEK() {
     );
 
   // Compute per-subtest progress
-  const { quizResults } = useStore();
   const sekStats = (subject: string) => {
     const results = (quizResults ?? []).filter((r) => r.type === "sek" && r.subject === subject);
     const total = results.reduce((s, r) => s + r.total, 0);
@@ -179,12 +178,12 @@ export default function SEK() {
   ];
 
   return (
-    <div className="max-w-5xl mx-auto space-y-8">
+    <div className="max-w-5xl mx-auto space-y-6">
       <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "SEK" }]} />
 
-      {/* Hero */}
-      <div className="hero-orbs text-center">
-        <div className="flex items-center justify-center gap-3 mb-2">
+      {/* Header */}
+      <div>
+        <div className="flex items-center gap-3 mb-1">
           <h1 className="text-2xl font-bold text-[var(--text-primary)]">
             Sozial-emotionale Kompetenzen
           </h1>
@@ -192,10 +191,17 @@ export default function SEK() {
             10% des MedAT
           </span>
         </div>
-        <p className="text-sm text-[var(--muted)] max-w-2xl leading-relaxed">
-          3 Untertests zu Emotionserkennung, Emotionsregulation und sozialem Entscheiden. Basiert
-          auf den 7 Basisemotionen nach Ekman.
-        </p>
+        <div className="flex items-center gap-4 text-sm text-[var(--muted)]">
+          <span>3 Untertests · 7 Basisemotionen nach Ekman</span>
+          <span className="text-[var(--border)]">|</span>
+          <button
+            onClick={() => setView("strategy")}
+            className="text-[var(--accent)] hover:underline cursor-pointer flex items-center gap-1"
+          >
+            <BookOpen className="w-3.5 h-3.5" />
+            Strategie-Guide
+          </button>
+        </div>
         {dailyPlanSek != null && dailyPlanSek.length > 0 && (
           <div className="text-xs text-[var(--accent)] font-medium mt-2">
             Lernplan heute:{" "}
@@ -206,82 +212,51 @@ export default function SEK() {
         )}
       </div>
 
-      {/* Strategy hint — inline, not a separate card */}
-      <button
-        onClick={() => setView("strategy")}
-        className="w-full flex items-center gap-3 bg-[var(--accent)]/5 border border-[var(--accent)]/15 rounded-xl px-4 py-3 text-left cursor-pointer hover:bg-[var(--accent)]/8 transition-colors"
-      >
-        <BookOpen className="w-4 h-4 text-[var(--accent)] shrink-0" />
-        <span className="text-sm text-[var(--text-secondary)]">
-          <span className="font-semibold text-[var(--text-primary)]">Strategie-Guide:</span> Die 7
-          Basisemotionen und Lösungsstrategien für alle 3 Untertests
-        </span>
-        <span className="text-xs text-[var(--accent)] ml-auto shrink-0">Lesen →</span>
-      </button>
-
       {/* Subtest Cards */}
-      <div className="space-y-4">
+      <div className="rounded-xl border border-[var(--border)] divide-y divide-[var(--border)] overflow-hidden">
         {subtests.map((s) => (
-          <div key={s.id} className="card-glass p-5">
-            <div className="flex items-start gap-4">
-              {/* Color bar */}
-              <div
-                className="w-1 self-stretch rounded-full shrink-0"
-                style={{ background: s.color }}
-              />
+          <div
+            key={s.id}
+            className="flex items-center gap-4 px-5 py-4 hover:bg-[var(--accent)]/2 transition-colors group"
+          >
+            {/* Color accent */}
+            <div
+              className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0"
+              style={{ background: `${s.color}12` }}
+            >
+              <span className="text-sm font-bold" style={{ color: s.color }}>
+                {s.abbr}
+              </span>
+            </div>
 
-              <div className="flex-1 min-w-0">
-                {/* Title + abbr */}
-                <div className="flex items-center gap-2 mb-1">
-                  <h3 className="font-semibold text-[var(--text-primary)]">{s.title}</h3>
+            {/* Content */}
+            <div className="flex-1 min-w-0">
+              <div className="flex items-center gap-2">
+                <h3 className="font-semibold text-[var(--text-primary)]">{s.title}</h3>
+                <span className="text-xs text-[var(--muted)]">{s.taskCount} Aufgaben</span>
+                {s.stats.total > 0 && (
                   <span
-                    className="text-[10px] font-bold px-1.5 py-0.5 rounded"
-                    style={{ background: `${s.color}15`, color: s.color }}
+                    className={`text-xs font-semibold ${
+                      s.stats.pct >= 70
+                        ? "text-emerald-500"
+                        : s.stats.pct >= 40
+                          ? "text-amber-500"
+                          : "text-red-400"
+                    }`}
                   >
-                    {s.abbr}
+                    {s.stats.pct}%
                   </span>
-                  <span className="text-[10px] text-[var(--muted)]">{s.taskCount} Aufgaben</span>
-                </div>
-
-                {/* Format explanation */}
-                <p className="text-sm text-[var(--text-secondary)] mb-1.5">{s.format}</p>
-
-                {/* Scoring tip + Progress */}
-                <div className="flex items-center gap-3 mb-3 text-xs text-[var(--muted)]">
-                  <span>Wertung: {s.tip}</span>
-                  {s.stats.total > 0 && (
-                    <>
-                      <span>·</span>
-                      <span>{s.stats.total} geübt</span>
-                      <span>·</span>
-                      <span
-                        className={
-                          s.stats.pct >= 70
-                            ? "text-emerald-500 font-semibold"
-                            : s.stats.pct >= 40
-                              ? "text-amber-500 font-semibold"
-                              : "text-red-400 font-semibold"
-                        }
-                      >
-                        {s.stats.pct}% richtig
-                      </span>
-                    </>
-                  )}
-                </div>
-
-                {/* Actions */}
-                <div className="flex items-center gap-2">
-                  <Button
-                    variant="premium"
-                    size="sm"
-                    onClick={s.onStart}
-                    disabled={s.taskCount === 0}
-                  >
-                    <Play className="w-4 h-4 mr-1" /> Üben
-                  </Button>
-                  <OfficialInstructionCard title={s.instructionTitle} instruction={s.instruction} />
-                </div>
+                )}
               </div>
+              <p className="text-sm text-[var(--muted)] mt-0.5 line-clamp-1">{s.format}</p>
+            </div>
+
+            {/* Actions */}
+            <div className="flex items-center gap-2 shrink-0">
+              <OfficialInstructionCard title={s.instructionTitle} instruction={s.instruction} />
+              <Button variant="premium" size="sm" onClick={s.onStart} disabled={s.taskCount === 0}>
+                Üben <ArrowRight className="w-3.5 h-3.5 ml-1" />
+              </Button>
             </div>
           </div>
         ))}

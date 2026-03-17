@@ -3,12 +3,10 @@ import { Link, useLocation } from "react-router-dom";
 import {
   ArrowLeft,
   BookOpen,
-  Play,
   Send,
   CheckCircle2,
   XCircle,
   ArrowRight,
-  FileText,
   ChevronDown,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -64,8 +62,9 @@ export default function TV() {
   // Aussagen mode
   const [selectedAussagenIndex, setSelectedAussagenIndex] = useState(0);
   const [aussagenAnswers, setAussagenAnswers] = useState<Record<string, TVAussagenOptionId>>({});
-  // Mobile
+  // Collapse toggles
   const [showAllLegacy, setShowAllLegacy] = useState(false);
+  const [showAllOffiziell, setShowAllOffiziell] = useState(false);
   const { addXP, checkStreak, saveQuizResult, logActivity } = useStore();
   const getMinutes = useSessionTimer();
 
@@ -706,21 +705,28 @@ export default function TV() {
   const displayedLegacyTexts = showAllLegacy ? tvTexts : tvTexts.slice(0, 3);
 
   return (
-    <div className="max-w-5xl mx-auto space-y-8">
+    <div className="max-w-5xl mx-auto space-y-6">
       <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "TV" }]} />
 
-      {/* Hero */}
-      <div className="hero-orbs text-center">
-        <div className="flex items-center justify-center gap-3 mb-2">
+      {/* Header */}
+      <div>
+        <div className="flex items-center gap-3 mb-1">
           <h1 className="text-2xl font-bold text-[var(--text-primary)]">Textverständnis</h1>
           <span className="text-xs font-semibold text-[var(--accent)] bg-[var(--accent)]/10 px-2.5 py-1 rounded-full">
             10% des MedAT
           </span>
         </div>
-        <p className="text-sm text-[var(--muted)] max-w-2xl leading-relaxed">
-          Du liest 5 Texte und beantwortest danach Multiple-Choice-Fragen dazu. Im MedAT hast du 35
-          Minuten für alle Texte — übe, schnell die Kernaussagen zu erfassen.
-        </p>
+        <div className="flex items-center gap-4 text-sm text-[var(--muted)]">
+          <span>5 Texte · 35 Minuten · Multiple-Choice</span>
+          <span className="text-[var(--border)]">|</span>
+          <button
+            onClick={() => setView("strategy")}
+            className="text-[var(--accent)] hover:underline cursor-pointer flex items-center gap-1"
+          >
+            <BookOpen className="w-3.5 h-3.5" />
+            Strategie-Guide
+          </button>
+        </div>
         {dailyPlanTvTexts != null && dailyPlanTvTexts > 0 && (
           <div className="text-xs text-[var(--accent)] font-medium mt-2">
             Lernplan heute: {dailyPlanTvTexts} Text{dailyPlanTvTexts > 1 ? "e" : ""}
@@ -728,64 +734,40 @@ export default function TV() {
         )}
       </div>
 
-      {/* Strategy hint */}
-      <button
-        onClick={() => setView("strategy")}
-        className="w-full flex items-center gap-3 bg-[var(--accent)]/5 border border-[var(--accent)]/15 rounded-xl px-4 py-3 text-left cursor-pointer hover:bg-[var(--accent)]/8 transition-colors"
-      >
-        <BookOpen className="w-4 h-4 text-[var(--accent)] shrink-0" />
-        <span className="text-sm text-[var(--text-secondary)]">
-          <span className="font-semibold text-[var(--text-primary)]">Strategie-Guide:</span>{" "}
-          Lesetechniken, Zeitmanagement und die beste Vorgehensweise für TV
-        </span>
-        <span className="text-xs text-[var(--accent)] ml-auto shrink-0">Lesen →</span>
-      </button>
-
       {/* MC Text Sets — primary section */}
       {allTextSets.length > 0 && (
-        <section className="space-y-4">
-          <div>
+        <section className="space-y-3">
+          <div className="flex items-baseline justify-between">
             <h2 className="text-lg font-semibold text-[var(--text-primary)]">Testsets</h2>
-            <p className="text-sm text-[var(--muted)] mt-0.5">
-              Je 5 Texte mit Multiple-Choice-Fragen — das Hauptformat zum Üben
-            </p>
+            <span className="text-xs text-[var(--muted)]">Je 5 Texte mit MC-Fragen</span>
           </div>
-          <div className="grid grid-cols-2 gap-4 stagger-children">
+          <div className="rounded-xl border border-[var(--border)] divide-y divide-[var(--border)] overflow-hidden">
             {allTextSets.map((set, i) => {
               const totalQ = set.texts.reduce((sum, t) => sum + t.questions.length, 0);
               return (
-                <Card key={set.id} className="card-glass">
-                  <CardContent className="p-5">
-                    <div className="flex items-start gap-3 mb-3">
-                      <div className="w-10 h-10 bg-[var(--card)] border border-[var(--border)] rounded-xl flex items-center justify-center shrink-0">
-                        <FileText className="w-5 h-5 text-[var(--accent)]" />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <div className="flex items-center gap-2">
-                          <h3 className="font-semibold text-[var(--foreground)] text-sm truncate">
-                            {set.name}
-                          </h3>
-                          <Badge
-                            className={`text-[10px] shrink-0 ${difficultyColors[set.difficulty] || ""}`}
-                          >
-                            {set.difficulty}
-                          </Badge>
-                        </div>
-                        <p className="text-xs text-[var(--muted)] mt-1">
-                          {set.texts.length} Texte · {totalQ} Fragen
-                        </p>
-                      </div>
-                    </div>
-                    <Button
-                      variant="premium"
-                      size="sm"
-                      className="w-full"
-                      onClick={() => handleStartSet(i)}
-                    >
-                      <Play className="w-4 h-4 mr-1" /> Starten
-                    </Button>
-                  </CardContent>
-                </Card>
+                <button
+                  key={set.id}
+                  onClick={() => handleStartSet(i)}
+                  className="w-full flex items-center gap-4 px-5 py-3.5 text-left hover:bg-[var(--accent)]/3 transition-colors cursor-pointer group"
+                >
+                  <span className="text-xs font-bold text-[var(--muted)] tabular-nums w-5 text-center shrink-0">
+                    {i + 1}
+                  </span>
+                  <div className="flex-1 min-w-0">
+                    <span className="text-sm font-medium text-[var(--text-primary)] truncate block">
+                      {set.name}
+                    </span>
+                  </div>
+                  <Badge
+                    className={`text-[10px] shrink-0 ${difficultyColors[set.difficulty] || ""}`}
+                  >
+                    {set.difficulty}
+                  </Badge>
+                  <span className="text-xs text-[var(--muted)] shrink-0 tabular-nums">
+                    {totalQ} Fragen
+                  </span>
+                  <ArrowRight className="w-4 h-4 text-[var(--muted)] shrink-0 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </button>
               );
             })}
           </div>
@@ -793,102 +775,104 @@ export default function TV() {
       )}
 
       {/* Offizielles Aussagen-Format */}
-      <section className="space-y-4 border-t border-[var(--border)] pt-8">
-        <div>
+      <section className="space-y-3 border-t border-[var(--border)] pt-8">
+        <div className="flex items-baseline justify-between">
           <div className="flex items-center gap-2">
-            <h2 className="text-lg font-semibold text-[var(--foreground)]">Offizielles Format</h2>
+            <h2 className="text-lg font-semibold text-[var(--text-primary)]">Offizielles Format</h2>
             <Badge variant="info" className="text-[10px]">
               MedAT
             </Badge>
           </div>
-          <p className="text-sm text-[var(--muted)] mt-0.5">
-            Aussagen-Kombination: Nummerierte Aussagen bewerten, dann passende Kombination (A-E)
-            wählen
-          </p>
+          <OfficialInstructionCard
+            title="Offizielle Instruktion: Textverständnis"
+            instruction={OFFICIAL_TV_INSTRUCTION}
+          />
         </div>
-        <OfficialInstructionCard
-          title="Offizielle Instruktion: Textverständnis"
-          instruction={OFFICIAL_TV_INSTRUCTION}
-        />
-        <div className="grid grid-cols-2 gap-4 stagger-children">
-          {tvOffiziellTexte.map((t, i) => (
-            <Card key={t.id} className="card-glass">
-              <CardContent className="p-5">
-                <div className="flex items-start gap-3 mb-3">
-                  <div className="w-10 h-10 bg-purple-100 dark:bg-purple-900/30 rounded-xl flex items-center justify-center shrink-0">
-                    <FileText className="w-5 h-5 text-purple-600 dark:text-purple-400" />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center gap-2">
-                      <h3 className="font-semibold text-[var(--foreground)] text-sm truncate">
-                        {t.title}
-                      </h3>
-                      {i < 2 && (
-                        <Badge variant="info" className="text-[10px] shrink-0">
-                          Offiziell
-                        </Badge>
-                      )}
-                    </div>
-                    <p className="text-xs text-[var(--muted)] mt-1">
-                      {t.fragen.length} Frage{t.fragen.length > 1 ? "n" : ""} · Aussagen-Format
-                    </p>
-                  </div>
-                </div>
-                <Button
-                  variant="premium"
-                  size="sm"
-                  className="w-full"
-                  onClick={() => handleStartAussagen(i)}
-                >
-                  <Play className="w-4 h-4 mr-1" /> Starten
-                </Button>
-              </CardContent>
-            </Card>
+        <p className="text-sm text-[var(--muted)]">
+          Aussagen-Kombination: Nummerierte Aussagen bewerten, dann passende Kombination (A–E)
+          wählen
+        </p>
+        <div className="rounded-xl border border-[var(--border)] divide-y divide-[var(--border)] overflow-hidden">
+          {(showAllOffiziell ? tvOffiziellTexte : tvOffiziellTexte.slice(0, 5)).map((t, i) => (
+            <button
+              key={t.id}
+              onClick={() => handleStartAussagen(i)}
+              className="w-full flex items-center gap-4 px-5 py-3.5 text-left hover:bg-[var(--accent)]/3 transition-colors cursor-pointer group"
+            >
+              <span className="text-xs font-bold text-[var(--muted)] tabular-nums w-5 text-center shrink-0">
+                {i + 1}
+              </span>
+              <div className="flex-1 min-w-0">
+                <span className="text-sm font-medium text-[var(--text-primary)] truncate block">
+                  {t.title}
+                </span>
+              </div>
+              {i < 2 && (
+                <Badge variant="info" className="text-[10px] shrink-0">
+                  Offiziell
+                </Badge>
+              )}
+              <span className="text-xs text-[var(--muted)] shrink-0 tabular-nums">
+                {t.fragen.length} Fragen
+              </span>
+              <ArrowRight className="w-4 h-4 text-[var(--muted)] shrink-0 opacity-0 group-hover:opacity-100 transition-opacity" />
+            </button>
           ))}
         </div>
+        {tvOffiziellTexte.length > 5 && !showAllOffiziell && (
+          <div className="flex justify-center pt-1">
+            <button
+              onClick={() => setShowAllOffiziell(true)}
+              className="flex items-center gap-2 text-sm text-[var(--accent)] hover:opacity-80 transition-opacity cursor-pointer"
+            >
+              <ChevronDown className="w-4 h-4" /> Alle {tvOffiziellTexte.length} Texte anzeigen
+            </button>
+          </div>
+        )}
+        {showAllOffiziell && tvOffiziellTexte.length > 5 && (
+          <div className="flex justify-center pt-1">
+            <button
+              onClick={() => setShowAllOffiziell(false)}
+              className="text-sm text-[var(--muted)] hover:text-[var(--foreground)] transition-colors cursor-pointer"
+            >
+              Weniger anzeigen
+            </button>
+          </div>
+        )}
       </section>
 
       {/* Klassischer Modus */}
-      <section className="space-y-4 border-t border-[var(--border)] pt-8">
-        <div>
-          <h2 className="text-lg font-semibold text-[var(--foreground)]">Klassischer Modus</h2>
-          <p className="text-sm text-[var(--muted)] mt-0.5">
-            Einzelne Texte mit Ableitbar/Nicht-Ableitbar Aussagen
-          </p>
+      <section className="space-y-3 border-t border-[var(--border)] pt-8">
+        <div className="flex items-baseline justify-between">
+          <h2 className="text-lg font-semibold text-[var(--text-primary)]">Klassischer Modus</h2>
+          <span className="text-xs text-[var(--muted)]">Ableitbar / Nicht ableitbar</span>
         </div>
-        <div className="space-y-3">
+        <div className="rounded-xl border border-[var(--border)] divide-y divide-[var(--border)] overflow-hidden">
           {displayedLegacyTexts.map((t, i) => (
-            <Card key={t.id} className="card-glass">
-              <CardContent className="p-4 flex items-center justify-between gap-3">
-                <div className="flex items-center gap-3 flex-1 min-w-0">
-                  <div className="w-8 h-8 bg-[var(--card)] border border-[var(--border)] rounded-lg flex items-center justify-center shrink-0">
-                    <span className="text-xs font-semibold text-[var(--muted)]">{i + 1}</span>
-                  </div>
-                  <div className="min-w-0">
-                    <h3 className="font-semibold text-[var(--foreground)] text-sm truncate">
-                      {t.title}
-                    </h3>
-                    <p className="text-xs text-[var(--muted)] mt-0.5">
-                      {t.statements.length} Aussagen zu bewerten
-                    </p>
-                  </div>
-                </div>
-                <Button
-                  variant="premium"
-                  size="sm"
-                  onClick={() => handleStartLegacy(i)}
-                  className="shrink-0"
-                >
-                  <Play className="w-4 h-4 mr-1" /> Starten
-                </Button>
-              </CardContent>
-            </Card>
+            <button
+              key={t.id}
+              onClick={() => handleStartLegacy(i)}
+              className="w-full flex items-center gap-4 px-5 py-3.5 text-left hover:bg-[var(--accent)]/3 transition-colors cursor-pointer group"
+            >
+              <span className="text-xs font-bold text-[var(--muted)] tabular-nums w-5 text-center shrink-0">
+                {i + 1}
+              </span>
+              <div className="flex-1 min-w-0">
+                <span className="text-sm font-medium text-[var(--text-primary)] truncate block">
+                  {t.title}
+                </span>
+              </div>
+              <span className="text-xs text-[var(--muted)] shrink-0 tabular-nums">
+                {t.statements.length} Aussagen
+              </span>
+              <ArrowRight className="w-4 h-4 text-[var(--muted)] shrink-0 opacity-0 group-hover:opacity-100 transition-opacity" />
+            </button>
           ))}
         </div>
 
         {/* Show more toggle */}
         {tvTexts.length > 3 && !showAllLegacy && (
-          <div className="flex justify-center pt-2">
+          <div className="flex justify-center pt-1">
             <button
               onClick={() => setShowAllLegacy(true)}
               className="flex items-center gap-2 text-sm text-[var(--accent)] hover:opacity-80 transition-opacity cursor-pointer"
@@ -898,7 +882,7 @@ export default function TV() {
           </div>
         )}
         {showAllLegacy && tvTexts.length > 3 && (
-          <div className="flex justify-center pt-2">
+          <div className="flex justify-center pt-1">
             <button
               onClick={() => setShowAllLegacy(false)}
               className="text-sm text-[var(--muted)] hover:text-[var(--foreground)] transition-colors cursor-pointer"
