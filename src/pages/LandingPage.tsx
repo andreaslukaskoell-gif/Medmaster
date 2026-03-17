@@ -54,7 +54,7 @@ const SAMPLE_Q = {
   text: "Welche Aussage zur DNA-Replikation ist FALSCH?",
   options: [
     { id: "a", text: "Die Replikation verläuft semikonservativ" },
-    { id: "b", text: "Die DNA-Polymerase synthetisiert in 5'\u21923'-Richtung" },
+    { id: "b", text: "Die DNA-Polymerase synthetisiert in 5'→3'-Richtung" },
     { id: "c", text: "Am Leitstrang erfolgt die Synthese kontinuierlich" },
     { id: "d", text: "Die Helikase spaltet die Wasserstoffbrücken" },
     { id: "e", text: "Okazaki-Fragmente entstehen am Leitstrang" },
@@ -121,9 +121,9 @@ function SampleQuestion({ onSignupClick }: { onSignupClick: () => void }) {
                 className={`w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold shrink-0 transition-colors ${letterStyle}`}
               >
                 {submitted && opt.id === q.correctId
-                  ? "\u2713"
+                  ? "✓"
                   : submitted && opt.id === selected
-                    ? "\u2717"
+                    ? "✗"
                     : letter}
               </span>
               <span className="leading-snug">{opt.text}</span>
@@ -138,7 +138,7 @@ function SampleQuestion({ onSignupClick }: { onSignupClick: () => void }) {
           disabled={!selected}
           className="btn-premium w-full py-4 text-sm font-semibold disabled:opacity-30 disabled:cursor-not-allowed rounded-xl"
         >
-          Antwort pr\u00fcfen
+          Antwort prüfen
         </button>
       ) : (
         <div className="space-y-5">
@@ -161,7 +161,7 @@ function SampleQuestion({ onSignupClick }: { onSignupClick: () => void }) {
             }}
             className="btn-premium flex items-center justify-center gap-2.5 w-full py-4 text-sm font-semibold rounded-xl"
           >
-            \u00dcber 5.000 weitere Fragen warten
+            Über 5.000 weitere Fragen warten
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
@@ -201,9 +201,9 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 
 export default function LandingPage() {
   usePageMeta({
-    title: "MedMaster \u2014 MedAT 2026 Vorbereitung | 5.000+ Fragen, KI-Lernsystem",
+    title: "MedMaster — MedAT 2026 Vorbereitung | 5.000+ Fragen, KI-Lernsystem",
     description:
-      "MedAT 2026 bestehen mit MedMaster: 5.000+ \u00dcbungsfragen, alle 4 Testbereiche (BMS, KFF, TV, SEK), adaptives KI-Lernsystem, Pr\u00fcfungssimulation. Kostenlos starten.",
+      "MedAT 2026 bestehen mit MedMaster: 5.000+ Übungsfragen, alle 4 Testbereiche (BMS, KFF, TV, SEK), adaptives KI-Lernsystem, Prüfungssimulation. Kostenlos starten.",
     canonical: "https://medmaster.at",
     ogImage: "https://medmaster.at/og-image.png",
   });
@@ -361,7 +361,7 @@ export default function LandingPage() {
           >
             17.000 Kandidaten.
             <br />
-            1.900 Pl\u00e4tze.
+            1.900 Plätze.
             <br />
             <span className="text-[var(--accent)]">Bist du vorbereitet?</span>
           </motion.h1>
@@ -370,7 +370,7 @@ export default function LandingPage() {
             transition={{ ...fade.transition, delay: 0.2 }}
             className="text-xl text-[var(--text-secondary)] max-w-lg mx-auto mb-12 leading-relaxed"
           >
-            Der Unterschied zwischen Zusage und Absage sind oft wenige Punkte. MedMaster gibt dir
+            Der Unterschied zwischen Zusage und Absage ist oft nur wenige Punkte. MedMaster gibt dir
             die Werkzeuge, die diesen Unterschied machen.
           </motion.p>
 
@@ -399,7 +399,7 @@ export default function LandingPage() {
             transition={{ ...fade.transition, delay: 0.35 }}
             className="text-xs text-[var(--muted)]/60 tracking-wide"
           >
-            Keine Kreditkarte &middot; Jederzeit k\u00fcndbar &middot; 1 Klick mit Google
+            Keine Kreditkarte &middot; Jederzeit kündbar &middot; 1 Klick mit Google
           </motion.p>
         </div>
       </section>
@@ -409,10 +409,10 @@ export default function LandingPage() {
         <div className="max-w-4xl mx-auto px-8">
           <motion.div {...fade} className="grid grid-cols-4 gap-8">
             {[
-              { value: "5.000+", label: "BMS-Fragen", sub: "mit Erkl\u00e4rungen" },
+              { value: "5.000+", label: "BMS-Fragen", sub: "mit Erklärungen" },
               { value: "10.000+", label: "KFF-Aufgaben", sub: "algorithmisch generiert" },
               { value: "173", label: "Lerneinheiten", sub: "offizielle Stichwortliste" },
-              { value: "4", label: "MedAT-Bereiche", sub: "vollst\u00e4ndig abgedeckt" },
+              { value: "4", label: "MedAT-Bereiche", sub: "vollständig abgedeckt" },
             ].map((s) => (
               <div key={s.label} className="text-center">
                 <div
@@ -436,7 +436,7 @@ export default function LandingPage() {
         <div className="max-w-3xl mx-auto px-8">
           <motion.div {...fade} className="text-center mb-16">
             <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-4">
-              Wie sich die meisten vorbereiten \u2014 und warum es nicht reicht
+              Wie sich die meisten vorbereiten — und warum es nicht reicht
             </h2>
           </motion.div>
           <motion.div {...fade} className="grid grid-cols-2 gap-6">
@@ -449,9 +449,9 @@ export default function LandingPage() {
               </h3>
               <ul className="space-y-3 text-sm text-[var(--text-secondary)] leading-relaxed">
                 <li>Lehrbuch von vorne bis hinten durchlesen</li>
-                <li>50 Altfragen auswendig k\u00f6nnen</li>
-                <li>Schw\u00e4chen ignorieren, St\u00e4rken wiederholen</li>
-                <li>Am Pr\u00fcfungstag \u00fcberrascht werden</li>
+                <li>50 Altfragen auswendig können</li>
+                <li>Schwächen ignorieren, Stärken wiederholen</li>
+                <li>Am Prüfungstag überrascht werden</li>
               </ul>
             </div>
             <div
@@ -470,8 +470,8 @@ export default function LandingPage() {
                 Systematisch mit MedMaster
               </h3>
               <ul className="space-y-3 text-sm text-[var(--text-secondary)] leading-relaxed">
-                <li>5.000+ Fragen im echten MedAT-Format \u00fcben</li>
-                <li>Schw\u00e4chen werden automatisch erkannt</li>
+                <li>5.000+ Fragen im echten MedAT-Format üben</li>
+                <li>Schwächen werden automatisch erkannt</li>
                 <li>Gezielte Wiederholung statt Zufall</li>
                 <li>Fortschritt pro Stichwort sichtbar</li>
               </ul>
@@ -485,11 +485,11 @@ export default function LandingPage() {
         <div className="max-w-4xl mx-auto px-8">
           <motion.div {...fade} className="text-center mb-16">
             <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-4">
-              Alle 4 MedAT-Bereiche. Vollst\u00e4ndig.
+              Alle 4 MedAT-Bereiche. Vollständig.
             </h2>
             <p className="text-base text-[var(--text-secondary)] max-w-lg mx-auto">
-              Nicht &bdquo;ein bisschen von allem&ldquo; \u2014 jeder Testteil ist mit hunderten
-              Aufgaben und Theorie abgedeckt.
+              Nicht &bdquo;ein bisschen von allem&ldquo; — jeder Testteil ist mit hunderten Aufgaben
+              und Theorie abgedeckt.
             </p>
           </motion.div>
           <motion.div {...fade} className="grid grid-cols-2 gap-6">
@@ -511,13 +511,13 @@ export default function LandingPage() {
               {
                 icon: Brain,
                 title: "KFF",
-                sub: "Kognitive F\u00e4higkeiten & Fertigkeiten",
+                sub: "Kognitive Fähigkeiten & Fertigkeiten",
                 items: [
                   "Zahlenfolgen",
                   "Implikationen erkennen",
-                  "Wortfl\u00fcssigkeit",
+                  "Wortflüssigkeit",
                   "Figuren zusammensetzen",
-                  "Ged\u00e4chtnis & Merkf\u00e4higkeit",
+                  "Gedächtnis & Merkfähigkeit",
                 ],
                 footer: "10.000+ algorithmisch generierte Aufgaben",
                 link: "/medat-kff-ueben",
@@ -526,9 +526,9 @@ export default function LandingPage() {
               {
                 icon: FileText,
                 title: "TV",
-                sub: "Textverst\u00e4ndnis",
-                items: ["10 vollst\u00e4ndige Textsets", "120 Verst\u00e4ndnisfragen"],
-                footer: "Pr\u00fcfungsnahe Texte mit detaillierter Auswertung",
+                sub: "Textverständnis",
+                items: ["10 vollständige Textsets", "120 Verständnisfragen"],
+                footer: "Prüfungsnahe Texte mit detaillierter Auswertung",
               },
               {
                 icon: Heart,
@@ -589,7 +589,7 @@ export default function LandingPage() {
               Kein Fragenpool. Ein Lernsystem.
             </h2>
             <p className="text-base text-[var(--text-secondary)] max-w-lg mx-auto">
-              MedMaster erkennt, wo du Schw\u00e4chen hast, und trainiert gezielt diese Bereiche.
+              MedMaster erkennt, wo du Schwächen hast, und trainiert gezielt diese Bereiche.
             </p>
           </motion.div>
           <motion.div {...fade} className="grid grid-cols-3 gap-6">
@@ -597,17 +597,17 @@ export default function LandingPage() {
               {
                 icon: BookOpen,
                 title: "Theorie + Praxis",
-                desc: "173 Lerneinheiten nach offizieller Stichwortliste \u2014 jedes Stichwort mit Erkl\u00e4rung, Merks\u00e4tzen und \u00dcbungsfragen.",
+                desc: "173 Lerneinheiten nach offizieller Stichwortliste — jedes Stichwort mit Erklärung, Merksätzen und Übungsfragen.",
               },
               {
                 icon: Zap,
-                title: "Adaptiv, nicht zuf\u00e4llig",
+                title: "Adaptiv, nicht zufällig",
                 desc: "Was du falsch beantwortest, kommt wieder. Was du kannst, wird seltener. Dein Lernplan passt sich an.",
               },
               {
                 icon: BarChart3,
-                title: "Echte Pr\u00fcfungssimulation",
-                desc: "Vollst\u00e4ndige Testsimulation unter echten Bedingungen \u2014 offizielle Zeitlimits pro Testteil.",
+                title: "Echte Prüfungssimulation",
+                desc: "Vollständige Testsimulation unter echten Bedingungen — offizielle Zeitlimits pro Testteil.",
               },
             ].map((f) => (
               <div
@@ -633,11 +633,11 @@ export default function LandingPage() {
         <div className="max-w-3xl mx-auto px-8">
           <motion.div {...fade} className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-4">
-              Eine Frage. Wei\u00dft du die Antwort?
+              Eine Frage. Weißt du die Antwort?
             </h2>
             <p className="text-base text-[var(--text-secondary)] max-w-md mx-auto">
-              So sehen die Fragen in MedMaster aus. Originalformat, detaillierte Erkl\u00e4rung bei
-              jeder Antwort.
+              So sehen die Fragen in MedMaster aus. Originalformat, detaillierte Erklärung bei jeder
+              Antwort.
             </p>
           </motion.div>
           <motion.div {...fade}>
@@ -664,7 +664,7 @@ export default function LandingPage() {
             <Clock className="w-7 h-7 mx-auto mb-5" style={{ color: NAVY }} />
             <h3 className="text-2xl font-bold text-[var(--text-primary)] mb-3">
               {countdown.expired ? (
-                "Einmalig \u20ac29,90. Kein Abo."
+                "Einmalig €29,90. Kein Abo."
               ) : (
                 <>
                   Gratis-Zugang endet in{" "}
@@ -678,8 +678,8 @@ export default function LandingPage() {
             </h3>
             <p className="text-sm text-[var(--text-secondary)] mb-8 max-w-md mx-auto leading-relaxed">
               {countdown.expired
-                ? "Jederzeit k\u00fcndbar. Voller Zugang zu allen Fragen, Lerneinheiten und der Pr\u00fcfungssimulation."
-                : "Wer jetzt startet, lernt bis April gratis \u2014 und hat einen Vorsprung gegen\u00fcber allen, die noch warten."}
+                ? "Jederzeit kündbar. Voller Zugang zu allen Fragen, Lerneinheiten und der Prüfungssimulation."
+                : "Wer jetzt startet, lernt bis April gratis — und hat einen Vorsprung gegenüber allen, die noch warten."}
             </p>
             <GoogleBtn
               label="Kostenlos starten"
@@ -694,7 +694,7 @@ export default function LandingPage() {
               >
                 Mit E-Mail anmelden
               </Link>
-              {" \u00b7 "}Keine Kreditkarte{" \u00b7 "}Jederzeit k\u00fcndbar
+              {" · "}Keine Kreditkarte{" · "}Jederzeit kündbar
             </p>
           </motion.div>
         </div>
@@ -709,7 +709,7 @@ export default function LandingPage() {
                 { icon: BookOpen, text: "5.000+ BMS-Fragen" },
                 { icon: Zap, text: "10.000+ KFF-Aufgaben" },
                 { icon: Star, text: "Alle 4 MedAT-Bereiche" },
-                { icon: Shield, text: "Jederzeit k\u00fcndbar" },
+                { icon: Shield, text: "Jederzeit kündbar" },
                 ...(userCount ? [{ icon: Users, text: `${userCount}+ lernen bereits` }] : []),
               ] as { icon: React.ComponentType<{ className?: string }>; text: string }[]
             ).map((b) => (
@@ -732,29 +732,29 @@ export default function LandingPage() {
             {...fade}
             className="text-3xl font-bold text-[var(--text-primary)] text-center mb-12"
           >
-            H\u00e4ufige Fragen
+            Häufige Fragen
           </motion.h2>
           <motion.div {...fade} className="divide-y divide-[var(--border)]">
             {[
               {
-                q: "Ist das aktuell f\u00fcr den MedAT 2026?",
-                a: "Ja, vollst\u00e4ndig. Alle Inhalte basieren auf der offiziellen Stichwortliste 2026 der Medizinischen Universit\u00e4ten. Die 173 Lerneinheiten decken jedes einzelne Stichwort ab \u2014 von Zellbiologie \u00fcber organische Chemie bis Stochastik. Die \u00fcber 5.000 BMS-Fragen sind im originalen MedAT-Format (A\u2013E, genau eine richtige Antwort) und werden laufend aktualisiert.",
+                q: "Ist das aktuell für den MedAT 2026?",
+                a: "Ja, vollständig. Alle Inhalte basieren auf der offiziellen Stichwortliste 2026 der Medizinischen Universitäten. Die 173 Lerneinheiten decken jedes einzelne Stichwort ab — von Zellbiologie über organische Chemie bis Stochastik. Die über 5.000 BMS-Fragen sind im originalen MedAT-Format (A–E, genau eine richtige Antwort) und werden laufend aktualisiert.",
               },
               {
-                q: "Kann ich jederzeit k\u00fcndigen?",
-                a: "Ja, ohne Wenn und Aber. Es gibt kein Abo, keine automatische Verl\u00e4ngerung und keine K\u00fcndigungsfrist. Du kannst deinen Account jederzeit in den Einstellungen l\u00f6schen \u2014 mit einem Klick. Bis 31. M\u00e4rz ist der volle Zugang komplett gratis, danach f\u00e4llt eine einmalige Zahlung von \u20ac29,90 an. Keine versteckten Kosten, kein Kleingedrucktes.",
+                q: "Kann ich jederzeit kündigen?",
+                a: "Ja, ohne Wenn und Aber. Es gibt kein Abo, keine automatische Verlängerung und keine Kündigungsfrist. Du kannst deinen Account jederzeit in den Einstellungen löschen — mit einem Klick. Bis 31. März ist der volle Zugang komplett gratis, danach fällt eine einmalige Zahlung von €29,90 an. Keine versteckten Kosten, kein Kleingedrucktes.",
               },
               {
                 q: "Reicht MedMaster als Vorbereitung?",
-                a: "MedMaster deckt alle 4 MedAT-Bereiche vollst\u00e4ndig ab: BMS (Biologie, Chemie, Physik, Mathematik), KFF (Zahlenfolgen, Implikationen, Wortfl\u00fcssigkeit, Figuren, Ged\u00e4chtnis), Textverst\u00e4ndnis und SEK. F\u00fcr den BMS-Teil empfehlen viele Kandidierende erg\u00e4nzend ein Biologie-Lehrbuch wie den Campbell f\u00fcr die Tiefe der Theorie. Die gesamte \u00dcbungs- und Simulationskomponente ist aber komplett abgedeckt \u2014 inklusive adaptivem Lernplan, der deine Schw\u00e4chen gezielt trainiert.",
+                a: "MedMaster deckt alle 4 MedAT-Bereiche vollständig ab: BMS (Biologie, Chemie, Physik, Mathematik), KFF (Zahlenfolgen, Implikationen, Wortflüssigkeit, Figuren, Gedächtnis), Textverständnis und SEK. Für den BMS-Teil empfehlen viele Kandidierende ergänzend ein Biologie-Lehrbuch wie den Campbell für die Tiefe der Theorie. Die gesamte Übungs- und Simulationskomponente ist aber komplett abgedeckt — inklusive adaptivem Lernplan, der deine Schwächen gezielt trainiert.",
               },
               {
-                q: "Was passiert nach dem 31. M\u00e4rz?",
-                a: "Ab 1. April kostet MedMaster einmalig \u20ac29,90. Das ist eine einmalige Zahlung \u2014 kein monatliches Abo, keine wiederkehrenden Kosten. Du beh\u00e4ltst vollen Zugang zu allen Fragen, Lerneinheiten, der Pr\u00fcfungssimulation und allen zuk\u00fcnftigen Updates bis zum MedAT 2026. Wer sich jetzt registriert, lernt bis dahin komplett gratis.",
+                q: "Was passiert nach dem 31. März?",
+                a: "Ab 1. April kostet MedMaster einmalig €29,90. Das ist eine einmalige Zahlung — kein monatliches Abo, keine wiederkehrenden Kosten. Du behältst vollen Zugang zu allen Fragen, Lerneinheiten, der Prüfungssimulation und allen zukünftigen Updates bis zum MedAT 2026. Wer sich jetzt registriert, lernt bis dahin komplett gratis.",
               },
               {
                 q: "Was unterscheidet MedMaster von anderen Anbietern?",
-                a: "Drei Dinge: Erstens decken wir alle 4 MedAT-Bereiche ab, nicht nur BMS. Zweitens ist unser Lernsystem adaptiv \u2014 es erkennt deine Schw\u00e4chen und trainiert sie gezielt. Drittens kosten wir einmalig \u20ac29,90 statt monatlich \u20ac9\u201330. Und: \u00fcber 10.000 KFF-Aufgaben werden algorithmisch generiert, sodass du nie dieselbe Aufgabe zweimal bekommst.",
+                a: "Drei Dinge: Erstens decken wir alle 4 MedAT-Bereiche ab, nicht nur BMS. Zweitens ist unser Lernsystem adaptiv — es erkennt deine Schwächen und trainiert sie gezielt. Drittens kosten wir einmalig €29,90 statt monatlich €9–30. Und: über 10.000 KFF-Aufgaben werden algorithmisch generiert, sodass du nie dieselbe Aufgabe zweimal bekommst.",
               },
             ].map((faq) => (
               <FAQItem key={faq.q} q={faq.q} a={faq.a} />
@@ -772,7 +772,7 @@ export default function LandingPage() {
             Deine Konkurrenz auch nicht.
           </h2>
           <p className="text-white/60 text-base mb-10 max-w-md mx-auto leading-relaxed">
-            5.000+ Fragen. Alle 4 Bereiche. Adaptives Lernsystem. Jederzeit k\u00fcndbar.
+            5.000+ Fragen. Alle 4 Bereiche. Adaptives Lernsystem. Jederzeit kündbar.
           </p>
           <GoogleBtn
             label="Jetzt kostenlos starten"
@@ -782,7 +782,7 @@ export default function LandingPage() {
             <Link to="/login" onClick={handleEmailClick} className="underline hover:text-white/60">
               Mit E-Mail anmelden
             </Link>
-            {" \u00b7 "}Keine Kreditkarte n\u00f6tig
+            {" · "}Keine Kreditkarte nötig
           </p>
         </div>
       </section>
@@ -801,7 +801,7 @@ export default function LandingPage() {
                   to="/medat-uebungsfragen"
                   className="block text-[var(--muted)] hover:text-[var(--text-primary)] transition-colors"
                 >
-                  MedAT \u00dcbungsfragen
+                  MedAT Übungsfragen
                 </Link>
                 <Link
                   to="/medat-kff-ueben"
@@ -821,7 +821,7 @@ export default function LandingPage() {
                   to="/faq"
                   className="block text-[var(--muted)] hover:text-[var(--text-primary)] transition-colors"
                 >
-                  H\u00e4ufige Fragen
+                  Häufige Fragen
                 </Link>
                 <Link
                   to="/blog"
@@ -859,7 +859,7 @@ export default function LandingPage() {
             </div>
           </div>
           <div className="border-t border-[var(--border)] pt-6 text-xs text-[var(--muted)]">
-            &copy; 2026 MedMaster \u2014 Alle Rechte vorbehalten.
+            &copy; 2026 MedMaster — Alle Rechte vorbehalten.
           </div>
         </div>
       </footer>
