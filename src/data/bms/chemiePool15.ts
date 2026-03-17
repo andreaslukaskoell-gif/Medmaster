@@ -517,7 +517,7 @@ export const chemiePool15: Question[] = [
     "Die Entropie S ist ein Maß für:",
     [
       "die Enthalpie (Wärmeinhalt bei konstantem Druck, H = U + pV)",
-      "die \"Unordnung\" bzw. Anzahl der Mikrozustände",
+      'die "Unordnung" bzw. Anzahl der Mikrozustände',
       "die Aktivierungsenergie (Barriere zum Übergangszustand der Reaktion)",
       "die Konzentration der Reaktanden im chemischen Gleichgewicht",
       "den Druck des Systems (wichtig für Gasreaktionen nach Le Chatelier)",

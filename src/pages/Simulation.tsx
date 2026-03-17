@@ -1322,7 +1322,7 @@ export default function Simulation() {
             </div>
             <div>
               <h2 className="text-lg font-bold text-[var(--text-primary)]">Kurztest (BMS)</h2>
-              <p className="text-sm text-[var(--muted)]">Schnelles Ueben eines einzelnen Fachs</p>
+              <p className="text-sm text-[var(--muted)]">Schnelles Üben eines einzelnen Fachs</p>
             </div>
           </div>
 

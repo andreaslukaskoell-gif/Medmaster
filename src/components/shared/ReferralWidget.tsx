@@ -21,9 +21,11 @@ export function ReferralWidget() {
 
   useEffect(() => {
     if (!user || !supabase) return;
-    supabase.rpc("get_referral_count", { user_uuid: user.id }).then(({ data }) => {
-      if (typeof data === "number") setCount(data);
-    });
+    Promise.resolve(supabase.rpc("get_referral_count", { user_uuid: user.id }))
+      .then(({ data }) => {
+        if (typeof data === "number") setCount(data);
+      })
+      .catch(() => {});
   }, [user]);
 
   const handleCopy = async () => {

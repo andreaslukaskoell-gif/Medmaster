@@ -470,7 +470,7 @@ export const biologiePool11: Question[] = [
   q(
     "bio-pool-11-034",
     "bio-kap5",
-    "Was versteht man unter \"Prädatoren\"?",
+    'Was versteht man unter "Prädatoren"?',
     ["Pflanzenfresser", "Räuber (Beutegreifer)", "Aasfresser", "Parasiten", "Destruenten"],
     1,
     "Prädatoren (Räuber) erbeuten andere Tiere. Herbivoren = Pflanzenfresser. Destruenten = Zersetzer.",
@@ -536,7 +536,7 @@ export const biologiePool11: Question[] = [
   q(
     "bio-pool-11-041",
     "bio-kap4",
-    "Was bedeutet \"homozygot\"?",
+    'Was bedeutet "homozygot"?',
     [
       "Zwei gleiche Allele an einem Genort",
       "Zwei verschiedene Allele an einem Genort",
@@ -674,7 +674,7 @@ export const biologiePool11: Question[] = [
   q(
     "bio-pool-11-050",
     "bio-kap5",
-    "Was versteht man unter \"Symbiose\"?",
+    'Was versteht man unter "Symbiose"?',
     [
       "Nur Räuber-Beute-Beziehung (Prädation) zwischen zwei Arten",
       "Längerfristige Wechselbeziehung zwischen Arten zum gegenseitigen Vorteil",

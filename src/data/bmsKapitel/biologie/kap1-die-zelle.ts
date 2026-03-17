@@ -1,4 +1,3 @@
-// @ts-nocheck
 import type { Kapitel } from "../types";
 
 export const bioKap1: Kapitel = {

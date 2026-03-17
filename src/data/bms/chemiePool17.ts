@@ -87,7 +87,7 @@ export const chemiePool17: Question[] = [
     "Die Spinquantenzahl s eines Elektrons kann die Werte annehmen:",
     ["nur +1", "nur −1", "+1/2 oder −1/2", "0 oder 1", "nur 0"],
     2,
-    "Spin s = +1/2 oder −1/2 (\"up\" oder \"down\"). Zwei Elektronen in einem Orbital haben entgegengesetzten Spin (Pauli).",
+    'Spin s = +1/2 oder −1/2 ("up" oder "down"). Zwei Elektronen in einem Orbital haben entgegengesetzten Spin (Pauli).',
     "mittel",
     ["Spin", "Quantenzahlen"]
   ),
@@ -207,7 +207,7 @@ export const chemiePool17: Question[] = [
       "nur bei Druckänderung",
     ],
     1,
-    "Endotherm: Wärme ist \"Edukt\". Temperaturerhöhung verschiebt das Gleichgewicht auf die Produktseite (van't Hoff).",
+    'Endotherm: Wärme ist "Edukt". Temperaturerhöhung verschiebt das Gleichgewicht auf die Produktseite (van\'t Hoff).',
     "mittel",
     ["Le Chatelier", "endotherm"]
   ),

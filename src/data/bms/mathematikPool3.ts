@@ -659,7 +659,7 @@ export const mathematikPool3: Question[] = [
   q(
     "ma-pool-3-057",
     "mathe-kap7",
-    "Wie viele verschiedene Anordnungen (Permutationen) gibt es fuer die Buchstaben des Wortes AAB?",
+    "Wie viele verschiedene Anordnungen (Permutationen) gibt es für die Buchstaben des Wortes AAB?",
     ["6", "3", "2", "9", "1"],
     1,
     "Es gibt 3!/2! = 6/2 = 3 verschiedene Anordnungen: AAB, ABA, BAA.",

@@ -267,7 +267,7 @@ export const chemiePool13: Question[] = [
       "zu höherem Druck",
     ],
     2,
-    "Exotherm: Wärme ist \"Produkt\". Temperaturerhöhung begünstigt die Rückreaktion (Eduktseite).",
+    'Exotherm: Wärme ist "Produkt". Temperaturerhöhung begünstigt die Rückreaktion (Eduktseite).',
     "mittel",
     ["Le Chatelier", "Temperatur"]
   ),

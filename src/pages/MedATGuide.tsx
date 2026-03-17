@@ -136,7 +136,7 @@ const SECTIONS: { id: string; title: string; content: ContentBlock[] }[] = [
         bold: "Mathematik (12 Fragen):",
         rest: " Algebra (Gleichungen, Ungleichungen), Bruchrechnung, Prozentrechnung, Einheiten und SI-System, Stochastik (Wahrscheinlichkeit, Kombinatorik) und Grundlagen der Trigonometrie.",
       },
-      "MedMaster bietet über 4.300 BMS-Fragen mit ausführlichen Erklärungen und deckt alle offiziellen Stichworte der BMS-Stichwortliste ab.",
+      "MedMaster bietet über 5.000 BMS-Fragen mit ausführlichen Erklärungen und deckt alle offiziellen Stichworte der BMS-Stichwortliste ab.",
     ],
   },
   {
@@ -422,7 +422,7 @@ export default function MedATGuide() {
             Bereit für die MedAT-Vorbereitung?
           </h2>
           <p className="text-[var(--muted)] mb-6 max-w-md mx-auto">
-            Starte jetzt mit 4.300+ Übungsfragen, KI-adaptivem Lernen und Prüfungssimulationen —
+            Starte jetzt mit 5.000+ Übungsfragen, KI-adaptivem Lernen und Prüfungssimulationen —
             komplett kostenlos.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">

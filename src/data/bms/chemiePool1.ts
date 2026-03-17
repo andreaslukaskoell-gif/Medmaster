@@ -656,7 +656,7 @@ export const chemiePool1: Question[] = [
       "Ideale Gase sind immer flüssig.",
     ],
     4,
-    "Ideale Gase sind ein Modell; reale Gase verhalten sich bei niedrigem Druck und hoher Temperatur annähernd ideal. Die Aussage \"immer flüssig\" ist falsch – ideale Gase bleiben bei diesem Modell gasförmig.",
+    'Ideale Gase sind ein Modell; reale Gase verhalten sich bei niedrigem Druck und hoher Temperatur annähernd ideal. Die Aussage "immer flüssig" ist falsch – ideale Gase bleiben bei diesem Modell gasförmig.',
     "mittel",
     ["ideales Gas", "Gasgesetze"]
   ),

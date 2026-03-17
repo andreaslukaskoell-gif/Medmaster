@@ -493,7 +493,7 @@ export default function KFFDemo() {
         <section className="pb-8">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
             {[
-              { to: "/medat-uebungsfragen", label: "BMS Übungsfragen", sub: "4.300+ Fragen" },
+              { to: "/medat-uebungsfragen", label: "BMS Übungsfragen", sub: "5.000+ Fragen" },
               { to: "/medat-guide", label: "MedAT 2026 Guide", sub: "Alles zum Test" },
               { to: "/faq", label: "FAQ", sub: "Häufige Fragen" },
               { to: "/challenge", label: "Quiz Challenge", sub: "Teile dein Ergebnis" },

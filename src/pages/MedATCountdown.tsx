@@ -104,7 +104,7 @@ export default function MedATCountdown() {
   const [googleError, setGoogleError] = useState("");
 
   usePageMeta({
-    title: `MedAT 2026 Countdown \u2014 Noch ${days} Tage bis zum Test | MedMaster`,
+    title: `MedAT 2026 Countdown \u2014 Noch ${days} Tage bis zum Test`,
     description:
       "Wann ist der MedAT 2026? Live-Countdown zum MedAT-Termin am 4. Juli 2026. Alle Fakten zu Anmeldung, Testorten und Vorbereitung.",
     canonical: "https://medmaster.at/medat-countdown",
@@ -275,7 +275,7 @@ export default function MedATCountdown() {
               Starte jetzt mit der Vorbereitung
             </h3>
             <p className="text-sm text-[var(--text-secondary)] mb-8 max-w-md mx-auto leading-relaxed">
-              4.000+ BMS-Fragen, 10.000+ KFF-Aufgaben, Testsimulationen und adaptives Lernsystem
+              5.000+ BMS-Fragen, 10.000+ KFF-Aufgaben, Testsimulationen und adaptives Lernsystem
               \u2014 alles in einer App.
             </p>
 

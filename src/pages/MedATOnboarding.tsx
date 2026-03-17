@@ -39,9 +39,13 @@ export default function MedATOnboarding() {
     setSaving(true);
 
     if (supabase && user) {
-      await supabase
-        .from("profiles")
-        .upsert({ id: user.id, display_name: trimmed, username: trimmed }, { onConflict: "id" });
+      try {
+        await supabase
+          .from("profiles")
+          .upsert({ id: user.id, display_name: trimmed, username: trimmed }, { onConflict: "id" });
+      } catch {
+        console.warn("[onboarding] profile upsert failed");
+      }
     }
 
     setSaving(false);

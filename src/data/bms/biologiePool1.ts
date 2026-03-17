@@ -494,7 +494,7 @@ export const biologiePool1: Question[] = [
   q(
     "bio-pool-040",
     "bio-kap1",
-    "Welche Hierarchieebene kommt in der Biologie nach \"Organell\"?",
+    'Welche Hierarchieebene kommt in der Biologie nach "Organell"?',
     ["Atom", "Molekül", "Zelle", "Gewebe", "Organismus"],
     2,
     "Reihenfolge: Atom → Molekül → Organell → Zelle → Gewebe → Organ → Organsystem → Organismus. Nach Organell kommt die Zelle.",

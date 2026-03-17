@@ -44,7 +44,7 @@ const SUBJECT_META: Record<
     desc: "Zellbiologie, Genetik, Humanbiologie, Evolution \u2014 teste dein BMS-Wissen mit echten Pr\u00fcfungsfragen.",
     metaTitle: "MedAT Biologie \u00dcbungsfragen kostenlos | MedMaster",
     metaDesc:
-      "1.100+ MedAT Biologie Fragen: Zellbiologie, Genetik, Humanbiologie, Evolution. T\u00e4glich neue Aufgaben \u2014 kostenlos und ohne Anmeldung \u00fcben.",
+      "1.250+ MedAT Biologie Fragen: Zellbiologie, Genetik, Humanbiologie, Evolution. T\u00e4glich neue Aufgaben \u2014 kostenlos und ohne Anmeldung \u00fcben.",
     ogImage: "/og-biologie.png",
     topics: [
       "Zellbiologie",
@@ -65,7 +65,7 @@ const SUBJECT_META: Record<
       },
       {
         q: "Reichen 1.000 \u00dcbungsfragen f\u00fcr die Biologie-Vorbereitung?",
-        a: "Ja \u2014 mit 1.100+ Fragen deckst du alle Kapitel mehrfach ab. MedMaster bietet Fragen in 3 Schwierigkeitsstufen mit Erkl\u00e4rungen.",
+        a: "Ja \u2014 mit 1.250+ Fragen deckst du alle Kapitel mehrfach ab. MedMaster bietet Fragen in 3 Schwierigkeitsstufen mit Erkl\u00e4rungen.",
       },
     ],
   },
@@ -79,7 +79,7 @@ const SUBJECT_META: Record<
     desc: "Allgemeine Chemie, Organische Chemie, Biochemie \u2014 teste dein BMS-Wissen mit echten Pr\u00fcfungsfragen.",
     metaTitle: "MedAT Chemie \u00dcbungsfragen kostenlos | MedMaster",
     metaDesc:
-      "1.400+ MedAT Chemie Fragen: Allgemeine Chemie, Organische Chemie, Biochemie. T\u00e4glich neue Aufgaben \u2014 kostenlos und ohne Anmeldung.",
+      "1.300+ MedAT Chemie Fragen: Allgemeine Chemie, Organische Chemie, Biochemie. T\u00e4glich neue Aufgaben \u2014 kostenlos und ohne Anmeldung.",
     ogImage: "/og-chemie.png",
     topics: [
       "Allgemeine Chemie",
@@ -114,7 +114,7 @@ const SUBJECT_META: Record<
     desc: "Mechanik, Thermodynamik, Elektrizit\u00e4t, Optik \u2014 teste dein BMS-Wissen mit echten Pr\u00fcfungsfragen.",
     metaTitle: "MedAT Physik \u00dcbungsfragen kostenlos | MedMaster",
     metaDesc:
-      "1.300+ MedAT Physik Fragen: Mechanik, Thermodynamik, Elektrizit\u00e4t, Optik, Akustik. T\u00e4glich neue Aufgaben \u2014 kostenlos \u00fcben.",
+      "1.350+ MedAT Physik Fragen: Mechanik, Thermodynamik, Elektrizit\u00e4t, Optik, Akustik. T\u00e4glich neue Aufgaben \u2014 kostenlos \u00fcben.",
     ogImage: "/og-physik.png",
     topics: ["Mechanik", "Thermodynamik", "Elektrizit\u00e4t", "Optik", "Akustik", "Atomphysik"],
     faq: [
@@ -142,7 +142,7 @@ const SUBJECT_META: Record<
     desc: "Algebra, Stochastik, Gleichungen, Einheiten \u2014 teste dein BMS-Wissen mit echten Pr\u00fcfungsfragen.",
     metaTitle: "MedAT Mathematik \u00dcbungsfragen kostenlos | MedMaster",
     metaDesc:
-      "490+ MedAT Mathematik Fragen: Algebra, Stochastik, Gleichungen, Einheiten. T\u00e4glich neue Aufgaben \u2014 kostenlos und ohne Anmeldung.",
+      "1.050+ MedAT Mathematik Fragen: Algebra, Stochastik, Gleichungen, Einheiten. T\u00e4glich neue Aufgaben \u2014 kostenlos und ohne Anmeldung.",
     ogImage: "/og-mathematik.png",
     topics: [
       "Algebra",
@@ -581,15 +581,15 @@ export default function SubjectDemo() {
             Alle {totalCount}+ {meta.label}-Fragen freischalten
           </h2>
           <p className="text-[var(--text-secondary)] mb-6 max-w-md mx-auto">
-            Registriere dich jetzt und erhalte 14 Tage vollen Zugang zu allen BMS-F{"\u00e4"}chern,
-            KFF, Textverst{"\u00e4"}ndnis und SEK.
+            Registriere dich jetzt — voller Zugang zu allen BMS-Fächern, KFF, Textverständnis und
+            SEK. Gratis bis 31. März.
           </p>
           <Link
             to="/login"
             className="inline-flex items-center gap-2 text-white font-semibold px-8 py-4 rounded-2xl text-base shadow-sm"
             style={{ backgroundColor: NAVY }}
           >
-            14 Tage gratis starten <ArrowRight className="w-5 h-5" />
+            Jetzt gratis starten <ArrowRight className="w-5 h-5" />
           </Link>
         </div>
       </main>

@@ -180,7 +180,7 @@ export const biologiePool13: Question[] = [
   q(
     "bio-pool-13-014",
     "bio-kap5",
-    "Was versteht man unter \"Konkurrenz\" in der Ökologie?",
+    'Was versteht man unter "Konkurrenz" in der Ökologie?',
     [
       "Nur Räuber-Beute-Interaktion (Prädation) zwischen trophischen Ebenen",
       "Nutzung derselben begrenzten Ressource durch verschiedene Individuen/Arten",
@@ -500,7 +500,7 @@ export const biologiePool13: Question[] = [
   q(
     "bio-pool-13-038",
     "bio-kap5",
-    "Was versteht man unter \"angeborener Immunität\"?",
+    'Was versteht man unter "angeborener Immunität"?',
     [
       "Nur humorale Antikörper",
       "Unspezifische, angeborene Abwehrmechanismen",

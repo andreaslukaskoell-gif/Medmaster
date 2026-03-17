@@ -70,7 +70,7 @@ function SampleQuestion({ onSignupClick }: { onSignupClick: () => void }) {
         <span className="text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full bg-[var(--accent)]/8 text-[var(--accent)]">
           {q.subject}
         </span>
-        <span className="text-xs text-[var(--muted)] tracking-wide">1 von 4.000+</span>
+        <span className="text-xs text-[var(--muted)] tracking-wide">1 von 5.000+</span>
       </div>
       <p className="text-lg font-semibold text-[var(--text-primary)] leading-relaxed mb-7">
         {q.text}
@@ -155,7 +155,7 @@ function SampleQuestion({ onSignupClick }: { onSignupClick: () => void }) {
             }}
             className="btn-premium flex items-center justify-center gap-2.5 w-full py-4 text-sm font-semibold rounded-xl"
           >
-            Über 4.000 weitere BMS-Fragen warten
+            Über 5.000 weitere BMS-Fragen warten
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
@@ -168,9 +168,9 @@ function SampleQuestion({ onSignupClick }: { onSignupClick: () => void }) {
 
 export default function PaidLandingBMS() {
   usePageMeta({
-    title: "BMS lernen für den MedAT 2026 — 4.000+ Fragen, alle 4 Fächer | MedMaster",
+    title: "BMS lernen für den MedAT 2026 — 5.000+ Fragen, alle 4 Fächer",
     description:
-      "BMS-Vorbereitung für den MedAT 2026: 4.000+ Fragen in Biologie, Chemie, Physik & Mathematik. 173 Lerneinheiten nach offizieller Stichwortliste. Einmalig €29,90.",
+      "BMS-Vorbereitung für den MedAT 2026: 5.000+ Fragen in Biologie, Chemie, Physik & Mathematik. 173 Lerneinheiten nach offizieller Stichwortliste. Einmalig €29,90.",
     canonical: "https://medmaster.at/lp/bms",
     ogImage: "https://medmaster.at/og-image.png",
   });
@@ -202,7 +202,7 @@ export default function PaidLandingBMS() {
           name: "Deckt MedMaster die gesamte BMS-Stichwortliste 2026 ab?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Ja, vollständig. Die 173 Lerneinheiten decken jedes einzelne Stichwort der offiziellen BMS-Liste ab — von Zellbiologie und DNA-Replikation über das Periodensystem und Stöchiometrie bis zu Mechanik, Optik, Trigonometrie und Stochastik. Die über 4.000 BMS-Fragen sind im originalen MedAT-Format (A–E, genau eine richtige Antwort) und werden laufend aktualisiert.",
+            text: "Ja, vollständig. Die 173 Lerneinheiten decken jedes einzelne Stichwort der offiziellen BMS-Liste ab — von Zellbiologie und DNA-Replikation über das Periodensystem und Stöchiometrie bis zu Mechanik, Optik, Trigonometrie und Stochastik. Die über 5.000 BMS-Fragen sind im originalen MedAT-Format (A–E, genau eine richtige Antwort) und werden laufend aktualisiert.",
           },
         },
         {
@@ -210,7 +210,7 @@ export default function PaidLandingBMS() {
           name: "Wie viele BMS-Fragen gibt es pro Fach?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Aktuell: ca. 1.100 Biologie-Fragen, 1.400 Chemie-Fragen, 1.300 Physik-Fragen und 500 Mathematik-Fragen. Jede Frage hat fünf Optionen (A–E) und eine ausführliche Erklärung. Die Schwierigkeitsgrade (leicht, mittel, schwer) sind gleichmäßig verteilt und bilden das echte MedAT-Niveau ab.",
+            text: "Aktuell: ca. 1.250 Biologie-Fragen, 1.300 Chemie-Fragen, 1.350 Physik-Fragen und 1.050 Mathematik-Fragen. Jede Frage hat fünf Optionen (A–E) und eine ausführliche Erklärung. Die Schwierigkeitsgrade (leicht, mittel, schwer) sind gleichmäßig verteilt und bilden das echte MedAT-Niveau ab.",
           },
         },
         {
@@ -386,7 +386,7 @@ export default function PaidLandingBMS() {
         <div className="max-w-4xl mx-auto px-8">
           <motion.div {...fade} className="grid grid-cols-4 gap-8">
             {[
-              { value: "4.000+", label: "BMS-Fragen", sub: "mit Erklärungen" },
+              { value: "5.000+", label: "BMS-Fragen", sub: "mit Erklärungen" },
               { value: "173", label: "Lerneinheiten", sub: "offizielle Stichwortliste 2026" },
               { value: "4", label: "Fächer", sub: "Bio, Chemie, Physik, Mathe" },
               { value: "100 %", label: "Stichwortliste 2026", sub: "vollständig abgedeckt" },
@@ -451,7 +451,7 @@ export default function PaidLandingBMS() {
                 Systematisch mit MedMaster
               </h3>
               <ul className="space-y-3 text-sm text-[var(--text-secondary)] leading-relaxed">
-                <li>4.000+ Fragen im echten MedAT-Format (A-E)</li>
+                <li>5.000+ Fragen im echten MedAT-Format (A-E)</li>
                 <li>Jedes Stichwort der offiziellen Liste abgedeckt</li>
                 <li>Schwächen werden automatisch erkannt und trainiert</li>
                 <li>Fortschritt pro Fach und Kapitel sichtbar</li>
@@ -479,25 +479,25 @@ export default function PaidLandingBMS() {
                 icon: BookOpen,
                 title: "Biologie",
                 desc: "Zellbiologie, Genetik, Evolution, Anatomie, Physiologie, Ökologie — von der Zellmembran bis zum Stammbaum.",
-                count: "1.100+ Fragen",
+                count: "1.250+ Fragen",
               },
               {
                 icon: FlaskConical,
                 title: "Chemie",
                 desc: "Atombau, Periodensystem, Stöchiometrie, organische Chemie, Reaktionsgleichgewichte, chemische Bindung.",
-                count: "1.400+ Fragen",
+                count: "1.300+ Fragen",
               },
               {
                 icon: Atom,
                 title: "Physik",
                 desc: "Mechanik, Thermodynamik, Elektrizität, Optik, Wellen, Atomphysik — inklusive Rechenaufgaben.",
-                count: "1.300+ Fragen",
+                count: "1.350+ Fragen",
               },
               {
                 icon: Calculator,
                 title: "Mathematik",
                 desc: "Grundlagen, Gleichungen, Funktionen, Trigonometrie, Stochastik, Folgen und Reihen.",
-                count: "500+ Fragen",
+                count: "1.050+ Fragen",
               },
             ].map((f) => (
               <div
@@ -614,7 +614,7 @@ export default function PaidLandingBMS() {
             </h3>
             <p className="text-sm text-[var(--text-secondary)] mb-8 max-w-md mx-auto leading-relaxed">
               {countdown.expired
-                ? "Einmalige Zahlung. Voller Zugang zu allen 4.000+ BMS-Fragen, 173 Lerneinheiten und der Prüfungssimulation."
+                ? "Einmalige Zahlung. Voller Zugang zu allen 5.000+ BMS-Fragen, 173 Lerneinheiten und der Prüfungssimulation."
                 : "Wer jetzt startet, lernt bis April gratis — und hat einen Vorsprung gegenüber allen, die noch warten."}
             </p>
             <GoogleBtn
@@ -642,7 +642,7 @@ export default function PaidLandingBMS() {
           <motion.div {...fade} className="flex flex-wrap justify-center gap-3">
             {(
               [
-                { icon: BookOpen, text: "4.000+ BMS-Fragen" },
+                { icon: BookOpen, text: "5.000+ BMS-Fragen" },
                 { icon: Star, text: "173 Lerneinheiten" },
                 { icon: Zap, text: "Stichwortliste 2026" },
                 { icon: Shield, text: "Jederzeit kündbar" },
@@ -673,11 +673,11 @@ export default function PaidLandingBMS() {
             {[
               {
                 q: "Deckt MedMaster die gesamte BMS-Stichwortliste 2026 ab?",
-                a: "Ja, vollständig. Die 173 Lerneinheiten decken jedes einzelne Stichwort der offiziellen BMS-Liste ab — von Zellbiologie und DNA-Replikation über das Periodensystem und Stöchiometrie bis zu Mechanik, Optik, Trigonometrie und Stochastik. Die über 4.000 BMS-Fragen sind im originalen MedAT-Format (A\u2013E, genau eine richtige Antwort) und werden laufend aktualisiert.",
+                a: "Ja, vollständig. Die 173 Lerneinheiten decken jedes einzelne Stichwort der offiziellen BMS-Liste ab — von Zellbiologie und DNA-Replikation über das Periodensystem und Stöchiometrie bis zu Mechanik, Optik, Trigonometrie und Stochastik. Die über 5.000 BMS-Fragen sind im originalen MedAT-Format (A\u2013E, genau eine richtige Antwort) und werden laufend aktualisiert.",
               },
               {
                 q: "Wie viele BMS-Fragen gibt es pro Fach?",
-                a: "Aktuell: ca. 1.100 Biologie-Fragen, 1.400 Chemie-Fragen, 1.300 Physik-Fragen und 500 Mathematik-Fragen. Jede Frage hat fünf Optionen (A\u2013E) und eine ausführliche Erklärung. Die Schwierigkeitsgrade (leicht, mittel, schwer) sind gleichmäßig verteilt und bilden das echte MedAT-Niveau ab.",
+                a: "Aktuell: ca. 1.250 Biologie-Fragen, 1.300 Chemie-Fragen, 1.350 Physik-Fragen und 1.050 Mathematik-Fragen. Jede Frage hat fünf Optionen (A\u2013E) und eine ausführliche Erklärung. Die Schwierigkeitsgrade (leicht, mittel, schwer) sind gleichmäßig verteilt und bilden das echte MedAT-Niveau ab.",
               },
               {
                 q: "Reicht MedMaster für die BMS-Vorbereitung?",
@@ -707,7 +707,7 @@ export default function PaidLandingBMS() {
             Null Prozent dem Zufall überlassen.
           </h2>
           <p className="text-white/60 text-base mb-10 max-w-md mx-auto leading-relaxed">
-            4.000+ BMS-Fragen. 4 Fächer. 173 Lerneinheiten. Adaptives Lernsystem. Jederzeit kündbar.
+            5.000+ BMS-Fragen. 4 Fächer. 173 Lerneinheiten. Adaptives Lernsystem. Jederzeit kündbar.
           </p>
           <GoogleBtn
             label="Jetzt kostenlos starten"

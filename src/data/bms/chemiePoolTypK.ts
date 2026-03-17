@@ -99,7 +99,7 @@ export const chemiePoolTypK: BMSFrage[] = [
       },
       {
         nr: 3,
-        text: "Metallbindung beruht auf einem \"Elektronensee\" delokalisierter Valenzelektronen.",
+        text: 'Metallbindung beruht auf einem "Elektronensee" delokalisierter Valenzelektronen.',
         korrekt: true,
       },
       {

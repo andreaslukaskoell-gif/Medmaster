@@ -22,12 +22,9 @@ export function useReferralAttribution() {
     if (user.id.startsWith(refCode)) return;
 
     // Find the referrer by matching ref code prefix
-    supabase
-      .from("profiles")
-      .select("id")
-      .ilike("id", `${refCode}%`)
-      .limit(1)
-      .single()
+    Promise.resolve(
+      supabase.from("profiles").select("id").ilike("id", `${refCode}%`).limit(1).single()
+    )
       .then(({ data: referrer }) => {
         if (!referrer || referrer.id === user.id) return;
 
@@ -44,6 +41,7 @@ export function useReferralAttribution() {
               console.warn("[referral]", error.message);
             }
           });
-      });
+      })
+      .catch(() => {});
   }, [user]);
 }

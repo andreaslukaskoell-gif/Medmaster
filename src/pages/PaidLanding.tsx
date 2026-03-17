@@ -60,7 +60,7 @@ function SampleQuestion({ onSignupClick }: { onSignupClick: () => void }) {
         <span className="text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full bg-[var(--accent)]/8 text-[var(--accent)]">
           {q.subject}
         </span>
-        <span className="text-xs text-[var(--muted)] tracking-wide">1 von 4.000+</span>
+        <span className="text-xs text-[var(--muted)] tracking-wide">1 von 5.000+</span>
       </div>
       <p className="text-lg font-semibold text-[var(--text-primary)] leading-relaxed mb-7">
         {q.text}
@@ -145,7 +145,7 @@ function SampleQuestion({ onSignupClick }: { onSignupClick: () => void }) {
             }}
             className="btn-premium flex items-center justify-center gap-2.5 w-full py-4 text-sm font-semibold rounded-xl"
           >
-            Über 4.000 weitere Fragen warten
+            Über 5.000 weitere Fragen warten
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
@@ -158,9 +158,9 @@ function SampleQuestion({ onSignupClick }: { onSignupClick: () => void }) {
 
 export default function PaidLanding() {
   usePageMeta({
-    title: "MedAT 2026 Vorbereitung \u2014 4.000+ BMS-Fragen, alle 4 Bereiche | MedMaster",
+    title: "MedAT 2026 Vorbereitung \u2014 5.000+ BMS-Fragen, alle 4 Bereiche",
     description:
-      "Bestehe den MedAT 2026: 4.000+ BMS-Fragen mit Erkl\u00e4rungen, 10.000+ KFF-Aufgaben, Pr\u00fcfungssimulation. Alle 4 Bereiche, einmalig \u20ac29,90.",
+      "Bestehe den MedAT 2026: 5.000+ BMS-Fragen mit Erkl\u00e4rungen, 10.000+ KFF-Aufgaben, Pr\u00fcfungssimulation. Alle 4 Bereiche, einmalig \u20ac29,90.",
     canonical: "https://medmaster.at/lp/medat",
     ogImage: "https://medmaster.at/og-image.png",
   });
@@ -203,7 +203,7 @@ export default function PaidLanding() {
           name: "Ist das aktuell für den MedAT 2026?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Ja, vollständig. Alle Inhalte basieren auf der offiziellen Stichwortliste 2026 der Medizinischen Universitäten. Die 173 Lerneinheiten decken jedes einzelne Stichwort ab — von Zellbiologie über organische Chemie bis Stochastik. Die über 4.000 BMS-Fragen sind im originalen MedAT-Format (A–E, genau eine richtige Antwort) und werden laufend aktualisiert.",
+            text: "Ja, vollständig. Alle Inhalte basieren auf der offiziellen Stichwortliste 2026 der Medizinischen Universitäten. Die 173 Lerneinheiten decken jedes einzelne Stichwort ab — von Zellbiologie über organische Chemie bis Stochastik. Die über 5.000 BMS-Fragen sind im originalen MedAT-Format (A–E, genau eine richtige Antwort) und werden laufend aktualisiert.",
           },
         },
         {
@@ -379,7 +379,7 @@ export default function PaidLanding() {
         <div className="max-w-4xl mx-auto px-8">
           <motion.div {...fade} className="grid grid-cols-4 gap-8">
             {[
-              { value: "4.000+", label: "BMS-Fragen", sub: "mit Erklärungen" },
+              { value: "5.000+", label: "BMS-Fragen", sub: "mit Erklärungen" },
               { value: "10.000+", label: "KFF-Aufgaben", sub: "algorithmisch generiert" },
               { value: "173", label: "Lerneinheiten", sub: "offizielle Stichwortliste" },
               { value: "5", label: "Testsimulationen", sub: "echte Zeitlimits" },
@@ -440,7 +440,7 @@ export default function PaidLanding() {
                 Systematisch mit MedMaster
               </h3>
               <ul className="space-y-3 text-sm text-[var(--text-secondary)] leading-relaxed">
-                <li>4.000+ Fragen im echten MedAT-Format üben</li>
+                <li>5.000+ Fragen im echten MedAT-Format üben</li>
                 <li>Schwächen werden automatisch erkannt</li>
                 <li>Gezielte Wiederholung statt Zufall</li>
                 <li>Fortschritt pro Stichwort sichtbar</li>
@@ -566,7 +566,7 @@ export default function PaidLanding() {
           <motion.div {...fade} className="flex flex-wrap justify-center gap-3">
             {(
               [
-                { icon: BookOpen, text: "4.000+ BMS-Fragen" },
+                { icon: BookOpen, text: "5.000+ BMS-Fragen" },
                 { icon: Zap, text: "10.000+ KFF-Aufgaben" },
                 { icon: Star, text: "Alle 4 MedAT-Bereiche" },
                 { icon: Shield, text: "Jederzeit kündbar" },
@@ -598,7 +598,7 @@ export default function PaidLanding() {
             {[
               {
                 q: "Ist das aktuell für den MedAT 2026?",
-                a: "Ja, vollständig. Alle Inhalte basieren auf der offiziellen Stichwortliste 2026 der Medizinischen Universitäten. Die 173 Lerneinheiten decken jedes einzelne Stichwort ab — von Zellbiologie über organische Chemie bis Stochastik. Die über 4.000 BMS-Fragen sind im originalen MedAT-Format (A\u2013E, genau eine richtige Antwort) und werden laufend aktualisiert.",
+                a: "Ja, vollständig. Alle Inhalte basieren auf der offiziellen Stichwortliste 2026 der Medizinischen Universitäten. Die 173 Lerneinheiten decken jedes einzelne Stichwort ab — von Zellbiologie über organische Chemie bis Stochastik. Die über 5.000 BMS-Fragen sind im originalen MedAT-Format (A\u2013E, genau eine richtige Antwort) und werden laufend aktualisiert.",
               },
               {
                 q: "Kann ich jederzeit kündigen?",
@@ -628,7 +628,7 @@ export default function PaidLanding() {
             Deine Konkurrenz auch nicht.
           </h2>
           <p className="text-white/60 text-base mb-10 max-w-md mx-auto leading-relaxed">
-            4.000+ Fragen. Alle 4 Bereiche. Adaptives Lernsystem. Jederzeit kündbar.
+            5.000+ Fragen. Alle 4 Bereiche. Adaptives Lernsystem. Jederzeit kündbar.
           </p>
           <GoogleBtn
             label="Jetzt kostenlos starten"

@@ -320,7 +320,7 @@ export const biologiePool12: Question[] = [
   q(
     "bio-pool-12-029",
     "bio-kap4",
-    "Was bedeutet \"heterozygot\"?",
+    'Was bedeutet "heterozygot"?',
     [
       "Zwei gleiche Allele an einem Genort",
       "Zwei verschiedene Allele an einem Genort",
@@ -464,7 +464,7 @@ export const biologiePool12: Question[] = [
   q(
     "bio-pool-12-042",
     "bio-kap5",
-    "Was versteht man unter \"ökologischer Nische\"?",
+    'Was versteht man unter "ökologischer Nische"?',
     [
       "Der konkrete Lebensort (Habitat)",
       "Die Gesamtheit der abiotischen und biotischen Faktoren, die eine Art nutzt bzw. erfordert",
@@ -473,7 +473,7 @@ export const biologiePool12: Question[] = [
       "Eine Population",
     ],
     1,
-    "Die ökologische Nische beschreibt die \"Rolle\" einer Art (Ressourcen, Lebensweise). Habitat = konkreter Ort.",
+    'Die ökologische Nische beschreibt die "Rolle" einer Art (Ressourcen, Lebensweise). Habitat = konkreter Ort.',
     "mittel",
     ["Ökologie", "Nische"]
   ),

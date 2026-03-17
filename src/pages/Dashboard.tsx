@@ -216,7 +216,7 @@ export default function Dashboard() {
               Starte jetzt mit deiner MedAT-Vorbereitung
             </h2>
             <p className="text-sm text-[var(--muted)] text-center mb-4">
-              Waehle einen Bereich und leg direkt los.
+              Wähle einen Bereich und leg direkt los.
             </p>
             <div className="grid grid-cols-3 gap-3 stagger-children">
               {(
@@ -225,7 +225,7 @@ export default function Dashboard() {
                     to: "/bms",
                     icon: BookOpen,
                     title: "BMS-Fragen üben",
-                    desc: "4.300+ Fragen zu Bio, Chemie, Physik & Mathe",
+                    desc: "5.000+ Fragen zu Bio, Chemie, Physik & Mathe",
                     color: "text-emerald-600",
                     bg: "bg-emerald-100 dark:bg-emerald-900/30",
                     target: "bms",

@@ -788,7 +788,7 @@ export const chemieWasIstFalsch: Question[] = [
       "Lithium hat das negativste Standardpotential aller Metalle.",
     ],
     3,
-    "Option D ist falsch. Gold hat zwar ein sehr positives Standardpotential (+1,50 V fuer Au3+/Au), aber Platin hat ebenfalls ein sehr hohes Potential. Unter den Standardpotentialen hat Fluor (F2/F- mit +2,87 V) den hoechsten Wert. Unter den Metallen hat Gold nicht das absolut positivste Potential. Die Aussage 'aller Metalle' ist eine haeufige Vereinfachung, die nicht exakt stimmt.",
+    "Option D ist falsch. Gold hat zwar ein sehr positives Standardpotential (+1,50 V für Au3+/Au), aber Platin hat ebenfalls ein sehr hohes Potential. Unter den Standardpotentialen hat Fluor (F2/F- mit +2,87 V) den höchsten Wert. Unter den Metallen hat Gold nicht das absolut positivste Potential. Die Aussage 'aller Metalle' ist eine häufige Vereinfachung, die nicht exakt stimmt.",
     "schwer",
     ["spannungsreihe", "standardpotential"]
   ),

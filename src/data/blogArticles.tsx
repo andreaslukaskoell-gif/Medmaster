@@ -102,7 +102,7 @@ export const blogArticles: BlogArticle[] = [
           mit Timer vor dem echten Test.
         </p>
 
-        <CTA text="Mit MedMaster alle 5 Fehler vermeiden: 4.300+ BMS-Fragen, adaptiver Lernplan und Prüfungssimulation." />
+        <CTA text="Mit MedMaster alle 5 Fehler vermeiden: 5.000+ BMS-Fragen, adaptiver Lernplan und Prüfungssimulation." />
       </>
     ),
   },
@@ -706,7 +706,7 @@ export const blogArticles: BlogArticle[] = [
           unabhängig vom Ausgangsniveau.
         </p>
 
-        <CTA text="Strukturiert vorbereiten: 4.300+ BMS-Fragen, KFF-Training und Prüfungssimulation in einer App." />
+        <CTA text="Strukturiert vorbereiten: 5.000+ BMS-Fragen, KFF-Training und Prüfungssimulation in einer App." />
       </>
     ),
   },
@@ -1236,7 +1236,7 @@ export const blogArticles: BlogArticle[] = [
           Menschenverstand — ergänzt durch psychologisches Grundwissen.
         </p>
 
-        <CTA text="100 SEK-Übungsaufgaben in allen drei Untertests — trainiere Emotionen erkennen, regulieren und entscheiden." />
+        <CTA text="324 SEK-Übungsaufgaben in allen drei Untertests — trainiere Emotionen erkennen, regulieren und entscheiden." />
       </>
     ),
   },
@@ -1296,7 +1296,7 @@ export const blogArticles: BlogArticle[] = [
           einem ähnlichen Niveau sind.
         </p>
 
-        <CTA text="MedMaster ist dein digitaler Lernpartner: 4.300+ Fragen, adaptiver Lernplan und Fortschrittstracking." />
+        <CTA text="MedMaster ist dein digitaler Lernpartner: 5.000+ Fragen, adaptiver Lernplan und Fortschrittstracking." />
       </>
     ),
   },
@@ -1500,7 +1500,7 @@ export const blogArticles: BlogArticle[] = [
           bis Mai, um mit dem Lernen anzufangen.
         </p>
 
-        <CTA text="Starte deine MedAT-Vorbereitung jetzt — mit über 4.300 Übungsfragen und strukturierten Lernplänen." />
+        <CTA text="Starte deine MedAT-Vorbereitung jetzt — mit über 5.000 Übungsfragen und strukturierten Lernplänen." />
       </>
     ),
   },
@@ -2059,7 +2059,7 @@ export const blogArticles: BlogArticle[] = [
           Lieber wenig Material gründlich durcharbeiten als viel Material oberflächlich überfliegen.
         </p>
 
-        <CTA text="Über 4.300 BMS-Fragen, alle KFF-Untertests und Prüfungssimulationen — teste MedMaster jetzt gratis." />
+        <CTA text="Über 5.000 BMS-Fragen, alle KFF-Untertests und Prüfungssimulationen — teste MedMaster jetzt gratis." />
       </>
     ),
   },
@@ -2101,7 +2101,7 @@ export const blogArticles: BlogArticle[] = [
           kurze Pausen. Plane den ganzen Tag ein und bring Verpflegung mit.
         </p>
 
-        <CTA text="Starte jetzt mit der Vorbereitung — über 4.300 BMS-Fragen und alle KFF-Untertests warten auf dich." />
+        <CTA text="Starte jetzt mit der Vorbereitung — über 5.000 BMS-Fragen und alle KFF-Untertests warten auf dich." />
       </>
     ),
   },
@@ -2178,7 +2178,7 @@ export const blogArticles: BlogArticle[] = [
           Wortflüssigkeit, Implikationen) lassen sich durch Training stark verbessern.
         </p>
 
-        <CTA text="Starte deine Vorbereitung mit über 4.300 Übungsfragen und allen KFF-Untertests — jetzt gratis testen." />
+        <CTA text="Starte deine Vorbereitung mit über 5.000 Übungsfragen und allen KFF-Untertests — jetzt gratis testen." />
       </>
     ),
   },
@@ -2219,7 +2219,7 @@ export const blogArticles: BlogArticle[] = [
           üben.
         </p>
 
-        <CTA text="Über 4.300 BMS-Fragen und alle KFF-Untertests — deine Alternative zum teuren Vorbereitungskurs." />
+        <CTA text="Über 5.000 BMS-Fragen und alle KFF-Untertests — deine Alternative zum teuren Vorbereitungskurs." />
       </>
     ),
   },
@@ -2239,7 +2239,7 @@ export const blogArticles: BlogArticle[] = [
           Biologie eignen sich der Campbell oder Purves (Kurzversion reicht), für Chemie ein
           Grundlagen-Lehrbuch wie Mortimer oder Chemie-Basics, für Physik eine gute Formelsammlung
           mit Erklärungen, und für Mathematik reicht ein Oberstufen-Buch. Ergänzend dazu brauchst du
-          eine <strong>Online-Fragensammlung mit 4.000+ Übungsfragen</strong> im MedAT-Format.
+          eine <strong>Online-Fragensammlung mit 5.000+ Übungsfragen</strong> im MedAT-Format.
         </p>
 
         <h2>Offizielle Materialien nicht vergessen</h2>
@@ -2260,7 +2260,7 @@ export const blogArticles: BlogArticle[] = [
           Wissen, sondern auch Geschwindigkeit und Stressresistenz.
         </p>
 
-        <CTA text="Über 4.300 BMS-Fragen, alle KFF-Untertests und realistische Prüfungssimulationen — jetzt gratis starten." />
+        <CTA text="Über 5.000 BMS-Fragen, alle KFF-Untertests und realistische Prüfungssimulationen — jetzt gratis starten." />
       </>
     ),
   },
@@ -2301,7 +2301,7 @@ export const blogArticles: BlogArticle[] = [
           schwieriger empfunden werden.
         </p>
 
-        <CTA text="Trainiere alle vier BMS-Fächer mit über 4.300 Übungsfragen im echten MedAT-Format." />
+        <CTA text="Trainiere alle vier BMS-Fächer mit über 5.000 Übungsfragen im echten MedAT-Format." />
       </>
     ),
   },

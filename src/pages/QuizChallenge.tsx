@@ -436,7 +436,7 @@ export default function QuizChallenge() {
           <CardContent className="p-6 text-center space-y-4">
             <h3 className="text-lg font-bold text-[var(--text-primary)]">Bereit für mehr?</h3>
             <p className="text-sm text-[var(--muted)]">
-              4.300+ Übungsfragen &bull; Alle MedAT-Bereiche &bull; KI-Adaptiv &bull; 2 Wochen
+              5.000+ Übungsfragen &bull; Alle MedAT-Bereiche &bull; KI-Adaptiv &bull; 2 Wochen
               gratis
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">

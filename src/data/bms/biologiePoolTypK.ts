@@ -91,7 +91,7 @@ export const biologiePoolTypK: BMSFrage[] = [
     fach: "biologie",
     uk_id: "bio-1-01",
     stamm:
-      "Welche der folgenden Aussagen zum Thema \"Kennzeichen des Lebens und Homöostase\" sind richtig?",
+      'Welche der folgenden Aussagen zum Thema "Kennzeichen des Lebens und Homöostase" sind richtig?',
     aussagen: [
       {
         nr: 1,

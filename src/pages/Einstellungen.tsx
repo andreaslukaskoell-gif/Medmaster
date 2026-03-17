@@ -213,7 +213,9 @@ export default function Einstellungen() {
       </section>
 
       {/* Version */}
-      <p className="text-xs text-[var(--muted)] text-center opacity-50 pt-4">MedMaster v2.0</p>
+      <p className="text-xs text-[var(--muted)] text-center opacity-50 pt-4">
+        MedMaster v{__APP_VERSION__}
+      </p>
     </div>
   );
 }

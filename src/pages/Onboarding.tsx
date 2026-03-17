@@ -72,7 +72,7 @@ function StepWelcome({ onNext }: { onNext: () => void }) {
           Willkommen bei Medmaster 🧠
         </h1>
         <p className="text-[var(--muted)] text-base max-w-sm mx-auto">
-          Lass uns deinen persoenlichen Lernplan erstellen.
+          Lass uns deinen persönlichen Lernplan erstellen.
         </p>
       </div>
 
@@ -121,7 +121,7 @@ function StepDate({
         <h2 className="text-2xl font-extrabold text-[var(--text-primary)]">
           Wann schreibst du die BMS?
         </h2>
-        <p className="text-[var(--muted)] text-sm">Gib dein Pruefungsdatum ein</p>
+        <p className="text-[var(--muted)] text-sm">Gib dein Prüfungsdatum ein</p>
       </div>
 
       <div className="w-full max-w-xs space-y-4">
@@ -150,7 +150,7 @@ function StepDate({
               animate={{ opacity: 1 }}
               className="text-red-500 text-sm"
             >
-              Bitte ein Datum in der Zukunft waehlen
+              Bitte ein Datum in der Zukunft wählen
             </motion.div>
           )}
         </AnimatePresence>
@@ -196,7 +196,7 @@ function StepTime({
         <h2 className="text-2xl font-extrabold text-[var(--text-primary)]">
           Wie viel Zeit hast du pro Tag?
         </h2>
-        <p className="text-[var(--muted)] text-sm">Waehle deine taegliche Lernzeit</p>
+        <p className="text-[var(--muted)] text-sm">Wähle deine tägliche Lernzeit</p>
       </div>
 
       <div className="w-full max-w-xs space-y-4">
@@ -269,7 +269,7 @@ function StepFach({
 
       <div className="space-y-2">
         <h2 className="text-2xl font-extrabold text-[var(--text-primary)]">
-          Was ist dein schwaechstes Fach?
+          Was ist dein schwächstes Fach?
         </h2>
         <p className="text-[var(--muted)] text-sm">Wir priorisieren deine Schwachstellen</p>
       </div>

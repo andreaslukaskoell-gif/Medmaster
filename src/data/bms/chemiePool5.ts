@@ -346,7 +346,7 @@ export const chemiePool5: Question[] = [
       "Metalle sind immer flüssig.",
     ],
     1,
-    "Metallbindung: positive Atomrümpfe in einem \"See\" delokalisierter Elektronen → Leitfähigkeit, Verformbarkeit.",
+    'Metallbindung: positive Atomrümpfe in einem "See" delokalisierter Elektronen → Leitfähigkeit, Verformbarkeit.',
     "mittel",
     []
   ),

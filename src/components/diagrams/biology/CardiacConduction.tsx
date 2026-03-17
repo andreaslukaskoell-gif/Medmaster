@@ -13,7 +13,7 @@ const parts = [
     id: "av",
     label: "AV-Knoten (Atrioventrikularknoten)",
     detail:
-      "Sekundärer Schrittmacher (~40-60/min). Verzoegert die Erregungsweiterleitung (AV-Delay), damit Vorhöfe vor Ventrikeln kontrahieren.",
+      "Sekundärer Schrittmacher (~40-60/min). Verzögert die Erregungsweiterleitung (AV-Delay), damit Vorhöfe vor Ventrikeln kontrahieren.",
     x: 230,
     y: 185,
   },

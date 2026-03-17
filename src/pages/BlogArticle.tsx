@@ -282,7 +282,7 @@ export default function BlogArticle() {
         {/* Bottom CTA */}
         <div className="mt-10 p-6 sm:p-8 rounded-xl border border-[var(--accent)]/20 bg-[var(--accent)]/5 text-center">
           <h2 className="text-lg font-bold text-[var(--text-primary)] mb-2">
-            Teste dein Wissen — 4.300+ BMS-Fragen warten
+            Teste dein Wissen — 5.000+ BMS-Fragen warten
           </h2>
           <p className="text-sm text-[var(--text-secondary)] mb-4 max-w-md mx-auto">
             Alle 4 MedAT-Bereiche in einer Plattform. Adaptiver Lernplan, 10.000+ KFF-Übungen,

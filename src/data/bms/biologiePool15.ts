@@ -265,7 +265,7 @@ export const biologiePool15: Question[] = [
       "Eine Population",
     ],
     1,
-    "Die Nische beschreibt die \"Rolle\" einer Art (Ressourcen, Lebensweise). Habitat = konkreter Ort.",
+    'Die Nische beschreibt die "Rolle" einer Art (Ressourcen, Lebensweise). Habitat = konkreter Ort.',
     "mittel",
     ["Ökologie", "Nische"]
   ),

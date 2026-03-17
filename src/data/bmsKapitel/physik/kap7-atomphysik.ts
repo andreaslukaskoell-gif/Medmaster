@@ -1212,7 +1212,7 @@ Das entspricht dem typischen HU-Bereich von Fett (−100 bis −50 HU). Knochen 
     {
       id: "ph-7-04",
       title: "Nuklearmedizin und Quantenphänomene",
-      imageUrl: "/images/bms/ch-chemische-reaktionen.jpg",
+      imageUrl: "/images/bms/bio-tierzelle.jpg",
       imageCaption: "Abb.: Nuklearmedizinische Bildgebung mit Radiotracern (OpenStax, CC BY 4.0)",
       stichworte: [
         "PET-Scan",

@@ -46,7 +46,7 @@ const FAQ_ITEMS: { q: string; a: string; category: string }[] = [
   {
     category: "BMS",
     q: "Wie viele Fragen hat MedMaster für den BMS-Teil?",
-    a: "MedMaster bietet über 4.300 BMS-Fragen: 1.113 Biologie, 1.426 Chemie, 1.316 Physik und 494 Mathematik. Jede Frage hat 5 Antwortoptionen, eine ausführliche Erklärung und einen Schwierigkeitsgrad (leicht/mittel/schwer).",
+    a: "MedMaster bietet über 5.000 BMS-Fragen: 1.252 Biologie, 1.315 Chemie, 1.377 Physik und 1.077 Mathematik. Jede Frage hat 5 Antwortoptionen, eine ausführliche Erklärung und einen Schwierigkeitsgrad (leicht/mittel/schwer).",
   },
   // KFF
   {
@@ -73,13 +73,13 @@ const FAQ_ITEMS: { q: string; a: string; category: string }[] = [
   {
     category: "Vorbereitung",
     q: "Kann ich mich nur mit MedMaster auf den MedAT vorbereiten?",
-    a: "MedMaster bietet eine umfassende Vorbereitung: 4.300+ BMS-Fragen, KFF-Training, Textverständnis, SEK-Übungen und Prüfungssimulationen. Viele Nutzer ergänzen mit einem Lehrbuch für die Theorie, aber die Übungskomponente ist vollständig abgedeckt.",
+    a: "MedMaster bietet eine umfassende Vorbereitung: 5.000+ BMS-Fragen, KFF-Training, Textverständnis, SEK-Übungen und Prüfungssimulationen. Viele Nutzer ergänzen mit einem Lehrbuch für die Theorie, aber die Übungskomponente ist vollständig abgedeckt.",
   },
   // MedMaster
   {
     category: "MedMaster",
     q: "Was kostet MedMaster?",
-    a: "Bis 31. März 2026 ist MedMaster komplett gratis — voller Zugang zu allen 4.300+ Fragen, allen 4 Testbereichen und allen Features. Ab 1. April kostet der Zugang einmalig €29,90 — kein Abo, keine versteckten Kosten, lebenslanger Zugang.",
+    a: "Bis 31. März 2026 ist MedMaster komplett gratis — voller Zugang zu allen 5.000+ Fragen, allen 4 Testbereichen und allen Features. Ab 1. April kostet der Zugang einmalig €29,90 — kein Abo, keine versteckten Kosten, lebenslanger Zugang.",
   },
   {
     category: "MedMaster",
@@ -99,7 +99,7 @@ const FAQ_ITEMS: { q: string; a: string; category: string }[] = [
   {
     category: "MedMaster",
     q: "Wie unterscheidet sich MedMaster von anderen MedAT-Kursen?",
-    a: "MedMaster bietet mehr Übungsfragen (4.300+) als die meisten kostenpflichtigen Anbieter. Dazu: KI-adaptives Lernen, algorithmisch generierte KFF-Aufgaben (10.000+), Prüfungstag-Prognose und alle 4 MedAT-Testbereiche in einer App — für eine einmalige Zahlung statt monatlichem Abo.",
+    a: "MedMaster bietet mehr Übungsfragen (5.000+) als die meisten kostenpflichtigen Anbieter. Dazu: KI-adaptives Lernen, algorithmisch generierte KFF-Aufgaben (10.000+), Prüfungstag-Prognose und alle 4 MedAT-Testbereiche in einer App — für eine einmalige Zahlung statt monatlichem Abo.",
   },
 ];
 
@@ -229,7 +229,7 @@ export default function FAQPage() {
             <span className="text-sm font-semibold text-[var(--text-primary)]">
               Kostenlos starten
             </span>
-            <span className="text-xs text-[var(--muted)]">4.300+ Fragen</span>
+            <span className="text-xs text-[var(--muted)]">5.000+ Fragen</span>
           </Link>
           <Link
             to="/lp/medat"

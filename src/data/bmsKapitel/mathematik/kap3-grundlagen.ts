@@ -10,7 +10,7 @@ export const mathKapGrundlagen: Kapitel = {
     {
       id: "ma-grund-01",
       title: "Bruchrechnung & Termumformung",
-      imageUrl: "/images/bms/ch-chemische-reaktionen.jpg",
+      imageUrl: "/images/bms/bio-blut-zusammensetzung.jpg",
       imageCaption:
         "Abb.: Dosierungsberechnung als Bruchrechnung in der Pharmakologie (OpenStax, CC BY 4.0)",
       stichworte: [
@@ -537,7 +537,7 @@ In der Epidemiologie sind drei Kennzahlen zentral -- alle basieren auf Prozentre
     {
       id: "ma-grund-03",
       title: "Dreisatz & Proportionen",
-      imageUrl: "/images/bms/ch-loesungen.jpg",
+      imageUrl: "/images/bms/bio-herz-kreislauf.jpg",
       imageCaption: "Abb.: Dreisatz bei Infusionsberechnungen (OpenStax, CC BY 4.0)",
       stichworte: [
         "Dreisatz",

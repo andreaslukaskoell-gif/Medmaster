@@ -11,7 +11,7 @@ export const physKapMechanik: Kapitel = {
     {
       id: "ph-1-01",
       title: "SI-Grundgrößen und abgeleitete Einheiten",
-      imageUrl: "/images/bms/ch-chemische-reaktionen.jpg",
+      imageUrl: "/images/bms/bio-skelett.svg",
       imageCaption: "Abb.: Physikalische Grundgrößen und Maßeinheiten (OpenStax, CC BY 4.0)",
       stichworte: [
         "SI-System",
@@ -628,7 +628,7 @@ f = 3 x 10¹⁸ Hz. Wellenlänge = c/f = (3 x 10⁸) / (3 x 10¹⁸) = **10⁻¹
     {
       id: "ph-1-03",
       title: "Dimensionsanalyse und Einheitenumrechnung",
-      imageUrl: "/images/bms/ch-loesungen.jpg",
+      imageUrl: "/images/bms/bio-niere.jpg",
       imageCaption:
         "Abb.: Konzentrationsberechnungen erfordern konsequente Einheitenumrechnung (OpenStax, CC BY 4.0)",
       stichworte: [

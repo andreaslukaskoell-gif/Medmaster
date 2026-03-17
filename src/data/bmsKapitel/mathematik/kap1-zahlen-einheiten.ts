@@ -342,7 +342,7 @@ Ein Virus (10⁻⁷ m) ist etwa **10-mal** kleiner als eine Bakterienzelle (10�
     {
       id: "ma-1-02",
       title: "SI-Präfixe von Femto bis Tera",
-      imageUrl: "/images/bms/ch-loesungen.jpg",
+      imageUrl: "/images/bms/bio-erythrozyten-lebenszyklus.jpg",
       imageCaption:
         "Abb.: Konzentrationsangaben in mmol/L und µmol/L — SI-Präfixe im Laboralltag (OpenStax, CC BY 4.0)",
       stichworte: [
@@ -1668,9 +1668,9 @@ Lösung: v = √(2 × g × h) = √(2 × 10 × 3) = √60 ≈ 7,7 m/s = 7,7 × 3
     {
       id: "ma-4-03",
       title: "SI-System — Grundeinheiten und abgeleitete Größen",
-      imageUrl: "/images/bms/ch-periodensystem.jpg",
+      imageUrl: "/images/bms/bio-lunge.jpg",
       imageCaption:
-        "Abb.: Das Periodensystem — Grundlage für SI-Einheiten und Stoffmengen (OpenStax, CC BY 4.0)",
+        "Abb.: SI-Einheiten und abgeleitete Größen in der Medizin (OpenStax, CC BY 4.0)",
       stichworte: [
         "SI-Grundeinheiten",
         "Meter",

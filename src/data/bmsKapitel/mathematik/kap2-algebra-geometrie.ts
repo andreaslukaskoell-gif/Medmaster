@@ -11,7 +11,7 @@ export const mathKapAlgebra: Kapitel = {
     {
       id: "ma-2-01",
       title: "Gleichungen und Ungleichungen",
-      imageUrl: "/images/bms/ch-loesungen.jpg",
+      imageUrl: "/images/bms/bio-nephron-blutfluss.jpg",
       imageCaption:
         "Abb.: Verdünnungsberechnungen als lineare Gleichungen im Labor (OpenStax, CC BY 4.0)",
       stichworte: [
@@ -662,7 +662,7 @@ Patient mit [HCO₃⁻] = 12 mmol/L und pCO₂ = 40 mmHg. pH = 6,1 + lg(12/1,2) 
     {
       id: "ma-2-03",
       title: "Quadratische Gleichungen und binomische Formeln",
-      imageUrl: "/images/bms/ch-chemische-reaktionen.jpg",
+      imageUrl: "/images/bms/bio-populationswachstum.svg",
       imageCaption: "Abb.: Reaktionskinetik und quadratische Zusammenhänge (OpenStax, CC BY 4.0)",
       stichworte: [
         "Binomische Formeln",

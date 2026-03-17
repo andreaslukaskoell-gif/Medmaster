@@ -484,7 +484,7 @@ export default function BMSDemo() {
   usePageMeta({
     title: "MedAT Übungsfragen kostenlos",
     description:
-      "4.300+ MedAT BMS-Übungsfragen und KFF-Aufgaben kostenlos üben — Biologie, Chemie, Physik, Mathematik, Zahlenfolgen, Implikationen und Wortflüssigkeit. Ohne Anmeldung.",
+      "5.000+ MedAT BMS-Übungsfragen und KFF-Aufgaben kostenlos üben — Biologie, Chemie, Physik, Mathematik, Zahlenfolgen, Implikationen und Wortflüssigkeit. Ohne Anmeldung.",
     canonical: "https://medmaster.at/medat-uebungsfragen",
   });
   const [activeTab, setActiveTab] = useState<string>("biologie");
@@ -646,15 +646,15 @@ export default function BMSDemo() {
             Alle {totalCount}+ Fragen kostenlos testen
           </h2>
           <p className="text-[var(--text-secondary)] mb-6 max-w-md mx-auto">
-            Registriere dich jetzt und erhalte 14 Tage vollen Zugang zu BMS, KFF, Textverst
-            {"\u00e4"}ndnis und SEK.
+            Registriere dich jetzt — voller Zugang zu BMS, KFF, Textverständnis und SEK. Gratis bis
+            31. März.
           </p>
           <Link
             to="/login"
             className="inline-flex items-center gap-2 text-white font-semibold px-8 py-4 rounded-2xl text-base shadow-sm"
             style={{ backgroundColor: NAVY }}
           >
-            14 Tage gratis starten <ArrowRight className="w-5 h-5" />
+            Jetzt gratis starten <ArrowRight className="w-5 h-5" />
           </Link>
         </div>
       </main>

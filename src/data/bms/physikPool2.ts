@@ -410,7 +410,7 @@ export const physikPool2: Question[] = [
       "Virtuelles Bild bei b = f.",
     ],
     2,
-    "g = f: aus der Linse treten parallele Strahlen aus → Bild \"im Unendlichen\".",
+    'g = f: aus der Linse treten parallele Strahlen aus → Bild "im Unendlichen".',
     "schwer",
     ["Linsengleichung", "Brennweite", "g=f"]
   ),

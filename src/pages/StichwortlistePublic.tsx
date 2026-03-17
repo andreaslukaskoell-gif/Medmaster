@@ -28,7 +28,7 @@ const SUBJECTS: Subject[] = [
     colorChipText: "text-emerald-700 dark:text-emerald-300",
     colorBorder: "border-emerald-200 dark:border-emerald-800/50",
     route: "/medat-biologie-fragen",
-    questionCount: "1.100+",
+    questionCount: "1.250+",
     topics: [
       {
         name: "Zellbiologie",
@@ -110,7 +110,7 @@ const SUBJECTS: Subject[] = [
     colorChipText: "text-red-700 dark:text-red-300",
     colorBorder: "border-red-200 dark:border-red-800/50",
     route: "/medat-chemie-fragen",
-    questionCount: "1.400+",
+    questionCount: "1.300+",
     topics: [
       {
         name: "Atombau und PSE",
@@ -191,7 +191,7 @@ const SUBJECTS: Subject[] = [
     colorChipText: "text-blue-700 dark:text-blue-300",
     colorBorder: "border-blue-200 dark:border-blue-800/50",
     route: "/medat-physik-fragen",
-    questionCount: "1.300+",
+    questionCount: "1.350+",
     topics: [
       {
         name: "Mechanik",
@@ -272,7 +272,7 @@ const SUBJECTS: Subject[] = [
     colorChipText: "text-violet-700 dark:text-violet-300",
     colorBorder: "border-violet-200 dark:border-violet-800/50",
     route: "/medat-mathematik-fragen",
-    questionCount: "490+",
+    questionCount: "1.050+",
     topics: [
       {
         name: "Algebra und Gleichungen",
@@ -422,7 +422,7 @@ export default function StichwortlistePublic() {
           </h1>
           <p className="text-lg text-[var(--muted)] max-w-2xl mx-auto leading-relaxed">
             Die vollständige offizielle Themenliste für den BMS-Teil des MedAT 2026. Alle Stichworte
-            aus Biologie, Chemie, Physik und Mathematik — mit über 4.300 Übungsfragen auf MedMaster.
+            aus Biologie, Chemie, Physik und Mathematik — mit über 5.000 Übungsfragen auf MedMaster.
           </p>
           <div className="flex flex-wrap justify-center gap-3 mt-8">
             {SUBJECTS.map((s) => (
@@ -508,7 +508,7 @@ export default function StichwortlistePublic() {
           style={{ background: `linear-gradient(135deg, ${NAVY}, #163286)` }}
         >
           <h2 className="text-2xl sm:text-3xl font-bold mb-3">
-            Alle Stichworte mit 4.300+ Fragen üben
+            Alle Stichworte mit 5.000+ Fragen üben
           </h2>
           <p className="text-blue-100 mb-8 max-w-xl mx-auto">
             MedMaster deckt alle offiziellen BMS-Stichworte ab. KI-adaptives Lernen, Fortschritt pro

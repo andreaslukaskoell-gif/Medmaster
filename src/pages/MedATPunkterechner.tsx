@@ -132,7 +132,7 @@ function ScoreBar({
 
 export default function MedATPunkterechner() {
   usePageMeta({
-    title: "MedAT Punkte-Rechner 2026 — MedAT Punkte berechnen | MedMaster",
+    title: "MedAT Punkte-Rechner 2026 — MedAT Punkte berechnen",
     description:
       "MedAT Punkte berechnen: BMS, KFF, TV und SEK eingeben und sofort deinen gewichteten MedAT-Score sehen. Kostenloser MedAT Punkteschlüssel 2026 mit Standort-Einschätzung für Wien, Graz, Innsbruck und Linz.",
     canonical: "https://medmaster.at/medat-punkte-rechner",
@@ -443,7 +443,7 @@ export default function MedATPunkterechner() {
             Verbessere deinen Score mit MedMaster
           </h2>
           <p className="text-gray-600 dark:text-gray-400 mb-6 max-w-md mx-auto">
-            Mit 4.300+ Übungsfragen, adaptivem KI-Training und realistischen Prüfungssimulationen.
+            Mit 5.000+ Übungsfragen, adaptivem KI-Training und realistischen Prüfungssimulationen.
           </p>
           <Link
             to="/login"

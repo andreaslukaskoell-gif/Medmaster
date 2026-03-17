@@ -362,8 +362,8 @@ export default function PedigreeAnalysis() {
             </p>
             <p className="text-xs text-gray-700 dark:text-gray-300 mt-1">
               Ein dominantes Allel (A) reicht für die Merkmalsausprägung. Betroffene haben
-              mindestens einen betroffenen Elternteil. Merkmal ueberspringt keine Generation.
-              Genotyp der Betroffenen: Aa oder AA.
+              mindestens einen betroffenen Elternteil. Merkmal überspringt keine Generation. Genotyp
+              der Betroffenen: Aa oder AA.
             </p>
           </>
         ) : (
@@ -373,7 +373,7 @@ export default function PedigreeAnalysis() {
             </p>
             <p className="text-xs text-gray-700 dark:text-gray-300 mt-1">
               Zwei rezessive Allele (aa) nötig für Merkmalsausprägung. Eltern können Träger sein
-              (Aa) ohne selbst betroffen zu sein. Merkmal kann Generationen ueberspringen. 25%
+              (Aa) ohne selbst betroffen zu sein. Merkmal kann Generationen überspringen. 25%
               Wahrscheinlichkeit bei Aa x Aa.
             </p>
           </>

@@ -148,7 +148,7 @@ export const physikPool17: Question[] = [
   q(
     "ph-pool-17-010",
     KAP[4],
-    "Die Strahlenschutzregel \"Abstand halten\" nutzt aus, dass:",
+    'Die Strahlenschutzregel "Abstand halten" nutzt aus, dass:',
     [
       "die Dosis proportional zum Abstand ist",
       "die Dosis mit 1/r² abnimmt (bei punktförmiger Quelle)",

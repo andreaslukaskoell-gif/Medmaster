@@ -219,7 +219,7 @@ function SampleQuestion() {
             to="/login"
             className="btn-premium flex items-center justify-center gap-2 w-full py-3 text-sm"
           >
-            4.000+ Fragen wie diese — jetzt gratis starten
+            5.000+ Fragen wie diese — jetzt gratis starten
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
@@ -405,7 +405,7 @@ function DailyQuestion() {
             to="/login"
             className="btn-premium flex items-center justify-center gap-2 w-full py-3 text-sm"
           >
-            \u00dcber 4.000 weitere Fragen \u2014 Jetzt starten
+            \u00dcber 5.000 weitere Fragen \u2014 Jetzt starten
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
@@ -430,10 +430,10 @@ const contentDepth = [
     color: "text-emerald-600",
     bgColor: "bg-emerald-100 dark:bg-emerald-900/30",
     items: [
-      "1.113 Biologie-Fragen",
-      "1.426 Chemie-Fragen",
-      "1.316 Physik-Fragen",
-      "494 Mathematik-Fragen",
+      "1.252 Biologie-Fragen",
+      "1.315 Chemie-Fragen",
+      "1.377 Physik-Fragen",
+      "1.077 Mathematik-Fragen",
     ],
     extra: "173 Lerneinheiten nach offizieller Stichwortliste 2026",
     demoLink: "/medat-uebungsfragen",
@@ -470,12 +470,12 @@ const contentDepth = [
     color: "text-rose-600",
     bgColor: "bg-rose-100 dark:bg-rose-900/30",
     items: ["Emotionen erkennen", "Emotionen regulieren", "Soziales Entscheiden"],
-    extra: "100 Aufgaben mit offiziellen MedAT-Instruktionen",
+    extra: "324 Aufgaben mit offiziellen MedAT-Instruktionen",
   },
 ];
 
 const comparisonRows = [
-  { feature: "BMS-Übungsfragen", medmaster: "4.000+", competitor: "500–2.000" },
+  { feature: "BMS-Übungsfragen", medmaster: "5.000+", competitor: "500–2.000" },
   {
     feature: "KFF-Aufgaben",
     medmaster: "10.000+",
@@ -491,9 +491,9 @@ const comparisonRows = [
 
 export default function LandingPage() {
   usePageMeta({
-    title: "MedAT 2026 Vorbereitung — Bestehe sicher mit 4.000+ Fragen",
+    title: "MedAT 2026 Vorbereitung — Bestehe sicher mit 5.000+ Fragen",
     description:
-      "MedAT 2026 Vorbereitung: 4.000+ BMS-Fragen, 10.000+ KFF-Übungen, 10 TV-Textsets, 100 SEK-Aufgaben. Alle 4 MedAT-Bereiche in einer App. Einmalig €29,90.",
+      "MedAT 2026 Vorbereitung: 5.000+ BMS-Fragen, 10.000+ KFF-Übungen, 10 TV-Textsets, 324 SEK-Aufgaben. Alle 4 MedAT-Bereiche in einer App. Einmalig €29,90.",
     canonical: "https://medmaster.at",
     ogImage: "https://medmaster.at/og-image.png",
   });
@@ -696,7 +696,7 @@ export default function LandingPage() {
           >
             Bestehe den MedAT 2026.
             <br />
-            4.000+ BMS-Fragen. 10.000+ KFF-Übungen.
+            5.000+ BMS-Fragen. 10.000+ KFF-Übungen.
             <br />
             <span className="text-[var(--accent)]">Eine Plattform. Kein Abo.</span>
           </motion.h1>
@@ -720,7 +720,7 @@ export default function LandingPage() {
               [
                 {
                   icon: BookOpen,
-                  text: "4.300+ Fragen",
+                  text: "5.000+ Fragen",
                   cls: "bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-300 ring-1 ring-emerald-200 dark:ring-emerald-800/50",
                 },
                 {
@@ -906,7 +906,7 @@ export default function LandingPage() {
           <div className="mt-8 card-glass p-6">
             <div className="grid grid-cols-4 gap-4 text-center">
               {[
-                { value: "4.000+", label: "BMS-Fragen" },
+                { value: "5.000+", label: "BMS-Fragen" },
                 { value: "173", label: "Lerneinheiten" },
                 { value: "∞", label: "KFF-Aufgaben" },
                 { value: "220+", label: "SEK+TV Aufgaben" },
@@ -994,7 +994,7 @@ export default function LandingPage() {
               Probier es aus — eine echte BMS-Frage
             </h2>
             <p className="text-[var(--text-secondary)] max-w-lg mx-auto">
-              So sehen die Fragen in MedMaster aus. 4.000+ davon warten auf dich — mit detaillierten
+              So sehen die Fragen in MedMaster aus. 5.000+ davon warten auf dich — mit detaillierten
               Erklärungen bei jeder Antwort.
             </p>
           </div>
@@ -1072,7 +1072,7 @@ export default function LandingPage() {
               },
               {
                 quote:
-                  "4.000+ BMS-Fragen mit Erklärungen — das ist mehr als jede andere Plattform. Und der adaptive Lernplan zeigt mir genau, wo ich noch schwach bin.",
+                  "5.000+ BMS-Fragen mit Erklärungen — das ist mehr als jede andere Plattform. Und der adaptive Lernplan zeigt mir genau, wo ich noch schwach bin.",
                 name: "Maximilian R.",
                 detail: "MedAT 2026 Kandidat, Graz",
               },
@@ -1107,7 +1107,7 @@ export default function LandingPage() {
             {[
               {
                 q: "Ist MedMaster aktuell für den MedAT 2026?",
-                a: "Ja. Alle Inhalte basieren auf der offiziellen Stichwortliste 2026. Die 173 Lerneinheiten und 4.000+ Fragen decken den gesamten BMS-Stoff ab. KFF-Aufgaben folgen dem aktuellen MedAT-Format.",
+                a: "Ja. Alle Inhalte basieren auf der offiziellen Stichwortliste 2026. Die 173 Lerneinheiten und 5.000+ Fragen decken den gesamten BMS-Stoff ab. KFF-Aufgaben folgen dem aktuellen MedAT-Format.",
               },
               {
                 q: "Was passiert nach dem 31. März?",
@@ -1115,7 +1115,7 @@ export default function LandingPage() {
               },
               {
                 q: "Reicht MedMaster als alleinige Vorbereitung?",
-                a: "MedMaster deckt alle 4 MedAT-Bereiche vollständig ab: 4.000+ BMS-Fragen, 10.000+ KFF-Übungen, 10 TV-Textsets und 100 SEK-Aufgaben. Viele ergänzen mit einem Biologie-Lehrbuch für die Theorie — die Übungskomponente ist komplett.",
+                a: "MedMaster deckt alle 4 MedAT-Bereiche vollständig ab: 5.000+ BMS-Fragen, 10.000+ KFF-Übungen, 10 TV-Textsets und 324 SEK-Aufgaben. Viele ergänzen mit einem Biologie-Lehrbuch für die Theorie — die Übungskomponente ist komplett.",
               },
               {
                 q: "Brauche ich eine App?",
@@ -1179,7 +1179,7 @@ export default function LandingPage() {
             <ul className="text-left max-w-sm mx-auto mb-8 space-y-2.5">
               {[
                 "Voller Zugang zu allen 4 MedAT-Bereichen",
-                "4.000+ BMS-Fragen mit Erklärungen",
+                "5.000+ BMS-Fragen mit Erklärungen",
                 "10.000+ KFF-Übungen",
                 "173 Lerneinheiten + Prüfungssimulation",
                 "Kein Abo — einmalige Zahlung, voller Zugang",
@@ -1371,7 +1371,7 @@ export default function LandingPage() {
                 Bereit für den MedAT 2026?
               </p>
               <p className="text-xs text-[var(--muted)]">
-                4.000+ Fragen · Alle 4 Bereiche · Jetzt gratis
+                5.000+ Fragen · Alle 4 Bereiche · Jetzt gratis
               </p>
             </div>
             <Link

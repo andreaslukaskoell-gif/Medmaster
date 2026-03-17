@@ -189,7 +189,7 @@ export default function SEK() {
             Sozial-emotionale Kompetenzen
           </h1>
           <span className="text-xs font-semibold text-[var(--accent)] bg-[var(--accent)]/10 px-2.5 py-1 rounded-full">
-            20% des MedAT
+            10% des MedAT
           </span>
         </div>
         <p className="text-sm text-[var(--muted)] max-w-2xl leading-relaxed">
