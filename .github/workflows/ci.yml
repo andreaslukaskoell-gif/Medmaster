@@ -27,3 +27,5 @@ jobs:
       - run: npm run audit-bms
 
       - run: npm run audit-security
+
+      - run: npm audit --production --audit-level=high

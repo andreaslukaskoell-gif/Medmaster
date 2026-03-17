@@ -1,65 +1,66 @@
 import { useState, useEffect, useCallback } from "react";
 import { supabase } from "@/lib/supabase";
 import { usePageTitle } from "@/hooks/usePageTitle";
+import { useAuth } from "@/hooks/useAuth";
+import { setAdminSkipTracking } from "@/lib/analyticsTracker";
 
-// ── Password gate ──
-
-const PASS_HASH = "1c97b3af724d5ac1b9b1a6e6a6289f29aac562d2e80b649c54e6f88e7f2f7b8f";
+// ── Auth-based admin gate ──
+// Only the admin email may access this dashboard (server-enforced via Supabase auth).
+// The password hash approach was removed because client-side hashing is trivially bypassable.
+const ADMIN_EMAIL = import.meta.env.VITE_ADMIN_EMAIL || "";
 const SESSION_KEY = "mm_analytics_auth";
 
-async function sha256(text: string): Promise<string> {
-  const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(text));
-  return Array.from(new Uint8Array(buf))
-    .map((b) => b.toString(16).padStart(2, "0"))
-    .join("");
-}
+function AdminAuthGate({ onUnlock }: { onUnlock: () => void }) {
+  const { isAuthenticated, user, loading } = useAuth();
+  const [denied, setDenied] = useState(false);
 
-function PasswordGate({ onUnlock }: { onUnlock: () => void }) {
-  const [pw, setPw] = useState("");
-  const [wrong, setWrong] = useState(false);
-
-  const submit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    const hash = await sha256(pw);
-    if (hash === PASS_HASH) {
+  useEffect(() => {
+    if (loading) return;
+    if (!isAuthenticated || !user?.email) {
+      setDenied(true);
+      return;
+    }
+    // Require exact email match against allowlist
+    if (ADMIN_EMAIL && user.email.toLowerCase() === ADMIN_EMAIL.toLowerCase()) {
       sessionStorage.setItem(SESSION_KEY, "1");
-      localStorage.setItem("mm_admin", "1");
+      setAdminSkipTracking(true);
       onUnlock();
     } else {
-      setWrong(true);
-      setPw("");
+      setDenied(true);
     }
-  };
+  }, [isAuthenticated, user, loading, onUnlock]);
 
-  return (
-    <div className="flex items-center justify-center min-h-[60vh]">
-      <form
-        onSubmit={submit}
-        className="bg-[var(--surface)] rounded-lg p-6 w-80 space-y-4 border border-[var(--border)]"
-      >
-        <h2 className="text-sm font-semibold text-[var(--text-primary)]">Dashboard-Passwort</h2>
-        <input
-          type="password"
-          value={pw}
-          onChange={(e) => {
-            setPw(e.target.value);
-            setWrong(false);
-          }}
-          placeholder="Passwort eingeben"
-          autoFocus
-          className="w-full px-3 py-2 text-sm rounded-lg border border-[var(--border)] bg-[var(--background)] text-[var(--text-primary)] outline-none focus:ring-2 focus:ring-[var(--accent)]/30"
-        />
-        {wrong && <p className="text-xs text-red-500">Falsches Passwort</p>}
-        <button
-          type="submit"
-          className="w-full py-2 text-sm font-medium text-white rounded-lg cursor-pointer"
-          style={{ background: "var(--accent)" }}
-        >
-          Entsperren
-        </button>
-      </form>
-    </div>
-  );
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center min-h-[60vh]">
+        <div className="animate-spin rounded-full h-8 w-8 border-2 border-[var(--accent)] border-t-transparent" />
+      </div>
+    );
+  }
+
+  if (denied) {
+    return (
+      <div className="flex items-center justify-center min-h-[60vh]">
+        <div className="bg-[var(--surface)] rounded-lg p-6 w-96 space-y-4 border border-[var(--border)] text-center">
+          <h2 className="text-sm font-semibold text-[var(--text-primary)]">Zugriff verweigert</h2>
+          <p className="text-xs text-[var(--muted)]">
+            {!isAuthenticated
+              ? "Bitte melde dich zuerst an."
+              : "Dein Account hat keinen Zugriff auf das Analytics-Dashboard."}
+          </p>
+          <a
+            href={isAuthenticated ? "/dashboard" : "/login"}
+            className="inline-block w-full py-2 text-sm font-medium text-white rounded-lg text-center"
+            style={{ background: "var(--accent)" }}
+          >
+            {isAuthenticated ? "Zum Dashboard" : "Anmelden"}
+          </a>
+        </div>
+      </div>
+    );
+  }
+
+  return null;
 }
 
 // ── Types ──
@@ -615,7 +616,7 @@ export default function AnalyticsDashboard() {
     if (unlocked) load();
   }, [load, unlocked]);
 
-  if (!unlocked) return <PasswordGate onUnlock={() => setUnlocked(true)} />;
+  if (!unlocked) return <AdminAuthGate onUnlock={() => setUnlocked(true)} />;
 
   if (loading) {
     return (

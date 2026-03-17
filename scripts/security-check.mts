@@ -71,6 +71,40 @@ const CHECKS: Check[] = [
     },
   },
   {
+    name: "console.error with stack traces in production code",
+    test: (_content: string, lines: string[]) => {
+      const issues: string[] = [];
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+        if (line.trim().startsWith("//")) continue;
+        // Flag error?.stack being logged without DEV guard
+        if (line.includes("error?.stack") || line.includes(".stack)")) {
+          // Check if preceding lines have a DEV guard
+          const contextStart = Math.max(0, i - 5);
+          const context = lines.slice(contextStart, i).join("\n");
+          if (!context.includes("import.meta.env.DEV")) {
+            issues.push(`  line ${i + 1}: Stack trace logged without DEV guard: ${line.trim()}`);
+          }
+        }
+      }
+      return issues;
+    },
+  },
+  {
+    name: "Client-side password/hash gate (use Supabase auth instead)",
+    test: (_content: string, lines: string[]) => {
+      const issues: string[] = [];
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+        if (line.trim().startsWith("//")) continue;
+        if (/PASS_HASH|password.*hash|sha256.*password/i.test(line)) {
+          issues.push(`  line ${i + 1}: ${line.trim().slice(0, 80)}`);
+        }
+      }
+      return issues;
+    },
+  },
+  {
     name: "Potential hardcoded secrets",
     test: (_content: string, lines: string[]) => {
       const issues: string[] = [];

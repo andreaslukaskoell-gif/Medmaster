@@ -1,0 +1,4 @@
+Contact: mailto:support@medmaster.at
+Preferred-Languages: de, en
+Canonical: https://medmaster.at/.well-known/security.txt
+Expires: 2027-03-17T00:00:00.000Z

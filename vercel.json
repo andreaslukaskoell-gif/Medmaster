@@ -17,8 +17,9 @@
         { "key": "X-Frame-Options", "value": "DENY" },
         { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
         { "key": "Strict-Transport-Security", "value": "max-age=31536000; includeSubDomains" },
-        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" },
-        { "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://googleads.g.doubleclick.net https://www.google.com https://connect.facebook.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://*.supabase.co https://*.sentry.io https://eu.i.posthog.com https://eu.posthog.com https://www.google-analytics.com https://www.googletagmanager.com https://googleads.g.doubleclick.net https://www.google.com https://region1.google-analytics.com; img-src 'self' data: https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://buy.stripe.com https://checkout.stripe.com https://accounts.google.com; upgrade-insecure-requests" },
+        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()" },
+        { "key": "X-Permitted-Cross-Domain-Policies", "value": "none" },
+        { "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://googleads.g.doubleclick.net https://www.google.com https://connect.facebook.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://*.supabase.co https://*.sentry.io https://*.ingest.de.sentry.io https://eu.i.posthog.com https://eu.posthog.com https://www.google-analytics.com https://www.googletagmanager.com https://googleads.g.doubleclick.net https://www.google.com https://region1.google-analytics.com; img-src 'self' data: https:; object-src 'none'; worker-src 'self'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://buy.stripe.com https://checkout.stripe.com https://accounts.google.com; report-uri https://o4511060973846528.ingest.de.sentry.io/api/4511060999012432/security/?sentry_key=9d2971696398e389788d2c786b8c9fb6; upgrade-insecure-requests" },
         { "key": "X-DNS-Prefetch-Control", "value": "off" },
         { "key": "Cross-Origin-Opener-Policy", "value": "same-origin" }
       ]
@@ -29,6 +30,7 @@
     { "source": "/robots.txt", "destination": "/robots.txt" },
     { "source": "/llms.txt", "destination": "/llms.txt" },
     { "source": "/llms-full.txt", "destination": "/llms-full.txt" },
+    { "source": "/.well-known/security.txt", "destination": "/.well-known/security.txt" },
     { "source": "/manifest.json", "destination": "/manifest.json" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]

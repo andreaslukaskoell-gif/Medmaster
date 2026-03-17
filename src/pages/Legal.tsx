@@ -218,25 +218,66 @@ function Datenschutz() {
 
       <h2>5. Cookies und lokale Speicherung</h2>
       <p>
-        MedMaster verwendet <strong>keine Tracking-Cookies</strong> und keine Analyse-Tools von
-        Drittanbietern. Wir setzen ausschließlich{" "}
-        <strong>technisch notwendige lokale Speicherung</strong> (localStorage) ein, um den
-        App-Zustand (z.B. Lernfortschritt, Theme-Einstellung) lokal auf Ihrem Gerät
-        zwischenzuspeichern. Diese Daten werden nicht an Dritte übermittelt.
+        MedMaster setzt <strong>technisch notwendige lokale Speicherung</strong> (localStorage) ein,
+        um den App-Zustand (z.B. Lernfortschritt, Theme-Einstellung, Anmeldestatus) lokal auf Ihrem
+        Gerät zwischenzuspeichern. Diese Daten werden nicht an Dritte übermittelt.
+      </p>
+      <p>
+        Darüber hinaus verwenden wir — <strong>nur mit Ihrer ausdrücklichen Einwilligung</strong>{" "}
+        (Cookie-Banner) — folgende optionale Dienste:
+      </p>
+      <ul>
+        <li>
+          <strong>Analyse-Cookies:</strong> PostHog (EU-Server, posthog.com) und eigene
+          Nutzungsstatistiken zur Verbesserung des Lernerlebnisses.
+        </li>
+        <li>
+          <strong>Marketing-Cookies:</strong> Google Ads (google.com) für Conversion-Tracking.
+        </li>
+      </ul>
+      <p>
+        Sie können Ihre Einwilligung jederzeit widerrufen, indem Sie Ihre Browser-Cookies löschen
+        oder in den Einstellungen die Kategorie deaktivieren. Ohne Einwilligung werden keine
+        Analyse- oder Marketing-Cookies gesetzt.
       </p>
 
       <h2>6. Weitergabe an Dritte</h2>
       <p>
-        Eine Weitergabe Ihrer Daten an Dritte erfolgt <strong>nicht</strong>, mit folgender
-        Ausnahme:
+        Eine Weitergabe Ihrer Daten an Dritte erfolgt nur in folgenden Fällen und nur mit Ihrer
+        Einwilligung (sofern nicht technisch notwendig):
       </p>
       <ul>
         <li>
-          <strong>Stripe, Inc.</strong> — Für die Abwicklung von Zahlungen und Abonnements. Stripe
-          verarbeitet Zahlungsdaten (Kreditkartendaten, Rechnungsadresse) direkt und unterliegt
-          eigenen Datenschutzrichtlinien:{" "}
+          <strong>Stripe, Inc.</strong> — Zahlungsabwicklung. Stripe verarbeitet Zahlungsdaten
+          direkt:{" "}
           <a href="https://stripe.com/privacy" target="_blank" rel="noopener noreferrer">
             stripe.com/privacy
+          </a>
+        </li>
+        <li>
+          <strong>PostHog (EU)</strong> — Analyse (nur mit Einwilligung):{" "}
+          <a href="https://posthog.com/privacy" target="_blank" rel="noopener noreferrer">
+            posthog.com/privacy
+          </a>
+        </li>
+        <li>
+          <strong>Google Ireland Ltd.</strong> — Google Ads Conversion-Tracking (nur mit
+          Einwilligung):{" "}
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">
+            policies.google.com/privacy
+          </a>
+        </li>
+        <li>
+          <strong>Sentry (Functional Software Inc.)</strong> — Fehlerverfolgung zur
+          Qualitätssicherung (berechtigtes Interesse, Art. 6 Abs. 1 lit. f DSGVO):{" "}
+          <a href="https://sentry.io/privacy" target="_blank" rel="noopener noreferrer">
+            sentry.io/privacy
+          </a>
+        </li>
+        <li>
+          <strong>Supabase, Inc.</strong> — Hosting und Datenbank (Auftragsverarbeitung):{" "}
+          <a href="https://supabase.com/privacy" target="_blank" rel="noopener noreferrer">
+            supabase.com/privacy
           </a>
         </li>
       </ul>

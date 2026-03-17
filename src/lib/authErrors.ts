@@ -24,6 +24,7 @@ export function translateAuthError(message: string): string {
     if (message.includes(key)) return value;
   }
 
-  // Fallback: return as-is
-  return message;
+  // Fallback: generic message to avoid leaking Supabase internals
+  if (import.meta.env.DEV) return message;
+  return "Ein Fehler ist aufgetreten. Bitte versuche es erneut.";
 }

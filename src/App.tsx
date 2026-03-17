@@ -18,6 +18,7 @@ import { useStore } from "@/store/useStore";
 import { usePageTracking } from "@/hooks/usePageTracking";
 import { sanitizeUrlParam } from "@/lib/security";
 import { FloatingCTA } from "@/components/growth/FloatingCTA";
+import { CookieConsentBanner } from "@/components/CookieConsent";
 
 // Lazy-loaded pages — casing must match filenames exactly (Linux/Vercel is case-sensitive)
 const LandingPage = lazy(() => import("@/pages/LandingPage"));
@@ -175,6 +176,7 @@ export default function App() {
     <BrowserRouter>
       <ScrollToTop />
       <FloatingCTA />
+      <CookieConsentBanner />
       <Suspense fallback={<LoadingSpinner />}>
         <Routes>
           {/* Public routes */}
@@ -200,9 +202,6 @@ export default function App() {
           <Route path="/lp/medat" element={<PaidLanding />} />
           <Route path="/lp/bms" element={<PaidLandingBMS />} />
           <Route path="/medat-countdown" element={<MedATCountdown />} />
-
-          {/* Analytics dashboard — password-protected, no auth needed */}
-          <Route path="/admin/analytics" element={<AnalyticsDashboard />} />
 
           {/* Protected routes */}
           <Route
@@ -306,6 +305,7 @@ export default function App() {
                   </AdminGuard>
                 }
               />
+              <Route path="/admin/analytics" element={<AnalyticsDashboard />} />
               <Route path="/prognose" element={<Prognose />} />
               <Route path="/performance" element={<PerformanceOverview />} />
               <Route path="/fortschritt" element={<FortschrittPage />} />

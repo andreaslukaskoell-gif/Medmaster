@@ -24,9 +24,13 @@ export class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, info: ErrorInfo) {
-    console.error("[ErrorBoundary] Fehler:", error?.name, error?.message);
-    console.error("[ErrorBoundary] Stack:", error?.stack);
-    console.error("[ErrorBoundary] Komponentenstack:", info?.componentStack);
+    // Only log details in development — console.error is NOT stripped by esbuild.pure
+    if (import.meta.env.DEV) {
+      console.error("[ErrorBoundary] Fehler:", error?.name, error?.message);
+      console.error("[ErrorBoundary] Stack:", error?.stack);
+      console.error("[ErrorBoundary] Komponentenstack:", info?.componentStack);
+    }
+    // In production, Sentry captures these automatically via its React integration.
   }
 
   handleRetry = () => {

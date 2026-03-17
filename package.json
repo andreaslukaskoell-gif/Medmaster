@@ -13,7 +13,7 @@
     "lint": "eslint .",
     "format": "prettier --write \"src/**/*.{ts,tsx}\"",
     "qa-kff": "npx tsx scripts/qa-kff.mts",
-    "check": "npm run typecheck && npm run audit-bms && npm run qa-kff",
+    "check": "npm run typecheck && npm run audit-bms && npm run qa-kff && npm run audit-security",
     "audit-deps": "npm audit --production --audit-level=high",
     "audit-security": "npx tsx scripts/security-check.mts",
     "audit-bms": "npx tsx scripts/audit-bms-questions.mts",

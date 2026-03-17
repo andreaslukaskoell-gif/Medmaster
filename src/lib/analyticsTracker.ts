@@ -9,6 +9,7 @@ import { supabase } from "./supabase";
 let visitorId = "";
 let sessionId = "";
 let currentUserId: string | null = null;
+let adminSkipTracking = false;
 
 /** Initialize visitor/session IDs. Call once on app start. */
 export function initTracker() {
@@ -61,6 +62,11 @@ export function setTrackerUserId(userId: string | null) {
   currentUserId = userId;
 }
 
+/** Mark current session as admin to skip self-tracking. */
+export function setAdminSkipTracking(skip: boolean) {
+  adminSkipTracking = skip;
+}
+
 /** Track a page view. Called automatically by usePageTracking. */
 export function trackPageView(path: string) {
   insertEvent("page_view", { page_path: path, referrer: document.referrer || null });
@@ -93,8 +99,8 @@ function insertEvent(
   if (!supabase) return;
   // Only track on production domain
   if (location.hostname === "localhost" || location.hostname === "127.0.0.1") return;
-  // Skip tracking for admin (flag set when analytics dashboard is unlocked)
-  if (localStorage.getItem("mm_admin") === "1") return;
+  // Skip tracking for admin
+  if (currentUserId && adminSkipTracking) return;
 
   const row = {
     event_name: eventName,

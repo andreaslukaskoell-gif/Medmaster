@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { useAuth } from "@/hooks/useAuth";
 import { usePageTitle } from "@/hooks/usePageTitle";
 import { useThrottle } from "@/hooks/useThrottle";
+import { translateAuthError } from "@/lib/authErrors";
 
 export default function ForgotPasswordPage() {
   usePageTitle("Passwort vergessen");
@@ -24,7 +25,7 @@ export default function ForgotPasswordPage() {
     setLoading(true);
     const { error } = await resetPassword(email);
     setLoading(false);
-    if (error) setError(error.message);
+    if (error) setError(translateAuthError(error.message));
     else setSuccess(true);
   };
 

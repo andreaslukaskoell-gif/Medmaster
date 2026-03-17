@@ -9,7 +9,9 @@ import App from "@/App";
 import { initAnalytics, captureUtmParams } from "@/lib/analytics";
 import { initTracker, captureTrafficSource } from "@/lib/analyticsTracker";
 import { initMetaPixel, initGtag } from "@/lib/growthTracking";
+import { getStoredConsent } from "@/hooks/useCookieConsent";
 
+// Sentry (error tracking) — runs regardless of consent (legitimate interest for bug fixes)
 const dsn = import.meta.env.VITE_SENTRY_DSN;
 if (typeof dsn === "string" && dsn.trim().length > 0) {
   Sentry.init({
@@ -20,17 +22,24 @@ if (typeof dsn === "string" && dsn.trim().length > 0) {
   });
 }
 
-// Analytics (PostHog) — noop if VITE_POSTHOG_KEY is missing
-initAnalytics();
-captureUtmParams();
+// ── Consent-gated analytics ──
+// Only initialize analytics/marketing if the user has given consent.
+const consent = getStoredConsent();
 
-// Supabase analytics tracker (always active when Supabase is configured)
-initTracker();
-captureTrafficSource();
+if (consent?.analytics) {
+  // PostHog (analytics)
+  initAnalytics();
+  captureUtmParams();
+  // Supabase analytics tracker
+  initTracker();
+  captureTrafficSource();
+}
 
-// Growth tracking — Meta Pixel + Google Ads (noop if env vars missing)
-initMetaPixel();
-initGtag();
+if (consent?.marketing) {
+  // Google Ads + Meta Pixel (marketing/conversion tracking)
+  initMetaPixel();
+  initGtag();
+}
 
 // Parallax: update --scroll-y on root so .hero-orbs pseudo-elements can use it
 (function initParallax() {

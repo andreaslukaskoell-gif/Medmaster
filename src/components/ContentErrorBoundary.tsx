@@ -27,10 +27,12 @@ export class ContentErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, info: ErrorInfo) {
-    const ctx = this.props.context ? ` [${this.props.context}]` : "";
-    console.error("[Content] Fehler im Kapitel-Inhalt:", error?.name, error?.message, ctx);
-    console.error("[Content] Stack:", error?.stack);
-    console.error("[Content] Komponentenstack (wo der Fehler auftrat):", info?.componentStack);
+    if (import.meta.env.DEV) {
+      const ctx = this.props.context ? ` [${this.props.context}]` : "";
+      console.error("[Content] Fehler im Kapitel-Inhalt:", error?.name, error?.message, ctx);
+      console.error("[Content] Stack:", error?.stack);
+      console.error("[Content] Komponentenstack:", info?.componentStack);
+    }
   }
 
   render() {
