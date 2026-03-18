@@ -997,6 +997,38 @@ function cutLShape5Hard(): CutResult {
   };
 }
 
+/** Rechteck: Diagonale (2 Dreiecke). */
+function cutRectangleDiagonal(): CutResult {
+  const [p0, p1, p2, p3] = RECTANGLE.points;
+  return { target: RECTANGLE, pieces: [{ points: [p0, p1, p2] }, { points: [p0, p2, p3] }] };
+}
+
+/** Rechteck: 3 Teile (von einer Ecke zu zwei Kantenmitten). */
+function cutRectangle3(): CutResult {
+  const [p0, p1, p2, p3] = RECTANGLE.points;
+  const m12 = mid(p1, p2);
+  const m23 = mid(p2, p3);
+  return {
+    target: RECTANGLE,
+    pieces: [{ points: [p0, p1, m12] }, { points: [p0, m12, p2, m23] }, { points: [p0, m23, p3] }],
+  };
+}
+
+/** Rechteck: 4 Teile (zwei Diagonalen durch Zentrum). */
+function cutRectangle4Hard(): CutResult {
+  const [p0, p1, p2, p3] = RECTANGLE.points;
+  const c = centroid(RECTANGLE);
+  return {
+    target: RECTANGLE,
+    pieces: [
+      { points: [p0, p1, c] },
+      { points: [p1, p2, c] },
+      { points: [p2, p3, c] },
+      { points: [p3, p0, c] },
+    ],
+  };
+}
+
 export type FZDifficulty = "easy" | "medium" | "hard";
 
 /** Pro Schema: Schwierigkeit, Zielform (für gleiche Häufigkeit aller 14 Formen), Schnitt. */
@@ -1004,10 +1036,11 @@ type CutScheme = { diff: FZDifficulty; shapeId: SolutionShapeName; cut: () => Cu
 
 /** Schnitt-Schemata. Nur die 14 offiziellen Zielformen, 2–7 Teile. shapeId für ausgeglichene Verteilung. */
 const CUT_SCHEMES: CutScheme[] = [
-  // --- EASY: all 14 shapes, 2-3 pieces ---
+  // --- EASY: all 15 shapes (incl. rectangle), 2-3 pieces ---
   { diff: "easy", shapeId: "square", cut: cutSquareDiagonal },
-  { diff: "easy", shapeId: "square", cut: cutSquareCenter4 },
   { diff: "easy", shapeId: "square", cut: cutSquare3 },
+  { diff: "easy", shapeId: "rectangle", cut: cutRectangleDiagonal },
+  { diff: "easy", shapeId: "rectangle", cut: cutRectangle3 },
   { diff: "easy", shapeId: "triangle", cut: cutTriangleMedian },
   { diff: "easy", shapeId: "triangle", cut: cutTriangle3 },
   { diff: "easy", shapeId: "hexagon", cut: cutHexagon2 },
@@ -1025,7 +1058,8 @@ const CUT_SCHEMES: CutScheme[] = [
   { diff: "easy", shapeId: "three-quarter-circle", cut: cutThreeQuarterCircle3 },
   { diff: "easy", shapeId: "full-circle", cut: cutFullCircle4 },
   { diff: "easy", shapeId: "L-shape", cut: cutLShape4Simple },
-  // --- MEDIUM: all 14 shapes, 3-4 pieces ---
+  // --- MEDIUM: all 15 shapes, 3-4 pieces ---
+  { diff: "medium", shapeId: "rectangle", cut: cutRectangle3 },
   { diff: "medium", shapeId: "hexagon", cut: cutHexagon3 },
   { diff: "medium", shapeId: "pentagon", cut: cutPentagon3 },
   { diff: "medium", shapeId: "pentagon", cut: cutPentagon4 },
@@ -1046,7 +1080,8 @@ const CUT_SCHEMES: CutScheme[] = [
   { diff: "medium", shapeId: "rhombus", cut: cutRhombus3 },
   { diff: "medium", shapeId: "parallelogram", cut: cutParallelogram3 },
   { diff: "medium", shapeId: "full-circle", cut: cutFullCircle4 },
-  // --- HARD: all 14 shapes, 4-8 pieces ---
+  // --- HARD: all 15 shapes, 4-8 pieces ---
+  { diff: "hard", shapeId: "rectangle", cut: cutRectangle4Hard },
   { diff: "hard", shapeId: "hexagon", cut: cutHexagon6 },
   { diff: "hard", shapeId: "heptagon", cut: cutHeptagon7 },
   { diff: "hard", shapeId: "pentagon", cut: cutPentagon5 },
@@ -1536,7 +1571,7 @@ function generateAsymmetricCut(poly: Polygon, rng: () => number): [Pt2, Pt2] | n
     const dist = Math.abs((p2.x - p1.x) * (p1.y - c.y) - (p1.x - c.x) * (p2.y - p1.y)) / lineLen;
     const bbox = polygonBBox(poly);
     const diagLen = Math.hypot(bbox.width, bbox.height);
-    if (dist < diagLen * 0.06) continue; // only reject if cutting right through center
+    if (dist < diagLen * 0.12) continue; // reject cuts too close to center (more asymmetric)
 
     return [p1, p2];
   }
@@ -2021,7 +2056,7 @@ function applyAsymmetricCuts(
   if (pieces.length === 2 && areaRatio < 2.0) return null;
   if (pieces.length >= 3 && areaRatio < 2.5) return null;
   // Cap: no piece should be more than 8x bigger than smallest (otherwise too obvious)
-  if (areaRatio > 8) return null;
+  if (areaRatio > 6) return null;
 
   // Reject if all pieces have the same point count (= identical shape fragments)
   if (pieces.length >= 3) {
@@ -2133,14 +2168,14 @@ export function generateFigurenTrainingTask(
     );
     if (!isAllowedTarget(target)) continue;
     // Global uniform rejection — regardless of which cut path produced the pieces
-    if (pieces.length < 2) continue;
+    if (pieces.length < 3) continue;
     {
       const pa = pieces.map((p) => polygonArea(p));
       const paMax = Math.max(...pa),
         paMin = Math.min(...pa);
       const paRatio = paMin > 0 ? paMax / paMin : 999;
       if (paRatio < 2.5) continue; // too uniform
-      if (paRatio > 8) continue; // too extreme = answer too obvious
+      if (paRatio > 6) continue; // too extreme = answer too obvious
       if (pieces.every((p) => p.points.length === pieces[0].points.length)) continue;
     }
     const fp = taskFingerprint(target, pieces);
@@ -2231,12 +2266,12 @@ function generateFigurenTrainingTaskFallback(
     const target = { points: OFFICIAL_TARGET_POLYGONS[fbShapeIdx].points.map((p) => ({ ...p })) };
     const nCuts = numCutsForDifficulty(difficulty, rng);
     const pieces = applyAsymmetricCuts(target, nCuts, rng, difficulty);
-    if (!pieces || pieces.length < 2) continue;
+    if (!pieces || pieces.length < 3) continue;
     const pa = pieces.map((p) => polygonArea(p));
     const paMax = Math.max(...pa),
       paMin = Math.min(...pa);
     const paRatio = paMin > 0 ? paMax / paMin : 999;
-    if (paRatio < 2.5 || paRatio > 8) continue;
+    if (paRatio < 2.5 || paRatio > 6) continue;
     if (pieces.every((p) => p.points.length === pieces[0].points.length)) continue;
 
     let options: [FigureOption, FigureOption, FigureOption, FigureOption, FigureOption];

@@ -37,9 +37,34 @@ export async function generateAndSaveOne(
     const t = generateSequenceTask(diffLabel as "easy" | "medium" | "hard", seed);
     insert = sequenceToTask(t, "generated");
   } else if (domain === "kff-figuren") {
-    // Cycle through all 14 shapes to ensure even distribution
-    const shapeIdx = seed % 14;
-    const t = generateFigurenTrainingTask(diffLabel as "easy" | "medium" | "hard", seed, shapeIdx);
+    // Use high-entropy seed variation + reject shape drift
+    const SHAPES = [
+      "triangle",
+      "square",
+      "rectangle",
+      "rhombus",
+      "parallelogram",
+      "trapezoid",
+      "pentagon",
+      "hexagon",
+      "heptagon",
+      "octagon",
+      "quarter-circle",
+      "half-circle",
+      "three-quarter-circle",
+      "full-circle",
+      "L-shape",
+    ];
+    const shapeIdx = seed % 15;
+    const requestedShape = SHAPES[shapeIdx];
+    const taskSeed = seed * 7 + Math.floor(seed / 14) * 31337;
+    const t = generateFigurenTrainingTask(
+      diffLabel as "easy" | "medium" | "hard",
+      taskSeed,
+      shapeIdx
+    );
+    // Reject if generator drifted to a different shape
+    if (t.targetShapeId !== requestedShape) return null;
     insert = figurenToTask(t, "generated");
   } else if (domain === "kff-implikationen") {
     const diffNum = targetDifficulty <= 333 ? 1 : targetDifficulty <= 666 ? 2 : 3;

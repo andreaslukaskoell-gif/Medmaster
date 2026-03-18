@@ -137,10 +137,10 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
           const maxA = Math.max(...areas);
           const minA = Math.min(...areas);
           const ratio = minA > 0 ? maxA / minA : 999;
+          if (t.pieces.length < 2) return false; // minimum 2 pieces (MedAT allows 2-piece tasks)
           if (t.pieces.length === 2 && ratio < 2.0) return false;
           if (t.pieces.length >= 3 && ratio < 2.5) return false;
-          if (ratio > 8) return false; // too extreme = answer too obvious
-          // 2-piece tasks are MedAT-konform (IB FZ 26 Beispiel 1+2) — allow them
+          if (ratio > 6) return false; // too extreme = answer too obvious
           if (
             t.pieces.length >= 3 &&
             t.pieces.every((p) => p.points.length === t.pieces[0].points.length)

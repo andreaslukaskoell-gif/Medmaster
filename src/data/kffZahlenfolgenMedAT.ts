@@ -526,14 +526,14 @@ function pickStart(
     const lcm = divisors.reduce((a, b) => (a * b) / gcd(a, b), 1);
     if (difficulty === "hard") {
       // Random multiple of LCM in range [lcm, 30*lcm], then add random multiple offset
-      const maxMult = Math.max(1, Math.floor(500 / lcm));
+      const maxMult = Math.max(1, Math.floor(100 / lcm));
       start = lcm * (1 + Math.floor(rand() * maxMult));
     } else {
       const maxMult = Math.max(1, Math.floor(60 / lcm));
       start = lcm * (1 + Math.floor(rand() * maxMult));
     }
   } else if (difficulty === "hard") {
-    start = Math.floor(rand() * 450) + 50;
+    start = Math.floor(rand() * 80) + 10;
   } else if (difficulty === "medium") {
     start = Math.floor(rand() * 30) + 5;
   } else {
@@ -646,7 +646,7 @@ function distractorLastRatio(
   if (!Number.isInteger(ratio) || ratio === 0) return null;
   const v1 = visible[n - 1] * ratio;
   const v2 = v1 * ratio;
-  if (!Number.isInteger(v1) || !Number.isInteger(v2) || Math.abs(v2) > 100000) return null;
+  if (!Number.isInteger(v1) || !Number.isInteger(v2) || Math.abs(v2) > 5000) return null;
   const r: [number, number] = [v1, v2];
   if (r[0] === correctNext[0] && r[1] === correctNext[1]) return null;
   return r;
@@ -712,7 +712,7 @@ function distractorInverseOp(
   const v1 = applyOp(last, modOps[phase]);
   const v2 = applyOp(v1, modOps[(phase + 1) % modOps.length]);
   if (!Number.isInteger(v1) || !Number.isInteger(v2) || isNaN(v1) || isNaN(v2)) return null;
-  if (Math.abs(v1) > 100000 || Math.abs(v2) > 100000) return null;
+  if (Math.abs(v1) > 5000 || Math.abs(v2) > 5000) return null;
   if (v1 === correctNext[0] && v2 === correctNext[1]) return null;
   return [v1, v2];
 }
@@ -730,7 +730,7 @@ function distractorRepeatedOp(
   const v1 = applyOp(last, op);
   const v2 = applyOp(v1, op); // same op again
   if (!Number.isInteger(v1) || !Number.isInteger(v2) || isNaN(v1) || isNaN(v2)) return null;
-  if (Math.abs(v2) > 100000) return null;
+  if (Math.abs(v2) > 5000) return null;
   if (v1 === correctNext[0] && v2 === correctNext[1]) return null;
   return [v1, v2];
 }
@@ -861,7 +861,7 @@ function buildQuadraticTaskFromSeq(
     if (fakeRatio !== 0 && fakeRatio !== 1) {
       const r1 = visible[visLen - 1] * fakeRatio;
       const r2 = r1 * fakeRatio;
-      if (Math.abs(r2) <= 100000 && (r1 !== correctNext[0] || r2 !== correctNext[1])) {
+      if (Math.abs(r2) <= 5000 && (r1 !== correctNext[0] || r2 !== correctNext[1])) {
         custom.push([r1, r2]);
       }
     }
@@ -980,7 +980,7 @@ function buildFibonacci(
   for (let i = 2; i < length; i++) {
     const next = out[i - 1] * multiplier + out[i - 2] + offset;
     if (!Number.isInteger(next) || isNaN(next)) return null;
-    if (Math.abs(next) > 100000) return null;
+    if (Math.abs(next) > 5000) return null;
     out.push(next);
   }
   return out;
@@ -1331,7 +1331,7 @@ function pickPatternType(difficulty: DifficultyLevel, rand: () => number): Patte
 
 /** Prüft ob eine Folge sinnvolle Werte hat (keine zu großen Zahlen, alle ganzzahlig). */
 function isReasonableSequence(seq: number[]): boolean {
-  return seq.every((n) => Number.isInteger(n) && !isNaN(n) && Math.abs(n) <= 100000);
+  return seq.every((n) => Number.isInteger(n) && !isNaN(n) && n >= 0 && n <= 5000);
 }
 
 /** Convert a valid task to have E as the correct answer by replacing the correct option with a distractor. */
@@ -1379,7 +1379,7 @@ const MAX_SEQUENCE_VALIDATE_RETRIES = 10;
 export function generateSequenceTask(difficulty: DifficultyLevel, seed: number): SequenceTask {
   // ~8% chance of E being correct (medium/hard only)
   const eRand = seedRng(seed * 31 + 7);
-  const shouldMakeE = difficulty !== "easy" && eRand() < 0.08;
+  const shouldMakeE = eRand() < 0.15;
 
   for (let retry = 0; retry < MAX_SEQUENCE_VALIDATE_RETRIES; retry++) {
     const result = generateSequenceTaskInner(difficulty, seed + retry);
@@ -1449,8 +1449,8 @@ function buildTaskFromSequence(
       Number.isInteger(p[1]) &&
       !isNaN(p[0]) &&
       !isNaN(p[1]) &&
-      Math.abs(p[0]) <= 100000 &&
-      Math.abs(p[1]) <= 100000 &&
+      Math.abs(p[0]) <= 5000 &&
+      Math.abs(p[1]) <= 5000 &&
       // Reject distractors that are nearly indistinguishable from correct
       Math.abs(p[0] - correctNext[0]) + Math.abs(p[1] - correctNext[1]) >= minDist
   );
@@ -1661,7 +1661,7 @@ function generateFibonacciTask(difficulty: DifficultyLevel, rand: () => number):
   // Wrong: swap a_{n-1} and a_{n-2} in formula
   const sw1 = cfg.multiplier * a + b + cfg.offset;
   const sw2 = cfg.multiplier * b + sw1 + cfg.offset;
-  if ((sw1 !== correctNext[0] || sw2 !== correctNext[1]) && Math.abs(sw2) <= 100000) {
+  if ((sw1 !== correctNext[0] || sw2 !== correctNext[1]) && Math.abs(sw2) <= 5000) {
     custom.push([sw1, sw2]);
   }
 

@@ -318,7 +318,7 @@ export function ZahlenfolgenQuiz({
     const selectedLabel = (q: SequenceTask, key: string) => {
       const opt = q.options?.find((o) => o.key === key);
       if (!opt) return key;
-      return opt.value ? `${opt.value[0]}, ${opt.value[1]}` : (opt.text ?? key);
+      return opt.value ? `${opt.value[0]} / ${opt.value[1]}` : (opt.text ?? key);
     };
     return (
       <div className="max-w-3xl mx-auto space-y-6">
@@ -364,7 +364,7 @@ export function ZahlenfolgenQuiz({
                   </p>
                 )}
                 <p className="text-sm text-green-700 dark:text-green-400 ml-7">
-                  Richtige Antwort: {q.correctNext[0]}, {q.correctNext[1]}
+                  Richtige Antwort: {q.correctNext[0]} / {q.correctNext[1]}
                 </p>
                 <div className="ml-7 mt-2 bg-[var(--surface)] p-3 rounded-lg">
                   <p className="text-xs text-[var(--muted)]">
@@ -435,7 +435,7 @@ export function ZahlenfolgenQuiz({
 
   const total = safeQuestions.length;
   const optionDisplay = (opt: (typeof currentQ.options)[number]) =>
-    opt.value ? `${opt.value[0]}, ${opt.value[1]}` : (opt.text ?? "");
+    opt.value ? `${opt.value[0]} / ${opt.value[1]}` : (opt.text ?? "");
   return (
     <div className="max-w-3xl mx-auto space-y-6">
       {examMode === "exam" && (
@@ -476,7 +476,7 @@ export function ZahlenfolgenQuiz({
                   onClick={() => setAnswers((p) => ({ ...p, [currentQ.id]: opt.key }))}
                   className={`px-4 py-3 rounded-lg border text-sm font-medium transition-colors cursor-pointer text-left ${answers[currentQ.id] === opt.key ? "border-[var(--accent)] bg-[var(--accent)]/10 text-[var(--accent)]" : "border-[var(--border)] hover:bg-[var(--border)]/50"}`}
                 >
-                  <span className="font-semibold mr-2">{opt.key})</span>
+                  <span className="font-semibold mr-2">({opt.key})</span>
                   {optionDisplay(opt)}
                   <kbd className="float-right text-[10px] bg-[var(--border)] px-1.5 py-0.5 rounded text-[var(--muted)]">
                     {oi + 1}

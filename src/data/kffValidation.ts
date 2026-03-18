@@ -37,6 +37,14 @@ function validateZahlenfolgen(task: SequenceTask): ValidationResult {
       ok: false,
       reason: "Zahlenfolge: Regel nicht eindeutig oder mehrere/keine passende Option",
     };
+  // Reject tasks with negative values or values > 5000 (not MedAT-realistic)
+  const allNums = [...task.sequence.filter((x): x is number => x !== "?"), ...task.correctNext];
+  if (allNums.some((n) => n < 0 || n > 5000))
+    return { ok: false, reason: "Zahlenfolge: Wert außerhalb 0–5000 (nicht MedAT-konform)" };
+  // Reject duplicate options (same value pair in A–D)
+  const optVals = task.options.filter((o) => o.value).map((o) => `${o.value![0]},${o.value![1]}`);
+  if (new Set(optVals).size < optVals.length)
+    return { ok: false, reason: "Zahlenfolge: Doppelte Optionen" };
   return { ok: true };
 }
 
