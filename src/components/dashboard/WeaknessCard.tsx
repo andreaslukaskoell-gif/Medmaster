@@ -32,7 +32,7 @@ export function WeaknessCard() {
   if (!data?.weakest_chapters?.length && !data?.subject_scores) return null;
 
   return (
-    <div className="card-glass rounded-xl p-5 space-y-4">
+    <div className="card-glass p-5 space-y-4">
       <div className="flex items-center gap-2">
         <AlertTriangle className="w-4 h-4 text-amber-500" />
         <h3 className="text-sm font-semibold text-[var(--foreground)]">Deine Schwachstellen</h3>

@@ -144,7 +144,7 @@ export default function Einstellungen() {
         <h2 className="text-xs font-semibold uppercase tracking-widest text-[var(--muted)]">
           Konto
         </h2>
-        <div className="card-glass rounded-xl divide-y divide-[var(--border)]">
+        <div className="card-glass divide-y divide-[var(--border)]">
           <div className="flex items-center gap-3 px-4 py-3.5">
             <Mail className="w-4 h-4 text-[var(--muted)] shrink-0" />
             <div className="flex-1 min-w-0">
@@ -188,7 +188,7 @@ export default function Einstellungen() {
         <h2 className="text-xs font-semibold uppercase tracking-widest text-[var(--muted)]">
           Darstellung
         </h2>
-        <div className="card-glass rounded-xl divide-y divide-[var(--border)]">
+        <div className="card-glass divide-y divide-[var(--border)]">
           <SettingRow
             icon={darkMode ? Moon : Sun}
             label="Dark Mode"
@@ -225,7 +225,7 @@ export default function Einstellungen() {
         <h2 className="text-xs font-semibold uppercase tracking-widest text-[var(--muted)]">
           Lernen
         </h2>
-        <div className="card-glass rounded-xl divide-y divide-[var(--border)]">
+        <div className="card-glass divide-y divide-[var(--border)]">
           <SettingRow
             icon={Target}
             label="Tägliches Lernziel"
@@ -276,7 +276,7 @@ export default function Einstellungen() {
         <h2 className="text-xs font-semibold uppercase tracking-widest text-[var(--muted)]">
           Rechtliches
         </h2>
-        <div className="card-glass rounded-xl divide-y divide-[var(--border)]">
+        <div className="card-glass divide-y divide-[var(--border)]">
           <Link
             to="/impressum"
             className="flex items-center gap-3 px-4 py-3.5 hover:bg-[var(--foreground)]/5 transition-colors"
@@ -309,7 +309,7 @@ export default function Einstellungen() {
         <h2 className="text-xs font-semibold uppercase tracking-widest text-[var(--muted)]">
           Aktionen
         </h2>
-        <div className="card-glass rounded-xl divide-y divide-[var(--border)]">
+        <div className="card-glass divide-y divide-[var(--border)]">
           {/* Daten exportieren (DSGVO Art. 20) */}
           <button
             type="button"

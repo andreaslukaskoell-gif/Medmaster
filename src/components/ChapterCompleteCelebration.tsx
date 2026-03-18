@@ -114,7 +114,7 @@ export function ChapterCompleteCelebration({
         </div>
       )}
 
-      <div className="card-glass rounded-2xl p-10 max-w-md text-center" style={{ zIndex: 511 }}>
+      <div className="card-glass p-10 max-w-md text-center" style={{ zIndex: 511 }}>
         {/* Animated checkmark */}
         <div className="flex justify-center mb-6">
           <svg

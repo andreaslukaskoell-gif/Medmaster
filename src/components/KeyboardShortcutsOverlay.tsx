@@ -39,7 +39,7 @@ export function KeyboardShortcutsOverlay() {
         onClick={() => setOpen(false)}
       >
         <div
-          className="card-glass rounded-2xl p-8 max-w-md w-full shadow-2xl"
+          className="card-glass p-8 max-w-md w-full shadow-2xl"
           onClick={(e) => e.stopPropagation()}
         >
           <div className="flex items-center justify-between mb-6">

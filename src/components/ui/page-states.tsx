@@ -57,7 +57,7 @@ export function PageLoadingSkeleton({
       <Skeleton className="h-8 w-48 rounded-lg" />
       <div className="grid gap-3 grid-cols-2">
         {[1, 2, 3, 4].map((i) => (
-          <div key={i} className="card-glass rounded-xl p-4">
+          <div key={i} className="card-glass p-4">
             <Skeleton className="h-16 rounded-lg" />
           </div>
         ))}
@@ -93,7 +93,7 @@ export function PageError({
       )}
       role="alert"
     >
-      <div className="card-glass rounded-2xl p-8 max-w-md mx-auto flex flex-col items-center gap-4">
+      <div className="card-glass p-8 max-w-md mx-auto flex flex-col items-center gap-4">
         <div className="rounded-2xl bg-red-50 dark:bg-red-900/20 p-4">
           <AlertCircle className="h-8 w-8 text-red-500 dark:text-red-400" />
         </div>
@@ -132,7 +132,7 @@ export function PageEmpty({
           className
         )}
       >
-        <div className="card-glass rounded-2xl p-8 max-w-md mx-auto flex flex-col items-center gap-4">
+        <div className="card-glass p-8 max-w-md mx-auto flex flex-col items-center gap-4">
           {icon}
           <p className="text-sm">{message}</p>
           {action}

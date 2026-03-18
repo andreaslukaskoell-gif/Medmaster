@@ -268,9 +268,9 @@ const icons: Record<EmptyStateIcon, React.ReactNode> = {
 export function EmptyState({ icon, title, description, action }: EmptyStateProps) {
   return (
     <div className="flex flex-col items-center justify-center py-12 px-4 text-center">
-      <div className="hero-orbs card-glass rounded-2xl p-10 max-w-md mx-auto flex flex-col items-center gap-5">
+      <div className="hero-orbs card-glass p-10 max-w-md mx-auto flex flex-col items-center gap-5">
         <div className="mb-1">{icons[icon]}</div>
-        <h2 className="text-xl font-semibold font-serif text-[var(--text-primary)]">{title}</h2>
+        <h2 className="text-xl font-semibold text-[var(--text-primary)]">{title}</h2>
         <p className="text-sm text-[var(--muted)] max-w-xs">{description}</p>
         {action && (
           <Link

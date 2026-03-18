@@ -1160,7 +1160,7 @@ export default function Simulation() {
         </div>
 
         {/* Full MedAT-H Simulation */}
-        <div className="card-glass rounded-2xl p-6 space-y-4">
+        <div className="card-glass p-6 space-y-4">
           <div className="flex items-center gap-4">
             <div className="w-14 h-14 bg-orange-100 dark:bg-orange-900/30 rounded-2xl flex items-center justify-center">
               <Clock className="w-7 h-7 text-orange-600 dark:text-orange-400" />
@@ -1260,7 +1260,7 @@ export default function Simulation() {
         <h2 className="text-lg font-bold text-[var(--text-primary)]">Einzelne Testteile</h2>
         <div className="grid grid-cols-4 gap-4 stagger-children">
           {/* BMS */}
-          <div className="card-glass rounded-2xl p-5 space-y-3">
+          <div className="card-glass p-5 space-y-3">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-teal-100 dark:bg-teal-900/30 rounded-xl flex items-center justify-center">
                 <BookOpen className="w-5 h-5 text-teal-600 dark:text-teal-400" />
@@ -1276,7 +1276,7 @@ export default function Simulation() {
           </div>
 
           {/* TV */}
-          <div className="card-glass rounded-2xl p-5 space-y-3">
+          <div className="card-glass p-5 space-y-3">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center">
                 <FileText className="w-5 h-5 text-blue-600 dark:text-blue-400" />
@@ -1292,7 +1292,7 @@ export default function Simulation() {
           </div>
 
           {/* KFF */}
-          <div className="card-glass rounded-2xl p-5 space-y-3">
+          <div className="card-glass p-5 space-y-3">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-purple-100 dark:bg-purple-900/30 rounded-xl flex items-center justify-center">
                 <Brain className="w-5 h-5 text-purple-600 dark:text-purple-400" />
@@ -1308,7 +1308,7 @@ export default function Simulation() {
           </div>
 
           {/* SEK */}
-          <div className="card-glass rounded-2xl p-5 space-y-3">
+          <div className="card-glass p-5 space-y-3">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-rose-100 dark:bg-rose-900/30 rounded-xl flex items-center justify-center">
                 <Heart className="w-5 h-5 text-rose-600 dark:text-rose-400" />
@@ -1325,7 +1325,7 @@ export default function Simulation() {
         </div>
 
         {/* BMS Kurztest */}
-        <div className="card-glass rounded-2xl p-6 space-y-4">
+        <div className="card-glass p-6 space-y-4">
           <div className="flex items-center gap-4">
             <div className="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 rounded-2xl flex items-center justify-center">
               <Timer className="w-7 h-7 text-blue-600 dark:text-blue-400" />
@@ -1367,7 +1367,7 @@ export default function Simulation() {
 
     return (
       <div className="max-w-5xl mx-auto space-y-6">
-        <div className="card-glass rounded-2xl p-8 text-center space-y-6">
+        <div className="card-glass p-8 text-center space-y-6">
           <div className="w-20 h-20 bg-yellow-100 dark:bg-yellow-900/30 rounded-2xl flex items-center justify-center mx-auto">
             <Coffee className="w-10 h-10 text-yellow-600 dark:text-yellow-400" />
           </div>
@@ -1590,7 +1590,7 @@ export default function Simulation() {
         </div>
 
         {/* Overall score */}
-        <div className="card-glass rounded-2xl p-6 text-center">
+        <div className="card-glass p-6 text-center">
           <div className="text-5xl font-bold text-[var(--accent)]/60">{totalPct}%</div>
           <p className="text-lg text-[var(--muted)] mt-1">
             {totalScore} von {allQuestions.length} richtig
@@ -1606,7 +1606,7 @@ export default function Simulation() {
             {[...groupScores.entries()].map(([key, data]) => {
               const pct = data.total > 0 ? Math.round((data.score / data.total) * 100) : 0;
               return (
-                <div key={key} className="card-glass rounded-2xl p-4 text-center">
+                <div key={key} className="card-glass p-4 text-center">
                   <p className="text-2xl font-bold text-[var(--accent)]/60">{pct}%</p>
                   <p className="text-sm font-medium text-[var(--text-primary)]">{data.label}</p>
                   <p className="text-xs text-[var(--muted)]">
@@ -1619,7 +1619,7 @@ export default function Simulation() {
         )}
 
         {/* Per-section breakdown */}
-        <div className="card-glass rounded-2xl p-5 space-y-3">
+        <div className="card-glass p-5 space-y-3">
           <h3 className="font-bold text-[var(--text-primary)] flex items-center gap-2">
             <BarChart3 className="w-4 h-4" /> Detaillierte Aufschlüsselung
           </h3>
@@ -1658,7 +1658,7 @@ export default function Simulation() {
 
         {/* Time usage */}
         {timeEntries.length > 0 && (
-          <div className="card-glass rounded-2xl p-5 space-y-3">
+          <div className="card-glass p-5 space-y-3">
             <h3 className="font-bold text-[var(--text-primary)] flex items-center gap-2">
               <Clock className="w-4 h-4" /> Zeitnutzung
             </h3>
@@ -1689,7 +1689,7 @@ export default function Simulation() {
 
         {/* Weakness analysis */}
         {weakAreas.length > 0 && weakAreas[0].pct < 70 && (
-          <div className="card-glass rounded-2xl p-5 space-y-3 border-l-4 border-l-amber-500">
+          <div className="card-glass p-5 space-y-3 border-l-4 border-l-amber-500">
             <h3 className="font-bold text-[var(--text-primary)] flex items-center gap-2">
               <AlertTriangle className="w-4 h-4 text-amber-500" /> Schwächen-Analyse
             </h3>
@@ -1734,7 +1734,7 @@ export default function Simulation() {
               : 0;
           const diff = totalPct - lastPct;
           return (
-            <div className="card-glass rounded-2xl p-5 space-y-3">
+            <div className="card-glass p-5 space-y-3">
               <h3 className="font-bold text-[var(--text-primary)] flex items-center gap-2">
                 <TrendingUp className="w-4 h-4" /> Vergleich mit früheren Versuchen
               </h3>

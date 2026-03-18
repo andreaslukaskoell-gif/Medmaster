@@ -197,7 +197,7 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
           Zurück zu BMS
         </Button>
 
-        <div className="card-glass rounded-2xl p-6 text-center">
+        <div className="card-glass p-6 text-center">
           <div className="text-4xl font-bold text-[var(--accent)]">
             {score}/{questions.length}
           </div>
@@ -227,7 +227,7 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
               if (answers[q.id] === q.correctOptionId) bySubject[s].correct += 1;
             });
             return (
-              <div className="card-glass rounded-2xl p-5">
+              <div className="card-glass p-5">
                 <h3 className="text-sm font-semibold text-[var(--text-primary)] mb-3">
                   Ergebnis nach Fach
                 </h3>
@@ -279,7 +279,7 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
           const avgTime = questions.length > 0 ? Math.round(totalTime / questions.length) : 0;
 
           return (
-            <div className="card-glass rounded-2xl p-5 space-y-4">
+            <div className="card-glass p-5 space-y-4">
               {totalTime > 0 && (
                 <div className="flex items-center gap-4 text-xs text-[var(--muted)]">
                   <span>
@@ -476,7 +476,7 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
         />
       </div>
 
-      <div className="card-glass rounded-2xl p-6">
+      <div className="card-glass p-6">
         <p className="text-base font-medium text-[var(--text-primary)] mb-6">
           {currentQuestion.text}
         </p>

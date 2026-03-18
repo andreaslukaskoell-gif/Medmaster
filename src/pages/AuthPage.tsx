@@ -106,7 +106,7 @@ export default function AuthPage() {
   if (googleLoading) {
     return (
       <div className="hero-orbs min-h-screen bg-[var(--background)] flex items-center justify-center p-4">
-        <div className="card-glass rounded-2xl p-8 text-center space-y-4">
+        <div className="card-glass p-8 text-center space-y-4">
           <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-[var(--accent)] mx-auto" />
           <p className="text-sm font-medium text-[var(--text-secondary)]">
             Weiterleitung zu Google...
@@ -121,7 +121,7 @@ export default function AuthPage() {
     return (
       <div className="hero-orbs min-h-screen bg-[var(--background)] flex items-center justify-center p-4">
         <div className="w-full max-w-md space-y-6">
-          <div className="card-glass rounded-2xl">
+          <div className="card-glass">
             <div className="p-8 text-center space-y-4">
               <CheckCircle className="w-12 h-12 text-emerald-500 mx-auto" />
               <h2 className="text-xl font-bold text-[var(--text-primary)]">Link gesendet!</h2>
@@ -160,7 +160,7 @@ export default function AuthPage() {
           </p>
         </div>
 
-        <div className="card-glass rounded-2xl">
+        <div className="card-glass">
           <div className="p-6 space-y-5">
             {blocked && (
               <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg p-3 text-sm text-amber-700 dark:text-amber-400">

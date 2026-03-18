@@ -239,7 +239,7 @@ function SelectionScreen({
       </div>
 
       {/* Stats summary */}
-      <div className="card-glass rounded-2xl px-4 py-3">
+      <div className="card-glass px-4 py-3">
         {bmsStats ? (
           <>
             <div className="flex items-center justify-between gap-4 text-sm">
@@ -283,7 +283,7 @@ function SelectionScreen({
       </div>
 
       {/* 1. Fach */}
-      <div className="card-glass rounded-2xl p-4 space-y-3">
+      <div className="card-glass p-4 space-y-3">
         <p className="text-sm font-semibold text-[var(--text-secondary)]">1. Fach wählen</p>
         <div className="grid grid-cols-4 gap-2 stagger-children">
           {BMS_SUBJECTS.map((s) => {
@@ -318,7 +318,7 @@ function SelectionScreen({
       {subjectId && (
         <>
           {/* 2. Modus */}
-          <div className="card-glass rounded-2xl p-4 space-y-3">
+          <div className="card-glass p-4 space-y-3">
             <p className="text-sm font-semibold text-[var(--text-secondary)]">2. Modus</p>
             <div className="grid grid-cols-2 gap-2">
               <button
@@ -354,7 +354,7 @@ function SelectionScreen({
 
           {/* Anzahl (nur bei Einfach) */}
           {mode === "einfach" && (
-            <div className="card-glass rounded-2xl p-4 space-y-3">
+            <div className="card-glass p-4 space-y-3">
               <p className="text-sm font-semibold text-[var(--text-secondary)]">Anzahl Fragen</p>
               <div className="flex flex-wrap gap-2">
                 {EINFACH_COUNTS.map((n) => (
@@ -792,7 +792,7 @@ function ResultsScreen({
         <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
       </Button>
 
-      <div className="card-glass rounded-2xl p-6">
+      <div className="card-glass p-6">
         <div className="text-center mb-5">
           <div className="w-20 h-20 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center mx-auto mb-4">
             <Trophy className="w-10 h-10 text-emerald-600 dark:text-emerald-400" />

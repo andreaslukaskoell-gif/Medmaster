@@ -87,7 +87,7 @@ export function KonamiEasterEgg() {
       {/* Center popup card */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <div
-          className="card-glass rounded-2xl px-10 py-8 text-center animate-fade-in-up"
+          className="card-glass px-10 py-8 text-center animate-fade-in-up"
           style={{ maxWidth: 420, zIndex: 9001 }}
         >
           <div className="text-5xl mb-4">🎉</div>

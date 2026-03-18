@@ -191,7 +191,7 @@ export function OnboardingWizard() {
                     />
                   </svg>
                 </div>
-                <h2 className="text-2xl font-serif font-semibold text-[var(--foreground)] mb-3">
+                <h2 className="text-2xl font-semibold text-[var(--foreground)] mb-3">
                   Willkommen bei MedMaster
                 </h2>
                 <p className="text-[var(--muted-foreground)] leading-relaxed max-w-sm mb-6">
@@ -222,7 +222,7 @@ export function OnboardingWizard() {
                 transition={{ duration: 0.38, ease: [0.16, 1, 0.3, 1] }}
                 className="absolute inset-0 flex flex-col items-center text-center"
               >
-                <h2 className="text-xl font-serif font-semibold text-[var(--foreground)] mb-6">
+                <h2 className="text-xl font-semibold text-[var(--foreground)] mb-6">
                   So funktioniert MedMaster
                 </h2>
                 <div className="grid grid-cols-2 gap-3 w-full">
@@ -232,7 +232,7 @@ export function OnboardingWizard() {
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: i * 0.07, duration: 0.3 }}
-                      className="card-glass rounded-xl p-4 flex flex-col items-center gap-2 text-center ring-1 ring-[var(--accent)]/10 hover:ring-[var(--accent)]/25 transition-all"
+                      className="card-glass p-4 flex flex-col items-center gap-2 text-center ring-1 ring-[var(--accent)]/10 hover:ring-[var(--accent)]/25 transition-all"
                     >
                       <div className="w-9 h-9 rounded-xl bg-[var(--accent)]/10 flex items-center justify-center text-[var(--accent)]">
                         {s.icon}
@@ -275,7 +275,7 @@ export function OnboardingWizard() {
                     />
                   </svg>
                 </div>
-                <h2 className="text-xl font-serif font-semibold text-[var(--foreground)] mb-2">
+                <h2 className="text-xl font-semibold text-[var(--foreground)] mb-2">
                   Wann ist dein MedAT?
                 </h2>
                 <p className="text-[var(--muted-foreground)] text-sm mb-6 max-w-xs leading-relaxed">
@@ -371,7 +371,7 @@ export function OnboardingWizard() {
                     />
                   </svg>
                 </div>
-                <h2 className="text-2xl font-serif font-semibold text-[var(--foreground)] mb-3">
+                <h2 className="text-2xl font-semibold text-[var(--foreground)] mb-3">
                   Bereit? Los geht's!
                 </h2>
                 <p className="text-[var(--muted-foreground)] mb-8 max-w-xs leading-relaxed">
