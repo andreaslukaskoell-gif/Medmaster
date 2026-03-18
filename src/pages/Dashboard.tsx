@@ -288,11 +288,11 @@ export default function Dashboard() {
         <motion.div variants={stagger} initial="initial" animate="animate" className="space-y-6">
           {/* Hero: Begrüßung + Heute im Lernplan */}
           <motion.section variants={tileMotion} aria-label="Start" className="space-y-4">
-            <div className="card-glass p-8 shadow-md">
+            <div className="card-glass p-5 shadow-md">
               <div className="flex flex-col gap-5">
                 <div>
                   <div className="flex items-start justify-between gap-3">
-                    <h1 className="text-4xl font-bold text-[var(--text-primary)] tracking-tight">
+                    <h1 className="text-2xl font-bold text-[var(--text-primary)] tracking-tight">
                       {displayName ? `${getGreetingByTime()}, ${displayName}` : getGreetingByTime()}
                     </h1>
                     {days > 0 && (
@@ -484,7 +484,7 @@ export default function Dashboard() {
                 content="Vollständige MedAT-Simulation unter Prüfungsbedingungen"
                 position="top"
               >
-                <Link to="/simulation" className={cn(cardClass, "p-4 flex items-center gap-2.5")}>
+                <Link to="/simulation" className={cn(cardClass, "p-5 flex items-center gap-3")}>
                   <Timer className="w-4 h-4 text-[var(--muted)] shrink-0" />
                   <span className="text-sm font-medium text-[var(--text-primary)]">Simulation</span>
                 </Link>
@@ -493,10 +493,7 @@ export default function Dashboard() {
                 content="BMS- und KFF-Fragen gezielt nach Fach und Schwierigkeit üben"
                 position="top"
               >
-                <Link
-                  to="/fragen-trainer"
-                  className={cn(cardClass, "p-4 flex items-center gap-2.5")}
-                >
+                <Link to="/fragen-trainer" className={cn(cardClass, "p-5 flex items-center gap-3")}>
                   <Dumbbell className="w-4 h-4 text-[var(--muted)] shrink-0" />
                   <span className="text-sm font-medium text-[var(--text-primary)]">
                     Fragen-Trainer
@@ -504,7 +501,7 @@ export default function Dashboard() {
                 </Link>
               </Tooltip>
               <Tooltip content="Lernfortschritt und Statistiken nach Fach anzeigen" position="top">
-                <Link to="/fortschritt" className={cn(cardClass, "p-4 flex items-center gap-2.5")}>
+                <Link to="/fortschritt" className={cn(cardClass, "p-5 flex items-center gap-3")}>
                   <BarChart3 className="w-4 h-4 text-[var(--muted)] shrink-0" />
                   <span className="text-sm font-medium text-[var(--text-primary)]">
                     Fortschritt
