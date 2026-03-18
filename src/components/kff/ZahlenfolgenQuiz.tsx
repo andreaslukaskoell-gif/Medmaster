@@ -53,8 +53,6 @@ function ZahlenfolgeBoxes({ sequence }: { sequence: (number | "?")[] }) {
   );
 }
 
-type ZahlenfolgenMode = "training";
-
 export function ZahlenfolgenQuiz({
   onBack,
   initialQuestionCount,
@@ -64,7 +62,6 @@ export function ZahlenfolgenQuiz({
   initialQuestionCount?: number;
   autoStart?: boolean;
 }) {
-  const [mode, setMode] = useState<ZahlenfolgenMode | null>(null);
   const [examMode, setExamMode] = useState<ExamMode>("practice");
   const [questionCount, setQuestionCount] = useState(
     initialQuestionCount ?? getLastCount("zahlenfolgen")
@@ -119,7 +116,7 @@ export function ZahlenfolgenQuiz({
       if (valid.length < questionCount && import.meta.env?.DEV) {
         logPoolWarning("zahlenfolgen", valid.length, "Training");
       }
-      setMode("training");
+
       setIndex(0);
       setAnswers({});
       setPhase("quiz");
@@ -236,7 +233,7 @@ export function ZahlenfolgenQuiz({
                   }
                   const seenIds = getKffSeenIdsForDomain("Zahlenfolgen");
                   setQuestions(preferUnseen(valid, count, seenIds));
-                  setMode("training");
+
                   setIndex(0);
                   setAnswers({});
                   setPhase("quiz");
@@ -247,7 +244,7 @@ export function ZahlenfolgenQuiz({
                   );
                   const valid = filterValidSequenceTasks(generated);
                   setQuestions(valid.slice(0, EXAM_CONFIG.zahlenfolgen.questions));
-                  setMode("training");
+
                   setIndex(0);
                   setAnswers({});
                   setPhase("quiz");
@@ -388,7 +385,6 @@ export function ZahlenfolgenQuiz({
           <Button
             onClick={() => {
               setPhase("setup");
-              setMode(null);
             }}
           >
             <Shuffle className="w-4 h-4 mr-1" /> Neue Fragen
@@ -399,7 +395,7 @@ export function ZahlenfolgenQuiz({
   }
 
   if (!safeQuestions.length) {
-    const isTrainingEmpty = phase === "quiz" && mode === "training";
+    const isTrainingEmpty = phase === "quiz";
     return (
       <div className="max-w-3xl mx-auto space-y-6 p-8">
         <Button variant="ghost" size="sm" onClick={onBack}>
@@ -468,11 +464,6 @@ export function ZahlenfolgenQuiz({
       </div>
       <Card>
         <CardContent className="p-6">
-          {currentQ.source && (
-            <Badge variant="default" className="mb-2">
-              🏛️ Offizielles MedAT-Beispiel
-            </Badge>
-          )}
           <ZahlenfolgeBoxes sequence={currentQ.sequence} />
           <p className="text-sm text-[var(--muted)] mb-6 text-center">
             Welche zwei Zahlen folgen als nächstes?

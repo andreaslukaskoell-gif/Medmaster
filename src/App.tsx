@@ -71,8 +71,9 @@ const MedATCountdown = lazy(() => import("@/pages/MedATCountdown"));
 
 function LoadingSpinner() {
   return (
-    <div className="flex items-center justify-center min-h-[60vh]">
-      <div className="animate-spin rounded-full h-8 w-8 border-2 border-[var(--accent)] border-t-transparent" />
+    <div className="flex flex-col items-center justify-center min-h-[60vh] gap-4">
+      <img src="/logo.svg" alt="" className="h-10 w-10 opacity-60" />
+      <div className="animate-spin rounded-full h-6 w-6 border-2 border-[var(--accent)] border-t-transparent" />
     </div>
   );
 }

@@ -11,15 +11,110 @@ import {
   FileText,
   Scale,
   ChevronRight,
+  Type,
+  Target,
+  ListOrdered,
+  Timer,
+  RotateCcw,
 } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
 import { useStore } from "@/store/useStore";
+
+const FONT_OPTIONS: { value: "small" | "normal" | "large"; label: string }[] = [
+  { value: "small", label: "Klein" },
+  { value: "normal", label: "Normal" },
+  { value: "large", label: "Groß" },
+];
+
+const GOAL_OPTIONS = [
+  { value: 0, label: "Aus" },
+  { value: 15, label: "15 Min" },
+  { value: 30, label: "30 Min" },
+  { value: 45, label: "45 Min" },
+  { value: 60, label: "60 Min" },
+  { value: 90, label: "90 Min" },
+];
+
+const QUESTIONS_OPTIONS = [5, 10, 15, 20, 30];
+
+const TIMER_OPTIONS = [
+  { value: 0, label: "Aus" },
+  { value: 30, label: "30 Sek" },
+  { value: 60, label: "60 Sek" },
+  { value: 90, label: "90 Sek" },
+  { value: 120, label: "2 Min" },
+];
+
+function SegmentedControl<T extends string | number>({
+  options,
+  value,
+  onChange,
+  getLabel,
+}: {
+  options: T[];
+  value: T;
+  onChange: (v: T) => void;
+  getLabel?: (v: T) => string;
+}) {
+  return (
+    <div className="flex gap-1 bg-[var(--foreground)]/5 rounded-lg p-0.5">
+      {options.map((opt) => (
+        <button
+          key={String(opt)}
+          type="button"
+          onClick={() => onChange(opt)}
+          className={`px-3 py-1.5 text-xs font-medium rounded-md transition-all cursor-pointer ${
+            value === opt
+              ? "bg-[var(--accent)] text-white shadow-sm"
+              : "text-[var(--text-secondary)] hover:text-[var(--foreground)]"
+          }`}
+        >
+          {getLabel ? getLabel(opt) : String(opt)}
+        </button>
+      ))}
+    </div>
+  );
+}
+
+function SettingRow({
+  icon: Icon,
+  label,
+  description,
+  children,
+}: {
+  icon: typeof Moon;
+  label: string;
+  description?: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="flex items-center gap-3 px-4 py-3.5">
+      <Icon className="w-4 h-4 text-[var(--muted)] shrink-0" />
+      <div className="flex-1 min-w-0">
+        <p className="text-sm font-medium text-[var(--foreground)]">{label}</p>
+        {description && <p className="text-xs text-[var(--muted)]">{description}</p>}
+      </div>
+      {children}
+    </div>
+  );
+}
 
 export default function Einstellungen() {
   const { user, profile, signOut, deleteAccount } = useAuth();
   const darkMode = useStore((s) => s.darkMode);
   const toggleDarkMode = useStore((s) => s.toggleDarkMode);
+  const fontSize = useStore((s) => s.fontSize) ?? "normal";
+  const setFontSize = useStore((s) => s.setFontSize);
+  const dailyGoalMinutes = useStore((s) => s.dailyGoalMinutes) ?? 30;
+  const setDailyGoalMinutes = useStore((s) => s.setDailyGoalMinutes);
+  const questionsPerSession = useStore((s) => s.questionsPerSession) ?? 10;
+  const setQuestionsPerSession = useStore((s) => s.setQuestionsPerSession);
+  const quizTimerSeconds = useStore((s) => s.quizTimerSeconds) ?? 0;
+  const setQuizTimerSeconds = useStore((s) => s.setQuizTimerSeconds);
+  const resetProgress = useStore((s) => s.resetProgress);
+
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
+  const [showResetConfirm, setShowResetConfirm] = useState(false);
   const [deleting, setDeleting] = useState(false);
 
   const handleDeleteAccount = async () => {
@@ -28,11 +123,17 @@ export default function Einstellungen() {
     setDeleting(false);
   };
 
+  const handleFontSize = (size: "small" | "normal" | "large") => {
+    setFontSize(size);
+    document.documentElement.classList.remove("font-small", "font-normal", "font-large");
+    document.documentElement.classList.add(`font-${size}`);
+  };
+
   return (
     <div className="max-w-5xl mx-auto px-4 py-8 space-y-8">
       <div className="hero-orbs text-center">
         <h1 className="text-2xl font-bold text-[var(--text-primary)]">Einstellungen</h1>
-        <p className="text-sm text-[var(--muted)] mt-1">Konto, Darstellung und mehr</p>
+        <p className="text-sm text-[var(--muted)] mt-1">Konto, Darstellung, Lernen und mehr</p>
       </div>
 
       {/* ── Konto ──────────────────────────────────────────────── */}
@@ -41,7 +142,6 @@ export default function Einstellungen() {
           Konto
         </h2>
         <div className="card-glass rounded-xl divide-y divide-[var(--border)]">
-          {/* E-Mail */}
           <div className="flex items-center gap-3 px-4 py-3.5">
             <Mail className="w-4 h-4 text-[var(--muted)] shrink-0" />
             <div className="flex-1 min-w-0">
@@ -49,8 +149,6 @@ export default function Einstellungen() {
               <p className="text-xs text-[var(--muted)] truncate">{user?.email ?? "—"}</p>
             </div>
           </div>
-
-          {/* Benutzername */}
           <div className="flex items-center gap-3 px-4 py-3.5">
             <User className="w-4 h-4 text-[var(--muted)] shrink-0" />
             <div className="flex-1 min-w-0">
@@ -64,8 +162,6 @@ export default function Einstellungen() {
               </p>
             </div>
           </div>
-
-          {/* Abo */}
           <div className="flex items-center gap-3 px-4 py-3.5">
             <Shield className="w-4 h-4 text-[var(--muted)] shrink-0" />
             <div className="flex-1 min-w-0">
@@ -90,19 +186,11 @@ export default function Einstellungen() {
           Darstellung
         </h2>
         <div className="card-glass rounded-xl divide-y divide-[var(--border)]">
-          {/* Dark Mode */}
-          <div className="flex items-center gap-3 px-4 py-3.5">
-            {darkMode ? (
-              <Moon className="w-4 h-4 text-[var(--muted)] shrink-0" />
-            ) : (
-              <Sun className="w-4 h-4 text-[var(--muted)] shrink-0" />
-            )}
-            <div className="flex-1 min-w-0">
-              <p className="text-sm font-medium text-[var(--foreground)]">Dark Mode</p>
-              <p className="text-xs text-[var(--muted)]">
-                {darkMode ? "Aktiviert" : "Deaktiviert"}
-              </p>
-            </div>
+          <SettingRow
+            icon={darkMode ? Moon : Sun}
+            label="Dark Mode"
+            description={darkMode ? "Aktiviert" : "Deaktiviert"}
+          >
             <button
               type="button"
               onClick={toggleDarkMode}
@@ -116,7 +204,67 @@ export default function Einstellungen() {
                 }`}
               />
             </button>
-          </div>
+          </SettingRow>
+
+          <SettingRow icon={Type} label="Schriftgröße" description="Größe der Lerninhalte">
+            <SegmentedControl
+              options={FONT_OPTIONS.map((o) => o.value)}
+              value={fontSize}
+              onChange={handleFontSize}
+              getLabel={(v) => FONT_OPTIONS.find((o) => o.value === v)?.label ?? v}
+            />
+          </SettingRow>
+        </div>
+      </section>
+
+      {/* ── Lernen ─────────────────────────────────────────────── */}
+      <section className="space-y-3">
+        <h2 className="text-xs font-semibold uppercase tracking-widest text-[var(--muted)]">
+          Lernen
+        </h2>
+        <div className="card-glass rounded-xl divide-y divide-[var(--border)]">
+          <SettingRow
+            icon={Target}
+            label="Tägliches Lernziel"
+            description={
+              dailyGoalMinutes === 0 ? "Deaktiviert" : `${dailyGoalMinutes} Minuten pro Tag`
+            }
+          >
+            <SegmentedControl
+              options={GOAL_OPTIONS.map((o) => o.value)}
+              value={dailyGoalMinutes}
+              onChange={setDailyGoalMinutes}
+              getLabel={(v) => GOAL_OPTIONS.find((o) => o.value === v)?.label ?? `${v}`}
+            />
+          </SettingRow>
+
+          <SettingRow
+            icon={ListOrdered}
+            label="Fragen pro Session"
+            description={`${questionsPerSession} Fragen werden pro Quiz geladen`}
+          >
+            <SegmentedControl
+              options={QUESTIONS_OPTIONS}
+              value={questionsPerSession}
+              onChange={setQuestionsPerSession}
+              getLabel={(v) => `${v}`}
+            />
+          </SettingRow>
+
+          <SettingRow
+            icon={Timer}
+            label="Timer pro Frage"
+            description={
+              quizTimerSeconds === 0 ? "Kein Zeitlimit" : `${quizTimerSeconds} Sekunden pro Frage`
+            }
+          >
+            <SegmentedControl
+              options={TIMER_OPTIONS.map((o) => o.value)}
+              value={quizTimerSeconds}
+              onChange={setQuizTimerSeconds}
+              getLabel={(v) => TIMER_OPTIONS.find((o) => o.value === v)?.label ?? `${v}`}
+            />
+          </SettingRow>
         </div>
       </section>
 
@@ -159,6 +307,58 @@ export default function Einstellungen() {
           Aktionen
         </h2>
         <div className="card-glass rounded-xl divide-y divide-[var(--border)]">
+          {/* Fortschritt zurücksetzen */}
+          {!showResetConfirm ? (
+            <button
+              type="button"
+              onClick={() => setShowResetConfirm(true)}
+              className="flex items-center gap-3 px-4 py-3.5 w-full text-left hover:bg-amber-500/5 transition-colors cursor-pointer"
+            >
+              <RotateCcw className="w-4 h-4 text-amber-500 shrink-0" />
+              <div className="flex-1">
+                <span className="text-sm font-medium text-amber-600 dark:text-amber-400">
+                  Fortschritt zurücksetzen
+                </span>
+                <p className="text-xs text-[var(--muted)]">
+                  XP, Streak, Quizergebnisse und Kapitelfortschritt löschen
+                </p>
+              </div>
+            </button>
+          ) : (
+            <div className="px-4 py-4 space-y-3">
+              <div className="flex items-start gap-3">
+                <RotateCcw className="w-4 h-4 text-amber-500 shrink-0 mt-0.5" />
+                <div>
+                  <p className="text-sm font-medium text-amber-600 dark:text-amber-400">
+                    Wirklich zurücksetzen?
+                  </p>
+                  <p className="text-xs text-[var(--muted)] mt-1">
+                    Dein gesamter Lernfortschritt wird auf Null gesetzt. Dein Konto bleibt bestehen.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-3 pl-7">
+                <button
+                  type="button"
+                  onClick={() => {
+                    resetProgress();
+                    setShowResetConfirm(false);
+                  }}
+                  className="px-4 py-2 text-xs font-medium text-white bg-amber-500 hover:bg-amber-600 rounded-lg transition-colors cursor-pointer"
+                >
+                  Ja, zurücksetzen
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setShowResetConfirm(false)}
+                  className="px-4 py-2 text-xs font-medium text-[var(--muted)] hover:text-[var(--foreground)] bg-[var(--foreground)]/5 rounded-lg transition-colors cursor-pointer"
+                >
+                  Abbrechen
+                </button>
+              </div>
+            </div>
+          )}
+
           {/* Abmelden */}
           <button
             type="button"

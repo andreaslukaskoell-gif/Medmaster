@@ -182,9 +182,10 @@ function SelectionScreen({
   ) => void;
   userId: string;
 }) {
+  const questionsPerSession = useStore((s) => s.questionsPerSession);
   const [subjectId, setSubjectId] = useState<BMSSubjectId | null>(null);
   const [mode, setMode] = useState<TrainMode>("einfach");
-  const [count, setCount] = useState(20);
+  const [count, setCount] = useState(questionsPerSession);
   const [source] = useState<QuestionSource>("supabase");
 
   const quizResults = useStore((s) => s.quizResults);
@@ -1022,9 +1023,10 @@ export default function FragenTrainer() {
     | { fach: BMSSubjectId; count: number }[]
     | undefined;
 
+  const questionsPerSession = useStore((s) => s.questionsPerSession);
   const [screen, setScreen] = useState<"select" | "quiz" | "results">("select");
   const [subjectId, setSubjectId] = useState<BMSSubjectId | null>(null);
-  const [count, setCount] = useState(20);
+  const [count, setCount] = useState(questionsPerSession);
   const [timeLimitMinutes, setTimeLimitMinutes] = useState<number | null>(null);
   const [questionSource, setQuestionSource] = useState<QuestionSource>("supabase");
   const [initialFragen, setInitialFragen] = useState<

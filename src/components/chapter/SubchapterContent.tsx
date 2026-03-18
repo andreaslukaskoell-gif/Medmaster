@@ -207,7 +207,7 @@ function buildMarkdownComponents(keywordLinkEntries?: KeywordLinkEntry[]) {
       }
 
       return (
-        <blockquote className="border-l-3 border-[var(--accent)]/30 pl-4 pr-2 py-2 my-5 text-[var(--text-secondary)] not-italic">
+        <blockquote className="border-l-[3px] border-[var(--accent)]/30 pl-4 pr-2 py-2 my-5 text-[var(--text-secondary)] not-italic">
           {children}
         </blockquote>
       );
@@ -386,7 +386,7 @@ export function SubchapterContent({
           parts.push(
             <figure
               key={`img-${partKey}`}
-              className={`${lastWasDiagram ? "mt-10" : "mt-4"} mb-4 mx-auto max-w-md`}
+              className={`${lastWasDiagram ? "mt-10" : "mt-4"} mb-4 mx-auto max-w-xl`}
             >
               <ImageWithFallback
                 src={uk.imageUrl}
@@ -476,6 +476,38 @@ export function SubchapterContent({
         });
       }
     });
+    // Inject imageUrl into the first H2 section (appended at end) when no inline visual exists
+    const hasInlineVisual = uk.content?.includes("{{IMAGE}}") || uk.content?.includes("{{DIAGRAM");
+    if (uk.imageUrl && !hasInlineVisual && list.length > 0) {
+      const firstH2Idx = list.findIndex((s) => s.variant === "default" && s.title !== "Einleitung");
+      const targetIdx = firstH2Idx >= 0 ? firstH2Idx : 0;
+      const target = list[targetIdx];
+      const imgFigure = (
+        <figure className="my-6 mx-auto max-w-xl">
+          <ImageWithFallback
+            src={uk.imageUrl}
+            alt={uk.imageCaption || uk.title}
+            containerClassName="rounded-lg overflow-hidden"
+            lightbox
+          />
+          {uk.imageCaption && (
+            <figcaption className="mt-2 text-center text-xs text-[var(--muted)] italic">
+              {uk.imageCaption}
+            </figcaption>
+          )}
+        </figure>
+      );
+      list[targetIdx] = {
+        ...target,
+        content: (
+          <>
+            {target.content}
+            {imgFigure}
+          </>
+        ),
+      };
+    }
+
     if (uk.diagram && !diagramRendered && list.length > 0) {
       const last = list[list.length - 1];
       list[list.length - 1] = {

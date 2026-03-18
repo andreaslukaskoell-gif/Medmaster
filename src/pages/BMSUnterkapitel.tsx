@@ -246,6 +246,7 @@ export default function BMSUnterkapitel({
   const [showScrollRestoredToast, setShowScrollRestoredToast] = useState(false);
   const [toolMenuOpen, setToolMenuOpen] = useState(false);
   const [showCelebration, setShowCelebration] = useState(false);
+  const [quizSummary, setQuizSummary] = useState<{ correct: number; total: number } | null>(null);
   const [navToast, setNavToast] = useState<{ direction: "prev" | "next"; title: string } | null>(
     null
   );
@@ -258,7 +259,7 @@ export default function BMSUnterkapitel({
   const readingTimeMin = useMemo(() => {
     const text = [uk?.content ?? "", ...(uk?.sections?.map((s) => s.text ?? "") ?? [])].join(" ");
     const words = text.trim().split(/\s+/).filter(Boolean).length;
-    return Math.max(1, Math.round(words / 200));
+    return Math.max(1, Math.round(words / 250));
   }, [uk?.content, uk?.sections]);
 
   useEffect(() => {
@@ -518,6 +519,8 @@ export default function BMSUnterkapitel({
     const newCompletedCount = completedCount + (isCompleted ? 0 : 1);
     if (newCompletedCount === total) {
       setShowCelebration(true);
+    } else if (typeof correctCount === "number" && typeof totalArg === "number" && totalArg > 0) {
+      setQuizSummary({ correct: correctCount, total: totalArg });
     } else {
       setTimeout(() => onBack(), 1200);
     }
@@ -976,6 +979,44 @@ export default function BMSUnterkapitel({
           xpEarned={50}
           onContinue={handleCelebrationContinue}
         />
+      )}
+
+      {quizSummary && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm">
+          <div className="card-glass p-8 max-w-sm w-full text-center space-y-4 animate-fade-in-up">
+            <div className="text-4xl font-bold" style={{ color: accentColor }}>
+              {quizSummary.correct}/{quizSummary.total}
+            </div>
+            <p className="text-sm text-[var(--text-secondary)]">
+              {quizSummary.correct === quizSummary.total
+                ? "Perfekt — alles richtig!"
+                : quizSummary.correct >= quizSummary.total * 0.7
+                  ? "Gut gemacht!"
+                  : "Weiter üben — du schaffst das!"}
+            </p>
+            <div className="w-full bg-[var(--border)] rounded-full h-2 overflow-hidden">
+              <div
+                className="h-full rounded-full transition-all duration-700"
+                style={{
+                  width: `${(quizSummary.correct / quizSummary.total) * 100}%`,
+                  background: accentColor,
+                }}
+              />
+            </div>
+            <div className="flex gap-3 justify-center pt-2">
+              <button
+                onClick={() => {
+                  setQuizSummary(null);
+                  onBack();
+                }}
+                className="btn-premium px-6 py-2 text-sm"
+                style={{ background: accentColor }}
+              >
+                Weiter
+              </button>
+            </div>
+          </div>
+        </div>
       )}
 
       <KnowledgeBridgeSlideOver

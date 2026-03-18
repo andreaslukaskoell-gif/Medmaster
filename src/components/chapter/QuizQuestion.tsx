@@ -14,6 +14,8 @@ type QuizQuestionProps = {
   onAnswerChange?: (isCorrect: boolean, secondTry?: boolean) => void;
   /** Called on first answer attempt only (before retry). Used for summary tracking. */
   onFirstAttempt?: (isCorrect: boolean) => void;
+  /** When true, force-mark question as wrong (e.g. timer expired). */
+  forceWrong?: boolean;
 };
 
 /**
@@ -25,6 +27,7 @@ export const QuizQuestion = React.memo(function QuizQuestion({
   questionNumber,
   onAnswerChange,
   onFirstAttempt,
+  forceWrong,
 }: QuizQuestionProps) {
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
   const [isAnswered, setIsAnswered] = useState(false);
@@ -83,6 +86,15 @@ export const QuizQuestion = React.memo(function QuizQuestion({
     setWrongShakeTrigger((t) => t + 1);
     onAnswerChange?.(false);
   };
+
+  // Force wrong answer when timer expires (forceWrong prop)
+  useEffect(() => {
+    if (forceWrong && !isAnswered) {
+      const wrongIdx = correctIndex === 0 ? 1 : 0;
+      handleSelectAnswer(wrongIdx);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [forceWrong]);
 
   const isCorrect = isAnswered && selectedOption === correctIndex;
   const isWrong = isAnswered && selectedOption !== null && selectedOption !== correctIndex;

@@ -27,9 +27,8 @@ if (typeof dsn === "string" && dsn.trim().length > 0) {
 const consent = getStoredConsent();
 
 if (consent?.analytics) {
-  // PostHog (analytics)
-  initAnalytics();
-  captureUtmParams();
+  // PostHog (analytics) — dynamically loaded
+  initAnalytics().then(() => captureUtmParams());
   // Supabase analytics tracker
   initTracker();
   captureTrafficSource();

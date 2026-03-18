@@ -1,17 +1,19 @@
 // PostHog analytics — tracks conversion funnel events.
 // Noop in dev unless VITE_POSTHOG_KEY is set.
+// posthog-js is dynamically imported to avoid bundling it when unused.
 
-import posthog from "posthog-js";
+import type { PostHog } from "posthog-js";
 
 const POSTHOG_KEY = import.meta.env.VITE_POSTHOG_KEY as string | undefined;
 const POSTHOG_HOST = (import.meta.env.VITE_POSTHOG_HOST as string) || "https://eu.i.posthog.com";
 
-let initialized = false;
+let ph: PostHog | null = null;
 
-export function initAnalytics() {
-  if (initialized) return;
+export async function initAnalytics() {
+  if (ph) return;
   if (!POSTHOG_KEY?.trim()) return;
 
+  const posthog = (await import("posthog-js")).default;
   posthog.init(POSTHOG_KEY.trim(), {
     api_host: POSTHOG_HOST,
     capture_pageview: true,
@@ -19,25 +21,22 @@ export function initAnalytics() {
     persistence: "localStorage+cookie",
     autocapture: false, // manual events only — less noise
   });
-  initialized = true;
+  ph = posthog;
 }
 
 /** Identify user after signup/login */
 export function identifyUser(userId: string, properties?: Record<string, unknown>) {
-  if (!initialized) return;
-  posthog.identify(userId, properties);
+  ph?.identify(userId, properties);
 }
 
 /** Reset identity on logout */
 export function resetAnalytics() {
-  if (!initialized) return;
-  posthog.reset();
+  ph?.reset();
 }
 
 /** Track a custom event */
 export function track(event: string, properties?: Record<string, unknown>) {
-  if (!initialized) return;
-  posthog.capture(event, properties);
+  ph?.capture(event, properties);
 }
 
 // ── Funnel events ──
@@ -76,7 +75,7 @@ export function trackPricingView() {
 
 /** Capture UTM params from URL on first visit */
 export function captureUtmParams() {
-  if (!initialized) return;
+  if (!ph) return;
   const params = new URLSearchParams(window.location.search);
   const utm: Record<string, string> = {};
   for (const key of ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"]) {
@@ -84,7 +83,7 @@ export function captureUtmParams() {
     if (val) utm[key] = val;
   }
   if (Object.keys(utm).length > 0) {
-    posthog.register(utm); // persists as super properties on all future events
+    ph.register(utm); // persists as super properties on all future events
     track("utm_captured", utm);
   }
 }

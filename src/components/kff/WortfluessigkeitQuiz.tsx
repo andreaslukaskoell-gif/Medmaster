@@ -21,7 +21,7 @@ import { useStore } from "@/store/useStore";
 import { useSessionTimer } from "@/hooks/useSessionTimer";
 import { UebungsbeschreibungCard } from "@/components/shared/UebungsbeschreibungCard";
 import { OfficialInstructionCard } from "@/components/shared/OfficialInstructionCard";
-import { OFFICIAL_WF_INSTRUCTION, OFFICIAL_WF_EXAMPLES } from "@/data/kffWortfluessigkeitMedAT";
+import { OFFICIAL_WF_INSTRUCTION } from "@/data/kffWortfluessigkeitMedAT";
 import {
   difficultyForIndex,
   getLastCount,
@@ -31,8 +31,6 @@ import {
   TaskDbCountHint,
 } from "./kffHelpers";
 
-type WortfluessigkeitMode = "official" | "training";
-
 export function WortflüssigkeitQuiz({
   onBack,
   autoStart,
@@ -40,7 +38,6 @@ export function WortflüssigkeitQuiz({
   onBack: () => void;
   autoStart?: boolean;
 }) {
-  const [, setMode] = useState<WortfluessigkeitMode | null>(null);
   const [examMode, setExamMode] = useState<ExamMode>("practice");
   const [questionCount, setQuestionCount] = useState(getLastCount("wortfluessigkeit"));
   const [phase, setPhase] = useState<"setup" | "quiz" | "result">("setup");
@@ -96,18 +93,11 @@ export function WortflüssigkeitQuiz({
         }
         valid = shuffleSlice(filterValidWordFluencyTasks(generated), questionCount);
         if (valid.length === 0) {
-          const withIds = OFFICIAL_WF_EXAMPLES.map((t, idx) => ({
-            ...t,
-            id: t.id ?? `wf-off-${idx}`,
-          }));
           const fromPool = WF_TRAINING_POOL_1000.map((t, idx) => ({
             ...t,
             id: t.id ?? `wf-1000-${idx}`,
           }));
-          valid = shuffleSlice(
-            filterValidWordFluencyTasks([...withIds, ...fromPool]),
-            questionCount
-          );
+          valid = shuffleSlice(filterValidWordFluencyTasks(fromPool), questionCount);
         }
         if (import.meta.env?.DEV)
           logPoolWarning("wortflüssigkeit", valid.length, "Fallback (generiert)");
@@ -119,7 +109,6 @@ export function WortflüssigkeitQuiz({
       if (valid.length < raw.length && import.meta.env?.DEV) {
         logPoolWarning("wortflüssigkeit", valid.length, "Training");
       }
-      setMode("training");
       setIndex(0);
       setAnswers({});
       setPhase("quiz");
@@ -261,7 +250,6 @@ export function WortflüssigkeitQuiz({
                   setQuestions(
                     preferUnseen(valid as (WordFluencyTask & { id: string })[], count, seenIds)
                   );
-                  setMode("training");
                   setIndex(0);
                   setAnswers({});
                   setPhase("quiz");
@@ -275,7 +263,6 @@ export function WortflüssigkeitQuiz({
                     EXAM_CONFIG.wortfluessigkeit.questions
                   );
                   setQuestions(valid);
-                  setMode("training");
                   setIndex(0);
                   setAnswers({});
                   setPhase("quiz");
@@ -416,7 +403,6 @@ export function WortflüssigkeitQuiz({
           <Button
             onClick={() => {
               setPhase("setup");
-              setMode(null);
             }}
           >
             <Shuffle className="w-4 h-4 mr-1" /> Neue Wörter

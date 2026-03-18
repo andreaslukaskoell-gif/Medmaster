@@ -281,6 +281,14 @@ interface AppState {
   /** Last Monday (ISO date) when streakFreezes was reset */
   lastFreezeReset: string;
   darkMode: boolean;
+  /** Schriftgröße für Lerninhalte: "small" | "normal" | "large" */
+  fontSize: "small" | "normal" | "large";
+  /** Tägliches Lernziel in Minuten (0 = deaktiviert) */
+  dailyGoalMinutes: number;
+  /** Anzahl Fragen pro Quiz-Session */
+  questionsPerSession: number;
+  /** Timer pro Frage im Quiz (Sekunden, 0 = deaktiviert) */
+  quizTimerSeconds: number;
   completedChapters: string[];
   quizResults: QuizResult[];
   currentAnswers: Record<string, string>;
@@ -357,6 +365,11 @@ interface AppState {
   setPendingBadgeId: (id: string | null) => void;
   checkStreak: () => void;
   toggleDarkMode: () => void;
+  setFontSize: (size: "small" | "normal" | "large") => void;
+  setDailyGoalMinutes: (minutes: number) => void;
+  setQuestionsPerSession: (count: number) => void;
+  setQuizTimerSeconds: (seconds: number) => void;
+  resetProgress: () => void;
   completeChapter: (chapterId: string) => void;
   setAnswer: (questionId: string, answer: string) => void;
   clearAnswers: () => void;
@@ -390,6 +403,10 @@ export const useStore = create<AppState>()(
       frozenDays: [],
       lastFreezeReset: "",
       darkMode: false,
+      fontSize: "normal",
+      dailyGoalMinutes: 30,
+      questionsPerSession: 10,
+      quizTimerSeconds: 0,
       completedChapters: [],
       quizResults: [],
       currentAnswers: {},
@@ -755,6 +772,27 @@ export const useStore = create<AppState>()(
           return { darkMode: newMode };
         }),
 
+      setFontSize: (size) => set({ fontSize: size }),
+      setDailyGoalMinutes: (minutes) => set({ dailyGoalMinutes: minutes }),
+      setQuestionsPerSession: (count) => set({ questionsPerSession: count }),
+      setQuizTimerSeconds: (seconds) => set({ quizTimerSeconds: seconds }),
+      resetProgress: () =>
+        set({
+          completedChapters: [],
+          quizResults: [],
+          currentAnswers: {},
+          spacedRepetition: {},
+          userProgress: {},
+          xp: 0,
+          streak: 0,
+          lastActiveDate: "",
+          activityLog: {},
+          earnedBadges: [],
+          flaggedQuestions: [],
+          notes: {},
+          bookmarks: { chapters: [], questions: [] },
+        }),
+
       completeChapter: (chapterId) => {
         set((s) => ({
           completedChapters: s.completedChapters.includes(chapterId)
@@ -778,7 +816,7 @@ export const useStore = create<AppState>()(
       saveQuizResult: (result) =>
         set((s) => {
           const ts = result.timestamp || new Date().toISOString();
-          const newResults = [...s.quizResults, { ...result, timestamp: ts }];
+          const newResults = [...s.quizResults, { ...result, timestamp: ts }].slice(-500);
           const wrongAnswers =
             result.type === "bms" && Array.isArray(result.answers)
               ? result.answers.filter((a) => !a.correct)
@@ -997,11 +1035,16 @@ export const useStore = create<AppState>()(
   )
 );
 
-// Hydration-Check: nach Reload (F5) Dark Mode anwenden; State ist bereits durch merge sanitized
+// Hydration-Check: nach Reload (F5) Dark Mode + Schriftgröße anwenden
 useStore.persist.onFinishHydration((state) => {
   try {
     if (state?.darkMode) {
       document.documentElement.classList.add("dark");
+    }
+    const fs = state?.fontSize;
+    if (fs && fs !== "normal") {
+      document.documentElement.classList.remove("font-small", "font-normal", "font-large");
+      document.documentElement.classList.add(`font-${fs}`);
     }
   } catch {
     // ignore

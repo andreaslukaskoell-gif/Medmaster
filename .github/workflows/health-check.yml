@@ -1,0 +1,285 @@
+name: Health Check & Auto-Fix
+
+on:
+  schedule:
+    # Every 5 minutes
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+    inputs:
+      force_fix:
+        description: "Force Claude auto-fix even if site is up"
+        type: boolean
+        default: false
+
+env:
+  SITE_URL: https://medmaster.at
+  # Max consecutive failures before triggering auto-fix
+  FAILURE_THRESHOLD: 2
+
+jobs:
+  health-check:
+    runs-on: ubuntu-latest
+    outputs:
+      site_down: ${{ steps.check.outputs.site_down }}
+      status_code: ${{ steps.check.outputs.status_code }}
+      error_msg: ${{ steps.check.outputs.error_msg }}
+
+    steps:
+      - name: Check site health
+        id: check
+        run: |
+          set +e
+          RESPONSE=$(curl -sS -o /dev/null -w "%{http_code}" --max-time 15 --retry 2 "$SITE_URL")
+          CURL_EXIT=$?
+          set -e
+
+          echo "status_code=$RESPONSE" >> "$GITHUB_OUTPUT"
+
+          if [ "$CURL_EXIT" -ne 0 ] || [ "$RESPONSE" -ge 500 ] || [ "$RESPONSE" -eq 000 ]; then
+            echo "site_down=true" >> "$GITHUB_OUTPUT"
+            echo "error_msg=HTTP $RESPONSE (curl exit: $CURL_EXIT)" >> "$GITHUB_OUTPUT"
+            echo "::error::Site is DOWN — HTTP $RESPONSE"
+          else
+            echo "site_down=false" >> "$GITHUB_OUTPUT"
+            echo "Site is UP — HTTP $RESPONSE"
+          fi
+
+      - name: Check Vercel deployment status
+        if: steps.check.outputs.site_down == 'true'
+        id: vercel
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          if [ -z "$VERCEL_TOKEN" ]; then
+            echo "vercel_status=unknown" >> "$GITHUB_OUTPUT"
+            echo "No VERCEL_TOKEN configured, skipping Vercel check"
+            exit 0
+          fi
+          STATUS=$(curl -sS -H "Authorization: Bearer $VERCEL_TOKEN" \
+            "https://api.vercel.com/v6/deployments?limit=1&projectId=${{ secrets.VERCEL_PROJECT_ID }}" \
+            | jq -r '.deployments[0].state // "unknown"')
+          echo "vercel_status=$STATUS" >> "$GITHUB_OUTPUT"
+          echo "Latest Vercel deployment: $STATUS"
+
+  track-failures:
+    needs: health-check
+    if: always()
+    runs-on: ubuntu-latest
+    outputs:
+      consecutive_failures: ${{ steps.count.outputs.consecutive_failures }}
+      should_fix: ${{ steps.count.outputs.should_fix }}
+
+    steps:
+      - name: Restore failure cache
+        uses: actions/cache@v4
+        with:
+          path: .failure-count
+          key: health-check-failures-${{ github.run_number }}
+          restore-keys: health-check-failures-
+
+      - name: Count failures
+        id: count
+        run: |
+          if [ "${{ needs.health-check.outputs.site_down }}" == "true" ]; then
+            COUNT=$(cat .failure-count 2>/dev/null || echo "0")
+            COUNT=$((COUNT + 1))
+            echo "$COUNT" > .failure-count
+            echo "consecutive_failures=$COUNT" >> "$GITHUB_OUTPUT"
+            echo "Consecutive failures: $COUNT / $FAILURE_THRESHOLD"
+
+            if [ "$COUNT" -ge "$FAILURE_THRESHOLD" ]; then
+              echo "should_fix=true" >> "$GITHUB_OUTPUT"
+            else
+              echo "should_fix=false" >> "$GITHUB_OUTPUT"
+            fi
+          else
+            echo "0" > .failure-count
+            echo "consecutive_failures=0" >> "$GITHUB_OUTPUT"
+            echo "should_fix=false" >> "$GITHUB_OUTPUT"
+          fi
+
+  notify:
+    needs: [health-check, track-failures]
+    if: needs.health-check.outputs.site_down == 'true'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Send alert
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          MSG="🚨 **medmaster.at is DOWN**\nStatus: ${{ needs.health-check.outputs.status_code }}\nError: ${{ needs.health-check.outputs.error_msg }}\nConsecutive failures: ${{ needs.track-failures.outputs.consecutive_failures }}\nAuto-fix: ${{ needs.track-failures.outputs.should_fix == 'true' && '🔧 Triggered' || '⏳ Waiting for threshold' }}"
+
+          # Discord
+          if [ -n "$DISCORD_WEBHOOK" ]; then
+            curl -sS -H "Content-Type: application/json" \
+              -d "{\"content\": \"$(echo -e $MSG)\"}" \
+              "$DISCORD_WEBHOOK"
+          fi
+
+          # Slack
+          if [ -n "$SLACK_WEBHOOK" ]; then
+            curl -sS -H "Content-Type: application/json" \
+              -d "{\"text\": \"$(echo -e $MSG)\"}" \
+              "$SLACK_WEBHOOK"
+          fi
+
+          # Always log
+          echo -e "$MSG"
+
+  auto-fix:
+    needs: [health-check, track-failures]
+    if: |
+      needs.track-failures.outputs.should_fix == 'true' ||
+      github.event.inputs.force_fix == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: Diagnose issue
+        id: diagnose
+        run: |
+          echo "## Diagnosis Report" > /tmp/diagnosis.md
+          echo "" >> /tmp/diagnosis.md
+
+          # 1. Check if build works
+          echo "### Build Check" >> /tmp/diagnosis.md
+          if npm run build 2>/tmp/build-error.log; then
+            echo "✅ Build passes locally" >> /tmp/diagnosis.md
+          else
+            echo "❌ Build FAILS" >> /tmp/diagnosis.md
+            echo '```' >> /tmp/diagnosis.md
+            tail -50 /tmp/build-error.log >> /tmp/diagnosis.md
+            echo '```' >> /tmp/diagnosis.md
+            echo "build_broken=true" >> "$GITHUB_OUTPUT"
+          fi
+
+          # 2. Typecheck
+          echo "" >> /tmp/diagnosis.md
+          echo "### Typecheck" >> /tmp/diagnosis.md
+          if npm run typecheck 2>/tmp/type-error.log; then
+            echo "✅ Types OK" >> /tmp/diagnosis.md
+          else
+            echo "❌ Type errors" >> /tmp/diagnosis.md
+            echo '```' >> /tmp/diagnosis.md
+            tail -30 /tmp/type-error.log >> /tmp/diagnosis.md
+            echo '```' >> /tmp/diagnosis.md
+            echo "types_broken=true" >> "$GITHUB_OUTPUT"
+          fi
+
+          # 3. Check Vercel build logs if available
+          echo "" >> /tmp/diagnosis.md
+          echo "### Site Status" >> /tmp/diagnosis.md
+          echo "HTTP: ${{ needs.health-check.outputs.status_code }}" >> /tmp/diagnosis.md
+          echo "Error: ${{ needs.health-check.outputs.error_msg }}" >> /tmp/diagnosis.md
+
+          cat /tmp/diagnosis.md
+          echo "diagnosis_path=/tmp/diagnosis.md" >> "$GITHUB_OUTPUT"
+
+      - name: Claude auto-fix
+        if: steps.diagnose.outputs.build_broken == 'true' || steps.diagnose.outputs.types_broken == 'true'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          # Install Claude Code CLI
+          npm install -g @anthropic-ai/claude-code
+
+          DIAGNOSIS=$(cat /tmp/diagnosis.md)
+
+          # Run Claude in non-interactive mode to fix build errors
+          claude -p "
+          The production site medmaster.at is DOWN. Here is the diagnosis:
+
+          $DIAGNOSIS
+
+          Fix the build/type errors with minimal changes. Do NOT refactor — only fix what's broken.
+          After fixing, run 'npm run build' and 'npm run typecheck' to verify.
+          " --allowedTools "Edit,Read,Bash,Glob,Grep" --max-turns 20
+
+      - name: Verify fix
+        if: steps.diagnose.outputs.build_broken == 'true' || steps.diagnose.outputs.types_broken == 'true'
+        run: |
+          npm run typecheck
+          npm run build
+
+      - name: Create fix PR
+        if: steps.diagnose.outputs.build_broken == 'true' || steps.diagnose.outputs.types_broken == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          BRANCH="auto-fix/health-$(date +%Y%m%d-%H%M)"
+          git checkout -b "$BRANCH"
+          git add -A
+          git diff --cached --quiet && echo "No changes to commit" && exit 0
+
+          git commit -m "fix: auto-fix production build errors
+
+          Site was down (HTTP ${{ needs.health-check.outputs.status_code }}).
+          Claude diagnosed and fixed build/type errors automatically.
+
+          Co-Authored-By: Claude <noreply@anthropic.com>"
+
+          git push -u origin "$BRANCH"
+
+          gh pr create \
+            --title "🔧 Auto-fix: Production build errors" \
+            --body "$(cat <<'EOF'
+          ## Auto-Fix Report
+
+          **Trigger:** Site down — HTTP ${{ needs.health-check.outputs.status_code }}
+          **Consecutive failures:** ${{ needs.track-failures.outputs.consecutive_failures }}
+
+          ### Diagnosis
+          $(cat /tmp/diagnosis.md)
+
+          ### What was fixed
+          Claude analyzed the build errors and applied minimal fixes.
+
+          > ⚠️ Review carefully before merging.
+
+          🤖 Generated by Health Check Auto-Fix
+          EOF
+          )"
+
+  recovery-notify:
+    needs: [health-check]
+    if: needs.health-check.outputs.site_down == 'false'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check if recovering from downtime
+        uses: actions/cache@v4
+        with:
+          path: .failure-count
+          key: health-check-failures-${{ github.run_number }}
+          restore-keys: health-check-failures-
+
+      - name: Send recovery alert
+        run: |
+          COUNT=$(cat .failure-count 2>/dev/null || echo "0")
+          if [ "$COUNT" -gt "0" ]; then
+            echo "✅ Site recovered after $COUNT failures"
+            # Reset counter
+            echo "0" > .failure-count
+
+            DISCORD_WEBHOOK="${{ secrets.DISCORD_WEBHOOK_URL }}"
+            if [ -n "$DISCORD_WEBHOOK" ]; then
+              curl -sS -H "Content-Type: application/json" \
+                -d "{\"content\": \"✅ **medmaster.at is BACK UP** after $COUNT check failures\"}" \
+                "$DISCORD_WEBHOOK"
+            fi
+          fi

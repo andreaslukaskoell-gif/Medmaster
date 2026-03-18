@@ -21,7 +21,7 @@ import { useStore } from "@/store/useStore";
 import { useSessionTimer } from "@/hooks/useSessionTimer";
 import { UebungsbeschreibungCard } from "@/components/shared/UebungsbeschreibungCard";
 import { OfficialInstructionCard } from "@/components/shared/OfficialInstructionCard";
-import { OFFICIAL_IMP_INSTRUCTION, OFFICIAL_IMPLICATION_EXAMPLES } from "@/data/kffImplikationen";
+import { OFFICIAL_IMP_INSTRUCTION } from "@/data/kffImplikationen";
 import {
   difficultyForIndex,
   getLastCount,
@@ -35,8 +35,6 @@ function impDifficultyLabel(d: 1 | 2 | 3): string {
   return d === 1 ? "Leicht" : d === 2 ? "Mittel" : "Schwer";
 }
 
-type ImplikationenMode = "official" | "training";
-
 export function ImplikationenQuiz({
   onBack,
   initialQuestionCount,
@@ -46,7 +44,6 @@ export function ImplikationenQuiz({
   initialQuestionCount?: number;
   autoStart?: boolean;
 }) {
-  const [, setMode] = useState<ImplikationenMode | null>(null);
   const [examMode, setExamMode] = useState<ExamMode>("practice");
   const [phase, setPhase] = useState<"setup" | "quiz" | "result">("setup");
   const [questionCount, setQuestionCount] = useState(
@@ -118,13 +115,7 @@ export function ImplikationenQuiz({
         }
         valid = [...valid, ...filterValidImplikationTasks(generated)];
         if (valid.length === 0) {
-          const combined = [
-            ...OFFICIAL_IMPLICATION_EXAMPLES,
-            ...implikationenTasks.filter(
-              (t) => !OFFICIAL_IMPLICATION_EXAMPLES.some((o) => o.id === t.id)
-            ),
-          ];
-          valid = shuffleSlice(filterValidImplikationTasks(combined), questionCount);
+          valid = shuffleSlice(filterValidImplikationTasks(implikationenTasks), questionCount);
         }
         if (import.meta.env?.DEV)
           logPoolWarning("implikationen", valid.length, "Fallback (legacy generator)");
@@ -134,7 +125,7 @@ export function ImplikationenQuiz({
       if (valid.length < raw.length && import.meta.env?.DEV) {
         logPoolWarning("implikationen", valid.length, "Training");
       }
-      setMode("training");
+
       setIndex(0);
       setAnswers({});
       setPhase("quiz");
@@ -274,17 +265,14 @@ export function ImplikationenQuiz({
                     valid = [
                       ...valid,
                       ...shuffleSlice(
-                        filterValidImplikationTasks([
-                          ...OFFICIAL_IMPLICATION_EXAMPLES,
-                          ...implikationenTasks,
-                        ]),
+                        filterValidImplikationTasks(implikationenTasks),
                         count - valid.length
                       ),
                     ];
                   }
                   const seenIds = getKffSeenIdsForDomain("Implikationen");
                   setQuestions(preferUnseen(valid, count, seenIds));
-                  setMode("training");
+
                   setIndex(0);
                   setAnswers({});
                   setPhase("quiz");
@@ -307,7 +295,7 @@ export function ImplikationenQuiz({
                     fallback = filterValidImplikationTasks(fallback);
                   }
                   setQuestions(fallback.slice(0, count));
-                  setMode("training");
+
                   setIndex(0);
                   setAnswers({});
                   setPhase("quiz");
@@ -407,21 +395,10 @@ export function ImplikationenQuiz({
                     <XCircle className="w-5 h-5 text-red-500" />
                   )}
                   <span className="font-medium text-sm">{i + 1}.</span>
-                  {qu.source ? (
-                    <Badge variant="default" className="text-[10px]">
-                      🏛️ Offizielles MedAT-Beispiel
-                    </Badge>
-                  ) : (
-                    <Badge variant="info" className="text-[10px]">
-                      🧪 Trainingsaufgabe · {impDifficultyLabel(qu.difficulty)}
-                    </Badge>
-                  )}
+                  <Badge variant="info" className="text-[10px]">
+                    {impDifficultyLabel(qu.difficulty)}
+                  </Badge>
                 </div>
-                {(qu.source || (qu.id.startsWith("imp-") && !qu.id.startsWith("imp-train"))) && (
-                  <p className="text-xs text-[var(--muted)] mb-2 ml-7">
-                    {qu.source ? `Quelle: ${qu.source}` : "Offizielle Beispielaufgabe"}
-                  </p>
-                )}
                 <p className="text-sm text-[var(--text-secondary)] ml-7 mb-1">
                   <strong>Prämisse 1:</strong> {qu.premise1}
                 </p>
@@ -455,7 +432,6 @@ export function ImplikationenQuiz({
           <Button
             onClick={() => {
               setPhase("setup");
-              setMode(null);
             }}
           >
             <Shuffle className="w-4 h-4 mr-1" /> Neue Fragen
@@ -545,22 +521,9 @@ export function ImplikationenQuiz({
       </div>
       <Card>
         <CardContent className="p-6">
-          {currentQ.source ||
-          (currentQ.id.startsWith("imp-") && !currentQ.id.startsWith("imp-train")) ? (
-            <Badge variant="default" className="mb-2">
-              🏛️ Offizielles MedAT-Beispiel
-            </Badge>
-          ) : (
-            <Badge variant="info" className="mb-2">
-              Geprüfte Trainingsaufgabe (MedAT-Logik)
-            </Badge>
-          )}
-          {(currentQ.source ||
-            (currentQ.id.startsWith("imp-") && !currentQ.id.startsWith("imp-train"))) && (
-            <p className="text-xs text-[var(--muted)] mb-3">
-              {currentQ.source ? `Quelle: ${currentQ.source}` : "Offizielle Beispielaufgabe"}
-            </p>
-          )}
+          <Badge variant="info" className="mb-2">
+            Geprüfte Trainingsaufgabe (MedAT-Logik)
+          </Badge>
           <div className="bg-[var(--border)]/30 border-l-4 border-[var(--accent)] p-4 rounded-r-lg mb-6 space-y-2">
             <p className="text-base font-medium text-[var(--text-primary)] italic">
               &bdquo;{currentQ.premise1 ?? "Fehler beim Laden"}&ldquo;

@@ -135,6 +135,22 @@ function Impressum() {
       <h2>Unternehmensgegenstand</h2>
       <p>Online-Lernplattform zur Vorbereitung auf den MedAT (Medizinischer Aufnahmetest).</p>
 
+      <h2>Anwendbare Gesetze</h2>
+      <p>
+        Gewerbeordnung (GewO), E-Commerce-Gesetz (ECG), Mediengesetz (MedienG),
+        Datenschutz-Grundverordnung (DSGVO), Konsumentenschutzgesetz (KSchG), Fern- und
+        Auswärtsgeschäfte-Gesetz (FAGG).
+      </p>
+
+      <h2>Aufsichtsbehörde</h2>
+      <p>
+        Österreichische Datenschutzbehörde, Barichgasse 40-42, 1030 Wien (
+        <a href="https://www.dsb.gv.at" target="_blank" rel="noopener noreferrer">
+          www.dsb.gv.at
+        </a>
+        ).
+      </p>
+
       <h2>Kontakt</h2>
       <p>
         Bei Fragen, Anregungen oder Beschwerden erreichen Sie uns unter{" "}
@@ -146,7 +162,8 @@ function Impressum() {
         Die Inhalte dieser Website wurden mit größtmöglicher Sorgfalt erstellt. Für die Richtigkeit,
         Vollständigkeit und Aktualität der Inhalte übernehmen wir jedoch keine Gewähr. Als
         Diensteanbieter sind wir gemäß § 7 Abs. 1 ECG für eigene Inhalte auf diesen Seiten nach den
-        allgemeinen Gesetzen verantwortlich.
+        allgemeinen Gesetzen verantwortlich. Es wird kein bestimmter Lern- oder Prüfungserfolg
+        garantiert.
       </p>
 
       <h2>Urheberrecht</h2>
@@ -154,7 +171,18 @@ function Impressum() {
         Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem
         österreichischen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art
         der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung
-        des jeweiligen Autors bzw. Erstellers.
+        des jeweiligen Autors bzw. Erstellers. Jeder festgestellte Urheberrechtsverstoß wird
+        zivilrechtlich und gegebenenfalls strafrechtlich verfolgt.
+      </p>
+
+      <h2>Online-Streitbeilegung</h2>
+      <p>
+        Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung bereit:{" "}
+        <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer">
+          ec.europa.eu/consumers/odr
+        </a>
+        . Wir sind weder bereit noch verpflichtet, an einem Streitbeilegungsverfahren vor einer
+        Verbraucherschlichtungsstelle teilzunehmen.
       </p>
     </article>
   );
@@ -392,12 +420,30 @@ function AGB() {
         eingelöst werden.
       </p>
 
-      <h2>6. Nutzungsbedingungen</h2>
+      <h2>6. Nutzungsbedingungen und Urheberrecht</h2>
       <p>
-        Alle bereitgestellten Inhalte (Fragen, Texte, Grafiken, Übungen) sind ausschließlich über
-        den erworbenen Zugang nutzbar. Das Herunterladen, Reproduzieren, Weitergeben oder sonstige
-        Verwertung der Inhalte außerhalb der Plattform ist untersagt und kann rechtliche
-        Konsequenzen nach sich ziehen.
+        Alle bereitgestellten Inhalte (Fragen, Texte, Grafiken, Übungen, Software) sind
+        urheberrechtlich geschützt und ausschließlich über den erworbenen Zugang im Rahmen des
+        bestimmungsgemäßen Gebrauchs nutzbar. Dem Nutzer wird ein einfaches, nicht übertragbares,
+        nicht unterlizenzierbares Nutzungsrecht für die Dauer des Vertragsverhältnisses eingeräumt.
+      </p>
+      <p>Insbesondere ist untersagt:</p>
+      <ul>
+        <li>
+          Das Herunterladen, Reproduzieren, Weitergeben oder sonstige Verwertung der Inhalte
+          außerhalb der Plattform;
+        </li>
+        <li>Das automatisierte Auslesen, Crawling oder Scraping der Inhalte;</li>
+        <li>Die Verwendung der Inhalte zum Training von KI- oder Machine-Learning-Modellen;</li>
+        <li>
+          Die gewerbliche Nutzung, der Weiterverkauf oder die öffentliche Zugänglichmachung der
+          Inhalte.
+        </li>
+      </ul>
+      <p>
+        Verstöße werden zivilrechtlich verfolgt. Schadenersatzansprüche in Höhe von bis zu EUR
+        10.000,- pro Verstoß bleiben vorbehalten. Bei Verdacht auf systematische
+        Urheberrechtsverletzungen wird Strafanzeige erstattet.
       </p>
 
       <h2>7. Widerruf und Kündigung</h2>
@@ -405,9 +451,14 @@ function AGB() {
         <strong>Widerrufsrecht (Verbraucher gem. FAGG):</strong> Sie haben das Recht, binnen 14
         Tagen ohne Angabe von Gründen vom Vertrag zurückzutreten. Die Frist beginnt mit dem
         Vertragsschluss. Zur Wahrung der Frist genügt die rechtzeitige Absendung der Mitteilung
-        (z.B. per E-Mail an support@medmaster.at). Haben Sie vor Ablauf der Widerrufsfrist mit der
-        Nutzung des Dienstes begonnen, kann ein angemessener Wertersatz für die bereits erbrachte
-        Leistung geschuldet sein.
+        (z.B. per E-Mail an support@medmaster.at).
+      </p>
+      <p>
+        <strong>Verzicht bei Nutzungsbeginn:</strong> Nehmen Sie vor Ablauf der Widerrufsfrist die
+        von MedMaster angebotene Leistung (Nutzung der Online-Lernplattform) in Anspruch und stimmen
+        ausdrücklich zu, dass die Leistungserbringung vor Ablauf der Rücktrittsfrist beginnt, so
+        erlischt Ihr Widerrufsrecht mit Beginn der Vertragserfüllung (§ 18 Abs. 1 Z 11 FAGG). Die
+        Nutzung beginnt mit dem ersten Aufruf der Lernplattform nach dem Kauf.
       </p>
       <p>
         <strong>Kündigung:</strong> Da es sich um einen einmaligen Kauf handelt, ist keine Kündigung
@@ -422,27 +473,67 @@ function AGB() {
         (Art. 17 DSGVO). Ein bereits bezahlter Zugang erlischt mit der Kontolöschung.
       </p>
 
-      <h2>9. Haftung</h2>
+      <h2>9. Gewährleistung</h2>
       <p>
-        Die Lerninhalte werden sorgfältig erstellt und aktuell gehalten. Der Betreiber übernimmt
-        jedoch keine Gewähr für Vollständigkeit und Richtigkeit. Insbesondere wird kein bestimmter
-        Lern- oder Prüfungserfolg garantiert. Bei technischen Störungen (die aufgrund der Natur des
-        Internets auftreten können) bemüht sich der Betreiber um schnellstmögliche
-        Wiederherstellung. Der Betreiber haftet unbeschränkt für Vorsatz und grobe Fahrlässigkeit
-        sowie für Schäden aus der Verletzung des Lebens, des Körpers oder der Gesundheit. Bei
-        leichter Fahrlässigkeit haftet er nur bei Verletzung wesentlicher Vertragspflichten und nur
-        in Höhe des vorhersehbaren, typischerweise eintretenden Schadens.
+        Die Leistungen werden gemäß der zum Zeitpunkt des Kaufs gültigen Leistungsbeschreibung
+        erbracht. Geringfügige, den Verwendungszweck nicht beeinträchtigende Abweichungen gelten als
+        genehmigt. Änderungen und Verbesserungen, die auf neuen Erkenntnissen oder technischen
+        Entwicklungen basieren, bleiben vorbehalten. Bei begründeten Mängeln ist der Betreiber
+        berechtigt, innerhalb angemessener Frist nach seiner Wahl den Mangel zu verbessern. Darüber
+        hinausgehende Ansprüche wie Wandlung oder Preisminderung sind ausgeschlossen. Bei
+        Verbrauchergeschäften gelten die vorangenannten Bestimmungen insoweit, als sie den
+        zwingenden gesetzlichen Gewährleistungsbestimmungen nicht widersprechen.
       </p>
 
-      <h2>10. Urheberrecht</h2>
+      <h2>10. Haftung</h2>
       <p>
-        Alle Inhalte der Plattform (Texte, Grafiken, Aufgaben, Strukturen) sind urheberrechtlich
-        geschützt. Sie erhalten ein nicht ausschließliches, nicht übertragbares Recht zur Nutzung im
-        Rahmen des bestimmungsgemäßen Gebrauchs des Dienstes. Eine Weitergabe, Vervielfältigung oder
-        gewerbliche Nutzung außerhalb der Plattform ist nicht gestattet.
+        Die Lerninhalte werden mit angemessener Fachkenntnis und Sorgfalt erstellt und fortlaufend
+        aktualisiert. Der Betreiber übernimmt jedoch keine Gewähr für die Vollständigkeit,
+        Richtigkeit und Aktualität der Inhalte. Insbesondere wird{" "}
+        <strong>kein bestimmter Lern- oder Prüfungserfolg garantiert</strong>.
+      </p>
+      <p>
+        Der Betreiber sowie seine gesetzlichen Vertreter und Erfüllungsgehilfen haften
+        ausschließlich für den Ersatz von vorhersehbaren Schäden, die grob fahrlässig oder
+        vorsätzlich verursacht wurden. Bei grober Fahrlässigkeit ist die Haftung der Höhe nach mit
+        dem Auftragswert beschränkt.
+      </p>
+      <p>
+        Für{" "}
+        <strong>
+          mittelbare Schäden, entgangenen Gewinn, Zinsverluste, unterbliebene Einsparungen, Folge-
+          und bloße Vermögensschäden
+        </strong>{" "}
+        sowie Schäden aus Ansprüchen Dritter haftet der Betreiber nicht.
       </p>
 
-      <h2>11. Schlussbestimmungen</h2>
+      <h3>Verfügbarkeit</h3>
+      <p>
+        Dem Nutzer ist bewusst, dass es aufgrund der technischen Eigenschaften des Internets
+        vorübergehend zu Störungen in der Verfügbarkeit der Plattform kommen kann. Eine Haftung für
+        derartige Störungen der Verfügbarkeit wird ausdrücklich ausgeschlossen. Im Fall von
+        technischen Störungen wird der Betreiber die Verfügbarkeit nach Maßgabe technischer und
+        personeller Möglichkeiten so schnell wie möglich wiederherstellen.
+      </p>
+
+      <h3>Höhere Gewalt</h3>
+      <p>
+        Leistungsverzögerungen aufgrund höherer Gewalt und aufgrund von Ereignissen, die dem
+        Betreiber die Leistung wesentlich erschweren oder unmöglich machen (z.B. Pandemie,
+        Naturkatastrophen, Cyberangriffe, Ausfall von Drittanbietern), hat der Betreiber nicht zu
+        verantworten. Die Haftung für daraus entstehende Schäden wird ausdrücklich ausgeschlossen.
+      </p>
+
+      <h2>11. Datenverarbeitung</h2>
+      <p>
+        Informationen zur Verarbeitung personenbezogener Daten finden Sie in unserer{" "}
+        <a href="/datenschutz">Datenschutzerklärung</a>. Die mit der Geschäftsbeziehung
+        zusammenhängenden Daten werden von MedMaster zur Erfüllung des Vertrages, zur Anfertigung
+        von Nutzerstatistiken und zur Bearbeitung von Support-Anfragen verarbeitet. Die
+        Rechtmäßigkeit ergibt sich aus Art. 6 Abs. 1 lit. b DSGVO.
+      </p>
+
+      <h2>12. Schlussbestimmungen</h2>
       <p>
         Es gilt das Recht der Republik Österreich unter Ausschluss des UN-Kaufrechts. Günstigere
         zwingende Verbraucherschutzbestimmungen des Wohnsitzstaates des Nutzers bleiben unberührt

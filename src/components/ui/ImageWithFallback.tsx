@@ -1,6 +1,12 @@
 import { useState, useCallback, useEffect } from "react";
 import { ImageOff, Image as ImageIcon, X } from "lucide-react";
 
+/** Derive WebP path from a JPG/PNG src. Returns null if not applicable. */
+function webpSrc(src: string): string | null {
+  if (!src || src.endsWith(".svg")) return null;
+  return src.replace(/\.(jpe?g|png)$/i, ".webp");
+}
+
 interface ImageWithFallbackProps {
   src: string;
   alt?: string;
@@ -18,7 +24,7 @@ interface ImageWithFallbackProps {
 export function ImageWithFallback({
   src,
   alt = "",
-  className = "w-full h-auto object-contain",
+  className = "w-full h-auto max-h-[500px] object-contain",
   containerClassName = "",
   lightbox = true,
 }: ImageWithFallbackProps) {
@@ -74,35 +80,42 @@ export function ImageWithFallback({
           </div>
         )}
 
-        {/* Real image: hidden until loaded, then fade in */}
-        {status !== "error" && (
-          <img
-            src={src}
-            alt={alt}
-            loading="lazy"
-            decoding="async"
-            onLoad={handleLoad}
-            onError={handleError}
-            className={`${className} transition-opacity duration-300 ${
-              status === "loaded"
-                ? "opacity-100"
-                : "opacity-0 absolute inset-0 w-full h-full object-contain"
-            } ${lightbox ? "cursor-zoom-in" : ""}`}
-            onClick={lightbox ? () => setLightboxOpen(true) : undefined}
-            role={lightbox ? "button" : undefined}
-            tabIndex={lightbox ? 0 : undefined}
-            onKeyDown={
-              lightbox
-                ? (e) => {
+        {/* Real image: hidden until loaded, then fade in. Prefer WebP via <picture>. */}
+        {status !== "error" &&
+          (() => {
+            const webp = webpSrc(src);
+            const imgProps = {
+              alt,
+              loading: "lazy" as const,
+              decoding: "async" as const,
+              onLoad: handleLoad,
+              onError: handleError,
+              className: `${className} transition-opacity duration-300 ${
+                status === "loaded"
+                  ? "opacity-100"
+                  : "opacity-0 absolute inset-0 w-full h-full object-contain"
+              } ${lightbox ? "cursor-zoom-in" : ""}`,
+              onClick: lightbox ? () => setLightboxOpen(true) : undefined,
+              role: lightbox ? ("button" as const) : undefined,
+              tabIndex: lightbox ? 0 : undefined,
+              onKeyDown: lightbox
+                ? (e: React.KeyboardEvent) => {
                     if (e.key === "Enter" || e.key === " ") {
                       e.preventDefault();
                       setLightboxOpen(true);
                     }
                   }
-                : undefined
-            }
-          />
-        )}
+                : undefined,
+            };
+            return webp ? (
+              <picture>
+                <source srcSet={webp} type="image/webp" />
+                <img src={src} {...imgProps} />
+              </picture>
+            ) : (
+              <img src={src} {...imgProps} />
+            );
+          })()}
       </div>
 
       {/* Lightbox modal */}

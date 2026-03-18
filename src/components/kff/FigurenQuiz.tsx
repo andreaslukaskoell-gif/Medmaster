@@ -30,7 +30,6 @@ import {
   getShapeDisplayNameAkk,
   type FigureAssembleTask,
   OFFICIAL_FZ_INSTRUCTION,
-  OFFICIAL_FZ_EXAMPLES,
   duplicateGuardClear,
   polygonArea,
 } from "@/data/kffFigurenZusammensetzenMedAT";
@@ -55,7 +54,6 @@ const FILL_FZ = "#7EC8E3";
 
 export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoStart?: boolean }) {
   const [phase, setPhase] = useState<"setup" | "quiz" | "result">("setup");
-  const [, setMode] = useState<"official" | "training" | null>(null);
   const [examMode, setExamMode] = useState<ExamMode>("practice");
   const [questionCount, setQuestionCount] = useState(getLastCount("figuren"));
   const [questions, setQuestions] = useState<FigureAssembleTask[]>([]);
@@ -138,7 +136,11 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
           const areas = t.pieces.map((p) => polygonArea(p));
           const maxA = Math.max(...areas);
           const minA = Math.min(...areas);
-          if (t.pieces.length >= 2 && minA > 0 && maxA / minA < 1.3) return false;
+          const ratio = minA > 0 ? maxA / minA : 999;
+          if (t.pieces.length === 2 && ratio < 2.0) return false;
+          if (t.pieces.length >= 3 && ratio < 2.5) return false;
+          if (ratio > 8) return false; // too extreme = answer too obvious
+          // 2-piece tasks are MedAT-konform (IB FZ 26 Beispiel 1+2) — allow them
           if (
             t.pieces.length >= 3 &&
             t.pieces.every((p) => p.points.length === t.pieces[0].points.length)
@@ -164,8 +166,7 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
           }
         }
         valid = [...valid, ...balanced];
-        if (valid.length === 0)
-          valid = shuffleSlice(filterValidFigurenTasks([...OFFICIAL_FZ_EXAMPLES]), target);
+        if (valid.length === 0) valid = shuffleSlice(filterValidFigurenTasks([]), target);
         if (import.meta.env?.DEV) logPoolWarning("figuren", valid.length, "Supplement (generiert)");
       }
       const seenIds = getKffSeenIdsForDomain("Figuren");
@@ -342,10 +343,7 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
                   if (valid.length < count)
                     valid = [
                       ...valid,
-                      ...shuffleSlice(
-                        filterValidFigurenTasks([...OFFICIAL_FZ_EXAMPLES]),
-                        count - valid.length
-                      ),
+                      ...shuffleSlice(filterValidFigurenTasks([]), count - valid.length),
                     ];
                   setQuestions(balancedDifficultySession(valid, count, (t) => t.difficulty));
                   setIndex(0);
@@ -412,9 +410,6 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
               </div>
             </div>
             <div className="flex gap-3">
-              <Button variant="outline" onClick={() => setMode(null)} disabled={trainingLoading}>
-                Zurück
-              </Button>
               <Button size="lg" onClick={startTraining} disabled={trainingLoading}>
                 {trainingLoading ? (
                   <>
@@ -659,7 +654,6 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
           <Button
             onClick={() => {
               setPhase("setup");
-              setMode(null);
             }}
           >
             <Shuffle className="w-4 h-4 mr-1" /> Neue Aufgaben
@@ -763,7 +757,14 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
               className="w-full max-w-lg h-28 sm:h-36 mx-auto"
             >
               {paths.map((p, pi) => (
-                <path key={pi} d={p.d} fill={FILL_FZ} stroke="none" transform={p.transform} />
+                <path
+                  key={pi}
+                  d={p.d}
+                  fill={FILL_FZ}
+                  stroke="#3d7a8c"
+                  strokeWidth="1.5"
+                  transform={p.transform}
+                />
               ))}
             </svg>
           );
@@ -795,7 +796,12 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
                   {...FIGURE_SVG_ASPECT_PROPS}
                   className="w-full max-w-[80px] max-h-[80px] flex-1"
                 >
-                  <path d={polygonToPathScaledToViewBox(opt)} fill={FILL_FZ} stroke="none" />
+                  <path
+                    d={polygonToPathScaledToViewBox(opt)}
+                    fill={FILL_FZ}
+                    stroke="#3d7a8c"
+                    strokeWidth="1.5"
+                  />
                 </svg>
               )}
               <span className="text-sm font-bold text-[var(--muted)] mt-1">{label}</span>

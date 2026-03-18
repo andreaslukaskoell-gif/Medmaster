@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Trophy, CheckCircle2 } from "lucide-react";
+import { Trophy, CheckCircle2, Clock } from "lucide-react";
 import { QuizQuestion } from "./QuizQuestion";
 import type { SelfTestQuestion } from "@/data/bmsKapitel/types";
 import { useStore } from "@/store/useStore";
@@ -24,6 +24,52 @@ export function InteractiveQuiz({ questions, onAnswer, onAllComplete }: Interact
   const [questionResults, setQuestionResults] = useState<Record<number, boolean>>({});
   /** Tracks whether each question was answered correctly on the very first click. */
   const [firstAttemptResults, setFirstAttemptResults] = useState<Record<number, boolean>>({});
+  /** Set of question indices that were force-marked wrong due to timer expiry. */
+  const [timedOutQuestions, setTimedOutQuestions] = useState<Set<number>>(new Set());
+
+  // Timer state
+  const quizTimerSeconds = useStore((s) => s.quizTimerSeconds);
+  const [timerRemaining, setTimerRemaining] = useState(quizTimerSeconds);
+  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  // Determine the next unanswered question index
+  const nextUnansweredIndex = questions.findIndex((_, i) => !(i in questionResults));
+
+  // Reset timer when the next unanswered question changes
+  useEffect(() => {
+    if (quizTimerSeconds <= 0 || nextUnansweredIndex < 0) return;
+    setTimerRemaining(quizTimerSeconds);
+  }, [nextUnansweredIndex, quizTimerSeconds]);
+
+  // Run countdown interval
+  useEffect(() => {
+    if (quizTimerSeconds <= 0 || nextUnansweredIndex < 0) return;
+
+    timerRef.current = setInterval(() => {
+      setTimerRemaining((prev) => {
+        if (prev <= 1) {
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+
+    return () => {
+      if (timerRef.current) clearInterval(timerRef.current);
+    };
+  }, [quizTimerSeconds, nextUnansweredIndex]);
+
+  // When timer hits 0, force-mark the current question as wrong
+  const handleTimerExpiry = useCallback((index: number) => {
+    setTimedOutQuestions((prev) => new Set(prev).add(index));
+  }, []);
+
+  useEffect(() => {
+    if (quizTimerSeconds <= 0 || nextUnansweredIndex < 0) return;
+    if (timerRemaining <= 0) {
+      handleTimerExpiry(nextUnansweredIndex);
+    }
+  }, [timerRemaining, quizTimerSeconds, nextUnansweredIndex, handleTimerExpiry]);
 
   const handleAnswerChange = (questionIndex: number, isCorrect: boolean) => {
     // Award XP with multipliers
@@ -74,6 +120,13 @@ export function InteractiveQuiz({ questions, onAnswer, onAllComplete }: Interact
   const scoreRatio = questions.length > 0 ? firstAttemptCorrect / questions.length : 0;
   const summaryColor = scoreRatio >= 0.8 ? "emerald" : scoreRatio >= 0.5 ? "amber" : "red";
 
+  // Format seconds as m:ss
+  const formatTimer = (s: number) => {
+    const min = Math.floor(s / 60);
+    const sec = s % 60;
+    return `${min}:${sec.toString().padStart(2, "0")}`;
+  };
+
   return (
     <div className="space-y-5 mt-8">
       {/* Header */}
@@ -107,14 +160,45 @@ export function InteractiveQuiz({ questions, onAnswer, onAllComplete }: Interact
           );
         }
 
+        const isCurrentTimerQuestion =
+          quizTimerSeconds > 0 && index === nextUnansweredIndex && !allAnswered;
+        const isTimedOut = timedOutQuestions.has(index);
+
         return (
-          <QuizQuestion
-            key={index}
-            question={question}
-            questionNumber={index + 1}
-            onAnswerChange={(isCorrect) => handleAnswerChange(index, isCorrect)}
-            onFirstAttempt={(isCorrect) => handleFirstAttempt(index, isCorrect)}
-          />
+          <div key={index}>
+            {/* Timer display for current question */}
+            {isCurrentTimerQuestion && (
+              <div className="flex items-center gap-2 mb-2 ml-1">
+                <Clock className="w-3.5 h-3.5 text-[var(--muted)]" />
+                <span
+                  className={`text-sm font-mono font-medium ${
+                    timerRemaining <= 10 ? "text-red-600 dark:text-red-400" : "text-[var(--muted)]"
+                  }`}
+                >
+                  {formatTimer(timerRemaining)}
+                </span>
+                <div className="flex-1 h-1.5 bg-[var(--border)] rounded-full overflow-hidden max-w-[200px]">
+                  <div
+                    className="h-full rounded-full transition-all duration-1000 ease-linear"
+                    style={{
+                      width: `${(timerRemaining / quizTimerSeconds) * 100}%`,
+                      background:
+                        timerRemaining <= 10
+                          ? "var(--color-red-500, #ef4444)"
+                          : "var(--accent, #3b82f6)",
+                    }}
+                  />
+                </div>
+              </div>
+            )}
+            <QuizQuestion
+              question={question}
+              questionNumber={index + 1}
+              onAnswerChange={(isCorrect) => handleAnswerChange(index, isCorrect)}
+              onFirstAttempt={(isCorrect) => handleFirstAttempt(index, isCorrect)}
+              forceWrong={isTimedOut}
+            />
+          </div>
         );
       })}
 

@@ -10,13 +10,12 @@ import { Tooltip } from "@/components/ui/Tooltip";
 
 export function TopBar({ onMenuToggle }: { onMenuToggle?: () => void }) {
   const mounted = useIsMounted();
-  const store = useStore();
-  const streak = store?.streak ?? 0;
-  const xp = store?.xp ?? 0;
+  const streak = useStore((s) => s.streak) ?? 0;
+  const xp = useStore((s) => s.xp) ?? 0;
   const level = getLevelFromXP(xp);
-  const lastActiveDate = store?.lastActiveDate ?? "";
-  const darkMode = store?.darkMode ?? false;
-  const toggleDarkMode = store?.toggleDarkMode ?? (() => {});
+  const lastActiveDate = useStore((s) => s.lastActiveDate) ?? "";
+  const darkMode = useStore((s) => s.darkMode) ?? false;
+  const toggleDarkMode = useStore((s) => s.toggleDarkMode) ?? (() => {});
   const todayStr = new Date().toISOString().split("T")[0];
   const hasActivityToday = lastActiveDate === todayStr;
 

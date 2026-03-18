@@ -284,6 +284,16 @@ const PARALLELOGRAM: Polygon = {
   ],
 };
 
+/** Rechteck (Seitenverhältnis ~2:1, explizit in der offiziellen Instruktion erwähnt). */
+const RECTANGLE: Polygon = {
+  points: [
+    { x: 40, y: 60 },
+    { x: 160, y: 60 },
+    { x: 160, y: 140 },
+    { x: 40, y: 140 },
+  ],
+};
+
 /** L-Form. */
 const L_SHAPE: Polygon = {
   points: [
@@ -321,6 +331,7 @@ const FULL_CIRCLE: Polygon = { points: regularPolygonPoints(CX, CY, R, 32) };
 export const SOLUTION_SHAPES = [
   "triangle",
   "square",
+  "rectangle",
   "rhombus",
   "parallelogram",
   "trapezoid",
@@ -343,6 +354,7 @@ export type SolutionShapeName = (typeof SOLUTION_SHAPES)[number];
 const OFFICIAL_TARGET_POLYGONS: Polygon[] = [
   TRIANGLE,
   SQUARE,
+  RECTANGLE,
   RHOMBUS,
   PARALLELOGRAM,
   TRAPEZ,
@@ -1111,8 +1123,8 @@ export function assertUniformScale(scaleX: number, scaleY: number, context?: str
 // DUPLICATE GUARD – Hash/Fingerprint, bei Kollision verwerfen
 // =============================================================================
 
-const seenFingerprints = new Set<string>();
-const MAX_SEEN = 5000;
+let seenFingerprints = new Set<string>();
+const MAX_SEEN = 200; // Keep small — only prevents duplicates WITHIN a single session
 
 /** Prüft, ob diese Ziel+Teile-Kombination schon vorkam. Wenn ja: verwerfen. */
 export function duplicateGuardHas(fingerprint: string): boolean {
@@ -1123,11 +1135,14 @@ export function duplicateGuardHas(fingerprint: string): boolean {
 export function duplicateGuardAdd(fingerprint: string): void {
   seenFingerprints.add(fingerprint);
   if (seenFingerprints.size > MAX_SEEN) {
-    const arr = [...seenFingerprints];
-    arr.splice(0, Math.floor(MAX_SEEN / 2));
-    seenFingerprints.clear();
-    arr.forEach((s) => seenFingerprints.add(s));
+    // Clear entirely — allows fresh generation each session
+    seenFingerprints = new Set<string>();
   }
+}
+
+/** Leert den Duplicate-Guard (z. B. beim Start einer neuen Übungsrunde). */
+export function duplicateGuardClear(): void {
+  seenFingerprints = new Set<string>();
 }
 
 // =============================================================================
@@ -1306,7 +1321,7 @@ export function validateFigurenTask(task: FigureAssembleTask, skipGeometric = fa
 /** Formfamilien: Distraktoren kommen bevorzugt aus derselben Familie. */
 const SHAPE_FAMILIES: Record<string, Polygon[]> = {
   circles: [QUARTER_CIRCLE, HALF_CIRCLE, THREE_QUARTER_CIRCLE, FULL_CIRCLE],
-  quads: [SQUARE, RHOMBUS, PARALLELOGRAM, TRAPEZ, L_SHAPE],
+  quads: [SQUARE, RECTANGLE, RHOMBUS, PARALLELOGRAM, TRAPEZ, L_SHAPE],
   polygons: [PENTAGON, HEXAGON, HEPTAGON, OCTAGON, TRIANGLE],
 };
 
@@ -1687,7 +1702,8 @@ function lshapedPath(p1: Pt2, p2: Pt2, rng: () => number): Pt2[] {
 }
 
 /** Erzeugt eine sanft geschwungene Schnittlinie (quadratische Bézier-Approximation).
- *  Sampelt 5-7 Punkte entlang der Kurve für eine glatte Polyline. */
+ *  Viele Sample-Punkte (16-20) für eine visuell glatte, deutlich sichtbare Kurve
+ *  wie in den offiziellen IB FZ 26 Beispielen. */
 function curvedPath(p1: Pt2, p2: Pt2, rng: () => number): Pt2[] {
   const dx = p2.x - p1.x;
   const dy = p2.y - p1.y;
@@ -1698,15 +1714,16 @@ function curvedPath(p1: Pt2, p2: Pt2, rng: () => number): Pt2[] {
   const nx = -dy / len;
   const ny = dx / len;
 
-  // Control point: midpoint offset perpendicular by 10-25% of cut length
+  // Control point: midpoint offset perpendicular by 15-30% of cut length (more pronounced curve)
   const midX = (p1.x + p2.x) / 2;
   const midY = (p1.y + p2.y) / 2;
-  const curveOffset = len * (0.1 + rng() * 0.15) * (rng() > 0.5 ? 1 : -1);
+  const curveOffset = len * (0.15 + rng() * 0.15) * (rng() > 0.5 ? 1 : -1);
   const ctrlX = midX + curveOffset * nx;
   const ctrlY = midY + curveOffset * ny;
 
   // Sample quadratic Bezier: B(t) = (1-t)²·P1 + 2(1-t)t·Ctrl + t²·P2
-  const numSamples = 5 + Math.floor(rng() * 3); // 5-7 interior points
+  // 16-20 points for a visually smooth curve (not jagged polyline)
+  const numSamples = 16 + Math.floor(rng() * 5);
   const points: Pt2[] = [p1];
 
   for (let i = 1; i <= numSamples; i++) {
@@ -1785,7 +1802,7 @@ function splitPolygonByPolyline(poly: Polygon, cutPoints: Pt2[]): [Polygon, Poly
   // Find which edges the start and end points lie on
   let startEdge = -1;
   let endEdge = -1;
-  const tolerance = 1.0;
+  const tolerance = 2.5; // Increased for curved cuts whose endpoints may drift slightly
 
   for (let i = 0; i < n; i++) {
     const j = (i + 1) % n;
@@ -1947,12 +1964,12 @@ function applyAsymmetricCuts(
   const pieces: Polygon[] = [{ points: target.points.map((p) => ({ ...p })) }];
   const targetArea = polygonArea(target);
   // Allow smaller pieces for higher cut counts (official examples have tiny fragments)
-  const minPieceArea = targetArea * (numCuts >= 5 ? 0.02 : 0.05);
+  const minPieceArea = targetArea * (numCuts >= 5 ? 0.01 : 0.03);
 
   let successfulCuts = 0;
   for (
     let totalAttempts = 0;
-    totalAttempts < numCuts * 6 && successfulCuts < numCuts;
+    totalAttempts < numCuts * 12 && successfulCuts < numCuts;
     totalAttempts++
   ) {
     // Find largest piece
@@ -1993,32 +2010,34 @@ function applyAsymmetricCuts(
   // Validate: we need at least the expected number of pieces
   if (pieces.length < 2) return null;
 
-  // Authenticity check: reject if pieces are too equally sized (45-55% split for 2 pieces)
-  if (pieces.length === 2) {
-    const a1 = polygonArea(pieces[0]);
-    const a2 = polygonArea(pieces[1]);
-    const ratio = Math.min(a1, a2) / Math.max(a1, a2);
-    if (ratio > 0.95) return null; // only reject near-identical halves
-  }
+  // Strict authenticity: official IB FZ 26 NEVER has uniform splits.
+  // Every example shows pieces that are clearly different in size and shape.
+  const areas = pieces.map((p) => polygonArea(p));
+  const maxA = Math.max(...areas);
+  const minA = Math.min(...areas);
+  const areaRatio = minA > 0 ? maxA / minA : 999;
 
-  // For 3-4 pieces: largest should be >= 1.5× smallest (avoid boring equal splits)
-  // For 5+ pieces: relax — official examples have varied fragment sizes
-  if (pieces.length >= 3 && pieces.length <= 4) {
-    const areas = pieces.map((p) => polygonArea(p));
-    const maxA = Math.max(...areas);
-    const minA = Math.min(...areas);
-    if (minA > 0 && maxA / minA < 1.5) return null;
+  // Reject too uniform (ratio too low) AND too extreme (ratio too high = one piece dominates)
+  if (pieces.length === 2 && areaRatio < 2.0) return null;
+  if (pieces.length >= 3 && areaRatio < 2.5) return null;
+  // Cap: no piece should be more than 8x bigger than smallest (otherwise too obvious)
+  if (areaRatio > 8) return null;
+
+  // Reject if all pieces have the same point count (= identical shape fragments)
+  if (pieces.length >= 3) {
+    const ptCounts = pieces.map((p) => p.points.length);
+    if (ptCounts.every((c) => c === ptCounts[0])) return null;
   }
 
   return pieces;
 }
 
-/** Anzahl Schnitte pro Schwierigkeitsstufe (IB FZ 26: easy=2pc, medium=3-5pc, hard=5-8pc).
- *  Requests more cuts than minimum needed — the cut system produces as many as it can. */
+/** Anzahl Schnitte pro Schwierigkeitsstufe.
+ *  IB FZ 26: Intro=2pc, Bsp1=4pc, Bsp2=2pc, Bsp3=6pc, Bsp4=6pc, Bsp5=4pc */
 function numCutsForDifficulty(diff: FZDifficulty, rng: () => number): number {
-  if (diff === "easy") return 1 + Math.floor(rng() * 2); // 1-2 cuts → 2-3 pieces
-  if (diff === "medium") return 2 + Math.floor(rng() * 2); // 2-3 cuts → 3-4 pieces
-  return 4 + Math.floor(rng() * 2); // 4-5 cuts → 4-6 pieces (official IB max ~6)
+  if (diff === "easy") return 1 + Math.floor(rng() * 3); // 1-3 cuts → 2-4 pieces
+  if (diff === "medium") return 2 + Math.floor(rng() * 3); // 2-4 cuts → 3-5 pieces
+  return 4 + Math.floor(rng() * 3); // 4-6 cuts → 5-7 pieces
 }
 
 /**
@@ -2037,7 +2056,20 @@ export function cutPolygonStrategically(
       : Math.floor(rng() * SOLUTION_SHAPES.length);
   const target = { points: OFFICIAL_TARGET_POLYGONS[shapeIndex].points.map((p) => ({ ...p })) };
 
-  // Hard difficulty: try grid-based cuts first for reliable 4-6 pieces (IB FZ 26 examples 3-4)
+  // Try asymmetric cuts FIRST (authentic look with curved/complex cuts like IB FZ 26)
+  const nCuts = numCutsForDifficulty(difficulty, rng);
+  const asymPieces = applyAsymmetricCuts(target, nCuts, rng, difficulty);
+  // Require minimum 3 pieces (2-piece tasks are too obvious)
+  if (asymPieces && asymPieces.length >= 3) {
+    const totalArea = asymPieces.reduce((s, p) => s + polygonArea(p), 0);
+    const targetArea = polygonArea(target);
+    // Relaxed tolerance (2%) — curved cuts shift area slightly via polyline approximation
+    if (Math.abs(totalArea - targetArea) / targetArea < 0.02) {
+      return { target, pieces: asymPieces };
+    }
+  }
+
+  // Hard difficulty fallback: grid-based cuts for reliable 4-6 pieces
   if (difficulty === "hard") {
     const gridPieces = applyGridCuts(target, 5, rng, difficulty);
     if (gridPieces && gridPieces.length >= 4) {
@@ -2049,49 +2081,33 @@ export function cutPolygonStrategically(
     }
   }
 
-  // Try asymmetric cuts (authentic look, with complex cuts for medium/hard)
-  const nCuts = numCutsForDifficulty(difficulty, rng);
-  const asymPieces = applyAsymmetricCuts(target, nCuts, rng, difficulty);
-  if (asymPieces && asymPieces.length >= 2) {
-    const totalArea = asymPieces.reduce((s, p) => s + polygonArea(p), 0);
-    const targetArea = polygonArea(target);
-    if (Math.abs(totalArea - targetArea) < 1e-4) {
-      return { target, pieces: asymPieces };
-    }
-  }
-
-  // Fallback: CUT_SCHEMES — always keep the SAME shape, search across difficulties if needed
-  const shapeId = SOLUTION_SHAPES[shapeIndex]!;
-  const sameShapeSameDiff = CUT_SCHEMES.filter(
-    (s) => s.diff === difficulty && s.shapeId === shapeId
-  );
-  const sameShapeAnyDiff = CUT_SCHEMES.filter((s) => s.shapeId === shapeId);
-  const list = sameShapeSameDiff.length > 0 ? sameShapeSameDiff : sameShapeAnyDiff;
-  if (list.length === 0) {
-    // No CUT_SCHEME for this shape at all — simple straight cut through the selected target
-    const fallbackRng = createRng(seed + 77777);
-    const cutLine = generateAsymmetricCut(
+  // Fallback: retry with different seeds, require 3+ pieces
+  for (let fa = 0; fa < 15; fa++) {
+    const fbRng = createRng(seed + 77777 + fa * 9999);
+    const fbPieces = applyAsymmetricCuts(
       { points: target.points.map((p) => ({ ...p })) },
-      fallbackRng
+      Math.max(nCuts, 2),
+      fbRng,
+      difficulty
     );
-    if (cutLine) {
-      const result = splitPolygonByLine(
-        { points: target.points.map((p) => ({ ...p })) },
-        cutLine[0],
-        cutLine[1]
-      );
-      if (result) return { target, pieces: result };
+    if (fbPieces && fbPieces.length >= 3) {
+      const ta = fbPieces.reduce((s, p) => s + polygonArea(p), 0);
+      if (Math.abs(ta - polygonArea(target)) / polygonArea(target) < 0.05)
+        return { target, pieces: fbPieces };
     }
-    return cutSquareDiagonal();
   }
-  const rawIdx = Math.floor(rng() * list.length);
-  const entry = list[rawIdx];
-  if (!entry?.cut) return cutSquareDiagonal();
-  const { target: t, pieces: p } = entry.cut();
-  return {
-    target: { points: [...t.points] },
-    pieces: p.map((pp) => ({ points: [...pp.points] })),
-  };
+  // True last resort: 2 sequential cuts for 3 pieces minimum
+  const lastRng = createRng(seed + 123456);
+  const lastPieces = applyAsymmetricCuts(
+    { points: target.points.map((p) => ({ ...p })) },
+    2,
+    lastRng,
+    difficulty
+  );
+  if (lastPieces && lastPieces.length >= 3) return { target, pieces: lastPieces };
+  // Accept 2 pieces only as absolute last resort
+  if (lastPieces && lastPieces.length >= 2) return { target, pieces: lastPieces };
+  return { target, pieces: [{ points: target.points.map((p) => ({ ...p })) }] };
 }
 
 /**
@@ -2108,7 +2124,7 @@ export function generateFigurenTrainingTask(
   // E-correct ~12% matches official IB FZ 26 benchmark (1 in ~6-7 tasks have E correct).
   // "Bei einigen Aufgaben kann es vorkommen, dass keine der Antwortmöglichkeiten A bis D richtig ist."
   const makeECorrect = forceECorrect ?? rng() < 0.12;
-  const maxAttempts = 20;
+  const maxAttempts = 40; // More attempts for shapes that are harder to cut non-uniformly
   for (let attempt = 0; attempt < maxAttempts; attempt++) {
     const { target, pieces } = cutPolygonStrategically(
       difficulty,
@@ -2116,6 +2132,17 @@ export function generateFigurenTrainingTask(
       forcedShapeIdx
     );
     if (!isAllowedTarget(target)) continue;
+    // Global uniform rejection — regardless of which cut path produced the pieces
+    if (pieces.length < 2) continue;
+    {
+      const pa = pieces.map((p) => polygonArea(p));
+      const paMax = Math.max(...pa),
+        paMin = Math.min(...pa);
+      const paRatio = paMin > 0 ? paMax / paMin : 999;
+      if (paRatio < 2.5) continue; // too uniform
+      if (paRatio > 8) continue; // too extreme = answer too obvious
+      if (pieces.every((p) => p.points.length === pieces[0].points.length)) continue;
+    }
     const fp = taskFingerprint(target, pieces);
     if (duplicateGuardHas(fp)) continue;
 
@@ -2178,23 +2205,39 @@ export function generateFigurenTrainingTask(
     return task;
   }
 
-  return generateFigurenTrainingTaskFallback(difficulty, seed + maxAttempts, makeECorrect);
+  return generateFigurenTrainingTaskFallback(
+    difficulty,
+    seed + maxAttempts,
+    makeECorrect,
+    forcedShapeIdx
+  );
 }
 
 function generateFigurenTrainingTaskFallback(
   difficulty: FZDifficulty,
   seed: number,
-  makeECorrect = false
+  makeECorrect = false,
+  forcedShapeIdx?: number
 ): FigureAssembleTask {
-  const maxFallbackAttempts = 10;
+  const maxFallbackAttempts = 20;
   for (let fa = 0; fa < maxFallbackAttempts; fa++) {
     const rng = createRng(seed + fa * 31337);
 
-    // Pick a RANDOM CUT_SCHEME — prefer same difficulty, fall back to any
-    const sameDiff = CUT_SCHEMES.filter((s) => s.diff === difficulty);
-    const pool = sameDiff.length > 0 ? sameDiff : CUT_SCHEMES;
-    const scheme = pool[Math.floor(rng() * pool.length)]!;
-    const { target, pieces } = scheme.cut();
+    // Use asymmetric cuts on forced shape (NO CUT_SCHEMES)
+    const fbShapeIdx =
+      forcedShapeIdx != null
+        ? forcedShapeIdx % SOLUTION_SHAPES.length
+        : Math.floor(rng() * SOLUTION_SHAPES.length);
+    const target = { points: OFFICIAL_TARGET_POLYGONS[fbShapeIdx].points.map((p) => ({ ...p })) };
+    const nCuts = numCutsForDifficulty(difficulty, rng);
+    const pieces = applyAsymmetricCuts(target, nCuts, rng, difficulty);
+    if (!pieces || pieces.length < 2) continue;
+    const pa = pieces.map((p) => polygonArea(p));
+    const paMax = Math.max(...pa),
+      paMin = Math.min(...pa);
+    const paRatio = paMin > 0 ? paMax / paMin : 999;
+    if (paRatio < 2.5 || paRatio > 8) continue;
+    if (pieces.every((p) => p.points.length === pieces[0].points.length)) continue;
 
     let options: [FigureOption, FigureOption, FigureOption, FigureOption, FigureOption];
     let correctIndex: number;
@@ -2248,8 +2291,43 @@ function generateFigurenTrainingTaskFallback(
     };
   }
 
-  // Ultimate fallback: simple diagonal-cut square (always valid)
-  const { target, pieces } = cutSquareDiagonal();
+  // Ultimate fallback: use forced shape with 2+ cuts for 3+ pieces
+  const fbShapeIdx2 =
+    forcedShapeIdx != null
+      ? forcedShapeIdx % SOLUTION_SHAPES.length
+      : Math.floor(createRng(seed + 888)() * SOLUTION_SHAPES.length);
+  const fbTarget = { points: OFFICIAL_TARGET_POLYGONS[fbShapeIdx2].points.map((p) => ({ ...p })) };
+  // Try to get 3+ pieces
+  let fbPieces: Polygon[] | null = null;
+  for (let fba = 0; fba < 10; fba++) {
+    const fbRngN = createRng(seed + 999999 + fba * 7777);
+    const res = applyAsymmetricCuts(
+      { points: fbTarget.points.map((p) => ({ ...p })) },
+      2,
+      fbRngN,
+      difficulty
+    );
+    if (res && res.length >= 3) {
+      fbPieces = res;
+      break;
+    }
+  }
+  // Accept 2 pieces as last resort
+  if (!fbPieces) {
+    const fbRng2 = createRng(seed + 999999);
+    const fbCut = generateAsymmetricCut({ points: fbTarget.points.map((p) => ({ ...p })) }, fbRng2);
+    if (fbCut) {
+      const res2 = splitPolygonByLine(
+        { points: fbTarget.points.map((p) => ({ ...p })) },
+        fbCut[0],
+        fbCut[1]
+      );
+      if (res2) fbPieces = res2;
+    }
+  }
+  const { target, pieces } = fbPieces
+    ? { target: fbTarget, pieces: fbPieces }
+    : cutSquareDiagonal();
   const rng = createRng(seed + 999);
   const distractors = buildDistractors(target, 3, rng, "");
   const four: Polygon[] = [target, distractors[0]!, distractors[1]!, distractors[2]!];
@@ -2390,6 +2468,7 @@ export function difficultyLabel(
 const SHAPE_NAMES_AKK: Record<string, string> = {
   triangle: "ein gleichseitiges Dreieck",
   square: "ein Quadrat",
+  rectangle: "ein Rechteck",
   rhombus: "eine Raute",
   parallelogram: "ein Parallelogramm",
   trapezoid: "ein Trapez",
@@ -2408,6 +2487,7 @@ const SHAPE_NAMES_AKK: Record<string, string> = {
 const SHAPE_NAMES_NOM: Record<string, string> = {
   triangle: "Dreieck",
   square: "Quadrat",
+  rectangle: "Rechteck",
   rhombus: "Raute",
   parallelogram: "Parallelogramm",
   trapezoid: "Trapez",
