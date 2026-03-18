@@ -24,19 +24,15 @@ const shuffle = <T>(arr: T[]): T[] => {
   return a;
 };
 
-/** Benötigtes Minimum an validierten Aufgaben pro Domain, bevor Nachfüllen getriggert wird */
-const MIN_POOL_SIZE = 50;
+/** Ziel: 2000 validierte Aufgaben pro Domain (außer GM, das generiert immer frisch). */
+const TARGET_POOL_SIZE = 2000;
 
-/** Für Figuren zusammensetzen: Mindestpool 500 Aufgaben. */
-const MIN_POOL_SIZE_FIGUREN = 500;
-
-/** Für Allergieausweise (Merkfähigkeit): Mindestpool 100 Aufgaben. */
-const MIN_POOL_SIZE_MERKFAEHIGKEIT = 100;
+/** GM generiert on-the-fly, Pool nur als Cache für Fragen-Sets. */
+const TARGET_POOL_SIZE_MERKFAEHIGKEIT = 100;
 
 function minPoolSizeFor(domain: TaskDomain): number {
-  if (domain === "kff-figuren") return MIN_POOL_SIZE_FIGUREN;
-  if (domain === "kff-merkfähigkeit") return MIN_POOL_SIZE_MERKFAEHIGKEIT;
-  return MIN_POOL_SIZE;
+  if (domain === "kff-merkfähigkeit") return TARGET_POOL_SIZE_MERKFAEHIGKEIT;
+  return TARGET_POOL_SIZE;
 }
 
 /**
@@ -73,14 +69,17 @@ export async function getTasksForUser(
   const minPool = minPoolSizeFor(domain);
   const total = await getTaskCountByDomain(domain, true);
   if (total < minPool) {
-    const toGenerate = Math.min(minPool - total, 100);
+    // Fill in larger batches (up to 200 per request) to reach 2000 faster
+    const toGenerate = Math.min(minPool - total, 200);
     fillPool(domain, toGenerate).then((r) => {
       if (
         typeof console !== "undefined" &&
         import.meta.env?.DEV &&
         (r.saved > 0 || r.discarded > 0)
       ) {
-        console.log(`[TaskDB] Filled ${domain}: saved=${r.saved}, discarded=${r.discarded}`);
+        console.log(
+          `[TaskDB] Filled ${domain}: saved=${r.saved}, discarded=${r.discarded} (total was ${total}/${minPool})`
+        );
       }
     });
   }
@@ -105,14 +104,16 @@ export async function getTasksForUserOrFill(
   const minPool = minPoolSizeFor(domain);
   const total = await getTaskCountByDomain(domain, true);
   if (total < minPool) {
-    const toGenerate = Math.max(count, Math.min(minPool - total, 100));
+    const toGenerate = Math.max(count, Math.min(minPool - total, 200));
     fillPool(domain, toGenerate).then((r) => {
       if (
         typeof console !== "undefined" &&
         import.meta.env?.DEV &&
         (r.saved > 0 || r.discarded > 0)
       ) {
-        console.log(`[TaskDB] Filled ${domain}: saved=${r.saved}, discarded=${r.discarded}`);
+        console.log(
+          `[TaskDB] Filled ${domain}: saved=${r.saved}, discarded=${r.discarded} (total was ${total}/${minPool})`
+        );
       }
     });
   }

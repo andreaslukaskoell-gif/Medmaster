@@ -96,12 +96,9 @@ export async function generateAndSaveOne(
 }
 
 /**
- * Füllt den Pool für eine Domain: versucht `count` gültige Aufgaben zu erzeugen
- * und zu speichern. Gibt Anzahl gespeichert vs. verworfen zurück.
- * Für kff-figuren mit count >= 500: läuft bis mind. 500 gespeichert oder max. (count + 150) Versuche.
- * Für kff-implikationen mit count >= 500: läuft bis mind. count gespeichert oder max. (count + 200) Versuche.
- * Für kff-zahlenfolgen mit count >= 1000: läuft bis mind. 1000 gespeichert oder max. (count + 200) Versuche.
- * Für kff-merkfähigkeit: erzeugt Sets (8 Pässe + 25 Fragen), je Frage = 1 Task mit passes in data.
+ * Füllt den Pool für eine Domain: generiert validierte Aufgaben bis `count` erreicht.
+ * Verwendet hohe Seed-Entropie um Duplikate zu vermeiden. Max 50% Overhead-Versuche.
+ * GM wird separat behandelt (Chunk-Logik mit Pässen + Fragen).
  */
 export async function fillPool(
   domain: TaskDomain,
@@ -115,22 +112,15 @@ export async function fillPool(
   let saved = 0;
   let discarded = 0;
   const targets = [200, 500, 800]; // easy, medium, hard
-  const isFigurenMin500 = domain === "kff-figuren" && count >= 500;
-  const isImplikationenMin500 = domain === "kff-implikationen" && count >= 500;
-  const isZahlenfolgenMin1000 = domain === "kff-zahlenfolgen" && count >= 1000;
-  const runUntilTarget = isFigurenMin500 || isImplikationenMin500 || isZahlenfolgenMin1000;
-  const maxAttempts = runUntilTarget
-    ? domain === "kff-figuren"
-      ? count + 150
-      : domain === "kff-implikationen"
-        ? count + 200
-        : count + 200
-    : count;
+  // Allow up to 50% extra attempts for validation failures
+  const maxAttempts = Math.ceil(count * 1.5);
 
   for (let i = 0; i < maxAttempts; i++) {
-    if (runUntilTarget && saved >= count) break;
+    if (saved >= count) break;
     const targetDiff = targets[i % 3]!;
-    const task = await generateAndSaveOne(domain, targetDiff, baseSeed + i * 7919);
+    // High-entropy seed: combine baseSeed + iteration with large prime to avoid collisions
+    const seed = baseSeed + i * 7919 + Math.floor(baseSeed / 1000) * 31337;
+    const task = await generateAndSaveOne(domain, targetDiff, seed);
     if (task) saved++;
     else discarded++;
   }
