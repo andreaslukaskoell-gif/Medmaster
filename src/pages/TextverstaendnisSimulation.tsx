@@ -13,6 +13,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Confetti } from "@/components/ui/confetti";
 import { useKFFResults } from "@/hooks/useKFFResults";
 import { ShareResultButton } from "@/components/shared/ShareResultButton";
+import { QuestionFeedbackButton } from "@/components/shared/QuestionFeedbackButton";
 import { getSimulationShareText } from "@/lib/shareUtils";
 import { useTvTexte } from "@/hooks/useTvTexte";
 import type { TVText, TVQuestion } from "@/data/kffTextverstaendnis";
@@ -367,6 +368,10 @@ export default function TextverstaendnisSimulation() {
                               Textstelle markieren
                             </button>
                           )}
+                          <QuestionFeedbackButton
+                            questionId={`${text.id}-q${fq.globalIndex}`}
+                            questionType="tv"
+                          />
                         </div>
                       </CardContent>
                     </Card>

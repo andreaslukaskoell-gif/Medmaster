@@ -12,6 +12,7 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import { useKFFResults } from "@/hooks/useKFFResults";
 import { ShareResultButton } from "@/components/shared/ShareResultButton";
+import { QuestionFeedbackButton } from "@/components/shared/QuestionFeedbackButton";
 import { getSimulationShareText } from "@/lib/shareUtils";
 import {
   emotionenRegulierenOffiziellTasks,
@@ -336,6 +337,7 @@ export default function EmotionenRegulierenSimulation() {
                         {result.task.explanation}
                       </p>
                     </div>
+                    <QuestionFeedbackButton questionId={result.task.id} questionType="sek-er" />
                   </div>
                 )}
               </CardContent>

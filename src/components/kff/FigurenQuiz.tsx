@@ -10,6 +10,7 @@ import {
   Puzzle,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { QuestionFeedbackButton } from "@/components/shared/QuestionFeedbackButton";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { FloatingQuestionCounter } from "@/components/ui/FloatingQuestionCounter";
@@ -30,6 +31,8 @@ import {
   type FigureAssembleTask,
   OFFICIAL_FZ_INSTRUCTION,
   OFFICIAL_FZ_EXAMPLES,
+  duplicateGuardClear,
+  polygonArea,
 } from "@/data/kffFigurenZusammensetzenMedAT";
 import { filterValidFigurenTasks, logPoolWarning } from "@/data/kffValidation";
 import { getTasksForUserWithWeakness, taskToData } from "@/lib/taskDb";
@@ -80,6 +83,7 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
     saveLastCount("figuren", questionCount);
     setTrainingError(null);
     setTrainingLoading(true);
+    duplicateGuardClear(); // Fresh start — allow all shapes/cuts again
     try {
       const domain = "kff-figuren" as const;
       const rating = skillRating ?? 500;
@@ -99,25 +103,67 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
       // Supplement from generator if DB pool is too small (not just empty)
       if (valid.length < target) {
         const levels: ["easy", "medium", "hard"] = ["easy", "medium", "hard"];
-        const seed = Date.now();
+        const seed = Date.now() * 1000 + Math.floor(Math.random() * 999);
         const generated: FigureAssembleTask[] = [];
         const numShapes = SOLUTION_SHAPES.length;
         const needed = target - valid.length;
-        for (let i = 0; i < needed + 10; i++) {
+        // Shuffled shape order per session — each cycle of 14 visits all shapes in random order
+        const shapeOrder: number[] = [];
+        const totalGen = (needed + 10) * 2;
+        const fullCycles = Math.ceil(totalGen / numShapes);
+        for (let c = 0; c < fullCycles; c++) {
+          const cycle = Array.from({ length: numShapes }, (_, k) => k);
+          for (let j = cycle.length - 1; j > 0; j--) {
+            const r = Math.floor(Math.random() * (j + 1));
+            [cycle[j], cycle[r]] = [cycle[r], cycle[j]];
+          }
+          shapeOrder.push(...cycle);
+        }
+        for (let i = 0; i < totalGen; i++) {
           try {
-            // Random shape index instead of sequential — avoids always the same order
-            const randomShapeIdx = Math.floor(Math.random() * numShapes);
+            const requestedShape = SOLUTION_SHAPES[shapeOrder[i] % numShapes];
             const t = generateFigurenTrainingTask(
               difficultyForIndex(i, levels),
               seed + i * 7919,
-              randomShapeIdx
+              shapeOrder[i]
             );
-            if (t) generated.push(t);
+            // Only accept if the generator produced the requested shape (reject fallback drift)
+            if (t && t.targetShapeId === requestedShape) generated.push(t);
           } catch {
             /* skip failed generation */
           }
         }
-        valid = [...valid, ...filterValidFigurenTasks(generated)];
+        // Quality filter: reject uniform splits (all pieces same size/shape = boring)
+        const qualityFiltered = generated.filter((t) => {
+          const areas = t.pieces.map((p) => polygonArea(p));
+          const maxA = Math.max(...areas);
+          const minA = Math.min(...areas);
+          if (t.pieces.length >= 2 && minA > 0 && maxA / minA < 1.3) return false;
+          if (
+            t.pieces.length >= 3 &&
+            t.pieces.every((p) => p.points.length === t.pieces[0].points.length)
+          )
+            return false;
+          return true;
+        });
+        // Balance: cap each shape to maxPerShape to prevent dominance
+        const validGen = filterValidFigurenTasks(qualityFiltered);
+        const maxPerShape = Math.max(2, Math.ceil((needed + 5) / numShapes));
+        const shapeCounts: Record<string, number> = {};
+        const balanced: FigureAssembleTask[] = [];
+        for (const t of validGen) {
+          const s = t.targetShapeId ?? "unknown";
+          shapeCounts[s] = (shapeCounts[s] ?? 0) + 1;
+          if (shapeCounts[s]! <= maxPerShape) balanced.push(t);
+        }
+        // Fill remaining from uncapped pool if balanced is too small
+        if (balanced.length < needed) {
+          for (const t of validGen) {
+            if (!balanced.includes(t)) balanced.push(t);
+            if (balanced.length >= needed + 5) break;
+          }
+        }
+        valid = [...valid, ...balanced];
         if (valid.length === 0)
           valid = shuffleSlice(filterValidFigurenTasks([...OFFICIAL_FZ_EXAMPLES]), target);
         if (import.meta.env?.DEV) logPoolWarning("figuren", valid.length, "Supplement (generiert)");
@@ -276,7 +322,7 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
                   );
                   if (valid.length < count) {
                     const levels: ["easy", "medium", "hard"] = ["easy", "medium", "hard"];
-                    const seed = Date.now();
+                    const seed = Date.now() * 1000 + Math.floor(Math.random() * 999);
                     const generated: FigureAssembleTask[] = [];
                     const numShapes = SOLUTION_SHAPES.length;
                     for (let i = 0; i < count - valid.length; i++) {
@@ -307,7 +353,7 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
                   setPhase("quiz");
                 } catch {
                   const levels: ["easy", "medium", "hard"] = ["easy", "medium", "hard"];
-                  const seed = Date.now();
+                  const seed = Date.now() * 1000 + Math.floor(Math.random() * 999);
                   const generated: FigureAssembleTask[] = [];
                   const numShapes = SOLUTION_SHAPES.length;
                   for (let i = 0; i < EXAM_CONFIG.figuren.questions; i++) {
@@ -598,6 +644,9 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
                         ? "Tipp: Prüfe zuerst die Gesamtfläche. Wenn kein Umriss A–D flächengleich ist, wähle E."
                         : `Tipp: Vergleiche die Gesamtfläche und den Umriss — nur ${correctLabel} stimmt mit den ${q.pieces.length} Teilen überein. Die gestrichelten Linien oben zeigen die exakten Schnittstellen.`}
                   </p>
+                </div>
+                <div className="ml-7 mt-2">
+                  <QuestionFeedbackButton questionId={q.id} questionType="kff-figuren" />
                 </div>
               </CardContent>
             </Card>

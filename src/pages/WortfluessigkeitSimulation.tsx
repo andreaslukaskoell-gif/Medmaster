@@ -13,6 +13,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Confetti } from "@/components/ui/confetti";
 import { useKFFResults } from "@/hooks/useKFFResults";
 import { ShareResultButton } from "@/components/shared/ShareResultButton";
+import { QuestionFeedbackButton } from "@/components/shared/QuestionFeedbackButton";
 import { getSimulationShareText } from "@/lib/shareUtils";
 import { wortfluessigkeitWords, type WortfluessigkeitWord } from "@/data/kffWortfluessigkeit";
 
@@ -396,6 +397,10 @@ export default function WortfluessigkeitSimulation() {
                             : ""}
                         </span>
                       </div>
+                      <QuestionFeedbackButton
+                        questionId={result.word.id ?? `wf-sim-${i}`}
+                        questionType="kff-wortfluessigkeit"
+                      />
                     </div>
                   )}
                 </CardContent>

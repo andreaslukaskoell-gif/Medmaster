@@ -12,6 +12,7 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import { useKFFResults } from "@/hooks/useKFFResults";
 import { ShareResultButton } from "@/components/shared/ShareResultButton";
+import { QuestionFeedbackButton } from "@/components/shared/QuestionFeedbackButton";
 import { getSimulationShareText } from "@/lib/shareUtils";
 import { implikationenTasks, type ImplikationTask } from "@/data/kffImplikationen";
 import { filterValidImplikationTasks } from "@/data/kffValidation";
@@ -357,6 +358,10 @@ export default function ImplikationenSimulation() {
                           {result.task.explanation}
                         </p>
                       </div>
+                      <QuestionFeedbackButton
+                        questionId={result.task.id}
+                        questionType="kff-implikationen"
+                      />
                     </div>
                   )}
                 </CardContent>

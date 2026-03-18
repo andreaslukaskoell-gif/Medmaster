@@ -9,6 +9,7 @@ import {
   SkipForward,
 } from "lucide-react";
 import { AiTutorChat, AiTutorButton } from "@/components/AiTutorChat";
+import { QuestionFeedbackButton } from "@/components/shared/QuestionFeedbackButton";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -418,6 +419,9 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
                       <AiTutorButton onClick={() => setAiTutorQ({ question: q, userAnswer })} />
                     </div>
                   )}
+                  <div className="ml-8 mt-2">
+                    <QuestionFeedbackButton questionId={q.id} questionType="bms" />
+                  </div>
                 </CardContent>
               </Card>
             );

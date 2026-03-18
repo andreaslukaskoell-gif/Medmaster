@@ -212,18 +212,17 @@ export default function BMSUnterkapitel({
     if (ukId) trackEvent("chapter_open", { chapter: kapitelId, subchapter: ukId });
   }, [ukId, kapitelId]);
 
-  const store = useStore();
-  const completedChapters = store.completedChapters || [];
-  const completeChapter = store.completeChapter || (() => {});
-  const addXP = store.addXP || (() => {});
-  const checkStreak = store.checkStreak || (() => {});
-  const notes = store.notes || {};
-  const setNote = store.setNote || (() => {});
-  const bookmarks = store.bookmarks || { chapters: [] };
-  const toggleBookmarkChapter = store.toggleBookmarkChapter || (() => {});
-  const saveQuizResult = store.saveQuizResult ?? (() => {});
-  const quizResults = store.quizResults || [];
-  const logActivity = store.logActivity ?? (() => {});
+  const completedChapters = useStore((s) => s.completedChapters) || [];
+  const completeChapter = useStore((s) => s.completeChapter) || (() => {});
+  const addXP = useStore((s) => s.addXP) || (() => {});
+  const checkStreak = useStore((s) => s.checkStreak) || (() => {});
+  const notes = useStore((s) => s.notes) || {};
+  const setNote = useStore((s) => s.setNote) || (() => {});
+  const bookmarks = useStore((s) => s.bookmarks) || { chapters: [] };
+  const toggleBookmarkChapter = useStore((s) => s.toggleBookmarkChapter) || (() => {});
+  const saveQuizResult = useStore((s) => s.saveQuizResult) ?? (() => {});
+  const quizResults = useStore((s) => s.quizResults) || [];
+  const logActivity = useStore((s) => s.logActivity) ?? (() => {});
   const getMinutes = useSessionTimer();
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -850,7 +849,7 @@ export default function BMSUnterkapitel({
             </div>
 
             {/* Altfrage + Kontrollfragen */}
-            <ScrollReveal className="w-full max-w-[680px] ml-[268px] min-w-0 mt-12">
+            <ScrollReveal className="w-full max-w-[680px] ml-[calc(220px+3rem)] min-w-0 mt-12">
               <div className="space-y-10">
                 {uk.altfrage && (
                   <div className="card-glass p-6 border-l-4 border-l-amber-500">
@@ -913,7 +912,7 @@ export default function BMSUnterkapitel({
 
         {/* Next Step recommendation — shown when UK is completed */}
         {isCompleted && nextStepRecommendation && (
-          <ScrollReveal className="w-full max-w-[680px] ml-[268px] min-w-0 mt-10">
+          <ScrollReveal className="w-full max-w-[680px] ml-[calc(220px+3rem)] min-w-0 mt-10">
             <NextStepCard
               recommendation={nextStepRecommendation}
               accentColor={accentColor}
@@ -968,33 +967,6 @@ export default function BMSUnterkapitel({
             </div>
           </div>
         </ScrollReveal>
-
-        {/* Dev-only status */}
-        {import.meta.env.DEV && (
-          <div className="mt-6 py-3 px-4 rounded-lg bg-[var(--surface)] border border-[var(--border)] text-xs text-[var(--muted)]">
-            <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-              <span>
-                Word Count:{" "}
-                {(() => {
-                  const text = (uk.content || "").trim();
-                  const words = text.split(/\s+/).filter(Boolean);
-                  return words.length;
-                })()}
-              </span>
-              <span>Quiz: {uk.quiz && uk.quiz.length > 0 ? "Vorhanden" : "Fehlt"}</span>
-              <span>Image: {uk.imageUrl ? "Vorhanden" : "Fehlt"}</span>
-              <button
-                type="button"
-                onClick={() => {
-                  void navigator.clipboard.writeText(uk.id);
-                }}
-                className="ml-auto px-2 py-1 rounded bg-[var(--surface)] text-[var(--text-secondary)] hover:bg-[var(--border)] transition-colors"
-              >
-                Copy ID
-              </button>
-            </div>
-          </div>
-        )}
       </ContentErrorBoundary>
 
       {showCelebration && (

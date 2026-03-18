@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { ArrowLeft, ArrowRight, Send, CheckCircle2, XCircle, Shuffle, Timer } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { QuestionFeedbackButton } from "@/components/shared/QuestionFeedbackButton";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { FloatingQuestionCounter } from "@/components/ui/FloatingQuestionCounter";
@@ -439,6 +440,9 @@ export function ImplikationenQuiz({
                   <p className="text-xs text-[var(--muted)]">
                     {stripMarkdownAsterisks(qu.explanation)}
                   </p>
+                </div>
+                <div className="ml-7 mt-2">
+                  <QuestionFeedbackButton questionId={qu.id} questionType="kff-implikationen" />
                 </div>
               </CardContent>
             </Card>

@@ -3,6 +3,7 @@ import { Timer, ChevronRight, RotateCcw, Trophy, Clock, BarChart3 } from "lucide
 import { Card, CardContent } from "@/components/ui/card";
 import { useKFFResults } from "@/hooks/useKFFResults";
 import { ShareResultButton } from "@/components/shared/ShareResultButton";
+import { QuestionFeedbackButton } from "@/components/shared/QuestionFeedbackButton";
 import { getSimulationShareText } from "@/lib/shareUtils";
 import {
   sozialesEntscheidenScenarios,
@@ -352,6 +353,10 @@ export default function SozialesEntscheidenSimulation() {
                           </div>
                         );
                       })}
+                      <QuestionFeedbackButton
+                        questionId={result.scenario.id}
+                        questionType="sek-se"
+                      />
                     </div>
                   )}
                 </CardContent>

@@ -11,6 +11,7 @@ import {
   BookOpen,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { QuestionFeedbackButton } from "@/components/shared/QuestionFeedbackButton";
 import { Confetti } from "@/components/ui/confetti";
 import { useKFFResults } from "@/hooks/useKFFResults";
 import { useTvTexte } from "@/hooks/useTvTexte";
@@ -279,6 +280,7 @@ export default function TextverstaendnisUeben() {
               key={qIdx}
               question={q}
               qIdx={qIdx}
+              questionId={`${currentText.id}-q${qIdx}`}
               selected={answers[qIdx]}
               isResultsView={showResultsBlock}
               onSelect={(optIdx) => handleSelectOption(qIdx, optIdx)}
@@ -343,6 +345,7 @@ export default function TextverstaendnisUeben() {
 function QuestionCard({
   question,
   qIdx,
+  questionId,
   selected,
   isResultsView,
   onSelect,
@@ -350,6 +353,7 @@ function QuestionCard({
 }: {
   question: TVQuestion;
   qIdx: number;
+  questionId: string;
   selected: number | undefined;
   isResultsView: boolean;
   onSelect: (optIdx: number) => void;
@@ -421,6 +425,7 @@ function QuestionCard({
                 Relevante Textstelle anzeigen
               </button>
             )}
+            <QuestionFeedbackButton questionId={questionId} questionType="tv" />
           </div>
         )}
       </CardContent>

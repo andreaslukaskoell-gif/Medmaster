@@ -3,6 +3,7 @@ import { Timer, CheckCircle2, XCircle, ChevronRight, RotateCcw, Trophy, Clock } 
 import { Card, CardContent } from "@/components/ui/card";
 import { useKFFResults } from "@/hooks/useKFFResults";
 import { ShareResultButton } from "@/components/shared/ShareResultButton";
+import { QuestionFeedbackButton } from "@/components/shared/QuestionFeedbackButton";
 import { getSimulationShareText } from "@/lib/shareUtils";
 import {
   emotionenErkennenOffiziellAlle,
@@ -284,6 +285,7 @@ export default function EmotionenErkennenSimulation() {
                     <p className="text-xs text-[var(--muted)] border-t border-gray-200 dark:border-gray-700 pt-2">
                       {r.task.explanation}
                     </p>
+                    <QuestionFeedbackButton questionId={r.task.id} questionType="sek-ee" />
                   </div>
                 )}
               </CardContent>
