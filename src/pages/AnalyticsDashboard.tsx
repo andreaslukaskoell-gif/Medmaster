@@ -72,6 +72,16 @@ type FunnelStep = { step: string; visitors: number };
 type ExitPage = { page_path: string; exits: number };
 type TrafficSource = { domain: string; count: number };
 type RecentReferral = { ref: string; referrer: string | null; created_at: string };
+type SignupAttribution = {
+  created_at: string;
+  method: string;
+  source: string;
+  utm_source: string | null;
+  utm_medium: string | null;
+  utm_campaign: string | null;
+  gclid: string | null;
+  ref: string | null;
+};
 type ActiveUser = {
   session_id: string;
   visitor_id: string;
@@ -97,6 +107,7 @@ type DashboardData = {
   pageEngagement: PageEngagement[];
   trafficSources: TrafficSource[];
   recentReferrals: RecentReferral[];
+  signupAttributions: SignupAttribution[];
 };
 
 // ── Funnel config ──
@@ -166,6 +177,17 @@ function sumField(rows: DailyStat[], field: "visitors" | "page_views", daysBack:
   return rows.filter((r) => r.day >= cutoffStr).reduce((sum, r) => sum + r[field], 0);
 }
 
+function deriveSignupSource(props: Record<string, unknown>, utm: Record<string, string>): string {
+  if (props.gclid) return "Google Ads";
+  if (utm.utm_source === "google" && utm.utm_medium === "cpc") return "Google Ads";
+  if (props.fbclid) return "Meta Ads";
+  if (utm.utm_source === "facebook" || utm.utm_source === "instagram" || utm.utm_source === "meta")
+    return "Meta Ads";
+  if (utm.utm_source) return utm.utm_source;
+  if (props.ref) return `Referral (${props.ref})`;
+  return "Direkt";
+}
+
 function extractDomain(url: string): string {
   try {
     return new URL(url).hostname.replace(/^www\./, "");
@@ -201,6 +223,7 @@ async function fetchDashboard(): Promise<DashboardData> {
       pageEngagement: [],
       trafficSources: [],
       recentReferrals: [],
+      signupAttributions: [],
     };
   }
 
@@ -268,6 +291,42 @@ async function fetchDashboard(): Promise<DashboardData> {
       created_at: row.created_at as string,
     }));
 
+  // Fetch signup events with attribution data
+  const signupResult = await supabase
+    .from("analytics_events")
+    .select("created_at, properties, user_agent")
+    .in("event_name", ["signup", "login_click", "signup_completed"])
+    .order("created_at", { ascending: false })
+    .limit(200);
+
+  const signupAttributions: SignupAttribution[] = (signupResult.data || [])
+    .filter((row) => !isInternalRow(row))
+    .map((row) => {
+      const props = (row.properties as Record<string, unknown>) || {};
+      const utm = (props.utm as Record<string, string>) || {};
+      return {
+        created_at: row.created_at as string,
+        method: (props.method as string) || "unknown",
+        source: deriveSignupSource(props, utm),
+        utm_source: utm.utm_source || null,
+        utm_medium: utm.utm_medium || null,
+        utm_campaign: utm.utm_campaign || null,
+        gclid: (props.gclid as string) || null,
+        ref: (props.ref as string) || null,
+      };
+    });
+
+  // Deduplicate by keeping only the latest event per unique combination of method + time (within 5s)
+  const deduped: SignupAttribution[] = [];
+  for (const s of signupAttributions) {
+    const isDupe = deduped.some(
+      (d) =>
+        d.method === s.method &&
+        Math.abs(new Date(d.created_at).getTime() - new Date(s.created_at).getTime()) < 5000
+    );
+    if (!isDupe) deduped.push(s);
+  }
+
   return {
     daily: (daily.data as DailyStat[]) || [],
     topPages: (topPages.data as TopPage[]) || [],
@@ -279,6 +338,7 @@ async function fetchDashboard(): Promise<DashboardData> {
     pageEngagement: (engagement.data as PageEngagement[]) || [],
     trafficSources: trafficSources.slice(0, 10),
     recentReferrals,
+    signupAttributions: deduped,
   };
 }
 
@@ -646,6 +706,87 @@ function Section({ title, children }: { title: string; children: React.ReactNode
   );
 }
 
+// ── Signup Attribution ──
+
+const SOURCE_COLORS: Record<string, string> = {
+  "Google Ads": "#4285f4",
+  Direkt: "#6b7280",
+  instagram: "#e1306c",
+  facebook: "#1877f2",
+  tiktok: "#000000",
+};
+
+function sourceColor(source: string): string {
+  return SOURCE_COLORS[source] || COLORS[Math.abs(hashCode(source)) % COLORS.length];
+}
+
+function hashCode(s: string): number {
+  let h = 0;
+  for (let i = 0; i < s.length; i++) h = (Math.imul(31, h) + s.charCodeAt(i)) | 0;
+  return h;
+}
+
+function SignupAttributionSection({ signups }: { signups: SignupAttribution[] }) {
+  if (signups.length === 0) return null;
+
+  // Aggregate by source
+  const sourceCounts: Record<string, number> = {};
+  for (const s of signups) {
+    sourceCounts[s.source] = (sourceCounts[s.source] || 0) + 1;
+  }
+  const sourceItems = Object.entries(sourceCounts)
+    .map(([label, value]) => ({ label, value }))
+    .sort((a, b) => b.value - a.value);
+
+  return (
+    <div className="bg-[var(--surface)] rounded-xl p-5 border border-[var(--border)]">
+      <h2 className="text-sm font-semibold text-[var(--text-primary)] mb-4">Signup-Attribution</h2>
+
+      <div className="grid grid-cols-2 gap-6">
+        {/* Left: source breakdown donut */}
+        <div>
+          <h3 className="text-xs font-medium text-[var(--muted)] mb-3 uppercase tracking-wide">
+            Quellen-Verteilung
+          </h3>
+          <DonutChart items={sourceItems} />
+        </div>
+
+        {/* Right: recent signups table */}
+        <div>
+          <h3 className="text-xs font-medium text-[var(--muted)] mb-3 uppercase tracking-wide">
+            Letzte Signups
+          </h3>
+          <div className="space-y-1.5 max-h-64 overflow-y-auto">
+            {signups.slice(0, 20).map((s, i) => (
+              <div
+                key={i}
+                className="flex items-center justify-between py-1.5 border-b border-[var(--border)]/30 last:border-0"
+              >
+                <div className="flex items-center gap-2">
+                  <span
+                    className="w-2 h-2 rounded-full shrink-0"
+                    style={{ background: sourceColor(s.source) }}
+                  />
+                  <span className="text-xs font-medium text-[var(--text-primary)]">{s.source}</span>
+                  {s.utm_campaign && (
+                    <span className="text-[10px] text-[var(--muted)] bg-[var(--background)] px-1.5 py-0.5 rounded">
+                      {s.utm_campaign}
+                    </span>
+                  )}
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-[10px] text-[var(--muted)]">{s.method}</span>
+                  <span className="text-[10px] text-[var(--muted)]">{timeAgo(s.created_at)}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // ── Main Dashboard ──
 
 export default function AnalyticsDashboard() {
@@ -861,6 +1002,9 @@ export default function AnalyticsDashboard() {
       <Section title="Conversion Funnel (30 Tage)">
         <FunnelViz steps={FUNNEL_STEPS} data={data.funnel} />
       </Section>
+
+      {/* 5b. Signup Attribution */}
+      <SignupAttributionSection signups={data.signupAttributions} />
 
       {/* 6. Top Pages + Events */}
       <div className="grid grid-cols-2 gap-4">

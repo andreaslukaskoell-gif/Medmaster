@@ -7,7 +7,7 @@ import { ErrorBoundary } from "@/components/ErrorBoundary";
 import "@/index.css";
 import App from "@/App";
 import { initAnalytics, captureUtmParams } from "@/lib/analytics";
-import { initTracker, captureTrafficSource } from "@/lib/analyticsTracker";
+import { initTracker, captureTrafficSource, captureAttributionOnly } from "@/lib/analyticsTracker";
 import { initMetaPixel, initGtag } from "@/lib/growthTracking";
 import { getStoredConsent } from "@/hooks/useCookieConsent";
 
@@ -21,6 +21,11 @@ if (typeof dsn === "string" && dsn.trim().length > 0) {
     tracesSampleRate: 0.1,
   });
 }
+
+// ── Attribution capture (always) ──
+// Store UTM, gclid, fbclid, ref in sessionStorage regardless of consent.
+// This ensures signup attribution works even without analytics consent.
+captureAttributionOnly();
 
 // ── Consent-gated analytics ──
 // Only initialize analytics/marketing if the user has given consent.

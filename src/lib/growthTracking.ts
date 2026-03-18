@@ -60,7 +60,7 @@ export function trackMetaCustom(event: string, data?: Record<string, unknown>) {
 const GTAG_ID = (import.meta.env.VITE_GTAG_ID as string | undefined) || "AW-18020022525";
 // Conversion labels from Google Ads → Tools → Conversions → Tag setup
 const GTAG_CONV_SIGNUP =
-  (import.meta.env.VITE_GTAG_CONV_SIGNUP as string | undefined) || "qK1CCKr-yYkcEP3xzpBD";
+  (import.meta.env.VITE_GTAG_CONV_SIGNUP as string | undefined) || "B4jqCOSgrIscEP3xzpBD";
 const GTAG_CONV_CHECKOUT = import.meta.env.VITE_GTAG_CONV_CHECKOUT as string | undefined;
 
 let gtagReady = false;
@@ -222,7 +222,7 @@ export function trackConversion(
   // Set VITE_GTAG_CONV_SIGNUP / VITE_GTAG_CONV_CHECKOUT in .env.local
   // (copy from Google Ads → Tools → Conversions → Tag setup → Conversion label)
   if (event === "signup_completed" && GTAG_CONV_SIGNUP) {
-    trackGtagConversion(GTAG_CONV_SIGNUP, 29.9);
+    trackGtagConversion(GTAG_CONV_SIGNUP);
   } else if (event === "checkout_started" && GTAG_CONV_CHECKOUT) {
     trackGtagConversion(GTAG_CONV_CHECKOUT, 29.9);
   }

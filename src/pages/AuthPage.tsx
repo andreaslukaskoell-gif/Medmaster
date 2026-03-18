@@ -8,7 +8,13 @@ import { useStore } from "@/store/useStore";
 import { usePageTitle } from "@/hooks/usePageTitle";
 import { translateAuthError } from "@/lib/authErrors";
 import { trackSignup, trackLogin } from "@/lib/analytics";
-import { trackEvent, getStoredRef, getStoredUtm } from "@/lib/analyticsTracker";
+import {
+  trackEvent,
+  getStoredRef,
+  getStoredUtm,
+  getStoredGclid,
+  getStoredFbclid,
+} from "@/lib/analyticsTracker";
 import { trackConversion } from "@/lib/growthTracking";
 import { useThrottle } from "@/hooks/useThrottle";
 
@@ -32,7 +38,13 @@ export default function AuthPage() {
   const handleGoogle = async () => {
     setError("");
     setGoogleLoading(true);
-    trackEvent("login_click", { method: "google", ref: getStoredRef(), utm: getStoredUtm() });
+    trackEvent("login_click", {
+      method: "google",
+      ref: getStoredRef(),
+      utm: getStoredUtm(),
+      gclid: getStoredGclid(),
+      fbclid: getStoredFbclid(),
+    });
     trackSignup("google");
     trackConversion("signup_started", { method: "google", source: "auth_page" });
     const { error } = await signInWithGoogle();
@@ -84,7 +96,13 @@ export default function AuthPage() {
         }
       } else {
         trackSignup("email");
-        trackEvent("signup", { method: "email", ref: getStoredRef(), utm: getStoredUtm() });
+        trackEvent("signup", {
+          method: "email",
+          ref: getStoredRef(),
+          utm: getStoredUtm(),
+          gclid: getStoredGclid(),
+          fbclid: getStoredFbclid(),
+        });
         trackConversion("signup_completed", { method: "email", ref: getStoredRef() });
         // Don't skip onboarding — let user set their display name first
         navigate("/medat-onboarding");

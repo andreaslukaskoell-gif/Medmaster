@@ -44,6 +44,20 @@ export function captureTrafficSource() {
     insertEvent("utm_visit", { properties: utm });
     sessionStorage.setItem("mm_utm", JSON.stringify(utm));
   }
+
+  // Capture Google Ads click ID
+  const gclid = params.get("gclid");
+  if (gclid) {
+    insertEvent("gclid_visit", { properties: { gclid } });
+    sessionStorage.setItem("mm_gclid", gclid);
+  }
+
+  // Capture Meta/Facebook click ID
+  const fbclid = params.get("fbclid");
+  if (fbclid) {
+    insertEvent("fbclid_visit", { properties: { fbclid } });
+    sessionStorage.setItem("mm_fbclid", fbclid);
+  }
 }
 
 /** Get stored referral code (if visitor came via ?ref=xxx). */
@@ -55,6 +69,41 @@ export function getStoredRef(): string | null {
 export function getStoredUtm(): Record<string, string> | null {
   const raw = sessionStorage.getItem("mm_utm");
   return raw ? JSON.parse(raw) : null;
+}
+
+/** Get stored Google Ads click ID (if visitor came via ?gclid=xxx). */
+export function getStoredGclid(): string | null {
+  return sessionStorage.getItem("mm_gclid");
+}
+
+/** Get stored Meta/Facebook click ID (if visitor came via ?fbclid=xxx). */
+export function getStoredFbclid(): string | null {
+  return sessionStorage.getItem("mm_fbclid");
+}
+
+/**
+ * Capture only attribution params (UTM, gclid, fbclid, ref) into sessionStorage
+ * WITHOUT firing analytics events. Use when analytics consent is not given
+ * but we still want to attribute signups later (legitimate interest).
+ */
+export function captureAttributionOnly() {
+  const params = new URLSearchParams(window.location.search);
+
+  const ref = params.get("ref");
+  if (ref) sessionStorage.setItem("mm_ref", ref);
+
+  const utm: Record<string, string> = {};
+  for (const key of ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"]) {
+    const val = params.get(key);
+    if (val) utm[key] = val;
+  }
+  if (Object.keys(utm).length > 0) sessionStorage.setItem("mm_utm", JSON.stringify(utm));
+
+  const gclid = params.get("gclid");
+  if (gclid) sessionStorage.setItem("mm_gclid", gclid);
+
+  const fbclid = params.get("fbclid");
+  if (fbclid) sessionStorage.setItem("mm_fbclid", fbclid);
 }
 
 /** Associate the current visitor with an authenticated user. */
