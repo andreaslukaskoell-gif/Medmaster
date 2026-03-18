@@ -50,8 +50,7 @@ CREATE POLICY "Own SRS cards" ON public.srs_cards
   FOR ALL USING (auth.uid() = user_id)
   WITH CHECK (auth.uid() = user_id);
 
-CREATE INDEX idx_srs_due ON public.srs_cards (user_id, next_review)
-  WHERE next_review <= now();
+CREATE INDEX idx_srs_due ON public.srs_cards (user_id, next_review);
 
 -- =============================================================================
 -- 3. simulation_results — MedAT-Simulationen
