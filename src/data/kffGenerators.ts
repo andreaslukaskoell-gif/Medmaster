@@ -1830,7 +1830,7 @@ export function generateWortflüssigkeit(
     }
 
     return {
-      id: `wf-gen-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`,
+      id: `wf-gen-${word}`,
       scrambled,
       correctWord: word,
       options,
@@ -1845,7 +1845,7 @@ export function generateWortflüssigkeit(
   const correctFirst = word[0];
   const wrong = shuffle(lettersInWord.filter((l) => l !== correctFirst)).slice(0, 3);
   return {
-    id: `wf-gen-fb-${Date.now()}`,
+    id: `wf-gen-fb-${word}`,
     scrambled,
     correctWord: word,
     options: [...shuffle([correctFirst, ...wrong]), "-"],
@@ -2479,7 +2479,7 @@ export function generateWordFluencyTask(difficulty: 1 | 2 | 3): WordFluencyTask 
     }
 
     const task: WordFluencyTask = {
-      id: `wf-train-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+      id: `wf-train-${word}`,
       letters: shuffled,
       options,
       correctIndex,
@@ -2512,7 +2512,7 @@ function generateWordFluencyTaskFallback(difficulty: 1 | 2 | 3): WordFluencyTask
     const mixed = shuffle([correctFirst, ...distractors.slice(0, 3)]);
     const options = [...mixed, "-"];
     const task: WordFluencyTask = {
-      id: `wf-train-fb-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`,
+      id: `wf-train-fb-${word}`,
       letters,
       options,
       correctIndex: mixed.indexOf(correctFirst),
@@ -2530,7 +2530,7 @@ function generateWordFluencyTaskFallback(difficulty: 1 | 2 | 3): WordFluencyTask
   const mixed = shuffle([correctFirst, ...distractors.slice(0, 3)]);
   const options = [...mixed, "-"];
   return {
-    id: `wf-train-fb-last-${Date.now()}`,
+    id: `wf-train-fb-last-${word}`,
     letters,
     options,
     correctIndex: mixed.indexOf(correctFirst),
@@ -2804,7 +2804,7 @@ export function generateSyllogism(difficulty: "leicht" | "mittel" | "schwer"): S
   }
 
   return {
-    id: `syl-gen-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`,
+    id: `syl-gen-${premise1.slice(0, 15)}-${premise2.slice(0, 15)}`.replace(/\s+/g, "_"),
     premise1,
     premise2,
     options,
@@ -3348,7 +3348,7 @@ export function generateImplicationTrainingTask(difficulty: 1 | 2 | 3): Implikat
       ];
 
       const task: ImplikationTask = {
-        id: `imp-train-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+        id: `imp-train-${premise1.slice(0, 15)}-${premise2.slice(0, 15)}`.replace(/\s+/g, "_"),
         premise1,
         premise2,
         options,
@@ -3391,7 +3391,7 @@ export function generateImplicationTrainingTask(difficulty: 1 | 2 | 3): Implikat
     ];
 
     const task: ImplikationTask = {
-      id: `imp-train-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+      id: `imp-train-${premise1.slice(0, 15)}-${premise2.slice(0, 15)}`.replace(/\s+/g, "_"),
       premise1,
       premise2,
       options,
@@ -3428,7 +3428,7 @@ function generateImplicationTrainingTaskFallback(difficulty: 1 | 2 | 3): Implika
     );
     if (correctIdx < 0) continue;
     const task: ImplikationTask = {
-      id: `imp-train-fb-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`,
+      id: `imp-train-fb-${premise1.slice(0, 15)}-${premise2.slice(0, 15)}`.replace(/\s+/g, "_"),
       premise1,
       premise2,
       options: [...grid, "Keine der Schlussfolgerungen ist richtig."],
@@ -3451,7 +3451,7 @@ function generateImplicationTrainingTaskFallback(difficulty: 1 | 2 | 3): Implika
     (g) => g.replace(/\.$/, "") === correctConclusion.replace(/\.$/, "")
   );
   return {
-    id: `imp-train-fb-last-${Date.now()}`,
+    id: `imp-train-fb-last-${premise1.slice(0, 15)}-${premise2.slice(0, 15)}`.replace(/\s+/g, "_"),
     premise1,
     premise2,
     options: [...grid, "Keine der Schlussfolgerungen ist richtig."],

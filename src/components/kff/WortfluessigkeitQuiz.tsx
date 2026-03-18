@@ -88,7 +88,7 @@ export function WortflüssigkeitQuiz({
         const generated: WordFluencyTask[] = [];
         for (let i = 0; i < questionCount; i++) {
           const t = generateWordFluencyTask(difficultyForIndex(i, levels));
-          t.id = t.id ?? `wf-client-${Date.now()}-${i}`;
+          t.id = t.id ?? `wf-gen-${t.solutionWord ?? i}`;
           generated.push(t);
         }
         valid = shuffleSlice(filterValidWordFluencyTasks(generated), questionCount);

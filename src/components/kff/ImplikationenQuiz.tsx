@@ -107,7 +107,12 @@ export function ImplikationenQuiz({
         const existingIds = new Set(valid.map((t) => t.id));
         for (let i = 0; i < questionCount - valid.length; i++) {
           const t = generateImplicationTrainingTask(difficultyForIndex(i, levels));
-          t.id = t.id ?? `imp-client-${Date.now()}-${i}`;
+          t.id =
+            t.id ??
+            `imp-gen-${t.premise1?.slice(0, 20)}-${t.premise2?.slice(0, 20)}-${i}`.replace(
+              /\s+/g,
+              "_"
+            );
           if (!existingIds.has(t.id)) {
             existingIds.add(t.id);
             generated.push(t);
