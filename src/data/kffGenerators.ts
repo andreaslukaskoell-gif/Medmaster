@@ -740,10 +740,38 @@ function generatePassportNumber(): string {
  * Fallback: leerer String → UI zeigt Initialen-Avatar.
  */
 const AVATAR_COUNT = 80;
+const GM_USED_AVATARS_KEY = "medmaster_gm_used_avatars";
+
+/** Returns `count` avatar paths that haven't been used in previous sessions.
+ *  Resets automatically when all 80 are exhausted. */
 function getAvatarPool(count: number): string[] {
-  const indices = Array.from({ length: AVATAR_COUNT }, (_, i) => i + 1);
-  const shuffled = shuffle(indices);
-  return shuffled.slice(0, count).map((n) => {
+  let used: number[] = [];
+  try {
+    const raw = localStorage.getItem(GM_USED_AVATARS_KEY);
+    if (raw) used = JSON.parse(raw);
+  } catch {
+    /* ignore */
+  }
+
+  const allIndices = Array.from({ length: AVATAR_COUNT }, (_, i) => i + 1);
+  let available = allIndices.filter((i) => !used.includes(i));
+
+  // Reset if not enough unused avatars remain
+  if (available.length < count) {
+    used = [];
+    available = allIndices;
+  }
+
+  const picked = shuffle(available).slice(0, count);
+
+  // Persist used avatars
+  try {
+    localStorage.setItem(GM_USED_AVATARS_KEY, JSON.stringify([...used, ...picked]));
+  } catch {
+    /* ignore */
+  }
+
+  return picked.map((n) => {
     const num = String(n).padStart(2, "0");
     return `/avatars/face-${num}.jpg`;
   });
