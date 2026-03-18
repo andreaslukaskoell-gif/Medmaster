@@ -42,7 +42,6 @@ import { OFFICIAL_IMPLICATION_EXAMPLES, implikationenTasks } from "@/data/kffImp
 import {
   generateFigurenTrainingTask,
   SOLUTION_SHAPES,
-  polygonToPath,
   polygonToPathScaledToViewBox,
   layoutPiecesCompact,
   isOptionE,
@@ -440,7 +439,6 @@ function generateZahlenfolgenQuestions(section: SimSection, variant?: number): U
 }
 
 /** Reserviert für künftige Gedächtnis-Sektion in der Simulation. */
-// eslint-disable-next-line @typescript-eslint/no-unused-vars -- kept for future use
 function _generateGedaechtnisQuestions(section: SimSection): {
   cards: AllergyPass[];
   questions: UnifiedQuestion[];
@@ -1713,6 +1711,7 @@ export default function Simulation() {
         {/* Previous attempts comparison */}
         {(() => {
           const prevSimulations = (quizResults ?? [])
+            // eslint-disable-next-line react-hooks/refs
             .filter((r) => r.type === "simulation" && r.id !== currentResultIdRef.current)
             .sort((a, b) => (b.timestamp ?? b.date).localeCompare(a.timestamp ?? a.date))
             .slice(0, 5);

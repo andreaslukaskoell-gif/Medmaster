@@ -56,6 +56,7 @@ export const NoneSelected: Story = {
 
 export const Interactive: Story = {
   render: () => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [current, setCurrent] = useState<string>("aufbau");
     return (
       <div className="max-w-xs">

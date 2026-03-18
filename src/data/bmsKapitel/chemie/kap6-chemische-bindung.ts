@@ -12,7 +12,7 @@ export const chemKap6: Kapitel = {
       title: "Ionenbindung — Entstehung und Eigenschaften",
       imageUrl: "/images/bms/ch-ionenbindung.jpg",
       imageCaption:
-        "Abb.: Bildung einer Ionenbindung durch Elektronenübertragung (OpenStax, CC BY 4.0)",
+        "Abb.: Elektronenübertragung von Natrium auf Chlor und das resultierende NaCl-Kristallgitter (OpenStax, CC BY 4.0)",
       stichworte: [
         "Ionenbindung",
         "Elektronenübertragung",
@@ -40,18 +40,16 @@ Natrium gibt sein einzelnes Valenzelektron ab und wird zum Na+-Kation; Chlor nim
 
 > **Merke:** Ionenbindungen entstehen bevorzugt zwischen Elementen der 1./2. Hauptgruppe (Metalle, niedrige IE) und der 6./7. Hauptgruppe (Nichtmetalle, hohe EA). Die EN-Differenz muss > 1,7 betragen.
 
-
 **Weitere Beispiele:**
 - **MgCl2:** Mg gibt 2 Elektronen ab -> Mg2+ (Ne-Konfiguration); jedes Cl nimmt 1 Elektron auf -> 2 Cl- (Ar-Konfiguration)
 - **CaO:** Ca gibt 2 Elektronen ab -> Ca2+; O nimmt 2 Elektronen auf -> O2- -- beide erreichen die Ar- bzw. Ne-Konfiguration
 - **Al2O3:** Aluminium gibt 3 Elektronen ab -> Al3+; hohe Ladung -> extrem hohe Gitterenergie -> Schmelzpunkt 2072 °C
 
-
-{{IMAGE}}
-
 {{DIAGRAM:ionic-bond}}
 
 ## Born-Haber-Kreisprozess und Gitterenergie
+
+Die Elektronenübertragung allein erklärt noch nicht, warum Ionenverbindungen so stabil sind. Der Schlüssel liegt in der enormen Energie, die beim Zusammentreten der Ionen zum Kristallgitter frei wird.
 
 Die **Gitterenergie** U ist die Energie, die freigesetzt wird, wenn gasförmige Ionen zu einem Ionenkristall zusammentreten. Sie ist der entscheidende Energiebeitrag bei der Ionenbindung und kann experimentell nicht direkt gemessen werden. Im Born-Haber-Kreisprozess wird die Bildungsenthalpie einer Ionenverbindung schrittweise aus messbaren Teilenthalpien berechnet:
 
@@ -75,7 +73,6 @@ wobei k die Coulomb-Konstante (8,99 * 10 hoch 9 N*m2/C2), q1 und q2 die Ladungen
 
 > **Prüfungstipp:** Bei MedAT-Fragen zur Gitterenergie immer zuerst die Ladungen vergleichen (q1*q2), dann die Radien. Die häufigste Falle: Verdopplung beider Ladungen ergibt Faktor 4, nicht 2. MgO vs. NaCl ist ein Standardbeispiel.
 
-
 | Verbindung | Gitterenergie (kJ/mol) | Schmelzpunkt (°C) | Begründung |
 |---|---|---|---|
 | NaCl | -786 | 801 | Einfach geladen, mittlere Radien |
@@ -85,6 +82,8 @@ wobei k die Coulomb-Konstante (8,99 * 10 hoch 9 N*m2/C2), q1 und q2 die Ladungen
 | KBr | -682 | 734 | Größere Ionen -> geringere Gitterenergie |
 
 ## Ionenradien -- Trends und Bedeutung
+
+Wir haben gesehen, dass die Gitterenergie vom Produkt der Ionenladungen und vom Ionenabstand abhängt. Um Gitterenergien verschiedener Verbindungen zu vergleichen, müssen wir daher die Ionenradien kennen.
 
 Der **Ionenradius** ist ein zentraler Parameter für Gitterenergie, Koordination und Löslichkeit. Wichtige Trends im Periodensystem:
 
@@ -115,6 +114,8 @@ Der **Ionenradius** ist ein zentraler Parameter für Gitterenergie, Koordination
 
 ## Struktur des Ionenkristalls
 
+Die Ionenradien bestimmen nicht nur die Gitterenergie, sondern auch die dreidimensionale Anordnung der Ionen im Kristall — und damit den Gittertyp.
+
 Ionenverbindungen bilden **Ionengitter** mit regelmäßiger, periodischer Anordnung. Im **NaCl-Gitter** (kubisch-flächenzentriert) ist jedes Na+ von 6 Cl- umgeben und umgekehrt -- Koordinationszahl (Zahl nächster Nachbaratome) 6. Im CsCl-Gitter (kubisch-raumzentriert) beträgt die Koordinationszahl 8 (größere Ionen passen besser).
 
 Die Packungsgeometrie hängt vom **Radienverhältnis** r+/r- ab:
@@ -134,6 +135,8 @@ Die **Madelung-Konstante** beschreibt die geometrische Anordnung der Ionen im Gi
 > **Merke:** Höhere Koordinationszahlen bedeuten mehr nächste Nachbarn und tendenziell höhere Gitterenergie -- allerdings nur, wenn das Radienverhältnis die entsprechende Koordination erlaubt. Das Radienverhältnis bestimmt die Kristallstruktur.
 
 ## Eigenschaften ionischer Verbindungen
+
+Aus der Gitterstruktur und der elektrostatischen Natur der Ionenbindung lassen sich alle wichtigen Eigenschaften ionischer Verbindungen direkt ableiten.
 
 **Hohe Schmelz- und Siedepunkte:** Die Gitterenergie muss vollständig überwunden werden. NaCl schmilzt bei 801 °C, MgO erst bei 2852 °C (höhere Gitterenergie). Zum Vergleich: Molekulare Verbindungen wie Wasser (0/100 °C) oder Ethanol (-114/78 °C) haben wesentlich niedrigere Werte, da dort nur schwache intermolekulare Kräfte überwunden werden müssen.
 
@@ -161,6 +164,8 @@ Die **Madelung-Konstante** beschreibt die geometrische Anordnung der Ionen im Gi
 > **Prüfungstipp:** Die Löslichkeitsregeln werden im MedAT häufig abgefragt. Merkhilfe: „ANNa löst alles" — **A**lkalimetalle, **N**itrate, **N**H4+ sind immer löslich. BaSO4 als Röntgenkontrastmittel und AgCl als Fällungsreaktion sind Klassiker.
 
 ## Klinisch relevante Ionenverbindungen
+
+Die Eigenschaften und Löslichkeitsregeln ionischer Verbindungen sind nicht nur Prüfungsstoff — sie haben direkte Bedeutung für den klinischen Alltag.
 
 - **NaCl (Natriumchlorid):** physiologische Kochsalzlösung (0,9 %), Osmolalitätsregulation, Infusionstherapie
 - **KCl (Kaliumchlorid):** Elektrolytsubstitution, Herzrhythmus (Hypokaliämie -> Arrhythmie)
@@ -425,7 +430,8 @@ Die **Madelung-Konstante** beschreibt die geometrische Anordnung der Ionen im Gi
       id: "ch-6-02",
       title: "Kovalente Bindung — Polarität und Hybridisierung",
       imageUrl: "/images/bms/ch-kovalente-bindung.jpg",
-      imageCaption: "Abb.: Kovalente Bindung mit geteilten Elektronenpaaren (OpenStax, CC BY 4.0)",
+      imageCaption:
+        "Abb.: Kovalente Bindungen — gemeinsame Elektronenpaare in H–H, O=O und CO₂ (OpenStax, CC BY 4.0)",
       stichworte: [
         "Kovalente Bindung",
         "Elektronegativität",
@@ -447,8 +453,6 @@ Die **Madelung-Konstante** beschreibt die geometrische Anordnung der Ionen im Gi
 Zwei Wasserstoffatome teilen sich ein Elektronenpaar — und bilden damit die einfachste kovalente Bindung überhaupt. Die **kovalente Bindung** (homöopolare oder Elektronenpaar-Bindung) entsteht durch **gemeinsame Nutzung von Elektronenpaaren** zwischen Atomen ähnlicher oder gleicher Elektronegativität. Im Gegensatz zur Ionenbindung werden Elektronen nicht übertragen, sondern geteilt. Die bindenden Elektronen halten sich bevorzugt im Bereich zwischen den Atomkernen auf und senken dort die potenzielle Energie des Systems. Der Energiegewinn durch die Bindungsbildung beträgt typischerweise 150–1000 kJ/mol.
 
 Lewis-Schreibweise (Darstellung der Valenzelektronen als Punkte/Striche): Einfachbindung (—), Doppelbindung (=), Dreifachbindung (≡). Das bindende Elektronenpaar wird durch einen Strich dargestellt, freie Elektronenpaare durch Punkte. Die **Oktettregel** gilt auch hier: Jedes Atom strebt 8 Valenzelektronen an (Ausnahme: H mit 2, Be mit 4, B mit 6).
-
-{{IMAGE}}
 
 {{DIAGRAM:covalent-bond}}
 
@@ -498,6 +502,8 @@ Die **Stärke der π-Bindung** lässt sich aus der Differenz berechnen: Energie 
 
 ## Elektronegativität und Bindungspolarität
 
+Bisher haben wir kovalente Bindungen betrachtet, bei denen Elektronen gleichmäßig geteilt werden. In der Realität sind Bindungselektronen jedoch fast nie perfekt symmetrisch verteilt — und genau das bestimmt die Polarität.
+
 **Elektronegativität (EN)** ist das Maß für die Fähigkeit eines Atoms in einer kovalenten Bindung, die gemeinsamen Bindungselektronen anzuziehen. Die am häufigsten verwendete Skala ist die **Pauling-Skala** (Linus Pauling, 1932), die auf Bindungsenergiedifferenzen basiert. Fluor hat als elektronegativstes Element den Wert 4,0.
 
 **Trends der Elektronegativität im PSE:**
@@ -541,6 +547,8 @@ Bei polaren kovalenten Bindungen sind die Elektronen zum elektronegativeren Atom
 
 ## Molekülpolarität
 
+Von der Bindungspolarität einzelner Bindungen gelangen wir nun zur entscheidenden Frage: Ist das gesamte Molekül polar oder unpolar? Hier spielt die räumliche Anordnung eine zentrale Rolle.
+
 Ein Molekül ist **polar**, wenn es Bindungsdipole besitzt UND diese sich nicht gegenseitig aufheben. Die Geometrie ist entscheidend:
 
 - **H₂O** (gewinkelt, 104,5°): beide O–H-Dipole zeigen in dieselbe Richtung → stark polar (μ = 1,85 D)
@@ -572,6 +580,8 @@ Ein Molekül ist **polar**, wenn es Bindungsdipole besitzt UND diese sich nicht 
 ---
 
 ## VSEPR-Modell (Valence Shell Electron Pair Repulsion)
+
+Wir haben gesehen, dass die Molekülgeometrie entscheidend für die Polarität ist. Doch wie kann man die Geometrie eines Moleküls vorhersagen? Genau dafür gibt es das VSEPR-Modell.
 
 Das VSEPR-Modell sagt die **Molekülgeometrie** voraus: Elektronenpaare (bindende und freie) stoßen sich ab und nehmen die Anordnung mit maximalem Abstand ein. Freie Elektronenpaare nehmen mehr Raum ein als bindende → verringern die Bindungswinkel stärker. Die Abstoßungsstärke folgt der Reihenfolge: frei-frei > frei-bindend > bindend-bindend.
 
@@ -607,6 +617,8 @@ Das VSEPR-Modell sagt die **Molekülgeometrie** voraus: Elektronenpaare (bindend
 ---
 
 ## Hybridisierung
+
+Das VSEPR-Modell sagt Geometrien voraus, erklärt aber nicht, warum Kohlenstoff vier gleichwertige Bindungen bildet, obwohl seine Orbitale unterschiedlich sind. Hier kommt die Hybridisierung ins Spiel.
 
 Kohlenstoff hat die Konfiguration 2s² 2p² — eigentlich nur 2 ungepaarte Elektronen. Aber um 4 gleichwertige Bindungen zu bilden, „mischt" es ein s- mit drei p-Orbitalen zu vier identischen sp³-Hybriden. Das kostet Energie (Promotion), die durch die 4 stabilen Bindungen mehr als kompensiert wird. Dieses Prinzip — **Hybridisierung** — erklärt die Geometrie von Kohlenstoff- (und anderen) Verbindungen durch Mischung von Atomorbitalen zu energieäquivalenten **Hybridorbitalen**. Die Zahl der Hybridorbitale entspricht der Zahl der gemischten Atomorbitale.
 
@@ -647,6 +659,8 @@ Ein s + ein p → zwei sp-Hybridorbitale (linear, 180°) + zwei unhybridisierte 
 
 ## Sigma- und Pi-Bindungen
 
+Bei der Hybridisierung haben wir bereits von σ- und π-Bindungen gesprochen. Nun schauen wir uns diese beiden grundlegenden Bindungstypen genauer an — denn sie erklären, warum Doppelbindungen die freie Rotation verhindern und warum Cis-Trans-Isomerie überhaupt existiert.
+
 - **σ-Bindung (Sigma):** Überlappung der Orbitale **entlang der Bindungsachse** (axial, Kopf-an-Kopf); immer vorhanden; freie Rotation um die σ-Bindungsachse möglich; stärkere Überlappung → stärkere Bindung. σ-Bindungen können aus s-s, s-p, p-p, sp³-sp³, sp²-sp² oder sp-sp Überlappung entstehen.
 - **π-Bindung (Pi):** **laterale Überlappung** der p-Orbitale seitlich der Bindungsachse; verhindert freie Rotation (Cis-Trans-Isomerie!); schwächer als σ, da geringere Überlappung (die Elektronendichte liegt ober- und unterhalb der Bindungsachse, nicht dazwischen).
 
@@ -674,6 +688,8 @@ Bindungsstärken: C–C (347 kJ/mol, 154 pm) < C=C (614 kJ/mol, 134 pm) < C≡C 
 > **Merke:** Jede Mehrfachbindung enthält genau eine σ-Bindung. Die π-Bindung(en) kommen hinzu und verhindern Rotation. Cis-Trans-Isomerie ist nur bei Doppelbindungen möglich, nicht bei Einfach- oder Dreifachbindungen. Prüfungsklassiker: „Wie viele σ- und π-Bindungen hat Molekül X?" → Einfachbindungen zählen als σ, jede Mehrfachbindung = 1σ + (n-1)π.
 
 ## Resonanz und mesomere Grenzstrukturen
+
+In vielen Molekülen lässt sich die Elektronenverteilung nicht durch eine einzige Lewis-Struktur korrekt beschreiben. Stattdessen wird die tatsächliche Struktur als Überlagerung (Hybrid) mehrerer Grenzstrukturen dargestellt — das Konzept der Resonanz.
 
 **Regeln für Resonanzstrukturen:**
 1. Nur π-Elektronen und freie Elektronenpaare werden verschoben — σ-Gerüst bleibt unverändert
@@ -1016,7 +1032,7 @@ Ein Molekül ist aromatisch (besonders stabil), wenn es die **Hückel-Regel** (K
       title: "Van-der-Waals, Wasserstoffbrücken und Metallbindung",
       imageUrl: "/images/bms/ch-wasserstoffbruecken.jpg",
       imageCaption:
-        "Abb.: Intermolekulare Kräfte — Van-der-Waals und Wasserstoffbrücken (OpenStax, CC BY 4.0)",
+        "Abb.: Wasserstoffbrücken zwischen Wassermolekülen — O–H···O-Wechselwirkungen im H₂O-Netzwerk (OpenStax, CC BY 4.0)",
       stichworte: [
         "Van-der-Waals-Kräfte",
         "London-Dispersionskräfte",
@@ -1058,8 +1074,6 @@ Warum siedet Wasser erst bei 100 °C, obwohl es leichter ist als H₂S (Sdp. −
 Entscheidend: Beim **Verdampfen** von Wasser werden nur die intermolekularen H-Brücken gebrochen (40,7 kJ/mol pro Mol), **nicht** die kovalenten O–H-Bindungen (463 kJ/mol pro Bindung). Beim Schmelzen von NaCl wird die ionische Bindung (Gitterenergie) überwunden. Beim Denaturieren von Proteinen werden intermolekulare Kräfte (H-Brücken, hydrophober Effekt) gestört, die kovalenten Peptidbindungen bleiben intakt.
 
 > **Merke:** Intermolekulare Kräfte sind 10–100-fach schwächer als kovalente Bindungen, bestimmen aber Aggregatszustand, Siedepunkt und biologische Erkennung. Verdampfen = Brechen intermolekularer Kräfte (NICHT kovalenter Bindungen!).
-
-{{IMAGE}}
 
 ## Van-der-Waals-Kräfte (London-Dispersionskräfte)
 
@@ -1111,6 +1125,7 @@ Einflussfaktoren:
 
 ## Dipol-Dipol-Wechselwirkungen
 
+London-Kräfte wirken zwischen allen Molekülen. Besitzen Moleküle jedoch ein permanentes Dipolmoment, kommt eine weitere, stärkere Kraft hinzu.
 
 **Mechanismus:** Die partiell positive Seite (δ+) eines polaren Moleküls orientiert sich bevorzugt zur partiell negativen Seite (δ−) des Nachbarmoleküls. Diese elektrostatische Anziehung ist stärker als reine London-Kräfte, aber schwächer als Wasserstoffbrücken.
 
@@ -1141,6 +1156,8 @@ Ein Spezialfall ist die **Keesom-Wechselwirkung** (Anziehung zwischen zwei perma
 
 ## Hierarchie der intermolekularen Kräfte — Stärkenvergleich
 
+Nachdem wir London-Kräfte und Dipol-Dipol-Wechselwirkungen kennengelernt haben, ordnen wir nun alle Wechselwirkungstypen in eine Gesamthierarchie ein — von den schwächsten bis zu den stärksten.
+
 Die **Stärkehierarchie** der Wechselwirkungen ist entscheidend für das Verständnis chemischer und biologischer Phänomene:
 
 | Rang | Wechselwirkung | Stärke (kJ/mol) | Voraussetzung | Abstandsabhängigkeit | Beispiel |
@@ -1164,6 +1181,8 @@ Die **Stärkehierarchie** der Wechselwirkungen ist entscheidend für das Verstä
 **Ion-Dipol-Wechselwirkungen:** Wirken zwischen Ionen und polaren Molekülen — Grundlage der Hydratation/Solvatation. Na⁺ wird von den partiell negativen Sauerstoffatomen des Wassers umgeben (Hydratationszahl ~6), Cl⁻ von den partiell positiven Wasserstoffatomen. Diese Wechselwirkung ist der stärkste intermolekulare Krafttyp und ermöglicht das Lösen von Salzen in Wasser. Die Hydratationsenthalpie von Na⁺ beträgt −406 kJ/mol, von Cl⁻ −377 kJ/mol — zusammen fast so groß wie die Gitterenergie von NaCl (−786 kJ/mol).
 
 ## Wasserstoffbrückenbindungen (H-Brücken)
+
+In der Hierarchie der intermolekularen Kräfte nehmen Wasserstoffbrücken eine besondere Stellung ein: Sie sind deutlich stärker als gewöhnliche Dipol-Dipol-Kräfte und spielen in der Biologie eine herausragende Rolle.
 
 Die stärkste intermolekulare Kraft (außer Ionenbindungen) ist die Wasserstoffbrücke. Wasserstoffbrücken sind die wichtigste intermolekulare Kraft in biologischen Systemen — stärker als Dipol-Dipol-Kräfte und London-Kräfte. Sie erklären die Anomalien des Wassers, die DNA-Basenpaarung und die Proteinstruktur.
 
@@ -1316,7 +1335,6 @@ Die Integrität der Lipiddoppelschicht hängt nicht nur vom hydrophoben Effekt a
 | Cis-ungesättigt (z. B. Ölsäure 18:1) | Locker (Knick) | Schwächer | Hoch (fluid) |
 | Trans-ungesättigt (z. B. Elaidinsäure) | Nahezu gerade | Stark (wie gesättigt) | Niedrig (pathologisch) |
 | + Cholesterol | Lücken gefüllt | Reguliert | Optimal bei 37 °C |
-
 
 ## Metallbindung
 

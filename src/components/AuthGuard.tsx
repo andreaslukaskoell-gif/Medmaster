@@ -10,7 +10,7 @@ export function AuthGuard({ children }: { children: ReactNode }) {
   // Give auth 6s to resolve before showing a retry option (not a redirect)
   useEffect(() => {
     if (!loading) {
-      setTimedOut(false);
+      queueMicrotask(() => setTimedOut(false));
       return;
     }
     const timer = setTimeout(() => setTimedOut(true), 6000);

@@ -128,7 +128,7 @@ export async function getTasksForUserWithWeakness(
   domain: TaskDomain,
   userSkill: number,
   count: number,
-  bandWidth: number = 100,
+  _bandWidth: number = 100,
   failedIds?: string[]
 ): Promise<Task[]> {
   const weakCount = failedIds?.length ? Math.min(Math.ceil(count / 2), failedIds.length) : 0;

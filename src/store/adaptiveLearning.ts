@@ -2,6 +2,7 @@ import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import { alleStichworteListe } from "@/data/stichwortliste";
 import type { Question } from "@/data/bms";
+import { useStore } from "@/store/useStore";
 
 // Lazy-load getDirectStichwortId to avoid pulling in 20 question part files
 let _getDirectStichwortId: ((id: string) => string | undefined) | null = null;
@@ -67,6 +68,13 @@ export interface FachStat {
   recommendedDailyQuestions: number;
 }
 
+export interface TimeToReadyResult {
+  overallReadyDate: string | null;
+  perFach: Record<string, { readiness: number; readyDate: string | null; daysNeeded: number }>;
+  onTrack: boolean;
+  weeklyHoursNeeded: number;
+}
+
 export interface DailyRecommendation {
   date: string;
   focusTopics: { stichwortId: string; thema: string; fach: string; successRate: number }[];
@@ -83,6 +91,19 @@ export interface LearnerProfile {
   lastDailyChallenge: string | null;
   totalQuestionsAnswered: number;
   totalCorrect: number;
+}
+
+export type TrendDirection = "up" | "stable" | "down";
+
+export interface TrendData {
+  direction: TrendDirection;
+  delta: number;
+  sparkline: number[];
+}
+
+export interface PerformanceTrend {
+  overall: TrendData;
+  perFach: Record<string, TrendData>;
 }
 
 const ADAPTIVE_FAST_SEC = 10;
@@ -128,9 +149,11 @@ interface AdaptiveState {
   initializeFromQuizResults: (
     results: { answers: { questionId: string; correct: boolean }[] }[]
   ) => void;
+  getTimeToReady: () => TimeToReadyResult;
   getDifficultyMultiplier: () => number;
   getShouldOfferBridge: () => boolean;
   clearOfferBridge: () => void;
+  getPerformanceTrend: () => PerformanceTrend;
 }
 
 // ============================================================
@@ -528,6 +551,80 @@ export const useAdaptiveStore = create<AdaptiveState>()(
         }));
       },
 
+      getPerformanceTrend: () => {
+        const quizResults = useStore.getState().quizResults ?? [];
+        const now = new Date();
+        const days: string[] = [];
+        for (let i = 13; i >= 0; i--) {
+          const d = new Date(now);
+          d.setDate(d.getDate() - i);
+          days.push(d.toISOString().split("T")[0]);
+        }
+
+        const computeTrend = (
+          results: { score: number; total: number; date: string }[]
+        ): TrendData => {
+          // Group by date
+          const byDate = new Map<string, { totalScore: number; totalMax: number }>();
+          for (const r of results) {
+            const dateKey = r.date?.split("T")[0] ?? r.date;
+            const entry = byDate.get(dateKey) ?? { totalScore: 0, totalMax: 0 };
+            entry.totalScore += r.score;
+            entry.totalMax += r.total;
+            byDate.set(dateKey, entry);
+          }
+
+          // Build sparkline for the 14-day window
+          const sparkline: number[] = days.map((day) => {
+            const entry = byDate.get(day);
+            if (!entry || entry.totalMax === 0) return 0;
+            return Math.round((entry.totalScore / entry.totalMax) * 100);
+          });
+
+          // Compare last 7 days avg vs previous 7 days avg
+          const prev7 = sparkline.slice(0, 7);
+          const last7 = sparkline.slice(7, 14);
+
+          const avg = (arr: number[]): number => {
+            const nonZero = arr.filter((v) => v > 0);
+            if (nonZero.length === 0) return 0;
+            return nonZero.reduce((a, b) => a + b, 0) / nonZero.length;
+          };
+
+          const prev7Avg = avg(prev7);
+          const last7Avg = avg(last7);
+          const delta = Math.round((last7Avg - prev7Avg) * 10) / 10;
+
+          let direction: TrendDirection = "stable";
+          if (delta > 3) direction = "up";
+          else if (delta < -3) direction = "down";
+
+          return { direction, delta, sparkline };
+        };
+
+        // Filter to last 14 days only
+        const cutoff = days[0];
+        const recent = quizResults.filter((r) => {
+          const dateKey = r.date?.split("T")[0] ?? r.date;
+          return dateKey >= cutoff;
+        });
+
+        const overall = computeTrend(recent);
+
+        // Per subject
+        const subjects = new Set<string>();
+        for (const r of recent) {
+          if (r.subject) subjects.add(r.subject);
+        }
+
+        const perFach: Record<string, TrendData> = {};
+        for (const fach of subjects) {
+          perFach[fach] = computeTrend(recent.filter((r) => r.subject === fach));
+        }
+
+        return { overall, perFach };
+      },
+
       initializeFromQuizResults: (results) => {
         const { recordAnswer } = get();
         let totalAdded = 0;
@@ -557,6 +654,161 @@ export const useAdaptiveStore = create<AdaptiveState>()(
             },
           }));
         }
+      },
+
+      getTimeToReady: (): TimeToReadyResult => {
+        const TARGET_READINESS = 75;
+        const TREND_WINDOW_DAYS = 14;
+        const FAECHER = ["biologie", "chemie", "physik", "mathematik"];
+
+        const today = new Date();
+        const todayStr = today.toISOString().split("T")[0];
+
+        // Access app store for quiz history and activity data
+        const appState = useStore.getState();
+        const quizResults = appState.quizResults ?? [];
+        const activityLog = appState.activityLog ?? {};
+        const examDateStr = appState.lernplanConfig?.medatDate ?? null;
+
+        // Trend window
+        const windowStart = new Date(today);
+        windowStart.setDate(windowStart.getDate() - TREND_WINDOW_DAYS);
+        const windowStartStr = windowStart.toISOString().split("T")[0];
+
+        // Collect BMS results within window
+        const bmsResults = quizResults
+          .filter((r) => (r.type === "bms" || r.type === "simulation") && r.date >= windowStartStr)
+          .sort((a, b) => a.date.localeCompare(b.date));
+
+        // Build per-day, per-fach score maps
+        type DayScore = { correct: number; total: number };
+        const fachDailyScores: Record<string, Map<string, DayScore>> = {};
+        const overallDailyScores = new Map<string, DayScore>();
+
+        for (const fach of FAECHER) {
+          fachDailyScores[fach] = new Map();
+        }
+
+        for (const r of bmsResults) {
+          const day = r.date;
+          const fach = r.subject ?? "";
+          const correct = r.answers.filter((a) => a.correct).length;
+          const total = r.answers.length;
+
+          const ov = overallDailyScores.get(day) ?? { correct: 0, total: 0 };
+          ov.correct += correct;
+          ov.total += total;
+          overallDailyScores.set(day, ov);
+
+          if (fachDailyScores[fach]) {
+            const fv = fachDailyScores[fach]!.get(day) ?? { correct: 0, total: 0 };
+            fv.correct += correct;
+            fv.total += total;
+            fachDailyScores[fach]!.set(day, fv);
+          }
+        }
+
+        // Linear regression: slope = readiness % change per day
+        function computeTrendPerDay(dailyScores: Map<string, DayScore>): number | null {
+          const entries = [...dailyScores.entries()].sort(([a], [b]) => a.localeCompare(b));
+          if (entries.length < 2) return null;
+
+          const firstDate = new Date(entries[0]![0]);
+          const points = entries.map(([dateStr, score]) => {
+            const d = new Date(dateStr);
+            const dayIndex = Math.round(
+              (d.getTime() - firstDate.getTime()) / (1000 * 60 * 60 * 24)
+            );
+            const rate = score.total > 0 ? (score.correct / score.total) * 100 : 0;
+            return { x: dayIndex, y: rate };
+          });
+
+          const n = points.length;
+          const sumX = points.reduce((s, p) => s + p.x, 0);
+          const sumY = points.reduce((s, p) => s + p.y, 0);
+          const sumXY = points.reduce((s, p) => s + p.x * p.y, 0);
+          const sumX2 = points.reduce((s, p) => s + p.x * p.x, 0);
+          const denom = n * sumX2 - sumX * sumX;
+          if (denom === 0) return null;
+          return (n * sumXY - sumX * sumY) / denom;
+        }
+
+        function extrapolateReadyDate(
+          currentReadiness: number,
+          trendPerDay: number | null
+        ): { readyDate: string | null; daysNeeded: number } {
+          if (currentReadiness >= TARGET_READINESS) {
+            return { readyDate: todayStr, daysNeeded: 0 };
+          }
+          if (trendPerDay == null || trendPerDay <= 0) {
+            return { readyDate: null, daysNeeded: Infinity };
+          }
+          const gap = TARGET_READINESS - currentReadiness;
+          const daysNeeded = Math.ceil(gap / trendPerDay);
+          const readyDate = new Date(today);
+          readyDate.setDate(readyDate.getDate() + daysNeeded);
+          return { readyDate: readyDate.toISOString().split("T")[0], daysNeeded };
+        }
+
+        // Overall readiness + extrapolation
+        const overallReadiness = get().getMedATReadiness();
+        const overallTrend = computeTrendPerDay(overallDailyScores);
+        const overall = extrapolateReadyDate(overallReadiness, overallTrend);
+
+        // Per fach
+        const perFach: TimeToReadyResult["perFach"] = {};
+        for (const fach of FAECHER) {
+          const readiness = get().getFachReadiness(fach);
+          const trend = computeTrendPerDay(fachDailyScores[fach]!);
+          const result = extrapolateReadyDate(readiness, trend);
+          perFach[fach] = {
+            readiness,
+            readyDate: result.readyDate,
+            daysNeeded: Number.isFinite(result.daysNeeded) ? result.daysNeeded : -1,
+          };
+        }
+
+        // onTrack: predicted ready date before exam date
+        let onTrack = false;
+        if (overall.readyDate && examDateStr) {
+          onTrack = overall.readyDate <= examDateStr;
+        } else if (overall.readyDate && !examDateStr) {
+          onTrack = true;
+        }
+
+        // weeklyHoursNeeded from last 14 days of activity, scaled if behind schedule
+        let totalMinutesLast14 = 0;
+        for (let i = 0; i < TREND_WINDOW_DAYS; i++) {
+          const d = new Date(today);
+          d.setDate(d.getDate() - i);
+          const key = d.toISOString().split("T")[0];
+          totalMinutesLast14 += activityLog[key]?.minutes ?? 0;
+        }
+        const currentHoursPerWeek = ((totalMinutesLast14 / TREND_WINDOW_DAYS) * 7) / 60;
+
+        let weeklyHoursNeeded = currentHoursPerWeek;
+        if (
+          overallReadiness < TARGET_READINESS &&
+          overall.daysNeeded > 0 &&
+          Number.isFinite(overall.daysNeeded) &&
+          examDateStr
+        ) {
+          const examDate = new Date(examDateStr);
+          const daysUntilExam = Math.max(
+            1,
+            Math.round((examDate.getTime() - today.getTime()) / (1000 * 60 * 60 * 24))
+          );
+          if (overall.daysNeeded > daysUntilExam && currentHoursPerWeek > 0) {
+            weeklyHoursNeeded = currentHoursPerWeek * (overall.daysNeeded / daysUntilExam);
+          }
+        }
+
+        return {
+          overallReadyDate: overall.readyDate,
+          perFach,
+          onTrack,
+          weeklyHoursNeeded: Math.round(weeklyHoursNeeded * 10) / 10,
+        };
       },
     }),
     {

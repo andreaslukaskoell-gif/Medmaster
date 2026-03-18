@@ -15,7 +15,6 @@ import {
   Loader2,
   AlertCircle,
   ChevronRight,
-  Dumbbell,
   Clock,
   Microscope,
   FlaskConical,
@@ -106,6 +105,16 @@ const BMS_SUBJECTS: {
 
 const EINFACH_COUNTS = [10, 20, 30, 50];
 
+/** MedAT official seconds per question by subject */
+const SECONDS_PER_QUESTION: Record<BMSSubjectId, number> = {
+  biologie: 45,
+  chemie: 45,
+  physik: 53,
+  mathematik: 55,
+};
+
+const LS_KEY_ZEITDRUCK = "medmaster-zeitdruck";
+
 const DIFF_COLOR: Record<number, string> = {
   1: "bg-green-100  text-green-700  dark:bg-green-900/30  dark:text-green-400",
   2: "bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400",
@@ -178,6 +187,35 @@ function SelectionScreen({
   const [count, setCount] = useState(20);
   const [source] = useState<QuestionSource>("supabase");
 
+  const quizResults = useStore((s) => s.quizResults);
+
+  const bmsStats = useMemo(() => {
+    const bms = (quizResults ?? []).filter((r) => r.type === "bms" || r.type === "simulation");
+    if (bms.length === 0) return null;
+
+    const totalAnswered = bms.reduce((sum, r) => sum + r.total, 0);
+    const avgScore =
+      bms.reduce((sum, r) => sum + (r.total > 0 ? r.score / r.total : 0), 0) / bms.length;
+
+    // Per-subject averages
+    const subjectLabels = ["Biologie", "Chemie", "Physik", "Mathematik"] as const;
+    const subjectAvgs = subjectLabels
+      .map((label) => {
+        const sub = bms.filter((r) => r.subject === label);
+        if (sub.length === 0) return null;
+        const avg = sub.reduce((s, r) => s + (r.total > 0 ? r.score / r.total : 0), 0) / sub.length;
+        return { label, avg };
+      })
+      .filter(Boolean) as { label: string; avg: number }[];
+
+    const weakest =
+      subjectAvgs.length > 0
+        ? subjectAvgs.reduce((min, cur) => (cur.avg < min.avg ? cur : min))
+        : null;
+
+    return { totalAnswered, avgScore, weakest };
+  }, [quizResults]);
+
   const subject = subjectId ? BMS_SUBJECTS.find((s) => s.id === subjectId) : null;
   const effectiveCount = mode === "offiziell" && subject ? subject.officialCount : count;
   const timeLimitMinutes = mode === "offiziell" && subject ? subject.officialMinutes : null;
@@ -197,6 +235,50 @@ function SelectionScreen({
         <p className="text-sm text-muted-foreground mt-1">
           BMS: Fach wählen, dann trainieren oder offizielle Zeitvorgabe
         </p>
+      </div>
+
+      {/* Stats summary */}
+      <div className="card-glass rounded-2xl px-4 py-3">
+        {bmsStats ? (
+          <>
+            <div className="flex items-center justify-between gap-4 text-sm">
+              <span className="text-[var(--text-secondary)]">
+                Bisher:{" "}
+                <span className="font-semibold text-[var(--text-primary)]">
+                  {bmsStats.totalAnswered}
+                </span>{" "}
+                Fragen beantwortet
+              </span>
+              <span className="text-[var(--text-secondary)]">
+                Durchschnitt:{" "}
+                <span className="font-semibold text-[var(--text-primary)]">
+                  {Math.round(bmsStats.avgScore * 100)}%
+                </span>
+              </span>
+              <span className="text-[var(--text-secondary)]">
+                {bmsStats.weakest ? (
+                  <>
+                    Schwächstes Fach:{" "}
+                    <span className="font-semibold text-[var(--text-primary)]">
+                      {bmsStats.weakest.label}
+                    </span>
+                  </>
+                ) : (
+                  "Noch keine Daten"
+                )}
+              </span>
+            </div>
+            {bmsStats.weakest && (
+              <p className="text-xs text-amber-600 dark:text-amber-400 mt-1.5">
+                Empfehlung: {bmsStats.weakest.label} trainieren
+              </p>
+            )}
+          </>
+        ) : (
+          <p className="text-sm text-[var(--text-secondary)]">
+            Beantworte deine ersten Fragen um Statistiken zu sehen
+          </p>
+        )}
       </div>
 
       {/* 1. Fach */}

@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Trophy, CheckCircle2 } from "lucide-react";
 import { QuizQuestion } from "./QuizQuestion";
 import type { SelfTestQuestion } from "@/data/bmsKapitel/types";
 import { useStore } from "@/store/useStore";
@@ -14,25 +16,25 @@ interface InteractiveQuizProps {
 }
 
 /**
- * Enhanced interactive quiz component for "Die Zelle" chapter
- * Shows immediate feedback per question with explanations
- * FIXED: Now uses reusable QuizQuestion component for consistency
+ * Enhanced interactive quiz component for BMS chapters.
+ * Shows immediate feedback per question with explanations.
+ * Tracks first-attempt accuracy and shows end summary.
  */
 export function InteractiveQuiz({ questions, onAnswer, onAllComplete }: InteractiveQuizProps) {
   const [questionResults, setQuestionResults] = useState<Record<number, boolean>>({});
+  /** Tracks whether each question was answered correctly on the very first click. */
+  const [firstAttemptResults, setFirstAttemptResults] = useState<Record<number, boolean>>({});
 
-  const handleAnswerChange = (questionIndex: number, isCorrect: boolean, secondTry?: boolean) => {
+  const handleAnswerChange = (questionIndex: number, isCorrect: boolean) => {
     // Award XP with multipliers
     const question = questions[questionIndex];
     if (question && isCorrect) {
-      // Calculate base XP with difficulty multiplier
       const baseXP = computeXP({
         baseXP: 10,
         difficultyMultiplier: question.difficulty ?? 1,
       });
 
-      // Apply second-try penalty (50% XP)
-      let finalXP = secondTry ? Math.round(baseXP * 0.5) : baseXP;
+      let finalXP = baseXP;
 
       // Apply hot-streak bonus (125% XP)
       const hotStreakActive = useQuizSessionStore.getState().hotStreakActive;
@@ -40,7 +42,6 @@ export function InteractiveQuiz({ questions, onAnswer, onAllComplete }: Interact
         finalXP = Math.round(finalXP * 1.25);
       }
 
-      // Award XP to user
       useStore.getState().addXP(finalXP);
     }
 
@@ -51,14 +52,27 @@ export function InteractiveQuiz({ questions, onAnswer, onAllComplete }: Interact
     onAnswer?.(questionIndex, isCorrect);
   };
 
+  const handleFirstAttempt = (questionIndex: number, isCorrect: boolean) => {
+    setFirstAttemptResults((prev) => ({
+      ...prev,
+      [questionIndex]: isCorrect,
+    }));
+  };
+
   const totalCorrect = Object.values(questionResults).filter(Boolean).length;
   const totalAnswered = Object.keys(questionResults).length;
+  const firstAttemptCorrect = Object.values(firstAttemptResults).filter(Boolean).length;
+  const allAnswered = questions.length > 0 && totalAnswered >= questions.length;
 
   useEffect(() => {
-    if (questions.length > 0 && totalAnswered >= questions.length && onAllComplete) {
+    if (allAnswered && onAllComplete) {
       onAllComplete(totalCorrect, questions.length);
     }
-  }, [totalAnswered, questions.length, totalCorrect, onAllComplete]);
+  }, [allAnswered, questions.length, totalCorrect, onAllComplete]);
+
+  // Summary color based on score
+  const scoreRatio = questions.length > 0 ? firstAttemptCorrect / questions.length : 0;
+  const summaryColor = scoreRatio >= 0.8 ? "emerald" : scoreRatio >= 0.5 ? "amber" : "red";
 
   return (
     <div className="space-y-5 mt-8">
@@ -70,7 +84,7 @@ export function InteractiveQuiz({ questions, onAnswer, onAllComplete }: Interact
           </span>
           <div className="flex-1 h-px bg-[var(--border)]" />
         </div>
-        {totalAnswered > 0 && (
+        {totalAnswered > 0 && !allAnswered && (
           <p className="text-sm text-[var(--muted)]">
             {totalCorrect}/{totalAnswered} richtig
           </p>
@@ -87,7 +101,7 @@ export function InteractiveQuiz({ questions, onAnswer, onAllComplete }: Interact
               className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-4"
             >
               <p className="text-sm text-yellow-800 dark:text-yellow-300">
-                ⚠️ Frage {index + 1} hat unvollständige Daten und wird übersprungen.
+                Frage {index + 1} hat unvollständige Daten und wird übersprungen.
               </p>
             </div>
           );
@@ -98,12 +112,71 @@ export function InteractiveQuiz({ questions, onAnswer, onAllComplete }: Interact
             key={index}
             question={question}
             questionNumber={index + 1}
-            onAnswerChange={(isCorrect, secondTry) =>
-              handleAnswerChange(index, isCorrect, secondTry)
-            }
+            onAnswerChange={(isCorrect) => handleAnswerChange(index, isCorrect)}
+            onFirstAttempt={(isCorrect) => handleFirstAttempt(index, isCorrect)}
           />
         );
       })}
+
+      {/* End Summary */}
+      <AnimatePresence>
+        {allAnswered && (
+          <motion.div
+            initial={{ opacity: 0, y: 16, scale: 0.97 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.4, ease: "easeOut", delay: 0.2 }}
+            className={`rounded-xl border p-5 mt-4 ${
+              summaryColor === "emerald"
+                ? "bg-emerald-50 dark:bg-emerald-900/15 border-emerald-300 dark:border-emerald-700"
+                : summaryColor === "amber"
+                  ? "bg-amber-50 dark:bg-amber-900/15 border-amber-300 dark:border-amber-700"
+                  : "bg-red-50 dark:bg-red-900/15 border-red-300 dark:border-red-700"
+            }`}
+          >
+            <div className="flex items-center gap-3">
+              {scoreRatio >= 0.8 ? (
+                <Trophy className="w-6 h-6 text-emerald-600 dark:text-emerald-400 shrink-0" />
+              ) : (
+                <CheckCircle2
+                  className={`w-6 h-6 shrink-0 ${
+                    summaryColor === "amber"
+                      ? "text-amber-600 dark:text-amber-400"
+                      : "text-red-600 dark:text-red-400"
+                  }`}
+                />
+              )}
+              <div>
+                <p
+                  className={`text-base font-bold ${
+                    summaryColor === "emerald"
+                      ? "text-emerald-800 dark:text-emerald-200"
+                      : summaryColor === "amber"
+                        ? "text-amber-800 dark:text-amber-200"
+                        : "text-red-800 dark:text-red-200"
+                  }`}
+                >
+                  {firstAttemptCorrect}/{questions.length} richtig beim ersten Versuch
+                </p>
+                <p
+                  className={`text-sm mt-0.5 ${
+                    summaryColor === "emerald"
+                      ? "text-emerald-700 dark:text-emerald-300"
+                      : summaryColor === "amber"
+                        ? "text-amber-700 dark:text-amber-300"
+                        : "text-red-700 dark:text-red-300"
+                  }`}
+                >
+                  {scoreRatio >= 0.8
+                    ? "Sehr gut! Du beherrschst dieses Thema."
+                    : scoreRatio >= 0.5
+                      ? "Solide Grundlage. Lies die Erklärungen nochmal durch."
+                      : "Wiederhole das Kapitel und versuche es erneut."}
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

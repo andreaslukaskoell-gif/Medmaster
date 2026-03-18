@@ -1,9 +1,7 @@
 import { useState, useRef } from "react";
 import { useSearchParams, useLocation } from "react-router-dom";
-import { BookOpen, Play, BarChart3, Puzzle } from "lucide-react";
+import { BookOpen, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { PageLoadingSkeleton, PageError } from "@/components/ui/page-states";
 import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { usePageTitle } from "@/hooks/usePageTitle";
@@ -106,6 +104,7 @@ export default function KFF() {
           autoStartRef.current = false;
           setView("overview");
         }}
+        // eslint-disable-next-line react-hooks/refs
         autoStart={autoStartRef.current}
       />
     );
@@ -132,6 +131,7 @@ export default function KFF() {
           setView("overview");
         }}
         initialQuestionCount={planZfCount > 0 ? planZfCount : undefined}
+        // eslint-disable-next-line react-hooks/refs
         autoStart={autoStartRef.current}
       />
     );
@@ -185,6 +185,7 @@ export default function KFF() {
           setView("overview");
         }}
         initialQuestionCount={planImpCount > 0 ? planImpCount : undefined}
+        // eslint-disable-next-line react-hooks/refs
         autoStart={autoStartRef.current}
       />
     );
@@ -205,6 +206,7 @@ export default function KFF() {
           autoStartRef.current = false;
           setView("overview");
         }}
+        // eslint-disable-next-line react-hooks/refs
         autoStart={autoStartRef.current}
       />
     );

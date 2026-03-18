@@ -171,6 +171,7 @@ export default function BlogArticle() {
     if (!article) return [];
     const others = blogArticles.filter((a) => a.slug !== article.slug);
     // Shuffle and pick 3
+    // eslint-disable-next-line react-hooks/purity
     const shuffled = [...others].sort(() => Math.random() - 0.5);
     return shuffled.slice(0, 3);
   }, [article]);

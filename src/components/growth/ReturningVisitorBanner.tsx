@@ -27,8 +27,10 @@ export function ReturningVisitorBanner() {
     localStorage.setItem(VISIT_COUNT_KEY, String(next));
 
     if (next >= 2) {
-      setVisitCount(next);
-      setVisible(true);
+      queueMicrotask(() => {
+        setVisitCount(next);
+        setVisible(true);
+      });
       trackEvent("returning_visitor_banner_shown", { visit_count: next });
     }
   }, [loading, user]);

@@ -231,6 +231,13 @@
     fbq('track','PageView');
     </script>
     -->
+    <!-- Apply dark mode immediately to prevent FOUC -->
+    <script>
+      try {
+        var d = JSON.parse(localStorage.getItem('medmaster-storage'));
+        if (d && d.state && d.state.darkMode) document.documentElement.classList.add('dark');
+      } catch(e) {}
+    </script>
   </head>
   <body>
     <div id="root">

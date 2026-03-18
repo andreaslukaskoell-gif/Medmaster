@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { CalendarDays, MapPin, Clock, Users, ArrowRight } from "lucide-react";
+import { CalendarDays, MapPin, Clock, Users } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { Logo } from "@/components/brand/Logo";

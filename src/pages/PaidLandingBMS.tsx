@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/static-components */
 import { useState, useEffect, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -68,7 +69,7 @@ function SampleQuestion({ onSignupClick }: { onSignupClick: () => void }) {
   const isCorrect = selected === q.correctId;
 
   return (
-    <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-10 max-w-2xl mx-auto shadow-[var(--shadow-sm)]">
+    <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-5 sm:p-10 max-w-2xl mx-auto shadow-[var(--shadow-sm)]">
       <div className="flex items-center justify-between mb-6">
         <span className="text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full bg-[var(--accent)]/8 text-[var(--accent)]">
           {q.subject}
@@ -304,7 +305,7 @@ export default function PaidLandingBMS() {
     <div className="min-h-screen bg-[var(--background)]">
       {/* ─── Header ─── */}
       <header className="sticky top-0 z-40 bg-[var(--surface)]/80 backdrop-blur-2xl border-b border-[var(--border)]/50">
-        <div className="max-w-4xl mx-auto px-8 h-16 flex items-center justify-between">
+        <div className="max-w-4xl mx-auto px-4 sm:px-8 h-14 sm:h-16 flex items-center justify-between">
           <Logo variant="full" size={26} />
           <Link
             to="/login"
@@ -339,7 +340,7 @@ export default function PaidLandingBMS() {
 
       {/* ─── Hero ─── */}
       <section className="pt-24 pb-20 hero-orbs">
-        <div className="max-w-3xl mx-auto px-8 text-center">
+        <div className="max-w-3xl mx-auto px-5 sm:px-8 text-center">
           <motion.p
             {...fade}
             className="text-sm font-semibold tracking-widest uppercase mb-6"
@@ -350,7 +351,7 @@ export default function PaidLandingBMS() {
           <motion.h1
             {...fade}
             transition={{ ...fade.transition, delay: 0.1 }}
-            className="text-6xl font-extrabold text-[var(--text-primary)] leading-[1.1] tracking-tight mb-8"
+            className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[var(--text-primary)] leading-[1.15] sm:leading-[1.1] tracking-tight mb-5 sm:mb-8"
           >
             BMS ist 40 % deiner
             <br />
@@ -398,8 +399,8 @@ export default function PaidLandingBMS() {
 
       {/* ─── Numbers ─── */}
       <section className="py-20 border-y border-[var(--border)]/50">
-        <div className="max-w-4xl mx-auto px-8">
-          <motion.div {...fade} className="grid grid-cols-4 gap-8">
+        <div className="max-w-4xl mx-auto px-5 sm:px-8">
+          <motion.div {...fade} className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8">
             {[
               { value: "5.000+", label: "BMS-Fragen", sub: "mit Erklärungen" },
               { value: "173", label: "Lerneinheiten", sub: "offizielle Stichwortliste 2026" },
@@ -408,7 +409,7 @@ export default function PaidLandingBMS() {
             ].map((s) => (
               <div key={s.label} className="text-center">
                 <div
-                  className="text-4xl font-extrabold tracking-tight mb-2"
+                  className="text-2xl sm:text-4xl font-extrabold tracking-tight mb-1 sm:mb-2"
                   style={{ color: NAVY }}
                 >
                   {s.value}
@@ -424,10 +425,10 @@ export default function PaidLandingBMS() {
       </section>
 
       {/* ─── The BMS problem ─── */}
-      <section className="py-24">
-        <div className="max-w-3xl mx-auto px-8">
+      <section className="py-12 sm:py-24">
+        <div className="max-w-3xl mx-auto px-5 sm:px-8">
           <motion.div {...fade} className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-4">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)] mb-4">
               BMS ist kein Auswendiglernen — es ist ein System
             </h2>
             <p className="text-base text-[var(--text-secondary)] max-w-lg mx-auto">
@@ -435,8 +436,8 @@ export default function PaidLandingBMS() {
               das in anderen Bereichen kaum aufholen.
             </p>
           </motion.div>
-          <motion.div {...fade} className="grid grid-cols-2 gap-6">
-            <div className="rounded-2xl border border-[var(--border)] p-8">
+          <motion.div {...fade} className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+            <div className="rounded-2xl border border-[var(--border)] p-5 sm:p-8">
               <div className="w-10 h-10 rounded-xl bg-[var(--card)] flex items-center justify-center mb-5">
                 <span className="text-lg text-[var(--muted)]">&times;</span>
               </div>
@@ -451,7 +452,7 @@ export default function PaidLandingBMS() {
               </ul>
             </div>
             <div
-              className="rounded-2xl border-2 p-8"
+              className="rounded-2xl border-2 p-5 sm:p-8"
               style={{ borderColor: `color-mix(in srgb, ${NAVY} 30%, transparent)` }}
             >
               <div
@@ -477,10 +478,10 @@ export default function PaidLandingBMS() {
       </section>
 
       {/* ─── 4 Fächer ─── */}
-      <section className="py-24 border-t border-[var(--border)]/50">
-        <div className="max-w-4xl mx-auto px-8">
+      <section className="py-12 sm:py-24 border-t border-[var(--border)]/50">
+        <div className="max-w-4xl mx-auto px-5 sm:px-8">
           <motion.div {...fade} className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-4">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)] mb-4">
               Alle 4 BMS-Fächer. Lückenlos.
             </h2>
             <p className="text-base text-[var(--text-secondary)] max-w-lg mx-auto">
@@ -488,7 +489,7 @@ export default function PaidLandingBMS() {
               exakt nach der offiziellen Stichwortliste 2026.
             </p>
           </motion.div>
-          <motion.div {...fade} className="grid grid-cols-2 gap-6">
+          <motion.div {...fade} className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
             {[
               {
                 icon: BookOpen,
@@ -517,7 +518,7 @@ export default function PaidLandingBMS() {
             ].map((f) => (
               <div
                 key={f.title}
-                className="rounded-2xl border border-[var(--border)] p-8 hover:shadow-[var(--shadow-sm)] transition-shadow"
+                className="rounded-2xl border border-[var(--border)] p-5 sm:p-8 hover:shadow-[var(--shadow-sm)] transition-shadow"
               >
                 <div className="flex items-center justify-between mb-5">
                   <div
@@ -542,17 +543,17 @@ export default function PaidLandingBMS() {
       </section>
 
       {/* ─── Features ─── */}
-      <section className="py-24 border-t border-[var(--border)]/50">
-        <div className="max-w-4xl mx-auto px-8">
+      <section className="py-12 sm:py-24 border-t border-[var(--border)]/50">
+        <div className="max-w-4xl mx-auto px-5 sm:px-8">
           <motion.div {...fade} className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-4">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)] mb-4">
               Kein Fragenpool. Ein Lernsystem.
             </h2>
             <p className="text-base text-[var(--text-secondary)] max-w-lg mx-auto">
               MedMaster erkennt, wo du Schwächen hast, und trainiert gezielt diese Bereiche.
             </p>
           </motion.div>
-          <motion.div {...fade} className="grid grid-cols-3 gap-6">
+          <motion.div {...fade} className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
             {[
               {
                 icon: Zap,
@@ -572,7 +573,7 @@ export default function PaidLandingBMS() {
             ].map((f) => (
               <div
                 key={f.title}
-                className="rounded-2xl border border-[var(--border)] p-8 hover:shadow-[var(--shadow-sm)] transition-shadow"
+                className="rounded-2xl border border-[var(--border)] p-5 sm:p-8 hover:shadow-[var(--shadow-sm)] transition-shadow"
               >
                 <div
                   className="w-12 h-12 rounded-xl flex items-center justify-center mb-5"
@@ -589,10 +590,10 @@ export default function PaidLandingBMS() {
       </section>
 
       {/* ─── Demo question ─── */}
-      <section className="py-24 border-t border-[var(--border)]/50">
-        <div className="max-w-3xl mx-auto px-8">
+      <section className="py-12 sm:py-24 border-t border-[var(--border)]/50">
+        <div className="max-w-3xl mx-auto px-5 sm:px-8">
           <motion.div {...fade} className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-4">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)] mb-4">
               Eine BMS-Frage. Weißt du die Antwort?
             </h2>
             <p className="text-base text-[var(--text-secondary)] max-w-md mx-auto">
@@ -611,11 +612,11 @@ export default function PaidLandingBMS() {
       </section>
 
       {/* ─── Mid CTA ─── */}
-      <section className="py-24 border-t border-[var(--border)]/50">
-        <div className="max-w-3xl mx-auto px-8">
+      <section className="py-12 sm:py-24 border-t border-[var(--border)]/50">
+        <div className="max-w-3xl mx-auto px-5 sm:px-8">
           <motion.div
             {...fade}
-            className="rounded-2xl p-12 text-center"
+            className="rounded-2xl p-8 sm:p-12 text-center"
             style={{
               background: `linear-gradient(135deg, color-mix(in srgb, ${NAVY} 4%, transparent), color-mix(in srgb, ${NAVY} 8%, transparent))`,
               border: `1px solid color-mix(in srgb, ${NAVY} 12%, transparent)`,
@@ -662,7 +663,7 @@ export default function PaidLandingBMS() {
 
       {/* ─── Trust badges ─── */}
       <section className="py-16 border-t border-[var(--border)]/50">
-        <div className="max-w-3xl mx-auto px-8">
+        <div className="max-w-3xl mx-auto px-5 sm:px-8">
           <motion.div {...fade} className="flex flex-wrap justify-center gap-3">
             {(
               [
@@ -685,11 +686,11 @@ export default function PaidLandingBMS() {
       </section>
 
       {/* ─── FAQ ─── */}
-      <section className="py-24 border-t border-[var(--border)]/50">
-        <div className="max-w-2xl mx-auto px-8">
+      <section className="py-12 sm:py-24 border-t border-[var(--border)]/50">
+        <div className="max-w-2xl mx-auto px-5 sm:px-8">
           <motion.h2
             {...fade}
-            className="text-3xl font-bold text-[var(--text-primary)] text-center mb-12"
+            className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)] text-center mb-12"
           >
             Häufige Fragen zum BMS
           </motion.h2>
@@ -723,9 +724,9 @@ export default function PaidLandingBMS() {
       </section>
 
       {/* ─── Final CTA ─── */}
-      <section className="py-28" style={{ backgroundColor: NAVY }}>
-        <div className="max-w-3xl mx-auto px-8 text-center">
-          <h2 className="text-4xl font-extrabold text-white mb-5 leading-tight tracking-tight">
+      <section className="py-16 sm:py-28" style={{ backgroundColor: NAVY }}>
+        <div className="max-w-3xl mx-auto px-5 sm:px-8 text-center">
+          <h2 className="text-2xl sm:text-4xl font-extrabold text-white mb-5 leading-tight tracking-tight">
             40 % deiner Note.
             <br />
             Null Prozent dem Zufall überlassen.
@@ -748,7 +749,7 @@ export default function PaidLandingBMS() {
 
       {/* ─── Footer ─── */}
       <footer className="py-8 border-t border-[var(--border)]">
-        <div className="max-w-4xl mx-auto px-8 flex items-center justify-between text-xs text-[var(--muted)]">
+        <div className="max-w-4xl mx-auto px-5 sm:px-8 flex items-center justify-between text-xs text-[var(--muted)]">
           <span>&copy; 2026 MedMaster</span>
           <div className="flex gap-6">
             <Link to="/impressum" className="hover:text-[var(--text-primary)] transition-colors">

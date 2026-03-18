@@ -199,7 +199,7 @@ export const biologiePool12: Question[] = [
     2,
     "TSH (Thyreoidea-stimulierendes Hormon) aus dem Hypophysenvorderlappen stimuliert die Schilddrüse.",
     "leicht",
-    ["Hormone", "Schilddrüse (Glandula thyroidea) mit T3/T4-Sekretion"]
+    ["Hormone", "Schilddrüse"]
   ),
   q(
     "bio-pool-12-016",
@@ -247,7 +247,7 @@ export const biologiePool12: Question[] = [
     1,
     "B-Lymphozyten reifen im Knochenmark, werden nach Antigenkontakt zu Plasmazellen und produzieren Antikörper.",
     "mittel",
-    ["Immunologie", "B-Zellen (knochenmarksgereifte Lymphozyten für die Antikörperproduktion)"]
+    ["Immunologie", "B-Zellen"]
   ),
   q(
     "bio-pool-12-023",
@@ -283,7 +283,7 @@ export const biologiePool12: Question[] = [
     2,
     "Die mRNA (Boten-RNA) wird im Zellkern transkribiert und trägt die Information zu den Ribosomen.",
     "leicht",
-    ["Genexpression", "mRNA (Boten-RNA als Kopie eines Gens für die Translation)"]
+    ["Genexpression", "mRNA"]
   ),
   q(
     "bio-pool-12-027",
@@ -315,7 +315,7 @@ export const biologiePool12: Question[] = [
     1,
     "In einer Nahrungskette wird Energie und Materie von Stufe zu Stufe weitergegeben (Produzent → Konsument).",
     "leicht",
-    ["Ökologie", "Nahrungskette (lineare Darstellung der trophischen Beziehungen zwischen Arten)"]
+    ["Ökologie", "Nahrungskette"]
   ),
   q(
     "bio-pool-12-029",
@@ -449,13 +449,7 @@ export const biologiePool12: Question[] = [
     "bio-pool-12-041",
     "bio-kap1",
     "Wo findet die Transkription statt?",
-    [
-      "Im Zytosol",
-      "Im Zellkern (Nukleus) während der Transkription von DNA zu mRNA",
-      "An der Zellmembran",
-      "Im Mitochondrium nur",
-      "Am Golgi-Apparat",
-    ],
+    ["Im Zytosol", "Im Zellkern", "An der Zellmembran", "Im Mitochondrium nur", "Am Golgi-Apparat"],
     1,
     "Transkription (DNA → RNA) erfolgt im Zellkern. Translation (RNA → Protein) im Zytosol.",
     "leicht",
@@ -485,7 +479,7 @@ export const biologiePool12: Question[] = [
     1,
     "Oxytocin wird im Hypothalamus gebildet, im Hypophysenhinterlappen gespeichert und fördert Wehen und Milchausschüttung.",
     "leicht",
-    ["Hormone (Signalmoleküle des endokrinen Systems für die Fernwirkung)", "Oxytocin"]
+    ["Hormone", "Oxytocin"]
   ),
   q(
     "bio-pool-12-044",
@@ -579,13 +573,13 @@ export const biologiePool12: Question[] = [
       "Großhirnrinde (Cortex cerebri)",
       "Kleinhirn (Cerebellum)",
       "Hirnstamm",
-      "Thalamus als Umschaltstation sensorischer Bahnen",
-      "Hypothalamus als übergeordnetes Steuerungszentrum des Hormonsystems",
+      "Thalamus",
+      "Hypothalamus",
     ],
     2,
     "Im Hirnstamm liegen lebenswichtige Zentren für Atmung, Kreislauf, Schlucken.",
     "leicht",
-    ["ZNS", "Hirnstamm als lebenswichtiges Regulationszentrum"]
+    ["ZNS", "Hirnstamm"]
   ),
   q(
     "bio-pool-12-051",
@@ -611,7 +605,7 @@ export const biologiePool12: Question[] = [
     1,
     "Produzenten betreiben Fotosynthese und bauen Biomasse aus CO2 und Licht auf.",
     "leicht",
-    ["Ökologie", "Produzent (autotropher Organismus an der Basis der Nahrungskette)"]
+    ["Ökologie", "Produzent"]
   ),
   q(
     "bio-pool-12-054",
@@ -621,7 +615,7 @@ export const biologiePool12: Question[] = [
     1,
     "Glukagon stimuliert Glykogenabbau und Gluconeogenese → Blutzucker steigt.",
     "leicht",
-    ["Hormone (Signalmoleküle des endokrinen Systems für die Fernwirkung)", "Blutzucker"]
+    ["Hormone", "Blutzucker"]
   ),
   q(
     "bio-pool-12-055",
@@ -637,7 +631,7 @@ export const biologiePool12: Question[] = [
     1,
     "Der Trophoblast umgibt die Blastozyste und bildet u. a. den kindlichen Anteil der Plazenta.",
     "mittel",
-    ["Embryologie", "Trophoblast (äußere Zellschicht der Blastozyste für die Implantation)"]
+    ["Embryologie", "Trophoblast"]
   ),
   q(
     "bio-pool-12-056",

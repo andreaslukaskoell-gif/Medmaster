@@ -10,9 +10,6 @@ export const mathKap5: Kapitel = {
     {
       id: "ma-5-01",
       title: "Lineare Funktionen",
-      imageUrl: "/images/bms/bio-blutzucker-regulation.jpg",
-      imageCaption:
-        "Abb.: Linearer Alkoholabbau — konstante Abbaurate als lineare Funktion (OpenStax, CC BY 4.0)",
       stichworte: [
         "Lineare Funktion",
         "Steigung",
@@ -321,9 +318,6 @@ g₁: y = 3x − 2. Senkrechte durch P(6|1): m₂ = −1/3 (weil 3 × (−1/3) =
     {
       id: "ma-5-02",
       title: "Quadratische & Exponentialfunktionen",
-      imageUrl: "/images/bms/bio-calcium-regulation.jpg",
-      imageCaption:
-        "Abb.: Parabolische Wurfbahn und biologische Regulationskurven (OpenStax, CC BY 4.0)",
       stichworte: [
         "Quadratische Funktion",
         "Parabel",
@@ -655,8 +649,6 @@ Minimum bei t = a/(2b) — das ist xs = \u2212(\u2212a)/(2b). Typische Falle: Ni
     {
       id: "ma-5-03",
       title: "Exponentialfunktionen",
-      imageUrl: "/images/bms/bio-bakterienwachstum-de.svg",
-      imageCaption: "Abb.: Bakterielles Wachstum — exponentielles Wachstum in der Mikrobiologie",
       stichworte: [
         "Exponentialfunktion",
         "Eulersche Zahl",
@@ -982,9 +974,6 @@ Medikament mit T½ = 8 h wird alle 8 h gegeben. Wann ist Steady State erreicht?
     {
       id: "ma-5-04",
       title: "Logarithmusfunktionen",
-      imageUrl: "/images/bms/ch-ph-skala.jpg",
-      imageCaption:
-        "Abb.: pH = \u2212log[H\u207A] \u2014 die Logarithmusfunktion in der Chemie (OpenStax, CC BY 4.0)",
       stichworte: [
         "Logarithmus",
         "Natürlicher Logarithmus",
@@ -1298,9 +1287,6 @@ Vereinfache: log(50) + log(2). *Denkprozess:* Produktregel → log(50 × 2) = lo
     {
       id: "ma-5-05",
       title: "Differentialrechnung & Integralrechnung",
-      imageUrl: "/images/bms/bio-herz-oberflaeche.jpg",
-      imageCaption:
-        "Abb.: Herzfrequenzänderung — Ableitung als momentane Änderungsrate (OpenStax, CC BY 4.0)",
       stichworte: [
         "Ableitung",
         "Differentialquotient",

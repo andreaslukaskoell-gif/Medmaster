@@ -55,26 +55,17 @@ export const biologiePoolOffiziellStyle: Question[] = [
     4,
     "Trypsinogen wird in der Bauchspeicheldrüse gebildet und im Dünndarm zu Trypsin aktiviert. Pepsinogen kommt aus der Magenschleimhaut.",
     "mittel",
-    ["Verdauung", "Enzyme (Biokatalysatoren für biochemische Reaktionen im Stoffwechsel)"]
+    ["Verdauung", "Enzyme"]
   ),
   q(
     "bio-off-003",
     "bio-kap2",
     "In welchem Abschnitt des Zentralnervensystems befinden sich unter anderem die Kerne für die Steuerung von Atmung und Kreislauf?",
-    [
-      "Kleinhirn (Cerebellum) als Koordinationszentrum für Motorik und Gleichgewicht",
-      "Großhirn (Cerebrum) als Sitz von Bewusstsein und höheren Funktionen",
-      "Zwischenhirn (Diencephalon) mit Thalamus und Hypothalamus",
-      "Hirnstamm (Medulla oblongata, Pons, Mesencephalon) als lebenswichtiges Regulationszentrum",
-      "Rückenmark (Medulla spinalis) als Reflexzentrum und Leitungsbahn",
-    ],
+    ["Kleinhirn", "Großhirn", "Zwischenhirn", "Hirnstamm", "Rückenmark"],
     3,
     "Atem- und Kreislaufzentrum liegen im Hirnstamm (Medulla oblongata, Pons).",
     "leicht",
-    [
-      "ZNS",
-      "Hirnstamm (Medulla oblongata, Pons, Mesencephalon) als lebenswichtiges Regulationszentrum",
-    ]
+    ["ZNS", "Hirnstamm"]
   ),
   q(
     "bio-off-004",
@@ -84,19 +75,13 @@ export const biologiePoolOffiziellStyle: Question[] = [
     1,
     "Glukagon (Alpha-Zellen) wirkt antagonistisch zu Insulin und erhöht den Blutzucker. Glykogen und Glukose sind keine Hormone.",
     "leicht",
-    ["Bauchspeicheldrüse", "Hormone (Signalmoleküle des endokrinen Systems für die Fernwirkung)"]
+    ["Bauchspeicheldrüse", "Hormone"]
   ),
   q(
     "bio-off-005",
     "bio-kap2",
     "Welche Struktur des Auges ist primär für die Änderung der Krümmung der Linse (Akkommodation) verantwortlich?",
-    [
-      "Hornhaut (Kornea) als stärkstes lichtbrechendes Medium des Auges",
-      "Ziliarkörper",
-      "Regenbogenhaut (Iris) mit M. sphincter und M. dilatator pupillae",
-      "äußere Augenmuskeln (sechs Muskeln für Augenbewegung und Blickrichtung)",
-      "Glaskörper (Corpus vitreum) als gelartiges Stützmedium des Augapfels",
-    ],
+    ["Hornhaut", "Ziliarkörper", "Regenbogenhaut (Iris)", "äußere Augenmuskeln", "Glaskörper"],
     1,
     "Der Ziliarkörper enthält den Ziliarmuskel; durch dessen Kontraktion wird die Aufhängung der Linse verändert und die Linse gekrümmt.",
     "mittel",
@@ -106,48 +91,27 @@ export const biologiePoolOffiziellStyle: Question[] = [
     "bio-off-006",
     "bio-kap1",
     "Welche der folgenden Strukturen liegt im Zellkern?",
-    [
-      "Lysosom (Verdauungsorganell mit sauren Hydrolasen im Zytoplasma)",
-      "Zentriol (zylindrische Mikrotubuli-Struktur des Centrosoms)",
-      "Nukleolus",
-      "Ribosom (rRNA-Protein-Komplex im Zytoplasma oder am rER)",
-      "Mitochondrium (Kraftwerk der Zelle mit eigener ringförmiger DNA)",
-    ],
+    ["Lysosom", "Zentriol", "Nukleolus", "Ribosom", "Mitochondrium"],
     2,
     "Der Nukleolus (Kernkörperchen) liegt im Zellkern und ist an der Ribosomenbildung beteiligt. Die anderen genannten liegen im Zytoplasma.",
     "leicht",
-    ["Zellkern (Nukleus mit Chromatin und Kernhülle aus Doppelmembran)", "Zelle"]
+    ["Zellkern", "Zelle"]
   ),
   q(
     "bio-off-007",
     "bio-kap5",
     "Das Körperwachstum wird unter anderem durch das Wachstumshormon Somatotropin stimuliert. Wo wird dieses Hormon überwiegend gebildet?",
-    [
-      "Nebenschilddrüse",
-      "Schilddrüse (Glandula thyroidea) mit T3/T4-Sekretion",
-      "Keimdrüsen",
-      "Nebenniere (Glandula suprarenalis) mit Cortisol und Adrenalin",
-      "Hypophyse (Hirnanhangsdrüse) als Master-Drüse des endokrinen Systems",
-    ],
+    ["Nebenschilddrüse", "Schilddrüse", "Keimdrüsen", "Nebenniere", "Hypophyse"],
     4,
     "Somatotropin (STH) wird im Hypophysenvorderlappen gebildet. Mangel führt zu Kleinwuchs, Überschuss zu Riesenwuchs.",
     "leicht",
-    [
-      "Hormone (Signalmoleküle des endokrinen Systems für die Fernwirkung)",
-      "Hypophyse (Hirnanhangsdrüse) als Master-Drüse des endokrinen Systems",
-    ]
+    ["Hormone", "Hypophyse"]
   ),
   q(
     "bio-off-008",
     "bio-kap2",
     "Durch welche Strukturen sind die Herzmuskelzellen untereinander elektrisch leitend verbunden?",
-    [
-      "Fokale Kontakte",
-      "Gap Junctions (Connexon-Kanäle für den Ionen- und Molekülaustausch)",
-      "Desmosomen (Haftplatten mit Cadherinen für den mechanischen Zusammenhalt)",
-      "Tight Junctions (Verschlusskontakte für die parazelluläre Barriere)",
-      "Adhärens-Kontakte",
-    ],
+    ["Fokale Kontakte", "Gap Junctions", "Desmosomen", "Tight Junctions", "Adhärens-Kontakte"],
     1,
     "Gap Junctions ermöglichen den direkten Ionenaustausch zwischen Herzmuskelzellen und damit die schnelle Erregungsausbreitung.",
     "mittel",
@@ -245,7 +209,7 @@ export const biologiePoolOffiziellStyle: Question[] = [
     4,
     "Die Befruchtung findet typischerweise in der Ampulle des Eileiters (Tuba uterina) statt, nicht in der Gebärmutter.",
     "leicht",
-    ["Befruchtung (Syngamie der Gameten im Eileiter bei der Konzeption)", "Reproduktion"]
+    ["Befruchtung", "Reproduktion"]
   ),
   q(
     "bio-off-016",
@@ -261,7 +225,7 @@ export const biologiePoolOffiziellStyle: Question[] = [
     "bio-off-017",
     "bio-kap1",
     "Bei welchen der folgenden Zellorganellen sind zwei Membranen (Doppelmembran) vorhanden?",
-    ["Mitochondrien", "Ribosomen", "Lysosomen", "Peroxisomen", "Dictyosomen (Golgi-Apparat)"],
+    ["Mitochondrien", "Ribosomen", "Lysosomen", "Peroxisomen", "Dictyosomen"],
     0,
     "Mitochondrien und Zellkern haben eine Doppelmembran (äußere + innere). Ribosomen haben keine Membran; Lysosomen, Peroxisomen und Golgi haben eine Einzelmembran.",
     "mittel",
@@ -366,14 +330,14 @@ export const biologiePoolOffiziellStyle: Question[] = [
     2,
     "Sauerstoff ist klein und lipophil und diffundiert frei durch die Lipidschicht; dafür sind keine Transportproteine nötig (C falsch).",
     "mittel",
-    ["Zellmembran (Zytoplasmamembran als Permeabilitätsbarriere aller Zellen)", "FALSCH"]
+    ["Zellmembran", "FALSCH"]
   ),
   q(
     "bio-off-026",
     "bio-kap4",
     "Welcher Prozess spielt sich während der Mitose NICHT ab?",
     [
-      "Crossing-over zwischen Schwesterchromatiden (Crossing-over erfolgt in der Meiose zwischen homologen Chromosomen).",
+      "In der Telophase kommt es zu mindestens einem Crossing-over zwischen den Schwesterchromatiden.",
       "Aufteilung eines diploiden Chromosomensatzes auf zwei diploide Tochterzellen.",
       "Kondensation der Chromosomen und Sichtbarwerden.",
       "Trennung der Schwesterchromatiden in der Anaphase und Wanderung zu den Polen.",
@@ -388,13 +352,7 @@ export const biologiePoolOffiziellStyle: Question[] = [
     "bio-off-027",
     "bio-kap2",
     "Blutserum und Blutplasma unterscheiden sich durch das Vorhandensein bzw. Fehlen von:",
-    [
-      "Immunglobulinen",
-      "Gerinnungsfaktoren",
-      "Erythrozyten (bikonkave, kernlose rote Blutkörperchen)",
-      "Leukozyten (weiße Blutkörperchen der Immunabwehr)",
-      "Elektrolyten",
-    ],
+    ["Immunglobulinen", "Gerinnungsfaktoren", "Erythrozyten", "Leukozyten", "Elektrolyten"],
     1,
     "Blutplasma enthält Fibrinogen und andere Gerinnungsfaktoren. Serum ist Plasma ohne Gerinnungsfaktoren (nach Ausfällung z. B. durch Gerinnung).",
     "mittel",
@@ -404,17 +362,11 @@ export const biologiePoolOffiziellStyle: Question[] = [
     "bio-off-028",
     "bio-kap2",
     "Welche der genannten Zellen des menschlichen Körpers besitzen keinen Zellkern?",
-    [
-      "Muskelzellen (Myozyten mit kontraktilen Filamenten)",
-      "Erythrozyten (reif)",
-      "Knochenzellen (Osteozyten in Knochenlakunen)",
-      "Knorpelzellen (Chondrozyten in der Knorpelmatrix)",
-      "Eizellen (Oozyten im Ovarialfollikel)",
-    ],
+    ["Muskelzellen", "Erythrozyten", "Knochenzellen", "Knorpelzellen", "Eizellen"],
     1,
     "Reife menschliche Erythrozyten haben keinen Zellkern (und keine Mitochondrien), um mehr Platz für Hämoglobin zu haben.",
     "leicht",
-    ["Blut", "Erythrozyten (bikonkave, kernlose rote Blutkörperchen)"]
+    ["Blut", "Erythrozyten"]
   ),
   q(
     "bio-off-029",

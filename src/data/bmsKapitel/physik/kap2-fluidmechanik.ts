@@ -11,8 +11,6 @@ export const physKapFluid: Kapitel = {
     {
       id: "ph-fluid-01",
       title: "Hydrostatik: Druck in ruhenden Fluiden",
-      imageUrl: "/images/bms/bio-herz-kreislauf.jpg",
-      imageCaption: "Abb.: Blutdruck als Anwendung der Hydrostatik (OpenStax, CC BY 4.0)",
       stichworte: [
         "Hydrostatischer Druck",
         "Schweredruck",
@@ -271,9 +269,6 @@ Bei einem echten Blutdruck von 132/88 mmHg würde man 144/100 mmHg messen — un
     {
       id: "ph-fluid-02",
       title: "Auftrieb & Oberflächenspannung",
-      imageUrl: "/images/bms/bio-alveolen.jpg",
-      imageCaption:
-        "Abb.: Oberflächenspannung in Alveolen — Surfactant verhindert den Kollaps (OpenStax, CC BY 4.0)",
       stichworte: [
         "Archimedisches Prinzip",
         "Auftriebskraft",
@@ -598,9 +593,6 @@ Auch bei Erwachsenen kann Surfactant-Mangel auftreten: Bei schwerem **ARDS** (Ac
     {
       id: "ph-fluid-03",
       title: "Strömende Fluide: Kontinuität & Bernoulli",
-      imageUrl: "/images/bms/bio-nephron-blutfluss.jpg",
-      imageCaption:
-        "Abb.: Blutfluss im Nephron — Kontinuitätsgleichung in der Niere (OpenStax, CC BY 4.0)",
       stichworte: [
         "Kontinuitätsgleichung",
         "Bernoulli-Gleichung",

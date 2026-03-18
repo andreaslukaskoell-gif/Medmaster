@@ -87,6 +87,10 @@ export function trackClick(elementId: string, label?: string) {
 
 // ── Internal ──
 
+function isAutomatedBrowser(): boolean {
+  return !!(navigator as { webdriver?: boolean }).webdriver;
+}
+
 function insertEvent(
   eventName: string,
   extra: {
@@ -99,8 +103,10 @@ function insertEvent(
   if (!supabase) return;
   // Only track on production domain
   if (location.hostname === "localhost" || location.hostname === "127.0.0.1") return;
-  // Skip tracking for admin
-  if (currentUserId && adminSkipTracking) return;
+  // Skip automated browsers (Playwright, Puppeteer, Selenium)
+  if (isAutomatedBrowser()) return;
+  // Skip tracking for admin (no longer requires userId)
+  if (adminSkipTracking) return;
 
   const row = {
     event_name: eventName,
@@ -110,6 +116,7 @@ function insertEvent(
     session_id: sessionId,
     user_id: currentUserId ?? null,
     referrer: extra.referrer ?? null,
+    user_agent: navigator.userAgent || null,
     properties: extra.properties ?? {},
   };
 

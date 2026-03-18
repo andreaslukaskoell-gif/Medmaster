@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import type { TaskDomain } from "@/lib/taskDb/types";
 import { getTaskCountByDomain } from "@/lib/taskDb";
 import { useState, useEffect } from "react";

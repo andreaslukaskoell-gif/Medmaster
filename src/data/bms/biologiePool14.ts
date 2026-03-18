@@ -89,7 +89,7 @@ export const biologiePool14: Question[] = [
     2,
     "Die Schilddrüse produziert die jodhaltigen Hormone T3 (Trijodthyronin) und T4 (Thyroxin).",
     "leicht",
-    ["Hormone", "Schilddrüse (Glandula thyroidea) mit T3/T4-Sekretion"]
+    ["Hormone", "Schilddrüse"]
   ),
   q(
     "bio-pool-14-007",
@@ -189,7 +189,7 @@ export const biologiePool14: Question[] = [
     2,
     "Östrogen wird vor allem in den Eierstöcken (Follikel, Corpus luteum) gebildet; in der Schwangerschaft auch in der Plazenta.",
     "leicht",
-    ["Hormone (Signalmoleküle des endokrinen Systems für die Fernwirkung)", "Reproduktion"]
+    ["Hormone", "Reproduktion"]
   ),
   q(
     "bio-pool-14-017",
@@ -205,7 +205,7 @@ export const biologiePool14: Question[] = [
     1,
     "Bei einer Insertion werden eine oder mehrere Basen in die DNA eingefügt.",
     "mittel",
-    ["Genetik", "Mutation (permanente Veränderung der DNA-Basensequenz)"]
+    ["Genetik", "Mutation"]
   ),
   q(
     "bio-pool-14-018",
@@ -283,7 +283,7 @@ export const biologiePool14: Question[] = [
     1,
     "Calcitonin senkt den Calciumspiegel. Parathormon erhöht ihn.",
     "mittel",
-    ["Hormone (Signalmoleküle des endokrinen Systems für die Fernwirkung)", "Calcium"]
+    ["Hormone", "Calcium"]
   ),
   q(
     "bio-pool-14-028",
@@ -345,7 +345,7 @@ export const biologiePool14: Question[] = [
     1,
     "Oxytocin fördert die Wehen und den Milchspendereflex.",
     "leicht",
-    ["Hormone (Signalmoleküle des endokrinen Systems für die Fernwirkung)", "Oxytocin"]
+    ["Hormone", "Oxytocin"]
   ),
   q(
     "bio-pool-14-041",
@@ -371,7 +371,7 @@ export const biologiePool14: Question[] = [
     2,
     "Enzyme werden nicht verbraucht; sie gehen unverändert aus der Reaktion hervor (C falsch).",
     "leicht",
-    ["Enzyme (Biokatalysatoren für biochemische Reaktionen im Stoffwechsel)", "FALSCH"]
+    ["Enzyme", "FALSCH"]
   ),
   q(
     "bio-pool-14-046",
@@ -397,7 +397,7 @@ export const biologiePool14: Question[] = [
     2,
     "EPO wird vor allem in der Niere gebildet und stimuliert die Bildung roter Blutkörperchen im Knochenmark.",
     "mittel",
-    ["Hormone (Signalmoleküle des endokrinen Systems für die Fernwirkung)", "Blut"]
+    ["Hormone", "Blut"]
   ),
   q(
     "bio-pool-14-050",
@@ -471,7 +471,7 @@ export const biologiePool14: Question[] = [
     1,
     "Renin wird in den Nieren (juxtaglomeruläre Zellen) gebildet und ist Teil des RAAS (Blutdruckregulation).",
     "mittel",
-    ["Hormone (Signalmoleküle des endokrinen Systems für die Fernwirkung)", "Niere"]
+    ["Hormone", "Niere"]
   ),
   q(
     "bio-pool-14-060",
@@ -487,6 +487,6 @@ export const biologiePool14: Question[] = [
     1,
     "Symbiose = wechselseitiger Nutzen.",
     "mittel",
-    ["Ökologie", "Symbiose (wechselseitig vorteilhaftes Zusammenleben zweier Arten)"]
+    ["Ökologie", "Symbiose"]
   ),
 ];

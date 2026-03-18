@@ -12,7 +12,8 @@ export const chemKapAnorganisch: Kapitel = {
       id: "ch-9-01",
       title: "Wasser — Eigenschaften und biologische Bedeutung",
       imageUrl: "/images/bms/ch-wasserstoffbruecken.jpg",
-      imageCaption: "Wasserstoffbrückenbindungen im Wasser",
+      imageCaption:
+        "Abb.: Wasserstoffbrückenbindungen zwischen drei H₂O-Molekülen — δ⁺-Wasserstoff wechselwirkt mit δ⁻-Sauerstoff des Nachbarmoleküls (OpenStax, CC BY 4.0)",
       stichworte: [
         "Dipolmoment",
         "Wasserstoffbrücken",
@@ -40,8 +41,6 @@ export const chemKapAnorganisch: Kapitel = {
 Wasser (H₂O) ist das häufigste und biologisch bedeutsamste anorganische Molekül auf der Erde. Der menschliche Körper besteht zu **60–70 %** aus Wasser — es ist Lösungsmittel, Reaktionsmedium, Transportvehikel und Temperaturpuffer in einem. Das zentrale Sauerstoffatom trägt vier Elektronenpaare: zwei bindende (zu den H-Atomen) und zwei nichtbindende (freie Elektronenpaare). Nach dem **VSEPR-Modell** (Valence Shell Electron Pair Repulsion, Elektronenpaar-Abstoßungs-Modell) komprimieren die freien Elektronenpaare den Bindungswinkel von theoretisch 109,5° (Tetraeder) auf **104,5°**. Die Sauerstoff-Wasserstoff-Bindung ist stark polar (ΔEN = 1,24 nach Pauling), woraus ein permanentes Dipolmoment von **μ = 1,85 Debye (D)** (Einheit der Polarität) resultiert — einer der höchsten Werte kleiner Moleküle.
 
 > **Merke:** Wasser hat eine gewinkelte Geometrie (104,5°), nicht linear wie CO₂. Die freien Elektronenpaare am O komprimieren den Winkel unter den Tetraederwinkel.
-
-{{IMAGE}}
 
 ## Wasserstoffbrückenbindungen
 
@@ -94,7 +93,6 @@ Wasser ist **amphoter** (Ampholyt) — je nach Reaktionspartner Säure oder Base
 - Als Base: H₂O + HCl → H₃O⁺ + Cl⁻ (nimmt H⁺ auf)
 
 ## Hydratation und Löslichkeit
-
 
 Wasser solvatisiert Ionen durch **Ion-Dipol-Wechselwirkungen**: Der δ⁻-Sauerstoff orientiert sich zu Kationen, die δ⁺-Wasserstoffe zu Anionen. Hydratationsenthalpien: ΔH_hyd(Na⁺) ≈ −406 kJ/mol, ΔH_hyd(Cl⁻) ≈ −363 kJ/mol. Die Summe (−769 kJ/mol) überwindet die NaCl-Gitterenergie (−787 kJ/mol); der leicht endotherme Lösungsprozess (+4 kJ/mol) wird durch Entropiegewinn kompensiert. Polare organische Moleküle (Glucose, Ethanol, Harnstoff) werden über H-Brücken und Dipol-Dipol-WW gelöst.
 
@@ -361,7 +359,8 @@ Der **hydrophobe Effekt** ist primär entropisch getrieben: Apolare Moleküle in
         "Acetyl-CoA als zentrale metabolische Schnittstelle benennen",
       ],
       imageUrl: "/images/bms/ch-kovalente-bindung.jpg",
-      imageCaption: "Kovalente Bindungen des Kohlenstoffs",
+      imageCaption:
+        "Abb.: Kovalente Bindungen — H–H-Einfachbindung, O=O-Doppelbindung und CO₂ mit zwei C=O-Doppelbindungen (OpenStax, CC BY 4.0)",
       content: `Kein anderes Element bildet so viele verschiedene Verbindungen wie Kohlenstoff. Seine einzigartige Fähigkeit, stabile Ketten, Ringe und Verzweigungen zu formen, macht es zum zentralen Baustein aller organischen Moleküle und damit des Lebens selbst.
 
 ## Kohlenstoff — das Element des Lebens
@@ -384,7 +383,7 @@ Die C-C-Einfachbindung hat eine Bindungsenergie von ~347 kJ/mol und eine Länge 
 
 ## Allotrope des Kohlenstoffs
 
-Kohlenstoff kommt in mehreren Allotropen (verschiedene Strukturformen desselben Elements) vor, deren Eigenschaften sich dramatisch unterscheiden — allein durch die Hybridisierung:
+Die verschiedenen Hybridisierungstypen des Kohlenstoffs führen nicht nur zu unterschiedlichen Molekülgeometrien, sondern auch zu völlig verschiedenen Materialien aus demselben Element. Kohlenstoff kommt in mehreren Allotropen (verschiedene Strukturformen desselben Elements) vor, deren Eigenschaften sich dramatisch unterscheiden — allein durch die Hybridisierung:
 
 **Diamant (sp³):** Dreidimensionales Tetraedernetzwerk — härtestes natürliches Material (Mohs 10), elektrischer Isolator (alle 4 Valenzelektronen in σ-Bindungen lokalisiert), transparent, höchste Wärmeleitfähigkeit. Bindungslänge C-C: 154 pm. Thermodynamisch metastabil (Graphit ist stabiler; ΔG°f = +2,9 kJ/mol), aber Umwandlung kinetisch gehemmt.
 
@@ -396,7 +395,7 @@ Kohlenstoff kommt in mehreren Allotropen (verschiedene Strukturformen desselben 
 
 ## CO₂ — Kohlenstoffdioxid
 
-CO₂ ist **sp-hybridisiert** (linear, 180°) und apolar (die beiden C=O-Dipole kompensieren sich, Gesamtdipolmoment = 0). CO₂ entsteht als Endprodukt der aeroben Zellatmung und reagiert im Blut mit Wasser — katalysiert durch **Carboanhydrase** (Zn²⁺-haltiges Enzym, eines der schnellsten, kcat ~10⁶ s⁻¹):
+Von den reinen Kohlenstoff-Allotropen kommen wir nun zu den wichtigsten anorganischen Kohlenstoffverbindungen — allen voran CO₂, das Endprodukt der Zellatmung und Schlüsselmolekül der Blut-pH-Regulation. CO₂ ist **sp-hybridisiert** (linear, 180°) und apolar (die beiden C=O-Dipole kompensieren sich, Gesamtdipolmoment = 0). CO₂ entsteht als Endprodukt der aeroben Zellatmung und reagiert im Blut mit Wasser — katalysiert durch **Carboanhydrase** (Zn²⁺-haltiges Enzym, eines der schnellsten, kcat ~10⁶ s⁻¹):
 
 **CO₂ + H₂O ⇌ H₂CO₃ ⇌ HCO₃⁻ + H⁺**
 
@@ -414,14 +413,13 @@ Bei Hypoventilation (verminderte Atmung) steigt CO₂ → pH sinkt (respiratoris
 
 ## CO — Kohlenstoffmonoxid
 
-CO ist farb-, geruch- und geschmacklos — **extrem toxisch**. Es bindet an Hämoglobin mit **250× höherer Affinität** als O₂ und bildet Carboxyhämoglobin (HbCO). HbCO kann kein O₂ transportieren (funktionelle Anämie). Zusätzlich verschiebt CO die O₂-Bindungskurve nach links → O₂-Abgabe ans Gewebe praktisch unmöglich → histotoxische Hypoxie (Gewebserstickung trotz O₂-Angebot). CO hemmt auch Cytochrom-c-Oxidase (Komplex IV der Atmungskette).
+Während CO₂ ein normales Stoffwechselprodukt ist, das der Körper routinemäßig über die Lunge abatmet, ist sein „kleiner Bruder" CO ein gefährlicher Giftstoff. CO ist farb-, geruch- und geschmacklos — **extrem toxisch**. Es bindet an Hämoglobin mit **250× höherer Affinität** als O₂ und bildet Carboxyhämoglobin (HbCO). HbCO kann kein O₂ transportieren (funktionelle Anämie). Zusätzlich verschiebt CO die O₂-Bindungskurve nach links → O₂-Abgabe ans Gewebe praktisch unmöglich → histotoxische Hypoxie (Gewebserstickung trotz O₂-Angebot). CO hemmt auch Cytochrom-c-Oxidase (Komplex IV der Atmungskette).
 
 **Klinische Zeichen:** Kopfschmerz, Schwindel, Übelkeit; kirschrote Haut (HbCO — Spätzeichen). Diagnose: Co-Oximetrie (spektralphotometrische Hb-Analyse).
 
 **Behandlung:** 100 % O₂ (Verdrängung durch Massenwirkungsgesetz); hyperbar (Überdruckkammer) bei schwerer Vergiftung. HWZ von HbCO: ~300 min (Raumluft), ~60 min (100 % O₂), ~20 min (hyperbar).
 
 ## Carbonate und Metabolismus
-
 
 **CaCO₃ (Calciumcarbonat)** bildet zusammen mit Hydroxylapatit die mineralische Matrix der Knochen und Zähne. CaCO₃ findet sich auch in Marmor, Kalkstein und Muschelschalen.
 
@@ -640,7 +638,8 @@ Metabolisch zentrale Kohlenstoffverbindungen:
         "Die medizinische Bedeutung von Iod (Schilddrüse), Chlor (Desinfektion) und Fluor (Kariesprophylaxe) erläutern",
       ],
       imageUrl: "/images/bms/ch-periodensystem.jpg",
-      imageCaption: "Periodensystem mit Hauptgruppen-Elementen",
+      imageCaption:
+        "Abb.: NIST-Periodensystem der Elemente — Hauptgruppen mit Stickstoff (N), Schwefel (S) und den Halogenen (F, Cl, Br, I) hervorgehoben (OpenStax, CC BY 4.0)",
       content: `Nach Wasserstoff, Sauerstoff und Kohlenstoff ist Stickstoff das vierte Schlüsselelement der Biologie. Er steckt in jeder Aminosäure, jeder Nukleinbase und vielen Cofaktoren — und ist dennoch als N₂-Gas erstaunlich reaktionsträge.
 
 ## Stickstoff (N) — das häufigste Atmosphärengas
@@ -1020,7 +1019,6 @@ Drei Säure-Base-Definitionen bauen aufeinander auf, jede allgemeiner als die vo
 
 ## Die Brønsted-Lowry-Definition
 
-
 **Johannes Nicolaus Brønsted** (1923) erweiterte das Konzept grundlegend:
 
 - **Säure** = Protonendonator: gibt ein Proton (H⁺) ab
@@ -1038,7 +1036,7 @@ Aus jeder Säure entsteht nach Protonenabgabe die **korrespondierende (konjugier
 
 ## Die Lewis-Definition
 
-**Gilbert N. Lewis** (1923) formulierte die allgemeinste Säure-Base-Definition:
+Die Brønsted-Definition erklärt Protonentransfer-Reaktionen hervorragend, doch manche Reaktionen — etwa die Bindung von O₂ an Fe²⁺ im Hämoglobin — lassen sich damit nicht beschreiben. Hier hilft die noch allgemeinere Lewis-Definition. **Gilbert N. Lewis** (1923) formulierte die allgemeinste Säure-Base-Definition:
 
 - **Lewis-Säure** = Elektronenpaarakzeptor (nimmt ein Elektronenpaar auf)
 - **Lewis-Base** = Elektronenpaardonor (gibt ein Elektronenpaar ab)
@@ -1047,12 +1045,9 @@ Diese Definition ist die weiteste und umfasst auch Reaktionen ohne Protonentrans
 
 Wichtige Lewis-Säure-Base-Reaktion: BF3 + :NH3 --> F3B<-NH3 (Addukt; Lewis-S. + Lewis-B.)
 
-
-{{IMAGE}}
-
 ## Das Ionenprodukt des Wassers (Kw) und die Autoprotolyse
 
-Wasser ist ein Ampholyt – es kann selbst mit sich selbst reagieren:
+Mit den drei Definitionen im Gepäck können wir nun das wichtigste Lösungsmittel der Biochemie quantitativ betrachten: Wasser als Ampholyt und die daraus resultierende pH-Skala. Wasser ist ein Ampholyt -- es kann selbst mit sich selbst reagieren:
 
 H₂O + H₂O ⇌ H₃O⁺ + OH⁻
 
@@ -1066,7 +1061,7 @@ K_W ist **temperaturabhängig**: Bei höherer Temperatur steigt K_W (Autoprotoly
 
 ## Definition und Berechnung des pH-Werts
 
-Der **pH-Wert** ist der negative dekadische Logarithmus der Hydronium-Ionen-Konzentration:
+Aus dem Ionenprodukt Kw ergibt sich die Notwendigkeit, die H₃O⁺-Konzentration handhabbar auszudrücken. Da die Werte über viele Zehnerpotenzen variieren (von 1 mol/L in starker Säure bis 10⁻¹⁴ mol/L in starker Base), verwendet man eine logarithmische Skala. Der **pH-Wert** ist der negative dekadische Logarithmus der Hydronium-Ionen-Konzentration:
 
 **pH = −log₁₀[H₃O⁺]**
 
@@ -1347,10 +1342,7 @@ Für starke Säuren gilt: **[H₃O⁺] = c(Säure)** (vollständige Dissoziation
 
 Beispiel: 0,01 mol/L HCl → [H₃O⁺] = 0,01 = 10⁻² mol/L → **pH = 2**
 
-{{IMAGE}}
-
 ## Schwache Säuren: Gleichgewichtige Dissoziation
-
 
 **Schwache Säuren** dissoziieren nur teilweise. Es stellt sich ein Gleichgewicht ein:
 
@@ -1387,7 +1379,7 @@ Beispiel: 0,1 mol/L Essigsäure (pKa = 4,75):
 
 ## Mehrprotonige Säuren (polyprotische Säuren)
 
-Säuren können mehrere Protonen stufenweise abgeben. Jede Stufe hat eine eigene Säurekonstante, die bei jeder folgenden Stufe kleiner wird:
+Bisher haben wir einprotonige Säuren betrachtet, die nur ein H⁺ abgeben. Viele biologisch und medizinisch wichtige Säuren — wie Phosphorsäure und Kohlensäure — besitzen jedoch mehrere abspaltbare Protonen. Säuren können mehrere Protonen stufenweise abgeben. Jede Stufe hat eine eigene Säurekonstante, die bei jeder folgenden Stufe kleiner wird:
 
 **Phosphorsäure H₃PO₄:**
 - pKa1 ≈ 2,15 (H₃PO₄ ⇌ H⁺ + H₂PO₄⁻)
@@ -1400,7 +1392,7 @@ Säuren können mehrere Protonen stufenweise abgeben. Jede Stufe hat eine eigene
 
 ## Starke Basen: NaOH, KOH
 
-Starke Basen dissoziieren vollständig. [OH⁻] = c(Base).
+So wie bei Säuren gibt es auch bei Basen starke und schwache Vertreter. Starke Basen dissoziieren vollständig. [OH⁻] = c(Base).
 
 pOH = −log[OH⁻]; pH = 14 − pOH
 
@@ -1422,7 +1414,7 @@ Beispiel: NH₃ hat pKb = 4,75 → korrespondierende Säure NH₄⁺ hat pKa = 9
 
 ## Dissoziationsgrad alpha
 
-Der **Dissoziationsgrad alpha** gibt an, welcher Anteil der eingesetzten Säure tatsächlich dissoziiert ist:
+Neben Ka und pKa gibt es noch eine anschaulichere Größe, um die Stärke einer Säure zu beschreiben: den Dissoziationsgrad. Der **Dissoziationsgrad alpha** gibt an, welcher Anteil der eingesetzten Säure tatsächlich dissoziiert ist:
 
 **alpha = [H₃O⁺] / c₀**
 
@@ -1442,6 +1434,8 @@ Die Lösung eines Salzes kann sauer, basisch oder neutral reagieren, abhängig d
 | Schwache Säure + schwache Base | Abhängig von pKa/pKb | CH3COONH4 |
 
 Natriumacetat (CH₃COONa) reagiert basisch, weil Acetat als konjugierte Base der schwachen Essigsäure Protonen aus dem Wasser aufnimmt: CH₃COO⁻ + H₂O ⇌ CH₃COOH + OH⁻.
+
+> **Merke:** Salz-Hydrolyse: Starke Säure + starke Base → neutral. Schwache Säure + starke Base → basisch. Starke Säure + schwache Base → sauer. Entscheidend ist, ob Kation oder Anion aus einer schwachen Säure/Base stammt.
 
 ## Klinische Relevanz
 
@@ -1689,8 +1683,9 @@ Die **Magensäure** (HCl, pH ~ 1-2) ist die einzige starke Säure im Körper und
         "Vitamin C Antioxidans",
         "Redox-Gleichung ausgleichen",
       ],
-      imageUrl: "/images/bms/ch-chemische-reaktionen.jpg",
-      imageCaption: "Chemische Reaktionen — Elektronentransfer bei Redox",
+      imageUrl: "/images/bms/ch-ionenbindung.jpg",
+      imageCaption:
+        "Abb.: Elektronentransfer bei der Ionenbildung — Grundlage der Redoxchemie (OpenStax, CC BY 4.0)",
       content: `Von der Zellatmung über die Photosynthese bis zur Korrosion von Implantaten — Redoxreaktionen gehören zu den häufigsten chemischen Prozessen in Natur und Medizin. In jeder Redoxreaktion werden Elektronen von einem Teilchen auf ein anderes übertragen.
 
 ## Definitionen: OIL RIG
@@ -1699,12 +1694,9 @@ Oxidation und Reduktion sind die grundlegendsten Elektronenübertragungsreaktion
 
 Das Teilchen, das Elektronen **abgibt** und dabei oxidiert wird, heißt **Reduktionsmittel** (RM), weil es das andere Teilchen reduziert. Das Teilchen, das Elektronen **aufnimmt** und dabei reduziert wird, heißt **Oxidationsmittel** (OM), weil es das andere Teilchen oxidiert. Im klassischen Beispiel Zn + Cu2+ -> Zn2+ + Cu ist Zink das Reduktionsmittel (gibt 2e- ab) und Cu2+ das Oxidationsmittel (nimmt 2e- auf).
 
-{{IMAGE}}
-
 ## Oxidationszahlen (Oxidationsstufen)
 
-
-Oxidationszahlen (OZ) sind formale, hypothetische Ladungen, die einem Atom zugewiesen werden, als wären alle Bindungen vollständig ionisch.
+Um in einer Reaktion zu erkennen, welches Atom oxidiert und welches reduziert wird, brauchen wir ein formales Buchführungssystem: die Oxidationszahlen. Oxidationszahlen (OZ) sind formale, hypothetische Ladungen, die einem Atom zugewiesen werden, als wären alle Bindungen vollständig ionisch.
 
 **Regeln zur Bestimmung der OZ (Prioritätsreihenfolge):**
 1. Reine Elemente: OZ = 0 (z. B. Fe, Cl2, O3)
@@ -1719,7 +1711,11 @@ Oxidationszahlen (OZ) sind formale, hypothetische Ladungen, die einem Atom zugew
 - HNO3: (+1) + OZ(N) + 3(-2) = 0 -> OZ(N) = **+5**
 - KMnO4: (+1) + OZ(Mn) + 4(-2) = 0 -> OZ(Mn) = **+7**
 
+> **Merke:** OZ-Bestimmung: Elemente = 0, F = −1, O = −2 (außer Peroxide: −1), H = +1 (außer Metallhydride: −1). Summe aller OZ = Gesamtladung. Steigt die OZ → Oxidation; sinkt sie → Reduktion.
+
 ## Aufstellen von Redox-Gleichungen (Halbreaktion-Methode)
+
+Mit den Oxidationszahlen können wir nun erkennen, was oxidiert und was reduziert wird. Der nächste Schritt ist, die Gleichung systematisch auszugleichen. Die Halbreaktion-Methode trennt dazu Oxidation und Reduktion.
 
 **Schritte (saures Medium):**
 1. Oxidations- und Reduktions-Halbreaktionen separat aufschreiben
@@ -1735,9 +1731,11 @@ Oxidationszahlen (OZ) sind formale, hypothetische Ladungen, die einem Atom zugew
 - Oxidation: Fe2+ -> Fe3+ + 1e- (x5)
 - Gesamt: MnO4- + 8H+ + 5Fe2+ -> Mn2+ + 5Fe3+ + 4H2O
 
+> **Merke:** Halbreaktion-Methode: Erst Oxidation und Reduktion trennen, dann jeweils Atome, O (mit H₂O), H (mit H⁺) und Ladung (mit e⁻) ausgleichen. Zuletzt addieren und kürzen. Im basischen Medium: zusätzlich OH⁻ statt H⁺ verwenden.
+
 ## Disproportionierung und Komproportionierung
 
-Ein Spezialfall entsteht, wenn ein und dasselbe Element gleichzeitig oxidiert und reduziert wird:
+Neben den klassischen Redoxreaktionen zwischen verschiedenen Elementen gibt es einen faszinierenden Spezialfall: Ein und dasselbe Element gleichzeitig oxidiert und reduziert wird:
 
 Bei der **Disproportionierung** reagiert ein Element gleichzeitig als Oxidans und Reduktans: 2H2O2 -> 2H2O + O2. O hat in H2O2 OZ = -1; im Produkt H2O hat O OZ = -2 (Reduktion) und in O2 hat O OZ = 0 (Oxidation).
 
@@ -1962,6 +1960,9 @@ Bei der **Komproportionierung** reagieren zwei verschiedene Oxidationsstufen des
         "Blei-Akkumulator",
         "Brennstoffzelle",
       ],
+      imageUrl: "/images/bms/ch-ionenbindung.jpg",
+      imageCaption:
+        "Abb.: Elektronentransfer zwischen Natrium und Chlor — Grundprinzip elektrochemischer Prozesse (OpenStax, CC BY 4.0)",
       content: `Ein Herzschrittmacher muss 10 Jahre lang zuverlässig Strom liefern — tief im Brustkorb, ohne Wartung. Die Batterie, die das ermöglicht, basiert auf denselben elektrochemischen Prinzipien wie das einfache Daniell-Element aus dem 19. Jahrhundert. Wer Galvanische Zellen versteht, versteht auch Batterien, Korrosion und sogar die Blutgasanalyse im Krankenhaus.
 
 ---

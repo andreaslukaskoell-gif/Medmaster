@@ -16,7 +16,8 @@ export const chemKapReaktionen: Kapitel = {
       id: "ch-7-01",
       title: "Reaktionstypen und Grundprinzipien",
       imageUrl: "/images/bms/ch-chemische-reaktionen.jpg",
-      imageCaption: "Abb.: Grundlegende Reaktionstypen in der Chemie (OpenStax, CC BY 4.0)",
+      imageCaption:
+        "Abb.: Synthese-, Zersetzungs- und Austauschreaktionen im Überblick — dargestellt am Wort-Analogie-Modell (OpenStax, CC BY 4.0)",
       stichworte: [
         "Synthesereaktion",
         "Zersetzungsreaktion",
@@ -76,8 +77,6 @@ Biologisch nutzt die Zelle **energetische Kopplung**: Die exergone ATP-Hydrolyse
 
 Dass eine Reaktion spontan ist (ΔG < 0), sagt nichts darüber, wie schnell sie abläuft. Holz verbrennt spontan an Luft (ΔG << 0), aber ohne Streichholz passiert nichts. Der Grund: Jede Reaktion muss eine **Aktivierungsenergie E_A** (Energiebarriere, die Edukte überwinden müssen) überwinden — die Energiebarriere zwischen Edukten und dem Übergangszustand.
 
-{{IMAGE}}
-
 Drei Faktoren bestimmen die Geschwindigkeit:
 
 **Temperatur:** Höhere Temperatur → mehr Teilchen haben genug Energie, um E_A zu überschreiten. Faustregel (RGT-Regel): +10 °C verdoppelt bis verdreifacht die Geschwindigkeit.
@@ -109,7 +108,7 @@ Enzyme senken E_A durch den Enzym-Substrat-Komplex im aktiven Zentrum (induced-f
 
 ## 3. Grundbegriffe und Reaktionsgleichungen
 
-Jede chemische Reaktion lässt sich in einer Reaktionsgleichung darstellen:
+Nachdem wir verstanden haben, was Reaktionen antreibt (Gibbs-Energie) und wie schnell sie ablaufen (Aktivierungsenergie, Katalyse), brauchen wir eine gemeinsame Sprache, um Reaktionen präzise zu beschreiben. Jede chemische Reaktion lässt sich in einer Reaktionsgleichung darstellen:
 
 - **Edukte (Reaktanten):** Ausgangsstoffe links vom Pfeil
 - **Produkte:** Entstehende Stoffe rechts vom Pfeil
@@ -419,12 +418,11 @@ Warum baut die Leber Alkohol mit konstanter Rate ab, während Medikamente expone
 
 Das negative Vorzeichen bei Edukten zeigt, dass deren Konzentration abnimmt. Die momentane Reaktionsgeschwindigkeit ist der Grenzwert des Differenzenquotienten (Steigung der Sekante) (Ableitung der Konzentrations-Zeit-Kurve). Im Verlauf einer Reaktion nimmt v in der Regel ab, weil die Eduktkonzentrationen sinken.
 
-
 > **Merke:** Bei der Reaktion aA + bB → cC + dD gilt: v = −(1/a)·Δ[A]/Δt = (1/c)·Δ[C]/Δt. Die stöchiometrischen Koeffizienten müssen berücksichtigt werden!
 
 ## Das Geschwindigkeitsgesetz
 
-Das **empirische Geschwindigkeitsgesetz** verknüpft v mit den Konzentrationen:
+Die Reaktionsgeschwindigkeit allein beschreibt nur, wie schnell sich die Konzentration ändert. Um vorhersagen zu können, wie v von den Bedingungen abhängt, brauchen wir das Geschwindigkeitsgesetz. Das **empirische Geschwindigkeitsgesetz** verknüpft v mit den Konzentrationen:
 
 **v = k · [A]ᵐ · [B]ⁿ**
 
@@ -450,9 +448,9 @@ Das **empirische Geschwindigkeitsgesetz** verknüpft v mit den Konzentrationen:
 **Rechenbeispiel — Halbwertszeit 1. Ordnung:**
 Medikament mit k = 0,0693 h⁻¹. t₁/₂ = 0,693 / 0,0693 = 10 h. Nach 10 h: 50 %. Nach 20 h: 25 %. Nach 30 h: 12,5 %. Steady-State nach ~5 Halbwertszeiten (< 3 % Rest).
 
-{{IMAGE}}
-
 ## Einflussfaktoren auf die Reaktionsgeschwindigkeit
+
+Das Geschwindigkeitsgesetz zeigt, dass v von k und den Konzentrationen abhängt. Aber welche äußeren Faktoren beeinflussen k und damit v? Fünf Stellschrauben sind entscheidend:
 
 **1. Konzentration:** Höhere Konzentration → mehr Kollisionen pro Zeiteinheit → höheres v (gilt nicht für 0. Ordnung). Grundlage: Stoßtheorie — nur wirksame Zusammenstöße (Energie ≥ E_A + richtige Orientierung) führen zur Reaktion.
 
@@ -473,6 +471,8 @@ k = A · e^(−E_A / RT)
 **5. Lösungsmittel und Ionenstärke:** Beeinflussen die effektive Konzentration und Aktivität der Reaktanten. Höhere Ionenstärke kann beschleunigend oder hemmend wirken je nach Ladung der Reaktanten.
 
 ## Michaelis-Menten-Kinetik
+
+Die bisherigen Geschwindigkeitsgesetze gelten für einfache chemische Reaktionen. In biologischen Systemen katalysieren Enzyme die meisten Reaktionen — und deren Kinetik folgt einem eigenen Modell.
 
 {{DIAGRAM:enzyme-substrate}}
 
@@ -498,7 +498,7 @@ Für Enzymreaktionen gilt eine spezielle Kinetik:
 
 ## Halbwertszeit und Pharmaka
 
-Die **Halbwertszeit t₁/₂** ist die Zeit, in der die Konzentration auf die Hälfte abfällt.
+Michaelis-Menten erklärt, warum Enzyme bei hoher Substratkonzentration sättigen. Eine direkte klinische Konsequenz davon ist die Halbwertszeit — das wichtigste Maß für die Dauer, die ein Medikament im Körper wirkt. Die **Halbwertszeit t₁/₂** ist die Zeit, in der die Konzentration auf die Hälfte abfällt.
 - Für 1. Ordnung: t₁/₂ = ln 2 / k ≈ 0,693 / k (konzentrationsunabhängig → klinisch praktisch!)
 - Viele Pharmakokinetik-Modelle nutzen dies: Medikamentenspiegel, Dosierungsintervalle.
 - Faustregel: Nach 5 Halbwertszeiten ist der Wirkstoff praktisch eliminiert (< 3 % verbleibend).
@@ -717,8 +717,9 @@ Die **Halbwertszeit t₁/₂** ist die Zeit, in der die Konzentration auf die H�
     {
       id: "ch-8-02",
       title: "Chemisches Gleichgewicht und Massenwirkungsgesetz",
-      imageUrl: "/images/bms/ch-chemische-reaktionen.jpg",
-      imageCaption: "Abb.: Chemisches Gleichgewicht und Massenwirkungsgesetz (OpenStax, CC BY 4.0)",
+      imageUrl: "/images/bms/ch-enzymatische-reaktion.jpg",
+      imageCaption:
+        "Abb.: Enzym-Substrat-Komplex im Schlüssel-Schloss-Modell — vier Schritte: Bindung, Katalyse, Produktbildung, Freisetzung (OpenStax, CC BY 4.0)",
       diagram: "equilibrium",
       stichworte: [
         "Dynamisches Gleichgewicht",
@@ -746,7 +747,6 @@ Das Gleichgewicht ist kein statischer Zustand. Isotopen-Tracerexperimente zeigen
 
 > **Merke:** Dynamisches Gleichgewicht = v_hin = v_rück. Konzentrationen sind konstant (aber nicht gleich!). Beide Reaktionsrichtungen laufen weiterhin ab.
 
-
 **Zeitlicher Verlauf bis zum Gleichgewicht:**
 - Beginn: [Edukte] hoch, [Produkte] = 0 → v_hin maximal, v_rück = 0
 - Verlauf: [Edukte] sinkt, [Produkte] steigt → v_hin sinkt, v_rück steigt
@@ -757,7 +757,7 @@ Das Gleichgewicht ist kein statischer Zustand. Isotopen-Tracerexperimente zeigen
 
 ## Das Massenwirkungsgesetz (MWG)
 
-Das **Massenwirkungsgesetz** (Guldberg und Waage, 1864) formuliert die quantitative Bedingung für das chemische Gleichgewicht. Für die allgemeine Reaktion:
+Bisher haben wir das dynamische Gleichgewicht qualitativ beschrieben. Doch wie lässt sich die Lage des Gleichgewichts quantitativ ausdrücken? Das **Massenwirkungsgesetz** (Guldberg und Waage, 1864) formuliert die quantitative Bedingung für das chemische Gleichgewicht. Für die allgemeine Reaktion:
 
 **aA + bB ⇌ cC + dD**
 
@@ -777,7 +777,7 @@ Die eckigen Klammern bezeichnen Gleichgewichtskonzentrationen in mol/L, die Hoch
 
 ## Interpretation von K_c
 
-Die Größe von K_c gibt Auskunft über die Lage des Gleichgewichts:
+Nachdem wir wissen, wie K_c berechnet wird, stellt sich die praktische Frage: Was sagt der Zahlenwert von K_c konkret aus? Die Größe von K_c gibt Auskunft über die Lage des Gleichgewichts:
 
 - K_c >> 1 (z. B. 10⁶): Gleichgewicht stark auf Seite der Produkte
 - K_c ≈ 1: Edukte und Produkte etwa gleich
@@ -798,7 +798,6 @@ Für Gasreaktionen ist es praktischer, mit Drücken statt Konzentrationen zu arb
 Der Zusammenhang: **K_p = K_c · (RT)^Δn**
 
 wobei Δn = (c + d) − (a + b) die Änderung der Molzahl an Gasen ist. Bei Δn = 0 ist K_p = K_c.
-
 
 ## Temperaturabhängigkeit von K
 
@@ -1042,9 +1041,9 @@ Das Massenwirkungsgesetz beschreibt die O₂-Bindung an Hämoglobin: Hb + O₂ �
     {
       id: "ch-8-03",
       title: "Le Chatelier-Prinzip — Störung des Gleichgewichts",
-      imageUrl: "/images/bms/ch-chemische-reaktionen.jpg",
+      imageUrl: "/images/bms/ch-enzymatische-reaktion.jpg",
       imageCaption:
-        "Abb.: Le Chatelier-Prinzip und Gleichgewichtsverschiebung (OpenStax, CC BY 4.0)",
+        "Abb.: Enzym-Substrat-Komplex im Schlüssel-Schloss-Modell — Katalysatoren beschleunigen die Gleichgewichtseinstellung, ohne die Lage zu ändern (OpenStax, CC BY 4.0)",
       content: `Wenn ein chemisches Gleichgewicht einmal eingestellt ist, bleibt es nicht zwingend dort stehen. Temperatur, Druck und Konzentrationsänderungen können das Gleichgewicht verschieben — und genau dieses Verhalten beschreibt eines der nützlichsten Prinzipien der Chemie.
 
 ## Das Prinzip von Le Chatelier
@@ -1054,7 +1053,6 @@ Wie steuert der Körper den Blut-pH, obwohl ständig Säuren und Basen anfallen?
 > Wird ein System im chemischen Gleichgewicht durch äußere Einwirkung gestört, so verschiebt es sich in diejenige Richtung, die der Störung entgegenwirkt.
 
 Dieses Prinzip ist eines der wichtigsten Konzepte der physikalischen Chemie — es erlaubt qualitative Vorhersagen über die Verschiebung von Gleichgewichten ohne aufwendige Berechnungen.
-
 
 {{DIAGRAM:le-chatelier}}
 
@@ -1102,7 +1100,6 @@ Die Ammoniaksynthese N₂ + 3H₂ ⇌ 2NH₃ (ΔH = −92 kJ/mol, exotherm) illu
 - **Kontinuierliche NH₃-Entnahme:** Verschiebt Gleichgewicht ständig in Richtung Produkte
 
 ## Puffergleichgewichte und Le Chatelier
-
 
 Blutpuffer (H₂CO₃/HCO₃⁻) funktionieren nach Le Chatelier:
 
@@ -1333,8 +1330,9 @@ CO₂ + H₂O ⇌ H₂CO₃ ⇌ H⁺ + HCO₃⁻
     {
       id: "ch-7-05",
       title: "Thermodynamik — Enthalpie, Entropie, Gibbs-Energie",
-      imageUrl: "/images/bms/ch-atp.jpg",
-      imageCaption: "Abb.: ATP-Struktur und Energieübertragung in der Zelle (OpenStax, CC BY 4.0)",
+      imageUrl: "/images/bms/ch-chemische-reaktionen.jpg",
+      imageCaption:
+        "Abb.: Grundlegende Reaktionstypen — Synthese, Zersetzung und Austausch als Basis thermodynamischer Energiebilanzen (OpenStax, CC BY 4.0)",
       stichworte: [
         "Enthalpie",
         "Entropie",
@@ -1359,8 +1357,6 @@ Die **Enthalpie** H ist eine thermodynamische Zustandsgröße (Zustandsgröße b
 **Exotherme Reaktionen (ΔH < 0):** Das System gibt Wärme an die Umgebung ab — die Produkte sind energieärmer als die Edukte. Du spürst das als Erwärmung. Beispiele: Verbrennung von Methan (ΔH = −890 kJ/mol), Neutralisation starker Säuren und Basen (ΔH ≈ −57 kJ/mol), Kristallisation aus einer übersättigten Lösung.
 
 **Endotherme Reaktionen (ΔH > 0):** Das System nimmt Wärme aus der Umgebung auf — die Produkte sind energiereicher als die Edukte. Du spürst das als Abkühlung. Beispiele: Auflösung von NH₄NO₃ in Wasser (Kältepack, ΔH = +25,7 kJ/mol), thermische Zersetzung von CaCO₃ zu CaO + CO₂ (ΔH = +178 kJ/mol), Photosynthese.
-
-{{IMAGE}}
 
 {{DIAGRAM:energy-diagram}}
 
@@ -1412,7 +1408,7 @@ Fett liefert also pro Gramm mehr als doppelt so viel Energie wie Kohlenhydrate o
 
 ## Entropie (ΔS) — Maß für Unordnung
 
-Die **Entropie** S quantifiziert die Anzahl der möglichen Mikrozustände (Anordnungen auf molekularer Ebene) eines Systems. Boltzmann fasste das in einer berühmten Gleichung zusammen: **S = k_B · ln W** (k_B = Boltzmann-Konstante, W = Anzahl der Mikrozustände). Vereinfacht: Entropie misst, wie viele verschiedene Wege es gibt, die Energie und Materie im System zu verteilen — je mehr Möglichkeiten, desto größer S.
+Die Enthalpie allein erklärt nicht alles: Manche endotherme Prozesse (wie das Auflösen von NH₄NO₃) laufen trotzdem spontan ab. Es muss also eine zweite Triebkraft geben — die Entropie. Die **Entropie** S quantifiziert die Anzahl der möglichen Mikrozustände (Anordnungen auf molekularer Ebene) eines Systems. Boltzmann fasste das in einer berühmten Gleichung zusammen: **S = k_B · ln W** (k_B = Boltzmann-Konstante, W = Anzahl der Mikrozustände). Vereinfacht: Entropie misst, wie viele verschiedene Wege es gibt, die Energie und Materie im System zu verteilen — je mehr Möglichkeiten, desto größer S.
 
 **Entropie steigt (ΔS > 0) bei:**
 - **Auflösung eines Feststoffs** → Ionen verlassen das geordnete Kristallgitter und verteilen sich in Lösung
@@ -1492,7 +1488,7 @@ Bei T = 298 K:
 
 ## ΔG°' — biochemische Standardbedingungen
 
-In der Chemie gelten als Standardbedingungen: 25 °C, 1 bar, alle Stoffe in 1 mol/L Konzentration, pH nicht festgelegt. Aber im Körper herrscht immer pH 7 — und das macht einen gewaltigen Unterschied, weil H⁺-Ionen an vielen biochemischen Reaktionen beteiligt sind.
+Die vier Fälle der Spontaneität gelten universell. Doch wenn wir ΔG-Werte aus verschiedenen Quellen vergleichen, müssen wir auf die Standardbedingungen achten — und hier unterscheidet sich die Biochemie von der klassischen Chemie. In der Chemie gelten als Standardbedingungen: 25 °C, 1 bar, alle Stoffe in 1 mol/L Konzentration, pH nicht festgelegt. Aber im Körper herrscht immer pH 7 — und das macht einen gewaltigen Unterschied, weil H⁺-Ionen an vielen biochemischen Reaktionen beteiligt sind.
 
 Deshalb hat die Biochemie eigene Standardbedingungen definiert, gekennzeichnet durch den Strich ('):
 

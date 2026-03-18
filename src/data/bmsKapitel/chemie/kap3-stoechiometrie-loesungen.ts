@@ -11,9 +11,9 @@ export const chemKapStoech: Kapitel = {
     {
       id: "ch-3s-01",
       title: "Mol-Konzept & Avogadro",
-      imageUrl: "/images/bms/ch-chemische-reaktionen.jpg",
+      imageUrl: "/images/bms/ch-atommodell.jpg",
       imageCaption:
-        "Abb.: Mol-Konzept und Avogadro-Zahl bei chemischen Reaktionen (OpenStax, CC BY 4.0)",
+        "Abb.: Planetenmodell und Elektronenwolke eines Heliumatoms — Grundlage für das Zählen von Teilchen (OpenStax, CC BY 4.0)",
       stichworte: [
         "Mol",
         "Avogadro-Zahl",
@@ -28,7 +28,9 @@ export const chemKapStoech: Kapitel = {
       ],
       content: `Jede Tablette, jede Infusion, jeder Laborwert beruht auf einer einzigen Frage: Wie viele Teilchen sind in dieser Probe?
 
-## Das Mol — die SI-Einheit der Stoffmenge Die Antwort liefert die **Stoffmenge n** mit der Einheit Mol. Seit der SI-Reform von 2019 ist das Mol über eine exakte Zahl definiert: **1 Mol = exakt 6,022 140 76 × 10²³ Teilchen**. Diese Zahl heißt **Avogadro-Zahl N_A** und bildet die Brücke zwischen der makroskopischen Welt, in der wir in Gramm und Litern messen, und der atomaren Welt, in der einzelne Atome und Moleküle existieren.
+## Das Mol — die SI-Einheit der Stoffmenge
+
+Die Antwort liefert die **Stoffmenge n** mit der Einheit Mol. Seit der SI-Reform von 2019 ist das Mol über eine exakte Zahl definiert: **1 Mol = exakt 6,022 140 76 × 10²³ Teilchen**. Diese Zahl heißt **Avogadro-Zahl N_A** und bildet die Brücke zwischen der makroskopischen Welt, in der wir in Gramm und Litern messen, und der atomaren Welt, in der einzelne Atome und Moleküle existieren.
 
 Man kann sich das Mol als gigantische Zähleinheit vorstellen — ähnlich wie ein Dutzend 12 Stück bedeutet, nur dass die Avogadro-Zahl unfassbar viel größer ist. Historisch wurde N_A so gewählt, dass 1 Mol Kohlenstoff-12-Atome exakt 12 g wiegt. Damit ergibt sich ein eleganter Zusammenhang: Die Zahlenwerte der atomaren Massen im Periodensystem entsprechen direkt den Massen in Gramm pro Mol.
 
@@ -41,6 +43,8 @@ Man kann sich das Mol als gigantische Zähleinheit vorstellen — ähnlich wie e
 ---
 
 ## Molare Masse M
+
+Nachdem wir wissen, dass das Mol eine feste Anzahl an Teilchen beschreibt, stellt sich die nächste Frage: Wie schwer ist ein Mol eines bestimmten Stoffes? Genau das beantwortet die molare Masse.
 
 Die **molare Masse M** gibt an, wie viel Gramm ein Mol eines bestimmten Stoffes wiegt. Sie wird in g/mol angegeben und lässt sich direkt aus dem Periodensystem ablesen: Für Elemente entspricht M numerisch der relativen Atommasse A_r, für Moleküle addiert man die Atommassen aller Atome der Summenformel.
 
@@ -56,7 +60,7 @@ In der Biochemie und Molekularbiologie begegnet man anstelle von g/mol häufig d
 
 ## Die drei Grundformeln: n, m, N
 
-Das gesamte stöchiometrische Rechnen basiert auf drei Formeln, die sich wie ein Dreieck gegenseitig verbinden. Wer diese drei Beziehungen beherrscht, kann jede Mol-Aufgabe lösen:
+Mit dem Mol als Zähleinheit und der molaren Masse als Umrechnungsfaktor haben wir nun die Werkzeuge, um zwischen Masse, Stoffmenge und Teilchenanzahl zu wechseln. Das gesamte stöchiometrische Rechnen basiert auf drei Formeln, die sich wie ein Dreieck gegenseitig verbinden. Wer diese drei Beziehungen beherrscht, kann jede Mol-Aufgabe lösen:
 
 Die zentrale Formel lautet **n = m / M** — die Stoffmenge ergibt sich aus der Masse geteilt durch die molare Masse. Umgestellt liefert sie **m = n × M**, also die Masse aus Stoffmenge und molarer Masse. Die dritte Beziehung verbindet die Stoffmenge mit der Teilchenanzahl: **N = n × N_A**. Daraus folgen auch **n = N / N_A** und **m = N × M / N_A** als abgeleitete Formen.
 
@@ -90,6 +94,8 @@ Diese Glucose-Infusion ist ein Standardpräparat auf jeder Station: Sie liefert 
 ---
 
 ## Atomare Masseneinheit und relative Atommasse
+
+Bisher haben wir mit molaren Massen in g/mol gearbeitet. Doch woher kommen die Zahlenwerte im Periodensystem eigentlich? Dazu müssen wir auf die atomare Ebene blicken.
 
 Auf atomarer Ebene sind Massen winzig klein. Um mit handlichen Zahlen arbeiten zu können, hat man die **atomare Masseneinheit u** (unified atomic mass unit) eingeführt: 1 u ist definiert als genau 1/12 der Masse eines ¹²C-Atoms und beträgt 1,6605 × 10⁻²⁴ g. Die **relative Atommasse A_r** ist eine dimensionslose Verhältniszahl, die angibt, wie schwer ein Atom im Vergleich zu 1/12 eines ¹²C-Atoms ist. So hat Kohlenstoff A_r = 12,01 (der Dezimalanteil stammt von den natürlichen Isotopen ¹³C und ¹⁴C). Der entscheidende Zusammenhang: A_r(C) = 12,01 bedeutet M(C) = 12,01 g/mol — die Zahlenwerte von relativer Atommasse und molarer Masse sind identisch, nur die Einheit unterscheidet sich.
 
@@ -209,7 +215,7 @@ Dieses Konzept macht das PSE zu einem universellen Nachschlagewerk für stöchio
       title: "Stöchiometrie & Reaktionsgleichungen",
       imageUrl: "/images/bms/ch-chemische-reaktionen.jpg",
       imageCaption:
-        "Abb.: Stöchiometrie und Massenerhaltung bei chemischen Reaktionen (OpenStax, CC BY 4.0)",
+        "Abb.: Reaktionstypen — Synthese, Zersetzung und Austauschreaktion am BOOKWORM-Beispiel (OpenStax, CC BY 4.0)",
       stichworte: [
         "Reaktionsgleichung",
         "Ausgleichen",
@@ -250,7 +256,7 @@ Ein klinisch relevantes Beispiel ist die Neutralisation von Magnesiumhydroxid mi
 
 ## Stöchiometrisches Rechnen
 
-Das stöchiometrische Rechnen ist die Königsdisziplin der quantitativen Chemie und folgt immer demselben vierstufigen Schema: **Masse Edukt → Mol Edukt → (Koeffizientenverhältnis) → Mol Produkt → Masse Produkt**. Der entscheidende Schritt in der Mitte — die Umrechnung über das Koeffizientenverhältnis — unterscheidet die Stöchiometrie von einer einfachen Mol-Aufgabe. Ohne ausgeglichene Gleichung ist dieser Schritt unmöglich, weshalb das korrekte Ausgleichen die Voraussetzung für jede stöchiometrische Berechnung darstellt.
+Sobald die Reaktionsgleichung korrekt ausgeglichen ist, können wir sie als Rechengrundlage verwenden. Das stöchiometrische Rechnen ist die Königsdisziplin der quantitativen Chemie und folgt immer demselben vierstufigen Schema: **Masse Edukt → Mol Edukt → (Koeffizientenverhältnis) → Mol Produkt → Masse Produkt**. Der entscheidende Schritt in der Mitte — die Umrechnung über das Koeffizientenverhältnis — unterscheidet die Stöchiometrie von einer einfachen Mol-Aufgabe. Ohne ausgeglichene Gleichung ist dieser Schritt unmöglich, weshalb das korrekte Ausgleichen die Voraussetzung für jede stöchiometrische Berechnung darstellt.
 
 ### Rechenbeispiel: CO₂ aus Glucose-Verbrennung
 
@@ -274,6 +280,8 @@ Dieses Beispiel ist zugleich biologisch bedeutsam: Die Gleichung beschreibt die 
 
 ## Limitierendes Reagenz und Ausbeute
 
+Die bisherigen Beispiele gingen davon aus, dass alle Edukte genau im richtigen Verhältnis vorliegen. In der Praxis ist das selten der Fall — und genau hier wird es spannend.
+
 In der Praxis liegen Edukte selten im perfekten stöchiometrischen Verhältnis vor. Wenn ein Reagenz aufgebraucht ist, stoppt die Reaktion — unabhängig davon, wie viel vom anderen Reagenz noch übrig ist. Das zuerst verbrauchte Edukt heißt **limitierendes Reagenz** (Mangelreagenz), das verbleibende befindet sich im **Überschuss**.
 
 ### Rechenbeispiel: Limitierendes Reagenz
@@ -294,6 +302,8 @@ In der pharmazeutischen Industrie spielt die Ausbeute eine zentrale Rolle. Die *
 ---
 
 ## Klinische Anwendungen der Stöchiometrie
+
+Nachdem wir die Grundlagen des Ausgleichens, des stöchiometrischen Rechnens und des limitierenden Reagenz kennengelernt haben, zeigen wir nun, wie allgegenwärtig die Stöchiometrie im klinischen Alltag ist.
 
 Die Stöchiometrie ist alles andere als abstrakte Theorie — sie begegnet Ärztinnen und Ärzten täglich. Ein anschauliches Beispiel ist die **Neutralisation von Magensäure** durch Antacida: Mg(OH)₂ + 2 HCl → MgCl₂ + 2 H₂O. Eine Antacidum-Tablette mit 300 mg Mg(OH)₂ enthält n = 0,300 g / 58,3 g/mol = 5,15 mmol Magnesiumhydroxid. Da das Molverhältnis 1:2 beträgt, neutralisiert sie 2 × 5,15 = 10,3 mmol HCl — eine beachtliche Menge, wenn man bedenkt, dass der Magen täglich etwa 50–100 mmol HCl produziert.
 
@@ -443,7 +453,7 @@ Bei der vollständigen Oxidation von 1 mol Glucose (180 g) entstehen 6 mol CO₂
       title: "Lösungen, Konzentration & Löslichkeit",
       imageUrl: "/images/bms/ch-loesungen.jpg",
       imageCaption:
-        "Abb.: Konzentration und Löslichkeit von Salzen in Wasser (OpenStax, CC BY 4.0)",
+        "Abb.: Osmotische Wirkung auf Erythrozyten — hypertonisch, isotonisch und hypotonisch (OpenStax, CC BY 4.0)",
       stichworte: [
         "Molarität",
         "Massenanteil",
@@ -461,7 +471,9 @@ Bei der vollständigen Oxidation von 1 mol Glucose (180 g) entstehen 6 mol CO₂
       ],
       content: `Ein Patient kommt mit Bewusstseinstrübung in die Notaufnahme.
 
-## Konzentration — die Sprache der Klinik Das Labor meldet: Blutglucose 350 mg/dL, Natrium 128 mmol/L, Serumosmolalität 310 mosmol/kg. Drei Werte, drei Einheiten — und jede davon muss das Notfallteam sofort interpretieren können. Konzentrationsangaben sind die gemeinsame Sprache zwischen Labor, Apotheke und Station. Wer sie sicher beherrscht, versteht Infusionspläne, Dosierungen und Laborergebnisse auf einen Blick.
+## Konzentration — die Sprache der Klinik
+
+Das Labor meldet: Blutglucose 350 mg/dL, Natrium 128 mmol/L, Serumosmolalität 310 mosmol/kg. Drei Werte, drei Einheiten — und jede davon muss das Notfallteam sofort interpretieren können. Konzentrationsangaben sind die gemeinsame Sprache zwischen Labor, Apotheke und Station. Wer sie sicher beherrscht, versteht Infusionspläne, Dosierungen und Laborergebnisse auf einen Blick.
 
 ---
 
@@ -488,6 +500,8 @@ In der Klinik begegnet dir die Molarität fast immer in **mmol/L** — Elektroly
 ---
 
 ## Massenkonzentration und Massenanteil
+
+Die Molarität ist zwar die wichtigste Konzentrationsangabe, aber im klinischen Alltag begegnen dir auch massebasierte Angaben — besonders bei Laborwerten und Infusionslösungen.
 
 Neben der Molarität sind zwei massebasierte Konzentrationsangaben im klinischen Alltag unverzichtbar: die **Massenkonzentration** und der **Massenanteil**.
 
@@ -521,6 +535,8 @@ Der Massenanteil gibt den prozentualen Masseanteil des gelösten Stoffes an der 
 
 {{DIAGRAM:ph-scale}}
 
+Molarität und Massenanteil decken den Großteil des klinischen Alltags ab. Für spezielle Fragestellungen — etwa kolligative Eigenschaften oder Elektrolytbilanzen — gibt es jedoch weitere wichtige Angaben.
+
 Über Molarität und Massenanteil hinaus gibt es Konzentrationsangaben, die am MedAT seltener, aber gezielt gefragt werden:
 
 | Größe | Formel | Einheit | Besonderheit |
@@ -541,6 +557,8 @@ Die **Äquivalentkonzentration** (Normalität, N) berücksichtigt die Wertigkeit
 ---
 
 ## Verdünnungsregel: c₁ × V₁ = c₂ × V₂
+
+In Apotheke und Labor muss man ständig Lösungen auf eine bestimmte Konzentration bringen. Dafür gibt es eine einfache, aber mächtige Formel.
 
 Beim Verdünnen wird nur Lösungsmittel zugefügt — die Stoffmenge n bleibt gleich. Da n = c × V, folgt direkt die Verdünnungsformel:
 
@@ -570,6 +588,8 @@ Man pipettiert 45 mL der 10 %-Lösung in einen Messkolben und füllt mit destill
 
 {{DIAGRAM:ionic-bond}}
 
+Bisher haben wir uns angeschaut, wie man Konzentrationen berechnet und Lösungen verdünnt. Doch es gibt eine natürliche Grenze: Nicht jeder Stoff löst sich unbegrenzt. Das führt uns zum Konzept der Löslichkeit.
+
 Warum bilden sich Nierensteine? Warum fällt BaSO₄ beim Röntgen-Kontrastmittel aus? Die Antwort liegt im **Löslichkeitsprodukt K_sp** — dem Gleichgewicht zwischen gelösten Ionen und ungelöstem Feststoff.
 
 ### Löslichkeit
@@ -597,6 +617,8 @@ Das K_sp ist eine **Gleichgewichtskonstante** — temperaturabhängig, aber konz
 **Lösung:** AgCl ⇌ Ag⁺ + Cl⁻ (1:1-Salz). Sei s = [Ag⁺] = [Cl⁻].
 
 K_sp = s × s = s² → s = √(K_sp) = √(1,8 × 10⁻¹⁰) = **1,34 × 10⁻⁵ mol/L**
+
+> **Merke:** Bei 1:1-Salzen (wie AgCl) ergibt sich die Sättigungskonzentration direkt als Quadratwurzel von K_sp. Bei 1:2-Salzen (wie CaF₂) muss der stöchiometrische Faktor beachtet werden: K_sp = s × (2s)² = 4s³.
 
 ### Klinischer Bezug: Nierensteine
 

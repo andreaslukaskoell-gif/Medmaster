@@ -138,6 +138,9 @@ function sanitizePersisted(state: unknown): Partial<AppState> {
       xp: Number.isFinite(s.xp) ? (s.xp as number) : 0,
       streak: Number.isFinite(s.streak) ? (s.streak as number) : 0,
       lastActiveDate: typeof s.lastActiveDate === "string" ? s.lastActiveDate : "",
+      streakFreezes: Number.isFinite(s.streakFreezes) ? (s.streakFreezes as number) : 1,
+      frozenDays: Array.isArray(s.frozenDays) ? s.frozenDays : [],
+      lastFreezeReset: typeof s.lastFreezeReset === "string" ? s.lastFreezeReset : "",
       darkMode: Boolean(s.darkMode),
       completedChapters: Array.isArray(s.completedChapters) ? s.completedChapters : [],
       quizResults: Array.isArray(s.quizResults) ? s.quizResults : [],
@@ -271,6 +274,12 @@ interface AppState {
   xp: number;
   streak: number;
   lastActiveDate: string;
+  /** Streak Insurance: remaining freezes this week (resets to 1 every Monday) */
+  streakFreezes: number;
+  /** ISO date strings where a freeze was used (streak survived a missed day) */
+  frozenDays: string[];
+  /** Last Monday (ISO date) when streakFreezes was reset */
+  lastFreezeReset: string;
   darkMode: boolean;
   completedChapters: string[];
   quizResults: QuizResult[];
@@ -377,6 +386,9 @@ export const useStore = create<AppState>()(
       xp: 0,
       streak: 0,
       lastActiveDate: "",
+      streakFreezes: 1,
+      frozenDays: [],
+      lastFreezeReset: "",
       darkMode: false,
       completedChapters: [],
       quizResults: [],
@@ -655,21 +667,80 @@ export const useStore = create<AppState>()(
 
       checkStreak: () => {
         const now = new Date();
-        const today = now.toISOString().split("T")[0];
+        const today = now.toISOString().split("T")[0]!;
         const state = get();
         if (state.lastActiveDate === today) return;
+
+        // Reset streakFreezes to 1 every Monday
+        const getMostRecentMonday = (d: Date): string => {
+          const copy = new Date(d);
+          const day = copy.getDay(); // 0=Sun,1=Mon,...
+          const diff = day === 0 ? 6 : day - 1; // days since last Monday
+          copy.setDate(copy.getDate() - diff);
+          return copy.toISOString().split("T")[0]!;
+        };
+        const thisMonday = getMostRecentMonday(now);
+        let { streakFreezes, lastFreezeReset } = state;
+        const { frozenDays } = state;
+        if (lastFreezeReset !== thisMonday) {
+          streakFreezes = 1;
+          lastFreezeReset = thisMonday;
+        }
+
         const yesterday = new Date();
         yesterday.setDate(yesterday.getDate() - 1);
         const yesterdayStr = yesterday.toISOString().split("T")[0];
         if (state.lastActiveDate === yesterdayStr) {
+          // Active yesterday — streak continues normally
           set({
             streak: (state.streak ?? 0) + 1,
             lastActiveDate: today,
             lastActiveAt: now.toISOString(),
+            streakFreezes,
+            lastFreezeReset,
           });
           get().addXP(100);
+        } else if (state.lastActiveDate && (state.streak ?? 0) > 0 && streakFreezes > 0) {
+          // Missed day(s) but have a freeze available — use it
+          // Calculate the missed date(s) between lastActiveDate and yesterday
+          const lastActive = new Date(state.lastActiveDate + "T00:00:00");
+          const missedDates: string[] = [];
+          const cursor = new Date(lastActive);
+          cursor.setDate(cursor.getDate() + 1);
+          while (cursor.toISOString().split("T")[0]! <= yesterdayStr) {
+            missedDates.push(cursor.toISOString().split("T")[0]!);
+            cursor.setDate(cursor.getDate() + 1);
+          }
+          // Only one freeze per week — if more than 1 day missed, streak resets
+          if (missedDates.length === 1) {
+            set({
+              streak: (state.streak ?? 0) + 1,
+              lastActiveDate: today,
+              lastActiveAt: now.toISOString(),
+              streakFreezes: streakFreezes - 1,
+              frozenDays: [...frozenDays, missedDates[0]!],
+              lastFreezeReset,
+            });
+            get().addXP(100);
+          } else {
+            // Multiple days missed — streak resets
+            set({
+              streak: 1,
+              lastActiveDate: today,
+              lastActiveAt: now.toISOString(),
+              streakFreezes,
+              lastFreezeReset,
+            });
+          }
         } else {
-          set({ streak: 1, lastActiveDate: today, lastActiveAt: now.toISOString() });
+          // No freeze available or no prior streak — reset
+          set({
+            streak: 1,
+            lastActiveDate: today,
+            lastActiveAt: now.toISOString(),
+            streakFreezes,
+            lastFreezeReset,
+          });
         }
       },
 

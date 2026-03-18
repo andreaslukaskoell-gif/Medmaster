@@ -25,7 +25,7 @@ export function ContentVisualizer({
   uk,
   subject,
   chapterId,
-  enhancedFormatting,
+  enhancedFormatting: _enhancedFormatting,
   contentClassName = "",
   hinterfragMode = false,
   keywordLinkEntries,
@@ -40,13 +40,18 @@ export function ContentVisualizer({
     );
   }
 
+  // Show hero image only for German visuals (SVG or -de.png) when no inline visual exists
+  const hasInlineVisual = uk.content?.includes("{{IMAGE}}") || uk.content?.includes("{{DIAGRAM");
+  const isGermanImage = uk.imageUrl?.endsWith(".svg") || uk.imageUrl?.includes("-de.png");
+  const showHeroImage = Boolean(uk.imageUrl && isGermanImage && !hasInlineVisual);
+
   return (
     <div className={`space-y-6 ${contentClassName}`}>
-      {/* Image — only show at top if NO {{IMAGE}} placeholder in content */}
-      {uk?.imageUrl && !uk.content?.includes("{{IMAGE}}") && (
+      {/* Image — only show for German visuals (SVG/-de.png) when no DIAGRAM/IMAGE inline */}
+      {showHeroImage && (
         <figure className="my-4 mx-auto max-w-md">
           <ImageWithFallback
-            src={uk.imageUrl}
+            src={uk.imageUrl!}
             alt={uk.imageCaption || uk.title}
             containerClassName="rounded-lg overflow-hidden"
             lightbox

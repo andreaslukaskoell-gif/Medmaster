@@ -13,9 +13,6 @@ export const mathKap6: Kapitel = {
     {
       id: "ma-6-01",
       title: "Vektoren — Grundbegriffe und Operationen",
-      imageUrl: "/images/bms/bio-muskelkontraktion.jpg",
-      imageCaption:
-        "Abb.: Kraftvektoren bei Muskelkontraktion — Richtung und Betrag (OpenStax, CC BY 4.0)",
       stichworte: [
         "Vektor",
         "Skalar",
@@ -356,9 +353,6 @@ $$\\vec{v} = r \\cdot \\begin{pmatrix} \\cos\\alpha \\\\ \\sin\\alpha \\end{pmat
     {
       id: "ma-6-02",
       title: "Skalarprodukt und Kreuzprodukt",
-      imageUrl: "/images/bms/bio-muskelfaser.jpg",
-      imageCaption:
-        "Abb.: Drehmoment am Gelenk — Kreuzprodukt in der Biomechanik (OpenStax, CC BY 4.0)",
       stichworte: [
         "Skalarprodukt",
         "Kreuzprodukt",

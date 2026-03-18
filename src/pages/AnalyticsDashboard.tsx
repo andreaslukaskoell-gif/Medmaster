@@ -17,7 +17,7 @@ function AdminAuthGate({ onUnlock }: { onUnlock: () => void }) {
   useEffect(() => {
     if (loading) return;
     if (!isAuthenticated || !user?.email) {
-      setDenied(true);
+      queueMicrotask(() => setDenied(true));
       return;
     }
     // Require exact email match against allowlist
@@ -26,7 +26,7 @@ function AdminAuthGate({ onUnlock }: { onUnlock: () => void }) {
       setAdminSkipTracking(true);
       onUnlock();
     } else {
-      setDenied(true);
+      queueMicrotask(() => setDenied(true));
     }
   }, [isAuthenticated, user, loading, onUnlock]);
 
@@ -72,6 +72,19 @@ type FunnelStep = { step: string; visitors: number };
 type ExitPage = { page_path: string; exits: number };
 type TrafficSource = { domain: string; count: number };
 type RecentReferral = { ref: string; referrer: string | null; created_at: string };
+type ActiveUser = {
+  session_id: string;
+  visitor_id: string;
+  current_page: string;
+  page_since: string;
+  pages_viewed: number;
+};
+type PageEngagement = {
+  page_path: string;
+  avg_time_seconds: number;
+  total_views: number;
+  unique_visitors: number;
+};
 
 type DashboardData = {
   daily: DailyStat[];
@@ -80,6 +93,8 @@ type DashboardData = {
   funnel: FunnelStep[];
   exitPages: ExitPage[];
   activeSessions: number;
+  activeUsers: ActiveUser[];
+  pageEngagement: PageEngagement[];
   trafficSources: TrafficSource[];
   recentReferrals: RecentReferral[];
 };
@@ -113,6 +128,21 @@ const COLORS = [
 ];
 
 // ── Helpers ──
+
+function formatDuration(secs: number): string {
+  if (secs < 60) return `${Math.round(secs)}s`;
+  const mins = Math.floor(secs / 60);
+  const rem = Math.round(secs % 60);
+  return rem > 0 ? `${mins}m ${rem}s` : `${mins}m`;
+}
+
+function isInternalRow(row: { user_agent?: string | null; properties?: unknown }): boolean {
+  const ua = (row.user_agent as string) || "";
+  const props = (row.properties as Record<string, unknown>) || {};
+  return (
+    /HeadlessChrome|Playwright|Puppeteer|Selenium|webdriver/i.test(ua) || props.is_bot === true
+  );
+}
 
 function shortPath(path: string) {
   if (path === "/") return "Landing";
@@ -167,28 +197,43 @@ async function fetchDashboard(): Promise<DashboardData> {
       funnel: [],
       exitPages: [],
       activeSessions: 0,
+      activeUsers: [],
+      pageEngagement: [],
       trafficSources: [],
       recentReferrals: [],
     };
   }
 
-  const [daily, topPages, topEvents, funnel, exitPages, active] = await Promise.all([
-    supabase.rpc("analytics_daily_stats", { days_back: 30 }),
-    supabase.rpc("analytics_top_pages", { days_back: 7, lim: 10 }),
-    supabase.rpc("analytics_top_events", { days_back: 7, lim: 10 }),
-    supabase.rpc("analytics_funnel", { days_back: 30 }),
-    supabase.rpc("analytics_exit_pages", { days_back: 7, lim: 10 }),
-    supabase.rpc("analytics_active_sessions"),
-  ]);
+  const [daily, topPages, topEvents, funnel, exitPages, active, activeDetail, engagement] =
+    await Promise.all([
+      supabase.rpc("analytics_daily_stats", { days_back: 30 }),
+      supabase.rpc("analytics_top_pages", { days_back: 7, lim: 10 }),
+      supabase.rpc("analytics_top_events", { days_back: 7, lim: 10 }),
+      supabase.rpc("analytics_funnel", { days_back: 30 }),
+      supabase.rpc("analytics_exit_pages", { days_back: 7, lim: 10 }),
+      supabase.rpc("analytics_active_sessions"),
+      supabase.rpc("analytics_active_users_detail"),
+      supabase.rpc("analytics_page_engagement", { days_back: 7, lim: 15 }),
+    ]);
 
-  const anyError = [daily, topPages, topEvents, funnel, exitPages, active].find((r) => r.error);
+  const anyError = [
+    daily,
+    topPages,
+    topEvents,
+    funnel,
+    exitPages,
+    active,
+    activeDetail,
+    engagement,
+  ].find((r) => r.error);
   if (anyError?.error?.message?.includes("does not exist") || anyError?.error?.code === "42883") {
     throw new Error(TABLE_MISSING_MSG);
   }
 
+  // RPCs filter via is_internal_traffic(); direct queries use isInternalRow() client-side
   const referrerResult = await supabase
     .from("analytics_events")
-    .select("referrer")
+    .select("referrer, user_agent, properties")
     .not("referrer", "is", null)
     .neq("referrer", "")
     .gte("created_at", new Date(Date.now() - 30 * 86400000).toISOString())
@@ -198,6 +243,7 @@ async function fetchDashboard(): Promise<DashboardData> {
   if (referrerResult.data) {
     const domainCounts: Record<string, number> = {};
     for (const row of referrerResult.data) {
+      if (isInternalRow(row)) continue;
       const domain = extractDomain(row.referrer as string);
       domainCounts[domain] = (domainCounts[domain] || 0) + 1;
     }
@@ -208,16 +254,19 @@ async function fetchDashboard(): Promise<DashboardData> {
 
   const referralResult = await supabase
     .from("analytics_events")
-    .select("properties, referrer, created_at")
+    .select("properties, referrer, created_at, user_agent")
     .eq("event_name", "referral_visit")
     .order("created_at", { ascending: false })
-    .limit(15);
+    .limit(20);
 
-  const recentReferrals: RecentReferral[] = (referralResult.data || []).map((row) => ({
-    ref: ((row.properties as Record<string, unknown>)?.ref as string) || "?",
-    referrer: row.referrer as string | null,
-    created_at: row.created_at as string,
-  }));
+  const recentReferrals: RecentReferral[] = (referralResult.data || [])
+    .filter((row) => !isInternalRow(row))
+    .slice(0, 15)
+    .map((row) => ({
+      ref: ((row.properties as Record<string, unknown>)?.ref as string) || "?",
+      referrer: row.referrer as string | null,
+      created_at: row.created_at as string,
+    }));
 
   return {
     daily: (daily.data as DailyStat[]) || [],
@@ -226,6 +275,8 @@ async function fetchDashboard(): Promise<DashboardData> {
     funnel: (funnel.data as FunnelStep[]) || [],
     exitPages: (exitPages.data as ExitPage[]) || [],
     activeSessions: typeof active.data === "number" ? active.data : 0,
+    activeUsers: (activeDetail.data as ActiveUser[]) || [],
+    pageEngagement: (engagement.data as PageEngagement[]) || [],
     trafficSources: trafficSources.slice(0, 10),
     recentReferrals,
   };
@@ -430,8 +481,14 @@ function DonutChart({ items }: { items: { label: string; value: number }[] }) {
   const size = 140;
   const r = 52;
   const strokeW = 18;
-  let offset = 0;
   const circumference = 2 * Math.PI * r;
+
+  // Pre-compute cumulative offsets to avoid mutable variable during render
+  const offsets = items.reduce<number[]>((acc, _, i) => {
+    const prev = i === 0 ? 0 : acc[i - 1] + (items[i - 1].value / total) * circumference;
+    acc.push(prev);
+    return acc;
+  }, []);
 
   return (
     <div className="flex items-center gap-6">
@@ -454,7 +511,7 @@ function DonutChart({ items }: { items: { label: string; value: number }[] }) {
           const pct = item.value / total;
           const dash = pct * circumference;
           const gap = circumference - dash;
-          const el = (
+          return (
             <circle
               key={item.label}
               cx={size / 2}
@@ -464,12 +521,10 @@ function DonutChart({ items }: { items: { label: string; value: number }[] }) {
               stroke={COLORS[i % COLORS.length]}
               strokeWidth={strokeW}
               strokeDasharray={`${dash} ${gap}`}
-              strokeDashoffset={-offset}
+              strokeDashoffset={-offsets[i]}
               className="transition-all duration-500"
             />
           );
-          offset += dash;
-          return el;
         })}
         <text
           x={size / 2}
@@ -595,7 +650,11 @@ function Section({ title, children }: { title: string; children: React.ReactNode
 
 export default function AnalyticsDashboard() {
   usePageTitle("Analytics");
-  const [unlocked, setUnlocked] = useState(() => sessionStorage.getItem(SESSION_KEY) === "1");
+  const [unlocked, setUnlocked] = useState(() => {
+    const wasUnlocked = sessionStorage.getItem(SESSION_KEY) === "1";
+    if (wasUnlocked) setAdminSkipTracking(true);
+    return wasUnlocked;
+  });
   const [data, setData] = useState<DashboardData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -664,12 +723,17 @@ export default function AnalyticsDashboard() {
             </div>
           )}
         </div>
-        <button
-          onClick={load}
-          className="text-xs text-[var(--accent)] hover:underline cursor-pointer"
-        >
-          Aktualisieren
-        </button>
+        <div className="flex items-center gap-3">
+          <span className="text-[10px] text-emerald-500 bg-emerald-500/10 px-2 py-0.5 rounded-full">
+            Bots & Admin gefiltert
+          </span>
+          <button
+            onClick={load}
+            className="text-xs text-[var(--accent)] hover:underline cursor-pointer"
+          >
+            Aktualisieren
+          </button>
+        </div>
       </div>
 
       {/* 1. Key Metrics */}
@@ -690,7 +754,95 @@ export default function AnalyticsDashboard() {
         />
       </div>
 
-      {/* 2. Visitor Sparkline Area Chart */}
+      {/* 2. Live Users — who's on right now */}
+      {data.activeUsers.length > 0 && (
+        <div className="bg-[var(--surface)] rounded-xl border border-emerald-500/30 overflow-hidden">
+          <div className="flex items-center gap-2.5 px-5 py-3 border-b border-[var(--border)]">
+            <LiveDot />
+            <h2 className="text-sm font-semibold text-[var(--text-primary)]">
+              {data.activeUsers.length} {data.activeUsers.length === 1 ? "User" : "User"} gerade
+              online
+            </h2>
+            <span className="text-[10px] text-[var(--muted)] ml-auto">nur echte Besucher</span>
+          </div>
+          <div className="divide-y divide-[var(--border)]/50">
+            {data.activeUsers.map((u) => {
+              const minsAgo = Math.max(
+                0,
+                Math.round((Date.now() - new Date(u.page_since).getTime()) / 60000)
+              );
+              return (
+                <div
+                  key={u.session_id}
+                  className="flex items-center gap-3 px-5 py-3 hover:bg-[var(--background)]/50 transition-colors"
+                >
+                  {/* Avatar placeholder */}
+                  <div className="w-8 h-8 rounded-full bg-[var(--accent)]/10 flex items-center justify-center text-xs font-bold text-[var(--accent)] shrink-0">
+                    {u.visitor_id.slice(0, 2).toUpperCase()}
+                  </div>
+                  {/* Current page */}
+                  <div className="flex-1 min-w-0">
+                    <div className="text-sm font-medium text-[var(--text-primary)] truncate">
+                      {shortPath(u.current_page)}
+                    </div>
+                    <div className="text-[11px] text-[var(--muted)]">
+                      {u.pages_viewed} {u.pages_viewed === 1 ? "Seite" : "Seiten"} besucht
+                    </div>
+                  </div>
+                  {/* Time indicator */}
+                  <div className="text-right shrink-0">
+                    <span
+                      className={`text-xs font-medium ${minsAgo <= 2 ? "text-emerald-500" : minsAgo <= 10 ? "text-amber-500" : "text-[var(--muted)]"}`}
+                    >
+                      {minsAgo === 0 ? "jetzt" : `vor ${minsAgo}m`}
+                    </span>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
+
+      {/* 3. Page Engagement — where users spend time */}
+      {data.pageEngagement.length > 0 && (
+        <Section title="Verweildauer pro Seite (7 Tage)">
+          <div className="space-y-2.5">
+            {data.pageEngagement.map((p, i) => {
+              const maxSecs = Math.max(1, ...data.pageEngagement.map((e) => e.avg_time_seconds));
+              const pct = (p.avg_time_seconds / maxSecs) * 100;
+              const hue = Math.min(140, (p.avg_time_seconds / 300) * 140); // 0s=red → 5min=green
+              return (
+                <div key={p.page_path + i}>
+                  <div className="flex items-center justify-between mb-1">
+                    <span className="text-xs text-[var(--text-secondary)] truncate max-w-[55%]">
+                      {shortPath(p.page_path)}
+                    </span>
+                    <div className="flex items-center gap-3 text-xs">
+                      <span className="text-[var(--muted)]">{p.unique_visitors} Besucher</span>
+                      <span className="font-bold text-[var(--text-primary)] tabular-nums w-16 text-right">
+                        {formatDuration(p.avg_time_seconds)}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="h-2 bg-[var(--background)] rounded-full overflow-hidden">
+                    <div
+                      className="h-full rounded-full transition-all duration-500"
+                      style={{
+                        width: `${Math.max(pct, 2)}%`,
+                        background: `hsl(${hue}, 65%, 50%)`,
+                        opacity: 0.8,
+                      }}
+                    />
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </Section>
+      )}
+
+      {/* 4. Visitor Sparkline Area Chart */}
       <Section title="Besucher & Aufrufe (30 Tage)">
         <div className="flex gap-4 mb-3 text-xs text-[var(--muted)]">
           <span className="flex items-center gap-1.5">
@@ -705,12 +857,12 @@ export default function AnalyticsDashboard() {
         <SparkArea data={data.daily} height={160} />
       </Section>
 
-      {/* 3. Funnel */}
+      {/* 5. Funnel */}
       <Section title="Conversion Funnel (30 Tage)">
         <FunnelViz steps={FUNNEL_STEPS} data={data.funnel} />
       </Section>
 
-      {/* 4. Top Pages + Events */}
+      {/* 6. Top Pages + Events */}
       <div className="grid grid-cols-2 gap-4">
         <Section title="Top Seiten (7 Tage)">
           <HorizontalBars
@@ -732,7 +884,7 @@ export default function AnalyticsDashboard() {
         </Section>
       </div>
 
-      {/* 5. Traffic Sources (Donut) + Referrals */}
+      {/* 7. Traffic Sources (Donut) + Referrals */}
       <div className="grid grid-cols-2 gap-4">
         <Section title="Traffic-Quellen (30 Tage)">
           <DonutChart
@@ -763,7 +915,7 @@ export default function AnalyticsDashboard() {
         </Section>
       </div>
 
-      {/* 6. Exit Pages */}
+      {/* 8. Exit Pages */}
       <Section title="Top Absprung-Seiten (7 Tage)">
         <HorizontalBars
           items={data.exitPages.map((p) => ({ label: shortPath(p.page_path), value: p.exits }))}

@@ -43,7 +43,7 @@ export const biologiePool11: Question[] = [
     1,
     "Enzyme sind Biokatalysatoren und senken die Aktivierungsenergie. Sie werden nicht verbraucht.",
     "leicht",
-    ["Enzyme (Biokatalysatoren für biochemische Reaktionen im Stoffwechsel)", "Stoffwechsel"]
+    ["Enzyme", "Stoffwechsel"]
   ),
   q(
     "bio-pool-11-002",
@@ -91,7 +91,7 @@ export const biologiePool11: Question[] = [
     2,
     "Testosteron wird vor allem in den Leydig-Zellen der Hoden gebildet. Die Nebenniere produziert geringe Mengen Androgene.",
     "leicht",
-    ["Hormone (Signalmoleküle des endokrinen Systems für die Fernwirkung)", "Reproduktion"]
+    ["Hormone", "Reproduktion"]
   ),
   q(
     "bio-pool-11-005",
@@ -117,7 +117,7 @@ export const biologiePool11: Question[] = [
     2,
     "Der Zellkern hat eine Doppelmembran (Kernhülle) und enthält die DNA. Mitochondrien haben auch Doppelmembran, aber die Haupt-DNA liegt im Kern.",
     "leicht",
-    ["Zelle", "Zellkern (Nukleus mit Chromatin und Kernhülle aus Doppelmembran)"]
+    ["Zelle", "Zellkern"]
   ),
   q(
     "bio-pool-11-007",
@@ -265,7 +265,7 @@ export const biologiePool11: Question[] = [
     1,
     "Männer (XY) haben nur ein X-Chromosom; ein rezessives Allel auf dem X führt bereits zum Phänotyp. Frauen (XX) können Konduktorinnen sein.",
     "mittel",
-    ["Vererbung", "X-chromosomal (geschlechtsgebundene Vererbung über das X)"]
+    ["Vererbung", "X-chromosomal"]
   ),
   q(
     "bio-pool-11-020",
@@ -281,7 +281,7 @@ export const biologiePool11: Question[] = [
     1,
     "Renin wird in den Nieren (juxtaglomeruläre Zellen) gebildet und ist Teil des Renin-Angiotensin-Aldosteron-Systems (Blutdruckregulation).",
     "mittel",
-    ["Hormone (Signalmoleküle des endokrinen Systems für die Fernwirkung)", "Niere"]
+    ["Hormone", "Niere"]
   ),
   q(
     "bio-pool-11-021",
@@ -413,7 +413,7 @@ export const biologiePool11: Question[] = [
     3,
     "Insulin senkt den Blutzucker. Glukagon erhöht ihn.",
     "leicht",
-    ["Hormone (Signalmoleküle des endokrinen Systems für die Fernwirkung)", "Blutzucker"]
+    ["Hormone", "Blutzucker"]
   ),
   q(
     "bio-pool-11-030",
@@ -485,7 +485,7 @@ export const biologiePool11: Question[] = [
     2,
     "Erythropoetin (EPO) wird vor allem in der Niere gebildet und stimuliert die Bildung roter Blutkörperchen im Knochenmark.",
     "mittel",
-    ["Hormone (Signalmoleküle des endokrinen Systems für die Fernwirkung)", "Blut", "Niere"]
+    ["Hormone", "Blut", "Niere"]
   ),
   q(
     "bio-pool-11-036",
@@ -521,7 +521,7 @@ export const biologiePool11: Question[] = [
     1,
     "Antikörper (Immunglobuline) werden von Plasmazellen (aus B-Lymphozyten) gebildet und sind Proteine der humoralen Abwehr.",
     "leicht",
-    ["Immunologie", "Antikörper (Immunglobuline zur spezifischen Antigenerkennung und -bindung)"]
+    ["Immunologie", "Antikörper"]
   ),
   q(
     "bio-pool-11-040",
@@ -573,7 +573,7 @@ export const biologiePool11: Question[] = [
     1,
     "Aldosteron (Mineralokortikoid) wird in der Nebennierenrinde gebildet und reguliert den Natrium-Kalium-Haushalt und den Blutdruck.",
     "mittel",
-    ["Hormone", "Nebenniere (Glandula suprarenalis) mit Cortisol und Adrenalin"]
+    ["Hormone", "Nebenniere"]
   ),
   q(
     "bio-pool-11-044",
@@ -621,7 +621,7 @@ export const biologiePool11: Question[] = [
     3,
     "Parathormon wird in den Nebenschilddrüsen gebildet, nicht in der Schilddrüse (D falsch). Die Schilddrüse bildet T3, T4 und Calcitonin.",
     "mittel",
-    ["Schilddrüse (Glandula thyroidea) mit T3/T4-Sekretion", "FALSCH"]
+    ["Schilddrüse", "FALSCH"]
   ),
   q(
     "bio-pool-11-047",
@@ -685,7 +685,7 @@ export const biologiePool11: Question[] = [
     1,
     "Symbiose im engeren Sinn = wechselseitiger Nutzen. Oft wird der Begriff auch für enge Lebensgemeinschaften verwendet.",
     "mittel",
-    ["Ökologie", "Symbiose (wechselseitig vorteilhaftes Zusammenleben zweier Arten)"]
+    ["Ökologie", "Symbiose"]
   ),
   q(
     "bio-pool-11-051",
@@ -717,7 +717,7 @@ export const biologiePool11: Question[] = [
     1,
     "Gastrin wird in der Magenschleimhaut (Antrum) gebildet und stimuliert die Magensäureproduktion.",
     "mittel",
-    ["Verdauung", "Hormone (Signalmoleküle des endokrinen Systems für die Fernwirkung)"]
+    ["Verdauung", "Hormone"]
   ),
   q(
     "bio-pool-11-053",
@@ -733,7 +733,7 @@ export const biologiePool11: Question[] = [
     1,
     "Das Flüssig-Mosaik-Modell: Lipiddoppelschicht mit eingelagerten und aufgelagerten Proteinen (und Kohlenhydraten).",
     "leicht",
-    ["Zellmembran (Zytoplasmamembran als Permeabilitätsbarriere aller Zellen)", "Zelle"]
+    ["Zellmembran", "Zelle"]
   ),
   q(
     "bio-pool-11-054",
@@ -749,7 +749,7 @@ export const biologiePool11: Question[] = [
     2,
     "Nach der 8. Woche sind die Organanlagen angelegt (Organogenese). Ab dann spricht man vom Fetus.",
     "mittel",
-    ["Embryologie", "Organogenese (Differenzierung und Anlage der embryonalen Organsysteme)"]
+    ["Embryologie", "Organogenese"]
   ),
   q(
     "bio-pool-11-055",
@@ -765,7 +765,7 @@ export const biologiePool11: Question[] = [
     2,
     "T-Killerzellen (zytotoxische T-Zellen) erkennen virusinfizierte Zellen über MHC-I und können sie abtöten. T-Zellen reifen im Thymus.",
     "mittel",
-    ["Immunologie", "T-Zellen (thymusgereifte Lymphozyten der zellulären Immunabwehr)"]
+    ["Immunologie", "T-Zellen"]
   ),
   q(
     "bio-pool-11-056",
@@ -775,7 +775,7 @@ export const biologiePool11: Question[] = [
       "Großhirn (Cerebrum)",
       "Zwischenhirn (Diencephalon)",
       "Kleinhirn (Cerebellum)",
-      "Hirnstamm als lebenswichtiges Regulationszentrum",
+      "Hirnstamm",
       "Rückenmark (Medulla spinalis)",
     ],
     2,

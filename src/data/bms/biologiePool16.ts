@@ -46,14 +46,14 @@ export const biologiePool16: Question[] = [
     [
       "Nebenniere (Glandula suprarenalis)",
       "Hypophysenvorderlappen",
-      "Hypothalamus als übergeordnetes Steuerungszentrum des Hormonsystems",
+      "Hypothalamus",
       "Niere",
       "Schilddrüse (Glandula thyroidea)",
     ],
     2,
     "ADH (Vasopressin) wird im Hypothalamus gebildet und im Hypophysenhinterlappen gespeichert.",
     "mittel",
-    ["Hormone (Signalmoleküle des endokrinen Systems für die Fernwirkung)", "ADH"]
+    ["Hormone", "ADH"]
   ),
   q(
     "bio-pool-16-011",
@@ -95,7 +95,7 @@ export const biologiePool16: Question[] = [
     1,
     "Konkurrenz entsteht um dieselbe begrenzte Ressource (Nahrung, Raum, Licht).",
     "leicht",
-    ["Ökologie", "Konkurrenz (Wettbewerb um begrenzte Ressourcen zwischen Organismen)"]
+    ["Ökologie", "Konkurrenz"]
   ),
   q(
     "bio-pool-16-016",
@@ -105,7 +105,7 @@ export const biologiePool16: Question[] = [
     1,
     "FSH (follikelstimulierendes Hormon) stimuliert die Follikelreifung im Eierstock.",
     "mittel",
-    ["Hormone (Signalmoleküle des endokrinen Systems für die Fernwirkung)", "Reproduktion"]
+    ["Hormone", "Reproduktion"]
   ),
   q(
     "bio-pool-16-031",
@@ -131,7 +131,7 @@ export const biologiePool16: Question[] = [
     1,
     "Amylase (Stärkespaltung) wird in Speicheldrüsen und Bauchspeicheldrüse gebildet.",
     "mittel",
-    ["Verdauung", "Enzyme (Biokatalysatoren für biochemische Reaktionen im Stoffwechsel)"]
+    ["Verdauung", "Enzyme"]
   ),
   q(
     "bio-pool-16-038",
@@ -189,7 +189,7 @@ export const biologiePool16: Question[] = [
     1,
     "Parathormon (PTH) aus den Nebenschilddrüsen erhöht den Calciumspiegel.",
     "mittel",
-    ["Hormone (Signalmoleküle des endokrinen Systems für die Fernwirkung)", "Calcium"]
+    ["Hormone", "Calcium"]
   ),
   q(
     "bio-pool-16-052",

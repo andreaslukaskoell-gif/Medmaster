@@ -11,9 +11,6 @@ export const physKapElektrizitaet: Kapitel = {
     {
       id: "ph-5-01",
       title: "Elektrische Ladung, Feld und Coulomb-Gesetz",
-      imageUrl: "/images/bms/bio-natrium-kalium-pumpe.jpg",
-      imageCaption:
-        "Abb.: Die Na\u207A/K\u207A-ATPase erzeugt das Membranpotenzial durch Ionentransport (OpenStax, CC BY 4.0)",
       stichworte: [
         "Elementarladung",
         "Coulomb-Gesetz",
@@ -279,9 +276,6 @@ Die tatsächliche Wanderungsgeschwindigkeit hängt von Reibung im Gel ab (größ
     {
       id: "ph-5-02",
       title: "Strom, Widerstand und Ohmsches Gesetz",
-      imageUrl: "/images/bms/bio-neuron.jpg",
-      imageCaption:
-        "Abb.: Nervenzelle — elektrische Signalweiterleitung als biologischer Stromkreis (OpenStax, CC BY 4.0)",
       stichworte: [
         "Stromstärke",
         "Ohmsches Gesetz",
@@ -626,9 +620,6 @@ Zum Vergleich: 1 mm Kupferdraht gleichen Querschnitts hätte R = 1,7×10⁻⁸ �
     {
       id: "ph-5-03",
       title: "Kirchhoffsche Gesetze und Schaltkreise",
-      imageUrl: "/images/bms/bio-neuron-typen.jpg",
-      imageCaption:
-        "Abb.: Verzweigte Nervenbahnen als Analogon zu Kirchhoffschen Knotenpunkten (OpenStax, CC BY 4.0)",
       stichworte: [
         "Reihenschaltung",
         "Parallelschaltung",
@@ -993,9 +984,6 @@ Bedeutung: Nach einem synaptischen Strompuls erreicht das Membranpotential in ~1
     {
       id: "ph-5-04",
       title: "Magnetismus und elektromagnetische Induktion",
-      imageUrl: "/images/bms/bio-hirnstamm.jpg",
-      imageCaption:
-        "Abb.: MRT des Gehirns — Magnetfelder in der medizinischen Bildgebung (OpenStax, CC BY 4.0)",
       stichworte: [
         "Magnetfeld",
         "Feldlinien",
@@ -1495,8 +1483,6 @@ F = q·v·B = 1,6×10⁻¹⁹ × 0,5 × 3 = **2,4×10⁻¹⁹ N**. Dieser winzig
     {
       id: "ph-6-01",
       title: "Geometrische Optik",
-      imageUrl: "/images/bms/bio-auge.jpg",
-      imageCaption: "Abb.: Geometrische Optik des menschlichen Auges (OpenStax, CC BY 4.0)",
       stichworte: [
         "Reflexionsgesetz",
         "Brechungsgesetz",
@@ -1770,9 +1756,6 @@ Brechkraft der Linse: D = 1/f = 1/0,20 m = **5 dpt**.`,
     {
       id: "ph-6-02",
       title: "Wellenoptik",
-      imageUrl: "/images/bms/bio-zellmembran-bilayer.jpg",
-      imageCaption:
-        "Abb.: Dünnschichtinterferenz — vergleichbar mit optischen Phänomenen (OpenStax, CC BY 4.0)",
       stichworte: [
         "Interferenz",
         "Beugung",
@@ -2135,9 +2118,6 @@ Eine nur 96 nm dicke MgF₂-Schicht eliminiert die Reflexion bei 530 nm nahezu v
     {
       id: "ph-6-03",
       title: "Optische Instrumente",
-      imageUrl: "/images/bms/bio-tierzelle.jpg",
-      imageCaption:
-        "Abb.: Zellstrukturen unter dem Mikroskop — optische Vergrößerung in der Medizin (OpenStax, CC BY 4.0)",
       stichworte: [
         "Lupe",
         "Lichtmikroskop",
@@ -2482,6 +2462,8 @@ Das menschliche Auge ist ein optisches Hochleistungssystem mit ~60 Dioptrien Bre
 Die **Gesamtbrechkraft** des entspannten Auges beträgt ca. **60 Dioptrien**, bei maximaler Akkommodation ca. 70 dpt.
 
 Der **Augapfeldurchmesser** (Hornhaut → Netzhaut = optische Achse) beträgt beim Erwachsenen ca. 24 mm.
+
+{{IMAGE}}
 
 {{DIAGRAM:lens-imaging}}
 

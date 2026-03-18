@@ -15,8 +15,16 @@ export const chemKapOrganisch: Kapitel = {
       id: "ch-12-01",
       title: "Kohlenwasserstoffe — Alkane, Alkene, Alkine",
       imageUrl: "/images/bms/ch-kovalente-bindung.jpg",
-      imageCaption: "Abb.: Kovalente Bindungen in organischen Molekülen (OpenStax, CC BY 4.0)",
+      imageCaption:
+        "Abb.: Kovalente Bindungen — Einfachbindung (H–H), Doppelbindung (O=O) und Doppelbindungen im CO₂ mit Elektronenpaar-Darstellung (OpenStax, CC BY 4.0)",
       content: `Ein einziges Kohlenstoffatom kann vier stabile Bindungen eingehen — und genau diese Vielseitigkeit macht Kohlenstoff zum Baustein aller Biomoleküle, von der Glucose im Blut bis zum Cholesterin in der Zellmembran. Die organische Chemie beginnt bei den einfachsten Kohlenstoffverbindungen: den Kohlenwasserstoffen.
+
+**In diesem Kapitel lernst du:**
+- Die drei Klassen der Kohlenwasserstoffe (Alkane, Alkene, Alkine) und ihre allgemeinen Formeln
+- Hybridisierung, Bindungswinkel und typische Reaktionen jeder Klasse
+- Die IUPAC-Nomenklatur zur systematischen Benennung organischer Verbindungen
+- Den Zusammenhang zwischen Molekülstruktur, zwischenmolekularen Kräften und Siedepunkten
+- Klinisch relevante Kohlenwasserstoffe und ihre medizinische Bedeutung
 
 ## Alkane — gesättigte Kohlenwasserstoffe
 
@@ -34,16 +42,27 @@ Die **typische Reaktion der Alkane** ist die radikalische Substitution (SR). Da 
 
 Die Struktur bestimmt die Reaktivität: Alkane mit ihren gesättigten C-C-Bindungen sind relativ reaktionsträge — erst Alkene und Alkine mit ihren π-Bindungen eröffnen ein reiches Reaktionsspektrum.
 
+> **Merke:** Alkane sind gesättigt (nur σ-Bindungen, sp³), unpolar und reagieren nur unter energiereichen Bedingungen (UV/Hitze) durch radikalische Substitution. Drei Phasen: Kettenstart → Kettenfortpflanzung → Kettenabbruch.
+
+---
+
+Nachdem wir die gesättigten Kohlenwasserstoffe und ihre Reaktionsträgheit kennengelernt haben, wenden wir uns nun den Alkenen zu — hier sorgt eine einzige Doppelbindung für grundlegend andere Eigenschaften und Reaktionen.
+
 ## Alkene — einfach ungesättigte Kohlenwasserstoffe
 
 Entfernt man aus einem Alkan zwei benachbarte Wasserstoffatome, entsteht zwischen den betroffenen Kohlenstoffatomen eine Doppelbindung — ein Alken mit der allgemeinen Formel CₙH₂ₙ. Diese Doppelbindung besteht aus einer σ-Bindung und einer zusätzlichen π-Bindung, die durch seitliche Überlappung der unhybridisierten p-Orbitale zustande kommt. Die beteiligten C-Atome sind sp²-hybridisiert und bilden eine trigonal-planare Geometrie mit einem Bindungswinkel von 120°. Die π-Bindung ist energiereicher und zugleich reaktiver als die σ-Bindung, weil die Elektronendichte oberhalb und unterhalb der Molekülebene für Angriffe zugänglich ist.
 
 Das elektronenreiche π-System macht Alkene zum idealen Angriffsziel für elektronenarme Teilchen (Elektrophile). Die **typische Reaktion** ist daher die elektrophile Addition: Brom addiert sich an die Doppelbindung (C₂H₄ + Br₂ → C₂H₄Br₂), und darauf beruht der klassische **Bromwasser-Nachweis** — orangefarbenes Bromwasser entfärbt sich bei Anwesenheit einer C=C- oder C≡C-Bindung.
 
-
 Bei der Addition von Halogenwasserstoffen an asymmetrische Alkene bestimmt die **Markovnikov-Regel** die Regioselektivität: Das H geht an das C-Atom mit den meisten H-Atomen — weil das entstehende Carbokation dann stabiler (tertiär > sekundär > primär) ist. Das Halogenid addiert anschließend an das höher substituierte, positiv geladene C-Atom. In der Praxis: Bei Propen (CH₃−CH=CH₂) + HBr addiert H an das endständige CH₂ (wird zu CH₃), und Br⁻ an das mittlere C (tertiär stabilisiertes Carbokation) → 2-Brompropan (Markovnikov-Produkt).
 
 Da die π-Bindung die freie Drehbarkeit um die C=C-Achse aufhebt, können Alkene **cis/trans-Isomerie** zeigen, sofern beide doppelgebundenen C-Atome jeweils zwei verschiedene Substituenten tragen. Bei cis-But-2-en stehen beide Methylgruppen auf derselben Seite (Sdp. 3,7 °C), bei trans-But-2-en auf gegenüberliegenden (Sdp. 0,9 °C). Für komplexere Fälle nutzt man die E/Z-Nomenklatur nach CIP-Prioritätsregeln (höhere Ordnungszahl = höhere Priorität).
+
+> **Merke:** Alkene (CₙH₂ₙ) haben eine C=C-Doppelbindung (sp², 120°), reagieren durch elektrophile Addition und können cis/trans-Isomerie zeigen.
+
+---
+
+Bisher haben wir Einfach- und Doppelbindungen betrachtet. Die nächste Stufe der Ungesättigtheit — die Dreifachbindung — führt uns zu den Alkinen.
 
 ## Alkine — zweifach ungesättigte Kohlenwasserstoffe
 
@@ -63,9 +82,17 @@ Das wichtigste Alkin ist Ethin (Acetylen, C₂H₂), das mit reinem Sauerstoff T
 
 {{DIAGRAM:hydrocarbon-types}}
 
+---
+
+Die reaktionsfreudige Doppelbindung der Alkene lässt sich nicht nur für Additionen nutzen — sie ist auch der Schlüssel zur Herstellung von Kunststoffen.
+
 ## Polymerisation
 
 Die Doppelbindung der Alkene eröffnet eine weitere Reaktionsmöglichkeit: Durch radikalische oder koordinative **Polymerisation** lassen sich Tausende von Monomeren zu Makromolekülen verknüpfen. So entsteht aus Ethen das allgegenwärtige Polyethylen (PE): n CH₂=CH₂ → (−CH₂−CH₂−)ₙ. In der Medizin begegnen einem Polymere auf Schritt und Tritt — Polypropylen (PP) in chirurgischem Nahtmaterial, PVC in Infusionsbeuteln und Polystyrol (PS) in Einweg-Laborartikeln.
+
+---
+
+Um die physikalischen Eigenschaften der Kohlenwasserstoffe besser zu verstehen, lohnt ein genauerer Blick auf die zwischenmolekularen Kräfte — sie erklären, warum Methan ein Gas und Octan eine Flüssigkeit ist.
 
 ## Siedepunkte und intermolekulare Wechselwirkungen
 
@@ -74,6 +101,12 @@ Die physikalischen Eigenschaften der Kohlenwasserstoffe werden fast ausschließl
 Doch nicht nur die Kettenlänge zählt — auch die **Molekülgestalt** spielt eine entscheidende Rolle. Vergleicht man n-Pentan (Sdp. 36 °C) mit dem kugelförmigen Neopentan (Sdp. 9,5 °C), so siedet das verzweigte Isomer trotz identischer Summenformel C₅H₁₂ deutlich niedriger, weil seine kompakte Form weniger Kontaktfläche bietet und damit schwächere van-der-Waals-Kräfte entstehen.
 
 Besonders eindrücklich wird der Einfluss funktioneller Gruppen beim Vergleich von Ethanol und Dimethylether: Beide besitzen die Summenformel C₂H₆O, doch Ethanol (Sdp. 78 °C) siedet um über 100 Grad höher als Dimethylether (Sdp. −24 °C). Der Grund sind die Wasserstoffbrücken, die nur die OH-Gruppe des Ethanols ausbilden kann. Carbonsäuren gehen sogar noch stärkere Wechselwirkungen ein, weil sie über ihre COOH-Gruppen stabile Dimere bilden.
+
+> **Merke:** Siedepunkt steigt mit Kettenlänge (mehr VdW-Kräfte) und sinkt mit Verzweigung (kleinere Oberfläche). Funktionelle Gruppen mit H-Brücken (–OH, –COOH) erhöhen den Siedepunkt drastisch.
+
+---
+
+Nachdem wir verstanden haben, wie Struktur und Kräfte die Eigenschaften bestimmen, benötigen wir ein einheitliches System, um organische Verbindungen korrekt zu benennen.
 
 ## IUPAC-Nomenklatur (systematische Benennung)
 
@@ -96,6 +129,10 @@ Ein konkretes Beispiel: CH₃-CH(OH)-CH₃ enthält drei Kohlenstoffatome (Propa
 > **Merke:** IUPAC-Nomenklatur: (1) Längste C-Kette = Stammname, (2) Endung nach Bindungstyp (-an/-en/-in), (3) Substituenten mit niedrigster Positionsnummer als Präfix, (4) funktionelle Gruppe bestimmt Suffix (-ol, -al, -on, -säure). Niedrigste Nummerierung hat Vorrang!
 
 > **Prüfungstipp:** Im MedAT wird häufig die Verwechslung von Alkan/Alken/Alkin-Formeln abgefragt. Merke: Alkane haben die meisten H-Atome (CₙH₂ₙ₊₂), mit jeder Doppelbindung gehen zwei H verloren. Typische Falle: Cycloalkane (CₙH₂ₙ) haben die gleiche Formel wie Alkene — aber keine Doppelbindung!
+
+---
+
+Theorie und Benennung sind die Basis — doch Kohlenwasserstoffe und ihre Derivate begegnen uns auch im klinischen Alltag.
 
 ## Klinischer Bezug
 
@@ -368,11 +405,19 @@ Unter den medizinisch relevanten Alkoholen verdient **Methanol** (CH₃OH) beson
 
 Neben der Oxidation zeigen Alkohole weitere wichtige Reaktionen: Unter Einwirkung von konzentrierter Schwefelsäure und Wärme kommt es zur **Dehydratisierung** — entweder intramolekular zum Alken (Eliminierung) oder intermolekular zum Ether (Kondensation). Die **Veresterung** mit Carbonsäuren und die **nucleophile Substitution** zum Alkylhalogenid erweitern das Reaktionsspektrum.
 
-{{IMAGE}}
+> **Merke:** Alkohole: primär → Aldehyd → Carbonsäure (Oxidation). Sekundär → Keton (Sackgasse). Tertiär → nicht oxidierbar. Methanol → Formaldehyd → Erblindung!
+
+---
+
+Eng verwandt mit den Alkoholen sind die Ether — sie entstehen formal durch Kondensation zweier Alkohole und zeigen ganz andere Eigenschaften.
 
 ## Ether (R−O−R')
 
 Ether enthalten ein Sauerstoffatom zwischen zwei organischen Resten. Im Gegensatz zu Alkoholen können sie keine Wasserstoffbrücken als Donor bilden und sind daher relativ unreaktiv mit niedrigeren Siedepunkten. **Diethylether** (C₂H₅-O-C₂H₅) erlangte medizinhistorische Bedeutung als erstes inhalatives Narkosemittel — 1846 wurde die erste öffentliche Äthernarkose durchgeführt. Heute dient er vor allem als Lösungsmittel. Besonders reaktiv sind **Epoxide**, dreigliedrige cyclische Ether, deren Ringspannung eine nucleophile Ringöffnung ermöglicht. In der Toxikologie spielen Epoxid-Intermediate eine Schlüsselrolle: Benzo[a]pyren aus Tabakrauch wird über Epoxide metabolisiert, die DNA-Addukte bilden und krebserregend wirken.
+
+---
+
+Während Ether relativ reaktionsträge sind, zeigen Aldehyde und Ketone — beides Verbindungen mit einer Carbonylgruppe (C=O) — ein deutlich vielfältigeres Reaktionsverhalten.
 
 ## Aldehyde (−CHO, Aldehydgruppe)
 
@@ -382,15 +427,31 @@ Aldehyde tragen die Carbonylgruppe (C=O) am Ende der Kohlenstoffkette, gebunden 
 
 Charakteristisch für Aldehyde sind ihre Nachweisreaktionen: Die **Tollens-Probe** (Ag⁺ → Silberspiegel) und die **Fehling-Probe** (Cu²⁺ → Cu₂O-Niederschlag) sind spezifisch für Aldehyde und reagieren nicht mit Ketonen. Durch nucleophile Addition an Alkohole bilden Aldehyde **Halbacetale** — so entsteht auch die Ringform der Glucose.
 
+> **Merke:** Aldehyde (−CHO) stehen am Kettenende, sind weiter oxidierbar zur Carbonsäure und reagieren positiv in der Tollens-/Fehling-Probe. Ketone tun das nicht!
+
+---
+
+Während Aldehyde die Carbonylgruppe am Ende der Kette tragen, sitzt sie bei Ketonen innerhalb der Kette — ein kleiner struktureller Unterschied mit großen Konsequenzen.
+
 ## Ketone (C=O in der Kette)
 
 Liegt die Carbonylgruppe dagegen innerhalb der Kohlenstoffkette, gebunden an zwei C-Atome, handelt es sich um ein Keton. Das bekannteste Keton ist **Aceton** (Propan-2-on, CH₃−CO−CH₃), das nicht nur als Lösungsmittel verwendet wird, sondern auch als Ketonkörper bei diabetischer Ketoazidose den charakteristischen süßlich-fruchtigen Acetongeruch des Atems verursacht. Neben Aceton gehören **β-Hydroxybutyrat** und **Acetoacetat** zu den Ketonkörpern, die bei Fasten oder unkontrolliertem Diabetes mellitus entstehen, wenn die Leber mangels ausreichender Glucose vermehrt Acetyl-CoA über die Ketogenese zu Ketonkörpern umwandelt. Diese dienen Muskel und Gehirn als alternativer Energieträger, doch bei Überproduktion sinkt der Blut-pH — es droht die lebensbedrohliche Ketoazidose.
+
+---
+
+Die nächste Stufe der Oxidation nach Aldehyd und Keton führt uns zu den Carbonsäuren — Verbindungen, die sowohl eine Carbonyl- als auch eine Hydroxylgruppe in sich vereinen.
 
 ## Carbonsäuren (−COOH, Carboxylgruppe)
 
 Die Carboxylgruppe (−COOH) vereinigt Carbonyl- und Hydroxylgruppe in einer einzigen funktionellen Einheit und verleiht Carbonsäuren ihre Säureeigenschaft: Sie geben ein Proton ab (R-COOH ⇌ R-COO⁻ + H⁺) und sind damit Brønsted-Säuren, wenn auch mit typischen pKₐ-Werten von 4–5 deutlich schwächer als etwa Salzsäure.
 
 In der Medizin und Biochemie begegnet man Carbonsäuren auf Schritt und Tritt: **Ameisensäure** (HCOOH, Methansäure) findet sich im Gift von Ameisen und Brennnesseln. **Essigsäure** (CH₃COOH, Ethansäure) ist nicht nur der Hauptbestandteil von Essig, sondern auch das Endprodukt des Ethanolabbaus. **Milchsäure** (Lactat) entsteht als Glykolyse-Endprodukt bei Sauerstoffmangel und ist für den Muskelschmerz nach intensiver Belastung mitverantwortlich. **Zitronensäure** (C₆H₈O₇) ist eine Tricarbonsäure mit drei COOH-Gruppen und das namensgebende Molekül des Citratzyklus. **Fettsäuren** schließlich sind langkettige Carbonsäuren (C16–C18), deren Sättigungsgrad die Eigenschaften von Fetten und Ölen bestimmt.
+
+> **Merke:** Carbonsäuren (−COOH) sind schwache Säuren (pKₐ 4–5). Wichtige Vertreter: Ameisensäure, Essigsäure, Milchsäure, Zitronensäure, Fettsäuren.
+
+---
+
+Carbonsäuren reagieren mit Alkoholen zu einer der wichtigsten Verbindungsklassen der Biochemie — den Estern.
 
 ## Ester (−COO−, Estergruppe)
 
@@ -400,6 +461,12 @@ R-COOH + R'-OH ⇌ R-COO-R' + H₂O
 Diese Gleichgewichtsreaktion lässt sich nach dem Prinzip von Le Chatelier zur Produktseite verschieben, indem man eine Komponente im Überschuss einsetzt oder das entstehende Wasser entfernt. Die biologisch wichtigsten Ester sind **Triglyceride** — Glycerin verestert mit drei Fettsäuren —, die als Neutralfette den Hauptenergiespeicher des Körpers bilden. In der Pharmazie ist **Aspirin** (Acetylsalicylsäure) ein prominentes Beispiel: Es ist ein Ester aus Salicylsäure und Essigsäure und hemmt irreversibel die Cyclooxygenase. Auch **Ethylacetat** (CH₃COO-C₂H₅), ein fruchtartig riechendes Lösungsmittel, gehört zu den Estern.
 
 Die Rückreaktion — die **Hydrolyse** — spaltet den Ester durch Wasser in Carbonsäure und Alkohol. Basische Hydrolyse von Fetten heißt **Verseifung** und liefert Fettsäuresalze (Seifen) und Glycerin.
+
+> **Merke:** Veresterung: Carbonsäure + Alkohol ⇌ Ester + H₂O (Gleichgewicht, Säure-katalysiert). Verseifung = basische Hydrolyse von Estern (irreversibel). Triglyceride und Aspirin sind wichtige Ester.
+
+---
+
+Neben den sauerstoffhaltigen funktionellen Gruppen spielen auch stickstoffhaltige Gruppen eine zentrale Rolle in der Biochemie — allen voran die Amine.
 
 ## Amine (−NH₂, Aminogruppe)
 
@@ -649,8 +716,6 @@ Alle 20 proteinogenen Aminosäuren teilen einen einheitlichen Bauplan am zentral
 
 Da das α-C vier verschiedene Substituenten trägt, ist es ein **Chiralitätszentrum** (Stereozentrum). Alle proteinogenen Aminosäuren liegen im Körper ausschließlich als **L-Enantiomere** vor (die Fischer-Projektion zeigt die NH₂-Gruppe links). Einzige Ausnahme: **Glycin** (R = H) — mit zwei identischen Substituenten am α-C ist es achiral.
 
-{{IMAGE}}
-
 > **Merke:** Vier Gruppen am α-C: NH₂, COOH, H, R. Vier verschiedene Reste = Chiralität. Alle proteinogenen AS sind L-konfiguriert. Glycin (R = H) ist die einzige achirale Ausnahme.
 
 ---
@@ -747,8 +812,6 @@ Die Synthese am Ribosom verläuft stets vom **N-Terminus zum C-Terminus** (die m
 
 > **Merke:** Peptidbindung = Kondensation (–H₂O) zwischen –COOH und –NH₂. Planar durch Mesomerie, partieller Doppelbindungscharakter, trans-Konfiguration. Synthese: N→C.
 
-![Peptidbindung zwischen zwei Aminosäuren](/images/bms/ch-peptidbindung.jpg)
-
 ---
 
 ## Proteinstruktur — vier hierarchische Ebenen
@@ -770,8 +833,6 @@ Die räumliche Organisation von Proteinen gliedert sich in vier Ebenen, die aufe
 **Quartärstruktur** — Zusammenlagerung mehrerer Polypeptidketten (Untereinheiten) zu einem funktionellen Komplex. Bekanntestes Beispiel: **Hämoglobin** (α₂β₂-Tetramer).
 
 > **Merke:** Primär = Sequenz. Sekundär = H-Brücken im Rückgrat (α-Helix, β-Faltblatt). Tertiär = Seitenketten-WW + Disulfidbrücken. Quartär = Untereinheiten.
-
-![Die vier Ebenen der Proteinstruktur](/images/bms/ch-proteinstruktur.jpg)
 
 ---
 
@@ -1086,8 +1147,16 @@ Beispiele: ACE-Hemmer (kompetitiv), Statine (kompetitiv an HMG-CoA-Reduktase), P
       id: "ch-13-02",
       title: "Kohlenhydrate — Mono-, Di- und Polysaccharide",
       imageUrl: "/images/bms/ch-kohlenhydrate.jpg",
-      imageCaption: "Abb.: Mono-, Di- und Polysaccharide im Vergleich (OpenStax, CC BY 4.0)",
+      imageCaption:
+        "Abb.: Haworth-Projektionen der Hexosen (Glucose, Fructose, Galactose) und der Pentosen (Desoxyribose, Ribose) (OpenStax, CC BY 4.0)",
       content: `Kohlenhydrate liefern den Großteil der Energie für den menschlichen Stoffwechsel und sind zentrale Bausteine von Zellwänden, Glykoproteinen und Nukleinsäuren. Ihre Chemie reicht von einfachen Zuckern bis zu riesigen Polysacchariden.
+
+**In diesem Kapitel lernst du:**
+- Monosaccharide (Aldosen vs. Ketosen), ihre Ringformen und das Konzept der Anomere
+- Die wichtigsten Disaccharide (Maltose, Saccharose, Lactose) und ob sie reduzierend oder nicht-reduzierend sind
+- Die Polysaccharide Stärke, Glykogen und Cellulose im Vergleich
+- Glykosaminoglykane (Heparin) und Blutgruppenantigene als medizinisch relevante Kohlenhydrate
+- HbA1c, Diabetes, Laktoseintoleranz und weitere klinische Bezüge
 
 ## Monosaccharide — die einfachsten Zucker
 
@@ -1095,19 +1164,29 @@ Kohlenhydrate gehören neben Lipiden und Proteinen zu den drei Hauptgruppen der 
 
 Die wichtigste Aldohexose ist **Glucose** (Traubenzucker, Dextrose), die mit einem Blutspiegel von 70–100 mg/dl der zentrale Energieträger des menschlichen Stoffwechsels ist. Jede Körperzelle kann Glucose über die Glykolyse verwerten, und das Gehirn ist im Normalzustand fast ausschließlich auf Glucose als Brennstoff angewiesen. Als Ketohexose spielt **Fructose** (Fruchtzucker) eine Rolle, die vor allem in Obst und Honig vorkommt und in der Leber metabolisiert wird. **Galactose** schließlich ist das C4-Epimer der Glucose und Bestandteil der Lactose (Milchzucker).
 
-{{IMAGE}}
-
 ## Ringformen und Mutarotation
 
 In wässriger Lösung liegt Glucose überwiegend nicht in der offenkettigen Form vor, sondern bildet durch eine **intramolekulare Halbacetal-Reaktion** eine sechsgliedrige Ringstruktur (Pyranose-Ring): Die Aldehydgruppe am C1 reagiert mit der OH-Gruppe am C5. Dabei entsteht am C1 ein neues Chiralitätszentrum — das **anomere Kohlenstoffatom** — mit zwei möglichen Konfigurationen: **α-D-Glucose** (OH am C1 axial, unterhalb der Ringebene in der Haworth-Projektion) und **β-D-Glucose** (OH am C1 äquatorial, oberhalb). In Lösung stellen sich beide Anomere über die offenkettige Form ineinander um — die **Mutarotation** — bis sich ein Gleichgewicht einstellt (ca. 36 % α, 64 % β, <1 % offenkettig).
 
 Die offenkettige Aldehydform, obwohl nur in Spuren vorhanden, verleiht der Glucose ihre **reduzierende Eigenschaft**: Sie kann die Fehling-Probe (Cu²⁺ → Cu₂O-Niederschlag, Farbumschlag von blau nach ziegelrot) und den Benedikt-Test positiv ausfallen lassen. Diese Eigenschaft ist klinisch relevant — der sogenannte Clinitest basierte darauf, und moderne Glucosesensoren nutzen enzymatische Varianten desselben Prinzips.
 
+> **Merke:** Glucose bildet in Lösung einen Pyranose-Ring (Halbacetal). α-Glucose: OH am C1 unten (Haworth); β-Glucose: OH am C1 oben. Mutarotation = Gleichgewicht zwischen α und β über die offenkettige Form.
+
+---
+
+Einzelne Monosaccharide können sich zu größeren Einheiten zusammenlagern — die Disaccharide entstehen durch glykosidische Bindung und sind für Ernährung und Klinik gleichermaßen bedeutsam.
+
 ## Disaccharide
 
 Durch **glykosidische Bindung** — eine Acetalbildung zwischen dem anomeren C-Atom eines Monosaccharids und einer OH-Gruppe eines zweiten — entstehen Disaccharide unter Wasserabspaltung. Die Art der Bindung bestimmt die biologischen Eigenschaften grundlegend.
 
 **Maltose** (Malzzucker) besteht aus zwei Glucose-Einheiten, verknüpft über eine α-1,4-glykosidische Bindung. Da das anomere C-Atom des zweiten Glucoserests frei bleibt, ist Maltose reduzierend. **Lactose** (Milchzucker) verbindet Galactose und Glucose über eine β-1,4-glykosidische Bindung — sie wird durch das Enzym Lactase gespalten, dessen Mangel zur **Lactoseintoleranz** führt, einer der häufigsten Enzymopathien weltweit. **Saccharose** (Haushaltszucker) verknüpft Glucose und Fructose über eine α-1,β-2-glykosidische Bindung, bei der beide anomeren C-Atome beteiligt sind — deshalb ist Saccharose nicht-reduzierend.
+
+> **Merke:** Maltose (α-1,4, Glc+Glc) und Lactose (β-1,4, Gal+Glc) sind reduzierend. Saccharose (α-1,β-2, Glc+Frc) ist nicht-reduzierend, weil beide anomeren C-Atome gebunden sind.
+
+---
+
+Von den Disacchariden ist es nur ein Schritt zu den Polysacchariden — riesige Makromoleküle, die als Energiespeicher oder Strukturmaterial dienen.
 
 ## Polysaccharide
 
@@ -1119,11 +1198,21 @@ Werden viele Monosaccharide zu langen Ketten verknüpft, entstehen **Polysacchar
 
 **Cellulose** besteht aus Glucose-Einheiten mit **β-1,4-Verknüpfung** und bildet lange, gestreckte Ketten, die über Wasserstoffbrücken zu stabilen Fibrillen aggregieren. Der menschliche Darm besitzt keine β-Glucosidase (Cellulase) und kann Cellulose nicht spalten — sie dient als unverdaulicher Ballaststoff, der die Darmperistaltik fördert. Wiederkäuer nutzen dafür symbiotische Bakterien im Pansen.
 
+---
+
+Neben den klassischen Speicher- und Strukturpolysacchariden gibt es spezialisierte Zucker-Polymere, die in der Medizin eine wichtige Rolle spielen.
+
 ## Glykosaminoglykane und Blutgruppenantigene
 
 Neben den klassischen Speicher- und Strukturpolysacchariden gibt es **Glykosaminoglykane** (GAGs) — lange, unverzweigte Polysaccharid-Ketten aus sich wiederholenden Disaccharid-Einheiten, die stark negativ geladen sind (Sulfat- und Carboxylgruppen). Die wichtigsten Vertreter sind **Hyaluronsäure** (Gelenkflüssigkeit, Glaskörper des Auges), **Chondroitinsulfat** (Knorpel), **Heparansulfat** und **Heparin** (potentes Antikoagulans — hemmt Thrombin und Faktor Xa durch Aktivierung von Antithrombin III).
 
 Die **Blutgruppenantigene** des AB0-Systems sind Kohlenhydratstrukturen auf der Erythrozytenoberfläche: Alle basieren auf dem gleichen Grundgerüst (H-Antigen). Beim Typ A wird N-Acetylgalactosamin angehängt, beim Typ B Galactose, beim Typ AB beide, und beim Typ 0 bleibt das H-Antigen unverändert.
+
+> **Merke:** GAGs sind stark negativ geladen (Sulfat/Carboxylgruppen). Heparin = klinisch wichtigstes GAG (Antikoagulans). Blutgruppenantigene = Kohlenhydrate auf Erythrozyten (A: N-Acetylgalactosamin, B: Galactose, 0: nur H-Antigen).
+
+---
+
+Die klinische Bedeutung der Kohlenhydrate zeigt sich besonders eindrücklich bei Störungen des Zuckerstoffwechsels.
 
 ## Klinischer Bezug
 
@@ -1353,7 +1442,8 @@ Die **Blutgruppenantigene** des AB0-Systems sind Kohlenhydratstrukturen auf der 
       id: "ch-13-03",
       title: "Lipide — Fette, Phospholipide und Steroide",
       imageUrl: "/images/bms/ch-triglycerid.jpg",
-      imageCaption: "Abb.: Aufbau eines Triglycerid-Moleküls (OpenStax, CC BY 4.0)",
+      imageCaption:
+        "Abb.: Veresterung von Glycerin mit drei Fettsäuren zum Triglycerid unter Abspaltung von 3 H₂O (OpenStax, CC BY 4.0)",
       stichworte: [
         "Fettsäuren",
         "Triglyceride",
@@ -1487,8 +1577,6 @@ Der entscheidende Punkt: Phospholipide sind **amphipathisch** — polarer Kopf (
 Warum bilden Phospholipide einen Bilayer und keine Mizellen? Phospholipide haben **zwei** Schwänze (zylindrische Geometrie) → Bilayer. Detergenzien/Seifen haben **einen** Schwanz (Kegelform) → Mizellen.
 
 > **Merke:** Phospholipid = 2 Schwänze → Bilayer (Membran). Seife/Detergens = 1 Schwanz → Mizelle. Triglycerid = 3 Schwänze, kein polarer Kopf → Fetttröpfchen (kein Bilayer).
-
-![Aufbau eines Phospholipids mit polarem Kopf und zwei Fettsäureschwänzen](/images/bms/ch-phospholipid.jpg)
 
 ---
 
@@ -1882,7 +1970,7 @@ Gehirn, Herzmuskel und Skelettmuskel können Ketonkörper als alternatives Subst
       title: "Nukleinsäuren — DNA und RNA",
       imageUrl: "/images/bms/ch-nukleotid.jpg",
       imageCaption:
-        "Abb.: Aufbau eines Nukleotids mit Base, Zucker und Phosphat (OpenStax, CC BY 4.0)",
+        "Abb.: Nukleotid-Aufbau (Phosphat + Pentose + Base), Pyrimidine (C, T, U) und Purine (A, G) sowie Polynukleotidkette mit Phosphodiesterbindungen (OpenStax, CC BY 4.0)",
       stichworte: [
         "Nukleotide",
         "DNA-Doppelhelix",
@@ -1903,15 +1991,29 @@ Gehirn, Herzmuskel und Skelettmuskel können Ketonkörper als alternatives Subst
 
 Die Erbinformation jedes Lebewesens ist in Nukleinsäuren gespeichert — langen Kettenmolekülen, deren Grundbausteine die **Nukleotide** sind. Jedes Nukleotid besteht aus drei Komponenten: einer **Stickstoffbase** (Purin oder Pyrimidin), einem **Pentosezucker** (Ribose bei RNA, 2'-Desoxyribose bei DNA — letzterer fehlt die OH-Gruppe an C2') und einer oder mehreren **Phosphatgruppen**. Ohne Phosphat spricht man von einem **Nukleosid** (Base + Zucker), mit Phosphat von einem **Nukleotid**. **ATP** (Adenosin-Triphosphat), das universelle Energietransportmolekül der Zelle, ist nichts anderes als ein Nukleotid mit drei Phosphatresten — die Hydrolyse der β-γ-Phosphorsäureanhydridbindung setzt ΔG°' ≈ −30,5 kJ/mol frei.
 
-{{IMAGE}}
+> **Merke:** Nukleosid = Base + Zucker. Nukleotid = Base + Zucker + Phosphat. ATP ist ein Nukleotid (Adenin + Ribose + 3 Phosphate).
+
+---
+
+Entscheidend für die Informationsspeicherung sind die Stickstoffbasen — sie bilden das „Alphabet" des genetischen Codes.
 
 ## Stickstoffbasen
 
 Die Basen werden nach ihrer Ringstruktur in zwei Klassen eingeteilt. **Purinbasen** bestehen aus einem Doppelringsystem (9 Atome) und umfassen **Adenin (A)** und **Guanin (G)** — beide kommen sowohl in DNA als auch in RNA vor. **Pyrimidinbasen** besitzen einen einfachen Sechsring (6 Atome): **Cytosin (C)** findet sich in beiden Nukleinsäuren, **Thymin (T)** nur in der DNA (es trägt eine Methylgruppe am C5), und **Uracil (U)** nur in der RNA (ohne Methylgruppe). Eine bewährte Eselsbrücke lautet: „CUT the Pyrimidine" (Cytosin, Uracil, Thymin sind die Pyrimidine).
 
+> **Merke:** Purine (Doppelring, 9 Atome): A und G. Pyrimidine (Einzelring, 6 Atome): C, T (DNA), U (RNA). Eselsbrücke: „CUT the Pyrimidine".
+
+---
+
+Die Basen paaren nicht zufällig — Erwin Chargaffs Entdeckung der quantitativen Gesetzmäßigkeiten war der Schlüssel zum Verständnis der DNA-Struktur.
+
 ## Chargaff-Regeln
 
 Erwin Chargaff entdeckte in den 1950er Jahren die quantitativen Gesetzmäßigkeiten der Basenzusammensetzung doppelsträngiger DNA, die sich später als direkte Konsequenz der Watson-Crick-Basenpaarung erwiesen: **A = T** (verbunden durch **2 Wasserstoffbrücken**), **G ≡ C** (verbunden durch **3 Wasserstoffbrücken**), und daraus folgt **A + G = C + T** (Purine = Pyrimidine). Der GC-Gehalt variiert zwischen verschiedenen Organismen und bestimmt die thermische Stabilität der DNA: Je höher der GC-Anteil, desto höher die Schmelztemperatur (Tm), weil G-C-Paare mit ihren drei Wasserstoffbrücken stabiler sind als A-T-Paare mit nur zwei.
+
+---
+
+Die Chargaff-Regeln erklären sich direkt aus dem dreidimensionalen Strukturmodell der DNA — der berühmten Doppelhelix.
 
 ## DNA-Doppelhelix
 
@@ -1921,13 +2023,25 @@ Das 1953 von Watson und Crick vorgeschlagene Strukturmodell der **B-DNA** beschr
 
 Die Antiparallelität hat eine wichtige biologische Konsequenz: Da DNA-Polymerasen ausschließlich in 5'→3'-Richtung synthetisieren können, wird an der Replikationsgabel ein Strang kontinuierlich als **Leitstrang** kopiert, während der andere diskontinuierlich als **Folgestrang** in Form kurzer **Okazaki-Fragmente** synthetisiert wird, die anschließend durch die DNA-Ligase verknüpft werden.
 
+---
+
+Während die DNA die stabile Langzeitspeicherung der Information übernimmt, sind verschiedene RNA-Typen für den Informationsfluss und die Umsetzung in Proteine zuständig.
+
 ## RNA-Typen
 
 Im Gegensatz zur DNA ist RNA meist einzelsträngig, enthält Ribose (OH an C2') und Uracil statt Thymin. Die wichtigsten RNA-Typen erfüllen grundverschiedene Funktionen im Informationsfluss der Zelle. Die **mRNA** (Messenger-RNA) überträgt die genetische Information vom Kern zum Ribosom und enthält ein 5'-Cap (7-Methylguanosin), die kodierende Sequenz aus Nukleotid-Tripletts (Codons) und einen 3'-Poly-A-Schwanz. Start-Codon ist AUG (kodiert Methionin), Stopp-Codons sind UAA, UAG und UGA. Die **tRNA** (Transfer-RNA) ist das Adaptormolekül der Translation — etwa 76 Nukleotide lang, mit kleeblattförmiger Sekundär- und L-förmiger Tertiärstruktur. Ihre Anticodon-Schleife erkennt komplementär das mRNA-Codon, am 3'-CCA-Ende wird die spezifische Aminosäure kovalent gebunden. Die **rRNA** (Ribosomale RNA) bildet das strukturelle und katalytische Gerüst des Ribosoms — sie katalysiert als Ribozym die Peptidbindungsbildung (Peptidyltransferase-Aktivität der 28S rRNA). **miRNA und siRNA** schließlich sind kleine regulatorische RNAs (~22 nt), die durch Bindung an komplementäre mRNA-Sequenzen den mRNA-Abbau oder die Translationshemmung auslösen (RNA-Interferenz, RNAi).
 
+---
+
+Um zu verstehen, wie die einzelnen Nukleotide zur langen Kette verknüpft werden, betrachten wir nun die chemische Bindung im Rückgrat.
+
 ## Phosphodiesterbindung und Polymerisation
 
 In der Nukleinsäure-Kette verbindet eine **Phosphodiesterbindung** das 3'-OH des einen Zuckers mit dem 5'-Phosphat des nächsten Nukleotids, sodass das Rückgrat in regelmäßiger Abfolge Zucker–Phosphat–Zucker–Phosphat aufgebaut ist. Die Phosphatgruppen sind bei physiologischem pH negativ geladen, was die DNA zum Polyanion macht und die Assoziation mit basischen **Histonproteinen** in Eukaryoten erklärt — 146 Basenpaare DNA wickeln sich um ein Histon-Oktamer zum Nukleosom, der Grundeinheit des Chromatins.
+
+---
+
+Nachdem wir Aufbau und Struktur der Nukleinsäuren verstanden haben, werfen wir einen Blick auf die drei zentralen Prozesse des Informationsflusses.
 
 ## Replikation, Transkription, Translation — Kurzüberblick
 
@@ -1937,17 +2051,37 @@ Bei der **Transkription** liest die RNA-Polymerase II (in Eukaryoten) den Matriz
 
 Bei der **Translation** liest das Ribosom die mRNA in 5'→3'-Richtung ab. Die drei Phasen — Initiation (Start bei AUG), Elongation (Codon-Anticodon-Erkennung, Peptidbindung, Translokation) und Termination (Stopp-Codon → Release-Faktor) — produzieren eine Polypeptidkette. Der genetische Code umfasst 64 Codons für 20 Aminosäuren und ist degeneriert (mehrere Codons pro Aminosäure), aber universell in fast allen Organismen.
 
+---
+
+Das Verständnis der Nukleotid-Chemie hat direkte therapeutische Konsequenzen — Nukleosid-Analoga gehören zu den wichtigsten Virustatika.
+
 ## Nukleosid-Analoga in der Therapie
 
 Das Prinzip der Nukleosid-Analoga beruht auf ihrer strukturellen Ähnlichkeit zu natürlichen Nukleosiden: Nach Phosphorylierung werden sie von viralen Polymerasen als falsche Substrate eingebaut, terminieren aber die Kettenverlängerung, weil ihnen die 3'-Hydroxylgruppe fehlt. **Aciclovir** (Acycloguanosin) ist ein Guanosin-Analogon, das bevorzugt von der viralen Thymidinkinase phosphoryliert wird und selektiv die DNA-Polymerase von Herpesviren hemmt. **Tenofovir** hemmt als Adenosinmonophosphat-Analogon die HIV-Reverse Transkriptase, und **Remdesivir** blockiert als Adenosin-Analogon die RNA-abhängige RNA-Polymerase von SARS-CoV-2.
+
+> **Merke:** Nukleosid-Analoga = falsches Substrat für virale Polymerasen. Fehlendes 3'-OH → Kettenabbruch. Selektivität durch virale Aktivierungsenzyme (z. B. HSV-Thymidinkinase bei Aciclovir).
+
+---
+
+Neben der Sequenz selbst beeinflusst auch die chemische Modifikation der DNA die Genexpression — ein Gebiet, das als Epigenetik immer wichtiger wird.
 
 ## DNA-Methylierung und Epigenetik
 
 Die **DNA-Methylierung** — die Übertragung einer Methylgruppe auf Cytosin an CpG-Dinukleotiden durch DNA-Methyltransferasen (DNMT) — ist eine epigenetische Modifikation: Sie verändert nicht die Basensequenz, beeinflusst aber die Genexpression. Methylierung von CpG-Inseln im Promotorbereich rekrutiert Methyl-CpG-bindende Proteine, führt zur Chromatinkondensation und bewirkt **Gen-Silencing**. Dieses Prinzip ist fundamental für das **Genimprinting** (elternspezifische Genexpression, z. B. IGF2 nur vom väterlichen Allel), die **X-Inaktivierung** (eines der zwei X-Chromosomen bei Frauen wird inaktiviert → Barr-Körper) und die **Krebsentstehung** (Hypermethylierung von Tumorsuppressor-Promotoren wie p16 oder BRCA1 → Funktionsverlust; globale Hypomethylierung → genomische Instabilität).
 
+---
+
+Eine der wichtigsten Anwendungen des Wissens über DNA-Struktur ist die PCR — sie hat die molekulare Diagnostik revolutioniert und ist auch im MedAT prüfungsrelevant.
+
 ## PCR — Polymerase-Kettenreaktion
 
 Die PCR ermöglicht die exponentielle Vermehrung (Amplifikation) spezifischer DNA-Abschnitte in vitro und hat die molekulare Diagnostik revolutioniert. Jeder Zyklus besteht aus drei Temperaturschritten: Bei der **Denaturierung** (~95 °C) werden die Doppelstränge in Einzelstränge getrennt. Beim **Annealing** (~55–65 °C) hybridisieren kurze Oligonukleotid-Primer an ihre komplementären Zielsequenzen. Bei der **Elongation** (~72 °C) verlängert die hitzestabile **Taq-Polymerase** (aus dem Thermalbakterium Thermus aquaticus) die Primer in 5'→3'-Richtung. Nach n Zyklen liegen 2ⁿ Kopien vor — 30 Zyklen ergeben eine milliardenfache Vervielfältigung. **RT-PCR** (Reverse-Transkriptase-PCR) wandelt zunächst RNA in cDNA um und amplifiziert dann — Grundlage des COVID-19-Tests und der HIV-Viruslastbestimmung. **qPCR** (quantitative Real-Time-PCR) erlaubt die Echtzeitquantifizierung über Fluoreszenzsonden.
+
+> **Merke:** PCR = 3 Schritte pro Zyklus: Denaturierung (95 °C) → Annealing (55–65 °C) → Elongation (72 °C, Taq-Polymerase). Nach 30 Zyklen: 2³⁰ ≈ 1 Milliarde Kopien.
+
+---
+
+DNA ist ständig Angriffen durch UV-Strahlung, Sauerstoffradikale und Replikationsfehler ausgesetzt — ohne Reparatur wäre das Genom innerhalb weniger Stunden zerstört.
 
 ## DNA-Reparaturmechanismen
 

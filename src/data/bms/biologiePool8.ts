@@ -72,7 +72,7 @@ export const biologiePool8: Question[] = [
     1,
     "Stratum corneum = Hornschicht aus abgestorbenen, verhornten Korneozyten (Keratin). Stratum basale = Stammzellen.",
     "mittel",
-    ["Epidermis (mehrschichtig verhorntes Plattenepithel als Hautschutzbarriere)", "Haut", "Kap2"]
+    ["Epidermis", "Haut", "Kap2"]
   ),
   q(
     "bio-pool-8-011",
@@ -88,7 +88,7 @@ export const biologiePool8: Question[] = [
     1,
     "DNA-Replikation ist semikonservativ: Jeder Tochterstrang enthält einen alten und einen neuen Strang.",
     "mittel",
-    ["DNA (Desoxyribonukleinsäure) als Erbmaterial", "Replikation", "Kap4"]
+    ["DNA", "Replikation", "Kap4"]
   ),
   q(
     "bio-pool-8-012",
@@ -162,7 +162,7 @@ export const biologiePool8: Question[] = [
     1,
     "Progesteron wird vom Gelbkörper (Corpus luteum) im Ovar nach dem Eisprung gebildet.",
     "mittel",
-    ["Hormone (Signalmoleküle des endokrinen Systems für die Fernwirkung)", "Zyklus", "Kap3"]
+    ["Hormone", "Zyklus", "Kap3"]
   ),
   q(
     "bio-pool-8-017",
@@ -220,7 +220,7 @@ export const biologiePool8: Question[] = [
     1,
     "Die Kortikalreaktion verändert die Eihülle und verhindert das Eindringen weiterer Spermien.",
     "mittel",
-    ["Befruchtung (Syngamie der Gameten im Eileiter bei der Konzeption)", "Kap3"]
+    ["Befruchtung", "Kap3"]
   ),
   q(
     "bio-pool-8-024",
@@ -251,7 +251,7 @@ export const biologiePool8: Question[] = [
     1,
     "Fibroblasten synthetisieren Kollagen und andere Matrixbestandteile. Mastzellen = Immunabwehr; Makrophagen = Phagozytose.",
     "mittel",
-    ["Bindegewebe (mesenchymale Zellen in extrazellulärer Matrix)", "Kap2"]
+    ["Bindegewebe", "Kap2"]
   ),
   q(
     "bio-pool-8-029",
@@ -260,7 +260,7 @@ export const biologiePool8: Question[] = [
     [
       "In den Mitochondrien",
       "Im Zytosol",
-      "Im Zellkern (Nukleus) während der Transkription von DNA zu mRNA",
+      "Im Zellkern",
       "Im endoplasmatischen Retikulum",
       "In den Lysosomen",
     ],
@@ -283,7 +283,7 @@ export const biologiePool8: Question[] = [
     1,
     "FSH stimuliert die Follikelreifung im Ovar; LH löst den Eisprung aus.",
     "mittel",
-    ["Hormone (Signalmoleküle des endokrinen Systems für die Fernwirkung)", "Kap3"]
+    ["Hormone", "Kap3"]
   ),
   q(
     "bio-pool-8-031",

@@ -1,20 +1,19 @@
 import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
-import { CheckCircle2, XCircle, RotateCcw, Lightbulb, BookOpen } from "lucide-react";
+import { CheckCircle2, XCircle } from "lucide-react";
 import type { SelfTestQuestion } from "../../data/bmsKapitel/types";
 import { stripMarkdownAsterisks, stripLatex } from "../../utils/formatExplanation";
 import { playCorrectAnswerSound } from "../../lib/sounds";
 import { useQuizSessionStore } from "../../store/quizSessionStore";
 import { CorrectBurst, WrongShake, StreakConfetti } from "../ui/AnswerFeedback";
 
-const FALLBACK_HINT =
-  "Überlege: Welcher Begriff in der Frage ist zentral? Was hast du im Kapitel dazu gelernt?";
-
 type QuizQuestionProps = {
   question: SelfTestQuestion;
   questionNumber: number;
   /** (isCorrect, secondTry). Second try = correct after hint; XP 50% when secondTry. */
   onAnswerChange?: (isCorrect: boolean, secondTry?: boolean) => void;
+  /** Called on first answer attempt only (before retry). Used for summary tracking. */
+  onFirstAttempt?: (isCorrect: boolean) => void;
 };
 
 /**
@@ -25,12 +24,11 @@ export const QuizQuestion = React.memo(function QuizQuestion({
   question,
   questionNumber,
   onAnswerChange,
+  onFirstAttempt,
 }: QuizQuestionProps) {
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
   const [isAnswered, setIsAnswered] = useState(false);
-  const [hintIndex, setHintIndex] = useState(0);
-  const [solutionRevealed, setSolutionRevealed] = useState(false);
-  const [isSecondAttempt, setIsSecondAttempt] = useState(false);
+  const [firstAttemptRecorded, setFirstAttemptRecorded] = useState(false);
 
   // Premium animation triggers — increment to re-fire the animation
   const [correctBurstTrigger, setCorrectBurstTrigger] = useState(0);
@@ -43,7 +41,6 @@ export const QuizQuestion = React.memo(function QuizQuestion({
   const explanation = question.explanation || "Erklärung folgt";
   const merksatz = (question as { merksatz?: string }).merksatz;
   const options = question.options || [];
-  const hints = question.hints && question.hints.length > 0 ? question.hints : [FALLBACK_HINT];
 
   const recordQuizAnswer = useQuizSessionStore((s) => s.recordQuizAnswer);
   const consecutiveCorrect = useQuizSessionStore((s) => s.consecutiveCorrect);
@@ -54,7 +51,7 @@ export const QuizQuestion = React.memo(function QuizQuestion({
     const prev = prevConsecutive.current;
     prevConsecutive.current = consecutiveCorrect;
     if (consecutiveCorrect > 0 && consecutiveCorrect % 5 === 0 && consecutiveCorrect > prev) {
-      setConfettiTrigger((t) => t + 1);
+      queueMicrotask(() => setConfettiTrigger((t) => t + 1));
     }
   }, [consecutiveCorrect]);
 
@@ -63,43 +60,30 @@ export const QuizQuestion = React.memo(function QuizQuestion({
     setSelectedOption(index);
     setIsAnswered(true);
     const isCorrect = index === correctIndex;
+
+    // Track first attempt for summary
+    if (!firstAttemptRecorded) {
+      setFirstAttemptRecorded(true);
+      onFirstAttempt?.(isCorrect);
+    }
+
     if (isCorrect) {
       playCorrectAnswerSound();
       recordQuizAnswer(true);
       // Sparkle burst on the chosen correct option
       setBurstOptionIndex(index);
       setCorrectBurstTrigger((t) => t + 1);
-      onAnswerChange?.(isCorrect, isSecondAttempt);
+      onAnswerChange?.(isCorrect);
       return;
     }
-    // Falsch: Erst beim 2. Mal (nach Wiederholen oder nach „Lösung anzeigen") auflösen
+    // Wrong answer: show explanation and correct answer immediately
     recordQuizAnswer(false);
     // Red pulse on the chosen wrong option
     setShakeOptionIndex(index);
     setWrongShakeTrigger((t) => t + 1);
-    if (isSecondAttempt) {
-      setSolutionRevealed(true);
-      onAnswerChange?.(false);
-    }
+    onAnswerChange?.(false);
   };
 
-  const handleSecondTry = () => {
-    setIsAnswered(false);
-    setSelectedOption(null);
-    setIsSecondAttempt(true);
-  };
-
-  /** Tipp anzeigen und sofort erneute Antwortwahl ermöglichen */
-  const handleMitTippLoesen = () => {
-    if (hintIndex < hints.length) setHintIndex((i) => i + 1);
-    handleSecondTry();
-  };
-
-  const showNextHint = () => {
-    if (hintIndex < hints.length) setHintIndex((i) => i + 1);
-  };
-
-  const hasMoreHints = hintIndex < hints.length;
   const isCorrect = isAnswered && selectedOption === correctIndex;
   const isWrong = isAnswered && selectedOption !== null && selectedOption !== correctIndex;
 
@@ -129,8 +113,7 @@ export const QuizQuestion = React.memo(function QuizQuestion({
           <div className="ml-0 sm:ml-11 flex flex-col gap-2">
             {options.map((option, oi) => {
               const isChosen = selectedOption === oi;
-              const showAsCorrect =
-                isAnswered && oi === correctIndex && (isChosen || solutionRevealed);
+              const showAsCorrect = isAnswered && oi === correctIndex;
               const isWrongChosen = isAnswered && isChosen && oi !== correctIndex;
 
               return (
@@ -214,99 +197,13 @@ export const QuizQuestion = React.memo(function QuizQuestion({
                 )}
                 {isWrong && (
                   <>
-                    <p className="text-sm text-[var(--text-primary)] mb-3">
-                      {solutionRevealed
-                        ? null
-                        : "Wähle \u201eWiederholen\u201c, um es erneut zu versuchen, oder \u201eMit Tipp l\u00f6sen\u201c, um einen Tipp zu sehen und dann die L\u00f6sung anzuzeigen."}
+                    <p className="text-sm text-[var(--text-primary)] leading-relaxed">
+                      {stripMarkdownAsterisks(explanation)}
                     </p>
-                    {hintIndex > 0 && (
-                      <div className="space-y-2 mb-3">
-                        {hints.slice(0, hintIndex).map((hint, i) => (
-                          <motion.div
-                            key={i}
-                            initial={{
-                              opacity: 0,
-                              scale: 0.98,
-                              boxShadow: "0 0 0 0 rgba(251, 191, 36, 0)",
-                            }}
-                            animate={{
-                              opacity: 1,
-                              scale: 1,
-                              boxShadow:
-                                i === hintIndex - 1
-                                  ? [
-                                      "0 0 0 0 rgba(251, 191, 36, 0)",
-                                      "0 0 16px 2px rgba(251, 191, 36, 0.25)",
-                                      "0 0 0 0 rgba(251, 191, 36, 0)",
-                                    ]
-                                  : "0 0 0 0 rgba(251, 191, 36, 0)",
-                            }}
-                            transition={{ duration: i === hintIndex - 1 ? 0.5 : 0.2 }}
-                            className="flex gap-2 text-sm text-amber-800 dark:text-amber-200 bg-amber-50 dark:bg-amber-900/20 rounded-lg px-3 py-2 border border-amber-200 dark:border-amber-800"
-                          >
-                            <Lightbulb className="w-4 h-4 shrink-0 mt-0.5" aria-hidden />
-                            <span className="leading-relaxed">{hint}</span>
-                          </motion.div>
-                        ))}
-                      </div>
-                    )}
-                    {solutionRevealed ? (
-                      <>
-                        <p className="text-sm text-[var(--text-primary)] leading-relaxed">
-                          {stripMarkdownAsterisks(explanation)}
-                        </p>
-                        {merksatz && (
-                          <p className="text-sm mt-2 pt-2 border-t border-red-200 dark:border-red-800 text-red-800 dark:text-red-200 italic">
-                            {merksatz}
-                          </p>
-                        )}
-                      </>
-                    ) : (
-                      <>
-                        <div className="flex flex-wrap gap-2 mt-3">
-                          {!isSecondAttempt && (
-                            <motion.button
-                              type="button"
-                              onClick={handleSecondTry}
-                              whileTap={{ scale: 0.97 }}
-                              whileHover={{ scale: 1.02 }}
-                              className="inline-flex items-center gap-2 px-3 py-1.5 text-sm font-medium rounded-md border border-[var(--border)] text-[var(--text-primary)] hover:bg-[var(--border)]/30"
-                            >
-                              <RotateCcw className="w-4 h-4" />
-                              Wiederholen
-                            </motion.button>
-                          )}
-                          {hasMoreHints ? (
-                            <motion.button
-                              type="button"
-                              onClick={hintIndex === 0 ? handleMitTippLoesen : showNextHint}
-                              whileTap={{ scale: 0.97 }}
-                              whileHover={{ scale: 1.02 }}
-                              transition={{ type: "spring", stiffness: 400, damping: 20 }}
-                              className="inline-flex items-center gap-2 px-3 py-1.5 text-sm font-medium rounded-md border border-[var(--accent)]/30 text-[var(--accent)] hover:bg-[var(--accent)]/5 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/30 focus:ring-offset-2 dark:focus:ring-offset-[var(--card)]"
-                            >
-                              <Lightbulb className="w-4 h-4" />
-                              {hintIndex === 0 ? "Mit Tipp l\u00f6sen" : "Weiterer Tipp"}
-                            </motion.button>
-                          ) : null}
-                          {(hintIndex > 0 || !hasMoreHints) && (
-                            <motion.button
-                              type="button"
-                              onClick={() => {
-                                setSolutionRevealed(true);
-                                onAnswerChange?.(false);
-                              }}
-                              whileTap={{ scale: 0.97 }}
-                              whileHover={{ scale: 1.02 }}
-                              transition={{ type: "spring", stiffness: 400, damping: 20 }}
-                              className="inline-flex items-center gap-2 px-3 py-1.5 text-sm font-medium rounded-md border border-[var(--border)] bg-transparent hover:bg-[var(--border)]/50 text-[var(--text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/50 focus:ring-offset-2 dark:focus:ring-offset-[var(--card)] active:ring-2 active:ring-[var(--accent)]/60 active:shadow-[0_0_12px_rgba(0,122,255,0.2)]"
-                            >
-                              <BookOpen className="w-4 h-4" />
-                              L\u00f6sung anzeigen
-                            </motion.button>
-                          )}
-                        </div>
-                      </>
+                    {merksatz && (
+                      <p className="text-sm mt-2 pt-2 border-t border-red-200 dark:border-red-800 text-red-800 dark:text-red-200 italic">
+                        {merksatz}
+                      </p>
                     )}
                   </>
                 )}

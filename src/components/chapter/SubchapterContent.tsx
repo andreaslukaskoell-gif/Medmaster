@@ -149,17 +149,18 @@ function buildMarkdownComponents(keywordLinkEntries?: KeywordLinkEntry[]) {
       </td>
     ),
     blockquote: ({ children }: ComponentProps<"blockquote">) => {
-      // Detect Merke blockquotes (start with **Merke:**)
-      const text = getTextContent(children ?? "");
-      const isMerke = text.trimStart().startsWith("Merke:");
-      const isAchtung = text.trimStart().startsWith("Achtung:");
-      const isTipp = text.trimStart().startsWith("Tipp:");
-      const isKlinisch = text.trimStart().startsWith("Klinischer Bezug:");
+      const text = getTextContent(children ?? "").trimStart();
+
+      // Detect callout type from blockquote content
+      const isMerke = text.startsWith("Merke:");
+      const isAchtung = /^(?:Achtung|Falle)[:\s—]/.test(text);
+      const isTipp = /^(?:Tipp|Prüfungstipp)[:\s—]/.test(text);
+      const isKlinisch = /^Klinisch/.test(text);
 
       if (isMerke) {
         return (
-          <div className="my-6 rounded-lg border-l-4 border-[var(--accent)] bg-white/40 dark:bg-white/5 backdrop-blur-sm shadow-sm px-5 py-4">
-            <div className="text-[13px] font-semibold uppercase tracking-wider text-[var(--accent)] mb-1.5">
+          <div className="my-6 rounded-lg border-l-4 border-blue-500 dark:border-blue-400 bg-blue-50/70 dark:bg-blue-950/30 shadow-sm px-5 py-4">
+            <div className="text-[11px] font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400 mb-2">
               Merke
             </div>
             <div className="text-sm text-[var(--text-primary)] leading-relaxed [&>p]:my-0 [&_strong]:font-semibold">
@@ -170,11 +171,11 @@ function buildMarkdownComponents(keywordLinkEntries?: KeywordLinkEntry[]) {
       }
       if (isAchtung) {
         return (
-          <div className="my-6 rounded-lg border-l-4 border-orange-500 bg-white/40 dark:bg-white/5 backdrop-blur-sm shadow-sm px-5 py-4">
-            <div className="text-[13px] font-semibold uppercase tracking-wider text-orange-700 dark:text-orange-300 mb-1.5">
+          <div className="my-6 rounded-lg border-l-4 border-red-500 dark:border-red-400 bg-red-50/70 dark:bg-red-950/30 shadow-sm px-5 py-4">
+            <div className="text-[11px] font-bold uppercase tracking-widest text-red-600 dark:text-red-400 mb-2">
               Achtung
             </div>
-            <div className="text-sm text-[var(--text-primary)] leading-relaxed [&>p]:my-0">
+            <div className="text-sm text-[var(--text-primary)] leading-relaxed [&>p]:my-0 [&_strong]:font-semibold">
               {children}
             </div>
           </div>
@@ -182,11 +183,11 @@ function buildMarkdownComponents(keywordLinkEntries?: KeywordLinkEntry[]) {
       }
       if (isTipp) {
         return (
-          <div className="my-6 rounded-lg border-l-4 border-purple-500 bg-white/40 dark:bg-white/5 backdrop-blur-sm shadow-sm px-5 py-4">
-            <div className="text-[13px] font-semibold uppercase tracking-wider text-purple-700 dark:text-purple-300 mb-1.5">
+          <div className="my-6 rounded-lg border-l-4 border-purple-500 dark:border-purple-400 bg-purple-50/70 dark:bg-purple-950/30 shadow-sm px-5 py-4">
+            <div className="text-[11px] font-bold uppercase tracking-widest text-purple-600 dark:text-purple-400 mb-2">
               Tipp
             </div>
-            <div className="text-sm text-[var(--text-primary)] leading-relaxed [&>p]:my-0">
+            <div className="text-sm text-[var(--text-primary)] leading-relaxed [&>p]:my-0 [&_strong]:font-semibold">
               {children}
             </div>
           </div>
@@ -194,11 +195,11 @@ function buildMarkdownComponents(keywordLinkEntries?: KeywordLinkEntry[]) {
       }
       if (isKlinisch) {
         return (
-          <div className="my-6 rounded-lg border-l-4 border-amber-500 bg-white/40 dark:bg-white/5 backdrop-blur-sm shadow-sm px-5 py-4">
-            <div className="text-[13px] font-semibold uppercase tracking-wider text-amber-700 dark:text-amber-300 mb-1.5">
-              Klinischer Bezug
+          <div className="my-6 rounded-lg border-l-4 border-emerald-500 dark:border-emerald-400 bg-emerald-50/70 dark:bg-emerald-950/30 shadow-sm px-5 py-4">
+            <div className="text-[11px] font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-400 mb-2">
+              Klinisch
             </div>
-            <div className="text-sm text-[var(--text-primary)] leading-relaxed [&>p]:my-0">
+            <div className="text-sm text-[var(--text-primary)] leading-relaxed [&>p]:my-0 [&_strong]:font-semibold">
               {children}
             </div>
           </div>
@@ -320,7 +321,7 @@ interface Props {
 
 export function SubchapterContent({
   uk,
-  subject,
+  subject: _subject,
   hinterfragMode = false,
   keywordLinkEntries,
 }: Props) {

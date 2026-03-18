@@ -11,9 +11,6 @@ export const mathKapAlgebra: Kapitel = {
     {
       id: "ma-2-01",
       title: "Gleichungen und Ungleichungen",
-      imageUrl: "/images/bms/bio-nephron-blutfluss.jpg",
-      imageCaption:
-        "Abb.: Verdünnungsberechnungen als lineare Gleichungen im Labor (OpenStax, CC BY 4.0)",
       stichworte: [
         "Lineare Gleichung",
         "Äquivalenzumformung",
@@ -310,9 +307,6 @@ Substitution: V_A = 500 − V_B → 0,05(500 − V_B) + 0,20 V_B = 40 → 25 + 0
     {
       id: "ma-2-04",
       title: "Potenzgesetze & Logarithmen",
-      imageUrl: "/images/bms/ch-ph-skala.jpg",
-      imageCaption:
-        "Abb.: Die pH-Skala — logarithmische Darstellung der H\u207A-Konzentration (OpenStax, CC BY 4.0)",
       stichworte: [
         "Potenzgesetz",
         "Wurzelgesetz",
@@ -662,8 +656,6 @@ Patient mit [HCO₃⁻] = 12 mmol/L und pCO₂ = 40 mmHg. pH = 6,1 + lg(12/1,2) 
     {
       id: "ma-2-03",
       title: "Quadratische Gleichungen und binomische Formeln",
-      imageUrl: "/images/bms/bio-populationswachstum.svg",
-      imageCaption: "Abb.: Reaktionskinetik und quadratische Zusammenhänge (OpenStax, CC BY 4.0)",
       stichworte: [
         "Binomische Formeln",
         "Quadratische Ergänzung",
@@ -951,9 +943,6 @@ Wirksamkeit E(d) = − 0,5 d² + 10d − 12 (d = Dosis in mg). Scheitelpunkt: d_
     {
       id: "ma-2-05",
       title: "Trigonometrie-Grundlagen",
-      imageUrl: "/images/bms/bio-muskelkontraktion.jpg",
-      imageCaption:
-        "Abb.: Kraftzerlegung am Gelenk — trigonometrische Funktionen in der Biomechanik (OpenStax, CC BY 4.0)",
       stichworte: [
         "Sinus",
         "Kosinus",
@@ -1218,9 +1207,6 @@ Probe: √(433² + 250²) = √(187489 + 62500) = √249989 ≈ 500 N ✓
     {
       id: "ma-3-01",
       title: "Ebene Figuren — Flächen und Umfang",
-      imageUrl: "/images/bms/bio-epidermis-schichten.jpg",
-      imageCaption:
-        "Abb.: Flächenberechnung von Hautarealen für Verbrennungsgrade (OpenStax, CC BY 4.0)",
       stichworte: [
         "Rechteck",
         "Dreieck",
@@ -1570,8 +1556,6 @@ Die **Aortenklappenöffnungsfläche** (normal ~3–4 cm²) wird per Echokardiogr
     {
       id: "ma-3-02",
       title: "Körper — Volumen und Oberfläche",
-      imageUrl: "/images/bms/bio-lunge.jpg",
-      imageCaption: "Abb.: Lungenvolumen — Berechnung von Atemvolumina (OpenStax, CC BY 4.0)",
       stichworte: [
         "Quader",
         "Würfel",
@@ -1858,8 +1842,6 @@ Die **Lungenalveolen** haben einen Radius von ca. 0,1–0,2 mm; die Gesamtoberfl
     {
       id: "ma-3-04",
       title: "Vektoren — Überblick und Verweis",
-      imageUrl: "/images/bms/bio-muskelfaser.jpg",
-      imageCaption: "Abb.: Kraftvektoren am Bewegungsapparat (OpenStax, CC BY 4.0)",
       stichworte: ["Vektor", "Skalar", "Betrag", "Richtung", "Vektorrechnung"],
       content: `Viele physikalische Größen haben nicht nur einen Betrag, sondern auch eine **Richtung**: Kraft, Geschwindigkeit, Verschiebung.
 

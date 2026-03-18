@@ -39,6 +39,7 @@ export function getDefaultBreadcrumbs(pathname: string): BreadcrumbItemConfig[] 
   const segments = pathname.split("/").filter(Boolean);
   if (segments.length === 0) return [{ label: "Dashboard" }];
   const labels: Record<string, string> = {
+    dashboard: "Dashboard",
     bms: "BMS",
     kff: "KFF",
     tv: "TV",
@@ -54,6 +55,11 @@ export function getDefaultBreadcrumbs(pathname: string): BreadcrumbItemConfig[] 
     prognose: "Prognose",
     "fragen-trainer": "Fragen-Trainer",
     formelsammlung: "Formelsammlung",
+    einstellungen: "Einstellungen",
+    impressum: "Impressum",
+    datenschutz: "Datenschutz",
+    agb: "AGB",
+    daily: "BMS des Tages",
     biologie: "Biologie",
     chemie: "Chemie",
     physik: "Physik",
@@ -63,7 +69,8 @@ export function getDefaultBreadcrumbs(pathname: string): BreadcrumbItemConfig[] 
   let href = "";
   for (let i = 0; i < segments.length; i++) {
     href += "/" + segments[i];
-    const label = labels[segments[i]] ?? segments[i];
+    const raw = segments[i];
+    const label = labels[raw] ?? (raw.includes("-kap") ? "…" : raw);
     const isLast = i === segments.length - 1;
     items.push(isLast ? { label } : { label, href });
   }

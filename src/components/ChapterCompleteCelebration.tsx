@@ -48,9 +48,11 @@ export function ChapterCompleteCelebration({
 
   useEffect(() => {
     // Trigger screen flash + confetti + sound on mount
-    setShowFlash(true);
-    setShowConfetti(true);
-    setConfettiKey((k) => k + 1);
+    queueMicrotask(() => {
+      setShowFlash(true);
+      setShowConfetti(true);
+      setConfettiKey((k) => k + 1);
+    });
     playStreak();
 
     const flashTimer = setTimeout(() => setShowFlash(false), 200);

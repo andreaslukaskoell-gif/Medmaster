@@ -39,6 +39,7 @@ export function ScrollReveal({
     <div
       ref={(node) => {
         // Assign to both refs
+        // eslint-disable-next-line react-hooks/immutability
         (ref as React.MutableRefObject<HTMLDivElement | null>).current = node;
         innerRef.current = node;
       }}

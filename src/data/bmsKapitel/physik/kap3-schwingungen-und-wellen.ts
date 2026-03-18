@@ -10,8 +10,6 @@ export const physKap3: Kapitel = {
     {
       id: "ph-3-01",
       title: "Harmonische Schwingungen",
-      imageUrl: "/images/bms/bio-herz-oberflaeche.jpg",
-      imageCaption: "Abb.: Herzrhythmus als periodische Schwingung im EKG (OpenStax, CC BY 4.0)",
       stichworte: [
         "Harmonische Schwingung",
         "Amplitude",
@@ -402,9 +400,6 @@ Eine Infusionspumpe enthält eine federgelagerte Kolbenmasse von m = 50 g. Die F
     {
       id: "ph-3-02",
       title: "Wellen — Grundgrößen und Typen",
-      imageUrl: "/images/bms/bio-cochlea.jpg",
-      imageCaption:
-        "Abb.: Die Cochlea wandelt Schallwellen in Nervenimpulse um (OpenStax, CC BY 4.0)",
       stichworte: [
         "Wellengleichung",
         "Wellenlänge",
@@ -751,8 +746,6 @@ R = ((6,3 - 1,63)/(6,3 + 1,63))^2 x 10^12 / 10^12 = (4,67/7,93)^2 ungefähr 0,34
     {
       id: "ph-3-03",
       title: "Wellenphänomene",
-      imageUrl: "/images/bms/bio-auge.jpg",
-      imageCaption: "Abb.: Lichtbrechung und -beugung im Auge (OpenStax, CC BY 4.0)",
       stichworte: [
         "Interferenz",
         "Superpositionsprinzip",

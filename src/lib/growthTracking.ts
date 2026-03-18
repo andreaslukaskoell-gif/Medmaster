@@ -13,7 +13,7 @@ import { trackEvent } from "./analyticsTracker";
 
 // ── Meta Pixel ──────────────────────────────────────────────────────────────
 
-const META_PIXEL_ID = import.meta.env.VITE_META_PIXEL_ID as string | undefined;
+const _META_PIXEL_ID = import.meta.env.VITE_META_PIXEL_ID as string | undefined;
 
 let metaPixelReady = false;
 

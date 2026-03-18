@@ -12,8 +12,6 @@ export const mathKapStochastik: Kapitel = {
     {
       id: "ma-7-01",
       title: "Kombinatorik — Permutationen, Variationen, Kombinationen",
-      imageUrl: "/images/bms/bio-dna-replikation.jpg",
-      imageCaption: "Abb.: DNA-Codons — 4³ = 64 Kombinationen aus drei Basen (OpenStax, CC BY 4.0)",
       stichworte: [
         "Permutation",
         "Kombination",
@@ -434,9 +432,6 @@ V(62,8) = 62⁸ ≈ **2,18 × 10¹⁴**. Nur Kleinbuchstaben: 26⁸ ≈ 2,09 × 
     {
       id: "ma-7-02",
       title: "Grundlagen der Wahrscheinlichkeitsrechnung",
-      imageUrl: "/images/bms/bio-homologe-chromosomen.jpg",
-      imageCaption:
-        "Abb.: Mendelsche Spaltung — Wahrscheinlichkeit bei Erbgängen (OpenStax, CC BY 4.0)",
       stichworte: [
         "Laplace-Experiment",
         "Ergebnisraum",
@@ -869,9 +864,6 @@ P(X=3) = 56 × 0,0507 × 0,0992 ≈ **0,281 ≈ 28,1%**. Erwartungswert: μ = 8 
     {
       id: "ma-7-03",
       title: "Bedingte Wahrscheinlichkeit & Bayes-Theorem",
-      imageUrl: "/images/bms/bio-blut-zusammensetzung.jpg",
-      imageCaption:
-        "Abb.: Diagnostische Tests — PPV und Prävalenz im klinischen Kontext (OpenStax, CC BY 4.0)",
       stichworte: [
         "Bedingte Wahrscheinlichkeit",
         "Bayes-Theorem",
@@ -1349,8 +1341,6 @@ Sensitivität ist eine Testeigenschaft (unabhängig von der Prävalenz). PPV hä
     {
       id: "ma-7-04",
       title: "Normalverteilung, Sensitivität & Spezifität",
-      imageUrl: "/images/bms/bio-haematopoese.jpg",
-      imageCaption: "Abb.: Normalverteilung klinischer Laborwerte (OpenStax, CC BY 4.0)",
       stichworte: [
         "Normalverteilung",
         "Glockenform",

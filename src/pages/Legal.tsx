@@ -385,11 +385,11 @@ function AGB() {
 
       <h2>5. Preise und Zahlung</h2>
       <p>
-        Ein Teil des Dienstes kann kostenlos genutzt werden. Für erweiterte Funktionen (z.B.
-        Standard- oder Pro-Tarif) gelten die zum Zeitpunkt des Abschlusses auf der Website
-        angegebenen Preise inkl. gesetzlicher Umsatzsteuer. Die Bezahlung erfolgt über Stripe; es
-        gelten die Zahlungsbedingungen des jeweiligen Tarifs (monatlich/jährlich, automatische
-        Verlängerung sofern nicht gekündigt). Pro Buchung kann nur ein Gutschein eingelöst werden.
+        Ein Teil des Dienstes kann kostenlos genutzt werden. Für den vollen Funktionsumfang gilt der
+        zum Zeitpunkt des Kaufs auf der Website angegebene einmalige Preis inkl. gesetzlicher
+        Umsatzsteuer. Die Bezahlung erfolgt über Stripe. Der Zugang wird nach erfolgreicher Zahlung
+        sofort freigeschaltet und ist zeitlich unbegrenzt gültig. Pro Buchung kann nur ein Gutschein
+        eingelöst werden.
       </p>
 
       <h2>6. Nutzungsbedingungen</h2>
@@ -410,10 +410,8 @@ function AGB() {
         Leistung geschuldet sein.
       </p>
       <p>
-        <strong>Kündigung:</strong> Abonnements können jederzeit zum Ende der laufenden
-        Abrechnungsperiode gekündigt werden (in den Kontoeinstellungen oder per E-Mail). Nach Ablauf
-        bleibt der Zugang bis zum Ende der bereits bezahlten Zeit bestehen; eine Verlängerung
-        erfolgt nicht.
+        <strong>Kündigung:</strong> Da es sich um einen einmaligen Kauf handelt, ist keine Kündigung
+        erforderlich. Der Zugang bleibt nach Zahlung zeitlich unbegrenzt bestehen.
       </p>
 
       <h2>8. Kontolöschung</h2>
@@ -421,7 +419,7 @@ function AGB() {
         Sie können Ihr Konto jederzeit in den Kontoeinstellungen oder per E-Mail an
         support@medmaster.at löschen lassen. Bei Löschung werden alle personenbezogenen Daten
         (Profil, Lernfortschritt, Quiz-Ergebnisse) innerhalb von 30 Tagen unwiderruflich entfernt
-        (Art. 17 DSGVO). Ein aktives Abonnement wird zum Ende der bezahlten Laufzeit beendet.
+        (Art. 17 DSGVO). Ein bereits bezahlter Zugang erlischt mit der Kontolöschung.
       </p>
 
       <h2>9. Haftung</h2>

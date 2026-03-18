@@ -79,7 +79,7 @@ export const biologiePool6: Question[] = [
     2,
     "Die Befruchtung erfolgt typischerweise im Eileiter (Tuba uterina), nicht in der Gebärmutter.",
     "leicht",
-    ["Befruchtung (Syngamie der Gameten im Eileiter bei der Konzeption)", "Reproduktion"]
+    ["Befruchtung", "Reproduktion"]
   ),
   q(
     "bio-pool-6-005",
@@ -188,7 +188,7 @@ export const biologiePool6: Question[] = [
     "bio-kap1",
     "Wo findet die Translation (Proteinbiosynthese) statt?",
     [
-      "Im Zellkern (Nukleus) während der Transkription von DNA zu mRNA",
+      "Im Zellkern",
       "An den Ribosomen im Zytosol bzw. am rauen ER",
       "In den Mitochondrien",
       "Im Golgi-Apparat",

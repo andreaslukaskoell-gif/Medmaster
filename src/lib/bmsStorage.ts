@@ -88,7 +88,8 @@ export function saveChapter(chapter: Kapitel): void {
         if (existingIndex >= 0) {
           // Update existing subchapter
           mergedSubchapters[existingIndex] = newSubchapter;
-          console.log("📝 Updated subchapter:", newSubchapter.id, newSubchapter.title);
+          if (import.meta.env.DEV)
+            console.log("📝 Updated subchapter:", newSubchapter.id, newSubchapter.title);
         } else {
           // Add new subchapter (ensure it has a unique ID)
           const subchapterWithId = {
@@ -96,7 +97,8 @@ export function saveChapter(chapter: Kapitel): void {
             id: newSubchapter.id || generateSubchapterId(chapter.id),
           };
           mergedSubchapters.push(subchapterWithId);
-          console.log("➕ Added new subchapter:", subchapterWithId.id, subchapterWithId.title);
+          if (import.meta.env.DEV)
+            console.log("➕ Added new subchapter:", subchapterWithId.id, subchapterWithId.title);
         }
       }
 
@@ -116,7 +118,7 @@ export function saveChapter(chapter: Kapitel): void {
         })),
       };
       existing.push(chapterWithUniqueIds);
-      console.log("➕ Added new chapter:", chapter.id, chapter.title);
+      if (import.meta.env.DEV) console.log("➕ Added new chapter:", chapter.id, chapter.title);
     }
 
     // Migrate old data format
@@ -129,12 +131,13 @@ export function saveChapter(chapter: Kapitel): void {
     };
 
     localStorage.setItem(STORAGE_KEY, JSON.stringify(stored));
-    console.log(
-      "✅ Chapter saved to localStorage:",
-      chapter.id,
-      chapter.title,
-      `(${(migrated.find((c) => c.id === chapter.id)?.unterkapitel || []).length} subchapters)`
-    );
+    if (import.meta.env.DEV)
+      console.log(
+        "✅ Chapter saved to localStorage:",
+        chapter.id,
+        chapter.title,
+        `(${(migrated.find((c) => c.id === chapter.id)?.unterkapitel || []).length} subchapters)`
+      );
   } catch (error) {
     console.error("❌ Error saving chapter to localStorage:", error);
     throw error;
@@ -172,7 +175,8 @@ export function saveSubchapter(
 
       existing.push(newChapter);
       chapterIndex = existing.length - 1;
-      console.log("➕ Created new chapter in localStorage:", chapterId, newChapter.title);
+      if (import.meta.env.DEV)
+        console.log("➕ Created new chapter in localStorage:", chapterId, newChapter.title);
     }
 
     const chapter = existing[chapterIndex];
@@ -190,7 +194,8 @@ export function saveSubchapter(
     if (existingIndexById >= 0) {
       // Update existing subchapter (replace it)
       subchapters[existingIndexById] = subchapterWithId;
-      console.log("📝 Updated subchapter:", subchapterWithId.id, subchapterWithId.title);
+      if (import.meta.env.DEV)
+        console.log("📝 Updated subchapter:", subchapterWithId.id, subchapterWithId.title);
     } else {
       // Guard: Check for duplicate by title (case-insensitive, trimmed)
       const normalizedTitle = subchapterWithId.title?.trim().toLowerCase();
@@ -208,20 +213,23 @@ export function saveSubchapter(
             `⚠️ Duplicate subchapter title "${subchapterWithId.title}" found. Updating existing subchapter instead of creating duplicate.`
           );
           subchapters[existingIndexByTitle] = subchapterWithId;
-          console.log(
-            "📝 Updated subchapter (duplicate title resolved):",
-            subchapterWithId.id,
-            subchapterWithId.title
-          );
+          if (import.meta.env.DEV)
+            console.log(
+              "📝 Updated subchapter (duplicate title resolved):",
+              subchapterWithId.id,
+              subchapterWithId.title
+            );
         } else {
           // Add new subchapter (append to array)
           subchapters.push(subchapterWithId);
-          console.log("➕ Added new subchapter:", subchapterWithId.id, subchapterWithId.title);
+          if (import.meta.env.DEV)
+            console.log("➕ Added new subchapter:", subchapterWithId.id, subchapterWithId.title);
         }
       } else {
         // No title - add anyway (shouldn't happen, but handle gracefully)
         subchapters.push(subchapterWithId);
-        console.log("➕ Added new subchapter (no title):", subchapterWithId.id);
+        if (import.meta.env.DEV)
+          console.log("➕ Added new subchapter (no title):", subchapterWithId.id);
       }
     }
 
@@ -239,17 +247,19 @@ export function saveSubchapter(
     };
 
     localStorage.setItem(STORAGE_KEY, JSON.stringify(stored));
-    console.log("✅ [saveSubchapter] Saved:", {
-      chapterId,
-      subchapterId: subchapterWithId.id,
-      subchapterTitle: subchapterWithId.title,
-      totalSubchapters: subchapters.length,
-      allSubchapterIds: subchapters.map((uk) => uk.id),
-    });
-    console.log(
-      "💾 [saveSubchapter] Full chapter data:",
-      JSON.stringify(existing[chapterIndex], null, 2)
-    );
+    if (import.meta.env.DEV)
+      console.log("✅ [saveSubchapter] Saved:", {
+        chapterId,
+        subchapterId: subchapterWithId.id,
+        subchapterTitle: subchapterWithId.title,
+        totalSubchapters: subchapters.length,
+        allSubchapterIds: subchapters.map((uk) => uk.id),
+      });
+    if (import.meta.env.DEV)
+      console.log(
+        "💾 [saveSubchapter] Full chapter data:",
+        JSON.stringify(existing[chapterIndex], null, 2)
+      );
   } catch (error) {
     console.error("❌ Error saving subchapter:", error);
     throw error;
@@ -264,19 +274,21 @@ export function saveSubchapter(
  */
 export function loadAllChapters(): Kapitel[] {
   try {
-    console.log("📖 [loadAllChapters] Starting load...");
+    if (import.meta.env.DEV) console.log("📖 [loadAllChapters] Starting load...");
     const stored = localStorage.getItem(STORAGE_KEY);
     if (!stored) {
-      console.log("📖 [loadAllChapters] No data in localStorage, returning empty array");
+      if (import.meta.env.DEV)
+        console.log("📖 [loadAllChapters] No data in localStorage, returning empty array");
       return [];
     }
 
     const parsed: StoredChapters = JSON.parse(stored);
-    console.log("📖 [loadAllChapters] Parsed data:", {
-      version: parsed.version,
-      chaptersCount: parsed.chapters?.length || 0,
-      lastUpdated: parsed.lastUpdated,
-    });
+    if (import.meta.env.DEV)
+      console.log("📖 [loadAllChapters] Parsed data:", {
+        version: parsed.version,
+        chaptersCount: parsed.chapters?.length || 0,
+        lastUpdated: parsed.lastUpdated,
+      });
 
     // Ensure chapters is an array
     if (!parsed.chapters || !Array.isArray(parsed.chapters)) {
@@ -286,7 +298,8 @@ export function loadAllChapters(): Kapitel[] {
 
     // Migrate if version is old
     if (parsed.version !== STORAGE_VERSION) {
-      console.log("🔄 Migrating chapters from version", parsed.version, "to", STORAGE_VERSION);
+      if (import.meta.env.DEV)
+        console.log("🔄 Migrating chapters from version", parsed.version, "to", STORAGE_VERSION);
       try {
         const migrated = migrateSubchapterIds(parsed.chapters || []);
 
@@ -298,11 +311,12 @@ export function loadAllChapters(): Kapitel[] {
         };
         localStorage.setItem(STORAGE_KEY, JSON.stringify(migratedStored));
 
-        console.log(
-          "✅ [loadAllChapters] Migration complete, returning",
-          migrated.length,
-          "chapters"
-        );
+        if (import.meta.env.DEV)
+          console.log(
+            "✅ [loadAllChapters] Migration complete, returning",
+            migrated.length,
+            "chapters"
+          );
         return migrated || [];
       } catch (migrationError) {
         console.error("❌ Error during migration:", migrationError);
@@ -320,7 +334,8 @@ export function loadAllChapters(): Kapitel[] {
     const cleanupDone = localStorage.getItem(DUPLICATE_CLEANUP_FLAG);
 
     if (!cleanupDone) {
-      console.log("🧹 [loadAllChapters] Performing one-time duplicate cleanup...");
+      if (import.meta.env.DEV)
+        console.log("🧹 [loadAllChapters] Performing one-time duplicate cleanup...");
       // Set flag first to prevent recursion
       localStorage.setItem(DUPLICATE_CLEANUP_FLAG, "true");
       try {
@@ -337,7 +352,8 @@ export function loadAllChapters(): Kapitel[] {
           }
         }
 
-        console.log("✅ [loadAllChapters] Duplicate chapter cleanup complete");
+        if (import.meta.env.DEV)
+          console.log("✅ [loadAllChapters] Duplicate chapter cleanup complete");
       } catch (cleanupError) {
         console.error("❌ Error during duplicate cleanup:", cleanupError);
         // Continue with original chapters if cleanup fails
@@ -362,14 +378,18 @@ export function loadAllChapters(): Kapitel[] {
       const hasDuplicates = Array.from(titleMap.values()).some((count) => count > 1);
 
       if (hasDuplicates) {
-        console.log('🧹 [loadAllChapters] Found duplicate subchapters in "Die Zelle", cleaning...');
-        console.log(
-          "📊 Duplicate titles:",
-          Array.from(titleMap.entries())
-            .filter(([, count]) => count > 1)
-            .map(([title, count]) => `"${title}" (${count}x)`)
-            .join(", ")
-        );
+        if (import.meta.env.DEV)
+          console.log(
+            '🧹 [loadAllChapters] Found duplicate subchapters in "Die Zelle", cleaning...'
+          );
+        if (import.meta.env.DEV)
+          console.log(
+            "📊 Duplicate titles:",
+            Array.from(titleMap.entries())
+              .filter(([, count]) => count > 1)
+              .map(([title, count]) => `"${title}" (${count}x)`)
+              .join(", ")
+          );
         try {
           const deletedSubchapterIds = removeDuplicateSubchapters("bio-kap1");
           if (deletedSubchapterIds.length > 0) {
@@ -380,10 +400,12 @@ export function loadAllChapters(): Kapitel[] {
               validChapters = (finalParsed.chapters || []).filter((ch): ch is Kapitel => {
                 return !!(ch && typeof ch === "object" && ch.id && ch.title && ch.subject);
               });
-              console.log("✅ [loadAllChapters] Duplicate subchapter cleanup complete");
+              if (import.meta.env.DEV)
+                console.log("✅ [loadAllChapters] Duplicate subchapter cleanup complete");
             }
           } else {
-            console.log("⚠️ [loadAllChapters] No duplicates removed - check function logic");
+            if (import.meta.env.DEV)
+              console.log("⚠️ [loadAllChapters] No duplicates removed - check function logic");
           }
         } catch (subchapterCleanupError) {
           console.error("❌ Error during subchapter cleanup:", subchapterCleanupError);
@@ -391,7 +413,8 @@ export function loadAllChapters(): Kapitel[] {
       }
     }
 
-    console.log("✅ [loadAllChapters] Loaded", validChapters.length, "valid chapters");
+    if (import.meta.env.DEV)
+      console.log("✅ [loadAllChapters] Loaded", validChapters.length, "valid chapters");
     return validChapters;
   } catch (error) {
     console.error("❌ Error loading chapters from localStorage:", error);
@@ -431,7 +454,7 @@ export function deleteChapter(chapterId: string): void {
     };
 
     localStorage.setItem(STORAGE_KEY, JSON.stringify(stored));
-    console.log("✅ Chapter deleted from localStorage:", chapterId);
+    if (import.meta.env.DEV) console.log("✅ Chapter deleted from localStorage:", chapterId);
   } catch (error) {
     console.error("❌ Error deleting chapter from localStorage:", error);
     throw error;
@@ -508,7 +531,7 @@ export function removeDuplicateChapters(): string[] {
     }
 
     if (deletedIds.length === 0) {
-      console.log("ℹ️ No duplicate chapters found");
+      if (import.meta.env.DEV) console.log("ℹ️ No duplicate chapters found");
       return [];
     }
 
@@ -522,14 +545,16 @@ export function removeDuplicateChapters(): string[] {
     };
 
     localStorage.setItem(STORAGE_KEY, JSON.stringify(stored));
-    console.log(`✅ Removed ${deletedIds.length} duplicate/unwanted chapter(s):`, deletedIds);
-    console.log(
-      "📋 Removed chapters:",
-      all
-        .filter((ch) => deletedIds.includes(ch.id))
-        .map((ch) => `${ch.title} (${ch.id}, ${(ch.unterkapitel || []).length} UKs)`)
-        .join(", ")
-    );
+    if (import.meta.env.DEV)
+      console.log(`✅ Removed ${deletedIds.length} duplicate/unwanted chapter(s):`, deletedIds);
+    if (import.meta.env.DEV)
+      console.log(
+        "📋 Removed chapters:",
+        all
+          .filter((ch) => deletedIds.includes(ch.id))
+          .map((ch) => `${ch.title} (${ch.id}, ${(ch.unterkapitel || []).length} UKs)`)
+          .join(", ")
+      );
 
     return deletedIds;
   } catch (error) {
@@ -653,7 +678,7 @@ function deduplicateSubchapters(chapter: Kapitel): Kapitel {
  */
 export function clearAllChapters(): void {
   localStorage.removeItem(STORAGE_KEY);
-  console.log("✅ All chapters cleared from localStorage");
+  if (import.meta.env.DEV) console.log("✅ All chapters cleared from localStorage");
 }
 
 /**
@@ -662,13 +687,15 @@ export function clearAllChapters(): void {
  * Or use: cleanupDieZelleDuplicates()
  */
 export function cleanupDieZelleDuplicates(): string[] {
-  console.log('🧹 Manually cleaning duplicate subchapters in "Die Zelle"...');
+  if (import.meta.env.DEV)
+    console.log('🧹 Manually cleaning duplicate subchapters in "Die Zelle"...');
   try {
     const deletedIds = removeDuplicateSubchapters("bio-kap1");
     if (deletedIds.length > 0) {
-      console.log("✅ Cleanup complete. Please refresh the page to see changes.");
+      if (import.meta.env.DEV)
+        console.log("✅ Cleanup complete. Please refresh the page to see changes.");
     } else {
-      console.log("ℹ️ No duplicates found.");
+      if (import.meta.env.DEV) console.log("ℹ️ No duplicates found.");
     }
     return deletedIds;
   } catch (error) {
@@ -688,7 +715,7 @@ export function removeDuplicateSubchapters(chapterId: string): string[] {
     const chapterIndex = all.findIndex((ch) => ch.id === chapterId);
 
     if (chapterIndex < 0) {
-      console.log(`ℹ️ Chapter ${chapterId} not found`);
+      if (import.meta.env.DEV) console.log(`ℹ️ Chapter ${chapterId} not found`);
       return [];
     }
 
@@ -696,7 +723,7 @@ export function removeDuplicateSubchapters(chapterId: string): string[] {
     const subchapters = chapter.unterkapitel || [];
 
     if (subchapters.length === 0) {
-      console.log(`ℹ️ Chapter ${chapterId} has no subchapters`);
+      if (import.meta.env.DEV) console.log(`ℹ️ Chapter ${chapterId} has no subchapters`);
       return [];
     }
 
@@ -718,9 +745,10 @@ export function removeDuplicateSubchapters(chapterId: string): string[] {
     };
 
     // First pass: identify duplicates by title (case-insensitive, trimmed)
-    console.log(
-      `🔍 [removeDuplicateSubchapters] Checking ${subchapters.length} subchapters in chapter ${chapterId}`
-    );
+    if (import.meta.env.DEV)
+      console.log(
+        `🔍 [removeDuplicateSubchapters] Checking ${subchapters.length} subchapters in chapter ${chapterId}`
+      );
     for (const subchapter of subchapters) {
       if (!subchapter.title) {
         console.warn(`⚠️ Subchapter without title found (ID: ${subchapter.id})`);
@@ -732,31 +760,37 @@ export function removeDuplicateSubchapters(chapterId: string): string[] {
 
       if (!existing) {
         seen.set(normalizedTitle, subchapter);
-        console.log(`✓ Keeping subchapter: "${subchapter.title}" (ID: ${subchapter.id})`);
+        if (import.meta.env.DEV)
+          console.log(`✓ Keeping subchapter: "${subchapter.title}" (ID: ${subchapter.id})`);
       } else {
         // Compare completeness scores
         const existingScore = getCompletenessScore(existing);
         const currentScore = getCompletenessScore(subchapter);
 
-        console.log(`🔍 Duplicate found: "${subchapter.title}"`);
-        console.log(`   Existing: ID ${existing.id}, Score: ${existingScore}`);
-        console.log(`   Current: ID ${subchapter.id}, Score: ${currentScore}`);
+        if (import.meta.env.DEV) console.log(`🔍 Duplicate found: "${subchapter.title}"`);
+        if (import.meta.env.DEV)
+          console.log(`   Existing: ID ${existing.id}, Score: ${existingScore}`);
+        if (import.meta.env.DEV)
+          console.log(`   Current: ID ${subchapter.id}, Score: ${currentScore}`);
 
         if (currentScore > existingScore) {
           // Current subchapter is more complete, replace
           deletedIds.push(existing.id);
           seen.set(normalizedTitle, subchapter);
-          console.log(`   → Keeping current (higher score), deleting existing`);
+          if (import.meta.env.DEV)
+            console.log(`   → Keeping current (higher score), deleting existing`);
         } else {
           // Existing subchapter is more complete or equal, delete current
           deletedIds.push(subchapter.id);
-          console.log(`   → Keeping existing (higher or equal score), deleting current`);
+          if (import.meta.env.DEV)
+            console.log(`   → Keeping existing (higher or equal score), deleting current`);
         }
       }
     }
 
     if (deletedIds.length === 0) {
-      console.log(`ℹ️ No duplicate subchapters found in chapter ${chapterId}`);
+      if (import.meta.env.DEV)
+        console.log(`ℹ️ No duplicate subchapters found in chapter ${chapterId}`);
       return [];
     }
 
@@ -776,17 +810,19 @@ export function removeDuplicateSubchapters(chapterId: string): string[] {
     };
 
     localStorage.setItem(STORAGE_KEY, JSON.stringify(stored));
-    console.log(
-      `✅ Removed ${deletedIds.length} duplicate subchapter(s) from chapter ${chapterId}:`,
-      deletedIds
-    );
-    console.log(
-      "📋 Removed subchapters:",
-      subchapters
-        .filter((uk) => deletedIds.includes(uk.id))
-        .map((uk) => `${uk.title} (${uk.id})`)
-        .join(", ")
-    );
+    if (import.meta.env.DEV)
+      console.log(
+        `✅ Removed ${deletedIds.length} duplicate subchapter(s) from chapter ${chapterId}:`,
+        deletedIds
+      );
+    if (import.meta.env.DEV)
+      console.log(
+        "📋 Removed subchapters:",
+        subchapters
+          .filter((uk) => deletedIds.includes(uk.id))
+          .map((uk) => `${uk.title} (${uk.id})`)
+          .join(", ")
+      );
 
     return deletedIds;
   } catch (error) {
@@ -807,7 +843,7 @@ export function deleteChaptersWithSingleSubchapter(): string[] {
     });
 
     if (chaptersToDelete.length === 0) {
-      console.log("ℹ️ No chapters with only one subchapter found");
+      if (import.meta.env.DEV) console.log("ℹ️ No chapters with only one subchapter found");
       return [];
     }
 
@@ -824,11 +860,16 @@ export function deleteChaptersWithSingleSubchapter(): string[] {
     };
 
     localStorage.setItem(STORAGE_KEY, JSON.stringify(stored));
-    console.log(`✅ Deleted ${deletedIds.length} chapter(s) with only one subchapter:`, deletedIds);
-    console.log(
-      "📋 Deleted chapters:",
-      chaptersToDelete.map((ch) => `${ch.title} (${ch.id})`).join(", ")
-    );
+    if (import.meta.env.DEV)
+      console.log(
+        `✅ Deleted ${deletedIds.length} chapter(s) with only one subchapter:`,
+        deletedIds
+      );
+    if (import.meta.env.DEV)
+      console.log(
+        "📋 Deleted chapters:",
+        chaptersToDelete.map((ch) => `${ch.title} (${ch.id})`).join(", ")
+      );
 
     return deletedIds;
   } catch (error) {

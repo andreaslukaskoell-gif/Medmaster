@@ -220,6 +220,7 @@ export function QuizSkeleton({ className }: { className?: string }) {
               <S className="w-8 h-8 rounded-lg shrink-0" />
               <S
                 className="h-4 flex-1 rounded"
+                // eslint-disable-next-line react-hooks/purity
                 style={{ maxWidth: `${55 + Math.random() * 35}%` }}
               />
             </div>

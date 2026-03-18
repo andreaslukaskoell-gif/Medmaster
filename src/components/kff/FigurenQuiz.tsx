@@ -105,10 +105,12 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
         const needed = target - valid.length;
         for (let i = 0; i < needed + 10; i++) {
           try {
+            // Random shape index instead of sequential — avoids always the same order
+            const randomShapeIdx = Math.floor(Math.random() * numShapes);
             const t = generateFigurenTrainingTask(
               difficultyForIndex(i, levels),
               seed + i * 7919,
-              i % numShapes
+              randomShapeIdx
             );
             if (t) generated.push(t);
           } catch {
@@ -701,67 +703,56 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
       <p className="text-sm font-medium text-[var(--text-primary)]">
         Welche Figur entsteht aus den Teilen? (Nur Drehen/Verschieben, keine Spiegelung.)
       </p>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <Card className="border-[var(--border)]">
-          <CardContent className="p-6">
-            <p className="text-xs font-medium text-[var(--muted)] uppercase tracking-wider mb-3">
-              Puzzleteile
-            </p>
-            <div className="flex flex-wrap gap-4 justify-center py-4 bg-[var(--border)]/30 rounded-lg">
-              {(() => {
-                const { viewBox, paths } = layoutPiecesCompact(fzQ.pieces);
-                return (
-                  <svg
-                    viewBox={viewBox}
-                    {...FIGURE_SVG_ASPECT_PROPS}
-                    className="w-full max-w-md h-24 sm:h-28 mx-auto"
-                  >
-                    {paths.map((p, pi) => (
-                      <path key={pi} d={p.d} fill={FILL_FZ} stroke="none" transform={p.transform} />
-                    ))}
-                  </svg>
-                );
-              })()}
-            </div>
-          </CardContent>
-        </Card>
-        <div>
-          <p className="text-xs font-medium text-[var(--muted)] uppercase tracking-wider mb-3">
-            Antwortoptionen
-          </p>
-          <div className="grid grid-cols-2 sm:grid-cols-5 lg:grid-cols-2 gap-3">
-            {fzQ.options.map((opt, optIdx) => {
-              const label = FZ_OPTION_LABELS[optIdx];
-              const selected = answers[fzQ.id] === label;
-              return (
-                <button
-                  key={optIdx}
-                  onClick={() => setAnswers((p) => ({ ...p, [fzQ.id]: label }))}
-                  className={`flex flex-col items-center justify-center min-h-[90px] p-3 rounded-lg border-2 transition-colors cursor-pointer ${
-                    selected
-                      ? "border-[var(--accent)] bg-[var(--accent)]/10 text-[var(--accent)]"
-                      : "border-[var(--border)] bg-[var(--card)] hover:border-[var(--border)]"
-                  }`}
+      {/* Puzzleteile — oben, zentriert (wie offizielles IB FZ 26 Layout) */}
+      <div className="flex justify-center py-6 bg-[var(--border)]/20 rounded-xl">
+        {(() => {
+          const { viewBox, paths } = layoutPiecesCompact(fzQ.pieces);
+          return (
+            <svg
+              viewBox={viewBox}
+              {...FIGURE_SVG_ASPECT_PROPS}
+              className="w-full max-w-lg h-28 sm:h-36 mx-auto"
+            >
+              {paths.map((p, pi) => (
+                <path key={pi} d={p.d} fill={FILL_FZ} stroke="none" transform={p.transform} />
+              ))}
+            </svg>
+          );
+        })()}
+      </div>
+
+      {/* Optionen A–E — horizontal in einer Reihe (wie offizielles PDF) */}
+      <div className="grid grid-cols-5 gap-3 mt-4">
+        {fzQ.options.map((opt, optIdx) => {
+          const label = FZ_OPTION_LABELS[optIdx];
+          const selected = answers[fzQ.id] === label;
+          return (
+            <button
+              key={optIdx}
+              onClick={() => setAnswers((p) => ({ ...p, [fzQ.id]: label }))}
+              className={`flex flex-col items-center justify-center min-h-[110px] p-3 rounded-lg border-2 transition-colors cursor-pointer ${
+                selected
+                  ? "border-[var(--accent)] bg-[var(--accent)]/10 text-[var(--accent)]"
+                  : "border-[var(--border)] bg-[var(--card)] hover:border-[var(--border)]"
+              }`}
+            >
+              {isOptionE(opt) ? (
+                <span className="text-xs text-center text-[var(--muted)] leading-tight px-1">
+                  Keine der Antwortmöglichkeiten ist richtig.
+                </span>
+              ) : (
+                <svg
+                  viewBox="0 0 200 200"
+                  {...FIGURE_SVG_ASPECT_PROPS}
+                  className="w-full max-w-[80px] max-h-[80px] flex-1"
                 >
-                  <span className="text-sm font-bold text-[var(--muted)] mb-1">{label}</span>
-                  {isOptionE(opt) ? (
-                    <span className="text-xs text-center text-[var(--muted)] leading-tight">
-                      Keine der Figuren ist richtig
-                    </span>
-                  ) : (
-                    <svg
-                      viewBox="0 0 200 200"
-                      {...FIGURE_SVG_ASPECT_PROPS}
-                      className="w-full max-w-[64px] max-h-[64px] flex-1"
-                    >
-                      <path d={polygonToPathScaledToViewBox(opt)} fill={FILL_FZ} stroke="none" />
-                    </svg>
-                  )}
-                </button>
-              );
-            })}
-          </div>
-        </div>
+                  <path d={polygonToPathScaledToViewBox(opt)} fill={FILL_FZ} stroke="none" />
+                </svg>
+              )}
+              <span className="text-sm font-bold text-[var(--muted)] mt-1">{label}</span>
+            </button>
+          );
+        })}
       </div>
 
       <div className="flex justify-between">

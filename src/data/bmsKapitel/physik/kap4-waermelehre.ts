@@ -13,9 +13,6 @@ export const physKap4: Kapitel = {
     {
       id: "ph-4-01",
       title: "Temperatur und Wärme",
-      imageUrl: "/images/bms/bio-blutzucker-regulation.jpg",
-      imageCaption:
-        "Abb.: Thermoregulation — Temperaturhomöostase als Regelkreis (OpenStax, CC BY 4.0)",
       stichworte: [
         "Temperatur",
         "Wärme",
@@ -340,9 +337,6 @@ Q = 70 · 3500 · 3 = 735.000 J = 735 kJ ≈ 176 kcal. Diese Energiemenge muss d
     {
       id: "ph-4-02",
       title: "Wärmeübertragung",
-      imageUrl: "/images/bms/bio-haut-aufbau.jpg",
-      imageCaption:
-        "Abb.: Die Haut als Wärmeaustauscher — Konvektion und Strahlung (OpenStax, CC BY 4.0)",
       stichworte: [
         "Wärmeleitung",
         "Konvektion",
@@ -709,9 +703,6 @@ Ein Läufer schwitzt 1,5 L/h. Verdampfungswärme: 1,5 × 2400 kJ = 3600 kJ/h = *
     {
       id: "ph-4-03",
       title: "Thermodynamische Hauptsätze",
-      imageUrl: "/images/bms/bio-mitochondrium.jpg",
-      imageCaption:
-        "Abb.: Mitochondrien — Wärmeproduktion und Energieumwandlung (OpenStax, CC BY 4.0)",
       stichworte: [
         "Erster Hauptsatz",
         "Zweiter Hauptsatz",
@@ -1153,6 +1144,8 @@ Q_warm = 1200 J, W = 400 J → Q_kalt = 1200 − 400 = 800 J.
         "Autoklav",
       ],
       content: `Warum kocht Wasser auf dem Mount Everest schon bei 70 °C, im Autoklav aber erst bei 121 °C? Warum perlt Stickstoff im Blut eines Tauchers wie CO₂ in einer Sprudelflasche? Die Antwort steckt in zwei Konzepten: dem **idealen Gasgesetz** und den **Phasenübergängen**. Beide sind MedAT-Dauerbrenner — und beide lassen sich mit wenigen Formeln vollständig beherrschen.
+
+{{IMAGE}}
 
 ---
 

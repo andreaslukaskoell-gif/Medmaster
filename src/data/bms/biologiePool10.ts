@@ -37,7 +37,7 @@ export const biologiePool10: Question[] = [
     2,
     "Die Glykolyse läuft im Zytosol ab. Der Citratzyklus in der Mitochondrienmatrix, die Atmungskette an der inneren Mitochondrienmembran.",
     "leicht",
-    ["Glykolyse (Abbau von Glucose zu Pyruvat im Zytoplasma)", "Zelle"]
+    ["Glykolyse", "Zelle"]
   ),
   q(
     "bio-pool-10-002",
@@ -85,7 +85,7 @@ export const biologiePool10: Question[] = [
     2,
     "Cortisol wird in der Nebennierenrinde gebildet (Glukokortikoide). Adrenalin/Noradrenalin im Nebennierenmark.",
     "leicht",
-    ["Hormone", "Nebenniere (Glandula suprarenalis) mit Cortisol und Adrenalin"]
+    ["Hormone", "Nebenniere"]
   ),
   q(
     "bio-pool-10-005",
@@ -209,7 +209,7 @@ export const biologiePool10: Question[] = [
     1,
     "Parathormon (PTH) aus den Nebenschilddrüsen erhöht den Blutcalciumspiegel. Calcitonin (Schilddrüse) senkt ihn.",
     "mittel",
-    ["Hormone (Signalmoleküle des endokrinen Systems für die Fernwirkung)", "Calcium"]
+    ["Hormone", "Calcium"]
   ),
   q(
     "bio-pool-10-017",
@@ -283,7 +283,7 @@ export const biologiePool10: Question[] = [
     2,
     "Produzenten (z. B. Pflanzen) → Konsumenten 1. Ordnung (Pflanzenfresser) → Konsumenten 2. Ordnung (Fleischfresser) usw.",
     "leicht",
-    ["Ökologie", "Nahrungskette (lineare Darstellung der trophischen Beziehungen zwischen Arten)"]
+    ["Ökologie", "Nahrungskette"]
   ),
   q(
     "bio-pool-10-024",
@@ -377,7 +377,7 @@ export const biologiePool10: Question[] = [
     3,
     "ADH (Vasopressin) wird im Hypothalamus gebildet und im Hypophysenhinterlappen gespeichert und ausgeschüttet. Es fördert die Wasserückresorption in der Niere.",
     "mittel",
-    ["Hormone (Signalmoleküle des endokrinen Systems für die Fernwirkung)", "Wasserhaushalt"]
+    ["Hormone", "Wasserhaushalt"]
   ),
   q(
     "bio-pool-10-031",
@@ -399,13 +399,7 @@ export const biologiePool10: Question[] = [
     "bio-pool-10-032",
     "bio-kap2",
     "Welche Struktur verbindet die beiden Großhirnhemisphären?",
-    [
-      "Pons (Brücke)",
-      "Corpus callosum",
-      "Kleinhirn (Cerebellum)",
-      "Thalamus als Umschaltstation sensorischer Bahnen",
-      "Medulla oblongata",
-    ],
+    ["Pons (Brücke)", "Corpus callosum", "Kleinhirn (Cerebellum)", "Thalamus", "Medulla oblongata"],
     1,
     "Der Corpus callosum (Balken) ist die große Kommissur und verbindet linke und rechte Großhirnhemisphäre.",
     "leicht",
@@ -425,7 +419,7 @@ export const biologiePool10: Question[] = [
     3,
     "Glukose wird über Transportproteine (GLUT) in die Zelle geschleust, nicht durch freie Diffusion (D falsch). Kleine ungeladene lipophile Moleküle (z. B. O₂) diffundieren frei.",
     "mittel",
-    ["Zellmembran (Zytoplasmamembran als Permeabilitätsbarriere aller Zellen)", "FALSCH"]
+    ["Zellmembran", "FALSCH"]
   ),
   q(
     "bio-pool-10-034",
@@ -531,7 +525,7 @@ export const biologiePool10: Question[] = [
     2,
     "T-Killerzellen (CD8⁺) erkennen virusinfizierte Zellen über MHC-I und können sie abtöten (zellvermittelte Immunantwort).",
     "mittel",
-    ["Immunologie", "T-Zellen (thymusgereifte Lymphozyten der zellulären Immunabwehr)"]
+    ["Immunologie", "T-Zellen"]
   ),
   q(
     "bio-pool-10-041",
@@ -541,7 +535,7 @@ export const biologiePool10: Question[] = [
     2,
     "Thyroxin (T4) und Trijodthyronin (T3) werden in der Schilddrüse gebildet und enthalten Jod. Jodmangel kann zu Kropf führen.",
     "leicht",
-    ["Hormone", "Schilddrüse (Glandula thyroidea) mit T3/T4-Sekretion"]
+    ["Hormone", "Schilddrüse"]
   ),
   q(
     "bio-pool-10-042",
@@ -703,13 +697,7 @@ export const biologiePool10: Question[] = [
     "bio-pool-10-055",
     "bio-kap1",
     "Wo findet die Transkription bei Eukaryoten statt?",
-    [
-      "An den Ribosomen",
-      "Im Zellkern (Nukleus) während der Transkription von DNA zu mRNA",
-      "Im Mitochondrium",
-      "Im Golgi-Apparat",
-      "Im Zytosol",
-    ],
+    ["An den Ribosomen", "Im Zellkern", "Im Mitochondrium", "Im Golgi-Apparat", "Im Zytosol"],
     1,
     "Die Transkription (DNA → RNA) findet im Zellkern statt. Die Translation (mRNA → Protein) an den Ribosomen im Zytosol bzw. am rauen ER.",
     "leicht",
@@ -724,7 +712,7 @@ export const biologiePool10: Question[] = [
       "Hornhaut (Kornea)",
       "Netzhaut (Retina)",
       "Linse",
-      "Iris (Regenbogenhaut) zur Pupillenregulation",
+      "Iris (Regenbogenhaut)",
     ],
     2,
     "Die Netzhaut (Retina) enthält die Stäbchen (Hell-Dunkel-Sehen) und Zapfen (Farbsehen). Die Linse bündelt das Licht.",

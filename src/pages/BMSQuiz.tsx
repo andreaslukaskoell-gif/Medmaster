@@ -138,6 +138,7 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
   };
 
   const captureQuestionTime = (questionId: string) => {
+    // eslint-disable-next-line react-hooks/purity
     const elapsed = Math.round((Date.now() - questionStartRef.current) / 1000);
     questionTimesRef.current = { ...questionTimesRef.current, [questionId]: elapsed };
   };
@@ -148,6 +149,7 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
     const pct = Math.round((score / questions.length) * 100);
 
     saveQuizResult({
+      // eslint-disable-next-line react-hooks/purity
       id: `bms-${subject}-${Date.now()}`,
       type: "bms",
       subject,

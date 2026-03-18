@@ -36,8 +36,8 @@ export const biologiePool15: Question[] = [
     [
       "Großhirn (Cerebrum)",
       "Kleinhirn (Cerebellum)",
-      "Thalamus als Umschaltstation sensorischer Bahnen",
-      "Hypothalamus als übergeordnetes Steuerungszentrum des Hormonsystems",
+      "Thalamus",
+      "Hypothalamus",
       "Medulla oblongata",
     ],
     1,
@@ -53,7 +53,7 @@ export const biologiePool15: Question[] = [
     1,
     "Antikörper (Immunglobuline) sind Proteine der humoralen Abwehr, gebildet von Plasmazellen.",
     "leicht",
-    ["Immunologie", "Antikörper (Immunglobuline zur spezifischen Antigenerkennung und -bindung)"]
+    ["Immunologie", "Antikörper"]
   ),
   q(
     "bio-pool-15-006",
@@ -63,7 +63,7 @@ export const biologiePool15: Question[] = [
     1,
     "Insulin senkt den Blutzucker; Glukagon erhöht ihn.",
     "leicht",
-    ["Hormone (Signalmoleküle des endokrinen Systems für die Fernwirkung)", "Blutzucker"]
+    ["Hormone", "Blutzucker"]
   ),
   q(
     "bio-pool-15-010",
@@ -79,7 +79,7 @@ export const biologiePool15: Question[] = [
     1,
     "Produzenten (Pflanzen, Algen) betreiben Fotosynthese und bauen Biomasse auf.",
     "leicht",
-    ["Ökologie", "Produzent (autotropher Organismus an der Basis der Nahrungskette)"]
+    ["Ökologie", "Produzent"]
   ),
   q(
     "bio-pool-15-011",
@@ -89,7 +89,7 @@ export const biologiePool15: Question[] = [
     1,
     "Der Zellkern enthält die Hauptmenge der DNA (Erbinformation). Mitochondrien haben eigene kleine DNA.",
     "leicht",
-    ["Zelle", "Zellkern (Nukleus mit Chromatin und Kernhülle aus Doppelmembran)"]
+    ["Zelle", "Zellkern"]
   ),
   q(
     "bio-pool-15-012",
@@ -121,7 +121,7 @@ export const biologiePool15: Question[] = [
     2,
     "Testosteron wird in den Leydig-Zellen der Hoden gebildet.",
     "leicht",
-    ["Hormone (Signalmoleküle des endokrinen Systems für die Fernwirkung)", "Reproduktion"]
+    ["Hormone", "Reproduktion"]
   ),
   q(
     "bio-pool-15-021",
@@ -163,7 +163,7 @@ export const biologiePool15: Question[] = [
     1,
     "T-Killerzellen (zytotoxische T-Zellen) erkennen infizierte Zellen über MHC-I und töten sie ab.",
     "mittel",
-    ["Immunologie", "T-Zellen (thymusgereifte Lymphozyten der zellulären Immunabwehr)"]
+    ["Immunologie", "T-Zellen"]
   ),
   q(
     "bio-pool-15-028",
@@ -173,7 +173,7 @@ export const biologiePool15: Question[] = [
     2,
     "Nach der 8. Woche sind die Organanlagen angelegt; ab dann spricht man vom Fetus.",
     "mittel",
-    ["Embryologie", "Organogenese (Differenzierung und Anlage der embryonalen Organsysteme)"]
+    ["Embryologie", "Organogenese"]
   ),
   q(
     "bio-pool-15-031",
@@ -209,7 +209,7 @@ export const biologiePool15: Question[] = [
     1,
     "Aldosteron (Mineralokortikoid) wird in der Nebennierenrinde gebildet (Natrium-Kalium-Haushalt, Blutdruck).",
     "mittel",
-    ["Hormone", "Nebenniere (Glandula suprarenalis) mit Cortisol und Adrenalin"]
+    ["Hormone", "Nebenniere"]
   ),
   q(
     "bio-pool-15-043",
@@ -235,7 +235,7 @@ export const biologiePool15: Question[] = [
     1,
     "Glukagon erhöht den Blutzucker (Glykogenabbau, Gluconeogenese).",
     "leicht",
-    ["Hormone (Signalmoleküle des endokrinen Systems für die Fernwirkung)", "Blutzucker"]
+    ["Hormone", "Blutzucker"]
   ),
   q(
     "bio-pool-15-051",
@@ -251,7 +251,7 @@ export const biologiePool15: Question[] = [
     1,
     "Konsumenten ernähren sich von anderen Organismen (Herbivoren, Karnivoren, Omnivoren).",
     "leicht",
-    ["Ökologie", "Konsument (heterotropher Organismus auf höherer trophischer Ebene)"]
+    ["Ökologie", "Konsument"]
   ),
   q(
     "bio-pool-15-056",

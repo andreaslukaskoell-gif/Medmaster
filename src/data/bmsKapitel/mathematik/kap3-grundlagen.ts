@@ -10,9 +10,6 @@ export const mathKapGrundlagen: Kapitel = {
     {
       id: "ma-grund-01",
       title: "Bruchrechnung & Termumformung",
-      imageUrl: "/images/bms/bio-blut-zusammensetzung.jpg",
-      imageCaption:
-        "Abb.: Dosierungsberechnung als Bruchrechnung in der Pharmakologie (OpenStax, CC BY 4.0)",
       stichworte: [
         "Bruchrechnung",
         "Erweitern",
@@ -279,9 +276,6 @@ Ein **Doppelbruch** ist ein Bruch im Bruch -- in der Klinik allgegenwärtig bei 
     {
       id: "ma-grund-02",
       title: "Prozentrechnung",
-      imageUrl: "/images/bms/bio-blut-zusammensetzung.jpg",
-      imageCaption:
-        "Abb.: Blutbestandteile in Prozent — Hämatokrit und Plasmaanteil (OpenStax, CC BY 4.0)",
       stichworte: [
         "Prozentrechnung",
         "Grundwert",
@@ -537,8 +531,6 @@ In der Epidemiologie sind drei Kennzahlen zentral -- alle basieren auf Prozentre
     {
       id: "ma-grund-03",
       title: "Dreisatz & Proportionen",
-      imageUrl: "/images/bms/bio-herz-kreislauf.jpg",
-      imageCaption: "Abb.: Dreisatz bei Infusionsberechnungen (OpenStax, CC BY 4.0)",
       stichworte: [
         "Dreisatz",
         "Direkter Dreisatz",
@@ -785,8 +777,6 @@ Glucose 5 % und Glucose 20 % sollen zu 500 mL Glucose 8 % gemischt werden:
     {
       id: "ma-grund-04",
       title: "Einheitenumrechnung & Größenordnungen",
-      imageUrl: "/images/bms/bio-pankreas.jpg",
-      imageCaption: "Abb.: Laborwerte umrechnen — mg/dL vs. mmol/L (OpenStax, CC BY 4.0)",
       stichworte: [
         "SI-Präfixe",
         "Nano",

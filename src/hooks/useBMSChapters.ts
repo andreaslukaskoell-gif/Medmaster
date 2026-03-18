@@ -39,18 +39,21 @@ export function useBMSChapters(selectedSubject: string | null, completedChapters
 
   // SWR: cache first, then Supabase
   useEffect(() => {
-    setIsLoading(true);
-    setError(null);
+    queueMicrotask(() => {
+      setIsLoading(true);
+      setError(null);
+    });
     loadBMSChaptersSWR(
       (chapters, source) => {
         setSupabaseChapters(chapters);
         setIsLoading(false);
         if (import.meta.env.DEV) {
-          console.log(
-            source === "cache"
-              ? "Showing cached chapters (revalidating in background)"
-              : `Loaded ${chapters.length} chapters from Supabase`
-          );
+          if (import.meta.env.DEV)
+            console.log(
+              source === "cache"
+                ? "Showing cached chapters (revalidating in background)"
+                : `Loaded ${chapters.length} chapters from Supabase`
+            );
         }
       },
       (err) => {

@@ -29,10 +29,6 @@ Die Basen der beiden Stränge paaren sich nach festen Regeln: A immer mit T (zwe
 
 > **Merke:** **Chargaff-Regel:** A = T und G = C (in Prozent). Wenn A = 27 % → T = 27 %, G = C = 23 %.
 
-{{IMAGE}}
-
-![DNA-Nukleotidaufbau: Zucker, Phosphat und Nukleobase als Bausteine der Doppelhelix](/images/bms/bio-dna-nukleotide.jpg)
-
 ---
 
 ## Gen: funktionelle Einheit auf der DNA
@@ -46,7 +42,6 @@ Ein Gen kann in verschiedenen Varianten vorkommen — diese Varianten nennt man 
 ---
 
 ## Chromosom: verpackte DNA
-
 
 Ein **Chromosom** ist ein langer DNA-Faden, der zusammen mit **Histonen** (Verpackungsproteinen) und weiteren Proteinen zu einer kompakten Struktur organisiert ist. So kann die DNA bei der Zellteilung sauber verteilt werden. Beim Menschen liegt die DNA im Zellkern in 46 Chromosomen vor (23 von der Mutter, 23 vom Vater). Vor der Zellteilung wird jede DNA verdoppelt; dann besteht jedes Chromosom aus zwei identischen **Schwesterchromatiden**, die am **Zentromer** zusammenhängen. Zwei Chromosomen, die dasselbe Set von Genen tragen (eins vom Vater, eins von der Mutter), heißen **homologe Chromosomen** — sie sind nicht identisch, aber entsprechen einander (gleiche Loci, oft unterschiedliche Allele).
 
@@ -63,7 +58,6 @@ Ein **Chromosom** ist ein langer DNA-Faden, der zusammen mit **Histonen** (Verpa
 ---
 
 ## Zusammenhang für die Vererbung
-
 
 > **Merke:** DNA → Gene (mit Allelen) → auf Chromosomen verpackt. Meiose trennt homologe Chromosomen → je ein Allel pro Gen in der Keimzelle.`,
       lernziele: [
@@ -223,8 +217,6 @@ An den Enden der Chromosomen liegen die **Telomere** — repetitive DNA-Sequenze
 
 > **Merke:** Zentromer verbindet die beiden Schwesterchromatiden; p-Arm = kurz, q-Arm = lang; Telomere schützen die Enden.
 
-{{IMAGE}}
-
 ---
 
 ## Chromatinstruktur: Euchromatin und Heterochromatin
@@ -256,7 +248,6 @@ Jede Bande erhält eine Nummer (z. B. 21q22 = Chromosom 21, langer Arm, Region 2
 ---
 
 ## Autosomen und Gonosomen
-
 
 Beim Menschen enthält jede Körperzelle **46 Chromosomen**: **22 Paare Autosomen** (Chromosomen 1–22) und **ein Paar Geschlechtschromosomen** (**Gonosomen**) — **XX** bei Frauen, **XY** bei Männern. Das **Y-Chromosom** trägt das **SRY-Gen**, das die männliche Geschlechtsentwicklung auslöst. Fehlt das Y, entwickelt sich der Organismus weiblich.
 
@@ -420,12 +411,9 @@ Der **Zellzyklus** umfasst die Vorbereitung der Zellteilung und die Teilung selb
 
 > **Merke:** Diploid (2n) = zwei Sätze; haploid (n) = ein Satz. Mensch: 2n = 46 in Körperzellen, n = 23 in Keimzellen.
 
-{{IMAGE}}
-
 ---
 
 ## Mitose: Teilung der Körperzellen
-
 
 {{DIAGRAM:mitosis}}
 
@@ -436,7 +424,6 @@ Der **Zellzyklus** umfasst die Vorbereitung der Zellteilung und die Teilung selb
 ---
 
 ## Meiose: Entstehung der Keimzellen
-
 
 {{DIAGRAM:meiosis}}
 
@@ -452,7 +439,6 @@ Der **Zellzyklus** umfasst die Vorbereitung der Zellteilung und die Teilung selb
 
 ## Crossing-over und Rekombination
 
-
 **Crossing-over** (in der Prophase I der Meiose): Zwei homologe Chromosomen (je mit zwei Chromatiden) liegen gepaart; dabei können sich Chromatidenstücke kreuzen und austauschen. Dadurch entstehen **Rekombinanten** — Chromosomen mit neuer Kombination von Allelen. Gene auf demselben Chromosom sind zunächst **gekoppelt**; durch Crossing-over können sie dennoch neu kombiniert werden. Die **Rekombinationsfrequenz** (wie oft zwei Gene getrennt werden) hängt vom Abstand der Gene ab und wird in **centiMorgan (cM)** (Einheit für genetischen Abstand) angegeben (1 cM ≈ 1 % Rekombination). Gene mit 50 % Rekombination verhalten sich wie unabhängig (entweder auf verschiedenen Chromosomen oder sehr weit auseinander).
 
 > **Merke:** Crossing-over = Austausch zwischen Chromatiden homologer Chromosomen in Prophase I → Rekombination, genetische Vielfalt. Genkopplung wird dadurch teilweise aufgehoben.
@@ -460,7 +446,6 @@ Der **Zellzyklus** umfasst die Vorbereitung der Zellteilung und die Teilung selb
 ---
 
 ## Nicht-Disjunktion und Aneuploidie
-
 
 **Nicht-Disjunktion** bedeutet: Bei der Meiose (oder seltener Mitose) trennen sich Chromosomen oder Chromatiden nicht korrekt. Eine Keimzelle erhält dann z. B. zwei Kopien eines Chromosoms statt einer, eine andere erhält keine. Nach Befruchtung: **Trisomie** (3 Kopien eines Chromosoms, z. B. Trisomie 21 = Down-Syndrom) oder **Monosomie** (nur 1 Kopie, z. B. 45,X = Turner-Syndrom). Das Risiko für Nicht-Disjunktion (besonders Trisomie 21) steigt mit dem **mütterlichen Alter**.
 
@@ -641,8 +626,6 @@ Der **Zellzyklus** umfasst die Vorbereitung der Zellteilung und die Teilung selb
 Beide Eltern sind gesund. Kein Familienmitglied war je auffällig. Trotzdem wird jedes vierte Kind mit **Mukoviszidose** (zystische Fibrose) geboren — einer schweren Lungenerkrankung. Die Erklärung liegt in drei Regeln, die der Augustinermönch Gregor Mendel 1865 an Erbsenpflanzen entdeckte. Sie gelten unverändert für den Menschen und sind die Grundlage jeder genetischen Beratung.
 
 Die Meiose (vorheriges Kapitel) liefert den Mechanismus: Während der Keimzellbildung werden die Allele auf die Gameten verteilt. Mendels Regeln beschreiben, **welche Kombinationen** dabei entstehen und in **welchen Verhältnissen** sie in der nächsten Generation auftreten.
-
-{{IMAGE}}
 
 ---
 
@@ -902,8 +885,6 @@ Nicht alle Merkmale folgen dem einfachen Mendel-Schema. Drei wichtige Phänomene
       content: `## Gleicher Genotyp, unterschiedlicher Phänotyp — warum?
 
 Zwei Menschen tragen dieselbe Mutation im BRCA1-Gen. Die eine erkrankt mit 40 an Brustkrebs, die andere bleibt ihr Leben lang gesund. Die Allel-Kombination (der **Genotyp**) ist identisch — das sichtbare Ergebnis (der **Phänotyp**) nicht. Zwischen Genotyp und Phänotyp liegen Dominanzverhältnisse, Wechselwirkungen zwischen Genen und Umwelteinflüsse. Dieses Kapitel zeigt, welche Mechanismen dafür sorgen, dass gleiche Gene zu verschiedenen Ergebnissen führen können.
-
-{{IMAGE}}
 
 ---
 
@@ -1218,8 +1199,6 @@ Die **Sichelzellanämie** vereint mehrere Konzepte dieses Kapitels:
 
 **Autosomal:** Das Gen liegt auf einem der **Autosomen** (Chromosomen 1–22). Beide Geschlechter sind gleich häufig betroffen (Männer und Frauen haben je zwei Kopien jedes Autosoms). **X-chromosomal:** Das Gen liegt auf dem **X-Chromosom**. Männer haben nur **ein** X-Chromosom (**Hemizygotie**) — sie tragen also nur ein Allel für X-chromosomale Gene. Daher manifestieren sich **X-chromosomal rezessive** Merkmale bei Männern häufiger (ein rezessives Allel reicht). Frauen haben zwei X-Chromosomen und können **Konduktorinnen** sein (heterozygot, phänotypisch gesund, geben das Allel weiter).
 
-{{IMAGE}}
-
 ---
 
 ## Autosomal-dominant
@@ -1231,7 +1210,6 @@ Die **Sichelzellanämie** vereint mehrere Konzepte dieses Kapitels:
 ---
 
 ## Autosomal-rezessiv
-
 
 Die Erkrankung tritt nur auf, wenn **beide** Allele krank sind (**aa**). Heterozygote (Aa) sind **Konduktoren/Träger**, meist gesund. Typisches Muster: **Generationensprünge** (gesunde Eltern können betroffene Kinder haben, wenn beide Aa sind); Geschwister können betroffen sein; **Konsanguinität** (Verwandtenehe) erhöht das Risiko. Aa × Aa → 25 % aa (krank), 50 % Aa (Träger), 25 % AA (gesund). Beispiele: Mukoviszidose (zystische Fibrose, zäher Schleim in Lunge/Pankreas), Phenylketonurie (PKU) (gestörter Phenylalanin-Abbau), Sichelzellanämie (sichelförmige Erythrozyten).
 
@@ -1249,7 +1227,6 @@ Das kranke Allel liegt auf dem **X-Chromosom** und ist **rezessiv**. **Männer**
 
 ## X-chromosomal dominant
 
-
 Das kranke Allel ist **dominant** auf dem X-Chromosom. **Kranker Vater (X^A Y):** Alle **Töchter** erhalten sein X^A → **100 % Töchter krank**; alle **Söhne** erhalten sein Y → **100 % Söhne gesund**. Dieses Muster ist sehr charakteristisch. Beispiele: Hypophosphatämische Rachitis (Vitamin-D-resistente Knochenerweichung), Rett-Syndrom (neurologische Entwicklungsstörung, meist nur Mädchen, da bei Jungen oft letal).
 
 > **Merke:** X-chromosomal dominant: kranker Vater → 100 % Töchter krank, 100 % Söhne gesund.
@@ -1257,7 +1234,6 @@ Das kranke Allel ist **dominant** auf dem X-Chromosom. **Kranker Vater (X^A Y):*
 ---
 
 ## Stammbaum: Symbole und Auswertung
-
 
 **Symbole im Stammbaum:**
 
@@ -1279,7 +1255,6 @@ Das kranke Allel ist **dominant** auf dem X-Chromosom. **Kranker Vater (X^A Y):*
 ---
 
 ## Stammbaumanalyse: Systematisches Vorgehen (MedAT-Standardaufgabe)
-
 
 {{DIAGRAM:pedigree-analysis}}
 
@@ -1318,7 +1293,6 @@ Das kranke Allel ist **dominant** auf dem X-Chromosom. **Kranker Vater (X^A Y):*
 ---
 
 ## Stammbaumanalyse: Durchgerechnetes Beispiel
-
 
 **Stammbaum:** Eine Familie mit einer Erbkrankheit. In Generation I sind beide Eltern gesund. In Generation II haben sie vier Kinder: zwei gesunde Töchter, einen gesunden Sohn und einen betroffenen Sohn. Eine der gesunden Töchter heiratet einen gesunden Mann; sie haben einen betroffenen Sohn.
 
@@ -1487,8 +1461,6 @@ Da jeder Mensch diploid ist, trägt er genau **zwei** dieser drei Allele. Daraus
 **Dominanzverhältnisse:** I^A und I^B sind beide **dominant** über i (das rezessive Allel). Untereinander sind I^A und I^B **kodominant** — bei Genotyp I^A I^B werden **beide** Antigene gleichzeitig und vollständig auf der Erythrozytenoberfläche exprimiert. Das ist der entscheidende Unterschied zur **intermediären Vererbung**, bei der ein Mischphänotyp entsteht (z. B. rosa Blüten bei Wunderblume).
 
 > **Merke:** Kodominanz (AB0): Beide Allele werden vollständig exprimiert (A UND B sichtbar). Intermediär: Mischphänotyp. I^A und I^B dominant über i. Sechs Genotypen → vier Phänotypen.
-
-{{IMAGE}}
 
 **Isoagglutinine (natürliche Antikörper):** Im Serum befinden sich Antikörper gegen die Antigene, die man selbst NICHT hat. Blutgruppe A hat Anti-B; Blutgruppe B hat Anti-A; Blutgruppe 0 hat Anti-A und Anti-B; Blutgruppe AB hat keine Antikörper. Diese Regel ist die Grundlage für die Transfusionsmedizin.
 
@@ -1674,8 +1646,6 @@ Ein seltener Sonderfall: Menschen mit dem **Bombay-Phänotyp** (h/h) können das
       content: `## Eine einzige Base verändert ein Leben
 
 Ein Austausch von Adenin gegen Thymin im β-Globin-Gen — sechs Buchstaben im drei Milliarden Buchstaben langen menschlichen Genom — reicht aus, um aus normalen runden Erythrozyten sichelförmige, starre Zellen zu machen. Die **Sichelzellanämie** zeigt eindrücklich: Mutationen können auf der kleinsten Ebene auftreten und trotzdem das gesamte Organsystem betreffen. Dieses Kapitel ordnet Mutationen systematisch nach drei Ebenen (Gen, Chromosom, Genom), erklärt ihre Ursachen und stellt die wichtigsten DNA-Reparaturmechanismen vor.
-
-{{IMAGE}}
 
 ---
 
@@ -1968,8 +1938,6 @@ Das Zentraldogma beschreibt den gerichteten Informationsfluss in biologischen Sy
 
 > **Merke:** DNA → (Transkription) → mRNA → (Translation) → Protein. Genexpression = Umsetzung der genetischen Information in ein Produkt. Die DNA bleibt als Originalspeicher im Kern erhalten.
 
-{{IMAGE}}
-
 ---
 
 ## Transkription — von der DNA zur mRNA
@@ -1995,12 +1963,9 @@ Die reife mRNA wird dann durch die **Kernporen** ins Zytoplasma exportiert.
 
 > **Merke:** Transkription = DNA → mRNA im Zellkern (RNA-Polymerase). Basen: A, U, G, C (U statt T). Eukaryoten: Capping, Polyadenylierung, Spleißen. Matrizenstrang 3'→5', mRNA wächst 5'→3'.
 
-![Transkription: RNA-Polymerase liest den Matrizenstrang und synthetisiert die komplementäre mRNA](/images/bms/bio-transkription.jpg)
-
 ---
 
 ## Der genetische Code
-
 
 Der genetische Code ist die **Übersetzungsregel** von Nucleotidsequenz in Aminosäure-Sequenz:
 
@@ -2018,7 +1983,6 @@ Der genetische Code ist die **Übersetzungsregel** von Nucleotidsequenz in Amino
 
 ## Translation — von der mRNA zum Protein
 
-
 Die Translation benötigt: **mRNA** (Vorlage), **Ribosomen** (Übersetzungsmaschine, bestehend aus rRNA und Proteinen), **tRNA** (Transfer-RNA, bringt die passende Aminosäure) und **Aminosäuren** als Bausteine.
 
 **Ablauf in drei Phasen:**
@@ -2034,8 +1998,6 @@ Die Translation benötigt: **mRNA** (Vorlage), **Ribosomen** (Übersetzungsmasch
 **Polyribosomen (Polysomen):** Mehrere Ribosomen können gleichzeitig dieselbe mRNA ablesen → effiziente Proteinproduktion.
 
 > **Merke:** Translation = mRNA → Protein an Ribosomen im Zytoplasma. tRNA bringt Aminosäuren (Anticodon erkennt Codon). Initiation (AUG) → Elongation (Peptidbindung) → Termination (Stoppcodon). Polypeptid faltet sich zum funktionellen Protein.
-
-![Translation: Ribosom liest mRNA-Codons, tRNA bringt passende Aminosäuren zur Proteinbiosynthese](/images/bms/bio-translation.jpg)
 
 ---
 
@@ -2233,8 +2195,6 @@ Krebs entsteht, wenn eine Zelle die Kontrolle über ihr eigenes Wachstum verlier
 
 > **Merke:** Krebs = Akkumulation von 5–7 Mutationen in wachstumskontrollierenden Genen. Nicht eine Mutation, sondern das Zusammenspiel vieler genetischer Treffer macht eine Zelle bösartig.
 
-{{IMAGE}}
-
 ---
 
 ## Proto-Onkogene und Onkogene — das festgeklemmte Gaspedal
@@ -2349,8 +2309,6 @@ Neben Onkogenen und Tumorsuppressorgenen gibt es eine dritte Gruppe krebsrelevan
 ---
 
 ## Hallmarks of Cancer — die zehn Kennzeichen
-
-{{IMAGE}}
 
 Hanahan und Weinberg definierten sechs (2000), später zehn (2011) **Hallmarks of Cancer** — universelle Eigenschaften, die eine Krebszelle von einer normalen Zelle unterscheiden:
 
@@ -2587,8 +2545,6 @@ Epigenetische Markierungen werden bei der **Zellteilung** an Tochterzellen weite
 
 > **Merke:** Epigenetik = Steuerung der Genaktivität ohne Änderung der DNA-Sequenz. Mechanismen: DNA-Methylierung und Histonmodifikation. Potenziell reversibel und zelltypspezifisch.
 
-{{IMAGE}}
-
 ---
 
 ## DNA-Methylierung
@@ -2608,7 +2564,6 @@ Bei der **DNA-Methylierung** wird eine **Methylgruppe (-CH₃)** an die Base **C
 ---
 
 ## Histonmodifikation
-
 
 Die DNA ist um **Histonproteine** gewickelt (Nukleosomen (DNA-Histon-Verpackungseinheiten)). Histone haben „Schwänze" (N-terminale Enden), die aus dem Nukleosom herausragen. An diesen Schwänzen können verschiedene **chemische Gruppen** angehängt werden:
 
@@ -2669,7 +2624,6 @@ Frauen haben zwei X-Chromosomen (XX), Männer nur eines (XY). Damit Frauen nicht
 ---
 
 ## Klinische Relevanz der Epigenetik
-
 
 - **Krebs:** Tumorsuppressorgene können durch **Hypermethylierung** stillgelegt werden (z. B. p16, BRCA1) → kein Schutz vor unkontrolliertem Wachstum. Umgekehrt: **Hypomethylierung** kann Onkogene aktivieren.
 - **Epigenetische Therapie:** DNMT-Inhibitoren (z. B. Azacitidin bei MDS/AML) und HDAC-Inhibitoren können epigenetische Markierungen rückgängig machen → Gene werden wieder aktiviert.
@@ -2817,8 +2771,6 @@ Frauen haben zwei X-Chromosomen (XX), Männer nur eines (XY). Damit Frauen nicht
 ## PCR — DNA millionenfach kopieren
 
 Die **Polymerase-Kettenreaktion** (PCR, engl. polymerase chain reaction) ist die wichtigste Methode der modernen Molekularbiologie. Sie erlaubt es, einen bestimmten DNA-Abschnitt innerhalb weniger Stunden **millionenfach zu vervielfältigen** (Amplifikation), selbst wenn nur winzige Mengen Ausgangs-DNA vorhanden sind — etwa aus einem Blutstropfen, einem Haar oder einer archäologischen Probe.
-
-{{IMAGE}}
 
 **Benötigte Komponenten:**
 - **Template-DNA** — der DNA-Abschnitt, der kopiert werden soll
@@ -3139,8 +3091,6 @@ Die Stammbaumanalyse wird in UK „Erbgänge" (bio-4-06) ausführlich erklärt. 
 
 > **Merke:** Im Stammbaum gilt: Quadrat = männlich, Kreis = weiblich, ausgefüllt = betroffen, halb ausgefüllt = Konduktor/in. Eine Doppellinie signalisiert Verwandtenehe (erhöhtes Risiko für rezessive Erkrankungen).
 
-{{IMAGE}}
-
 ---
 
 ## Erbgänge erkennen — Entscheidungsbaum
@@ -3340,8 +3290,6 @@ Die Kopplungsanalyse wurde historisch genutzt, um **Krankheitsgene zu kartieren*
 ## Genetische Beratung
 
 Die **genetische Beratung** ist ein Informations- und Kommunikationsprozess, bei dem Ratsuchende über **Ursachen, Verlauf und Wiederholungsrisiken** genetischer Erkrankungen aufgeklärt werden. Zentrales Prinzip: die Beratung erfolgt **nicht-direktiv** — der Berater gibt keine Handlungsempfehlung, sondern befähigt die Ratsuchenden zu einer **eigenständigen, informierten Entscheidung**.
-
-{{IMAGE}}
 
 ### Indikationen (Wann wird genetische Beratung empfohlen?)
 

@@ -31,6 +31,8 @@ export const physKap7: Kapitel = {
       ],
       content: `Der Clip am Finger misst Sauerstoff, ohne einen Tropfen Blut zu brauchen — Pulsoximetrie funktioniert, weil jedes Atom nur ganz bestimmte Lichtfarben absorbiert.
 
+{{IMAGE}}
+
 ## Entwicklung der Atommodelle
 
 Das **Thomsonsche Modell** (1904) stellte sich das Atom als eine gleichförmig positive Ladungsverteilung vor, in der Elektronen wie Rosinen in einem Kuchen eingebettet sind (“Plum-Pudding-Modell”). Es konnte keine diskreten Spektrallinien erklären und sagte keine Rückstreuung geladener Teilchen voraus.
@@ -283,8 +285,6 @@ Grundzustand n=1: E₁ = −13,6 eV. Ionisation (n→∞): E_∞ = 0 eV. Ionisie
     {
       id: "ph-7-02",
       title: "Radioaktivität – Strahlenarten und Zerfallsgesetze",
-      imageUrl: "/images/bms/ch-elektronenschalen.jpg",
-      imageCaption: "Abb.: Kernzerfall und Strahlenarten (OpenStax, CC BY 4.0)",
       stichworte: [
         "Alpha-Strahlung",
         "Beta-Strahlung",
@@ -856,8 +856,6 @@ Das bedeutet: Schon 1 Mikrogramm ¹³¹I hat eine therapeutisch relevante Aktivi
     {
       id: "ph-7-03",
       title: "Röntgenstrahlung und Strahlenwirkung",
-      imageUrl: "/images/bms/bio-hirnstamm.jpg",
-      imageCaption: "Abb.: Röntgen- und CT-Bildgebung des Gehirns (OpenStax, CC BY 4.0)",
       stichworte: [
         "Röntgenröhre",
         "Bremsstrahlung",
@@ -1212,8 +1210,6 @@ Das entspricht dem typischen HU-Bereich von Fett (−100 bis −50 HU). Knochen 
     {
       id: "ph-7-04",
       title: "Nuklearmedizin und Quantenphänomene",
-      imageUrl: "/images/bms/bio-tierzelle.jpg",
-      imageCaption: "Abb.: Nuklearmedizinische Bildgebung mit Radiotracern (OpenStax, CC BY 4.0)",
       stichworte: [
         "PET-Scan",
         "Annihilation",

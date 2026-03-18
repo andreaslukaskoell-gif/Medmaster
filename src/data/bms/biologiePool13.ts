@@ -69,7 +69,7 @@ export const biologiePool13: Question[] = [
     1,
     "Mastzellen speichern Histamin und andere Mediatoren; bei Allergenkontakt (IgE) setzen sie diese frei.",
     "mittel",
-    ["Immunologie", "Mastzellen (histaminhaltige Granulozyten im Bindegewebe)"]
+    ["Immunologie", "Mastzellen"]
   ),
   q(
     "bio-pool-13-005",
@@ -101,7 +101,7 @@ export const biologiePool13: Question[] = [
     1,
     "Bei der Gastrulation entstehen durch Einstülpung die drei Keimblätter (Ektoderm, Mesoderm, Entoderm).",
     "mittel",
-    ["Embryologie", "Gastrulation (Keimblattbildung mit Ektoderm, Mesoderm und Entoderm)"]
+    ["Embryologie", "Gastrulation"]
   ),
   q(
     "bio-pool-13-009",
@@ -191,7 +191,7 @@ export const biologiePool13: Question[] = [
     1,
     "Konkurrenz entsteht, wenn Individuen/Arten um dieselbe begrenzte Ressource konkurrieren (Nahrung, Raum, Licht).",
     "leicht",
-    ["Ökologie", "Konkurrenz (Wettbewerb um begrenzte Ressourcen zwischen Organismen)"]
+    ["Ökologie", "Konkurrenz"]
   ),
   q(
     "bio-pool-13-015",
@@ -217,7 +217,7 @@ export const biologiePool13: Question[] = [
     1,
     "FSH (follikelstimulierendes Hormon) aus dem Hypophysenvorderlappen stimuliert die Follikelreifung.",
     "mittel",
-    ["Hormone (Signalmoleküle des endokrinen Systems für die Fernwirkung)", "Reproduktion"]
+    ["Hormone", "Reproduktion"]
   ),
   q(
     "bio-pool-13-017",
@@ -259,7 +259,7 @@ export const biologiePool13: Question[] = [
     1,
     "Parasiten leben in oder auf einem Wirt und schädigen ihn.",
     "leicht",
-    ["Ökologie", "Parasitismus (einseitig nützliche Beziehung auf Kosten des Wirts)"]
+    ["Ökologie", "Parasitismus"]
   ),
   q(
     "bio-pool-13-020",
@@ -285,7 +285,7 @@ export const biologiePool13: Question[] = [
     0,
     "Bei Osmose diffundiert Wasser durch eine semipermeable Membran in Richtung der höheren Konzentration gelöster Stoffe.",
     "mittel",
-    ["Zellmembran (Zytoplasmamembran als Permeabilitätsbarriere aller Zellen)", "Osmose"]
+    ["Zellmembran", "Osmose"]
   ),
   q(
     "bio-pool-13-022",
@@ -353,7 +353,7 @@ export const biologiePool13: Question[] = [
     1,
     "Progesteron wird im Gelbkörper (Corpus luteum) und in der Plazenta gebildet; es erhält die Schwangerschaft.",
     "mittel",
-    ["Hormone (Signalmoleküle des endokrinen Systems für die Fernwirkung)", "Reproduktion"]
+    ["Hormone", "Reproduktion"]
   ),
   q(
     "bio-pool-13-027",
@@ -401,7 +401,7 @@ export const biologiePool13: Question[] = [
     1,
     "Plasmazellen sind aus B-Lymphozyten entstanden und produzieren große Mengen spezifischer Antikörper.",
     "mittel",
-    ["Immunologie", "Plasmazellen (terminal differenzierte B-Zellen, Antikörpersekretion)"]
+    ["Immunologie", "Plasmazellen"]
   ),
   q(
     "bio-pool-13-030",
@@ -417,7 +417,7 @@ export const biologiePool13: Question[] = [
     1,
     "Beim aktiven Transport werden Stoffe gegen das Konzentrationsgefälle unter Energieverbrauch transportiert.",
     "mittel",
-    ["Zellmembran (Zytoplasmamembran als Permeabilitätsbarriere aller Zellen)", "Transport"]
+    ["Zellmembran", "Transport"]
   ),
   q(
     "bio-pool-13-031",
@@ -453,7 +453,7 @@ export const biologiePool13: Question[] = [
     1,
     "Herbivoren (Pflanzenfresser) ernähren sich von Pflanzen. Prädatoren = Räuber.",
     "leicht",
-    ["Ökologie", "Nahrungskette (lineare Darstellung der trophischen Beziehungen zwischen Arten)"]
+    ["Ökologie", "Nahrungskette"]
   ),
   q(
     "bio-pool-13-035",
@@ -469,7 +469,7 @@ export const biologiePool13: Question[] = [
     1,
     "Amylase wird in Speicheldrüsen und in der Bauchspeicheldrüse gebildet.",
     "mittel",
-    ["Verdauung", "Enzyme (Biokatalysatoren für biochemische Reaktionen im Stoffwechsel)"]
+    ["Verdauung", "Enzyme"]
   ),
   q(
     "bio-pool-13-036",
@@ -479,7 +479,7 @@ export const biologiePool13: Question[] = [
     1,
     "Crossing-over erfolgt in der Prophase I der Meiose zwischen homologen Chromosomen.",
     "mittel",
-    ["Meiose", "Crossing-over (Rekombination homologer Chromosomenabschnitte in der Prophase I)"]
+    ["Meiose", "Crossing-over"]
   ),
   q(
     "bio-pool-13-037",
@@ -584,7 +584,7 @@ export const biologiePool13: Question[] = [
     [
       "Im Zytosol",
       "In der Mitochondrienmatrix",
-      "Im Zellkern (Nukleus) während der Transkription von DNA zu mRNA",
+      "Im Zellkern",
       "An der Zellmembran",
       "Am Golgi-Apparat",
     ],
@@ -643,7 +643,7 @@ export const biologiePool13: Question[] = [
     1,
     "T-Helferzellen (CD4+) erkennen Antigene auf MHC-II und unterstützen B-Zellen, Makrophagen und zytotoxische T-Zellen.",
     "mittel",
-    ["Immunologie", "T-Helferzellen (CD4-positiv, Zytokinfreisetzung)"]
+    ["Immunologie", "T-Helferzellen"]
   ),
   q(
     "bio-pool-13-048",
@@ -669,7 +669,7 @@ export const biologiePool13: Question[] = [
     1,
     "Parathormon (PTH) aus den Nebenschilddrüsen erhöht den Calciumspiegel im Blut. Calcitonin (Schilddrüse) senkt ihn.",
     "mittel",
-    ["Hormone (Signalmoleküle des endokrinen Systems für die Fernwirkung)", "Calcium"]
+    ["Hormone", "Calcium"]
   ),
   q(
     "bio-pool-13-050",
@@ -759,7 +759,7 @@ export const biologiePool13: Question[] = [
     1,
     "Die Chorionhöhle (extraembryonales Zölom) liegt außerhalb des Embryos, zwischen Trophoblast und Amnion.",
     "schwer",
-    ["Embryologie", "Chorion (äußere Eihaut mit Zotten für den Stoffaustausch)"]
+    ["Embryologie", "Chorion"]
   ),
   q(
     "bio-pool-13-056",
@@ -785,7 +785,7 @@ export const biologiePool13: Question[] = [
     1,
     "Bei Diffusion bewegen sich Teilchen vom Ort höherer zum Ort geringerer Konzentration (passiv).",
     "leicht",
-    ["Zellmembran (Zytoplasmamembran als Permeabilitätsbarriere aller Zellen)", "Diffusion"]
+    ["Zellmembran", "Diffusion"]
   ),
   q(
     "bio-pool-13-058",
@@ -811,7 +811,7 @@ export const biologiePool13: Question[] = [
     1,
     "Bei polygener Vererbung wirken viele Gene und die Umwelt zusammen.",
     "mittel",
-    ["Genetik", "polygen (mehrere Gene bestimmen ein Merkmal additiv)"]
+    ["Genetik", "polygen"]
   ),
   q(
     "bio-pool-13-060",
@@ -827,6 +827,6 @@ export const biologiePool13: Question[] = [
     1,
     "Konsumenten ernähren sich von anderen Organismen (Herbivoren, Karnivoren, Omnivoren).",
     "leicht",
-    ["Ökologie", "Konsument (heterotropher Organismus auf höherer trophischer Ebene)"]
+    ["Ökologie", "Konsument"]
   ),
 ];

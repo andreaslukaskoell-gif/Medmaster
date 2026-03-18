@@ -35,7 +35,6 @@ import { useAdaptiveStore } from "@/store/adaptiveLearning";
 import { getLevelFromXP, getRequiredLevelForPath } from "@/lib/progression";
 import { pathForChapter } from "@/lib/bmsRoutes";
 import type { Kapitel } from "@/data/bmsKapitel/types";
-import { SIDEBAR_PANEL_WIDTH } from "./sidebarLayout";
 
 /* ── Subject config ─────────────────────────────────────────────────── */
 

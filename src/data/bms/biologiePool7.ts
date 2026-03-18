@@ -176,7 +176,7 @@ export const biologiePool7: Question[] = [
     "bio-pool-7-024",
     "bio-kap2",
     "Becherzellen im Darmepithel sezernieren …",
-    ["Insulin", "Muzin (Schleim)", "Talg (Sebum) aus den holokrinen Talgdrüsen", "Schweiß", "Blut"],
+    ["Insulin", "Muzin (Schleim)", "Talg (Sebum)", "Schweiß", "Blut"],
     1,
     "Becherzellen sind einzelfellige Schleimdrüsen; sie sezernieren Muzin (merokrin) für den Schleimfilm und die mukoziliäre Clearance.",
     "mittel",
@@ -196,7 +196,7 @@ export const biologiePool7: Question[] = [
     3,
     "Stratum basale (Basalzellschicht) liegt an der Basalmembran und enthält die proliferierenden Keratinozyten.",
     "mittel",
-    ["Epidermis (mehrschichtig verhorntes Plattenepithel als Hautschutzbarriere)", "Haut", "Kap2"]
+    ["Epidermis", "Haut", "Kap2"]
   ),
   // —— Kap4: Genetik (DNA, Gen, Chromosom, Meiose) ——
   q(
@@ -255,7 +255,7 @@ export const biologiePool7: Question[] = [
     1,
     "Die Erbinformation liegt in der DNA im Zellkern. Mitochondrien haben zusätzlich eigene DNA.",
     "leicht",
-    ["DNA", "Zellkern (Nukleus mit Chromatin und Kernhülle aus Doppelmembran)", "Kap4"]
+    ["DNA", "Zellkern", "Kap4"]
   ),
   q(
     "bio-pool-7-032",
@@ -287,7 +287,7 @@ export const biologiePool7: Question[] = [
     2,
     "Die Befruchtung erfolgt im Eileiter (Tuba uterina); die Einnistung dann in der Gebärmutter.",
     "leicht",
-    ["Befruchtung (Syngamie der Gameten im Eileiter bei der Konzeption)", "Reproduktion", "Kap3"]
+    ["Befruchtung", "Reproduktion", "Kap3"]
   ),
   q(
     "bio-pool-7-044",

@@ -11,9 +11,6 @@ export const mathKapZahlen: Kapitel = {
     {
       id: "ma-1-01",
       title: "Zehnerpotenzen — Schreibweise und Rechenregeln",
-      imageUrl: "/images/bms/bio-erythrozyten.jpg",
-      imageCaption:
-        "Abb.: Erythrozyten unter dem Mikroskop — Durchmesser ca. 7 µm (OpenStax, CC BY 4.0)",
       stichworte: [
         "Zehnerpotenzen",
         "Exponenten",
@@ -82,8 +79,6 @@ Unter einer **Zehnerpotenz** versteht man einen Ausdruck 10ⁿ, bei dem die Zahl
 **Kurz:** Multiplikation → Exponenten **addieren**. Division → Exponenten **subtrahieren**. Potenzieren → Exponenten **multiplizieren**. Wurzel → Exponent **halbieren**. Für die Basis 10 ist jede Potenz eine klar benennbare **Größenordnung** (Tausend, Million, Millionstel usw.).
 
 > **Merke:** Multiplikation → Exponenten **addieren** | Division → Exponenten **subtrahieren** | Potenzieren → Exponenten **multiplizieren** | Wurzel → Exponent halbieren. **Nicht** vertauschen (z. B. bei Multiplikation niemals Exponenten multiplizieren!).
-
-{{DIAGRAM:equation-balance}}
 
 ---
 
@@ -342,9 +337,6 @@ Ein Virus (10⁻⁷ m) ist etwa **10-mal** kleiner als eine Bakterienzelle (10�
     {
       id: "ma-1-02",
       title: "SI-Präfixe von Femto bis Tera",
-      imageUrl: "/images/bms/bio-erythrozyten-lebenszyklus.jpg",
-      imageCaption:
-        "Abb.: Konzentrationsangaben in mmol/L und µmol/L — SI-Präfixe im Laboralltag (OpenStax, CC BY 4.0)",
       stichworte: [
         "SI-Präfixe",
         "Milli",
@@ -695,9 +687,6 @@ Lösung: 0,01 µg/mL = 10 ng/mL (da 1 µg = 1.000 ng → 0,01 × 1.000 = 10). Al
     {
       id: "ma-1-03",
       title: "Wissenschaftliche Notation — Umrechnen und Rechnen",
-      imageUrl: "/images/bms/bio-dna-nukleotide.jpg",
-      imageCaption:
-        "Abb.: DNA-Moleküle — Avogadro-Zahl 6,022 × 10²³ als Beispiel wissenschaftlicher Notation (OpenStax, CC BY 4.0)",
       stichworte: [
         "Wissenschaftliche Notation",
         "Exponentialschreibweise",
@@ -813,13 +802,9 @@ Der dekadische Logarithmus (log₁₀) ist die Umkehrfunktion der Zehnerpotenz �
 - log(a / b) = log(a) − log(b)
 - log(aⁿ) = n × log(a)
 
-{{DIAGRAM:logarithm-function}}
-
 **pH-Wert als Logarithmus:** pH = −log₁₀([H⁺]), wobei [H⁺] in mol/L. Das bedeutet: Bei [H⁺] = 10⁻⁷ mol/L ist pH = 7 (neutrales Wasser). Eine Änderung des pH um 1 entspricht einer zehnfachen Änderung der H⁺-Konzentration. pH 6 hat zehnmal mehr H⁺ als pH 7, pH 5 hat hundertmal mehr H⁺ als pH 7.
 
 > **Merke:** **pH = −log₁₀([H⁺]).** 1 pH-Einheit Unterschied = **Faktor 10** in der H⁺-Konzentration. Physiologisch pH 7,4 ↔ [H⁺] ≈ 40 nmol/L.
-
-{{DIAGRAM:ph-scale}}
 
 ---
 
@@ -1047,9 +1032,6 @@ Der dekadische Logarithmus (log₁₀) ist die Umkehrfunktion der Zehnerpotenz �
     {
       id: "ma-4-01",
       title: "Länge, Fläche und Volumen — Umrechnung",
-      imageUrl: "/images/bms/bio-niere.jpg",
-      imageCaption:
-        "Abb.: Organvolumen und Flächenberechnung in der medizinischen Diagnostik (OpenStax, CC BY 4.0)",
       stichworte: [
         "Längeneinheiten",
         "Flächeneinheiten",
@@ -1350,8 +1332,6 @@ Lösung: 1 dL = 100 mL = 0,1 L → 1 L = 10 dL → 14 g/dL × 10 = 140 g/L. Dies
     {
       id: "ma-4-02",
       title: "Zeit, Geschwindigkeit, Beschleunigung",
-      imageUrl: "/images/bms/bio-herz-kreislauf.jpg",
-      imageCaption: "Abb.: Blutflussgeschwindigkeit im Kreislaufsystem (OpenStax, CC BY 4.0)",
       stichworte: [
         "Zeiteinheiten",
         "Geschwindigkeit",
@@ -1668,9 +1648,6 @@ Lösung: v = √(2 × g × h) = √(2 × 10 × 3) = √60 ≈ 7,7 m/s = 7,7 × 3
     {
       id: "ma-4-03",
       title: "SI-System — Grundeinheiten und abgeleitete Größen",
-      imageUrl: "/images/bms/bio-lunge.jpg",
-      imageCaption:
-        "Abb.: SI-Einheiten und abgeleitete Größen in der Medizin (OpenStax, CC BY 4.0)",
       stichworte: [
         "SI-Grundeinheiten",
         "Meter",
@@ -1728,8 +1705,6 @@ Die **elektrischen Einheiten** bauen aufeinander auf: **Coulomb (C)** = A×s ist
 In der **Strahlenmedizin** zählt **Becquerel (Bq)** = 1/s die Zerfallsereignisse pro Sekunde (Szintigraphie). Die absorbierte Strahlendosis wird in **Gray (Gy)** = J/kg gemessen (Strahlentherapie: 60–70 Gy), die biologische Wirkung auf den Menschen in **Sievert (Sv)** = J/kg × Wichtungsfaktor (Strahlenschutz).
 
 > **Merke:** Die zentrale Ableitungskette: **N** (kg×m/s²) → **Pa** = N/m² → **J** = N×m → **W** = J/s. Wer diese Kette beherrscht, kann fast jede MedAT-Physikaufgabe mit Einheiten lösen.
-
-{{DIAGRAM:equation-balance}}
 
 ---
 

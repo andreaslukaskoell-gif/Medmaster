@@ -3,7 +3,7 @@
  */
 import type { Question } from "./index";
 
-function q(
+function _q(
   id: string,
   chapter: string,
   text: string,

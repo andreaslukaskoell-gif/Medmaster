@@ -171,9 +171,23 @@ function NotFound404() {
   );
 }
 
+/** Sync dark mode class on <html> whenever store.darkMode changes */
+function DarkModeSync() {
+  const darkMode = useStore((s) => s.darkMode);
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [darkMode]);
+  return null;
+}
+
 export default function App() {
   return (
     <BrowserRouter>
+      <DarkModeSync />
       <ScrollToTop />
       <FloatingCTA />
       <CookieConsentBanner />

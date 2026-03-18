@@ -1558,7 +1558,7 @@ function getValidImplikationenTasks(): ImplikationTask[] {
  */
 export function rebalanceEAnswerRate(tasks: ImplikationTask[], maxERate = 0.22): ImplikationTask[] {
   const eTasks = tasks.filter((t) => t.correctAnswer === 4);
-  const nonETasks = tasks.filter((t) => t.correctAnswer !== 4);
+  const _nonETasks = tasks.filter((t) => t.correctAnswer !== 4);
   const maxE = Math.max(1, Math.round(tasks.length * maxERate));
   if (eTasks.length <= maxE) return tasks;
   // Keep only maxE of the E-tasks (shuffle to avoid always dropping the same ones)

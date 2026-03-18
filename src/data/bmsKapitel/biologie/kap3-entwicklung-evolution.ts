@@ -66,8 +66,6 @@ Die Theorie erklärt eine fundamentale Frage: Warum sind eukaryotische Zellen so
 
 > **Merke:** Endosymbiose-Belege: eigenes Genom, 70S-Ribosomen, Antibiotikasensitivität, Doppelmembran, binäre Teilung, phylogenetische Ähnlichkeit zu Bakterien.
 
-{{IMAGE}}
-
 {{DIAGRAM:prokaryote-vs-eukaryote}}
 
 ---
@@ -291,8 +289,6 @@ Natürliche Selektion kann auf Merkmale einer Population auf drei verschiedene W
 **Disruptive Selektion**: Beide Extreme werden bevorzugt, der Mittelwert wird benachteiligt. Die Merkmalsverteilung spaltet sich auf. Beispiel: Schnabelgröße bei Vögeln mit zwei verschiedenen Nahrungsquellen — sehr große Schnäbel (harte Samen) und sehr kleine Schnäbel (Insekten) sind vorteilhaft, mittlere nicht. Disruptive Selektion kann zur **Artaufspaltung** führen.
 
 > **Merke:** Stabilisierend = Mittelwert bleibt (Varianz ↓). Gerichtet = Mittelwert verschiebt sich. Disruptiv = Extreme bevorzugt → kann Artaufspaltung einleiten.
-
-{{IMAGE}}
 
 ---
 
@@ -559,8 +555,6 @@ Für ein Gen mit zwei Allelen (Häufigkeit **p** für das dominante, **q** für 
 
 > **Merke:** Hardy-Weinberg: **p² + 2pq + q² = 1**. Rezessiv-homozygot = q². Überträger = 2pq. Aus der Krankheitshäufigkeit (q²) lässt sich die Überträgerfrequenz berechnen — das ist eine klassische MedAT-Rechenaufgabe.
 
-{{IMAGE}}
-
 ---
 
 ## Heterozygotenvorteil — Warum schädliche Allele überleben
@@ -791,8 +785,6 @@ Die Embryonalentwicklung lässt sich in klar abgegrenzte Phasen gliedern:
 
 Diese zeitliche Abfolge ist prüfungsrelevant. Merke dir besonders: Das Herz beginnt bereits in **Woche 4 (Tag 22–23)** zu schlagen — nicht erst am Ende der Embryonalperiode.
 
-{{IMAGE}}
-
 ---
 
 ## Die drei Keimblätter — die meistgeprüfte Tabelle
@@ -1015,8 +1007,6 @@ Für die Merkmalsanalyse im Stammbaum unterscheidet man: **Apomorphie** (abgelei
 
 > **Merke:** Clade = monophyletisch = Vorfahre + ALLE Nachkommen. Synapomorphie = geteiltes abgeleitetes Merkmal → zeigt Verwandtschaft. Plesiomorphie = ursprüngliches Merkmal → keine Verwandtschaftsaussage.
 
-{{IMAGE}}
-
 ---
 
 ## Homologie vs. Analogie — Der kritische Unterschied
@@ -1207,8 +1197,6 @@ Auch die HIV-Forensik nutzt Phylogenetik: In Gerichtsprozessen wurde anhand vira
         "Aufrechter Gang",
       ],
       content: `98,7 % DNA-Übereinstimmung mit Schimpansen — und doch trennen uns aufrechter Gang, Sprache und ein dreifach größeres Gehirn. Die Geschichte der Hominiden ist kein linearer Aufstieg, sondern ein verzweigter Stammbaum mit Sackgassen, Koexistenzen und überraschenden Hybridisierungen.
-
-{{IMAGE}}
 
 ---
 
@@ -1470,8 +1458,6 @@ Pääbos Paläogenomik (Erbgutanalyse ausgestorbener Arten) verknüpft Hominiden
 
 Ohne Keimzellen keine Fortpflanzung. Die **Gametogenese** bezeichnet die Bildung reifer Geschlechtszellen (Gameten) durch Meiose — und sie verläuft bei Mann und Frau grundlegend verschieden. Beim Mann entstehen täglich Millionen Spermien ab der Pubertät, kontinuierlich bis ins hohe Alter. Bei der Frau sind die Eizell-Vorläufer bereits pränatal angelegt — ein Pool, der ein Leben lang nicht erneuert wird. Diese Asymmetrie hat weitreichende Konsequenzen: Sie erklärt, warum das Risiko für chromosomale Fehler mit dem mütterlichen Alter steigt (lange Meiose-Pause in Prophase I), und warum Spermien genetisch frischer Mutation unterliegen als Eizellen.
 
-{{IMAGE}}
-
 Wichtige Begriffe:
 - **Gamet** = reife Keimzelle (Spermium oder Eizelle) mit einfachem Chromosomensatz (n)
 - **Spermatogonium** = diploide Stammzelle der Spermien im Hoden (2n)
@@ -1645,8 +1631,6 @@ Die reife **Eizelle** (n) nach Abschluss der Meiose II und die **Spermien** (n) 
       ],
       content: `## Ort und zeitliche Einordnung
 
-{{IMAGE}}
-
 Nur eine von Millionen Samenzellen schafft es bis zur Eizelle — und der Ort dieses Treffens ist genau festgelegt. Die Befruchtung erfolgt in der **Ampulle des Eileiters** (Tuba uterina) — dem äußeren, weitesten Abschnitt. Die Eizelle wird bei der Ovulation aus dem Ovar freigesetzt, vom Eileiter aufgenommen und wandert langsam in Richtung Uterus; die Spermien bewegen sich vom Scheidenbereich durch Uterus in die Tuben. Das Zusammentreffen und die Fusion finden in der Ampulle statt. Eine Einnistung (Implantation) in der Tube führt zur **Eileiterschwangerschaft** (Extrauteringravidität, Schwangerschaft außerhalb der Gebärmutter) und ist lebensbedrohlich.
 
 ---
@@ -1773,8 +1757,6 @@ Bevor ein Spermium die Eizelle durchdringen kann, muss es **kapazitiert** sein. 
       content: `## Von der Zygote zur Einnistung — vier Tage, drei Stadien
 
 Unmittelbar nach der Befruchtung beginnt die Zygote sich zu teilen. In den ersten fünf Tagen durchläuft der Keim drei charakteristische Stadien — Morula, Blastozyste und schließlich Implantation — während er durch den Eileiter in die Gebärmutter wandert. Keine dieser Teilungen ist normales Zellwachstum: Die Zellen werden bei jeder Runde kleiner, bis zwei klar unterschiedliche Zellpopulationen entstehen, die später zu Embryo und Plazenta werden.
-
-{{IMAGE}}
 
 ## Furchung — Teilungen ohne Wachstum
 
@@ -1903,8 +1885,6 @@ Die **Implantation** (Einnistung) ist das Einbetten der Blastozyste in die **Geb
 Der Entwicklungsbiologe Lewis Wolpert sagte: *"It is not birth, marriage, or death, but gastrulation which is truly the most important time in your life."* Der Satz ist nicht übertrieben: In der dritten Entwicklungswoche wird aus einer einschichtigen Zellscheibe ein dreischichtiger Embryo mit festgelegten Körperachsen — der Grundriss aller späteren Organe.
 
 Voraussetzung ist die **zweischichtige Keimscheibe**, die sich nach der Implantation gebildet hat: oben der **Epiblast** (zylindrische, hochprismatische Zellen) und unten der **Hypoblast** (platte Zellen, bildet den Dottersack). Alle drei Keimblätter — Ektoderm, Mesoderm und Endoderm — entstehen ausschließlich aus dem **Epiblast**. Der Hypoblast wird dabei verdrängt.
-
-{{IMAGE}}
 
 ---
 
@@ -2127,8 +2107,6 @@ Die Neurulation beginnt nicht aus dem Nichts — sie wird durch das **Notochord*
 
 > **Merke:** Neurulation = Neuralplatte → Neuralrinne → Neuralrohr (ZNS-Anlage). Anteriorer Neuroporus Tag 25, posteriorer Tag 27; offen = Fehlbildung.
 
-{{IMAGE}}
-
 ---
 
 ## Neuralleiste — Herkunft und Derivate
@@ -2307,8 +2285,6 @@ Wenn der **posteriore Neuroporus** nicht schließt, kann es zur **Spina bifida**
       content: `Nach der Gastrulation und Neurulation beginnt die Organogenese — die Phase, in der alle Organsysteme angelegt werden. Fehler in dieser kritischen Zeit können schwere Fehlbildungen verursachen.
 
 ## Embryonalperiode (Wochen 1–8) — Organogenese
-
-{{IMAGE}}
 
 Die **Embryonalperiode** umfasst die ersten **8 Wochen** nach der Befruchtung. Sie endet nicht willkürlich, sondern an einem biologisch definierten Punkt: Am Ende von Woche 8 sind alle wesentlichen Organsysteme angelegt — danach beginnt die **Fetalperiode**, die sich auf Wachstum und Reifung konzentriert, nicht auf neue Strukturbildung.
 
@@ -2498,8 +2474,6 @@ Thalidomid (Contergan) verursachte in den 1960er Jahren Phokomelie (Flipper-arti
 Ohne Plazenta kein Fetus: Sie versorgt den heranwachsenden Organismus neun Monate lang mit Sauerstoff und Nährstoffen, entsorgt Abfallprodukte, produziert Hormone und schützt vor mütterlicher Immunabwehr. Gleichzeitig verhindert sie, dass mütterliches und fetales Blut sich mischen — eine Grenzfläche, keine Verbindung.
 
 Die Plazenta geht aus dem **Trophoblasten** hervor — der äußeren Zellschicht der Blastozyste, die bei der Implantation in das Endometrium eindringt. Parallel dazu bilden sich zwei Eihüllen: das **Amnion** (innere Membran, umgibt das Fruchtwasser) und das **Chorion** (äußere Membran, grenzt an die Decidua). Beide entstammen dem fetalen Gewebe, nicht der Mutter.
-
-{{IMAGE}}
 
 ---
 

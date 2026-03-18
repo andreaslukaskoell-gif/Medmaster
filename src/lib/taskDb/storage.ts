@@ -58,7 +58,7 @@ function handleSupabaseError(
 }
 
 /** Check if we should attempt Supabase calls */
-function useSupabase(): boolean {
+function canUseSupabase(): boolean {
   if (!supabase || supabaseTasksUnavailable) return false;
   // If the main sync already detected missing tables, skip without another 404
   if (isSchemaSkipActive()) {
@@ -144,7 +144,7 @@ const localStore = {
 };
 
 export async function getTaskById(id: string): Promise<Task | null> {
-  if (useSupabase()) {
+  if (canUseSupabase()) {
     const { data, error } = await supabase!.from("tasks").select("*").eq("id", id).single();
     if (handleSupabaseError(error)) {
       return localStore.get().find((t) => t.id === id) ?? null;
@@ -160,7 +160,7 @@ export async function getTasksByIds(ids: string[]): Promise<Task[]> {
   if (ids.length === 0) return [];
   const seen = new Set(ids);
   const unique = [...seen];
-  if (useSupabase()) {
+  if (canUseSupabase()) {
     const { data, error } = await supabase!
       .from("tasks")
       .select("*")
@@ -190,7 +190,7 @@ export async function getTasksByDomain(filters: TaskFilters): Promise<Task[]> {
     offset = 0,
   } = filters;
 
-  if (useSupabase()) {
+  if (canUseSupabase()) {
     let q = supabase!
       .from("tasks")
       .select("*")
@@ -244,7 +244,7 @@ export async function saveTask(task: TaskInsert): Promise<void> {
     ...task,
     createdAt: task.createdAt ?? new Date().toISOString(),
   };
-  if (useSupabase()) {
+  if (canUseSupabase()) {
     const { error } = await supabase!
       .from("tasks")
       .upsert(taskToRow(t) as never, { onConflict: "id" });
@@ -258,7 +258,7 @@ export async function saveTask(task: TaskInsert): Promise<void> {
 }
 
 export async function markTaskInvalid(id: string, reason: string): Promise<void> {
-  if (useSupabase()) {
+  if (canUseSupabase()) {
     const { error } = await supabase!
       .from("tasks")
       .update({ invalid_reason: reason, validated: false })
@@ -282,7 +282,7 @@ export async function getTaskCountByDomain(
   domain: TaskDomain,
   validatedOnly = true
 ): Promise<number> {
-  if (useSupabase()) {
+  if (canUseSupabase()) {
     let q = supabase!
       .from("tasks")
       .select("id", { count: "exact", head: true })
@@ -307,7 +307,7 @@ export async function getTaskCountInBand(
   minDiff: number,
   maxDiff: number
 ): Promise<number> {
-  if (useSupabase()) {
+  if (canUseSupabase()) {
     const { count, error } = await supabase!
       .from("tasks")
       .select("id", { count: "exact", head: true })
@@ -337,7 +337,7 @@ export async function getTaskCountInBand(
 
 /** Lädt alle Tasks eines Merkfähigkeit-Sets (gleiche setId in data). */
 export async function getTasksBySetId(setId: string): Promise<Task[]> {
-  if (useSupabase()) {
+  if (canUseSupabase()) {
     const { data, error } = await supabase!
       .from("tasks")
       .select("*")

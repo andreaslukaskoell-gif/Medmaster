@@ -92,7 +92,7 @@ export const biologiePool9: Question[] = [
     1,
     "Knochen: vor allem Kollagen Typ I (und Hydroxylapatit). Hyaliner Knorpel: Kollagen Typ II.",
     "mittel",
-    ["Bindegewebe (mesenchymale Zellen in extrazellulärer Matrix)", "Kap2"]
+    ["Bindegewebe", "Kap2"]
   ),
   q(
     "bio-pool-9-018",
@@ -118,7 +118,7 @@ export const biologiePool9: Question[] = [
     1,
     "Befruchtung = Verschmelzung von Eizelle (haploid) und Spermium (haploid) → Zygote (diploid).",
     "leicht",
-    ["Befruchtung (Syngamie der Gameten im Eileiter bei der Konzeption)", "Kap3"]
+    ["Befruchtung", "Kap3"]
   ),
   q(
     "bio-pool-9-024",
@@ -288,6 +288,6 @@ export const biologiePool9: Question[] = [
     1,
     "Der LH-Peak löst den Eisprung aus. FSH stimuliert die Follikelreifung.",
     "mittel",
-    ["Hormone (Signalmoleküle des endokrinen Systems für die Fernwirkung)", "Kap3"]
+    ["Hormone", "Kap3"]
   ),
 ];

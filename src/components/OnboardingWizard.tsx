@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { useStore } from "@/store/useStore";
 import { useAdaptiveStore } from "@/store/adaptiveLearning";
+import { getMedATDate } from "@/lib/utils";
 
 const LS_KEY = "medmaster-onboarding-complete";
 
@@ -95,10 +96,28 @@ const SECTIONS = [
 
 export function OnboardingWizard() {
   const completedChapters = useStore((s) => s.completedChapters);
+  const setLernplanConfig = useStore((s) => s.setLernplanConfig);
+  const lernplanConfig = useStore((s) => s.lernplanConfig);
   const totalAnswered = useAdaptiveStore((s) => s.profile.totalQuestionsAnswered);
   const [step, setStep] = useState(0);
   const [dismissed, setDismissed] = useState(() => localStorage.getItem(LS_KEY) === "true");
+  const [dateChoice, setDateChoice] = useState<"standard" | "custom" | null>(null);
+  const [customDate, setCustomDate] = useState("");
   const navigate = useNavigate();
+
+  const defaultMedATDate = getMedATDate();
+  const defaultDateISO = defaultMedATDate.toISOString().split("T")[0];
+
+  const saveMedATDate = useCallback(
+    (dateISO: string) => {
+      const base = lernplanConfig ?? {
+        hoursPerWeek: 7,
+        generatedAt: new Date().toISOString(),
+      };
+      setLernplanConfig({ ...base, medatDate: dateISO, generatedAt: new Date().toISOString() });
+    },
+    [lernplanConfig, setLernplanConfig]
+  );
 
   const finish = useCallback(() => {
     localStorage.setItem(LS_KEY, "true");
@@ -109,8 +128,8 @@ export function OnboardingWizard() {
   const hasProgress = completedChapters.length > 0 || totalAnswered > 0;
   if (dismissed || hasProgress) return null;
 
-  const isLast = step === 2;
-  const TOTAL_STEPS = 3;
+  const isLast = step === 3;
+  const TOTAL_STEPS = 4;
 
   const stepVariants = {
     enter: (dir: number) => ({
@@ -250,6 +269,102 @@ export function OnboardingWizard() {
                     className="w-7 h-7"
                   >
                     <path
+                      d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </div>
+                <h2 className="text-xl font-serif font-semibold text-[var(--foreground)] mb-2">
+                  Wann ist dein MedAT?
+                </h2>
+                <p className="text-[var(--muted-foreground)] text-sm mb-6 max-w-xs leading-relaxed">
+                  Damit wir deinen Countdown und Lernplan einrichten.
+                </p>
+                <div className="flex flex-col gap-3 w-full max-w-xs">
+                  <button
+                    type="button"
+                    className={`card-glass w-full py-3 rounded-xl text-sm font-medium transition-all ring-1 ${
+                      dateChoice === "standard"
+                        ? "ring-[var(--accent)] bg-[var(--accent)]/10 text-[var(--accent)]"
+                        : "ring-[var(--border)] text-[var(--foreground)] hover:bg-white/10"
+                    }`}
+                    onClick={() => {
+                      setDateChoice("standard");
+                      setCustomDate("");
+                    }}
+                  >
+                    <span className="font-semibold">
+                      {defaultMedATDate.toLocaleDateString("de-AT", {
+                        day: "numeric",
+                        month: "long",
+                        year: "numeric",
+                      })}
+                    </span>
+                    <span className="block text-xs mt-0.5 opacity-70">Offizieller Termin</span>
+                  </button>
+                  <button
+                    type="button"
+                    className={`card-glass w-full py-3 rounded-xl text-sm font-medium transition-all ring-1 ${
+                      dateChoice === "custom"
+                        ? "ring-[var(--accent)] bg-[var(--accent)]/10 text-[var(--accent)]"
+                        : "ring-[var(--border)] text-[var(--foreground)] hover:bg-white/10"
+                    }`}
+                    onClick={() => setDateChoice("custom")}
+                  >
+                    Anderes Datum
+                  </button>
+                  {dateChoice === "custom" && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <input
+                        type="date"
+                        value={customDate}
+                        min={new Date().toISOString().split("T")[0]}
+                        max="2027-12-31"
+                        onChange={(e) => setCustomDate(e.target.value)}
+                        className="w-full rounded-lg border border-[var(--border)] bg-[var(--card)] px-4 py-2.5 text-sm text-[var(--foreground)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
+                      />
+                    </motion.div>
+                  )}
+                  <button
+                    type="button"
+                    className="text-xs text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors mt-1"
+                    onClick={() => {
+                      /* Skip without saving date — use default */
+                      saveMedATDate(defaultDateISO);
+                      setStep(3);
+                    }}
+                  >
+                    Ich weiß es noch nicht
+                  </button>
+                </div>
+              </motion.div>
+            )}
+
+            {step === 3 && (
+              <motion.div
+                key="step-3"
+                custom={1}
+                variants={stepVariants}
+                initial="enter"
+                animate="center"
+                exit="exit"
+                transition={{ duration: 0.38, ease: [0.16, 1, 0.3, 1] }}
+                className="absolute inset-0 flex flex-col items-center text-center justify-center"
+              >
+                <div className="w-14 h-14 rounded-2xl bg-[var(--accent)]/10 flex items-center justify-center mb-5 ring-1 ring-[var(--accent)]/20">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="var(--accent)"
+                    strokeWidth="1.5"
+                    className="w-7 h-7"
+                  >
+                    <path
                       d="M15.59 14.37a6 6 0 0 1-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 0 0 6.16-12.12A14.98 14.98 0 0 0 9.631 8.41m5.96 5.96a14.926 14.926 0 0 1-5.841 2.58m-.119-8.54a6 6 0 0 0-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 0 0-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 0 1-2.448-2.448 14.9 14.9 0 0 1 .06-.312m-2.24 2.39a4.493 4.493 0 0 0-1.757 4.306 4.493 4.493 0 0 0 4.306-1.758M16.5 9a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -325,7 +440,15 @@ export function OnboardingWizard() {
               <button
                 type="button"
                 className="btn-premium px-8 py-2.5 rounded-xl text-sm font-semibold"
-                onClick={() => setStep((s) => s + 1)}
+                disabled={step === 2 && dateChoice === "custom" && !customDate}
+                onClick={() => {
+                  if (step === 2) {
+                    const chosenDate =
+                      dateChoice === "custom" && customDate ? customDate : defaultDateISO;
+                    saveMedATDate(chosenDate);
+                  }
+                  setStep((s) => s + 1);
+                }}
               >
                 Weiter
               </button>

@@ -1,5 +1,5 @@
 import { useState, useMemo, useRef, useEffect, useCallback } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import {
   ArrowLeft,
   ArrowRight,
@@ -11,6 +11,9 @@ import {
   Zap,
   Clock,
   MoreHorizontal,
+  GraduationCap,
+  BookOpen,
+  Target,
 } from "lucide-react";
 import { Button } from "../components/ui/button";
 import { QuickEdit } from "../components/QuickEdit";
@@ -56,6 +59,133 @@ const subjectAccentVars: Record<string, string> = {
   mathematik: "var(--accent-math)",
 };
 
+/* ---------- NextStepCard ---------- */
+
+type NextStepRecommendation =
+  | { kind: "quiz"; subject: string; kapitelId: string }
+  | { kind: "next-chapter"; title: string; onGo: () => void }
+  | null;
+
+function useNextStepRecommendation(
+  uk: { id: string } | null,
+  kapitel: Kapitel | null,
+  unterkapitel: Kapitel["unterkapitel"],
+  completedChapters: string[],
+  quizResults: { id: string }[],
+  onNextChapter?: () => void
+): NextStepRecommendation {
+  return useMemo(() => {
+    if (!uk || !kapitel) return null;
+
+    // 1. If user hasn't completed any quiz for this UK → suggest Fragen-Trainer
+    const hasQuizResult = quizResults.some((r) => r.id.startsWith(`kontroll-${uk.id}-`));
+    if (!hasQuizResult) {
+      return { kind: "quiz", subject: kapitel.subject, kapitelId: kapitel.id };
+    }
+
+    // 2. If ALL UKs in chapter are completed → suggest next chapter (if available)
+    const allUKsDone = unterkapitel.every((u) => u?.id && completedChapters.includes(u.id));
+    if (allUKsDone && onNextChapter) {
+      return { kind: "next-chapter", title: "Nächstes Kapitel", onGo: onNextChapter };
+    }
+
+    // 3. Otherwise the existing "Weiter" navigation is sufficient
+    return null;
+  }, [uk, kapitel, unterkapitel, completedChapters, quizResults, onNextChapter]);
+}
+
+function NextStepCard({
+  recommendation,
+  accentColor,
+  navigate,
+}: {
+  recommendation: NextStepRecommendation;
+  accentColor: string;
+  navigate: ReturnType<typeof useNavigate>;
+}) {
+  if (!recommendation) return null;
+
+  const iconClass = "w-5 h-5 shrink-0";
+
+  if (recommendation.kind === "quiz") {
+    return (
+      <div
+        className="rounded-xl border p-5 flex items-start gap-4 transition-all hover:shadow-md"
+        style={{
+          borderColor: `color-mix(in srgb, ${accentColor} 30%, var(--border))`,
+          background: `linear-gradient(135deg, color-mix(in srgb, ${accentColor} 4%, var(--background)), var(--background))`,
+        }}
+      >
+        <div
+          className="mt-0.5 p-2 rounded-lg"
+          style={{ background: `color-mix(in srgb, ${accentColor} 12%, transparent)` }}
+        >
+          <GraduationCap className={iconClass} style={{ color: accentColor }} />
+        </div>
+        <div className="flex-1 min-w-0">
+          <h4 className="text-sm font-semibold text-[var(--text-primary)] mb-1">
+            Nächster Schritt
+          </h4>
+          <p className="text-sm text-[var(--text-secondary)] mb-3">
+            Teste dein Wissen mit Kontrollfragen zu diesem Kapitel im Fragen-Trainer.
+          </p>
+          <button
+            onClick={() => navigate("/fragen-trainer")}
+            className="inline-flex items-center gap-2 text-sm font-medium px-4 py-2 rounded-lg cursor-pointer transition-colors"
+            style={{
+              color: "white",
+              background: accentColor,
+            }}
+          >
+            <Target className="w-3.5 h-3.5" />
+            Kontrollfragen üben
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  if (recommendation.kind === "next-chapter") {
+    return (
+      <div
+        className="rounded-xl border p-5 flex items-start gap-4 transition-all hover:shadow-md"
+        style={{
+          borderColor: `color-mix(in srgb, ${accentColor} 30%, var(--border))`,
+          background: `linear-gradient(135deg, color-mix(in srgb, ${accentColor} 4%, var(--background)), var(--background))`,
+        }}
+      >
+        <div
+          className="mt-0.5 p-2 rounded-lg"
+          style={{ background: `color-mix(in srgb, ${accentColor} 12%, transparent)` }}
+        >
+          <BookOpen className={iconClass} style={{ color: accentColor }} />
+        </div>
+        <div className="flex-1 min-w-0">
+          <h4 className="text-sm font-semibold text-[var(--text-primary)] mb-1">
+            Kapitel abgeschlossen!
+          </h4>
+          <p className="text-sm text-[var(--text-secondary)] mb-3">
+            Alle Unterkapitel erledigt. Weiter zum nächsten Kapitel?
+          </p>
+          <button
+            onClick={recommendation.onGo}
+            className="inline-flex items-center gap-2 text-sm font-medium px-4 py-2 rounded-lg cursor-pointer transition-colors"
+            style={{
+              color: "white",
+              background: accentColor,
+            }}
+          >
+            <ArrowRight className="w-3.5 h-3.5" />
+            {recommendation.title}
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  return null;
+}
+
 export default function BMSUnterkapitel({
   kapitel,
   unterkapitelIndex,
@@ -65,6 +195,7 @@ export default function BMSUnterkapitel({
   onNextChapter,
 }: Props) {
   const location = useLocation();
+  const navigate = useNavigate();
   const { setBreadcrumbs } = useBreadcrumb();
   const kapitelId = kapitel?.id;
   const ukFromIndex =
@@ -91,9 +222,11 @@ export default function BMSUnterkapitel({
   const bookmarks = store.bookmarks || { chapters: [] };
   const toggleBookmarkChapter = store.toggleBookmarkChapter || (() => {});
   const saveQuizResult = store.saveQuizResult ?? (() => {});
+  const quizResults = store.quizResults || [];
   const logActivity = store.logActivity ?? (() => {});
   const getMinutes = useSessionTimer();
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const unterkapitel =
     kapitel?.unterkapitel && Array.isArray(kapitel.unterkapitel) ? kapitel.unterkapitel : [];
   const total = unterkapitel.length;
@@ -114,9 +247,14 @@ export default function BMSUnterkapitel({
   const [showScrollRestoredToast, setShowScrollRestoredToast] = useState(false);
   const [toolMenuOpen, setToolMenuOpen] = useState(false);
   const [showCelebration, setShowCelebration] = useState(false);
+  const [navToast, setNavToast] = useState<{ direction: "prev" | "next"; title: string } | null>(
+    null
+  );
+  const navToastTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const allCompleteFired = useRef(false);
   const scrollSaveTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const kontrollResultsRef = useRef<{ questionIndex: number; correct: boolean }[]>([]);
+  const contentAreaRef = useRef<HTMLDivElement>(null);
 
   const readingTimeMin = useMemo(() => {
     const text = [uk?.content ?? "", ...(uk?.sections?.map((s) => s.text ?? "") ?? [])].join(" ");
@@ -166,10 +304,25 @@ export default function BMSUnterkapitel({
   useEffect(() => {
     const storageKey = ukId ? `medmaster-uk-scroll-${ukId}` : null;
     const update = () => {
-      const el = document.documentElement;
-      const scrolled = el.scrollTop || document.body.scrollTop;
-      const totalHeight = el.scrollHeight - el.clientHeight;
-      setScrollProgress(totalHeight > 0 ? Math.min(100, (scrolled / totalHeight) * 100) : 0);
+      const scrolled = document.documentElement.scrollTop || document.body.scrollTop;
+
+      // Calculate progress based on content area only (excluding quiz)
+      const contentEl = contentAreaRef.current;
+      if (contentEl) {
+        const rect = contentEl.getBoundingClientRect();
+        const contentTop = contentEl.offsetTop;
+        const contentBottom = contentTop + rect.height;
+        const viewportHeight = window.innerHeight;
+        // Progress = how far through the content area the bottom of the viewport has reached
+        const progressStart = contentTop;
+        const progressEnd = contentBottom - viewportHeight * 0.3; // done when 30% viewport past content end
+        const progress = ((scrolled - progressStart) / (progressEnd - progressStart)) * 100;
+        setScrollProgress(Math.max(0, Math.min(100, progress)));
+      } else {
+        const totalHeight =
+          document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        setScrollProgress(totalHeight > 0 ? Math.min(100, (scrolled / totalHeight) * 100) : 0);
+      }
 
       // Debounced scroll position save
       if (storageKey) {
@@ -213,6 +366,15 @@ export default function BMSUnterkapitel({
   const isBookmarked = uk ? bookmarks.chapters.includes(uk.id) : false;
   const isCompleted = uk ? completedChapters.includes(uk.id) : false;
 
+  const nextStepRecommendation = useNextStepRecommendation(
+    uk,
+    kapitel,
+    unterkapitel,
+    completedChapters,
+    quizResults,
+    onNextChapter
+  );
+
   const handleComplete = () => {
     if (!uk || !kapitel) return;
     // Clear saved scroll position on completion
@@ -254,18 +416,51 @@ export default function BMSUnterkapitel({
 
   const canGoPrev = !isFirst || !!onPrevChapter;
 
+  const showNavToastFn = useCallback(
+    (direction: "prev" | "next") => {
+      const title =
+        direction === "next"
+          ? !isLast
+            ? (unterkapitel[unterkapitelIndex + 1]?.title ?? "Weiter")
+            : onNextChapter
+              ? "Nächstes Kapitel"
+              : "Kapitel abschließen"
+          : !isFirst
+            ? (unterkapitel[unterkapitelIndex - 1]?.title ?? "Zurück")
+            : "Vorheriges Kapitel";
+      if (navToastTimerRef.current) clearTimeout(navToastTimerRef.current);
+      setNavToast({ direction, title });
+      navToastTimerRef.current = setTimeout(() => setNavToast(null), 1500);
+    },
+    [unterkapitelIndex, isFirst, isLast, onNextChapter, unterkapitel]
+  );
+
+  useEffect(() => {
+    return () => {
+      if (navToastTimerRef.current) clearTimeout(navToastTimerRef.current);
+    };
+  }, []);
+
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
-      const tag = (e.target as HTMLElement)?.tagName;
+      const el = e.target as HTMLElement;
+      const tag = el?.tagName;
       if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT") return;
-      if (e.key === "ArrowRight" && !e.altKey && !e.metaKey) handleNext();
-      if (e.key === "ArrowLeft" && !e.altKey && !e.metaKey) handlePrev();
+      if (el?.isContentEditable) return;
+      if (e.key === "ArrowRight" && !e.altKey && !e.metaKey) {
+        showNavToastFn("next");
+        handleNext();
+      }
+      if (e.key === "ArrowLeft" && !e.altKey && !e.metaKey && canGoPrev) {
+        showNavToastFn("prev");
+        handlePrev();
+      }
       if ((e.key === "r" || e.key === "R") && !e.ctrlKey && !e.metaKey)
         setQuickReviewMode((v) => !v);
     };
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
-  }, [unterkapitelIndex, isFirst, isLast]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [unterkapitelIndex, isFirst, isLast, canGoPrev, showNavToastFn]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleKontrollfragenAnswer = (
     questionIndex: number,
@@ -334,7 +529,6 @@ export default function BMSUnterkapitel({
     onBack();
   }, [onBack]);
 
-  // eslint-disable-next-line react-hooks/preserve-manual-memoization -- deps intentionally minimal
   const selfTestBlock = useMemo(() => {
     if (!uk || !uk.id) return null;
     const questionsFromArray =
@@ -426,11 +620,37 @@ export default function BMSUnterkapitel({
         </div>
       )}
 
-      {/* Reading progress bar */}
-      <div className="fixed top-0 left-0 right-0 z-[200] h-[3px] bg-transparent pointer-events-none">
+      {/* Keyboard navigation toast */}
+      {navToast && (
         <div
-          className="h-full transition-all duration-150"
-          style={{ width: `${scrollProgress}%`, backgroundColor: accentColor }}
+          className="fixed bottom-6 left-1/2 -translate-x-1/2 z-[300] flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm pointer-events-none animate-fade-in-up"
+          style={{
+            backgroundColor: "var(--surface)",
+            color: "var(--text-secondary)",
+            boxShadow: "0 2px 12px rgba(0,0,0,0.15)",
+            border: "1px solid var(--border)",
+          }}
+        >
+          {navToast.direction === "prev" ? (
+            <ArrowLeft className="w-3.5 h-3.5 shrink-0" style={{ color: accentColor }} />
+          ) : (
+            <ArrowRight className="w-3.5 h-3.5 shrink-0" style={{ color: accentColor }} />
+          )}
+          <span className="truncate max-w-[240px]">{navToast.title}</span>
+        </div>
+      )}
+
+      {/* Reading progress bar */}
+      <div className="fixed top-0 left-0 right-0 z-[200] h-[3px] pointer-events-none">
+        <div
+          className="h-full will-change-[width]"
+          style={{
+            width: `${scrollProgress}%`,
+            background: `linear-gradient(90deg, ${accentColor}, color-mix(in srgb, ${accentColor} 70%, white))`,
+            opacity:
+              scrollProgress > 0 && scrollProgress < 100 ? 1 : scrollProgress >= 100 ? 0.6 : 0,
+            transition: "width 200ms ease-out, opacity 400ms ease",
+          }}
         />
       </div>
 
@@ -618,7 +838,7 @@ export default function BMSUnterkapitel({
           </div>
         ) : (
           <>
-            <div className="relative">
+            <div className="relative" ref={contentAreaRef}>
               <ContentErrorBoundary context={`${kapitel?.id ?? "chapter"}-${uk?.id ?? "uk"}`}>
                 <ContentVisualizer
                   uk={uk}
@@ -689,6 +909,17 @@ export default function BMSUnterkapitel({
               </div>
             </ScrollReveal>
           </>
+        )}
+
+        {/* Next Step recommendation — shown when UK is completed */}
+        {isCompleted && nextStepRecommendation && (
+          <ScrollReveal className="w-full max-w-[680px] ml-[268px] min-w-0 mt-10">
+            <NextStepCard
+              recommendation={nextStepRecommendation}
+              accentColor={accentColor}
+              navigate={navigate}
+            />
+          </ScrollReveal>
         )}
 
         {/* Navigation: Previous / Next — premium glass cards */}

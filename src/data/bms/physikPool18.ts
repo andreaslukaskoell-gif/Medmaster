@@ -140,8 +140,8 @@ export const physikPool18: Question[] = [
     [
       "ist nach kurzer Zeit verschwunden",
       "bleibt lange aktiv",
-      "hat keine Aktivität (unter Standardbedingungen)",
-      "ist nur künstlich (unter Standardbedingungen)",
+      "hat keine Aktivität",
+      "ist nur künstlich",
       "zerfällt nie",
     ],
     1,
@@ -212,7 +212,7 @@ export const physikPool18: Question[] = [
     [
       "der Gewichtskraft des Körpers",
       "der Gewichtskraft der verdrängten Flüssigkeit",
-      "null (kein Beitrag, verschwindet)",
+      "null",
       "der Masse des Körpers",
       "der Dichte",
     ],
@@ -536,7 +536,7 @@ export const physikPool18: Question[] = [
     KAP[1],
     "Bei der Totalreflexion:",
     [
-      "wird Licht immer gebrochen (unter Standardbedingungen)",
+      "wird Licht immer gebrochen",
       "wird kein Licht ins zweite Medium übertragen",
       "ändert sich die Frequenz",
       "tritt nur bei senkrechtem Einfall auf",

@@ -51,8 +51,6 @@ Die Biologie organisiert lebende Systeme in einer Hierarchie, bei der jede Ebene
 
 > **Merke:** Die Hierarchie lautet: Organismus → Population → Biozönose → Ökosystem → Biom → Biosphäre.
 
-{{IMAGE}}
-
 ---
 
 ## Biotop und Biozönose: Die zwei Hälften des Ökosystems
@@ -167,8 +165,6 @@ Jeder Organismus kann nur innerhalb bestimmter Grenzen eines Umweltfaktors über
 - **Ökologische Amplitude (Toleranzbreite):** Der gesamte Bereich zwischen unterem und oberem Todespunkt — also die Spanne, in der Überleben überhaupt möglich ist.
 
 > **Merke:** Die Toleranzkurve zeigt: Optimum (maximale Leistung) → Pessimum (Stressbereich) → Todespunkt (letale Grenze). Die ökologische Amplitude ist die gesamte Toleranzbreite zwischen den beiden Todespunkten.
-
-{{IMAGE}}
 
 ---
 
@@ -437,8 +433,6 @@ Jeder Krankheitserreger braucht bestimmte Bedingungen, um sich zu vermehren: den
 
 > **Merke:** Nische ≠ Lebensraum. Lebensraum = wo ein Organismus vorkommt. Nische = sämtliche Umweltfaktoren (Temperatur, Nahrung, Konkurrenten, Wirtsgewebe) plus die funktionelle Rolle im System.
 
-{{IMAGE}}
-
 ---
 
 ## Fundamentale und realisierte Nische (Hutchinson, 1957)
@@ -614,8 +608,6 @@ Bei Immunsuppression (z. B. HIV/AIDS mit CD4-T-Zell-Verlust, Chemotherapie-induz
 - **Ausbeutungskonkurrenz (Exploitationskonkurrenz):** indirekte Konkurrenz durch Ressourcenverbrauch — wer schneller frisst, gewinnt, ohne direkten Kontakt.
 
 > **Merke:** Intraspezifisch = innerhalb einer Art (stärkste Konkurrenz wegen identischer Nische). Interspezifisch = zwischen Arten. Interferenz = direkt, Ausbeutung = indirekt.
-
-{{IMAGE}}
 
 ---
 
@@ -885,8 +877,6 @@ Ein **Ökosystem** umfasst alle Lebewesen (Biozönose/biotische Komponente) eine
 
 > **Merke:** Produzenten → Konsumenten I → II → III → Destruenten. Destruenten bauen Detritus ab und schließen den Kreislauf. Nahrungsnetz > Nahrungskette (realistischer, stabiler).
 
-{{IMAGE}}
-
 ---
 
 ## Energiefluss und die 10%-Regel
@@ -966,8 +956,6 @@ Phosphor hat **kein gasförmiges Reservoir** — er zirkuliert nur zwischen terr
 **Kreislauf:** Gestein → Verwitterung → Phosphat im Boden → Pflanzenaufnahme → organisches P in Biomasse → Mineralisation durch Destruenten → Phosphat → Auswaschung ins Gewässer → Sedimentation im Meeresboden.
 
 **Eutrophierung:** Überschuss von Phosphat (aus Düngemitteln, Waschmitteln, Kläranlagenabwässern) in Gewässern → übermäßiges Algenwachstum (Algenblüte) → Algentod → Abbau durch Bakterien → Sauerstoffzehrung → Hypoxie (Sauerstoffmangel)/Anoxie (völliger Sauerstoffentzug) → Fischsterben.
-
-![Phosphorkreislauf — Gestein, Verwitterung, Boden, Pflanzen, Tiere und Sedimentation](/images/bms/bio-phosphorkreislauf.png)
 
 ### Wasserkreislauf
 
@@ -1199,8 +1187,6 @@ Eine einzige *E. coli*-Zelle teilt sich alle 20 Minuten. Nach 10 Stunden wären 
 Jede Populationsgröße ändert sich durch vier Prozesse: **Geburten** und **Immigration** (Zuwachs) versus **Todesfälle** und **Emigration** (Verlust). Die Nettoänderung pro Zeiteinheit bestimmt, ob eine Population wächst, schrumpft oder stabil bleibt.
 
 > **Merke:** ΔN = (Geburten + Immigration) − (Todesfälle + Emigration). Ist ΔN > 0, wächst die Population; ist ΔN < 0, schrumpft sie; bei ΔN = 0 herrscht Gleichgewicht.
-
-{{IMAGE}}
 
 ---
 
@@ -1619,8 +1605,6 @@ Ein **Antikörper (Immunglobulin, Ig)** ist ein Y-förmiges Glykoprotein (Protei
 
 > **Merke:** IgG: 2 schwere + 2 leichte Ketten, Y-Form. Fab = variabel (Antigenerkennung). Fc = konstant (Effektorfunktionen: Opsonisierung, Komplementaktivierung, Plazentatransfer).
 
-{{IMAGE}}
-
 ---
 
 ## Immunglobulin-Klassen (Isotypen)
@@ -1636,7 +1620,6 @@ Das Immunsystem produziert fünf Klassen von Immunglobulinen (Isotypen), die sic
 | IgM | Serum | Pentamer (10 Bindestellen), erste Reaktion (Primärantwort), starker Komplementaktivator |
 | IgE | Sehr wenig im Serum | Bindet Mastzellen (Gewebezellen mit Histamingranula) und Basophile (granuläre Leukozyten) → Allergie (Typ I), Parasitenabwehr |
 | IgD | B-Zell-Oberfläche | B-Zell-Aktivierung (Signalübertragung), selten im Serum |
-
 
 ---
 
@@ -1848,8 +1831,6 @@ Die V(D)J-Rekombination wird durch den RAG1/RAG2-Komplex (Recombination Activati
 
 ![V(D)J-Rekombination — RAG1/RAG2 wählt je ein V-, D- und J-Segment zur Rekombination aus](/images/bms/bio-vdj-rekombination-de.svg)
 
-{{IMAGE}}
-
 ---
 
 ## Affinitätsreifung in Keimzentren
@@ -2036,8 +2017,6 @@ Das **AB0-Blutgruppensystem** wird durch das ABO-Gen auf Chromosom 9 bestimmt. D
 - I^A und I^B sind beide **dominant** über i⁰ (rezessiv)
 - Das AB0-System ist ein klassisches Beispiel für **multiple Allelie** (drei Allele eines Gens) und **Kodominanz** in der Genetik
 
-{{IMAGE}}
-
 ---
 
 ## Genotypen und Phänotypen
@@ -2052,7 +2031,6 @@ Die vier AB0-Blutgruppen werden durch drei Allele (I^A, I^B, i⁰) bestimmt. Jed
 | B | I^B I^B oder I^B i⁰ | B | Anti-A |
 | AB | I^A I^B | A + B | Keiner |
 | 0 | i⁰ i⁰ | Keines | Anti-A + Anti-B |
-
 
 ---
 
@@ -2245,8 +2223,6 @@ Das **Rhesus-System** ist das medizinisch bedeutsamste Blutgruppensystem nach AB
 **Häufigkeit und Populationsgenetik:** Ca. 85% der Europäer sind Rh+, 15% Rh-. Die Frequenz variiert erheblich zwischen Populationen: In der baskischen Bevölkerung sind bis zu 35% Rh-negativ (höchste Frequenz weltweit), in afrikanischen und asiatischen Populationen ist Rh-negativ sehr selten (<1–5%). Die hohe Rh-negativ-Frequenz in Europa wird als Ergebnis genetischer Drift oder eines bisher unbekannten Selektionsvorteils diskutiert.
 
 **Genotypbestimmung beim Vater:** Bei Rh-negativer Mutter und Rh-positivem Vater ist klinisch relevant, ob der Vater homozygot (DD) oder heterozygot (Dd) ist: Bei DD → alle Kinder Rh+, bei Dd → 50% Rh+ (gefährdet) und 50% Rh- (nicht gefährdet). Die Zygotie des Vaters kann durch serologische Testung der D-Antigendichte oder molekulargenetisch bestimmt werden.
-
-{{IMAGE}}
 
 ---
 

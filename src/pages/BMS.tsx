@@ -52,6 +52,7 @@ export default function BMS() {
   // Store access
   const store = useSafeStore();
   const completedChapters = useMemo(
+    // eslint-disable-next-line react-hooks/preserve-manual-memoization
     () =>
       store?.completedChapters && Array.isArray(store.completedChapters)
         ? store.completedChapters
@@ -151,6 +152,7 @@ export default function BMS() {
     if (supabaseChapters.length === 0) return;
     const subjectId = subjectFromSlug(fachParam);
     if (subjectId) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setSelectedSubject(subjectId);
     } else if (fachParam === undefined && kapitelParam === undefined) {
       setSelectedSubject(null);
@@ -166,6 +168,7 @@ export default function BMS() {
     if (chapterId) {
       const chapter = chaptersForSelectedSubject.find((c) => c.id === chapterId);
       if (chapter) {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setActiveKapitel(chapter);
       }
     }

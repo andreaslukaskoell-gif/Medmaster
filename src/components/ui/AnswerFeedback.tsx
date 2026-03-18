@@ -52,8 +52,10 @@ export function CorrectBurst({ trigger }: CorrectBurstProps) {
 
   useEffect(() => {
     if (trigger === 0) return;
-    setVisible(true);
-    setKey((k) => k + 1);
+    queueMicrotask(() => {
+      setVisible(true);
+      setKey((k) => k + 1);
+    });
     const t = setTimeout(() => setVisible(false), 700);
     return () => clearTimeout(t);
   }, [trigger]);
@@ -104,8 +106,10 @@ export function WrongShake({ trigger }: WrongShakeProps) {
 
   useEffect(() => {
     if (trigger === 0) return;
-    setVisible(true);
-    setKey((k) => k + 1);
+    queueMicrotask(() => {
+      setVisible(true);
+      setKey((k) => k + 1);
+    });
     const t = setTimeout(() => setVisible(false), 450);
     return () => clearTimeout(t);
   }, [trigger]);
@@ -154,8 +158,10 @@ export function StreakConfetti({ trigger }: StreakConfettiProps) {
 
   useEffect(() => {
     if (trigger === 0) return;
-    setVisible(true);
-    setKey((k) => k + 1);
+    queueMicrotask(() => {
+      setVisible(true);
+      setKey((k) => k + 1);
+    });
     const t = setTimeout(() => setVisible(false), 1200);
     return () => clearTimeout(t);
   }, [trigger]);

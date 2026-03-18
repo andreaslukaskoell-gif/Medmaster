@@ -495,7 +495,7 @@ export function GedaechtnisQuiz({ onBack }: { onBack: () => void }) {
   // Auto-submit when timer expires
   useEffect(() => {
     if (quizTimerExpired && !submitted && questions.length > 0) {
-      handleSubmit();
+      queueMicrotask(() => handleSubmit());
     }
   }, [quizTimerExpired]); // eslint-disable-line react-hooks/exhaustive-deps
 

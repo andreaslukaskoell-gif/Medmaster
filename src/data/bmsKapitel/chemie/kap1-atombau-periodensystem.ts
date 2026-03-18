@@ -43,10 +43,7 @@ Bereits ca. 400 v. Chr. postulierte der griechische Philosoph **Demokrit** untei
 
 ---
 
-{{IMAGE}}
-
 ## Thomson-Modell (Rosinenmodell, 1904)
-
 
 J. J. Thomson entdeckte 1897 das **Elektron** (Kathodenstrahlröhre (evakuierte Glasröhre mit Elektroden), Bestimmung des e/m-Verhältnisses) und widerlegte damit die Vorstellung vom unteilbaren Atom. Er stellte sich das Atom als eine **gleichmäßig positiv geladene Kugel** vor, in die negativ geladene Elektronen — wie Rosinen in einem Kuchen — eingebettet sind. Das Modell erklärt **Ionisation** (Abgabe von Elektronen) und elektrische Neutralität des Atoms, scheitert jedoch an den Ergebnissen des Rutherford-Streuversuchs.
 
@@ -55,7 +52,6 @@ J. J. Thomson entdeckte 1897 das **Elektron** (Kathodenstrahlröhre (evakuierte 
 ---
 
 ## Rutherford-Streuversuch (1911) → Kern-Modell
-
 
 Ernest Rutherford beschoss eine hauchdünne **Goldfolie** (ca. 100 Atomlagen) mit positiv geladenen **Alphateilchen** — das sind ⁴He²⁺-Kerne (Heliumkerne ohne Elektronen), die bei radioaktivem Zerfall entstehen und hier als Projektile dienten.
 
@@ -71,13 +67,11 @@ Ernest Rutherford beschoss eine hauchdünne **Goldfolie** (ca. 100 Atomlagen) mi
 
 > **Merke:** Rutherford: Meiste Teilchen durch → leerer Raum. Wenige stark abgelenkt → winziger, positiver, massereicher **Kern**. Vergleich: Kern = Murmel (1 cm), Atom = Fußballstadion (~100 m).
 
-
 **Grenzen des Rutherford-Modells:** Es erklärt nicht, warum Elektronen nicht spiralförmig in den Kern stürzen (beschleunigte Ladungen strahlen klassisch Energie ab), und liefert keine Erklärung für **diskrete Spektrallinien** (charakteristische Lichtfarben von angeregten Atomen).
 
 {{DIAGRAM:bohr-model}}
 
 ## Bohrsches Atommodell (1913)
-
 
 Niels Bohr postulierte, dass Elektronen auf **festen Kreisbahnen** um den Kern kreisen, ohne Energie abzustrahlen. Diese Bahnen heißen **Schalen** (K, L, M, N, …) und werden mit der **Hauptquantenzahl** n = 1, 2, 3, 4, … bezeichnet. **Schalen** sind also die nach Bohr angenommenen Kreisbahnen, auf denen Elektronen den Kern umkreisen. Maximale Elektronenzahl pro Schale: **2n²**.
 
@@ -92,10 +86,13 @@ Beim **Übergang** von einer höheren auf eine niedrigere Schale (Emission) gibt
 
 > **Merke:** Bohr: Elektronen auf **Schalen** (K, L, M, N); max. **2n²** Elektronen pro Schale. Übergänge zwischen Schalen → Photon abgegeben oder aufgenommen → Spektrallinien.
 
+**Licht als elektromagnetische Welle:** Licht besitzt einen Welle-Teilchen-Dualismus — es kann sowohl als **elektromagnetische Welle** als auch als **Teilchenstrom (Photonen)** beschrieben werden. Die Ausbreitungsgeschwindigkeit im Vakuum beträgt **c ≈ 3 × 10⁸ m/s = 300 000 km/s** (Naturkonstante). Es gilt: **c = λ × f** (Wellenlänge × Frequenz) und **E = h × f** (Energie proportional zur Frequenz). Je kürzer die Wellenlänge, desto energiereicher das Photon. **Sichtbares Licht** umfasst den Wellenlängenbereich **380 nm** (violett) bis **750 nm** (rot).
+
 **Grenzen:** Das Bohr-Modell versagt für Mehrelektronenatome und erklärt keine Feinstruktur der Spektren.
 
 ## Quantenmechanisches Modell (Orbital-Modell, ab 1925)
 
+Nachdem Bohrs Modell bei Mehrelektronenatomen an seine Grenzen stieß, entwickelten Physiker ein grundlegend neues Bild des Atoms.
 
 Heisenberg (Unschärfeprinzip: Ort und Impuls eines Elektrons nicht gleichzeitig exakt bestimmbar), Schrödinger (Wellengleichung) und Dirac entwickelten das moderne Modell: Elektronen sind keine klassischen Teilchen auf festen Bahnen, sondern werden durch **Wellenfunktionen** beschrieben — das ist die mathematische Größe, deren Betrag zum Quadrat die Aufenthaltswahrscheinlichkeit des Elektrons angibt. Daraus leiten sich die **Orbitale** ab: Ein **Orbital** ist ein Raumbereich, in dem ein Elektron mit 90 % Wahrscheinlichkeit anzutreffen ist — also kein fester Pfad, sondern ein **Aufenthaltswahrscheinlichkeitsraum** (das quantenmechanische Gegenstück zu Bohrs Schalen).
 
@@ -112,6 +109,7 @@ Heisenberg (Unschärfeprinzip: Ort und Impuls eines Elektrons nicht gleichzeitig
 
 ## Atomkern: Protonen, Neutronen, Isotope
 
+Bisher haben wir die Elektronenhülle betrachtet — nun wenden wir uns dem Kern zu, der fast die gesamte Masse des Atoms enthält.
 
 **Bausteine des Atoms — Übersicht:**
 
@@ -143,7 +141,6 @@ Die **Ordnungszahl Z** (Protonenzahl) gibt an, wie viele Protonen im Kern sitzen
 | ¹⁴C | 6 | 8 | 14 | Spuren, radioaktiv (T½ = 5730 a, Datierung) |
 
 > **Merke:** **Z** = Protonenzahl = Element. **A** = Z + N = Massenzahl. **Isotope**: gleiche Z, verschiedene N → gleiche Chemie, verschiedene Masse/Stabilität. Notation ᴬ_Z X.
-
 
 **Stabile vs. instabile Kerne:** Stabile Isotope haben ein günstiges N/Z-Verhältnis (bei leichten Elementen N ≈ Z; bei schweren überwiegen Neutronen). Instabile Nuklide sind **radioaktiv**. Alle Elemente mit **Z > 83** (Bismut) sind ausschließlich radioaktiv.
 
@@ -408,8 +405,6 @@ Der Spin ist eine Quanteneigenschaft ohne klassisches Analogon — man stellt ih
 
 > **Merke:** Vier Quantenzahlen = vier Fragen: Welche Schale (n)? Welche Form (l)? Welche Richtung (mₗ)? Welcher Spin (mₛ)? Keine zwei Elektronen im selben Atom dürfen auf alle vier Fragen dieselbe Antwort geben (Pauli-Prinzip).
 
-{{IMAGE}}
-
 {{DIAGRAM:atomic-orbitals}}
 
 ## Die drei Besetzungsregeln — Wie Elektronen ihre Plätze finden
@@ -509,12 +504,16 @@ Die Quantenzahlen erklären einzelne Atome. Aber sobald Atome Bindungen eingehen
 
 ## Dia- und Paramagnetismus
 
+Nachdem wir gesehen haben, wie Orbitale sich zu Hybridorbitalen mischen, kommen wir zu einer weiteren praktischen Konsequenz der Elektronenkonfiguration: dem Magnetismus.
+
 Die Elektronenkonfiguration verrät direkt, ob ein Stoff magnetisch ist:
 - **Paramagnetisch** (von Magnetfeldern angezogen): enthält ungepaarte Elektronen. Beispiel: Fe³⁺ ([Ar]3d⁵) hat 5 ungepaarte e⁻ → stark paramagnetisch.
 - **Diamagnetisch** (schwach abgestoßen): alle Elektronen gepaart. Beispiel: Zn²⁺ ([Ar]3d¹⁰) → vollständig gepaart → diamagnetisch.
 - MRT-Kontrastmittel nutzen starken Paramagnetismus: Gadolinium Gd³⁺ ([Xe]4f⁷) hat 7 ungepaarte f-Elektronen.
 
 ## Klinische Relevanz — Übergangsmetalle als Spurenelemente
+
+Die Konzepte der Elektronenkonfiguration und des Magnetismus sind nicht nur theoretisch — sie erklären direkt, warum bestimmte Metalle im Körper unverzichtbar sind.
 
 Übergangsmetalle nutzen ihre unvollständigen d-Orbitale für variable Oxidationsstufen und koordinative Funktionen. Die ausführliche biologische Rolle wird in UK ch-5-03 behandelt — hier das Wichtigste:
 - **Fe** ([Ar]3d⁶4s²): Hämoglobin (O₂-Transport), Zytochrome (Elektronentransportkette). Der Fe²⁺/Fe³⁺-Wechsel durch die unvollständige 3d-Schale ermöglicht reversible O₂-Bindung.
@@ -729,9 +728,9 @@ Die Elektronenkonfiguration verrät direkt, ob ein Stoff magnetisch ist:
     {
       id: "ch-1-04",
       title: "Massenzahl, Atommasse und Mol-Konzept",
-      imageUrl: "/images/bms/ch-chemische-reaktionen.jpg",
+      imageUrl: "/images/bms/ch-atommodell.jpg",
       imageCaption:
-        "Abb.: Stöchiometrie und Mol-Konzept bei chemischen Reaktionen (OpenStax, CC BY 4.0)",
+        "Abb.: Vom Atom zum Mol — Atombau als Grundlage der Massenberechnung (OpenStax, CC BY 4.0)",
       stichworte: [
         "Atommasse",
         "Mol",
@@ -745,8 +744,6 @@ Die Elektronenkonfiguration verrät direkt, ob ein Stoff magnetisch ist:
         "Laborwerte",
       ],
       content: `Eine Aspirin-Tablette enthält exakt 2,78 × 10²¹ Moleküle Acetylsalicylsäure — aber wie wiegt man Teilchen, die man nicht sehen kann? Das Mol verbindet die unsichtbare Welt der Atome mit der wägbaren Welt des Labors — eine Brücke, die jede Dosisberechnung und jede Infusion möglich macht.
-
-{{IMAGE}}
 
 ## Atomare Masseneinheit u
 
@@ -772,6 +769,8 @@ Die **relative Atommasse Ar** ist das gewichtete Mittel aller Isotopenmengen im 
 
 ## Molare Masse M
 
+Nachdem wir die atomare Masseneinheit kennengelernt haben, brauchen wir eine Brücke zur makroskopischen Welt — die molare Masse.
+
 Die **molare Masse M** [Einheit: g/mol] eines Elements ist numerisch gleich der relativen Atommasse in u:
 - M(C) = 12,011 g/mol | M(O) = 15,999 g/mol | M(Na) = 22,990 g/mol
 
@@ -782,6 +781,8 @@ Für Moleküle: M(Molekül) = Summe der molaren Massen aller Atome.
 - M(NaOH) = 22,990 + 15,999 + 1,008 = 39,997 g/mol
 
 ## Avogadro-Konstante und Mol
+
+Mit der molaren Masse können wir Gramm in Mol umrechnen — doch was genau ist ein Mol? Hier kommt die Avogadro-Konstante ins Spiel.
 
 Die **Avogadro-Konstante** Na = 6,022 mal 10 hoch 23 pro mol gibt die Anzahl der Teilchen (Atome, Moleküle, Ionen) in einem Mol an.
 
@@ -805,6 +806,8 @@ Beispielrechnung: Wie viele Mol NaCl sind in 11,7 g?
 n = 11,7 g geteilt durch 58,44 g/mol = 0,200 mol = 200 mmol
 
 ## Molkonzentration (Molarität) und klinische Relevanz
+
+Die Stoffmenge allein reicht für die Klinik nicht aus — dort brauchen wir die Konzentration, also Mol pro Liter Lösung.
 
 **Molarität c [mol/L = M]:** c = n / V
 
@@ -832,8 +835,9 @@ Beispiel: 50 mL einer 2 mol/L HCl-Lösung sollen auf 0,1 mol/L verdünnt werden.
 
 > **Merke:** Die Verdünnungsformel c₁V₁ = c₂V₂ gilt für alle Konzentrationsberechnungen bei Verdünnung – klinisch wichtig bei Medikamentenherstellung und Infusionsansatz.
 
-
 ## Stöchiometrie (mengenmäßige Berechnung chemischer Reaktionen) – Mol-Verhältnisse in Reaktionsgleichungen
+
+Bisher haben wir einzelne Stoffe betrachtet. Doch bei chemischen Reaktionen müssen wir wissen, in welchem Verhältnis die Stoffe miteinander reagieren — das ist die Aufgabe der Stöchiometrie.
 
 Die Koeffizienten in einer Reaktionsgleichung geben direkt die Mol-Verhältnisse an:
 2 H₂ + O₂ → 2 H₂O bedeutet: 2 mol H₂ + 1 mol O₂ ergibt 2 mol H₂O
@@ -1067,6 +1071,8 @@ Ein permanenter Dipol polarisiert ein benachbartes unpolares Molekül. Geringer 
 
 ## Stärkeranking der Wechselwirkungen
 
+Um die verschiedenen Wechselwirkungen einzuordnen, hilft ein direkter Vergleich ihrer Energien:
+
 | Wechselwirkung | Energie (kJ/mol) | Beispiel |
 |----------------|-------------------|----------|
 | Ionenbindung (Gitter) | 400–4000 | NaCl (786) |
@@ -1075,10 +1081,9 @@ Ein permanenter Dipol polarisiert ein benachbartes unpolares Molekül. Geringer 
 | Dipol–Dipol (Keesom) | 3–10 | HCl···HCl |
 | London-Dispersion | 0,05–40 | CH₄···CH₄ (~1) |
 
-
-{{IMAGE}}
-
 ## Wasserstoffbrückenbindungen
+
+Im Stärkeranking stehen Wasserstoffbrücken zwischen kovalenten Bindungen und einfachen Dipol-Dipol-Kräften — und genau diese Sonderstellung macht sie zu den wichtigsten nicht-kovalenten Kräften in der Biologie.
 
 Wasserstoffbrücken (H-Brücken) entstehen, wenn ein **elektropositives H-Atom**, das kovalent an ein stark elektronegatives Atom X gebunden ist (X = N, O oder F), mit dem freien Elektronenpaar eines weiteren elektronegativen Atoms Y (Y = N, O, F) wechselwirkt:
 
@@ -1096,13 +1101,19 @@ H-Brücken sind **nicht kovalent**, aber deutlich stärker als gewöhnliche van-
 
 ## Hydrophober Effekt
 
+Neben den H-Brücken gibt es eine weitere Kraft, die für die Biochemie entscheidend ist — und sie ist nicht enthalpisch, sondern entropisch getrieben.
+
 Unpolare Moleküle in Wasser erzwingen eine geordnete Wasserstruktur um sich herum ("Eisberg-Modell"), was entropisch ungünstig ist. Die Zusammenlagerung unpolarer Bereiche (hydrophobe Wechselwirkung) setzt geordnetes Wasser frei → Entropiegewinn → treibende Kraft der Proteinfaltung und Membranbildung. Obwohl der hydrophobe Effekt auf London-Kräften basiert, ist er entropisch getrieben, nicht enthalpisch.
+
+> **Merke:** Der hydrophobe Effekt ist die Haupttriebkraft der Proteinfaltung und Membranbildung. Er basiert nicht auf Abstoßung, sondern auf dem Entropiegewinn des Wassers, wenn unpolare Bereiche sich zusammenlagern.
 
 ## Klinische Relevanz
 
 Die Wasserlöslichkeit von Pharmaka hängt direkt von intermolekularen Wechselwirkungen ab: **polare, H-Brücken-bildende Moleküle** (Paracetamol, viele Antibiotika) sind wasserlöslich und renal eliminierbar; **unpolare Moleküle** (Anästhetika, Steroide) akkumulieren in Lipidphasen und werden hepatisch metabolisiert. Lipinski-Regel (Rule of Five, Faustregel für orale Arzneistoff-Aufnahme): Gute orale Bioverfügbarkeit, wenn ≤5 H-Brücken-Donoren, ≤10 Akzeptoren, M ≤500 g/mol, logP (Maß für Lipophilie) ≤5.
 
 Proteinfaltung und -funktion basieren auf einem Netzwerk aus H-Brücken, hydrophoben Wechselwirkungen und ionischen Kontakten — **Denaturierung** durch Hitze, Harnstoff oder pH-Änderung bricht dieses Netzwerk auf. Bei der **PCR** wird die DNA durch Erhitzen auf 94–98 °C (Denaturierungsschritt) vollständig aufgebrochen, weil alle H-Brücken zwischen den Basenpaaren überwunden werden, während die kovalenten Phosphodiesterbindungen intakt bleiben.
+
+> **Klinisch:** Denaturierung zerstört nicht-kovalente Wechselwirkungen (H-Brücken, hydrophobe Kontakte) — die kovalente Primärstruktur (Peptidbindungen) bleibt intakt. Deshalb kann ein denaturiertes Protein seine Form nicht zurückgewinnen, wenn die Rückfaltung nicht durch Chaperone unterstützt wird.
 
 > **Prüfungstipp:** Beim MedAT wird oft nach dem Stärkeranking gefragt: Ionenbindung > kovalent > H-Brücken > Dipol-Dipol > London. Merke auch: H-Brücken brauchen N, O oder F als Partner — Schwefel (S-H) reicht nicht aus, deshalb siedet H₂S bei −60 °C statt bei +100 °C.`,
 
@@ -1368,6 +1379,8 @@ Die Phasenübergänge und ihre thermodynamischen Vorzeichen:
 
 ## Dampfdruck und Siedepunkt
 
+Nachdem wir die Phasenübergänge und ihre Energetik kennengelernt haben, stellt sich die Frage: Wann genau siedet eine Flüssigkeit? Die Antwort hängt vom Dampfdruck ab.
+
 Der **Dampfdruck** ist der Partialdruck des Dampfes über einer Flüssigkeit im Gleichgewicht bei gegebener Temperatur. Er steigt mit der Temperatur (Clausius-Clapeyron-Gleichung, beschreibt den Zusammenhang zwischen Dampfdruck und Temperatur).
 
 **Siedepunkt:** Temperatur, bei der der Dampfdruck dem **äußeren Druck** entspricht.
@@ -1375,19 +1388,21 @@ Der **Dampfdruck** ist der Partialdruck des Dampfes über einer Flüssigkeit im 
 - Im Gebirge (Luftdruck < 1 atm): niedrigerer Siedepunkt (Wasser kocht bei weniger als 100 °C → längere Garzeit)
 - Im Druckkochtopf (Druck > 1 atm): höherer Siedepunkt → schnelleres Garen
 
+> **Merke:** Der Siedepunkt hängt vom äußeren Druck ab: Niedrigerer Druck → niedrigerer Siedepunkt. Im Gebirge kocht Wasser unter 100 °C, im Schnellkochtopf über 100 °C.
+
 **Siedepunktserhöhung** durch gelöste Substanzen (kolligative Eigenschaft):
 ΔTb = Kb · m · i
 - Kb(Wasser) = 0,512 K·kg/mol
 - m = Molalität [mol/kg]
 - i = van't-Hoff-Faktor
 
-
 ## Kolloidchemie
+
+Bisher haben wir reine Stoffe in ihren Aggregatzuständen betrachtet. In der Medizin begegnen wir jedoch häufig Mischsystemen — und hier spielen Kolloide eine zentrale Rolle.
 
 Neben den klassischen Aggregatzuständen gibt es fein verteilte Systeme, die weder echte Lösungen noch Suspensionen sind:
 
 **Kolloide** sind Systeme, in denen Partikel mit einem Durchmesser von **1 nm bis 1 μm** in einem Dispersionsmedium verteilt sind. Sie liegen zwischen echten Lösungen (<1 nm, molekulardispers) und Suspensionen (>1 μm, sedimentieren).
-
 
 **Kolloidale Eigenschaften:**
 
@@ -1664,8 +1679,6 @@ Neben den klassischen Aggregatzuständen gibt es fein verteilte Systeme, die wed
       ],
       content: `Das Periodensystem ordnet alle bekannten Elemente nach einem einzigen Prinzip — der Protonenzahl — und macht chemische Eigenschaften vorhersagbar.
 
-{{IMAGE}}
-
 {{DIAGRAM:periodic-table}}
 
 ## Geschichte und Entwicklung des Periodensystems
@@ -1704,8 +1717,11 @@ Das PSE hat **18 Gruppen** (IUPAC-Nummerierung 1-18). Elemente derselben Gruppe 
 
 Im p-Block gilt: Gruppenummer = 10 + Anzahl der Valenzelektronen.
 
+> **Merke:** Gleiche Gruppe = gleiche Valenzelektronenzahl = ähnliche chemische Eigenschaften. Halogene (Gr. 17) haben immer 7 VE und bilden stets −1-Ionen. Alkalimetalle (Gr. 1) haben immer 1 VE und bilden stets +1-Ionen.
 
 ## Blöcke: Orbital-Besetzung und Position
+
+Die Gruppen verraten die Valenzelektronenzahl — die Blöcke verraten, in welchem Orbitaltyp diese Elektronen sitzen.
 
 Die PSE-Position spiegelt direkt wider, welches Orbital zuletzt besetzt wird (Aufbauprinzip):
 
@@ -1716,11 +1732,15 @@ Die PSE-Position spiegelt direkt wider, welches Orbital zuletzt besetzt wird (Au
 
 ## Metallcharakter und Trennlinie
 
+Die Blöcke beschreiben den Orbitaltyp — doch eine weitere wichtige Einteilung trennt Metalle von Nichtmetallen.
+
 Eine Treppenlinie (B -> Si -> Ge -> As -> Sb -> Te -> At) trennt **Metalle** (links/unten) von **Nichtmetallen** (rechts/oben). Entlang dieser Linie stehen die **Halbmetalle (Metalloide)**: B, Si, Ge, As, Sb, Te, At. Silicium ist die Basis der Mikroelektronik (Transistoren, integrierte Schaltkreise durch p- und n-Dotierung). As₂O₃ (Trisenox) ist ein zugelassenes Therapeutikum bei akuter Promyelozyten-Leukämie (APL).
 
 Der **Metallcharakter** nimmt zu: in einer Periode von rechts nach links und in einer Gruppe von oben nach unten.
 
 ## Ausnahmen beim Aufbauprinzip: Chrom und Kupfer
+
+Die regelmäßige Elektronenbesetzung nach der Madelung-Regel gilt für die allermeisten Elemente — doch zwei Ausnahmen im d-Block sind MedAT-Dauerbrenner.
 
 - **Chrom (Z=24)**: [Ar] 3d⁵ 4s¹ statt erwartet 3d⁴ 4s²
 - **Kupfer (Z=29)**: [Ar] 3d¹⁰ 4s¹ statt erwartet 3d⁹ 4s²
@@ -1968,8 +1988,6 @@ Halb- und vollgefüllte d-Schalen sind besonders stabil — die ausführliche Er
       ],
       content: `Atomradius, Ionisierungsenergie, Elektronegativität — alle periodischen Trends haben eine gemeinsame Ursache: die effektive Kernladung.
 
-{{IMAGE}}
-
 ## Effektive Kernladung: die treibende Kraft aller Trends
 
 Die Kernladung, die ein Außenelektron tatsächlich "spürt", ist kleiner als die Gesamtladung — innere Elektronen schirmen den Kern ab, wie eine Menschenmenge zwischen dir und einem Lautsprecher. Je mehr Leute (innere Elektronen) dazwischen stehen, desto leiser (schwächer) kommt das Signal (die Anziehung) an.
@@ -1996,7 +2014,11 @@ Gruppe 1: Li (152 pm) < Na (186 pm) < K (227 pm) < Rb (248 pm) < Cs (265 pm)
 Na⁺ (102 pm) < Na (186 pm); Cl⁻ (181 pm) > Cl (99 pm).
 Isoelektronische Reihe ([Ne]-Konfiguration): O²⁻ > F⁻ > Ne > Na⁺ > Mg²⁺ > Al³⁺
 
+> **Tipp:** In isoelektronischen Reihen (gleiche Elektronenzahl) bestimmt die Kernladung den Radius: mehr Protonen = stärkere Anziehung = kleinerer Ionenradius. Al³⁺ hat 13 Protonen für 10 Elektronen, O²⁻ nur 8 Protonen für 10 Elektronen.
+
 ## Ionisierungsenergie (IE₁)
+
+Vom Atomradius kommen wir nun zu einer eng verwandten Eigenschaft: Wie viel Energie braucht es, um ein Elektron zu entfernen?
 
 **M(g) → M⁺(g) + e⁻; ΔH = IE₁ > 0**
 
@@ -2014,11 +2036,15 @@ Beispiel: IE₁=590, IE₂=1145, IE₃=4912 kJ/mol → Sprung bei IE₂/IE₃ �
 
 ## Elektronenaffinität (EA)
 
+Während die Ionisierungsenergie misst, wie schwer es ist, ein Elektron zu *entfernen*, beschreibt die Elektronenaffinität, wie viel Energie bei der *Aufnahme* eines Elektrons frei wird.
+
 **M(g) + e⁻ → M⁻(g); ΔH = −EA**
 
 Höchste EA: **Chlor** (349 kJ/mol) > Fluor (328 kJ/mol), weil Fluors kompakte 2p-Orbitale starke Elektron-Elektron-Abstoßung verursachen. Chlors 3p-Orbitale sind räumlich ausgedehnter → bessere Elektronenaufnahme. Muster: EA(O)<EA(S), EA(N)<EA(P). Edelgase, Erdalkalimetalle: negative EA.
 
 ## Elektronegativität (EN) nach Pauling
+
+IE und EA beschreiben isolierte Atome. In Bindungen brauchen wir ein kombiniertes Maß — die Elektronegativität vereint beide Konzepte und ist der wichtigste periodische Trend für die Chemie.
 
 Dimensionslos, normiert auf F=4,0. Wichtige Werte: F(4,0) > O(3,44) > Cl(3,16) > N(3,04) > Br(2,96) > S(2,58) > C(2,55) > H(2,20) > P(2,19) > Si(1,90) > Mg(1,31) > Ca(1,00) > Na(0,93).
 

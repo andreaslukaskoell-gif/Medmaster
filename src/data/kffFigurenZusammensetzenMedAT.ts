@@ -1722,12 +1722,29 @@ function curvedPath(p1: Pt2, p2: Pt2, rng: () => number): Pt2[] {
 }
 
 /** Wählt einen Schnittstil basierend auf Schwierigkeit.
- *  Official IB FZ 26 uses ONLY straight cuts — complexity comes from piece count,
- *  rotation, and shape variety, NOT from zigzag/step/notch cut lines. */
-function pickCutStyle(_difficulty: FZDifficulty, _rng: () => number): CutStyle {
-  // All difficulties use straight cuts to match official MedAT style.
-  // The difficulty is determined by piece count and rotation angle variety.
-  return "straight";
+ *  IB FZ 26 zeigt gekrümmte Schnitte (Beispiel 1, 2, 5) und gerade Schnitte (Beispiel 3, 4).
+ *  Easy: meist gerade, gelegentlich curved. Medium: Mix. Hard: komplex. */
+function pickCutStyle(difficulty: FZDifficulty, rng: () => number): CutStyle {
+  const r = rng();
+  if (difficulty === "easy") {
+    if (r < 0.55) return "straight";
+    if (r < 0.85) return "curved";
+    return "step";
+  }
+  if (difficulty === "medium") {
+    if (r < 0.25) return "straight";
+    if (r < 0.55) return "curved";
+    if (r < 0.75) return "step";
+    if (r < 0.88) return "notch";
+    return "lshaped";
+  }
+  // hard
+  if (r < 0.15) return "straight";
+  if (r < 0.45) return "curved";
+  if (r < 0.65) return "step";
+  if (r < 0.8) return "notch";
+  if (r < 0.9) return "zigzag";
+  return "lshaped";
 }
 
 /** Erzeugt eine Polyline zwischen zwei Punkten basierend auf dem Schnittstil. */
@@ -1821,7 +1838,7 @@ function applyGridCuts(
   target: Polygon,
   targetPieceCount: number,
   rng: () => number,
-  difficulty: FZDifficulty
+  _difficulty: FZDifficulty
 ): Polygon[] | null {
   const bbox = polygonBBox(target);
   const targetArea = polygonArea(target);

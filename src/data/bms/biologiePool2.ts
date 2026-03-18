@@ -225,7 +225,7 @@ export const biologiePool2: Question[] = [
       "Im Intermembranraum der Mitochondrien",
       "In der mitochondrialen Matrix",
       "Am rauen endoplasmatischen Retikulum",
-      "Im Zellkern (Nukleus) während der Transkription von DNA zu mRNA",
+      "Im Zellkern",
     ],
     2,
     "Der Citratzyklus läuft in der mitochondrialen Matrix ab. Hier wird Acetyl-CoA schrittweise oxidiert, wobei CO₂, NADH, FADH₂ und GTP entstehen. Die Glykolyse hingegen findet im Cytoplasma statt.",

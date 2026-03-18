@@ -566,7 +566,7 @@ function distractorFirstRight(
 }
 
 /** Distraktor: falscher Operator fortgesetzt (z. B. + statt ×). */
-function distractorWrongOp(correct: [number, number], rand: () => number): [number, number] {
+function _distractorWrongOp(correct: [number, number], rand: () => number): [number, number] {
   const a = correct[0];
   const off = Math.floor(rand() * 4) + 1;
   return [a, a + (rand() > 0.5 ? off : -off)];
@@ -920,8 +920,8 @@ function buildInterleaved(
     }
   }
   // Generate two more
-  const lastEvenIdx = out.length % 2 === 0 ? out.length : out.length - 1;
-  const lastOddIdx = out.length % 2 === 1 ? out.length : out.length - 1;
+  const _lastEvenIdx = out.length % 2 === 0 ? out.length : out.length - 1;
+  const _lastOddIdx = out.length % 2 === 1 ? out.length : out.length - 1;
   // Determine next two values
   const extra: number[] = [];
   for (let i = 0; i < 2; i++) {
@@ -1753,7 +1753,7 @@ function buildPeriodicTaskFromSeq(
     const j = Math.floor(rand() * (i + 1));
     [filtered[i], filtered[j]] = [filtered[j], filtered[i]];
   }
-  let unique = distinctPairs(correctNext, filtered);
+  const unique = distinctPairs(correctNext, filtered);
   const three = unique.slice(0, 3);
   while (three.length < 3) {
     const off = Math.max(minDist, Math.floor(rand() * 8) + 2);

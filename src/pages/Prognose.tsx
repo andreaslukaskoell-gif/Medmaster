@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
 import { Link } from "react-router-dom";
 import { useStore, type QuizResult } from "@/store/useStore";
+import { useAdaptiveStore } from "@/store/adaptiveLearning";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
@@ -11,6 +12,7 @@ import { getPrognoseShareText } from "@/lib/shareUtils";
 import { usePageTitle } from "@/hooks/usePageTitle";
 import {
   TrendingUp,
+  TrendingDown,
   Target,
   GraduationCap,
   BookOpen,
@@ -21,6 +23,9 @@ import {
   AlertTriangle,
   CheckCircle,
   Info,
+  Clock,
+  Crosshair,
+  Minus,
 } from "lucide-react";
 
 /* ── Types ────────────────────────────────────── */
@@ -43,7 +48,110 @@ interface UniChance {
   status: "green" | "yellow" | "red";
 }
 
+type TrendDirection = "up" | "flat" | "down";
+
+interface SectionTrend {
+  key: string;
+  label: string;
+  direction: TrendDirection;
+  /** Last N data points (pct) for sparkline */
+  dataPoints: number[];
+}
+
 /* ── Helpers ──────────────────────────────────── */
+
+/** Calculate trend from quiz results: compare first half EMA vs second half EMA */
+function calcTrend(results: QuizResult[]): { direction: TrendDirection; dataPoints: number[] } {
+  if (results.length < 3) return { direction: "flat", dataPoints: [] };
+
+  const sorted = [...results].sort(
+    (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
+  );
+
+  // Build data points: rolling pct per result (max 12 for sparkline)
+  const all = sorted.map((r) => (r.total > 0 ? (r.score / r.total) * 100 : 0));
+  const dataPoints = all.slice(-12);
+
+  // Compare first half vs second half average
+  const mid = Math.floor(sorted.length / 2);
+  const firstHalf = sorted.slice(0, mid);
+  const secondHalf = sorted.slice(mid);
+  const avgFirst = firstHalf.reduce((s, r) => s + r.score / r.total, 0) / firstHalf.length;
+  const avgSecond = secondHalf.reduce((s, r) => s + r.score / r.total, 0) / secondHalf.length;
+  const diff = avgSecond - avgFirst;
+
+  const direction: TrendDirection = diff > 0.03 ? "up" : diff < -0.03 ? "down" : "flat";
+  return { direction, dataPoints };
+}
+
+/** Estimate days to reach target readiness based on improvement rate */
+function estimateDaysToReady(
+  results: QuizResult[],
+  currentPct: number,
+  targetPct = 80
+): number | null {
+  if (currentPct >= targetPct) return 0;
+  if (results.length < 5) return null;
+
+  const sorted = [...results].sort(
+    (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
+  );
+
+  const firstDate = new Date(sorted[0].date).getTime();
+  const lastDate = new Date(sorted[sorted.length - 1].date).getTime();
+  const daySpan = (lastDate - firstDate) / (1000 * 60 * 60 * 24);
+  if (daySpan < 1) return null;
+
+  // Compare first-third EMA vs last-third EMA
+  const third = Math.max(1, Math.floor(sorted.length / 3));
+  const earlyPct = ema(sorted.slice(0, third));
+  const latePct = ema(sorted.slice(-third));
+  const improvement = latePct - earlyPct; // pct points gained
+
+  if (improvement <= 0.5) return null; // no meaningful improvement
+
+  const pctPerDay = improvement / daySpan;
+  const remaining = targetPct - currentPct;
+  const days = Math.ceil(remaining / pctPerDay);
+  return Math.min(days, 365); // cap at 1 year
+}
+
+/* ── Sparkline SVG ───────────────────────────── */
+
+function Sparkline({ data, color }: { data: number[]; color: string }) {
+  if (data.length < 2) return null;
+
+  const w = 80;
+  const h = 24;
+  const padding = 2;
+  const min = Math.min(...data);
+  const max = Math.max(...data);
+  const range = max - min || 1;
+
+  const points = data.map((v, i) => {
+    const x = padding + (i / (data.length - 1)) * (w - padding * 2);
+    const y = h - padding - ((v - min) / range) * (h - padding * 2);
+    return `${x},${y}`;
+  });
+
+  return (
+    <svg width={w} height={h} viewBox={`0 0 ${w} ${h}`} className="inline-block">
+      <polyline
+        points={points.join(" ")}
+        fill="none"
+        stroke={color}
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      {/* Dot on last point */}
+      {(() => {
+        const last = points[points.length - 1].split(",");
+        return <circle cx={last[0]} cy={last[1]} r="2.5" fill={color} />;
+      })()}
+    </svg>
+  );
+}
 
 /** Exponential moving average — recent results weigh more */
 function ema(results: QuizResult[], alpha = 0.3): number {
@@ -267,6 +375,269 @@ function SectionCard({ s }: { s: SectionScore }) {
   );
 }
 
+/* ── Trend Section ───────────────────────────── */
+
+function TrendSection({ trends }: { trends: SectionTrend[] }) {
+  const trendConfig: Record<
+    TrendDirection,
+    { icon: ReactNode; color: string; label: string; sparkColor: string }
+  > = {
+    up: {
+      icon: <TrendingUp className="w-4 h-4" />,
+      color: "text-green-600 dark:text-green-400",
+      label: "Aufwärtstrend",
+      sparkColor: "#22c55e",
+    },
+    flat: {
+      icon: <Minus className="w-4 h-4" />,
+      color: "text-gray-500 dark:text-gray-400",
+      label: "Stabil",
+      sparkColor: "#9ca3af",
+    },
+    down: {
+      icon: <TrendingDown className="w-4 h-4" />,
+      color: "text-red-500 dark:text-red-400",
+      label: "Abwärtstrend",
+      sparkColor: "#ef4444",
+    },
+  };
+
+  return (
+    <div>
+      <h2 className="text-xl font-bold text-[var(--text-primary)] mb-4 flex items-center gap-2">
+        <TrendingUp className="w-5 h-5 text-[var(--accent)]" />
+        Dein Trend
+      </h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        {trends.map((t) => {
+          const cfg = trendConfig[t.direction];
+          return (
+            <Card key={t.key}>
+              <CardContent className="p-4">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <div className={`flex items-center gap-1.5 ${cfg.color}`}>
+                      {cfg.icon}
+                      <span className="font-semibold text-[var(--text-primary)]">{t.label}</span>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Sparkline data={t.dataPoints} color={cfg.sparkColor} />
+                    <Badge
+                      variant={
+                        t.direction === "up"
+                          ? "success"
+                          : t.direction === "down"
+                            ? "danger"
+                            : "default"
+                      }
+                    >
+                      {cfg.label}
+                    </Badge>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          );
+        })}
+      </div>
+      {trends.every((t) => t.dataPoints.length < 2) && (
+        <p className="text-xs text-muted-foreground/70 mt-2">
+          Mehr Ergebnisse nötig, um Trends anzuzeigen.
+        </p>
+      )}
+    </div>
+  );
+}
+
+/* ── Readiness Section ───────────────────────── */
+
+function ReadinessSection({
+  sections,
+  quizResults,
+  totalPct,
+}: {
+  sections: SectionScore[];
+  quizResults: QuizResult[];
+  totalPct: number;
+}) {
+  const TARGET = 80;
+  const daysEstimate = useMemo(
+    () => estimateDaysToReady(quizResults, totalPct, TARGET),
+    [quizResults, totalPct]
+  );
+
+  const onTrack = totalPct >= TARGET || (daysEstimate !== null && daysEstimate <= 60);
+
+  const readinessLabel = useMemo(() => {
+    if (totalPct >= TARGET) return "Bereit!";
+    if (daysEstimate === null) return "Mehr Daten nötig";
+    if (daysEstimate <= 14) return `Bereit in ~${daysEstimate} Tagen`;
+    if (daysEstimate <= 60) return `Bereit in ~${Math.ceil(daysEstimate / 7)} Wochen`;
+    return `Bereit in ~${Math.ceil(daysEstimate / 30)} Monaten`;
+  }, [totalPct, daysEstimate]);
+
+  const readinessColor =
+    totalPct >= TARGET
+      ? "text-green-600 dark:text-green-400"
+      : onTrack
+        ? "text-yellow-600 dark:text-yellow-400"
+        : "text-red-500 dark:text-red-400";
+
+  return (
+    <div>
+      <h2 className="text-xl font-bold text-[var(--text-primary)] mb-4 flex items-center gap-2">
+        <Clock className="w-5 h-5 text-[var(--accent)]" />
+        Prüfungsbereitschaft
+      </h2>
+      <Card>
+        <CardContent className="p-6">
+          {/* Overall readiness */}
+          <div className="flex items-center justify-between mb-6">
+            <div>
+              <p className={`text-lg font-bold ${readinessColor}`}>{readinessLabel}</p>
+              <p className="text-sm text-muted-foreground">
+                {totalPct >= TARGET
+                  ? "Dein Niveau liegt über dem Zielwert."
+                  : onTrack
+                    ? "Du bist auf gutem Weg."
+                    : "Mehr Aufwand nötig, um das Ziel zu erreichen."}
+              </p>
+            </div>
+            <Badge variant={totalPct >= TARGET ? "success" : onTrack ? "warning" : "danger"}>
+              {totalPct >= TARGET ? "Bereit" : onTrack ? "On track" : "Mehr Aufwand nötig"}
+            </Badge>
+          </div>
+
+          {/* Per-section readiness bars */}
+          <div className="space-y-4">
+            {sections
+              .filter((s) => s.count > 0)
+              .map((s) => {
+                const barPct = Math.min(s.pct, 100);
+                const barColor =
+                  s.pct >= 80 ? "bg-green-500" : s.pct >= 60 ? "bg-yellow-500" : "bg-red-500";
+                return (
+                  <div key={s.key}>
+                    <div className="flex items-center justify-between mb-1">
+                      <span className="text-sm font-medium text-[var(--text-primary)]">
+                        {s.label}
+                      </span>
+                      <span className="text-sm font-semibold text-muted-foreground">
+                        {s.pct.toFixed(0)}%
+                      </span>
+                    </div>
+                    <div className="h-3 rounded-full bg-[var(--muted)] overflow-hidden">
+                      <div
+                        className={`h-full rounded-full ${barColor} transition-all duration-700`}
+                        style={{ width: `${barPct}%` }}
+                      />
+                    </div>
+                  </div>
+                );
+              })}
+          </div>
+
+          {/* Target line legend */}
+          <div className="flex items-center gap-2 mt-4 text-xs text-muted-foreground">
+            <div className="w-4 h-0.5 bg-gray-400" />
+            <span>Ziel: {TARGET}%</span>
+          </div>
+        </CardContent>
+      </Card>
+    </div>
+  );
+}
+
+/* ── Weak Topics Section ─────────────────────── */
+
+function WeakTopicsSection() {
+  const getWeakestTopics = useAdaptiveStore((s) => s.getWeakestTopics);
+  const weakTopics = useMemo(() => getWeakestTopics(5), [getWeakestTopics]);
+
+  const fachColors: Record<string, string> = {
+    biologie: "bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400",
+    chemie: "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400",
+    physik: "bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-400",
+    mathematik: "bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400",
+  };
+
+  if (weakTopics.length === 0) {
+    return (
+      <div>
+        <h2 className="text-xl font-bold text-[var(--text-primary)] mb-4 flex items-center gap-2">
+          <Crosshair className="w-5 h-5 text-[var(--accent)]" />
+          Top 5 Schwachstellen
+        </h2>
+        <Card>
+          <CardContent className="p-6 text-center text-muted-foreground">
+            <p>
+              Noch keine Schwachstellen erkannt. Beantworte mehr Fragen, um Schwachstellen zu
+              identifizieren.
+            </p>
+          </CardContent>
+        </Card>
+      </div>
+    );
+  }
+
+  return (
+    <div>
+      <h2 className="text-xl font-bold text-[var(--text-primary)] mb-4 flex items-center gap-2">
+        <Crosshair className="w-5 h-5 text-[var(--accent)]" />
+        Top 5 Schwachstellen
+      </h2>
+      <Card>
+        <CardContent className="p-2">
+          <div className="divide-y divide-[var(--border)]">
+            {weakTopics.map((topic, i) => {
+              const ratePct = Math.round(topic.rate * 100);
+              const barColor =
+                ratePct >= 60 ? "bg-yellow-500" : ratePct >= 40 ? "bg-orange-500" : "bg-red-500";
+              return (
+                <div key={topic.stichwortId} className="flex items-center gap-4 px-4 py-3">
+                  <span className="text-sm font-bold text-muted-foreground w-5 text-center">
+                    {i + 1}
+                  </span>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-2 mb-1">
+                      <span className="text-sm font-medium text-[var(--text-primary)] truncate">
+                        {topic.thema}
+                      </span>
+                      <span
+                        className={`text-[10px] px-1.5 py-0.5 rounded-full font-medium ${fachColors[topic.fach] ?? "bg-gray-100 text-gray-600"}`}
+                      >
+                        {topic.fach.charAt(0).toUpperCase() + topic.fach.slice(1)}
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="flex-1 h-1.5 rounded-full bg-[var(--muted)] overflow-hidden">
+                        <div
+                          className={`h-full rounded-full ${barColor}`}
+                          style={{ width: `${ratePct}%` }}
+                        />
+                      </div>
+                      <span className="text-xs font-semibold text-muted-foreground w-10 text-right">
+                        {ratePct}%
+                      </span>
+                    </div>
+                  </div>
+                  <Link
+                    to="/schwachstellen"
+                    className="shrink-0 px-3 py-1.5 text-xs font-medium rounded-lg bg-[var(--accent)]/10 text-[var(--accent)] hover:bg-[var(--accent)]/20 transition"
+                  >
+                    Üben
+                  </Link>
+                </div>
+              );
+            })}
+          </div>
+        </CardContent>
+      </Card>
+    </div>
+  );
+}
+
 /* ── Empty State ──────────────────────────────── */
 
 function EmptyState() {
@@ -353,6 +724,15 @@ export default function Prognose() {
     return green?.name ?? null;
   }, [sortedUnis, totalPct]);
 
+  // Trend per section
+  const sectionTrends: SectionTrend[] = useMemo(() => {
+    return SECTION_META.map((meta) => {
+      const results = quizResults.filter((r) => r.type === meta.key);
+      const { direction, dataPoints } = calcTrend(results);
+      return { key: meta.key, label: meta.label, direction, dataPoints };
+    });
+  }, [quizResults]);
+
   if (totalAnswered < 20) return <EmptyState />;
 
   return (
@@ -437,6 +817,17 @@ export default function Prognose() {
           </CardContent>
         </Card>
       )}
+
+      {/* ── Prüfungsreife-Dashboard ─────────────── */}
+
+      {/* Trend Section */}
+      <TrendSection trends={sectionTrends} />
+
+      {/* Readiness Section */}
+      <ReadinessSection sections={sections} quizResults={quizResults} totalPct={totalPct} />
+
+      {/* Top 5 Weak Topics */}
+      <WeakTopicsSection />
     </div>
   );
 }

@@ -533,7 +533,7 @@ const COUNTRIES = [
   "Finnland",
 ];
 
-const BLOOD_GROUPS = ["A+", "A-", "B+", "B-", "AB+", "AB-", "0+", "0-"];
+const _BLOOD_GROUPS = ["A+", "A-", "B+", "B-", "AB+", "AB-", "0+", "0-"];
 
 /** Für Gedächtnis Allergiepässe: MedAT-Stil A | B | AB | 0 (ohne Rhesus in Typ) */
 const BLOOD_GROUPS_GM: AllergyPass["bloodGroup"][] = ["A", "B", "AB", "0"];
@@ -1702,7 +1702,7 @@ function scrambleWord(word: string): string {
   return chars.join("");
 }
 
-const ALL_LETTERS = "ABCDEFGHIJKLMNOPRSTUVWZ".split("");
+const _ALL_LETTERS = "ABCDEFGHIJKLMNOPRSTUVWZ".split("");
 
 /** Maps each letter to visually/phonetically similar letters for harder distractors. */
 const CONFUSING_LETTERS: Record<string, string[]> = {

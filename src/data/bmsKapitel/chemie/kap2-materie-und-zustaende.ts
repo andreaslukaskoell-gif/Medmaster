@@ -25,9 +25,9 @@ export const chemKapMaterie: Kapitel = {
         "Kinetische Gastheorie",
         "Kompressibilitätsfaktor",
       ],
-      imageUrl: "/images/bms/ch-chemische-reaktionen.jpg",
+      imageUrl: "/images/bms/ch-aggregatzustaende.jpg",
       imageCaption:
-        "Abb.: Ideale Gasgleichung und Zustandsgrößen eines Gases (OpenStax, CC BY 4.0)",
+        "Abb.: Gasförmiger, flüssiger und fester Aggregatzustand auf molekularer Ebene — Grundlage der Gasgesetze (OpenStax, CC BY 4.0)",
       content: `Kaum eine Gleichung begegnet angehenden Medizinerinnen und Medizinern so häufig wie **pV = nRT**.
 
 ## Die Ideale Gasgleichung Sie verknüpft vier messbare Zustandsgrößen eines Gases in einer einzigen, eleganten Beziehung und bildet damit das Fundament der physikalischen Chemie der Gase. Ob Beatmungsmedizin, Blutgasanalyse oder Tauchphysiologie – wer diese Gleichung sicher beherrscht, versteht die physikalischen Grundlagen zahlreicher klinischer Situationen.
@@ -54,6 +54,8 @@ Kombiniert man alle drei Gesetze, erhält man: p·V/(n·T) = R = const, also **p
 
 ## Umrechnungen und Standardbedingungen
 
+Nachdem wir die Gleichung aus ihren historischen Wurzeln hergeleitet haben, schauen wir uns an, wie sie in der Praxis angewendet wird.
+
 Die ideale Gasgleichung lässt sich zu zahlreichen nützlichen Ausdrücken umformen. Die **Gasdichte** ergibt sich als ρ = M·p/(R·T), wobei M die molare Masse ist – schwere Gase sind bei gleichen Bedingungen dichter. Die **Konzentration** eines Gases beträgt c = n/V = p/(R·T), und die **molare Masse** lässt sich experimentell aus m, p, V und T bestimmen: M = m·R·T/(p·V).
 
 Bei den **Standardbedingungen** herrscht gelegentlich Verwirrung. Die aktuelle IUPAC-Definition (STP) legt 0 °C und 1 bar fest, woraus V_m = 22,711 L/mol folgt. Viele ältere Lehrbücher verwenden 0 °C und 1 atm (= 101.325 Pa), was V_m = 22,414 L/mol ergibt. Bei SATP (25 °C, 1 bar) beträgt V_m = 24,790 L/mol. Für die Praxis genügt es, mit 22,4 L/mol bei STP zu rechnen.
@@ -62,11 +64,15 @@ Die wichtigsten **Druckumrechnungen**: 1 atm = 101.325 Pa = 1,01325 bar = 760 mm
 
 ## Ideales versus reales Gas
 
+Die bisherigen Gesetze gelten streng nur für ein Modell — das ideale Gas. Doch wie gut beschreibt es die Wirklichkeit?
+
 Das Modell des idealen Gases beruht auf zwei vereinfachenden Annahmen: Die Gasteilchen sind punktförmig (kein Eigenvolumen), und zwischen ihnen wirken keine Anziehungs- oder Abstoßungskräfte. Unter Normalbedingungen – also bei moderatem Druck und nicht zu tiefer Temperatur – beschreibt dieses Modell die Wirklichkeit erstaunlich gut.
 
 Reale Gase weichen jedoch spürbar ab, wenn der Druck hoch oder die Temperatur niedrig ist. Bei **hohem Druck** wird das Eigenvolumen der Moleküle im Verhältnis zum Gesamtvolumen nicht mehr vernachlässigbar – das Gas lässt sich schwerer komprimieren als vorhergesagt, und der Kompressibilitätsfaktor Z = pV/(nRT) steigt über 1. Bei **tiefer Temperatur** dominieren die intermolekularen Anziehungskräfte (Van-der-Waals-Kräfte), die den effektiven Wandstoßdruck verringern – Z sinkt unter 1. In der Nähe des **Kondensationspunkts** versagt das ideale Modell vollständig.
 
 ## Die Van-der-Waals-Gleichung
+
+Um diese Abweichungen quantitativ zu beschreiben, brauchen wir eine erweiterte Gleichung mit zwei Korrekturparametern.
 
 Johannes Diderik van der Waals stellte 1873 eine korrigierte Zustandsgleichung auf, die beide Abweichungen berücksichtigt:
 
@@ -88,6 +94,8 @@ Der Parameter **a** (in L²·bar/mol²) korrigiert den Druck nach oben: Die inte
 
 ## Klinische Relevanz: Beatmungsmedizin
 
+Die Gasgesetze sind kein abstraktes Wissen — sie begegnen Ärztinnen und Ärzten bei jeder Beatmung und jeder Narkose.
+
 In der Intensivmedizin begegnet die ideale Gasgleichung bei jeder maschinellen Beatmung. Bei der **volumenkontrollierten Beatmung** wird ein definiertes Tidalvolumen (Atemzugvolumen, V_T ≈ 6–8 ml/kg Idealgewicht) appliziert. Der resultierende Atemwegsdruck hängt von der **Compliance** (Dehnbarkeit) der Lunge ab: p = V_T / C_stat. Bei **ARDS** (Acute Respiratory Distress Syndrome, akutes Lungenversagen) sinkt die Compliance drastisch – der gleiche Volumenhub erzeugt wesentlich höhere Drücke, was zu einem Barotrauma (druckbedingte Gewebeschädigung) führen kann. Die lungenprotektive Beatmung mit niedrigem Tidalvolumen und begrenztem Spitzendruck ist die logische Konsequenz aus dieser physikalischen Beziehung.
 
 Auch die Anästhesie nutzt Gasgesetze täglich: Volatile Anästhetika wie Sevofluran und Desfluran werden als Gase in definierten Partialdrücken verabreicht. Ihre Verteilung zwischen Alveolarluft und Blut folgt dem Henry-Gesetz – der Blut-Gas-Verteilungskoeffizient bestimmt, wie schnell die Narkose ein- und abflutet.
@@ -96,11 +104,15 @@ Auch die Anästhesie nutzt Gasgesetze täglich: Volatile Anästhetika wie Sevofl
 
 ## Eigenschaften von Gasen
 
+Bevor wir zur mikroskopischen Erklärung übergehen, fassen wir die makroskopischen Eigenschaften von Gasen zusammen, die im MedAT gerne als Richtig-Falsch-Aussagen abgefragt werden.
+
 Vier Grundeigenschaften von Gasen sind prüfungsrelevant und werden häufig als Richtig-Falsch-Aussagen abgefragt: Erstens verteilt sich ein Gas durch Diffusion **gleichmäßig** im gesamten verfügbaren Raum. Zweitens ist ein Gas **komprimierbar** – eine Druckerhöhung verringert das Volumen gemäß Boyle-Mariotte. Drittens lassen sich Gase durch **Abkühlung verflüssigen** (Kondensation), sofern die Temperatur unter die kritische Temperatur sinkt. Viertens ist das **Mischen von Gasen in jedem Verhältnis** möglich.
 
 > **Merke:** Richtig sind: (1) Gas verteilt sich gleichmäßig, (2) Gas ist komprimierbar, (3) Gase lassen sich verflüssigen, (4) Gase sind in jedem Verhältnis mischbar. Die Falschaussage „Ein Gas kann nicht komprimiert werden” ist eine beliebte Prüfungsfalle.
 
 ## Kinetische Gastheorie
+
+All diese makroskopischen Eigenschaften lassen sich auf eine einzige Idee zurückführen: Gasteilchen sind schnelle, chaotisch bewegte Kügelchen.
 
 Die mikroskopische Begründung für die makroskopischen Gasgesetze liefert die **kinetische Gastheorie** von Maxwell und Boltzmann. Ihr zentrales Ergebnis: Die mittlere kinetische Energie eines Gasteilchens hängt ausschließlich von der Temperatur ab – E_kin = (3/2)·k_B·T, wobei k_B = 1,381 × 10⁻²³ J/K die Boltzmann-Konstante ist. Daraus folgt unmittelbar der **quadratische Mittelwert der Geschwindigkeit**: v_rms = √(3·R·T/M). Bei 25 °C rasen Stickstoffmoleküle (M = 0,028 kg/mol) mit v_rms ≈ 515 m/s durch den Raum – schneller als der Schall!
 
@@ -348,8 +360,6 @@ Die **Maxwell-Boltzmann-Verteilung** beschreibt, wie die Geschwindigkeiten der e
 
 ## Die vier Aggregatzustände der Materie Warum kühlt Schweiß die Haut, obwohl er warm aus den Poren tritt? Die Antworten stecken in den Aggregatzuständen und den Kräften zwischen den Teilchen. Materie tritt in vier grundlegenden Aggregatzuständen auf, die sich durch Energie, Anordnung und Beweglichkeit ihrer Teilchen fundamental unterscheiden. Welcher Aggregatzustand vorliegt, hängt von der Bilanz zwischen der **kinetischen Energie der Teilchen** (Wärmebewegung) und der **potentiellen Energie** durch intermolekulare Wechselwirkungen ab.
 
-{{IMAGE}}
-
 {{DIAGRAM:states-of-matter}}
 
 ### Fester Aggregatzustand (solid)
@@ -380,13 +390,15 @@ Das **ideale Gasgesetz** (pV = nRT) gilt für verdünnte Gase gut: p = Druck (Pa
 
 Plasma ist ionisiertes Gas, in dem Elektronen von Atomkernen getrennt sind. Es ist der bei weitem häufigste Zustand sichtbarer Materie im Universum (Sterne, Blitze, Fluoreszenzlampen). Im medizinischen Sprachgebrauch bezeichnet "Blutplasma" den flüssigen Bestandteil des Blutes nach Entfernung der Zellen – ein biologischer Begriff ohne Bezug zum physikalischen Plasma.
 
+> **Achtung:** "Plasma" hat in der Medizin zwei völlig verschiedene Bedeutungen: physikalisches Plasma (ionisiertes Gas, z. B. Argon-Plasma-Koagulation) vs. Blutplasma (flüssiger Blutbestandteil). Im MedAT-Kontext immer den Zusammenhang beachten!
 
 ## Anomalie des Wassers – ein Leben ermöglichendes Phänomen
+
+Nachdem wir die vier Aggregatzustände kennengelernt haben, kommen wir zu einer bemerkenswerten Ausnahme: Wasser verhält sich beim Gefrieren völlig anders als die meisten Stoffe.
 
 Wasser zeigt ein physikalisch einzigartiges Verhalten: Seine Dichte nimmt beim Abkühlen von 100°C zunächst zu, erreicht ein **Maximum bei 3,98°C** (ρ = 0,9998 g/cm³) und nimmt dann beim weiteren Abkühlen bis 0°C wieder ab. Beim Gefrieren zu Eis sinkt die Dichte abrupt auf **ρ_Eis ≈ 0,917 g/cm³** – Eis ist also leichter als flüssiges Wasser.
 
 **Ursache**: Wassermoleküle sind gewinkelt (Bindungswinkel 104,5°) und stark polar (Dipolmoment 1,85 D). Im flüssigen Wasser bestehen dynamische Wasserstoffbrückennetzwerke – jedes Molekül bildet im Mittel 3,4 Wasserstoffbrücken. Im Eiskristall (hexagonale Struktur) sind es genau 4 Wasserstoffbrücken pro Molekül, die ein offenes, weiträumiges hexagonales Gitter bilden. Diese Gitterstruktur ist weniger dicht gepackt als die Flüssigkeit.
-
 
 **Biologische Bedeutung**: Diese Anomalie ist entscheidend für das Leben in gemäßigten Klimazonen:
 1. Im Winter sinkt das dichtere 4°C-Wasser auf den Grund von Gewässern (Dichteausgleich)
@@ -397,6 +409,8 @@ Wasser zeigt ein physikalisch einzigartiges Verhalten: Seine Dichte nimmt beim A
 Ohne diese Anomalie würden Seen vollständig von unten nach oben gefrieren – aquatisches Leben wäre in gemäßigten Klimazonen unmöglich.
 
 ## Intermolekulare Wechselwirkungen als Grundlage der Aggregatzustände
+
+Die Dichteanomalie des Wassers hat uns gezeigt, wie stark intermolekulare Kräfte das physikalische Verhalten bestimmen. Dieser Zusammenhang gilt ganz allgemein.
 
 Die Art und Stärke der intermolekularen Wechselwirkungen bestimmt maßgeblich, bei welcher Temperatur ein Stoff welchen Aggregatzustand einnimmt:
 
@@ -409,6 +423,8 @@ Die Art und Stärke der intermolekularen Wechselwirkungen bestimmt maßgeblich, 
 **Ionische Wechselwirkungen**: Elektrische Anziehung zwischen entgegengesetzt geladenen Ionen. Energie bis zu 1000 kJ/mol. Ionische Verbindungen haben extrem hohe Schmelzpunkte.
 
 ## Siedepunktvergleiche: Intermolekulare Kräfte
+
+Um die Theorie greifbar zu machen, vergleichen wir konkrete Substanzen — die Siedepunkte spiegeln die intermolekularen Kräfte direkt wider.
 
 Die Stärke der intermolekularen Kräfte bestimmt den Siedepunkt direkt. Folgende Vergleiche sind für den MedAT zentral:
 
@@ -663,7 +679,8 @@ Nicht alle Feststoffe sind kristallin. **Amorphe Feststoffe** (Glas, viele Kunst
       id: "ch-4-02",
       title: "Phasenübergänge – Energetik und Bedingungen",
       imageUrl: "/images/bms/ch-aggregatzustaende.jpg",
-      imageCaption: "Abb.: Phasenübergänge und Heizkurve von Wasser",
+      imageCaption:
+        "Abb.: Die drei Aggregatzustände und ihre Phasenübergänge auf molekularer Ebene (OpenStax, CC BY 4.0)",
       stichworte: [
         "Phasenübergänge",
         "Schmelzenthalpie",
@@ -695,8 +712,6 @@ Die sechs Phasenübergänge (Richtung und Name — prüfungssicher):
 | fest → gasförmig | **Sublimieren** (endotherm) |
 | gasförmig → fest | **Resublimieren / Desublimieren** (exotherm) |
 
-{{IMAGE}}
-
 {{DIAGRAM:phase-diagram}}
 
 - **Schmelzen** (fest → flüssig): endotherm, ΔH > 0; Gitterstruktur wird aufgebrochen
@@ -708,12 +723,12 @@ Die sechs Phasenübergänge (Richtung und Name — prüfungssicher):
 
 Die Enthalpie eines Phasenübergangs und seines Umkehrprozesses sind stets betragsmäßig gleich und haben entgegengesetztes Vorzeichen (Hess'scher Satz).
 
-
 ## Schmelzenthalpie und Verdampfungsenthalpie von Wasser
+
+Nachdem wir die sechs Phasenübergänge benannt haben, schauen wir uns die Energiebeträge genauer an — am medizinisch wichtigsten Beispiel: Wasser.
 
 **Schmelzenthalpie**: ΔH_s(H₂O) = **6,01 kJ/mol = 333 J/g** (bei 0°C, 1 bar)
 Zum Schmelzen von 1 g Eis bei 0°C werden 333 J benötigt – deutlich mehr als zum Erwärmen von 1 g flüssigem Wasser um 1°C (4,18 J). Ein Gramm schmelzendes Eis bei 0°C entnimmt der Umgebung dieselbe Wärmemenge wie die Abkühlung von 80 g Wasser um 1°C – deshalb kühlt Eis im Getränk so effizient.
-
 
 **Verdampfungsenthalpie**: ΔH_v(H₂O) = **40,7 kJ/mol = 2257 J/g** (bei 100°C, 1 bar)
 Dies ist ein außergewöhnlich hoher Wert – verursacht durch die starken Wasserstoffbrücken, die beim Verdampfen vollständig gebrochen werden müssen. Verglichen mit: Methanol: 1104 J/g; Benzol: 393 J/g; Diethylether: 358 J/g.
@@ -722,12 +737,16 @@ Dies ist ein außergewöhnlich hoher Wert – verursacht durch die starken Wasse
 
 ## Thermoregulation durch Schweiß
 
+Die hohe Verdampfungsenthalpie von Wasser ist nicht nur eine Zahl — sie hat eine direkte physiologische Bedeutung.
+
 Der menschliche Körper nutzt die hohe Verdampfungsenthalpie des Wassers zur Thermoregulation:
 - Bei starker körperlicher Aktivität können 1–2 Liter Schweiß pro Stunde produziert werden
 - Verdunstung von 1 Liter Wasser entzieht der Haut: 1000 g × 2257 J/g = 2.257.000 J = **2,26 MJ/h ≈ 627 W**
 - Bei Hypohidrose (verminderte Schweißsekretion, z.B. durch anticholinerge Medikamente) ist die Thermoregulation gestört → Hyperthermierisiko
 
 ## Kolligative Eigenschaften: Siedepunktserhöhung und Gefrierpunktserniedrigung
+
+Bisher haben wir reine Stoffe betrachtet. Was passiert, wenn ein Stoff in einem Lösungsmittel gelöst ist? Die Antwort führt zu den kolligativen Eigenschaften — einem Schlüsselkonzept für die klinische Diagnostik.
 
 Gelöste Stoffe verändern Siedepunkt und Gefrierpunkt des Lösungsmittels. Diese **kolligativen Eigenschaften** hängen ausschließlich von der **Anzahl der gelösten Teilchen** (Molalität b), nicht von deren chemischer Natur ab:
 
@@ -754,11 +773,15 @@ Die Blutosmolalität (normal: 280–300 mosmol/kg) kann durch Kryoskopie (Messun
 
 ## Verdunstung vs. Sieden
 
+Eine häufige Prüfungsfrage betrifft den Unterschied zwischen Sieden und Verdunstung — zwei verwandte, aber physikalisch verschiedene Prozesse.
+
 **Sieden** tritt auf, wenn der Sättigungsdampfdruck (maximaler Dampfdruck über Flüssigkeit) der Flüssigkeit den Umgebungsdruck erreicht (Blasenbildung im Volumen).
 
 **Verdunstung** findet bei jeder Temperatur unterhalb des Siedepunkts an der **Oberfläche** statt. Gemäß der Maxwell-Boltzmann-Verteilung haben immer einige Oberflächenmoleküle genug kinetische Energie, um die intermolekularen Bindungen zu überwinden und zu entweichen. Verdunstung kühlt die Oberfläche (Abtransport energiereicher Moleküle) – dies ist der physikalische Grund für das Kältegefühl nach dem Schwimmen oder beim Auftragen von Desinfektionsmittel (Ethanol verdunstet schnell).
 
 ## Phasendiagramm und Tripelpunkt
+
+Alle bisherigen Zusammenhänge — Druck, Temperatur, Aggregatzustand — lassen sich in einem einzigen Diagramm zusammenfassen.
 
 Das **Phasendiagramm** zeigt die Stabilitätsbereiche der Aggregatzustände als Funktion von Druck und Temperatur. Drei wichtige Punkte:
 
@@ -779,6 +802,8 @@ Damit lässt sich berechnen, bei welcher Temperatur eine Flüssigkeit unter gege
 > **Merke:** Auf dem Everest (340 hPa) siedet Wasser bei nur ~70 °C. Im Schnellkochtopf (2 bar) bei ~120 °C. Druck verändert den Siedepunkt!
 
 ## Rechenbeispiel: Gefrierpunktserniedrigung
+
+Um die kolligativen Eigenschaften in der Praxis anzuwenden, rechnen wir ein klinisch relevantes Beispiel durch.
 
 **Aufgabe:** Wie stark senkt eine physiologische NaCl-Lösung (0,9 %, d.h. 9 g NaCl pro 1000 g H₂O) den Gefrierpunkt?
 

@@ -277,6 +277,11 @@ h1, h2, h3, h4, h5, h6 {
   transition: background-color 0.15s ease;
 }
 
+/* Safe-area bottom padding for sticky CTAs on notched phones */
+.safe-area-bottom {
+  padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+}
+
 /* Premium CTA button — gradient with glow */
 .btn-premium {
   background: linear-gradient(135deg, var(--accent), var(--accent-hover));
@@ -679,16 +684,23 @@ select:focus {
   -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 12px;
+  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 .dark .content-svg-wrap {
-  background: rgba(255, 255, 255, 0.03);
-  border-color: rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.93);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.08);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 .content-svg-wrap figcaption {
   margin-top: 0.5rem;
   font-size: 0.8125rem;
   color: var(--muted);
   text-align: center;
+}
+.dark .content-svg-wrap figcaption {
+  color: #6b7280;
 }
 
 /* Prose: Bilder und SVGs überlappen nicht, responsive */

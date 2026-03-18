@@ -11,8 +11,6 @@ export const physKapMechanik: Kapitel = {
     {
       id: "ph-1-01",
       title: "SI-Grundgrößen und abgeleitete Einheiten",
-      imageUrl: "/images/bms/bio-skelett.svg",
-      imageCaption: "Abb.: Physikalische Grundgrößen und Maßeinheiten (OpenStax, CC BY 4.0)",
       stichworte: [
         "SI-System",
         "Basisgrößen",
@@ -316,9 +314,6 @@ P = 7 531 200 J / 86 400 s ≈ **87 W** — vergleichbar mit einer Glühbirne!
     {
       id: "ph-1-02",
       title: "Präfixe und wissenschaftliche Notation",
-      imageUrl: "/images/bms/bio-erythrozyten.jpg",
-      imageCaption:
-        "Abb.: Erythrozyten — Durchmesser ca. 7 µm, ein Paradebeispiel für SI-Präfixe (OpenStax, CC BY 4.0)",
       stichworte: [
         "SI-Präfixe",
         "Zehnerpotenz",
@@ -628,9 +623,6 @@ f = 3 x 10¹⁸ Hz. Wellenlänge = c/f = (3 x 10⁸) / (3 x 10¹⁸) = **10⁻¹
     {
       id: "ph-1-03",
       title: "Dimensionsanalyse und Einheitenumrechnung",
-      imageUrl: "/images/bms/bio-niere.jpg",
-      imageCaption:
-        "Abb.: Konzentrationsberechnungen erfordern konsequente Einheitenumrechnung (OpenStax, CC BY 4.0)",
       stichworte: [
         "Dimensionsanalyse",
         "dimensionale Homogenität",
@@ -947,8 +939,6 @@ Re = (1060 x 0,5 x 0,025) / 0,0035 ≈ **3786** → Übergangsbereich, bei Belas
     {
       id: "ph-2-01",
       title: "Newtonsche Gesetze und Kinematik",
-      imageUrl: "/images/bms/bio-muskelkontraktion.jpg",
-      imageCaption: "Abb.: Muskelkräfte folgen den Newtonschen Gesetzen (OpenStax, CC BY 4.0)",
       stichworte: [
         "Trägheitsgesetz",
         "F=ma",
@@ -1190,9 +1180,6 @@ Realistisch braucht CPR ca. **400–500 N** (Federwiderstand des Thorax dominier
     {
       id: "ph-2-02",
       title: "Erhaltungssätze — Energie, Impuls, Drehimpuls",
-      imageUrl: "/images/bms/bio-muskelfaser.jpg",
-      imageCaption:
-        "Abb.: Energieumwandlung in Muskelfasern — ein Beispiel für Energieerhaltung (OpenStax, CC BY 4.0)",
       stichworte: [
         "Energieerhaltung",
         "Impulserhaltung",
@@ -1485,8 +1472,6 @@ Bei η = 17 %: metabolischer Verbrauch = 96/0,17 ≈ **565 kJ/Tag ≈ 135 kcal/T
     {
       id: "ph-2-03",
       title: "Statik, Druck und Hebelmechanik",
-      imageUrl: "/images/bms/bio-haut-aufbau.jpg",
-      imageCaption: "Abb.: Hebelmechanik am Bewegungsapparat (OpenStax, CC BY 4.0)",
       stichworte: [
         "Gleichgewicht",
         "Kräftegleichgewicht",
@@ -1760,9 +1745,6 @@ Probe: F_H² + F_N² = 40,3² + 110,6² = 1624 + 12 232 = 13 856 ≈ 117,7² = 1
     {
       id: "ph-2-04",
       title: "Gravitation und Rotation",
-      imageUrl: "/images/bms/bio-herz-kreislauf.jpg",
-      imageCaption:
-        "Abb.: Gravitation beeinflusst den hydrostatischen Blutdruck (OpenStax, CC BY 4.0)",
       stichworte: [
         "Gravitationsgesetz",
         "Gewichtskraft",

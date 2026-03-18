@@ -764,7 +764,7 @@ export default function TV() {
                     {set.difficulty}
                   </Badge>
                   <span className="text-xs text-[var(--muted)] shrink-0 tabular-nums">
-                    {totalQ} Fragen
+                    {totalQ} {totalQ === 1 ? "Frage" : "Fragen"}
                   </span>
                   <ArrowRight className="w-4 h-4 text-[var(--muted)] shrink-0 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </button>
@@ -813,7 +813,7 @@ export default function TV() {
                 </Badge>
               )}
               <span className="text-xs text-[var(--muted)] shrink-0 tabular-nums">
-                {t.fragen.length} Fragen
+                {t.fragen.length} {t.fragen.length === 1 ? "Frage" : "Fragen"}
               </span>
               <ArrowRight className="w-4 h-4 text-[var(--muted)] shrink-0 opacity-0 group-hover:opacity-100 transition-opacity" />
             </button>
@@ -863,7 +863,7 @@ export default function TV() {
                 </span>
               </div>
               <span className="text-xs text-[var(--muted)] shrink-0 tabular-nums">
-                {t.statements.length} Aussagen
+                {t.statements.length} {t.statements.length === 1 ? "Aussage" : "Aussagen"}
               </span>
               <ArrowRight className="w-4 h-4 text-[var(--muted)] shrink-0 opacity-0 group-hover:opacity-100 transition-opacity" />
             </button>
