@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import { useSearchParams, useLocation } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import { BookOpen, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PageLoadingSkeleton, PageError } from "@/components/ui/page-states";
@@ -45,20 +45,10 @@ const QUICK_START_VIEWS: Record<string, KffView> = {
 export default function KFF() {
   usePageTitle("KFF – Kognitive Fähigkeiten");
   const [searchParams] = useSearchParams();
-  const location = useLocation();
-  const dailyPlanKff = location.state?.dailyPlanKff as
-    | { domain: string; count: number }[]
-    | undefined;
-  const planZfCount = dailyPlanKff?.find((t) => t.domain === "kff-zahlenfolgen")?.count ?? 0;
-  const planImpCount = dailyPlanKff?.find((t) => t.domain === "kff-implikationen")?.count ?? 0;
 
   const startParam = searchParams.get("start");
   const initialView: KffView =
-    startParam && QUICK_START_VIEWS[startParam]
-      ? QUICK_START_VIEWS[startParam]
-      : planZfCount > 0 || planImpCount > 0
-        ? "zahlenfolgen"
-        : "overview";
+    startParam && QUICK_START_VIEWS[startParam] ? QUICK_START_VIEWS[startParam] : "overview";
   const [view, setView] = useState<KffView>(initialView);
   const [strategyKey, setStrategyKey] = useState<StrategyKey>("zahlenfolgen");
   const { user, loading: isLoading } = useAuth();
@@ -130,7 +120,6 @@ export default function KFF() {
           autoStartRef.current = false;
           setView("overview");
         }}
-        initialQuestionCount={planZfCount > 0 ? planZfCount : undefined}
         // eslint-disable-next-line react-hooks/refs
         autoStart={autoStartRef.current}
       />
@@ -184,7 +173,6 @@ export default function KFF() {
           autoStartRef.current = false;
           setView("overview");
         }}
-        initialQuestionCount={planImpCount > 0 ? planImpCount : undefined}
         // eslint-disable-next-line react-hooks/refs
         autoStart={autoStartRef.current}
       />
@@ -365,12 +353,8 @@ export default function KFF() {
                     variant="premium"
                     size="sm"
                     onClick={() => {
-                      if (m.id === "gedaechtnis") {
-                        setView(m.startView);
-                      } else {
-                        autoStartRef.current = true;
-                        setView(m.startView);
-                      }
+                      autoStartRef.current = false;
+                      setView(m.startView);
                     }}
                   >
                     <Play className="w-4 h-4 mr-1" /> Üben
