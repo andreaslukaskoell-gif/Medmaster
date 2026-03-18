@@ -666,7 +666,7 @@ function getCorrectAnswerDisplay(q: UnifiedQuestion): string {
       return q.sylOptions?.[q.sylCorrectOption ?? 0] || "";
     case "kff-wortfluessigkeit":
       return q.correctLetter === "-"
-        ? `E – Keine der Antworten (${q.correctWord})`
+        ? `E – Keine der Antwortmöglichkeiten ist richtig. (${q.correctWord})`
         : `${q.correctLetter} (${q.correctWord})`;
     case "kff-figuren": {
       const FZ_LABELS2 = ["A", "B", "C", "D", "E"];

@@ -504,7 +504,9 @@ export function WortflüssigkeitQuiz({
                 }`}
               >
                 <span className="font-semibold mr-2">({String.fromCharCode(65 + li)})</span>
-                {opt === "-" ? "Keine der Antworten ist richtig" : `Anfangsbuchstabe: ${opt}`}
+                {opt === "-"
+                  ? "Keine der Antwortmöglichkeiten ist richtig."
+                  : `Anfangsbuchstabe: ${opt}`}
                 <kbd className="float-right text-[10px] bg-[var(--border)] px-1.5 py-0.5 rounded text-[var(--muted)]">
                   {li + 1}
                 </kbd>

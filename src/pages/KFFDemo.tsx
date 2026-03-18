@@ -291,7 +291,7 @@ function WFCard({ task, index }: { task: WordFluencyTask; index: number }) {
                 {OPTION_LABELS[i]}
               </span>
               <span className="text-sm font-mono text-[var(--text-primary)]">
-                {opt === "-" ? "Keine der Antworten" : opt}
+                {opt === "-" ? "Keine der Antwortmöglichkeiten ist richtig." : opt}
               </span>
               {revealed && isCorrect && (
                 <CheckCircle2 className="w-5 h-5 text-emerald-500 ml-auto shrink-0" />
