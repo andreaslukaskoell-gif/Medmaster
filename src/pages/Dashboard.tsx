@@ -29,6 +29,7 @@ import { Button } from "@/components/ui/button";
 // Progress replaced with .progress-premium CSS class
 import { Heatmap } from "@/components/ui/heatmap";
 import { SyncIndicator } from "@/components/dashboard/SyncIndicator";
+import { WeaknessCard } from "@/components/dashboard/WeaknessCard";
 import { StreakFlameIcon } from "@/components/dashboard/StreakFire";
 import { useLevelUpSound } from "@/hooks/useLevelUpSound";
 import { trackEvent } from "@/lib/analyticsTracker";
@@ -572,6 +573,11 @@ export default function Dashboard() {
               </div>
               <ReferralWidget />
             </motion.section>
+          </ScrollReveal>
+
+          {/* Schwächen-Analyse (server-side, nur wenn Daten vorhanden) */}
+          <ScrollReveal>
+            <WeaknessCard />
           </ScrollReveal>
         </motion.div>
 

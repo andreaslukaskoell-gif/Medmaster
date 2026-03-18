@@ -759,6 +759,15 @@ export const useStore = create<AppState>()(
             lastFreezeReset,
           });
         }
+        // Fire-and-forget: sync streak to backend
+        const s = get();
+        import("@/lib/backendSync").then(({ syncStreak }) =>
+          syncStreak({
+            current_streak: s.streak,
+            xp: s.xp,
+            daily_goal_minutes: s.dailyGoalMinutes,
+          })
+        );
       },
 
       toggleDarkMode: () =>
@@ -1001,6 +1010,21 @@ export const useStore = create<AppState>()(
             },
           };
         });
+        // Sync leaderboard snapshot after activity
+        const s = get();
+        import("@/lib/backendSync").then(({ syncLeaderboard }) =>
+          syncLeaderboard({
+            nickname: "Anonym",
+            xp: s.xp,
+            level: Math.floor(s.xp / 100) + 1,
+            xp_this_week: Object.entries(s.activityLog)
+              .filter(([d]) => {
+                const diff = (Date.now() - new Date(d).getTime()) / 86400000;
+                return diff <= 7;
+              })
+              .reduce((sum, [, v]) => sum + v.questions * 10, 0),
+          })
+        );
       },
 
       toggleFlagQuestion: (id) =>
