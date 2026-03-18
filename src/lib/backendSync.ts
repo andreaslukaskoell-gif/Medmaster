@@ -1,0 +1,214 @@
+/**
+ * Backend sync layer — bridges localStorage state with Supabase.
+ * All functions are fire-and-forget (don't block UI) and fail silently.
+ */
+
+import { supabase } from "./supabase";
+import { isSchemaSkipActive } from "./supabaseSchemaSkip";
+
+function skip() {
+  return !supabase || isSchemaSkipActive();
+}
+
+// ── Quiz Results ──────────────────────────────────────────────
+
+type QuizResultPayload = {
+  quiz_type: "bms" | "kff" | "tv" | "sek" | "simulation";
+  subject?: string;
+  chapter_id?: string;
+  score: number;
+  total: number;
+  duration_seconds?: number;
+  answers?: { questionId: string; selectedAnswer: string; correct: boolean }[];
+};
+
+export async function syncQuizResult(payload: QuizResultPayload) {
+  if (skip()) return;
+  try {
+    const {
+      data: { user },
+    } = await supabase!.auth.getUser();
+    if (!user) return;
+    await supabase!.from("quiz_results").insert({
+      user_id: user.id,
+      ...payload,
+    });
+  } catch {
+    // silent — localStorage is primary
+  }
+}
+
+// ── SRS Review ────────────────────────────────────────────────
+
+export async function syncSrsReview(questionId: string, correct: boolean) {
+  if (skip()) return;
+  try {
+    await supabase!.rpc("sync_srs_review", {
+      p_question_id: questionId,
+      p_correct: correct,
+    });
+  } catch {
+    // silent
+  }
+}
+
+// ── Streak Sync ───────────────────────────────────────────────
+
+export async function syncStreak(data: {
+  current_streak: number;
+  xp: number;
+  daily_goal_minutes: number;
+}) {
+  if (skip()) return;
+  try {
+    const {
+      data: { user },
+    } = await supabase!.auth.getUser();
+    if (!user) return;
+    await supabase!.from("user_streaks").upsert(
+      {
+        user_id: user.id,
+        current_streak: data.current_streak,
+        longest_streak: data.current_streak, // updated by trigger if higher
+        last_active_date: new Date().toISOString().slice(0, 10),
+        xp: data.xp,
+        daily_goal_minutes: data.daily_goal_minutes,
+        updated_at: new Date().toISOString(),
+      },
+      { onConflict: "user_id" }
+    );
+  } catch {
+    // silent
+  }
+}
+
+// ── Simulation Results ────────────────────────────────────────
+
+type SimulationPayload = {
+  bms_score?: number;
+  bms_total?: number;
+  tv_score?: number;
+  kff_score?: number;
+  sek_score?: number;
+  total_score?: number;
+  duration_minutes?: number;
+  details?: Record<string, unknown>;
+};
+
+export async function syncSimulationResult(payload: SimulationPayload) {
+  if (skip()) return;
+  try {
+    const {
+      data: { user },
+    } = await supabase!.auth.getUser();
+    if (!user) return;
+    await supabase!.from("simulation_results").insert({
+      user_id: user.id,
+      ...payload,
+    });
+  } catch {
+    // silent
+  }
+}
+
+// ── Weakness Analysis ─────────────────────────────────────────
+
+export type WeaknessResult = {
+  weakest_chapters:
+    | {
+        subject: string;
+        chapter_id: string;
+        total: number;
+        correct: number;
+        pct: number;
+      }[]
+    | null;
+  subject_scores: Record<string, { total: number; correct: number; pct: number }> | null;
+  analyzed_at: string;
+};
+
+export async function fetchWeaknessAnalysis(): Promise<WeaknessResult | null> {
+  if (skip()) return null;
+  try {
+    const {
+      data: { user },
+    } = await supabase!.auth.getUser();
+    if (!user) return null;
+    const { data, error } = await supabase!.rpc("get_weakness_analysis", {
+      p_user_id: user.id,
+    });
+    if (error) throw error;
+    return data as WeaknessResult;
+  } catch {
+    return null;
+  }
+}
+
+// ── Data Export (DSGVO Art. 20) ───────────────────────────────
+
+export async function exportUserData(): Promise<Record<string, unknown> | null> {
+  if (skip()) return null;
+  try {
+    const { data, error } = await supabase!.rpc("export_user_data");
+    if (error) throw error;
+    return data as Record<string, unknown>;
+  } catch {
+    return null;
+  }
+}
+
+// ── Leaderboard ───────────────────────────────────────────────
+
+export async function syncLeaderboard(data: {
+  nickname: string;
+  xp: number;
+  level: number;
+  xp_this_week: number;
+  subject_scores?: Record<string, number>;
+  badge_ids?: string[];
+}) {
+  if (skip()) return;
+  try {
+    const {
+      data: { user },
+    } = await supabase!.auth.getUser();
+    if (!user) return;
+    await supabase!.from("leaderboard_snapshots").upsert(
+      {
+        user_id: user.id,
+        ...data,
+        updated_at: new Date().toISOString(),
+      },
+      { onConflict: "user_id" }
+    );
+  } catch {
+    // silent
+  }
+}
+
+export type LeaderboardEntry = {
+  nickname: string;
+  xp: number;
+  level: number;
+  xp_this_week: number;
+  badge_ids: string[];
+};
+
+export async function fetchLeaderboard(
+  mode: "alltime" | "weekly" = "weekly",
+  limit = 20
+): Promise<LeaderboardEntry[]> {
+  if (skip()) return [];
+  try {
+    const orderCol = mode === "weekly" ? "xp_this_week" : "xp";
+    const { data, error } = await supabase!
+      .from("leaderboard_snapshots")
+      .select("nickname, xp, level, xp_this_week, badge_ids")
+      .order(orderCol, { ascending: false })
+      .limit(limit);
+    if (error) throw error;
+    return (data ?? []) as LeaderboardEntry[];
+  } catch {
+    return [];
+  }
+}

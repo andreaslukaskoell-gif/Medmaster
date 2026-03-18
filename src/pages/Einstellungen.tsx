@@ -16,8 +16,10 @@ import {
   ListOrdered,
   Timer,
   RotateCcw,
+  Download,
 } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
+import { exportUserData } from "@/lib/backendSync";
 import { useStore } from "@/store/useStore";
 
 const FONT_OPTIONS: { value: "small" | "normal" | "large"; label: string }[] = [
@@ -116,6 +118,7 @@ export default function Einstellungen() {
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
   const [showResetConfirm, setShowResetConfirm] = useState(false);
   const [deleting, setDeleting] = useState(false);
+  const [exporting, setExporting] = useState(false);
 
   const handleDeleteAccount = async () => {
     setDeleting(true);
@@ -307,6 +310,36 @@ export default function Einstellungen() {
           Aktionen
         </h2>
         <div className="card-glass rounded-xl divide-y divide-[var(--border)]">
+          {/* Daten exportieren (DSGVO Art. 20) */}
+          <button
+            type="button"
+            onClick={async () => {
+              setExporting(true);
+              const data = await exportUserData();
+              setExporting(false);
+              if (!data) return;
+              const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+              const url = URL.createObjectURL(blob);
+              const a = document.createElement("a");
+              a.href = url;
+              a.download = `medmaster-export-${new Date().toISOString().slice(0, 10)}.json`;
+              a.click();
+              URL.revokeObjectURL(url);
+            }}
+            disabled={exporting}
+            className="flex items-center gap-3 px-4 py-3.5 w-full text-left hover:bg-[var(--foreground)]/5 transition-colors cursor-pointer disabled:opacity-50"
+          >
+            <Download className="w-4 h-4 text-[var(--muted)] shrink-0" />
+            <div className="flex-1">
+              <span className="text-sm font-medium text-[var(--foreground)]">
+                {exporting ? "Wird exportiert..." : "Daten exportieren"}
+              </span>
+              <p className="text-xs text-[var(--muted)]">
+                Alle Lerndaten als JSON herunterladen (DSGVO Art. 20)
+              </p>
+            </div>
+          </button>
+
           {/* Fortschritt zurücksetzen */}
           {!showResetConfirm ? (
             <button

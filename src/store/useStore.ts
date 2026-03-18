@@ -813,7 +813,7 @@ export const useStore = create<AppState>()(
 
       clearAnswers: () => set({ currentAnswers: {} }),
 
-      saveQuizResult: (result) =>
+      saveQuizResult: (result) => {
         set((s) => {
           const ts = result.timestamp || new Date().toISOString();
           const newResults = [...s.quizResults, { ...result, timestamp: ts }].slice(-500);
@@ -837,9 +837,24 @@ export const useStore = create<AppState>()(
             quizResults: newResults,
             ...(wrongAnswers.length > 0 ? { errorEvents: newErrorEvents } : {}),
           };
-        }),
+        });
+        // Fire-and-forget backend sync
+        import("@/lib/backendSync").then(({ syncQuizResult }) =>
+          syncQuizResult({
+            quiz_type: (result.type as "bms" | "kff" | "tv" | "sek") ?? "bms",
+            subject: result.subject,
+            chapter_id: undefined,
+            score: result.score ?? 0,
+            total: result.total ?? 0,
+            duration_seconds: result.durationMinutes ? result.durationMinutes * 60 : undefined,
+            answers: result.answers,
+          })
+        );
+      },
 
-      updateSpacedRepetition: (questionId, correct) =>
+      updateSpacedRepetition: (questionId, correct) => {
+        // Fire-and-forget backend SRS sync
+        import("@/lib/backendSync").then(({ syncSrsReview }) => syncSrsReview(questionId, correct));
         set((s) => {
           const existing = s.spacedRepetition[questionId];
           const now = new Date().toISOString().split("T")[0];
@@ -882,7 +897,8 @@ export const useStore = create<AppState>()(
               },
             },
           };
-        }),
+        });
+      },
 
       getDueQuestions: () => {
         const today = new Date().toISOString().split("T")[0];
