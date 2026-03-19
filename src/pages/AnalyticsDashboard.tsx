@@ -89,6 +89,13 @@ type ActiveUser = {
   page_since: string;
   pages_viewed: number;
 };
+type ActiveUserByEmail = {
+  user_id: string;
+  email: string;
+  current_page: string;
+  page_since: string;
+  pages_viewed: number;
+};
 type PageEngagement = {
   page_path: string;
   avg_time_seconds: number;
@@ -108,6 +115,7 @@ type DashboardData = {
   trafficSources: TrafficSource[];
   recentReferrals: RecentReferral[];
   signupAttributions: SignupAttribution[];
+  activeUsersByEmail: ActiveUserByEmail[];
 };
 
 // ── Funnel config ──
@@ -224,6 +232,7 @@ async function fetchDashboard(): Promise<DashboardData> {
       trafficSources: [],
       recentReferrals: [],
       signupAttributions: [],
+      activeUsersByEmail: [],
     };
   }
 
@@ -333,6 +342,11 @@ async function fetchDashboard(): Promise<DashboardData> {
     if (!isDupe) deduped.push(s);
   }
 
+  // Fetch active users deduplicated by email
+  const activeByEmailResult = await supabase.rpc("analytics_active_users_by_email");
+  const activeUsersByEmail: ActiveUserByEmail[] =
+    (activeByEmailResult.data as ActiveUserByEmail[]) || [];
+
   return {
     daily: (daily.data as DailyStat[]) || [],
     topPages: (topPages.data as TopPage[]) || [],
@@ -345,6 +359,7 @@ async function fetchDashboard(): Promise<DashboardData> {
     trafficSources: trafficSources.slice(0, 10),
     recentReferrals,
     signupAttributions: deduped,
+    activeUsersByEmail,
   };
 }
 
@@ -861,11 +876,11 @@ export default function AnalyticsDashboard() {
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
           <h1 className="text-xl font-bold text-[var(--text-primary)]">Analytics</h1>
-          {data.activeSessions > 0 && (
+          {data.activeUsersByEmail.length > 0 && (
             <div className="flex items-center gap-1.5 bg-emerald-50 dark:bg-emerald-900/20 px-2.5 py-1 rounded-full">
               <LiveDot />
               <span className="text-xs font-semibold text-emerald-600 dark:text-emerald-400">
-                {data.activeSessions} aktiv
+                {data.activeUsersByEmail.length} aktiv
               </span>
             </div>
           )}
@@ -901,39 +916,40 @@ export default function AnalyticsDashboard() {
         />
       </div>
 
-      {/* 2. Live Users — who's on right now */}
-      {data.activeUsers.length > 0 && (
+      {/* 2. Live Users — who's on right now (deduplicated by email) */}
+      {data.activeUsersByEmail.length > 0 && (
         <div className="bg-[var(--surface)] rounded-xl border border-emerald-500/30 overflow-hidden">
           <div className="flex items-center gap-2.5 px-5 py-3 border-b border-[var(--border)]">
             <LiveDot />
             <h2 className="text-sm font-semibold text-[var(--text-primary)]">
-              {data.activeUsers.length} {data.activeUsers.length === 1 ? "User" : "User"} gerade
-              online
+              {data.activeUsersByEmail.length}{" "}
+              {data.activeUsersByEmail.length === 1 ? "User" : "User"} gerade online
             </h2>
-            <span className="text-[10px] text-[var(--muted)] ml-auto">nur echte Besucher</span>
+            <span className="text-[10px] text-[var(--muted)] ml-auto">pro E-Mail 1x gezählt</span>
           </div>
           <div className="divide-y divide-[var(--border)]/50">
-            {data.activeUsers.map((u) => {
+            {data.activeUsersByEmail.map((u) => {
               const minsAgo = Math.max(
                 0,
                 Math.round((Date.now() - new Date(u.page_since).getTime()) / 60000)
               );
               return (
                 <div
-                  key={u.session_id}
+                  key={u.user_id}
                   className="flex items-center gap-3 px-5 py-3 hover:bg-[var(--background)]/50 transition-colors"
                 >
                   {/* Avatar placeholder */}
                   <div className="w-8 h-8 rounded-full bg-[var(--accent)]/10 flex items-center justify-center text-xs font-bold text-[var(--accent)] shrink-0">
-                    {u.visitor_id.slice(0, 2).toUpperCase()}
+                    {u.email.slice(0, 2).toUpperCase()}
                   </div>
-                  {/* Current page */}
+                  {/* Email + current page */}
                   <div className="flex-1 min-w-0">
                     <div className="text-sm font-medium text-[var(--text-primary)] truncate">
-                      {shortPath(u.current_page)}
+                      {u.email}
                     </div>
                     <div className="text-[11px] text-[var(--muted)]">
-                      {u.pages_viewed} {u.pages_viewed === 1 ? "Seite" : "Seiten"} besucht
+                      {shortPath(u.current_page)} · {u.pages_viewed}{" "}
+                      {u.pages_viewed === 1 ? "Seite" : "Seiten"}
                     </div>
                   </div>
                   {/* Time indicator */}
