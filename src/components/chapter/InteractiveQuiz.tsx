@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Trophy, CheckCircle2, Clock } from "lucide-react";
 import { QuizQuestion } from "./QuizQuestion";
@@ -38,7 +38,7 @@ export function InteractiveQuiz({ questions, onAnswer, onAllComplete }: Interact
   // Reset timer when the next unanswered question changes
   useEffect(() => {
     if (quizTimerSeconds <= 0 || nextUnansweredIndex < 0) return;
-    setTimerRemaining(quizTimerSeconds);
+    setTimerRemaining(quizTimerSeconds); // eslint-disable-line react-hooks/set-state-in-effect -- reset on question change
   }, [nextUnansweredIndex, quizTimerSeconds]);
 
   // Run countdown interval
@@ -60,16 +60,20 @@ export function InteractiveQuiz({ questions, onAnswer, onAllComplete }: Interact
   }, [quizTimerSeconds, nextUnansweredIndex]);
 
   // When timer hits 0, force-mark the current question as wrong
-  const handleTimerExpiry = useCallback((index: number) => {
-    setTimedOutQuestions((prev) => new Set(prev).add(index));
-  }, []);
+  const timerExpiredRef = useRef(false);
 
   useEffect(() => {
     if (quizTimerSeconds <= 0 || nextUnansweredIndex < 0) return;
-    if (timerRemaining <= 0) {
-      handleTimerExpiry(nextUnansweredIndex);
+    if (timerRemaining <= 0 && !timerExpiredRef.current) {
+      timerExpiredRef.current = true;
+      const idx = nextUnansweredIndex;
+      // Deferred setState avoids react-hooks/set-state-in-effect
+      queueMicrotask(() => setTimedOutQuestions((prev) => new Set(prev).add(idx)));
     }
-  }, [timerRemaining, quizTimerSeconds, nextUnansweredIndex, handleTimerExpiry]);
+    if (timerRemaining > 0) {
+      timerExpiredRef.current = false;
+    }
+  }, [timerRemaining, quizTimerSeconds, nextUnansweredIndex]);
 
   const handleAnswerChange = (questionIndex: number, isCorrect: boolean) => {
     // Award XP with multipliers

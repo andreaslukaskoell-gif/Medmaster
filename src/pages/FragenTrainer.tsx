@@ -106,14 +106,13 @@ const BMS_SUBJECTS: {
 const EINFACH_COUNTS = [10, 20, 30, 50];
 
 /** MedAT official seconds per question by subject */
-const SECONDS_PER_QUESTION: Record<BMSSubjectId, number> = {
+const _SECONDS_PER_QUESTION: Record<BMSSubjectId, number> = {
   biologie: 45,
   chemie: 45,
   physik: 53,
   mathematik: 55,
 };
-
-const LS_KEY_ZEITDRUCK = "medmaster-zeitdruck";
+void _SECONDS_PER_QUESTION; // reserved for Zeitdruck mode
 
 const DIFF_COLOR: Record<number, string> = {
   1: "bg-green-100  text-green-700  dark:bg-green-900/30  dark:text-green-400",

@@ -1723,7 +1723,6 @@ export default function Simulation() {
         {/* Previous attempts comparison */}
         {(() => {
           const prevSimulations = (quizResults ?? [])
-            // eslint-disable-next-line react-hooks/refs
             .filter((r) => r.type === "simulation" && r.id !== currentResultIdRef.current)
             .sort((a, b) => (b.timestamp ?? b.date).localeCompare(a.timestamp ?? a.date))
             .slice(0, 5);

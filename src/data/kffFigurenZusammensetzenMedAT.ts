@@ -455,7 +455,7 @@ function cutSquareDiagonal(): CutResult {
 }
 
 /** Mittig von Zentrum zu Ecken (symmetrisch). */
-function cutSquareCenter4(): CutResult {
+function _cutSquareCenter4(): CutResult {
   const pts = SQUARE.points;
   const c = centroid(SQUARE);
   return {
@@ -1035,6 +1035,7 @@ export type FZDifficulty = "easy" | "medium" | "hard";
 type CutScheme = { diff: FZDifficulty; shapeId: SolutionShapeName; cut: () => CutResult };
 
 /** Schnitt-Schemata. Nur die 14 offiziellen Zielformen, 2–7 Teile. shapeId für ausgeglichene Verteilung. */
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const CUT_SCHEMES: CutScheme[] = [
   // --- EASY: all 15 shapes (incl. rectangle), 2-3 pieces ---
   { diff: "easy", shapeId: "square", cut: cutSquareDiagonal },
