@@ -295,7 +295,13 @@ async function fetchDashboard(): Promise<DashboardData> {
   const signupResult = await supabase
     .from("analytics_events")
     .select("created_at, properties, user_agent")
-    .in("event_name", ["signup", "login_click", "signup_completed"])
+    .in("event_name", [
+      "signup",
+      "signup_completed",
+      "login_click",
+      "conversion_signup_completed",
+      "conversion_signup_started",
+    ])
     .order("created_at", { ascending: false })
     .limit(200);
 

@@ -3,7 +3,14 @@ import { supabase } from "@/lib/supabase";
 import { startAutoSync, stopAutoSync, pushStatsToSupabase } from "@/lib/syncService";
 import { startMainSync, stopMainSync } from "@/lib/sync";
 import { identifyUser, resetAnalytics } from "@/lib/analytics";
-import { setTrackerUserId } from "@/lib/analyticsTracker";
+import {
+  setTrackerUserId,
+  trackEvent,
+  getStoredRef,
+  getStoredUtm,
+  getStoredGclid,
+  getStoredFbclid,
+} from "@/lib/analyticsTracker";
 import { sanitizeUrlParam } from "@/lib/security";
 import type { User, Session } from "@supabase/supabase-js";
 
@@ -71,13 +78,29 @@ export function useAuth() {
 
     const {
       data: { subscription },
-    } = supabase.auth.onAuthStateChange((_event, session) => {
+    } = supabase.auth.onAuthStateChange((event, session) => {
       setSession(session);
       setUser(session?.user ?? null);
       if (session?.user) {
         fetchProfile(session.user.id);
         startAutoSync(session.user.id);
         startMainSync(session.user.id);
+
+        // Track new signups (works for Google OAuth, email, magic link)
+        if (event === "SIGNED_IN") {
+          const createdAt = new Date(session.user.created_at).getTime();
+          const isNewUser = Date.now() - createdAt < 60_000; // created less than 60s ago
+          if (isNewUser) {
+            const provider = session.user.app_metadata?.provider || "unknown";
+            trackEvent("signup_completed", {
+              method: provider,
+              ref: getStoredRef(),
+              utm: getStoredUtm(),
+              gclid: getStoredGclid(),
+              fbclid: getStoredFbclid(),
+            });
+          }
+        }
       } else {
         stopAutoSync();
         stopMainSync();
