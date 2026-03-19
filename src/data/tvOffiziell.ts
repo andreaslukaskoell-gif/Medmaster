@@ -571,7 +571,14 @@ Die Chronobiologie hat auch therapeutische Implikationen: Die Wirksamkeit und Ve
   },
 ];
 
+import { tvAussagenSet1 } from "./tvAussagenSet1";
+import { tvAussagenSet2 } from "./tvAussagenSet2";
+import { tvAussagenSet3 } from "./tvAussagenSet3";
+
 export const tvOffiziellTexte: TVOffiziellText[] = [
   ...OFFICIAL_TV_EXAMPLES,
   ...TRAINING_TV_AUSSAGEN,
+  ...tvAussagenSet1,
+  ...tvAussagenSet2,
+  ...tvAussagenSet3,
 ];
