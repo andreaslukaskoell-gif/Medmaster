@@ -288,16 +288,16 @@ export default function Dashboard() {
         <motion.div variants={stagger} initial="initial" animate="animate" className="space-y-6">
           {/* Hero: Begrüßung + Heute im Lernplan */}
           <motion.section variants={tileMotion} aria-label="Start" className="space-y-4">
-            <div className="card-glass p-5 shadow-md">
-              <div className="flex flex-col gap-5">
+            <div className="card-glass p-5">
+              <div className="flex flex-col gap-3">
                 <div>
                   <div className="flex items-start justify-between gap-3">
                     <h1 className="text-2xl font-bold text-[var(--text-primary)] tracking-tight">
                       {displayName ? `${getGreetingByTime()}, ${displayName}` : getGreetingByTime()}
                     </h1>
                     {days > 0 && (
-                      <div className="shrink-0 flex flex-col items-center px-3 py-1.5 rounded-lg bg-[var(--accent)]/10 border border-[var(--accent)]/20">
-                        <span className="text-lg font-bold text-[var(--accent)] leading-tight">
+                      <div className="shrink-0 flex flex-col items-center px-2.5 py-1 rounded-lg bg-[var(--accent)]/10 border border-[var(--accent)]/20">
+                        <span className="text-base font-bold text-[var(--accent)] leading-tight">
                           {days}
                         </span>
                         <span className="text-[10px] text-[var(--muted)] leading-tight">
@@ -308,7 +308,7 @@ export default function Dashboard() {
                   </div>
                   <Link
                     to="/lernplan"
-                    className="mt-2 inline-flex items-center gap-1.5 text-base font-semibold text-[var(--accent)] hover:underline"
+                    className="mt-1 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--accent)] hover:underline"
                   >
                     Heute im Lernplan
                     <ArrowRight className="w-4 h-4" />
@@ -466,7 +466,7 @@ export default function Dashboard() {
                 </div>
               </Tooltip>
               <div className="flex-1 min-w-0">
-                <p className="text-2xl font-bold text-[var(--text-primary)]">{flameStreak}</p>
+                <p className="text-xl font-bold text-[var(--text-primary)]">{flameStreak}</p>
                 <p className="text-sm text-[var(--muted)]">Tage Streak</p>
               </div>
               {streak > 0 && !streakPreview && <StreakShareButton streak={streak} />}

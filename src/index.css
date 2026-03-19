@@ -197,8 +197,9 @@ body.dark-body {
     radial-gradient(ellipse 60% 40% at 80% 50%, rgba(50, 149, 86, 0.03), transparent);
 }
 
-/* Heading font: premium serif for academic feel */
-h1, h2, h3, h4, h5, h6 {
+/* Heading font: serif only in reading/content context — sans in app UI */
+.prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6,
+.content-section h1, .content-section h2, .content-section h3 {
   font-family: var(--font-heading);
 }
 
