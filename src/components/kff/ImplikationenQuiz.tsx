@@ -418,7 +418,13 @@ export function ImplikationenQuiz({
                 <p className="text-sm text-green-700 dark:text-green-400 ml-7">
                   Richtig: {qu.options?.[qu.correctAnswer]}
                 </p>
-                <div className="ml-7 mt-2 bg-[var(--surface)] p-3 rounded-lg">
+                <div className="ml-7 mt-2 bg-[var(--surface)] p-3 rounded-lg space-y-1">
+                  {qu.rulesApplied?.length > 0 && (
+                    <p className="text-xs font-medium text-[var(--text-secondary)]">
+                      Goldene Regel{qu.rulesApplied.length > 1 ? "n" : ""}:{" "}
+                      {qu.rulesApplied.map((r) => `#${r}`).join(", ")}
+                    </p>
+                  )}
                   <p className="text-xs text-[var(--muted)]">
                     {stripMarkdownAsterisks(qu.explanation)}
                   </p>

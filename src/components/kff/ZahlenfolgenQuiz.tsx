@@ -366,7 +366,12 @@ export function ZahlenfolgenQuiz({
                 <p className="text-sm text-green-700 dark:text-green-400 ml-7">
                   Richtige Antwort: {q.correctNext[0]} / {q.correctNext[1]}
                 </p>
-                <div className="ml-7 mt-2 bg-[var(--surface)] p-3 rounded-lg">
+                <div className="ml-7 mt-2 bg-[var(--surface)] p-3 rounded-lg space-y-1">
+                  {q.rule && (
+                    <p className="text-xs font-medium text-[var(--text-secondary)]">
+                      Regel: {q.rule}
+                    </p>
+                  )}
                   <p className="text-xs text-[var(--muted)]">
                     {stripMarkdownAsterisks(q.explanation)}
                   </p>

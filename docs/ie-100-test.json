@@ -1,1808 +1,1836 @@
-[
-  {
-    "id": "imp-gen-1773997164866-4m3s6w",
-    "premise1": "Alle Getränke sind Flüssigkeiten.",
-    "premise2": "Alle Flüssigkeiten sind Lebensmittel.",
-    "options": [
-      "Keine Getränke sind Lebensmittel.",
-      "Alle Lebensmittel sind Getränke.",
-      "Keine Lebensmittel sind Getränke.",
-      "Alle Getränke sind Lebensmittel.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 3,
-    "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Getränke sind Lebensmittel.",
-    "difficulty": 1,
-    "rulesApplied": [
-      3
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164868-8rlgha",
-    "premise1": "Alle Vögel sind Raubvögel.",
-    "premise2": "Alle Raubvögel sind Adler.",
-    "options": [
-      "Alle Adler sind Vögel.",
-      "Keine Adler sind Vögel.",
-      "Keine Vögel sind Adler.",
-      "Alle Vögel sind Adler.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 3,
-    "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Vögel sind Adler.",
-    "difficulty": 1,
-    "rulesApplied": [
-      3
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164887-mdi3hg",
-    "premise1": "Einige Pflanzen sind Gewürze.",
-    "premise2": "Alle Gewürze sind Nahrungsmittel.",
-    "options": [
-      "Einige Pflanzen sind Nahrungsmittel.",
-      "Keine Nahrungsmittel sind Pflanzen.",
-      "Keine Pflanzen sind Nahrungsmittel.",
-      "Alle Pflanzen sind Nahrungsmittel.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 0,
-    "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Pflanzen sind Nahrungsmittel.",
-    "difficulty": 2,
-    "rulesApplied": [
-      5
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164867-2lj1is",
-    "premise1": "Alle Nadelbäume sind Tannen.",
-    "premise2": "Alle Tannen sind Bäume.",
-    "options": [
-      "Einige Nadelbäume sind Bäume.",
-      "Alle Bäume sind Nadelbäume.",
-      "Keine Nadelbäume sind Bäume.",
-      "Alle Nadelbäume sind Bäume.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 3,
-    "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Nadelbäume sind Bäume.",
-    "difficulty": 1,
-    "rulesApplied": [
-      3
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164891-wn0eyq",
-    "premise1": "Keine Einrichtungen sind Gebrauchsgegenstände.",
-    "premise2": "Keine Möbelstücke sind Gebrauchsgegenstände.",
-    "options": [
-      "Einige Einrichtungen sind Möbelstücke.",
-      "Einige Möbelstücke sind Einrichtungen.",
-      "Keine Möbelstücke sind Einrichtungen.",
-      "Alle Einrichtungen sind Möbelstücke.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 4,
-    "explanation": "Zwei 'keine'-Prämissen ergeben keinen zwingenden Schluss (Regel 2). Aus den Prämissen über Einrichtungen, Gebrauchsgegenstände und Möbelstücke lässt sich keine zwingende Schlussfolgerung ableiten. E ist korrekt.",
-    "difficulty": 3,
-    "rulesApplied": [
-      2
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164870-je47sc",
-    "premise1": "Alle Künstler sind Musiker.",
-    "premise2": "Alle Musiker sind Sänger.",
-    "options": [
-      "Keine Sänger sind Künstler.",
-      "Alle Künstler sind Sänger.",
-      "Einige Künstler sind Sänger.",
-      "Alle Sänger sind Künstler.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 1,
-    "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Künstler sind Sänger.",
-    "difficulty": 1,
-    "rulesApplied": [
-      3
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164866-vijilu",
-    "premise1": "Alle Raubvögel sind Vögel.",
-    "premise2": "Alle Vögel sind Adler.",
-    "options": [
-      "Alle Adler sind Raubvögel.",
-      "Einige Raubvögel sind Adler.",
-      "Keine Raubvögel sind Adler.",
-      "Alle Raubvögel sind Adler.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 3,
-    "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Raubvögel sind Adler.",
-    "difficulty": 1,
-    "rulesApplied": [
-      3
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164891-8f3je5",
-    "premise1": "Keine Delfine sind Säugetiere.",
-    "premise2": "Keine Säugetiere sind Wassertiere.",
-    "options": [
-      "Alle Delfine sind Wassertiere.",
-      "Alle Wassertiere sind Delfine.",
-      "Einige Delfine sind Wassertiere.",
-      "Einige Wassertiere sind Delfine.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 4,
-    "explanation": "Zwei 'keine'-Prämissen ergeben keinen zwingenden Schluss (Regel 2). Aus den Prämissen über Delfine, Säugetiere und Wassertiere lässt sich keine zwingende Schlussfolgerung ableiten. E ist korrekt.",
-    "difficulty": 3,
-    "rulesApplied": [
-      2
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164892-vvmd92",
-    "premise1": "Einige Jugendliche sind Kinder.",
-    "premise2": "Einige Schüler sind Kinder.",
-    "options": [
-      "Keine Schüler sind Jugendliche.",
-      "Einige Schüler sind Jugendliche.",
-      "Einige Jugendliche sind Schüler.",
-      "Keine Jugendliche sind Schüler.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 4,
-    "explanation": "Zwei 'einige'-Prämissen ergeben keinen zwingenden Schluss (Regel 1). Aus den Prämissen über Jugendliche, Kinder und Schüler lässt sich keine zwingende Schlussfolgerung ableiten. E ist korrekt.",
-    "difficulty": 3,
-    "rulesApplied": [
-      1
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164872-37l6ag",
-    "premise1": "Einige Fische sind Wirbeltiere.",
-    "premise2": "Alle Wirbeltiere sind Wassertiere.",
-    "options": [
-      "Alle Fische sind Wassertiere.",
-      "Alle Wassertiere sind Fische.",
-      "Einige Fische sind Wassertiere.",
-      "Keine Fische sind Wassertiere.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 2,
-    "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Fische sind Wassertiere.",
-    "difficulty": 2,
-    "rulesApplied": [
-      5
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164892-tnnpuq",
-    "premise1": "Einige Raubtiere sind Haustiere.",
-    "premise2": "Einige Katzen sind Haustiere.",
-    "options": [
-      "Keine Raubtiere sind Katzen.",
-      "Alle Raubtiere sind Katzen.",
-      "Keine Katzen sind Raubtiere.",
-      "Alle Katzen sind Raubtiere.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 4,
-    "explanation": "Zwei 'einige'-Prämissen ergeben keinen zwingenden Schluss (Regel 1). Aus den Prämissen über Raubtiere, Haustiere und Katzen lässt sich keine zwingende Schlussfolgerung ableiten. E ist korrekt.",
-    "difficulty": 3,
-    "rulesApplied": [
-      1
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164877-738r54",
-    "premise1": "Einige Kleidungsstücke sind Textilien.",
-    "premise2": "Alle Textilien sind Gebrauchsgegenstände.",
-    "options": [
-      "Alle Kleidungsstücke sind Gebrauchsgegenstände.",
-      "Einige Kleidungsstücke sind Gebrauchsgegenstände.",
-      "Keine Gebrauchsgegenstände sind Kleidungsstücke.",
-      "Keine Kleidungsstücke sind Gebrauchsgegenstände.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 1,
-    "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Kleidungsstücke sind Gebrauchsgegenstände.",
-    "difficulty": 2,
-    "rulesApplied": [
-      5
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164869-i7fxhm",
-    "premise1": "Alle Geigen sind Musikinstrumente.",
-    "premise2": "Alle Musikinstrumente sind Wertgegenstände.",
-    "options": [
-      "Keine Wertgegenstände sind Geigen.",
-      "Einige Geigen sind Wertgegenstände.",
-      "Keine Geigen sind Wertgegenstände.",
-      "Alle Geigen sind Wertgegenstände.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 3,
-    "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Geigen sind Wertgegenstände.",
-    "difficulty": 1,
-    "rulesApplied": [
-      3
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164871-l7knf4",
-    "premise1": "Alle Erwachsene sind Lebewesen.",
-    "premise2": "Alle Lebewesen sind Kinder.",
-    "options": [
-      "Einige Erwachsene sind Kinder.",
-      "Alle Kinder sind Erwachsene.",
-      "Keine Erwachsene sind Kinder.",
-      "Alle Erwachsene sind Kinder.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 3,
-    "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Erwachsene sind Kinder.",
-    "difficulty": 1,
-    "rulesApplied": [
-      3
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164882-1nzpbh",
-    "premise1": "Einige Wertgegenstände sind Musikinstrumente.",
-    "premise2": "Alle Musikinstrumente sind Geigen.",
-    "options": [
-      "Keine Wertgegenstände sind Geigen.",
-      "Alle Wertgegenstände sind Geigen.",
-      "Alle Geigen sind Wertgegenstände.",
-      "Einige Wertgegenstände sind Geigen.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 3,
-    "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Wertgegenstände sind Geigen.",
-    "difficulty": 2,
-    "rulesApplied": [
-      5
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164870-ibdb74",
-    "premise1": "Alle Flüssigkeiten sind Lebensmittel.",
-    "premise2": "Alle Lebensmittel sind Getränke.",
-    "options": [
-      "Alle Flüssigkeiten sind Getränke.",
-      "Keine Flüssigkeiten sind Getränke.",
-      "Einige Flüssigkeiten sind Getränke.",
-      "Alle Getränke sind Flüssigkeiten.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 0,
-    "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Flüssigkeiten sind Getränke.",
-    "difficulty": 1,
-    "rulesApplied": [
-      3
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164892-tsfhia",
-    "premise1": "Einige Haustiere sind Hunde.",
-    "premise2": "Einige Säugetiere sind Hunde.",
-    "options": [
-      "Keine Säugetiere sind Haustiere.",
-      "Alle Säugetiere sind Haustiere.",
-      "Keine Haustiere sind Säugetiere.",
-      "Einige Säugetiere sind Haustiere.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 4,
-    "explanation": "Zwei 'einige'-Prämissen ergeben keinen zwingenden Schluss (Regel 1). Aus den Prämissen über Haustiere, Hunde und Säugetiere lässt sich keine zwingende Schlussfolgerung ableiten. E ist korrekt.",
-    "difficulty": 3,
-    "rulesApplied": [
-      1
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164891-aq6qjs",
-    "premise1": "Einige Nadelbäume sind Tannen.",
-    "premise2": "Einige Tannen sind Bäume.",
-    "options": [
-      "Alle Nadelbäume sind Bäume.",
-      "Alle Bäume sind Nadelbäume.",
-      "Einige Bäume sind Nadelbäume.",
-      "Keine Nadelbäume sind Bäume.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 4,
-    "explanation": "Zwei 'einige'-Prämissen ergeben keinen zwingenden Schluss (Regel 1). Aus den Prämissen über Nadelbäume, Tannen und Bäume lässt sich keine zwingende Schlussfolgerung ableiten. E ist korrekt.",
-    "difficulty": 3,
-    "rulesApplied": [
-      1
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164871-ld8553",
-    "premise1": "Alle Sträucher sind Pflanzen.",
-    "premise2": "Alle Pflanzen sind Gartengewächse.",
-    "options": [
-      "Alle Sträucher sind Gartengewächse.",
-      "Keine Sträucher sind Gartengewächse.",
-      "Alle Gartengewächse sind Sträucher.",
-      "Einige Sträucher sind Gartengewächse.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 0,
-    "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Sträucher sind Gartengewächse.",
-    "difficulty": 1,
-    "rulesApplied": [
-      3
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164870-7xow04",
-    "premise1": "Alle Fische sind Wassertiere.",
-    "premise2": "Alle Wassertiere sind Wirbeltiere.",
-    "options": [
-      "Alle Fische sind Wirbeltiere.",
-      "Einige Fische sind Wirbeltiere.",
-      "Alle Wirbeltiere sind Fische.",
-      "Keine Wirbeltiere sind Fische.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 0,
-    "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Fische sind Wirbeltiere.",
-    "difficulty": 1,
-    "rulesApplied": [
-      3
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164882-ly1zfu",
-    "premise1": "Einige Nüsse sind Gewürze.",
-    "premise2": "Alle Gewürze sind Pflanzen.",
-    "options": [
-      "Einige Nüsse sind Pflanzen.",
-      "Keine Pflanzen sind Nüsse.",
-      "Alle Nüsse sind Pflanzen.",
-      "Alle Pflanzen sind Nüsse.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 0,
-    "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Nüsse sind Pflanzen.",
-    "difficulty": 2,
-    "rulesApplied": [
-      5
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164892-urhs03",
-    "premise1": "Keine Chemikalien sind Arzneimittel.",
-    "premise2": "Einige Arzneimittel sind Medikamente.",
-    "options": [
-      "Alle Medikamente sind Chemikalien.",
-      "Alle Chemikalien sind Medikamente.",
-      "Einige Medikamente sind Chemikalien.",
-      "Keine Chemikalien sind Medikamente.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 4,
-    "explanation": "Zwei 'einige'-Prämissen ergeben keinen zwingenden Schluss (Regel 1). Zwei 'keine'-Prämissen ergeben keinen zwingenden Schluss (Regel 2). Aus den Prämissen über Chemikalien, Arzneimittel und Medikamente lässt sich keine zwingende Schlussfolgerung ableiten. E ist korrekt.",
-    "difficulty": 3,
-    "rulesApplied": [
-      1,
-      2
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164869-90cld1",
-    "premise1": "Alle Chemikalien sind Arzneimittel.",
-    "premise2": "Alle Arzneimittel sind Medikamente.",
-    "options": [
-      "Alle Chemikalien sind Medikamente.",
-      "Alle Medikamente sind Chemikalien.",
-      "Keine Chemikalien sind Medikamente.",
-      "Einige Chemikalien sind Medikamente.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 0,
-    "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Chemikalien sind Medikamente.",
-    "difficulty": 1,
-    "rulesApplied": [
-      3
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164870-h4idpv",
-    "premise1": "Alle Haustiere sind Raubtiere.",
-    "premise2": "Alle Raubtiere sind Katzen.",
-    "options": [
-      "Alle Haustiere sind Katzen.",
-      "Keine Haustiere sind Katzen.",
-      "Einige Haustiere sind Katzen.",
-      "Alle Katzen sind Haustiere.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 0,
-    "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Haustiere sind Katzen.",
-    "difficulty": 1,
-    "rulesApplied": [
-      3
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164875-9p3l58",
-    "premise1": "Einige Haustiere sind Katzen.",
-    "premise2": "Alle Katzen sind Raubtiere.",
-    "options": [
-      "Keine Raubtiere sind Haustiere.",
-      "Einige Haustiere sind Raubtiere.",
-      "Alle Haustiere sind Raubtiere.",
-      "Keine Haustiere sind Raubtiere.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 1,
-    "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Haustiere sind Raubtiere.",
-    "difficulty": 2,
-    "rulesApplied": [
-      5
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164878-97n0eo",
-    "premise1": "Einige Kleidungsstücke sind Gebrauchsgegenstände.",
-    "premise2": "Alle Gebrauchsgegenstände sind Textilien.",
-    "options": [
-      "Einige Kleidungsstücke sind Textilien.",
-      "Alle Kleidungsstücke sind Textilien.",
-      "Alle Textilien sind Kleidungsstücke.",
-      "Keine Textilien sind Kleidungsstücke.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 0,
-    "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Kleidungsstücke sind Textilien.",
-    "difficulty": 2,
-    "rulesApplied": [
-      5
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164871-7vu6yq",
-    "premise1": "Alle Handwerker sind Berufstätige.",
-    "premise2": "Alle Berufstätige sind Angestellte.",
-    "options": [
-      "Keine Handwerker sind Angestellte.",
-      "Keine Angestellte sind Handwerker.",
-      "Alle Handwerker sind Angestellte.",
-      "Einige Handwerker sind Angestellte.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 2,
-    "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Handwerker sind Angestellte.",
-    "difficulty": 1,
-    "rulesApplied": [
-      3
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164887-169arv",
-    "premise1": "Einige Ärzte sind Akademiker.",
-    "premise2": "Alle Akademiker sind Berufstätige.",
-    "options": [
-      "Keine Ärzte sind Berufstätige.",
-      "Alle Ärzte sind Berufstätige.",
-      "Einige Ärzte sind Berufstätige.",
-      "Keine Berufstätige sind Ärzte.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 2,
-    "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Ärzte sind Berufstätige.",
-    "difficulty": 2,
-    "rulesApplied": [
-      5
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164871-03m8iy",
-    "premise1": "Alle Haustiere sind Katzen.",
-    "premise2": "Alle Katzen sind Raubtiere.",
-    "options": [
-      "Keine Raubtiere sind Haustiere.",
-      "Alle Haustiere sind Raubtiere.",
-      "Alle Raubtiere sind Haustiere.",
-      "Einige Haustiere sind Raubtiere.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 1,
-    "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Haustiere sind Raubtiere.",
-    "difficulty": 1,
-    "rulesApplied": [
-      3
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164884-tsyqvh",
-    "premise1": "Einige Pinguine sind Vögel.",
-    "premise2": "Alle Vögel sind Wildtiere.",
-    "options": [
-      "Einige Pinguine sind Wildtiere.",
-      "Keine Pinguine sind Wildtiere.",
-      "Alle Pinguine sind Wildtiere.",
-      "Alle Wildtiere sind Pinguine.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 0,
-    "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Pinguine sind Wildtiere.",
-    "difficulty": 2,
-    "rulesApplied": [
-      5
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164868-a60xha",
-    "premise1": "Alle Medien sind Druckerzeugnisse.",
-    "premise2": "Alle Druckerzeugnisse sind Bücher.",
-    "options": [
-      "Alle Medien sind Bücher.",
-      "Keine Medien sind Bücher.",
-      "Alle Bücher sind Medien.",
-      "Einige Medien sind Bücher.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 0,
-    "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Medien sind Bücher.",
-    "difficulty": 1,
-    "rulesApplied": [
-      3
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164887-1f0gcc",
-    "premise1": "Einige Säugetiere sind Hunde.",
-    "premise2": "Alle Hunde sind Haustiere.",
-    "options": [
-      "Einige Säugetiere sind Haustiere.",
-      "Keine Säugetiere sind Haustiere.",
-      "Alle Säugetiere sind Haustiere.",
-      "Alle Haustiere sind Säugetiere.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 0,
-    "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Säugetiere sind Haustiere.",
-    "difficulty": 2,
-    "rulesApplied": [
-      5
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164870-rlxx2m",
-    "premise1": "Alle Arzneimittel sind Medikamente.",
-    "premise2": "Alle Medikamente sind Chemikalien.",
-    "options": [
-      "Alle Arzneimittel sind Chemikalien.",
-      "Keine Chemikalien sind Arzneimittel.",
-      "Einige Arzneimittel sind Chemikalien.",
-      "Alle Chemikalien sind Arzneimittel.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 0,
-    "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Arzneimittel sind Chemikalien.",
-    "difficulty": 1,
-    "rulesApplied": [
-      3
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164884-0jp2vb",
-    "premise1": "Einige Pflanzen sind Gewürze.",
-    "premise2": "Alle Gewürze sind Nüsse.",
-    "options": [
-      "Einige Pflanzen sind Nüsse.",
-      "Keine Pflanzen sind Nüsse.",
-      "Alle Pflanzen sind Nüsse.",
-      "Alle Nüsse sind Pflanzen.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 0,
-    "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Pflanzen sind Nüsse.",
-    "difficulty": 2,
-    "rulesApplied": [
-      5
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164870-qjwadf",
-    "premise1": "Alle Handwerker sind Berufstätige.",
-    "premise2": "Alle Berufstätige sind Angestellte.",
-    "options": [
-      "Alle Handwerker sind Angestellte.",
-      "Alle Angestellte sind Handwerker.",
-      "Einige Handwerker sind Angestellte.",
-      "Keine Angestellte sind Handwerker.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 0,
-    "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Handwerker sind Angestellte.",
-    "difficulty": 1,
-    "rulesApplied": [
-      3
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164881-ak2hyg",
-    "premise1": "Einige Künstler sind Musiker.",
-    "premise2": "Alle Musiker sind Berufstätige.",
-    "options": [
-      "Keine Künstler sind Berufstätige.",
-      "Einige Künstler sind Berufstätige.",
-      "Alle Künstler sind Berufstätige.",
-      "Alle Berufstätige sind Künstler.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 1,
-    "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Künstler sind Berufstätige.",
-    "difficulty": 2,
-    "rulesApplied": [
-      5
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164890-usxcp6",
-    "premise1": "Einige Nutztiere sind Säugetiere.",
-    "premise2": "Alle Säugetiere sind Pferde.",
-    "options": [
-      "Keine Nutztiere sind Pferde.",
-      "Alle Nutztiere sind Pferde.",
-      "Keine Pferde sind Nutztiere.",
-      "Einige Nutztiere sind Pferde.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 3,
-    "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Nutztiere sind Pferde.",
-    "difficulty": 2,
-    "rulesApplied": [
-      5
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164881-s57nyi",
-    "premise1": "Einige Gebrauchsgegenstände sind Textilien.",
-    "premise2": "Alle Textilien sind Kleidungsstücke.",
-    "options": [
-      "Alle Kleidungsstücke sind Gebrauchsgegenstände.",
-      "Keine Gebrauchsgegenstände sind Kleidungsstücke.",
-      "Alle Gebrauchsgegenstände sind Kleidungsstücke.",
-      "Einige Gebrauchsgegenstände sind Kleidungsstücke.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 3,
-    "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Gebrauchsgegenstände sind Kleidungsstücke.",
-    "difficulty": 2,
-    "rulesApplied": [
-      5
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164882-8wuupv",
-    "premise1": "Einige Säugetiere sind Haustiere.",
-    "premise2": "Alle Haustiere sind Hunde.",
-    "options": [
-      "Alle Säugetiere sind Hunde.",
-      "Alle Hunde sind Säugetiere.",
-      "Keine Hunde sind Säugetiere.",
-      "Einige Säugetiere sind Hunde.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 3,
-    "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Säugetiere sind Hunde.",
-    "difficulty": 2,
-    "rulesApplied": [
-      5
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164892-79rnrp",
-    "premise1": "Einige Medien sind Druckerzeugnisse.",
-    "premise2": "Keine Bücher sind Druckerzeugnisse.",
-    "options": [
-      "Alle Medien sind Bücher.",
-      "Keine Medien sind Bücher.",
-      "Einige Bücher sind Medien.",
-      "Alle Bücher sind Medien.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 4,
-    "explanation": "Zwei 'einige'-Prämissen ergeben keinen zwingenden Schluss (Regel 1). Zwei 'keine'-Prämissen ergeben keinen zwingenden Schluss (Regel 2). Aus den Prämissen über Medien, Druckerzeugnisse und Bücher lässt sich keine zwingende Schlussfolgerung ableiten. E ist korrekt.",
-    "difficulty": 3,
-    "rulesApplied": [
-      1,
-      2
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164891-bxlcn6",
-    "premise1": "Keine Pilze sind Lebewesen.",
-    "premise2": "Keine Waldgewächse sind Lebewesen.",
-    "options": [
-      "Keine Waldgewächse sind Pilze.",
-      "Keine Pilze sind Waldgewächse.",
-      "Alle Pilze sind Waldgewächse.",
-      "Alle Waldgewächse sind Pilze.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 4,
-    "explanation": "Zwei 'keine'-Prämissen ergeben keinen zwingenden Schluss (Regel 2). Aus den Prämissen über Pilze, Lebewesen und Waldgewächse lässt sich keine zwingende Schlussfolgerung ableiten. E ist korrekt.",
-    "difficulty": 3,
-    "rulesApplied": [
-      2
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164876-9pc1rj",
-    "premise1": "Einige Kleidungsstücke sind Textilien.",
-    "premise2": "Alle Textilien sind Gebrauchsgegenstände.",
-    "options": [
-      "Keine Kleidungsstücke sind Gebrauchsgegenstände.",
-      "Alle Kleidungsstücke sind Gebrauchsgegenstände.",
-      "Einige Kleidungsstücke sind Gebrauchsgegenstände.",
-      "Alle Gebrauchsgegenstände sind Kleidungsstücke.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 2,
-    "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Kleidungsstücke sind Gebrauchsgegenstände.",
-    "difficulty": 2,
-    "rulesApplied": [
-      5
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164872-mkz10n",
-    "premise1": "Alle Lebewesen sind Kinder.",
-    "premise2": "Alle Kinder sind Erwachsene.",
-    "options": [
-      "Keine Erwachsene sind Lebewesen.",
-      "Keine Lebewesen sind Erwachsene.",
-      "Einige Lebewesen sind Erwachsene.",
-      "Alle Lebewesen sind Erwachsene.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 3,
-    "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Lebewesen sind Erwachsene.",
-    "difficulty": 1,
-    "rulesApplied": [
-      3
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164881-zgxrel",
-    "premise1": "Einige Getränke sind Lebensmittel.",
-    "premise2": "Alle Lebensmittel sind Flüssigkeiten.",
-    "options": [
-      "Einige Getränke sind Flüssigkeiten.",
-      "Keine Getränke sind Flüssigkeiten.",
-      "Keine Flüssigkeiten sind Getränke.",
-      "Alle Getränke sind Flüssigkeiten.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 0,
-    "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Getränke sind Flüssigkeiten.",
-    "difficulty": 2,
-    "rulesApplied": [
-      5
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164867-iujog9",
-    "premise1": "Alle Berufstätige sind Künstler.",
-    "premise2": "Alle Künstler sind Musiker.",
-    "options": [
-      "Keine Musiker sind Berufstätige.",
-      "Keine Berufstätige sind Musiker.",
-      "Einige Berufstätige sind Musiker.",
-      "Alle Berufstätige sind Musiker.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 3,
-    "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Berufstätige sind Musiker.",
-    "difficulty": 1,
-    "rulesApplied": [
-      3
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164870-xq41x4",
-    "premise1": "Alle Erwachsene sind Studenten.",
-    "premise2": "Alle Studenten sind Akademiker.",
-    "options": [
-      "Alle Erwachsene sind Akademiker.",
-      "Keine Erwachsene sind Akademiker.",
-      "Alle Akademiker sind Erwachsene.",
-      "Keine Akademiker sind Erwachsene.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 0,
-    "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Erwachsene sind Akademiker.",
-    "difficulty": 1,
-    "rulesApplied": [
-      3
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164892-ln7a8v",
-    "premise1": "Keine Pferde sind Säugetiere.",
-    "premise2": "Keine Säugetiere sind Nutztiere.",
-    "options": [
-      "Keine Pferde sind Nutztiere.",
-      "Keine Nutztiere sind Pferde.",
-      "Alle Pferde sind Nutztiere.",
-      "Einige Pferde sind Nutztiere.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 4,
-    "explanation": "Zwei 'keine'-Prämissen ergeben keinen zwingenden Schluss (Regel 2). Aus den Prämissen über Pferde, Säugetiere und Nutztiere lässt sich keine zwingende Schlussfolgerung ableiten. E ist korrekt.",
-    "difficulty": 3,
-    "rulesApplied": [
-      2
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164875-hy53jc",
-    "premise1": "Einige Bäume sind Nadelbäume.",
-    "premise2": "Alle Nadelbäume sind Tannen.",
-    "options": [
-      "Keine Tannen sind Bäume.",
-      "Keine Bäume sind Tannen.",
-      "Alle Bäume sind Tannen.",
-      "Einige Bäume sind Tannen.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 3,
-    "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Bäume sind Tannen.",
-    "difficulty": 2,
-    "rulesApplied": [
-      5
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164871-v5fqkx",
-    "premise1": "Alle Jugendliche sind Kinder.",
-    "premise2": "Alle Kinder sind Schüler.",
-    "options": [
-      "Alle Jugendliche sind Schüler.",
-      "Keine Schüler sind Jugendliche.",
-      "Alle Schüler sind Jugendliche.",
-      "Keine Jugendliche sind Schüler.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 0,
-    "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Jugendliche sind Schüler.",
-    "difficulty": 1,
-    "rulesApplied": [
-      3
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164892-nap88e",
-    "premise1": "Einige Arzneimittel sind Medikamente.",
-    "premise2": "Keine Chemikalien sind Medikamente.",
-    "options": [
-      "Alle Arzneimittel sind Chemikalien.",
-      "Alle Chemikalien sind Arzneimittel.",
-      "Keine Chemikalien sind Arzneimittel.",
-      "Keine Arzneimittel sind Chemikalien.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 4,
-    "explanation": "Zwei 'einige'-Prämissen ergeben keinen zwingenden Schluss (Regel 1). Zwei 'keine'-Prämissen ergeben keinen zwingenden Schluss (Regel 2). Aus den Prämissen über Arzneimittel, Medikamente und Chemikalien lässt sich keine zwingende Schlussfolgerung ableiten. E ist korrekt.",
-    "difficulty": 3,
-    "rulesApplied": [
-      1,
-      2
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164867-i7cqqb",
-    "premise1": "Alle Haustiere sind Säugetiere.",
-    "premise2": "Alle Säugetiere sind Hunde.",
-    "options": [
-      "Alle Haustiere sind Hunde.",
-      "Keine Haustiere sind Hunde.",
-      "Keine Hunde sind Haustiere.",
-      "Alle Hunde sind Haustiere.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 0,
-    "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Haustiere sind Hunde.",
-    "difficulty": 1,
-    "rulesApplied": [
-      3
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164889-f1shla",
-    "premise1": "Einige Nahrungsmittel sind Gemüse.",
-    "premise2": "Alle Gemüse sind Tomaten.",
-    "options": [
-      "Einige Nahrungsmittel sind Tomaten.",
-      "Keine Nahrungsmittel sind Tomaten.",
-      "Keine Tomaten sind Nahrungsmittel.",
-      "Alle Nahrungsmittel sind Tomaten.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 0,
-    "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Nahrungsmittel sind Tomaten.",
-    "difficulty": 2,
-    "rulesApplied": [
-      5
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164874-q6gufw",
-    "premise1": "Einige Gewürze sind Nahrungsmittel.",
-    "premise2": "Alle Nahrungsmittel sind Pflanzen.",
-    "options": [
-      "Alle Gewürze sind Pflanzen.",
-      "Alle Pflanzen sind Gewürze.",
-      "Einige Gewürze sind Pflanzen.",
-      "Keine Gewürze sind Pflanzen.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 2,
-    "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Gewürze sind Pflanzen.",
-    "difficulty": 2,
-    "rulesApplied": [
-      5
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164880-ldmiys",
-    "premise1": "Einige Gartengewächse sind Sträucher.",
-    "premise2": "Alle Sträucher sind Pflanzen.",
-    "options": [
-      "Einige Gartengewächse sind Pflanzen.",
-      "Keine Gartengewächse sind Pflanzen.",
-      "Alle Gartengewächse sind Pflanzen.",
-      "Alle Pflanzen sind Gartengewächse.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 0,
-    "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Gartengewächse sind Pflanzen.",
-    "difficulty": 2,
-    "rulesApplied": [
-      5
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164870-evovii",
-    "premise1": "Alle Säugetiere sind Pferde.",
-    "premise2": "Alle Pferde sind Nutztiere.",
-    "options": [
-      "Alle Säugetiere sind Nutztiere.",
-      "Alle Nutztiere sind Säugetiere.",
-      "Keine Nutztiere sind Säugetiere.",
-      "Einige Säugetiere sind Nutztiere.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 0,
-    "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Säugetiere sind Nutztiere.",
-    "difficulty": 1,
-    "rulesApplied": [
-      3
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164892-octsie",
-    "premise1": "Einige Berufstätige sind Handwerker.",
-    "premise2": "Keine Angestellte sind Handwerker.",
-    "options": [
-      "Einige Angestellte sind Berufstätige.",
-      "Alle Berufstätige sind Angestellte.",
-      "Keine Angestellte sind Berufstätige.",
-      "Keine Berufstätige sind Angestellte.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 4,
-    "explanation": "Zwei 'einige'-Prämissen ergeben keinen zwingenden Schluss (Regel 1). Zwei 'keine'-Prämissen ergeben keinen zwingenden Schluss (Regel 2). Aus den Prämissen über Berufstätige, Handwerker und Angestellte lässt sich keine zwingende Schlussfolgerung ableiten. E ist korrekt.",
-    "difficulty": 3,
-    "rulesApplied": [
-      1,
-      2
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164871-hdiqec",
-    "premise1": "Alle Tomaten sind Gemüse.",
-    "premise2": "Alle Gemüse sind Nahrungsmittel.",
-    "options": [
-      "Einige Tomaten sind Nahrungsmittel.",
-      "Alle Nahrungsmittel sind Tomaten.",
-      "Alle Tomaten sind Nahrungsmittel.",
-      "Keine Tomaten sind Nahrungsmittel.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 2,
-    "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Tomaten sind Nahrungsmittel.",
-    "difficulty": 1,
-    "rulesApplied": [
-      3
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164882-1tajbm",
-    "premise1": "Einige Handwerker sind Berufstätige.",
-    "premise2": "Alle Berufstätige sind Angestellte.",
-    "options": [
-      "Alle Angestellte sind Handwerker.",
-      "Alle Handwerker sind Angestellte.",
-      "Keine Angestellte sind Handwerker.",
-      "Einige Handwerker sind Angestellte.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 3,
-    "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Handwerker sind Angestellte.",
-    "difficulty": 2,
-    "rulesApplied": [
-      5
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164870-nr3sol",
-    "premise1": "Alle Künstler sind Musiker.",
-    "premise2": "Alle Musiker sind Sänger.",
-    "options": [
-      "Alle Künstler sind Sänger.",
-      "Alle Sänger sind Künstler.",
-      "Keine Künstler sind Sänger.",
-      "Einige Künstler sind Sänger.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 0,
-    "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Künstler sind Sänger.",
-    "difficulty": 1,
-    "rulesApplied": [
-      3
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164877-0c22wi",
-    "premise1": "Einige Berufstätige sind Akademiker.",
-    "premise2": "Alle Akademiker sind Ärzte.",
-    "options": [
-      "Keine Berufstätige sind Ärzte.",
-      "Alle Berufstätige sind Ärzte.",
-      "Einige Berufstätige sind Ärzte.",
-      "Alle Ärzte sind Berufstätige.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 2,
-    "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Berufstätige sind Ärzte.",
-    "difficulty": 2,
-    "rulesApplied": [
-      5
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164891-nuf1uc",
-    "premise1": "Keine Getränke sind Lebensmittel.",
-    "premise2": "Keine Lebensmittel sind Flüssigkeiten.",
-    "options": [
-      "Einige Getränke sind Flüssigkeiten.",
-      "Keine Flüssigkeiten sind Getränke.",
-      "Einige Flüssigkeiten sind Getränke.",
-      "Alle Flüssigkeiten sind Getränke.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 4,
-    "explanation": "Zwei 'keine'-Prämissen ergeben keinen zwingenden Schluss (Regel 2). Aus den Prämissen über Getränke, Lebensmittel und Flüssigkeiten lässt sich keine zwingende Schlussfolgerung ableiten. E ist korrekt.",
-    "difficulty": 3,
-    "rulesApplied": [
-      2
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164888-kkc4o1",
-    "premise1": "Einige Pflanzen sind Nahrungsmittel.",
-    "premise2": "Alle Nahrungsmittel sind Gewürze.",
-    "options": [
-      "Alle Pflanzen sind Gewürze.",
-      "Keine Pflanzen sind Gewürze.",
-      "Keine Gewürze sind Pflanzen.",
-      "Einige Pflanzen sind Gewürze.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 3,
-    "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Pflanzen sind Gewürze.",
-    "difficulty": 2,
-    "rulesApplied": [
-      5
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164868-faxs0s",
-    "premise1": "Alle Kleidungsstücke sind Textilien.",
-    "premise2": "Alle Textilien sind Gebrauchsgegenstände.",
-    "options": [
-      "Keine Kleidungsstücke sind Gebrauchsgegenstände.",
-      "Einige Kleidungsstücke sind Gebrauchsgegenstände.",
-      "Alle Gebrauchsgegenstände sind Kleidungsstücke.",
-      "Alle Kleidungsstücke sind Gebrauchsgegenstände.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 3,
-    "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Kleidungsstücke sind Gebrauchsgegenstände.",
-    "difficulty": 1,
-    "rulesApplied": [
-      3
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164881-vlujm9",
-    "premise1": "Einige Wertanlagen sind Edelsteine.",
-    "premise2": "Alle Edelsteine sind Diamanten.",
-    "options": [
-      "Keine Wertanlagen sind Diamanten.",
-      "Einige Wertanlagen sind Diamanten.",
-      "Alle Wertanlagen sind Diamanten.",
-      "Keine Diamanten sind Wertanlagen.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 1,
-    "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Wertanlagen sind Diamanten.",
-    "difficulty": 2,
-    "rulesApplied": [
-      5
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164867-ltyjzc",
-    "premise1": "Alle Stofftiere sind Spielsachen.",
-    "premise2": "Alle Spielsachen sind Wertanlagen.",
-    "options": [
-      "Alle Wertanlagen sind Stofftiere.",
-      "Keine Wertanlagen sind Stofftiere.",
-      "Alle Stofftiere sind Wertanlagen.",
-      "Einige Stofftiere sind Wertanlagen.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 2,
-    "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Stofftiere sind Wertanlagen.",
-    "difficulty": 1,
-    "rulesApplied": [
-      3
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164871-3htzzx",
-    "premise1": "Alle Lebewesen sind Pilze.",
-    "premise2": "Alle Pilze sind Waldgewächse.",
-    "options": [
-      "Alle Lebewesen sind Waldgewächse.",
-      "Keine Lebewesen sind Waldgewächse.",
-      "Einige Lebewesen sind Waldgewächse.",
-      "Alle Waldgewächse sind Lebewesen.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 0,
-    "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Lebewesen sind Waldgewächse.",
-    "difficulty": 1,
-    "rulesApplied": [
-      3
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164872-ceid3i",
-    "premise1": "Alle Akademiker sind Naturwissenschaftler.",
-    "premise2": "Alle Naturwissenschaftler sind Mediziner.",
-    "options": [
-      "Keine Akademiker sind Mediziner.",
-      "Keine Mediziner sind Akademiker.",
-      "Alle Mediziner sind Akademiker.",
-      "Alle Akademiker sind Mediziner.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 3,
-    "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Akademiker sind Mediziner.",
-    "difficulty": 1,
-    "rulesApplied": [
-      3
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164889-fmo3rj",
-    "premise1": "Einige Edelsteine sind Wertanlagen.",
-    "premise2": "Alle Wertanlagen sind Diamanten.",
-    "options": [
-      "Keine Diamanten sind Edelsteine.",
-      "Einige Edelsteine sind Diamanten.",
-      "Alle Edelsteine sind Diamanten.",
-      "Alle Diamanten sind Edelsteine.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 1,
-    "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Edelsteine sind Diamanten.",
-    "difficulty": 2,
-    "rulesApplied": [
-      5
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164891-r143z0",
-    "premise1": "Keine Tulpen sind Blumen.",
-    "premise2": "Keine Gartengewächse sind Blumen.",
-    "options": [
-      "Alle Tulpen sind Gartengewächse.",
-      "Alle Gartengewächse sind Tulpen.",
-      "Einige Tulpen sind Gartengewächse.",
-      "Keine Tulpen sind Gartengewächse.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 4,
-    "explanation": "Zwei 'keine'-Prämissen ergeben keinen zwingenden Schluss (Regel 2). Aus den Prämissen über Tulpen, Blumen und Gartengewächse lässt sich keine zwingende Schlussfolgerung ableiten. E ist korrekt.",
-    "difficulty": 3,
-    "rulesApplied": [
-      2
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164868-7uah3f",
-    "premise1": "Alle Gewürze sind Nahrungsmittel.",
-    "premise2": "Alle Nahrungsmittel sind Pflanzen.",
-    "options": [
-      "Einige Gewürze sind Pflanzen.",
-      "Keine Gewürze sind Pflanzen.",
-      "Keine Pflanzen sind Gewürze.",
-      "Alle Gewürze sind Pflanzen.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 3,
-    "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Gewürze sind Pflanzen.",
-    "difficulty": 1,
-    "rulesApplied": [
-      3
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164892-0mlt5l",
-    "premise1": "Einige Künstler sind Musiker.",
-    "premise2": "Einige Sänger sind Musiker.",
-    "options": [
-      "Einige Sänger sind Künstler.",
-      "Alle Künstler sind Sänger.",
-      "Keine Sänger sind Künstler.",
-      "Alle Sänger sind Künstler.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 4,
-    "explanation": "Zwei 'einige'-Prämissen ergeben keinen zwingenden Schluss (Regel 1). Aus den Prämissen über Künstler, Musiker und Sänger lässt sich keine zwingende Schlussfolgerung ableiten. E ist korrekt.",
-    "difficulty": 3,
-    "rulesApplied": [
-      1
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164883-aizjhe",
-    "premise1": "Einige Wirbeltiere sind Wassertiere.",
-    "premise2": "Alle Wassertiere sind Fische.",
-    "options": [
-      "Alle Wirbeltiere sind Fische.",
-      "Keine Wirbeltiere sind Fische.",
-      "Alle Fische sind Wirbeltiere.",
-      "Einige Wirbeltiere sind Fische.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 3,
-    "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Wirbeltiere sind Fische.",
-    "difficulty": 2,
-    "rulesApplied": [
-      5
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164891-a12uuc",
-    "premise1": "Keine Wertgegenstände sind Musikinstrumente.",
-    "premise2": "Keine Geigen sind Musikinstrumente.",
-    "options": [
-      "Keine Wertgegenstände sind Geigen.",
-      "Alle Wertgegenstände sind Geigen.",
-      "Einige Wertgegenstände sind Geigen.",
-      "Alle Geigen sind Wertgegenstände.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 4,
-    "explanation": "Zwei 'keine'-Prämissen ergeben keinen zwingenden Schluss (Regel 2). Aus den Prämissen über Wertgegenstände, Musikinstrumente und Geigen lässt sich keine zwingende Schlussfolgerung ableiten. E ist korrekt.",
-    "difficulty": 3,
-    "rulesApplied": [
-      2
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164870-hish3i",
-    "premise1": "Alle Haustiere sind Katzen.",
-    "premise2": "Alle Katzen sind Raubtiere.",
-    "options": [
-      "Einige Haustiere sind Raubtiere.",
-      "Alle Haustiere sind Raubtiere.",
-      "Alle Raubtiere sind Haustiere.",
-      "Keine Haustiere sind Raubtiere.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 1,
-    "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Haustiere sind Raubtiere.",
-    "difficulty": 1,
-    "rulesApplied": [
-      3
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164867-3wgbkw",
-    "premise1": "Alle Insekten sind Wirbellose.",
-    "premise2": "Alle Wirbellose sind Lebewesen.",
-    "options": [
-      "Keine Lebewesen sind Insekten.",
-      "Keine Insekten sind Lebewesen.",
-      "Alle Lebewesen sind Insekten.",
-      "Alle Insekten sind Lebewesen.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 3,
-    "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Insekten sind Lebewesen.",
-    "difficulty": 1,
-    "rulesApplied": [
-      3
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164866-vdfop0",
-    "premise1": "Alle Einrichtungen sind Möbelstücke.",
-    "premise2": "Alle Möbelstücke sind Gebrauchsgegenstände.",
-    "options": [
-      "Einige Einrichtungen sind Gebrauchsgegenstände.",
-      "Alle Einrichtungen sind Gebrauchsgegenstände.",
-      "Alle Gebrauchsgegenstände sind Einrichtungen.",
-      "Keine Einrichtungen sind Gebrauchsgegenstände.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 1,
-    "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Einrichtungen sind Gebrauchsgegenstände.",
-    "difficulty": 1,
-    "rulesApplied": [
-      3
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164868-qntdoj",
-    "premise1": "Alle Tulpen sind Blumen.",
-    "premise2": "Alle Blumen sind Gartengewächse.",
-    "options": [
-      "Einige Tulpen sind Gartengewächse.",
-      "Alle Gartengewächse sind Tulpen.",
-      "Keine Gartengewächse sind Tulpen.",
-      "Alle Tulpen sind Gartengewächse.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 3,
-    "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Tulpen sind Gartengewächse.",
-    "difficulty": 1,
-    "rulesApplied": [
-      3
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164892-laewbf",
-    "premise1": "Einige Fische sind Wassertiere.",
-    "premise2": "Keine Wirbeltiere sind Wassertiere.",
-    "options": [
-      "Keine Fische sind Wirbeltiere.",
-      "Alle Fische sind Wirbeltiere.",
-      "Einige Wirbeltiere sind Fische.",
-      "Einige Fische sind Wirbeltiere.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 4,
-    "explanation": "Zwei 'einige'-Prämissen ergeben keinen zwingenden Schluss (Regel 1). Zwei 'keine'-Prämissen ergeben keinen zwingenden Schluss (Regel 2). Aus den Prämissen über Fische, Wassertiere und Wirbeltiere lässt sich keine zwingende Schlussfolgerung ableiten. E ist korrekt.",
-    "difficulty": 3,
-    "rulesApplied": [
-      1,
-      2
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164885-cndayo",
-    "premise1": "Einige Getränke sind Lebensmittel.",
-    "premise2": "Alle Lebensmittel sind Flüssigkeiten.",
-    "options": [
-      "Alle Getränke sind Flüssigkeiten.",
-      "Keine Getränke sind Flüssigkeiten.",
-      "Alle Flüssigkeiten sind Getränke.",
-      "Einige Getränke sind Flüssigkeiten.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 3,
-    "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Getränke sind Flüssigkeiten.",
-    "difficulty": 2,
-    "rulesApplied": [
-      5
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164872-ct84n9",
-    "premise1": "Einige Säugetiere sind Delfine.",
-    "premise2": "Alle Delfine sind Wassertiere.",
-    "options": [
-      "Alle Säugetiere sind Wassertiere.",
-      "Einige Säugetiere sind Wassertiere.",
-      "Keine Säugetiere sind Wassertiere.",
-      "Keine Wassertiere sind Säugetiere.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 1,
-    "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Säugetiere sind Wassertiere.",
-    "difficulty": 2,
-    "rulesApplied": [
-      5
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164893-c3s07e",
-    "premise1": "Keine Ärzte sind Akademiker.",
-    "premise2": "Einige Akademiker sind Berufstätige.",
-    "options": [
-      "Einige Ärzte sind Berufstätige.",
-      "Einige Berufstätige sind Ärzte.",
-      "Alle Berufstätige sind Ärzte.",
-      "Keine Ärzte sind Berufstätige.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 4,
-    "explanation": "Zwei 'einige'-Prämissen ergeben keinen zwingenden Schluss (Regel 1). Zwei 'keine'-Prämissen ergeben keinen zwingenden Schluss (Regel 2). Aus den Prämissen über Ärzte, Akademiker und Berufstätige lässt sich keine zwingende Schlussfolgerung ableiten. E ist korrekt.",
-    "difficulty": 3,
-    "rulesApplied": [
-      1,
-      2
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164888-bgj47d",
-    "premise1": "Einige Bäume sind Laubbäume.",
-    "premise2": "Alle Laubbäume sind Eichen.",
-    "options": [
-      "Einige Bäume sind Eichen.",
-      "Keine Eichen sind Bäume.",
-      "Alle Bäume sind Eichen.",
-      "Keine Bäume sind Eichen.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 0,
-    "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Bäume sind Eichen.",
-    "difficulty": 2,
-    "rulesApplied": [
-      5
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164886-qugmyo",
-    "premise1": "Einige Pflanzen sind Gewürze.",
-    "premise2": "Alle Gewürze sind Nüsse.",
-    "options": [
-      "Alle Nüsse sind Pflanzen.",
-      "Einige Pflanzen sind Nüsse.",
-      "Keine Nüsse sind Pflanzen.",
-      "Alle Pflanzen sind Nüsse.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 1,
-    "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Pflanzen sind Nüsse.",
-    "difficulty": 2,
-    "rulesApplied": [
-      5
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164891-qi92s1",
-    "premise1": "Einige Wertanlagen sind Edelsteine.",
-    "premise2": "Einige Diamanten sind Edelsteine.",
-    "options": [
-      "Alle Wertanlagen sind Diamanten.",
-      "Alle Diamanten sind Wertanlagen.",
-      "Einige Wertanlagen sind Diamanten.",
-      "Einige Diamanten sind Wertanlagen.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 4,
-    "explanation": "Zwei 'einige'-Prämissen ergeben keinen zwingenden Schluss (Regel 1). Aus den Prämissen über Wertanlagen, Edelsteine und Diamanten lässt sich keine zwingende Schlussfolgerung ableiten. E ist korrekt.",
-    "difficulty": 3,
-    "rulesApplied": [
-      1
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164872-9n2i0b",
-    "premise1": "Einige Flüssigkeiten sind Lebensmittel.",
-    "premise2": "Alle Lebensmittel sind Getränke.",
-    "options": [
-      "Alle Getränke sind Flüssigkeiten.",
-      "Alle Flüssigkeiten sind Getränke.",
-      "Keine Getränke sind Flüssigkeiten.",
-      "Einige Flüssigkeiten sind Getränke.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 3,
-    "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Flüssigkeiten sind Getränke.",
-    "difficulty": 2,
-    "rulesApplied": [
-      5
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164868-qsah37",
-    "premise1": "Alle Pflanzen sind Blumen.",
-    "premise2": "Alle Blumen sind Rosen.",
-    "options": [
-      "Keine Pflanzen sind Rosen.",
-      "Alle Pflanzen sind Rosen.",
-      "Alle Rosen sind Pflanzen.",
-      "Einige Pflanzen sind Rosen.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 1,
-    "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Pflanzen sind Rosen.",
-    "difficulty": 1,
-    "rulesApplied": [
-      3
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164887-vlnk0y",
-    "premise1": "Einige Pferde sind Säugetiere.",
-    "premise2": "Alle Säugetiere sind Nutztiere.",
-    "options": [
-      "Alle Pferde sind Nutztiere.",
-      "Keine Pferde sind Nutztiere.",
-      "Alle Nutztiere sind Pferde.",
-      "Einige Pferde sind Nutztiere.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 3,
-    "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Pferde sind Nutztiere.",
-    "difficulty": 2,
-    "rulesApplied": [
-      5
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164867-10hmdh",
-    "premise1": "Alle Akademiker sind Berufstätige.",
-    "premise2": "Alle Berufstätige sind Ärzte.",
-    "options": [
-      "Keine Akademiker sind Ärzte.",
-      "Keine Ärzte sind Akademiker.",
-      "Einige Akademiker sind Ärzte.",
-      "Alle Akademiker sind Ärzte.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 3,
-    "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Akademiker sind Ärzte.",
-    "difficulty": 1,
-    "rulesApplied": [
-      3
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164879-i074ss",
-    "premise1": "Einige Pferde sind Säugetiere.",
-    "premise2": "Alle Säugetiere sind Nutztiere.",
-    "options": [
-      "Keine Nutztiere sind Pferde.",
-      "Keine Pferde sind Nutztiere.",
-      "Einige Pferde sind Nutztiere.",
-      "Alle Pferde sind Nutztiere.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 2,
-    "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Pferde sind Nutztiere.",
-    "difficulty": 2,
-    "rulesApplied": [
-      5
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164869-62ec35",
-    "premise1": "Alle Wirbeltiere sind Vögel.",
-    "premise2": "Alle Vögel sind Lebewesen.",
-    "options": [
-      "Keine Lebewesen sind Wirbeltiere.",
-      "Einige Wirbeltiere sind Lebewesen.",
-      "Alle Lebewesen sind Wirbeltiere.",
-      "Alle Wirbeltiere sind Lebewesen.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 3,
-    "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Wirbeltiere sind Lebewesen.",
-    "difficulty": 1,
-    "rulesApplied": [
-      3
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164875-070xcp",
-    "premise1": "Einige Gewürze sind Nüsse.",
-    "premise2": "Alle Nüsse sind Pflanzen.",
-    "options": [
-      "Alle Pflanzen sind Gewürze.",
-      "Keine Pflanzen sind Gewürze.",
-      "Einige Gewürze sind Pflanzen.",
-      "Keine Gewürze sind Pflanzen.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 2,
-    "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Gewürze sind Pflanzen.",
-    "difficulty": 2,
-    "rulesApplied": [
-      5
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164885-34gq49",
-    "premise1": "Einige Hunde sind Säugetiere.",
-    "premise2": "Alle Säugetiere sind Haustiere.",
-    "options": [
-      "Einige Hunde sind Haustiere.",
-      "Alle Haustiere sind Hunde.",
-      "Keine Haustiere sind Hunde.",
-      "Alle Hunde sind Haustiere.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 0,
-    "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Hunde sind Haustiere.",
-    "difficulty": 2,
-    "rulesApplied": [
-      5
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164891-gt13cv",
-    "premise1": "Keine Pferde sind Säugetiere.",
-    "premise2": "Keine Nutztiere sind Säugetiere.",
-    "options": [
-      "Alle Nutztiere sind Pferde.",
-      "Keine Nutztiere sind Pferde.",
-      "Einige Pferde sind Nutztiere.",
-      "Einige Nutztiere sind Pferde.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 4,
-    "explanation": "Zwei 'keine'-Prämissen ergeben keinen zwingenden Schluss (Regel 2). Aus den Prämissen über Pferde, Säugetiere und Nutztiere lässt sich keine zwingende Schlussfolgerung ableiten. E ist korrekt.",
-    "difficulty": 3,
-    "rulesApplied": [
-      2
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164870-gfe5xf",
-    "premise1": "Alle Maschinen sind Fahrzeuge.",
-    "premise2": "Alle Fahrzeuge sind Autos.",
-    "options": [
-      "Keine Autos sind Maschinen.",
-      "Alle Maschinen sind Autos.",
-      "Einige Maschinen sind Autos.",
-      "Alle Autos sind Maschinen.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 1,
-    "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Maschinen sind Autos.",
-    "difficulty": 1,
-    "rulesApplied": [
-      3
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164871-3hk7cs",
-    "premise1": "Alle Kinder sind Schüler.",
-    "premise2": "Alle Schüler sind Jugendliche.",
-    "options": [
-      "Alle Jugendliche sind Kinder.",
-      "Alle Kinder sind Jugendliche.",
-      "Einige Kinder sind Jugendliche.",
-      "Keine Kinder sind Jugendliche.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 1,
-    "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Kinder sind Jugendliche.",
-    "difficulty": 1,
-    "rulesApplied": [
-      3
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164885-h8g1og",
-    "premise1": "Einige Chemikalien sind Arzneimittel.",
-    "premise2": "Alle Arzneimittel sind Medikamente.",
-    "options": [
-      "Alle Chemikalien sind Medikamente.",
-      "Einige Chemikalien sind Medikamente.",
-      "Keine Medikamente sind Chemikalien.",
-      "Alle Medikamente sind Chemikalien.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 1,
-    "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Chemikalien sind Medikamente.",
-    "difficulty": 2,
-    "rulesApplied": [
-      5
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164871-jlydsh",
-    "premise1": "Alle Diamanten sind Edelsteine.",
-    "premise2": "Alle Edelsteine sind Wertanlagen.",
-    "options": [
-      "Alle Wertanlagen sind Diamanten.",
-      "Keine Wertanlagen sind Diamanten.",
-      "Alle Diamanten sind Wertanlagen.",
-      "Einige Diamanten sind Wertanlagen.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 2,
-    "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Diamanten sind Wertanlagen.",
-    "difficulty": 1,
-    "rulesApplied": [
-      3
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164867-ejglbm",
-    "premise1": "Alle Akademiker sind Ärzte.",
-    "premise2": "Alle Ärzte sind Berufstätige.",
-    "options": [
-      "Alle Akademiker sind Berufstätige.",
-      "Einige Akademiker sind Berufstätige.",
-      "Alle Berufstätige sind Akademiker.",
-      "Keine Akademiker sind Berufstätige.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 0,
-    "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Akademiker sind Berufstätige.",
-    "difficulty": 1,
-    "rulesApplied": [
-      3
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164867-lz08hj",
-    "premise1": "Alle Getränke sind Lebensmittel.",
-    "premise2": "Alle Lebensmittel sind Flüssigkeiten.",
-    "options": [
-      "Alle Flüssigkeiten sind Getränke.",
-      "Einige Getränke sind Flüssigkeiten.",
-      "Keine Flüssigkeiten sind Getränke.",
-      "Alle Getränke sind Flüssigkeiten.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 3,
-    "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Getränke sind Flüssigkeiten.",
-    "difficulty": 1,
-    "rulesApplied": [
-      3
-    ]
-  },
-  {
-    "id": "imp-gen-1773997164869-jilloc",
-    "premise1": "Alle Tomaten sind Gemüse.",
-    "premise2": "Alle Gemüse sind Nahrungsmittel.",
-    "options": [
-      "Keine Tomaten sind Nahrungsmittel.",
-      "Alle Nahrungsmittel sind Tomaten.",
-      "Keine Nahrungsmittel sind Tomaten.",
-      "Alle Tomaten sind Nahrungsmittel.",
-      "Keine der Schlussfolgerungen ist richtig."
-    ],
-    "correctAnswer": 3,
-    "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Tomaten sind Nahrungsmittel.",
-    "difficulty": 1,
-    "rulesApplied": [
-      3
-    ]
-  }
-]
+{
+  "generated": "2026-03-20T09:49:59.418Z",
+  "count": 100,
+  "stats": {
+    "difficultyDistribution": {
+      "1": 34,
+      "2": 33,
+      "3": 33
+    },
+    "eCorrectRate": "33.0%",
+    "ruleDistribution": {
+      "1": 21,
+      "2": 20,
+      "3": 34,
+      "5": 33
+    },
+    "uniquePremises": 172,
+    "positionDistribution": {
+      "0": 24,
+      "1": 13,
+      "2": 9,
+      "3": 21,
+      "4": 33
+    }
+  },
+  "tasks": [
+    {
+      "id": "imp-gen-1774000199391-x5jq2b",
+      "premise1": "Alle Nutztiere sind Säugetiere.",
+      "premise2": "Alle Säugetiere sind Pferde.",
+      "options": [
+        "Alle Nutztiere sind Pferde.",
+        "Einige Nutztiere sind Pferde.",
+        "Alle Pferde sind Nutztiere.",
+        "Keine Pferde sind Nutztiere.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 0,
+      "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Nutztiere sind Pferde.",
+      "difficulty": 1,
+      "rulesApplied": [
+        3
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199391-ta06ne",
+      "premise1": "Alle Musiker sind Sänger.",
+      "premise2": "Alle Sänger sind Künstler.",
+      "options": [
+        "Keine Künstler sind Musiker.",
+        "Keine Musiker sind Künstler.",
+        "Einige Musiker sind Künstler.",
+        "Alle Musiker sind Künstler.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 3,
+      "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Musiker sind Künstler.",
+      "difficulty": 1,
+      "rulesApplied": [
+        3
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199391-cy6ja9",
+      "premise1": "Alle Wirbeltiere sind Vögel.",
+      "premise2": "Alle Vögel sind Lebewesen.",
+      "options": [
+        "Keine Lebewesen sind Wirbeltiere.",
+        "Alle Lebewesen sind Wirbeltiere.",
+        "Einige Wirbeltiere sind Lebewesen.",
+        "Alle Wirbeltiere sind Lebewesen.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 3,
+      "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Wirbeltiere sind Lebewesen.",
+      "difficulty": 1,
+      "rulesApplied": [
+        3
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199392-1bfo3u",
+      "premise1": "Alle Waldgewächse sind Lebewesen.",
+      "premise2": "Alle Lebewesen sind Pilze.",
+      "options": [
+        "Alle Waldgewächse sind Pilze.",
+        "Keine Pilze sind Waldgewächse.",
+        "Einige Waldgewächse sind Pilze.",
+        "Alle Pilze sind Waldgewächse.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 0,
+      "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Waldgewächse sind Pilze.",
+      "difficulty": 1,
+      "rulesApplied": [
+        3
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199392-pmdsvx",
+      "premise1": "Alle Wildtiere sind Vögel.",
+      "premise2": "Alle Vögel sind Pinguine.",
+      "options": [
+        "Alle Pinguine sind Wildtiere.",
+        "Keine Pinguine sind Wildtiere.",
+        "Keine Wildtiere sind Pinguine.",
+        "Alle Wildtiere sind Pinguine.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 3,
+      "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Wildtiere sind Pinguine.",
+      "difficulty": 1,
+      "rulesApplied": [
+        3
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199392-39wsve",
+      "premise1": "Alle Handwerker sind Berufstätige.",
+      "premise2": "Alle Berufstätige sind Angestellte.",
+      "options": [
+        "Keine Handwerker sind Angestellte.",
+        "Alle Angestellte sind Handwerker.",
+        "Keine Angestellte sind Handwerker.",
+        "Alle Handwerker sind Angestellte.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 3,
+      "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Handwerker sind Angestellte.",
+      "difficulty": 1,
+      "rulesApplied": [
+        3
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199392-4iua3y",
+      "premise1": "Alle Einrichtungen sind Gebrauchsgegenstände.",
+      "premise2": "Alle Gebrauchsgegenstände sind Möbelstücke.",
+      "options": [
+        "Einige Einrichtungen sind Möbelstücke.",
+        "Alle Möbelstücke sind Einrichtungen.",
+        "Keine Einrichtungen sind Möbelstücke.",
+        "Alle Einrichtungen sind Möbelstücke.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 3,
+      "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Einrichtungen sind Möbelstücke.",
+      "difficulty": 1,
+      "rulesApplied": [
+        3
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199392-cnuw8e",
+      "premise1": "Alle Nüsse sind Gewürze.",
+      "premise2": "Alle Gewürze sind Pflanzen.",
+      "options": [
+        "Keine Nüsse sind Pflanzen.",
+        "Alle Nüsse sind Pflanzen.",
+        "Einige Nüsse sind Pflanzen.",
+        "Alle Pflanzen sind Nüsse.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 1,
+      "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Nüsse sind Pflanzen.",
+      "difficulty": 1,
+      "rulesApplied": [
+        3
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199392-82vu08",
+      "premise1": "Alle Wertanlagen sind Spielsachen.",
+      "premise2": "Alle Spielsachen sind Stofftiere.",
+      "options": [
+        "Einige Wertanlagen sind Stofftiere.",
+        "Alle Stofftiere sind Wertanlagen.",
+        "Keine Wertanlagen sind Stofftiere.",
+        "Alle Wertanlagen sind Stofftiere.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 3,
+      "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Wertanlagen sind Stofftiere.",
+      "difficulty": 1,
+      "rulesApplied": [
+        3
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199393-1sy7w8",
+      "premise1": "Alle Akademiker sind Erwachsene.",
+      "premise2": "Alle Erwachsene sind Studenten.",
+      "options": [
+        "Einige Akademiker sind Studenten.",
+        "Alle Studenten sind Akademiker.",
+        "Keine Studenten sind Akademiker.",
+        "Alle Akademiker sind Studenten.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 3,
+      "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Akademiker sind Studenten.",
+      "difficulty": 1,
+      "rulesApplied": [
+        3
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199393-yt8h0e",
+      "premise1": "Alle Früchte sind Nahrungsmittel.",
+      "premise2": "Alle Nahrungsmittel sind Äpfel.",
+      "options": [
+        "Alle Früchte sind Äpfel.",
+        "Keine Früchte sind Äpfel.",
+        "Alle Äpfel sind Früchte.",
+        "Keine Äpfel sind Früchte.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 0,
+      "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Früchte sind Äpfel.",
+      "difficulty": 1,
+      "rulesApplied": [
+        3
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199393-avt8y0",
+      "premise1": "Alle Adler sind Raubvögel.",
+      "premise2": "Alle Raubvögel sind Vögel.",
+      "options": [
+        "Einige Adler sind Vögel.",
+        "Alle Vögel sind Adler.",
+        "Keine Adler sind Vögel.",
+        "Alle Adler sind Vögel.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 3,
+      "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Adler sind Vögel.",
+      "difficulty": 1,
+      "rulesApplied": [
+        3
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199393-mdsb6d",
+      "premise1": "Alle Chemikalien sind Arzneimittel.",
+      "premise2": "Alle Arzneimittel sind Medikamente.",
+      "options": [
+        "Alle Chemikalien sind Medikamente.",
+        "Alle Medikamente sind Chemikalien.",
+        "Einige Chemikalien sind Medikamente.",
+        "Keine Medikamente sind Chemikalien.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 0,
+      "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Chemikalien sind Medikamente.",
+      "difficulty": 1,
+      "rulesApplied": [
+        3
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199393-uo9alx",
+      "premise1": "Alle Eichen sind Laubbäume.",
+      "premise2": "Alle Laubbäume sind Bäume.",
+      "options": [
+        "Alle Eichen sind Bäume.",
+        "Keine Eichen sind Bäume.",
+        "Alle Bäume sind Eichen.",
+        "Einige Eichen sind Bäume.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 0,
+      "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Eichen sind Bäume.",
+      "difficulty": 1,
+      "rulesApplied": [
+        3
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199394-r1feon",
+      "premise1": "Alle Säugetiere sind Hunde.",
+      "premise2": "Alle Hunde sind Haustiere.",
+      "options": [
+        "Alle Säugetiere sind Haustiere.",
+        "Einige Säugetiere sind Haustiere.",
+        "Alle Haustiere sind Säugetiere.",
+        "Keine Säugetiere sind Haustiere.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 0,
+      "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Säugetiere sind Haustiere.",
+      "difficulty": 1,
+      "rulesApplied": [
+        3
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199394-pxoh9d",
+      "premise1": "Alle Naturwissenschaftler sind Mediziner.",
+      "premise2": "Alle Mediziner sind Akademiker.",
+      "options": [
+        "Alle Naturwissenschaftler sind Akademiker.",
+        "Keine Naturwissenschaftler sind Akademiker.",
+        "Einige Naturwissenschaftler sind Akademiker.",
+        "Alle Akademiker sind Naturwissenschaftler.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 0,
+      "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Naturwissenschaftler sind Akademiker.",
+      "difficulty": 1,
+      "rulesApplied": [
+        3
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199394-zkv49s",
+      "premise1": "Alle Lebewesen sind Wirbellose.",
+      "premise2": "Alle Wirbellose sind Insekten.",
+      "options": [
+        "Alle Lebewesen sind Insekten.",
+        "Alle Insekten sind Lebewesen.",
+        "Keine Insekten sind Lebewesen.",
+        "Einige Lebewesen sind Insekten.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 0,
+      "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Lebewesen sind Insekten.",
+      "difficulty": 1,
+      "rulesApplied": [
+        3
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199394-ikxp27",
+      "premise1": "Alle Beamte sind Lehrer.",
+      "premise2": "Alle Lehrer sind Berufstätige.",
+      "options": [
+        "Alle Berufstätige sind Beamte.",
+        "Keine Beamte sind Berufstätige.",
+        "Alle Beamte sind Berufstätige.",
+        "Einige Beamte sind Berufstätige.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 2,
+      "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Beamte sind Berufstätige.",
+      "difficulty": 1,
+      "rulesApplied": [
+        3
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199394-wvvjq8",
+      "premise1": "Alle Reptilien sind Wirbeltiere.",
+      "premise2": "Alle Wirbeltiere sind Wildtiere.",
+      "options": [
+        "Einige Reptilien sind Wildtiere.",
+        "Alle Wildtiere sind Reptilien.",
+        "Keine Wildtiere sind Reptilien.",
+        "Alle Reptilien sind Wildtiere.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 3,
+      "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Reptilien sind Wildtiere.",
+      "difficulty": 1,
+      "rulesApplied": [
+        3
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199394-39zvyd",
+      "premise1": "Alle Tomaten sind Gemüse.",
+      "premise2": "Alle Gemüse sind Nahrungsmittel.",
+      "options": [
+        "Alle Tomaten sind Nahrungsmittel.",
+        "Einige Tomaten sind Nahrungsmittel.",
+        "Keine Tomaten sind Nahrungsmittel.",
+        "Keine Nahrungsmittel sind Tomaten.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 0,
+      "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Tomaten sind Nahrungsmittel.",
+      "difficulty": 1,
+      "rulesApplied": [
+        3
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199395-7k9srl",
+      "premise1": "Alle Wildtiere sind Pinguine.",
+      "premise2": "Alle Pinguine sind Vögel.",
+      "options": [
+        "Alle Wildtiere sind Vögel.",
+        "Einige Wildtiere sind Vögel.",
+        "Keine Wildtiere sind Vögel.",
+        "Alle Vögel sind Wildtiere.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 0,
+      "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Wildtiere sind Vögel.",
+      "difficulty": 1,
+      "rulesApplied": [
+        3
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199395-a1wk7p",
+      "premise1": "Alle Pflanzen sind Gewürze.",
+      "premise2": "Alle Gewürze sind Nüsse.",
+      "options": [
+        "Einige Pflanzen sind Nüsse.",
+        "Keine Pflanzen sind Nüsse.",
+        "Alle Nüsse sind Pflanzen.",
+        "Alle Pflanzen sind Nüsse.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 3,
+      "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Pflanzen sind Nüsse.",
+      "difficulty": 1,
+      "rulesApplied": [
+        3
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199395-vdnvkm",
+      "premise1": "Alle Berufstätige sind Musiker.",
+      "premise2": "Alle Musiker sind Künstler.",
+      "options": [
+        "Einige Berufstätige sind Künstler.",
+        "Alle Künstler sind Berufstätige.",
+        "Alle Berufstätige sind Künstler.",
+        "Keine Künstler sind Berufstätige.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 2,
+      "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Berufstätige sind Künstler.",
+      "difficulty": 1,
+      "rulesApplied": [
+        3
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199395-iqd2k9",
+      "premise1": "Alle Künstler sind Musiker.",
+      "premise2": "Alle Musiker sind Sänger.",
+      "options": [
+        "Alle Künstler sind Sänger.",
+        "Alle Sänger sind Künstler.",
+        "Keine Sänger sind Künstler.",
+        "Einige Künstler sind Sänger.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 0,
+      "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Künstler sind Sänger.",
+      "difficulty": 1,
+      "rulesApplied": [
+        3
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199395-6klyf2",
+      "premise1": "Alle Insekten sind Wirbellose.",
+      "premise2": "Alle Wirbellose sind Lebewesen.",
+      "options": [
+        "Keine Lebewesen sind Insekten.",
+        "Einige Insekten sind Lebewesen.",
+        "Keine Insekten sind Lebewesen.",
+        "Alle Insekten sind Lebewesen.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 3,
+      "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Insekten sind Lebewesen.",
+      "difficulty": 1,
+      "rulesApplied": [
+        3
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199396-1ur2ue",
+      "premise1": "Alle Lebewesen sind Wirbeltiere.",
+      "premise2": "Alle Wirbeltiere sind Vögel.",
+      "options": [
+        "Keine Lebewesen sind Vögel.",
+        "Alle Vögel sind Lebewesen.",
+        "Alle Lebewesen sind Vögel.",
+        "Einige Lebewesen sind Vögel.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 2,
+      "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Lebewesen sind Vögel.",
+      "difficulty": 1,
+      "rulesApplied": [
+        3
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199396-5fg7cj",
+      "premise1": "Alle Hunde sind Säugetiere.",
+      "premise2": "Alle Säugetiere sind Haustiere.",
+      "options": [
+        "Alle Haustiere sind Hunde.",
+        "Einige Hunde sind Haustiere.",
+        "Alle Hunde sind Haustiere.",
+        "Keine Haustiere sind Hunde.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 2,
+      "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Hunde sind Haustiere.",
+      "difficulty": 1,
+      "rulesApplied": [
+        3
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199396-t3lxxo",
+      "premise1": "Alle Kinder sind Lebewesen.",
+      "premise2": "Alle Lebewesen sind Erwachsene.",
+      "options": [
+        "Alle Kinder sind Erwachsene.",
+        "Keine Kinder sind Erwachsene.",
+        "Einige Kinder sind Erwachsene.",
+        "Alle Erwachsene sind Kinder.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 0,
+      "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Kinder sind Erwachsene.",
+      "difficulty": 1,
+      "rulesApplied": [
+        3
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199396-fwwlxd",
+      "premise1": "Alle Schüler sind Kinder.",
+      "premise2": "Alle Kinder sind Jugendliche.",
+      "options": [
+        "Alle Jugendliche sind Schüler.",
+        "Alle Schüler sind Jugendliche.",
+        "Einige Schüler sind Jugendliche.",
+        "Keine Jugendliche sind Schüler.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 1,
+      "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Schüler sind Jugendliche.",
+      "difficulty": 1,
+      "rulesApplied": [
+        3
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199396-0m8cxj",
+      "premise1": "Alle Berufstätige sind Sportler.",
+      "premise2": "Alle Sportler sind Vereinsmitglieder.",
+      "options": [
+        "Einige Berufstätige sind Vereinsmitglieder.",
+        "Alle Berufstätige sind Vereinsmitglieder.",
+        "Alle Vereinsmitglieder sind Berufstätige.",
+        "Keine Berufstätige sind Vereinsmitglieder.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 1,
+      "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Berufstätige sind Vereinsmitglieder.",
+      "difficulty": 1,
+      "rulesApplied": [
+        3
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199396-1ud3if",
+      "premise1": "Alle Diamanten sind Edelsteine.",
+      "premise2": "Alle Edelsteine sind Wertanlagen.",
+      "options": [
+        "Keine Wertanlagen sind Diamanten.",
+        "Alle Diamanten sind Wertanlagen.",
+        "Einige Diamanten sind Wertanlagen.",
+        "Alle Wertanlagen sind Diamanten.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 1,
+      "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Diamanten sind Wertanlagen.",
+      "difficulty": 1,
+      "rulesApplied": [
+        3
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199396-h81cz3",
+      "premise1": "Alle Musiker sind Künstler.",
+      "premise2": "Alle Künstler sind Sänger.",
+      "options": [
+        "Alle Musiker sind Sänger.",
+        "Keine Sänger sind Musiker.",
+        "Alle Sänger sind Musiker.",
+        "Einige Musiker sind Sänger.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 0,
+      "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Musiker sind Sänger.",
+      "difficulty": 1,
+      "rulesApplied": [
+        3
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199397-aba36x",
+      "premise1": "Alle Musikinstrumente sind Geigen.",
+      "premise2": "Alle Geigen sind Wertgegenstände.",
+      "options": [
+        "Keine Musikinstrumente sind Wertgegenstände.",
+        "Alle Wertgegenstände sind Musikinstrumente.",
+        "Keine Wertgegenstände sind Musikinstrumente.",
+        "Alle Musikinstrumente sind Wertgegenstände.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 3,
+      "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Musikinstrumente sind Wertgegenstände.",
+      "difficulty": 1,
+      "rulesApplied": [
+        3
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199397-5985nm",
+      "premise1": "Alle Vögel sind Raubvögel.",
+      "premise2": "Alle Raubvögel sind Adler.",
+      "options": [
+        "Alle Vögel sind Adler.",
+        "Alle Adler sind Vögel.",
+        "Keine Adler sind Vögel.",
+        "Keine Vögel sind Adler.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 0,
+      "explanation": "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3). Im Euler-Diagramm folgt zwingend: Alle Vögel sind Adler.",
+      "difficulty": 1,
+      "rulesApplied": [
+        3
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199397-y51hlo",
+      "premise1": "Einige Maschinen sind Autos.",
+      "premise2": "Alle Autos sind Fahrzeuge.",
+      "options": [
+        "Alle Maschinen sind Fahrzeuge.",
+        "Keine Fahrzeuge sind Maschinen.",
+        "Alle Fahrzeuge sind Maschinen.",
+        "Einige Maschinen sind Fahrzeuge.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 3,
+      "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Maschinen sind Fahrzeuge.",
+      "difficulty": 2,
+      "rulesApplied": [
+        5
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199398-t9dyd1",
+      "premise1": "Einige Gebrauchsgegenstände sind Einrichtungen.",
+      "premise2": "Alle Einrichtungen sind Möbelstücke.",
+      "options": [
+        "Alle Möbelstücke sind Gebrauchsgegenstände.",
+        "Alle Gebrauchsgegenstände sind Möbelstücke.",
+        "Einige Gebrauchsgegenstände sind Möbelstücke.",
+        "Keine Möbelstücke sind Gebrauchsgegenstände.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 2,
+      "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Gebrauchsgegenstände sind Möbelstücke.",
+      "difficulty": 2,
+      "rulesApplied": [
+        5
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199400-1klsnj",
+      "premise1": "Einige Getränke sind Lebensmittel.",
+      "premise2": "Alle Lebensmittel sind Flüssigkeiten.",
+      "options": [
+        "Keine Getränke sind Flüssigkeiten.",
+        "Alle Getränke sind Flüssigkeiten.",
+        "Einige Getränke sind Flüssigkeiten.",
+        "Keine Flüssigkeiten sind Getränke.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 2,
+      "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Getränke sind Flüssigkeiten.",
+      "difficulty": 2,
+      "rulesApplied": [
+        5
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199400-7brk7a",
+      "premise1": "Einige Sänger sind Musiker.",
+      "premise2": "Alle Musiker sind Künstler.",
+      "options": [
+        "Alle Sänger sind Künstler.",
+        "Keine Sänger sind Künstler.",
+        "Keine Künstler sind Sänger.",
+        "Einige Sänger sind Künstler.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 3,
+      "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Sänger sind Künstler.",
+      "difficulty": 2,
+      "rulesApplied": [
+        5
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199401-1l2ohv",
+      "premise1": "Einige Ärzte sind Akademiker.",
+      "premise2": "Alle Akademiker sind Berufstätige.",
+      "options": [
+        "Alle Ärzte sind Berufstätige.",
+        "Einige Ärzte sind Berufstätige.",
+        "Keine Ärzte sind Berufstätige.",
+        "Alle Berufstätige sind Ärzte.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 1,
+      "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Ärzte sind Berufstätige.",
+      "difficulty": 2,
+      "rulesApplied": [
+        5
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199402-1xrzxy",
+      "premise1": "Einige Pferde sind Säugetiere.",
+      "premise2": "Alle Säugetiere sind Nutztiere.",
+      "options": [
+        "Einige Pferde sind Nutztiere.",
+        "Keine Pferde sind Nutztiere.",
+        "Alle Pferde sind Nutztiere.",
+        "Alle Nutztiere sind Pferde.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 0,
+      "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Pferde sind Nutztiere.",
+      "difficulty": 2,
+      "rulesApplied": [
+        5
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199404-ko56uw",
+      "premise1": "Einige Pflanzen sind Blumen.",
+      "premise2": "Alle Blumen sind Rosen.",
+      "options": [
+        "Alle Pflanzen sind Rosen.",
+        "Alle Rosen sind Pflanzen.",
+        "Einige Pflanzen sind Rosen.",
+        "Keine Pflanzen sind Rosen.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 2,
+      "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Pflanzen sind Rosen.",
+      "difficulty": 2,
+      "rulesApplied": [
+        5
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199405-l2ey0n",
+      "premise1": "Einige Maschinen sind Fahrzeuge.",
+      "premise2": "Alle Fahrzeuge sind Autos.",
+      "options": [
+        "Einige Maschinen sind Autos.",
+        "Alle Maschinen sind Autos.",
+        "Alle Autos sind Maschinen.",
+        "Keine Maschinen sind Autos.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 0,
+      "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Maschinen sind Autos.",
+      "difficulty": 2,
+      "rulesApplied": [
+        5
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199405-alxayh",
+      "premise1": "Einige Backwaren sind Nahrungsmittel.",
+      "premise2": "Alle Nahrungsmittel sind Lebensmittel.",
+      "options": [
+        "Alle Backwaren sind Lebensmittel.",
+        "Keine Lebensmittel sind Backwaren.",
+        "Alle Lebensmittel sind Backwaren.",
+        "Einige Backwaren sind Lebensmittel.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 3,
+      "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Backwaren sind Lebensmittel.",
+      "difficulty": 2,
+      "rulesApplied": [
+        5
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199405-bfyayq",
+      "premise1": "Einige Hunde sind Säugetiere.",
+      "premise2": "Alle Säugetiere sind Haustiere.",
+      "options": [
+        "Alle Hunde sind Haustiere.",
+        "Einige Hunde sind Haustiere.",
+        "Keine Haustiere sind Hunde.",
+        "Alle Haustiere sind Hunde.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 1,
+      "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Hunde sind Haustiere.",
+      "difficulty": 2,
+      "rulesApplied": [
+        5
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199406-v3k60i",
+      "premise1": "Einige Adler sind Vögel.",
+      "premise2": "Alle Vögel sind Raubvögel.",
+      "options": [
+        "Keine Adler sind Raubvögel.",
+        "Einige Adler sind Raubvögel.",
+        "Alle Adler sind Raubvögel.",
+        "Alle Raubvögel sind Adler.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 1,
+      "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Adler sind Raubvögel.",
+      "difficulty": 2,
+      "rulesApplied": [
+        5
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199406-4zddvp",
+      "premise1": "Einige Gewürze sind Pflanzen.",
+      "premise2": "Alle Pflanzen sind Nüsse.",
+      "options": [
+        "Alle Gewürze sind Nüsse.",
+        "Einige Gewürze sind Nüsse.",
+        "Keine Gewürze sind Nüsse.",
+        "Alle Nüsse sind Gewürze.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 1,
+      "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Gewürze sind Nüsse.",
+      "difficulty": 2,
+      "rulesApplied": [
+        5
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199406-5396oh",
+      "premise1": "Einige Lebewesen sind Kinder.",
+      "premise2": "Alle Kinder sind Erwachsene.",
+      "options": [
+        "Alle Erwachsene sind Lebewesen.",
+        "Keine Lebewesen sind Erwachsene.",
+        "Alle Lebewesen sind Erwachsene.",
+        "Einige Lebewesen sind Erwachsene.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 3,
+      "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Lebewesen sind Erwachsene.",
+      "difficulty": 2,
+      "rulesApplied": [
+        5
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199407-cxjmb4",
+      "premise1": "Einige Möbelstücke sind Einrichtungen.",
+      "premise2": "Alle Einrichtungen sind Gebrauchsgegenstände.",
+      "options": [
+        "Keine Gebrauchsgegenstände sind Möbelstücke.",
+        "Alle Gebrauchsgegenstände sind Möbelstücke.",
+        "Alle Möbelstücke sind Gebrauchsgegenstände.",
+        "Einige Möbelstücke sind Gebrauchsgegenstände.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 3,
+      "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Möbelstücke sind Gebrauchsgegenstände.",
+      "difficulty": 2,
+      "rulesApplied": [
+        5
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199407-f7rs5q",
+      "premise1": "Einige Kinder sind Lebewesen.",
+      "premise2": "Alle Lebewesen sind Erwachsene.",
+      "options": [
+        "Einige Kinder sind Erwachsene.",
+        "Keine Kinder sind Erwachsene.",
+        "Alle Erwachsene sind Kinder.",
+        "Keine Erwachsene sind Kinder.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 0,
+      "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Kinder sind Erwachsene.",
+      "difficulty": 2,
+      "rulesApplied": [
+        5
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199408-re179w",
+      "premise1": "Einige Haustiere sind Raubtiere.",
+      "premise2": "Alle Raubtiere sind Katzen.",
+      "options": [
+        "Alle Katzen sind Haustiere.",
+        "Keine Katzen sind Haustiere.",
+        "Keine Haustiere sind Katzen.",
+        "Einige Haustiere sind Katzen.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 3,
+      "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Haustiere sind Katzen.",
+      "difficulty": 2,
+      "rulesApplied": [
+        5
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199408-nbstif",
+      "premise1": "Einige Wirbeltiere sind Lebewesen.",
+      "premise2": "Alle Lebewesen sind Vögel.",
+      "options": [
+        "Alle Vögel sind Wirbeltiere.",
+        "Alle Wirbeltiere sind Vögel.",
+        "Einige Wirbeltiere sind Vögel.",
+        "Keine Wirbeltiere sind Vögel.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 2,
+      "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Wirbeltiere sind Vögel.",
+      "difficulty": 2,
+      "rulesApplied": [
+        5
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199408-rov09m",
+      "premise1": "Einige Wildtiere sind Vögel.",
+      "premise2": "Alle Vögel sind Pinguine.",
+      "options": [
+        "Alle Wildtiere sind Pinguine.",
+        "Keine Pinguine sind Wildtiere.",
+        "Einige Wildtiere sind Pinguine.",
+        "Keine Wildtiere sind Pinguine.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 2,
+      "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Wildtiere sind Pinguine.",
+      "difficulty": 2,
+      "rulesApplied": [
+        5
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199409-3jn9nt",
+      "premise1": "Einige Erwachsene sind Lebewesen.",
+      "premise2": "Alle Lebewesen sind Kinder.",
+      "options": [
+        "Einige Erwachsene sind Kinder.",
+        "Alle Erwachsene sind Kinder.",
+        "Keine Kinder sind Erwachsene.",
+        "Keine Erwachsene sind Kinder.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 0,
+      "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Erwachsene sind Kinder.",
+      "difficulty": 2,
+      "rulesApplied": [
+        5
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199409-7vi745",
+      "premise1": "Einige Autos sind Fahrzeuge.",
+      "premise2": "Alle Fahrzeuge sind Maschinen.",
+      "options": [
+        "Alle Autos sind Maschinen.",
+        "Einige Autos sind Maschinen.",
+        "Keine Maschinen sind Autos.",
+        "Alle Maschinen sind Autos.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 1,
+      "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Autos sind Maschinen.",
+      "difficulty": 2,
+      "rulesApplied": [
+        5
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199409-eis36r",
+      "premise1": "Einige Chemikalien sind Arzneimittel.",
+      "premise2": "Alle Arzneimittel sind Medikamente.",
+      "options": [
+        "Keine Medikamente sind Chemikalien.",
+        "Alle Chemikalien sind Medikamente.",
+        "Keine Chemikalien sind Medikamente.",
+        "Einige Chemikalien sind Medikamente.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 3,
+      "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Chemikalien sind Medikamente.",
+      "difficulty": 2,
+      "rulesApplied": [
+        5
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199409-so3cem",
+      "premise1": "Einige Bäume sind Nadelbäume.",
+      "premise2": "Alle Nadelbäume sind Tannen.",
+      "options": [
+        "Keine Tannen sind Bäume.",
+        "Einige Bäume sind Tannen.",
+        "Alle Tannen sind Bäume.",
+        "Alle Bäume sind Tannen.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 1,
+      "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Bäume sind Tannen.",
+      "difficulty": 2,
+      "rulesApplied": [
+        5
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199412-q7l8tr",
+      "premise1": "Einige Sportler sind Berufstätige.",
+      "premise2": "Alle Berufstätige sind Vereinsmitglieder.",
+      "options": [
+        "Alle Sportler sind Vereinsmitglieder.",
+        "Einige Sportler sind Vereinsmitglieder.",
+        "Alle Vereinsmitglieder sind Sportler.",
+        "Keine Sportler sind Vereinsmitglieder.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 1,
+      "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Sportler sind Vereinsmitglieder.",
+      "difficulty": 2,
+      "rulesApplied": [
+        5
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199412-2wvjuc",
+      "premise1": "Einige Nutztiere sind Säugetiere.",
+      "premise2": "Alle Säugetiere sind Pferde.",
+      "options": [
+        "Einige Nutztiere sind Pferde.",
+        "Keine Pferde sind Nutztiere.",
+        "Alle Pferde sind Nutztiere.",
+        "Alle Nutztiere sind Pferde.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 0,
+      "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Nutztiere sind Pferde.",
+      "difficulty": 2,
+      "rulesApplied": [
+        5
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199412-7z6qco",
+      "premise1": "Einige Tomaten sind Gemüse.",
+      "premise2": "Alle Gemüse sind Nahrungsmittel.",
+      "options": [
+        "Einige Tomaten sind Nahrungsmittel.",
+        "Alle Nahrungsmittel sind Tomaten.",
+        "Keine Tomaten sind Nahrungsmittel.",
+        "Alle Tomaten sind Nahrungsmittel.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 0,
+      "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Tomaten sind Nahrungsmittel.",
+      "difficulty": 2,
+      "rulesApplied": [
+        5
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199412-l2yiag",
+      "premise1": "Einige Waldgewächse sind Lebewesen.",
+      "premise2": "Alle Lebewesen sind Pilze.",
+      "options": [
+        "Alle Pilze sind Waldgewächse.",
+        "Keine Pilze sind Waldgewächse.",
+        "Alle Waldgewächse sind Pilze.",
+        "Einige Waldgewächse sind Pilze.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 3,
+      "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Waldgewächse sind Pilze.",
+      "difficulty": 2,
+      "rulesApplied": [
+        5
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199412-senkfw",
+      "premise1": "Einige Vereinsmitglieder sind Berufstätige.",
+      "premise2": "Alle Berufstätige sind Sportler.",
+      "options": [
+        "Einige Vereinsmitglieder sind Sportler.",
+        "Alle Vereinsmitglieder sind Sportler.",
+        "Alle Sportler sind Vereinsmitglieder.",
+        "Keine Sportler sind Vereinsmitglieder.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 0,
+      "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Vereinsmitglieder sind Sportler.",
+      "difficulty": 2,
+      "rulesApplied": [
+        5
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199413-gg2ykf",
+      "premise1": "Einige Pilze sind Lebewesen.",
+      "premise2": "Alle Lebewesen sind Waldgewächse.",
+      "options": [
+        "Alle Waldgewächse sind Pilze.",
+        "Einige Pilze sind Waldgewächse.",
+        "Keine Waldgewächse sind Pilze.",
+        "Alle Pilze sind Waldgewächse.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 1,
+      "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Pilze sind Waldgewächse.",
+      "difficulty": 2,
+      "rulesApplied": [
+        5
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199413-v0pwpo",
+      "premise1": "Einige Erwachsene sind Akademiker.",
+      "premise2": "Alle Akademiker sind Studenten.",
+      "options": [
+        "Keine Studenten sind Erwachsene.",
+        "Alle Erwachsene sind Studenten.",
+        "Alle Studenten sind Erwachsene.",
+        "Einige Erwachsene sind Studenten.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 3,
+      "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Erwachsene sind Studenten.",
+      "difficulty": 2,
+      "rulesApplied": [
+        5
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199413-yvig69",
+      "premise1": "Einige Tulpen sind Blumen.",
+      "premise2": "Alle Blumen sind Gartengewächse.",
+      "options": [
+        "Einige Tulpen sind Gartengewächse.",
+        "Keine Tulpen sind Gartengewächse.",
+        "Alle Tulpen sind Gartengewächse.",
+        "Keine Gartengewächse sind Tulpen.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 0,
+      "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Tulpen sind Gartengewächse.",
+      "difficulty": 2,
+      "rulesApplied": [
+        5
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199414-tfbckj",
+      "premise1": "Einige Diamanten sind Edelsteine.",
+      "premise2": "Alle Edelsteine sind Wertanlagen.",
+      "options": [
+        "Keine Diamanten sind Wertanlagen.",
+        "Einige Diamanten sind Wertanlagen.",
+        "Alle Wertanlagen sind Diamanten.",
+        "Keine Wertanlagen sind Diamanten.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 1,
+      "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Diamanten sind Wertanlagen.",
+      "difficulty": 2,
+      "rulesApplied": [
+        5
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199414-30ewgi",
+      "premise1": "Einige Wertanlagen sind Spielsachen.",
+      "premise2": "Alle Spielsachen sind Stofftiere.",
+      "options": [
+        "Einige Wertanlagen sind Stofftiere.",
+        "Alle Stofftiere sind Wertanlagen.",
+        "Keine Wertanlagen sind Stofftiere.",
+        "Keine Stofftiere sind Wertanlagen.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 0,
+      "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Wertanlagen sind Stofftiere.",
+      "difficulty": 2,
+      "rulesApplied": [
+        5
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199415-z9hlzw",
+      "premise1": "Einige Musikinstrumente sind Geigen.",
+      "premise2": "Alle Geigen sind Wertgegenstände.",
+      "options": [
+        "Einige Musikinstrumente sind Wertgegenstände.",
+        "Alle Musikinstrumente sind Wertgegenstände.",
+        "Keine Wertgegenstände sind Musikinstrumente.",
+        "Alle Wertgegenstände sind Musikinstrumente.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 0,
+      "explanation": "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5). Im Euler-Diagramm folgt zwingend: Einige Musikinstrumente sind Wertgegenstände.",
+      "difficulty": 2,
+      "rulesApplied": [
+        5
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199415-3auak5",
+      "premise1": "Einige Vögel sind Pinguine.",
+      "premise2": "Einige Pinguine sind Wildtiere.",
+      "options": [
+        "Alle Vögel sind Wildtiere.",
+        "Alle Wildtiere sind Vögel.",
+        "Einige Vögel sind Wildtiere.",
+        "Keine Wildtiere sind Vögel.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 4,
+      "explanation": "Zwei 'einige'-Prämissen ergeben keinen zwingenden Schluss (Regel 1). Aus den Prämissen über Vögel, Pinguine und Wildtiere lässt sich keine zwingende Schlussfolgerung ableiten. E ist korrekt.",
+      "difficulty": 3,
+      "rulesApplied": [
+        1
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199415-nl0l3o",
+      "premise1": "Keine Berufstätige sind Akademiker.",
+      "premise2": "Keine Ärzte sind Akademiker.",
+      "options": [
+        "Alle Berufstätige sind Ärzte.",
+        "Keine Berufstätige sind Ärzte.",
+        "Keine Ärzte sind Berufstätige.",
+        "Einige Ärzte sind Berufstätige.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 4,
+      "explanation": "Zwei 'keine'-Prämissen ergeben keinen zwingenden Schluss (Regel 2). Aus den Prämissen über Berufstätige, Akademiker und Ärzte lässt sich keine zwingende Schlussfolgerung ableiten. E ist korrekt.",
+      "difficulty": 3,
+      "rulesApplied": [
+        2
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199415-8j2uzf",
+      "premise1": "Einige Spielsachen sind Stofftiere.",
+      "premise2": "Keine Wertanlagen sind Stofftiere.",
+      "options": [
+        "Einige Spielsachen sind Wertanlagen.",
+        "Alle Wertanlagen sind Spielsachen.",
+        "Keine Wertanlagen sind Spielsachen.",
+        "Alle Spielsachen sind Wertanlagen.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 4,
+      "explanation": "Zwei 'einige'-Prämissen ergeben keinen zwingenden Schluss (Regel 1). Zwei 'keine'-Prämissen ergeben keinen zwingenden Schluss (Regel 2). Aus den Prämissen über Spielsachen, Stofftiere und Wertanlagen lässt sich keine zwingende Schlussfolgerung ableiten. E ist korrekt.",
+      "difficulty": 3,
+      "rulesApplied": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199415-wlbppz",
+      "premise1": "Keine Lebensmittel sind Nahrungsmittel.",
+      "premise2": "Keine Backwaren sind Nahrungsmittel.",
+      "options": [
+        "Alle Backwaren sind Lebensmittel.",
+        "Einige Backwaren sind Lebensmittel.",
+        "Alle Lebensmittel sind Backwaren.",
+        "Keine Lebensmittel sind Backwaren.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 4,
+      "explanation": "Zwei 'keine'-Prämissen ergeben keinen zwingenden Schluss (Regel 2). Aus den Prämissen über Lebensmittel, Nahrungsmittel und Backwaren lässt sich keine zwingende Schlussfolgerung ableiten. E ist korrekt.",
+      "difficulty": 3,
+      "rulesApplied": [
+        2
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199415-85g01n",
+      "premise1": "Keine Sportler sind Berufstätige.",
+      "premise2": "Keine Vereinsmitglieder sind Berufstätige.",
+      "options": [
+        "Alle Sportler sind Vereinsmitglieder.",
+        "Einige Sportler sind Vereinsmitglieder.",
+        "Keine Vereinsmitglieder sind Sportler.",
+        "Alle Vereinsmitglieder sind Sportler.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 4,
+      "explanation": "Zwei 'keine'-Prämissen ergeben keinen zwingenden Schluss (Regel 2). Aus den Prämissen über Sportler, Berufstätige und Vereinsmitglieder lässt sich keine zwingende Schlussfolgerung ableiten. E ist korrekt.",
+      "difficulty": 3,
+      "rulesApplied": [
+        2
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199415-ltwnr3",
+      "premise1": "Keine Erwachsene sind Lebewesen.",
+      "premise2": "Keine Lebewesen sind Kinder.",
+      "options": [
+        "Keine Kinder sind Erwachsene.",
+        "Keine Erwachsene sind Kinder.",
+        "Einige Kinder sind Erwachsene.",
+        "Einige Erwachsene sind Kinder.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 4,
+      "explanation": "Zwei 'keine'-Prämissen ergeben keinen zwingenden Schluss (Regel 2). Aus den Prämissen über Erwachsene, Lebewesen und Kinder lässt sich keine zwingende Schlussfolgerung ableiten. E ist korrekt.",
+      "difficulty": 3,
+      "rulesApplied": [
+        2
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199415-r4zo1e",
+      "premise1": "Einige Backwaren sind Nahrungsmittel.",
+      "premise2": "Einige Nahrungsmittel sind Lebensmittel.",
+      "options": [
+        "Keine Lebensmittel sind Backwaren.",
+        "Einige Backwaren sind Lebensmittel.",
+        "Einige Lebensmittel sind Backwaren.",
+        "Alle Lebensmittel sind Backwaren.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 4,
+      "explanation": "Zwei 'einige'-Prämissen ergeben keinen zwingenden Schluss (Regel 1). Aus den Prämissen über Backwaren, Nahrungsmittel und Lebensmittel lässt sich keine zwingende Schlussfolgerung ableiten. E ist korrekt.",
+      "difficulty": 3,
+      "rulesApplied": [
+        1
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199415-wyiqv9",
+      "premise1": "Keine Haustiere sind Säugetiere.",
+      "premise2": "Einige Säugetiere sind Hunde.",
+      "options": [
+        "Einige Haustiere sind Hunde.",
+        "Keine Hunde sind Haustiere.",
+        "Einige Hunde sind Haustiere.",
+        "Keine Haustiere sind Hunde.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 4,
+      "explanation": "Zwei 'einige'-Prämissen ergeben keinen zwingenden Schluss (Regel 1). Zwei 'keine'-Prämissen ergeben keinen zwingenden Schluss (Regel 2). Aus den Prämissen über Haustiere, Säugetiere und Hunde lässt sich keine zwingende Schlussfolgerung ableiten. E ist korrekt.",
+      "difficulty": 3,
+      "rulesApplied": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199415-ile3sk",
+      "premise1": "Keine Rosen sind Blumen.",
+      "premise2": "Keine Pflanzen sind Blumen.",
+      "options": [
+        "Alle Rosen sind Pflanzen.",
+        "Alle Pflanzen sind Rosen.",
+        "Einige Rosen sind Pflanzen.",
+        "Einige Pflanzen sind Rosen.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 4,
+      "explanation": "Zwei 'keine'-Prämissen ergeben keinen zwingenden Schluss (Regel 2). Aus den Prämissen über Rosen, Blumen und Pflanzen lässt sich keine zwingende Schlussfolgerung ableiten. E ist korrekt.",
+      "difficulty": 3,
+      "rulesApplied": [
+        2
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199416-tw43lw",
+      "premise1": "Keine Blumen sind Tulpen.",
+      "premise2": "Keine Gartengewächse sind Tulpen.",
+      "options": [
+        "Alle Blumen sind Gartengewächse.",
+        "Keine Gartengewächse sind Blumen.",
+        "Keine Blumen sind Gartengewächse.",
+        "Alle Gartengewächse sind Blumen.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 4,
+      "explanation": "Zwei 'keine'-Prämissen ergeben keinen zwingenden Schluss (Regel 2). Aus den Prämissen über Blumen, Tulpen und Gartengewächse lässt sich keine zwingende Schlussfolgerung ableiten. E ist korrekt.",
+      "difficulty": 3,
+      "rulesApplied": [
+        2
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199416-i6acf7",
+      "premise1": "Einige Pferde sind Nutztiere.",
+      "premise2": "Einige Säugetiere sind Nutztiere.",
+      "options": [
+        "Keine Säugetiere sind Pferde.",
+        "Einige Säugetiere sind Pferde.",
+        "Einige Pferde sind Säugetiere.",
+        "Alle Säugetiere sind Pferde.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 4,
+      "explanation": "Zwei 'einige'-Prämissen ergeben keinen zwingenden Schluss (Regel 1). Aus den Prämissen über Pferde, Nutztiere und Säugetiere lässt sich keine zwingende Schlussfolgerung ableiten. E ist korrekt.",
+      "difficulty": 3,
+      "rulesApplied": [
+        1
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199416-dy0rbl",
+      "premise1": "Keine Ärzte sind Berufstätige.",
+      "premise2": "Keine Akademiker sind Berufstätige.",
+      "options": [
+        "Einige Akademiker sind Ärzte.",
+        "Einige Ärzte sind Akademiker.",
+        "Alle Akademiker sind Ärzte.",
+        "Keine Ärzte sind Akademiker.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 4,
+      "explanation": "Zwei 'keine'-Prämissen ergeben keinen zwingenden Schluss (Regel 2). Aus den Prämissen über Ärzte, Berufstätige und Akademiker lässt sich keine zwingende Schlussfolgerung ableiten. E ist korrekt.",
+      "difficulty": 3,
+      "rulesApplied": [
+        2
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199416-rht0wb",
+      "premise1": "Keine Lebewesen sind Pilze.",
+      "premise2": "Keine Waldgewächse sind Pilze.",
+      "options": [
+        "Einige Waldgewächse sind Lebewesen.",
+        "Einige Lebewesen sind Waldgewächse.",
+        "Keine Waldgewächse sind Lebewesen.",
+        "Alle Waldgewächse sind Lebewesen.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 4,
+      "explanation": "Zwei 'keine'-Prämissen ergeben keinen zwingenden Schluss (Regel 2). Aus den Prämissen über Lebewesen, Pilze und Waldgewächse lässt sich keine zwingende Schlussfolgerung ableiten. E ist korrekt.",
+      "difficulty": 3,
+      "rulesApplied": [
+        2
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199416-k2xmb6",
+      "premise1": "Einige Gartengewächse sind Blumen.",
+      "premise2": "Einige Blumen sind Tulpen.",
+      "options": [
+        "Keine Gartengewächse sind Tulpen.",
+        "Einige Tulpen sind Gartengewächse.",
+        "Einige Gartengewächse sind Tulpen.",
+        "Alle Tulpen sind Gartengewächse.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 4,
+      "explanation": "Zwei 'einige'-Prämissen ergeben keinen zwingenden Schluss (Regel 1). Aus den Prämissen über Gartengewächse, Blumen und Tulpen lässt sich keine zwingende Schlussfolgerung ableiten. E ist korrekt.",
+      "difficulty": 3,
+      "rulesApplied": [
+        1
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199416-kkm3qw",
+      "premise1": "Einige Diamanten sind Edelsteine.",
+      "premise2": "Einige Wertanlagen sind Edelsteine.",
+      "options": [
+        "Einige Wertanlagen sind Diamanten.",
+        "Einige Diamanten sind Wertanlagen.",
+        "Alle Wertanlagen sind Diamanten.",
+        "Alle Diamanten sind Wertanlagen.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 4,
+      "explanation": "Zwei 'einige'-Prämissen ergeben keinen zwingenden Schluss (Regel 1). Aus den Prämissen über Diamanten, Edelsteine und Wertanlagen lässt sich keine zwingende Schlussfolgerung ableiten. E ist korrekt.",
+      "difficulty": 3,
+      "rulesApplied": [
+        1
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199416-klh4cs",
+      "premise1": "Einige Musiker sind Künstler.",
+      "premise2": "Einige Künstler sind Sänger.",
+      "options": [
+        "Keine Sänger sind Musiker.",
+        "Alle Musiker sind Sänger.",
+        "Alle Sänger sind Musiker.",
+        "Einige Musiker sind Sänger.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 4,
+      "explanation": "Zwei 'einige'-Prämissen ergeben keinen zwingenden Schluss (Regel 1). Aus den Prämissen über Musiker, Künstler und Sänger lässt sich keine zwingende Schlussfolgerung ableiten. E ist korrekt.",
+      "difficulty": 3,
+      "rulesApplied": [
+        1
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199416-ewq88n",
+      "premise1": "Einige Autos sind Maschinen.",
+      "premise2": "Einige Maschinen sind Fahrzeuge.",
+      "options": [
+        "Einige Autos sind Fahrzeuge.",
+        "Alle Fahrzeuge sind Autos.",
+        "Keine Autos sind Fahrzeuge.",
+        "Alle Autos sind Fahrzeuge.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 4,
+      "explanation": "Zwei 'einige'-Prämissen ergeben keinen zwingenden Schluss (Regel 1). Aus den Prämissen über Autos, Maschinen und Fahrzeuge lässt sich keine zwingende Schlussfolgerung ableiten. E ist korrekt.",
+      "difficulty": 3,
+      "rulesApplied": [
+        1
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199416-in351j",
+      "premise1": "Einige Musiker sind Künstler.",
+      "premise2": "Keine Berufstätige sind Künstler.",
+      "options": [
+        "Keine Musiker sind Berufstätige.",
+        "Keine Berufstätige sind Musiker.",
+        "Alle Musiker sind Berufstätige.",
+        "Alle Berufstätige sind Musiker.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 4,
+      "explanation": "Zwei 'einige'-Prämissen ergeben keinen zwingenden Schluss (Regel 1). Zwei 'keine'-Prämissen ergeben keinen zwingenden Schluss (Regel 2). Aus den Prämissen über Musiker, Künstler und Berufstätige lässt sich keine zwingende Schlussfolgerung ableiten. E ist korrekt.",
+      "difficulty": 3,
+      "rulesApplied": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199416-5x9yx5",
+      "premise1": "Keine Gebrauchsgegenstände sind Einrichtungen.",
+      "premise2": "Keine Möbelstücke sind Einrichtungen.",
+      "options": [
+        "Einige Möbelstücke sind Gebrauchsgegenstände.",
+        "Alle Gebrauchsgegenstände sind Möbelstücke.",
+        "Einige Gebrauchsgegenstände sind Möbelstücke.",
+        "Keine Gebrauchsgegenstände sind Möbelstücke.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 4,
+      "explanation": "Zwei 'keine'-Prämissen ergeben keinen zwingenden Schluss (Regel 2). Aus den Prämissen über Gebrauchsgegenstände, Einrichtungen und Möbelstücke lässt sich keine zwingende Schlussfolgerung ableiten. E ist korrekt.",
+      "difficulty": 3,
+      "rulesApplied": [
+        2
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199417-fv9qe1",
+      "premise1": "Einige Sänger sind Künstler.",
+      "premise2": "Keine Musiker sind Künstler.",
+      "options": [
+        "Alle Musiker sind Sänger.",
+        "Keine Musiker sind Sänger.",
+        "Keine Sänger sind Musiker.",
+        "Alle Sänger sind Musiker.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 4,
+      "explanation": "Zwei 'einige'-Prämissen ergeben keinen zwingenden Schluss (Regel 1). Zwei 'keine'-Prämissen ergeben keinen zwingenden Schluss (Regel 2). Aus den Prämissen über Sänger, Künstler und Musiker lässt sich keine zwingende Schlussfolgerung ableiten. E ist korrekt.",
+      "difficulty": 3,
+      "rulesApplied": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199417-whktw4",
+      "premise1": "Einige Berufstätige sind Künstler.",
+      "premise2": "Einige Musiker sind Künstler.",
+      "options": [
+        "Einige Musiker sind Berufstätige.",
+        "Alle Berufstätige sind Musiker.",
+        "Keine Musiker sind Berufstätige.",
+        "Keine Berufstätige sind Musiker.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 4,
+      "explanation": "Zwei 'einige'-Prämissen ergeben keinen zwingenden Schluss (Regel 1). Aus den Prämissen über Berufstätige, Künstler und Musiker lässt sich keine zwingende Schlussfolgerung ableiten. E ist korrekt.",
+      "difficulty": 3,
+      "rulesApplied": [
+        1
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199417-4fjt58",
+      "premise1": "Keine Jugendliche sind Kinder.",
+      "premise2": "Keine Schüler sind Kinder.",
+      "options": [
+        "Alle Jugendliche sind Schüler.",
+        "Alle Schüler sind Jugendliche.",
+        "Keine Schüler sind Jugendliche.",
+        "Keine Jugendliche sind Schüler.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 4,
+      "explanation": "Zwei 'keine'-Prämissen ergeben keinen zwingenden Schluss (Regel 2). Aus den Prämissen über Jugendliche, Kinder und Schüler lässt sich keine zwingende Schlussfolgerung ableiten. E ist korrekt.",
+      "difficulty": 3,
+      "rulesApplied": [
+        2
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199417-f0xkp7",
+      "premise1": "Keine Gartengewächse sind Sträucher.",
+      "premise2": "Keine Sträucher sind Pflanzen.",
+      "options": [
+        "Alle Gartengewächse sind Pflanzen.",
+        "Alle Pflanzen sind Gartengewächse.",
+        "Keine Gartengewächse sind Pflanzen.",
+        "Einige Gartengewächse sind Pflanzen.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 4,
+      "explanation": "Zwei 'keine'-Prämissen ergeben keinen zwingenden Schluss (Regel 2). Aus den Prämissen über Gartengewächse, Sträucher und Pflanzen lässt sich keine zwingende Schlussfolgerung ableiten. E ist korrekt.",
+      "difficulty": 3,
+      "rulesApplied": [
+        2
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199417-beowft",
+      "premise1": "Keine Studenten sind Akademiker.",
+      "premise2": "Keine Akademiker sind Erwachsene.",
+      "options": [
+        "Keine Studenten sind Erwachsene.",
+        "Einige Studenten sind Erwachsene.",
+        "Keine Erwachsene sind Studenten.",
+        "Alle Erwachsene sind Studenten.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 4,
+      "explanation": "Zwei 'keine'-Prämissen ergeben keinen zwingenden Schluss (Regel 2). Aus den Prämissen über Studenten, Akademiker und Erwachsene lässt sich keine zwingende Schlussfolgerung ableiten. E ist korrekt.",
+      "difficulty": 3,
+      "rulesApplied": [
+        2
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199417-p4fkmt",
+      "premise1": "Einige Berufstätige sind Beamte.",
+      "premise2": "Keine Lehrer sind Beamte.",
+      "options": [
+        "Einige Berufstätige sind Lehrer.",
+        "Einige Lehrer sind Berufstätige.",
+        "Alle Lehrer sind Berufstätige.",
+        "Keine Berufstätige sind Lehrer.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 4,
+      "explanation": "Zwei 'einige'-Prämissen ergeben keinen zwingenden Schluss (Regel 1). Zwei 'keine'-Prämissen ergeben keinen zwingenden Schluss (Regel 2). Aus den Prämissen über Berufstätige, Beamte und Lehrer lässt sich keine zwingende Schlussfolgerung ableiten. E ist korrekt.",
+      "difficulty": 3,
+      "rulesApplied": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199417-zapxfz",
+      "premise1": "Einige Erwachsene sind Lebewesen.",
+      "premise2": "Einige Kinder sind Lebewesen.",
+      "options": [
+        "Alle Erwachsene sind Kinder.",
+        "Alle Kinder sind Erwachsene.",
+        "Einige Erwachsene sind Kinder.",
+        "Einige Kinder sind Erwachsene.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 4,
+      "explanation": "Zwei 'einige'-Prämissen ergeben keinen zwingenden Schluss (Regel 1). Aus den Prämissen über Erwachsene, Lebewesen und Kinder lässt sich keine zwingende Schlussfolgerung ableiten. E ist korrekt.",
+      "difficulty": 3,
+      "rulesApplied": [
+        1
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199417-2f7iei",
+      "premise1": "Einige Lebensmittel sind Getränke.",
+      "premise2": "Keine Flüssigkeiten sind Getränke.",
+      "options": [
+        "Einige Lebensmittel sind Flüssigkeiten.",
+        "Einige Flüssigkeiten sind Lebensmittel.",
+        "Alle Flüssigkeiten sind Lebensmittel.",
+        "Alle Lebensmittel sind Flüssigkeiten.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 4,
+      "explanation": "Zwei 'einige'-Prämissen ergeben keinen zwingenden Schluss (Regel 1). Zwei 'keine'-Prämissen ergeben keinen zwingenden Schluss (Regel 2). Aus den Prämissen über Lebensmittel, Getränke und Flüssigkeiten lässt sich keine zwingende Schlussfolgerung ableiten. E ist korrekt.",
+      "difficulty": 3,
+      "rulesApplied": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199417-65qhxi",
+      "premise1": "Einige Reptilien sind Wirbeltiere.",
+      "premise2": "Einige Wildtiere sind Wirbeltiere.",
+      "options": [
+        "Alle Wildtiere sind Reptilien.",
+        "Einige Wildtiere sind Reptilien.",
+        "Alle Reptilien sind Wildtiere.",
+        "Keine Reptilien sind Wildtiere.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 4,
+      "explanation": "Zwei 'einige'-Prämissen ergeben keinen zwingenden Schluss (Regel 1). Aus den Prämissen über Reptilien, Wirbeltiere und Wildtiere lässt sich keine zwingende Schlussfolgerung ableiten. E ist korrekt.",
+      "difficulty": 3,
+      "rulesApplied": [
+        1
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199417-gy0kbi",
+      "premise1": "Keine Musiker sind Künstler.",
+      "premise2": "Einige Künstler sind Berufstätige.",
+      "options": [
+        "Keine Musiker sind Berufstätige.",
+        "Einige Berufstätige sind Musiker.",
+        "Alle Musiker sind Berufstätige.",
+        "Alle Berufstätige sind Musiker.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 4,
+      "explanation": "Zwei 'einige'-Prämissen ergeben keinen zwingenden Schluss (Regel 1). Zwei 'keine'-Prämissen ergeben keinen zwingenden Schluss (Regel 2). Aus den Prämissen über Musiker, Künstler und Berufstätige lässt sich keine zwingende Schlussfolgerung ableiten. E ist korrekt.",
+      "difficulty": 3,
+      "rulesApplied": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199417-8ymfot",
+      "premise1": "Einige Raubtiere sind Katzen.",
+      "premise2": "Einige Haustiere sind Katzen.",
+      "options": [
+        "Alle Raubtiere sind Haustiere.",
+        "Keine Haustiere sind Raubtiere.",
+        "Einige Haustiere sind Raubtiere.",
+        "Einige Raubtiere sind Haustiere.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 4,
+      "explanation": "Zwei 'einige'-Prämissen ergeben keinen zwingenden Schluss (Regel 1). Aus den Prämissen über Raubtiere, Katzen und Haustiere lässt sich keine zwingende Schlussfolgerung ableiten. E ist korrekt.",
+      "difficulty": 3,
+      "rulesApplied": [
+        1
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199417-1gdx5p",
+      "premise1": "Einige Wertanlagen sind Edelsteine.",
+      "premise2": "Keine Diamanten sind Edelsteine.",
+      "options": [
+        "Alle Wertanlagen sind Diamanten.",
+        "Einige Diamanten sind Wertanlagen.",
+        "Keine Diamanten sind Wertanlagen.",
+        "Alle Diamanten sind Wertanlagen.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 4,
+      "explanation": "Zwei 'einige'-Prämissen ergeben keinen zwingenden Schluss (Regel 1). Zwei 'keine'-Prämissen ergeben keinen zwingenden Schluss (Regel 2). Aus den Prämissen über Wertanlagen, Edelsteine und Diamanten lässt sich keine zwingende Schlussfolgerung ableiten. E ist korrekt.",
+      "difficulty": 3,
+      "rulesApplied": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199417-0jfppe",
+      "premise1": "Einige Vereinsmitglieder sind Berufstätige.",
+      "premise2": "Einige Berufstätige sind Sportler.",
+      "options": [
+        "Alle Vereinsmitglieder sind Sportler.",
+        "Alle Sportler sind Vereinsmitglieder.",
+        "Einige Vereinsmitglieder sind Sportler.",
+        "Einige Sportler sind Vereinsmitglieder.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 4,
+      "explanation": "Zwei 'einige'-Prämissen ergeben keinen zwingenden Schluss (Regel 1). Aus den Prämissen über Vereinsmitglieder, Berufstätige und Sportler lässt sich keine zwingende Schlussfolgerung ableiten. E ist korrekt.",
+      "difficulty": 3,
+      "rulesApplied": [
+        1
+      ]
+    },
+    {
+      "id": "imp-gen-1774000199418-64emo9",
+      "premise1": "Einige Nahrungsmittel sind Gewürze.",
+      "premise2": "Einige Gewürze sind Pflanzen.",
+      "options": [
+        "Einige Pflanzen sind Nahrungsmittel.",
+        "Keine Nahrungsmittel sind Pflanzen.",
+        "Einige Nahrungsmittel sind Pflanzen.",
+        "Alle Nahrungsmittel sind Pflanzen.",
+        "Keine der Schlussfolgerungen ist richtig."
+      ],
+      "correctAnswer": 4,
+      "explanation": "Zwei 'einige'-Prämissen ergeben keinen zwingenden Schluss (Regel 1). Aus den Prämissen über Nahrungsmittel, Gewürze und Pflanzen lässt sich keine zwingende Schlussfolgerung ableiten. E ist korrekt.",
+      "difficulty": 3,
+      "rulesApplied": [
+        1
+      ]
+    }
+  ]
+}
