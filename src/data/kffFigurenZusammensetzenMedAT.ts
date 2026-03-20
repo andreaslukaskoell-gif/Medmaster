@@ -21,7 +21,10 @@ export type SolutionOverlayLine = { from: { x: number; y: number }; to: { x: num
 
 export type FigureAssembleTask = {
   id: string;
+  /** Display pieces (rotated for the puzzle challenge). */
   pieces: Polygon[];
+  /** Original unrotated pieces in their cut positions — for the solution overlay. */
+  originalPieces?: Polygon[];
   target: Polygon;
   options: [FigureOption, FigureOption, FigureOption, FigureOption, FigureOption];
   correctIndex: number;
@@ -2117,11 +2120,17 @@ function applyGridCuts(
 
       if (result) {
         const [a, b] = result;
-        // Keep both halves if they have sufficient area
-        if (polygonArea(a) >= minPieceArea && polygonArea(b) >= minPieceArea) {
+        // Keep both halves if they have sufficient area and aren't slivers
+        const bxA = polygonBBox(a),
+          bxB = polygonBBox(b);
+        const rA = (bxA.width || 1) / (bxA.height || 1);
+        const rB = (bxB.width || 1) / (bxB.height || 1);
+        const areaOk = polygonArea(a) >= minPieceArea && polygonArea(b) >= minPieceArea;
+        const noSliver = rA > 0.2 && rA < 5 && rB > 0.2 && rB < 5;
+        if (areaOk && noSliver) {
           nextPieces.push(a, b);
         } else {
-          nextPieces.push(piece); // line barely clips — keep original
+          nextPieces.push(piece); // line barely clips or creates sliver — keep original
         }
       } else {
         nextPieces.push(piece); // line doesn't intersect this piece
@@ -2201,6 +2210,15 @@ function applyAsymmetricCuts(
 
     const [a, b] = result;
     if (polygonArea(a) < minPieceArea || polygonArea(b) < minPieceArea) continue;
+
+    // Reject sliver pieces: thin lamella-like fragments leak the contour of
+    // adjacent pieces, making the task too obvious. A piece is a sliver if
+    // its bounding box aspect ratio exceeds 5:1.
+    const bA = polygonBBox(a),
+      bB = polygonBBox(b);
+    const arA = (bA.width || 1) / (bA.height || 1);
+    const arB = (bB.width || 1) / (bB.height || 1);
+    if (arA > 5 || arA < 0.2 || arB > 5 || arB < 0.2) continue;
 
     pieces.splice(cutIdx, 1, a, b);
     successfulCuts++;
@@ -2423,6 +2441,7 @@ export function generateFigurenTrainingTask(
     const task: FigureAssembleTask = {
       ...validationTask,
       pieces: displayPieces,
+      originalPieces: pieces.map((p) => ({ points: p.points.map((pt) => ({ ...pt })) })),
       explanation:
         correctIndex === 4
           ? `Keine der Figuren A–D ist korrekt. Die ${pieces.length} Teile ergeben ${shapeName}, aber diese Form ist nicht unter den Optionen A–D. Tipp: Schätze die Gesamtfläche der Teile ab — wenn kein Umriss A–D flächengleich ist, wähle E.`
@@ -2516,6 +2535,7 @@ function generateFigurenTrainingTaskFallback(
     return {
       ...validationTask,
       pieces: displayPieces,
+      originalPieces: pieces.map((p) => ({ points: p.points.map((pt) => ({ ...pt })) })),
       explanation:
         correctIndex === 4
           ? `Keine der Figuren A–D ist korrekt. Die ${pieces.length} Teile ergeben zusammengesetzt ${fbShapeName} — diese Form ist aber nicht unter den Optionen A–D.`
@@ -2579,6 +2599,7 @@ function generateFigurenTrainingTaskFallback(
   return {
     id: `fz-train-fb-${difficulty}-${seed}-safe`,
     pieces: rotatePiecesForDisplay(pieces, difficulty, rng),
+    originalPieces: pieces.map((p) => ({ points: p.points.map((pt) => ({ ...pt })) })),
     target,
     options,
     correctIndex,

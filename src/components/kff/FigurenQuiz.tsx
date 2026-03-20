@@ -590,8 +590,8 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
                         {...FIGURE_SVG_ASPECT_PROPS}
                         className="w-28 h-28 sm:w-36 sm:h-36"
                       >
-                        {/* Show each piece in a distinct color inside the target outline */}
-                        {q.pieces.map((piece, pi) => (
+                        {/* Show original (unrotated) pieces in distinct colors — geometrically exact */}
+                        {(q.originalPieces ?? q.pieces).map((piece, pi) => (
                           <path
                             key={`piece-${pi}`}
                             d={polygonToPath(piece)}
