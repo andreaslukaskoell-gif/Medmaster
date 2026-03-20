@@ -49,8 +49,8 @@ import {
 } from "./kffHelpers";
 
 const FZ_OPTION_LABELS = ["A", "B", "C", "D", "E"] as const;
-/** Offizielles MedAT-Hellblau (IB FZ 26): einheitlich cyan, kein Rand. */
-const FILL_FZ = "#7EC8E3";
+/** Offizielles MedAT-Hellblau (IB FZ 26): Cyan-Hellblau wie im VMC-PDF. */
+const FILL_FZ = "#87CEEB";
 
 export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoStart?: boolean }) {
   const [phase, setPhase] = useState<"setup" | "quiz" | "result">("setup");
@@ -538,7 +538,7 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
                                 key={pi}
                                 d={p.d}
                                 fill={FILL_FZ}
-                                stroke="#4d9eb8"
+                                stroke="#333"
                                 strokeWidth="0.8"
                                 transform={p.transform}
                               />
@@ -564,7 +564,7 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
                         <path
                           d={polygonToPath(q.target)}
                           fill={FILL_FZ}
-                          stroke="#4d9eb8"
+                          stroke="#333"
                           strokeWidth="1"
                         />
                         {q.solutionOverlay?.lines.map((line, li) => (
@@ -793,8 +793,8 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
                   key={pi}
                   d={p.d}
                   fill={FILL_FZ}
-                  stroke="#3d7a8c"
-                  strokeWidth="1.5"
+                  stroke="#222"
+                  strokeWidth="1"
                   transform={p.transform}
                 />
               ))}
@@ -831,8 +831,8 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
                   <path
                     d={polygonToPathScaledToViewBox(opt)}
                     fill={FILL_FZ}
-                    stroke="#3d7a8c"
-                    strokeWidth="1.5"
+                    stroke="#222"
+                    strokeWidth="1"
                   />
                 </svg>
               )}

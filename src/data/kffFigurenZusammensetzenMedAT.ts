@@ -1,7 +1,7 @@
 /**
  * KFF „Figuren zusammensetzen“ – MedAT.
  *
- * Nur 14 offizielle Zielformen: gleichseitiges Dreieck, Quadrat, Raute, Parallelogramm,
+ * 15 offizielle Zielformen: gleichseitiges Dreieck, Quadrat, Rechteck, Raute, Parallelogramm,
  * Trapez, regelmäßiges Fünfeck, Sechseck, Siebeneck, Achteck, Viertelkreis, Halbkreis,
  * Dreiviertelkreis, Vollkreis, L-Form.
  *
