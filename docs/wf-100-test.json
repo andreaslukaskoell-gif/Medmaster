@@ -1,0 +1,2460 @@
+[
+  {
+    "id": "wf-test-001",
+    "letters": [
+      "M",
+      "M",
+      "T",
+      "S",
+      "Y",
+      "O",
+      "P"
+    ],
+    "options": [
+      "M",
+      "P",
+      "T",
+      "S",
+      "-"
+    ],
+    "correctIndex": 3,
+    "solutionWord": "SYMPTOM",
+    "explanation": "Die Buchstaben ergeben das Wort „SYMPTOM\" (Anfangsbuchstabe „S\").",
+    "difficulty": 1
+  },
+  {
+    "id": "wf-test-002",
+    "letters": [
+      "L",
+      "I",
+      "S",
+      "U",
+      "G",
+      "E",
+      "N",
+      "T"
+    ],
+    "options": [
+      "T",
+      "E",
+      "L",
+      "I",
+      "-"
+    ],
+    "correctIndex": 2,
+    "solutionWord": "LEISTUNG",
+    "explanation": "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „LEISTUNG\" (Anfangsbuchstabe „L\").",
+    "difficulty": 1
+  },
+  {
+    "id": "wf-test-003",
+    "letters": [
+      "N",
+      "D",
+      "U",
+      "B",
+      "N",
+      "G",
+      "I"
+    ],
+    "options": [
+      "D",
+      "I",
+      "B",
+      "G",
+      "-"
+    ],
+    "correctIndex": 2,
+    "solutionWord": "BINDUNG",
+    "explanation": "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „BINDUNG\" (Anfangsbuchstabe „B\").",
+    "difficulty": 1
+  },
+  {
+    "id": "wf-test-004",
+    "letters": [
+      "L",
+      "N",
+      "L",
+      "W",
+      "Z",
+      "A",
+      "D",
+      "E"
+    ],
+    "options": [
+      "D",
+      "Z",
+      "W",
+      "L",
+      "-"
+    ],
+    "correctIndex": 1,
+    "solutionWord": "ZELLWAND",
+    "explanation": "Die Buchstaben ergeben das Wort „ZELLWAND\" (Anfangsbuchstabe „Z\").",
+    "difficulty": 1
+  },
+  {
+    "id": "wf-test-005",
+    "letters": [
+      "I",
+      "U",
+      "H",
+      "R",
+      "G",
+      "R",
+      "C"
+    ],
+    "options": [
+      "G",
+      "H",
+      "R",
+      "C",
+      "-"
+    ],
+    "correctIndex": 3,
+    "solutionWord": "CHIRURG",
+    "explanation": "Die Buchstaben ergeben das Wort „CHIRURG\" (Anfangsbuchstabe „C\").",
+    "difficulty": 1
+  },
+  {
+    "id": "wf-test-006",
+    "letters": [
+      "A",
+      "B",
+      "D",
+      "H",
+      "D",
+      "C",
+      "N",
+      "E",
+      "O"
+    ],
+    "options": [
+      "D",
+      "E",
+      "B",
+      "H",
+      "-"
+    ],
+    "correctIndex": 0,
+    "solutionWord": "DACHBODEN",
+    "explanation": "Die Buchstaben ergeben das Wort „DACHBODEN\" (Anfangsbuchstabe „D\").",
+    "difficulty": 1
+  },
+  {
+    "id": "wf-test-007",
+    "letters": [
+      "K",
+      "H",
+      "B",
+      "B",
+      "A",
+      "L",
+      "C",
+      "C",
+      "E"
+    ],
+    "options": [
+      "A",
+      "L",
+      "H",
+      "B",
+      "-"
+    ],
+    "correctIndex": 3,
+    "solutionWord": "BACKBLECH",
+    "explanation": "Die Buchstaben ergeben das Wort „BACKBLECH\" (Anfangsbuchstabe „B\").",
+    "difficulty": 1
+  },
+  {
+    "id": "wf-test-008",
+    "letters": [
+      "S",
+      "I",
+      "H",
+      "F",
+      "T",
+      "C",
+      "R"
+    ],
+    "options": [
+      "T",
+      "F",
+      "C",
+      "S",
+      "-"
+    ],
+    "correctIndex": 3,
+    "solutionWord": "SCHRIFT",
+    "explanation": "Die Buchstaben ergeben das Wort „SCHRIFT\" (Anfangsbuchstabe „S\").",
+    "difficulty": 1
+  },
+  {
+    "id": "wf-test-009",
+    "letters": [
+      "W",
+      "V",
+      "O",
+      "D",
+      "R",
+      "N",
+      "A"
+    ],
+    "options": [
+      "V",
+      "D",
+      "W",
+      "O",
+      "-"
+    ],
+    "correctIndex": 0,
+    "solutionWord": "VORWAND",
+    "explanation": "Die Buchstaben ergeben das Wort „VORWAND\" (Anfangsbuchstabe „V\").",
+    "difficulty": 1
+  },
+  {
+    "id": "wf-test-010",
+    "letters": [
+      "E",
+      "N",
+      "S",
+      "U",
+      "G",
+      "N",
+      "D"
+    ],
+    "options": [
+      "E",
+      "G",
+      "S",
+      "N",
+      "-"
+    ],
+    "correctIndex": 2,
+    "solutionWord": "SENDUNG",
+    "explanation": "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „SENDUNG\" (Anfangsbuchstabe „S\").",
+    "difficulty": 1
+  },
+  {
+    "id": "wf-test-011",
+    "letters": [
+      "F",
+      "E",
+      "H",
+      "I",
+      "E",
+      "R",
+      "I",
+      "T"
+    ],
+    "options": [
+      "H",
+      "T",
+      "F",
+      "E",
+      "-"
+    ],
+    "correctIndex": 2,
+    "solutionWord": "FREIHEIT",
+    "explanation": "Erkennbar an der Endung -HEIT. Die Buchstaben ergeben das Wort „FREIHEIT\" (Anfangsbuchstabe „F\").",
+    "difficulty": 1
+  },
+  {
+    "id": "wf-test-012",
+    "letters": [
+      "C",
+      "T",
+      "D",
+      "H",
+      "E",
+      "A",
+      "B"
+    ],
+    "options": [
+      "B",
+      "D",
+      "T",
+      "C",
+      "-"
+    ],
+    "correctIndex": 0,
+    "solutionWord": "BEDACHT",
+    "explanation": "Erkennbar an der Vorsilbe BE-. Die Buchstaben ergeben das Wort „BEDACHT\" (Anfangsbuchstabe „B\").",
+    "difficulty": 1
+  },
+  {
+    "id": "wf-test-013",
+    "letters": [
+      "E",
+      "R",
+      "B",
+      "I",
+      "E",
+      "R",
+      "T"
+    ],
+    "options": [
+      "B",
+      "E",
+      "I",
+      "R",
+      "-"
+    ],
+    "correctIndex": 4,
+    "solutionWord": "TREIBER",
+    "explanation": "Das Lösungswort lautet „TREIBER\" (Anfangsbuchstabe „T\"), der nicht unter A–D angeboten wird. Daher ist E richtig.",
+    "difficulty": 1
+  },
+  {
+    "id": "wf-test-014",
+    "letters": [
+      "O",
+      "P",
+      "R",
+      "S",
+      "Z",
+      "E",
+      "S"
+    ],
+    "options": [
+      "P",
+      "E",
+      "S",
+      "O",
+      "-"
+    ],
+    "correctIndex": 0,
+    "solutionWord": "PROZESS",
+    "explanation": "Die Buchstaben ergeben das Wort „PROZESS\" (Anfangsbuchstabe „P\").",
+    "difficulty": 1
+  },
+  {
+    "id": "wf-test-015",
+    "letters": [
+      "L",
+      "L",
+      "I",
+      "A",
+      "K",
+      "S",
+      "R",
+      "T"
+    ],
+    "options": [
+      "K",
+      "I",
+      "S",
+      "T",
+      "-"
+    ],
+    "correctIndex": 0,
+    "solutionWord": "KRISTALL",
+    "explanation": "Die Buchstaben ergeben das Wort „KRISTALL\" (Anfangsbuchstabe „K\").",
+    "difficulty": 1
+  },
+  {
+    "id": "wf-test-016",
+    "letters": [
+      "T",
+      "T",
+      "K",
+      "N",
+      "A",
+      "O",
+      "K"
+    ],
+    "options": [
+      "K",
+      "N",
+      "O",
+      "A",
+      "-"
+    ],
+    "correctIndex": 0,
+    "solutionWord": "KONTAKT",
+    "explanation": "Die Buchstaben ergeben das Wort „KONTAKT\" (Anfangsbuchstabe „K\").",
+    "difficulty": 1
+  },
+  {
+    "id": "wf-test-017",
+    "letters": [
+      "M",
+      "A",
+      "O",
+      "A",
+      "T",
+      "I",
+      "E",
+      "N"
+    ],
+    "options": [
+      "O",
+      "M",
+      "E",
+      "A",
+      "-"
+    ],
+    "correctIndex": 3,
+    "solutionWord": "ANATOMIE",
+    "explanation": "Erkennbar an der Vorsilbe AN-. Die Buchstaben ergeben das Wort „ANATOMIE\" (Anfangsbuchstabe „A\").",
+    "difficulty": 1
+  },
+  {
+    "id": "wf-test-018",
+    "letters": [
+      "C",
+      "H",
+      "N",
+      "E",
+      "A",
+      "D",
+      "S"
+    ],
+    "options": [
+      "C",
+      "N",
+      "E",
+      "S",
+      "-"
+    ],
+    "correctIndex": 3,
+    "solutionWord": "SCHADEN",
+    "explanation": "Die Buchstaben ergeben das Wort „SCHADEN\" (Anfangsbuchstabe „S\").",
+    "difficulty": 1
+  },
+  {
+    "id": "wf-test-019",
+    "letters": [
+      "A",
+      "N",
+      "T",
+      "P",
+      "E",
+      "I",
+      "T"
+    ],
+    "options": [
+      "T",
+      "I",
+      "E",
+      "A",
+      "-"
+    ],
+    "correctIndex": 4,
+    "solutionWord": "PATIENT",
+    "explanation": "Das Lösungswort lautet „PATIENT\" (Anfangsbuchstabe „P\"), der nicht unter A–D angeboten wird. Daher ist E richtig.",
+    "difficulty": 1
+  },
+  {
+    "id": "wf-test-020",
+    "letters": [
+      "E",
+      "R",
+      "G",
+      "W",
+      "E",
+      "K",
+      "R",
+      "B"
+    ],
+    "options": [
+      "R",
+      "B",
+      "G",
+      "K",
+      "-"
+    ],
+    "correctIndex": 1,
+    "solutionWord": "BERGWERK",
+    "explanation": "Erkennbar an der Vorsilbe BE-. Die Buchstaben ergeben das Wort „BERGWERK\" (Anfangsbuchstabe „B\").",
+    "difficulty": 1
+  },
+  {
+    "id": "wf-test-021",
+    "letters": [
+      "L",
+      "R",
+      "I",
+      "E",
+      "N",
+      "M",
+      "A"
+    ],
+    "options": [
+      "M",
+      "A",
+      "R",
+      "N",
+      "-"
+    ],
+    "correctIndex": 0,
+    "solutionWord": "MINERAL",
+    "explanation": "Die Buchstaben ergeben das Wort „MINERAL\" (Anfangsbuchstabe „M\").",
+    "difficulty": 1
+  },
+  {
+    "id": "wf-test-022",
+    "letters": [
+      "H",
+      "S",
+      "E",
+      "V",
+      "R",
+      "U",
+      "C"
+    ],
+    "options": [
+      "V",
+      "H",
+      "S",
+      "U",
+      "-"
+    ],
+    "correctIndex": 0,
+    "solutionWord": "VERSUCH",
+    "explanation": "Erkennbar an der Vorsilbe VER-. Die Buchstaben ergeben das Wort „VERSUCH\" (Anfangsbuchstabe „V\").",
+    "difficulty": 1
+  },
+  {
+    "id": "wf-test-023",
+    "letters": [
+      "L",
+      "U",
+      "P",
+      "A",
+      "M",
+      "F",
+      "E"
+    ],
+    "options": [
+      "M",
+      "F",
+      "P",
+      "A",
+      "-"
+    ],
+    "correctIndex": 2,
+    "solutionWord": "PFLAUME",
+    "explanation": "Die Buchstaben ergeben das Wort „PFLAUME\" (Anfangsbuchstabe „P\").",
+    "difficulty": 1
+  },
+  {
+    "id": "wf-test-024",
+    "letters": [
+      "C",
+      "I",
+      "S",
+      "E",
+      "D",
+      "H",
+      "O",
+      "L",
+      "T",
+      "R",
+      "E",
+      "K"
+    ],
+    "options": [
+      "C",
+      "H",
+      "S",
+      "E",
+      "-"
+    ],
+    "correctIndex": 2,
+    "solutionWord": "SCHILDKROETE",
+    "explanation": "Die Buchstaben ergeben das Wort „SCHILDKROETE\" (Anfangsbuchstabe „S\").",
+    "difficulty": 1
+  },
+  {
+    "id": "wf-test-025",
+    "letters": [
+      "E",
+      "R",
+      "P",
+      "T",
+      "O",
+      "N",
+      "F"
+    ],
+    "options": [
+      "N",
+      "F",
+      "T",
+      "P",
+      "-"
+    ],
+    "correctIndex": 2,
+    "solutionWord": "TROPFEN",
+    "explanation": "Die Buchstaben ergeben das Wort „TROPFEN\" (Anfangsbuchstabe „T\").",
+    "difficulty": 1
+  },
+  {
+    "id": "wf-test-026",
+    "letters": [
+      "F",
+      "R",
+      "P",
+      "A",
+      "N",
+      "L",
+      "A",
+      "H"
+    ],
+    "options": [
+      "P",
+      "L",
+      "F",
+      "H",
+      "-"
+    ],
+    "correctIndex": 2,
+    "solutionWord": "FAHRPLAN",
+    "explanation": "Die Buchstaben ergeben das Wort „FAHRPLAN\" (Anfangsbuchstabe „F\").",
+    "difficulty": 1
+  },
+  {
+    "id": "wf-test-027",
+    "letters": [
+      "D",
+      "B",
+      "L",
+      "E",
+      "L",
+      "I",
+      "T",
+      "I"
+    ],
+    "options": [
+      "E",
+      "I",
+      "L",
+      "T",
+      "-"
+    ],
+    "correctIndex": 2,
+    "solutionWord": "LEITBILD",
+    "explanation": "Die Buchstaben ergeben das Wort „LEITBILD\" (Anfangsbuchstabe „L\").",
+    "difficulty": 1
+  },
+  {
+    "id": "wf-test-028",
+    "letters": [
+      "F",
+      "I",
+      "N",
+      "F",
+      "A",
+      "G",
+      "R"
+    ],
+    "options": [
+      "I",
+      "G",
+      "A",
+      "N",
+      "-"
+    ],
+    "correctIndex": 2,
+    "solutionWord": "ANGRIFF",
+    "explanation": "Erkennbar an der Vorsilbe AN-. Die Buchstaben ergeben das Wort „ANGRIFF\" (Anfangsbuchstabe „A\").",
+    "difficulty": 1
+  },
+  {
+    "id": "wf-test-029",
+    "letters": [
+      "A",
+      "E",
+      "E",
+      "R",
+      "P",
+      "H",
+      "T",
+      "I"
+    ],
+    "options": [
+      "P",
+      "H",
+      "R",
+      "I",
+      "-"
+    ],
+    "correctIndex": 4,
+    "solutionWord": "THERAPIE",
+    "explanation": "Das Lösungswort lautet „THERAPIE\" (Anfangsbuchstabe „T\"), der nicht unter A–D angeboten wird. Daher ist E richtig.",
+    "difficulty": 1
+  },
+  {
+    "id": "wf-test-030",
+    "letters": [
+      "E",
+      "D",
+      "G",
+      "C",
+      "I",
+      "H",
+      "T"
+    ],
+    "options": [
+      "C",
+      "G",
+      "T",
+      "D",
+      "-"
+    ],
+    "correctIndex": 1,
+    "solutionWord": "GEDICHT",
+    "explanation": "Erkennbar an der Vorsilbe GE-. Die Buchstaben ergeben das Wort „GEDICHT\" (Anfangsbuchstabe „G\").",
+    "difficulty": 1
+  },
+  {
+    "id": "wf-test-031",
+    "letters": [
+      "B",
+      "U",
+      "T",
+      "B",
+      "L",
+      "L",
+      "D",
+      "I"
+    ],
+    "options": [
+      "B",
+      "D",
+      "L",
+      "T",
+      "-"
+    ],
+    "correctIndex": 0,
+    "solutionWord": "BLUTBILD",
+    "explanation": "Die Buchstaben ergeben das Wort „BLUTBILD\" (Anfangsbuchstabe „B\").",
+    "difficulty": 1
+  },
+  {
+    "id": "wf-test-032",
+    "letters": [
+      "D",
+      "U",
+      "L",
+      "G",
+      "N",
+      "I",
+      "B"
+    ],
+    "options": [
+      "D",
+      "G",
+      "I",
+      "N",
+      "-"
+    ],
+    "correctIndex": 4,
+    "solutionWord": "BILDUNG",
+    "explanation": "Erkennbar an der Endung -UNG. Das Lösungswort lautet „BILDUNG\" (Anfangsbuchstabe „B\"), der nicht unter A–D angeboten wird. Daher ist E richtig.",
+    "difficulty": 1
+  },
+  {
+    "id": "wf-test-033",
+    "letters": [
+      "U",
+      "G",
+      "F",
+      "M",
+      "P",
+      "N",
+      "I"
+    ],
+    "options": [
+      "I",
+      "N",
+      "U",
+      "F",
+      "-"
+    ],
+    "correctIndex": 0,
+    "solutionWord": "IMPFUNG",
+    "explanation": "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „IMPFUNG\" (Anfangsbuchstabe „I\").",
+    "difficulty": 1
+  },
+  {
+    "id": "wf-test-034",
+    "letters": [
+      "N",
+      "B",
+      "S",
+      "Z",
+      "T",
+      "U",
+      "A",
+      "S"
+    ],
+    "options": [
+      "T",
+      "S",
+      "Z",
+      "N",
+      "-"
+    ],
+    "correctIndex": 1,
+    "solutionWord": "SUBSTANZ",
+    "explanation": "Die Buchstaben ergeben das Wort „SUBSTANZ\" (Anfangsbuchstabe „S\").",
+    "difficulty": 1
+  },
+  {
+    "id": "wf-test-035",
+    "letters": [
+      "N",
+      "A",
+      "D",
+      "A",
+      "W",
+      "U",
+      "F"
+    ],
+    "options": [
+      "A",
+      "D",
+      "U",
+      "W",
+      "-"
+    ],
+    "correctIndex": 0,
+    "solutionWord": "AUFWAND",
+    "explanation": "Erkennbar an der Vorsilbe AUF-. Die Buchstaben ergeben das Wort „AUFWAND\" (Anfangsbuchstabe „A\").",
+    "difficulty": 2
+  },
+  {
+    "id": "wf-test-036",
+    "letters": [
+      "U",
+      "T",
+      "I",
+      "F",
+      "N",
+      "S",
+      "T",
+      "G"
+    ],
+    "options": [
+      "F",
+      "T",
+      "N",
+      "S",
+      "-"
+    ],
+    "correctIndex": 3,
+    "solutionWord": "STIFTUNG",
+    "explanation": "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „STIFTUNG\" (Anfangsbuchstabe „S\").",
+    "difficulty": 2
+  },
+  {
+    "id": "wf-test-037",
+    "letters": [
+      "R",
+      "A",
+      "C",
+      "S",
+      "H",
+      "N",
+      "K"
+    ],
+    "options": [
+      "C",
+      "A",
+      "R",
+      "K",
+      "-"
+    ],
+    "correctIndex": 4,
+    "solutionWord": "SCHRANK",
+    "explanation": "Das Lösungswort lautet „SCHRANK\" (Anfangsbuchstabe „S\"), der nicht unter A–D angeboten wird. Daher ist E richtig.",
+    "difficulty": 2
+  },
+  {
+    "id": "wf-test-038",
+    "letters": [
+      "D",
+      "R",
+      "C",
+      "R",
+      "K",
+      "E",
+      "U"
+    ],
+    "options": [
+      "K",
+      "U",
+      "R",
+      "D",
+      "-"
+    ],
+    "correctIndex": 3,
+    "solutionWord": "DRUCKER",
+    "explanation": "Die Buchstaben ergeben das Wort „DRUCKER\" (Anfangsbuchstabe „D\").",
+    "difficulty": 2
+  },
+  {
+    "id": "wf-test-039",
+    "letters": [
+      "S",
+      "R",
+      "M",
+      "P",
+      "T",
+      "F",
+      "U"
+    ],
+    "options": [
+      "S",
+      "U",
+      "F",
+      "P",
+      "-"
+    ],
+    "correctIndex": 0,
+    "solutionWord": "STRUMPF",
+    "explanation": "Die Buchstaben ergeben das Wort „STRUMPF\" (Anfangsbuchstabe „S\").",
+    "difficulty": 2
+  },
+  {
+    "id": "wf-test-040",
+    "letters": [
+      "E",
+      "T",
+      "K",
+      "S",
+      "C",
+      "B",
+      "E"
+    ],
+    "options": [
+      "T",
+      "B",
+      "S",
+      "C",
+      "-"
+    ],
+    "correctIndex": 1,
+    "solutionWord": "BESTECK",
+    "explanation": "Erkennbar an der Vorsilbe BE-. Die Buchstaben ergeben das Wort „BESTECK\" (Anfangsbuchstabe „B\").",
+    "difficulty": 2
+  },
+  {
+    "id": "wf-test-041",
+    "letters": [
+      "I",
+      "T",
+      "N",
+      "S",
+      "A",
+      "E",
+      "U",
+      "B"
+    ],
+    "options": [
+      "A",
+      "T",
+      "N",
+      "B",
+      "-"
+    ],
+    "correctIndex": 3,
+    "solutionWord": "BAUSTEIN",
+    "explanation": "Die Buchstaben ergeben das Wort „BAUSTEIN\" (Anfangsbuchstabe „B\").",
+    "difficulty": 2
+  },
+  {
+    "id": "wf-test-042",
+    "letters": [
+      "P",
+      "X",
+      "L",
+      "M",
+      "O",
+      "E",
+      "K"
+    ],
+    "options": [
+      "P",
+      "K",
+      "E",
+      "X",
+      "-"
+    ],
+    "correctIndex": 1,
+    "solutionWord": "KOMPLEX",
+    "explanation": "Die Buchstaben ergeben das Wort „KOMPLEX\" (Anfangsbuchstabe „K\").",
+    "difficulty": 2
+  },
+  {
+    "id": "wf-test-043",
+    "letters": [
+      "I",
+      "H",
+      "R",
+      "E",
+      "T",
+      "O",
+      "E"
+    ],
+    "options": [
+      "H",
+      "E",
+      "T",
+      "I",
+      "-"
+    ],
+    "correctIndex": 2,
+    "solutionWord": "THEORIE",
+    "explanation": "Die Buchstaben ergeben das Wort „THEORIE\" (Anfangsbuchstabe „T\").",
+    "difficulty": 2
+  },
+  {
+    "id": "wf-test-044",
+    "letters": [
+      "R",
+      "L",
+      "B",
+      "E",
+      "P",
+      "O",
+      "M"
+    ],
+    "options": [
+      "P",
+      "L",
+      "E",
+      "B",
+      "-"
+    ],
+    "correctIndex": 0,
+    "solutionWord": "PROBLEM",
+    "explanation": "Die Buchstaben ergeben das Wort „PROBLEM\" (Anfangsbuchstabe „P\").",
+    "difficulty": 2
+  },
+  {
+    "id": "wf-test-045",
+    "letters": [
+      "H",
+      "E",
+      "Z",
+      "C",
+      "M",
+      "R",
+      "S"
+    ],
+    "options": [
+      "S",
+      "Z",
+      "C",
+      "H",
+      "-"
+    ],
+    "correctIndex": 0,
+    "solutionWord": "SCHMERZ",
+    "explanation": "Die Buchstaben ergeben das Wort „SCHMERZ\" (Anfangsbuchstabe „S\").",
+    "difficulty": 2
+  },
+  {
+    "id": "wf-test-046",
+    "letters": [
+      "E",
+      "T",
+      "N",
+      "R",
+      "W",
+      "U",
+      "F"
+    ],
+    "options": [
+      "E",
+      "R",
+      "F",
+      "U",
+      "-"
+    ],
+    "correctIndex": 0,
+    "solutionWord": "ENTWURF",
+    "explanation": "Erkennbar an der Vorsilbe ENT-. Die Buchstaben ergeben das Wort „ENTWURF\" (Anfangsbuchstabe „E\").",
+    "difficulty": 2
+  },
+  {
+    "id": "wf-test-047",
+    "letters": [
+      "N",
+      "G",
+      "E",
+      "R",
+      "U",
+      "C",
+      "H",
+      "N"
+    ],
+    "options": [
+      "N",
+      "R",
+      "U",
+      "E",
+      "-"
+    ],
+    "correctIndex": 1,
+    "solutionWord": "RECHNUNG",
+    "explanation": "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „RECHNUNG\" (Anfangsbuchstabe „R\").",
+    "difficulty": 2
+  },
+  {
+    "id": "wf-test-048",
+    "letters": [
+      "G",
+      "H",
+      "T",
+      "D",
+      "N",
+      "U",
+      "C",
+      "I"
+    ],
+    "options": [
+      "T",
+      "U",
+      "D",
+      "G",
+      "-"
+    ],
+    "correctIndex": 2,
+    "solutionWord": "DICHTUNG",
+    "explanation": "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „DICHTUNG\" (Anfangsbuchstabe „D\").",
+    "difficulty": 2
+  },
+  {
+    "id": "wf-test-049",
+    "letters": [
+      "T",
+      "F",
+      "R",
+      "E",
+      "S",
+      "N",
+      "E"
+    ],
+    "options": [
+      "T",
+      "E",
+      "R",
+      "S",
+      "-"
+    ],
+    "correctIndex": 4,
+    "solutionWord": "FENSTER",
+    "explanation": "Das Lösungswort lautet „FENSTER\" (Anfangsbuchstabe „F\"), der nicht unter A–D angeboten wird. Daher ist E richtig.",
+    "difficulty": 2
+  },
+  {
+    "id": "wf-test-050",
+    "letters": [
+      "G",
+      "R",
+      "I",
+      "R",
+      "S",
+      "D",
+      "S",
+      "N",
+      "U"
+    ],
+    "options": [
+      "D",
+      "R",
+      "S",
+      "N",
+      "-"
+    ],
+    "correctIndex": 4,
+    "solutionWord": "GRUNDRISS",
+    "explanation": "Das Lösungswort lautet „GRUNDRISS\" (Anfangsbuchstabe „G\"), der nicht unter A–D angeboten wird. Daher ist E richtig.",
+    "difficulty": 2
+  },
+  {
+    "id": "wf-test-051",
+    "letters": [
+      "D",
+      "N",
+      "E",
+      "W",
+      "L",
+      "A",
+      "F",
+      "S"
+    ],
+    "options": [
+      "L",
+      "S",
+      "F",
+      "D",
+      "-"
+    ],
+    "correctIndex": 2,
+    "solutionWord": "FELSWAND",
+    "explanation": "Die Buchstaben ergeben das Wort „FELSWAND\" (Anfangsbuchstabe „F\").",
+    "difficulty": 2
+  },
+  {
+    "id": "wf-test-052",
+    "letters": [
+      "U",
+      "E",
+      "A",
+      "L",
+      "K",
+      "R",
+      "W",
+      "F"
+    ],
+    "options": [
+      "L",
+      "E",
+      "K",
+      "A",
+      "-"
+    ],
+    "correctIndex": 0,
+    "solutionWord": "LAUFWERK",
+    "explanation": "Die Buchstaben ergeben das Wort „LAUFWERK\" (Anfangsbuchstabe „L\").",
+    "difficulty": 2
+  },
+  {
+    "id": "wf-test-053",
+    "letters": [
+      "K",
+      "E",
+      "S",
+      "L",
+      "T",
+      "T",
+      "E"
+    ],
+    "options": [
+      "E",
+      "K",
+      "S",
+      "T",
+      "-"
+    ],
+    "correctIndex": 2,
+    "solutionWord": "SKELETT",
+    "explanation": "Die Buchstaben ergeben das Wort „SKELETT\" (Anfangsbuchstabe „S\").",
+    "difficulty": 2
+  },
+  {
+    "id": "wf-test-054",
+    "letters": [
+      "E",
+      "A",
+      "S",
+      "F",
+      "H",
+      "L",
+      "C"
+    ],
+    "options": [
+      "H",
+      "A",
+      "F",
+      "S",
+      "-"
+    ],
+    "correctIndex": 2,
+    "solutionWord": "FLASCHE",
+    "explanation": "Die Buchstaben ergeben das Wort „FLASCHE\" (Anfangsbuchstabe „F\").",
+    "difficulty": 2
+  },
+  {
+    "id": "wf-test-055",
+    "letters": [
+      "E",
+      "D",
+      "I",
+      "E",
+      "S",
+      "F",
+      "P",
+      "L",
+      "L"
+    ],
+    "options": [
+      "S",
+      "F",
+      "E",
+      "D",
+      "-"
+    ],
+    "correctIndex": 0,
+    "solutionWord": "SPIELFELD",
+    "explanation": "Die Buchstaben ergeben das Wort „SPIELFELD\" (Anfangsbuchstabe „S\").",
+    "difficulty": 2
+  },
+  {
+    "id": "wf-test-056",
+    "letters": [
+      "R",
+      "K",
+      "I",
+      "W",
+      "N",
+      "G",
+      "U"
+    ],
+    "options": [
+      "N",
+      "K",
+      "W",
+      "U",
+      "-"
+    ],
+    "correctIndex": 2,
+    "solutionWord": "WIRKUNG",
+    "explanation": "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „WIRKUNG\" (Anfangsbuchstabe „W\").",
+    "difficulty": 2
+  },
+  {
+    "id": "wf-test-057",
+    "letters": [
+      "G",
+      "T",
+      "U",
+      "L",
+      "T",
+      "F",
+      "L",
+      "A",
+      "B"
+    ],
+    "options": [
+      "A",
+      "B",
+      "T",
+      "F",
+      "-"
+    ],
+    "correctIndex": 3,
+    "solutionWord": "FLUGBLATT",
+    "explanation": "Die Buchstaben ergeben das Wort „FLUGBLATT\" (Anfangsbuchstabe „F\").",
+    "difficulty": 2
+  },
+  {
+    "id": "wf-test-058",
+    "letters": [
+      "T",
+      "C",
+      "I",
+      "H",
+      "S",
+      "C",
+      "H"
+    ],
+    "options": [
+      "T",
+      "C",
+      "H",
+      "S",
+      "-"
+    ],
+    "correctIndex": 3,
+    "solutionWord": "SCHICHT",
+    "explanation": "Die Buchstaben ergeben das Wort „SCHICHT\" (Anfangsbuchstabe „S\").",
+    "difficulty": 2
+  },
+  {
+    "id": "wf-test-059",
+    "letters": [
+      "H",
+      "M",
+      "T",
+      "R",
+      "L",
+      "E",
+      "A"
+    ],
+    "options": [
+      "L",
+      "E",
+      "M",
+      "T",
+      "-"
+    ],
+    "correctIndex": 0,
+    "solutionWord": "LEHRAMT",
+    "explanation": "Die Buchstaben ergeben das Wort „LEHRAMT\" (Anfangsbuchstabe „L\").",
+    "difficulty": 2
+  },
+  {
+    "id": "wf-test-060",
+    "letters": [
+      "D",
+      "U",
+      "H",
+      "G",
+      "N",
+      "N",
+      "A",
+      "L"
+    ],
+    "options": [
+      "H",
+      "N",
+      "G",
+      "A",
+      "-"
+    ],
+    "correctIndex": 0,
+    "solutionWord": "HANDLUNG",
+    "explanation": "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „HANDLUNG\" (Anfangsbuchstabe „H\").",
+    "difficulty": 2
+  },
+  {
+    "id": "wf-test-061",
+    "letters": [
+      "D",
+      "N",
+      "R",
+      "G",
+      "N",
+      "U",
+      "T",
+      "O"
+    ],
+    "options": [
+      "D",
+      "T",
+      "U",
+      "N",
+      "-"
+    ],
+    "correctIndex": 4,
+    "solutionWord": "GRUNDTON",
+    "explanation": "Das Lösungswort lautet „GRUNDTON\" (Anfangsbuchstabe „G\"), der nicht unter A–D angeboten wird. Daher ist E richtig.",
+    "difficulty": 2
+  },
+  {
+    "id": "wf-test-062",
+    "letters": [
+      "R",
+      "E",
+      "P",
+      "O",
+      "T",
+      "N",
+      "I"
+    ],
+    "options": [
+      "O",
+      "P",
+      "T",
+      "E",
+      "-"
+    ],
+    "correctIndex": 1,
+    "solutionWord": "PROTEIN",
+    "explanation": "Die Buchstaben ergeben das Wort „PROTEIN\" (Anfangsbuchstabe „P\").",
+    "difficulty": 2
+  },
+  {
+    "id": "wf-test-063",
+    "letters": [
+      "W",
+      "S",
+      "R",
+      "K",
+      "A",
+      "T",
+      "T",
+      "T",
+      "E"
+    ],
+    "options": [
+      "S",
+      "T",
+      "W",
+      "K",
+      "-"
+    ],
+    "correctIndex": 2,
+    "solutionWord": "WERKSTATT",
+    "explanation": "Die Buchstaben ergeben das Wort „WERKSTATT\" (Anfangsbuchstabe „W\").",
+    "difficulty": 2
+  },
+  {
+    "id": "wf-test-064",
+    "letters": [
+      "R",
+      "U",
+      "E",
+      "G",
+      "E",
+      "K",
+      "W",
+      "Z"
+    ],
+    "options": [
+      "Z",
+      "R",
+      "W",
+      "U",
+      "-"
+    ],
+    "correctIndex": 2,
+    "solutionWord": "WERKZEUG",
+    "explanation": "Die Buchstaben ergeben das Wort „WERKZEUG\" (Anfangsbuchstabe „W\").",
+    "difficulty": 2
+  },
+  {
+    "id": "wf-test-065",
+    "letters": [
+      "R",
+      "C",
+      "S",
+      "A",
+      "H",
+      "E",
+      "U"
+    ],
+    "options": [
+      "U",
+      "A",
+      "S",
+      "C",
+      "-"
+    ],
+    "correctIndex": 0,
+    "solutionWord": "URSACHE",
+    "explanation": "Die Buchstaben ergeben das Wort „URSACHE\" (Anfangsbuchstabe „U\").",
+    "difficulty": 2
+  },
+  {
+    "id": "wf-test-066",
+    "letters": [
+      "S",
+      "E",
+      "T",
+      "T",
+      "M",
+      "I",
+      "Z",
+      "E",
+      "N"
+    ],
+    "options": [
+      "N",
+      "S",
+      "T",
+      "Z",
+      "-"
+    ],
+    "correctIndex": 1,
+    "solutionWord": "STEINMETZ",
+    "explanation": "Die Buchstaben ergeben das Wort „STEINMETZ\" (Anfangsbuchstabe „S\").",
+    "difficulty": 2
+  },
+  {
+    "id": "wf-test-067",
+    "letters": [
+      "T",
+      "H",
+      "A",
+      "R",
+      "N",
+      "C",
+      "I",
+      "H",
+      "C"
+    ],
+    "options": [
+      "R",
+      "N",
+      "H",
+      "T",
+      "-"
+    ],
+    "correctIndex": 1,
+    "solutionWord": "NACHRICHT",
+    "explanation": "Die Buchstaben ergeben das Wort „NACHRICHT\" (Anfangsbuchstabe „N\").",
+    "difficulty": 2
+  },
+  {
+    "id": "wf-test-068",
+    "letters": [
+      "E",
+      "I",
+      "T",
+      "B",
+      "A",
+      "A",
+      "H",
+      "R",
+      "N",
+      "D"
+    ],
+    "options": [
+      "N",
+      "H",
+      "B",
+      "A",
+      "-"
+    ],
+    "correctIndex": 1,
+    "solutionWord": "HANDARBEIT",
+    "explanation": "Die Buchstaben ergeben das Wort „HANDARBEIT\" (Anfangsbuchstabe „H\").",
+    "difficulty": 3
+  },
+  {
+    "id": "wf-test-069",
+    "letters": [
+      "R",
+      "E",
+      "L",
+      "U",
+      "K",
+      "B",
+      "I",
+      "A",
+      "U",
+      "F",
+      "T",
+      "L",
+      "S"
+    ],
+    "options": [
+      "R",
+      "A",
+      "B",
+      "E",
+      "-"
+    ],
+    "correctIndex": 2,
+    "solutionWord": "BLUTKREISLAUF",
+    "explanation": "Die Buchstaben ergeben das Wort „BLUTKREISLAUF\" (Anfangsbuchstabe „B\").",
+    "difficulty": 3
+  },
+  {
+    "id": "wf-test-070",
+    "letters": [
+      "G",
+      "R",
+      "N",
+      "Z",
+      "D",
+      "G",
+      "E",
+      "E",
+      "S",
+      "U",
+      "T"
+    ],
+    "options": [
+      "D",
+      "U",
+      "E",
+      "S",
+      "-"
+    ],
+    "correctIndex": 4,
+    "solutionWord": "GRUNDGESETZ",
+    "explanation": "Das Lösungswort lautet „GRUNDGESETZ\" (Anfangsbuchstabe „G\"), der nicht unter A–D angeboten wird. Daher ist E richtig.",
+    "difficulty": 3
+  },
+  {
+    "id": "wf-test-071",
+    "letters": [
+      "S",
+      "E",
+      "C",
+      "R",
+      "T",
+      "H",
+      "A",
+      "T",
+      "H",
+      "C",
+      "I",
+      "I",
+      "B"
+    ],
+    "options": [
+      "C",
+      "R",
+      "E",
+      "H",
+      "-"
+    ],
+    "correctIndex": 4,
+    "solutionWord": "SCHICHTARBEIT",
+    "explanation": "Das Lösungswort lautet „SCHICHTARBEIT\" (Anfangsbuchstabe „S\"), der nicht unter A–D angeboten wird. Daher ist E richtig.",
+    "difficulty": 3
+  },
+  {
+    "id": "wf-test-072",
+    "letters": [
+      "E",
+      "P",
+      "E",
+      "H",
+      "Y",
+      "T",
+      "H",
+      "S",
+      "O"
+    ],
+    "options": [
+      "H",
+      "P",
+      "Y",
+      "O",
+      "-"
+    ],
+    "correctIndex": 0,
+    "solutionWord": "HYPOTHESE",
+    "explanation": "Die Buchstaben ergeben das Wort „HYPOTHESE\" (Anfangsbuchstabe „H\").",
+    "difficulty": 3
+  },
+  {
+    "id": "wf-test-073",
+    "letters": [
+      "E",
+      "E",
+      "H",
+      "R",
+      "I",
+      "S",
+      "T",
+      "I",
+      "C",
+      "H"
+    ],
+    "options": [
+      "S",
+      "E",
+      "R",
+      "C",
+      "-"
+    ],
+    "correctIndex": 0,
+    "solutionWord": "SICHERHEIT",
+    "explanation": "Erkennbar an der Endung -HEIT. Die Buchstaben ergeben das Wort „SICHERHEIT\" (Anfangsbuchstabe „S\").",
+    "difficulty": 3
+  },
+  {
+    "id": "wf-test-074",
+    "letters": [
+      "C",
+      "Z",
+      "R",
+      "O",
+      "R",
+      "E",
+      "K",
+      "H",
+      "U",
+      "R"
+    ],
+    "options": [
+      "R",
+      "U",
+      "K",
+      "C",
+      "-"
+    ],
+    "correctIndex": 0,
+    "solutionWord": "ROHRZUCKER",
+    "explanation": "Die Buchstaben ergeben das Wort „ROHRZUCKER\" (Anfangsbuchstabe „R\").",
+    "difficulty": 3
+  },
+  {
+    "id": "wf-test-075",
+    "letters": [
+      "R",
+      "K",
+      "D",
+      "U",
+      "T",
+      "E",
+      "S",
+      "R",
+      "E"
+    ],
+    "options": [
+      "K",
+      "T",
+      "E",
+      "U",
+      "-"
+    ],
+    "correctIndex": 2,
+    "solutionWord": "ERDKRUSTE",
+    "explanation": "Erkennbar an der Vorsilbe ER-. Die Buchstaben ergeben das Wort „ERDKRUSTE\" (Anfangsbuchstabe „E\").",
+    "difficulty": 3
+  },
+  {
+    "id": "wf-test-076",
+    "letters": [
+      "R",
+      "A",
+      "Z",
+      "M",
+      "H",
+      "A",
+      "E",
+      "I",
+      "P"
+    ],
+    "options": [
+      "A",
+      "Z",
+      "E",
+      "H",
+      "-"
+    ],
+    "correctIndex": 4,
+    "solutionWord": "PHARMAZIE",
+    "explanation": "Das Lösungswort lautet „PHARMAZIE\" (Anfangsbuchstabe „P\"), der nicht unter A–D angeboten wird. Daher ist E richtig.",
+    "difficulty": 3
+  },
+  {
+    "id": "wf-test-077",
+    "letters": [
+      "S",
+      "F",
+      "O",
+      "S",
+      "T",
+      "R",
+      "E",
+      "U",
+      "F",
+      "A"
+    ],
+    "options": [
+      "O",
+      "S",
+      "F",
+      "A",
+      "-"
+    ],
+    "correctIndex": 1,
+    "solutionWord": "SAUERSTOFF",
+    "explanation": "Die Buchstaben ergeben das Wort „SAUERSTOFF\" (Anfangsbuchstabe „S\").",
+    "difficulty": 3
+  },
+  {
+    "id": "wf-test-078",
+    "letters": [
+      "W",
+      "C",
+      "T",
+      "R",
+      "K",
+      "T",
+      "S",
+      "H",
+      "S",
+      "A",
+      "U",
+      "A",
+      "F",
+      "M"
+    ],
+    "options": [
+      "U",
+      "W",
+      "M",
+      "F",
+      "-"
+    ],
+    "correctIndex": 1,
+    "solutionWord": "WACHSTUMSKRAFT",
+    "explanation": "Die Buchstaben ergeben das Wort „WACHSTUMSKRAFT\" (Anfangsbuchstabe „W\").",
+    "difficulty": 3
+  },
+  {
+    "id": "wf-test-079",
+    "letters": [
+      "L",
+      "A",
+      "S",
+      "H",
+      "N",
+      "T",
+      "F",
+      "C",
+      "A",
+      "D"
+    ],
+    "options": [
+      "L",
+      "C",
+      "T",
+      "A",
+      "-"
+    ],
+    "correctIndex": 0,
+    "solutionWord": "LANDSCHAFT",
+    "explanation": "Erkennbar an der Endung -SCHAFT. Die Buchstaben ergeben das Wort „LANDSCHAFT\" (Anfangsbuchstabe „L\").",
+    "difficulty": 3
+  },
+  {
+    "id": "wf-test-080",
+    "letters": [
+      "F",
+      "D",
+      "T",
+      "E",
+      "L",
+      "M",
+      "N",
+      "G",
+      "A",
+      "E"
+    ],
+    "options": [
+      "N",
+      "L",
+      "T",
+      "D",
+      "-"
+    ],
+    "correctIndex": 4,
+    "solutionWord": "MAGNETFELD",
+    "explanation": "Das Lösungswort lautet „MAGNETFELD\" (Anfangsbuchstabe „M\"), der nicht unter A–D angeboten wird. Daher ist E richtig.",
+    "difficulty": 3
+  },
+  {
+    "id": "wf-test-081",
+    "letters": [
+      "V",
+      "E",
+      "L",
+      "N",
+      "O",
+      "I",
+      "T",
+      "U",
+      "O"
+    ],
+    "options": [
+      "E",
+      "I",
+      "U",
+      "O",
+      "-"
+    ],
+    "correctIndex": 0,
+    "solutionWord": "EVOLUTION",
+    "explanation": "Erkennbar an der Endung -TION. Die Buchstaben ergeben das Wort „EVOLUTION\" (Anfangsbuchstabe „E\").",
+    "difficulty": 3
+  },
+  {
+    "id": "wf-test-082",
+    "letters": [
+      "K",
+      "E",
+      "P",
+      "G",
+      "A",
+      "T",
+      "S",
+      "L",
+      "N",
+      "R",
+      "N",
+      "U"
+    ],
+    "options": [
+      "G",
+      "L",
+      "K",
+      "P",
+      "-"
+    ],
+    "correctIndex": 2,
+    "solutionWord": "KERNSPALTUNG",
+    "explanation": "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „KERNSPALTUNG\" (Anfangsbuchstabe „K\").",
+    "difficulty": 3
+  },
+  {
+    "id": "wf-test-083",
+    "letters": [
+      "F",
+      "E",
+      "R",
+      "E",
+      "N",
+      "R",
+      "A",
+      "V",
+      "H"
+    ],
+    "options": [
+      "V",
+      "F",
+      "R",
+      "E",
+      "-"
+    ],
+    "correctIndex": 0,
+    "solutionWord": "VERFAHREN",
+    "explanation": "Erkennbar an der Vorsilbe VER-. Die Buchstaben ergeben das Wort „VERFAHREN\" (Anfangsbuchstabe „V\").",
+    "difficulty": 3
+  },
+  {
+    "id": "wf-test-084",
+    "letters": [
+      "R",
+      "W",
+      "B",
+      "E",
+      "N",
+      "R",
+      "N",
+      "T",
+      "E"
+    ],
+    "options": [
+      "T",
+      "B",
+      "R",
+      "N",
+      "-"
+    ],
+    "correctIndex": 1,
+    "solutionWord": "BRENNWERT",
+    "explanation": "Die Buchstaben ergeben das Wort „BRENNWERT\" (Anfangsbuchstabe „B\").",
+    "difficulty": 3
+  },
+  {
+    "id": "wf-test-085",
+    "letters": [
+      "K",
+      "E",
+      "T",
+      "I",
+      "D",
+      "M",
+      "M",
+      "N",
+      "E",
+      "A"
+    ],
+    "options": [
+      "A",
+      "M",
+      "N",
+      "E",
+      "-"
+    ],
+    "correctIndex": 1,
+    "solutionWord": "MEDIKAMENT",
+    "explanation": "Erkennbar an der Endung -MENT. Die Buchstaben ergeben das Wort „MEDIKAMENT\" (Anfangsbuchstabe „M\").",
+    "difficulty": 3
+  },
+  {
+    "id": "wf-test-086",
+    "letters": [
+      "E",
+      "C",
+      "L",
+      "U",
+      "T",
+      "L",
+      "H",
+      "E",
+      "P",
+      "G",
+      "F",
+      "I",
+      "F",
+      "H"
+    ],
+    "options": [
+      "E",
+      "T",
+      "P",
+      "F",
+      "-"
+    ],
+    "correctIndex": 2,
+    "solutionWord": "PFLICHTGEFUEHL",
+    "explanation": "Die Buchstaben ergeben das Wort „PFLICHTGEFUEHL\" (Anfangsbuchstabe „P\").",
+    "difficulty": 3
+  },
+  {
+    "id": "wf-test-087",
+    "letters": [
+      "R",
+      "H",
+      "K",
+      "F",
+      "R",
+      "T",
+      "E",
+      "W",
+      "C",
+      "A",
+      "S"
+    ],
+    "options": [
+      "C",
+      "F",
+      "E",
+      "A",
+      "-"
+    ],
+    "correctIndex": 4,
+    "solutionWord": "SCHWERKRAFT",
+    "explanation": "Das Lösungswort lautet „SCHWERKRAFT\" (Anfangsbuchstabe „S\"), der nicht unter A–D angeboten wird. Daher ist E richtig.",
+    "difficulty": 3
+  },
+  {
+    "id": "wf-test-088",
+    "letters": [
+      "E",
+      "H",
+      "L",
+      "G",
+      "I",
+      "C",
+      "T",
+      "H",
+      "C",
+      "W",
+      "I",
+      "E",
+      "G"
+    ],
+    "options": [
+      "W",
+      "T",
+      "C",
+      "G",
+      "-"
+    ],
+    "correctIndex": 3,
+    "solutionWord": "GLEICHGEWICHT",
+    "explanation": "Die Buchstaben ergeben das Wort „GLEICHGEWICHT\" (Anfangsbuchstabe „G\").",
+    "difficulty": 3
+  },
+  {
+    "id": "wf-test-089",
+    "letters": [
+      "M",
+      "S",
+      "U",
+      "N",
+      "G",
+      "A",
+      "O",
+      "I",
+      "R",
+      "S"
+    ],
+    "options": [
+      "O",
+      "N",
+      "U",
+      "A",
+      "-"
+    ],
+    "correctIndex": 0,
+    "solutionWord": "ORGANISMUS",
+    "explanation": "Die Buchstaben ergeben das Wort „ORGANISMUS\" (Anfangsbuchstabe „O\").",
+    "difficulty": 3
+  },
+  {
+    "id": "wf-test-090",
+    "letters": [
+      "H",
+      "T",
+      "O",
+      "K",
+      "L",
+      "I",
+      "B",
+      "E",
+      "I",
+      "B"
+    ],
+    "options": [
+      "L",
+      "E",
+      "H",
+      "B",
+      "-"
+    ],
+    "correctIndex": 3,
+    "solutionWord": "BIBLIOTHEK",
+    "explanation": "Die Buchstaben ergeben das Wort „BIBLIOTHEK\" (Anfangsbuchstabe „B\").",
+    "difficulty": 3
+  },
+  {
+    "id": "wf-test-091",
+    "letters": [
+      "A",
+      "R",
+      "L",
+      "S",
+      "I",
+      "P",
+      "M",
+      "U",
+      "E"
+    ],
+    "options": [
+      "P",
+      "M",
+      "U",
+      "S",
+      "-"
+    ],
+    "correctIndex": 3,
+    "solutionWord": "SPIELRAUM",
+    "explanation": "Die Buchstaben ergeben das Wort „SPIELRAUM\" (Anfangsbuchstabe „S\").",
+    "difficulty": 3
+  },
+  {
+    "id": "wf-test-092",
+    "letters": [
+      "E",
+      "C",
+      "S",
+      "S",
+      "R",
+      "D",
+      "S",
+      "H",
+      "G",
+      "E",
+      "O"
+    ],
+    "options": [
+      "S",
+      "E",
+      "D",
+      "O",
+      "-"
+    ],
+    "correctIndex": 1,
+    "solutionWord": "ERDGESCHOSS",
+    "explanation": "Erkennbar an der Vorsilbe ER-. Die Buchstaben ergeben das Wort „ERDGESCHOSS\" (Anfangsbuchstabe „E\").",
+    "difficulty": 3
+  },
+  {
+    "id": "wf-test-093",
+    "letters": [
+      "H",
+      "F",
+      "R",
+      "T",
+      "S",
+      "E",
+      "A",
+      "K"
+    ],
+    "options": [
+      "A",
+      "S",
+      "F",
+      "H",
+      "-"
+    ],
+    "correctIndex": 1,
+    "solutionWord": "SEHKRAFT",
+    "explanation": "Die Buchstaben ergeben das Wort „SEHKRAFT\" (Anfangsbuchstabe „S\").",
+    "difficulty": 3
+  },
+  {
+    "id": "wf-test-094",
+    "letters": [
+      "L",
+      "H",
+      "E",
+      "I",
+      "T",
+      "R",
+      "K",
+      "P",
+      "A",
+      "E",
+      "K",
+      "I",
+      "R"
+    ],
+    "options": [
+      "K",
+      "A",
+      "T",
+      "P",
+      "-"
+    ],
+    "correctIndex": 4,
+    "solutionWord": "HEILPRAKTIKER",
+    "explanation": "Das Lösungswort lautet „HEILPRAKTIKER\" (Anfangsbuchstabe „H\"), der nicht unter A–D angeboten wird. Daher ist E richtig.",
+    "difficulty": 3
+  },
+  {
+    "id": "wf-test-095",
+    "letters": [
+      "L",
+      "E",
+      "O",
+      "S",
+      "W",
+      "E",
+      "F",
+      "H",
+      "T",
+      "C",
+      "F",
+      "S"
+    ],
+    "options": [
+      "F",
+      "S",
+      "C",
+      "H",
+      "-"
+    ],
+    "correctIndex": 1,
+    "solutionWord": "STOFFWECHSEL",
+    "explanation": "Die Buchstaben ergeben das Wort „STOFFWECHSEL\" (Anfangsbuchstabe „S\").",
+    "difficulty": 3
+  },
+  {
+    "id": "wf-test-096",
+    "letters": [
+      "C",
+      "L",
+      "L",
+      "W",
+      "B",
+      "K",
+      "I",
+      "K",
+      "E",
+      "I",
+      "N"
+    ],
+    "options": [
+      "L",
+      "K",
+      "B",
+      "I",
+      "-"
+    ],
+    "correctIndex": 2,
+    "solutionWord": "BLICKWINKEL",
+    "explanation": "Die Buchstaben ergeben das Wort „BLICKWINKEL\" (Anfangsbuchstabe „B\").",
+    "difficulty": 3
+  },
+  {
+    "id": "wf-test-097",
+    "letters": [
+      "T",
+      "S",
+      "N",
+      "F",
+      "F",
+      "R",
+      "E",
+      "O",
+      "B",
+      "N"
+    ],
+    "options": [
+      "O",
+      "F",
+      "R",
+      "B",
+      "-"
+    ],
+    "correctIndex": 3,
+    "solutionWord": "BRENNSTOFF",
+    "explanation": "Die Buchstaben ergeben das Wort „BRENNSTOFF\" (Anfangsbuchstabe „B\").",
+    "difficulty": 3
+  },
+  {
+    "id": "wf-test-098",
+    "letters": [
+      "I",
+      "T",
+      "R",
+      "N",
+      "P",
+      "E",
+      "M",
+      "E",
+      "E",
+      "X"
+    ],
+    "options": [
+      "E",
+      "I",
+      "P",
+      "N",
+      "-"
+    ],
+    "correctIndex": 0,
+    "solutionWord": "EXPERIMENT",
+    "explanation": "Erkennbar an der Endung -MENT. Die Buchstaben ergeben das Wort „EXPERIMENT\" (Anfangsbuchstabe „E\").",
+    "difficulty": 3
+  },
+  {
+    "id": "wf-test-099",
+    "letters": [
+      "K",
+      "I",
+      "L",
+      "T",
+      "A",
+      "S",
+      "C",
+      "E",
+      "R",
+      "H",
+      "S"
+    ],
+    "options": [
+      "I",
+      "C",
+      "K",
+      "S",
+      "-"
+    ],
+    "correctIndex": 3,
+    "solutionWord": "SCHALTKREIS",
+    "explanation": "Die Buchstaben ergeben das Wort „SCHALTKREIS\" (Anfangsbuchstabe „S\").",
+    "difficulty": 3
+  },
+  {
+    "id": "wf-test-100",
+    "letters": [
+      "G",
+      "A",
+      "U",
+      "N",
+      "S",
+      "N",
+      "P",
+      "N"
+    ],
+    "options": [
+      "U",
+      "A",
+      "P",
+      "S",
+      "-"
+    ],
+    "correctIndex": 3,
+    "solutionWord": "SPANNUNG",
+    "explanation": "Erkennbar an der Endung -UNG. Die Buchstaben ergeben das Wort „SPANNUNG\" (Anfangsbuchstabe „S\").",
+    "difficulty": 3
+  }
+]

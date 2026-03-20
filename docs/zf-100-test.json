@@ -1,0 +1,6216 @@
+[
+  {
+    "id": "zf-test-001",
+    "sequence": [
+      5,
+      8,
+      9,
+      12,
+      13,
+      16,
+      17,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      20,
+      21
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          23,
+          21
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          20,
+          24
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          14,
+          15
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          20,
+          21
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "D",
+    "rule": "+3, +1 (wiederholend)",
+    "explanation": "Die Folge entsteht durch wiederholtes Anwenden der Operationen: +3, +1.\n5 + 3 = 8 → 8 + 1 = 9 → 9 + 3 = 12 → 12 + 1 = 13 → 13 + 3 = 16 → … \nDaher lauten die nächsten Zahlen: 20 und 21.",
+    "difficulty": "easy",
+    "ops": [
+      {
+        "type": "+",
+        "value": 3
+      },
+      {
+        "type": "+",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "zf-test-002",
+    "sequence": [
+      6,
+      12,
+      13,
+      26,
+      27,
+      54,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      55,
+      110
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          81,
+          108
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          108,
+          109
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          55,
+          107
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          55,
+          110
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "D",
+    "rule": "×2, +1 (wiederholend)",
+    "explanation": "Die Folge entsteht durch wiederholtes Anwenden der Operationen: ×2, +1.\n6 × 2 = 12 → 12 + 1 = 13 → 13 × 2 = 26 → 26 + 1 = 27 → 27 × 2 = 54 → … \nDaher lauten die nächsten Zahlen: 55 und 110.",
+    "difficulty": "easy",
+    "ops": [
+      {
+        "type": "×",
+        "value": 2
+      },
+      {
+        "type": "+",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "zf-test-003",
+    "sequence": [
+      7,
+      14,
+      28,
+      56,
+      112,
+      224,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      448,
+      896
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          448,
+          896
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          448,
+          560
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          336,
+          448
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          112,
+          56
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "A",
+    "rule": "×2 (durchgehend)",
+    "explanation": "Die Folge entsteht durch wiederholtes Anwenden der Operationen: ×2.\n7 × 2 = 14 → 14 × 2 = 28 → 28 × 2 = 56 → 56 × 2 = 112 → 112 × 2 = 224 → … \nDaher lauten die nächsten Zahlen: 448 und 896.",
+    "difficulty": "easy",
+    "ops": [
+      {
+        "type": "×",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "zf-test-004",
+    "sequence": [
+      8,
+      16,
+      20,
+      28,
+      32,
+      40,
+      44,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      52,
+      56
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          52,
+          56
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          52,
+          60
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          52,
+          48
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          48,
+          52
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "A",
+    "rule": "+8, +4 (wiederholend)",
+    "explanation": "Die Folge entsteht durch wiederholtes Anwenden der Operationen: +8, +4.\n8 + 8 = 16 → 16 + 4 = 20 → 20 + 8 = 28 → 28 + 4 = 32 → 32 + 8 = 40 → … \nDaher lauten die nächsten Zahlen: 52 und 56.",
+    "difficulty": "easy",
+    "ops": [
+      {
+        "type": "+",
+        "value": 8
+      },
+      {
+        "type": "+",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "id": "zf-test-005",
+    "sequence": [
+      9,
+      13,
+      11,
+      15,
+      13,
+      17,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      15,
+      19
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          15,
+          13
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          19,
+          23
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          21,
+          25
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          15,
+          19
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "D",
+    "rule": "+4, −2 (wiederholend)",
+    "explanation": "Die Folge entsteht durch wiederholtes Anwenden der Operationen: +4, −2.\n9 + 4 = 13 → 13 − 2 = 11 → 11 + 4 = 15 → 15 − 2 = 13 → 13 + 4 = 17 → … \nDaher lauten die nächsten Zahlen: 15 und 19.",
+    "difficulty": "easy",
+    "ops": [
+      {
+        "type": "+",
+        "value": 4
+      },
+      {
+        "type": "−",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "zf-test-006",
+    "sequence": [
+      10,
+      16,
+      22,
+      28,
+      34,
+      40,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      46,
+      52
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          49,
+          52
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          46,
+          52
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          34,
+          28
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          51,
+          47
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "B",
+    "rule": "+6 (durchgehend)",
+    "explanation": "Die Folge entsteht durch wiederholtes Anwenden der Operationen: +6.\n10 + 6 = 16 → 16 + 6 = 22 → 22 + 6 = 28 → 28 + 6 = 34 → 34 + 6 = 40 → … \nDaher lauten die nächsten Zahlen: 46 und 52.",
+    "difficulty": "easy",
+    "ops": [
+      {
+        "type": "+",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "zf-test-007",
+    "sequence": [
+      11,
+      22,
+      21,
+      42,
+      41,
+      82,
+      81,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      162,
+      161
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          80,
+          79
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          162,
+          324
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          80,
+          160
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          162,
+          161
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "D",
+    "rule": "×2, −1 (wiederholend)",
+    "explanation": "Die Folge entsteht durch wiederholtes Anwenden der Operationen: ×2, −1.\n11 × 2 = 22 → 22 − 1 = 21 → 21 × 2 = 42 → 42 − 1 = 41 → 41 × 2 = 82 → … \nDaher lauten die nächsten Zahlen: 162 und 161.",
+    "difficulty": "easy",
+    "ops": [
+      {
+        "type": "×",
+        "value": 2
+      },
+      {
+        "type": "−",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "zf-test-008",
+    "sequence": [
+      9,
+      11,
+      15,
+      21,
+      29,
+      39,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      51,
+      65
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          46,
+          54
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          49,
+          59
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          51,
+          65
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          56,
+          76
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "C",
+    "rule": "Wachsende Differenz: +2, +4, +6, …",
+    "explanation": "Differenzen wachsen: +2, +4, +6, +8, …\nNächste Zahlen: 51 und 65.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "zf-test-009",
+    "sequence": [
+      2,
+      3,
+      5,
+      8,
+      12,
+      17,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      23,
+      30
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          22,
+          27
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          23,
+          30
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          18,
+          19
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          11,
+          4
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "B",
+    "rule": "Wachsende Differenz: +1, +2, +3, …",
+    "explanation": "Differenzen wachsen: +1, +2, +3, +4, …\nNächste Zahlen: 23 und 30.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "zf-test-010",
+    "sequence": [
+      6,
+      100,
+      7,
+      90,
+      8,
+      80,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      9,
+      70
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          9,
+          70
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          -2,
+          81
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          306,
+          686
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          152,
+          224
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "A",
+    "rule": "Verschachtelt: Pos 1,3,5,… +1; Pos 2,4,6,… −10",
+    "explanation": "Verschachtelte Folge: Ungerade Positionen (6, 7, 8) folgen der Regel +1. Gerade Positionen (100, 90, 80) folgen der Regel −10.\nNächste Zahlen: 9 und 70.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "zf-test-011",
+    "sequence": [
+      4,
+      7,
+      7,
+      12,
+      10,
+      17,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      13,
+      22
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          33,
+          58
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          15,
+          20
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          24,
+          31
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          13,
+          22
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "D",
+    "rule": "Verschachtelt: Pos 1,3,5,… +3; Pos 2,4,6,… +5",
+    "explanation": "Verschachtelte Folge: Ungerade Positionen (4, 7, 10) folgen der Regel +3. Gerade Positionen (7, 12, 17) folgen der Regel +5.\nNächste Zahlen: 13 und 22.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "zf-test-012",
+    "sequence": [
+      4,
+      6,
+      10,
+      16,
+      26,
+      42,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      68,
+      110
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          16,
+          -26
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          68,
+          84
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          64,
+          116
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          64,
+          92
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "E",
+    "rule": "Fibonacci: nächste = vorherige + vorvorherige",
+    "explanation": "Fibonacci: nächste = vorherige + vorvorherige.\nBeispiel: 26 und 42 → 42 + 26 = 68.\nNächste Zahlen: 68 und 110.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "zf-test-013",
+    "sequence": [
+      3,
+      5,
+      8,
+      13,
+      21,
+      34,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      55,
+      89
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          61,
+          84
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          52,
+          75
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          55,
+          68
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          13,
+          -21
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "E",
+    "rule": "Fibonacci: nächste = vorherige + vorvorherige",
+    "explanation": "Fibonacci: nächste = vorherige + vorvorherige.\nBeispiel: 21 und 34 → 34 + 21 = 55.\nNächste Zahlen: 55 und 89.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "zf-test-014",
+    "sequence": [
+      5,
+      6,
+      8,
+      11,
+      15,
+      20,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      26,
+      33
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          27,
+          36
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          25,
+          30
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          26,
+          30
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          26,
+          33
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "D",
+    "rule": "Zweite Differenz konstant: +1",
+    "explanation": "Differenzen: 1, 2, 3, 4, … (jeweils +1 mehr)\nNächste Zahlen: 26 und 33.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "zf-test-015",
+    "sequence": [
+      18,
+      22,
+      27,
+      33,
+      40,
+      48,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      57,
+      67
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          58,
+          70
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          57,
+          67
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          56,
+          64
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          57,
+          64
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "B",
+    "rule": "Zweite Differenz konstant: +1",
+    "explanation": "Differenzen: 4, 5, 6, 7, … (jeweils +1 mehr)\nNächste Zahlen: 57 und 67.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "zf-test-016",
+    "sequence": [
+      20,
+      24,
+      22,
+      26,
+      24,
+      28,
+      26,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      30,
+      28
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          30,
+          34
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          30,
+          31
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          30,
+          28
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          30,
+          32
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "C",
+    "rule": "+4, −2 (wiederholend)",
+    "explanation": "Die Folge entsteht durch wiederholtes Anwenden der Operationen: +4, −2.\n20 + 4 = 24 → 24 − 2 = 22 → 22 + 4 = 26 → 26 − 2 = 24 → 24 + 4 = 28 → … \nDaher lauten die nächsten Zahlen: 30 und 28.",
+    "difficulty": "easy",
+    "ops": [
+      {
+        "type": "+",
+        "value": 4
+      },
+      {
+        "type": "−",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "zf-test-017",
+    "sequence": [
+      21,
+      28,
+      35,
+      42,
+      49,
+      56,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      63,
+      70
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          49,
+          42
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          63,
+          73
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          67,
+          66
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          63,
+          70
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "D",
+    "rule": "+7 (durchgehend)",
+    "explanation": "Die Folge entsteht durch wiederholtes Anwenden der Operationen: +7.\n21 + 7 = 28 → 28 + 7 = 35 → 35 + 7 = 42 → 42 + 7 = 49 → 49 + 7 = 56 → … \nDaher lauten die nächsten Zahlen: 63 und 70.",
+    "difficulty": "easy",
+    "ops": [
+      {
+        "type": "+",
+        "value": 7
+      }
+    ]
+  },
+  {
+    "id": "zf-test-018",
+    "sequence": [
+      22,
+      24,
+      48,
+      50,
+      100,
+      102,
+      204,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      206,
+      412
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          206,
+          412
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          306,
+          408
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          206,
+          103
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          408,
+          410
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "A",
+    "rule": "+2, ×2 (wiederholend)",
+    "explanation": "Die Folge entsteht durch wiederholtes Anwenden der Operationen: +2, ×2.\n22 + 2 = 24 → 24 × 2 = 48 → 48 + 2 = 50 → 50 × 2 = 100 → 100 + 2 = 102 → … \nDaher lauten die nächsten Zahlen: 206 und 412.",
+    "difficulty": "easy",
+    "ops": [
+      {
+        "type": "+",
+        "value": 2
+      },
+      {
+        "type": "×",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "zf-test-019",
+    "sequence": [
+      23,
+      26,
+      31,
+      34,
+      39,
+      42,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      47,
+      50
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          37,
+          40
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          44,
+          50
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          47,
+          50
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          45,
+          48
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "C",
+    "rule": "+3, +5 (wiederholend)",
+    "explanation": "Die Folge entsteht durch wiederholtes Anwenden der Operationen: +3, +5.\n23 + 3 = 26 → 26 + 5 = 31 → 31 + 3 = 34 → 34 + 5 = 39 → 39 + 3 = 42 → … \nDaher lauten die nächsten Zahlen: 47 und 50.",
+    "difficulty": "easy",
+    "ops": [
+      {
+        "type": "+",
+        "value": 3
+      },
+      {
+        "type": "+",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "zf-test-020",
+    "sequence": [
+      24,
+      30,
+      36,
+      42,
+      48,
+      54,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      60,
+      66
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          60,
+          66
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          48,
+          42
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          65,
+          61
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          63,
+          63
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "A",
+    "rule": "+6 (durchgehend)",
+    "explanation": "Die Folge entsteht durch wiederholtes Anwenden der Operationen: +6.\n24 + 6 = 30 → 30 + 6 = 36 → 36 + 6 = 42 → 42 + 6 = 48 → 48 + 6 = 54 → … \nDaher lauten die nächsten Zahlen: 60 und 66.",
+    "difficulty": "easy",
+    "ops": [
+      {
+        "type": "+",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "zf-test-021",
+    "sequence": [
+      5,
+      10,
+      9,
+      18,
+      17,
+      34,
+      33,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      66,
+      65
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          32,
+          64
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          66,
+          65
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          32,
+          31
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          66,
+          83
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "B",
+    "rule": "×2, −1 (wiederholend)",
+    "explanation": "Die Folge entsteht durch wiederholtes Anwenden der Operationen: ×2, −1.\n5 × 2 = 10 → 10 − 1 = 9 → 9 × 2 = 18 → 18 − 1 = 17 → 17 × 2 = 34 → … \nDaher lauten die nächsten Zahlen: 66 und 65.",
+    "difficulty": "easy",
+    "ops": [
+      {
+        "type": "×",
+        "value": 2
+      },
+      {
+        "type": "−",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "zf-test-022",
+    "sequence": [
+      19,
+      24,
+      23,
+      28,
+      27,
+      32,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      31,
+      36
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          31,
+          30
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          31,
+          26
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          37,
+          36
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          31,
+          36
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "D",
+    "rule": "+5, −1 (wiederholend)",
+    "explanation": "Die Folge entsteht durch wiederholtes Anwenden der Operationen: +5, −1.\n19 + 5 = 24 → 24 − 1 = 23 → 23 + 5 = 28 → 28 − 1 = 27 → 27 + 5 = 32 → … \nDaher lauten die nächsten Zahlen: 31 und 36.",
+    "difficulty": "easy",
+    "ops": [
+      {
+        "type": "+",
+        "value": 5
+      },
+      {
+        "type": "−",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "zf-test-023",
+    "sequence": [
+      7,
+      10,
+      11,
+      14,
+      15,
+      18,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      19,
+      22
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          21,
+          24
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          19,
+          22
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          17,
+          20
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          28,
+          13
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "B",
+    "rule": "+3, +1 (wiederholend)",
+    "explanation": "Die Folge entsteht durch wiederholtes Anwenden der Operationen: +3, +1.\n7 + 3 = 10 → 10 + 1 = 11 → 11 + 3 = 14 → 14 + 1 = 15 → 15 + 3 = 18 → … \nDaher lauten die nächsten Zahlen: 19 und 22.",
+    "difficulty": "easy",
+    "ops": [
+      {
+        "type": "+",
+        "value": 3
+      },
+      {
+        "type": "+",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "zf-test-024",
+    "sequence": [
+      13,
+      16,
+      20,
+      25,
+      31,
+      38,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      46,
+      55
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          51,
+          66
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          45,
+          52
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          56,
+          77
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          46,
+          55
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "D",
+    "rule": "Wachsende Differenz: +3, +4, +5, …",
+    "explanation": "Differenzen wachsen: +3, +4, +5, +6, …\nNächste Zahlen: 46 und 55.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "zf-test-025",
+    "sequence": [
+      6,
+      8,
+      12,
+      18,
+      26,
+      36,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      48,
+      62
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          43,
+          51
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          53,
+          73
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          46,
+          56
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          57,
+          68
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "E",
+    "rule": "Wachsende Differenz: +2, +4, +6, …",
+    "explanation": "Differenzen wachsen: +2, +4, +6, +8, …\nNächste Zahlen: 48 und 62.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "zf-test-026",
+    "sequence": [
+      19,
+      20,
+      22,
+      25,
+      29,
+      34,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      40,
+      47
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          45,
+          58
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          40,
+          42
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          44,
+          42
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          39,
+          44
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "E",
+    "rule": "Wachsende Differenz: +1, +2, +3, …",
+    "explanation": "Differenzen wachsen: +1, +2, +3, +4, …\nNächste Zahlen: 40 und 47.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "zf-test-027",
+    "sequence": [
+      6,
+      4,
+      10,
+      6,
+      14,
+      8,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      18,
+      10
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          16,
+          12
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          18,
+          14
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          -12,
+          -46
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          18,
+          10
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "D",
+    "rule": "Verschachtelt: Pos 1,3,5,… +4; Pos 2,4,6,… +2",
+    "explanation": "Verschachtelte Folge: Ungerade Positionen (6, 10, 14) folgen der Regel +4. Gerade Positionen (4, 6, 8) folgen der Regel +2.\nNächste Zahlen: 18 und 10.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "zf-test-028",
+    "sequence": [
+      1,
+      2,
+      3,
+      5,
+      8,
+      13,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      21,
+      34
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          5,
+          -8
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          21,
+          34
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          20,
+          29
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          21,
+          23
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "B",
+    "rule": "Fibonacci: nächste = vorherige + vorvorherige",
+    "explanation": "Fibonacci: nächste = vorherige + vorvorherige.\nBeispiel: 8 und 13 → 13 + 8 = 21.\nNächste Zahlen: 21 und 34.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "zf-test-029",
+    "sequence": [
+      4,
+      5,
+      9,
+      14,
+      23,
+      37,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      60,
+      97
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          56,
+          80
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          60,
+          65
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          60,
+          97
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          14,
+          -23
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "C",
+    "rule": "Fibonacci: nächste = vorherige + vorvorherige",
+    "explanation": "Fibonacci: nächste = vorherige + vorvorherige.\nBeispiel: 23 und 37 → 37 + 23 = 60.\nNächste Zahlen: 60 und 97.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "zf-test-030",
+    "sequence": [
+      9,
+      11,
+      15,
+      21,
+      29,
+      39,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      51,
+      65
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          51,
+          57
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          52,
+          68
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          51,
+          65
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          49,
+          59
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "C",
+    "rule": "Zweite Differenz konstant: +2",
+    "explanation": "Differenzen: 2, 4, 6, 8, … (jeweils +2 mehr)\nNächste Zahlen: 51 und 65.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "zf-test-031",
+    "sequence": [
+      2,
+      3,
+      5,
+      8,
+      12,
+      17,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      23,
+      30
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          23,
+          30
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          23,
+          26
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          22,
+          27
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          24,
+          33
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "A",
+    "rule": "Zweite Differenz konstant: +1",
+    "explanation": "Differenzen: 1, 2, 3, 4, … (jeweils +1 mehr)\nNächste Zahlen: 23 und 30.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "zf-test-032",
+    "sequence": [
+      16,
+      32,
+      31,
+      62,
+      61,
+      122,
+      121,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      242,
+      241
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          242,
+          484
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          120,
+          119
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          120,
+          240
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          242,
+          241
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "D",
+    "rule": "×2, −1 (wiederholend)",
+    "explanation": "Die Folge entsteht durch wiederholtes Anwenden der Operationen: ×2, −1.\n16 × 2 = 32 → 32 − 1 = 31 → 31 × 2 = 62 → 62 − 1 = 61 → 61 × 2 = 122 → … \nDaher lauten die nächsten Zahlen: 242 und 241.",
+    "difficulty": "easy",
+    "ops": [
+      {
+        "type": "×",
+        "value": 2
+      },
+      {
+        "type": "−",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "zf-test-033",
+    "sequence": [
+      6,
+      9,
+      14,
+      17,
+      22,
+      25,
+      30,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      33,
+      38
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          27,
+          32
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          33,
+          35
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          33,
+          38
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          35,
+          40
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "C",
+    "rule": "+3, +5 (wiederholend)",
+    "explanation": "Die Folge entsteht durch wiederholtes Anwenden der Operationen: +3, +5.\n6 + 3 = 9 → 9 + 5 = 14 → 14 + 3 = 17 → 17 + 5 = 22 → 22 + 3 = 25 → … \nDaher lauten die nächsten Zahlen: 33 und 38.",
+    "difficulty": "easy",
+    "ops": [
+      {
+        "type": "+",
+        "value": 3
+      },
+      {
+        "type": "+",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "zf-test-034",
+    "sequence": [
+      18,
+      22,
+      26,
+      30,
+      34,
+      38,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      42,
+      46
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          34,
+          30
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          50,
+          38
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          49,
+          39
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          42,
+          46
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "D",
+    "rule": "+4 (durchgehend)",
+    "explanation": "Die Folge entsteht durch wiederholtes Anwenden der Operationen: +4.\n18 + 4 = 22 → 22 + 4 = 26 → 26 + 4 = 30 → 30 + 4 = 34 → 34 + 4 = 38 → … \nDaher lauten die nächsten Zahlen: 42 und 46.",
+    "difficulty": "easy",
+    "ops": [
+      {
+        "type": "+",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "id": "zf-test-035",
+    "sequence": [
+      21,
+      25,
+      50,
+      46,
+      50,
+      100,
+      96,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      100,
+      200
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          192,
+          188
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          92,
+          88
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          100,
+          200
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          100,
+          104
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "C",
+    "rule": "+4, ×2, −4 (wiederholend)",
+    "explanation": "Die Folge entsteht durch wiederholtes Anwenden der Operationen: +4, ×2, −4.\n21 + 4 = 25 → 25 × 2 = 50 → 50 − 4 = 46 → 46 + 4 = 50 → 50 × 2 = 100 → … \nDaher lauten die nächsten Zahlen: 100 und 200.",
+    "difficulty": "medium",
+    "ops": [
+      {
+        "type": "+",
+        "value": 4
+      },
+      {
+        "type": "×",
+        "value": 2
+      },
+      {
+        "type": "−",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "id": "zf-test-036",
+    "sequence": [
+      22,
+      44,
+      52,
+      104,
+      112,
+      224,
+      232,
+      464,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      472,
+      944
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          696,
+          928
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          928,
+          936
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          472,
+          524
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          472,
+          944
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "D",
+    "rule": "×2, +8 (wiederholend)",
+    "explanation": "Die Folge entsteht durch wiederholtes Anwenden der Operationen: ×2, +8.\n22 × 2 = 44 → 44 + 8 = 52 → 52 × 2 = 104 → 104 + 8 = 112 → 112 × 2 = 224 → … \nDaher lauten die nächsten Zahlen: 472 und 944.",
+    "difficulty": "medium",
+    "ops": [
+      {
+        "type": "×",
+        "value": 2
+      },
+      {
+        "type": "+",
+        "value": 8
+      }
+    ]
+  },
+  {
+    "id": "zf-test-037",
+    "sequence": [
+      24,
+      48,
+      43,
+      86,
+      81,
+      162,
+      157,
+      314,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      309,
+      618
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          309,
+          352
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          309,
+          618
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          628,
+          623
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          309,
+          304
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "B",
+    "rule": "×2, −5 (wiederholend)",
+    "explanation": "Die Folge entsteht durch wiederholtes Anwenden der Operationen: ×2, −5.\n24 × 2 = 48 → 48 − 5 = 43 → 43 × 2 = 86 → 86 − 5 = 81 → 81 × 2 = 162 → … \nDaher lauten die nächsten Zahlen: 309 und 618.",
+    "difficulty": "medium",
+    "ops": [
+      {
+        "type": "×",
+        "value": 2
+      },
+      {
+        "type": "−",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "zf-test-038",
+    "sequence": [
+      4,
+      128,
+      12,
+      113,
+      36,
+      98,
+      108,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      83,
+      324
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          83,
+          324
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          83,
+          6
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          294,
+          882
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          294,
+          93
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "A",
+    "rule": "Verschachtelt: Pos 1,3,5,… ×3; Pos 2,4,6,… −15",
+    "explanation": "Verschachtelte Folge: Ungerade Positionen (4, 12, 36, 108) folgen der Regel ×3. Gerade Positionen (128, 113, 98) folgen der Regel −15.\nNächste Zahlen: 83 und 324.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "zf-test-039",
+    "sequence": [
+      8,
+      72,
+      16,
+      67,
+      24,
+      62,
+      32,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      57,
+      40
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          52,
+          45
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          -66,
+          -232
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          70,
+          27
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          2,
+          -28
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "E",
+    "rule": "Verschachtelt: Pos 1,3,5,… +8; Pos 2,4,6,… −5",
+    "explanation": "Verschachtelte Folge: Ungerade Positionen (8, 16, 24, 32) folgen der Regel +8. Gerade Positionen (72, 67, 62) folgen der Regel −5.\nNächste Zahlen: 57 und 40.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "zf-test-040",
+    "sequence": [
+      60,
+      66,
+      33,
+      36,
+      42,
+      21,
+      24,
+      30,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      15,
+      18
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          18,
+          18
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          36,
+          42
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          8,
+          14
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          15,
+          23
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "E",
+    "rule": "+6, ÷2, +3 (wiederholend)",
+    "explanation": "Die Folge entsteht durch wiederholtes Anwenden der Operationen: +6, ÷2, +3.\n60 + 6 = 66 → 66 ÷ 2 = 33 → 33 + 3 = 36 → 36 + 6 = 42 → 42 ÷ 2 = 21 → … \nDaher lauten die nächsten Zahlen: 15 und 18.",
+    "difficulty": "medium",
+    "ops": [
+      {
+        "type": "+",
+        "value": 6
+      },
+      {
+        "type": "÷",
+        "value": 2
+      },
+      {
+        "type": "+",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "zf-test-041",
+    "sequence": [
+      17,
+      20,
+      25,
+      32,
+      41,
+      52,
+      65,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      80,
+      97
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          86,
+          110
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          80,
+          91
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          80,
+          97
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          92,
+          123
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "C",
+    "rule": "Wachsende Differenz: +3, +5, +7, …",
+    "explanation": "Differenzen wachsen: +3, +5, +7, +9, …\nNächste Zahlen: 80 und 97.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "zf-test-042",
+    "sequence": [
+      523,
+      521,
+      517,
+      511,
+      503,
+      493,
+      481,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      467,
+      451
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          473,
+          464
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          495,
+          511
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          467,
+          451
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          461,
+          438
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "C",
+    "rule": "Wachsende Differenz: −2, −4, −6, …",
+    "explanation": "Differenzen wachsen: −2, −4, −6, −8, …\nNächste Zahlen: 467 und 451.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "zf-test-043",
+    "sequence": [
+      1,
+      6,
+      7,
+      13,
+      20,
+      33,
+      53,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      86,
+      139
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          86,
+          92
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          80,
+          114
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          86,
+          139
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          73,
+          93
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "C",
+    "rule": "Fibonacci: nächste = vorherige + vorvorherige",
+    "explanation": "Fibonacci: nächste = vorherige + vorvorherige.\nBeispiel: 33 und 53 → 53 + 33 = 86.\nNächste Zahlen: 86 und 139.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "zf-test-044",
+    "sequence": [
+      5,
+      10,
+      16,
+      27,
+      44,
+      72,
+      117,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      190,
+      308
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          190,
+          308
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          179,
+          258
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          162,
+          207
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          190,
+          201
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "A",
+    "rule": "Fibonacci + 1: nächste = vorherige + vorvorherige + 1",
+    "explanation": "Fibonacci + 1: nächste = vorherige + vorvorherige + 1.\nBeispiel: 72 und 117 → 117 + 72 +1 = 190.\nNächste Zahlen: 190 und 308.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "zf-test-045",
+    "sequence": [
+      3,
+      3,
+      5,
+      7,
+      11,
+      17,
+      27,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      43,
+      69
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          43,
+          69
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          41,
+          59
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          43,
+          45
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          44,
+          71
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "A",
+    "rule": "Fibonacci − 1: nächste = vorherige + vorvorherige − 1",
+    "explanation": "Fibonacci − 1: nächste = vorherige + vorvorherige − 1.\nBeispiel: 17 und 27 → 27 + 17 -1 = 43.\nNächste Zahlen: 43 und 69.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "zf-test-046",
+    "sequence": [
+      0,
+      3,
+      10,
+      21,
+      36,
+      55,
+      78,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      105,
+      136
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          106,
+          139
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          105,
+          136
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          101,
+          124
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          105,
+          108
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "B",
+    "rule": "Zweite Differenz konstant: +4",
+    "explanation": "Differenzen: 3, 7, 11, 15, … (jeweils +4 mehr)\nNächste Zahlen: 105 und 136.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "zf-test-047",
+    "sequence": [
+      13,
+      14,
+      20,
+      31,
+      47,
+      68,
+      94,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      125,
+      161
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          120,
+          146
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          125,
+          161
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          125,
+          126
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          124,
+          158
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "B",
+    "rule": "Zweite Differenz konstant: +5",
+    "explanation": "Differenzen: 1, 6, 11, 16, … (jeweils +5 mehr)\nNächste Zahlen: 125 und 161.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "zf-test-048",
+    "sequence": [
+      6,
+      10,
+      17,
+      27,
+      40,
+      56,
+      75,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      97,
+      122
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          97,
+          101
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          97,
+          122
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          94,
+          113
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          96,
+          119
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "B",
+    "rule": "Zweite Differenz konstant: +3",
+    "explanation": "Differenzen: 4, 7, 10, 13, … (jeweils +3 mehr)\nNächste Zahlen: 97 und 122.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "zf-test-049",
+    "sequence": [
+      12,
+      17,
+      34,
+      31,
+      36,
+      72,
+      69,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      74,
+      148
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          138,
+          135
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          74,
+          79
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          66,
+          71
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          74,
+          148
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "D",
+    "rule": "+5, ×2, −3 (wiederholend)",
+    "explanation": "Die Folge entsteht durch wiederholtes Anwenden der Operationen: +5, ×2, −3.\n12 + 5 = 17 → 17 × 2 = 34 → 34 − 3 = 31 → 31 + 5 = 36 → 36 × 2 = 72 → … \nDaher lauten die nächsten Zahlen: 74 und 148.",
+    "difficulty": "medium",
+    "ops": [
+      {
+        "type": "+",
+        "value": 5
+      },
+      {
+        "type": "×",
+        "value": 2
+      },
+      {
+        "type": "−",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "zf-test-050",
+    "sequence": [
+      13,
+      23,
+      20,
+      30,
+      27,
+      37,
+      34,
+      44,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      41,
+      51
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          41,
+          51
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          41,
+          31
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          41,
+          38
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          54,
+          51
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "A",
+    "rule": "+10, −3 (wiederholend)",
+    "explanation": "Die Folge entsteht durch wiederholtes Anwenden der Operationen: +10, −3.\n13 + 10 = 23 → 23 − 3 = 20 → 20 + 10 = 30 → 30 − 3 = 27 → 27 + 10 = 37 → … \nDaher lauten die nächsten Zahlen: 41 und 51.",
+    "difficulty": "medium",
+    "ops": [
+      {
+        "type": "+",
+        "value": 10
+      },
+      {
+        "type": "−",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "zf-test-051",
+    "sequence": [
+      26,
+      31,
+      62,
+      56,
+      61,
+      122,
+      116,
+      121,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      242,
+      236
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          242,
+          484
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          115,
+          120
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          242,
+          236
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          242,
+          247
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "C",
+    "rule": "+5, ×2, −6 (wiederholend)",
+    "explanation": "Die Folge entsteht durch wiederholtes Anwenden der Operationen: +5, ×2, −6.\n26 + 5 = 31 → 31 × 2 = 62 → 62 − 6 = 56 → 56 + 5 = 61 → 61 × 2 = 122 → … \nDaher lauten die nächsten Zahlen: 242 und 236.",
+    "difficulty": "medium",
+    "ops": [
+      {
+        "type": "+",
+        "value": 5
+      },
+      {
+        "type": "×",
+        "value": 2
+      },
+      {
+        "type": "−",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "zf-test-052",
+    "sequence": [
+      24,
+      28,
+      84,
+      28,
+      24,
+      28,
+      84,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      28,
+      24
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          88,
+          264
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          252,
+          84
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          80,
+          84
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          25,
+          19
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "E",
+    "rule": "+4, ×3, ÷3, −4 (wiederholend)",
+    "explanation": "Die Folge entsteht durch wiederholtes Anwenden der Operationen: +4, ×3, ÷3, −4.\n24 + 4 = 28 → 28 × 3 = 84 → 84 ÷ 3 = 28 → 28 − 4 = 24 → 24 + 4 = 28 → … \nDaher lauten die nächsten Zahlen: 28 und 24.",
+    "difficulty": "medium",
+    "ops": [
+      {
+        "type": "+",
+        "value": 4
+      },
+      {
+        "type": "×",
+        "value": 3
+      },
+      {
+        "type": "÷",
+        "value": 3
+      },
+      {
+        "type": "−",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "id": "zf-test-053",
+    "sequence": [
+      18,
+      21,
+      25,
+      32,
+      35,
+      39,
+      46,
+      49,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      53,
+      60
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          45,
+          52
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          50,
+          60
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          53,
+          55
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          58,
+          56
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "E",
+    "rule": "+3, +4, +7 (wiederholend)",
+    "explanation": "Die Folge entsteht durch wiederholtes Anwenden der Operationen: +3, +4, +7.\n18 + 3 = 21 → 21 + 4 = 25 → 25 + 7 = 32 → 32 + 3 = 35 → 35 + 4 = 39 → … \nDaher lauten die nächsten Zahlen: 53 und 60.",
+    "difficulty": "medium",
+    "ops": [
+      {
+        "type": "+",
+        "value": 3
+      },
+      {
+        "type": "+",
+        "value": 4
+      },
+      {
+        "type": "+",
+        "value": 7
+      }
+    ]
+  },
+  {
+    "id": "zf-test-054",
+    "sequence": [
+      2,
+      9,
+      4,
+      16,
+      8,
+      23,
+      16,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      30,
+      32
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          46,
+          92
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          46,
+          23
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          30,
+          32
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          -13,
+          -64
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "C",
+    "rule": "Verschachtelt: Pos 1,3,5,… ×2; Pos 2,4,6,… +7",
+    "explanation": "Verschachtelte Folge: Ungerade Positionen (2, 4, 8, 16) folgen der Regel ×2. Gerade Positionen (9, 16, 23) folgen der Regel +7.\nNächste Zahlen: 30 und 32.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "zf-test-055",
+    "sequence": [
+      4,
+      118,
+      12,
+      103,
+      36,
+      88,
+      108,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      73,
+      324
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          96,
+          52
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          73,
+          324
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          73,
+          -33
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          128,
+          148
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "B",
+    "rule": "Verschachtelt: Pos 1,3,5,… ×3; Pos 2,4,6,… −15",
+    "explanation": "Verschachtelte Folge: Ungerade Positionen (4, 12, 36, 108) folgen der Regel ×3. Gerade Positionen (118, 103, 88) folgen der Regel −15.\nNächste Zahlen: 73 und 324.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "zf-test-056",
+    "sequence": [
+      7,
+      68,
+      15,
+      63,
+      23,
+      58,
+      31,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      53,
+      39
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          53,
+          39
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          53,
+          0
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          66,
+          26
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          -58,
+          -209
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "A",
+    "rule": "Verschachtelt: Pos 1,3,5,… +8; Pos 2,4,6,… −5",
+    "explanation": "Verschachtelte Folge: Ungerade Positionen (7, 15, 23, 31) folgen der Regel +8. Gerade Positionen (68, 63, 58) folgen der Regel −5.\nNächste Zahlen: 53 und 39.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "zf-test-057",
+    "sequence": [
+      1,
+      3,
+      8,
+      16,
+      27,
+      41,
+      58,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      78,
+      101
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          78,
+          101
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          38,
+          15
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          75,
+          92
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          90,
+          127
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "A",
+    "rule": "Wachsende Differenz: +2, +5, +8, …",
+    "explanation": "Differenzen wachsen: +2, +5, +8, +11, …\nNächste Zahlen: 78 und 101.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "zf-test-058",
+    "sequence": [
+      14,
+      17,
+      22,
+      29,
+      38,
+      49,
+      62,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      77,
+      94
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          83,
+          107
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          89,
+          120
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          75,
+          88
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          77,
+          94
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "D",
+    "rule": "Wachsende Differenz: +3, +5, +7, …",
+    "explanation": "Differenzen wachsen: +3, +5, +7, +9, …\nNächste Zahlen: 77 und 94.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "zf-test-059",
+    "sequence": [
+      2,
+      6,
+      7,
+      12,
+      18,
+      29,
+      46,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      74,
+      119
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          63,
+          80
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          74,
+          75
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          74,
+          119
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          69,
+          98
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "C",
+    "rule": "Fibonacci − 1: nächste = vorherige + vorvorherige − 1",
+    "explanation": "Fibonacci − 1: nächste = vorherige + vorvorherige − 1.\nBeispiel: 29 und 46 → 46 + 29 -1 = 74.\nNächste Zahlen: 74 und 119.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "zf-test-060",
+    "sequence": [
+      31,
+      36,
+      72,
+      66,
+      71,
+      142,
+      136,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      141,
+      282
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          141,
+          282
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          272,
+          266
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          130,
+          124
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          130,
+          135
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "A",
+    "rule": "+5, ×2, −6 (wiederholend)",
+    "explanation": "Die Folge entsteht durch wiederholtes Anwenden der Operationen: +5, ×2, −6.\n31 + 5 = 36 → 36 × 2 = 72 → 72 − 6 = 66 → 66 + 5 = 71 → 71 × 2 = 142 → … \nDaher lauten die nächsten Zahlen: 141 und 282.",
+    "difficulty": "medium",
+    "ops": [
+      {
+        "type": "+",
+        "value": 5
+      },
+      {
+        "type": "×",
+        "value": 2
+      },
+      {
+        "type": "−",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "zf-test-061",
+    "sequence": [
+      4,
+      9,
+      14,
+      24,
+      39,
+      64,
+      104,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      169,
+      274
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          159,
+          229
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          169,
+          174
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          144,
+          184
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          169,
+          274
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "D",
+    "rule": "Fibonacci + 1: nächste = vorherige + vorvorherige + 1",
+    "explanation": "Fibonacci + 1: nächste = vorherige + vorvorherige + 1.\nBeispiel: 64 und 104 → 104 + 64 +1 = 169.\nNächste Zahlen: 169 und 274.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "zf-test-062",
+    "sequence": [
+      5,
+      11,
+      19,
+      29,
+      41,
+      55,
+      71,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      89,
+      109
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          89,
+          103
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          89,
+          109
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          90,
+          112
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          88,
+          106
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "B",
+    "rule": "Zweite Differenz konstant: +2",
+    "explanation": "Differenzen: 6, 8, 10, 12, … (jeweils +2 mehr)\nNächste Zahlen: 89 und 109.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "zf-test-063",
+    "sequence": [
+      18,
+      21,
+      28,
+      39,
+      54,
+      73,
+      96,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      123,
+      154
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          123,
+          142
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          123,
+          154
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          124,
+          157
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          122,
+          151
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "B",
+    "rule": "Zweite Differenz konstant: +4",
+    "explanation": "Differenzen: 3, 7, 11, 15, … (jeweils +4 mehr)\nNächste Zahlen: 123 und 154.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "zf-test-064",
+    "sequence": [
+      10,
+      11,
+      17,
+      28,
+      44,
+      65,
+      91,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      122,
+      158
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          116,
+          152
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          123,
+          161
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          122,
+          143
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          121,
+          155
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "E",
+    "rule": "Zweite Differenz konstant: +5",
+    "explanation": "Differenzen: 1, 6, 11, 16, … (jeweils +5 mehr)\nNächste Zahlen: 122 und 158.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "zf-test-065",
+    "sequence": [
+      6,
+      4,
+      12,
+      13,
+      11,
+      33,
+      34,
+      32,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      96,
+      97
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          104,
+          92
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          30,
+          28
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          96,
+          94
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          96,
+          288
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "E",
+    "rule": "−2, ×3, +1 (wiederholend)",
+    "explanation": "Die Folge entsteht durch wiederholtes Anwenden der Operationen: −2, ×3, +1.\n6 − 2 = 4 → 4 × 3 = 12 → 12 + 1 = 13 → 13 − 2 = 11 → 11 × 3 = 33 → … \nDaher lauten die nächsten Zahlen: 96 und 97.",
+    "difficulty": "medium",
+    "ops": [
+      {
+        "type": "−",
+        "value": 2
+      },
+      {
+        "type": "×",
+        "value": 3
+      },
+      {
+        "type": "+",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "zf-test-066",
+    "sequence": [
+      7,
+      42,
+      36,
+      42,
+      252,
+      246,
+      252,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      1512,
+      1506
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          246,
+          252
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          258,
+          264
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          42,
+          36
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          1512,
+          1506
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "D",
+    "rule": "×6, −6, +6 (wiederholend)",
+    "explanation": "Die Folge entsteht durch wiederholtes Anwenden der Operationen: ×6, −6, +6.\n7 × 6 = 42 → 42 − 6 = 36 → 36 + 6 = 42 → 42 × 6 = 252 → 252 − 6 = 246 → … \nDaher lauten die nächsten Zahlen: 1512 und 1506.",
+    "difficulty": "medium",
+    "ops": [
+      {
+        "type": "×",
+        "value": 6
+      },
+      {
+        "type": "−",
+        "value": 6
+      },
+      {
+        "type": "+",
+        "value": 6
+      }
+    ]
+  },
+  {
+    "id": "zf-test-067",
+    "sequence": [
+      9,
+      12,
+      24,
+      27,
+      54,
+      57,
+      114,
+      117,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      234,
+      237
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          120,
+          123
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          234,
+          237
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          120,
+          240
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          234,
+          468
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "B",
+    "rule": "+3, ×2 (wiederholend)",
+    "explanation": "Die Folge entsteht durch wiederholtes Anwenden der Operationen: +3, ×2.\n9 + 3 = 12 → 12 × 2 = 24 → 24 + 3 = 27 → 27 × 2 = 54 → 54 + 3 = 57 → … \nDaher lauten die nächsten Zahlen: 234 und 237.",
+    "difficulty": "medium",
+    "ops": [
+      {
+        "type": "+",
+        "value": 3
+      },
+      {
+        "type": "×",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "zf-test-068",
+    "sequence": [
+      3,
+      5,
+      6,
+      16,
+      12,
+      27,
+      24,
+      38,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      48,
+      49
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          69,
+          117
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          52,
+          66
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          48,
+          76
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          48,
+          49
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "D",
+    "rule": "Verschachtelt: Pos 1,3,5,… ×2; Pos 2,4,6,… +11",
+    "explanation": "Verschachtelte Folge: Ungerade Positionen (3, 6, 12, 24) folgen der Regel ×2. Gerade Positionen (5, 16, 27, 38) folgen der Regel +11.\nNächste Zahlen: 48 und 49.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "zf-test-069",
+    "sequence": [
+      3,
+      1,
+      6,
+      3,
+      12,
+      9,
+      24,
+      27,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      48,
+      81
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          48,
+          54
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          48,
+          81
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          18,
+          -3
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          30,
+          33
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "B",
+    "rule": "Verschachtelt: Pos 1,3,5,… ×2; Pos 2,4,6,… ×3",
+    "explanation": "Verschachtelte Folge: Ungerade Positionen (3, 6, 12, 24) folgen der Regel ×2. Gerade Positionen (1, 3, 9, 27) folgen der Regel ×3.\nNächste Zahlen: 48 und 81.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "zf-test-070",
+    "sequence": [
+      3,
+      85,
+      12,
+      77,
+      48,
+      69,
+      192,
+      61,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      768,
+      53
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          768,
+          695
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          768,
+          53
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          768,
+          244
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          -70,
+          -201
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "B",
+    "rule": "Verschachtelt: Pos 1,3,5,… ×4; Pos 2,4,6,… −8",
+    "explanation": "Verschachtelte Folge: Ungerade Positionen (3, 12, 48, 192) folgen der Regel ×4. Gerade Positionen (85, 77, 69, 61) folgen der Regel −8.\nNächste Zahlen: 768 und 53.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "zf-test-071",
+    "sequence": [
+      8,
+      7,
+      16,
+      18,
+      32,
+      29,
+      64,
+      40,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      128,
+      51
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          128,
+          51
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          128,
+          137
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          -43,
+          -185
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          16,
+          -8
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "A",
+    "rule": "Verschachtelt: Pos 1,3,5,… ×2; Pos 2,4,6,… +11",
+    "explanation": "Verschachtelte Folge: Ungerade Positionen (8, 16, 32, 64) folgen der Regel ×2. Gerade Positionen (7, 18, 29, 40) folgen der Regel +11.\nNächste Zahlen: 128 und 51.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "zf-test-072",
+    "sequence": [
+      13,
+      14,
+      18,
+      25,
+      35,
+      48,
+      64,
+      83,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      105,
+      130
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          119,
+          160
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          112,
+          145
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          105,
+          109
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          105,
+          130
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "D",
+    "rule": "Wachsende Differenz: +1, +4, +7, …",
+    "explanation": "Differenzen wachsen: +1, +4, +7, +10, …\nNächste Zahlen: 105 und 130.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "zf-test-073",
+    "sequence": [
+      93,
+      97,
+      291,
+      285,
+      95,
+      97,
+      101,
+      303,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      297,
+      99
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          297,
+          291
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          305,
+          309
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          909,
+          903
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          297,
+          99
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "D",
+    "rule": "+4, ×3, −6, ÷3, +2 (wiederholend)",
+    "explanation": "Die Folge entsteht durch wiederholtes Anwenden der Operationen: +4, ×3, −6, ÷3, +2.\n93 + 4 = 97 → 97 × 3 = 291 → 291 − 6 = 285 → 285 ÷ 3 = 95 → 95 + 2 = 97 → … \nDaher lauten die nächsten Zahlen: 297 und 99.",
+    "difficulty": "hard",
+    "ops": [
+      {
+        "type": "+",
+        "value": 4
+      },
+      {
+        "type": "×",
+        "value": 3
+      },
+      {
+        "type": "−",
+        "value": 6
+      },
+      {
+        "type": "÷",
+        "value": 3
+      },
+      {
+        "type": "+",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "zf-test-074",
+    "sequence": [
+      896,
+      824,
+      758,
+      698,
+      644,
+      596,
+      554,
+      518,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      488,
+      464
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          481,
+          449
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          474,
+          434
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          488,
+          464
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          488,
+          422
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "C",
+    "rule": "Schrumpfende Differenz: −72, −66, −60, …",
+    "explanation": "Differenzen wachsen: −72, −66, −60, −54, …\nNächste Zahlen: 488 und 464.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "zf-test-075",
+    "sequence": [
+      50,
+      200,
+      100,
+      106,
+      103,
+      412,
+      206,
+      212,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      209,
+      836
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          218,
+          215
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          209,
+          836
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          106,
+          112
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          209,
+          109
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "B",
+    "rule": "×4, ÷2, +6, −3 (wiederholend)",
+    "explanation": "Die Folge entsteht durch wiederholtes Anwenden der Operationen: ×4, ÷2, +6, −3.\n50 × 4 = 200 → 200 ÷ 2 = 100 → 100 + 6 = 106 → 106 − 3 = 103 → 103 × 4 = 412 → … \nDaher lauten die nächsten Zahlen: 209 und 836.",
+    "difficulty": "hard",
+    "ops": [
+      {
+        "type": "×",
+        "value": 4
+      },
+      {
+        "type": "÷",
+        "value": 2
+      },
+      {
+        "type": "+",
+        "value": 6
+      },
+      {
+        "type": "−",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "zf-test-076",
+    "sequence": [
+      50,
+      56,
+      112,
+      104,
+      52,
+      58,
+      116,
+      108,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      54,
+      60
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          54,
+          27
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          100,
+          92
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          54,
+          60
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          216,
+          222
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "C",
+    "rule": "+6, ×2, −8, ÷2 (wiederholend)",
+    "explanation": "Die Folge entsteht durch wiederholtes Anwenden der Operationen: +6, ×2, −8, ÷2.\n50 + 6 = 56 → 56 × 2 = 112 → 112 − 8 = 104 → 104 ÷ 2 = 52 → 52 + 6 = 58 → … \nDaher lauten die nächsten Zahlen: 54 und 60.",
+    "difficulty": "hard",
+    "ops": [
+      {
+        "type": "+",
+        "value": 6
+      },
+      {
+        "type": "×",
+        "value": 2
+      },
+      {
+        "type": "−",
+        "value": 8
+      },
+      {
+        "type": "÷",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "zf-test-077",
+    "sequence": [
+      411,
+      391,
+      373,
+      357,
+      343,
+      331,
+      321,
+      313,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      307,
+      303
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          316,
+          309
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          307,
+          291
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          308,
+          302
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          306,
+          304
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "E",
+    "rule": "Zweite Differenz konstant: +2",
+    "explanation": "Differenzen: -20, -18, -16, -14, … (jeweils +2 mehr)\nNächste Zahlen: 307 und 303.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "zf-test-078",
+    "sequence": [
+      9,
+      16,
+      26,
+      39,
+      55,
+      74,
+      96,
+      121,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      149,
+      180
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          149,
+          162
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          146,
+          171
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          145,
+          175
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          157,
+          172
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "E",
+    "rule": "Zweite Differenz konstant: +3",
+    "explanation": "Differenzen: 7, 10, 13, 16, … (jeweils +3 mehr)\nNächste Zahlen: 149 und 180.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "zf-test-079",
+    "sequence": [
+      1,
+      4,
+      14,
+      31,
+      55,
+      86,
+      124,
+      169,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      221,
+      280
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          221,
+          238
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          214,
+          259
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          221,
+          280
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          236,
+          265
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "C",
+    "rule": "Zweite Differenz konstant: +7",
+    "explanation": "Differenzen: 3, 10, 17, 24, … (jeweils +7 mehr)\nNächste Zahlen: 221 und 280.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "zf-test-080",
+    "sequence": [
+      15,
+      16,
+      23,
+      36,
+      55,
+      80,
+      111,
+      148,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      191,
+      240
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          191,
+          210
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          191,
+          240
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          185,
+          222
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          203,
+          228
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "B",
+    "rule": "Zweite Differenz konstant: +6",
+    "explanation": "Differenzen: 1, 7, 13, 19, … (jeweils +6 mehr)\nNächste Zahlen: 191 und 240.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "zf-test-081",
+    "sequence": [
+      65,
+      70,
+      140,
+      134,
+      137,
+      142,
+      284,
+      278,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      281,
+      286
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          281,
+          286
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          272,
+          275
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          556,
+          550
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          283,
+          566
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "A",
+    "rule": "+5, ×2, −6, +3 (wiederholend)",
+    "explanation": "Die Folge entsteht durch wiederholtes Anwenden der Operationen: +5, ×2, −6, +3.\n65 + 5 = 70 → 70 × 2 = 140 → 140 − 6 = 134 → 134 + 3 = 137 → 137 + 5 = 142 → … \nDaher lauten die nächsten Zahlen: 281 und 286.",
+    "difficulty": "hard",
+    "ops": [
+      {
+        "type": "+",
+        "value": 5
+      },
+      {
+        "type": "×",
+        "value": 2
+      },
+      {
+        "type": "−",
+        "value": 6
+      },
+      {
+        "type": "+",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "zf-test-082",
+    "sequence": [
+      76,
+      84,
+      168,
+      158,
+      79,
+      87,
+      174,
+      164,
+      82,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      90,
+      180
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          90,
+          98
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          90,
+          180
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          74,
+          148
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          90,
+          175
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "B",
+    "rule": "+8, ×2, −10, ÷2 (wiederholend)",
+    "explanation": "Die Folge entsteht durch wiederholtes Anwenden der Operationen: +8, ×2, −10, ÷2.\n76 + 8 = 84 → 84 × 2 = 168 → 168 − 10 = 158 → 158 ÷ 2 = 79 → 79 + 8 = 87 → … \nDaher lauten die nächsten Zahlen: 90 und 180.",
+    "difficulty": "hard",
+    "ops": [
+      {
+        "type": "+",
+        "value": 8
+      },
+      {
+        "type": "×",
+        "value": 2
+      },
+      {
+        "type": "−",
+        "value": 10
+      },
+      {
+        "type": "÷",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "zf-test-083",
+    "sequence": [
+      73,
+      146,
+      149,
+      298,
+      293,
+      586,
+      589,
+      1178,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      1173,
+      2346
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          2356,
+          2359
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          1173,
+          1176
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          1173,
+          2346
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          1173,
+          1168
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "C",
+    "rule": "×2, +3, ×2, −5 (wiederholend)",
+    "explanation": "Die Folge entsteht durch wiederholtes Anwenden der Operationen: ×2, +3, ×2, −5.\n73 × 2 = 146 → 146 + 3 = 149 → 149 × 2 = 298 → 298 − 5 = 293 → 293 × 2 = 586 → … \nDaher lauten die nächsten Zahlen: 1173 und 2346.",
+    "difficulty": "hard",
+    "ops": [
+      {
+        "type": "×",
+        "value": 2
+      },
+      {
+        "type": "+",
+        "value": 3
+      },
+      {
+        "type": "×",
+        "value": 2
+      },
+      {
+        "type": "−",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "zf-test-084",
+    "sequence": [
+      84,
+      88,
+      264,
+      258,
+      86,
+      88,
+      92,
+      276,
+      270,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      90,
+      92
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          264,
+          88
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          90,
+          30
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          90,
+          88
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          90,
+          92
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "D",
+    "rule": "+4, ×3, −6, ÷3, +2 (wiederholend)",
+    "explanation": "Die Folge entsteht durch wiederholtes Anwenden der Operationen: +4, ×3, −6, ÷3, +2.\n84 + 4 = 88 → 88 × 3 = 264 → 264 − 6 = 258 → 258 ÷ 3 = 86 → 86 + 2 = 88 → … \nDaher lauten die nächsten Zahlen: 90 und 92.",
+    "difficulty": "hard",
+    "ops": [
+      {
+        "type": "+",
+        "value": 4
+      },
+      {
+        "type": "×",
+        "value": 3
+      },
+      {
+        "type": "−",
+        "value": 6
+      },
+      {
+        "type": "÷",
+        "value": 3
+      },
+      {
+        "type": "+",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "zf-test-085",
+    "sequence": [
+      8,
+      14,
+      16,
+      25,
+      32,
+      36,
+      64,
+      47,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      128,
+      58
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          128,
+          134
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          128,
+          94
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          30,
+          13
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          128,
+          58
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "D",
+    "rule": "Verschachtelt: Pos 1,3,5,… ×2; Pos 2,4,6,… +11",
+    "explanation": "Verschachtelte Folge: Ungerade Positionen (8, 16, 32, 64) folgen der Regel ×2. Gerade Positionen (14, 25, 36, 47) folgen der Regel +11.\nNächste Zahlen: 128 und 58.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "zf-test-086",
+    "sequence": [
+      3,
+      4,
+      6,
+      12,
+      12,
+      36,
+      24,
+      108,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      48,
+      324
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          192,
+          276
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          48,
+          49
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          48,
+          324
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          288,
+          564
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "C",
+    "rule": "Verschachtelt: Pos 1,3,5,… ×2; Pos 2,4,6,… ×3",
+    "explanation": "Verschachtelte Folge: Ungerade Positionen (3, 6, 12, 24) folgen der Regel ×2. Gerade Positionen (4, 12, 36, 108) folgen der Regel ×3.\nNächste Zahlen: 48 und 324.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "zf-test-087",
+    "sequence": [
+      2,
+      120,
+      8,
+      112,
+      32,
+      104,
+      128,
+      96,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      512,
+      88
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          64,
+          32
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          512,
+          88
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          8,
+          -136
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          512,
+          384
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "B",
+    "rule": "Verschachtelt: Pos 1,3,5,… ×4; Pos 2,4,6,… −8",
+    "explanation": "Verschachtelte Folge: Ungerade Positionen (2, 8, 32, 128) folgen der Regel ×4. Gerade Positionen (120, 112, 104, 96) folgen der Regel −8.\nNächste Zahlen: 512 und 88.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "zf-test-088",
+    "sequence": [
+      842,
+      770,
+      704,
+      644,
+      590,
+      542,
+      500,
+      464,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      434,
+      410
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          434,
+          362
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          434,
+          410
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          494,
+          518
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          441,
+          425
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "B",
+    "rule": "Schrumpfende Differenz: −72, −66, −60, …",
+    "explanation": "Differenzen wachsen: −72, −66, −60, −54, …\nNächste Zahlen: 434 und 410.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "zf-test-089",
+    "sequence": [
+      10,
+      11,
+      15,
+      22,
+      32,
+      45,
+      61,
+      80,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      102,
+      127
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          102,
+          127
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          116,
+          157
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          58,
+          33
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          95,
+          112
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "A",
+    "rule": "Wachsende Differenz: +1, +4, +7, …",
+    "explanation": "Differenzen wachsen: +1, +4, +7, +10, …\nNächste Zahlen: 102 und 127.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "zf-test-090",
+    "sequence": [
+      88,
+      96,
+      192,
+      182,
+      91,
+      99,
+      198,
+      188,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      94,
+      102
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          178,
+          89
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          87,
+          97
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          94,
+          107
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          94,
+          47
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "E",
+    "rule": "+8, ×2, −10, ÷2 (wiederholend)",
+    "explanation": "Die Folge entsteht durch wiederholtes Anwenden der Operationen: +8, ×2, −10, ÷2.\n88 + 8 = 96 → 96 × 2 = 192 → 192 − 10 = 182 → 182 ÷ 2 = 91 → 91 + 8 = 99 → … \nDaher lauten die nächsten Zahlen: 94 und 102.",
+    "difficulty": "hard",
+    "ops": [
+      {
+        "type": "+",
+        "value": 8
+      },
+      {
+        "type": "×",
+        "value": 2
+      },
+      {
+        "type": "−",
+        "value": 10
+      },
+      {
+        "type": "÷",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "zf-test-091",
+    "sequence": [
+      24,
+      96,
+      48,
+      54,
+      51,
+      204,
+      102,
+      108,
+      105,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      420,
+      210
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          102,
+          99
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          420,
+          1680
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          102,
+          408
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          411,
+          214
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "E",
+    "rule": "×4, ÷2, +6, −3 (wiederholend)",
+    "explanation": "Die Folge entsteht durch wiederholtes Anwenden der Operationen: ×4, ÷2, +6, −3.\n24 × 4 = 96 → 96 ÷ 2 = 48 → 48 + 6 = 54 → 54 − 3 = 51 → 51 × 4 = 204 → … \nDaher lauten die nächsten Zahlen: 420 und 210.",
+    "difficulty": "hard",
+    "ops": [
+      {
+        "type": "×",
+        "value": 4
+      },
+      {
+        "type": "÷",
+        "value": 2
+      },
+      {
+        "type": "+",
+        "value": 6
+      },
+      {
+        "type": "−",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "id": "zf-test-092",
+    "sequence": [
+      73,
+      146,
+      149,
+      298,
+      293,
+      586,
+      589,
+      1178,
+      1173,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      2346,
+      2349
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          1168,
+          2336
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          1176,
+          2352
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          2346,
+          2349
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          2346,
+          4692
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "C",
+    "rule": "×2, +3, ×2, −5 (wiederholend)",
+    "explanation": "Die Folge entsteht durch wiederholtes Anwenden der Operationen: ×2, +3, ×2, −5.\n73 × 2 = 146 → 146 + 3 = 149 → 149 × 2 = 298 → 298 − 5 = 293 → 293 × 2 = 586 → … \nDaher lauten die nächsten Zahlen: 2346 und 2349.",
+    "difficulty": "hard",
+    "ops": [
+      {
+        "type": "×",
+        "value": 2
+      },
+      {
+        "type": "+",
+        "value": 3
+      },
+      {
+        "type": "×",
+        "value": 2
+      },
+      {
+        "type": "−",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "zf-test-093",
+    "sequence": [
+      0,
+      3,
+      13,
+      30,
+      54,
+      85,
+      123,
+      168,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      220,
+      279
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          213,
+          258
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          220,
+          230
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          220,
+          279
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          235,
+          264
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "C",
+    "rule": "Zweite Differenz konstant: +7",
+    "explanation": "Differenzen: 3, 10, 17, 24, … (jeweils +7 mehr)\nNächste Zahlen: 220 und 279.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "zf-test-094",
+    "sequence": [
+      346,
+      326,
+      308,
+      292,
+      278,
+      266,
+      256,
+      248,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      242,
+      238
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          240,
+          232
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          242,
+          224
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          242,
+          238
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          243,
+          237
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "C",
+    "rule": "Zweite Differenz konstant: +2",
+    "explanation": "Differenzen: -20, -18, -16, -14, … (jeweils +2 mehr)\nNächste Zahlen: 242 und 238.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "zf-test-095",
+    "sequence": [
+      6,
+      13,
+      23,
+      36,
+      52,
+      71,
+      93,
+      118,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      146,
+      177
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          143,
+          168
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          146,
+          156
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          146,
+          177
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          154,
+          169
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "C",
+    "rule": "Zweite Differenz konstant: +3",
+    "explanation": "Differenzen: 7, 10, 13, 16, … (jeweils +3 mehr)\nNächste Zahlen: 146 und 177.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "zf-test-096",
+    "sequence": [
+      19,
+      22,
+      32,
+      49,
+      73,
+      104,
+      142,
+      187,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      239,
+      298
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          232,
+          277
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          239,
+          298
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          239,
+          256
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          254,
+          283
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "B",
+    "rule": "Zweite Differenz konstant: +7",
+    "explanation": "Differenzen: 3, 10, 17, 24, … (jeweils +7 mehr)\nNächste Zahlen: 239 und 298.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "zf-test-097",
+    "sequence": [
+      49,
+      51,
+      54,
+      59,
+      66,
+      77,
+      79,
+      82,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      87,
+      94
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          85,
+          90
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          87,
+          94
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          87,
+          99
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          85,
+          88
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "B",
+    "rule": "+2, +3, +5, +7, +11 (wiederholend)",
+    "explanation": "Die Folge entsteht durch wiederholtes Anwenden der Operationen: +2, +3, +5, +7, +11.\n49 + 2 = 51 → 51 + 3 = 54 → 54 + 5 = 59 → 59 + 7 = 66 → 66 + 11 = 77 → … \nDaher lauten die nächsten Zahlen: 87 und 94.",
+    "difficulty": "hard",
+    "ops": [
+      {
+        "type": "+",
+        "value": 2
+      },
+      {
+        "type": "+",
+        "value": 3
+      },
+      {
+        "type": "+",
+        "value": 5
+      },
+      {
+        "type": "+",
+        "value": 7
+      },
+      {
+        "type": "+",
+        "value": 11
+      }
+    ]
+  },
+  {
+    "id": "zf-test-098",
+    "sequence": [
+      56,
+      112,
+      118,
+      59,
+      56,
+      63,
+      126,
+      132,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      66,
+      63
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          66,
+          72
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          66,
+          33
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          139,
+          278
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          66,
+          63
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "D",
+    "rule": "×2, +6, ÷2, −3, +7 (wiederholend)",
+    "explanation": "Die Folge entsteht durch wiederholtes Anwenden der Operationen: ×2, +6, ÷2, −3, +7.\n56 × 2 = 112 → 112 + 6 = 118 → 118 ÷ 2 = 59 → 59 − 3 = 56 → 56 + 7 = 63 → … \nDaher lauten die nächsten Zahlen: 66 und 63.",
+    "difficulty": "hard",
+    "ops": [
+      {
+        "type": "×",
+        "value": 2
+      },
+      {
+        "type": "+",
+        "value": 6
+      },
+      {
+        "type": "÷",
+        "value": 2
+      },
+      {
+        "type": "−",
+        "value": 3
+      },
+      {
+        "type": "+",
+        "value": 7
+      }
+    ]
+  },
+  {
+    "id": "zf-test-099",
+    "sequence": [
+      38,
+      44,
+      88,
+      80,
+      40,
+      46,
+      92,
+      84,
+      42,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      48,
+      96
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          48,
+          96
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          48,
+          40
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          84,
+          76
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          0,
+          -42
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "A",
+    "rule": "+6, ×2, −8, ÷2 (wiederholend)",
+    "explanation": "Die Folge entsteht durch wiederholtes Anwenden der Operationen: +6, ×2, −8, ÷2.\n38 + 6 = 44 → 44 × 2 = 88 → 88 − 8 = 80 → 80 ÷ 2 = 40 → 40 + 6 = 46 → … \nDaher lauten die nächsten Zahlen: 48 und 96.",
+    "difficulty": "hard",
+    "ops": [
+      {
+        "type": "+",
+        "value": 6
+      },
+      {
+        "type": "×",
+        "value": 2
+      },
+      {
+        "type": "−",
+        "value": 8
+      },
+      {
+        "type": "÷",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "zf-test-100",
+    "sequence": [
+      62,
+      186,
+      179,
+      183,
+      549,
+      542,
+      546,
+      1638,
+      "?",
+      "?"
+    ],
+    "correctNext": [
+      1631,
+      1635
+    ],
+    "options": [
+      {
+        "key": "A",
+        "value": [
+          4914,
+          4907
+        ]
+      },
+      {
+        "key": "B",
+        "value": [
+          1642,
+          4926
+        ]
+      },
+      {
+        "key": "C",
+        "value": [
+          2730,
+          3822
+        ]
+      },
+      {
+        "key": "D",
+        "value": [
+          1631,
+          1635
+        ]
+      },
+      {
+        "key": "E",
+        "text": "Keine der Antwortmöglichkeiten ist richtig"
+      }
+    ],
+    "correctOptionId": "D",
+    "rule": "×3, −7, +4 (wiederholend)",
+    "explanation": "Die Folge entsteht durch wiederholtes Anwenden der Operationen: ×3, −7, +4.\n62 × 3 = 186 → 186 − 7 = 179 → 179 + 4 = 183 → 183 × 3 = 549 → 549 − 7 = 542 → … \nDaher lauten die nächsten Zahlen: 1631 und 1635.",
+    "difficulty": "hard",
+    "ops": [
+      {
+        "type": "×",
+        "value": 3
+      },
+      {
+        "type": "−",
+        "value": 7
+      },
+      {
+        "type": "+",
+        "value": 4
+      }
+    ]
+  }
+]

@@ -1575,70 +1575,57 @@ export const implikationenTasks: ImplikationTask[] = rebalanceEAnswerRate(
 // GENERATOR: Dynamische Implikations-Aufgaben
 // =============================================================================
 
-const NOUN_POOLS = {
-  animals: [
-    "Hunde",
-    "Katzen",
-    "Vögel",
-    "Fische",
-    "Pferde",
-    "Adler",
-    "Wale",
-    "Delfine",
-    "Elefanten",
-    "Tiger",
-    "Löwen",
-    "Bären",
-    "Haie",
-    "Schlangen",
-    "Schildkröten",
-    "Pinguine",
-    "Falken",
-    "Raben",
-    "Eidechsen",
-    "Frösche",
-  ],
-  people: [
-    "Ärzte",
-    "Studenten",
-    "Lehrer",
-    "Sportler",
-    "Musiker",
-    "Forscher",
-    "Ingenieure",
-    "Piloten",
-    "Architekten",
-    "Journalisten",
-    "Richter",
-    "Diplomaten",
-    "Köche",
-    "Chirurgen",
-    "Biologen",
-    "Physiker",
-    "Mathematiker",
-    "Künstler",
-  ],
-  things: [
-    "Planeten",
-    "Sterne",
-    "Metalle",
-    "Kristalle",
-    "Inseln",
-    "Vulkane",
-    "Diamanten",
-    "Moleküle",
-    "Fossilien",
-    "Satelliten",
-    "Minerale",
-    "Gesteine",
-    "Kometen",
-    "Galaxien",
-    "Atome",
-    "Zellen",
-    "Bakterien",
-    "Pilze",
-  ],
-};
+// Nomen-Tripel: Semantisch verwandte Gruppen wie in den offiziellen MedAT-Beispielen.
+// Jedes Tripel enthält 3 Nomen, die plausible „X sind Y"-Aussagen bilden können.
+// Offizielle Vorbilder: Stofftiere/Spielsachen/Wertanlagen, Nüsse/Gewürze/Pflanzen,
+// Menschen/Säugetiere/Lebewesen, Kinder/Lebewesen/Erwachsene
+const NOUN_TRIPLETS: [string, string, string][] = [
+  // Tier-Taxonomie
+  ["Hunde", "Säugetiere", "Haustiere"],
+  ["Katzen", "Raubtiere", "Haustiere"],
+  ["Vögel", "Wirbeltiere", "Lebewesen"],
+  ["Pferde", "Säugetiere", "Nutztiere"],
+  ["Fische", "Wirbeltiere", "Wassertiere"],
+  ["Delfine", "Säugetiere", "Wassertiere"],
+  ["Adler", "Raubvögel", "Vögel"],
+  ["Insekten", "Wirbellose", "Lebewesen"],
+  ["Reptilien", "Wirbeltiere", "Wildtiere"],
+  ["Pinguine", "Vögel", "Wildtiere"],
+  // Menschen & Berufe
+  ["Kinder", "Lebewesen", "Erwachsene"],
+  ["Ärzte", "Akademiker", "Berufstätige"],
+  ["Studenten", "Akademiker", "Erwachsene"],
+  ["Lehrer", "Beamte", "Berufstätige"],
+  ["Sportler", "Berufstätige", "Vereinsmitglieder"],
+  ["Musiker", "Künstler", "Berufstätige"],
+  ["Schüler", "Kinder", "Jugendliche"],
+  ["Handwerker", "Berufstätige", "Angestellte"],
+  ["Mediziner", "Naturwissenschaftler", "Akademiker"],
+  ["Sänger", "Musiker", "Künstler"],
+  // Pflanzen & Natur
+  ["Rosen", "Blumen", "Pflanzen"],
+  ["Eichen", "Laubbäume", "Bäume"],
+  ["Tulpen", "Blumen", "Gartengewächse"],
+  ["Tannen", "Nadelbäume", "Bäume"],
+  ["Pilze", "Lebewesen", "Waldgewächse"],
+  ["Sträucher", "Pflanzen", "Gartengewächse"],
+  // Nahrung & Alltag
+  ["Nüsse", "Gewürze", "Pflanzen"],
+  ["Äpfel", "Früchte", "Nahrungsmittel"],
+  ["Tomaten", "Gemüse", "Nahrungsmittel"],
+  ["Backwaren", "Nahrungsmittel", "Lebensmittel"],
+  ["Gewürze", "Pflanzen", "Nahrungsmittel"],
+  ["Getränke", "Lebensmittel", "Flüssigkeiten"],
+  // Gegenstände & Konzepte
+  ["Stofftiere", "Spielsachen", "Wertanlagen"],
+  ["Autos", "Fahrzeuge", "Maschinen"],
+  ["Geigen", "Musikinstrumente", "Wertgegenstände"],
+  ["Bücher", "Druckerzeugnisse", "Medien"],
+  ["Möbelstücke", "Einrichtungen", "Gebrauchsgegenstände"],
+  ["Diamanten", "Edelsteine", "Wertanlagen"],
+  ["Medikamente", "Arzneimittel", "Chemikalien"],
+  ["Kleidungsstücke", "Textilien", "Gebrauchsgegenstände"],
+];
 
 type SyllogismPattern = {
   quantifier1: "Alle" | "Einige" | "Keine";
@@ -1823,9 +1810,10 @@ function pickRandom<T>(arr: T[]): T {
 }
 
 function pick3UniqueNouns(): [string, string, string] {
-  const allNouns = [...NOUN_POOLS.animals, ...NOUN_POOLS.people, ...NOUN_POOLS.things];
-  const shuffled = allNouns.sort(() => Math.random() - 0.5);
-  return [shuffled[0], shuffled[1], shuffled[2]];
+  const triplet = NOUN_TRIPLETS[Math.floor(Math.random() * NOUN_TRIPLETS.length)]!;
+  // Shuffle triplet positions to avoid predictable S/M/P ordering
+  const shuffled = [...triplet].sort(() => Math.random() - 0.5) as [string, string, string];
+  return shuffled;
 }
 
 function buildPremiseText(
@@ -1853,9 +1841,9 @@ function buildExplanationForPattern(
   C: string
 ): string {
   const ruleTexts: Record<number, string> = {
-    1: "Zwei 'einige'-Praemissen ergeben keinen zwingenden Schluss (Regel 1).",
-    2: "Zwei 'keine'-Praemissen ergeben keinen zwingenden Schluss (Regel 2).",
-    3: "Kein 'keine' in den Praemissen -> Schluss darf kein 'keine' enthalten (Regel 3).",
+    1: "Zwei 'einige'-Prämissen ergeben keinen zwingenden Schluss (Regel 1).",
+    2: "Zwei 'keine'-Prämissen ergeben keinen zwingenden Schluss (Regel 2).",
+    3: "Kein 'keine' in den Prämissen -> Schluss darf kein 'keine' enthalten (Regel 3).",
     4: "Ein 'keine' in einer Praemisse -> Schluss muss 'keine' enthalten (Regel 4).",
     5: "Ein 'einige' in einer Praemisse -> Schluss muss 'einige' enthalten (Regel 5).",
   };
@@ -1969,10 +1957,11 @@ export function generateImplicationTaskSet(
       }
     }
   } else {
-    // Balanced mix: ~33% each difficulty
-    const perDiff = Math.ceil(count / 3);
+    // Generiere ~30% mehr als nötig, um nach E-Rate-Rebalancierung genug übrig zu haben
+    const overgenerate = Math.ceil(count * 1.4);
+    const perDiff = Math.ceil(overgenerate / 3);
     for (const d of [1, 2, 3] as const) {
-      const target = d === 3 ? count - result.length : perDiff;
+      const target = d === 3 ? overgenerate - result.length : perDiff;
       for (
         let i = 0;
         i < target * 3 && result.filter((t) => t.difficulty === d).length < target;
@@ -2002,5 +1991,10 @@ export function generateImplicationTaskSet(
     }
   }
 
-  return result.sort(() => Math.random() - 0.5).slice(0, count);
+  // E-Rate auf ~20% deckeln (offizieller MedAT: ca. 2 von 10 Aufgaben)
+  const maxE = Math.max(1, Math.round(count * 0.2));
+  const eTasks = result.filter((t) => t.correctAnswer === 4).sort(() => Math.random() - 0.5);
+  const nonETasks = result.filter((t) => t.correctAnswer !== 4).sort(() => Math.random() - 0.5);
+  const final = [...nonETasks.slice(0, count - maxE), ...eTasks.slice(0, maxE)];
+  return final.sort(() => Math.random() - 0.5).slice(0, count);
 }
