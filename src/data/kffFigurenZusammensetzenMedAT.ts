@@ -2126,7 +2126,7 @@ function applyGridCuts(
         const rA = (bxA.width || 1) / (bxA.height || 1);
         const rB = (bxB.width || 1) / (bxB.height || 1);
         const areaOk = polygonArea(a) >= minPieceArea && polygonArea(b) >= minPieceArea;
-        const noSliver = rA > 0.2 && rA < 5 && rB > 0.2 && rB < 5;
+        const noSliver = rA > 0.25 && rA < 4 && rB > 0.25 && rB < 4;
         if (areaOk && noSliver) {
           nextPieces.push(a, b);
         } else {
@@ -2212,13 +2212,13 @@ function applyAsymmetricCuts(
     if (polygonArea(a) < minPieceArea || polygonArea(b) < minPieceArea) continue;
 
     // Reject sliver pieces: thin lamella-like fragments leak the contour of
-    // adjacent pieces, making the task too obvious. A piece is a sliver if
-    // its bounding box aspect ratio exceeds 5:1.
+    // adjacent pieces, making the task too obvious. Tightened from 5:1 to 4:1
+    // after psychometric audit found borderline slivers at 5.9-6.1 aspect.
     const bA = polygonBBox(a),
       bB = polygonBBox(b);
     const arA = (bA.width || 1) / (bA.height || 1);
     const arB = (bB.width || 1) / (bB.height || 1);
-    if (arA > 5 || arA < 0.2 || arB > 5 || arB < 0.2) continue;
+    if (arA > 4 || arA < 0.25 || arB > 4 || arB < 0.25) continue;
 
     pieces.splice(cutIdx, 1, a, b);
     successfulCuts++;
@@ -2560,6 +2560,11 @@ function generateFigurenTrainingTaskFallback(
       difficulty
     );
     if (res && res.length >= 3) {
+      // Check anchor dominance even in fallback
+      const pa = res.map((p) => polygonArea(p));
+      const pMax = Math.max(...pa),
+        pTotal = pa.reduce((s, a) => s + a, 0);
+      if (pTotal > 0 && pMax / pTotal > 0.65) continue;
       fbPieces = res;
       break;
     }
