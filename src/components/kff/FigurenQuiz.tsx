@@ -14,6 +14,7 @@ import { QuestionFeedbackButton } from "@/components/shared/QuestionFeedbackButt
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { FloatingQuestionCounter } from "@/components/ui/FloatingQuestionCounter";
+import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
 
 import { ExamTimer } from "@/components/shared/ExamTimer";
 import { type ExamMode, EXAM_CONFIG } from "@/data/examConfig";
@@ -76,6 +77,22 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
     getKffSeenIdsForDomain,
   } = useStore();
   const getMinutes = useSessionTimer();
+
+  const fzQForKeys = questions[index];
+  useKeyboardShortcuts({
+    disabled: phase !== "quiz" || !fzQForKeys,
+    maxOptions: 5,
+    onSelectOption: (idx) => {
+      if (fzQForKeys && idx < FZ_OPTION_LABELS.length)
+        setAnswers((p) => ({ ...p, [fzQForKeys.id]: FZ_OPTION_LABELS[idx] }));
+    },
+    onNext: () => {
+      if (index < questions.length - 1) setIndex((i) => i + 1);
+    },
+    onPrev: () => {
+      if (index > 0) setIndex((i) => i - 1);
+    },
+  });
 
   const startTraining = async () => {
     saveLastCount("figuren", questionCount);

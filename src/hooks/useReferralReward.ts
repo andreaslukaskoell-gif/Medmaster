@@ -55,6 +55,12 @@ export function useReferralReward(): ReferralRewardData & { refresh: () => void 
       return;
     }
 
+    // In dev mode with placeholder user, skip RPC calls that don't exist
+    if (import.meta.env.DEV && user.id.startsWith("00000000")) {
+      setData({ ...DEFAULT_DATA, state: "no-referrals", refCode, refLink });
+      return;
+    }
+
     try {
       // Fetch reward status from Supabase RPC
       const { data: rpcData, error } = await supabase.rpc("get_referral_reward_status", {

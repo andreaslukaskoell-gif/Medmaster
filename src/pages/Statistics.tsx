@@ -16,7 +16,6 @@ import {
 } from "recharts";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Heatmap } from "@/components/ui/heatmap";
-import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { useStore } from "@/store/useStore";
 import { useAdaptiveStore } from "@/store/adaptiveLearning";
 import { alleStichworteListe, fachConfig } from "@/data/stichwortliste";
@@ -80,8 +79,6 @@ export default function Statistics() {
 
   return (
     <div className="max-w-7xl mx-auto space-y-6">
-      <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "Statistik" }]} />
-
       <div>
         <h1 className="text-2xl font-bold text-[var(--text-primary)]">Statistik</h1>
         <p className="text-[var(--muted)] mt-1">Dein Lernfortschritt im Überblick.</p>

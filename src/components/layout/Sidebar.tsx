@@ -377,26 +377,29 @@ export function Sidebar({ open, onClose }: { open: boolean; onClose: () => void 
           </NavLink>
         </div>
 
-        {/* Weiterlernen – schneller Einstieg wenn vorhanden */}
-        {lastPathLabel && lastPath && lastPath !== "/" && (
-          <div ref={lastPathRef} className="mb-3">
-            <NavLink to={lastPath} end={false}>
-              {({ isActive: active }) => (
-                <div
-                  className={cn(
-                    "flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-sm font-semibold transition-colors cursor-pointer",
-                    active
-                      ? "bg-[var(--accent)]/12 text-[var(--foreground)]"
-                      : "bg-[var(--accent)]/6 text-[var(--foreground)] hover:bg-[var(--accent)]/10"
-                  )}
-                >
-                  <BookOpen className="w-4 h-4 shrink-0 text-[var(--accent)]" />
-                  <span className="truncate">{lastPathLabel}</span>
-                </div>
-              )}
-            </NavLink>
-          </div>
-        )}
+        {/* Weiterlernen – schneller Einstieg wenn vorhanden (only on BMS/dashboard pages) */}
+        {lastPathLabel &&
+          lastPath &&
+          lastPath !== "/" &&
+          (pathname === "/dashboard" || pathname.startsWith("/bms")) && (
+            <div ref={lastPathRef} className="mb-3">
+              <NavLink to={lastPath} end={false}>
+                {({ isActive: active }) => (
+                  <div
+                    className={cn(
+                      "flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-sm font-semibold transition-colors cursor-pointer",
+                      active
+                        ? "bg-[var(--accent)]/12 text-[var(--foreground)]"
+                        : "bg-[var(--accent)]/6 text-[var(--foreground)] hover:bg-[var(--accent)]/10"
+                    )}
+                  >
+                    <BookOpen className="w-4 h-4 shrink-0 text-[var(--accent)]" />
+                    <span className="truncate">{lastPathLabel}</span>
+                  </div>
+                )}
+              </NavLink>
+            </div>
+          )}
 
         {/* Contextual chapter navigation */}
         {chapterContext && (

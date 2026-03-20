@@ -408,7 +408,7 @@ export default function PaidLanding() {
             transition={{ ...fade.transition, delay: 0.35 }}
             className="text-xs text-[var(--muted)]/60 tracking-wide"
           >
-            Keine Kreditkarte &middot; Jederzeit kündbar &middot; 1 Klick mit Google
+            Keine Kreditkarte &middot; Kein Abo &middot; 1 Klick mit Google
           </motion.p>
         </div>
       </section>
@@ -585,7 +585,7 @@ export default function PaidLanding() {
             </h3>
             <p className="text-sm text-[var(--text-secondary)] mb-6 sm:mb-8 max-w-md mx-auto leading-relaxed">
               {countdown.expired
-                ? "Jederzeit kündbar. Voller Zugang zu allen Fragen, Lerneinheiten und der Prüfungssimulation."
+                ? "Kein Abo. Voller Zugang zu allen Fragen, Lerneinheiten und der Prüfungssimulation."
                 : "Wer jetzt startet, lernt bis April gratis — und hat einen Vorsprung gegenüber allen, die noch warten."}
             </p>
             <GoogleBtn
@@ -601,7 +601,7 @@ export default function PaidLanding() {
               >
                 Mit E-Mail anmelden
               </Link>
-              {" \u00b7 "}Keine Kreditkarte{" \u00b7 "}Jederzeit kündbar
+              {" \u00b7 "}Keine Kreditkarte{" \u00b7 "}Kein Abo
             </p>
           </motion.div>
         </div>
@@ -672,7 +672,7 @@ export default function PaidLanding() {
             Deine Konkurrenz auch nicht.
           </h2>
           <p className="text-white/60 text-sm sm:text-base mb-8 sm:mb-10 max-w-md mx-auto leading-relaxed">
-            5.000+ Fragen. Alle 4 Bereiche. Adaptives Lernsystem. Jederzeit kündbar.
+            5.000+ Fragen. Alle 4 Bereiche. Adaptives Lernsystem. Kein Abo.
           </p>
           <GoogleBtn
             label="Jetzt kostenlos starten"

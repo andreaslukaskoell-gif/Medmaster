@@ -65,12 +65,18 @@ export const mathematikPool1: Question[] = [
   q(
     "ma-pool-003",
     "mathe-kap5",
-    "Welche der in einer Abbildung gezeigten Kurven gibt die Funktion y = −x² − 5 an?",
-    ["Kurve a", "Kurve b", "Kurve c", "Kurve d", "Keine der gezeigten Kurven."],
-    4,
-    "y = −x² − 5 ist eine nach unten geöffnete Parabel mit Scheitel (0; −5). Welche Kurve das ist, hängt von der konkreten Abbildung ab; oft wird E gewählt, wenn keine passende Kurve gezeigt wird.",
+    "Welche Aussage über den Graphen der Funktion y = −x² − 5 ist richtig?",
+    [
+      "Die Parabel ist nach oben geöffnet mit Scheitel (0; 5)",
+      "Die Parabel ist nach unten geöffnet mit Scheitel (0; −5)",
+      "Die Parabel ist nach oben geöffnet mit Scheitel (0; −5)",
+      "Die Parabel ist nach unten geöffnet mit Scheitel (5; 0)",
+      "Die Parabel hat keinen Scheitel",
+    ],
+    1,
+    "y = −x² − 5: Der negative Koeffizient vor x² bewirkt eine nach unten geöffnete Parabel. Setzt man x = 0 ein, erhält man y = −5, also liegt der Scheitel bei (0; −5). Der Scheitel ist gleichzeitig der höchste Punkt der Parabel.",
     "leicht",
-    ["Parabel", "quadratische Funktion", "Graph"]
+    ["Parabel", "quadratische Funktion", "Scheitel"]
   ),
   q(
     "ma-pool-004",

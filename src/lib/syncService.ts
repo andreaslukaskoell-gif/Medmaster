@@ -140,6 +140,7 @@ export async function pushStatsToSupabase(
   userId: string
 ): Promise<{ ok: boolean; error?: string }> {
   if (!supabase) return { ok: true };
+  if (import.meta.env.DEV && userId.startsWith("00000000")) return { ok: true };
   if (isSchemaSkipActive()) {
     return { ok: true };
   }
@@ -260,6 +261,7 @@ export async function pullStatsFromSupabase(
   userId: string
 ): Promise<{ ok: boolean; error?: string }> {
   if (!supabase) return { ok: true };
+  if (import.meta.env.DEV && userId.startsWith("00000000")) return { ok: true };
   if (isSchemaSkipActive()) {
     return { ok: true };
   }

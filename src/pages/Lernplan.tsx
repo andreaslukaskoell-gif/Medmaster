@@ -1,53 +1,52 @@
-import { useState, useMemo, useRef, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import {
-  CalendarDays,
-  Clock,
   BookOpen,
+  RefreshCw,
+  ListChecks,
   Brain,
   FileText,
   Heart,
+  Clock,
+  Check,
+  ChevronDown,
+  ChevronUp,
   Zap,
   ArrowRight,
-  ListChecks,
-  RefreshCw,
-  Check,
-  CheckCircle2,
 } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
-import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
+
 import { useStore } from "@/store/useStore";
 import { useAdaptiveStore } from "@/store/adaptiveLearning";
-import { daysUntilMedAT } from "@/lib/utils";
-import { generateAdaptivePlan } from "@/lib/adaptivePlan";
-import { getDailyGoalFromPlan } from "@/lib/dailyGoal";
-import { buildConcreteDailyPlan } from "@/lib/concreteDailyPlan";
-import { getPlanAdaptation } from "@/lib/planAdaptation";
 import { usePageTitle } from "@/hooks/usePageTitle";
+import { useDailyPlan, type PlanTier } from "@/hooks/useDailyPlan";
 
-// Gesamtpensum BMS+KFF+TV+SEK (gleicher Wert wie Onboarding)
-const TOTAL_CONTENT_HOURS = 400;
+// ============================================================
+// Tier card config
+// ============================================================
 
-const phaseConfig = {
-  einstieg: {
-    label: "Einstieg",
-    badge: "info" as const,
-    desc: "Grundlagen aufbauen, Überblick gewinnen",
-  },
-  vertiefung: {
-    label: "Vertiefung",
-    badge: "warning" as const,
-    desc: "Schwächen gezielt trainieren, Wissen festigen",
-  },
-  pruefung: {
-    label: "Prüfungsphase",
-    badge: "danger" as const,
-    desc: "Simulationen, Zeitmanagement, letzte Wiederholung",
-  },
+const TIER_ORDER: PlanTier[] = ["minimal", "empfohlen", "intensiv"];
+
+const TIER_ICONS: Record<PlanTier, string> = {
+  minimal: "30",
+  empfohlen: "60",
+  intensiv: "90",
 };
+
+// ============================================================
+// Section colors
+// ============================================================
+
+const SECTION_COLORS = {
+  bmsRead: "border-emerald-500",
+  bmsReview: "border-amber-500",
+  bmsQuestions: "border-emerald-600",
+  kff: "border-purple-500",
+  tv: "border-blue-500",
+  sek: "border-pink-500",
+} as const;
 
 // ============================================================
 // Component
@@ -55,599 +54,477 @@ const phaseConfig = {
 
 export default function Lernplan() {
   usePageTitle("Lernplan");
-  const {
-    lernplanConfig,
-    setLernplanConfig,
-    getDueChapterIds,
-    completedChapters,
-    goalAchievedByDate,
-    quizResults,
-    activityLog,
-  } = useStore();
-  const adaptive = useAdaptiveStore();
-  const lastViewedKapitelId = useAdaptiveStore((s) => s.lastViewedKapitelId);
-  const lastViewedUnterkapitelId = useAdaptiveStore((s) => s.lastViewedUnterkapitelId);
+
+  const { lernplanConfig, setLernplanConfig } = useStore();
   const setResumeToUnterkapitelId = useAdaptiveStore((s) => s.setResumeToUnterkapitelId);
+
+  const { plan, tier, setTier, allTiers, completedItems, toggleCompleted, completionProgress } =
+    useDailyPlan();
+
+  const [configOpen, setConfigOpen] = useState(false);
   const [daysPerWeek, setDaysPerWeek] = useState(lernplanConfig?.daysPerWeek ?? 5);
   const [hoursPerDay, setHoursPerDay] = useState(
     lernplanConfig?.hoursPerDay ??
       (lernplanConfig ? lernplanConfig.hoursPerWeek / (lernplanConfig.daysPerWeek || 5) : 2)
   );
-  const [updateFeedback, setUpdateFeedback] = useState(false);
-  const todayPlanRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    if (!updateFeedback) return;
-    const t = setTimeout(() => setUpdateFeedback(false), 3000);
-    return () => clearTimeout(t);
-  }, [updateFeedback]);
-
-  const days = daysUntilMedAT();
-  const weeksLeft = Math.max(1, Math.floor(days / 7));
   const derivedHoursPerWeek = Math.round(daysPerWeek * hoursPerDay * 4) / 4;
-  const recommendedHoursPerDay =
-    weeksLeft > 0 && daysPerWeek > 0
-      ? Math.ceil((TOTAL_CONTENT_HOURS / (weeksLeft * daysPerWeek)) * 4) / 4
-      : null;
-  const readiness = adaptive.getMedATReadiness();
-  const weakTopics = adaptive.getWeakestTopics(5);
-  const _strongTopics = adaptive.getStrongestTopics(3);
-  void _strongTopics;
-  const { profile } = adaptive;
 
-  const fachReadiness = useMemo(
-    () => ({
-      biologie: adaptive.getFachReadiness("biologie"),
-      chemie: adaptive.getFachReadiness("chemie"),
-      physik: adaptive.getFachReadiness("physik"),
-      mathematik: adaptive.getFachReadiness("mathematik"),
-    }),
-    [adaptive]
-  );
-
-  const handleGenerate = () => {
-    const hours = Math.round(daysPerWeek * hoursPerDay * 4) / 4;
+  const handleSaveConfig = () => {
     setLernplanConfig({
-      medatDate: new Date(Date.now() + days * 86400000).toISOString().split("T")[0],
-      hoursPerWeek: hours,
+      medatDate: lernplanConfig?.medatDate ?? new Date().toISOString().split("T")[0],
+      hoursPerWeek: derivedHoursPerWeek,
       daysPerWeek,
       hoursPerDay,
       generatedAt: new Date().toISOString(),
     });
-    setUpdateFeedback(true);
-    requestAnimationFrame(() => {
-      todayPlanRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-    });
   };
 
-  const adaptation = useMemo(
-    () =>
-      lernplanConfig
-        ? getPlanAdaptation({
-            hoursPerWeek: lernplanConfig.hoursPerWeek,
-            goalAchievedByDate: goalAchievedByDate ?? {},
-            quizResults: quizResults ?? [],
-            activityLog: activityLog ?? {},
-          })
-        : null,
-    [lernplanConfig, goalAchievedByDate, quizResults, activityLog]
-  );
-  const effectiveHoursPerWeek =
-    adaptation?.effectiveHoursPerWeek ?? lernplanConfig?.hoursPerWeek ?? 10;
-
-  const plan = lernplanConfig
-    ? generateAdaptivePlan({
-        hoursPerWeek: effectiveHoursPerWeek,
-        weeksLeft,
-        readiness,
-        fachReadiness,
-        weakTopics,
-        phase: profile.learningPhase,
-      })
-    : null;
-
-  const concretePlan = useMemo(() => {
-    if (!plan) return null;
-    return buildConcreteDailyPlan(plan, {
-      dueChapterIds: getDueChapterIds(),
-      lastViewedChapterId: lastViewedKapitelId,
-      lastViewedUnterkapitelId,
-      completedChapterIds: completedChapters ?? [],
-    });
-  }, [plan, getDueChapterIds, lastViewedKapitelId, lastViewedUnterkapitelId, completedChapters]);
+  // Count total plan items for empty state check
+  const hasPlanItems =
+    plan.bmsRead.length > 0 ||
+    plan.bmsReview.length > 0 ||
+    plan.bmsQuestions.length > 0 ||
+    plan.kffTasks.length > 0 ||
+    plan.tvTexts > 0 ||
+    plan.sekTasks.length > 0;
 
   return (
-    <div className="max-w-5xl mx-auto space-y-6">
-      <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "Lernplan" }]} />
-
+    <div className="max-w-5xl mx-auto space-y-8">
       {/* Hero */}
       <div className="hero-orbs text-center">
-        <h1 className="text-2xl font-bold text-[var(--text-primary)]">Lernplan</h1>
+        <h1 className="text-3xl font-bold text-[var(--text-primary)]">Lernplan</h1>
         <p className="text-[var(--muted)] mt-1">Dein persönlicher Weg zum MedAT</p>
       </div>
 
-      {/* 1. Heutiger Lernplan – ganz oben */}
-      <div ref={todayPlanRef}>
-        <Card className="card-glass border-2 border-[var(--accent)]/20 dark:border-[var(--accent)]/30">
-          <CardHeader className="pb-2">
-            <CardTitle className="flex items-center gap-2 text-base">
-              <CalendarDays className="w-4 h-4 text-[var(--accent)]" />
-              Heutiger Lernplan
-              {updateFeedback && (
-                <span className="text-sm font-normal text-emerald-600 dark:text-emerald-400 animate-pulse">
-                  · Aktualisiert
+      {/* Tier Selector */}
+      <div className="grid grid-cols-3 gap-4">
+        {TIER_ORDER.map((t) => {
+          const info = allTiers[t];
+          const isSelected = tier === t;
+          return (
+            <button
+              key={t}
+              onClick={() => setTier(t)}
+              className={`relative rounded-xl border-2 p-5 text-left transition-all duration-200 cursor-pointer ${
+                isSelected
+                  ? "border-[var(--accent)] bg-[var(--accent)]/5 dark:bg-[var(--accent)]/10 shadow-sm"
+                  : "border-[var(--border)] hover:border-[var(--accent)]/40 bg-[var(--card-bg)]"
+              }`}
+            >
+              {t === "empfohlen" && (
+                <span className="absolute -top-2.5 left-4 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider bg-[var(--accent)] text-white rounded-full">
+                  Empfohlen
                 </span>
               )}
-            </CardTitle>
-            <p className="text-sm text-[var(--muted)] font-normal">
-              Konkrete Vorschläge für heute – machbar und nicht überfordernd.
-            </p>
-            {adaptation && adaptation.reason === "schnell_und_gut" && (
-              <p className="text-xs text-emerald-600 dark:text-emerald-400">
-                Dein Plan wurde leicht erhöht – du warst in den letzten Tagen schnell und gut
-                unterwegs.
-              </p>
-            )}
-            {adaptation && adaptation.reason === "überfordert" && (
-              <p className="text-xs text-amber-600 dark:text-amber-400">
-                Dein Plan wurde etwas entlastet – damit du nicht unter Druck gerätst.
-              </p>
-            )}
-          </CardHeader>
-          <CardContent className="space-y-4">
-            {plan ? (
-              (() => {
-                const today = new Date().toISOString().split("T")[0];
-                const { quizResults: qr } = useStore.getState();
-                const dailyState = getDailyGoalFromPlan(plan, qr, today);
-                const { primaryProgressPct } = dailyState;
-
-                return (
-                  <>
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm text-[var(--text-secondary)]">
-                        {concretePlan
-                          ? `ca. ${concretePlan.totalMinutesEstimate} Min heute`
-                          : "Lade Plan…"}
-                      </span>
-                      <span className="text-sm font-bold text-[var(--accent)]">
-                        {primaryProgressPct}%
-                      </span>
-                    </div>
-                    <Progress
-                      value={primaryProgressPct}
-                      className={primaryProgressPct >= 100 ? "[&>div]:bg-emerald-500" : ""}
-                    />
-
-                    {concretePlan && (
-                      <div className="space-y-4 pt-2">
-                        {concretePlan.bmsRead.length > 0 && (
-                          <div>
-                            <h4 className="text-xs font-semibold uppercase tracking-wide text-[var(--muted)] mb-2 flex items-center gap-1.5">
-                              <BookOpen className="w-3.5 h-3.5" />
-                              Kapitel lernen
-                            </h4>
-                            <ul className="space-y-1.5">
-                              {concretePlan.bmsRead.map((item) => {
-                                const isDone =
-                                  (item.subchapterId &&
-                                    completedChapters?.includes(item.subchapterId)) ||
-                                  completedChapters?.includes(item.chapterId);
-                                return (
-                                  <li key={`${item.chapterId}-${item.subchapterId ?? "ch"}`}>
-                                    <Link
-                                      to={item.path}
-                                      onClick={() =>
-                                        item.subchapterId &&
-                                        setResumeToUnterkapitelId(item.subchapterId)
-                                      }
-                                      className={`flex items-center gap-2 p-2 rounded-lg border transition-colors text-left ${
-                                        isDone
-                                          ? "border-emerald-200 dark:border-emerald-800/50 bg-emerald-50/50 dark:bg-emerald-900/10"
-                                          : "border-[var(--border)] dark:border-[var(--border)] hover:bg-[var(--border)]/50"
-                                      }`}
-                                    >
-                                      {isDone ? (
-                                        <CheckCircle2 className="w-4 h-4 shrink-0 text-emerald-600 dark:text-emerald-400" />
-                                      ) : (
-                                        <span className="w-4 h-4 shrink-0 rounded-full border-2 border-muted" />
-                                      )}
-                                      <span
-                                        className={`text-sm font-medium truncate flex-1 ${
-                                          isDone
-                                            ? "text-emerald-800 dark:text-emerald-200"
-                                            : "text-[var(--text-primary)]"
-                                        }`}
-                                      >
-                                        {item.title}
-                                      </span>
-                                      {!isDone && (
-                                        <ArrowRight className="w-4 h-4 shrink-0 text-[var(--muted)]" />
-                                      )}
-                                    </Link>
-                                  </li>
-                                );
-                              })}
-                            </ul>
-                          </div>
-                        )}
-
-                        {concretePlan.bmsReview.length > 0 && (
-                          <div>
-                            <h4 className="text-xs font-semibold uppercase tracking-wide text-[var(--muted)] mb-2 flex items-center gap-1.5">
-                              <RefreshCw className="w-3.5 h-3.5" />
-                              Wiederholen (fällig)
-                            </h4>
-                            <ul className="space-y-1.5">
-                              {concretePlan.bmsReview.map((item) => {
-                                const isDone = item.subchapterId
-                                  ? completedChapters?.includes(item.subchapterId)
-                                  : completedChapters?.includes(item.chapterId);
-                                return (
-                                  <li key={item.subchapterId ?? item.chapterId}>
-                                    <Link
-                                      to={item.path}
-                                      className={`flex items-center gap-2 p-2 rounded-lg transition-colors text-left ${
-                                        isDone
-                                          ? "border border-emerald-200 dark:border-emerald-800/50 bg-emerald-50/50 dark:bg-emerald-900/10"
-                                          : "border border-amber-200 dark:border-amber-800/50 bg-amber-50/50 dark:bg-amber-900/10 hover:bg-amber-100/50 dark:hover:bg-amber-900/20"
-                                      }`}
-                                    >
-                                      {isDone ? (
-                                        <CheckCircle2 className="w-4 h-4 shrink-0 text-emerald-600 dark:text-emerald-400" />
-                                      ) : (
-                                        <span className="w-4 h-4 shrink-0 rounded-full border-2 border-amber-400 dark:border-amber-500" />
-                                      )}
-                                      <span
-                                        className={`text-sm font-medium truncate flex-1 ${
-                                          isDone
-                                            ? "text-emerald-800 dark:text-emerald-200"
-                                            : "text-[var(--text-primary)]"
-                                        }`}
-                                      >
-                                        {item.title}
-                                      </span>
-                                      {!isDone && (
-                                        <ArrowRight className="w-4 h-4 shrink-0 text-amber-600 dark:text-amber-400" />
-                                      )}
-                                    </Link>
-                                  </li>
-                                );
-                              })}
-                            </ul>
-                          </div>
-                        )}
-
-                        {concretePlan.bmsQuestions.length > 0 &&
-                          (() => {
-                            const bmsDone = dailyState.todayTasks.find(
-                              (t) => t.module === "BMS"
-                            )?.done;
-                            return (
-                              <div>
-                                <h4 className="text-xs font-semibold uppercase tracking-wide text-[var(--muted)] mb-2 flex items-center gap-1.5">
-                                  <ListChecks className="w-3.5 h-3.5" />
-                                  BMS-Fragen
-                                </h4>
-                                <Link
-                                  to="/fragen-trainer"
-                                  state={{
-                                    dailyPlanBms: concretePlan.bmsQuestions.map((q) => ({
-                                      fach: q.fach,
-                                      count: q.count,
-                                    })),
-                                  }}
-                                  className={`flex flex-wrap gap-2 p-3 rounded-lg border transition-colors ${
-                                    bmsDone
-                                      ? "border-emerald-200 dark:border-emerald-800/50 bg-emerald-50/50 dark:bg-emerald-900/10"
-                                      : "border-[var(--border)] dark:border-[var(--border)] hover:bg-[var(--border)]/50"
-                                  }`}
-                                >
-                                  {bmsDone ? (
-                                    <CheckCircle2 className="w-4 h-4 shrink-0 text-emerald-600 dark:text-emerald-400 mt-0.5" />
-                                  ) : null}
-                                  {concretePlan.bmsQuestions.map((q) => (
-                                    <span
-                                      key={q.fach}
-                                      className={`inline-flex items-center gap-1 px-2 py-1 rounded-md text-xs font-medium ${
-                                        bmsDone
-                                          ? "bg-emerald-200/60 dark:bg-emerald-800/40 text-emerald-800 dark:text-emerald-200"
-                                          : "bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-200"
-                                      }`}
-                                    >
-                                      {q.label}: {q.count}
-                                    </span>
-                                  ))}
-                                  <span className="text-xs text-[var(--muted)] self-center ml-auto">
-                                    {bmsDone ? "Erledigt" : "Fragen-Trainer →"}
-                                  </span>
-                                </Link>
-                              </div>
-                            );
-                          })()}
-
-                        {concretePlan.kffTasks.length > 0 &&
-                          (() => {
-                            const kffDone = dailyState.todayTasks.find(
-                              (t) => t.module === "KFF"
-                            )?.done;
-                            return (
-                              <div>
-                                <h4 className="text-xs font-semibold uppercase tracking-wide text-[var(--muted)] mb-2 flex items-center gap-1.5">
-                                  <Brain className="w-3.5 h-3.5" />
-                                  KFF
-                                </h4>
-                                <Link
-                                  to="/kff"
-                                  state={{
-                                    dailyPlanKff: concretePlan.kffTasks.map((t) => ({
-                                      domain: t.domain,
-                                      count: t.count,
-                                    })),
-                                  }}
-                                  className={`flex flex-wrap gap-2 p-3 rounded-lg border transition-colors ${
-                                    kffDone
-                                      ? "border-emerald-200 dark:border-emerald-800/50 bg-emerald-50/50 dark:bg-emerald-900/10"
-                                      : "border-[var(--border)] dark:border-[var(--border)] hover:bg-[var(--border)]/50"
-                                  }`}
-                                >
-                                  {kffDone ? (
-                                    <CheckCircle2 className="w-4 h-4 shrink-0 text-emerald-600 dark:text-emerald-400 mt-0.5" />
-                                  ) : null}
-                                  {concretePlan.kffTasks.map((t) => (
-                                    <span
-                                      key={t.domain}
-                                      className={`inline-flex items-center gap-1 px-2 py-1 rounded-md text-xs font-medium ${
-                                        kffDone
-                                          ? "bg-amber-200/60 dark:bg-amber-800/40 text-amber-800 dark:text-amber-200"
-                                          : "bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-200"
-                                      }`}
-                                    >
-                                      {t.label}: {t.count}
-                                    </span>
-                                  ))}
-                                  <span className="text-xs text-[var(--muted)] self-center ml-auto">
-                                    {kffDone ? "Erledigt" : "KFF →"}
-                                  </span>
-                                </Link>
-                              </div>
-                            );
-                          })()}
-
-                        {concretePlan.tvTexts > 0 &&
-                          (() => {
-                            const tvDone = dailyState.todayTasks.find(
-                              (t) => t.module === "TV"
-                            )?.done;
-                            return (
-                              <div>
-                                <h4 className="text-xs font-semibold uppercase tracking-wide text-[var(--muted)] mb-2 flex items-center gap-1.5">
-                                  <FileText className="w-3.5 h-3.5" />
-                                  TV
-                                </h4>
-                                <Link
-                                  to="/tv"
-                                  state={{ dailyPlanTvTexts: concretePlan.tvTexts }}
-                                  className={`flex items-center gap-2 p-3 rounded-lg border transition-colors ${
-                                    tvDone
-                                      ? "border-emerald-200 dark:border-emerald-800/50 bg-emerald-50/50 dark:bg-emerald-900/10"
-                                      : "border-[var(--border)] dark:border-[var(--border)] hover:bg-[var(--border)]/50"
-                                  }`}
-                                >
-                                  {tvDone ? (
-                                    <CheckCircle2 className="w-4 h-4 shrink-0 text-emerald-600 dark:text-emerald-400" />
-                                  ) : null}
-                                  <span
-                                    className={`text-sm font-medium flex-1 ${
-                                      tvDone
-                                        ? "text-emerald-800 dark:text-emerald-200"
-                                        : "text-[var(--text-primary)]"
-                                    }`}
-                                  >
-                                    {concretePlan.tvTexts} Text{concretePlan.tvTexts > 1 ? "e" : ""}{" "}
-                                    bearbeiten
-                                  </span>
-                                  {!tvDone && (
-                                    <ArrowRight className="w-4 h-4 shrink-0 text-[var(--muted)] ml-auto" />
-                                  )}
-                                  {tvDone && (
-                                    <span className="text-xs text-[var(--muted)]">Erledigt</span>
-                                  )}
-                                </Link>
-                              </div>
-                            );
-                          })()}
-
-                        {concretePlan.sekTasks.length > 0 &&
-                          (() => {
-                            const sekDone = dailyState.todayTasks.find(
-                              (t) => t.module === "SEK"
-                            )?.done;
-                            return (
-                              <div>
-                                <h4 className="text-xs font-semibold uppercase tracking-wide text-[var(--muted)] mb-2 flex items-center gap-1.5">
-                                  <Heart className="w-3.5 h-3.5" />
-                                  SEK
-                                </h4>
-                                <Link
-                                  to="/sek"
-                                  state={{ dailyPlanSek: concretePlan.sekTasks }}
-                                  className={`flex items-center gap-2 p-3 rounded-lg border transition-colors ${
-                                    sekDone
-                                      ? "border-emerald-200 dark:border-emerald-800/50 bg-emerald-50/50 dark:bg-emerald-900/10"
-                                      : "border-[var(--border)] dark:border-[var(--border)] hover:bg-[var(--border)]/50"
-                                  }`}
-                                >
-                                  {sekDone ? (
-                                    <CheckCircle2 className="w-4 h-4 shrink-0 text-emerald-600 dark:text-emerald-400" />
-                                  ) : null}
-                                  <div className="flex flex-wrap gap-2 flex-1">
-                                    {concretePlan.sekTasks.map((t) => (
-                                      <span
-                                        key={t.domain}
-                                        className={`inline-flex items-center gap-1 px-2 py-1 rounded-md text-xs font-medium ${
-                                          sekDone
-                                            ? "bg-rose-200/60 dark:bg-rose-800/40 text-rose-800 dark:text-rose-200"
-                                            : "bg-rose-100 dark:bg-rose-900/30 text-rose-800 dark:text-rose-200"
-                                        }`}
-                                      >
-                                        {t.label}: {t.count}{" "}
-                                        {t.count === 1 ? "Beispiel" : "Beispiele"}
-                                      </span>
-                                    ))}
-                                  </div>
-                                  <span className="text-xs text-[var(--muted)] shrink-0">
-                                    {sekDone ? "Erledigt" : "SEK →"}
-                                  </span>
-                                </Link>
-                              </div>
-                            );
-                          })()}
-                      </div>
-                    )}
-                  </>
-                );
-              })()
-            ) : (
-              <div className="space-y-3">
-                <p className="text-sm text-[var(--text-primary)] font-medium">
-                  Noch kein Lernplan erstellt
-                </p>
-                <p className="text-sm text-[var(--muted)]">
-                  Stelle unten ein, an wie vielen Tagen und wie lange du pro Tag lernen möchtest.
-                  Klicke dann auf „Lernplan generieren" — du siehst hier sofort deine täglichen
-                  Aufgaben (Kapitel, Fragen, KFF, TV, SEK).
-                </p>
-                <div className="flex items-center gap-2 text-xs text-[var(--muted)]">
-                  <Zap className="w-3.5 h-3.5 text-[var(--accent)]" />
-                  Du kannst den Plan jederzeit anpassen.
-                </div>
+              <div className="flex items-center gap-3 mb-2">
+                <span
+                  className={`text-2xl font-bold ${
+                    isSelected ? "text-[var(--accent)]" : "text-[var(--text-secondary)]"
+                  }`}
+                >
+                  ~{TIER_ICONS[t]}
+                </span>
+                <span className="text-xs text-[var(--muted)] uppercase tracking-wide">Min</span>
               </div>
-            )}
-          </CardContent>
-        </Card>
+              <p
+                className={`text-sm font-semibold ${
+                  isSelected ? "text-[var(--text-primary)]" : "text-[var(--text-secondary)]"
+                }`}
+              >
+                {info.label}
+              </p>
+              <p className="text-xs text-[var(--muted)] mt-0.5">{info.desc}</p>
+              {isSelected && (
+                <div className="absolute top-3 right-3">
+                  <div className="w-5 h-5 rounded-full bg-[var(--accent)] flex items-center justify-center">
+                    <Check className="w-3 h-3 text-white" />
+                  </div>
+                </div>
+              )}
+            </button>
+          );
+        })}
       </div>
 
-      {/* 2. Lernphasen (nur wenn Plan existiert) */}
-      {plan && (
-        <div>
-          <h2 className="text-lg font-semibold text-[var(--text-primary)] mb-3">Lernphasen</h2>
-          <div className="grid grid-cols-2 gap-4 stagger-children">
-            {plan.phases.map((phase, i) => {
-              const pc = phaseConfig[phase.phase as keyof typeof phaseConfig];
-              const isActive = plan.activePhase === phase.phase;
-              return (
-                <Card
-                  key={i}
-                  className={`card-glass ${isActive ? "ring-2 ring-[var(--accent)]" : ""}`}
-                >
-                  <CardContent className="p-4">
-                    <div className="flex items-center gap-2 mb-2">
-                      <Badge variant={pc.badge}>{pc.label}</Badge>
-                      <span className="text-xs text-[var(--muted)]">{phase.weeks} Wochen</span>
-                      {isActive && <Badge variant="success">Aktuell</Badge>}
-                    </div>
-                    <p className="text-xs text-[var(--muted)]">{pc.desc}</p>
-                  </CardContent>
-                </Card>
-              );
-            })}
-          </div>
+      {/* Completion Progress Bar */}
+      <div className="space-y-2">
+        <div className="flex items-center justify-between">
+          <span className="text-sm text-[var(--text-secondary)]">
+            {completionProgress.done} von {completionProgress.total} Aufgaben erledigt
+          </span>
+          <span className="text-sm font-bold text-emerald-600 dark:text-emerald-400">
+            {completionProgress.percentage}%
+          </span>
         </div>
-      )}
+        <Progress value={completionProgress.percentage} barClassName="bg-emerald-500" />
+      </div>
 
-      {/* 3. Lernplan-Einstellungen – zum Anpassen */}
-      <Card className="card-glass">
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <Clock className="w-5 h-5 text-[var(--accent)]" />
-            Lernplan anpassen
-          </CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-4">
-          <div>
-            <label className="text-sm font-medium text-[var(--text-secondary)] block mb-2">
-              An wie vielen Tagen pro Woche kannst du lernen?
-            </label>
-            <div className="flex items-center gap-4">
-              <input
-                type="range"
-                min={3}
-                max={7}
-                value={daysPerWeek}
-                onChange={(e) => setDaysPerWeek(Number(e.target.value))}
-                className="flex-1 accent-[var(--accent)]"
-              />
-              <span className="text-lg font-bold text-[var(--accent)] w-16 text-right">
-                {daysPerWeek} Tage
-              </span>
-            </div>
+      {/* Daily Plan Sections */}
+      {hasPlanItems ? (
+        <div className="space-y-6">
+          {/* Estimated Time */}
+          <div className="flex items-center gap-2 text-sm text-[var(--muted)]">
+            <Clock className="w-4 h-4" />
+            Geschätzte Dauer: ~{plan.totalMinutesEstimate} Minuten
           </div>
-          <div>
-            <label className="text-sm font-medium text-[var(--text-secondary)] block mb-2">
-              Wie viele Stunden pro Lerntag?
-            </label>
-            <div className="flex items-center gap-4">
-              <input
-                type="range"
-                min={0.5}
-                max={8}
-                step={0.25}
-                value={hoursPerDay}
-                onChange={(e) => setHoursPerDay(Number(e.target.value))}
-                className="flex-1 accent-[var(--accent)]"
-              />
-              <span className="text-lg font-bold text-[var(--accent)] w-20 text-right">
-                {hoursPerDay}h/Tag
-              </span>
-            </div>
-          </div>
-          <p className="text-sm text-[var(--muted)]">
-            = <strong className="text-[var(--text-primary)]">{derivedHoursPerWeek} h/Woche</strong>
-          </p>
 
-          {recommendedHoursPerDay != null && days > 0 && (
-            <div className="rounded-lg bg-[var(--accent)]/5 dark:bg-[var(--accent)]/10 border border-[var(--accent)]/20 dark:border-[var(--accent)]/30 p-3">
-              <p className="text-sm font-medium text-[var(--accent)]">Unsere Empfehlung</p>
-              <p className="text-sm text-[var(--muted)] mt-0.5">
-                Damit du bis zum MedAT durchkommst, empfehlen wir mind.{" "}
-                <strong className="text-[var(--text-primary)]">{recommendedHoursPerDay} h</strong>{" "}
-                pro Tag an{" "}
-                <strong className="text-[var(--text-primary)]">{daysPerWeek} Tagen</strong> pro
-                Woche.
-                {hoursPerDay < recommendedHoursPerDay && (
-                  <span className="block mt-1 text-amber-700 dark:text-amber-400">
-                    Dein aktueller Wert ({hoursPerDay} h/Tag) liegt darunter – du müsstest mehr Zeit
-                    einplanen oder den Lernstart vorziehen.
-                  </span>
-                )}
-              </p>
-            </div>
+          {/* BMS: Lernen */}
+          {plan.bmsRead.length > 0 && (
+            <PlanSection
+              title="Lernen"
+              icon={<BookOpen className="w-4 h-4" />}
+              borderColor={SECTION_COLORS.bmsRead}
+            >
+              <ul className="space-y-2">
+                {plan.bmsRead.map((item) => {
+                  const itemId = `bms-read-${item.subchapterId ?? item.chapterId}`;
+                  const isDone = completedItems.has(itemId);
+                  return (
+                    <li key={itemId} className="flex items-center gap-3">
+                      <PlanCheckbox checked={isDone} onChange={() => toggleCompleted(itemId)} />
+                      <Link
+                        to={item.path}
+                        onClick={() =>
+                          item.subchapterId && setResumeToUnterkapitelId(item.subchapterId)
+                        }
+                        className={`flex items-center gap-2 flex-1 min-w-0 group ${
+                          isDone ? "line-through text-[var(--muted)]" : "text-[var(--text-primary)]"
+                        }`}
+                      >
+                        <span className="text-sm font-medium truncate">{item.title}</span>
+                        <SubjectBadge subject={item.subject} />
+                        {!isDone && (
+                          <ArrowRight className="w-3.5 h-3.5 text-[var(--muted)] opacity-0 group-hover:opacity-100 transition-opacity ml-auto shrink-0" />
+                        )}
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </PlanSection>
           )}
 
-          <Button
-            variant={updateFeedback ? "default" : "premium"}
-            onClick={handleGenerate}
-            className={
-              updateFeedback
-                ? "bg-emerald-600 hover:bg-emerald-600 text-white border-emerald-500 transition-colors duration-200"
-                : ""
-            }
-          >
-            {updateFeedback ? (
-              <>
-                <Check className="w-4 h-4 mr-2" />
-                Aktualisiert!
-              </>
-            ) : (
-              <>
-                <Zap className="w-4 h-4 mr-2" />
-                {lernplanConfig ? "Lernplan aktualisieren" : "Lernplan generieren"}
-              </>
-            )}
-          </Button>
-        </CardContent>
+          {/* BMS: Wiederholen */}
+          {plan.bmsReview.length > 0 && (
+            <PlanSection
+              title="Wiederholen"
+              icon={<RefreshCw className="w-4 h-4" />}
+              borderColor={SECTION_COLORS.bmsReview}
+            >
+              <ul className="space-y-2">
+                {plan.bmsReview.map((item) => {
+                  const itemId = `bms-review-${item.subchapterId ?? item.chapterId}`;
+                  const isDone = completedItems.has(itemId);
+                  return (
+                    <li key={itemId} className="flex items-center gap-3">
+                      <PlanCheckbox checked={isDone} onChange={() => toggleCompleted(itemId)} />
+                      <Link
+                        to={item.path}
+                        className={`flex items-center gap-2 flex-1 min-w-0 group ${
+                          isDone ? "line-through text-[var(--muted)]" : "text-[var(--text-primary)]"
+                        }`}
+                      >
+                        <span className="text-sm font-medium truncate">{item.title}</span>
+                        <SubjectBadge subject={item.subject} />
+                        {!isDone && (
+                          <ArrowRight className="w-3.5 h-3.5 text-[var(--muted)] opacity-0 group-hover:opacity-100 transition-opacity ml-auto shrink-0" />
+                        )}
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </PlanSection>
+          )}
+
+          {/* BMS-Fragen */}
+          {plan.bmsQuestions.length > 0 && (
+            <PlanSection
+              title="BMS-Fragen"
+              icon={<ListChecks className="w-4 h-4" />}
+              borderColor={SECTION_COLORS.bmsQuestions}
+            >
+              <ul className="space-y-2">
+                {plan.bmsQuestions.map((q) => {
+                  const itemId = `bms-questions-${q.fach}`;
+                  const isDone = completedItems.has(itemId);
+                  return (
+                    <li key={itemId} className="flex items-center gap-3">
+                      <PlanCheckbox checked={isDone} onChange={() => toggleCompleted(itemId)} />
+                      <Link
+                        to="/fragen-trainer"
+                        state={{ dailyPlanBms: [{ fach: q.fach, count: q.count }] }}
+                        className={`flex items-center gap-2 flex-1 min-w-0 group ${
+                          isDone ? "line-through text-[var(--muted)]" : "text-[var(--text-primary)]"
+                        }`}
+                      >
+                        <span className="text-sm font-medium">
+                          {q.count} Fragen {q.label}
+                        </span>
+                        {!isDone && (
+                          <ArrowRight className="w-3.5 h-3.5 text-[var(--muted)] opacity-0 group-hover:opacity-100 transition-opacity ml-auto shrink-0" />
+                        )}
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </PlanSection>
+          )}
+
+          {/* KFF */}
+          {plan.kffTasks.length > 0 && (
+            <PlanSection
+              title="KFF"
+              icon={<Brain className="w-4 h-4" />}
+              borderColor={SECTION_COLORS.kff}
+            >
+              <ul className="space-y-2">
+                {plan.kffTasks.map((t) => {
+                  const itemId = `kff-${t.domain}`;
+                  const isDone = completedItems.has(itemId);
+                  return (
+                    <li key={itemId} className="flex items-center gap-3">
+                      <PlanCheckbox checked={isDone} onChange={() => toggleCompleted(itemId)} />
+                      <Link
+                        to="/kff"
+                        state={{ dailyPlanKff: [{ domain: t.domain, count: t.count }] }}
+                        className={`flex items-center gap-2 flex-1 min-w-0 group ${
+                          isDone ? "line-through text-[var(--muted)]" : "text-[var(--text-primary)]"
+                        }`}
+                      >
+                        <span className="text-sm font-medium">
+                          {t.count} {t.label}
+                        </span>
+                        {!isDone && (
+                          <ArrowRight className="w-3.5 h-3.5 text-[var(--muted)] opacity-0 group-hover:opacity-100 transition-opacity ml-auto shrink-0" />
+                        )}
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </PlanSection>
+          )}
+
+          {/* TV */}
+          {plan.tvTexts > 0 && (
+            <PlanSection
+              title="Textverständnis"
+              icon={<FileText className="w-4 h-4" />}
+              borderColor={SECTION_COLORS.tv}
+            >
+              {(() => {
+                const itemId = "tv-texte";
+                const isDone = completedItems.has(itemId);
+                return (
+                  <div className="flex items-center gap-3">
+                    <PlanCheckbox checked={isDone} onChange={() => toggleCompleted(itemId)} />
+                    <Link
+                      to="/tv"
+                      state={{ dailyPlanTvTexts: plan.tvTexts }}
+                      className={`flex items-center gap-2 flex-1 min-w-0 group ${
+                        isDone ? "line-through text-[var(--muted)]" : "text-[var(--text-primary)]"
+                      }`}
+                    >
+                      <span className="text-sm font-medium">
+                        {plan.tvTexts} {plan.tvTexts > 1 ? "Texte" : "Text"} bearbeiten
+                      </span>
+                      {!isDone && (
+                        <ArrowRight className="w-3.5 h-3.5 text-[var(--muted)] opacity-0 group-hover:opacity-100 transition-opacity ml-auto shrink-0" />
+                      )}
+                    </Link>
+                  </div>
+                );
+              })()}
+            </PlanSection>
+          )}
+
+          {/* SEK */}
+          {plan.sekTasks.length > 0 && (
+            <PlanSection
+              title="SEK"
+              icon={<Heart className="w-4 h-4" />}
+              borderColor={SECTION_COLORS.sek}
+            >
+              <ul className="space-y-2">
+                {plan.sekTasks.map((t) => {
+                  const itemId = `sek-${t.domain}`;
+                  const isDone = completedItems.has(itemId);
+                  return (
+                    <li key={itemId} className="flex items-center gap-3">
+                      <PlanCheckbox checked={isDone} onChange={() => toggleCompleted(itemId)} />
+                      <Link
+                        to="/sek"
+                        state={{ dailyPlanSek: [{ domain: t.domain, count: t.count }] }}
+                        className={`flex items-center gap-2 flex-1 min-w-0 group ${
+                          isDone ? "line-through text-[var(--muted)]" : "text-[var(--text-primary)]"
+                        }`}
+                      >
+                        <span className="text-sm font-medium">
+                          {t.count} {t.label}
+                        </span>
+                        {!isDone && (
+                          <ArrowRight className="w-3.5 h-3.5 text-[var(--muted)] opacity-0 group-hover:opacity-100 transition-opacity ml-auto shrink-0" />
+                        )}
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </PlanSection>
+          )}
+        </div>
+      ) : (
+        /* Empty state */
+        <Card className="card-glass">
+          <CardContent className="py-12 text-center">
+            <div className="w-12 h-12 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center mx-auto mb-4">
+              <Check className="w-6 h-6 text-emerald-600 dark:text-emerald-400" />
+            </div>
+            <p className="text-lg font-semibold text-[var(--text-primary)]">Kein Lernplan nötig</p>
+            <p className="text-sm text-[var(--muted)] mt-1">Du bist auf dem neuesten Stand!</p>
+          </CardContent>
+        </Card>
+      )}
+
+      {/* Config Section — collapsed by default */}
+      <Card className="card-glass">
+        <button
+          onClick={() => setConfigOpen(!configOpen)}
+          className="w-full flex items-center justify-between p-4 cursor-pointer"
+        >
+          <div className="flex items-center gap-2">
+            <Clock className="w-4 h-4 text-[var(--muted)]" />
+            <span className="text-sm font-medium text-[var(--text-secondary)]">
+              Lernplan anpassen
+            </span>
+          </div>
+          {configOpen ? (
+            <ChevronUp className="w-4 h-4 text-[var(--muted)]" />
+          ) : (
+            <ChevronDown className="w-4 h-4 text-[var(--muted)]" />
+          )}
+        </button>
+        {configOpen && (
+          <CardContent className="pt-0 space-y-4">
+            <div>
+              <label className="text-sm font-medium text-[var(--text-secondary)] block mb-2">
+                An wie vielen Tagen pro Woche kannst du lernen?
+              </label>
+              <div className="flex items-center gap-4">
+                <input
+                  type="range"
+                  min={3}
+                  max={7}
+                  value={daysPerWeek}
+                  onChange={(e) => setDaysPerWeek(Number(e.target.value))}
+                  className="flex-1 accent-[var(--accent)]"
+                />
+                <span className="text-lg font-bold text-[var(--accent)] w-16 text-right">
+                  {daysPerWeek} Tage
+                </span>
+              </div>
+            </div>
+            <div>
+              <label className="text-sm font-medium text-[var(--text-secondary)] block mb-2">
+                Wie viele Stunden pro Lerntag?
+              </label>
+              <div className="flex items-center gap-4">
+                <input
+                  type="range"
+                  min={0.5}
+                  max={8}
+                  step={0.25}
+                  value={hoursPerDay}
+                  onChange={(e) => setHoursPerDay(Number(e.target.value))}
+                  className="flex-1 accent-[var(--accent)]"
+                />
+                <span className="text-lg font-bold text-[var(--accent)] w-20 text-right">
+                  {hoursPerDay}h/Tag
+                </span>
+              </div>
+            </div>
+            <p className="text-sm text-[var(--muted)]">
+              ={" "}
+              <strong className="text-[var(--text-primary)]">{derivedHoursPerWeek} h/Woche</strong>
+            </p>
+            <Button variant="premium" onClick={handleSaveConfig}>
+              <Zap className="w-4 h-4 mr-2" />
+              {lernplanConfig ? "Lernplan aktualisieren" : "Lernplan generieren"}
+            </Button>
+          </CardContent>
+        )}
       </Card>
     </div>
+  );
+}
+
+// ============================================================
+// Sub-components
+// ============================================================
+
+function PlanSection({
+  title,
+  icon,
+  borderColor,
+  children,
+}: {
+  title: string;
+  icon: React.ReactNode;
+  borderColor: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className={`border-l-4 ${borderColor} pl-4 py-1`}>
+      <h3 className="text-xs font-semibold uppercase tracking-wide text-[var(--muted)] mb-3 flex items-center gap-1.5">
+        {icon}
+        {title}
+      </h3>
+      {children}
+    </div>
+  );
+}
+
+function PlanCheckbox({ checked, onChange }: { checked: boolean; onChange: () => void }) {
+  return (
+    <button
+      onClick={(e) => {
+        e.preventDefault();
+        onChange();
+      }}
+      className={`w-5 h-5 rounded-md border-2 flex items-center justify-center shrink-0 transition-colors cursor-pointer ${
+        checked
+          ? "bg-emerald-500 border-emerald-500"
+          : "border-[var(--border)] hover:border-[var(--accent)]"
+      }`}
+    >
+      {checked && <Check className="w-3 h-3 text-white" />}
+    </button>
+  );
+}
+
+function SubjectBadge({ subject }: { subject: string }) {
+  const colors: Record<string, string> = {
+    biologie: "bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200",
+    chemie: "bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200",
+    physik: "bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-200",
+    mathematik: "bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-200",
+  };
+  const label: Record<string, string> = {
+    biologie: "Bio",
+    chemie: "Chemie",
+    physik: "Physik",
+    mathematik: "Mathe",
+  };
+  return (
+    <span
+      className={`inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-semibold uppercase tracking-wider shrink-0 ${
+        colors[subject] ?? "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300"
+      }`}
+    >
+      {label[subject] ?? subject}
+    </span>
   );
 }

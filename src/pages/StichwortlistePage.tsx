@@ -16,7 +16,6 @@ import {
 import { EmptyState } from "@/components/ui/EmptyState";
 import { Card, CardContent } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
-import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import {
   alleStichworteListe,
   getStichworteByFach,
@@ -197,8 +196,6 @@ export default function StichwortlistePage() {
 
   return (
     <div className="max-w-5xl mx-auto space-y-6">
-      <BreadcrumbNav items={[{ label: "BMS", href: "/bms" }, { label: "Stichwortliste" }]} />
-
       <div className="hero-orbs text-center">
         <h1 className="text-2xl font-bold text-[var(--text-primary)]">
           BMS-Stichwortliste 2025/2026

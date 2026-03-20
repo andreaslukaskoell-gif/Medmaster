@@ -10,15 +10,11 @@ import {
   CheckCircle2,
   Clock,
   Share2,
-  TrendingUp,
   Brain,
   FileText,
   Heart,
   ListChecks,
   RefreshCw,
-  Timer,
-  Dumbbell,
-  BarChart3,
   MessageCircle,
   Copy,
   Puzzle,
@@ -52,13 +48,16 @@ import { getLevelFromXP, XP_PER_LEVEL } from "@/lib/progression";
 import { generateAdaptivePlan } from "@/lib/adaptivePlan";
 import { buildConcreteDailyPlan } from "@/lib/concreteDailyPlan";
 import { getPlanAdaptation } from "@/lib/planAdaptation";
-import { getPrognoseSummary } from "@/lib/prognoseScore";
+// prognoseSummary moved into widgets
 import { alleKapitel, getKapitelById, findChapterByUnterkapitelId } from "@/data/bmsKapitel";
 import { pathForChapter } from "@/lib/bmsRoutes";
 import { useTodayEngine } from "@/hooks/useTodayEngine";
 import { ReferralWidget } from "@/components/shared/ReferralWidget";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { Tooltip } from "@/components/ui/Tooltip";
+import { DailyPlanWidget } from "@/components/dashboard/DailyPlanWidget";
+import { WeaknessWidget } from "@/components/dashboard/WeaknessWidget";
+import { RecentActivityWidget } from "@/components/dashboard/RecentActivityWidget";
 
 const tileMotion = {
   initial: { opacity: 0, y: 16 },
@@ -147,7 +146,6 @@ export default function Dashboard() {
       lastViewedUnterkapitelId,
     });
   }, [plan, getDueChapterIds, lastViewedKapitelId, lastViewedUnterkapitelId]);
-  const prognoseSummary = useMemo(() => getPrognoseSummary(quizResults ?? []), [quizResults]);
   const dailyGoalState = useMemo(
     () => getDailyGoalFromPlan(plan, quizResults, todayStr),
     [plan, quizResults, todayStr]
@@ -473,82 +471,16 @@ export default function Dashboard() {
             </div>
           </motion.section>
 
-          {/* Schnellzugriff + Prognose — side by side on desktop */}
+          {/* Empfehlungen — adaptive widgets based on user behavior */}
           <ScrollReveal delay={80}>
             <motion.section
               variants={tileMotion}
-              aria-label="Schnellzugriff"
-              className="grid grid-cols-4 gap-3 stagger-children"
+              aria-label="Empfehlungen"
+              className="grid grid-cols-3 gap-4"
             >
-              <Tooltip
-                content="Vollständige MedAT-Simulation unter Prüfungsbedingungen"
-                position="top"
-              >
-                <Link to="/simulation" className={cn(cardClass, "p-5 flex items-center gap-3")}>
-                  <Timer className="w-4 h-4 text-[var(--muted)] shrink-0" />
-                  <span className="text-sm font-medium text-[var(--text-primary)]">Simulation</span>
-                </Link>
-              </Tooltip>
-              <Tooltip
-                content="BMS- und KFF-Fragen gezielt nach Fach und Schwierigkeit üben"
-                position="top"
-              >
-                <Link to="/fragen-trainer" className={cn(cardClass, "p-5 flex items-center gap-3")}>
-                  <Dumbbell className="w-4 h-4 text-[var(--muted)] shrink-0" />
-                  <span className="text-sm font-medium text-[var(--text-primary)]">
-                    Fragen-Trainer
-                  </span>
-                </Link>
-              </Tooltip>
-              <Tooltip content="Lernfortschritt und Statistiken nach Fach anzeigen" position="top">
-                <Link to="/fortschritt" className={cn(cardClass, "p-5 flex items-center gap-3")}>
-                  <BarChart3 className="w-4 h-4 text-[var(--muted)] shrink-0" />
-                  <span className="text-sm font-medium text-[var(--text-primary)]">
-                    Fortschritt
-                  </span>
-                </Link>
-              </Tooltip>
-              <Tooltip
-                content="Geschätzte MedAT-Ergebnisquote basierend auf deinen Antworten"
-                position="top"
-              >
-                <Link to="/fortschritt">
-                  <div className={cn(cardClass, "h-full p-4 flex items-center gap-2.5")}>
-                    {prognoseSummary.hasEnoughData ? (
-                      <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
-                    ) : (
-                      <TrendingUp className="w-4 h-4 text-[var(--muted)] shrink-0" />
-                    )}
-                    <div className="min-w-0 flex-1">
-                      <p className="text-sm font-medium text-[var(--text-primary)]">Prognose</p>
-                      {prognoseSummary.hasEnoughData ? (
-                        <p className="text-xs text-emerald-600 dark:text-emerald-400 font-medium">
-                          Verfügbar
-                        </p>
-                      ) : (
-                        <>
-                          <p className="text-xs text-[var(--muted)]">
-                            {Math.min((quizResults ?? []).length, 20)}/20 Fragen
-                          </p>
-                          <div className="mt-1 w-full h-1 rounded-full bg-[var(--border)] overflow-hidden">
-                            <div
-                              className="h-full rounded-full bg-[var(--accent)] transition-all"
-                              style={{
-                                width: `${Math.min(((quizResults ?? []).length / 20) * 100, 100)}%`,
-                              }}
-                            />
-                          </div>
-                        </>
-                      )}
-                    </div>
-                    {prognoseSummary.hasEnoughData && (
-                      <p className="text-xl font-bold text-[var(--accent)] shrink-0">
-                        {prognoseSummary.totalPct.toFixed(0)}%
-                      </p>
-                    )}
-                  </div>
-                </Link>
-              </Tooltip>
+              <DailyPlanWidget />
+              <WeaknessWidget />
+              <RecentActivityWidget />
             </motion.section>
           </ScrollReveal>
 

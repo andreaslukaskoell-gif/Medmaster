@@ -37,31 +37,55 @@ export function useBMSChapters(selectedSubject: string | null, completedChapters
   const [error, setError] = useState<string | null>(null);
   const [supabaseChapters, setSupabaseChapters] = useState<Kapitel[]>([]);
 
-  // SWR: cache first, then Supabase
+  // SWR: cache first, then Supabase, with static fallback timeout
   useEffect(() => {
+    let resolved = false;
     queueMicrotask(() => {
       setIsLoading(true);
       setError(null);
     });
+
+    // Fallback: if nothing loads within 5s, use static chapter data
+    const fallbackTimer = setTimeout(() => {
+      if (!resolved) {
+        resolved = true;
+        const staticFallback = Array.isArray(alleKapitel) ? alleKapitel : [];
+        if (staticFallback.length > 0) {
+          setSupabaseChapters(staticFallback);
+          setIsLoading(false);
+          if (import.meta.env.DEV)
+            console.log(
+              `[BMS] Timeout — showing ${staticFallback.length} static chapters as fallback`
+            );
+        }
+      }
+    }, 5000);
+
     loadBMSChaptersSWR(
       (chapters, source) => {
+        resolved = true;
+        clearTimeout(fallbackTimer);
         setSupabaseChapters(chapters);
         setIsLoading(false);
         if (import.meta.env.DEV) {
-          if (import.meta.env.DEV)
-            console.log(
-              source === "cache"
-                ? "Showing cached chapters (revalidating in background)"
-                : `Loaded ${chapters.length} chapters from Supabase`
-            );
+          console.log(
+            source === "cache"
+              ? "Showing cached chapters (revalidating in background)"
+              : `Loaded ${chapters.length} chapters from Supabase`
+          );
         }
       },
       (err) => {
-        setError(err);
-        setIsLoading(false);
+        if (!resolved) {
+          // If timed out already with static fallback, don't show error
+          setError(err);
+          setIsLoading(false);
+        }
       },
       () => {}
     );
+
+    return () => clearTimeout(fallbackTimer);
   }, []);
 
   // Merged chapters for selected subject

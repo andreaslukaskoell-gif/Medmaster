@@ -22,7 +22,6 @@ import {
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { FloatingQuestionCounter } from "@/components/ui/FloatingQuestionCounter";
 import {
   getAllBmsQuestions,
@@ -56,6 +55,7 @@ import { useStore } from "@/store/useStore";
 import { useSessionTimer } from "@/hooks/useSessionTimer";
 import { usePageTitle } from "@/hooks/usePageTitle";
 import { stripMarkdownAsterisks } from "@/utils/formatExplanation";
+import { SimulationHistory } from "@/components/simulation/SimulationHistory";
 
 // ============================================================
 // BMS QUESTION RESOLUTION
@@ -756,6 +756,7 @@ function getSectionGroupLabel(sectionType: SectionType): string {
 export default function Simulation() {
   usePageTitle("MedAT Simulation");
   const [mode, setMode] = useState<Mode>("select");
+  const [activeTab, setActiveTab] = useState<"start" | "verlauf">("start");
   const currentResultIdRef = useRef<string>("");
   const [simType, setSimType] = useState<"full" | "bms" | "tv" | "kff" | "sek" | "kurz">("full");
   const [sections, setSections] = useState<SimSection[]>([]);
@@ -1151,7 +1152,6 @@ export default function Simulation() {
 
     return (
       <div className="max-w-5xl mx-auto space-y-6">
-        <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "Simulation" }]} />
         <div className="hero-orbs text-center py-6">
           <h1 className="text-2xl font-bold text-[var(--text-primary)]">Testsimulation</h1>
           <p className="text-[var(--muted)] mt-1">
@@ -1159,198 +1159,230 @@ export default function Simulation() {
           </p>
         </div>
 
-        {/* Full MedAT-H Simulation */}
-        <div className="card-glass p-6 space-y-4">
-          <div className="flex items-center gap-4">
-            <div className="w-14 h-14 bg-orange-100 dark:bg-orange-900/30 rounded-2xl flex items-center justify-center">
-              <Clock className="w-7 h-7 text-orange-600 dark:text-orange-400" />
-            </div>
-            <div>
-              <h2 className="text-lg font-bold text-[var(--text-primary)]">
-                MedAT-H Vollsimulation
-              </h2>
-              <p className="text-sm text-[var(--muted)]">
-                Alle 4 Testteile mit exaktem Timing und Pausen
-              </p>
-            </div>
-          </div>
+        {/* Tab navigation */}
+        <div className="flex gap-6 border-b border-[var(--border)]">
+          <button
+            onClick={() => setActiveTab("start")}
+            className={`pb-2.5 text-sm font-medium transition-colors cursor-pointer ${
+              activeTab === "start"
+                ? "border-b-2 border-[var(--accent)] text-[var(--accent)]"
+                : "text-[var(--muted)] hover:text-[var(--text-primary)]"
+            }`}
+          >
+            Simulation starten
+          </button>
+          <button
+            onClick={() => setActiveTab("verlauf")}
+            className={`pb-2.5 text-sm font-medium transition-colors cursor-pointer ${
+              activeTab === "verlauf"
+                ? "border-b-2 border-[var(--accent)] text-[var(--accent)]"
+                : "text-[var(--muted)] hover:text-[var(--text-primary)]"
+            }`}
+          >
+            Verlauf
+          </button>
+        </div>
 
-          <div className="space-y-3">
-            {/* BMS */}
-            <div className="bg-[var(--border)]/30 rounded-lg p-3">
-              <div className="flex items-center gap-2 mb-2">
-                <BookOpen className="w-4 h-4 text-teal-600 dark:text-teal-400" />
-                <span className="font-semibold text-sm text-[var(--text-primary)]">BMS</span>
-                <span className="text-xs text-[var(--muted)]">94 Fragen, 75 Min</span>
+        {activeTab === "verlauf" ? (
+          <SimulationHistory />
+        ) : (
+          <>
+            {/* Full MedAT-H Simulation */}
+            <div className="card-glass p-6 space-y-4">
+              <div className="flex items-center gap-4">
+                <div className="w-14 h-14 bg-orange-100 dark:bg-orange-900/30 rounded-2xl flex items-center justify-center">
+                  <Clock className="w-7 h-7 text-orange-600 dark:text-orange-400" />
+                </div>
+                <div>
+                  <h2 className="text-lg font-bold text-[var(--text-primary)]">
+                    MedAT-H Vollsimulation
+                  </h2>
+                  <p className="text-sm text-[var(--muted)]">
+                    Alle 4 Testteile mit exaktem Timing und Pausen
+                  </p>
+                </div>
               </div>
-              <div className="grid grid-cols-4 gap-2">
-                {BMS_FULL_SECTIONS.map((sec) => (
-                  <div key={sec.id} className="text-center text-xs text-[var(--muted)]">
-                    {sec.label}: {sec.questionCount}F / {sec.timeLimitMinutes}Min
+
+              <div className="space-y-3">
+                {/* BMS */}
+                <div className="bg-[var(--border)]/30 rounded-lg p-3">
+                  <div className="flex items-center gap-2 mb-2">
+                    <BookOpen className="w-4 h-4 text-teal-600 dark:text-teal-400" />
+                    <span className="font-semibold text-sm text-[var(--text-primary)]">BMS</span>
+                    <span className="text-xs text-[var(--muted)]">94 Fragen, 75 Min</span>
                   </div>
+                  <div className="grid grid-cols-4 gap-2">
+                    {BMS_FULL_SECTIONS.map((sec) => (
+                      <div key={sec.id} className="text-center text-xs text-[var(--muted)]">
+                        {sec.label}: {sec.questionCount}F / {sec.timeLimitMinutes}Min
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                {/* TV */}
+                <div className="bg-[var(--border)]/30 rounded-lg p-3">
+                  <div className="flex items-center gap-2">
+                    <FileText className="w-4 h-4 text-blue-600 dark:text-blue-400" />
+                    <span className="font-semibold text-sm text-[var(--text-primary)]">
+                      Textverständnis
+                    </span>
+                    <span className="text-xs text-[var(--muted)]">12 Aussagen, 35 Min</span>
+                  </div>
+                </div>
+                {/* KFF */}
+                <div className="bg-[var(--border)]/30 rounded-lg p-3">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Brain className="w-4 h-4 text-purple-600 dark:text-purple-400" />
+                    <span className="font-semibold text-sm text-[var(--text-primary)]">KFF</span>
+                    <span className="text-xs text-[var(--muted)]">5 Untertests, ~93 Min</span>
+                  </div>
+                  <div className="grid grid-cols-3 gap-2 text-xs text-[var(--muted)]">
+                    <div>Zahlenfolgen: 10 / 25Min</div>
+                    <div>Gedächtnis: 8Min + 25F / 15Min</div>
+                    <div>Implikationen: 10 / 10Min</div>
+                    <div>Wortflüssigkeit: 20 / 20Min</div>
+                    <div>Figuren: 10 / 15Min</div>
+                  </div>
+                </div>
+                {/* SEK */}
+                <div className="bg-[var(--border)]/30 rounded-lg p-3">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Heart className="w-4 h-4 text-rose-600 dark:text-rose-400" />
+                    <span className="font-semibold text-sm text-[var(--text-primary)]">SEK</span>
+                    <span className="text-xs text-[var(--muted)]">3 Untertests, 45 Min</span>
+                  </div>
+                  <div className="grid grid-cols-3 gap-2 text-xs text-[var(--muted)]">
+                    <div>Erkennen: 10 / 15Min</div>
+                    <div>Regulieren: 10 / 15Min</div>
+                    <div>Entscheiden: 10 / 15Min</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-orange-50 dark:bg-orange-900/10 rounded-lg p-3 space-y-3">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="text-sm font-medium text-orange-800 dark:text-orange-300">
+                      Gesamt: {totalFullQuestions} Fragen
+                    </p>
+                    <p className="text-xs text-orange-600 dark:text-orange-400">
+                      ~{totalFullMinutes} Minuten inkl. Pausen
+                    </p>
+                  </div>
+                </div>
+                <div className="grid grid-cols-5 gap-2">
+                  {[1, 2, 3, 4, 5].map((v) => (
+                    <Button
+                      key={v}
+                      variant={v === 1 ? "primary" : "outline"}
+                      onClick={() => startSimulation("full", undefined, v)}
+                    >
+                      <Play className="w-4 h-4 mr-1" /> Simulation {v}
+                    </Button>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Individual Section Tests */}
+            <h2 className="text-lg font-bold text-[var(--text-primary)]">Einzelne Testteile</h2>
+            <div className="grid grid-cols-4 gap-4 stagger-children">
+              {/* BMS */}
+              <div className="card-glass p-5 space-y-3">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-teal-100 dark:bg-teal-900/30 rounded-xl flex items-center justify-center">
+                    <BookOpen className="w-5 h-5 text-teal-600 dark:text-teal-400" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-[var(--text-primary)]">BMS</h3>
+                    <p className="text-xs text-[var(--muted)]">94 Fragen, 75 Min</p>
+                  </div>
+                </div>
+                <Button variant="premium" className="w-full" onClick={() => startSimulation("bms")}>
+                  <Play className="w-4 h-4 mr-1" /> BMS starten
+                </Button>
+              </div>
+
+              {/* TV */}
+              <div className="card-glass p-5 space-y-3">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center">
+                    <FileText className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-[var(--text-primary)]">Textverständnis</h3>
+                    <p className="text-xs text-[var(--muted)]">12 Aussagen, 35 Min</p>
+                  </div>
+                </div>
+                <Button variant="premium" className="w-full" onClick={() => startSimulation("tv")}>
+                  <Play className="w-4 h-4 mr-1" /> TV starten
+                </Button>
+              </div>
+
+              {/* KFF */}
+              <div className="card-glass p-5 space-y-3">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-purple-100 dark:bg-purple-900/30 rounded-xl flex items-center justify-center">
+                    <Brain className="w-5 h-5 text-purple-600 dark:text-purple-400" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-[var(--text-primary)]">KFF</h3>
+                    <p className="text-xs text-[var(--muted)]">5 Untertests, ~93 Min</p>
+                  </div>
+                </div>
+                <Button variant="premium" className="w-full" onClick={() => startSimulation("kff")}>
+                  <Play className="w-4 h-4 mr-1" /> KFF starten
+                </Button>
+              </div>
+
+              {/* SEK */}
+              <div className="card-glass p-5 space-y-3">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-rose-100 dark:bg-rose-900/30 rounded-xl flex items-center justify-center">
+                    <Heart className="w-5 h-5 text-rose-600 dark:text-rose-400" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-[var(--text-primary)]">SEK</h3>
+                    <p className="text-xs text-[var(--muted)]">3 Untertests, 45 Min</p>
+                  </div>
+                </div>
+                <Button variant="premium" className="w-full" onClick={() => startSimulation("sek")}>
+                  <Play className="w-4 h-4 mr-1" /> SEK starten
+                </Button>
+              </div>
+            </div>
+
+            {/* BMS Kurztest */}
+            <div className="card-glass p-6 space-y-4">
+              <div className="flex items-center gap-4">
+                <div className="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 rounded-2xl flex items-center justify-center">
+                  <Timer className="w-7 h-7 text-blue-600 dark:text-blue-400" />
+                </div>
+                <div>
+                  <h2 className="text-lg font-bold text-[var(--text-primary)]">Kurztest (BMS)</h2>
+                  <p className="text-sm text-[var(--muted)]">
+                    Schnelles Üben eines einzelnen Fachs
+                  </p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-3 gap-3 stagger-children">
+                {BMS_KURZTEST_OPTIONS.map((opt) => (
+                  <button
+                    key={opt.id}
+                    onClick={() => startSimulation("kurz", opt.id)}
+                    className="bg-[var(--border)]/30 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-lg p-4 text-left transition-colors cursor-pointer border border-transparent hover:border-blue-200 dark:hover:border-blue-800"
+                  >
+                    <p className="font-semibold text-[var(--text-primary)]">{opt.label}</p>
+                    <p className="text-xs text-[var(--muted)]">
+                      {opt.questionCount} Fragen / {opt.timeLimitMinutes} Min
+                    </p>
+                  </button>
                 ))}
               </div>
             </div>
-            {/* TV */}
-            <div className="bg-[var(--border)]/30 rounded-lg p-3">
-              <div className="flex items-center gap-2">
-                <FileText className="w-4 h-4 text-blue-600 dark:text-blue-400" />
-                <span className="font-semibold text-sm text-[var(--text-primary)]">
-                  Textverständnis
-                </span>
-                <span className="text-xs text-[var(--muted)]">12 Aussagen, 35 Min</span>
-              </div>
-            </div>
-            {/* KFF */}
-            <div className="bg-[var(--border)]/30 rounded-lg p-3">
-              <div className="flex items-center gap-2 mb-2">
-                <Brain className="w-4 h-4 text-purple-600 dark:text-purple-400" />
-                <span className="font-semibold text-sm text-[var(--text-primary)]">KFF</span>
-                <span className="text-xs text-[var(--muted)]">5 Untertests, ~93 Min</span>
-              </div>
-              <div className="grid grid-cols-3 gap-2 text-xs text-[var(--muted)]">
-                <div>Zahlenfolgen: 10 / 25Min</div>
-                <div>Gedächtnis: 8Min + 25F / 15Min</div>
-                <div>Implikationen: 10 / 10Min</div>
-                <div>Wortflüssigkeit: 20 / 20Min</div>
-                <div>Figuren: 10 / 15Min</div>
-              </div>
-            </div>
-            {/* SEK */}
-            <div className="bg-[var(--border)]/30 rounded-lg p-3">
-              <div className="flex items-center gap-2 mb-2">
-                <Heart className="w-4 h-4 text-rose-600 dark:text-rose-400" />
-                <span className="font-semibold text-sm text-[var(--text-primary)]">SEK</span>
-                <span className="text-xs text-[var(--muted)]">3 Untertests, 45 Min</span>
-              </div>
-              <div className="grid grid-cols-3 gap-2 text-xs text-[var(--muted)]">
-                <div>Erkennen: 10 / 15Min</div>
-                <div>Regulieren: 10 / 15Min</div>
-                <div>Entscheiden: 10 / 15Min</div>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-orange-50 dark:bg-orange-900/10 rounded-lg p-3 space-y-3">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-sm font-medium text-orange-800 dark:text-orange-300">
-                  Gesamt: {totalFullQuestions} Fragen
-                </p>
-                <p className="text-xs text-orange-600 dark:text-orange-400">
-                  ~{totalFullMinutes} Minuten inkl. Pausen
-                </p>
-              </div>
-            </div>
-            <div className="grid grid-cols-5 gap-2">
-              {[1, 2, 3, 4, 5].map((v) => (
-                <Button
-                  key={v}
-                  variant={v === 1 ? "primary" : "outline"}
-                  onClick={() => startSimulation("full", undefined, v)}
-                >
-                  <Play className="w-4 h-4 mr-1" /> Simulation {v}
-                </Button>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Individual Section Tests */}
-        <h2 className="text-lg font-bold text-[var(--text-primary)]">Einzelne Testteile</h2>
-        <div className="grid grid-cols-4 gap-4 stagger-children">
-          {/* BMS */}
-          <div className="card-glass p-5 space-y-3">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-teal-100 dark:bg-teal-900/30 rounded-xl flex items-center justify-center">
-                <BookOpen className="w-5 h-5 text-teal-600 dark:text-teal-400" />
-              </div>
-              <div>
-                <h3 className="font-bold text-[var(--text-primary)]">BMS</h3>
-                <p className="text-xs text-[var(--muted)]">94 Fragen, 75 Min</p>
-              </div>
-            </div>
-            <Button variant="premium" className="w-full" onClick={() => startSimulation("bms")}>
-              <Play className="w-4 h-4 mr-1" /> BMS starten
-            </Button>
-          </div>
-
-          {/* TV */}
-          <div className="card-glass p-5 space-y-3">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center">
-                <FileText className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-              </div>
-              <div>
-                <h3 className="font-bold text-[var(--text-primary)]">Textverständnis</h3>
-                <p className="text-xs text-[var(--muted)]">12 Aussagen, 35 Min</p>
-              </div>
-            </div>
-            <Button variant="premium" className="w-full" onClick={() => startSimulation("tv")}>
-              <Play className="w-4 h-4 mr-1" /> TV starten
-            </Button>
-          </div>
-
-          {/* KFF */}
-          <div className="card-glass p-5 space-y-3">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-purple-100 dark:bg-purple-900/30 rounded-xl flex items-center justify-center">
-                <Brain className="w-5 h-5 text-purple-600 dark:text-purple-400" />
-              </div>
-              <div>
-                <h3 className="font-bold text-[var(--text-primary)]">KFF</h3>
-                <p className="text-xs text-[var(--muted)]">5 Untertests, ~93 Min</p>
-              </div>
-            </div>
-            <Button variant="premium" className="w-full" onClick={() => startSimulation("kff")}>
-              <Play className="w-4 h-4 mr-1" /> KFF starten
-            </Button>
-          </div>
-
-          {/* SEK */}
-          <div className="card-glass p-5 space-y-3">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-rose-100 dark:bg-rose-900/30 rounded-xl flex items-center justify-center">
-                <Heart className="w-5 h-5 text-rose-600 dark:text-rose-400" />
-              </div>
-              <div>
-                <h3 className="font-bold text-[var(--text-primary)]">SEK</h3>
-                <p className="text-xs text-[var(--muted)]">3 Untertests, 45 Min</p>
-              </div>
-            </div>
-            <Button variant="premium" className="w-full" onClick={() => startSimulation("sek")}>
-              <Play className="w-4 h-4 mr-1" /> SEK starten
-            </Button>
-          </div>
-        </div>
-
-        {/* BMS Kurztest */}
-        <div className="card-glass p-6 space-y-4">
-          <div className="flex items-center gap-4">
-            <div className="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 rounded-2xl flex items-center justify-center">
-              <Timer className="w-7 h-7 text-blue-600 dark:text-blue-400" />
-            </div>
-            <div>
-              <h2 className="text-lg font-bold text-[var(--text-primary)]">Kurztest (BMS)</h2>
-              <p className="text-sm text-[var(--muted)]">Schnelles Üben eines einzelnen Fachs</p>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-3 gap-3 stagger-children">
-            {BMS_KURZTEST_OPTIONS.map((opt) => (
-              <button
-                key={opt.id}
-                onClick={() => startSimulation("kurz", opt.id)}
-                className="bg-[var(--border)]/30 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-lg p-4 text-left transition-colors cursor-pointer border border-transparent hover:border-blue-200 dark:hover:border-blue-800"
-              >
-                <p className="font-semibold text-[var(--text-primary)]">{opt.label}</p>
-                <p className="text-xs text-[var(--muted)]">
-                  {opt.questionCount} Fragen / {opt.timeLimitMinutes} Min
-                </p>
-              </button>
-            ))}
-          </div>
-        </div>
+          </>
+        )}
       </div>
     );
   }
@@ -1577,14 +1609,6 @@ export default function Simulation() {
 
     return (
       <div className="max-w-5xl mx-auto space-y-6">
-        <BreadcrumbNav
-          items={[
-            { label: "Dashboard", href: "/" },
-            { label: "Simulation", href: "/simulation" },
-            { label: "Ergebnis" },
-          ]}
-        />
-
         <div className="hero-orbs text-center py-4">
           <h1 className="text-2xl font-bold text-[var(--text-primary)]">Simulationsergebnis</h1>
         </div>

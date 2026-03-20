@@ -44,6 +44,7 @@ export function useDashboardProfile(): DashboardProfile {
     async function fetchProfile() {
       const client = supabase;
       if (!client || isSchemaSkipActive()) return;
+      if (import.meta.env.DEV && userId?.startsWith("00000000")) return;
       setState((s) => ({ ...s, loading: true }));
       try {
         const { data, error } = await client

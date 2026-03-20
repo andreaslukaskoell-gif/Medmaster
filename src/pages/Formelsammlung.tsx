@@ -2,7 +2,7 @@ import { useState, useMemo } from "react";
 import { useParams } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
+
 import { usePageTitle } from "@/hooks/usePageTitle";
 import { formeln, type Formel } from "@/data/formeln";
 import {
@@ -16,6 +16,23 @@ import {
 } from "lucide-react";
 
 type FachFilter = "alle" | "physik" | "chemie" | "mathematik";
+
+/** Render formula string with proper subscripts/superscripts for common patterns. */
+function renderFormel(text: string): React.ReactNode {
+  // Replace common patterns: x² → x<sup>2</sup>, v₁ → v<sub>1</sub>, etc.
+  const html = text
+    .replace(/(\w)²/g, "$1<sup>2</sup>")
+    .replace(/(\w)³/g, "$1<sup>3</sup>")
+    .replace(/(\w)\^(\d+)/g, "$1<sup>$2</sup>")
+    .replace(/(\w)_(\w)/g, "$1<sub>$2</sub>")
+    .replace(/(\w)₁/g, "$1<sub>1</sub>")
+    .replace(/(\w)₂/g, "$1<sub>2</sub>")
+    .replace(/(\w)₃/g, "$1<sub>3</sub>")
+    .replace(/Δ/g, "<i>Δ</i>")
+    .replace(/π/g, "<i>π</i>")
+    .replace(/√/g, "√");
+  return <span dangerouslySetInnerHTML={{ __html: html }} />;
+}
 
 const fachConfig: Record<
   Exclude<FachFilter, "alle">,
@@ -75,8 +92,8 @@ function FormelCard({ f }: { f: Formel }) {
 
         {/* Formel */}
         <div className="bg-[var(--surface)]/60 backdrop-blur-sm rounded-lg px-4 py-3 mb-3 border border-[var(--border)]/30">
-          <p className="text-lg font-mono font-bold text-[var(--text-primary)] whitespace-pre-line leading-relaxed">
-            {f.formel}
+          <p className="text-xl font-mono font-bold text-[var(--text-primary)] whitespace-pre-line leading-relaxed tracking-wide">
+            {renderFormel(f.formel)}
           </p>
         </div>
 
@@ -148,8 +165,6 @@ export default function Formelsammlung() {
 
   return (
     <div className="max-w-5xl mx-auto space-y-6">
-      <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "Formelsammlung" }]} />
-
       {/* Header */}
       <div className="hero-orbs text-center">
         <h1 className="text-2xl font-bold text-[var(--text-primary)]">Formelsammlung</h1>

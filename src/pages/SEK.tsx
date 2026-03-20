@@ -15,7 +15,6 @@ import { type ExamMode, EXAM_CONFIG } from "@/data/examConfig";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { PageEmpty } from "@/components/ui/page-states";
 import { FloatingQuestionCounter } from "@/components/ui/FloatingQuestionCounter";
 import { usePageTitle } from "@/hooks/usePageTitle";
@@ -74,7 +73,6 @@ export default function SEK() {
   if (!hasTasks) {
     return (
       <div className="max-w-5xl mx-auto p-6">
-        <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "SEK" }]} />
         <PageEmpty
           message="Keine SEK-Aufgaben geladen."
           action={
@@ -179,8 +177,6 @@ export default function SEK() {
 
   return (
     <div className="max-w-5xl mx-auto space-y-6">
-      <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "SEK" }]} />
-
       {/* Header */}
       <div>
         <div className="flex items-center gap-3 mb-1">
@@ -284,6 +280,8 @@ function EmotionenErkennenQuiz({
   const [answers, setAnswers] = useState<
     Record<string, Record<string, "wahrscheinlich" | "unwahrscheinlich">>
   >({});
+  // Track which questions have shown feedback in practice mode
+  const [revealedQuestions, setRevealedQuestions] = useState<Set<string>>(new Set());
   const { addXP, checkStreak, saveQuizResult, logActivity } = useStore();
   const getMinutes = useSessionTimer();
 
@@ -447,6 +445,8 @@ function EmotionenErkennenQuiz({
   if (!q)
     return <div className="p-8 text-center text-[var(--muted)]">Keine Aufgaben verfügbar.</div>;
   const currentAnswers = answers[q.id] || {};
+  const currentQuestionFullyAnswered = q.emotionen.every((e) => currentAnswers[e.id] !== undefined);
+  const isRevealed = revealedQuestions.has(q.id);
   const allQuestionsAnswered = questions.every((qu) => {
     const a = answers[qu.id] || {};
     return qu.emotionen.every((e) => a[e.id] !== undefined);
@@ -494,14 +494,38 @@ function EmotionenErkennenQuiz({
           <div className="space-y-3">
             {q.emotionen.map((e) => {
               const val = currentAnswers[e.id];
+              const isCorrect = isRevealed && val === e.correct;
+              const isWrong = isRevealed && val !== undefined && val !== e.correct;
               return (
                 <div
                   key={e.id}
-                  className="flex items-center justify-between gap-3 p-3 rounded-lg border border-[var(--border)]"
+                  className={`flex items-center justify-between gap-3 p-3 rounded-lg border transition-colors ${
+                    isCorrect
+                      ? "border-green-400 bg-green-50 dark:bg-green-900/10"
+                      : isWrong
+                        ? "border-red-400 bg-red-50 dark:bg-red-900/10"
+                        : "border-[var(--border)]"
+                  }`}
                 >
-                  <span className="text-sm font-medium text-[var(--text-primary)]">
-                    ({e.id}) {e.text}
-                  </span>
+                  <div className="flex items-center gap-2 min-w-0">
+                    {isRevealed &&
+                      (isCorrect ? (
+                        <CheckCircle2 className="w-4 h-4 text-green-600 shrink-0" />
+                      ) : isWrong ? (
+                        <XCircle className="w-4 h-4 text-red-500 shrink-0" />
+                      ) : null)}
+                    <span className="text-sm font-medium text-[var(--text-primary)]">
+                      ({e.id}) {e.text}
+                    </span>
+                  </div>
+                  {isRevealed && isWrong && (
+                    <span className="text-[10px] text-[var(--muted)] shrink-0">
+                      Richtig:{" "}
+                      {e.correct === "wahrscheinlich"
+                        ? "eher wahrscheinlich"
+                        : "eher unwahrscheinlich"}
+                    </span>
+                  )}
                   <div className="flex gap-2">
                     <button
                       onClick={() => {
@@ -554,8 +578,35 @@ function EmotionenErkennenQuiz({
           <div />
         )}
         {index < questions.length - 1 ? (
-          <Button onClick={() => setIndex((i) => i + 1)} className="w-auto">
-            Weiter <ArrowRight className="w-4 h-4 ml-1" />
+          examMode === "practice" && currentQuestionFullyAnswered && !isRevealed ? (
+            <Button
+              onClick={() => setRevealedQuestions((prev) => new Set([...prev, q.id]))}
+              className="w-auto"
+            >
+              <CheckCircle2 className="w-4 h-4 mr-1" /> Lösung zeigen
+            </Button>
+          ) : (
+            <Button
+              onClick={() => {
+                setRevealedQuestions((prev) => {
+                  const next = new Set(prev);
+                  next.delete(q.id);
+                  return next;
+                });
+                setIndex((i) => i + 1);
+              }}
+              className="w-auto"
+              disabled={examMode === "practice" && !currentQuestionFullyAnswered && !isRevealed}
+            >
+              Weiter <ArrowRight className="w-4 h-4 ml-1" />
+            </Button>
+          )
+        ) : examMode === "practice" && currentQuestionFullyAnswered && !isRevealed ? (
+          <Button
+            onClick={() => setRevealedQuestions((prev) => new Set([...prev, q.id]))}
+            className="w-auto"
+          >
+            <CheckCircle2 className="w-4 h-4 mr-1" /> Lösung zeigen
           </Button>
         ) : (
           <Button onClick={handleSubmit} disabled={!allQuestionsAnswered} className="w-auto">

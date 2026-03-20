@@ -32,7 +32,7 @@ const isDev = import.meta.env.DEV;
 
 /** Test-User für lokale Entwicklung ohne echte Anmeldung */
 const DEV_USER = {
-  id: "dev-user",
+  id: "00000000-0000-0000-0000-00000000deva",
   email: "test@medmaster.at",
 } as User;
 
@@ -118,7 +118,7 @@ export function useAuth() {
   }, []);
 
   async function fetchProfile(userId: string) {
-    if (!supabase) {
+    if (!supabase || (isDev && userId.startsWith("00000000"))) {
       setLoading(false);
       return;
     }

@@ -392,7 +392,7 @@ export default function PaidLandingBMS() {
             transition={{ ...fade.transition, delay: 0.35 }}
             className="text-xs text-[var(--muted)]/60 tracking-wide"
           >
-            Keine Kreditkarte &middot; Jederzeit kündbar &middot; 1 Klick mit Google
+            Keine Kreditkarte &middot; Kein Abo &middot; 1 Klick mit Google
           </motion.p>
         </div>
       </section>
@@ -655,7 +655,7 @@ export default function PaidLandingBMS() {
               >
                 Mit E-Mail anmelden
               </Link>
-              {" \u00b7 "}Keine Kreditkarte{" \u00b7 "}Jederzeit kündbar
+              {" \u00b7 "}Keine Kreditkarte{" \u00b7 "}Kein Abo
             </p>
           </motion.div>
         </div>
@@ -670,7 +670,7 @@ export default function PaidLandingBMS() {
                 { icon: BookOpen, text: "5.000+ BMS-Fragen" },
                 { icon: Star, text: "173 Lerneinheiten" },
                 { icon: Zap, text: "Stichwortliste 2026" },
-                { icon: Shield, text: "Jederzeit kündbar" },
+                { icon: Shield, text: "Kein Abo" },
               ] as { icon: React.ComponentType<{ className?: string }>; text: string }[]
             ).map((b) => (
               <span
@@ -732,7 +732,7 @@ export default function PaidLandingBMS() {
             Null Prozent dem Zufall überlassen.
           </h2>
           <p className="text-white/60 text-base mb-10 max-w-md mx-auto leading-relaxed">
-            5.000+ BMS-Fragen. 4 Fächer. 173 Lerneinheiten. Adaptives Lernsystem. Jederzeit kündbar.
+            5.000+ BMS-Fragen. 4 Fächer. 173 Lerneinheiten. Adaptives Lernsystem. Kein Abo.
           </p>
           <GoogleBtn
             label="Jetzt kostenlos starten"

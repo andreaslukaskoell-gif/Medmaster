@@ -178,7 +178,7 @@ export function GedaechtnisSetup({ onLearn, onBack }: { onLearn: () => void; onB
 
       <Card>
         <CardHeader>
-          <CardTitle className="text-lg">🧠 Training</CardTitle>
+          <CardTitle className="text-lg">Training</CardTitle>
           <p className="text-sm text-[var(--muted)]">
             Trainingsaufgaben aus der Datenbank (8 Pässe + bis zu 25 Fragen) oder lokal generiert.
           </p>

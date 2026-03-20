@@ -13,6 +13,7 @@ export function useReferralAttribution() {
 
   useEffect(() => {
     if (!user || !supabase || attributed.current) return;
+    if (import.meta.env.DEV && user.id.startsWith("00000000")) return;
     attributed.current = true;
 
     const refCode = getStoredRef();

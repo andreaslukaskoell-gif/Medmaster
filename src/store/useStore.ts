@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
 import { computeXP } from "@/lib/xp";
@@ -1076,7 +1077,13 @@ export const useStore = create<AppState>()(
 );
 
 // Hydration-Check: nach Reload (F5) Dark Mode + Schriftgröße anwenden
+let _storeHydrated = false;
+const _hydratedListeners = new Set<() => void>();
+
 useStore.persist.onFinishHydration((state) => {
+  _storeHydrated = true;
+  _hydratedListeners.forEach((fn) => fn());
+  _hydratedListeners.clear();
   try {
     if (state?.darkMode) {
       document.documentElement.classList.add("dark");
@@ -1090,3 +1097,24 @@ useStore.persist.onFinishHydration((state) => {
     // ignore
   }
 });
+
+/**
+ * Returns true once the Zustand persist middleware has finished
+ * rehydrating from localStorage. Use this to avoid rendering
+ * analytics with stale default (empty) state.
+ */
+export function useStoreHydrated(): boolean {
+  const [hydrated, setHydrated] = useState(_storeHydrated);
+  useEffect(() => {
+    if (_storeHydrated) {
+      setHydrated(true);
+      return;
+    }
+    const cb = () => setHydrated(true);
+    _hydratedListeners.add(cb);
+    return () => {
+      _hydratedListeners.delete(cb);
+    };
+  }, []);
+  return hydrated;
+}

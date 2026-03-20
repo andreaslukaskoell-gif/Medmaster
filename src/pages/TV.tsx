@@ -8,11 +8,13 @@ import {
   XCircle,
   ArrowRight,
   ChevronDown,
+  Timer,
 } from "lucide-react";
+import { ExamTimer } from "@/components/shared/ExamTimer";
+import { type ExamMode } from "@/data/examConfig";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { PageEmpty, PageError } from "@/components/ui/page-states";
 import { FloatingQuestionCounter } from "@/components/ui/FloatingQuestionCounter";
 import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
@@ -59,6 +61,7 @@ export default function TV() {
   const [selectedSetIndex, setSelectedSetIndex] = useState(0);
   const [textIndex, setTextIndex] = useState(0);
   const [mcAnswers, setMcAnswers] = useState<Record<string, number>>({});
+  const [tvExamMode, setTvExamMode] = useState<ExamMode>("practice");
   // Aussagen mode
   const [selectedAussagenIndex, setSelectedAussagenIndex] = useState(0);
   const [aussagenAnswers, setAussagenAnswers] = useState<Record<string, TVAussagenOptionId>>({});
@@ -90,7 +93,6 @@ export default function TV() {
   if (!tvTexts?.length && !allTextSets?.length) {
     return (
       <div className="max-w-5xl mx-auto p-6">
-        <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "TV" }]} />
         <PageEmpty
           message="Keine TV-Texte geladen."
           action={
@@ -137,10 +139,11 @@ export default function TV() {
   };
 
   // --- Set quiz handlers ---
-  const handleStartSet = (setIdx: number) => {
+  const handleStartSet = (setIdx: number, mode: ExamMode = "practice") => {
     setSelectedSetIndex(setIdx);
     setTextIndex(0);
     setMcAnswers({});
+    setTvExamMode(mode);
     setView("set-quiz");
   };
 
@@ -437,11 +440,18 @@ export default function TV() {
 
     return (
       <div className="max-w-5xl mx-auto space-y-6">
+        {tvExamMode === "exam" && <ExamTimer totalSeconds={35 * 60} onTimeUp={handleSubmitSet} />}
         <div className="flex items-center justify-between gap-2">
           <Button variant="ghost" size="sm" onClick={() => setView("overview")}>
             <ArrowLeft className="w-4 h-4 mr-1" /> Abbrechen
           </Button>
           <div className="flex items-center gap-2">
+            {tvExamMode === "exam" && (
+              <Badge variant="danger" className="text-[10px]">
+                <Timer className="w-3 h-3 mr-1 inline" />
+                Prüfungsmodus
+              </Badge>
+            )}
             <Badge variant="info">
               Text {textIndex + 1}/{currentSet.texts.length}
             </Badge>
@@ -710,8 +720,6 @@ export default function TV() {
 
   return (
     <div className="max-w-5xl mx-auto space-y-6">
-      <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "TV" }]} />
-
       {/* Header */}
       <div>
         <div className="flex items-center gap-3 mb-1">
@@ -749,10 +757,9 @@ export default function TV() {
             {allTextSets.map((set, i) => {
               const totalQ = set.texts.reduce((sum, t) => sum + t.questions.length, 0);
               return (
-                <button
+                <div
                   key={set.id}
-                  onClick={() => handleStartSet(i)}
-                  className="w-full flex items-center gap-4 px-5 py-3.5 text-left hover:bg-[var(--accent)]/3 transition-colors cursor-pointer group"
+                  className="flex items-center gap-4 px-5 py-3.5 hover:bg-[var(--accent)]/3 transition-colors group"
                 >
                   <span className="text-xs font-bold text-[var(--muted)] tabular-nums w-5 text-center shrink-0">
                     {i + 1}
@@ -768,10 +775,23 @@ export default function TV() {
                     {set.difficulty}
                   </Badge>
                   <span className="text-xs text-[var(--muted)] shrink-0 tabular-nums">
-                    {totalQ} {totalQ === 1 ? "Frage" : "Fragen"}
+                    {totalQ} Fragen
                   </span>
-                  <ArrowRight className="w-4 h-4 text-[var(--muted)] shrink-0 opacity-0 group-hover:opacity-100 transition-opacity" />
-                </button>
+                  <button
+                    onClick={() => handleStartSet(i, "practice")}
+                    className="text-xs font-medium text-[var(--accent)] hover:underline cursor-pointer shrink-0"
+                  >
+                    Üben
+                  </button>
+                  <button
+                    onClick={() => handleStartSet(i, "exam")}
+                    className="text-xs font-medium text-[var(--muted)] hover:text-[var(--accent)] hover:underline cursor-pointer shrink-0"
+                    title="35 Minuten Timer"
+                  >
+                    <Timer className="w-3 h-3 inline mr-0.5" />
+                    Prüfung
+                  </button>
+                </div>
               );
             })}
           </div>

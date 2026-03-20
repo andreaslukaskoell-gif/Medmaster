@@ -125,8 +125,16 @@ export function ImplikationenQuiz({
         if (import.meta.env?.DEV)
           logPoolWarning("implikationen", valid.length, "Fallback (legacy generator)");
       }
+      // Deduplicate by premise content (not just ID) to prevent identical tasks in same session
+      const seenPremises = new Set<string>();
+      const uniqueByContent = valid.filter((t) => {
+        const key = `${t.premise1}|${t.premise2}`;
+        if (seenPremises.has(key)) return false;
+        seenPremises.add(key);
+        return true;
+      });
       const seenIds = getKffSeenIdsForDomain("Implikationen");
-      setQuestions(preferUnseen(valid, questionCount, seenIds));
+      setQuestions(preferUnseen(uniqueByContent, questionCount, seenIds));
       if (valid.length < raw.length && import.meta.env?.DEV) {
         logPoolWarning("implikationen", valid.length, "Training");
       }
@@ -317,7 +325,7 @@ export function ImplikationenQuiz({
 
         <Card>
           <CardHeader>
-            <CardTitle className="text-lg">🧪 Training</CardTitle>
+            <CardTitle className="text-lg">Training</CardTitle>
             <p className="text-sm text-[var(--muted)]">
               Aufgaben aus der Datenbank – verschiedene Logik-Typen und Inhalte.
             </p>

@@ -24,6 +24,8 @@ function isSchemaMissing(err: unknown): boolean {
 export async function pullFromSupabase(userId: string): Promise<void> {
   const client = supabase;
   if (!client) return;
+  // Skip Supabase sync for dev placeholder user
+  if (import.meta.env.DEV && userId.startsWith("00000000")) return;
   clearSchemaSkip();
   try {
     // Einmalige Probe: wenn profiles-Tabelle fehlt, keine weiteren Requests (weniger Console-Fehler)

@@ -103,8 +103,17 @@ export function WortflüssigkeitQuiz({
           logPoolWarning("wortflüssigkeit", valid.length, "Fallback (generiert)");
       }
       const seenIds = getKffSeenIdsForDomain("Wortfl");
+      // Deduplicate by ID AND by solution word to prevent same word appearing twice
+      const uniqueById = [...new Map(valid.map((t) => [t.id, t])).values()];
+      const seenWords = new Set<string>();
+      const uniqueByWord = uniqueById.filter((t) => {
+        const word = (t.solutionWord ?? "").toUpperCase();
+        if (!word || seenWords.has(word)) return false;
+        seenWords.add(word);
+        return true;
+      });
       setQuestions(
-        preferUnseen(valid as (WordFluencyTask & { id: string })[], questionCount, seenIds)
+        preferUnseen(uniqueByWord as (WordFluencyTask & { id: string })[], questionCount, seenIds)
       );
       if (valid.length < raw.length && import.meta.env?.DEV) {
         logPoolWarning("wortflüssigkeit", valid.length, "Training");
@@ -279,7 +288,7 @@ export function WortflüssigkeitQuiz({
 
         <Card>
           <CardHeader>
-            <CardTitle className="text-lg">🧪 Training</CardTitle>
+            <CardTitle className="text-lg">Training</CardTitle>
             <p className="text-sm text-[var(--muted)]">
               Aufgaben aus der Datenbank – verschiedene Wörter, gleiche Regel.
             </p>

@@ -3,7 +3,6 @@ import { useSearchParams } from "react-router-dom";
 import { BookOpen, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PageLoadingSkeleton, PageError } from "@/components/ui/page-states";
-import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { usePageTitle } from "@/hooks/usePageTitle";
 import KFFStrategyView from "@/components/shared/KFFStrategyView";
 import { useStore } from "@/store/useStore";
@@ -19,6 +18,7 @@ import {
 import { ImplikationenQuiz } from "@/components/kff/ImplikationenQuiz";
 import { WortflüssigkeitQuiz } from "@/components/kff/WortfluessigkeitQuiz";
 import { FigurenQuiz } from "@/components/kff/FigurenQuiz";
+import { KFFStatsSection } from "@/components/kff/KFFStatsSection";
 import { useEffect } from "react";
 
 type KffView =
@@ -278,8 +278,6 @@ export default function KFF() {
 
   return (
     <div className="max-w-4xl mx-auto space-y-8">
-      <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "KFF" }]} />
-
       {/* Hero */}
       <div>
         <div className="flex items-center gap-3 mb-2">
@@ -375,6 +373,9 @@ export default function KFF() {
           </div>
         ))}
       </div>
+
+      {/* Stats section — collapsible, below subtest cards */}
+      <KFFStatsSection />
     </div>
   );
 }

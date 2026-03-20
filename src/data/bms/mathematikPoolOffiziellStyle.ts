@@ -94,12 +94,18 @@ export const mathematikPoolOffiziellStyle: Question[] = [
   q(
     "ma-off-010",
     "mathe-kap5",
-    "Welche Kurve gibt die Funktion y = −x² − 5 an? (Ohne Abbildung: nach unten geöffnete Parabel mit Scheitel (0; −5).)",
-    ["Kurve a", "Kurve b", "Kurve c", "Kurve d", "Keine der gezeigten Kurven."],
-    4,
-    "y = −x² − 5 ist eine nach unten geöffnete Parabel mit Scheitel (0; −5). Ohne Abbildung kann die Zuordnung nicht bestimmt werden; typisch ist E, wenn keine passende Kurve gezeigt wird.",
+    "Welche Eigenschaften hat der Graph der Funktion f(x) = −x² − 5?",
+    [
+      "Nach oben geöffnete Parabel, Scheitel bei (−5; 0)",
+      "Nach unten geöffnete Parabel, Scheitel bei (0; −5)",
+      "Nach oben geöffnete Parabel, Scheitel bei (0; −5)",
+      "Nach unten geöffnete Parabel, Scheitel bei (−5; 0)",
+      "Gerade mit Steigung −5",
+    ],
+    1,
+    "f(x) = −x² − 5: Der Koeffizient −1 vor x² bedeutet, dass die Parabel nach unten geöffnet ist. Der Scheitel liegt bei x = 0 (kein linearer Term) mit f(0) = −5, also bei (0; −5). Die Funktion hat keine reellen Nullstellen, da −x² − 5 < 0 für alle x.",
     "leicht",
-    ["Parabel", "quadratische Funktion"]
+    ["Parabel", "quadratische Funktion", "Scheitel"]
   ),
   q(
     "ma-off-012",
