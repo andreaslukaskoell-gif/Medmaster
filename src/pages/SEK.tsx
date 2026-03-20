@@ -633,7 +633,13 @@ function EmotionenRegulierenQuiz({
   const [phase, setPhase] = useState<"setup" | "quiz" | "result">("setup");
   const [examMode, setExamMode] = useState<ExamMode>("practice");
   const erConfig = EXAM_CONFIG.emotionenRegulieren;
-  const [questions] = useState(() => shuffle(tasks).slice(0, erConfig.questions));
+  // Shuffle task order AND option order within each task to prevent
+  // "longest answer = best answer" shortcut (92% correlation in raw data).
+  const [questions] = useState(() =>
+    shuffle(tasks)
+      .slice(0, erConfig.questions)
+      .map((t) => ({ ...t, options: shuffle([...t.options]) }))
+  );
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, OptionId>>({});
   const { addXP, checkStreak, saveQuizResult, logActivity } = useStore();
