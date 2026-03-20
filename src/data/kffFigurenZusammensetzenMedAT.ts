@@ -1547,6 +1547,9 @@ const OPTION_E = { isOptionE: true as const } as const;
 
 function createRng(seed: number): () => number {
   let s = (((seed % 2147483646) + 2147483646) % 2147483646) + 1;
+  // Warm up: skip first 5 outputs to avoid LCG first-call bias.
+  // Without this, seeds <16000 produce first values <0.12, breaking E-correct calibration.
+  for (let i = 0; i < 5; i++) s = (s * 16807) % 2147483647;
   return () => {
     s = (s * 16807) % 2147483647;
     return (s - 1) / 2147483646;
@@ -2198,9 +2201,10 @@ export function cutPolygonStrategically(
   // Try asymmetric cuts FIRST (authentic look with curved/complex cuts like IB FZ 26)
   const nCuts = numCutsForDifficulty(difficulty, rng);
   const asymPieces = applyAsymmetricCuts(target, nCuts, rng, difficulty);
-  // Allow 2-piece tasks for easy, 3+ for medium/hard
+  // Piece count bounds
   const minPieces = difficulty === "easy" ? 2 : 3;
-  if (asymPieces && asymPieces.length >= minPieces) {
+  const maxPieces = difficulty === "easy" ? 3 : difficulty === "medium" ? 5 : 6;
+  if (asymPieces && asymPieces.length >= minPieces && asymPieces.length <= maxPieces) {
     const totalArea = asymPieces.reduce((s, p) => s + polygonArea(p), 0);
     const targetArea = polygonArea(target);
     // Relaxed tolerance (2%) — curved cuts shift area slightly via polyline approximation
@@ -2211,8 +2215,9 @@ export function cutPolygonStrategically(
 
   // Grid-based fallback for all difficulties when asymmetric cuts fail
   {
-    const gridPieces = applyGridCuts(target, difficulty === "easy" ? 3 : 5, rng, difficulty);
-    if (gridPieces && gridPieces.length >= minPieces) {
+    const gridSize = difficulty === "easy" ? 3 : difficulty === "medium" ? 4 : 5;
+    const gridPieces = applyGridCuts(target, gridSize, rng, difficulty);
+    if (gridPieces && gridPieces.length >= minPieces && gridPieces.length <= maxPieces) {
       const totalArea = gridPieces.reduce((s, p) => s + polygonArea(p), 0);
       const tgtArea = polygonArea(target);
       if (Math.abs(totalArea - tgtArea) / tgtArea < 0.02) {
@@ -2272,9 +2277,10 @@ export function generateFigurenTrainingTask(
       forcedShapeIdx
     );
     if (!isAllowedTarget(target)) continue;
-    // Minimum pieces: 2 for easy, 3 for medium/hard
+    // Piece count bounds per difficulty
     const minPcs = difficulty === "easy" ? 2 : 3;
-    if (pieces.length < minPcs) continue;
+    const maxPcs = difficulty === "easy" ? 3 : difficulty === "medium" ? 5 : 6;
+    if (pieces.length < minPcs || pieces.length > maxPcs) continue;
     {
       const pa = pieces.map((p) => polygonArea(p));
       const paMax = Math.max(...pa),
@@ -2283,6 +2289,9 @@ export function generateFigurenTrainingTask(
       if (pieces.length === 2 && paRatio < 1.8) continue;
       if (pieces.length >= 3 && paRatio < 1.5) continue;
       if (paRatio > 10) continue;
+      // Reduce anchor dominance: reject if largest piece > 75% of total (too obvious)
+      const totalA = pa.reduce((s, a) => s + a, 0);
+      if (totalA > 0 && paMax / totalA > 0.75) continue;
     }
     const fp = taskFingerprint(target, pieces);
     if (duplicateGuardHas(fp)) continue;
@@ -2377,13 +2386,17 @@ function generateFigurenTrainingTaskFallback(
     const target = { points: OFFICIAL_TARGET_POLYGONS[fbShapeIdx].points.map((p) => ({ ...p })) };
     const nCuts = numCutsForDifficulty(difficulty, rng);
     const pieces = applyAsymmetricCuts(target, nCuts, rng, difficulty);
-    if (!pieces || pieces.length < 3) continue;
+    const fbMaxPcs = difficulty === "easy" ? 3 : difficulty === "medium" ? 5 : 6;
+    if (!pieces || pieces.length < 3 || pieces.length > fbMaxPcs) continue;
     const pa = pieces.map((p) => polygonArea(p));
     const paMax = Math.max(...pa),
       paMin = Math.min(...pa);
     const paRatio = paMin > 0 ? paMax / paMin : 999;
     if (paRatio < 2.5 || paRatio > 6) continue;
     if (pieces.every((p) => p.points.length === pieces[0].points.length)) continue;
+    // Reject overly dominant anchor pieces
+    const totalA = pa.reduce((s, a) => s + a, 0);
+    if (totalA > 0 && paMax / totalA > 0.75) continue;
 
     let options: [FigureOption, FigureOption, FigureOption, FigureOption, FigureOption];
     let correctIndex: number;
