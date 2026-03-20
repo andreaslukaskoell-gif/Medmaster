@@ -3,9 +3,9 @@ import { supabase } from "@/lib/supabase";
 import { startAutoSync, stopAutoSync, pushStatsToSupabase } from "@/lib/syncService";
 import { startMainSync, stopMainSync } from "@/lib/sync";
 import { identifyUser, resetAnalytics } from "@/lib/analytics";
+import { trackConversion } from "@/lib/growthTracking";
 import {
   setTrackerUserId,
-  trackEvent,
   getStoredRef,
   getStoredUtm,
   getStoredGclid,
@@ -92,7 +92,7 @@ export function useAuth() {
           const isNewUser = Date.now() - createdAt < 60_000; // created less than 60s ago
           if (isNewUser) {
             const provider = session.user.app_metadata?.provider || "unknown";
-            trackEvent("signup_completed", {
+            trackConversion("signup_completed", {
               method: provider,
               ref: getStoredRef(),
               utm: getStoredUtm(),
