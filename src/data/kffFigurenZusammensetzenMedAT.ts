@@ -1638,7 +1638,9 @@ function generateAsymmetricCut(poly: Polygon, rng: () => number): [Pt2, Pt2] | n
   const n = poly.points.length;
   if (n < 3) return null;
 
-  for (let attempt = 0; attempt < 30; attempt++) {
+  // More attempts for high-vertex shapes (circles, octagons) which reject more cuts
+  const maxAttempt = n > 8 ? 60 : 30;
+  for (let attempt = 0; attempt < maxAttempt; attempt++) {
     // Pick two different, non-adjacent edges
     const e1 = Math.floor(rng() * n);
     let e2: number;
@@ -1647,8 +1649,9 @@ function generateAsymmetricCut(poly: Polygon, rng: () => number): [Pt2, Pt2] | n
       e2 = (e1 + 2) % n;
       if (n === 3) e2 = (e1 + 1 + Math.floor(rng() * 2)) % n; // any other edge for triangle
     } else {
-      const minGap = 2;
-      e2 = (e1 + minGap + Math.floor(rng() * (n - 2 * minGap + 1))) % n;
+      // For high-vertex polygons, allow closer edges (minGap=1 for n>8)
+      const minGap = n > 8 ? 1 : 2;
+      e2 = (e1 + minGap + Math.floor(rng() * Math.max(1, n - 2 * minGap + 1))) % n;
     }
     if (e2 === e1 || e2 === (e1 + 1) % n || (n > 3 && e1 === (e2 + 1) % n)) continue;
 
@@ -1677,8 +1680,10 @@ function generateAsymmetricCut(poly: Polygon, rng: () => number): [Pt2, Pt2] | n
     const dist = Math.abs((p2.x - p1.x) * (p1.y - c.y) - (p1.x - c.x) * (p2.y - p1.y)) / lineLen;
     const bbox = polygonBBox(poly);
     const diagLen = Math.hypot(bbox.width, bbox.height);
-    // Strong off-center: IB FZ 26 NEVER has center cuts. 20% for polygons, 8% for circles
-    const threshold = n > 8 ? 0.08 : 0.2;
+    // Off-center requirement: IB FZ 26 avoids center cuts.
+    // Relax for sub-pieces (n>12 = likely a cut fragment of a circle, not the original target)
+    // and for small pieces being re-cut in multi-cut sequences.
+    const threshold = n > 12 ? 0.05 : n > 8 ? 0.1 : 0.15;
     if (dist < diagLen * threshold) continue;
 
     return [p1, p2];
@@ -2240,8 +2245,8 @@ export function cutPolygonStrategically(
     }
   }
 
-  // Fallback: retry with different seeds, require 3+ pieces
-  for (let fa = 0; fa < 15; fa++) {
+  // Fallback: retry asymmetric cuts with different seeds
+  for (let fa = 0; fa < 20; fa++) {
     const fbRng = createRng(seed + 77777 + fa * 9999);
     const fbPieces = applyAsymmetricCuts(
       { points: target.points.map((p) => ({ ...p })) },
@@ -2249,10 +2254,22 @@ export function cutPolygonStrategically(
       fbRng,
       difficulty
     );
-    if (fbPieces && fbPieces.length >= minPieces) {
+    if (fbPieces && fbPieces.length >= minPieces && fbPieces.length <= maxPieces) {
       const ta = fbPieces.reduce((s, p) => s + polygonArea(p), 0);
       if (Math.abs(ta - polygonArea(target)) / polygonArea(target) < 0.05)
         return { target, pieces: fbPieces };
+    }
+  }
+
+  // Grid fallback with varied rotations for stubborn shapes (circles, octagon, rhombus)
+  for (let gr = 0; gr < 5; gr++) {
+    const grRng = createRng(seed + 55555 + gr * 13337);
+    const grSize = difficulty === "easy" ? 3 : difficulty === "medium" ? 4 : 5;
+    const grPieces = applyGridCuts(target, grSize, grRng, difficulty);
+    if (grPieces && grPieces.length >= minPieces && grPieces.length <= maxPieces) {
+      const ta = grPieces.reduce((s, p) => s + polygonArea(p), 0);
+      if (Math.abs(ta - polygonArea(target)) / polygonArea(target) < 0.03)
+        return { target, pieces: grPieces };
     }
   }
   // True last resort: 2 sequential cuts for 3 pieces minimum
@@ -2283,7 +2300,12 @@ export function generateFigurenTrainingTask(
   // E-correct ~12% matches official IB FZ 26 benchmark (1 in ~6-7 tasks have E correct).
   // "Bei einigen Aufgaben kann es vorkommen, dass keine der Antwortmöglichkeiten A bis D richtig ist."
   const makeECorrect = forceECorrect ?? rng() < 0.12;
-  const maxAttempts = 40; // More attempts for shapes that are harder to cut non-uniformly
+  // More attempts for complex shapes (circles, octagon, heptagon) that reject many cuts
+  const shapeVertexCount =
+    forcedShapeIdx != null
+      ? OFFICIAL_TARGET_POLYGONS[forcedShapeIdx % OFFICIAL_TARGET_POLYGONS.length].points.length
+      : 4;
+  const maxAttempts = shapeVertexCount > 8 ? 80 : 50;
   for (let attempt = 0; attempt < maxAttempts; attempt++) {
     const { target, pieces } = cutPolygonStrategically(
       difficulty,
