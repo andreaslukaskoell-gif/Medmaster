@@ -1565,14 +1565,16 @@ function generateAsymmetricCut(poly: Polygon, rng: () => number): [Pt2, Pt2] | n
       y: rd(pts[e2].y + t2 * (pts[(e2 + 1) % n].y - pts[e2].y)),
     };
 
-    // Reject if line passes through centroid (>15% distance from center)
+    // Reject if line passes very close to centroid (slightly off-center cuts are fine)
     const c = centroid(poly);
     const lineLen = Math.hypot(p2.x - p1.x, p2.y - p1.y);
     if (lineLen < 1) continue;
     const dist = Math.abs((p2.x - p1.x) * (p1.y - c.y) - (p1.x - c.x) * (p2.y - p1.y)) / lineLen;
     const bbox = polygonBBox(poly);
     const diagLen = Math.hypot(bbox.width, bbox.height);
-    if (dist < diagLen * 0.12) continue; // reject cuts too close to center (more asymmetric)
+    // Strong off-center: IB FZ 26 NEVER has center cuts. 20% for polygons, 8% for circles
+    const threshold = n > 8 ? 0.08 : 0.2;
+    if (dist < diagLen * threshold) continue;
 
     return [p1, p2];
   }
@@ -1779,25 +1781,30 @@ function curvedPath(p1: Pt2, p2: Pt2, rng: () => number): Pt2[] {
  *  Easy: meist gerade, gelegentlich curved. Medium: Mix. Hard: komplex. */
 function pickCutStyle(difficulty: FZDifficulty, rng: () => number): CutStyle {
   const r = rng();
+  // IB FZ 26: even the intro has complex cuts (notches, L-shapes). No difficulty has
+  // majority straight cuts — the puzzle-like interlocking is what makes it challenging.
   if (difficulty === "easy") {
-    if (r < 0.55) return "straight";
-    if (r < 0.85) return "curved";
-    return "step";
-  }
-  if (difficulty === "medium") {
-    if (r < 0.25) return "straight";
-    if (r < 0.55) return "curved";
-    if (r < 0.75) return "step";
-    if (r < 0.88) return "notch";
+    if (r < 0.2) return "straight";
+    if (r < 0.45) return "curved";
+    if (r < 0.65) return "step";
+    if (r < 0.8) return "notch";
     return "lshaped";
   }
+  if (difficulty === "medium") {
+    if (r < 0.1) return "straight";
+    if (r < 0.35) return "curved";
+    if (r < 0.55) return "step";
+    if (r < 0.75) return "notch";
+    if (r < 0.88) return "lshaped";
+    return "zigzag";
+  }
   // hard
-  if (r < 0.15) return "straight";
-  if (r < 0.45) return "curved";
-  if (r < 0.65) return "step";
-  if (r < 0.8) return "notch";
-  if (r < 0.9) return "zigzag";
-  return "lshaped";
+  if (r < 0.05) return "straight";
+  if (r < 0.25) return "curved";
+  if (r < 0.45) return "step";
+  if (r < 0.65) return "notch";
+  if (r < 0.82) return "lshaped";
+  return "zigzag";
 }
 
 /** Erzeugt eine Polyline zwischen zwei Punkten basierend auf dem Schnittstil. */
@@ -1982,7 +1989,7 @@ function applyGridCuts(
   }
 
   // Validate piece count and area conservation
-  if (pieces.length < 4) return null; // grid approach should produce at least 4
+  if (pieces.length < 3) return null; // grid approach should produce at least 3
 
   const totalArea = pieces.reduce((s, p) => s + polygonArea(p), 0);
   if (Math.abs(totalArea - targetArea) / targetArea > 0.02) return null; // >2% area loss
@@ -2053,17 +2060,10 @@ function applyAsymmetricCuts(
   const minA = Math.min(...areas);
   const areaRatio = minA > 0 ? maxA / minA : 999;
 
-  // Reject too uniform (ratio too low) AND too extreme (ratio too high = one piece dominates)
-  if (pieces.length === 2 && areaRatio < 2.0) return null;
-  if (pieces.length >= 3 && areaRatio < 2.5) return null;
-  // Cap: no piece should be more than 8x bigger than smallest (otherwise too obvious)
-  if (areaRatio > 6) return null;
-
-  // Reject if all pieces have the same point count (= identical shape fragments)
-  if (pieces.length >= 3) {
-    const ptCounts = pieces.map((p) => p.points.length);
-    if (ptCounts.every((c) => c === ptCounts[0])) return null;
-  }
+  // IB FZ 26: always clear size differences — no even splits
+  if (pieces.length === 2 && areaRatio < 1.8) return null;
+  if (pieces.length >= 3 && areaRatio < 1.5) return null;
+  if (areaRatio > 10) return null;
 
   return pieces;
 }
@@ -2095,8 +2095,9 @@ export function cutPolygonStrategically(
   // Try asymmetric cuts FIRST (authentic look with curved/complex cuts like IB FZ 26)
   const nCuts = numCutsForDifficulty(difficulty, rng);
   const asymPieces = applyAsymmetricCuts(target, nCuts, rng, difficulty);
-  // Require minimum 3 pieces (2-piece tasks are too obvious)
-  if (asymPieces && asymPieces.length >= 3) {
+  // Allow 2-piece tasks for easy, 3+ for medium/hard
+  const minPieces = difficulty === "easy" ? 2 : 3;
+  if (asymPieces && asymPieces.length >= minPieces) {
     const totalArea = asymPieces.reduce((s, p) => s + polygonArea(p), 0);
     const targetArea = polygonArea(target);
     // Relaxed tolerance (2%) — curved cuts shift area slightly via polyline approximation
@@ -2105,10 +2106,10 @@ export function cutPolygonStrategically(
     }
   }
 
-  // Hard difficulty fallback: grid-based cuts for reliable 4-6 pieces
-  if (difficulty === "hard") {
-    const gridPieces = applyGridCuts(target, 5, rng, difficulty);
-    if (gridPieces && gridPieces.length >= 4) {
+  // Grid-based fallback for all difficulties when asymmetric cuts fail
+  {
+    const gridPieces = applyGridCuts(target, difficulty === "easy" ? 3 : 5, rng, difficulty);
+    if (gridPieces && gridPieces.length >= minPieces) {
       const totalArea = gridPieces.reduce((s, p) => s + polygonArea(p), 0);
       const tgtArea = polygonArea(target);
       if (Math.abs(totalArea - tgtArea) / tgtArea < 0.02) {
@@ -2126,7 +2127,7 @@ export function cutPolygonStrategically(
       fbRng,
       difficulty
     );
-    if (fbPieces && fbPieces.length >= 3) {
+    if (fbPieces && fbPieces.length >= minPieces) {
       const ta = fbPieces.reduce((s, p) => s + polygonArea(p), 0);
       if (Math.abs(ta - polygonArea(target)) / polygonArea(target) < 0.05)
         return { target, pieces: fbPieces };
@@ -2168,16 +2169,17 @@ export function generateFigurenTrainingTask(
       forcedShapeIdx
     );
     if (!isAllowedTarget(target)) continue;
-    // Global uniform rejection — regardless of which cut path produced the pieces
-    if (pieces.length < 3) continue;
+    // Minimum pieces: 2 for easy, 3 for medium/hard
+    const minPcs = difficulty === "easy" ? 2 : 3;
+    if (pieces.length < minPcs) continue;
     {
       const pa = pieces.map((p) => polygonArea(p));
       const paMax = Math.max(...pa),
         paMin = Math.min(...pa);
       const paRatio = paMin > 0 ? paMax / paMin : 999;
-      if (paRatio < 2.5) continue; // too uniform
-      if (paRatio > 6) continue; // too extreme = answer too obvious
-      if (pieces.every((p) => p.points.length === pieces[0].points.length)) continue;
+      if (pieces.length === 2 && paRatio < 1.8) continue;
+      if (pieces.length >= 3 && paRatio < 1.5) continue;
+      if (paRatio > 10) continue;
     }
     const fp = taskFingerprint(target, pieces);
     if (duplicateGuardHas(fp)) continue;

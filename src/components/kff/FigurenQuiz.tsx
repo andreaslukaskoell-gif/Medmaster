@@ -98,16 +98,20 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
         (t) => t.solutionOverlay && t.solutionOverlay.lines.length >= 1
       );
       const target = Math.min(questionCount, 150);
-      // Supplement from generator if DB pool is too small (not just empty)
-      if (valid.length < target) {
+      // Supplement: always generate to fill missing shapes, even if DB has enough total tasks
+      const dbShapes = new Set(valid.map((t) => t.targetShapeId).filter(Boolean));
+      const missingShapes = SOLUTION_SHAPES.filter((s) => !dbShapes.has(s));
+      if (valid.length < target || missingShapes.length > 0) {
+        duplicateGuardClear(); // Clear — pool filling may have consumed guard slots
         const levels: ["easy", "medium", "hard"] = ["easy", "medium", "hard"];
         const seed = Date.now() * 1000 + Math.floor(Math.random() * 999);
         const generated: FigureAssembleTask[] = [];
         const numShapes = SOLUTION_SHAPES.length;
-        const needed = target - valid.length;
-        // Shuffled shape order per session — each cycle of 14 visits all shapes in random order
+        // Generate enough for missing shapes even if DB has most tasks
+        const needed = Math.max(target - valid.length, missingShapes.length * 7);
+        // Shuffled shape order per session — each cycle visits all shapes in random order
         const shapeOrder: number[] = [];
-        const totalGen = (needed + 10) * 2;
+        const totalGen = Math.max((needed + 10) * 3, numShapes * 15);
         const fullCycles = Math.ceil(totalGen / numShapes);
         for (let c = 0; c < fullCycles; c++) {
           const cycle = Array.from({ length: numShapes }, (_, k) => k);
@@ -125,27 +129,21 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
               seed + i * 7919,
               shapeOrder[i]
             );
-            // Only accept if the generator produced the requested shape (reject fallback drift)
             if (t && t.targetShapeId === requestedShape) generated.push(t);
           } catch {
             /* skip failed generation */
           }
         }
-        // Quality filter: reject uniform splits (all pieces same size/shape = boring)
+        // Quality filter: reject degenerate tasks only
         const qualityFiltered = generated.filter((t) => {
+          if (t.pieces.length < 2) return false;
           const areas = t.pieces.map((p) => polygonArea(p));
           const maxA = Math.max(...areas);
           const minA = Math.min(...areas);
           const ratio = minA > 0 ? maxA / minA : 999;
-          if (t.pieces.length < 2) return false; // minimum 2 pieces (MedAT allows 2-piece tasks)
-          if (t.pieces.length === 2 && ratio < 2.0) return false;
-          if (t.pieces.length >= 3 && ratio < 2.5) return false;
-          if (ratio > 6) return false; // too extreme = answer too obvious
-          if (
-            t.pieces.length >= 3 &&
-            t.pieces.every((p) => p.points.length === t.pieces[0].points.length)
-          )
-            return false;
+          if (t.pieces.length === 2 && ratio < 1.8) return false;
+          if (t.pieces.length >= 3 && ratio < 1.5) return false;
+          if (ratio > 10) return false;
           return true;
         });
         // Balance: cap each shape to maxPerShape to prevent dominance
@@ -158,16 +156,50 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
           shapeCounts[s] = (shapeCounts[s] ?? 0) + 1;
           if (shapeCounts[s]! <= maxPerShape) balanced.push(t);
         }
-        // Fill remaining from uncapped pool if balanced is too small
+        // Fill remaining with least-represented shapes only (prevent dominant shapes flooding)
         if (balanced.length < needed) {
-          for (const t of validGen) {
-            if (!balanced.includes(t)) balanced.push(t);
+          const remaining = validGen.filter((t) => !balanced.includes(t));
+          // Sort by shape frequency (prefer underrepresented shapes)
+          remaining.sort((a, b) => {
+            const ca = shapeCounts[a.targetShapeId ?? ""] ?? 0;
+            const cb = shapeCounts[b.targetShapeId ?? ""] ?? 0;
+            return ca - cb;
+          });
+          for (const t of remaining) {
+            balanced.push(t);
             if (balanced.length >= needed + 5) break;
           }
         }
         valid = [...valid, ...balanced];
         if (valid.length === 0) valid = shuffleSlice(filterValidFigurenTasks([]), target);
         if (import.meta.env?.DEV) logPoolWarning("figuren", valid.length, "Supplement (generiert)");
+      }
+      // Balance shape distribution across ALL tasks (DB + generated) to prevent DB bias
+      {
+        const finalMaxPerShape = Math.max(2, Math.ceil((target + 5) / SOLUTION_SHAPES.length));
+        const finalShapeCounts: Record<string, number> = {};
+        const finalBalanced: FigureAssembleTask[] = [];
+        // Shuffle to avoid always picking DB tasks first
+        const shuffled = [...valid].sort(() => Math.random() - 0.5);
+        for (const t of shuffled) {
+          const s = t.targetShapeId ?? "unknown";
+          finalShapeCounts[s] = (finalShapeCounts[s] ?? 0) + 1;
+          if (finalShapeCounts[s]! <= finalMaxPerShape) finalBalanced.push(t);
+        }
+        // Fill remaining with least-represented shapes
+        if (finalBalanced.length < target) {
+          const rest = shuffled.filter((t) => !finalBalanced.includes(t));
+          rest.sort((a, b) => {
+            const ca = finalShapeCounts[a.targetShapeId ?? ""] ?? 0;
+            const cb = finalShapeCounts[b.targetShapeId ?? ""] ?? 0;
+            return ca - cb;
+          });
+          for (const t of rest) {
+            finalBalanced.push(t);
+            if (finalBalanced.length >= target + 5) break;
+          }
+        }
+        valid = finalBalanced;
       }
       const seenIds = getKffSeenIdsForDomain("Figuren");
       const fresh = preferUnseen(valid, target, seenIds);
