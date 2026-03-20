@@ -1435,6 +1435,36 @@ export function validateTaskUsesOnlyStrategyShapes(task: FigureAssembleTask): bo
  * `skipGeometric`: set true for display-rotated tasks (pieces no longer inside target after rotation).
  * The generator validates pre-rotation; re-validation only checks structural integrity.
  */
+/**
+ * Checks that pieces have distinct silhouettes — no two pieces should be
+ * visually interchangeable (same vertex count + similar aspect ratio).
+ * Structural lesson: benchmark tasks create difficulty through piece UNIQUENESS,
+ * not edge complexity. Each piece must play a distinct visual role.
+ */
+function validatePieceDistinctness(pieces: Polygon[]): boolean {
+  if (pieces.length <= 2) return true; // 2-piece tasks are inherently distinct
+  // For 5+ pieces, skip this check — with many fragments, some vertex-count
+  // overlap is natural and difficulty comes from quantity, not individual uniqueness.
+  if (pieces.length >= 5) return true;
+  for (let i = 0; i < pieces.length; i++) {
+    for (let j = i + 1; j < pieces.length; j++) {
+      const pi = pieces[i],
+        pj = pieces[j];
+      // Same vertex count = similar silhouette risk
+      if (pi.points.length === pj.points.length) {
+        // Check aspect ratio similarity
+        const bboxI = polygonBBox(pi),
+          bboxJ = polygonBBox(pj);
+        const arI = bboxI.width > 0 ? bboxI.height / bboxI.width : 1;
+        const arJ = bboxJ.width > 0 ? bboxJ.height / bboxJ.width : 1;
+        // If both vertex count AND aspect ratio are close, pieces are too similar
+        if (Math.abs(arI - arJ) < 0.3) return false;
+      }
+    }
+  }
+  return true;
+}
+
 export function validateFigurenTask(task: FigureAssembleTask, skipGeometric = false): boolean {
   if (task.pieces.length < 2 || task.pieces.length > 6 || task.options.length !== 5) return false;
   if (task.targetShapeId != null && !TARGET_SHAPE_IDS.includes(task.targetShapeId)) return false;
@@ -1446,6 +1476,8 @@ export function validateFigurenTask(task: FigureAssembleTask, skipGeometric = fa
   if (!validateUniqueCorrectOption(task)) return false;
   if (!validateTaskUsesOnlyStrategyShapes(task)) return false;
   if (task.correctIndex < 0 || task.correctIndex > 4) return false;
+  // Piece distinctness: reject tasks with interchangeable pieces
+  if (!skipGeometric && !validatePieceDistinctness(task.pieces)) return false;
   return true;
 }
 
@@ -2325,9 +2357,13 @@ export function generateFigurenTrainingTask(
       if (pieces.length === 2 && paRatio < 1.8) continue;
       if (pieces.length >= 3 && paRatio < 1.5) continue;
       if (paRatio > 10) continue;
-      // Reduce anchor dominance: reject if largest piece > 75% of total (too obvious)
+      // Anchor suppression scaled by piece count.
+      // For 5+ pieces, allow up to 65% (one larger piece among many is OK).
+      // For 2-3 pieces medium/hard, stricter 55% to avoid trivial solutions.
       const totalA = pa.reduce((s, a) => s + a, 0);
-      if (totalA > 0 && paMax / totalA > 0.75) continue;
+      const baseLim = difficulty === "easy" ? 0.7 : 0.55;
+      const anchorLimit = pieces.length >= 5 ? Math.max(baseLim, 0.65) : baseLim;
+      if (totalA > 0 && paMax / totalA > anchorLimit) continue;
     }
     const fp = taskFingerprint(target, pieces);
     if (duplicateGuardHas(fp)) continue;
@@ -2430,9 +2466,11 @@ function generateFigurenTrainingTaskFallback(
     const paRatio = paMin > 0 ? paMax / paMin : 999;
     if (paRatio < 2.5 || paRatio > 6) continue;
     if (pieces.every((p) => p.points.length === pieces[0].points.length)) continue;
-    // Reject overly dominant anchor pieces
+    // Anchor suppression matching main generator (scaled by piece count)
     const totalA = pa.reduce((s, a) => s + a, 0);
-    if (totalA > 0 && paMax / totalA > 0.75) continue;
+    const fbBase = difficulty === "easy" ? 0.7 : 0.55;
+    const fbAnchorLimit = pieces.length >= 5 ? Math.max(fbBase, 0.65) : fbBase;
+    if (totalA > 0 && paMax / totalA > fbAnchorLimit) continue;
 
     let options: [FigureOption, FigureOption, FigureOption, FigureOption, FigureOption];
     let correctIndex: number;
