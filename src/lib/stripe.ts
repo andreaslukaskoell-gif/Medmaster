@@ -10,6 +10,7 @@ export const PRICING = {
   oneTime: {
     priceId: "price_PLACEHOLDER_medmaster_komplett",
     amount: 2990, // €29,90
+    discountedAmount: 2490, // €24,90 (with referral reward)
     label: "MedMaster Komplett",
   },
 };
