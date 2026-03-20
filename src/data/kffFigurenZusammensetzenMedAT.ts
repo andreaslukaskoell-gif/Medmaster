@@ -1436,29 +1436,29 @@ export function validateTaskUsesOnlyStrategyShapes(task: FigureAssembleTask): bo
  * The generator validates pre-rotation; re-validation only checks structural integrity.
  */
 /**
- * Checks that pieces have distinct silhouettes — no two pieces should be
- * visually interchangeable (same vertex count + similar aspect ratio).
- * Structural lesson: benchmark tasks create difficulty through piece UNIQUENESS,
- * not edge complexity. Each piece must play a distinct visual role.
+ * Light check: reject tasks where pieces are nearly identical twins (same vertex
+ * count AND very similar size AND aspect ratio). This catches the worst cases
+ * without being overly aggressive — the official IB can have pieces with similar
+ * vertex counts as long as their shapes differ.
  */
 function validatePieceDistinctness(pieces: Polygon[]): boolean {
-  if (pieces.length <= 2) return true; // 2-piece tasks are inherently distinct
-  // For 5+ pieces, skip this check — with many fragments, some vertex-count
-  // overlap is natural and difficulty comes from quantity, not individual uniqueness.
-  if (pieces.length >= 5) return true;
+  if (pieces.length <= 2 || pieces.length >= 5) return true;
   for (let i = 0; i < pieces.length; i++) {
     for (let j = i + 1; j < pieces.length; j++) {
       const pi = pieces[i],
         pj = pieces[j];
-      // Same vertex count = similar silhouette risk
+      // Only flag if ALL THREE criteria match: same vertices, similar size, similar shape
       if (pi.points.length === pj.points.length) {
-        // Check aspect ratio similarity
+        const aI = polygonArea(pi),
+          aJ = polygonArea(pj);
+        const sizeRatio = Math.min(aI, aJ) > 0 ? Math.max(aI, aJ) / Math.min(aI, aJ) : 999;
+        if (sizeRatio > 1.5) continue; // Different size = visually distinct
         const bboxI = polygonBBox(pi),
           bboxJ = polygonBBox(pj);
         const arI = bboxI.width > 0 ? bboxI.height / bboxI.width : 1;
         const arJ = bboxJ.width > 0 ? bboxJ.height / bboxJ.width : 1;
-        // If both vertex count AND aspect ratio are close, pieces are too similar
-        if (Math.abs(arI - arJ) < 0.3) return false;
+        // Only reject if nearly identical: same vertices, similar size, similar shape
+        if (Math.abs(arI - arJ) < 0.15) return false;
       }
     }
   }
@@ -2157,10 +2157,11 @@ function applyAsymmetricCuts(
     totalAttempts < numCuts * 12 && successfulCuts < numCuts;
     totalAttempts++
   ) {
-    // Pick which piece to cut: usually largest, but 25% of the time pick a random
-    // eligible piece to break the "one big + several small" monotony
+    // Pick which piece to cut: usually largest, but 15% of the time pick a random
+    // eligible piece. Kept conservative because split-largest ensures off-center cuts
+    // (officially required per IB FZ 26) while still adding some variety.
     let cutIdx = 0;
-    if (pieces.length >= 3 && rng() < 0.25) {
+    if (pieces.length >= 3 && rng() < 0.15) {
       // Pick random piece that's at least 15% of total area
       const totalA = pieces.reduce((s, p) => s + polygonArea(p), 0);
       const eligible = pieces
@@ -2357,12 +2358,11 @@ export function generateFigurenTrainingTask(
       if (pieces.length === 2 && paRatio < 1.8) continue;
       if (pieces.length >= 3 && paRatio < 1.5) continue;
       if (paRatio > 10) continue;
-      // Anchor suppression scaled by piece count.
-      // For 5+ pieces, allow up to 65% (one larger piece among many is OK).
-      // For 2-3 pieces medium/hard, stricter 55% to avoid trivial solutions.
+      // Anchor suppression: IB FZ 26 requires "clear size differences" (ratio > 1.5)
+      // but NOT forced balance. 65% max keeps asymmetry while preventing trivial
+      // anchor-piece shortcuts. Easy allows 70% for inherently asymmetric 2-pc tasks.
       const totalA = pa.reduce((s, a) => s + a, 0);
-      const baseLim = difficulty === "easy" ? 0.7 : 0.55;
-      const anchorLimit = pieces.length >= 5 ? Math.max(baseLim, 0.65) : baseLim;
+      const anchorLimit = difficulty === "easy" ? 0.7 : 0.65;
       if (totalA > 0 && paMax / totalA > anchorLimit) continue;
     }
     const fp = taskFingerprint(target, pieces);
@@ -2466,10 +2466,9 @@ function generateFigurenTrainingTaskFallback(
     const paRatio = paMin > 0 ? paMax / paMin : 999;
     if (paRatio < 2.5 || paRatio > 6) continue;
     if (pieces.every((p) => p.points.length === pieces[0].points.length)) continue;
-    // Anchor suppression matching main generator (scaled by piece count)
+    // Anchor suppression matching main generator
     const totalA = pa.reduce((s, a) => s + a, 0);
-    const fbBase = difficulty === "easy" ? 0.7 : 0.55;
-    const fbAnchorLimit = pieces.length >= 5 ? Math.max(fbBase, 0.65) : fbBase;
+    const fbAnchorLimit = difficulty === "easy" ? 0.7 : 0.65;
     if (totalA > 0 && paMax / totalA > fbAnchorLimit) continue;
 
     let options: [FigureOption, FigureOption, FigureOption, FigureOption, FigureOption];
