@@ -58,6 +58,7 @@ const BMSDemo = lazy(() => import("@/pages/BMSDemo"));
 const SubjectDemo = lazy(() => import("@/pages/SubjectDemo"));
 const QuizChallenge = lazy(() => import("@/pages/QuizChallenge"));
 const FAQPage = lazy(() => import("@/pages/FAQPage"));
+const UeberUns = lazy(() => import("@/pages/UeberUns"));
 const MedATGuide = lazy(() => import("@/pages/MedATGuide"));
 const MedATPunkterechner = lazy(() => import("@/pages/MedATPunkterechner"));
 const StichwortlistePublic = lazy(() => import("@/pages/StichwortlistePublic"));
@@ -208,6 +209,7 @@ export default function App() {
           <Route path="/medat-:subject-fragen" element={<SubjectDemo />} />
           <Route path="/challenge" element={<QuizChallenge />} />
           <Route path="/faq" element={<FAQPage />} />
+          <Route path="/ueber-uns" element={<UeberUns />} />
           <Route path="/medat-guide" element={<MedATGuide />} />
           <Route path="/medat-punkte-rechner" element={<MedATPunkterechner />} />
           <Route path="/bms-stichwortliste-2026" element={<StichwortlistePublic />} />

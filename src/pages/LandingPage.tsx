@@ -415,7 +415,7 @@ export default function LandingPage() {
             transition={{ ...fade.transition, delay: 0.35 }}
             className="text-xs text-[var(--muted)]/60 tracking-wide"
           >
-            Keine Kreditkarte &middot; Jederzeit kündbar &middot; 1 Klick mit Google
+            Keine Kreditkarte &middot; Kein Abo &middot; 1 Klick mit Google
           </motion.p>
         </div>
       </section>
@@ -693,7 +693,7 @@ export default function LandingPage() {
             </h3>
             <p className="text-sm text-[var(--text-secondary)] mb-6 sm:mb-8 max-w-md mx-auto leading-relaxed">
               {countdown.expired
-                ? "Jederzeit kündbar. Voller Zugang zu allen Fragen, Lerneinheiten und der Prüfungssimulation."
+                ? "Kein Abo. Voller Zugang zu allen Fragen, Lerneinheiten und der Prüfungssimulation."
                 : "Wer jetzt startet, lernt bis April gratis — und hat einen Vorsprung gegenüber allen, die noch warten."}
             </p>
             <GoogleBtn
@@ -709,7 +709,7 @@ export default function LandingPage() {
               >
                 Mit E-Mail anmelden
               </Link>
-              {" · "}Keine Kreditkarte{" · "}Jederzeit kündbar
+              {" · "}Keine Kreditkarte{" · "}Kein Abo
             </p>
           </motion.div>
         </div>
@@ -784,7 +784,7 @@ export default function LandingPage() {
             Deine Konkurrenz auch nicht.
           </h2>
           <p className="text-white/60 text-sm sm:text-base mb-8 sm:mb-10 max-w-md mx-auto leading-relaxed">
-            5.000+ Fragen. Alle 4 Bereiche. Adaptives Lernsystem. Jederzeit kündbar.
+            5.000+ Fragen. Alle 4 Bereiche. Adaptives Lernsystem. Kein Abo.
           </p>
           <GoogleBtn
             label="Jetzt kostenlos starten"
@@ -837,6 +837,12 @@ export default function LandingPage() {
                 className="text-[var(--muted)] hover:text-[var(--text-primary)] transition-colors"
               >
                 FAQ
+              </Link>
+              <Link
+                to="/ueber-uns"
+                className="text-[var(--muted)] hover:text-[var(--text-primary)] transition-colors"
+              >
+                Über uns
               </Link>
             </div>
           </div>
