@@ -17,13 +17,12 @@ const features = [
   "Alle 173 Lerneinheiten (Theorie)",
   "10.000+ KFF-Übungen (algorithmisch generiert)",
   "10 TV-Textsets mit MC-Fragen",
-  "324 SEK-Aufgaben",
+  "230+ SEK-Aufgaben",
   "Realistische Prüfungssimulation im MedAT-Format",
   "KI-adaptives Lernsystem",
   "Spaced Repetition & Schwachstellen-Trainer",
   "Prüfungstag-Prognose",
   "Personalisierter Lernplan",
-  "KI-Tutor Chat",
   "Updates bis zum MedAT 2026 inklusive",
 ];
 

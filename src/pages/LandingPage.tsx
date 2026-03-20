@@ -573,7 +573,7 @@ export default function LandingPage() {
                 title: "SEK",
                 sub: "Sozial-emotionale Kompetenzen",
                 items: ["Emotionen erkennen", "Emotionen regulieren", "Soziales Entscheiden"],
-                footer: "324 Aufgaben mit offiziellen MedAT-Instruktionen",
+                footer: "230+ Aufgaben mit offiziellen MedAT-Instruktionen",
               },
             ].map((area) => (
               <div
@@ -737,6 +737,63 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* ─── Comparison ─── */}
+      <section className="py-12 sm:py-24 border-t border-[var(--border)]/50">
+        <div className="max-w-3xl mx-auto px-5 sm:px-8">
+          <motion.div {...fade} className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)] mb-3">
+              Warum MedMaster?
+            </h2>
+            <p className="text-sm sm:text-base text-[var(--text-secondary)] max-w-lg mx-auto">
+              MedAT-Vorbereitung muss nicht teuer sein. Vergleich mit typischen Anbietern am Markt.
+            </p>
+          </motion.div>
+          <motion.div {...fade}>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm border-collapse">
+                <thead>
+                  <tr className="border-b-2 border-[var(--border)]">
+                    <th className="py-3 pr-4 text-left font-semibold text-[var(--text-secondary)]" />
+                    <th className="py-3 px-4 text-center font-bold text-teal-700 dark:text-teal-400 bg-teal-50/50 dark:bg-teal-900/15 rounded-t-xl">
+                      MedMaster
+                    </th>
+                    <th className="py-3 px-4 text-center font-medium text-[var(--text-secondary)]">
+                      Typische Anbieter
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="text-[var(--text-primary)]">
+                  {[
+                    ["Preis", "Einmalig €29,90", "€69 – €599+"],
+                    ["Abo / Verlängerung", "Nein", "Häufig monatlich"],
+                    ["BMS-Fragen", "5.000+", "1.300 – 2.700"],
+                    ["KFF-Aufgaben", "10.000+ (generiert)", "500 – 7.500"],
+                    ["Prüfungssimulation", "Inklusive, unbegrenzt", "€69 pro Simulation"],
+                    ["Adaptives Lernsystem", "Ja", "Nicht verfügbar"],
+                    ["Alle 4 MedAT-Bereiche", "Ja", "Oft nur BMS"],
+                    ["Zugang bis MedAT", "Ja", "Saisonabhängig"],
+                  ].map(([label, medmaster, others]) => (
+                    <tr key={label} className="border-b border-[var(--border)]/50">
+                      <td className="py-2.5 pr-4 font-medium">{label}</td>
+                      <td className="py-2.5 px-4 text-center font-semibold text-teal-700 dark:text-teal-400 bg-teal-50/30 dark:bg-teal-900/10">
+                        {medmaster}
+                      </td>
+                      <td className="py-2.5 px-4 text-center text-[var(--text-secondary)]">
+                        {others}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-xs text-[var(--muted)] mt-4 text-center">
+              Vergleich basierend auf öffentlich sichtbaren Preisen und Leistungen führender
+              MedAT-Vorbereitungsplattformen (Stand März 2026). Keine spezifischen Anbieter genannt.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
       {/* ─── FAQ ─── */}
       <section className="py-12 sm:py-24 border-t border-[var(--border)]/50">
         <div className="max-w-2xl mx-auto px-5 sm:px-8">
@@ -766,7 +823,7 @@ export default function LandingPage() {
               },
               {
                 q: "Was unterscheidet MedMaster von anderen Anbietern?",
-                a: "Drei Dinge: Erstens decken wir alle 4 MedAT-Bereiche ab, nicht nur BMS. Zweitens ist unser Lernsystem adaptiv — es erkennt deine Schwächen und trainiert sie gezielt. Drittens kosten wir einmalig €29,90 statt monatlich €9–30. Und: über 10.000 KFF-Aufgaben werden algorithmisch generiert, sodass du nie dieselbe Aufgabe zweimal bekommst.",
+                a: "Vier Dinge: Erstens decken wir alle 4 MedAT-Bereiche ab — nicht nur BMS. Zweitens ist unser Lernsystem adaptiv — es erkennt deine Schwächen und passt den Lernplan automatisch an. Drittens kosten andere Plattformen €69–599 (oft mit Abo), während MedMaster einmalig €29,90 kostet. Viertens: Über 10.000 KFF-Aufgaben werden algorithmisch generiert und validiert — du bekommst nie dieselbe Aufgabe zweimal. Dazu eine realistische Prüfungssimulation mit echten MedAT-Zeitlimits, unbegrenzt wiederholbar.",
               },
             ].map((faq) => (
               <FAQItem key={faq.q} q={faq.q} a={faq.a} />

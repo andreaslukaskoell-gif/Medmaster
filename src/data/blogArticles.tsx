@@ -1237,7 +1237,7 @@ export const blogArticles: BlogArticle[] = [
           Menschenverstand — ergänzt durch psychologisches Grundwissen.
         </p>
 
-        <CTA text="324 SEK-Übungsaufgaben in allen drei Untertests — trainiere Emotionen erkennen, regulieren und entscheiden." />
+        <CTA text="230+ SEK-Übungsaufgaben in allen drei Untertests — trainiere Emotionen erkennen, regulieren und entscheiden." />
       </>
     ),
   },
