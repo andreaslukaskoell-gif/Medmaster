@@ -3254,6 +3254,39 @@ const TRAINING_INVALID_MODES: TrainingInvalidMode[] = [
     explanation: (s, m, p) =>
       `Zwei "keine"-Prämissen (Regel 2): ${s.p} und ${m.p} sind disjunkt, ${p.p} und ${m.p} auch — über ${s.p} und ${p.p} ist nichts zwingend.`,
   },
+  {
+    // Einige-Keine crossover: Einige M sind P + Alle S sind keine M → kein zwingender Schluss
+    p1: (_s, m, p) => `Einige ${m.p} sind ${p.p}`,
+    p2: (s, m) => `Alle ${s.p} sind keine ${m.p}`,
+    gridSubj: (s) => s.p,
+    gridPred: (_s, _m, p) => p.p,
+    name: "Einige-Keine-Crossover",
+    rulesApplied: [1, 2],
+    explanation: (s, m, p) =>
+      `Einige ${m.p} sind ${p.p}, aber ${s.p} sind komplett von ${m.p} getrennt — über ${s.p} und ${p.p} lässt sich nichts ableiten.`,
+  },
+  {
+    // Undistributed middle: Einige M sind P + Einige M sind S → kein zwingender Schluss
+    p1: (_s, m, p) => `Einige ${m.p} sind ${p.p}`,
+    p2: (s, m) => `Einige ${m.p} sind ${s.p}`,
+    gridSubj: (s) => s.p,
+    gridPred: (_s, _m, p) => p.p,
+    name: "Undistributed-Middle",
+    rulesApplied: [1],
+    explanation: (s, m, p) =>
+      `Beide Prämissen sind partikulär (Regel 1): Einige ${m.p} sind ${p.p} und Einige ${m.p} sind ${s.p} — die Teilmengen von ${m.p} können disjunkt sein, kein zwingender Schluss über ${s.p} und ${p.p}.`,
+  },
+  {
+    // Reversed universal: Alle P sind M + Alle S sind M → kein zwingender Schluss
+    p1: (_s, m, p) => `Alle ${p.p} sind ${m.p}`,
+    p2: (s, m) => `Alle ${s.p} sind ${m.p}`,
+    gridSubj: (s) => s.p,
+    gridPred: (_s, _m, p) => p.p,
+    name: "Reversed-Universal",
+    rulesApplied: [3],
+    explanation: (s, m, p) =>
+      `${p.p} und ${s.p} sind beide Teilmengen von ${m.p}, aber sie können sich überlappen oder disjunkt sein — über ${s.p} und ${p.p} ist nichts zwingend (unverteilter Mittelbegriff).`,
+  },
 ];
 
 const TRAINING_MODES: TrainingSyllogismMode[] = [
@@ -3298,6 +3331,55 @@ const TRAINING_MODES: TrainingSyllogismMode[] = [
     p2: (s, m) => `Alle ${m.p} sind ${s.p}`,
     conclusion: (s, _m, p) => `Einige ${s.p} sind ${p.p}`,
     name: "Disamis",
+  },
+  {
+    // Festino (Figure 2): Alle P sind keine M + Einige S sind M → Einige S sind keine P
+    p1: (_s, m, p) => `Alle ${p.p} sind keine ${m.p}`,
+    p2: (s, m) => `Einige ${s.p} sind ${m.p}`,
+    conclusion: (s, _m, p) => `Einige ${s.p} sind keine ${p.p}`,
+    name: "Festino",
+  },
+  {
+    // Baroco (Figure 2): Alle P sind M + Einige S sind keine M → Einige S sind keine P
+    p1: (_s, m, p) => `Alle ${p.p} sind ${m.p}`,
+    p2: (s, m) => `Einige ${s.p} sind keine ${m.p}`,
+    conclusion: (s, _m, p) => `Einige ${s.p} sind keine ${p.p}`,
+    name: "Baroco",
+  },
+  {
+    // Bocardo (Figure 3): Einige M sind keine P + Alle M sind S → Einige S sind keine P
+    p1: (_s, m, p) => `Einige ${m.p} sind keine ${p.p}`,
+    p2: (s, m) => `Alle ${m.p} sind ${s.p}`,
+    conclusion: (s, _m, p) => `Einige ${s.p} sind keine ${p.p}`,
+    name: "Bocardo",
+  },
+  {
+    // Bramantip (Figure 4): Alle P sind M + Alle M sind S → Einige S sind P
+    p1: (_s, m, p) => `Alle ${p.p} sind ${m.p}`,
+    p2: (s, m) => `Alle ${m.p} sind ${s.p}`,
+    conclusion: (s, _m, p) => `Einige ${s.p} sind ${p.p}`,
+    name: "Bramantip",
+  },
+  {
+    // Camenes (Figure 4): Alle P sind M + Alle M sind keine S → Alle S sind keine P
+    p1: (_s, m, p) => `Alle ${p.p} sind ${m.p}`,
+    p2: (s, m) => `Alle ${m.p} sind keine ${s.p}`,
+    conclusion: (s, _m, p) => `Alle ${s.p} sind keine ${p.p}`,
+    name: "Camenes",
+  },
+  {
+    // Dimaris (Figure 4): Einige P sind M + Alle M sind S → Einige S sind P
+    p1: (_s, m, p) => `Einige ${p.p} sind ${m.p}`,
+    p2: (s, m) => `Alle ${m.p} sind ${s.p}`,
+    conclusion: (s, _m, p) => `Einige ${s.p} sind ${p.p}`,
+    name: "Dimaris",
+  },
+  {
+    // Fresison (Figure 3): Alle M sind keine P + Einige M sind S → Einige S sind keine P
+    p1: (_s, m, p) => `Alle ${m.p} sind keine ${p.p}`,
+    p2: (s, m) => `Einige ${m.p} sind ${s.p}`,
+    conclusion: (s, _m, p) => `Einige ${s.p} sind keine ${p.p}`,
+    name: "Fresison",
   },
 ];
 

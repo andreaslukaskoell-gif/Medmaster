@@ -222,6 +222,15 @@ function mid(a: { x: number; y: number }, b: { x: number; y: number }): { x: num
   return { x: rd((a.x + b.x) / 2), y: rd((a.y + b.y) / 2) };
 }
 
+/** Point at fraction t along edge from a to b (0=a, 1=b). */
+function lerp(
+  a: { x: number; y: number },
+  b: { x: number; y: number },
+  t: number
+): { x: number; y: number } {
+  return { x: rd(a.x + (b.x - a.x) * t), y: rd(a.y + (b.y - a.y) * t) };
+}
+
 /** Kreisbogen als Polygon (Zentrum + Bogenpunkte). Winkel in Radiant, von start bis end. */
 function arcPolygon(
   cx: number,
@@ -1029,6 +1038,92 @@ function cutRectangle4Hard(): CutResult {
   };
 }
 
+// =============================================================================
+// ASYMMETRIC CUT STRATEGIES – 1/3 and 2/3 positions via lerp()
+// =============================================================================
+
+/** Quadrat: 3 asymmetrische Teile (Schnitt von Ecke p0 zu 1/3 auf p1-p2 und 2/3 auf p2-p3). */
+function cutSquareAsymmetric3(): CutResult {
+  const [p0, p1, p2, p3] = SQUARE.points;
+  const t12 = lerp(p1, p2, 1 / 3); // 1/3 along edge p1→p2
+  const t23 = lerp(p2, p3, 2 / 3); // 2/3 along edge p2→p3
+  return {
+    target: SQUARE,
+    pieces: [{ points: [p0, p1, t12] }, { points: [p0, t12, p2, t23] }, { points: [p0, t23, p3] }],
+  };
+}
+
+/** Dreieck: 3 asymmetrische Teile (Basis bei 1/3 und 2/3 geteilt, Linien zur Spitze). */
+function cutTriangleAsymmetric3(): CutResult {
+  const [p0, p1, p2] = TRIANGLE.points;
+  const t1 = lerp(p1, p2, 1 / 3); // 1/3 along base
+  const t2 = lerp(p1, p2, 2 / 3); // 2/3 along base
+  return {
+    target: TRIANGLE,
+    pieces: [{ points: [p0, p1, t1] }, { points: [p0, t1, t2] }, { points: [p0, t2, p2] }],
+  };
+}
+
+/** Sechseck: 3 asymmetrische Teile (Diagonale v0→v3 + Linie von v0 zu 1/3 auf v3→v4). */
+function cutHexagonAsymmetric3(): CutResult {
+  const v = HEXAGON.points;
+  const t34 = lerp(v[3], v[4], 1 / 3);
+  return {
+    target: HEXAGON,
+    pieces: [
+      { points: [v[0], v[1], v[2], v[3]] },
+      { points: [v[0], v[3], t34] },
+      { points: [v[0], t34, v[4], v[5]] },
+    ],
+  };
+}
+
+/** Parallelogramm: 3 asymmetrische Teile (horizontaler Schnitt bei 1/3 Höhe). */
+function cutParallelogramAsymmetric3(): CutResult {
+  const [p0, p1, p2, p3] = PARALLELOGRAM.points;
+  const tL = lerp(p0, p3, 1 / 3);
+  const tR = lerp(p1, p2, 1 / 3);
+  return {
+    target: PARALLELOGRAM,
+    pieces: [{ points: [p0, p1, tR, tL] }, { points: [tL, tR, p2] }, { points: [tL, p2, p3] }],
+  };
+}
+
+/** Trapez: 3 asymmetrische Teile (Diagonale von 1/3 Oberkante zu 2/3 Unterkante, then split right part). */
+function cutTrapezAsymmetric3(): CutResult {
+  const [p0, p1, p2, p3] = TRAPEZ.points;
+  const tTop = lerp(p0, p1, 1 / 3);
+  const tBot = lerp(p3, p2, 2 / 3);
+  const tRight = lerp(p1, p2, 1 / 3);
+  return {
+    target: TRAPEZ,
+    pieces: [
+      { points: [p0, tTop, tBot, p3] },
+      { points: [tTop, p1, tRight] },
+      { points: [tTop, tRight, p2, tBot] },
+    ],
+  };
+}
+
+/** Rechteck: 4 asymmetrische Teile (senkrecht bei 1/3, waagerecht bei 2/3 — 4 ungleiche Rechtecke). */
+function cutRectangleAsymmetric4(): CutResult {
+  const [p0, p1, p2, p3] = RECTANGLE.points;
+  const tTop = lerp(p0, p1, 1 / 3);
+  const tBot = lerp(p3, p2, 1 / 3);
+  const tLeft = lerp(p0, p3, 2 / 3);
+  const tRight = lerp(p1, p2, 2 / 3);
+  const cross = { x: rd(tTop.x), y: rd(tLeft.y) };
+  return {
+    target: RECTANGLE,
+    pieces: [
+      { points: [p0, tTop, cross, tLeft] }, // top-left (narrow, tall)
+      { points: [tTop, p1, tRight, cross] }, // top-right (wide, tall)
+      { points: [tLeft, cross, tBot, p3] }, // bottom-left (narrow, short)
+      { points: [cross, tRight, p2, tBot] }, // bottom-right (wide, short)
+    ],
+  };
+}
+
 export type FZDifficulty = "easy" | "medium" | "hard";
 
 /** Pro Schema: Schwierigkeit, Zielform (für gleiche Häufigkeit aller 14 Formen), Schnitt. */
@@ -1099,6 +1194,13 @@ const CUT_SCHEMES: CutScheme[] = [
   { diff: "hard", shapeId: "quarter-circle", cut: cutQuarterCircle3 },
   { diff: "hard", shapeId: "half-circle", cut: cutHalfCircle4 },
   { diff: "hard", shapeId: "three-quarter-circle", cut: cutThreeQuarterCircle4 },
+  // --- ASYMMETRIC cuts (lerp 1/3, 2/3) ---
+  { diff: "medium", shapeId: "square", cut: cutSquareAsymmetric3 },
+  { diff: "medium", shapeId: "triangle", cut: cutTriangleAsymmetric3 },
+  { diff: "medium", shapeId: "parallelogram", cut: cutParallelogramAsymmetric3 },
+  { diff: "hard", shapeId: "hexagon", cut: cutHexagonAsymmetric3 },
+  { diff: "hard", shapeId: "trapezoid", cut: cutTrapezAsymmetric3 },
+  { diff: "hard", shapeId: "rectangle", cut: cutRectangleAsymmetric4 },
 ];
 
 // =============================================================================
