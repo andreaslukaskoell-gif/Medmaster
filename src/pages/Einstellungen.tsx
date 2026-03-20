@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { ReferralWidget } from "@/components/shared/ReferralWidget";
 import { Link } from "react-router-dom";
 import {
   Moon,
@@ -181,6 +182,14 @@ export default function Einstellungen() {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* ── Freunde einladen ─────────────────────────────────── */}
+      <section className="space-y-3">
+        <h2 className="text-xs font-semibold uppercase tracking-widest text-[var(--muted)]">
+          Freunde einladen
+        </h2>
+        <ReferralWidget />
       </section>
 
       {/* ── Darstellung ────────────────────────────────────────── */}

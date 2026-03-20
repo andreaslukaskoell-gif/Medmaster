@@ -51,31 +51,41 @@ serve(async (req) => {
     switch (event.type) {
       case "checkout.session.completed": {
         const session = event.data.object as Stripe.Checkout.Session;
-        const userId = session.metadata?.supabase_user_id;
+        // Payment Links use client_reference_id for user attribution
+        const userId = session.client_reference_id || session.metadata?.supabase_user_id;
         if (!userId) {
-          console.error("No supabase_user_id in checkout session metadata");
+          console.error("No user ID in checkout session (check client_reference_id or metadata)");
           break;
         }
 
-        // Get subscription to determine tier from price
-        let tier: "standard" | "pro" = "standard";
-        if (session.subscription) {
-          const subscription = await stripe.subscriptions.retrieve(session.subscription as string);
-          const priceId = subscription.items.data[0]?.price.id;
-          if (priceId) tier = tierFromPriceId(priceId);
-        }
-
+        // One-time payment model: upgrade to premium
         const { error } = await supabase
           .from("profiles")
           .update({
-            subscription_tier: tier,
+            subscription_tier: "premium",
             stripe_customer_id: session.customer as string,
             updated_at: new Date().toISOString(),
           })
           .eq("id", userId);
 
         if (error) console.error("Profile update error:", error);
-        else console.log(`User ${userId} upgraded to ${tier}`);
+        else console.log(`User ${userId} upgraded to premium`);
+
+        // ── Referral reward: grant 5€ to referrer if applicable ──
+        try {
+          const { data: rewardGranted, error: rewardError } = await supabase.rpc(
+            "mark_referee_paid",
+            { referee_uuid: userId }
+          );
+          if (rewardError) {
+            console.error("Referral reward error:", rewardError);
+          } else if (rewardGranted) {
+            console.log(`Referral reward granted for referee ${userId}`);
+          }
+        } catch (e) {
+          // Non-critical: don't fail the webhook if referral reward fails
+          console.error("Referral reward exception:", e);
+        }
         break;
       }
 

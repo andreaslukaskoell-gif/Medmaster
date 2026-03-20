@@ -7,8 +7,10 @@ import { Badge } from "@/components/ui/badge";
 import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { usePageTitle } from "@/hooks/usePageTitle";
 import { useAuth } from "@/hooks/useAuth";
-import { startCheckout, isPaymentEnabled } from "@/lib/stripe";
+import { startCheckout, isPaymentEnabled, formatPrice } from "@/lib/stripe";
 import { trackPricingView } from "@/lib/analytics";
+import { useReferralReward } from "@/hooks/useReferralReward";
+import { ReferralWidget } from "@/components/shared/ReferralWidget";
 
 const features = [
   "5.000+ BMS-Fragen mit Erklärungen",
@@ -28,8 +30,11 @@ const features = [
 export default function Pricing() {
   usePageTitle("Preise");
   const { user } = useAuth();
+  const reward = useReferralReward();
 
   const isFreePromo = new Date() < new Date("2026-04-01T00:00:00+02:00");
+  const personalPrice = reward.personalPriceCents;
+  const hasDiscount = reward.hasReward;
 
   useEffect(() => {
     trackPricingView();
@@ -73,6 +78,18 @@ export default function Pricing() {
                     Bis 31. März 2026
                   </p>
                 </>
+              ) : hasDiscount ? (
+                <>
+                  <div className="flex items-baseline gap-2 justify-end">
+                    <span className="text-lg text-[var(--muted)] line-through">€29,90</span>
+                    <span className="text-4xl font-bold text-emerald-600 dark:text-emerald-400">
+                      {formatPrice(personalPrice)}
+                    </span>
+                  </div>
+                  <p className="text-sm text-emerald-600 dark:text-emerald-400 font-medium">
+                    Dein persönlicher Preis
+                  </p>
+                </>
               ) : (
                 <>
                   <span className="text-4xl font-bold text-[var(--text-primary)]">€29,90</span>
@@ -104,7 +121,7 @@ export default function Pricing() {
               size="lg"
               onClick={() => startCheckout({ email: user?.email ?? undefined, userId: user?.id })}
             >
-              Jetzt kaufen — €29,90
+              Jetzt kaufen — {formatPrice(personalPrice)}
               <ArrowRight className="w-4 h-4 ml-2" />
             </Button>
           ) : (
@@ -132,6 +149,13 @@ export default function Pricing() {
           </div>
         </CardContent>
       </Card>
+
+      {/* Referral widget — earn 5€ off */}
+      {user && !isFreePromo && (
+        <div className="max-w-md mx-auto">
+          <ReferralWidget />
+        </div>
+      )}
 
       <div className="text-center space-y-4 py-4">
         <h3 className="text-lg font-semibold text-[var(--text-primary)]">
