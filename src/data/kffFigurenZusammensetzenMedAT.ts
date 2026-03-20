@@ -2376,12 +2376,10 @@ export function generateFigurenTrainingTask(
       if (pieces.length === 2 && paRatio < 1.8) continue;
       if (pieces.length >= 3 && paRatio < 1.5) continue;
       if (paRatio > 10) continue;
-      // Anchor suppression: IB FZ 26 requires "clear size differences" (ratio > 1.5)
-      // but NOT forced balance. 65% max keeps asymmetry while preventing trivial
-      // anchor-piece shortcuts. Easy allows 70% for inherently asymmetric 2-pc tasks.
+      // Anchor suppression: max 65% for ALL difficulties. No piece may dominate
+      // so much that the task becomes trivially solvable from silhouette alone.
       const totalA = pa.reduce((s, a) => s + a, 0);
-      const anchorLimit = difficulty === "easy" ? 0.7 : 0.65;
-      if (totalA > 0 && paMax / totalA > anchorLimit) continue;
+      if (totalA > 0 && paMax / totalA > 0.65) continue;
     }
     const fp = taskFingerprint(target, pieces);
     if (duplicateGuardHas(fp)) continue;
@@ -2430,6 +2428,15 @@ export function generateFigurenTrainingTask(
 
     // Rotate pieces AFTER validation for display
     const displayPieces = rotatePiecesForDisplay(pieces, difficulty, rng);
+
+    // Post-rotation quality gate: check display pieces for slivers and twins
+    const hasRotatedSliver = displayPieces.some((p) => {
+      const bb = polygonBBox(p);
+      const ar = (bb.width || 1) / (bb.height || 1);
+      return ar > 4 || ar < 0.25;
+    });
+    if (hasRotatedSliver) continue;
+    if (!validatePieceDistinctness(displayPieces)) continue;
 
     const shapeName = SHAPE_NAMES_AKK[validationTask.targetShapeId ?? ""] ?? "die Figur";
     const optionLetter = ["A", "B", "C", "D", "E"][correctIndex] ?? "?";
@@ -2531,6 +2538,16 @@ function generateFigurenTrainingTaskFallback(
     if (!validateFigurenTask(validationTask)) continue;
 
     const displayPieces = rotatePiecesForDisplay(pieces, difficulty, rng);
+
+    // Post-rotation sliver check (same as main generator)
+    const fbRotSliver = displayPieces.some((p) => {
+      const bb = polygonBBox(p);
+      const ar = (bb.width || 1) / (bb.height || 1);
+      return ar > 4 || ar < 0.25;
+    });
+    if (fbRotSliver) continue;
+    if (!validatePieceDistinctness(displayPieces)) continue;
+
     const fbShapeName = SHAPE_NAMES_AKK[validationTask.targetShapeId ?? ""] ?? "die Figur";
     return {
       ...validationTask,
@@ -2569,17 +2586,29 @@ function generateFigurenTrainingTaskFallback(
       break;
     }
   }
-  // Accept 2 pieces as last resort
+  // Accept 2 pieces as last resort — but still enforce anchor limit
   if (!fbPieces) {
-    const fbRng2 = createRng(seed + 999999);
-    const fbCut = generateAsymmetricCut({ points: fbTarget.points.map((p) => ({ ...p })) }, fbRng2);
-    if (fbCut) {
-      const res2 = splitPolygonByLine(
+    for (let fba2 = 0; fba2 < 5; fba2++) {
+      const fbRng2 = createRng(seed + 999999 + fba2 * 4441);
+      const fbCut = generateAsymmetricCut(
         { points: fbTarget.points.map((p) => ({ ...p })) },
-        fbCut[0],
-        fbCut[1]
+        fbRng2
       );
-      if (res2) fbPieces = res2;
+      if (fbCut) {
+        const res2 = splitPolygonByLine(
+          { points: fbTarget.points.map((p) => ({ ...p })) },
+          fbCut[0],
+          fbCut[1]
+        );
+        if (res2) {
+          const pa2 = res2.map((p) => polygonArea(p));
+          const mx2 = Math.max(...pa2),
+            tot2 = pa2.reduce((s, a) => s + a, 0);
+          if (tot2 > 0 && mx2 / tot2 > 0.65) continue;
+          fbPieces = res2;
+          break;
+        }
+      }
     }
   }
   const { target, pieces } = fbPieces
@@ -2601,9 +2630,19 @@ function generateFigurenTrainingTaskFallback(
     four[order[3]!]!,
     OPTION_E,
   ];
+  // Post-rotation quality gate for ultimate fallback
+  let safeDisplayPieces = rotatePiecesForDisplay(pieces, difficulty, rng);
+  const safeSliver = safeDisplayPieces.some((p) => {
+    const bb = polygonBBox(p);
+    const ar = (bb.width || 1) / (bb.height || 1);
+    return ar > 4 || ar < 0.25;
+  });
+  // If rotation creates slivers, use unrotated pieces (safe fallback)
+  if (safeSliver)
+    safeDisplayPieces = pieces.map((p) => ({ points: p.points.map((pt) => ({ ...pt })) }));
   return {
     id: `fz-train-fb-${difficulty}-${seed}-safe`,
-    pieces: rotatePiecesForDisplay(pieces, difficulty, rng),
+    pieces: safeDisplayPieces,
     originalPieces: pieces.map((p) => ({ points: p.points.map((pt) => ({ ...pt })) })),
     target,
     options,
