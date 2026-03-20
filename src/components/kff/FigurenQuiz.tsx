@@ -176,7 +176,8 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
       }
       // Balance shape distribution across ALL tasks (DB + generated) to prevent DB bias
       {
-        const finalMaxPerShape = Math.max(2, Math.ceil((target + 5) / SOLUTION_SHAPES.length));
+        // Prefer unique shapes: allow repeat only when target > numShapes
+        const finalMaxPerShape = Math.max(1, Math.ceil(target / SOLUTION_SHAPES.length));
         const finalShapeCounts: Record<string, number> = {};
         const finalBalanced: FigureAssembleTask[] = [];
         // Shuffle to avoid always picking DB tasks first

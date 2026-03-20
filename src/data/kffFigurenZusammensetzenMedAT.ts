@@ -2173,9 +2173,10 @@ function applyAsymmetricCuts(
 /** Anzahl Schnitte pro Schwierigkeitsstufe.
  *  IB FZ 26: Intro=2pc, Bsp1=4pc, Bsp2=2pc, Bsp3=6pc, Bsp4=6pc, Bsp5=4pc */
 function numCutsForDifficulty(diff: FZDifficulty, rng: () => number): number {
-  if (diff === "easy") return 1 + Math.floor(rng() * 3); // 1-3 cuts → 2-4 pieces
-  if (diff === "medium") return 2 + Math.floor(rng() * 3); // 2-4 cuts → 3-5 pieces
-  return 4 + Math.floor(rng() * 3); // 4-6 cuts → 5-7 pieces
+  // VMC-calibrated: easy=2-3 pieces, medium=3-4 pieces, hard=5-6 pieces
+  if (diff === "easy") return 1 + Math.floor(rng() * 2); // 1-2 cuts → 2-3 pieces
+  if (diff === "medium") return 2 + Math.floor(rng() * 2); // 2-3 cuts → 3-4 pieces
+  return 4 + Math.floor(rng() * 2); // 4-5 cuts → 5-6 pieces
 }
 
 /**
@@ -2333,13 +2334,18 @@ export function generateFigurenTrainingTask(
 
     const shapeName = SHAPE_NAMES_AKK[validationTask.targetShapeId ?? ""] ?? "die Figur";
     const optionLetter = ["A", "B", "C", "D", "E"][correctIndex] ?? "?";
+    // Build difficulty-aware explanation
+    const pieceDesc =
+      pieces.length <= 3
+        ? `Die ${pieces.length} Teile lassen sich direkt zu ${shapeName} zusammenfügen.`
+        : `Die ${pieces.length} Teile ergeben zusammengesetzt ${shapeName}. Orientiere dich am größten Teil und prüfe, wie die kleineren Teile die Lücken füllen.`;
     const task: FigureAssembleTask = {
       ...validationTask,
       pieces: displayPieces,
       explanation:
         correctIndex === 4
-          ? `Richtige Antwort: E — Keine der Figuren A–D ist korrekt. Die ${pieces.length} Teile ergeben zusammengesetzt ${shapeName}, aber diese Form ist nicht unter den Optionen A–D. Tipp: Schätze zuerst die Gesamtfläche der Teile ab und vergleiche mit den Optionen.`
-          : `Richtige Antwort: ${optionLetter} — Die ${pieces.length} Teile ergeben zusammengesetzt ${shapeName}. Achte auf die Winkel und Kantenlängen der Teile: nur bei dieser Figur passen alle Teile lückenlos zusammen.`,
+          ? `Keine der Figuren A–D ist korrekt. Die ${pieces.length} Teile ergeben ${shapeName}, aber diese Form ist nicht unter den Optionen A–D. Tipp: Schätze die Gesamtfläche der Teile ab — wenn kein Umriss A–D flächengleich ist, wähle E.`
+          : `${pieceDesc} Achte auf markante Kanten und Winkel: nur bei Option ${optionLetter} passen alle Teile lückenlos zusammen.`,
     };
     duplicateGuardAdd(fp);
     return task;
