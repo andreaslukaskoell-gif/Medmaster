@@ -52,6 +52,12 @@ import {
 const FZ_OPTION_LABELS = ["A", "B", "C", "D", "E"] as const;
 /** Offizielles MedAT-Hellblau (IB FZ 26): Cyan-Hellblau wie im VMC-PDF. */
 const FILL_FZ = "#87CEEB";
+/** Uniform stroke props for all FZ shapes — consistent line weight everywhere. */
+const FZ_STROKE = {
+  stroke: "#333",
+  strokeWidth: "1.5",
+  vectorEffect: "non-scaling-stroke",
+} as const;
 /** Distinct piece colors for solution overlay — visually shows how each piece fits. */
 const PIECE_FILLS = [
   "#7EC8E3",
@@ -567,8 +573,7 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
                                 key={pi}
                                 d={p.d}
                                 fill={FILL_FZ}
-                                stroke="#333"
-                                strokeWidth="0.8"
+                                {...FZ_STROKE}
                                 transform={p.transform}
                               />
                             ))}
@@ -596,17 +601,11 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
                             key={`piece-${pi}`}
                             d={polygonToPath(piece)}
                             fill={PIECE_FILLS[pi % PIECE_FILLS.length]}
-                            stroke="#555"
-                            strokeWidth="1"
+                            {...FZ_STROKE}
                             opacity={0.85}
                           />
                         ))}
-                        <path
-                          d={polygonToPath(q.target)}
-                          fill="none"
-                          stroke="#333"
-                          strokeWidth="1.5"
-                        />
+                        <path d={polygonToPath(q.target)} fill="none" {...FZ_STROKE} />
                       </svg>
                     </div>
                   </div>
@@ -641,7 +640,8 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
                           )}
                           fill="#22c55e"
                           stroke="#15803d"
-                          strokeWidth="2"
+                          strokeWidth="1.5"
+                          vectorEffect="non-scaling-stroke"
                         />
                       </svg>
                     )}
@@ -673,7 +673,8 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
                             )}
                             fill="#ef4444"
                             stroke="#b91c1c"
-                            strokeWidth="2"
+                            strokeWidth="1.5"
+                            vectorEffect="non-scaling-stroke"
                           />
                         </svg>
                       )}
@@ -816,14 +817,7 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
               className="w-full max-w-lg h-28 sm:h-36 mx-auto"
             >
               {paths.map((p, pi) => (
-                <path
-                  key={pi}
-                  d={p.d}
-                  fill={FILL_FZ}
-                  stroke="#222"
-                  strokeWidth="1"
-                  transform={p.transform}
-                />
+                <path key={pi} d={p.d} fill={FILL_FZ} {...FZ_STROKE} transform={p.transform} />
               ))}
             </svg>
           );
@@ -855,12 +849,7 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
                   {...FIGURE_SVG_ASPECT_PROPS}
                   className="w-full max-w-[80px] max-h-[80px] flex-1"
                 >
-                  <path
-                    d={polygonToPathScaledToViewBox(opt)}
-                    fill={FILL_FZ}
-                    stroke="#222"
-                    strokeWidth="1"
-                  />
+                  <path d={polygonToPathScaledToViewBox(opt)} fill={FILL_FZ} {...FZ_STROKE} />
                 </svg>
               )}
               <span className="text-sm font-bold text-[var(--muted)] mt-1">{label}</span>
