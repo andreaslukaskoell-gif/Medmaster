@@ -1950,7 +1950,7 @@ function splitPolygonByPolyline(poly: Polygon, cutPoints: Pt2[]): [Polygon, Poly
   // Find which edges the start and end points lie on
   let startEdge = -1;
   let endEdge = -1;
-  const tolerance = 2.5; // Increased for curved cuts whose endpoints may drift slightly
+  const tolerance = 4.0; // Generous tolerance so complex cut styles don't fall back to straight
 
   for (let i = 0; i < n; i++) {
     const j = (i + 1) % n;
@@ -2120,17 +2120,30 @@ function applyAsymmetricCuts(
     totalAttempts < numCuts * 12 && successfulCuts < numCuts;
     totalAttempts++
   ) {
-    // Find largest piece
-    let maxIdx = 0,
-      maxArea = 0;
-    for (let i = 0; i < pieces.length; i++) {
-      const a = polygonArea(pieces[i]);
-      if (a > maxArea) {
-        maxArea = a;
-        maxIdx = i;
+    // Pick which piece to cut: usually largest, but 25% of the time pick a random
+    // eligible piece to break the "one big + several small" monotony
+    let cutIdx = 0;
+    if (pieces.length >= 3 && rng() < 0.25) {
+      // Pick random piece that's at least 15% of total area
+      const totalA = pieces.reduce((s, p) => s + polygonArea(p), 0);
+      const eligible = pieces
+        .map((p, i) => ({ i, a: polygonArea(p) }))
+        .filter((e) => e.a > totalA * 0.15);
+      if (eligible.length > 0) {
+        cutIdx = eligible[Math.floor(rng() * eligible.length)].i;
+      }
+    } else {
+      // Default: cut the largest piece
+      let maxArea = 0;
+      for (let i = 0; i < pieces.length; i++) {
+        const a = polygonArea(pieces[i]);
+        if (a > maxArea) {
+          maxArea = a;
+          cutIdx = i;
+        }
       }
     }
-    const largest = pieces[maxIdx];
+    const largest = pieces[cutIdx];
     const cutLine = generateAsymmetricCut(largest, rng);
     if (!cutLine) continue;
 
@@ -2151,7 +2164,7 @@ function applyAsymmetricCuts(
     const [a, b] = result;
     if (polygonArea(a) < minPieceArea || polygonArea(b) < minPieceArea) continue;
 
-    pieces.splice(maxIdx, 1, a, b);
+    pieces.splice(cutIdx, 1, a, b);
     successfulCuts++;
   }
 
@@ -2176,9 +2189,10 @@ function applyAsymmetricCuts(
 /** Anzahl Schnitte pro Schwierigkeitsstufe.
  *  IB FZ 26: Intro=2pc, Bsp1=4pc, Bsp2=2pc, Bsp3=6pc, Bsp4=6pc, Bsp5=4pc */
 function numCutsForDifficulty(diff: FZDifficulty, rng: () => number): number {
-  // VMC-calibrated: easy=2-3 pieces, medium=3-4 pieces, hard=5-6 pieces
+  // Calibrated piece counts: easy=2-3, medium=3-5, hard=5-6
+  // Medium needs 3+ cuts to reliably produce 4+ pieces (avoid collapsing to easy-like 3pc)
   if (diff === "easy") return 1 + Math.floor(rng() * 2); // 1-2 cuts → 2-3 pieces
-  if (diff === "medium") return 2 + Math.floor(rng() * 2); // 2-3 cuts → 3-4 pieces
+  if (diff === "medium") return 3 + Math.floor(rng() * 2); // 3-4 cuts → 4-5 pieces
   return 4 + Math.floor(rng() * 2); // 4-5 cuts → 5-6 pieces
 }
 

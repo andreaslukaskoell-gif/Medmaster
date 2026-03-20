@@ -52,6 +52,17 @@ import {
 const FZ_OPTION_LABELS = ["A", "B", "C", "D", "E"] as const;
 /** Offizielles MedAT-Hellblau (IB FZ 26): Cyan-Hellblau wie im VMC-PDF. */
 const FILL_FZ = "#87CEEB";
+/** Distinct piece colors for solution overlay — visually shows how each piece fits. */
+const PIECE_FILLS = [
+  "#7EC8E3",
+  "#A8D8EA",
+  "#B5E2FA",
+  "#C9E4DE",
+  "#D4E09B",
+  "#F6D55C",
+  "#F0B27A",
+  "#E8A0BF",
+] as const;
 
 export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoStart?: boolean }) {
   const [phase, setPhase] = useState<"setup" | "quiz" | "result">("setup");
@@ -579,31 +590,29 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
                         {...FIGURE_SVG_ASPECT_PROPS}
                         className="w-28 h-28 sm:w-36 sm:h-36"
                       >
-                        <path
-                          d={polygonToPath(q.target)}
-                          fill={FILL_FZ}
-                          stroke="#333"
-                          strokeWidth="1"
-                        />
-                        {q.solutionOverlay?.lines.map((line, li) => (
-                          <line
-                            key={li}
-                            x1={line.from.x}
-                            y1={line.from.y}
-                            x2={line.to.x}
-                            y2={line.to.y}
-                            stroke="#666"
-                            strokeWidth="1.5"
-                            strokeLinecap="round"
-                            strokeDasharray="4 3"
+                        {/* Show each piece in a distinct color inside the target outline */}
+                        {q.pieces.map((piece, pi) => (
+                          <path
+                            key={`piece-${pi}`}
+                            d={polygonToPath(piece)}
+                            fill={PIECE_FILLS[pi % PIECE_FILLS.length]}
+                            stroke="#555"
+                            strokeWidth="1"
+                            opacity={0.85}
                           />
                         ))}
+                        <path
+                          d={polygonToPath(q.target)}
+                          fill="none"
+                          stroke="#333"
+                          strokeWidth="1.5"
+                        />
                       </svg>
                     </div>
                   </div>
                   <p className="text-[11px] text-[var(--muted)] mt-1.5 ml-1">
-                    {q.solutionOverlay?.lines.length
-                      ? "Die gestrichelten Linien zeigen, wo die Teile zusammenstoßen."
+                    {q.pieces.length >= 2
+                      ? `${q.pieces.length} Teile in Originalposition — jede Farbe = ein Teil.`
                       : "Teile zusammengesetzt = Zielfigur"}
                   </p>
                 </div>
