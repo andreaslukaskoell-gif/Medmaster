@@ -33,7 +33,7 @@ import { useStore } from "@/store/useStore";
 import { useAuth } from "@/hooks/useAuth";
 import { useAdaptiveStore } from "@/store/adaptiveLearning";
 import { getLevelFromXP, getRequiredLevelForPath } from "@/lib/progression";
-import { pathForChapter } from "@/lib/bmsRoutes";
+import { pathForChapter, chapterIdFromParams } from "@/lib/bmsRoutes";
 import type { Kapitel } from "@/data/bmsKapitel/types";
 
 /* ── Subject config ─────────────────────────────────────────────────── */
@@ -263,13 +263,14 @@ export function Sidebar({ open, onClose }: { open: boolean; onClose: () => void 
       const subjectId = slugToSubject[subjectSlug];
 
       if (subjectId && kapitelSlug) {
-        // Try to find the Kapitel by its id from the URL
-        const kap = bmsModule.getKapitelById(kapitelSlug);
+        // Resolve chapter ID using fuzzy matching (handles slug ≠ ID mismatches)
+        const allIds = bmsModule.alleKapitel.map((k) => k.id);
+        const resolvedId = chapterIdFromParams(subjectSlug, kapitelSlug, allIds);
+        const kap = resolvedId
+          ? bmsModule.getKapitelById(resolvedId)
+          : bmsModule.getKapitelById(kapitelSlug);
         if (kap) {
-          // Verify the kapitel actually belongs to this subject
-          if (kap.subject === subjectId) {
-            return `${subj[subjectId]} · ${kap.title}`;
-          }
+          return `${subj[subjectId]} · ${kap.title}`;
         }
         // Fallback: use slug as-is
         return `${subj[subjectId] ?? subjectSlug} · ${kapitelSlug}`;

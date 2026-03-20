@@ -541,7 +541,11 @@ export default function TV() {
             </Button>
           )}
         </div>
-        <FloatingQuestionCounter current={totalQuestionsAnswered} total={allSetQuestions.length} />
+        <FloatingQuestionCounter
+          current={totalQuestionsAnswered}
+          total={allSetQuestions.length}
+          label="Beantwortet:"
+        />
       </div>
     );
   }

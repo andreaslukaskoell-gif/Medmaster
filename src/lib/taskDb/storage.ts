@@ -40,15 +40,21 @@ function handleSupabaseError(
   const msg = error.message ?? "";
   const status = (error as { status?: number }).status ?? 0;
   // 42P01 = relation does not exist, PGRST* = PostgREST errors for missing/inaccessible tables
+  // 42501 = RLS violation, 401/403 = permission denied
   if (
     code === "42P01" ||
+    code === "42501" ||
     code === "PGRST116" ||
     code === "PGRST204" ||
     code === "PGRST301" ||
     code === "404" ||
+    status === 401 ||
+    status === 403 ||
     status === 404 ||
     msg.includes("does not exist") ||
     msg.includes("relation") ||
+    msg.includes("permission denied") ||
+    msg.includes("row-level security") ||
     msg.includes("404")
   ) {
     markUnavailable();
