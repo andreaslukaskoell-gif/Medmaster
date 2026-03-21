@@ -125,7 +125,7 @@ export function preferUnseen<T extends { id: string }>(
 ): T[] {
   const seenSet = new Set(seenIds);
   const fresh = pool.filter((t) => !seenSet.has(t.id));
-  if (fresh.length >= target) return fresh;
+  if (fresh.length >= target) return fresh.slice(0, target);
   // Not enough fresh — supplement with least-recently-seen (end of seenIds = oldest)
   const seenInPool = pool.filter((t) => seenSet.has(t.id));
   // Sort by recency: least-recently-seen first (seenIds is most-recent-first, so reverse lookup)
