@@ -88,11 +88,11 @@ const set6: TVTextSet = {
           id: "tv6-1-q4",
           question: "Was ist die Hauptaussage des Textes über das Immunsystem?",
           options: [
-            "Das Immunsystem besteht laut dem Text ausschließlich aus Antikörpern und natürlichen Killerzellen, die gemeinsam alle Erreger bekämpfen.",
-            "Das angeborene Immunsystem ist dem erworbenen in jeder Hinsicht überlegen und macht Impfungen überflüssig.",
-            "Impfungen ersetzen laut dem Text das gesamte Immunsystem und machen eine natürliche Immunantwort unnötig.",
-            "Zweistufiges Netzwerk aus angeborenem und erworbenem System; Gedächtnis bildet Impfgrundlage.",
-            "Die häufigste Folge eines funktionierenden Immunsystems sind laut dem Text Autoimmunerkrankungen, die bei den meisten Menschen auftreten.",
+            "Das Immunsystem besteht ausschließlich aus Antikörpern und natürlichen Killerzellen, die gemeinsam alle Erreger abwehren.",
+            "Das angeborene Immunsystem ist dem erworbenen in jeder Hinsicht überlegen und macht eine Impfung vollständig überflüssig.",
+            "Impfungen ersetzen das gesamte natürliche Immunsystem und machen eine körpereigene Immunantwort unnötig.",
+            "Das Immunsystem bildet ein zweistufiges Netzwerk aus angeborenem und erworbenem System, dessen immunologisches Gedächtnis die Grundlage der Impfung darstellt.",
+            "Die häufigste Folge eines funktionierenden Immunsystems sind Autoimmunerkrankungen, die bei der Mehrheit der Menschen auftreten.",
           ],
           correctOption: 3,
           explanation:
@@ -103,11 +103,11 @@ const set6: TVTextSet = {
           question:
             "Welche Schlussfolgerung lässt sich über B-Lymphozyten und zytotoxische T-Zellen ziehen?",
           options: [
-            "Sowohl B-Lymphozyten als auch zytotoxische T-Zellen gehören laut dem Text zum angeborenen Immunsystem und reagieren unspezifisch.",
-            "B-Lymphozyten und zytotoxische T-Zellen erfüllen laut dem Text identische Funktionen und sind daher austauschbar.",
-            "B-Lymphozyten sind laut dem Text nur beim Erstkontakt mit einem Erreger aktiv und spielen danach keine Rolle mehr.",
-            "Zytotoxische T-Zellen werden laut dem Text von B-Lymphozyten produziert und sind deren direkte Abkömmlinge.",
-            "Ergänzen sich: B-Lymphozyten markieren, T-Zellen töten infizierte Zellen.",
+            "Sowohl B-Lymphozyten als auch zytotoxische T-Zellen gehören zum angeborenen Immunsystem und reagieren unspezifisch auf Eindringlinge.",
+            "B-Lymphozyten und zytotoxische T-Zellen erfüllen identische Funktionen innerhalb des erworbenen Immunsystems und sind daher austauschbar.",
+            "B-Lymphozyten sind nur beim Erstkontakt mit einem Erreger aktiv und spielen bei einer erneuten Infektion keine Rolle mehr.",
+            "Zytotoxische T-Zellen werden von B-Lymphozyten produziert und stellen deren direkte Abkömmlinge im Immunsystem dar.",
+            "B-Lymphozyten und zytotoxische T-Zellen ergänzen sich im erworbenen Immunsystem, indem erstere Erreger markieren und letztere infizierte Zellen abtöten.",
           ],
           correctOption: 4,
           explanation:
@@ -182,11 +182,11 @@ const set6: TVTextSet = {
           id: "tv6-2-q3",
           question: "Was ist die Hauptaussage des Textes über Stammzellen?",
           options: [
-            "Stammzellen werden laut dem Text ausschließlich für Knochenmarktransplantationen eingesetzt und haben keine weiteren Anwendungsbereiche.",
-            "Die Entdeckung der iPS-Zellen hat laut dem Text embryonale Stammzellen vollständig aus der Forschung verdrängt.",
-            "Einzigartige Fähigkeiten, großes Potenzial, viele Therapien noch in Erforschung.",
-            "Das Hauptrisiko der Stammzelltherapie besteht laut dem Text in einer Abstoßungsreaktion des Empfängerorganismus.",
-            "Adulte Stammzellen sind laut dem Text für die Medizin wichtiger als embryonale, da sie ein breiteres Differenzierungspotenzial besitzen.",
+            "Stammzellen werden ausschließlich für Knochenmarktransplantationen eingesetzt und haben darüber hinaus keine weiteren medizinischen Anwendungsbereiche.",
+            "Die Entdeckung der iPS-Zellen hat embryonale Stammzellen vollständig aus der biomedizinischen Forschung verdrängt.",
+            "Stammzellen besitzen durch ihre einzigartigen Fähigkeiten enormes medizinisches Potenzial, doch viele darauf aufbauende Therapien befinden sich noch im Forschungsstadium.",
+            "Das Hauptrisiko der Stammzelltherapie besteht in einer Abstoßungsreaktion des Empfängerorganismus gegen die transplantierten Zellen.",
+            "Adulte Stammzellen sind für die Medizin bedeutsamer als embryonale, da sie ein breiteres Differenzierungspotenzial besitzen.",
           ],
           correctOption: 2,
           explanation:
@@ -196,11 +196,11 @@ const set6: TVTextSet = {
           id: "tv6-2-q4",
           question: "Welche Schlussfolgerung lässt der Text zum Risiko der Stammzelltherapie zu?",
           options: [
-            "Stammzelltherapien sind laut dem Text vollständig sicher und können ohne Risiken am Menschen eingesetzt werden.",
-            "Das einzige vom Text genannte Risiko der Stammzellforschung betrifft ethische Bedenken, nicht medizinische Komplikationen.",
-            "Induzierte pluripotente Stammzellen sind laut dem Text im Gegensatz zu embryonalen Stammzellen völlig risikofrei einsetzbar.",
-            "Trotz Tierversuchen Risiko unkontrollierter Zellteilung; weitere Forschung nötig.",
-            "Das Risiko einer unkontrollierten Zellteilung und Tumorbildung besteht laut dem Text nur bei adulten Stammzellen, nicht bei embryonalen.",
+            "Stammzelltherapien sind vollständig sicher und können ohne nennenswerte Risiken am Menschen eingesetzt werden.",
+            "Das einzige genannte Risiko der Stammzellforschung betrifft ethische Bedenken bei der Gewinnung, nicht medizinische Komplikationen.",
+            "Induzierte pluripotente Stammzellen sind im Gegensatz zu embryonalen Stammzellen völlig risikofrei in der klinischen Anwendung.",
+            "Trotz vielversprechender Tierversuche besteht das Risiko unkontrollierter Zellteilung und Tumorbildung, weshalb weitere Forschung zwingend nötig ist.",
+            "Das Risiko einer unkontrollierten Zellteilung und Tumorbildung besteht nur bei adulten Stammzellen, nicht bei embryonalen.",
           ],
           correctOption: 3,
           explanation:
@@ -272,11 +272,11 @@ const set6: TVTextSet = {
           id: "tv6-3-q3",
           question: "Was ist laut dem Text die Hauptaussage über Prionenerkrankungen?",
           options: [
-            "Prionenerkrankungen treten laut dem Text selten auf und betreffen ausschließlich Rinder, nicht den Menschen.",
-            "Neuartiger Mechanismus, stets tödlich, lange Inkubationszeit erschwert Diagnose.",
-            "Prionenerkrankungen sind laut dem Text mit Antibiotika behandelbar, sofern sie frühzeitig diagnostiziert werden.",
-            "Der Text beschreibt die Übertragung vom Tier auf den Menschen als den hauptsächlichen Verbreitungsweg aller Prionenerkrankungen.",
-            "Stanley Prusiners Theorie wurde laut dem Text sofort von der wissenschaftlichen Gemeinschaft akzeptiert und anerkannt.",
+            "Prionenerkrankungen treten selten auf und betreffen ausschließlich Rinder, nicht den Menschen.",
+            "Prionen verursachen durch einen neuartigen Mechanismus stets tödlich verlaufende Erkrankungen, deren Diagnose durch eine lange Inkubationszeit zusätzlich erschwert wird.",
+            "Prionenerkrankungen sind mit Antibiotika behandelbar, sofern sie in einem frühen Stadium diagnostiziert werden.",
+            "Die Übertragung vom Tier auf den Menschen stellt den hauptsächlichen Verbreitungsweg aller bekannten Prionenerkrankungen dar.",
+            "Stanley Prusiners Theorie wurde sofort von der wissenschaftlichen Gemeinschaft akzeptiert und mit dem Nobelpreis gewürdigt.",
           ],
           correctOption: 1,
           explanation:
@@ -287,11 +287,11 @@ const set6: TVTextSet = {
           question:
             "Welche Schlussfolgerung lässt sich über die Ausbreitung von PrPSc im Gehirn ziehen?",
           options: [
-            "PrPSc breitet sich laut dem Text über die Blutgefäße in sämtliche Organe des Körpers aus und schädigt nicht nur das Gehirn.",
-            "Das Immunsystem ist laut dem Text in der Lage, PrPSc zu erkennen und zu eliminieren, bevor größere Schäden entstehen.",
-            "PrPSc faltet gesunde Prion-Proteine um, selbstverstärkende Kettenreaktion.",
-            "PrPSc wird laut dem Text aktiv von Nervenzellen transportiert und gezielt in benachbarte Hirnregionen weitergeleitet.",
-            "Die Ausbreitung von PrPSc im Gehirn verlangsamt sich laut dem Text ab einer kritischen Menge fehlgefalteter Proteine.",
+            "PrPSc breitet sich über die Blutgefäße in sämtliche Organe des Körpers aus und verursacht nicht nur im Gehirn Schäden.",
+            "Das Immunsystem ist in der Lage, PrPSc zu erkennen und zu eliminieren, bevor größere neuronale Schäden entstehen.",
+            "PrPSc faltet benachbarte gesunde Prion-Proteine in die pathologische Form um, wodurch eine sich selbst verstärkende Kettenreaktion entsteht.",
+            "PrPSc wird aktiv von Nervenzellen transportiert und gezielt in benachbarte Hirnregionen weitergeleitet.",
+            "Die Ausbreitung von PrPSc im Gehirn verlangsamt sich ab einer kritischen Menge fehlgefalteter Proteine durch zelleigene Schutzmechanismen.",
           ],
           correctOption: 2,
           explanation:
@@ -365,11 +365,11 @@ const set6: TVTextSet = {
           id: "tv6-4-q3",
           question: "Was ist die Hauptaussage des Textes zur Antibiotikaresistenz?",
           options: [
-            "Globale Bedrohung durch unsachgemäßen Einsatz; ohne Gegenmaßnahmen drastisch zunehmend.",
-            "Das Problem der Antibiotikaresistenz ist laut dem Text durch die Entwicklung neuer Medikamente bereits vollständig gelöst worden.",
-            "Der Text beschreibt ausschließlich MRSA als gefährlichen resistenten Erreger, während andere Resistenzen klinisch unbedeutend seien.",
-            "Der Text empfiehlt, Antibiotika grundsätzlich nicht mehr einzusetzen, da sie mehr Schaden als Nutzen verursachen.",
-            "Der prophylaktische Einsatz in der Landwirtschaft ist laut dem Text die einzige Ursache für die Entstehung von Antibiotikaresistenzen.",
+            "Antibiotikaresistenz stellt eine globale Bedrohung dar, die durch unsachgemäßen Einsatz entsteht und ohne Gegenmaßnahmen drastisch zunehmen wird.",
+            "Das Problem der Antibiotikaresistenz ist durch die Entwicklung neuer Medikamente und Bakteriophagen bereits vollständig gelöst worden.",
+            "MRSA ist der einzige gefährliche resistente Erreger, während andere Formen der Resistenz klinisch unbedeutend bleiben.",
+            "Antibiotika sollten grundsätzlich nicht mehr eingesetzt werden, da sie insgesamt mehr Schaden als Nutzen verursachen.",
+            "Der prophylaktische Einsatz in der Landwirtschaft ist die einzige nachgewiesene Ursache für die Entstehung von Antibiotikaresistenzen.",
           ],
           correctOption: 0,
           explanation: "Der Text nennt Antibiotikaresistenz als globale Bedrohung.",
@@ -379,11 +379,11 @@ const set6: TVTextSet = {
           question:
             "Welche Schlussfolgerung lässt der Text zum Selektionsdruck durch Antibiotika zu?",
           options: [
-            "Antibiotika töten laut dem Text ausnahmslos alle Bakterien ab, unabhängig davon, ob diese resistent sind oder nicht.",
-            "Selektionsdruck begünstigt resistente Stämme, da empfindliche absterben und resistente sich vermehren.",
-            "Resistente Bakterien werden laut dem Text langfristig wieder empfindlich gegenüber Antibiotika, wenn der Selektionsdruck nachlässt.",
-            "Der Selektionsdruck durch Antibiotika ist laut dem Text nur in der Landwirtschaft wirksam, nicht in der Humanmedizin.",
-            "Die Resistenzentwicklung erfolgt laut dem Text ausschließlich durch horizontalen Gentransfer und niemals durch Mutation.",
+            "Antibiotika töten ausnahmslos alle vorhandenen Bakterien ab, unabhängig davon, ob diese resistent sind oder nicht.",
+            "Der Selektionsdruck durch Antibiotika begünstigt resistente Stämme, da empfindliche Bakterien absterben und resistente sich ungehindert vermehren können.",
+            "Resistente Bakterien werden langfristig wieder empfindlich gegenüber Antibiotika, sobald der Selektionsdruck durch geringeren Einsatz nachlässt.",
+            "Der Selektionsdruck durch Antibiotika ist nur in der Landwirtschaft wirksam und spielt in der Humanmedizin keine relevante Rolle.",
+            "Die Resistenzentwicklung erfolgt ausschließlich durch horizontalen Gentransfer zwischen Bakterienarten und niemals durch spontane Mutation.",
           ],
           correctOption: 1,
           explanation:
@@ -471,11 +471,11 @@ const set6: TVTextSet = {
           id: "tv6-5-q4",
           question: "Welche Schlussfolgerung lässt sich über den Einsatz von Ciclosporin ziehen?",
           options: [
-            "Ciclosporin ermöglicht Transplantationen durch T-Lymphozyten-Hemmung, erfordert aber lebenslange Einnahme mit erhöhtem Infektions- und Krebsrisiko.",
-            "Ciclosporin löst laut dem Text das Abstoßungsproblem vollständig und verursacht dabei keinerlei Nebenwirkungen.",
-            "Ciclosporin muss laut dem Text nur kurzfristig nach der Transplantation eingenommen werden und kann danach abgesetzt werden.",
-            "Ciclosporin unterdrückt laut dem Text das gesamte Immunsystem vollständig, weshalb es nur als letzte Option eingesetzt wird.",
-            "Ciclosporin wurde laut dem Text bereits bei der ersten Nierentransplantation im Jahr 1954 erfolgreich eingesetzt.",
+            "Ciclosporin ermöglicht erfolgreiche Transplantationen durch gezielte T-Lymphozyten-Hemmung, erfordert jedoch lebenslange Einnahme mit erhöhtem Infektions- und Krebsrisiko.",
+            "Ciclosporin löst das Abstoßungsproblem bei Transplantationen vollständig und verursacht dabei keinerlei relevante Nebenwirkungen.",
+            "Ciclosporin muss nur kurzfristig nach der Transplantation eingenommen werden und kann nach einer Stabilisierungsphase abgesetzt werden.",
+            "Ciclosporin unterdrückt das gesamte Immunsystem vollständig, weshalb es nur als letzte therapeutische Option eingesetzt wird.",
+            "Ciclosporin wurde bereits bei der ersten Nierentransplantation im Jahr 1954 eingesetzt und ermöglichte deren Erfolg.",
           ],
           correctOption: 0,
           explanation:
@@ -568,11 +568,11 @@ const set7: TVTextSet = {
           id: "tv7-1-q4",
           question: "Was ist die Hauptaussage des Textes über die Photosynthese?",
           options: [
-            "Die Photosynthese dient laut dem Text ausschließlich der Sauerstoffproduktion und spielt keine Rolle bei der Bildung organischer Verbindungen.",
-            "Chlorophyll a und Chlorophyll b sind laut dem Text funktionell austauschbar und absorbieren dieselben Wellenlängen des Lichts.",
-            "RuBisCO wird im Text als das wichtigste Pigment der Lichtreaktion beschrieben, das Lichtenergie direkt absorbiert.",
-            "Photosynthese ist laut dem Text bei hohen Temperaturen nur über den C4-Weg möglich, da der Calvin-Zyklus dann vollständig ausfällt.",
-            "Zweiphasiger Prozess; Faktoren wie Temperatur und CO2 beeinflussen Effizienz.",
+            "Die Photosynthese dient ausschließlich der Sauerstoffproduktion und spielt keine Rolle bei der Bildung organischer Verbindungen.",
+            "Chlorophyll a und Chlorophyll b sind funktionell austauschbar und absorbieren dieselben Wellenlängen des sichtbaren Lichts.",
+            "RuBisCO ist das wichtigste Pigment der Lichtreaktion und absorbiert Lichtenergie direkt in den Thylakoiden.",
+            "Die Photosynthese ist bei hohen Temperaturen nur über den C4-Weg möglich, da der Calvin-Zyklus dann vollständig zum Erliegen kommt.",
+            "Die Photosynthese ist ein zweiphasiger Prozess aus Lichtreaktion und Calvin-Zyklus, dessen Effizienz von Faktoren wie Temperatur und CO2-Konzentration beeinflusst wird.",
           ],
           correctOption: 4,
           explanation: "Der Text beschreibt die Photosynthese als zweiphasigen Prozess.",
@@ -582,11 +582,11 @@ const set7: TVTextSet = {
           question:
             "Welche Schlussfolgerung lässt sich über den Vorteil der C4-Photosynthese ziehen?",
           options: [
-            "C4-Photosynthese ermöglicht effizientere CO2-Fixierung bei Hitze und umgeht Photosyntheserückgang durch Spaltöffnungsschluss.",
-            "C4-Pflanzen verzichten laut dem Text vollständig auf den Calvin-Zyklus und nutzen einen alternativen Stoffwechselweg zur Glucosebildung.",
-            "C4-Pflanzen besitzen laut dem Text keine Spaltöffnungen und nehmen CO2 stattdessen direkt über die Blattoberfläche auf.",
-            "C4-Pflanzen produzieren laut dem Text mehr Sauerstoff als andere Pflanzen, da sie das Enzym RuBisCO nicht benötigen.",
-            "Die C4-Photosynthese ist laut dem Text am effizientesten in gemäßigten Klimazonen und bietet in den Tropen keinen Vorteil.",
+            "Die C4-Photosynthese ermöglicht eine effizientere CO2-Fixierung bei hohen Temperaturen und umgeht so den Photosyntheserückgang durch den Schluss der Spaltöffnungen.",
+            "C4-Pflanzen verzichten vollständig auf den Calvin-Zyklus und nutzen einen alternativen Stoffwechselweg zur Glucosebildung.",
+            "C4-Pflanzen besitzen keine Spaltöffnungen und nehmen CO2 stattdessen über spezialisierte Bereiche der Blattoberfläche auf.",
+            "C4-Pflanzen produzieren mehr Sauerstoff als andere Pflanzen, da sie das Enzym RuBisCO durch ein effizienteres Enzym ersetzt haben.",
+            "Die C4-Photosynthese ist am effizientesten in gemäßigten Klimazonen und bietet in den Tropen keinen nachweisbaren Vorteil.",
           ],
           correctOption: 0,
           explanation: "C4-Pflanzen ermöglichen effizientere CO2-Fixierung bei Hitze.",
@@ -660,11 +660,11 @@ const set7: TVTextSet = {
           id: "tv7-2-q3",
           question: "Was ist die Hauptaussage des Textes zur Ozeanversäuerung?",
           options: [
-            "Die Ozeanversauerung betrifft laut dem Text ausschließlich Korallenriffe und hat keine Auswirkungen auf andere marine Organismen.",
-            "Organismen mit Kalkschalen oder Kalkskeletten sind laut dem Text durch die Ozeanversauerung nicht gefährdet, da sie sich anpassen können.",
-            "Die Ozeane können laut dem Text unbegrenzt CO2 aufnehmen, ohne dass negative Folgen für marine Ökosysteme entstehen.",
-            "CO2-Aufnahme führt zur Versauerung, bedroht marine Ökosysteme und menschliche Lebensgrundlage.",
-            "Die Ozeanversauerung ist laut dem Text ein natürlicher Vorgang, der ohne menschlichen Einfluss in gleicher Geschwindigkeit ablaufen würde.",
+            "Die Ozeanversauerung betrifft ausschließlich Korallenriffe und hat keine messbaren Auswirkungen auf andere marine Organismen.",
+            "Organismen mit Kalkschalen oder Kalkskeletten sind durch die Ozeanversauerung nicht gefährdet, da sie sich an niedrigere pH-Werte anpassen können.",
+            "Die Ozeane können unbegrenzt CO2 aufnehmen, ohne dass daraus negative Folgen für marine Ökosysteme entstehen.",
+            "Die Aufnahme von CO2 durch die Ozeane führt zur Versauerung, die marine Ökosysteme und damit auch die menschliche Lebensgrundlage bedroht.",
+            "Die Ozeanversauerung ist ein natürlicher Vorgang, der ohne menschlichen Einfluss in derselben Geschwindigkeit ablaufen würde.",
           ],
           correctOption: 3,
           explanation:
@@ -675,11 +675,11 @@ const set7: TVTextSet = {
           question:
             "Welche Schlussfolgerung lässt sich über die doppelte Bedrohung von Korallenriffen ziehen?",
           options: [
-            "Korallenriffe sind laut dem Text entweder von Versauerung oder von Erwärmung betroffen, wobei beide Faktoren nie gleichzeitig auftreten.",
-            "Die Korallenbleiche durch steigende Wassertemperaturen ist laut dem Text weniger gefährlich als die Versauerung und daher vernachlässigbar.",
-            "Korallen passen sich laut dem Text rasch an veränderte Umweltbedingungen an und sind daher langfristig nicht bedroht.",
-            "Die doppelte Bedrohung betrifft laut dem Text nur Korallenriffe in tropischen oder polaren Gebieten, nicht in gemäßigten Zonen.",
-            "Korallenriffe durch Versauerung und Meereswärmung gleichzeitig bedroht; gefährdet Lebensraum für ein Viertel mariner Arten.",
+            "Korallenriffe sind entweder von Versauerung oder von Erwärmung betroffen, wobei beide Faktoren nie gleichzeitig auf dasselbe Riff einwirken.",
+            "Die Korallenbleiche durch steigende Wassertemperaturen ist weniger gefährlich als die Versauerung und daher klinisch vernachlässigbar.",
+            "Korallen passen sich rasch an veränderte Umweltbedingungen an, weshalb sie langfristig trotz Versauerung nicht bedroht sind.",
+            "Die doppelte Bedrohung betrifft nur Korallenriffe in tropischen Gewässern, während Riffe in gemäßigten Zonen davon verschont bleiben.",
+            "Korallenriffe sind durch Versauerung und Meereserwärmung gleichzeitig bedroht, was den Lebensraum für schätzungsweise ein Viertel aller marinen Arten gefährdet.",
           ],
           correctOption: 4,
           explanation:
@@ -751,11 +751,11 @@ const set7: TVTextSet = {
           id: "tv7-3-q3",
           question: "Was ist die Hauptaussage des Textes über Vulkanismus und Klima?",
           options: [
-            "Vulkanausbrüche sind laut dem Text die Hauptursache des aktuellen Klimawandels und übertreffen die menschengemachten Emissionen deutlich.",
-            "Das von Vulkanen freigesetzte CO2 hat laut dem Text einen größeren klimatischen Einfluss als die Sulfataerosole.",
-            "Kühlend durch Sulfataerosole kurzfristig, erwärmend durch CO2 langfristig, negativ auf Ozonschicht.",
-            "Der Ausbruch des Tambora im Jahr 1815 hatte laut dem Text keine messbaren Auswirkungen auf das globale Klima.",
-            "Sulfataerosole verbleiben laut dem Text jahrzehntelang in der Stratosphäre und wirken über längere Zeiträume kühlend.",
+            "Vulkanausbrüche sind die Hauptursache des aktuellen Klimawandels und übertreffen die menschengemachten CO2-Emissionen deutlich.",
+            "Das von Vulkanen freigesetzte CO2 hat einen größeren klimatischen Einfluss als die kurzfristig kühlenden Sulfataerosole.",
+            "Vulkanausbrüche wirken kurzfristig kühlend durch Sulfataerosole, langfristig leicht erwärmend durch CO2 und beeinflussen zudem die Ozonschicht negativ.",
+            "Der Ausbruch des Tambora im Jahr 1815 hatte keine messbaren Auswirkungen auf das globale Klima oder die Landwirtschaft.",
+            "Sulfataerosole verbleiben jahrzehntelang in der Stratosphäre und wirken daher über deutlich längere Zeiträume kühlend als bisher angenommen.",
           ],
           correctOption: 2,
           explanation:
@@ -766,11 +766,11 @@ const set7: TVTextSet = {
           question:
             "Welche Schlussfolgerung lässt sich aus dem Vergleich von Tambora und Pinatubo ziehen?",
           options: [
-            "Der Ausbruch des Tambora führte laut dem Text trotz des Temperaturrückgangs nicht zu Hungersnöten in Europa.",
-            "Der Ausbruch des Pinatubo hatte laut dem Text einen stärkeren Kühlungseffekt als der Tambora-Ausbruch von 1815.",
-            "Beide Vulkanausbrüche hatten laut dem Text keinen messbaren Einfluss auf die globale Durchschnittstemperatur.",
-            "Größere SO2-Mengen tendieren zu stärkerem Kühlungseffekt.",
-            "Vulkane auf Inseln erzeugen laut dem Text generell stärkere Eruptionen als Vulkane auf Kontinenten.",
+            "Der Ausbruch des Tambora führte trotz des Temperaturrückgangs nicht zu Hungersnöten oder Ernteausfällen in Europa.",
+            "Der Ausbruch des Pinatubo hatte einen stärkeren Kühlungseffekt als der Tambora-Ausbruch, obwohl er weniger SO2 freisetzte.",
+            "Beide Vulkanausbrüche hatten keinen messbaren Einfluss auf die globale Durchschnittstemperatur der Folgejahre.",
+            "Da Tambora mit mehr SO2 einen stärkeren Temperaturrückgang verursachte als Pinatubo, zeigt sich, dass größere SO2-Mengen zu einem stärkeren Kühlungseffekt tendieren.",
+            "Vulkane auf Inseln erzeugen generell stärkere Eruptionen als Vulkane auf Kontinenten, da der Kontakt mit Meerwasser die Explosivität erhöht.",
           ],
           correctOption: 3,
           explanation:
@@ -845,11 +845,11 @@ const set7: TVTextSet = {
           id: "tv7-4-q3",
           question: "Was ist die Hauptaussage des Textes über genetische Drift?",
           options: [
-            "Genetische Drift beschreibt laut dem Text denselben Mechanismus wie natürliche Selektion und bevorzugt vorteilhafte Allele.",
-            "Zufälliger Evolutionsmechanismus in kleinen Populationen; Gründer- und Flaschenhalseffekt führen zu Genverarmung.",
-            "Genetische Drift ist laut dem Text nur in Inselpopulationen relevant und spielt auf Kontinenten keine Rolle.",
-            "Genetische Drift begünstigt laut dem Text gezielt diejenigen Allele, die am besten an die Umwelt angepasst sind.",
-            "Der Flaschenhalseffekt ist laut dem Text der einzige Mechanismus, durch den genetische Drift wirksam werden kann.",
+            "Genetische Drift beschreibt denselben Mechanismus wie natürliche Selektion und bevorzugt dabei vorteilhafte Allele gegenüber neutralen.",
+            "Genetische Drift ist ein zufälliger Evolutionsmechanismus, der besonders in kleinen Populationen wirkt und über Gründer- sowie Flaschenhalseffekte zur Genverarmung führen kann.",
+            "Genetische Drift ist nur in Inselpopulationen relevant und spielt in großen kontinentalen Populationen keine nennenswerte Rolle.",
+            "Genetische Drift begünstigt gezielt diejenigen Allele, die am besten an die jeweilige Umwelt angepasst sind.",
+            "Der Flaschenhalseffekt ist der einzige Mechanismus, durch den genetische Drift in natürlichen Populationen wirksam werden kann.",
           ],
           correctOption: 1,
           explanation:
@@ -860,11 +860,11 @@ const set7: TVTextSet = {
           question:
             "Welche Schlussfolgerung lässt sich über die Krankheitsanfälligkeit der Geparden ziehen?",
           options: [
-            "Die Krankheitsanfälligkeit der Geparden ist laut dem Text auf ihre große Körpergröße zurückzuführen, die das Immunsystem belastet.",
-            "Durch die Bejagung wurden laut dem Text gezielt Gene aus der Gepardenpopulation entfernt, die für Krankheitsresistenz zuständig waren.",
-            "Geringe genetische Diversität durch Flaschenhals macht Geparden anfälliger und weniger anpassungsfähig.",
-            "Die natürliche Selektion hat laut dem Text diejenigen Geparden bevorzugt, die anfälliger für Krankheiten sind.",
-            "Geparden sind laut dem Text aufgrund ihres Flaschenhalses ausschließlich für Virusinfektionen anfällig, nicht für bakterielle Erreger.",
+            "Die Krankheitsanfälligkeit der Geparden ist auf ihre große Körpergröße zurückzuführen, die das Immunsystem unverhältnismäßig belastet.",
+            "Durch die Bejagung wurden gezielt Gene aus der Gepardenpopulation entfernt, die für Krankheitsresistenz verantwortlich waren.",
+            "Die geringe genetische Diversität durch einen historischen Flaschenhals macht Geparden anfälliger für Krankheiten und verringert ihre Anpassungsfähigkeit an Umweltveränderungen.",
+            "Die natürliche Selektion hat diejenigen Geparden bevorzugt, die schneller laufen können, was auf Kosten der Krankheitsresistenz ging.",
+            "Geparden sind aufgrund ihres Flaschenhalses ausschließlich für Virusinfektionen anfällig, während bakterielle Erreger kein Risiko darstellen.",
           ],
           correctOption: 2,
           explanation:
@@ -952,11 +952,11 @@ const set7: TVTextSet = {
           question:
             "Welche Schlussfolgerung lässt sich über die ökologische Rolle von Parasiten ziehen?",
           options: [
-            "Parasiten sind laut dem Text ausschließlich schädlich für Ökosysteme und haben keinerlei positive Funktion in der Natur.",
-            "Trotz Schädigung des Wirts wichtig für Ökosysteme; regulieren Populationen und fördern Biodiversität.",
-            "Parasiten haben laut dem Text keinen Einfluss auf die Populationsdynamik ihrer Wirtsarten und spielen ökologisch keine Rolle.",
-            "Parasitismus ist laut dem Text eine Übergangsform, die sich im Laufe der Evolution stets zu Kommensalismus oder Mutualismus entwickelt.",
-            "Parasiten profitieren laut dem Text langfristig nicht von ihren Wirten, da sie diese unweigerlich abtöten.",
+            "Parasiten sind ausschließlich schädlich für Ökosysteme und haben keinerlei positive ökologische Funktion.",
+            "Obwohl Parasiten ihren Wirt schädigen, sind sie wichtig für Ökosysteme, da sie die Populationsdynamik regulieren und die biologische Vielfalt fördern.",
+            "Parasiten haben keinen messbaren Einfluss auf die Populationsdynamik ihrer Wirtsarten und spielen ökologisch keine relevante Rolle.",
+            "Parasitismus ist eine Übergangsform, die sich im Laufe der Evolution stets zu Kommensalismus oder Mutualismus weiterentwickelt.",
+            "Parasiten profitieren langfristig nicht von ihren Wirten, da sie diese unweigerlich abtöten und so ihre eigene Lebensgrundlage zerstören.",
           ],
           correctOption: 1,
           explanation:
@@ -1038,11 +1038,11 @@ const set8: TVTextSet = {
           question:
             "Welche Schlussfolgerung lässt sich über die Entfernung von Neurotransmittern ziehen?",
           options: [
-            "Die Entfernung von Neurotransmittern aus dem synaptischen Spalt dient laut dem Text primär dazu, das Gleichgewicht zwischen Glutamat und GABA aufrechtzuerhalten.",
-            "Alle Neurotransmitter werden laut dem Text nach jeder Signalübertragung vollständig enzymatisch abgebaut und müssen neu synthetisiert werden.",
-            "Das Aktionspotenzial wird laut dem Text nach der Signalübertragung in den synaptischen Vesikeln gespeichert und bei Bedarf erneut freigesetzt.",
-            "Serotonin reguliert laut dem Text als übergeordneter Botenstoff die Wiederaufnahme aller anderen Neurotransmitter in die Zelle.",
-            "Neurotransmitter werden durch enzymatischen Abbau, Wiederaufnahme oder Diffusion entfernt.",
+            "Die Entfernung von Neurotransmittern aus dem synaptischen Spalt dient primär dazu, das Gleichgewicht zwischen Glutamat und GABA aufrechtzuerhalten.",
+            "Alle Neurotransmitter werden nach jeder Signalübertragung vollständig enzymatisch abgebaut und müssen anschließend neu synthetisiert werden.",
+            "Das Aktionspotenzial wird nach der Signalübertragung in den synaptischen Vesikeln gespeichert und bei Bedarf erneut freigesetzt.",
+            "Serotonin reguliert als übergeordneter Botenstoff die Wiederaufnahme aller anderen Neurotransmitter in die präsynaptische Zelle.",
+            "Neurotransmitter werden nach der Signalübertragung durch drei Mechanismen aus dem synaptischen Spalt entfernt: enzymatischen Abbau, Wiederaufnahme in die Zelle oder Diffusion.",
           ],
           correctOption: 4,
           explanation:
@@ -1052,11 +1052,11 @@ const set8: TVTextSet = {
           id: "tv8-1-q4",
           question: "Was ist die Hauptaussage des Textes über Neurotransmitter?",
           options: [
-            "Chemische Botenstoffe übertragen Signale an Synapsen; Ungleichgewichte führen zu neuropsychiatrischen Erkrankungen.",
-            "Ungleichgewichte in der Konzentration von Neurotransmittern treten laut dem Text äußerst selten auf und haben keine klinische Bedeutung.",
-            "Das einzige im Text beschriebene Problem ist ein Mangel an GABA, der zu sämtlichen neuropsychiatrischen Erkrankungen führt.",
-            "Glutamat ist laut dem Text der einzige im Gehirn vorkommende Neurotransmitter und übernimmt sowohl erregende als auch hemmende Funktionen.",
-            "Dopamin hat laut dem Text keine Auswirkungen auf motorische Funktionen und spielt ausschließlich bei der Stimmungsregulation eine Rolle.",
+            "Neurotransmitter sind chemische Botenstoffe, die Signale an Synapsen übertragen, wobei Ungleichgewichte in ihren Konzentrationen zu verschiedenen neuropsychiatrischen Erkrankungen führen können.",
+            "Ungleichgewichte in der Konzentration von Neurotransmittern treten äußerst selten auf und haben in der klinischen Praxis keine relevante Bedeutung.",
+            "Ein Mangel an GABA ist das einzige im Text beschriebene Problem und die alleinige Ursache sämtlicher neuropsychiatrischer Erkrankungen.",
+            "Glutamat ist der einzige relevante Neurotransmitter im Gehirn und übernimmt sowohl erregende als auch hemmende Funktionen an den Synapsen.",
+            "Dopamin hat keine Auswirkungen auf motorische Funktionen und spielt ausschließlich bei der Regulation von Stimmung und Appetit eine Rolle.",
           ],
           correctOption: 0,
           explanation:
@@ -1144,11 +1144,11 @@ const set8: TVTextSet = {
           question:
             "Welche Schlussfolgerung lässt sich über die Herausforderungen der CAR-T-Therapie ziehen?",
           options: [
-            "CAR-T-Zellen sind vollkommen risikofrei.",
-            "CAR-T-Therapie hat keine Nebenwirkungen.",
-            "CAR-T-Zellen werden nach der Therapie vom Körper abgebaut.",
-            "CAR-T-Therapie wirkt nur bei festen Tumoren.",
-            "Die hohen Kosten und der Zytokinsturm sind zentrale Herausforderungen, die den breiten Einsatz begrenzen.",
+            "Die CAR-T-Zelltherapie ist bei allen Krebsarten gleichermaßen wirksam und zeigt unabhängig vom Tumortyp hohe Remissionsraten.",
+            "Die größte Herausforderung der CAR-T-Therapie liegt in der fehlenden Spezifität der modifizierten Zellen, die gesundes Gewebe ebenso angreifen.",
+            "Die CAR-T-Zelltherapie erfordert eine lebenslange Nachbehandlung mit Immunsuppressiva, um eine Abstoßung der veränderten Zellen zu verhindern.",
+            "Die CAR-T-Zelltherapie wirkt ausschließlich bei soliden Tumoren und zeigt bei Blutkrebs keine nennenswerten Erfolge.",
+            "Die hohen Kosten der Herstellung und das Risiko eines potenziell lebensbedrohlichen Zytokinsturms sind zentrale Herausforderungen, die den breiten Einsatz der CAR-T-Therapie begrenzen.",
           ],
           correctOption: 4,
           explanation:
@@ -1223,11 +1223,11 @@ const set8: TVTextSet = {
           id: "tv8-3-q3",
           question: "Was ist die Hauptaussage des Textes über CRISPR-Cas9?",
           options: [
-            "Doudna und Charpentier erfanden CRISPR als Waffe gegen Bakterien.",
-            "CRISPR-Cas9 wurde 2020 erstmals an Pflanzen angewendet.",
-            "CRISPR-Cas9 ist ein vielseitiges Genomwerkzeug aus einem bakteriellen Abwehrsystem mit Anwendungen in Landwirtschaft, Forschung und Medizin.",
-            "CRISPR-Cas9 kann nur Gensequenzen löschen, nicht ersetzen.",
-            "Keimbahnedierung ist weltweit erlaubt.",
+            "Doudna und Charpentier erfanden das CRISPR-System als gezielte Waffe gegen bakterielle Infektionen beim Menschen.",
+            "CRISPR-Cas9 wurde erst im Jahr 2020 erstmals an Pflanzen angewendet und hat seitdem keine weiteren Anwendungen gefunden.",
+            "CRISPR-Cas9 ist ein vielseitiges Genomwerkzeug, das aus einem bakteriellen Abwehrsystem entwickelt wurde und Anwendungen in Landwirtschaft, Grundlagenforschung und Medizin ermöglicht.",
+            "CRISPR-Cas9 kann Gensequenzen ausschließlich löschen, nicht aber durch neue Sequenzen ersetzen oder gezielt verändern.",
+            "Die Keimbahnedierung mittels CRISPR-Cas9 ist weltweit erlaubt und wird bereits routinemäßig am Menschen durchgeführt.",
           ],
           correctOption: 2,
           explanation:
@@ -1238,11 +1238,11 @@ const set8: TVTextSet = {
           question:
             "Welche Schlussfolgerung lässt sich über die Flexibilität von CRISPR-Cas9 ziehen?",
           options: [
-            "Die Guide-RNA kann beliebige Zielsequenzen erkennen, weil Cas9 ohne sie nicht funktioniert.",
-            "Die Guide-RNA ist immer identisch, unabhängig von der Zielsequenz.",
-            "CRISPR funktioniert nur in Bakterienzellen.",
-            "Da Cas9 die DNA an der Zielsequenz schneidet und zelleigene Reparaturmechanismen die Bearbeitung ermöglichen, lässt sich jedes Gen gezielt verändern.",
-            "Cas9 kann nur DNA schneiden, nicht reparieren.",
+            "Die Guide-RNA erkennt beliebige Zielsequenzen, weil das Cas9-Enzym ohne sie nicht an die DNA binden kann.",
+            "Die Guide-RNA ist bei allen CRISPR-Anwendungen identisch und muss nicht an die jeweilige Zielsequenz angepasst werden.",
+            "Das CRISPR-Cas9-System funktioniert ausschließlich in Bakterienzellen und lässt sich nicht auf eukaryotische Organismen übertragen.",
+            "Da eine synthetische Guide-RNA für jede beliebige Zielsequenz entworfen werden kann und zelleigene Reparaturmechanismen die Bearbeitung ermöglichen, lässt sich prinzipiell jedes Gen gezielt verändern.",
+            "Das Cas9-Enzym kann die DNA zwar an der Zielsequenz schneiden, ist aber nicht an der anschließenden Reparatur oder dem Einbau neuer Sequenzen beteiligt.",
           ],
           correctOption: 3,
           explanation:
@@ -1331,11 +1331,11 @@ const set8: TVTextSet = {
           question:
             "Welche Schlussfolgerung lässt sich über die Bewertung von Sterbehilfe im Text ziehen?",
           options: [
-            "Nur aktive Sterbehilfe ist ethisch problematisch.",
-            "Alle Sterbehilfeformen sind weltweit verboten.",
-            "Die rechtliche und ethische Bewertung von aktiver und passiver Sterbehilfe unterscheidet sich erheblich zwischen Ländern und Kulturen.",
-            "Palliativmedizin und Sterbehilfe sind identisch.",
-            "Der Arzt entscheidet allein über Sterbehilfe.",
+            "Nur die aktive Sterbehilfe ist ethisch problematisch, während passive Sterbehilfe weltweit als unbedenklich anerkannt ist.",
+            "Alle Formen der Sterbehilfe sind weltweit verboten und werden ausnahmslos strafrechtlich verfolgt.",
+            "Die rechtliche und ethische Bewertung von aktiver und passiver Sterbehilfe unterscheidet sich erheblich zwischen verschiedenen Ländern und Kulturen.",
+            "Palliativmedizin und aktive Sterbehilfe verfolgen dasselbe Ziel und werden in der medizinischen Praxis gleichgesetzt.",
+            "Der behandelnde Arzt entscheidet allein über die Durchführung von Sterbehilfe, ohne die Wünsche des Patienten berücksichtigen zu müssen.",
           ],
           correctOption: 2,
           explanation:
@@ -1408,11 +1408,11 @@ const set8: TVTextSet = {
           id: "tv8-5-q3",
           question: "Was ist die Hauptaussage des Textes über die forensische Medizin?",
           options: [
-            "Forensische Medizin wendet medizinisches Wissen auf rechtliche Fragen an; DNA-Analyse ermöglicht eindeutige Identifikation, wirft aber Datenschutzfragen auf.",
-            "Genetischer Fingerabdruck ist seit 1970 in Verwendung.",
-            "Forensische Medizin ist ausschließlich für Mordermittlungen zuständig.",
-            "Totenflecke entstehen durch chemische Reaktionen, nicht durch Blutabsinken.",
-            "Die Obduktion ist in Österreich verboten.",
+            "Die forensische Medizin wendet medizinisches Wissen auf rechtliche Fragen an, wobei die DNA-Analyse eine nahezu eindeutige Identifikation ermöglicht, aber Datenschutzfragen aufwirft.",
+            "Der genetische Fingerabdruck basiert auf der Analyse vollständiger Genomsequenzen und wird seit den 1970er-Jahren routinemäßig in der Forensik eingesetzt.",
+            "Die forensische Medizin beschränkt sich auf die Aufklärung von Tötungsdelikten und spielt bei anderen Rechtsverfahren keine Rolle.",
+            "Totenflecke entstehen durch chemische Reaktionen im Gewebe und nicht durch das Absinken des Blutes in tieferliegende Körperpartien.",
+            "Die Obduktion dient ausschließlich der Bestimmung des Todeszeitpunkts und liefert keine Hinweise auf die Todesursache.",
           ],
           correctOption: 0,
           explanation:
@@ -1423,11 +1423,11 @@ const set8: TVTextSet = {
           question:
             "Welche Schlussfolgerung lässt sich über Totenflecke als Todeszeitindikator ziehen?",
           options: [
-            "Totenflecke fixieren sich sofort nach dem Tod.",
-            "Totenflecke entstehen durch Blutabsinken, sind anfänglich wegdrückbar und fixieren sich nach 12-24 Stunden.",
-            "Totenflecke sind dauerhaft wegdrückbar.",
-            "Totenflecke entstehen nur bei Kälte.",
-            "Totenflecke und Totenstarre treten gleichzeitig auf.",
+            "Totenflecke fixieren sich unmittelbar nach dem Tod und sind von Beginn an nicht mehr wegdrückbar.",
+            "Totenflecke entstehen durch das Absinken des Blutes, sind anfänglich wegdrückbar und fixieren sich nach etwa 12 bis 24 Stunden durch Diffusion ins Gewebe.",
+            "Totenflecke sind dauerhaft wegdrückbar und eignen sich daher nicht zur Bestimmung des Todeszeitpunkts.",
+            "Totenflecke entstehen nur bei niedrigen Umgebungstemperaturen, da Wärme die Blutgerinnung beschleunigt.",
+            "Totenflecke und Totenstarre treten stets gleichzeitig auf und erreichen gemeinsam ihr Maximum nach sechs Stunden.",
           ],
           correctOption: 1,
           explanation:
@@ -1509,11 +1509,11 @@ const set9: TVTextSet = {
           question:
             "Was ist die Hauptaussage des Textes über Klimawandel und menschliche Gesundheit?",
           options: [
-            "Die gesundheitlichen Folgen des Klimawandels betreffen laut dem Text ausschließlich tropische Regionen und sind für gemäßigte Breiten irrelevant.",
-            "Der Text beschreibt Hitzewellen als einzige gesundheitliche Folge des Klimawandels, während andere Auswirkungen nicht thematisiert werden.",
-            "Die gesundheitlichen Risiken des Klimawandels betreffen laut dem Text nur ältere Menschen, während Kinder und Erwachsene nicht gefährdet sind.",
-            "Der Klimawandel hat laut dem Text keine Auswirkungen auf die Verbreitung von Infektionskrankheiten oder deren Überträger.",
-            "Der Klimawandel gefährdet die Gesundheit direkt durch Hitzestress und indirekt durch Ausbreitung von Krankheiten, Luftqualitätsverschlechterung und psychische Folgen.",
+            "Die gesundheitlichen Folgen des Klimawandels betreffen ausschließlich tropische Regionen und sind für gemäßigte Breiten nicht relevant.",
+            "Hitzewellen sind die einzige gesundheitliche Folge des Klimawandels, während andere Auswirkungen vernachlässigbar bleiben.",
+            "Die gesundheitlichen Risiken des Klimawandels betreffen nur ältere Menschen und Personen mit Vorerkrankungen, nicht jedoch Kinder oder gesunde Erwachsene.",
+            "Der Klimawandel hat keine messbaren Auswirkungen auf die Verbreitung von Infektionskrankheiten oder deren Überträger in Europa.",
+            "Der Klimawandel gefährdet die menschliche Gesundheit direkt durch Hitzestress und indirekt durch die Ausbreitung von Krankheitsüberträgern, Verschlechterung der Luftqualität und psychische Folgen.",
           ],
           correctOption: 4,
           explanation:
@@ -1524,11 +1524,11 @@ const set9: TVTextSet = {
           question:
             "Welche Schlussfolgerung lässt sich über die Ausbreitung von Tropenkrankheiten durch den Klimawandel ziehen?",
           options: [
-            "Weil erwärmte Regionen für Wärme-liebende Vektoren wie die Tigermücke geeignet werden, breiten sich Tropenkrankheiten in neue Gebiete aus.",
-            "Die Tigermücke überträgt nur Malaria.",
-            "Dengue-Fieber ist in Europa endemisch.",
-            "Dengue-Fieber wird nur durch direkte Berührung übertragen.",
-            "Nur Malaria wird durch Klimawandel beeinflusst.",
+            "Da erwärmte Regionen für wärmeliebende Vektoren wie die Tigermücke geeignet werden, breiten sich Tropenkrankheiten wie Dengue-Fieber in bisher verschonte Gebiete aus.",
+            "Die Tigermücke überträgt ausschließlich Malaria, weshalb nur diese Tropenkrankheit durch den Klimawandel begünstigt wird.",
+            "Dengue-Fieber ist in Europa bereits endemisch und wird durch den Klimawandel nicht weiter begünstigt.",
+            "Die Ausbreitung von Tropenkrankheiten in gemäßigte Breiten wird durch die dortige medizinische Infrastruktur vollständig verhindert.",
+            "Die Tigermücke breitet sich zwar in neue Gebiete aus, kann dort aber keine Krankheiten übertragen, da die Erreger kühlere Temperaturen nicht überleben.",
           ],
           correctOption: 0,
           explanation: "Erwärmung macht neue Gebiete für die Tigermücke geeignet.",
@@ -1614,11 +1614,11 @@ const set9: TVTextSet = {
           id: "tv9-2-q4",
           question: "Was ist die Hauptaussage des Textes über Pandemien und ihre Bekämpfung?",
           options: [
-            "Die Spanische Grippe betraf nur ältere Menschen.",
-            "Pandemien sind durch moderne Medizin vollständig vermeidbar.",
-            "Der Schwarze Tod hatte keine sozialen Folgen.",
-            "mRNA-Impfstoffe sind die einzige wirksame Schutzmaßnahme.",
-            "Pandemien werden durch Zoonosen wahrscheinlicher; Ungleichheiten bei Impfstoffverteilung und Fehlinformationen erschwerten die COVID-19-Bekämpfung.",
+            "Die Spanische Grippe betraf vor allem ältere Menschen mit geschwächtem Immunsystem, während junge Erwachsene kaum gefährdet waren.",
+            "Moderne Impftechnologien wie die mRNA-Methode machen zukünftige Pandemien durch schnelle Impfstoffentwicklung vollständig vermeidbar.",
+            "Der Schwarze Tod hatte zwar verheerende demographische Folgen, führte aber zu keinen wesentlichen sozialen oder wirtschaftlichen Veränderungen.",
+            "Die mRNA-Technologie ist die einzige wirksame Schutzmaßnahme gegen Pandemien, da herkömmliche Impfstoffe nicht schnell genug entwickelt werden können.",
+            "Pandemien werden durch Zoonosen infolge von Lebensraumzerstörung wahrscheinlicher, und Ungleichheiten bei der Impfstoffverteilung sowie Fehlinformationen erschwerten die COVID-19-Bekämpfung.",
           ],
           correctOption: 4,
           explanation:
@@ -1691,11 +1691,11 @@ const set9: TVTextSet = {
           id: "tv9-3-q3",
           question: "Was ist die Hauptaussage des Textes über die Psychoneuroimmunologie?",
           options: [
-            "PNI untersucht nur die Auswirkungen von Stress auf Verdauung.",
-            "PNI hat keine klinische Relevanz.",
-            "PNI belegt, dass Psyche, Nervensystem und Immunsystem eng verbunden sind; positive Interventionen können das Immunsystem verbessern.",
-            "Chronischer Stress stärkt das Immunsystem.",
-            "Das Immunsystem ist vollständig autonom.",
+            "Die PNI untersucht ausschließlich die Auswirkungen von akutem Stress auf das Verdauungssystem und hat keinen Bezug zum Immunsystem.",
+            "Die PNI hat trotz interessanter Grundlagenforschung bislang keine klinisch relevanten Erkenntnisse hervorgebracht.",
+            "Die PNI belegt, dass Psyche, Nervensystem und Immunsystem eng miteinander verbunden sind und dass positive psychologische Interventionen die Immunfunktion verbessern können.",
+            "Chronischer Stress stärkt das Immunsystem langfristig, da die dauerhaft erhöhten Cortisolspiegel die Immunzellen stimulieren.",
+            "Das Immunsystem arbeitet vollständig autonom und wird weder durch das Nervensystem noch durch psychische Prozesse beeinflusst.",
           ],
           correctOption: 2,
           explanation:
@@ -1799,11 +1799,11 @@ const set9: TVTextSet = {
           id: "tv9-4-q4",
           question: "Was ist die Hauptaussage des Textes über die Nanomedizin?",
           options: [
-            "Nanomedizin ist ausschließlich für Diagnostik.",
-            "Nanopartikel sind vollkommen sicher.",
-            "Nanomedizin nutzt Nanoskala-Eigenschaften für gezieltes Drug Delivery und verbesserte Diagnostik, birgt aber noch nicht vollständig verstandene Toxizitätsrisiken.",
-            "EPR-Effekt betrifft nur gesundes Gewebe.",
-            "Nanopartikel werden sofort vom Körper ausgeschieden.",
+            "Die Nanomedizin beschränkt sich auf diagnostische Anwendungen und bietet im Bereich der Arzneimittelverabreichung keinen nennenswerten Vorteil.",
+            "Nanopartikel sind vollkommen sicher, da ihr Verhalten im menschlichen Körper mittlerweile umfassend erforscht und verstanden ist.",
+            "Die Nanomedizin nutzt die besonderen Eigenschaften von Materialien auf der Nanoskala für gezieltes Drug Delivery und verbesserte Diagnostik, birgt aber noch nicht vollständig verstandene Toxizitätsrisiken.",
+            "Der EPR-Effekt tritt sowohl in gesundem als auch in krankem Gewebe gleichermaßen auf und bietet daher keinen therapeutischen Vorteil.",
+            "Nanopartikel werden nach ihrer Wirkung umgehend vom Körper ausgeschieden, weshalb eine Anreicherung in Organen ausgeschlossen ist.",
           ],
           correctOption: 2,
           explanation:
@@ -1814,11 +1814,11 @@ const set9: TVTextSet = {
           question:
             "Welche Schlussfolgerung lässt sich über die Zielgerichtetheit von Nanopartikeln in der Krebstherapie ziehen?",
           options: [
-            "Ligandfunktionalisierung ist bei Nanopartikeln unwirksam.",
-            "Nanopartikel können nicht in Tumorgewebe eindringen.",
-            "EPR-Effekt betrifft alle Gewebe gleich.",
-            "Da Nanopartikel durch den EPR-Effekt in Tumorgewebe angereichert werden und mit Liganden funktionalisiert werden können, ergibt sich eine zweistufige Zielgerichtetheit.",
-            "Liganden erhöhen die Toxizität der Nanopartikel.",
+            "Die Funktionalisierung mit Liganden hat bei Nanopartikeln keinen messbaren Effekt auf die Anreicherung im Tumorgewebe.",
+            "Nanopartikel können aufgrund ihrer Größe nicht durch die Blutgefäßwände in Tumorgewebe eindringen und reichern sich dort nicht an.",
+            "Der EPR-Effekt tritt in allen Geweben gleichermaßen auf, weshalb Nanopartikel keine bevorzugte Anreicherung in Tumoren zeigen.",
+            "Da Nanopartikel durch den EPR-Effekt passiv in Tumorgewebe angereichert werden und zusätzlich mit Liganden für aktive Zielsteuerung funktionalisiert werden können, ergibt sich eine zweistufige Zielgerichtetheit.",
+            "Liganden auf Nanopartikeln erhöhen deren Toxizität für gesundes Gewebe und verringern so den therapeutischen Nutzen.",
           ],
           correctOption: 3,
           explanation:
@@ -1890,11 +1890,11 @@ const set9: TVTextSet = {
           id: "tv9-5-q3",
           question: "Was ist die Hauptaussage des Textes über die Neurobiologie der Abhängigkeit?",
           options: [
-            "Sucht ist eine Frage mangelnder Willenskraft.",
-            "Sucht ist eine chronische Hirnerkrankung; neuroadaptive Veränderungen in Belohnungssystem und präfrontalem Kortex erklären den Kontrollverlust.",
-            "Sucht betrifft nur das Dopaminsystem.",
-            "Sucht kann allein durch Medikamente geheilt werden.",
-            "Das mesolimbische System ist nicht an Sucht beteiligt.",
+            "Sucht ist primär eine Frage mangelnder Willenskraft und lässt sich durch bewusste Entscheidungen des Betroffenen überwinden.",
+            "Sucht ist eine chronische Hirnerkrankung, bei der neuroadaptive Veränderungen im Belohnungssystem und im präfrontalen Kortex den Kontrollverlust erklären.",
+            "Sucht betrifft ausschließlich das Dopaminsystem im Nucleus accumbens und hat keinen Einfluss auf andere Hirnregionen.",
+            "Sucht kann allein durch medikamentöse Behandlung geheilt werden, da psychotherapeutische Verfahren die neurochemischen Veränderungen nicht beeinflussen.",
+            "Das mesolimbische Belohnungssystem ist an der Suchtentstehung nicht beteiligt, da Abhängigkeit primär im präfrontalen Kortex entsteht.",
           ],
           correctOption: 1,
           explanation:
@@ -1905,11 +1905,11 @@ const set9: TVTextSet = {
           question:
             "Welche Schlussfolgerung lässt sich über den Wirkmechanismus von Alkohol und Opiaten im Vergleich zu Kokain ziehen?",
           options: [
-            "Alkohol blockiert die Dopamin-Wiederaufnahme wie Kokain.",
-            "Opioide steigern direkt die Dopaminfreisetzung aus Vesikeln.",
-            "Da Alkohol und Opioide hemmende Interneuronen unterdrücken, wirken sie indirekt; ihre Wirkweise unterscheidet sich von direkter Dopaminbeeinflussung durch Kokain oder Amphetamine.",
-            "Alle Suchtmittel wirken durch denselben Mechanismus.",
-            "Alkohol hat keine Wirkung auf das mesolimbische System.",
+            "Alkohol blockiert die Dopamin-Wiederaufnahme in die präsynaptische Zelle auf dieselbe Weise wie Kokain.",
+            "Opioide steigern direkt die Dopaminfreisetzung aus den synaptischen Vesikeln, ähnlich wie Amphetamine.",
+            "Da Alkohol und Opioide hemmende Interneuronen im ventralen Tegmentum unterdrücken, wirken sie indirekt auf die Dopaminfreisetzung, was sich grundlegend von der direkten Dopaminbeeinflussung durch Kokain oder Amphetamine unterscheidet.",
+            "Alle Suchtmittel wirken durch denselben neurochemischen Mechanismus und unterscheiden sich lediglich in ihrer Wirkstärke.",
+            "Alkohol hat keine nachweisbare Wirkung auf das mesolimbische Belohnungssystem und erzeugt Abhängigkeit über andere Hirnregionen.",
           ],
           correctOption: 2,
           explanation:
@@ -1992,11 +1992,11 @@ const set10: TVTextSet = {
           id: "tv10-1-q3",
           question: "Was ist die Hauptaussage des Textes über die evolutionäre Medizin?",
           options: [
-            "Evolutionäre Medizin erklärt Krankheiten als evolutionsgeprägtes Phänomen; Symptome wie Fieber können adaptiv sein und das heterozygote Sichelzellgen bietet Malariaschutz.",
-            "Evolutionäre Medizin lehnt jede Behandlung ab.",
-            "Evolutionäre Medizin sieht Krankheiten als unvermeidlich.",
-            "Fieber sollte immer unterdrückt werden.",
-            "Das Sichelzellgen ist global gleichmäßig verbreitet.",
+            "Die evolutionäre Medizin erklärt Krankheiten als evolutionsgeprägtes Phänomen, wobei Symptome wie Fieber adaptiv sein können und das heterozygote Sichelzellgen einen Malariaschutz bietet.",
+            "Die evolutionäre Medizin lehnt jede symptomatische Behandlung grundsätzlich ab, da sie natürliche Abwehrmechanismen stört.",
+            "Die evolutionäre Medizin betrachtet alle Krankheiten als unvermeidliche Folge der menschlichen Evolution, die nicht behandelt werden sollten.",
+            "Fieber sollte immer sofort unterdrückt werden, da es den Körper unnötig schwächt und die Genesung verzögert.",
+            "Das Sichelzellgen ist weltweit gleichmäßig verbreitet und bietet in allen Regionen denselben Selektionsvorteil.",
           ],
           correctOption: 0,
           explanation:
@@ -2007,11 +2007,11 @@ const set10: TVTextSet = {
           question:
             "Welche Schlussfolgerung lässt sich über die Behandlung von Fieber aus dem Text ziehen?",
           options: [
-            "Fieber ist grundsätzlich gefährlich und sollte immer behandelt werden.",
-            "Da Fieber bei bestimmten Infektionen die Sterblichkeit bei Unterdrückung erhöhen kann, spricht der Text für eine differenzierte statt automatische Fieberbehandlung.",
-            "Unterdrückung von Fieber reduziert Sterblichkeit bei Infektionen.",
-            "Fieber hat keine messbaren Vorteile.",
-            "Fieber ist ausschließlich ein Nebenprodukt der Infektion.",
+            "Fieber ist grundsätzlich eine gefährliche Begleiterscheinung jeder Infektion und sollte stets so schnell wie möglich medikamentös gesenkt werden.",
+            "Da die Unterdrückung von Fieber bei bestimmten Infektionen die Sterblichkeit erhöhen kann, spricht der Text für eine differenzierte statt automatische Fieberbehandlung.",
+            "Die medikamentöse Unterdrückung von Fieber reduziert die Sterblichkeit bei Infektionen grundsätzlich und beschleunigt die Genesung.",
+            "Fieber hat keine messbaren immunologischen Vorteile und stellt lediglich eine Belastung für den Kreislauf des Patienten dar.",
+            "Fieber ist ausschließlich ein schädliches Nebenprodukt der Infektion ohne adaptive Funktion für die Immunabwehr.",
           ],
           correctOption: 1,
           explanation:
@@ -2086,11 +2086,11 @@ const set10: TVTextSet = {
           id: "tv10-2-q3",
           question: "Was ist die Hauptaussage des Textes über künstliche Organe und Bioprinting?",
           options: [
-            "Bioprinting kann bereits komplexe Organe vollständig ersetzen.",
-            "Dialyse ist keine Form des künstlichen Organersatzes.",
-            "Künstliche Organe sind günstiger als Transplantate.",
-            "VADs erzeugen einen normalen Herzrhythmus.",
-            "Mechanische Systeme wie Dialyse und VADs existieren bereits; Bioprinting bietet Zukunftspotenzial, scheitert aber noch an der Vaskularisierung.",
+            "Das Bioprinting kann bereits komplexe Organe wie Herz und Niere vollständig ersetzen und macht Spenderorgane überflüssig.",
+            "Die Dialyse ist kein künstlicher Organersatz, sondern lediglich eine vorübergehende Maßnahme zur Überbrückung bis zur Transplantation.",
+            "Künstliche Organe sind in der Herstellung deutlich günstiger als Transplantate und daher die bevorzugte Behandlungsoption.",
+            "Moderne VADs erzeugen einen normalen pulsierenden Herzrhythmus, der vom natürlichen nicht zu unterscheiden ist.",
+            "Mechanische Ersatzsysteme wie Dialyse und VADs existieren bereits seit Jahrzehnten, während das vielversprechende Bioprinting noch an der Herausforderung der Vaskularisierung scheitert.",
           ],
           correctOption: 4,
           explanation:
@@ -2101,11 +2101,11 @@ const set10: TVTextSet = {
           question:
             "Welche Schlussfolgerung lässt sich über die Bedeutung der Vaskularisierung für das Bioprinting ziehen?",
           options: [
-            "Da Zellen mehr als 200 Mikrometer von Blutgefäßen absterben, ist die Lösung des Vaskularisierungsproblems entscheidend für das Bioprinting komplexer Organe.",
-            "Wachstumsfaktoren sind für Bioprinting irrelevant.",
-            "Zellen können unbegrenzt weit von Blutgefäßen entfernt überleben.",
-            "Hydrogel ersetzt die Funktion von Blutgefäßen.",
-            "Bioprinting-Organe benötigen keine Vaskularisierung.",
+            "Da Zellen mehr als etwa 200 Mikrometer von einem Blutgefäß entfernt absterben, ist die Lösung des Vaskularisierungsproblems entscheidend für das Bioprinting komplexer Organe.",
+            "Wachstumsfaktoren spielen beim Bioprinting keine Rolle, da die Blutgefäßbildung ausschließlich durch das Hydrogel-Trägermaterial gesteuert wird.",
+            "Zellen können im gedruckten Gewebe unbegrenzt weit von Blutgefäßen entfernt überleben, solange das Hydrogel ausreichend Nährstoffe speichert.",
+            "Das Hydrogel-Trägermaterial übernimmt vollständig die Funktion von Blutgefäßen und macht eine separate Vaskularisierung überflüssig.",
+            "Bioprinting-Organe benötigen keine eigenständige Vaskularisierung, da der Körper nach der Implantation automatisch Blutgefäße einwachsen lässt.",
           ],
           correctOption: 0,
           explanation:
@@ -2180,11 +2180,11 @@ const set10: TVTextSet = {
           id: "tv10-3-q3",
           question: "Was ist die Hauptaussage des Textes über die Gentherapie?",
           options: [
-            "Gentherapie ist bereits vollständig sicher und breit verfügbar.",
-            "Gentherapie behandelt nur Bluterkrankungen.",
-            "Gentherapie ersetzt alle anderen Behandlungsformen.",
-            "Gentherapie korrigiert genetische Defekte mithilfe viraler Vektoren; zugelassene Therapien zeigen beeindruckende Ergebnisse, sind aber oft extrem teuer.",
-            "AAV-Vektoren integrieren sich ins menschliche Genom.",
+            "Die Gentherapie ist bereits vollständig sicher, breit verfügbar und wird routinemäßig in der klinischen Praxis eingesetzt.",
+            "Die Gentherapie beschränkt sich auf die Behandlung von Bluterkrankungen und bietet bei anderen genetischen Defekten keinen Ansatzpunkt.",
+            "Die Gentherapie ersetzt alle anderen Behandlungsformen, da sie den genetischen Defekt an der Wurzel korrigiert.",
+            "Die Gentherapie korrigiert genetische Defekte mithilfe viraler Vektoren, wobei zugelassene Therapien beeindruckende Ergebnisse zeigen, aber oft extrem teuer sind.",
+            "AAV-Vektoren integrieren sich fest ins menschliche Genom und ermöglichen dadurch eine dauerhafte Korrektur des genetischen Defekts.",
           ],
           correctOption: 3,
           explanation:
@@ -2195,11 +2195,11 @@ const set10: TVTextSet = {
           question:
             "Welche Schlussfolgerung lässt sich aus dem Beispiel Zolgensma über Gentherapie ziehen?",
           options: [
-            "Alle Gentherapien sind gleich teuer.",
-            "Zolgensma ist weltweit kostenlos verfügbar.",
-            "Nur reiche Länder entwickeln Gentherapien.",
-            "Die hohen Kosten sind durch die Wirksamkeit gerechtfertigt und kein Problem.",
-            "Da Zolgensma über 2 Mio. USD kostet, können nicht alle Patienten auf lebensrettende Gentherapien zugreifen, was die Frage der Verteilungsgerechtigkeit aufwirft.",
+            "Alle zugelassenen Gentherapien kosten gleich viel, da die Herstellungsverfahren standardisiert sind.",
+            "Zolgensma ist weltweit kostenlos verfügbar, da die Herstellerfirma auf Gewinnmargen verzichtet hat.",
+            "Gentherapien werden ausschließlich in wohlhabenden Ländern entwickelt und sind in Entwicklungsländern nicht anwendbar.",
+            "Die hohen Kosten von Zolgensma sind durch die einmalige Verabreichung und lebenslange Wirksamkeit vollständig gerechtfertigt und stellen kein ethisches Problem dar.",
+            "Da Zolgensma über zwei Millionen US-Dollar kostet, können nicht alle betroffenen Patienten auf diese lebensrettende Gentherapie zugreifen, was die Frage der Verteilungsgerechtigkeit aufwirft.",
           ],
           correctOption: 4,
           explanation: "Zolgensma kostet über 2 Mio. USD → Fragen der Zugangsgerechtigkeit.",
@@ -2288,11 +2288,11 @@ const set10: TVTextSet = {
           question:
             "Welche Schlussfolgerung lässt sich aus dem Text über die begrenzte CPAP-Akzeptanz ziehen?",
           options: [
-            "CPAP ist nur für leichte Schlafapnoe geeignet.",
-            "Schlafapnoe hat keine langfristigen Herzfolgen.",
-            "Schienen ersetzen CPAP vollständig.",
-            "Da CPAP bei 50-70% der Patienten akzeptiert wird, sind alternative Therapien wie Schienen oder Operationen wichtig, um alle Patienten zu erreichen.",
-            "Schlafapnoe kann nur operativ behandelt werden.",
+            "Die CPAP-Therapie ist nur für leichte Formen der Schlafapnoe geeignet und bei schweren Fällen unwirksam.",
+            "Eine unbehandelte Schlafapnoe hat keine langfristigen kardiovaskulären Folgen und beeinträchtigt lediglich die Schlafqualität.",
+            "Unterkieferprotrusionsschienen ersetzen die CPAP-Therapie vollständig und sind bei allen Patienten gleichermaßen wirksam.",
+            "Da die CPAP-Therapie nur von 50 bis 70 Prozent der Patienten langfristig akzeptiert wird, sind alternative Ansätze wie Schienen oder Operationen wichtig, um alle Betroffenen zu erreichen.",
+            "Schlafapnoe kann ausschließlich durch operative Eingriffe an den oberen Atemwegen behandelt werden, da nichtinvasive Methoden unwirksam sind.",
           ],
           correctOption: 3,
           explanation: "Da nur 50-70% CPAP akzeptieren, sind alternative Therapien wichtig.",
@@ -2382,11 +2382,11 @@ const set10: TVTextSet = {
           question:
             "Welche Schlussfolgerung lässt sich über die ethische Problematik der Tiefen Hirnstimulation ziehen?",
           options: [
-            "Tiefe Hirnstimulation ist vollkommen risikolos.",
-            "Persönlichkeit ändert sich nie durch medizinische Behandlung.",
-            "Da Tiefe Hirnstimulation die Persönlichkeit verändern kann, stellt sich die Frage, ob der Patient nach dem Eingriff noch seine ursprüngliche Zustimmung aufrechterhalten kann.",
-            "Tiefe Hirnstimulation hat keinerlei Einfluss auf die Psyche.",
-            "Persönlichkeitsveränderungen sind erwartete und erwünschte Nebenwirkungen.",
+            "Die Tiefe Hirnstimulation ist vollkommen risikolos, da die implantierten Elektroden keinen Einfluss auf die Persönlichkeit des Patienten haben.",
+            "Die Persönlichkeit eines Menschen wird durch medizinische Behandlungen grundsätzlich nicht verändert, da sie genetisch festgelegt ist.",
+            "Da die Tiefe Hirnstimulation in seltenen Fällen die Persönlichkeit verändern kann, stellt sich die Frage, ob der Patient nach dem Eingriff seine ursprüngliche Zustimmung zur Therapie noch aufrechterhalten kann.",
+            "Die Tiefe Hirnstimulation beeinflusst ausschließlich motorische Funktionen und hat keinerlei Auswirkungen auf die Psyche oder Persönlichkeit.",
+            "Persönlichkeitsveränderungen durch Tiefe Hirnstimulation sind erwartete und therapeutisch erwünschte Nebenwirkungen des Eingriffs.",
           ],
           correctOption: 2,
           explanation:

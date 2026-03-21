@@ -27,6 +27,7 @@ Die Konsequenzen dieser Veränderungen sind noch nicht vollständig absehbar. Ö
           "Er ist um 30 Prozent gesunken",
           "Er ist um 280 ppm gestiegen",
           "Er ist um 0,1 Einheiten gestiegen",
+          "Er ist um 420 ppm gesunken",
         ],
         correctAnswer: 0,
         explanation:
@@ -41,6 +42,7 @@ Die Konsequenzen dieser Veränderungen sind noch nicht vollständig absehbar. Ö
           "Es wurde entwickelt, um Todeszonen zu bekämpfen",
           "Die Menschheit fixiert damit mehr Stickstoff als natürliche terrestrische Prozesse",
           "Es wird hauptsächlich zur Bekämpfung invasiver Arten eingesetzt",
+          "Es fixiert Stickstoff ausschließlich in Küstenregionen mit hypoxischen Gebieten",
         ],
         correctAnswer: 2,
         explanation:
@@ -55,6 +57,7 @@ Die Konsequenzen dieser Veränderungen sind noch nicht vollständig absehbar. Ö
           "Sie liegt unter der Rate früherer Massenaussterben",
           "Sie übertrifft die natürliche Rate um das Hundert- bis Tausendfache",
           "Sie betrifft ausschließlich Arten in Regenwäldern",
+          "Sie wird primär durch den Stickstoffkreislauf verursacht",
         ],
         correctAnswer: 2,
         explanation:
@@ -69,6 +72,7 @@ Die Konsequenzen dieser Veränderungen sind noch nicht vollständig absehbar. Ö
           "Reduzierung der Lebensraumgröße unter kritische Schwellenwerte",
           "Erhöhung der Biodiversität durch Inseleffekte",
           "Langfristiges Überleben vieler Arten wird unmöglich",
+          "Bevorzugung generalistischer Kulturfolger gegenüber Spezialisten",
         ],
         correctAnswer: 2,
         explanation:
@@ -79,7 +83,7 @@ Die Konsequenzen dieser Veränderungen sind noch nicht vollständig absehbar. Ö
       {
         question:
           "Laut dem Text beträgt die atmosphärische CO₂-Konzentration vor der Industrialisierung etwa:",
-        options: ["420 ppm", "280 ppm", "0,1 ppm", "3 Millionen ppm"],
+        options: ["420 ppm", "280 ppm", "0,1 ppm", "3 Millionen ppm", "400 ppm"],
         correctAnswer: 1,
         explanation:
           "Der Text gibt an, dass die CO₂-Konzentration seit Beginn der Industrialisierung von etwa 280 ppm auf über 420 ppm gestiegen ist. 280 ppm ist also der Wert vor der Industrialisierung, 420 ppm der aktuelle Wert. Die 3 Millionen beziehen sich auf Jahre, nicht auf ppm.",
@@ -117,6 +121,7 @@ Interessanterweise schützt medizinische Expertise nicht vor diesen Verzerrungen
           "Die initiale Verdachtsdiagnose beeinflusst die weitere Informationssuche",
           "Statusinformationen von Patienten werden ignoriert",
           "Widersprüchliche Befunde werden stärker gewichtet als bestätigende",
+          "Ärzte orientieren sich an der Basisrate statt an der Überweisungsdiagnose",
         ],
         correctAnswer: 1,
         explanation:
@@ -131,6 +136,7 @@ Interessanterweise schützt medizinische Expertise nicht vor diesen Verzerrungen
           "Ein junger sportlicher Mann mit Brustschmerzen wird nicht als Herzinfarktpatient erkannt",
           "Ein Arzt sucht nur nach Informationen, die seine Hypothese bestätigen",
           "Eine Diagnose wird als offensichtlich wahrgenommen, nachdem sie bekannt ist",
+          "Ein übergewichtiger Patient wird aufgrund seiner Symptome korrekt als Sepsisfall eingestuft",
         ],
         correctAnswer: 1,
         explanation:
@@ -146,6 +152,7 @@ Interessanterweise schützt medizinische Expertise nicht vor diesen Verzerrungen
           "Experten zeigen kognitive Verzerrungen genauso wie Anfänger, aber in anderen Situationen",
           "Nur Novizen unterliegen kognitiven Verzerrungen aufgrund von Wissensdefiziten",
           "Erfahrene Ärzte sind anfälliger für kognitive Verzerrungen als Anfänger",
+          "Kognitive Verzerrungen treten bei Experten nur unter extremem Zeitdruck auf",
         ],
         correctAnswer: 1,
         explanation:
@@ -160,6 +167,7 @@ Interessanterweise schützt medizinische Expertise nicht vor diesen Verzerrungen
           "Diagnosen für wahrscheinlicher gehalten werden, wenn sie leicht aus dem Gedächtnis abrufbar sind",
           "Der diagnostische Prozess vorzeitig abgeschlossen wird",
           "Mehrere gleichzeitig vorliegende Erkrankungen übersehen werden",
+          "Seltene Erkrankungen grundsätzlich überdiagnostiziert werden",
         ],
         correctAnswer: 1,
         explanation:
@@ -174,6 +182,7 @@ Interessanterweise schützt medizinische Expertise nicht vor diesen Verzerrungen
           "Diagnostische Entscheidungen erscheinen rückblickend offensichtlich und Fehler vermeidbar",
           "Widersprüchliche Informationen werden selektiv ignoriert",
           "Experten verlassen sich zu stark auf musterbasierte Heuristiken",
+          "Ärzte vermeiden nach Fehlern ähnliche Diagnosen in zukünftigen Fällen",
         ],
         correctAnswer: 1,
         explanation:
@@ -210,7 +219,13 @@ Moderne MRT-Sequenzen nutzen ausgefeilte Pulssequenzen und k-Raum-Akquisitionsst
     questions: [
       {
         question: "Laut dem Text beträgt die Larmorfrequenz für Protonen bei 1,5 Tesla etwa:",
-        options: ["30.000 Megahertz", "64 Megahertz", "1,5 Megahertz", "180 Megahertz"],
+        options: [
+          "30.000 Megahertz",
+          "64 Megahertz",
+          "1,5 Megahertz",
+          "180 Megahertz",
+          "3 Megahertz",
+        ],
         correctAnswer: 1,
         explanation:
           "Der Text gibt explizit an, dass die Larmorfrequenz für Protonen bei 1,5 Tesla etwa 64 Megahertz beträgt. 30.000 ist das Verhältnis zum Erdmagnetfeld, 1,5 ist die Feldstärke in Tesla, und 180 ist ein Kippwinkel in Grad.",
@@ -224,6 +239,7 @@ Moderne MRT-Sequenzen nutzen ausgefeilte Pulssequenzen und k-Raum-Akquisitionsst
           "Er kippt die Nettomagnetisierung und bringt Kernspins in Phase",
           "Er verkürzt T1-Zeiten und verlängert T2-Zeiten",
           "Er aktiviert die Empfangsspule und startet die Fourier-Transformation",
+          "Er richtet die Kernspins parallel zum Erdmagnetfeld aus",
         ],
         correctAnswer: 1,
         explanation:
@@ -238,6 +254,7 @@ Moderne MRT-Sequenzen nutzen ausgefeilte Pulssequenzen und k-Raum-Akquisitionsst
           "Beide Prozesse sind identisch und folgen denselben Zeitkonstanten",
           "T1-Relaxation beschreibt die Wiederherstellung der Magnetisierung in Feldrichtung",
           "T2-Relaxation erfolgt durch Energieabgabe an die Umgebung",
+          "Beide Relaxationsprozesse hängen ausschließlich von der Feldstärke ab, nicht vom Gewebetyp",
         ],
         correctAnswer: 2,
         explanation:
@@ -252,6 +269,7 @@ Moderne MRT-Sequenzen nutzen ausgefeilte Pulssequenzen und k-Raum-Akquisitionsst
           "Sie ermöglichen die räumliche Kodierung durch ortsabhängige Frequenzänderung",
           "Sie verkürzen die Relaxationszeiten pathologischer Gewebe",
           "Sie verstärken das Signal-Rausch-Verhältnis bei höheren Feldstärken",
+          "Sie synchronisieren die Präzessionsfrequenz aller Protonen auf einen einheitlichen Wert",
         ],
         correctAnswer: 1,
         explanation:
@@ -266,6 +284,7 @@ Moderne MRT-Sequenzen nutzen ausgefeilte Pulssequenzen und k-Raum-Akquisitionsst
           "Lange T1- und T2-Zeiten",
           "Kurze T1-Zeiten und lange T2-Zeiten",
           "Lange T1-Zeiten und kurze T2-Zeiten",
+          "Variable T1- und T2-Zeiten abhängig von der Feldstärke des Gradientenfelds",
         ],
         correctAnswer: 1,
         explanation:
@@ -306,6 +325,7 @@ Die Stammzellnische – die lokale Mikroumgebung, die Stammzellen in vivo beherb
           "Oct4, Sox2, Klf4 und c-Myc",
           "Fibroblasten, Neuronen, Kardiomyozyten und Leberzellen",
           "Wachstumsfaktoren, Zytokine, morphogenetische Gradienten und kleine Moleküle",
+          "Oct4, Sox2, Nanog und STAT3",
         ],
         correctAnswer: 1,
         explanation:
@@ -320,6 +340,7 @@ Die Stammzellnische – die lokale Mikroumgebung, die Stammzellen in vivo beherb
           "Pluripotente Zellen können einen vollständigen Organismus bilden",
           "Totipotente Zellen können exträmbryonales Gewebe bilden, pluripotente nicht",
           "Pluripotente Zellen sind effizienter in der Reprogrammierung",
+          "Totipotente Zellen differenzieren sich nur in Zelltypen der drei Keimblätter",
         ],
         correctAnswer: 2,
         explanation:
@@ -334,6 +355,7 @@ Die Stammzellnische – die lokale Mikroumgebung, die Stammzellen in vivo beherb
           "Etwa 50 Prozent der behandelten Zellen",
           "Nur ein bis zwei Prozent der behandelten Zellen",
           "Weniger als 0,01 Prozent der behandelten Zellen",
+          "Etwa zehn bis zwanzig Prozent der behandelten Zellen",
         ],
         correctAnswer: 2,
         explanation:
@@ -349,6 +371,7 @@ Die Stammzellnische – die lokale Mikroumgebung, die Stammzellen in vivo beherb
           "Sie überspringt den pluripotenten Zwischenzustand und vermeidet theoretisches Tumorrisiko",
           "Sie ist ethisch weniger problematisch als ES-Zellen",
           "Sie ermöglicht die Bildung exträmbryonaler Gewebe",
+          "Sie erreicht eine deutlich höhere Reprogrammierungseffizienz als die iPS-Methode",
         ],
         correctAnswer: 1,
         explanation:
@@ -363,6 +386,7 @@ Die Stammzellnische – die lokale Mikroumgebung, die Stammzellen in vivo beherb
           "Bereitstellung von Nachbarzellen, extrazellulärer Matrix und löslichen Faktoren",
           "Direkte Erzeugung von iPS-Zellen durch Transkriptionsfaktoren",
           "Beherbergung von Stammzellen und Krebsstammzellen",
+          "Steuerung der Transdifferenzierung von Fibroblasten in spezialisierte Zelltypen",
         ],
         correctAnswer: 2,
         explanation:
@@ -400,7 +424,13 @@ Datenschutz und ethische Fragen sind ebenfalls zentral. Medizinische Daten sind 
       {
         question:
           "Laut dem Text wurde ein KI-System zur Erkennung welcher Erkrankung von der FDA genehmigt?",
-        options: ["Hautkrebs", "Diabetische Retinopathie", "Sepsis", "Krebserkrankungen"],
+        options: [
+          "Hautkrebs",
+          "Diabetische Retinopathie",
+          "Sepsis",
+          "Krebserkrankungen",
+          "Pathologien in Gewebeproben",
+        ],
         correctAnswer: 1,
         explanation:
           "Der Text gibt explizit an, dass ein KI-System zur Erkennung diabetischer Retinopathie in Netzhautfotos von der FDA genehmigt wurde. Hautkrebs, Sepsis und Krebserkrankungen werden zwar erwähnt, aber nicht im Zusammenhang mit einer FDA-Genehmigung.",
@@ -415,6 +445,7 @@ Datenschutz und ethische Fragen sind ebenfalls zentral. Medizinische Daten sind 
           "Über 130.000 Bildern",
           "Über 1.300 Bildern",
           "Über 1,3 Millionen Bildern",
+          "Über 30.000 Bildern",
         ],
         correctAnswer: 1,
         explanation:
@@ -430,6 +461,7 @@ Datenschutz und ethische Fragen sind ebenfalls zentral. Medizinische Daten sind 
           "Die Qualität von KI-Systemen hängt von der Qualität und Relevanz der Trainingsdaten ab",
           "Röntgengeräte verschiedener Hersteller können nicht verglichen werden",
           "Pathologien in Röntgenbildern sind für KI nicht erkennbar",
+          "Algorithmen sollten ausschließlich mit Daten eines einzigen Krankenhauses trainiert werden",
         ],
         correctAnswer: 1,
         explanation:
@@ -444,6 +476,7 @@ Datenschutz und ethische Fragen sind ebenfalls zentral. Medizinische Daten sind 
           "Schnellerer, objektiverer und reproduzierbarerer Diagnoseprozess",
           "Elimination aller diagnostischen Fehler",
           "Kostenloses Screening für alle Patienten",
+          "Automatische Identifikation optimaler Chemotherapie-Protokolle",
         ],
         correctAnswer: 1,
         explanation:
@@ -458,6 +491,7 @@ Datenschutz und ethische Fragen sind ebenfalls zentral. Medizinische Daten sind 
           "Sie funktionieren als 'Black Box' und ihre Entscheidungen sind schwer nachvollziehbar",
           "Sie benötigen zu wenig Trainingsdaten",
           "Sie können keine Röntgenbilder analysieren",
+          "Sie liefern nur bei seltenen Erkrankungen zuverlässige Ergebnisse",
         ],
         correctAnswer: 1,
         explanation:

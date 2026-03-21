@@ -62,11 +62,11 @@ type NavItem = {
   activePaths?: string[];
 };
 
-/** MedAT-orientierte Struktur: LERNEN → TRAINIEREN → FORTSCHRITT → MEHR. Dashboard ist fix oben. */
+/** MedAT-orientierte Struktur: LERNEN & ÜBEN → TRAINIEREN → FORTSCHRITT → MEHR. Dashboard ist fix oben. */
 const NAV_SECTIONS: { id: string; title: string; items: NavItem[] }[] = [
   {
     id: "lernen",
-    title: "LERNEN",
+    title: "LERNEN & ÜBEN",
     items: [
       { to: "/bms", icon: BookOpen, label: "BMS-Inhalte", hasChildren: true },
       { to: "/kff", icon: Brain, label: "KFF" },

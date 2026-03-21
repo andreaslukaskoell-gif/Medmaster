@@ -100,11 +100,11 @@ const set1: TVTextSet = {
           question:
             "Welche gesundheitlichen Folgen werden im Text mit chronischem Schlafmangel in Verbindung gebracht?",
           options: [
-            "Nur Diabetes und Herzkrankheiten",
-            "Ausschlie\u00DFlich psychische Erkrankungen",
-            "Herz-Kreislauf-Erkrankungen, Diabetes, Adipositas und psychische St\u00F6rungen",
-            "Vor allem Erkrankungen des Immunsystems",
-            "Nur Schlaflosigkeit",
+            "Diabetes, Adipositas und Erkrankungen des Immunsystems",
+            "Herz-Kreislauf-Erkrankungen, Adipositas und chronische Schmerzen",
+            "Herz-Kreislauf-Erkrankungen, Diabetes, Adipositas und psychische Störungen",
+            "Psychische Störungen, Adipositas und hormonelle Dysbalancen",
+            "Diabetes, Herz-Kreislauf-Erkrankungen und Sehstörungen",
           ],
           correctOption: 2,
           explanation:
@@ -176,11 +176,11 @@ const set1: TVTextSet = {
           id: "tv1-t2-q3",
           question: "Welche Rolle spielte die Seidenstraße laut Text neben dem Warenhandel?",
           options: [
-            "Sie diente ausschließlich dem militärischen Nachschub zwischen Ost und West",
-            "Sie verband ausschließlich China mit dem Römischen Reich",
-            "Sie wurde nur für den Transport von Seide und Gewürzen genutzt",
-            "Sie war ein Kanal für den Austausch von Ideen, Religionen, Technologien und kulturellen Praktiken",
-            "Sie war ein reines Pilgernetzwerk für buddhistische Mönche",
+            "Sie diente vorrangig dem militärischen Nachschub zwischen den Großreichen",
+            "Sie ermöglichte den Austausch von Arbeitskräften und Siedlern zwischen Ost und West",
+            "Sie war hauptsächlich eine Postroute für diplomatische Korrespondenz",
+            "Sie ermöglichte den Austausch von Ideen, Religionen, Technologien und kulturellen Praktiken",
+            "Sie diente dem Transport von Rohstoffen für die europäische Metallverarbeitung",
           ],
           correctOption: 3,
           explanation:
@@ -191,11 +191,11 @@ const set1: TVTextSet = {
           question:
             "Welche Religionen verbreiteten sich laut Text \u00FCber die Seidenstra\u00DFe?",
           options: [
-            "Christentum und Judentum",
-            "Hinduismus und Zoroastrismus",
+            "Das Christentum von Rom nach Ostasien und der Hinduismus",
+            "Der Hinduismus von Indien nach China und der Zoroastrismus",
             "Der Buddhismus von Indien nach China und Zentralasien sowie der Islam",
-            "Nur der Buddhismus von Indien nach China",
-            "Keine \u2013 die Route war rein wirtschaftlich",
+            "Nur der Buddhismus von Indien nach China, nicht aber der Islam",
+            "Der Islam von Arabien nach Europa und das Christentum nach Asien",
           ],
           correctOption: 2,
           explanation:
@@ -206,11 +206,11 @@ const set1: TVTextSet = {
           question:
             "Welche negative Rolle spielte die Seidenstra\u00DFe laut Text au\u00DFer dem Handel?",
           options: [
-            "Sie verursachte politische Kriege zwischen Ost und West",
-            "Sie verbreitete ausschlie\u00DFlich religi\u00F6se Konflikte",
-            "Sie schw\u00E4chte die Wirtschaft der Anrainerstaaten",
-            "Sie verhinderte technologischen Fortschritt durch Handelsmonopole",
-            "Sie f\u00FChrte zur Verbreitung von Krankheitserregern, darunter mutma\u00DFlich die Pest im 14. Jahrhundert",
+            "Sie beschleunigte die Entwaldung entlang der zentralasiatischen Steppe",
+            "Sie verbreitete ausschließlich religiöse Konflikte zwischen den Kulturen",
+            "Sie führte zu einer Hungersnot in China durch den Export von Getreide",
+            "Sie verhinderte die eigenständige technologische Entwicklung der Anrainerstaaten",
+            "Krankheitserreger verbreiteten sich über die Handelswege, vermutlich gelangte so die Pest nach Europa",
           ],
           correctOption: 4,
           explanation:
@@ -278,11 +278,11 @@ const set1: TVTextSet = {
           id: "tv1-t3-q4",
           question: "Was zeichnet laut Text die Atmosph\u00E4re des Wiener Kaffeehauses aus?",
           options: [
-            "Marmortische, Thonet-St\u00FChle, Zeitungsst\u00E4nder und die Erlaubnis, stundenlang zu verweilen",
-            "Schnelle Bedienung und g\u00FCnstige Preise",
-            "Laute Musik und ein lebhaftes Nachtleben",
-            "Exklusive Mitgliedschaft und reservierte Sitzpl\u00E4tze",
-            "Moderne Technik und WLAN f\u00FCr Gesch\u00E4ftsreisende",
+            "Marmortische, Thonet-Stühle, Zeitungsständer und die Erlaubnis, stundenlang zu verweilen",
+            "Gemütliche Sofas, gedämpftes Licht und eine hauseigene Büchersammlung",
+            "Holzvertäfelte Wände, Porzellanservice und Live-Klaviermusik am Abend",
+            "Reservierte Stammplätze, exklusive Mitgliedschaft und personalisierter Service",
+            "Moderne Einrichtung, Selbstbedienung und schneller Kundenwechsel",
           ],
           correctOption: 0,
           explanation:
@@ -292,11 +292,11 @@ const set1: TVTextSet = {
           id: "tv1-t3-q5",
           question: "Was besagt der Text \u00FCber die Herkunft der Wiener Kaffeehauskultur?",
           options: [
-            "Sie wurde von italienischen H\u00E4ndlern im 16. Jahrhundert eingef\u00FChrt",
-            "Sie geht auf kaiserliche Dekrete Maria Theresias zur\u00FCck",
-            "Sie entstand nach der zweiten osmanischen Belagerung Wiens 1683, als angeblich Kaffeebohnen zur\u00FCckgelassen wurden",
-            "Sie wurde von Wiener B\u00FCrgerlichen als Gegenmodell zum Adel entwickelt",
-            "Sie entstand erst im fr\u00FChen 20. Jahrhundert als Reaktion auf die Industrialisierung",
+            "Sie wurde von italienischen Händlern im 16. Jahrhundert über den Seehandel eingeführt",
+            "Sie geht auf kaiserliche Dekrete Maria Theresias zur Förderung des Handels zurück",
+            "Sie entstand nach der zweiten osmanischen Belagerung 1683, als angeblich Kaffeebohnen zurückgelassen wurden",
+            "Sie wurde von Wiener Bürgerlichen als intellektuelles Gegenmodell zum Adel entwickelt",
+            "Sie entstand im frühen 19. Jahrhundert als Reaktion auf die napoleonischen Kriege",
           ],
           correctOption: 2,
           explanation:
@@ -356,11 +356,11 @@ const set1: TVTextSet = {
           id: "tv1-t4-q3",
           question: "Was bezeichnet der Text als 'Trilateration'?",
           options: [
-            "Die Berechnung der Satellitengeschwindigkeit aus der Erdumlaufbahn",
-            "Die Umwandlung von Radiosignalen in GPS-Koordinaten",
-            "Die Synchronisierung aller 24 Satelliten untereinander",
-            "Den Vorgang der Signalverstärkung durch DGPS",
-            "Das Prinzip, durch Messung der Signallaufzeit zu mindestens vier Satelliten die Position zu bestimmen",
+            "Die Berechnung der Satellitengeschwindigkeit anhand der Signaldaten mehrerer Bodenstationen",
+            "Die direkte Umwandlung von Radiosignalen in dreidimensionale GPS-Koordinaten",
+            "Die Synchronisierung aller 24 Satelliten untereinander durch gegenseitige Signalabstimmung",
+            "Die Verbesserung der Signalgenauigkeit durch das ergänzende DGPS-Korrektursystem",
+            "Die Positionsbestimmung durch Messung der Signallaufzeit zu mindestens vier Satelliten",
           ],
           correctOption: 4,
           explanation:
@@ -580,11 +580,11 @@ const set2: TVTextSet = {
           id: "tv2-t1-q5",
           question: "Welche besondere Rolle spielt der Rhesusfaktor laut Text?",
           options: [
-            "Er bestimmt, welche Blutgruppe jemand hat",
-            "Er verhindert das Verklumpen bei Bluttransfusionen",
-            "Er bestimmt die Farbe der roten Blutkörperchen",
-            "Er wurde erst 1950 entdeckt und ist wichtiger als das AB0-System",
-            "Er spielt bei Schwangerschaften eine besondere Rolle, wenn Mutter und Kind unterschiedliche Rhesusfaktoren haben",
+            "Er bestimmt die Verträglichkeit aller Bluttransfusionen unabhängig vom AB0-System",
+            "Er beeinflusst die Produktion von Antikörpern gegen körperfremde Antigene im Plasma",
+            "Er reguliert die Lebensdauer der roten Blutkörperchen im Kreislaufsystem",
+            "Er wurde erst in den 1950er-Jahren entdeckt und hat das AB0-System weitgehend ersetzt",
+            "Er ist besonders bei Schwangerschaften relevant, wenn Mutter und Kind unterschiedliche Rhesusfaktoren haben",
           ],
           correctOption: 4,
           explanation:
@@ -615,11 +615,11 @@ const set2: TVTextSet = {
           id: "tv2-t2-q1",
           question: "Wie äußert sich Colony Collapse Disorder laut Text?",
           options: [
-            "Die Bienenkönigin stirbt und das Volk löst sich auf",
-            "Die Bienen produzieren keinen Honig mehr und verhungern",
-            "Die Bienenstöcke werden von Varroamilben vollständig zerstört",
-            "Die Larven entwickeln sich nicht mehr zu erwachsenen Bienen",
-            "Arbeiterbienen verlassen plötzlich den Stock und kehren nicht zurück",
+            "Die Bienenkönigin stirbt plötzlich und das gesamte Volk löst sich daraufhin auf",
+            "Die Bienen stellen die Honigproduktion ein und das Volk verhungert im Stock",
+            "Varroamilben befallen den gesamten Stock und zerstören sämtliche Waben und Vorräte",
+            "Die Larven entwickeln sich aufgrund von Mangelernährung nicht mehr zu erwachsenen Bienen",
+            "Arbeiterbienen verschwinden ohne erkennbare Ursache aus dem Stock und kommen nicht zurück",
           ],
           correctOption: 4,
           explanation:
@@ -644,11 +644,11 @@ const set2: TVTextSet = {
           id: "tv2-t2-q3",
           question: "Welche Wirkung haben Neonicotinoide laut Text auf Bienen?",
           options: [
-            "Sie töten die Bienenkönigin direkt",
-            "Sie verhindern die Honigproduktion vollständig",
-            "Sie zerstören die Blühflächen, von denen Bienen abhängig sind",
-            "Sie fördern die Verbreitung der Varroamilbe",
-            "Sie schädigen das Nervensystem und beeinträchtigen die Orientierungsfähigkeit der Bienen",
+            "Sie greifen die Flügelmuskeln an und verhindern so den Flug der Bienen",
+            "Sie hemmen die Fortpflanzung der Bienenkönigin und reduzieren die Volksgröße",
+            "Sie reichern sich im Honig an und vergiften so die gesamte Brut im Stock",
+            "Sie fördern die Verbreitung der Varroamilbe durch Schwächung des Immunsystems",
+            "Sie schädigen das Nervensystem der Bienen und beeinträchtigen deren Orientierungsfähigkeit",
           ],
           correctOption: 4,
           explanation:
@@ -672,11 +672,11 @@ const set2: TVTextSet = {
           id: "tv2-t2-q5",
           question: "Welche Auswirkung des Klimawandels auf Bienen wird im Text beschrieben?",
           options: [
-            "Der Klimawandel erhöht die Temperatur und tötet Bienen direkt durch Hitzestress",
-            "Der Klimawandel fördert das Wachstum der Varroamilbe durch wärmere Winter",
-            "Der Klimawandel führt zu mehr Stürmen, die Bienenstöcke zerstören",
-            "Der Klimawandel verschiebt die Blühzeiten von Pflanzen, sodass sie nicht mehr mit den Aktivitätszyklen der Bienen übereinstimmen",
-            "Der Klimawandel erhöht den Pestizideinsatz in der Landwirtschaft",
+            "Der Klimawandel erhöht die Temperaturen und löst bei Bienen tödlichen Hitzestress aus",
+            "Der Klimawandel fördert das Wachstum der Varroamilbe durch mildere Winterbedingungen",
+            "Der Klimawandel verursacht häufigere Stürme, die Bienenstöcke physisch zerstören",
+            "Der Klimawandel verschiebt die Blühzeiten, sodass sie nicht mehr zu den Aktivitätszyklen der Bienen passen",
+            "Der Klimawandel reduziert die Blütenvielfalt und damit das Nahrungsangebot für Bienen",
           ],
           correctOption: 3,
           explanation:
@@ -709,11 +709,11 @@ const set2: TVTextSet = {
           question:
             "Was wird im Text über die Fähigkeit von Säuglingen zur Lautunterscheidung gesagt?",
           options: [
-            "Sie können von Geburt an nur die Laute ihrer Muttersprache unterscheiden",
-            "Sie können Laute erst ab dem dritten Lebensmonat wahrnehmen",
-            "Sie erwerben die Fähigkeit zur Lautunterscheidung erst mit dem Lallen ab sechs Monaten",
-            "Sie können nur Vokale, aber keine Konsonanten unterscheiden",
-            "Sie können anfangs Laute aller Sprachen unterscheiden, verlieren diese Fähigkeit aber im ersten Lebensjahr",
+            "Sie können von Geburt an nur die Laute der in ihrer Umgebung gesprochenen Sprache unterscheiden",
+            "Sie können Laute erst ab dem dritten Lebensmonat wahrnehmen und voneinander trennen",
+            "Sie erwerben die Fähigkeit zur Lautunterscheidung erst mit dem Beginn des Lallens ab sechs Monaten",
+            "Sie können zunächst nur Vokale unterscheiden, Konsonanten erst ab dem sechsten Lebensmonat",
+            "Sie unterscheiden anfangs Laute aller Sprachen, verlieren diese Fähigkeit aber im ersten Lebensjahr",
           ],
           correctOption: 4,
           explanation:
@@ -753,11 +753,11 @@ const set2: TVTextSet = {
           question:
             "Was stellt der Text über den kindlichen Grammatikerwerb bis zum Schuleintritt fest?",
           options: [
-            "Die meisten Kinder beherrschen bis zum Schuleintritt nur einfache Sätze",
-            "Die Grammatik muss durch formalen Unterricht erworben werden",
-            "Kinder lernen Grammatik hauptsächlich durch das Lesen von Büchern",
-            "Die meisten Kinder beherrschen die grundlegende Grammatik ihrer Muttersprache weitgehend fehlerfrei, ohne je formalen Grammatikunterricht erhalten zu haben",
-            "Die Grammatikentwicklung ist erst mit dem 10. Lebensjahr abgeschlossen",
+            "Kinder beherrschen bis zum Schuleintritt nur einfache Zwei-Wort-Sätze und Grundstrukturen",
+            "Kinder erwerben die Grammatik hauptsächlich durch formalen Unterricht im Kindergarten",
+            "Kinder lernen Grammatik vor allem durch das Vorlesen von Büchern durch die Eltern",
+            "Kinder beherrschen die Grammatik weitgehend fehlerfrei, obwohl sie keinen formalen Unterricht erhalten haben",
+            "Die vollständige Grammatikentwicklung ist erst mit dem zehnten Lebensjahr abgeschlossen",
           ],
           correctOption: 3,
           explanation:
@@ -767,11 +767,11 @@ const set2: TVTextSet = {
           id: "tv2-t3-q5",
           question: "Was können Föten laut Text bereits im Mutterleib?",
           options: [
-            "Sie können Licht und Dunkel wahrnehmen",
-            "Sie können ihre eigene Muttersprache von Fremdsprachen unterscheiden",
-            "Sie können einfache Melodien von komplexen unterscheiden",
-            "Sie können bereits auf bestimmte Wörter mit Bewegungen reagieren",
-            "Sie können Sprachlaute wahrnehmen und zeigen nach der Geburt eine Präferenz für die Stimme der Mutter",
+            "Sie können Licht- und Dunkelunterschiede durch die Bauchdecke wahrnehmen",
+            "Sie können die Muttersprache bereits zuverlässig von Fremdsprachen unterscheiden",
+            "Sie können einfache Melodien erkennen und nach der Geburt wiedererkennen",
+            "Sie reagieren auf bestimmte Wörter bereits mit gezielten Bewegungen",
+            "Sie können Sprachlaute wahrnehmen und bevorzugen nach der Geburt die Stimme der Mutter",
           ],
           correctOption: 4,
           explanation:
@@ -862,11 +862,11 @@ const set2: TVTextSet = {
           question:
             "Welche Probleme entstehen laut Text durch schnelles Stadtwachstum in Entwicklungsländern?",
           options: [
-            "Informelle Siedlungen ohne Zugang zu sauberem Wasser, Abwasserentsorgung und Elektrizität",
-            "Zu viele Grünflächen und Parks verdrängen Wohnraum",
-            "Unmäßiger Ausbau des öffentlichen Nahverkehrs",
-            "Überangebot an Arbeitsplätzen führt zu Inflation",
-            "Zu hohe Bildungsausgaben belasten die Staatskassen",
+            "Informelle Siedlungen ohne sauberes Wasser, Abwasserentsorgung und Elektrizität",
+            "Gentrifizierung und steigende Mietpreise verdrängen die ärmere Bevölkerung",
+            "Überlastete Verkehrsnetze und zunehmende Luftverschmutzung in den Ballungsräumen",
+            "Steigende Kriminalitätsraten durch die Konzentration von Armut in Randgebieten",
+            "Mangel an qualifizierten Arbeitskräften durch fehlende Ausbildungseinrichtungen",
           ],
           correctOption: 0,
           explanation:
@@ -897,11 +897,11 @@ const set2: TVTextSet = {
           id: "tv2-t5-q1",
           question: "Was versteht man laut Text unter der \u201EMäeutik\u201C des Sokrates?",
           options: [
-            "Eine Methode, bei der der Lehrer dem Schüler die richtige Antwort vorgibt",
-            "Eine schriftliche Lehrmethode, die Sokrates in seinen Büchern beschrieb",
-            "Eine rhetorische Technik, um politische Gegner in Debatten zu besiegen",
-            "Eine Form der Meditation, die zur inneren Erleuchtung führen soll",
-            "Eine Methode des gezielten Fragens, um das Gegenüber zu eigenen Einsichten zu führen",
+            "Eine Methode, bei der der Lehrer dem Schüler die richtige Antwort direkt vorgibt",
+            "Eine schriftliche Lehrmethode, die Sokrates in seinen philosophischen Werken beschrieb",
+            "Eine rhetorische Technik, um politische Gegner in öffentlichen Debatten zu besiegen",
+            "Eine meditative Praxis der Selbsterkenntnis durch innere Kontemplation und Rückzug",
+            "Eine Methode des gezielten Fragens, die das Gegenüber zu eigenen Einsichten führt",
           ],
           correctOption: 4,
           explanation:
@@ -953,11 +953,11 @@ const set2: TVTextSet = {
           id: "tv2-t5-q5",
           question: "Wessen wesentliches Merkmal sah Sokrates laut Text als Vorteil an?",
           options: [
-            "Das Bewusstsein seines eigenen Nicht-Wissens gegenüber jenen, die fälschlich glaubten, im Besitz sicherer Wahrheiten zu sein",
-            "Seine politischen Verbindungen in Athen",
-            "Sein umfassendes Wissen über Naturphilosophie",
-            "Seine rhetorische Überlegenheit in öffentlichen Debatten",
-            "Seine Fähigkeit, Schüler schnell zu bekehren",
+            "Das Bewusstsein des eigenen Nicht-Wissens gegenüber denen, die sich fälschlich im Besitz sicherer Wahrheiten wähnten",
+            "Seine umfangreichen politischen Verbindungen zu einflussreichen Persönlichkeiten in Athen",
+            "Sein breit gefächertes Wissen über Naturphilosophie und kosmologische Zusammenhänge",
+            "Seine unübertroffene rhetorische Überlegenheit in öffentlichen philosophischen Debatten",
+            "Seine besondere Fähigkeit, Schüler durch persönliche Ausstrahlung schnell zu überzeugen",
           ],
           correctOption: 0,
           explanation:
@@ -1060,11 +1060,11 @@ const set3: TVTextSet = {
           id: "tv3-t1-q5",
           question: "Welche allgemeine Definition des Placebo-Effekts gibt der Text?",
           options: [
-            "Die schädliche Wirkung eines Scheinmedikaments auf den Patienten",
-            "Ein statistischer Fehler in klinischen Studien",
-            "Die Wirksamkeit billiger Medikamente im Vergleich zu teuren",
-            "Die Reaktion des Immunsystems auf inaktive Substanzen",
-            "Die messbare Verbesserung des Gesundheitszustands, die auf Erwartungshaltung und Glauben an die Wirksamkeit zurückzuführen ist, nicht auf pharmakologische Wirkung",
+            "Die schädliche Wirkung eines Scheinmedikaments auf den Gesundheitszustand des Patienten",
+            "Ein systematischer statistischer Fehler, der in klinischen Studien regelmäßig auftritt",
+            "Die überlegene Wirksamkeit billiger Medikamente im direkten Vergleich zu teureren Präparaten",
+            "Die unspezifische Aktivierung des Immunsystems durch pharmakologisch inaktive Substanzen",
+            "Eine Gesundheitsverbesserung durch Erwartungshaltung und Glauben an die Wirksamkeit, nicht durch Pharmakologie",
           ],
           correctOption: 4,
           explanation:
@@ -1143,11 +1143,11 @@ const set3: TVTextSet = {
           question:
             "Was versteht man laut Text unter dem Prinzip der Verschränkung bei Quantencomputern?",
           options: [
-            "Dass Qubits physisch miteinander verdrahtet werden müssen",
-            "Dass alle Qubits gleichzeitig denselben Zustand annehmen",
-            "Zwei verschränkte Qubits sind so verbunden, dass der Zustand des einen den Zustand des anderen unmittelbar beeinflusst, unabhängig von der räumlichen Entfernung",
-            "Die mechanische Verbindung mehrerer Quantenprozessoren",
-            "Dass Quantencomputer nur bei verschränkten Temperaturen funktionieren",
+            "Dass Qubits physisch miteinander verdrahtet werden müssen, um Informationen auszutauschen",
+            "Dass alle Qubits eines Systems immer gleichzeitig denselben Quantenzustand annehmen",
+            "Dass der Zustand eines Qubits den eines anderen unmittelbar beeinflusst, unabhängig von der Entfernung",
+            "Dass mehrere Quantenprozessoren mechanisch verbunden sein müssen, um Rechenleistung zu bündeln",
+            "Dass Quantencomputer nur bei extrem niedrigen, sogenannten verschränkten Temperaturen funktionieren",
           ],
           correctOption: 2,
           explanation:
@@ -1212,10 +1212,10 @@ const set3: TVTextSet = {
           question:
             "Welche möglichen gesundheitlichen Auswirkungen von Mikroplastik werden im Text genannt?",
           options: [
-            "Ausschließlich allergische Hautreaktionen",
-            "Störungen des Sehvermögens und des Gehörs",
-            "Ausschließlich Krebserkrankungen der Atemwege",
-            "Akute Vergiftungserscheinungen und Organversagen",
+            "Allergische Hautreaktionen und chronische Atemwegserkrankungen durch eingeatmete Partikel",
+            "Störungen des Sehvermögens und des Gehörs durch Ablagerungen in den Sinnesorganen",
+            "Krebserkrankungen der Atemwege und des Verdauungstrakts durch dauerhafte Exposition",
+            "Akute Vergiftungserscheinungen und fortschreitendes Organversagen bei hoher Konzentration",
             "Entzündungsreaktionen, Transport von Schadstoffen und mögliche Beeinflussung des Hormonsystems",
           ],
           correctOption: 4,
@@ -1241,11 +1241,11 @@ const set3: TVTextSet = {
           question:
             "Welche Maßnahme der Europäischen Union gegen Mikroplastik wird im Text beschrieben?",
           options: [
-            "Ein sofortiges Totalverbot aller Kunststoffprodukte",
-            "Ein schrittweises Verbot von absichtlich zugesetztem Mikroplastik in Produkten, das ab 2023 stufenweise in Kraft tritt",
-            "Die Einführung einer Mikroplastiksteuer für Produzenten",
-            "Die Verpflichtung zur vollständigen Beseitigung von Mikroplastik aus Ozeanen bis 2030",
-            "Ein Importverbot für Kosmetikprodukte mit Mikroplastik aus Drittländern",
+            "Ein sofortiges Totalverbot aller Kunststoffprodukte, die Mikroplastik enthalten könnten",
+            "Ein stufenweises Verbot von absichtlich zugesetztem Mikroplastik in Produkten ab 2023",
+            "Die Einführung einer Mikroplastiksteuer für alle industriellen Kunststoffproduzenten",
+            "Eine Verpflichtung zur vollständigen Beseitigung von Mikroplastik aus den Ozeanen bis 2030",
+            "Ein Importverbot für sämtliche Kosmetikprodukte mit Mikroplastik aus Drittländern",
           ],
           correctOption: 1,
           explanation:
@@ -1295,11 +1295,11 @@ const set3: TVTextSet = {
           id: "tv3-t4-q1",
           question: "Welche Rolle spielte James Watt laut Text in der Industriellen Revolution?",
           options: [
-            "Er erfand die erste Textilfabrik in Großbritannien",
-            "Er initiierte die erste Sozialgesetzgebung in England",
-            "Er gründete die erste Gewerkschaft zum Schutz der Arbeiter",
-            "Er entwickelte die Dampfmaschine weiter und ermöglichte die Nutzung mechanischer Energie im großen Maßstab",
-            "Er erfand die Eisenbahn und revolutionierte damit den Personenverkehr",
+            "Er erfand die mechanische Spinnmaschine und begründete damit die Textilindustrie",
+            "Er initiierte die erste Sozialgesetzgebung zum Schutz der Fabrikarbeiter in England",
+            "Er gründete die erste Arbeitergewerkschaft und erkämpfte kürzere Arbeitszeiten",
+            "Er entwickelte die Dampfmaschine weiter und ermöglichte mechanische Energie im großen Maßstab",
+            "Er konstruierte die erste Eisenbahn und revolutionierte damit das gesamte Transportwesen",
           ],
           correctOption: 3,
           explanation:
@@ -1550,11 +1550,11 @@ const set4: TVTextSet = {
           id: "tv4-t1-q5",
           question: "Was zeigte der Tierversuch mit trächtigen Mäusen laut Text?",
           options: [
-            "Dass Stress bei trächtigen Mäusen epigenetische Veränderungen im Nachwuchs bewirken kann, die dessen Stressreaktion dauerhaft beeinflusst",
-            "Dass Stress bei Mäusen deren eigene Stressreaktion verbessert",
-            "Dass epigenetische Veränderungen ausschließlich bei Nagetieren auftreten",
-            "Dass Stress keinen messbaren Einfluss auf die nächste Generation hat",
-            "Dass trächtige Tiere grundsätzlich immun gegen Stress sind",
+            "Dass Stress bei trächtigen Mäusen epigenetische Veränderungen im Nachwuchs auslöst, die dessen Stressreaktion dauerhaft verändern",
+            "Dass Stress bei trächtigen Mäusen deren eigene Stressreaktion langfristig verbessert und anpassungsfähiger macht",
+            "Dass epigenetische Veränderungen durch Stress ausschließlich bei Nagetieren auftreten und nicht auf den Menschen übertragbar sind",
+            "Dass mütterlicher Stress keinen messbaren epigenetischen Einfluss auf den Nachwuchs hat",
+            "Dass trächtige Mäuse durch hormonelle Schutzfaktoren grundsätzlich vor Stressauswirkungen geschützt sind",
           ],
           correctOption: 0,
           explanation:
@@ -1631,11 +1631,11 @@ const set4: TVTextSet = {
           id: "tv4-t2-q4",
           question: "Welche Kritik am Utilitarismus wird im Text vorgebracht?",
           options: [
-            "Der Utilitarismus ist zu religiös orientiert",
-            "Der Utilitarismus ist zu kompliziert, um in der Praxis angewendet zu werden",
-            "Der Utilitarismus könnte individuelle Rechte zugunsten des Gesamtwohls opfern – etwa wenn Folter das Leid vieler verhindert",
-            "Der Utilitarismus bevorzugt immer die wohlhabende Mehrheit",
-            "Der Utilitarismus vernachlässigt ökonomische Faktoren",
+            "Der Utilitarismus basiert zu stark auf religiösen Moralvorstellungen und ist daher nicht universell anwendbar",
+            "Der Utilitarismus ist in der Praxis zu kompliziert, weil alle Konsequenzen einer Handlung vorhergesehen werden müssten",
+            "Der Utilitarismus könnte individuelle Rechte dem Gesamtwohl opfern, etwa wenn Folter das Leid vieler verhindert",
+            "Der Utilitarismus bevorzugt systematisch die wohlhabende Mehrheit gegenüber gesellschaftlichen Minderheiten",
+            "Der Utilitarismus vernachlässigt ökonomische Faktoren und ist daher für politische Entscheidungen ungeeignet",
           ],
           correctOption: 2,
           explanation:
@@ -1698,11 +1698,11 @@ const set4: TVTextSet = {
           question:
             "Welche führende Hypothese zur Erklärung von Déjà-vus wird im Text vorgestellt?",
           options: [
-            "Déjà-vus sind Erinnerungen an Erlebnisse aus einem früheren Leben",
-            "Déjà-vus entstehen durch einen Gedächtnisfehler, bei dem das Gehirn eine aktuelle Wahrnehmung fälschlicherweise als Erinnerung einstuft",
-            "Déjà-vus werden durch einen kurzzeitigen Sauerstoffmangel im Gehirn verursacht",
-            "Déjà-vus sind immer Vorboten epileptischer Anfälle",
-            "Déjà-vus entstehen durch den Konsum bestimmter Nahrungsmittel",
+            "Déjà-vus sind unbewusste Erinnerungsfragmente aus dem Langzeitgedächtnis, die fehlerhaft abgerufen werden",
+            "Bei einem Déjà-vu ordnet das Gehirn eine neue Wahrnehmung irrtümlich als bereits gespeicherte Erinnerung ein",
+            "Déjà-vus werden durch einen kurzzeitigen Sauerstoffmangel in den vorderen Hirnregionen verursacht",
+            "Déjà-vus sind regelmäßige Vorboten epileptischer Anfälle und weisen stets auf neurologische Probleme hin",
+            "Déjà-vus entstehen durch bestimmte Neurotransmitter-Schwankungen nach dem Konsum stimulierender Substanzen",
           ],
           correctOption: 1,
           explanation:
@@ -1742,11 +1742,11 @@ const set4: TVTextSet = {
           question:
             "Welcher Befund bei Epilepsiepatienten weist laut Text auf eine Beteiligung des Temporallappens hin?",
           options: [
-            "Déjà-vus treten bei Temporallappenepilepsie deutlich häufiger auf und können als Vorboten eines epileptischen Anfalls gelten",
-            "Epilepsiepatienten haben deutlich schlechtere Erinnerungen an Déjà-vus",
-            "Epilepsiepatienten erleben keine echten Déjà-vus, nur Halluzinationen",
-            "Der Temporallappen ist der einzige Teil des Gehirns, der beim Déjà-vu aktiv ist",
-            "Epilepsiepatienten können Déjà-vus durch Konzentration unterdrücken",
+            "Bei Temporallappenepilepsie treten Déjà-vus gehäuft auf und können einen bevorstehenden Anfall ankündigen",
+            "Epilepsiepatienten erinnern sich deutlich schlechter an Details ihrer Déjà-vu-Erlebnisse",
+            "Epilepsiepatienten erleben keine echten Déjà-vus, sondern ausschließlich visuelle Halluzinationen",
+            "Der Temporallappen ist der einzige Teil des Gehirns, der während eines Déjà-vus messbar aktiv ist",
+            "Epilepsiepatienten können Déjà-vus durch bewusste Konzentration auf die Umgebung unterdrücken",
           ],
           correctOption: 0,
           explanation:
@@ -1838,11 +1838,11 @@ const set4: TVTextSet = {
           id: "tv4-t4-q5",
           question: "Welches klassische Beispiel für den Halo-Effekt nennt der Text?",
           options: [
-            "Reiche Menschen werden als intelligenter eingestuft als ärmere",
-            "Gut gekleidete Menschen werden als fleißiger beurteilt",
-            "Große Menschen werden als autoritärer wahrgenommen als kleinere",
-            "Menschen mit tiefer Stimme gelten als vertrauenswürdiger",
-            "Attraktive Menschen werden häufig auch als intelligenter, kompetenter und vertrauenswürdiger eingeschätzt",
+            "Wohlhabende Menschen werden als intelligenter und sozial kompetenter eingestuft",
+            "Gut gekleidete Menschen werden als fleißiger und zuverlässiger beurteilt",
+            "Großgewachsene Menschen werden als autoritärer und durchsetzungsfähiger wahrgenommen",
+            "Menschen mit tiefer Stimme gelten als vertrauenswürdiger und führungsstärker",
+            "Attraktive Menschen werden als intelligenter, kompetenter und vertrauenswürdiger eingeschätzt",
           ],
           correctOption: 4,
           explanation:
@@ -1876,11 +1876,11 @@ const set4: TVTextSet = {
           id: "tv4-t5-q1",
           question: "Welcher Rückkopplungsmechanismus wird im Text beschrieben?",
           options: [
-            "Auftauender Permafrost setzt Treibhausgase frei, die die Erwärmung verstärken, was weiteres Auftauen verursacht",
-            "Mehr Niederschlag führt zu mehr Vegetation, die mehr CO\u2082 aufnimmt",
-            "Steigende Meeresspiegel kühlen die Atmosphäre durch erhöhte Verdunstung ab",
-            "Mehr Sonnenstrahlung reflektiert an freigewordenen Eisflächen und kühlt die Erde",
-            "Die Zersetzung organischen Materials erzeugt Wärme, die den Permafrost von innen auftaut",
+            "Auftauender Permafrost setzt Treibhausgase frei, die die Erwärmung verstärken und weiteres Auftauen verursachen",
+            "Zunehmender Niederschlag fördert das Pflanzenwachstum, wodurch mehr CO\u2082 aus der Atmosphäre gebunden wird",
+            "Steigende Meeresspiegel erhöhen die Verdunstung, was die Atmosphäre durch Wolkenbildung abkühlt",
+            "Freigewordene Eisflächen reflektieren mehr Sonnenstrahlung und verlangsamen so die globale Erwärmung",
+            "Mikroorganismen erzeugen bei der Zersetzung organischen Materials Wärme, die den Permafrost von innen auftaut",
           ],
           correctOption: 0,
           explanation:
@@ -1985,11 +1985,11 @@ const set5: TVTextSet = {
           question:
             "Welches ethische Dilemma für Ärzte ergibt sich laut Text aus dem Nocebo-Effekt?",
           options: [
-            "Ärzte müssen entscheiden, ob sie Placebos oder echte Medikamente verschreiben",
-            "Ärzte dürfen keine Studien mehr durchführen, die den Nocebo-Effekt auslösen könnten",
-            "Ärzte müssen abwägen, ob sie den Patienten überhaupt behandeln sollen",
-            "Die Kosten der Behandlung stehen im Widerspruch zur Wirksamkeit der Therapie",
-            "Die Pflicht zur Aufklärung über Nebenwirkungen kann durch den Nocebo-Effekt genau die Beschwerden hervorrufen, die sie benennt",
+            "Ärzte müssen entscheiden, ob sie Placebos oder echte Medikamente verschreiben sollen",
+            "Ärzte dürfen keine klinischen Studien mehr durchführen, die den Nocebo-Effekt auslösen könnten",
+            "Ärzte müssen abwägen, ob die Behandlung dem Patienten mehr schadet als nutzt",
+            "Die hohen Behandlungskosten stehen im Widerspruch zur begrenzten Therapiewirksamkeit",
+            "Die Pflicht zur Nebenwirkungsaufklärung kann über den Nocebo-Effekt genau diese Beschwerden hervorrufen",
           ],
           correctOption: 4,
           explanation:
@@ -2000,11 +2000,11 @@ const set5: TVTextSet = {
           question:
             "Welche neurobiologischen Mechanismen des Nocebo-Effekts werden im Text genannt?",
           options: [
-            "Eine verminderte Dopaminausschüttung im Nucleus accumbens",
-            "Die Hemmung der Melatoninproduktion durch negative Gedanken",
-            "Eine Überproduktion von Endorphinen, die zu Unwohlsein führt",
-            "Die Aktivierung der HPA-Achse, verstärkte Cortisolausschüttung und angstbedingte Verstärkung der Schmerzwahrnehmung",
-            "Eine Fehlfunktion des Immunsystems durch psychischen Stress",
+            "Eine verminderte Dopaminausschüttung im Belohnungszentrum des Gehirns",
+            "Die Hemmung der Melatoninproduktion im Hypothalamus durch negative Gedanken",
+            "Eine Überproduktion von Endorphinen, die paradoxerweise zu Unwohlsein führt",
+            "Aktivierung der HPA-Achse, verstärkte Cortisolausschüttung und angstbedingte Schmerzverstärkung",
+            "Eine stressbedingte Fehlfunktion des Immunsystems mit erhöhter Entzündungsbereitschaft",
           ],
           correctOption: 3,
           explanation:
@@ -2096,11 +2096,11 @@ const set5: TVTextSet = {
           id: "tv5-t2-q2",
           question: "Welchen Einwand der Kritiker gegen die Sapir-Whorf-Hypothese nennt der Text?",
           options: [
-            "Dass kognitive Unterschiede möglicherweise auf kulturelle Praktiken und Umweltbedingungen zurückzuführen sind, die Sprache und Kognition unabhängig formen",
-            "Dass Sprache überhaupt keinen Einfluss auf das Denken hat",
-            "Dass die genannten Studien methodisch fehlerhaft durchgeführt wurden",
-            "Dass nur tote Sprachen aussagekräftige Vergleiche ermöglichen",
-            "Dass alle Sprachen im Grunde dasselbe System von Farbwörtern besitzen",
+            "Dass kognitive Unterschiede auf kulturelle Praktiken und Umweltbedingungen zurückgehen könnten, die Sprache und Denken unabhängig formen",
+            "Dass Sprache nachweislich keinerlei messbaren Einfluss auf das Denken oder die Wahrnehmung ausübt",
+            "Dass die angeführten Studien an gravierenden methodischen Mängeln leiden und daher nicht aussagekräftig sind",
+            "Dass nur ausgestorbene Sprachen, die keinem Wandel mehr unterliegen, zuverlässige Vergleiche ermöglichen",
+            "Dass alle Sprachen der Welt im Grunde über dasselbe grundlegende System von Farbbezeichnungen verfügen",
           ],
           correctOption: 0,
           explanation:
@@ -2110,11 +2110,11 @@ const set5: TVTextSet = {
           id: "tv5-t2-q3",
           question: "Welches Beispiel aus der Sprache Kuuk Thaayorre führt der Text an?",
           options: [
-            "Diese Sprache hat keine Pluralformen für Substantive",
-            "Diese Sprache kennt keine Begriffe für 'links' und 'rechts', verwendet stattdessen Himmelsrichtungen, und ihre Sprecher haben einen bemerkenswert präzisen inneren Kompass",
-            "Diese Sprache hat über 50 Wörter für Farbnuancen",
-            "Diese Sprache unterscheidet nicht zwischen Vergangenheit und Gegenwart",
-            "Diese Sprache hat keine Zahlen über fünf",
+            "Diese Sprache hat keine Pluralformen und zwingt Sprecher, stets exakte Mengen anzugeben",
+            "Sie kennt keine Begriffe für 'links' und 'rechts', nutzt Himmelsrichtungen und ihre Sprecher haben einen präzisen inneren Kompass",
+            "Diese Sprache verfügt über mehr als fünfzig differenzierte Wörter für verschiedene Farbnuancen",
+            "Diese Sprache unterscheidet nicht zwischen Vergangenheit und Gegenwart in der Verbkonjugation",
+            "Diese Sprache besitzt keine Zahlwörter über fünf und verwendet stattdessen Mengenangaben",
           ],
           correctOption: 1,
           explanation:
@@ -2125,11 +2125,11 @@ const set5: TVTextSet = {
           question:
             "Welche empirische Beobachtung unterstützt laut Text den linguistischen Relativismus?",
           options: [
-            "Alle Menschen denken in derselben logischen Struktur, unabhängig von der Sprache",
-            "Grammatikstrukturen aller Sprachen sind universell gleich",
-            "Kinder aller Kulturen erwerben Sprache in denselben Phasen",
-            "Übersetzungen zwischen Sprachen sind immer verlustfrei möglich",
-            "Sprecher von Sprachen mit vielen Farbwörtern unterscheiden bestimmte Farbnuancen schneller als Sprecher mit weniger Farbbezeichnungen",
+            "Alle Menschen denken in derselben logischen Struktur, völlig unabhängig von ihrer Muttersprache",
+            "Die Grammatikstrukturen aller Sprachen basieren auf universellen, angeborenen Prinzipien",
+            "Kinder aller Kulturen durchlaufen beim Spracherwerb exakt dieselben Entwicklungsphasen",
+            "Übersetzungen zwischen beliebigen Sprachen sind grundsätzlich verlustfrei und vollständig möglich",
+            "Wer eine Sprache mit differenziertem Farbvokabular spricht, erkennt Farbnuancen schneller als Sprecher mit weniger Farbbegriffen",
           ],
           correctOption: 4,
           explanation:
@@ -2195,11 +2195,11 @@ const set5: TVTextSet = {
           id: "tv5-t3-q2",
           question: "Was bedeutet der Begriff \u201EBlack Box\u201C im Kontext des Textes?",
           options: [
-            "Ein physisches Gerät, das Algorithmen sicher verwahrt",
-            "Die Tatsache, dass die komplexen Berechnungen neuronaler Netzwerke selbst für Experten oft nicht nachvollziehbar sind",
-            "Ein Flugschreiber, der algorithmische Entscheidungen aufzeichnet",
-            "Eine spezielle Verschlüsselungstechnik zum Schutz von Nutzerdaten",
-            "Ein Testverfahren, bei dem Algorithmen ohne Zugang zu externen Daten arbeiten",
+            "Ein geschlossenes System, dessen Quellcode durch Urheberrecht vor Einsicht geschützt ist",
+            "Dass die komplexen Berechnungen neuronaler Netzwerke selbst für Experten oft nicht nachvollziehbar sind",
+            "Ein automatisches Protokollierungsverfahren, das alle algorithmischen Entscheidungen aufzeichnet",
+            "Eine Verschlüsselungstechnik, die verhindert, dass Dritte den Algorithmus manipulieren",
+            "Ein Testverfahren, bei dem Algorithmen isoliert und ohne Zugang zu externen Daten arbeiten",
           ],
           correctOption: 1,
           explanation:
@@ -2209,11 +2209,11 @@ const set5: TVTextSet = {
           id: "tv5-t3-q3",
           question: "Welche Regulierungsmaßnahme der EU wird im Text erwähnt?",
           options: [
-            "Ein vollständiges Verbot aller KI-Anwendungen ab 2025",
+            "Ein vollständiges Verbot aller risikoreichen KI-Anwendungen in der EU ab 2025",
             "Der AI Act, der risikoreiche KI-Anwendungen strengeren Transparenz- und Fairness-Anforderungen unterwirft",
-            "Die Einführung einer Steuer auf algorithmische Entscheidungen",
-            "Die Verpflichtung, alle Algorithmen als Open Source zu veröffentlichen",
-            "Ein Moratorium für die Forschung an neuronalen Netzwerken",
+            "Die Einführung einer progressiven Steuer auf alle algorithmischen Entscheidungsprozesse",
+            "Die Verpflichtung sämtlicher Unternehmen, ihre Algorithmen als Open Source offenzulegen",
+            "Ein zeitlich befristetes Moratorium für die Erforschung und Entwicklung neuronaler Netzwerke",
           ],
           correctOption: 1,
           explanation:
@@ -2303,11 +2303,11 @@ const set5: TVTextSet = {
           id: "tv5-t4-q3",
           question: "Wo befindet sich laut Text der zentrale Taktgeber der inneren Uhr?",
           options: [
-            "Im Kleinhirn, direkt neben dem Stammhirn",
-            "In der Amygdala, die emotionale Reaktionen steuert",
-            "In der Zirbeldrüse, die Melatonin produziert",
-            "Im Hippocampus, der für zeitliche Orientierung zuständig ist",
-            "Im suprachiasmatischen Nucleus (SCN) im Hypothalamus, direkt oberhalb der Kreuzung der Sehnerven",
+            "Im Kleinhirn, direkt neben dem Stammhirn und oberhalb des Rückenmarks",
+            "In der Amygdala, die emotionale Reaktionen und Stressantworten steuert",
+            "In der Zirbeldrüse, die das Schlafhormon Melatonin produziert und ausschüttet",
+            "Im Hippocampus, der für zeitliche Orientierung und Gedächtnisbildung zuständig ist",
+            "Im suprachiasmatischen Nucleus (SCN) im Hypothalamus, oberhalb der Sehnervenkreuzung",
           ],
           correctOption: 4,
           explanation:
@@ -2399,11 +2399,11 @@ const set5: TVTextSet = {
           id: "tv5-t5-q3",
           question: "Was ist laut Text die 'pluralistische Ignoranz'?",
           options: [
-            "Die Annahme, dass niemand sonst um Hilfe bitten wird",
-            "Die kollektive Ignoranz einer Gruppe gegenüber gesellschaftlichen Problemen",
-            "Die Überzeugung, dass in einer großen Gruppe immer jemand anderes helfen wird",
-            "Das Phänomen, dass Menschen in mehrdeutigen Situationen das Verhalten anderer beobachten und – wenn niemand reagiert – die Situation als nicht bedrohlich interpretieren",
-            "Die Tendenz, bei offensichtlichen Notfällen trotzdem nicht einzugreifen",
+            "Die Annahme, dass in einer großen Gruppe niemand sonst um Hilfe bitten wird",
+            "Die kollektive Gleichgültigkeit einer Gruppe gegenüber offensichtlichen Missständen",
+            "Die Überzeugung, dass in einer Gruppe schon jemand anderes die Verantwortung übernimmt",
+            "Dass Menschen in unklaren Situationen das Verhalten anderer beobachten und bei fehlender Reaktion die Lage als ungefährlich einschätzen",
+            "Die Tendenz, selbst bei offensichtlichen Notfällen nicht einzugreifen, weil man Konsequenzen fürchtet",
           ],
           correctOption: 3,
           explanation:
@@ -2414,11 +2414,11 @@ const set5: TVTextSet = {
           question:
             "Welchen historischen Fall inspirierte laut Text die Erforschung des Bystander-Effekts?",
           options: [
-            "Den Fall eines Kindes, das im Straßenverkehr verunglückte",
-            "Die Ermordung von Kitty Genovese in New York, bei der Medienberichte behaupteten, 38 Nachbarn hätten ohne einzugreifen zugesehen",
-            "Ein Laborexperiment mit elektrischen Schocks",
-            "Eine Überschwemmungskatastrophe ohne Helfer",
-            "Eine Studie über Kinder auf Schulhöfen",
+            "Den Fall eines Kindes, das in einer belebten Straße verunglückte, ohne dass Passanten Hilfe leisteten",
+            "Die Ermordung von Kitty Genovese in New York, bei der laut Medien 38 Nachbarn untätig zusahen",
+            "Ein Laborexperiment mit simulierten elektrischen Schocks und passiven Beobachtern in Gruppen",
+            "Eine Überschwemmungskatastrophe in den USA, bei der Anwohner trotz Warnungen nicht evakuierten",
+            "Eine Feldstudie über unterlassene Hilfeleistung unter Kindern auf öffentlichen Schulhöfen",
           ],
           correctOption: 1,
           explanation:

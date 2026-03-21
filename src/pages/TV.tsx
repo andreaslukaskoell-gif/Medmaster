@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import {
   ArrowLeft,
   BookOpen,
+  Play,
   Send,
   CheckCircle2,
   XCircle,
@@ -730,14 +731,9 @@ export default function TV() {
         </div>
         <div className="flex items-center gap-4 text-sm text-[var(--muted)]">
           <span>5 Texte · 35 Minuten · Multiple-Choice</span>
-          <span className="text-[var(--border)]">|</span>
-          <button
-            onClick={() => setView("strategy")}
-            className="text-[var(--accent)] hover:underline cursor-pointer flex items-center gap-1"
-          >
-            <BookOpen className="w-3.5 h-3.5" />
-            Strategie-Guide
-          </button>
+          <Button variant="outline" size="sm" onClick={() => setView("strategy")}>
+            <BookOpen className="w-4 h-4 mr-1" /> Strategie
+          </Button>
         </div>
         {dailyPlanTvTexts != null && dailyPlanTvTexts > 0 && (
           <div className="text-xs text-[var(--accent)] font-medium mt-2">
@@ -777,20 +773,17 @@ export default function TV() {
                   <span className="text-xs text-[var(--muted)] shrink-0 tabular-nums">
                     {totalQ} Fragen
                   </span>
-                  <button
-                    onClick={() => handleStartSet(i, "practice")}
-                    className="text-xs font-medium text-[var(--accent)] hover:underline cursor-pointer shrink-0"
-                  >
-                    Üben
-                  </button>
-                  <button
+                  <Button variant="premium" size="sm" onClick={() => handleStartSet(i, "practice")}>
+                    <Play className="w-4 h-4 mr-1" /> Üben
+                  </Button>
+                  <Button
+                    variant="outline"
+                    size="sm"
                     onClick={() => handleStartSet(i, "exam")}
-                    className="text-xs font-medium text-[var(--muted)] hover:text-[var(--accent)] hover:underline cursor-pointer shrink-0"
                     title="35 Minuten Timer"
                   >
-                    <Timer className="w-3 h-3 inline mr-0.5" />
-                    Prüfung
-                  </button>
+                    <Timer className="w-4 h-4 mr-1" /> Prüfung
+                  </Button>
                 </div>
               );
             })}
@@ -868,9 +861,13 @@ export default function TV() {
       {/* Klassischer Modus */}
       <section className="space-y-3 border-t border-[var(--border)] pt-8">
         <div className="flex items-baseline justify-between">
-          <h2 className="text-lg font-semibold text-[var(--text-primary)]">Klassischer Modus</h2>
+          <h2 className="text-lg font-semibold text-[var(--text-primary)]">
+            Klassischer Modus{" "}
+            <span className="text-xs font-normal text-[var(--muted)]">(Einfach)</span>
+          </h2>
           <span className="text-xs text-[var(--muted)]">Ableitbar / Nicht ableitbar</span>
         </div>
+        <p className="text-xs text-[var(--muted)] -mt-1">Vereinfachtes Format — für den Einstieg</p>
         <div className="rounded-xl border border-[var(--border)] divide-y divide-[var(--border)] overflow-hidden">
           {displayedLegacyTexts.map((t, i) => (
             <button

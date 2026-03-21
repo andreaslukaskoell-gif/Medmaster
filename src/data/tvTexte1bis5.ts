@@ -31,6 +31,7 @@ Die Forschung zur Darmmikrobiota steht erst am Anfang. Viele Fragen sind noch of
           "Etwa 100 Billionen",
           "Etwa 100 Milliarden",
           "Genauso viele wie der Körper Zellen besitzt",
+          "Etwa 10 Billionen, also ein Zehntel der Körperzellen",
         ],
         correctAnswer: 1,
         explanation:
@@ -45,6 +46,7 @@ Die Forschung zur Darmmikrobiota steht erst am Anfang. Viele Fragen sind noch of
           "Sie produzieren kurzkettige Fettsäuren",
           "Sie verhindern überschießende Immunreaktionen",
           "Sie verstärken die Darmbarriere",
+          "Sie fördern gezielt die Bildung von Immunglobulin A im Blut",
         ],
         correctAnswer: 2,
         explanation:
@@ -59,6 +61,7 @@ Die Forschung zur Darmmikrobiota steht erst am Anfang. Viele Fragen sind noch of
           "Sie sind vollständig resistent gegen Infektionen",
           "Darmbakterien sind für die normale Entwicklung des Immunsystems notwendig",
           "Sie können keine regulatorischen T-Zellen bilden",
+          "Ihre Immunfunktion normalisiert sich vollständig nach Bakterienzugabe",
         ],
         correctAnswer: 2,
         explanation:
@@ -73,6 +76,7 @@ Die Forschung zur Darmmikrobiota steht erst am Anfang. Viele Fragen sind noch of
           "Regulatorische T-Zellen",
           "Kurzkettige Fettsäuren",
           "Probiotika",
+          "Langkettige Aminosäuren wie Glutamin",
         ],
         correctAnswer: 2,
         explanation:
@@ -87,6 +91,7 @@ Die Forschung zur Darmmikrobiota steht erst am Anfang. Viele Fragen sind noch of
           "Hohe Diversität mit vielen verschiedenen Bakterienarten",
           "Vollständige Abwesenheit von Clostridien",
           "Keine Produktion von kurzkettigen Fettsäuren",
+          "Dominanz einer einzelnen besonders leistungsstarken Bakterienart",
         ],
         correctAnswer: 1,
         explanation:
@@ -128,6 +133,7 @@ Kritische Phasen in der Entwicklung bleiben wichtig. Im Kindesalter ist das Gehi
           "Häufig genutzte neuronale Verbindungen werden stärker, ungenutzte verkümmern",
           "Das Gehirn kann nur in der Kindheit lernen",
           "Neue Nervenzellen entstehen nur bei Nutzung",
+          "Synapsen werden nach einmaligem Gebrauch dauerhaft gefestigt",
         ],
         correctAnswer: 1,
         explanation:
@@ -142,6 +148,7 @@ Kritische Phasen in der Entwicklung bleiben wichtig. Im Kindesalter ist das Gehi
           "Ein vergrößerter Hippocampus",
           "Mehr Neuronen in der Amygdala",
           "Verdünnte Bereiche für Aufmerksamkeit",
+          "Eine erhöhte Dichte an Synapsen im gesamten Cortex",
         ],
         correctAnswer: 1,
         explanation:
@@ -156,6 +163,7 @@ Kritische Phasen in der Entwicklung bleiben wichtig. Im Kindesalter ist das Gehi
           "Sie ist nur im Kindesalter möglich",
           "Sie kann auch im erwachsenen Gehirn in bestimmten Regionen auftreten",
           "Sie ist schädlich für die Gehirnfunktion",
+          "Sie findet ausschließlich in der Amygdala statt",
         ],
         correctAnswer: 2,
         explanation:
@@ -170,6 +178,7 @@ Kritische Phasen in der Entwicklung bleiben wichtig. Im Kindesalter ist das Gehi
           "Sie ist immer vorteilhaft für das Gehirn",
           "Sie kann zu negativen Folgen wie chronischen Schmerzen führen",
           "Sie verhindert das Lernen neuer Fähigkeiten",
+          "Sie betrifft nur motorische Fähigkeiten, nicht das Schmerzempfinden",
         ],
         correctAnswer: 2,
         explanation:
@@ -184,6 +193,7 @@ Kritische Phasen in der Entwicklung bleiben wichtig. Im Kindesalter ist das Gehi
           "Isolation und Ruhe",
           "Körperliche Bewegung, geistige Anregung und soziale Interaktionen",
           "Meditation allein",
+          "Intensive kognitive Belastung in Kombination mit Schlafentzug",
         ],
         correctAnswer: 2,
         explanation:
@@ -225,6 +235,7 @@ Trotz des enormen Potenzials bleiben viele Fragen offen. Wie stabil sind epigene
           "Sie aktiviert alle Gene gleichzeitig",
           "Stark methylierte Genabschnitte werden nicht abgelesen",
           "Sie führt immer zu Krebserkrankungen",
+          "Sie betrifft ausschließlich Histonproteine, nicht die DNA selbst",
         ],
         correctAnswer: 2,
         explanation:
@@ -239,6 +250,7 @@ Trotz des enormen Potenzials bleiben viele Fragen offen. Wie stabil sind epigene
           "Sie entwickeln niemals unterschiedliche Krankheiten",
           "Epigenetische Unterschiede können zu verschiedenen Eigenschaften führen",
           "Ihre DNA unterscheidet sich durch Umwelteinflüsse",
+          "Ihre Unterschiede beruhen hauptsächlich auf somatischen Mutationen",
         ],
         correctAnswer: 2,
         explanation:
@@ -254,6 +266,7 @@ Trotz des enormen Potenzials bleiben viele Fragen offen. Wie stabil sind epigene
           "Epigenetische Veränderungen können über Generationen vererbt werden",
           "Nur Männer vererben epigenetische Markierungen",
           "Hungersnöte haben keine langfristigen biologischen Folgen",
+          "Epigenetische Markierungen werden bei der Gametenbildung ausnahmslos gelöscht",
         ],
         correctAnswer: 1,
         explanation:
@@ -268,6 +281,7 @@ Trotz des enormen Potenzials bleiben viele Fragen offen. Wie stabil sind epigene
           "Sie beeinflussen, wie zugänglich Gene für Transkription sind",
           "Sie verhindern alle Formen von Krebs",
           "Sie haben keinen Einfluss auf die Genexpression",
+          "Sie wirken ausschließlich durch Phosphorylierung der DNA-Doppelhelix",
         ],
         correctAnswer: 1,
         explanation:
@@ -282,6 +296,7 @@ Trotz des enormen Potenzials bleiben viele Fragen offen. Wie stabil sind epigene
           "Nur chemische Gifte können epigenetische Veränderungen auslösen",
           "Ernährung, Stress, Schadstoffe und körperliche Aktivität hinterlassen epigenetische Spuren",
           "Umweltfaktoren löschen alle epigenetischen Markierungen",
+          "Nur während der frühkindlichen Phase können Umweltfaktoren die Epigenetik beeinflussen",
         ],
         correctAnswer: 2,
         explanation:
@@ -324,6 +339,7 @@ Die Geschichte lehrt: Pandemien sind unvermeidlich, aber ihre Folgen hängen von
           "Zwischen 50 und 100 Millionen",
           "Etwa 40 Millionen",
           "90 Prozent der Weltbevölkerung",
+          "Zwischen 10 und 20 Millionen, vorwiegend Soldaten",
         ],
         correctAnswer: 1,
         explanation:
@@ -338,6 +354,7 @@ Die Geschichte lehrt: Pandemien sind unvermeidlich, aber ihre Folgen hängen von
           "Sie betraf nur ältere Menschen",
           "Sie hatte eine hohe Sterblichkeit bei jungen, gesunden Erwachsenen",
           "Sie wurde durch Impfungen vollständig ausgerottet",
+          "Sie führte vor allem bei immungeschwächten Personen zu Todesfällen",
         ],
         correctAnswer: 2,
         explanation:
@@ -353,6 +370,7 @@ Die Geschichte lehrt: Pandemien sind unvermeidlich, aber ihre Folgen hängen von
           "Vollständige Entvölkerung Europas",
           "Stärkung der Position von Bauern und Handwerkern",
           "Einführung der Impfpflicht",
+          "Zentralisierung der Macht bei religiösen Autoritäten",
         ],
         correctAnswer: 2,
         explanation:
@@ -368,6 +386,7 @@ Die Geschichte lehrt: Pandemien sind unvermeidlich, aber ihre Folgen hängen von
           "Nur globale Mobilität erhöht das Risiko",
           "Mehrere Faktoren wie Mobilität, Entwaldung und Massentierhaltung erhöhen das Risiko",
           "Der Klimawandel hat keinen Einfluss auf Pandemien",
+          "Die Urbanisierung ist der einzige relevante Risikofaktor der Neuzeit",
         ],
         correctAnswer: 2,
         explanation:
@@ -382,6 +401,7 @@ Die Geschichte lehrt: Pandemien sind unvermeidlich, aber ihre Folgen hängen von
           "Es führte zu keinen medizinischen Fortschritten",
           "Es mobilisierte Patientenaktivismus und revolutionierte die Arzneimittelentwicklung",
           "Es tötete mehr Menschen als die Spanische Grippe",
+          "Es wurde durch Quarantänemaßnahmen innerhalb weniger Jahre eingedämmt",
         ],
         correctAnswer: 2,
         explanation:
@@ -425,6 +445,7 @@ Wissenschaftler suchen nach alternativen Ansätzen: Bakteriophagen (Viren, die B
           "Durch einen Zufall mit einem kontaminierten Bakterienkulturgefäß",
           "Durch Experimente im Zweiten Weltkrieg",
           "Durch Zusammenarbeit mit Howard Florey",
+          "Durch gezielte Analyse verschiedener Schimmelpilzarten auf ihre Wirksamkeit",
         ],
         correctAnswer: 1,
         explanation:
@@ -440,6 +461,7 @@ Wissenschaftler suchen nach alternativen Ansätzen: Bakteriophagen (Viren, die B
           "Bakterielle Infektionen töteten viele Soldaten, was zur Massenproduktion führte",
           "Vorher gab es keine bakteriellen Infektionen",
           "Der Schimmelpilz wurde erst im Krieg entdeckt",
+          "Die britische Regierung hatte die Forschung bis dahin aus ethischen Gründen verboten",
         ],
         correctAnswer: 1,
         explanation:
@@ -454,6 +476,7 @@ Wissenschaftler suchen nach alternativen Ansätzen: Bakteriophagen (Viren, die B
           "Fleming, Florey und Chain",
           "Nur Howard Florey und Ernst Boris Chain",
           "Selman Waksman",
+          "Fleming und Waksman gemeinsam",
         ],
         correctAnswer: 1,
         explanation:
@@ -467,6 +490,7 @@ Wissenschaftler suchen nach alternativen Ansätzen: Bakteriophagen (Viren, die B
           "Fleming warnte bereits 1945 vor diesem Problem",
           "Sie entstehen nur durch genetische Manipulation im Labor",
           "Sie sind heute kein relevantes Problem mehr",
+          "Sie treten nur bei gramnegativen Bakterien auf",
         ],
         correctAnswer: 1,
         explanation:
@@ -480,6 +504,7 @@ Wissenschaftler suchen nach alternativen Ansätzen: Bakteriophagen (Viren, die B
           "Die Forschung ist nicht mehr nötig, da alle Infektionen behandelbar sind",
           "Die Forschung ist aufwändig und teuer, mit geringen Gewinnmargen für Unternehmen",
           "Bakteriophagen haben Antibiotika vollständig ersetzt",
+          "Staatliche Regulierungen verbieten die Erforschung neuer Antibiotikaklassen",
         ],
         correctAnswer: 2,
         explanation:

@@ -189,14 +189,9 @@ export default function SEK() {
         </div>
         <div className="flex items-center gap-4 text-sm text-[var(--muted)]">
           <span>3 Untertests · 7 Basisemotionen nach Ekman</span>
-          <span className="text-[var(--border)]">|</span>
-          <button
-            onClick={() => setView("strategy")}
-            className="text-[var(--accent)] hover:underline cursor-pointer flex items-center gap-1"
-          >
-            <BookOpen className="w-3.5 h-3.5" />
-            Strategie-Guide
-          </button>
+          <Button variant="outline" size="sm" onClick={() => setView("strategy")}>
+            <BookOpen className="w-4 h-4 mr-1" /> Strategie
+          </Button>
         </div>
         {dailyPlanSek != null && dailyPlanSek.length > 0 && (
           <div className="text-xs text-[var(--accent)] font-medium mt-2">
@@ -251,7 +246,7 @@ export default function SEK() {
             <div className="flex items-center gap-2 shrink-0">
               <OfficialInstructionCard title={s.instructionTitle} instruction={s.instruction} />
               <Button variant="premium" size="sm" onClick={s.onStart} disabled={s.taskCount === 0}>
-                Üben <ArrowRight className="w-3.5 h-3.5 ml-1" />
+                <Play className="w-4 h-4 mr-1" /> Üben
               </Button>
             </div>
           </div>

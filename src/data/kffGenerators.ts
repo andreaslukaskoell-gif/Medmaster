@@ -2444,7 +2444,7 @@ export function generateAllWordFluencyTasksFromLexicon(): WordFluencyTask[] {
  * Min distinct letters: 5 (1 correct + 4 distractors from word).
  */
 export function generateWordFluencyTask(difficulty: 1 | 2 | 3): WordFluencyTask {
-  // Official IB WF 26: words are 7-10 letters — borrow from diff 2 if diff 1 has none
+  // Official MedAT WF: words are 7-15 letters (ÖH Wien KFF Skript)
   const allPools = [
     ...TRAINING_WF_WORDS[difficulty],
     ...(difficulty === 1 ? TRAINING_WF_WORDS[2] : []),
@@ -2498,7 +2498,7 @@ export function generateWordFluencyTask(difficulty: 1 | 2 | 3): WordFluencyTask 
 
 function generateWordFluencyTaskFallback(difficulty: 1 | 2 | 3): WordFluencyTask {
   const pool = TRAINING_WF_WORDS[difficulty];
-  // Official IB WF 26: minimum 7 letters + at least 5 distinct (all options from word letters)
+  // Official MedAT WF: 7-15 letters + at least 5 distinct (all options from word letters)
   const withEnoughLetters = pool.filter(
     (w) => w.length >= 7 && new Set(w.toUpperCase().split("")).size >= 5
   );
@@ -2926,21 +2926,6 @@ const TRAINING_TERM_TRIPELS: [TrainingBegriff, TrainingBegriff, TrainingBegriff]
     { s: "Disziplin", p: "Disziplinen" },
   ],
   [
-    { s: "Symbol", p: "Symbole" },
-    { s: "Zeichen", p: "Zeichen" },
-    { s: "Markierung", p: "Markierungen" },
-  ],
-  [
-    { s: "Behälter", p: "Behälter" },
-    { s: "Gefäß", p: "Gefäße" },
-    { s: "Kontainer", p: "Kontainer" },
-  ],
-  [
-    { s: "Verfahren", p: "Verfahren" },
-    { s: "Methode", p: "Methoden" },
-    { s: "Technik", p: "Techniken" },
-  ],
-  [
     { s: "Rahmen", p: "Rahmen" },
     { s: "Struktur", p: "Strukturen" },
     { s: "Schema", p: "Schemata" },
@@ -2965,11 +2950,6 @@ const TRAINING_TERM_TRIPELS: [TrainingBegriff, TrainingBegriff, TrainingBegriff]
     { s: "Anzeiger", p: "Anzeiger" },
     { s: "Signal", p: "Signale" },
   ],
-  [
-    { s: "Variante", p: "Varianten" },
-    { s: "Ausführung", p: "Ausführungen" },
-    { s: "Version", p: "Versionen" },
-  ],
   // 15 new triplets for session variety
   [
     { s: "Fahrzeug", p: "Fahrzeuge" },
@@ -2982,16 +2962,6 @@ const TRAINING_TERM_TRIPELS: [TrainingBegriff, TrainingBegriff, TrainingBegriff]
     { s: "Lebewesen", p: "Lebewesen" },
   ],
   [
-    { s: "Gebäude", p: "Gebäude" },
-    { s: "Bauwerk", p: "Bauwerke" },
-    { s: "Konstruktion", p: "Konstruktionen" },
-  ],
-  [
-    { s: "Dokument", p: "Dokumente" },
-    { s: "Schriftstück", p: "Schriftstücke" },
-    { s: "Unterlage", p: "Unterlagen" },
-  ],
-  [
     { s: "Mineral", p: "Minerale" },
     { s: "Gestein", p: "Gesteine" },
     { s: "Kristall", p: "Kristalle" },
@@ -3002,34 +2972,9 @@ const TRAINING_TERM_TRIPELS: [TrainingBegriff, TrainingBegriff, TrainingBegriff]
     { s: "Welle", p: "Wellen" },
   ],
   [
-    { s: "Prozess", p: "Prozesse" },
-    { s: "Vorgang", p: "Vorgänge" },
-    { s: "Ablauf", p: "Abläufe" },
-  ],
-  [
-    { s: "Eigenschaft", p: "Eigenschaften" },
-    { s: "Merkmal", p: "Merkmale" },
-    { s: "Attribut", p: "Attribute" },
-  ],
-  [
-    { s: "Lösung", p: "Lösungen" },
-    { s: "Ergebnis", p: "Ergebnisse" },
-    { s: "Resultat", p: "Resultate" },
-  ],
-  [
     { s: "Instrument", p: "Instrumente" },
     { s: "Apparat", p: "Apparate" },
     { s: "Vorrichtung", p: "Vorrichtungen" },
-  ],
-  [
-    { s: "Abschnitt", p: "Abschnitte" },
-    { s: "Segment", p: "Segmente" },
-    { s: "Teilstück", p: "Teilstücke" },
-  ],
-  [
-    { s: "Prinzip", p: "Prinzipien" },
-    { s: "Grundsatz", p: "Grundsätze" },
-    { s: "Regel", p: "Regeln" },
   ],
   [
     { s: "Substanz", p: "Substanzen" },
@@ -3146,6 +3091,332 @@ const TRAINING_TERM_TRIPELS: [TrainingBegriff, TrainingBegriff, TrainingBegriff]
     { s: "Stern", p: "Sterne" },
     { s: "Planet", p: "Planeten" },
     { s: "Himmelskörper", p: "Himmelskörper" },
+  ],
+  // 65 diverse cross-domain triplets (terms within each triplet are logically unrelated)
+  [
+    { s: "Richter", p: "Richter" },
+    { s: "Zeuge", p: "Zeugen" },
+    { s: "Angeklagter", p: "Angeklagte" },
+  ],
+  [
+    { s: "Pendler", p: "Pendler" },
+    { s: "Vegetarier", p: "Vegetarier" },
+    { s: "Sportler", p: "Sportler" },
+  ],
+  [
+    { s: "Briefmarke", p: "Briefmarken" },
+    { s: "Schlüssel", p: "Schlüssel" },
+    { s: "Kalender", p: "Kalender" },
+  ],
+  [
+    { s: "Schiedsrichter", p: "Schiedsrichter" },
+    { s: "Trainer", p: "Trainer" },
+    { s: "Zuschauer", p: "Zuschauer" },
+  ],
+  [
+    { s: "Mieter", p: "Mieter" },
+    { s: "Vermieter", p: "Vermieter" },
+    { s: "Makler", p: "Makler" },
+  ],
+  [
+    { s: "Argument", p: "Argumente" },
+    { s: "Behauptung", p: "Behauptungen" },
+    { s: "Widerspruch", p: "Widersprüche" },
+  ],
+  [
+    { s: "Handwerker", p: "Handwerker" },
+    { s: "Kunde", p: "Kunden" },
+    { s: "Lieferant", p: "Lieferanten" },
+  ],
+  [
+    { s: "Rätsel", p: "Rätsel" },
+    { s: "Hinweis", p: "Hinweise" },
+    { s: "Verdächtiger", p: "Verdächtige" },
+  ],
+  [
+    { s: "Bürger", p: "Bürger" },
+    { s: "Beamter", p: "Beamte" },
+    { s: "Abgeordneter", p: "Abgeordnete" },
+  ],
+  [
+    { s: "Prüfling", p: "Prüflinge" },
+    { s: "Aufsicht", p: "Aufsichten" },
+    { s: "Korrektor", p: "Korrektoren" },
+  ],
+  [
+    { s: "Schachfigur", p: "Schachfiguren" },
+    { s: "Spielbrett", p: "Spielbretter" },
+    { s: "Würfel", p: "Würfel" },
+  ],
+  [
+    { s: "Fenster", p: "Fenster" },
+    { s: "Treppe", p: "Treppen" },
+    { s: "Kamin", p: "Kamine" },
+  ],
+  [
+    { s: "Erfindung", p: "Erfindungen" },
+    { s: "Patent", p: "Patente" },
+    { s: "Prototyp", p: "Prototypen" },
+  ],
+  [
+    { s: "Journalist", p: "Journalisten" },
+    { s: "Leser", p: "Leser" },
+    { s: "Verleger", p: "Verleger" },
+  ],
+  [
+    { s: "Passagier", p: "Passagiere" },
+    { s: "Pilot", p: "Piloten" },
+    { s: "Fluglotse", p: "Fluglotsen" },
+  ],
+  [
+    { s: "Gewohnheit", p: "Gewohnheiten" },
+    { s: "Vorurteil", p: "Vorurteile" },
+    { s: "Überzeugung", p: "Überzeugungen" },
+  ],
+  [
+    { s: "Sammler", p: "Sammler" },
+    { s: "Händler", p: "Händler" },
+    { s: "Gutachter", p: "Gutachter" },
+  ],
+  [
+    { s: "Ereignis", p: "Ereignisse" },
+    { s: "Ursache", p: "Ursachen" },
+    { s: "Folge", p: "Folgen" },
+  ],
+  [
+    { s: "Dirigent", p: "Dirigenten" },
+    { s: "Solist", p: "Solisten" },
+    { s: "Komponist", p: "Komponisten" },
+  ],
+  [
+    { s: "Architekt", p: "Architekten" },
+    { s: "Statiker", p: "Statiker" },
+    { s: "Bauarbeiter", p: "Bauarbeiter" },
+  ],
+  [
+    { s: "Fossil", p: "Fossilien" },
+    { s: "Artefakt", p: "Artefakte" },
+    { s: "Fundstück", p: "Fundstücke" },
+  ],
+  [
+    { s: "Rezept", p: "Rezepte" },
+    { s: "Vorschrift", p: "Vorschriften" },
+    { s: "Anleitung", p: "Anleitungen" },
+  ],
+  [
+    { s: "Übersetzer", p: "Übersetzer" },
+    { s: "Autor", p: "Autoren" },
+    { s: "Kritiker", p: "Kritiker" },
+  ],
+  [
+    { s: "Versprechen", p: "Versprechen" },
+    { s: "Drohung", p: "Drohungen" },
+    { s: "Warnung", p: "Warnungen" },
+  ],
+  [
+    { s: "Wähler", p: "Wähler" },
+    { s: "Kandidat", p: "Kandidaten" },
+    { s: "Wahlhelfer", p: "Wahlhelfer" },
+  ],
+  [
+    { s: "Hafen", p: "Häfen" },
+    { s: "Leuchtturm", p: "Leuchttürme" },
+    { s: "Schleuse", p: "Schleusen" },
+  ],
+  [
+    { s: "Semester", p: "Semester" },
+    { s: "Vorlesung", p: "Vorlesungen" },
+    { s: "Prüfung", p: "Prüfungen" },
+  ],
+  [
+    { s: "Gläubiger", p: "Gläubiger" },
+    { s: "Schuldner", p: "Schuldner" },
+    { s: "Bürge", p: "Bürgen" },
+  ],
+  [
+    { s: "Forscher", p: "Forscher" },
+    { s: "Proband", p: "Probanden" },
+    { s: "Gutachter", p: "Gutachter" },
+  ],
+  [
+    { s: "Vulkan", p: "Vulkane" },
+    { s: "Geysir", p: "Geysire" },
+    { s: "Gletscher", p: "Gletscher" },
+  ],
+  [
+    { s: "Paragraph", p: "Paragraphen" },
+    { s: "Klausel", p: "Klauseln" },
+    { s: "Satzung", p: "Satzungen" },
+  ],
+  [
+    { s: "Pächter", p: "Pächter" },
+    { s: "Erbe", p: "Erben" },
+    { s: "Treuhänder", p: "Treuhänder" },
+  ],
+  [
+    { s: "Expedition", p: "Expeditionen" },
+    { s: "Entdeckung", p: "Entdeckungen" },
+    { s: "Reisebericht", p: "Reiseberichte" },
+  ],
+  [
+    { s: "Bibliothekar", p: "Bibliothekare" },
+    { s: "Archivar", p: "Archivare" },
+    { s: "Kurator", p: "Kuratoren" },
+  ],
+  [
+    { s: "Hürde", p: "Hürden" },
+    { s: "Anreiz", p: "Anreize" },
+    { s: "Frist", p: "Fristen" },
+  ],
+  [
+    { s: "Schüler", p: "Schüler" },
+    { s: "Tutor", p: "Tutoren" },
+    { s: "Schulleiter", p: "Schulleiter" },
+  ],
+  [
+    { s: "Währung", p: "Währungen" },
+    { s: "Anleihe", p: "Anleihen" },
+    { s: "Aktie", p: "Aktien" },
+  ],
+  [
+    { s: "Gärtner", p: "Gärtner" },
+    { s: "Förster", p: "Förster" },
+    { s: "Winzer", p: "Winzer" },
+  ],
+  [
+    { s: "Grenze", p: "Grenzen" },
+    { s: "Schwelle", p: "Schwellen" },
+    { s: "Übergang", p: "Übergänge" },
+  ],
+  [
+    { s: "Redner", p: "Redner" },
+    { s: "Moderator", p: "Moderatoren" },
+    { s: "Zuhörer", p: "Zuhörer" },
+  ],
+  [
+    { s: "Lehrling", p: "Lehrlinge" },
+    { s: "Geselle", p: "Gesellen" },
+    { s: "Meister", p: "Meister" },
+  ],
+  [
+    { s: "Manuskript", p: "Manuskripte" },
+    { s: "Entwurf", p: "Entwürfe" },
+    { s: "Skizze", p: "Skizzen" },
+  ],
+  [
+    { s: "Käufer", p: "Käufer" },
+    { s: "Verkäufer", p: "Verkäufer" },
+    { s: "Vermittler", p: "Vermittler" },
+  ],
+  [
+    { s: "Insel", p: "Inseln" },
+    { s: "Halbinsel", p: "Halbinseln" },
+    { s: "Archipel", p: "Archipele" },
+  ],
+  [
+    { s: "Gewitter", p: "Gewitter" },
+    { s: "Dürre", p: "Dürren" },
+    { s: "Flut", p: "Fluten" },
+  ],
+  [
+    { s: "Anwalt", p: "Anwälte" },
+    { s: "Notar", p: "Notare" },
+    { s: "Staatsanwalt", p: "Staatsanwälte" },
+  ],
+  [
+    { s: "Steuerzahler", p: "Steuerzahler" },
+    { s: "Rentner", p: "Rentner" },
+    { s: "Selbstständiger", p: "Selbstständige" },
+  ],
+  [
+    { s: "Denkmal", p: "Denkmäler" },
+    { s: "Ruine", p: "Ruinen" },
+    { s: "Festung", p: "Festungen" },
+  ],
+  [
+    { s: "Gleichung", p: "Gleichungen" },
+    { s: "Beweis", p: "Beweise" },
+    { s: "Axiom", p: "Axiome" },
+  ],
+  [
+    { s: "Regisseur", p: "Regisseure" },
+    { s: "Schauspieler", p: "Schauspieler" },
+    { s: "Drehbuchautor", p: "Drehbuchautoren" },
+  ],
+  [
+    { s: "Satellit", p: "Satelliten" },
+    { s: "Sonde", p: "Sonden" },
+    { s: "Teleskop", p: "Teleskope" },
+  ],
+  [
+    { s: "Pfand", p: "Pfänder" },
+    { s: "Kaution", p: "Kautionen" },
+    { s: "Bürgschaft", p: "Bürgschaften" },
+  ],
+  [
+    { s: "Koch", p: "Köche" },
+    { s: "Kellner", p: "Kellner" },
+    { s: "Sommelier", p: "Sommeliers" },
+  ],
+  [
+    { s: "Stiftung", p: "Stiftungen" },
+    { s: "Verein", p: "Vereine" },
+    { s: "Genossenschaft", p: "Genossenschaften" },
+  ],
+  [
+    { s: "Kompass", p: "Kompasse" },
+    { s: "Landkarte", p: "Landkarten" },
+    { s: "Koordinate", p: "Koordinaten" },
+  ],
+  [
+    { s: "Dolmetscher", p: "Dolmetscher" },
+    { s: "Diplomat", p: "Diplomaten" },
+    { s: "Konsul", p: "Konsuln" },
+  ],
+  [
+    { s: "Apotheker", p: "Apotheker" },
+    { s: "Optiker", p: "Optiker" },
+    { s: "Zahntechniker", p: "Zahntechniker" },
+  ],
+  [
+    { s: "Hypothek", p: "Hypotheken" },
+    { s: "Kredit", p: "Kredite" },
+    { s: "Zinssatz", p: "Zinssätze" },
+  ],
+  [
+    { s: "Schornstein", p: "Schornsteine" },
+    { s: "Dachrinne", p: "Dachrinnen" },
+    { s: "Fundament", p: "Fundamente" },
+  ],
+  [
+    { s: "Biologe", p: "Biologen" },
+    { s: "Geologe", p: "Geologen" },
+    { s: "Physiker", p: "Physiker" },
+  ],
+  [
+    { s: "Verteidiger", p: "Verteidiger" },
+    { s: "Stürmer", p: "Stürmer" },
+    { s: "Torwart", p: "Torwarte" },
+  ],
+  [
+    { s: "Praktikant", p: "Praktikanten" },
+    { s: "Referendar", p: "Referendare" },
+    { s: "Volontär", p: "Volontäre" },
+  ],
+  [
+    { s: "Brunnen", p: "Brunnen" },
+    { s: "Staudamm", p: "Staudämme" },
+    { s: "Aquädukt", p: "Aquädukte" },
+  ],
+  [
+    { s: "Phänomen", p: "Phänomene" },
+    { s: "Paradoxon", p: "Paradoxa" },
+    { s: "Anomalie", p: "Anomalien" },
+  ],
+  [
+    { s: "Tresor", p: "Tresore" },
+    { s: "Schließfach", p: "Schließfächer" },
+    { s: "Vitrine", p: "Vitrinen" },
   ],
 ];
 
@@ -3315,12 +3586,6 @@ const TRAINING_MODES: TrainingSyllogismMode[] = [
     name: "Ferio",
   },
   {
-    p1: (_s, m, p) => `Alle ${m.p} sind keine ${p.p}`,
-    p2: (s, m) => `Alle ${s.p} sind ${m.p}`,
-    conclusion: (s, _m, p) => `Alle ${s.p} sind keine ${p.p}`,
-    name: "Alle-keine-Kette",
-  },
-  {
     p1: (_s, m, p) => `Alle ${m.p} sind ${p.p}`,
     p2: (s, m) => `Alle ${m.p} sind ${s.p}`,
     conclusion: (s, _m, p) => `Einige ${s.p} sind ${p.p}`,
@@ -3382,6 +3647,39 @@ const TRAINING_MODES: TrainingSyllogismMode[] = [
     name: "Fresison",
   },
 ];
+
+/**
+ * Compute which golden rules apply based on premise and conclusion content.
+ * Rules: 1=Two "einige"→E, 2=Two "keine"→E, 3=No "keine" in premises→no "keine" in conclusion,
+ * 4=One "keine" in premise→conclusion must have "keine", 5=One "einige"→conclusion must have "einige"
+ */
+function computeRulesApplied(premise1: string, premise2: string, conclusion: string): number[] {
+  const rules: number[] = [];
+  const p1HasKeine = /sind keine/.test(premise1);
+  const p2HasKeine = /sind keine/.test(premise2);
+  const p1HasEinige = /^Einige /.test(premise1) || /^„Einige /.test(premise1);
+  const p2HasEinige = /^Einige /.test(premise2) || /^„Einige /.test(premise2);
+  const conclusionHasKeine = /sind keine/.test(conclusion);
+  const conclusionHasEinige = /^Einige /.test(conclusion) || /^„Einige /.test(conclusion);
+
+  // Rule 3: no "keine" in premises → conclusion has no "keine"
+  if (!p1HasKeine && !p2HasKeine && !conclusionHasKeine) rules.push(3);
+  // Rule 4: one "keine" in premises → conclusion must have "keine"
+  if ((p1HasKeine || p2HasKeine) && conclusionHasKeine) rules.push(4);
+  // Rule 5: one "einige" in premises → conclusion must have "einige"
+  if ((p1HasEinige || p2HasEinige) && conclusionHasEinige) rules.push(5);
+  // Rule 3+5 combo: no "keine" + has "einige"
+  if (
+    !p1HasKeine &&
+    !p2HasKeine &&
+    !conclusionHasKeine &&
+    conclusionHasEinige &&
+    !rules.includes(5)
+  )
+    rules.push(5);
+
+  return rules.length > 0 ? rules : [3];
+}
 
 /** MedAT-Stil: Optionen A–D bilden das systematische 4er-Gitter mit gleichem Subjekt+Prädikat, Position zufällig. */
 function buildOptionGrid(subj: string, pred: string): [string, string, string, string] {
@@ -3449,7 +3747,7 @@ export function generateImplicationTrainingTask(difficulty: 1 | 2 | 3): Implikat
     // Valid syllogism mode (one of A–D is correct)
     const mode =
       difficulty === 1
-        ? TRAINING_MODES[randInt(0, 2)]
+        ? TRAINING_MODES[randInt(0, 3)]
         : TRAINING_MODES[randInt(0, TRAINING_MODES.length - 1)];
 
     const premise1 = mode.p1(s, m, p);
@@ -3480,7 +3778,7 @@ export function generateImplicationTrainingTask(difficulty: 1 | 2 | 3): Implikat
       correctAnswer: correctIdx,
       explanation: `${mode.name}: Aus den Prämissen folgt zwingend: „${correctConclusion}".`,
       difficulty,
-      rulesApplied: [3],
+      rulesApplied: computeRulesApplied(premise1, premise2, correctConclusion),
     };
 
     if (!validateImplikationTask(task)) continue;
@@ -3517,7 +3815,7 @@ function generateImplicationTrainingTaskFallback(difficulty: 1 | 2 | 3): Implika
       correctAnswer: correctIdx,
       explanation: `Aus den Prämissen folgt: „${correctConclusion}".`,
       difficulty,
-      rulesApplied: [3],
+      rulesApplied: computeRulesApplied(premise1, premise2, correctConclusion),
     };
     if (validateImplikationTask(task) && hasVisualSolutionForImplikationTask(task)) return task;
   }
