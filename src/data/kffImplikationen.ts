@@ -1,5 +1,5 @@
 // Implikationen erkennen – MedAT-H KFF Subtest
-// 80 Übungsaufgaben (IMPLIKATION_PRACTICE_TASKS) + 4 offizielle Beispiele (OFFICIAL_IMPLICATION_EXAMPLES)
+// 66 Übungsaufgaben (IMPLIKATION_PRACTICE_TASKS) + 4 offizielle Beispiele (OFFICIAL_IMPLICATION_EXAMPLES)
 //
 // Goldene Regeln:
 // 1. Zwei "einige"-Prämissen → KEIN gültiger Schluss (Antwort E)
@@ -512,23 +512,6 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
     rulesApplied: [3, 5],
   },
   {
-    id: "imp-25",
-    premise1: "Alle Kirschen sind Früchte.",
-    premise2: "Einige Kirschen sind keine Importwaren.",
-    options: [
-      "Alle Früchte sind Importwaren.",
-      "Alle Früchte sind keine Importwaren.",
-      "Einige Früchte sind Importwaren.",
-      "Einige Früchte sind keine Importwaren.",
-      "Keine der Schlussfolgerungen ist richtig.",
-    ],
-    correctAnswer: 3,
-    explanation:
-      "Alle A sind B, Einige A sind keine C. Die einigen Kirschen, die nicht rot sind, sind zugleich Früchte. Regel 4: 'keine' in Prämisse → 'keine' im Schluss. Regel 5: 'einige' → 'einige'. Im Euler-Diagramm: Kirschen ⊆ Früchte, und ein Teil der Kirschen liegt außerhalb der roten Dinge. Dieser Teil ist auch in Früchte. Daher: Einige Früchte sind keine roten Dinge. A ist zu stark, D widerspricht Prämisse 2.",
-    difficulty: 2,
-    rulesApplied: [4, 5],
-  },
-  {
     id: "imp-26",
     premise1: "Alle Fußbälle sind Sportgeräte.",
     premise2: "Einige Sportgeräte sind Luxusartikel.",
@@ -603,108 +586,6 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
     rulesApplied: [1],
   },
   {
-    id: "imp-30",
-    premise1: "Einige Katzen sind Wildtiere.",
-    premise2: "Einige Wildtiere sind Raubtiere.",
-    options: [
-      "Alle Katzen sind Raubtiere.",
-      "Alle Katzen sind keine Raubtiere.",
-      "Einige Katzen sind Raubtiere.",
-      "Einige Katzen sind keine Raubtiere.",
-      "Keine der Schlussfolgerungen ist richtig.",
-    ],
-    correctAnswer: 4,
-    explanation:
-      "Zwei 'einige'-Prämissen: Regel 1 greift direkt. Die einigen Katzen, die wild sind, und die einigen wilden Tiere, die gefährlich sind, müssen nicht dieselben sein. Im Euler-Diagramm könnten die wilden Katzen und die gefährlichen wilden Tiere komplett disjunkte Teilmengen der wilden Tiere sein. Kein zwingender Schluss möglich, daher E.",
-    difficulty: 3,
-    rulesApplied: [1],
-  },
-  {
-    id: "imp-31",
-    premise1: "Alle Äpfel sind keine Gemüse.",
-    premise2: "Alle Karotten sind keine Gemüse.",
-    options: [
-      "Alle Äpfel sind Karotten.",
-      "Alle Äpfel sind keine Karotten.",
-      "Einige Äpfel sind Karotten.",
-      "Einige Äpfel sind keine Karotten.",
-      "Keine der Schlussfolgerungen ist richtig.",
-    ],
-    correctAnswer: 4,
-    explanation:
-      "Zwei 'keine'-Prämissen: Regel 2 greift – aus zwei negativen Prämissen lässt sich kein zwingender Schluss ableiten. Im Euler-Diagramm: Äpfel und Karotten sind beide disjunkt zu Gemüse, aber über das Verhältnis von Äpfeln zu Karotten sagt das nichts aus. Sie könnten identisch, überlappend oder vollständig getrennt sein. Daher ist E korrekt.",
-    difficulty: 3,
-    rulesApplied: [2],
-  },
-  {
-    id: "imp-32",
-    premise1: "Alle Hunde sind keine Katzen.",
-    premise2: "Alle Perser sind keine Katzen.",
-    options: [
-      "Alle Hunde sind Perser.",
-      "Alle Hunde sind keine Perser.",
-      "Einige Hunde sind Perser.",
-      "Einige Hunde sind keine Perser.",
-      "Keine der Schlussfolgerungen ist richtig.",
-    ],
-    correctAnswer: 4,
-    explanation:
-      "Zwei 'keine'-Prämissen: Regel 2 besagt, dass aus zwei negativen Prämissen kein zwingender Schluss folgt. Im Euler-Diagramm: Hunde ∩ Katzen = ∅ und Perser ∩ Katzen = ∅. Aber 'Perser' hier sind mehrdeutig – sind es Perser(katzen)? Unabhängig davon: Dass beide nicht Katzen sind, sagt über das Verhältnis Hunde-Perser nichts. Daher E. Achtung: C klingt plausibel, ist aber nicht zwingend, da Hunde und Perser sich theoretisch überlappen könnten.",
-    difficulty: 3,
-    rulesApplied: [2],
-  },
-  {
-    id: "imp-33",
-    premise1: "Einige Wiener sind Studenten.",
-    premise2: "Einige Studenten sind Sportler.",
-    options: [
-      "Alle Wiener sind Sportler.",
-      "Alle Wiener sind keine Sportler.",
-      "Einige Wiener sind Sportler.",
-      "Einige Wiener sind keine Sportler.",
-      "Keine der Schlussfolgerungen ist richtig.",
-    ],
-    correctAnswer: 4,
-    explanation:
-      "Zwei 'einige'-Prämissen: Regel 1 greift. Die Wiener Studenten und die sportlichen Studenten können völlig verschiedene Teilgruppen der Studenten sein. Im Euler-Diagramm: Die Schnittmenge Wiener∩Studenten und die Schnittmenge Studenten∩Sportler müssen sich nicht überlappen. Es gibt keinen zwingenden Zusammenhang zwischen Wienern und Sportlern. Daher E.",
-    difficulty: 3,
-    rulesApplied: [1],
-  },
-  {
-    id: "imp-34",
-    premise1: "Alle Pianisten sind keine Tänzer.",
-    premise2: "Alle Sänger sind keine Tänzer.",
-    options: [
-      "Alle Pianisten sind Sänger.",
-      "Alle Pianisten sind keine Sänger.",
-      "Einige Pianisten sind Sänger.",
-      "Einige Pianisten sind keine Sänger.",
-      "Keine der Schlussfolgerungen ist richtig.",
-    ],
-    correctAnswer: 4,
-    explanation:
-      "Zwei 'keine'-Prämissen: Regel 2 greift. Pianisten und Sänger sind beide disjunkt zu Tänzern, aber ihr Verhältnis zueinander ist unbestimmt. Im Euler-Diagramm: Pianisten ∩ Tänzer = ∅ und Sänger ∩ Tänzer = ∅. Pianisten und Sänger könnten identisch, überlappend oder disjunkt sein. C klingt verlockend, ist aber nicht zwingend. Daher E.",
-    difficulty: 3,
-    rulesApplied: [2],
-  },
-  {
-    id: "imp-35",
-    premise1: "Einige Lehrer sind keine Eltern.",
-    premise2: "Einige Eltern sind keine Berufstätige.",
-    options: [
-      "Alle Lehrer sind Berufstätige.",
-      "Alle Lehrer sind keine Berufstätige.",
-      "Einige Lehrer sind Berufstätige.",
-      "Einige Lehrer sind keine Berufstätige.",
-      "Keine der Schlussfolgerungen ist richtig.",
-    ],
-    correctAnswer: 4,
-    explanation:
-      "Zwei 'einige'-Prämissen (auch wenn sie 'keine' enthalten, sind es partikuläre Aussagen): Regel 1 greift, da beide Prämissen mit 'Einige' beginnen. Aus zwei partikulären Prämissen folgt kein zwingender Schluss. Im Euler-Diagramm: Die Lehrer außerhalb der Eltern und die Eltern außerhalb der Berufstätigen sind verschiedene Mengen ohne zwingenden Zusammenhang. Daher E.",
-    difficulty: 3,
-    rulesApplied: [1],
-  },
-  {
     id: "imp-36",
     premise1: "Alle Piloten sind Angestellte.",
     premise2: "Alle Ingenieure sind Angestellte.",
@@ -737,57 +618,6 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
       "Obwohl D ('Einige Blumen sind Rosen') intuitiv plausibel erscheint, geht es hier streng um formale Logik. Der Mittelterm 'Blumen' ist in keiner Prämisse verteilt (unverteilte Mitte). Im Euler-Diagramm: Rosen ⊆ Blumen und Tulpen ⊆ Blumen. Über das Verhältnis von Rosen zu Tulpen sagen die Prämissen nichts. D wäre zwar eine Teilumkehrung von Prämisse 1, die in der traditionellen Syllogistik erlaubt wäre, aber formal ist kein NEUER Schluss über das Verhältnis Rosen-Tulpen möglich. E ist korrekt.",
     difficulty: 3,
     rulesApplied: [3],
-  },
-  {
-    id: "imp-38",
-    premise1: "Einige Schüler sind keine Sportler.",
-    premise2: "Einige Sportler sind keine Musiker.",
-    options: [
-      "Alle Schüler sind Musiker.",
-      "Alle Schüler sind keine Musiker.",
-      "Einige Schüler sind Musiker.",
-      "Einige Schüler sind keine Musiker.",
-      "Keine der Schlussfolgerungen ist richtig.",
-    ],
-    correctAnswer: 4,
-    explanation:
-      "Zwei 'einige'-Prämissen: Regel 1 greift. Die Schüler, die keine Sportler sind, und die Sportler, die keine Musiker sind, sind verschiedene Gruppen ohne zwingenden logischen Zusammenhang zwischen Schülern und Musikern. Im Euler-Diagramm: Die nicht-sportlichen Schüler und die nicht-musikalischen Sportler können in jeder denkbaren Relation zueinander stehen. Kein gültiger Schluss, daher E.",
-    difficulty: 3,
-    rulesApplied: [1],
-  },
-  {
-    id: "imp-39",
-    premise1: "Alle Löwen sind keine Pflanzenfresser.",
-    premise2: "Alle Giraffen sind keine Pflanzenfresser.",
-    options: [
-      "Alle Löwen sind Giraffen.",
-      "Alle Löwen sind keine Giraffen.",
-      "Einige Löwen sind Giraffen.",
-      "Einige Löwen sind keine Giraffen.",
-      "Keine der Schlussfolgerungen ist richtig.",
-    ],
-    correctAnswer: 4,
-    explanation:
-      "Zwei 'keine'-Prämissen: Regel 2 greift – aus zwei negativen Prämissen folgt kein gültiger Schluss. Im Euler-Diagramm: Löwen ∩ Pflanzenfresser = ∅ und Giraffen ∩ Pflanzenfresser = ∅. Über die Beziehung Löwen-Giraffen sagt das nichts. Sie könnten disjunkt, überlappend oder (theoretisch in der abstrakten Logik) identisch sein. C klingt inhaltlich richtig, ist aber logisch nicht zwingend ableitbar. Daher E.",
-    difficulty: 3,
-    rulesApplied: [2],
-  },
-  {
-    id: "imp-40",
-    premise1: "Einige Bücher sind Antiquitäten.",
-    premise2: "Einige Antiquitäten sind Sammlerstücke.",
-    options: [
-      "Alle Bücher sind Sammlerstücke.",
-      "Alle Bücher sind keine Sammlerstücke.",
-      "Einige Bücher sind Sammlerstücke.",
-      "Einige Bücher sind keine Sammlerstücke.",
-      "Keine der Schlussfolgerungen ist richtig.",
-    ],
-    correctAnswer: 4,
-    explanation:
-      "Zwei 'einige'-Prämissen: Regel 1 greift. Die alten Bücher und die alten wertvollen Dinge können völlig unterschiedliche Teilmengen der alten Dinge sein. Im Euler-Diagramm: Bücher ∩ alt ≠ ∅ und alt ∩ wertvoll ≠ ∅, aber Bücher ∩ wertvoll kann leer sein. Daher gibt es keinen zwingenden Schluss. E ist korrekt.",
-    difficulty: 3,
-    rulesApplied: [1],
   },
   {
     id: "imp-41",
@@ -944,7 +774,7 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
     correctAnswer: 4,
     explanation:
       "Alle A sind keine B, Alle B sind C. Asteroiden und Planeten sind disjunkt, aber Asteroiden könnten trotzdem Himmelskörper sein (oder auch nicht) — die Prämissen geben darüber keine zwingende Auskunft. Im Euler-Diagramm: A ∩ B = ∅ und B ⊆ C, aber A kann innerhalb oder außerhalb von C liegen. Kein zwingender Schluss. E ist korrekt.",
-    difficulty: 1,
+    difficulty: 2,
     rulesApplied: [4],
   },
   {
@@ -1366,23 +1196,6 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
     rulesApplied: [1],
   },
   {
-    id: "imp-74",
-    premise1: "Alle Kontinente sind keine Inseln.",
-    premise2: "Alle Kontinente sind keine Ozeane.",
-    options: [
-      "Alle Inseln sind Ozeane.",
-      "Alle Inseln sind keine Ozeane.",
-      "Einige Inseln sind Ozeane.",
-      "Einige Inseln sind keine Ozeane.",
-      "Keine der Schlussfolgerungen ist richtig.",
-    ],
-    correctAnswer: 4,
-    explanation:
-      "Zwei 'keine'-Prämissen: Regel 2 greift. Kontinent ∩ Insel = ∅ und Kontinent ∩ Ozean = ∅, aber über Inseln und Ozeane wird nichts ausgesagt. Im Euler-Diagramm können Inseln und Ozeane beliebig zueinander stehen. Kein zwingender Schluss. E ist korrekt.",
-    difficulty: 3,
-    rulesApplied: [2],
-  },
-  {
     id: "imp-75",
     premise1: "Alle Atome sind keine Moleküle.",
     premise2: "Einige Teilchen sind Atome.",
@@ -1398,57 +1211,6 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
       "Alle A sind keine B, Einige C sind A. Die einigen Teilchen, die Atome sind, können keine Moleküle sein (da alle Atome keine Moleküle sind). Regel 4: 'keine' in Prämisse → 'keine' im Schluss. Regel 5: 'einige' → 'einige'. Einige Teilchen sind keine Moleküle. B ist zu stark, A widerspricht der Disjunktheit.",
     difficulty: 3,
     rulesApplied: [4, 5],
-  },
-  {
-    id: "imp-76",
-    premise1: "Einige Piloten sind Ingenieure.",
-    premise2: "Einige Ingenieure sind Erfinder.",
-    options: [
-      "Alle Piloten sind Erfinder.",
-      "Alle Piloten sind keine Erfinder.",
-      "Einige Piloten sind Erfinder.",
-      "Einige Piloten sind keine Erfinder.",
-      "Keine der Schlussfolgerungen ist richtig.",
-    ],
-    correctAnswer: 4,
-    explanation:
-      "Zwei 'einige'-Prämissen: Regel 1 greift. Die Piloten unter den Ingenieuren und die Erfinder unter den Ingenieuren können verschiedene Teilmengen sein. Im Euler-Diagramm: Piloten ∩ Ingenieure ≠ ∅ und Ingenieure ∩ Erfinder ≠ ∅, aber Piloten ∩ Erfinder kann leer sein. E ist korrekt.",
-    difficulty: 3,
-    rulesApplied: [1],
-  },
-  {
-    id: "imp-77",
-    premise1: "Alle Fossilien sind keine lebenden Wesen.",
-    premise2: "Alle lebenden Wesen sind keine Gesteine.",
-    options: [
-      "Alle Fossilien sind Gesteine.",
-      "Alle Fossilien sind keine Gesteine.",
-      "Einige Fossilien sind Gesteine.",
-      "Einige Fossilien sind keine Gesteine.",
-      "Keine der Schlussfolgerungen ist richtig.",
-    ],
-    correctAnswer: 4,
-    explanation:
-      "Zwei 'keine'-Prämissen: Regel 2 greift. Fossil ∩ lebendes Wesen = ∅ und lebendes Wesen ∩ Gestein = ∅, aber über die Beziehung zwischen Fossilien und Gesteinen lässt sich nichts zwingend ableiten. Fossilien könnten in Gesteinen eingebettet sein oder nicht. E ist korrekt.",
-    difficulty: 3,
-    rulesApplied: [2],
-  },
-  {
-    id: "imp-78",
-    premise1: "Einige Rezeptoren sind Proteine.",
-    premise2: "Einige Proteine sind Enzyme.",
-    options: [
-      "Alle Rezeptoren sind Enzyme.",
-      "Alle Rezeptoren sind keine Enzyme.",
-      "Einige Rezeptoren sind Enzyme.",
-      "Einige Rezeptoren sind keine Enzyme.",
-      "Keine der Schlussfolgerungen ist richtig.",
-    ],
-    correctAnswer: 4,
-    explanation:
-      "Zwei 'einige'-Prämissen: Regel 1 greift. Rezeptoren ∩ Proteine ≠ ∅ und Proteine ∩ Enzyme ≠ ∅, aber Rezeptoren ∩ Enzyme kann leer sein. Die beiden Schnittmengen können verschiedene Teilmengen der Proteine sein. Kein zwingender Schluss. E ist korrekt.",
-    difficulty: 3,
-    rulesApplied: [1],
   },
   {
     id: "imp-79",
@@ -1751,6 +1513,33 @@ const SYLLOGISM_PATTERNS: SyllogismPattern[] = [
     conclusion: { quantifier: "Keine", direction: "AC" },
     difficulty: 3,
     rulesApplied: [4],
+  },
+  // Difficulty 3: Celarent reverse — Keine C sind B + Alle A sind B → Keine A sind C
+  {
+    quantifier1: "Keine",
+    quantifier2: "Alle",
+    structure: "chain",
+    conclusion: { quantifier: "Keine", direction: "CA" },
+    difficulty: 3,
+    rulesApplied: [4],
+  },
+  // Difficulty 3: Ferio chain — Keine B sind C + Einige A sind B → Einige A sind keine C
+  {
+    quantifier1: "Keine",
+    quantifier2: "Einige",
+    structure: "reverse",
+    conclusion: { quantifier: "Einige", direction: "CA" },
+    difficulty: 3,
+    rulesApplied: [4, 5],
+  },
+  // Difficulty 3: Darii reverse — Alle B sind C + Einige A sind B → Einige A sind C
+  {
+    quantifier1: "Alle",
+    quantifier2: "Einige",
+    structure: "reverse",
+    conclusion: { quantifier: "Einige", direction: "AC" },
+    difficulty: 3,
+    rulesApplied: [5],
   },
   // Difficulty 3: No valid conclusion (E)
   {

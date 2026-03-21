@@ -808,7 +808,8 @@ function pickQuadratic(
 }
 
 function generateQuadraticTask(difficulty: DifficultyLevel, rand: () => number): SequenceTask {
-  const totalLen = difficulty === "easy" ? 8 : difficulty === "medium" ? 9 : 10;
+  // Official MedAT: always 7 visible + 2 to find = 9 total
+  const totalLen = 9;
   // Try multiple configs to find one that produces reasonable values
   for (let attempt = 0; attempt < 5; attempt++) {
     const cfg = pickQuadratic(difficulty, rand);
@@ -1306,26 +1307,26 @@ function pickFibonacci(
 function pickPatternType(difficulty: DifficultyLevel, rand: () => number): PatternType {
   const r = rand();
   if (difficulty === "easy") {
-    // 50% periodic, 15% growing-diff, 10% interleaved, 10% fibonacci, 15% quadratic
-    if (r < 0.5) return "periodic";
-    if (r < 0.65) return "growing-diff";
-    if (r < 0.75) return "interleaved";
+    // 35% periodic, 20% growing-diff, 15% interleaved, 15% fibonacci, 15% quadratic
+    if (r < 0.35) return "periodic";
+    if (r < 0.55) return "growing-diff";
+    if (r < 0.7) return "interleaved";
     if (r < 0.85) return "fibonacci";
     return "quadratic";
   }
   if (difficulty === "medium") {
-    // 30% periodic, 20% interleaved, 15% growing-diff, 15% fibonacci, 20% quadratic
+    // 30% periodic, 20% growing-diff, 20% interleaved, 15% fibonacci, 15% quadratic
     if (r < 0.3) return "periodic";
-    if (r < 0.5) return "interleaved";
-    if (r < 0.65) return "growing-diff";
-    if (r < 0.8) return "fibonacci";
+    if (r < 0.5) return "growing-diff";
+    if (r < 0.7) return "interleaved";
+    if (r < 0.85) return "fibonacci";
     return "quadratic";
   }
-  // hard: 25% periodic, 20% interleaved, 20% growing-diff, 15% fibonacci, 20% quadratic
+  // hard: 25% periodic, 20% growing-diff, 20% interleaved, 20% fibonacci, 15% quadratic
   if (r < 0.25) return "periodic";
-  if (r < 0.45) return "interleaved";
-  if (r < 0.65) return "growing-diff";
-  if (r < 0.8) return "fibonacci";
+  if (r < 0.45) return "growing-diff";
+  if (r < 0.65) return "interleaved";
+  if (r < 0.85) return "fibonacci";
   return "quadratic";
 }
 
@@ -1346,10 +1347,117 @@ function makeTaskECorrect(task: SequenceTask, rand: () => number): SequenceTask 
     .filter((o): o is typeof o & { value: [number, number] } => !!o.value)
     .map((o) => o.value);
 
+  // Extract visible numbers from the sequence (everything before the "?" entries)
+  const visible = task.sequence.filter((v): v is number => typeof v === "number");
+
+  // --- Pattern-derived distractor candidates ---
+  const patternCandidates: [number, number][] = [];
+
+  // Strategy 1: Wrong last-difference (assume constant first-difference)
+  const ld = distractorLastDiff(visible, correctVal);
+  if (ld) patternCandidates.push(ld);
+
+  // Strategy 2: Wrong second-difference extrapolation
+  const sd = distractorSecondDiff(visible, correctVal);
+  if (sd) patternCandidates.push(sd);
+
+  // Strategy 3: Wrong last-ratio extrapolation
+  const lr = distractorLastRatio(visible, correctVal);
+  if (lr) patternCandidates.push(lr);
+
+  // Strategy 4: Correct first value, wrong second using a previous step's difference
+  const frs = distractorFirstRightSmart(visible, correctVal, rand);
+  if (frs) patternCandidates.push(frs);
+
+  // Strategy 5–7: Ops-based distractors (if ops are available)
+  if (task.ops && task.ops.length > 0) {
+    // Wrong phase in the cycle
+    const wpCandidates = distractorWrongPhase(visible, task.ops, correctVal);
+    patternCandidates.push(...wpCandidates);
+
+    // Inverse operation swap
+    const inv = distractorInverseOp(visible, task.ops, correctVal, rand);
+    if (inv) patternCandidates.push(inv);
+
+    // Repeated same operation instead of cycling
+    const rep = distractorRepeatedOp(visible, task.ops, correctVal);
+    if (rep) patternCandidates.push(rep);
+  }
+
+  // Strategy 8: Off-by-one on the operation value (e.g., +4 becomes +3 or +5)
+  if (task.ops && task.ops.length > 0) {
+    const last = visible[visible.length - 1];
+    const phase = (visible.length - 1) % task.ops.length;
+    for (const delta of [-1, 1]) {
+      const modOps = task.ops.map((o) => ({ ...o }));
+      modOps[phase] = { ...modOps[phase], value: modOps[phase].value + delta };
+      const v1 = applyOp(last, modOps[phase]);
+      const nextPhase = (phase + 1) % modOps.length;
+      const v2 = applyOp(v1, modOps[nextPhase]);
+      if (
+        Number.isInteger(v1) &&
+        Number.isInteger(v2) &&
+        !isNaN(v1) &&
+        !isNaN(v2) &&
+        Math.abs(v1) <= 5000 &&
+        Math.abs(v2) <= 5000 &&
+        (v1 !== correctVal[0] || v2 !== correctVal[1])
+      ) {
+        patternCandidates.push([v1, v2]);
+      }
+    }
+
+    // Strategy 9: Apply rule to wrong starting number (use second-to-last instead of last)
+    if (visible.length >= 2) {
+      const wrongStart = visible[visible.length - 2];
+      const v1 = applyOp(wrongStart, task.ops[phase]);
+      const nextPhase = (phase + 1) % task.ops.length;
+      const v2 = applyOp(v1, task.ops[nextPhase]);
+      if (
+        Number.isInteger(v1) &&
+        Number.isInteger(v2) &&
+        !isNaN(v1) &&
+        !isNaN(v2) &&
+        Math.abs(v1) <= 5000 &&
+        Math.abs(v2) <= 5000 &&
+        (v1 !== correctVal[0] || v2 !== correctVal[1])
+      ) {
+        patternCandidates.push([v1, v2]);
+      }
+    }
+  }
+
+  // Filter: must be integers, in range, and differ from correct answer
+  const validCandidates = patternCandidates.filter(
+    (p) =>
+      Number.isInteger(p[0]) &&
+      Number.isInteger(p[1]) &&
+      !isNaN(p[0]) &&
+      !isNaN(p[1]) &&
+      Math.abs(p[0]) <= 5000 &&
+      Math.abs(p[1]) <= 5000 &&
+      (p[0] !== correctVal[0] || p[1] !== correctVal[1])
+  );
+
+  // Shuffle for variety
+  for (let i = validCandidates.length - 1; i > 0; i--) {
+    const j = Math.floor(rand() * (i + 1));
+    [validCandidates[i], validCandidates[j]] = [validCandidates[j], validCandidates[i]];
+  }
+
+  // Try pattern-derived candidates first, then fall back to random offsets
   for (let i = 0; i < 20; i++) {
-    const offset1 = (Math.floor(rand() * 7) + 3) * (rand() < 0.5 ? 1 : -1);
-    const offset2 = (Math.floor(rand() * 7) + 3) * (rand() < 0.5 ? 1 : -1);
-    const replacement: [number, number] = [correctVal[0] + offset1, correctVal[1] + offset2];
+    let replacement: [number, number];
+
+    if (i < validCandidates.length) {
+      // Use pattern-derived candidate
+      replacement = validCandidates[i];
+    } else {
+      // Fallback: random offsets (original approach)
+      const offset1 = (Math.floor(rand() * 7) + 3) * (rand() < 0.5 ? 1 : -1);
+      const offset2 = (Math.floor(rand() * 7) + 3) * (rand() < 0.5 ? 1 : -1);
+      replacement = [correctVal[0] + offset1, correctVal[1] + offset2];
+    }
 
     const isDuplicate = existingValues.some(
       (v) => v[0] === replacement[0] && v[1] === replacement[1]
@@ -1516,7 +1624,8 @@ function buildTaskFromSequence(
 
 function generateInterleavedTask(difficulty: DifficultyLevel, rand: () => number): SequenceTask {
   const cfg = pickInterleavedOps(difficulty, rand);
-  const totalLen = difficulty === "easy" ? 8 : difficulty === "medium" ? 9 : 10;
+  // Official MedAT: always 7 visible + 2 to find = 9 total
+  const totalLen = 9;
   const fullSeq = buildInterleaved(cfg.startA, cfg.startB, cfg.opA, cfg.opB, totalLen);
   if (!fullSeq || !isReasonableSequence(fullSeq)) {
     return generatePeriodicTask(difficulty, rand);
@@ -1561,7 +1670,7 @@ function generateInterleavedTask(difficulty: DifficultyLevel, rand: () => number
 
 function generateGrowingDiffTask(difficulty: DifficultyLevel, rand: () => number): SequenceTask {
   const cfg = pickGrowingDiff(difficulty, rand);
-  const totalLen = difficulty === "easy" ? 8 : difficulty === "medium" ? 9 : 10;
+  const totalLen = 9; // always 7 visible + 2 to find (official MedAT format)
   const fullSeq = buildGrowingDiff(cfg.start, cfg.baseOp, cfg.initial, cfg.step, totalLen);
   if (!fullSeq || !isReasonableSequence(fullSeq)) {
     return generatePeriodicTask(difficulty, rand);
@@ -1619,7 +1728,8 @@ function generateGrowingDiffTask(difficulty: DifficultyLevel, rand: () => number
 
 function generateFibonacciTask(difficulty: DifficultyLevel, rand: () => number): SequenceTask {
   const cfg = pickFibonacci(difficulty, rand);
-  const totalLen = difficulty === "easy" ? 8 : difficulty === "medium" ? 9 : 10;
+  // Official MedAT: always 7 visible + 2 to find = 9 total
+  const totalLen = 9;
   const fullSeq = buildFibonacci(cfg.a, cfg.b, totalLen, cfg.offset, cfg.multiplier);
   if (!fullSeq || !isReasonableSequence(fullSeq)) {
     return generatePeriodicTask(difficulty, rand);
@@ -1681,12 +1791,8 @@ function generateFibonacciTask(difficulty: DifficultyLevel, rand: () => number):
 }
 
 function generatePeriodicTask(difficulty: DifficultyLevel, rand: () => number): SequenceTask {
-  const lengthVisible =
-    difficulty === "easy"
-      ? 6 + Math.floor(rand() * 2)
-      : difficulty === "medium"
-        ? 7 + Math.floor(rand() * 2)
-        : 8 + Math.floor(rand() * 2);
+  // Official MedAT: always exactly 7 visible numbers, find the next 2
+  const lengthVisible = 7;
 
   // Try up to 5 different op-sets before falling back to a different pattern type
   for (let attempt = 0; attempt < 5; attempt++) {
@@ -1792,22 +1898,24 @@ function buildPeriodicTaskFromSeq(
 
 /** Difficulty distribution: 20% leicht, 40% mittel, 40% schwer. */
 function zfDifficultyForIndex(i: number): DifficultyLevel {
+  // 30% easy / 40% medium / 30% hard — gives beginners enough introductory
+  // tasks while keeping medium as the core training band.
   const pattern: DifficultyLevel[] = [
     "easy",
     "medium",
-    "medium",
     "hard",
-    "medium",
-    "hard",
-    "hard",
-    "medium",
     "easy",
+    "medium",
+    "medium",
+    "hard",
+    "easy",
+    "medium",
     "hard",
   ];
   return pattern[i % 10]!;
 }
 
-/** Generiert mehrere Aufgaben (gemischt nach Schwierigkeit, 20/40/40). */
+/** Generiert mehrere Aufgaben (gemischt nach Schwierigkeit, 30/40/30). */
 export function generateSequenceTaskSet(count: number, baseSeed: number): SequenceTask[] {
   const out: SequenceTask[] = [];
   for (let i = 0; i < count; i++) {
