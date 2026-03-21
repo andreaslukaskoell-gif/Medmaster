@@ -28,6 +28,7 @@ import {
   saveLastCount,
   shuffleSlice,
   preferUnseen,
+  enforceExactCount,
   TaskDbCountHint,
 } from "./kffHelpers";
 
@@ -134,7 +135,9 @@ export function ImplikationenQuiz({
         return true;
       });
       const seenIds = getKffSeenIdsForDomain("Implikationen");
-      setQuestions(preferUnseen(uniqueByContent, questionCount, seenIds));
+      setQuestions(
+        enforceExactCount(preferUnseen(uniqueByContent, questionCount, seenIds), questionCount)
+      );
       if (valid.length < raw.length && import.meta.env?.DEV) {
         logPoolWarning("implikationen", valid.length, "Training");
       }
@@ -284,7 +287,7 @@ export function ImplikationenQuiz({
                     ];
                   }
                   const seenIds = getKffSeenIdsForDomain("Implikationen");
-                  setQuestions(preferUnseen(valid, count, seenIds));
+                  setQuestions(enforceExactCount(preferUnseen(valid, count, seenIds), count));
 
                   setIndex(0);
                   setAnswers({});
@@ -307,7 +310,7 @@ export function ImplikationenQuiz({
                     }
                     fallback = filterValidImplikationTasks(fallback);
                   }
-                  setQuestions(fallback.slice(0, count));
+                  setQuestions(enforceExactCount(fallback.slice(0, count), count));
 
                   setIndex(0);
                   setAnswers({});

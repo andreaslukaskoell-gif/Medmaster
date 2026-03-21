@@ -4,6 +4,23 @@ import { getTaskCountByDomain } from "@/lib/taskDb";
 import { useState, useEffect } from "react";
 
 /**
+ * Hard count enforcement: ensures exactly `target` tasks are delivered.
+ * If pool has more → slices. If pool has fewer → duplicates from start of pool
+ * (better to show a repeated task than deliver the wrong count).
+ */
+export function enforceExactCount<T>(pool: T[], target: number): T[] {
+  if (pool.length === target) return pool;
+  if (pool.length > target) return pool.slice(0, target);
+  // Undergeneration: pad by cycling from the start of the pool
+  if (pool.length === 0) return pool; // truly empty — caller must handle
+  const result = [...pool];
+  while (result.length < target) {
+    result.push(pool[result.length % pool.length]);
+  }
+  return result.slice(0, target);
+}
+
+/**
  * Difficulty distribution: 20% leicht, 40% mittel, 40% schwer.
  * Returns the difficulty for task index i in a deterministic repeating pattern.
  */

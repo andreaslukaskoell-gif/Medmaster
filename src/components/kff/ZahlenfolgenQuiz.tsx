@@ -23,6 +23,7 @@ import {
   saveLastCount,
   shuffleSlice,
   preferUnseen,
+  enforceExactCount,
   TaskDbCountHint,
 } from "./kffHelpers";
 
@@ -96,26 +97,25 @@ export function ZahlenfolgenQuiz({
     try {
       const domain = "kff-zahlenfolgen" as const;
       const rating = skillRating ?? 500;
+      // Request extra tasks to compensate for validation rejections
+      const requestCount = Math.ceil(questionCount * 1.3);
       const tasks = await getTasksForUserWithWeakness(
         domain,
         rating,
-        questionCount,
+        requestCount,
         150,
         getKffFailedIdsForDomain(domain)
       );
       const raw = tasks.map((t) => taskToData<SequenceTask>(t));
       let valid = filterValidSequenceTasks(raw);
       if (valid.length === 0) {
-        const generated = generateSequenceTaskSet(questionCount, Date.now());
+        const generated = generateSequenceTaskSet(requestCount, Date.now());
         valid = shuffleSlice(filterValidSequenceTasks(generated), questionCount);
         if (import.meta.env?.DEV)
           logPoolWarning("zahlenfolgen", valid.length, "Fallback (generiert)");
       }
       const seenIds = getKffSeenIdsForDomain("Zahlenfolgen");
-      setQuestions(preferUnseen(valid, questionCount, seenIds));
-      if (valid.length < questionCount && import.meta.env?.DEV) {
-        logPoolWarning("zahlenfolgen", valid.length, "Training");
-      }
+      setQuestions(enforceExactCount(preferUnseen(valid, questionCount, seenIds), questionCount));
 
       setIndex(0);
       setAnswers({});
@@ -232,18 +232,16 @@ export function ZahlenfolgenQuiz({
                     ];
                   }
                   const seenIds = getKffSeenIdsForDomain("Zahlenfolgen");
-                  setQuestions(preferUnseen(valid, count, seenIds));
+                  setQuestions(enforceExactCount(preferUnseen(valid, count, seenIds), count));
 
                   setIndex(0);
                   setAnswers({});
                   setPhase("quiz");
                 } catch {
-                  const generated = generateSequenceTaskSet(
-                    EXAM_CONFIG.zahlenfolgen.questions,
-                    Date.now()
-                  );
+                  const examCount = EXAM_CONFIG.zahlenfolgen.questions;
+                  const generated = generateSequenceTaskSet(examCount, Date.now());
                   const valid = filterValidSequenceTasks(generated);
-                  setQuestions(valid.slice(0, EXAM_CONFIG.zahlenfolgen.questions));
+                  setQuestions(enforceExactCount(valid.slice(0, examCount), examCount));
 
                   setIndex(0);
                   setAnswers({});

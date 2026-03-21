@@ -47,6 +47,7 @@ import {
   shuffleSlice,
   balancedDifficultySession,
   preferUnseen,
+  enforceExactCount,
 } from "./kffHelpers";
 
 const FZ_OPTION_LABELS = ["A", "B", "C", "D", "E"] as const;
@@ -238,7 +239,12 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
       }
       const seenIds = getKffSeenIdsForDomain("Figuren");
       const fresh = preferUnseen(valid, target, seenIds);
-      setQuestions(balancedDifficultySession(fresh, target, (t) => t.difficulty));
+      setQuestions(
+        enforceExactCount(
+          balancedDifficultySession(fresh, target, (t) => t.difficulty),
+          target
+        )
+      );
       if (valid.length < list.length && import.meta.env?.DEV) {
         logPoolWarning("figuren", valid.length, "Training");
       }
@@ -412,7 +418,12 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
                       ...valid,
                       ...shuffleSlice(filterValidFigurenTasks([]), count - valid.length),
                     ];
-                  setQuestions(balancedDifficultySession(valid, count, (t) => t.difficulty));
+                  setQuestions(
+                    enforceExactCount(
+                      balancedDifficultySession(valid, count, (t) => t.difficulty),
+                      count
+                    )
+                  );
                   setIndex(0);
                   setAnswers({});
                   setPhase("quiz");
@@ -433,11 +444,15 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
                       /* skip */
                     }
                   }
+                  const examCount = EXAM_CONFIG.figuren.questions;
                   setQuestions(
-                    balancedDifficultySession(
-                      filterValidFigurenTasks(generated),
-                      EXAM_CONFIG.figuren.questions,
-                      (t) => t.difficulty
+                    enforceExactCount(
+                      balancedDifficultySession(
+                        filterValidFigurenTasks(generated),
+                        examCount,
+                        (t) => t.difficulty
+                      ),
+                      examCount
                     )
                   );
                   setIndex(0);

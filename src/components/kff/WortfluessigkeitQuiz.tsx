@@ -13,8 +13,8 @@ import { generateWordFluencyTask } from "@/data/kffGenerators";
 import { type WordFluencyTask } from "@/data/kffWortfluessigkeitMedAT";
 import { WF_TRAINING_POOL_1000 as _WF_RAW_POOL } from "@/data/kffWortfluessigkeit1000";
 
-/** MedAT uses 7+ letter words; filter out trivially short ones */
-const WF_TRAINING_POOL_1000 = _WF_RAW_POOL.filter((t) => t.solutionWord.length >= 5);
+/** Official MedAT WF: 7–15 letter words (ÖH Wien KFF Skript) */
+const WF_TRAINING_POOL_1000 = _WF_RAW_POOL.filter((t) => t.solutionWord.length >= 7);
 import { filterValidWordFluencyTasks, logPoolWarning } from "@/data/kffValidation";
 import { getTasksForUserWithWeakness, taskToData } from "@/lib/taskDb";
 import { useStore } from "@/store/useStore";
@@ -28,7 +28,7 @@ import {
   saveLastCount,
   shuffleSlice,
   preferUnseen,
-  TaskDbCountHint,
+  enforceExactCount,
 } from "./kffHelpers";
 
 export function WortflüssigkeitQuiz({
@@ -113,7 +113,14 @@ export function WortflüssigkeitQuiz({
         return true;
       });
       setQuestions(
-        preferUnseen(uniqueByWord as (WordFluencyTask & { id: string })[], questionCount, seenIds)
+        enforceExactCount(
+          preferUnseen(
+            uniqueByWord as (WordFluencyTask & { id: string })[],
+            questionCount,
+            seenIds
+          ),
+          questionCount
+        )
       );
       if (valid.length < raw.length && import.meta.env?.DEV) {
         logPoolWarning("wortflüssigkeit", valid.length, "Training");
@@ -257,7 +264,10 @@ export function WortflüssigkeitQuiz({
                   }
                   const seenIds = getKffSeenIdsForDomain("Wortfl");
                   setQuestions(
-                    preferUnseen(valid as (WordFluencyTask & { id: string })[], count, seenIds)
+                    enforceExactCount(
+                      preferUnseen(valid as (WordFluencyTask & { id: string })[], count, seenIds),
+                      count
+                    )
                   );
                   setIndex(0);
                   setAnswers({});
@@ -271,7 +281,7 @@ export function WortflüssigkeitQuiz({
                     filterValidWordFluencyTasks(pool),
                     EXAM_CONFIG.wortfluessigkeit.questions
                   );
-                  setQuestions(valid);
+                  setQuestions(enforceExactCount(valid, EXAM_CONFIG.wortfluessigkeit.questions));
                   setIndex(0);
                   setAnswers({});
                   setPhase("quiz");
@@ -290,10 +300,12 @@ export function WortflüssigkeitQuiz({
           <CardHeader>
             <CardTitle className="text-lg">Training</CardTitle>
             <p className="text-sm text-[var(--muted)]">
-              Aufgaben aus der Datenbank – verschiedene Wörter, gleiche Regel.
+              Aufgaben aus der Datenbank und dem Wörter-Pool – verschiedene Wörter, gleiche Regel.
             </p>
             <p className="mt-1">
-              <TaskDbCountHint domain="kff-wortflüssigkeit" />
+              <span className="text-[var(--muted)] text-sm">
+                {WF_TRAINING_POOL_1000.length}+ Wörter im Trainingspool verfügbar.
+              </span>
             </p>
           </CardHeader>
           <CardContent className="space-y-6">
