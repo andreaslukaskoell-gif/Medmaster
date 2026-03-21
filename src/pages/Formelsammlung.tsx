@@ -19,19 +19,77 @@ type FachFilter = "alle" | "physik" | "chemie" | "mathematik";
 
 /** Render formula string with proper subscripts/superscripts for common patterns. */
 function renderFormel(text: string): React.ReactNode {
-  // Replace common patterns: x² → x<sup>2</sup>, v₁ → v<sub>1</sub>, etc.
-  const html = text
-    .replace(/(\w)²/g, "$1<sup>2</sup>")
-    .replace(/(\w)³/g, "$1<sup>3</sup>")
-    .replace(/(\w)\^(\d+)/g, "$1<sup>$2</sup>")
-    .replace(/(\w)_(\w)/g, "$1<sub>$2</sub>")
-    .replace(/(\w)₁/g, "$1<sub>1</sub>")
-    .replace(/(\w)₂/g, "$1<sub>2</sub>")
-    .replace(/(\w)₃/g, "$1<sub>3</sub>")
-    .replace(/Δ/g, "<i>Δ</i>")
-    .replace(/π/g, "<i>π</i>")
-    .replace(/√/g, "√");
-  return <span dangerouslySetInnerHTML={{ __html: html }} />;
+  // Tokenize the text into segments with formatting info
+  type Segment = { type: "text" | "sup" | "sub" | "italic"; content: string };
+  const segments: Segment[] = [];
+  let remaining = text;
+
+  while (remaining.length > 0) {
+    // Match patterns in order of specificity
+    const match =
+      /(\w)\^(\d+)|(\w)²|(\w)³|(\w)_(\w)|(\w)₁|(\w)₂|(\w)₃|Δ|π/.exec(remaining);
+
+    if (!match) {
+      segments.push({ type: "text", content: remaining });
+      break;
+    }
+
+    // Add text before match
+    if (match.index > 0) {
+      segments.push({ type: "text", content: remaining.slice(0, match.index) });
+    }
+
+    if (match[1] && match[2]) {
+      // \w^digits
+      segments.push({ type: "text", content: match[1] });
+      segments.push({ type: "sup", content: match[2] });
+    } else if (match[3]) {
+      // \w²
+      segments.push({ type: "text", content: match[3] });
+      segments.push({ type: "sup", content: "2" });
+    } else if (match[4]) {
+      // \w³
+      segments.push({ type: "text", content: match[4] });
+      segments.push({ type: "sup", content: "3" });
+    } else if (match[5] && match[6]) {
+      // \w_\w
+      segments.push({ type: "text", content: match[5] });
+      segments.push({ type: "sub", content: match[6] });
+    } else if (match[7]) {
+      // \w₁
+      segments.push({ type: "text", content: match[7] });
+      segments.push({ type: "sub", content: "1" });
+    } else if (match[8]) {
+      // \w₂
+      segments.push({ type: "text", content: match[8] });
+      segments.push({ type: "sub", content: "2" });
+    } else if (match[9]) {
+      // \w₃
+      segments.push({ type: "text", content: match[9] });
+      segments.push({ type: "sub", content: "3" });
+    } else if (match[0] === "Δ" || match[0] === "π") {
+      segments.push({ type: "italic", content: match[0] });
+    }
+
+    remaining = remaining.slice(match.index + match[0].length);
+  }
+
+  return (
+    <span>
+      {segments.map((seg, i) => {
+        switch (seg.type) {
+          case "sup":
+            return <sup key={i}>{seg.content}</sup>;
+          case "sub":
+            return <sub key={i}>{seg.content}</sub>;
+          case "italic":
+            return <i key={i}>{seg.content}</i>;
+          default:
+            return <span key={i}>{seg.content}</span>;
+        }
+      })}
+    </span>
+  );
 }
 
 const fachConfig: Record<
