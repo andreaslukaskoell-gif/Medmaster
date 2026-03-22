@@ -159,13 +159,13 @@ export default function Dashboard() {
       try {
         return getDailyGoalFromPlan(plan, quizResults, todayStr);
       } catch {
-        return { hasPlan: false, isPrimaryComplete: false, primaryDone: 0, primaryTarget: 0, secondaryDone: 0, secondaryTarget: 0 };
+        return { hasPlan: false, isPrimaryComplete: false, dailyMinutes: 0, todayTasks: [], primaryProgressPct: 0, totalSegments: 0, completedSegments: 0 };
       }
     },
     [plan, quizResults, todayStr]
   );
   const consecutiveGoalMissed = useMemo(
-    () => getConsecutiveDaysGoalMissed(goalAchievedByDate),
+    () => getConsecutiveDaysGoalMissed(goalAchievedByDate ?? {}),
     [goalAchievedByDate]
   );
   const showSmartAdjust =
