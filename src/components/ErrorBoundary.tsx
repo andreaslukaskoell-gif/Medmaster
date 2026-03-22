@@ -11,23 +11,24 @@ interface Props {
 interface State {
   hasError: boolean;
   retryKey: number;
+  errorMessage: string;
 }
 
 export class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = { hasError: false, retryKey: 0 };
+    this.state = { hasError: false, retryKey: 0, errorMessage: "" };
   }
 
-  static getDerivedStateFromError(): Partial<State> {
-    return { hasError: true };
+  static getDerivedStateFromError(error: Error): Partial<State> {
+    return { hasError: true, errorMessage: `${error?.name}: ${error?.message}` };
   }
 
   componentDidCatch(error: Error, info: ErrorInfo) {
-    // Only log details in development — console.error is NOT stripped by esbuild.pure
+    // Log in all environments so users can report the error from browser console
+    console.error("[ErrorBoundary] Fehler:", error?.name, error?.message);
+    console.error("[ErrorBoundary] Stack:", error?.stack);
     if (import.meta.env.DEV) {
-      console.error("[ErrorBoundary] Fehler:", error?.name, error?.message);
-      console.error("[ErrorBoundary] Stack:", error?.stack);
       console.error("[ErrorBoundary] Komponentenstack:", info?.componentStack);
     }
     // In production, Sentry captures these automatically via its React integration.
@@ -55,10 +56,15 @@ export class ErrorBoundary extends Component<Props, State> {
             <h1 className="text-2xl font-bold text-[var(--text-primary)] mb-2">
               Etwas ist schiefgelaufen
             </h1>
-            <p className="text-sm text-[var(--muted)] mb-8">
+            <p className="text-sm text-[var(--muted)] mb-4">
               Ein unerwarteter Fehler ist aufgetreten. Du kannst es erneut versuchen oder die App
               neu starten.
             </p>
+            {this.state.errorMessage && (
+              <p className="text-xs text-[var(--muted)] mb-8 font-mono bg-[var(--surface)] rounded-lg px-3 py-2 text-left break-all">
+                {this.state.errorMessage}
+              </p>
+            )}
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <button
                 type="button"

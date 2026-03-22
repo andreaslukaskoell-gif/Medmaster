@@ -151,9 +151,9 @@ export function useProgressAnalytics(): ProgressAnalytics {
   const activityLog = useStore((s) => s.activityLog);
   const completedChapters = useStore((s) => s.completedChapters);
 
-  const getMedATReadiness = useAdaptiveStore((s) => s.getMedATReadiness);
-  const getWeakestTopics = useAdaptiveStore((s) => s.getWeakestTopics);
-  const getStrongestTopics = useAdaptiveStore((s) => s.getStrongestTopics);
+  const getMedATReadiness = useAdaptiveStore((s) => s.getMedATReadiness ?? (() => 0));
+  const getWeakestTopics = useAdaptiveStore((s) => s.getWeakestTopics ?? (() => []));
+  const getStrongestTopics = useAdaptiveStore((s) => s.getStrongestTopics ?? (() => []));
 
   // ── Subject Accuracy ──────────────────────────────────────
   const subjectAccuracy = useMemo(() => {
