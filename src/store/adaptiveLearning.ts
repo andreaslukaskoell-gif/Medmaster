@@ -821,6 +821,16 @@ export const useAdaptiveStore = create<AdaptiveState>()(
         lastPath: state.lastPath,
         difficultyLevel: state.difficultyLevel,
       }),
+      merge: (persisted, current) => {
+        const p = persisted as Record<string, unknown> | undefined;
+        if (!p) return current;
+        return {
+          ...current,
+          ...p,
+          // Deep-merge profile so missing keys fall back to defaults
+          profile: { ...current.profile, ...(p.profile as Record<string, unknown> ?? {}) },
+        };
+      },
     }
   )
 );

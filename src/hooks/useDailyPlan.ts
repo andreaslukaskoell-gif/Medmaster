@@ -69,9 +69,9 @@ export function useDailyPlan(): DailyPlanResult {
   const lastViewedUnterkapitelId = useAdaptiveStore((s) => s.lastViewedUnterkapitelId);
 
   // Stable selectors: extract functions, call in useMemo to avoid infinite loops
-  const getMedATReadiness = useAdaptiveStore((s) => s.getMedATReadiness);
-  const getFachReadiness = useAdaptiveStore((s) => s.getFachReadiness);
-  const getWeakestTopics = useAdaptiveStore((s) => s.getWeakestTopics);
+  const getMedATReadiness = useAdaptiveStore((s) => s.getMedATReadiness ?? (() => 0));
+  const getFachReadiness = useAdaptiveStore((s) => s.getFachReadiness ?? ((() => 0) as (f: string) => number));
+  const getWeakestTopics = useAdaptiveStore((s) => s.getWeakestTopics ?? (() => []));
   const phase = useAdaptiveStore((s) => s.profile?.learningPhase ?? "einstieg");
 
   // Generate adaptive plan with tier factor
