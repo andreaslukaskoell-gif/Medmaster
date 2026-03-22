@@ -87,7 +87,8 @@ export function getDailyGoalFromPlan(
 }
 
 /** Zählt ab gestern rückwärts, wie viele Tage in Folge das Tagesziel verfehlt wurde */
-export function getConsecutiveDaysGoalMissed(goalAchievedByDate: Record<string, boolean>): number {
+export function getConsecutiveDaysGoalMissed(goalAchievedByDate: Record<string, boolean> | null | undefined): number {
+  if (!goalAchievedByDate) return 0;
   const d = new Date();
   d.setDate(d.getDate() - 1);
   let count = 0;
