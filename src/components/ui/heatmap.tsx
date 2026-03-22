@@ -46,7 +46,7 @@ const MEDAT_KEY = "2026-07-03";
 export function Heatmap({ className }: HeatmapProps) {
   const quizResults = useStore((s) => s.quizResults ?? []);
   const activityLog = useStore((s) => s.activityLog ?? {});
-  const stichwortStats = useAdaptiveStore((s) => s.profile.stichwortStats);
+  const stichwortStats = useAdaptiveStore((s) => s.profile?.stichwortStats ?? {});
   const minutesMap = useMemo(
     () => buildMinutesActivityMap({ quizResults, activityLog }),
     [quizResults, activityLog]
