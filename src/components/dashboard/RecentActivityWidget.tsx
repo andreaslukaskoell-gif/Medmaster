@@ -81,7 +81,7 @@ export function RecentActivityWidget() {
                     colors.bg
                   )}
                 >
-                  {TYPE_LABEL[s.type] ?? s.type.toUpperCase()}
+                  {TYPE_LABEL[s.type] ?? (s.type || "BMS").toUpperCase()}
                 </span>
                 <span className="flex-1 text-[var(--text-secondary)] truncate">
                   {s.score}/{s.total}

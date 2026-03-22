@@ -53,7 +53,7 @@ export default function Statistics() {
   const byType = quizResults.reduce<
     Record<string, { correct: number; total: number; count: number }>
   >((acc, r) => {
-    const key = r.type.toUpperCase();
+    const key = (r.type || "bms").toUpperCase();
     if (!acc[key]) acc[key] = { correct: 0, total: 0, count: 0 };
     acc[key].correct += r.score;
     acc[key].total += r.total;

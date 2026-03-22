@@ -273,7 +273,7 @@ export function useProgressAnalytics(): ProgressAnalytics {
       .reverse()
       .map((r) => ({
         id: r.id,
-        type: r.type,
+        type: r.type ?? "bms",
         subject: r.subject,
         score: r.score,
         total: r.total,
