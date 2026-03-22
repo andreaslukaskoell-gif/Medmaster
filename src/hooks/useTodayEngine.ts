@@ -15,6 +15,15 @@ import {
   todayStr,
 } from "@/lib/learning";
 
+const EMPTY_RESULT = {
+  dueCount: 0,
+  weaknessCount: 0,
+  newCount: 0,
+  tasks: [] as ReturnType<typeof buildTodayTasks>,
+  dueItems: [] as ReturnType<typeof getDueReviews>,
+  topWeaknesses: [] as ReturnType<typeof getTopWeaknesses>,
+};
+
 export function useTodayEngine() {
   const spacedRepetition = useStore((s) => s.spacedRepetition ?? {});
   const userProgress = useStore((s) => s.userProgress ?? {});
@@ -24,26 +33,39 @@ export function useTodayEngine() {
   const lastViewedKapitelId = useAdaptiveStore((s) => s.lastViewedKapitelId);
   const lastViewedUnterkapitelId = useAdaptiveStore((s) => s.lastViewedUnterkapitelId);
 
-  const dueItems = useMemo(
-    () => getDueReviews(spacedRepetition, userProgress, todayStr()),
-    [spacedRepetition, userProgress]
-  );
+  const dueItems = useMemo(() => {
+    try {
+      return getDueReviews(spacedRepetition, userProgress, todayStr());
+    } catch {
+      return [];
+    }
+  }, [spacedRepetition, userProgress]);
 
   const allErrorEvents = useMemo(() => {
-    const fromQuiz = errorEventsFromQuizResults(
-      quizResults.map((r) => ({
-        answers: r.answers.map((a) => ({ questionId: a.questionId, correct: a.correct })),
-        timestamp: r.timestamp ?? r.date,
-      }))
-    );
-    return [...fromQuiz, ...errorEvents];
+    try {
+      const fromQuiz = errorEventsFromQuizResults(
+        (quizResults ?? []).map((r) => ({
+          answers: (r.answers ?? []).map((a) => ({ questionId: a.questionId, correct: a.correct })),
+          timestamp: r.timestamp ?? r.date,
+        }))
+      );
+      return [...fromQuiz, ...errorEvents];
+    } catch {
+      return [];
+    }
   }, [errorEvents, quizResults]);
 
-  const topWeaknesses = useMemo(() => getTopWeaknesses(allErrorEvents, 20), [allErrorEvents]);
+  const topWeaknesses = useMemo(() => {
+    try {
+      return getTopWeaknesses(allErrorEvents, 20);
+    } catch {
+      return [];
+    }
+  }, [allErrorEvents]);
 
-  const tasks = useMemo(
-    () =>
-      buildTodayTasks({
+  const tasks = useMemo(() => {
+    try {
+      return buildTodayTasks({
         dueItems,
         topWeaknesses,
         lastViewedChapterId: lastViewedKapitelId,
@@ -51,16 +73,22 @@ export function useTodayEngine() {
         lastPath,
         today: todayStr(),
         maxTasks: 25,
-      }),
-    [dueItems, topWeaknesses, lastViewedKapitelId, lastViewedUnterkapitelId, lastPath]
-  );
+      });
+    } catch {
+      return [];
+    }
+  }, [dueItems, topWeaknesses, lastViewedKapitelId, lastViewedUnterkapitelId, lastPath]);
 
-  return {
-    dueCount: countDueReviews(dueItems),
-    weaknessCount: countWeaknessRecommendations(topWeaknesses),
-    newCount: Math.max(0, tasks.filter((t) => t.reason === "continue").length),
-    tasks,
-    dueItems,
-    topWeaknesses,
-  };
+  try {
+    return {
+      dueCount: countDueReviews(dueItems),
+      weaknessCount: countWeaknessRecommendations(topWeaknesses),
+      newCount: Math.max(0, tasks.filter((t) => t.reason === "continue").length),
+      tasks,
+      dueItems,
+      topWeaknesses,
+    };
+  } catch {
+    return EMPTY_RESULT;
+  }
 }

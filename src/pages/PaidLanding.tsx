@@ -19,14 +19,18 @@ import { supabase } from "@/lib/supabase";
 
 const NAVY = "#1b3ea7";
 
-/* ── Countdown ── */
+/* ── Countdown (isolated to prevent full-page re-renders) ── */
 function useCountdown(targetDate: Date) {
-  const [now, setNow] = useState(() => new Date());
+  const [countdown, setCountdown] = useState(() => calcCountdown(targetDate));
   useEffect(() => {
-    const id = setInterval(() => setNow(new Date()), 1000);
+    const id = setInterval(() => setCountdown(calcCountdown(targetDate)), 1000);
     return () => clearInterval(id);
-  }, []);
-  const diff = Math.max(0, targetDate.getTime() - now.getTime());
+  }, [targetDate]);
+  return countdown;
+}
+
+function calcCountdown(targetDate: Date) {
+  const diff = Math.max(0, targetDate.getTime() - Date.now());
   return {
     days: Math.floor(diff / 86400000),
     hours: Math.floor((diff % 86400000) / 3600000),
@@ -36,11 +40,14 @@ function useCountdown(targetDate: Date) {
   };
 }
 
-/* ── Sticky CTA hook ── */
+/* ── Sticky CTA hook (optimized: only updates state on threshold cross) ── */
 function useShowStickyCTA() {
   const [show, setShow] = useState(false);
   useEffect(() => {
-    const onScroll = () => setShow(window.scrollY > 500);
+    const onScroll = () => {
+      const shouldShow = window.scrollY > 500;
+      setShow((prev) => (prev !== shouldShow ? shouldShow : prev));
+    };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -189,13 +196,17 @@ export default function PaidLanding() {
   const countdown = useCountdown(deadline);
 
   useEffect(() => {
-    if (!supabase) return;
-    supabase
-      .from("leaderboard_snapshots")
-      .select("*", { count: "exact", head: true })
-      .then(({ count }) => {
-        if (count && count >= 10) setUserCount(count);
-      });
+    const sb = supabase;
+    if (!sb) return;
+    // Defer DB query — don't block initial paint for non-critical social proof
+    const timeout = setTimeout(() => {
+      sb.from("leaderboard_snapshots")
+        .select("*", { count: "exact", head: true })
+        .then(({ count }) => {
+          if (count && count >= 10) setUserCount(count);
+        });
+    }, 1500);
+    return () => clearTimeout(timeout);
   }, []);
 
   useEffect(() => {
@@ -259,10 +270,12 @@ export default function PaidLanding() {
 
   const handleGoogle = useCallback(async () => {
     setGoogleError("");
+    // Fire auth immediately — track in background (non-blocking)
+    const authPromise = signInWithGoogle();
     trackClick("lp-google-signup", "Paid LP Google CTA");
     trackEvent("signup_click", { method: "google", source: "paid-lp" });
     trackConversion("signup_started", { method: "google", source: "paid-lp" });
-    const { error } = await signInWithGoogle();
+    const { error } = await authPromise;
     if (error) setGoogleError(error.message);
   }, [signInWithGoogle]);
 

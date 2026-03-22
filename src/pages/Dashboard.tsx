@@ -117,41 +117,55 @@ export default function Dashboard() {
   const weeksLeft = Math.max(1, Math.floor(days / 7));
   const plan = useMemo(() => {
     if (!lernplanConfig) return null;
-    const ad = useAdaptiveStore.getState();
-    const adaptation = getPlanAdaptation({
-      hoursPerWeek: lernplanConfig.hoursPerWeek,
-      goalAchievedByDate: goalAchievedByDate ?? {},
-      quizResults: quizResults ?? [],
-      activityLog: activityLog ?? {},
-    });
-    return generateAdaptivePlan({
-      hoursPerWeek: adaptation.effectiveHoursPerWeek,
-      weeksLeft,
-      readiness: ad.getMedATReadiness(),
-      fachReadiness: {
-        biologie: ad.getFachReadiness("biologie"),
-        chemie: ad.getFachReadiness("chemie"),
-        physik: ad.getFachReadiness("physik"),
-        mathematik: ad.getFachReadiness("mathematik"),
-      },
-      weakTopics: ad.getWeakestTopics(5),
-      phase: ad.profile.learningPhase,
-    });
+    try {
+      const ad = useAdaptiveStore.getState();
+      const adaptation = getPlanAdaptation({
+        hoursPerWeek: lernplanConfig.hoursPerWeek,
+        goalAchievedByDate: goalAchievedByDate ?? {},
+        quizResults: quizResults ?? [],
+        activityLog: activityLog ?? {},
+      });
+      return generateAdaptivePlan({
+        hoursPerWeek: adaptation.effectiveHoursPerWeek,
+        weeksLeft,
+        readiness: ad.getMedATReadiness?.() ?? 0,
+        fachReadiness: {
+          biologie: ad.getFachReadiness?.("biologie") ?? 0,
+          chemie: ad.getFachReadiness?.("chemie") ?? 0,
+          physik: ad.getFachReadiness?.("physik") ?? 0,
+          mathematik: ad.getFachReadiness?.("mathematik") ?? 0,
+        },
+        weakTopics: ad.getWeakestTopics?.(5) ?? [],
+        phase: ad.profile?.learningPhase ?? "einstieg",
+      });
+    } catch {
+      return null;
+    }
   }, [lernplanConfig, weeksLeft, goalAchievedByDate, quizResults, activityLog]);
   const concretePlan = useMemo(() => {
     if (!plan) return null;
-    return buildConcreteDailyPlan(plan, {
-      dueChapterIds: getDueChapterIds(),
-      lastViewedChapterId: lastViewedKapitelId,
-      lastViewedUnterkapitelId,
-    });
+    try {
+      return buildConcreteDailyPlan(plan, {
+        dueChapterIds: getDueChapterIds?.() ?? [],
+        lastViewedChapterId: lastViewedKapitelId,
+        lastViewedUnterkapitelId,
+      });
+    } catch {
+      return null;
+    }
   }, [plan, getDueChapterIds, lastViewedKapitelId, lastViewedUnterkapitelId]);
   const dailyGoalState = useMemo(
-    () => getDailyGoalFromPlan(plan, quizResults, todayStr),
+    () => {
+      try {
+        return getDailyGoalFromPlan(plan, quizResults, todayStr);
+      } catch {
+        return { hasPlan: false, isPrimaryComplete: false, dailyMinutes: 0, todayTasks: [], primaryProgressPct: 0, totalSegments: 0, completedSegments: 0 };
+      }
+    },
     [plan, quizResults, todayStr]
   );
   const consecutiveGoalMissed = useMemo(
-    () => getConsecutiveDaysGoalMissed(goalAchievedByDate),
+    () => getConsecutiveDaysGoalMissed(goalAchievedByDate ?? {}),
     [goalAchievedByDate]
   );
   const showSmartAdjust =
