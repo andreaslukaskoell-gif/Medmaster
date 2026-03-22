@@ -29,14 +29,18 @@ import { Logo } from "@/components/brand/Logo";
 
 const NAVY = "#1b3ea7";
 
-/* ── Countdown ── */
+/* ── Countdown (isolated to prevent full-page re-renders) ── */
 function useCountdown(targetDate: Date) {
-  const [now, setNow] = useState(() => new Date());
+  const [countdown, setCountdown] = useState(() => calcCountdown(targetDate));
   useEffect(() => {
-    const id = setInterval(() => setNow(new Date()), 1000);
+    const id = setInterval(() => setCountdown(calcCountdown(targetDate)), 1000);
     return () => clearInterval(id);
-  }, []);
-  const diff = Math.max(0, targetDate.getTime() - now.getTime());
+  }, [targetDate]);
+  return countdown;
+}
+
+function calcCountdown(targetDate: Date) {
+  const diff = Math.max(0, targetDate.getTime() - Date.now());
   return {
     days: Math.floor(diff / 86400000),
     hours: Math.floor((diff % 86400000) / 3600000),
@@ -254,10 +258,12 @@ export default function PaidLandingBMS() {
 
   const handleGoogle = async () => {
     setGoogleError("");
+    // Fire auth immediately — track in background (non-blocking)
+    const authPromise = signInWithGoogle();
     trackClick("lp-bms-google-signup", "Paid LP BMS Google CTA");
     trackEvent("signup_click", { method: "google", source: "paid-lp-bms" });
     trackConversion("signup_started", { method: "google", source: "paid-lp-bms" });
-    const { error } = await signInWithGoogle();
+    const { error } = await authPromise;
     if (error) setGoogleError(error.message);
   };
 
