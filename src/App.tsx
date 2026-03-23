@@ -116,8 +116,14 @@ function MedATGuard({ children }: { children: ReactNode }) {
   const hasNameInDB = !!profile?.display_name?.trim() || !!(uname && !uname.includes("@"));
   const isComplete = hasCompletedMedATOnboarding || hasNameInDB;
 
-  // Don't redirect while still loading auth/profile
-  if (loading) return null;
+  // Don't redirect while still loading auth/profile — show spinner instead of blank screen
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-[var(--accent)]" />
+      </div>
+    );
+  }
 
   if (!isComplete && location.pathname !== "/onboarding/medat") {
     return <Navigate to="/onboarding/medat" replace />;
