@@ -42,7 +42,7 @@ export default function Analysis() {
     quizResults.forEach((r) => {
       r.answers.forEach((a) => {
         const key =
-          (r.type === "bms" ? getQuestionSubject(a.questionId) : null) || r.subject || r.type;
+          (r.type === "bms" ? getQuestionSubject(a.questionId) : null) || r.subject || r.type || "bms";
         if (!data[key]) data[key] = { correct: 0, total: 0 };
         data[key].total += 1;
         if (a.correct) data[key].correct += 1;

@@ -251,7 +251,7 @@ export function useProgressAnalytics(): ProgressAnalytics {
       if (!day) continue;
       const week = isoWeekLabel(day);
       const entry = weekMap.get(week) ?? { bms: 0, kff: 0, tv: 0, sek: 0 };
-      const section = r.type === "simulation" ? "bms" : r.type;
+      const section = r.type === "simulation" ? "bms" : r.type || "bms";
       if (section in entry) {
         entry[section as keyof typeof entry] += r.total;
       }

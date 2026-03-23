@@ -144,7 +144,12 @@ function sanitizePersisted(state: unknown): Partial<AppState> {
       lastFreezeReset: typeof s.lastFreezeReset === "string" ? s.lastFreezeReset : "",
       darkMode: Boolean(s.darkMode),
       completedChapters: Array.isArray(s.completedChapters) ? s.completedChapters : [],
-      quizResults: Array.isArray(s.quizResults) ? s.quizResults : [],
+      quizResults: Array.isArray(s.quizResults)
+        ? (s.quizResults as QuizResult[]).map((r) => ({
+            ...r,
+            type: r.type || "bms",
+          }))
+        : [],
       currentAnswers:
         s.currentAnswers && typeof s.currentAnswers === "object"
           ? (s.currentAnswers as Record<string, string>)
