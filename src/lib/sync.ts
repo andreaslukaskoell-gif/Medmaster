@@ -80,7 +80,7 @@ export async function pullFromSupabase(userId: string): Promise<void> {
         if (!byId.has(row.id)) {
           byId.set(row.id, {
             id: row.id,
-            type: row.type,
+            type: row.type || "bms",
             subject: row.subject ?? undefined,
             score: row.score,
             total: row.total,

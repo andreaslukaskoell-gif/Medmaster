@@ -49,7 +49,7 @@ export function getDailyGoalFromPlan(
     };
   }
 
-  const dayResults = quizResults.filter((r) => r.timestamp?.startsWith(date));
+  const dayResults = (quizResults ?? []).filter((r) => r?.timestamp?.startsWith(date));
   const dailyMinutes = Math.round(plan.weeklyPlan.reduce((s, p) => s + p.minutesPerWeek, 0) / 7);
 
   const todayTasks: TodayTask[] = plan.weeklyPlan.map((item) => {

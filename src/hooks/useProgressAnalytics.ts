@@ -147,7 +147,7 @@ function isoWeekLabel(dateString: string): string {
 // ============================================================
 
 export function useProgressAnalytics(): ProgressAnalytics {
-  const quizResults = useStore((s) => s.quizResults);
+  const quizResults = useStore((s) => (s.quizResults ?? []).filter(Boolean));
   const activityLog = useStore((s) => s.activityLog);
   const completedChapters = useStore((s) => s.completedChapters);
 
