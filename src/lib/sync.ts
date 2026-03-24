@@ -75,7 +75,8 @@ export async function pullFromSupabase(userId: string): Promise<void> {
 
     // --- Quiz Results: Union by ID ---
     if (quizRes.data && quizRes.data.length > 0) {
-      const byId = new Map(state.quizResults.map((r) => [r.id, r]));
+      const validResults = (state.quizResults ?? []).filter((r) => r != null && !!r.id);
+      const byId = new Map(validResults.map((r) => [r.id, r]));
       for (const row of quizRes.data) {
         if (!byId.has(row.id)) {
           byId.set(row.id, {
@@ -90,7 +91,7 @@ export async function pullFromSupabase(userId: string): Promise<void> {
           } as QuizResult);
         }
       }
-      patch.quizResults = Array.from(byId.values());
+      patch.quizResults = Array.from(byId.values()).filter((r) => r != null && !!r.id);
     }
 
     // --- Spaced Repetition: späteres lastAnswered gewinnt ---
