@@ -150,8 +150,8 @@ export function useProgressAnalytics(): ProgressAnalytics {
   const quizResults = useStore((s) =>
     (s.quizResults ?? []).filter((r) => r != null && typeof r === "object")
   );
-  const activityLog = useStore((s) => s.activityLog);
-  const completedChapters = useStore((s) => s.completedChapters);
+  const activityLog = useStore((s) => s.activityLog ?? {});
+  const completedChapters = useStore((s) => s.completedChapters ?? []);
 
   const getMedATReadiness = useAdaptiveStore((s) => s.getMedATReadiness ?? (() => 0));
   const getWeakestTopics = useAdaptiveStore((s) => s.getWeakestTopics ?? (() => []));
