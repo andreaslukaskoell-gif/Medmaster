@@ -187,7 +187,9 @@ function SelectionScreen({
   const [count, setCount] = useState(questionsPerSession);
   const [source] = useState<QuestionSource>("supabase");
 
-  const quizResults = useStore((s) => s.quizResults);
+  const quizResults = useStore((s) =>
+    (s.quizResults ?? []).filter((r) => r != null && typeof r === "object")
+  );
 
   const bmsStats = useMemo(() => {
     const bms = (quizResults ?? []).filter((r) => r.type === "bms" || r.type === "simulation");

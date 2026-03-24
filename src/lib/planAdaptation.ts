@@ -62,7 +62,7 @@ export function getPlanAdaptation(input: PlanAdaptationInput): PlanAdaptationRes
   cutoff.setDate(cutoff.getDate() - DAYS_LOOKBACK_QUALITY);
   const cutoffStr = cutoff.toISOString().split("T")[0];
   const recentResults = quizResults.filter(
-    (r) => r.timestamp && r.timestamp >= cutoffStr && r.total > 0
+    (r) => r != null && r.timestamp && r.timestamp >= cutoffStr && r.total > 0
   );
   const totalScore = recentResults.reduce((s, r) => s + r.score, 0);
   const totalQuestions = recentResults.reduce((s, r) => s + r.total, 0);

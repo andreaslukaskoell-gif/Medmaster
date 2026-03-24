@@ -47,7 +47,9 @@ export default function TodayPage() {
   const navigate = useNavigate();
   const setResumeToUnterkapitelId = useAdaptiveStore((s) => s.setResumeToUnterkapitelId);
   const { lernplanConfig, getDueChapterIds } = useStore();
-  const quizResults = useStore((s) => s.quizResults);
+  const quizResults = useStore((s) =>
+    (s.quizResults ?? []).filter((r) => r != null && typeof r === "object")
+  );
   const goalAchievedByDate = useStore((s) => s.goalAchievedByDate);
   const activityLog = useStore((s) => s.activityLog);
   const adaptive = useAdaptiveStore();

@@ -147,7 +147,9 @@ function isoWeekLabel(dateString: string): string {
 // ============================================================
 
 export function useProgressAnalytics(): ProgressAnalytics {
-  const quizResults = useStore((s) => s.quizResults);
+  const quizResults = useStore((s) =>
+    (s.quizResults ?? []).filter((r) => r != null && typeof r === "object")
+  );
   const activityLog = useStore((s) => s.activityLog);
   const completedChapters = useStore((s) => s.completedChapters);
 
@@ -251,7 +253,7 @@ export function useProgressAnalytics(): ProgressAnalytics {
       if (!day) continue;
       const week = isoWeekLabel(day);
       const entry = weekMap.get(week) ?? { bms: 0, kff: 0, tv: 0, sek: 0 };
-      const section = r.type === "simulation" ? "bms" : r.type;
+      const section = r.type === "simulation" ? "bms" : r.type || "bms";
       if (section in entry) {
         entry[section as keyof typeof entry] += r.total;
       }
@@ -273,7 +275,7 @@ export function useProgressAnalytics(): ProgressAnalytics {
       .reverse()
       .map((r) => ({
         id: r.id,
-        type: r.type,
+        type: r.type ?? "bms",
         subject: r.subject,
         score: r.score,
         total: r.total,

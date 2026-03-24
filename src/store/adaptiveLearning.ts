@@ -552,7 +552,9 @@ export const useAdaptiveStore = create<AdaptiveState>()(
       },
 
       getPerformanceTrend: () => {
-        const quizResults = useStore.getState().quizResults ?? [];
+        const quizResults = (useStore.getState().quizResults ?? []).filter(
+          (r) => r != null && typeof r === "object"
+        );
         const now = new Date();
         const days: string[] = [];
         for (let i = 13; i >= 0; i--) {

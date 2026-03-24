@@ -129,7 +129,7 @@ function typeBadge(type: string) {
     <span
       className={`text-[10px] uppercase font-semibold tracking-wider px-2 py-0.5 rounded-full ${style.bg} ${style.text}`}
     >
-      {type === "simulation" ? "SIM" : type.toUpperCase()}
+      {type === "simulation" ? "SIM" : (type || "BMS").toUpperCase()}
     </span>
   );
 }

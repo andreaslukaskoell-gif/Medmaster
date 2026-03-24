@@ -144,7 +144,14 @@ function sanitizePersisted(state: unknown): Partial<AppState> {
       lastFreezeReset: typeof s.lastFreezeReset === "string" ? s.lastFreezeReset : "",
       darkMode: Boolean(s.darkMode),
       completedChapters: Array.isArray(s.completedChapters) ? s.completedChapters : [],
-      quizResults: Array.isArray(s.quizResults) ? s.quizResults : [],
+      quizResults: Array.isArray(s.quizResults)
+        ? (s.quizResults as QuizResult[])
+            .filter((r): r is QuizResult => r != null && typeof r === "object" && !!r.id)
+            .map((r) => ({
+              ...r,
+              type: r.type || "bms",
+            }))
+        : [],
       currentAnswers:
         s.currentAnswers && typeof s.currentAnswers === "object"
           ? (s.currentAnswers as Record<string, string>)
@@ -826,7 +833,8 @@ export const useStore = create<AppState>()(
       saveQuizResult: (result) => {
         set((s) => {
           const ts = result.timestamp || new Date().toISOString();
-          const newResults = [...s.quizResults, { ...result, timestamp: ts }].slice(-500);
+          const existing = (s.quizResults ?? []).filter((r) => r != null && !!r.id);
+          const newResults = [...existing, { ...result, timestamp: ts }].slice(-500);
           const wrongAnswers =
             result.type === "bms" && Array.isArray(result.answers)
               ? result.answers.filter((a) => !a.correct)
@@ -1084,6 +1092,22 @@ useStore.persist.onFinishHydration((state) => {
   _storeHydrated = true;
   _hydratedListeners.forEach((fn) => fn());
   _hydratedListeners.clear();
+
+  // Post-hydration safety: strip any remaining null/corrupt quizResults entries
+  try {
+    const qr = state?.quizResults;
+    if (Array.isArray(qr)) {
+      const clean = qr.filter(
+        (r): r is QuizResult => r != null && typeof r === "object" && !!r.id
+      );
+      if (clean.length !== qr.length) {
+        useStore.setState({ quizResults: clean });
+      }
+    }
+  } catch {
+    // ignore
+  }
+
   try {
     if (state?.darkMode) {
       document.documentElement.classList.add("dark");

@@ -25,10 +25,9 @@ export class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, info: ErrorInfo) {
-    // Log in all environments so users can report the error from browser console
     console.error("[ErrorBoundary] Fehler:", error?.name, error?.message);
-    console.error("[ErrorBoundary] Stack:", error?.stack);
     if (import.meta.env.DEV) {
+      console.error("[ErrorBoundary] Stack:", error?.stack);
       console.error("[ErrorBoundary] Komponentenstack:", info?.componentStack);
     }
     // In production, Sentry captures these automatically via its React integration.

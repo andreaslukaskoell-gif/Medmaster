@@ -16,9 +16,10 @@ function toDateKey(isoOrDate: string | undefined): string | null {
 function activityFromQuizResults(quizResults: QuizResult[]): Record<string, number> {
   const byDay: Record<string, number> = {};
   for (const r of quizResults) {
+    if (r == null) continue;
     const key = toDateKey(r.date) ?? toDateKey(r.timestamp);
     if (!key) continue;
-    byDay[key] = (byDay[key] ?? 0) + r.total;
+    byDay[key] = (byDay[key] ?? 0) + (r.total ?? 0);
   }
   return byDay;
 }

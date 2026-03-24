@@ -54,7 +54,9 @@ type Step = "reentry" | "question" | "feedback" | "result";
 export default function SmartRecoveryPage() {
   const navigate = useNavigate();
   const getMinutes = useSessionTimer();
-  const quizResults = useStore((s) => s.quizResults);
+  const quizResults = useStore((s) =>
+    (s.quizResults ?? []).filter((r) => r != null && typeof r === "object")
+  );
   const {
     saveQuizResult,
     addXP,

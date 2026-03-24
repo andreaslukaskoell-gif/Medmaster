@@ -44,7 +44,9 @@ function toDateKey(d: Date): string {
 const MEDAT_KEY = "2026-07-03";
 
 export function Heatmap({ className }: HeatmapProps) {
-  const quizResults = useStore((s) => s.quizResults ?? []);
+  const quizResults = useStore((s) =>
+    (s.quizResults ?? []).filter((r) => r != null && typeof r === "object")
+  );
   const activityLog = useStore((s) => s.activityLog ?? {});
   const stichwortStats = useAdaptiveStore((s) => s.profile?.stichwortStats ?? {});
   const minutesMap = useMemo(
