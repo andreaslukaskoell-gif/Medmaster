@@ -28,7 +28,9 @@ export function useTodayEngine() {
   const spacedRepetition = useStore((s) => s.spacedRepetition ?? {});
   const userProgress = useStore((s) => s.userProgress ?? {});
   const errorEvents = useStore((s) => s.errorEvents ?? []);
-  const quizResults = useStore((s) => s.quizResults ?? []);
+  const quizResults = useStore((s) =>
+    (s.quizResults ?? []).filter((r) => r != null && typeof r === "object")
+  );
   const lastPath = useAdaptiveStore((s) => s.lastPath);
   const lastViewedKapitelId = useAdaptiveStore((s) => s.lastViewedKapitelId);
   const lastViewedUnterkapitelId = useAdaptiveStore((s) => s.lastViewedUnterkapitelId);

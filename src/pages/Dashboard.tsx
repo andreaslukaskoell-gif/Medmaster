@@ -29,7 +29,7 @@ import { WeaknessCard } from "@/components/dashboard/WeaknessCard";
 import { StreakFlameIcon } from "@/components/dashboard/StreakFire";
 import { useLevelUpSound } from "@/hooks/useLevelUpSound";
 import { trackEvent } from "@/lib/analyticsTracker";
-import { useStore } from "@/store/useStore";
+import { useStore, type QuizResult } from "@/store/useStore";
 import { useAdaptiveStore } from "@/store/adaptiveLearning";
 import { useDashboardProfile } from "@/hooks/useDashboardProfile";
 import { usePageTitle } from "@/hooks/usePageTitle";
@@ -71,7 +71,7 @@ export default function Dashboard() {
   const {
     xp: storeXp,
     completedChapters,
-    quizResults,
+    quizResults: rawQuizResults,
     streak,
     lastActiveDate,
     unlockedFachMilestones,
@@ -85,6 +85,11 @@ export default function Dashboard() {
     getDueChapterIds,
     userProgress,
   } = useStore();
+  // Defensive: always filter out null/corrupt entries from quizResults
+  const quizResults = useMemo(
+    () => (rawQuizResults ?? []).filter((r): r is QuizResult => r != null && typeof r === "object"),
+    [rawQuizResults]
+  );
   const activityLog = useStore((s) => s.activityLog);
   const getFachReadiness = useAdaptiveStore((s) => s.getFachReadiness);
   const lastViewedKapitelId = useAdaptiveStore((s) => s.lastViewedKapitelId);

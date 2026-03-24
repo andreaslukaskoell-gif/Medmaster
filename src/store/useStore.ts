@@ -1092,6 +1092,22 @@ useStore.persist.onFinishHydration((state) => {
   _storeHydrated = true;
   _hydratedListeners.forEach((fn) => fn());
   _hydratedListeners.clear();
+
+  // Post-hydration safety: strip any remaining null/corrupt quizResults entries
+  try {
+    const qr = state?.quizResults;
+    if (Array.isArray(qr)) {
+      const clean = qr.filter(
+        (r): r is QuizResult => r != null && typeof r === "object" && !!r.id
+      );
+      if (clean.length !== qr.length) {
+        useStore.setState({ quizResults: clean });
+      }
+    }
+  } catch {
+    // ignore
+  }
+
   try {
     if (state?.darkMode) {
       document.documentElement.classList.add("dark");

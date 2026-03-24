@@ -40,7 +40,10 @@ const confidenceLabel: Record<string, { text: string; className: string }> = {
 };
 
 export default function Statistics() {
-  const { quizResults, xp, streak } = useStore();
+  const { quizResults: rawQuizResults, xp, streak } = useStore();
+  const quizResults = (rawQuizResults ?? []).filter(
+    (r) => r != null && typeof r === "object"
+  );
   const adaptive = useAdaptiveStore();
   const { profile } = adaptive;
   const [stichwortFach, setStichwortFach] = useState<string>("biologie");

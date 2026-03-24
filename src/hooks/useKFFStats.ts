@@ -130,12 +130,15 @@ function getTimestamp(r: QuizResult): number {
 // ---------------------------------------------------------------------------
 
 export function useKFFStats(): KFFStats {
-  const quizResults = useStore((s) => s.quizResults);
+  const quizResults = useStore((s) =>
+    (s.quizResults ?? []).filter((r) => r != null && typeof r === "object")
+  );
 
   // We need direct store access for resetStats
   const resetStats = useCallback((subtest?: KFFSubtestKey) => {
     useStore.setState((s) => {
-      const filtered = s.quizResults.filter((r) => {
+      const filtered = (s.quizResults ?? []).filter((r) => {
+        if (r == null) return false;
         if (r.type !== "kff") return true; // keep non-KFF
         if (!subtest) return false; // reset all KFF
         const matched = matchSubtest(r.subject);
