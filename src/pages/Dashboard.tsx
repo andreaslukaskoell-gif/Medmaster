@@ -686,7 +686,7 @@ function DueReviewsCard({
       if (!match) continue;
 
       const { kapitel, index } = match;
-      const uk = kapitel.unterkapitel[index];
+      const uk = (kapitel.unterkapitel ?? [])[index];
       if (!uk) continue;
 
       const overdueDays = Math.floor(
@@ -875,13 +875,14 @@ function ContinueLearningCard({ completedChapters }: { completedChapters: string
     const ukMatch = findChapterByUnterkapitelId(lastViewedUnterkapitelId);
     if (!ukMatch) return null;
 
+    const uks = kapitel.unterkapitel ?? [];
     const uk =
-      kapitel.unterkapitel[ukMatch.index] ??
-      kapitel.unterkapitel.find((u) => u.id === lastViewedUnterkapitelId);
+      uks[ukMatch.index] ??
+      uks.find((u) => u.id === lastViewedUnterkapitelId);
     if (!uk) return null;
 
-    const totalUks = kapitel.unterkapitel.length;
-    const doneUks = kapitel.unterkapitel.filter((u) => completedChapters.includes(u.id)).length;
+    const totalUks = uks.length;
+    const doneUks = uks.filter((u) => completedChapters.includes(u.id)).length;
 
     // Estimate remaining reading time: parse chapter estimatedTime, scale by remaining UKs
     let remainingMinutes: number | null = null;

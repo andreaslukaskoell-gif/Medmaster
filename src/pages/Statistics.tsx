@@ -261,7 +261,7 @@ export default function Statistics() {
         if (bmsResults.length === 0) return null;
         const bySubject: Record<string, { correct: number; total: number }> = {};
         bmsResults.forEach((r) => {
-          r.answers.forEach((a) => {
+          (r.answers ?? []).forEach((a) => {
             const subj = getQuestionSubject(a.questionId) || r.subject || "unbekannt";
             if (!bySubject[subj]) bySubject[subj] = { correct: 0, total: 0 };
             bySubject[subj].total += 1;

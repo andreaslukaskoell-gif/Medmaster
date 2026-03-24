@@ -960,8 +960,8 @@ export const useStore = create<AppState>()(
 
       getDueChapterIds: () => {
         const today = new Date().toISOString().split("T")[0];
-        return Object.entries(get().userProgress)
-          .filter(([, p]) => p.nextReviewDate <= today)
+        return Object.entries(get().userProgress ?? {})
+          .filter(([, p]) => p?.nextReviewDate && p.nextReviewDate <= today)
           .map(([id]) => id);
       },
 

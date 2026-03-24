@@ -47,8 +47,8 @@ export function useTodayEngine() {
     try {
       const fromQuiz = errorEventsFromQuizResults(
         (quizResults ?? []).map((r) => ({
-          answers: (r.answers ?? []).map((a) => ({ questionId: a.questionId, correct: a.correct })),
-          timestamp: r.timestamp ?? r.date,
+          answers: (r?.answers ?? []).map((a) => ({ questionId: a?.questionId ?? "", correct: a?.correct ?? false })),
+          timestamp: r?.timestamp ?? r?.date ?? "",
         }))
       );
       return [...fromQuiz, ...errorEvents];
