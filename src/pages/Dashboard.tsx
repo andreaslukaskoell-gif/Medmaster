@@ -80,11 +80,8 @@ export default function Dashboard() {
   const rawQuizResults = useStore((s) => s.quizResults ?? STABLE_EMPTY_ARR);
   const streak = useStore((s) => s.streak);
   const lastActiveDate = useStore((s) => s.lastActiveDate);
-  const unlockedFachMilestones = useStore((s) => s.unlockedFachMilestones ?? STABLE_EMPTY_ARR);
-  const unlockFachMilestone = useStore((s) => s.unlockFachMilestone);
   const firstActivityTimeByDay = useStore((s) => s.firstActivityTimeByDay ?? STABLE_EMPTY_OBJ);
   const lernplanConfig = useStore((s) => s.lernplanConfig);
-  const setGoalAchievedToday = useStore((s) => s.setGoalAchievedToday);
   const goalAchievedByDate = useStore((s) => s.goalAchievedByDate ?? STABLE_EMPTY_OBJ);
   const smartAdjustDismissedUntil = useStore((s) => s.smartAdjustDismissedUntil);
   const dismissSmartAdjust = useStore((s) => s.dismissSmartAdjust);
@@ -94,7 +91,6 @@ export default function Dashboard() {
     () => rawQuizResults.filter((r): r is QuizResult => r != null && typeof r === "object"),
     [rawQuizResults]
   );
-  const activityLog = useStore((s) => s.activityLog ?? STABLE_EMPTY_OBJ);
   const lastViewedKapitelId = useAdaptiveStore((s) => s.lastViewedKapitelId);
   const lastViewedUnterkapitelId = useAdaptiveStore((s) => s.lastViewedUnterkapitelId);
   const todayStr = useMemo(() => new Date().toISOString().split("T")[0], []);
@@ -127,11 +123,12 @@ export default function Dashboard() {
     if (!lernplanConfig) return null;
     try {
       const ad = useAdaptiveStore.getState();
+      const storeState = useStore.getState();
       const adaptation = getPlanAdaptation({
         hoursPerWeek: lernplanConfig.hoursPerWeek,
-        goalAchievedByDate: goalAchievedByDate ?? {},
-        quizResults: quizResults ?? [],
-        activityLog: activityLog ?? {},
+        goalAchievedByDate: storeState.goalAchievedByDate ?? {},
+        quizResults: storeState.quizResults ?? [],
+        activityLog: storeState.activityLog ?? {},
       });
       return generateAdaptivePlan({
         hoursPerWeek: adaptation.effectiveHoursPerWeek,
@@ -149,7 +146,8 @@ export default function Dashboard() {
     } catch {
       return null;
     }
-  }, [lernplanConfig, weeksLeft, goalAchievedByDate, quizResults, activityLog]);
+    // goalAchievedByDate/activityLog read via getState() to avoid cascading re-renders
+  }, [lernplanConfig, weeksLeft, quizResults]);
   const concretePlan = useMemo(() => {
     if (!plan) return null;
     try {
@@ -183,32 +181,34 @@ export default function Dashboard() {
     consecutiveGoalMissed >= 3 &&
     (!smartAdjustDismissedUntil || todayStr > smartAdjustDismissedUntil);
 
-  // Due count from Today Engine (Fragen + Kapitel)
+  // Mark daily goal as achieved — runs only when completion state actually changes
+  const goalComplete = dailyGoalState.hasPlan && dailyGoalState.isPrimaryComplete;
   useEffect(() => {
-    if (dailyGoalState.hasPlan && dailyGoalState.isPrimaryComplete) {
-      // Guard: only set if not already achieved to prevent cascading updates
-      const alreadyAchieved = useStore.getState().goalAchievedByDate?.[todayStr];
-      if (!alreadyAchieved) {
-        setGoalAchievedToday(todayStr, true);
-      }
+    if (!goalComplete) return;
+    const s = useStore.getState();
+    if (!s.goalAchievedByDate?.[todayStr]) {
+      s.setGoalAchievedToday(todayStr, true);
     }
-  }, [dailyGoalState.hasPlan, dailyGoalState.isPrimaryComplete, todayStr, setGoalAchievedToday]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- read store via getState() to avoid cascading
+  }, [goalComplete, todayStr]);
 
   const xp = profile.hasData ? profile.xp : Number.isFinite(storeXp) ? storeXp : 0;
   const _level = getLevelFromXP(xp);
   useLevelUpSound(xp);
 
-  const faecherIds = useMemo(() => ["biologie", "chemie", "physik", "mathematik"], []);
+  // Run only once on mount — check and unlock all fach milestones in one pass
   useEffect(() => {
     const currentGetFachReadiness = useAdaptiveStore.getState().getFachReadiness;
     if (!currentGetFachReadiness) return;
-    faecherIds.forEach((fach) => {
-      if (currentGetFachReadiness(fach) >= 50 && !unlockedFachMilestones.includes(fach)) {
-        unlockFachMilestone(fach);
+    const currentUnlocked = useStore.getState().unlockedFachMilestones ?? [];
+    const unlock = useStore.getState().unlockFachMilestone;
+    for (const fach of ["biologie", "chemie", "physik", "mathematik"]) {
+      if (currentGetFachReadiness(fach) >= 50 && !currentUnlocked.includes(fach)) {
+        unlock(fach);
       }
-    });
-    // eslint-disable-next-line react-hooks/exhaustive-deps -- getFachReadiness is unstable; read from getState() instead
-  }, [unlockedFachMilestones, unlockFachMilestone, faecherIds]);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- intentionally run only on mount
+  }, []);
 
   const cardClass = "card-glass";
   const { bmsProgressPct, bmsProgressDone, bmsProgressTotal } = useMemo(() => {
