@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
-import { Sun, Moon, Search, Award, Menu } from "lucide-react";
+import { Sun, Moon, Search, Award, Menu, Monitor, Smartphone } from "lucide-react";
 import { useStore } from "@/store/useStore";
 import { StreakFlameIcon } from "@/components/dashboard/StreakFire";
 import { useIsMounted } from "@/hooks/useIsMounted";
 import { OPEN_COMMAND_PALETTE } from "@/lib/commandPaletteConstants";
 import { getLevelFromXP } from "@/lib/progression";
+import { useViewportMode } from "@/hooks/useViewportMode";
 import { GlobalBreadcrumb } from "./GlobalBreadcrumb";
 import { Tooltip } from "@/components/ui/Tooltip";
 
@@ -18,6 +19,8 @@ export function TopBar({ onMenuToggle }: { onMenuToggle?: () => void }) {
   const toggleDarkMode = useStore((s) => s.toggleDarkMode) ?? (() => {});
   const todayStr = new Date().toISOString().split("T")[0];
   const hasActivityToday = lastActiveDate === todayStr;
+
+  const { mode: viewportMode, toggle: toggleViewport } = useViewportMode();
 
   const openCommandPalette = () => {
     window.dispatchEvent(new CustomEvent(OPEN_COMMAND_PALETTE));
@@ -81,6 +84,18 @@ export function TopBar({ onMenuToggle }: { onMenuToggle?: () => void }) {
             </div>
           </Tooltip>
         </div>
+
+        {/* Viewport toggle (Desktop / Mobile) */}
+        <Tooltip content={viewportMode === "desktop" ? "Handyansicht" : "Desktopansicht"} position="bottom">
+          <button
+            type="button"
+            onClick={toggleViewport}
+            className="p-2 rounded-lg text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-[var(--foreground)]/5 transition-colors cursor-pointer"
+            aria-label={viewportMode === "desktop" ? "Zur Handyansicht wechseln" : "Zur Desktopansicht wechseln"}
+          >
+            {viewportMode === "desktop" ? <Smartphone className="w-4 h-4" /> : <Monitor className="w-4 h-4" />}
+          </button>
+        </Tooltip>
 
         {/* Dark mode toggle */}
         <Tooltip content={darkMode ? "Hellmodus" : "Darkmodus"} position="bottom">
