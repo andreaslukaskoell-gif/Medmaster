@@ -153,9 +153,7 @@ export function useProgressAnalytics(): ProgressAnalytics {
   const activityLog = useStore((s) => s.activityLog ?? {});
   const completedChapters = useStore((s) => s.completedChapters ?? []);
 
-  const getMedATReadiness = useAdaptiveStore((s) => s.getMedATReadiness ?? (() => 0));
-  const getWeakestTopics = useAdaptiveStore((s) => s.getWeakestTopics ?? (() => []));
-  const getStrongestTopics = useAdaptiveStore((s) => s.getStrongestTopics ?? (() => []));
+  // Note: store functions accessed via getState() to avoid unstable refs in dependency arrays
 
   // ── Subject Accuracy ──────────────────────────────────────
   const subjectAccuracy = useMemo(() => {
@@ -286,27 +284,34 @@ export function useProgressAnalytics(): ProgressAnalytics {
   }, [quizResults]);
 
   // ── Overall Readiness ─────────────────────────────────────
-  const overallReadiness = useMemo(() => getMedATReadiness(), [getMedATReadiness]);
+  const overallReadiness = useMemo(() => {
+    const fn = useAdaptiveStore.getState().getMedATReadiness;
+    return fn?.() ?? 0;
+  }, [quizResults]);
 
   // ── Weak / Strong Topics ──────────────────────────────────
   const weakTopics = useMemo(
-    () =>
-      getWeakestTopics(10).map((t) => ({
+    () => {
+      const fn = useAdaptiveStore.getState().getWeakestTopics;
+      return (fn?.(10) ?? []).map((t) => ({
         topic: t.thema,
         fach: t.fach,
         successRate: t.rate,
-      })),
-    [getWeakestTopics]
+      }));
+    },
+    [quizResults]
   );
 
   const strongTopics = useMemo(
-    () =>
-      getStrongestTopics(10).map((t) => ({
+    () => {
+      const fn = useAdaptiveStore.getState().getStrongestTopics;
+      return (fn?.(10) ?? []).map((t) => ({
         topic: t.thema,
         fach: t.fach,
         successRate: t.rate,
-      })),
-    [getStrongestTopics]
+      }));
+    },
+    [quizResults]
   );
 
   // ── Total Stats ───────────────────────────────────────────

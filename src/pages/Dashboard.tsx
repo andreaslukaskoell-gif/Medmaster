@@ -82,7 +82,6 @@ export default function Dashboard() {
     goalAchievedByDate,
     smartAdjustDismissedUntil,
     dismissSmartAdjust,
-    getDueChapterIds,
     userProgress,
   } = useStore();
   // Defensive: always filter out null/corrupt entries from quizResults
@@ -91,7 +90,6 @@ export default function Dashboard() {
     [rawQuizResults]
   );
   const activityLog = useStore((s) => s.activityLog);
-  const getFachReadiness = useAdaptiveStore((s) => s.getFachReadiness);
   const lastViewedKapitelId = useAdaptiveStore((s) => s.lastViewedKapitelId);
   const lastViewedUnterkapitelId = useAdaptiveStore((s) => s.lastViewedUnterkapitelId);
   const todayStr = useMemo(() => new Date().toISOString().split("T")[0], []);
@@ -150,15 +148,17 @@ export default function Dashboard() {
   const concretePlan = useMemo(() => {
     if (!plan) return null;
     try {
+      const dueIds = useStore.getState().getDueChapterIds?.() ?? [];
       return buildConcreteDailyPlan(plan, {
-        dueChapterIds: getDueChapterIds?.() ?? [],
+        dueChapterIds: dueIds,
         lastViewedChapterId: lastViewedKapitelId,
         lastViewedUnterkapitelId,
       });
     } catch {
       return null;
     }
-  }, [plan, getDueChapterIds, lastViewedKapitelId, lastViewedUnterkapitelId]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- getDueChapterIds is unstable; read from getState()
+  }, [plan, lastViewedKapitelId, lastViewedUnterkapitelId]);
   const dailyGoalState = useMemo(
     () => {
       try {
@@ -181,7 +181,11 @@ export default function Dashboard() {
   // Due count from Today Engine (Fragen + Kapitel)
   useEffect(() => {
     if (dailyGoalState.hasPlan && dailyGoalState.isPrimaryComplete) {
-      setGoalAchievedToday(todayStr, true);
+      // Guard: only set if not already achieved to prevent cascading updates
+      const alreadyAchieved = useStore.getState().goalAchievedByDate?.[todayStr];
+      if (!alreadyAchieved) {
+        setGoalAchievedToday(todayStr, true);
+      }
     }
   }, [dailyGoalState.hasPlan, dailyGoalState.isPrimaryComplete, todayStr, setGoalAchievedToday]);
 
@@ -191,12 +195,15 @@ export default function Dashboard() {
 
   const faecherIds = useMemo(() => ["biologie", "chemie", "physik", "mathematik"], []);
   useEffect(() => {
+    const currentGetFachReadiness = useAdaptiveStore.getState().getFachReadiness;
+    if (!currentGetFachReadiness) return;
     faecherIds.forEach((fach) => {
-      if (getFachReadiness(fach) >= 50 && !unlockedFachMilestones.includes(fach)) {
+      if (currentGetFachReadiness(fach) >= 50 && !unlockedFachMilestones.includes(fach)) {
         unlockFachMilestone(fach);
       }
     });
-  }, [getFachReadiness, unlockedFachMilestones, unlockFachMilestone, faecherIds]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- getFachReadiness is unstable; read from getState() instead
+  }, [unlockedFachMilestones, unlockFachMilestone, faecherIds]);
 
   const cardClass = "card-glass";
   const { bmsProgressPct, bmsProgressDone, bmsProgressTotal } = useMemo(() => {
