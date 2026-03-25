@@ -59,18 +59,18 @@ import { DailyPlanWidget } from "@/components/dashboard/DailyPlanWidget";
 import { WeaknessWidget } from "@/components/dashboard/WeaknessWidget";
 import { RecentActivityWidget } from "@/components/dashboard/RecentActivityWidget";
 
+// Stable defaults — prevent infinite re-render loops in Zustand selectors.
+// `?? []` inside a selector creates a NEW reference every render if the value is nullish,
+// causing Zustand (Object.is equality) to trigger re-render → loop.
+const STABLE_EMPTY_ARR: never[] = [];
+const STABLE_EMPTY_OBJ = {} as Record<string, never>;
+
 const tileMotion = {
   initial: { opacity: 0, y: 16 },
   animate: { opacity: 1, y: 0 },
   transition: { duration: 0.35, ease: [0.25, 0.1, 0.25, 1] },
 };
 const stagger = { transition: { staggerChildren: 0.08 } };
-
-// Stable defaults — prevent infinite re-render loops in Zustand selectors.
-// `?? []` inside a selector creates a NEW reference every render if the value is nullish,
-// causing Zustand (Object.is equality) to trigger re-render → loop.
-const STABLE_EMPTY_ARR: never[] = [];
-const STABLE_EMPTY_OBJ = {} as Record<string, never>;
 
 export default function Dashboard() {
   usePageTitle("Dashboard");
