@@ -52,6 +52,7 @@ import { getPlanAdaptation } from "@/lib/planAdaptation";
 import { alleKapitel, getKapitelById, findChapterByUnterkapitelId } from "@/data/bmsKapitel";
 import { pathForChapter } from "@/lib/bmsRoutes";
 import { useTodayEngine } from "@/hooks/useTodayEngine";
+import { useViewportMode } from "@/hooks/useViewportMode";
 import { ReferralWidget } from "@/components/shared/ReferralWidget";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { Tooltip } from "@/components/ui/Tooltip";
@@ -74,6 +75,7 @@ const stagger = { transition: { staggerChildren: 0.08 } };
 
 export default function Dashboard() {
   usePageTitle("Dashboard");
+  const { isMobile } = useViewportMode();
   // Use individual selectors instead of useStore() to avoid re-rendering on ANY state change
   const storeXp = useStore((s) => s.xp);
   const completedChapters = useStore((s) => s.completedChapters ?? STABLE_EMPTY_ARR);
@@ -249,7 +251,7 @@ export default function Dashboard() {
             <p className="text-sm text-[var(--muted)] text-center mb-4">
               Wähle einen Bereich und leg direkt los.
             </p>
-            <div className="grid grid-cols-3 gap-3 stagger-children">
+            <div className={`grid gap-3 stagger-children ${isMobile ? "grid-cols-1" : "grid-cols-3"}`}>
               {(
                 [
                   {
@@ -443,7 +445,7 @@ export default function Dashboard() {
           <motion.section
             variants={tileMotion}
             aria-label="Daily und Streak"
-            className="grid grid-cols-2 gap-4"
+            className={`grid gap-4 ${isMobile ? "grid-cols-1" : "grid-cols-2"}`}
           >
             {/* Daily Challenge Widget */}
             <div aria-label="BMS des Tages">
@@ -525,7 +527,7 @@ export default function Dashboard() {
             <motion.section
               variants={tileMotion}
               aria-label="Empfehlungen"
-              className="grid grid-cols-3 gap-4"
+              className={`grid gap-4 ${isMobile ? "grid-cols-1" : "grid-cols-3"}`}
             >
               <DailyPlanWidget />
               <WeaknessWidget />
@@ -538,7 +540,7 @@ export default function Dashboard() {
             <motion.section
               variants={tileMotion}
               aria-label="Wochen-Aktivität und Freunde"
-              className="grid grid-cols-2 gap-4"
+              className={`grid gap-4 ${isMobile ? "grid-cols-1" : "grid-cols-2"}`}
             >
               <div className={cn(cardClass, "p-5")}>
                 <div className="flex flex-wrap items-center justify-between gap-2 mb-3">

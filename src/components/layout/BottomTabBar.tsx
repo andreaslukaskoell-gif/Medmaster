@@ -15,7 +15,7 @@ export function BottomTabBar() {
   const location = useLocation();
   return (
     <nav
-      className="lg:hidden fixed bottom-0 left-0 right-0 z-50 safe-area-pb"
+      className="fixed bottom-0 left-0 right-0 z-50 safe-area-pb"
       aria-label="Hauptnavigation"
     >
       <div className="bg-[var(--topbar-bg)] backdrop-blur-xl border-t border-[var(--border)] shadow-[0_-2px_12px_rgba(0,0,0,0.04)] dark:shadow-[0_-2px_12px_rgba(0,0,0,0.15)] pb-[env(safe-area-inset-bottom)]">

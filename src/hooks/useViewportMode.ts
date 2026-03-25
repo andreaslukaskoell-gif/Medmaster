@@ -17,6 +17,16 @@ function applyViewport(mode: ViewportMode) {
       ? "width=1280, initial-scale=0.35, user-scalable=yes"
       : "width=device-width, initial-scale=1.0"
   );
+  // Toggle CSS class on <html> so components can use .mobile-mode selectors
+  document.documentElement.classList.toggle("mobile-mode", mode === "mobile");
+}
+
+/** Detect if device is likely mobile based on screen width and touch support. */
+function detectDevice(): ViewportMode {
+  if (typeof window === "undefined") return "desktop";
+  const isNarrow = window.screen.width < 768;
+  const hasTouch = "ontouchstart" in window || navigator.maxTouchPoints > 0;
+  return isNarrow && hasTouch ? "mobile" : "desktop";
 }
 
 function loadMode(): ViewportMode {
@@ -26,7 +36,14 @@ function loadMode(): ViewportMode {
   } catch {
     // ignore
   }
-  return "desktop";
+  // No stored preference — auto-detect from device
+  return detectDevice();
+}
+
+// Apply immediately on load (before React hydrates) to avoid flash
+if (typeof document !== "undefined") {
+  const initial = loadMode();
+  applyViewport(initial);
 }
 
 export function useViewportMode() {
@@ -48,5 +65,5 @@ export function useViewportMode() {
     });
   }, []);
 
-  return { mode, toggle } as const;
+  return { mode, toggle, isMobile: mode === "mobile" } as const;
 }

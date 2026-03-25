@@ -37,6 +37,8 @@ import { cn } from "@/lib/utils";
 import { useNoIndex } from "@/hooks/usePageTitle";
 import { useReferralAttribution } from "@/hooks/useReferralAttribution";
 import { SIDEBAR_MAIN_ML } from "./sidebarLayout";
+import { BottomTabBar } from "./BottomTabBar";
+import { useViewportMode } from "@/hooks/useViewportMode";
 import { KeyboardShortcutsOverlay } from "@/components/KeyboardShortcutsOverlay";
 import { OnboardingWizard } from "@/components/OnboardingWizard";
 import { XPToast } from "@/components/ui/XPToast";
@@ -68,6 +70,7 @@ export function AppShell() {
   useNoIndex(); // All AppShell routes are auth-gated — prevent indexing
   useReferralAttribution();
   useKonamiCode();
+  const { isMobile } = useViewportMode();
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [commandPaletteOpen, setCommandPaletteOpen] = useState(false);
   const [cmdPaletteEverOpened, setCmdPaletteEverOpened] = useState(false);
@@ -217,6 +220,7 @@ export function AppShell() {
         <XPToast />
         <ScrollToTop />
         <KonamiEasterEgg />
+        {isMobile && <BottomTabBar />}
         <div
           className={cn(
             "min-h-screen flex flex-col relative z-50 w-full transition-colors duration-200",
@@ -229,8 +233,8 @@ export function AppShell() {
             id="main-content"
             tabIndex={-1}
             className={cn(
-              "flex-1 p-6 pb-8 w-full transition-[max-width,padding-top] duration-200",
-              "pt-16",
+              "flex-1 w-full transition-[max-width,padding-top] duration-200",
+              isMobile ? "px-3 pt-14 pb-24" : "p-6 pb-8 pt-16",
               isChapterRoute ? "max-w-none mx-auto" : "max-w-7xl mx-auto"
             )}
           >
