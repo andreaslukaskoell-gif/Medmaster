@@ -12,6 +12,9 @@ import { daysUntilMedAT } from "@/lib/utils";
 
 export type PlanTier = "minimal" | "empfohlen" | "intensiv";
 
+// Stable default to avoid infinite re-render loop in Zustand selector
+const EMPTY_CHAPTERS: string[] = [];
+
 const TIER_FACTORS: Record<PlanTier, number> = {
   minimal: 0.5,
   empfohlen: 1.0,
@@ -63,7 +66,7 @@ export function useDailyPlan(): DailyPlanResult {
 
   // Read from stores
   const lernplanConfig = useStore((s) => s.lernplanConfig);
-  const completedChapters = useStore((s) => s.completedChapters ?? []);
+  const completedChapters = useStore((s) => s.completedChapters ?? EMPTY_CHAPTERS);
   const lastViewedKapitelId = useAdaptiveStore((s) => s.lastViewedKapitelId);
   const lastViewedUnterkapitelId = useAdaptiveStore((s) => s.lastViewedUnterkapitelId);
 

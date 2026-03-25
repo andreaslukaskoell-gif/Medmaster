@@ -24,13 +24,17 @@ const EMPTY_RESULT = {
   topWeaknesses: [] as ReturnType<typeof getTopWeaknesses>,
 };
 
+// Stable defaults to avoid infinite re-render loops.
+// Zustand uses Object.is for equality; `?? {}` creates a NEW reference every render
+// if the original value is nullish, causing Zustand to think state changed → re-render → loop.
+const EMPTY_OBJ = {} as Record<string, never>;
+const EMPTY_ARR = [] as never[];
+
 export function useTodayEngine() {
-  const spacedRepetition = useStore((s) => s.spacedRepetition ?? {});
-  const userProgress = useStore((s) => s.userProgress ?? {});
-  const errorEvents = useStore((s) => s.errorEvents ?? []);
-  const quizResults = useStore((s) =>
-    (s.quizResults ?? []).filter((r) => r != null && typeof r === "object")
-  );
+  const spacedRepetition = useStore((s) => s.spacedRepetition ?? EMPTY_OBJ);
+  const userProgress = useStore((s) => s.userProgress ?? EMPTY_OBJ);
+  const errorEvents = useStore((s) => s.errorEvents ?? EMPTY_ARR);
+  const quizResults = useStore((s) => s.quizResults ?? EMPTY_ARR);
   const lastPath = useAdaptiveStore((s) => s.lastPath);
   const lastViewedKapitelId = useAdaptiveStore((s) => s.lastViewedKapitelId);
   const lastViewedUnterkapitelId = useAdaptiveStore((s) => s.lastViewedUnterkapitelId);
@@ -45,8 +49,9 @@ export function useTodayEngine() {
 
   const allErrorEvents = useMemo(() => {
     try {
+      const validResults = quizResults.filter((r) => r != null && typeof r === "object");
       const fromQuiz = errorEventsFromQuizResults(
-        (quizResults ?? []).map((r) => ({
+        validResults.map((r) => ({
           answers: (r?.answers ?? []).map((a) => ({ questionId: a?.questionId ?? "", correct: a?.correct ?? false })),
           timestamp: r?.timestamp ?? r?.date ?? "",
         }))

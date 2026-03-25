@@ -66,30 +66,35 @@ const tileMotion = {
 };
 const stagger = { transition: { staggerChildren: 0.08 } };
 
+// Stable defaults — prevent infinite re-render loops in Zustand selectors.
+// `?? []` inside a selector creates a NEW reference every render if the value is nullish,
+// causing Zustand (Object.is equality) to trigger re-render → loop.
+const STABLE_EMPTY_ARR: never[] = [];
+const STABLE_EMPTY_OBJ = {} as Record<string, never>;
+
 export default function Dashboard() {
   usePageTitle("Dashboard");
-  const {
-    xp: storeXp,
-    completedChapters,
-    quizResults: rawQuizResults,
-    streak,
-    lastActiveDate,
-    unlockedFachMilestones,
-    unlockFachMilestone,
-    firstActivityTimeByDay,
-    lernplanConfig,
-    setGoalAchievedToday,
-    goalAchievedByDate,
-    smartAdjustDismissedUntil,
-    dismissSmartAdjust,
-    userProgress,
-  } = useStore();
+  // Use individual selectors instead of useStore() to avoid re-rendering on ANY state change
+  const storeXp = useStore((s) => s.xp);
+  const completedChapters = useStore((s) => s.completedChapters ?? STABLE_EMPTY_ARR);
+  const rawQuizResults = useStore((s) => s.quizResults ?? STABLE_EMPTY_ARR);
+  const streak = useStore((s) => s.streak);
+  const lastActiveDate = useStore((s) => s.lastActiveDate);
+  const unlockedFachMilestones = useStore((s) => s.unlockedFachMilestones ?? STABLE_EMPTY_ARR);
+  const unlockFachMilestone = useStore((s) => s.unlockFachMilestone);
+  const firstActivityTimeByDay = useStore((s) => s.firstActivityTimeByDay ?? STABLE_EMPTY_OBJ);
+  const lernplanConfig = useStore((s) => s.lernplanConfig);
+  const setGoalAchievedToday = useStore((s) => s.setGoalAchievedToday);
+  const goalAchievedByDate = useStore((s) => s.goalAchievedByDate ?? STABLE_EMPTY_OBJ);
+  const smartAdjustDismissedUntil = useStore((s) => s.smartAdjustDismissedUntil);
+  const dismissSmartAdjust = useStore((s) => s.dismissSmartAdjust);
+  const userProgress = useStore((s) => s.userProgress ?? STABLE_EMPTY_OBJ);
   // Defensive: always filter out null/corrupt entries from quizResults
   const quizResults = useMemo(
-    () => (rawQuizResults ?? []).filter((r): r is QuizResult => r != null && typeof r === "object"),
+    () => rawQuizResults.filter((r): r is QuizResult => r != null && typeof r === "object"),
     [rawQuizResults]
   );
-  const activityLog = useStore((s) => s.activityLog);
+  const activityLog = useStore((s) => s.activityLog ?? STABLE_EMPTY_OBJ);
   const lastViewedKapitelId = useAdaptiveStore((s) => s.lastViewedKapitelId);
   const lastViewedUnterkapitelId = useAdaptiveStore((s) => s.lastViewedUnterkapitelId);
   const todayStr = useMemo(() => new Date().toISOString().split("T")[0], []);

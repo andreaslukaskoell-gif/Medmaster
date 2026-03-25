@@ -36,6 +36,10 @@ import { getLevelFromXP, getRequiredLevelForPath } from "@/lib/progression";
 import { pathForChapter, chapterIdFromParams } from "@/lib/bmsRoutes";
 import type { Kapitel } from "@/data/bmsKapitel/types";
 
+// Stable defaults for Zustand selectors
+const SIDEBAR_EMPTY_OBJ = {} as Record<string, never>;
+const SIDEBAR_EMPTY_ARR: never[] = [];
+
 /* ── Subject config ─────────────────────────────────────────────────── */
 
 const subjectConfig: Record<
@@ -175,7 +179,7 @@ export function Sidebar({ open, onClose }: { open: boolean; onClose: () => void 
 
   const xp = useStore((s) => s.xp);
   const currentLevel = useMemo(() => getLevelFromXP(xp ?? 0), [xp]);
-  const userProgress = useStore((s) => s.userProgress ?? {});
+  const userProgress = useStore((s) => s.userProgress ?? SIDEBAR_EMPTY_OBJ);
   const dueChapterIds = useMemo(() => {
     const today = new Date().toISOString().split("T")[0];
     const progress = userProgress ?? {};
@@ -190,7 +194,7 @@ export function Sidebar({ open, onClose }: { open: boolean; onClose: () => void 
     return Object.values(sr).filter((item) => item?.nextDue <= today).length;
   });
 
-  const completedChapters = useStore((s) => s.completedChapters ?? []);
+  const completedChapters = useStore((s) => s.completedChapters ?? SIDEBAR_EMPTY_ARR);
   const bmsProgress = useMemo(() => {
     const kapitel = bmsModule?.alleKapitel ?? [];
     const totalUK = kapitel.reduce((sum, k) => sum + (k?.unterkapitel?.length ?? 0), 0);
