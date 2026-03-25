@@ -146,16 +146,23 @@ function isoWeekLabel(dateString: string): string {
 // Hook
 // ============================================================
 
-export function useProgressAnalytics(): ProgressAnalytics {
-  const quizResults = useStore((s) =>
-    (s.quizResults ?? []).filter((r) => r != null && typeof r === "object")
-  );
-  const activityLog = useStore((s) => s.activityLog);
-  const completedChapters = useStore((s) => s.completedChapters);
+// Stable defaults — prevent infinite re-render loops in Zustand selectors.
+// `?? {}` inside a selector creates a NEW reference every render if the value is nullish,
+// causing Zustand (Object.is equality) to re-render → loop.
+const EMPTY_QUIZ: never[] = [];
+const EMPTY_LOG = {} as Record<string, never>;
+const EMPTY_CHAPTERS: string[] = [];
 
-  const getMedATReadiness = useAdaptiveStore((s) => s.getMedATReadiness ?? (() => 0));
-  const getWeakestTopics = useAdaptiveStore((s) => s.getWeakestTopics ?? (() => []));
-  const getStrongestTopics = useAdaptiveStore((s) => s.getStrongestTopics ?? (() => []));
+export function useProgressAnalytics(): ProgressAnalytics {
+  const rawQuizResults = useStore((s) => s.quizResults ?? EMPTY_QUIZ);
+  const quizResults = useMemo(
+    () => rawQuizResults.filter((r) => r != null && typeof r === "object"),
+    [rawQuizResults]
+  );
+  const activityLog = useStore((s) => s.activityLog ?? EMPTY_LOG);
+  const completedChapters = useStore((s) => s.completedChapters ?? EMPTY_CHAPTERS);
+
+  // Note: store functions accessed via getState() to avoid unstable refs in dependency arrays
 
   // ── Subject Accuracy ──────────────────────────────────────
   const subjectAccuracy = useMemo(() => {
@@ -286,27 +293,34 @@ export function useProgressAnalytics(): ProgressAnalytics {
   }, [quizResults]);
 
   // ── Overall Readiness ─────────────────────────────────────
-  const overallReadiness = useMemo(() => getMedATReadiness(), [getMedATReadiness]);
+  const overallReadiness = useMemo(() => {
+    const fn = useAdaptiveStore.getState().getMedATReadiness;
+    return fn?.() ?? 0;
+  }, [quizResults]);
 
   // ── Weak / Strong Topics ──────────────────────────────────
   const weakTopics = useMemo(
-    () =>
-      getWeakestTopics(10).map((t) => ({
+    () => {
+      const fn = useAdaptiveStore.getState().getWeakestTopics;
+      return (fn?.(10) ?? []).map((t) => ({
         topic: t.thema,
         fach: t.fach,
         successRate: t.rate,
-      })),
-    [getWeakestTopics]
+      }));
+    },
+    [quizResults]
   );
 
   const strongTopics = useMemo(
-    () =>
-      getStrongestTopics(10).map((t) => ({
+    () => {
+      const fn = useAdaptiveStore.getState().getStrongestTopics;
+      return (fn?.(10) ?? []).map((t) => ({
         topic: t.thema,
         fach: t.fach,
         successRate: t.rate,
-      })),
-    [getStrongestTopics]
+      }));
+    },
+    [quizResults]
   );
 
   // ── Total Stats ───────────────────────────────────────────

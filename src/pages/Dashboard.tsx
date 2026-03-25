@@ -59,6 +59,12 @@ import { DailyPlanWidget } from "@/components/dashboard/DailyPlanWidget";
 import { WeaknessWidget } from "@/components/dashboard/WeaknessWidget";
 import { RecentActivityWidget } from "@/components/dashboard/RecentActivityWidget";
 
+// Stable defaults — prevent infinite re-render loops in Zustand selectors.
+// `?? []` inside a selector creates a NEW reference every render if the value is nullish,
+// causing Zustand (Object.is equality) to trigger re-render → loop.
+const STABLE_EMPTY_ARR: never[] = [];
+const STABLE_EMPTY_OBJ = {} as Record<string, never>;
+
 const tileMotion = {
   initial: { opacity: 0, y: 16 },
   animate: { opacity: 1, y: 0 },
@@ -68,30 +74,27 @@ const stagger = { transition: { staggerChildren: 0.08 } };
 
 export default function Dashboard() {
   usePageTitle("Dashboard");
-  const {
-    xp: storeXp,
-    completedChapters,
-    quizResults: rawQuizResults,
-    streak,
-    lastActiveDate,
-    unlockedFachMilestones,
-    unlockFachMilestone,
-    firstActivityTimeByDay,
-    lernplanConfig,
-    setGoalAchievedToday,
-    goalAchievedByDate,
-    smartAdjustDismissedUntil,
-    dismissSmartAdjust,
-    getDueChapterIds,
-    userProgress,
-  } = useStore();
+  // Use individual selectors instead of useStore() to avoid re-rendering on ANY state change
+  const storeXp = useStore((s) => s.xp);
+  const completedChapters = useStore((s) => s.completedChapters ?? STABLE_EMPTY_ARR);
+  const rawQuizResults = useStore((s) => s.quizResults ?? STABLE_EMPTY_ARR);
+  const streak = useStore((s) => s.streak);
+  const lastActiveDate = useStore((s) => s.lastActiveDate);
+  const unlockedFachMilestones = useStore((s) => s.unlockedFachMilestones ?? STABLE_EMPTY_ARR);
+  const unlockFachMilestone = useStore((s) => s.unlockFachMilestone);
+  const firstActivityTimeByDay = useStore((s) => s.firstActivityTimeByDay ?? STABLE_EMPTY_OBJ);
+  const lernplanConfig = useStore((s) => s.lernplanConfig);
+  const setGoalAchievedToday = useStore((s) => s.setGoalAchievedToday);
+  const goalAchievedByDate = useStore((s) => s.goalAchievedByDate ?? STABLE_EMPTY_OBJ);
+  const smartAdjustDismissedUntil = useStore((s) => s.smartAdjustDismissedUntil);
+  const dismissSmartAdjust = useStore((s) => s.dismissSmartAdjust);
+  const userProgress = useStore((s) => s.userProgress ?? STABLE_EMPTY_OBJ);
   // Defensive: always filter out null/corrupt entries from quizResults
   const quizResults = useMemo(
-    () => (rawQuizResults ?? []).filter((r): r is QuizResult => r != null && typeof r === "object"),
+    () => rawQuizResults.filter((r): r is QuizResult => r != null && typeof r === "object"),
     [rawQuizResults]
   );
-  const activityLog = useStore((s) => s.activityLog);
-  const getFachReadiness = useAdaptiveStore((s) => s.getFachReadiness);
+  const activityLog = useStore((s) => s.activityLog ?? STABLE_EMPTY_OBJ);
   const lastViewedKapitelId = useAdaptiveStore((s) => s.lastViewedKapitelId);
   const lastViewedUnterkapitelId = useAdaptiveStore((s) => s.lastViewedUnterkapitelId);
   const todayStr = useMemo(() => new Date().toISOString().split("T")[0], []);
@@ -150,15 +153,17 @@ export default function Dashboard() {
   const concretePlan = useMemo(() => {
     if (!plan) return null;
     try {
+      const dueIds = useStore.getState().getDueChapterIds?.() ?? [];
       return buildConcreteDailyPlan(plan, {
-        dueChapterIds: getDueChapterIds?.() ?? [],
+        dueChapterIds: dueIds,
         lastViewedChapterId: lastViewedKapitelId,
         lastViewedUnterkapitelId,
       });
     } catch {
       return null;
     }
-  }, [plan, getDueChapterIds, lastViewedKapitelId, lastViewedUnterkapitelId]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- getDueChapterIds is unstable; read from getState()
+  }, [plan, lastViewedKapitelId, lastViewedUnterkapitelId]);
   const dailyGoalState = useMemo(
     () => {
       try {
@@ -181,7 +186,11 @@ export default function Dashboard() {
   // Due count from Today Engine (Fragen + Kapitel)
   useEffect(() => {
     if (dailyGoalState.hasPlan && dailyGoalState.isPrimaryComplete) {
-      setGoalAchievedToday(todayStr, true);
+      // Guard: only set if not already achieved to prevent cascading updates
+      const alreadyAchieved = useStore.getState().goalAchievedByDate?.[todayStr];
+      if (!alreadyAchieved) {
+        setGoalAchievedToday(todayStr, true);
+      }
     }
   }, [dailyGoalState.hasPlan, dailyGoalState.isPrimaryComplete, todayStr, setGoalAchievedToday]);
 
@@ -191,12 +200,15 @@ export default function Dashboard() {
 
   const faecherIds = useMemo(() => ["biologie", "chemie", "physik", "mathematik"], []);
   useEffect(() => {
+    const currentGetFachReadiness = useAdaptiveStore.getState().getFachReadiness;
+    if (!currentGetFachReadiness) return;
     faecherIds.forEach((fach) => {
-      if (getFachReadiness(fach) >= 50 && !unlockedFachMilestones.includes(fach)) {
+      if (currentGetFachReadiness(fach) >= 50 && !unlockedFachMilestones.includes(fach)) {
         unlockFachMilestone(fach);
       }
     });
-  }, [getFachReadiness, unlockedFachMilestones, unlockFachMilestone, faecherIds]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- getFachReadiness is unstable; read from getState() instead
+  }, [unlockedFachMilestones, unlockFachMilestone, faecherIds]);
 
   const cardClass = "card-glass";
   const { bmsProgressPct, bmsProgressDone, bmsProgressTotal } = useMemo(() => {
@@ -686,7 +698,7 @@ function DueReviewsCard({
       if (!match) continue;
 
       const { kapitel, index } = match;
-      const uk = kapitel.unterkapitel[index];
+      const uk = (kapitel.unterkapitel ?? [])[index];
       if (!uk) continue;
 
       const overdueDays = Math.floor(
@@ -875,13 +887,14 @@ function ContinueLearningCard({ completedChapters }: { completedChapters: string
     const ukMatch = findChapterByUnterkapitelId(lastViewedUnterkapitelId);
     if (!ukMatch) return null;
 
+    const uks = kapitel.unterkapitel ?? [];
     const uk =
-      kapitel.unterkapitel[ukMatch.index] ??
-      kapitel.unterkapitel.find((u) => u.id === lastViewedUnterkapitelId);
+      uks[ukMatch.index] ??
+      uks.find((u) => u.id === lastViewedUnterkapitelId);
     if (!uk) return null;
 
-    const totalUks = kapitel.unterkapitel.length;
-    const doneUks = kapitel.unterkapitel.filter((u) => completedChapters.includes(u.id)).length;
+    const totalUks = uks.length;
+    const doneUks = uks.filter((u) => completedChapters.includes(u.id)).length;
 
     // Estimate remaining reading time: parse chapter estimatedTime, scale by remaining UKs
     let remainingMinutes: number | null = null;

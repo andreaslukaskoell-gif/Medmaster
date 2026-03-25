@@ -692,9 +692,10 @@ export const useAdaptiveStore = create<AdaptiveState>()(
         }
 
         for (const r of bmsResults) {
+          if (!r?.answers || !Array.isArray(r.answers)) continue;
           const day = r.date;
           const fach = r.subject ?? "";
-          const correct = r.answers.filter((a) => a.correct).length;
+          const correct = r.answers.filter((a) => a?.correct).length;
           const total = r.answers.length;
 
           const ov = overallDailyScores.get(day) ?? { correct: 0, total: 0 };
