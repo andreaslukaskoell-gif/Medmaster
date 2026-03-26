@@ -31,7 +31,11 @@ function loadConsent(): ConsentState | null {
 }
 
 function saveConsent(consent: ConsentState) {
-  localStorage.setItem(CONSENT_KEY, JSON.stringify(consent));
+  try {
+    localStorage.setItem(CONSENT_KEY, JSON.stringify(consent));
+  } catch {
+    // Safari private mode / storage full
+  }
 }
 
 export function useCookieConsent() {

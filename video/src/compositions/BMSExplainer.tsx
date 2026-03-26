@@ -10,8 +10,8 @@ import {
 } from "remotion";
 import { BrandedBackground } from "../shared/BrandedBackground";
 import { SafeArea } from "../shared/SafeArea";
-import { HookText } from "../shared/HookText";
-import { AnimatedText } from "../shared/AnimatedText";
+import { HookText as _HookText } from "../shared/HookText";
+import { AnimatedText as _AnimatedText } from "../shared/AnimatedText";
 import { SubjectBadge } from "../shared/SubjectBadge";
 import { BRAND, SUBJECT_COLORS } from "../shared/brand";
 

@@ -56,8 +56,12 @@ function loadCompletedToday(): Set<string> {
 }
 
 function saveCompletedToday(items: Set<string>) {
-  const today = new Date().toISOString().split("T")[0];
-  localStorage.setItem(COMPLETION_KEY, JSON.stringify({ date: today, items: [...items] }));
+  try {
+    const today = new Date().toISOString().split("T")[0];
+    localStorage.setItem(COMPLETION_KEY, JSON.stringify({ date: today, items: [...items] }));
+  } catch {
+    // Safari private mode / storage full — silently skip persistence
+  }
 }
 
 export function useDailyPlan(): DailyPlanResult {

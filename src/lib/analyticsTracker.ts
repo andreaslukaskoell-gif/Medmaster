@@ -13,25 +13,37 @@ let adminSkipTracking = false;
 
 /** Initialize visitor/session IDs. Call once on app start. */
 export function initTracker() {
-  // Visitor ID persists across sessions (localStorage)
-  visitorId = localStorage.getItem("mm_vid") || crypto.randomUUID();
-  localStorage.setItem("mm_vid", visitorId);
+  try {
+    // Visitor ID persists across sessions (localStorage)
+    visitorId = localStorage.getItem("mm_vid") || crypto.randomUUID();
+    localStorage.setItem("mm_vid", visitorId);
+  } catch {
+    // Safari private mode / storage full — use ephemeral ID
+    visitorId = crypto.randomUUID();
+  }
 
-  // Session ID resets per browser session (sessionStorage)
-  sessionId = sessionStorage.getItem("mm_sid") || crypto.randomUUID();
-  sessionStorage.setItem("mm_sid", sessionId);
+  try {
+    // Session ID resets per browser session (sessionStorage)
+    sessionId = sessionStorage.getItem("mm_sid") || crypto.randomUUID();
+    sessionStorage.setItem("mm_sid", sessionId);
+  } catch {
+    sessionId = crypto.randomUUID();
+  }
 }
 
 /** Capture UTM and referral params from URL. Call once on app start. */
 export function captureTrafficSource() {
   const params = new URLSearchParams(window.location.search);
 
+  const safeSessionSet = (key: string, value: string) => {
+    try { sessionStorage.setItem(key, value); } catch { /* private mode */ }
+  };
+
   // Capture referral
   const ref = params.get("ref");
   if (ref) {
     insertEvent("referral_visit", { properties: { ref, referrer: document.referrer || null } });
-    // Store ref for later attribution on signup
-    sessionStorage.setItem("mm_ref", ref);
+    safeSessionSet("mm_ref", ref);
   }
 
   // Capture UTM params
@@ -42,21 +54,21 @@ export function captureTrafficSource() {
   }
   if (Object.keys(utm).length > 0) {
     insertEvent("utm_visit", { properties: utm });
-    sessionStorage.setItem("mm_utm", JSON.stringify(utm));
+    safeSessionSet("mm_utm", JSON.stringify(utm));
   }
 
   // Capture Google Ads click ID
   const gclid = params.get("gclid");
   if (gclid) {
     insertEvent("gclid_visit", { properties: { gclid } });
-    sessionStorage.setItem("mm_gclid", gclid);
+    safeSessionSet("mm_gclid", gclid);
   }
 
   // Capture Meta/Facebook click ID
   const fbclid = params.get("fbclid");
   if (fbclid) {
     insertEvent("fbclid_visit", { properties: { fbclid } });
-    sessionStorage.setItem("mm_fbclid", fbclid);
+    safeSessionSet("mm_fbclid", fbclid);
   }
 }
 

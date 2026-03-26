@@ -39,7 +39,7 @@ export const PollBar: React.FC<Props> = ({
             fps,
             config: { damping: 8, stiffness: 250 },
           });
-          const isHighlight = i === 0; // first one pulses slightly
+          const _isHighlight = i === 0; // first one pulses slightly
 
           return (
             <div

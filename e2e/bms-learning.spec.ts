@@ -176,7 +176,7 @@ test.describe('BMS Learning Flow', () => {
       await expect(firstTocLink).toBeVisible();
 
       // Record scroll position, click TOC link, verify scroll changed
-      const scrollBefore = await page.evaluate(() => window.scrollY);
+      const _scrollBefore = await page.evaluate(() => window.scrollY);
       await firstTocLink.click();
       await page.waitForTimeout(500);
       const scrollAfter = await page.evaluate(() => window.scrollY);

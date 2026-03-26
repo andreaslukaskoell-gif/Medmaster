@@ -24,7 +24,7 @@ const TARGET = 1000;
 
 // ---- Helpers (mirrored from kffGenerators for standalone use) ----
 
-const ALL_LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+const _ALL_LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 
 const CONFUSING_LETTERS: Record<string, string[]> = {
   A: ["E", "O", "U"],

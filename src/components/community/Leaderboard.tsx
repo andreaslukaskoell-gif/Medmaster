@@ -74,12 +74,18 @@ export function Leaderboard() {
       setDbLoaded(true);
       return;
     }
-    fetchLeaderboardFromDB(supabase, category, category === "fach" ? fach : undefined).then(
-      (rows) => {
-        setDbEntries(rows);
-        setDbLoaded(true);
-      }
-    );
+    let cancelled = false;
+    fetchLeaderboardFromDB(supabase, category, category === "fach" ? fach : undefined)
+      .then((rows) => {
+        if (!cancelled) {
+          setDbEntries(rows);
+          setDbLoaded(true);
+        }
+      })
+      .catch(() => {
+        if (!cancelled) setDbLoaded(true);
+      });
+    return () => { cancelled = true; };
   }, [category, fach]);
 
   const xpThisWeek = useMemo(() => {

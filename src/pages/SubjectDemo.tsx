@@ -276,9 +276,13 @@ function LeadCapture({ subject }: { subject: string }) {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
-    const leads = JSON.parse(localStorage.getItem("medmaster_leads") || "[]");
-    leads.push({ email, subject, date: new Date().toISOString(), source: "subject-demo" });
-    localStorage.setItem("medmaster_leads", JSON.stringify(leads));
+    try {
+      const leads = JSON.parse(localStorage.getItem("medmaster_leads") || "[]");
+      leads.push({ email, subject, date: new Date().toISOString(), source: "subject-demo" });
+      localStorage.setItem("medmaster_leads", JSON.stringify(leads));
+    } catch {
+      // Storage unavailable — continue without local persistence
+    }
     setSubmitted(true);
   };
 

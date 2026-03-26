@@ -63,7 +63,7 @@ const OVERVIEW_END = 450;
 // Scene 3: Innate defense build (seg 4–8: 462–1008)
 const INNATE_START = 455;
 const INNATE_ITEM_STARTS = [462, 629, 743, 901]; // Barriere, Makrophagen, NK, Komplement
-const INNATE_END = 1015;
+const _INNATE_END = 1015;
 
 // Scene 4: Adaptive defense build (seg 9–12: 1024–1563)
 const ADAPTIVE_START = 1018;

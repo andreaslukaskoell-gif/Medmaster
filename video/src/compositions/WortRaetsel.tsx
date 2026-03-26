@@ -11,7 +11,7 @@ import { BrandedBackground } from "../shared/BrandedBackground";
 import { SafeArea } from "../shared/SafeArea";
 import { HookText } from "../shared/HookText";
 import { CountdownRing } from "../shared/CountdownRing";
-import { AnimatedText } from "../shared/AnimatedText";
+import { AnimatedText as _AnimatedText } from "../shared/AnimatedText";
 import { TripleCTA } from "../shared/TripleCTA";
 import { PollBar } from "../shared/PollBar";
 import { BRAND } from "../shared/brand";

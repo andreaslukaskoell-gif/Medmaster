@@ -129,12 +129,16 @@ const DIFF_LABEL: Record<number, string> = { 1: "Leicht", 2: "Mittel", 3: "Schwe
 
 function getLocalUserId(): string {
   const key = "medmaster-local-uid";
-  let id = localStorage.getItem(key);
-  if (!id) {
-    id = crypto.randomUUID();
-    localStorage.setItem(key, id);
+  try {
+    let id = localStorage.getItem(key);
+    if (!id) {
+      id = crypto.randomUUID();
+      localStorage.setItem(key, id);
+    }
+    return id;
+  } catch {
+    return crypto.randomUUID();
   }
-  return id;
 }
 
 function formatTime(seconds: number): string {
@@ -575,8 +579,12 @@ function QuizScreen({
   ]);
 
   const [adaptiveHintDismissed, setAdaptiveHintDismissed] = useState(() => {
-    if (typeof window === "undefined") return true;
-    return localStorage.getItem("medmaster-adaptive-hint") === "1";
+    try {
+      if (typeof window === "undefined") return true;
+      return localStorage.getItem("medmaster-adaptive-hint") === "1";
+    } catch {
+      return true;
+    }
   });
 
   if (loading)

@@ -583,7 +583,8 @@ export const useStore = create<AppState>()(
           .checkAndAwardBadges()
           .then((newBadge) => {
             if (newBadge) set({ pendingBadgeId: newBadge });
-          });
+          })
+          .catch(() => {});
       },
 
       incrementSmartRecoveryCount: () => {
@@ -592,7 +593,8 @@ export const useStore = create<AppState>()(
           .checkAndAwardBadges()
           .then((newBadge) => {
             if (newBadge) set({ pendingBadgeId: newBadge });
-          });
+          })
+          .catch(() => {});
       },
 
       setMaxConsecutiveCorrect: (n) => {
@@ -602,7 +604,8 @@ export const useStore = create<AppState>()(
             .checkAndAwardBadges()
             .then((newBadge) => {
               if (newBadge) set({ pendingBadgeId: newBadge });
-            });
+            })
+            .catch(() => {});
         }
       },
 
@@ -775,7 +778,7 @@ export const useStore = create<AppState>()(
             xp: s.xp,
             daily_goal_minutes: s.dailyGoalMinutes,
           })
-        );
+        ).catch(() => {});
       },
 
       toggleDarkMode: () =>
@@ -820,7 +823,8 @@ export const useStore = create<AppState>()(
           .checkAndAwardBadges()
           .then((newBadge) => {
             if (newBadge) set({ pendingBadgeId: newBadge });
-          });
+          })
+          .catch(() => {});
       },
 
       setAnswer: (questionId, answer) =>
@@ -857,22 +861,24 @@ export const useStore = create<AppState>()(
           };
         });
         // Fire-and-forget backend sync
-        import("@/lib/backendSync").then(({ syncQuizResult }) =>
-          syncQuizResult({
-            quiz_type: (result.type as "bms" | "kff" | "tv" | "sek") ?? "bms",
-            subject: result.subject,
-            chapter_id: undefined,
-            score: result.score ?? 0,
-            total: result.total ?? 0,
-            duration_seconds: result.durationMinutes ? result.durationMinutes * 60 : undefined,
-            answers: result.answers,
-          })
-        );
+        import("@/lib/backendSync")
+          .then(({ syncQuizResult }) =>
+            syncQuizResult({
+              quiz_type: (result.type as "bms" | "kff" | "tv" | "sek") ?? "bms",
+              subject: result.subject,
+              chapter_id: undefined,
+              score: result.score ?? 0,
+              total: result.total ?? 0,
+              duration_seconds: result.durationMinutes ? result.durationMinutes * 60 : undefined,
+              answers: result.answers,
+            })
+          )
+          .catch(() => {});
       },
 
       updateSpacedRepetition: (questionId, correct) => {
         // Fire-and-forget backend SRS sync
-        import("@/lib/backendSync").then(({ syncSrsReview }) => syncSrsReview(questionId, correct));
+        import("@/lib/backendSync").then(({ syncSrsReview }) => syncSrsReview(questionId, correct)).catch(() => {});
         set((s) => {
           const existing = s.spacedRepetition[questionId];
           const now = new Date().toISOString().split("T")[0];
@@ -1033,7 +1039,7 @@ export const useStore = create<AppState>()(
               })
               .reduce((sum, [, v]) => sum + v.questions * 10, 0),
           })
-        );
+        ).catch(() => {});
       },
 
       toggleFlagQuestion: (id) =>

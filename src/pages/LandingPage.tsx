@@ -235,12 +235,17 @@ export default function LandingPage() {
 
   useEffect(() => {
     if (!supabase) return;
-    supabase
-      .from("leaderboard_snapshots")
-      .select("*", { count: "exact", head: true })
+    let cancelled = false;
+    Promise.resolve(
+      supabase
+        .from("leaderboard_snapshots")
+        .select("*", { count: "exact", head: true })
+    )
       .then(({ count }) => {
-        if (count && count >= 10) setUserCount(count);
-      });
+        if (!cancelled && count && count >= 10) setUserCount(count);
+      })
+      .catch(() => {});
+    return () => { cancelled = true; };
   }, []);
 
   useEffect(() => {

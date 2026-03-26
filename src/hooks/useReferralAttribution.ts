@@ -30,18 +30,19 @@ export function useReferralAttribution() {
         if (!referrer || referrer.id === user.id) return;
 
         // Insert referral (idempotent — UNIQUE on referee_id)
-        supabase!
-          .from("referrals")
-          .insert({
-            referrer_id: referrer.id,
-            referee_id: user.id,
-            ref_code: refCode,
-          })
-          .then(({ error }) => {
-            if (error && !error.message.includes("duplicate")) {
-              console.warn("[referral]", error.message);
-            }
-          });
+        return Promise.resolve(
+          supabase!
+            .from("referrals")
+            .insert({
+              referrer_id: referrer.id,
+              referee_id: user.id,
+              ref_code: refCode,
+            })
+        ).then(({ error }) => {
+          if (error && !error.message.includes("duplicate")) {
+            console.warn("[referral]", error.message);
+          }
+        });
       })
       .catch(() => {});
   }, [user]);

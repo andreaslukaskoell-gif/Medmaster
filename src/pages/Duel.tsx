@@ -79,7 +79,11 @@ export default function Duel() {
     useAdaptiveStore();
 
   useEffect(() => {
-    getQuestions().then((q) => setQuestions(q));
+    let cancelled = false;
+    getQuestions()
+      .then((q) => { if (!cancelled) setQuestions(q); })
+      .catch(() => {});
+    return () => { cancelled = true; };
   }, []);
 
   // Save result once when duel ends (avoid calling during render)

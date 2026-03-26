@@ -22,10 +22,18 @@ export function WeaknessCard() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetchWeaknessAnalysis().then((result) => {
-      setData(result);
-      setLoading(false);
-    });
+    let cancelled = false;
+    fetchWeaknessAnalysis()
+      .then((result) => {
+        if (!cancelled) {
+          setData(result);
+          setLoading(false);
+        }
+      })
+      .catch(() => {
+        if (!cancelled) setLoading(false);
+      });
+    return () => { cancelled = true; };
   }, []);
 
   if (loading) return null;

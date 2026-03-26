@@ -973,15 +973,17 @@ export default function Simulation() {
     logActivity(totalQuestions, getMinutes());
 
     // Sync detailed simulation result to backend
-    import("@/lib/backendSync").then(({ syncSimulationResult }) =>
-      syncSimulationResult({
-        bms_score: totalScore,
-        bms_total: totalQuestions,
-        total_score: totalQuestions > 0 ? (totalScore / totalQuestions) * 100 : 0,
-        duration_minutes: getMinutes(),
-        details: { sections: sections.map((s) => s.label), subjectLabel },
-      })
-    );
+    import("@/lib/backendSync")
+      .then(({ syncSimulationResult }) =>
+        syncSimulationResult({
+          bms_score: totalScore,
+          bms_total: totalQuestions,
+          total_score: totalQuestions > 0 ? (totalScore / totalQuestions) * 100 : 0,
+          duration_minutes: getMinutes(),
+          details: { sections: sections.map((s) => s.label), subjectLabel },
+        })
+      )
+      .catch(() => {});
 
     setMode("result");
     setIndex(0);
