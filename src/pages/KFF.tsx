@@ -1,6 +1,6 @@
 import { useState, useRef, useMemo, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
-import { BookOpen, Play } from "lucide-react";
+import { BookOpen, Play, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PageLoadingSkeleton, PageError } from "@/components/ui/page-states";
 import { usePageTitle } from "@/hooks/usePageTitle";
@@ -341,27 +341,42 @@ export default function KFF() {
 
                 {/* Progress + Actions */}
                 {m.stats.total > 0 && (
-                  <div className={`flex items-center gap-3 mb-3 text-xs text-[var(--muted)]`}>
-                    <span>{m.stats.total} Aufgaben geübt</span>
-                    <span>·</span>
-                    <span
-                      className={
-                        m.stats.pct >= 70
-                          ? "text-emerald-500 font-semibold"
-                          : m.stats.pct >= 40
-                            ? "text-amber-500 font-semibold"
-                            : "text-red-400 font-semibold"
-                      }
-                    >
-                      {m.stats.pct}% richtig
-                    </span>
+                  <div className="mb-3">
+                    <div className="flex items-center gap-3 text-xs text-[var(--muted)] mb-1.5">
+                      <span className="flex items-center gap-1">
+                        <TrendingUp className="w-3 h-3" />
+                        {m.stats.total} geübt
+                      </span>
+                      <span>·</span>
+                      <span
+                        className={
+                          m.stats.pct >= 70
+                            ? "text-emerald-500 font-semibold"
+                            : m.stats.pct >= 40
+                              ? "text-amber-500 font-semibold"
+                              : "text-red-400 font-semibold"
+                        }
+                      >
+                        {m.stats.pct}% richtig
+                      </span>
+                    </div>
+                    {/* Mini progress bar */}
+                    <div className="h-1.5 w-full rounded-full bg-[var(--border)]">
+                      <div
+                        className="h-full rounded-full transition-all"
+                        style={{
+                          width: `${Math.min(m.stats.pct, 100)}%`,
+                          background: m.stats.pct >= 70 ? "#10b981" : m.stats.pct >= 40 ? "#f59e0b" : "#ef4444",
+                        }}
+                      />
+                    </div>
                   </div>
                 )}
                 <div className="flex items-center gap-2">
                   <Button
                     variant="premium"
                     size="sm"
-                    className={isMobile ? "flex-1" : ""}
+                    className={isMobile ? "flex-1 min-h-[44px]" : ""}
                     onClick={() => {
                       autoStartRef.current = false;
                       setView(m.startView);
@@ -372,7 +387,7 @@ export default function KFF() {
                   <Button
                     variant="outline"
                     size="sm"
-                    className={isMobile ? "flex-1" : ""}
+                    className={isMobile ? "flex-1 min-h-[44px]" : ""}
                     onClick={() => {
                       setStrategyKey(m.strategyKey);
                       setView("strategy");

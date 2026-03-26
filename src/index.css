@@ -1840,3 +1840,126 @@ html.quiz-active.mobile-mode nav[aria-label="Hauptnavigation"] {
   outline-offset: 2px;
   border-radius: 4px;
 }
+
+/* ── Premium Mobile Polish ─────────────────────────────────────────────────── */
+
+/* Smooth momentum scrolling everywhere */
+.mobile-mode * {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Pull-to-refresh spinner area */
+.mobile-mode .pull-to-refresh-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: height 0.2s ease-out;
+}
+
+/* Streak card motivational glow for 7+ day streaks */
+.mobile-mode [aria-label="Streak"] {
+  transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
+}
+
+/* Mobile chapter view — TOC as collapsible at top */
+.mobile-mode nav[aria-label="Inhaltsverzeichnis"] {
+  position: sticky;
+  top: 3.25rem; /* Below TopBar */
+  z-index: 30;
+  background: var(--background);
+  margin: -0.75rem -0.75rem 1rem;
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+}
+
+/* Mobile reading progress bar at top of chapter */
+.mobile-mode .reading-progress-bar {
+  position: fixed;
+  top: 3.25rem;
+  left: 0;
+  right: 0;
+  height: 3px;
+  z-index: 90;
+  background: transparent;
+}
+.mobile-mode .reading-progress-bar .fill {
+  height: 100%;
+  background: var(--accent);
+  transition: width 0.1s linear;
+}
+
+/* Smoother skeleton animations on mobile */
+.mobile-mode .skeleton-shimmer {
+  animation-duration: 1.8s;
+}
+
+/* KFF module cards — larger touch targets */
+.mobile-mode [class*="rounded-xl"][class*="border"][class*="p-3"] {
+  min-height: 5rem;
+}
+
+/* Mobile-optimized dialog/modal bottom sheet style */
+.mobile-mode [role="dialog"] > div:not([class*="inset"]) {
+  max-height: 85vh;
+  overflow-y: auto;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+/* Improved touch feedback on interactive cards */
+.mobile-mode .card-glass[class*="cursor-pointer"]:active,
+.mobile-mode a.card-glass:active {
+  transform: scale(0.98);
+  transition: transform 0.1s ease-out;
+}
+
+/* Mobile breadcrumb pill style */
+.mobile-mode nav[aria-label="Breadcrumb"] a {
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  min-height: 2rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Floating action buttons better positioning */
+.mobile-mode .fab,
+.mobile-mode [class*="fixed"][class*="right-4"][class*="bottom-"] {
+  bottom: max(5.5rem, calc(4.5rem + env(safe-area-inset-bottom))) !important;
+}
+
+/* Better scroll snap for horizontal scrolling areas */
+.mobile-mode .horizontal-scroll {
+  scroll-snap-type: x mandatory;
+  scroll-padding: 0.75rem;
+}
+.mobile-mode .horizontal-scroll > * {
+  scroll-snap-align: start;
+}
+
+/* Mobile page header — compact */
+.mobile-mode .page-header h1 {
+  font-size: 1.25rem !important;
+  line-height: 1.75rem !important;
+}
+
+/* Ensure images in chapter content don't overflow */
+.mobile-mode .chapter-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+}
+
+/* Premium transition for page content */
+.mobile-mode main#main-content {
+  transition: transform 0.2s ease-out;
+}
+
+/* Dark mode mobile enhancements */
+.dark.mobile-mode .card-glass {
+  border-color: rgba(255, 255, 255, 0.06);
+}
+.dark.mobile-mode .topbar-glass {
+  border-bottom-color: rgba(255, 255, 255, 0.06);
+}

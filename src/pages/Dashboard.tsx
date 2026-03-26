@@ -54,6 +54,7 @@ import { alleKapitel, getKapitelById, findChapterByUnterkapitelId } from "@/data
 import { pathForChapter } from "@/lib/bmsRoutes";
 import { useTodayEngine } from "@/hooks/useTodayEngine";
 import { useViewportMode } from "@/hooks/useViewportMode";
+import { usePullToRefresh } from "@/hooks/usePullToRefresh";
 import { ReferralWidget } from "@/components/shared/ReferralWidget";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { Tooltip } from "@/components/ui/Tooltip";
@@ -211,6 +212,12 @@ export default function Dashboard() {
     }
   }, []);
 
+  // Pull-to-refresh on mobile
+  const { pullDistance, isRefreshing } = usePullToRefresh(
+    () => window.location.reload(),
+    80
+  );
+
   const cardClass = "card-glass";
   const { bmsProgressPct, bmsProgressDone, bmsProgressTotal } = useMemo(() => {
     const total = alleKapitel.reduce((s, k) => s + (k?.unterkapitel?.length ?? 0), 0);
@@ -238,6 +245,20 @@ export default function Dashboard() {
 
   return (
     <div className="min-h-screen">
+      {/* Pull-to-refresh indicator (mobile) */}
+      {isMobile && pullDistance > 10 && (
+        <div
+          className="flex items-center justify-center overflow-hidden transition-opacity"
+          style={{ height: pullDistance, opacity: Math.min(pullDistance / 60, 1) }}
+        >
+          <div
+            className={`w-8 h-8 rounded-full border-2 border-[var(--accent)] border-t-transparent ${isRefreshing ? "animate-spin" : ""}`}
+            style={{
+              transform: isRefreshing ? undefined : `rotate(${pullDistance * 3}deg)`,
+            }}
+          />
+        </div>
+      )}
       <div className="max-w-5xl mx-auto px-4 py-8 pb-12">
         <SyncIndicator />
 
@@ -518,7 +539,16 @@ export default function Dashboard() {
               </Tooltip>
             </div>
             {/* Streak-Karte */}
-            <div className={cn(cardClass, "p-5 flex items-center gap-4")} aria-label="Streak">
+            <div className={cn(cardClass, "p-5 flex items-center gap-4 relative overflow-hidden")} aria-label="Streak">
+              {/* Subtle streak glow for active streaks */}
+              {flameStreak >= 7 && (
+                <div
+                  className="absolute inset-0 opacity-[0.04] pointer-events-none"
+                  style={{
+                    background: "linear-gradient(135deg, #f59e0b 0%, #ef4444 50%, transparent 100%)",
+                  }}
+                />
+              )}
               <Tooltip
                 content={`${flameStreak} ${flameStreak === 1 ? "Tag" : "Tage"} in Folge aktiv`}
                 position="top"
@@ -534,7 +564,15 @@ export default function Dashboard() {
               </Tooltip>
               <div className="flex-1 min-w-0">
                 <p className="text-xl font-bold text-[var(--text-primary)]">{flameStreak}</p>
-                <p className="text-sm text-[var(--muted)]">Tage Streak</p>
+                <p className="text-sm text-[var(--muted)]">
+                  {flameStreak === 0
+                    ? "Starte deinen Streak!"
+                    : flameStreak >= 30
+                      ? "Tage Streak — unaufhaltsam!"
+                      : flameStreak >= 7
+                        ? "Tage Streak — stark!"
+                        : "Tage Streak"}
+                </p>
               </div>
               {streak > 0 && !streakPreview && <StreakShareButton streak={streak} />}
             </div>
