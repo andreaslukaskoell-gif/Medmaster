@@ -103,7 +103,7 @@ const NAV_SECTIONS: { id: string; title: string; items: NavItem[] }[] = [
 function SectionHeader({ title }: { title: string }) {
   return (
     <div className="mb-1 mt-4 first:mt-0">
-      <div className="flex items-center gap-1.5 w-full py-1.5 px-3 text-[11px] font-medium text-[var(--muted)]/70">
+      <div className="flex items-center gap-1.5 w-full py-1.5 px-3 text-[12px] font-medium text-[var(--muted)]/70">
         {title}
       </div>
     </div>
@@ -420,7 +420,7 @@ export function Sidebar({ open, onClose }: { open: boolean; onClose: () => void 
             {/* Chapter title */}
             <div className="px-3 py-1.5">
               <div
-                className="text-[11px] font-semibold uppercase tracking-wide"
+                className="text-[12px] font-semibold uppercase tracking-wide"
                 style={{ color: chapterContext.accent }}
               >
                 {chapterContext.subjectLabel}
@@ -502,7 +502,7 @@ export function Sidebar({ open, onClose }: { open: boolean; onClose: () => void 
                     >
                       <Lock className="w-4 h-4 shrink-0" />
                       <span className="truncate flex-1">{item.label}</span>
-                      <span className="text-[10px] font-medium shrink-0">Lv.{requiredLevel}</span>
+                      <span className="text-[11px] font-medium shrink-0">Lv.{requiredLevel}</span>
                     </div>
                   );
                 }
@@ -546,12 +546,12 @@ export function Sidebar({ open, onClose }: { open: boolean; onClose: () => void 
                           className="flex items-center gap-1 px-2 py-2 rounded-lg hover:bg-[var(--foreground)]/5 transition-colors cursor-pointer shrink-0"
                         >
                           {(bmsProgress ?? 0) > 0 && (
-                            <span className="text-[10px] font-medium text-[var(--muted)]">
+                            <span className="text-[11px] font-medium text-[var(--muted)]">
                               {bmsProgress}%
                             </span>
                           )}
                           {(dueCount ?? 0) > 0 && (
-                            <span className="bg-orange-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">
+                            <span className="bg-orange-500 text-white text-[11px] font-bold px-1.5 py-0.5 rounded-full">
                               {dueCount}
                             </span>
                           )}
@@ -623,7 +623,7 @@ export function Sidebar({ open, onClose }: { open: boolean; onClose: () => void 
                                         />
                                         <SubjectIcon className="w-3.5 h-3.5 shrink-0 opacity-70" />
                                         <span>{config.label}</span>
-                                        <span className="text-[10px] text-[var(--muted)] opacity-60">
+                                        <span className="text-[11px] text-[var(--muted)] opacity-60">
                                           ({filteredChapters.length})
                                         </span>
                                         {isSubjectOpen ? (
@@ -731,7 +731,7 @@ export function Sidebar({ open, onClose }: { open: boolean; onClose: () => void 
             </button>
           </div>
         )}
-        <p className="text-[10px] text-[var(--muted)] text-center pt-2 opacity-50">medmaster.at</p>
+        <p className="text-[11px] text-[var(--muted)] text-center pt-2 opacity-50">medmaster.at</p>
       </div>
     </>
   );
@@ -752,7 +752,7 @@ export function Sidebar({ open, onClose }: { open: boolean; onClose: () => void 
       <aside
         className={cn(
           "fixed left-0 top-0 h-screen z-[200] flex flex-col",
-          "w-[280px]",
+          "w-[min(280px,calc(100vw-60px))]",
           "bg-[var(--sidebar-bg)]/95 backdrop-blur-xl",
           "border-r border-[var(--border)]/50",
           "shadow-2xl",

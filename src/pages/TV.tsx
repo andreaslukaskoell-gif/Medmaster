@@ -22,6 +22,7 @@ import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
 import { usePageTitle } from "@/hooks/usePageTitle";
 import StrategyGuideView from "@/components/shared/StrategyGuideView";
 import { stripMarkdownAsterisks } from "@/utils/formatExplanation";
+import { useViewportMode } from "@/hooks/useViewportMode";
 import { tvStrategyGuide, tvTexts } from "@/data/tvData";
 import { tvTextSets } from "@/data/tvTextsExpanded";
 import { tvTextSets2 } from "@/data/tvTextsExpanded2";
@@ -51,6 +52,7 @@ const LABELS = ["A", "B", "C", "D", "E"];
 
 export default function TV() {
   usePageTitle("TV – Textverständnis");
+  const { isMobile } = useViewportMode();
   const location = useLocation();
   const dailyPlanTvTexts = location.state?.dailyPlanTvTexts as number | undefined;
 
@@ -490,9 +492,9 @@ export default function TV() {
         </div>
 
         {/* Split-pane: text (sticky on desktop) + questions side by side */}
-        <div className="grid grid-cols-2 gap-6">
+        <div className={isMobile ? "space-y-4" : "grid grid-cols-2 gap-6"}>
           {/* Text content — sticky on desktop */}
-          <div className="sticky top-20 self-start max-h-[calc(100vh-6rem)] overflow-y-auto pr-2">
+          <div className={isMobile ? "" : "sticky top-20 self-start max-h-[calc(100vh-6rem)] overflow-y-auto pr-2"}>
             <Card>
               <CardHeader>
                 <CardTitle className="text-[var(--text-primary)] text-base">
@@ -758,35 +760,39 @@ export default function TV() {
               return (
                 <div
                   key={set.id}
-                  className="flex items-center gap-4 px-5 py-3.5 hover:bg-[var(--accent)]/3 transition-colors group"
+                  className={`${isMobile ? "flex flex-col gap-2 px-3 py-3" : "flex items-center gap-4 px-5 py-3.5"} hover:bg-[var(--accent)]/3 transition-colors group`}
                 >
-                  <span className="text-xs font-bold text-[var(--muted)] tabular-nums w-5 text-center shrink-0">
-                    {i + 1}
-                  </span>
-                  <div className="flex-1 min-w-0">
-                    <span className="text-sm font-medium text-[var(--text-primary)] truncate block">
-                      {set.name}
+                  <div className="flex items-center gap-3 min-w-0">
+                    <span className="text-xs font-bold text-[var(--muted)] tabular-nums w-5 text-center shrink-0">
+                      {i + 1}
+                    </span>
+                    <div className="flex-1 min-w-0">
+                      <span className="text-sm font-medium text-[var(--text-primary)] truncate block">
+                        {set.name}
+                      </span>
+                    </div>
+                    <Badge
+                      className={`text-[10px] shrink-0 ${difficultyColors[set.difficulty] || ""}`}
+                    >
+                      {set.difficulty}
+                    </Badge>
+                    <span className="text-xs text-[var(--muted)] shrink-0 tabular-nums">
+                      {totalQ} Fragen
                     </span>
                   </div>
-                  <Badge
-                    className={`text-[10px] shrink-0 ${difficultyColors[set.difficulty] || ""}`}
-                  >
-                    {set.difficulty}
-                  </Badge>
-                  <span className="text-xs text-[var(--muted)] shrink-0 tabular-nums">
-                    {totalQ} Fragen
-                  </span>
-                  <Button variant="premium" size="sm" onClick={() => handleStartSet(i, "practice")}>
-                    <Play className="w-4 h-4 mr-1" /> Üben
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    onClick={() => handleStartSet(i, "exam")}
-                    title="35 Minuten Timer"
-                  >
-                    <Timer className="w-4 h-4 mr-1" /> Prüfung
-                  </Button>
+                  <div className={`flex items-center gap-2 ${isMobile ? "ml-8" : ""}`}>
+                    <Button variant="premium" size="sm" onClick={() => handleStartSet(i, "practice")}>
+                      <Play className="w-4 h-4 mr-1" /> Üben
+                    </Button>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={() => handleStartSet(i, "exam")}
+                      title="35 Minuten Timer"
+                    >
+                      <Timer className="w-4 h-4 mr-1" /> Prüfung
+                    </Button>
+                  </div>
                 </div>
               );
             })}

@@ -1543,11 +1543,6 @@ a:focus-visible,
   display: none !important;
 }
 
-/* --- Bottom safe area for BottomTabBar --- */
-.mobile-mode main {
-  padding-bottom: max(6rem, calc(5rem + env(safe-area-inset-bottom))) !important;
-}
-
 /* --- Card content: tighter mobile padding --- */
 .mobile-mode [class*="CardContent"] {
   padding: 1rem !important;
@@ -1562,12 +1557,6 @@ a:focus-visible,
 }
 .mobile-mode nav[aria-label="Breadcrumb"]::-webkit-scrollbar {
   display: none;
-}
-
-/* --- Floating elements: above BottomTabBar --- */
-.mobile-mode .fixed.bottom-4,
-.mobile-mode .fixed.bottom-6 {
-  bottom: 5rem !important;
 }
 
 /* --- Tab bars: scrollable on mobile --- */
@@ -1715,7 +1704,7 @@ html.quiz-active.mobile-mode nav[aria-label="Hauptnavigation"] {
 /* --- Mobile: bottom action bars (exam submit, quiz nav) --- */
 .mobile-mode .bottom-action-bar {
   position: fixed;
-  bottom: 4.5rem; /* above BottomTabBar */
+  bottom: 5rem; /* above BottomTabBar (h-16 = 64px ≈ 4rem + safe area) */
   left: 0;
   right: 0;
   padding: 0.75rem 1rem;
@@ -1763,6 +1752,81 @@ html.quiz-active.mobile-mode nav[aria-label="Hauptnavigation"] {
   display: grid !important;
   grid-template-columns: repeat(3, 1fr) !important;
   gap: 0.5rem !important;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Premium Mobile Polish
+   ═══════════════════════════════════════════════════════════ */
+
+/* --- Smooth page transitions --- */
+.mobile-mode main {
+  scroll-behavior: smooth;
+}
+
+/* --- Card press effect with spring feel --- */
+.mobile-mode .card-glass {
+  transition: transform 0.15s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.15s ease;
+}
+.mobile-mode .card-glass:active {
+  transform: scale(0.97) !important;
+  box-shadow: none !important;
+}
+
+/* --- Premium button press feedback --- */
+.mobile-mode button:not(:disabled):active,
+.mobile-mode a[class*="rounded"]:active {
+  transition: transform 0.08s ease;
+}
+
+/* --- BottomTabBar higher z-index + refined shadow --- */
+.mobile-mode nav[aria-label="Hauptnavigation"] {
+  z-index: 60 !important;
+  box-shadow: 0 -2px 16px rgba(0, 0, 0, 0.08) !important;
+}
+.dark .mobile-mode nav[aria-label="Hauptnavigation"],
+.dark.mobile-mode nav[aria-label="Hauptnavigation"] {
+  box-shadow: 0 -2px 16px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* --- Floating elements: above BottomTabBar (now 64px + safe area) --- */
+.mobile-mode .fixed.bottom-4,
+.mobile-mode .fixed.bottom-6 {
+  bottom: 5.5rem !important;
+}
+
+/* --- Bottom safe area for BottomTabBar (now taller: h-16 = 64px) --- */
+.mobile-mode main#main-content {
+  padding-bottom: max(7rem, calc(5.5rem + env(safe-area-inset-bottom))) !important;
+}
+
+/* --- Progress bars: thicker on mobile for visibility --- */
+.mobile-mode .progress-premium {
+  height: 6px !important;
+  border-radius: 3px !important;
+}
+.mobile-mode .progress-premium .progress-fill {
+  border-radius: 3px !important;
+}
+
+/* --- Badge pills: slightly larger on mobile --- */
+.mobile-mode [class*="badge"],
+.mobile-mode [class*="Badge"] {
+  min-height: 24px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+/* --- Link cards: full-width tap area --- */
+.mobile-mode a.card-glass,
+.mobile-mode a[class*="rounded-xl"][class*="border"] {
+  display: block;
+  width: 100%;
+}
+
+/* --- Focus ring: thicker for touch --- */
+.mobile-mode :focus-visible {
+  outline-width: 3px !important;
+  outline-offset: 2px !important;
 }
 
 /* --- Mobile: 5-column option grids → 3 columns + 2 on second row --- */

@@ -53,7 +53,7 @@ export function TopBar({ onMenuToggle }: { onMenuToggle?: () => void }) {
             className="p-1.5 -ml-1.5 rounded-lg text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-[var(--foreground)]/5 transition-colors cursor-pointer"
             aria-label="Menü öffnen"
           >
-            <Menu className="w-5 h-5" />
+            <Menu className={isMobile ? "w-[18px] h-[18px]" : "w-5 h-5"} />
           </button>
         )}
         {!isMobile && <GlobalBreadcrumb />}

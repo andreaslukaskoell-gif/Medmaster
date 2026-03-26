@@ -225,7 +225,7 @@ export function AppShell() {
         {isMobile && <BottomTabBar />}
         <div
           className={cn(
-            "min-h-screen flex flex-col relative z-50 w-full transition-colors duration-200",
+            "min-h-screen flex flex-col relative z-0 w-full transition-colors duration-200",
             "bg-[var(--background)]",
             SIDEBAR_MAIN_ML // now empty — sidebar is overlay
           )}
