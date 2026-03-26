@@ -179,7 +179,7 @@ function NotFound404() {
   );
 }
 
-/** Sync dark mode class on <html> whenever store.darkMode changes */
+/** Sync dark mode class on <html> + native status bar whenever store.darkMode changes */
 function DarkModeSync() {
   const darkMode = useStore((s) => s.darkMode);
   useEffect(() => {
@@ -188,6 +188,12 @@ function DarkModeSync() {
     } else {
       document.documentElement.classList.remove("dark");
     }
+    // Sync native status bar color on Capacitor
+    import("@/lib/native").then(({ isNative, setStatusBarDark, setStatusBarLight }) => {
+      if (!isNative) return;
+      if (darkMode) setStatusBarDark().catch(() => {});
+      else setStatusBarLight().catch(() => {});
+    }).catch(() => {});
   }, [darkMode]);
   return null;
 }
