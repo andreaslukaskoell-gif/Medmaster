@@ -73,3 +73,20 @@ MIGRATION_INSTRUCTIONS.md
 supabase/.temp/
 supabase/migrations/*.backup
 supabase/migrations/*.bak*
+
+# Capacitor native build artifacts (keep config, ignore build output)
+ios/App/App/public/
+ios/App/Pods/
+ios/App/DerivedData/
+ios/App/build/
+ios/App/App.xcworkspace/xcuserdata/
+android/app/build/
+android/app/src/main/assets/public/
+android/.gradle/
+android/build/
+*.aar
+*.apk
+*.ipa
+
+# Generated icon resources
+resources/*.png
