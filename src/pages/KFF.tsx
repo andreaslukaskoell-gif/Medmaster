@@ -1,4 +1,4 @@
-import { useState, useRef, useMemo } from "react";
+import { useState, useRef, useMemo, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import { BookOpen, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -7,6 +7,7 @@ import { usePageTitle } from "@/hooks/usePageTitle";
 import KFFStrategyView from "@/components/shared/KFFStrategyView";
 import { useStore } from "@/store/useStore";
 import { useAuth } from "@/hooks/useAuth";
+import { useViewportMode } from "@/hooks/useViewportMode";
 import { FirstTimeKffIntro } from "@/components/kff/FirstTimeKffIntro";
 import { ZahlenfolgenQuiz } from "@/components/kff/ZahlenfolgenQuiz";
 import {
@@ -19,7 +20,6 @@ import { ImplikationenQuiz } from "@/components/kff/ImplikationenQuiz";
 import { WortflüssigkeitQuiz } from "@/components/kff/WortfluessigkeitQuiz";
 import { FigurenQuiz } from "@/components/kff/FigurenQuiz";
 import { KFFStatsSection } from "@/components/kff/KFFStatsSection";
-import { useEffect } from "react";
 
 /** Stable reference for empty quizResults to prevent unnecessary re-renders. */
 const STABLE_EMPTY_RESULTS: never[] = [];
@@ -47,6 +47,7 @@ const QUICK_START_VIEWS: Record<string, KffView> = {
 
 export default function KFF() {
   usePageTitle("KFF – Kognitive Fähigkeiten");
+  const { isMobile } = useViewportMode();
   const [searchParams] = useSearchParams();
 
   const startParam = searchParams.get("start");
@@ -283,31 +284,33 @@ export default function KFF() {
   }
 
   return (
-    <div className="max-w-4xl mx-auto space-y-8">
+    <div className={`max-w-4xl mx-auto ${isMobile ? "space-y-5" : "space-y-8"}`}>
       {/* Hero */}
       <div>
-        <div className="flex items-center gap-3 mb-2">
-          <h1 className="text-2xl font-bold text-[var(--text-primary)]">
-            Kognitive Fähigkeiten & Fertigkeiten
+        <div className={`flex ${isMobile ? "flex-col gap-1.5" : "items-center gap-3"} mb-2`}>
+          <h1 className={`${isMobile ? "text-xl" : "text-2xl"} font-bold text-[var(--text-primary)]`}>
+            {isMobile ? "KFF – Kognitive Fähigkeiten" : "Kognitive Fähigkeiten & Fertigkeiten"}
           </h1>
-          <span className="text-xs font-semibold text-[var(--accent)] bg-[var(--accent)]/10 px-2.5 py-1 rounded-full">
+          <span className="text-xs font-semibold text-[var(--accent)] bg-[var(--accent)]/10 px-2.5 py-1 rounded-full w-fit">
             40% des MedAT
           </span>
         </div>
-        <p className="text-sm text-[var(--muted)] max-w-2xl leading-relaxed">
-          5 Aufgabentypen, die logisches Denken, Merkfähigkeit und räumliches Vorstellungsvermögen
-          prüfen. Jeder Untertest wird separat gewertet — trainiere alle regelmäßig.
-        </p>
+        {!isMobile && (
+          <p className="text-sm text-[var(--muted)] max-w-2xl leading-relaxed">
+            5 Aufgabentypen, die logisches Denken, Merkfähigkeit und räumliches Vorstellungsvermögen
+            prüfen. Jeder Untertest wird separat gewertet — trainiere alle regelmäßig.
+          </p>
+        )}
       </div>
 
       {/* Module cards */}
-      <div className="space-y-4">
+      <div className={isMobile ? "space-y-3" : "space-y-4"}>
         {modules.map((m) => (
           <div
             key={m.id}
-            className="bg-[var(--surface)] rounded-xl border border-[var(--border)] p-5"
+            className={`bg-[var(--surface)] rounded-xl border border-[var(--border)] ${isMobile ? "p-3.5" : "p-5"}`}
           >
-            <div className="flex items-start gap-4">
+            <div className="flex items-start gap-3">
               {/* Color bar */}
               <div
                 className="w-1 self-stretch rounded-full shrink-0"
@@ -316,8 +319,8 @@ export default function KFF() {
 
               <div className="flex-1 min-w-0">
                 {/* Title row */}
-                <div className="flex items-center gap-2 mb-1">
-                  <h3 className="font-semibold text-[var(--text-primary)]">{m.title}</h3>
+                <div className="flex items-center gap-2 mb-1 flex-wrap">
+                  <h3 className={`font-semibold text-[var(--text-primary)] ${isMobile ? "text-sm" : ""}`}>{m.title}</h3>
                   <span
                     className="text-[10px] font-semibold px-2 py-0.5 rounded-full"
                     style={{ background: `${m.color}15`, color: m.color }}
@@ -327,16 +330,18 @@ export default function KFF() {
                 </div>
 
                 {/* Format explanation */}
-                <p className="text-sm text-[var(--text-secondary)] mb-2">{m.format}</p>
+                <p className={`text-[var(--text-secondary)] mb-2 ${isMobile ? "text-xs leading-relaxed" : "text-sm"}`}>{m.format}</p>
 
-                {/* Example */}
-                <div className="text-xs text-[var(--muted)] bg-[var(--background)] rounded-lg px-3 py-1.5 inline-block font-mono mb-3">
-                  {m.example}
-                </div>
+                {/* Example — hide on mobile for compactness */}
+                {!isMobile && (
+                  <div className="text-xs text-[var(--muted)] bg-[var(--background)] rounded-lg px-3 py-1.5 inline-block font-mono mb-3">
+                    {m.example}
+                  </div>
+                )}
 
                 {/* Progress + Actions */}
                 {m.stats.total > 0 && (
-                  <div className="flex items-center gap-3 mb-3 text-xs text-[var(--muted)]">
+                  <div className={`flex items-center gap-3 mb-3 text-xs text-[var(--muted)]`}>
                     <span>{m.stats.total} Aufgaben geübt</span>
                     <span>·</span>
                     <span
@@ -356,6 +361,7 @@ export default function KFF() {
                   <Button
                     variant="premium"
                     size="sm"
+                    className={isMobile ? "flex-1" : ""}
                     onClick={() => {
                       autoStartRef.current = false;
                       setView(m.startView);
@@ -366,6 +372,7 @@ export default function KFF() {
                   <Button
                     variant="outline"
                     size="sm"
+                    className={isMobile ? "flex-1" : ""}
                     onClick={() => {
                       setStrategyKey(m.strategyKey);
                       setView("strategy");

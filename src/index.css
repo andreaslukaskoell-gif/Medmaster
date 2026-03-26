@@ -1627,3 +1627,123 @@ a:focus-visible,
   flex-wrap: wrap !important;
   gap: 0.25rem !important;
 }
+
+/* --- Mobile: smooth scroll momentum everywhere --- */
+.mobile-mode * {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* --- Mobile: improved input styling --- */
+.mobile-mode input[type="number"],
+.mobile-mode input[type="text"] {
+  font-size: 16px !important; /* prevents iOS zoom on focus */
+  min-height: 44px;
+}
+
+/* --- Mobile: card hover states → active press states --- */
+.mobile-mode .bg-\[var\(--surface\)\]:active {
+  background: var(--background) !important;
+  transition: background 0.1s ease;
+}
+
+/* --- Mobile: quiz header sticky positioning --- */
+.mobile-mode .quiz-header {
+  position: sticky;
+  top: 3rem;
+  z-index: 40;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* --- Mobile: full-width buttons in quiz contexts --- */
+.mobile-mode .quiz-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.mobile-mode .quiz-actions button {
+  width: 100% !important;
+}
+
+/* --- Mobile: better option cards for quiz answers --- */
+.mobile-mode .option-card,
+.mobile-mode [data-quiz-option] {
+  min-height: 52px;
+  padding: 0.875rem 1rem !important;
+  font-size: 0.9375rem !important;
+  border-radius: 0.75rem !important;
+}
+
+/* --- Mobile: swipe-friendly horizontal scroll areas --- */
+.mobile-mode .horizontal-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+.mobile-mode .horizontal-scroll::-webkit-scrollbar {
+  display: none;
+}
+.mobile-mode .horizontal-scroll > * {
+  scroll-snap-align: start;
+}
+
+/* --- Mobile: pull-to-refresh feel for page tops --- */
+.mobile-mode main {
+  overscroll-behavior-y: contain;
+}
+
+/* --- Mobile: improved spacing for page headers --- */
+.mobile-mode .page-header {
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.75rem !important;
+}
+
+/* --- Mobile: bottom action bars (exam submit, quiz nav) --- */
+.mobile-mode .bottom-action-bar {
+  position: fixed;
+  bottom: 4.5rem; /* above BottomTabBar */
+  left: 0;
+  right: 0;
+  padding: 0.75rem 1rem;
+  padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 45;
+}
+
+/* --- Mobile: animation performance --- */
+.mobile-mode .card-glass,
+.mobile-mode [class*="rounded-xl"] {
+  will-change: auto;
+  transform: translateZ(0);
+}
+
+/* --- Mobile: prevent text selection on interactive elements --- */
+.mobile-mode button,
+.mobile-mode [role="button"],
+.mobile-mode [role="tab"] {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* --- Mobile: count selectors (6 buttons in a row → 3x2 grid) --- */
+.mobile-mode .flex.gap-3:has(> button:nth-child(6):last-child) {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 0.5rem !important;
+}
+
+/* --- Mobile: 5-column option grids → 3 columns + 2 on second row --- */
+.mobile-mode .grid-cols-5:not([data-mobile-keep]) {
+  grid-template-columns: repeat(3, 1fr) !important;
+}
+
+/* --- Mobile: improved focus states for accessibility --- */
+.mobile-mode :focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
