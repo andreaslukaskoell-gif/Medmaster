@@ -55,7 +55,8 @@ const SECTION_COLORS = {
 export default function Lernplan() {
   usePageTitle("Lernplan");
 
-  const { lernplanConfig, setLernplanConfig } = useStore();
+  const lernplanConfig = useStore((s) => s.lernplanConfig);
+  const setLernplanConfig = useStore((s) => s.setLernplanConfig);
   const setResumeToUnterkapitelId = useAdaptiveStore((s) => s.setResumeToUnterkapitelId);
 
   const { plan, tier, setTier, allTiers, completedItems, toggleCompleted, completionProgress } =

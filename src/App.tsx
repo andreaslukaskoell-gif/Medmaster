@@ -100,13 +100,13 @@ function ScrollToTop() {
 }
 
 function OnboardingGuard() {
-  const { onboardingCompleted } = useStore();
+  const onboardingCompleted = useStore((s) => s.onboardingCompleted);
   if (onboardingCompleted) return <Navigate to="/dashboard" replace />;
   return <Onboarding />;
 }
 
 function MedATGuard({ children }: { children: ReactNode }) {
-  const { hasCompletedMedATOnboarding } = useStore();
+  const hasCompletedMedATOnboarding = useStore((s) => s.hasCompletedMedATOnboarding);
   const { profile, loading } = useAuth();
   const location = useLocation();
 

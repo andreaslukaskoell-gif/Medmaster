@@ -30,9 +30,7 @@ function getTreemapFill(value: number, maxValue: number): string {
 
 export function SchwachstellenAnalyse() {
   const mounted = useIsMounted();
-  const quizResults = useStore((s) =>
-    (s.quizResults ?? []).filter((r) => r != null && typeof r === "object")
-  );
+  const quizResults = useStore((s) => s.quizResults) ?? [];
 
   const { treemapRoot, donutData, actionSentence, totalWrong, totalAnswered } = useMemo(() => {
     const {

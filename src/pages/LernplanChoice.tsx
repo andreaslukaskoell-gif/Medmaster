@@ -11,7 +11,8 @@ import { getMedATDate } from "@/lib/utils";
 
 export default function LernplanChoice() {
   const navigate = useNavigate();
-  const { onboardingCompleted, completeOnboarding } = useStore();
+  const onboardingCompleted = useStore((s) => s.onboardingCompleted);
+  const completeOnboarding = useStore((s) => s.completeOnboarding);
 
   if (onboardingCompleted) {
     return <Navigate to="/dashboard" replace />;

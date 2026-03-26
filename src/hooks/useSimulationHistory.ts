@@ -104,9 +104,7 @@ function computeTrend(
 }
 
 export function useSimulationHistory(): SimulationHistory {
-  const quizResults = useStore((s) =>
-    (s.quizResults ?? []).filter((r) => r != null && typeof r === "object")
-  );
+  const quizResults = useStore((s) => s.quizResults) ?? [];
   const simulationResults = useKFFStore((s) => s.simulationResults);
 
   return useMemo(() => {

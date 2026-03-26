@@ -54,17 +54,13 @@ type Step = "reentry" | "question" | "feedback" | "result";
 export default function SmartRecoveryPage() {
   const navigate = useNavigate();
   const getMinutes = useSessionTimer();
-  const quizResults = useStore((s) =>
-    (s.quizResults ?? []).filter((r) => r != null && typeof r === "object")
-  );
-  const {
-    saveQuizResult,
-    addXP,
-    checkStreak,
-    logActivity,
-    updateSpacedRepetition,
-    incrementSmartRecoveryCount,
-  } = useStore();
+  const quizResults = useStore((s) => s.quizResults) ?? [];
+  const saveQuizResult = useStore((s) => s.saveQuizResult);
+  const addXP = useStore((s) => s.addXP);
+  const checkStreak = useStore((s) => s.checkStreak);
+  const logActivity = useStore((s) => s.logActivity);
+  const updateSpacedRepetition = useStore((s) => s.updateSpacedRepetition);
+  const incrementSmartRecoveryCount = useStore((s) => s.incrementSmartRecoveryCount);
   const adaptive = useAdaptiveStore();
 
   const session = useMemo(() => getRecoverySession(quizResults), [quizResults]);

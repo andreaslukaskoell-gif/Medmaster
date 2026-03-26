@@ -46,10 +46,9 @@ export default function TodayPage() {
   usePageTitle("Heute lernen");
   const navigate = useNavigate();
   const setResumeToUnterkapitelId = useAdaptiveStore((s) => s.setResumeToUnterkapitelId);
-  const { lernplanConfig, getDueChapterIds } = useStore();
-  const quizResults = useStore((s) =>
-    (s.quizResults ?? []).filter((r) => r != null && typeof r === "object")
-  );
+  const lernplanConfig = useStore((s) => s.lernplanConfig);
+  const getDueChapterIds = useStore((s) => s.getDueChapterIds);
+  const quizResults = useStore((s) => s.quizResults) ?? [];
   const goalAchievedByDate = useStore((s) => s.goalAchievedByDate);
   const activityLog = useStore((s) => s.activityLog);
   const adaptive = useAdaptiveStore();

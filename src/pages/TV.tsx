@@ -69,7 +69,10 @@ export default function TV() {
   // Collapse toggles
   const [showAllLegacy, setShowAllLegacy] = useState(false);
   const [showAllOffiziell, setShowAllOffiziell] = useState(false);
-  const { addXP, checkStreak, saveQuizResult, logActivity } = useStore();
+  const addXP = useStore((s) => s.addXP);
+  const checkStreak = useStore((s) => s.checkStreak);
+  const saveQuizResult = useStore((s) => s.saveQuizResult);
+  const logActivity = useStore((s) => s.logActivity);
   const getMinutes = useSessionTimer();
 
   const tvText = tvTexts[selectedTextIndex];

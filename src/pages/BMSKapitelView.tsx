@@ -97,7 +97,7 @@ export default function BMSKapitelView({
     return () => cancelAnimationFrame(id);
   }, [activeUKIndex, kapitel?.id]);
 
-  const { completedChapters: storeCompleted } = useStore();
+  const storeCompleted = useStore((s) => s.completedChapters);
   const completedChapters = storeCompleted || [];
 
   if (!kapitel || !kapitel.id) {

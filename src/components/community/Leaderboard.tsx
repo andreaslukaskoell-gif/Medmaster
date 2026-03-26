@@ -36,7 +36,9 @@ const FACH_OPTIONS: { value: FachFilter; label: string }[] = [
 export function Leaderboard() {
   const mounted = useIsMounted();
   const { profile } = useAuth();
-  const { xp, earnedBadges, activityLog } = useStore();
+  const xp = useStore((s) => s.xp);
+  const earnedBadges = useStore((s) => s.earnedBadges);
+  const activityLog = useStore((s) => s.activityLog);
   const getFachReadiness = useAdaptiveStore((s) => s.getFachReadiness);
   const [category, setCategory] = useState<LeaderboardCategory>("global");
   const [fach, setFach] = useState<FachFilter>("biologie");

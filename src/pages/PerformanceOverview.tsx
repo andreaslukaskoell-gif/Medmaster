@@ -69,10 +69,15 @@ function ProgressRing({
 export default function PerformanceOverview() {
   usePageTitle("Performance");
   const mounted = useIsMounted();
-  const { quizResults, completedChapters, streak, unlockedFachMilestones, goalAchievedByDate } =
-    useStore();
+  const quizResults = useStore((s) => s.quizResults);
+  const completedChapters = useStore((s) => s.completedChapters);
+  const streak = useStore((s) => s.streak);
+  const unlockedFachMilestones = useStore((s) => s.unlockedFachMilestones);
+  const goalAchievedByDate = useStore((s) => s.goalAchievedByDate);
   const getFachReadiness = useAdaptiveStore((s) => s.getFachReadiness);
-  const { maxConsecutiveCorrectEver, smartRecoveryCount, firstActivityTimeByDay } = useStore();
+  const maxConsecutiveCorrectEver = useStore((s) => s.maxConsecutiveCorrectEver);
+  const smartRecoveryCount = useStore((s) => s.smartRecoveryCount);
+  const firstActivityTimeByDay = useStore((s) => s.firstActivityTimeByDay);
 
   const totalQuizzes = quizResults.length;
   const badgeState = useMemo(() => {

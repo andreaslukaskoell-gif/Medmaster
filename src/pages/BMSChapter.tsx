@@ -23,7 +23,11 @@ interface Props {
 }
 
 export default function BMSChapter({ chapter, onBack }: Props) {
-  const { completedChapters, notes, setNote, bookmarks, toggleBookmarkChapter } = useStore();
+  const completedChapters = useStore((s) => s.completedChapters);
+  const notes = useStore((s) => s.notes);
+  const setNote = useStore((s) => s.setNote);
+  const bookmarks = useStore((s) => s.bookmarks);
+  const toggleBookmarkChapter = useStore((s) => s.toggleBookmarkChapter);
   const isCompleted = completedChapters.includes(chapter.id);
   const isBookmarked = bookmarks.chapters.includes(chapter.id);
   const [noteText, setNoteText] = useState(notes[chapter.id] || "");

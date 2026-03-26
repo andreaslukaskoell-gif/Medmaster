@@ -87,15 +87,13 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
     question: (typeof questions)[0];
     userAnswer: string;
   } | null>(null);
-  const {
-    addXP,
-    checkStreak,
-    saveQuizResult,
-    logActivity,
-    flaggedQuestions,
-    toggleFlagQuestion,
-    updateSpacedRepetition,
-  } = useStore();
+  const addXP = useStore((s) => s.addXP);
+  const checkStreak = useStore((s) => s.checkStreak);
+  const saveQuizResult = useStore((s) => s.saveQuizResult);
+  const logActivity = useStore((s) => s.logActivity);
+  const flaggedQuestions = useStore((s) => s.flaggedQuestions);
+  const toggleFlagQuestion = useStore((s) => s.toggleFlagQuestion);
+  const updateSpacedRepetition = useStore((s) => s.updateSpacedRepetition);
 
   const currentQuestion = questions[currentIndex];
   const allAnswered = questions.every((q) => answers[q.id]);
