@@ -52,7 +52,9 @@ export default function KFF() {
   const [view, setView] = useState<KffView>(initialView);
   const [strategyKey, setStrategyKey] = useState<StrategyKey>("zahlenfolgen");
   const { user, loading: isLoading } = useAuth();
-  const { kffDomainIntroSeen, markKffDomainIntroSeen, quizResults } = useStore();
+  const kffDomainIntroSeen = useStore((s) => s.kffDomainIntroSeen);
+  const markKffDomainIntroSeen = useStore((s) => s.markKffDomainIntroSeen);
+  const quizResults = useStore((s) => s.quizResults);
   const [authTimedOut, setAuthTimedOut] = useState(false);
   const autoStartRef = useRef(false);
 

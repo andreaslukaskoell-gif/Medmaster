@@ -121,7 +121,7 @@ export function GedaechtnisSetup({ onLearn, onBack }: { onLearn: () => void; onB
   const [passCount, setPassCount] = useState(8);
   const [dbLoading, setDbLoading] = useState(false);
   const [dbError, setDbError] = useState<string | null>(null);
-  const { getKffSeenIdsForDomain } = useStore();
+  const getKffSeenIdsForDomain = useStore((s) => s.getKffSeenIdsForDomain);
   const startFromDb = async () => {
     setDbError(null);
     setDbLoading(true);
@@ -445,7 +445,10 @@ export function GedaechtnisQuiz({ onBack }: { onBack: () => void }) {
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [submitted, setSubmitted] = useState(false);
-  const { addXP, checkStreak, saveQuizResult, logActivity } = useStore();
+  const addXP = useStore((s) => s.addXP);
+  const checkStreak = useStore((s) => s.checkStreak);
+  const saveQuizResult = useStore((s) => s.saveQuizResult);
+  const logActivity = useStore((s) => s.logActivity);
   const getMinutes = useSessionTimer();
   const q = questions[index];
   const allAnswered = questions.every((qu) => answers[qu.id] !== undefined);

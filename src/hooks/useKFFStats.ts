@@ -2,6 +2,9 @@ import { useMemo, useCallback } from "react";
 import { useStore } from "@/store/useStore";
 import type { QuizResult } from "@/store/useStore";
 
+/** Stable empty array to prevent new references when quizResults is nullish. */
+const EMPTY_QUIZ_RESULTS: QuizResult[] = [];
+
 // ---------------------------------------------------------------------------
 // Types
 // ---------------------------------------------------------------------------
@@ -130,9 +133,7 @@ function getTimestamp(r: QuizResult): number {
 // ---------------------------------------------------------------------------
 
 export function useKFFStats(): KFFStats {
-  const quizResults = useStore((s) =>
-    (s.quizResults ?? []).filter((r) => r != null && typeof r === "object")
-  );
+  const quizResults = useStore((s) => s.quizResults) ?? EMPTY_QUIZ_RESULTS;
 
   // We need direct store access for resetStats
   const resetStats = useCallback((subtest?: KFFSubtestKey) => {
@@ -152,6 +153,7 @@ export function useKFFStats(): KFFStats {
     // 1. Filter and tag KFF results
     const kffResults: KFFQuizResult[] = [];
     for (const r of quizResults) {
+      if (r == null || typeof r !== "object") continue;
       if (r.type !== "kff") continue;
       const sub = matchSubtest(r.subject);
       if (!sub) continue;
