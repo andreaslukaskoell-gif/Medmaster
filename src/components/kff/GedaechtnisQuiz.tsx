@@ -499,9 +499,30 @@ export function GedaechtnisQuiz({ onBack }: { onBack: () => void }) {
   // Auto-submit when timer expires
   useEffect(() => {
     if (quizTimerExpired && !submitted && questions.length > 0) {
-      queueMicrotask(() => handleSubmit());
+      // Guard: only submit once; handleSubmit sets submitted=true
+      const score = questions.filter((qu) => answers[qu.id] === qu.correctIndex).length;
+      saveQuizResult({
+        id: `kff-ged-${Date.now()}`,
+        type: "kff",
+        subject: "Gedächtnis",
+        score,
+        total: questions.length,
+        date: new Date().toLocaleDateString("de-AT"),
+        durationMinutes: getMinutes(),
+        answers: questions.map((qu) => ({
+          questionId: qu.id,
+          selectedAnswer: qu.options[answers[qu.id] ?? -1] ?? "",
+          correct: answers[qu.id] === qu.correctIndex,
+        })),
+      });
+      logActivity(questions.length, getMinutes());
+      addXP(score * 10);
+      checkStreak();
+      setSubmitted(true);
+      setIndex(0);
     }
-  }, [quizTimerExpired]); // eslint-disable-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- only run when timer expires
+  }, [quizTimerExpired]);
 
   useKeyboardShortcuts({
     disabled: submitted,

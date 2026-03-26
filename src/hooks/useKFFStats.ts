@@ -133,7 +133,7 @@ function getTimestamp(r: QuizResult): number {
 // ---------------------------------------------------------------------------
 
 export function useKFFStats(): KFFStats {
-  const quizResults = useStore((s) => s.quizResults) ?? EMPTY_QUIZ_RESULTS;
+  const quizResults = useStore((s) => s.quizResults ?? EMPTY_QUIZ_RESULTS);
 
   // We need direct store access for resetStats
   const resetStats = useCallback((subtest?: KFFSubtestKey) => {
@@ -149,7 +149,7 @@ export function useKFFStats(): KFFStats {
     });
   }, []);
 
-  const stats = useMemo(() => {
+  return useMemo((): KFFStats => {
     // 1. Filter and tag KFF results
     const kffResults: KFFQuizResult[] = [];
     for (const r of quizResults) {
@@ -233,8 +233,7 @@ export function useKFFStats(): KFFStats {
       totalSeriousSessions,
       weakestSubtest,
       strongestSubtest,
+      resetStats,
     };
-  }, [quizResults]);
-
-  return { ...stats, resetStats };
+  }, [quizResults, resetStats]);
 }
