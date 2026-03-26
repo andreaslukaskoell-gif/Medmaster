@@ -38,6 +38,7 @@ import { filterValidFigurenTasks, logPoolWarning } from "@/data/kffValidation";
 import { getTasksForUserWithWeakness, taskToData } from "@/lib/taskDb";
 import { useStore } from "@/store/useStore";
 import { useSessionTimer } from "@/hooks/useSessionTimer";
+import { useViewportMode } from "@/hooks/useViewportMode";
 import { UebungsbeschreibungCard } from "@/components/shared/UebungsbeschreibungCard";
 import { OfficialInstructionCard } from "@/components/shared/OfficialInstructionCard";
 import {
@@ -72,6 +73,7 @@ const PIECE_FILLS = [
 ] as const;
 
 export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoStart?: boolean }) {
+  const { isMobile } = useViewportMode();
   const [phase, setPhase] = useState<"setup" | "quiz" | "result">("setup");
   const [examMode, setExamMode] = useState<ExamMode>("practice");
   const [questionCount, setQuestionCount] = useState(getLastCount("figuren"));
@@ -473,12 +475,12 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
               <label className="text-sm font-medium text-[var(--text-primary)] mb-2 block">
                 Anzahl Aufgaben
               </label>
-              <div className="flex gap-2">
+              <div className={`grid ${isMobile ? "grid-cols-3" : "grid-cols-6"} gap-2`} data-mobile-keep>
                 {[10, 25, 50, 75, 100, 150].map((c) => (
                   <button
                     key={c}
                     onClick={() => setQuestionCount(c)}
-                    className={`flex-1 px-3 py-2 rounded-lg border text-sm font-medium transition-colors cursor-pointer ${
+                    className={`px-3 py-2.5 rounded-lg border text-sm font-medium transition-colors cursor-pointer ${
                       questionCount === c
                         ? "border-[var(--accent)] bg-[var(--accent)]/10 text-[var(--accent)]"
                         : "border-[var(--border)]"
@@ -838,7 +840,7 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
       </div>
 
       {/* Optionen A–E — horizontal in einer Reihe (wie offizielles PDF) */}
-      <div className="grid grid-cols-5 gap-3 mt-4">
+      <div className={`grid ${isMobile ? "grid-cols-3 gap-2" : "grid-cols-5 gap-3"} mt-4`} data-mobile-keep>
         {fzQ.options.map((opt, optIdx) => {
           const label = FZ_OPTION_LABELS[optIdx];
           const selected = answers[fzQ.id] === label;
