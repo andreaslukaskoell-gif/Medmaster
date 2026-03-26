@@ -1729,6 +1729,22 @@ a:focus-visible,
   user-select: none;
 }
 
+/* --- Mobile: enforce minimum touch targets for small button sizes (Apple HIG: 44px) --- */
+.mobile-mode .h-6:is(button, [role="button"]),
+.mobile-mode .h-8:is(button, [role="button"]),
+.mobile-mode .size-6:is(button, [role="button"]),
+.mobile-mode .size-8:is(button, [role="button"]) {
+  min-height: 40px !important;
+  min-width: 40px !important;
+}
+
+/* --- Mobile: ExamTimer safe-area-aware positioning --- */
+.mobile-mode .fixed.top-4.right-4,
+.mobile-mode .fixed[class*="top-[max"] {
+  top: max(0.75rem, env(safe-area-inset-top)) !important;
+  right: max(0.75rem, env(safe-area-inset-right)) !important;
+}
+
 /* --- Mobile: count selectors (6 buttons in a row → 3x2 grid) --- */
 .mobile-mode .flex.gap-3:has(> button:nth-child(6):last-child) {
   display: grid !important;

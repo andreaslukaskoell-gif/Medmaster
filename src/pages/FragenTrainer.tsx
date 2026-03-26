@@ -48,6 +48,7 @@ import { useAdaptiveStore } from "@/store/adaptiveLearning";
 import { useLocation, useNavigate } from "react-router-dom";
 import { trackQuizComplete } from "@/lib/analytics";
 import { trackEvent } from "@/lib/analyticsTracker";
+import { useViewportMode } from "@/hooks/useViewportMode";
 
 // ── Constants ─────────────────────────────────────────────────
 const STABLE_EMPTY_ARR: never[] = [];
@@ -182,6 +183,7 @@ function SelectionScreen({
   ) => void;
   userId: string;
 }) {
+  const { isMobile } = useViewportMode();
   const questionsPerSession = useStore((s) => s.questionsPerSession);
   const [subjectId, setSubjectId] = useState<BMSSubjectId | null>(null);
   const [mode, setMode] = useState<TrainMode>("einfach");
@@ -285,7 +287,7 @@ function SelectionScreen({
       {/* 1. Fach */}
       <div className="card-glass p-4 space-y-3">
         <p className="text-sm font-semibold text-[var(--text-secondary)]">1. Fach wählen</p>
-        <div className="grid grid-cols-4 gap-2 stagger-children">
+        <div className={`grid ${isMobile ? "grid-cols-2" : "grid-cols-4"} gap-2 stagger-children`} data-mobile-keep>
           {BMS_SUBJECTS.map((s) => {
             const Icon = s.icon;
             const selected = subjectId === s.id;
@@ -294,16 +296,16 @@ function SelectionScreen({
                 key={s.id}
                 type="button"
                 onClick={() => setSubjectId(s.id)}
-                className={`flex items-center gap-3 px-4 py-3.5 rounded-xl border-2 text-sm font-medium transition-all cursor-pointer text-left ${
+                className={`flex items-center gap-3 ${isMobile ? "px-3 py-3" : "px-4 py-3.5"} rounded-xl border-2 text-sm font-medium transition-all cursor-pointer text-left ${
                   selected
                     ? `${s.borderClass} ${s.bgClass} font-semibold`
                     : "border-[var(--border)] text-[var(--text-secondary)] hover:border-[var(--muted)]/50 hover:bg-[var(--foreground)]/3"
                 }`}
               >
                 <div
-                  className={`w-9 h-9 rounded-lg ${s.bgClass} flex items-center justify-center shrink-0`}
+                  className={`${isMobile ? "w-8 h-8" : "w-9 h-9"} rounded-lg ${s.bgClass} flex items-center justify-center shrink-0`}
                 >
-                  <Icon className={`w-5 h-5 ${s.accentClass}`} />
+                  <Icon className={`${isMobile ? "w-4 h-4" : "w-5 h-5"} ${s.accentClass}`} />
                 </div>
                 <div>
                   <div className={selected ? "text-[var(--foreground)]" : ""}>{s.label}</div>
