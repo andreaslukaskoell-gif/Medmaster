@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from "react";
-import { List, ChevronDown, ChevronUp } from "lucide-react";
+import { List, ChevronDown, ChevronUp, BookOpen } from "lucide-react";
 
 export interface TocSection {
   id: string;
@@ -59,23 +59,58 @@ export function TableOfContents({ sections }: Props) {
   // Number sections: H2 gets main number, H3 gets sub-number
   const numbered = buildNumberedList(sections);
 
+  // Find current section title for mobile compact display
+  const activeSection = numbered.find((s) => s.id === activeId);
+  const progressPct = activeSection
+    ? Math.round(((numbered.indexOf(activeSection) + 1) / numbered.length) * 100)
+    : 0;
+
   return (
-    <nav className="rounded-xl border border-[var(--accent)]/20 dark:border-[var(--accent)] bg-[var(--accent)]/5/50 dark:bg-[var(--accent)]/10 overflow-hidden">
-      {/* Mobile toggle */}
+    <nav
+      className="rounded-xl border border-[var(--accent)]/20 dark:border-[var(--accent)] bg-[var(--accent)]/5/50 dark:bg-[var(--accent)]/10 overflow-hidden"
+      aria-label="Inhaltsverzeichnis"
+    >
+      {/* Mobile toggle — shows current section + progress */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex items-center justify-between p-3 md:hidden cursor-pointer"
+        className="w-full flex items-center justify-between p-3 md:hidden cursor-pointer gap-2"
       >
-        <span className="text-sm font-semibold text-[var(--accent)] dark:text-[var(--accent)]/60 flex items-center gap-2">
-          <List className="w-4 h-4" />
-          Inhaltsverzeichnis
-        </span>
-        {isOpen ? (
-          <ChevronUp className="w-4 h-4 text-[var(--accent)] dark:text-[var(--accent)]/60" />
-        ) : (
-          <ChevronDown className="w-4 h-4 text-[var(--accent)] dark:text-[var(--accent)]/60" />
-        )}
+        <div className="flex items-center gap-2 min-w-0 flex-1">
+          <BookOpen className="w-4 h-4 text-[var(--accent)] dark:text-[var(--accent)]/60 shrink-0" />
+          <div className="min-w-0 flex-1">
+            <span className="text-xs font-semibold text-[var(--accent)] dark:text-[var(--accent)]/60 block">
+              Inhaltsverzeichnis
+            </span>
+            {activeSection && (
+              <span className="text-[11px] text-[var(--muted)] truncate block">
+                {activeSection.label} {activeSection.title}
+              </span>
+            )}
+          </div>
+        </div>
+        <div className="flex items-center gap-2 shrink-0">
+          {activeSection && (
+            <span className="text-[10px] font-medium text-[var(--accent)] bg-[var(--accent)]/10 px-1.5 py-0.5 rounded">
+              {progressPct}%
+            </span>
+          )}
+          {isOpen ? (
+            <ChevronUp className="w-4 h-4 text-[var(--accent)] dark:text-[var(--accent)]/60" />
+          ) : (
+            <ChevronDown className="w-4 h-4 text-[var(--accent)] dark:text-[var(--accent)]/60" />
+          )}
+        </div>
       </button>
+
+      {/* Mobile progress bar */}
+      {!isOpen && activeSection && (
+        <div className="h-0.5 bg-[var(--border)] md:hidden">
+          <div
+            className="h-full bg-[var(--accent)] transition-all duration-300"
+            style={{ width: `${progressPct}%` }}
+          />
+        </div>
+      )}
 
       {/* Desktop header (always visible) */}
       <div className="hidden md:flex items-center gap-2 p-3 pb-0">
@@ -91,7 +126,7 @@ export function TableOfContents({ sections }: Props) {
           <li key={id}>
             <button
               onClick={() => handleClick(id)}
-              className={`w-full text-left text-sm py-1 px-2 rounded-md transition-colors cursor-pointer ${
+              className={`w-full text-left text-sm py-1.5 px-2 rounded-md transition-colors cursor-pointer ${
                 level === 3 ? "pl-7" : ""
               } ${
                 activeId === id

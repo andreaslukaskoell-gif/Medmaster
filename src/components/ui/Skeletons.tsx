@@ -18,9 +18,9 @@ function S({ className, style }: { className?: string; style?: React.CSSProperti
 /**
  * Mirrors Dashboard.tsx layout:
  *   1. Hero card (greeting + progress bar) — tall
- *   2. 2-col row: daily challenge card + streak card
- *   3. 4-col quick-access row
- *   4. 2-col activity row
+ *   2. 2-col row: daily challenge card + streak card (1-col on mobile)
+ *   3. 3-col recommendation row (1-col on mobile)
+ *   4. 2-col activity row (1-col on mobile)
  */
 export function DashboardSkeleton({ className }: { className?: string }) {
   return (
@@ -32,11 +32,11 @@ export function DashboardSkeleton({ className }: { className?: string }) {
       {/* Hero card */}
       <div className="card-glass p-8 space-y-4">
         {/* Greeting line */}
-        <S className="h-10 w-72 rounded-lg" />
+        <S className="h-10 w-72 max-w-full rounded-lg" />
         {/* Sub-link */}
         <S className="h-5 w-40 rounded" />
         {/* Plan badge pills */}
-        <div className="flex gap-2">
+        <div className="flex gap-2 flex-wrap">
           <S className="h-7 w-28 rounded-lg" />
           <S className="h-7 w-24 rounded-lg" />
           <S className="h-7 w-20 rounded-lg" />
@@ -51,12 +51,12 @@ export function DashboardSkeleton({ className }: { className?: string }) {
         </div>
       </div>
 
-      {/* 2-col row: daily + streak */}
-      <div className="grid grid-cols-2 gap-4">
+      {/* 2-col row: daily + streak → 1-col on mobile */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4" data-mobile-keep>
         <div className="card-glass p-5 flex items-center gap-4">
           <S className="w-10 h-10 rounded-xl shrink-0" />
           <div className="flex-1 space-y-2">
-            <S className="h-4 w-40 rounded" />
+            <S className="h-4 w-40 max-w-full rounded" />
             <S className="h-3 w-28 rounded" />
           </div>
           <S className="h-8 w-24 rounded-full shrink-0" />
@@ -70,26 +70,27 @@ export function DashboardSkeleton({ className }: { className?: string }) {
         </div>
       </div>
 
-      {/* 4-col quick-access row */}
-      <div className="grid grid-cols-4 gap-3">
-        {[1, 2, 3, 4].map((i) => (
-          <div key={i} className="card-glass p-4 flex items-center gap-2.5">
-            <S className="w-4 h-4 rounded shrink-0" />
-            <S className="h-4 flex-1 rounded" />
+      {/* 3-col recommendation row → 1-col on mobile */}
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4" data-mobile-keep>
+        {[1, 2, 3].map((i) => (
+          <div key={i} className="card-glass p-4 space-y-3">
+            <S className="h-4 w-24 rounded" />
+            <S className="h-3 w-full rounded" />
+            <S className="h-3 w-3/4 rounded" />
           </div>
         ))}
       </div>
 
-      {/* 2-col activity row */}
-      <div className="grid grid-cols-2 gap-4">
+      {/* 2-col activity row → 1-col on mobile */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4" data-mobile-keep>
         <div className="card-glass p-5 space-y-3">
           <div className="flex justify-between">
             <S className="h-4 w-32 rounded" />
             <S className="h-4 w-28 rounded" />
           </div>
           {/* Heatmap placeholder */}
-          <div className="grid grid-cols-7 gap-1.5 mt-2">
-            {Array.from({ length: 49 }).map((_, i) => (
+          <div className="grid grid-cols-7 gap-1.5 mt-2" data-mobile-keep>
+            {Array.from({ length: 35 }).map((_, i) => (
               <S key={i} className="aspect-square rounded-sm" />
             ))}
           </div>
@@ -112,7 +113,7 @@ export function DashboardSkeleton({ className }: { className?: string }) {
 /**
  * Mirrors BMSSubjectSelector layout:
  *   1. Centered hero text block with progress bar
- *   2. 2x2 grid of tall subject cards
+ *   2. 2x2 grid of tall subject cards → 1-col on mobile
  */
 export function BMSSkeleton({ className }: { className?: string }) {
   return (
@@ -123,7 +124,7 @@ export function BMSSkeleton({ className }: { className?: string }) {
     >
       {/* Hero text block */}
       <div className="text-center max-w-2xl mx-auto space-y-4">
-        <S className="h-12 w-96 mx-auto rounded-lg" />
+        <S className="h-12 w-96 max-w-full mx-auto rounded-lg" />
         <S className="h-6 w-48 mx-auto rounded" />
         <div className="mt-6 max-w-sm mx-auto space-y-2">
           <div className="flex justify-between">
@@ -134,8 +135,8 @@ export function BMSSkeleton({ className }: { className?: string }) {
         </div>
       </div>
 
-      {/* 2x2 subject card grid */}
-      <div className="grid grid-cols-2 gap-8">
+      {/* 2x2 subject card grid → 1-col on mobile */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8" data-mobile-keep>
         {[1, 2, 3, 4].map((i) => (
           <div key={i} className="card-glass p-8 pb-6 space-y-5">
             {/* Icon + title row */}
@@ -180,6 +181,8 @@ export function BMSSkeleton({ className }: { className?: string }) {
  *   4. 5 answer option buttons
  */
 export function QuizSkeleton({ className }: { className?: string }) {
+  // Stable widths to avoid hydration mismatch
+  const optionWidths = [72, 85, 60, 90, 68];
   return (
     <div
       className={cn("max-w-3xl mx-auto px-4 py-8 space-y-6", className)}
@@ -212,7 +215,7 @@ export function QuizSkeleton({ className }: { className?: string }) {
 
         {/* 5 answer options */}
         <div className="space-y-3 pt-2">
-          {["A", "B", "C", "D", "E"].map((letter) => (
+          {["A", "B", "C", "D", "E"].map((letter, i) => (
             <div
               key={letter}
               className="card-glass border border-[var(--border)] rounded-xl p-4 flex items-center gap-4"
@@ -220,8 +223,7 @@ export function QuizSkeleton({ className }: { className?: string }) {
               <S className="w-8 h-8 rounded-lg shrink-0" />
               <S
                 className="h-4 flex-1 rounded"
-                // eslint-disable-next-line react-hooks/purity
-                style={{ maxWidth: `${55 + Math.random() * 35}%` }}
+                style={{ maxWidth: `${optionWidths[i]}%` }}
               />
             </div>
           ))}
@@ -234,8 +236,8 @@ export function QuizSkeleton({ className }: { className?: string }) {
 // ── Chapter skeleton ──────────────────────────────────────────────────────────
 /**
  * Mirrors BMSUnterkapitel layout:
- *   Left: narrow sidebar TOC (240px)
- *   Right: main content with heading + text blocks + callout boxes
+ *   Desktop: Left sidebar TOC (240px) + main content
+ *   Mobile: TOC hidden, full-width content
  */
 export function ChapterSkeleton({ className }: { className?: string }) {
   return (
@@ -244,8 +246,8 @@ export function ChapterSkeleton({ className }: { className?: string }) {
       role="status"
       aria-label="Kapitel wird geladen"
     >
-      {/* Left sidebar TOC */}
-      <aside className="w-60 shrink-0 space-y-3 sticky top-8 self-start">
+      {/* Left sidebar TOC — hidden on mobile */}
+      <aside className="w-60 shrink-0 space-y-3 sticky top-8 self-start hidden md:block">
         <S className="h-5 w-32 rounded mb-4" />
         {[90, 75, 80, 65, 85, 70, 60].map((w, i) => (
           <S key={i} className="h-4 rounded" style={{ width: `${w}%` }} />
@@ -258,10 +260,15 @@ export function ChapterSkeleton({ className }: { className?: string }) {
 
       {/* Main content area */}
       <main className="flex-1 min-w-0 space-y-8">
+        {/* Mobile TOC placeholder */}
+        <div className="md:hidden">
+          <S className="h-12 w-full rounded-xl" />
+        </div>
+
         {/* Chapter title + breadcrumb */}
         <div className="space-y-2">
           <S className="h-4 w-48 rounded" />
-          <S className="h-9 w-3/4 rounded-lg" />
+          <S className="h-9 w-3/4 max-w-full rounded-lg" />
         </div>
 
         {/* Content block 1 */}

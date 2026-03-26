@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { AlertCircle, RefreshCw } from "lucide-react";
+import { AlertCircle, RefreshCw, WifiOff, SearchX, FileQuestion } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { EmptyState } from "@/components/ui/EmptyState";
@@ -77,6 +77,48 @@ type PageErrorProps = {
   onRetry?: () => void;
   action?: ReactNode;
   className?: string;
+  variant?: "error" | "offline" | "not-found" | "empty-search";
+};
+
+/** SVG illustration for error states — small, inline, no external dependencies */
+function ErrorIllustration({ variant }: { variant: PageErrorProps["variant"] }) {
+  const Icon =
+    variant === "offline"
+      ? WifiOff
+      : variant === "not-found"
+        ? FileQuestion
+        : variant === "empty-search"
+          ? SearchX
+          : AlertCircle;
+  const bgColor =
+    variant === "offline"
+      ? "bg-amber-50 dark:bg-amber-900/20"
+      : variant === "not-found"
+        ? "bg-blue-50 dark:bg-blue-900/20"
+        : variant === "empty-search"
+          ? "bg-violet-50 dark:bg-violet-900/20"
+          : "bg-red-50 dark:bg-red-900/20";
+  const iconColor =
+    variant === "offline"
+      ? "text-amber-500 dark:text-amber-400"
+      : variant === "not-found"
+        ? "text-blue-500 dark:text-blue-400"
+        : variant === "empty-search"
+          ? "text-violet-500 dark:text-violet-400"
+          : "text-red-500 dark:text-red-400";
+
+  return (
+    <div className={cn("w-20 h-20 rounded-2xl flex items-center justify-center", bgColor)}>
+      <Icon className={cn("h-10 w-10", iconColor)} />
+    </div>
+  );
+}
+
+const ERROR_TITLES: Record<string, string> = {
+  error: "Etwas ist schiefgelaufen",
+  offline: "Keine Verbindung",
+  "not-found": "Seite nicht gefunden",
+  "empty-search": "Nichts gefunden",
 };
 
 export function PageError({
@@ -84,20 +126,24 @@ export function PageError({
   onRetry,
   action,
   className,
+  variant = "error",
 }: PageErrorProps) {
   return (
     <div
       className={cn(
-        "flex flex-col items-center justify-center gap-4 py-12 px-4 text-center",
+        "flex flex-col items-center justify-center gap-4 py-16 px-4 text-center",
         className
       )}
       role="alert"
     >
-      <div className="card-glass p-8 max-w-md mx-auto flex flex-col items-center gap-4">
-        <div className="rounded-2xl bg-red-50 dark:bg-red-900/20 p-4">
-          <AlertCircle className="h-8 w-8 text-red-500 dark:text-red-400" />
+      <div className="card-glass p-8 max-w-md mx-auto flex flex-col items-center gap-5">
+        <ErrorIllustration variant={variant} />
+        <div className="space-y-2">
+          <h2 className="text-lg font-semibold text-[var(--text-primary)]">
+            {ERROR_TITLES[variant] ?? ERROR_TITLES.error}
+          </h2>
+          <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{message}</p>
         </div>
-        <p className="text-sm text-[var(--text-secondary)]">{message}</p>
         {action}
         {onRetry && (
           <Button variant="outline" onClick={onRetry} className="btn-glass gap-2">
