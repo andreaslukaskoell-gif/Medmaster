@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import {
   ArrowLeft,
   ArrowRight,
@@ -316,12 +316,17 @@ export function GedaechtnisInterferenz({
   const [selected, setSelected] = useState<string | null>(null);
   const [answered, setAnswered] = useState(false);
 
+  // Stable ref for onComplete — prevents useEffect from re-firing when parent
+  // re-renders and passes a new anonymous function reference.
+  const onCompleteRef = useRef(onComplete);
+  useEffect(() => { onCompleteRef.current = onComplete; }, [onComplete]);
+
   const task = tasks[taskIndex];
 
   // When all tasks are done, trigger onComplete via effect (not during render)
   useEffect(() => {
-    if (started && !task) onComplete();
-  }, [started, task, onComplete]);
+    if (started && !task) onCompleteRef.current();
+  }, [started, task]);
 
   if (!started) {
     return (
