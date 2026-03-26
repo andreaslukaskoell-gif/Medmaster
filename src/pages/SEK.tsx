@@ -36,6 +36,7 @@ import {
 import type { SozialesEntscheidenTask } from "@/data/sekDataNew";
 import { useStore } from "@/store/useStore";
 import { useSessionTimer } from "@/hooks/useSessionTimer";
+import { useViewportMode } from "@/hooks/useViewportMode";
 
 type SekView =
   | "overview"
@@ -58,6 +59,7 @@ function shuffle<T>(arr: T[]): T[] {
 
 export default function SEK() {
   usePageTitle("SEK – Sozial-emotionale Kompetenzen");
+  const { isMobile } = useViewportMode();
   const location = useLocation();
   const dailyPlanSek = location.state?.dailyPlanSek as
     | { domain: string; count: number; label: string }[]
@@ -176,18 +178,18 @@ export default function SEK() {
   ];
 
   return (
-    <div className="max-w-5xl mx-auto space-y-6">
+    <div className={`max-w-5xl mx-auto space-y-6 ${isMobile ? "px-3" : ""}`}>
       {/* Header */}
       <div>
-        <div className="flex items-center gap-3 mb-1">
-          <h1 className="text-2xl font-bold text-[var(--text-primary)]">
+        <div className={`flex ${isMobile ? "flex-col gap-1" : "items-center gap-3"} mb-1`}>
+          <h1 className={`${isMobile ? "text-xl" : "text-2xl"} font-bold text-[var(--text-primary)]`}>
             Sozial-emotionale Kompetenzen
           </h1>
-          <span className="text-xs font-semibold text-[var(--accent)] bg-[var(--accent)]/10 px-2.5 py-1 rounded-full">
+          <span className="text-xs font-semibold text-[var(--accent)] bg-[var(--accent)]/10 px-2.5 py-1 rounded-full w-fit">
             10% des MedAT
           </span>
         </div>
-        <div className="flex items-center gap-4 text-sm text-[var(--muted)]">
+        <div className={`flex ${isMobile ? "flex-col gap-2" : "items-center gap-4"} text-sm text-[var(--muted)]`}>
           <span>3 Untertests · 7 Basisemotionen nach Ekman</span>
           <Button variant="outline" size="sm" onClick={() => setView("strategy")}>
             <BookOpen className="w-4 h-4 mr-1" /> Strategie
@@ -208,42 +210,44 @@ export default function SEK() {
         {subtests.map((s) => (
           <div
             key={s.id}
-            className="flex items-center gap-4 px-5 py-4 hover:bg-[var(--accent)]/2 transition-colors group"
+            className={`${isMobile ? "flex flex-col gap-2 px-3 py-3" : "flex items-center gap-4 px-5 py-4"} hover:bg-[var(--accent)]/2 transition-colors group`}
           >
-            {/* Color accent */}
-            <div
-              className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0"
-              style={{ background: `${s.color}12` }}
-            >
-              <span className="text-sm font-bold" style={{ color: s.color }}>
-                {s.abbr}
-              </span>
-            </div>
-
-            {/* Content */}
-            <div className="flex-1 min-w-0">
-              <div className="flex items-center gap-2">
-                <h3 className="font-semibold text-[var(--text-primary)]">{s.title}</h3>
-                <span className="text-xs text-[var(--muted)]">{s.taskCount} Aufgaben</span>
-                {s.stats.total > 0 && (
-                  <span
-                    className={`text-xs font-semibold ${
-                      s.stats.pct >= 70
-                        ? "text-emerald-500"
-                        : s.stats.pct >= 40
-                          ? "text-amber-500"
-                          : "text-red-400"
-                    }`}
-                  >
-                    {s.stats.pct}%
-                  </span>
-                )}
+            <div className="flex items-center gap-3 min-w-0">
+              {/* Color accent */}
+              <div
+                className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0"
+                style={{ background: `${s.color}12` }}
+              >
+                <span className="text-sm font-bold" style={{ color: s.color }}>
+                  {s.abbr}
+                </span>
               </div>
-              <p className="text-sm text-[var(--muted)] mt-0.5 line-clamp-1">{s.format}</p>
+
+              {/* Content */}
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center gap-2 flex-wrap">
+                  <h3 className="font-semibold text-[var(--text-primary)]">{s.title}</h3>
+                  <span className="text-xs text-[var(--muted)]">{s.taskCount} Aufgaben</span>
+                  {s.stats.total > 0 && (
+                    <span
+                      className={`text-xs font-semibold ${
+                        s.stats.pct >= 70
+                          ? "text-emerald-500"
+                          : s.stats.pct >= 40
+                            ? "text-amber-500"
+                            : "text-red-400"
+                      }`}
+                    >
+                      {s.stats.pct}%
+                    </span>
+                  )}
+                </div>
+                <p className="text-sm text-[var(--muted)] mt-0.5 line-clamp-1">{s.format}</p>
+              </div>
             </div>
 
             {/* Actions */}
-            <div className="flex items-center gap-2 shrink-0">
+            <div className={`flex items-center gap-2 shrink-0 ${isMobile ? "ml-13" : ""}`}>
               <OfficialInstructionCard title={s.instructionTitle} instruction={s.instruction} />
               <Button variant="premium" size="sm" onClick={s.onStart} disabled={s.taskCount === 0}>
                 <Play className="w-4 h-4 mr-1" /> Üben
@@ -277,6 +281,7 @@ function EmotionenErkennenQuiz({
   >({});
   // Track which questions have shown feedback in practice mode
   const [revealedQuestions, setRevealedQuestions] = useState<Set<string>>(new Set());
+  const { isMobile } = useViewportMode();
   const addXP = useStore((s) => s.addXP);
   const checkStreak = useStore((s) => s.checkStreak);
   const saveQuizResult = useStore((s) => s.saveQuizResult);
@@ -333,12 +338,12 @@ function EmotionenErkennenQuiz({
           <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
         </Button>
         <h1 className="text-2xl font-bold text-[var(--text-primary)]">Emotionen erkennen</h1>
-        <div className="grid gap-4 grid-cols-2">
+        <div className={`grid gap-4 ${isMobile ? "grid-cols-1" : "grid-cols-2"}`}>
           <Card
             className={`cursor-pointer border-2 transition-colors ${examMode === "exam" ? "border-[var(--accent)]" : "border-transparent hover:border-[var(--accent)]/30"}`}
             onClick={() => setExamMode("exam")}
           >
-            <CardContent className="p-6">
+            <CardContent className={isMobile ? "p-4" : "p-6"}>
               <div className="flex items-center gap-2 mb-2">
                 <Timer className="w-5 h-5 text-[var(--accent)]" />
                 <h2 className="font-semibold text-[var(--text-primary)]">Prüfungsmodus</h2>
@@ -353,7 +358,7 @@ function EmotionenErkennenQuiz({
             className={`cursor-pointer border-2 transition-colors ${examMode === "practice" ? "border-[var(--accent)]" : "border-transparent hover:border-[var(--accent)]/30"}`}
             onClick={() => setExamMode("practice")}
           >
-            <CardContent className="p-6">
+            <CardContent className={isMobile ? "p-4" : "p-6"}>
               <div className="flex items-center gap-2 mb-2">
                 <BookOpen className="w-5 h-5 text-green-600" />
                 <h2 className="font-semibold text-[var(--text-primary)]">Übungsmodus</h2>
@@ -630,6 +635,7 @@ function EmotionenRegulierenQuiz({
 }) {
   const [phase, setPhase] = useState<"setup" | "quiz" | "result">("setup");
   const [examMode, setExamMode] = useState<ExamMode>("practice");
+  const { isMobile } = useViewportMode();
   const erConfig = EXAM_CONFIG.emotionenRegulieren;
   // Shuffle task order AND option order within each task to prevent
   // "longest answer = best answer" shortcut (92% correlation in raw data).
@@ -684,12 +690,12 @@ function EmotionenRegulierenQuiz({
           <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
         </Button>
         <h1 className="text-2xl font-bold text-[var(--text-primary)]">Emotionen regulieren</h1>
-        <div className="grid gap-4 grid-cols-2">
+        <div className={`grid gap-4 ${isMobile ? "grid-cols-1" : "grid-cols-2"}`}>
           <Card
             className={`cursor-pointer border-2 transition-colors ${examMode === "exam" ? "border-[var(--accent)]" : "border-transparent hover:border-[var(--accent)]/30"}`}
             onClick={() => setExamMode("exam")}
           >
-            <CardContent className="p-6">
+            <CardContent className={isMobile ? "p-4" : "p-6"}>
               <div className="flex items-center gap-2 mb-2">
                 <Timer className="w-5 h-5 text-[var(--accent)]" />
                 <h2 className="font-semibold text-[var(--text-primary)]">Prüfungsmodus</h2>
@@ -704,7 +710,7 @@ function EmotionenRegulierenQuiz({
             className={`cursor-pointer border-2 transition-colors ${examMode === "practice" ? "border-[var(--accent)]" : "border-transparent hover:border-[var(--accent)]/30"}`}
             onClick={() => setExamMode("practice")}
           >
-            <CardContent className="p-6">
+            <CardContent className={isMobile ? "p-4" : "p-6"}>
               <div className="flex items-center gap-2 mb-2">
                 <BookOpen className="w-5 h-5 text-green-600" />
                 <h2 className="font-semibold text-[var(--text-primary)]">Übungsmodus</h2>
@@ -927,6 +933,7 @@ function SozialesEntscheidenQuiz({
 }) {
   const [phase, setPhase] = useState<"setup" | "instructions" | "quiz" | "result">("setup");
   const [examMode, setExamMode] = useState<ExamMode>("practice");
+  const { isMobile } = useViewportMode();
   const seConfig = EXAM_CONFIG.sozialesEntscheiden;
   const [questions] = useState(() => shuffle(tasks).slice(0, seConfig.questions));
   const [index, setIndex] = useState(0);
@@ -991,12 +998,12 @@ function SozialesEntscheidenQuiz({
           <ArrowLeft className="w-4 h-4 mr-1" /> Zurück
         </Button>
         <h1 className="text-2xl font-bold text-[var(--text-primary)]">Soziales Entscheiden</h1>
-        <div className="grid gap-4 grid-cols-2">
+        <div className={`grid gap-4 ${isMobile ? "grid-cols-1" : "grid-cols-2"}`}>
           <Card
             className={`cursor-pointer border-2 transition-colors ${examMode === "exam" ? "border-[var(--accent)]" : "border-transparent hover:border-[var(--accent)]/30"}`}
             onClick={() => setExamMode("exam")}
           >
-            <CardContent className="p-6">
+            <CardContent className={isMobile ? "p-4" : "p-6"}>
               <div className="flex items-center gap-2 mb-2">
                 <Timer className="w-5 h-5 text-[var(--accent)]" />
                 <h2 className="font-semibold text-[var(--text-primary)]">Prüfungsmodus</h2>
@@ -1011,7 +1018,7 @@ function SozialesEntscheidenQuiz({
             className={`cursor-pointer border-2 transition-colors ${examMode === "practice" ? "border-[var(--accent)]" : "border-transparent hover:border-[var(--accent)]/30"}`}
             onClick={() => setExamMode("practice")}
           >
-            <CardContent className="p-6">
+            <CardContent className={isMobile ? "p-4" : "p-6"}>
               <div className="flex items-center gap-2 mb-2">
                 <BookOpen className="w-5 h-5 text-green-600" />
                 <h2 className="font-semibold text-[var(--text-primary)]">Übungsmodus</h2>
