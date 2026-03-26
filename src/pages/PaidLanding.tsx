@@ -76,7 +76,7 @@ function SampleQuestion({ onSignupClick }: { onSignupClick: () => void }) {
         <span className="text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full bg-[var(--accent)]/8 text-[var(--accent)]">
           {q.subject}
         </span>
-        <span className="text-xs text-[var(--muted)] tracking-wide">1 von 5.000+</span>
+        <span className="text-xs text-[var(--muted)] tracking-wide">1 von tausenden</span>
       </div>
       <p className="text-base sm:text-lg font-semibold text-[var(--text-primary)] leading-relaxed mb-5 sm:mb-7">
         {q.text}
@@ -161,7 +161,7 @@ function SampleQuestion({ onSignupClick }: { onSignupClick: () => void }) {
             }}
             className="btn-premium flex items-center justify-center gap-2.5 w-full py-3.5 sm:py-4 text-sm font-semibold rounded-xl"
           >
-            Über 5.000 weitere Fragen warten
+            Tausende weitere Fragen warten
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
@@ -174,9 +174,9 @@ function SampleQuestion({ onSignupClick }: { onSignupClick: () => void }) {
 
 export default function PaidLanding() {
   usePageMeta({
-    title: "MedAT 2026 Vorbereitung \u2014 5.000+ BMS-Fragen, alle 4 Bereiche",
+    title: "MedAT 2026 Vorbereitung — tausende BMS-Fragen, alle 4 Bereiche",
     description:
-      "Bestehe den MedAT 2026: 5.000+ BMS-Fragen mit Erkl\u00e4rungen, 10.000+ KFF-Aufgaben, Pr\u00fcfungssimulation. Alle 4 Bereiche, einmalig \u20ac29,90.",
+      "Bestehe den MedAT 2026: Tausende BMS-Fragen mit Erklärungen, unbegrenzt KFF-Aufgaben, Prüfungssimulation. Alle 4 Bereiche, einmalig €29,90.",
     canonical: "https://medmaster.at/lp/medat",
     ogImage: "https://medmaster.at/og-image.png",
   });
@@ -420,10 +420,10 @@ export default function PaidLanding() {
         <div className="max-w-4xl mx-auto px-5 sm:px-8">
           <motion.div {...fade} className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8" data-mobile-keep>
             {[
-              { value: "5.000+", label: "BMS-Fragen", sub: "mit Erklärungen" },
-              { value: "10.000+", label: "KFF-Aufgaben", sub: "algorithmisch generiert" },
-              { value: "173", label: "Lerneinheiten", sub: "offizielle Stichwortliste" },
-              { value: "5", label: "Testsimulationen", sub: "echte Zeitlimits" },
+              { value: "Tausende", label: "BMS-Fragen", sub: "mit detaillierten Erklärungen" },
+              { value: "Unbegrenzt", label: "KFF-Aufgaben", sub: "algorithmisch generiert" },
+              { value: "Alle", label: "Stichwörter abgedeckt", sub: "offizielle Stichwortliste" },
+              { value: "Realitätsnah", label: "Testsimulationen", sub: "echte MedAT-Zeitlimits" },
             ].map((s) => (
               <div key={s.label} className="text-center">
                 <div
@@ -503,7 +503,7 @@ export default function PaidLanding() {
                 Systematisch mit MedMaster
               </h3>
               <ul className="space-y-2.5 sm:space-y-3 text-sm text-[var(--text-secondary)] leading-relaxed">
-                <li>5.000+ Fragen im echten MedAT-Format üben</li>
+                <li>Tausende Fragen im echten MedAT-Format üben</li>
                 <li>Schwächen werden automatisch erkannt</li>
                 <li>Gezielte Wiederholung statt Zufall</li>
                 <li>Fortschritt pro Stichwort sichtbar</li>
@@ -644,7 +644,7 @@ export default function PaidLanding() {
             {[
               {
                 q: "Ist das aktuell für den MedAT 2026?",
-                a: "Ja, vollständig. Alle Inhalte basieren auf der offiziellen Stichwortliste 2026 der Medizinischen Universitäten. Die 173 Lerneinheiten decken jedes einzelne Stichwort ab. Die über 5.000 BMS-Fragen sind im originalen MedAT-Format (A\u2013E, genau eine richtige Antwort) und werden laufend aktualisiert.",
+                a: "Ja, vollständig. Alle Inhalte basieren auf der offiziellen Stichwortliste 2026 der Medizinischen Universitäten. Unsere Lerneinheiten decken jedes einzelne Stichwort ab. Sämtliche BMS-Fragen sind im originalen MedAT-Format (A–E, genau eine richtige Antwort) und werden laufend aktualisiert.",
               },
               {
                 q: "Kann ich jederzeit kündigen?",
@@ -674,7 +674,7 @@ export default function PaidLanding() {
             Deine Konkurrenz auch nicht.
           </h2>
           <p className="text-white/60 text-sm sm:text-base mb-8 sm:mb-10 max-w-md mx-auto leading-relaxed">
-            5.000+ Fragen. Alle 4 Bereiche. Adaptives Lernsystem. Kein Abo.
+            Tausende Fragen. Alle 4 Bereiche. Adaptives Lernsystem. Kein Abo.
           </p>
           <GoogleBtn
             label="Jetzt kostenlos starten"

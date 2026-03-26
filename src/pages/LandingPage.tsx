@@ -88,7 +88,7 @@ function SampleQuestion({ onSignupClick }: { onSignupClick: () => void }) {
         <span className="text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full bg-[var(--accent)]/8 text-[var(--accent)]">
           {q.subject}
         </span>
-        <span className="text-xs text-[var(--muted)] tracking-wide">1 von 5.000+</span>
+        <span className="text-xs text-[var(--muted)] tracking-wide">1 von tausenden</span>
       </div>
       <p className="text-base sm:text-lg font-semibold text-[var(--text-primary)] leading-relaxed mb-5 sm:mb-7">
         {q.text}
@@ -173,7 +173,7 @@ function SampleQuestion({ onSignupClick }: { onSignupClick: () => void }) {
             }}
             className="btn-premium flex items-center justify-center gap-2.5 w-full py-3.5 sm:py-4 text-sm font-semibold rounded-xl"
           >
-            Über 5.000 weitere Fragen warten
+            Tausende weitere Fragen warten
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
@@ -217,9 +217,9 @@ function FAQItem({ q, a, isMobile }: { q: string; a: string; isMobile: boolean }
 
 export default function LandingPage() {
   usePageMeta({
-    title: "MedMaster — MedAT 2026 Vorbereitung | 5.000+ Fragen, KI-Lernsystem",
+    title: "MedMaster — MedAT 2026 Vorbereitung | Tausende Fragen, Adaptives Lernsystem",
     description:
-      "MedAT 2026 bestehen mit MedMaster: 5.000+ Übungsfragen, alle 4 Testbereiche (BMS, KFF, TV, SEK), adaptives KI-Lernsystem, Prüfungssimulation. Kostenlos starten.",
+      "MedAT 2026 bestehen mit MedMaster: Tausende Übungsfragen, alle 4 Testbereiche (BMS, KFF, TV, SEK), adaptives Lernsystem, Prüfungssimulation. Kostenlos starten.",
     canonical: "https://medmaster.at",
     ogImage: "https://medmaster.at/og-image.png",
   });
@@ -427,10 +427,10 @@ export default function LandingPage() {
         <div className="max-w-4xl mx-auto px-5 sm:px-8">
           <motion.div {...fade} className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8" data-mobile-keep>
             {[
-              { value: "5.000+", label: "BMS-Fragen", sub: "mit Erklärungen" },
-              { value: "10.000+", label: "KFF-Aufgaben", sub: "algorithmisch generiert" },
-              { value: "173", label: "Lerneinheiten", sub: "offizielle Stichwortliste" },
-              { value: "4", label: "MedAT-Bereiche", sub: "vollständig abgedeckt" },
+              { value: "Tausende", label: "BMS-Fragen", sub: "mit detaillierten Erklärungen" },
+              { value: "Unbegrenzt", label: "KFF-Aufgaben", sub: "algorithmisch generiert" },
+              { value: "Alle", label: "Stichwörter abgedeckt", sub: "offizielle Stichwortliste" },
+              { value: "4 / 4", label: "MedAT-Bereiche", sub: "vollständig abgedeckt" },
             ].map((s) => (
               <div key={s.label} className="text-center">
                 <div
@@ -510,7 +510,7 @@ export default function LandingPage() {
                 Systematisch mit MedMaster
               </h3>
               <ul className="space-y-2.5 sm:space-y-3 text-sm text-[var(--text-secondary)] leading-relaxed">
-                <li>5.000+ Fragen im echten MedAT-Format üben</li>
+                <li>Tausende Fragen im echten MedAT-Format üben</li>
                 <li>Schwächen werden automatisch erkannt</li>
                 <li>Gezielte Wiederholung statt Zufall</li>
                 <li>Fortschritt pro Stichwort sichtbar</li>
@@ -528,8 +528,8 @@ export default function LandingPage() {
               Alle 4 MedAT-Bereiche. Vollständig.
             </h2>
             <p className="text-sm sm:text-base text-[var(--text-secondary)] max-w-lg mx-auto">
-              Nicht &bdquo;ein bisschen von allem&ldquo; — jeder Testteil ist mit hunderten Aufgaben
-              und Theorie abgedeckt.
+              Nicht &bdquo;ein bisschen von allem&ldquo; — jeder Testteil ist mit hunderten
+              Aufgaben, Theorie und Erklärungen abgedeckt.
             </p>
           </motion.div>
           <motion.div {...fade} className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
@@ -539,12 +539,12 @@ export default function LandingPage() {
                 title: "BMS",
                 sub: "Basiskenntnistest Medizinische Studien",
                 items: [
-                  "1.252 Biologie-Fragen",
-                  "1.315 Chemie-Fragen",
-                  "1.377 Physik-Fragen",
-                  "1.077 Mathematik-Fragen",
+                  "Biologie — umfassender Fragenpool",
+                  "Chemie — organisch & anorganisch",
+                  "Physik — Mechanik bis Optik",
+                  "Mathematik — Algebra bis Stochastik",
                 ],
-                footer: "173 Lerneinheiten nach offizieller Stichwortliste",
+                footer: "Jedes offizielle Stichwort mit Lerneinheit abgedeckt",
                 link: "/medat-uebungsfragen",
                 linkLabel: "BMS testen",
               },
@@ -559,7 +559,7 @@ export default function LandingPage() {
                   "Figuren zusammensetzen",
                   "Gedächtnis & Merkfähigkeit",
                 ],
-                footer: "10.000+ algorithmisch generierte Aufgaben",
+                footer: "Unbegrenzt viele algorithmisch generierte Aufgaben",
                 link: "/medat-kff-ueben",
                 linkLabel: "KFF testen",
               },
@@ -567,7 +567,7 @@ export default function LandingPage() {
                 icon: FileText,
                 title: "TV",
                 sub: "Textverständnis",
-                items: ["10 vollständige Textsets", "120 Verständnisfragen"],
+                items: ["Prüfungsnahe Textsets", "Hunderte Verständnisfragen"],
                 footer: "Prüfungsnahe Texte mit detaillierter Auswertung",
               },
               {
@@ -575,7 +575,7 @@ export default function LandingPage() {
                 title: "SEK",
                 sub: "Sozial-emotionale Kompetenzen",
                 items: ["Emotionen erkennen", "Emotionen regulieren", "Soziales Entscheiden"],
-                footer: "230+ Aufgaben mit offiziellen MedAT-Instruktionen",
+                footer: "Hunderte Aufgaben mit offiziellen MedAT-Instruktionen",
               },
             ].map((area) => (
               <div
@@ -637,7 +637,7 @@ export default function LandingPage() {
               {
                 icon: BookOpen,
                 title: "Theorie + Praxis",
-                desc: "173 Lerneinheiten nach offizieller Stichwortliste — jedes Stichwort mit Erklärung, Merksätzen und Übungsfragen.",
+                desc: "Lerneinheiten zu jedem offiziellen Stichwort — mit Erklärung, Merksätzen und Übungsfragen.",
               },
               {
                 icon: Zap,
@@ -768,9 +768,9 @@ export default function LandingPage() {
                   {[
                     ["Preis", "Einmalig €29,90", "€69 – €599+"],
                     ["Abo / Verlängerung", "Nein", "Häufig monatlich"],
-                    ["BMS-Fragen", "5.000+", "1.300 – 2.700"],
-                    ["KFF-Aufgaben", "10.000+ (generiert)", "500 – 7.500"],
-                    ["Prüfungssimulation", "Inklusive, unbegrenzt", "€69 pro Simulation"],
+                    ["BMS-Fragen", "Tausende", "Deutlich weniger"],
+                    ["KFF-Aufgaben", "Unbegrenzt (generiert)", "Begrenzter Pool"],
+                    ["Prüfungssimulation", "Inklusive, unbegrenzt", "Extra kostenpflichtig"],
                     ["Adaptives Lernsystem", "Ja", "Nicht verfügbar"],
                     ["Alle 4 MedAT-Bereiche", "Ja", "Oft nur BMS"],
                     ["Zugang bis MedAT", "Ja", "Saisonabhängig"],
@@ -809,7 +809,7 @@ export default function LandingPage() {
             {[
               {
                 q: "Ist das aktuell für den MedAT 2026?",
-                a: "Ja, vollständig. Alle Inhalte basieren auf der offiziellen Stichwortliste 2026 der Medizinischen Universitäten. Die 173 Lerneinheiten decken jedes einzelne Stichwort ab — von Zellbiologie über organische Chemie bis Stochastik. Die über 5.000 BMS-Fragen sind im originalen MedAT-Format (A–E, genau eine richtige Antwort) und werden laufend aktualisiert.",
+                a: "Ja, vollständig. Alle Inhalte basieren auf der offiziellen Stichwortliste 2026 der Medizinischen Universitäten. Unsere Lerneinheiten decken jedes einzelne Stichwort ab — von Zellbiologie über organische Chemie bis Stochastik. Sämtliche BMS-Fragen sind im originalen MedAT-Format (A–E, genau eine richtige Antwort) und werden laufend aktualisiert.",
               },
               {
                 q: "Kann ich jederzeit kündigen?",
@@ -825,7 +825,7 @@ export default function LandingPage() {
               },
               {
                 q: "Was unterscheidet MedMaster von anderen Anbietern?",
-                a: "Vier Dinge: Erstens decken wir alle 4 MedAT-Bereiche ab — nicht nur BMS. Zweitens ist unser Lernsystem adaptiv — es erkennt deine Schwächen und passt den Lernplan automatisch an. Drittens kosten andere Plattformen €69–599 (oft mit Abo), während MedMaster einmalig €29,90 kostet. Viertens: Über 10.000 KFF-Aufgaben werden algorithmisch generiert und validiert — du bekommst nie dieselbe Aufgabe zweimal. Dazu eine realistische Prüfungssimulation mit echten MedAT-Zeitlimits, unbegrenzt wiederholbar.",
+                a: "Vier Dinge: Erstens decken wir alle 4 MedAT-Bereiche ab — nicht nur BMS. Zweitens ist unser Lernsystem adaptiv — es erkennt deine Schwächen und passt den Lernplan automatisch an. Drittens kosten andere Plattformen €69–599 (oft mit Abo), während MedMaster einmalig €29,90 kostet. Viertens: KFF-Aufgaben werden algorithmisch generiert und validiert — du bekommst nie dieselbe Aufgabe zweimal. Dazu eine realistische Prüfungssimulation mit echten MedAT-Zeitlimits, unbegrenzt wiederholbar.",
               },
             ].map((faq) => (
               <FAQItem key={faq.q} q={faq.q} a={faq.a} isMobile={isMobile} />
@@ -843,7 +843,7 @@ export default function LandingPage() {
             Deine Konkurrenz auch nicht.
           </h2>
           <p className="text-white/60 text-sm sm:text-base mb-8 sm:mb-10 max-w-md mx-auto leading-relaxed">
-            5.000+ Fragen. Alle 4 Bereiche. Adaptives Lernsystem. Kein Abo.
+            Tausende Fragen. Alle 4 Bereiche. Adaptives Lernsystem. Kein Abo.
           </p>
           <GoogleBtn
             label="Jetzt kostenlos starten"
