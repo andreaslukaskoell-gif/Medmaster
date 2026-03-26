@@ -21,6 +21,9 @@ import { FigurenQuiz } from "@/components/kff/FigurenQuiz";
 import { KFFStatsSection } from "@/components/kff/KFFStatsSection";
 import { useEffect } from "react";
 
+/** Stable reference for empty quizResults to prevent unnecessary re-renders. */
+const STABLE_EMPTY_RESULTS: never[] = [];
+
 type KffView =
   | "overview"
   | "strategy"
@@ -54,14 +57,14 @@ export default function KFF() {
   const { user, loading: isLoading } = useAuth();
   const kffDomainIntroSeen = useStore((s) => s.kffDomainIntroSeen);
   const markKffDomainIntroSeen = useStore((s) => s.markKffDomainIntroSeen);
-  const quizResults = useStore((s) => s.quizResults);
+  const quizResults = useStore((s) => s.quizResults ?? STABLE_EMPTY_RESULTS);
   const [authTimedOut, setAuthTimedOut] = useState(false);
   const autoStartRef = useRef(false);
 
   // Compute per-module progress from quizResults — must be before early returns (Rules of Hooks)
   const modules = useMemo(() => {
     const getStats = (subject: string) => {
-      const results = (quizResults ?? []).filter((r) => r.type === "kff" && r.subject === subject);
+      const results = quizResults.filter((r) => r.type === "kff" && r.subject === subject);
       const total = results.reduce((s, r) => s + r.total, 0);
       const correct = results.reduce((s, r) => s + r.score, 0);
       return {
