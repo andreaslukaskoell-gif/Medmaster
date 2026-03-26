@@ -113,6 +113,7 @@ export function useReferralReward(): ReferralRewardData & { refresh: () => void 
   }, [user, refCode, refLink]);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- fetchStatus is async; setState occurs after await, not synchronously
     fetchStatus();
   }, [fetchStatus]);
 

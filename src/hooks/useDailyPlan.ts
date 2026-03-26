@@ -106,7 +106,6 @@ export function useDailyPlan(): DailyPlanResult {
       lastViewedUnterkapitelId: lastViewedUnterkapitelId,
       completedChapterIds: completedChapters,
     });
-    // eslint-disable-next-line react-hooks/exhaustive-deps -- getDueChapterIds is unstable; read via getState()
   }, [
     adaptivePlan,
     lastViewedKapitelId,

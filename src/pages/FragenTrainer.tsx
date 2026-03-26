@@ -50,6 +50,7 @@ import { trackQuizComplete } from "@/lib/analytics";
 import { trackEvent } from "@/lib/analyticsTracker";
 
 // ── Constants ─────────────────────────────────────────────────
+const STABLE_EMPTY_ARR: never[] = [];
 
 const BMS_SUBJECTS: {
   id: BMSSubjectId;
@@ -187,7 +188,7 @@ function SelectionScreen({
   const [count, setCount] = useState(questionsPerSession);
   const [source] = useState<QuestionSource>("supabase");
 
-  const quizResults = useStore((s) => s.quizResults) ?? [];
+  const quizResults = useStore((s) => s.quizResults ?? STABLE_EMPTY_ARR);
 
   const bmsStats = useMemo(() => {
     const bms = (quizResults ?? []).filter((r) => r.type === "bms" || r.type === "simulation");

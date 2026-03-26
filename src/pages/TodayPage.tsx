@@ -26,6 +26,8 @@ import { generateAdaptivePlan } from "@/lib/adaptivePlan";
 import { buildConcreteDailyPlan } from "@/lib/concreteDailyPlan";
 import { getPlanAdaptation } from "@/lib/planAdaptation";
 
+const STABLE_EMPTY_ARR: never[] = [];
+
 const REASON_LABEL: Record<string, string> = {
   due: "Fällig",
   weak: "Schwachstelle",
@@ -48,7 +50,7 @@ export default function TodayPage() {
   const setResumeToUnterkapitelId = useAdaptiveStore((s) => s.setResumeToUnterkapitelId);
   const lernplanConfig = useStore((s) => s.lernplanConfig);
   const getDueChapterIds = useStore((s) => s.getDueChapterIds);
-  const quizResults = useStore((s) => s.quizResults) ?? [];
+  const quizResults = useStore((s) => s.quizResults ?? STABLE_EMPTY_ARR);
   const goalAchievedByDate = useStore((s) => s.goalAchievedByDate);
   const activityLog = useStore((s) => s.activityLog);
   const adaptive = useAdaptiveStore();
