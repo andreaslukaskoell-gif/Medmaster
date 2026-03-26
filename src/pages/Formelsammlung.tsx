@@ -19,11 +19,8 @@ type FachFilter = "alle" | "physik" | "chemie" | "mathematik";
 
 /** Render formula string with proper subscripts/superscripts for common patterns. */
 function renderFormel(text: string): React.ReactNode {
-  // Split text into segments with sup/sub/italic markers, then render as React elements
-  type Segment = { type: "text" | "sup" | "sub" | "italic"; content: string };
-  const segments: Segment[] = [];
-  // Build a working copy and extract patterns into segments
-  let remaining = text;
+  // Build React elements with sup/sub/italic for formula rendering
+  const remaining = text;
   const result: React.ReactNode[] = [];
 
   // Process character by character, building React elements

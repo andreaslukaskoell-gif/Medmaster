@@ -31,7 +31,7 @@ export default function AuthPage() {
   const [isNewUser, setIsNewUser] = useState(false);
   const [otpSent, setOtpSent] = useState(false);
   const { signIn, signUp, signInWithGoogle, signInWithOtp } = useAuth();
-  const { setMedATOnboardingComplete } = useStore();
+  const setMedATOnboardingComplete = useStore((s) => s.setMedATOnboardingComplete);
   const navigate = useNavigate();
   const { blocked, remainingCooldown, checkThrottle } = useThrottle(5, 60_000, 30_000);
 

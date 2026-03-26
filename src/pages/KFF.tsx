@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useMemo } from "react";
 import { useSearchParams } from "react-router-dom";
 import { BookOpen, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -20,6 +20,9 @@ import { WortflüssigkeitQuiz } from "@/components/kff/WortfluessigkeitQuiz";
 import { FigurenQuiz } from "@/components/kff/FigurenQuiz";
 import { KFFStatsSection } from "@/components/kff/KFFStatsSection";
 import { useEffect } from "react";
+
+/** Stable reference for empty quizResults to prevent unnecessary re-renders. */
+const STABLE_EMPTY_RESULTS: never[] = [];
 
 type KffView =
   | "overview"
@@ -52,9 +55,88 @@ export default function KFF() {
   const [view, setView] = useState<KffView>(initialView);
   const [strategyKey, setStrategyKey] = useState<StrategyKey>("zahlenfolgen");
   const { user, loading: isLoading } = useAuth();
-  const { kffDomainIntroSeen, markKffDomainIntroSeen, quizResults } = useStore();
+  const kffDomainIntroSeen = useStore((s) => s.kffDomainIntroSeen);
+  const markKffDomainIntroSeen = useStore((s) => s.markKffDomainIntroSeen);
+  const quizResults = useStore((s) => s.quizResults ?? STABLE_EMPTY_RESULTS);
   const [authTimedOut, setAuthTimedOut] = useState(false);
   const autoStartRef = useRef(false);
+
+  // Compute per-module progress from quizResults — must be before early returns (Rules of Hooks)
+  const modules = useMemo(() => {
+    const getStats = (subject: string) => {
+      const results = quizResults.filter((r) => r.type === "kff" && r.subject === subject);
+      const total = results.reduce((s, r) => s + r.total, 0);
+      const correct = results.reduce((s, r) => s + r.score, 0);
+      return {
+        sessions: results.length,
+        total,
+        correct,
+        pct: total > 0 ? Math.round((correct / total) * 100) : 0,
+      };
+    };
+    return [
+      {
+        id: "zahlenfolgen" as const,
+        title: "Zahlenfolgen",
+        format: "Zahlenreihe mit Lücke — erkenne das Muster, finde die nächste Zahl",
+        example: "2, 5, 11, 23, ?",
+        badge: "100+",
+        strategyKey: "zahlenfolgen" as StrategyKey,
+        startView: "zahlenfolgen" as KffView,
+        icon: "chart",
+        color: "#3b82f6",
+        stats: getStats("Zahlenfolgen"),
+      },
+      {
+        id: "gedaechtnis" as const,
+        title: "Gedächtnis & Merkfähigkeit",
+        format: "Allergieausweise einprägen, dann Fragen dazu beantworten (A–E)",
+        example: "8 Ausweise → 8 Min. lernen → 25 Fragen",
+        badge: "MedAT-Format",
+        strategyKey: "gedaechtnis" as StrategyKey,
+        startView: "gedaechtnis-setup" as KffView,
+        icon: "chart",
+        color: "#10b981",
+        stats: getStats("Gedächtnis"),
+      },
+      {
+        id: "implikationen" as const,
+        title: "Implikationen erkennen",
+        format: "Aus Prämissen (Alle/Einige/Keine) die korrekte Schlussfolgerung wählen",
+        example: "Alle A sind B. Einige B sind C. → ?",
+        badge: "200+",
+        strategyKey: "implikationen" as StrategyKey,
+        startView: "implikationen" as KffView,
+        icon: "chart",
+        color: "#8b5cf6",
+        stats: getStats("Implikationen"),
+      },
+      {
+        id: "wortflüssigkeit" as const,
+        title: "Wortflüssigkeit",
+        format: "Buchstaben sind vertauscht — finde das richtige Wort und seinen Anfangsbuchstaben",
+        example: "FKARE → FARKE? KRAFE? → Antwort: K",
+        badge: "720+",
+        strategyKey: "wortflüssigkeit" as StrategyKey,
+        startView: "wortflüssigkeit" as KffView,
+        icon: "chart",
+        color: "#f59e0b",
+        stats: getStats("Wortflüssigkeit"),
+      },
+      {
+        id: "figuren" as const,
+        title: "Figuren zusammensetzen",
+        format: "Puzzleteile im Kopf zusammenfügen — welche Figur entsteht?",
+        example: "3–5 Teile → 1 aus 5 Figuren wählen",
+        badge: "10.000+",
+        strategyKey: "figuren" as StrategyKey,
+        startView: "figuren-quiz" as KffView,
+        icon: "puzzle",
+        color: "#ec4899",
+        stats: getStats("Figuren zusammensetzen"),
+      },
+    ];
+  }, [quizResults]);
 
   useEffect(() => {
     if (!isLoading) return;
@@ -199,82 +281,6 @@ export default function KFF() {
       />
     );
   }
-
-  // Compute per-module progress from quizResults
-  const kffStats = (subject: string) => {
-    const results = (quizResults ?? []).filter((r) => r.type === "kff" && r.subject === subject);
-    const total = results.reduce((s, r) => s + r.total, 0);
-    const correct = results.reduce((s, r) => s + r.score, 0);
-    return {
-      sessions: results.length,
-      total,
-      correct,
-      pct: total > 0 ? Math.round((correct / total) * 100) : 0,
-    };
-  };
-
-  const modules = [
-    {
-      id: "zahlenfolgen" as const,
-      title: "Zahlenfolgen",
-      format: "Zahlenreihe mit Lücke — erkenne das Muster, finde die nächste Zahl",
-      example: "2, 5, 11, 23, ?",
-      badge: "100+",
-      strategyKey: "zahlenfolgen" as StrategyKey,
-      startView: "zahlenfolgen" as KffView,
-      icon: "chart",
-      color: "#3b82f6",
-      stats: kffStats("Zahlenfolgen"),
-    },
-    {
-      id: "gedaechtnis" as const,
-      title: "Gedächtnis & Merkfähigkeit",
-      format: "Allergieausweise einprägen, dann Fragen dazu beantworten (A–E)",
-      example: "8 Ausweise → 8 Min. lernen → 25 Fragen",
-      badge: "MedAT-Format",
-      strategyKey: "gedaechtnis" as StrategyKey,
-      startView: "gedaechtnis-setup" as KffView,
-      icon: "chart",
-      color: "#10b981",
-      stats: kffStats("Gedächtnis"),
-    },
-    {
-      id: "implikationen" as const,
-      title: "Implikationen erkennen",
-      format: "Aus Prämissen (Alle/Einige/Keine) die korrekte Schlussfolgerung wählen",
-      example: "Alle A sind B. Einige B sind C. → ?",
-      badge: "200+",
-      strategyKey: "implikationen" as StrategyKey,
-      startView: "implikationen" as KffView,
-      icon: "chart",
-      color: "#8b5cf6",
-      stats: kffStats("Implikationen"),
-    },
-    {
-      id: "wortflüssigkeit" as const,
-      title: "Wortflüssigkeit",
-      format: "Buchstaben sind vertauscht — finde das richtige Wort und seinen Anfangsbuchstaben",
-      example: "FKARE → FARKE? KRAFE? → Antwort: K",
-      badge: "720+",
-      strategyKey: "wortflüssigkeit" as StrategyKey,
-      startView: "wortflüssigkeit" as KffView,
-      icon: "chart",
-      color: "#f59e0b",
-      stats: kffStats("Wortflüssigkeit"),
-    },
-    {
-      id: "figuren" as const,
-      title: "Figuren zusammensetzen",
-      format: "Puzzleteile im Kopf zusammenfügen — welche Figur entsteht?",
-      example: "3–5 Teile → 1 aus 5 Figuren wählen",
-      badge: "10.000+",
-      strategyKey: "figuren" as StrategyKey,
-      startView: "figuren-quiz" as KffView,
-      icon: "puzzle",
-      color: "#ec4899",
-      stats: kffStats("Figuren zusammensetzen"),
-    },
-  ];
 
   return (
     <div className="max-w-4xl mx-auto space-y-8">

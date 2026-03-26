@@ -673,7 +673,7 @@ function EmptyState() {
 
 export default function Prognose() {
   usePageTitle("Prognose");
-  const { quizResults } = useStore();
+  const quizResults = useStore((s) => s.quizResults);
 
   const totalAnswered = useMemo(
     () => quizResults.reduce((sum, r) => sum + r.total, 0),

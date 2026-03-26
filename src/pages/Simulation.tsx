@@ -776,7 +776,11 @@ export default function Simulation() {
   void sectionStartTime;
   const [simVariant, setSimVariant] = useState<number | undefined>(undefined);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
-  const { addXP, checkStreak, saveQuizResult, logActivity, quizResults } = useStore();
+  const addXP = useStore((s) => s.addXP);
+  const checkStreak = useStore((s) => s.checkStreak);
+  const saveQuizResult = useStore((s) => s.saveQuizResult);
+  const logActivity = useStore((s) => s.logActivity);
+  const quizResults = useStore((s) => s.quizResults);
   const getMinutes = useSessionTimer();
   const { recordAnswer: recordAdaptive } = useAdaptiveStore();
 

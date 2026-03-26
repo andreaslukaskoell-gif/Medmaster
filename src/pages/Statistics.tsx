@@ -40,7 +40,9 @@ const confidenceLabel: Record<string, { text: string; className: string }> = {
 };
 
 export default function Statistics() {
-  const { quizResults: rawQuizResults, xp, streak } = useStore();
+  const rawQuizResults = useStore((s) => s.quizResults);
+  const xp = useStore((s) => s.xp);
+  const streak = useStore((s) => s.streak);
   const quizResults = (rawQuizResults ?? []).filter(
     (r) => r != null && typeof r === "object"
   );

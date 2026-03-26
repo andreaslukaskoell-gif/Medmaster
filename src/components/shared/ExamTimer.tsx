@@ -17,10 +17,15 @@ export function ExamTimer({ totalSeconds, onTimeUp, paused = false }: ExamTimerP
   }, [onTimeUp]);
 
   useEffect(() => {
-    if (paused || secondsLeft <= 0) return;
-    const t = setInterval(() => setSecondsLeft((s) => s - 1), 1000);
+    if (paused) return;
+    const t = setInterval(() => {
+      setSecondsLeft((s) => {
+        if (s <= 1) { clearInterval(t); return 0; }
+        return s - 1;
+      });
+    }, 1000);
     return () => clearInterval(t);
-  }, [paused, secondsLeft]);
+  }, [paused]);
 
   useEffect(() => {
     if (secondsLeft <= 0 && !firedRef.current) {

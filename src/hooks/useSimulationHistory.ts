@@ -4,6 +4,8 @@ import { useKFFStore } from "@/store/kffStore";
 import type { QuizResult } from "@/store/useStore";
 import type { SimulationResult } from "@/data/kffTypes";
 
+const STABLE_EMPTY_ARR: never[] = [];
+
 type SimulationHistoryEntry = {
   id: string;
   date: string;
@@ -104,9 +106,7 @@ function computeTrend(
 }
 
 export function useSimulationHistory(): SimulationHistory {
-  const quizResults = useStore((s) =>
-    (s.quizResults ?? []).filter((r) => r != null && typeof r === "object")
-  );
+  const quizResults = useStore((s) => s.quizResults ?? STABLE_EMPTY_ARR);
   const simulationResults = useKFFStore((s) => s.simulationResults);
 
   return useMemo(() => {

@@ -118,7 +118,7 @@ export default function StichwortlistePage() {
   const [activeTab, setActiveTab] = useState<string>("alle");
   const [searchQuery, setSearchQuery] = useState("");
   const [priorityFilter, setPriorityFilter] = useState<string>("alle");
-  const { quizResults } = useStore();
+  const quizResults = useStore((s) => s.quizResults);
   const { profile: adaptiveProfile } = useAdaptiveStore();
 
   const filteredStichworte = useMemo(() => {

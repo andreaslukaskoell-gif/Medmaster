@@ -513,15 +513,18 @@ function Slide5Share({ data, onBack }: { data: SlideData; onBack: () => void }) 
 export default function BMSWrapped() {
   usePageTitle("BMS Jahresrückblick");
   const [currentSlide, setCurrentSlide] = useState(0);
-  const store = useStore();
+  const quizResults = useStore((s) => s.quizResults);
+  const streak = useStore((s) => s.streak);
+  const xp = useStore((s) => s.xp);
+  const activityLog = useStore((s) => s.activityLog);
 
-  const totalQuestions = store.quizResults.reduce((sum, r) => sum + r.total, 0);
-  const correctAnswers = store.quizResults.reduce((sum, r) => sum + r.score, 0);
+  const totalQuestions = quizResults.reduce((sum, r) => sum + r.total, 0);
+  const correctAnswers = quizResults.reduce((sum, r) => sum + r.score, 0);
   const correctRate = Math.round((correctAnswers / Math.max(totalQuestions, 1)) * 100);
   const currentMonth = new Date().toLocaleDateString("de-AT", { month: "long", year: "numeric" });
-  const longestStreak = store.streak;
-  const currentLevel = getLevelFromXP(store.xp);
-  const activeDays = Object.keys(store.activityLog || {}).length;
+  const longestStreak = streak;
+  const currentLevel = getLevelFromXP(xp);
+  const activeDays = Object.keys(activityLog || {}).length;
 
   const data: SlideData = {
     totalQuestions,
@@ -531,7 +534,7 @@ export default function BMSWrapped() {
     longestStreak,
     currentLevel,
     activeDays,
-    xp: store.xp,
+    xp,
   };
 
   const goNext = () => {

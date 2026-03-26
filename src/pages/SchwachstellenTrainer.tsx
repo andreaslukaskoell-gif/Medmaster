@@ -112,8 +112,12 @@ export default function SchwachstellenTrainer() {
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
   const adaptive = useAdaptiveStore();
-  const { saveQuizResult, addXP, checkStreak, logActivity, updateSpacedRepetition, quizResults } =
-    useStore();
+  const saveQuizResult = useStore((s) => s.saveQuizResult);
+  const addXP = useStore((s) => s.addXP);
+  const checkStreak = useStore((s) => s.checkStreak);
+  const logActivity = useStore((s) => s.logActivity);
+  const updateSpacedRepetition = useStore((s) => s.updateSpacedRepetition);
+  const quizResults = useStore((s) => s.quizResults);
   const getMinutes = useSessionTimer();
 
   const readiness = adaptive.getMedATReadiness();

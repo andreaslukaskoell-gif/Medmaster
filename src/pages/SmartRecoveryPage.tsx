@@ -26,6 +26,8 @@ import { getDirectStichwortId } from "@/data/questions/index";
 import { stripMarkdownAsterisks } from "@/utils/formatExplanation";
 import { alleStichworteListe } from "@/data/stichwortliste";
 
+const STABLE_EMPTY_ARR: never[] = [];
+
 const fachColors: Record<string, { bg: string; text: string; label: string }> = {
   biologie: {
     bg: "bg-emerald-50 dark:bg-emerald-900/20",
@@ -54,17 +56,13 @@ type Step = "reentry" | "question" | "feedback" | "result";
 export default function SmartRecoveryPage() {
   const navigate = useNavigate();
   const getMinutes = useSessionTimer();
-  const quizResults = useStore((s) =>
-    (s.quizResults ?? []).filter((r) => r != null && typeof r === "object")
-  );
-  const {
-    saveQuizResult,
-    addXP,
-    checkStreak,
-    logActivity,
-    updateSpacedRepetition,
-    incrementSmartRecoveryCount,
-  } = useStore();
+  const quizResults = useStore((s) => s.quizResults ?? STABLE_EMPTY_ARR);
+  const saveQuizResult = useStore((s) => s.saveQuizResult);
+  const addXP = useStore((s) => s.addXP);
+  const checkStreak = useStore((s) => s.checkStreak);
+  const logActivity = useStore((s) => s.logActivity);
+  const updateSpacedRepetition = useStore((s) => s.updateSpacedRepetition);
+  const incrementSmartRecoveryCount = useStore((s) => s.incrementSmartRecoveryCount);
   const adaptive = useAdaptiveStore();
 
   const session = useMemo(() => getRecoverySession(quizResults), [quizResults]);

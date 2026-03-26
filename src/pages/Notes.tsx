@@ -195,7 +195,8 @@ const toolbarHints: { icon: React.ElementType; label: string; syntax: string; in
 // ---------------------------------------------------------------------------
 export default function Notes() {
   usePageTitle("Notizen");
-  const { notes, setNote } = useStore();
+  const notes = useStore((s) => s.notes);
+  const setNote = useStore((s) => s.setNote);
   const [searchQuery, setSearchQuery] = useState("");
   const [editingId, setEditingId] = useState<string | null>(null);
   const [editContent, setEditContent] = useState("");

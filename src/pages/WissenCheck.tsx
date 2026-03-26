@@ -138,7 +138,10 @@ export default function WissenCheck() {
   usePageTitle("Wissen-Check");
   const { fach } = useParams<{ fach: string }>();
   const navigate = useNavigate();
-  const { saveQuizResult, logActivity, addXP, checkStreak } = useStore();
+  const saveQuizResult = useStore((s) => s.saveQuizResult);
+  const logActivity = useStore((s) => s.logActivity);
+  const addXP = useStore((s) => s.addXP);
+  const checkStreak = useStore((s) => s.checkStreak);
   const getMinutes = useSessionTimer();
 
   const config = fach ? subjectConfig[fach] : undefined;

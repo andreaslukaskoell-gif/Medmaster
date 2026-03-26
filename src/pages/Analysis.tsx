@@ -35,7 +35,7 @@ import { daysUntilMedAT } from "@/lib/utils";
 
 export default function Analysis() {
   const mounted = useIsMounted();
-  const { quizResults } = useStore();
+  const quizResults = useStore((s) => s.quizResults);
 
   const subjectData = useMemo(() => {
     const data: Record<string, { correct: number; total: number }> = {};

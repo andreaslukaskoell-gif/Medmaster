@@ -72,7 +72,9 @@ export default function Duel() {
   const [aiTutorQ, setAiTutorQ] = useState<{ question: Question; userAnswer: string } | null>(null);
   const timerRef = useRef<ReturnType<typeof setInterval>>(null);
   const savedResultRef = useRef(false);
-  const { addXP, checkStreak, saveQuizResult } = useStore();
+  const addXP = useStore((s) => s.addXP);
+  const checkStreak = useStore((s) => s.checkStreak);
+  const saveQuizResult = useStore((s) => s.saveQuizResult);
   const { recordAnswer, getWeakestTopics, getAdaptiveQuestions, getMedATReadiness } =
     useAdaptiveStore();
 

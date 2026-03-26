@@ -1131,6 +1131,8 @@ export function useStoreHydrated(): boolean {
   const [hydrated, setHydrated] = useState(_storeHydrated);
   useEffect(() => {
     if (_storeHydrated) {
+      // Already hydrated before mount — sync state once
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- one-time hydration sync, not a cascading render
       setHydrated(true);
       return;
     }

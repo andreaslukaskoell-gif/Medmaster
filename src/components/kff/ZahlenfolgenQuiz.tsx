@@ -73,18 +73,16 @@ export function ZahlenfolgenQuiz({
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [trainingLoading, setTrainingLoading] = useState(false);
   const [trainingError, setTrainingError] = useState<string | null>(null);
-  const {
-    addXP,
-    checkStreak,
-    saveQuizResult,
-    logActivity,
-    skillRating,
-    setSkillRating,
-    addKffTaskFailed,
-    markKffTaskCorrect,
-    getKffFailedIdsForDomain,
-    getKffSeenIdsForDomain,
-  } = useStore();
+  const addXP = useStore((s) => s.addXP);
+  const checkStreak = useStore((s) => s.checkStreak);
+  const saveQuizResult = useStore((s) => s.saveQuizResult);
+  const logActivity = useStore((s) => s.logActivity);
+  const skillRating = useStore((s) => s.skillRating);
+  const setSkillRating = useStore((s) => s.setSkillRating);
+  const addKffTaskFailed = useStore((s) => s.addKffTaskFailed);
+  const markKffTaskCorrect = useStore((s) => s.markKffTaskCorrect);
+  const getKffFailedIdsForDomain = useStore((s) => s.getKffFailedIdsForDomain);
+  const getKffSeenIdsForDomain = useStore((s) => s.getKffSeenIdsForDomain);
   const getMinutes = useSessionTimer();
 
   const safeQuestions = questions || [];

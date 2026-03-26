@@ -296,6 +296,7 @@ export function useProgressAnalytics(): ProgressAnalytics {
   const overallReadiness = useMemo(() => {
     const fn = useAdaptiveStore.getState().getMedATReadiness;
     return fn?.() ?? 0;
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- quizResults triggers recomputation
   }, [quizResults]);
 
   // ── Weak / Strong Topics ──────────────────────────────────
@@ -308,6 +309,7 @@ export function useProgressAnalytics(): ProgressAnalytics {
         successRate: t.rate,
       }));
     },
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- quizResults triggers recomputation
     [quizResults]
   );
 
@@ -320,6 +322,7 @@ export function useProgressAnalytics(): ProgressAnalytics {
         successRate: t.rate,
       }));
     },
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- quizResults triggers recomputation
     [quizResults]
   );
 

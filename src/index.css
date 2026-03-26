@@ -1428,3 +1428,202 @@ a:focus-visible,
   outline-offset: 1px;
   box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 15%, transparent);
 }
+
+/* ==========================================================================
+   MOBILE-MODE GLOBAL OVERRIDES
+   Applied when <html> has .mobile-mode (auto-detected or user-toggled).
+   Single-column, full-width, touch-friendly, premium mobile experience.
+   ========================================================================== */
+
+/* --- Prevent horizontal overflow globally --- */
+.mobile-mode {
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+.mobile-mode body {
+  overflow-x: hidden;
+}
+
+/* --- Layout: force full-width content --- */
+.mobile-mode .max-w-7xl,
+.mobile-mode .max-w-6xl,
+.mobile-mode .max-w-5xl,
+.mobile-mode .max-w-4xl,
+.mobile-mode .max-w-3xl,
+.mobile-mode .max-w-2xl {
+  max-width: 100% !important;
+}
+
+/* --- Grids: collapse to single column (except navigation & compact grids) --- */
+.mobile-mode .grid-cols-2:not([data-mobile-keep]),
+.mobile-mode .grid-cols-3:not([data-mobile-keep]),
+.mobile-mode .sm\:grid-cols-2,
+.mobile-mode .sm\:grid-cols-3,
+.mobile-mode .md\:grid-cols-2,
+.mobile-mode .md\:grid-cols-3,
+.mobile-mode .lg\:grid-cols-2,
+.mobile-mode .lg\:grid-cols-3 {
+  grid-template-columns: 1fr !important;
+}
+/* 4+ column grids → 2 columns (better than single for buttons/small items) */
+.mobile-mode .grid-cols-4:not([data-mobile-keep]),
+.mobile-mode .grid-cols-5:not([data-mobile-keep]) {
+  grid-template-columns: repeat(2, 1fr) !important;
+}
+/* 6+ column grids → 3 columns */
+.mobile-mode .grid-cols-6,
+.mobile-mode .grid-cols-7 {
+  grid-template-columns: repeat(3, 1fr) !important;
+}
+
+/* --- Typography: improved readability on small screens --- */
+.mobile-mode .text-4xl { font-size: 1.75rem !important; line-height: 2.25rem !important; }
+.mobile-mode .text-3xl { font-size: 1.5rem !important; line-height: 2rem !important; }
+.mobile-mode .text-2xl { font-size: 1.25rem !important; line-height: 1.75rem !important; }
+.mobile-mode .text-xl  { font-size: 1.125rem !important; line-height: 1.625rem !important; }
+.mobile-mode h1 { font-size: 1.375rem !important; line-height: 1.875rem !important; }
+
+/* --- Spacing: tighter padding for mobile --- */
+.mobile-mode .p-6 { padding: 1rem !important; }
+.mobile-mode .p-8 { padding: 1.25rem !important; }
+.mobile-mode .p-10 { padding: 1.5rem !important; }
+.mobile-mode .px-6 { padding-left: 0.75rem !important; padding-right: 0.75rem !important; }
+.mobile-mode .px-8 { padding-left: 1rem !important; padding-right: 1rem !important; }
+.mobile-mode .py-8 { padding-top: 1.25rem !important; padding-bottom: 1.25rem !important; }
+.mobile-mode .py-10 { padding-top: 1.5rem !important; padding-bottom: 1.5rem !important; }
+.mobile-mode .gap-6 { gap: 1rem !important; }
+.mobile-mode .gap-8 { gap: 1.25rem !important; }
+.mobile-mode .space-y-8 > * + * { margin-top: 1.25rem !important; }
+.mobile-mode .space-y-6 > * + * { margin-top: 1rem !important; }
+
+/* --- Cards: mobile-appropriate rounding & padding --- */
+.mobile-mode .card-glass {
+  padding: 1rem !important;
+}
+
+/* --- Buttons: touch-friendly minimum size (44px Apple guideline) --- */
+.mobile-mode button:not(.mobile-btn-compact),
+.mobile-mode [role="button"],
+.mobile-mode .btn-premium,
+.mobile-mode .btn-glass {
+  min-height: 44px;
+}
+
+/* --- Tables: horizontal scroll with touch momentum --- */
+.mobile-mode table {
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.mobile-mode pre,
+.mobile-mode code {
+  max-width: 100%;
+  overflow-x: auto;
+  word-break: break-word;
+}
+
+/* --- Images & SVGs: constrain to viewport --- */
+.mobile-mode img,
+.mobile-mode svg:not(.lucide):not(.recharts-surface) {
+  max-width: 100%;
+  height: auto;
+}
+
+/* --- Quiz options: larger touch targets --- */
+.mobile-mode [class*="quiz"] button,
+.mobile-mode [data-option] {
+  min-height: 48px;
+  padding: 0.75rem 1rem !important;
+}
+
+/* --- Hide desktop-only elements --- */
+.mobile-mode .hidden-mobile,
+.mobile-mode [data-desktop-only] {
+  display: none !important;
+}
+
+/* --- Bottom safe area for BottomTabBar --- */
+.mobile-mode main {
+  padding-bottom: max(6rem, calc(5rem + env(safe-area-inset-bottom))) !important;
+}
+
+/* --- Card content: tighter mobile padding --- */
+.mobile-mode [class*="CardContent"] {
+  padding: 1rem !important;
+}
+
+/* --- Breadcrumbs: horizontal scroll, compact --- */
+.mobile-mode nav[aria-label="Breadcrumb"] {
+  font-size: 0.75rem;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+}
+.mobile-mode nav[aria-label="Breadcrumb"]::-webkit-scrollbar {
+  display: none;
+}
+
+/* --- Floating elements: above BottomTabBar --- */
+.mobile-mode .fixed.bottom-4,
+.mobile-mode .fixed.bottom-6 {
+  bottom: 5rem !important;
+}
+
+/* --- Tab bars: scrollable on mobile --- */
+.mobile-mode [role="tablist"],
+.mobile-mode [class*="flex"][class*="gap-1"][class*="rounded-lg"][class*="p-1"] {
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  flex-wrap: nowrap !important;
+}
+.mobile-mode [role="tablist"]::-webkit-scrollbar {
+  display: none;
+}
+
+/* --- SectionTOC sidebar: hide on mobile (content flows directly) --- */
+.mobile-mode nav[aria-label="Inhaltsverzeichnis"] {
+  display: none !important;
+}
+
+/* --- Charts: constrain to viewport width --- */
+.mobile-mode .recharts-wrapper {
+  max-width: 100% !important;
+}
+
+/* --- Modals/Dialogs: full-width on mobile --- */
+.mobile-mode [role="dialog"],
+.mobile-mode [class*="DialogContent"] {
+  max-width: calc(100vw - 2rem) !important;
+  width: 100% !important;
+  margin: 1rem !important;
+}
+
+/* --- Progress bars: always visible --- */
+.mobile-mode [role="progressbar"] {
+  min-width: 0;
+  width: 100%;
+}
+
+/* --- Premium polish: subtle press feedback --- */
+.mobile-mode .card-glass:active {
+  transform: scale(0.98);
+  transition: transform 0.1s ease;
+}
+
+/* --- Recharts responsive containers: ensure they fit --- */
+.mobile-mode .recharts-responsive-container {
+  min-width: 0 !important;
+}
+
+/* --- Wide content containers: prevent overflow --- */
+.mobile-mode [class*="w-\\["] {
+  max-width: 100% !important;
+}
+
+/* --- Stat rows: keep inline for label+value pairs --- */
+.mobile-mode .flex.justify-between {
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  gap: 0.25rem !important;
+}

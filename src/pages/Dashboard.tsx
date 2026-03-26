@@ -148,7 +148,8 @@ export default function Dashboard() {
     } catch {
       return null;
     }
-    // goalAchievedByDate/activityLog read via getState() to avoid cascading re-renders
+    // quizResults triggers recomputation; actual data read via getState() to avoid cascading re-renders
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- quizResults is an intentional recompute trigger
   }, [lernplanConfig, weeksLeft, quizResults]);
   const concretePlan = useMemo(() => {
     if (!plan) return null;
@@ -162,7 +163,6 @@ export default function Dashboard() {
     } catch {
       return null;
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps -- getDueChapterIds is unstable; read from getState()
   }, [plan, lastViewedKapitelId, lastViewedUnterkapitelId]);
   const dailyGoalState = useMemo(
     () => {
@@ -191,7 +191,6 @@ export default function Dashboard() {
     if (!s.goalAchievedByDate?.[todayStr]) {
       s.setGoalAchievedToday(todayStr, true);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps -- read store via getState() to avoid cascading
   }, [goalComplete, todayStr]);
 
   const xp = profile.hasData ? profile.xp : Number.isFinite(storeXp) ? storeXp : 0;
@@ -209,7 +208,6 @@ export default function Dashboard() {
         unlock(fach);
       }
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps -- intentionally run only on mount
   }, []);
 
   const cardClass = "card-glass";

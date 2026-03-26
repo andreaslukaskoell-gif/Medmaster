@@ -147,7 +147,9 @@ function FlashcardStudy({
   const [flipped, setFlipped] = useState(false);
   const [results, setResults] = useState<Record<number, "again" | "hard" | "good" | "easy">>({});
   const [finished, setFinished] = useState(false);
-  const { addXP, checkStreak, updateSpacedRepetition } = useStore();
+  const addXP = useStore((s) => s.addXP);
+  const checkStreak = useStore((s) => s.checkStreak);
+  const updateSpacedRepetition = useStore((s) => s.updateSpacedRepetition);
 
   // Touch/swipe support
   const [touchStartX, setTouchStartX] = useState<number | null>(null);

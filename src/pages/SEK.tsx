@@ -64,7 +64,7 @@ export default function SEK() {
     | undefined;
 
   const [view, setView] = useState<SekView>("overview");
-  const { quizResults } = useStore();
+  const quizResults = useStore((s) => s.quizResults);
 
   const hasTasks =
     emotionenErkennenOffiziellAlle.length > 0 ||
@@ -277,7 +277,10 @@ function EmotionenErkennenQuiz({
   >({});
   // Track which questions have shown feedback in practice mode
   const [revealedQuestions, setRevealedQuestions] = useState<Set<string>>(new Set());
-  const { addXP, checkStreak, saveQuizResult, logActivity } = useStore();
+  const addXP = useStore((s) => s.addXP);
+  const checkStreak = useStore((s) => s.checkStreak);
+  const saveQuizResult = useStore((s) => s.saveQuizResult);
+  const logActivity = useStore((s) => s.logActivity);
   const getMinutes = useSessionTimer();
 
   const _toggleEmotion = (taskId: string, optionId: string) => {
@@ -637,7 +640,10 @@ function EmotionenRegulierenQuiz({
   );
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, OptionId>>({});
-  const { addXP, checkStreak, saveQuizResult, logActivity } = useStore();
+  const addXP = useStore((s) => s.addXP);
+  const checkStreak = useStore((s) => s.checkStreak);
+  const saveQuizResult = useStore((s) => s.saveQuizResult);
+  const logActivity = useStore((s) => s.logActivity);
   const getMinutes = useSessionTimer();
 
   const handleSubmit = () => {
@@ -926,7 +932,10 @@ function SozialesEntscheidenQuiz({
   const [index, setIndex] = useState(0);
   // rankings[taskId] = { statementIdx: rank (1-5) }
   const [rankings, setRankings] = useState<Record<string, Record<number, number>>>({});
-  const { addXP, checkStreak, saveQuizResult, logActivity } = useStore();
+  const addXP = useStore((s) => s.addXP);
+  const checkStreak = useStore((s) => s.checkStreak);
+  const saveQuizResult = useStore((s) => s.saveQuizResult);
+  const logActivity = useStore((s) => s.logActivity);
   const getMinutes = useSessionTimer();
 
   const setRank = (taskId: string, stmtIdx: number, rank: number) => {

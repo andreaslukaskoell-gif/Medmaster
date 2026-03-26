@@ -221,9 +221,7 @@ export default function BMSUnterkapitel({
   const bookmarks = useStore((s) => s.bookmarks) || { chapters: [] };
   const toggleBookmarkChapter = useStore((s) => s.toggleBookmarkChapter) || (() => {});
   const saveQuizResult = useStore((s) => s.saveQuizResult) ?? (() => {});
-  const quizResults = useStore((s) =>
-    (s.quizResults ?? []).filter((r) => r != null && typeof r === "object")
-  );
+  const quizResults = useStore((s) => s.quizResults) ?? [];
   const logActivity = useStore((s) => s.logActivity) ?? (() => {});
   const getMinutes = useSessionTimer();
 
