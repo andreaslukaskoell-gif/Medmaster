@@ -1442,6 +1442,7 @@ a:focus-visible,
 }
 .mobile-mode body {
   overflow-x: hidden;
+  font-size: 17px !important; /* Apple HIG: 17px body text for mobile readability */
 }
 
 /* --- Layout: force full-width content --- */
@@ -1691,6 +1692,18 @@ a:focus-visible,
 /* --- Mobile: pull-to-refresh feel for page tops --- */
 .mobile-mode main {
   overscroll-behavior-y: contain;
+}
+
+/* --- Mobile: quiz focus mode — hide main bottom tab bar during quiz --- */
+html.quiz-active.mobile-mode nav[aria-label="Hauptnavigation"] {
+  display: none !important;
+}
+
+/* --- Mobile: quiz option buttons — larger touch targets --- */
+.mobile-mode .space-y-2 > button[class*="rounded-xl"] {
+  min-height: 48px !important;
+  padding-top: 0.875rem !important;
+  padding-bottom: 0.875rem !important;
 }
 
 /* --- Mobile: improved spacing for page headers --- */

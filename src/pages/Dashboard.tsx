@@ -19,6 +19,7 @@ import {
   Copy,
   Puzzle,
   CalendarClock,
+  Zap,
 } from "lucide-react";
 import { CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -328,6 +329,25 @@ export default function Dashboard() {
 
         {/* ─── Weiterlernen card ─── */}
         <ContinueLearningCard completedChapters={completedChapters} />
+
+        {/* ─── Quick Quiz (mobile-prominent) ─── */}
+        {isMobile && (quizResults ?? []).length > 0 && (
+          <Link
+            to="/fragen-trainer"
+            className="block mb-4 card-glass p-4 group"
+          >
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-xl bg-[var(--accent)]/10 flex items-center justify-center shrink-0">
+                <Zap className="w-5 h-5 text-[var(--accent)]" />
+              </div>
+              <div className="flex-1 min-w-0">
+                <p className="text-sm font-semibold text-[var(--text-primary)]">Quick Quiz</p>
+                <p className="text-xs text-[var(--muted)]">10 Fragen · gemischte Fächer</p>
+              </div>
+              <ArrowRight className="w-4 h-4 text-[var(--muted)] group-hover:translate-x-0.5 transition-transform" />
+            </div>
+          </Link>
+        )}
 
         {/* ─── Fällige Wiederholungen ─── */}
         <DueReviewsCard userProgress={userProgress} />

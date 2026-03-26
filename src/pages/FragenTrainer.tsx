@@ -6,7 +6,7 @@
  *    oder Offizielle Simulation (z. B. Bio 40 Fragen in 30 Min)
  * 3. Quiz → Ergebnis mit richtig/falsch und Begründung
  */
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, useRef, useCallback } from "react";
 import {
   ArrowLeft,
   Trophy,
@@ -20,6 +20,8 @@ import {
   FlaskConical,
   Zap,
   Calculator,
+  ChevronLeft,
+  Grid3X3,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -49,6 +51,8 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { trackQuizComplete } from "@/lib/analytics";
 import { trackEvent } from "@/lib/analyticsTracker";
 import { useViewportMode } from "@/hooks/useViewportMode";
+import { useSwipe } from "@/hooks/useSwipe";
+import { hapticLight, hapticMedium, hapticSuccess, hapticError } from "@/lib/haptics";
 
 // ── Constants ─────────────────────────────────────────────────
 const STABLE_EMPTY_ARR: never[] = [];
@@ -414,6 +418,7 @@ function QuizScreen({
   onFinish: (a: SessionAnswers) => void;
   onBack: () => void;
 }) {
+  const { isMobile } = useViewportMode();
   const trainer = useFragenTrainer(
     [],
     userId,
@@ -433,18 +438,74 @@ function QuizScreen({
     sessionDone,
     revealed,
     chosenOption,
-    chooseOption,
+    chooseOption: rawChooseOption,
     typKPhase,
     typKDecisions,
     typKCombChosen,
-    judgeAussage,
+    judgeAussage: rawJudgeAussage,
     confirmTypKPhase1,
-    chooseTypKCombination,
+    chooseTypKCombination: rawChooseTypKCombination,
     answers,
     timeRemainingSeconds,
     timeLimitSeconds,
     goToQuestion,
   } = trainer;
+
+  // Wrap answer callbacks with haptic feedback
+  const chooseOption = useCallback((key: string) => {
+    hapticMedium();
+    rawChooseOption(key);
+  }, [rawChooseOption]);
+
+  const judgeAussage = useCallback((nr: number, correct: boolean) => {
+    hapticLight();
+    rawJudgeAussage(nr, correct);
+  }, [rawJudgeAussage]);
+
+  const chooseTypKCombination = useCallback((key: string) => {
+    hapticMedium();
+    rawChooseTypKCombination(key);
+  }, [rawChooseTypKCombination]);
+
+  // Mobile: question grid overlay
+  const [showGrid, setShowGrid] = useState(false);
+
+  // Mobile: swipe to navigate in review mode
+  const isReviewMode = idx < answers.length;
+  const handleSwipeLeft = useCallback(() => {
+    if (isReviewMode && idx < fragen.length - 1) {
+      hapticLight();
+      goToQuestion(idx + 1);
+    }
+  }, [isReviewMode, idx, fragen.length, goToQuestion]);
+
+  const handleSwipeRight = useCallback(() => {
+    if (isReviewMode && idx > 0) {
+      hapticLight();
+      goToQuestion(idx - 1);
+    }
+  }, [isReviewMode, idx, goToQuestion]);
+
+  const swipeHandlers = useSwipe(handleSwipeLeft, handleSwipeRight);
+
+  // Mobile: hide BottomTabBar during quiz
+  useEffect(() => {
+    if (isMobile) {
+      document.documentElement.classList.add("quiz-active");
+      return () => document.documentElement.classList.remove("quiz-active");
+    }
+  }, [isMobile]);
+
+  // Haptic feedback after answer reveal (correct/wrong)
+  const prevAnswerCount = useRef(0);
+  useEffect(() => {
+    if (answers.length > prevAnswerCount.current) {
+      const last = answers[answers.length - 1];
+      if (last?.correct) hapticSuccess();
+      else hapticError();
+    }
+    prevAnswerCount.current = answers.length;
+  }, [answers.length]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     if (sessionDone) {
@@ -551,7 +612,6 @@ function QuizScreen({
   if (!currentFrage) return null;
 
   const showTimer = timeLimitSeconds != null && timeRemainingSeconds != null;
-  const isReviewMode = idx < answers.length;
   const reviewAnswer = isReviewMode ? answers[idx] : null;
 
   const showAdaptiveHint = !adaptiveHintDismissed;
@@ -565,9 +625,12 @@ function QuizScreen({
   };
 
   return (
-    <div className="flex gap-4 max-w-5xl mx-auto">
+    <div
+      className={`flex gap-4 max-w-5xl mx-auto ${isMobile ? "pb-20" : ""}`}
+      {...(isMobile ? swipeHandlers : {})}
+    >
       <div className="flex-1 min-w-0 space-y-4">
-        {showAdaptiveHint && (
+        {showAdaptiveHint && !isMobile && (
           <div className="flex items-center justify-between gap-2 rounded-lg bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 px-3 py-2">
             <p className="text-xs text-blue-800 dark:text-blue-200">
               Schwierigkeit und Wiederholungen passen sich deinem Stand an.
@@ -583,7 +646,7 @@ function QuizScreen({
         )}
         <div className="flex items-center justify-between">
           <Button variant="ghost" size="sm" onClick={onBack}>
-            <ArrowLeft className="w-4 h-4 mr-1" /> Abbrechen
+            <ArrowLeft className="w-4 h-4 mr-1" /> {!isMobile && "Abbrechen"}
           </Button>
           <div className="flex items-center gap-3">
             {showTimer && (
@@ -601,9 +664,11 @@ function QuizScreen({
             <span className="text-sm text-muted-foreground font-medium">
               {idx + 1} / {fragen.length}
             </span>
-            <Badge variant="info" className="text-xs font-normal">
-              An dein Level angepasst
-            </Badge>
+            {!isMobile && (
+              <Badge variant="info" className="text-xs font-normal">
+                An dein Level angepasst
+              </Badge>
+            )}
           </div>
         </div>
 
@@ -700,7 +765,7 @@ function QuizScreen({
                         revealed={revealed}
                         onChoose={chooseOption}
                       />
-                      {!revealed && (
+                      {!isMobile && !revealed && (
                         <p className="text-xs text-muted-foreground mt-2">
                           Tipp: Tasten{" "}
                           <kbd className="px-1 rounded bg-[var(--surface)] font-mono">1</kbd>–
@@ -722,7 +787,7 @@ function QuizScreen({
                         onConfirmPhase1={confirmTypKPhase1}
                         onChooseCombination={chooseTypKCombination}
                       />
-                      {!revealed && typKPhase === 2 && (
+                      {!isMobile && !revealed && typKPhase === 2 && (
                         <p className="text-xs text-muted-foreground mt-2">
                           Tipp: Tasten{" "}
                           <kbd className="px-1 rounded bg-[var(--surface)] font-mono">1</kbd>–
@@ -739,33 +804,113 @@ function QuizScreen({
         )}
       </div>
 
-      {/* Rechte Seite: Fragen-Navigation */}
-      <div className="w-12 shrink-0 flex flex-col gap-1">
-        <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide sticky top-0 bg-[var(--background)]/95 py-1">
-          Nr.
-        </p>
-        <div className="flex flex-col gap-0.5 max-h-[60vh] overflow-y-auto">
-          {fragen.map((_, i) => {
-            const answered = i < answers.length;
-            const isCurrent = i === idx;
-            return (
-              <button
-                key={i}
-                type="button"
-                onClick={() => goToQuestion(i)}
-                className={`w-8 h-8 rounded-lg text-sm font-medium transition-colors shrink-0
-                  ${isCurrent ? "ring-2 ring-emerald-500 bg-emerald-100 dark:bg-emerald-900/40 text-emerald-800 dark:text-emerald-200" : ""}
-                  ${!isCurrent && answered ? "bg-[var(--surface)] text-muted-foreground hover:bg-[var(--surface)]/80" : ""}
-                  ${!isCurrent && !answered ? "bg-[var(--border)]/50 text-[var(--muted)] hover:bg-[var(--border)]" : ""}
-                `}
-                title={answered ? `Frage ${i + 1} (beantwortet)` : `Frage ${i + 1}`}
-              >
-                {i + 1}
-              </button>
-            );
-          })}
+      {/* Desktop: question number sidebar */}
+      {!isMobile && (
+        <div className="w-12 shrink-0 flex flex-col gap-1">
+          <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide sticky top-0 bg-[var(--background)]/95 py-1">
+            Nr.
+          </p>
+          <div className="flex flex-col gap-0.5 max-h-[60vh] overflow-y-auto">
+            {fragen.map((_, i) => {
+              const answered = i < answers.length;
+              const isCurrent = i === idx;
+              return (
+                <button
+                  key={i}
+                  type="button"
+                  onClick={() => goToQuestion(i)}
+                  className={`w-8 h-8 rounded-lg text-sm font-medium transition-colors shrink-0
+                    ${isCurrent ? "ring-2 ring-emerald-500 bg-emerald-100 dark:bg-emerald-900/40 text-emerald-800 dark:text-emerald-200" : ""}
+                    ${!isCurrent && answered ? "bg-[var(--surface)] text-muted-foreground hover:bg-[var(--surface)]/80" : ""}
+                    ${!isCurrent && !answered ? "bg-[var(--border)]/50 text-[var(--muted)] hover:bg-[var(--border)]" : ""}
+                  `}
+                  title={answered ? `Frage ${i + 1} (beantwortet)` : `Frage ${i + 1}`}
+                >
+                  {i + 1}
+                </button>
+              );
+            })}
+          </div>
         </div>
-      </div>
+      )}
+
+      {/* Mobile: bottom action bar */}
+      {isMobile && (
+        <>
+          <div className="fixed bottom-0 left-0 right-0 z-50 bg-[var(--card)]/95 backdrop-blur-xl border-t border-[var(--border)]/60 pb-[env(safe-area-inset-bottom)]">
+            <div className="flex items-center justify-between px-4 h-14">
+              <button
+                type="button"
+                onClick={() => { hapticLight(); goToQuestion(Math.max(0, idx - 1)); }}
+                disabled={idx <= 0}
+                className="flex items-center gap-1 text-sm font-medium text-[var(--accent)] disabled:opacity-30 disabled:text-[var(--muted)] min-h-[44px] px-2"
+              >
+                <ChevronLeft className="w-4 h-4" /> Zurück
+              </button>
+              <button
+                type="button"
+                onClick={() => setShowGrid(true)}
+                className="flex items-center gap-2 text-sm font-medium text-[var(--text-secondary)] min-h-[44px] px-3"
+              >
+                <Grid3X3 className="w-4 h-4" />
+                {idx + 1} / {fragen.length}
+              </button>
+              <button
+                type="button"
+                onClick={() => { hapticLight(); goToQuestion(Math.min(fragen.length - 1, idx + 1)); }}
+                disabled={idx >= fragen.length - 1}
+                className="flex items-center gap-1 text-sm font-medium text-[var(--accent)] disabled:opacity-30 disabled:text-[var(--muted)] min-h-[44px] px-2"
+              >
+                Weiter <ChevronRight className="w-4 h-4" />
+              </button>
+            </div>
+          </div>
+
+          {/* Mobile: question grid overlay */}
+          {showGrid && (
+            <div
+              className="fixed inset-0 z-[60] bg-black/50 backdrop-blur-sm flex items-end"
+              onClick={() => setShowGrid(false)}
+            >
+              <div
+                className="w-full bg-[var(--card)] rounded-t-2xl p-4 pb-[calc(1rem+env(safe-area-inset-bottom))] max-h-[60vh] overflow-y-auto"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <div className="flex items-center justify-between mb-3">
+                  <p className="text-sm font-semibold text-[var(--text-primary)]">Fragen-Übersicht</p>
+                  <button
+                    type="button"
+                    onClick={() => setShowGrid(false)}
+                    className="text-xs text-[var(--muted)] px-2 py-1"
+                  >
+                    Schließen
+                  </button>
+                </div>
+                <div className="grid grid-cols-6 gap-2">
+                  {fragen.map((_, i) => {
+                    const answered = i < answers.length;
+                    const isCurrent = i === idx;
+                    return (
+                      <button
+                        key={i}
+                        type="button"
+                        onClick={() => { hapticLight(); goToQuestion(i); setShowGrid(false); }}
+                        className={`w-full aspect-square rounded-lg text-sm font-medium transition-colors
+                          ${isCurrent ? "ring-2 ring-emerald-500 bg-emerald-100 dark:bg-emerald-900/40 text-emerald-800 dark:text-emerald-200" : ""}
+                          ${!isCurrent && answered ? "bg-[var(--surface)] text-muted-foreground" : ""}
+                          ${!isCurrent && !answered ? "bg-[var(--border)]/50 text-[var(--muted)]" : ""}
+                        `}
+                      >
+                        {i + 1}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          )}
+        </>
+      )}
     </div>
   );
 }

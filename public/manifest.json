@@ -1,14 +1,49 @@
 {
-  "name": "MedMaster",
+  "id": "at.medmaster.app",
+  "name": "MedMaster – MedAT Vorbereitung",
   "short_name": "MedMaster",
   "description": "MedAT 2026 Vorbereitung — 4.300+ Übungsfragen, KFF, TV und SEK.",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#fafaf8",
   "theme_color": "#2d3a8c",
   "orientation": "any",
+  "categories": ["education", "medical"],
+  "lang": "de-AT",
+  "dir": "ltr",
   "icons": [
     { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
     { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ],
+  "shortcuts": [
+    {
+      "name": "BMS Fragen trainieren",
+      "short_name": "Fragen",
+      "url": "/fragen-trainer",
+      "icon": "/icon-192.png",
+      "description": "BMS-Fragen üben"
+    },
+    {
+      "name": "KFF Übungen",
+      "short_name": "KFF",
+      "url": "/kff",
+      "icon": "/icon-192.png",
+      "description": "Kognitive Fähigkeiten trainieren"
+    },
+    {
+      "name": "Textverständnis",
+      "short_name": "TV",
+      "url": "/tv",
+      "icon": "/icon-192.png",
+      "description": "Textverständnis üben"
+    },
+    {
+      "name": "Fortschritt",
+      "short_name": "Fortschritt",
+      "url": "/fortschritt",
+      "icon": "/icon-192.png",
+      "description": "Deinen Lernfortschritt ansehen"
+    }
   ]
 }
