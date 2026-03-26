@@ -73,12 +73,14 @@ export async function pullFromSupabase(userId: string): Promise<void> {
       if (p.onboarding_completed) patch.onboardingCompleted = true;
     }
 
-    // --- Quiz Results: Union by ID ---
+    // --- Quiz Results: Union by ID (only update if changed) ---
     if (quizRes.data && quizRes.data.length > 0) {
       const validResults = (state.quizResults ?? []).filter((r) => r != null && !!r.id);
       const byId = new Map(validResults.map((r) => [r.id, r]));
+      let changed = false;
       for (const row of quizRes.data) {
         if (!byId.has(row.id)) {
+          changed = true;
           byId.set(row.id, {
             id: row.id,
             type: row.type || "bms",
@@ -91,7 +93,10 @@ export async function pullFromSupabase(userId: string): Promise<void> {
           } as QuizResult);
         }
       }
-      patch.quizResults = Array.from(byId.values()).filter((r) => r != null && !!r.id);
+      // Only update quizResults if new results were actually added
+      if (changed) {
+        patch.quizResults = Array.from(byId.values()).filter((r) => r != null && !!r.id);
+      }
     }
 
     // --- Spaced Repetition: späteres lastAnswered gewinnt ---

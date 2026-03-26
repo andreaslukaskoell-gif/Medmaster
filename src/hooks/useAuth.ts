@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { supabase } from "@/lib/supabase";
 import { startAutoSync, stopAutoSync, pushStatsToSupabase } from "@/lib/syncService";
 import { startMainSync, stopMainSync } from "@/lib/sync";
@@ -300,7 +300,10 @@ export function useAuth() {
   const isAuthenticated = !!user;
   const isPremium = tier === "premium";
 
-  return {
+  // Memoize return object to prevent new reference on every render.
+  // Functions are intentionally excluded — they read latest state via closure
+  // and are only called from event handlers, not during render.
+  return useMemo(() => ({
     user,
     profile,
     session,
@@ -316,5 +319,6 @@ export function useAuth() {
     signOut,
     deleteAccount,
     resetPassword,
-  };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }), [user, profile, session, loading, isAuthenticated, tier, isPremium]);
 }

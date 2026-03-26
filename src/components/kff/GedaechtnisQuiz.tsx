@@ -229,10 +229,15 @@ export function GedaechtnisLearn({ onStart, onBack }: { onStart: () => void; onB
   const [started, setStarted] = useState(false);
   const passes = _gmSession.passes;
   useEffect(() => {
-    if (!started || secondsLeft <= 0) return;
-    const t = setInterval(() => setSecondsLeft((s) => s - 1), 1000);
+    if (!started) return;
+    const t = setInterval(() => {
+      setSecondsLeft((s) => {
+        if (s <= 1) { clearInterval(t); return 0; }
+        return s - 1;
+      });
+    }, 1000);
     return () => clearInterval(t);
-  }, [started, secondsLeft]);
+  }, [started]);
 
   const startTimer = () => setStarted(true);
   const m = Math.floor(secondsLeft / 60);
@@ -313,6 +318,11 @@ export function GedaechtnisInterferenz({
 
   const task = tasks[taskIndex];
 
+  // When all tasks are done, trigger onComplete via effect (not during render)
+  useEffect(() => {
+    if (started && !task) onComplete();
+  }, [started, task, onComplete]);
+
   if (!started) {
     return (
       <div className="max-w-2xl mx-auto space-y-6 mt-8">
@@ -341,7 +351,6 @@ export function GedaechtnisInterferenz({
   }
 
   if (!task) {
-    onComplete();
     return null;
   }
 
