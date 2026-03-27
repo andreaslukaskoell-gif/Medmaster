@@ -18,7 +18,10 @@ import { mathematikPool12 } from "./mathematikPool12";
 import { mathematikPool13 } from "./mathematikPool13";
 import { mathematikPool14 } from "./mathematikPool14";
 import { mathematikPool15 } from "./mathematikPool15";
+import { mathematikPool16 } from "./mathematikPool16";
+import { mathematikPool17 } from "./mathematikPool17";
 import { mathematikPool18 } from "./mathematikPool18";
+import { mathematikPool19 } from "./mathematikPool19";
 import { mathematikPoolOffiziellStyle } from "./mathematikPoolOffiziellStyle";
 import { mathematikWasIstFalsch } from "./mathematikWasIstFalsch";
 
@@ -38,7 +41,10 @@ export const mathematikPoolQuestions: Question[] = [
   ...mathematikPool13,
   ...mathematikPool14,
   ...mathematikPool15,
+  ...mathematikPool16,
+  ...mathematikPool17,
   ...mathematikPool18,
+  ...mathematikPool19,
   ...mathematikPoolOffiziellStyle,
   ...mathematikWasIstFalsch,
 ];
