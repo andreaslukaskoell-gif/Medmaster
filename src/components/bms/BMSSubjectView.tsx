@@ -1,8 +1,10 @@
-import { Play, CheckCircle2, ChevronRight, ChevronLeft, Clock } from "lucide-react";
+import { Play, CheckCircle2, ChevronRight, ChevronLeft, Clock, Lock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import type { Kapitel } from "@/data/bmsKapitel/types";
 import { countUK } from "@/lib/mergeChapters";
 import type { SubjectData } from "@/data/bmsSubjects";
+import { useUsageLimits } from "@/hooks/useUsageLimits";
+import { UpgradePrompt } from "@/components/paywall/UpgradePrompt";
 
 const subjectAccentVars: Record<string, string> = {
   biologie: "var(--accent-bio)",
@@ -31,6 +33,9 @@ export function BMSSubjectView({
 }: BMSSubjectViewProps) {
   const kapitel = Array.isArray(roadmapChapters) ? roadmapChapters : [];
   const accentColor = subjectAccentVars[subjectData.id] ?? "var(--accent)";
+  const limits = useUsageLimits();
+  // Free users: first 2 chapters per subject are free, rest locked
+  const FREE_CHAPTERS_PER_SUBJECT = 2;
 
   if (kapitel.length === 0) {
     return (
@@ -152,13 +157,17 @@ export function BMSSubjectView({
               completedChapters.includes(kap.id) || (ukTotal > 0 && ukDone === ukTotal);
             const progressPct = ukTotal > 0 ? (ukDone / ukTotal) * 100 : 0;
             const isCurrent = kap.id === firstIncompleteChapter?.id;
+            const isLocked = limits.isFree && index >= FREE_CHAPTERS_PER_SUBJECT;
 
             return (
               <button
                 key={kap.id}
-                onClick={() => onSelectChapter(kap)}
-                className={`w-full text-left py-4 px-5 hover:bg-[var(--surface)] transition-colors cursor-pointer flex items-center gap-4 ${
-                  isCurrent ? "bg-[var(--surface)]" : ""
+                disabled={isLocked}
+                onClick={() => !isLocked && onSelectChapter(kap)}
+                className={`w-full text-left py-4 px-5 transition-colors flex items-center gap-4 ${
+                  isLocked
+                    ? "opacity-50 cursor-not-allowed"
+                    : `hover:bg-[var(--surface)] cursor-pointer ${isCurrent ? "bg-[var(--surface)]" : ""}`
                 }`}
               >
                 {/* Chapter number */}
@@ -210,8 +219,10 @@ export function BMSSubjectView({
                   )}
                 </div>
 
-                {/* Current badge or chevron */}
-                {isCurrent && !isCompleted ? (
+                {/* Current badge, lock, or chevron */}
+                {isLocked ? (
+                  <Lock className="w-4 h-4 text-amber-500 shrink-0" />
+                ) : isCurrent && !isCompleted ? (
                   <ChevronRight className="w-5 h-5 shrink-0" style={{ color: accentColor }} />
                 ) : (
                   <ChevronRight className="w-4 h-4 text-[var(--muted)]/50 shrink-0" />
@@ -220,6 +231,17 @@ export function BMSSubjectView({
             );
           })}
         </div>
+
+        {/* Upgrade prompt below locked chapters */}
+        {limits.isFree && kapitel.length > FREE_CHAPTERS_PER_SUBJECT && (
+          <div className="mt-4">
+            <UpgradePrompt
+              feature="Alle Kapitel freischalten"
+              limitInfo={`${FREE_CHAPTERS_PER_SUBJECT} von ${kapitel.length} Kapiteln in ${subjectData.label} verfügbar`}
+              variant="banner"
+            />
+          </div>
+        )}
       </div>
     </div>
   );

@@ -587,9 +587,9 @@ export function SubchapterContent({
 
   return (
     <div className="content-section">
-      <div className="grid grid-cols-[220px_1fr] gap-12">
-        {/* Sticky left TOC */}
-        <aside className="min-w-0">
+      <div className="grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-6 lg:gap-12">
+        {/* Sticky left TOC — hidden on mobile */}
+        <aside className="hidden lg:block min-w-0">
           <SectionTOC
             sections={tocSections}
             currentSectionId={currentSectionId}
@@ -599,7 +599,7 @@ export function SubchapterContent({
         </aside>
 
         {/* Main content — flowing sections, no accordions */}
-        <div className="min-w-0 max-w-[720px]">
+        <div className="min-w-0 max-w-full lg:max-w-[720px]">
           {unifiedSections.map((section, index) => (
             <div
               key={section.id}

@@ -94,7 +94,7 @@ export default function Statistics() {
 
   const barData = Object.entries(byType).map(([name, d]) => ({
     name,
-    Prozent: Math.round((d.correct / d.total) * 100),
+    Prozent: d.total > 0 ? Math.round((d.correct / d.total) * 100) : 0,
     Quizze: d.count,
   }));
 
@@ -120,7 +120,7 @@ export default function Statistics() {
 
     let entries = Object.entries(byWeek).map(([week, d]) => ({
       week,
-      Prozent: Math.round((d.correct / d.total) * 100),
+      Prozent: d.total > 0 ? Math.round((d.correct / d.total) * 100) : 0,
       Fragen: d.total,
     }));
 
@@ -428,7 +428,7 @@ export default function Statistics() {
                             {r.score}/{r.total}
                           </td>
                           <td className="py-2 px-3 text-right font-bold text-[var(--accent)]">
-                            {Math.round((r.score / r.total) * 100)}%
+                            {r.total > 0 ? Math.round((r.score / r.total) * 100) : 0}%
                           </td>
                         </tr>
                       ))}
@@ -475,7 +475,7 @@ export default function Statistics() {
               <div className="space-y-4">
                 {entries.map(([subj, data]) => {
                   const meta = subjectMeta[subj];
-                  const pct = Math.round((data.correct / data.total) * 100);
+                  const pct = data.total > 0 ? Math.round((data.correct / data.total) * 100) : 0;
                   return (
                     <div key={subj}>
                       <div className="flex items-center justify-between mb-1">

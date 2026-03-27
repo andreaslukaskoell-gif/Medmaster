@@ -28,11 +28,14 @@ import { useBMSChapters } from "@/hooks/useBMSChapters";
 
 import { useStore } from "@/store/useStore";
 import { useAdaptiveStore } from "@/store/adaptiveLearning";
+import { useUsageLimits } from "@/hooks/useUsageLimits";
+import { UpgradePrompt } from "@/components/paywall/UpgradePrompt";
 
 const STABLE_EMPTY_CHAPTERS: string[] = [];
 
 export default function BMS() {
   usePageTitle("BMS – Biomedizinische Grundlagen");
+  const bmsLimits = useUsageLimits();
   const navigate = useNavigate();
   const { fach: fachParam, kapitel: kapitelParam } = useParams<{
     fach?: string;
@@ -185,6 +188,28 @@ export default function BMS() {
         </div>
       );
     }
+    // Gate: free users can only access first 2 chapters per subject
+    if (bmsLimits.isFree) {
+      const chapterIndex = chaptersForSelectedSubject.findIndex((c) => c?.id === activeKapitel.id);
+      if (chapterIndex >= 2) {
+        return (
+          <div className="max-w-2xl mx-auto p-6 space-y-4">
+            <Button variant="ghost" size="sm" onClick={() => {
+              setActiveKapitel(null);
+              navigate(selectedSubject ? pathForSubject(selectedSubject) : "/bms");
+            }} className="text-[var(--muted)]">
+              ← Zurück
+            </Button>
+            <UpgradePrompt
+              feature={`Kapitel: ${activeKapitel.title}`}
+              limitInfo="Die ersten 2 Kapitel pro Fach sind gratis — schalte alle Kapitel frei mit Premium."
+              variant="card"
+            />
+          </div>
+        );
+      }
+    }
+
     const ukParam = searchParams.get("uk");
     const initialUkIndex = ukParam !== null ? parseInt(ukParam, 10) : undefined;
     const validUkIndex =
