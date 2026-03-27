@@ -23,6 +23,8 @@ import { getQuestionSubject } from "@/lib/bmsLookup";
 import { Progress } from "@/components/ui/progress";
 import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { usePageTitle } from "@/hooks/usePageTitle";
+import { useUsageLimits } from "@/hooks/useUsageLimits";
+import { UpgradePrompt } from "@/components/paywall/UpgradePrompt";
 
 const COLORS = ["#0f766e", "#14b8a6", "#2dd4bf", "#5eead4", "#99f6e4"];
 
@@ -71,6 +73,7 @@ export default function Statistics() {
   const { profile } = adaptive;
   const [stichwortFach, setStichwortFach] = useState<string>("biologie");
   const [trendRange, setTrendRange] = useState<"all" | "4w" | "12w">("12w");
+  const statsLimits = useUsageLimits();
 
   const totalQuizzes = quizResults.length;
   const totalCorrect = quizResults.reduce((sum, r) => sum + r.score, 0);
@@ -157,6 +160,18 @@ export default function Statistics() {
         return row;
       });
   }, [quizResults]);
+
+  if (statsLimits.analyticsLocked) {
+    return (
+      <div className="max-w-3xl mx-auto py-12">
+        <UpgradePrompt
+          feature="Detaillierte Statistik"
+          limitInfo="Verfolge deinen Lernfortschritt mit Trends, Diagrammen und Fach-Analysen — nur mit Premium."
+          variant="card"
+        />
+      </div>
+    );
+  }
 
   return (
     <div className="max-w-7xl mx-auto space-y-6">

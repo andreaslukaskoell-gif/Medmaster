@@ -22,6 +22,8 @@ import { useStore } from "@/store/useStore";
 import { useAdaptiveStore } from "@/store/adaptiveLearning";
 import { usePageTitle } from "@/hooks/usePageTitle";
 import { useDailyPlan, type PlanTier } from "@/hooks/useDailyPlan";
+import { useUsageLimits } from "@/hooks/useUsageLimits";
+import { UpgradePrompt } from "@/components/paywall/UpgradePrompt";
 
 // ============================================================
 // Tier card config
@@ -81,6 +83,8 @@ export default function Lernplan() {
     });
   };
 
+  const limits = useUsageLimits();
+
   // Count total plan items for empty state check
   const hasPlanItems =
     plan.bmsRead.length > 0 ||
@@ -89,6 +93,18 @@ export default function Lernplan() {
     plan.kffTasks.length > 0 ||
     plan.tvTexts > 0 ||
     plan.sekTasks.length > 0;
+
+  if (limits.lernplanLocked) {
+    return (
+      <div className="max-w-3xl mx-auto py-12">
+        <UpgradePrompt
+          feature="Personalisierter Lernplan"
+          limitInfo="Erstelle deinen individuellen Lernplan für den MedAT — nur mit Premium."
+          variant="card"
+        />
+      </div>
+    );
+  }
 
   return (
     <div className="max-w-5xl mx-auto space-y-8">

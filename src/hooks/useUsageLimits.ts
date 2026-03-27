@@ -20,7 +20,7 @@ export function useUsageLimits() {
         tv: { used: 0, limit: null, exhausted: false },
         sek: { used: 0, limit: null, exhausted: false },
         simulations: { used: 0, limit: null, exhausted: false },
-        aiTutorLocked: false,
+
         schwachstellenLocked: false,
         srsLocked: false,
         lernplanLocked: false,
@@ -83,7 +83,7 @@ export function useUsageLimits() {
         limit: simLimit,
         exhausted: simLimit !== null && simUsed >= simLimit,
       },
-      aiTutorLocked: permissions.ai_tutor === false,
+
       schwachstellenLocked: permissions.weakness_analysis === false,
       srsLocked: permissions.spaced_repetition === false,
       lernplanLocked: permissions.lernplan === false,

@@ -62,6 +62,8 @@ import { DailyPlanWidget } from "@/components/dashboard/DailyPlanWidget";
 import { WeaknessWidget } from "@/components/dashboard/WeaknessWidget";
 import { RecentActivityWidget } from "@/components/dashboard/RecentActivityWidget";
 import { SpacedRepetitionWidget } from "@/components/dashboard/SpacedRepetitionWidget";
+import { useUsageLimits } from "@/hooks/useUsageLimits";
+import { FeatureGate } from "@/components/paywall/UpgradePrompt";
 
 // Stable defaults — prevent infinite re-render loops in Zustand selectors.
 // `?? []` inside a selector creates a NEW reference every render if the value is nullish,
@@ -104,6 +106,7 @@ export default function Dashboard() {
   useTodayEngine();
   const hasActivityToday = lastActiveDate === todayStr;
   const [searchParams] = useSearchParams();
+  const dashLimits = useUsageLimits();
   const streakPreview = searchParams.get("streakPreview");
   const flameStreak =
     streakPreview != null ? Math.max(0, parseInt(streakPreview, 10) || 0) : streak;
@@ -593,7 +596,9 @@ export default function Dashboard() {
           </ScrollReveal>
 
           {/* Spaced Repetition Widget */}
-          <SpacedRepetitionWidget />
+          <FeatureGate locked={dashLimits.srsLocked} feature="Spaced Repetition" limitInfo="Intelligente Wiederholungen — nur mit Premium.">
+            <SpacedRepetitionWidget />
+          </FeatureGate>
 
           {/* Wochen-Aktivität + Freunde einladen — side by side on desktop */}
           <ScrollReveal delay={120}>

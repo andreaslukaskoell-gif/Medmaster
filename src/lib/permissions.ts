@@ -10,7 +10,6 @@ export type FeatureLimits = {
   tv_texts: number | "unlimited";
   sek_situations: number | "unlimited";
   simulations: number | "unlimited";
-  ai_tutor: boolean;
   weakness_analysis: boolean;
   spaced_repetition: boolean;
   advanced_analytics: boolean;
@@ -25,7 +24,6 @@ const LIMITS: Record<Tier, FeatureLimits> = {
     tv_texts: 2,
     sek_situations: 5,
     simulations: 1,
-    ai_tutor: false,
     weakness_analysis: false,
     spaced_repetition: false,
     advanced_analytics: false,
@@ -38,7 +36,6 @@ const LIMITS: Record<Tier, FeatureLimits> = {
     tv_texts: "unlimited",
     sek_situations: "unlimited",
     simulations: "unlimited",
-    ai_tutor: true,
     weakness_analysis: true,
     spaced_repetition: true,
     advanced_analytics: true,
