@@ -28,6 +28,7 @@ import {
 import { ExitIntentCapture } from "@/components/growth/ExitIntentCapture";
 import { ReturningVisitorBanner } from "@/components/growth/ReturningVisitorBanner";
 import { Logo } from "@/components/brand/Logo";
+import { useCookieConsent } from "@/hooks/useCookieConsent";
 import { supabase } from "@/lib/supabase";
 
 const NAVY = "#1b3ea7";
@@ -229,6 +230,8 @@ export default function LandingPage() {
   const [googleError, setGoogleError] = useState("");
   const [userCount, setUserCount] = useState<number | null>(null);
   const showStickyCTA = useShowStickyCTA();
+  const { hasConsented } = useCookieConsent();
+  const cookieBannerVisible = !hasConsented;
 
   const deadline = useMemo(() => new Date("2026-03-31T23:59:59+02:00"), []);
   const countdown = useCountdown(deadline);
@@ -931,7 +934,7 @@ export default function LandingPage() {
       </footer>
 
       {/* ─── Sticky mobile CTA ─── */}
-      {showStickyCTA && (
+      {showStickyCTA && !cookieBannerVisible && (
         <div className="fixed bottom-0 left-0 right-0 z-50 sm:hidden bg-[var(--surface)] border-t border-[var(--border)] px-4 py-3 safe-area-bottom">
           <button
             onClick={handleGoogle}
@@ -961,7 +964,7 @@ export default function LandingPage() {
       )}
 
       {/* Add bottom padding when sticky CTA is visible on mobile */}
-      {showStickyCTA && <div className="h-16 sm:hidden" />}
+      {showStickyCTA && !cookieBannerVisible && <div className="h-20 sm:hidden" />}
 
       <ExitIntentCapture />
     </div>
