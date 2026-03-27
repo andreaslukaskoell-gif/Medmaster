@@ -20,6 +20,8 @@ import { ImplikationenQuiz } from "@/components/kff/ImplikationenQuiz";
 import { WortflüssigkeitQuiz } from "@/components/kff/WortfluessigkeitQuiz";
 import { FigurenQuiz } from "@/components/kff/FigurenQuiz";
 import { KFFStatsSection } from "@/components/kff/KFFStatsSection";
+import { useUsageLimits } from "@/hooks/useUsageLimits";
+import { UpgradePrompt } from "@/components/paywall/UpgradePrompt";
 
 /** Stable reference for empty quizResults to prevent unnecessary re-renders. */
 const STABLE_EMPTY_RESULTS: never[] = [];
@@ -47,6 +49,7 @@ const QUICK_START_VIEWS: Record<string, KffView> = {
 
 export default function KFF() {
   usePageTitle("KFF – Kognitive Fähigkeiten");
+  const kffLimits = useUsageLimits();
   const { isMobile } = useViewportMode();
   const [searchParams] = useSearchParams();
 
@@ -302,6 +305,15 @@ export default function KFF() {
           </p>
         )}
       </div>
+
+      {/* Upgrade prompt for free tier */}
+      {kffLimits.kff.exhausted && (
+        <UpgradePrompt
+          feature="KFF-Übungen"
+          limitInfo={`${kffLimits.kff.used} von ${kffLimits.kff.limit} Gratis-Aufgaben absolviert`}
+          variant="banner"
+        />
+      )}
 
       {/* Module cards */}
       <div className={isMobile ? "space-y-3" : "space-y-4"}>

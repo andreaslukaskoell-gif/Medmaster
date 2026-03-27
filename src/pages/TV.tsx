@@ -35,6 +35,8 @@ import { OfficialInstructionCard } from "@/components/shared/OfficialInstruction
 import { useStore } from "@/store/useStore";
 import { useSessionTimer } from "@/hooks/useSessionTimer";
 import type { TVTextSet } from "@/data/tvTextsExpanded";
+import { useUsageLimits } from "@/hooks/useUsageLimits";
+import { UpgradePrompt } from "@/components/paywall/UpgradePrompt";
 
 const allTextSets: TVTextSet[] = [...tvTextSets, ...tvTextSets2];
 
@@ -52,6 +54,7 @@ const LABELS = ["A", "B", "C", "D", "E"];
 
 export default function TV() {
   usePageTitle("TV – Textverständnis");
+  const tvLimits = useUsageLimits();
   const { isMobile } = useViewportMode();
   const location = useLocation();
   const dailyPlanTvTexts = location.state?.dailyPlanTvTexts as number | undefined;
@@ -746,6 +749,15 @@ export default function TV() {
           </div>
         )}
       </div>
+
+      {/* Upgrade prompt for free tier */}
+      {tvLimits.tv.exhausted && (
+        <UpgradePrompt
+          feature="Textverständnis"
+          limitInfo={`${tvLimits.tv.used} von ${tvLimits.tv.limit} Gratis-Texten absolviert`}
+          variant="banner"
+        />
+      )}
 
       {/* MC Text Sets — primary section */}
       {allTextSets.length > 0 && (

@@ -37,6 +37,8 @@ import type { SozialesEntscheidenTask } from "@/data/sekDataNew";
 import { useStore } from "@/store/useStore";
 import { useSessionTimer } from "@/hooks/useSessionTimer";
 import { useViewportMode } from "@/hooks/useViewportMode";
+import { useUsageLimits } from "@/hooks/useUsageLimits";
+import { UpgradePrompt } from "@/components/paywall/UpgradePrompt";
 
 type SekView =
   | "overview"
@@ -59,6 +61,7 @@ function shuffle<T>(arr: T[]): T[] {
 
 export default function SEK() {
   usePageTitle("SEK – Sozial-emotionale Kompetenzen");
+  const sekLimits = useUsageLimits();
   const { isMobile } = useViewportMode();
   const location = useLocation();
   const dailyPlanSek = location.state?.dailyPlanSek as
@@ -204,6 +207,15 @@ export default function SEK() {
           </div>
         )}
       </div>
+
+      {/* Upgrade prompt for free tier */}
+      {sekLimits.sek.exhausted && (
+        <UpgradePrompt
+          feature="SEK-Übungen"
+          limitInfo={`${sekLimits.sek.used} von ${sekLimits.sek.limit} Gratis-Situationen absolviert`}
+          variant="banner"
+        />
+      )}
 
       {/* Subtest Cards */}
       <div className="rounded-xl border border-[var(--border)] divide-y divide-[var(--border)] overflow-hidden">

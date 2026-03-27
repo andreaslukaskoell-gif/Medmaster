@@ -229,7 +229,7 @@ export default function PaidLanding() {
           name: "Kann ich jederzeit kündigen?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Ja. Kein Abo, keine automatische Verlängerung. Einmalig \u20ac29,90 nach dem 30. Juni.",
+            text: "Ja. Kein Abo, keine automatische Verlängerung. Einmalig \u20ac29,90 nach dem 31. März.",
           },
         },
         {
@@ -242,10 +242,10 @@ export default function PaidLanding() {
         },
         {
           "@type": "Question",
-          name: "Was passiert nach dem 30. Juni?",
+          name: "Was passiert nach dem 31. März?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Ab 1. Juli kostet MedMaster einmalig \u20ac29,90. Kein Abo.",
+            text: "Ab 1. April kostet MedMaster einmalig \u20ac29,90. Kein Abo.",
           },
         },
       ],
@@ -648,15 +648,15 @@ export default function PaidLanding() {
               },
               {
                 q: "Kann ich jederzeit kündigen?",
-                a: "Ja, ohne Wenn und Aber. Es gibt kein Abo, keine automatische Verlängerung und keine Kündigungsfrist. Bis 30. Juni ist der volle Zugang komplett gratis, danach fällt eine einmalige Zahlung von \u20ac29,90 an. Keine versteckten Kosten.",
+                a: "Ja, ohne Wenn und Aber. Es gibt kein Abo, keine automatische Verlängerung und keine Kündigungsfrist. Bis 31. März ist der volle Zugang komplett gratis, danach fällt eine einmalige Zahlung von \u20ac29,90 an. Keine versteckten Kosten.",
               },
               {
                 q: "Reicht MedMaster als Vorbereitung?",
                 a: "MedMaster deckt alle 4 MedAT-Bereiche vollständig ab: BMS, KFF, Textverständnis und SEK. Für den BMS-Teil empfehlen viele Kandidierende ergänzend ein Biologie-Lehrbuch. Die gesamte Übungs- und Simulationskomponente ist komplett abgedeckt \u2014 inklusive adaptivem Lernplan.",
               },
               {
-                q: "Was passiert nach dem 30. Juni?",
-                a: "Ab 1. Juli kostet MedMaster einmalig \u20ac29,90. Kein monatliches Abo, keine wiederkehrenden Kosten. Du behältst vollen Zugang bis zum MedAT 2026. Wer sich jetzt registriert, lernt bis dahin komplett gratis.",
+                q: "Was passiert nach dem 31. März?",
+                a: "Ab 1. April kostet MedMaster einmalig \u20ac29,90. Kein monatliches Abo, keine wiederkehrenden Kosten. Du behältst vollen Zugang bis zum MedAT 2026. Wer sich jetzt registriert, lernt bis dahin komplett gratis.",
               },
             ].map((faq) => (
               <FAQItem key={faq.q} q={faq.q} a={faq.a} isMobile={isMobile} />

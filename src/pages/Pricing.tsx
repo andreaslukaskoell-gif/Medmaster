@@ -75,7 +75,7 @@ export default function Pricing() {
                     </span>
                   </div>
                   <p className="text-sm text-emerald-600 dark:text-emerald-400 font-medium">
-                    Bis 30. Juni 2026
+                    Bis 31. März 2026
                   </p>
                 </>
               ) : hasDiscount ? (
@@ -135,7 +135,7 @@ export default function Pricing() {
 
           <div className="mt-4 text-center space-y-1">
             <p className="text-xs text-[var(--muted)]">
-              Keine Kreditkarte nötig{isFreePromo ? " — komplett gratis bis 30. Juni" : ""}.
+              Keine Kreditkarte nötig{isFreePromo ? " — komplett gratis bis 31. März" : ""}.
             </p>
             <p className="text-xs text-[var(--muted)]">
               Fragen?{" "}

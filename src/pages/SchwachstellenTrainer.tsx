@@ -37,6 +37,8 @@ import { SchwachstellenAnalyse } from "@/components/schwachstellen/Schwachstelle
 import { hasCriticalErrorPattern } from "@/lib/smartRecovery";
 import { pathForChapter } from "@/lib/bmsRoutes";
 import { usePageTitle } from "@/hooks/usePageTitle";
+import { useUsageLimits } from "@/hooks/useUsageLimits";
+import { UpgradePrompt } from "@/components/paywall/UpgradePrompt";
 
 // ============================================================
 // Types & Helpers
@@ -96,6 +98,7 @@ function getQuestionsForStichwort(stichwortId: string, count = 10) {
 
 export default function SchwachstellenTrainer() {
   usePageTitle("Schwachstellen-Trainer");
+  const limits = useUsageLimits();
   const [mode, setMode] = useState<Mode>("overview");
   const [focusStichwortId, setFocusStichwortId] = useState<string | null>(null);
   const [quizQuestions, setQuizQuestions] = useState<typeof allBmsQuestions>([]);
@@ -244,6 +247,22 @@ export default function SchwachstellenTrainer() {
       if (showResult) handleNext();
     },
   });
+
+  // ============================================================
+  // Paywall Gate
+  // ============================================================
+
+  if (limits.schwachstellenLocked) {
+    return (
+      <div className="max-w-2xl mx-auto p-6">
+        <UpgradePrompt
+          feature="Schwachstellen-Trainer"
+          limitInfo="Gezielte Schwachstellen-Analyse und adaptives Training — nur mit Premium."
+          variant="card"
+        />
+      </div>
+    );
+  }
 
   // ============================================================
   // Quiz View

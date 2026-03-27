@@ -57,6 +57,8 @@ import { usePageTitle } from "@/hooks/usePageTitle";
 import { useViewportMode } from "@/hooks/useViewportMode";
 import { stripMarkdownAsterisks } from "@/utils/formatExplanation";
 import { SimulationHistory } from "@/components/simulation/SimulationHistory";
+import { useUsageLimits } from "@/hooks/useUsageLimits";
+import { UpgradePrompt } from "@/components/paywall/UpgradePrompt";
 
 // ============================================================
 // BMS QUESTION RESOLUTION
@@ -756,6 +758,7 @@ function getSectionGroupLabel(sectionType: SectionType): string {
 
 export default function Simulation() {
   usePageTitle("MedAT Simulation");
+  const simLimits = useUsageLimits();
   const { isMobile } = useViewportMode();
   const [mode, setMode] = useState<Mode>("select");
   const [activeTab, setActiveTab] = useState<"start" | "verlauf">("start");
@@ -1149,6 +1152,18 @@ export default function Simulation() {
   // ============================================================
   // SELECT MODE
   // ============================================================
+
+  if (simLimits.simulations.exhausted && mode === "select") {
+    return (
+      <div className="max-w-2xl mx-auto p-6">
+        <UpgradePrompt
+          feature="Prüfungssimulation"
+          limitInfo={`${simLimits.simulations.used} von ${simLimits.simulations.limit} Gratis-Simulationen absolviert`}
+          variant="card"
+        />
+      </div>
+    );
+  }
 
   if (mode === "select") {
     const fullSections = buildFullSimulation();

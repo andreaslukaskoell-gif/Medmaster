@@ -586,7 +586,7 @@ export default function SubjectDemo() {
           </h2>
           <p className="text-[var(--text-secondary)] mb-6 max-w-md mx-auto">
             Registriere dich jetzt — voller Zugang zu allen BMS-Fächern, KFF, Textverständnis und
-            SEK. Gratis bis 30. Juni.
+            SEK. Gratis bis 31. März.
           </p>
           <Link
             to="/login"

@@ -53,6 +53,8 @@ import { trackEvent } from "@/lib/analyticsTracker";
 import { useViewportMode } from "@/hooks/useViewportMode";
 import { useSwipe } from "@/hooks/useSwipe";
 import { hapticLight, hapticMedium, hapticSuccess, hapticError } from "@/lib/haptics";
+import { useUsageLimits } from "@/hooks/useUsageLimits";
+import { UpgradePrompt } from "@/components/paywall/UpgradePrompt";
 
 // ── Constants ─────────────────────────────────────────────────
 const STABLE_EMPTY_ARR: never[] = [];
@@ -1172,6 +1174,7 @@ function ResultsScreen({
 
 export default function FragenTrainer() {
   usePageTitle("Fragen-Trainer");
+  const limits = useUsageLimits();
   const location = useLocation();
   const navigate = useNavigate();
   const planBms = location.state?.dailyPlanBms as
@@ -1262,6 +1265,18 @@ export default function FragenTrainer() {
             setPlanResults(r);
           }}
           onBack={() => navigate("/fragen-trainer", { replace: true })}
+        />
+      </div>
+    );
+  }
+
+  if (limits.bms.exhausted && screen === "select") {
+    return (
+      <div className="p-6 max-w-2xl mx-auto">
+        <UpgradePrompt
+          feature="Fragentrainer"
+          limitInfo={`${limits.bms.used} von ${limits.bms.limit} Gratis-Fragen beantwortet`}
+          variant="card"
         />
       </div>
     );

@@ -177,7 +177,7 @@ export default function Einstellungen() {
                 profile?.subscription_tier === "pro"
                   ? "Premium"
                   : isPromoActive()
-                    ? "Gratis (bis 30. Juni)"
+                    ? "Gratis (bis 31. März)"
                     : "Kostenlos"}
               </p>
             </div>

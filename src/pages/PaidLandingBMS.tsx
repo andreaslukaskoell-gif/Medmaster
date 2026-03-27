@@ -227,10 +227,10 @@ export default function PaidLandingBMS() {
         },
         {
           "@type": "Question",
-          name: "Was passiert nach dem 30. Juni?",
+          name: "Was passiert nach dem 31. März?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Ab 1. Juli kostet MedMaster einmalig €29,90. Das ist eine einmalige Zahlung — kein monatliches Abo, keine wiederkehrenden Kosten. Du behältst vollen Zugang zu allen BMS-Fragen, Lerneinheiten und der Prüfungssimulation bis zum MedAT 2026. Wer sich jetzt registriert, lernt bis dahin komplett gratis.",
+            text: "Ab 1. April kostet MedMaster einmalig €29,90. Das ist eine einmalige Zahlung — kein monatliches Abo, keine wiederkehrenden Kosten. Du behältst vollen Zugang zu allen BMS-Fragen, Lerneinheiten und der Prüfungssimulation bis zum MedAT 2026. Wer sich jetzt registriert, lernt bis dahin komplett gratis.",
           },
         },
         {
@@ -709,8 +709,8 @@ export default function PaidLandingBMS() {
                 a: "MedMaster deckt den gesamten BMS-Teil vollständig ab: alle Stichwörter, Tausende Übungsfragen, adaptives Lernen und Fortschrittskontrolle pro Thema. Für die Vertiefung in Biologie empfehlen viele ergänzend ein Lehrbuch wie den Campbell. Die Übungs- und Lernkomponente ist aber komplett abgedeckt — inklusive adaptivem Lernplan, der deine Schwächen gezielt trainiert.",
               },
               {
-                q: "Was passiert nach dem 30. Juni?",
-                a: "Ab 1. Juli kostet MedMaster einmalig \u20ac29,90. Das ist eine einmalige Zahlung — kein monatliches Abo, keine wiederkehrenden Kosten. Du behältst vollen Zugang zu allen BMS-Fragen, Lerneinheiten und der Prüfungssimulation bis zum MedAT 2026. Wer sich jetzt registriert, lernt bis dahin komplett gratis.",
+                q: "Was passiert nach dem 31. März?",
+                a: "Ab 1. April kostet MedMaster einmalig \u20ac29,90. Das ist eine einmalige Zahlung — kein monatliches Abo, keine wiederkehrenden Kosten. Du behältst vollen Zugang zu allen BMS-Fragen, Lerneinheiten und der Prüfungssimulation bis zum MedAT 2026. Wer sich jetzt registriert, lernt bis dahin komplett gratis.",
               },
               {
                 q: "Kann ich jederzeit kündigen?",
