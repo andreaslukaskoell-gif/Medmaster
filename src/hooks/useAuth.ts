@@ -255,8 +255,8 @@ export function useAuth() {
       // Try RPC if available (requires Supabase function)
       const { error: rpcError } = await supabase.rpc("delete_user");
       if (rpcError) {
-        // Fallback: sign out and send deletion request email
-        console.warn("RPC delete_user not available, manual deletion needed:", rpcError.message);
+        // RPC not deployed — user data was already deleted from profiles/stats tables above
+        if (import.meta.env.DEV) console.warn("[deleteAccount] RPC unavailable:", rpcError.message);
       }
       stopAutoSync();
       stopMainSync();

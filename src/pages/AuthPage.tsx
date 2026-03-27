@@ -290,6 +290,7 @@ export default function AuthPage() {
                           placeholder="deine@email.at"
                           required
                           autoFocus
+                          autoComplete="email"
                           className="w-full pl-10 pr-4 py-3 rounded-lg border border-[var(--border)] bg-[var(--card)] text-[var(--text-primary)] text-sm outline-none focus:ring-2 focus:ring-[var(--accent)]"
                         />
                       </div>
@@ -304,6 +305,7 @@ export default function AuthPage() {
                             isNewUser ? "Passwort wählen (min. 6 Zeichen)" : "Dein Passwort"
                           }
                           required
+                          autoComplete={isNewUser ? "new-password" : "current-password"}
                           className="w-full pl-10 pr-10 py-3 rounded-lg border border-[var(--border)] bg-[var(--card)] text-[var(--text-primary)] text-sm outline-none focus:ring-2 focus:ring-[var(--accent)]"
                         />
                         <button
