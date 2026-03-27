@@ -261,8 +261,8 @@ export default function SEK() {
             {/* Actions */}
             <div className={`flex items-center gap-2 shrink-0 ${isMobile ? "ml-13" : ""}`}>
               <OfficialInstructionCard title={s.instructionTitle} instruction={s.instruction} />
-              <Button variant="premium" size="sm" onClick={s.onStart} disabled={s.taskCount === 0}>
-                <Play className="w-4 h-4 mr-1" /> Üben
+              <Button variant="premium" size="sm" onClick={s.onStart} disabled={s.taskCount === 0 || sekLimits.sek.exhausted}>
+                <Play className="w-4 h-4 mr-1" /> {sekLimits.sek.exhausted ? "Limit erreicht" : "Üben"}
               </Button>
             </div>
           </div>

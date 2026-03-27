@@ -52,9 +52,11 @@ export function isPromoActive(): boolean {
 
 /**
  * Resolve effective tier: during promo everyone is premium,
- * in dev mode everyone is premium, otherwise use actual tier.
+ * in dev mode everyone is premium (unless VITE_TEST_PAYWALL=true),
+ * otherwise use actual tier.
  */
 function effectiveTier(tier: Tier): Tier {
+  if (import.meta.env.DEV && import.meta.env.VITE_TEST_PAYWALL === "true") return tier;
   if (import.meta.env.DEV || isPromoActive()) return "premium";
   return tier;
 }

@@ -793,12 +793,13 @@ export default function TV() {
                     </span>
                   </div>
                   <div className={`flex items-center gap-2 ${isMobile ? "ml-8" : ""}`}>
-                    <Button variant="premium" size="sm" onClick={() => handleStartSet(i, "practice")}>
-                      <Play className="w-4 h-4 mr-1" /> Üben
+                    <Button variant="premium" size="sm" disabled={tvLimits.tv.exhausted} onClick={() => handleStartSet(i, "practice")}>
+                      <Play className="w-4 h-4 mr-1" /> {tvLimits.tv.exhausted ? "Limit erreicht" : "Üben"}
                     </Button>
                     <Button
                       variant="outline"
                       size="sm"
+                      disabled={tvLimits.tv.exhausted}
                       onClick={() => handleStartSet(i, "exam")}
                       title="35 Minuten Timer"
                     >
@@ -834,8 +835,9 @@ export default function TV() {
           {(showAllOffiziell ? tvOffiziellTexte : tvOffiziellTexte.slice(0, 5)).map((t, i) => (
             <button
               key={t.id}
+              disabled={tvLimits.tv.exhausted}
               onClick={() => handleStartAussagen(i)}
-              className={`w-full flex items-center ${isMobile ? "gap-2 px-3 py-3" : "gap-4 px-5 py-3.5"} text-left hover:bg-[var(--accent)]/3 transition-colors cursor-pointer group`}
+              className={`w-full flex items-center ${isMobile ? "gap-2 px-3 py-3" : "gap-4 px-5 py-3.5"} text-left hover:bg-[var(--accent)]/3 transition-colors ${tvLimits.tv.exhausted ? "opacity-50 cursor-not-allowed" : "cursor-pointer"} group`}
             >
               <span className="text-xs font-bold text-[var(--muted)] tabular-nums w-5 text-center shrink-0">
                 {i + 1}

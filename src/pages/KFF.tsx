@@ -389,12 +389,13 @@ export default function KFF() {
                     variant="premium"
                     size="sm"
                     className={isMobile ? "flex-1 min-h-[44px]" : ""}
+                    disabled={kffLimits.kff.exhausted}
                     onClick={() => {
                       autoStartRef.current = false;
                       setView(m.startView);
                     }}
                   >
-                    <Play className="w-4 h-4 mr-1" /> Üben
+                    <Play className="w-4 h-4 mr-1" /> {kffLimits.kff.exhausted ? "Limit erreicht" : "Üben"}
                   </Button>
                   <Button
                     variant="outline"

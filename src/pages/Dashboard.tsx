@@ -63,7 +63,6 @@ import { WeaknessWidget } from "@/components/dashboard/WeaknessWidget";
 import { RecentActivityWidget } from "@/components/dashboard/RecentActivityWidget";
 import { SpacedRepetitionWidget } from "@/components/dashboard/SpacedRepetitionWidget";
 import { useUsageLimits } from "@/hooks/useUsageLimits";
-import { FeatureGate } from "@/components/paywall/UpgradePrompt";
 
 // Stable defaults — prevent infinite re-render loops in Zustand selectors.
 // `?? []` inside a selector creates a NEW reference every render if the value is nullish,
@@ -595,10 +594,8 @@ export default function Dashboard() {
             </motion.section>
           </ScrollReveal>
 
-          {/* Spaced Repetition Widget */}
-          <FeatureGate locked={dashLimits.srsLocked} feature="Spaced Repetition" limitInfo="Intelligente Wiederholungen — nur mit Premium.">
-            <SpacedRepetitionWidget />
-          </FeatureGate>
+          {/* Spaced Repetition Widget — only for premium users */}
+          {!dashLimits.srsLocked && <SpacedRepetitionWidget />}
 
           {/* Wochen-Aktivität + Freunde einladen — side by side on desktop */}
           <ScrollReveal delay={120}>
