@@ -42,7 +42,7 @@ import { usePageTitle } from "@/hooks/usePageTitle";
 // Types & Helpers
 // ============================================================
 
-type Mode = "overview" | "daily" | "focused";
+type Mode = "overview" | "daily" | "focused" | "result";
 
 const fachColors: Record<string, { bg: string; text: string; label: string; accent: string }> = {
   biologie: {
@@ -102,8 +102,7 @@ export default function SchwachstellenTrainer() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [showResult, setShowResult] = useState(false);
-  const [showTipp, setShowTipp] = useState<string | null>(null);
-  void showTipp;
+  const [fachFilter, setFachFilter] = useState<string | null>(null);
   const [aiTutorQ, setAiTutorQ] = useState<{
     question: (typeof allBmsQuestions)[0];
     userAnswer: string;
@@ -141,7 +140,7 @@ export default function SchwachstellenTrainer() {
           setCurrentIndex(0);
           setAnswers({});
           setShowResult(false);
-          setShowTipp(null);
+    
           setMode("focused");
           setSearchParams({}, { replace: true });
         }, 0);
@@ -163,7 +162,7 @@ export default function SchwachstellenTrainer() {
     setCurrentIndex(0);
     setAnswers({});
     setShowResult(false);
-    setShowTipp(null);
+
     setMode("focused");
   }
 
@@ -174,14 +173,14 @@ export default function SchwachstellenTrainer() {
     setCurrentIndex(0);
     setAnswers({});
     setShowResult(false);
-    setShowTipp(null);
+
     setMode("daily");
   }
 
   function handleSelect(optionId: string) {
     if (showResult) return;
     setAnswers((prev) => ({ ...prev, [quizQuestions[currentIndex].id]: optionId }));
-    setShowTipp(null);
+
   }
 
   function handleCheck() {
@@ -196,7 +195,7 @@ export default function SchwachstellenTrainer() {
 
   function handleNext() {
     setShowResult(false);
-    setShowTipp(null);
+
     if (currentIndex < quizQuestions.length - 1) {
       setCurrentIndex((i) => i + 1);
     } else {
@@ -225,7 +224,7 @@ export default function SchwachstellenTrainer() {
     checkStreak();
     logActivity(quizQuestions.length, getMinutes());
     if (mode === "daily") adaptive.completeDailyChallenge();
-    setMode("overview");
+    setMode("result");
   }
 
   // Keyboard shortcuts for quiz
@@ -403,11 +402,87 @@ export default function SchwachstellenTrainer() {
   }
 
   // ============================================================
+  // Result Screen
+  // ============================================================
+
+  if (mode === "result" && quizQuestions.length > 0) {
+    const score = quizQuestions.filter((q) => answers[q.id] === q.correctOptionId).length;
+    const total = quizQuestions.length;
+    const pct = Math.round((score / total) * 100);
+
+    return (
+      <div className="max-w-3xl mx-auto space-y-6">
+        <div className="text-center py-8">
+          <div className="w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-4"
+            style={{ background: pct >= 70 ? "rgba(34,197,94,0.12)" : pct >= 40 ? "rgba(251,146,60,0.12)" : "rgba(239,68,68,0.12)" }}>
+            <Trophy className={`w-10 h-10 ${pct >= 70 ? "text-green-500" : pct >= 40 ? "text-orange-500" : "text-red-500"}`} />
+          </div>
+          <h2 className="text-2xl font-bold text-[var(--text-primary)]">
+            {pct >= 70 ? "Stark!" : pct >= 40 ? "Guter Fortschritt" : "Weiter üben"}
+          </h2>
+          <p className="text-4xl font-bold mt-2" style={{ color: pct >= 70 ? "#22c55e" : pct >= 40 ? "#fb923c" : "#ef4444" }}>
+            {score}/{total}
+          </p>
+          <p className="text-sm text-[var(--muted)] mt-1">{pct}% richtig</p>
+        </div>
+
+        <Card>
+          <CardHeader className="pb-3">
+            <CardTitle className="text-base">Fragen-Übersicht</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-2">
+            {quizQuestions.map((q, i) => {
+              const correct = answers[q.id] === q.correctOptionId;
+              return (
+                <div key={q.id} className={`flex items-start gap-3 p-3 rounded-lg ${correct ? "bg-green-50 dark:bg-green-900/10" : "bg-red-50 dark:bg-red-900/10"}`}>
+                  <div className="shrink-0 mt-0.5">
+                    {correct ? <CheckCircle2 className="w-4 h-4 text-green-500" /> : <XCircle className="w-4 h-4 text-red-500" />}
+                  </div>
+                  <div className="min-w-0">
+                    <p className="text-sm text-[var(--text-primary)] line-clamp-2">{i + 1}. {q.text}</p>
+                    {!correct && (
+                      <p className="text-xs text-[var(--muted)] mt-1">
+                        Richtig: {q.options.find((o) => o.id === q.correctOptionId)?.text}
+                      </p>
+                    )}
+                  </div>
+                </div>
+              );
+            })}
+          </CardContent>
+        </Card>
+
+        <div className="flex gap-3 justify-center">
+          <Button variant="outline" onClick={() => setMode("overview")} className="gap-2">
+            <ArrowLeft className="w-4 h-4" />
+            Zurück
+          </Button>
+          {focusStichwortId && (
+            <Button onClick={() => startFocusedQuiz(focusStichwortId)} className="gap-2">
+              <RotateCcw className="w-4 h-4" />
+              Nochmal üben
+            </Button>
+          )}
+          {!focusStichwortId && (
+            <Button onClick={startDailyChallenge} className="gap-2">
+              <RotateCcw className="w-4 h-4" />
+              Neue Challenge
+            </Button>
+          )}
+        </div>
+      </div>
+    );
+  }
+
+  // ============================================================
   // Overview
   // ============================================================
 
   const totalPracticed = Object.keys(profile.stichwortStats).length;
   const totalStichworte = alleStichworteListe.length;
+  const filteredWeakTopics = fachFilter
+    ? weakTopics.filter((t) => t.fach === fachFilter)
+    : weakTopics;
 
   return (
     <div className="max-w-4xl mx-auto space-y-6">
@@ -425,6 +500,25 @@ export default function SchwachstellenTrainer() {
         </div>
       </div>
 
+      {/* Onboarding hint for new users */}
+      {totalPracticed === 0 && (
+        <Card className="border-2 border-dashed border-[var(--border)]">
+          <CardContent className="p-6 text-center">
+            <Lightbulb className="w-8 h-8 text-amber-500 mx-auto mb-3" />
+            <p className="text-sm font-medium text-[var(--text-primary)] mb-1">
+              Willkommen im Schwachstellen-Trainer!
+            </p>
+            <p className="text-sm text-[var(--muted)] max-w-md mx-auto">
+              Hier siehst du nach ein paar Quizzen automatisch deine schwächsten Themen und kannst sie gezielt trainieren. Starte jetzt im Fragentrainer, um deine Analyse aufzubauen.
+            </p>
+            <Button variant="outline" size="sm" className="mt-4 gap-2" onClick={() => navigate("/fragentrainer")}>
+              <Play className="w-3 h-3" />
+              Zum Fragentrainer
+            </Button>
+          </CardContent>
+        </Card>
+      )}
+
       {/* High-End Fehler-Analyse: Treemap + Donut + Handlungsempfehlung */}
       <SchwachstellenAnalyse />
 
@@ -432,7 +526,7 @@ export default function SchwachstellenTrainer() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <Card>
           <CardContent className="p-5 text-center">
-            <div className="text-3xl font-bold text-[var(--accent)]/60">{readiness}%</div>
+            <div className="text-3xl font-bold text-[var(--accent)]">{readiness}%</div>
             <p className="text-xs text-[var(--muted)] mt-1">MedAT Readiness</p>
             <Progress value={readiness} className="mt-3" />
           </CardContent>
@@ -473,11 +567,13 @@ export default function SchwachstellenTrainer() {
           </CardHeader>
           <CardContent className="pb-5">
             <p className="text-sm text-[var(--muted)] mb-4">
-              15 adaptive Fragen aus deinen Schwachstellen — Bonus-XP und Streak-Aufbau!
+              {dailyQuestions.length > 0
+                ? "15 adaptive Fragen aus deinen Schwachstellen — Bonus-XP und Streak-Aufbau!"
+                : "Bearbeite zuerst ein paar Quizze im Fragentrainer, damit wir deine Schwachstellen erkennen können."}
             </p>
-            <Button onClick={startDailyChallenge} className="gap-2">
+            <Button onClick={startDailyChallenge} disabled={dailyQuestions.length === 0} className="gap-2">
               <Play className="w-4 h-4" />
-              Challenge starten
+              {dailyQuestions.length > 0 ? "Challenge starten" : "Noch keine Daten"}
             </Button>
           </CardContent>
         </Card>
@@ -522,11 +618,45 @@ export default function SchwachstellenTrainer() {
         </CardHeader>
         <CardContent className="space-y-3">
           {weakTopics.length === 0 ? (
-            <p className="text-sm text-[var(--muted)]">
-              Bearbeite zuerst einige Quizze, damit deine Schwachstellen erkannt werden.
-            </p>
+            <div className="text-center py-8">
+              <Target className="w-10 h-10 text-[var(--muted)] mx-auto mb-3 opacity-30" />
+              <p className="text-sm font-medium text-[var(--text-primary)] mb-1">
+                Noch keine Schwachstellen erkannt
+              </p>
+              <p className="text-sm text-[var(--muted)] mb-4">
+                Bearbeite Quizze im Fragentrainer — wir analysieren automatisch, wo du Hilfe brauchst.
+              </p>
+              <Button variant="outline" size="sm" onClick={() => navigate("/fragentrainer")} className="gap-2">
+                <Play className="w-3 h-3" />
+                Zum Fragentrainer
+              </Button>
+            </div>
           ) : (
-            weakTopics.map((topic) => {
+            <>
+              {/* Fach filter tabs */}
+              <div className="flex gap-2 flex-wrap mb-2">
+                <button
+                  onClick={() => setFachFilter(null)}
+                  className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${!fachFilter ? "bg-[var(--accent)] text-white" : "bg-[var(--surface)] text-[var(--muted)] hover:text-[var(--text-primary)]"}`}
+                >
+                  Alle ({weakTopics.length})
+                </button>
+                {(["biologie", "chemie", "physik", "mathematik"] as const).map((fach) => {
+                  const count = weakTopics.filter((t) => t.fach === fach).length;
+                  if (count === 0) return null;
+                  const fc = fachColors[fach];
+                  return (
+                    <button
+                      key={fach}
+                      onClick={() => setFachFilter(fachFilter === fach ? null : fach)}
+                      className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${fachFilter === fach ? `${fc.accent} text-white` : `bg-[var(--surface)] ${fc.text} hover:opacity-80`}`}
+                    >
+                      {fc.label} ({count})
+                    </button>
+                  );
+                })}
+              </div>
+              {filteredWeakTopics.map((topic) => {
               const sw = alleStichworteListe.find((s) => s.id === topic.stichwortId);
               const fc = fachColors[topic.fach];
               const chapterLink =
@@ -573,17 +703,19 @@ export default function SchwachstellenTrainer() {
                     )}
                     <Button
                       size="sm"
-                      variant="outline"
+                      variant={questionsAvailable === 0 ? "ghost" : "outline"}
                       onClick={() => startFocusedQuiz(topic.stichwortId)}
                       disabled={questionsAvailable === 0}
+                      title={questionsAvailable === 0 ? "Keine Fragen verfügbar" : `${questionsAvailable} Fragen üben`}
                     >
                       <RotateCcw className="w-3 h-3 mr-1" />
-                      Üben
+                      {questionsAvailable === 0 ? "Keine Fragen" : "Üben"}
                     </Button>
                   </div>
                 </div>
               );
-            })
+            })}
+            </>
           )}
         </CardContent>
       </Card>

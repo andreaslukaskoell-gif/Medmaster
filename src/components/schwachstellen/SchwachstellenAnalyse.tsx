@@ -13,7 +13,6 @@ import {
   buildActionSentence,
 } from "@/lib/schwachstellenAnalyse";
 
-const MIDNIGHT = "#0f172a";
 const NEON_RED = "#ff3366";
 const NEON_RED_DIM = "rgba(255, 51, 102, 0.7)";
 const SLATE_700 = "#334155";
@@ -69,8 +68,7 @@ export function SchwachstellenAnalyse() {
 
   return (
     <div
-      className="rounded-2xl overflow-hidden border border-[var(--border)]/50"
-      style={{ background: MIDNIGHT }}
+      className="rounded-2xl overflow-hidden border border-[var(--border)]/50 bg-[var(--surface)] dark:bg-slate-900"
     >
       <div className="p-5 border-b border-[var(--border)]/50">
         <h2 className="text-lg font-bold text-[var(--text-primary)]">Fehler-Analyse</h2>
@@ -180,7 +178,7 @@ export function SchwachstellenAnalyse() {
                           innerRadius={60}
                           outerRadius={90}
                           paddingAngle={2}
-                          stroke={MIDNIGHT}
+                          stroke="transparent"
                           strokeWidth={2}
                         >
                           {donutData.map((_, i) => (
