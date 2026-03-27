@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
 import {
   BarChart,
@@ -11,8 +11,8 @@ import {
   PieChart,
   Pie,
   Cell,
-  LineChart,
-  Line,
+  AreaChart,
+  Area,
 } from "recharts";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Heatmap } from "@/components/ui/heatmap";
@@ -21,8 +21,17 @@ import { useAdaptiveStore } from "@/store/adaptiveLearning";
 import { alleStichworteListe, fachConfig } from "@/data/stichwortliste";
 import { getQuestionSubject } from "@/lib/bmsLookup";
 import { Progress } from "@/components/ui/progress";
+import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
+import { usePageTitle } from "@/hooks/usePageTitle";
 
 const COLORS = ["#0f766e", "#14b8a6", "#2dd4bf", "#5eead4", "#99f6e4"];
+
+const FACH_COLORS: Record<string, string> = {
+  biologie: "#10b981",
+  chemie: "#ef4444",
+  physik: "#3b82f6",
+  mathematik: "#8b5cf6",
+};
 
 const confidenceLabel: Record<string, { text: string; className: string }> = {
   sicher: {
@@ -39,7 +48,19 @@ const confidenceLabel: Record<string, { text: string; className: string }> = {
   },
 };
 
+/** Group quiz results by ISO week for trend charts */
+function getWeekKey(dateStr: string): string {
+  const d = new Date(dateStr);
+  if (isNaN(d.getTime())) return "Unbekannt";
+  const day = d.getDay() || 7;
+  d.setDate(d.getDate() + 4 - day);
+  const yearStart = new Date(d.getFullYear(), 0, 1);
+  const weekNo = Math.ceil(((d.getTime() - yearStart.getTime()) / 86400000 + 1) / 7);
+  return `KW ${weekNo}`;
+}
+
 export default function Statistics() {
+  usePageTitle("Statistik");
   const rawQuizResults = useStore((s) => s.quizResults);
   const xp = useStore((s) => s.xp);
   const streak = useStore((s) => s.streak);
@@ -49,11 +70,13 @@ export default function Statistics() {
   const adaptive = useAdaptiveStore();
   const { profile } = adaptive;
   const [stichwortFach, setStichwortFach] = useState<string>("biologie");
+  const [trendRange, setTrendRange] = useState<"all" | "4w" | "12w">("12w");
 
   const totalQuizzes = quizResults.length;
   const totalCorrect = quizResults.reduce((sum, r) => sum + r.score, 0);
   const totalQuestions = quizResults.reduce((sum, r) => sum + r.total, 0);
   const avgPct = totalQuestions > 0 ? Math.round((totalCorrect / totalQuestions) * 100) : 0;
+  const totalMinutes = quizResults.reduce((sum, r) => sum + (r.durationMinutes ?? 0), 0);
 
   const byType = quizResults.reduce<
     Record<string, { correct: number; total: number; count: number }>
@@ -77,19 +100,77 @@ export default function Statistics() {
     value: d.count,
   }));
 
-  const timelineData = quizResults.slice(-10).map((r, i) => ({
-    name: `#${i + 1}`,
-    Prozent: Math.round((r.score / r.total) * 100),
-  }));
+  // Weekly trend data
+  const weeklyTrend = useMemo(() => {
+    const sorted = quizResults
+      .filter((r) => r.timestamp)
+      .sort((a, b) => (a.timestamp ?? "").localeCompare(b.timestamp ?? ""));
+
+    const byWeek: Record<string, { correct: number; total: number; count: number }> = {};
+    sorted.forEach((r) => {
+      const wk = getWeekKey(r.timestamp ?? r.date);
+      if (!byWeek[wk]) byWeek[wk] = { correct: 0, total: 0, count: 0 };
+      byWeek[wk].correct += r.score;
+      byWeek[wk].total += r.total;
+      byWeek[wk].count += 1;
+    });
+
+    let entries = Object.entries(byWeek).map(([week, d]) => ({
+      week,
+      Prozent: Math.round((d.correct / d.total) * 100),
+      Fragen: d.total,
+    }));
+
+    if (trendRange === "4w") entries = entries.slice(-4);
+    else if (trendRange === "12w") entries = entries.slice(-12);
+
+    return entries;
+  }, [quizResults, trendRange]);
+
+  // Per-Fach trend over time (for BMS)
+  const fachTrend = useMemo(() => {
+    const bmsResults = quizResults
+      .filter((r) => r.type === "bms" && r.timestamp && r.answers?.length)
+      .sort((a, b) => (a.timestamp ?? "").localeCompare(b.timestamp ?? ""));
+
+    const byWeekFach: Record<string, Record<string, { correct: number; total: number }>> = {};
+    bmsResults.forEach((r) => {
+      const wk = getWeekKey(r.timestamp ?? r.date);
+      if (!byWeekFach[wk]) byWeekFach[wk] = {};
+      (r.answers ?? []).forEach((a) => {
+        const subj = getQuestionSubject(a.questionId) || r.subject || "unbekannt";
+        if (!["biologie", "chemie", "physik", "mathematik"].includes(subj)) return;
+        if (!byWeekFach[wk][subj]) byWeekFach[wk][subj] = { correct: 0, total: 0 };
+        byWeekFach[wk][subj].total += 1;
+        if (a.correct) byWeekFach[wk][subj].correct += 1;
+      });
+    });
+
+    return Object.entries(byWeekFach)
+      .slice(-12)
+      .map(([week, faecher]) => {
+        const row: Record<string, string | number> = { week };
+        for (const f of ["biologie", "chemie", "physik", "mathematik"]) {
+          const d = faecher[f];
+          row[f] = d && d.total > 0 ? Math.round((d.correct / d.total) * 100) : 0;
+        }
+        return row;
+      });
+  }, [quizResults]);
 
   return (
     <div className="max-w-7xl mx-auto space-y-6">
+      <BreadcrumbNav
+        items={[{ label: "Dashboard", href: "/" }, { label: "Statistik" }]}
+      />
+
       <div>
         <h1 className="text-2xl font-bold text-[var(--text-primary)]">Statistik</h1>
         <p className="text-[var(--muted)] mt-1">Dein Lernfortschritt im Überblick.</p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+      {/* KPI Row */}
+      <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
         <Card>
           <CardContent className="p-4 text-center">
             <p className="text-3xl font-bold text-[var(--accent)]">
@@ -109,9 +190,9 @@ export default function Statistics() {
         <Card>
           <CardContent className="p-4 text-center">
             <p className="text-3xl font-bold text-blue-600">
-              <AnimatedCounter value={totalQuizzes} />
+              <AnimatedCounter value={totalQuestions} />
             </p>
-            <p className="text-xs text-[var(--muted)]">Quizze absolviert</p>
+            <p className="text-xs text-[var(--muted)]">Fragen beantwortet</p>
           </CardContent>
         </Card>
         <Card>
@@ -120,6 +201,17 @@ export default function Statistics() {
               <AnimatedCounter value={avgPct} suffix="%" />
             </p>
             <p className="text-xs text-[var(--muted)]">Durchschnitt</p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardContent className="p-4 text-center">
+            <p className="text-3xl font-bold text-purple-600">
+              {totalMinutes >= 60
+                ? <><AnimatedCounter value={Math.round(totalMinutes / 60)} /><span className="text-lg">h</span></>
+                : <><AnimatedCounter value={totalMinutes} /><span className="text-lg">m</span></>
+              }
+            </p>
+            <p className="text-xs text-[var(--muted)]">Lernzeit</p>
           </CardContent>
         </Card>
       </div>
@@ -144,75 +236,150 @@ export default function Statistics() {
           </CardContent>
         </Card>
       ) : (
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <Card>
-            <CardHeader>
-              <CardTitle>Leistung nach Modul</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <ResponsiveContainer width="100%" height={300}>
-                <BarChart data={barData}>
-                  <CartesianGrid strokeDasharray="3 3" />
-                  <XAxis dataKey="name" />
-                  <YAxis domain={[0, 100]} />
-                  <Tooltip />
-                  <Bar dataKey="Prozent" fill="#0f766e" radius={[4, 4, 0, 0]} />
-                </BarChart>
-              </ResponsiveContainer>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardHeader>
-              <CardTitle>Quizverteilung</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <ResponsiveContainer width="100%" height={300}>
-                <PieChart>
-                  <Pie
-                    data={pieData}
-                    cx="50%"
-                    cy="50%"
-                    innerRadius={60}
-                    outerRadius={100}
-                    paddingAngle={5}
-                    dataKey="value"
-                    label={({ name, value }) => `${name}: ${value}`}
-                  >
-                    {pieData.map((_, i) => (
-                      <Cell key={i} fill={COLORS[i % COLORS.length]} />
+        <>
+          {/* Weekly Trend */}
+          {weeklyTrend.length > 1 && (
+            <Card>
+              <CardHeader className="pb-3">
+                <div className="flex items-center justify-between">
+                  <CardTitle>Leistungsverlauf</CardTitle>
+                  <div className="flex gap-1">
+                    {(["4w", "12w", "all"] as const).map((r) => (
+                      <button
+                        key={r}
+                        onClick={() => setTrendRange(r)}
+                        className={`px-2 py-1 rounded text-xs font-medium transition-colors cursor-pointer ${
+                          trendRange === r
+                            ? "bg-[var(--accent)] text-white"
+                            : "bg-[var(--surface)] text-muted-foreground hover:bg-accent"
+                        }`}
+                      >
+                        {r === "4w" ? "4 Wochen" : r === "12w" ? "12 Wochen" : "Alles"}
+                      </button>
                     ))}
-                  </Pie>
-                  <Tooltip />
-                </PieChart>
-              </ResponsiveContainer>
-            </CardContent>
-          </Card>
+                  </div>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <ResponsiveContainer width="100%" height={260}>
+                  <AreaChart data={weeklyTrend}>
+                    <defs>
+                      <linearGradient id="trendGrad" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="5%" stopColor="#0f766e" stopOpacity={0.3} />
+                        <stop offset="95%" stopColor="#0f766e" stopOpacity={0} />
+                      </linearGradient>
+                    </defs>
+                    <CartesianGrid strokeDasharray="3 3" strokeOpacity={0.3} />
+                    <XAxis dataKey="week" tick={{ fontSize: 11 }} />
+                    <YAxis domain={[0, 100]} tick={{ fontSize: 11 }} />
+                    <Tooltip
+                      formatter={(v?: number, name?: string) => [
+                        name === "Prozent" ? `${v ?? 0}%` : (v ?? 0),
+                        name === "Prozent" ? "Richtig" : (name ?? ""),
+                      ]}
+                    />
+                    <Area
+                      type="monotone"
+                      dataKey="Prozent"
+                      stroke="#0f766e"
+                      strokeWidth={2}
+                      fill="url(#trendGrad)"
+                      dot={{ fill: "#0f766e", r: 3 }}
+                    />
+                  </AreaChart>
+                </ResponsiveContainer>
+              </CardContent>
+            </Card>
+          )}
 
-          <Card className="lg:col-span-2">
-            <CardHeader>
-              <CardTitle>Leistungsverlauf (letzte 10 Quizze)</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <ResponsiveContainer width="100%" height={300}>
-                <LineChart data={timelineData}>
-                  <CartesianGrid strokeDasharray="3 3" />
-                  <XAxis dataKey="name" />
-                  <YAxis domain={[0, 100]} />
-                  <Tooltip />
-                  <Line
-                    type="monotone"
-                    dataKey="Prozent"
-                    stroke="#0f766e"
-                    strokeWidth={2}
-                    dot={{ fill: "#0f766e", r: 4 }}
-                  />
-                </LineChart>
-              </ResponsiveContainer>
-            </CardContent>
-          </Card>
+          {/* Per-Fach BMS Trend */}
+          {fachTrend.length > 1 && (
+            <Card>
+              <CardHeader>
+                <CardTitle>BMS-Entwicklung nach Fach</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ResponsiveContainer width="100%" height={260}>
+                  <AreaChart data={fachTrend}>
+                    <CartesianGrid strokeDasharray="3 3" strokeOpacity={0.3} />
+                    <XAxis dataKey="week" tick={{ fontSize: 11 }} />
+                    <YAxis domain={[0, 100]} tick={{ fontSize: 11 }} />
+                    <Tooltip formatter={(v?: number) => [`${v ?? 0}%`, ""]} />
+                    {(["biologie", "chemie", "physik", "mathematik"] as const).map((f) => (
+                      <Area
+                        key={f}
+                        type="monotone"
+                        dataKey={f}
+                        name={fachConfig[f]?.label || f}
+                        stroke={FACH_COLORS[f]}
+                        fill={FACH_COLORS[f]}
+                        fillOpacity={0.08}
+                        strokeWidth={2}
+                        dot={false}
+                      />
+                    ))}
+                  </AreaChart>
+                </ResponsiveContainer>
+                <div className="flex gap-4 justify-center mt-3">
+                  {(["biologie", "chemie", "physik", "mathematik"] as const).map((f) => (
+                    <div key={f} className="flex items-center gap-1.5 text-xs text-[var(--muted)]">
+                      <div className="w-2.5 h-2.5 rounded-full" style={{ background: FACH_COLORS[f] }} />
+                      {fachConfig[f]?.label || f}
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          )}
 
-          <Card className="lg:col-span-2">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <Card>
+              <CardHeader>
+                <CardTitle>Leistung nach Modul</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ResponsiveContainer width="100%" height={300}>
+                  <BarChart data={barData}>
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis dataKey="name" />
+                    <YAxis domain={[0, 100]} />
+                    <Tooltip />
+                    <Bar dataKey="Prozent" fill="#0f766e" radius={[4, 4, 0, 0]} />
+                  </BarChart>
+                </ResponsiveContainer>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle>Quizverteilung</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ResponsiveContainer width="100%" height={300}>
+                  <PieChart>
+                    <Pie
+                      data={pieData}
+                      cx="50%"
+                      cy="50%"
+                      innerRadius={60}
+                      outerRadius={100}
+                      paddingAngle={5}
+                      dataKey="value"
+                      label={({ name, value }) => `${name}: ${value}`}
+                    >
+                      {pieData.map((_, i) => (
+                        <Cell key={i} fill={COLORS[i % COLORS.length]} />
+                      ))}
+                    </Pie>
+                    <Tooltip />
+                  </PieChart>
+                </ResponsiveContainer>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Detailed results table */}
+          <Card>
             <CardHeader>
               <CardTitle>Detaillierte Ergebnisse</CardTitle>
             </CardHeader>
@@ -236,6 +403,7 @@ export default function Statistics() {
                     {quizResults
                       .slice()
                       .reverse()
+                      .slice(0, 50)
                       .map((r) => (
                         <tr key={r.id} className="border-b border-[var(--border)]/50">
                           <td className="py-2 px-3">{r.date}</td>
@@ -254,7 +422,7 @@ export default function Statistics() {
               </div>
             </CardContent>
           </Card>
-        </div>
+        </>
       )}
 
       {/* BMS per-subject breakdown */}

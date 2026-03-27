@@ -174,7 +174,7 @@ export default function AuthPage() {
         <div className="text-center">
           <h1 className="font-serif text-3xl font-bold text-[var(--accent)]">MedMaster</h1>
           <p className="text-[var(--muted)] mt-2">
-            5.000+ BMS-Fragen · 10.000+ KFF-Übungen · Gratis bis 31. März
+            5.000+ BMS-Fragen · 10.000+ KFF-Übungen · Gratis bis 30. Juni
           </p>
         </div>
 

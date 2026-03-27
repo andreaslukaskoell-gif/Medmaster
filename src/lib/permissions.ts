@@ -46,9 +46,9 @@ const LIMITS: Record<Tier, FeatureLimits> = {
   },
 };
 
-const PROMO_END = new Date("2026-04-01T00:00:00+02:00");
+const PROMO_END = new Date("2026-07-01T00:00:00+02:00");
 
-/** Launch promo: everyone gets premium access until March 31, 2026 */
+/** Launch promo: everyone gets premium access until June 30, 2026 */
 export function isPromoActive(): boolean {
   return new Date() < PROMO_END;
 }

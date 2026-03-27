@@ -647,7 +647,7 @@ export default function BMSDemo() {
           </h2>
           <p className="text-[var(--text-secondary)] mb-6 max-w-md mx-auto">
             Registriere dich jetzt — voller Zugang zu BMS, KFF, Textverständnis und SEK. Gratis bis
-            31. März.
+            30. Juni.
           </p>
           <Link
             to="/login"

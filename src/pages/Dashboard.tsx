@@ -61,6 +61,7 @@ import { Tooltip } from "@/components/ui/Tooltip";
 import { DailyPlanWidget } from "@/components/dashboard/DailyPlanWidget";
 import { WeaknessWidget } from "@/components/dashboard/WeaknessWidget";
 import { RecentActivityWidget } from "@/components/dashboard/RecentActivityWidget";
+import { SpacedRepetitionWidget } from "@/components/dashboard/SpacedRepetitionWidget";
 
 // Stable defaults — prevent infinite re-render loops in Zustand selectors.
 // `?? []` inside a selector creates a NEW reference every render if the value is nullish,
@@ -590,6 +591,9 @@ export default function Dashboard() {
               <RecentActivityWidget />
             </motion.section>
           </ScrollReveal>
+
+          {/* Spaced Repetition Widget */}
+          <SpacedRepetitionWidget />
 
           {/* Wochen-Aktivität + Freunde einladen — side by side on desktop */}
           <ScrollReveal delay={120}>

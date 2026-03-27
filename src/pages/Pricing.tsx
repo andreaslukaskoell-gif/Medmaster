@@ -8,6 +8,7 @@ import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { usePageTitle } from "@/hooks/usePageTitle";
 import { useAuth } from "@/hooks/useAuth";
 import { startCheckout, isPaymentEnabled, formatPrice } from "@/lib/stripe";
+import { isPromoActive } from "@/lib/permissions";
 import { trackPricingView } from "@/lib/analytics";
 import { useReferralReward } from "@/hooks/useReferralReward";
 import { ReferralWidget } from "@/components/shared/ReferralWidget";
@@ -31,7 +32,7 @@ export default function Pricing() {
   const { user } = useAuth();
   const reward = useReferralReward();
 
-  const isFreePromo = new Date() < new Date("2026-04-01T00:00:00+02:00");
+  const isFreePromo = isPromoActive();
   const personalPrice = reward.personalPriceCents;
   const hasDiscount = reward.hasReward;
 
@@ -74,7 +75,7 @@ export default function Pricing() {
                     </span>
                   </div>
                   <p className="text-sm text-emerald-600 dark:text-emerald-400 font-medium">
-                    Bis 31. März 2026
+                    Bis 30. Juni 2026
                   </p>
                 </>
               ) : hasDiscount ? (
@@ -134,7 +135,7 @@ export default function Pricing() {
 
           <div className="mt-4 text-center space-y-1">
             <p className="text-xs text-[var(--muted)]">
-              Keine Kreditkarte nötig{isFreePromo ? " — komplett gratis bis 31. März" : ""}.
+              Keine Kreditkarte nötig{isFreePromo ? " — komplett gratis bis 30. Juni" : ""}.
             </p>
             <p className="text-xs text-[var(--muted)]">
               Fragen?{" "}

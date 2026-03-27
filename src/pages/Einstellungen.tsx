@@ -21,6 +21,7 @@ import {
 } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
 import { exportUserData } from "@/lib/backendSync";
+import { isPromoActive } from "@/lib/permissions";
 import { useStore } from "@/store/useStore";
 
 const FONT_OPTIONS: { value: "small" | "normal" | "large"; label: string }[] = [
@@ -175,8 +176,8 @@ export default function Einstellungen() {
                 profile?.subscription_tier === "standard" ||
                 profile?.subscription_tier === "pro"
                   ? "Premium"
-                  : new Date() < new Date("2026-04-01T00:00:00+02:00")
-                    ? "Gratis (bis 31. März)"
+                  : isPromoActive()
+                    ? "Gratis (bis 30. Juni)"
                     : "Kostenlos"}
               </p>
             </div>
