@@ -342,28 +342,28 @@ export default function LandingPage() {
             </Link>
           </div>
         </div>
-      </header>
 
-      {/* ─── Urgency bar ─── */}
-      {!countdown.expired && (
-        <div className="text-center py-2.5 sm:py-3 px-4" style={{ backgroundColor: NAVY }}>
-          <p className="text-xs sm:text-sm font-medium text-white/90 tracking-wide flex items-center justify-center gap-2 sm:gap-3">
-            <span>Gratis-Zugang endet in</span>
-            <span className="inline-flex gap-1 sm:gap-1.5 font-mono tabular-nums text-xs sm:text-sm">
-              <span className="bg-white/15 rounded px-1.5 py-0.5">{countdown.days}d</span>
-              <span className="bg-white/15 rounded px-1.5 py-0.5">
-                {String(countdown.hours).padStart(2, "0")}h
+        {/* ─── Urgency bar (inside sticky header to prevent overlap) ─── */}
+        {!countdown.expired && (
+          <div className="text-center py-2 sm:py-2.5 px-4 border-t border-white/10" style={{ backgroundColor: NAVY }}>
+            <p className="text-xs sm:text-sm font-medium text-white/90 tracking-wide flex items-center justify-center gap-2 sm:gap-3">
+              <span>Gratis-Zugang endet in</span>
+              <span className="inline-flex gap-1 sm:gap-1.5 font-mono tabular-nums text-xs sm:text-sm">
+                <span className="bg-white/15 rounded px-1.5 py-0.5">{countdown.days}d</span>
+                <span className="bg-white/15 rounded px-1.5 py-0.5">
+                  {String(countdown.hours).padStart(2, "0")}h
+                </span>
+                <span className="bg-white/15 rounded px-1.5 py-0.5">
+                  {String(countdown.minutes).padStart(2, "0")}m
+                </span>
+                <span className="bg-white/15 rounded px-1.5 py-0.5 hidden sm:inline">
+                  {String(countdown.seconds).padStart(2, "0")}s
+                </span>
               </span>
-              <span className="bg-white/15 rounded px-1.5 py-0.5">
-                {String(countdown.minutes).padStart(2, "0")}m
-              </span>
-              <span className="bg-white/15 rounded px-1.5 py-0.5 hidden sm:inline">
-                {String(countdown.seconds).padStart(2, "0")}s
-              </span>
-            </span>
-          </p>
-        </div>
-      )}
+            </p>
+          </div>
+        )}
+      </header>
 
       <ReturningVisitorBanner />
 
