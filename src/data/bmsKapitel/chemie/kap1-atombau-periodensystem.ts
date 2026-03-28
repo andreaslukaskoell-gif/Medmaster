@@ -154,26 +154,7 @@ Die **Ordnungszahl Z** (Protonenzahl) gibt an, wie viele Protonen im Kern sitzen
         "Den Unterschied zwischen Bohrschen Schalen und quantenmechanischen Orbitalen (s, p, d, f) erklären.",
       ],
 
-      sections: [
-        {
-          heading: "Von Thomson zu Rutherford – die Entdeckung des Kerns",
-          text: "Das Thomson-Modell (1904) beschrieb das Atom als gleichmäßig positive Kugel mit eingebetteten Elektronen. Rutherfords Streuversuch (1911) widerlegte dieses Bild: Die starke Ablenkung und Rückstreuung von Alphateilchen an Goldfolie bewies die Existenz eines winzigen, positiv geladenen Kerns. Das Atom besteht größtenteils aus leerem Raum – der Kern hat nur 1/100 000 des Atomdurchmessers, enthält aber >99,9 % der Masse.",
-          merksatz:
-            "Rutherford-Experiment: Meiste Teilchen durch – wenige stark abgelenkt → Kern ist winzig, schwer und positiv geladen.",
-        },
-        {
-          heading: "Bohrsches Modell und Quantenmechanisches Orbital-Modell",
-          text: "Bohr (1913) postulierte diskrete Elektronenschalen (K, L, M..., max. 2n² Elektronen). Übergänge zwischen Schalen erklären Spektrallinien. Das modernere quantenmechanische Modell ersetzt feste Bahnen durch Orbitale (Aufenthaltswahrscheinlichkeitsräume): s (kugelig), p (hantelförmig, 3 Richtungen), d (5 Orbitale), f (7 Orbitale). Jedes Orbital fasst maximal 2 Elektronen mit entgegengesetztem Spin.",
-          merksatz:
-            "Orbital ≠ Bahn. Ein Orbital ist ein Raumbereich mit 90 % Aufenthaltswahrscheinlichkeit des Elektrons.",
-        },
-        {
-          heading: "Isotope und Nuklidnotation",
-          text: 'Isotope sind Atome desselben Elements (gleiche Z) mit unterschiedlicher Neutronenzahl N. Sie werden durch die Massenzahl A = Z + N unterschieden. Notation: oben links A, unten links Z, z. B. ¹⁴₆C. Die relative Atommasse im Periodensystem ist das gewichtete Mittel aller natürlich vorkommenden Isotope (z. B. Cl ≈ 35,5 u wegen ³⁵Cl / ³⁷Cl). Stabile Isotope liegen im "Stabilitätsgürtel"; außerhalb sind Kerne radioaktiv.',
-          merksatz:
-            "Isotope: gleiche Z (gleiches Element), verschiedene N → verschiedene A. Chemisch fast identisch, physikalisch unterschiedlich.",
-        },
-      ],
+      sections: [],
 
       merksätze: [
         "Z = Protonenzahl = Ordnungszahl; A = Z + N (Massenzahl); N = A − Z.",
