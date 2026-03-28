@@ -79,7 +79,10 @@ const FAQ_ITEMS: { q: string; a: string; category: string }[] = [
   {
     category: "MedMaster",
     q: "Was kostet MedMaster?",
-    a: "Bis 31. März 2026 ist MedMaster komplett gratis — voller Zugang zu allen 5.000+ Fragen, allen 4 Testbereichen und allen Features. Ab 1. April kostet der Zugang einmalig €29,90 — kein Abo, keine versteckten Kosten, lebenslanger Zugang.",
+    a:
+      new Date() < new Date("2026-04-01T00:00:00+02:00")
+        ? "Bis 31. März 2026 ist MedMaster komplett gratis — voller Zugang zu allen 5.000+ Fragen, allen 4 Testbereichen und allen Features. Ab 1. April kostet der Zugang einmalig €29,90 — kein Abo, keine versteckten Kosten, lebenslanger Zugang."
+        : "MedMaster kostet einmalig €29,90 — kein Abo, kein Haken.",
   },
   {
     category: "MedMaster",

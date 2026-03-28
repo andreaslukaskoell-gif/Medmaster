@@ -21,7 +21,10 @@ export function PostSignupReferral() {
 
   const referralCode = user.id.slice(0, 8);
   const referralUrl = `https://medmaster.at?ref=${referralCode}`;
-  const shareText = `Hey! Ich bereite mich gerade mit MedMaster auf den MedAT vor – 5.000+ Fragen, alle 4 Bereiche, gratis bis Ende März. Probier's mal: ${referralUrl}`;
+  const isFreePromo = new Date() < new Date("2026-04-01T00:00:00+02:00");
+  const shareText = isFreePromo
+    ? `Hey! Ich bereite mich gerade mit MedMaster auf den MedAT vor – 5.000+ Fragen, alle 4 Bereiche, gratis bis Ende März. Probier's mal: ${referralUrl}`
+    : `Hey! Ich bereite mich gerade mit MedMaster auf den MedAT vor – 5.000+ Fragen, alle 4 Bereiche, die beste MedAT-Vorbereitung. Probier's mal: ${referralUrl}`;
 
   const handleDismiss = () => {
     setDismissed(true);

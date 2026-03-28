@@ -581,8 +581,9 @@ export default function SubjectDemo() {
             Alle {totalCount}+ {meta.label}-Fragen freischalten
           </h2>
           <p className="text-[var(--text-secondary)] mb-6 max-w-md mx-auto">
-            Registriere dich jetzt — voller Zugang zu allen BMS-Fächern, KFF, Textverständnis und
-            SEK. Gratis bis 31. März.
+            {new Date() < new Date("2026-04-01T00:00:00+02:00")
+              ? "Registriere dich jetzt — voller Zugang zu allen BMS-Fächern, KFF, Textverständnis und SEK. Gratis bis 31. März."
+              : "Registriere dich jetzt — voller Zugang zu allen BMS-Fächern, KFF, Textverständnis und SEK. Einmalig €29,90 — kein Abo."}
           </p>
           <Link
             to="/login"

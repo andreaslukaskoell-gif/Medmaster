@@ -34,7 +34,6 @@ import { ExitIntentCapture } from "@/components/growth/ExitIntentCapture";
 import { ReturningVisitorBanner } from "@/components/growth/ReturningVisitorBanner";
 import { Logo } from "@/components/brand/Logo";
 
-
 const NAVY = "#1b3ea7";
 
 /* ── Countdown ── */
@@ -210,7 +209,9 @@ function FAQItem({ q, a, isMobile }: { q: string; a: string; isMobile: boolean }
         </svg>
       </button>
       {open && (
-        <p className={`text-sm text-[var(--muted)] leading-relaxed pb-5 sm:pb-6 -mt-2 ${isMobile ? "pr-4" : "pr-8 sm:pr-12"}`}>
+        <p
+          className={`text-sm text-[var(--muted)] leading-relaxed pb-5 sm:pb-6 -mt-2 ${isMobile ? "pr-4" : "pr-8 sm:pr-12"}`}
+        >
           {a}
         </p>
       )}
@@ -369,7 +370,9 @@ export default function LandingPage() {
           }}
         />
 
-        <div className={`max-w-3xl mx-auto ${isMobile ? "px-4" : "px-5 sm:px-8"} text-center relative`}>
+        <div
+          className={`max-w-3xl mx-auto ${isMobile ? "px-4" : "px-5 sm:px-8"} text-center relative`}
+        >
           {/* Pill badge */}
           <BlurFade delay={0} className="mb-5 sm:mb-7">
             <span
@@ -397,8 +400,12 @@ export default function LandingPage() {
           </TextAnimate>
 
           <BlurFade delay={0.4} className="mb-5 sm:mb-8">
-            <span className={`${isMobile ? "text-2xl" : "text-3xl sm:text-5xl lg:text-6xl"} font-extrabold leading-[1.15] sm:leading-[1.1] tracking-tight`}>
-              <AnimatedGradientText colors={["#1b3ea7", "#2563eb", "#7c3aed", "#2563eb", "#1b3ea7"]}>
+            <span
+              className={`${isMobile ? "text-2xl" : "text-3xl sm:text-5xl lg:text-6xl"} font-extrabold leading-[1.15] sm:leading-[1.1] tracking-tight`}
+            >
+              <AnimatedGradientText
+                colors={["#1b3ea7", "#2563eb", "#7c3aed", "#2563eb", "#1b3ea7"]}
+              >
                 Bist du vorbereitet?
               </AnimatedGradientText>
             </span>
@@ -406,8 +413,8 @@ export default function LandingPage() {
 
           <BlurFade delay={0.55}>
             <p className="text-base sm:text-xl text-[var(--text-secondary)] max-w-lg mx-auto mb-8 sm:mb-12 leading-relaxed">
-              Der Unterschied zwischen Zusage und Absage ist oft nur wenige Punkte. MedMaster gibt dir
-              die Werkzeuge, die diesen Unterschied machen.
+              Der Unterschied zwischen Zusage und Absage ist oft nur wenige Punkte. MedMaster gibt
+              dir die Werkzeuge, die diesen Unterschied machen.
             </p>
           </BlurFade>
 
@@ -418,10 +425,26 @@ export default function LandingPage() {
               className={`${isMobile ? "px-5" : "px-8 sm:px-10"} py-4 text-base shadow-xl w-full sm:w-auto`}
             >
               <svg className="w-5 h-5 shrink-0" viewBox="0 0 24 24">
-                <path fill="#fff" fillOpacity="0.9" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" />
-                <path fill="#fff" fillOpacity="0.7" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
-                <path fill="#fff" fillOpacity="0.6" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
-                <path fill="#fff" fillOpacity="0.8" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                <path
+                  fill="#fff"
+                  fillOpacity="0.9"
+                  d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"
+                />
+                <path
+                  fill="#fff"
+                  fillOpacity="0.7"
+                  d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                />
+                <path
+                  fill="#fff"
+                  fillOpacity="0.6"
+                  d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                />
+                <path
+                  fill="#fff"
+                  fillOpacity="0.8"
+                  d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                />
               </svg>
               Kostenlos ausprobieren
             </ShimmerButton>
@@ -447,12 +470,24 @@ export default function LandingPage() {
       <section className="py-10 sm:py-20 border-y border-[var(--border)]/50">
         <div className="max-w-4xl mx-auto px-5 sm:px-8">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8" data-mobile-keep>
-            {([
-              { counter: 4000, suffix: "+", label: "BMS-Fragen", sub: "mit detaillierten Erklärungen" },
-              { text: "∞", label: "KFF-Aufgaben", sub: "algorithmisch generiert" },
-              { counter: 100, suffix: "%", label: "Stichwörter abgedeckt", sub: "offizielle Stichwortliste" },
-              { text: "4 / 4", label: "MedAT-Bereiche", sub: "vollständig abgedeckt" },
-            ] as const).map((s, i) => (
+            {(
+              [
+                {
+                  counter: 5000,
+                  suffix: "+",
+                  label: "BMS-Fragen",
+                  sub: "mit detaillierten Erklärungen",
+                },
+                { text: "∞", label: "KFF-Aufgaben", sub: "algorithmisch generiert" },
+                {
+                  counter: 100,
+                  suffix: "%",
+                  label: "Stichwörter abgedeckt",
+                  sub: "offizielle Stichwortliste",
+                },
+                { text: "4 / 4", label: "MedAT-Bereiche", sub: "vollständig abgedeckt" },
+              ] as const
+            ).map((s, i) => (
               <BlurFade key={s.label} delay={0.1 + i * 0.08}>
                 <div className="text-center">
                   <div
@@ -529,7 +564,9 @@ export default function LandingPage() {
                 {/* Subtle accent glow */}
                 <div
                   className="absolute -top-12 -right-12 w-32 h-32 rounded-full pointer-events-none"
-                  style={{ background: `radial-gradient(circle, color-mix(in srgb, ${NAVY} 8%, transparent) 0%, transparent 70%)` }}
+                  style={{
+                    background: `radial-gradient(circle, color-mix(in srgb, ${NAVY} 8%, transparent) 0%, transparent 70%)`,
+                  }}
                 />
                 <div
                   className="w-10 h-10 rounded-xl flex items-center justify-center mb-4 sm:mb-5 relative"
@@ -720,7 +757,9 @@ export default function LandingPage() {
               ) : (
                 <>
                   Gratis-Zugang endet in{" "}
-                  <span className={`font-mono tabular-nums ${isMobile ? "text-base" : "text-lg sm:text-2xl"}`}>
+                  <span
+                    className={`font-mono tabular-nums ${isMobile ? "text-base" : "text-lg sm:text-2xl"}`}
+                  >
                     {countdown.days}d {String(countdown.hours).padStart(2, "0")}h{" "}
                     {String(countdown.minutes).padStart(2, "0")}m
                   </span>
@@ -737,10 +776,26 @@ export default function LandingPage() {
               className="px-8 sm:px-10 py-4 text-base shadow-xl w-full sm:w-auto"
             >
               <svg className="w-5 h-5 shrink-0" viewBox="0 0 24 24">
-                <path fill="#fff" fillOpacity="0.9" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" />
-                <path fill="#fff" fillOpacity="0.7" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
-                <path fill="#fff" fillOpacity="0.6" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
-                <path fill="#fff" fillOpacity="0.8" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                <path
+                  fill="#fff"
+                  fillOpacity="0.9"
+                  d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"
+                />
+                <path
+                  fill="#fff"
+                  fillOpacity="0.7"
+                  d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                />
+                <path
+                  fill="#fff"
+                  fillOpacity="0.6"
+                  d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                />
+                <path
+                  fill="#fff"
+                  fillOpacity="0.8"
+                  d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                />
               </svg>
               Kostenlos starten
             </ShimmerButton>
@@ -832,7 +887,8 @@ export default function LandingPage() {
             </div>
             <p className="text-xs text-[var(--muted)] mt-4 text-center">
               Vergleich basierend auf öffentlich sichtbaren Preisen und Leistungen führender
-              MedAT-Vorbereitungsplattformen (Stand März 2026). Keine spezifischen Anbieter genannt.
+              MedAT-Vorbereitungsplattformen (Stand Frühjahr 2026). Keine spezifischen Anbieter
+              genannt.
             </p>
           </motion.div>
         </div>
@@ -855,16 +911,27 @@ export default function LandingPage() {
               },
               {
                 q: "Kann ich jederzeit kündigen?",
-                a: "Ja, ohne Wenn und Aber. Es gibt kein Abo, keine automatische Verlängerung und keine Kündigungsfrist. Du kannst deinen Account jederzeit in den Einstellungen löschen — mit einem Klick. Bis 31. März ist der volle Zugang komplett gratis, danach fällt eine einmalige Zahlung von €29,90 an. Keine versteckten Kosten, kein Kleingedrucktes.",
+                a: countdown.expired
+                  ? "Ja, ohne Wenn und Aber. Es gibt kein Abo, keine automatische Verlängerung und keine Kündigungsfrist. Du kannst deinen Account jederzeit in den Einstellungen löschen — mit einem Klick. MedMaster kostet einmalig €29,90. Keine versteckten Kosten, kein Kleingedrucktes."
+                  : "Ja, ohne Wenn und Aber. Es gibt kein Abo, keine automatische Verlängerung und keine Kündigungsfrist. Du kannst deinen Account jederzeit in den Einstellungen löschen — mit einem Klick. Bis 31. März ist der volle Zugang komplett gratis, danach fällt eine einmalige Zahlung von €29,90 an. Keine versteckten Kosten, kein Kleingedrucktes.",
               },
               {
                 q: "Reicht MedMaster als Vorbereitung?",
                 a: "MedMaster deckt alle 4 MedAT-Bereiche vollständig ab: BMS (Biologie, Chemie, Physik, Mathematik), KFF (Zahlenfolgen, Implikationen, Wortflüssigkeit, Figuren, Gedächtnis), Textverständnis und SEK. Für den BMS-Teil empfehlen viele Kandidierende ergänzend ein Biologie-Lehrbuch wie den Campbell für die Tiefe der Theorie. Die gesamte Übungs- und Simulationskomponente ist aber komplett abgedeckt — inklusive adaptivem Lernplan, der deine Schwächen gezielt trainiert.",
               },
-              {
-                q: "Was passiert nach dem 31. März?",
-                a: "Ab 1. April kostet MedMaster einmalig €29,90. Das ist eine einmalige Zahlung — kein monatliches Abo, keine wiederkehrenden Kosten. Du behältst vollen Zugang zu allen Fragen, Lerneinheiten, der Prüfungssimulation und allen zukünftigen Updates bis zum MedAT 2026. Wer sich jetzt registriert, lernt bis dahin komplett gratis.",
-              },
+              ...(!countdown.expired
+                ? [
+                    {
+                      q: "Was passiert nach dem 31. März?",
+                      a: "Ab 1. April kostet MedMaster einmalig €29,90. Das ist eine einmalige Zahlung — kein monatliches Abo, keine wiederkehrenden Kosten. Du behältst vollen Zugang zu allen Fragen, Lerneinheiten, der Prüfungssimulation und allen zukünftigen Updates bis zum MedAT 2026. Wer sich jetzt registriert, lernt bis dahin komplett gratis.",
+                    },
+                  ]
+                : [
+                    {
+                      q: "Was kostet MedMaster?",
+                      a: "MedMaster kostet einmalig €29,90 — kein Abo, keine wiederkehrenden Kosten. Du behältst vollen Zugang zu allen Fragen, Lerneinheiten, der Prüfungssimulation und allen zukünftigen Updates bis zum MedAT 2026.",
+                    },
+                  ]),
               {
                 q: "Was unterscheidet MedMaster von anderen Anbietern?",
                 a: "Vier Dinge: Erstens decken wir alle 4 MedAT-Bereiche ab — nicht nur BMS. Zweitens ist unser Lernsystem adaptiv — es erkennt deine Schwächen und passt den Lernplan automatisch an. Drittens kosten andere Plattformen €69–599 (oft mit Abo), während MedMaster einmalig €29,90 kostet. Viertens: KFF-Aufgaben werden algorithmisch generiert und validiert — du bekommst nie dieselbe Aufgabe zweimal. Dazu eine realistische Prüfungssimulation mit echten MedAT-Zeitlimits, unbegrenzt wiederholbar.",
@@ -908,7 +975,9 @@ export default function LandingPage() {
               <Logo variant="icon" size={20} />
               <span className="text-sm font-semibold text-[var(--text-primary)]">MedMaster</span>
             </div>
-            <div className={`flex flex-wrap ${isMobile ? "gap-x-4 gap-y-2" : "gap-x-8 gap-y-2"} text-sm`}>
+            <div
+              className={`flex flex-wrap ${isMobile ? "gap-x-4 gap-y-2" : "gap-x-8 gap-y-2"} text-sm`}
+            >
               <Link
                 to="/medat-uebungsfragen"
                 className="text-[var(--muted)] hover:text-[var(--text-primary)] transition-colors"

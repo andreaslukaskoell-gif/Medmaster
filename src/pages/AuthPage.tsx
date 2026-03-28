@@ -214,7 +214,9 @@ export default function AuthPage() {
         <div className="text-center">
           <h1 className="font-serif text-3xl font-bold text-[var(--accent)]">MedMaster</h1>
           <p className="text-[var(--muted)] mt-2">
-            5.000+ BMS-Fragen · 10.000+ KFF-Übungen · Gratis bis 31. März
+            {new Date() < new Date("2026-04-01T00:00:00+02:00")
+              ? "5.000+ BMS-Fragen · 10.000+ KFF-Übungen · Gratis bis 31. März"
+              : "5.000+ BMS-Fragen · 10.000+ KFF-Übungen · Einmalig €29,90"}
           </p>
         </div>
 
@@ -274,7 +276,9 @@ export default function AuthPage() {
                 <div className="w-full border-t border-[var(--border)]" />
               </div>
               <div className="relative flex justify-center text-xs">
-                <span className="bg-[var(--background)] px-2 text-[var(--muted)]">oder per E-Mail</span>
+                <span className="bg-[var(--background)] px-2 text-[var(--muted)]">
+                  oder per E-Mail
+                </span>
               </div>
             </div>
 
@@ -361,11 +365,7 @@ export default function AuthPage() {
                     </div>
 
                     <Button type="submit" className="w-full py-5" disabled={loading}>
-                      {loading
-                        ? "Wird verarbeitet..."
-                        : isNewUser
-                          ? "Konto erstellen"
-                          : "Anmelden"}
+                      {loading ? "Wird verarbeitet..." : isNewUser ? "Konto erstellen" : "Anmelden"}
                     </Button>
 
                     <div className="flex items-center justify-between text-xs">
