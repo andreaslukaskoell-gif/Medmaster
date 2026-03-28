@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { Mail, ArrowRight, Lock, Eye, EyeOff, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -17,15 +17,35 @@ import {
 } from "@/lib/analyticsTracker";
 import { trackConversion } from "@/lib/growthTracking";
 import { useThrottle } from "@/hooks/useThrottle";
+import { isSafeInternalPath } from "@/lib/security";
+
+/** Remember last email for returning users (non-sensitive, UX convenience). */
+const LAST_EMAIL_KEY = "medmaster_last_email";
+
+function getLastEmail(): string {
+  try {
+    return localStorage.getItem(LAST_EMAIL_KEY) ?? "";
+  } catch {
+    return "";
+  }
+}
+
+function saveLastEmail(email: string) {
+  try {
+    localStorage.setItem(LAST_EMAIL_KEY, email.trim());
+  } catch {
+    // localStorage unavailable — ignore
+  }
+}
 
 export default function AuthPage() {
   usePageTitle("Anmelden");
-  const [email, setEmail] = useState("");
+  const savedEmail = getLastEmail();
+  const [email, setEmail] = useState(savedEmail);
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [googleLoading, setGoogleLoading] = useState(false);
-  const [showEmailForm, setShowEmailForm] = useState(false);
   const [showPasswordForm, setShowPasswordForm] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [isNewUser, setIsNewUser] = useState(false);
@@ -33,7 +53,24 @@ export default function AuthPage() {
   const { signIn, signUp, signInWithGoogle, signInWithOtp } = useAuth();
   const setMedATOnboardingComplete = useStore((s) => s.setMedATOnboardingComplete);
   const navigate = useNavigate();
+  const location = useLocation();
   const { blocked, remainingCooldown, checkThrottle } = useThrottle(5, 60_000, 30_000);
+
+  // Extract redirect target from ?redirect= or from location state
+  const redirectTarget = (() => {
+    const params = new URLSearchParams(location.search);
+    const param = params.get("redirect");
+    if (param && isSafeInternalPath(param)) return param;
+    const state = location.state as { from?: string } | null;
+    if (state?.from && isSafeInternalPath(state.from)) return state.from;
+    return "/dashboard";
+  })();
+
+  // If user already logged in, redirect immediately
+  const { isAuthenticated } = useAuth();
+  useEffect(() => {
+    if (isAuthenticated) navigate(redirectTarget, { replace: true });
+  }, [isAuthenticated, navigate, redirectTarget]);
 
   const handleGoogle = async () => {
     setError("");
@@ -65,6 +102,7 @@ export default function AuthPage() {
     if (error) {
       setError(translateAuthError(error.message));
     } else {
+      saveLastEmail(email);
       trackLogin("magic_link");
       setOtpSent(true);
     }
@@ -95,6 +133,7 @@ export default function AuthPage() {
           setError(translateAuthError(msg));
         }
       } else {
+        saveLastEmail(email);
         trackSignup("email");
         trackEvent("signup", {
           method: "email",
@@ -113,9 +152,10 @@ export default function AuthPage() {
       if (error) {
         setError(translateAuthError(error.message ?? String(error)));
       } else {
+        saveLastEmail(email);
         trackLogin("email");
         setMedATOnboardingComplete();
-        navigate("/dashboard");
+        navigate(redirectTarget);
       }
     }
   };
@@ -234,140 +274,128 @@ export default function AuthPage() {
                 <div className="w-full border-t border-[var(--border)]" />
               </div>
               <div className="relative flex justify-center text-xs">
-                <span className="bg-[var(--background)] px-2 text-[var(--muted)]">oder</span>
+                <span className="bg-[var(--background)] px-2 text-[var(--muted)]">oder per E-Mail</span>
               </div>
             </div>
 
-            {/* Email fallback — magic link (secondary) */}
-            {!showEmailForm ? (
-              <button
-                type="button"
-                onClick={() => setShowEmailForm(true)}
-                className="w-full text-sm text-[var(--accent)] font-medium hover:underline py-2"
-              >
-                Mit E-Mail anmelden
-              </button>
-            ) : (
-              <div className="space-y-3">
-                {/* Magic link form */}
-                {!showPasswordForm ? (
-                  <>
-                    <form onSubmit={handleMagicLink} className="space-y-3">
-                      <div className="relative">
-                        <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[var(--muted)]" />
-                        <input
-                          type="email"
-                          value={email}
-                          onChange={(e) => setEmail(e.target.value)}
-                          placeholder="deine@email.at"
-                          required
-                          autoFocus
-                          aria-label="E-Mail-Adresse"
-                          aria-describedby={error ? "auth-error" : undefined}
-                          aria-invalid={!!error || undefined}
-                          className="w-full pl-10 pr-4 py-3 rounded-lg border border-[var(--border)] bg-[var(--card)] text-[var(--text-primary)] text-sm outline-none focus:ring-2 focus:ring-[var(--accent)]"
-                        />
-                      </div>
+            {/* Email section — Magic Link always visible (no extra click needed) */}
+            <div className="space-y-3">
+              {!showPasswordForm ? (
+                <>
+                  <form onSubmit={handleMagicLink} className="space-y-3">
+                    <div className="relative">
+                      <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[var(--muted)]" />
+                      <input
+                        type="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        placeholder="deine@email.at"
+                        required
+                        aria-label="E-Mail-Adresse"
+                        aria-describedby={error ? "auth-error" : undefined}
+                        aria-invalid={!!error || undefined}
+                        className="w-full pl-10 pr-4 py-3 rounded-lg border border-[var(--border)] bg-[var(--card)] text-[var(--text-primary)] text-sm outline-none focus:ring-2 focus:ring-[var(--accent)]"
+                      />
+                    </div>
 
-                      <Button type="submit" className="w-full py-5" disabled={loading}>
-                        {loading ? "Wird gesendet..." : "Anmeldelink senden"}
-                      </Button>
-                    </form>
-                    <p className="text-center text-xs text-[var(--muted)]">
-                      Wir senden dir einen Link — kein Passwort nötig
-                    </p>
-                    <button
-                      type="button"
-                      onClick={() => setShowPasswordForm(true)}
-                      className="w-full text-xs text-[var(--muted)] hover:text-[var(--text-secondary)] py-1"
-                    >
-                      Lieber mit Passwort anmelden?
-                    </button>
-                  </>
-                ) : (
-                  /* Password form — tertiary, demoted */
-                  <>
-                    <form onSubmit={handlePasswordSubmit} className="space-y-3">
-                      <div className="relative">
-                        <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[var(--muted)]" />
-                        <input
-                          type="email"
-                          value={email}
-                          onChange={(e) => setEmail(e.target.value)}
-                          placeholder="deine@email.at"
-                          required
-                          autoFocus
-                          aria-label="E-Mail-Adresse"
-                          aria-describedby={error ? "auth-error" : undefined}
-                          aria-invalid={!!error || undefined}
-                          className="w-full pl-10 pr-4 py-3 rounded-lg border border-[var(--border)] bg-[var(--card)] text-[var(--text-primary)] text-sm outline-none focus:ring-2 focus:ring-[var(--accent)]"
-                        />
-                      </div>
+                    <Button type="submit" className="w-full py-5" disabled={loading}>
+                      {loading ? "Wird gesendet..." : "Anmeldelink senden"}
+                    </Button>
+                  </form>
+                  <p className="text-center text-xs text-[var(--muted)]">
+                    Wir senden dir einen Link — kein Passwort nötig
+                  </p>
+                  <button
+                    type="button"
+                    onClick={() => setShowPasswordForm(true)}
+                    className="w-full text-xs text-[var(--muted)] hover:text-[var(--text-secondary)] py-1"
+                  >
+                    Lieber mit Passwort anmelden?
+                  </button>
+                </>
+              ) : (
+                /* Password form — tertiary, demoted */
+                <>
+                  <form onSubmit={handlePasswordSubmit} className="space-y-3">
+                    <div className="relative">
+                      <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[var(--muted)]" />
+                      <input
+                        type="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        placeholder="deine@email.at"
+                        required
+                        autoFocus
+                        aria-label="E-Mail-Adresse"
+                        aria-describedby={error ? "auth-error" : undefined}
+                        aria-invalid={!!error || undefined}
+                        className="w-full pl-10 pr-4 py-3 rounded-lg border border-[var(--border)] bg-[var(--card)] text-[var(--text-primary)] text-sm outline-none focus:ring-2 focus:ring-[var(--accent)]"
+                      />
+                    </div>
 
-                      <div className="relative">
-                        <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[var(--muted)]" />
-                        <input
-                          type={showPassword ? "text" : "password"}
-                          value={password}
-                          onChange={(e) => setPassword(e.target.value)}
-                          placeholder={
-                            isNewUser ? "Passwort wählen (min. 6 Zeichen)" : "Dein Passwort"
-                          }
-                          required
-                          aria-label="Passwort"
-                          className="w-full pl-10 pr-10 py-3 rounded-lg border border-[var(--border)] bg-[var(--card)] text-[var(--text-primary)] text-sm outline-none focus:ring-2 focus:ring-[var(--accent)]"
-                        />
-                        <button
-                          type="button"
-                          onClick={() => setShowPassword(!showPassword)}
-                          aria-label={showPassword ? "Passwort verbergen" : "Passwort anzeigen"}
-                          className="absolute right-3 top-1/2 -translate-y-1/2 text-[var(--muted)] hover:text-[var(--text-secondary)]"
-                        >
-                          {showPassword ? (
-                            <EyeOff className="w-4 h-4" />
-                          ) : (
-                            <Eye className="w-4 h-4" />
-                          )}
-                        </button>
-                      </div>
-
-                      <Button type="submit" className="w-full py-5" disabled={loading}>
-                        {loading
-                          ? "Wird verarbeitet..."
-                          : isNewUser
-                            ? "Konto erstellen"
-                            : "Anmelden"}
-                      </Button>
-
-                      <div className="flex items-center justify-between text-xs">
-                        <button
-                          type="button"
-                          onClick={() => setIsNewUser(!isNewUser)}
-                          className="text-[var(--accent)] hover:underline"
-                        >
-                          {isNewUser ? "Bereits ein Konto? Anmelden" : "Neu hier? Konto erstellen"}
-                        </button>
-                        {!isNewUser && (
-                          <Link
-                            to="/forgot-password"
-                            className="text-[var(--muted)] hover:text-[var(--text-secondary)]"
-                          >
-                            Passwort vergessen?
-                          </Link>
+                    <div className="relative">
+                      <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[var(--muted)]" />
+                      <input
+                        type={showPassword ? "text" : "password"}
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        placeholder={
+                          isNewUser ? "Passwort wählen (min. 6 Zeichen)" : "Dein Passwort"
+                        }
+                        required
+                        aria-label="Passwort"
+                        className="w-full pl-10 pr-10 py-3 rounded-lg border border-[var(--border)] bg-[var(--card)] text-[var(--text-primary)] text-sm outline-none focus:ring-2 focus:ring-[var(--accent)]"
+                      />
+                      <button
+                        type="button"
+                        onClick={() => setShowPassword(!showPassword)}
+                        aria-label={showPassword ? "Passwort verbergen" : "Passwort anzeigen"}
+                        className="absolute right-3 top-1/2 -translate-y-1/2 text-[var(--muted)] hover:text-[var(--text-secondary)]"
+                      >
+                        {showPassword ? (
+                          <EyeOff className="w-4 h-4" />
+                        ) : (
+                          <Eye className="w-4 h-4" />
                         )}
-                      </div>
-                    </form>
-                    <button
-                      type="button"
-                      onClick={() => setShowPasswordForm(false)}
-                      className="w-full text-xs text-[var(--muted)] hover:text-[var(--text-secondary)] py-1"
-                    >
-                      Zurück zum Anmeldelink
-                    </button>
-                  </>
-                )}
-              </div>
-            )}
+                      </button>
+                    </div>
+
+                    <Button type="submit" className="w-full py-5" disabled={loading}>
+                      {loading
+                        ? "Wird verarbeitet..."
+                        : isNewUser
+                          ? "Konto erstellen"
+                          : "Anmelden"}
+                    </Button>
+
+                    <div className="flex items-center justify-between text-xs">
+                      <button
+                        type="button"
+                        onClick={() => setIsNewUser(!isNewUser)}
+                        className="text-[var(--accent)] hover:underline"
+                      >
+                        {isNewUser ? "Bereits ein Konto? Anmelden" : "Neu hier? Konto erstellen"}
+                      </button>
+                      {!isNewUser && (
+                        <Link
+                          to="/forgot-password"
+                          className="text-[var(--muted)] hover:text-[var(--text-secondary)]"
+                        >
+                          Passwort vergessen?
+                        </Link>
+                      )}
+                    </div>
+                  </form>
+                  <button
+                    type="button"
+                    onClick={() => setShowPasswordForm(false)}
+                    className="w-full text-xs text-[var(--muted)] hover:text-[var(--text-secondary)] py-1"
+                  >
+                    Zurück zum Anmeldelink
+                  </button>
+                </>
+              )}
+            </div>
 
             <p className="text-center text-xs text-[var(--muted)] leading-relaxed">
               Mit der Anmeldung akzeptierst du die{" "}

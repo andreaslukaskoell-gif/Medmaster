@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import type { ReactNode } from "react";
-import { Navigate } from "react-router-dom";
+import { Navigate, useLocation } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 
 export function AuthGuard({ children }: { children: ReactNode }) {
   const { isAuthenticated, loading } = useAuth();
+  const location = useLocation();
   const [timedOut, setTimedOut] = useState(false);
 
   // Give auth 6s to resolve before showing a retry option (not a redirect)
@@ -48,7 +49,7 @@ export function AuthGuard({ children }: { children: ReactNode }) {
   }
 
   if (!isAuthenticated) {
-    return <Navigate to="/login" replace />;
+    return <Navigate to="/login" replace state={{ from: location.pathname }} />;
   }
 
   return <>{children}</>;
