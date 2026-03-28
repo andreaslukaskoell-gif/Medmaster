@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 import { ChevronLeft, ChevronRight, CheckCircle2, Clock, Play, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -254,7 +254,7 @@ export default function BMSKapitelView({
             Noch keine Unterkapitel vorhanden.
           </p>
         ) : (
-          <div className="card-glass divide-y divide-[var(--border)]/30 overflow-hidden" ref={(el) => { if (el) autoAnimateRef(el); }}>
+          <div className="card-glass divide-y divide-[var(--border)]/30 overflow-hidden" ref={autoAnimateRef}>
             {unterkapitel.map((uk, index) => {
               if (!uk || !uk.id) return null;
               const isDone = completedChapters.includes(uk.id);
