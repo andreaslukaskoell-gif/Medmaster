@@ -304,61 +304,64 @@ export default function LandingPage() {
 
   return (
     <div className="min-h-screen bg-[var(--background)]">
-      {/* ─── Header ─── */}
-      <header className="sticky top-0 z-40 bg-[var(--surface)]/80 backdrop-blur-2xl border-b border-[var(--border)]/50">
-        <div className="max-w-5xl mx-auto px-4 sm:px-8 h-14 sm:h-16 flex items-center justify-between">
-          <Logo variant="full" size={24} />
-          <div className="flex items-center gap-3 sm:gap-6">
-            <Link
-              to="/medat-kff-ueben"
-              className="text-sm text-[var(--muted)] hover:text-[var(--text-primary)] transition-colors hidden md:block"
-            >
-              KFF Demo
-            </Link>
-            <Link
-              to="/medat-uebungsfragen"
-              className="text-sm text-[var(--muted)] hover:text-[var(--text-primary)] transition-colors hidden md:block"
-            >
-              BMS Demo
-            </Link>
-            <Link
-              to="/login"
-              className="text-sm text-[var(--muted)] hover:text-[var(--text-primary)] transition-colors hidden sm:block"
-            >
-              Anmelden
-            </Link>
-            <Link
-              to="/login"
-              onClick={handleEmailClick}
-              className="btn-premium text-sm font-semibold px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl inline-flex items-center gap-1.5"
-            >
-              Kostenlos starten
-              <ArrowRight className="w-3.5 h-3.5" />
-            </Link>
+      {/* ─── Header + Urgency bar (sticky together) ─── */}
+      <div className="sticky top-0 z-40">
+        <header className="bg-[var(--surface)]/80 backdrop-blur-2xl border-b border-[var(--border)]/50">
+          <div className="max-w-5xl mx-auto px-4 sm:px-8 h-14 sm:h-16 flex items-center justify-between">
+            <Logo variant="full" size={24} />
+            <div className="flex items-center gap-3 sm:gap-6">
+              <Link
+                to="/medat-kff-ueben"
+                className="text-sm text-[var(--muted)] hover:text-[var(--text-primary)] transition-colors hidden md:block"
+              >
+                KFF Demo
+              </Link>
+              <Link
+                to="/medat-uebungsfragen"
+                className="text-sm text-[var(--muted)] hover:text-[var(--text-primary)] transition-colors hidden md:block"
+              >
+                BMS Demo
+              </Link>
+              <Link
+                to="/login"
+                className="text-sm text-[var(--muted)] hover:text-[var(--text-primary)] transition-colors"
+              >
+                Anmelden
+              </Link>
+              <Link
+                to="/login"
+                onClick={handleEmailClick}
+                className="btn-premium text-sm font-semibold px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl inline-flex items-center gap-1.5"
+              >
+                <span className="hidden sm:inline">Kostenlos starten</span>
+                <span className="sm:hidden">Starten</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
           </div>
-        </div>
-      </header>
+        </header>
 
-      {/* ─── Urgency bar ─── */}
-      {!countdown.expired && (
-        <div className="text-center py-2.5 sm:py-3 px-4" style={{ backgroundColor: NAVY }}>
-          <p className="text-xs sm:text-sm font-medium text-white/90 tracking-wide flex items-center justify-center gap-2 sm:gap-3">
-            <span>Gratis-Zugang endet in</span>
-            <span className="inline-flex gap-1 sm:gap-1.5 font-mono tabular-nums text-xs sm:text-sm">
-              <span className="bg-white/15 rounded px-1.5 py-0.5">{countdown.days}d</span>
-              <span className="bg-white/15 rounded px-1.5 py-0.5">
-                {String(countdown.hours).padStart(2, "0")}h
+        {/* ─── Urgency bar (sticks below header) ─── */}
+        {!countdown.expired && (
+          <div className="text-center py-2 sm:py-3 px-4" style={{ backgroundColor: NAVY }}>
+            <p className="text-xs sm:text-sm font-medium text-white/90 tracking-wide flex items-center justify-center gap-2 sm:gap-3">
+              <span>Gratis-Zugang endet in</span>
+              <span className="inline-flex gap-1 sm:gap-1.5 font-mono tabular-nums text-xs sm:text-sm">
+                <span className="bg-white/15 rounded px-1.5 py-0.5">{countdown.days}d</span>
+                <span className="bg-white/15 rounded px-1.5 py-0.5">
+                  {String(countdown.hours).padStart(2, "0")}h
+                </span>
+                <span className="bg-white/15 rounded px-1.5 py-0.5">
+                  {String(countdown.minutes).padStart(2, "0")}m
+                </span>
+                <span className="bg-white/15 rounded px-1.5 py-0.5 hidden sm:inline">
+                  {String(countdown.seconds).padStart(2, "0")}s
+                </span>
               </span>
-              <span className="bg-white/15 rounded px-1.5 py-0.5">
-                {String(countdown.minutes).padStart(2, "0")}m
-              </span>
-              <span className="bg-white/15 rounded px-1.5 py-0.5 hidden sm:inline">
-                {String(countdown.seconds).padStart(2, "0")}s
-              </span>
-            </span>
-          </p>
-        </div>
-      )}
+            </p>
+          </div>
+        )}
+      </div>
 
       <ReturningVisitorBanner />
 
