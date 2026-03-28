@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import { useAutoAnimate } from "@formkit/auto-animate/react";
 import { ChevronLeft, ChevronRight, CheckCircle2, Clock, Play, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useStore } from "@/store/useStore";
@@ -46,6 +47,7 @@ export default function BMSKapitelView({
   const location = useLocation();
   const [activeUKIndex, setActiveUKIndex] = useState<number | null>(initialUkIndex ?? null);
   const { setBreadcrumbs } = useBreadcrumb();
+  const [autoAnimateRef] = useAutoAnimate({ duration: 250 });
 
   useEffect(() => {
     if (location.pathname) useAdaptiveStore.getState().setLastPath(location.pathname);
@@ -97,7 +99,7 @@ export default function BMSKapitelView({
     return () => cancelAnimationFrame(id);
   }, [activeUKIndex, kapitel?.id]);
 
-  const { completedChapters: storeCompleted } = useStore();
+  const storeCompleted = useStore((s) => s.completedChapters);
   const completedChapters = storeCompleted || [];
 
   if (!kapitel || !kapitel.id) {
@@ -252,7 +254,7 @@ export default function BMSKapitelView({
             Noch keine Unterkapitel vorhanden.
           </p>
         ) : (
-          <div className="card-glass divide-y divide-[var(--border)]/30 overflow-hidden">
+          <div className="card-glass divide-y divide-[var(--border)]/30 overflow-hidden" ref={autoAnimateRef}>
             {unterkapitel.map((uk, index) => {
               if (!uk || !uk.id) return null;
               const isDone = completedChapters.includes(uk.id);

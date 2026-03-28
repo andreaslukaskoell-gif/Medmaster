@@ -22,6 +22,7 @@ import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
 import { usePageTitle } from "@/hooks/usePageTitle";
 import StrategyGuideView from "@/components/shared/StrategyGuideView";
 import { stripMarkdownAsterisks } from "@/utils/formatExplanation";
+import { useViewportMode } from "@/hooks/useViewportMode";
 import { tvStrategyGuide, tvTexts } from "@/data/tvData";
 import { tvTextSets } from "@/data/tvTextsExpanded";
 import { tvTextSets2 } from "@/data/tvTextsExpanded2";
@@ -51,6 +52,7 @@ const LABELS = ["A", "B", "C", "D", "E"];
 
 export default function TV() {
   usePageTitle("TV – Textverständnis");
+  const { isMobile } = useViewportMode();
   const location = useLocation();
   const dailyPlanTvTexts = location.state?.dailyPlanTvTexts as number | undefined;
 
@@ -69,7 +71,10 @@ export default function TV() {
   // Collapse toggles
   const [showAllLegacy, setShowAllLegacy] = useState(false);
   const [showAllOffiziell, setShowAllOffiziell] = useState(false);
-  const { addXP, checkStreak, saveQuizResult, logActivity } = useStore();
+  const addXP = useStore((s) => s.addXP);
+  const checkStreak = useStore((s) => s.checkStreak);
+  const saveQuizResult = useStore((s) => s.saveQuizResult);
+  const logActivity = useStore((s) => s.logActivity);
   const getMinutes = useSessionTimer();
 
   const tvText = tvTexts[selectedTextIndex];
@@ -487,9 +492,9 @@ export default function TV() {
         </div>
 
         {/* Split-pane: text (sticky on desktop) + questions side by side */}
-        <div className="grid grid-cols-2 gap-6">
+        <div className={isMobile ? "space-y-4" : "grid grid-cols-2 gap-6"}>
           {/* Text content — sticky on desktop */}
-          <div className="sticky top-20 self-start max-h-[calc(100vh-6rem)] overflow-y-auto pr-2">
+          <div className={isMobile ? "" : "sticky top-20 self-start max-h-[calc(100vh-6rem)] overflow-y-auto pr-2"}>
             <Card>
               <CardHeader>
                 <CardTitle className="text-[var(--text-primary)] text-base">
@@ -720,16 +725,16 @@ export default function TV() {
   const displayedLegacyTexts = showAllLegacy ? tvTexts : tvTexts.slice(0, 3);
 
   return (
-    <div className="max-w-5xl mx-auto space-y-6">
+    <div className={`max-w-5xl mx-auto space-y-6 ${isMobile ? "px-3" : ""}`}>
       {/* Header */}
       <div>
-        <div className="flex items-center gap-3 mb-1">
-          <h1 className="text-2xl font-bold text-[var(--text-primary)]">Textverständnis</h1>
-          <span className="text-xs font-semibold text-[var(--accent)] bg-[var(--accent)]/10 px-2.5 py-1 rounded-full">
+        <div className={`flex ${isMobile ? "flex-col gap-1" : "items-center gap-3"} mb-1`}>
+          <h1 className={`${isMobile ? "text-xl" : "text-2xl"} font-bold text-[var(--text-primary)]`}>Textverständnis</h1>
+          <span className="text-xs font-semibold text-[var(--accent)] bg-[var(--accent)]/10 px-2.5 py-1 rounded-full w-fit">
             10% des MedAT
           </span>
         </div>
-        <div className="flex items-center gap-4 text-sm text-[var(--muted)]">
+        <div className={`flex ${isMobile ? "flex-col gap-2" : "items-center gap-4"} text-sm text-[var(--muted)]`}>
           <span>5 Texte · 35 Minuten · Multiple-Choice</span>
           <Button variant="outline" size="sm" onClick={() => setView("strategy")}>
             <BookOpen className="w-4 h-4 mr-1" /> Strategie
@@ -755,35 +760,39 @@ export default function TV() {
               return (
                 <div
                   key={set.id}
-                  className="flex items-center gap-4 px-5 py-3.5 hover:bg-[var(--accent)]/3 transition-colors group"
+                  className={`${isMobile ? "flex flex-col gap-2 px-3 py-3" : "flex items-center gap-4 px-5 py-3.5"} hover:bg-[var(--accent)]/3 transition-colors group`}
                 >
-                  <span className="text-xs font-bold text-[var(--muted)] tabular-nums w-5 text-center shrink-0">
-                    {i + 1}
-                  </span>
-                  <div className="flex-1 min-w-0">
-                    <span className="text-sm font-medium text-[var(--text-primary)] truncate block">
-                      {set.name}
+                  <div className="flex items-center gap-3 min-w-0">
+                    <span className="text-xs font-bold text-[var(--muted)] tabular-nums w-5 text-center shrink-0">
+                      {i + 1}
+                    </span>
+                    <div className="flex-1 min-w-0">
+                      <span className="text-sm font-medium text-[var(--text-primary)] truncate block">
+                        {set.name}
+                      </span>
+                    </div>
+                    <Badge
+                      className={`text-[10px] shrink-0 ${difficultyColors[set.difficulty] || ""}`}
+                    >
+                      {set.difficulty}
+                    </Badge>
+                    <span className="text-xs text-[var(--muted)] shrink-0 tabular-nums">
+                      {totalQ} Fragen
                     </span>
                   </div>
-                  <Badge
-                    className={`text-[10px] shrink-0 ${difficultyColors[set.difficulty] || ""}`}
-                  >
-                    {set.difficulty}
-                  </Badge>
-                  <span className="text-xs text-[var(--muted)] shrink-0 tabular-nums">
-                    {totalQ} Fragen
-                  </span>
-                  <Button variant="premium" size="sm" onClick={() => handleStartSet(i, "practice")}>
-                    <Play className="w-4 h-4 mr-1" /> Üben
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    onClick={() => handleStartSet(i, "exam")}
-                    title="35 Minuten Timer"
-                  >
-                    <Timer className="w-4 h-4 mr-1" /> Prüfung
-                  </Button>
+                  <div className={`flex items-center gap-2 ${isMobile ? "ml-8" : ""}`}>
+                    <Button variant="premium" size="sm" onClick={() => handleStartSet(i, "practice")}>
+                      <Play className="w-4 h-4 mr-1" /> Üben
+                    </Button>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={() => handleStartSet(i, "exam")}
+                      title="35 Minuten Timer"
+                    >
+                      <Timer className="w-4 h-4 mr-1" /> Prüfung
+                    </Button>
+                  </div>
                 </div>
               );
             })}
@@ -792,8 +801,8 @@ export default function TV() {
       )}
 
       {/* Offizielles Aussagen-Format */}
-      <section className="space-y-3 border-t border-[var(--border)] pt-8">
-        <div className="flex items-baseline justify-between">
+      <section className={`space-y-3 border-t border-[var(--border)] ${isMobile ? "pt-5" : "pt-8"}`}>
+        <div className={`flex ${isMobile ? "flex-col gap-2" : "items-baseline justify-between"}`}>
           <div className="flex items-center gap-2">
             <h2 className="text-lg font-semibold text-[var(--text-primary)]">Offizielles Format</h2>
             <Badge variant="info" className="text-[10px]">
@@ -814,7 +823,7 @@ export default function TV() {
             <button
               key={t.id}
               onClick={() => handleStartAussagen(i)}
-              className="w-full flex items-center gap-4 px-5 py-3.5 text-left hover:bg-[var(--accent)]/3 transition-colors cursor-pointer group"
+              className={`w-full flex items-center ${isMobile ? "gap-2 px-3 py-3" : "gap-4 px-5 py-3.5"} text-left hover:bg-[var(--accent)]/3 transition-colors cursor-pointer group`}
             >
               <span className="text-xs font-bold text-[var(--muted)] tabular-nums w-5 text-center shrink-0">
                 {i + 1}
@@ -859,7 +868,7 @@ export default function TV() {
       </section>
 
       {/* Klassischer Modus */}
-      <section className="space-y-3 border-t border-[var(--border)] pt-8">
+      <section className={`space-y-3 border-t border-[var(--border)] ${isMobile ? "pt-5" : "pt-8"}`}>
         <div className="flex items-baseline justify-between">
           <h2 className="text-lg font-semibold text-[var(--text-primary)]">
             Klassischer Modus{" "}
@@ -873,7 +882,7 @@ export default function TV() {
             <button
               key={t.id}
               onClick={() => handleStartLegacy(i)}
-              className="w-full flex items-center gap-4 px-5 py-3.5 text-left hover:bg-[var(--accent)]/3 transition-colors cursor-pointer group"
+              className={`w-full flex items-center ${isMobile ? "gap-2 px-3 py-3" : "gap-4 px-5 py-3.5"} text-left hover:bg-[var(--accent)]/3 transition-colors cursor-pointer group`}
             >
               <span className="text-xs font-bold text-[var(--muted)] tabular-nums w-5 text-center shrink-0">
                 {i + 1}

@@ -131,7 +131,7 @@ export default function ChromosomalMutations() {
       </p>
 
       {/* Main diagram */}
-      <svg viewBox="0 0 440 310" className="w-full max-w-lg mx-auto">
+      <svg role="img" viewBox="0 0 440 310" className="w-full max-w-lg mx-auto">
         <title>
           Chromosomenmutationen: Deletion, Duplikation, Inversion, Translokation, Aneuploidie
         </title>

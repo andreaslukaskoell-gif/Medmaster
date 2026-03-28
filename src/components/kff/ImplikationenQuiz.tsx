@@ -55,18 +55,16 @@ export function ImplikationenQuiz({
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [trainingLoading, setTrainingLoading] = useState(false);
   const [trainingError, setTrainingError] = useState<string | null>(null);
-  const {
-    addXP,
-    checkStreak,
-    saveQuizResult,
-    logActivity,
-    skillRating,
-    setSkillRating,
-    addKffTaskFailed,
-    markKffTaskCorrect,
-    getKffFailedIdsForDomain,
-    getKffSeenIdsForDomain,
-  } = useStore();
+  const addXP = useStore((s) => s.addXP);
+  const checkStreak = useStore((s) => s.checkStreak);
+  const saveQuizResult = useStore((s) => s.saveQuizResult);
+  const logActivity = useStore((s) => s.logActivity);
+  const skillRating = useStore((s) => s.skillRating);
+  const setSkillRating = useStore((s) => s.setSkillRating);
+  const addKffTaskFailed = useStore((s) => s.addKffTaskFailed);
+  const markKffTaskCorrect = useStore((s) => s.markKffTaskCorrect);
+  const getKffFailedIdsForDomain = useStore((s) => s.getKffFailedIdsForDomain);
+  const getKffSeenIdsForDomain = useStore((s) => s.getKffSeenIdsForDomain);
   const getMinutes = useSessionTimer();
 
   const safeQuestions = questions || [];
@@ -557,11 +555,13 @@ export function ImplikationenQuiz({
           <p className="text-sm font-medium text-[var(--text-primary)] mb-3">
             Welche Schlussfolgerung ist korrekt?
           </p>
-          <div className="space-y-2">
+          <div className="space-y-2" role="radiogroup" aria-label="Antwortmöglichkeiten">
             {currentQ.options && Array.isArray(currentQ.options) ? (
               currentQ.options.map((opt, oi) => (
                 <button
                   key={oi}
+                  role="radio"
+                  aria-checked={answers[currentQ.id] === oi}
                   onClick={() => setAnswers((p) => ({ ...p, [currentQ.id]: oi }))}
                   className={`w-full text-left px-4 py-3 rounded-lg border text-sm transition-colors cursor-pointer ${
                     answers[currentQ.id] === oi

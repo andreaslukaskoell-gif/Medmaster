@@ -2,6 +2,8 @@ import { useMemo } from "react";
 import { Treemap, ResponsiveContainer, Tooltip, PieChart, Pie, Cell } from "recharts";
 import { useStore } from "@/store/useStore";
 import { useIsMounted } from "@/hooks/useIsMounted";
+
+const STABLE_EMPTY_ARR: never[] = [];
 import { RadarHexagonSkeleton } from "@/components/skeletons/AppSkeletons";
 import {
   aggregateWrongAnswersByTopic,
@@ -30,7 +32,7 @@ function getTreemapFill(value: number, maxValue: number): string {
 
 export function SchwachstellenAnalyse() {
   const mounted = useIsMounted();
-  const quizResults = useStore((s) => s.quizResults);
+  const quizResults = useStore((s) => s.quizResults ?? STABLE_EMPTY_ARR);
 
   const { treemapRoot, donutData, actionSentence, totalWrong, totalAnswered } = useMemo(() => {
     const {

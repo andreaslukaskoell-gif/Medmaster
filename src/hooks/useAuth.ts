@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { supabase } from "@/lib/supabase";
 import { startAutoSync, stopAutoSync, pushStatsToSupabase } from "@/lib/syncService";
 import { startMainSync, stopMainSync } from "@/lib/sync";
@@ -12,8 +12,15 @@ import {
   getStoredGclid,
   getStoredFbclid,
 } from "@/lib/analyticsTracker";
-import { sanitizeUrlParam } from "@/lib/security";
+import { sanitizeUrlParam, validateRedirectUrl } from "@/lib/security";
 import type { User, Session } from "@supabase/supabase-js";
+
+/** Domains allowed for OAuth redirect (Supabase Auth + Google) */
+const OAUTH_REDIRECT_DOMAINS = [
+  "supabase.co",
+  "accounts.google.com",
+  "medmaster.at",
+];
 
 interface Profile {
   id: string;
@@ -228,8 +235,14 @@ export function useAuth() {
         options: { redirectTo: window.location.origin + "/dashboard" },
       });
       if (error) return { error: new Error(error.message) };
-      // signInWithOAuth returns a URL — if no redirect happened, open it manually
-      if (data?.url) window.location.href = data.url;
+      // signInWithOAuth returns a URL — validate domain before redirect
+      if (data?.url) {
+        const safe = validateRedirectUrl(data.url, OAUTH_REDIRECT_DOMAINS);
+        if (!safe) {
+          return { error: new Error("OAuth-Redirect-URL nicht vertrauenswürdig") };
+        }
+        window.location.href = safe;
+      }
       return { error: null };
     } catch (e: unknown) {
       const msg = e instanceof Error ? e.message : "Google Login fehlgeschlagen";
@@ -304,7 +317,10 @@ export function useAuth() {
   const isAuthenticated = !!user;
   const isPremium = tier === "premium";
 
-  return {
+  // Memoize return object to prevent new reference on every render.
+  // Functions are intentionally excluded — they read latest state via closure
+  // and are only called from event handlers, not during render.
+  return useMemo(() => ({
     user,
     profile,
     session,
@@ -320,5 +336,6 @@ export function useAuth() {
     signOut,
     deleteAccount,
     resetPassword,
-  };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }), [user, profile, session, loading, isAuthenticated, tier, isPremium]);
 }

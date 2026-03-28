@@ -83,7 +83,8 @@ type PlacementItem = { kind: "task"; task: Task } | { kind: "bms"; question: Que
 
 export default function PlacementTest() {
   const navigate = useNavigate();
-  const { setSkillRating, setMedATOnboardingComplete } = useStore();
+  const setSkillRating = useStore((s) => s.setSkillRating);
+  const setMedATOnboardingComplete = useStore((s) => s.setMedATOnboardingComplete);
   const [items, setItems] = useState<PlacementItem[]>([]);
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});

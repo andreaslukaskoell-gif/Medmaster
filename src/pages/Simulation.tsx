@@ -54,6 +54,7 @@ import { Link } from "react-router-dom";
 import { useStore } from "@/store/useStore";
 import { useSessionTimer } from "@/hooks/useSessionTimer";
 import { usePageTitle } from "@/hooks/usePageTitle";
+import { useViewportMode } from "@/hooks/useViewportMode";
 import { stripMarkdownAsterisks } from "@/utils/formatExplanation";
 import { SimulationHistory } from "@/components/simulation/SimulationHistory";
 
@@ -474,9 +475,7 @@ function generateImplikationenQuestions(section: SimSection): UnifiedQuestion[] 
 }
 
 function generateWortflüssigkeitQuestions(section: SimSection): UnifiedQuestion[] {
-  const set = mixDifficulties(generateWortflüssigkeitSet, section.questionCount).filter(
-    (q) => q.correctWord.length >= 7
-  );
+  const set = mixDifficulties(generateWortflüssigkeitSet, section.questionCount);
   return set.map((q) => ({
     id: q.id,
     sectionId: section.id,
@@ -757,6 +756,7 @@ function getSectionGroupLabel(sectionType: SectionType): string {
 
 export default function Simulation() {
   usePageTitle("MedAT Simulation");
+  const { isMobile } = useViewportMode();
   const [mode, setMode] = useState<Mode>("select");
   const [activeTab, setActiveTab] = useState<"start" | "verlauf">("start");
   const currentResultIdRef = useRef<string>("");
@@ -778,7 +778,11 @@ export default function Simulation() {
   void sectionStartTime;
   const [simVariant, setSimVariant] = useState<number | undefined>(undefined);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
-  const { addXP, checkStreak, saveQuizResult, logActivity, quizResults } = useStore();
+  const addXP = useStore((s) => s.addXP);
+  const checkStreak = useStore((s) => s.checkStreak);
+  const saveQuizResult = useStore((s) => s.saveQuizResult);
+  const logActivity = useStore((s) => s.logActivity);
+  const quizResults = useStore((s) => s.quizResults);
   const getMinutes = useSessionTimer();
   const { recordAnswer: recordAdaptive } = useAdaptiveStore();
 
@@ -1153,7 +1157,7 @@ export default function Simulation() {
     );
 
     return (
-      <div className="max-w-5xl mx-auto space-y-6">
+      <div className={`max-w-5xl mx-auto space-y-6 ${isMobile ? "px-3" : ""}`}>
         <div className="hero-orbs text-center py-6">
           <h1 className="text-2xl font-bold text-[var(--text-primary)]">Testsimulation</h1>
           <p className="text-[var(--muted)] mt-1">
@@ -1213,7 +1217,7 @@ export default function Simulation() {
                     <span className="font-semibold text-sm text-[var(--text-primary)]">BMS</span>
                     <span className="text-xs text-[var(--muted)]">94 Fragen, 75 Min</span>
                   </div>
-                  <div className="grid grid-cols-4 gap-2">
+                  <div className={`grid ${isMobile ? "grid-cols-2" : "grid-cols-4"} gap-2`}>
                     {BMS_FULL_SECTIONS.map((sec) => (
                       <div key={sec.id} className="text-center text-xs text-[var(--muted)]">
                         {sec.label}: {sec.questionCount}F / {sec.timeLimitMinutes}Min
@@ -1238,11 +1242,11 @@ export default function Simulation() {
                     <span className="font-semibold text-sm text-[var(--text-primary)]">KFF</span>
                     <span className="text-xs text-[var(--muted)]">5 Untertests, ~93 Min</span>
                   </div>
-                  <div className="grid grid-cols-3 gap-2 text-xs text-[var(--muted)]">
+                  <div className={`grid ${isMobile ? "grid-cols-2" : "grid-cols-3"} gap-2 text-xs text-[var(--muted)]`}>
                     <div>Zahlenfolgen: 10 / 25Min</div>
                     <div>Gedächtnis: 8Min + 25F / 15Min</div>
                     <div>Implikationen: 10 / 10Min</div>
-                    <div>Wortflüssigkeit: 15 / 20Min</div>
+                    <div>Wortflüssigkeit: 20 / 20Min</div>
                     <div>Figuren: 10 / 15Min</div>
                   </div>
                 </div>
@@ -1253,7 +1257,7 @@ export default function Simulation() {
                     <span className="font-semibold text-sm text-[var(--text-primary)]">SEK</span>
                     <span className="text-xs text-[var(--muted)]">3 Untertests, 45 Min</span>
                   </div>
-                  <div className="grid grid-cols-3 gap-2 text-xs text-[var(--muted)]">
+                  <div className={`grid ${isMobile ? "grid-cols-1" : "grid-cols-3"} gap-2 text-xs text-[var(--muted)]`}>
                     <div>Erkennen: 10 / 15Min</div>
                     <div>Regulieren: 10 / 15Min</div>
                     <div>Entscheiden: 10 / 15Min</div>
@@ -1272,10 +1276,7 @@ export default function Simulation() {
                     </p>
                   </div>
                 </div>
-                <p className="text-xs text-[var(--muted)]">
-                  Jede Variante verwendet einen anderen Fragenpool mit gleichem Aufbau.
-                </p>
-                <div className="grid grid-cols-5 gap-2">
+                <div className={`grid ${isMobile ? "grid-cols-2" : "grid-cols-5"} gap-2`}>
                   {[1, 2, 3, 4, 5].map((v) => (
                     <Button
                       key={v}
@@ -1291,7 +1292,7 @@ export default function Simulation() {
 
             {/* Individual Section Tests */}
             <h2 className="text-lg font-bold text-[var(--text-primary)]">Einzelne Testteile</h2>
-            <div className="grid grid-cols-4 gap-4 stagger-children">
+            <div className={`grid ${isMobile ? "grid-cols-2" : "grid-cols-4"} gap-4 stagger-children`}>
               {/* BMS */}
               <div className="card-glass p-5 space-y-3">
                 <div className="flex items-center gap-3">
@@ -1371,7 +1372,7 @@ export default function Simulation() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-3 gap-3 stagger-children">
+              <div className={`grid ${isMobile ? "grid-cols-2" : "grid-cols-3"} gap-3 stagger-children`}>
                 {BMS_KURZTEST_OPTIONS.map((opt) => (
                   <button
                     key={opt.id}
@@ -1403,7 +1404,7 @@ export default function Simulation() {
     const nextGroup = nextSec ? getSectionGroupLabel(nextSec.sectionType) : "";
 
     return (
-      <div className="max-w-5xl mx-auto space-y-6">
+      <div className={`max-w-5xl mx-auto space-y-6 ${isMobile ? "px-3" : ""}`}>
         <div className="card-glass p-8 text-center space-y-6">
           <div className="w-20 h-20 bg-yellow-100 dark:bg-yellow-900/30 rounded-2xl flex items-center justify-center mx-auto">
             <Coffee className="w-10 h-10 text-yellow-600 dark:text-yellow-400" />
@@ -1436,7 +1437,7 @@ export default function Simulation() {
 
   if (mode === "gedaechtnis-learn") {
     return (
-      <div className="max-w-5xl mx-auto space-y-6">
+      <div className={`max-w-5xl mx-auto space-y-6 ${isMobile ? "px-3" : ""}`}>
         <div className="flex items-center justify-between">
           <div>
             <Badge variant="info">Gedächtnis & Merkfähigkeit</Badge>
@@ -1462,7 +1463,7 @@ export default function Simulation() {
           beantworten müssen.
         </div>
 
-        <div className="grid grid-cols-2 gap-4">
+        <div className={`grid ${isMobile ? "grid-cols-1" : "grid-cols-2"} gap-4`}>
           {allergyCards.map((pass) => {
             const initials = pass.name
               .split(/\s+/)
@@ -1613,7 +1614,7 @@ export default function Simulation() {
     const timeEntries = sectionTimeData;
 
     return (
-      <div className="max-w-5xl mx-auto space-y-6">
+      <div className={`max-w-5xl mx-auto space-y-6 ${isMobile ? "px-3" : ""}`}>
         <div className="hero-orbs text-center py-4">
           <h1 className="text-2xl font-bold text-[var(--text-primary)]">Simulationsergebnis</h1>
         </div>
@@ -1631,7 +1632,7 @@ export default function Simulation() {
 
         {/* Group breakdown */}
         {groupScores.size > 1 && (
-          <div className="grid grid-cols-4 gap-3 stagger-children">
+          <div className={`grid ${isMobile ? "grid-cols-2" : "grid-cols-4"} gap-3 stagger-children`}>
             {[...groupScores.entries()].map(([key, data]) => {
               const pct = data.total > 0 ? Math.round((data.score / data.total) * 100) : 0;
               return (
@@ -2138,7 +2139,7 @@ export default function Simulation() {
           <p className="text-sm font-medium text-[var(--text-primary)] mb-3">
             Welche Figur entsteht aus den Teilen?
           </p>
-          <div className="grid grid-cols-5 gap-3">
+          <div className={`grid ${isMobile ? "grid-cols-3" : "grid-cols-5"} gap-3`}>
             {aufgabe.options.map((opt, oi) => {
               const label = FZ_OPT_LABELS[oi];
               const selected = answers[q.id] === label;
@@ -2243,15 +2244,15 @@ export default function Simulation() {
   };
 
   return (
-    <div className="max-w-5xl mx-auto space-y-6">
+    <div className={`max-w-5xl mx-auto space-y-6 ${isMobile ? "px-3" : ""}`}>
       {/* Header */}
-      <div className="flex items-center justify-between">
+      <div className={`flex items-center justify-between ${isMobile ? "flex-wrap gap-2" : ""}`}>
         <div>
           <Badge variant="info">{currentSec.label}</Badge>
           {currentSec.parentGroup && (
             <span className="text-xs text-[var(--muted)] ml-1">({currentSec.parentGroup})</span>
           )}
-          <span className="text-sm text-[var(--muted)] ml-2">
+          <span className={`text-[var(--muted)] ml-2 ${isMobile ? "text-xs" : "text-sm"}`}>
             Teil {currentSectionIdx + 1}/{sections.length} / Frage {index + 1}/
             {sectionQuestions.length}
           </span>
@@ -2311,7 +2312,7 @@ export default function Simulation() {
           <button
             key={sq.id}
             onClick={() => setIndex(i)}
-            className={`w-7 h-7 rounded text-xs font-medium transition-colors cursor-pointer ${
+            className={`${isMobile ? "w-6 h-6 text-[10px]" : "w-7 h-7 text-xs"} rounded font-medium transition-colors cursor-pointer ${
               i === index
                 ? "bg-[var(--accent)] text-white"
                 : answers[sq.id]

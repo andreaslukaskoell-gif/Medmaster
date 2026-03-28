@@ -2,6 +2,7 @@ import { useState } from "react";
 import { RotateCcw, ChevronDown, ChevronUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useKFFStats } from "@/hooks/useKFFStats";
+import { useViewportMode } from "@/hooks/useViewportMode";
 
 // ---------------------------------------------------------------------------
 // Helpers
@@ -56,11 +57,51 @@ function Sparkline({ data, color }: { data: number[]; color: string }) {
 }
 
 // ---------------------------------------------------------------------------
+// Mobile subtest row — stacked layout
+// ---------------------------------------------------------------------------
+
+function MobileSubtestRow({
+  s,
+  color,
+}: {
+  s: { subtest: string; label: string; accuracy: number; totalTasks: number; sessionsCount: number; lastPracticed: string | null; trend: number[] };
+  color: string;
+}) {
+  const practiced = s.sessionsCount > 0;
+  return (
+    <div className="py-3">
+      <div className="flex items-center justify-between gap-2">
+        <div className="flex items-center gap-2 min-w-0">
+          <span className="w-2.5 h-2.5 rounded-full shrink-0" style={{ background: color }} />
+          <span className="text-sm font-medium text-[var(--text-primary)] truncate">{s.label}</span>
+        </div>
+        {practiced ? (
+          <span className={`text-sm font-bold shrink-0 ${accuracyColor(s.accuracy)}`}>
+            {s.accuracy}%
+          </span>
+        ) : (
+          <span className="text-xs text-[var(--muted)] italic shrink-0">Noch nicht geübt</span>
+        )}
+      </div>
+      {practiced && (
+        <div className="flex items-center gap-3 mt-1.5 ml-[18px]">
+          <span className="text-[11px] text-[var(--muted)]">{s.totalTasks} Aufg.</span>
+          <span className="text-[11px] text-[var(--muted)]">{s.sessionsCount} Sess.</span>
+          <span className="text-[11px] text-[var(--muted)]">{relativeDate(s.lastPracticed)}</span>
+          <Sparkline data={s.trend} color={color} />
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ---------------------------------------------------------------------------
 // Component
 // ---------------------------------------------------------------------------
 
 export function KFFStatsSection() {
   const { subtests, overallAccuracy, totalSeriousSessions, resetStats } = useKFFStats();
+  const { isMobile } = useViewportMode();
   const [expanded, setExpanded] = useState(false);
   const [confirmReset, setConfirmReset] = useState(false);
 
@@ -72,9 +113,9 @@ export function KFFStatsSection() {
       <button
         type="button"
         onClick={() => setExpanded((p) => !p)}
-        className="w-full flex items-center justify-between px-5 py-3.5 text-left cursor-pointer hover:bg-[var(--background)]/50 rounded-xl transition-colors"
+        className={`w-full flex items-center justify-between ${isMobile ? "px-3.5 py-3" : "px-5 py-3.5"} text-left cursor-pointer hover:bg-[var(--background)]/50 rounded-xl transition-colors`}
       >
-        <div className="flex items-center gap-3">
+        <div className={`flex items-center gap-2 ${isMobile ? "flex-wrap" : "gap-3"}`}>
           <h3 className="text-sm font-semibold text-[var(--text-primary)]">Dein KFF-Fortschritt</h3>
           {hasPracticed && (
             <span
@@ -89,26 +130,29 @@ export function KFFStatsSection() {
               {overallAccuracy}% gesamt
             </span>
           )}
-          {hasPracticed && (
+          {hasPracticed && !isMobile && (
             <span className="text-xs text-[var(--muted)]">
               {totalSeriousSessions} {totalSeriousSessions === 1 ? "Session" : "Sessions"}
             </span>
           )}
         </div>
         {expanded ? (
-          <ChevronUp className="w-4 h-4 text-[var(--muted)]" />
+          <ChevronUp className="w-4 h-4 text-[var(--muted)] shrink-0" />
         ) : (
-          <ChevronDown className="w-4 h-4 text-[var(--muted)]" />
+          <ChevronDown className="w-4 h-4 text-[var(--muted)] shrink-0" />
         )}
       </button>
 
       {/* Expandable body */}
       {expanded && (
-        <div className="px-5 pb-4">
+        <div className={isMobile ? "px-3.5 pb-3" : "px-5 pb-4"}>
           {/* Subtest rows */}
           <div className="divide-y divide-[var(--border)]">
             {subtests.map((s) => {
               const color = SUBTEST_COLORS[s.subtest] ?? "#6b7280";
+              if (isMobile) {
+                return <MobileSubtestRow key={s.subtest} s={s} color={color} />;
+              }
               const practiced = s.sessionsCount > 0;
               return (
                 <div key={s.subtest} className="flex items-center gap-4 py-2.5 text-sm">
@@ -152,10 +196,10 @@ export function KFFStatsSection() {
           </div>
 
           {/* Reset footer */}
-          <div className="mt-3 pt-3 border-t border-[var(--border)] flex items-center justify-end gap-2">
+          <div className={`mt-3 pt-3 border-t border-[var(--border)] flex items-center ${isMobile ? "justify-center" : "justify-end"} gap-2 ${isMobile ? "flex-wrap" : ""}`}>
             {confirmReset ? (
               <>
-                <span className="text-xs text-[var(--muted)]">
+                <span className={`text-xs text-[var(--muted)] ${isMobile ? "text-center w-full mb-2" : ""}`}>
                   Möchtest du die KFF-Statistik zurücksetzen? Deine Lernhistorie wird gelöscht.
                 </span>
                 <Button

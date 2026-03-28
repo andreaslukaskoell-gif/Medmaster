@@ -17,10 +17,15 @@ export function ExamTimer({ totalSeconds, onTimeUp, paused = false }: ExamTimerP
   }, [onTimeUp]);
 
   useEffect(() => {
-    if (paused || secondsLeft <= 0) return;
-    const t = setInterval(() => setSecondsLeft((s) => s - 1), 1000);
+    if (paused) return;
+    const t = setInterval(() => {
+      setSecondsLeft((s) => {
+        if (s <= 1) { clearInterval(t); return 0; }
+        return s - 1;
+      });
+    }, 1000);
     return () => clearInterval(t);
-  }, [paused, secondsLeft]);
+  }, [paused]);
 
   useEffect(() => {
     if (secondsLeft <= 0 && !firedRef.current) {
@@ -35,7 +40,7 @@ export function ExamTimer({ totalSeconds, onTimeUp, paused = false }: ExamTimerP
 
   return (
     <div
-      className={`fixed top-4 right-4 z-50 flex items-center gap-2 px-3 py-1.5 rounded-full shadow-lg border backdrop-blur-sm font-mono text-sm font-semibold transition-colors ${
+      className={`fixed top-[max(1rem,env(safe-area-inset-top))] right-[max(1rem,env(safe-area-inset-right))] z-50 flex items-center gap-2 px-3 py-1.5 rounded-full shadow-lg border backdrop-blur-sm font-mono text-sm font-semibold transition-colors ${
         isWarning
           ? "bg-red-50/90 dark:bg-red-950/90 border-red-300 dark:border-red-700 text-red-700 dark:text-red-400 animate-pulse"
           : "bg-[var(--card)]/80 border-[var(--border)]/50 text-[var(--text-primary)]"

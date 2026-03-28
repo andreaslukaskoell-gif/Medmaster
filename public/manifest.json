@@ -1,14 +1,72 @@
 {
-  "name": "MedMaster",
+  "id": "at.medmaster.app",
+  "name": "MedMaster – MedAT Vorbereitung",
   "short_name": "MedMaster",
-  "description": "MedAT 2026 Vorbereitung — 4.300+ Übungsfragen, KFF, TV und SEK.",
+  "description": "MedAT 2026 Vorbereitung — Tausende Übungsfragen, KFF, TV und SEK. Die umfassendste MedAT-Lernplattform Österreichs.",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#fafaf8",
   "theme_color": "#2d3a8c",
   "orientation": "any",
+  "categories": ["education", "medical"],
+  "lang": "de-AT",
+  "dir": "ltr",
+  "prefer_related_applications": true,
+  "related_applications": [
+    {
+      "platform": "itunes",
+      "url": "https://apps.apple.com/at/app/medmaster/id0000000000",
+      "id": "at.medmaster.app"
+    },
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=at.medmaster.app",
+      "id": "at.medmaster.app"
+    }
+  ],
   "icons": [
     { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
-    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    {
+      "name": "BMS Fragen trainieren",
+      "short_name": "Fragen",
+      "url": "/fragen-trainer",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }],
+      "description": "BMS-Fragen üben"
+    },
+    {
+      "name": "KFF Übungen",
+      "short_name": "KFF",
+      "url": "/kff",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }],
+      "description": "Kognitive Fähigkeiten trainieren"
+    },
+    {
+      "name": "Textverständnis",
+      "short_name": "TV",
+      "url": "/tv",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }],
+      "description": "Textverständnis üben"
+    },
+    {
+      "name": "Fortschritt",
+      "short_name": "Fortschritt",
+      "url": "/fortschritt",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }],
+      "description": "Deinen Lernfortschritt ansehen"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/og-image.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "MedMaster Dashboard"
+    }
   ]
 }

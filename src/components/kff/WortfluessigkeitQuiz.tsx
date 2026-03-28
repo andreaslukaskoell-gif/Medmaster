@@ -46,18 +46,16 @@ export function WortflüssigkeitQuiz({
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [trainingLoading, setTrainingLoading] = useState(false);
   const [trainingError, setTrainingError] = useState<string | null>(null);
-  const {
-    addXP,
-    checkStreak,
-    saveQuizResult,
-    logActivity,
-    skillRating,
-    setSkillRating,
-    addKffTaskFailed,
-    markKffTaskCorrect,
-    getKffFailedIdsForDomain,
-    getKffSeenIdsForDomain,
-  } = useStore();
+  const addXP = useStore((s) => s.addXP);
+  const checkStreak = useStore((s) => s.checkStreak);
+  const saveQuizResult = useStore((s) => s.saveQuizResult);
+  const logActivity = useStore((s) => s.logActivity);
+  const skillRating = useStore((s) => s.skillRating);
+  const setSkillRating = useStore((s) => s.setSkillRating);
+  const addKffTaskFailed = useStore((s) => s.addKffTaskFailed);
+  const markKffTaskCorrect = useStore((s) => s.markKffTaskCorrect);
+  const getKffFailedIdsForDomain = useStore((s) => s.getKffFailedIdsForDomain);
+  const getKffSeenIdsForDomain = useStore((s) => s.getKffSeenIdsForDomain);
   const getMinutes = useSessionTimer();
 
   const safeQuestions = questions || [];
@@ -515,10 +513,12 @@ export function WortflüssigkeitQuiz({
               </div>
             ))}
           </div>
-          <div className="space-y-2">
+          <div className="space-y-2" role="radiogroup" aria-label="Antwortmöglichkeiten">
             {(currentQ.options ?? []).map((opt, li) => (
               <button
                 key={`${opt}-${li}`}
+                role="radio"
+                aria-checked={answers[taskId] === opt}
                 onClick={() => setAnswers((p) => ({ ...p, [taskId]: opt }))}
                 className={`w-full text-left px-4 py-3 rounded-lg border text-sm transition-colors cursor-pointer ${
                   answers[taskId] === opt

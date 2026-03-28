@@ -1,0 +1,45 @@
+{
+	"appId": "at.medmaster.app",
+	"appName": "MedMaster",
+	"webDir": "dist",
+	"plugins": {
+		"SplashScreen": {
+			"launchAutoHide": true,
+			"launchShowDuration": 2000,
+			"launchFadeOutDuration": 300,
+			"backgroundColor": "#fafaf8",
+			"androidSplashResourceName": "splash",
+			"androidScaleType": "CENTER_CROP",
+			"showSpinner": false,
+			"splashFullScreen": false,
+			"splashImmersive": false
+		},
+		"StatusBar": {
+			"style": "LIGHT",
+			"backgroundColor": "#fafaf8"
+		},
+		"Keyboard": {
+			"resize": "body",
+			"resizeOnFullScreen": true
+		},
+		"CapacitorHttp": {
+			"enabled": true
+		}
+	},
+	"ios": {
+		"contentInset": "automatic",
+		"preferredContentMode": "mobile",
+		"scheme": "MedMaster",
+		"backgroundColor": "#fafaf8",
+		"allowsLinkPreview": true,
+		"scrollEnabled": true,
+		"limitsNavigationsToAppBoundDomains": false
+	},
+	"android": {
+		"backgroundColor": "#fafaf8",
+		"allowMixedContent": false,
+		"captureInput": true,
+		"webContentsDebuggingEnabled": false,
+		"minWebViewVersion": "80.0.0"
+	}
+}

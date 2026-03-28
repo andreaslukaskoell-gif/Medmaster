@@ -35,14 +35,14 @@ import { daysUntilMedAT } from "@/lib/utils";
 
 export default function Analysis() {
   const mounted = useIsMounted();
-  const { quizResults } = useStore();
+  const quizResults = useStore((s) => s.quizResults);
 
   const subjectData = useMemo(() => {
     const data: Record<string, { correct: number; total: number }> = {};
     quizResults.forEach((r) => {
-      r.answers.forEach((a) => {
+      (r.answers ?? []).forEach((a) => {
         const key =
-          (r.type === "bms" ? getQuestionSubject(a.questionId) : null) || r.subject || r.type;
+          (r.type === "bms" ? getQuestionSubject(a.questionId) : null) || r.subject || r.type || "bms";
         if (!data[key]) data[key] = { correct: 0, total: 0 };
         data[key].total += 1;
         if (a.correct) data[key].correct += 1;
@@ -104,7 +104,7 @@ export default function Analysis() {
     });
 
     const unanswered = quizResults.reduce(
-      (count, r) => count + r.answers.filter((a) => !a.selectedAnswer).length,
+      (count, r) => count + (r.answers ?? []).filter((a) => !a.selectedAnswer).length,
       0
     );
     if (unanswered > 3) {

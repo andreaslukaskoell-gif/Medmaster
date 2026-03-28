@@ -111,7 +111,7 @@ export default function CarbohydrateTypes() {
         ))}
       </div>
 
-      <svg viewBox="0 0 480 310" className="w-full max-w-lg mx-auto">
+      <svg role="img" viewBox="0 0 480 310" className="w-full max-w-lg mx-auto">
         <title>Kohlenhydrattypen: Monosaccharide, Disaccharide, Polysaccharide</title>
 
         {/* Monosaccharide section */}

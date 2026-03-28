@@ -92,8 +92,8 @@ function getStatusForStichwort(
   let lastPracticed: string | null = null;
 
   for (const r of quizResults) {
-    if (r.type !== "bms") continue;
-    for (const a of r.answers) {
+    if (r == null || r.type !== "bms") continue;
+    for (const a of r.answers ?? []) {
       const qSubj = getQuestionSubject(a.questionId);
       if (qSubj !== sw.fach) continue;
       const q = allBmsQuestions.find((bq) => bq.id === a.questionId);
@@ -118,7 +118,7 @@ export default function StichwortlistePage() {
   const [activeTab, setActiveTab] = useState<string>("alle");
   const [searchQuery, setSearchQuery] = useState("");
   const [priorityFilter, setPriorityFilter] = useState<string>("alle");
-  const { quizResults } = useStore();
+  const quizResults = useStore((s) => s.quizResults);
   const { profile: adaptiveProfile } = useAdaptiveStore();
 
   const filteredStichworte = useMemo(() => {

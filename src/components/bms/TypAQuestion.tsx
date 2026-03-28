@@ -43,7 +43,7 @@ export const TypAQuestion = React.memo(function TypAQuestion({
       </p>
 
       {/* Options */}
-      <div className="space-y-2">
+      <div className="space-y-2" role="radiogroup" aria-label="Antwortmöglichkeiten">
         {optionen.map((opt, i) => {
           let cls =
             "border-[var(--border)] hover:bg-[var(--border)]/50 text-[var(--text-secondary)]";
@@ -63,6 +63,9 @@ export const TypAQuestion = React.memo(function TypAQuestion({
           return (
             <motion.button
               key={opt.key}
+              role="radio"
+              aria-checked={chosenOption === opt.key}
+              aria-label={`Option ${opt.key}: ${stripMarkdownAsterisks(opt.text)}`}
               onClick={() => !locked && onChoose(opt.key)}
               disabled={locked}
               layout
@@ -94,6 +97,7 @@ export const TypAQuestion = React.memo(function TypAQuestion({
       </div>
 
       {/* Explanation */}
+      <div aria-live="polite" aria-atomic="true">
       <AnimatePresence>
         {revealed && (
           <motion.div
@@ -130,6 +134,7 @@ export const TypAQuestion = React.memo(function TypAQuestion({
           </motion.div>
         )}
       </AnimatePresence>
+      </div>
     </div>
   );
 });

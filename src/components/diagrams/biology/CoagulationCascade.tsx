@@ -141,7 +141,7 @@ export default function CoagulationCascade() {
         Klicke auf einen Schritt für Details.
       </p>
 
-      <svg viewBox="0 0 420 590" className="w-full max-w-sm mx-auto">
+      <svg role="img" viewBox="0 0 420 590" className="w-full max-w-sm mx-auto">
         <title>Gerinnungskaskade — intrinsischer und extrinsischer Weg</title>
 
         {/* Pathway headers */}

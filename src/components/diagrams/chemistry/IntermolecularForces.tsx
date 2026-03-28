@@ -45,7 +45,7 @@ export default function IntermolecularForces() {
         Wasserstoffbrücken.
       </p>
 
-      <svg viewBox="0 0 480 320" className="w-full max-w-lg mx-auto">
+      <svg role="img" viewBox="0 0 480 320" className="w-full max-w-lg mx-auto">
         <title>Zwischenmolekulare Kräfte: Van-der-Waals, Dipol-Dipol, Wasserstoffbrücken</title>
 
         {/* Strength bar chart */}

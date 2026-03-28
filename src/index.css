@@ -66,7 +66,7 @@ html.font-large { font-size: 18px; }
   --text-primary: #1a1a1a;
   --text-secondary: #5c5c5c;
   --border: #e8e8e4;
-  --muted: #8c8c8c;
+  --muted: #737373; /* WCAG AA compliant: 4.75:1 on #fafaf8 */
   /* Accent (Deep Indigo / Primary) */
   --accent: #2d3a8c;
   --accent-hover: #3d4ca6;
@@ -111,7 +111,7 @@ html.font-large { font-size: 18px; }
   --text-primary: #ededed; /* warm off-white: body/main content */
   --text-secondary: #a0a0a0; /* warm medium gray: secondary */
   --border: #2a2a2a;
-  --muted: #888888; /* warm gray: meta, labels */
+  --muted: #9a9a9a; /* WCAG AA compliant: 5.8:1 on #141414 */
   --accent: #5b8def;
   --accent-hover: #7aa4f7;
   --success: #2dd4bf;
@@ -147,7 +147,7 @@ html.font-large { font-size: 18px; }
   --color-surface: #fafaf8;
   --color-card: #ffffff;
   --color-border: #e8e8e4;
-  --color-muted: #8c8c8c;
+  --color-muted: #737373;
 
   --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   --font-serif: "Source Serif 4", "Georgia", serif;
@@ -173,8 +173,35 @@ html.font-large { font-size: 18px; }
   }
 }
 
+@keyframes shimmer-sweep {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+
+@keyframes gradient-x {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 html {
   scroll-behavior: smooth;
+}
+
+/* ── Reduced Motion: Respect user preference ─────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 body {
@@ -1427,4 +1454,617 @@ a:focus-visible,
   outline: 2px solid var(--accent);
   outline-offset: 1px;
   box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 15%, transparent);
+}
+
+/* ==========================================================================
+   MOBILE-MODE GLOBAL OVERRIDES
+   Applied when <html> has .mobile-mode (auto-detected or user-toggled).
+   Single-column, full-width, touch-friendly, premium mobile experience.
+   ========================================================================== */
+
+/* --- Prevent horizontal overflow globally --- */
+.mobile-mode {
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+.mobile-mode body {
+  overflow-x: hidden;
+  font-size: 17px !important; /* Apple HIG: 17px body text for mobile readability */
+}
+
+/* --- Layout: force full-width content --- */
+.mobile-mode .max-w-7xl,
+.mobile-mode .max-w-6xl,
+.mobile-mode .max-w-5xl,
+.mobile-mode .max-w-4xl,
+.mobile-mode .max-w-3xl,
+.mobile-mode .max-w-2xl {
+  max-width: 100% !important;
+}
+
+/* --- Grids: collapse to single column (except navigation & compact grids) --- */
+.mobile-mode .grid-cols-2:not([data-mobile-keep]),
+.mobile-mode .grid-cols-3:not([data-mobile-keep]),
+.mobile-mode .sm\:grid-cols-2,
+.mobile-mode .sm\:grid-cols-3,
+.mobile-mode .md\:grid-cols-2,
+.mobile-mode .md\:grid-cols-3,
+.mobile-mode .lg\:grid-cols-2,
+.mobile-mode .lg\:grid-cols-3 {
+  grid-template-columns: 1fr !important;
+}
+/* 4+ column grids → 2 columns (better than single for buttons/small items) */
+.mobile-mode .grid-cols-4:not([data-mobile-keep]),
+.mobile-mode .grid-cols-5:not([data-mobile-keep]) {
+  grid-template-columns: repeat(2, 1fr) !important;
+}
+/* 6+ column grids → 3 columns */
+.mobile-mode .grid-cols-6,
+.mobile-mode .grid-cols-7 {
+  grid-template-columns: repeat(3, 1fr) !important;
+}
+
+/* --- Typography: improved readability on small screens --- */
+.mobile-mode .text-4xl { font-size: 1.75rem !important; line-height: 2.25rem !important; }
+.mobile-mode .text-3xl { font-size: 1.5rem !important; line-height: 2rem !important; }
+.mobile-mode .text-2xl { font-size: 1.25rem !important; line-height: 1.75rem !important; }
+.mobile-mode .text-xl  { font-size: 1.125rem !important; line-height: 1.625rem !important; }
+.mobile-mode h1 { font-size: 1.375rem !important; line-height: 1.875rem !important; }
+
+/* --- Spacing: tighter padding for mobile --- */
+.mobile-mode .p-6 { padding: 1rem !important; }
+.mobile-mode .p-8 { padding: 1.25rem !important; }
+.mobile-mode .p-10 { padding: 1.5rem !important; }
+.mobile-mode .px-6 { padding-left: 0.75rem !important; padding-right: 0.75rem !important; }
+.mobile-mode .px-8 { padding-left: 1rem !important; padding-right: 1rem !important; }
+.mobile-mode .py-8 { padding-top: 1.25rem !important; padding-bottom: 1.25rem !important; }
+.mobile-mode .py-10 { padding-top: 1.5rem !important; padding-bottom: 1.5rem !important; }
+.mobile-mode .gap-6 { gap: 1rem !important; }
+.mobile-mode .gap-8 { gap: 1.25rem !important; }
+.mobile-mode .space-y-8 > * + * { margin-top: 1.25rem !important; }
+.mobile-mode .space-y-6 > * + * { margin-top: 1rem !important; }
+
+/* --- Cards: mobile-appropriate rounding & padding --- */
+.mobile-mode .card-glass {
+  padding: 1rem !important;
+}
+
+/* --- Buttons: touch-friendly minimum size (44px Apple guideline) --- */
+.mobile-mode button:not(.mobile-btn-compact),
+.mobile-mode [role="button"],
+.mobile-mode .btn-premium,
+.mobile-mode .btn-glass {
+  min-height: 44px;
+}
+
+/* --- Tables: horizontal scroll with touch momentum --- */
+.mobile-mode table {
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.mobile-mode pre,
+.mobile-mode code {
+  max-width: 100%;
+  overflow-x: auto;
+  word-break: break-word;
+}
+
+/* --- Images & SVGs: constrain to viewport --- */
+.mobile-mode img,
+.mobile-mode svg:not(.lucide):not(.recharts-surface) {
+  max-width: 100%;
+  height: auto;
+}
+
+/* --- Quiz options: larger touch targets --- */
+.mobile-mode [class*="quiz"] button,
+.mobile-mode [data-option] {
+  min-height: 48px;
+  padding: 0.75rem 1rem !important;
+}
+
+/* --- Hide desktop-only elements --- */
+.mobile-mode .hidden-mobile,
+.mobile-mode [data-desktop-only] {
+  display: none !important;
+}
+
+/* --- Card content: tighter mobile padding --- */
+.mobile-mode [class*="CardContent"] {
+  padding: 1rem !important;
+}
+
+/* --- Breadcrumbs: horizontal scroll, compact --- */
+.mobile-mode nav[aria-label="Breadcrumb"] {
+  font-size: 0.75rem;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+}
+.mobile-mode nav[aria-label="Breadcrumb"]::-webkit-scrollbar {
+  display: none;
+}
+
+/* --- Tab bars: scrollable on mobile --- */
+.mobile-mode [role="tablist"],
+.mobile-mode [class*="flex"][class*="gap-1"][class*="rounded-lg"][class*="p-1"] {
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  flex-wrap: nowrap !important;
+}
+.mobile-mode [role="tablist"]::-webkit-scrollbar {
+  display: none;
+}
+
+/* --- SectionTOC sidebar: hide on mobile (content flows directly) --- */
+.mobile-mode nav[aria-label="Inhaltsverzeichnis"] {
+  display: none !important;
+}
+
+/* --- BMS content: collapse 2-col grid to single column on mobile --- */
+.mobile-mode .content-section .grid {
+  display: block !important;
+}
+.mobile-mode .content-section .grid > aside {
+  display: none !important; /* TOC sidebar already hidden */
+}
+.mobile-mode .content-section .grid > div {
+  max-width: 100% !important;
+}
+
+/* --- BMS Unterkapitel: full-width Altfragen/Kontrollfragen --- */
+.mobile-mode [class*="ml-[calc(220px"] {
+  margin-left: 0 !important;
+  max-width: 100% !important;
+}
+
+/* --- BMS content: mobile padding --- */
+.mobile-mode .content-section {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* --- BMS page container: add horizontal padding --- */
+.mobile-mode .max-w-6xl {
+  padding-left: 0.75rem !important;
+  padding-right: 0.75rem !important;
+}
+
+/* --- BMS prose: better line length & spacing for small screens --- */
+.mobile-mode .prose {
+  font-size: 1rem !important;
+  line-height: 1.75 !important;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+.mobile-mode .prose h2 {
+  font-size: 1.25rem !important;
+  margin-top: 2rem !important;
+}
+.mobile-mode .prose h3 {
+  font-size: 1.1rem !important;
+}
+.mobile-mode .prose img {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* --- BMS callout boxes: tighter on mobile --- */
+.mobile-mode .prose blockquote,
+.mobile-mode [class*="border-l-4"][class*="px-5"] {
+  padding-left: 0.75rem !important;
+  padding-right: 0.75rem !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* --- BMS hero header: smaller on mobile --- */
+.mobile-mode .hero-orbs {
+  margin-bottom: 2rem !important;
+  margin-top: 0.5rem !important;
+}
+.mobile-mode .hero-orbs .text-\[3rem\] {
+  font-size: 1.5rem !important;
+  line-height: 2rem !important;
+}
+
+/* --- SVG diagrams: fit mobile viewport --- */
+.mobile-mode .content-svg-wrap {
+  padding: 0.75rem !important;
+  margin-left: -0.25rem;
+  margin-right: -0.25rem;
+}
+.mobile-mode .content-svg-wrap svg {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* --- Charts: constrain to viewport width --- */
+.mobile-mode .recharts-wrapper {
+  max-width: 100% !important;
+}
+
+/* --- Modals/Dialogs: full-width on mobile --- */
+.mobile-mode [role="dialog"],
+.mobile-mode [class*="DialogContent"] {
+  max-width: calc(100vw - 2rem) !important;
+  width: 100% !important;
+  margin: 1rem !important;
+}
+
+/* --- Progress bars: always visible --- */
+.mobile-mode [role="progressbar"] {
+  min-width: 0;
+  width: 100%;
+}
+
+/* --- Premium polish: subtle press feedback --- */
+.mobile-mode .card-glass:active {
+  transform: scale(0.98);
+  transition: transform 0.1s ease;
+}
+
+/* --- Recharts responsive containers: ensure they fit --- */
+.mobile-mode .recharts-responsive-container {
+  min-width: 0 !important;
+}
+
+/* --- Wide content containers: prevent overflow --- */
+.mobile-mode [class*="w-\\["] {
+  max-width: 100% !important;
+}
+
+/* --- Stat rows: keep inline for label+value pairs --- */
+.mobile-mode .flex.justify-between {
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  gap: 0.25rem !important;
+}
+
+/* --- Mobile: smooth scroll momentum everywhere --- */
+.mobile-mode * {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* --- Mobile: improved input styling --- */
+.mobile-mode input[type="number"],
+.mobile-mode input[type="text"] {
+  font-size: 16px !important; /* prevents iOS zoom on focus */
+  min-height: 44px;
+}
+
+/* --- Mobile: card hover states → active press states --- */
+.mobile-mode .bg-\[var\(--surface\)\]:active {
+  background: var(--background) !important;
+  transition: background 0.1s ease;
+}
+
+/* --- Mobile: quiz header sticky positioning --- */
+.mobile-mode .quiz-header {
+  position: sticky;
+  top: 3rem;
+  z-index: 40;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* --- Mobile: full-width buttons in quiz contexts --- */
+.mobile-mode .quiz-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.mobile-mode .quiz-actions button {
+  width: 100% !important;
+}
+
+/* --- Mobile: better option cards for quiz answers --- */
+.mobile-mode .option-card,
+.mobile-mode [data-quiz-option] {
+  min-height: 52px;
+  padding: 0.875rem 1rem !important;
+  font-size: 0.9375rem !important;
+  border-radius: 0.75rem !important;
+}
+
+/* --- Mobile: swipe-friendly horizontal scroll areas --- */
+.mobile-mode .horizontal-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+.mobile-mode .horizontal-scroll::-webkit-scrollbar {
+  display: none;
+}
+.mobile-mode .horizontal-scroll > * {
+  scroll-snap-align: start;
+}
+
+/* --- Mobile: pull-to-refresh feel for page tops --- */
+.mobile-mode main {
+  overscroll-behavior-y: contain;
+}
+
+/* --- Mobile: quiz focus mode — hide main bottom tab bar during quiz --- */
+html.quiz-active.mobile-mode nav[aria-label="Hauptnavigation"] {
+  display: none !important;
+}
+
+/* --- Mobile: quiz option buttons — larger touch targets --- */
+.mobile-mode .space-y-2 > button[class*="rounded-xl"] {
+  min-height: 48px !important;
+  padding-top: 0.875rem !important;
+  padding-bottom: 0.875rem !important;
+}
+
+/* --- Mobile: improved spacing for page headers --- */
+.mobile-mode .page-header {
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.75rem !important;
+}
+
+/* --- Mobile: bottom action bars (exam submit, quiz nav) --- */
+.mobile-mode .bottom-action-bar {
+  position: fixed;
+  bottom: 5rem; /* above BottomTabBar (h-16 = 64px ≈ 4rem + safe area) */
+  left: 0;
+  right: 0;
+  padding: 0.75rem 1rem;
+  padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 45;
+}
+
+/* --- Mobile: animation performance --- */
+.mobile-mode .card-glass,
+.mobile-mode [class*="rounded-xl"] {
+  will-change: auto;
+  transform: translateZ(0);
+}
+
+/* --- Mobile: prevent text selection on interactive elements --- */
+.mobile-mode button,
+.mobile-mode [role="button"],
+.mobile-mode [role="tab"] {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* --- Mobile: enforce minimum touch targets for small button sizes (Apple HIG: 44px) --- */
+.mobile-mode .h-6:is(button, [role="button"]),
+.mobile-mode .h-8:is(button, [role="button"]),
+.mobile-mode .size-6:is(button, [role="button"]),
+.mobile-mode .size-8:is(button, [role="button"]) {
+  min-height: 40px !important;
+  min-width: 40px !important;
+}
+
+/* --- Mobile: ExamTimer safe-area-aware positioning --- */
+.mobile-mode .fixed.top-4.right-4,
+.mobile-mode .fixed[class*="top-[max"] {
+  top: max(0.75rem, env(safe-area-inset-top)) !important;
+  right: max(0.75rem, env(safe-area-inset-right)) !important;
+}
+
+/* --- Mobile: count selectors (6 buttons in a row → 3x2 grid) --- */
+.mobile-mode .flex.gap-3:has(> button:nth-child(6):last-child) {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 0.5rem !important;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Premium Mobile Polish
+   ═══════════════════════════════════════════════════════════ */
+
+/* --- Smooth page transitions --- */
+.mobile-mode main {
+  scroll-behavior: smooth;
+}
+
+/* --- Card press effect with spring feel --- */
+.mobile-mode .card-glass {
+  transition: transform 0.15s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.15s ease;
+}
+.mobile-mode .card-glass:active {
+  transform: scale(0.97) !important;
+  box-shadow: none !important;
+}
+
+/* --- Premium button press feedback --- */
+.mobile-mode button:not(:disabled):active,
+.mobile-mode a[class*="rounded"]:active {
+  transition: transform 0.08s ease;
+}
+
+/* --- BottomTabBar higher z-index + refined shadow --- */
+.mobile-mode nav[aria-label="Hauptnavigation"] {
+  z-index: 60 !important;
+  box-shadow: 0 -2px 16px rgba(0, 0, 0, 0.08) !important;
+}
+.dark .mobile-mode nav[aria-label="Hauptnavigation"],
+.dark.mobile-mode nav[aria-label="Hauptnavigation"] {
+  box-shadow: 0 -2px 16px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* --- Floating elements: above BottomTabBar (now 64px + safe area) --- */
+.mobile-mode .fixed.bottom-4,
+.mobile-mode .fixed.bottom-6 {
+  bottom: 5.5rem !important;
+}
+
+/* --- Bottom safe area for BottomTabBar (now taller: h-16 = 64px) --- */
+.mobile-mode main#main-content {
+  padding-bottom: max(7rem, calc(5.5rem + env(safe-area-inset-bottom))) !important;
+}
+
+/* --- Progress bars: thicker on mobile for visibility --- */
+.mobile-mode .progress-premium {
+  height: 6px !important;
+  border-radius: 3px !important;
+}
+.mobile-mode .progress-premium .progress-fill {
+  border-radius: 3px !important;
+}
+
+/* --- Badge pills: slightly larger on mobile --- */
+.mobile-mode [class*="badge"],
+.mobile-mode [class*="Badge"] {
+  min-height: 24px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+/* --- Link cards: full-width tap area --- */
+.mobile-mode a.card-glass,
+.mobile-mode a[class*="rounded-xl"][class*="border"] {
+  display: block;
+  width: 100%;
+}
+
+/* --- Focus ring: thicker for touch --- */
+.mobile-mode :focus-visible {
+  outline-width: 3px !important;
+  outline-offset: 2px !important;
+}
+
+/* --- Mobile: 5-column option grids → 3 columns + 2 on second row --- */
+.mobile-mode .grid-cols-5:not([data-mobile-keep]) {
+  grid-template-columns: repeat(3, 1fr) !important;
+}
+
+/* --- Mobile: improved focus states for accessibility --- */
+.mobile-mode :focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ── Premium Mobile Polish ─────────────────────────────────────────────────── */
+
+/* Smooth momentum scrolling everywhere */
+.mobile-mode * {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Pull-to-refresh spinner area */
+.mobile-mode .pull-to-refresh-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: height 0.2s ease-out;
+}
+
+/* Streak card motivational glow for 7+ day streaks */
+.mobile-mode [aria-label="Streak"] {
+  transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
+}
+
+/* Mobile chapter view — TOC as collapsible at top */
+.mobile-mode nav[aria-label="Inhaltsverzeichnis"] {
+  position: sticky;
+  top: 3.25rem; /* Below TopBar */
+  z-index: 30;
+  background: var(--background);
+  margin: -0.75rem -0.75rem 1rem;
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+}
+
+/* Mobile reading progress bar at top of chapter */
+.mobile-mode .reading-progress-bar {
+  position: fixed;
+  top: 3.25rem;
+  left: 0;
+  right: 0;
+  height: 3px;
+  z-index: 90;
+  background: transparent;
+}
+.mobile-mode .reading-progress-bar .fill {
+  height: 100%;
+  background: var(--accent);
+  transition: width 0.1s linear;
+}
+
+/* Smoother skeleton animations on mobile */
+.mobile-mode .skeleton-shimmer {
+  animation-duration: 1.8s;
+}
+
+/* KFF module cards — larger touch targets */
+.mobile-mode [class*="rounded-xl"][class*="border"][class*="p-3"] {
+  min-height: 5rem;
+}
+
+/* Mobile-optimized dialog/modal bottom sheet style */
+.mobile-mode [role="dialog"] > div:not([class*="inset"]) {
+  max-height: 85vh;
+  overflow-y: auto;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+/* Improved touch feedback on interactive cards */
+.mobile-mode .card-glass[class*="cursor-pointer"]:active,
+.mobile-mode a.card-glass:active {
+  transform: scale(0.98);
+  transition: transform 0.1s ease-out;
+}
+
+/* Mobile breadcrumb pill style */
+.mobile-mode nav[aria-label="Breadcrumb"] a {
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  min-height: 2rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Floating action buttons better positioning */
+.mobile-mode .fab,
+.mobile-mode [class*="fixed"][class*="right-4"][class*="bottom-"] {
+  bottom: max(5.5rem, calc(4.5rem + env(safe-area-inset-bottom))) !important;
+}
+
+/* Better scroll snap for horizontal scrolling areas */
+.mobile-mode .horizontal-scroll {
+  scroll-snap-type: x mandatory;
+  scroll-padding: 0.75rem;
+}
+.mobile-mode .horizontal-scroll > * {
+  scroll-snap-align: start;
+}
+
+/* Mobile page header — compact */
+.mobile-mode .page-header h1 {
+  font-size: 1.25rem !important;
+  line-height: 1.75rem !important;
+}
+
+/* Ensure images in chapter content don't overflow */
+.mobile-mode .chapter-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+}
+
+/* Premium transition for page content */
+.mobile-mode main#main-content {
+  transition: transform 0.2s ease-out;
+}
+
+/* Dark mode mobile enhancements */
+.dark.mobile-mode .card-glass {
+  border-color: rgba(255, 255, 255, 0.06);
+}
+.dark.mobile-mode .topbar-glass {
+  border-bottom-color: rgba(255, 255, 255, 0.06);
 }

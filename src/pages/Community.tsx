@@ -15,7 +15,7 @@ function getScoreBewertung(score: number): string {
 
 export default function Community() {
   usePageTitle("Community");
-  const { quizResults } = useStore();
+  const quizResults = useStore((s) => s.quizResults);
   const [activeTab, setActiveTab] = useState<"vergleich" | "leaderboard">("vergleich");
 
   const totalQuizzes = quizResults.length;

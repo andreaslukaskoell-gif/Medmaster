@@ -112,5 +112,37 @@ export function isSafeInternalPath(path: string): boolean {
   ) {
     return false;
   }
+  // Block path traversal attempts
+  if (path.includes("..")) return false;
   return true;
+}
+
+// ── Safe JSON parsing ──
+
+/**
+ * Parse JSON safely with a max-length guard to prevent oversized payloads
+ * from causing memory issues. Returns null on failure.
+ */
+export function safeJsonParse<T = unknown>(
+  raw: string,
+  maxLength = 1_000_000
+): T | null {
+  if (!raw || raw.length > maxLength) return null;
+  try {
+    return JSON.parse(raw) as T;
+  } catch {
+    return null;
+  }
+}
+
+// ── Timing-safe comparison (for non-crypto use in client) ──
+
+/** Constant-time string comparison to mitigate timing attacks on token checks. */
+export function timingSafeEqual(a: string, b: string): boolean {
+  if (a.length !== b.length) return false;
+  let result = 0;
+  for (let i = 0; i < a.length; i++) {
+    result |= a.charCodeAt(i) ^ b.charCodeAt(i);
+  }
+  return result === 0;
 }

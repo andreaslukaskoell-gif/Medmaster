@@ -26,17 +26,10 @@ import { BMSSubjectSelector } from "@/components/bms/BMSSubjectSelector";
 import { BMSSubjectView } from "@/components/bms/BMSSubjectView";
 import { useBMSChapters } from "@/hooks/useBMSChapters";
 
-import { useStore as _useStore } from "@/store/useStore";
+import { useStore } from "@/store/useStore";
 import { useAdaptiveStore } from "@/store/adaptiveLearning";
 
-function useSafeStore() {
-  try {
-    return _useStore ? _useStore() : { completedChapters: [] };
-  } catch (error) {
-    console.error("Error accessing store:", error);
-    return { completedChapters: [] };
-  }
-}
+const STABLE_EMPTY_CHAPTERS: string[] = [];
 
 export default function BMS() {
   usePageTitle("BMS – Biomedizinische Grundlagen");
@@ -49,15 +42,9 @@ export default function BMS() {
   const [selectedSubject, setSelectedSubject] = useState<string | null>(null);
   const [activeKapitel, setActiveKapitel] = useState<Kapitel | null>(null);
 
-  // Store access
-  const store = useSafeStore();
-  const completedChapters = useMemo(
-    // eslint-disable-next-line react-hooks/preserve-manual-memoization
-    () =>
-      store?.completedChapters && Array.isArray(store.completedChapters)
-        ? store.completedChapters
-        : [],
-    [store?.completedChapters]
+  // Store access — individual selectors to avoid re-rendering on unrelated state changes
+  const completedChapters = useStore((s) =>
+    Array.isArray(s.completedChapters) ? s.completedChapters : STABLE_EMPTY_CHAPTERS
   );
   const stichwortStats = useAdaptiveStore((s) => s.profile.stichwortStats);
   const setLastPath = useAdaptiveStore((s) => s.setLastPath);

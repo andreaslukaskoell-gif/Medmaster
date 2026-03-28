@@ -1,0 +1,23 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "TEAM_ID.at.medmaster.app",
+        "paths": [
+          "/dashboard",
+          "/bms/*",
+          "/kff/*",
+          "/tv/*",
+          "/sek/*",
+          "/fragen-trainer",
+          "/fortschritt",
+          "/simulation"
+        ]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": ["TEAM_ID.at.medmaster.app"]
+  }
+}

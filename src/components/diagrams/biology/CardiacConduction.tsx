@@ -57,7 +57,7 @@ export default function CardiacConduction() {
         Klicke auf Komponenten für Details.
       </p>
 
-      <svg viewBox="0 0 480 420" className="w-full max-w-xl mx-auto">
+      <svg role="img" viewBox="0 0 480 420" className="w-full max-w-xl mx-auto">
         <title>Erregungsleitungssystem des Herzens</title>
         {/* Heart outline */}
         <path

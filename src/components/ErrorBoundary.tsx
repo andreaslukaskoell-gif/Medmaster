@@ -11,26 +11,34 @@ interface Props {
 interface State {
   hasError: boolean;
   retryKey: number;
+  errorMessage: string;
+  errorStack: string;
+  componentStack: string;
 }
 
 export class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = { hasError: false, retryKey: 0 };
+    this.state = { hasError: false, retryKey: 0, errorMessage: "", errorStack: "", componentStack: "" };
   }
 
-  static getDerivedStateFromError(): Partial<State> {
-    return { hasError: true };
+  static getDerivedStateFromError(error: Error): Partial<State> {
+    return {
+      hasError: true,
+      errorMessage: `${error?.name}: ${error?.message}`,
+      // Only capture stack in dev — import.meta.env.DEV
+      errorStack: import.meta.env.DEV ? (error?.stack ?? "") : "",
+    };
   }
 
   componentDidCatch(error: Error, info: ErrorInfo) {
-    // Only log details in development — console.error is NOT stripped by esbuild.pure
+    console.error("[ErrorBoundary] Fehler:", error?.name, error?.message);
+    // Only log stack traces in dev — import.meta.env.DEV
     if (import.meta.env.DEV) {
-      console.error("[ErrorBoundary] Fehler:", error?.name, error?.message);
       console.error("[ErrorBoundary] Stack:", error?.stack);
       console.error("[ErrorBoundary] Komponentenstack:", info?.componentStack);
     }
-    // In production, Sentry captures these automatically via its React integration.
+    this.setState({ componentStack: import.meta.env.DEV ? (info?.componentStack ?? "") : "" });
   }
 
   handleRetry = () => {
@@ -55,10 +63,34 @@ export class ErrorBoundary extends Component<Props, State> {
             <h1 className="text-2xl font-bold text-[var(--text-primary)] mb-2">
               Etwas ist schiefgelaufen
             </h1>
-            <p className="text-sm text-[var(--muted)] mb-8">
+            <p className="text-sm text-[var(--muted)] mb-4">
               Ein unerwarteter Fehler ist aufgetreten. Du kannst es erneut versuchen oder die App
               neu starten.
             </p>
+            {this.state.errorMessage && (
+              <div className="mb-6 text-left">
+                <p className="text-xs font-semibold text-[var(--text-primary)] mb-1">Fehler:</p>
+                <pre className="text-xs text-red-600 dark:text-red-400 font-mono bg-[var(--surface)] rounded-lg px-3 py-2 break-all whitespace-pre-wrap mb-2">
+                  {this.state.errorMessage}
+                </pre>
+                {this.state.errorStack && (
+                  <>
+                    <p className="text-xs font-semibold text-[var(--text-primary)] mb-1">Stack:</p>
+                    <pre className="text-[10px] text-[var(--muted)] font-mono bg-[var(--surface)] rounded-lg px-3 py-2 break-all whitespace-pre-wrap max-h-40 overflow-y-auto mb-2">
+                      {this.state.errorStack}
+                    </pre>
+                  </>
+                )}
+                {this.state.componentStack && (
+                  <>
+                    <p className="text-xs font-semibold text-[var(--text-primary)] mb-1">Komponente:</p>
+                    <pre className="text-[10px] text-[var(--muted)] font-mono bg-[var(--surface)] rounded-lg px-3 py-2 break-all whitespace-pre-wrap max-h-40 overflow-y-auto mb-2">
+                      {this.state.componentStack}
+                    </pre>
+                  </>
+                )}
+              </div>
+            )}
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <button
                 type="button"

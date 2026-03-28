@@ -26,6 +26,7 @@ const BadgeUnlockModalLazy = lazy(() =>
 );
 import { SyncToast } from "@/components/SyncToast";
 import { OfflineBanner } from "@/components/OfflineBanner";
+import { UpdateBanner } from "@/components/UpdateBanner";
 import { BreadcrumbProvider } from "@/contexts/BreadcrumbContext";
 import { useInterleavingStore, shouldShowInterleavingOverlay } from "@/store/interleaving";
 import { useNavigationStore } from "@/store/navigationStore";
@@ -37,6 +38,8 @@ import { cn } from "@/lib/utils";
 import { useNoIndex } from "@/hooks/usePageTitle";
 import { useReferralAttribution } from "@/hooks/useReferralAttribution";
 import { SIDEBAR_MAIN_ML } from "./sidebarLayout";
+import { BottomTabBar } from "./BottomTabBar";
+import { useViewportMode } from "@/hooks/useViewportMode";
 import { KeyboardShortcutsOverlay } from "@/components/KeyboardShortcutsOverlay";
 import { OnboardingWizard } from "@/components/OnboardingWizard";
 import { XPToast } from "@/components/ui/XPToast";
@@ -51,14 +54,14 @@ function isChapterFocusRoute(pathname: string): boolean {
 }
 
 const pageVariants = {
-  initial: { opacity: 0 },
-  animate: { opacity: 1 },
-  exit: { opacity: 0 },
+  initial: { opacity: 0, y: 8 },
+  animate: { opacity: 1, y: 0 },
+  exit: { opacity: 0, y: -4 },
 };
 
 const pageTransition = {
   type: "tween" as const,
-  duration: 0.3,
+  duration: 0.2,
   ease: [0.25, 0.1, 0.25, 1] as const,
 };
 
@@ -68,6 +71,7 @@ export function AppShell() {
   useNoIndex(); // All AppShell routes are auth-gated — prevent indexing
   useReferralAttribution();
   useKonamiCode();
+  const { isMobile } = useViewportMode();
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [commandPaletteOpen, setCommandPaletteOpen] = useState(false);
   const [cmdPaletteEverOpened, setCmdPaletteEverOpened] = useState(false);
@@ -193,6 +197,7 @@ export function AppShell() {
         </Suspense>
         <SyncToast />
         <OfflineBanner />
+        <UpdateBanner />
         <Suspense fallback={null}>
           <HotStreakOverlayLazy active={hotStreakActive} />
           <RandomRewardToastLazy
@@ -217,9 +222,10 @@ export function AppShell() {
         <XPToast />
         <ScrollToTop />
         <KonamiEasterEgg />
+        {isMobile && <BottomTabBar />}
         <div
           className={cn(
-            "min-h-screen flex flex-col relative z-50 w-full transition-colors duration-200",
+            "min-h-screen flex flex-col relative z-0 w-full transition-colors duration-200",
             "bg-[var(--background)]",
             SIDEBAR_MAIN_ML // now empty — sidebar is overlay
           )}
@@ -229,8 +235,8 @@ export function AppShell() {
             id="main-content"
             tabIndex={-1}
             className={cn(
-              "flex-1 p-6 pb-8 w-full transition-[max-width,padding-top] duration-200",
-              "pt-16",
+              "flex-1 w-full transition-[max-width,padding-top] duration-200",
+              isMobile ? "px-3 pt-14 pb-24" : "p-6 pb-8 pt-16",
               isChapterRoute ? "max-w-none mx-auto" : "max-w-7xl mx-auto"
             )}
           >

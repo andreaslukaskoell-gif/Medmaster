@@ -8,7 +8,7 @@ export default function SnelliusRefraction() {
         Brechung und Totalreflexion beim Übergang zwischen zwei Medien.
       </p>
 
-      <svg viewBox="0 0 520 400" className="w-full max-w-lg mx-auto">
+      <svg role="img" viewBox="0 0 520 400" className="w-full max-w-lg mx-auto">
         <title>Snelliussches Brechungsgesetz und Totalreflexion</title>
 
         <defs>

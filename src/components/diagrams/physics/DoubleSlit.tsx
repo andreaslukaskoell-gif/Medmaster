@@ -8,7 +8,7 @@ export default function DoubleSlit() {
         Interferenzmuster durch Beugung am Doppelspalt — Beweis der Wellennatur des Lichts.
       </p>
 
-      <svg viewBox="0 0 540 360" className="w-full max-w-lg mx-auto">
+      <svg role="img" viewBox="0 0 540 360" className="w-full max-w-lg mx-auto">
         <title>Doppelspaltexperiment mit Interferenzmuster</title>
 
         <defs>

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight, BookOpen, Zap, BarChart3, Clock, Users, Check } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
+import { useViewportMode } from "@/hooks/useViewportMode";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { trackClick, trackEvent } from "@/lib/analyticsTracker";
 import {
@@ -75,7 +76,7 @@ function SampleQuestion({ onSignupClick }: { onSignupClick: () => void }) {
         <span className="text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full bg-[var(--accent)]/8 text-[var(--accent)]">
           {q.subject}
         </span>
-        <span className="text-xs text-[var(--muted)] tracking-wide">1 von 5.000+</span>
+        <span className="text-xs text-[var(--muted)] tracking-wide">1 von tausenden</span>
       </div>
       <p className="text-base sm:text-lg font-semibold text-[var(--text-primary)] leading-relaxed mb-5 sm:mb-7">
         {q.text}
@@ -160,7 +161,7 @@ function SampleQuestion({ onSignupClick }: { onSignupClick: () => void }) {
             }}
             className="btn-premium flex items-center justify-center gap-2.5 w-full py-3.5 sm:py-4 text-sm font-semibold rounded-xl"
           >
-            Über 5.000 weitere Fragen warten
+            Tausende weitere Fragen warten
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
@@ -173,14 +174,15 @@ function SampleQuestion({ onSignupClick }: { onSignupClick: () => void }) {
 
 export default function PaidLanding() {
   usePageMeta({
-    title: "MedAT 2026 Vorbereitung \u2014 5.000+ BMS-Fragen, alle 4 Bereiche",
+    title: "MedAT 2026 Vorbereitung — tausende BMS-Fragen, alle 4 Bereiche",
     description:
-      "Bestehe den MedAT 2026: 5.000+ BMS-Fragen mit Erkl\u00e4rungen, 10.000+ KFF-Aufgaben, Pr\u00fcfungssimulation. Alle 4 Bereiche, einmalig \u20ac29,90.",
+      "Bestehe den MedAT 2026: Tausende BMS-Fragen mit Erklärungen, unbegrenzt KFF-Aufgaben, Prüfungssimulation. Alle 4 Bereiche, einmalig €29,90.",
     canonical: "https://medmaster.at/lp/medat",
     ogImage: "https://medmaster.at/og-image.png",
   });
 
   const { signInWithGoogle } = useAuth();
+  const { isMobile } = useViewportMode();
   const [googleError, setGoogleError] = useState("");
   const [userCount, setUserCount] = useState<number | null>(null);
   const showStickyCTA = useShowStickyCTA();
@@ -275,7 +277,7 @@ export default function PaidLanding() {
   const GoogleBtn = ({ label, className = "" }: { label: string; className?: string }) => (
     <button
       onClick={handleGoogle}
-      className={`inline-flex items-center justify-center gap-3 font-semibold px-8 sm:px-10 py-4 text-base cursor-pointer transition-all duration-200 ${className}`}
+      className={`inline-flex items-center justify-center gap-3 font-semibold ${isMobile ? "px-5" : "px-8 sm:px-10"} py-4 text-base cursor-pointer transition-all duration-200 ${className}`}
     >
       <svg className="w-5 h-5 shrink-0" viewBox="0 0 24 24">
         <path
@@ -355,7 +357,7 @@ export default function PaidLanding() {
 
       {/* ─── Hero ─── */}
       <section className="pt-12 sm:pt-24 pb-10 sm:pb-20 hero-orbs">
-        <div className="max-w-3xl mx-auto px-5 sm:px-8 text-center">
+        <div className={`max-w-3xl mx-auto ${isMobile ? "px-4" : "px-5 sm:px-8"} text-center`}>
           <motion.p
             {...fade}
             className="text-xs sm:text-sm font-semibold tracking-widest uppercase mb-4 sm:mb-6"
@@ -366,7 +368,7 @@ export default function PaidLanding() {
           <motion.h1
             {...fade}
             transition={{ ...fade.transition, delay: 0.1 }}
-            className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[var(--text-primary)] leading-[1.15] sm:leading-[1.1] tracking-tight mb-5 sm:mb-8"
+            className={`${isMobile ? "text-2xl" : "text-3xl sm:text-5xl lg:text-6xl"} font-extrabold text-[var(--text-primary)] leading-[1.15] sm:leading-[1.1] tracking-tight mb-5 sm:mb-8`}
           >
             17.000 Kandidaten.
             <br />
@@ -416,12 +418,12 @@ export default function PaidLanding() {
       {/* ─── Numbers ─── */}
       <section className="py-10 sm:py-20 border-y border-[var(--border)]/50">
         <div className="max-w-4xl mx-auto px-5 sm:px-8">
-          <motion.div {...fade} className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8">
+          <motion.div {...fade} className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8" data-mobile-keep>
             {[
-              { value: "5.000+", label: "BMS-Fragen", sub: "mit Erklärungen" },
-              { value: "10.000+", label: "KFF-Aufgaben", sub: "algorithmisch generiert" },
-              { value: "173", label: "Lerneinheiten", sub: "offizielle Stichwortliste" },
-              { value: "5", label: "Testsimulationen", sub: "echte Zeitlimits" },
+              { value: "Tausende", label: "BMS-Fragen", sub: "mit detaillierten Erklärungen" },
+              { value: "Unbegrenzt", label: "KFF-Aufgaben", sub: "algorithmisch generiert" },
+              { value: "Alle", label: "Stichwörter abgedeckt", sub: "offizielle Stichwortliste" },
+              { value: "Realitätsnah", label: "Testsimulationen", sub: "echte MedAT-Zeitlimits" },
             ].map((s) => (
               <div key={s.label} className="text-center">
                 <div
@@ -501,7 +503,7 @@ export default function PaidLanding() {
                 Systematisch mit MedMaster
               </h3>
               <ul className="space-y-2.5 sm:space-y-3 text-sm text-[var(--text-secondary)] leading-relaxed">
-                <li>5.000+ Fragen im echten MedAT-Format üben</li>
+                <li>Tausende Fragen im echten MedAT-Format üben</li>
                 <li>Schwächen werden automatisch erkannt</li>
                 <li>Gezielte Wiederholung statt Zufall</li>
                 <li>Fortschritt pro Stichwort sichtbar</li>
@@ -563,7 +565,7 @@ export default function PaidLanding() {
         <div className="max-w-3xl mx-auto px-5 sm:px-8">
           <motion.div
             {...fade}
-            className="rounded-2xl p-8 sm:p-12 text-center"
+            className={`rounded-2xl ${isMobile ? "p-5" : "p-8 sm:p-12"} text-center`}
             style={{
               background: `linear-gradient(135deg, color-mix(in srgb, ${NAVY} 4%, transparent), color-mix(in srgb, ${NAVY} 8%, transparent))`,
               border: `1px solid color-mix(in srgb, ${NAVY} 12%, transparent)`,
@@ -576,7 +578,7 @@ export default function PaidLanding() {
               ) : (
                 <>
                   Gratis-Zugang endet in{" "}
-                  <span className="font-mono tabular-nums text-lg sm:text-2xl">
+                  <span className={`font-mono tabular-nums ${isMobile ? "text-base" : "text-lg sm:text-2xl"}`}>
                     {countdown.days}d {String(countdown.hours).padStart(2, "0")}h{" "}
                     {String(countdown.minutes).padStart(2, "0")}m
                   </span>
@@ -642,7 +644,7 @@ export default function PaidLanding() {
             {[
               {
                 q: "Ist das aktuell für den MedAT 2026?",
-                a: "Ja, vollständig. Alle Inhalte basieren auf der offiziellen Stichwortliste 2026 der Medizinischen Universitäten. Die 173 Lerneinheiten decken jedes einzelne Stichwort ab. Die über 5.000 BMS-Fragen sind im originalen MedAT-Format (A\u2013E, genau eine richtige Antwort) und werden laufend aktualisiert.",
+                a: "Ja, vollständig. Alle Inhalte basieren auf der offiziellen Stichwortliste 2026 der Medizinischen Universitäten. Unsere Lerneinheiten decken jedes einzelne Stichwort ab. Sämtliche BMS-Fragen sind im originalen MedAT-Format (A–E, genau eine richtige Antwort) und werden laufend aktualisiert.",
               },
               {
                 q: "Kann ich jederzeit kündigen?",
@@ -657,7 +659,7 @@ export default function PaidLanding() {
                 a: "Ab 1. April kostet MedMaster einmalig \u20ac29,90. Kein monatliches Abo, keine wiederkehrenden Kosten. Du behältst vollen Zugang bis zum MedAT 2026. Wer sich jetzt registriert, lernt bis dahin komplett gratis.",
               },
             ].map((faq) => (
-              <FAQItem key={faq.q} q={faq.q} a={faq.a} />
+              <FAQItem key={faq.q} q={faq.q} a={faq.a} isMobile={isMobile} />
             ))}
           </motion.div>
         </div>
@@ -672,7 +674,7 @@ export default function PaidLanding() {
             Deine Konkurrenz auch nicht.
           </h2>
           <p className="text-white/60 text-sm sm:text-base mb-8 sm:mb-10 max-w-md mx-auto leading-relaxed">
-            5.000+ Fragen. Alle 4 Bereiche. Adaptives Lernsystem. Kein Abo.
+            Tausende Fragen. Alle 4 Bereiche. Adaptives Lernsystem. Kein Abo.
           </p>
           <GoogleBtn
             label="Jetzt kostenlos starten"
@@ -691,7 +693,7 @@ export default function PaidLanding() {
       <footer className="py-8 border-t border-[var(--border)]">
         <div className="max-w-4xl mx-auto px-5 sm:px-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-[var(--muted)]">
           <span>&copy; 2026 MedMaster</span>
-          <div className="flex gap-4 sm:gap-6">
+          <div className={`flex ${isMobile ? "gap-x-4 gap-y-2" : "gap-x-8 gap-y-2"}`}>
             <Link to="/impressum" className="hover:text-[var(--text-primary)] transition-colors">
               Impressum
             </Link>
@@ -743,7 +745,7 @@ export default function PaidLanding() {
   );
 }
 
-function FAQItem({ q, a }: { q: string; a: string }) {
+function FAQItem({ q, a, isMobile }: { q: string; a: string; isMobile: boolean }) {
   const [open, setOpen] = useState(false);
   return (
     <div>
@@ -765,7 +767,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
         </svg>
       </button>
       {open && (
-        <p className="text-sm text-[var(--muted)] leading-relaxed pb-5 sm:pb-6 -mt-2 pr-8 sm:pr-12">
+        <p className={`text-sm text-[var(--muted)] leading-relaxed pb-5 sm:pb-6 -mt-2 ${isMobile ? "pr-4" : "pr-8 sm:pr-12"}`}>
           {a}
         </p>
       )}

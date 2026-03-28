@@ -7,6 +7,10 @@ import { buildUnifiedActivityMap, buildMinutesActivityMap } from "@/lib/heatmapA
 const MEDAT_DATE = new Date(2026, 6, 3); // 3.7.26
 const HEATMAP_START_DATE = new Date(2026, 1, 26); // 26.02.26 – erster Tag
 
+// Stable defaults — prevent infinite re-render loops in Zustand selectors
+const STABLE_EMPTY_ARR: never[] = [];
+const STABLE_EMPTY_OBJ = {} as Record<string, never>;
+
 interface HeatmapProps {
   className?: string;
 }
@@ -44,9 +48,13 @@ function toDateKey(d: Date): string {
 const MEDAT_KEY = "2026-07-03";
 
 export function Heatmap({ className }: HeatmapProps) {
-  const quizResults = useStore((s) => s.quizResults ?? []);
-  const activityLog = useStore((s) => s.activityLog ?? {});
-  const stichwortStats = useAdaptiveStore((s) => s.profile.stichwortStats);
+  const rawQuizResults = useStore((s) => s.quizResults ?? STABLE_EMPTY_ARR);
+  const quizResults = useMemo(
+    () => rawQuizResults.filter((r) => r != null && typeof r === "object"),
+    [rawQuizResults]
+  );
+  const activityLog = useStore((s) => s.activityLog ?? STABLE_EMPTY_OBJ);
+  const stichwortStats = useAdaptiveStore((s) => s.profile?.stichwortStats ?? STABLE_EMPTY_OBJ);
   const minutesMap = useMemo(
     () => buildMinutesActivityMap({ quizResults, activityLog }),
     [quizResults, activityLog]

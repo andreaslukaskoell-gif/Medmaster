@@ -457,7 +457,9 @@ export default function Onboarding() {
   const [selectedTime, setSelectedTime] = useState<number | null>(null);
   const [selectedFach, setSelectedFach] = useState<string | null>(null);
   const navigate = useNavigate();
-  const { addXP, setLernplanConfig, completeOnboarding } = useStore();
+  const addXP = useStore((s) => s.addXP);
+  const setLernplanConfig = useStore((s) => s.setLernplanConfig);
+  const completeOnboarding = useStore((s) => s.completeOnboarding);
 
   // Auto-navigate away from "done" slide after 5s (user can also click CTAs directly)
   useEffect(() => {

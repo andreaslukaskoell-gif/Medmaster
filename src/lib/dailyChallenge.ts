@@ -25,8 +25,8 @@ function getDateSeed(dateStr: string): number {
 
 function getAllBMSQuestions() {
   return alleKapitel.flatMap((kapitel) =>
-    kapitel.unterkapitel.flatMap((uk) =>
-      uk.selfTest.map((q, idx) => ({
+    (kapitel.unterkapitel ?? []).flatMap((uk) =>
+      (uk?.selfTest ?? []).map((q, idx) => ({
         questionId: `${uk.id}-${idx}`,
         question: q.question,
         options: q.options,

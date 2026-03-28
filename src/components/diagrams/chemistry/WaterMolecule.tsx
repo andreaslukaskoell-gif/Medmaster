@@ -38,7 +38,7 @@ export default function WaterMolecule() {
       </div>
 
       {view === "single" ? (
-        <svg viewBox="0 0 480 300" className="w-full max-w-lg mx-auto">
+        <svg role="img" viewBox="0 0 480 300" className="w-full max-w-lg mx-auto">
           <title>Wassermolekül — gewinkelte Geometrie, Partialladungen und Dipolmoment</title>
           <defs>
             <radialGradient id="oGrad" cx="40%" cy="35%" r="55%">
@@ -173,7 +173,7 @@ export default function WaterMolecule() {
           </text>
         </svg>
       ) : (
-        <svg viewBox="0 0 480 300" className="w-full max-w-lg mx-auto">
+        <svg role="img" viewBox="0 0 480 300" className="w-full max-w-lg mx-auto">
           <title>Wasserstoffbrücken-Netzwerk im flüssigen Wasser</title>
           <defs>
             <radialGradient id="oGrad2" cx="40%" cy="35%" r="55%">

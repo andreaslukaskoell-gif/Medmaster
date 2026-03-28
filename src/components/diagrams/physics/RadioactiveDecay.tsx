@@ -21,7 +21,7 @@ export default function RadioactiveDecay() {
   const halves = [1, 2, 3, 4];
 
   return (
-    <svg viewBox={`0 0 ${W} ${H}`} className="w-full max-w-md mx-auto">
+    <svg role="img" viewBox={`0 0 ${W} ${H}`} className="w-full max-w-md mx-auto">
       <title>Radioaktiver Zerfall — Zerfallskurve</title>
 
       <text x={W / 2} y={18} textAnchor="middle" fontSize={13} fill="#7c3aed" fontWeight={700}>

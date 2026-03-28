@@ -65,7 +65,7 @@ export default function BloodComponents() {
       <p className="text-xs text-gray-600 dark:text-gray-400">
         Klicke auf Bestandteile für Details.
       </p>
-      <svg viewBox="0 0 700 500" className="w-full max-w-3xl mx-auto">
+      <svg role="img" viewBox="0 0 700 500" className="w-full max-w-3xl mx-auto">
         <title>Blutbestandteile — Plasma, Erythrozyten, Leukozyten, Thrombozyten</title>
         {/* Test tube container */}
         <rect

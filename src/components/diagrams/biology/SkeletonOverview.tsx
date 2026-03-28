@@ -134,7 +134,7 @@ export default function SkeletonOverview() {
         Klicke auf eine Knochengruppe für Details (gesamt: 206 Knochen im Erwachsenenalter).
       </p>
 
-      <svg viewBox={`0 0 ${W} ${H}`} className="w-full max-w-lg mx-auto">
+      <svg role="img" viewBox={`0 0 ${W} ${H}`} className="w-full max-w-lg mx-auto">
         <title>Menschliches Skelett — Knochengruppen Übersicht</title>
 
         {/* ── SKULL ── */}

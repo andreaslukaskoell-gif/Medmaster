@@ -25,7 +25,7 @@ export default function LaminarFlowProfile() {
         Parabolisches Geschwindigkeitsprofil in einem zylindrischen Rohr (Hagen-Poiseuille).
       </p>
 
-      <svg viewBox="0 0 500 300" className="w-full max-w-lg mx-auto">
+      <svg role="img" viewBox="0 0 500 300" className="w-full max-w-lg mx-auto">
         <title>Laminares Strömungsprofil — Hagen-Poiseuille-Gesetz</title>
         <defs>
           <marker id="arrowLF" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">

@@ -85,7 +85,7 @@ export default function EquationBalance() {
         Was auf einer Seite gemacht wird, muss auch auf der anderen gemacht werden
       </p>
 
-      <svg viewBox={`0 0 ${W} ${H}`} className="w-full">
+      <svg role="img" viewBox={`0 0 ${W} ${H}`} className="w-full">
         <title>Gleichung lösen — Waage-Modell</title>
 
         {/* Equation display */}

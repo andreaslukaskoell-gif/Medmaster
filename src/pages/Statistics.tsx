@@ -40,7 +40,12 @@ const confidenceLabel: Record<string, { text: string; className: string }> = {
 };
 
 export default function Statistics() {
-  const { quizResults, xp, streak } = useStore();
+  const rawQuizResults = useStore((s) => s.quizResults);
+  const xp = useStore((s) => s.xp);
+  const streak = useStore((s) => s.streak);
+  const quizResults = (rawQuizResults ?? []).filter(
+    (r) => r != null && typeof r === "object"
+  );
   const adaptive = useAdaptiveStore();
   const { profile } = adaptive;
   const [stichwortFach, setStichwortFach] = useState<string>("biologie");
@@ -53,7 +58,7 @@ export default function Statistics() {
   const byType = quizResults.reduce<
     Record<string, { correct: number; total: number; count: number }>
   >((acc, r) => {
-    const key = r.type.toUpperCase();
+    const key = (r.type || "bms").toUpperCase();
     if (!acc[key]) acc[key] = { correct: 0, total: 0, count: 0 };
     acc[key].correct += r.score;
     acc[key].total += r.total;
@@ -258,7 +263,7 @@ export default function Statistics() {
         if (bmsResults.length === 0) return null;
         const bySubject: Record<string, { correct: number; total: number }> = {};
         bmsResults.forEach((r) => {
-          r.answers.forEach((a) => {
+          (r.answers ?? []).forEach((a) => {
             const subj = getQuestionSubject(a.questionId) || r.subject || "unbekannt";
             if (!bySubject[subj]) bySubject[subj] = { correct: 0, total: 0 };
             bySubject[subj].total += 1;

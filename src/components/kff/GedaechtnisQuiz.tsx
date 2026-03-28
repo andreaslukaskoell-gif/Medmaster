@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import {
   ArrowLeft,
   ArrowRight,
@@ -121,7 +121,7 @@ export function GedaechtnisSetup({ onLearn, onBack }: { onLearn: () => void; onB
   const [passCount, setPassCount] = useState(8);
   const [dbLoading, setDbLoading] = useState(false);
   const [dbError, setDbError] = useState<string | null>(null);
-  const { getKffSeenIdsForDomain } = useStore();
+  const getKffSeenIdsForDomain = useStore((s) => s.getKffSeenIdsForDomain);
   const startFromDb = async () => {
     setDbError(null);
     setDbLoading(true);
@@ -229,10 +229,15 @@ export function GedaechtnisLearn({ onStart, onBack }: { onStart: () => void; onB
   const [started, setStarted] = useState(false);
   const passes = _gmSession.passes;
   useEffect(() => {
-    if (!started || secondsLeft <= 0) return;
-    const t = setInterval(() => setSecondsLeft((s) => s - 1), 1000);
+    if (!started) return;
+    const t = setInterval(() => {
+      setSecondsLeft((s) => {
+        if (s <= 1) { clearInterval(t); return 0; }
+        return s - 1;
+      });
+    }, 1000);
     return () => clearInterval(t);
-  }, [started, secondsLeft]);
+  }, [started]);
 
   const startTimer = () => setStarted(true);
   const m = Math.floor(secondsLeft / 60);
@@ -311,7 +316,17 @@ export function GedaechtnisInterferenz({
   const [selected, setSelected] = useState<string | null>(null);
   const [answered, setAnswered] = useState(false);
 
+  // Stable ref for onComplete — prevents useEffect from re-firing when parent
+  // re-renders and passes a new anonymous function reference.
+  const onCompleteRef = useRef(onComplete);
+  useEffect(() => { onCompleteRef.current = onComplete; }, [onComplete]);
+
   const task = tasks[taskIndex];
+
+  // When all tasks are done, trigger onComplete via effect (not during render)
+  useEffect(() => {
+    if (started && !task) onCompleteRef.current();
+  }, [started, task]);
 
   if (!started) {
     return (
@@ -341,7 +356,6 @@ export function GedaechtnisInterferenz({
   }
 
   if (!task) {
-    onComplete();
     return null;
   }
 
@@ -393,7 +407,7 @@ export function GedaechtnisInterferenz({
             ))}
           </div>
           {/* Options */}
-          <div className="space-y-2">
+          <div className="space-y-2" role="radiogroup" aria-label="Antwortmöglichkeiten">
             {task.options.map((opt) => {
               const isCorrect = opt.key === task.correctOptionId;
               const isSelected = selected === opt.key;
@@ -412,7 +426,7 @@ export function GedaechtnisInterferenz({
                 ? `${opt.value[0]}, ${opt.value[1]}`
                 : (opt.text ?? "Keine der genannten");
               return (
-                <button key={opt.key} onClick={() => handleSelect(opt.key)} className={cls}>
+                <button key={opt.key} onClick={() => handleSelect(opt.key)} className={cls} role="radio" aria-checked={isSelected}>
                   <span className="font-semibold shrink-0">{opt.key})</span>
                   {label}
                 </button>
@@ -445,7 +459,10 @@ export function GedaechtnisQuiz({ onBack }: { onBack: () => void }) {
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [submitted, setSubmitted] = useState(false);
-  const { addXP, checkStreak, saveQuizResult, logActivity } = useStore();
+  const addXP = useStore((s) => s.addXP);
+  const checkStreak = useStore((s) => s.checkStreak);
+  const saveQuizResult = useStore((s) => s.saveQuizResult);
+  const logActivity = useStore((s) => s.logActivity);
   const getMinutes = useSessionTimer();
   const q = questions[index];
   const allAnswered = questions.every((qu) => answers[qu.id] !== undefined);
@@ -496,9 +513,30 @@ export function GedaechtnisQuiz({ onBack }: { onBack: () => void }) {
   // Auto-submit when timer expires
   useEffect(() => {
     if (quizTimerExpired && !submitted && questions.length > 0) {
-      queueMicrotask(() => handleSubmit());
+      // Guard: only submit once; handleSubmit sets submitted=true
+      const score = questions.filter((qu) => answers[qu.id] === qu.correctIndex).length;
+      saveQuizResult({
+        id: `kff-ged-${Date.now()}`,
+        type: "kff",
+        subject: "Gedächtnis",
+        score,
+        total: questions.length,
+        date: new Date().toLocaleDateString("de-AT"),
+        durationMinutes: getMinutes(),
+        answers: questions.map((qu) => ({
+          questionId: qu.id,
+          selectedAnswer: qu.options[answers[qu.id] ?? -1] ?? "",
+          correct: answers[qu.id] === qu.correctIndex,
+        })),
+      });
+      logActivity(questions.length, getMinutes());
+      addXP(score * 10);
+      checkStreak();
+      setSubmitted(true);
+      setIndex(0);
     }
-  }, [quizTimerExpired]); // eslint-disable-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- only run when timer expires
+  }, [quizTimerExpired]);
 
   useKeyboardShortcuts({
     disabled: submitted,
@@ -663,11 +701,13 @@ export function GedaechtnisQuiz({ onBack }: { onBack: () => void }) {
             </div>
           )}
           <p className="text-base font-medium text-[var(--text-primary)] mb-6">{q.question}</p>
-          <div className="space-y-2">
+          <div className="space-y-2" role="radiogroup" aria-label="Antwortmöglichkeiten">
             {q.options.map((opt, oi) => (
               <button
                 key={oi}
                 onClick={() => setAnswers((p) => ({ ...p, [q.id]: oi }))}
+                role="radio"
+                aria-checked={answers[q.id] === oi}
                 className={`w-full text-left px-4 py-3 rounded-lg border text-sm transition-colors cursor-pointer flex items-center gap-2 ${
                   answers[q.id] === oi
                     ? "border-[var(--accent)] bg-[var(--accent)]/10 text-[var(--accent)]"

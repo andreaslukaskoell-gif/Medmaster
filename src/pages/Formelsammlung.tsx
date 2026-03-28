@@ -19,19 +19,79 @@ type FachFilter = "alle" | "physik" | "chemie" | "mathematik";
 
 /** Render formula string with proper subscripts/superscripts for common patterns. */
 function renderFormel(text: string): React.ReactNode {
-  // Replace common patterns: x² → x<sup>2</sup>, v₁ → v<sub>1</sub>, etc.
-  const html = text
-    .replace(/(\w)²/g, "$1<sup>2</sup>")
-    .replace(/(\w)³/g, "$1<sup>3</sup>")
-    .replace(/(\w)\^(\d+)/g, "$1<sup>$2</sup>")
-    .replace(/(\w)_(\w)/g, "$1<sub>$2</sub>")
-    .replace(/(\w)₁/g, "$1<sub>1</sub>")
-    .replace(/(\w)₂/g, "$1<sub>2</sub>")
-    .replace(/(\w)₃/g, "$1<sub>3</sub>")
-    .replace(/Δ/g, "<i>Δ</i>")
-    .replace(/π/g, "<i>π</i>")
-    .replace(/√/g, "√");
-  return <span dangerouslySetInnerHTML={{ __html: html }} />;
+  // Build React elements with sup/sub/italic for formula rendering
+  const remaining = text;
+  const result: React.ReactNode[] = [];
+
+  // Process character by character, building React elements
+  let i = 0;
+  while (i < remaining.length) {
+    const ch = remaining[i];
+    const next = remaining[i + 1];
+
+    // Unicode superscripts: x², x³
+    if (next === "²") {
+      result.push(remaining[i]);
+      result.push(<sup key={`sup-${i}`}>2</sup>);
+      i += 2;
+      continue;
+    }
+    if (next === "³") {
+      result.push(remaining[i]);
+      result.push(<sup key={`sup-${i}`}>3</sup>);
+      i += 2;
+      continue;
+    }
+    // Caret notation: x^2
+    if (next === "^" && /\w/.test(ch) && /\d/.test(remaining[i + 2] ?? "")) {
+      result.push(ch);
+      let exp = "";
+      let j = i + 2;
+      while (j < remaining.length && /\d/.test(remaining[j])) {
+        exp += remaining[j];
+        j++;
+      }
+      result.push(<sup key={`sup-${i}`}>{exp}</sup>);
+      i = j;
+      continue;
+    }
+    // Unicode subscripts: x₁, x₂, x₃
+    if (next === "₁") {
+      result.push(ch);
+      result.push(<sub key={`sub-${i}`}>1</sub>);
+      i += 2;
+      continue;
+    }
+    if (next === "₂") {
+      result.push(ch);
+      result.push(<sub key={`sub-${i}`}>2</sub>);
+      i += 2;
+      continue;
+    }
+    if (next === "₃") {
+      result.push(ch);
+      result.push(<sub key={`sub-${i}`}>3</sub>);
+      i += 2;
+      continue;
+    }
+    // Underscore subscript: x_y
+    if (next === "_" && /\w/.test(ch) && /\w/.test(remaining[i + 2] ?? "")) {
+      result.push(ch);
+      result.push(<sub key={`sub-${i}`}>{remaining[i + 2]}</sub>);
+      i += 3;
+      continue;
+    }
+    // Greek/special chars as italic
+    if (ch === "Δ" || ch === "π") {
+      result.push(<i key={`i-${i}`}>{ch}</i>);
+      i += 1;
+      continue;
+    }
+    result.push(ch);
+    i += 1;
+  }
+
+  return <span>{result}</span>;
 }
 
 const fachConfig: Record<

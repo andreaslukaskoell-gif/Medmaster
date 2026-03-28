@@ -8,13 +8,19 @@ import {
   Zap,
   BarChart3,
   Clock,
-  Users,
   Brain,
   FileText,
   Heart,
   Check,
+  Sparkles,
 } from "lucide-react";
+import { TextAnimate } from "@/components/ui/text-animate";
+import { ShimmerButton } from "@/components/ui/shimmer-button";
+import { AnimatedGradientText } from "@/components/ui/animated-gradient-text";
+import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
+import { BlurFade } from "@/components/ui/blur-fade";
 import { useAuth } from "@/hooks/useAuth";
+import { useViewportMode } from "@/hooks/useViewportMode";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { trackClick, trackEvent } from "@/lib/analyticsTracker";
 import {
@@ -27,7 +33,7 @@ import {
 import { ExitIntentCapture } from "@/components/growth/ExitIntentCapture";
 import { ReturningVisitorBanner } from "@/components/growth/ReturningVisitorBanner";
 import { Logo } from "@/components/brand/Logo";
-import { supabase } from "@/lib/supabase";
+
 
 const NAVY = "#1b3ea7";
 
@@ -87,7 +93,7 @@ function SampleQuestion({ onSignupClick }: { onSignupClick: () => void }) {
         <span className="text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full bg-[var(--accent)]/8 text-[var(--accent)]">
           {q.subject}
         </span>
-        <span className="text-xs text-[var(--muted)] tracking-wide">1 von 5.000+</span>
+        <span className="text-xs text-[var(--muted)] tracking-wide">1 von tausenden</span>
       </div>
       <p className="text-base sm:text-lg font-semibold text-[var(--text-primary)] leading-relaxed mb-5 sm:mb-7">
         {q.text}
@@ -172,7 +178,7 @@ function SampleQuestion({ onSignupClick }: { onSignupClick: () => void }) {
             }}
             className="btn-premium flex items-center justify-center gap-2.5 w-full py-3.5 sm:py-4 text-sm font-semibold rounded-xl"
           >
-            Über 5.000 weitere Fragen warten
+            Tausende weitere Fragen warten
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
@@ -182,7 +188,7 @@ function SampleQuestion({ onSignupClick }: { onSignupClick: () => void }) {
 }
 
 /* ── FAQ ── */
-function FAQItem({ q, a }: { q: string; a: string }) {
+function FAQItem({ q, a, isMobile }: { q: string; a: string; isMobile: boolean }) {
   const [open, setOpen] = useState(false);
   return (
     <div>
@@ -204,7 +210,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
         </svg>
       </button>
       {open && (
-        <p className="text-sm text-[var(--muted)] leading-relaxed pb-5 sm:pb-6 -mt-2 pr-8 sm:pr-12">
+        <p className={`text-sm text-[var(--muted)] leading-relaxed pb-5 sm:pb-6 -mt-2 ${isMobile ? "pr-4" : "pr-8 sm:pr-12"}`}>
           {a}
         </p>
       )}
@@ -216,30 +222,20 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 
 export default function LandingPage() {
   usePageMeta({
-    title: "MedMaster — MedAT 2026 Vorbereitung | 5.000+ Fragen, KI-Lernsystem",
+    title: "MedMaster — MedAT 2026 Vorbereitung | Tausende Fragen, Adaptives Lernsystem",
     description:
-      "MedAT 2026 bestehen mit MedMaster: 5.000+ Übungsfragen, alle 4 Testbereiche (BMS, KFF, TV, SEK), adaptives KI-Lernsystem, Prüfungssimulation. Kostenlos starten.",
+      "MedAT 2026 bestehen mit MedMaster: Tausende Übungsfragen, alle 4 Testbereiche (BMS, KFF, TV, SEK), adaptives Lernsystem, Prüfungssimulation. Kostenlos starten.",
     canonical: "https://medmaster.at",
     ogImage: "https://medmaster.at/og-image.png",
   });
 
   const { signInWithGoogle } = useAuth();
+  const { isMobile } = useViewportMode();
   const [googleError, setGoogleError] = useState("");
-  const [userCount, setUserCount] = useState<number | null>(null);
   const showStickyCTA = useShowStickyCTA();
 
   const deadline = useMemo(() => new Date("2026-03-31T23:59:59+02:00"), []);
   const countdown = useCountdown(deadline);
-
-  useEffect(() => {
-    if (!supabase) return;
-    supabase
-      .from("leaderboard_snapshots")
-      .select("*", { count: "exact", head: true })
-      .then(({ count }) => {
-        if (count && count >= 10) setUserCount(count);
-      });
-  }, []);
 
   useEffect(() => {
     startPageTimer();
@@ -269,7 +265,7 @@ export default function LandingPage() {
   const GoogleBtn = ({ label, className = "" }: { label: string; className?: string }) => (
     <button
       onClick={handleGoogle}
-      className={`inline-flex items-center justify-center gap-3 font-semibold px-8 sm:px-10 py-4 text-base cursor-pointer transition-all duration-200 ${className}`}
+      className={`inline-flex items-center justify-center gap-3 font-semibold ${isMobile ? "px-5" : "px-8 sm:px-10"} py-4 text-base cursor-pointer transition-all duration-200 ${className}`}
     >
       <svg className="w-5 h-5 shrink-0" viewBox="0 0 24 24">
         <path
@@ -302,104 +298,133 @@ export default function LandingPage() {
 
   return (
     <div className="min-h-screen bg-[var(--background)]">
-      {/* ─── Header ─── */}
-      <header className="sticky top-0 z-40 bg-[var(--surface)]/80 backdrop-blur-2xl border-b border-[var(--border)]/50">
-        <div className="max-w-5xl mx-auto px-4 sm:px-8 h-14 sm:h-16 flex items-center justify-between">
-          <Logo variant="full" size={24} />
-          <div className="flex items-center gap-3 sm:gap-6">
-            <Link
-              to="/medat-kff-ueben"
-              className="text-sm text-[var(--muted)] hover:text-[var(--text-primary)] transition-colors hidden md:block"
-            >
-              KFF Demo
-            </Link>
-            <Link
-              to="/medat-uebungsfragen"
-              className="text-sm text-[var(--muted)] hover:text-[var(--text-primary)] transition-colors hidden md:block"
-            >
-              BMS Demo
-            </Link>
-            <Link
-              to="/login"
-              className="text-sm text-[var(--muted)] hover:text-[var(--text-primary)] transition-colors hidden sm:block"
-            >
-              Anmelden
-            </Link>
-            <Link
-              to="/login"
-              onClick={handleEmailClick}
-              className="btn-premium text-sm font-semibold px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl inline-flex items-center gap-1.5"
-            >
-              Kostenlos starten
-              <ArrowRight className="w-3.5 h-3.5" />
-            </Link>
+      {/* ─── Header + Urgency bar (sticky together) ─── */}
+      <div className="sticky top-0 z-40" style={{ WebkitTransform: "translateZ(0)" }}>
+        <header className="bg-[var(--surface)] border-b border-[var(--border)]/50">
+          <div className="max-w-5xl mx-auto px-4 sm:px-8 h-14 sm:h-16 flex items-center justify-between">
+            <Logo variant="full" size={24} />
+            <div className="flex items-center gap-3 sm:gap-6">
+              <Link
+                to="/medat-kff-ueben"
+                className="text-sm text-[var(--muted)] hover:text-[var(--text-primary)] transition-colors hidden md:block"
+              >
+                KFF Demo
+              </Link>
+              <Link
+                to="/medat-uebungsfragen"
+                className="text-sm text-[var(--muted)] hover:text-[var(--text-primary)] transition-colors hidden md:block"
+              >
+                BMS Demo
+              </Link>
+              <Link
+                to="/login"
+                className="text-sm text-[var(--muted)] hover:text-[var(--text-primary)] transition-colors"
+              >
+                Anmelden
+              </Link>
+              <Link
+                to="/login"
+                onClick={handleEmailClick}
+                className="btn-premium text-sm font-semibold px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl inline-flex items-center gap-1.5"
+              >
+                <span className="hidden sm:inline">Kostenlos starten</span>
+                <span className="sm:hidden">Starten</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
           </div>
-        </div>
-      </header>
+        </header>
 
-      {/* ─── Urgency bar ─── */}
-      {!countdown.expired && (
-        <div className="text-center py-2.5 sm:py-3 px-4" style={{ backgroundColor: NAVY }}>
-          <p className="text-xs sm:text-sm font-medium text-white/90 tracking-wide flex items-center justify-center gap-2 sm:gap-3">
-            <span>Gratis-Zugang endet in</span>
-            <span className="inline-flex gap-1 sm:gap-1.5 font-mono tabular-nums text-xs sm:text-sm">
-              <span className="bg-white/15 rounded px-1.5 py-0.5">{countdown.days}d</span>
-              <span className="bg-white/15 rounded px-1.5 py-0.5">
-                {String(countdown.hours).padStart(2, "0")}h
+        {/* ─── Urgency bar (sticks below header) ─── */}
+        {!countdown.expired && (
+          <div className="text-center py-2 sm:py-3 px-4" style={{ backgroundColor: NAVY }}>
+            <p className="text-xs sm:text-sm font-medium text-white/90 tracking-wide flex items-center justify-center gap-2 sm:gap-3">
+              <span>Gratis-Zugang endet in</span>
+              <span className="inline-flex gap-1 sm:gap-1.5 font-mono tabular-nums text-xs sm:text-sm">
+                <span className="bg-white/15 rounded px-1.5 py-0.5">{countdown.days}d</span>
+                <span className="bg-white/15 rounded px-1.5 py-0.5">
+                  {String(countdown.hours).padStart(2, "0")}h
+                </span>
+                <span className="bg-white/15 rounded px-1.5 py-0.5">
+                  {String(countdown.minutes).padStart(2, "0")}m
+                </span>
+                <span className="bg-white/15 rounded px-1.5 py-0.5 hidden sm:inline">
+                  {String(countdown.seconds).padStart(2, "0")}s
+                </span>
               </span>
-              <span className="bg-white/15 rounded px-1.5 py-0.5">
-                {String(countdown.minutes).padStart(2, "0")}m
-              </span>
-              <span className="bg-white/15 rounded px-1.5 py-0.5 hidden sm:inline">
-                {String(countdown.seconds).padStart(2, "0")}s
-              </span>
-            </span>
-          </p>
-        </div>
-      )}
+            </p>
+          </div>
+        )}
+      </div>
 
       <ReturningVisitorBanner />
 
       {/* ─── Hero ─── */}
-      <section className="pt-12 sm:pt-24 pb-10 sm:pb-20 hero-orbs">
-        <div className="max-w-3xl mx-auto px-5 sm:px-8 text-center">
-          <motion.p
-            {...fade}
-            className="text-xs sm:text-sm font-semibold tracking-widest uppercase mb-4 sm:mb-6"
-            style={{ color: NAVY }}
+      <section className="pt-12 sm:pt-28 pb-10 sm:pb-24 hero-orbs relative overflow-hidden">
+        {/* Subtle radial glow behind hero */}
+        <div
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full pointer-events-none"
+          style={{
+            background: `radial-gradient(circle, color-mix(in srgb, ${NAVY} 6%, transparent) 0%, transparent 70%)`,
+          }}
+        />
+
+        <div className={`max-w-3xl mx-auto ${isMobile ? "px-4" : "px-5 sm:px-8"} text-center relative`}>
+          {/* Pill badge */}
+          <BlurFade delay={0} className="mb-5 sm:mb-7">
+            <span
+              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold tracking-widest uppercase border"
+              style={{
+                color: NAVY,
+                borderColor: `color-mix(in srgb, ${NAVY} 20%, transparent)`,
+                background: `color-mix(in srgb, ${NAVY} 5%, transparent)`,
+              }}
+            >
+              <Sparkles className="w-3.5 h-3.5" />
+              MedAT 2026 Vorbereitung
+            </span>
+          </BlurFade>
+
+          {/* Headline with staggered word animation */}
+          <TextAnimate
+            as="h1"
+            animation="blurInUp"
+            by="word"
+            delay={0.15}
+            className={`${isMobile ? "text-2xl" : "text-3xl sm:text-5xl lg:text-6xl"} font-extrabold text-[var(--text-primary)] leading-[1.15] sm:leading-[1.1] tracking-tight mb-5 sm:mb-8 justify-center`}
           >
-            MedAT 2026 Vorbereitung
-          </motion.p>
-          <motion.h1
-            {...fade}
-            transition={{ ...fade.transition, delay: 0.1 }}
-            className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[var(--text-primary)] leading-[1.15] sm:leading-[1.1] tracking-tight mb-5 sm:mb-8"
-          >
-            17.000 Kandidaten.
-            <br />
-            1.900 Plätze.
-            <br />
-            <span className="text-[var(--accent)]">Bist du vorbereitet?</span>
-          </motion.h1>
-          <motion.p
-            {...fade}
-            transition={{ ...fade.transition, delay: 0.2 }}
-            className="text-base sm:text-xl text-[var(--text-secondary)] max-w-lg mx-auto mb-8 sm:mb-12 leading-relaxed"
-          >
-            Der Unterschied zwischen Zusage und Absage ist oft nur wenige Punkte. MedMaster gibt dir
-            die Werkzeuge, die diesen Unterschied machen.
-          </motion.p>
+            {"17.000 Kandidaten. 1.900 Plätze."}
+          </TextAnimate>
+
+          <BlurFade delay={0.4} className="mb-5 sm:mb-8">
+            <span className={`${isMobile ? "text-2xl" : "text-3xl sm:text-5xl lg:text-6xl"} font-extrabold leading-[1.15] sm:leading-[1.1] tracking-tight`}>
+              <AnimatedGradientText colors={["#1b3ea7", "#2563eb", "#7c3aed", "#2563eb", "#1b3ea7"]}>
+                Bist du vorbereitet?
+              </AnimatedGradientText>
+            </span>
+          </BlurFade>
+
+          <BlurFade delay={0.55}>
+            <p className="text-base sm:text-xl text-[var(--text-secondary)] max-w-lg mx-auto mb-8 sm:mb-12 leading-relaxed">
+              Der Unterschied zwischen Zusage und Absage ist oft nur wenige Punkte. MedMaster gibt dir
+              die Werkzeuge, die diesen Unterschied machen.
+            </p>
+          </BlurFade>
 
           {/* CTA */}
-          <motion.div
-            {...fade}
-            transition={{ ...fade.transition, delay: 0.3 }}
-            className="flex flex-col items-center gap-3 sm:gap-4 mb-4 sm:mb-6"
-          >
-            <GoogleBtn
-              label="Kostenlos ausprobieren"
-              className="btn-premium rounded-2xl shadow-xl hover:shadow-2xl hover:scale-[1.02] w-full sm:w-auto"
-            />
+          <BlurFade delay={0.7} className="flex flex-col items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
+            <ShimmerButton
+              onClick={handleGoogle}
+              className={`${isMobile ? "px-5" : "px-8 sm:px-10"} py-4 text-base shadow-xl w-full sm:w-auto`}
+            >
+              <svg className="w-5 h-5 shrink-0" viewBox="0 0 24 24">
+                <path fill="#fff" fillOpacity="0.9" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" />
+                <path fill="#fff" fillOpacity="0.7" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                <path fill="#fff" fillOpacity="0.6" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                <path fill="#fff" fillOpacity="0.8" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+              </svg>
+              Kostenlos ausprobieren
+            </ShimmerButton>
             <Link
               to="/login"
               onClick={handleEmailClick}
@@ -408,113 +433,124 @@ export default function LandingPage() {
               Mit E-Mail anmelden
               <ArrowRight className="w-3.5 h-3.5" />
             </Link>
-          </motion.div>
+          </BlurFade>
           {googleError && <p className="text-sm text-red-500 mt-2">{googleError}</p>}
-          <motion.p
-            {...fade}
-            transition={{ ...fade.transition, delay: 0.35 }}
-            className="text-xs text-[var(--muted)]/60 tracking-wide"
-          >
-            Keine Kreditkarte &middot; Kein Abo &middot; 1 Klick mit Google
-          </motion.p>
+          <BlurFade delay={0.8}>
+            <p className="text-xs text-[var(--muted)]/60 tracking-wide">
+              Keine Kreditkarte &middot; Kein Abo &middot; 1 Klick mit Google
+            </p>
+          </BlurFade>
         </div>
       </section>
 
       {/* ─── Numbers ─── */}
       <section className="py-10 sm:py-20 border-y border-[var(--border)]/50">
         <div className="max-w-4xl mx-auto px-5 sm:px-8">
-          <motion.div {...fade} className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8">
-            {[
-              { value: "5.000+", label: "BMS-Fragen", sub: "mit Erklärungen" },
-              { value: "10.000+", label: "KFF-Aufgaben", sub: "algorithmisch generiert" },
-              { value: "173", label: "Lerneinheiten", sub: "offizielle Stichwortliste" },
-              { value: "4", label: "MedAT-Bereiche", sub: "vollständig abgedeckt" },
-            ].map((s) => (
-              <div key={s.label} className="text-center">
-                <div
-                  className="text-2xl sm:text-4xl font-extrabold tracking-tight mb-1 sm:mb-2"
-                  style={{ color: NAVY }}
-                >
-                  {s.value}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8" data-mobile-keep>
+            {([
+              { counter: 4000, suffix: "+", label: "BMS-Fragen", sub: "mit detaillierten Erklärungen" },
+              { text: "∞", label: "KFF-Aufgaben", sub: "algorithmisch generiert" },
+              { counter: 100, suffix: "%", label: "Stichwörter abgedeckt", sub: "offizielle Stichwortliste" },
+              { text: "4 / 4", label: "MedAT-Bereiche", sub: "vollständig abgedeckt" },
+            ] as const).map((s, i) => (
+              <BlurFade key={s.label} delay={0.1 + i * 0.08}>
+                <div className="text-center">
+                  <div
+                    className="text-2xl sm:text-4xl font-extrabold tracking-tight mb-1 sm:mb-2"
+                    style={{ color: NAVY }}
+                  >
+                    {"counter" in s ? (
+                      <AnimatedCounter value={s.counter} suffix={s.suffix} duration={1200} />
+                    ) : (
+                      s.text
+                    )}
+                  </div>
+                  <div className="text-xs sm:text-sm font-semibold text-[var(--text-primary)] mb-0.5">
+                    {s.label}
+                  </div>
+                  <div className="text-[11px] sm:text-xs text-[var(--muted)]">{s.sub}</div>
                 </div>
-                <div className="text-xs sm:text-sm font-semibold text-[var(--text-primary)] mb-0.5">
-                  {s.label}
-                </div>
-                <div className="text-[11px] sm:text-xs text-[var(--muted)]">{s.sub}</div>
-              </div>
+              </BlurFade>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* ─── Trust strip (mobile: compact badges, desktop: inline) ─── */}
       <section className="py-6 sm:py-8">
         <div className="max-w-3xl mx-auto px-5 sm:px-8">
-          <motion.div {...fade} className="flex flex-wrap justify-center gap-2 sm:gap-3">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
             {[
               { icon: Check, text: "Alle 4 MedAT-Bereiche" },
               { icon: Check, text: "Offizielle Stichwortliste" },
               { icon: Check, text: "Adaptives Lernsystem" },
-              ...(userCount ? [{ icon: Users, text: `${userCount}+ lernen bereits` }] : []),
-            ].map((b) => (
-              <span
-                key={b.text}
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium text-[var(--text-secondary)] bg-[var(--card)] border border-[var(--border)]"
-              >
-                <b.icon className="w-3.5 h-3.5 text-emerald-500" />
-                {b.text}
-              </span>
+            ].map((b, i) => (
+              <BlurFade key={b.text} delay={0.05 + i * 0.06}>
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium text-[var(--text-secondary)] bg-[var(--card)] border border-[var(--border)]">
+                  <b.icon className="w-3.5 h-3.5 text-emerald-500" />
+                  {b.text}
+                </span>
+              </BlurFade>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* ─── Problem vs. Solution ─── */}
       <section className="py-12 sm:py-24">
         <div className="max-w-3xl mx-auto px-5 sm:px-8">
-          <motion.div {...fade} className="text-center mb-8 sm:mb-16">
+          <BlurFade className="text-center mb-8 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)] mb-3 sm:mb-4">
               Wie sich die meisten vorbereiten — und warum es nicht reicht
             </h2>
-          </motion.div>
-          <motion.div {...fade} className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-            <div className="rounded-2xl border border-[var(--border)] p-6 sm:p-8">
-              <div className="w-10 h-10 rounded-xl bg-[var(--card)] flex items-center justify-center mb-4 sm:mb-5">
-                <span className="text-lg text-[var(--muted)]">&times;</span>
+          </BlurFade>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+            <BlurFade delay={0.1}>
+              <div className="rounded-2xl border border-[var(--border)] p-6 sm:p-8 h-full">
+                <div className="w-10 h-10 rounded-xl bg-[var(--card)] flex items-center justify-center mb-4 sm:mb-5">
+                  <span className="text-lg text-[var(--muted)]">&times;</span>
+                </div>
+                <h3 className="text-base font-bold text-[var(--text-primary)] mb-3 sm:mb-4">
+                  Planlos lernen
+                </h3>
+                <ul className="space-y-2.5 sm:space-y-3 text-sm text-[var(--text-secondary)] leading-relaxed">
+                  <li>Lehrbuch von vorne bis hinten durchlesen</li>
+                  <li>50 Altfragen auswendig können</li>
+                  <li>Schwächen ignorieren, Stärken wiederholen</li>
+                  <li>Am Prüfungstag überrascht werden</li>
+                </ul>
               </div>
-              <h3 className="text-base font-bold text-[var(--text-primary)] mb-3 sm:mb-4">
-                Planlos lernen
-              </h3>
-              <ul className="space-y-2.5 sm:space-y-3 text-sm text-[var(--text-secondary)] leading-relaxed">
-                <li>Lehrbuch von vorne bis hinten durchlesen</li>
-                <li>50 Altfragen auswendig können</li>
-                <li>Schwächen ignorieren, Stärken wiederholen</li>
-                <li>Am Prüfungstag überrascht werden</li>
-              </ul>
-            </div>
-            <div
-              className="rounded-2xl border-2 p-6 sm:p-8"
-              style={{ borderColor: `color-mix(in srgb, ${NAVY} 30%, transparent)` }}
-            >
+            </BlurFade>
+            <BlurFade delay={0.2}>
               <div
-                className="w-10 h-10 rounded-xl flex items-center justify-center mb-4 sm:mb-5"
-                style={{ backgroundColor: `color-mix(in srgb, ${NAVY} 10%, transparent)` }}
+                className="rounded-2xl border-2 p-6 sm:p-8 h-full relative overflow-hidden"
+                style={{ borderColor: `color-mix(in srgb, ${NAVY} 30%, transparent)` }}
               >
-                <span className="text-lg" style={{ color: NAVY }}>
-                  &rarr;
-                </span>
+                {/* Subtle accent glow */}
+                <div
+                  className="absolute -top-12 -right-12 w-32 h-32 rounded-full pointer-events-none"
+                  style={{ background: `radial-gradient(circle, color-mix(in srgb, ${NAVY} 8%, transparent) 0%, transparent 70%)` }}
+                />
+                <div
+                  className="w-10 h-10 rounded-xl flex items-center justify-center mb-4 sm:mb-5 relative"
+                  style={{ backgroundColor: `color-mix(in srgb, ${NAVY} 10%, transparent)` }}
+                >
+                  <span className="text-lg" style={{ color: NAVY }}>
+                    &rarr;
+                  </span>
+                </div>
+                <h3 className="text-base font-bold text-[var(--text-primary)] mb-3 sm:mb-4 relative">
+                  Systematisch mit MedMaster
+                </h3>
+                <ul className="space-y-2.5 sm:space-y-3 text-sm text-[var(--text-secondary)] leading-relaxed relative">
+                  <li>Tausende Fragen im echten MedAT-Format üben</li>
+                  <li>Schwächen werden automatisch erkannt</li>
+                  <li>Gezielte Wiederholung statt Zufall</li>
+                  <li>Fortschritt pro Stichwort sichtbar</li>
+                </ul>
               </div>
-              <h3 className="text-base font-bold text-[var(--text-primary)] mb-3 sm:mb-4">
-                Systematisch mit MedMaster
-              </h3>
-              <ul className="space-y-2.5 sm:space-y-3 text-sm text-[var(--text-secondary)] leading-relaxed">
-                <li>5.000+ Fragen im echten MedAT-Format üben</li>
-                <li>Schwächen werden automatisch erkannt</li>
-                <li>Gezielte Wiederholung statt Zufall</li>
-                <li>Fortschritt pro Stichwort sichtbar</li>
-              </ul>
-            </div>
-          </motion.div>
+            </BlurFade>
+          </div>
         </div>
       </section>
 
@@ -526,8 +562,8 @@ export default function LandingPage() {
               Alle 4 MedAT-Bereiche. Vollständig.
             </h2>
             <p className="text-sm sm:text-base text-[var(--text-secondary)] max-w-lg mx-auto">
-              Nicht &bdquo;ein bisschen von allem&ldquo; — jeder Testteil ist mit hunderten Aufgaben
-              und Theorie abgedeckt.
+              Nicht &bdquo;ein bisschen von allem&ldquo; — jeder Testteil ist mit hunderten
+              Aufgaben, Theorie und Erklärungen abgedeckt.
             </p>
           </motion.div>
           <motion.div {...fade} className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
@@ -537,12 +573,12 @@ export default function LandingPage() {
                 title: "BMS",
                 sub: "Basiskenntnistest Medizinische Studien",
                 items: [
-                  "1.252 Biologie-Fragen",
-                  "1.315 Chemie-Fragen",
-                  "1.377 Physik-Fragen",
-                  "1.077 Mathematik-Fragen",
+                  "Biologie — umfassender Fragenpool",
+                  "Chemie — organisch & anorganisch",
+                  "Physik — Mechanik bis Optik",
+                  "Mathematik — Algebra bis Stochastik",
                 ],
-                footer: "173 Lerneinheiten nach offizieller Stichwortliste",
+                footer: "Jedes offizielle Stichwort mit Lerneinheit abgedeckt",
                 link: "/medat-uebungsfragen",
                 linkLabel: "BMS testen",
               },
@@ -557,7 +593,7 @@ export default function LandingPage() {
                   "Figuren zusammensetzen",
                   "Gedächtnis & Merkfähigkeit",
                 ],
-                footer: "10.000+ algorithmisch generierte Aufgaben",
+                footer: "Unbegrenzt viele algorithmisch generierte Aufgaben",
                 link: "/medat-kff-ueben",
                 linkLabel: "KFF testen",
               },
@@ -565,7 +601,7 @@ export default function LandingPage() {
                 icon: FileText,
                 title: "TV",
                 sub: "Textverständnis",
-                items: ["10 vollständige Textsets", "120 Verständnisfragen"],
+                items: ["Prüfungsnahe Textsets", "Hunderte Verständnisfragen"],
                 footer: "Prüfungsnahe Texte mit detaillierter Auswertung",
               },
               {
@@ -573,7 +609,7 @@ export default function LandingPage() {
                 title: "SEK",
                 sub: "Sozial-emotionale Kompetenzen",
                 items: ["Emotionen erkennen", "Emotionen regulieren", "Soziales Entscheiden"],
-                footer: "85+ Aufgaben mit offiziellen MedAT-Instruktionen",
+                footer: "Hunderte Aufgaben mit offiziellen MedAT-Instruktionen",
               },
             ].map((area) => (
               <div
@@ -635,7 +671,7 @@ export default function LandingPage() {
               {
                 icon: BookOpen,
                 title: "Theorie + Praxis",
-                desc: "173 Lerneinheiten nach offizieller Stichwortliste — jedes Stichwort mit Erklärung, Merksätzen und Übungsfragen.",
+                desc: "Lerneinheiten zu jedem offiziellen Stichwort — mit Erklärung, Merksätzen und Übungsfragen.",
               },
               {
                 icon: Zap,
@@ -671,7 +707,7 @@ export default function LandingPage() {
         <div className="max-w-3xl mx-auto px-5 sm:px-8">
           <motion.div
             {...fade}
-            className="rounded-2xl p-8 sm:p-12 text-center"
+            className={`rounded-2xl ${isMobile ? "p-5" : "p-8 sm:p-12"} text-center`}
             style={{
               background: `linear-gradient(135deg, color-mix(in srgb, ${NAVY} 4%, transparent), color-mix(in srgb, ${NAVY} 8%, transparent))`,
               border: `1px solid color-mix(in srgb, ${NAVY} 12%, transparent)`,
@@ -684,7 +720,7 @@ export default function LandingPage() {
               ) : (
                 <>
                   Gratis-Zugang endet in{" "}
-                  <span className="font-mono tabular-nums text-lg sm:text-2xl">
+                  <span className={`font-mono tabular-nums ${isMobile ? "text-base" : "text-lg sm:text-2xl"}`}>
                     {countdown.days}d {String(countdown.hours).padStart(2, "0")}h{" "}
                     {String(countdown.minutes).padStart(2, "0")}m
                   </span>
@@ -696,10 +732,18 @@ export default function LandingPage() {
                 ? "Kein Abo. Voller Zugang zu allen Fragen, Lerneinheiten und der Prüfungssimulation."
                 : "Wer jetzt startet, lernt bis April gratis — und hat einen Vorsprung gegenüber allen, die noch warten."}
             </p>
-            <GoogleBtn
-              label="Kostenlos starten"
-              className="btn-premium rounded-2xl shadow-xl hover:shadow-2xl hover:scale-[1.02] w-full sm:w-auto"
-            />
+            <ShimmerButton
+              onClick={handleGoogle}
+              className="px-8 sm:px-10 py-4 text-base shadow-xl w-full sm:w-auto"
+            >
+              <svg className="w-5 h-5 shrink-0" viewBox="0 0 24 24">
+                <path fill="#fff" fillOpacity="0.9" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" />
+                <path fill="#fff" fillOpacity="0.7" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                <path fill="#fff" fillOpacity="0.6" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                <path fill="#fff" fillOpacity="0.8" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+              </svg>
+              Kostenlos starten
+            </ShimmerButton>
             {googleError && <p className="text-sm text-red-500 mt-3">{googleError}</p>}
             <p className="text-xs text-[var(--muted)] mt-4">
               <Link
@@ -766,9 +810,9 @@ export default function LandingPage() {
                   {[
                     ["Preis", "Einmalig €29,90", "€69 – €599+"],
                     ["Abo / Verlängerung", "Nein", "Häufig monatlich"],
-                    ["BMS-Fragen", "5.000+", "1.300 – 2.700"],
-                    ["KFF-Aufgaben", "10.000+ (generiert)", "500 – 7.500"],
-                    ["Prüfungssimulation", "Inklusive, unbegrenzt", "€69 pro Simulation"],
+                    ["BMS-Fragen", "Tausende", "Deutlich weniger"],
+                    ["KFF-Aufgaben", "Unbegrenzt (generiert)", "Begrenzter Pool"],
+                    ["Prüfungssimulation", "Inklusive, unbegrenzt", "Extra kostenpflichtig"],
                     ["Adaptives Lernsystem", "Ja", "Nicht verfügbar"],
                     ["Alle 4 MedAT-Bereiche", "Ja", "Oft nur BMS"],
                     ["Zugang bis MedAT", "Ja", "Saisonabhängig"],
@@ -807,7 +851,7 @@ export default function LandingPage() {
             {[
               {
                 q: "Ist das aktuell für den MedAT 2026?",
-                a: "Ja, vollständig. Alle Inhalte basieren auf der offiziellen Stichwortliste 2026 der Medizinischen Universitäten. Die 173 Lerneinheiten decken jedes einzelne Stichwort ab — von Zellbiologie über organische Chemie bis Stochastik. Die über 5.000 BMS-Fragen sind im originalen MedAT-Format (A–E, genau eine richtige Antwort) und werden laufend aktualisiert.",
+                a: "Ja, vollständig. Alle Inhalte basieren auf der offiziellen Stichwortliste 2026 der Medizinischen Universitäten. Unsere Lerneinheiten decken jedes einzelne Stichwort ab — von Zellbiologie über organische Chemie bis Stochastik. Sämtliche BMS-Fragen sind im originalen MedAT-Format (A–E, genau eine richtige Antwort) und werden laufend aktualisiert.",
               },
               {
                 q: "Kann ich jederzeit kündigen?",
@@ -823,10 +867,10 @@ export default function LandingPage() {
               },
               {
                 q: "Was unterscheidet MedMaster von anderen Anbietern?",
-                a: "Vier Dinge: Erstens decken wir alle 4 MedAT-Bereiche ab — nicht nur BMS. Zweitens ist unser Lernsystem adaptiv — es erkennt deine Schwächen und passt den Lernplan automatisch an. Drittens kosten andere Plattformen €69–599 (oft mit Abo), während MedMaster einmalig €29,90 kostet. Viertens: Über 10.000 KFF-Aufgaben werden algorithmisch generiert und validiert — du bekommst nie dieselbe Aufgabe zweimal. Dazu eine realistische Prüfungssimulation mit echten MedAT-Zeitlimits, unbegrenzt wiederholbar.",
+                a: "Vier Dinge: Erstens decken wir alle 4 MedAT-Bereiche ab — nicht nur BMS. Zweitens ist unser Lernsystem adaptiv — es erkennt deine Schwächen und passt den Lernplan automatisch an. Drittens kosten andere Plattformen €69–599 (oft mit Abo), während MedMaster einmalig €29,90 kostet. Viertens: KFF-Aufgaben werden algorithmisch generiert und validiert — du bekommst nie dieselbe Aufgabe zweimal. Dazu eine realistische Prüfungssimulation mit echten MedAT-Zeitlimits, unbegrenzt wiederholbar.",
               },
             ].map((faq) => (
-              <FAQItem key={faq.q} q={faq.q} a={faq.a} />
+              <FAQItem key={faq.q} q={faq.q} a={faq.a} isMobile={isMobile} />
             ))}
           </motion.div>
         </div>
@@ -841,7 +885,7 @@ export default function LandingPage() {
             Deine Konkurrenz auch nicht.
           </h2>
           <p className="text-white/60 text-sm sm:text-base mb-8 sm:mb-10 max-w-md mx-auto leading-relaxed">
-            5.000+ Fragen. Alle 4 Bereiche. Adaptives Lernsystem. Kein Abo.
+            Tausende Fragen. Alle 4 Bereiche. Adaptives Lernsystem. Kein Abo.
           </p>
           <GoogleBtn
             label="Jetzt kostenlos starten"
@@ -864,7 +908,7 @@ export default function LandingPage() {
               <Logo variant="icon" size={20} />
               <span className="text-sm font-semibold text-[var(--text-primary)]">MedMaster</span>
             </div>
-            <div className="flex flex-wrap gap-x-8 gap-y-2 text-sm">
+            <div className={`flex flex-wrap ${isMobile ? "gap-x-4 gap-y-2" : "gap-x-8 gap-y-2"} text-sm`}>
               <Link
                 to="/medat-uebungsfragen"
                 className="text-[var(--muted)] hover:text-[var(--text-primary)] transition-colors"

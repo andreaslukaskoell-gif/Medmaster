@@ -552,7 +552,9 @@ export const useAdaptiveStore = create<AdaptiveState>()(
       },
 
       getPerformanceTrend: () => {
-        const quizResults = useStore.getState().quizResults ?? [];
+        const quizResults = (useStore.getState().quizResults ?? []).filter(
+          (r) => r != null && typeof r === "object"
+        );
         const now = new Date();
         const days: string[] = [];
         for (let i = 13; i >= 0; i--) {
@@ -690,9 +692,10 @@ export const useAdaptiveStore = create<AdaptiveState>()(
         }
 
         for (const r of bmsResults) {
+          if (!r?.answers || !Array.isArray(r.answers)) continue;
           const day = r.date;
           const fach = r.subject ?? "";
-          const correct = r.answers.filter((a) => a.correct).length;
+          const correct = r.answers.filter((a) => a?.correct).length;
           const total = r.answers.length;
 
           const ov = overallDailyScores.get(day) ?? { correct: 0, total: 0 };
@@ -821,6 +824,16 @@ export const useAdaptiveStore = create<AdaptiveState>()(
         lastPath: state.lastPath,
         difficultyLevel: state.difficultyLevel,
       }),
+      merge: (persisted, current) => {
+        const p = persisted as Record<string, unknown> | undefined;
+        if (!p) return current;
+        return {
+          ...current,
+          ...p,
+          // Deep-merge profile so missing keys fall back to defaults
+          profile: { ...current.profile, ...(p.profile as Record<string, unknown> ?? {}) },
+        };
+      },
     }
   )
 );

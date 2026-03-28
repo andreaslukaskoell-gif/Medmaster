@@ -45,7 +45,7 @@ export default function Gastrulation() {
         Klicke auf ein Stadium für Details.
       </p>
 
-      <svg viewBox={`0 0 ${W} ${H}`} className="w-full max-w-2xl mx-auto">
+      <svg role="img" viewBox={`0 0 ${W} ${H}`} className="w-full max-w-2xl mx-auto">
         <title>Gastrulation — Von der Zweiblattscheibe zu drei Keimblättern</title>
 
         {stages.map((stage, i) => {

@@ -19,6 +19,7 @@ import {
   Copy,
   Puzzle,
   CalendarClock,
+  Zap,
 } from "lucide-react";
 import { CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -29,7 +30,7 @@ import { WeaknessCard } from "@/components/dashboard/WeaknessCard";
 import { StreakFlameIcon } from "@/components/dashboard/StreakFire";
 import { useLevelUpSound } from "@/hooks/useLevelUpSound";
 import { trackEvent } from "@/lib/analyticsTracker";
-import { useStore } from "@/store/useStore";
+import { useStore, type QuizResult } from "@/store/useStore";
 import { useAdaptiveStore } from "@/store/adaptiveLearning";
 import { useDashboardProfile } from "@/hooks/useDashboardProfile";
 import { usePageTitle } from "@/hooks/usePageTitle";
@@ -52,12 +53,20 @@ import { getPlanAdaptation } from "@/lib/planAdaptation";
 import { alleKapitel, getKapitelById, findChapterByUnterkapitelId } from "@/data/bmsKapitel";
 import { pathForChapter } from "@/lib/bmsRoutes";
 import { useTodayEngine } from "@/hooks/useTodayEngine";
+import { useViewportMode } from "@/hooks/useViewportMode";
+import { usePullToRefresh } from "@/hooks/usePullToRefresh";
 import { ReferralWidget } from "@/components/shared/ReferralWidget";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { Tooltip } from "@/components/ui/Tooltip";
 import { DailyPlanWidget } from "@/components/dashboard/DailyPlanWidget";
 import { WeaknessWidget } from "@/components/dashboard/WeaknessWidget";
 import { RecentActivityWidget } from "@/components/dashboard/RecentActivityWidget";
+
+// Stable defaults — prevent infinite re-render loops in Zustand selectors.
+// `?? []` inside a selector creates a NEW reference every render if the value is nullish,
+// causing Zustand (Object.is equality) to trigger re-render → loop.
+const STABLE_EMPTY_ARR: never[] = [];
+const STABLE_EMPTY_OBJ = {} as Record<string, never>;
 
 const tileMotion = {
   initial: { opacity: 0, y: 16 },
@@ -68,25 +77,24 @@ const stagger = { transition: { staggerChildren: 0.08 } };
 
 export default function Dashboard() {
   usePageTitle("Dashboard");
-  const {
-    xp: storeXp,
-    completedChapters,
-    quizResults,
-    streak,
-    lastActiveDate,
-    unlockedFachMilestones,
-    unlockFachMilestone,
-    firstActivityTimeByDay,
-    lernplanConfig,
-    setGoalAchievedToday,
-    goalAchievedByDate,
-    smartAdjustDismissedUntil,
-    dismissSmartAdjust,
-    getDueChapterIds,
-    userProgress,
-  } = useStore();
-  const activityLog = useStore((s) => s.activityLog);
-  const getFachReadiness = useAdaptiveStore((s) => s.getFachReadiness);
+  const { isMobile } = useViewportMode();
+  // Use individual selectors instead of useStore() to avoid re-rendering on ANY state change
+  const storeXp = useStore((s) => s.xp);
+  const completedChapters = useStore((s) => s.completedChapters ?? STABLE_EMPTY_ARR);
+  const rawQuizResults = useStore((s) => s.quizResults ?? STABLE_EMPTY_ARR);
+  const streak = useStore((s) => s.streak);
+  const lastActiveDate = useStore((s) => s.lastActiveDate);
+  const firstActivityTimeByDay = useStore((s) => s.firstActivityTimeByDay ?? STABLE_EMPTY_OBJ);
+  const lernplanConfig = useStore((s) => s.lernplanConfig);
+  const goalAchievedByDate = useStore((s) => s.goalAchievedByDate ?? STABLE_EMPTY_OBJ);
+  const smartAdjustDismissedUntil = useStore((s) => s.smartAdjustDismissedUntil);
+  const dismissSmartAdjust = useStore((s) => s.dismissSmartAdjust);
+  const userProgress = useStore((s) => s.userProgress ?? STABLE_EMPTY_OBJ);
+  // Defensive: always filter out null/corrupt entries from quizResults
+  const quizResults = useMemo(
+    () => rawQuizResults.filter((r): r is QuizResult => r != null && typeof r === "object"),
+    [rawQuizResults]
+  );
   const lastViewedKapitelId = useAdaptiveStore((s) => s.lastViewedKapitelId);
   const lastViewedUnterkapitelId = useAdaptiveStore((s) => s.lastViewedUnterkapitelId);
   const todayStr = useMemo(() => new Date().toISOString().split("T")[0], []);
@@ -117,41 +125,59 @@ export default function Dashboard() {
   const weeksLeft = Math.max(1, Math.floor(days / 7));
   const plan = useMemo(() => {
     if (!lernplanConfig) return null;
-    const ad = useAdaptiveStore.getState();
-    const adaptation = getPlanAdaptation({
-      hoursPerWeek: lernplanConfig.hoursPerWeek,
-      goalAchievedByDate: goalAchievedByDate ?? {},
-      quizResults: quizResults ?? [],
-      activityLog: activityLog ?? {},
-    });
-    return generateAdaptivePlan({
-      hoursPerWeek: adaptation.effectiveHoursPerWeek,
-      weeksLeft,
-      readiness: ad.getMedATReadiness(),
-      fachReadiness: {
-        biologie: ad.getFachReadiness("biologie"),
-        chemie: ad.getFachReadiness("chemie"),
-        physik: ad.getFachReadiness("physik"),
-        mathematik: ad.getFachReadiness("mathematik"),
-      },
-      weakTopics: ad.getWeakestTopics(5),
-      phase: ad.profile.learningPhase,
-    });
-  }, [lernplanConfig, weeksLeft, goalAchievedByDate, quizResults, activityLog]);
+    try {
+      const ad = useAdaptiveStore.getState();
+      const storeState = useStore.getState();
+      const adaptation = getPlanAdaptation({
+        hoursPerWeek: lernplanConfig.hoursPerWeek,
+        goalAchievedByDate: storeState.goalAchievedByDate ?? {},
+        quizResults: storeState.quizResults ?? [],
+        activityLog: storeState.activityLog ?? {},
+      });
+      return generateAdaptivePlan({
+        hoursPerWeek: adaptation.effectiveHoursPerWeek,
+        weeksLeft,
+        readiness: ad.getMedATReadiness?.() ?? 0,
+        fachReadiness: {
+          biologie: ad.getFachReadiness?.("biologie") ?? 0,
+          chemie: ad.getFachReadiness?.("chemie") ?? 0,
+          physik: ad.getFachReadiness?.("physik") ?? 0,
+          mathematik: ad.getFachReadiness?.("mathematik") ?? 0,
+        },
+        weakTopics: ad.getWeakestTopics?.(5) ?? [],
+        phase: ad.profile?.learningPhase ?? "einstieg",
+      });
+    } catch {
+      return null;
+    }
+    // quizResults triggers recomputation; actual data read via getState() to avoid cascading re-renders
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- quizResults is an intentional recompute trigger
+  }, [lernplanConfig, weeksLeft, quizResults]);
   const concretePlan = useMemo(() => {
     if (!plan) return null;
-    return buildConcreteDailyPlan(plan, {
-      dueChapterIds: getDueChapterIds(),
-      lastViewedChapterId: lastViewedKapitelId,
-      lastViewedUnterkapitelId,
-    });
-  }, [plan, getDueChapterIds, lastViewedKapitelId, lastViewedUnterkapitelId]);
+    try {
+      const dueIds = useStore.getState().getDueChapterIds?.() ?? [];
+      return buildConcreteDailyPlan(plan, {
+        dueChapterIds: dueIds,
+        lastViewedChapterId: lastViewedKapitelId,
+        lastViewedUnterkapitelId,
+      });
+    } catch {
+      return null;
+    }
+  }, [plan, lastViewedKapitelId, lastViewedUnterkapitelId]);
   const dailyGoalState = useMemo(
-    () => getDailyGoalFromPlan(plan, quizResults, todayStr),
+    () => {
+      try {
+        return getDailyGoalFromPlan(plan, quizResults, todayStr);
+      } catch {
+        return { hasPlan: false, isPrimaryComplete: false, dailyMinutes: 0, todayTasks: [], primaryProgressPct: 0, totalSegments: 0, completedSegments: 0 };
+      }
+    },
     [plan, quizResults, todayStr]
   );
   const consecutiveGoalMissed = useMemo(
-    () => getConsecutiveDaysGoalMissed(goalAchievedByDate),
+    () => getConsecutiveDaysGoalMissed(goalAchievedByDate ?? {}),
     [goalAchievedByDate]
   );
   const showSmartAdjust =
@@ -159,25 +185,38 @@ export default function Dashboard() {
     consecutiveGoalMissed >= 3 &&
     (!smartAdjustDismissedUntil || todayStr > smartAdjustDismissedUntil);
 
-  // Due count from Today Engine (Fragen + Kapitel)
+  // Mark daily goal as achieved — runs only when completion state actually changes
+  const goalComplete = dailyGoalState.hasPlan && dailyGoalState.isPrimaryComplete;
   useEffect(() => {
-    if (dailyGoalState.hasPlan && dailyGoalState.isPrimaryComplete) {
-      setGoalAchievedToday(todayStr, true);
+    if (!goalComplete) return;
+    const s = useStore.getState();
+    if (!s.goalAchievedByDate?.[todayStr]) {
+      s.setGoalAchievedToday(todayStr, true);
     }
-  }, [dailyGoalState.hasPlan, dailyGoalState.isPrimaryComplete, todayStr, setGoalAchievedToday]);
+  }, [goalComplete, todayStr]);
 
   const xp = profile.hasData ? profile.xp : Number.isFinite(storeXp) ? storeXp : 0;
   const _level = getLevelFromXP(xp);
   useLevelUpSound(xp);
 
-  const faecherIds = useMemo(() => ["biologie", "chemie", "physik", "mathematik"], []);
+  // Run only once on mount — check and unlock all fach milestones in one pass
   useEffect(() => {
-    faecherIds.forEach((fach) => {
-      if (getFachReadiness(fach) >= 50 && !unlockedFachMilestones.includes(fach)) {
-        unlockFachMilestone(fach);
+    const currentGetFachReadiness = useAdaptiveStore.getState().getFachReadiness;
+    if (!currentGetFachReadiness) return;
+    const currentUnlocked = useStore.getState().unlockedFachMilestones ?? [];
+    const unlock = useStore.getState().unlockFachMilestone;
+    for (const fach of ["biologie", "chemie", "physik", "mathematik"]) {
+      if (currentGetFachReadiness(fach) >= 50 && !currentUnlocked.includes(fach)) {
+        unlock(fach);
       }
-    });
-  }, [getFachReadiness, unlockedFachMilestones, unlockFachMilestone, faecherIds]);
+    }
+  }, []);
+
+  // Pull-to-refresh on mobile
+  const { pullDistance, isRefreshing } = usePullToRefresh(
+    () => window.location.reload(),
+    80
+  );
 
   const cardClass = "card-glass";
   const { bmsProgressPct, bmsProgressDone, bmsProgressTotal } = useMemo(() => {
@@ -206,6 +245,20 @@ export default function Dashboard() {
 
   return (
     <div className="min-h-screen">
+      {/* Pull-to-refresh indicator (mobile) */}
+      {isMobile && pullDistance > 10 && (
+        <div
+          className="flex items-center justify-center overflow-hidden transition-opacity"
+          style={{ height: pullDistance, opacity: Math.min(pullDistance / 60, 1) }}
+        >
+          <div
+            className={`w-8 h-8 rounded-full border-2 border-[var(--accent)] border-t-transparent ${isRefreshing ? "animate-spin" : ""}`}
+            style={{
+              transform: isRefreshing ? undefined : `rotate(${pullDistance * 3}deg)`,
+            }}
+          />
+        </div>
+      )}
       <div className="max-w-5xl mx-auto px-4 py-8 pb-12">
         <SyncIndicator />
 
@@ -218,7 +271,7 @@ export default function Dashboard() {
             <p className="text-sm text-[var(--muted)] text-center mb-4">
               Wähle einen Bereich und leg direkt los.
             </p>
-            <div className="grid grid-cols-3 gap-3 stagger-children">
+            <div className={`grid gap-3 stagger-children ${isMobile ? "grid-cols-1" : "grid-cols-3"}`}>
               {(
                 [
                   {
@@ -297,6 +350,25 @@ export default function Dashboard() {
 
         {/* ─── Weiterlernen card ─── */}
         <ContinueLearningCard completedChapters={completedChapters} />
+
+        {/* ─── Quick Quiz (mobile-prominent) ─── */}
+        {isMobile && (quizResults ?? []).length > 0 && (
+          <Link
+            to="/fragen-trainer"
+            className="block mb-4 card-glass p-4 group"
+          >
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-xl bg-[var(--accent)]/10 flex items-center justify-center shrink-0">
+                <Zap className="w-5 h-5 text-[var(--accent)]" />
+              </div>
+              <div className="flex-1 min-w-0">
+                <p className="text-sm font-semibold text-[var(--text-primary)]">Quick Quiz</p>
+                <p className="text-xs text-[var(--muted)]">10 Fragen · gemischte Fächer</p>
+              </div>
+              <ArrowRight className="w-4 h-4 text-[var(--muted)] group-hover:translate-x-0.5 transition-transform" />
+            </div>
+          </Link>
+        )}
 
         {/* ─── Fällige Wiederholungen ─── */}
         <DueReviewsCard userProgress={userProgress} />
@@ -412,7 +484,7 @@ export default function Dashboard() {
           <motion.section
             variants={tileMotion}
             aria-label="Daily und Streak"
-            className="grid grid-cols-2 gap-4"
+            className={`grid gap-4 ${isMobile ? "grid-cols-1" : "grid-cols-2"}`}
           >
             {/* Daily Challenge Widget */}
             <div aria-label="BMS des Tages">
@@ -467,7 +539,16 @@ export default function Dashboard() {
               </Tooltip>
             </div>
             {/* Streak-Karte */}
-            <div className={cn(cardClass, "p-5 flex items-center gap-4")} aria-label="Streak">
+            <div className={cn(cardClass, "p-5 flex items-center gap-4 relative overflow-hidden")} aria-label="Streak">
+              {/* Subtle streak glow for active streaks */}
+              {flameStreak >= 7 && (
+                <div
+                  className="absolute inset-0 opacity-[0.04] pointer-events-none"
+                  style={{
+                    background: "linear-gradient(135deg, #f59e0b 0%, #ef4444 50%, transparent 100%)",
+                  }}
+                />
+              )}
               <Tooltip
                 content={`${flameStreak} ${flameStreak === 1 ? "Tag" : "Tage"} in Folge aktiv`}
                 position="top"
@@ -483,7 +564,15 @@ export default function Dashboard() {
               </Tooltip>
               <div className="flex-1 min-w-0">
                 <p className="text-xl font-bold text-[var(--text-primary)]">{flameStreak}</p>
-                <p className="text-sm text-[var(--muted)]">Tage Streak</p>
+                <p className="text-sm text-[var(--muted)]">
+                  {flameStreak === 0
+                    ? "Starte deinen Streak!"
+                    : flameStreak >= 30
+                      ? "Tage Streak — unaufhaltsam!"
+                      : flameStreak >= 7
+                        ? "Tage Streak — stark!"
+                        : "Tage Streak"}
+                </p>
               </div>
               {streak > 0 && !streakPreview && <StreakShareButton streak={streak} />}
             </div>
@@ -494,7 +583,7 @@ export default function Dashboard() {
             <motion.section
               variants={tileMotion}
               aria-label="Empfehlungen"
-              className="grid grid-cols-3 gap-4"
+              className={`grid gap-4 ${isMobile ? "grid-cols-1" : "grid-cols-3"}`}
             >
               <DailyPlanWidget />
               <WeaknessWidget />
@@ -507,7 +596,7 @@ export default function Dashboard() {
             <motion.section
               variants={tileMotion}
               aria-label="Wochen-Aktivität und Freunde"
-              className="grid grid-cols-2 gap-4"
+              className={`grid gap-4 ${isMobile ? "grid-cols-1" : "grid-cols-2"}`}
             >
               <div className={cn(cardClass, "p-5")}>
                 <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
@@ -667,7 +756,7 @@ function DueReviewsCard({
       if (!match) continue;
 
       const { kapitel, index } = match;
-      const uk = kapitel.unterkapitel[index];
+      const uk = (kapitel.unterkapitel ?? [])[index];
       if (!uk) continue;
 
       const overdueDays = Math.floor(
@@ -856,13 +945,14 @@ function ContinueLearningCard({ completedChapters }: { completedChapters: string
     const ukMatch = findChapterByUnterkapitelId(lastViewedUnterkapitelId);
     if (!ukMatch) return null;
 
+    const uks = kapitel.unterkapitel ?? [];
     const uk =
-      kapitel.unterkapitel[ukMatch.index] ??
-      kapitel.unterkapitel.find((u) => u.id === lastViewedUnterkapitelId);
+      uks[ukMatch.index] ??
+      uks.find((u) => u.id === lastViewedUnterkapitelId);
     if (!uk) return null;
 
-    const totalUks = kapitel.unterkapitel.length;
-    const doneUks = kapitel.unterkapitel.filter((u) => completedChapters.includes(u.id)).length;
+    const totalUks = uks.length;
+    const doneUks = uks.filter((u) => completedChapters.includes(u.id)).length;
 
     // Estimate remaining reading time: parse chapter estimatedTime, scale by remaining UKs
     let remainingMinutes: number | null = null;

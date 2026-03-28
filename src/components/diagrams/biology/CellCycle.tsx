@@ -54,7 +54,7 @@ export default function CellCycle() {
     <div className="space-y-3">
       <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">Zellzyklus</h4>
       <p className="text-xs text-gray-600 dark:text-gray-400">Klicke auf Phasen für Details.</p>
-      <svg viewBox="0 0 480 420" className="w-full max-w-xl mx-auto">
+      <svg role="img" viewBox="0 0 480 420" className="w-full max-w-xl mx-auto">
         <title>Zellzyklus — G1, S, G2, M-Phase</title>
         {/* Center circle for G0 */}
         <circle

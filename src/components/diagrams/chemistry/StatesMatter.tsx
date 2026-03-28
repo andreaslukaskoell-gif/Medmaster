@@ -72,7 +72,7 @@ export default function StatesMatter() {
         Klicke auf einen Zustand für Details. Phasenübergänge zwischen den Zuständen.
       </p>
 
-      <svg viewBox="0 0 480 320" className="w-full max-w-lg mx-auto">
+      <svg role="img" viewBox="0 0 480 320" className="w-full max-w-lg mx-auto">
         <title>
           Aggregatzustände: fest, flüssig, gasförmig — Teilchenanordnung und Phasenübergänge
         </title>

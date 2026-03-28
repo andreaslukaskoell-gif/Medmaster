@@ -2,7 +2,7 @@ export default function LeverArm() {
   return (
     <div className="space-y-3">
       <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">Hebelgesetz</h4>
-      <svg viewBox="0 0 520 340" className="w-full max-w-2xl mx-auto">
+      <svg role="img" viewBox="0 0 520 340" className="w-full max-w-2xl mx-auto">
         <title>Hebelgesetz — Drehmoment und Gleichgewicht</title>
         <defs>
           <marker

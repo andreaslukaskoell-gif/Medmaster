@@ -45,7 +45,7 @@ export default function BohrModel() {
         Klicke auf eine Schale, um Details zu Maximalbesetzung und Energieniveau zu sehen.
       </p>
 
-      <svg viewBox="0 0 400 400" className="w-full max-w-sm mx-auto">
+      <svg role="img" viewBox="0 0 400 400" className="w-full max-w-sm mx-auto">
         <title>Bohr'sches Atommodell mit Elektronenschalen K, L, M, N</title>
 
         {/* Shells */}

@@ -52,10 +52,20 @@ function parseMarkdown(text: string): string {
     // Italic (single asterisk, but not inside a word boundary with *)
     result = result.replace(/(?<!\*)\*([^*]+)\*(?!\*)/g, '<em class="italic">$1</em>');
 
-    // Links [text](url)
+    // Links [text](url) — only allow safe protocols (http, https, mailto, relative)
     result = result.replace(
       /\[([^\]]+)\]\(([^)]+)\)/g,
-      '<a href="$2" class="text-[var(--accent)] hover:underline" target="_blank" rel="noopener noreferrer">$1</a>'
+      (_: string, text: string, url: string) => {
+        const trimmed = url.trim().toLowerCase();
+        if (
+          trimmed.startsWith("javascript:") ||
+          trimmed.startsWith("data:") ||
+          trimmed.startsWith("vbscript:")
+        ) {
+          return text; // strip dangerous link, keep text
+        }
+        return `<a href="${url}" class="text-[var(--accent)] hover:underline" target="_blank" rel="noopener noreferrer">${text}</a>`;
+      }
     );
 
     return result;
@@ -195,7 +205,8 @@ const toolbarHints: { icon: React.ElementType; label: string; syntax: string; in
 // ---------------------------------------------------------------------------
 export default function Notes() {
   usePageTitle("Notizen");
-  const { notes, setNote } = useStore();
+  const notes = useStore((s) => s.notes);
+  const setNote = useStore((s) => s.setNote);
   const [searchQuery, setSearchQuery] = useState("");
   const [editingId, setEditingId] = useState<string | null>(null);
   const [editContent, setEditContent] = useState("");

@@ -9,7 +9,7 @@ export default function ContinuityEquation() {
         Geschwindigkeit.
       </p>
 
-      <svg viewBox="0 0 500 300" className="w-full max-w-lg mx-auto">
+      <svg role="img" viewBox="0 0 500 300" className="w-full max-w-lg mx-auto">
         <title>Kontinuitätsgleichung — Rohrverengung und Strömungsgeschwindigkeit</title>
         <defs>
           <marker id="arrowCE" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">

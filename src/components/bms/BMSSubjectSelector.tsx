@@ -7,6 +7,7 @@ import { getQuestionsBySubject } from "@/data/bms/index";
 import type { MRSData } from "@/lib/supabaseBMSFragen";
 import type { MRSFallback } from "@/components/bms/MRSWidget";
 import { Tooltip } from "@/components/ui/Tooltip";
+import { useViewportMode } from "@/hooks/useViewportMode";
 
 type BMSSubjectSelectorProps = {
   bmsKapitel: Kapitel[];
@@ -32,8 +33,9 @@ export function BMSSubjectSelector({
   getKapitelBySubject,
   onSelectSubject,
 }: BMSSubjectSelectorProps) {
+  const { isMobile } = useViewportMode();
   return (
-    <div className="max-w-5xl mx-auto space-y-14 py-4">
+    <div className={`max-w-5xl mx-auto ${isMobile ? "space-y-8 py-2" : "space-y-14 py-4"}`}>
       {filterParam === "due" && (
         <div className="card-glass flex items-center gap-2 px-5 py-3 text-sm text-[var(--warning)]">
           <Clock className="w-4 h-4 shrink-0" />
@@ -43,10 +45,10 @@ export function BMSSubjectSelector({
 
       {/* Hero header */}
       <div className="text-center max-w-2xl mx-auto hero-orbs">
-        <h1 className="text-5xl font-bold text-[var(--foreground)] tracking-tight">
-          Biomedizinische Grundlagen
+        <h1 className={`${isMobile ? "text-2xl" : "text-5xl"} font-bold text-[var(--foreground)] tracking-tight`}>
+          {isMobile ? "BMS – Grundlagen" : "Biomedizinische Grundlagen"}
         </h1>
-        <p className="text-xl text-[var(--text-secondary)] mt-3">
+        <p className={`${isMobile ? "text-sm" : "text-xl"} text-[var(--text-secondary)] mt-3`}>
           {totalUK} Unterkapitel · 4 Fachgebiete
         </p>
         {totalUK > 0 && (
@@ -69,7 +71,7 @@ export function BMSSubjectSelector({
         )}
       </div>
 
-      <div className="grid grid-cols-2 gap-8 stagger-children">
+      <div className={`grid ${isMobile ? "grid-cols-1 gap-4" : "grid-cols-2 gap-8"} stagger-children`}>
         {subjects.map((subject) => (
           <SubjectCard
             key={subject.id}
@@ -118,6 +120,7 @@ function SubjectCard({
   getKapitelBySubject,
   onSelect,
 }: SubjectCardProps) {
+  const { isMobile } = useViewportMode();
   const { sBmsKapitel, sTotal, sDone, progressPct, totalMinutes, questionCount } = useMemo(() => {
     const staticChapters = getKapitelBySubject(subject.id) || [];
     const dynamicChapters = supabaseChapters.filter((k) => k?.subject === subject.id);
@@ -151,24 +154,24 @@ function SubjectCard({
 
   return (
     <div
-      className="card-subject group cursor-pointer p-8 pb-6"
+      className={`card-subject group cursor-pointer ${isMobile ? "p-4 pb-3" : "p-8 pb-6"}`}
       style={{ "--subject-accent": accentColor } as React.CSSProperties}
       onClick={() => onSelect(subject.id)}
     >
       {/* Icon + Title row */}
-      <div className="flex items-start gap-5 mb-5">
+      <div className={`flex items-start ${isMobile ? "gap-3 mb-3" : "gap-5 mb-5"}`}>
         <div
-          className="w-16 h-16 rounded-2xl flex items-center justify-center shrink-0 shadow-sm"
+          className={`${isMobile ? "w-12 h-12 rounded-xl" : "w-16 h-16 rounded-2xl"} flex items-center justify-center shrink-0 shadow-sm`}
           style={{
             background: `linear-gradient(135deg, ${accentColor}20, ${accentColor}08)`,
             color: accentColor,
           }}
         >
-          <subject.icon className="w-8 h-8" />
+          <subject.icon className={isMobile ? "w-6 h-6" : "w-8 h-8"} />
         </div>
         <div className="flex-1 min-w-0">
           <div className="flex items-center justify-between gap-2">
-            <h2 className="text-2xl font-semibold text-[var(--foreground)]">{subject.label}</h2>
+            <h2 className={`${isMobile ? "text-lg" : "text-2xl"} font-semibold text-[var(--foreground)]`}>{subject.label}</h2>
             <span
               className="text-xs font-semibold px-3 py-1.5 rounded-lg opacity-70 group-hover:opacity-100 transition-all duration-200 shrink-0 group-hover:shadow-sm"
               style={{

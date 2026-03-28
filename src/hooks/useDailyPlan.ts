@@ -12,6 +12,9 @@ import { daysUntilMedAT } from "@/lib/utils";
 
 export type PlanTier = "minimal" | "empfohlen" | "intensiv";
 
+// Stable default to avoid infinite re-render loop in Zustand selector
+const EMPTY_CHAPTERS: string[] = [];
+
 const TIER_FACTORS: Record<PlanTier, number> = {
   minimal: 0.5,
   empfohlen: 1.0,
@@ -63,28 +66,26 @@ export function useDailyPlan(): DailyPlanResult {
 
   // Read from stores
   const lernplanConfig = useStore((s) => s.lernplanConfig);
-  const completedChapters = useStore((s) => s.completedChapters ?? []);
-  const getDueChapterIds = useStore((s) => s.getDueChapterIds);
+  const completedChapters = useStore((s) => s.completedChapters ?? EMPTY_CHAPTERS);
   const lastViewedKapitelId = useAdaptiveStore((s) => s.lastViewedKapitelId);
   const lastViewedUnterkapitelId = useAdaptiveStore((s) => s.lastViewedUnterkapitelId);
 
-  // Stable selectors: extract functions, call in useMemo to avoid infinite loops
-  const getMedATReadiness = useAdaptiveStore((s) => s.getMedATReadiness);
-  const getFachReadiness = useAdaptiveStore((s) => s.getFachReadiness);
-  const getWeakestTopics = useAdaptiveStore((s) => s.getWeakestTopics);
   const phase = useAdaptiveStore((s) => s.profile?.learningPhase ?? "einstieg");
 
   // Generate adaptive plan with tier factor
+  // Note: store functions (getMedATReadiness etc.) are accessed via getState() to avoid
+  // unstable function references in the dependency array causing infinite re-renders.
   const adaptivePlan = useMemo(() => {
     const baseHours = lernplanConfig?.hoursPerWeek ?? 10;
     const hoursPerWeek = Math.max(3, Math.min(40, baseHours * TIER_FACTORS[tier]));
     const weeksLeft = Math.max(1, Math.ceil(daysUntilMedAT() / 7));
 
-    const readiness = getMedATReadiness();
+    const ad = useAdaptiveStore.getState();
+    const readiness = ad.getMedATReadiness?.() ?? 0;
     const faecher = ["biologie", "chemie", "physik", "mathematik"];
     const fachReadiness: Record<string, number> = {};
-    for (const f of faecher) fachReadiness[f] = getFachReadiness(f);
-    const weakTopics = getWeakestTopics(10);
+    for (const f of faecher) fachReadiness[f] = ad.getFachReadiness?.(f) ?? 0;
+    const weakTopics = ad.getWeakestTopics?.(10) ?? [];
 
     return generateAdaptivePlan({
       hoursPerWeek,
@@ -94,11 +95,11 @@ export function useDailyPlan(): DailyPlanResult {
       weakTopics,
       phase,
     });
-  }, [tier, lernplanConfig, getMedATReadiness, getFachReadiness, getWeakestTopics, phase]);
+  }, [tier, lernplanConfig, phase]);
 
   // Build concrete daily plan
   const plan = useMemo(() => {
-    const dueIds = getDueChapterIds?.() ?? [];
+    const dueIds = useStore.getState().getDueChapterIds?.() ?? [];
     return buildConcreteDailyPlan(adaptivePlan, {
       dueChapterIds: dueIds,
       lastViewedChapterId: lastViewedKapitelId,
@@ -107,7 +108,6 @@ export function useDailyPlan(): DailyPlanResult {
     });
   }, [
     adaptivePlan,
-    getDueChapterIds,
     lastViewedKapitelId,
     lastViewedUnterkapitelId,
     completedChapters,

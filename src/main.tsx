@@ -81,3 +81,22 @@ if (rootEl) {
     </StrictMode>
   );
 }
+
+// ── Service Worker registration (web only — skip in native) ──
+import { isNative, setupAppListeners, setStatusBarLight } from "@/lib/native";
+
+if ("serviceWorker" in navigator && import.meta.env.PROD && !isNative) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("/sw.js").catch(() => {
+      // SW registration failed — app works fine without it
+    });
+  });
+}
+
+// ── Native app setup (Capacitor) ──
+if (isNative) {
+  setStatusBarLight().catch(() => {});
+  setupAppListeners(() => {
+    // On resume: could trigger sync or re-check auth
+  }).catch(() => {});
+}

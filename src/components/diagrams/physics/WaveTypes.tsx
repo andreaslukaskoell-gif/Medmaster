@@ -36,7 +36,7 @@ export default function WaveTypes() {
       </div>
 
       {view === "transversal" ? (
-        <svg viewBox="0 0 460 280" className="w-full max-w-lg mx-auto">
+        <svg role="img" viewBox="0 0 460 280" className="w-full max-w-lg mx-auto">
           <title>Transversal- und Longitudinalwellen</title>
           <defs>
             <marker id="arrowTW" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
@@ -159,7 +159,7 @@ export default function WaveTypes() {
           </text>
         </svg>
       ) : (
-        <svg viewBox="0 0 460 280" className="w-full max-w-lg mx-auto">
+        <svg role="img" viewBox="0 0 460 280" className="w-full max-w-lg mx-auto">
           <defs>
             <marker id="arrowLW" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
               <path d="M0,0 L8,3 L0,6" fill="#0d9488" />

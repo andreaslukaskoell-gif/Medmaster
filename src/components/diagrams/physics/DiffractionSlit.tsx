@@ -104,7 +104,7 @@ export default function DiffractionSlit() {
         auf ein Maximum oder Minimum für die Erklärung.
       </p>
 
-      <svg viewBox="0 0 580 370" className="w-full max-w-xl mx-auto">
+      <svg role="img" viewBox="0 0 580 370" className="w-full max-w-xl mx-auto">
         <title>Einzelspaltbeugung — Intensitätsmuster und Minima-Formel</title>
 
         <defs>

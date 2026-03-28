@@ -49,7 +49,9 @@ export function getDailyGoalFromPlan(
     };
   }
 
-  const dayResults = quizResults.filter((r) => r.timestamp?.startsWith(date));
+  const dayResults = (quizResults ?? []).filter(
+    (r) => r != null && typeof r === "object" && r.timestamp?.startsWith(date)
+  );
   const dailyMinutes = Math.round(plan.weeklyPlan.reduce((s, p) => s + p.minutesPerWeek, 0) / 7);
 
   const todayTasks: TodayTask[] = plan.weeklyPlan.map((item) => {
@@ -87,7 +89,8 @@ export function getDailyGoalFromPlan(
 }
 
 /** Zählt ab gestern rückwärts, wie viele Tage in Folge das Tagesziel verfehlt wurde */
-export function getConsecutiveDaysGoalMissed(goalAchievedByDate: Record<string, boolean>): number {
+export function getConsecutiveDaysGoalMissed(goalAchievedByDate: Record<string, boolean> | null | undefined): number {
+  if (!goalAchievedByDate) return 0;
   const d = new Date();
   d.setDate(d.getDate() - 1);
   let count = 0;

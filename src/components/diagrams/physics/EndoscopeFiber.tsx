@@ -19,7 +19,7 @@ export default function EndoscopeFiber() {
       <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">
         Totalreflexion im Lichtleiter (Endoskop)
       </h4>
-      <svg viewBox="0 0 500 360" className="w-full max-w-2xl mx-auto">
+      <svg role="img" viewBox="0 0 500 360" className="w-full max-w-2xl mx-auto">
         <title>Glasfaser-Lichtleiter — Totalreflexion im Kern f{"\u00FC"}r Endoskopie</title>
         <defs>
           <marker id="ef-arrow" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">

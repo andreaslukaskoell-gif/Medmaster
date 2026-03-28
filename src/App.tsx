@@ -11,6 +11,7 @@ import {
   useLocation,
   Outlet,
 } from "react-router-dom";
+import { MotionConfig } from "framer-motion";
 import { AppShell } from "@/components/layout/AppShell";
 import { AuthGuard } from "@/components/AuthGuard";
 import { useAuth } from "@/hooks/useAuth";
@@ -19,6 +20,11 @@ import { usePageTracking } from "@/hooks/usePageTracking";
 import { sanitizeUrlParam } from "@/lib/security";
 import { FloatingCTA } from "@/components/growth/FloatingCTA";
 import { CookieConsentBanner } from "@/components/CookieConsent";
+
+/** True when user prefers reduced motion (vestibular disorders, etc.) */
+const prefersReducedMotion =
+  typeof window !== "undefined" &&
+  window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 // Lazy-loaded pages — casing must match filenames exactly (Linux/Vercel is case-sensitive)
 const LandingPage = lazy(() => import("@/pages/LandingPage"));
@@ -100,13 +106,13 @@ function ScrollToTop() {
 }
 
 function OnboardingGuard() {
-  const { onboardingCompleted } = useStore();
+  const onboardingCompleted = useStore((s) => s.onboardingCompleted);
   if (onboardingCompleted) return <Navigate to="/dashboard" replace />;
   return <Onboarding />;
 }
 
 function MedATGuard({ children }: { children: ReactNode }) {
-  const { hasCompletedMedATOnboarding } = useStore();
+  const hasCompletedMedATOnboarding = useStore((s) => s.hasCompletedMedATOnboarding);
   const { profile, loading } = useAuth();
   const location = useLocation();
 
@@ -116,8 +122,14 @@ function MedATGuard({ children }: { children: ReactNode }) {
   const hasNameInDB = !!profile?.display_name?.trim() || !!(uname && !uname.includes("@"));
   const isComplete = hasCompletedMedATOnboarding || hasNameInDB;
 
-  // Don't redirect while still loading auth/profile
-  if (loading) return null;
+  // Don't redirect while still loading auth/profile — show spinner instead of blank screen
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-[var(--accent)]" />
+      </div>
+    );
+  }
 
   if (!isComplete && location.pathname !== "/onboarding/medat") {
     return <Navigate to="/onboarding/medat" replace />;
@@ -173,7 +185,7 @@ function NotFound404() {
   );
 }
 
-/** Sync dark mode class on <html> whenever store.darkMode changes */
+/** Sync dark mode class on <html> + native status bar whenever store.darkMode changes */
 function DarkModeSync() {
   const darkMode = useStore((s) => s.darkMode);
   useEffect(() => {
@@ -182,12 +194,19 @@ function DarkModeSync() {
     } else {
       document.documentElement.classList.remove("dark");
     }
+    // Sync native status bar color on Capacitor
+    import("@/lib/native").then(({ isNative, setStatusBarDark, setStatusBarLight }) => {
+      if (!isNative) return;
+      if (darkMode) setStatusBarDark().catch(() => {});
+      else setStatusBarLight().catch(() => {});
+    }).catch(() => {});
   }, [darkMode]);
   return null;
 }
 
 export default function App() {
   return (
+    <MotionConfig reducedMotion={prefersReducedMotion ? "always" : "never"}>
     <BrowserRouter>
       <DarkModeSync />
       <ScrollToTop />
@@ -341,5 +360,6 @@ export default function App() {
         </Routes>
       </Suspense>
     </BrowserRouter>
+    </MotionConfig>
   );
 }

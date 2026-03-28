@@ -28,7 +28,7 @@ export default function GalvanicCell() {
         Zn/Cu-Zellen, Salzbrücke, Elektronenfluss. Klicke auf Komponenten.
       </p>
 
-      <svg viewBox="0 0 480 300" className="w-full max-w-lg mx-auto cursor-pointer">
+      <svg role="img" viewBox="0 0 480 300" className="w-full max-w-lg mx-auto cursor-pointer">
         <title>Daniell-Element — galvanisches Element</title>
         <defs>
           <linearGradient id="znSol" x1="0%" y1="0%" x2="0%" y2="100%">

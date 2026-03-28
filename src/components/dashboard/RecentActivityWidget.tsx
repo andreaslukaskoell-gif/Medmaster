@@ -59,7 +59,7 @@ function relativeDate(raw: string): string {
 
 export function RecentActivityWidget() {
   const { recentSessions } = useProgressAnalytics();
-  const last3 = recentSessions.slice(0, 3);
+  const last3 = recentSessions.filter(Boolean).slice(0, 3);
 
   return (
     <div className="card-glass p-5 flex flex-col h-full">
@@ -81,7 +81,7 @@ export function RecentActivityWidget() {
                     colors.bg
                   )}
                 >
-                  {TYPE_LABEL[s.type] ?? s.type.toUpperCase()}
+                  {TYPE_LABEL[s.type] ?? (s.type || "BMS").toUpperCase?.() ?? "BMS"}
                 </span>
                 <span className="flex-1 text-[var(--text-secondary)] truncate">
                   {s.score}/{s.total}
