@@ -93,7 +93,7 @@ export default function SensitivitySpecificity() {
         Klicke auf eine Zelle, um zu sehen, welche Kennzahl sie beeinflusst
       </p>
 
-      <svg viewBox={`0 0 ${W} ${H}`} className="w-full">
+      <svg role="img" viewBox={`0 0 ${W} ${H}`} className="w-full">
         <title>Sensitivität und Spezifität — Vierfeldertafel</title>
 
         {/* Column headers */}

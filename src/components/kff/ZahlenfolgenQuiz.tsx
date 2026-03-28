@@ -469,11 +469,13 @@ export function ZahlenfolgenQuiz({
           <p className="text-sm text-[var(--muted)] mb-6 text-center">
             Welche zwei Zahlen folgen als nächstes?
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3" role="radiogroup" aria-label="Antwortmöglichkeiten">
             {currentQ.options && Array.isArray(currentQ.options) ? (
               currentQ.options.map((opt, oi) => (
                 <button
                   key={opt.key}
+                  role="radio"
+                  aria-checked={answers[currentQ.id] === opt.key}
                   onClick={() => setAnswers((p) => ({ ...p, [currentQ.id]: opt.key }))}
                   className={`px-4 py-3 rounded-lg border text-sm font-medium transition-colors cursor-pointer text-left ${answers[currentQ.id] === opt.key ? "border-[var(--accent)] bg-[var(--accent)]/10 text-[var(--accent)]" : "border-[var(--border)] hover:bg-[var(--border)]/50"}`}
                 >

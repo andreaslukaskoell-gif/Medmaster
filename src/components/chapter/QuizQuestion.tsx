@@ -122,7 +122,11 @@ export const QuizQuestion = React.memo(function QuizQuestion({
           </div>
 
           {/* Options: Sofort-Check (Grün/Rot), Lock-In nach Klick */}
-          <div className="ml-0 sm:ml-11 flex flex-col gap-2">
+          <div
+            className="ml-0 sm:ml-11 flex flex-col gap-2"
+            role="radiogroup"
+            aria-label={`Antwortmöglichkeiten für Frage ${questionNumber}`}
+          >
             {options.map((option, oi) => {
               const isChosen = selectedOption === oi;
               const showAsCorrect = isAnswered && oi === correctIndex;
@@ -137,6 +141,9 @@ export const QuizQuestion = React.memo(function QuizQuestion({
 
                   <motion.button
                     type="button"
+                    role="radio"
+                    aria-checked={isChosen}
+                    aria-label={`Option ${String.fromCharCode(65 + oi)}: ${stripLatex(option)}`}
                     onClick={() => handleSelectAnswer(oi)}
                     disabled={isAnswered}
                     className={`w-full min-w-0 text-left px-4 py-3 rounded-lg border transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/50
@@ -168,6 +175,7 @@ export const QuizQuestion = React.memo(function QuizQuestion({
         </div>
 
         {/* Smart Reveal: Erklärung und Merksatz erst nach Beantwortung, weiche Transition */}
+        <div aria-live="polite" aria-atomic="true">
         {isAnswered && (
           <motion.div
             initial={{ opacity: 0, y: 8 }}
@@ -223,6 +231,7 @@ export const QuizQuestion = React.memo(function QuizQuestion({
             </div>
           </motion.div>
         )}
+        </div>
       </motion.div>
     </>
   );

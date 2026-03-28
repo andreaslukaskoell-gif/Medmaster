@@ -162,7 +162,7 @@ export function ImplikationSolutionDiagram({
 /** "Alle X sind Y" — X komplett innerhalb von Y */
 export function EulerAlleXsindY({ width = 220, height = 150, className }: EulerProps) {
   return (
-    <svg viewBox="0 0 220 150" width={width} height={height} className={className}>
+    <svg role="img" viewBox="0 0 220 150" width={width} height={height} className={className}>
       <circle cx="110" cy="75" r="60" fill="none" stroke="#6366f1" strokeWidth="2" />
       <circle cx="110" cy="85" r="32" fill="#c7d2fe" stroke="#6366f1" strokeWidth="2" />
       <text x="110" y="90" textAnchor="middle" fontSize="13" fontWeight="600" fill="#4338ca">
@@ -178,7 +178,7 @@ export function EulerAlleXsindY({ width = 220, height = 150, className }: EulerP
 /** "Alle X sind keine Y" — Kreise getrennt */
 export function EulerAlleXkeineY({ width = 220, height = 150, className }: EulerProps) {
   return (
-    <svg viewBox="0 0 220 150" width={width} height={height} className={className}>
+    <svg role="img" viewBox="0 0 220 150" width={width} height={height} className={className}>
       <circle cx="70" cy="75" r="45" fill="#fecaca" stroke="#dc2626" strokeWidth="2" />
       <circle cx="155" cy="75" r="45" fill="#c7d2fe" stroke="#6366f1" strokeWidth="2" />
       <text x="70" y="80" textAnchor="middle" fontSize="13" fontWeight="600" fill="#dc2626">
@@ -194,7 +194,7 @@ export function EulerAlleXkeineY({ width = 220, height = 150, className }: Euler
 /** "Einige X sind Y" — Kreise überlappen */
 export function EulerEinigeXsindY({ width = 220, height = 150, className }: EulerProps) {
   return (
-    <svg viewBox="0 0 220 150" width={width} height={height} className={className}>
+    <svg role="img" viewBox="0 0 220 150" width={width} height={height} className={className}>
       <circle
         cx="85"
         cy="75"
@@ -229,7 +229,7 @@ export function EulerEinigeXsindY({ width = 220, height = 150, className }: Eule
 /** "Einige X sind keine Y" — Kreise überlappen teilweise, mit Betonung des nicht-überlappenden Teils */
 export function EulerEinigeXkeineY({ width = 220, height = 150, className }: EulerProps) {
   return (
-    <svg viewBox="0 0 220 150" width={width} height={height} className={className}>
+    <svg role="img" viewBox="0 0 220 150" width={width} height={height} className={className}>
       <circle
         cx="85"
         cy="75"
@@ -390,7 +390,7 @@ export function EulerThreeCircles({
   };
 
   return (
-    <svg viewBox="0 0 280 160" width={width} height={height} className={className}>
+    <svg role="img" viewBox="0 0 280 160" width={width} height={height} className={className}>
       {sortedCircles.map((c, i) => (
         <circle
           key={i}
@@ -509,7 +509,7 @@ export function EulerTwoCircles({
   const drawOrder = overlap === "contained" ? (["c2", "c1"] as const) : (["c1", "c2"] as const);
 
   return (
-    <svg viewBox="0 0 220 140" width={width} height={height} className={className}>
+    <svg role="img" viewBox="0 0 220 140" width={width} height={height} className={className}>
       {drawOrder.map((key, i) => {
         const circle = c[key];
         const isFirst = key === "c1";

@@ -34,7 +34,7 @@ export default function LensImaging() {
       </div>
 
       {lens === "converging" ? (
-        <svg viewBox="0 0 480 300" className="w-full max-w-lg mx-auto">
+        <svg role="img" viewBox="0 0 480 300" className="w-full max-w-lg mx-auto">
           <title>Strahlengang durch Sammel- und Zerstreuungslinsen</title>
           <defs>
             <marker
@@ -195,7 +195,7 @@ export default function LensImaging() {
           </text>
         </svg>
       ) : (
-        <svg viewBox="0 0 480 300" className="w-full max-w-lg mx-auto">
+        <svg role="img" viewBox="0 0 480 300" className="w-full max-w-lg mx-auto">
           <defs>
             <marker
               id="arrowRayD"

@@ -555,11 +555,13 @@ export function ImplikationenQuiz({
           <p className="text-sm font-medium text-[var(--text-primary)] mb-3">
             Welche Schlussfolgerung ist korrekt?
           </p>
-          <div className="space-y-2">
+          <div className="space-y-2" role="radiogroup" aria-label="Antwortmöglichkeiten">
             {currentQ.options && Array.isArray(currentQ.options) ? (
               currentQ.options.map((opt, oi) => (
                 <button
                   key={oi}
+                  role="radio"
+                  aria-checked={answers[currentQ.id] === oi}
                   onClick={() => setAnswers((p) => ({ ...p, [currentQ.id]: oi }))}
                   className={`w-full text-left px-4 py-3 rounded-lg border text-sm transition-colors cursor-pointer ${
                     answers[currentQ.id] === oi

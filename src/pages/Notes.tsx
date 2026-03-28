@@ -52,10 +52,20 @@ function parseMarkdown(text: string): string {
     // Italic (single asterisk, but not inside a word boundary with *)
     result = result.replace(/(?<!\*)\*([^*]+)\*(?!\*)/g, '<em class="italic">$1</em>');
 
-    // Links [text](url)
+    // Links [text](url) — only allow safe protocols (http, https, mailto, relative)
     result = result.replace(
       /\[([^\]]+)\]\(([^)]+)\)/g,
-      '<a href="$2" class="text-[var(--accent)] hover:underline" target="_blank" rel="noopener noreferrer">$1</a>'
+      (_: string, text: string, url: string) => {
+        const trimmed = url.trim().toLowerCase();
+        if (
+          trimmed.startsWith("javascript:") ||
+          trimmed.startsWith("data:") ||
+          trimmed.startsWith("vbscript:")
+        ) {
+          return text; // strip dangerous link, keep text
+        }
+        return `<a href="${url}" class="text-[var(--accent)] hover:underline" target="_blank" rel="noopener noreferrer">${text}</a>`;
+      }
     );
 
     return result;

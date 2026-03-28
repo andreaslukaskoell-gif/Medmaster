@@ -69,7 +69,7 @@ export default function ImmuneResponse() {
       </h4>
       <p className="text-xs text-gray-600 dark:text-gray-400">Klicke auf Zelltypen für Details.</p>
 
-      <svg viewBox="0 0 480 420" className="w-full max-w-xl mx-auto">
+      <svg role="img" viewBox="0 0 480 420" className="w-full max-w-xl mx-auto">
         <title>Angeborene und adaptive Immunantwort</title>
         {/* Pathogen at top */}
         <g>

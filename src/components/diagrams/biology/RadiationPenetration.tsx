@@ -63,7 +63,7 @@ export default function RadiationPenetration() {
         Klicke auf einen Strahlungstyp für Details.
       </p>
 
-      <svg viewBox={`0 0 ${W} ${H}`} className="w-full max-w-lg mx-auto">
+      <svg role="img" viewBox={`0 0 ${W} ${H}`} className="w-full max-w-lg mx-auto">
         <title>Durchdringungsfähigkeit von Alpha-, Beta- und Gamma-Strahlung</title>
 
         {/* Source */}

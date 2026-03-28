@@ -46,6 +46,7 @@ export function KeyboardShortcutsOverlay() {
             <h2 className="text-xl font-bold text-[var(--text-primary)]">Tastaturk&uuml;rzel</h2>
             <button
               onClick={() => setOpen(false)}
+              aria-label="Schließen"
               className="p-1.5 rounded-lg text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-[var(--foreground)]/5 transition-colors cursor-pointer"
             >
               <X className="w-4 h-4" />

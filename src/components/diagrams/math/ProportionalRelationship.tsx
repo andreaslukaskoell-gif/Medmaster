@@ -81,7 +81,7 @@ export default function ProportionalRelationship() {
         ))}
       </div>
 
-      <svg viewBox={`0 0 ${W} ${H}`} className="w-full">
+      <svg role="img" viewBox={`0 0 ${W} ${H}`} className="w-full">
         <title>Proportionale Beziehungen</title>
 
         {/* Title */}

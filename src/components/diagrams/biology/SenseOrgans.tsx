@@ -98,7 +98,7 @@ export default function SenseOrgans() {
         Sinnesorgane — Auge &amp; Ohr
       </h4>
       <p className="text-xs text-gray-600 dark:text-gray-400">Klicke auf Strukturen für Details.</p>
-      <svg viewBox="0 0 560 450" className="w-full max-w-2xl mx-auto">
+      <svg role="img" viewBox="0 0 560 450" className="w-full max-w-2xl mx-auto">
         <title>Sinnesorgane und Reizverarbeitung</title>
         <defs>
           <linearGradient id="eyeGrad" x1="0%" y1="0%" x2="100%" y2="100%">

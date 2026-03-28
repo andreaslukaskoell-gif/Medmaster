@@ -4,7 +4,7 @@ export default function MicroscopeOptics() {
       <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">
         Strahlengang im Lichtmikroskop
       </h4>
-      <svg viewBox="0 0 520 340" className="w-full max-w-2xl mx-auto">
+      <svg role="img" viewBox="0 0 520 340" className="w-full max-w-2xl mx-auto">
         <title>Zusammengesetztes Mikroskop — Objektiv und Okular mit Strahlengang</title>
         <defs>
           <marker id="mo-arrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">

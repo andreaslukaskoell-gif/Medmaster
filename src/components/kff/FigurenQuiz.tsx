@@ -840,13 +840,15 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
       </div>
 
       {/* Optionen A–E — horizontal in einer Reihe (wie offizielles PDF) */}
-      <div className={`grid ${isMobile ? "grid-cols-3 gap-2" : "grid-cols-5 gap-3"} mt-4`} data-mobile-keep>
+      <div className={`grid ${isMobile ? "grid-cols-3 gap-2" : "grid-cols-5 gap-3"} mt-4`} data-mobile-keep role="radiogroup" aria-label="Antwortmöglichkeiten">
         {fzQ.options.map((opt, optIdx) => {
           const label = FZ_OPTION_LABELS[optIdx];
           const selected = answers[fzQ.id] === label;
           return (
             <button
               key={optIdx}
+              role="radio"
+              aria-checked={selected}
               onClick={() => setAnswers((p) => ({ ...p, [fzQ.id]: label }))}
               className={`flex flex-col items-center justify-center min-h-[110px] p-3 rounded-lg border-2 transition-colors cursor-pointer ${
                 selected

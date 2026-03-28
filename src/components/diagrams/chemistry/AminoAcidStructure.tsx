@@ -72,7 +72,7 @@ export default function AminoAcidStructure() {
         </button>
       </div>
 
-      <svg viewBox="0 0 480 310" className="w-full max-w-lg mx-auto">
+      <svg role="img" viewBox="0 0 480 310" className="w-full max-w-lg mx-auto">
         <title>Allgemeine Aminosäurestruktur mit Amino-, Carboxyl- und R-Gruppe</title>
 
         <text x="240" y="22" textAnchor="middle" fontSize="12" fill="#0f766e" fontWeight="bold">

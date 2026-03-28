@@ -8,7 +8,7 @@ export default function PhaseDiagramWater() {
         P-T-Diagramm mit Tripelpunkt, kritischem Punkt und der Anomalie des Wassers.
       </p>
 
-      <svg viewBox="0 0 500 340" className="w-full max-w-lg mx-auto">
+      <svg role="img" viewBox="0 0 500 340" className="w-full max-w-lg mx-auto">
         <title>Phasendiagramm von Wasser — Tripelpunkt, kritischer Punkt und Anomalie</title>
 
         {/* Axes */}

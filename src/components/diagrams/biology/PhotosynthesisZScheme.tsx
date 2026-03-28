@@ -58,7 +58,7 @@ export default function PhotosynthesisZScheme() {
         Klicke auf eine Komponente für Details.
       </p>
 
-      <svg viewBox={`0 0 ${W} ${H}`} className="w-full max-w-lg mx-auto">
+      <svg role="img" viewBox={`0 0 ${W} ${H}`} className="w-full max-w-lg mx-auto">
         <title>Z-Schema der Photosynthese — Lichtreaktion</title>
 
         {/* Energy axis */}

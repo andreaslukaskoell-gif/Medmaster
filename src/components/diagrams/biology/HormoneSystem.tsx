@@ -65,7 +65,7 @@ export default function HormoneSystem() {
         Klicke auf die Drüsen für Details zu Hormonen und Funktionen.
       </p>
 
-      <svg viewBox="0 0 500 620" className="w-full max-w-2xl mx-auto">
+      <svg role="img" viewBox="0 0 500 620" className="w-full max-w-2xl mx-auto">
         <title>Endokrines System — Hypothalamus-Hypophysen-Achse</title>
         {/* Body silhouette */}
         <path

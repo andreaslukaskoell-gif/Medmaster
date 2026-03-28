@@ -407,7 +407,7 @@ export function GedaechtnisInterferenz({
             ))}
           </div>
           {/* Options */}
-          <div className="space-y-2">
+          <div className="space-y-2" role="radiogroup" aria-label="Antwortmöglichkeiten">
             {task.options.map((opt) => {
               const isCorrect = opt.key === task.correctOptionId;
               const isSelected = selected === opt.key;
@@ -426,7 +426,7 @@ export function GedaechtnisInterferenz({
                 ? `${opt.value[0]}, ${opt.value[1]}`
                 : (opt.text ?? "Keine der genannten");
               return (
-                <button key={opt.key} onClick={() => handleSelect(opt.key)} className={cls}>
+                <button key={opt.key} onClick={() => handleSelect(opt.key)} className={cls} role="radio" aria-checked={isSelected}>
                   <span className="font-semibold shrink-0">{opt.key})</span>
                   {label}
                 </button>
@@ -701,11 +701,13 @@ export function GedaechtnisQuiz({ onBack }: { onBack: () => void }) {
             </div>
           )}
           <p className="text-base font-medium text-[var(--text-primary)] mb-6">{q.question}</p>
-          <div className="space-y-2">
+          <div className="space-y-2" role="radiogroup" aria-label="Antwortmöglichkeiten">
             {q.options.map((opt, oi) => (
               <button
                 key={oi}
                 onClick={() => setAnswers((p) => ({ ...p, [q.id]: oi }))}
+                role="radio"
+                aria-checked={answers[q.id] === oi}
                 className={`w-full text-left px-4 py-3 rounded-lg border text-sm transition-colors cursor-pointer flex items-center gap-2 ${
                   answers[q.id] === oi
                     ? "border-[var(--accent)] bg-[var(--accent)]/10 text-[var(--accent)]"

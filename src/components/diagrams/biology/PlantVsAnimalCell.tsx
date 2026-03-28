@@ -45,7 +45,7 @@ export default function PlantVsAnimalCell() {
       </h4>
       <p className="text-xs text-gray-600 dark:text-gray-400">Klicke auf Strukturen für Details.</p>
 
-      <svg viewBox="0 0 500 320" className="w-full max-w-xl mx-auto">
+      <svg role="img" viewBox="0 0 500 320" className="w-full max-w-xl mx-auto">
         <title>Pflanzenzelle vs. Tierzelle — Strukturvergleich</title>
         {/* Background */}
         <rect x="0" y="0" width="500" height="320" fill="none" />

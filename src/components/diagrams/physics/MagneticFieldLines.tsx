@@ -8,7 +8,7 @@ export default function MagneticFieldLines() {
         Feldlinienverlauf eines Stabmagneten — von Nord nach Süd (außen) und Süd nach Nord (innen).
       </p>
 
-      <svg viewBox="0 0 520 340" className="w-full max-w-lg mx-auto">
+      <svg role="img" viewBox="0 0 520 340" className="w-full max-w-lg mx-auto">
         <title>Magnetische Feldlinien eines Stabmagneten</title>
 
         <defs>

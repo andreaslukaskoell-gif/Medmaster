@@ -29,7 +29,7 @@ export default function DampedOscillation() {
       <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">
         Ged{"\u00E4"}mpfte Schwingung
       </h4>
-      <svg viewBox="0 0 500 300" className="w-full max-w-2xl mx-auto">
+      <svg role="img" viewBox="0 0 500 300" className="w-full max-w-2xl mx-auto">
         <title>Ged{"\u00E4"}mpfte Schwingung — exponentiell abklingende Amplitude</title>
         <defs>
           <marker

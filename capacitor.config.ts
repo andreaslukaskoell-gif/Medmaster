@@ -41,8 +41,9 @@ const config: CapacitorConfig = {
     backgroundColor: "#fafaf8",
     allowsLinkPreview: true,
     scrollEnabled: true,
-    // WebView configuration for better performance
-    limitsNavigationsToAppBoundDomains: false,
+    // SECURITY: Restrict navigation to app-bound domains.
+    // External links (Stripe, etc.) open in SFSafariViewController, not in-app WebView.
+    limitsNavigationsToAppBoundDomains: true,
   },
   android: {
     backgroundColor: "#fafaf8",

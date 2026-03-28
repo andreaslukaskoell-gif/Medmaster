@@ -37,7 +37,7 @@ export default function SIPrefixes() {
       <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">
         SI-Pr{"\u00E4"}fixe
       </h4>
-      <svg viewBox={`0 0 480 ${totalH}`} className="w-full max-w-2xl mx-auto">
+      <svg role="img" viewBox={`0 0 480 ${totalH}`} className="w-full max-w-2xl mx-auto">
         <title>SI-Pr{"\u00E4"}fixe — von Femto bis Tera mit medizinischen Beispielen</title>
 
         {/* Title */}

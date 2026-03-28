@@ -84,7 +84,7 @@ export default function HeartAnatomy() {
         Klicke auf Strukturen für Details. Blau = sauerstoffarm, Rot = sauerstoffreich.
       </p>
 
-      <svg viewBox="0 0 480 440" className="w-full max-w-xl mx-auto">
+      <svg role="img" viewBox="0 0 480 440" className="w-full max-w-xl mx-auto">
         <title>Anatomie des Herzens — Kammern, Klappen und Gefäße</title>
         {/* Heart outline */}
         <path

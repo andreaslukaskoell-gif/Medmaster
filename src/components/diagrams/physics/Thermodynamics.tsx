@@ -3,7 +3,7 @@ export default function Thermodynamics() {
     H = 300;
 
   return (
-    <svg viewBox={`0 0 ${W} ${H}`} className="w-full max-w-md mx-auto">
+    <svg role="img" viewBox={`0 0 ${W} ${H}`} className="w-full max-w-md mx-auto">
       <title>Hauptsätze der Thermodynamik</title>
       <defs>
         <linearGradient id="thermo-hot" x1="0" y1="0" x2="0" y2="1">

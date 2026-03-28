@@ -65,7 +65,7 @@ export default function Sarcomere() {
       <p className="text-xs text-gray-600 dark:text-gray-400">
         Klicke auf Strukturen für Details zur Gleitfilamenttheorie.
       </p>
-      <svg viewBox="0 0 600 420" className="w-full max-w-2xl mx-auto">
+      <svg role="img" viewBox="0 0 600 420" className="w-full max-w-2xl mx-auto">
         <title>Sarkomer — Aktin, Myosin und Gleitfilament-Modell</title>
         <defs>
           {/* Gradient for depth */}

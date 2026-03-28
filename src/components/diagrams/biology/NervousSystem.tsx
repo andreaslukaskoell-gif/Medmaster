@@ -141,7 +141,7 @@ export default function NervousSystem() {
         Violett = Parasympathikus.
       </p>
 
-      <svg viewBox="0 0 600 520" className="w-full max-w-2xl mx-auto">
+      <svg role="img" viewBox="0 0 600 520" className="w-full max-w-2xl mx-auto">
         <title>Zentrales und peripheres Nervensystem</title>
         <defs>
           {/* Brain interior gradient */}

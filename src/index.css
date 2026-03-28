@@ -66,7 +66,7 @@ html.font-large { font-size: 18px; }
   --text-primary: #1a1a1a;
   --text-secondary: #5c5c5c;
   --border: #e8e8e4;
-  --muted: #8c8c8c;
+  --muted: #737373; /* WCAG AA compliant: 4.75:1 on #fafaf8 */
   /* Accent (Deep Indigo / Primary) */
   --accent: #2d3a8c;
   --accent-hover: #3d4ca6;
@@ -111,7 +111,7 @@ html.font-large { font-size: 18px; }
   --text-primary: #ededed; /* warm off-white: body/main content */
   --text-secondary: #a0a0a0; /* warm medium gray: secondary */
   --border: #2a2a2a;
-  --muted: #888888; /* warm gray: meta, labels */
+  --muted: #9a9a9a; /* WCAG AA compliant: 5.8:1 on #141414 */
   --accent: #5b8def;
   --accent-hover: #7aa4f7;
   --success: #2dd4bf;
@@ -147,7 +147,7 @@ html.font-large { font-size: 18px; }
   --color-surface: #fafaf8;
   --color-card: #ffffff;
   --color-border: #e8e8e4;
-  --color-muted: #8c8c8c;
+  --color-muted: #737373;
 
   --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   --font-serif: "Source Serif 4", "Georgia", serif;
@@ -173,8 +173,35 @@ html.font-large { font-size: 18px; }
   }
 }
 
+@keyframes shimmer-sweep {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+
+@keyframes gradient-x {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 html {
   scroll-behavior: smooth;
+}
+
+/* ── Reduced Motion: Respect user preference ─────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 body {
@@ -1574,6 +1601,84 @@ a:focus-visible,
 /* --- SectionTOC sidebar: hide on mobile (content flows directly) --- */
 .mobile-mode nav[aria-label="Inhaltsverzeichnis"] {
   display: none !important;
+}
+
+/* --- BMS content: collapse 2-col grid to single column on mobile --- */
+.mobile-mode .content-section .grid {
+  display: block !important;
+}
+.mobile-mode .content-section .grid > aside {
+  display: none !important; /* TOC sidebar already hidden */
+}
+.mobile-mode .content-section .grid > div {
+  max-width: 100% !important;
+}
+
+/* --- BMS Unterkapitel: full-width Altfragen/Kontrollfragen --- */
+.mobile-mode [class*="ml-[calc(220px"] {
+  margin-left: 0 !important;
+  max-width: 100% !important;
+}
+
+/* --- BMS content: mobile padding --- */
+.mobile-mode .content-section {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* --- BMS page container: add horizontal padding --- */
+.mobile-mode .max-w-6xl {
+  padding-left: 0.75rem !important;
+  padding-right: 0.75rem !important;
+}
+
+/* --- BMS prose: better line length & spacing for small screens --- */
+.mobile-mode .prose {
+  font-size: 1rem !important;
+  line-height: 1.75 !important;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+.mobile-mode .prose h2 {
+  font-size: 1.25rem !important;
+  margin-top: 2rem !important;
+}
+.mobile-mode .prose h3 {
+  font-size: 1.1rem !important;
+}
+.mobile-mode .prose img {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* --- BMS callout boxes: tighter on mobile --- */
+.mobile-mode .prose blockquote,
+.mobile-mode [class*="border-l-4"][class*="px-5"] {
+  padding-left: 0.75rem !important;
+  padding-right: 0.75rem !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* --- BMS hero header: smaller on mobile --- */
+.mobile-mode .hero-orbs {
+  margin-bottom: 2rem !important;
+  margin-top: 0.5rem !important;
+}
+.mobile-mode .hero-orbs .text-\[3rem\] {
+  font-size: 1.5rem !important;
+  line-height: 2rem !important;
+}
+
+/* --- SVG diagrams: fit mobile viewport --- */
+.mobile-mode .content-svg-wrap {
+  padding: 0.75rem !important;
+  margin-left: -0.25rem;
+  margin-right: -0.25rem;
+}
+.mobile-mode .content-svg-wrap svg {
+  max-width: 100% !important;
+  height: auto !important;
 }
 
 /* --- Charts: constrain to viewport width --- */

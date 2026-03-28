@@ -16,7 +16,7 @@ export default function HarmonicOscillation() {
       <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">
         Harmonische Schwingung
       </h4>
-      <svg viewBox="0 0 500 380" className="w-full max-w-2xl mx-auto">
+      <svg role="img" viewBox="0 0 500 380" className="w-full max-w-2xl mx-auto">
         <title>Harmonische Schwingung — Sinuswelle und Feder-Masse-System</title>
         <defs>
           <marker

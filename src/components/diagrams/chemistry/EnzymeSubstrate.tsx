@@ -34,7 +34,7 @@ export default function EnzymeSubstrate() {
         ))}
       </div>
 
-      <svg viewBox="0 0 460 280" className="w-full max-w-lg mx-auto">
+      <svg role="img" viewBox="0 0 460 280" className="w-full max-w-lg mx-auto">
         <title>Enzym-Substrat-Komplex — Schlüssel-Schloss-Prinzip</title>
         <defs>
           <linearGradient id="enzymeGrad" x1="0%" y1="0%" x2="100%" y2="100%">

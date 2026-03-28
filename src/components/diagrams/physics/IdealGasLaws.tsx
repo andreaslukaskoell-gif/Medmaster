@@ -13,7 +13,7 @@ export default function IdealGasLaws() {
         Boyle-Mariotte, Gay-Lussac und Charles — die drei Spezialfälle der idealen Gasgleichung.
       </p>
 
-      <svg viewBox="0 0 500 200" className="w-full max-w-lg mx-auto">
+      <svg role="img" viewBox="0 0 500 200" className="w-full max-w-lg mx-auto">
         <title>Ideale Gasgesetze — Boyle-Mariotte, Gay-Lussac, Charles</title>
 
         {/* ── Chart 1: Boyle-Mariotte (P vs V, T=const) ── */}

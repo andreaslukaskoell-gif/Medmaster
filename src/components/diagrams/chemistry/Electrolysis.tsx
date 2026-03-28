@@ -46,7 +46,7 @@ export default function Electrolysis() {
         ))}
       </div>
 
-      <svg viewBox="0 0 480 300" className="w-full max-w-lg mx-auto">
+      <svg role="img" viewBox="0 0 480 300" className="w-full max-w-lg mx-auto">
         <title>Elektrolyse — Wasserelektrolyse</title>
         <defs>
           <linearGradient id="elecSol" x1="0%" y1="0%" x2="0%" y2="100%">

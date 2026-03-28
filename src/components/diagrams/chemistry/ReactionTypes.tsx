@@ -60,7 +60,7 @@ export default function ReactionTypes() {
         ))}
       </div>
 
-      <svg viewBox="0 0 480 240" className="w-full max-w-lg mx-auto">
+      <svg role="img" viewBox="0 0 480 240" className="w-full max-w-lg mx-auto">
         <title>Reaktionstyp: {t.label}</title>
         <defs>
           <radialGradient id="rtA" cx="40%" cy="35%" r="55%">

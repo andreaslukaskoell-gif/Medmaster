@@ -28,7 +28,7 @@ export default function LipidStructure() {
         Glycerol-Rückgrat, Fettsäureketten, Esterbindung. Klicke auf Komponenten.
       </p>
 
-      <svg viewBox="0 0 480 320" className="w-full max-w-lg mx-auto cursor-pointer">
+      <svg role="img" viewBox="0 0 480 320" className="w-full max-w-lg mx-auto cursor-pointer">
         <title>Triglycerid-Struktur</title>
         <defs>
           <linearGradient id="glyGrad" x1="0%" y1="0%" x2="100%" y2="0%">
