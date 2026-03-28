@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useCallback } from "react";
 import { useSearchParams } from "react-router-dom";
 import { BookOpen, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -42,19 +42,74 @@ const QUICK_START_VIEWS: Record<string, KffView> = {
   figuren: "figuren-quiz",
 };
 
+const ALL_KFF_VIEWS: ReadonlySet<string> = new Set<KffView>([
+  "overview",
+  "strategy",
+  "zahlenfolgen",
+  "gedaechtnis-setup",
+  "gedaechtnis-learn",
+  "gedaechtnis-interferenz",
+  "gedaechtnis-quiz",
+  "implikationen",
+  "wortflüssigkeit",
+  "figuren-quiz",
+]);
+
+/** Sub-views within a quiz flow that should use replace (Back skips them). */
+const REPLACE_VIEWS: ReadonlySet<KffView> = new Set([
+  "gedaechtnis-learn",
+  "gedaechtnis-interferenz",
+  "gedaechtnis-quiz",
+]);
+
+function viewFromParams(sp: URLSearchParams): KffView {
+  const viewParam = sp.get("view");
+  if (viewParam && ALL_KFF_VIEWS.has(viewParam)) return viewParam as KffView;
+  const startParam = sp.get("start");
+  if (startParam && QUICK_START_VIEWS[startParam]) return QUICK_START_VIEWS[startParam];
+  return "overview";
+}
+
 export default function KFF() {
   usePageTitle("KFF – Kognitive Fähigkeiten");
-  const [searchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
 
-  const startParam = searchParams.get("start");
-  const initialView: KffView =
-    startParam && QUICK_START_VIEWS[startParam] ? QUICK_START_VIEWS[startParam] : "overview";
-  const [view, setView] = useState<KffView>(initialView);
+  const [view, setViewState] = useState<KffView>(() => viewFromParams(searchParams));
   const [strategyKey, setStrategyKey] = useState<StrategyKey>("zahlenfolgen");
   const { user, loading: isLoading } = useAuth();
   const { kffDomainIntroSeen, markKffDomainIntroSeen, quizResults } = useStore();
   const [authTimedOut, setAuthTimedOut] = useState(false);
   const autoStartRef = useRef(false);
+
+  // Navigate to a new view, updating both React state and URL search params.
+  // `replace` defaults to true for sub-views within a quiz flow, false otherwise.
+  const navigateTo = useCallback(
+    (newView: KffView, opts?: { replace?: boolean }) => {
+      const shouldReplace = opts?.replace ?? REPLACE_VIEWS.has(newView);
+      setViewState(newView);
+      setSearchParams(
+        (prev) => {
+          const next = new URLSearchParams(prev);
+          if (newView === "overview") {
+            next.delete("view");
+            next.delete("start");
+          } else {
+            next.set("view", newView);
+            next.delete("start");
+          }
+          return next;
+        },
+        { replace: shouldReplace }
+      );
+    },
+    [setSearchParams]
+  );
+
+  // Sync React state when the URL changes (browser Back/Forward).
+  useEffect(() => {
+    const fromUrl = viewFromParams(searchParams);
+    setViewState((prev) => (prev !== fromUrl ? fromUrl : prev));
+  }, [searchParams]);
 
   useEffect(() => {
     if (!isLoading) return;
@@ -84,7 +139,7 @@ export default function KFF() {
         <FirstTimeKffIntro
           strategyKey="figuren"
           onContinue={() => markKffDomainIntroSeen("figuren")}
-          onBack={() => setView("overview")}
+          onBack={() => navigateTo("overview")}
         />
       );
     }
@@ -92,7 +147,7 @@ export default function KFF() {
       <FigurenQuiz
         onBack={() => {
           autoStartRef.current = false;
-          setView("overview");
+          navigateTo("overview");
         }}
         // eslint-disable-next-line react-hooks/refs
         autoStart={autoStartRef.current}
@@ -101,7 +156,7 @@ export default function KFF() {
   }
 
   if (view === "strategy") {
-    return <KFFStrategyView strategyKey={strategyKey} onBack={() => setView("overview")} />;
+    return <KFFStrategyView strategyKey={strategyKey} onBack={() => navigateTo("overview")} />;
   }
 
   if (view === "zahlenfolgen") {
@@ -110,7 +165,7 @@ export default function KFF() {
         <FirstTimeKffIntro
           strategyKey="zahlenfolgen"
           onContinue={() => markKffDomainIntroSeen("zahlenfolgen")}
-          onBack={() => setView("overview")}
+          onBack={() => navigateTo("overview")}
         />
       );
     }
@@ -118,7 +173,7 @@ export default function KFF() {
       <ZahlenfolgenQuiz
         onBack={() => {
           autoStartRef.current = false;
-          setView("overview");
+          navigateTo("overview");
         }}
         // eslint-disable-next-line react-hooks/refs
         autoStart={autoStartRef.current}
@@ -131,39 +186,39 @@ export default function KFF() {
         <FirstTimeKffIntro
           strategyKey="gedaechtnis"
           onContinue={() => markKffDomainIntroSeen("gedaechtnis")}
-          onBack={() => setView("overview")}
+          onBack={() => navigateTo("overview")}
         />
       );
     }
     return (
       <GedaechtnisSetup
-        onLearn={() => setView("gedaechtnis-learn")}
-        onBack={() => setView("overview")}
+        onLearn={() => navigateTo("gedaechtnis-learn")}
+        onBack={() => navigateTo("overview")}
       />
     );
   }
   if (view === "gedaechtnis-learn")
     return (
       <GedaechtnisLearn
-        onStart={() => setView("gedaechtnis-interferenz")}
-        onBack={() => setView("gedaechtnis-setup")}
+        onStart={() => navigateTo("gedaechtnis-interferenz")}
+        onBack={() => navigateTo("gedaechtnis-setup")}
       />
     );
   if (view === "gedaechtnis-interferenz")
     return (
       <GedaechtnisInterferenz
-        onComplete={() => setView("gedaechtnis-quiz")}
-        onSkip={() => setView("gedaechtnis-quiz")}
+        onComplete={() => navigateTo("gedaechtnis-quiz")}
+        onSkip={() => navigateTo("gedaechtnis-quiz")}
       />
     );
-  if (view === "gedaechtnis-quiz") return <GedaechtnisQuiz onBack={() => setView("overview")} />;
+  if (view === "gedaechtnis-quiz") return <GedaechtnisQuiz onBack={() => navigateTo("overview")} />;
   if (view === "implikationen") {
     if (!kffDomainIntroSeen["implikationen"]) {
       return (
         <FirstTimeKffIntro
           strategyKey="implikationen"
           onContinue={() => markKffDomainIntroSeen("implikationen")}
-          onBack={() => setView("overview")}
+          onBack={() => navigateTo("overview")}
         />
       );
     }
@@ -171,7 +226,7 @@ export default function KFF() {
       <ImplikationenQuiz
         onBack={() => {
           autoStartRef.current = false;
-          setView("overview");
+          navigateTo("overview");
         }}
         // eslint-disable-next-line react-hooks/refs
         autoStart={autoStartRef.current}
@@ -184,7 +239,7 @@ export default function KFF() {
         <FirstTimeKffIntro
           strategyKey="wortflüssigkeit"
           onContinue={() => markKffDomainIntroSeen("wortflüssigkeit")}
-          onBack={() => setView("overview")}
+          onBack={() => navigateTo("overview")}
         />
       );
     }
@@ -192,7 +247,7 @@ export default function KFF() {
       <WortflüssigkeitQuiz
         onBack={() => {
           autoStartRef.current = false;
-          setView("overview");
+          navigateTo("overview");
         }}
         // eslint-disable-next-line react-hooks/refs
         autoStart={autoStartRef.current}
@@ -352,7 +407,7 @@ export default function KFF() {
                     size="sm"
                     onClick={() => {
                       autoStartRef.current = false;
-                      setView(m.startView);
+                      navigateTo(m.startView);
                     }}
                   >
                     <Play className="w-4 h-4 mr-1" /> Üben
@@ -362,7 +417,7 @@ export default function KFF() {
                     size="sm"
                     onClick={() => {
                       setStrategyKey(m.strategyKey);
-                      setView("strategy");
+                      navigateTo("strategy");
                     }}
                   >
                     <BookOpen className="w-4 h-4 mr-1" /> Strategie

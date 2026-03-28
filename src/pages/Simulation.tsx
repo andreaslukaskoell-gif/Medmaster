@@ -1272,6 +1272,9 @@ export default function Simulation() {
                     </p>
                   </div>
                 </div>
+                <p className="text-xs text-[var(--muted)]">
+                  Jede Variante verwendet einen anderen Fragenpool mit gleichem Aufbau.
+                </p>
                 <div className="grid grid-cols-5 gap-2">
                   {[1, 2, 3, 4, 5].map((v) => (
                     <Button

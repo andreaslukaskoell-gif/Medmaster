@@ -353,7 +353,9 @@ export default function FortschrittPage() {
                     ))}
                   </div>
                 ) : (
-                  <p className="text-[10px] text-[var(--muted)] italic">Keine Daten</p>
+                  <p className="text-[10px] text-[var(--muted)] italic">
+                    Beantworte mehr Fragen, um deine Schwachstellen zu erkennen.
+                  </p>
                 )}
               </div>
             );
@@ -362,174 +364,189 @@ export default function FortschrittPage() {
 
         {/* ── Charts: Two-column ────────────────────────── */}
         {hasAnyData && (
-          <div className="grid grid-cols-2 gap-6 mb-8">
-            {/* Accuracy Trend Chart */}
-            <div className="card-glass p-5">
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="text-sm font-semibold text-[var(--text-primary)]">
-                  Genauigkeit im Zeitverlauf
-                </h3>
-                <div className="flex gap-1">
-                  {([7, 14, 30] as const).map((range) => (
-                    <button
-                      key={range}
-                      onClick={() => setTimeRange(range)}
-                      className={`px-2.5 py-1 rounded-lg text-xs font-medium transition-colors cursor-pointer ${
-                        timeRange === range
-                          ? "bg-[var(--accent)] text-white"
-                          : "bg-[var(--surface)] text-[var(--muted)] hover:text-[var(--text-primary)]"
-                      }`}
+          <div className="space-y-2 mb-8">
+            {filteredAccuracy.length < 3 && (
+              <p className="text-xs text-[var(--muted)] italic text-center">
+                Nach ein paar Übungseinheiten wird hier dein Fortschritt sichtbar.
+              </p>
+            )}
+            <div className="grid grid-cols-2 gap-6">
+              {/* Accuracy Trend Chart */}
+              <div className="card-glass p-5">
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className="text-sm font-semibold text-[var(--text-primary)]">
+                    Genauigkeit im Zeitverlauf
+                  </h3>
+                  <div className="flex gap-1">
+                    {([7, 14, 30] as const).map((range) => (
+                      <button
+                        key={range}
+                        onClick={() => setTimeRange(range)}
+                        className={`px-2.5 py-1 rounded-lg text-xs font-medium transition-colors cursor-pointer ${
+                          timeRange === range
+                            ? "bg-[var(--accent)] text-white"
+                            : "bg-[var(--surface)] text-[var(--muted)] hover:text-[var(--text-primary)]"
+                        }`}
+                      >
+                        {range}T
+                      </button>
+                    ))}
+                  </div>
+                </div>
+                <ResponsiveContainer width="100%" height={260}>
+                  <LineChart data={filteredAccuracy}>
+                    <CartesianGrid
+                      strokeDasharray="3 3"
+                      stroke="var(--border)"
+                      strokeOpacity={0.5}
+                    />
+                    <XAxis
+                      dataKey="date"
+                      tick={{ fontSize: 10, fill: "var(--muted)" }}
+                      tickFormatter={(v: string) => {
+                        const parts = v.split("-");
+                        return `${parts[2]}.${parts[1]}`;
+                      }}
+                      interval="preserveStartEnd"
+                    />
+                    <YAxis
+                      domain={[0, 100]}
+                      tick={{ fontSize: 10, fill: "var(--muted)" }}
+                      width={30}
+                    />
+                    <Tooltip
+                      contentStyle={{
+                        backgroundColor: "var(--card)",
+                        border: "1px solid var(--border)",
+                        borderRadius: "8px",
+                        fontSize: "12px",
+                      }}
+                      labelFormatter={(v: unknown) => {
+                        const parts = String(v).split("-");
+                        return `${parts[2]}.${parts[1]}.${parts[0]}`;
+                      }}
+                    />
+                    <Line
+                      type="monotone"
+                      dataKey="overall"
+                      stroke="var(--accent)"
+                      strokeWidth={2}
+                      dot={false}
+                      name="Gesamt"
+                    />
+                    <Line
+                      type="monotone"
+                      dataKey="bio"
+                      stroke="#10b981"
+                      strokeWidth={1.5}
+                      dot={false}
+                      strokeDasharray="4 2"
+                      name="Bio"
+                    />
+                    <Line
+                      type="monotone"
+                      dataKey="ch"
+                      stroke="#ef4444"
+                      strokeWidth={1.5}
+                      dot={false}
+                      strokeDasharray="4 2"
+                      name="Chemie"
+                    />
+                    <Line
+                      type="monotone"
+                      dataKey="ph"
+                      stroke="#3b82f6"
+                      strokeWidth={1.5}
+                      dot={false}
+                      strokeDasharray="4 2"
+                      name="Physik"
+                    />
+                    <Line
+                      type="monotone"
+                      dataKey="ma"
+                      stroke="#f59e0b"
+                      strokeWidth={1.5}
+                      dot={false}
+                      strokeDasharray="4 2"
+                      name="Mathe"
+                    />
+                  </LineChart>
+                </ResponsiveContainer>
+                {/* Legend */}
+                <div className="flex items-center gap-4 mt-3 justify-center">
+                  <span className="flex items-center gap-1 text-[10px] text-[var(--muted)]">
+                    <span className="w-3 h-0.5 bg-[var(--accent)] inline-block rounded" /> Gesamt
+                  </span>
+                  {Object.entries(SUBJECT_CONFIG).map(([, cfg]) => (
+                    <span
+                      key={cfg.label}
+                      className="flex items-center gap-1 text-[10px] text-[var(--muted)]"
                     >
-                      {range}T
-                    </button>
+                      <span
+                        className="w-3 h-0.5 inline-block rounded"
+                        style={{ backgroundColor: cfg.chartColor }}
+                      />{" "}
+                      {cfg.label.slice(0, 3)}
+                    </span>
                   ))}
                 </div>
               </div>
-              <ResponsiveContainer width="100%" height={260}>
-                <LineChart data={filteredAccuracy}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" strokeOpacity={0.5} />
-                  <XAxis
-                    dataKey="date"
-                    tick={{ fontSize: 10, fill: "var(--muted)" }}
-                    tickFormatter={(v: string) => {
-                      const parts = v.split("-");
-                      return `${parts[2]}.${parts[1]}`;
-                    }}
-                    interval="preserveStartEnd"
-                  />
-                  <YAxis
-                    domain={[0, 100]}
-                    tick={{ fontSize: 10, fill: "var(--muted)" }}
-                    width={30}
-                  />
-                  <Tooltip
-                    contentStyle={{
-                      backgroundColor: "var(--card)",
-                      border: "1px solid var(--border)",
-                      borderRadius: "8px",
-                      fontSize: "12px",
-                    }}
-                    labelFormatter={(v: unknown) => {
-                      const parts = String(v).split("-");
-                      return `${parts[2]}.${parts[1]}.${parts[0]}`;
-                    }}
-                  />
-                  <Line
-                    type="monotone"
-                    dataKey="overall"
-                    stroke="var(--accent)"
-                    strokeWidth={2}
-                    dot={false}
-                    name="Gesamt"
-                  />
-                  <Line
-                    type="monotone"
-                    dataKey="bio"
-                    stroke="#10b981"
-                    strokeWidth={1.5}
-                    dot={false}
-                    strokeDasharray="4 2"
-                    name="Bio"
-                  />
-                  <Line
-                    type="monotone"
-                    dataKey="ch"
-                    stroke="#ef4444"
-                    strokeWidth={1.5}
-                    dot={false}
-                    strokeDasharray="4 2"
-                    name="Chemie"
-                  />
-                  <Line
-                    type="monotone"
-                    dataKey="ph"
-                    stroke="#3b82f6"
-                    strokeWidth={1.5}
-                    dot={false}
-                    strokeDasharray="4 2"
-                    name="Physik"
-                  />
-                  <Line
-                    type="monotone"
-                    dataKey="ma"
-                    stroke="#f59e0b"
-                    strokeWidth={1.5}
-                    dot={false}
-                    strokeDasharray="4 2"
-                    name="Mathe"
-                  />
-                </LineChart>
-              </ResponsiveContainer>
-              {/* Legend */}
-              <div className="flex items-center gap-4 mt-3 justify-center">
-                <span className="flex items-center gap-1 text-[10px] text-[var(--muted)]">
-                  <span className="w-3 h-0.5 bg-[var(--accent)] inline-block rounded" /> Gesamt
-                </span>
-                {Object.entries(SUBJECT_CONFIG).map(([, cfg]) => (
-                  <span
-                    key={cfg.label}
-                    className="flex items-center gap-1 text-[10px] text-[var(--muted)]"
-                  >
-                    <span
-                      className="w-3 h-0.5 inline-block rounded"
-                      style={{ backgroundColor: cfg.chartColor }}
-                    />{" "}
-                    {cfg.label.slice(0, 3)}
-                  </span>
-                ))}
-              </div>
-            </div>
 
-            {/* Practice Distribution Chart */}
-            <div className="card-glass p-5">
-              <h3 className="text-sm font-semibold text-[var(--text-primary)] mb-4">
-                Lernverteilung pro Woche
-              </h3>
-              <ResponsiveContainer width="100%" height={260}>
-                <BarChart data={practiceDistribution}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" strokeOpacity={0.5} />
-                  <XAxis dataKey="week" tick={{ fontSize: 10, fill: "var(--muted)" }} />
-                  <YAxis tick={{ fontSize: 10, fill: "var(--muted)" }} width={30} />
-                  <Tooltip
-                    contentStyle={{
-                      backgroundColor: "var(--card)",
-                      border: "1px solid var(--border)",
-                      borderRadius: "8px",
-                      fontSize: "12px",
-                    }}
-                  />
-                  <Bar
-                    dataKey="bms"
-                    stackId="a"
-                    fill={SECTION_COLORS.bms}
-                    radius={[0, 0, 0, 0]}
-                    name="BMS"
-                  />
-                  <Bar dataKey="kff" stackId="a" fill={SECTION_COLORS.kff} name="KFF" />
-                  <Bar dataKey="tv" stackId="a" fill={SECTION_COLORS.tv} name="TV" />
-                  <Bar
-                    dataKey="sek"
-                    stackId="a"
-                    fill={SECTION_COLORS.sek}
-                    radius={[3, 3, 0, 0]}
-                    name="SEK"
-                  />
-                </BarChart>
-              </ResponsiveContainer>
-              {/* Legend */}
-              <div className="flex items-center gap-4 mt-3 justify-center">
-                {Object.entries(SECTION_COLORS).map(([key, color]) => (
-                  <span
-                    key={key}
-                    className="flex items-center gap-1 text-[10px] text-[var(--muted)]"
-                  >
-                    <span
-                      className="w-2.5 h-2.5 rounded-sm inline-block"
-                      style={{ backgroundColor: color }}
+              {/* Practice Distribution Chart */}
+              <div className="card-glass p-5">
+                <h3 className="text-sm font-semibold text-[var(--text-primary)] mb-4">
+                  Lernverteilung pro Woche
+                </h3>
+                <ResponsiveContainer width="100%" height={260}>
+                  <BarChart data={practiceDistribution}>
+                    <CartesianGrid
+                      strokeDasharray="3 3"
+                      stroke="var(--border)"
+                      strokeOpacity={0.5}
                     />
-                    {key.toUpperCase()}
-                  </span>
-                ))}
+                    <XAxis dataKey="week" tick={{ fontSize: 10, fill: "var(--muted)" }} />
+                    <YAxis tick={{ fontSize: 10, fill: "var(--muted)" }} width={30} />
+                    <Tooltip
+                      contentStyle={{
+                        backgroundColor: "var(--card)",
+                        border: "1px solid var(--border)",
+                        borderRadius: "8px",
+                        fontSize: "12px",
+                      }}
+                    />
+                    <Bar
+                      dataKey="bms"
+                      stackId="a"
+                      fill={SECTION_COLORS.bms}
+                      radius={[0, 0, 0, 0]}
+                      name="BMS"
+                    />
+                    <Bar dataKey="kff" stackId="a" fill={SECTION_COLORS.kff} name="KFF" />
+                    <Bar dataKey="tv" stackId="a" fill={SECTION_COLORS.tv} name="TV" />
+                    <Bar
+                      dataKey="sek"
+                      stackId="a"
+                      fill={SECTION_COLORS.sek}
+                      radius={[3, 3, 0, 0]}
+                      name="SEK"
+                    />
+                  </BarChart>
+                </ResponsiveContainer>
+                {/* Legend */}
+                <div className="flex items-center gap-4 mt-3 justify-center">
+                  {Object.entries(SECTION_COLORS).map(([key, color]) => (
+                    <span
+                      key={key}
+                      className="flex items-center gap-1 text-[10px] text-[var(--muted)]"
+                    >
+                      <span
+                        className="w-2.5 h-2.5 rounded-sm inline-block"
+                        style={{ backgroundColor: color }}
+                      />
+                      {key.toUpperCase()}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
