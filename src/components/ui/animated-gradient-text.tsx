@@ -19,7 +19,7 @@ export function AnimatedGradientText({
   return (
     <span
       className={cn(
-        "inline-block bg-clip-text text-transparent animate-[gradient-x_4s_ease_infinite] bg-[length:300%_100%]",
+        "inline-block bg-clip-text text-transparent animate-[gradient-x_4s_ease_1_forwards] bg-[length:300%_100%]",
         className,
       )}
       style={{

@@ -38,7 +38,7 @@ export function ShimmerButton({
         style={{ borderRadius }}
       >
         <div
-          className="absolute inset-0 -translate-x-full animate-[shimmer-sweep_3s_ease-in-out_infinite]"
+          className="absolute inset-0 -translate-x-full animate-[shimmer-sweep_3s_ease-in-out_1_0.5s_forwards]"
           style={{
             background: `linear-gradient(90deg, transparent 0%, ${shimmerColor} 50%, transparent 100%)`,
           }}
