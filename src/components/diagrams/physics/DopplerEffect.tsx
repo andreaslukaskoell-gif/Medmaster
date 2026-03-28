@@ -3,7 +3,7 @@ export default function DopplerEffect() {
     <div className="space-y-3">
       <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">Doppler-Effekt</h4>
       <p className="text-xs text-[var(--muted)]">Frequenzänderung bei bewegter Schallquelle.</p>
-      <svg viewBox="0 0 480 320" className="w-full max-w-lg mx-auto">
+      <svg role="img" viewBox="0 0 480 320" className="w-full max-w-lg mx-auto">
         <title>Doppler-Effekt — Frequenzverschiebung</title>
         <defs>
           <marker id="arrowDop" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">

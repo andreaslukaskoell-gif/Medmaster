@@ -2,7 +2,7 @@ export default function CentrifugeBlood() {
   return (
     <div className="space-y-3">
       <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">Blutzentrifugation</h4>
-      <svg viewBox="0 0 500 380" className="w-full max-w-2xl mx-auto">
+      <svg role="img" viewBox="0 0 500 380" className="w-full max-w-2xl mx-auto">
         <title>Blutzentrifugation — Auftrennung in Plasma, Buffy Coat und Erythrozyten</title>
         <defs>
           <linearGradient id="cb-plasma" x1="0" y1="0" x2="0" y2="1">

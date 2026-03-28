@@ -8,7 +8,7 @@ export default function KirchhoffLaws() {
         Knotenregel (1. Kirchhoff) und Maschenregel (2. Kirchhoff) in einem Netzwerk.
       </p>
 
-      <svg viewBox="0 0 520 380" className="w-full max-w-lg mx-auto">
+      <svg role="img" viewBox="0 0 520 380" className="w-full max-w-lg mx-auto">
         <title>Kirchhoffsche Gesetze — Knoten- und Maschenregel</title>
 
         <defs>

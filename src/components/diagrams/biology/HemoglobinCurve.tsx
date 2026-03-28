@@ -143,7 +143,7 @@ export default function HemoglobinCurve() {
         ))}
       </div>
 
-      <svg viewBox={`0 0 ${W} ${H}`} className="w-full max-w-md mx-auto">
+      <svg role="img" viewBox={`0 0 ${W} ${H}`} className="w-full max-w-md mx-auto">
         <title>Sauerstoff-Dissoziationskurve des Hämoglobins</title>
 
         {/* Axes */}

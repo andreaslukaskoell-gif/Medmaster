@@ -62,7 +62,7 @@ export default function DNAStructure() {
         ))}
       </div>
 
-      <svg viewBox="0 0 480 320" className="w-full max-w-lg mx-auto">
+      <svg role="img" viewBox="0 0 480 320" className="w-full max-w-lg mx-auto">
         <title>DNA-Struktur — chemischer Aufbau</title>
         <defs>
           <radialGradient id="pGrad" cx="40%" cy="35%" r="55%">

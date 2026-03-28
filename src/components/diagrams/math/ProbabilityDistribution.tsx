@@ -19,7 +19,7 @@ export default function ProbabilityDistribution() {
   const pcts = ["0.1%", "2.1%", "13.6%", "34.1%", "34.1%", "13.6%", "2.1%"];
 
   return (
-    <svg viewBox={`0 0 ${W} ${H}`} className="w-full max-w-md mx-auto">
+    <svg role="img" viewBox={`0 0 ${W} ${H}`} className="w-full max-w-md mx-auto">
       <title>Normalverteilung</title>
       {/* Shaded areas */}
       {[-2, -1, 0, 1].map((s) => {

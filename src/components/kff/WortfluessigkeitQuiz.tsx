@@ -511,10 +511,12 @@ export function WortflüssigkeitQuiz({
               </div>
             ))}
           </div>
-          <div className="space-y-2">
+          <div className="space-y-2" role="radiogroup" aria-label="Antwortmöglichkeiten">
             {(currentQ.options ?? []).map((opt, li) => (
               <button
                 key={`${opt}-${li}`}
+                role="radio"
+                aria-checked={answers[taskId] === opt}
                 onClick={() => setAnswers((p) => ({ ...p, [taskId]: opt }))}
                 className={`w-full text-left px-4 py-3 rounded-lg border text-sm transition-colors cursor-pointer ${
                   answers[taskId] === opt

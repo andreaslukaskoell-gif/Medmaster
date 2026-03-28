@@ -82,7 +82,7 @@ export default function AntibodyStructure() {
         Klicke auf einen Bereich für Details.
       </p>
 
-      <svg viewBox={`0 0 ${W} ${H}`} className="w-full max-w-md mx-auto">
+      <svg role="img" viewBox={`0 0 ${W} ${H}`} className="w-full max-w-md mx-auto">
         <title>Y-förmige Antikörperstruktur mit Fab und Fc Fragment</title>
 
         {/* ── Fc stem (constant, heavy chains) ── */}

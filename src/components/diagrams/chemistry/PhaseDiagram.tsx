@@ -43,7 +43,7 @@ export default function PhaseDiagram() {
         Phasenübergängen.
       </p>
 
-      <svg viewBox="0 0 480 320" className="w-full max-w-lg mx-auto">
+      <svg role="img" viewBox="0 0 480 320" className="w-full max-w-lg mx-auto">
         <title>Allgemeines Phasendiagramm — Tripelpunkt, kritischer Punkt, Phasenübergänge</title>
         <defs>
           <marker id="phArrow" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">

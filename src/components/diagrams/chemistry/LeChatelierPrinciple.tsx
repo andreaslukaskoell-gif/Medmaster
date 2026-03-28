@@ -96,7 +96,7 @@ export default function LeChatelierPrinciple() {
         ))}
       </div>
 
-      <svg viewBox="0 0 480 280" className="w-full max-w-lg mx-auto">
+      <svg role="img" viewBox="0 0 480 280" className="w-full max-w-lg mx-auto">
         <title>Le Chatelier'sches Prinzip — Gleichgewichtsverschiebung</title>
         <defs>
           <marker id="arrLC" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">

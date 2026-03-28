@@ -52,7 +52,7 @@ export default function CarbonHybridization() {
       </div>
 
       {active === "sp3" && (
-        <svg viewBox="0 0 480 260" className="w-full max-w-lg mx-auto">
+        <svg role="img" viewBox="0 0 480 260" className="w-full max-w-lg mx-auto">
           <title>sp³-Hybridisierung — Tetraeder</title>
           <defs>
             <radialGradient id="cGrad3" cx="40%" cy="35%" r="55%">
@@ -172,7 +172,7 @@ export default function CarbonHybridization() {
       )}
 
       {active === "sp2" && (
-        <svg viewBox="0 0 480 260" className="w-full max-w-lg mx-auto">
+        <svg role="img" viewBox="0 0 480 260" className="w-full max-w-lg mx-auto">
           <title>sp²-Hybridisierung — trigonal-planar</title>
           <defs>
             <radialGradient id="cGrad2" cx="40%" cy="35%" r="55%">
@@ -257,7 +257,7 @@ export default function CarbonHybridization() {
       )}
 
       {active === "sp" && (
-        <svg viewBox="0 0 480 260" className="w-full max-w-lg mx-auto">
+        <svg role="img" viewBox="0 0 480 260" className="w-full max-w-lg mx-auto">
           <title>sp-Hybridisierung — linear</title>
           <defs>
             <radialGradient id="cGradSp" cx="40%" cy="35%" r="55%">

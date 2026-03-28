@@ -63,7 +63,7 @@ export default function EndomembraneSystem() {
         Klicke auf Organellen für Details zum Membranfluss.
       </p>
 
-      <svg viewBox="0 0 600 500" className="w-full max-w-2xl mx-auto">
+      <svg role="img" viewBox="0 0 600 500" className="w-full max-w-2xl mx-auto">
         <title>Endomembransystem — ER, Golgi, Vesikel, Lysosom</title>
         <defs>
           {/* Arrow markers */}

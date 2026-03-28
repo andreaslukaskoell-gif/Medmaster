@@ -92,7 +92,7 @@ export default function MembraneTransport() {
         Bewege die Maus über eine Transportart für Details.
       </p>
 
-      <svg viewBox="0 0 650 380" className="w-full max-w-2xl mx-auto">
+      <svg role="img" viewBox="0 0 650 380" className="w-full max-w-2xl mx-auto">
         <title>Membrantransport — Diffusion, Osmose, aktiver Transport</title>
         <defs>
           {/* Gradients */}

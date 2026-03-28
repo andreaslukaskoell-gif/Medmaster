@@ -93,7 +93,7 @@ export default function GasLaws() {
         ))}
       </div>
 
-      <svg viewBox="0 0 480 280" className="w-full max-w-lg mx-auto">
+      <svg role="img" viewBox="0 0 480 280" className="w-full max-w-lg mx-auto">
         <title>
           Gasgesetze: {info.title} — {info.formula}
         </title>

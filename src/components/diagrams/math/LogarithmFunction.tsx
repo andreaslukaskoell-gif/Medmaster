@@ -23,7 +23,7 @@ export default function LogarithmFunction() {
   }
 
   return (
-    <svg viewBox={`0 0 ${W} ${H}`} className="w-full max-w-md mx-auto">
+    <svg role="img" viewBox={`0 0 ${W} ${H}`} className="w-full max-w-md mx-auto">
       <title>Logarithmusfunktionen — ln und log</title>
 
       <text x={W / 2} y={18} textAnchor="middle" fontSize={13} fill="#1e40af" fontWeight={700}>

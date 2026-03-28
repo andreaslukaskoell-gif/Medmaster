@@ -69,7 +69,7 @@ export default function HPAAxis() {
       </h4>
       <p className="text-xs text-gray-600 dark:text-gray-400">Klicke auf eine Drüse für Details.</p>
 
-      <svg viewBox="0 0 420 430" className="w-full max-w-sm mx-auto">
+      <svg role="img" viewBox="0 0 420 430" className="w-full max-w-sm mx-auto">
         <title>HPA-Achse — CRH, ACTH, Cortisol und negatives Feedback</title>
 
         <defs>

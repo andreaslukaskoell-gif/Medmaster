@@ -20,7 +20,7 @@ export default function ScalarVectorComparison() {
       <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">
         Skalare vs. Vektoren
       </h4>
-      <svg viewBox="0 0 500 360" className="w-full max-w-2xl mx-auto">
+      <svg role="img" viewBox="0 0 500 360" className="w-full max-w-2xl mx-auto">
         <title>Vergleich Skalar vs. Vektor — Betrag vs. Betrag + Richtung</title>
         <defs>
           <marker id="sv-arrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">

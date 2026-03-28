@@ -37,7 +37,7 @@ export default function VectorAddition() {
         </button>
       </div>
 
-      <svg viewBox="0 0 420 350" className="w-full max-w-lg mx-auto">
+      <svg role="img" viewBox="0 0 420 350" className="w-full max-w-lg mx-auto">
         <title>Vektoraddition — grafisch und rechnerisch</title>
         <defs>
           <marker id="arrowVecA" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">

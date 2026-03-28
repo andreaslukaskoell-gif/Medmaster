@@ -294,7 +294,7 @@ export default function JointTypes() {
               onMouseEnter={() => setActive(joint.id)}
               onMouseLeave={() => setActive(null)}
             >
-              <svg viewBox="0 0 160 130" className="w-full">
+              <svg role="img" viewBox="0 0 160 130" className="w-full">
                 <title>{joint.label}</title>
                 <JointShape joint={joint} isActive={isAct} />
                 <text

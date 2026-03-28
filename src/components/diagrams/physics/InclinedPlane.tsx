@@ -4,7 +4,7 @@ export default function InclinedPlane() {
       <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">
         Schiefe Ebene — Kräftezerlegung
       </h4>
-      <svg viewBox="0 0 500 360" className="w-full max-w-2xl mx-auto">
+      <svg role="img" viewBox="0 0 500 360" className="w-full max-w-2xl mx-auto">
         <title>Schiefe Ebene mit Kräftezerlegung</title>
         <defs>
           <marker id="ip-arrowRed" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">

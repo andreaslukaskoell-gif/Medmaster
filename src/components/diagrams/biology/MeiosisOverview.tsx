@@ -47,7 +47,7 @@ export default function MeiosisOverview() {
       <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">Meiose — Übersicht</h4>
       <p className="text-xs text-gray-600 dark:text-gray-400">Klicke auf Phasen für Details.</p>
 
-      <svg viewBox="0 0 480 420" className="w-full max-w-xl mx-auto">
+      <svg role="img" viewBox="0 0 480 420" className="w-full max-w-xl mx-auto">
         <title>Meiose I und II — Reduktion von 2n auf n</title>
         {/* Title labels */}
         <text x="240" y="16" textAnchor="middle" fontSize="13" fill="#0d9488" fontWeight="bold">

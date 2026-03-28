@@ -16,7 +16,7 @@ export default function CombinatoricsTree() {
   ];
 
   return (
-    <svg viewBox={`0 0 ${W} ${H}`} className="w-full max-w-md mx-auto">
+    <svg role="img" viewBox={`0 0 ${W} ${H}`} className="w-full max-w-md mx-auto">
       <title>Baumdiagramm — Kombinatorik und Wahrscheinlichkeit</title>
 
       <text x={W / 2} y={16} textAnchor="middle" fontSize={12} fill="#1e40af" fontWeight={700}>

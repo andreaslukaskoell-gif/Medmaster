@@ -66,7 +66,7 @@ html.font-large { font-size: 18px; }
   --text-primary: #1a1a1a;
   --text-secondary: #5c5c5c;
   --border: #e8e8e4;
-  --muted: #8c8c8c;
+  --muted: #737373; /* WCAG AA compliant: 4.75:1 on #fafaf8 */
   /* Accent (Deep Indigo / Primary) */
   --accent: #2d3a8c;
   --accent-hover: #3d4ca6;
@@ -111,7 +111,7 @@ html.font-large { font-size: 18px; }
   --text-primary: #ededed; /* warm off-white: body/main content */
   --text-secondary: #a0a0a0; /* warm medium gray: secondary */
   --border: #2a2a2a;
-  --muted: #888888; /* warm gray: meta, labels */
+  --muted: #9a9a9a; /* WCAG AA compliant: 5.8:1 on #141414 */
   --accent: #5b8def;
   --accent-hover: #7aa4f7;
   --success: #2dd4bf;
@@ -147,7 +147,7 @@ html.font-large { font-size: 18px; }
   --color-surface: #fafaf8;
   --color-card: #ffffff;
   --color-border: #e8e8e4;
-  --color-muted: #8c8c8c;
+  --color-muted: #737373;
 
   --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   --font-serif: "Source Serif 4", "Georgia", serif;

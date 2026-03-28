@@ -1,6 +1,6 @@
 export default function GeometricShapes() {
   return (
-    <svg viewBox="0 0 400 260" className="w-full max-w-md mx-auto">
+    <svg role="img" viewBox="0 0 400 260" className="w-full max-w-md mx-auto">
       <title>Geometrische Grundformen und Formeln</title>
       {/* Row 1: 2D shapes */}
       <text x={200} y={18} textAnchor="middle" fontSize={13} fill="#1e40af" fontWeight={700}>

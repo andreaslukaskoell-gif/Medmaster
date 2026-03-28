@@ -47,7 +47,7 @@ export default function RedoxOverview() {
         ))}
       </div>
 
-      <svg viewBox="0 0 480 270" className="w-full max-w-lg mx-auto">
+      <svg role="img" viewBox="0 0 480 270" className="w-full max-w-lg mx-auto">
         <title>Redoxreaktionen Überblick</title>
         <defs>
           <radialGradient id="znGrad" cx="40%" cy="35%" r="55%">

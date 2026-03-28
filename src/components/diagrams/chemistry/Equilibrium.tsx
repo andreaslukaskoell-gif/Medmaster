@@ -31,7 +31,7 @@ export default function Equilibrium() {
       </div>
 
       {view === "rates" && (
-        <svg viewBox="0 0 480 270" className="w-full max-w-lg mx-auto">
+        <svg role="img" viewBox="0 0 480 270" className="w-full max-w-lg mx-auto">
           <title>Chemisches Gleichgewicht — Reaktionsraten</title>
           <defs>
             <marker id="arrT" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
@@ -135,7 +135,7 @@ export default function Equilibrium() {
       )}
 
       {view === "concentration" && (
-        <svg viewBox="0 0 480 270" className="w-full max-w-lg mx-auto">
+        <svg role="img" viewBox="0 0 480 270" className="w-full max-w-lg mx-auto">
           <title>Gleichgewicht — Konzentrationen vs. Zeit</title>
           <defs>
             <marker id="arrC" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">

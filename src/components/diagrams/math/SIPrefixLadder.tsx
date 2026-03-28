@@ -61,7 +61,7 @@ export default function SIPrefixLadder() {
         Klicke auf einen Präfix für Details
       </p>
 
-      <svg viewBox={`0 0 ${W} ${H}`} className="w-full">
+      <svg role="img" viewBox={`0 0 ${W} ${H}`} className="w-full">
         <title>SI-Präfix-Leiter</title>
 
         {/* Header */}

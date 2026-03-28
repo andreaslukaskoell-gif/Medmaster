@@ -70,7 +70,7 @@ export default function HydrocarbonTypes() {
         ))}
       </div>
 
-      <svg viewBox="0 0 480 250" className="w-full max-w-lg mx-auto">
+      <svg role="img" viewBox="0 0 480 250" className="w-full max-w-lg mx-auto">
         <title>{info.name} — Struktur</title>
         <defs>
           <radialGradient id="hcC" cx="40%" cy="35%" r="55%">

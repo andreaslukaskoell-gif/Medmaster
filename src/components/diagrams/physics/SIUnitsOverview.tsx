@@ -24,7 +24,7 @@ export default function SIUnitsOverview() {
       <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">
         Die 7 SI-Basiseinheiten
       </h4>
-      <svg viewBox="0 0 490 360" className="w-full max-w-2xl mx-auto">
+      <svg role="img" viewBox="0 0 490 360" className="w-full max-w-2xl mx-auto">
         <title>
           Die 7 SI-Basiseinheiten — Gr{"\u00F6"}
           {"\u00DF"}e, Name und Symbol

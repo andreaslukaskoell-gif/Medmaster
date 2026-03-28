@@ -139,7 +139,7 @@ export default function PeriodicTable() {
         Periodensystem der Elemente
       </h4>
       <p className="text-xs text-[var(--muted)]">Klicke auf ein Element für Details.</p>
-      <svg viewBox="0 0 460 180" className="w-full max-w-2xl mx-auto">
+      <svg role="img" viewBox="0 0 460 180" className="w-full max-w-2xl mx-auto">
         <title>Periodensystem der Elemente</title>
         <text x="230" y="16" textAnchor="middle" fontSize="13" fill="#0f766e" fontWeight="bold">
           Periodensystem (1-36)
