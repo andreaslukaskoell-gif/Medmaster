@@ -8,7 +8,12 @@ import "@/index.css";
 import App from "@/App";
 import { initAnalytics, captureUtmParams } from "@/lib/analytics";
 import { initTracker, captureTrafficSource, captureAttributionOnly } from "@/lib/analyticsTracker";
-import { initMetaPixel, initGtag } from "@/lib/growthTracking";
+import {
+  initMetaPixel,
+  initGtag,
+  initGtagConsentMode,
+  initSessionDurationTracking,
+} from "@/lib/growthTracking";
 import { getStoredConsent } from "@/hooks/useCookieConsent";
 
 // Sentry (error tracking) — runs regardless of consent (legitimate interest for bug fixes)
@@ -31,18 +36,24 @@ captureAttributionOnly();
 // Only initialize analytics/marketing if the user has given consent.
 const consent = getStoredConsent();
 
+// Google Ads Consent Mode v2: always init gtag with consent defaults.
+// This allows Google to model conversions even when consent is denied.
+const marketingConsent = consent?.marketing ?? false;
+initGtagConsentMode(marketingConsent);
+initGtag(); // always load — consent mode controls data collection
+
 if (consent?.analytics) {
   // PostHog (analytics) — dynamically loaded
   initAnalytics().then(() => captureUtmParams());
   // Supabase analytics tracker
   initTracker();
   captureTrafficSource();
+  initSessionDurationTracking();
 }
 
-if (consent?.marketing) {
-  // Google Ads + Meta Pixel (marketing/conversion tracking)
+if (marketingConsent) {
+  // Meta Pixel (marketing) — still consent-gated
   initMetaPixel();
-  initGtag();
 }
 
 // Parallax: update --scroll-y on root so .hero-orbs pseudo-elements can use it

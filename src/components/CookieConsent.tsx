@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useCookieConsent } from "@/hooks/useCookieConsent";
+import { updateGtagConsent } from "@/lib/growthTracking";
 
 export function CookieConsentBanner() {
   const { hasConsented, acceptAll, acceptNecessaryOnly, updateConsent } = useCookieConsent();
@@ -11,12 +12,14 @@ export function CookieConsentBanner() {
 
   const handleSaveCustom = () => {
     updateConsent({ analytics, marketing });
+    updateGtagConsent(marketing);
     // Reload to apply consent-gated analytics
     window.location.reload();
   };
 
   const handleAcceptAll = () => {
     acceptAll();
+    updateGtagConsent(true);
     window.location.reload();
   };
 

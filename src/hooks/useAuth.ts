@@ -5,6 +5,7 @@ import { startMainSync, stopMainSync } from "@/lib/sync";
 import { identifyUser, resetAnalytics } from "@/lib/analytics";
 import { trackConversion } from "@/lib/growthTracking";
 import {
+  trackEvent,
   setTrackerUserId,
   getStoredRef,
   getStoredUtm,
@@ -86,19 +87,22 @@ export function useAuth() {
         startAutoSync(session.user.id);
         startMainSync(session.user.id);
 
-        // Track new signups (works for Google OAuth, email, magic link)
+        // Track new signups and returning logins
         if (event === "SIGNED_IN") {
           const createdAt = new Date(session.user.created_at).getTime();
           const isNewUser = Date.now() - createdAt < 60_000; // created less than 60s ago
+          const provider = session.user.app_metadata?.provider || "unknown";
           if (isNewUser) {
-            const provider = session.user.app_metadata?.provider || "unknown";
             trackConversion("signup_completed", {
               method: provider,
               ref: getStoredRef(),
               utm: getStoredUtm(),
               gclid: getStoredGclid(),
               fbclid: getStoredFbclid(),
+              email: session.user.email,
             });
+          } else {
+            trackEvent("login", { method: provider });
           }
         }
       } else {

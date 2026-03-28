@@ -102,6 +102,12 @@ type PageEngagement = {
   total_views: number;
   unique_visitors: number;
 };
+type DailyUserActivity = {
+  day: string;
+  signups: number;
+  logins: number;
+  avg_session_seconds: number;
+};
 
 type DashboardData = {
   daily: DailyStat[];
@@ -116,6 +122,7 @@ type DashboardData = {
   recentReferrals: RecentReferral[];
   signupAttributions: SignupAttribution[];
   activeUsersByEmail: ActiveUserByEmail[];
+  dailyUserActivity: DailyUserActivity[];
 };
 
 // ── Funnel config ──
@@ -233,6 +240,7 @@ async function fetchDashboard(): Promise<DashboardData> {
       recentReferrals: [],
       signupAttributions: [],
       activeUsersByEmail: [],
+      dailyUserActivity: [],
     };
   }
 
@@ -347,6 +355,12 @@ async function fetchDashboard(): Promise<DashboardData> {
   const activeUsersByEmail: ActiveUserByEmail[] =
     (activeByEmailResult.data as ActiveUserByEmail[]) || [];
 
+  // Fetch daily user activity (signups, logins, session duration)
+  const activityResult = await supabase.rpc("analytics_daily_user_activity", { days_back: 30 });
+  if (activityResult.error)
+    console.warn("[Analytics] daily_user_activity:", activityResult.error.message);
+  const dailyUserActivity: DailyUserActivity[] = (activityResult.data as DailyUserActivity[]) || [];
+
   return {
     daily: (daily.data as DailyStat[]) || [],
     topPages: (topPages.data as TopPage[]) || [],
@@ -360,6 +374,7 @@ async function fetchDashboard(): Promise<DashboardData> {
     recentReferrals,
     signupAttributions: deduped,
     activeUsersByEmail,
+    dailyUserActivity,
   };
 }
 
@@ -966,6 +981,144 @@ export default function AnalyticsDashboard() {
           </div>
         </div>
       )}
+
+      {/* 2b. Daily User Activity — signups, logins, session duration */}
+      {data.dailyUserActivity.length > 0 &&
+        (() => {
+          const recent = data.dailyUserActivity.slice(-7);
+          const todayActivity = data.dailyUserActivity[data.dailyUserActivity.length - 1];
+          const totalSignups7d = recent.reduce((s, d) => s + d.signups, 0);
+          const totalLogins7d = recent.reduce((s, d) => s + d.logins, 0);
+          const avgSession7d = recent.filter((d) => d.avg_session_seconds > 0);
+          const avgSessionDuration =
+            avgSession7d.length > 0
+              ? Math.round(
+                  avgSession7d.reduce((s, d) => s + d.avg_session_seconds, 0) / avgSession7d.length
+                )
+              : 0;
+          return (
+            <div className="bg-[var(--surface)] rounded-xl p-5 border border-[var(--border)]">
+              <h2 className="text-sm font-semibold text-[var(--text-primary)] mb-4">
+                Nutzeraktivität
+              </h2>
+              {/* Summary cards */}
+              <div className="grid grid-cols-4 gap-3 mb-5">
+                <div className="bg-[var(--background)] rounded-lg p-3 text-center">
+                  <div className="text-[10px] font-medium text-[var(--muted)] uppercase tracking-wide mb-1">
+                    Signups heute
+                  </div>
+                  <div className="text-2xl font-extrabold text-[var(--text-primary)] tabular-nums">
+                    {todayActivity?.signups ?? 0}
+                  </div>
+                </div>
+                <div className="bg-[var(--background)] rounded-lg p-3 text-center">
+                  <div className="text-[10px] font-medium text-[var(--muted)] uppercase tracking-wide mb-1">
+                    Logins heute
+                  </div>
+                  <div className="text-2xl font-extrabold text-[var(--text-primary)] tabular-nums">
+                    {todayActivity?.logins ?? 0}
+                  </div>
+                </div>
+                <div className="bg-[var(--background)] rounded-lg p-3 text-center">
+                  <div className="text-[10px] font-medium text-[var(--muted)] uppercase tracking-wide mb-1">
+                    Signups 7d
+                  </div>
+                  <div className="text-2xl font-extrabold text-[var(--text-primary)] tabular-nums">
+                    {totalSignups7d}
+                  </div>
+                </div>
+                <div className="bg-[var(--background)] rounded-lg p-3 text-center">
+                  <div className="text-[10px] font-medium text-[var(--muted)] uppercase tracking-wide mb-1">
+                    Ø Session
+                  </div>
+                  <div className="text-2xl font-extrabold text-[var(--text-primary)] tabular-nums">
+                    {formatDuration(avgSessionDuration)}
+                  </div>
+                </div>
+              </div>
+              {/* 7-day activity bars */}
+              <div className="space-y-1.5">
+                <div className="flex items-center gap-2 mb-2 text-[10px] text-[var(--muted)]">
+                  <span className="flex items-center gap-1">
+                    <span className="w-2 h-2 rounded-full bg-emerald-500" /> Signups
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <span className="w-2 h-2 rounded-full bg-blue-500" /> Logins
+                  </span>
+                  <span className="ml-auto">Letzte 7 Tage</span>
+                </div>
+                {recent.map((d) => {
+                  const maxActivity = Math.max(1, ...recent.map((r) => r.signups + r.logins));
+                  const total = d.signups + d.logins;
+                  const pct = (total / maxActivity) * 100;
+                  const signupPct = total > 0 ? (d.signups / total) * 100 : 0;
+                  return (
+                    <div key={d.day} className="flex items-center gap-3">
+                      <span className="text-[11px] text-[var(--muted)] w-12 shrink-0 tabular-nums">
+                        {d.day.slice(5)}
+                      </span>
+                      <div className="flex-1 h-5 bg-[var(--background)] rounded-full overflow-hidden">
+                        <div
+                          className="h-full flex rounded-full transition-all duration-500"
+                          style={{ width: `${Math.max(pct, 2)}%` }}
+                        >
+                          {d.signups > 0 && (
+                            <div
+                              className="h-full bg-emerald-500"
+                              style={{ width: `${signupPct}%` }}
+                            />
+                          )}
+                          {d.logins > 0 && (
+                            <div
+                              className="h-full bg-blue-500"
+                              style={{ width: `${100 - signupPct}%` }}
+                            />
+                          )}
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-2 w-28 shrink-0 justify-end">
+                        <span className="text-[11px] font-semibold text-[var(--text-primary)] tabular-nums">
+                          {total}
+                        </span>
+                        {d.avg_session_seconds > 0 && (
+                          <span className="text-[10px] text-[var(--muted)]">
+                            {formatDuration(d.avg_session_seconds)}
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+              {/* Monthly totals */}
+              {data.dailyUserActivity.length > 7 &&
+                (() => {
+                  const all = data.dailyUserActivity;
+                  const totalSignups30d = all.reduce((s, d) => s + d.signups, 0);
+                  const totalLogins30d = all.reduce((s, d) => s + d.logins, 0);
+                  return (
+                    <div className="mt-4 pt-3 border-t border-[var(--border)] flex gap-4 text-xs text-[var(--muted)]">
+                      <span>
+                        30d:{" "}
+                        <strong className="text-[var(--text-primary)]">{totalSignups30d}</strong>{" "}
+                        Signups
+                      </span>
+                      <span>
+                        <strong className="text-[var(--text-primary)]">{totalLogins30d}</strong>{" "}
+                        Logins
+                      </span>
+                      <span>
+                        <strong className="text-[var(--text-primary)]">
+                          {totalSignups30d + totalLogins30d}
+                        </strong>{" "}
+                        gesamt
+                      </span>
+                    </div>
+                  );
+                })()}
+            </div>
+          );
+        })()}
 
       {/* 3. Page Engagement — where users spend time */}
       {data.pageEngagement.length > 0 && (

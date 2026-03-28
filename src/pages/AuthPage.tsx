@@ -103,7 +103,7 @@ export default function AuthPage() {
           gclid: getStoredGclid(),
           fbclid: getStoredFbclid(),
         });
-        trackConversion("signup_completed", { method: "email", ref: getStoredRef() });
+        trackConversion("signup_completed", { method: "email", ref: getStoredRef(), email });
         // Don't skip onboarding — let user set their display name first
         navigate("/medat-onboarding");
       }

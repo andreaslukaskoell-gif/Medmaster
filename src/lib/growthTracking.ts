@@ -65,7 +65,42 @@ const GTAG_CONV_CHECKOUT = import.meta.env.VITE_GTAG_CONV_CHECKOUT as string | u
 
 let gtagReady = false;
 
-/** Load gtag.js and initialize. Call once on app start. */
+/**
+ * Initialize Google Consent Mode v2 defaults.
+ * Must be called BEFORE gtag("config") — ideally before the gtag script loads.
+ * This allows Google to model conversions even when full consent is denied.
+ */
+export function initGtagConsentMode(marketingConsent: boolean) {
+  if (typeof window === "undefined") return;
+  if (location.hostname === "localhost" || location.hostname === "127.0.0.1") return;
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  (window as any).dataLayer = (window as any).dataLayer || [];
+
+  // Set consent defaults BEFORE gtag loads
+  gtag("consent", "default", {
+    ad_storage: marketingConsent ? "granted" : "denied",
+    ad_user_data: marketingConsent ? "granted" : "denied",
+    ad_personalization: marketingConsent ? "granted" : "denied",
+    analytics_storage: "granted", // basic analytics always allowed for conversion modeling
+    wait_for_update: 500,
+  });
+}
+
+/** Update consent state after user interaction with cookie banner. */
+export function updateGtagConsent(marketingConsent: boolean) {
+  if (!gtagReady) return;
+  gtag("consent", "update", {
+    ad_storage: marketingConsent ? "granted" : "denied",
+    ad_user_data: marketingConsent ? "granted" : "denied",
+    ad_personalization: marketingConsent ? "granted" : "denied",
+  });
+}
+
+/**
+ * Load gtag.js and initialize with Consent Mode v2.
+ * Now always called on app start — consent mode handles the rest.
+ */
 export function initGtag() {
   if (!GTAG_ID?.trim()) return;
   if (typeof window === "undefined") return;
@@ -88,9 +123,15 @@ function gtag(...args: unknown[]) {
   ((window as any).dataLayer as unknown[])?.push(args);
 }
 
-/** Track Google Ads conversion. */
-export function trackGtagConversion(conversionLabel: string, value?: number) {
+/** Track Google Ads conversion with optional Enhanced Conversions data. */
+export function trackGtagConversion(conversionLabel: string, value?: number, userEmail?: string) {
   if (!gtagReady || !GTAG_ID) return;
+
+  // Enhanced Conversions: send hashed user data for better attribution
+  if (userEmail) {
+    gtag("set", "user_data", { email: userEmail });
+  }
+
   gtag("event", "conversion", {
     send_to: `${GTAG_ID}/${conversionLabel}`,
     value: value ?? 0,
@@ -218,13 +259,12 @@ export function trackConversion(
       break;
   }
 
-  // Google Ads — fire conversion with label from env vars
-  // Set VITE_GTAG_CONV_SIGNUP / VITE_GTAG_CONV_CHECKOUT in .env.local
-  // (copy from Google Ads → Tools → Conversions → Tag setup → Conversion label)
+  // Google Ads — fire conversion with Enhanced Conversions (hashed email)
+  const userEmail = (properties?.email as string) || undefined;
   if (event === "signup_completed" && GTAG_CONV_SIGNUP) {
-    trackGtagConversion(GTAG_CONV_SIGNUP);
+    trackGtagConversion(GTAG_CONV_SIGNUP, undefined, userEmail);
   } else if (event === "checkout_started" && GTAG_CONV_CHECKOUT) {
-    trackGtagConversion(GTAG_CONV_CHECKOUT, 29.9);
+    trackGtagConversion(GTAG_CONV_CHECKOUT, 29.9, userEmail);
   }
 }
 
@@ -245,4 +285,27 @@ export function logPageTime(page: string) {
     trackEvent("time_on_page", { page, seconds });
   }
   pageEntryTime = 0;
+}
+
+// ── Session Duration Tracking ──────────────────────────────────────────────
+
+let sessionStartTime = 0;
+
+/** Call once on app start to begin tracking total session duration. */
+export function initSessionDurationTracking() {
+  if (typeof window === "undefined") return;
+  sessionStartTime = Date.now();
+
+  const logSessionEnd = () => {
+    if (!sessionStartTime) return;
+    const seconds = Math.round((Date.now() - sessionStartTime) / 1000);
+    if (seconds >= 3) {
+      trackEvent("session_end", { session_duration_seconds: seconds });
+    }
+  };
+
+  window.addEventListener("beforeunload", logSessionEnd);
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "hidden") logSessionEnd();
+  });
 }
