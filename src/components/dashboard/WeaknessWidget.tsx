@@ -34,7 +34,7 @@ export function WeaknessWidget() {
   const top3 = weakTopics.slice(0, 3);
 
   return (
-    <div className="card-glass p-5 flex flex-col h-full">
+    <div className="card-glass p-4 flex flex-col h-full">
       <div className="flex items-center gap-2 mb-3">
         <AlertTriangle className="w-4 h-4 text-amber-500" />
         <h3 className="text-sm font-semibold text-[var(--text-primary)]">Schwachstellen</h3>

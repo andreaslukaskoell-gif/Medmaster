@@ -15,8 +15,6 @@ import {
   Heart,
   ListChecks,
   RefreshCw,
-  MessageCircle,
-  Copy,
   Puzzle,
   CalendarClock,
   Zap,
@@ -38,13 +36,7 @@ import { useAuth } from "@/hooks/useAuth";
 import { cn, daysUntilMedAT, getGreetingByTime } from "@/lib/utils";
 import { getDailyGoalFromPlan, getConsecutiveDaysGoalMissed } from "@/lib/dailyGoal";
 import { getTodaysResult } from "@/lib/dailyChallenge";
-import {
-  shareText,
-  getStreakShareText,
-  getReferralShareText,
-  shareWhatsApp,
-  copyToClipboard,
-} from "@/lib/shareUtils";
+import { shareText, getStreakShareText } from "@/lib/shareUtils";
 import { getLevelFromXP, XP_PER_LEVEL } from "@/lib/progression";
 import { generateAdaptivePlan } from "@/lib/adaptivePlan";
 import { buildConcreteDailyPlan } from "@/lib/concreteDailyPlan";
@@ -166,16 +158,21 @@ export default function Dashboard() {
       return null;
     }
   }, [plan, lastViewedKapitelId, lastViewedUnterkapitelId]);
-  const dailyGoalState = useMemo(
-    () => {
-      try {
-        return getDailyGoalFromPlan(plan, quizResults, todayStr);
-      } catch {
-        return { hasPlan: false, isPrimaryComplete: false, dailyMinutes: 0, todayTasks: [], primaryProgressPct: 0, totalSegments: 0, completedSegments: 0 };
-      }
-    },
-    [plan, quizResults, todayStr]
-  );
+  const dailyGoalState = useMemo(() => {
+    try {
+      return getDailyGoalFromPlan(plan, quizResults, todayStr);
+    } catch {
+      return {
+        hasPlan: false,
+        isPrimaryComplete: false,
+        dailyMinutes: 0,
+        todayTasks: [],
+        primaryProgressPct: 0,
+        totalSegments: 0,
+        completedSegments: 0,
+      };
+    }
+  }, [plan, quizResults, todayStr]);
   const consecutiveGoalMissed = useMemo(
     () => getConsecutiveDaysGoalMissed(goalAchievedByDate ?? {}),
     [goalAchievedByDate]
@@ -213,10 +210,7 @@ export default function Dashboard() {
   }, []);
 
   // Pull-to-refresh on mobile
-  const { pullDistance, isRefreshing } = usePullToRefresh(
-    () => window.location.reload(),
-    80
-  );
+  const { pullDistance, isRefreshing } = usePullToRefresh(() => window.location.reload(), 80);
 
   const cardClass = "card-glass";
   const { bmsProgressPct, bmsProgressDone, bmsProgressTotal } = useMemo(() => {
@@ -271,7 +265,9 @@ export default function Dashboard() {
             <p className="text-sm text-[var(--muted)] text-center mb-4">
               Wähle einen Bereich und leg direkt los.
             </p>
-            <div className={`grid gap-3 stagger-children ${isMobile ? "grid-cols-1" : "grid-cols-3"}`}>
+            <div
+              className={`grid gap-3 stagger-children ${isMobile ? "grid-cols-1" : "grid-cols-3"}`}
+            >
               {(
                 [
                   {
@@ -353,10 +349,7 @@ export default function Dashboard() {
 
         {/* ─── Quick Quiz (mobile-prominent) ─── */}
         {isMobile && (quizResults ?? []).length > 0 && (
-          <Link
-            to="/fragen-trainer"
-            className="block mb-4 card-glass p-4 group"
-          >
+          <Link to="/fragen-trainer" className="block mb-4 card-glass p-4 group">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-xl bg-[var(--accent)]/10 flex items-center justify-center shrink-0">
                 <Zap className="w-5 h-5 text-[var(--accent)]" />
@@ -373,7 +366,7 @@ export default function Dashboard() {
         {/* ─── Fällige Wiederholungen ─── */}
         <DueReviewsCard userProgress={userProgress} />
 
-        <motion.div variants={stagger} initial="initial" animate="animate" className="space-y-6">
+        <motion.div variants={stagger} initial="initial" animate="animate" className="space-y-5">
           {/* Hero: Begrüßung + Heute im Lernplan */}
           <motion.section variants={tileMotion} aria-label="Start" className="space-y-4">
             <div className="card-glass p-5">
@@ -539,13 +532,17 @@ export default function Dashboard() {
               </Tooltip>
             </div>
             {/* Streak-Karte */}
-            <div className={cn(cardClass, "p-5 flex items-center gap-4 relative overflow-hidden")} aria-label="Streak">
+            <div
+              className={cn(cardClass, "p-4 flex items-center gap-3 relative overflow-hidden")}
+              aria-label="Streak"
+            >
               {/* Subtle streak glow for active streaks */}
               {flameStreak >= 7 && (
                 <div
                   className="absolute inset-0 opacity-[0.04] pointer-events-none"
                   style={{
-                    background: "linear-gradient(135deg, #f59e0b 0%, #ef4444 50%, transparent 100%)",
+                    background:
+                      "linear-gradient(135deg, #f59e0b 0%, #ef4444 50%, transparent 100%)",
                   }}
                 />
               )}
@@ -553,18 +550,20 @@ export default function Dashboard() {
                 content={`${flameStreak} ${flameStreak === 1 ? "Tag" : "Tage"} in Folge aktiv`}
                 position="top"
               >
-                <div className="w-12 h-12 rounded-xl bg-[var(--accent)]/10 flex items-center justify-center shrink-0">
+                <div className="w-10 h-10 rounded-xl bg-[var(--accent)]/10 flex items-center justify-center shrink-0">
                   <StreakFlameIcon
                     streak={flameStreak}
                     hasActivityToday={flameHasActivity}
                     size="sm"
-                    className="w-6 h-6"
+                    className="w-5 h-5"
                   />
                 </div>
               </Tooltip>
               <div className="flex-1 min-w-0">
-                <p className="text-xl font-bold text-[var(--text-primary)]">{flameStreak}</p>
-                <p className="text-sm text-[var(--muted)]">
+                <p className="text-lg font-bold text-[var(--text-primary)] leading-tight">
+                  {flameStreak}
+                </p>
+                <p className="text-xs text-[var(--muted)]">
                   {flameStreak === 0
                     ? "Starte deinen Streak!"
                     : flameStreak >= 30
@@ -583,7 +582,7 @@ export default function Dashboard() {
             <motion.section
               variants={tileMotion}
               aria-label="Empfehlungen"
-              className={`grid gap-4 ${isMobile ? "grid-cols-1" : "grid-cols-3"}`}
+              className={`grid gap-3 ${isMobile ? "grid-cols-1" : "grid-cols-3"}`}
             >
               <DailyPlanWidget />
               <WeaknessWidget />
@@ -596,10 +595,10 @@ export default function Dashboard() {
             <motion.section
               variants={tileMotion}
               aria-label="Wochen-Aktivität und Freunde"
-              className={`grid gap-4 ${isMobile ? "grid-cols-1" : "grid-cols-2"}`}
+              className={`grid gap-3 ${isMobile ? "grid-cols-1" : "grid-cols-2"}`}
             >
-              <div className={cn(cardClass, "p-5")}>
-                <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
+              <div className={cn(cardClass, "p-4")}>
+                <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
                   <p className="text-sm font-medium text-[var(--muted)]">Wochen-Aktivität</p>
                   <p className="text-sm text-[var(--text-primary)]">
                     Diese Woche an <strong>{daysThisWeekActive}/7</strong> Tagen aktiv
@@ -652,52 +651,6 @@ export default function Dashboard() {
             </div>
           </div>
         )}
-      </div>
-    </div>
-  );
-}
-
-// eslint-disable-next-line @typescript-eslint/no-unused-vars -- kept for future referral feature
-function ReferralCard() {
-  const [copied, setCopied] = useState(false);
-  const { user } = useAuth();
-  const refLink = user?.id
-    ? `https://medmaster.at?ref=${user.id.slice(0, 8)}`
-    : "https://medmaster.at";
-  const waText = getReferralShareText(user?.id);
-
-  return (
-    <div className="h-full card-glass p-5">
-      <p className="text-sm font-semibold text-[var(--text-primary)] mb-1">Freunde einladen</p>
-      <p className="text-xs text-[var(--muted)] leading-relaxed mb-3">
-        Teile MedMaster mit deiner Lerngruppe — wer gemeinsam übt, schneidet besser ab.
-      </p>
-      <div className="flex gap-2">
-        <button
-          type="button"
-          onClick={() => shareWhatsApp(waText)}
-          className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium bg-[#25D366] text-white hover:bg-[#1ebe57] transition-colors"
-        >
-          <MessageCircle className="w-4 h-4" />
-          WhatsApp
-        </button>
-        <button
-          type="button"
-          onClick={async () => {
-            await copyToClipboard(refLink);
-            setCopied(true);
-            setTimeout(() => setCopied(false), 2500);
-          }}
-          className={cn(
-            "inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium border transition-colors",
-            copied
-              ? "border-emerald-300 text-emerald-600 bg-emerald-50 dark:bg-emerald-900/20"
-              : "border-[var(--border)] text-[var(--text-secondary)] hover:bg-[var(--surface)]"
-          )}
-        >
-          {copied ? <CheckCircle2 className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
-          {copied ? "Kopiert!" : "Link kopieren"}
-        </button>
       </div>
     </div>
   );
@@ -946,9 +899,7 @@ function ContinueLearningCard({ completedChapters }: { completedChapters: string
     if (!ukMatch) return null;
 
     const uks = kapitel.unterkapitel ?? [];
-    const uk =
-      uks[ukMatch.index] ??
-      uks.find((u) => u.id === lastViewedUnterkapitelId);
+    const uk = uks[ukMatch.index] ?? uks.find((u) => u.id === lastViewedUnterkapitelId);
     if (!uk) return null;
 
     const totalUks = uks.length;
@@ -997,19 +948,19 @@ function ContinueLearningCard({ completedChapters }: { completedChapters: string
           trackEvent("continue_learning_click", { kapitel: lastViewedKapitelId ?? "" })
         }
       >
-        <div className="p-5 flex items-center gap-5">
+        <div className="p-6 flex items-center gap-5">
           <div
-            className="w-11 h-11 rounded-xl flex items-center justify-center shrink-0"
+            className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0"
             style={{ backgroundColor: `color-mix(in srgb, ${data.accent} 15%, transparent)` }}
           >
-            <BookOpen className="w-5 h-5" style={{ color: data.accent }} />
+            <BookOpen className="w-6 h-6" style={{ color: data.accent }} />
           </div>
 
           <div className="flex-1 min-w-0">
             <p className="text-xs font-medium text-[var(--muted)] mb-0.5">
               Weiterlernen &middot; {data.subjectLabel}
             </p>
-            <p className="text-sm font-semibold text-[var(--text-primary)] truncate">
+            <p className="text-base font-bold text-[var(--text-primary)] truncate">
               {data.kapitelTitle}
             </p>
             <p className="text-xs text-[var(--text-secondary)] truncate mt-0.5">{data.ukTitle}</p>
@@ -1034,9 +985,9 @@ function ContinueLearningCard({ completedChapters }: { completedChapters: string
           </div>
 
           <span
-            className="shrink-0 inline-flex items-center gap-1.5 text-sm font-semibold px-4 py-2 rounded-lg transition-colors"
+            className="shrink-0 inline-flex items-center gap-1.5 text-sm font-bold px-5 py-2.5 rounded-lg transition-colors"
             style={{
-              backgroundColor: `color-mix(in srgb, ${data.accent} 12%, transparent)`,
+              backgroundColor: `color-mix(in srgb, ${data.accent} 15%, transparent)`,
               color: data.accent,
             }}
           >
