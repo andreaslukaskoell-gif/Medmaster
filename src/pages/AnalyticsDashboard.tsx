@@ -103,6 +103,13 @@ type PageEngagement = {
   unique_visitors: number;
 };
 
+type DailyUserActivity = {
+  day: string;
+  signups: number;
+  logins: number;
+  avg_session_seconds: number;
+};
+
 type DashboardData = {
   daily: DailyStat[];
   topPages: TopPage[];
@@ -116,6 +123,7 @@ type DashboardData = {
   recentReferrals: RecentReferral[];
   signupAttributions: SignupAttribution[];
   activeUsersByEmail: ActiveUserByEmail[];
+  dailyUserActivity: DailyUserActivity[];
 };
 
 // ── Funnel config ──
@@ -233,6 +241,7 @@ async function fetchDashboard(): Promise<DashboardData> {
       recentReferrals: [],
       signupAttributions: [],
       activeUsersByEmail: [],
+      dailyUserActivity: [],
     };
   }
 
@@ -347,6 +356,10 @@ async function fetchDashboard(): Promise<DashboardData> {
   const activeUsersByEmail: ActiveUserByEmail[] =
     (activeByEmailResult.data as ActiveUserByEmail[]) || [];
 
+  // Fetch daily user activity (signups, logins, session duration)
+  const activityResult = await supabase.rpc("analytics_daily_user_activity", { days_back: 30 });
+  const dailyUserActivity: DailyUserActivity[] = (activityResult.data as DailyUserActivity[]) || [];
+
   return {
     daily: (daily.data as DailyStat[]) || [],
     topPages: (topPages.data as TopPage[]) || [],
@@ -360,6 +373,7 @@ async function fetchDashboard(): Promise<DashboardData> {
     recentReferrals,
     signupAttributions: deduped,
     activeUsersByEmail,
+    dailyUserActivity,
   };
 }
 
@@ -721,7 +735,9 @@ function LiveDot() {
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <div className="bg-[var(--surface)] rounded-2xl p-5 border border-[var(--border)] h-full">
-      <h2 className="text-[11px] font-bold text-[var(--muted)] mb-4 uppercase tracking-wider">{title}</h2>
+      <h2 className="text-[11px] font-bold text-[var(--muted)] mb-4 uppercase tracking-wider">
+        {title}
+      </h2>
       {children}
     </div>
   );
@@ -904,38 +920,55 @@ export default function AnalyticsDashboard() {
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
         <div className="bg-[var(--surface)] rounded-2xl p-5 border border-[var(--border)] relative overflow-hidden group">
           <div className="absolute top-0 left-0 right-0 h-1 rounded-t-2xl bg-blue-500" />
-          <div className="text-[11px] font-medium text-[var(--muted)] uppercase tracking-wider mb-2">Heute</div>
-          <div className="text-4xl font-extrabold text-[var(--text-primary)] tabular-nums leading-none">{formatNum(todayVisitors)}</div>
+          <div className="text-[11px] font-medium text-[var(--muted)] uppercase tracking-wider mb-2">
+            Heute
+          </div>
+          <div className="text-4xl font-extrabold text-[var(--text-primary)] tabular-nums leading-none">
+            {formatNum(todayVisitors)}
+          </div>
           <div className="text-xs text-[var(--muted)] mt-1.5">Besucher</div>
         </div>
         <div className="bg-[var(--surface)] rounded-2xl p-5 border border-[var(--border)] relative overflow-hidden">
           <div className="absolute top-0 left-0 right-0 h-1 rounded-t-2xl bg-violet-500" />
-          <div className="text-[11px] font-medium text-[var(--muted)] uppercase tracking-wider mb-2">7 Tage</div>
-          <div className="text-4xl font-extrabold text-[var(--text-primary)] tabular-nums leading-none">{formatNum(weekVisitors)}</div>
+          <div className="text-[11px] font-medium text-[var(--muted)] uppercase tracking-wider mb-2">
+            7 Tage
+          </div>
+          <div className="text-4xl font-extrabold text-[var(--text-primary)] tabular-nums leading-none">
+            {formatNum(weekVisitors)}
+          </div>
           <div className="text-xs text-[var(--muted)] mt-1.5">Besucher</div>
         </div>
         <div className="bg-[var(--surface)] rounded-2xl p-5 border border-[var(--border)] relative overflow-hidden">
           <div className="absolute top-0 left-0 right-0 h-1 rounded-t-2xl bg-cyan-500" />
-          <div className="text-[11px] font-medium text-[var(--muted)] uppercase tracking-wider mb-2">30 Tage</div>
-          <div className="text-4xl font-extrabold text-[var(--text-primary)] tabular-nums leading-none">{formatNum(monthVisitors)}</div>
+          <div className="text-[11px] font-medium text-[var(--muted)] uppercase tracking-wider mb-2">
+            30 Tage
+          </div>
+          <div className="text-4xl font-extrabold text-[var(--text-primary)] tabular-nums leading-none">
+            {formatNum(monthVisitors)}
+          </div>
           <div className="text-xs text-[var(--muted)] mt-1.5">{monthSignups} Signups</div>
         </div>
         <div className="bg-[var(--surface)] rounded-2xl p-5 border border-[var(--border)] relative overflow-hidden">
           <div className="absolute top-0 left-0 right-0 h-1 rounded-t-2xl bg-emerald-500" />
-          <div className="text-[11px] font-medium text-[var(--muted)] uppercase tracking-wider mb-2">Conversion</div>
-          <div className="text-4xl font-extrabold text-[var(--text-primary)] tabular-nums leading-none">{signupRate}%</div>
+          <div className="text-[11px] font-medium text-[var(--muted)] uppercase tracking-wider mb-2">
+            Conversion
+          </div>
+          <div className="text-4xl font-extrabold text-[var(--text-primary)] tabular-nums leading-none">
+            {signupRate}%
+          </div>
           <div className="text-xs text-[var(--muted)] mt-1.5">Besucher → Signup</div>
         </div>
       </div>
 
       {/* ─── 2. Live Users ─── */}
       {data.activeUsersByEmail.length > 0 && (
-        <div className="rounded-2xl border border-emerald-500/20 overflow-hidden" style={{ background: "color-mix(in srgb, var(--surface) 95%, #10b981 5%)" }}>
+        <div
+          className="rounded-2xl border border-emerald-500/20 overflow-hidden"
+          style={{ background: "color-mix(in srgb, var(--surface) 95%, #10b981 5%)" }}
+        >
           <div className="flex items-center gap-2.5 px-5 py-3.5 border-b border-emerald-500/10">
             <LiveDot />
-            <h2 className="text-sm font-bold text-[var(--text-primary)]">
-              Gerade online
-            </h2>
+            <h2 className="text-sm font-bold text-[var(--text-primary)]">Gerade online</h2>
             <span className="text-[10px] text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full font-medium ml-auto">
               dedupliziert
             </span>
@@ -997,6 +1030,141 @@ export default function AnalyticsDashboard() {
           </Section>
         </div>
       </div>
+
+      {/* ─── 3b. Nutzeraktivität ─── */}
+      {data.dailyUserActivity.length > 0 &&
+        (() => {
+          const recent = data.dailyUserActivity.slice(-7);
+          const todayActivity = data.dailyUserActivity[data.dailyUserActivity.length - 1];
+          const totalSignups7d = recent.reduce((s, d) => s + d.signups, 0);
+          const totalLogins7d = recent.reduce((s, d) => s + d.logins, 0);
+          const avgSession7d = recent.filter((d) => d.avg_session_seconds > 0);
+          const avgSessionDuration =
+            avgSession7d.length > 0
+              ? Math.round(
+                  avgSession7d.reduce((s, d) => s + d.avg_session_seconds, 0) / avgSession7d.length
+                )
+              : 0;
+          return (
+            <div className="bg-[var(--surface)] rounded-xl p-5 border border-[var(--border)]">
+              <h2 className="text-sm font-semibold text-[var(--text-primary)] mb-4">
+                Nutzeraktivität
+              </h2>
+              <div className="grid grid-cols-4 gap-3 mb-5">
+                <div className="bg-[var(--background)] rounded-lg p-3 text-center">
+                  <div className="text-[10px] font-medium text-[var(--muted)] uppercase tracking-wide mb-1">
+                    Signups heute
+                  </div>
+                  <div className="text-2xl font-extrabold text-[var(--text-primary)] tabular-nums">
+                    {todayActivity?.signups ?? 0}
+                  </div>
+                </div>
+                <div className="bg-[var(--background)] rounded-lg p-3 text-center">
+                  <div className="text-[10px] font-medium text-[var(--muted)] uppercase tracking-wide mb-1">
+                    Logins heute
+                  </div>
+                  <div className="text-2xl font-extrabold text-[var(--text-primary)] tabular-nums">
+                    {todayActivity?.logins ?? 0}
+                  </div>
+                </div>
+                <div className="bg-[var(--background)] rounded-lg p-3 text-center">
+                  <div className="text-[10px] font-medium text-[var(--muted)] uppercase tracking-wide mb-1">
+                    Signups 7d
+                  </div>
+                  <div className="text-2xl font-extrabold text-[var(--text-primary)] tabular-nums">
+                    {totalSignups7d}
+                  </div>
+                </div>
+                <div className="bg-[var(--background)] rounded-lg p-3 text-center">
+                  <div className="text-[10px] font-medium text-[var(--muted)] uppercase tracking-wide mb-1">
+                    Ø Session
+                  </div>
+                  <div className="text-2xl font-extrabold text-[var(--text-primary)] tabular-nums">
+                    {formatDuration(avgSessionDuration)}
+                  </div>
+                </div>
+              </div>
+              <div className="space-y-1.5">
+                <div className="flex items-center gap-2 mb-2 text-[10px] text-[var(--muted)]">
+                  <span className="flex items-center gap-1">
+                    <span className="w-2 h-2 rounded-full bg-emerald-500" /> Signups
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <span className="w-2 h-2 rounded-full bg-blue-500" /> Logins
+                  </span>
+                  <span className="ml-auto">Letzte 7 Tage</span>
+                </div>
+                {recent.map((d) => {
+                  const maxActivity = Math.max(1, ...recent.map((r) => r.signups + r.logins));
+                  const total = d.signups + d.logins;
+                  const pct = (total / maxActivity) * 100;
+                  const signupPct = total > 0 ? (d.signups / total) * 100 : 0;
+                  return (
+                    <div key={d.day} className="flex items-center gap-3">
+                      <span className="text-[11px] text-[var(--muted)] w-12 shrink-0 tabular-nums">
+                        {d.day.slice(5)}
+                      </span>
+                      <div className="flex-1 h-5 bg-[var(--background)] rounded-full overflow-hidden">
+                        <div
+                          className="h-full flex rounded-full transition-all duration-500"
+                          style={{ width: `${Math.max(pct, 2)}%` }}
+                        >
+                          {d.signups > 0 && (
+                            <div
+                              className="h-full bg-emerald-500"
+                              style={{ width: `${signupPct}%` }}
+                            />
+                          )}
+                          {d.logins > 0 && (
+                            <div
+                              className="h-full bg-blue-500"
+                              style={{ width: `${100 - signupPct}%` }}
+                            />
+                          )}
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-2 w-28 shrink-0 justify-end">
+                        <span className="text-[11px] font-semibold text-[var(--text-primary)] tabular-nums">
+                          {total}
+                        </span>
+                        {d.avg_session_seconds > 0 && (
+                          <span className="text-[10px] text-[var(--muted)]">
+                            {formatDuration(d.avg_session_seconds)}
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+              {data.dailyUserActivity.length > 7 &&
+                (() => {
+                  const all = data.dailyUserActivity;
+                  const totalSignups30d = all.reduce((s, d) => s + d.signups, 0);
+                  const totalLogins30d = all.reduce((s, d) => s + d.logins, 0);
+                  return (
+                    <div className="mt-4 pt-3 border-t border-[var(--border)] flex gap-4 text-xs text-[var(--muted)]">
+                      <span>
+                        30d:{" "}
+                        <strong className="text-[var(--text-primary)]">{totalSignups30d}</strong>{" "}
+                        Signups
+                      </span>
+                      <span>
+                        <strong className="text-[var(--text-primary)]">{totalLogins30d}</strong>{" "}
+                        Logins
+                      </span>
+                      <span>
+                        <strong className="text-[var(--text-primary)]">
+                          {totalSignups30d + totalLogins30d}
+                        </strong>{" "}
+                        gesamt
+                      </span>
+                    </div>
+                  );
+                })()}
+            </div>
+          );
+        })()}
 
       {/* ─── 4. Verweildauer ─── */}
       {data.pageEngagement.length > 0 && (
@@ -1082,7 +1250,9 @@ export default function AnalyticsDashboard() {
                     <span className="w-6 h-6 rounded-full bg-[var(--accent)]/10 flex items-center justify-center text-[10px] font-bold text-[var(--accent)]">
                       {r.ref.slice(0, 2)}
                     </span>
-                    <span className="text-xs font-medium text-[var(--text-primary)]">?ref={r.ref}</span>
+                    <span className="text-xs font-medium text-[var(--text-primary)]">
+                      ?ref={r.ref}
+                    </span>
                   </div>
                   <span className="text-[10px] text-[var(--muted)]">{timeAgo(r.created_at)}</span>
                 </div>
