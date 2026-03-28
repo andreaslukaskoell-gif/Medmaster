@@ -8,7 +8,6 @@ import {
   Zap,
   BarChart3,
   Clock,
-  Users,
   Brain,
   FileText,
   Heart,
@@ -34,7 +33,7 @@ import {
 import { ExitIntentCapture } from "@/components/growth/ExitIntentCapture";
 import { ReturningVisitorBanner } from "@/components/growth/ReturningVisitorBanner";
 import { Logo } from "@/components/brand/Logo";
-import { supabase } from "@/lib/supabase";
+
 
 const NAVY = "#1b3ea7";
 
@@ -233,21 +232,10 @@ export default function LandingPage() {
   const { signInWithGoogle } = useAuth();
   const { isMobile } = useViewportMode();
   const [googleError, setGoogleError] = useState("");
-  const [userCount, setUserCount] = useState<number | null>(null);
   const showStickyCTA = useShowStickyCTA();
 
   const deadline = useMemo(() => new Date("2026-03-31T23:59:59+02:00"), []);
   const countdown = useCountdown(deadline);
-
-  useEffect(() => {
-    if (!supabase) return;
-    supabase
-      .from("leaderboard_snapshots")
-      .select("*", { count: "exact", head: true })
-      .then(({ count }) => {
-        if (count && count >= 10) setUserCount(count);
-      });
-  }, []);
 
   useEffect(() => {
     startPageTimer();
@@ -311,8 +299,8 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen bg-[var(--background)]">
       {/* ─── Header + Urgency bar (sticky together) ─── */}
-      <div className="sticky top-0 z-40">
-        <header className="bg-[var(--surface)]/80 backdrop-blur-2xl border-b border-[var(--border)]/50">
+      <div className="sticky top-0 z-40" style={{ WebkitTransform: "translateZ(0)" }}>
+        <header className="bg-[var(--surface)] border-b border-[var(--border)]/50">
           <div className="max-w-5xl mx-auto px-4 sm:px-8 h-14 sm:h-16 flex items-center justify-between">
             <Logo variant="full" size={24} />
             <div className="flex items-center gap-3 sm:gap-6">
@@ -496,7 +484,6 @@ export default function LandingPage() {
               { icon: Check, text: "Alle 4 MedAT-Bereiche" },
               { icon: Check, text: "Offizielle Stichwortliste" },
               { icon: Check, text: "Adaptives Lernsystem" },
-              ...(userCount ? [{ icon: Users, text: `${userCount}+ lernen bereits` }] : []),
             ].map((b, i) => (
               <BlurFade key={b.text} delay={0.05 + i * 0.06}>
                 <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium text-[var(--text-secondary)] bg-[var(--card)] border border-[var(--border)]">
