@@ -11,6 +11,7 @@ import {
   useLocation,
   Outlet,
 } from "react-router-dom";
+import { MotionConfig } from "framer-motion";
 import { AppShell } from "@/components/layout/AppShell";
 import { AuthGuard } from "@/components/AuthGuard";
 import { useAuth } from "@/hooks/useAuth";
@@ -19,6 +20,11 @@ import { usePageTracking } from "@/hooks/usePageTracking";
 import { sanitizeUrlParam } from "@/lib/security";
 import { FloatingCTA } from "@/components/growth/FloatingCTA";
 import { CookieConsentBanner } from "@/components/CookieConsent";
+
+/** True when user prefers reduced motion (vestibular disorders, etc.) */
+const prefersReducedMotion =
+  typeof window !== "undefined" &&
+  window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 // Lazy-loaded pages — casing must match filenames exactly (Linux/Vercel is case-sensitive)
 const LandingPage = lazy(() => import("@/pages/LandingPage"));
@@ -200,6 +206,7 @@ function DarkModeSync() {
 
 export default function App() {
   return (
+    <MotionConfig reducedMotion={prefersReducedMotion ? "always" : "never"}>
     <BrowserRouter>
       <DarkModeSync />
       <ScrollToTop />
@@ -353,5 +360,6 @@ export default function App() {
         </Routes>
       </Suspense>
     </BrowserRouter>
+    </MotionConfig>
   );
 }

@@ -187,7 +187,11 @@ export default function AuthPage() {
             )}
 
             {error && !blocked && (
-              <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-3 text-sm text-red-700 dark:text-red-400">
+              <div
+                role="alert"
+                id="auth-error"
+                className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-3 text-sm text-red-700 dark:text-red-400"
+              >
                 {error}
               </div>
             )}
@@ -258,6 +262,9 @@ export default function AuthPage() {
                           placeholder="deine@email.at"
                           required
                           autoFocus
+                          aria-label="E-Mail-Adresse"
+                          aria-describedby={error ? "auth-error" : undefined}
+                          aria-invalid={!!error || undefined}
                           className="w-full pl-10 pr-4 py-3 rounded-lg border border-[var(--border)] bg-[var(--card)] text-[var(--text-primary)] text-sm outline-none focus:ring-2 focus:ring-[var(--accent)]"
                         />
                       </div>
@@ -290,6 +297,9 @@ export default function AuthPage() {
                           placeholder="deine@email.at"
                           required
                           autoFocus
+                          aria-label="E-Mail-Adresse"
+                          aria-describedby={error ? "auth-error" : undefined}
+                          aria-invalid={!!error || undefined}
                           className="w-full pl-10 pr-4 py-3 rounded-lg border border-[var(--border)] bg-[var(--card)] text-[var(--text-primary)] text-sm outline-none focus:ring-2 focus:ring-[var(--accent)]"
                         />
                       </div>
@@ -304,11 +314,13 @@ export default function AuthPage() {
                             isNewUser ? "Passwort wählen (min. 6 Zeichen)" : "Dein Passwort"
                           }
                           required
+                          aria-label="Passwort"
                           className="w-full pl-10 pr-10 py-3 rounded-lg border border-[var(--border)] bg-[var(--card)] text-[var(--text-primary)] text-sm outline-none focus:ring-2 focus:ring-[var(--accent)]"
                         />
                         <button
                           type="button"
                           onClick={() => setShowPassword(!showPassword)}
+                          aria-label={showPassword ? "Passwort verbergen" : "Passwort anzeigen"}
                           className="absolute right-3 top-1/2 -translate-y-1/2 text-[var(--muted)] hover:text-[var(--text-secondary)]"
                         >
                           {showPassword ? (
