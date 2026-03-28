@@ -573,7 +573,7 @@ export default function LandingPage() {
                 title: "SEK",
                 sub: "Sozial-emotionale Kompetenzen",
                 items: ["Emotionen erkennen", "Emotionen regulieren", "Soziales Entscheiden"],
-                footer: "230+ Aufgaben mit offiziellen MedAT-Instruktionen",
+                footer: "85+ Aufgaben mit offiziellen MedAT-Instruktionen",
               },
             ].map((area) => (
               <div

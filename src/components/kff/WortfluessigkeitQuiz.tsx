@@ -81,7 +81,9 @@ export function WortflüssigkeitQuiz({
         150,
         getKffFailedIdsForDomain(domain)
       );
-      const raw = tasks.map((t) => taskToData<WordFluencyTask>(t));
+      const raw = tasks
+        .map((t) => taskToData<WordFluencyTask>(t))
+        .filter((t) => !t.solutionWord || t.solutionWord.length >= 7);
       let valid = filterValidWordFluencyTasks(raw);
       if (valid.length === 0) {
         const levels: [1, 2, 3] = [1, 2, 3];

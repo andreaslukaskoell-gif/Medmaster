@@ -474,7 +474,9 @@ function generateImplikationenQuestions(section: SimSection): UnifiedQuestion[] 
 }
 
 function generateWortflüssigkeitQuestions(section: SimSection): UnifiedQuestion[] {
-  const set = mixDifficulties(generateWortflüssigkeitSet, section.questionCount);
+  const set = mixDifficulties(generateWortflüssigkeitSet, section.questionCount).filter(
+    (q) => q.correctWord.length >= 7
+  );
   return set.map((q) => ({
     id: q.id,
     sectionId: section.id,
@@ -1240,7 +1242,7 @@ export default function Simulation() {
                     <div>Zahlenfolgen: 10 / 25Min</div>
                     <div>Gedächtnis: 8Min + 25F / 15Min</div>
                     <div>Implikationen: 10 / 10Min</div>
-                    <div>Wortflüssigkeit: 20 / 20Min</div>
+                    <div>Wortflüssigkeit: 15 / 20Min</div>
                     <div>Figuren: 10 / 15Min</div>
                   </div>
                 </div>
