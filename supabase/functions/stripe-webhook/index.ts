@@ -1,6 +1,6 @@
-import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2.39.0";
-import Stripe from "https://esm.sh/stripe@14.0.0";
+import { serve } from "https://deno.land/std@0.224.0/http/server.ts";
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2.49.4";
+import Stripe from "https://esm.sh/stripe@17.7.0";
 
 // TODO: Set these as Supabase Secrets:
 //   supabase secrets set STRIPE_SECRET_KEY=sk_live_...
@@ -25,15 +25,44 @@ const supabase = createClient(
   Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
 );
 
+/** Map Stripe Price IDs to subscription tiers.
+ *  Uses an explicit allowlist — unknown IDs default to "standard". */
+const PRO_PRICE_IDS = new Set(
+  (Deno.env.get("STRIPE_PRO_PRICE_IDS") || "").split(",").map((s) => s.trim()).filter(Boolean)
+);
+
 function tierFromPriceId(priceId: string): "standard" | "pro" {
-  // TODO: Replace with real Price IDs once created in Stripe Dashboard
-  // price_PLACEHOLDER_pro_monthly / price_PLACEHOLDER_pro_yearly → "pro"
-  // Everything else → "standard"
-  if (priceId.includes("pro")) return "pro";
+  if (PRO_PRICE_IDS.has(priceId)) return "pro";
   return "standard";
 }
 
+// ── Simple in-memory rate limiter (per-IP, resets on cold start) ──
+const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
+const RATE_LIMIT_WINDOW_MS = 60_000;
+const RATE_LIMIT_MAX = 30; // generous limit for webhook bursts
+
+function isRateLimited(ip: string): boolean {
+  const now = Date.now();
+  const entry = rateLimitMap.get(ip);
+  if (!entry || now > entry.resetAt) {
+    rateLimitMap.set(ip, { count: 1, resetAt: now + RATE_LIMIT_WINDOW_MS });
+    return false;
+  }
+  entry.count++;
+  return entry.count > RATE_LIMIT_MAX;
+}
+
 serve(async (req) => {
+  // Reject non-POST requests
+  if (req.method !== "POST") {
+    return new Response("Method not allowed", { status: 405 });
+  }
+
+  const clientIp = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
+  if (isRateLimited(clientIp)) {
+    return new Response("Too many requests", { status: 429, headers: { "Retry-After": "60" } });
+  }
+
   try {
     const body = await req.text();
     const signature = req.headers.get("stripe-signature");

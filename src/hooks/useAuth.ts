@@ -11,8 +11,15 @@ import {
   getStoredGclid,
   getStoredFbclid,
 } from "@/lib/analyticsTracker";
-import { sanitizeUrlParam } from "@/lib/security";
+import { sanitizeUrlParam, validateRedirectUrl } from "@/lib/security";
 import type { User, Session } from "@supabase/supabase-js";
+
+/** Domains allowed for OAuth redirect (Supabase Auth + Google) */
+const OAUTH_REDIRECT_DOMAINS = [
+  "supabase.co",
+  "accounts.google.com",
+  "medmaster.at",
+];
 
 interface Profile {
   id: string;
@@ -224,8 +231,14 @@ export function useAuth() {
         options: { redirectTo: window.location.origin + "/dashboard" },
       });
       if (error) return { error: new Error(error.message) };
-      // signInWithOAuth returns a URL — if no redirect happened, open it manually
-      if (data?.url) window.location.href = data.url;
+      // signInWithOAuth returns a URL — validate domain before redirect
+      if (data?.url) {
+        const safe = validateRedirectUrl(data.url, OAUTH_REDIRECT_DOMAINS);
+        if (!safe) {
+          return { error: new Error("OAuth-Redirect-URL nicht vertrauenswürdig") };
+        }
+        window.location.href = safe;
+      }
       return { error: null };
     } catch (e: unknown) {
       const msg = e instanceof Error ? e.message : "Google Login fehlgeschlagen";
