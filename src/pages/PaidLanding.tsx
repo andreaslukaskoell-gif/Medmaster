@@ -370,9 +370,9 @@ export default function PaidLanding() {
             transition={{ ...fade.transition, delay: 0.1 }}
             className={`${isMobile ? "text-2xl" : "text-3xl sm:text-5xl lg:text-6xl"} font-extrabold text-[var(--text-primary)] leading-[1.15] sm:leading-[1.1] tracking-tight mb-5 sm:mb-8`}
           >
-            17.000 Kandidaten.
+            16.000 Kandidaten.
             <br />
-            1.900 Plätze.
+            1.850 Plätze.
             <br />
             <span className="text-[var(--accent)]">Bist du vorbereitet?</span>
           </motion.h1>
@@ -418,7 +418,11 @@ export default function PaidLanding() {
       {/* ─── Numbers ─── */}
       <section className="py-10 sm:py-20 border-y border-[var(--border)]/50">
         <div className="max-w-4xl mx-auto px-5 sm:px-8">
-          <motion.div {...fade} className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8" data-mobile-keep>
+          <motion.div
+            {...fade}
+            className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8"
+            data-mobile-keep
+          >
             {[
               { value: "Tausende", label: "BMS-Fragen", sub: "mit detaillierten Erklärungen" },
               { value: "Unbegrenzt", label: "KFF-Aufgaben", sub: "algorithmisch generiert" },
@@ -578,7 +582,9 @@ export default function PaidLanding() {
               ) : (
                 <>
                   Gratis-Zugang endet in{" "}
-                  <span className={`font-mono tabular-nums ${isMobile ? "text-base" : "text-lg sm:text-2xl"}`}>
+                  <span
+                    className={`font-mono tabular-nums ${isMobile ? "text-base" : "text-lg sm:text-2xl"}`}
+                  >
                     {countdown.days}d {String(countdown.hours).padStart(2, "0")}h{" "}
                     {String(countdown.minutes).padStart(2, "0")}m
                   </span>
@@ -767,7 +773,9 @@ function FAQItem({ q, a, isMobile }: { q: string; a: string; isMobile: boolean }
         </svg>
       </button>
       {open && (
-        <p className={`text-sm text-[var(--muted)] leading-relaxed pb-5 sm:pb-6 -mt-2 ${isMobile ? "pr-4" : "pr-8 sm:pr-12"}`}>
+        <p
+          className={`text-sm text-[var(--muted)] leading-relaxed pb-5 sm:pb-6 -mt-2 ${isMobile ? "pr-4" : "pr-8 sm:pr-12"}`}
+        >
           {a}
         </p>
       )}

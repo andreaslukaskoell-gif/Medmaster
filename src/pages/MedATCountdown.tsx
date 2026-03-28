@@ -149,7 +149,7 @@ export default function MedATCountdown() {
       icon: Users,
       title: "Teilnehmer",
       value: "~16.000",
-      detail: "Rund 1.900 Studienplatze \u2014 Quote ca. 12 %",
+      detail: "Rund 1.850 Studienplätze \u2014 Quote ca. 12 %",
     },
   ];
 

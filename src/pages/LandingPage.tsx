@@ -396,7 +396,7 @@ export default function LandingPage() {
             delay={0.15}
             className={`${isMobile ? "text-2xl" : "text-3xl sm:text-5xl lg:text-6xl"} font-extrabold text-[var(--text-primary)] leading-[1.15] sm:leading-[1.1] tracking-tight mb-5 sm:mb-8 justify-center`}
           >
-            {"17.000 Kandidaten. 1.900 Plätze."}
+            {"16.000 Kandidaten. 1.850 Plätze."}
           </TextAnimate>
 
           <BlurFade delay={0.4} className="mb-5 sm:mb-8">

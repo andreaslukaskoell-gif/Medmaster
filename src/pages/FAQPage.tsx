@@ -97,7 +97,7 @@ const FAQ_ITEMS: { q: string; a: string; category: string }[] = [
   {
     category: "MedMaster",
     q: "Wie realistisch sind die Prüfungssimulationen?",
-    a: "Die MedMaster-Simulationen bilden den echten MedAT ab: 40 BMS-Fragen unter Zeitdruck, zufällige Fragenauswahl aus dem gesamten Pool, detaillierte Auswertung nach Fach und Schwierigkeitsgrad. Ideal für die letzten Wochen vor dem Test.",
+    a: "Die MedMaster-Simulationen bilden den echten MedAT ab: BMS-Fragen aus allen Fachgebieten unter Zeitdruck, zufällige Fragenauswahl aus dem gesamten Pool, detaillierte Auswertung nach Fach und Schwierigkeitsgrad. Ideal für die letzten Wochen vor dem Test.",
   },
   {
     category: "MedMaster",

@@ -22,6 +22,7 @@ import {
 import { useAuth } from "@/hooks/useAuth";
 import { exportUserData } from "@/lib/backendSync";
 import { useStore } from "@/store/useStore";
+import { usePageMeta } from "@/hooks/usePageMeta";
 
 const FONT_OPTIONS: { value: "small" | "normal" | "large"; label: string }[] = [
   { value: "small", label: "Klein" },
@@ -103,6 +104,11 @@ function SettingRow({
 }
 
 export default function Einstellungen() {
+  usePageMeta({
+    title: "Einstellungen — MedMaster",
+    description:
+      "Passe deine MedMaster-Einstellungen an: Design, Lernziele, Schriftgröße und mehr.",
+  });
   const { user, profile, signOut, deleteAccount } = useAuth();
   const darkMode = useStore((s) => s.darkMode);
   const toggleDarkMode = useStore((s) => s.toggleDarkMode);
