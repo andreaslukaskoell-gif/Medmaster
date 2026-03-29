@@ -24,7 +24,7 @@ const LIMITS: Record<Tier, FeatureLimits> = {
     kff_exercises: 10,
     tv_texts: 2,
     sek_situations: 5,
-    simulations: 1,
+    simulations: 0,
     ai_tutor: false,
     weakness_analysis: false,
     spaced_repetition: false,
