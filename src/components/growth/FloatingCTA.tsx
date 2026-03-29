@@ -63,7 +63,7 @@ export function FloatingCTA() {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 80, opacity: 0 }}
           transition={{ type: "spring", stiffness: 300, damping: 25 }}
-          className="fixed bottom-6 right-6 z-[900] flex items-center gap-2"
+          className="fixed bottom-24 sm:bottom-6 right-4 sm:right-6 z-[900] flex items-center gap-2"
         >
           <Link
             to="/login"
