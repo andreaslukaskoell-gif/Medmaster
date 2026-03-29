@@ -27,7 +27,7 @@ export function ScrollToTop() {
         {visible && (
           <motion.button
             key="scroll-to-top"
-            className="scroll-to-top-btn btn-glass fixed bottom-6 right-6 z-[150] w-10 h-10 rounded-full shadow-md flex items-center justify-center cursor-pointer"
+            className="scroll-to-top-btn btn-glass fixed bottom-24 sm:bottom-6 right-4 sm:right-6 z-[150] w-10 h-10 rounded-full shadow-md flex items-center justify-center cursor-pointer"
             onClick={scrollToTop}
             aria-label="Nach oben scrollen"
             initial={{ opacity: 0, scale: 0.8 }}
