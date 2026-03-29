@@ -1,4 +1,4 @@
-import { useMemo, useEffect, useState } from "react";
+import { useMemo, useEffect } from "react";
 // PostSignupReferral kept available but removed from render to reduce top-of-page clutter
 // import { PostSignupReferral } from "@/components/growth/PostSignupReferral";
 import { Link, useSearchParams } from "react-router-dom";
@@ -9,7 +9,6 @@ import {
   Target,
   CheckCircle2,
   Clock,
-  Share2,
   Brain,
   FileText,
   Heart,
@@ -36,7 +35,6 @@ import { useAuth } from "@/hooks/useAuth";
 import { cn, daysUntilMedAT, getGreetingByTime } from "@/lib/utils";
 import { getDailyGoalFromPlan, getConsecutiveDaysGoalMissed } from "@/lib/dailyGoal";
 import { getTodaysResult } from "@/lib/dailyChallenge";
-import { shareText, getStreakShareText } from "@/lib/shareUtils";
 import { getLevelFromXP, XP_PER_LEVEL } from "@/lib/progression";
 import { generateAdaptivePlan } from "@/lib/adaptivePlan";
 import { buildConcreteDailyPlan } from "@/lib/concreteDailyPlan";
@@ -376,24 +374,40 @@ export default function Dashboard() {
                     <h1 className="text-2xl font-bold text-[var(--text-primary)] tracking-tight">
                       {displayName ? `${getGreetingByTime()}, ${displayName}` : getGreetingByTime()}
                     </h1>
-                    {days > 0 && (
-                      <div className="shrink-0 flex flex-col items-center px-2.5 py-1 rounded-lg bg-[var(--accent)]/10 border border-[var(--accent)]/20">
-                        <span className="text-base font-bold text-[var(--accent)] leading-tight">
-                          {days}
-                        </span>
-                        <span className="text-[10px] text-[var(--muted)] leading-tight">
-                          Tage bis MedAT
-                        </span>
-                      </div>
-                    )}
+                    <div className="shrink-0 flex items-center gap-2">
+                      {flameStreak > 0 && (
+                        <Tooltip
+                          content={`${flameStreak} ${flameStreak === 1 ? "Tag" : "Tage"} in Folge aktiv`}
+                          position="top"
+                        >
+                          <div className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-amber-100/80 dark:bg-amber-900/20 border border-amber-200/50 dark:border-amber-800/30">
+                            <StreakFlameIcon
+                              streak={flameStreak}
+                              hasActivityToday={flameHasActivity}
+                              size="sm"
+                              className="w-4 h-4"
+                            />
+                            <span className="text-sm font-bold text-amber-700 dark:text-amber-400 leading-tight">
+                              {flameStreak}
+                            </span>
+                            <span className="text-[10px] text-amber-600/70 dark:text-amber-500/70 leading-tight">
+                              Streak
+                            </span>
+                          </div>
+                        </Tooltip>
+                      )}
+                      {days > 0 && (
+                        <div className="flex flex-col items-center px-2.5 py-1 rounded-lg bg-[var(--accent)]/10 border border-[var(--accent)]/20">
+                          <span className="text-base font-bold text-[var(--accent)] leading-tight">
+                            {days}
+                          </span>
+                          <span className="text-[10px] text-[var(--muted)] leading-tight">
+                            Tage bis MedAT
+                          </span>
+                        </div>
+                      )}
+                    </div>
                   </div>
-                  <Link
-                    to="/lernplan"
-                    className="mt-1 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--accent)] hover:underline"
-                  >
-                    Heute im Lernplan
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
                 </div>
                 {concretePlan && (
                   <div className="flex flex-wrap gap-2 text-sm">
@@ -473,108 +487,46 @@ export default function Dashboard() {
             </div>
           </motion.section>
 
-          {/* Daily + Streak in einer Zeile */}
-          <motion.section
-            variants={tileMotion}
-            aria-label="Daily und Streak"
-            className={`grid gap-4 ${isMobile ? "grid-cols-1" : "grid-cols-2"}`}
-          >
-            {/* Daily Challenge Widget */}
-            <div aria-label="BMS des Tages">
-              <Tooltip content="Täglich eine neue BMS-Frage" position="top">
-                {dailyResult ? (
-                  <Link to="/daily">
-                    <div className={cn(cardClass, "relative overflow-hidden")}>
-                      <CardContent className="p-5 flex items-center justify-between gap-4">
-                        <div className="flex items-center gap-3">
-                          <div className="w-10 h-10 rounded-xl bg-[var(--success-bg)] flex items-center justify-center shrink-0">
-                            <CheckCircle2 className="w-5 h-5 text-[var(--success)]" />
-                          </div>
-                          <div>
-                            <p className="text-sm font-semibold text-[var(--text-primary)]">
-                              BMS des Tages gelöst!
-                            </p>
-                            <p className="text-xs text-[var(--text-secondary)] flex items-center gap-1 mt-0.5">
-                              <Clock className="w-3 h-3" /> Nächste Frage morgen
-                            </p>
-                          </div>
-                        </div>
-                        <span className="shrink-0 text-xs font-bold text-[var(--success)] bg-[var(--success-bg)] px-2.5 py-1 rounded-full">
-                          +{dailyResult.xpEarned} XP
-                        </span>
-                      </CardContent>
-                    </div>
-                  </Link>
-                ) : (
-                  <Link to="/daily">
-                    <div className={cn(cardClass, "cursor-pointer")}>
-                      <CardContent className="p-5 flex items-center justify-between gap-4">
-                        <div className="flex items-center gap-3">
-                          <div className="w-10 h-10 rounded-xl bg-[var(--accent)]/15 flex items-center justify-center shrink-0">
-                            <Target className="w-5 h-5 text-[var(--accent)]" />
-                          </div>
-                          <div>
-                            <p className="text-sm font-semibold text-[var(--text-primary)]">
-                              BMS des Tages wartet!
-                            </p>
-                            <p className="text-xs text-[var(--muted)] mt-0.5">
-                              Täglich eine Frage — bis zu {XP_PER_LEVEL} XP
-                            </p>
-                          </div>
-                        </div>
-                        <span className="shrink-0 inline-flex items-center gap-1 text-xs font-semibold text-[var(--accent)] bg-[var(--accent)]/10 px-3 py-1.5 rounded-full">
-                          Jetzt starten <ArrowRight className="w-3 h-3" />
-                        </span>
-                      </CardContent>
-                    </div>
-                  </Link>
-                )}
-              </Tooltip>
-            </div>
-            {/* Streak-Karte */}
-            <div
-              className={cn(cardClass, "p-4 flex items-center gap-3 relative overflow-hidden")}
-              aria-label="Streak"
-            >
-              {/* Subtle streak glow for active streaks */}
-              {flameStreak >= 7 && (
-                <div
-                  className="absolute inset-0 opacity-[0.04] pointer-events-none"
-                  style={{
-                    background:
-                      "linear-gradient(135deg, #f59e0b 0%, #ef4444 50%, transparent 100%)",
-                  }}
-                />
+          {/* Daily Challenge — compact single row */}
+          <motion.section variants={tileMotion} aria-label="BMS des Tages">
+            <Tooltip content="Täglich eine neue BMS-Frage" position="top">
+              {dailyResult ? (
+                <Link to="/daily">
+                  <div className={cn(cardClass, "relative overflow-hidden")}>
+                    <CardContent className="px-5 py-3 flex items-center gap-3">
+                      <div className="w-8 h-8 rounded-lg bg-[var(--success-bg)] flex items-center justify-center shrink-0">
+                        <CheckCircle2 className="w-4 h-4 text-[var(--success)]" />
+                      </div>
+                      <p className="text-sm font-semibold text-[var(--text-primary)] flex-1">
+                        BMS des Tages gelöst!
+                      </p>
+                      <span className="shrink-0 text-xs font-bold text-[var(--success)] bg-[var(--success-bg)] px-2.5 py-1 rounded-full">
+                        +{dailyResult.xpEarned} XP
+                      </span>
+                    </CardContent>
+                  </div>
+                </Link>
+              ) : (
+                <Link to="/daily">
+                  <div className={cn(cardClass, "cursor-pointer")}>
+                    <CardContent className="px-5 py-3 flex items-center gap-3">
+                      <div className="w-8 h-8 rounded-lg bg-[var(--accent)]/15 flex items-center justify-center shrink-0">
+                        <Target className="w-4 h-4 text-[var(--accent)]" />
+                      </div>
+                      <p className="text-sm font-semibold text-[var(--text-primary)] flex-1">
+                        BMS des Tages
+                      </p>
+                      <span className="shrink-0 text-xs font-bold text-[var(--accent)] bg-[var(--accent)]/10 px-2 py-0.5 rounded-full">
+                        {XP_PER_LEVEL} XP
+                      </span>
+                      <span className="shrink-0 inline-flex items-center gap-1 text-xs font-semibold text-[var(--accent)] bg-[var(--accent)]/10 px-3 py-1.5 rounded-full">
+                        Jetzt starten <ArrowRight className="w-3 h-3" />
+                      </span>
+                    </CardContent>
+                  </div>
+                </Link>
               )}
-              <Tooltip
-                content={`${flameStreak} ${flameStreak === 1 ? "Tag" : "Tage"} in Folge aktiv`}
-                position="top"
-              >
-                <div className="w-10 h-10 rounded-xl bg-[var(--accent)]/10 flex items-center justify-center shrink-0">
-                  <StreakFlameIcon
-                    streak={flameStreak}
-                    hasActivityToday={flameHasActivity}
-                    size="sm"
-                    className="w-5 h-5"
-                  />
-                </div>
-              </Tooltip>
-              <div className="flex-1 min-w-0">
-                <p className="text-lg font-bold text-[var(--text-primary)] leading-tight">
-                  {flameStreak}
-                </p>
-                <p className="text-xs text-[var(--muted)]">
-                  {flameStreak === 0
-                    ? "Starte deinen Streak!"
-                    : flameStreak >= 30
-                      ? "Tage Streak — unaufhaltsam!"
-                      : flameStreak >= 7
-                        ? "Tage Streak — stark!"
-                        : "Tage Streak"}
-                </p>
-              </div>
-              {streak > 0 && !streakPreview && <StreakShareButton streak={streak} />}
-            </div>
+            </Tooltip>
           </motion.section>
 
           {/* Empfehlungen — adaptive widgets based on user behavior */}
@@ -582,7 +534,10 @@ export default function Dashboard() {
             <motion.section
               variants={tileMotion}
               aria-label="Empfehlungen"
-              className={`grid gap-3 ${isMobile ? "grid-cols-1" : "grid-cols-3"}`}
+              className="grid gap-3"
+              style={{
+                gridTemplateColumns: isMobile ? "1fr" : "repeat(auto-fit, minmax(280px, 1fr))",
+              }}
             >
               <DailyPlanWidget />
               <WeaknessWidget />
@@ -656,28 +611,7 @@ export default function Dashboard() {
   );
 }
 
-function StreakShareButton({ streak }: { streak: number }) {
-  const [copied, setCopied] = useState(false);
-  return (
-    <button
-      type="button"
-      onClick={async () => {
-        await shareText(getStreakShareText(streak));
-        setCopied(true);
-        setTimeout(() => setCopied(false), 2000);
-      }}
-      className="p-2 rounded-lg text-[var(--accent)] hover:bg-[var(--accent)]/10 transition-colors cursor-pointer"
-      aria-label="Streak teilen"
-      title="Streak teilen"
-    >
-      {copied ? (
-        <CheckCircle2 className="w-4 h-4 text-[var(--success)]" />
-      ) : (
-        <Share2 className="w-4 h-4" />
-      )}
-    </button>
-  );
-}
+// StreakShareButton removed from Dashboard — streak sharing moved to Fortschritt page
 
 function DueReviewsCard({
   userProgress,

@@ -61,6 +61,16 @@ export function RecentActivityWidget() {
   const { recentSessions } = useProgressAnalytics();
   const last3 = recentSessions.filter(Boolean).slice(0, 3);
 
+  // Hide entirely when there are no activities
+  if (last3.length === 0) return null;
+
+  // Hide when the most recent activity is older than 7 days
+  const mostRecentDate = parseDate(last3[0].date);
+  const sevenDaysAgo = new Date();
+  sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
+  sevenDaysAgo.setHours(0, 0, 0, 0);
+  if (mostRecentDate < sevenDaysAgo) return null;
+
   return (
     <div className="card-glass p-4 flex flex-col h-full">
       <div className="flex items-center gap-2 mb-3">
@@ -68,39 +78,33 @@ export function RecentActivityWidget() {
         <h3 className="text-sm font-semibold text-[var(--text-primary)]">Letzte Aktivität</h3>
       </div>
 
-      {last3.length > 0 ? (
-        <ul className="space-y-2 flex-1">
-          {last3.map((s, idx) => {
-            const colors = TYPE_COLOR[s.type] ?? TYPE_COLOR.bms;
-            return (
-              <li key={`${s.id}-${idx}`} className="flex items-center gap-2 text-sm">
-                <span
-                  className={cn(
-                    "shrink-0 text-[10px] font-bold px-1.5 py-0.5 rounded",
-                    colors.text,
-                    colors.bg
-                  )}
-                >
-                  {TYPE_LABEL[s.type] ?? (s.type || "BMS").toUpperCase?.() ?? "BMS"}
-                </span>
-                <span className="flex-1 text-[var(--text-secondary)] truncate">
-                  {s.score}/{s.total}
-                </span>
-                <span className={cn("shrink-0 text-xs font-semibold", pctColor(s.percentage))}>
-                  {s.percentage} %
-                </span>
-                <span className="shrink-0 text-[10px] text-[var(--muted)]">
-                  {relativeDate(s.date)}
-                </span>
-              </li>
-            );
-          })}
-        </ul>
-      ) : (
-        <p className="text-xs text-[var(--muted)] flex-1 flex items-center">
-          Noch keine Aktivität — starte jetzt!
-        </p>
-      )}
+      <ul className="space-y-2 flex-1">
+        {last3.map((s, idx) => {
+          const colors = TYPE_COLOR[s.type] ?? TYPE_COLOR.bms;
+          return (
+            <li key={`${s.id}-${idx}`} className="flex items-center gap-2 text-sm">
+              <span
+                className={cn(
+                  "shrink-0 text-[10px] font-bold px-1.5 py-0.5 rounded",
+                  colors.text,
+                  colors.bg
+                )}
+              >
+                {TYPE_LABEL[s.type] ?? (s.type || "BMS").toUpperCase?.() ?? "BMS"}
+              </span>
+              <span className="flex-1 text-[var(--text-secondary)] truncate">
+                {s.score}/{s.total}
+              </span>
+              <span className={cn("shrink-0 text-xs font-semibold", pctColor(s.percentage))}>
+                {s.percentage} %
+              </span>
+              <span className="shrink-0 text-[10px] text-[var(--muted)]">
+                {relativeDate(s.date)}
+              </span>
+            </li>
+          );
+        })}
+      </ul>
 
       <Link
         to="/fortschritt"

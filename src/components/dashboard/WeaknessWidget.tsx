@@ -33,6 +33,9 @@ export function WeaknessWidget() {
   const { weakTopics } = useProgressAnalytics();
   const top3 = weakTopics.slice(0, 3);
 
+  // Hide entirely when there are no weak topics — the empty state wastes space
+  if (top3.length === 0) return null;
+
   return (
     <div className="card-glass p-4 flex flex-col h-full">
       <div className="flex items-center gap-2 mb-3">
@@ -40,37 +43,31 @@ export function WeaknessWidget() {
         <h3 className="text-sm font-semibold text-[var(--text-primary)]">Schwachstellen</h3>
       </div>
 
-      {top3.length > 0 ? (
-        <ul className="space-y-2 flex-1">
-          {top3.map((t) => (
-            <li key={`${t.fach}-${t.topic}`} className="flex items-center gap-2 text-sm">
-              <span
-                className="shrink-0 text-[10px] font-bold px-1.5 py-0.5 rounded"
-                style={{
-                  backgroundColor: `color-mix(in srgb, ${FACH_ACCENT[t.fach] ?? "var(--accent)"} 12%, transparent)`,
-                  color: FACH_ACCENT[t.fach] ?? "var(--accent)",
-                }}
-              >
-                {FACH_LABEL[t.fach] ?? t.fach}
-              </span>
-              <span className="flex-1 truncate text-[var(--text-secondary)]">{t.topic}</span>
-              <span
-                className={cn(
-                  "shrink-0 text-xs font-semibold px-1.5 py-0.5 rounded",
-                  accuracyColor(t.successRate),
-                  accuracyBg(t.successRate)
-                )}
-              >
-                {Math.round(t.successRate)} %
-              </span>
-            </li>
-          ))}
-        </ul>
-      ) : (
-        <p className="text-xs text-[var(--muted)] flex-1 flex items-center">
-          Noch keine Schwachstellen erkannt — beantworte mehr Fragen!
-        </p>
-      )}
+      <ul className="space-y-2 flex-1">
+        {top3.map((t) => (
+          <li key={`${t.fach}-${t.topic}`} className="flex items-center gap-2 text-sm">
+            <span
+              className="shrink-0 text-[10px] font-bold px-1.5 py-0.5 rounded"
+              style={{
+                backgroundColor: `color-mix(in srgb, ${FACH_ACCENT[t.fach] ?? "var(--accent)"} 12%, transparent)`,
+                color: FACH_ACCENT[t.fach] ?? "var(--accent)",
+              }}
+            >
+              {FACH_LABEL[t.fach] ?? t.fach}
+            </span>
+            <span className="flex-1 truncate text-[var(--text-secondary)]">{t.topic}</span>
+            <span
+              className={cn(
+                "shrink-0 text-xs font-semibold px-1.5 py-0.5 rounded",
+                accuracyColor(t.successRate),
+                accuracyBg(t.successRate)
+              )}
+            >
+              {Math.round(t.successRate)} %
+            </span>
+          </li>
+        ))}
+      </ul>
 
       <Link
         to="/fragen-trainer"
