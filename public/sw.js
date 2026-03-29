@@ -1,14 +1,12 @@
 // MedMaster Service Worker — App Shell caching (network-first)
 // Bump version to force cache refresh on deploy
-const CACHE_NAME = "medmaster-v3";
+const CACHE_NAME = "medmaster-v4";
 
 // Pre-cache critical shell on install
-const SHELL_URLS = ["/", "/index.html"];
+const SHELL_URLS = ["/", "/index.html", "/dashboard"];
 
 self.addEventListener("install", (event) => {
-  event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => cache.addAll(SHELL_URLS))
-  );
+  event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(SHELL_URLS)));
   self.skipWaiting();
 });
 
