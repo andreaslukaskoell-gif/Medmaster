@@ -361,7 +361,7 @@ export default function LandingPage() {
       <ReturningVisitorBanner />
 
       {/* ─── Hero ─── */}
-      <section className="pt-12 sm:pt-28 pb-10 sm:pb-24 hero-orbs relative overflow-hidden">
+      <section className="pt-8 sm:pt-28 pb-8 sm:pb-24 hero-orbs relative overflow-hidden">
         {/* Subtle radial glow behind hero */}
         <div
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full pointer-events-none"
@@ -394,14 +394,14 @@ export default function LandingPage() {
             animation="blurInUp"
             by="word"
             delay={0.15}
-            className={`${isMobile ? "text-2xl" : "text-3xl sm:text-5xl lg:text-6xl"} font-extrabold text-[var(--text-primary)] leading-[1.15] sm:leading-[1.1] tracking-tight mb-5 sm:mb-8 justify-center`}
+            className={`${isMobile ? "text-[1.75rem]" : "text-3xl sm:text-5xl lg:text-6xl"} font-extrabold text-[var(--text-primary)] leading-[1.15] sm:leading-[1.1] tracking-tight mb-4 sm:mb-8 justify-center`}
           >
             {"16.000 Kandidaten. 1.850 Plätze."}
           </TextAnimate>
 
-          <BlurFade delay={0.4} className="mb-5 sm:mb-8">
+          <BlurFade delay={0.4} className="mb-4 sm:mb-8">
             <span
-              className={`${isMobile ? "text-2xl" : "text-3xl sm:text-5xl lg:text-6xl"} font-extrabold leading-[1.15] sm:leading-[1.1] tracking-tight`}
+              className={`${isMobile ? "text-[1.75rem]" : "text-3xl sm:text-5xl lg:text-6xl"} font-extrabold leading-[1.15] sm:leading-[1.1] tracking-tight`}
             >
               <AnimatedGradientText
                 colors={["#1b3ea7", "#2563eb", "#7c3aed", "#2563eb", "#1b3ea7"]}
@@ -412,7 +412,7 @@ export default function LandingPage() {
           </BlurFade>
 
           <BlurFade delay={0.55}>
-            <p className="text-base sm:text-xl text-[var(--text-secondary)] max-w-lg mx-auto mb-8 sm:mb-12 leading-relaxed">
+            <p className="text-base sm:text-xl text-[var(--text-secondary)] max-w-lg mx-auto mb-6 sm:mb-12 leading-relaxed">
               Der Unterschied zwischen Zusage und Absage ist oft nur wenige Punkte. MedMaster gibt
               dir die Werkzeuge, die diesen Unterschied machen.
             </p>
@@ -532,7 +532,7 @@ export default function LandingPage() {
       </section>
 
       {/* ─── Problem vs. Solution ─── */}
-      <section className="py-12 sm:py-24">
+      <section className="py-8 sm:py-24">
         <div className="max-w-3xl mx-auto px-5 sm:px-8">
           <BlurFade className="text-center mb-8 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)] mb-3 sm:mb-4">
@@ -592,7 +592,7 @@ export default function LandingPage() {
       </section>
 
       {/* ─── 4 MedAT-Bereiche ─── */}
-      <section className="py-12 sm:py-24 border-t border-[var(--border)]/50">
+      <section className="py-8 sm:py-24 border-t border-[var(--border)]/50">
         <div className="max-w-4xl mx-auto px-5 sm:px-8">
           <motion.div {...fade} className="text-center mb-8 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)] mb-3 sm:mb-4">
@@ -693,7 +693,7 @@ export default function LandingPage() {
       </section>
 
       {/* ─── Features (Lernsystem) ─── */}
-      <section className="py-12 sm:py-24 border-t border-[var(--border)]/50">
+      <section className="py-8 sm:py-24 border-t border-[var(--border)]/50">
         <div className="max-w-4xl mx-auto px-5 sm:px-8">
           <motion.div {...fade} className="text-center mb-8 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)] mb-3 sm:mb-4">
@@ -740,7 +740,7 @@ export default function LandingPage() {
       </section>
 
       {/* ─── Mid CTA ─── */}
-      <section className="py-12 sm:py-24 border-t border-[var(--border)]/50">
+      <section className="py-8 sm:py-24 border-t border-[var(--border)]/50">
         <div className="max-w-3xl mx-auto px-5 sm:px-8">
           <motion.div
             {...fade}
@@ -815,7 +815,7 @@ export default function LandingPage() {
       </section>
 
       {/* ─── Demo question ─── */}
-      <section className="py-12 sm:py-24 border-t border-[var(--border)]/50">
+      <section className="py-8 sm:py-24 border-t border-[var(--border)]/50">
         <div className="max-w-3xl mx-auto px-5 sm:px-8">
           <motion.div {...fade} className="text-center mb-8 sm:mb-12">
             <h2 className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)] mb-3 sm:mb-4">
@@ -837,7 +837,7 @@ export default function LandingPage() {
       </section>
 
       {/* ─── Comparison ─── */}
-      <section className="py-12 sm:py-24 border-t border-[var(--border)]/50">
+      <section className="py-8 sm:py-24 border-t border-[var(--border)]/50">
         <div className="max-w-3xl mx-auto px-5 sm:px-8">
           <motion.div {...fade} className="text-center mb-8 sm:mb-12">
             <h2 className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)] mb-3">
@@ -895,7 +895,7 @@ export default function LandingPage() {
       </section>
 
       {/* ─── FAQ ─── */}
-      <section className="py-12 sm:py-24 border-t border-[var(--border)]/50">
+      <section className="py-8 sm:py-24 border-t border-[var(--border)]/50">
         <div className="max-w-2xl mx-auto px-5 sm:px-8">
           <motion.h2
             {...fade}
@@ -944,7 +944,7 @@ export default function LandingPage() {
       </section>
 
       {/* ─── Final CTA ─── */}
-      <section className="py-16 sm:py-28" style={{ backgroundColor: NAVY }}>
+      <section className="py-10 sm:py-28" style={{ backgroundColor: NAVY }}>
         <div className="max-w-3xl mx-auto px-5 sm:px-8 text-center">
           <h2 className="text-2xl sm:text-4xl font-extrabold text-white mb-4 sm:mb-5 leading-tight tracking-tight">
             Der MedAT wartet nicht.
@@ -1038,12 +1038,12 @@ export default function LandingPage() {
 
       {/* ─── Sticky mobile CTA ─── */}
       {showStickyCTA && (
-        <div className="fixed bottom-0 left-0 right-0 z-50 sm:hidden bg-[var(--surface)] border-t border-[var(--border)] px-4 py-3 safe-area-bottom">
+        <div className="fixed bottom-0 left-0 right-0 z-50 sm:hidden bg-[var(--surface)]/95 backdrop-blur-md border-t border-[var(--border)] px-4 py-3 safe-area-bottom">
           <button
             onClick={handleGoogle}
-            className="btn-premium w-full flex items-center justify-center gap-2.5 py-3.5 text-sm font-semibold rounded-xl shadow-lg"
+            className="btn-premium w-full flex items-center justify-center gap-2.5 py-4 text-base font-semibold rounded-xl shadow-lg"
           >
-            <svg className="w-4.5 h-4.5 shrink-0" viewBox="0 0 24 24">
+            <svg className="w-5 h-5 shrink-0" viewBox="0 0 24 24">
               <path
                 fill="#fff"
                 d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"
@@ -1067,7 +1067,7 @@ export default function LandingPage() {
       )}
 
       {/* Add bottom padding when sticky CTA is visible on mobile */}
-      {showStickyCTA && <div className="h-16 sm:hidden" />}
+      {showStickyCTA && <div className="h-20 sm:hidden" />}
 
       <ExitIntentCapture />
     </div>
