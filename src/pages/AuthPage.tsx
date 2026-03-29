@@ -295,6 +295,9 @@ export default function AuthPage() {
                         onChange={(e) => setEmail(e.target.value)}
                         placeholder="deine@email.at"
                         required
+                        autoComplete="email"
+                        inputMode="email"
+                        enterKeyHint="go"
                         aria-label="E-Mail-Adresse"
                         aria-describedby={error ? "auth-error" : undefined}
                         aria-invalid={!!error || undefined}
@@ -330,6 +333,8 @@ export default function AuthPage() {
                         placeholder="deine@email.at"
                         required
                         autoFocus
+                        autoComplete="email"
+                        inputMode="email"
                         aria-label="E-Mail-Adresse"
                         aria-describedby={error ? "auth-error" : undefined}
                         aria-invalid={!!error || undefined}
@@ -347,6 +352,8 @@ export default function AuthPage() {
                           isNewUser ? "Passwort wählen (min. 6 Zeichen)" : "Dein Passwort"
                         }
                         required
+                        autoComplete={isNewUser ? "new-password" : "current-password"}
+                        enterKeyHint="go"
                         aria-label="Passwort"
                         className="w-full pl-10 pr-10 py-3 rounded-lg border border-[var(--border)] bg-[var(--card)] text-[var(--text-primary)] text-sm outline-none focus:ring-2 focus:ring-[var(--accent)]"
                       />
