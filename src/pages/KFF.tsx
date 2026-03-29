@@ -8,6 +8,7 @@ import KFFStrategyView from "@/components/shared/KFFStrategyView";
 import { useStore } from "@/store/useStore";
 import { useAuth } from "@/hooks/useAuth";
 import { useViewportMode } from "@/hooks/useViewportMode";
+import { trackEvent } from "@/lib/analyticsTracker";
 import { FirstTimeKffIntro } from "@/components/kff/FirstTimeKffIntro";
 import { ZahlenfolgenQuiz } from "@/components/kff/ZahlenfolgenQuiz";
 import {
@@ -144,6 +145,16 @@ export default function KFF() {
     const t = setTimeout(() => setAuthTimedOut(true), 5000);
     return () => clearTimeout(t);
   }, [isLoading]);
+
+  // Track first lesson started (once per user, ever)
+  useEffect(() => {
+    if (view === "overview" || view === "strategy") return;
+    const FIRST_LESSON_KEY = "medmaster_first_lesson_tracked";
+    if (!localStorage.getItem(FIRST_LESSON_KEY)) {
+      trackEvent("first_lesson_started", { source: "kff" });
+      localStorage.setItem(FIRST_LESSON_KEY, "1");
+    }
+  }, [view]);
 
   if (isLoading && !authTimedOut) {
     return <PageLoadingSkeleton />;
@@ -288,11 +299,13 @@ export default function KFF() {
       {/* Hero */}
       <div>
         <div className={`flex ${isMobile ? "flex-col gap-1.5" : "items-center gap-3"} mb-2`}>
-          <h1 className={`${isMobile ? "text-xl" : "text-2xl"} font-bold text-[var(--text-primary)]`}>
+          <h1
+            className={`${isMobile ? "text-xl" : "text-2xl"} font-bold text-[var(--text-primary)]`}
+          >
             {isMobile ? "KFF – Kognitive Fähigkeiten" : "Kognitive Fähigkeiten & Fertigkeiten"}
           </h1>
-          <span className="text-xs font-semibold text-[var(--accent)] bg-[var(--accent)]/10 px-2.5 py-1 rounded-full w-fit">
-            40% des MedAT
+          <span className="text-xs font-medium text-[var(--muted)] bg-[var(--surface)] border border-[var(--border)] px-2 py-0.5 rounded w-fit">
+            40 % des MedAT
           </span>
         </div>
         {!isMobile && (
@@ -320,7 +333,11 @@ export default function KFF() {
               <div className="flex-1 min-w-0">
                 {/* Title row */}
                 <div className="flex items-center gap-2 mb-1 flex-wrap">
-                  <h3 className={`font-semibold text-[var(--text-primary)] ${isMobile ? "text-sm" : ""}`}>{m.title}</h3>
+                  <h3
+                    className={`font-semibold text-[var(--text-primary)] ${isMobile ? "text-sm" : ""}`}
+                  >
+                    {m.title}
+                  </h3>
                   <span
                     className="text-[10px] font-semibold px-2 py-0.5 rounded-full"
                     style={{ background: `${m.color}15`, color: m.color }}
@@ -330,7 +347,11 @@ export default function KFF() {
                 </div>
 
                 {/* Format explanation */}
-                <p className={`text-[var(--text-secondary)] mb-2 ${isMobile ? "text-xs leading-relaxed" : "text-sm"}`}>{m.format}</p>
+                <p
+                  className={`text-[var(--text-secondary)] mb-2 ${isMobile ? "text-xs leading-relaxed" : "text-sm"}`}
+                >
+                  {m.format}
+                </p>
 
                 {/* Example — hide on mobile for compactness */}
                 {!isMobile && (
@@ -366,7 +387,12 @@ export default function KFF() {
                         className="h-full rounded-full transition-all"
                         style={{
                           width: `${Math.min(m.stats.pct, 100)}%`,
-                          background: m.stats.pct >= 70 ? "#10b981" : m.stats.pct >= 40 ? "#f59e0b" : "#ef4444",
+                          background:
+                            m.stats.pct >= 70
+                              ? "#10b981"
+                              : m.stats.pct >= 40
+                                ? "#f59e0b"
+                                : "#ef4444",
                         }}
                       />
                     </div>

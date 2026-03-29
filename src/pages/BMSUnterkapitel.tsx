@@ -212,6 +212,16 @@ export default function BMSUnterkapitel({
     if (ukId) trackEvent("chapter_open", { chapter: kapitelId, subchapter: ukId });
   }, [ukId, kapitelId]);
 
+  // Track first lesson started (once per user, ever)
+  useEffect(() => {
+    if (!ukId) return;
+    const FIRST_LESSON_KEY = "medmaster_first_lesson_tracked";
+    if (!localStorage.getItem(FIRST_LESSON_KEY)) {
+      trackEvent("first_lesson_started", { source: "bms" });
+      localStorage.setItem(FIRST_LESSON_KEY, "1");
+    }
+  }, [ukId]);
+
   const completedChapters = useStore((s) => s.completedChapters) || [];
   const completeChapter = useStore((s) => s.completeChapter) || (() => {});
   const addXP = useStore((s) => s.addXP) || (() => {});
