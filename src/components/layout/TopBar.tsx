@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Sun, Moon, Search, Award, Menu, Monitor, Smartphone } from "lucide-react";
+import { Sun, Moon, Search, Award, Menu } from "lucide-react";
 import { useStore } from "@/store/useStore";
 import { StreakFlameIcon } from "@/components/dashboard/StreakFire";
 import { useIsMounted } from "@/hooks/useIsMounted";
@@ -36,14 +36,16 @@ export function TopBar({ onMenuToggle }: { onMenuToggle?: () => void }) {
   const todayStr = new Date().toISOString().split("T")[0];
   const hasActivityToday = lastActiveDate === todayStr;
 
-  const { mode: viewportMode, toggle: toggleViewport, isMobile } = useViewportMode();
+  const { isMobile } = useViewportMode();
 
   const openCommandPalette = () => {
     window.dispatchEvent(new CustomEvent(OPEN_COMMAND_PALETTE));
   };
 
   return (
-    <header className={`topbar-glass sticky top-0 z-[100] flex items-center justify-between gap-2 ${isMobile ? "h-[3.25rem] px-3" : "h-12 px-6 gap-3"}`}>
+    <header
+      className={`topbar-glass sticky top-0 z-[100] flex items-center justify-between gap-2 ${isMobile ? "h-[3.25rem] px-3" : "h-12 px-6 gap-3"}`}
+    >
       {/* Left: menu + breadcrumb/title */}
       <div className="flex items-center gap-2 min-w-0 flex-1">
         {onMenuToggle && (
@@ -94,7 +96,9 @@ export function TopBar({ onMenuToggle }: { onMenuToggle?: () => void }) {
         )}
 
         {/* Level + Streak */}
-        <div className={`flex items-center text-xs text-[var(--muted)] ${isMobile ? "bg-[var(--foreground)]/5 rounded-full px-1" : ""}`}>
+        <div
+          className={`flex items-center text-xs text-[var(--muted)] ${isMobile ? "bg-[var(--foreground)]/5 rounded-full px-1" : ""}`}
+        >
           <Tooltip content="Dein Level" position="bottom">
             <Link
               to="/fortschritt"
@@ -106,7 +110,9 @@ export function TopBar({ onMenuToggle }: { onMenuToggle?: () => void }) {
           </Tooltip>
           <div className="w-px h-3.5 bg-[var(--border)] mx-0.5" />
           <Tooltip content="Tage-Streak" position="bottom">
-            <div className={`flex items-center gap-1 ${isMobile ? "px-1.5 py-1" : "px-1.5 py-1.5"} rounded-lg hover:bg-[var(--foreground)]/5 hover:text-[var(--foreground)] transition-colors`}>
+            <div
+              className={`flex items-center gap-1 ${isMobile ? "px-1.5 py-1" : "px-1.5 py-1.5"} rounded-lg hover:bg-[var(--foreground)]/5 hover:text-[var(--foreground)] transition-colors`}
+            >
               <StreakFlameIcon
                 streak={streak}
                 hasActivityToday={hasActivityToday}
@@ -125,22 +131,14 @@ export function TopBar({ onMenuToggle }: { onMenuToggle?: () => void }) {
           className={`${isMobile ? "p-1.5" : "p-2"} rounded-lg text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-[var(--foreground)]/5 transition-colors cursor-pointer`}
           aria-label={darkMode ? "Hellmodus" : "Darkmodus"}
         >
-          {darkMode ? <Sun className={isMobile ? "w-[18px] h-[18px]" : "w-4 h-4"} /> : <Moon className={isMobile ? "w-[18px] h-[18px]" : "w-4 h-4"} />}
+          {darkMode ? (
+            <Sun className={isMobile ? "w-[18px] h-[18px]" : "w-4 h-4"} />
+          ) : (
+            <Moon className={isMobile ? "w-[18px] h-[18px]" : "w-4 h-4"} />
+          )}
         </button>
 
-        {/* Viewport toggle — hide on actual mobile devices, show on desktop */}
-        {!isMobile && (
-          <Tooltip content={viewportMode === "desktop" ? "Handyansicht" : "Desktopansicht"} position="bottom">
-            <button
-              type="button"
-              onClick={toggleViewport}
-              className="p-2 rounded-lg text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-[var(--foreground)]/5 transition-colors cursor-pointer"
-              aria-label={viewportMode === "desktop" ? "Zur Handyansicht wechseln" : "Zur Desktopansicht wechseln"}
-            >
-              {viewportMode === "desktop" ? <Smartphone className="w-4 h-4" /> : <Monitor className="w-4 h-4" />}
-            </button>
-          </Tooltip>
-        )}
+        {/* Viewport mode is auto-detected only — no manual toggle */}
       </div>
     </header>
   );
