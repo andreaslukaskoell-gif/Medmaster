@@ -1158,9 +1158,11 @@ export default function Simulation() {
 
     return (
       <div className={`max-w-5xl mx-auto space-y-6 ${isMobile ? "px-3" : ""}`}>
-        <div className="hero-orbs text-center py-6">
-          <h1 className="text-2xl font-bold text-[var(--text-primary)]">Testsimulation</h1>
-          <p className="text-[var(--muted)] mt-1">
+        <div className="hero-gradient text-center py-8">
+          <h1 className="text-[3rem] leading-tight font-bold text-white heading-glow relative z-10">
+            Testsimulation
+          </h1>
+          <p className="text-white/70 mt-2 relative z-10">
             Simuliere den MedAT-H unter realistischen Bedingungen.
           </p>
         </div>
@@ -1242,7 +1244,9 @@ export default function Simulation() {
                     <span className="font-semibold text-sm text-[var(--text-primary)]">KFF</span>
                     <span className="text-xs text-[var(--muted)]">5 Untertests, ~93 Min</span>
                   </div>
-                  <div className={`grid ${isMobile ? "grid-cols-2" : "grid-cols-3"} gap-2 text-xs text-[var(--muted)]`}>
+                  <div
+                    className={`grid ${isMobile ? "grid-cols-2" : "grid-cols-3"} gap-2 text-xs text-[var(--muted)]`}
+                  >
                     <div>Zahlenfolgen: 10 / 25Min</div>
                     <div>Gedächtnis: 8Min + 25F / 15Min</div>
                     <div>Implikationen: 10 / 10Min</div>
@@ -1257,7 +1261,9 @@ export default function Simulation() {
                     <span className="font-semibold text-sm text-[var(--text-primary)]">SEK</span>
                     <span className="text-xs text-[var(--muted)]">3 Untertests, 45 Min</span>
                   </div>
-                  <div className={`grid ${isMobile ? "grid-cols-1" : "grid-cols-3"} gap-2 text-xs text-[var(--muted)]`}>
+                  <div
+                    className={`grid ${isMobile ? "grid-cols-1" : "grid-cols-3"} gap-2 text-xs text-[var(--muted)]`}
+                  >
                     <div>Erkennen: 10 / 15Min</div>
                     <div>Regulieren: 10 / 15Min</div>
                     <div>Entscheiden: 10 / 15Min</div>
@@ -1292,7 +1298,9 @@ export default function Simulation() {
 
             {/* Individual Section Tests */}
             <h2 className="text-lg font-bold text-[var(--text-primary)]">Einzelne Testteile</h2>
-            <div className={`grid ${isMobile ? "grid-cols-2" : "grid-cols-4"} gap-4 stagger-children`}>
+            <div
+              className={`grid ${isMobile ? "grid-cols-2" : "grid-cols-4"} gap-4 stagger-children`}
+            >
               {/* BMS */}
               <div className="card-glass p-5 space-y-3">
                 <div className="flex items-center gap-3">
@@ -1372,7 +1380,9 @@ export default function Simulation() {
                 </div>
               </div>
 
-              <div className={`grid ${isMobile ? "grid-cols-2" : "grid-cols-3"} gap-3 stagger-children`}>
+              <div
+                className={`grid ${isMobile ? "grid-cols-2" : "grid-cols-3"} gap-3 stagger-children`}
+              >
                 {BMS_KURZTEST_OPTIONS.map((opt) => (
                   <button
                     key={opt.id}
@@ -1632,7 +1642,9 @@ export default function Simulation() {
 
         {/* Group breakdown */}
         {groupScores.size > 1 && (
-          <div className={`grid ${isMobile ? "grid-cols-2" : "grid-cols-4"} gap-3 stagger-children`}>
+          <div
+            className={`grid ${isMobile ? "grid-cols-2" : "grid-cols-4"} gap-3 stagger-children`}
+          >
             {[...groupScores.entries()].map(([key, data]) => {
               const pct = data.total > 0 ? Math.round((data.score / data.total) * 100) : 0;
               return (

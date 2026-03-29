@@ -73,6 +73,7 @@
     "dompurify": "^3.3.3",
     "framer-motion": "^12.34.1",
     "lucide-react": "^0.563.0",
+    "mafs": "^0.21.0",
     "posthog-js": "^1.360.2",
     "radix-ui": "^1.4.3",
     "react": "19.2.0",
@@ -82,6 +83,7 @@
     "react-router-dom": "^7.13.0",
     "recharts": "^3.7.0",
     "remark-gfm": "^4.0.1",
+    "smiles-drawer": "^2.2.1",
     "tailwind-merge": "^3.4.0",
     "tailwindcss": "^4.1.18",
     "zustand": "^5.0.11"
@@ -109,6 +111,7 @@
     "tsx": "^4.21.0",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.48.0",
-    "vite": "^7.3.1"
+    "vite": "^7.3.1",
+    "vite-plugin-svgo": "^2.0.0"
   }
 }

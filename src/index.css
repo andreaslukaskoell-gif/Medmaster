@@ -1160,6 +1160,20 @@ body.dark-body .dashboard-page-bg {
   color: var(--text-primary);
 }
 
+/* ── Heading glow — visible text glow for premium headings ───────── */
+.heading-glow {
+  text-shadow:
+    0 0 10px rgba(255, 255, 255, 0.8),
+    0 0 30px rgba(104, 128, 230, 0.6),
+    0 0 60px rgba(104, 128, 230, 0.3);
+}
+.dark .heading-glow {
+  text-shadow:
+    0 0 10px rgba(255, 255, 255, 0.7),
+    0 0 30px rgba(91, 141, 239, 0.5),
+    0 0 60px rgba(91, 141, 239, 0.25);
+}
+
 /* ── Hero orbs — atmospheric focal glow for section identity ─────── *
  * Applied on hero sections, page headers, and focal areas.
  * Two soft radial orbs create depth and premium atmosphere.
@@ -1176,8 +1190,6 @@ body.dark-body .dashboard-page-bg {
   pointer-events: none;
   z-index: -1;
 }
-/* Primary orb: deep indigo — the brand anchor.
- * Large, blurred, anchored top-left to frame the heading area. */
 .hero-orbs::before {
   width: 380px;
   height: 300px;
@@ -1187,8 +1199,6 @@ body.dark-body .dashboard-page-bg {
   top: -80px;
   left: -5%;
 }
-/* Secondary orb: warm green — life-science accent.
- * Smaller, softer, offset right to create asymmetric warmth. */
 .hero-orbs::after {
   width: 240px;
   height: 200px;
@@ -1203,6 +1213,51 @@ body.dark-body .dashboard-page-bg {
 }
 .dark .hero-orbs::after {
   opacity: 0.09;
+}
+
+/* ── Hero gradient — visible glow cloud behind page headings ─────── *
+ * Indigo-to-blue gradient with radial orb overlays.
+ * White text + text-shadow glow for premium heading effect.          */
+.hero-gradient {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  background: linear-gradient(135deg, #2d3a8c, #4a5fd5, #6880e6);
+}
+.hero-gradient::before,
+.hero-gradient::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+.hero-gradient::before {
+  width: 500px;
+  height: 400px;
+  background: radial-gradient(circle, #6880e6 0%, #4a5fd5 40%, transparent 70%);
+  opacity: 0.5;
+  filter: blur(60px);
+  top: -100px;
+  left: 10%;
+}
+.hero-gradient::after {
+  width: 350px;
+  height: 280px;
+  background: radial-gradient(circle, #47c97a 0%, #329556 40%, transparent 70%);
+  opacity: 0.25;
+  filter: blur(50px);
+  top: -40px;
+  right: 5%;
+}
+.dark .hero-gradient {
+  background: linear-gradient(135deg, #1a2355, #2d3a8c, #3d52b5);
+}
+.dark .hero-gradient::before {
+  opacity: 0.4;
+}
+.dark .hero-gradient::after {
+  opacity: 0.2;
 }
 
 /* ── Animated shimmer on progress bars ───────────────────────────── */

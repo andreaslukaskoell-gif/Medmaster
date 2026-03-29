@@ -12,8 +12,9 @@ export const bioKap1: Kapitel = {
     {
       id: "bio-1-01",
       title: "Kennzeichen des Lebens und Systembiologie",
-      imageUrl: "/images/bms/bio-tierzelle.jpg",
-      imageCaption: "Abb.: Aufbau einer tierischen Zelle mit Organellen (OpenStax, CC BY 4.0)",
+      imageUrl: "/images/wiki-animal-cell.svg",
+      imageCaption:
+        "Abb.: Aufbau einer tierischen Zelle mit Organellen (Wikimedia Commons, Public Domain)",
       stichworte: [
         "Kennzeichen des Lebens",
         "Stoffwechsel",
@@ -30,6 +31,8 @@ export const bioKap1: Kapitel = {
       content: `Die Zelle ist die kleinste funktionelle Einheit des Lebens — und damit die Grundlage für fast jede BMS-Frage in Biologie. Dieses Kapitel behandelt den Aufbau eukaryotischer und prokaryotischer Zellen, ihre Organellen, den Membrantransport, die Zellteilung und den Energiestoffwechsel.
 
 ## Die sieben Kennzeichen des Lebens
+
+{{IMAGE}}
 
 Kein einzelnes Merkmal allein definiert Leben — erst ihr Zusammenspiel kennzeichnet ein lebendes System:
 
@@ -555,7 +558,7 @@ Viele Archäen sind **Extremophile**: Thermophile (bis 121°C), Halophile (gesä
     {
       id: "bio-1-03",
       title: "Zellmembran — Aufbau, Barriere und Identität",
-      imageUrl: "/images/bms/bio-zellmembran-bilayer.jpg",
+      imageUrl: "/images/wiki-membrane-de.svg",
       imageCaption: "Abb.: Phospholipid-Doppelschicht der Zellmembran (OpenStax, CC BY 4.0)",
       stichworte: [
         "Flüssig-Mosaik-Modell",
@@ -570,6 +573,8 @@ Viele Archäen sind **Extremophile**: Thermophile (bis 121°C), Halophile (gesä
       content: `Die Zellmembran entscheidet, was in die Zelle gelangt und was sie verlässt — ihr Aufbau ist die Grundlage für Transportprozesse, Signalübertragung und Zellidentität.
 
 ## Grundprinzip: Phospholipid-Doppelschicht
+
+{{IMAGE}}
 
 Die Zellmembran ist die Grenze zwischen Zelle und Außenwelt — nicht als starre Wand, sondern als selektive, dynamische Schranke. Ihr Aufbau erklärt direkt, was sie durchlässt und was nicht.
 

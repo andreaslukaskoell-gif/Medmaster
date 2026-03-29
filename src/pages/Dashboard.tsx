@@ -256,7 +256,7 @@ export default function Dashboard() {
         {/* ─── First-action guidance for new users (hidden after first activity) ─── */}
         {(quizResults ?? []).length === 0 && completedChapters.length === 0 && (
           <section className="mb-8" aria-label="Erste Schritte">
-            <h2 className="text-xl font-semibold text-[var(--text-primary)] mb-1">
+            <h2 className="text-xl font-semibold text-[var(--text-primary)] heading-glow mb-1">
               Starte deine MedAT-Vorbereitung
             </h2>
             <p className="text-sm text-[var(--muted)] mb-5">
@@ -364,7 +364,7 @@ export default function Dashboard() {
             <div className="card-glass p-6">
               <div className="flex items-start justify-between gap-4 mb-5">
                 <div>
-                  <h1 className="text-2xl font-bold text-[var(--text-primary)] tracking-tight">
+                  <h1 className="text-2xl font-bold text-[var(--text-primary)] tracking-tight heading-glow">
                     {displayName ? `${getGreetingByTime()}, ${displayName}` : getGreetingByTime()}
                   </h1>
                   {concretePlan && (

@@ -74,6 +74,7 @@ const BlogArticle = lazy(() => import("@/pages/BlogArticle"));
 const PaidLanding = lazy(() => import("@/pages/PaidLanding"));
 const PaidLandingBMS = lazy(() => import("@/pages/PaidLandingBMS"));
 const MedATCountdown = lazy(() => import("@/pages/MedATCountdown"));
+const DiagramDemo = lazy(() => import("@/pages/DiagramDemo"));
 
 function LoadingSpinner() {
   return (
@@ -357,6 +358,7 @@ export default function App() {
                 <Route path="/daily" element={<DailyChallenge />} />
                 <Route path="/formelsammlung" element={<Formelsammlung />} />
                 <Route path="/einstellungen" element={<Einstellungen />} />
+                <Route path="/diagram-demo" element={<DiagramDemo />} />
 
                 {/* 404 Catch-all for protected routes */}
                 <Route path="*" element={<NotFound404 />} />

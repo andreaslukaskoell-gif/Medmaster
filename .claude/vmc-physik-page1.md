@@ -1,0 +1,607 @@
+- generic [ref=e1]:
+  - status
+  - generic [ref=e2]:
+    - link "Zum Hauptinhalt" [ref=e3] [cursor=pointer]:
+      - /url: "#maincontent"
+    - navigation "Site-Navigation" [ref=e4]:
+      - generic [ref=e5]:
+        - link "ANV" [ref=e6] [cursor=pointer]:
+          - /url: https://vmc.medunigraz.at/add-on/
+          - img "ANV" [ref=e7]
+        - navigation [ref=e9]:
+          - menubar [ref=e10]:
+            - menuitem "Startseite" [ref=e11] [cursor=pointer]
+            - menuitem "Dashboard" [ref=e12] [cursor=pointer]
+            - menuitem "Meine Kurse" [ref=e13] [cursor=pointer]
+            - text: 
+        - list
+        - generic [ref=e14]:
+          - button "Mitteilungsfenster ohne neue Systemnachrichten anzeigen" [ref=e16] [cursor=pointer]:
+            - generic [ref=e17]: 
+          - button "Mitteilungen" [ref=e19] [cursor=pointer]:
+            - generic [ref=e20]: 
+          - generic [ref=e24]:
+            - button "Nutzermenü" [ref=e25] [cursor=pointer]:
+              - img "Luki Köll" [ref=e29]: LK
+              - text: 
+            - text:  
+    - generic [ref=e30]:
+      - button "Blockleiste schließen" [ref=e32] [cursor=pointer]:
+        - generic [ref=e33]: 
+      - complementary "Blöcke" [ref=e36]:
+        - heading "Blöcke" [level=2] [ref=e37]
+        - link "Test-Navigation überspringen" [ref=e38] [cursor=pointer]:
+          - /url: "#sb-1"
+        - navigation "Test-Navigation" [ref=e39]:
+          - generic [ref=e40]:
+            - heading "Test-Navigation" [level=3] [ref=e41]
+            - generic [ref=e42]:
+              - generic [ref=e43]:
+                - link "Frage 1 Diese Seite" [ref=e44] [cursor=pointer]:
+                  - /url: "#question-433042-8"
+                  - generic [ref=e47]: Frage
+                  - text: "1"
+                  - generic [ref=e48]: Diese Seite
+                - link "Frage 2 Diese Seite" [ref=e49] [cursor=pointer]:
+                  - /url: "#question-433042-14"
+                  - generic [ref=e52]: Frage
+                  - text: "2"
+                  - generic [ref=e53]: Diese Seite
+                - link "Frage 3 Diese Seite" [ref=e54] [cursor=pointer]:
+                  - /url: "#question-433042-17"
+                  - generic [ref=e57]: Frage
+                  - text: "3"
+                  - generic [ref=e58]: Diese Seite
+                - link "Frage 4 Diese Seite" [ref=e59] [cursor=pointer]:
+                  - /url: "#question-433042-5"
+                  - generic [ref=e62]: Frage
+                  - text: "4"
+                  - generic [ref=e63]: Diese Seite
+                - link "Frage 5 Diese Seite" [ref=e64] [cursor=pointer]:
+                  - /url: "#question-433042-15"
+                  - generic [ref=e67]: Frage
+                  - text: "5"
+                  - generic [ref=e68]: Diese Seite
+                - link "Frage 6 Diese Seite" [ref=e69] [cursor=pointer]:
+                  - /url: "#question-433042-4"
+                  - generic [ref=e72]: Frage
+                  - text: "6"
+                  - generic [ref=e73]: Diese Seite
+                - link "Frage 7 Diese Seite" [ref=e74] [cursor=pointer]:
+                  - /url: "#question-433042-6"
+                  - generic [ref=e77]: Frage
+                  - text: "7"
+                  - generic [ref=e78]: Diese Seite
+                - link "Frage 8 Diese Seite" [ref=e79] [cursor=pointer]:
+                  - /url: "#question-433042-7"
+                  - generic [ref=e82]: Frage
+                  - text: "8"
+                  - generic [ref=e83]: Diese Seite
+                - link "Frage 9 Diese Seite" [ref=e84] [cursor=pointer]:
+                  - /url: "#question-433042-10"
+                  - generic [ref=e87]: Frage
+                  - text: "9"
+                  - generic [ref=e88]: Diese Seite
+                - link "Frage 10 Diese Seite" [ref=e89] [cursor=pointer]:
+                  - /url: "#question-433042-18"
+                  - generic [ref=e92]: Frage
+                  - text: "10"
+                  - generic [ref=e93]: Diese Seite
+                - link "Frage 11" [ref=e94] [cursor=pointer]:
+                  - /url: https://vmc.medunigraz.at/add-on/mod/quiz/attempt.php?attempt=430247&cmid=13896&page=1#
+                  - generic [ref=e97]: Frage
+                  - text: "11"
+                - link "Frage 12" [ref=e99] [cursor=pointer]:
+                  - /url: https://vmc.medunigraz.at/add-on/mod/quiz/attempt.php?attempt=430247&cmid=13896&page=1#question-433042-13
+                  - generic [ref=e102]: Frage
+                  - text: "12"
+                - link "Frage 13" [ref=e104] [cursor=pointer]:
+                  - /url: https://vmc.medunigraz.at/add-on/mod/quiz/attempt.php?attempt=430247&cmid=13896&page=1#question-433042-12
+                  - generic [ref=e107]: Frage
+                  - text: "13"
+                - link "Frage 14" [ref=e109] [cursor=pointer]:
+                  - /url: https://vmc.medunigraz.at/add-on/mod/quiz/attempt.php?attempt=430247&cmid=13896&page=1#question-433042-9
+                  - generic [ref=e112]: Frage
+                  - text: "14"
+                - link "Frage 15" [ref=e114] [cursor=pointer]:
+                  - /url: https://vmc.medunigraz.at/add-on/mod/quiz/attempt.php?attempt=430247&cmid=13896&page=1#question-433042-11
+                  - generic [ref=e117]: Frage
+                  - text: "15"
+                - link "Frage 16" [ref=e119] [cursor=pointer]:
+                  - /url: https://vmc.medunigraz.at/add-on/mod/quiz/attempt.php?attempt=430247&cmid=13896&page=1#question-433042-3
+                  - generic [ref=e122]: Frage
+                  - text: "16"
+                - link "Frage 17" [ref=e124] [cursor=pointer]:
+                  - /url: https://vmc.medunigraz.at/add-on/mod/quiz/attempt.php?attempt=430247&cmid=13896&page=1#question-433042-1
+                  - generic [ref=e127]: Frage
+                  - text: "17"
+                - link "Frage 18" [ref=e129] [cursor=pointer]:
+                  - /url: https://vmc.medunigraz.at/add-on/mod/quiz/attempt.php?attempt=430247&cmid=13896&page=1#question-433042-16
+                  - generic [ref=e132]: Frage
+                  - text: "18"
+              - link "Versuch abschließen ..." [ref=e135] [cursor=pointer]:
+                - /url: https://vmc.medunigraz.at/add-on/mod/quiz/summary.php?attempt=430247&cmid=13896
+    - generic [ref=e136]:
+      - generic [ref=e138]:
+        - generic:
+          - button "Kursindex öffnen" [active] [ref=e140] [cursor=pointer]:
+            - generic [ref=e141]: Kursindex öffnen
+            - generic [ref=e142]: 
+          - text:  
+        - banner [ref=e143]:
+          - generic [ref=e144]:
+            - navigation "Navigationsleiste" [ref=e147]:
+              - list [ref=e148]:
+                - listitem [ref=e149]:
+                  - link "MedAT-H" [ref=e150] [cursor=pointer]:
+                    - /url: https://vmc.medunigraz.at/add-on/course/view.php?id=352
+                - listitem [ref=e151]:
+                  - text: /
+                  - link "Basiskenntnistest für Medizinische Studien (BMS)" [ref=e152] [cursor=pointer]:
+                    - /url: https://vmc.medunigraz.at/add-on/course/section.php?id=3940
+                - listitem [ref=e153]: / BMS - Physik
+            - generic [ref=e157]:
+              - img [ref=e160]
+              - heading "BMS - Physik" [level=1] [ref=e162]
+        - main [ref=e167]:
+          - link "Zurück" [ref=e171] [cursor=pointer]:
+            - /url: https://vmc.medunigraz.at/add-on/mod/quiz/view.php?id=13896
+          - generic [ref=e172]:
+            - timer [ref=e173]: Verbleibende Zeit 0:15:54
+            - button "Verbergen" [ref=e174] [cursor=pointer]
+          - generic [ref=e176]:
+            - generic [ref=e177]:
+              - generic [ref=e178]:
+                - heading "Frage 1" [level=3] [ref=e179]
+                - generic [ref=e180]: Bisher nicht beantwortet
+                - generic [ref=e181]: "Erreichbare Punkte: 1,00"
+                - button "markiert" [ref=e183] [cursor=pointer]: Frage markieren
+              - generic [ref=e185]:
+                - heading "Fragetext" [level=4] [ref=e186]
+                - paragraph [ref=e189]:
+                  - text: Ein Mobilfunkgerät arbeitet mit einer Trägerfrequenz von 2 GHz. Unter der Annahme der Ausbreitung der elektromagnetischen Welle mit Lichtgeschwindigkeit (3*10
+                  - superscript [ref=e190]: "8"
+                  - text: "m/s) kann man die Wellenlänge berechnen. Diese beträgt circa:"
+                - group "Frage 1 Antwort" [ref=e191]:
+                  - generic [ref=e192]:
+                    - generic [ref=e193]: Frage 1
+                    - text: Antwort
+                  - generic [ref=e194]:
+                    - generic [ref=e195]:
+                      - radio "A. 0,66 m" [ref=e196]
+                      - generic [ref=e197]:
+                        - generic [ref=e198]: A.
+                        - paragraph [ref=e200]: 0,66 m
+                    - generic [ref=e201]:
+                      - radio "B. 6,6 cm" [ref=e202]
+                      - generic [ref=e203]:
+                        - generic [ref=e204]: B.
+                        - paragraph [ref=e206]: 6,6 cm
+                    - generic [ref=e207]:
+                      - radio "C. 15 cm" [ref=e208]
+                      - generic [ref=e209]:
+                        - generic [ref=e210]: C.
+                        - paragraph [ref=e212]: 15 cm
+                    - generic [ref=e213]:
+                      - radio "D. 1,5 cm" [ref=e214]
+                      - generic [ref=e215]:
+                        - generic [ref=e216]: D.
+                        - paragraph [ref=e218]: 1,5 cm
+                    - generic [ref=e219]:
+                      - radio "E. 1,5 m" [ref=e220]
+                      - generic [ref=e221]:
+                        - generic [ref=e222]: E.
+                        - paragraph [ref=e224]: 1,5 m
+                  - generic [ref=e225]:
+                    - radio [checked] [ref=e226]
+                    - button [ref=e228] [cursor=pointer]: Meine Auswahl widerrufen
+            - generic [ref=e229]:
+              - generic [ref=e230]:
+                - heading "Frage 2" [level=3] [ref=e231]
+                - generic [ref=e232]: Bisher nicht beantwortet
+                - generic [ref=e233]: "Erreichbare Punkte: 1,00"
+                - button "markiert" [ref=e235] [cursor=pointer]: Frage markieren
+              - generic [ref=e237]:
+                - heading "Fragetext" [level=4] [ref=e238]
+                - paragraph [ref=e241]: "Die Auffächerung (Dispersion) von weißem Licht beim Regenbogen entsteht durch:"
+                - group "Frage 2 Antwort" [ref=e242]:
+                  - generic [ref=e243]:
+                    - generic [ref=e244]: Frage 2
+                    - text: Antwort
+                  - generic [ref=e245]:
+                    - generic [ref=e246]:
+                      - radio "A. die wellenlängenabhängige Totalreflexion in Wassertropfen." [ref=e247]
+                      - generic [ref=e248]:
+                        - generic [ref=e249]: A.
+                        - paragraph [ref=e251]: die wellenlängenabhängige Totalreflexion in Wassertropfen.
+                    - generic [ref=e252]:
+                      - radio "B. die wellenlängenabhängige Beugung an der Grenzfläche von Wassertropfen." [ref=e253]
+                      - generic [ref=e254]:
+                        - generic [ref=e255]: B.
+                        - paragraph [ref=e257]: die wellenlängenabhängige Beugung an der Grenzfläche von Wassertropfen.
+                    - generic [ref=e258]:
+                      - radio "C. die wellenlängenabhängige Absorption in Wassertropfen." [ref=e259]
+                      - generic [ref=e260]:
+                        - generic [ref=e261]: C.
+                        - paragraph [ref=e263]: die wellenlängenabhängige Absorption in Wassertropfen.
+                    - generic [ref=e264]:
+                      - radio "D. die wellenlängenabhängige Streuung an Wassertropfen." [ref=e265]
+                      - generic [ref=e266]:
+                        - generic [ref=e267]: D.
+                        - paragraph [ref=e269]: die wellenlängenabhängige Streuung an Wassertropfen.
+                    - generic [ref=e270]:
+                      - radio "E. die wellenlängenabhängige Brechung in Wassertropfen." [ref=e271]
+                      - generic [ref=e272]:
+                        - generic [ref=e273]: E.
+                        - paragraph [ref=e275]: die wellenlängenabhängige Brechung in Wassertropfen.
+                  - generic [ref=e276]:
+                    - radio [checked] [ref=e277]
+                    - button [ref=e279] [cursor=pointer]: Meine Auswahl widerrufen
+            - generic [ref=e280]:
+              - generic [ref=e281]:
+                - heading "Frage 3" [level=3] [ref=e282]
+                - generic [ref=e283]: Bisher nicht beantwortet
+                - generic [ref=e284]: "Erreichbare Punkte: 1,00"
+                - button "markiert" [ref=e286] [cursor=pointer]: Frage markieren
+              - generic [ref=e288]:
+                - heading "Fragetext" [level=4] [ref=e289]
+                - paragraph [ref=e292]:
+                  - text: "Beim Zerfall radioaktiver Substanzen können folgende ionisierende Strahlungsarten freigesetzt werden:"
+                  - text: 1. Beta-Strahlung
+                  - text: 2. Alpha-Strahlung
+                  - text: 3. Gamma-Strahlung
+                  - text: 4. Infrarotstrahlung
+                - group "Frage 3" [ref=e293]:
+                  - generic [ref=e295]: Frage 3
+                  - generic [ref=e296]:
+                    - generic [ref=e297]:
+                      - radio "A. 2. und 4. sind richtig." [ref=e298]
+                      - generic [ref=e299]:
+                        - generic [ref=e300]: A.
+                        - generic [ref=e301]: 2. und 4. sind richtig.
+                    - generic [ref=e302]:
+                      - radio "B. 4. ist richtig." [ref=e303]
+                      - generic [ref=e304]:
+                        - generic [ref=e305]: B.
+                        - generic [ref=e306]: 4. ist richtig.
+                    - generic [ref=e307]:
+                      - radio "C. 1. und 3. sind richtig." [ref=e308]
+                      - generic [ref=e309]:
+                        - generic [ref=e310]: C.
+                        - generic [ref=e311]: 1. und 3. sind richtig.
+                    - generic [ref=e312]:
+                      - radio "D. 1., 2. und 3. sind richtig." [ref=e313]
+                      - generic [ref=e314]:
+                        - generic [ref=e315]: D.
+                        - generic [ref=e316]: 1., 2. und 3. sind richtig.
+                    - generic [ref=e317]:
+                      - radio "E. Alle sind richtig." [ref=e318]
+                      - generic [ref=e319]:
+                        - generic [ref=e320]: E.
+                        - generic [ref=e321]: Alle sind richtig.
+                  - generic [ref=e322]:
+                    - radio [checked] [ref=e323]
+                    - button [ref=e325] [cursor=pointer]: Meine Auswahl widerrufen
+            - generic [ref=e326]:
+              - generic [ref=e327]:
+                - heading "Frage 4" [level=3] [ref=e328]
+                - generic [ref=e329]: Bisher nicht beantwortet
+                - generic [ref=e330]: "Erreichbare Punkte: 1,00"
+                - button "markiert" [ref=e332] [cursor=pointer]: Frage markieren
+              - generic [ref=e334]:
+                - heading "Fragetext" [level=4] [ref=e335]
+                - paragraph [ref=e338]: Bei der Kernspaltung von Uran zur Energiegewinnung werden welche Teilchen benötigt?
+                - group "Frage 4" [ref=e339]:
+                  - generic [ref=e341]: Frage 4
+                  - generic [ref=e342]:
+                    - generic [ref=e343]:
+                      - radio "A. Beta Teilchen" [ref=e344]
+                      - generic [ref=e345]:
+                        - generic [ref=e346]: A.
+                        - generic [ref=e347]: Beta Teilchen
+                    - generic [ref=e348]:
+                      - radio "B. Neutrinos" [ref=e349]
+                      - generic [ref=e350]:
+                        - generic [ref=e351]: B.
+                        - generic [ref=e352]: Neutrinos
+                    - generic [ref=e353]:
+                      - radio "C. Neutronen" [ref=e354]
+                      - generic [ref=e355]:
+                        - generic [ref=e356]: C.
+                        - generic [ref=e357]: Neutronen
+                    - generic [ref=e358]:
+                      - radio "D. Protonen" [ref=e359]
+                      - generic [ref=e360]:
+                        - generic [ref=e361]: D.
+                        - generic [ref=e362]: Protonen
+                    - generic [ref=e363]:
+                      - radio "E. Alpha Teilchen" [ref=e364]
+                      - generic [ref=e365]:
+                        - generic [ref=e366]: E.
+                        - generic [ref=e367]: Alpha Teilchen
+                  - generic [ref=e368]:
+                    - radio [checked] [ref=e369]
+                    - button [ref=e371] [cursor=pointer]: Meine Auswahl widerrufen
+            - generic [ref=e372]:
+              - generic [ref=e373]:
+                - heading "Frage 5" [level=3] [ref=e374]
+                - generic [ref=e375]: Bisher nicht beantwortet
+                - generic [ref=e376]: "Erreichbare Punkte: 1,00"
+                - button "markiert" [ref=e378] [cursor=pointer]: Frage markieren
+              - generic [ref=e380]:
+                - heading "Fragetext" [level=4] [ref=e381]
+                - paragraph [ref=e384]: Was versteht man in der Physik unter "abgeleitete Größen"?
+                - group "Frage 5 Antwort" [ref=e385]:
+                  - generic [ref=e386]:
+                    - generic [ref=e387]: Frage 5
+                    - text: Antwort
+                  - generic [ref=e388]:
+                    - generic [ref=e389]:
+                      - radio "A. Keine Aussage ist richtig." [ref=e390]
+                      - generic [ref=e391]:
+                        - generic [ref=e392]: A.
+                        - paragraph [ref=e394]: Keine Aussage ist richtig.
+                    - generic [ref=e395]:
+                      - radio "B. Physikalische Größen, die aus Differentialquotienten entstanden sind." [ref=e396]
+                      - generic [ref=e397]:
+                        - generic [ref=e398]: B.
+                        - paragraph [ref=e400]: Physikalische Größen, die aus Differentialquotienten entstanden sind.
+                    - generic [ref=e401]:
+                      - radio "C. Physikalische Größen, die nicht messbar sind." [ref=e402]
+                      - generic [ref=e403]:
+                        - generic [ref=e404]: C.
+                        - paragraph [ref=e406]: Physikalische Größen, die nicht messbar sind.
+                    - generic [ref=e407]:
+                      - radio "D. Veraltete physikalische Begriffe (z.B. Permeabilität statt Dielektrizitätskonstante)." [ref=e408]
+                      - generic [ref=e409]:
+                        - generic [ref=e410]: D.
+                        - paragraph [ref=e412]: Veraltete physikalische Begriffe (z.B. Permeabilität statt Dielektrizitätskonstante).
+                    - generic [ref=e413]:
+                      - radio "E. Physikalische Größen, die keine SI-Einheiten besitzen." [ref=e414]
+                      - generic [ref=e415]:
+                        - generic [ref=e416]: E.
+                        - paragraph [ref=e418]: Physikalische Größen, die keine SI-Einheiten besitzen.
+                  - generic [ref=e419]:
+                    - radio [checked] [ref=e420]
+                    - button [ref=e422] [cursor=pointer]: Meine Auswahl widerrufen
+            - generic [ref=e423]:
+              - generic [ref=e424]:
+                - heading "Frage 6" [level=3] [ref=e425]
+                - generic [ref=e426]: Bisher nicht beantwortet
+                - generic [ref=e427]: "Erreichbare Punkte: 1,00"
+                - button "markiert" [ref=e429] [cursor=pointer]: Frage markieren
+              - generic [ref=e431]:
+                - heading "Fragetext" [level=4] [ref=e432]
+                - paragraph [ref=e435]: Was ist der Massendefekt?
+                - group "Frage 6 Antwort" [ref=e436]:
+                  - generic [ref=e437]:
+                    - generic [ref=e438]: Frage 6
+                    - text: Antwort
+                  - generic [ref=e439]:
+                    - generic [ref=e440]:
+                      - radio "A. Protonen und Neutronen haben nicht die ganz gleiche Masse." [ref=e441]
+                      - generic [ref=e442]:
+                        - generic [ref=e443]: A.
+                        - paragraph [ref=e445]: Protonen und Neutronen haben nicht die ganz gleiche Masse.
+                    - generic [ref=e446]:
+                      - radio "B. Er ist der Massenunterschied zwischen Protonen und Elektronen." [ref=e447]
+                      - generic [ref=e448]:
+                        - generic [ref=e449]: B.
+                        - paragraph [ref=e451]: Er ist der Massenunterschied zwischen Protonen und Elektronen.
+                    - generic [ref=e452]:
+                      - radio "C. Die Masse des Atomkerns ist etwas geringer als die Summe der Massen der in ihm enthaltenen Nukleonen." [ref=e453]
+                      - generic [ref=e454]:
+                        - generic [ref=e455]: C.
+                        - paragraph [ref=e457]: Die Masse des Atomkerns ist etwas geringer als die Summe der Massen der in ihm enthaltenen Nukleonen.
+                    - generic [ref=e458]:
+                      - radio "D. Er ist die Massenzunahme der Atome bei relativ hohen Geschwindigkeiten." [ref=e459]
+                      - generic [ref=e460]:
+                        - generic [ref=e461]: D.
+                        - paragraph [ref=e463]: Er ist die Massenzunahme der Atome bei relativ hohen Geschwindigkeiten.
+                    - generic [ref=e464]:
+                      - radio "E. Die Masse des Atoms ist wegen der Elektronen etwas größer als die Summe der Massen der in ihm enthaltenen Nukleonen." [ref=e465]
+                      - generic [ref=e466]:
+                        - generic [ref=e467]: E.
+                        - paragraph [ref=e469]: Die Masse des Atoms ist wegen der Elektronen etwas größer als die Summe der Massen der in ihm enthaltenen Nukleonen.
+                  - generic [ref=e470]:
+                    - radio [checked] [ref=e471]
+                    - button [ref=e473] [cursor=pointer]: Meine Auswahl widerrufen
+            - generic [ref=e474]:
+              - generic [ref=e475]:
+                - heading "Frage 7" [level=3] [ref=e476]
+                - generic [ref=e477]: Bisher nicht beantwortet
+                - generic [ref=e478]: "Erreichbare Punkte: 1,00"
+                - button "markiert" [ref=e480] [cursor=pointer]: Frage markieren
+              - generic [ref=e482]:
+                - heading "Fragetext" [level=4] [ref=e483]
+                - paragraph [ref=e486]: Was verstehen wir unter der Anomalie des Wassers ?
+                - group "Frage 7" [ref=e487]:
+                  - generic [ref=e489]: Frage 7
+                  - generic [ref=e490]:
+                    - generic [ref=e491]:
+                      - radio "A. Die Tatsache, dass Wasser im schwerelosen Zustand immer Kugelgestalt einnimmt." [ref=e492]
+                      - generic [ref=e493]:
+                        - generic [ref=e494]: A.
+                        - generic [ref=e495]: Die Tatsache, dass Wasser im schwerelosen Zustand immer Kugelgestalt einnimmt.
+                    - generic [ref=e496]:
+                      - radio "B. Die Tatsache, dass Wasser und Speiseöl – zwei Flüssigkeiten - sich nicht miteinander vermischen lassen." [ref=e497]
+                      - generic [ref=e498]:
+                        - generic [ref=e499]: B.
+                        - generic [ref=e500]: Die Tatsache, dass Wasser und Speiseöl – zwei Flüssigkeiten - sich nicht miteinander vermischen lassen.
+                    - generic [ref=e501]:
+                      - radio "C. Die Dichte des Wassers ist bei 4°C und nicht bei 0°C am größten – deswegen frieren Seen im Winter von oben und nicht von unten zu." [ref=e502]
+                      - generic [ref=e503]:
+                        - generic [ref=e504]: C.
+                        - generic [ref=e505]: Die Dichte des Wassers ist bei 4°C und nicht bei 0°C am größten – deswegen frieren Seen im Winter von oben und nicht von unten zu.
+                    - generic [ref=e506]:
+                      - radio "D. Im Vergleich zu anderen Himmelskörpern, z.B. dem Mond, befindet sich auf der Erde anomal viel Wasser." [ref=e507]
+                      - generic [ref=e508]:
+                        - generic [ref=e509]: D.
+                        - generic [ref=e510]: Im Vergleich zu anderen Himmelskörpern, z.B. dem Mond, befindet sich auf der Erde anomal viel Wasser.
+                    - generic [ref=e511]:
+                      - radio "E. Wasser verhält sich völlig normal – eine Anomalie gibt es nicht." [ref=e512]
+                      - generic [ref=e513]:
+                        - generic [ref=e514]: E.
+                        - generic [ref=e515]: Wasser verhält sich völlig normal – eine Anomalie gibt es nicht.
+                  - generic [ref=e516]:
+                    - radio [checked] [ref=e517]
+                    - button [ref=e519] [cursor=pointer]: Meine Auswahl widerrufen
+            - generic [ref=e520]:
+              - generic [ref=e521]:
+                - heading "Frage 8" [level=3] [ref=e522]
+                - generic [ref=e523]: Bisher nicht beantwortet
+                - generic [ref=e524]: "Erreichbare Punkte: 1,00"
+                - button "markiert" [ref=e526] [cursor=pointer]: Frage markieren
+              - generic [ref=e528]:
+                - heading "Fragetext" [level=4] [ref=e529]
+                - generic [ref=e531]:
+                  - paragraph [ref=e532]: Eine inkompressible Flüssigkeit (z.B. Wasser) strömt reibungsfrei durch das dargestellte Rohr mit einer Verengung. Welche Aussage zu den Geschwindigkeitsverhältnissen am Anfang und Ende des Rohres ist korrekt?
+                  - paragraph [ref=e533]
+                  - paragraph [ref=e534]
+                - group "Frage 8 Antwort" [ref=e535]:
+                  - generic [ref=e536]:
+                    - generic [ref=e537]: Frage 8
+                    - text: Antwort
+                  - generic [ref=e538]:
+                    - generic [ref=e539]:
+                      - radio "A. v2 < v1" [ref=e540]
+                      - generic [ref=e541]:
+                        - generic [ref=e542]: A.
+                        - paragraph [ref=e544]:
+                          - text: v
+                          - subscript [ref=e545]: "2"
+                          - text: < v
+                          - subscript [ref=e546]: "1"
+                    - generic [ref=e547]:
+                      - radio "B. v2 - v1 = 0" [ref=e548]
+                      - generic [ref=e549]:
+                        - generic [ref=e550]: B.
+                        - paragraph [ref=e552]:
+                          - text: v
+                          - subscript [ref=e553]: "2"
+                          - text: "- v"
+                          - subscript [ref=e554]: "1"
+                          - text: = 0
+                    - generic [ref=e555]:
+                      - radio "C. v2 + v1 = 0" [ref=e556]
+                      - generic [ref=e557]:
+                        - generic [ref=e558]: C.
+                        - paragraph [ref=e560]:
+                          - text: v
+                          - subscript [ref=e561]: "2"
+                          - text: + v
+                          - subscript [ref=e562]: "1"
+                          - text: = 0
+                    - generic [ref=e563]:
+                      - radio "D. v2 = v1" [ref=e564]
+                      - generic [ref=e565]:
+                        - generic [ref=e566]: D.
+                        - paragraph [ref=e568]:
+                          - text: v
+                          - subscript [ref=e569]: "2"
+                          - text: = v
+                          - subscript [ref=e570]: "1"
+                    - generic [ref=e571]:
+                      - radio "E. v2 > v1" [ref=e572]
+                      - generic [ref=e573]:
+                        - generic [ref=e574]: E.
+                        - paragraph [ref=e576]:
+                          - text: v
+                          - subscript [ref=e577]: "2"
+                          - text: "> v"
+                          - subscript [ref=e578]: "1"
+                  - generic [ref=e579]:
+                    - radio [checked] [ref=e580]
+                    - button [ref=e582] [cursor=pointer]: Meine Auswahl widerrufen
+            - generic [ref=e583]:
+              - generic [ref=e584]:
+                - heading "Frage 9" [level=3] [ref=e585]
+                - generic [ref=e586]: Bisher nicht beantwortet
+                - generic [ref=e587]: "Erreichbare Punkte: 1,00"
+                - button "markiert" [ref=e589] [cursor=pointer]: Frage markieren
+              - generic [ref=e591]:
+                - heading "Fragetext" [level=4] [ref=e592]
+                - paragraph [ref=e595]: Was besagt das Pauli-Prinzip?
+                - group "Frage 9 Antwort" [ref=e596]:
+                  - generic [ref=e597]:
+                    - generic [ref=e598]: Frage 9
+                    - text: Antwort
+                  - generic [ref=e599]:
+                    - generic [ref=e600]:
+                      - radio "A. Jedem Elektron kann eine Wellenlänge zugeordnet werden (Welle-Teilchen-Dualismus)." [ref=e601]
+                      - generic [ref=e602]:
+                        - generic [ref=e603]: A.
+                        - paragraph [ref=e605]: Jedem Elektron kann eine Wellenlänge zugeordnet werden (Welle-Teilchen-Dualismus).
+                    - generic [ref=e606]:
+                      - radio "B. Jedes Orbital der Atomhülle kann nur zwei Elektronen aufnehmen." [ref=e607]
+                      - generic [ref=e608]:
+                        - generic [ref=e609]: B.
+                        - paragraph [ref=e611]: Jedes Orbital der Atomhülle kann nur zwei Elektronen aufnehmen.
+                    - generic [ref=e612]:
+                      - radio "C. Elektronen kreisen reibungsfrei auf Bahnen um den Atomkern." [ref=e613]
+                      - generic [ref=e614]:
+                        - generic [ref=e615]: C.
+                        - paragraph [ref=e617]: Elektronen kreisen reibungsfrei auf Bahnen um den Atomkern.
+                    - generic [ref=e618]:
+                      - radio "D. Die Masse eines Atoms wird hauptsächlich durch den Atomkern, also durch die Masse der Neutronen und Protonen, bestimmt." [ref=e619]
+                      - generic [ref=e620]:
+                        - generic [ref=e621]: D.
+                        - paragraph [ref=e623]: Die Masse eines Atoms wird hauptsächlich durch den Atomkern, also durch die Masse der Neutronen und Protonen, bestimmt.
+                    - generic [ref=e624]:
+                      - radio "E. Beim photoelektrischen Effekt ist die kinetische Energie der Elektronen unabhängig von der Lichtintensität." [ref=e625]
+                      - generic [ref=e626]:
+                        - generic [ref=e627]: E.
+                        - paragraph [ref=e629]: Beim photoelektrischen Effekt ist die kinetische Energie der Elektronen unabhängig von der Lichtintensität.
+                  - generic [ref=e630]:
+                    - radio [checked] [ref=e631]
+                    - button [ref=e633] [cursor=pointer]: Meine Auswahl widerrufen
+            - generic [ref=e634]:
+              - generic [ref=e635]:
+                - heading "Frage 10" [level=3] [ref=e636]
+                - generic [ref=e637]: Bisher nicht beantwortet
+                - generic [ref=e638]: "Erreichbare Punkte: 1,00"
+                - button "markiert" [ref=e640] [cursor=pointer]: Frage markieren
+              - generic [ref=e642]:
+                - heading "Fragetext" [level=4] [ref=e643]
+                - generic [ref=e645]:
+                  - text: "Wenn wir an einer Steckdose eine Beschriftung vorfinden von ~ 230V (Effektivwert der Versorgungsspannung), dann bedeutet dies:"
+                  - text: 1. Die sinusförmige Spannung wechselt ständig zwischen Maximalwerten von +230 V und -230 V.
+                  - text: 2. Eine Gleichspannung von 230 V würde an einem ohmschen Widerstand die gleiche elektrische Leistung ergeben.
+                  - text: 3. Der Mittelwert der Spannung über eine Periodendauer ist 230 V.
+                  - text: 4. Die Amplitude der sinusförmigen Spannung ist größer als 230 V.
+                - group "Frage 10" [ref=e646]:
+                  - generic [ref=e648]: Frage 10
+                  - generic [ref=e649]:
+                    - generic [ref=e650]:
+                      - radio "A. 1. und 3. sind richtig." [ref=e651]
+                      - generic [ref=e652]:
+                        - generic [ref=e653]: A.
+                        - generic [ref=e654]: 1. und 3. sind richtig.
+                    - generic [ref=e655]:
+                      - radio "B. 2. und 4. sind richtig." [ref=e656]
+                      - generic [ref=e657]:
+                        - generic [ref=e658]: B.
+                        - generic [ref=e659]: 2. und 4. sind richtig.
+                    - generic [ref=e660]:
+                      - radio "C. Alle sind richtig." [ref=e661]
+                      - generic [ref=e662]:
+                        - generic [ref=e663]: C.
+                        - generic [ref=e664]: Alle sind richtig.
+                    - generic [ref=e665]:
+                      - radio "D. 1., 2. und 3. sind richtig." [ref=e666]
+                      - generic [ref=e667]:
+                        - generic [ref=e668]: D.
+                        - generic [ref=e669]: 1., 2. und 3. sind richtig.
+                    - generic [ref=e670]:
+                      - radio "E. 4. ist richtig." [ref=e671]
+                      - generic [ref=e672]:
+                        - generic [ref=e673]: E.
+                        - generic [ref=e674]: 4. ist richtig.
+                  - generic [ref=e675]:
+                    - radio [checked] [ref=e676]
+                    - button [ref=e678] [cursor=pointer]: Meine Auswahl widerrufen
+            - button "Nächste Seite" [ref=e680] [cursor=pointer]
+      - contentinfo:
+        - button "Fußbereich anzeigen" [ref=e681] [cursor=pointer]:
+          - generic [ref=e682]: "?"
+        - text: 

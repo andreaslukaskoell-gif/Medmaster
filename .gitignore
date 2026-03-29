@@ -90,3 +90,5 @@ android/build/
 
 # Generated icon resources
 resources/*.png
+.vercel
+.env*.local

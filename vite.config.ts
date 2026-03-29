@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
+import svgo from "vite-plugin-svgo";
 import path from "path";
 import { readFileSync } from "fs";
 
@@ -10,7 +11,7 @@ export default defineConfig({
   define: {
     __APP_VERSION__: JSON.stringify(pkg.version),
   },
-  plugins: [react(), tailwindcss()],
+  plugins: [react(), tailwindcss(), svgo()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
@@ -67,6 +68,8 @@ export default defineConfig({
               return "vendor-markdown";
             if (id.includes("@sentry")) return "vendor-sentry";
             if (id.includes("lucide-react")) return "vendor-icons";
+            if (id.includes("mafs")) return "vendor-mafs";
+            if (id.includes("smiles-drawer")) return "vendor-smiles";
           }
         },
       },

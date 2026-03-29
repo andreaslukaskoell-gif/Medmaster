@@ -237,9 +237,11 @@ function SelectionScreen({
 
   return (
     <div className="max-w-5xl mx-auto space-y-5">
-      <div className="hero-orbs text-center py-6">
-        <h1 className="text-2xl font-bold text-[var(--text-primary)]">Fragen-Trainer</h1>
-        <p className="text-sm text-muted-foreground mt-1">
+      <div className="hero-gradient text-center py-8">
+        <h1 className="text-[3rem] leading-tight font-bold text-white heading-glow relative z-10">
+          Fragen-Trainer
+        </h1>
+        <p className="text-sm text-white/70 mt-2 relative z-10">
           BMS: Fach wählen, dann trainieren oder offizielle Zeitvorgabe
         </p>
       </div>
@@ -291,7 +293,10 @@ function SelectionScreen({
       {/* 1. Fach */}
       <div className="card-glass p-4 space-y-3">
         <p className="text-sm font-semibold text-[var(--text-secondary)]">1. Fach wählen</p>
-        <div className={`grid ${isMobile ? "grid-cols-2" : "grid-cols-4"} gap-2 stagger-children`} data-mobile-keep>
+        <div
+          className={`grid ${isMobile ? "grid-cols-2" : "grid-cols-4"} gap-2 stagger-children`}
+          data-mobile-keep
+        >
           {BMS_SUBJECTS.map((s) => {
             const Icon = s.icon;
             const selected = subjectId === s.id;
@@ -452,20 +457,29 @@ function QuizScreen({
   } = trainer;
 
   // Wrap answer callbacks with haptic feedback
-  const chooseOption = useCallback((key: string) => {
-    hapticMedium();
-    rawChooseOption(key);
-  }, [rawChooseOption]);
+  const chooseOption = useCallback(
+    (key: string) => {
+      hapticMedium();
+      rawChooseOption(key);
+    },
+    [rawChooseOption]
+  );
 
-  const judgeAussage = useCallback((nr: number, correct: boolean) => {
-    hapticLight();
-    rawJudgeAussage(nr, correct);
-  }, [rawJudgeAussage]);
+  const judgeAussage = useCallback(
+    (nr: number, correct: boolean) => {
+      hapticLight();
+      rawJudgeAussage(nr, correct);
+    },
+    [rawJudgeAussage]
+  );
 
-  const chooseTypKCombination = useCallback((key: string) => {
-    hapticMedium();
-    rawChooseTypKCombination(key);
-  }, [rawChooseTypKCombination]);
+  const chooseTypKCombination = useCallback(
+    (key: string) => {
+      hapticMedium();
+      rawChooseTypKCombination(key);
+    },
+    [rawChooseTypKCombination]
+  );
 
   // Mobile: question grid overlay
   const [showGrid, setShowGrid] = useState(false);
@@ -841,7 +855,10 @@ function QuizScreen({
             <div className="flex items-center justify-between px-4 h-14">
               <button
                 type="button"
-                onClick={() => { hapticLight(); goToQuestion(Math.max(0, idx - 1)); }}
+                onClick={() => {
+                  hapticLight();
+                  goToQuestion(Math.max(0, idx - 1));
+                }}
                 disabled={idx <= 0}
                 className="flex items-center gap-1 text-sm font-medium text-[var(--accent)] disabled:opacity-30 disabled:text-[var(--muted)] min-h-[44px] px-2"
               >
@@ -857,7 +874,10 @@ function QuizScreen({
               </button>
               <button
                 type="button"
-                onClick={() => { hapticLight(); goToQuestion(Math.min(fragen.length - 1, idx + 1)); }}
+                onClick={() => {
+                  hapticLight();
+                  goToQuestion(Math.min(fragen.length - 1, idx + 1));
+                }}
                 disabled={idx >= fragen.length - 1}
                 className="flex items-center gap-1 text-sm font-medium text-[var(--accent)] disabled:opacity-30 disabled:text-[var(--muted)] min-h-[44px] px-2"
               >
@@ -877,7 +897,9 @@ function QuizScreen({
                 onClick={(e) => e.stopPropagation()}
               >
                 <div className="flex items-center justify-between mb-3">
-                  <p className="text-sm font-semibold text-[var(--text-primary)]">Fragen-Übersicht</p>
+                  <p className="text-sm font-semibold text-[var(--text-primary)]">
+                    Fragen-Übersicht
+                  </p>
                   <button
                     type="button"
                     onClick={() => setShowGrid(false)}
@@ -894,7 +916,11 @@ function QuizScreen({
                       <button
                         key={i}
                         type="button"
-                        onClick={() => { hapticLight(); goToQuestion(i); setShowGrid(false); }}
+                        onClick={() => {
+                          hapticLight();
+                          goToQuestion(i);
+                          setShowGrid(false);
+                        }}
                         className={`w-full aspect-square rounded-lg text-sm font-medium transition-colors
                           ${isCurrent ? "ring-2 ring-emerald-500 bg-emerald-100 dark:bg-emerald-900/40 text-emerald-800 dark:text-emerald-200" : ""}
                           ${!isCurrent && answered ? "bg-[var(--surface)] text-muted-foreground" : ""}

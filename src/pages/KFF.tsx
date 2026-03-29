@@ -297,21 +297,21 @@ export default function KFF() {
   return (
     <div className={`max-w-4xl mx-auto ${isMobile ? "space-y-5" : "space-y-8"}`}>
       {/* Hero */}
-      <div className="hero-orbs text-center">
+      <div className="hero-gradient text-center py-8">
         <div
-          className={`flex ${isMobile ? "flex-col gap-1.5" : "items-center gap-3 justify-center"} mb-2`}
+          className={`flex ${isMobile ? "flex-col gap-1.5" : "items-center gap-3 justify-center"} mb-2 relative z-10`}
         >
           <h1
-            className={`${isMobile ? "text-xl" : "text-2xl"} font-bold text-[var(--text-primary)]`}
+            className={`${isMobile ? "text-xl" : "text-[3rem] leading-tight"} font-bold text-white heading-glow`}
           >
             {isMobile ? "KFF – Kognitive Fähigkeiten" : "Kognitive Fähigkeiten & Fertigkeiten"}
           </h1>
-          <span className="text-xs font-medium text-[var(--muted)] bg-[var(--surface)] border border-[var(--border)] px-2 py-0.5 rounded w-fit">
+          <span className="text-xs font-medium text-white/60 bg-white/10 border border-white/20 px-2 py-0.5 rounded w-fit">
             40 % des MedAT
           </span>
         </div>
         {!isMobile && (
-          <p className="text-sm text-[var(--muted)] max-w-2xl mx-auto leading-relaxed">
+          <p className="text-sm text-white/70 max-w-2xl mx-auto leading-relaxed relative z-10">
             5 Aufgabentypen, die logisches Denken, Merkfähigkeit und räumliches Vorstellungsvermögen
             prüfen. Jeder Untertest wird separat gewertet — trainiere alle regelmäßig.
           </p>

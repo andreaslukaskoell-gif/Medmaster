@@ -386,7 +386,7 @@ export function SubchapterContent({
           parts.push(
             <figure
               key={`img-${partKey}`}
-              className={`${lastWasDiagram ? "mt-10" : "mt-4"} mb-4 mx-auto max-w-xl`}
+              className={`${lastWasDiagram ? "mt-10" : "mt-4"} mb-4 mx-auto ${uk.imageUrl?.endsWith(".svg") ? "max-w-2xl" : "max-w-xl"}`}
             >
               <ImageWithFallback
                 src={uk.imageUrl}

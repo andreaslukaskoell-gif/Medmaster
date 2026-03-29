@@ -42,6 +42,7 @@ const PhylogeneticTree = lazy(() => import("./biology/PhylogeneticTree"));
 const AntibodyStructure = lazy(() => import("./biology/AntibodyStructure"));
 const CoagulationCascade = lazy(() => import("./biology/CoagulationCascade"));
 const HemoglobinCurve = lazy(() => import("./biology/HemoglobinCurve"));
+const HeartAnatomyInteractive = lazy(() => import("./biology/HeartAnatomyInteractive"));
 const HPAAxis = lazy(() => import("./biology/HPAAxis"));
 const JointTypes = lazy(() => import("./biology/JointTypes"));
 const Reflexbogen = lazy(() => import("./biology/Reflexbogen"));
@@ -74,6 +75,7 @@ const HydrocarbonTypes = lazy(() => import("./chemistry/HydrocarbonTypes"));
 const LipidStructure = lazy(() => import("./chemistry/LipidStructure"));
 const DNAStructure = lazy(() => import("./chemistry/DNAStructure"));
 const LeChatelierPrinciple = lazy(() => import("./chemistry/LeChatelierPrinciple"));
+const MoleculeViewer = lazy(() => import("./chemistry/MoleculeViewer"));
 
 // Physics
 const CircuitDiagram = lazy(() => import("./physics/CircuitDiagram"));
@@ -106,6 +108,7 @@ const EndoscopeFiber = lazy(() => import("./physics/EndoscopeFiber"));
 const ThinFilmInterference = lazy(() => import("./physics/ThinFilmInterference"));
 const SIPrefixes = lazy(() => import("./physics/SIPrefixes"));
 const DiffractionSlit = lazy(() => import("./physics/DiffractionSlit"));
+const InteractiveWave = lazy(() => import("./physics/InteractiveWave"));
 
 // Math
 const CombinatoricsTree = lazy(() => import("./math/CombinatoricsTree"));
@@ -127,6 +130,7 @@ const StandardDeviation = lazy(() => import("./math/StandardDeviation"));
 const SensitivitySpecificity = lazy(() => import("./math/SensitivitySpecificity"));
 const EquationBalance = lazy(() => import("./math/EquationBalance"));
 const CalculusOverview = lazy(() => import("./math/CalculusOverview"));
+const InteractiveFunction = lazy(() => import("./math/InteractiveFunction"));
 
 const DIAGRAM_MAP: Record<string, LazyExoticComponent<ComponentType>> = {
   "animal-cell": AnimalCell,
@@ -168,6 +172,7 @@ const DIAGRAM_MAP: Record<string, LazyExoticComponent<ComponentType>> = {
   "phylogenetic-tree": PhylogeneticTree,
   "antibody-structure": AntibodyStructure,
   "coagulation-cascade": CoagulationCascade,
+  "heart-anatomy-interactive": HeartAnatomyInteractive,
   "hemoglobin-curve": HemoglobinCurve,
   "hpa-axis": HPAAxis,
   "joint-types": JointTypes,
@@ -200,6 +205,7 @@ const DIAGRAM_MAP: Record<string, LazyExoticComponent<ComponentType>> = {
   "lipid-structure": LipidStructure,
   "dna-structure": DNAStructure,
   "le-chatelier": LeChatelierPrinciple,
+  "molecule-viewer": MoleculeViewer,
   // Physics
   "circuit-diagram": CircuitDiagram,
   "doppler-effect": DopplerEffect,
@@ -231,6 +237,7 @@ const DIAGRAM_MAP: Record<string, LazyExoticComponent<ComponentType>> = {
   "thin-film-interference": ThinFilmInterference,
   "si-prefixes": SIPrefixes,
   "diffraction-slit": DiffractionSlit,
+  "interactive-wave": InteractiveWave,
   // Math
   "combinatorics-tree": CombinatoricsTree,
   "coordinate-system": CoordinateSystem,
@@ -251,6 +258,7 @@ const DIAGRAM_MAP: Record<string, LazyExoticComponent<ComponentType>> = {
   "sensitivity-specificity": SensitivitySpecificity,
   "equation-balance": EquationBalance,
   "calculus-overview": CalculusOverview,
+  "interactive-function": InteractiveFunction,
 };
 
 /** Short German captions shown below each diagram. */
@@ -308,6 +316,8 @@ const DIAGRAM_CAPTIONS: Record<string, string> = {
     "Antikörperstruktur (IgG) — Variable Region, konstante Region, Fab/Fc-Fragment, Schwere und leichte Ketten.",
   "coagulation-cascade":
     "Gerinnungskaskade — Intrinsischer und extrinsischer Weg konvergieren an Faktor X → Thrombin → Fibrin.",
+  "heart-anatomy-interactive":
+    "Interaktive Herzanatomie — Kammern, Klappen, große Gefäße mit Blutfluss, Wanddicken und MedAT-Fokuspunkten.",
   "hemoglobin-curve":
     "Sauerstoff-Dissoziationskurve — Sigmoidförmige Kurve mit Links-/Rechtsverschiebung durch pH, Temperatur, CO₂ und 2,3-BPG.",
   "hpa-axis":
@@ -363,6 +373,8 @@ const DIAGRAM_CAPTIONS: Record<string, string> = {
     "DNA chemischer Aufbau — Phosphat-Desoxyribose-Rückgrat, Basenpaare A–T (2H) / G–C (3H), antiparallel 5'→3'.",
   "le-chatelier":
     "Le Chatelier'sches Prinzip — Gleichgewichtsverschiebung bei Störung durch Konzentration, Druck oder Temperatur.",
+  "molecule-viewer":
+    "Interaktiver Molekülstruktur-Viewer — 2D-Strukturformeln aus SMILES-Notation (Glucose, ATP, Ethanol, Aspirin, Alanin, Benzol).",
   // Physics
   "circuit-diagram": "Schaltkreise — Reihen- und Parallelschaltung von Widerständen.",
   "doppler-effect": "Doppler-Effekt — Frequenzverschiebung bei bewegter Quelle.",
@@ -408,6 +420,8 @@ const DIAGRAM_CAPTIONS: Record<string, string> = {
     "SI-Präfixe — Zehnerpotenzen von Femto bis Tera mit medizinisch relevanten Bereichen.",
   "diffraction-slit":
     "Einzelspaltbeugung — Intensitätsverteilung mit Zentralmaximum und Minima nach sin(θ) = mλ/b.",
+  "interactive-wave":
+    "Interaktive Wellenphysik — Amplitude, Frequenz und Superposition live verändern und Interferenz beobachten.",
   // Math
   "combinatorics-tree": "Baumdiagramm — Permutationen, Variationen und Kombinationen.",
   "coordinate-system": "Koordinatensystem — Lineare, quadratische und exponentielle Funktionen.",
@@ -438,6 +452,8 @@ const DIAGRAM_CAPTIONS: Record<string, string> = {
     "Gleichung lösen — Waage-Modell zeigt Schritt für Schritt, wie 2x + 6 = 14 gelöst wird.",
   "calculus-overview":
     "Analysis — f(x), Ableitung f′(x) als Tangentensteigung und Integral ∫f(x)dx als Flächeninhalt.",
+  "interactive-function":
+    "Interaktiver Funktionsplotter — Quadratische, Sinus- und Exponentialfunktionen mit verschiebbaren Parametern.",
 };
 
 export type DiagramType = keyof typeof DIAGRAM_MAP;

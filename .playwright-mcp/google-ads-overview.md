@@ -1,0 +1,1206 @@
+- generic [ref=e1]:
+  - generic [ref=e4]:
+    - banner "Navigationsleiste oben" [ref=e6]:
+      - status
+      - generic [ref=e7]:
+        - button [expanded] [ref=e8] [cursor=pointer]:
+          - img [ref=e11]: menu
+        - heading "Google Ads – Startseite aufrufen" [level=1] [ref=e13]:
+          - button "Google Ads – Startseite aufrufen" [ref=e14]:
+            - generic [ref=e15] [cursor=pointer]:
+              - img [ref=e16]
+              - img [ref=e23]
+              - generic [ref=e25]: Ads
+      - generic [ref=e28]:
+        - generic [ref=e30]:
+          - generic [ref=e36]:
+            - img [ref=e39]: search
+            - generic [ref=e40]:
+              - generic:
+                - generic: Seite oder Kampagne suchen
+              - combobox "Seite oder Kampagne suchen" [ref=e41]
+          - text: Suchen
+        - generic [ref=e42]:
+          - button "Darstellung" [ref=e45] [cursor=pointer]:
+            - generic [ref=e47]:
+              - img [ref=e48]: responsive_layout
+              - text: Darstellung
+          - button "Aktualisieren" [ref=e52] [cursor=pointer]:
+            - generic [ref=e54]:
+              - img [ref=e55]: refresh
+              - text: Aktualisieren
+          - button "Soforthilfe-Bereich öffnen" [ref=e58] [cursor=pointer]:
+            - generic [ref=e59]:
+              - text: Hilfe
+              - generic [ref=e60]:
+                - img [ref=e61]: help_outline
+                - text: Hilfe
+          - button "Benachrichtigungen" [ref=e79] [cursor=pointer]:
+            - generic [ref=e81]:
+              - img [ref=e84]: notifications
+              - generic [ref=e85]: Benachrichtigungen
+      - generic [ref=e64]:
+        - generic "489-261-6148 (MedMaster)" [ref=e65]
+        - generic [ref=e66]: andreas.lukas.koell@gmail.com
+      - button "Google-Konto" [ref=e71] [cursor=pointer]:
+        - img "Google-Konto (andreas.lukas.koell@gmail.com)" [ref=e72]
+    - generic [ref=e87]:
+      - generic [ref=e89]:
+        - generic [ref=e90]:
+          - generic [ref=e91]:
+            - button "Erstellen" [ref=e93] [cursor=pointer]:
+              - img [ref=e96]
+            - generic [ref=e98]: Erstellen
+          - menu [ref=e99]:
+            - menu [ref=e100]:
+              - menuitem "Kampagnen" [ref=e103] [cursor=pointer]:
+                - generic [ref=e104]:
+                  - img [ref=e106]: campaign
+                  - generic [ref=e107]: Kampagnen
+              - menuitem "Zielvorhaben" [ref=e110] [cursor=pointer]:
+                - generic [ref=e111]:
+                  - img [ref=e113]: rewarded_ads
+                  - generic [ref=e114]: Zielvorhaben
+              - menuitem "Tools" [ref=e117] [cursor=pointer]:
+                - generic [ref=e118]:
+                  - img [ref=e120]: construction
+                  - generic [ref=e121]: Tools
+              - menuitem "Abrechnung" [ref=e124] [cursor=pointer]:
+                - generic [ref=e125]:
+                  - img [ref=e127]: credit_card
+                  - generic [ref=e128]: Abrechnung
+              - menuitem "Verwaltung" [ref=e131] [cursor=pointer]:
+                - generic [ref=e132]:
+                  - img [ref=e134]: settings
+                  - generic [ref=e135]: Verwaltung
+        - navigation [ref=e136]:
+          - menu [ref=e137]:
+            - generic [ref=e138]:
+              - menuitem "Übersicht" [ref=e141] [cursor=pointer]:
+                - generic [ref=e143]: Übersicht
+              - menuitem "Empfehlungen" [ref=e147] [cursor=pointer]:
+                - generic [ref=e149]: Empfehlungen
+              - menuitem "Statistiken und Berichte" [ref=e153] [cursor=pointer]:
+                - generic [ref=e154]:
+                  - generic [ref=e155]: Statistiken und Berichte
+                  - img [ref=e158]: expand_more
+              - menuitem "Kampagnen" [ref=e161] [cursor=pointer]:
+                - generic [ref=e162]:
+                  - generic [ref=e163]: Kampagnen
+                  - img [ref=e166]: expand_more
+              - menuitem "Assets" [ref=e169] [cursor=pointer]:
+                - generic [ref=e170]:
+                  - generic [ref=e171]: Assets
+                  - img [ref=e174]: expand_more
+              - menuitem "Zielgruppen, Keywords und Inhalte" [ref=e177] [cursor=pointer]:
+                - generic [ref=e178]:
+                  - generic [ref=e179]: Zielgruppen, Keywords und Inhalte
+                  - img [ref=e182]: expand_more
+              - menuitem "Änderungsverlauf" [ref=e185] [cursor=pointer]:
+                - generic [ref=e187]: Änderungsverlauf
+      - generic [ref=e189]:
+        - generic [ref=e192]:
+          - button "Ansicht (2 Filter) Alle Kampagnen" [ref=e197] [cursor=pointer]:
+            - generic [ref=e198]:
+              - generic [ref=e199]: Ansicht (2 Filter)
+              - generic [ref=e200]:
+                - img [ref=e203]: home
+                - button "Alle Kampagnen" [ref=e204]
+            - img [ref=e206]: arrow_drop_down
+          - button "Kampagnen (1) Kampagne auswählen" [ref=e211] [cursor=pointer]:
+            - generic [ref=e212]:
+              - generic [ref=e213]: Kampagnen (1)
+              - generic [ref=e214]: Kampagne auswählen
+            - img [ref=e216]: arrow_drop_down
+        - group [ref=e220]:
+          - generic [ref=e221]:
+            - generic [ref=e222] [cursor=pointer]:
+              - generic: Filter
+            - generic: "Angewendete Filter:"
+            - grid "Angewendete Filter:" [ref=e223]:
+              - 'row "Kampagnenstatus: Aktiviert, Pausiert" [ref=e225] [cursor=pointer]':
+                - 'gridcell "Kampagnenstatus: Aktiviert, Pausiert" [ref=e226]':
+                  - 'button "Kampagnenstatus: Aktiviert, Pausiert" [ref=e227]': "Kampagnenstatus: Aktiviert, Pausiert"
+              - 'row "Anzeigengruppenstatus: Aktiviert, Pausiert" [ref=e229] [cursor=pointer]':
+                - 'gridcell "Anzeigengruppenstatus: Aktiviert, Pausiert" [ref=e230]':
+                  - 'button "Anzeigengruppenstatus: Aktiviert, Pausiert" [ref=e231]': "Anzeigengruppenstatus: Aktiviert, Pausiert"
+              - row [ref=e232]:
+                - gridcell [ref=e233]:
+                  - combobox "Filter hinzufügen" [ref=e234]
+                  - status [ref=e235]
+            - button "Speichern" [ref=e238] [cursor=pointer]:
+              - generic [ref=e239]:
+                - img [ref=e241]: save
+                - generic [ref=e242]: Speichern
+        - generic [ref=e245]:
+          - generic [ref=e247]:
+            - heading "Übersicht" [level=2] [ref=e250]
+            - generic [ref=e253]:
+              - generic [ref=e255] [cursor=pointer]:
+                - generic [ref=e256]: Letzte 30 Tage
+                - generic [ref=e258]:
+                  - button "16. bis 28. Mär 2026 Nicht zutreffend" [ref=e260]:
+                    - generic [ref=e261]: 16. bis 28. Mär 2026
+                    - img [ref=e263]: arrow_drop_down
+                  - generic [ref=e264]:
+                    - button "Zurück" [disabled]:
+                      - generic:
+                        - generic:
+                          - img: chevron_left
+                    - button "Weiter" [ref=e265]:
+                      - img [ref=e268]: chevron_right
+              - button "Letzte 30 Tage anzeigen" [ref=e270] [cursor=pointer]:
+                - generic [ref=e271]: Letzte 30 Tage anzeigen
+          - main [ref=e277]:
+            - generic [ref=e279]:
+              - application [ref=e282]:
+                - application [ref=e284]:
+                  - generic [ref=e285]:
+                    - tablist [ref=e289]:
+                      - tab "Startseite" [selected] [ref=e290] [cursor=pointer]:
+                        - generic [ref=e291]: Startseite
+                    - button "Benutzerdefinierte Ansicht hinzufügen" [ref=e294] [cursor=pointer]:
+                      - generic [ref=e295]:
+                        - img [ref=e297]: add
+                        - text: Benutzerdefinierte Ansicht hinzufügen
+                    - img [ref=e300] [cursor=pointer]: help_outline
+                  - generic [ref=e301]:
+                    - button "Neue Kampagne" [ref=e305] [cursor=pointer]:
+                      - img [ref=e307]: add
+                      - generic [ref=e308]: Neue Kampagne
+                    - generic [ref=e309]:
+                      - button "Button, über den sich der Inhalt der Übersichtskarten in verschiedenen Formaten herunterladen lässt." [ref=e312] [cursor=pointer]:
+                        - generic [ref=e314]:
+                          - img [ref=e315]: file_download
+                          - text: Herunterladen
+                      - button "Button, über den Sie Feedback zur Übersichtsseite geben können." [ref=e319] [cursor=pointer]:
+                        - generic [ref=e321]:
+                          - img [ref=e322]: feedback
+                          - text: Feedback
+                  - list [ref=e324]:
+                    - generic [ref=e325]:
+                      - listitem "Karte 1 von 0. Verwenden Sie die Pfeiltasten, um zwischen Karten zu wechseln, und die Tabulatortaste, um Karteninhalte einzugeben." [ref=e326]:
+                        - generic [ref=e328]:
+                          - generic [ref=e329]:
+                            - generic [ref=e330]:
+                              - img [ref=e332]: tour
+                              - heading "Einstieg in Google Ads" [level=1] [ref=e333]
+                            - button "Ein Menü mit zusätzlichen Kartenoptionen. Drücken Sie zum Öffnen die Eingabetaste." [ref=e337] [cursor=pointer]:
+                              - img [ref=e340]: more_vert
+                          - generic [ref=e345]:
+                            - generic [ref=e346]:
+                              - generic [ref=e348]: Empfehlungen zur Optimierung Ihrer Kampagne
+                              - generic [ref=e350]: Neue Möglichkeiten zur Optimierung Ihrer Anzeigen und der Leistung
+                              - generic [ref=e351]:
+                                - generic [ref=e352]:
+                                  - img [ref=e355]: lightbulb_outline
+                                  - generic [ref=e356]:
+                                    - generic [ref=e357]: Empfehlungen zur Leistungsverbesserung ansehen
+                                    - generic [ref=e359]: Sehen Sie sich individuelle Empfehlungen zur Optimierung Ihrer Kampagne an
+                                - generic [ref=e360]:
+                                  - button "Überspringen" [ref=e361]:
+                                    - generic [ref=e364]: Überspringen
+                                  - button "Empfehlungen aufrufen" [ref=e365]:
+                                    - generic [ref=e368]: Empfehlungen aufrufen
+                            - button "Kampagnenstatus ansehen" [ref=e370]:
+                              - generic [ref=e373]: Kampagnenstatus ansehen
+                      - listitem "Karte 1 von 0. Verwenden Sie die Pfeiltasten, um zwischen Karten zu wechseln, und die Tabulatortaste, um Karteninhalte einzugeben." [ref=e374]:
+                        - generic [ref=e376]:
+                          - heading "Zeitreihe" [level=1]
+                          - generic [ref=e377]:
+                            - generic [ref=e378]:
+                              - generic [ref=e379] [cursor=pointer]:
+                                - 'button "Messwert 1 von 4 für die Karte \"Zeitreihe\" auswählen. Aktueller Messwert: Klicks" [ref=e380]':
+                                  - 'generic "Messwert 1 von 4 für die Karte \"Zeitreihe\" auswählen. Aktueller Messwert: Klicks" [ref=e381]':
+                                    - generic [ref=e382]: Klicks
+                                    - text: arrow_drop_down
+                                - button "Klicks. 186. Diesen Messwert im Zeitachsendiagramm ausblenden." [ref=e383]:
+                                  - generic "186" [ref=e384]
+                              - generic [ref=e385] [cursor=pointer]:
+                                - 'button "Messwert 2 von 4 für die Karte \"Zeitreihe\" auswählen. Aktueller Messwert: Impressionen" [ref=e386]':
+                                  - 'generic "Messwert 2 von 4 für die Karte \"Zeitreihe\" auswählen. Aktueller Messwert: Impressionen" [ref=e387]':
+                                    - generic [ref=e388]: Impressionen
+                                    - text: arrow_drop_down
+                                - button "Impressionen. 4.781. Diesen Messwert im Zeitachsendiagramm ausblenden." [ref=e389]:
+                                  - generic "4.781" [ref=e390]: "4781"
+                              - generic [ref=e391] [cursor=pointer]:
+                                - 'button "Messwert 3 von 4 für die Karte \"Zeitreihe\" auswählen. Aktueller Messwert: Durchschn. CPC"':
+                                  - 'generic "Messwert 3 von 4 für die Karte \"Zeitreihe\" auswählen. Aktueller Messwert: Durchschn. CPC"':
+                                    - generic: Durchschn. CPC
+                                - button "Durchschn. CPC. 0,79 €. Diesen Messwert im Zeitachsendiagramm anzeigen und seine Änderung zulassen." [ref=e392]:
+                                  - generic "0,79 €" [ref=e393]
+                              - generic [ref=e394] [cursor=pointer]:
+                                - 'button "Messwert 4 von 4 für die Karte \"Zeitreihe\" auswählen. Aktueller Messwert: Kosten"':
+                                  - 'generic "Messwert 4 von 4 für die Karte \"Zeitreihe\" auswählen. Aktueller Messwert: Kosten"':
+                                    - generic: Kosten
+                                - button "Kosten. 147,10 €. Diesen Messwert im Zeitachsendiagramm anzeigen und seine Änderung zulassen." [ref=e395]:
+                                  - generic "147,10 €" [ref=e396]: 147 €
+                            - button "Ein Menü mit zusätzlichen Kartenoptionen. Drücken Sie zum Öffnen die Eingabetaste." [ref=e398] [cursor=pointer]:
+                              - img [ref=e401]: more_vert
+                          - generic [ref=e408]: Das Zeitachsendiagramm mit der Kontoleistung für bis zu vier ausgewählte Messwerte. Mit den Pfeiltasten nach links und rechts können Sie zwischen den Datenpunkten wechseln.
+                    - generic [ref=e411]:
+                      - listitem "Karte 1 von 0. Verwenden Sie die Pfeiltasten, um zwischen Karten zu wechseln, und die Tabulatortaste, um Karteninhalte einzugeben." [ref=e412]:
+                        - generic [ref=e414]:
+                          - generic [ref=e415]:
+                            - generic [ref=e416]:
+                              - img [ref=e418]: share_eta
+                              - heading "Tag und Uhrzeit" [level=1] [ref=e419]
+                            - generic [ref=e421]:
+                              - 'button "Wählen Sie einen Messwert für die Karte \"Tag und Uhrzeit\" aus. Aktueller Messwert: Impressionen" [ref=e422]':
+                                - 'generic "Wählen Sie einen Messwert für die Karte \"Tag und Uhrzeit\" aus. Aktueller Messwert: Impressionen" [ref=e423] [cursor=pointer]':
+                                  - generic [ref=e424]: Impressionen
+                                  - text: arrow_drop_down
+                              - button "Ein Menü mit zusätzlichen Kartenoptionen. Drücken Sie zum Öffnen die Eingabetaste." [ref=e426] [cursor=pointer]:
+                                - img [ref=e429]: more_vert
+                          - generic [ref=e432]:
+                            - generic [ref=e433]: Leistung nach Wochentag und Tageszeit
+                            - tablist [ref=e435]:
+                              - tab "Tag" [ref=e437] [cursor=pointer]:
+                                - generic [ref=e438]: Tag
+                              - tab "Tag und Uhrzeit" [selected] [ref=e440] [cursor=pointer]:
+                                - generic [ref=e441]: Tag und Uhrzeit
+                              - tab "Stunde" [ref=e443] [cursor=pointer]:
+                                - generic [ref=e444]: Stunde
+                            - generic [ref=e446]:
+                              - generic [ref=e447]:
+                                - generic [ref=e448]: S
+                                - generic [ref=e449]: M
+                                - generic [ref=e450]: D
+                                - generic [ref=e451]: M
+                                - generic [ref=e452]: D
+                                - generic [ref=e453]: F
+                                - generic [ref=e454]: S
+                              - grid [ref=e455]:
+                                - generic [ref=e456]:
+                                  - row [ref=e457]:
+                                    - gridcell [ref=e458]
+                                    - gridcell [ref=e459]
+                                    - gridcell [ref=e460]
+                                    - gridcell [ref=e461]
+                                    - gridcell [ref=e462]
+                                    - gridcell [ref=e463]
+                                    - gridcell [ref=e464]
+                                    - gridcell [ref=e465]
+                                    - gridcell [ref=e466]
+                                    - gridcell [ref=e467]
+                                    - gridcell [ref=e468]
+                                    - gridcell [ref=e469]
+                                    - gridcell [ref=e470]
+                                    - gridcell [ref=e471]
+                                    - gridcell [ref=e472]
+                                    - gridcell [ref=e473]
+                                    - gridcell [ref=e474]
+                                    - gridcell [ref=e475]
+                                    - gridcell [ref=e476]
+                                    - gridcell [ref=e477]
+                                    - gridcell [ref=e478]
+                                    - gridcell [ref=e479]
+                                    - gridcell [ref=e480]
+                                    - gridcell [ref=e481]
+                                  - row [ref=e482]:
+                                    - gridcell [ref=e483]
+                                    - gridcell [ref=e484]
+                                    - gridcell [ref=e485]
+                                    - gridcell [ref=e486]
+                                    - gridcell [ref=e487]
+                                    - gridcell [ref=e488]
+                                    - gridcell [ref=e489]
+                                    - gridcell [ref=e490]
+                                    - gridcell [ref=e491]
+                                    - gridcell [ref=e492]
+                                    - gridcell [ref=e493]
+                                    - gridcell [ref=e494]
+                                    - gridcell [ref=e495]
+                                    - gridcell [ref=e496]
+                                    - gridcell [ref=e497]
+                                    - gridcell [ref=e498]
+                                    - gridcell [ref=e499]
+                                    - gridcell [ref=e500]
+                                    - gridcell [ref=e501]
+                                    - gridcell [ref=e502]
+                                    - gridcell [ref=e503]
+                                    - gridcell [ref=e504]
+                                    - gridcell [ref=e505]
+                                    - gridcell [ref=e506]
+                                  - row [ref=e507]:
+                                    - gridcell [ref=e508]
+                                    - gridcell [ref=e509]
+                                    - gridcell [ref=e510]
+                                    - gridcell [ref=e511]
+                                    - gridcell [ref=e512]
+                                    - gridcell [ref=e513]
+                                    - gridcell [ref=e514]
+                                    - gridcell [ref=e515]
+                                    - gridcell [ref=e516]
+                                    - gridcell [ref=e517]
+                                    - gridcell [ref=e518]
+                                    - gridcell [ref=e519]
+                                    - gridcell [ref=e520]
+                                    - gridcell [ref=e521]
+                                    - gridcell [ref=e522]
+                                    - gridcell [ref=e523]
+                                    - gridcell [ref=e524]
+                                    - gridcell [ref=e525]
+                                    - gridcell [ref=e526]
+                                    - gridcell [ref=e527]
+                                    - gridcell [ref=e528]
+                                    - gridcell [ref=e529]
+                                    - gridcell [ref=e530]
+                                    - gridcell [ref=e531]
+                                  - row [ref=e532]:
+                                    - gridcell [ref=e533]
+                                    - gridcell [ref=e534]
+                                    - gridcell [ref=e535]
+                                    - gridcell [ref=e536]
+                                    - gridcell [ref=e537]
+                                    - gridcell [ref=e538]
+                                    - gridcell [ref=e539]
+                                    - gridcell [ref=e540]
+                                    - gridcell [ref=e541]
+                                    - gridcell [ref=e542]
+                                    - gridcell [ref=e543]
+                                    - gridcell [ref=e544]
+                                    - gridcell [ref=e545]
+                                    - gridcell [ref=e546]
+                                    - gridcell [ref=e547]
+                                    - gridcell [ref=e548]
+                                    - gridcell [ref=e549]
+                                    - gridcell [ref=e550]
+                                    - gridcell [ref=e551]
+                                    - gridcell [ref=e552]
+                                    - gridcell [ref=e553]
+                                    - gridcell [ref=e554]
+                                    - gridcell [ref=e555]
+                                    - gridcell [ref=e556]
+                                  - row [ref=e557]:
+                                    - gridcell [ref=e558]
+                                    - gridcell [ref=e559]
+                                    - gridcell [ref=e560]
+                                    - gridcell [ref=e561]
+                                    - gridcell [ref=e562]
+                                    - gridcell [ref=e563]
+                                    - gridcell [ref=e564]
+                                    - gridcell [ref=e565]
+                                    - gridcell [ref=e566]
+                                    - gridcell [ref=e567]
+                                    - gridcell [ref=e568]
+                                    - gridcell [ref=e569]
+                                    - gridcell [ref=e570]
+                                    - gridcell [ref=e571]
+                                    - gridcell [ref=e572]
+                                    - gridcell [ref=e573]
+                                    - gridcell [ref=e574]
+                                    - gridcell [ref=e575]
+                                    - gridcell [ref=e576]
+                                    - gridcell [ref=e577]
+                                    - gridcell [ref=e578]
+                                    - gridcell [ref=e579]
+                                    - gridcell [ref=e580]
+                                    - gridcell [ref=e581]
+                                  - row [ref=e582]:
+                                    - gridcell [ref=e583]
+                                    - gridcell [ref=e584]
+                                    - gridcell [ref=e585]
+                                    - gridcell [ref=e586]
+                                    - gridcell [ref=e587]
+                                    - gridcell [ref=e588]
+                                    - gridcell [ref=e589]
+                                    - gridcell [ref=e590]
+                                    - gridcell [ref=e591]
+                                    - gridcell [ref=e592]
+                                    - gridcell [ref=e593]
+                                    - gridcell [ref=e594]
+                                    - gridcell [ref=e595]
+                                    - gridcell [ref=e596]
+                                    - gridcell [ref=e597]
+                                    - gridcell [ref=e598]
+                                    - gridcell [ref=e599]
+                                    - gridcell [ref=e600]
+                                    - gridcell [ref=e601]
+                                    - gridcell [ref=e602]
+                                    - gridcell [ref=e603]
+                                    - gridcell [ref=e604]
+                                    - gridcell [ref=e605]
+                                    - gridcell [ref=e606]
+                                  - row [ref=e607]:
+                                    - gridcell [ref=e608]
+                                    - gridcell [ref=e609]
+                                    - gridcell [ref=e610]
+                                    - gridcell [ref=e611]
+                                    - gridcell [ref=e612]
+                                    - gridcell [ref=e613]
+                                    - gridcell [ref=e614]
+                                    - gridcell [ref=e615]
+                                    - gridcell [ref=e616]
+                                    - gridcell [ref=e617]
+                                    - gridcell [ref=e618]
+                                    - gridcell [ref=e619]
+                                    - gridcell [ref=e620]
+                                    - gridcell [ref=e621]
+                                    - gridcell [ref=e622]
+                                    - gridcell [ref=e623]
+                                    - gridcell [ref=e624]
+                                    - gridcell [ref=e625]
+                                    - gridcell [ref=e626]
+                                    - gridcell [ref=e627]
+                                    - gridcell [ref=e628]
+                                    - gridcell [ref=e629]
+                                    - gridcell [ref=e630]
+                                    - gridcell [ref=e631]
+                              - generic [ref=e639]:
+                                - generic [ref=e640]: 00 Uhr
+                                - generic [ref=e641]: 06 Uhr
+                                - generic [ref=e642]: 12 Uhr
+                                - generic [ref=e643]: 18 Uhr
+                                - generic [ref=e644]: 00 Uhr
+                          - button "Tabelle mit Werbezeitplaner aufrufen" [ref=e647] [cursor=pointer]:
+                            - generic [ref=e648]: Werbezeitplaner
+                      - listitem "Karte 1 von 0. Verwenden Sie die Pfeiltasten, um zwischen Karten zu wechseln, und die Tabulatortaste, um Karteninhalte einzugeben." [ref=e650]:
+                        - generic [ref=e652]:
+                          - generic [ref=e653]:
+                            - generic [ref=e654]:
+                              - img [ref=e656]: devices
+                              - heading "Geräte" [level=1] [ref=e657]
+                            - button "Ein Menü mit zusätzlichen Kartenoptionen. Drücken Sie zum Öffnen die Eingabetaste." [ref=e661] [cursor=pointer]:
+                              - img [ref=e664]: more_vert
+                          - generic [ref=e667]:
+                            - generic [ref=e668]: Geräteübergreifende Anzeigenleistung
+                            - generic [ref=e669]:
+                              - generic [ref=e670]:
+                                - generic [ref=e671]:
+                                  - generic [ref=e672]:
+                                    - generic [ref=e673]: smartphone
+                                    - generic [ref=e674]: Smartphones
+                                  - generic [ref=e675]:
+                                    - generic [ref=e676]: tablet
+                                    - generic [ref=e677]: Tablets
+                                  - generic [ref=e678]:
+                                    - generic [ref=e679]: laptop
+                                    - generic [ref=e680]: Computer
+                                - table "Segmentierte Daten. Verwenden Sie die Pfeiltasten, um zwischen den Zellen zu wechseln." [ref=e681]:
+                                  - generic [ref=e682]:
+                                    - row [ref=e683]:
+                                      - cell [ref=e684]
+                                      - cell [ref=e685]
+                                      - cell [ref=e686]
+                                    - row "55,0 % 0,6 % 44,4 %" [ref=e687]:
+                                      - cell "55,0 %" [ref=e688]:
+                                        - generic [ref=e690]: 55,0 %
+                                      - cell "0,6 %" [ref=e691]:
+                                        - generic [ref=e693]: 0,6 %
+                                      - cell "44,4 %" [ref=e694]:
+                                        - generic [ref=e696]: 44,4 %
+                                  - generic [ref=e697]:
+                                    - row [ref=e698]:
+                                      - cell [ref=e699]
+                                      - cell [ref=e700]
+                                      - cell [ref=e701]
+                                    - row "56,2 % 3,8 % 40,0 %" [ref=e702]:
+                                      - cell "56,2 %" [ref=e703]:
+                                        - generic [ref=e705]: 56,2 %
+                                      - cell "3,8 %" [ref=e706]:
+                                        - generic [ref=e708]: 3,8 %
+                                      - cell "40,0 %" [ref=e709]:
+                                        - generic [ref=e711]: 40,0 %
+                                  - generic [ref=e712]:
+                                    - row [ref=e713]:
+                                      - cell [ref=e714]
+                                      - cell [ref=e715]
+                                      - cell [ref=e716]
+                                    - row "56,5 % 1,1 % 42,5 %" [ref=e717]:
+                                      - cell "56,5 %" [ref=e718]:
+                                        - generic [ref=e720]: 56,5 %
+                                      - cell "1,1 %" [ref=e721]:
+                                        - generic [ref=e723]: 1,1 %
+                                      - cell "42,5 %" [ref=e724]:
+                                        - generic [ref=e726]: 42,5 %
+                              - generic [ref=e727]:
+                                - 'button "Messwert 1 von 3 für die Karte \"Geräte\" auswählen. Aktueller Messwert: Kosten" [ref=e729]':
+                                  - 'generic "Messwert 1 von 3 für die Karte \"Geräte\" auswählen. Aktueller Messwert: Kosten" [ref=e730] [cursor=pointer]':
+                                    - generic [ref=e731]: Kosten
+                                    - text: arrow_drop_down
+                                - 'button "Messwert 2 von 3 für die Karte \"Geräte\" auswählen. Aktueller Messwert: Impressionen" [ref=e733]':
+                                  - 'generic "Messwert 2 von 3 für die Karte \"Geräte\" auswählen. Aktueller Messwert: Impressionen" [ref=e734] [cursor=pointer]':
+                                    - generic [ref=e735]: Impressionen
+                                    - text: arrow_drop_down
+                                - 'button "Messwert 3 von 3 für die Karte \"Geräte\" auswählen. Aktueller Messwert: Klicks" [ref=e737]':
+                                  - 'generic "Messwert 3 von 3 für die Karte \"Geräte\" auswählen. Aktueller Messwert: Klicks" [ref=e738] [cursor=pointer]':
+                                    - generic [ref=e739]: Klicks
+                                    - text: arrow_drop_down
+                          - button "Tabelle mit Geräten aufrufen" [ref=e742] [cursor=pointer]:
+                            - generic [ref=e743]: Geräte
+                      - listitem "Karte 1 von 0. Verwenden Sie die Pfeiltasten, um zwischen Karten zu wechseln, und die Tabulatortaste, um Karteninhalte einzugeben." [ref=e745]:
+                        - generic [ref=e747]:
+                          - generic [ref=e748]:
+                            - generic [ref=e749]:
+                              - img [ref=e751]: lightbulb
+                              - heading "Optimierungsfaktor" [level=1] [ref=e752]
+                            - button "Ein Menü mit zusätzlichen Kartenoptionen. Drücken Sie zum Öffnen die Eingabetaste." [ref=e756] [cursor=pointer]:
+                              - img [ref=e759]: more_vert
+                          - generic [ref=e762]:
+                            - generic [ref=e763]:
+                              - generic [ref=e764]:
+                                - link "Ihr Optimierungsfaktor ist 97,4 %." [ref=e765] [cursor=pointer]: 97,4 %
+                                - progressbar "aktiver Fortschritt" [ref=e768]
+                              - generic [ref=e772]:
+                                - generic [ref=e773]:
+                                  - generic [ref=e774]: Ihr Optimierungsfaktor
+                                  - button "Weitere Informationen" [ref=e776] [cursor=pointer]:
+                                    - img [ref=e778]: help_outline
+                                - generic [ref=e779]: Wenn Sie die Empfehlungen für diese Kampagnen übernehmen, können Sie den Faktor steigern
+                            - grid "Verwenden Sie die Pfeiltasten, um zwischen Zeilen zu wechseln" [ref=e780]:
+                              - rowgroup [ref=e781]:
+                                - row "Der Optimierungsfaktor für „MedAT Vorbereitung“ ist 97,4 %. Mit der Eingabetaste können Sie die entsprechenden Empfehlungen aufrufen." [ref=e782] [cursor=pointer]:
+                                  - gridcell "97,4 %" [ref=e783]
+                                  - gridcell "MedAT Vorbereitung" [ref=e784]
+                                  - gridcell [ref=e785]:
+                                    - img [ref=e787]: east
+                          - generic [ref=e788]:
+                            - button "Empfehlungen aufrufen" [ref=e790] [cursor=pointer]:
+                              - generic [ref=e791]: Alle Empfehlungen
+                            - generic [ref=e793]:
+                              - generic:
+                                - img: keyboard_arrow_left
+                              - generic [ref=e794]: 1 / 1
+                              - generic:
+                                - img: keyboard_arrow_right
+                      - listitem "Karte 1 von 0. Verwenden Sie die Pfeiltasten, um zwischen Karten zu wechseln, und die Tabulatortaste, um Karteninhalte einzugeben." [ref=e795]:
+                        - generic [ref=e797]:
+                          - generic [ref=e798]:
+                            - generic [ref=e799]:
+                              - img [ref=e801]: bar_chart
+                              - heading "Kampagnen" [level=1] [ref=e802]
+                            - button "Ein Menü mit zusätzlichen Kartenoptionen. Drücken Sie zum Öffnen die Eingabetaste." [ref=e806] [cursor=pointer]:
+                              - img [ref=e809]: more_vert
+                          - region "Kampagnen absteigend nach Kosten sortiert. Verwenden Sie die Pfeiltasten zum Auswählen, \"E\" zur Budgetbearbeitung und die Eingabetaste, um eine Übersichtsseite für die jeweilige Kampagne aufzurufen." [ref=e812]:
+                            - generic [ref=e813]: Zusammenfassung der Kampagnenleistung
+                            - generic:
+                              - generic: Kampagnen absteigend nach Kosten sortiert. Verwenden Sie die Pfeiltasten zum Auswählen, "E" zur Budgetbearbeitung und die Eingabetaste, um eine Übersichtsseite für die jeweilige Kampagne aufzurufen.
+                            - generic [ref=e815]:
+                              - generic [ref=e826] [cursor=pointer]:
+                                - img [ref=e828]: circle
+                                - generic [ref=e829]: MedAT Vorbereitung
+                              - generic [ref=e830]:
+                                - 'button "Messwert 1 von 3 für die Karte \"Kampagnen\" auswählen. Aktueller Messwert: Kosten" [ref=e832]':
+                                  - 'generic "Messwert 1 von 3 für die Karte \"Kampagnen\" auswählen. Aktueller Messwert: Kosten" [ref=e833] [cursor=pointer]':
+                                    - generic [ref=e834]: Kosten
+                                    - text: arrow_drop_down
+                                - generic [ref=e841]: 147,10 €
+                              - generic [ref=e842]:
+                                - 'button "Messwert 2 von 3 für die Karte \"Kampagnen\" auswählen. Aktueller Messwert: Klicks" [ref=e844]':
+                                  - 'generic "Messwert 2 von 3 für die Karte \"Kampagnen\" auswählen. Aktueller Messwert: Klicks" [ref=e845] [cursor=pointer]':
+                                    - generic [ref=e846]: Klicks
+                                    - text: arrow_drop_down
+                                - generic [ref=e853]: "186"
+                              - generic [ref=e854]:
+                                - 'button "Messwert 3 von 3 für die Karte \"Kampagnen\" auswählen. Aktueller Messwert: CTR" [ref=e856]':
+                                  - 'generic "Messwert 3 von 3 für die Karte \"Kampagnen\" auswählen. Aktueller Messwert: CTR" [ref=e857] [cursor=pointer]':
+                                    - generic [ref=e858]: CTR
+                                    - text: arrow_drop_down
+                                - generic [ref=e865]: 3,89 %
+                          - generic [ref=e866]:
+                            - button "Kampagnentabelle aufrufen" [ref=e868] [cursor=pointer]:
+                              - generic [ref=e869]: Alle Kampagnen
+                            - generic [ref=e871]:
+                              - generic:
+                                - img: keyboard_arrow_left
+                              - generic [ref=e872]: 1 / 1
+                              - generic:
+                                - img: keyboard_arrow_right
+                      - listitem "Karte 1 von 0. Verwenden Sie die Pfeiltasten, um zwischen Karten zu wechseln, und die Tabulatortaste, um Karteninhalte einzugeben." [ref=e873]:
+                        - generic [ref=e875]:
+                          - generic [ref=e876]:
+                            - generic [ref=e877]:
+                              - img [ref=e879]: user_attributes
+                              - heading "Demografische Merkmale" [level=1] [ref=e880]
+                            - generic [ref=e882]:
+                              - 'button "Wählen Sie einen Messwert für die Karte \"Demografische Merkmale\" aus. Aktueller Messwert: Impressionen" [ref=e883]':
+                                - 'generic "Wählen Sie einen Messwert für die Karte \"Demografische Merkmale\" aus. Aktueller Messwert: Impressionen" [ref=e884] [cursor=pointer]':
+                                  - generic [ref=e885]: Impressionen
+                                  - text: arrow_drop_down
+                              - button "Ein Menü mit zusätzlichen Kartenoptionen. Drücken Sie zum Öffnen die Eingabetaste." [ref=e887] [cursor=pointer]:
+                                - img [ref=e890]: more_vert
+                          - generic [ref=e893]:
+                            - generic [ref=e894]: Zusammenfassung der demografischen Gruppen, die Sie mit Ihren Anzeigen erreichen, nach Alter und Geschlecht unterteilt
+                            - tablist [ref=e896]:
+                              - tab "Geschlecht" [ref=e898] [cursor=pointer]:
+                                - generic [ref=e899]: Geschlecht
+                              - tab "Geschlecht und Alter" [selected] [ref=e901] [cursor=pointer]:
+                                - generic [ref=e902]: Geschlecht und Alter
+                              - tab "Alter" [ref=e904] [cursor=pointer]:
+                                - generic [ref=e905]: Alter
+                            - generic [ref=e907]:
+                              - generic [ref=e908]:
+                                - generic [ref=e909]: Männlich
+                                - generic [ref=e910]: Weiblich
+                              - grid [ref=e911]:
+                                - generic [ref=e912]:
+                                  - row [ref=e913]:
+                                    - gridcell [ref=e914]
+                                    - gridcell [ref=e915]
+                                    - gridcell [ref=e916]
+                                    - gridcell [ref=e917]
+                                    - gridcell [ref=e918]
+                                    - gridcell [ref=e919]
+                                  - row [ref=e920]:
+                                    - gridcell [ref=e921]
+                                    - gridcell [ref=e922]
+                                    - gridcell [ref=e923]
+                                    - gridcell [ref=e924]
+                                    - gridcell [ref=e925]
+                                    - gridcell [ref=e926]
+                              - generic [ref=e928]:
+                                - generic [ref=e929]: 18–24
+                                - generic [ref=e930]: 25–34
+                                - generic [ref=e931]: 35–44
+                                - generic [ref=e932]: 45–54
+                                - generic [ref=e933]: 55–64
+                                - generic [ref=e934]: 65 und älter
+                            - generic [ref=e935]:
+                              - text: Basierend auf den 38 % der Impressionen mit bekanntem Geschlecht und Alter.
+                              - button "Weitere Informationen" [ref=e937] [cursor=pointer]:
+                                - img [ref=e939]: help_outline
+                          - button "Geschlecht und Alter" [ref=e942] [cursor=pointer]:
+                            - generic [ref=e943]: Geschlecht und Alter
+                      - listitem "Karte 1 von 0. Verwenden Sie die Pfeiltasten, um zwischen Karten zu wechseln, und die Tabulatortaste, um Karteninhalte einzugeben." [ref=e945]:
+                        - generic [ref=e947]:
+                          - generic [ref=e948]:
+                            - generic [ref=e949]:
+                              - img [ref=e951]: add_ad
+                              - heading "Größte Veränderungen" [level=1] [ref=e952]
+                            - generic [ref=e954]:
+                              - 'button "Wählen Sie einen Messwert für die Karte \"Größte Veränderungen\" aus. Aktueller Messwert: Kosten" [ref=e955]':
+                                - 'generic "Wählen Sie einen Messwert für die Karte \"Größte Veränderungen\" aus. Aktueller Messwert: Kosten" [ref=e956] [cursor=pointer]':
+                                  - generic [ref=e957]: Kosten
+                                  - text: arrow_drop_down
+                              - button "Ein Menü mit zusätzlichen Kartenoptionen. Drücken Sie zum Öffnen die Eingabetaste." [ref=e959] [cursor=pointer]:
+                                - img [ref=e962]: more_vert
+                          - generic [ref=e965]:
+                            - generic [ref=e966]: Wichtigste Änderungen an Ihren Kampagnen und Anzeigengruppen
+                            - generic [ref=e967]:
+                              - text: 16. bis 28. Mär 2026 im Vergleich zu 3. bis 15. Mär 2026
+                              - button "Drücken Sie die Eingabetaste, um weitere Informationen zum Zeitraumvergleich zu erhalten." [ref=e968] [cursor=pointer]:
+                                - img [ref=e970]: help_outline
+                            - region "Verwenden Sie die Pfeiltasten, um zwischen Zeilen zu wechseln" [ref=e971]:
+                              - list [ref=e972]:
+                                - listitem [ref=e973]:
+                                  - generic [ref=e977]:
+                                    - img [ref=e980]: circle
+                                    - generic [ref=e982]: MedAT Vorbereitung
+                                    - generic [ref=e987]:
+                                      - generic [ref=e988]: + 147,10 €
+                                      - generic [ref=e989]: + ∞
+                          - generic [ref=e992]:
+                            - generic:
+                              - img: keyboard_arrow_left
+                            - generic [ref=e993]: 1 / 1
+                            - generic:
+                              - img: keyboard_arrow_right
+                      - listitem "Karte 1 von 0. Verwenden Sie die Pfeiltasten, um zwischen Karten zu wechseln, und die Tabulatortaste, um Karteninhalte einzugeben." [ref=e994]:
+                        - generic [ref=e996]:
+                          - generic [ref=e997]:
+                            - generic [ref=e998]:
+                              - img [ref=e1000]: search
+                              - button "Suchanfragen" [ref=e1001]:
+                                - heading "Suchanfragen" [level=1] [ref=e1002] [cursor=pointer]
+                            - generic [ref=e1004]:
+                              - generic [ref=e1005]: "Sortieren nach:"
+                              - 'button "Wählen Sie einen Messwert für die Karte \"Suchanfragen\" aus. Aktueller Messwert: Impressionen" [ref=e1006]':
+                                - 'generic "Wählen Sie einen Messwert für die Karte \"Suchanfragen\" aus. Aktueller Messwert: Impressionen" [ref=e1007] [cursor=pointer]':
+                                  - generic [ref=e1008]: Impressionen
+                                  - text: arrow_drop_down
+                              - button "Ein Menü mit zusätzlichen Kartenoptionen. Drücken Sie zum Öffnen die Eingabetaste." [ref=e1010] [cursor=pointer]:
+                                - img [ref=e1013]: more_vert
+                          - generic [ref=e1016]:
+                            - generic [ref=e1017]: Top-Suchanfragen und ‑Wörter in Suchanfragen, bei denen Nutzer Ihre Anzeigen gesehen haben
+                            - tablist [ref=e1019]:
+                              - tab "Suchanfragen" [selected] [ref=e1021] [cursor=pointer]:
+                                - generic [ref=e1022]: Suchanfragen
+                              - tab "Wörter" [ref=e1024] [cursor=pointer]:
+                                - generic [ref=e1025]: Wörter
+                            - 'listbox "100 Ergebnisse, darunter: medat, medat vorbereitung, med at" [ref=e1029]':
+                              - option "medat" [ref=e1030] [cursor=pointer]:
+                                - generic [ref=e1031]: medat
+                              - option "medat vorbereitung" [ref=e1032] [cursor=pointer]:
+                                - generic [ref=e1033]: medat vorbereitung
+                              - option "med at" [ref=e1034] [cursor=pointer]:
+                                - generic [ref=e1035]: med at
+                              - option "medat 2026" [ref=e1036] [cursor=pointer]:
+                                - generic [ref=e1037]: medat 2026
+                              - option "medat testsimulation" [ref=e1038] [cursor=pointer]:
+                                - generic [ref=e1039]: medat testsimulation
+                              - option "medat simulation" [ref=e1040] [cursor=pointer]:
+                                - generic [ref=e1041]: medat simulation
+                              - option "medat stichwortliste 2026" [ref=e1042] [cursor=pointer]:
+                                - generic [ref=e1043]: medat stichwortliste 2026
+                              - option "medbreaker" [ref=e1044] [cursor=pointer]:
+                                - generic [ref=e1045]: medbreaker
+                              - option "medat altfragen" [ref=e1046] [cursor=pointer]:
+                                - generic [ref=e1047]: medat altfragen
+                              - option "medat anmeldung" [ref=e1048] [cursor=pointer]:
+                                - generic [ref=e1049]: medat anmeldung
+                              - option "stichwortliste medat 2026" [ref=e1050] [cursor=pointer]:
+                                - generic [ref=e1051]: stichwortliste medat 2026
+                              - option "medat anmeldung 2026" [ref=e1052] [cursor=pointer]:
+                                - generic [ref=e1053]: medat anmeldung 2026
+                              - option "medat test" [ref=e1054] [cursor=pointer]:
+                                - generic [ref=e1055]: medat test
+                              - option "medat probetest" [ref=e1056] [cursor=pointer]:
+                                - generic [ref=e1057]: medat probetest
+                              - option "medizin aufnahmetest 2026" [ref=e1058] [cursor=pointer]:
+                                - generic [ref=e1059]: medizin aufnahmetest 2026
+                              - option "medat lernplan" [ref=e1060] [cursor=pointer]:
+                                - generic [ref=e1061]: medat lernplan
+                              - option "medizinertest österreich" [ref=e1062] [cursor=pointer]:
+                                - generic [ref=e1063]: medizinertest österreich
+                              - option "medat fragen" [ref=e1064] [cursor=pointer]:
+                                - generic [ref=e1065]: medat fragen
+                              - option "medbuddy" [ref=e1066] [cursor=pointer]:
+                                - generic [ref=e1067]: medbuddy
+                              - option "kff medat" [ref=e1068] [cursor=pointer]:
+                                - generic [ref=e1069]: kff medat
+                              - option "medat kurse" [ref=e1070] [cursor=pointer]:
+                                - generic [ref=e1071]: medat kurse
+                              - option "medat österreich" [ref=e1072] [cursor=pointer]:
+                                - generic [ref=e1073]: medat österreich
+                              - option "probe medat" [ref=e1074] [cursor=pointer]:
+                                - generic [ref=e1075]: probe medat
+                              - option "medat aufbau" [ref=e1076] [cursor=pointer]:
+                                - generic [ref=e1077]: medat aufbau
+                              - option "medat aufnahmetest 2026" [ref=e1078] [cursor=pointer]:
+                                - generic [ref=e1079]: medat aufnahmetest 2026
+                              - option "medat lernen" [ref=e1080] [cursor=pointer]:
+                                - generic [ref=e1081]: medat lernen
+                              - option "medat simulation kostenlos" [ref=e1082] [cursor=pointer]:
+                                - generic [ref=e1083]: medat simulation kostenlos
+                              - option "medat stichwortliste 2026 pdf" [ref=e1084] [cursor=pointer]:
+                                - generic [ref=e1085]: medat stichwortliste 2026 pdf
+                              - option "medat wortflüssigkeit übungen" [ref=e1086] [cursor=pointer]:
+                                - generic [ref=e1087]: medat wortflüssigkeit übungen
+                              - option "testsimulation medat" [ref=e1088] [cursor=pointer]:
+                                - generic [ref=e1089]: testsimulation medat
+                              - option "medat 2026 anmeldung" [ref=e1090] [cursor=pointer]:
+                                - generic [ref=e1091]: medat 2026 anmeldung
+                              - option "medat stoff" [ref=e1092] [cursor=pointer]:
+                                - generic [ref=e1093]: medat stoff
+                              - option "medizin aufnahmetest" [ref=e1094] [cursor=pointer]:
+                                - generic [ref=e1095]: medizin aufnahmetest
+                              - option "medat innsbruck 2026" [ref=e1096] [cursor=pointer]:
+                                - generic [ref=e1097]: medat innsbruck 2026
+                              - option "mission medat" [ref=e1098] [cursor=pointer]:
+                                - generic [ref=e1099]: mission medat
+                              - option "textverständnis medat" [ref=e1100] [cursor=pointer]:
+                                - generic [ref=e1101]: textverständnis medat
+                              - option "vmc medat" [ref=e1102] [cursor=pointer]:
+                                - generic [ref=e1103]: vmc medat
+                              - option "ablauf medat" [ref=e1104] [cursor=pointer]:
+                                - generic [ref=e1105]: ablauf medat
+                              - option "medat test simulation" [ref=e1106] [cursor=pointer]:
+                                - generic [ref=e1107]: medat test simulation
+                              - option "medat unterlagen" [ref=e1108] [cursor=pointer]:
+                                - generic [ref=e1109]: medat unterlagen
+                              - option "medat vision" [ref=e1110] [cursor=pointer]:
+                                - generic [ref=e1111]: medat vision
+                              - option "medat übungen" [ref=e1112] [cursor=pointer]:
+                                - generic [ref=e1113]: medat übungen
+                              - option "medat übungen kostenlos" [ref=e1114] [cursor=pointer]:
+                                - generic [ref=e1115]: medat übungen kostenlos
+                              - option "medbreaker testsimulation" [ref=e1116] [cursor=pointer]:
+                                - generic [ref=e1117]: medbreaker testsimulation
+                              - option "studymed" [ref=e1118] [cursor=pointer]:
+                                - generic [ref=e1119]: studymed
+                              - option "wortflüssigkeit medat" [ref=e1120] [cursor=pointer]:
+                                - generic [ref=e1121]: wortflüssigkeit medat
+                              - option "anmeldung medat 2026" [ref=e1122] [cursor=pointer]:
+                                - generic [ref=e1123]: anmeldung medat 2026
+                              - option "implikationen erkennen medat" [ref=e1124] [cursor=pointer]:
+                                - generic [ref=e1125]: implikationen erkennen medat
+                              - option "medat aufnahmetest" [ref=e1126] [cursor=pointer]:
+                                - generic [ref=e1127]: medat aufnahmetest
+                              - option "medat bms fragen" [ref=e1128] [cursor=pointer]:
+                                - generic [ref=e1129]: medat bms fragen
+                              - option "medat skripten" [ref=e1130] [cursor=pointer]:
+                                - generic [ref=e1131]: medat skripten
+                              - option "medat vorbereitungsunterlagen" [ref=e1132] [cursor=pointer]:
+                                - generic [ref=e1133]: medat vorbereitungsunterlagen
+                              - option "medat z" [ref=e1134] [cursor=pointer]:
+                                - generic [ref=e1135]: medat z
+                              - option "medizinstudium aufnahmetest" [ref=e1136] [cursor=pointer]:
+                                - generic [ref=e1137]: medizinstudium aufnahmetest
+                              - option "100 medat" [ref=e1138] [cursor=pointer]:
+                                - generic [ref=e1139]: 100 medat
+                              - option "med aufnahmetest 2026" [ref=e1140] [cursor=pointer]:
+                                - generic [ref=e1141]: med aufnahmetest 2026
+                              - option "medat 2026 stichwortliste" [ref=e1142] [cursor=pointer]:
+                                - generic [ref=e1143]: medat 2026 stichwortliste
+                              - option "medat bücher" [ref=e1144] [cursor=pointer]:
+                                - generic [ref=e1145]: medat bücher
+                              - option "medat graz" [ref=e1146] [cursor=pointer]:
+                                - generic [ref=e1147]: medat graz
+                              - option "medat online übungen" [ref=e1148] [cursor=pointer]:
+                                - generic [ref=e1149]: medat online übungen
+                              - option "medat skript" [ref=e1150] [cursor=pointer]:
+                                - generic [ref=e1151]: medat skript
+                              - option "medat stichwortliste" [ref=e1152] [cursor=pointer]:
+                                - generic [ref=e1153]: medat stichwortliste
+                              - option "medat testsimulation pdf" [ref=e1154] [cursor=pointer]:
+                                - generic [ref=e1155]: medat testsimulation pdf
+                              - option "medat testsimulationen" [ref=e1156] [cursor=pointer]:
+                                - generic [ref=e1157]: medat testsimulationen
+                              - option "medat vorbereitung bücher" [ref=e1158] [cursor=pointer]:
+                                - generic [ref=e1159]: medat vorbereitung bücher
+                              - option "medat vorbereitungskurs" [ref=e1160] [cursor=pointer]:
+                                - generic [ref=e1161]: medat vorbereitungskurs
+                              - option "medat vorbereitungskurse" [ref=e1162] [cursor=pointer]:
+                                - generic [ref=e1163]: medat vorbereitungskurse
+                              - option "medat wien 2026" [ref=e1164] [cursor=pointer]:
+                                - generic [ref=e1165]: medat wien 2026
+                              - option "medat2go" [ref=e1166] [cursor=pointer]:
+                                - generic [ref=e1167]: medat2go
+                              - option "textverständnis übungen medat" [ref=e1168] [cursor=pointer]:
+                                - generic [ref=e1169]: textverständnis übungen medat
+                              - option "wann ist medat 2026" [ref=e1170] [cursor=pointer]:
+                                - generic [ref=e1171]: wann ist medat 2026
+                              - option "wortflüssigkeit medat übungen pdf" [ref=e1172] [cursor=pointer]:
+                                - generic [ref=e1173]: wortflüssigkeit medat übungen pdf
+                              - option "aufnahmetest medizin 2026" [ref=e1174] [cursor=pointer]:
+                                - generic [ref=e1175]: aufnahmetest medizin 2026
+                              - option "bms fragen medat" [ref=e1176] [cursor=pointer]:
+                                - generic [ref=e1177]: bms fragen medat
+                              - option "bms medat" [ref=e1178] [cursor=pointer]:
+                                - generic [ref=e1179]: bms medat
+                              - option "emotionen erkennen medat" [ref=e1180] [cursor=pointer]:
+                                - generic [ref=e1181]: emotionen erkennen medat
+                              - option "emotionen regulieren medat" [ref=e1182] [cursor=pointer]:
+                                - generic [ref=e1183]: emotionen regulieren medat
+                              - option "figuren zusammensetzen medat" [ref=e1184] [cursor=pointer]:
+                                - generic [ref=e1185]: figuren zusammensetzen medat
+                              - option "med at 2026" [ref=e1186] [cursor=pointer]:
+                                - generic [ref=e1187]: med at 2026
+                              - option "medat 2026 vorbereitung" [ref=e1188] [cursor=pointer]:
+                                - generic [ref=e1189]: medat 2026 vorbereitung
+                              - option "medat 3 monate lernplan" [ref=e1190] [cursor=pointer]:
+                                - generic [ref=e1191]: medat 3 monate lernplan
+                              - option "medat altfragen pdf" [ref=e1192] [cursor=pointer]:
+                                - generic [ref=e1193]: medat altfragen pdf
+                              - option "medat aufnahmeprüfung" [ref=e1194] [cursor=pointer]:
+                                - generic [ref=e1195]: medat aufnahmeprüfung
+                              - option "medat beispielaufgaben" [ref=e1196] [cursor=pointer]:
+                                - generic [ref=e1197]: medat beispielaufgaben
+                              - option "medat biologie fragen" [ref=e1198] [cursor=pointer]:
+                                - generic [ref=e1199]: medat biologie fragen
+                              - option "medat bms skript" [ref=e1200] [cursor=pointer]:
+                                - generic [ref=e1201]: medat bms skript
+                              - option "medat figuren zusammensetzen" [ref=e1202] [cursor=pointer]:
+                                - generic [ref=e1203]: medat figuren zusammensetzen
+                              - option "medat implikationen erkennen übungen" [ref=e1204] [cursor=pointer]:
+                                - generic [ref=e1205]: medat implikationen erkennen übungen
+                              - option "medat online test" [ref=e1206] [cursor=pointer]:
+                                - generic [ref=e1207]: medat online test
+                              - option "medat soziales entscheiden" [ref=e1208] [cursor=pointer]:
+                                - generic [ref=e1209]: medat soziales entscheiden
+                              - option "medat wortflüssigkeit" [ref=e1210] [cursor=pointer]:
+                                - generic [ref=e1211]: medat wortflüssigkeit
+                              - option "medbreaker bücher" [ref=e1212] [cursor=pointer]:
+                                - generic [ref=e1213]: medbreaker bücher
+                              - option "medinaut testsimulation" [ref=e1214] [cursor=pointer]:
+                                - generic [ref=e1215]: medinaut testsimulation
+                              - option "medizin studieren" [ref=e1216] [cursor=pointer]:
+                                - generic [ref=e1217]: medizin studieren
+                              - option "medizinertest österreich 2026" [ref=e1218] [cursor=pointer]:
+                                - generic [ref=e1219]: medizinertest österreich 2026
+                              - option "medizinstudieren at" [ref=e1220] [cursor=pointer]:
+                                - generic [ref=e1221]: medizinstudieren at
+                              - option "medizinstudium österreich" [ref=e1222] [cursor=pointer]:
+                                - generic [ref=e1223]: medizinstudium österreich
+                              - option "physik medat" [ref=e1224] [cursor=pointer]:
+                                - generic [ref=e1225]: physik medat
+                              - option "aufbau medat" [ref=e1226] [cursor=pointer]:
+                                - generic [ref=e1227]: aufbau medat
+                              - option "aufnahmeprüfung medat" [ref=e1228] [cursor=pointer]:
+                                - generic [ref=e1229]: aufnahmeprüfung medat
+                          - generic [ref=e1230]:
+                            - button "Zur Tabelle mit Suchanfragen" [ref=e1232] [cursor=pointer]:
+                              - generic [ref=e1233]: Alle Suchanfragen
+                            - generic [ref=e1235]:
+                              - generic:
+                                - img: keyboard_arrow_left
+                              - generic [ref=e1236]: 1 / 8
+                              - img [ref=e1238] [cursor=pointer]: keyboard_arrow_right
+                      - listitem "Karte 1 von 0. Verwenden Sie die Pfeiltasten, um zwischen Karten zu wechseln, und die Tabulatortaste, um Karteninhalte einzugeben." [ref=e1239]:
+                        - generic [ref=e1241]:
+                          - generic [ref=e1242]:
+                            - generic [ref=e1243]:
+                              - img [ref=e1245]: query_stats
+                              - heading "Keywords" [level=1] [ref=e1246]
+                            - generic [ref=e1248]:
+                              - link "Keyword hinzufügen" [ref=e1249] [cursor=pointer]:
+                                - generic [ref=e1250]:
+                                  - img [ref=e1252]: add
+                                  - text: Keyword hinzufügen
+                              - button "Ein Menü mit zusätzlichen Kartenoptionen. Drücken Sie zum Öffnen die Eingabetaste." [ref=e1255] [cursor=pointer]:
+                                - img [ref=e1258]: more_vert
+                          - generic "Keywords absteigend nach Kosten storniert. Verwenden Sie die Pfeiltasten zum Auswählen, \"E\" zur Budgetbearbeitung und die Eingabetaste, um eine Übersichtsseite für das jeweilige Keyword aufzurufen." [ref=e1261]:
+                            - generic [ref=e1262]: Zusammenfassung der Keyword-Leistung
+                            - generic:
+                              - generic: Keywords absteigend nach Kosten storniert. Verwenden Sie die Pfeiltasten zum Auswählen, "E" zur Budgetbearbeitung und die Eingabetaste, um eine Übersichtsseite für das jeweilige Keyword aufzurufen.
+                            - generic [ref=e1264]:
+                              - generic [ref=e1268]:
+                                - generic [ref=e1275] [cursor=pointer]:
+                                  - img [ref=e1277]: circle
+                                  - generic [ref=e1278]: med at vorbereitung
+                                - generic [ref=e1285] [cursor=pointer]:
+                                  - img [ref=e1287]: circle
+                                  - generic [ref=e1288]: vorbereitung medat
+                                - generic [ref=e1295] [cursor=pointer]:
+                                  - img [ref=e1297]: circle
+                                  - generic [ref=e1298]: medat test vorbereitung
+                                - generic [ref=e1305] [cursor=pointer]:
+                                  - img [ref=e1307]: circle
+                                  - generic [ref=e1308]: medat h vorbereitung
+                                - generic [ref=e1312] [cursor=pointer]:
+                                  - img [ref=e1314]: cancel
+                                  - generic [ref=e1315]: medat lernen
+                              - generic [ref=e1317]:
+                                - 'button "Messwert 1 von 3 für die Karte \"Keywords\" auswählen. Aktueller Messwert: Kosten" [ref=e1319]':
+                                  - 'generic "Messwert 1 von 3 für die Karte \"Keywords\" auswählen. Aktueller Messwert: Kosten" [ref=e1320] [cursor=pointer]':
+                                    - generic [ref=e1321]: Kosten
+                                    - text: arrow_drop_down
+                                - generic [ref=e1323]:
+                                  - generic [ref=e1328]: 114,47 €
+                                  - generic [ref=e1333]: 11,60 €
+                                  - generic [ref=e1338]: 7,42 €
+                                  - generic [ref=e1343]: 3,88 €
+                                  - generic [ref=e1348]: 3,65 €
+                              - generic [ref=e1350]:
+                                - 'button "Messwert 2 von 3 für die Karte \"Keywords\" auswählen. Aktueller Messwert: Klicks" [ref=e1352]':
+                                  - 'generic "Messwert 2 von 3 für die Karte \"Keywords\" auswählen. Aktueller Messwert: Klicks" [ref=e1353] [cursor=pointer]':
+                                    - generic [ref=e1354]: Klicks
+                                    - text: arrow_drop_down
+                                - generic [ref=e1356]:
+                                  - generic [ref=e1361]: "155"
+                                  - generic [ref=e1366]: "8"
+                                  - generic [ref=e1371]: "7"
+                                  - generic [ref=e1376]: "3"
+                                  - generic [ref=e1381]: "4"
+                              - generic [ref=e1383]:
+                                - 'button "Messwert 3 von 3 für die Karte \"Keywords\" auswählen. Aktueller Messwert: CTR" [ref=e1385]':
+                                  - 'generic "Messwert 3 von 3 für die Karte \"Keywords\" auswählen. Aktueller Messwert: CTR" [ref=e1386] [cursor=pointer]':
+                                    - generic [ref=e1387]: CTR
+                                    - text: arrow_drop_down
+                                - generic [ref=e1389]:
+                                  - generic [ref=e1394]: 4,47 %
+                                  - generic [ref=e1399]: 4,30 %
+                                  - generic [ref=e1404]: 14,29 %
+                                  - generic [ref=e1409]: 30,00 %
+                                  - generic [ref=e1414]: 8,70 %
+                          - generic [ref=e1416]:
+                            - generic [ref=e1417]:
+                              - button "Keywords-Tabelle aufrufen" [ref=e1418] [cursor=pointer]:
+                                - generic [ref=e1419]: Keywords
+                              - button "Tabelle mit auszuschließenden Keywords aufrufen" [ref=e1421] [cursor=pointer]:
+                                - generic [ref=e1422]: Auszuschließende Keywords
+                            - generic [ref=e1424]:
+                              - generic:
+                                - img: keyboard_arrow_left
+                              - generic [ref=e1425]: 1 / 7
+                              - img [ref=e1427] [cursor=pointer]: keyboard_arrow_right
+                      - listitem "Karte 1 von 0. Verwenden Sie die Pfeiltasten, um zwischen Karten zu wechseln, und die Tabulatortaste, um Karteninhalte einzugeben." [ref=e1428]:
+                        - generic [ref=e1430]:
+                          - generic [ref=e1431]:
+                            - generic [ref=e1432]:
+                              - img [ref=e1434]: add_ad
+                              - heading "Häufigste Anzeigen" [level=1] [ref=e1435]
+                            - button "Ein Menü mit zusätzlichen Kartenoptionen. Drücken Sie zum Öffnen die Eingabetaste." [ref=e1439] [cursor=pointer]:
+                              - img [ref=e1442]: more_vert
+                          - list "Mit den Pfeiltasten nach links und rechts können Sie zwischen Anzeigen wechseln. Mit \"E\" bearbeiten Sie Anzeigen, mit \"C\" kopieren Sie sie und mit der Eingabetaste rufen Sie die URL der Anzeige auf." [ref=e1445]:
+                            - listitem [ref=e1446]:
+                              - generic [ref=e1447]:
+                                - link "In campaign MedAT Vorbereitung mit dem Status \"aktiv\" gefunden" [ref=e1448] [cursor=pointer]:
+                                  - generic [ref=e1451]: MedAT Vorbereitung
+                                - generic [ref=e1452]: ›
+                                - link "ad group Anzeigengruppe 1 mit dem Status \"aktiv\"" [ref=e1453] [cursor=pointer]:
+                                  - generic [ref=e1456]: Anzeigengruppe 1
+                            - listitem [ref=e1457]:
+                              - generic [ref=e1464]:
+                                - generic [ref=e1466]:
+                                  - generic [ref=e1467]:
+                                    - generic [ref=e1468]: MedAT 2026 bestehen
+                                    - generic [ref=e1470]: "|"
+                                    - generic [ref=e1472]: 5.000+ BMS-Übungsfragen
+                                    - generic [ref=e1474]: "|"
+                                    - generic [ref=e1476]: Alle 4 MedAT-Bereiche
+                                  - generic [ref=e1478]:
+                                    - generic [ref=e1479]: Anzeige
+                                    - text: medmaster.at
+                                    - generic [ref=e1480]:
+                                      - generic [ref=e1481]: /
+                                      - generic [ref=e1482]: MedAT
+                                      - generic [ref=e1483]: /
+                                      - generic [ref=e1484]: Vorbereitung
+                                - generic [ref=e1489]:
+                                  - generic [ref=e1491]: "4.000+ BMS-Fragen mit Erklärungen. 10.000+ KFF-Übungen. Alle 4 Bereiche. Gratis starten. Bio, Chemie, Physik, Mathe: 173 Lerneinheiten nach Stichwortliste 2026. Kein Abo."
+                                  - generic [ref=e1493]:
+                                    - generic [ref=e1495]: MedAT Guide 2026
+                                    - generic [ref=e1497]: KFF Training
+                                    - generic [ref=e1499]: BMS Übungsfragen
+                                    - generic [ref=e1501]: Preise & Angebote
+                            - generic [ref=e1502]:
+                              - generic [ref=e1503]: Anzeige
+                              - generic [ref=e1505]:
+                                - img [ref=e1507]: circle
+                                - generic [ref=e1508]: Aktiviert
+                            - listitem [ref=e1509]:
+                              - generic [ref=e1510]: Status
+                              - generic [ref=e1511]: Aktiv
+                            - generic [ref=e1512]:
+                              - generic [ref=e1513]: Impressionen
+                              - generic [ref=e1514]: "4.781"
+                            - 'listitem "Messwert 1 von 2 für die Karte \"Häufigste Anzeigen\" auswählen. Aktueller Messwert: Klicks" [ref=e1517]':
+                              - 'generic "Messwert 1 von 2 für die Karte \"Häufigste Anzeigen\" auswählen. Aktueller Messwert: Klicks" [ref=e1518] [cursor=pointer]':
+                                - generic [ref=e1519]: Klicks
+                                - text: arrow_drop_down
+                            - generic [ref=e1520]: "186"
+                            - 'listitem "Messwert 2 von 2 für die Karte \"Häufigste Anzeigen\" auswählen. Aktueller Messwert: CTR" [ref=e1523]':
+                              - 'generic "Messwert 2 von 2 für die Karte \"Häufigste Anzeigen\" auswählen. Aktueller Messwert: CTR" [ref=e1524] [cursor=pointer]':
+                                - generic [ref=e1525]: CTR
+                                - text: arrow_drop_down
+                            - generic [ref=e1526]: 3,89 %
+                            - generic [ref=e1527]: MedAT 2026 bestehen | 5.000+ BMS-Übungsfragen | Alle 4 MedAT-Bereiche
+                          - generic [ref=e1528]:
+                            - generic [ref=e1529]:
+                              - button "Anzeigentabelle aufrufen" [ref=e1530] [cursor=pointer]:
+                                - generic [ref=e1531]: Alle Anzeigen
+                              - button "Seite mit Asset-Tabellen aufrufen" [ref=e1533] [cursor=pointer]:
+                                - generic [ref=e1534]: Alle Assets
+                            - generic [ref=e1536]:
+                              - generic:
+                                - img: keyboard_arrow_left
+                              - generic [ref=e1537]: 1 / 1
+                              - generic:
+                                - img: keyboard_arrow_right
+                      - listitem "Karte 1 von 0. Verwenden Sie die Pfeiltasten, um zwischen Karten zu wechseln, und die Tabulatortaste, um Karteninhalte einzugeben." [ref=e1538]:
+                        - generic [ref=e1540]:
+                          - generic [ref=e1541]:
+                            - generic [ref=e1542]:
+                              - img [ref=e1544]: bar_chart
+                              - heading "Conversion-Tracking-Status" [level=1] [ref=e1545]
+                            - generic [ref=e1547]:
+                              - button "Alle" [ref=e1551] [cursor=pointer]:
+                                - generic [ref=e1552]: Alle
+                                - img [ref=e1554]: arrow_drop_down
+                              - button "Ein Menü mit zusätzlichen Kartenoptionen. Drücken Sie zum Öffnen die Eingabetaste." [ref=e1556] [cursor=pointer]:
+                                - img [ref=e1559]: more_vert
+                          - grid "Horizontales Balkendiagramm. Verwenden Sie die Pfeiltasten, um zwischen Zeilen zu wechseln" [ref=e1565]:
+                            - 'row "Name: Tag inaktiv, Wert: 1" [ref=e1566]':
+                              - gridcell "Tag inaktiv" [ref=e1567]
+                              - gridcell "1" [ref=e1568]:
+                                - generic [ref=e1570]: "1"
+                            - 'row "Name: Nicht überprüft, Wert: 1" [ref=e1571]':
+                              - gridcell "Nicht überprüft" [ref=e1572]
+                              - gridcell "1" [ref=e1573]:
+                                - generic [ref=e1575]: "1"
+                            - 'row "Name: Keine kürzlich erfassten Conversions, Wert: 0" [ref=e1576]':
+                              - gridcell "Keine kürzlich erfassten Conversions" [ref=e1577]
+                              - gridcell "0" [ref=e1578]:
+                                - generic [ref=e1580]: "0"
+                            - 'row "Name: Conversions werden erfasst., Wert: 0" [ref=e1581]':
+                              - gridcell "Conversions werden erfasst." [ref=e1582]
+                              - gridcell "0" [ref=e1583]:
+                                - generic [ref=e1585]: "0"
+                          - button "Tabelle „Conversions“ aufrufen" [ref=e1588] [cursor=pointer]:
+                            - generic [ref=e1589]: Conversions verwalten
+                      - listitem "Karte 1 von 0. Verwenden Sie die Pfeiltasten, um zwischen Karten zu wechseln, und die Tabulatortaste, um Karteninhalte einzugeben." [ref=e1591]:
+                        - generic [ref=e1593]:
+                          - generic [ref=e1594]:
+                            - generic [ref=e1595]:
+                              - img [ref=e1597]: payments
+                              - heading "Abrechnung" [level=1] [ref=e1598]
+                            - button "Ein Menü mit zusätzlichen Kartenoptionen. Drücken Sie zum Öffnen die Eingabetaste." [ref=e1602] [cursor=pointer]:
+                              - img [ref=e1605]: more_vert
+                          - generic [ref=e1609]:
+                            - generic [ref=e1610]:
+                              - generic [ref=e1612]:
+                                - generic [ref=e1613]: Kontostand am 29. März 2026
+                                - generic [ref=e1614]: 81,31 €
+                              - generic [ref=e1616]:
+                                - generic [ref=e1617]:
+                                  - text: Nächste automatische Zahlung
+                                  - button "Weitere Informationen" [ref=e1619] [cursor=pointer]:
+                                    - img "Weitere Informationen" [ref=e1620]: help_outline
+                                - generic [ref=e1622]:
+                                  - generic [ref=e1623]: 1. Apr. 2026
+                                  - generic [ref=e1626]:
+                                    - text: oder wenn der Kontostand
+                                    - text: 100,00 € erreicht
+                            - generic [ref=e1628]:
+                              - generic [ref=e1629]: Zahlungsmethoden
+                              - generic [ref=e1630]:
+                                - generic [ref=e1631]:
+                                  - text: Primäre Zahlungsmethode
+                                  - button "Mastercard •••• 5499 ist Ihre primäre Zahlungsmethode. Drücken Sie die Eingabetaste, um die Zahlungsmethode zu ändern." [ref=e1632] [cursor=pointer]:
+                                    - generic [ref=e1634]: Mastercard •••• 5499
+                                - generic [ref=e1636]:
+                                  - text: Alternativ
+                                  - button "Sie haben keine sekundäre Zahlungsmethode eingerichtet. Drücken Sie die Eingabetaste, um das jetzt nachzuholen." [ref=e1637] [cursor=pointer]:
+                                    - generic [ref=e1639]: Sekundäre Zahlungsmethode hinzufügen
+                          - generic [ref=e1642]:
+                            - button "Abrechnung ansehen" [ref=e1643] [cursor=pointer]:
+                              - generic [ref=e1644]: Abrechnung ansehen
+                            - button "Auszüge und Steuerdokumente ansehen" [ref=e1646] [cursor=pointer]:
+                              - generic [ref=e1647]: Auszüge und Steuerdokumente ansehen
+                      - listitem "Karte 1 von 0. Verwenden Sie die Pfeiltasten, um zwischen Karten zu wechseln, und die Tabulatortaste, um Karteninhalte einzugeben." [ref=e1649]:
+                        - generic [ref=e1651]:
+                          - generic [ref=e1652]:
+                            - generic [ref=e1653]:
+                              - img [ref=e1655]: troubleshoot
+                              - heading "Suchtrends" [level=1] [ref=e1656]
+                            - generic [ref=e1658]:
+                              - button "Klicks" [ref=e1661] [cursor=pointer]:
+                                - generic [ref=e1662]: Klicks
+                                - img [ref=e1664]: arrow_drop_down
+                              - button "Ein Menü mit zusätzlichen Kartenoptionen. Drücken Sie zum Öffnen die Eingabetaste." [ref=e1666] [cursor=pointer]:
+                                - img [ref=e1669]: more_vert
+                          - generic [ref=e1672]:
+                            - generic [ref=e1674]:
+                              - strong [ref=e1675]: "Standardisierte Tests und Zulassungstests: medat"
+                              - text: "liegt im Vergleich zu diesem Zeitraum in Trend:"
+                              - strong [ref=e1676]: letztem Monat
+                            - generic [ref=e1678]:
+                              - generic [ref=e1679]:
+                                - generic [ref=e1682]: Suchvolumen (AT)
+                                - generic [ref=e1684]: +37 %
+                              - generic [ref=e1685]:
+                                - generic [ref=e1688]: Meine Klicks
+                                - generic [ref=e1690]: "137"
+                          - button "Zu den Trenddetails" [ref=e1697] [cursor=pointer]:
+                            - generic [ref=e1698]: Trenddetails aufrufen
+              - generic [ref=e1701]:
+                - generic [ref=e1702]:
+                  - link "Die Berichterstellung erfolgt nicht in Echtzeit." [ref=e1704] [cursor=pointer]:
+                    - /url: https://support.google.com/google-ads/?p=help_2544985&hl=de
+                  - text: "Zeitzone für alle Datums- und Uhrzeitangaben: (GMT+02:00) Mitteleuropäische Zeit."
+                  - link "Weitere Informationen zum Ändern Ihrer Google Ads-Kontoeinstellungen" [ref=e1706] [cursor=pointer]:
+                    - /url: https://support.google.com/google-ads/?p=help_9842104&hl=de
+                    - text: Weitere Informationen
+                  - generic [ref=e1707]: Unter Umständen wird ein Teil des Inventars von einem Drittanbieter bereitgestellt, der als Vermittler agiert.
+                  - generic [ref=e1708]: Für akkreditierte Messwerte sehen Sie die Akkreditierung vom Media Rating Council (MRC), wenn Sie den Mauszeiger auf die Spaltenüberschrift bewegen.
+                - generic [ref=e1709]: © Google 2026.
+  - generic:
+    - dialog:
+      - generic:
+        - generic:
+          - heading [level=1]: Turn off ad blockers
+          - paragraph: Google Ads can't work when you're using an ad blocker. To use Google Ads, please turn off any ad blockers for now.
+  - generic:
+    - generic:
+      - generic:
+        - dialog "Dialogfeld"
+  - generic:
+    - generic:
+      - generic:
+        - dialog "Dialogfeld"
+  - generic:
+    - generic:
+      - generic:
+        - dialog "Dialogfeld"

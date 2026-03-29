@@ -487,8 +487,9 @@ Sehne, Knorpel und Knochen sehen völlig verschieden aus, bestehen aber alle aus
     {
       id: "bio-2-03",
       title: "Muskelgewebe — Vom Sarkomer zur Kontraktion",
-      imageUrl: "/images/bms/bio-muskelfaser.jpg",
-      imageCaption: "Abb.: Aufbau einer Skelettmuskelfaser mit Sarkomeren (OpenStax, CC BY 4.0)",
+      imageUrl: "/images/wiki-sarcomere-de.svg",
+      imageCaption:
+        "Abb.: Sarkomer — Aufbau mit Aktin, Myosin, Z-Scheibe und M-Linie (Wikimedia Commons, CC BY-SA 3.0)",
       stichworte: [
         "Glatte Muskulatur",
         "Skelettmuskulatur",
@@ -500,6 +501,8 @@ Sehne, Knorpel und Knochen sehen völlig verschieden aus, bestehen aber alle aus
         "Querstreifung",
       ],
       content: `## Grundprinzip: Die drei Muskeltypen
+
+{{IMAGE}}
 
 **Um die folgenden Abschnitte einzuordnen:** Zuerst der Überblick — welche Muskeltypen gibt es und wie unterscheiden sie sich?
 
@@ -519,7 +522,7 @@ Sehne, Knorpel und Knochen sehen völlig verschieden aus, bestehen aber alle aus
 
 ## Sarkomerstruktur: Grundprinzip der Querstreifung
 
-{{DIAGRAM:sarkomer}}
+{{IMAGE}}
 
 **Aufbau (von Z zu Z):**
 - **I-Bande** (hell): Nur Aktin-Dünnfilamente -> **wird bei Kontraktion kürzer**
@@ -747,7 +750,7 @@ Kein Troponin! Ca2+ bindet **Calmodulin** -> aktiviert **MLCK** (Myosin-Leichtke
     {
       id: "bio-2-04",
       title: "Nervengewebe — Neuronen, Gliazellen und Myelinisierung",
-      imageUrl: "/images/bms/bio-neuron.jpg",
+      imageUrl: "/images/wiki-synapse-de.svg",
       imageCaption: "Abb.: Aufbau eines Neurons mit Axon und Dendriten (OpenStax, CC BY 4.0)",
       stichworte: [
         "Neuronen",
@@ -760,6 +763,8 @@ Kein Troponin! Ca2+ bindet **Calmodulin** -> aktiviert **MLCK** (Myosin-Leichtke
         "Ranvier-Schnürringe",
       ],
       content: `Das Nervensystem besteht aus zwei grundlegenden Zelltypen: **Neuronen** übertragen elektrochemische Signale; **Gliazellen** übernehmen Stütz-, Schutz- und Versorgungsfunktionen. Beide sind für die normale Nervenfunktion unentbehrlich.
+
+{{IMAGE}}
 
 ## Aufbau eines Neurons
 
@@ -993,7 +998,7 @@ Gliazellen überwiegen numerisch: ca. 10:1 gegenüber Neuronen im ZNS. Sie teile
 
 Ein Schlaganfall in der linken Großhirnhemisphäre kann Sprache und rechtsseitige Motorik gleichzeitig auslöschen — weil Gehirnareale hochspezialisiert und die Leitungsbahnen gekreuzt sind. Dieses Kapitel zeigt, wie das Nervensystem aufgebaut ist und warum solche Ausfälle lokalisierbar sind.
 
-{{DIAGRAM:nervensystem-übersicht}}
+{{IMAGE}}
 
 ---
 
@@ -1069,7 +1074,7 @@ Beide Systeme innervieren dieselben Organe, wirken aber antagonistisch. Die Umsc
 
 ## Synapse — Signalübertragung zwischen Neuronen
 
-{{DIAGRAM:synapse}}
+{{IMAGE}}
 
 An der chemischen Synapse wird das elektrische Signal in ein chemisches umgewandelt:
 
@@ -1113,7 +1118,7 @@ An der chemischen Synapse wird das elektrische Signal in ein chemisches umgewand
 
 ## Reflexbogen — Die 5 Glieder
 
-{{DIAGRAM:reflexbogen}}
+{{IMAGE}}
 
 Reflexe sind unwillkürliche, stereotype Antworten auf einen Reiz. Jeder Reflexbogen besteht aus fünf Gliedern:
 
@@ -1303,7 +1308,7 @@ Jedes Rückenmarkssegment versorgt über seinen Spinalnerv ein bestimmtes Hautar
 
 ## Grundprinzip: Transduktion — Reize als elektrische Signale
 
-{{DIAGRAM:sinnesorgane}}
+{{IMAGE}}
 
 Ob Licht, Schall oder Geruch — jeder Reiz muss zunächst in ein elektrisches Signal umgewandelt werden. Dieser Vorgang heißt **Transduktion**. Der Mechanismus dahinter unterscheidet sich je nach Sinn:
 
@@ -1567,7 +1572,7 @@ Das **Riechepithel** sitzt in der oberen Nasenmuschel (Regio olfactoria, ~5 cm²
       ],
       content: `Eine junge Patientin klagt über Herzrasen, Gewichtsverlust und Hitzeunverträglichkeit — die Laborwerte zeigen TSH im Keller und freies T₄ massiv erhöht. Morbus Basedow. Ohne das Zusammenspiel von Hypothalamus, Hypophyse und Schilddrüse zu verstehen, bleibt diese Diagnose ein Rätsel. Das endokrine System steuert über chemische Botenstoffe nahezu jeden Stoffwechselprozess — von der Blutzuckerregulation bis zur Stressantwort.
 
-{{DIAGRAM:hormonsystem}}
+{{IMAGE}}
 
 ---
 
@@ -1661,7 +1666,7 @@ Die Nebenniere (Glandula suprarenalis) sitzt kappenförmig auf der Niere und gli
 
 ## Pankreas und Blutzuckerregulation
 
-{{DIAGRAM:hormone-system}}
+{{IMAGE}}
 
 Die **Langerhans-Inseln** (1–2 % des Pankreasgewebes, ~1 Million Inseln) enthalten die endokrinen Zellen des Pankreas. Die exokrine Funktion (Verdauungsenzyme) wird hier nicht behandelt.
 
@@ -1866,7 +1871,7 @@ Dieses Schema ist auf **jede Hormonachse** übertragbar: CRH-ACTH-Cortisol, GnRH
     {
       id: "bio-3-04",
       title: "Herz-Kreislauf-System",
-      imageUrl: "/images/bms/bio-herz-kreislauf.jpg",
+      imageUrl: "/images/wiki-heart-anatomy-de.svg",
       imageCaption:
         "Abb.: Herz-Kreislauf-System mit großem und kleinem Kreislauf (OpenStax, CC BY 4.0)",
       stichworte: [
@@ -1880,6 +1885,8 @@ Dieses Schema ist auf **jede Hormonachse** übertragbar: CRH-ACTH-Cortisol, GnRH
         "Systole",
       ],
       content: `## Das Herz — Aufbau, Erregung und Kreislauf
+
+{{IMAGE}}
 
 Ein 70-jähriger Patient kollabiert beim Einkaufen. Das EKG zeigt eine ST-Hebung in den Ableitungen II, III und aVF — ein akuter Hinterwandinfarkt. Innerhalb von 60 Minuten muss die verschlossene rechte Koronararterie mittels PCI (perkutane Koronarintervention) eröffnet werden, sonst stirbt Herzmuskelgewebe unwiederbringlich ab. Um solche Notfälle zu verstehen, brauchen wir ein solides Fundament: den Aufbau des Herzens, seine elektrische Erregung und die Kreislaufphysiologie.
 
@@ -1910,7 +1917,7 @@ Der LV hat eine ~3× dickere Wand (~10–15 mm) als der RV (~3–5 mm), weil er 
 
 > **Merke:** Wandschichten von innen nach außen: **E**ndokard – **M**yokard – **E**pikard (Eselsbrücke: **EME**). LV-Wand 3× dicker als RV, weil Systemdruck ~5× höher als Pulmonaldruck.
 
-{{DIAGRAM:heart-anatomy}}
+{{IMAGE}}
 
 ---
 
@@ -2009,7 +2016,7 @@ Das Elektrokardiogramm zeichnet die elektrische Aktivität des Herzens an der K�
 
 ## Großer und kleiner Kreislauf
 
-{{DIAGRAM:blutkreislauf}}
+{{IMAGE}}
 
 Die beiden Kreisläufe sind **in Serie geschaltet** — das Blut muss zwingend durch beide:
 
@@ -2273,7 +2280,7 @@ Normaler Blutdruck: **120/80 mmHg** (systolisch/diastolisch). Hypertonie: ≥140
 
 ## Blutbestandteile — Plasma und zelluläre Elemente
 
-{{DIAGRAM:blutbestandteile}}
+{{IMAGE}}
 
 Ein Erwachsener besitzt etwa **4–6 Liter Blut** (ca. 7–8 % des Körpergewichts). Nach Zentrifugation trennt sich das Blut in zwei Phasen:
 
@@ -2705,7 +2712,7 @@ B-Zellen reifen im **Knochenmark** und werden in den Lymphknoten durch CD4⁺-T-
 
 > **Merke:** Y-Form: 2 Fab (Antigenbindung, Spezifität) + 1 Fc (Effektorfunktion, Klasse). IgM = Pentamer, Primärantwort, akut. IgG = Monomer, Sekundärantwort, plazentagängig, ~75 % im Serum. IgA = Dimer, Schleimhaut. IgE = Allergie + Parasiten. Klassenwechsel ändert Fc (Funktion), nicht Fab (Spezifität).
 
-{{DIAGRAM:antibody-structure}}
+{{IMAGE}}
 
 ---
 
@@ -3086,8 +3093,9 @@ Der Lymphknoten filtert Lymphe und initiiert Immunantworten. Seine zonale Archit
     {
       id: "bio-3-08",
       title: "Atmungssystem",
-      imageUrl: "/images/bms/bio-atemwege.jpg",
-      imageCaption: "Abb.: Obere und untere Atemwege mit Bronchialbaum (OpenStax, CC BY 4.0)",
+      imageUrl: "/images/wiki-respiratory-de.svg",
+      imageCaption:
+        "Abb.: Atmungssystem — Obere und untere Atemwege (Wikimedia Commons, LadyofHats, Public Domain)",
       stichworte: [
         "Gasaustausch",
         "Alveolen",
@@ -3099,9 +3107,11 @@ Der Lymphknoten filtert Lymphe und initiiert Immunantworten. Seine zonale Archit
       ],
       content: `Jede Zelle benötigt Sauerstoff und muss CO₂ abgeben — das Atmungssystem stellt sicher, dass dieser Gasaustausch kontinuierlich abläuft.
 
+{{IMAGE}}
+
 ## Der Bronchialbaum — von der Trachea zur Alveole
 
-{{DIAGRAM:atmungssystem}}
+{{IMAGE}}
 
 Die Atemluft durchläuft auf ihrem Weg zu den Alveolen eine zunehmend feinere Verzweigung. Die **Trachea** (Luftröhre, ~10–12 cm lang) wird von **16–20 hufeisenförmigen Knorpelspangen** (C-Knorpel, dorsal offen → Paries membranaceus mit glatter Muskulatur) offengehalten. Sie teilt sich an der **Bifurcatio tracheae** (Höhe Th4/5) in die beiden **Hauptbronchien**:
 
@@ -3367,7 +3377,7 @@ Das **Atemzentrum** liegt in der **Medulla oblongata** und im **Pons**. Es gener
     {
       id: "bio-3-09",
       title: "Verdauungssystem",
-      imageUrl: "/images/bms/bio-verdauungssystem.jpg",
+      imageUrl: "/images/wiki-digestive-de.svg",
       imageCaption: "Abb.: Organe des Verdauungssystems im Überblick (OpenStax, CC BY 4.0)",
       stichworte: [
         "Magen",
@@ -3381,9 +3391,11 @@ Das **Atemzentrum** liegt in der **Medulla oblongata** und im **Pons**. Es gener
       ],
       content: `Nahrung muss mechanisch zerkleinert, chemisch gespalten und als Nährstoff resorbiert werden — genau das leistet der Verdauungstrakt in einer koordinierten Abfolge von Organen.
 
+{{IMAGE}}
+
 ## Verdauungstrakt Organ für Organ — Mund bis Kolon
 
-{{DIAGRAM:verdauungssystem}}
+{{IMAGE}}
 
 Die Verdauung beginnt bereits in der **Mundhöhle**: Mechanische Zerkleinerung (Kauen) und Benetzung mit Speichel (~1–1,5 L/Tag). Die **Speichel-Amylase** (Ptyalin) spaltet Stärke zu Maltose und Dextrinen — die Kohlenhydratverdauung beginnt also im Mund. Der Bolus gelangt über den **Ösophagus** (Speiseröhre, ~25 cm) durch **Peristaltik** (koordinierte Kontraktion: Längsmuskulatur → Ringmuskulatur, gesteuert vom Plexus myentericus = Auerbach) in den Magen. Der untere Ösophagussphinkter (UÖS) verhindert Reflux.
 
@@ -3600,7 +3612,7 @@ Die **Leber** (größte Drüse, ~1,5 kg) hat eine einzigartige doppelte Blutvers
     {
       id: "bio-3-10",
       title: "Harnsystem",
-      imageUrl: "/images/bms/bio-niere.jpg",
+      imageUrl: "/images/wiki-nephron-de.svg",
       imageCaption: "Abb.: Aufbau der Niere mit Rinde, Mark und Nierenbecken (OpenStax, CC BY 4.0)",
       stichworte: [
         "Niere",
@@ -3614,9 +3626,11 @@ Die **Leber** (größte Drüse, ~1,5 kg) hat eine einzigartige doppelte Blutvers
       ],
       content: `Die Niere ist weit mehr als ein Ausscheidungsorgan — sie reguliert Wasserhaushalt, Elektrolyte, Säure-Basen-Gleichgewicht und Blutdruck. Wer Nierenphysiologie versteht, versteht auch, warum Diuretika wirken, warum Diabetiker Proteinurie entwickeln und warum ACE-Hemmer Husten verursachen.
 
+{{IMAGE}}
+
 ## Das Nephron — funktionelle Einheit der Niere
 
-{{DIAGRAM:nephron}}
+{{IMAGE}}
 
 Jede Niere enthält ca. **1 Million Nephrone**. Ein einzelnes Nephron besteht aus:
 
@@ -3891,7 +3905,7 @@ Der fertige Urin verlässt die Niere über: **Nierenbecken (Pelvis renalis) → 
     {
       id: "bio-3-11",
       title: "Skelettsystem",
-      imageUrl: "/images/bms/bio-skelett.svg",
+      imageUrl: "/images/wiki-skeleton-de.svg",
       imageCaption:
         "Abb.: Menschliches Skelett — Vorderansicht mit Bezeichnung der wichtigsten Knochen (Wikimedia Commons, Public Domain)",
       stichworte: [
@@ -3904,6 +3918,8 @@ Der fertige Urin verlässt die Niere über: **Nierenbecken (Pelvis renalis) → 
         "Ossifikation",
       ],
       content: `## Klinischer Einstieg
+
+{{IMAGE}}
 
 Eine 68-jährige Patientin stürzt beim Einkaufen und erleidet eine Schenkelhalsfraktur — obwohl sie nur aus dem Stand gefallen ist. Die Diagnose: **Osteoporose** mit massiv reduzierter Knochendichte. Warum brechen manche Knochen bei Bagatelltrauma? Die Antwort liegt im Zusammenspiel von Skelettanatomie, Knochenumbau und hormoneller Regulation.
 
