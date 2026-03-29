@@ -224,6 +224,9 @@ export function initSectionVisibility(sectionIds: string[]) {
  * Fire a unified conversion event across all tracking platforms.
  * Call this instead of individual platform trackers.
  */
+// Dedup flag to prevent duplicate conversion fires per session
+const _firedConversions = new Set<string>();
+
 export function trackConversion(
   event:
     | "signup_started" // clicked any signup CTA
@@ -234,6 +237,12 @@ export function trackConversion(
     | "onboarding_completed", // finished onboarding steps
   properties?: Record<string, unknown>
 ) {
+  // Dedup: signup_completed and checkout_started must fire only once per session
+  if (event === "signup_completed" || event === "checkout_started") {
+    if (_firedConversions.has(event)) return;
+    _firedConversions.add(event);
+  }
+
   // Supabase analytics (always)
   trackEvent(`conversion_${event}`, properties);
 
