@@ -190,7 +190,7 @@ export default function BMSKapitelView({
             </span>
           )}
         </div>
-        <h1 className="text-4xl font-bold text-[var(--text-primary)] tracking-tight mb-3">
+        <h1 className="text-3xl font-bold text-[var(--text-primary)] tracking-tight mb-3">
           {kapitel.title}
         </h1>
         <div className="flex items-center justify-center gap-5 text-sm text-[var(--muted)]">
@@ -254,7 +254,10 @@ export default function BMSKapitelView({
             Noch keine Unterkapitel vorhanden.
           </p>
         ) : (
-          <div className="card-glass divide-y divide-[var(--border)]/30 overflow-hidden" ref={autoAnimateRef}>
+          <div
+            className="card-glass divide-y divide-[var(--border)]/30 overflow-hidden"
+            ref={autoAnimateRef}
+          >
             {unterkapitel.map((uk, index) => {
               if (!uk || !uk.id) return null;
               const isDone = completedChapters.includes(uk.id);

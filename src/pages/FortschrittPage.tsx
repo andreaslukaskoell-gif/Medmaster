@@ -228,7 +228,7 @@ export default function FortschrittPage() {
       <div className="max-w-6xl mx-auto px-4 py-8 pb-12">
         {/* ── Hero ──────────────────────────────────────── */}
         <div className="hero-orbs text-center mb-10">
-          <h1 className="text-3xl font-bold text-[var(--text-primary)] mb-2">Fortschritt</h1>
+          <h1 className="text-2xl font-bold text-[var(--text-primary)] mb-2">Fortschritt</h1>
           <p className="text-[var(--muted)]">
             Dein analytisches Dashboard — Leistung, Trends und Schwachstellen auf einen Blick.
           </p>
@@ -236,7 +236,10 @@ export default function FortschrittPage() {
 
         {/* ── Quick Stats Bar ───────────────────────────── */}
         <div className="card-glass mb-6 p-5">
-          <div className={`grid ${isMobile ? "grid-cols-2" : "grid-cols-4"} gap-4 items-center`} data-mobile-keep>
+          <div
+            className={`grid ${isMobile ? "grid-cols-2" : "grid-cols-4"} gap-4 items-center`}
+            data-mobile-keep
+          >
             <div>
               <p className="text-xs text-[var(--muted)] uppercase tracking-wide">Level</p>
               <p className="text-2xl font-bold text-[var(--text-primary)]">
@@ -288,7 +291,10 @@ export default function FortschrittPage() {
         </div>
 
         {/* ── Subject Performance Grid ──────────────────── */}
-        <div className={`grid ${isMobile ? "grid-cols-2 gap-3" : "grid-cols-4 gap-4"} mb-8`} data-mobile-keep>
+        <div
+          className={`grid ${isMobile ? "grid-cols-2 gap-3" : "grid-cols-4 gap-4"} mb-8`}
+          data-mobile-keep
+        >
           {(["biologie", "chemie", "physik", "mathematik"] as const).map((subject) => {
             const cfg = SUBJECT_CONFIG[subject];
             const acc = subjectAccuracy[subject];
@@ -621,7 +627,10 @@ export default function FortschrittPage() {
         {/* ── Total Learning Stats ──────────────────────── */}
         <div className="card-glass p-5 mb-8">
           <h3 className="text-sm font-semibold text-[var(--text-primary)] mb-4">Gesamtstatistik</h3>
-          <div className={`grid ${isMobile ? "grid-cols-3 gap-3" : "grid-cols-5 gap-6"}`} data-mobile-keep>
+          <div
+            className={`grid ${isMobile ? "grid-cols-3 gap-3" : "grid-cols-5 gap-6"}`}
+            data-mobile-keep
+          >
             <div className="text-center">
               <div className="w-10 h-10 rounded-xl bg-[var(--accent)]/10 flex items-center justify-center mx-auto mb-2">
                 <CheckCircle2 className="w-5 h-5 text-[var(--accent)]" />
@@ -671,7 +680,9 @@ export default function FortschrittPage() {
         </div>
 
         {/* ── Navigation Cards ──────────────────────────── */}
-        <div className={`grid ${isMobile ? "grid-cols-1 gap-3" : "grid-cols-2 gap-4"} stagger-children`}>
+        <div
+          className={`grid ${isMobile ? "grid-cols-1 gap-3" : "grid-cols-2 gap-4"} stagger-children`}
+        >
           <Link to="/schwachstellen">
             <div className="card-glass p-5 flex items-center gap-4 cursor-pointer hover:shadow-md transition-shadow duration-200">
               <div className="w-12 h-12 rounded-xl bg-[var(--accent)]/15 flex items-center justify-center shrink-0">

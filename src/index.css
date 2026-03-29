@@ -56,6 +56,7 @@ html.font-large { font-size: 18px; }
 /* ── Design System: Premium Lernplattform (warm, refined, academic) ───
  * Light: warm paper-tone background, deep indigo accents.
  * Dark: warm charcoal base, soft surfaces.
+ * Philosophy: calm, structured, confident. No noise, no flash.
  */
 :root {
   /* Base */
@@ -66,6 +67,7 @@ html.font-large { font-size: 18px; }
   --text-primary: #1a1a1a;
   --text-secondary: #5c5c5c;
   --border: #e8e8e4;
+  --border-strong: #d4d4cf;
   --muted: #737373; /* WCAG AA compliant: 4.75:1 on #fafaf8 */
   /* Accent (Deep Indigo / Primary) */
   --accent: #2d3a8c;
@@ -80,17 +82,24 @@ html.font-large { font-size: 18px; }
   --topbar-bg: rgba(250, 250, 248, 0.92);
   --radius: 10px;
   --radius-lg: 12px;
-  /* Spacing (Luft zwischen Abschnitten) */
+  /* Spacing Scale (enforced across sections, widgets, cards) */
+  --space-xs: 0.5rem;    /* 8px — tight inner padding */
+  --space-sm: 0.75rem;   /* 12px — inner card gaps */
+  --space-md: 1rem;      /* 16px — standard block gap */
+  --space-lg: 1.5rem;    /* 24px — section gap */
+  --space-xl: 2rem;      /* 32px — page-level section gap */
+  --space-2xl: 3rem;     /* 48px — major page divisions */
   --space-section: 1.5rem;
   --space-block: 1rem;
   /* Typography */
   --font-heading: "Source Serif 4", "Georgia", serif;
+  --heading-letter-spacing: -0.015em;
   /* Transitions */
   --ease-out: 0.15s ease-out;
   --ease-out-slow: 0.2s ease-out;
   /* Elevation (shadow tokens) — warmer, subtler */
   --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.03);
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
   --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.05);
   --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.07);
   /* Dashboard */
@@ -111,6 +120,7 @@ html.font-large { font-size: 18px; }
   --text-primary: #ededed; /* warm off-white: body/main content */
   --text-secondary: #a0a0a0; /* warm medium gray: secondary */
   --border: #2a2a2a;
+  --border-strong: #3a3a3a;
   --muted: #9a9a9a; /* WCAG AA compliant: 5.8:1 on #141414 */
   --accent: #5b8def;
   --accent-hover: #7aa4f7;
@@ -208,9 +218,14 @@ body {
   font-family: var(--font-sans);
   font-size: 16px;
   background-color: var(--background);
+  /* ── Sitewide atmospheric orbs ──────────────────────────────────────
+   * Two soft radial glows anchored to the viewport corners.
+   * These create persistent atmospheric depth across every page.
+   * Primary: deep indigo (brand). Secondary: warm green (bio/life-science warmth). */
   background-image:
-    radial-gradient(ellipse 80% 60% at 50% -20%, rgba(45, 58, 140, 0.04), transparent),
-    radial-gradient(ellipse 60% 40% at 80% 50%, rgba(50, 149, 86, 0.02), transparent);
+    radial-gradient(ellipse 70% 55% at 15% -8%, rgba(45, 58, 140, 0.09), transparent 70%),
+    radial-gradient(ellipse 55% 45% at 85% 5%, rgba(50, 149, 86, 0.05), transparent 65%);
+  background-attachment: fixed;
   color: var(--foreground);
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -220,14 +235,16 @@ body {
 .dark body,
 body.dark-body {
   background-image:
-    radial-gradient(ellipse 80% 60% at 50% -20%, rgba(91, 141, 239, 0.06), transparent),
-    radial-gradient(ellipse 60% 40% at 80% 50%, rgba(50, 149, 86, 0.03), transparent);
+    radial-gradient(ellipse 70% 55% at 15% -8%, rgba(91, 141, 239, 0.12), transparent 70%),
+    radial-gradient(ellipse 55% 45% at 85% 5%, rgba(50, 149, 86, 0.06), transparent 65%);
 }
 
-/* Heading font: serif only in reading/content context — sans in app UI */
+/* Typography: Inter everywhere in the app UI for coherence.
+ * Serif (Source Serif 4) is reserved ONLY for reading/textbook context. */
 .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6,
 .content-section h1, .content-section h2, .content-section h3 {
   font-family: var(--font-heading);
+  letter-spacing: var(--heading-letter-spacing);
 }
 
 /* Reading content — generous book-like sizing */
@@ -249,32 +266,47 @@ body.dark-body {
   margin-bottom: var(--space-block);
 }
 
-/* ── Glass & Premium Card System ─────────────────────────────────── */
+/* ── Card System — warm, present, refined ────────────────────────── *
+ * Cards use a very subtle translucency so atmospheric orbs behind
+ * them can bleed through, integrating the glow into the surface.    */
 .card-glass {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(16px) saturate(180%);
-  -webkit-backdrop-filter: blur(16px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04), 0 0 0 1px rgba(0, 0, 0, 0.02);
+  box-shadow: var(--shadow-sm);
+}
+.card-glass:hover {
+  box-shadow:
+    var(--shadow-sm),
+    0 0 16px color-mix(in srgb, var(--accent) 6%, transparent);
+  border-color: var(--border-strong);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
 }
 .dark .card-glass {
-  background: rgba(30, 30, 30, 0.7);
-  border-color: rgba(255, 255, 255, 0.06);
-  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.03);
+  background: rgba(30, 30, 30, 0.80);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-color: var(--border);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+.dark .card-glass:hover {
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.2),
+    0 0 16px color-mix(in srgb, var(--accent) 8%, transparent);
+  border-color: var(--border-strong);
 }
 
-/* Premium subject card with glass + accent glow */
+/* Subject card — translucent surface with accent top border and hover glow */
 .card-subject {
-  background: rgba(255, 255, 255, 0.65);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 16px;
-  box-shadow:
-    0 4px 24px rgba(0, 0, 0, 0.04),
-    0 1px 3px rgba(0, 0, 0, 0.02);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   position: relative;
   overflow: hidden;
 }
@@ -286,22 +318,24 @@ body.dark-body {
   right: 0;
   height: 3px;
   background: var(--subject-accent, var(--accent));
-  opacity: 0.8;
 }
 .card-subject:hover {
   transform: translateY(-2px);
   box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.08),
-    0 2px 8px rgba(0, 0, 0, 0.04),
-    0 0 20px color-mix(in srgb, var(--subject-accent, var(--accent)) 15%, transparent);
+    var(--shadow-md),
+    0 0 20px color-mix(in srgb, var(--subject-accent, var(--accent)) 12%, transparent);
+  border-color: color-mix(in srgb, var(--subject-accent, var(--accent)) 30%, var(--border));
 }
 .dark .card-subject {
-  background: rgba(30, 30, 30, 0.6);
-  border-color: rgba(255, 255, 255, 0.06);
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+  background: rgba(30, 30, 30, 0.75);
+  border-color: var(--border);
+  box-shadow: none;
 }
 .dark .card-subject:hover {
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  box-shadow:
+    var(--shadow-md),
+    0 0 20px color-mix(in srgb, var(--subject-accent, var(--accent)) 15%, transparent);
+  border-color: var(--border-strong);
 }
 
 /* Accent gradient line (reusable) */
@@ -337,15 +371,17 @@ body.dark-body {
   border-radius: 0 3px 3px 0;
 }
 
-/* Glass TopBar */
+/* TopBar — translucent, lets the atmospheric gradient bleed through */
 .topbar-glass {
-  background: rgba(250, 250, 248, 0.8);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  background: rgba(250, 250, 248, 0.82);
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 .dark .topbar-glass {
-  background: rgba(20, 20, 20, 0.8);
+  background: rgba(20, 20, 20, 0.82);
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
   border-bottom-color: rgba(255, 255, 255, 0.06);
 }
 
@@ -799,11 +835,20 @@ select:focus {
     box-shadow var(--ease-out);
 }
 .card-interactive:hover {
-  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
-  border-color: var(--border);
+  box-shadow: var(--shadow-sm);
+  border-color: var(--border-strong);
 }
 .dark .card-interactive:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Section label — small caps, letter-spaced, muted. Replaces raw uppercase text. */
+.section-label {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
 }
 
 /* Dashboard: subtle tint, not a gradient show */
@@ -1070,17 +1115,17 @@ body.dark-body .dashboard-page-bg {
   animation: fade-in-up 0.4s ease-out both;
 }
 
-/* Staggered children animation */
+/* Staggered children animation — very subtle, fast */
 .stagger-children > * {
   opacity: 0;
-  animation: fade-in-up 0.4s ease-out both;
+  animation: fade-in-up 0.25s ease-out both;
 }
-.stagger-children > *:nth-child(1) { animation-delay: 0.05s; }
-.stagger-children > *:nth-child(2) { animation-delay: 0.1s; }
-.stagger-children > *:nth-child(3) { animation-delay: 0.15s; }
-.stagger-children > *:nth-child(4) { animation-delay: 0.2s; }
-.stagger-children > *:nth-child(5) { animation-delay: 0.25s; }
-.stagger-children > *:nth-child(6) { animation-delay: 0.3s; }
+.stagger-children > *:nth-child(1) { animation-delay: 0.02s; }
+.stagger-children > *:nth-child(2) { animation-delay: 0.04s; }
+.stagger-children > *:nth-child(3) { animation-delay: 0.06s; }
+.stagger-children > *:nth-child(4) { animation-delay: 0.08s; }
+.stagger-children > *:nth-child(5) { animation-delay: 0.10s; }
+.stagger-children > *:nth-child(6) { animation-delay: 0.12s; }
 
 /* Subtle hover glow for interactive cards */
 .hover-glow {
@@ -1115,37 +1160,49 @@ body.dark-body .dashboard-page-bg {
   color: var(--text-primary);
 }
 
-/* ── Gradient orb decoration — behind hero titles ────────────────── */
+/* ── Hero orbs — atmospheric focal glow for section identity ─────── *
+ * Applied on hero sections, page headers, and focal areas.
+ * Two soft radial orbs create depth and premium atmosphere.
+ * Larger than card-level, positioned to frame the content area.      */
 .hero-orbs {
   position: relative;
+  overflow: visible;
 }
 .hero-orbs::before,
 .hero-orbs::after {
   content: "";
   position: absolute;
   border-radius: 50%;
-  filter: blur(60px);
-  opacity: 0.15;
   pointer-events: none;
   z-index: -1;
 }
+/* Primary orb: deep indigo — the brand anchor.
+ * Large, blurred, anchored top-left to frame the heading area. */
 .hero-orbs::before {
-  width: 300px;
+  width: 380px;
   height: 300px;
   background: var(--accent);
+  opacity: 0.10;
+  filter: blur(70px);
   top: -80px;
-  left: 50%;
-  transform: translateX(-70%) translateY(calc(var(--scroll-y, 0px) * -0.08));
-  will-change: transform;
+  left: -5%;
 }
+/* Secondary orb: warm green — life-science accent.
+ * Smaller, softer, offset right to create asymmetric warmth. */
 .hero-orbs::after {
-  width: 200px;
+  width: 240px;
   height: 200px;
   background: var(--accent-bio, #329556);
-  top: -40px;
-  left: 50%;
-  transform: translateX(30%) translateY(calc(var(--scroll-y, 0px) * -0.05));
-  will-change: transform;
+  opacity: 0.07;
+  filter: blur(60px);
+  top: -30px;
+  right: 5%;
+}
+.dark .hero-orbs::before {
+  opacity: 0.14;
+}
+.dark .hero-orbs::after {
+  opacity: 0.09;
 }
 
 /* ── Animated shimmer on progress bars ───────────────────────────── */

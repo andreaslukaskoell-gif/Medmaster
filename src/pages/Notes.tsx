@@ -53,20 +53,17 @@ function parseMarkdown(text: string): string {
     result = result.replace(/(?<!\*)\*([^*]+)\*(?!\*)/g, '<em class="italic">$1</em>');
 
     // Links [text](url) — only allow safe protocols (http, https, mailto, relative)
-    result = result.replace(
-      /\[([^\]]+)\]\(([^)]+)\)/g,
-      (_: string, text: string, url: string) => {
-        const trimmed = url.trim().toLowerCase();
-        if (
-          trimmed.startsWith("javascript:") ||
-          trimmed.startsWith("data:") ||
-          trimmed.startsWith("vbscript:")
-        ) {
-          return text; // strip dangerous link, keep text
-        }
-        return `<a href="${url}" class="text-[var(--accent)] hover:underline" target="_blank" rel="noopener noreferrer">${text}</a>`;
+    result = result.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_: string, text: string, url: string) => {
+      const trimmed = url.trim().toLowerCase();
+      if (
+        trimmed.startsWith("javascript:") ||
+        trimmed.startsWith("data:") ||
+        trimmed.startsWith("vbscript:")
+      ) {
+        return text; // strip dangerous link, keep text
       }
-    );
+      return `<a href="${url}" class="text-[var(--accent)] hover:underline" target="_blank" rel="noopener noreferrer">${text}</a>`;
+    });
 
     return result;
   };
@@ -308,7 +305,7 @@ export default function Notes() {
 
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Meine Notizen</h1>
+          <h1 className="text-2xl font-bold text-[var(--text-primary)]">Meine Notizen</h1>
           <p className="text-[var(--muted)] mt-1">
             {allNotes.length} Notiz{allNotes.length !== 1 ? "en" : ""} gespeichert
           </p>

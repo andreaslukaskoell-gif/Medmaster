@@ -102,10 +102,8 @@ const NAV_SECTIONS: { id: string; title: string; items: NavItem[] }[] = [
 
 function SectionHeader({ title }: { title: string }) {
   return (
-    <div className="mb-1 mt-4 first:mt-0">
-      <div className="flex items-center gap-1.5 w-full py-1.5 px-3 text-[12px] font-medium text-[var(--muted)]/70">
-        {title}
-      </div>
+    <div className="mb-1 mt-5 first:mt-0">
+      <div className="section-label px-3 py-1.5">{title}</div>
     </div>
   );
 }
@@ -126,16 +124,14 @@ function NavItemRow({
   return (
     <div
       className={cn(
-        "sidebar-nav-item flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm font-medium cursor-pointer",
+        "sidebar-nav-item flex items-center gap-2.5 px-3 py-2 rounded-lg text-[13px] font-medium cursor-pointer",
         active
-          ? "bg-[var(--accent)]/10 text-[var(--foreground)] font-semibold"
-          : "text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-[var(--foreground)]/5",
-        emphasized && !active && "bg-[var(--accent)]/5"
+          ? "bg-[var(--accent)]/8 text-[var(--accent)] font-semibold"
+          : "text-[var(--text-secondary)] hover:text-[var(--foreground)] hover:bg-[var(--foreground)]/[0.03]",
+        emphasized && !active && "text-[var(--foreground)]"
       )}
     >
-      <Icon
-        className={cn("w-4 h-4 shrink-0", active ? "text-[var(--accent)]" : "text-[var(--muted)]")}
-      />
+      <Icon className={cn("w-4 h-4 shrink-0", active ? "text-[var(--accent)]" : "")} />
       <span className="truncate flex-1">{label}</span>
     </div>
   );

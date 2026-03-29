@@ -180,7 +180,7 @@ export default function FAQPage() {
       </nav>
 
       <header className="bg-[var(--card)] border-b border-[var(--border)]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-14 text-center">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-14 text-center hero-orbs">
           <h1 className="text-3xl sm:text-4xl font-extrabold text-[var(--text-primary)] mb-4">
             Häufige Fragen zum MedAT 2026
           </h1>

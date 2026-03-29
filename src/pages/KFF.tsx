@@ -297,8 +297,10 @@ export default function KFF() {
   return (
     <div className={`max-w-4xl mx-auto ${isMobile ? "space-y-5" : "space-y-8"}`}>
       {/* Hero */}
-      <div>
-        <div className={`flex ${isMobile ? "flex-col gap-1.5" : "items-center gap-3"} mb-2`}>
+      <div className="hero-orbs text-center">
+        <div
+          className={`flex ${isMobile ? "flex-col gap-1.5" : "items-center gap-3 justify-center"} mb-2`}
+        >
           <h1
             className={`${isMobile ? "text-xl" : "text-2xl"} font-bold text-[var(--text-primary)]`}
           >
@@ -309,7 +311,7 @@ export default function KFF() {
           </span>
         </div>
         {!isMobile && (
-          <p className="text-sm text-[var(--muted)] max-w-2xl leading-relaxed">
+          <p className="text-sm text-[var(--muted)] max-w-2xl mx-auto leading-relaxed">
             5 Aufgabentypen, die logisches Denken, Merkfähigkeit und räumliches Vorstellungsvermögen
             prüfen. Jeder Untertest wird separat gewertet — trainiere alle regelmäßig.
           </p>
@@ -319,10 +321,7 @@ export default function KFF() {
       {/* Module cards */}
       <div className={isMobile ? "space-y-3" : "space-y-4"}>
         {modules.map((m) => (
-          <div
-            key={m.id}
-            className={`bg-[var(--surface)] rounded-xl border border-[var(--border)] ${isMobile ? "p-3.5" : "p-5"}`}
-          >
+          <div key={m.id} className={`card-glass ${isMobile ? "p-3.5" : "p-5"}`}>
             <div className="flex items-start gap-3">
               {/* Color bar */}
               <div

@@ -49,7 +49,7 @@ export default function Community() {
       <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "Community" }]} />
 
       <div>
-        <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Community</h1>
+        <h1 className="text-2xl font-bold text-[var(--text-primary)]">Community</h1>
         <p className="text-[var(--muted)] mt-1">Dein Lernfortschritt auf einen Blick.</p>
       </div>
 

@@ -213,12 +213,12 @@ export default function MedATPunkterechner() {
       </nav>
 
       {/* Header */}
-      <header className="bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-14 text-center">
+      <header className="bg-[var(--card)] border-b border-[var(--border)]">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-14 text-center hero-orbs">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-2xl text-sm font-medium mb-6 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-400">
             MedAT 2026
           </div>
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-gray-100 mb-4">
+          <h1 className="text-3xl sm:text-4xl font-extrabold text-[var(--text-primary)] mb-4">
             MedAT Punkte-Rechner 2026
           </h1>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-xl mx-auto">

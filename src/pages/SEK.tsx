@@ -180,16 +180,22 @@ export default function SEK() {
   return (
     <div className={`max-w-5xl mx-auto space-y-6 ${isMobile ? "px-3" : ""}`}>
       {/* Header */}
-      <div>
-        <div className={`flex ${isMobile ? "flex-col gap-1" : "items-center gap-3"} mb-1`}>
-          <h1 className={`${isMobile ? "text-xl" : "text-2xl"} font-bold text-[var(--text-primary)]`}>
+      <div className="hero-orbs text-center">
+        <div
+          className={`flex ${isMobile ? "flex-col gap-1" : "items-center gap-3 justify-center"} mb-1`}
+        >
+          <h1
+            className={`${isMobile ? "text-xl" : "text-2xl"} font-bold text-[var(--text-primary)]`}
+          >
             Sozial-emotionale Kompetenzen
           </h1>
-          <span className="text-xs font-semibold text-[var(--accent)] bg-[var(--accent)]/10 px-2.5 py-1 rounded-full w-fit">
-            10% des MedAT
+          <span className="text-xs font-medium text-[var(--muted)] bg-[var(--surface)] border border-[var(--border)] px-2 py-0.5 rounded w-fit">
+            10 % des MedAT
           </span>
         </div>
-        <div className={`flex ${isMobile ? "flex-col gap-2" : "items-center gap-4"} text-sm text-[var(--muted)]`}>
+        <div
+          className={`flex ${isMobile ? "flex-col gap-2" : "items-center gap-4 justify-center"} text-sm text-[var(--muted)]`}
+        >
           <span>3 Untertests · 7 Basisemotionen nach Ekman</span>
           <Button variant="outline" size="sm" onClick={() => setView("strategy")}>
             <BookOpen className="w-4 h-4 mr-1" /> Strategie
@@ -206,7 +212,7 @@ export default function SEK() {
       </div>
 
       {/* Subtest Cards */}
-      <div className="rounded-xl border border-[var(--border)] divide-y divide-[var(--border)] overflow-hidden">
+      <div className="card-glass divide-y divide-[var(--border)] overflow-hidden">
         {subtests.map((s) => (
           <div
             key={s.id}

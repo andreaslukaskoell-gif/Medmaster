@@ -364,7 +364,7 @@ export default function MedATGuide() {
       </nav>
 
       <header className="bg-[var(--card)] border-b border-[var(--border)]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-14 text-center">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-14 text-center hero-orbs">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-2xl text-sm font-medium mb-6 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-400">
             Aktualisiert für 2026
           </div>

@@ -165,7 +165,7 @@ export default function DailyChallengePage() {
   // --- Already completed today ---
   if (existingResult && !isFinished) {
     return (
-      <div className="min-h-screen bg-[var(--border)]/30 flex flex-col">
+      <div className="min-h-screen bg-[var(--background)] flex flex-col hero-orbs">
         <div className="max-w-2xl mx-auto w-full px-4 py-8 flex flex-col gap-6">
           {/* Back */}
           <button
@@ -241,7 +241,7 @@ export default function DailyChallengePage() {
   // --- Loading state ---
   if (!challenge) {
     return (
-      <div className="min-h-screen bg-[var(--border)]/30 flex items-center justify-center">
+      <div className="min-h-screen bg-[var(--background)] flex items-center justify-center hero-orbs">
         <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-blue-500" />
       </div>
     );
@@ -255,7 +255,7 @@ export default function DailyChallengePage() {
   // --- Finished state ---
   if (isFinished && finalResult) {
     return (
-      <div className="min-h-screen bg-[var(--border)]/30 flex flex-col">
+      <div className="min-h-screen bg-[var(--background)] flex flex-col hero-orbs">
         <div className="max-w-2xl mx-auto w-full px-4 py-8 flex flex-col gap-6">
           {/* Back */}
           <button
@@ -406,7 +406,7 @@ export default function DailyChallengePage() {
 
   // --- Active challenge state ---
   return (
-    <div className="min-h-screen bg-[var(--border)]/30 flex flex-col">
+    <div className="min-h-screen bg-[var(--background)] flex flex-col hero-orbs">
       <div className="max-w-2xl mx-auto w-full px-4 py-8 flex flex-col gap-6">
         {/* Back */}
         <button

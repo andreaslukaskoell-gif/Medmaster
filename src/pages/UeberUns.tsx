@@ -17,7 +17,7 @@ export default function UeberUns() {
       </Button>
 
       {/* Hero */}
-      <div className="text-center space-y-4">
+      <div className="text-center space-y-4 hero-orbs">
         <h1 className="text-3xl font-bold text-[var(--text-primary)]">
           Die Geschichte hinter MedMaster
         </h1>

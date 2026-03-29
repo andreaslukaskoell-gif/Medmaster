@@ -44,20 +44,20 @@ export function BMSSubjectSelector({
       )}
 
       {/* Hero header */}
-      <div className="text-center max-w-2xl mx-auto hero-orbs">
-        <h1 className={`${isMobile ? "text-2xl" : "text-5xl"} font-bold text-[var(--foreground)] tracking-tight`}>
-          {isMobile ? "BMS – Grundlagen" : "Biomedizinische Grundlagen"}
+      <div className="hero-orbs text-center">
+        <h1 className={`${isMobile ? "text-xl" : "text-2xl"} font-bold text-[var(--text-primary)]`}>
+          Biomedizinische Grundlagen
         </h1>
-        <p className={`${isMobile ? "text-sm" : "text-xl"} text-[var(--text-secondary)] mt-3`}>
+        <p className={`${isMobile ? "text-sm" : "text-base"} text-[var(--text-secondary)] mt-1.5`}>
           {totalUK} Unterkapitel · 4 Fachgebiete
         </p>
         {totalUK > 0 && (
-          <div className="mt-6 max-w-sm mx-auto">
-            <div className="flex items-center justify-between text-xs text-[var(--muted)] mb-2">
+          <div className="mt-4 max-w-sm mx-auto">
+            <div className="flex items-center justify-between text-xs text-[var(--muted)] mb-1.5">
               <span>
                 {completedUK} von {totalUK} abgeschlossen
               </span>
-              <span className="font-semibold text-[var(--accent)]">
+              <span className="font-medium text-[var(--text-primary)]">
                 {Math.round((completedUK / totalUK) * 100)}%
               </span>
             </div>
@@ -71,7 +71,7 @@ export function BMSSubjectSelector({
         )}
       </div>
 
-      <div className={`grid ${isMobile ? "grid-cols-1 gap-4" : "grid-cols-2 gap-8"} stagger-children`}>
+      <div className={`grid ${isMobile ? "grid-cols-1 gap-3" : "grid-cols-2 gap-4"}`}>
         {subjects.map((subject) => (
           <SubjectCard
             key={subject.id}
@@ -171,7 +171,11 @@ function SubjectCard({
         </div>
         <div className="flex-1 min-w-0">
           <div className="flex items-center justify-between gap-2">
-            <h2 className={`${isMobile ? "text-lg" : "text-2xl"} font-semibold text-[var(--foreground)]`}>{subject.label}</h2>
+            <h2
+              className={`${isMobile ? "text-lg" : "text-2xl"} font-semibold text-[var(--foreground)]`}
+            >
+              {subject.label}
+            </h2>
             <span
               className="text-xs font-semibold px-3 py-1.5 rounded-lg opacity-70 group-hover:opacity-100 transition-all duration-200 shrink-0 group-hover:shadow-sm"
               style={{

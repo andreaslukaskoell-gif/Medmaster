@@ -18,7 +18,6 @@ import {
   CalendarClock,
   Zap,
 } from "lucide-react";
-import { CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 // Progress replaced with .progress-premium CSS class
 import { Heatmap } from "@/components/ui/heatmap";
@@ -35,7 +34,7 @@ import { useAuth } from "@/hooks/useAuth";
 import { cn, daysUntilMedAT, getGreetingByTime } from "@/lib/utils";
 import { getDailyGoalFromPlan, getConsecutiveDaysGoalMissed } from "@/lib/dailyGoal";
 import { getTodaysResult } from "@/lib/dailyChallenge";
-import { getLevelFromXP, XP_PER_LEVEL } from "@/lib/progression";
+import { getLevelFromXP } from "@/lib/progression";
 import { generateAdaptivePlan } from "@/lib/adaptivePlan";
 import { buildConcreteDailyPlan } from "@/lib/concreteDailyPlan";
 import { getPlanAdaptation } from "@/lib/planAdaptation";
@@ -251,20 +250,20 @@ export default function Dashboard() {
           />
         </div>
       )}
-      <div className="max-w-5xl mx-auto px-4 py-8 pb-12">
+      <div className="max-w-5xl mx-auto px-4 py-6 pb-12">
         <SyncIndicator />
 
         {/* ─── First-action guidance for new users (hidden after first activity) ─── */}
         {(quizResults ?? []).length === 0 && completedChapters.length === 0 && (
-          <section className="mb-6 hero-orbs" aria-label="Erste Schritte">
-            <h2 className="text-2xl font-bold text-[var(--text-primary)] mb-1 text-center">
-              Starte jetzt mit deiner MedAT-Vorbereitung
+          <section className="mb-8" aria-label="Erste Schritte">
+            <h2 className="text-xl font-semibold text-[var(--text-primary)] mb-1">
+              Starte deine MedAT-Vorbereitung
             </h2>
-            <p className="text-sm text-[var(--muted)] text-center mb-4">
+            <p className="text-sm text-[var(--muted)] mb-5">
               Wähle einen Bereich und leg direkt los.
             </p>
             <div
-              className={`grid gap-3 stagger-children ${isMobile ? "grid-cols-1" : "grid-cols-3"}`}
+              className={`grid gap-3 ${isMobile ? "grid-cols-1" : "grid-cols-2 lg:grid-cols-3"}`}
             >
               {(
                 [
@@ -273,8 +272,7 @@ export default function Dashboard() {
                     icon: BookOpen,
                     title: "BMS-Fragen üben",
                     desc: "5.000+ Fragen zu Bio, Chemie, Physik & Mathe",
-                    color: "text-emerald-600",
-                    bg: "bg-emerald-100 dark:bg-emerald-900/30",
+                    accent: "var(--accent-bio)",
                     target: "bms",
                   },
                   {
@@ -282,8 +280,7 @@ export default function Dashboard() {
                     icon: Puzzle,
                     title: "KFF trainieren",
                     desc: "Zahlenfolgen, Figuren, Implikationen & mehr",
-                    color: "text-blue-600",
-                    bg: "bg-blue-100 dark:bg-blue-900/30",
+                    accent: "var(--accent-phys)",
                     target: "kff",
                   },
                   {
@@ -291,8 +288,7 @@ export default function Dashboard() {
                     icon: FileText,
                     title: "TV üben",
                     desc: "Textverständnis trainieren",
-                    color: "text-amber-600",
-                    bg: "bg-amber-100 dark:bg-amber-900/30",
+                    accent: "var(--accent-math)",
                     target: "tv",
                   },
                   {
@@ -300,8 +296,7 @@ export default function Dashboard() {
                     icon: Heart,
                     title: "SEK üben",
                     desc: "Sozial-emotionale Kompetenzen",
-                    color: "text-rose-600",
-                    bg: "bg-rose-100 dark:bg-rose-900/30",
+                    accent: "var(--accent-chem)",
                     target: "sek",
                   },
                   {
@@ -309,8 +304,7 @@ export default function Dashboard() {
                     icon: Target,
                     title: "Simulation starten",
                     desc: "Vollständiger MedAT unter echten Bedingungen",
-                    color: "text-violet-600",
-                    bg: "bg-violet-100 dark:bg-violet-900/30",
+                    accent: "var(--accent)",
                     target: "simulation",
                   },
                 ] as const
@@ -319,15 +313,15 @@ export default function Dashboard() {
                   key={card.target}
                   to={card.to}
                   onClick={() => trackEvent("activation_cta_click", { target: card.target })}
-                  className="card-glass p-5 flex items-start gap-4 group hover:shadow-md transition-shadow"
+                  className="card-glass p-4 flex items-center gap-3.5 group hover:border-[var(--border-strong)] transition-colors"
                 >
                   <div
-                    className={cn(
-                      "w-10 h-10 rounded-xl flex items-center justify-center shrink-0",
-                      card.bg
-                    )}
+                    className="w-9 h-9 rounded-lg flex items-center justify-center shrink-0"
+                    style={{
+                      backgroundColor: `color-mix(in srgb, ${card.accent} 12%, transparent)`,
+                    }}
                   >
-                    <card.icon className={cn("w-5 h-5", card.color)} />
+                    <card.icon className="w-4.5 h-4.5" style={{ color: card.accent }} />
                   </div>
                   <div className="flex-1 min-w-0">
                     <p className="text-sm font-semibold text-[var(--text-primary)]">{card.title}</p>
@@ -335,7 +329,7 @@ export default function Dashboard() {
                       {card.desc}
                     </p>
                   </div>
-                  <ArrowRight className="w-4 h-4 text-[var(--muted)] shrink-0 mt-1 group-hover:translate-x-0.5 transition-transform" />
+                  <ArrowRight className="w-4 h-4 text-[var(--muted)] shrink-0 opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" />
                 </Link>
               ))}
             </div>
@@ -365,204 +359,195 @@ export default function Dashboard() {
         <DueReviewsCard userProgress={userProgress} />
 
         <motion.div variants={stagger} initial="initial" animate="animate" className="space-y-5">
-          {/* Hero: Begrüßung + Heute im Lernplan */}
-          <motion.section variants={tileMotion} aria-label="Start" className="space-y-4">
-            <div className="card-glass p-5">
-              <div className="flex flex-col gap-3">
+          {/* Hero: Greeting + Key Metrics — with atmospheric orbs behind */}
+          <motion.section variants={tileMotion} aria-label="Start" className="hero-orbs">
+            <div className="card-glass p-6">
+              <div className="flex items-start justify-between gap-4 mb-5">
                 <div>
-                  <div className="flex items-start justify-between gap-3">
-                    <h1 className="text-2xl font-bold text-[var(--text-primary)] tracking-tight">
-                      {displayName ? `${getGreetingByTime()}, ${displayName}` : getGreetingByTime()}
-                    </h1>
-                    <div className="shrink-0 flex items-center gap-2">
-                      {flameStreak > 0 && (
-                        <Tooltip
-                          content={`${flameStreak} ${flameStreak === 1 ? "Tag" : "Tage"} in Folge aktiv`}
-                          position="top"
+                  <h1 className="text-2xl font-bold text-[var(--text-primary)] tracking-tight">
+                    {displayName ? `${getGreetingByTime()}, ${displayName}` : getGreetingByTime()}
+                  </h1>
+                  {concretePlan && (
+                    <div className="flex flex-wrap gap-2 mt-3">
+                      {concretePlan.bmsRead.length > 0 && (
+                        <Link
+                          to="/bms"
+                          className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium text-[var(--accent)] bg-[var(--accent)]/[0.06] hover:bg-[var(--accent)]/[0.1] transition-colors"
                         >
-                          <div className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-amber-100/80 dark:bg-amber-900/20 border border-amber-200/50 dark:border-amber-800/30">
-                            <StreakFlameIcon
-                              streak={flameStreak}
-                              hasActivityToday={flameHasActivity}
-                              size="sm"
-                              className="w-4 h-4"
-                            />
-                            <span className="text-sm font-bold text-amber-700 dark:text-amber-400 leading-tight">
-                              {flameStreak}
-                            </span>
-                            <span className="text-[10px] text-amber-600/70 dark:text-amber-500/70 leading-tight">
-                              Streak
-                            </span>
-                          </div>
-                        </Tooltip>
+                          <BookOpen className="w-3 h-3" />
+                          {concretePlan.bmsRead.length} Kapitel lernen
+                        </Link>
                       )}
-                      {days > 0 && (
-                        <div className="flex flex-col items-center px-2.5 py-1 rounded-lg bg-[var(--accent)]/10 border border-[var(--accent)]/20">
-                          <span className="text-base font-bold text-[var(--accent)] leading-tight">
-                            {days}
-                          </span>
-                          <span className="text-[10px] text-[var(--muted)] leading-tight">
-                            Tage bis MedAT
-                          </span>
-                        </div>
+                      {concretePlan.bmsReview.length > 0 && (
+                        <Link
+                          to="/bms"
+                          className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium text-[var(--accent)] bg-[var(--accent)]/[0.06] hover:bg-[var(--accent)]/[0.1] transition-colors"
+                        >
+                          <RefreshCw className="w-3 h-3" />
+                          {concretePlan.bmsReview.length} wiederholen
+                        </Link>
+                      )}
+                      {concretePlan.bmsQuestions.length > 0 && (
+                        <Link
+                          to="/fragen-trainer"
+                          className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium text-[var(--accent)] bg-[var(--accent)]/[0.06] hover:bg-[var(--accent)]/[0.1] transition-colors"
+                        >
+                          <ListChecks className="w-3 h-3" />
+                          BMS-Fragen
+                        </Link>
+                      )}
+                      {concretePlan.kffTasks.length > 0 && (
+                        <Link
+                          to="/kff"
+                          className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium text-[var(--accent)] bg-[var(--accent)]/[0.06] hover:bg-[var(--accent)]/[0.1] transition-colors"
+                        >
+                          <Brain className="w-3 h-3" />
+                          KFF
+                        </Link>
+                      )}
+                      {concretePlan.tvTexts > 0 && (
+                        <Link
+                          to="/tv"
+                          className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium text-[var(--accent)] bg-[var(--accent)]/[0.06] hover:bg-[var(--accent)]/[0.1] transition-colors"
+                        >
+                          <FileText className="w-3 h-3" />
+                          TV
+                        </Link>
+                      )}
+                      {concretePlan.sekTasks.length > 0 && (
+                        <Link
+                          to="/sek"
+                          className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium text-[var(--accent)] bg-[var(--accent)]/[0.06] hover:bg-[var(--accent)]/[0.1] transition-colors"
+                        >
+                          <Heart className="w-3 h-3" />
+                          SEK
+                        </Link>
                       )}
                     </div>
-                  </div>
+                  )}
                 </div>
-                {concretePlan && (
-                  <div className="flex flex-wrap gap-2 text-sm">
-                    {concretePlan.bmsRead.length > 0 && (
-                      <Link
-                        to="/bms"
-                        className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-[var(--accent)]/10 text-[var(--accent)] hover:bg-[var(--accent)]/15 transition-colors"
-                      >
-                        <BookOpen className="w-3.5 h-3.5" />
-                        {concretePlan.bmsRead.length} Kapitel lernen
-                      </Link>
-                    )}
-                    {concretePlan.bmsReview.length > 0 && (
-                      <Link
-                        to="/bms"
-                        className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-[var(--accent)]/10 text-[var(--accent)] hover:bg-[var(--accent)]/15 transition-colors"
-                      >
-                        <RefreshCw className="w-3.5 h-3.5" />
-                        {concretePlan.bmsReview.length} wiederholen
-                      </Link>
-                    )}
-                    {concretePlan.bmsQuestions.length > 0 && (
-                      <Link
-                        to="/fragen-trainer"
-                        className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-[var(--accent)]/10 text-[var(--accent)] hover:bg-[var(--accent)]/15 transition-colors"
-                      >
-                        <ListChecks className="w-3.5 h-3.5" />
-                        BMS-Fragen
-                      </Link>
-                    )}
-                    {concretePlan.kffTasks.length > 0 && (
-                      <Link
-                        to="/kff"
-                        className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-[var(--accent)]/10 text-[var(--accent)] hover:bg-[var(--accent)]/15 transition-colors"
-                      >
-                        <Brain className="w-3.5 h-3.5" />
-                        KFF
-                      </Link>
-                    )}
-                    {concretePlan.tvTexts > 0 && (
-                      <Link
-                        to="/tv"
-                        className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-[var(--accent)]/10 text-[var(--accent)] hover:bg-[var(--accent)]/15 transition-colors"
-                      >
-                        <FileText className="w-3.5 h-3.5" />
-                        TV
-                      </Link>
-                    )}
-                    {concretePlan.sekTasks.length > 0 && (
-                      <Link
-                        to="/sek"
-                        className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-[var(--accent)]/10 text-[var(--accent)] hover:bg-[var(--accent)]/15 transition-colors"
-                      >
-                        <Heart className="w-3.5 h-3.5" />
-                        SEK
-                      </Link>
-                    )}
-                  </div>
-                )}
+                <div className="shrink-0 flex items-center gap-2.5">
+                  {flameStreak > 0 && (
+                    <Tooltip
+                      content={`${flameStreak} ${flameStreak === 1 ? "Tag" : "Tage"} in Folge aktiv`}
+                      position="top"
+                    >
+                      <div className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-amber-50 dark:bg-amber-900/20 border border-amber-200/60 dark:border-amber-800/30">
+                        <StreakFlameIcon
+                          streak={flameStreak}
+                          hasActivityToday={flameHasActivity}
+                          size="sm"
+                          className="w-4 h-4"
+                        />
+                        <span className="text-sm font-bold text-amber-700 dark:text-amber-400 leading-tight">
+                          {flameStreak}
+                        </span>
+                      </div>
+                    </Tooltip>
+                  )}
+                  {days > 0 && (
+                    <div className="flex flex-col items-center px-3 py-1.5 rounded-lg bg-[var(--accent)]/[0.06] border border-[var(--accent)]/[0.12]">
+                      <span className="text-lg font-bold text-[var(--accent)] leading-tight tabular-nums">
+                        {days}
+                      </span>
+                      <span className="text-[10px] text-[var(--muted)] leading-tight">
+                        Tage bis MedAT
+                      </span>
+                    </div>
+                  )}
+                </div>
               </div>
-              <div className="mt-4 pt-4 border-t border-[var(--border)]">
-                <div className="flex items-center justify-between text-sm mb-1">
+
+              {/* BMS Progress — inside the hero card */}
+              <div className="pt-4 border-t border-[var(--border)]">
+                <div className="flex items-center justify-between text-sm mb-1.5">
                   <span className="text-[var(--text-secondary)]">BMS-Fortschritt</span>
-                  <span className="font-semibold text-[var(--text-primary)]">
-                    {bmsProgressPct} %
-                  </span>
+                  <Tooltip
+                    content={`${bmsProgressDone} von ${bmsProgressTotal} Unterkapitel abgeschlossen`}
+                    position="top"
+                  >
+                    <span className="font-semibold text-[var(--text-primary)]">
+                      {bmsProgressPct} %
+                    </span>
+                  </Tooltip>
                 </div>
-                <Tooltip
-                  content={`${bmsProgressDone} von ${bmsProgressTotal} Unterkapitel abgeschlossen`}
-                  position="top"
-                >
-                  <div className="progress-premium w-full">
-                    <div className="progress-fill" style={{ width: `${bmsProgressPct}%` }} />
-                  </div>
-                </Tooltip>
+                <div className="progress-premium w-full">
+                  <div className="progress-fill" style={{ width: `${bmsProgressPct}%` }} />
+                </div>
               </div>
             </div>
           </motion.section>
 
-          {/* Daily Challenge — compact single row */}
+          {/* Daily Challenge — clean, compact */}
           <motion.section variants={tileMotion} aria-label="BMS des Tages">
-            <Tooltip content="Täglich eine neue BMS-Frage" position="top">
-              {dailyResult ? (
-                <Link to="/daily">
-                  <div className={cn(cardClass, "relative overflow-hidden")}>
-                    <CardContent className="px-5 py-3 flex items-center gap-3">
-                      <div className="w-8 h-8 rounded-lg bg-[var(--success-bg)] flex items-center justify-center shrink-0">
-                        <CheckCircle2 className="w-4 h-4 text-[var(--success)]" />
-                      </div>
-                      <p className="text-sm font-semibold text-[var(--text-primary)] flex-1">
-                        BMS des Tages gelöst!
-                      </p>
-                      <span className="shrink-0 text-xs font-bold text-[var(--success)] bg-[var(--success-bg)] px-2.5 py-1 rounded-full">
-                        +{dailyResult.xpEarned} XP
-                      </span>
-                    </CardContent>
+            {dailyResult ? (
+              <Link to="/daily" className="block card-glass p-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-lg bg-[var(--success-bg)] flex items-center justify-center shrink-0">
+                    <CheckCircle2 className="w-4 h-4 text-[var(--success)]" />
                   </div>
-                </Link>
-              ) : (
-                <Link to="/daily">
-                  <div className={cn(cardClass, "cursor-pointer")}>
-                    <CardContent className="px-5 py-3 flex items-center gap-3">
-                      <div className="w-8 h-8 rounded-lg bg-[var(--accent)]/15 flex items-center justify-center shrink-0">
-                        <Target className="w-4 h-4 text-[var(--accent)]" />
-                      </div>
-                      <p className="text-sm font-semibold text-[var(--text-primary)] flex-1">
-                        BMS des Tages
-                      </p>
-                      <span className="shrink-0 text-xs font-bold text-[var(--accent)] bg-[var(--accent)]/10 px-2 py-0.5 rounded-full">
-                        {XP_PER_LEVEL} XP
-                      </span>
-                      <span className="shrink-0 inline-flex items-center gap-1 text-xs font-semibold text-[var(--accent)] bg-[var(--accent)]/10 px-3 py-1.5 rounded-full">
-                        Jetzt starten <ArrowRight className="w-3 h-3" />
-                      </span>
-                    </CardContent>
+                  <p className="text-sm font-medium text-[var(--text-primary)] flex-1">
+                    BMS des Tages gelöst
+                  </p>
+                  <span className="shrink-0 text-xs font-medium text-[var(--success)]">
+                    +{dailyResult.xpEarned} XP
+                  </span>
+                </div>
+              </Link>
+            ) : (
+              <Link
+                to="/daily"
+                className="block card-glass p-4 group hover:border-[var(--border-strong)] transition-colors"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-lg bg-[var(--accent)]/10 flex items-center justify-center shrink-0">
+                    <Target className="w-4 h-4 text-[var(--accent)]" />
                   </div>
-                </Link>
-              )}
-            </Tooltip>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-sm font-medium text-[var(--text-primary)]">BMS des Tages</p>
+                    <p className="text-xs text-[var(--muted)]">Tägliche Übungsfrage</p>
+                  </div>
+                  <span className="shrink-0 inline-flex items-center gap-1 text-xs font-medium text-[var(--accent)]">
+                    Jetzt starten{" "}
+                    <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
+                  </span>
+                </div>
+              </Link>
+            )}
           </motion.section>
 
-          {/* Empfehlungen — adaptive widgets based on user behavior */}
-          <ScrollReveal delay={80}>
-            <motion.section
-              variants={tileMotion}
-              aria-label="Empfehlungen"
-              className="grid gap-3"
-              style={{
-                gridTemplateColumns: isMobile ? "1fr" : "repeat(auto-fit, minmax(280px, 1fr))",
-              }}
-            >
-              <DailyPlanWidget />
-              <WeaknessWidget />
-              <RecentActivityWidget />
-            </motion.section>
-          </ScrollReveal>
+          {/* Adaptive widgets — Tagesplan, Schwachstellen, Letzte Aktivität */}
+          <motion.section
+            variants={tileMotion}
+            aria-label="Empfehlungen"
+            className="grid gap-3"
+            style={{
+              gridTemplateColumns: isMobile ? "1fr" : "repeat(auto-fit, minmax(280px, 1fr))",
+            }}
+          >
+            <DailyPlanWidget />
+            <WeaknessWidget />
+            <RecentActivityWidget />
+          </motion.section>
 
-          {/* Wochen-Aktivität + Freunde einladen — side by side on desktop */}
-          <ScrollReveal delay={120}>
-            <motion.section
-              variants={tileMotion}
-              aria-label="Wochen-Aktivität und Freunde"
-              className={`grid gap-3 ${isMobile ? "grid-cols-1" : "grid-cols-2"}`}
-            >
-              <div className={cn(cardClass, "p-4")}>
-                <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
-                  <p className="text-sm font-medium text-[var(--muted)]">Wochen-Aktivität</p>
-                  <p className="text-sm text-[var(--text-primary)]">
-                    Diese Woche an <strong>{daysThisWeekActive}/7</strong> Tagen aktiv
-                  </p>
-                </div>
-                <Heatmap />
+          {/* Wochen-Aktivität — full width, no referral widget crowding the learning context */}
+          <motion.section variants={tileMotion} aria-label="Wochen-Aktivität">
+            <div className={cn(cardClass, "p-4")}>
+              <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
+                <p className="text-sm font-medium text-[var(--text-primary)]">Wochen-Aktivität</p>
+                <p className="text-xs text-[var(--muted)]">
+                  Diese Woche an{" "}
+                  <strong className="text-[var(--text-primary)]">{daysThisWeekActive}/7</strong>{" "}
+                  Tagen aktiv
+                </p>
               </div>
-              <ReferralWidget />
-            </motion.section>
+              <Heatmap />
+            </div>
+          </motion.section>
+
+          {/* Referral widget — separated, lower priority */}
+          <ScrollReveal>
+            <ReferralWidget />
           </ScrollReveal>
 
           {/* Schwächen-Analyse (server-side, nur wenn Daten vorhanden) */}
@@ -579,7 +564,7 @@ export default function Dashboard() {
             aria-labelledby="smart-adjust-title"
           >
             <div
-              className="relative w-full max-w-md card-glass shadow-xl p-6"
+              className="relative w-full max-w-md card-glass shadow-lg p-6"
               onClick={(e) => e.stopPropagation()}
             >
               <h2

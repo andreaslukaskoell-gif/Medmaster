@@ -494,7 +494,13 @@ export default function TV() {
         {/* Split-pane: text (sticky on desktop) + questions side by side */}
         <div className={isMobile ? "space-y-4" : "grid grid-cols-2 gap-6"}>
           {/* Text content — sticky on desktop */}
-          <div className={isMobile ? "" : "sticky top-20 self-start max-h-[calc(100vh-6rem)] overflow-y-auto pr-2"}>
+          <div
+            className={
+              isMobile
+                ? ""
+                : "sticky top-20 self-start max-h-[calc(100vh-6rem)] overflow-y-auto pr-2"
+            }
+          >
             <Card>
               <CardHeader>
                 <CardTitle className="text-[var(--text-primary)] text-base">
@@ -727,14 +733,22 @@ export default function TV() {
   return (
     <div className={`max-w-5xl mx-auto space-y-6 ${isMobile ? "px-3" : ""}`}>
       {/* Header */}
-      <div>
-        <div className={`flex ${isMobile ? "flex-col gap-1" : "items-center gap-3"} mb-1`}>
-          <h1 className={`${isMobile ? "text-xl" : "text-2xl"} font-bold text-[var(--text-primary)]`}>Textverständnis</h1>
-          <span className="text-xs font-semibold text-[var(--accent)] bg-[var(--accent)]/10 px-2.5 py-1 rounded-full w-fit">
-            10% des MedAT
+      <div className="hero-orbs text-center">
+        <div
+          className={`flex ${isMobile ? "flex-col gap-1" : "items-center gap-3 justify-center"} mb-1`}
+        >
+          <h1
+            className={`${isMobile ? "text-xl" : "text-2xl"} font-bold text-[var(--text-primary)]`}
+          >
+            Textverständnis
+          </h1>
+          <span className="text-xs font-medium text-[var(--muted)] bg-[var(--surface)] border border-[var(--border)] px-2 py-0.5 rounded w-fit">
+            10 % des MedAT
           </span>
         </div>
-        <div className={`flex ${isMobile ? "flex-col gap-2" : "items-center gap-4"} text-sm text-[var(--muted)]`}>
+        <div
+          className={`flex ${isMobile ? "flex-col gap-2" : "items-center gap-4 justify-center"} text-sm text-[var(--muted)]`}
+        >
           <span>5 Texte · 35 Minuten · Multiple-Choice</span>
           <Button variant="outline" size="sm" onClick={() => setView("strategy")}>
             <BookOpen className="w-4 h-4 mr-1" /> Strategie
@@ -754,7 +768,7 @@ export default function TV() {
             <h2 className="text-lg font-semibold text-[var(--text-primary)]">Testsets</h2>
             <span className="text-xs text-[var(--muted)]">Je 5 Texte mit MC-Fragen</span>
           </div>
-          <div className="rounded-xl border border-[var(--border)] divide-y divide-[var(--border)] overflow-hidden">
+          <div className="card-glass divide-y divide-[var(--border)] overflow-hidden">
             {allTextSets.map((set, i) => {
               const totalQ = set.texts.reduce((sum, t) => sum + t.questions.length, 0);
               return (
@@ -781,7 +795,11 @@ export default function TV() {
                     </span>
                   </div>
                   <div className={`flex items-center gap-2 ${isMobile ? "ml-8" : ""}`}>
-                    <Button variant="premium" size="sm" onClick={() => handleStartSet(i, "practice")}>
+                    <Button
+                      variant="premium"
+                      size="sm"
+                      onClick={() => handleStartSet(i, "practice")}
+                    >
                       <Play className="w-4 h-4 mr-1" /> Üben
                     </Button>
                     <Button
@@ -801,7 +819,9 @@ export default function TV() {
       )}
 
       {/* Offizielles Aussagen-Format */}
-      <section className={`space-y-3 border-t border-[var(--border)] ${isMobile ? "pt-5" : "pt-8"}`}>
+      <section
+        className={`space-y-3 border-t border-[var(--border)] ${isMobile ? "pt-5" : "pt-8"}`}
+      >
         <div className={`flex ${isMobile ? "flex-col gap-2" : "items-baseline justify-between"}`}>
           <div className="flex items-center gap-2">
             <h2 className="text-lg font-semibold text-[var(--text-primary)]">Offizielles Format</h2>
@@ -818,7 +838,7 @@ export default function TV() {
           Aussagen-Kombination: Nummerierte Aussagen bewerten, dann passende Kombination (A–E)
           wählen
         </p>
-        <div className="rounded-xl border border-[var(--border)] divide-y divide-[var(--border)] overflow-hidden">
+        <div className="card-glass divide-y divide-[var(--border)] overflow-hidden">
           {(showAllOffiziell ? tvOffiziellTexte : tvOffiziellTexte.slice(0, 5)).map((t, i) => (
             <button
               key={t.id}
@@ -868,7 +888,9 @@ export default function TV() {
       </section>
 
       {/* Klassischer Modus */}
-      <section className={`space-y-3 border-t border-[var(--border)] ${isMobile ? "pt-5" : "pt-8"}`}>
+      <section
+        className={`space-y-3 border-t border-[var(--border)] ${isMobile ? "pt-5" : "pt-8"}`}
+      >
         <div className="flex items-baseline justify-between">
           <h2 className="text-lg font-semibold text-[var(--text-primary)]">
             Klassischer Modus{" "}
@@ -877,7 +899,7 @@ export default function TV() {
           <span className="text-xs text-[var(--muted)]">Ableitbar / Nicht ableitbar</span>
         </div>
         <p className="text-xs text-[var(--muted)] -mt-1">Vereinfachtes Format — für den Einstieg</p>
-        <div className="rounded-xl border border-[var(--border)] divide-y divide-[var(--border)] overflow-hidden">
+        <div className="card-glass divide-y divide-[var(--border)] overflow-hidden">
           {displayedLegacyTexts.map((t, i) => (
             <button
               key={t.id}

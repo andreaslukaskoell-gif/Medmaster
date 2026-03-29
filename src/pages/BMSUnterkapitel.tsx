@@ -748,7 +748,7 @@ export default function BMSUnterkapitel({
 
       <ContentErrorBoundary context={uk.id}>
         {/* Header — premium centered */}
-        <header className="mb-20 mt-4 max-w-3xl mx-auto text-center hero-orbs">
+        <header className="mb-10 mt-4 max-w-3xl mx-auto text-center hero-orbs">
           <div className="flex items-center justify-center gap-3 mb-6">
             <span
               className="text-[11px] font-bold uppercase tracking-[0.15em] px-3 py-1 rounded-md"

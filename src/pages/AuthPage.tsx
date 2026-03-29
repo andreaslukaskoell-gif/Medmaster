@@ -212,7 +212,7 @@ export default function AuthPage() {
     <div className="hero-orbs min-h-screen bg-[var(--background)] flex items-center justify-center p-4">
       <div className="w-full max-w-md space-y-6">
         <div className="text-center">
-          <h1 className="font-serif text-3xl font-bold text-[var(--accent)]">MedMaster</h1>
+          <h1 className="text-3xl font-bold text-[var(--accent)]">MedMaster</h1>
           <p className="text-[var(--muted)] mt-2">
             {new Date() < new Date("2026-04-01T00:00:00+02:00")
               ? "5.000+ BMS-Fragen · 10.000+ KFF-Übungen · Gratis bis 31. März"
