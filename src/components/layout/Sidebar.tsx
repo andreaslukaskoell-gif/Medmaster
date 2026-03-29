@@ -11,7 +11,6 @@ import {
   Timer,
   BarChart3,
   CalendarDays,
-  ListChecks,
   LogOut,
   Settings,
   ChevronDown,
@@ -66,34 +65,27 @@ type NavItem = {
   activePaths?: string[];
 };
 
-/** MedAT-orientierte Struktur: LERNEN & ÜBEN → TRAINIEREN → FORTSCHRITT → MEHR. Dashboard ist fix oben. */
+/** MedAT-orientierte Struktur: LERNEN & ÜBEN → TOOLS & FORTSCHRITT. Dashboard ist fix oben. */
 const NAV_SECTIONS: { id: string; title: string; items: NavItem[] }[] = [
   {
     id: "lernen",
     title: "LERNEN & ÜBEN",
     items: [
-      { to: "/bms", icon: BookOpen, label: "BMS-Inhalte", hasChildren: true },
+      { to: "/bms", icon: BookOpen, label: "BMS", hasChildren: true },
       { to: "/kff", icon: Brain, label: "KFF" },
       { to: "/tv", icon: FileText, label: "TV" },
       { to: "/sek", icon: Heart, label: "SEK" },
+      { to: "/fragen-trainer", icon: Dumbbell, label: "Fragen-Trainer" },
+      { to: "/simulation", icon: Timer, label: "Simulation", requiredLevel: 0 },
       { to: "/lernplan", icon: CalendarDays, label: "Lernplan" },
     ],
   },
   {
-    id: "training",
-    title: "TRAINIEREN",
-    items: [
-      { to: "/fragen-trainer", icon: Dumbbell, label: "Fragen-Trainer" },
-      { to: "/simulation", icon: Timer, label: "Simulation", requiredLevel: 0 },
-      { to: "/formelsammlung", icon: BookMarked, label: "Formelsammlung" },
-    ],
-  },
-  {
-    id: "fortschritt",
-    title: "FORTSCHRITT",
+    id: "tools",
+    title: "TOOLS & FORTSCHRITT",
     items: [
       { to: "/fortschritt", icon: BarChart3, label: "Fortschritt", emphasized: true },
-      { to: "/stichwortliste", icon: ListChecks, label: "Stichwortliste" },
+      { to: "/formelsammlung", icon: BookMarked, label: "Formelsammlung" },
     ],
   },
 ];
