@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Copy, Check, Share2, Gift } from "lucide-react";
+import { Copy, Check, Share2 } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
 import {
   getReferralShareText,
@@ -9,7 +9,7 @@ import {
 } from "@/lib/shareUtils";
 import { trackEvent } from "@/lib/analyticsTracker";
 import { useReferralReward } from "@/hooks/useReferralReward";
-import { formatPrice, REFERRAL_PROMO_CODE } from "@/lib/stripe";
+import { REFERRAL_PROMO_CODE } from "@/lib/stripe";
 
 export function ReferralWidget() {
   const { user } = useAuth();
@@ -39,40 +39,23 @@ export function ReferralWidget() {
 
   if (!user) return null;
 
-  const hasReward = reward.hasReward;
   const totalReferrals = reward.totalReferrals;
 
   return (
     <div className="bg-[var(--surface)] rounded-xl border border-[var(--border)] p-3">
       {/* Compact header row: icon + text + reward status */}
       <div className="flex items-center gap-2.5 mb-2">
-        {hasReward ? (
-          <Gift className="w-4 h-4 text-emerald-500 shrink-0" />
-        ) : (
-          <Share2 className="w-4 h-4 text-[var(--accent)] shrink-0" />
-        )}
+        <Share2 className="w-4 h-4 text-[var(--accent)] shrink-0" />
         <div className="flex-1 min-w-0">
           <p className="text-sm font-semibold text-[var(--text-primary)] leading-tight">
-            {hasReward ? "Dein Vorteil ist aktiv" : "5 € sparen"}
+            {totalReferrals > 0
+              ? `${totalReferrals} Freund${totalReferrals > 1 ? "e" : ""} eingeladen`
+              : "Freunde einladen"}
           </p>
           <p className="text-xs text-[var(--muted)] leading-snug mt-0.5">
-            {hasReward ? (
-              <>
-                Dein Preis: {formatPrice(reward.personalPriceCents)} statt {formatPrice(2990)}
-              </>
-            ) : (
-              <>
-                Freund einladen &rarr; dein Preis sinkt auf {formatPrice(2490)}. Dein Freund bekommt
-                &euro;5 Rabatt mit Code {REFERRAL_PROMO_CODE}.
-              </>
-            )}
+            Dein Freund spart &euro;5 mit Code {REFERRAL_PROMO_CODE} &mdash; hilf deiner Lerngruppe!
           </p>
         </div>
-        {totalReferrals > 0 && (
-          <span className="shrink-0 text-[10px] font-medium text-[var(--muted)] bg-[var(--card)] px-2 py-0.5 rounded-full">
-            {totalReferrals} eingeladen
-          </span>
-        )}
       </div>
 
       {/* Compact share row: link input + copy + share buttons */}
