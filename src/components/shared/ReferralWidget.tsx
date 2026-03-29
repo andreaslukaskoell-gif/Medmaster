@@ -9,7 +9,7 @@ import {
 } from "@/lib/shareUtils";
 import { trackEvent } from "@/lib/analyticsTracker";
 import { useReferralReward } from "@/hooks/useReferralReward";
-import { formatPrice } from "@/lib/stripe";
+import { formatPrice, REFERRAL_PROMO_CODE } from "@/lib/stripe";
 
 export function ReferralWidget() {
   const { user } = useAuth();
@@ -61,7 +61,10 @@ export function ReferralWidget() {
                 Dein Preis: {formatPrice(reward.personalPriceCents)} statt {formatPrice(2990)}
               </>
             ) : (
-              <>Freund einladen &rarr; dein Preis sinkt auf {formatPrice(2490)}</>
+              <>
+                Freund einladen &rarr; dein Preis sinkt auf {formatPrice(2490)}. Dein Freund bekommt
+                &euro;5 Rabatt mit Code {REFERRAL_PROMO_CODE}.
+              </>
             )}
           </p>
         </div>

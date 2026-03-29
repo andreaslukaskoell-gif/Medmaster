@@ -6,6 +6,9 @@
 import { track, trackCheckoutStart } from "@/lib/analytics";
 import { validateRedirectUrl } from "@/lib/security";
 
+/** Stripe promotion code applied automatically for referred users (€5 off). */
+export const REFERRAL_PROMO_CODE = "FREUND5";
+
 export const PRICING = {
   oneTime: {
     priceId: "",
@@ -45,6 +48,12 @@ export function startCheckout(options?: { email?: string; userId?: string }): bo
   const url = new URL(validated);
   if (options?.email) url.searchParams.set("prefilled_email", options.email);
   if (options?.userId) url.searchParams.set("client_reference_id", options.userId);
+
+  // Pre-fill promo code for referred users (arrived via ?ref=XXXXX)
+  const referredBy = sessionStorage.getItem("medmaster_ref") || sessionStorage.getItem("mm_ref");
+  if (referredBy) {
+    url.searchParams.set("prefilled_promo_code", REFERRAL_PROMO_CODE);
+  }
 
   track("checkout_redirect", { url: url.origin + url.pathname });
   window.location.href = url.toString();
