@@ -9,7 +9,6 @@ import {
 } from "@/lib/shareUtils";
 import { trackEvent } from "@/lib/analyticsTracker";
 import { useReferralReward } from "@/hooks/useReferralReward";
-import { REFERRAL_PROMO_CODE } from "@/lib/stripe";
 
 export function ReferralWidget() {
   const { user } = useAuth();
@@ -53,7 +52,7 @@ export function ReferralWidget() {
               : "Freunde einladen"}
           </p>
           <p className="text-xs text-[var(--muted)] leading-snug mt-0.5">
-            Dein Freund spart &euro;5 mit Code {REFERRAL_PROMO_CODE} &mdash; hilf deiner Lerngruppe!
+            Ihr spart beide &euro;5 &mdash; dein Freund beim Kauf, du per Rückerstattung.
           </p>
         </div>
       </div>

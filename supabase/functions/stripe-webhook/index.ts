@@ -28,7 +28,10 @@ const supabase = createClient(
 /** Map Stripe Price IDs to subscription tiers.
  *  Uses an explicit allowlist — unknown IDs default to "standard". */
 const PRO_PRICE_IDS = new Set(
-  (Deno.env.get("STRIPE_PRO_PRICE_IDS") || "").split(",").map((s) => s.trim()).filter(Boolean)
+  (Deno.env.get("STRIPE_PRO_PRICE_IDS") || "")
+    .split(",")
+    .map((s) => s.trim())
+    .filter(Boolean)
 );
 
 function tierFromPriceId(priceId: string): "standard" | "pro" {
@@ -110,6 +113,53 @@ serve(async (req) => {
             console.error("Referral reward error:", rewardError);
           } else if (rewardGranted) {
             console.log(`Referral reward granted for referee ${userId}`);
+
+            // ── Auto-refund €5 to the referrer who invited this user ──
+            try {
+              // Find the referrer's profile via the referrals table
+              const { data: referral } = await supabase
+                .from("referrals")
+                .select("referrer_id")
+                .eq("referee_id", userId)
+                .single();
+
+              if (referral?.referrer_id) {
+                // Get the referrer's Stripe customer ID
+                const { data: referrerProfile } = await supabase
+                  .from("profiles")
+                  .select("stripe_customer_id")
+                  .eq("id", referral.referrer_id)
+                  .single();
+
+                if (referrerProfile?.stripe_customer_id) {
+                  // Find the referrer's most recent payment intent
+                  const payments = await stripe.paymentIntents.list({
+                    customer: referrerProfile.stripe_customer_id,
+                    limit: 1,
+                  });
+
+                  const pi = payments.data[0];
+                  if (pi && pi.status === "succeeded") {
+                    // Issue €5 partial refund
+                    await stripe.refunds.create({
+                      payment_intent: pi.id,
+                      amount: 500, // €5.00 in cents
+                      reason: "requested_by_customer",
+                    });
+                    console.log(
+                      `Referral refund: €5 back to ${referral.referrer_id} (PI: ${pi.id})`
+                    );
+                  } else {
+                    console.log(
+                      `Referral refund skipped: no successful payment for referrer ${referral.referrer_id}`
+                    );
+                  }
+                }
+              }
+            } catch (refundErr) {
+              // Non-critical: log but don't fail
+              console.error("Referral refund error:", refundErr);
+            }
           }
         } catch (e) {
           // Non-critical: don't fail the webhook if referral reward fails
