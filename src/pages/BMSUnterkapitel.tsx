@@ -611,7 +611,7 @@ export default function BMSUnterkapitel({
   const accentColor = subjectAccentVars[kapitel.subject] ?? "var(--accent)";
 
   return (
-    <div className="w-full max-w-6xl mx-auto pb-16 relative px-0">
+    <div className="w-full max-w-6xl mx-auto pb-16 relative px-1 sm:px-0">
       {/* Scroll restored toast */}
       {showScrollRestoredToast && (
         <div
@@ -763,7 +763,7 @@ export default function BMSUnterkapitel({
               {kapitel.title} &middot; {unterkapitelIndex + 1} von {total}
             </span>
           </div>
-          <h1 className="text-[3rem] font-bold text-[var(--text-primary)] leading-[1.15] tracking-tight mb-5">
+          <h1 className="text-2xl sm:text-[3rem] font-bold text-[var(--text-primary)] leading-[1.15] tracking-tight mb-5">
             {uk.title}
           </h1>
           <div className="flex items-center justify-center gap-5 text-sm text-[var(--muted)]">

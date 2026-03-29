@@ -339,12 +339,12 @@ export function ImplikationenQuiz({
               <label className="text-sm font-medium text-[var(--text-primary)] mb-3 block">
                 Anzahl Fragen
               </label>
-              <div className="flex gap-3">
+              <div className="flex flex-wrap gap-2 sm:gap-3">
                 {[10, 25, 50, 75, 100, 150].map((c) => (
                   <button
                     key={c}
                     onClick={() => setQuestionCount(c)}
-                    className={`flex-1 px-4 py-3 rounded-lg border text-sm font-medium transition-colors cursor-pointer ${
+                    className={`flex-1 min-w-[3rem] min-h-[44px] px-3 sm:px-4 py-3 rounded-lg border text-sm font-medium transition-colors cursor-pointer ${
                       questionCount === c
                         ? "border-[var(--accent)] bg-[var(--accent)]/10 text-[var(--accent)]"
                         : "border-[var(--border)] hover:bg-[var(--border)]/50"

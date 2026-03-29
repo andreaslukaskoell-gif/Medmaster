@@ -271,12 +271,12 @@ export function ZahlenfolgenQuiz({
               <label className="text-sm font-medium text-[var(--text-primary)] mb-3 block">
                 Anzahl Fragen
               </label>
-              <div className="flex gap-3">
+              <div className="flex flex-wrap gap-2 sm:gap-3">
                 {[10, 25, 50, 75, 100, 150].map((c) => (
                   <button
                     key={c}
                     onClick={() => setQuestionCount(c)}
-                    className={`flex-1 px-4 py-3 rounded-lg border text-sm font-medium transition-colors cursor-pointer ${
+                    className={`flex-1 min-w-[3rem] min-h-[44px] px-3 sm:px-4 py-3 rounded-lg border text-sm font-medium transition-colors cursor-pointer ${
                       questionCount === c
                         ? "border-[var(--accent)] bg-[var(--accent)]/10 text-[var(--accent)]"
                         : "border-[var(--border)] hover:bg-[var(--border)]/50"
@@ -469,7 +469,11 @@ export function ZahlenfolgenQuiz({
           <p className="text-sm text-[var(--muted)] mb-6 text-center">
             Welche zwei Zahlen folgen als nächstes?
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3" role="radiogroup" aria-label="Antwortmöglichkeiten">
+          <div
+            className="grid grid-cols-1 sm:grid-cols-2 gap-3"
+            role="radiogroup"
+            aria-label="Antwortmöglichkeiten"
+          >
             {currentQ.options && Array.isArray(currentQ.options) ? (
               currentQ.options.map((opt, oi) => (
                 <button
@@ -477,7 +481,7 @@ export function ZahlenfolgenQuiz({
                   role="radio"
                   aria-checked={answers[currentQ.id] === opt.key}
                   onClick={() => setAnswers((p) => ({ ...p, [currentQ.id]: opt.key }))}
-                  className={`px-4 py-3 rounded-lg border text-sm font-medium transition-colors cursor-pointer text-left ${answers[currentQ.id] === opt.key ? "border-[var(--accent)] bg-[var(--accent)]/10 text-[var(--accent)]" : "border-[var(--border)] hover:bg-[var(--border)]/50"}`}
+                  className={`px-4 py-3 min-h-[44px] rounded-lg border text-sm font-medium transition-colors cursor-pointer text-left ${answers[currentQ.id] === opt.key ? "border-[var(--accent)] bg-[var(--accent)]/10 text-[var(--accent)]" : "border-[var(--border)] hover:bg-[var(--border)]/50"}`}
                 >
                   <span className="font-semibold mr-2">({opt.key})</span>
                   {optionDisplay(opt)}
