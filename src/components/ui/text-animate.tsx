@@ -3,8 +3,19 @@
  * Animates text word-by-word or character-by-character with blur + slide.
  */
 
+import { memo } from "react";
 import { motion, type Variants } from "framer-motion";
 import { cn } from "@/lib/utils";
+
+// Pre-create motion components to avoid re-mounting on parent re-render
+const motionTags = {
+  h1: motion.h1,
+  h2: motion.h2,
+  h3: motion.h3,
+  p: motion.p,
+  span: motion.span,
+  div: motion.div,
+} as const;
 
 type AnimateBy = "word" | "character" | "line";
 type Animation = "blurInUp" | "fadeIn" | "slideUp" | "scaleUp";
@@ -20,7 +31,10 @@ type TextAnimateProps = {
   as?: "h1" | "h2" | "h3" | "p" | "span" | "div";
 };
 
-const animations: Record<Animation, { hidden: Record<string, string | number>; visible: Record<string, string | number> }> = {
+const animations: Record<
+  Animation,
+  { hidden: Record<string, string | number>; visible: Record<string, string | number> }
+> = {
   blurInUp: {
     hidden: { opacity: 0, y: 12, filter: "blur(8px)" },
     visible: { opacity: 1, y: 0, filter: "blur(0px)" },
@@ -45,7 +59,7 @@ function splitText(text: string, by: AnimateBy): string[] {
   return text.split("\n");
 }
 
-export function TextAnimate({
+export const TextAnimate = memo(function TextAnimate({
   children,
   by = "word",
   animation = "blurInUp",
@@ -77,7 +91,7 @@ export function TextAnimate({
     },
   };
 
-  const MotionTag = motion.create(Tag);
+  const MotionTag = motionTags[Tag];
 
   return (
     <MotionTag
@@ -99,4 +113,4 @@ export function TextAnimate({
       })}
     </MotionTag>
   );
-}
+});
