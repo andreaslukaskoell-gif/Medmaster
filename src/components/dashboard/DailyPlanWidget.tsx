@@ -42,7 +42,7 @@ export function DailyPlanWidget() {
     <div className="card-glass p-4 flex flex-col h-full">
       <div className="flex items-center gap-2 mb-3">
         <CalendarClock className="w-4 h-4 text-[var(--accent)]" />
-        <h3 className="text-sm font-semibold text-[var(--text-primary)]">Tagesplan</h3>
+        <h3 className="text-sm font-semibold text-[var(--text-primary)]">Heute empfohlen</h3>
         <span className="ml-auto text-xs text-[var(--muted)]">{tierLabel.label}</span>
       </div>
 
