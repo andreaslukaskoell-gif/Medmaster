@@ -212,10 +212,15 @@ otp_length = 8
 # Number of seconds before the email OTP expires (defaults to 1 hour).
 otp_expiry = 3600
 
-# Use a production-ready SMTP server
-# [auth.email.smtp]
-# enabled = true
-# host = "smtp.sendgrid.net"
+# Production SMTP via IONOS (welcome@medmaster.at)
+[auth.email.smtp]
+enabled = true
+host = "smtp.ionos.de"
+port = 587
+user = "env(SMTP_USER)"
+pass = "env(SMTP_PASS)"
+admin_email = "welcome@medmaster.at"
+sender_name = "MedMaster"
 # port = 587
 # user = "apikey"
 # pass = "env(SENDGRID_API_KEY)"
