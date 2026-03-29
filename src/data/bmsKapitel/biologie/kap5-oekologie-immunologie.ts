@@ -967,7 +967,9 @@ Phosphor hat **kein gasförmiges Reservoir** — er zirkuliert nur zwischen terr
 
 Entwaldung reduziert Transpiration → verändert regionale Niederschlagsmuster (v.a. Amazonas-Regenwald: ca. 50% des Niederschlags kommt aus der Vegetation selbst durch Evapotranspiration (Verdunstung von Boden und Pflanzen)).
 
-![Wasserkreislauf — Verdunstung, Kondensation, Niederschlag, Abfluss und Grundwasser](/images/bms/bio-wasserkreislauf.svg)
+{{DIAGRAM}}
+
+> **Hinweis:** Diagramm zum Wasserkreislauf wird überarbeitet.
 
 ---
 

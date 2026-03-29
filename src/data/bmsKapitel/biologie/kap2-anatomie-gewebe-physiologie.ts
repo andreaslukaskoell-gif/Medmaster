@@ -4153,8 +4153,8 @@ Die Wirbelsäule ist keine gerade Säule, sondern zeigt im Sagittalprofil **vier
     {
       id: "bio-3-12",
       title: "Fortpflanzungssystem",
-      imageUrl: "/images/bms/bio-fortpflanzungssystem.svg",
-      imageCaption: "Abb.: Weibliches Fortpflanzungssystem (Wikimedia Commons, Public Domain)",
+      imageUrl: "",
+      imageCaption: "",
       stichworte: [
         "Spermatogenese",
         "Oogenese",

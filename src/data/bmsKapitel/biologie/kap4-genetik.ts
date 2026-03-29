@@ -1181,9 +1181,8 @@ Die **Sichelzellanämie** vereint mehrere Konzepte dieses Kapitels:
     {
       id: "bio-4-06",
       title: "Erbgänge: autosomal und X-chromosomal",
-      imageUrl: "/images/bms/bio-erbgang-autosomal.svg",
-      imageCaption:
-        "Abb.: Stammbaum eines autosomal-rezessiven Erbgangs (Wikimedia Commons, CC BY 2.5)",
+      imageUrl: "",
+      imageCaption: "",
       stichworte: [
         "autosomal",
         "X-chromosomal",
@@ -1435,9 +1434,8 @@ Das kranke Allel ist **dominant** auf dem X-Chromosom. **Kranker Vater (X^A Y):*
     {
       id: "bio-4-07",
       title: "Blutgruppen: AB0-System",
-      imageUrl: "/images/bms/bio-blutgruppen-abo.svg",
-      imageCaption:
-        "Abb.: AB0-Blutgruppensystem — Antigene auf Erythrozyten (Wikimedia Commons, Public Domain)",
+      imageUrl: "",
+      imageCaption: "",
       stichworte: ["AB0", "Blutgruppe", "kodominant", "I^A", "I^B", "i", "Antigen", "Rhesus"],
       content: `Das AB0-Blutgruppensystem ist ein Musterbeispiel für Kodominanz und multiple Allele an einem einzigen Genort — und eine der beliebtesten MedAT-Aufgaben.
 
@@ -2170,9 +2168,8 @@ Vererbung bedeutet: Die DNA (Allele) wird über Keimzellen (Meiose) von Generati
     {
       id: "bio-4-10",
       title: "Tumorgenetik",
-      imageUrl: "/images/bms/bio-tumorgenetik-hallmarks.svg",
-      imageCaption:
-        "Abb.: Hallmarks of Cancer nach Hanahan & Weinberg (Wikimedia Commons, CC BY-SA 3.0)",
+      imageUrl: "",
+      imageCaption: "",
       stichworte: [
         "Tumorgenetik",
         "Onkogen",

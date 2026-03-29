@@ -2457,9 +2457,8 @@ Thalidomid (Contergan) verursachte in den 1960er Jahren Phokomelie (Flipper-arti
     {
       id: "bio-9-12",
       title: "Embryonalhüllen und Plazenta",
-      imageUrl: "/images/bms/bio-plazenta.svg",
-      imageCaption:
-        "Abb.: Plazentaaufbau mit Chorionzotten und maternalem Blutkreislauf (Wikimedia Commons, CC BY-SA 3.0)",
+      imageUrl: "",
+      imageCaption: "",
       stichworte: [
         "Plazenta",
         "Amnion",
