@@ -40,7 +40,7 @@ export default function Legal() {
       <header className="bg-[var(--card)] border-b border-[var(--border)]">
         <div className="max-w-3xl mx-auto px-4 py-4 flex items-center gap-3">
           <Link
-            to="/dashboard"
+            to="/"
             className="text-[var(--muted)] hover:text-[var(--foreground)] transition-colors"
           >
             <ArrowLeft className="w-5 h-5" />

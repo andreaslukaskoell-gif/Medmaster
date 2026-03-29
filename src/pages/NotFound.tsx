@@ -16,10 +16,10 @@ export default function NotFound() {
           Die angeforderte Seite existiert nicht oder wurde verschoben.
         </p>
         <Link
-          to="/dashboard"
+          to="/"
           className="inline-flex items-center justify-center bg-[var(--accent)] hover:bg-[var(--accent)] text-white font-medium px-6 py-2.5 rounded-lg transition-colors"
         >
-          Zurück zum Dashboard
+          Zur Startseite
         </Link>
       </div>
     </div>

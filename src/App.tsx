@@ -23,8 +23,7 @@ import { CookieConsentBanner } from "@/components/CookieConsent";
 
 /** True when user prefers reduced motion (vestibular disorders, etc.) */
 const prefersReducedMotion =
-  typeof window !== "undefined" &&
-  window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 // Lazy-loaded pages — casing must match filenames exactly (Linux/Vercel is case-sensitive)
 const LandingPage = lazy(() => import("@/pages/LandingPage"));
@@ -195,11 +194,13 @@ function DarkModeSync() {
       document.documentElement.classList.remove("dark");
     }
     // Sync native status bar color on Capacitor
-    import("@/lib/native").then(({ isNative, setStatusBarDark, setStatusBarLight }) => {
-      if (!isNative) return;
-      if (darkMode) setStatusBarDark().catch(() => {});
-      else setStatusBarLight().catch(() => {});
-    }).catch(() => {});
+    import("@/lib/native")
+      .then(({ isNative, setStatusBarDark, setStatusBarLight }) => {
+        if (!isNative) return;
+        if (darkMode) setStatusBarDark().catch(() => {});
+        else setStatusBarLight().catch(() => {});
+      })
+      .catch(() => {});
   }, [darkMode]);
   return null;
 }
@@ -207,159 +208,166 @@ function DarkModeSync() {
 export default function App() {
   return (
     <MotionConfig reducedMotion={prefersReducedMotion ? "always" : "never"}>
-    <BrowserRouter>
-      <DarkModeSync />
-      <ScrollToTop />
-      <FloatingCTA />
-      <CookieConsentBanner />
-      <Suspense fallback={<LoadingSpinner />}>
-        <Routes>
-          {/* Public routes */}
-          <Route path="/" element={<RootRoute />} />
-          <Route path="/login" element={<AuthPage />} />
-          {/* Legacy /register URLs redirect to unified auth page */}
-          <Route path="/register" element={<Navigate to="/login" replace />} />
-          <Route path="/forgot-password" element={<ForgotPasswordPage />} />
-          <Route path="/legal" element={<Legal />} />
-          <Route path="/impressum" element={<Legal />} />
-          <Route path="/datenschutz" element={<Legal />} />
-          <Route path="/agb" element={<Legal />} />
-          <Route path="/medat-uebungsfragen" element={<BMSDemo />} />
-          <Route path="/medat-:subject-fragen" element={<SubjectDemo />} />
-          <Route path="/challenge" element={<QuizChallenge />} />
-          <Route path="/faq" element={<FAQPage />} />
-          <Route path="/ueber-uns" element={<UeberUns />} />
-          <Route path="/medat-guide" element={<MedATGuide />} />
-          <Route path="/medat-punkte-rechner" element={<MedATPunkterechner />} />
-          <Route path="/bms-stichwortliste-2026" element={<StichwortlistePublic />} />
-          <Route path="/medat-kff-ueben" element={<KFFDemo />} />
-          <Route path="/blog" element={<BlogIndex />} />
-          <Route path="/blog/:slug" element={<BlogArticle />} />
-          <Route path="/lp/medat" element={<PaidLanding />} />
-          <Route path="/lp/bms" element={<PaidLandingBMS />} />
-          <Route path="/medat-countdown" element={<MedATCountdown />} />
+      <BrowserRouter>
+        <DarkModeSync />
+        <ScrollToTop />
+        <FloatingCTA />
+        <CookieConsentBanner />
+        <Suspense fallback={<LoadingSpinner />}>
+          <Routes>
+            {/* Public routes */}
+            <Route path="/" element={<RootRoute />} />
+            <Route path="/login" element={<AuthPage />} />
+            {/* Legacy /register URLs redirect to unified auth page */}
+            <Route path="/register" element={<Navigate to="/login" replace />} />
+            <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+            <Route path="/legal" element={<Legal />} />
+            <Route path="/impressum" element={<Legal />} />
+            <Route path="/datenschutz" element={<Legal />} />
+            <Route path="/agb" element={<Legal />} />
+            <Route path="/medat-uebungsfragen" element={<BMSDemo />} />
+            <Route path="/medat-:subject-fragen" element={<SubjectDemo />} />
+            <Route path="/challenge" element={<QuizChallenge />} />
+            <Route path="/faq" element={<FAQPage />} />
+            <Route path="/ueber-uns" element={<UeberUns />} />
+            <Route path="/medat-guide" element={<MedATGuide />} />
+            <Route path="/medat-punkte-rechner" element={<MedATPunkterechner />} />
+            <Route path="/bms-stichwortliste-2026" element={<StichwortlistePublic />} />
+            <Route path="/medat-kff-ueben" element={<KFFDemo />} />
+            <Route path="/blog" element={<BlogIndex />} />
+            <Route path="/blog/:slug" element={<BlogArticle />} />
+            <Route path="/lp/medat" element={<PaidLanding />} />
+            <Route path="/lp/bms" element={<PaidLandingBMS />} />
+            <Route path="/medat-countdown" element={<MedATCountdown />} />
 
-          {/* Protected routes */}
-          <Route
-            element={
-              <AuthGuard>
-                <Outlet />
-              </AuthGuard>
-            }
-          >
-            <Route path="/onboarding/medat" element={<MedATOnboarding />} />
-            <Route path="/onboarding/lernplan-choice" element={<LernplanChoice />} />
+            {/* Protected routes */}
             <Route
               element={
-                <MedATGuard>
-                  <AppShell />
-                </MedATGuard>
+                <AuthGuard>
+                  <Outlet />
+                </AuthGuard>
               }
             >
-              <Route path="/dashboard" element={<Dashboard />} />
-              <Route path="/today" element={<TodayPage />} />
-              <Route path="/onboarding" element={<OnboardingGuard />} />
+              <Route path="/onboarding/medat" element={<MedATOnboarding />} />
+              <Route path="/onboarding/lernplan-choice" element={<LernplanChoice />} />
               <Route
-                path="/bms"
                 element={
-                  <Suspense fallback={<PageLoadingSkeleton variant="bms" />}>
-                    <BMS />
-                  </Suspense>
+                  <MedATGuard>
+                    <AppShell />
+                  </MedATGuard>
                 }
-              />
-              <Route
-                path="/bms/quiz/:fach"
-                element={
-                  <Suspense fallback={<PageLoadingSkeleton variant="quiz" />}>
-                    <BMSQuizWrapper />
-                  </Suspense>
-                }
-              />
-              <Route
-                path="/bms/:fach"
-                element={
-                  <Suspense fallback={<PageLoadingSkeleton variant="bms" />}>
-                    <BMS />
-                  </Suspense>
-                }
-              />
-              <Route
-                path="/bms/:fach/:kapitel"
-                element={
-                  <Suspense fallback={<PageLoadingSkeleton variant="chapter" />}>
-                    <BMS />
-                  </Suspense>
-                }
-              />
-              <Route path="/kff" element={<KFF />} />
-              <Route path="/tv" element={<TV />} />
-              <Route path="/sek" element={<SEK />} />
-              <Route path="/simulation" element={<Simulation />} />
-              <Route path="/lernplan" element={<Lernplan />} />
-              <Route path="/statistik" element={<Statistics />} />
-              <Route path="/stichwortliste" element={<StichwortlistePage />} />
-              <Route path="/schwachstellen" element={<SchwachstellenTrainer />} />
-              <Route path="/schwachstellen/recovery" element={<SmartRecoveryPage />} />
-              <Route path="/preise" element={<Pricing />} />
-              <Route
-                path="/admin/kapitel-editor"
-                element={
-                  <AdminGuard>
-                    <KapitelEditor />
-                  </AdminGuard>
-                }
-              />
-              <Route
-                path="/admin/audit"
-                element={
-                  <AdminGuard>
-                    <ContentAudit />
-                  </AdminGuard>
-                }
-              />
-              <Route
-                path="/admin/preview"
-                element={
-                  <AdminGuard>
-                    <AdminPreview />
-                  </AdminGuard>
-                }
-              />
-              <Route
-                path="/admin/dashboard"
-                element={
-                  <AdminGuard>
-                    <AdminDashboard />
-                  </AdminGuard>
-                }
-              />
-              <Route
-                path="/admin/tasks"
-                element={
-                  <AdminGuard>
-                    <AdminTasksPage />
-                  </AdminGuard>
-                }
-              />
-              <Route path="/admin/analytics" element={<AnalyticsDashboard />} />
-              <Route path="/prognose" element={<Prognose />} />
-              <Route path="/performance" element={<PerformanceOverview />} />
-              <Route path="/fortschritt" element={<FortschrittPage />} />
-              <Route path="/fragen-trainer" element={<FragenTrainer />} />
-              <Route path="/daily" element={<DailyChallenge />} />
-              <Route path="/formelsammlung" element={<Formelsammlung />} />
-              <Route path="/einstellungen" element={<Einstellungen />} />
+              >
+                <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/today" element={<TodayPage />} />
+                <Route path="/onboarding" element={<OnboardingGuard />} />
+                <Route
+                  path="/bms"
+                  element={
+                    <Suspense fallback={<PageLoadingSkeleton variant="bms" />}>
+                      <BMS />
+                    </Suspense>
+                  }
+                />
+                <Route
+                  path="/bms/quiz/:fach"
+                  element={
+                    <Suspense fallback={<PageLoadingSkeleton variant="quiz" />}>
+                      <BMSQuizWrapper />
+                    </Suspense>
+                  }
+                />
+                <Route
+                  path="/bms/:fach"
+                  element={
+                    <Suspense fallback={<PageLoadingSkeleton variant="bms" />}>
+                      <BMS />
+                    </Suspense>
+                  }
+                />
+                <Route
+                  path="/bms/:fach/:kapitel"
+                  element={
+                    <Suspense fallback={<PageLoadingSkeleton variant="chapter" />}>
+                      <BMS />
+                    </Suspense>
+                  }
+                />
+                <Route path="/kff" element={<KFF />} />
+                <Route path="/tv" element={<TV />} />
+                <Route path="/sek" element={<SEK />} />
+                <Route path="/simulation" element={<Simulation />} />
+                <Route path="/lernplan" element={<Lernplan />} />
+                <Route path="/statistik" element={<Statistics />} />
+                <Route path="/stichwortliste" element={<StichwortlistePage />} />
+                <Route path="/schwachstellen" element={<SchwachstellenTrainer />} />
+                <Route path="/schwachstellen/recovery" element={<SmartRecoveryPage />} />
+                <Route path="/preise" element={<Pricing />} />
+                <Route
+                  path="/admin/kapitel-editor"
+                  element={
+                    <AdminGuard>
+                      <KapitelEditor />
+                    </AdminGuard>
+                  }
+                />
+                <Route
+                  path="/admin/audit"
+                  element={
+                    <AdminGuard>
+                      <ContentAudit />
+                    </AdminGuard>
+                  }
+                />
+                <Route
+                  path="/admin/preview"
+                  element={
+                    <AdminGuard>
+                      <AdminPreview />
+                    </AdminGuard>
+                  }
+                />
+                <Route
+                  path="/admin/dashboard"
+                  element={
+                    <AdminGuard>
+                      <AdminDashboard />
+                    </AdminGuard>
+                  }
+                />
+                <Route
+                  path="/admin/tasks"
+                  element={
+                    <AdminGuard>
+                      <AdminTasksPage />
+                    </AdminGuard>
+                  }
+                />
+                <Route
+                  path="/admin/analytics"
+                  element={
+                    <AdminGuard>
+                      <AnalyticsDashboard />
+                    </AdminGuard>
+                  }
+                />
+                <Route path="/prognose" element={<Prognose />} />
+                <Route path="/performance" element={<PerformanceOverview />} />
+                <Route path="/fortschritt" element={<FortschrittPage />} />
+                <Route path="/fragen-trainer" element={<FragenTrainer />} />
+                <Route path="/daily" element={<DailyChallenge />} />
+                <Route path="/formelsammlung" element={<Formelsammlung />} />
+                <Route path="/einstellungen" element={<Einstellungen />} />
 
-              {/* 404 Catch-all for protected routes */}
-              <Route path="*" element={<NotFound404 />} />
+                {/* 404 Catch-all for protected routes */}
+                <Route path="*" element={<NotFound404 />} />
+              </Route>
             </Route>
-          </Route>
 
-          {/* 404 Catch-all for public routes (fallback) */}
-          <Route path="*" element={<NotFound404 />} />
-        </Routes>
-      </Suspense>
-    </BrowserRouter>
+            {/* 404 Catch-all for public routes (fallback) */}
+            <Route path="*" element={<NotFound404 />} />
+          </Routes>
+        </Suspense>
+      </BrowserRouter>
     </MotionConfig>
   );
 }

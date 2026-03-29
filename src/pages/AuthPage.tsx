@@ -39,7 +39,7 @@ function saveLastEmail(email: string) {
 }
 
 export default function AuthPage() {
-  usePageTitle("Anmelden");
+  usePageTitle("Anmelden & Registrieren");
   const savedEmail = getLastEmail();
   const [email, setEmail] = useState(savedEmail);
   const [password, setPassword] = useState("");
