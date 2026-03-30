@@ -17,8 +17,8 @@ export default function UeberUns() {
       </Button>
 
       {/* Hero */}
-      <div className="text-center space-y-4 hero-orbs">
-        <h1 className="text-3xl font-bold text-[var(--text-primary)]">
+      <div className="text-center space-y-4 hero-orbs py-8">
+        <h1 className="heading-glow text-2xl sm:text-[3rem] sm:leading-tight font-bold text-[var(--text-primary)]">
           Die Geschichte hinter MedMaster
         </h1>
         <p className="text-lg text-[var(--muted)] max-w-xl mx-auto">

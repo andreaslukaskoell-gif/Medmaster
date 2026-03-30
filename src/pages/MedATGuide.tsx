@@ -368,7 +368,7 @@ export default function MedATGuide() {
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-2xl text-sm font-medium mb-6 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-400">
             Aktualisiert für 2026
           </div>
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-[var(--text-primary)] mb-4">
+          <h1 className="heading-glow text-2xl sm:text-[3rem] sm:leading-tight font-extrabold text-[var(--text-primary)] mb-4">
             MedAT 2026: Alles was du wissen musst
           </h1>
           <p className="text-lg text-[var(--muted)] max-w-2xl mx-auto">
