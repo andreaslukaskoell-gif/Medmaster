@@ -30,6 +30,8 @@ export const chemKapMaterie: Kapitel = {
         "Abb.: Gasförmiger, flüssiger und fester Aggregatzustand auf molekularer Ebene — Grundlage der Gasgesetze (OpenStax, CC BY 4.0)",
       content: `Kaum eine Gleichung begegnet angehenden Medizinerinnen und Medizinern so häufig wie **pV = nRT**.
 
+{{IMAGE}}
+
 ## Die Ideale Gasgleichung Sie verknüpft vier messbare Zustandsgrößen eines Gases in einer einzigen, eleganten Beziehung und bildet damit das Fundament der physikalischen Chemie der Gase. Ob Beatmungsmedizin, Blutgasanalyse oder Tauchphysiologie – wer diese Gleichung sicher beherrscht, versteht die physikalischen Grundlagen zahlreicher klinischer Situationen.
 
 Die vier Zustandsgrößen im Detail: Der **Druck p** (gemessen in Pascal, bar oder mmHg) beschreibt die Kraft pro Fläche, die Gasteilchen durch ihre Wandstöße erzeugen. Das **Volumen V** (in Litern oder Kubikmetern) gibt den Raum an, den das Gas einnimmt. Die **Stoffmenge n** (in Mol) zählt die Teilchen in Vielfachen der Avogadro-Zahl (N_A = 6,022 × 10²³ mol⁻¹). Die **absolute Temperatur T** muss stets in Kelvin angegeben werden: K = °C + 273,15. Die **universelle Gaskonstante R** = 8,314 J/(mol·K) verbindet alle Größen miteinander. In der Einheit L·bar/(mol·K) beträgt sie 0,08314 – dieser Wert ist für Aufgaben mit Druck in bar und Volumen in Litern besonders praktisch.
@@ -358,7 +360,11 @@ Die **Maxwell-Boltzmann-Verteilung** beschreibt, wie die Geschwindigkeiten der e
       ],
       content: `Warum platzen Wasserleitungen im Winter, aber Seen frieren nie ganz durch?
 
-## Die vier Aggregatzustände der Materie Warum kühlt Schweiß die Haut, obwohl er warm aus den Poren tritt? Die Antworten stecken in den Aggregatzuständen und den Kräften zwischen den Teilchen. Materie tritt in vier grundlegenden Aggregatzuständen auf, die sich durch Energie, Anordnung und Beweglichkeit ihrer Teilchen fundamental unterscheiden. Welcher Aggregatzustand vorliegt, hängt von der Bilanz zwischen der **kinetischen Energie der Teilchen** (Wärmebewegung) und der **potentiellen Energie** durch intermolekulare Wechselwirkungen ab.
+## Die vier Aggregatzustände der Materie Warum kühlt Schweiß die Haut, obwohl er warm aus den Poren tritt? Die Antworten stecken in den Aggregatzuständen und den Kräften zwischen den Teilchen.
+
+{{IMAGE}}
+
+Materie tritt in vier grundlegenden Aggregatzuständen auf, die sich durch Energie, Anordnung und Beweglichkeit ihrer Teilchen fundamental unterscheiden. Welcher Aggregatzustand vorliegt, hängt von der Bilanz zwischen der **kinetischen Energie der Teilchen** (Wärmebewegung) und der **potentiellen Energie** durch intermolekulare Wechselwirkungen ab.
 
 {{DIAGRAM:states-of-matter}}
 
@@ -698,6 +704,8 @@ Nicht alle Feststoffe sind kristallin. **Amorphe Feststoffe** (Glas, viele Kunst
       content: `Eine Verbrühung durch 100 °C heißen Wasserdampf ist deutlich schwerer als durch 100 °C heißes Wasser — obwohl die Temperatur identisch ist.
 
 ## Phasenübergänge: Überblick und Nomenklatur Der Grund: Beim Kondensieren gibt der Dampf seine gesamte Verdampfungsenthalpie (2257 J/g) an die Haut ab, bevor das flüssige Wasser überhaupt zu kühlen beginnt. Dieses Beispiel zeigt, dass Phasenübergänge gewaltige Energiemengen umsetzen, ohne die Temperatur zu ändern.
+
+{{IMAGE}}
 
 Phasenübergänge sind Zustandsänderungen zwischen den Aggregatzuständen, die bei definierten Temperatur-Druck-Bedingungen stattfinden. Sie sind stets mit einer Enthalpieänderung (Wärmeänderung bei konstantem Druck) verbunden (latente Wärme), die **nicht** zur Temperaturänderung, sondern zur Änderung der Molekülanordnung und der intermolekularen Abstände verwendet wird. Auf einer **Heizkurve** (Temperatur gegen Zeit bei konstanter Wärmezufuhr) erscheinen Phasenübergänge als **Plateaus** – die Temperatur bleibt konstant, obwohl weiterhin Energie zugeführt wird.
 

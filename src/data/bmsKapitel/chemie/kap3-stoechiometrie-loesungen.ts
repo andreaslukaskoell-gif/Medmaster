@@ -28,6 +28,8 @@ export const chemKapStoech: Kapitel = {
       ],
       content: `Jede Tablette, jede Infusion, jeder Laborwert beruht auf einer einzigen Frage: Wie viele Teilchen sind in dieser Probe?
 
+{{IMAGE}}
+
 ## Das Mol — die SI-Einheit der Stoffmenge
 
 Die Antwort liefert die **Stoffmenge n** mit der Einheit Mol. Seit der SI-Reform von 2019 ist das Mol über eine exakte Zahl definiert: **1 Mol = exakt 6,022 140 76 × 10²³ Teilchen**. Diese Zahl heißt **Avogadro-Zahl N_A** und bildet die Brücke zwischen der makroskopischen Welt, in der wir in Gramm und Litern messen, und der atomaren Welt, in der einzelne Atome und Moleküle existieren.
@@ -229,6 +231,8 @@ Dieses Konzept macht das PSE zu einem universellen Nachschlagewerk für stöchio
         "Verbrennungsreaktion",
       ],
       content: `Wer das Mol-Konzept beherrscht, kann den nächsten Schritt gehen: chemische Reaktionen quantitativ beschreiben. Dafür braucht man ausgeglichene Reaktionsgleichungen — sie zeigen, in welchen Verhältnissen Stoffe miteinander reagieren.
+
+{{IMAGE}}
 
 ## Chemische Reaktionsgleichungen
 
@@ -474,6 +478,8 @@ Bei der vollständigen Oxidation von 1 mol Glucose (180 g) entstehen 6 mol CO₂
 ## Konzentration — die Sprache der Klinik
 
 Das Labor meldet: Blutglucose 350 mg/dL, Natrium 128 mmol/L, Serumosmolalität 310 mosmol/kg. Drei Werte, drei Einheiten — und jede davon muss das Notfallteam sofort interpretieren können. Konzentrationsangaben sind die gemeinsame Sprache zwischen Labor, Apotheke und Station. Wer sie sicher beherrscht, versteht Infusionspläne, Dosierungen und Laborergebnisse auf einen Blick.
+
+{{IMAGE}}
 
 ---
 

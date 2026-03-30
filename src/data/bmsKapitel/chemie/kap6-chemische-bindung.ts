@@ -38,6 +38,8 @@ Na (2-8-1) + Cl (2-8-7) -> Na+ (2-8) + Cl- (2-8-8)
 
 Natrium gibt sein einzelnes Valenzelektron ab und wird zum Na+-Kation; Chlor nimmt dieses Elektron auf und wird zum Cl--Anion. Beide besitzen nun die Elektronenkonfiguration von Edelgasen (Neon bzw. Argon).
 
+{{IMAGE}}
+
 > **Merke:** Ionenbindungen entstehen bevorzugt zwischen Elementen der 1./2. Hauptgruppe (Metalle, niedrige IE) und der 6./7. Hauptgruppe (Nichtmetalle, hohe EA). Die EN-Differenz muss > 1,7 betragen.
 
 **Weitere Beispiele:**
@@ -451,6 +453,8 @@ Die Eigenschaften und Löslichkeitsregeln ionischer Verbindungen sind nicht nur 
 ## Grundprinzip der kovalenten Bindung
 
 Zwei Wasserstoffatome teilen sich ein Elektronenpaar — und bilden damit die einfachste kovalente Bindung überhaupt. Die **kovalente Bindung** (homöopolare oder Elektronenpaar-Bindung) entsteht durch **gemeinsame Nutzung von Elektronenpaaren** zwischen Atomen ähnlicher oder gleicher Elektronegativität. Im Gegensatz zur Ionenbindung werden Elektronen nicht übertragen, sondern geteilt. Die bindenden Elektronen halten sich bevorzugt im Bereich zwischen den Atomkernen auf und senken dort die potenzielle Energie des Systems. Der Energiegewinn durch die Bindungsbildung beträgt typischerweise 150–1000 kJ/mol.
+
+{{IMAGE}}
 
 Lewis-Schreibweise (Darstellung der Valenzelektronen als Punkte/Striche): Einfachbindung (—), Doppelbindung (=), Dreifachbindung (≡). Das bindende Elektronenpaar wird durch einen Strich dargestellt, freie Elektronenpaare durch Punkte. Die **Oktettregel** gilt auch hier: Jedes Atom strebt 8 Valenzelektronen an (Ausnahme: H mit 2, Be mit 4, B mit 6).
 
@@ -1060,6 +1064,8 @@ Ein Molekül ist aromatisch (besonders stabil), wenn es die **Hückel-Regel** (K
 ## Überblick: Zwischenmolekulare Kräfte
 
 Warum siedet Wasser erst bei 100 °C, obwohl es leichter ist als H₂S (Sdp. −60 °C)? Die Antwort liegt in den **intermolekularen Wechselwirkungen** — Kräfte zwischen Molekülen, die Aggregatszustand, Siedepunkt, Löslichkeit und Viskosität bestimmen. In der Biologie sind sie ebenso fundamental: Sie halten die DNA-Doppelhelix zusammen, falten Proteine und ermöglichen Enzym-Substrat-Erkennung.
+
+{{IMAGE}}
 
 **Zentrale Unterscheidung — intramolekular vs. intermolekular:**
 

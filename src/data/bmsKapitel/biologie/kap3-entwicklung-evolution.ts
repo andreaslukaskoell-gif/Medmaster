@@ -990,9 +990,9 @@ Was genau eine **Art** ist, bleibt umstritten. Das **biologische Artkonzept** (E
 
 ## Phylogenetische Bäume lesen — Kladistik
 
-{{DIAGRAM:phylogenetic-tree}}
-
 Die **Kladistik** (von griech. *klados* = Zweig) ist die heute dominierende Methode, Verwandtschaft zu rekonstruieren. Sie klassifiziert Organismen ausschließlich nach **Synapomorphien** — gemeinsamen, abgeleiteten Merkmalen, die nach der Trennung vom letzten gemeinsamen Vorfahren neu entstanden sind. Das Ergebnis ist ein **Kladogramm (phylogenetischer Stammbaum)**, dessen Elemente sich wie folgt lesen:
+
+{{DIAGRAM:phylogenetic-tree}}
 
 - **Äste** = Evolutionslinien einzelner Taxa (systematische Einheiten: Art, Gattung, Familie etc.)
 - **Knoten** = Verzweigungspunkte, die hypothetische gemeinsame Vorfahren darstellen
@@ -1231,6 +1231,8 @@ Die **Hominisation** (Menschwerdung) umfasst vier zentrale Entwicklungsschritte,
 ---
 
 ## Wichtige Fossilien — Chronologischer Überblick
+
+Die folgende Tabelle zeigt die wichtigsten Stationen der menschlichen Evolution — vom frühesten möglichen Homininen bis zum modernen *Homo sapiens*.
 
 {{DIAGRAM:phylogenetic-tree}}
 
@@ -1890,9 +1892,9 @@ Voraussetzung ist die **zweischichtige Keimscheibe**, die sich nach der Implanta
 
 ## Ablauf der Gastrulation
 
-{{DIAGRAM:gastrulation}}
-
 Die **Gastrulation** findet in der **dritten Entwicklungswoche** (etwa Tag 15–21) statt. Ausgangspunkt ist die zweischichtige Keimscheibe (Epiblast + Hypoblast).
+
+{{DIAGRAM:gastrulation}}
 
 **Schritte (vereinfacht):**
 1. Am **kaudalen** (schwanzwärtigen) Ende der Keimscheibe bildet sich der **Primitivstreifen** — eine Verdickung von Epiblastzellen in der Mittellinie. Er legt die **Körperachsen** fest (kranial-kaudal, dorsal-ventral, links-rechts). Kranial (kopfwärts) davon liegt der **Primitivknoten** (Hensen-Knoten).

@@ -36,6 +36,8 @@ export const chemKapAnorganisch: Kapitel = {
       ],
       content: `Ohne Wasser kein Leben — dieser Satz gilt nicht nur poetisch, sondern chemisch. Die besonderen physikalischen Eigenschaften des Wassers ergeben sich direkt aus seiner Molekülstruktur und dem Netzwerk aus Wasserstoffbrückenbindungen.
 
+{{IMAGE}}
+
 ## Struktur des Wassermoleküls
 
 Wasser (H₂O) ist das häufigste und biologisch bedeutsamste anorganische Molekül auf der Erde. Der menschliche Körper besteht zu **60–70 %** aus Wasser — es ist Lösungsmittel, Reaktionsmedium, Transportvehikel und Temperaturpuffer in einem. Das zentrale Sauerstoffatom trägt vier Elektronenpaare: zwei bindende (zu den H-Atomen) und zwei nichtbindende (freie Elektronenpaare). Nach dem **VSEPR-Modell** (Valence Shell Electron Pair Repulsion, Elektronenpaar-Abstoßungs-Modell) komprimieren die freien Elektronenpaare den Bindungswinkel von theoretisch 109,5° (Tetraeder) auf **104,5°**. Die Sauerstoff-Wasserstoff-Bindung ist stark polar (ΔEN = 1,24 nach Pauling), woraus ein permanentes Dipolmoment von **μ = 1,85 Debye (D)** (Einheit der Polarität) resultiert — einer der höchsten Werte kleiner Moleküle.
@@ -363,6 +365,8 @@ Der **hydrophobe Effekt** ist primär entropisch getrieben: Apolare Moleküle in
         "Abb.: Kovalente Bindungen — H–H-Einfachbindung, O=O-Doppelbindung und CO₂ mit zwei C=O-Doppelbindungen (OpenStax, CC BY 4.0)",
       content: `Kein anderes Element bildet so viele verschiedene Verbindungen wie Kohlenstoff. Seine einzigartige Fähigkeit, stabile Ketten, Ringe und Verzweigungen zu formen, macht es zum zentralen Baustein aller organischen Moleküle und damit des Lebens selbst.
 
+{{IMAGE}}
+
 ## Kohlenstoff — das Element des Lebens
 
 Kohlenstoff (C, Atomnr. 6, Elektronenkonfiguration [He] 2s² 2p²) kann mit seinen **vier Valenzelektronen** vier kovalente Bindungen eingehen. Zusammen mit der Fähigkeit zur **Katenation** (Verkettung von C-Atomen zu Ketten, Ringen und Verzweigungen) entsteht eine nahezu unbegrenzte strukturelle Vielfalt — die Grundlage der gesamten organischen Chemie.
@@ -641,6 +645,8 @@ Metabolisch zentrale Kohlenstoffverbindungen:
       imageCaption:
         "Abb.: NIST-Periodensystem der Elemente — Hauptgruppen mit Stickstoff (N), Schwefel (S) und den Halogenen (F, Cl, Br, I) hervorgehoben (OpenStax, CC BY 4.0)",
       content: `Nach Wasserstoff, Sauerstoff und Kohlenstoff ist Stickstoff das vierte Schlüsselelement der Biologie. Er steckt in jeder Aminosäure, jeder Nukleinbase und vielen Cofaktoren — und ist dennoch als N₂-Gas erstaunlich reaktionsträge.
+
+{{IMAGE}}
 
 ## Stickstoff (N) — das häufigste Atmosphärengas
 
@@ -1013,6 +1019,8 @@ Die Halogene (F, Cl, Br, I) sind starke Oxidationsmittel mit abnehmender Oxidati
       ],
       content: `Säuren und Basen begegnen Medizinerinnen und Medizinern täglich — vom Blut-pH über Magensäure bis zur Pufferwirkung von Bicarbonat. Doch was genau macht einen Stoff zur Säure oder Base? Drei historisch gewachsene Definitionen geben darauf unterschiedlich weite Antworten.
 
+{{IMAGE}}
+
 ## Drei Definitionen -- von eng bis allgemein
 
 Drei Säure-Base-Definitionen bauen aufeinander auf, jede allgemeiner als die vorige. Die engste stammt von **Arrhenius** (1884): Säuren setzen in wässriger Lösung H⁺-Ionen frei, Basen OH⁻-Ionen. Diese Definition ist auf wässrige Systeme beschränkt und kann nicht erklären, warum Ammoniak (NH₃) basisch reagiert, obwohl es keine OH⁻-Gruppe enthält.
@@ -1333,6 +1341,8 @@ Der Blut-pH des Menschen liegt im Normbereich bei **7,35–7,45**. Eine Abweichu
         "Dissoziationsgrad",
       ],
       content: `Nachdem wir die drei Säure-Base-Definitionen kennengelernt haben, stellt sich die entscheidende Frage: Wie stark gibt eine Säure ihr Proton ab? Die Antwort teilt alle Säuren und Basen in zwei Kategorien — starke und schwache — mit grundlegend unterschiedlichem Rechenweg.
+
+{{IMAGE}}
 
 ## Starke Säuren: Vollständige Dissoziation
 
@@ -1688,6 +1698,8 @@ Die **Magensäure** (HCl, pH ~ 1-2) ist die einzige starke Säure im Körper und
         "Abb.: Elektronentransfer bei der Ionenbildung — Grundlage der Redoxchemie (OpenStax, CC BY 4.0)",
       content: `Von der Zellatmung über die Photosynthese bis zur Korrosion von Implantaten — Redoxreaktionen gehören zu den häufigsten chemischen Prozessen in Natur und Medizin. In jeder Redoxreaktion werden Elektronen von einem Teilchen auf ein anderes übertragen.
 
+{{IMAGE}}
+
 ## Definitionen: OIL RIG
 
 Oxidation und Reduktion sind die grundlegendsten Elektronenübertragungsreaktionen der Chemie. Die Eselsbrücke **OIL RIG** fasst beide Prozesse zusammen: **O**xidation **I**s **L**oss (Oxidation = Elektronenverlust), **R**eduction **I**s **G**ain (Reduktion = Elektronengewinn). Beide Prozesse laufen stets gleichzeitig und gekoppelt ab -- es kann keine Oxidation ohne gleichzeitige Reduktion geben.
@@ -1964,6 +1976,8 @@ Bei der **Komproportionierung** reagieren zwei verschiedene Oxidationsstufen des
       imageCaption:
         "Abb.: Elektronentransfer zwischen Natrium und Chlor — Grundprinzip elektrochemischer Prozesse (OpenStax, CC BY 4.0)",
       content: `Ein Herzschrittmacher muss 10 Jahre lang zuverlässig Strom liefern — tief im Brustkorb, ohne Wartung. Die Batterie, die das ermöglicht, basiert auf denselben elektrochemischen Prinzipien wie das einfache Daniell-Element aus dem 19. Jahrhundert. Wer Galvanische Zellen versteht, versteht auch Batterien, Korrosion und sogar die Blutgasanalyse im Krankenhaus.
+
+{{IMAGE}}
 
 ---
 

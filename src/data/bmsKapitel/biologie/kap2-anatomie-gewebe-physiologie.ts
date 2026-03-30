@@ -538,8 +538,6 @@ Sehne, Knorpel und Knochen sehen völlig verschieden aus, bestehen aber alle aus
 
 ---
 
-{{DIAGRAM:action-potential}}
-
 ## Troponin-Tropomyosin-Schalter: Wie Ca2+ Kontraktion auslöst
 
 **Ruhezustand:** Tropomyosin liegt in der Furche des Aktinstrangs und **blockiert** die Myosin-Bindungsstellen.
@@ -1112,6 +1110,8 @@ An der chemischen Synapse wird das elektrische Signal in ein chemisches umgewand
 
 > **Merke:** −70 mV → Schwelle −55 mV → Na⁺ rein (+40 mV) → K⁺ raus → Repolarisation. Alles-oder-Nichts.
 
+{{DIAGRAM:action-potential}}
+
 ---
 
 ## Reflexbogen — Die 5 Glieder
@@ -1351,6 +1351,8 @@ Ob Licht, Schall oder Geruch — jeder Reiz muss zunächst in ein elektrisches S
 ---
 
 ## Ohr — Schallübertragung und Hörphysiologie
+
+Das Ohr ist in drei funktionelle Abschnitte gegliedert — Außenohr, Mittelohr und Innenohr — die gemeinsam Schallwellen in neuronale Signale umwandeln.
 
 ![Anatomie des menschlichen Ohrs](/images/wiki-ear-de.svg)
 

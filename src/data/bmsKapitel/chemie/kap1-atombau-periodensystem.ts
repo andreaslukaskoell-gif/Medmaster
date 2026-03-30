@@ -33,6 +33,8 @@ export const chemKapAtom: Kapitel = {
       ],
       content: `Die Vorstellung vom „unteilbaren Teilchen” reicht über 2000 Jahre zurück — und jedes Atommodell, das folgte, kam der Wahrheit ein Stück näher.
 
+{{IMAGE}}
+
 ## Demokrit und Dalton — die Anfänge
 
 Bereits ca. 400 v. Chr. postulierte der griechische Philosoph **Demokrit** unteilbare Teilchen (griech. *átomos* = unteilbar). Wissenschaftlich wurde die Atomtheorie erst durch **John Dalton** (1808) begründet: Elemente bestehen aus identischen, unteilbaren Atomen; verschiedene Elemente haben verschiedene Atommassen; chemische Reaktionen sind Umlagerungen von Atomen — keine Erzeugung oder Vernichtung.
@@ -354,6 +356,8 @@ Die **Ordnungszahl Z** (Protonenzahl) gibt an, wie viele Protonen im Kern sitzen
         "Übergangsmetalle",
       ],
       content: `Wo genau halten sich Elektronen auf? Die Antwort bestimmt, wie ein Atom reagiert — ob es Bindungen eingeht, Elektronen abgibt oder Licht absorbiert. Um den Aufenthaltsort jedes einzelnen Elektrons zu beschreiben, brauchen wir ein präzises Adresssystem: die vier Quantenzahlen.
+
+{{IMAGE}}
 
 ## Die vier Quantenzahlen — vier Fragen an jedes Elektron
 
@@ -726,6 +730,8 @@ Die Konzepte der Elektronenkonfiguration und des Magnetismus sind nicht nur theo
       ],
       content: `Eine Aspirin-Tablette enthält exakt 2,78 × 10²¹ Moleküle Acetylsalicylsäure — aber wie wiegt man Teilchen, die man nicht sehen kann? Das Mol verbindet die unsichtbare Welt der Atome mit der wägbaren Welt des Labors — eine Brücke, die jede Dosisberechnung und jede Infusion möglich macht.
 
+{{IMAGE}}
+
 ## Atomare Masseneinheit u
 
 Die **atomare Masseneinheit** (u, unified atomic mass unit; IUPAC: Da, Dalton) ist definiert als **1/12 der Masse eines C-12-Atoms**:
@@ -1033,6 +1039,8 @@ C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O (vollständige Oxidation von Gluk
 
 Warum siedet Wasser erst bei 100 °C, obwohl es nur 18 g/mol wiegt? Die Antwort liegt in den zwischenmolekularen Kräften — sie entscheiden über Siedepunkte, Löslichkeiten und die gesamte Biochemie.
 
+{{IMAGE}}
+
 ## Van-der-Waals-Kräfte
 
 **London-Dispersionskräfte** (induziert-Dipol–induziert-Dipol):
@@ -1332,6 +1340,8 @@ Proteinfaltung und -funktion basieren auf einem Netzwerk aus H-Brücken, hydroph
         "HAES",
       ],
       content: `Fest, flüssig, gasförmig — die drei Zustände der Materie bestimmen, wie Stoffe sich verhalten, von der Gefriertrocknung von Impfstoffen bis zum Surfactant in den Lungen eines Neugeborenen.
+
+{{IMAGE}}
 
 ## Die drei Aggregatzustände
 
@@ -1660,6 +1670,8 @@ Neben den klassischen Aggregatzuständen gibt es fein verteilte Systeme, die wed
       ],
       content: `Das Periodensystem ordnet alle bekannten Elemente nach einem einzigen Prinzip — der Protonenzahl — und macht chemische Eigenschaften vorhersagbar.
 
+{{IMAGE}}
+
 {{DIAGRAM:periodic-table}}
 
 ## Geschichte und Entwicklung des Periodensystems
@@ -1968,6 +1980,8 @@ Halb- und vollgefüllte d-Schalen sind besonders stabil — die ausführliche Er
         "Fluorierte Arzneistoffe",
       ],
       content: `Atomradius, Ionisierungsenergie, Elektronegativität — alle periodischen Trends haben eine gemeinsame Ursache: die effektive Kernladung.
+
+{{IMAGE}}
 
 ## Effektive Kernladung: die treibende Kraft aller Trends
 
@@ -2284,6 +2298,8 @@ Trend: In der Periode↑; in der Gruppe↓. Höchste EN: Fluor (oben rechts im P
         "Schilddrüse",
       ],
       content: `Von Natrium im Blutplasma über Calcium in den Knochen bis Eisen im Hämoglobin — die Elementgruppen des PSE spiegeln sich direkt in der Physiologie des menschlichen Körpers wider.
+
+{{IMAGE}}
 
 {{DIAGRAM:periodic-table}}
 

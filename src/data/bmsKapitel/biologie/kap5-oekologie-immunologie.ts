@@ -25,6 +25,8 @@ export const bioKapOekologie: Kapitel = {
       ],
       content: `Ökologie und Immunologie verbinden zwei BMS-Schwerpunkte: das Zusammenspiel von Organismen mit ihrer Umwelt und die Abwehr von Krankheitserregern.
 
+{{IMAGE}}
+
 ## Ökologie: Definition und Grundprinzip
 
 **Ökologie** (griech. oikos = Haus, logos = Lehre) untersucht die **Wechselbeziehungen** zwischen Organismen untereinander und mit ihrer Umwelt. Die zentrale Frage lautet: Welche Faktoren bestimmen, wo eine Art vorkommt, wie groß ihre Population wird und wie verschiedene Arten miteinander interagieren?
@@ -154,6 +156,8 @@ In der Ökologie unterscheidet man zwei Kategorien von Umweltfaktoren:
         "Bioindikator",
       ],
       content: `Wie reagieren Organismen auf konkrete Umweltfaktoren? Die Toleranzkurve liefert dazu das zentrale Modell.
+
+{{IMAGE}}
 
 ## Die Toleranzkurve: Grundmodell der Ökophysiologie
 
@@ -422,6 +426,8 @@ Klinische Parallele: Der **Mensch** ist dank **Thermoregulation** (Schwitzen, Va
       ],
       content: `Wo lebt ein Organismus, und was braucht er zum Überleben? Die Unterscheidung zwischen Lebensraum und ökologischer Nische ist ein BMS-Klassiker — und klinisch direkt anwendbar.
 
+{{IMAGE}}
+
 ## Nische vs. Lebensraum — warum der Unterschied klinisch relevant ist
 
 Jeder Krankheitserreger braucht bestimmte Bedingungen, um sich zu vermehren: den richtigen Wirt, das richtige Gewebe, den passenden pH-Wert, bestimmte Nährstoffe. Genau diese Gesamtheit aller Lebensbedingungen nennt die Ökologie eine **ökologische Nische**. Der rein physische Aufenthaltsort — etwa “Dünndarm” oder “Erythrozyt” — ist dagegen nur der **Lebensraum (Habitat)**.
@@ -597,6 +603,8 @@ Bei Immunsuppression (z. B. HIV/AIDS mit CD4-T-Zell-Verlust, Chemotherapie-induz
         "Räuber-Beute",
       ],
       content: `Organismen leben nicht isoliert — sie konkurrieren um Ressourcen, gehen Partnerschaften ein oder nutzen einander aus. Hier die wichtigsten Formen biotischer Wechselwirkungen.
+
+{{IMAGE}}
 
 ## Konkurrenz: intraspezifisch und interspezifisch
 
@@ -856,6 +864,8 @@ Die **Räuberpopulation hinkt der Beutepopulation zeitlich nach** (Höhepunkt de
         "Trophieebenen",
       ],
       content: `Wie fließen Energie und Materie durch ein Ökosystem? Nahrungsketten, Stoffkreisläufe und die 10%-Regel beantworten diese prüfungsrelevante Frage.
+
+{{IMAGE}}
 
 ## Ökosystem-Ebenen und Trophiestruktur
 
@@ -1187,6 +1197,8 @@ Bestimmte Schadstoffe werden **nicht abgebaut** und reichern sich entlang der Na
 Eine einzige *E. coli*-Zelle teilt sich alle 20 Minuten. Nach 10 Stunden wären es über eine Million, nach 24 Stunden rechnerisch mehr als die Masse der Erde. Offensichtlich passiert das nicht — aber warum? Populationsdynamik erklärt Wachstum, Zusammenbrüche und Gleichgewichte mit derselben Mathematik, die auch für bakterielle Infektionen, Tumorwachstum und Epidemien gilt.
 
 Jede Populationsgröße ändert sich durch vier Prozesse: **Geburten** und **Immigration** (Zuwachs) versus **Todesfälle** und **Emigration** (Verlust). Die Nettoänderung pro Zeiteinheit bestimmt, ob eine Population wächst, schrumpft oder stabil bleibt.
+
+{{IMAGE}}
 
 > **Merke:** ΔN = (Geburten + Immigration) − (Todesfälle + Emigration). Ist ΔN > 0, wächst die Population; ist ΔN < 0, schrumpft sie; bei ΔN = 0 herrscht Gleichgewicht.
 
@@ -1581,6 +1593,8 @@ Bakterienwachstum in geschlossener Kultur (Blutkultur, Nährmedium) durchläuft 
       ],
       content: `Mit dem Wechsel zur Immunologie steht die körpereigene Abwehr im Mittelpunkt. Antikörper (Immunglobuline) sind die zentralen Effektormoleküle der humoralen Immunantwort — ihr Aufbau und ihre Klassen gehören zum MedAT-Kernstoff.
 
+{{IMAGE}}
+
 ## IgG-Grundstruktur — Fab und Fc
 
 {{DIAGRAM:immune-response}}
@@ -1819,6 +1833,8 @@ Das Komplementsystem ist ein kaskadenartiges System aus ca. 30 Plasmaproteinen, 
       ],
       content: `Wie schafft es das Immunsystem, Milliarden verschiedener Antigene zu erkennen, obwohl das Genom nur ~20.000 Gene hat? Die Antwort liegt in der V(D)J-Rekombination — einem einzigartigen genetischen Mechanismus.
 
+{{IMAGE}}
+
 ## Antikörperdiversität — Das Grundproblem
 
 Das menschliche Immunsystem erkennt schätzungsweise mehr als 10¹⁰ verschiedene Antigene — eine Zahl, die das Genom mit seinen ~20.000 Genen unmöglich direkt codieren könnte. Die Lösung liegt in drei sich ergänzenden Mechanismen: **V(D)J-Rekombination** (kombinatorische Vielfalt), **junctionale Diversität** (zufällige Nukleotidinsertionen an Verbindungsstellen) und **somatische Hypermutation** (nachträgliche Feinabstimmung in Keimzentren). Diese Mechanismen zusammen erklären, wie ein begrenztes Genom eine nahezu unbegrenzte Antikörperbibliothek erzeugt.
@@ -1998,6 +2014,8 @@ Neben der V(D)J-Rekombination und der somatischen Hypermutation verfügt das Imm
       imageCaption: "Abb.: AB0-Blutgruppen — Antigene und Antikörper (OpenStax, CC BY 4.0)",
       stichworte: ["AB0-Vererbung", "Genotypen", "Phänotypen", "Kodominanz", "Multiple Allele"],
       content: `Das AB0-System verbindet Immunologie mit Genetik: Kohlenhydrat-Antigene auf Erythrozyten bestimmen Blutgruppe und Transfusionskompatibilität — ein Paradebeispiel für Kodominanz und multiple Allelie.
+
+{{IMAGE}}
 
 ## AB0-Blutgruppensystem — Genetische Grundlagen
 
@@ -2206,6 +2224,8 @@ In der klinischen Praxis gilt traditionell: Blutgruppe 0 Rh-negativ (0-) als uni
         "Anti-D-Prophylaxe",
       ],
       content: `Neben dem AB0-System ist der Rhesusfaktor das klinisch wichtigste Blutgruppenmerkmal — vor allem wegen der Rhesus-Inkompatibilität in der Schwangerschaft.
+
+{{IMAGE}}
 
 ## Rhesusfaktor — Definition
 

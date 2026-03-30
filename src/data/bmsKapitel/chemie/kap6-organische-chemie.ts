@@ -26,6 +26,8 @@ export const chemKapOrganisch: Kapitel = {
 - Den Zusammenhang zwischen Molekülstruktur, zwischenmolekularen Kräften und Siedepunkten
 - Klinisch relevante Kohlenwasserstoffe und ihre medizinische Bedeutung
 
+{{IMAGE}}
+
 ## Alkane — gesättigte Kohlenwasserstoffe
 
 Die organische Chemie beschäftigt sich mit Verbindungen des Kohlenstoffs, und die einfachsten unter ihnen sind die Alkane. Ihre allgemeine Formel lautet CₙH₂ₙ₊₂. In einem Alkan sind sämtliche Kohlenstoffatome über Einfachbindungen miteinander verknüpft — ausschließlich σ-Bindungen, die durch frontale Orbitalüberlappung entstehen. Da keine weiteren Bindungspartner mehr aufgenommen werden können, bezeichnet man Alkane als gesättigt. Jedes C-Atom ist sp³-hybridisiert, was eine tetraederförmige Geometrie mit einem Bindungswinkel von 109,5° zur Folge hat.
@@ -391,11 +393,13 @@ In der Atemgasanalytik gelten Kohlenwasserstoffe wie Ethan und Pentan als Biomar
       imageCaption: "Abb.: Dehydratation und Hydrolyse organischer Moleküle (OpenStax, CC BY 4.0)",
       content: `Funktionelle Gruppen bestimmen die chemischen Eigenschaften organischer Moleküle. In diesem Unterkapitel lernst du die wichtigsten Gruppen kennen — von Alkoholen über Aldehyde und Ketone bis zu Carbonsäuren und Estern — und ihre Bedeutung für Biochemie und Pharmakologie.
 
+{{IMAGE}}
+
 ## Alkohole (−OH, Hydroxylgruppe)
 
-{{DIAGRAM:functional-groups}}
+Sobald man in einem Kohlenwasserstoff ein Wasserstoffatom durch eine Hydroxylgruppe (−OH) ersetzt, entsteht ein Alkohol — und die Eigenschaften des Moleküls ändern sich grundlegend.
 
-Sobald man in einem Kohlenwasserstoff ein Wasserstoffatom durch eine Hydroxylgruppe (−OH) ersetzt, entsteht ein Alkohol — und die Eigenschaften des Moleküls ändern sich grundlegend. Die polare OH-Gruppe ermöglicht Wasserstoffbrückenbindungen, erhöht die Löslichkeit in Wasser und steigert den Siedepunkt im Vergleich zum entsprechenden Alkan beträchtlich.
+{{DIAGRAM:functional-groups}} Die polare OH-Gruppe ermöglicht Wasserstoffbrückenbindungen, erhöht die Löslichkeit in Wasser und steigert den Siedepunkt im Vergleich zum entsprechenden Alkan beträchtlich.
 
 Alkohole werden nach der Anzahl der am Hydroxyl-C gebundenen weiteren Kohlenstoffatome eingeteilt: **Primäre Alkohole** (−CH₂−OH, ein C-Nachbar), **sekundäre Alkohole** (−CH(OH)−, zwei C-Nachbarn) und **tertiäre Alkohole** (−C(OH)<, drei C-Nachbarn). Diese Klassifikation ist für die Reaktivität entscheidend, denn sie bestimmt die **Oxidationsreihe** — eines der zentralsten Konzepte für den MedAT. Ein primärer Alkohol lässt sich zunächst zum **Aldehyd** (−CHO) und dann weiter zur **Carbonsäure** (−COOH) oxidieren. Ein sekundärer Alkohol wird dagegen zum **Keton** (C=O) oxidiert, das ohne Spaltung einer C-C-Bindung nicht weiter oxidiert werden kann. Tertiäre Alkohole sind unter Standardbedingungen gar nicht oxidierbar.
 
@@ -690,6 +694,8 @@ Amine sind als Neurotransmitter und Signalmoleküle von zentraler klinischer Bed
       imageCaption:
         "Abb.: Grundstruktur einer Aminosäure mit funktionellen Gruppen (OpenStax, CC BY 4.0)",
       content: `Aminosäuren sind die Bausteine aller Proteine — und damit die molekulare Grundlage des Lebens.
+
+{{IMAGE}}
 
 ## Amine — Stickstoffbasen der organischen Chemie Ihre Chemie zu verstehen ist Voraussetzung für Biochemie, Pharmakologie und klinische Medizin. Bevor wir die Aminosäuren selbst betrachten, lohnt ein kurzer Blick auf die funktionelle Gruppe, die ihnen den Namen gibt: die **Aminogruppe (–NH₂)**.
 
@@ -1158,6 +1164,8 @@ Beispiele: ACE-Hemmer (kompetitiv), Statine (kompetitiv an HMG-CoA-Reduktase), P
 - Glykosaminoglykane (Heparin) und Blutgruppenantigene als medizinisch relevante Kohlenhydrate
 - HbA1c, Diabetes, Laktoseintoleranz und weitere klinische Bezüge
 
+{{IMAGE}}
+
 ## Monosaccharide — die einfachsten Zucker
 
 Kohlenhydrate gehören neben Lipiden und Proteinen zu den drei Hauptgruppen der Biomoleküle. Ihre allgemeine Summenformel Cₙ(H₂O)ₙ erklärt den historischen Namen „Kohlen-Hydrate", obwohl es sich chemisch nicht um Hydrate des Kohlenstoffs handelt. Die einfachsten Vertreter sind die **Monosaccharide** — Polyhydroxyaldehyde (Aldosen) oder Polyhydroxyketone (Ketosen), die sich nicht weiter hydrolysieren lassen.
@@ -1464,6 +1472,8 @@ Die klinische Bedeutung der Kohlenhydrate zeigt sich besonders eindrücklich bei
         "Dyslipidemien",
       ],
       content: `Fette machen krank, Cholesterin verstopft Arterien, Butter ist Gift — so klingt es in Schlagzeilen.
+
+{{IMAGE}}
 
 ## Was Lipide eigentlich sind Die biochemische Realität ist komplexer und faszinierender: Lipide bilden Zellmembranen, speichern Energie effizienter als jeder andere Makronährstoff, isolieren Nervenfasern, tragen Signale zwischen Zellen und sind Ausgangsstoff für Hormone. Ohne Lipide gäbe es kein Cortisol, kein Testosteron, kein Vitamin D. Wer Lipidchemie versteht, versteht Ernährung, Atherosklerose und Pharmakologie.
 
@@ -1986,6 +1996,8 @@ Gehirn, Herzmuskel und Skelettmuskel können Ketonkörper als alternatives Subst
         "Phosphodiesterbindung",
       ],
       content: `DNA und RNA speichern und übermitteln die genetische Information aller Lebewesen. Ihre Chemie — vom Nukleotid-Baustein bis zur Doppelhelix — ist Voraussetzung für das Verständnis von Genetik, Molekularbiologie und moderner Diagnostik (z. B. PCR).
+
+{{IMAGE}}
 
 ## Nukleotid-Aufbau
 

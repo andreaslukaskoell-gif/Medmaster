@@ -34,6 +34,8 @@ export const chemKapReaktionen: Kapitel = {
       ],
       content: `Jede chemische Reaktion folgt denselben Grundprinzipien: Energie muss investiert werden (Aktivierungsenergie), und am Ende ist die Welt energetisch anders als vorher. Bevor wir die verschiedenen Reaktionstypen katalogisieren, verstehen wir zuerst die drei Grundfragen, die jede Reaktion beantworten muss: **Läuft sie ab? Wie schnell? Und was passiert dabei?**
 
+{{IMAGE}}
+
 {{DIAGRAM:reaction-types}}
 
 ## 1. Was treibt Reaktionen an? — Die Gibbs-Energie
@@ -410,6 +412,8 @@ Klinisch relevant:
       ],
       content: `Ob eine Reaktion thermodynamisch möglich ist, sagt noch nichts darüber aus, wie schnell sie abläuft. Die Reaktionskinetik beantwortet genau diese Frage — und ist damit die Grundlage für das Verständnis von Enzymwirkung, Medikamentenabbau und Haltbarkeit.
 
+{{IMAGE}}
+
 ## Reaktionsgeschwindigkeit
 
 Warum baut die Leber Alkohol mit konstanter Rate ab, während Medikamente exponentiell aus dem Blut verschwinden? Die Antwort liegt in der Reaktionskinetik. Die **Reaktionsgeschwindigkeit v** beschreibt, wie schnell sich Konzentrationen mit der Zeit ändern:
@@ -735,6 +739,8 @@ Michaelis-Menten erklärt, warum Enzyme bei hoher Substratkonzentration sättige
       ],
       content: `Viele chemische Reaktionen laufen nicht bis zur vollständigen Umsetzung der Edukte, sondern stellen sich auf einen Gleichgewichtszustand ein. Dieses Konzept erklärt, warum Puffer funktionieren, wie der Körper den Blut-pH reguliert und weshalb Enzyme ihre Substrate nie vollständig umsetzen.
 
+{{IMAGE}}
+
 ## Das dynamische Gleichgewicht
 
 Sauerstoffabgabe im Gewebe, Pufferwirkung im Blut, Enzym-Substrat-Bindung — all diese Prozesse beruhen auf chemischen Gleichgewichten. Viele chemische Reaktionen sind reversibel: Die Produkte können wieder zu Edukten zurückreagieren. Man schreibt dies mit einem Doppelpfeil:
@@ -1046,6 +1052,8 @@ Das Massenwirkungsgesetz beschreibt die O₂-Bindung an Hämoglobin: Hb + O₂ �
         "Abb.: Enzym-Substrat-Komplex im Schlüssel-Schloss-Modell — Katalysatoren beschleunigen die Gleichgewichtseinstellung, ohne die Lage zu ändern (OpenStax, CC BY 4.0)",
       content: `Wenn ein chemisches Gleichgewicht einmal eingestellt ist, bleibt es nicht zwingend dort stehen. Temperatur, Druck und Konzentrationsänderungen können das Gleichgewicht verschieben — und genau dieses Verhalten beschreibt eines der nützlichsten Prinzipien der Chemie.
 
+{{IMAGE}}
+
 ## Das Prinzip von Le Chatelier
 
 Wie steuert der Körper den Blut-pH, obwohl ständig Säuren und Basen anfallen? Die Antwort liefert das Prinzip von Le Chatelier. Das **Prinzip von Le Chatelier** (auch: Prinzip des kleinsten Zwangs, 1884) lautet:
@@ -1347,6 +1355,8 @@ CO₂ + H₂O ⇌ H₂CO₃ ⇌ H⁺ + HCO₃⁻
         "Delta-S",
       ],
       content: `Die Thermodynamik beantwortet die grundlegendste Frage der Chemie: Warum laufen manche Reaktionen von selbst ab, andere aber nicht? Drei Größen — Enthalpie, Entropie und Gibbs-Energie — bilden zusammen das Werkzeug, das jede Reaktion thermodynamisch einordnet.
+
+{{IMAGE}}
 
 ## Enthalpie (ΔH) — Wärme bei konstantem Druck
 
