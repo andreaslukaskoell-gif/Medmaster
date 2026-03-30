@@ -66,7 +66,7 @@ Die Theorie erklärt eine fundamentale Frage: Warum sind eukaryotische Zellen so
 
 > **Merke:** Endosymbiose-Belege: eigenes Genom, 70S-Ribosomen, Antibiotikasensitivität, Doppelmembran, binäre Teilung, phylogenetische Ähnlichkeit zu Bakterien.
 
-{{DIAGRAM:prokaryote-vs-eukaryote}}
+{{IMAGE}}
 
 ---
 
@@ -1030,7 +1030,7 @@ Wer Stammbäume korrekt lesen will, muss echte Verwandtschaft (Homologie) von ob
 
 ## Molekulare Phylogenetik — Sequenzvergleich und molekulare Uhr
 
-{{DIAGRAM:dna-helix}}
+{{IMAGE}}
 
 Während klassische Systematik auf morphologischen Merkmalen (Knochen, Organe, Embryonalentwicklung) aufbaut, nutzt die molekulare Phylogenetik DNA-, RNA- und Proteinsequenzen zur Verwandtschaftsanalyse. Der Grundgedanke: Je mehr Sequenzunterschiede zwei Arten in einem homologen Gen aufweisen, desto länger liegt ihre letzte gemeinsame Abstammung zurück.
 
@@ -2301,7 +2301,7 @@ Die Organogenese schreitet in zwei Richtungen fort: **cephalo-caudal** (vom Kopf
 | Woche 8 | Alle Organanlagen vorhanden; SSL ca. 3 cm, Gewicht ca. 3 g |
 | Ab Woche 9 | Fetus: Wachstum und Reifung; kaum neue Organanlagen |
 
-{{DIAGRAM:heart-anatomy}}
+{{IMAGE}}
 
 > **Merke:** Embryonalperiode (Woche 1–8) = Organanlage; Fetalperiode (ab Woche 9) = Wachstum. Herz schlägt ab Tag 22–23.
 
@@ -2505,7 +2505,7 @@ Die Plazenta ist ein endokrin aktives Organ. In der Frühschwangerschaft dominie
 
 ## Nabelschnur und Eihäute
 
-{{DIAGRAM:blutkreislauf}}
+{{IMAGE}}
 
 Die Nabelschnur enthält 2 Nabelarterien (Aa. umbilicales) und 1 Nabelvene (V. umbilicalis), eingehüllt in Wharton-Sulze. Merkhilfe: 'AVA' (Arterie-Vene-Arterie). Sauerstoffarmes, kohlendioxidreiches fetales Blut fließt durch die Arterien zur Plazenta; sauerstoffreiches Blut kehrt über die Vene zum Fötus zurück – also umgekehrt zur konventionellen Arterie/Vene-Definition (fetale Arterien führen 'venöses' Blut). Fehlt eine Nabelarterie (Single Umbilical Artery, SUA), ist dies mit erhöhtem Risiko für Fehlbildungen assoziiert. Das Amnion (innere Membran) produziert und umgibt Fruchtwasser (Amnionflüssigkeit, ca. 800 ml am Termin). Das Chorion (äußere Membran) liegt dem Amnion an und grenzt an die Decidua.
 

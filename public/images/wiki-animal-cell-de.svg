@@ -6,7 +6,7 @@
      xmlns:xlink="http://www.w3.org/1999/xlink"
      viewBox="-133.621 -59.397 724.464 484.476">
   
-  <title>Animal cell structure</title>
+  <title>Tierische Zelle — Aufbau</title>
   
   <metadata>
   </metadata>
@@ -1641,7 +1641,7 @@
 	c1.526-1.7,2.418-2.62,4.332-3.806c1.755-1.087,3.432-3.174,4.261-5.069c1.081-2.479,0.795-6.772-0.703-9.089
 	c-1.881-2.907-6.117-1.884-8.862-1.228c-2.145,0.513-4.561,0.459-6.766,0.438C289.667,250.778,288.464,250.508,287.231,250.127z"/>
 <g>
-  <title>Plasma membrane</title>
+  <title>Zellmembran</title>
 	<path fill="#A5F1F9" stroke="#231F20" stroke-width="0.5923" d="M301.205,71.699c0.107-0.065,0.214-0.132,0.321-0.198
 		c3.362-2.091,6.967-4.108,9.819-6.869c3.162-3.059,5.897-6.665,9.327-9.4c-24.235,14.51-51.255,29.318-80.276,29.425
 		c-11.302,0.042-19.73-6.924-30.696-8.91c6.324,1.146,12.899,7.559,18.758,10.253c5.64,2.595,11.251,2.831,15.448,2.861
@@ -1685,16 +1685,16 @@
   <!-- North labels -->
 
   <switch class="header" transform="translate(62 -40)">
-    <text systemLanguage="en">Nucleus</text>
-    <text>Nucleus</text>
+    <text systemLanguage="en">Zellkern</text>
+    <text>Zellkern</text>
   </switch>
   <polyline class="leader" points="58.769,-45.5 58.769,44.499 138.769,44.499 ">
 		<title>nucleus border</title>
 	</polyline>
 
   <switch class="label right" transform="translate(154 -25)">
-    <text systemLanguage="en">Nuclear pore</text>
-    <text>Nuclear pore</text>
+    <text systemLanguage="en">Kernpore</text>
+    <text>Kernpore</text>
   </switch>
 	<line class="leader" x1="158" y1="-25" x2="244.102" y2="121.166">
 		<title>leader: Nuclear pore</title>
@@ -1709,24 +1709,24 @@
 	</line>
 
   <switch class="label right" transform="translate(154 5)">
-    <text systemLanguage="en">Nuclear envelope</text>
-    <text>Nuclear envelope</text>
+    <text systemLanguage="en">Kernhülle</text>
+    <text>Kernhülle</text>
   </switch>
   <line class="leader" x1="158" y1="5" x2="231.447" y2="123.592">
 		<title>leader: Nuclear envelope</title>
 	</line>
 
   <switch class="label right" transform="translate(154 20)">
-    <text systemLanguage="en">Nucleus</text>
-    <text>Nucleus</text>
+    <text systemLanguage="en">Zellkern</text>
+    <text>Zellkern</text>
   </switch>
 	<line class="leader" x1="158" y1="20" x2="233.435" y2="137.833">
 		<title>leader: Nucleus</title>
 	</line>
 
   <switch class="label right" transform="translate(154 35)">
-    <text systemLanguage="en">Nucleolus</text>
-    <text>Nucleolus</text>
+    <text systemLanguage="en">Nukleolus</text>
+    <text>Nukleolus</text>
   </switch>
   <line class="leader" x1="158" y1="35" x2="230.45" y2="151.485">
 		<title>leader: Nucleolus</title>
@@ -1736,48 +1736,48 @@
   <!-- North East labels -->
 
   <switch class="label" transform="translate(462 35)">
-    <text systemLanguage="en">Peroxisome</text>
-    <text>Peroxisome</text>
+    <text systemLanguage="en">Peroxisom</text>
+    <text>Peroxisom</text>
   </switch>
   <line class="leader" x1="460" y1="35" x2="320.101" y2="117.833">
 		<title>leader: Peroxisome</title>
 	</line>
 
   <switch class="label" transform="translate(462 55)">
-    <text systemLanguage="en">Microtubule</text>
-    <text>Microtubule</text>
+    <text systemLanguage="en">Mikrotubulus</text>
+    <text>Mikrotubulus</text>
   </switch>
   <line class="leader" x1="348.497" y1="117.226" x2="460" y2="55">
 		<title>leader: Microtubule</title>
 	</line>
 
   <switch class="label" transform="translate(462 75)">
-    <text systemLanguage="en">Lysosome</text>
-    <text>Lysosome</text>
+    <text systemLanguage="en">Lysosom</text>
+    <text>Lysosom</text>
   </switch>
   <line class="leader" x1="386.567" y1="119.368" x2="460" y2="75">
 		<title>leader: Lysosome</title>
 	</line>
 
   <switch class="label" transform="translate(462 95)">
-    <text systemLanguage="en">Free Ribosomes</text>
-    <text>Free Ribosomes</text>
+    <text systemLanguage="en">Freie Ribosomen</text>
+    <text>Freie Ribosomen</text>
   </switch>
 	<line class="leader" x1="460" y1="95" x2="360" y2="133.3" marker-end="url(#circle8)">
 		<title>leader: Free Ribosomes</title>
 	</line>
 
   <switch class="label" transform="translate(462 115)">
-    <text systemLanguage="en">Mitochondrion</text>
-    <text>Mitochondrion</text>
+    <text systemLanguage="en">Mitochondrium</text>
+    <text>Mitochondrium</text>
   </switch>
 	<line class="leader" x1="460" y1="115" x2="392.38" y2="142.177">
 		<title>leader: Mitochondrion</title>
 	</line>
 
   <switch class="label" transform="translate(462 135)">
-    <text systemLanguage="en">Intermediate Filaments</text>
-    <text>Intermediate Filaments</text>
+    <text systemLanguage="en">Intermediärfilamente</text>
+    <text>Intermediärfilamente</text>
   </switch>
 	<line class="leader" x1="460" y1="135" x2="354.768" y2="173.833">
 		<title>leader: Intermediate Filaments</title>
@@ -1786,24 +1786,24 @@
   <!-- South East labels -->
 
   <switch class="label" transform="translate(462 290)">
-    <text systemLanguage="en">Cytoplasm</text>
-    <text>Cytoplasm</text>
+    <text systemLanguage="en">Zytoplasma</text>
+    <text>Zytoplasma</text>
   </switch>
   <line class="leader" x1="352.102" y1="183.832" x2="460" y2="290">
 		<title>leader: Cytoplasm</title>
 	</line>
 
   <switch class="label" transform="translate(462 310)">
-    <text systemLanguage="en">Secretory vesicle</text>
-    <text>Secretory vesicle</text>
+    <text systemLanguage="en">Sekretorisches Vesikel</text>
+    <text>Sekretorisches Vesikel</text>
   </switch>
   <line class="leader" x1="460" y1="310" x2="364.285" y2="234.016">
 		<title>leader: Secretory vesicle</title>
   </line>
 
   <switch class="label" transform="translate(462 330)">
-		<text systemLanguage="en"><tspan>Centrosome</tspan><tspan x="0" dy="15">(with 2 centrioles)</tspan></text>
-		<text><tspan>Centrosome</tspan><tspan x="0" dy="15">(with 2 centrioles)</tspan></text>
+		<text systemLanguage="en"><tspan>Zentrosom</tspan><tspan x="0" dy="15">(mit 2 Zentriolen)</tspan></text>
+		<text><tspan>Zentrosom</tspan><tspan x="0" dy="15">(mit 2 Zentriolen)</tspan></text>
   </switch>
   <line class="leader" x1="313.435" y1="207.833" x2="460" y2="330">
 		<title>leader: Centrosome with 2 centrioles</title>
@@ -1822,48 +1822,48 @@
   <!-- West labels -->
 
   <switch class="label right" transform="translate(37 130)">
-    <text systemLanguage="en">Plasma membrane</text>
-    <text>Plasma membrane</text>
+    <text systemLanguage="en">Zellmembran</text>
+    <text>Zellmembran</text>
   </switch>
 	<line class="leader" x1="39" y1="130" x2="74.102" y2="105.167">
 		<title>leader: Plasma membrane</title>
 	</line>
 
   <switch class="label right" transform="translate(37 150)">
-    <text systemLanguage="en"><tspan>Golgi vesicles</tspan><tspan x="0" dy="15">(golgi apparatus)</tspan></text>
-    <text><tspan>Golgi vesicles</tspan><tspan x="0" dy="15">(golgi apparatus)</tspan></text>
+    <text systemLanguage="en"><tspan>Golgi-Vesikel</tspan><tspan x="0" dy="15">(Golgi-Apparat)</tspan></text>
+    <text><tspan>Golgi-Vesikel</tspan><tspan x="0" dy="15">(Golgi-Apparat)</tspan></text>
   </switch>
 	<line class="leader" x1="39" y1="150" x2="142.692" y2="137.18">
-		<title>leader: Golgi vesicles (golgi apparatus)</title>
+		<title>leader: Golgi vesicles (Golgi-Apparat)</title>
 	</line>
 
   <switch class="label right" transform="translate(37 190)">
-    <text systemLanguage="en">Ribosomes</text>
-    <text>Ribosomes</text>
+    <text systemLanguage="en">Ribosomen</text>
+    <text>Ribosomen</text>
   </switch>
   <line class="leader" x1="39" y1="190" x2="172.585" y2="164.885" marker-end="url(#circle4)">
 		<title>leader: Ribosomes</title>
 	</line>
 
   <switch class="label right" transform="translate(37 210)">
-    <text systemLanguage="en">Rough endoplasmic reticulum</text>
-    <text>Rough endoplasmic reticulum</text>
+    <text systemLanguage="en">Raues ER</text>
+    <text>Raues ER</text>
   </switch>
   <line class="leader" x1="39" y1="210" x2="183.337" y2="172.702">
 		<title>leader: Rough endoplasmic reticulum</title>
 	</line>
 
   <switch class="label right" transform="translate(37 230)">
-    <text systemLanguage="en">Smooth endoplasmic reticulum</text>
-    <text>Smooth endoplasmic reticulum</text>
+    <text systemLanguage="en">Glattes ER</text>
+    <text>Glattes ER</text>
   </switch>
   <line class="leader" x1="39" y1="230" x2="167.435" y2="201.167">
     <title>leader: Smooth endoplasmic reticulm</title>
   </line>
 
   <switch class="label right" transform="translate(37 250)">
-    <text systemLanguage="en">Actin Filaments</text>
-    <text>Actin Filaments</text>
+    <text systemLanguage="en">Aktinfilamente</text>
+    <text>Aktinfilamente</text>
   </switch>
   <line class="leader" x1="39" y1="250" x2="185.435" y2="247.834">
     <title>leader: Actin Filaments</title>

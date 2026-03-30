@@ -12,7 +12,7 @@ export const bioKap1: Kapitel = {
     {
       id: "bio-1-01",
       title: "Kennzeichen des Lebens und Systembiologie",
-      imageUrl: "/images/wiki-animal-cell.svg",
+      imageUrl: "/images/wiki-animal-cell-de.svg",
       imageCaption:
         "Abb.: Aufbau einer tierischen Zelle mit Organellen (Wikimedia Commons, Public Domain)",
       stichworte: [
@@ -51,8 +51,6 @@ Kein einzelnes Merkmal allein definiert Leben — erst ihr Zusammenspiel kennzei
 7. **Homöostase**: Aktive Aufrechterhaltung innerer Gleichgewichte (pH, Temperatur, Blutzucker, Osmolarität) trotz schwankender Außenbedingungen. Das für die Medizin wichtigste Kennzeichen.
 
 > **Merke:** **StReForWaEvoBeHo**: Stoffwechsel – Reizbarkeit – Fortpflanzung – Wachstum – Evolution – Bewegung – Homöostase
-
-{{DIAGRAM:animal-cell}}
 
 ---
 
@@ -287,7 +285,7 @@ Dieses Phänomen nennt sich **Emergenz** (von lat. *emergere* = hervorkommen): D
     {
       id: "bio-1-02",
       title: "Prokaryoten vs. Eukaryoten",
-      imageUrl: "/images/bms/bio-endosymbiose.svg",
+      imageUrl: "/images/wiki-prokaryote-eukaryote.svg",
       imageCaption:
         "Abb.: Endosymbiontentheorie — Ursprung von Mitochondrien und Chloroplasten aus Prokaryoten (CC BY 4.0)",
       stichworte: [
@@ -322,7 +320,7 @@ Das definierendste Merkmal: Prokaryoten haben **keinen membranumschlossenen Zell
 
 **Warum ist Kompartimentierung (Eukaryoten) ein Vorteil?** Räumliche Trennung von Reaktionen — Transkription im Kern, Translation im Zytoplasma — ermöglicht umfangreiche mRNA-Prozessierung (Spleißen (Herausschneiden nicht-codierender Abschnitte), 5'-Kappe, Poly-A-Schwanz) und feinere Regulation. Prokaryoten haben das nicht → ihre Gene haben keine Introns, keine RNA-Prozessierung.
 
-{{DIAGRAM:prokaryote-vs-eukaryote}}
+{{IMAGE}}
 
 > **Merke:** Pro = kein Kern: Prokaryoten = Nukleoid (keine Membran), 70S, binäre Fission. Eukaryoten = echter Kern, 80S, Mitose.
 
@@ -592,8 +590,6 @@ Weil das Innere der Doppelschicht aus Fettschwänzen besteht, ist die Membran **
 | **Via Kanal/Transporter** | Wasser (AQP = Aquaporine, Wasserkanäle), Ionen (Na⁺, K⁺, Ca²⁺, Cl⁻), Glucose (GLUT), Aminosäuren | Membranproteine: passiv (Kanäle, Carrier) oder aktiv (ATP, Na⁺-Gradient) |
 | **Blockiert** | Geladene Ionen ohne Kanal | Hydrophobes Membraninneres + Hydrathülle der Ionen = hohe Energiebarriere |
 
-{{DIAGRAM:membrane-transport}}
-
 Steroide (z. B. Cortisol, Vitamin D) sind lipophil und passieren die Membran ungehindert. Ionen sind geladen und von einer Wasserhülle umgeben — ihr Durchtritt durch die hydrophobe Zone wäre energetisch viel zu teuer. Dafür braucht die Zelle spezialisierte Membranproteine: Kanäle und Transporter.
 
 > **Merke:** Phospholipide = amphiphil → Bilayer durch Selbstorganisation. Kleine unpolare Moleküle frei; Ionen und große polare Moleküle brauchen Proteine.
@@ -617,8 +613,6 @@ Steroide (z. B. Cortisol, Vitamin D) sind lipophil und passieren die Membran ung
 |-----|----------|------------------------|----------|
 | **Ungesättigt** (cis-Doppelbindung = Knick) | Keine enge Packung | **↑ Fluidität** | Ölsäure, DHA (Nervenzellen) |
 | **Gesättigt** (gerade Kette) | Enges Packen | **↓ Fluidität** | Palmitinsäure, Stearinsäure (Butter fest) |
-
-{{DIAGRAM:cell-membrane}}
 
 **Lipidbewegung — das Wesentliche:** Phospholipide bewegen sich **lateral** sehr schnell (10⁷-mal/Sekunde Platztausch mit dem Nachbarn — messbar durch FRAP (Fluorescence Recovery After Photobleaching, eine Methode zur Messung der Membranfluidität)). Den Wechsel von einer Schicht zur anderen (**Flip-Flop**) schaffen sie dagegen kaum allein — der hydrophile Kopf müsste das hydrophobe Innere passieren. Halbwertszeit: Stunden bis Tage. Enzyme beschleunigen das: **Flippasen** (PS nach innen, ATP-abhängig), **Floppasen** (nach außen, ATP-abhängig), **Scramblasen** (bidirektional, ATP-unabhängig → PS-Flip bei Apoptose).
 
@@ -848,7 +842,7 @@ Ein klinisch wichtiges Beispiel für Glykokalix-Strukturen sind die **ABO-Blutgr
     {
       id: "bio-1-04",
       title: "Membrantransport — passiv und aktiv",
-      imageUrl: "/images/bms/bio-membrantransport.svg",
+      imageUrl: "/images/wiki-membrane-de.svg",
       imageCaption:
         "Abb.: Passiver und aktiver Membrantransport im Vergleich (Wikimedia Commons, CC BY-SA 4.0)",
       stichworte: [
@@ -924,7 +918,7 @@ Substanzen werden **gegen** ihren Gradienten gepumpt. Das zentrale Beispiel: die
 - Aufbau des **Ruhemembranpotenzials** (~−70 mV, innen negativ gegenüber außen)
 - Niedrige intrazelluläre Na⁺-Konzentration = Grundlage für sekundär aktiven Transport und Aktionspotenzial
 
-{{DIAGRAM:membrane-transport}}
+{{IMAGE}}
 
 > **Merke:** Na⁺/K⁺-ATPase: 3 Na⁺ raus, 2 K⁺ rein pro 1 ATP — nicht umgekehrt! Sie ist die wichtigste Pumpe der Zelle.
 
@@ -1111,7 +1105,7 @@ Na⁺ strömt in die Zelle, während ein anderes Ion **heraus** transportiert wi
     {
       id: "bio-1-05",
       title: "Zellorganellen — Funktion und medizinische Relevanz",
-      imageUrl: "/images/bms/bio-golgi.jpg",
+      imageUrl: "/images/wiki-endomembrane-de.svg",
       imageCaption:
         "Abb.: Golgi-Apparat — Sortier- und Versandzentrale der Zelle (OpenStax, CC BY 4.0)",
       stichworte: [
@@ -1139,7 +1133,7 @@ Na⁺ strömt in die Zelle, während ein anderes Ion **heraus** transportiert wi
 
 Eine eukaryotische Zelle funktioniert wie eine Fabrik mit spezialisierten Abteilungen. Jedes Organell hat eine klar definierte Aufgabe — von der Proteinherstellung über Energiegewinnung bis zur Müllentsorgung. Die meisten Krankheiten lassen sich auf Fehlfunktionen einzelner Organellen zurückführen. Wer versteht, **wer was macht**, versteht Zellbiologie.
 
-{{DIAGRAM:endomembrane-system}}
+{{IMAGE}}
 
 ---
 
@@ -1198,8 +1192,6 @@ Proteine sind hergestellt und versandt — doch was passiert mit beschädigten B
 ---
 
 ## 3. Das Kraftwerk: Mitochondrien
-
-{{DIAGRAM:double-membrane-organelles}}
 
 Mitochondrien liefern den Großteil des ATP — sind aber gleichzeitig der Todesschalter der Zelle.
 
@@ -1417,7 +1409,7 @@ Das **glatte ER (gER)** hat keine Ribosomen und übernimmt andere Aufgaben als d
     {
       id: "bio-1-06",
       title: "Der Zellkern — Steuerzentrale der Zelle",
-      imageUrl: "/images/bms/bio-zellkern.jpg",
+      imageUrl: "/images/wiki-dna-helix-de.svg",
       imageCaption: "Abb.: Zellkern mit Kernhülle, Poren und Nukleolus (OpenStax, CC BY 4.0)",
       stichworte: [
         "Kernporen",
@@ -1470,7 +1462,7 @@ Das menschliche Genom umfasst 3,2 Milliarden Basenpaare — ausgestreckt ca. **2
 
 Die Neukombination der Gene erfolgt durch **Crossing-over** und die zufällige Verteilung homologer Chromosomen während der **Meiose** — nicht durch die Chromosomenstruktur selbst. Chromosomen sind die Verpackungsform der DNA; die genetische Rekombination ist ein aktiver Vorgang der Keimzellbildung.
 
-{{DIAGRAM:dna-helix}}
+{{IMAGE}}
 
 **Hierarchische Verpackung:**
 1. **Nukleosom** (~10 nm): 147 bp DNA um Histon-Oktamer (je 2× H2A, H2B, H3, H4) gewickelt — wie “Perlen auf einer Schnur”
@@ -1996,7 +1988,7 @@ Die Schwesterchromatiden trennen sich in jeder haploiden Zelle. Ergebnis: **4 ha
     {
       id: "bio-1-08",
       title: "Energiestoffwechsel — Glykolyse, Citratzyklus & Atmungskette",
-      imageUrl: "/images/bms/bio-mitochondrium.jpg",
+      imageUrl: "/images/wiki-mitochondrion-de.svg",
       imageCaption: "Abb.: Mitochondrium als Ort der Zellatmung (OpenStax, CC BY 4.0)",
       stichworte: [
         "Glykolyse",
@@ -2050,7 +2042,7 @@ Pro Glucose (2 Pyruvat): 2 Acetyl-CoA + 2 CO₂ + 2 NADH
 
 > **Merke:** Brückenschritt = Pyruvat → Acetyl-CoA. Findet in Mitochondrien statt. Thiamin-Mangel → PDH-Defekt → Wernicke-Enzephalopathie!
 
-{{DIAGRAM:double-membrane-organelles}}
+{{IMAGE}}
 
 ---
 

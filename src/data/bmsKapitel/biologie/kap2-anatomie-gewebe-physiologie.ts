@@ -522,8 +522,6 @@ Sehne, Knorpel und Knochen sehen völlig verschieden aus, bestehen aber alle aus
 
 ## Sarkomerstruktur: Grundprinzip der Querstreifung
 
-{{IMAGE}}
-
 **Aufbau (von Z zu Z):**
 - **I-Bande** (hell): Nur Aktin-Dünnfilamente -> **wird bei Kontraktion kürzer**
 - **A-Bande** (dunkel): Myosin-Dickfilamente + überlappende Aktinfilamente -> **bleibt konstant** (Myosinlänge ändert sich nicht!)
@@ -750,8 +748,9 @@ Kein Troponin! Ca2+ bindet **Calmodulin** -> aktiviert **MLCK** (Myosin-Leichtke
     {
       id: "bio-2-04",
       title: "Nervengewebe — Neuronen, Gliazellen und Myelinisierung",
-      imageUrl: "/images/wiki-synapse-de.svg",
-      imageCaption: "Abb.: Aufbau eines Neurons mit Axon und Dendriten (OpenStax, CC BY 4.0)",
+      imageUrl: "/images/wiki-neuron-de.svg",
+      imageCaption:
+        "Abb.: Aufbau eines Neurons — Dendrit, Soma, Axon, Myelinscheide, Synapse (Wikimedia Commons, LadyofHats, Public Domain)",
       stichworte: [
         "Neuronen",
         "Gliazellen",
@@ -981,7 +980,7 @@ Gliazellen überwiegen numerisch: ca. 10:1 gegenüber Neuronen im ZNS. Sie teile
     {
       id: "bio-3-01",
       title: "Nervensystem",
-      imageUrl: "/images/bms/bio-rueckenmark.jpg",
+      imageUrl: "/images/wiki-nervous-system-de.svg",
       imageCaption:
         "Abb.: Querschnitt des Rückenmarks mit grauer und weißer Substanz (OpenStax, CC BY 4.0)",
       stichworte: [
@@ -1074,8 +1073,6 @@ Beide Systeme innervieren dieselben Organe, wirken aber antagonistisch. Die Umsc
 
 ## Synapse — Signalübertragung zwischen Neuronen
 
-{{IMAGE}}
-
 An der chemischen Synapse wird das elektrische Signal in ein chemisches umgewandelt:
 
 1. **Aktionspotential** erreicht das Axonterminal → spannungsgesteuerte **Ca²⁺-Kanäle** öffnen
@@ -1117,8 +1114,6 @@ An der chemischen Synapse wird das elektrische Signal in ein chemisches umgewand
 ---
 
 ## Reflexbogen — Die 5 Glieder
-
-{{IMAGE}}
 
 Reflexe sind unwillkürliche, stereotype Antworten auf einen Reiz. Jeder Reflexbogen besteht aus fünf Gliedern:
 
@@ -1292,8 +1287,9 @@ Jedes Rückenmarkssegment versorgt über seinen Spinalnerv ein bestimmtes Hautar
     {
       id: "bio-3-02",
       title: "Sinnesorgane",
-      imageUrl: "/images/bms/bio-auge.jpg",
-      imageCaption: "Abb.: Anatomie des menschlichen Auges (OpenStax, CC BY 4.0)",
+      imageUrl: "/images/wiki-eye-de.svg",
+      imageCaption:
+        "Abb.: Anatomie des menschlichen Auges (Wikimedia Commons, LadyofHats, Public Domain)",
       stichworte: [
         "Auge",
         "Ohr",
@@ -1354,6 +1350,8 @@ Ob Licht, Schall oder Geruch — jeder Reiz muss zunächst in ein elektrisches S
 ---
 
 ## Ohr — Schallübertragung und Hörphysiologie
+
+![Anatomie des menschlichen Ohrs](/images/wiki-ear-de.svg)
 
 **Anatomische Gliederung (prüfungssicher):**
 
@@ -1557,7 +1555,7 @@ Das **Riechepithel** sitzt in der oberen Nasenmuschel (Regio olfactoria, ~5 cm²
     {
       id: "bio-3-03",
       title: "Hormonsystem",
-      imageUrl: "/images/bms/bio-blutzucker-regulation.jpg",
+      imageUrl: "/images/wiki-endocrine-de.svg",
       imageCaption:
         "Abb.: Regulation des Blutzuckerspiegels durch Insulin und Glucagon (OpenStax, CC BY 4.0)",
       stichworte: [
@@ -1665,8 +1663,6 @@ Die Nebenniere (Glandula suprarenalis) sitzt kappenförmig auf der Niere und gli
 ---
 
 ## Pankreas und Blutzuckerregulation
-
-{{IMAGE}}
 
 Die **Langerhans-Inseln** (1–2 % des Pankreasgewebes, ~1 Million Inseln) enthalten die endokrinen Zellen des Pankreas. Die exokrine Funktion (Verdauungsenzyme) wird hier nicht behandelt.
 
@@ -1917,8 +1913,6 @@ Der LV hat eine ~3× dickere Wand (~10–15 mm) als der RV (~3–5 mm), weil er 
 
 > **Merke:** Wandschichten von innen nach außen: **E**ndokard – **M**yokard – **E**pikard (Eselsbrücke: **EME**). LV-Wand 3× dicker als RV, weil Systemdruck ~5× höher als Pulmonaldruck.
 
-{{IMAGE}}
-
 ---
 
 ## Herzklappen: Ventile gegen Rückfluss
@@ -1990,7 +1984,7 @@ Das Herz schlägt **autonom** — auch ohne Nervenversorgung, weil spezialisiert
 
 > **Merke:** SA-Knoten (60–80/min) → AV-Knoten (Verzögerung, 40–60/min) → His-Bündel → Tawara-Schenkel → Purkinje-Fasern (20–40/min, Spitze → Basis). Frequenz-Hierarchie: Der schnellste Schrittmacher dominiert!
 
-{{DIAGRAM:cardiac-conduction}}
+![Erregungsleitungssystem des Herzens](/images/wiki-cardiac-conduction-de.svg)
 
 ---
 
@@ -2015,8 +2009,6 @@ Das Elektrokardiogramm zeichnet die elektrische Aktivität des Herzens an der K�
 ---
 
 ## Großer und kleiner Kreislauf
-
-{{IMAGE}}
 
 Die beiden Kreisläufe sind **in Serie geschaltet** — das Blut muss zwingend durch beide:
 
@@ -2261,7 +2253,7 @@ Normaler Blutdruck: **120/80 mmHg** (systolisch/diastolisch). Hypertonie: ≥140
     {
       id: "bio-3-05",
       title: "Blut",
-      imageUrl: "/images/bms/bio-blut-zusammensetzung.jpg",
+      imageUrl: "/images/wiki-blood-composition-de.svg",
       imageCaption:
         "Abb.: Zusammensetzung des Blutes mit zellulären Bestandteilen (OpenStax, CC BY 4.0)",
       stichworte: [
@@ -2587,7 +2579,7 @@ Das Rhesus-System wird durch das **D-Antigen** definiert: **Rh+ (~85 %)** = D-An
     {
       id: "bio-3-06",
       title: "Immunsystem",
-      imageUrl: "/images/bms/bio-immunantwort.jpg",
+      imageUrl: "/images/wiki-antibody-de.svg",
       imageCaption: "Abb.: Ablauf der Immunantwort mit T- und B-Zellen (OpenStax, CC BY 4.0)",
       stichworte: [
         "Angeborene Immunität",
@@ -3111,8 +3103,6 @@ Der Lymphknoten filtert Lymphe und initiiert Immunantworten. Seine zonale Archit
 
 ## Der Bronchialbaum — von der Trachea zur Alveole
 
-{{IMAGE}}
-
 Die Atemluft durchläuft auf ihrem Weg zu den Alveolen eine zunehmend feinere Verzweigung. Die **Trachea** (Luftröhre, ~10–12 cm lang) wird von **16–20 hufeisenförmigen Knorpelspangen** (C-Knorpel, dorsal offen → Paries membranaceus mit glatter Muskulatur) offengehalten. Sie teilt sich an der **Bifurcatio tracheae** (Höhe Th4/5) in die beiden **Hauptbronchien**:
 
 - **Rechter Hauptbronchus**: Steiler, kürzer, weiter → **Aspiration geht häufiger rechts** (besonders rechter Unterlappen)
@@ -3395,8 +3385,6 @@ Das **Atemzentrum** liegt in der **Medulla oblongata** und im **Pons**. Es gener
 
 ## Verdauungstrakt Organ für Organ — Mund bis Kolon
 
-{{IMAGE}}
-
 Die Verdauung beginnt bereits in der **Mundhöhle**: Mechanische Zerkleinerung (Kauen) und Benetzung mit Speichel (~1–1,5 L/Tag). Die **Speichel-Amylase** (Ptyalin) spaltet Stärke zu Maltose und Dextrinen — die Kohlenhydratverdauung beginnt also im Mund. Der Bolus gelangt über den **Ösophagus** (Speiseröhre, ~25 cm) durch **Peristaltik** (koordinierte Kontraktion: Längsmuskulatur → Ringmuskulatur, gesteuert vom Plexus myentericus = Auerbach) in den Magen. Der untere Ösophagussphinkter (UÖS) verhindert Reflux.
 
 **Magen-Abschnitte:** Kardia (Eingang) → Fundus (Kuppel, Gasblase) → Corpus (Hauptteil, Beleg- und Hauptzellen) → Antrum (G-Zellen, Gastrin) → Pylorus (Pförtner, reguliert Magenentleerung). Verweildauer: Kohlenhydrate ~1–2 h, Proteine ~3–4 h, Fette ~5–6 h (Fett hemmt Magenentleerung via CCK).
@@ -3629,8 +3617,6 @@ Die **Leber** (größte Drüse, ~1,5 kg) hat eine einzigartige doppelte Blutvers
 {{IMAGE}}
 
 ## Das Nephron — funktionelle Einheit der Niere
-
-{{IMAGE}}
 
 Jede Niere enthält ca. **1 Million Nephrone**. Ein einzelnes Nephron besteht aus:
 
@@ -3929,8 +3915,6 @@ Die Grundlagen zu Knochengewebe (Osteoblasten, Osteoklasten, RANKL/OPG), Knorpel
 
 ## Gliederung des Skeletts — Axial- und Appendikulärskelett
 
-{{DIAGRAM:skeleton-overview}}
-
 Das erwachsene Skelett umfasst **206 Knochen**, eingeteilt in zwei funktionelle Gruppen:
 
 **Axialskelett** (80 Knochen — Körperachse, Schutz):
@@ -3949,8 +3933,6 @@ Das erwachsene Skelett umfasst **206 Knochen**, eingeteilt in zwei funktionelle 
 ---
 
 ## Gelenktypen — Freiheitsgrade und Beispiele
-
-{{DIAGRAM:joint-types}}
 
 Gelenke verbinden Knochen und bestimmen das Bewegungsausmaß. Grundunterscheidung: **Synarthrosen** (unecht, kein Gelenkspalt — Schädelnähte, Symphyse) vs. **Diarthrosen** (echt, mit Gelenkspalt, Kapsel und Synovia).
 

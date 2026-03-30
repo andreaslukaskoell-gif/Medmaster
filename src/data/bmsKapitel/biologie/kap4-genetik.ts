@@ -1950,7 +1950,7 @@ Die Transkription findet im **Zellkern** statt und wird von der **RNA-Polymerase
 
 3. **Termination:** Die RNA-Polymerase erreicht ein **Terminationssignal** und löst sich von der DNA. Die fertige **Prä-mRNA** (pre-mRNA) wird prozessiert.
 
-{{DIAGRAM:dna-helix}}
+{{IMAGE}}
 
 **mRNA-Prozessierung (bei Eukaryoten):**
 - **5'-Capping:** Methylguanosin-Kappe schützt vor Abbau und unterstützt die Ribosomenbindung
