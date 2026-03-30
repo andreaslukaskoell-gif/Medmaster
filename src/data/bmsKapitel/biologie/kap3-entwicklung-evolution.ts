@@ -1185,7 +1185,7 @@ Auch die HIV-Forensik nutzt Phylogenetik: In Gerichtsprozessen wurde anhand vira
     {
       id: "bio-9-07",
       title: "Entwicklung des Menschen — Hominiden",
-      imageUrl: "/images/bms/bio-hominiden-evolution.svg",
+      imageUrl: "/images/wiki-human-evolution-de.svg",
       imageCaption: "Abb.: Stammbaum der Hominiden-Evolution (Wikimedia Commons, CC BY-SA 4.0)",
       stichworte: [
         "Hominiden",
@@ -2457,7 +2457,7 @@ Thalidomid (Contergan) verursachte in den 1960er Jahren Phokomelie (Flipper-arti
     {
       id: "bio-9-12",
       title: "Embryonalhüllen und Plazenta",
-      imageUrl: "",
+      imageUrl: "/images/wiki-placenta-de.svg",
       imageCaption: "",
       stichworte: [
         "Plazenta",

@@ -861,7 +861,7 @@ Nicht alle Merkmale folgen dem einfachen Mendel-Schema. Drei wichtige Phänomene
     {
       id: "bio-4-05",
       title: "Genotyp, Phänotyp und Dominanzverhältnisse",
-      imageUrl: "/images/bms/bio-dominanz-kodominanz.svg",
+      imageUrl: "/images/wiki-codominance-de.svg",
       imageCaption:
         "Abb.: Kodominanz und unvollständige Dominanz (Wikimedia Commons, CC BY-SA 4.0)",
       stichworte: [

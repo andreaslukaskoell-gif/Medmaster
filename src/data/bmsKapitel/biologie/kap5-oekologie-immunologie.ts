@@ -12,7 +12,7 @@ export const bioKapOekologie: Kapitel = {
     {
       id: "bio-10-01",
       title: "Ökologie: Grundbegriffe und Ebenen",
-      imageUrl: "/images/bms/bio-oekologische-pyramide.svg",
+      imageUrl: "/images/wiki-ecological-pyramid-de.svg",
       imageCaption: "Abb.: Ökologische Pyramide — Trophieebenen (Wikimedia Commons, CC BY-SA 4.0)",
       stichworte: [
         "Ökologie",
@@ -2196,7 +2196,7 @@ In der klinischen Praxis gilt traditionell: Blutgruppe 0 Rh-negativ (0-) als uni
     {
       id: "bio-11-04",
       title: "Rhesusfaktor — Vererbung, Inkompatibilität und Anti-D",
-      imageUrl: "/images/bms/bio-erythrozyten.jpg",
+      imageUrl: "/images/wiki-abo-blood-de.svg",
       imageCaption: "Abb.: Erythrozyten mit Oberflächenantigenen (OpenStax, CC BY 4.0)",
       stichworte: [
         "Rh-positiv",
