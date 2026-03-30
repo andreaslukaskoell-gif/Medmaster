@@ -1666,8 +1666,9 @@ Der **Nucleolus** ist der Ort der Ribosomenfabrikation — keine Membranstruktur
     {
       id: "bio-1-07",
       title: "Zellteilung — Mitose und Meiose",
-      imageUrl: "/images/bms/bio-mitose-phasen.jpg",
-      imageCaption: "Abb.: Phasen der Mitose von Prophase bis Telophase (OpenStax, CC BY 4.0)",
+      imageUrl: "/images/wiki-mitosis-sequence-de.svg",
+      imageCaption:
+        "Abb.: Mitose — Phasen von Prophase bis Zytokinese (Wikimedia Commons, Public Domain)",
       stichworte: [
         "Mitose",
         "Meiose",

@@ -11,9 +11,9 @@ export const bioKapGenetik: Kapitel = {
     {
       id: "bio-4-01",
       title: "DNA, Gene und Chromosomen",
-      imageUrl: "/images/bms/bio-dna-makrostruktur.jpg",
+      imageUrl: "/images/wiki-dna-helix-de.svg",
       imageCaption:
-        "Abb.: DNA-Doppelhelix mit Basenpaaren und Zucker-Phosphat-Rückgrat (OpenStax, CC BY 4.0)",
+        "Abb.: DNA-Struktur — Adenin, Thymin, Guanin, Cytosin, Zucker-Phosphat-Rückgrat (Wikimedia Commons, CC BY-SA 3.0)",
       stichworte: ["DNA", "Gen", "Chromosom", "Allel", "Locus", "Doppelhelix", "Erbinformation"],
       content: `Genetik bildet das Fundament der modernen Biologie — von der DNA-Struktur über Vererbungsregeln bis zur Gentechnik ist dieses Thema ein Schwerpunkt im BMS.
 
@@ -1630,9 +1630,9 @@ Ein seltener Sonderfall: Menschen mit dem **Bombay-Phänotyp** (h/h) können das
     {
       id: "bio-4-08",
       title: "Mutationen",
-      imageUrl: "/images/bms/bio-dna-replikation.jpg",
+      imageUrl: "/images/wiki-dna-replication-de.svg",
       imageCaption:
-        "Abb.: DNA-Replikation — Fehler bei der Replikation sind eine Hauptquelle von Mutationen (OpenStax, CC BY 4.0)",
+        "Abb.: DNA-Replikation — Helikase, Primase, DNA-Polymerase, Leitstrang/Folgestrang (Wikimedia Commons, CC BY-SA 3.0)",
       stichworte: [
         "Genmutation",
         "Chromosomenmutation",

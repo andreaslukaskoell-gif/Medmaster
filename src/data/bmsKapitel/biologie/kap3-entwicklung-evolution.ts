@@ -10,7 +10,7 @@ export const bioKapEntwicklung: Kapitel = {
     {
       id: "bio-9-01",
       title: "Entstehung des Lebens und Endosymbiontentheorie",
-      imageUrl: "/images/bms/bio-endosymbiose.svg",
+      imageUrl: "/images/wiki-endosymbiosis-de.svg",
       imageCaption:
         "Abb.: Endosymbiontentheorie — Entstehung von Mitochondrien und Chloroplasten (Wikimedia Commons, CC BY-SA 4.0)",
       stichworte: [
@@ -1741,7 +1741,7 @@ Bevor ein Spermium die Eizelle durchdringen kann, muss es **kapazitiert** sein. 
     {
       id: "bio-4-01b",
       title: "Furchung, Morula, Blastozyste und Implantation",
-      imageUrl: "/images/bms/bio-blastozyste-de.svg",
+      imageUrl: "/images/wiki-blastocyst-de.svg",
       imageCaption:
         "Abb.: Blastozyste (Tag 5-6) — Trophoblast, Embryoblast und Blastozoel mit Zona pellucida",
       stichworte: [

@@ -1565,9 +1565,9 @@ Bakterienwachstum in geschlossener Kultur (Blutkultur, Nährmedium) durchläuft 
     {
       id: "bio-11-01",
       title: "Antikörper — Aufbau, Klassen und Effektorfunktionen",
-      imageUrl: "/images/bms/bio-immunantwort.jpg",
+      imageUrl: "/images/wiki-antibody-de.svg",
       imageCaption:
-        "Abb.: Humorale Immunantwort — Antikörperproduktion durch B-Zellen (OpenStax, CC BY 4.0)",
+        "Abb.: Antikörperstruktur (IgG) — Antigenbindungsstelle, Variable/Konstante Region (Wikimedia Commons, CC BY-SA 3.0)",
       stichworte: [
         "IgG",
         "IgA",

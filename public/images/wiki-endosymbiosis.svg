@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>endosymbiosis</title>
+<defs>
+    <marker id="barb"
+      refX="0" refY="1.5" 
+      markerUnits="strokeWidth"
+      markerWidth="4" markerHeight="3"
+      orient="auto">
+      <path d="M 0 0 4 1.5 0 3 z" fill="#666" />
+    </marker>
+    <marker id="barb_red"
+      refX="0" refY="1.5" 
+      markerUnits="strokeWidth"
+      markerWidth="4" markerHeight="3"
+      orient="auto">
+      <path d="M 0 0 4 1.5 0 3 z" fill="#e00" />
+    </marker>
+
+    <linearGradient id="chloroplast_green" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#9a3" stop-opacity="1" offset="0" />
+      <stop stop-color="#0f0" stop-opacity="0.5" offset="1" />
+    </linearGradient>
+    <radialGradient id="chloroplast_yellow" >
+      <stop offset="0%" stop-color="#ffd" />
+      <stop offset="100%" stop-color="#fefe99" />
+</radialGradient>
+
+<rect id="thylakoid" fill="url(#chloroplast_green)" stroke="#cfc" stroke-width="1" height="4" width="20" rx="2" ry="2"/>
+<rect id="thylakoid_long" fill="url(#chloroplast_green)" stroke="#cfc" stroke-width="1" height="4" width="90" rx="2" ry="2"/>
+
+<symbol id="mitochondrion" viewBox="0 0 150 150" >
+<path d="M53,75 C 51,-20 99,-20 97,75 C 99,170 51,170 53,75" fill="#36f" stroke="#333" stroke-width="2" />
+<path d="M63,123 74,123 74,120 62,120 58,96 80,96 80,93 58,93 58,73 76,73 76,70 58,70 59,50 80,50 80,47 59,47 62,30 76,30 76,27 63,27 Q 72,-3  84,17 L74,17 74,20 85,20 89,37 72,37 72,40 90,40 92,60 65,60 67,63 92,63 92,83 76,83 76,86 92,86 90,106 72,106 72,109 90,109 85,130 73,130 71,133 84,133 Q 72,153 63,123" fill="#bef" stroke="#333" stroke-width="2" stroke-linejoin="round" />
+</symbol>
+
+<symbol id="chloroplast" viewBox="0 0 150 150" >
+<ellipse cx="75" cy="75" rx="73" ry="30" stroke="#ff0" stroke-width="2" fill="url(#chloroplast_yellow)"/>
+<use xlink:href="#thylakoid" x="85" y="50" />
+<use xlink:href="#thylakoid_long" x="31" y="55" />
+<use xlink:href="#thylakoid" x="85" y="60" />
+<use xlink:href="#thylakoid" x="85" y="65" />
+<use xlink:href="#thylakoid" x="45" y="60" />
+<use xlink:href="#thylakoid" x="45" y="65" />
+<use xlink:href="#thylakoid" x="45" y="70" />
+<use xlink:href="#thylakoid" x="115" y="65" />
+<use xlink:href="#thylakoid" x="115" y="70" />
+<rect x="25" y="75" fill="url(#chloroplast_green)" stroke="#cfc" stroke-width="1" height="4" width="110" rx="2" ry="2"/>
+<use xlink:href="#thylakoid" x="115" y="80" />
+<use xlink:href="#thylakoid" x="90" y="80" />
+<use xlink:href="#thylakoid" x="90" y="85" />
+<use xlink:href="#thylakoid" x="60" y="85" />
+<use xlink:href="#thylakoid" x="30" y="85" />
+<use xlink:href="#thylakoid_long" x="28" y="90" />
+<use xlink:href="#thylakoid" x="60" y="95" />
+</symbol>
+
+</defs>
+<rect x="0" y="0" width="1920" height="1080" fill="#ccc"/>
+<text x="200" y="100" font-size="3.5em">Endosymbiosis</text>
+<circle cx="480" cy="590" r="350" fill="#bef"/>
+<circle cx="1440" cy="590" r="350" fill="#bef"/>
+<circle cx="440" cy="560" r="100" fill="#bbf"/>
+<circle cx="430" cy="520" r="25" fill="#99f"/>
+<circle cx="470" cy="600" r="25" fill="#99f"/>
+<use xlink:href="#mitochondrion" x="160" y="450" width='200' height='200' transform="rotate(10, 160, 300)"/>
+<ellipse cx="190" cy="835" rx="50" ry="110" stroke="none" fill="#ccc" transform="rotate(40, 190, 850)"/>
+<use xlink:href="#mitochondrion" x="180" y="700" width='200' height='200' transform="rotate(40, 180, 700)"/>
+<use xlink:href="#chloroplast" x="700" y="300" width='250' height='200' transform="rotate(40, 700, 250)" />
+<ellipse cx="690" cy="835" rx="60" ry="100" stroke="none" fill="#ccc" transform="rotate(-40, 690, 850)"/>
+<use xlink:href="#chloroplast" x="700" y="700" width='250' height='200' transform="rotate(50, 700, 700)" />
+<path d="M 230 920 Q350 800 270 670" fill="none" stroke="#e00" stroke-width="14" marker-end="url(#barb_red)"  />
+<path d="M 800 850 Q650 700 700 570" fill="none" stroke="#e00" stroke-width="14" marker-end="url(#barb_red)"  />
+<text x="200" y="200" font-size="2.5em">Ancestral host cell</text>
+<text x="100" y="1000" font-size="2em">Aerobic bacterium</text>
+<text x="600" y="1000" font-size="2em">Cyanobacterium</text>
+
+<path d="M 880 590 L 1020 590" fill="none" stroke="#666" stroke-width="8" marker-end="url(#barb)"  />
+<text x="890" y="640" font-size="2em">after many</text>
+<text x="890" y="675" font-size="2em">generations</text>
+<text x="890" y="710" font-size="2em">of evolution</text>
+<use xlink:href="#mitochondrion" x="1180" y="700" width='200' height='200' transform="rotate(-50, 1280, 800)"/>
+<use xlink:href="#mitochondrion" x="1320" y="300" width='200' height='200' transform="rotate(100, 1420, 400)"/>
+<use xlink:href="#chloroplast" x="1500" y="400" width='250' height='200' transform="rotate(70, 1600, 500)" />
+<use xlink:href="#chloroplast" x="1200" y="450" width='250' height='200' transform="rotate(110, 1300,550)" />
+<use xlink:href="#chloroplast" x="1450" y="700" width='250' height='200' transform="rotate(10, 1550, 800)" />
+<circle cx="1440" cy="660" r="100" fill="#bbf"/>
+<circle cx="1410" cy="690" r="25" fill="#99f"/>
+<circle cx="1500" cy="670" r="25" fill="#99f"/>
+<path d="M 1205 960 L 1250 850" fill="none" stroke="#666" stroke-width="4" marker-end="url(#barb)"  />
+<path d="M 1605 960 L 1585 875" fill="none" stroke="#666" stroke-width="4" marker-end="url(#barb)"  />
+
+<text x="1200" y="200" font-size="2.5em">Modern cell</text>
+<text x="1200" y="1000" font-size="2em">Mitochondrion</text>
+<text x="1600" y="1000" font-size="2em">Chloroplast</text>
+
+<text x="1650" y="1050" font-size="2em">after Lynn Margulis</text>
+</svg>
