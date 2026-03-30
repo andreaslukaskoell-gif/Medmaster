@@ -240,8 +240,9 @@ Sekretionsmechanismen exokriner Drüsen:
     {
       id: "bio-2-02",
       title: "Binde- und Stützgewebe — Kollagen, Knochen und Knorpel",
-      imageUrl: "/images/bms/bio-bindegewebe-typen.jpg",
-      imageCaption: "Abb.: Bindegewebetypen im Überblick (OpenStax/Wikimedia Commons, CC BY 3.0)",
+      imageUrl: "/images/wiki-bone-crosssection-de.svg",
+      imageCaption:
+        "Abb.: Knochenquerschnitt — Kompakta, Spongiosa, Periost, Markhöhle (Wikimedia Commons, CC BY-SA 4.0)",
       stichworte: [
         "Knochen",
         "Knorpel",
@@ -2881,8 +2882,9 @@ Die Immunisierung nutzt das Prinzip der erworbenen Immunität gezielt aus — en
     {
       id: "bio-3-07",
       title: "Lymphsystem",
-      imageUrl: "/images/bms/bio-lymphsystem.jpg",
-      imageCaption: "Abb.: Lymphatisches System mit Lymphknoten und -gefäßen (OpenStax, CC BY 4.0)",
+      imageUrl: "/images/wiki-lymphatic-system-de.svg",
+      imageCaption:
+        "Abb.: Lymphatisches System — Lymphknoten, Milz, Thymus und Lymphgefäße (Wikimedia Commons, Public Domain)",
       stichworte: ["Lymphknoten", "Milz", "Thymus", "Lymphe", "Lymphgefäße", "Lymphozytenreifung"],
       content: `Neben dem Blutkreislauf durchzieht ein zweites Gefäßsystem den Körper: das lymphatische System. Es transportiert überschüssige Gewebsflüssigkeit zurück, spielt eine zentrale Rolle in der Immunabwehr und leitet resorbierte Fette aus dem Darm.
 
@@ -4151,8 +4153,9 @@ Die Wirbelsäule ist keine gerade Säule, sondern zeigt im Sagittalprofil **vier
     {
       id: "bio-3-12",
       title: "Fortpflanzungssystem",
-      imageUrl: "",
-      imageCaption: "",
+      imageUrl: "/images/wiki-female-reproductive-de.svg",
+      imageCaption:
+        "Abb.: Weibliches Fortpflanzungssystem — Eileiter, Eierstöcke, Uterus, Cervix, Vagina (Wikimedia Commons, CC BY-SA 3.0)",
       stichworte: [
         "Spermatogenese",
         "Oogenese",
@@ -4166,6 +4169,8 @@ Die Wirbelsäule ist keine gerade Säule, sondern zeigt im Sagittalprofil **vier
       content: `Das Fortpflanzungssystem verbindet Anatomie, Endokrinologie und Genetik — von der Keimzellbildung über den Menstruationszyklus bis zur Befruchtung.
 
 ## Spermatogenese und Oogenese — Gametogenese im Vergleich
+
+{{IMAGE}}
 
 Ein Mann produziert täglich rund 200 Millionen Spermien, eine Frau reift pro Zyklus nur eine einzige Eizelle — dieser Kontrast prägt die gesamte Fortpflanzungsbiologie. Beide Keimzellentwicklungen nutzen die Meiose, unterscheiden sich aber fundamental in Ergebnis und Zeitplanung:
 

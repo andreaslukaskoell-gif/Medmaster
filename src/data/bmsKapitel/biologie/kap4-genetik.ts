@@ -194,8 +194,9 @@ Ein **Chromosom** ist ein langer DNA-Faden, der zusammen mit **Histonen** (Verpa
     {
       id: "bio-4-02",
       title: "Chromosomen: Aufbau und Karyotyp",
-      imageUrl: "/images/bms/bio-homologe-chromosomen.jpg",
-      imageCaption: "Abb.: Homologe Chromosomenpaare im Karyogramm (OpenStax, CC BY 4.0)",
+      imageUrl: "/images/wiki-chromosome-de.svg",
+      imageCaption:
+        "Abb.: Aufbau eines Chromosoms — Zentromer, Chromatiden, Telomere (Wikimedia Commons, CC BY-SA 3.0)",
       stichworte: [
         "Zentromer",
         "Telomere",
