@@ -70,7 +70,7 @@ export function getDefaultBreadcrumbs(pathname: string): BreadcrumbItemConfig[] 
   for (let i = 0; i < segments.length; i++) {
     href += "/" + segments[i];
     const raw = segments[i];
-    const label = labels[raw] ?? (raw.includes("-kap") ? "…" : raw);
+    const label = labels[raw] ?? raw.replace(/[-_]/g, " ");
     const isLast = i === segments.length - 1;
     items.push(isLast ? { label } : { label, href });
   }

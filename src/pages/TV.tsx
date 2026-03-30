@@ -315,7 +315,7 @@ export default function TV() {
             <CardTitle className="text-[var(--text-primary)]">{tvText.title}</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="text-sm text-[var(--text-secondary)] leading-relaxed whitespace-pre-line">
+            <div className="text-sm text-[var(--text-secondary)] leading-relaxed whitespace-pre-line tv-highlightable">
               {tvText.content}
             </div>
           </CardContent>
@@ -508,7 +508,7 @@ export default function TV() {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="text-sm text-[var(--text-secondary)] leading-relaxed whitespace-pre-line">
+                <div className="text-sm text-[var(--text-secondary)] leading-relaxed whitespace-pre-line tv-highlightable">
                   {currentText.content}
                 </div>
               </CardContent>
@@ -669,7 +669,7 @@ export default function TV() {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="text-sm text-[var(--text-secondary)] leading-relaxed whitespace-pre-line">
+            <div className="text-sm text-[var(--text-secondary)] leading-relaxed whitespace-pre-line tv-highlightable">
               {currentAussagenText.text}
             </div>
           </CardContent>

@@ -2195,3 +2195,16 @@ html.quiz-active.mobile-mode nav[aria-label="Hauptnavigation"] {
 .dark.mobile-mode .topbar-glass {
   border-bottom-color: rgba(255, 255, 255, 0.06);
 }
+
+/* TV Textverständnis — yellow text highlighting (simulates paper-marking) */
+.tv-highlightable {
+  cursor: text;
+}
+.tv-highlightable::selection {
+  background: #fef08a;
+  color: #1a1a1a;
+}
+.dark .tv-highlightable::selection {
+  background: #ca8a04;
+  color: #fff;
+}

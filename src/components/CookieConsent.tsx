@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useCookieConsent } from "@/hooks/useCookieConsent";
 import { updateGtagConsent } from "@/lib/growthTracking";
 
@@ -7,13 +7,28 @@ export function CookieConsentBanner() {
   const [showDetails, setShowDetails] = useState(false);
   const [analytics, setAnalytics] = useState(true);
   const [marketing, setMarketing] = useState(true);
+  const bannerRef = useRef<HTMLDivElement>(null);
+
+  // Add padding-bottom to body so the banner never overlaps scrollable content
+  useEffect(() => {
+    if (hasConsented) return;
+    const update = () => {
+      const h = bannerRef.current?.offsetHeight ?? 0;
+      document.body.style.paddingBottom = h ? `${h}px` : "";
+    };
+    update();
+    window.addEventListener("resize", update);
+    return () => {
+      document.body.style.paddingBottom = "";
+      window.removeEventListener("resize", update);
+    };
+  }, [hasConsented, showDetails]);
 
   if (hasConsented) return null;
 
   const handleSaveCustom = () => {
     updateConsent({ analytics, marketing });
     updateGtagConsent(marketing);
-    // Reload to apply consent-gated analytics
     window.location.reload();
   };
 
@@ -24,7 +39,10 @@ export function CookieConsentBanner() {
   };
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-[9999] bg-[var(--surface)] border-t border-[var(--border)] shadow-2xl">
+    <div
+      ref={bannerRef}
+      className="fixed bottom-0 left-0 right-0 z-[9999] bg-[var(--surface)] border-t border-[var(--border)] shadow-2xl"
+    >
       <div className="max-w-4xl mx-auto px-6 py-4">
         {!showDetails ? (
           <div className="flex items-center justify-between gap-6">

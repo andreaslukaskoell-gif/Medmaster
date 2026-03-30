@@ -4,6 +4,12 @@
  */
 import { supabase } from "@/lib/supabase";
 import { isSchemaSkipActive } from "@/lib/supabaseSchemaSkip";
+
+/** Dev-mode uses a fake user ID that has no Supabase session → skip DB calls to avoid 400s */
+const DEV_USER_PREFIX = "00000000-0000-0000-0000-00000000";
+function isDevUser(user_id: string | null): boolean {
+  return !!user_id && user_id.startsWith(DEV_USER_PREFIX);
+}
 import { fsrsSchedule, isDue, type FSRSState, type FSRSRating } from "@/lib/fsrs";
 
 // ── Types ────────────────────────────────────────────────────
@@ -219,7 +225,7 @@ function buildNextFromCategorized(fragenWithFSRS: BMSFrage[], count: number): BM
 // ── Record attempt ────────────────────────────────────────────
 
 export async function recordAttempt(input: RecordAttemptInput): Promise<void> {
-  if (!supabase || isSchemaSkipActive()) return;
+  if (!supabase || isSchemaSkipActive() || isDevUser(input.user_id)) return;
 
   const newFSRS = fsrsSchedule(input.prev_fsrs, input.fsrs_rating);
 
@@ -248,7 +254,7 @@ export interface MRSData {
 }
 
 export async function fetchMRSData(user_id: string | null): Promise<MRSData | null> {
-  if (!supabase || !user_id || isSchemaSkipActive()) return null;
+  if (!supabase || !user_id || isSchemaSkipActive() || isDevUser(user_id)) return null;
 
   const thirtyDaysAgo = new Date(Date.now() - 30 * 86_400_000).toISOString();
 
@@ -308,7 +314,8 @@ export async function fetchErrorPatterns(
   user_id: string | null,
   uk_ids: string[]
 ): Promise<Record<string, ErrorPattern>> {
-  if (!supabase || !user_id || !uk_ids.length || isSchemaSkipActive()) return {};
+  if (!supabase || !user_id || !uk_ids.length || isSchemaSkipActive() || isDevUser(user_id))
+    return {};
 
   // Get all question IDs for these UKs
   const { data: qData } = await supabase
@@ -358,7 +365,8 @@ async function fetchFSRSStates(
   question_ids: string[],
   user_id: string | null
 ): Promise<Record<string, FSRSState>> {
-  if (!supabase || !user_id || !question_ids.length || isSchemaSkipActive()) return {};
+  if (!supabase || !user_id || !question_ids.length || isSchemaSkipActive() || isDevUser(user_id))
+    return {};
 
   // Latest attempt per question (ordered desc → take first per question_id)
   const { data, error } = await supabase
