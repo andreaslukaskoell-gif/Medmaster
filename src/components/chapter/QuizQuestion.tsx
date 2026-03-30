@@ -116,9 +116,31 @@ export const QuizQuestion = React.memo(function QuizQuestion({
             <span className="shrink-0 text-sm font-medium text-[var(--muted)]">
               {questionNumber}.
             </span>
-            <p className="text-sm font-semibold text-[var(--text-primary)] leading-relaxed flex-1">
-              {stripLatex(question.question)}
-            </p>
+            <div className="text-sm font-semibold text-[var(--text-primary)] leading-relaxed flex-1">
+              {(() => {
+                const text = stripLatex(question.question);
+                // Detect numbered statements (e.g. "1. ... 2. ... 3. ...") and render as list
+                const parts = text.split(/(?=\s*\d+\.\s)/);
+                if (parts.length >= 3 && /\d+\.\s/.test(parts[1])) {
+                  return (
+                    <>
+                      <p className="mb-2">{parts[0].trim()}</p>
+                      <ol className="list-none space-y-1.5 font-normal text-[var(--text-secondary)]">
+                        {parts.slice(1).map((part, i) => (
+                          <li key={i} className="flex gap-2">
+                            <span className="font-bold text-[var(--text-primary)] shrink-0">
+                              {i + 1}.
+                            </span>
+                            <span>{part.replace(/^\d+\.\s*/, "").trim()}</span>
+                          </li>
+                        ))}
+                      </ol>
+                    </>
+                  );
+                }
+                return <p>{text}</p>;
+              })()}
+            </div>
           </div>
 
           {/* Options: Sofort-Check (Grün/Rot), Lock-In nach Klick */}
@@ -176,61 +198,61 @@ export const QuizQuestion = React.memo(function QuizQuestion({
 
         {/* Smart Reveal: Erklärung und Merksatz erst nach Beantwortung, weiche Transition */}
         <div aria-live="polite" aria-atomic="true">
-        {isAnswered && (
-          <motion.div
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
-            className={`ml-0 sm:ml-6 mt-4 p-4 rounded-lg border-l-2 ${
-              isCorrect
-                ? "border-emerald-400 dark:border-emerald-600"
-                : "border-red-400 dark:border-red-600"
-            }`}
-          >
-            <div className="flex items-start gap-3">
-              {isCorrect ? (
-                <CheckCircle2 className="w-6 h-6 text-green-600 dark:text-green-400 shrink-0 mt-0.5" />
-              ) : (
-                <XCircle className="w-6 h-6 text-red-600 dark:text-red-400 shrink-0 mt-0.5" />
-              )}
-              <div className="flex-1 min-w-0">
-                <p
-                  className={`font-bold text-sm mb-2 ${
-                    isCorrect
-                      ? "text-green-800 dark:text-green-200"
-                      : "text-red-800 dark:text-red-200"
-                  }`}
-                >
-                  {isCorrect ? "Richtig" : "Leider falsch"}
-                </p>
-                {isCorrect && (
-                  <>
-                    <p className="text-sm text-[var(--text-primary)] leading-relaxed">
-                      {stripMarkdownAsterisks(explanation)}
-                    </p>
-                    {merksatz && (
-                      <p className="text-sm mt-2 pt-2 border-t border-green-200 dark:border-green-800 text-green-800 dark:text-green-200 italic">
-                        {merksatz}
-                      </p>
-                    )}
-                  </>
+          {isAnswered && (
+            <motion.div
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+              className={`ml-0 sm:ml-6 mt-4 p-4 rounded-lg border-l-2 ${
+                isCorrect
+                  ? "border-emerald-400 dark:border-emerald-600"
+                  : "border-red-400 dark:border-red-600"
+              }`}
+            >
+              <div className="flex items-start gap-3">
+                {isCorrect ? (
+                  <CheckCircle2 className="w-6 h-6 text-green-600 dark:text-green-400 shrink-0 mt-0.5" />
+                ) : (
+                  <XCircle className="w-6 h-6 text-red-600 dark:text-red-400 shrink-0 mt-0.5" />
                 )}
-                {isWrong && (
-                  <>
-                    <p className="text-sm text-[var(--text-primary)] leading-relaxed">
-                      {stripMarkdownAsterisks(explanation)}
-                    </p>
-                    {merksatz && (
-                      <p className="text-sm mt-2 pt-2 border-t border-red-200 dark:border-red-800 text-red-800 dark:text-red-200 italic">
-                        {merksatz}
+                <div className="flex-1 min-w-0">
+                  <p
+                    className={`font-bold text-sm mb-2 ${
+                      isCorrect
+                        ? "text-green-800 dark:text-green-200"
+                        : "text-red-800 dark:text-red-200"
+                    }`}
+                  >
+                    {isCorrect ? "Richtig" : "Leider falsch"}
+                  </p>
+                  {isCorrect && (
+                    <>
+                      <p className="text-sm text-[var(--text-primary)] leading-relaxed">
+                        {stripMarkdownAsterisks(explanation)}
                       </p>
-                    )}
-                  </>
-                )}
+                      {merksatz && (
+                        <p className="text-sm mt-2 pt-2 border-t border-green-200 dark:border-green-800 text-green-800 dark:text-green-200 italic">
+                          {merksatz}
+                        </p>
+                      )}
+                    </>
+                  )}
+                  {isWrong && (
+                    <>
+                      <p className="text-sm text-[var(--text-primary)] leading-relaxed">
+                        {stripMarkdownAsterisks(explanation)}
+                      </p>
+                      {merksatz && (
+                        <p className="text-sm mt-2 pt-2 border-t border-red-200 dark:border-red-800 text-red-800 dark:text-red-200 italic">
+                          {merksatz}
+                        </p>
+                      )}
+                    </>
+                  )}
+                </div>
               </div>
-            </div>
-          </motion.div>
-        )}
+            </motion.div>
+          )}
         </div>
       </motion.div>
     </>
