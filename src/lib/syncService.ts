@@ -19,9 +19,13 @@ function isSchemaMissingError(err: unknown): boolean {
     err && typeof err === "object" && "code" in err ? String((err as { code: string }).code) : "";
   return (
     code === "PGRST301" ||
+    code === "PGRST204" || // column not found
+    code === "42703" || // PostgreSQL: undefined column
     msg.includes("404") ||
     msg.includes("relation") ||
-    msg.includes("does not exist")
+    msg.includes("does not exist") ||
+    msg.includes("column") ||
+    msg.includes("Could not find")
   );
 }
 

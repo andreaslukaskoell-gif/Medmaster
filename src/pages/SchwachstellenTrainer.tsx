@@ -1,4 +1,6 @@
 import { useState, useMemo, useEffect } from "react";
+import { usePermissions } from "@/hooks/usePermissions";
+import { Paywall } from "@/components/ui/paywall";
 import { useSearchParams, useNavigate } from "react-router-dom";
 import {
   Target,
@@ -96,6 +98,7 @@ function getQuestionsForStichwort(stichwortId: string, count = 10) {
 
 export default function SchwachstellenTrainer() {
   usePageTitle("Schwachstellen-Trainer");
+  const { isLocked: isFeatureLocked } = usePermissions();
   const [mode, setMode] = useState<Mode>("overview");
   const [focusStichwortId, setFocusStichwortId] = useState<string | null>(null);
   const [quizQuestions, setQuizQuestions] = useState<typeof allBmsQuestions>([]);
@@ -408,6 +411,23 @@ export default function SchwachstellenTrainer() {
 
   const totalPracticed = Object.keys(profile.stichwortStats).length;
   const totalStichworte = alleStichworteListe.length;
+
+  if (isFeatureLocked("fortschritt")) {
+    return (
+      <div className="max-w-3xl mx-auto p-6">
+        <Paywall feature="Schwachstellen-Trainer">
+          <div className="text-center py-12 space-y-3">
+            <h2 className="text-2xl font-bold text-[var(--text-primary)]">
+              Schwachstellen-Trainer
+            </h2>
+            <p className="text-[var(--muted)]">
+              Gezieltes Training deiner schwächsten Themen — einmalig €29,90.
+            </p>
+          </div>
+        </Paywall>
+      </div>
+    );
+  }
 
   return (
     <div className="max-w-4xl mx-auto space-y-6">

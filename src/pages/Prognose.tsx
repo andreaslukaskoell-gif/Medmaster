@@ -1,5 +1,7 @@
 import { useMemo } from "react";
 import type { ReactNode } from "react";
+import { usePermissions } from "@/hooks/usePermissions";
+import { Paywall } from "@/components/ui/paywall";
 import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
 import { Link } from "react-router-dom";
 import { useStore, type QuizResult } from "@/store/useStore";
@@ -673,6 +675,7 @@ function EmptyState() {
 
 export default function Prognose() {
   usePageTitle("Prognose");
+  const { isLocked } = usePermissions();
   const quizResults = useStore((s) => s.quizResults);
 
   const totalAnswered = useMemo(
@@ -732,6 +735,21 @@ export default function Prognose() {
       return { key: meta.key, label: meta.label, direction, dataPoints };
     });
   }, [quizResults]);
+
+  if (isLocked("fortschritt")) {
+    return (
+      <div className="max-w-3xl mx-auto p-6">
+        <Paywall feature="Prüfungstag-Prognose">
+          <div className="text-center py-12 space-y-3">
+            <h2 className="text-2xl font-bold text-[var(--text-primary)]">Prüfungstag-Prognose</h2>
+            <p className="text-[var(--muted)]">
+              Erfahre deine voraussichtliche MedAT-Punktzahl — einmalig €29,90.
+            </p>
+          </div>
+        </Paywall>
+      </div>
+    );
+  }
 
   if (totalAnswered < 20) return <EmptyState />;
 

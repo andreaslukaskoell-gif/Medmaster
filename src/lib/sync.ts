@@ -15,9 +15,13 @@ function isSchemaMissing(err: unknown): boolean {
     err && typeof err === "object" && "code" in err ? String((err as { code: string }).code) : "";
   return (
     code === "PGRST301" ||
+    code === "PGRST204" ||
+    code === "42703" ||
     msg.includes("404") ||
     msg.includes("relation") ||
-    msg.includes("does not exist")
+    msg.includes("does not exist") ||
+    msg.includes("column") ||
+    msg.includes("Could not find")
   );
 }
 
@@ -35,9 +39,13 @@ export async function pullFromSupabase(userId: string): Promise<void> {
       const msg = probe.error.message ?? "";
       if (
         code === "PGRST301" ||
+        code === "PGRST204" ||
+        code === "42703" ||
         String(code).includes("404") ||
         msg.includes("relation") ||
-        msg.includes("does not exist")
+        msg.includes("does not exist") ||
+        msg.includes("column") ||
+        msg.includes("Could not find")
       ) {
         setSchemaSkip();
         console.warn(
