@@ -8,8 +8,8 @@ import KFFStrategyView from "@/components/shared/KFFStrategyView";
 import { useStore } from "@/store/useStore";
 import { useAuth } from "@/hooks/useAuth";
 import { useViewportMode } from "@/hooks/useViewportMode";
-import { useUsageLimits } from "@/hooks/useUsageLimits";
-import { Paywall } from "@/components/ui/paywall";
+import { usePermissions } from "@/hooks/usePermissions";
+import { PaywallBanner } from "@/components/ui/paywall";
 import { trackEvent } from "@/lib/analyticsTracker";
 import { FirstTimeKffIntro } from "@/components/kff/FirstTimeKffIntro";
 import { ZahlenfolgenQuiz } from "@/components/kff/ZahlenfolgenQuiz";
@@ -59,7 +59,9 @@ export default function KFF() {
   const [view, setView] = useState<KffView>(initialView);
   const [strategyKey, setStrategyKey] = useState<StrategyKey>("zahlenfolgen");
   const { user, loading: isLoading } = useAuth();
-  const { kffExercisesExceeded, kffExercisesUsed, kffExercisesLimit } = useUsageLimits();
+  const { getLimit } = usePermissions();
+  const kffPerSubtest = getLimit("kff_per_subtest");
+  const kffGmLimit = getLimit("kff_gm");
   const kffDomainIntroSeen = useStore((s) => s.kffDomainIntroSeen);
   const markKffDomainIntroSeen = useStore((s) => s.markKffDomainIntroSeen);
   const quizResults = useStore((s) => s.quizResults ?? STABLE_EMPTY_RESULTS);
@@ -321,125 +323,129 @@ export default function KFF() {
         )}
       </div>
 
-      {kffExercisesExceeded && (
-        <Paywall feature="KFF-Übungen">
-          <div className="text-center py-12 space-y-3">
-            <h2 className="text-2xl font-bold text-[var(--text-primary)]">KFF-Übungen</h2>
-            <p className="text-[var(--muted)]">
-              Du hast {kffExercisesUsed} von {kffExercisesLimit} kostenlosen Übungen gemacht.
-              Schalte alle KFF-Übungen frei.
-            </p>
-          </div>
-        </Paywall>
-      )}
-
       {/* Module cards */}
       <div className={isMobile ? "space-y-3" : "space-y-4"}>
-        {modules.map((m) => (
-          <div key={m.id} className={`card-glass ${isMobile ? "p-3.5" : "p-5"}`}>
-            <div className="flex items-start gap-3">
-              {/* Color bar */}
-              <div
-                className="w-1 self-stretch rounded-full shrink-0"
-                style={{ background: m.color }}
-              />
+        {modules.map((m) => {
+          const limit = m.id === "gedaechtnis" ? kffGmLimit : kffPerSubtest;
+          const isSubtestLocked = limit !== null && m.stats.total >= limit;
+          return (
+            <div
+              key={m.id}
+              className={`card-glass ${isMobile ? "p-3.5" : "p-5"} ${isSubtestLocked ? "opacity-60" : ""}`}
+            >
+              <div className="flex items-start gap-3">
+                {/* Color bar */}
+                <div
+                  className="w-1 self-stretch rounded-full shrink-0"
+                  style={{ background: m.color }}
+                />
 
-              <div className="flex-1 min-w-0">
-                {/* Title row */}
-                <div className="flex items-center gap-2 mb-1 flex-wrap">
-                  <h3
-                    className={`font-semibold text-[var(--text-primary)] ${isMobile ? "text-sm" : ""}`}
-                  >
-                    {m.title}
-                  </h3>
-                  <span
-                    className="text-[10px] font-semibold px-2 py-0.5 rounded-full"
-                    style={{ background: `${m.color}15`, color: m.color }}
-                  >
-                    {m.badge}
-                  </span>
-                </div>
-
-                {/* Format explanation */}
-                <p
-                  className={`text-[var(--text-secondary)] mb-2 ${isMobile ? "text-xs leading-relaxed" : "text-sm"}`}
-                >
-                  {m.format}
-                </p>
-
-                {/* Example — hide on mobile for compactness */}
-                {!isMobile && (
-                  <div className="text-xs text-[var(--muted)] bg-[var(--background)] rounded-lg px-3 py-1.5 inline-block font-mono mb-3">
-                    {m.example}
+                <div className="flex-1 min-w-0">
+                  {/* Title row */}
+                  <div className="flex items-center gap-2 mb-1 flex-wrap">
+                    <h3
+                      className={`font-semibold text-[var(--text-primary)] ${isMobile ? "text-sm" : ""}`}
+                    >
+                      {m.title}
+                    </h3>
+                    <span
+                      className="text-[10px] font-semibold px-2 py-0.5 rounded-full"
+                      style={{ background: `${m.color}15`, color: m.color }}
+                    >
+                      {m.badge}
+                    </span>
                   </div>
-                )}
 
-                {/* Progress + Actions */}
-                {m.stats.total > 0 && (
-                  <div className="mb-3">
-                    <div className="flex items-center gap-3 text-xs text-[var(--muted)] mb-1.5">
-                      <span className="flex items-center gap-1">
-                        <TrendingUp className="w-3 h-3" />
-                        {m.stats.total} geübt
-                      </span>
-                      <span>·</span>
-                      <span
-                        className={
-                          m.stats.pct >= 70
-                            ? "text-emerald-500 font-semibold"
-                            : m.stats.pct >= 40
-                              ? "text-amber-500 font-semibold"
-                              : "text-red-400 font-semibold"
-                        }
-                      >
-                        {m.stats.pct}% richtig
-                      </span>
+                  {/* Format explanation */}
+                  <p
+                    className={`text-[var(--text-secondary)] mb-2 ${isMobile ? "text-xs leading-relaxed" : "text-sm"}`}
+                  >
+                    {m.format}
+                  </p>
+
+                  {/* Example — hide on mobile for compactness */}
+                  {!isMobile && (
+                    <div className="text-xs text-[var(--muted)] bg-[var(--background)] rounded-lg px-3 py-1.5 inline-block font-mono mb-3">
+                      {m.example}
                     </div>
-                    {/* Mini progress bar */}
-                    <div className="h-1.5 w-full rounded-full bg-[var(--border)]">
-                      <div
-                        className="h-full rounded-full transition-all"
-                        style={{
-                          width: `${Math.min(m.stats.pct, 100)}%`,
-                          background:
+                  )}
+
+                  {/* Progress + Actions */}
+                  {m.stats.total > 0 && (
+                    <div className="mb-3">
+                      <div className="flex items-center gap-3 text-xs text-[var(--muted)] mb-1.5">
+                        <span className="flex items-center gap-1">
+                          <TrendingUp className="w-3 h-3" />
+                          {m.stats.total} geübt
+                        </span>
+                        <span>·</span>
+                        <span
+                          className={
                             m.stats.pct >= 70
-                              ? "#10b981"
+                              ? "text-emerald-500 font-semibold"
                               : m.stats.pct >= 40
-                                ? "#f59e0b"
-                                : "#ef4444",
-                        }}
-                      />
+                                ? "text-amber-500 font-semibold"
+                                : "text-red-400 font-semibold"
+                          }
+                        >
+                          {m.stats.pct}% richtig
+                        </span>
+                      </div>
+                      {/* Mini progress bar */}
+                      <div className="h-1.5 w-full rounded-full bg-[var(--border)]">
+                        <div
+                          className="h-full rounded-full transition-all"
+                          style={{
+                            width: `${Math.min(m.stats.pct, 100)}%`,
+                            background:
+                              m.stats.pct >= 70
+                                ? "#10b981"
+                                : m.stats.pct >= 40
+                                  ? "#f59e0b"
+                                  : "#ef4444",
+                          }}
+                        />
+                      </div>
                     </div>
-                  </div>
-                )}
-                <div className="flex items-center gap-2">
-                  <Button
-                    variant="premium"
-                    size="sm"
-                    className={isMobile ? "flex-1 min-h-[44px]" : ""}
-                    onClick={() => {
-                      autoStartRef.current = false;
-                      setView(m.startView);
-                    }}
-                  >
-                    <Play className="w-4 h-4 mr-1" /> Üben
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className={isMobile ? "flex-1 min-h-[44px]" : ""}
-                    onClick={() => {
-                      setStrategyKey(m.strategyKey);
-                      setView("strategy");
-                    }}
-                  >
-                    <BookOpen className="w-4 h-4 mr-1" /> Strategie
-                  </Button>
+                  )}
+                  {isSubtestLocked ? (
+                    <PaywallBanner feature={`${m.title} freischalten`} />
+                  ) : (
+                    <div className="flex items-center gap-2">
+                      <Button
+                        variant="premium"
+                        size="sm"
+                        className={isMobile ? "flex-1 min-h-[44px]" : ""}
+                        onClick={() => {
+                          autoStartRef.current = false;
+                          setView(m.startView);
+                        }}
+                      >
+                        <Play className="w-4 h-4 mr-1" /> Üben
+                        {limit !== null && (
+                          <span className="ml-1 text-xs opacity-70">
+                            ({m.stats.total}/{limit})
+                          </span>
+                        )}
+                      </Button>
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className={isMobile ? "flex-1 min-h-[44px]" : ""}
+                        onClick={() => {
+                          setStrategyKey(m.strategyKey);
+                          setView("strategy");
+                        }}
+                      >
+                        <BookOpen className="w-4 h-4 mr-1" /> Strategie
+                      </Button>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
 
       {/* Stats section — collapsible, below subtest cards */}

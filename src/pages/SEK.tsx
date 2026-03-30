@@ -18,8 +18,8 @@ import { Badge } from "@/components/ui/badge";
 import { PageEmpty } from "@/components/ui/page-states";
 import { FloatingQuestionCounter } from "@/components/ui/FloatingQuestionCounter";
 import { usePageTitle } from "@/hooks/usePageTitle";
-import { useUsageLimits } from "@/hooks/useUsageLimits";
-import { Paywall } from "@/components/ui/paywall";
+import { usePermissions } from "@/hooks/usePermissions";
+import { PaywallBanner } from "@/components/ui/paywall";
 import StrategyGuideView from "@/components/shared/StrategyGuideView";
 import { sekStrategyGuide } from "@/data/sekData";
 import { OfficialInstructionCard } from "@/components/shared/OfficialInstructionCard";
@@ -62,7 +62,8 @@ function shuffle<T>(arr: T[]): T[] {
 export default function SEK() {
   usePageTitle("SEK – Sozial-emotionale Kompetenzen");
   const { isMobile } = useViewportMode();
-  const { sekSituationsExceeded, sekSituationsUsed, sekSituationsLimit } = useUsageLimits();
+  const { getLimit } = usePermissions();
+  const sekPerSubtest = getLimit("sek_per_subtest");
   const location = useLocation();
   const dailyPlanSek = location.state?.dailyPlanSek as
     | { domain: string; count: number; label: string }[]
@@ -214,68 +215,78 @@ export default function SEK() {
         )}
       </div>
 
-      {sekSituationsExceeded && (
-        <Paywall feature="SEK-Aufgaben">
-          <div className="text-center py-12 space-y-3">
-            <h2 className="text-2xl font-bold text-[var(--text-primary)]">SEK-Aufgaben</h2>
-            <p className="text-[var(--muted)]">
-              Du hast {sekSituationsUsed} von {sekSituationsLimit} kostenlosen Aufgaben bearbeitet.
-              Schalte alle 230+ SEK-Aufgaben frei.
-            </p>
-          </div>
-        </Paywall>
-      )}
-
       {/* Subtest Cards */}
       <div className="card-glass divide-y divide-[var(--border)] overflow-hidden">
-        {subtests.map((s) => (
-          <div
-            key={s.id}
-            className={`${isMobile ? "flex flex-col gap-2 px-3 py-3" : "flex items-center gap-4 px-5 py-4"} hover:bg-[var(--accent)]/2 transition-colors group`}
-          >
-            <div className="flex items-center gap-3 min-w-0">
-              {/* Color accent */}
-              <div
-                className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0"
-                style={{ background: `${s.color}12` }}
-              >
-                <span className="text-sm font-bold" style={{ color: s.color }}>
-                  {s.abbr}
-                </span>
-              </div>
-
-              {/* Content */}
-              <div className="flex-1 min-w-0">
-                <div className="flex items-center gap-2 flex-wrap">
-                  <h3 className="font-semibold text-[var(--text-primary)]">{s.title}</h3>
-                  <span className="text-xs text-[var(--muted)]">{s.taskCount} Aufgaben</span>
-                  {s.stats.total > 0 && (
-                    <span
-                      className={`text-xs font-semibold ${
-                        s.stats.pct >= 70
-                          ? "text-emerald-500"
-                          : s.stats.pct >= 40
-                            ? "text-amber-500"
-                            : "text-red-400"
-                      }`}
-                    >
-                      {s.stats.pct}%
-                    </span>
-                  )}
+        {subtests.map((s) => {
+          const isSubtestLocked = sekPerSubtest !== null && s.stats.total >= sekPerSubtest;
+          return (
+            <div
+              key={s.id}
+              className={`${isMobile ? "flex flex-col gap-2 px-3 py-3" : "flex items-center gap-4 px-5 py-4"} ${isSubtestLocked ? "opacity-60" : "hover:bg-[var(--accent)]/2"} transition-colors group`}
+            >
+              <div className="flex items-center gap-3 min-w-0">
+                {/* Color accent */}
+                <div
+                  className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0"
+                  style={{ background: `${s.color}12` }}
+                >
+                  <span className="text-sm font-bold" style={{ color: s.color }}>
+                    {s.abbr}
+                  </span>
                 </div>
-                <p className="text-sm text-[var(--muted)] mt-0.5 line-clamp-1">{s.format}</p>
+
+                {/* Content */}
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <h3 className="font-semibold text-[var(--text-primary)]">{s.title}</h3>
+                    <span className="text-xs text-[var(--muted)]">{s.taskCount} Aufgaben</span>
+                    {s.stats.total > 0 && (
+                      <span
+                        className={`text-xs font-semibold ${
+                          s.stats.pct >= 70
+                            ? "text-emerald-500"
+                            : s.stats.pct >= 40
+                              ? "text-amber-500"
+                              : "text-red-400"
+                        }`}
+                      >
+                        {s.stats.pct}%
+                      </span>
+                    )}
+                  </div>
+                  <p className="text-sm text-[var(--muted)] mt-0.5 line-clamp-1">{s.format}</p>
+                </div>
+              </div>
+
+              {/* Actions */}
+              <div className={`flex items-center gap-2 shrink-0 ${isMobile ? "ml-13" : ""}`}>
+                {isSubtestLocked ? (
+                  <PaywallBanner feature={`${s.title} freischalten`} />
+                ) : (
+                  <>
+                    <OfficialInstructionCard
+                      title={s.instructionTitle}
+                      instruction={s.instruction}
+                    />
+                    <Button
+                      variant="premium"
+                      size="sm"
+                      onClick={s.onStart}
+                      disabled={s.taskCount === 0}
+                    >
+                      <Play className="w-4 h-4 mr-1" /> Üben
+                      {sekPerSubtest !== null && (
+                        <span className="ml-1 text-xs opacity-70">
+                          ({s.stats.total}/{sekPerSubtest})
+                        </span>
+                      )}
+                    </Button>
+                  </>
+                )}
               </div>
             </div>
-
-            {/* Actions */}
-            <div className={`flex items-center gap-2 shrink-0 ${isMobile ? "ml-13" : ""}`}>
-              <OfficialInstructionCard title={s.instructionTitle} instruction={s.instruction} />
-              <Button variant="premium" size="sm" onClick={s.onStart} disabled={s.taskCount === 0}>
-                <Play className="w-4 h-4 mr-1" /> Üben
-              </Button>
-            </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );
