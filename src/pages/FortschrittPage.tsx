@@ -227,8 +227,10 @@ export default function FortschrittPage() {
     <div className="min-h-screen bg-[var(--dashboard-bg)]">
       <div className="max-w-6xl mx-auto px-4 py-8 pb-12">
         {/* ── Hero ──────────────────────────────────────── */}
-        <div className="hero-orbs text-center mb-10">
-          <h1 className="text-2xl font-bold text-[var(--text-primary)] mb-2">Fortschritt</h1>
+        <div className="hero-orbs text-center mb-10 py-8">
+          <h1 className="heading-glow text-2xl sm:text-[3rem] sm:leading-tight font-bold text-[var(--text-primary)] mb-2">
+            Fortschritt
+          </h1>
           <p className="text-[var(--muted)]">
             Dein analytisches Dashboard — Leistung, Trends und Schwachstellen auf einen Blick.
           </p>

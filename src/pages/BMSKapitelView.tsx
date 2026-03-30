@@ -172,7 +172,7 @@ export default function BMSKapitelView({
       </Button>
 
       {/* Chapter header — centered premium */}
-      <div className="text-center hero-orbs">
+      <div className="text-center hero-orbs py-8">
         <div className="flex items-center justify-center gap-3 mb-4">
           <span
             className="text-[11px] font-bold uppercase tracking-[0.15em] px-3 py-1 rounded-md"
@@ -190,7 +190,7 @@ export default function BMSKapitelView({
             </span>
           )}
         </div>
-        <h1 className="text-3xl font-bold text-[var(--text-primary)] tracking-tight mb-3">
+        <h1 className="heading-glow text-2xl sm:text-[3rem] sm:leading-tight font-bold text-[var(--text-primary)] tracking-tight mb-3">
           {kapitel.title}
         </h1>
         <div className="flex items-center justify-center gap-5 text-sm text-[var(--muted)]">

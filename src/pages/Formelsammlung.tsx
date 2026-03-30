@@ -226,8 +226,10 @@ export default function Formelsammlung() {
   return (
     <div className="max-w-5xl mx-auto space-y-6">
       {/* Header */}
-      <div className="hero-orbs text-center">
-        <h1 className="text-2xl font-bold text-[var(--text-primary)]">Formelsammlung</h1>
+      <div className="hero-orbs text-center py-8">
+        <h1 className="heading-glow text-2xl sm:text-[3rem] sm:leading-tight font-bold text-[var(--text-primary)]">
+          Formelsammlung
+        </h1>
         <p className="text-[var(--muted)] mt-1">
           {formeln.length} Formeln für Physik, Chemie und Mathematik
         </p>

@@ -141,8 +141,10 @@ export default function Einstellungen() {
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-8 space-y-8">
-      <div className="hero-orbs text-center">
-        <h1 className="text-2xl font-bold text-[var(--text-primary)]">Einstellungen</h1>
+      <div className="hero-orbs text-center py-8">
+        <h1 className="heading-glow text-2xl sm:text-[3rem] sm:leading-tight font-bold text-[var(--text-primary)]">
+          Einstellungen
+        </h1>
         <p className="text-sm text-[var(--muted)] mt-1">Konto, Darstellung, Lernen und mehr</p>
       </div>
 

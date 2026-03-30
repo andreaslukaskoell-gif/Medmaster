@@ -75,7 +75,7 @@ export function BMSSubjectView({
       </div>
 
       {/* Subject header — centered premium */}
-      <div className="text-center hero-orbs">
+      <div className="text-center hero-orbs py-8">
         <div className="flex items-center justify-center gap-3 mb-4">
           <span
             className="text-[11px] font-bold uppercase tracking-[0.15em] px-3 py-1 rounded-md"
@@ -87,7 +87,7 @@ export function BMSSubjectView({
             {subjectData.label}
           </span>
         </div>
-        <h1 className="text-4xl font-bold text-[var(--foreground)] tracking-tight mb-2">
+        <h1 className="text-2xl sm:text-[3rem] sm:leading-tight font-bold text-[var(--foreground)] tracking-tight mb-2 heading-glow">
           {subjectData.label}
         </h1>
         <p className="text-lg text-[var(--muted)]">

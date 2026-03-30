@@ -748,7 +748,7 @@ export default function BMSUnterkapitel({
 
       <ContentErrorBoundary context={uk.id}>
         {/* Header — premium centered */}
-        <header className="mb-10 mt-4 max-w-3xl mx-auto text-center hero-orbs">
+        <header className="mb-10 mt-4 max-w-3xl mx-auto text-center hero-orbs py-8">
           <div className="flex items-center justify-center gap-3 mb-6">
             <span
               className="text-[11px] font-bold uppercase tracking-[0.15em] px-3 py-1 rounded-md"
@@ -763,7 +763,7 @@ export default function BMSUnterkapitel({
               {kapitel.title} &middot; {unterkapitelIndex + 1} von {total}
             </span>
           </div>
-          <h1 className="text-2xl sm:text-[3rem] font-bold text-[var(--text-primary)] leading-[1.15] tracking-tight mb-5">
+          <h1 className="heading-glow text-2xl sm:text-[3rem] font-bold text-[var(--text-primary)] sm:leading-tight leading-[1.15] tracking-tight mb-5">
             {uk.title}
           </h1>
           <div className="flex items-center justify-center gap-5 text-sm text-[var(--muted)]">

@@ -44,22 +44,22 @@ export function BMSSubjectSelector({
       )}
 
       {/* Hero header */}
-      <div className="hero-gradient text-center py-8">
+      <div className="hero-orbs text-center py-8">
         <h1
-          className={`${isMobile ? "text-xl" : "text-[3rem] leading-tight"} font-bold text-white heading-glow relative z-10`}
+          className={`${isMobile ? "text-xl" : "text-[3rem] leading-tight"} font-bold text-[var(--text-primary)] heading-glow`}
         >
           Biomedizinische Grundlagen
         </h1>
-        <p className={`${isMobile ? "text-sm" : "text-lg"} text-white/80 mt-2 relative z-10`}>
+        <p className={`${isMobile ? "text-sm" : "text-lg"} text-[var(--text-secondary)] mt-2`}>
           {totalUK} Unterkapitel · 4 Fachgebiete
         </p>
         {totalUK > 0 && (
-          <div className="mt-4 max-w-sm mx-auto relative z-10">
-            <div className="flex items-center justify-between text-xs text-white/60 mb-1.5">
+          <div className="mt-4 max-w-sm mx-auto">
+            <div className="flex items-center justify-between text-xs text-[var(--muted)] mb-1.5">
               <span>
                 {completedUK} von {totalUK} abgeschlossen
               </span>
-              <span className="font-medium text-white/90">
+              <span className="font-medium text-[var(--text-primary)]">
                 {Math.round((completedUK / totalUK) * 100)}%
               </span>
             </div>

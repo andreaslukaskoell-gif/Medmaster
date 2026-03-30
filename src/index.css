@@ -1160,18 +1160,18 @@ body.dark-body .dashboard-page-bg {
   color: var(--text-primary);
 }
 
-/* ── Heading glow — visible text glow for premium headings ───────── */
+/* ── Heading glow — soft spotlight behind dark headings ───────────── */
 .heading-glow {
   text-shadow:
-    0 0 10px rgba(255, 255, 255, 0.8),
-    0 0 30px rgba(104, 128, 230, 0.6),
-    0 0 60px rgba(104, 128, 230, 0.3);
+    0 0 20px rgba(104, 128, 230, 0.35),
+    0 0 50px rgba(104, 128, 230, 0.20),
+    0 0 80px rgba(104, 128, 230, 0.10);
 }
 .dark .heading-glow {
   text-shadow:
-    0 0 10px rgba(255, 255, 255, 0.7),
-    0 0 30px rgba(91, 141, 239, 0.5),
-    0 0 60px rgba(91, 141, 239, 0.25);
+    0 0 20px rgba(91, 141, 239, 0.45),
+    0 0 50px rgba(91, 141, 239, 0.25),
+    0 0 80px rgba(91, 141, 239, 0.12);
 }
 
 /* ── Hero orbs — atmospheric focal glow for section identity ─────── *
@@ -1191,28 +1191,30 @@ body.dark-body .dashboard-page-bg {
   z-index: -1;
 }
 .hero-orbs::before {
-  width: 380px;
-  height: 300px;
-  background: var(--accent);
-  opacity: 0.10;
-  filter: blur(70px);
+  width: 500px;
+  height: 400px;
+  background: radial-gradient(circle, #6880e6, #4a5fd5 50%, transparent 70%);
+  opacity: 0.25;
+  filter: blur(60px);
   top: -80px;
-  left: -5%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .hero-orbs::after {
-  width: 240px;
-  height: 200px;
-  background: var(--accent-bio, #329556);
-  opacity: 0.07;
-  filter: blur(60px);
-  top: -30px;
-  right: 5%;
+  width: 350px;
+  height: 280px;
+  background: radial-gradient(circle, #47c97a, #329556 50%, transparent 70%);
+  opacity: 0.12;
+  filter: blur(50px);
+  top: -20px;
+  left: 50%;
+  transform: translateX(-30%);
 }
 .dark .hero-orbs::before {
-  opacity: 0.14;
+  opacity: 0.30;
 }
 .dark .hero-orbs::after {
-  opacity: 0.09;
+  opacity: 0.15;
 }
 
 /* ── Hero gradient — visible glow cloud behind page headings ─────── *
@@ -1443,10 +1445,21 @@ body.dark-body .dashboard-page-bg {
     box-shadow: none !important;
   }
 
-  /* Hero orbs: hide pseudo-elements */
+  /* Hero orbs/gradient: hide pseudo-elements */
   .hero-orbs::before,
-  .hero-orbs::after {
+  .hero-orbs::after,
+  .hero-gradient::before,
+  .hero-gradient::after {
     display: none !important;
+  }
+  .hero-gradient {
+    background: white !important;
+    border: 1px solid #ccc !important;
+  }
+  .hero-gradient h1,
+  .hero-gradient p,
+  .hero-gradient span {
+    color: black !important;
   }
 
   /* Clean typography: black on white */
@@ -1773,11 +1786,13 @@ a:focus-visible,
 }
 
 /* --- BMS hero header: smaller on mobile --- */
-.mobile-mode .hero-orbs {
+.mobile-mode .hero-orbs,
+.mobile-mode .hero-gradient {
   margin-bottom: 2rem !important;
   margin-top: 0.5rem !important;
 }
-.mobile-mode .hero-orbs .text-\[3rem\] {
+.mobile-mode .hero-orbs .text-\[3rem\],
+.mobile-mode .hero-gradient .text-\[3rem\] {
   font-size: 1.5rem !important;
   line-height: 2rem !important;
 }
