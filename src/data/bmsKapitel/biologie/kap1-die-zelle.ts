@@ -12,6 +12,7 @@ export const bioKap1: Kapitel = {
     {
       id: "bio-1-01",
       title: "Kennzeichen des Lebens und Systembiologie",
+      diagram: "cell-overview",
       imageUrl: "/images/wiki-animal-cell-de.svg",
       imageCaption:
         "Abb.: Aufbau einer tierischen Zelle mit Organellen (Wikimedia Commons, Public Domain)",
@@ -109,6 +110,8 @@ Das Virus-Beispiel zeigt: Die Kennzeichen des Lebens sind kein beliebiges Beiwer
 Leben ist hierarchisch aufgebaut — auf jeder Ebene entstehen neue Eigenschaften, die die Ebene darunter nicht hat:
 
 **Atom → Molekül → Organell → Zelle → Gewebe → Organ → Organsystem → Organismus**
+
+{{DIAGRAM}}
 
 Dieses Phänomen nennt sich **Emergenz** (von lat. *emergere* = hervorkommen): Das Ganze ist mehr als die Summe seiner Teile — die neuen Eigenschaften „kommen hervor”, wenn man die nächsthöhere Ebene betrachtet.
 - Keine einzelne Nervenzelle denkt — aber das Gehirn (Milliarden vernetzte Neuronen) denkt
@@ -379,6 +382,8 @@ Die **Endosymbiontentheorie** besagt: Vor ~1,5–2 Milliarden Jahren wurde ein �
 
 > **Merke:** Endosymbiontentheorie: 5 Belege = zirkuläre DNA, 70S-Ribosomen, Doppelmembran, binäre Fission, Antibiotika-Empfindlichkeit. mtDNA = maternale Vererbung.
 
+![Endosymbiose — Ursprung von Mitochondrien und Chloroplasten aus Prokaryoten](/images/wiki-endosymbiosis-de.svg)
+
 ---
 
 ## Archäen — die dritte Domäne des Lebens
@@ -640,6 +645,8 @@ Steroide (z. B. Cortisol, Vitamin D) sind lipophil und passieren die Membran ung
 
 ## Glykokalix: Zellerkennung und Schutz
 
+![Endomembransystem — rER, Golgi und Vesikelfluss im Überblick](/images/wiki-endomembrane-de.svg)
+
 Die **Glykokalix** (von griech. *glykys* = süß, *kalyx* = Hülle) ist die **Zuckerschicht** auf der Außenseite der Zellmembran — Kohlenhydratketten, die an **Glykoproteine** (Proteine mit angehängten Zuckern) und **Glykolipide** (Lipide mit angehängten Zuckern) gebunden sind. Funktionen: **Zellerkennung** (z. B. MHC/HLA (Gewebeverträglichkeitsantigene)), **Schutz** der Zelloberfläche (besonders bei Epithelien).
 
 Ein klinisch wichtiges Beispiel für Glykokalix-Strukturen sind die **ABO-Blutgruppenantigene** — das wird im Kapitel Blut/Immunologie ausführlich behandelt.`,
@@ -842,6 +849,7 @@ Ein klinisch wichtiges Beispiel für Glykokalix-Strukturen sind die **ABO-Blutgr
     {
       id: "bio-1-04",
       title: "Membrantransport — passiv und aktiv",
+      diagram: "membrane-transport",
       imageUrl: "/images/wiki-membrane-de.svg",
       imageCaption:
         "Abb.: Passiver und aktiver Membrantransport im Vergleich (Wikimedia Commons, CC BY-SA 4.0)",
@@ -904,6 +912,8 @@ Polare oder geladene Moleküle nutzen Proteine — weiterhin **entlang** des Gra
 **Hämolyse** = Zerfall der Zellmembran (z. B. Erythrozyt platzt); **Krenation** = Schrumpfung der Zelle durch Wasseraustritt. Isotone NaCl-Lösung: **0,9 %** (~290 mosmol/kg) = physiologische Kochsalzlösung (Infusion).
 
 > **Merke:** Osmose = Wassertransport zur höheren Osmolalität. Hypoton → Hämolyse; hyperton → Krenation.
+
+{{DIAGRAM}}
 
 ---
 
@@ -1214,6 +1224,8 @@ Mitochondrien liefern den Großteil des ATP — sind aber gleichzeitig der Todes
 
 > **Merke:** Cristae = innere Membran = Atmungskette. Eigene DNA + 70S-Ribosomen + Doppelmembran = Endosymbiont. Cytochrom c frei → Apoptose.
 
+![Mitochondrium — Struktur mit Cristae, Matrix und Doppelmembran](/images/wiki-mitochondrion-de.svg)
+
 ---
 
 ## 4. Lipidsynthese und Entgiftung: Glattes ER
@@ -1447,6 +1459,8 @@ Rund 3000 Moleküle passieren jede Kernpore pro Sekunde — ohne diese Schleusen
 **Klinisch:** HIV nutzt das NLS seines Preintegrationskomplexes (PIC) + Importin-α/β → Kerntransport → Integration ins Wirtsgenom. HIV-Integrase-Inhibitoren (Dolutegravir) blockieren diesen Schritt.
 
 > **Merke:** Kernporen: <40 kDa frei, >40 kDa nur mit NLS (Import) oder NES (Export). Äußere Kernmembran = Fortsatz des rauen ER. Kernlamina = Lamine (nicht Aktin!).
+
+![Zellkern — Kernhülle, Kernporen, Nucleolus und Chromatin im Überblick](/images/wiki-nucleus.svg)
 
 ---
 

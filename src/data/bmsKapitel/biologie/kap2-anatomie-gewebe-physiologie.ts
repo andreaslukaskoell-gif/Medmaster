@@ -13,6 +13,7 @@ export const bioKapAnatomieGewebe: Kapitel = {
       title: "Epithelgewebe — Formen, Schichtungen und Funktionen",
       imageUrl: "/images/bms/bio-epidermis-schichten.jpg",
       imageCaption: "Abb.: Schichten der Epidermis mit Zelltypen (OpenStax, CC BY 4.0)",
+      diagram: "epithelial-tissue",
       stichworte: [
         "Plattenepithel",
         "Zylinderepithel",
@@ -24,6 +25,8 @@ export const bioKapAnatomieGewebe: Kapitel = {
         "Apikale Polarität",
       ],
       content: `Gewebe bilden die Bausteine aller Organe — ihre Kenntnis ist für den BMS-Teil unverzichtbar. Dieses Kapitel behandelt die vier Grundgewebearten (Epithel-, Binde-, Muskel- und Nervengewebe) sowie die wichtigsten Organsysteme des Menschen.
+
+{{DIAGRAM}}
 
 ## Grundprinzip: Eigenschaften aller Epithelien
 
@@ -243,6 +246,7 @@ Sekretionsmechanismen exokriner Drüsen:
       imageUrl: "/images/wiki-bone-crosssection-de.svg",
       imageCaption:
         "Abb.: Knochenquerschnitt — Kompakta, Spongiosa, Periost, Markhöhle (Wikimedia Commons, CC BY-SA 4.0)",
+      diagram: "bone-structure",
       stichworte: [
         "Knochen",
         "Knorpel",
@@ -254,6 +258,8 @@ Sekretionsmechanismen exokriner Drüsen:
         "Straffes Bindegewebe",
       ],
       content: `Binde- und Stützgewebe geben dem Körper Form, Halt und mechanische Belastbarkeit — ihr gemeinsames Prinzip ist die Extrazelluläre Matrix.
+
+{{DIAGRAM}}
 
 ## Grundprinzip: Die Extrazelluläre Matrix (EZM)
 
@@ -491,6 +497,7 @@ Sehne, Knorpel und Knochen sehen völlig verschieden aus, bestehen aber alle aus
       imageUrl: "/images/wiki-sarcomere-de.svg",
       imageCaption:
         "Abb.: Sarkomer — Aufbau mit Aktin, Myosin, Z-Scheibe und M-Linie (Wikimedia Commons, CC BY-SA 3.0)",
+      diagram: "sarcomere",
       stichworte: [
         "Glatte Muskulatur",
         "Skelettmuskulatur",
@@ -520,6 +527,8 @@ Sehne, Knorpel und Knochen sehen völlig verschieden aus, bestehen aber alle aus
 > **Merke:** Herzmuskel = quergestreift (wie Skelett) + einkernig + Gap Junctions + kein Tetanus. Glatte Muskulatur = kein Troponin -> Calmodulin stattdessen.
 
 ---
+
+{{DIAGRAM}}
 
 ## Sarkomerstruktur: Grundprinzip der Querstreifung
 
@@ -750,6 +759,7 @@ Kein Troponin! Ca2+ bindet **Calmodulin** -> aktiviert **MLCK** (Myosin-Leichtke
       imageUrl: "/images/wiki-neuron-de.svg",
       imageCaption:
         "Abb.: Aufbau eines Neurons — Dendrit, Soma, Axon, Myelinscheide, Synapse (Wikimedia Commons, LadyofHats, Public Domain)",
+      diagram: "neuron-structure",
       stichworte: [
         "Neuronen",
         "Gliazellen",
@@ -778,6 +788,8 @@ Am präsynaptischen Endknöpfchen werden Neurotransmitter (z. B. Glutamat, GABA,
 > **Merke:** Dendriten = Input. Axon = Output. Axonhügel = Entscheidungsstelle (Schwelle ≈ −55 mV). Soma = Proteinsynthese.
 
 ---
+
+{{DIAGRAM}}
 
 ## Myelinisierung und saltatorische Erregungsleitung
 
@@ -3092,6 +3104,7 @@ Der Lymphknoten filtert Lymphe und initiiert Immunantworten. Seine zonale Archit
       imageUrl: "/images/wiki-respiratory-de.svg",
       imageCaption:
         "Abb.: Atmungssystem — Obere und untere Atemwege (Wikimedia Commons, LadyofHats, Public Domain)",
+      diagram: "respiratory-system",
       stichworte: [
         "Gasaustausch",
         "Alveolen",
@@ -3125,6 +3138,8 @@ Die Bronchien verzweigen sich über ~23 Generationen:
 > **Merke:** Trachea → Hauptbronchien → Lappen-/Segmentbronchien (Knorpel) → Bronchiolen (kein Knorpel, glatte Muskulatur) → Alveolen. Aspiration: rechter Unterlappen (steiler Bronchus). ~23 Generationen bis zur Alveole.
 
 ---
+
+{{DIAGRAM}}
 
 ## Surfactant und Alveolarstruktur
 
@@ -3373,6 +3388,7 @@ Das **Atemzentrum** liegt in der **Medulla oblongata** und im **Pons**. Es gener
       title: "Verdauungssystem",
       imageUrl: "/images/wiki-digestive-de.svg",
       imageCaption: "Abb.: Organe des Verdauungssystems im Überblick (OpenStax, CC BY 4.0)",
+      diagram: "digestive-system",
       stichworte: [
         "Magen",
         "Dünndarm",
@@ -3403,6 +3419,8 @@ Die Verdauung beginnt bereits in der **Mundhöhle**: Mechanische Zerkleinerung (
 > **Merke:** Mund (Amylase, mechanisch) → Ösophagus (Peristaltik) → Magen (HCl, Pepsin) → Duodenum (Galle + Pankreas) → Jejunum (Hauptresorption) → Ileum (B₁₂, Gallensalze) → Kolon (Wasser, Bakterien). Fett bremst die Magenentleerung.
 
 ---
+
+{{DIAGRAM}}
 
 ## Magen — Sekretion und Regulation
 
@@ -3606,6 +3624,7 @@ Die **Leber** (größte Drüse, ~1,5 kg) hat eine einzigartige doppelte Blutvers
       title: "Harnsystem",
       imageUrl: "/images/wiki-nephron-de.svg",
       imageCaption: "Abb.: Aufbau der Niere mit Rinde, Mark und Nierenbecken (OpenStax, CC BY 4.0)",
+      diagram: "nephron",
       stichworte: [
         "Niere",
         "Nephron",
@@ -3635,6 +3654,8 @@ Jede Niere enthält ca. **1 Million Nephrone**. Ein einzelnes Nephron besteht au
 > **Merke:** Das Nephron ist die funktionelle Einheit. Jede Niere hat ~1 Mio. Nephrone. Nur juxtamedulläre Nephrone reichen tief genug ins Mark, um den vollen osmotischen Gradienten (bis 1200 mOsm/L) aufzubauen.
 
 ---
+
+{{DIAGRAM}}
 
 ## Glomeruläre Filtration — der erste Schritt
 
@@ -3933,6 +3954,8 @@ Das erwachsene Skelett umfasst **206 Knochen**, eingeteilt in zwei funktionelle 
 - **Untere Extremität**: Femur (längster Knochen) → Patella + Tibia + Fibula → Tarsalknochen (7, inkl. Talus + Calcaneus) → Metatarsalia (5) → Phalangen (14)
 
 > **Merke:** **Axialskelett** = Schädel + Wirbelsäule + Thorax (Schutz von Gehirn, Rückenmark, Herz/Lunge). **Appendikulärskelett** = Extremitäten + Gürtel (Bewegung). Wirbelsäulenformel: **7-12-5-5-(3–5)**.
+
+![Knochen-Querschnitt — Kompakta, Spongiosa und Markhöhle](/images/wiki-bone-crosssection-de.svg)
 
 ---
 

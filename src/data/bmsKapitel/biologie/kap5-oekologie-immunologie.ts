@@ -14,6 +14,7 @@ export const bioKapOekologie: Kapitel = {
       title: "Ökologie: Grundbegriffe und Ebenen",
       imageUrl: "/images/wiki-ecological-pyramid-de.svg",
       imageCaption: "Abb.: Ökologische Pyramide — Trophieebenen (Wikimedia Commons, CC BY-SA 4.0)",
+      diagram: "ecosystem",
       stichworte: [
         "Ökologie",
         "Biotop",
@@ -34,6 +35,8 @@ export const bioKapOekologie: Kapitel = {
 Die Ökologie gliedert sich in Teilgebiete, die jeweils eine andere **Organisationsebene** betrachten — von der einzelnen Zelle bis zur gesamten Biosphäre.
 
 ---
+
+{{DIAGRAM}}
 
 ## Die ökologischen Ebenen: Vom Organismus zur Biosphäre
 
@@ -143,6 +146,7 @@ In der Ökologie unterscheidet man zwei Kategorien von Umweltfaktoren:
       imageUrl: "/images/bms/bio-toleranzkurve.svg",
       imageCaption:
         "Abb.: Toleranzkurve — Optimum, Pessimum, letale Grenzen und ökologische Amplitude",
+      diagram: "tolerance-curve",
       stichworte: [
         "Abiotische Faktoren",
         "Biotische Faktoren",
@@ -171,6 +175,8 @@ Jeder Organismus kann nur innerhalb bestimmter Grenzen eines Umweltfaktors über
 > **Merke:** Die Toleranzkurve zeigt: Optimum (maximale Leistung) → Pessimum (Stressbereich) → Todespunkt (letale Grenze). Die ökologische Amplitude ist die gesamte Toleranzbreite zwischen den beiden Todespunkten.
 
 ---
+
+{{DIAGRAM}}
 
 ## Menschliche Toleranzkurven: Klinische Anwendung
 
@@ -441,6 +447,8 @@ Jeder Krankheitserreger braucht bestimmte Bedingungen, um sich zu vermehren: den
 
 ---
 
+![Nahrungsnetz](/images/wiki-food-web-de.svg)
+
 ## Fundamentale und realisierte Nische (Hutchinson, 1957)
 
 G. Evelyn Hutchinson definierte die Nische als **n-dimensionalen Hyperraum**: Jede relevante Umweltvariable (Temperatur, Feuchtigkeit, pH, Nährstoffverfügbarkeit) bildet eine Achse; der Bereich, in dem eine Art überleben und sich fortpflanzen kann, spannt die **fundamentale Nische** auf. Das ist das theoretische Maximum — begrenzt nur durch die physiologischen Toleranzen des Organismus.
@@ -590,6 +598,7 @@ Bei Immunsuppression (z. B. HIV/AIDS mit CD4-T-Zell-Verlust, Chemotherapie-induz
       imageUrl: "/images/bms/bio-symbiose-typen.svg",
       imageCaption:
         "Abb.: Symbioseformen — Mutualismus, Kommensalismus, Parasitismus (Wikimedia Commons, CC BY-SA 4.0)",
+      diagram: "symbiosis-types",
       stichworte: [
         "Konkurrenz",
         "intraspezifisch",
@@ -618,6 +627,8 @@ Bei Immunsuppression (z. B. HIV/AIDS mit CD4-T-Zell-Verlust, Chemotherapie-induz
 > **Merke:** Intraspezifisch = innerhalb einer Art (stärkste Konkurrenz wegen identischer Nische). Interspezifisch = zwischen Arten. Interferenz = direkt, Ausbeutung = indirekt.
 
 ---
+
+{{DIAGRAM}}
 
 ## Konkurrenzausschlussprinzip (Gause, 1934)
 

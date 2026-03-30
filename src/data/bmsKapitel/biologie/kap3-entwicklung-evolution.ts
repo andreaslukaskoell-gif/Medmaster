@@ -26,6 +26,8 @@ export const bioKapEntwicklung: Kapitel = {
       ],
       content: `Von der Entstehung des Lebens über die Embryonalentwicklung bis zur Evolution des Menschen — dieses Kapitel deckt die biologischen Grundlagen ab, die im BMS regelmäßig geprüft werden.
 
+![Endosymbiose — Entstehung von Mitochondrien und Chloroplasten](/images/wiki-endosymbiosis-de.svg)
+
 ## Miller-Urey-Experiment — Abiotische Synthese organischer Moleküle
 
 Stanley Miller und Harold Urey simulierten 1953 die Bedingungen der frühen Erde: Sie mischten **CH₄ (Methan), NH₃ (Ammoniak), H₂ (Wasserstoff)** und **H₂O (Wasserdampf)** — die damals angenommenen Bestandteile der Uratmosphäre — in einem geschlossenen Kolben und erzeugten durch elektrische Entladungen Blitze. Nach wenigen Tagen enthielt die Lösung diverse **Aminosäuren** sowie weitere organische Verbindungen (Blausäure, Formaldehyd, Zuckervorstufen). Das Experiment bewies erstmals, dass organische Bausteine des Lebens **ohne Lebewesen** aus anorganischen Vorstufen entstehen können — **abiotische Synthese**.
@@ -236,6 +238,8 @@ Die 70S-Ribosomen der Mitochondrien erklären, warum manche Antibiotika mitochon
         "Fitness",
       ],
       content: `Wie entsteht die Vielfalt des Lebens? Darwins Evolutionstheorie erklärt, warum sich Arten verändern — und wie natürliche Selektion als treibende Kraft wirkt.
+
+![Evolution des Menschen — Stammbaum der Hominiden](/images/wiki-human-evolution-de.svg)
 
 ## Darwins 4 Kernprinzipien und Lamarck im Vergleich
 
@@ -496,6 +500,8 @@ Beide Formen können zu **sexuellem Dimorphismus** (Geschlechtsunterschied in Gr
         "Flaschenhalseffekt",
       ],
       content: `Was treibt Evolution konkret an? Vier Faktoren verändern die genetische Zusammensetzung von Populationen — und das Hardy-Weinberg-Gleichgewicht beschreibt den Idealfall ohne Evolution.
+
+![Hardy-Weinberg-Gleichgewicht — Genotypfrequenzen](/images/wiki-hardy-weinberg-de.svg)
 
 ## Die vier Evolutionsfaktoren
 
@@ -766,6 +772,8 @@ Der Gründereffekt erklärt die erhöhte Häufigkeit bestimmter genetischer Erkr
         "Teratogene",
       ],
       content: `Aus einer einzigen befruchteten Eizelle entsteht ein Organismus mit über 200 Zelltypen und einem funktionierenden Nervensystem. Dieses Kapitel gibt einen Überblick über die Stationen dieser Entwicklung — von der Befruchtung bis zur Fetalperiode. Die einzelnen Stationen werden in den folgenden Unterkapiteln im Detail behandelt.
+
+{{DIAGRAM:embryo-stages}}
 
 ---
 
@@ -1633,7 +1641,9 @@ Die reife **Eizelle** (n) nach Abschluss der Meiose II und die **Spermien** (n) 
       ],
       content: `## Ort und zeitliche Einordnung
 
-Nur eine von Millionen Samenzellen schafft es bis zur Eizelle — und der Ort dieses Treffens ist genau festgelegt. Die Befruchtung erfolgt in der **Ampulle des Eileiters** (Tuba uterina) — dem äußeren, weitesten Abschnitt. Die Eizelle wird bei der Ovulation aus dem Ovar freigesetzt, vom Eileiter aufgenommen und wandert langsam in Richtung Uterus; die Spermien bewegen sich vom Scheidenbereich durch Uterus in die Tuben. Das Zusammentreffen und die Fusion finden in der Ampulle statt. Eine Einnistung (Implantation) in der Tube führt zur **Eileiterschwangerschaft** (Extrauteringravidität, Schwangerschaft außerhalb der Gebärmutter) und ist lebensbedrohlich.
+Nur eine von Millionen Samenzellen schafft es bis zur Eizelle — und der Ort dieses Treffens ist genau festgelegt. Die Befruchtung erfolgt in der **Ampulle des Eileiters** (Tuba uterina) — dem äußeren, weitesten Abschnitt.
+
+![Spermatogenese und Befruchtung — Entwicklung der Spermien](/images/wiki-spermatogenesis-de.svg) Die Eizelle wird bei der Ovulation aus dem Ovar freigesetzt, vom Eileiter aufgenommen und wandert langsam in Richtung Uterus; die Spermien bewegen sich vom Scheidenbereich durch Uterus in die Tuben. Das Zusammentreffen und die Fusion finden in der Ampulle statt. Eine Einnistung (Implantation) in der Tube führt zur **Eileiterschwangerschaft** (Extrauteringravidität, Schwangerschaft außerhalb der Gebärmutter) und ist lebensbedrohlich.
 
 ---
 
@@ -1759,6 +1769,8 @@ Bevor ein Spermium die Eizelle durchdringen kann, muss es **kapazitiert** sein. 
       content: `## Von der Zygote zur Einnistung — vier Tage, drei Stadien
 
 Unmittelbar nach der Befruchtung beginnt die Zygote sich zu teilen. In den ersten fünf Tagen durchläuft der Keim drei charakteristische Stadien — Morula, Blastozyste und schließlich Implantation — während er durch den Eileiter in die Gebärmutter wandert. Keine dieser Teilungen ist normales Zellwachstum: Die Zellen werden bei jeder Runde kleiner, bis zwei klar unterschiedliche Zellpopulationen entstehen, die später zu Embryo und Plazenta werden.
+
+![Blastozyste — Trophoblast, Embryoblast und Blastozoel](/images/wiki-blastocyst-de.svg)
 
 ## Furchung — Teilungen ohne Wachstum
 
@@ -2286,6 +2298,8 @@ Wenn der **posteriore Neuroporus** nicht schließt, kann es zur **Spina bifida**
       ],
       content: `Nach der Gastrulation und Neurulation beginnt die Organogenese — die Phase, in der alle Organsysteme angelegt werden. Fehler in dieser kritischen Zeit können schwere Fehlbildungen verursachen.
 
+![Weibliches Fortpflanzungssystem — Anatomie und Entwicklung](/images/wiki-female-reproductive-de.svg)
+
 ## Embryonalperiode (Wochen 1–8) — Organogenese
 
 Die **Embryonalperiode** umfasst die ersten **8 Wochen** nach der Befruchtung. Sie endet nicht willkürlich, sondern an einem biologisch definierten Punkt: Am Ende von Woche 8 sind alle wesentlichen Organsysteme angelegt — danach beginnt die **Fetalperiode**, die sich auf Wachstum und Reifung konzentriert, nicht auf neue Strukturbildung.
@@ -2473,6 +2487,8 @@ Thalidomid (Contergan) verursachte in den 1960er Jahren Phokomelie (Flipper-arti
       content: `## Plazenta und Eihüllen — Lebenserhaltung im Mutterleib
 
 Ohne Plazenta kein Fetus: Sie versorgt den heranwachsenden Organismus neun Monate lang mit Sauerstoff und Nährstoffen, entsorgt Abfallprodukte, produziert Hormone und schützt vor mütterlicher Immunabwehr. Gleichzeitig verhindert sie, dass mütterliches und fetales Blut sich mischen — eine Grenzfläche, keine Verbindung.
+
+![Plazenta — Aufbau und Blutkreislauf zwischen Mutter und Kind](/images/wiki-placenta-de.svg)
 
 Die Plazenta geht aus dem **Trophoblasten** hervor — der äußeren Zellschicht der Blastozyste, die bei der Implantation in das Endometrium eindringt. Parallel dazu bilden sich zwei Eihüllen: das **Amnion** (innere Membran, umgibt das Fruchtwasser) und das **Chorion** (äußere Membran, grenzt an die Decidua). Beide entstammen dem fetalen Gewebe, nicht der Mutter.
 

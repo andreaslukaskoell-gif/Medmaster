@@ -17,6 +17,8 @@ export const bioKapGenetik: Kapitel = {
       stichworte: ["DNA", "Gen", "Chromosom", "Allel", "Locus", "Doppelhelix", "Erbinformation"],
       content: `Genetik bildet das Fundament der modernen Biologie — von der DNA-Struktur über Vererbungsregeln bis zur Gentechnik ist dieses Thema ein Schwerpunkt im BMS.
 
+{{DIAGRAM:dna-structure}}
+
 ## DNA: Träger der Erbinformation
 
 **DNA** (Desoxyribonukleinsäure) ist das Molekül, das die genetische Information speichert. Sie besteht aus zwei antiparallel gewundenen Strängen — der **Doppelhelix**. Jeder Strang ist eine Kette aus **Nukleotiden**: jedes Nukleotid enthält den Zucker Desoxyribose, ein Phosphat und eine von vier **Basen** — Adenin (A), Thymin (T), Guanin (G) oder Cytosin (C).
@@ -209,6 +211,8 @@ Ein **Chromosom** ist ein langer DNA-Faden, der zusammen mit **Histonen** (Verpa
         "46,XY",
       ],
       content: `Chromosomen sind die Verpackungseinheiten der DNA — ihr Aufbau bestimmt, wie Gene organisiert und bei der Zellteilung verteilt werden.
+
+{{DIAGRAM:chromosome-structure}}
 
 ## Aufbau eines Chromosoms
 
@@ -886,6 +890,8 @@ Nicht alle Merkmale folgen dem einfachen Mendel-Schema. Drei wichtige Phänomene
       content: `## Gleicher Genotyp, unterschiedlicher Phänotyp — warum?
 
 Zwei Menschen tragen dieselbe Mutation im BRCA1-Gen. Die eine erkrankt mit 40 an Brustkrebs, die andere bleibt ihr Leben lang gesund. Die Allel-Kombination (der **Genotyp**) ist identisch — das sichtbare Ergebnis (der **Phänotyp**) nicht. Zwischen Genotyp und Phänotyp liegen Dominanzverhältnisse, Wechselwirkungen zwischen Genen und Umwelteinflüsse. Dieses Kapitel zeigt, welche Mechanismen dafür sorgen, dass gleiche Gene zu verschiedenen Ergebnissen führen können.
+
+![Punnett-Quadrat](/images/wiki-punnett-square-de.svg)
 
 ---
 
@@ -1937,6 +1943,8 @@ Das Zentraldogma beschreibt den gerichteten Informationsfluss in biologischen Sy
 
 > **Merke:** DNA → (Transkription) → mRNA → (Translation) → Protein. Genexpression = Umsetzung der genetischen Information in ein Produkt. Die DNA bleibt als Originalspeicher im Kern erhalten.
 
+{{DIAGRAM:protein-synthesis}}
+
 ---
 
 ## Transkription — von der DNA zur mRNA
@@ -2543,6 +2551,8 @@ Epigenetische Markierungen werden bei der **Zellteilung** an Tochterzellen weite
 
 > **Merke:** Epigenetik = Steuerung der Genaktivität ohne Änderung der DNA-Sequenz. Mechanismen: DNA-Methylierung und Histonmodifikation. Potenziell reversibel und zelltypspezifisch.
 
+{{DIAGRAM:epigenetics}}
+
 ---
 
 ## DNA-Methylierung
@@ -2765,6 +2775,8 @@ Frauen haben zwei X-Chromosomen (XX), Männer nur eines (XY). Damit Frauen nicht
         "GVO",
       ],
       content: `Moderne Genetik beruht auf Methoden, die es erlauben, DNA zu kopieren, zu schneiden, zu lesen und gezielt zu verändern — die wichtigsten Werkzeuge im Überblick.
+
+{{DIAGRAM:pcr-cycle}}
 
 ## PCR — DNA millionenfach kopieren
 
