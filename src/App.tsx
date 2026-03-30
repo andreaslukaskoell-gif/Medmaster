@@ -153,13 +153,19 @@ function BMSQuizWrapper() {
   return <BMSQuiz subject={fach} onBack={() => navigate("/bms")} />;
 }
 
-/** `/` — LandingPage sofort zeigen, Redirect nur wenn definitiv eingeloggt. */
+/** `/` — Redirect authenticated users to dashboard, show LandingPage for visitors. */
 function RootRoute() {
   const { isAuthenticated, loading } = useAuth();
 
-  // Show LandingPage immediately — never block on auth loading.
-  // Only redirect to dashboard if we're sure user is authenticated.
-  if (!loading && isAuthenticated) {
+  if (loading) {
+    // Check localStorage for a session hint to avoid flashing the landing page
+    // for users who are very likely logged in.
+    const hasSession = !!localStorage.getItem("medmaster-storage");
+    if (hasSession) return <LoadingSpinner />;
+    // No session hint → show landing page immediately (no delay for new visitors)
+    return <LandingPage />;
+  }
+  if (isAuthenticated) {
     return <Navigate to="/dashboard" replace />;
   }
   return <LandingPage />;
