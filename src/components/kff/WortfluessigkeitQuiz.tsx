@@ -27,7 +27,7 @@ import {
   getLastCount,
   saveLastCount,
   shuffleSlice,
-  preferUnseen,
+  strictUnseen,
   enforceExactCount,
 } from "./kffHelpers";
 
@@ -112,16 +112,19 @@ export function WortflüssigkeitQuiz({
         seenWords.add(word);
         return true;
       });
-      setQuestions(
-        enforceExactCount(
-          preferUnseen(
-            uniqueByWord as (WordFluencyTask & { id: string })[],
-            questionCount,
-            seenIds
-          ),
-          questionCount
-        )
+      const { fresh, gap } = strictUnseen(
+        uniqueByWord as (WordFluencyTask & { id: string })[],
+        questionCount,
+        seenIds
       );
+      let final = fresh as WordFluencyTask[];
+      if (gap > 0) {
+        const gen = Array.from({ length: gap }, (_, i) =>
+          generateWordFluencyTask(([1, 2, 3] as const)[i % 3])
+        );
+        final = [...fresh, ...gen] as WordFluencyTask[];
+      }
+      setQuestions(enforceExactCount(final, questionCount));
       if (valid.length < raw.length && import.meta.env?.DEV) {
         logPoolWarning("wortflüssigkeit", valid.length, "Training");
       }
@@ -263,12 +266,19 @@ export function WortflüssigkeitQuiz({
                     ];
                   }
                   const seenIds = getKffSeenIdsForDomain("Wortfl");
-                  setQuestions(
-                    enforceExactCount(
-                      preferUnseen(valid as (WordFluencyTask & { id: string })[], count, seenIds),
-                      count
-                    )
+                  const { fresh: f2, gap: g2 } = strictUnseen(
+                    valid as (WordFluencyTask & { id: string })[],
+                    count,
+                    seenIds
                   );
+                  let final2 = f2 as WordFluencyTask[];
+                  if (g2 > 0) {
+                    const gen = Array.from({ length: g2 }, (_, i) =>
+                      generateWordFluencyTask(([1, 2, 3] as const)[i % 3])
+                    );
+                    final2 = [...f2, ...gen] as WordFluencyTask[];
+                  }
+                  setQuestions(enforceExactCount(final2, count));
                   setIndex(0);
                   setAnswers({});
                   setPhase("quiz");

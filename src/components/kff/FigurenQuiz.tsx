@@ -22,7 +22,6 @@ import {
   difficultyLabel,
   generateFigurenTrainingTask,
   SOLUTION_SHAPES,
-  polygonToPath,
   polygonToPathScaledToViewBox,
   layoutPiecesCompact,
   FIGURE_SVG_ASPECT_PROPS,
@@ -47,7 +46,7 @@ import {
   saveLastCount,
   shuffleSlice,
   balancedDifficultySession,
-  preferUnseen,
+  strictUnseen,
   enforceExactCount,
 } from "./kffHelpers";
 
@@ -116,138 +115,39 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
     saveLastCount("figuren", questionCount);
     setTrainingError(null);
     setTrainingLoading(true);
-    duplicateGuardClear(); // Fresh start — allow all shapes/cuts again
+    duplicateGuardClear();
     try {
-      const domain = "kff-figuren" as const;
-      const rating = skillRating ?? 500;
-      const tasks = await getTasksForUserWithWeakness(
-        domain,
-        rating,
-        Math.min(questionCount, 150),
-        150,
-        getKffFailedIdsForDomain(domain)
-      );
-      const list = tasks.map((t) => taskToData<FigureAssembleTask>(t));
-      // Filter DB tasks: must pass validator AND have solutionOverlay (reject stale data)
-      let valid = filterValidFigurenTasks(list).filter(
-        (t) => t.solutionOverlay && t.solutionOverlay.lines.length >= 1
-      );
       const target = Math.min(questionCount, 150);
-      // Supplement: always generate to fill missing shapes, even if DB has enough total tasks
-      const dbShapes = new Set(valid.map((t) => t.targetShapeId).filter(Boolean));
-      const missingShapes = SOLUTION_SHAPES.filter((s) => !dbShapes.has(s));
-      if (valid.length < target || missingShapes.length > 0) {
-        duplicateGuardClear(); // Clear — pool filling may have consumed guard slots
-        const levels: ["easy", "medium", "hard"] = ["easy", "medium", "hard"];
-        const seed = Date.now() * 1000 + Math.floor(Math.random() * 999);
-        const generated: FigureAssembleTask[] = [];
-        const numShapes = SOLUTION_SHAPES.length;
-        // Generate enough for missing shapes even if DB has most tasks
-        const needed = Math.max(target - valid.length, missingShapes.length * 7);
-        // Shuffled shape order per session — each cycle visits all shapes in random order
-        const shapeOrder: number[] = [];
-        const totalGen = Math.max((needed + 10) * 3, numShapes * 15);
-        const fullCycles = Math.ceil(totalGen / numShapes);
-        for (let c = 0; c < fullCycles; c++) {
-          const cycle = Array.from({ length: numShapes }, (_, k) => k);
-          for (let j = cycle.length - 1; j > 0; j--) {
-            const r = Math.floor(Math.random() * (j + 1));
-            [cycle[j], cycle[r]] = [cycle[r], cycle[j]];
-          }
-          shapeOrder.push(...cycle);
-        }
-        for (let i = 0; i < totalGen; i++) {
-          try {
-            const requestedShape = SOLUTION_SHAPES[shapeOrder[i] % numShapes];
-            const t = generateFigurenTrainingTask(
-              difficultyForIndex(i, levels),
-              seed + i * 7919,
-              shapeOrder[i]
-            );
-            if (t && t.targetShapeId === requestedShape) generated.push(t);
-          } catch {
-            /* skip failed generation */
-          }
-        }
-        // Quality filter: reject degenerate tasks only
-        const qualityFiltered = generated.filter((t) => {
-          if (t.pieces.length < 2) return false;
-          const areas = t.pieces.map((p) => polygonArea(p));
-          const maxA = Math.max(...areas);
-          const minA = Math.min(...areas);
-          const ratio = minA > 0 ? maxA / minA : 999;
-          if (t.pieces.length === 2 && ratio < 1.8) return false;
-          if (t.pieces.length >= 3 && ratio < 1.5) return false;
-          if (ratio > 10) return false;
-          return true;
-        });
-        // Balance: cap each shape to maxPerShape to prevent dominance
-        const validGen = filterValidFigurenTasks(qualityFiltered);
-        const maxPerShape = Math.max(2, Math.ceil((needed + 5) / numShapes));
-        const shapeCounts: Record<string, number> = {};
-        const balanced: FigureAssembleTask[] = [];
-        for (const t of validGen) {
-          const s = t.targetShapeId ?? "unknown";
-          shapeCounts[s] = (shapeCounts[s] ?? 0) + 1;
-          if (shapeCounts[s]! <= maxPerShape) balanced.push(t);
-        }
-        // Fill remaining with least-represented shapes only (prevent dominant shapes flooding)
-        if (balanced.length < needed) {
-          const remaining = validGen.filter((t) => !balanced.includes(t));
-          // Sort by shape frequency (prefer underrepresented shapes)
-          remaining.sort((a, b) => {
-            const ca = shapeCounts[a.targetShapeId ?? ""] ?? 0;
-            const cb = shapeCounts[b.targetShapeId ?? ""] ?? 0;
-            return ca - cb;
-          });
-          for (const t of remaining) {
-            balanced.push(t);
-            if (balanced.length >= needed + 5) break;
-          }
-        }
-        valid = [...valid, ...balanced];
-        if (valid.length === 0) valid = shuffleSlice(filterValidFigurenTasks([]), target);
-        if (import.meta.env?.DEV) logPoolWarning("figuren", valid.length, "Supplement (generiert)");
-      }
-      // Balance shape distribution across ALL tasks (DB + generated) to prevent DB bias
-      {
-        // Prefer unique shapes: allow repeat only when target > numShapes
-        const finalMaxPerShape = Math.max(1, Math.ceil(target / SOLUTION_SHAPES.length));
-        const finalShapeCounts: Record<string, number> = {};
-        const finalBalanced: FigureAssembleTask[] = [];
-        // Shuffle to avoid always picking DB tasks first
-        const shuffled = [...valid].sort(() => Math.random() - 0.5);
-        for (const t of shuffled) {
-          const s = t.targetShapeId ?? "unknown";
-          finalShapeCounts[s] = (finalShapeCounts[s] ?? 0) + 1;
-          if (finalShapeCounts[s]! <= finalMaxPerShape) finalBalanced.push(t);
-        }
-        // Fill remaining with least-represented shapes
-        if (finalBalanced.length < target) {
-          const rest = shuffled.filter((t) => !finalBalanced.includes(t));
-          rest.sort((a, b) => {
-            const ca = finalShapeCounts[a.targetShapeId ?? ""] ?? 0;
-            const cb = finalShapeCounts[b.targetShapeId ?? ""] ?? 0;
-            return ca - cb;
-          });
-          for (const t of rest) {
-            finalBalanced.push(t);
-            if (finalBalanced.length >= target + 5) break;
-          }
-        }
-        valid = finalBalanced;
+      // Primary: static pool (instant, no network)
+      let valid: FigureAssembleTask[];
+      try {
+        const { FIGUREN_POOL_1000 } = await import("@/data/kffFiguren1000");
+        valid = filterValidFigurenTasks(FIGUREN_POOL_1000);
+      } catch {
+        // Pool not generated yet — generate on-the-fly
+        valid = [];
       }
       const seenIds = getKffSeenIdsForDomain("Figuren");
-      const fresh = preferUnseen(valid, target, seenIds);
+      const { fresh, gap } = strictUnseen(valid, target, seenIds);
+      let final = fresh;
+      if (gap > 0) {
+        const gen: FigureAssembleTask[] = [];
+        for (let i = 0; i < (gap + 5) * 3; i++) {
+          const t = generateFigurenTrainingTask(
+            (["easy", "medium", "hard"] as const)[i % 3],
+            Date.now() + i * 7919
+          );
+          if (t) gen.push(t);
+          if (gen.length >= gap) break;
+        }
+        final = [...fresh, ...gen];
+      }
       setQuestions(
         enforceExactCount(
-          balancedDifficultySession(fresh, target, (t) => t.difficulty),
+          balancedDifficultySession(final, target, (t) => t.difficulty),
           target
         )
       );
-      if (valid.length < list.length && import.meta.env?.DEV) {
-        logPoolWarning("figuren", valid.length, "Training");
-      }
       setIndex(0);
       setAnswers({});
       setTimeLeft(90);
@@ -475,7 +375,10 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
               <label className="text-sm font-medium text-[var(--text-primary)] mb-2 block">
                 Anzahl Aufgaben
               </label>
-              <div className={`grid ${isMobile ? "grid-cols-3" : "grid-cols-6"} gap-2`} data-mobile-keep>
+              <div
+                className={`grid ${isMobile ? "grid-cols-3" : "grid-cols-6"} gap-2`}
+                data-mobile-keep
+              >
                 {[10, 25, 50, 75, 100, 150].map((c) => (
                   <button
                     key={c}
@@ -605,23 +508,52 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
                       <p className="text-xs font-medium text-[var(--muted)] mb-1 uppercase tracking-wider">
                         {getShapeDisplayName(q.targetShapeId)}
                       </p>
-                      <svg
-                        viewBox="0 0 200 200"
-                        {...FIGURE_SVG_ASPECT_PROPS}
-                        className="w-28 h-28 sm:w-36 sm:h-36"
-                      >
-                        {/* Show original (unrotated) pieces in distinct colors — geometrically exact */}
-                        {(q.originalPieces ?? q.pieces).map((piece, pi) => (
-                          <path
-                            key={`piece-${pi}`}
-                            d={polygonToPath(piece)}
-                            fill={PIECE_FILLS[pi % PIECE_FILLS.length]}
-                            {...FZ_STROKE}
-                            opacity={0.85}
-                          />
-                        ))}
-                        <path d={polygonToPath(q.target)} fill="none" {...FZ_STROKE} />
-                      </svg>
+                      {(() => {
+                        // Scale pieces + target into the same 200x200 viewBox
+                        const allPts = [
+                          ...q.target.points,
+                          ...(q.originalPieces ?? q.pieces).flatMap((p) => p.points),
+                        ];
+                        const xs = allPts.map((p) => p.x);
+                        const ys = allPts.map((p) => p.y);
+                        const minX = Math.min(...xs);
+                        const minY = Math.min(...ys);
+                        const maxX = Math.max(...xs);
+                        const maxY = Math.max(...ys);
+                        const w = maxX - minX || 1;
+                        const h = maxY - minY || 1;
+                        const margin = 20;
+                        const scale = (200 - margin * 2) / Math.max(w, h);
+                        const tx = 100 - ((minX + maxX) / 2) * scale;
+                        const ty = 100 - ((minY + maxY) / 2) * scale;
+                        const scaledPath = (poly: typeof q.target) =>
+                          "M " +
+                          poly.points
+                            .map(
+                              (p) =>
+                                `${(p.x * scale + tx).toFixed(2)} ${(p.y * scale + ty).toFixed(2)}`
+                            )
+                            .join(" L ") +
+                          " Z";
+                        return (
+                          <svg
+                            viewBox="0 0 200 200"
+                            {...FIGURE_SVG_ASPECT_PROPS}
+                            className="w-28 h-28 sm:w-36 sm:h-36"
+                          >
+                            {(q.originalPieces ?? q.pieces).map((piece, pi) => (
+                              <path
+                                key={`piece-${pi}`}
+                                d={scaledPath(piece)}
+                                fill={PIECE_FILLS[pi % PIECE_FILLS.length]}
+                                {...FZ_STROKE}
+                                opacity={0.85}
+                              />
+                            ))}
+                            <path d={scaledPath(q.target)} fill="none" {...FZ_STROKE} />
+                          </svg>
+                        );
+                      })()}
                     </div>
                   </div>
                   <p className="text-[11px] text-[var(--muted)] mt-1.5 ml-1">
@@ -840,7 +772,12 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
       </div>
 
       {/* Optionen A–E — horizontal in einer Reihe (wie offizielles PDF) */}
-      <div className={`grid ${isMobile ? "grid-cols-3 gap-2" : "grid-cols-5 gap-3"} mt-4`} data-mobile-keep role="radiogroup" aria-label="Antwortmöglichkeiten">
+      <div
+        className={`grid ${isMobile ? "grid-cols-3 gap-2" : "grid-cols-5 gap-3"} mt-4`}
+        data-mobile-keep
+        role="radiogroup"
+        aria-label="Antwortmöglichkeiten"
+      >
         {fzQ.options.map((opt, optIdx) => {
           const label = FZ_OPTION_LABELS[optIdx];
           const selected = answers[fzQ.id] === label;

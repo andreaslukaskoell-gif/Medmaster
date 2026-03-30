@@ -27,7 +27,7 @@ import {
   getLastCount,
   saveLastCount,
   shuffleSlice,
-  preferUnseen,
+  strictUnseen,
   enforceExactCount,
   TaskDbCountHint,
 } from "./kffHelpers";
@@ -76,69 +76,26 @@ export function ImplikationenQuiz({
     setTrainingError(null);
     setTrainingLoading(true);
     try {
-      const domain = "kff-implikationen" as const;
-      const rating = skillRating ?? 500;
-      const tasks = await getTasksForUserWithWeakness(
-        domain,
-        rating,
-        questionCount,
-        150,
-        getKffFailedIdsForDomain(domain)
-      );
-      const raw = tasks.map((t) => taskToData<ImplikationTask>(t));
-      let valid = filterValidImplikationTasks(raw);
-      if (valid.length < questionCount) {
-        // Supplement with generated tasks from the new syllogism-based generator
-        const needed = questionCount - valid.length;
-        const generatedSet = generateImplicationTaskSet(needed);
-        const existingIds = new Set(valid.map((t) => t.id));
-        const supplement = filterValidImplikationTasks(
-          generatedSet.filter((t) => !existingIds.has(t.id))
-        );
-        valid = [...valid, ...supplement];
-        if (import.meta.env?.DEV && supplement.length > 0)
-          logPoolWarning("implikationen", valid.length, "Supplement (generateImplicationTaskSet)");
-      }
-      if (valid.length < questionCount) {
-        // Legacy fallback: old generator from kffGenerators
-        const levels: [1, 2, 3] = [1, 2, 3];
-        const generated: ImplikationTask[] = [];
-        const existingIds = new Set(valid.map((t) => t.id));
-        for (let i = 0; i < questionCount - valid.length; i++) {
-          const t = generateImplicationTrainingTask(difficultyForIndex(i, levels));
-          t.id =
-            t.id ??
-            `imp-gen-${t.premise1?.slice(0, 20)}-${t.premise2?.slice(0, 20)}-${i}`.replace(
-              /\s+/g,
-              "_"
-            );
-          if (!existingIds.has(t.id)) {
-            existingIds.add(t.id);
-            generated.push(t);
-          }
-        }
-        valid = [...valid, ...filterValidImplikationTasks(generated)];
-        if (valid.length === 0) {
-          valid = shuffleSlice(filterValidImplikationTasks(implikationenTasks), questionCount);
-        }
-        if (import.meta.env?.DEV)
-          logPoolWarning("implikationen", valid.length, "Fallback (legacy generator)");
-      }
-      // Deduplicate by premise content (not just ID) to prevent identical tasks in same session
+      // Primary: static pool (instant, no network)
+      const { IMPLIKATIONEN_POOL } = await import("@/data/kffImplikationen1000");
+      const poolValid = filterValidImplikationTasks(IMPLIKATIONEN_POOL);
+      // Deduplicate by premise content
       const seenPremises = new Set<string>();
-      const uniqueByContent = valid.filter((t) => {
+      const uniqueByContent = poolValid.filter((t) => {
         const key = `${t.premise1}|${t.premise2}`;
         if (seenPremises.has(key)) return false;
         seenPremises.add(key);
         return true;
       });
       const seenIds = getKffSeenIdsForDomain("Implikationen");
-      setQuestions(
-        enforceExactCount(preferUnseen(uniqueByContent, questionCount, seenIds), questionCount)
-      );
-      if (valid.length < raw.length && import.meta.env?.DEV) {
-        logPoolWarning("implikationen", valid.length, "Training");
+      const { fresh, gap } = strictUnseen(uniqueByContent, questionCount, seenIds);
+      let final = fresh;
+      if (gap > 0) {
+        // Generator fallback for exhausted pool
+        const gen = Array.from({ length: gap }, () => generateImplicationTrainingTask(2));
+        final = [...fresh, ...gen];
       }
+      setQuestions(enforceExactCount(final, questionCount));
 
       setIndex(0);
       setAnswers({});
@@ -285,7 +242,15 @@ export function ImplikationenQuiz({
                     ];
                   }
                   const seenIds = getKffSeenIdsForDomain("Implikationen");
-                  setQuestions(enforceExactCount(preferUnseen(valid, count, seenIds), count));
+                  const { fresh: f2, gap: g2 } = strictUnseen(valid, count, seenIds);
+                  let final2 = f2;
+                  if (g2 > 0) {
+                    const gen = Array.from({ length: g2 }, () =>
+                      generateImplicationTrainingTask(2)
+                    );
+                    final2 = [...f2, ...gen];
+                  }
+                  setQuestions(enforceExactCount(final2, count));
 
                   setIndex(0);
                   setAnswers({});

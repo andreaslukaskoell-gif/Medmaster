@@ -22,7 +22,7 @@ import {
   getLastCount,
   saveLastCount,
   shuffleSlice,
-  preferUnseen,
+  strictUnseen,
   enforceExactCount,
   TaskDbCountHint,
 } from "./kffHelpers";
@@ -93,27 +93,18 @@ export function ZahlenfolgenQuiz({
     setTrainingError(null);
     setTrainingLoading(true);
     try {
-      const domain = "kff-zahlenfolgen" as const;
-      const rating = skillRating ?? 500;
-      // Request extra tasks to compensate for validation rejections
-      const requestCount = Math.ceil(questionCount * 1.3);
-      const tasks = await getTasksForUserWithWeakness(
-        domain,
-        rating,
-        requestCount,
-        150,
-        getKffFailedIdsForDomain(domain)
-      );
-      const raw = tasks.map((t) => taskToData<SequenceTask>(t));
-      let valid = filterValidSequenceTasks(raw);
-      if (valid.length === 0) {
-        const generated = generateSequenceTaskSet(requestCount, Date.now());
-        valid = shuffleSlice(filterValidSequenceTasks(generated), questionCount);
-        if (import.meta.env?.DEV)
-          logPoolWarning("zahlenfolgen", valid.length, "Fallback (generiert)");
-      }
+      // Primary: static pool (instant, no network)
+      const { ZAHLENFOLGEN_POOL } = await import("@/data/kffZahlenfolgen1000");
+      const poolValid = filterValidSequenceTasks(ZAHLENFOLGEN_POOL);
       const seenIds = getKffSeenIdsForDomain("Zahlenfolgen");
-      setQuestions(enforceExactCount(preferUnseen(valid, questionCount, seenIds), questionCount));
+      const { fresh, gap } = strictUnseen(poolValid, questionCount, seenIds);
+      let final = fresh;
+      if (gap > 0) {
+        // Generator fallback for exhausted pool
+        const generated = filterValidSequenceTasks(generateSequenceTaskSet(gap + 10, Date.now()));
+        final = [...fresh, ...generated.slice(0, gap)];
+      }
+      setQuestions(enforceExactCount(final, questionCount));
 
       setIndex(0);
       setAnswers({});
@@ -230,7 +221,15 @@ export function ZahlenfolgenQuiz({
                     ];
                   }
                   const seenIds = getKffSeenIdsForDomain("Zahlenfolgen");
-                  setQuestions(enforceExactCount(preferUnseen(valid, count, seenIds), count));
+                  const { fresh, gap } = strictUnseen(valid, count, seenIds);
+                  let final = fresh;
+                  if (gap > 0) {
+                    const gen = filterValidSequenceTasks(
+                      generateSequenceTaskSet(gap + 10, Date.now())
+                    );
+                    final = [...fresh, ...gen.slice(0, gap)];
+                  }
+                  setQuestions(enforceExactCount(final, count));
 
                   setIndex(0);
                   setAnswers({});

@@ -25,8 +25,8 @@ export function enforceExactCount<T>(pool: T[], target: number): T[] {
  * Returns the difficulty for task index i in a deterministic repeating pattern.
  */
 export function difficultyForIndex<T>(i: number, levels: [T, T, T]): T {
-  // Pattern of 10: 2× easy, 4× medium, 4× hard → 20/40/40
-  const pattern = [0, 1, 1, 2, 1, 2, 2, 1, 0, 2] as const;
+  // Pattern of 10: 2× easy, 6× medium, 2× hard → 20/60/20
+  const pattern = [0, 1, 1, 1, 2, 1, 1, 1, 0, 2] as const;
   return levels[pattern[i % 10]!]!;
 }
 
@@ -86,14 +86,11 @@ export function balancedDifficultySession<T>(
       [b[i], b[j]] = [b[j]!, b[i]!];
     }
   }
-  // Target per bucket: equal thirds, remainder goes medium > hard > easy
-  const base = Math.floor(target / 3);
-  const rem = target - base * 3;
-  const quotas = {
-    easy: base + (rem >= 3 ? 1 : 0),
-    medium: base + (rem >= 1 ? 1 : 0),
-    hard: base + (rem >= 2 ? 1 : 0),
-  };
+  // Target per bucket: 20% easy, 60% medium, 20% hard
+  const easyQ = Math.round(target * 0.2);
+  const hardQ = Math.round(target * 0.2);
+  const medQ = target - easyQ - hardQ;
+  const quotas = { easy: easyQ, medium: medQ, hard: hardQ };
   // Pick from each bucket up to quota; track surplus for redistribution
   const picked: Record<"easy" | "medium" | "hard", T[]> = { easy: [], medium: [], hard: [] };
   let deficit = 0;
@@ -131,21 +128,35 @@ export function balancedDifficultySession<T>(
 }
 
 /**
- * Removes already-seen tasks from a pool, preferring fresh tasks.
- * If not enough fresh tasks remain, fills with least-recently-seen tasks.
- * seenIds must be ordered most-recent-first (as returned by getKffSeenIdsForDomain).
+ * Returns only unseen tasks from the pool (strict no-repeat).
+ * Returns `{ fresh, gap }` where `gap` is the number of tasks the caller
+ * must fill via generator. This replaces the old preferUnseen() which
+ * recycled already-seen tasks.
+ */
+export function strictUnseen<T extends { id: string }>(
+  pool: T[],
+  target: number,
+  seenIds: string[]
+): { fresh: T[]; gap: number } {
+  const seenSet = new Set(seenIds);
+  const fresh = pool.filter((t) => !seenSet.has(t.id)).slice(0, target);
+  return { fresh, gap: Math.max(0, target - fresh.length) };
+}
+
+/**
+ * @deprecated Use strictUnseen + generator fallback instead.
+ * Kept temporarily for callers that haven't migrated yet.
  */
 export function preferUnseen<T extends { id: string }>(
   pool: T[],
   target: number,
   seenIds: string[]
 ): T[] {
+  const { fresh, gap } = strictUnseen(pool, target, seenIds);
+  if (gap === 0) return fresh;
+  // Legacy fallback: fill with least-recently-seen
   const seenSet = new Set(seenIds);
-  const fresh = pool.filter((t) => !seenSet.has(t.id));
-  if (fresh.length >= target) return fresh.slice(0, target);
-  // Not enough fresh — supplement with least-recently-seen (end of seenIds = oldest)
   const seenInPool = pool.filter((t) => seenSet.has(t.id));
-  // Sort by recency: least-recently-seen first (seenIds is most-recent-first, so reverse lookup)
   const recencyMap = new Map(seenIds.map((id, i) => [id, i]));
   seenInPool.sort((a, b) => (recencyMap.get(b.id) ?? 0) - (recencyMap.get(a.id) ?? 0));
   return [...fresh, ...seenInPool].slice(0, target);

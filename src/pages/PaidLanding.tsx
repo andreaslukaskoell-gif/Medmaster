@@ -176,7 +176,7 @@ export default function PaidLanding() {
   usePageMeta({
     title: "MedAT 2026 Vorbereitung — tausende BMS-Fragen, alle 4 Bereiche",
     description:
-      "Bestehe den MedAT 2026: Tausende BMS-Fragen mit Erklärungen, unbegrenzt KFF-Aufgaben, Prüfungssimulation. Alle 4 Bereiche, einmalig €29,90.",
+      "Bestehe den MedAT 2026: Tausende BMS-Fragen mit Erklärungen, KFF-Aufgaben mit Generatoren, Prüfungssimulation. Alle 4 Bereiche, einmalig €29,90.",
     canonical: "https://medmaster.at/lp/medat",
     ogImage: "https://medmaster.at/og-image.png",
   });

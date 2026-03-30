@@ -2296,8 +2296,8 @@ export function cutPolygonStrategically(
     }
   }
 
-  // Fallback: retry asymmetric cuts with different seeds
-  for (let fa = 0; fa < 20; fa++) {
+  // Fallback: retry asymmetric cuts with different seeds (stricter 2% tolerance)
+  for (let fa = 0; fa < 30; fa++) {
     const fbRng = createRng(seed + 77777 + fa * 9999);
     const fbPieces = applyAsymmetricCuts(
       { points: target.points.map((p) => ({ ...p })) },
@@ -2307,33 +2307,47 @@ export function cutPolygonStrategically(
     );
     if (fbPieces && fbPieces.length >= minPieces && fbPieces.length <= maxPieces) {
       const ta = fbPieces.reduce((s, p) => s + polygonArea(p), 0);
-      if (Math.abs(ta - polygonArea(target)) / polygonArea(target) < 0.05)
+      if (Math.abs(ta - polygonArea(target)) / polygonArea(target) < 0.02)
         return { target, pieces: fbPieces };
     }
   }
 
-  // Grid fallback with varied rotations for stubborn shapes (circles, octagon, rhombus)
-  for (let gr = 0; gr < 5; gr++) {
+  // Grid fallback with varied rotations for stubborn shapes (stricter 2% tolerance)
+  for (let gr = 0; gr < 10; gr++) {
     const grRng = createRng(seed + 55555 + gr * 13337);
     const grSize = difficulty === "easy" ? 3 : difficulty === "medium" ? 4 : 5;
     const grPieces = applyGridCuts(target, grSize, grRng, difficulty);
     if (grPieces && grPieces.length >= minPieces && grPieces.length <= maxPieces) {
       const ta = grPieces.reduce((s, p) => s + polygonArea(p), 0);
-      if (Math.abs(ta - polygonArea(target)) / polygonArea(target) < 0.03)
+      if (Math.abs(ta - polygonArea(target)) / polygonArea(target) < 0.02)
         return { target, pieces: grPieces };
     }
   }
-  // True last resort: 2 sequential cuts for 3 pieces minimum
-  const lastRng = createRng(seed + 123456);
-  const lastPieces = applyAsymmetricCuts(
-    { points: target.points.map((p) => ({ ...p })) },
-    2,
-    lastRng,
-    difficulty
-  );
-  if (lastPieces && lastPieces.length >= 3) return { target, pieces: lastPieces };
-  // Accept 2 pieces only as absolute last resort
-  if (lastPieces && lastPieces.length >= 2) return { target, pieces: lastPieces };
+  // Last resort: more retries with simple 2-cut strategy, still validated
+  for (let lr = 0; lr < 10; lr++) {
+    const lastRng = createRng(seed + 123456 + lr * 7777);
+    const lastPieces = applyAsymmetricCuts(
+      { points: target.points.map((p) => ({ ...p })) },
+      2,
+      lastRng,
+      difficulty
+    );
+    if (lastPieces && lastPieces.length >= 2) {
+      const ta = lastPieces.reduce((s, p) => s + polygonArea(p), 0);
+      if (Math.abs(ta - polygonArea(target)) / polygonArea(target) < 0.02)
+        return { target, pieces: lastPieces };
+    }
+  }
+  // Absolute last resort: try different target shape entirely
+  const altIdx = (shapeIndex + 1) % SOLUTION_SHAPES.length;
+  const altTarget = { points: OFFICIAL_TARGET_POLYGONS[altIdx].points.map((p) => ({ ...p })) };
+  const altRng = createRng(seed + 999999);
+  const altPieces = applyAsymmetricCuts(altTarget, 2, altRng, difficulty);
+  if (altPieces && altPieces.length >= 2) {
+    const ta = altPieces.reduce((s, p) => s + polygonArea(p), 0);
+    if (Math.abs(ta - polygonArea(altTarget)) / polygonArea(altTarget) < 0.02)
+      return { target: altTarget, pieces: altPieces };
+  }
   return { target, pieces: [{ points: target.points.map((p) => ({ ...p })) }] };
 }
 

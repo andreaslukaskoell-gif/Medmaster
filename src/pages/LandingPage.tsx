@@ -866,8 +866,8 @@ export default function LandingPage() {
                     ["Preis", "Einmalig €29,90", "€69 – €599+"],
                     ["Abo / Verlängerung", "Nein", "Häufig monatlich"],
                     ["BMS-Fragen", "Tausende", "Deutlich weniger"],
-                    ["KFF-Aufgaben", "Unbegrenzt (generiert)", "Begrenzter Pool"],
-                    ["Prüfungssimulation", "Inklusive, unbegrenzt", "Extra kostenpflichtig"],
+                    ["KFF-Aufgaben", "Tausende + Generatoren", "Begrenzter Pool"],
+                    ["Prüfungssimulation", "Inklusive", "Extra kostenpflichtig"],
                     ["Adaptives Lernsystem", "Ja", "Nicht verfügbar"],
                     ["Alle 4 MedAT-Bereiche", "Ja", "Oft nur BMS"],
                     ["Zugang bis MedAT", "Ja", "Saisonabhängig"],
@@ -934,7 +934,7 @@ export default function LandingPage() {
                   ]),
               {
                 q: "Was unterscheidet MedMaster von anderen Anbietern?",
-                a: "Vier Dinge: Erstens decken wir alle 4 MedAT-Bereiche ab — nicht nur BMS. Zweitens ist unser Lernsystem adaptiv — es erkennt deine Schwächen und passt den Lernplan automatisch an. Drittens kosten andere Plattformen €69–599 (oft mit Abo), während MedMaster einmalig €29,90 kostet. Viertens: KFF-Aufgaben werden algorithmisch generiert und validiert — du bekommst nie dieselbe Aufgabe zweimal. Dazu eine realistische Prüfungssimulation mit echten MedAT-Zeitlimits, unbegrenzt wiederholbar.",
+                a: "Vier Dinge: Erstens decken wir alle 4 MedAT-Bereiche ab — nicht nur BMS. Zweitens ist unser Lernsystem adaptiv — es erkennt deine Schwächen und passt den Lernplan automatisch an. Drittens kosten andere Plattformen €69–599 (oft mit Abo), während MedMaster einmalig €29,90 kostet. Viertens: KFF-Aufgaben werden algorithmisch generiert und validiert — du bekommst immer frische Aufgaben. Dazu eine realistische Prüfungssimulation mit echten MedAT-Zeitlimits.",
               },
             ].map((faq) => (
               <FAQItem key={faq.q} q={faq.q} a={faq.a} isMobile={isMobile} />
