@@ -51,8 +51,9 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { trackQuizComplete } from "@/lib/analytics";
 import { trackEvent } from "@/lib/analyticsTracker";
 import { useViewportMode } from "@/hooks/useViewportMode";
-import { useUsageLimits } from "@/hooks/useUsageLimits";
+import { usePermissions } from "@/hooks/usePermissions";
 import { Paywall } from "@/components/ui/paywall";
+import type { FeatureLimits } from "@/lib/permissions";
 import { useSwipe } from "@/hooks/useSwipe";
 import { hapticLight, hapticMedium, hapticSuccess, hapticError } from "@/lib/haptics";
 
@@ -1192,7 +1193,9 @@ function ResultsScreen({
 
 export default function FragenTrainer() {
   usePageTitle("Fragen-Trainer");
-  const { bmsQuestionsExceeded, bmsQuestionsUsed, bmsQuestionsLimit } = useUsageLimits();
+  const { isLocked, getLimit } = usePermissions();
+  const questionsPerSubjectLimit = getLimit("bms_questions_per_subject" as keyof FeatureLimits);
+  const quizResults = useStore((s) => s.quizResults ?? []);
   const location = useLocation();
   const navigate = useNavigate();
   const planBms = location.state?.dailyPlanBms as
@@ -1290,32 +1293,55 @@ export default function FragenTrainer() {
 
   return (
     <div className="p-6">
-      {screen === "select" && bmsQuestionsExceeded && (
-        <div className="mb-6">
-          <Paywall feature="Fragen-Trainer">
-            <div className="text-center py-12 space-y-3">
-              <h2 className="text-2xl font-bold text-[var(--text-primary)]">Fragen-Trainer</h2>
-              <p className="text-[var(--muted)]">
-                Du hast {bmsQuestionsUsed} von {bmsQuestionsLimit} kostenlosen Fragen beantwortet.
-                Schalte alle 5.000+ BMS-Fragen frei.
-              </p>
-            </div>
-          </Paywall>
-        </div>
-      )}
-      {screen === "select" && !bmsQuestionsExceeded && (
-        <SelectionScreen
-          userId={userId}
-          onStart={(subj, c, time, src, precomputed) => {
-            setSubjectId(subj);
-            setCount(c);
-            setTimeLimitMinutes(time);
-            setQuestionSource(src);
-            setInitialFragen(precomputed);
-            setScreen("quiz");
-          }}
-        />
-      )}
+      {screen === "select" &&
+        (() => {
+          // Check if ALL subjects exceeded their limit
+          const allSubjectsExceeded =
+            questionsPerSubjectLimit !== null &&
+            (["biologie", "chemie", "physik", "mathematik"] as const).every((fach) => {
+              const used = quizResults
+                .filter((r) => r.type === "bms" && r.subject === fach)
+                .reduce((s, r) => s + r.total, 0);
+              return used >= (questionsPerSubjectLimit ?? 0);
+            });
+
+          if (allSubjectsExceeded) {
+            return (
+              <Paywall feature="Fragen-Trainer">
+                <div className="text-center py-12 space-y-3">
+                  <h2 className="text-2xl font-bold text-[var(--text-primary)]">Fragen-Trainer</h2>
+                  <p className="text-[var(--muted)]">
+                    Du hast je {questionsPerSubjectLimit} Gratis-Fragen pro Fach beantwortet.
+                    Schalte alle 5.000+ BMS-Fragen frei.
+                  </p>
+                </div>
+              </Paywall>
+            );
+          }
+
+          return (
+            <SelectionScreen
+              userId={userId}
+              onStart={(subj, c, time, src, precomputed) => {
+                // Per-subject limit: cap questions at remaining free quota
+                if (questionsPerSubjectLimit !== null) {
+                  const used = quizResults
+                    .filter((r) => r.type === "bms" && r.subject === subj)
+                    .reduce((s, r) => s + r.total, 0);
+                  const remaining = Math.max(0, questionsPerSubjectLimit - used);
+                  if (remaining === 0) return; // Subject exhausted
+                  c = Math.min(c, remaining);
+                }
+                setSubjectId(subj);
+                setCount(c);
+                setTimeLimitMinutes(time);
+                setQuestionSource(src);
+                setInitialFragen(precomputed);
+                setScreen("quiz");
+              }}
+            />
+          );
+        })()}
       {screen === "quiz" && subjectId != null && (
         <QuizScreen
           subjectId={subjectId}

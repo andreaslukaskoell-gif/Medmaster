@@ -1,5 +1,7 @@
 import { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
+import { usePermissions } from "@/hooks/usePermissions";
+import { Paywall } from "@/components/ui/paywall";
 import {
   LineChart,
   Line,
@@ -167,6 +169,7 @@ function subjectLabel(subject?: string): string {
 
 export default function FortschrittPage() {
   usePageTitle("Fortschritt");
+  const { isLocked } = usePermissions();
   const { isMobile } = useViewportMode();
   const hydrated = useStoreHydrated();
 
@@ -222,6 +225,21 @@ export default function FortschrittPage() {
 
   // Wait for store hydration to avoid flashing empty state when data exists in localStorage
   const hasAnyData = hydrated && (recentSessions.length > 0 || totalStats.questionsAnswered > 0);
+
+  if (isLocked("fortschritt")) {
+    return (
+      <div className="max-w-3xl mx-auto p-6">
+        <Paywall feature="Fortschritt & Analyse">
+          <div className="text-center py-12 space-y-3">
+            <h2 className="text-2xl font-bold text-[var(--text-primary)]">Fortschritt</h2>
+            <p className="text-[var(--muted)]">
+              Dein analytisches Dashboard — Leistung, Trends und Schwachstellen auf einen Blick.
+            </p>
+          </div>
+        </Paywall>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-[var(--dashboard-bg)]">

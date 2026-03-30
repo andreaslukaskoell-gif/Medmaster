@@ -4,7 +4,8 @@
 type Tier = "starter" | "premium";
 
 export type FeatureLimits = {
-  bms_questions: number | "unlimited";
+  /** Free BMS quiz questions per subject */
+  bms_questions_per_subject: number | "unlimited";
   bms_chapters: number | "unlimited";
   /** Free UKs per BMS subject (first N UKs of first chapter) */
   bms_uks_per_subject: number | "unlimited";
@@ -17,16 +18,18 @@ export type FeatureLimits = {
   /** Free SEK tasks per subtest (Erkennen/Regulieren/Entscheiden) */
   sek_per_subtest: number | "unlimited";
   simulations: number | "unlimited";
+  fragen_trainer: boolean;
   ai_tutor: boolean;
   weakness_analysis: boolean;
   spaced_repetition: boolean;
   advanced_analytics: boolean;
   lernplan: boolean;
+  fortschritt: boolean;
 };
 
 const LIMITS: Record<Tier, FeatureLimits> = {
   starter: {
-    bms_questions: 50,
+    bms_questions_per_subject: 10,
     bms_chapters: "unlimited",
     bms_uks_per_subject: 2,
     kff_exercises: 10,
@@ -36,14 +39,16 @@ const LIMITS: Record<Tier, FeatureLimits> = {
     sek_situations: 5,
     sek_per_subtest: 5,
     simulations: 0,
+    fragen_trainer: true,
     ai_tutor: false,
     weakness_analysis: false,
     spaced_repetition: false,
     advanced_analytics: false,
     lernplan: false,
+    fortschritt: false,
   },
   premium: {
-    bms_questions: "unlimited",
+    bms_questions_per_subject: "unlimited",
     bms_chapters: "unlimited",
     bms_uks_per_subject: "unlimited",
     kff_exercises: "unlimited",
@@ -53,11 +58,13 @@ const LIMITS: Record<Tier, FeatureLimits> = {
     sek_situations: "unlimited",
     sek_per_subtest: "unlimited",
     simulations: "unlimited",
+    fragen_trainer: true,
     ai_tutor: true,
     weakness_analysis: true,
     spaced_repetition: true,
     advanced_analytics: true,
     lernplan: true,
+    fortschritt: true,
   },
 };
 

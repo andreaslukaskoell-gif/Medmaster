@@ -28,18 +28,12 @@ export function useUsageLimits() {
       };
     }
 
-    const bmsTotal = quizResults
-      .filter((r) => r.type === "bms")
-      .reduce((s, r) => s + r.total, 0);
-    const kffTotal = quizResults
-      .filter((r) => r.type === "kff")
-      .reduce((s, r) => s + r.total, 0);
+    const bmsTotal = quizResults.filter((r) => r.type === "bms").reduce((s, r) => s + r.total, 0);
+    const kffTotal = quizResults.filter((r) => r.type === "kff").reduce((s, r) => s + r.total, 0);
     const tvTotal = quizResults.filter((r) => r.type === "tv").length;
-    const sekTotal = quizResults
-      .filter((r) => r.type === "sek")
-      .reduce((s, r) => s + r.total, 0);
+    const sekTotal = quizResults.filter((r) => r.type === "sek").reduce((s, r) => s + r.total, 0);
 
-    const bmsLimit = getLimit("bms_questions");
+    const bmsLimit = getLimit("bms_questions_per_subject");
     const kffLimit = getLimit("kff_exercises");
     const tvLimit = getLimit("tv_texts");
     const sekLimit = getLimit("sek_situations");
