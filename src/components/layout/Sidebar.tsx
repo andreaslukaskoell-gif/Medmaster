@@ -31,6 +31,8 @@ import { Logo } from "@/components/brand/Logo";
 import { useStore } from "@/store/useStore";
 import { useAuth } from "@/hooks/useAuth";
 import { useAdaptiveStore } from "@/store/adaptiveLearning";
+import { usePermissions } from "@/hooks/usePermissions";
+import type { FeatureLimits } from "@/lib/permissions";
 import { getLevelFromXP, getRequiredLevelForPath } from "@/lib/progression";
 import { pathForChapter, chapterIdFromParams } from "@/lib/bmsRoutes";
 import type { Kapitel } from "@/data/bmsKapitel/types";
@@ -63,6 +65,8 @@ type NavItem = {
   emphasized?: boolean;
   /** Zusätzliche Pfade, die diesen Eintrag als aktiv markieren (z. B. Fortschritt-Subseiten). */
   activePaths?: string[];
+  /** Feature key in permissions — shows lock icon when locked */
+  premiumFeature?: string;
 };
 
 /** MedAT-orientierte Struktur: LERNEN & ÜBEN → TOOLS & FORTSCHRITT. Dashboard ist fix oben. */
@@ -76,15 +80,27 @@ const NAV_SECTIONS: { id: string; title: string; items: NavItem[] }[] = [
       { to: "/tv", icon: FileText, label: "TV" },
       { to: "/sek", icon: Heart, label: "SEK" },
       { to: "/fragen-trainer", icon: Dumbbell, label: "Fragen-Trainer" },
-      { to: "/simulation", icon: Timer, label: "Simulation", requiredLevel: 0 },
-      { to: "/lernplan", icon: CalendarDays, label: "Lernplan" },
+      {
+        to: "/simulation",
+        icon: Timer,
+        label: "Simulation",
+        requiredLevel: 0,
+        premiumFeature: "simulations",
+      },
+      { to: "/lernplan", icon: CalendarDays, label: "Lernplan", premiumFeature: "lernplan" },
     ],
   },
   {
     id: "tools",
     title: "TOOLS & FORTSCHRITT",
     items: [
-      { to: "/fortschritt", icon: BarChart3, label: "Fortschritt", emphasized: true },
+      {
+        to: "/fortschritt",
+        icon: BarChart3,
+        label: "Fortschritt",
+        emphasized: true,
+        premiumFeature: "fortschritt",
+      },
       { to: "/formelsammlung", icon: BookMarked, label: "Formelsammlung" },
     ],
   },
@@ -107,24 +123,29 @@ function NavItemRow({
   label,
   active,
   emphasized,
+  locked,
 }: {
   icon: typeof BookOpen;
   label: string;
   active: boolean;
   emphasized?: boolean;
+  locked?: boolean;
 }) {
   return (
     <div
       className={cn(
         "sidebar-nav-item flex items-center gap-2.5 px-3 py-2 rounded-lg text-[13px] font-medium cursor-pointer",
-        active
-          ? "bg-[var(--accent)]/8 text-[var(--accent)] font-semibold"
-          : "text-[var(--text-secondary)] hover:text-[var(--foreground)] hover:bg-[var(--foreground)]/[0.03]",
-        emphasized && !active && "text-[var(--foreground)]"
+        locked
+          ? "text-[var(--muted)] opacity-60"
+          : active
+            ? "bg-[var(--accent)]/8 text-[var(--accent)] font-semibold"
+            : "text-[var(--text-secondary)] hover:text-[var(--foreground)] hover:bg-[var(--foreground)]/[0.03]",
+        emphasized && !active && !locked && "text-[var(--foreground)]"
       )}
     >
-      <Icon className={cn("w-4 h-4 shrink-0", active ? "text-[var(--accent)]" : "")} />
+      <Icon className={cn("w-4 h-4 shrink-0", active && !locked ? "text-[var(--accent)]" : "")} />
       <span className="truncate flex-1">{label}</span>
+      {locked && <Lock className="w-3.5 h-3.5 shrink-0 text-[var(--muted)]" />}
     </div>
   );
 }
@@ -133,6 +154,7 @@ function NavItemRow({
 
 export function Sidebar({ open, onClose }: { open: boolean; onClose: () => void }) {
   const { user, signOut } = useAuth();
+  const { isLocked: isFeatureLocked } = usePermissions();
   const location = useLocation();
   const lastPathRef = useRef<HTMLDivElement>(null);
 
@@ -672,6 +694,9 @@ export function Sidebar({ open, onClose }: { open: boolean; onClose: () => void 
                 }
 
                 /* Regular nav item: Fortschritt gilt auch auf /schwachstellen, /statistik, /prognose als aktiv */
+                const itemLocked = item.premiumFeature
+                  ? isFeatureLocked(item.premiumFeature as keyof FeatureLimits)
+                  : false;
                 return (
                   <NavLink key={to} to={to} end={to === "/"} onClick={() => playClick()}>
                     {({ isActive: itemActive }) => (
@@ -680,6 +705,7 @@ export function Sidebar({ open, onClose }: { open: boolean; onClose: () => void 
                         label={item.label}
                         active={to === "/fortschritt" ? isActive(to) : itemActive}
                         emphasized={item.emphasized}
+                        locked={itemLocked}
                       />
                     )}
                   </NavLink>

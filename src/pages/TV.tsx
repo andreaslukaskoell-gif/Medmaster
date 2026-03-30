@@ -23,8 +23,8 @@ import { usePageTitle } from "@/hooks/usePageTitle";
 import StrategyGuideView from "@/components/shared/StrategyGuideView";
 import { stripMarkdownAsterisks } from "@/utils/formatExplanation";
 import { useViewportMode } from "@/hooks/useViewportMode";
-import { useUsageLimits } from "@/hooks/useUsageLimits";
-import { Paywall } from "@/components/ui/paywall";
+import { usePermissions } from "@/hooks/usePermissions";
+import { PaywallBanner } from "@/components/ui/paywall";
 import { tvStrategyGuide, tvTexts } from "@/data/tvData";
 import { tvTextSets } from "@/data/tvTextsExpanded";
 import { tvTextSets2 } from "@/data/tvTextsExpanded2";
@@ -55,7 +55,8 @@ const LABELS = ["A", "B", "C", "D", "E"];
 export default function TV() {
   usePageTitle("TV – Textverständnis");
   const { isMobile } = useViewportMode();
-  const { tvTextsExceeded, tvTextsUsed, tvTextsLimit } = useUsageLimits();
+  const { getLimit } = usePermissions();
+  const tvTextLimit = getLimit("tv_texts"); // null = unlimited
   const location = useLocation();
   const dailyPlanTvTexts = location.state?.dailyPlanTvTexts as number | undefined;
 
@@ -764,17 +765,7 @@ export default function TV() {
         )}
       </div>
 
-      {tvTextsExceeded && (
-        <Paywall feature="TV-Textsets">
-          <div className="text-center py-12 space-y-3">
-            <h2 className="text-2xl font-bold text-[var(--text-primary)]">Textverständnis</h2>
-            <p className="text-[var(--muted)]">
-              Du hast {tvTextsUsed} von {tvTextsLimit} kostenlosen Textsets abgeschlossen. Schalte
-              alle 10 Textsets frei.
-            </p>
-          </div>
-        </Paywall>
-      )}
+      {/* Per-set gating handled inline below */}
 
       {/* MC Text Sets — primary section */}
       {allTextSets.length > 0 && (
@@ -786,17 +777,20 @@ export default function TV() {
           <div className="card-glass divide-y divide-[var(--border)] overflow-hidden">
             {allTextSets.map((set, i) => {
               const totalQ = set.texts.reduce((sum, t) => sum + t.questions.length, 0);
+              const isSetLocked = tvTextLimit !== null && i >= tvTextLimit;
               return (
                 <div
                   key={set.id}
-                  className={`${isMobile ? "flex flex-col gap-2 px-3 py-3" : "flex items-center gap-4 px-5 py-3.5"} hover:bg-[var(--accent)]/3 transition-colors group`}
+                  className={`${isMobile ? "flex flex-col gap-2 px-3 py-3" : "flex items-center gap-4 px-5 py-3.5"} ${isSetLocked ? "opacity-50" : "hover:bg-[var(--accent)]/3"} transition-colors group`}
                 >
                   <div className="flex items-center gap-3 min-w-0">
                     <span className="text-xs font-bold text-[var(--muted)] tabular-nums w-5 text-center shrink-0">
                       {i + 1}
                     </span>
                     <div className="flex-1 min-w-0">
-                      <span className="text-sm font-medium text-[var(--text-primary)] truncate block">
+                      <span
+                        className={`text-sm font-medium truncate block ${isSetLocked ? "text-[var(--muted)]" : "text-[var(--text-primary)]"}`}
+                      >
                         {set.name}
                       </span>
                     </div>
@@ -809,26 +803,35 @@ export default function TV() {
                       {totalQ} Fragen
                     </span>
                   </div>
-                  <div className={`flex items-center gap-2 ${isMobile ? "ml-8" : ""}`}>
-                    <Button
-                      variant="premium"
-                      size="sm"
-                      onClick={() => handleStartSet(i, "practice")}
-                    >
-                      <Play className="w-4 h-4 mr-1" /> Üben
-                    </Button>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      onClick={() => handleStartSet(i, "exam")}
-                      title="35 Minuten Timer"
-                    >
-                      <Timer className="w-4 h-4 mr-1" /> Prüfung
-                    </Button>
-                  </div>
+                  {isSetLocked ? (
+                    <span className="text-xs text-[var(--muted)] shrink-0">Premium</span>
+                  ) : (
+                    <div className={`flex items-center gap-2 ${isMobile ? "ml-8" : ""}`}>
+                      <Button
+                        variant="premium"
+                        size="sm"
+                        onClick={() => handleStartSet(i, "practice")}
+                      >
+                        <Play className="w-4 h-4 mr-1" /> Üben
+                      </Button>
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        onClick={() => handleStartSet(i, "exam")}
+                        title="35 Minuten Timer"
+                      >
+                        <Timer className="w-4 h-4 mr-1" /> Prüfung
+                      </Button>
+                    </div>
+                  )}
                 </div>
               );
             })}
+            {tvTextLimit !== null && allTextSets.length > tvTextLimit && (
+              <div className="p-4">
+                <PaywallBanner feature={`Alle ${allTextSets.length} Textsets freischalten`} />
+              </div>
+            )}
           </div>
         </section>
       )}

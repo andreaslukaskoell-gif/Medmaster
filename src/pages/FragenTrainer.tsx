@@ -1319,27 +1319,62 @@ export default function FragenTrainer() {
             );
           }
 
+          // Per-subject usage stats for limit display
+          const subjectUsage =
+            questionsPerSubjectLimit !== null
+              ? Object.fromEntries(
+                  (["biologie", "chemie", "physik", "mathematik"] as const).map((f) => [
+                    f,
+                    quizResults
+                      .filter((r) => r.type === "bms" && r.subject === f)
+                      .reduce((s, r) => s + r.total, 0),
+                  ])
+                )
+              : null;
+
           return (
-            <SelectionScreen
-              userId={userId}
-              onStart={(subj, c, time, src, precomputed) => {
-                // Per-subject limit: cap questions at remaining free quota
-                if (questionsPerSubjectLimit !== null) {
-                  const used = quizResults
-                    .filter((r) => r.type === "bms" && r.subject === subj)
-                    .reduce((s, r) => s + r.total, 0);
-                  const remaining = Math.max(0, questionsPerSubjectLimit - used);
-                  if (remaining === 0) return; // Subject exhausted
-                  c = Math.min(c, remaining);
-                }
-                setSubjectId(subj);
-                setCount(c);
-                setTimeLimitMinutes(time);
-                setQuestionSource(src);
-                setInitialFragen(precomputed);
-                setScreen("quiz");
-              }}
-            />
+            <>
+              {questionsPerSubjectLimit !== null && subjectUsage && (
+                <div className="mb-4 flex flex-wrap gap-2">
+                  {(["biologie", "chemie", "physik", "mathematik"] as const).map((f) => {
+                    const used = subjectUsage[f] ?? 0;
+                    const exhausted = used >= questionsPerSubjectLimit;
+                    return (
+                      <span
+                        key={f}
+                        className={`text-xs px-2.5 py-1 rounded-full ${
+                          exhausted
+                            ? "bg-[var(--muted)]/10 text-[var(--muted)] line-through"
+                            : "bg-[var(--accent)]/10 text-[var(--accent)]"
+                        }`}
+                      >
+                        {f.charAt(0).toUpperCase() + f.slice(1)}: {used}/{questionsPerSubjectLimit}
+                      </span>
+                    );
+                  })}
+                </div>
+              )}
+              <SelectionScreen
+                userId={userId}
+                onStart={(subj, c, time, src, precomputed) => {
+                  // Per-subject limit: cap questions at remaining free quota
+                  if (questionsPerSubjectLimit !== null) {
+                    const used = quizResults
+                      .filter((r) => r.type === "bms" && r.subject === subj)
+                      .reduce((s, r) => s + r.total, 0);
+                    const remaining = Math.max(0, questionsPerSubjectLimit - used);
+                    if (remaining === 0) return;
+                    c = Math.min(c, remaining);
+                  }
+                  setSubjectId(subj);
+                  setCount(c);
+                  setTimeLimitMinutes(time);
+                  setQuestionSource(src);
+                  setInitialFragen(precomputed);
+                  setScreen("quiz");
+                }}
+              />
+            </>
           );
         })()}
       {screen === "quiz" && subjectId != null && (

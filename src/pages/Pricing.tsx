@@ -156,6 +156,22 @@ export default function Pricing() {
         </div>
       )}
 
+      {/* Social proof */}
+      <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-[var(--muted)] py-2">
+        <div className="flex items-center gap-1.5">
+          <Check className="w-4 h-4 text-emerald-500" />
+          <span>5.230+ BMS-Fragen</span>
+        </div>
+        <div className="flex items-center gap-1.5">
+          <Check className="w-4 h-4 text-emerald-500" />
+          <span>174 Lerneinheiten</span>
+        </div>
+        <div className="flex items-center gap-1.5">
+          <Check className="w-4 h-4 text-emerald-500" />
+          <span>Von MedAT-Absolventen entwickelt</span>
+        </div>
+      </div>
+
       <div className="text-center space-y-4 py-4">
         <h3 className="text-lg font-semibold text-[var(--text-primary)]">
           Warum einmalig statt Abo?
