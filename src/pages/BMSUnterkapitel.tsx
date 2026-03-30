@@ -253,6 +253,7 @@ export default function BMSUnterkapitel({
   const [hinterfragMode, setHinterfragMode] = useState(false);
   const [quickReviewMode, setQuickReviewMode] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [showStickyHeader, setShowStickyHeader] = useState(false);
   const [showScrollRestoredToast, setShowScrollRestoredToast] = useState(false);
   const [toolMenuOpen, setToolMenuOpen] = useState(false);
   const [showCelebration, setShowCelebration] = useState(false);
@@ -315,6 +316,9 @@ export default function BMSUnterkapitel({
     const storageKey = ukId ? `medmaster-uk-scroll-${ukId}` : null;
     const update = () => {
       const scrolled = document.documentElement.scrollTop || document.body.scrollTop;
+
+      // Show sticky header once scrolled past the main header (~300px)
+      setShowStickyHeader(scrolled > 300);
 
       // Calculate progress based on content area only (excluding quiz)
       const contentEl = contentAreaRef.current;
@@ -664,6 +668,41 @@ export default function BMSUnterkapitel({
             transition: "width 200ms ease-out, opacity 400ms ease",
           }}
         />
+      </div>
+
+      {/* Sticky reading header — appears on scroll (AMBOSS-style) */}
+      <div
+        className={`fixed top-[3px] left-0 right-0 z-[190] transition-all duration-300 ${showStickyHeader ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-full pointer-events-none"}`}
+        style={{
+          background: "var(--topbar-bg)",
+          backdropFilter: "blur(12px)",
+          WebkitBackdropFilter: "blur(12px)",
+          borderBottom: "1px solid var(--border)",
+        }}
+      >
+        <div className="max-w-6xl mx-auto px-4 py-2.5 flex items-center justify-between gap-4">
+          <div className="flex items-center gap-3 min-w-0">
+            <span
+              className="w-2.5 h-2.5 rounded-full shrink-0"
+              style={{ backgroundColor: accentColor }}
+            />
+            <span className="text-sm font-medium text-[var(--text-primary)] truncate">
+              {uk.title}
+            </span>
+          </div>
+          <div className="flex items-center gap-3 shrink-0">
+            <span className="text-xs text-[var(--muted)]">{Math.round(scrollProgress)}%</span>
+            <div className="w-20 h-1.5 rounded-full bg-[var(--border)] overflow-hidden">
+              <div
+                className="h-full rounded-full transition-[width] duration-200"
+                style={{
+                  width: `${scrollProgress}%`,
+                  backgroundColor: accentColor,
+                }}
+              />
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Top bar: back + tools */}

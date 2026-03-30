@@ -816,6 +816,8 @@ Welches Keimblatt welches Organ bildet, ist eine der meistgeprüften Zuordnungen
 
 ## Kritische Perioden und Teratogene
 
+{{DIAGRAM:embryo-stages}}
+
 **Teratogene** sind Substanzen oder Einflüsse, die Fehlbildungen verursachen. Ihre Wirkung hängt vom **Zeitpunkt der Exposition** ab — jedes Organ hat sein eigenes Zeitfenster maximaler Verletzlichkeit.
 
 - **Woche 1–2:** Alles-oder-Nichts-Prinzip (Absterben oder normale Entwicklung dank Totipotenz)
@@ -2285,9 +2287,10 @@ Wenn der **posteriore Neuroporus** nicht schließt, kann es zur **Spina bifida**
     {
       id: "bio-9-11",
       title: "Organogenese, Embryo vs. Fetus und kritische Phasen",
-      imageUrl: "/images/wiki-placenta-de.svg",
+      imageUrl: "/images/bms/bio-embryogenese-de.svg",
       imageCaption:
-        "Abb.: Vergleichende Embryonalentwicklung bei Wirbeltieren (Wikimedia Commons, Public Domain)",
+        "Abb.: Embryonalentwicklung — Von der Zygote über Morula und Blastozyste bis zur Organogenese (Wikimedia Commons, Public Domain)",
+      diagram: "embryo-stages",
       stichworte: [
         "Embryonalperiode",
         "Organogenese",
@@ -2298,7 +2301,7 @@ Wenn der **posteriore Neuroporus** nicht schließt, kann es zur **Spina bifida**
       ],
       content: `Nach der Gastrulation und Neurulation beginnt die Organogenese — die Phase, in der alle Organsysteme angelegt werden. Fehler in dieser kritischen Zeit können schwere Fehlbildungen verursachen.
 
-![Weibliches Fortpflanzungssystem — Anatomie und Entwicklung](/images/wiki-female-reproductive-de.svg)
+{{IMAGE}}
 
 ## Embryonalperiode (Wochen 1–8) — Organogenese
 
@@ -2341,7 +2344,9 @@ In der Fetalperiode (Woche 9–40) nimmt das Gewicht exponentiell zu: von ca. 10
 
 ## Klinischer Bezug
 
-Thalidomid (Contergan) verursachte in den 1960er Jahren Phokomelie (Flipper-artige Extremitäten), wenn es in der kritischen Periode der Extremitätenanlage (Woche 4–8) eingenommen wurde. Dies verdeutlicht, dass kritische Perioden organspezifisch sind und selbst kurze Exposition mit einem Teratogen irreversible Fehlbildungen hervorrufen kann.`,
+Thalidomid (Contergan) verursachte in den 1960er Jahren Phokomelie (Flipper-artige Extremitäten), wenn es in der kritischen Periode der Extremitätenanlage (Woche 4–8) eingenommen wurde. Dies verdeutlicht, dass kritische Perioden organspezifisch sind und selbst kurze Exposition mit einem Teratogen irreversible Fehlbildungen hervorrufen kann.
+
+{{DIAGRAM:embryo-stages}}`,
       lernziele: [
         "Embryonal- und Fetalperiode zeitlich und inhaltlich abgrenzen sowie die Organogenese in der Embryonalperiode beschreiben.",
         "Das Konzept der kritischen Perioden erklären und wichtige Teratogene mit ihren Zielorganen und -zeiträumen nennen.",
@@ -2474,7 +2479,8 @@ Thalidomid (Contergan) verursachte in den 1960er Jahren Phokomelie (Flipper-arti
       id: "bio-9-12",
       title: "Embryonalhüllen und Plazenta",
       imageUrl: "/images/wiki-placenta-de.svg",
-      imageCaption: "",
+      imageCaption:
+        "Abb.: Plazenta — Aufbau und Blutkreislauf zwischen Mutter und Kind (Wikimedia Commons, Public Domain)",
       stichworte: [
         "Plazenta",
         "Amnion",

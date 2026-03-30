@@ -26,8 +26,6 @@ export const bioKapAnatomieGewebe: Kapitel = {
       ],
       content: `Gewebe bilden die Bausteine aller Organe — ihre Kenntnis ist für den BMS-Teil unverzichtbar. Dieses Kapitel behandelt die vier Grundgewebearten (Epithel-, Binde-, Muskel- und Nervengewebe) sowie die wichtigsten Organsysteme des Menschen.
 
-{{DIAGRAM}}
-
 ## Grundprinzip: Eigenschaften aller Epithelien
 
 Epithelien kleiden jede Körperoberfläche und jedes Hohlorgan aus — trotz ihrer Vielfalt teilen **alle** Epithelien drei Grundeigenschaften:
@@ -45,6 +43,8 @@ Epithelien kleiden jede Körperoberfläche und jedes Hohlorgan aus — trotz ihr
 - **Hemidesmosomen**: Verankerung an Basalmembran (Integrine + Laminin).
 
 > **Merke:** Tight Junctions = apikal, Barriere + Fence. Desmosomen = mechanisch. Gap Junctions = Ionenaustausch. Hemidesmosomen = Basalmembran-Verankerung.
+
+{{DIAGRAM}}
 
 ---
 
@@ -2904,7 +2904,11 @@ Die Immunisierung nutzt das Prinzip der erworbenen Immunität gezielt aus — en
 
 ## Lymphgefäße — vom Kapillarnetz zum Ductus thoracicus
 
-Das lymphatische Gefäßsystem beginnt blind im Gewebe und transportiert interstitielle Flüssigkeit zurück ins venöse Blut. Die Hierarchie der Lymphgefäße:
+Das lymphatische Gefäßsystem beginnt blind im Gewebe und transportiert interstitielle Flüssigkeit zurück ins venöse Blut.
+
+{{IMAGE}}
+
+Die Hierarchie der Lymphgefäße:
 
 - **Lymphkapillaren**: Blind endende, hochpermeable Gefäße ohne Basalmembran. Überlappende Endothelzellen wirken als Einlassventile — bei steigendem Gewebedruck öffnen sie sich, bei sinkendem Druck schließen sie. Aufnahme von Proteinen, Zelltrümmern und Krankheitserregern aus dem Interstitium
 - **Präkollektoren**: Erste Klappen erscheinen, leiten Lymphe zu den Kollektoren
@@ -3930,11 +3934,11 @@ Der fertige Urin verlässt die Niere über: **Nierenbecken (Pelvis renalis) → 
       ],
       content: `## Klinischer Einstieg
 
-{{IMAGE}}
-
 Eine 68-jährige Patientin stürzt beim Einkaufen und erleidet eine Schenkelhalsfraktur — obwohl sie nur aus dem Stand gefallen ist. Die Diagnose: **Osteoporose** mit massiv reduzierter Knochendichte. Warum brechen manche Knochen bei Bagatelltrauma? Die Antwort liegt im Zusammenspiel von Skelettanatomie, Knochenumbau und hormoneller Regulation.
 
 Die Grundlagen zu Knochengewebe (Osteoblasten, Osteoklasten, RANKL/OPG), Knorpeltypen und Kollagen sind in **bio-2-02 (Binde- und Stützgewebe)** behandelt. Hier liegt der Fokus auf dem **Skelett als Organsystem**: Gliederung, Gelenktypen, Ossifikation und Wirbelsäule.
+
+{{IMAGE}}
 
 ---
 

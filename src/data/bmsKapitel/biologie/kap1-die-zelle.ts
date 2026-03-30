@@ -563,6 +563,7 @@ Viele Archäen sind **Extremophile**: Thermophile (bis 121°C), Halophile (gesä
       title: "Zellmembran — Aufbau, Barriere und Identität",
       imageUrl: "/images/wiki-membrane-de.svg",
       imageCaption: "Abb.: Phospholipid-Doppelschicht der Zellmembran (OpenStax, CC BY 4.0)",
+      diagram: "cell-membrane",
       stichworte: [
         "Flüssig-Mosaik-Modell",
         "Phospholipid-Doppelschicht",
@@ -577,8 +578,6 @@ Viele Archäen sind **Extremophile**: Thermophile (bis 121°C), Halophile (gesä
 
 ## Grundprinzip: Phospholipid-Doppelschicht
 
-{{IMAGE}}
-
 Die Zellmembran ist die Grenze zwischen Zelle und Außenwelt — nicht als starre Wand, sondern als selektive, dynamische Schranke. Ihr Aufbau erklärt direkt, was sie durchlässt und was nicht.
 
 Die Bausteine heißen **Phospholipide** — Moleküle mit einem wasserfreundlichen „Kopf” (Phosphatgruppe + Glycerin + polarer Rest) und zwei wasserabweisenden „Schwänzen” (Fettsäureketten). Dieses Doppelgesicht nennt man **amphiphil** (griech.: beide Seiten liebend).
@@ -586,6 +585,8 @@ Die Bausteine heißen **Phospholipide** — Moleküle mit einem wasserfreundlich
 - **Hydrophobe Schwänze**: zwei **Fettsäureketten** — die hydrophoben Ketten der Phospholipide; längere Kohlenstoffketten, die Fett aufbauen und wasserabweisend wirken
 
 In wässriger Umgebung ordnen sich Phospholipide spontan an: Köpfe zum Wasser, Schwänze nach innen. So entsteht eine **Doppelschicht (Bilayer)**. Das ist energetisch günstig (hydrophober Effekt) und erklärt, warum sich Membranen von selbst bilden.
+
+{{IMAGE}}
 
 Weil das Innere der Doppelschicht aus Fettschwänzen besteht, ist die Membran **semipermeabel** (latein.: halbdurchlässig): Sie ist für manche Stoffe durchlässig, für andere nicht. Übersicht:
 
@@ -639,13 +640,13 @@ Steroide (z. B. Cortisol, Vitamin D) sind lipophil und passieren die Membran ung
 
 > **Merke:** Integral = durch die Membran (Kanäle, Transporter, Rezeptoren, Pumpen). Peripher = nur an der Oberfläche.
 
+{{DIAGRAM}}
+
 **Klinisches Beispiel — CFTR und Mukoviszidose (zentral prüfungsrelevant):** Ein integrales Protein mit großer klinischer Bedeutung ist **CFTR** (Cystic Fibrosis Transmembrane Conductance Regulator) — ein **Cl⁻-Kanal**. Bei **Mukoviszidose** (zystische Fibrose, häufigste autosomal-rezessive Erbkrankheit) führt die Mutation **ΔF508** dazu, dass das Protein fehlgefaltet wird und nicht in die apikale Membran von Atemwegs- und Darmepithelzellen eingebaut wird. Folge: kein Cl⁻-Export → zu wenig Wasser im Schleim → **visköser Schleim** → chronische Infektionen (z. B. *Pseudomonas*) → Lungenversagen. CFTR ist ein **Kanal**, kein Transporter.
 
 ---
 
 ## Glykokalix: Zellerkennung und Schutz
-
-![Endomembransystem — rER, Golgi und Vesikelfluss im Überblick](/images/wiki-endomembrane-de.svg)
 
 Die **Glykokalix** (von griech. *glykys* = süß, *kalyx* = Hülle) ist die **Zuckerschicht** auf der Außenseite der Zellmembran — Kohlenhydratketten, die an **Glykoproteine** (Proteine mit angehängten Zuckern) und **Glykolipide** (Lipide mit angehängten Zuckern) gebunden sind. Funktionen: **Zellerkennung** (z. B. MHC/HLA (Gewebeverträglichkeitsantigene)), **Schutz** der Zelloberfläche (besonders bei Epithelien).
 
@@ -1460,7 +1461,7 @@ Rund 3000 Moleküle passieren jede Kernpore pro Sekunde — ohne diese Schleusen
 
 > **Merke:** Kernporen: <40 kDa frei, >40 kDa nur mit NLS (Import) oder NES (Export). Äußere Kernmembran = Fortsatz des rauen ER. Kernlamina = Lamine (nicht Aktin!).
 
-![Zellkern — Kernhülle, Kernporen, Nucleolus und Chromatin im Überblick](/images/wiki-nucleus.svg)
+![Zellkern — Kernhülle, Kernporen, Nukleolus und Chromatin im Überblick](/images/wiki-nucleus-de.svg)
 
 ---
 
@@ -1729,8 +1730,6 @@ Bei Krebszellen sind diese Checkpoints oft defekt (Mutationen in **p53**, **Rb**
 
 Die Mitose erzeugt aus einer Mutterzelle **2 genetisch identische Tochterzellen** (2n → 2×2n). Sie dient dem Wachstum, der Gewebeerneuerung und der Wundheilung.
 
-{{DIAGRAM:mitosis}}
-
 **Prophase:** Chromosomen kondensieren und werden sichtbar. Zentrosomen wandern zu den Polen. Der Spindelapparat (Mikrotubuli) beginnt sich zu bilden. Die Kernhülle löst sich auf.
 
 **Prometaphase:** Spindelmikrotubuli heften sich an die **Kinetochore** (Proteinstrukturen am Zentromer der Chromosomen). Chromosomen bewegen sich chaotisch.
@@ -1743,6 +1742,8 @@ Die Mitose erzeugt aus einer Mutterzelle **2 genetisch identische Tochterzellen*
 
 **Zytokinese:** Ein kontraktiler Ring (Aktin + Myosin II) schnürt die Zelle ein → 2 Tochterzellen. Bei Pflanzenzellen: Zellplatte statt Einschnürung.
 
+{{DIAGRAM:mitosis}}
+
 > **Merke:** Mitose-Anaphase: **Schwesterchromatiden** trennen sich (2n → 2n). Eselsbrücke: **S**chwestern trennen sich bei der **S**omatischen Teilung.
 
 ---
@@ -1750,8 +1751,6 @@ Die Mitose erzeugt aus einer Mutterzelle **2 genetisch identische Tochterzellen*
 ## Meiose — genetische Vielfalt für die Fortpflanzung
 
 Die Meiose erzeugt aus einer Keimzelle **4 genetisch verschiedene haploide Zellen** (2n → 4×n). Sie findet nur in den Gonaden (Eierstöcke, Hoden) statt.
-
-{{DIAGRAM:meiosis}}
 
 ### Meiose I — Reduktionsteilung (das Besondere!)
 
@@ -1780,6 +1779,8 @@ Die homologen Chromosomen werden zu entgegengesetzten Polen gezogen. Jeder Pol e
 Die Schwesterchromatiden trennen sich in jeder haploiden Zelle. Ergebnis: **4 haploide Zellen (n)**, genetisch verschieden.
 
 > **Merke:** Meiose I = **homologe Chromosomen** trennen sich (Reduktion 2n→n). Meiose II = **Schwesterchromatiden** trennen sich (wie Mitose). Crossing-over passiert NUR in Prophase I!
+
+{{DIAGRAM:meiosis}}
 
 ---
 

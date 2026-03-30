@@ -2,7 +2,7 @@ import { useState, useMemo, useEffect, useCallback, useRef } from "react";
 import type { ComponentProps, ReactNode } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { HelpCircle } from "lucide-react";
+import { HelpCircle, Lightbulb, AlertTriangle, Sparkles, Stethoscope } from "lucide-react";
 import type { Unterkapitel, SelfTestQuestion } from "@/data/bmsKapitel/types";
 import DiagramSVG from "@/components/diagrams/DiagramSVG";
 import { ImageWithFallback } from "@/components/ui/ImageWithFallback";
@@ -160,7 +160,8 @@ function buildMarkdownComponents(keywordLinkEntries?: KeywordLinkEntry[]) {
       if (isMerke) {
         return (
           <div className="my-6 rounded-lg border-l-4 border-blue-500 dark:border-blue-400 bg-blue-50/70 dark:bg-blue-950/30 shadow-sm px-5 py-4">
-            <div className="text-[11px] font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400 mb-2">
+            <div className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400 mb-2">
+              <Lightbulb className="w-3.5 h-3.5" aria-hidden />
               Merke
             </div>
             <div className="text-sm text-[var(--text-primary)] leading-relaxed [&>p]:my-0 [&_strong]:font-semibold">
@@ -172,7 +173,8 @@ function buildMarkdownComponents(keywordLinkEntries?: KeywordLinkEntry[]) {
       if (isAchtung) {
         return (
           <div className="my-6 rounded-lg border-l-4 border-red-500 dark:border-red-400 bg-red-50/70 dark:bg-red-950/30 shadow-sm px-5 py-4">
-            <div className="text-[11px] font-bold uppercase tracking-widest text-red-600 dark:text-red-400 mb-2">
+            <div className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-red-600 dark:text-red-400 mb-2">
+              <AlertTriangle className="w-3.5 h-3.5" aria-hidden />
               Achtung
             </div>
             <div className="text-sm text-[var(--text-primary)] leading-relaxed [&>p]:my-0 [&_strong]:font-semibold">
@@ -184,7 +186,8 @@ function buildMarkdownComponents(keywordLinkEntries?: KeywordLinkEntry[]) {
       if (isTipp) {
         return (
           <div className="my-6 rounded-lg border-l-4 border-purple-500 dark:border-purple-400 bg-purple-50/70 dark:bg-purple-950/30 shadow-sm px-5 py-4">
-            <div className="text-[11px] font-bold uppercase tracking-widest text-purple-600 dark:text-purple-400 mb-2">
+            <div className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-purple-600 dark:text-purple-400 mb-2">
+              <Sparkles className="w-3.5 h-3.5" aria-hidden />
               Tipp
             </div>
             <div className="text-sm text-[var(--text-primary)] leading-relaxed [&>p]:my-0 [&_strong]:font-semibold">
@@ -196,7 +199,8 @@ function buildMarkdownComponents(keywordLinkEntries?: KeywordLinkEntry[]) {
       if (isKlinisch) {
         return (
           <div className="my-6 rounded-lg border-l-4 border-emerald-500 dark:border-emerald-400 bg-emerald-50/70 dark:bg-emerald-950/30 shadow-sm px-5 py-4">
-            <div className="text-[11px] font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-400 mb-2">
+            <div className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-400 mb-2">
+              <Stethoscope className="w-3.5 h-3.5" aria-hidden />
               Klinisch
             </div>
             <div className="text-sm text-[var(--text-primary)] leading-relaxed [&>p]:my-0 [&_strong]:font-semibold">
@@ -530,6 +534,7 @@ export function SubchapterContent({
 
   // Current section for TOC highlight (IntersectionObserver)
   const [currentSectionId, setCurrentSectionId] = useState<string | null>(null);
+  const [readSections, setReadSections] = useState<Set<string>>(new Set());
   const sectionRefsMap = useRef<Record<string, HTMLDivElement | null>>({});
 
   useEffect(() => {
@@ -546,7 +551,17 @@ export function SubchapterContent({
           .filter((p) => p.id);
         if (visible.length === 0) return;
         const byTop = [...visible].sort((a, b) => a.top - b.top);
-        setCurrentSectionId(byTop[0].id);
+        const topId = byTop[0].id;
+        setCurrentSectionId(topId);
+        // Mark sections above current as read
+        const idx = ids.indexOf(topId);
+        if (idx > 0) {
+          setReadSections((prev) => {
+            const next = new Set(prev);
+            for (let i = 0; i < idx; i++) next.add(ids[i]);
+            return next.size !== prev.size ? next : prev;
+          });
+        }
       },
       { rootMargin: "-10% 0px -70% 0px", threshold: 0 }
     );
@@ -593,6 +608,7 @@ export function SubchapterContent({
           <SectionTOC
             sections={tocSections}
             currentSectionId={currentSectionId}
+            readSections={readSections}
             onSelect={handleTOCSelect}
             variant="left"
           />

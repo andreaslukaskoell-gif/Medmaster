@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8"/>
+  <title>MedMaster Email Preview</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #111827; color: #fff; }
+    .toolbar { position: fixed; top: 0; left: 0; right: 0; background: #1f2937; padding: 12px 24px; display: flex; gap: 8px; align-items: center; z-index: 10; border-bottom: 1px solid #374151; }
+    .toolbar select { padding: 8px 12px; border-radius: 8px; border: 1px solid #4b5563; background: #374151; color: #fff; font-size: 14px; }
+    .toolbar label { font-size: 13px; color: #9ca3af; }
+    .preview { margin-top: 72px; display: flex; justify-content: center; padding: 32px; }
+    .preview iframe { border: none; background: #f3f4f6; border-radius: 12px; box-shadow: 0 25px 50px rgba(0,0,0,0.5); }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <label>Template:</label>
+    <select id="template">
+      <option value="trial-ending-7d">Trial -7 Tage</option>
+      <option value="trial-ending-3d">Trial -3 Tage</option>
+      <option value="trial-ending-today" selected>Trial Heute</option>
+      <option value="post-trial-day1">Post-Trial +1</option>
+      <option value="post-trial-day3">Post-Trial +3</option>
+      <option value="post-trial-day7">Post-Trial +7</option>
+      <option value="welcome">Welcome</option>
+      <option value="weekly-progress">Wochenbericht</option>
+    </select>
+    <label style="margin-left:16px">Breite:</label>
+    <select id="width">
+      <option value="580">Desktop (580px)</option>
+      <option value="375">Mobile (375px)</option>
+      <option value="420">Tablet (420px)</option>
+    </select>
+  </div>
+  <div class="preview">
+    <iframe id="frame" width="580" height="900"></iframe>
+  </div>
+
+  <script>
+    const SITE_URL = "https://medmaster.at";
+    const data = { displayName: "Luki", email: "test@example.com", questionsAnswered: 347, correctRate: 72, daysUntilExam: 68 };
+
+    function statCards(q, r) {
+      if (!q) return "";
+      return `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:20px 0"><tr>
+        <td width="48%" style="padding-right:8px"><div style="background:#f0f4ff;border-radius:12px;padding:20px;text-align:center"><div style="font-size:28px;font-weight:800;color:#1e3a8a">${q}</div><div style="font-size:13px;color:#6b7280;margin-top:4px">Fragen beantwortet</div></div></td>
+        ${r ? `<td width="48%"><div style="background:#f0fdf4;border-radius:12px;padding:20px;text-align:center"><div style="font-size:28px;font-weight:800;color:#16a34a">${r}%</div><div style="font-size:13px;color:#6b7280;margin-top:4px">Richtigquote</div></div></td>` : ""}
+      </tr></table>`;
+    }
+
+    function btn(text, url, urgent) {
+      const bg = urgent ? "background:linear-gradient(135deg,#dc2626 0%,#ef4444 100%)" : "background:linear-gradient(135deg,#1e3a8a 0%,#2563eb 100%)";
+      return `<table role="presentation" cellpadding="0" cellspacing="0" style="margin:24px 0"><tr><td style="${bg};border-radius:10px;text-align:center"><a href="${url}" style="display:inline-block;padding:14px 32px;color:#ffffff;font-weight:700;font-size:16px;text-decoration:none">${text}</a></td></tr></table>`;
+    }
+
+    function countdown(days) {
+      return `<div style="background:linear-gradient(135deg,#1e3a8a,#2563eb);border-radius:12px;padding:24px;text-align:center;margin:20px 0"><div style="font-size:36px;font-weight:900;color:#ffffff">${days}</div><div style="font-size:14px;color:rgba(255,255,255,0.8);margin-top:4px">Tage bis zum MedAT</div></div>`;
+    }
+
+    const templates = {
+      "trial-ending-7d": () => `
+        <h1 style="font-size:24px;font-weight:800;color:#1e3a8a;margin:0 0 20px">Noch 7 Tage gratis lernen</h1>
+        <p style="margin:0 0 16px">Hallo ${data.displayName},</p>
+        <p style="margin:0 0 16px">Dein kostenloser Zugang zu MedMaster endet am <strong>1. April</strong>.</p>
+        ${statCards(data.questionsAnswered, data.correctRate)}
+        <p style="margin:0 0 8px">Fur einmalig <strong>&euro;29,90</strong> unbegrenzten Zugang &mdash; kein Abo, keine versteckten Kosten.</p>
+        ${btn("Jetzt Premium sichern", "#")}
+        <p style="color:#6b7280;font-size:13px;margin:0">Viel Erfolg beim Lernen!</p>`,
+      "trial-ending-3d": () => `
+        <h1 style="font-size:24px;font-weight:800;color:#1e3a8a;margin:0 0 20px">72 Stunden bis zum Ende</h1>
+        <p style="margin:0 0 16px">Hallo ${data.displayName},</p>
+        <p style="margin:0 0 16px">Am <strong>1. April</strong> endet dein kostenloser Zugang.</p>
+        ${statCards(data.questionsAnswered, data.correctRate)}
+        <p style="margin:0 0 8px">Fur einmalig <strong>&euro;29,90</strong> behaltst du alles.</p>
+        ${btn("Weiterlernen fur \u20AC29,90", "#")}`,
+      "trial-ending-today": () => `
+        <h1 style="font-size:24px;font-weight:800;color:#dc2626;margin:0 0 20px">Letzter Tag</h1>
+        <p style="margin:0 0 16px">Hallo ${data.displayName},</p>
+        <p style="margin:0 0 16px"><strong>Heute</strong> endet dein kostenloser Zugang. Ab morgen sind alle Premium-Inhalte gesperrt.</p>
+        ${statCards(data.questionsAnswered, data.correctRate)}
+        <p style="margin:0 0 8px">Der MedAT kommt &mdash; einmalig &euro;29,90, kein Abo.</p>
+        ${btn("Jetzt freischalten", "#", true)}
+        <p style="color:#6b7280;font-size:13px;margin:0">Fragen? Antworte einfach auf diese E-Mail.</p>`,
+      "post-trial-day1": () => `
+        <h1 style="font-size:24px;font-weight:800;color:#1e3a8a;margin:0 0 20px">Dein Zugang ist abgelaufen</h1>
+        <p style="margin:0 0 16px">Hallo ${data.displayName},</p>
+        <table role="presentation" width="100%" style="margin:16px 0;background:#fef2f2;border-radius:12px"><tr><td style="padding:12px 20px;font-size:14px;color:#991b1b;border-bottom:1px solid #fecaca">Kein Zugriff auf 5.230+ BMS-Fragen</td></tr><tr><td style="padding:12px 20px;font-size:14px;color:#991b1b;border-bottom:1px solid #fecaca">Kein KFF-Generator</td></tr><tr><td style="padding:12px 20px;font-size:14px;color:#991b1b;border-bottom:1px solid #fecaca">Keine MedAT-Simulationen</td></tr><tr><td style="padding:12px 20px;font-size:14px;color:#991b1b">Kein Spaced Repetition</td></tr></table>
+        <div style="background:#f0f4ff;border-radius:12px;padding:16px 20px;margin:16px 0;border-left:4px solid #2563eb"><p style="margin:0;font-size:14px;color:#1e3a8a"><strong>Fortschritt gesichert:</strong> ${data.questionsAnswered} Fragen, ${data.correctRate}% richtig.</p></div>
+        ${btn("Fur \u20AC29,90 weiterlernen", "#")}`,
+      "post-trial-day3": () => `
+        <h1 style="font-size:24px;font-weight:800;color:#1e3a8a;margin:0 0 20px">3 Fehler, die 80% machen</h1>
+        <p style="margin:0 0 16px">Hallo ${data.displayName},</p>
+        <table role="presentation" width="100%" style="margin:0 0 20px"><tr><td style="padding:16px 20px;background:#fef3c7;border-radius:12px 12px 0 0;border-bottom:1px solid #fde68a"><strong style="color:#92400e">1. Zu wenig Chemie</strong><p style="margin:8px 0 0;font-size:14px;color:#78350f">Chemie bringt die gleichen Punkte wie Bio.</p></td></tr><tr><td style="padding:16px 20px;background:#fef3c7;border-bottom:1px solid #fde68a"><strong style="color:#92400e">2. Typ-K unterschatzen</strong><p style="margin:8px 0 0;font-size:14px;color:#78350f">Andere Strategie als Einzelauswahl notig.</p></td></tr><tr><td style="padding:16px 20px;background:#fef3c7;border-radius:0 0 12px 12px"><strong style="color:#92400e">3. KFF nicht uben</strong><p style="margin:8px 0 0;font-size:14px;color:#78350f">Nur Wiederholung verbessert Zahlenfolgen.</p></td></tr></table>
+        ${btn("MedMaster freischalten", "#")}`,
+      "post-trial-day7": () => `
+        <h1 style="font-size:24px;font-weight:800;color:#1e3a8a;margin:0 0 20px">Eine Woche ohne Lernen?</h1>
+        <p style="margin:0 0 16px">Hallo ${data.displayName},</p>
+        <p style="margin:0 0 16px"><strong>${data.questionsAnswered} Fragen</strong> beantwortet. Dieser Fortschritt ist noch da.</p>
+        ${countdown(data.daysUntilExam)}
+        ${btn("Jetzt weitermachen", "#")}`,
+      "welcome": () => `
+        <h1 style="font-size:24px;font-weight:800;color:#1e3a8a;margin:0 0 20px">Deine MedAT-Vorbereitung startet jetzt</h1>
+        <p style="margin:0 0 16px">Hallo ${data.displayName},</p>
+        <table role="presentation" width="100%" style="margin:0 0 24px"><tr><td width="48%" style="padding:0 8px 8px 0"><div style="background:#f0f4ff;border-radius:12px;padding:20px"><div style="font-size:28px;margin-bottom:8px">&#128218;</div><strong style="color:#1e3a8a;font-size:14px">5.230+ BMS-Fragen</strong><p style="margin:6px 0 0;font-size:13px;color:#6b7280">Bio, Chemie, Physik, Mathe</p></div></td><td width="48%" style="padding:0 0 8px 0"><div style="background:#f0fdf4;border-radius:12px;padding:20px"><div style="font-size:28px;margin-bottom:8px">&#129513;</div><strong style="color:#16a34a;font-size:14px">KFF-Generator</strong><p style="margin:6px 0 0;font-size:13px;color:#6b7280">Zahlenfolgen, Figuren, WF</p></div></td></tr><tr><td width="48%" style="padding:0 8px 0 0"><div style="background:#fef3c7;border-radius:12px;padding:20px"><div style="font-size:28px;margin-bottom:8px">&#128221;</div><strong style="color:#92400e;font-size:14px">TV & SEK</strong><p style="margin:6px 0 0;font-size:13px;color:#6b7280">Textverstandnis & Entscheiden</p></div></td><td width="48%"><div style="background:#fdf2f8;border-radius:12px;padding:20px"><div style="font-size:28px;margin-bottom:8px">&#9201;&#65039;</div><strong style="color:#9d174d;font-size:14px">Simulationen</strong><p style="margin:6px 0 0;font-size:13px;color:#6b7280">Originalgetreue MedAT-Ubungen</p></div></td></tr></table>
+        <div style="background:#f0f4ff;border-radius:12px;padding:16px 20px;border-left:4px solid #2563eb"><p style="margin:0;font-size:14px;color:#1e3a8a"><strong>Tipp:</strong> Starte mit dem BMS-Bereich.</p></div>
+        ${btn("Jetzt loslegen", "#")}
+        <p style="color:#6b7280;font-size:13px;margin:0">Kostenlos bis 1. April &mdash; danach einmalig &euro;29,90.</p>`,
+      "weekly-progress": () => `
+        <h1 style="font-size:24px;font-weight:800;color:#1e3a8a;margin:0 0 20px">Dein Fortschritt diese Woche</h1>
+        <p style="margin:0 0 16px">Hallo ${data.displayName},</p>
+        ${statCards(data.questionsAnswered, data.correctRate)}
+        ${countdown(data.daysUntilExam)}
+        ${btn("Weiterlernen", "#")}`
+    };
+
+    function shell(body) {
+      return `<!DOCTYPE html><html lang="de"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width"/></head>
+<body style="margin:0;padding:0;background:#f3f4f6">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f3f4f6"><tr><td align="center" style="padding:32px 16px">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:580px;background:#ffffff;border-radius:16px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,0.08)">
+<tr><td style="background:linear-gradient(135deg,#1e3a8a 0%,#1b3ea7 50%,#2563eb 100%);padding:28px 32px;text-align:center">
+<table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto"><tr>
+<td style="vertical-align:middle;padding-right:12px"><div style="width:40px;height:40px;background:rgba(255,255,255,0.15);border-radius:10px;text-align:center;line-height:40px"><span style="color:#ffffff;font-size:22px;font-weight:900">M</span></div></td>
+<td style="vertical-align:middle"><span style="color:#ffffff;font-size:24px;font-weight:800;letter-spacing:-0.02em">Med</span><span style="color:#93c5fd;font-size:24px;font-weight:800;letter-spacing:-0.02em">Master</span></td>
+</tr></table>
+<p style="color:rgba(255,255,255,0.7);font-size:13px;margin:8px 0 0;font-weight:500">Deine MedAT-Vorbereitung</p>
+</td></tr>
+<tr><td style="padding:32px 32px 8px;color:#1f2937;font-size:15px;line-height:1.7">${body}</td></tr>
+<tr><td style="padding:0 32px 28px"><hr style="border:none;border-top:1px solid #e5e7eb;margin:24px 0 20px"/>
+<p style="font-size:12px;color:#9ca3af;text-align:center;margin:0 0 8px">MedMaster &mdash; MedAT 2026 Vorbereitung</p>
+<p style="font-size:12px;color:#9ca3af;text-align:center;margin:0"><a href="#" style="color:#9ca3af;text-decoration:underline">Abmelden</a> &middot; <a href="#" style="color:#9ca3af;text-decoration:underline">Datenschutz</a> &middot; <a href="#" style="color:#9ca3af;text-decoration:underline">medmaster.at</a></p>
+</td></tr></table></td></tr></table></body></html>`;
+    }
+
+    function render() {
+      const tid = document.getElementById("template").value;
+      const w = parseInt(document.getElementById("width").value);
+      const frame = document.getElementById("frame");
+      frame.width = w;
+      frame.srcdoc = shell(templates[tid]());
+    }
+
+    document.getElementById("template").onchange = render;
+    document.getElementById("width").onchange = render;
+    render();
+  </script>
+</body>
+</html>

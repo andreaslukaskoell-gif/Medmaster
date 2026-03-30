@@ -1,3 +1,4 @@
+import { Check } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export type SectionTOCItem = { id: string; title: string };
@@ -8,6 +9,8 @@ type SectionTOCProps = {
   onSelect: (id: string) => void;
   /** "left" = sidebar-style: narrow, minimal */
   variant?: "default" | "left";
+  /** Set of section IDs the user has scrolled past */
+  readSections?: Set<string>;
   className?: string;
 };
 
@@ -16,6 +19,7 @@ export function SectionTOC({
   currentSectionId,
   onSelect,
   variant = "default",
+  readSections,
   className,
 }: SectionTOCProps) {
   if (sections.length === 0) return null;
@@ -37,6 +41,7 @@ export function SectionTOC({
       <ul className="space-y-0.5 border-l border-[var(--border)]">
         {sections.map((section) => {
           const isCurrent = currentSectionId === section.id;
+          const isRead = readSections?.has(section.id) && !isCurrent;
           return (
             <li key={section.id}>
               <button
@@ -44,13 +49,18 @@ export function SectionTOC({
                 onClick={() => onSelect(section.id)}
                 className={cn(
                   "w-full text-left text-[13px] leading-snug transition-colors",
-                  "pl-3.5 py-1.5 -ml-px border-l-2",
+                  "pl-3.5 py-1.5 -ml-px border-l-2 flex items-center gap-1.5",
                   "focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]",
                   isCurrent
                     ? "border-[var(--accent)] text-[var(--text-primary)] font-medium"
-                    : "border-transparent text-[var(--muted)] hover:text-[var(--text-primary)] hover:border-[var(--border)]"
+                    : isRead
+                      ? "border-transparent text-[var(--muted)] hover:text-[var(--text-primary)] hover:border-[var(--border)]"
+                      : "border-transparent text-[var(--muted)] hover:text-[var(--text-primary)] hover:border-[var(--border)]"
                 )}
               >
+                {isRead && (
+                  <Check className="w-3 h-3 shrink-0 text-emerald-500 dark:text-emerald-400" aria-label="Gelesen" />
+                )}
                 <span className="line-clamp-2">{section.title}</span>
               </button>
             </li>
