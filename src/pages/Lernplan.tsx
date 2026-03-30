@@ -93,11 +93,11 @@ export default function Lernplan() {
   return (
     <div className="max-w-5xl mx-auto space-y-8">
       {/* Hero */}
-      <div className="hero-gradient text-center py-8">
-        <h1 className="text-[3rem] leading-tight font-bold text-white heading-glow relative z-10">
+      <div className="hero-orbs text-center py-8">
+        <h1 className="text-[3rem] leading-tight font-bold text-[var(--text-primary)] heading-glow">
           Lernplan
         </h1>
-        <p className="text-white/70 mt-2 relative z-10">Dein persönlicher Weg zum MedAT</p>
+        <p className="text-[var(--muted)] mt-2">Dein persönlicher Weg zum MedAT</p>
       </div>
 
       {/* Tier Selector */}

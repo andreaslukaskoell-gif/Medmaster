@@ -43,8 +43,8 @@ export default function Pricing() {
     <div className="max-w-3xl mx-auto space-y-8">
       <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "Preise" }]} />
 
-      <div className="text-center space-y-3 hero-orbs">
-        <h1 className="text-3xl font-bold text-[var(--text-primary)]">
+      <div className="text-center space-y-3 hero-orbs py-8">
+        <h1 className="heading-glow text-2xl sm:text-[3rem] sm:leading-tight font-bold text-[var(--text-primary)]">
           Alles. Ein Preis. Kein Abo.
         </h1>
         <p className="text-[var(--muted)] max-w-lg mx-auto">

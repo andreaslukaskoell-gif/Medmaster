@@ -351,7 +351,7 @@ export default function PaidLandingBMS() {
           <motion.h1
             {...fade}
             transition={{ ...fade.transition, delay: 0.1 }}
-            className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[var(--text-primary)] leading-[1.15] sm:leading-[1.1] tracking-tight mb-5 sm:mb-8"
+            className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[var(--text-primary)] leading-[1.15] sm:leading-[1.1] tracking-tight mb-5 sm:mb-8 heading-glow"
           >
             BMS ist 40 % deiner
             <br />
@@ -428,7 +428,7 @@ export default function PaidLandingBMS() {
       <section className="py-12 sm:py-24">
         <div className="max-w-3xl mx-auto px-5 sm:px-8">
           <motion.div {...fade} className="text-center mb-16">
-            <h2 className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)] mb-4">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)] mb-4 heading-glow">
               BMS ist kein Auswendiglernen — es ist ein System
             </h2>
             <p className="text-base text-[var(--text-secondary)] max-w-lg mx-auto">
@@ -481,7 +481,7 @@ export default function PaidLandingBMS() {
       <section className="py-12 sm:py-24 border-t border-[var(--border)]/50">
         <div className="max-w-4xl mx-auto px-5 sm:px-8">
           <motion.div {...fade} className="text-center mb-16">
-            <h2 className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)] mb-4">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)] mb-4 heading-glow">
               Alle 4 BMS-Fächer. Lückenlos.
             </h2>
             <p className="text-base text-[var(--text-secondary)] max-w-lg mx-auto">
@@ -546,7 +546,7 @@ export default function PaidLandingBMS() {
       <section className="py-12 sm:py-24 border-t border-[var(--border)]/50">
         <div className="max-w-4xl mx-auto px-5 sm:px-8">
           <motion.div {...fade} className="text-center mb-16">
-            <h2 className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)] mb-4">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)] mb-4 heading-glow">
               Kein Fragenpool. Ein Lernsystem.
             </h2>
             <p className="text-base text-[var(--text-secondary)] max-w-lg mx-auto">
@@ -593,7 +593,7 @@ export default function PaidLandingBMS() {
       <section className="py-12 sm:py-24 border-t border-[var(--border)]/50">
         <div className="max-w-3xl mx-auto px-5 sm:px-8">
           <motion.div {...fade} className="text-center mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)] mb-4">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)] mb-4 heading-glow">
               Eine BMS-Frage. Weißt du die Antwort?
             </h2>
             <p className="text-base text-[var(--text-secondary)] max-w-md mx-auto">

@@ -1158,11 +1158,11 @@ export default function Simulation() {
 
     return (
       <div className={`max-w-5xl mx-auto space-y-6 ${isMobile ? "px-3" : ""}`}>
-        <div className="hero-gradient text-center py-8">
-          <h1 className="text-[3rem] leading-tight font-bold text-white heading-glow relative z-10">
+        <div className="hero-orbs text-center py-8">
+          <h1 className="text-[3rem] leading-tight font-bold text-[var(--text-primary)] heading-glow">
             Testsimulation
           </h1>
-          <p className="text-white/70 mt-2 relative z-10">
+          <p className="text-[var(--muted)] mt-2">
             Simuliere den MedAT-H unter realistischen Bedingungen.
           </p>
         </div>
@@ -1625,8 +1625,10 @@ export default function Simulation() {
 
     return (
       <div className={`max-w-5xl mx-auto space-y-6 ${isMobile ? "px-3" : ""}`}>
-        <div className="hero-orbs text-center py-4">
-          <h1 className="text-2xl font-bold text-[var(--text-primary)]">Simulationsergebnis</h1>
+        <div className="hero-orbs text-center py-8">
+          <h1 className="heading-glow text-2xl sm:text-[3rem] sm:leading-tight font-bold text-[var(--text-primary)]">
+            Simulationsergebnis
+          </h1>
         </div>
 
         {/* Overall score */}

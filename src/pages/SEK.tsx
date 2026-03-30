@@ -180,34 +180,29 @@ export default function SEK() {
   return (
     <div className={`max-w-5xl mx-auto space-y-6 ${isMobile ? "px-3" : ""}`}>
       {/* Header */}
-      <div className="hero-gradient text-center py-8">
+      <div className="hero-orbs text-center py-8">
         <div
-          className={`flex ${isMobile ? "flex-col gap-1" : "items-center gap-3 justify-center"} mb-1 relative z-10`}
+          className={`flex ${isMobile ? "flex-col gap-1" : "items-center gap-3 justify-center"} mb-1`}
         >
           <h1
-            className={`${isMobile ? "text-xl" : "text-[3rem] leading-tight"} font-bold text-white heading-glow`}
+            className={`${isMobile ? "text-xl" : "text-[3rem] leading-tight"} font-bold text-[var(--text-primary)] heading-glow`}
           >
             Sozial-emotionale Kompetenzen
           </h1>
-          <span className="text-xs font-medium text-white/60 bg-white/10 border border-white/20 px-2 py-0.5 rounded w-fit">
+          <span className="text-xs font-medium text-[var(--muted)] bg-[var(--surface)] border border-[var(--border)] px-2 py-0.5 rounded w-fit">
             10 % des MedAT
           </span>
         </div>
         <div
-          className={`flex ${isMobile ? "flex-col gap-2" : "items-center gap-4 justify-center"} text-sm text-white/70 relative z-10`}
+          className={`flex ${isMobile ? "flex-col gap-2" : "items-center gap-4 justify-center"} text-sm text-[var(--muted)]`}
         >
           <span>3 Untertests · 7 Basisemotionen nach Ekman</span>
-          <Button
-            variant="outline"
-            size="sm"
-            className="border-white/30 text-white hover:bg-white/10"
-            onClick={() => setView("strategy")}
-          >
+          <Button variant="outline" size="sm" onClick={() => setView("strategy")}>
             <BookOpen className="w-4 h-4 mr-1" /> Strategie
           </Button>
         </div>
         {dailyPlanSek != null && dailyPlanSek.length > 0 && (
-          <div className="text-xs text-white/80 font-medium mt-2 relative z-10">
+          <div className="text-xs text-[var(--accent)] font-medium mt-2">
             Lernplan heute:{" "}
             {dailyPlanSek
               .map((t) => `${t.label}: ${t.count} ${t.count === 1 ? "Beispiel" : "Beispiele"}`)

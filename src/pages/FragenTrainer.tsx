@@ -237,11 +237,11 @@ function SelectionScreen({
 
   return (
     <div className="max-w-5xl mx-auto space-y-5">
-      <div className="hero-gradient text-center py-8">
-        <h1 className="text-[3rem] leading-tight font-bold text-white heading-glow relative z-10">
+      <div className="hero-orbs text-center py-8">
+        <h1 className="text-[3rem] leading-tight font-bold text-[var(--text-primary)] heading-glow">
           Fragen-Trainer
         </h1>
-        <p className="text-sm text-white/70 mt-2 relative z-10">
+        <p className="text-sm text-[var(--muted)] mt-2">
           BMS: Fach wählen, dann trainieren oder offizielle Zeitvorgabe
         </p>
       </div>
