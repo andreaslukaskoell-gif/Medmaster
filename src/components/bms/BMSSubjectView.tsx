@@ -34,7 +34,7 @@ export function BMSSubjectView({
   const kapitel = Array.isArray(roadmapChapters) ? roadmapChapters : [];
   const accentColor = subjectAccentVars[subjectData.id] ?? "var(--accent)";
   const { getLimit } = usePermissions();
-  const chapterLimit = getLimit("bms_chapters"); // null = unlimited
+  const ukLimit = getLimit("bms_uks_per_subject"); // null = unlimited
 
   if (kapitel.length === 0) {
     return (
@@ -59,8 +59,15 @@ export function BMSSubjectView({
   const overallPct = subjectUK > 0 ? Math.round((subjectCompletedUK / subjectUK) * 100) : 0;
 
   // Find first chapter with incomplete UKs (only within free chapters)
-  const freeChapters = chapterLimit !== null ? kapitel.slice(0, chapterLimit) : kapitel;
-  const firstIncompleteChapter = freeChapters.find((kap) => {
+  // Pre-compute cumulative UK counts for gating
+  const cumulativeUKsBefore = kapitel.reduce<number[]>((acc, _kap, i) => {
+    const prev = i === 0 ? 0 : acc[i - 1] + (kapitel[i - 1]?.unterkapitel?.length ?? 0);
+    acc.push(prev);
+    return acc;
+  }, []);
+
+  // All chapters accessible; UK limit enforced inside chapter view
+  const firstIncompleteChapter = kapitel.find((kap) => {
     if (!kap?.unterkapitel) return false;
     const done = kap.unterkapitel.filter((u) => u?.id && completedChapters.includes(u.id)).length;
     return done < kap.unterkapitel.length;
@@ -146,7 +153,6 @@ export function BMSSubjectView({
             if (!kap || !kap.id || typeof kap.id !== "string" || typeof kap.title !== "string") {
               return null;
             }
-            const isLocked = chapterLimit !== null && index >= chapterLimit;
             const ukTotal =
               kap.unterkapitel && Array.isArray(kap.unterkapitel) ? kap.unterkapitel.length : 0;
             const ukDone =
@@ -155,17 +161,21 @@ export function BMSSubjectView({
                     .length
                 : 0;
             const isCompleted =
-              !isLocked &&
-              (completedChapters.includes(kap.id) || (ukTotal > 0 && ukDone === ukTotal));
+              completedChapters.includes(kap.id) || (ukTotal > 0 && ukDone === ukTotal);
             const progressPct = ukTotal > 0 ? (ukDone / ukTotal) * 100 : 0;
-            const isCurrent = !isLocked && kap.id === firstIncompleteChapter?.id;
+            const isCurrent = kap.id === firstIncompleteChapter?.id;
+            // Show how many UKs are free in this chapter
+            const cumBefore = cumulativeUKsBefore[index] ?? 0;
+            const freeUKs = ukLimit !== null ? Math.max(0, ukLimit - cumBefore) : ukTotal;
+            const isPartiallyLocked = ukLimit !== null && freeUKs < ukTotal && freeUKs > 0;
+            const isFullyLocked = ukLimit !== null && freeUKs === 0;
 
             return (
               <button
                 key={kap.id}
-                onClick={() => !isLocked && onSelectChapter(kap)}
+                onClick={() => !isFullyLocked && onSelectChapter(kap)}
                 className={`w-full text-left py-4 px-5 transition-colors flex items-center gap-4 ${
-                  isLocked
+                  isFullyLocked
                     ? "opacity-50 cursor-default"
                     : isCurrent
                       ? "bg-[var(--surface)] hover:bg-[var(--surface)] cursor-pointer"
@@ -173,7 +183,7 @@ export function BMSSubjectView({
                 }`}
               >
                 {/* Chapter number / lock */}
-                {isLocked ? (
+                {isFullyLocked ? (
                   <Lock className="w-5 h-5 text-[var(--muted)] shrink-0" />
                 ) : isCompleted ? (
                   <CheckCircle2 className="w-5 h-5 text-emerald-500 shrink-0" />
@@ -191,26 +201,28 @@ export function BMSSubjectView({
                 {/* Chapter info */}
                 <div className="flex-1 min-w-0">
                   <h3
-                    className={`font-medium text-sm ${isLocked || isCompleted ? "text-[var(--muted)]" : "text-[var(--text-primary)]"}`}
+                    className={`font-medium text-sm ${isFullyLocked || isCompleted ? "text-[var(--muted)]" : "text-[var(--text-primary)]"}`}
                   >
                     {kap.title || "Untitled Chapter"}
                   </h3>
                   <div className="flex items-center gap-3 mt-0.5 text-xs text-[var(--muted)]">
-                    <span>{ukTotal} UK</span>
+                    <span>
+                      {isPartiallyLocked ? `${freeUKs}/${ukTotal} UK frei` : `${ukTotal} UK`}
+                    </span>
                     {kap.estimatedTime && (
                       <span className="flex items-center gap-1">
                         <Clock className="w-3 h-3" />
                         {kap.estimatedTime}
                       </span>
                     )}
-                    {!isLocked && ukDone > 0 && !isCompleted && (
+                    {!isFullyLocked && ukDone > 0 && !isCompleted && (
                       <span style={{ color: accentColor }}>
                         {ukDone}/{ukTotal}
                       </span>
                     )}
                   </div>
                   {/* Inline progress bar */}
-                  {!isLocked && ukTotal > 0 && progressPct > 0 && !isCompleted && (
+                  {!isFullyLocked && ukTotal > 0 && progressPct > 0 && !isCompleted && (
                     <div className="w-full bg-[var(--border)] rounded-full h-1 mt-2 max-w-[200px]">
                       <div
                         className="h-1 rounded-full transition-all duration-500"
@@ -224,8 +236,10 @@ export function BMSSubjectView({
                 </div>
 
                 {/* Current badge or chevron */}
-                {isLocked ? (
+                {isFullyLocked ? (
                   <span className="text-xs text-[var(--muted)] shrink-0">Premium</span>
+                ) : isPartiallyLocked ? (
+                  <span className="text-xs text-[var(--accent)] shrink-0">{freeUKs} frei</span>
                 ) : isCurrent && !isCompleted ? (
                   <ChevronRight className="w-5 h-5 shrink-0" style={{ color: accentColor }} />
                 ) : (
@@ -234,9 +248,9 @@ export function BMSSubjectView({
               </button>
             );
           })}
-          {chapterLimit !== null && kapitel.length > chapterLimit && (
+          {ukLimit !== null && (
             <div className="p-4">
-              <PaywallBanner feature={`Alle ${kapitel.length} Kapitel freischalten`} />
+              <PaywallBanner feature="Alle Unterkapitel freischalten" />
             </div>
           )}
         </div>

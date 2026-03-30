@@ -1,6 +1,14 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useMemo, useEffect, useRef } from "react";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
-import { ChevronLeft, ChevronRight, CheckCircle2, Clock, Play, ArrowRight } from "lucide-react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  CheckCircle2,
+  Clock,
+  Play,
+  ArrowRight,
+  Lock,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useStore } from "@/store/useStore";
 import { useAdaptiveStore } from "@/store/adaptiveLearning";
@@ -10,6 +18,8 @@ import { pathForSubject, pathForChapter } from "@/lib/bmsRoutes";
 import type { Kapitel } from "@/data/bmsKapitel/types";
 import { getKapitelById } from "@/data/bmsKapitel";
 import BMSUnterkapitel from "./BMSUnterkapitel";
+import { usePermissions } from "@/hooks/usePermissions";
+import { PaywallBanner } from "@/components/ui/paywall";
 
 interface Props {
   kapitel: Kapitel;
@@ -138,7 +148,7 @@ export default function BMSKapitelView({
         kapitel={kapitel}
         unterkapitelIndex={activeUKIndex}
         onBack={() => setActiveUKIndex(null)}
-        onNavigate={(idx) => setActiveUKIndex(idx)}
+        onNavigate={(idx) => idx < freeUKsInChapter && setActiveUKIndex(idx)}
         onPrevChapter={
           onGoToChapter && hasPrevChapter
             ? () => onGoToChapter(prevChapter.id, prevChapter.unterkapitel!.length - 1)
@@ -151,8 +161,23 @@ export default function BMSKapitelView({
     );
   }
 
+  const { getLimit } = usePermissions();
+  const ukLimit = getLimit("bms_uks_per_subject"); // null = unlimited
+
+  // Count UKs in chapters before this one in the same subject
+  const uksBefore = useMemo(() => {
+    return chaptersInSubject
+      .slice(0, currentChapterIndex)
+      .reduce((sum, ch) => sum + (ch?.unterkapitel?.length ?? 0), 0);
+  }, [chaptersInSubject, currentChapterIndex]);
+
+  // How many UKs in this chapter are free
+  const freeUKsInChapter =
+    ukLimit !== null ? Math.min(totalUK, Math.max(0, ukLimit - uksBefore)) : totalUK;
+
   const firstIncomplete = unterkapitel.findIndex(
-    (u) => u && u.id && !completedChapters.includes(u.id)
+    (u, i) =>
+      u && u.id && !completedChapters.includes(u.id) && (ukLimit === null || i < freeUKsInChapter)
   );
 
   const accentColor = subjectAccentVars[kapitel.subject] ?? "var(--accent)";
@@ -260,18 +285,25 @@ export default function BMSKapitelView({
           >
             {unterkapitel.map((uk, index) => {
               if (!uk || !uk.id) return null;
-              const isDone = completedChapters.includes(uk.id);
-              const isCurrent = firstIncomplete === index;
+              const isUKLocked = index >= freeUKsInChapter;
+              const isDone = !isUKLocked && completedChapters.includes(uk.id);
+              const isCurrent = !isUKLocked && firstIncomplete === index;
               return (
                 <button
                   key={uk.id}
-                  className={`w-full text-left flex items-center gap-4 py-4 px-5 hover:bg-[var(--surface)] transition-colors cursor-pointer ${
-                    isCurrent ? "bg-[var(--surface)]" : ""
+                  className={`w-full text-left flex items-center gap-4 py-4 px-5 transition-colors ${
+                    isUKLocked
+                      ? "opacity-50 cursor-default"
+                      : isCurrent
+                        ? "bg-[var(--surface)] hover:bg-[var(--surface)] cursor-pointer"
+                        : "hover:bg-[var(--surface)] cursor-pointer"
                   }`}
-                  onClick={() => saveScrollAndOpen(index)}
+                  onClick={() => !isUKLocked && saveScrollAndOpen(index)}
                 >
                   {/* Status indicator */}
-                  {isDone ? (
+                  {isUKLocked ? (
+                    <Lock className="w-5 h-5 text-[var(--muted)] shrink-0" />
+                  ) : isDone ? (
                     <CheckCircle2 className="w-5 h-5 text-emerald-500 shrink-0" />
                   ) : (
                     <span
@@ -291,18 +323,16 @@ export default function BMSKapitelView({
                   {/* Title */}
                   <span
                     className={`flex-1 min-w-0 text-sm font-medium ${
-                      isDone
-                        ? "text-[var(--muted)]"
-                        : isCurrent
-                          ? "text-[var(--text-primary)]"
-                          : "text-[var(--text-primary)]"
+                      isUKLocked || isDone ? "text-[var(--muted)]" : "text-[var(--text-primary)]"
                     }`}
                   >
                     {uk.title || "Untitled Subchapter"}
                   </span>
 
                   {/* Current indicator */}
-                  {isCurrent && !isDone ? (
+                  {isUKLocked ? (
+                    <span className="text-xs text-[var(--muted)] shrink-0">Premium</span>
+                  ) : isCurrent && !isDone ? (
                     <ChevronRight className="w-5 h-5 shrink-0" style={{ color: accentColor }} />
                   ) : !isDone ? (
                     <ChevronRight className="w-4 h-4 text-[var(--muted)]/50 shrink-0" />
@@ -310,6 +340,11 @@ export default function BMSKapitelView({
                 </button>
               );
             })}
+            {freeUKsInChapter < totalUK && (
+              <div className="p-4">
+                <PaywallBanner feature={`Alle ${totalUK} Unterkapitel freischalten`} />
+              </div>
+            )}
           </div>
         )}
       </div>

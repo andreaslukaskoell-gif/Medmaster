@@ -6,9 +6,16 @@ type Tier = "starter" | "premium";
 export type FeatureLimits = {
   bms_questions: number | "unlimited";
   bms_chapters: number | "unlimited";
+  /** Free UKs per BMS subject (first N UKs of first chapter) */
+  bms_uks_per_subject: number | "unlimited";
   kff_exercises: number | "unlimited";
+  /** Free KFF exercises per subtest (GM has separate limit) */
+  kff_per_subtest: number | "unlimited";
+  kff_gm: number | "unlimited";
   tv_texts: number | "unlimited";
   sek_situations: number | "unlimited";
+  /** Free SEK tasks per subtest (Erkennen/Regulieren/Entscheiden) */
+  sek_per_subtest: number | "unlimited";
   simulations: number | "unlimited";
   ai_tutor: boolean;
   weakness_analysis: boolean;
@@ -20,10 +27,14 @@ export type FeatureLimits = {
 const LIMITS: Record<Tier, FeatureLimits> = {
   starter: {
     bms_questions: 50,
-    bms_chapters: 5,
+    bms_chapters: "unlimited",
+    bms_uks_per_subject: 2,
     kff_exercises: 10,
+    kff_per_subtest: 20,
+    kff_gm: 8,
     tv_texts: 2,
     sek_situations: 5,
+    sek_per_subtest: 5,
     simulations: 0,
     ai_tutor: false,
     weakness_analysis: false,
@@ -34,9 +45,13 @@ const LIMITS: Record<Tier, FeatureLimits> = {
   premium: {
     bms_questions: "unlimited",
     bms_chapters: "unlimited",
+    bms_uks_per_subject: "unlimited",
     kff_exercises: "unlimited",
+    kff_per_subtest: "unlimited",
+    kff_gm: "unlimited",
     tv_texts: "unlimited",
     sek_situations: "unlimited",
+    sek_per_subtest: "unlimited",
     simulations: "unlimited",
     ai_tutor: true,
     weakness_analysis: true,
