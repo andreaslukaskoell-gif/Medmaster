@@ -841,7 +841,7 @@ Die **Räuberpopulation hinkt der Beutepopulation zeitlich nach** (Höhepunkt de
     {
       id: "bio-10-05",
       title: "Ökosysteme — Nahrungsketten, Stoffkreisläufe & Energiefluss",
-      imageUrl: "/images/bms/bio-nahrungsnetz.svg",
+      imageUrl: "/images/wiki-food-web-de.svg",
       imageCaption:
         "Abb.: Nahrungsnetz mit Produzenten, Konsumenten und Destruenten (Wikimedia Commons, CC0)",
       stichworte: [
@@ -1165,7 +1165,7 @@ Bestimmte Schadstoffe werden **nicht abgebaut** und reichern sich entlang der Na
     {
       id: "bio-10-06",
       title: "Populationsdynamik",
-      imageUrl: "/images/bms/bio-populationswachstum.svg",
+      imageUrl: "/images/wiki-population-curve-de.svg",
       imageCaption:
         "Abb.: Logistisches Populationswachstum mit Kapazitätsgrenze K (Wikimedia Commons, CC BY-SA 4.0)",
       stichworte: [
@@ -1809,7 +1809,7 @@ Das Komplementsystem ist ein kaskadenartiges System aus ca. 30 Plasmaproteinen, 
     {
       id: "bio-11-02",
       title: "Antikörper-Gene — V(D)J-Rekombination und Diversität",
-      imageUrl: "/images/bms/bio-antigene.jpg",
+      imageUrl: "/images/wiki-antibody-de.svg",
       imageCaption: "Abb.: Antigenpräsentation und Antikörpervielfalt (OpenStax, CC BY 4.0)",
       stichworte: [
         "Somatische Rekombination",
@@ -1994,7 +1994,7 @@ Neben der V(D)J-Rekombination und der somatischen Hypermutation verfügt das Imm
     {
       id: "bio-11-03",
       title: "Blutgruppen-Vererbung — AB0-System und Kodominanz",
-      imageUrl: "/images/bms/bio-blutgruppen.jpg",
+      imageUrl: "/images/wiki-abo-blood-de.svg",
       imageCaption: "Abb.: AB0-Blutgruppen — Antigene und Antikörper (OpenStax, CC BY 4.0)",
       stichworte: ["AB0-Vererbung", "Genotypen", "Phänotypen", "Kodominanz", "Multiple Allele"],
       content: `Das AB0-System verbindet Immunologie mit Genetik: Kohlenhydrat-Antigene auf Erythrozyten bestimmen Blutgruppe und Transfusionskompatibilität — ein Paradebeispiel für Kodominanz und multiple Allelie.

@@ -483,7 +483,7 @@ Beide Formen können zu **sexuellem Dimorphismus** (Geschlechtsunterschied in Gr
     {
       id: "bio-9-06",
       title: "Evolutionsfaktoren — Mutation, Drift und Hardy-Weinberg",
-      imageUrl: "/images/bms/bio-hardy-weinberg.svg",
+      imageUrl: "/images/wiki-hardy-weinberg-de.svg",
       imageCaption:
         "Abb.: Hardy-Weinberg-Gleichgewicht — Genotypfrequenzen (Wikimedia Commons, CC BY-SA 3.0)",
       stichworte: [
@@ -1442,7 +1442,7 @@ Pääbos Paläogenomik (Erbgutanalyse ausgestorbener Arten) verknüpft Hominiden
     {
       id: "bio-4-00",
       title: "Gametogenese — Spermatogenese und Oogenese",
-      imageUrl: "/images/bms/bio-spermatogenese-de.svg",
+      imageUrl: "/images/wiki-spermatogenesis-de.svg",
       imageCaption:
         "Abb.: Spermatogenese und Oogenese im Vergleich — 4 Spermien vs. 1 Eizelle + Polkörper",
       stichworte: [
@@ -1616,7 +1616,7 @@ Die reife **Eizelle** (n) nach Abschluss der Meiose II und die **Spermien** (n) 
     {
       id: "bio-4-01e",
       title: "Befruchtung",
-      imageUrl: "/images/bms/bio-befruchtung.png",
+      imageUrl: "/images/wiki-spermatogenesis-de.svg",
       imageCaption:
         "Abb.: Befruchtung — Verschmelzung von Spermium und Eizelle zur Zygote (Wikimedia Commons, CC0)",
       stichworte: [
@@ -2271,7 +2271,7 @@ Wenn der **posteriore Neuroporus** nicht schließt, kann es zur **Spina bifida**
     {
       id: "bio-9-11",
       title: "Organogenese, Embryo vs. Fetus und kritische Phasen",
-      imageUrl: "/images/bms/bio-organogenese.jpg",
+      imageUrl: "/images/wiki-placenta-de.svg",
       imageCaption:
         "Abb.: Vergleichende Embryonalentwicklung bei Wirbeltieren (Wikimedia Commons, Public Domain)",
       stichworte: [

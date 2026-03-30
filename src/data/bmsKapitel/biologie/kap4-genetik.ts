@@ -389,7 +389,7 @@ Chromosomenaberrationen (numerisch oder strukturell) verursachen schwerwiegende 
     {
       id: "bio-4-03",
       title: "Zellzyklus, Mitose und Meiose",
-      imageUrl: "/images/bms/bio-zellzyklus.jpg",
+      imageUrl: "/images/wiki-mitosis-sequence-de.svg",
       imageCaption: "Abb.: Phasen des Zellzyklus mit Interphase und M-Phase (OpenStax, CC BY 4.0)",
       stichworte: [
         "Mitose",
@@ -605,7 +605,7 @@ Der **Zellzyklus** umfasst die Vorbereitung der Zellteilung und die Teilung selb
     {
       id: "bio-4-04",
       title: "Mendelsche Regeln",
-      imageUrl: "/images/bms/bio-mendel-kreuzung-f2.svg",
+      imageUrl: "/images/wiki-punnett-square-de.svg",
       imageCaption:
         "Abb.: Kreuzungsschema eines dominant-rezessiven Erbgangs — F₂-Generation mit 3:1-Aufspaltung (Wikimedia Commons, CC0)",
       stichworte: [
@@ -1182,7 +1182,7 @@ Die **Sichelzellanämie** vereint mehrere Konzepte dieses Kapitels:
     {
       id: "bio-4-06",
       title: "Erbgänge: autosomal und X-chromosomal",
-      imageUrl: "",
+      imageUrl: "/images/wiki-x-linked-de.svg",
       imageCaption: "",
       stichworte: [
         "autosomal",
@@ -1435,7 +1435,7 @@ Das kranke Allel ist **dominant** auf dem X-Chromosom. **Kranker Vater (X^A Y):*
     {
       id: "bio-4-07",
       title: "Blutgruppen: AB0-System",
-      imageUrl: "",
+      imageUrl: "/images/wiki-x-linked-de.svg",
       imageCaption: "",
       stichworte: ["AB0", "Blutgruppe", "kodominant", "I^A", "I^B", "i", "Antigen", "Rhesus"],
       content: `Das AB0-Blutgruppensystem ist ein Musterbeispiel für Kodominanz und multiple Allele an einem einzigen Genort — und eine der beliebtesten MedAT-Aufgaben.
@@ -1913,7 +1913,7 @@ Im Kontext der Tumorbiologie: **Onkogene** (GOF in Protoonkogenen, z. B. RAS-Mut
     {
       id: "bio-4-09",
       title: "Von der DNA zum Merkmal: Genexpression",
-      imageUrl: "/images/bms/bio-transkription-translation.jpg",
+      imageUrl: "/images/wiki-protein-synthesis-de.svg",
       imageCaption:
         "Abb.: Vom Gen zum Protein — Transkription und Translation (OpenStax, CC BY 4.0)",
       stichworte: [
@@ -2169,7 +2169,7 @@ Vererbung bedeutet: Die DNA (Allele) wird über Keimzellen (Meiose) von Generati
     {
       id: "bio-4-10",
       title: "Tumorgenetik",
-      imageUrl: "",
+      imageUrl: "/images/wiki-x-linked-de.svg",
       imageCaption: "",
       stichworte: [
         "Tumorgenetik",
@@ -2517,7 +2517,7 @@ Das Verständnis der Tumorgenetik hat die Krebstherapie revolutioniert — Medik
     {
       id: "bio-4-11",
       title: "Epigenetik",
-      imageUrl: "/images/bms/bio-epigenetik.png",
+      imageUrl: "/images/wiki-dna-replication-de.svg",
       imageCaption:
         "Abb.: Epigenetische Mechanismen — DNA-Methylierung und Histonmodifikation (NIH/Wikimedia Commons, Public Domain)",
       stichworte: [
@@ -2742,7 +2742,7 @@ Frauen haben zwei X-Chromosomen (XX), Männer nur eines (XY). Damit Frauen nicht
     {
       id: "bio-4-12",
       title: "Methoden der Genetik & Gentechnik",
-      imageUrl: "/images/bms/bio-pcr-gentechnik.svg",
+      imageUrl: "/images/wiki-pcr-de.svg",
       imageCaption:
         "Abb.: Polymerase-Kettenreaktion (PCR) — Denaturierung, Annealing, Elongation (Wikimedia Commons, CC BY-SA 4.0)",
       stichworte: [
@@ -3054,7 +3054,7 @@ Beim **reproduktiven Klonen** wird ein genetisch identischer Organismus erzeugt.
     {
       id: "bio-4-13",
       title: "Humangenetik — Stammbaumanalyse und Besondere Erbgänge",
-      imageUrl: "/images/bms/bio-stammbaum-analyse.png",
+      imageUrl: "/images/wiki-autosomal-dominant-de.svg",
       imageCaption: "Abb.: Stammbaumanalyse — Symbole und Erbgang-Muster (Wikimedia Commons, CC0)",
       stichworte: [
         "Stammbaumanalyse",
