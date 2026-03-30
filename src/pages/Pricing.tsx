@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { usePageTitle } from "@/hooks/usePageTitle";
 import { useAuth } from "@/hooks/useAuth";
-import { startCheckout, isPaymentEnabled, formatPrice } from "@/lib/stripe";
+import { startCheckout, isPaymentEnabled, formatPrice, isEarlyBirdDay } from "@/lib/stripe";
 import { trackPricingView } from "@/lib/analytics";
 import { useReferralReward } from "@/hooks/useReferralReward";
 import { ReferralWidget } from "@/components/shared/ReferralWidget";
@@ -32,8 +32,9 @@ export default function Pricing() {
   const reward = useReferralReward();
 
   const isFreePromo = new Date() < new Date("2026-04-01T00:00:00+02:00");
-  const personalPrice = reward.personalPriceCents;
-  const hasDiscount = reward.hasReward;
+  const earlyBird = isEarlyBirdDay();
+  const personalPrice = earlyBird ? 2490 : reward.personalPriceCents;
+  const hasDiscount = earlyBird || reward.hasReward;
 
   useEffect(() => {
     trackPricingView();
@@ -86,7 +87,7 @@ export default function Pricing() {
                     </span>
                   </div>
                   <p className="text-sm text-emerald-600 dark:text-emerald-400 font-medium">
-                    Dein persönlicher Preis
+                    {earlyBird ? "Early-Bird — nur heute!" : "Dein persönlicher Preis"}
                   </p>
                 </>
               ) : (

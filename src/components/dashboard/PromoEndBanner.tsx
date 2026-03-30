@@ -3,6 +3,7 @@ import { Clock, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/useAuth";
 import { isPromoActive } from "@/lib/permissions";
+import { isEarlyBirdDay } from "@/lib/stripe";
 
 const PROMO_END = new Date("2026-04-01T00:00:00+02:00");
 
@@ -46,7 +47,9 @@ export function PromoEndBanner() {
               : `Noch ${daysLeft} Tage gratis`}
         </p>
         <p className="text-xs text-[var(--muted)]">
-          Ab 1. April kostet MedMaster einmalig €29,90. Sichere dir jetzt Premium.
+          {isEarlyBirdDay()
+            ? "Heute noch upgraden und €5 sparen — nur €24,90 statt €29,90!"
+            : "Ab 1. April kostet MedMaster einmalig €29,90. Sichere dir jetzt Premium."}
         </p>
       </div>
       <Link to="/preise" className="shrink-0">
