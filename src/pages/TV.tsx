@@ -23,6 +23,8 @@ import { usePageTitle } from "@/hooks/usePageTitle";
 import StrategyGuideView from "@/components/shared/StrategyGuideView";
 import { stripMarkdownAsterisks } from "@/utils/formatExplanation";
 import { useViewportMode } from "@/hooks/useViewportMode";
+import { useUsageLimits } from "@/hooks/useUsageLimits";
+import { Paywall } from "@/components/ui/paywall";
 import { tvStrategyGuide, tvTexts } from "@/data/tvData";
 import { tvTextSets } from "@/data/tvTextsExpanded";
 import { tvTextSets2 } from "@/data/tvTextsExpanded2";
@@ -53,6 +55,7 @@ const LABELS = ["A", "B", "C", "D", "E"];
 export default function TV() {
   usePageTitle("TV – Textverständnis");
   const { isMobile } = useViewportMode();
+  const { tvTextsExceeded, tvTextsUsed, tvTextsLimit } = useUsageLimits();
   const location = useLocation();
   const dailyPlanTvTexts = location.state?.dailyPlanTvTexts as number | undefined;
 
@@ -760,6 +763,18 @@ export default function TV() {
           </div>
         )}
       </div>
+
+      {tvTextsExceeded && (
+        <Paywall feature="TV-Textsets">
+          <div className="text-center py-12 space-y-3">
+            <h2 className="text-2xl font-bold text-[var(--text-primary)]">Textverständnis</h2>
+            <p className="text-[var(--muted)]">
+              Du hast {tvTextsUsed} von {tvTextsLimit} kostenlosen Textsets abgeschlossen. Schalte
+              alle 10 Textsets frei.
+            </p>
+          </div>
+        </Paywall>
+      )}
 
       {/* MC Text Sets — primary section */}
       {allTextSets.length > 0 && (

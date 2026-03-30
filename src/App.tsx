@@ -75,6 +75,7 @@ const PaidLanding = lazy(() => import("@/pages/PaidLanding"));
 const PaidLandingBMS = lazy(() => import("@/pages/PaidLandingBMS"));
 const MedATCountdown = lazy(() => import("@/pages/MedATCountdown"));
 const DiagramDemo = lazy(() => import("@/pages/DiagramDemo"));
+const PaymentSuccess = lazy(() => import("@/pages/PaymentSuccess"));
 
 function LoadingSpinner() {
   return (
@@ -89,11 +90,17 @@ function LoadingSpinner() {
 function ScrollToTop() {
   usePageTracking();
   const { pathname, search } = useLocation();
+  const navigate = useNavigate();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
   useEffect(() => {
     const params = new URLSearchParams(search);
+    // Stripe Payment Link redirect: ?payment=success → /success
+    if (params.get("payment") === "success") {
+      navigate("/success", { replace: true });
+      return;
+    }
     const ref = sanitizeUrlParam(params.get("ref"));
     if (ref) sessionStorage.setItem("medmaster_ref", ref);
     // Persist UTM params for attribution (validated against injection)
@@ -101,7 +108,7 @@ function ScrollToTop() {
       const val = sanitizeUrlParam(params.get(key));
       if (val) sessionStorage.setItem(`medmaster_${key}`, val);
     }
-  }, [search]);
+  }, [search, navigate]);
   return null;
 }
 
@@ -309,6 +316,7 @@ export default function App() {
                 <Route path="/schwachstellen" element={<SchwachstellenTrainer />} />
                 <Route path="/schwachstellen/recovery" element={<SmartRecoveryPage />} />
                 <Route path="/preise" element={<Pricing />} />
+                <Route path="/success" element={<PaymentSuccess />} />
                 <Route
                   path="/admin/kapitel-editor"
                   element={

@@ -22,6 +22,8 @@ import { useStore } from "@/store/useStore";
 import { useAdaptiveStore } from "@/store/adaptiveLearning";
 import { usePageTitle } from "@/hooks/usePageTitle";
 import { useDailyPlan, type PlanTier } from "@/hooks/useDailyPlan";
+import { usePermissions } from "@/hooks/usePermissions";
+import { Paywall } from "@/components/ui/paywall";
 
 // ============================================================
 // Tier card config
@@ -54,6 +56,7 @@ const SECTION_COLORS = {
 
 export default function Lernplan() {
   usePageTitle("Lernplan");
+  const { isLocked } = usePermissions();
 
   const lernplanConfig = useStore((s) => s.lernplanConfig);
   const setLernplanConfig = useStore((s) => s.setLernplanConfig);
@@ -89,6 +92,22 @@ export default function Lernplan() {
     plan.kffTasks.length > 0 ||
     plan.tvTexts > 0 ||
     plan.sekTasks.length > 0;
+
+  if (isLocked("lernplan")) {
+    return (
+      <div className="max-w-3xl mx-auto py-12">
+        <Paywall feature="Lernplan">
+          <div className="text-center py-16 space-y-4">
+            <h1 className="text-3xl font-bold text-[var(--text-primary)]">Lernplan</h1>
+            <p className="text-[var(--muted)]">
+              Dein personalisierter Lernplan bis zum MedAT — mit täglichen Aufgaben und
+              Fortschrittskontrolle.
+            </p>
+          </div>
+        </Paywall>
+      </div>
+    );
+  }
 
   return (
     <div className="max-w-5xl mx-auto space-y-8">

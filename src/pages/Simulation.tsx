@@ -55,6 +55,8 @@ import { useStore } from "@/store/useStore";
 import { useSessionTimer } from "@/hooks/useSessionTimer";
 import { usePageTitle } from "@/hooks/usePageTitle";
 import { useViewportMode } from "@/hooks/useViewportMode";
+import { usePermissions } from "@/hooks/usePermissions";
+import { Paywall } from "@/components/ui/paywall";
 import { stripMarkdownAsterisks } from "@/utils/formatExplanation";
 import { SimulationHistory } from "@/components/simulation/SimulationHistory";
 
@@ -757,6 +759,7 @@ function getSectionGroupLabel(sectionType: SectionType): string {
 export default function Simulation() {
   usePageTitle("MedAT Simulation");
   const { isMobile } = useViewportMode();
+  const { isLocked } = usePermissions();
   const [mode, setMode] = useState<Mode>("select");
   const [activeTab, setActiveTab] = useState<"start" | "verlauf">("start");
   const currentResultIdRef = useRef<string>("");
@@ -1149,6 +1152,22 @@ export default function Simulation() {
   // ============================================================
 
   if (mode === "select") {
+    if (isLocked("simulations")) {
+      return (
+        <div className="max-w-3xl mx-auto py-12">
+          <Paywall feature="Testsimulation">
+            <div className="text-center py-16 space-y-4">
+              <h1 className="text-3xl font-bold text-[var(--text-primary)]">Testsimulation</h1>
+              <p className="text-[var(--muted)]">
+                Realistische MedAT-Prüfungssimulation mit offiziellem Zeitlimit und allen
+                Untertests.
+              </p>
+            </div>
+          </Paywall>
+        </div>
+      );
+    }
+
     const fullSections = buildFullSimulation();
     const totalFullQuestions = fullSections.reduce((s, x) => s + x.questionCount, 0);
     const totalFullMinutes = fullSections.reduce(
@@ -1931,23 +1950,43 @@ export default function Simulation() {
 
   const renderBmsMcq = () => (
     <Card>
-      <CardContent className="p-6">
-        <p className="text-base font-medium text-[var(--text-primary)] mb-6">{q.text}</p>
-        <div className="space-y-3">
-          {q.options?.map((opt) => (
-            <button
-              key={opt.id}
-              onClick={() => setAnswers((p) => ({ ...p, [q.id]: opt.id }))}
-              className={`w-full text-left px-4 py-3 rounded-lg border text-sm transition-colors cursor-pointer ${
-                answers[q.id] === opt.id
-                  ? "border-[var(--accent)] bg-[var(--accent)]/5 dark:bg-[var(--accent)]/10 text-[var(--accent)]/30"
-                  : "border-[var(--border)] hover:bg-[var(--border)]/50 text-[var(--text-secondary)]"
-              }`}
-            >
-              <span className="font-semibold mr-2">{opt.id.toUpperCase()})</span>
-              {opt.text}
-            </button>
-          ))}
+      <CardContent className="p-6 space-y-6">
+        <p className="text-base font-medium text-[var(--text-primary)] leading-[1.7]">{q.text}</p>
+        <div>
+          <p className="text-[11px] font-bold text-[var(--muted)] uppercase tracking-[0.12em] mb-3">
+            Wähle eine Antwort:
+          </p>
+          <div className="space-y-2.5">
+            {q.options?.map((opt) => {
+              const isSelected = answers[q.id] === opt.id;
+              return (
+                <button
+                  key={opt.id}
+                  onClick={() => setAnswers((p) => ({ ...p, [q.id]: opt.id }))}
+                  className={`w-full text-left rounded-xl border px-4 py-3.5 transition-all cursor-pointer flex items-center gap-3.5 hover:border-[var(--accent)]/40 hover:shadow-sm active:scale-[0.99] ${
+                    isSelected
+                      ? "border-[var(--accent)]/60 bg-[var(--accent)]/5"
+                      : "border-[var(--border)] bg-[var(--card)]"
+                  }`}
+                >
+                  <span
+                    className={`inline-flex items-center justify-center w-7 h-7 rounded-lg text-[13px] font-bold shrink-0 ${
+                      isSelected
+                        ? "bg-[var(--accent)]/15 text-[var(--accent)]"
+                        : "bg-[var(--border)]/60 text-[var(--muted)]"
+                    }`}
+                  >
+                    {opt.id.toUpperCase()}
+                  </span>
+                  <span
+                    className={`text-[15px] flex-1 leading-snug ${isSelected ? "text-[var(--text-primary)]" : "text-[var(--text-primary)]"}`}
+                  >
+                    {opt.text}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
         </div>
       </CardContent>
     </Card>
@@ -2018,22 +2057,35 @@ export default function Simulation() {
           ))}
           <span className="text-2xl font-mono font-bold text-[var(--accent)]/60">?, ?</span>
         </div>
-        <p className="text-sm text-[var(--muted)] mb-4">Welche zwei Zahlen folgen als nächstes?</p>
-        <div className="grid grid-cols-2 gap-3">
-          {q.numOptions?.map((opt, oi) => (
-            <button
-              key={oi}
-              onClick={() => setAnswers((p) => ({ ...p, [q.id]: String(oi) }))}
-              className={`px-4 py-3 rounded-lg border text-sm font-mono font-bold transition-colors cursor-pointer text-left ${
-                answers[q.id] === String(oi)
-                  ? "border-[var(--accent)] bg-[var(--accent)]/5 dark:bg-[var(--accent)]/10 text-[var(--accent)]/30"
-                  : "border-[var(--border)] hover:bg-[var(--border)]/50 text-[var(--text-secondary)]"
-              }`}
-            >
-              <span className="font-semibold mr-2">{String.fromCharCode(65 + oi)})</span>
-              {opt}
-            </button>
-          ))}
+        <p className="text-[11px] font-bold text-[var(--muted)] uppercase tracking-[0.12em] mb-3">
+          Welche zwei Zahlen folgen als nächstes?
+        </p>
+        <div className="grid grid-cols-2 gap-2.5">
+          {q.numOptions?.map((opt, oi) => {
+            const isSelected = answers[q.id] === String(oi);
+            return (
+              <button
+                key={oi}
+                onClick={() => setAnswers((p) => ({ ...p, [q.id]: String(oi) }))}
+                className={`rounded-xl border px-4 py-3.5 text-sm font-mono font-bold transition-all cursor-pointer text-left flex items-center gap-3 hover:border-[var(--accent)]/40 hover:shadow-sm active:scale-[0.99] ${
+                  isSelected
+                    ? "border-[var(--accent)]/60 bg-[var(--accent)]/5"
+                    : "border-[var(--border)] bg-[var(--card)]"
+                }`}
+              >
+                <span
+                  className={`inline-flex items-center justify-center w-7 h-7 rounded-lg text-[13px] font-bold shrink-0 ${
+                    isSelected
+                      ? "bg-[var(--accent)]/15 text-[var(--accent)]"
+                      : "bg-[var(--border)]/60 text-[var(--muted)]"
+                  }`}
+                >
+                  {String.fromCharCode(65 + oi)}
+                </span>
+                <span className="text-[15px] leading-snug text-[var(--text-primary)]">{opt}</span>
+              </button>
+            );
+          })}
         </div>
       </CardContent>
     </Card>
@@ -2041,22 +2093,38 @@ export default function Simulation() {
 
   const renderGedaechtnisQuiz = () => (
     <Card>
-      <CardContent className="p-6">
-        <p className="text-base font-medium text-[var(--text-primary)] mb-6">{q.memText}</p>
-        <div className="space-y-3">
-          {q.memOptions?.map((opt, i) => (
-            <button
-              key={i}
-              onClick={() => setAnswers((p) => ({ ...p, [q.id]: opt }))}
-              className={`w-full text-left px-4 py-3 rounded-lg border text-sm transition-colors cursor-pointer ${
-                answers[q.id] === opt
-                  ? "border-[var(--accent)] bg-[var(--accent)]/5 dark:bg-[var(--accent)]/10 text-[var(--accent)]/30"
-                  : "border-[var(--border)] hover:bg-[var(--border)]/50 text-[var(--text-secondary)]"
-              }`}
-            >
-              {opt}
-            </button>
-          ))}
+      <CardContent className="p-6 space-y-6">
+        <p className="text-base font-medium text-[var(--text-primary)] leading-[1.7]">
+          {q.memText}
+        </p>
+        <div className="space-y-2.5">
+          {q.memOptions?.map((opt, i) => {
+            const isSelected = answers[q.id] === opt;
+            return (
+              <button
+                key={i}
+                onClick={() => setAnswers((p) => ({ ...p, [q.id]: opt }))}
+                className={`w-full text-left rounded-xl border px-4 py-3.5 transition-all cursor-pointer flex items-center gap-3.5 hover:border-[var(--accent)]/40 hover:shadow-sm active:scale-[0.99] ${
+                  isSelected
+                    ? "border-[var(--accent)]/60 bg-[var(--accent)]/5"
+                    : "border-[var(--border)] bg-[var(--card)]"
+                }`}
+              >
+                <span
+                  className={`inline-flex items-center justify-center w-7 h-7 rounded-lg text-[13px] font-bold shrink-0 ${
+                    isSelected
+                      ? "bg-[var(--accent)]/15 text-[var(--accent)]"
+                      : "bg-[var(--border)]/60 text-[var(--muted)]"
+                  }`}
+                >
+                  {String.fromCharCode(65 + i)}
+                </span>
+                <span className="text-[15px] flex-1 leading-snug text-[var(--text-primary)]">
+                  {opt}
+                </span>
+              </button>
+            );
+          })}
         </div>
       </CardContent>
     </Card>
@@ -2079,22 +2147,37 @@ export default function Simulation() {
             </p>
           </div>
         </div>
-        <p className="text-sm text-[var(--muted)] mb-3">Welche Schlussfolgerung ist korrekt?</p>
-        <div className="space-y-2">
-          {q.sylOptions?.map((opt, oi) => (
-            <button
-              key={oi}
-              onClick={() => setAnswers((p) => ({ ...p, [q.id]: String(oi) }))}
-              className={`w-full text-left px-4 py-3 rounded-lg border text-sm font-medium transition-colors cursor-pointer ${
-                answers[q.id] === String(oi)
-                  ? "border-[var(--accent)] bg-[var(--accent)]/5 dark:bg-[var(--accent)]/10 text-[var(--accent)]/30"
-                  : "border-[var(--border)] hover:bg-[var(--border)]/50 text-[var(--text-secondary)]"
-              }`}
-            >
-              <span className="font-semibold mr-2">{String.fromCharCode(65 + oi)})</span>
-              {opt}
-            </button>
-          ))}
+        <p className="text-[11px] font-bold text-[var(--muted)] uppercase tracking-[0.12em] mb-3">
+          Welche Schlussfolgerung ist korrekt?
+        </p>
+        <div className="space-y-2.5">
+          {q.sylOptions?.map((opt, oi) => {
+            const isSelected = answers[q.id] === String(oi);
+            return (
+              <button
+                key={oi}
+                onClick={() => setAnswers((p) => ({ ...p, [q.id]: String(oi) }))}
+                className={`w-full text-left rounded-xl border px-4 py-3.5 transition-all cursor-pointer flex items-center gap-3.5 hover:border-[var(--accent)]/40 hover:shadow-sm active:scale-[0.99] ${
+                  isSelected
+                    ? "border-[var(--accent)]/60 bg-[var(--accent)]/5"
+                    : "border-[var(--border)] bg-[var(--card)]"
+                }`}
+              >
+                <span
+                  className={`inline-flex items-center justify-center w-7 h-7 rounded-lg text-[13px] font-bold shrink-0 ${
+                    isSelected
+                      ? "bg-[var(--accent)]/15 text-[var(--accent)]"
+                      : "bg-[var(--border)]/60 text-[var(--muted)]"
+                  }`}
+                >
+                  {String.fromCharCode(65 + oi)}
+                </span>
+                <span className="text-[15px] flex-1 leading-snug text-[var(--text-primary)]">
+                  {opt}
+                </span>
+              </button>
+            );
+          })}
         </div>
       </CardContent>
     </Card>
@@ -2103,29 +2186,44 @@ export default function Simulation() {
   const renderWortfluessigkeit = () => (
     <Card>
       <CardContent className="p-6">
-        <p className="text-sm text-[var(--muted)] mb-2">Mit welchem Buchstaben beginnt das Wort?</p>
+        <p className="text-[11px] font-bold text-[var(--muted)] uppercase tracking-[0.12em] mb-2">
+          Mit welchem Buchstaben beginnt das Wort?
+        </p>
         <div className="text-center mb-6">
           <span className="text-3xl font-mono font-bold tracking-widest text-[var(--text-primary)]">
             {q.scrambled}
           </span>
         </div>
-        <div className="space-y-2">
-          {q.letterOptions?.map((letter, li) => (
-            <button
-              key={`${letter}-${li}`}
-              onClick={() => setAnswers((p) => ({ ...p, [q.id]: letter }))}
-              className={`w-full text-left px-4 py-3 rounded-lg border text-sm font-semibold transition-colors cursor-pointer ${
-                answers[q.id] === letter
-                  ? "border-[var(--accent)] bg-[var(--accent)]/5 dark:bg-[var(--accent)]/10 text-[var(--accent)]/30"
-                  : "border-[var(--border)] hover:bg-[var(--border)]/50 text-[var(--text-secondary)]"
-              }`}
-            >
-              ({String.fromCharCode(65 + li)}){" "}
-              {letter === "-"
-                ? "Keine der Antwortmöglichkeiten ist richtig"
-                : `Anfangsbuchstabe: ${letter}`}
-            </button>
-          ))}
+        <div className="space-y-2.5">
+          {q.letterOptions?.map((letter, li) => {
+            const isSelected = answers[q.id] === letter;
+            return (
+              <button
+                key={`${letter}-${li}`}
+                onClick={() => setAnswers((p) => ({ ...p, [q.id]: letter }))}
+                className={`w-full text-left rounded-xl border px-4 py-3.5 transition-all cursor-pointer flex items-center gap-3.5 hover:border-[var(--accent)]/40 hover:shadow-sm active:scale-[0.99] ${
+                  isSelected
+                    ? "border-[var(--accent)]/60 bg-[var(--accent)]/5"
+                    : "border-[var(--border)] bg-[var(--card)]"
+                }`}
+              >
+                <span
+                  className={`inline-flex items-center justify-center w-7 h-7 rounded-lg text-[13px] font-bold shrink-0 ${
+                    isSelected
+                      ? "bg-[var(--accent)]/15 text-[var(--accent)]"
+                      : "bg-[var(--border)]/60 text-[var(--muted)]"
+                  }`}
+                >
+                  {String.fromCharCode(65 + li)}
+                </span>
+                <span className="text-[15px] flex-1 leading-snug text-[var(--text-primary)]">
+                  {letter === "-"
+                    ? "Keine der Antwortmöglichkeiten ist richtig"
+                    : `Anfangsbuchstabe: ${letter}`}
+                </span>
+              </button>
+            );
+          })}
         </div>
       </CardContent>
     </Card>
@@ -2205,27 +2303,49 @@ export default function Simulation() {
 
     return (
       <Card>
-        <CardContent className="p-6">
-          <div className="mb-4">
-            <p className="text-xs text-[var(--muted)] uppercase tracking-wider mb-1">Situation</p>
+        <CardContent className="p-6 space-y-6">
+          <div>
+            <p className="text-[11px] font-bold text-[var(--muted)] uppercase tracking-[0.12em] mb-1">
+              Situation
+            </p>
             <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{situation}</p>
           </div>
-          <p className="text-base font-medium text-[var(--text-primary)] mb-6">{question}</p>
-          <div className="space-y-3">
-            {q.options?.map((opt) => (
-              <button
-                key={opt.id}
-                onClick={() => setAnswers((p) => ({ ...p, [q.id]: opt.id }))}
-                className={`w-full text-left px-4 py-3 rounded-lg border text-sm transition-colors cursor-pointer ${
-                  answers[q.id] === opt.id
-                    ? "border-[var(--accent)] bg-[var(--accent)]/5 dark:bg-[var(--accent)]/10 text-[var(--accent)]/30"
-                    : "border-[var(--border)] hover:bg-[var(--border)]/50 text-[var(--text-secondary)]"
-                }`}
-              >
-                <span className="font-semibold mr-2">{opt.id.toUpperCase()})</span>
-                {opt.text}
-              </button>
-            ))}
+          <p className="text-base font-medium text-[var(--text-primary)] leading-[1.7]">
+            {question}
+          </p>
+          <div>
+            <p className="text-[11px] font-bold text-[var(--muted)] uppercase tracking-[0.12em] mb-3">
+              Wähle eine Antwort:
+            </p>
+            <div className="space-y-2.5">
+              {q.options?.map((opt) => {
+                const isSelected = answers[q.id] === opt.id;
+                return (
+                  <button
+                    key={opt.id}
+                    onClick={() => setAnswers((p) => ({ ...p, [q.id]: opt.id }))}
+                    className={`w-full text-left rounded-xl border px-4 py-3.5 transition-all cursor-pointer flex items-center gap-3.5 hover:border-[var(--accent)]/40 hover:shadow-sm active:scale-[0.99] ${
+                      isSelected
+                        ? "border-[var(--accent)]/60 bg-[var(--accent)]/5"
+                        : "border-[var(--border)] bg-[var(--card)]"
+                    }`}
+                  >
+                    <span
+                      className={`inline-flex items-center justify-center w-7 h-7 rounded-lg text-[13px] font-bold shrink-0 ${
+                        isSelected
+                          ? "bg-[var(--accent)]/15 text-[var(--accent)]"
+                          : "bg-[var(--border)]/60 text-[var(--muted)]"
+                      }`}
+                    >
+                      {opt.id.toUpperCase()}
+                    </span>
+                    <span className="text-[15px] flex-1 leading-snug text-[var(--text-primary)]">
+                      {opt.text}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
           </div>
         </CardContent>
       </Card>

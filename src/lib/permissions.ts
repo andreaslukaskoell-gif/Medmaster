@@ -3,7 +3,7 @@
 
 type Tier = "starter" | "premium";
 
-type FeatureLimits = {
+export type FeatureLimits = {
   bms_questions: number | "unlimited";
   bms_chapters: number | "unlimited";
   kff_exercises: number | "unlimited";

@@ -16,11 +16,7 @@ import { sanitizeUrlParam, validateRedirectUrl } from "@/lib/security";
 import type { User, Session } from "@supabase/supabase-js";
 
 /** Domains allowed for OAuth redirect (Supabase Auth + Google) */
-const OAUTH_REDIRECT_DOMAINS = [
-  "supabase.co",
-  "accounts.google.com",
-  "medmaster.at",
-];
+const OAUTH_REDIRECT_DOMAINS = ["supabase.co", "accounts.google.com", "medmaster.at"];
 
 interface Profile {
   id: string;
@@ -317,25 +313,34 @@ export function useAuth() {
   const isAuthenticated = !!user;
   const isPremium = tier === "premium";
 
+  /** Re-fetch the profile from Supabase (e.g. after payment upgrade). */
+  function refreshProfile() {
+    if (user) fetchProfile(user.id);
+  }
+
   // Memoize return object to prevent new reference on every render.
   // Functions are intentionally excluded — they read latest state via closure
   // and are only called from event handlers, not during render.
-  return useMemo(() => ({
-    user,
-    profile,
-    session,
-    loading,
-    isAuthenticated,
-    tier,
-    isPremium,
-    isPro: isPremium, // legacy compat — maps to premium in binary model
-    signUp,
-    signIn,
-    signInWithOtp,
-    signInWithGoogle,
-    signOut,
-    deleteAccount,
-    resetPassword,
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }), [user, profile, session, loading, isAuthenticated, tier, isPremium]);
+  return useMemo(
+    () => ({
+      user,
+      profile,
+      session,
+      loading,
+      isAuthenticated,
+      tier,
+      isPremium,
+      isPro: isPremium, // legacy compat — maps to premium in binary model
+      signUp,
+      signIn,
+      signInWithOtp,
+      signInWithGoogle,
+      signOut,
+      deleteAccount,
+      resetPassword,
+      refreshProfile,
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    }),
+    [user, profile, session, loading, isAuthenticated, tier, isPremium]
+  );
 }

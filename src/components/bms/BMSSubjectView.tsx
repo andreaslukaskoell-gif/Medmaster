@@ -1,8 +1,10 @@
-import { Play, CheckCircle2, ChevronRight, ChevronLeft, Clock } from "lucide-react";
+import { Play, CheckCircle2, ChevronRight, ChevronLeft, Clock, Lock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import type { Kapitel } from "@/data/bmsKapitel/types";
 import { countUK } from "@/lib/mergeChapters";
 import type { SubjectData } from "@/data/bmsSubjects";
+import { usePermissions } from "@/hooks/usePermissions";
+import { PaywallBanner } from "@/components/ui/paywall";
 
 const subjectAccentVars: Record<string, string> = {
   biologie: "var(--accent-bio)",
@@ -31,6 +33,8 @@ export function BMSSubjectView({
 }: BMSSubjectViewProps) {
   const kapitel = Array.isArray(roadmapChapters) ? roadmapChapters : [];
   const accentColor = subjectAccentVars[subjectData.id] ?? "var(--accent)";
+  const { getLimit } = usePermissions();
+  const chapterLimit = getLimit("bms_chapters"); // null = unlimited
 
   if (kapitel.length === 0) {
     return (
@@ -54,8 +58,9 @@ export function BMSSubjectView({
   const { total: subjectUK, completed: subjectCompletedUK } = countUK(kapitel, completedChapters);
   const overallPct = subjectUK > 0 ? Math.round((subjectCompletedUK / subjectUK) * 100) : 0;
 
-  // Find first chapter with incomplete UKs
-  const firstIncompleteChapter = kapitel.find((kap) => {
+  // Find first chapter with incomplete UKs (only within free chapters)
+  const freeChapters = chapterLimit !== null ? kapitel.slice(0, chapterLimit) : kapitel;
+  const firstIncompleteChapter = freeChapters.find((kap) => {
     if (!kap?.unterkapitel) return false;
     const done = kap.unterkapitel.filter((u) => u?.id && completedChapters.includes(u.id)).length;
     return done < kap.unterkapitel.length;
@@ -141,6 +146,7 @@ export function BMSSubjectView({
             if (!kap || !kap.id || typeof kap.id !== "string" || typeof kap.title !== "string") {
               return null;
             }
+            const isLocked = chapterLimit !== null && index >= chapterLimit;
             const ukTotal =
               kap.unterkapitel && Array.isArray(kap.unterkapitel) ? kap.unterkapitel.length : 0;
             const ukDone =
@@ -149,20 +155,27 @@ export function BMSSubjectView({
                     .length
                 : 0;
             const isCompleted =
-              completedChapters.includes(kap.id) || (ukTotal > 0 && ukDone === ukTotal);
+              !isLocked &&
+              (completedChapters.includes(kap.id) || (ukTotal > 0 && ukDone === ukTotal));
             const progressPct = ukTotal > 0 ? (ukDone / ukTotal) * 100 : 0;
-            const isCurrent = kap.id === firstIncompleteChapter?.id;
+            const isCurrent = !isLocked && kap.id === firstIncompleteChapter?.id;
 
             return (
               <button
                 key={kap.id}
-                onClick={() => onSelectChapter(kap)}
-                className={`w-full text-left py-4 px-5 hover:bg-[var(--surface)] transition-colors cursor-pointer flex items-center gap-4 ${
-                  isCurrent ? "bg-[var(--surface)]" : ""
+                onClick={() => !isLocked && onSelectChapter(kap)}
+                className={`w-full text-left py-4 px-5 transition-colors flex items-center gap-4 ${
+                  isLocked
+                    ? "opacity-50 cursor-default"
+                    : isCurrent
+                      ? "bg-[var(--surface)] hover:bg-[var(--surface)] cursor-pointer"
+                      : "hover:bg-[var(--surface)] cursor-pointer"
                 }`}
               >
-                {/* Chapter number */}
-                {isCompleted ? (
+                {/* Chapter number / lock */}
+                {isLocked ? (
+                  <Lock className="w-5 h-5 text-[var(--muted)] shrink-0" />
+                ) : isCompleted ? (
                   <CheckCircle2 className="w-5 h-5 text-emerald-500 shrink-0" />
                 ) : (
                   <span
@@ -178,7 +191,7 @@ export function BMSSubjectView({
                 {/* Chapter info */}
                 <div className="flex-1 min-w-0">
                   <h3
-                    className={`font-medium text-sm ${isCompleted ? "text-[var(--muted)]" : "text-[var(--text-primary)]"}`}
+                    className={`font-medium text-sm ${isLocked || isCompleted ? "text-[var(--muted)]" : "text-[var(--text-primary)]"}`}
                   >
                     {kap.title || "Untitled Chapter"}
                   </h3>
@@ -190,14 +203,14 @@ export function BMSSubjectView({
                         {kap.estimatedTime}
                       </span>
                     )}
-                    {ukDone > 0 && !isCompleted && (
+                    {!isLocked && ukDone > 0 && !isCompleted && (
                       <span style={{ color: accentColor }}>
                         {ukDone}/{ukTotal}
                       </span>
                     )}
                   </div>
                   {/* Inline progress bar */}
-                  {ukTotal > 0 && progressPct > 0 && !isCompleted && (
+                  {!isLocked && ukTotal > 0 && progressPct > 0 && !isCompleted && (
                     <div className="w-full bg-[var(--border)] rounded-full h-1 mt-2 max-w-[200px]">
                       <div
                         className="h-1 rounded-full transition-all duration-500"
@@ -211,7 +224,9 @@ export function BMSSubjectView({
                 </div>
 
                 {/* Current badge or chevron */}
-                {isCurrent && !isCompleted ? (
+                {isLocked ? (
+                  <span className="text-xs text-[var(--muted)] shrink-0">Premium</span>
+                ) : isCurrent && !isCompleted ? (
                   <ChevronRight className="w-5 h-5 shrink-0" style={{ color: accentColor }} />
                 ) : (
                   <ChevronRight className="w-4 h-4 text-[var(--muted)]/50 shrink-0" />
@@ -219,6 +234,11 @@ export function BMSSubjectView({
               </button>
             );
           })}
+          {chapterLimit !== null && kapitel.length > chapterLimit && (
+            <div className="p-4">
+              <PaywallBanner feature={`Alle ${kapitel.length} Kapitel freischalten`} />
+            </div>
+          )}
         </div>
       </div>
     </div>

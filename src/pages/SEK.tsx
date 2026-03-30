@@ -18,6 +18,8 @@ import { Badge } from "@/components/ui/badge";
 import { PageEmpty } from "@/components/ui/page-states";
 import { FloatingQuestionCounter } from "@/components/ui/FloatingQuestionCounter";
 import { usePageTitle } from "@/hooks/usePageTitle";
+import { useUsageLimits } from "@/hooks/useUsageLimits";
+import { Paywall } from "@/components/ui/paywall";
 import StrategyGuideView from "@/components/shared/StrategyGuideView";
 import { sekStrategyGuide } from "@/data/sekData";
 import { OfficialInstructionCard } from "@/components/shared/OfficialInstructionCard";
@@ -60,6 +62,7 @@ function shuffle<T>(arr: T[]): T[] {
 export default function SEK() {
   usePageTitle("SEK – Sozial-emotionale Kompetenzen");
   const { isMobile } = useViewportMode();
+  const { sekSituationsExceeded, sekSituationsUsed, sekSituationsLimit } = useUsageLimits();
   const location = useLocation();
   const dailyPlanSek = location.state?.dailyPlanSek as
     | { domain: string; count: number; label: string }[]
@@ -210,6 +213,18 @@ export default function SEK() {
           </div>
         )}
       </div>
+
+      {sekSituationsExceeded && (
+        <Paywall feature="SEK-Aufgaben">
+          <div className="text-center py-12 space-y-3">
+            <h2 className="text-2xl font-bold text-[var(--text-primary)]">SEK-Aufgaben</h2>
+            <p className="text-[var(--muted)]">
+              Du hast {sekSituationsUsed} von {sekSituationsLimit} kostenlosen Aufgaben bearbeitet.
+              Schalte alle 230+ SEK-Aufgaben frei.
+            </p>
+          </div>
+        </Paywall>
+      )}
 
       {/* Subtest Cards */}
       <div className="card-glass divide-y divide-[var(--border)] overflow-hidden">

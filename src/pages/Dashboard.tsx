@@ -50,6 +50,7 @@ import { Tooltip } from "@/components/ui/Tooltip";
 import { DailyPlanWidget } from "@/components/dashboard/DailyPlanWidget";
 import { WeaknessWidget } from "@/components/dashboard/WeaknessWidget";
 import { RecentActivityWidget } from "@/components/dashboard/RecentActivityWidget";
+import { PromoEndBanner } from "@/components/dashboard/PromoEndBanner";
 
 // Stable defaults — prevent infinite re-render loops in Zustand selectors.
 // `?? []` inside a selector creates a NEW reference every render if the value is nullish,
@@ -252,6 +253,7 @@ export default function Dashboard() {
       )}
       <div className="max-w-5xl mx-auto px-4 py-6 pb-12">
         <SyncIndicator />
+        <PromoEndBanner />
 
         {/* ─── First-action guidance for new users (hidden after first activity) ─── */}
         {(quizResults ?? []).length === 0 && completedChapters.length === 0 && (

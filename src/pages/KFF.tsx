@@ -8,6 +8,8 @@ import KFFStrategyView from "@/components/shared/KFFStrategyView";
 import { useStore } from "@/store/useStore";
 import { useAuth } from "@/hooks/useAuth";
 import { useViewportMode } from "@/hooks/useViewportMode";
+import { useUsageLimits } from "@/hooks/useUsageLimits";
+import { Paywall } from "@/components/ui/paywall";
 import { trackEvent } from "@/lib/analyticsTracker";
 import { FirstTimeKffIntro } from "@/components/kff/FirstTimeKffIntro";
 import { ZahlenfolgenQuiz } from "@/components/kff/ZahlenfolgenQuiz";
@@ -57,6 +59,7 @@ export default function KFF() {
   const [view, setView] = useState<KffView>(initialView);
   const [strategyKey, setStrategyKey] = useState<StrategyKey>("zahlenfolgen");
   const { user, loading: isLoading } = useAuth();
+  const { kffExercisesExceeded, kffExercisesUsed, kffExercisesLimit } = useUsageLimits();
   const kffDomainIntroSeen = useStore((s) => s.kffDomainIntroSeen);
   const markKffDomainIntroSeen = useStore((s) => s.markKffDomainIntroSeen);
   const quizResults = useStore((s) => s.quizResults ?? STABLE_EMPTY_RESULTS);
@@ -317,6 +320,18 @@ export default function KFF() {
           </p>
         )}
       </div>
+
+      {kffExercisesExceeded && (
+        <Paywall feature="KFF-Übungen">
+          <div className="text-center py-12 space-y-3">
+            <h2 className="text-2xl font-bold text-[var(--text-primary)]">KFF-Übungen</h2>
+            <p className="text-[var(--muted)]">
+              Du hast {kffExercisesUsed} von {kffExercisesLimit} kostenlosen Übungen gemacht.
+              Schalte alle KFF-Übungen frei.
+            </p>
+          </div>
+        </Paywall>
+      )}
 
       {/* Module cards */}
       <div className={isMobile ? "space-y-3" : "space-y-4"}>
