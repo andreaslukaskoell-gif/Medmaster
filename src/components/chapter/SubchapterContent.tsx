@@ -602,9 +602,30 @@ export function SubchapterContent({
 
   return (
     <div className="content-section">
-      <div className="grid grid-cols-[220px_1fr] gap-12">
-        {/* Sticky left TOC */}
-        <aside className="min-w-0">
+      {/* Mobile: horizontal scrollable TOC */}
+      <div className="lg:hidden sticky top-14 z-30 -mx-3 px-3 py-2 bg-[var(--background)]/95 backdrop-blur-sm border-b border-[var(--border)]/40 mb-4 overflow-x-auto scrollbar-none">
+        <div className="flex gap-2 min-w-max">
+          {tocSections.map((s) => (
+            <button
+              key={s.id}
+              onClick={() => handleTOCSelect(s.id)}
+              className={`px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-colors cursor-pointer ${
+                currentSectionId === s.id
+                  ? "bg-[var(--accent)]/10 text-[var(--accent)]"
+                  : readSections.has(s.id)
+                    ? "bg-[var(--surface)] text-[var(--muted)]"
+                    : "bg-[var(--surface)] text-[var(--text-secondary)]"
+              }`}
+            >
+              {s.title}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div className="lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
+        {/* Desktop: Sticky left TOC (hidden on mobile) */}
+        <aside className="hidden lg:block min-w-0">
           <SectionTOC
             sections={tocSections}
             currentSectionId={currentSectionId}
