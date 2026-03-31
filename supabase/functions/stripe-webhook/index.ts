@@ -103,6 +103,11 @@ serve(async (req) => {
 
         if (error) {
           console.error("Profile update error:", error);
+          // Return 500 so Stripe retries — do NOT swallow this error
+          return new Response(JSON.stringify({ error: "Profile update failed" }), {
+            status: 500,
+            headers: { "Content-Type": "application/json" },
+          });
         } else {
           console.log(`User ${userId} upgraded to premium`);
 

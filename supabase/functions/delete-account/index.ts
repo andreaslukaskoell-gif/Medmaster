@@ -78,36 +78,22 @@ serve(async (req) => {
 
   const token = authHeader.replace("Bearer ", "");
 
-  // Decode JWT to get user ID, then verify via admin API
-  let payload: { sub?: string };
-  try {
-    payload = JSON.parse(atob(token.split(".")[1]));
-  } catch {
-    return new Response(JSON.stringify({ error: "Invalid token" }), {
-      status: 401,
-      headers: { "Content-Type": "application/json" },
-    });
-  }
-
-  const userId = payload.sub;
-  if (!userId) {
-    return new Response(JSON.stringify({ error: "Invalid token" }), {
-      status: 401,
-      headers: { "Content-Type": "application/json" },
-    });
-  }
-
-  // Verify user exists via admin API
+  // Verify JWT signature via Supabase Auth (cryptographically validated)
+  const userClient = createClient(SUPABASE_URL, Deno.env.get("SUPABASE_ANON_KEY")!, {
+    global: { headers: { Authorization: `Bearer ${token}` } },
+  });
   const {
     data: { user },
     error: authError,
-  } = await supabaseAdmin.auth.admin.getUserById(userId);
+  } = await userClient.auth.getUser();
   if (authError || !user) {
-    return new Response(JSON.stringify({ error: "User not found" }), {
+    return new Response(JSON.stringify({ error: "Invalid or expired token" }), {
       status: 401,
       headers: { "Content-Type": "application/json" },
     });
   }
+
+  const userId = user.id;
 
   const email = user.email || "";
 

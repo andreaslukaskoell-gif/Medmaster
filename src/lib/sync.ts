@@ -266,16 +266,38 @@ async function pushBookmarks(
   userId: string,
   bookmarks: { chapters: string[]; questions: string[] }
 ) {
-  await client.from("user_bookmarks").delete().eq("user_id", userId);
+  // Build desired bookmark set
   const rows: { user_id: string; item_type: string; item_id: string }[] = [];
   for (const id of bookmarks.chapters)
     rows.push({ user_id: userId, item_type: "chapter", item_id: id });
   for (const id of bookmarks.questions)
     rows.push({ user_id: userId, item_type: "question", item_id: id });
+
+  // Upsert all current bookmarks (safe — no data loss on network failure)
   if (rows.length > 0) {
     for (let i = 0; i < rows.length; i += 200) {
-      const { error } = await client.from("user_bookmarks").insert(rows.slice(i, i + 200));
+      const { error } = await client
+        .from("user_bookmarks")
+        .upsert(rows.slice(i, i + 200), { onConflict: "user_id,item_type,item_id" });
       if (error) throw error;
+    }
+  }
+
+  // Remove bookmarks that are no longer in local state
+  const localIds = new Set(rows.map((r) => `${r.item_type}:${r.item_id}`));
+  const { data: remote } = await client
+    .from("user_bookmarks")
+    .select("item_type, item_id")
+    .eq("user_id", userId);
+  if (remote) {
+    const toDelete = remote.filter((r) => !localIds.has(`${r.item_type}:${r.item_id}`));
+    for (const d of toDelete) {
+      await client
+        .from("user_bookmarks")
+        .delete()
+        .eq("user_id", userId)
+        .eq("item_type", d.item_type)
+        .eq("item_id", d.item_id);
     }
   }
 }
