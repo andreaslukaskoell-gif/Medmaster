@@ -125,12 +125,22 @@ export default function Einstellungen() {
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
   const [showResetConfirm, setShowResetConfirm] = useState(false);
   const [deleting, setDeleting] = useState(false);
+  const [deleteError, setDeleteError] = useState<string | null>(null);
   const [exporting, setExporting] = useState(false);
 
   const handleDeleteAccount = async () => {
     setDeleting(true);
-    await deleteAccount();
-    setDeleting(false);
+    setDeleteError(null);
+    try {
+      await deleteAccount();
+    } catch (err) {
+      setDeleteError(
+        err instanceof Error
+          ? err.message
+          : "Fehler beim Löschen. Bitte kontaktiere support@medmaster.at"
+      );
+      setDeleting(false);
+    }
   };
 
   const handleFontSize = (size: "small" | "normal" | "large") => {
@@ -440,6 +450,7 @@ export default function Einstellungen() {
                   </p>
                 </div>
               </div>
+              {deleteError && <p className="text-xs text-red-400 pl-7 mb-2">{deleteError}</p>}
               <div className="flex gap-3 pl-7">
                 <button
                   type="button"

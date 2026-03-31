@@ -272,8 +272,14 @@ export function useAuth() {
           headers: { Authorization: `Bearer ${accessToken}` },
         });
         if (fnError) {
-          console.warn("Edge Function delete-account failed, falling back:", fnError.message);
+          throw new Error(
+            `Konto konnte nicht gelöscht werden: ${fnError.message}. Bitte versuche es erneut oder kontaktiere support@medmaster.at`
+          );
         }
+      } else {
+        throw new Error(
+          "Keine aktive Sitzung — bitte melde dich erneut an und versuche es nochmal."
+        );
       }
 
       stopAutoSync();

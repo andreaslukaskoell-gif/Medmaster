@@ -1,6 +1,22 @@
-import { lazy, Suspense, useEffect } from "react";
+import { lazy, Suspense, useEffect, type ComponentType } from "react";
 import { PageLoadingSkeleton } from "@/components/ui/page-states";
 import type { ReactNode } from "react";
+
+/** Retry dynamic import once on chunk load failure (happens after deployments). */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function lazyRetry(factory: () => Promise<{ default: ComponentType<any> }>) {
+  return lazy(() =>
+    factory().catch((err) => {
+      const key = "medmaster-chunk-retry";
+      if (!sessionStorage.getItem(key)) {
+        sessionStorage.setItem(key, "1");
+        window.location.reload();
+      }
+      throw err;
+    })
+  );
+}
+sessionStorage.removeItem("medmaster-chunk-retry");
 import {
   BrowserRouter,
   Routes,
@@ -27,56 +43,56 @@ const prefersReducedMotion =
   typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 // Lazy-loaded pages — casing must match filenames exactly (Linux/Vercel is case-sensitive)
-const LandingPage = lazy(() => import("@/pages/LandingPage"));
-const Dashboard = lazy(() => import("@/pages/Dashboard"));
-const MedATOnboarding = lazy(() => import("@/pages/MedATOnboarding"));
-const LernplanChoice = lazy(() => import("@/pages/LernplanChoice"));
-const Onboarding = lazy(() => import("@/pages/Onboarding"));
-const BMS = lazy(() => import("@/pages/BMS"));
-const KFF = lazy(() => import("@/pages/KFF"));
-const TV = lazy(() => import("@/pages/TV"));
-const SEK = lazy(() => import("@/pages/SEK"));
-const Simulation = lazy(() => import("@/pages/Simulation"));
-const Statistics = lazy(() => import("@/pages/Statistics"));
-const Pricing = lazy(() => import("@/pages/Pricing"));
-const Lernplan = lazy(() => import("@/pages/Lernplan"));
-const StichwortlistePage = lazy(() => import("@/pages/StichwortlistePage"));
-const SchwachstellenTrainer = lazy(() => import("@/pages/SchwachstellenTrainer"));
-const KapitelEditor = lazy(() => import("@/pages/KapitelEditor"));
-const ContentAudit = lazy(() => import("@/pages/ContentAudit"));
-const AdminPreview = lazy(() => import("@/pages/AdminPreview"));
-const AdminDashboard = lazy(() => import("@/pages/AdminDashboard"));
-const AdminTasksPage = lazy(() => import("@/pages/AdminTasksPage"));
-const AuthPage = lazy(() => import("@/pages/AuthPage"));
-const ForgotPasswordPage = lazy(() => import("@/pages/ForgotPasswordPage"));
-const Prognose = lazy(() => import("@/pages/Prognose"));
-const PerformanceOverview = lazy(() => import("@/pages/PerformanceOverview"));
-const BMSQuiz = lazy(() => import("@/pages/BMSQuiz"));
-const SmartRecoveryPage = lazy(() => import("@/pages/SmartRecoveryPage"));
-const FragenTrainer = lazy(() => import("@/pages/FragenTrainer"));
-const DailyChallenge = lazy(() => import("@/pages/DailyChallenge"));
-const Formelsammlung = lazy(() => import("@/pages/Formelsammlung"));
-const FortschrittPage = lazy(() => import("@/pages/FortschrittPage"));
-const TodayPage = lazy(() => import("@/pages/TodayPage"));
-const Legal = lazy(() => import("@/pages/Legal"));
-const Einstellungen = lazy(() => import("@/pages/Einstellungen"));
-const BMSDemo = lazy(() => import("@/pages/BMSDemo"));
-const SubjectDemo = lazy(() => import("@/pages/SubjectDemo"));
-const QuizChallenge = lazy(() => import("@/pages/QuizChallenge"));
-const FAQPage = lazy(() => import("@/pages/FAQPage"));
-const UeberUns = lazy(() => import("@/pages/UeberUns"));
-const MedATGuide = lazy(() => import("@/pages/MedATGuide"));
-const MedATPunkterechner = lazy(() => import("@/pages/MedATPunkterechner"));
-const StichwortlistePublic = lazy(() => import("@/pages/StichwortlistePublic"));
-const KFFDemo = lazy(() => import("@/pages/KFFDemo"));
-const AnalyticsDashboard = lazy(() => import("@/pages/AnalyticsDashboard"));
-const BlogIndex = lazy(() => import("@/pages/BlogIndex"));
-const BlogArticle = lazy(() => import("@/pages/BlogArticle"));
-const PaidLanding = lazy(() => import("@/pages/PaidLanding"));
-const PaidLandingBMS = lazy(() => import("@/pages/PaidLandingBMS"));
-const MedATCountdown = lazy(() => import("@/pages/MedATCountdown"));
-const DiagramDemo = lazy(() => import("@/pages/DiagramDemo"));
-const PaymentSuccess = lazy(() => import("@/pages/PaymentSuccess"));
+const LandingPage = lazyRetry(() => import("@/pages/LandingPage"));
+const Dashboard = lazyRetry(() => import("@/pages/Dashboard"));
+const MedATOnboarding = lazyRetry(() => import("@/pages/MedATOnboarding"));
+const LernplanChoice = lazyRetry(() => import("@/pages/LernplanChoice"));
+const Onboarding = lazyRetry(() => import("@/pages/Onboarding"));
+const BMS = lazyRetry(() => import("@/pages/BMS"));
+const KFF = lazyRetry(() => import("@/pages/KFF"));
+const TV = lazyRetry(() => import("@/pages/TV"));
+const SEK = lazyRetry(() => import("@/pages/SEK"));
+const Simulation = lazyRetry(() => import("@/pages/Simulation"));
+const Statistics = lazyRetry(() => import("@/pages/Statistics"));
+const Pricing = lazyRetry(() => import("@/pages/Pricing"));
+const Lernplan = lazyRetry(() => import("@/pages/Lernplan"));
+const StichwortlistePage = lazyRetry(() => import("@/pages/StichwortlistePage"));
+const SchwachstellenTrainer = lazyRetry(() => import("@/pages/SchwachstellenTrainer"));
+const KapitelEditor = lazyRetry(() => import("@/pages/KapitelEditor"));
+const ContentAudit = lazyRetry(() => import("@/pages/ContentAudit"));
+const AdminPreview = lazyRetry(() => import("@/pages/AdminPreview"));
+const AdminDashboard = lazyRetry(() => import("@/pages/AdminDashboard"));
+const AdminTasksPage = lazyRetry(() => import("@/pages/AdminTasksPage"));
+const AuthPage = lazyRetry(() => import("@/pages/AuthPage"));
+const ForgotPasswordPage = lazyRetry(() => import("@/pages/ForgotPasswordPage"));
+const Prognose = lazyRetry(() => import("@/pages/Prognose"));
+const PerformanceOverview = lazyRetry(() => import("@/pages/PerformanceOverview"));
+const BMSQuiz = lazyRetry(() => import("@/pages/BMSQuiz"));
+const SmartRecoveryPage = lazyRetry(() => import("@/pages/SmartRecoveryPage"));
+const FragenTrainer = lazyRetry(() => import("@/pages/FragenTrainer"));
+const DailyChallenge = lazyRetry(() => import("@/pages/DailyChallenge"));
+const Formelsammlung = lazyRetry(() => import("@/pages/Formelsammlung"));
+const FortschrittPage = lazyRetry(() => import("@/pages/FortschrittPage"));
+const TodayPage = lazyRetry(() => import("@/pages/TodayPage"));
+const Legal = lazyRetry(() => import("@/pages/Legal"));
+const Einstellungen = lazyRetry(() => import("@/pages/Einstellungen"));
+const BMSDemo = lazyRetry(() => import("@/pages/BMSDemo"));
+const SubjectDemo = lazyRetry(() => import("@/pages/SubjectDemo"));
+const QuizChallenge = lazyRetry(() => import("@/pages/QuizChallenge"));
+const FAQPage = lazyRetry(() => import("@/pages/FAQPage"));
+const UeberUns = lazyRetry(() => import("@/pages/UeberUns"));
+const MedATGuide = lazyRetry(() => import("@/pages/MedATGuide"));
+const MedATPunkterechner = lazyRetry(() => import("@/pages/MedATPunkterechner"));
+const StichwortlistePublic = lazyRetry(() => import("@/pages/StichwortlistePublic"));
+const KFFDemo = lazyRetry(() => import("@/pages/KFFDemo"));
+const AnalyticsDashboard = lazyRetry(() => import("@/pages/AnalyticsDashboard"));
+const BlogIndex = lazyRetry(() => import("@/pages/BlogIndex"));
+const BlogArticle = lazyRetry(() => import("@/pages/BlogArticle"));
+const PaidLanding = lazyRetry(() => import("@/pages/PaidLanding"));
+const PaidLandingBMS = lazyRetry(() => import("@/pages/PaidLandingBMS"));
+const MedATCountdown = lazyRetry(() => import("@/pages/MedATCountdown"));
+const DiagramDemo = lazyRetry(() => import("@/pages/DiagramDemo"));
+const PaymentSuccess = lazyRetry(() => import("@/pages/PaymentSuccess"));
 
 function LoadingSpinner() {
   return (

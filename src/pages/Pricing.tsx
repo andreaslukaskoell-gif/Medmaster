@@ -115,14 +115,21 @@ export default function Pricing() {
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </Button>
-          ) : isPaymentEnabled() ? (
+          ) : isPaymentEnabled() && user ? (
             <Button
               className="w-full py-6 text-base font-semibold"
               size="lg"
-              onClick={() => startCheckout({ email: user?.email ?? undefined, userId: user?.id })}
+              onClick={() => startCheckout({ email: user.email ?? undefined, userId: user.id })}
             >
               Jetzt kaufen — {formatPrice(personalPrice)}
               <ArrowRight className="w-4 h-4 ml-2" />
+            </Button>
+          ) : isPaymentEnabled() && !user ? (
+            <Button className="w-full py-6 text-base font-semibold" size="lg" asChild>
+              <Link to="/login?redirect=/preise">
+                Anmelden & kaufen — {formatPrice(personalPrice)}
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
             </Button>
           ) : (
             <Button className="w-full py-6 text-base font-semibold" size="lg" asChild>
