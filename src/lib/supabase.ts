@@ -60,26 +60,20 @@ function completeProbe(ok: boolean) {
 if (isSchemaSkipActive()) {
   probeResult = false;
 } else if (rawClient) {
-  // Fire probe immediately
-  rawClient
-    .from("profiles")
-    .select("id")
-    .limit(1)
-    .maybeSingle()
-    .then(
-      ({ error }) => {
-        if (error) {
-          setSchemaSkip();
-          completeProbe(false);
-        } else {
-          completeProbe(true);
-        }
-      },
-      () => {
+  // Fire probe immediately — wrap in Promise.resolve to ensure .catch is available
+  Promise.resolve(rawClient.from("profiles").select("id").limit(1).maybeSingle())
+    .then(({ error }) => {
+      if (error) {
         setSchemaSkip();
         completeProbe(false);
+      } else {
+        completeProbe(true);
       }
-    );
+    })
+    .catch(() => {
+      setSchemaSkip();
+      completeProbe(false);
+    });
 } else {
   probeResult = false;
 }
