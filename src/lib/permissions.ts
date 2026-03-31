@@ -25,13 +25,14 @@ export type FeatureLimits = {
   advanced_analytics: boolean;
   lernplan: boolean;
   fortschritt: boolean;
+  prognose: boolean;
 };
 
 const LIMITS: Record<Tier, FeatureLimits> = {
   starter: {
-    bms_questions_per_subject: 10,
+    bms_questions_per_subject: 50,
     bms_chapters: "unlimited",
-    bms_uks_per_subject: 2,
+    bms_uks_per_subject: 5,
     kff_exercises: 10,
     kff_per_subtest: 20,
     kff_gm: 8,
@@ -45,7 +46,8 @@ const LIMITS: Record<Tier, FeatureLimits> = {
     spaced_repetition: false,
     advanced_analytics: false,
     lernplan: false,
-    fortschritt: false,
+    fortschritt: true,
+    prognose: false,
   },
   premium: {
     bms_questions_per_subject: "unlimited",
@@ -65,6 +67,7 @@ const LIMITS: Record<Tier, FeatureLimits> = {
     advanced_analytics: true,
     lernplan: true,
     fortschritt: true,
+    prognose: true,
   },
 };
 

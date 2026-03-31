@@ -736,7 +736,7 @@ export default function Prognose() {
     });
   }, [quizResults]);
 
-  if (isLocked("fortschritt")) {
+  if (isLocked("prognose")) {
     return (
       <div className="max-w-3xl mx-auto p-6">
         <Paywall feature="Prüfungstag-Prognose">
