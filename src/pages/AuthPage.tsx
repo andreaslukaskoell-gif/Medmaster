@@ -4,6 +4,7 @@ import { Mail, ArrowRight, Lock, Eye, EyeOff, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 import { useAuth } from "@/hooks/useAuth";
+import { supabase } from "@/lib/supabase";
 import { useStore } from "@/store/useStore";
 import { usePageTitle } from "@/hooks/usePageTitle";
 import { translateAuthError } from "@/lib/authErrors";
@@ -50,6 +51,7 @@ export default function AuthPage() {
   const [showPassword, setShowPassword] = useState(false);
   const [isNewUser, setIsNewUser] = useState(false);
   const [otpSent, setOtpSent] = useState(false);
+  const [showReregisterConfirm, setShowReregisterConfirm] = useState(false);
   const { signIn, signUp, signInWithGoogle, signInWithOtp } = useAuth();
   const setMedATOnboardingComplete = useStore((s) => s.setMedATOnboardingComplete);
   const navigate = useNavigate();
@@ -91,11 +93,7 @@ export default function AuthPage() {
     }
   };
 
-  const handleMagicLink = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email.trim()) return;
-    if (!checkThrottle()) return;
-    setError("");
+  const sendMagicLink = async () => {
     setLoading(true);
     const { error } = await signInWithOtp(email);
     setLoading(false);
@@ -106,6 +104,34 @@ export default function AuthPage() {
       trackLogin("magic_link");
       setOtpSent(true);
     }
+  };
+
+  const handleMagicLink = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email.trim()) return;
+    if (!checkThrottle()) return;
+    setError("");
+
+    // Check if this email was previously deleted
+    if (supabase) {
+      const { data: wasDeleted } = await supabase.rpc("check_deleted_email", {
+        check_email: email.trim(),
+      });
+      if (wasDeleted) {
+        setShowReregisterConfirm(true);
+        return;
+      }
+    }
+
+    await sendMagicLink();
+  };
+
+  const handleConfirmReregister = async () => {
+    setShowReregisterConfirm(false);
+    if (supabase) {
+      await supabase.rpc("confirm_reregistration", { check_email: email.trim() });
+    }
+    await sendMagicLink();
   };
 
   const handlePasswordSubmit = async (e: React.FormEvent) => {
@@ -169,6 +195,43 @@ export default function AuthPage() {
           <p className="text-sm font-medium text-[var(--text-secondary)]">
             Weiterleitung zu Google...
           </p>
+        </div>
+      </div>
+    );
+  }
+
+  // Re-registration confirmation for previously deleted accounts
+  if (showReregisterConfirm) {
+    return (
+      <div className="hero-orbs min-h-screen bg-[var(--background)] flex items-center justify-center p-4">
+        <div className="w-full max-w-md space-y-6">
+          <div className="card-glass">
+            <div className="p-8 text-center space-y-4">
+              <Mail className="w-12 h-12 text-amber-500 mx-auto" />
+              <h2 className="text-xl font-bold text-[var(--text-primary)]">Konto wurde gelöscht</h2>
+              <p className="text-sm text-[var(--muted)] leading-relaxed">
+                Das Konto mit{" "}
+                <span className="font-medium text-[var(--text-primary)]">{email}</span> wurde zuvor
+                auf Wunsch gelöscht. Alle Daten wurden entfernt.
+              </p>
+              <p className="text-sm text-[var(--muted)]">
+                Möchtest du ein neues Konto mit dieser E-Mail erstellen? Bisheriger Fortschritt ist
+                nicht wiederherstellbar.
+              </p>
+              <div className="flex gap-3 justify-center pt-2">
+                <button
+                  type="button"
+                  onClick={() => setShowReregisterConfirm(false)}
+                  className="px-4 py-2 text-sm rounded-lg border border-[var(--border)] text-[var(--muted)] hover:bg-[var(--surface-hover)] transition-colors"
+                >
+                  Abbrechen
+                </button>
+                <Button onClick={handleConfirmReregister} disabled={loading}>
+                  {loading ? "Wird erstellt..." : "Ja, neu registrieren"}
+                </Button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     );
