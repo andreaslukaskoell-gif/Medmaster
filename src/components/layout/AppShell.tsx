@@ -24,6 +24,9 @@ const LevelUpOverlayLazy = lazy(() =>
 const BadgeUnlockModalLazy = lazy(() =>
   import("@/components/badges/BadgeUnlockModal").then((m) => ({ default: m.BadgeUnlockModal }))
 );
+const ReviewPromptLazy = lazy(() =>
+  import("@/components/ReviewPrompt").then((m) => ({ default: m.ReviewPrompt }))
+);
 import { SyncToast } from "@/components/SyncToast";
 import { OfflineBanner } from "@/components/OfflineBanner";
 import { UpdateBanner } from "@/components/UpdateBanner";
@@ -215,6 +218,7 @@ export function AppShell() {
             badgeId={pendingBadgeId}
             onDismiss={() => setPendingBadgeId(null)}
           />
+          <ReviewPromptLazy />
         </Suspense>
         <Sidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
         <KeyboardShortcutsOverlay />
