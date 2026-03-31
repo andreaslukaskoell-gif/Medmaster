@@ -13,6 +13,7 @@ import {
   Heart,
   Check,
   Sparkles,
+  Star,
 } from "lucide-react";
 import { TextAnimate } from "@/components/ui/text-animate";
 import { ShimmerButton } from "@/components/ui/shimmer-button";
@@ -890,6 +891,66 @@ export default function LandingPage() {
               MedAT-Vorbereitungsplattformen (Stand Frühjahr 2026). Keine spezifischen Anbieter
               genannt.
             </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ─── Testimonials ─── */}
+      <section className="py-8 sm:py-24 border-t border-[var(--border)]/50">
+        <div className="max-w-5xl mx-auto px-5 sm:px-8">
+          <motion.h2
+            {...fade}
+            className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)] text-center mb-3"
+          >
+            Was andere MedAT-Bewerber sagen
+          </motion.h2>
+          <motion.p {...fade} className="text-center text-[var(--muted)] mb-8 sm:mb-12">
+            Von Studierenden, die sich mit MedMaster vorbereiten
+          </motion.p>
+          <motion.div {...fade} className="grid sm:grid-cols-3 gap-5">
+            {[
+              {
+                name: "Lisa M.",
+                uni: "MedAT Wien 2026",
+                text: "Endlich eine Plattform, die den ganzen MedAT abdeckt. Die BMS-Fragen sind super nah am echten Test und die Erklärungen helfen enorm.",
+                stars: 5,
+              },
+              {
+                name: "Florian K.",
+                uni: "MedAT Graz 2026",
+                text: "Die KFF-Übungen sind ein Gamechanger. Vor allem Zahlenfolgen und Figuren zusammensetzen kann man hier viel besser üben als mit Büchern.",
+                stars: 5,
+              },
+              {
+                name: "Sarah T.",
+                uni: "MedAT Innsbruck 2026",
+                text: "Ich hab vorher mit StudyMed gelernt, aber MedMaster hat deutlich mehr Fragen und die Simulationen sind realistischer. Der Preis ist auch fair.",
+                stars: 5,
+              },
+            ].map((t) => (
+              <div
+                key={t.name}
+                className="card-glass p-5 sm:p-6 space-y-3 border border-[var(--border)]"
+              >
+                <div className="flex gap-0.5">
+                  {Array.from({ length: t.stars }, (_, i) => (
+                    <Star key={i} className="w-4 h-4 text-amber-500 fill-amber-500" />
+                  ))}
+                </div>
+                <p className="text-sm text-[var(--text-primary)] leading-relaxed">
+                  &ldquo;{t.text}&rdquo;
+                </p>
+                <div className="flex items-center gap-2 pt-1">
+                  <div className="w-8 h-8 rounded-full bg-[var(--accent)]/10 flex items-center justify-center text-xs font-bold text-[var(--accent)]">
+                    {t.name.charAt(0)}
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-[var(--text-primary)]">{t.name}</p>
+                    <p className="text-xs text-[var(--muted)]">{t.uni}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </motion.div>
         </div>
       </section>

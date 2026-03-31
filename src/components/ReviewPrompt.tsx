@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { useStore } from "@/store/useStore";
 
 const STORAGE_KEY = "medmaster-review-prompt";
-const GOOGLE_REVIEW_URL = "https://g.page/r/medmaster-at/review";
 const TRUSTPILOT_URL = "https://www.trustpilot.com/evaluate/medmaster.at";
 
 type ReviewState = {
@@ -39,9 +38,7 @@ function shouldShowPrompt(quizResults: { score: number; total: number }[]): bool
   if (quizResults.length < 3) return false;
 
   // At least one good result
-  const hasGoodResult = quizResults.some(
-    (r) => r.total > 0 && r.score / r.total >= 0.7
-  );
+  const hasGoodResult = quizResults.some((r) => r.total > 0 && r.score / r.total >= 0.7);
   return hasGoodResult;
 }
 
@@ -85,40 +82,29 @@ export function ReviewPrompt() {
                 Danke! Das freut uns
               </h3>
             </div>
-            <button onClick={dismiss} className="text-[var(--muted)] hover:text-[var(--text-primary)] cursor-pointer">
+            <button
+              onClick={dismiss}
+              className="text-[var(--muted)] hover:text-[var(--text-primary)] cursor-pointer"
+            >
               <X className="w-4 h-4" />
             </button>
           </div>
           <p className="text-sm text-[var(--muted)]">
             Hilf anderen MedAT-Bewerbern — eine kurze Bewertung macht einen riesigen Unterschied!
           </p>
-          <div className="flex gap-2">
-            <Button
-              size="sm"
-              variant="premium"
-              className="flex-1"
-              onClick={() => {
-                markReviewed();
-                window.open(GOOGLE_REVIEW_URL, "_blank");
-              }}
-            >
-              <Star className="w-3.5 h-3.5 mr-1" />
-              Google
-              <ExternalLink className="w-3 h-3 ml-1" />
-            </Button>
-            <Button
-              size="sm"
-              variant="outline"
-              className="flex-1"
-              onClick={() => {
-                markReviewed();
-                window.open(TRUSTPILOT_URL, "_blank");
-              }}
-            >
-              Trustpilot
-              <ExternalLink className="w-3 h-3 ml-1" />
-            </Button>
-          </div>
+          <Button
+            size="sm"
+            variant="premium"
+            className="w-full"
+            onClick={() => {
+              markReviewed();
+              window.open(TRUSTPILOT_URL, "_blank");
+            }}
+          >
+            <Star className="w-3.5 h-3.5 mr-1 fill-current" />
+            Auf Trustpilot bewerten
+            <ExternalLink className="w-3 h-3 ml-1" />
+          </Button>
           <button
             onClick={dismiss}
             className="text-xs text-[var(--muted)] hover:text-[var(--text-primary)] cursor-pointer"
@@ -138,7 +124,10 @@ export function ReviewPrompt() {
             <h3 className="font-semibold text-[var(--text-primary)] text-sm">
               Danke für dein Feedback
             </h3>
-            <button onClick={dismiss} className="text-[var(--muted)] hover:text-[var(--text-primary)] cursor-pointer">
+            <button
+              onClick={dismiss}
+              className="text-[var(--muted)] hover:text-[var(--text-primary)] cursor-pointer"
+            >
               <X className="w-4 h-4" />
             </button>
           </div>
@@ -146,9 +135,7 @@ export function ReviewPrompt() {
             Wir arbeiten ständig an Verbesserungen. Schreib uns gerne was fehlt:
           </p>
           <Button size="sm" variant="outline" asChild className="w-full">
-            <a href="mailto:feedback@medmaster.at?subject=MedMaster Feedback">
-              Feedback senden
-            </a>
+            <a href="mailto:feedback@medmaster.at?subject=MedMaster Feedback">Feedback senden</a>
           </Button>
         </div>
       </div>
@@ -168,12 +155,16 @@ export function ReviewPrompt() {
               Wie gefällt dir MedMaster?
             </h3>
           </div>
-          <button onClick={dismiss} className="text-[var(--muted)] hover:text-[var(--text-primary)] cursor-pointer">
+          <button
+            onClick={dismiss}
+            className="text-[var(--muted)] hover:text-[var(--text-primary)] cursor-pointer"
+          >
             <X className="w-4 h-4" />
           </button>
         </div>
         <p className="text-sm text-[var(--muted)]">
-          Du hast schon einige Quizze gemeistert! Wir würden gerne wissen, ob dir MedMaster bei der Vorbereitung hilft.
+          Du hast schon einige Quizze gemeistert! Wir würden gerne wissen, ob dir MedMaster bei der
+          Vorbereitung hilft.
         </p>
         <div className="flex gap-2">
           <Button
