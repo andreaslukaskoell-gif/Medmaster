@@ -311,7 +311,7 @@ function getEmailTemplate(
     // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
     case "launch-announcement":
       return {
-        subject: `Dein MedAT-Erfolg: Wichtige \u00C4nderung am 1. April`,
+        subject: `MedMaster: Wichtige Neuerung am 1. April`,
         html: premiumWrap(
           `
           <!-- Pill badge -->
@@ -375,7 +375,7 @@ function getEmailTemplate(
     // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
     case "launch-golive":
       return {
-        subject: `Nur heute: MedMaster Premium f\u00FCr \u20AC24,90 statt \u20AC29,90`,
+        subject: `Nur heute: MedMaster Premium 24,90 statt 29,90`,
         html: premiumWrap(
           `
           <!-- Urgency pill -->
@@ -467,7 +467,7 @@ function getEmailTemplate(
 
     case "trial-ending-7d":
       return {
-        subject: `${name}, ab 1. April nur noch eingeschr\u00E4nkter Zugang`,
+        subject: `${name}, ab 1. April nur noch limitierter Zugang`,
         html: premiumWrap(
           `
           <h1 style="font-size:24px;font-weight:800;color:${NAVY_DARK};margin:0 0 24px">Noch 7 Tage voller Zugang</h1>
@@ -485,7 +485,7 @@ function getEmailTemplate(
 
     case "trial-ending-3d":
       return {
-        subject: `Noch 72h voller Zugang \u2014 ab 1. April wird reduziert`,
+        subject: `Noch 72h voller Zugang - ab 1. April wird reduziert`,
         html: premiumWrap(
           `
           <h1 style="font-size:24px;font-weight:800;color:${NAVY_DARK};margin:0 0 24px">72 Stunden bis zur Umstellung</h1>
@@ -502,7 +502,7 @@ function getEmailTemplate(
 
     case "trial-ending-today":
       return {
-        subject: `Letzter Tag: Ab morgen nur noch eingeschr\u00E4nkter Zugang`,
+        subject: `Letzter Tag: Ab morgen nur noch limitierter Zugang`,
         html: premiumWrap(
           `
           <h1 style="font-size:24px;font-weight:800;color:#dc2626;margin:0 0 24px">Heute ist der letzte Tag</h1>
@@ -536,7 +536,7 @@ function getEmailTemplate(
 
     case "post-trial-day3":
       return {
-        subject: `MedAT-Tipp: Die 3 h\u00E4ufigsten Fehler`,
+        subject: `MedAT-Tipp: Die 3 typischsten Fehler`,
         html: premiumWrap(
           `
           <h1 style="font-size:24px;font-weight:800;color:${NAVY_DARK};margin:0 0 24px">3 Fehler, die 80% der Bewerber machen</h1>
@@ -794,30 +794,49 @@ serve(async (req) => {
           });
         }
 
-        const { data: users, error } = await supabase.auth.admin.listUsers();
-        if (error) {
-          console.error("Failed to list users:", error);
-          return new Response(JSON.stringify({ error: "Failed to list users" }), {
-            status: 500,
-            headers: { "Content-Type": "application/json" },
+        // Fetch ALL users (listUsers has a default limit of 50, paginate to get all)
+        let allUsers: { id: string; email?: string }[] = [];
+        let page = 1;
+        while (true) {
+          const { data: batch, error: batchErr } = await supabase.auth.admin.listUsers({
+            page,
+            perPage: 100,
           });
+          if (batchErr) {
+            console.error("Failed to list users:", batchErr);
+            return new Response(JSON.stringify({ error: "Failed to list users" }), {
+              status: 500,
+              headers: { "Content-Type": "application/json" },
+            });
+          }
+          allUsers = allUsers.concat(batch.users);
+          if (batch.users.length < 100) break;
+          page++;
         }
+        const users = { users: allUsers };
 
-        const { data: starterProfiles } = await supabase
+        // Get ALL profiles — send to everyone except confirmed premium users
+        const { data: allProfiles } = await supabase
           .from("profiles")
-          .select("id, display_name, subscription_tier")
-          .eq("subscription_tier", "starter");
+          .select("id, display_name, subscription_tier");
 
-        const starterIds = new Set((starterProfiles || []).map((p: { id: string }) => p.id));
+        const premiumIds = new Set(
+          (allProfiles || [])
+            .filter(
+              (p: { subscription_tier: string }) =>
+                p.subscription_tier === "premium" || p.subscription_tier === "pro"
+            )
+            .map((p: { id: string }) => p.id)
+        );
         const profileMap = new Map(
-          (starterProfiles || []).map((p: { id: string; display_name: string }) => [p.id, p])
+          (allProfiles || []).map((p: { id: string; display_name: string }) => [p.id, p])
         );
 
         let sent = 0;
         let skipped = 0;
 
         for (const user of users.users) {
-          if (!starterIds.has(user.id) || !user.email) {
+          if (premiumIds.has(user.id) || !user.email) {
             skipped++;
             continue;
           }
@@ -862,7 +881,98 @@ serve(async (req) => {
           await new Promise((r) => setTimeout(r, 100));
         }
 
-        return new Response(JSON.stringify({ sent, skipped }), {
+        // Debug: list users that were skipped and why
+        const skippedNoEmail = users.users
+          .filter((u: { email?: string }) => !u.email)
+          .map((u: { id: string }) => u.id);
+        const skippedPremium = users.users
+          .filter((u: { id: string; email?: string }) => u.email && premiumIds.has(u.id))
+          .map((u: { id: string; email?: string }) => u.email);
+        const skippedAlready =
+          users.users.filter(
+            (u: { id: string; email?: string }) => u.email && !premiumIds.has(u.id)
+          ).length - sent;
+        return new Response(
+          JSON.stringify({
+            sent,
+            skipped,
+            totalUsers: users.users.length,
+            skippedNoEmail: skippedNoEmail.length,
+            skippedPremium,
+            allEmails: users.users
+              .filter((u: { email?: string }) => u.email)
+              .map((u: { email?: string }) => u.email)
+              .sort(),
+          }),
+          {
+            status: 200,
+            headers: { "Content-Type": "application/json" },
+          }
+        );
+      }
+
+      // ── Send raw HTML email (support replies etc.) ──
+      case "send-raw": {
+        const { to, subject, html } = body;
+        if (!to || !subject || !html) {
+          return new Response(JSON.stringify({ error: "Missing to, subject, or html" }), {
+            status: 400,
+            headers: { "Content-Type": "application/json" },
+          });
+        }
+        const ok = await sendEmail(to, subject, html);
+        return new Response(JSON.stringify({ sent: ok, ...(ok ? {} : { error: lastSendError }) }), {
+          status: ok ? 200 : 500,
+          headers: { "Content-Type": "application/json" },
+        });
+      }
+
+      // ── Debug user counts ──
+      case "debug-users": {
+        let allU: { id: string; email?: string }[] = [];
+        let pg = 1;
+        while (true) {
+          const { data: b } = await supabase.auth.admin.listUsers({ page: pg, perPage: 100 });
+          if (!b) break;
+          allU = allU.concat(b.users);
+          if (b.users.length < 100) break;
+          pg++;
+        }
+        const { data: profs } = await supabase.from("profiles").select("id, subscription_tier");
+        const premC = (profs || []).filter(
+          (x: { subscription_tier: string }) =>
+            x.subscription_tier === "premium" || x.subscription_tier === "pro"
+        ).length;
+        const withEm = allU.filter((u) => u.email).length;
+        return new Response(
+          JSON.stringify({
+            totalAuthUsers: allU.length,
+            withEmail: withEm,
+            totalProfiles: (profs || []).length,
+            premiumProfiles: premC,
+            eligibleForBroadcast: withEm - premC,
+          }),
+          { status: 200, headers: { "Content-Type": "application/json" } }
+        );
+      }
+
+      // ── List sent emails ──
+      case "logs": {
+        const { templateId: tid } = body;
+        let query = supabase
+          .from("email_logs")
+          .select("recipient_email, template_id, sent_at")
+          .order("sent_at", { ascending: false })
+          .limit(200);
+        if (tid) query = query.eq("template_id", tid);
+        const { data: logs, error: logErr } = await query;
+        if (logErr) {
+          return new Response(JSON.stringify({ error: logErr.message }), {
+            status: 500,
+            headers: { "Content-Type": "application/json" },
+          });
+        }
+        return new Response(JSON.stringify(logs), {
           status: 200,
           headers: { "Content-Type": "application/json" },
         });

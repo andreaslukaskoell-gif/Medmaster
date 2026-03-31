@@ -262,15 +262,20 @@ export function useAuth() {
   async function deleteAccount() {
     if (!supabase || !user) return { error: new Error("Nicht eingeloggt") };
     try {
-      // Delete profile data first
-      await supabase.from("profiles").delete().eq("id", user.id);
-      await supabase.from("user_stats").delete().eq("user_id", user.id);
-      // Try RPC if available (requires Supabase function)
-      const { error: rpcError } = await supabase.rpc("delete_user");
-      if (rpcError) {
-        // Fallback: sign out and send deletion request email
-        console.warn("RPC delete_user not available, manual deletion needed:", rpcError.message);
+      // Get current session token for Edge Function auth
+      const { data: sessionData } = await supabase.auth.getSession();
+      const accessToken = sessionData?.session?.access_token;
+
+      if (accessToken) {
+        // Call Edge Function: deletes auth user (cascades all data) + sends confirmation email
+        const { error: fnError } = await supabase.functions.invoke("delete-account", {
+          headers: { Authorization: `Bearer ${accessToken}` },
+        });
+        if (fnError) {
+          console.warn("Edge Function delete-account failed, falling back:", fnError.message);
+        }
       }
+
       stopAutoSync();
       stopMainSync();
       await supabase.auth.signOut();

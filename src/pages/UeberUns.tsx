@@ -126,12 +126,12 @@ export default function UeberUns() {
             es beim ersten Anlauf schaffst.
           </p>
           <p className="text-xs text-[var(--muted)]">
-            Fragen oder Feedback? Schreib mir direkt:{" "}
+            Fragen oder Feedback? Schreib uns direkt:{" "}
             <a
-              href="mailto:andreas@medmaster.at"
+              href="mailto:support@medmaster.at"
               className="text-[var(--accent)] font-medium hover:underline"
             >
-              andreas@medmaster.at
+              support@medmaster.at
             </a>
           </p>
         </CardContent>
