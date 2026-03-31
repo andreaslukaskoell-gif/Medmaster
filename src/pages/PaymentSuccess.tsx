@@ -56,16 +56,37 @@ function Confetti() {
 
 export default function PaymentSuccess() {
   usePageTitle("Zahlung erfolgreich");
-  const { refreshProfile } = useAuth();
+  const { refreshProfile, isPremium } = useAuth();
   const [showConfetti, setShowConfetti] = useState(true);
+  const [activating, setActivating] = useState(true);
 
   useEffect(() => {
     track("payment_success");
     const t = setTimeout(() => setShowConfetti(false), 5000);
     return () => clearTimeout(t);
-    // Re-fetch profile to pick up the premium tier set by webhook
-    refreshProfile();
-  }, [refreshProfile]);
+  }, []);
+
+  // Poll for premium status — webhook may take a few seconds
+  useEffect(() => {
+    if (isPremium) {
+      setActivating(false);
+      return;
+    }
+    let cancelled = false;
+    let attempts = 0;
+    const poll = async () => {
+      while (!cancelled && attempts < 15) {
+        attempts++;
+        await refreshProfile();
+        await new Promise((r) => setTimeout(r, 2000));
+      }
+      if (!cancelled) setActivating(false);
+    };
+    poll();
+    return () => {
+      cancelled = true;
+    };
+  }, [isPremium, refreshProfile]);
 
   return (
     <div className="min-h-[60vh] flex items-center justify-center px-4">
@@ -78,11 +99,12 @@ export default function PaymentSuccess() {
 
           <div className="space-y-2">
             <h1 className="text-2xl font-bold text-[var(--text-primary)]">
-              Willkommen bei MedMaster Premium!
+              {activating ? "Premium wird aktiviert …" : "Willkommen bei MedMaster Premium!"}
             </h1>
             <p className="text-[var(--muted)]">
-              Deine Zahlung war erfolgreich. Du hast jetzt vollen Zugang zu allen Features — 5.000+
-              BMS-Fragen, Simulationen, Lernplan und mehr.
+              {activating
+                ? "Deine Zahlung war erfolgreich. Dein Account wird gerade freigeschaltet — dauert nur einen Moment."
+                : "Deine Zahlung war erfolgreich. Du hast jetzt vollen Zugang zu allen Features — 5.000+ BMS-Fragen, Simulationen, Lernplan und mehr."}
             </p>
           </div>
 

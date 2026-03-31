@@ -85,9 +85,21 @@ export async function initIAP(onVerified?: (userId: string) => Promise<void>): P
         const receipt = transaction.parentReceipt;
         if (receipt && onVerified) {
           try {
-            // The Supabase Edge Function validates the receipt and upgrades the profile
-            const userId = localStorage.getItem("medmaster-user-id") ?? "";
-            await onVerified(userId);
+            // Read userId from Supabase auth session (reliable) or Zustand store
+            const { createClient } = await import("@supabase/supabase-js");
+            const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+            const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+            let userId = "";
+            if (supabaseUrl && supabaseKey) {
+              const sb = createClient(supabaseUrl, supabaseKey);
+              const { data } = await sb.auth.getSession();
+              userId = data.session?.user?.id ?? "";
+            }
+            if (!userId) {
+              console.error("[IAP] No user ID found — cannot verify purchase server-side");
+            } else {
+              await onVerified(userId);
+            }
           } catch (err) {
             console.error("[IAP] Server verification failed:", err);
           }

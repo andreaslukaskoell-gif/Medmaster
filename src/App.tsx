@@ -15,6 +15,7 @@ import { MotionConfig } from "framer-motion";
 import { AppShell } from "@/components/layout/AppShell";
 import { AuthGuard } from "@/components/AuthGuard";
 import { useAuth } from "@/hooks/useAuth";
+import { usePermissions } from "@/hooks/usePermissions";
 import { useStore } from "@/store/useStore";
 import { usePageTracking } from "@/hooks/usePageTracking";
 import { sanitizeUrlParam } from "@/lib/security";
@@ -157,6 +158,9 @@ function BMSQuizWrapper() {
   const { fach } = useParams<{ fach: string }>();
   const navigate = useNavigate();
   if (!fach) return <Navigate to="/bms" replace />;
+  // Prevent free users from bypassing question limits via direct URL
+  const { isPremium } = usePermissions();
+  if (!isPremium) return <Navigate to="/bms" replace />;
   return <BMSQuiz subject={fach} onBack={() => navigate("/bms")} />;
 }
 
@@ -199,6 +203,26 @@ function NotFound404() {
 }
 
 /** Sync dark mode class on <html> + native status bar whenever store.darkMode changes */
+/** Initialize In-App Purchase store on native platforms */
+function IAPInit() {
+  useEffect(() => {
+    import("@/lib/native").then(({ isNative }) => {
+      if (!isNative) return;
+      import("@/lib/iap").then(({ initIAP }) => {
+        const onVerified = async (userId: string) => {
+          const { supabase } = await import("@/lib/supabase");
+          if (!supabase) return;
+          await supabase.functions.invoke("verify-apple-receipt", {
+            body: { userId },
+          });
+        };
+        initIAP(onVerified).catch((err) => console.warn("[IAP] Init error:", err));
+      });
+    });
+  }, []);
+  return null;
+}
+
 function DarkModeSync() {
   const darkMode = useStore((s) => s.darkMode);
   useEffect(() => {
@@ -224,6 +248,7 @@ export default function App() {
     <MotionConfig reducedMotion={prefersReducedMotion ? "always" : "never"}>
       <BrowserRouter>
         <DarkModeSync />
+        <IAPInit />
         <ScrollToTop />
         <FloatingCTA />
         <CookieConsentBanner />

@@ -56,6 +56,13 @@ export default defineConfig({
             if (id.includes("/mathematik/")) return "bms-mathematik";
             return "bms-data";
           }
+          // KFF pools — large pre-generated data, always lazy-loaded
+          if (id.includes("kffFiguren1000_chunk1")) return "kff-figuren-1";
+          if (id.includes("kffFiguren1000_chunk2")) return "kff-figuren-2";
+          if (id.includes("kffFiguren1000_chunk3")) return "kff-figuren-3";
+          if (id.includes("kffFiguren1000_chunk4")) return "kff-figuren-4";
+          if (id.includes("kffImplikationen1000")) return "kff-implikationen-pool";
+          if (id.includes("kffZahlenfolgen1000")) return "kff-zahlenfolgen-pool";
           // Vendor splits
           if (id.includes("node_modules")) {
             if (id.includes("react-dom") || id.includes("react-router-dom")) return "vendor-react";

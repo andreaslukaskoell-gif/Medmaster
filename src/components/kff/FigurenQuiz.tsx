@@ -121,8 +121,9 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
       // Primary: static pool (instant, no network)
       let valid: FigureAssembleTask[];
       try {
-        const { FIGUREN_POOL_1000 } = await import("@/data/kffFiguren1000");
-        valid = filterValidFigurenTasks(FIGUREN_POOL_1000);
+        const { loadFigurenPool } = await import("@/data/kffFiguren1000");
+        const pool = await loadFigurenPool();
+        valid = filterValidFigurenTasks(pool);
       } catch {
         // Pool not generated yet — generate on-the-fly
         valid = [];

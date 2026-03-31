@@ -120,6 +120,7 @@ export default function TV() {
 
   // --- Legacy quiz handlers ---
   const handleStartLegacy = (textIdx: number) => {
+    if (tvTextLimit !== null && textIdx >= tvTextLimit) return;
     setSelectedTextIndex(textIdx);
     setLegacyAnswers({});
     setView("legacy-quiz");
@@ -184,6 +185,7 @@ export default function TV() {
   const allAussagenFragen = tvOffiziellTexte[selectedAussagenIndex]?.fragen ?? [];
 
   const handleStartAussagen = (idx: number) => {
+    if (tvTextLimit !== null && idx >= tvTextLimit) return;
     setSelectedAussagenIndex(idx);
     setAussagenAnswers({});
     setView("aussagen-quiz");
@@ -783,7 +785,7 @@ export default function TV() {
                   key={set.id}
                   className={`${isMobile ? "flex flex-col gap-2 px-3 py-3" : "flex items-center gap-4 px-5 py-3.5"} ${isSetLocked ? "opacity-50" : "hover:bg-[var(--accent)]/3"} transition-colors group`}
                 >
-                  <div className="flex items-center gap-3 min-w-0">
+                  <div className="flex items-center gap-3 min-w-0 flex-1">
                     <span className="text-xs font-bold text-[var(--muted)] tabular-nums w-5 text-center shrink-0">
                       {i + 1}
                     </span>
@@ -794,19 +796,16 @@ export default function TV() {
                         {set.name}
                       </span>
                     </div>
-                    <Badge
-                      className={`text-[10px] shrink-0 ${difficultyColors[set.difficulty] || ""}`}
-                    >
-                      {set.difficulty}
-                    </Badge>
                     <span className="text-xs text-[var(--muted)] shrink-0 tabular-nums">
                       {totalQ} Fragen
                     </span>
                   </div>
                   {isSetLocked ? (
-                    <span className="text-xs text-[var(--muted)] shrink-0">Premium</span>
+                    <span className="text-xs text-[var(--muted)] shrink-0 ml-auto">Premium</span>
                   ) : (
-                    <div className={`flex items-center gap-2 ${isMobile ? "ml-8" : ""}`}>
+                    <div
+                      className={`flex items-center gap-2 shrink-0 ${isMobile ? "ml-8" : "ml-auto"}`}
+                    >
                       <Button
                         variant="premium"
                         size="sm"
@@ -857,31 +856,46 @@ export default function TV() {
           wählen
         </p>
         <div className="card-glass divide-y divide-[var(--border)] overflow-hidden">
-          {(showAllOffiziell ? tvOffiziellTexte : tvOffiziellTexte.slice(0, 5)).map((t, i) => (
-            <button
-              key={t.id}
-              onClick={() => handleStartAussagen(i)}
-              className={`w-full flex items-center ${isMobile ? "gap-2 px-3 py-3" : "gap-4 px-5 py-3.5"} text-left hover:bg-[var(--accent)]/3 transition-colors cursor-pointer group`}
-            >
-              <span className="text-xs font-bold text-[var(--muted)] tabular-nums w-5 text-center shrink-0">
-                {i + 1}
-              </span>
-              <div className="flex-1 min-w-0">
-                <span className="text-sm font-medium text-[var(--text-primary)] truncate block">
-                  {t.title}
+          {(showAllOffiziell ? tvOffiziellTexte : tvOffiziellTexte.slice(0, 5)).map((t, i) => {
+            const isLocked = tvTextLimit !== null && i >= tvTextLimit;
+            return (
+              <button
+                key={t.id}
+                onClick={() => handleStartAussagen(i)}
+                disabled={isLocked}
+                className={`w-full flex items-center ${isMobile ? "gap-2 px-3 py-3" : "gap-4 px-5 py-3.5"} text-left ${isLocked ? "opacity-50 cursor-not-allowed" : "hover:bg-[var(--accent)]/3 cursor-pointer"} transition-colors group`}
+              >
+                <span className="text-xs font-bold text-[var(--muted)] tabular-nums w-5 text-center shrink-0">
+                  {i + 1}
                 </span>
-              </div>
-              {i < 2 && (
-                <Badge variant="info" className="text-[10px] shrink-0">
-                  Offiziell
-                </Badge>
-              )}
-              <span className="text-xs text-[var(--muted)] shrink-0 tabular-nums">
-                {t.fragen.length} {t.fragen.length === 1 ? "Frage" : "Fragen"}
-              </span>
-              <ArrowRight className="w-4 h-4 text-[var(--muted)] shrink-0 opacity-0 group-hover:opacity-100 transition-opacity" />
-            </button>
-          ))}
+                <div className="flex-1 min-w-0">
+                  <span
+                    className={`text-sm font-medium truncate block ${isLocked ? "text-[var(--muted)]" : "text-[var(--text-primary)]"}`}
+                  >
+                    {t.title}
+                  </span>
+                </div>
+                {i < 2 && (
+                  <Badge variant="info" className="text-[10px] shrink-0">
+                    Offiziell
+                  </Badge>
+                )}
+                <span className="text-xs text-[var(--muted)] shrink-0 tabular-nums">
+                  {isLocked
+                    ? "Premium"
+                    : `${t.fragen.length} ${t.fragen.length === 1 ? "Frage" : "Fragen"}`}
+                </span>
+                {!isLocked && (
+                  <ArrowRight className="w-4 h-4 text-[var(--muted)] shrink-0 opacity-0 group-hover:opacity-100 transition-opacity" />
+                )}
+              </button>
+            );
+          })}
+          {tvTextLimit !== null && tvOffiziellTexte.length > tvTextLimit && (
+            <div className="p-4">
+              <PaywallBanner feature={`Alle ${tvOffiziellTexte.length} Texte freischalten`} />
+            </div>
+          )}
         </div>
         {tvOffiziellTexte.length > 5 && !showAllOffiziell && (
           <div className="flex justify-center pt-1">
@@ -918,26 +932,41 @@ export default function TV() {
         </div>
         <p className="text-xs text-[var(--muted)] -mt-1">Vereinfachtes Format — für den Einstieg</p>
         <div className="card-glass divide-y divide-[var(--border)] overflow-hidden">
-          {displayedLegacyTexts.map((t, i) => (
-            <button
-              key={t.id}
-              onClick={() => handleStartLegacy(i)}
-              className={`w-full flex items-center ${isMobile ? "gap-2 px-3 py-3" : "gap-4 px-5 py-3.5"} text-left hover:bg-[var(--accent)]/3 transition-colors cursor-pointer group`}
-            >
-              <span className="text-xs font-bold text-[var(--muted)] tabular-nums w-5 text-center shrink-0">
-                {i + 1}
-              </span>
-              <div className="flex-1 min-w-0">
-                <span className="text-sm font-medium text-[var(--text-primary)] truncate block">
-                  {t.title}
+          {displayedLegacyTexts.map((t, i) => {
+            const isLocked = tvTextLimit !== null && i >= tvTextLimit;
+            return (
+              <button
+                key={t.id}
+                onClick={() => handleStartLegacy(i)}
+                disabled={isLocked}
+                className={`w-full flex items-center ${isMobile ? "gap-2 px-3 py-3" : "gap-4 px-5 py-3.5"} text-left ${isLocked ? "opacity-50 cursor-not-allowed" : "hover:bg-[var(--accent)]/3 cursor-pointer"} transition-colors group`}
+              >
+                <span className="text-xs font-bold text-[var(--muted)] tabular-nums w-5 text-center shrink-0">
+                  {i + 1}
                 </span>
-              </div>
-              <span className="text-xs text-[var(--muted)] shrink-0 tabular-nums">
-                {t.statements.length} {t.statements.length === 1 ? "Aussage" : "Aussagen"}
-              </span>
-              <ArrowRight className="w-4 h-4 text-[var(--muted)] shrink-0 opacity-0 group-hover:opacity-100 transition-opacity" />
-            </button>
-          ))}
+                <div className="flex-1 min-w-0">
+                  <span
+                    className={`text-sm font-medium truncate block ${isLocked ? "text-[var(--muted)]" : "text-[var(--text-primary)]"}`}
+                  >
+                    {t.title}
+                  </span>
+                </div>
+                <span className="text-xs text-[var(--muted)] shrink-0 tabular-nums">
+                  {isLocked
+                    ? "Premium"
+                    : `${t.statements.length} ${t.statements.length === 1 ? "Aussage" : "Aussagen"}`}
+                </span>
+                {!isLocked && (
+                  <ArrowRight className="w-4 h-4 text-[var(--muted)] shrink-0 opacity-0 group-hover:opacity-100 transition-opacity" />
+                )}
+              </button>
+            );
+          })}
+          {tvTextLimit !== null && tvTexts.length > tvTextLimit && (
+            <div className="p-4">
+              <PaywallBanner feature={`Alle ${tvTexts.length} Texte freischalten`} />
+            </div>
+          )}
         </div>
 
         {/* Show more toggle */}
