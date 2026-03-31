@@ -1,5 +1,5 @@
 import { createClient, SupabaseClient } from "@supabase/supabase-js";
-import { isSchemaSkipActive } from "./supabaseSchemaSkip";
+import { isSchemaSkipActive, setSchemaSkip } from "./supabaseSchemaSkip";
 
 // Vite: use import.meta.env.VITE_*; Node (e.g. seed scripts): fallback to process.env
 const env =
@@ -28,29 +28,66 @@ function createNoopFromBuilder(): PromiseLike<{ data: null; error: null }> {
     data: null as null,
     error: null as null,
   });
-  // Callable proxy: methods like .insert(), .select(), .upsert() return the builder itself
   const builder: unknown = new Proxy(function () {}, {
     get(_target, prop) {
       if (prop === "then") {
         return (onfulfilled?: (v: unknown) => unknown, onrejected?: (e: unknown) => unknown) =>
           Promise.resolve(empty).then(onfulfilled, onrejected);
       }
-      return builder; // chain: .from().select().eq().single() etc.
+      return builder;
     },
     apply() {
-      return builder; // .insert({...}), .eq("id", x), etc.
+      return builder;
     },
   });
   return builder as PromiseLike<{ data: null; error: null }> & Record<string, unknown>;
+}
+
+/**
+ * Auto-detecting schema probe: the first .from() call is allowed through.
+ * If Supabase returns 400 (missing tables), schema-skip is activated for the session.
+ * All subsequent .from() calls become no-ops (zero network requests).
+ */
+let probeState: "pending" | "probing" | "done" = "pending";
+
+function wrapFromWithAutoProbe(realFrom: SupabaseClient["from"]): SupabaseClient["from"] {
+  return ((table: string) => {
+    // Already confirmed broken — noop
+    if (isSchemaSkipActive()) return createNoopFromBuilder();
+
+    // First call: do probe on "profiles" table
+    if (probeState === "pending") {
+      probeState = "probing";
+      // Fire-and-forget probe — don't block the current call
+      Promise.resolve().then(async () => {
+        try {
+          const { error } = await rawClient!.from("profiles").select("id").limit(1).maybeSingle();
+          if (error && (error as { status?: number }).status === 400) {
+            setSchemaSkip();
+            console.warn("[MedMaster] Supabase-Schema fehlt (400) — alle DB-Calls deaktiviert.");
+          }
+        } catch {
+          setSchemaSkip();
+        } finally {
+          probeState = "done";
+        }
+      });
+    }
+
+    // Allow real call through (the first few calls before probe completes go through)
+    return realFrom(table);
+  }) as SupabaseClient["from"];
 }
 
 /** Supabase-Client: bei aktivem Schema-Skip liefert .from() einen Noop-Builder (kein Netzwerk). */
 export const supabase: SupabaseClient | null = rawClient
   ? new Proxy(rawClient, {
       get(target, prop, receiver) {
-        if (prop === "from" && isSchemaSkipActive()) {
-          // eslint-disable-next-line @typescript-eslint/no-unused-vars -- .from(table) signature
-          return (table: string) => createNoopFromBuilder();
+        if (prop === "from") {
+          if (isSchemaSkipActive()) {
+            return () => createNoopFromBuilder();
+          }
+          return wrapFromWithAutoProbe(target.from.bind(target));
         }
         return Reflect.get(target, prop, receiver);
       },
