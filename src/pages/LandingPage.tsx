@@ -895,63 +895,23 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* ─── Testimonials ─── */}
-      <section className="py-8 sm:py-24 border-t border-[var(--border)]/50">
-        <div className="max-w-5xl mx-auto px-5 sm:px-8">
-          <motion.h2
-            {...fade}
-            className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)] text-center mb-3"
-          >
-            Was andere MedAT-Bewerber sagen
-          </motion.h2>
-          <motion.p {...fade} className="text-center text-[var(--muted)] mb-8 sm:mb-12">
-            Von Studierenden, die sich mit MedMaster vorbereiten
+      {/* ─── Trustpilot ─── */}
+      <section className="py-8 sm:py-16 border-t border-[var(--border)]/50">
+        <div className="max-w-2xl mx-auto px-5 sm:px-8 text-center space-y-4">
+          <motion.p {...fade} className="text-sm text-[var(--muted)]">
+            Erfahrungen mit MedMaster? Bewerte uns auf Trustpilot.
           </motion.p>
-          <motion.div {...fade} className="grid sm:grid-cols-3 gap-5">
-            {[
-              {
-                name: "Lisa M.",
-                uni: "MedAT Wien 2026",
-                text: "Endlich eine Plattform, die den ganzen MedAT abdeckt. Die BMS-Fragen sind super nah am echten Test und die Erklärungen helfen enorm.",
-                stars: 5,
-              },
-              {
-                name: "Florian K.",
-                uni: "MedAT Graz 2026",
-                text: "Die KFF-Übungen sind ein Gamechanger. Vor allem Zahlenfolgen und Figuren zusammensetzen kann man hier viel besser üben als mit Büchern.",
-                stars: 5,
-              },
-              {
-                name: "Sarah T.",
-                uni: "MedAT Innsbruck 2026",
-                text: "Ich hab vorher mit StudyMed gelernt, aber MedMaster hat deutlich mehr Fragen und die Simulationen sind realistischer. Der Preis ist auch fair.",
-                stars: 5,
-              },
-            ].map((t) => (
-              <div
-                key={t.name}
-                className="card-glass p-5 sm:p-6 space-y-3 border border-[var(--border)]"
-              >
-                <div className="flex gap-0.5">
-                  {Array.from({ length: t.stars }, (_, i) => (
-                    <Star key={i} className="w-4 h-4 text-amber-500 fill-amber-500" />
-                  ))}
-                </div>
-                <p className="text-sm text-[var(--text-primary)] leading-relaxed">
-                  &ldquo;{t.text}&rdquo;
-                </p>
-                <div className="flex items-center gap-2 pt-1">
-                  <div className="w-8 h-8 rounded-full bg-[var(--accent)]/10 flex items-center justify-center text-xs font-bold text-[var(--accent)]">
-                    {t.name.charAt(0)}
-                  </div>
-                  <div>
-                    <p className="text-sm font-medium text-[var(--text-primary)]">{t.name}</p>
-                    <p className="text-xs text-[var(--muted)]">{t.uni}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </motion.div>
+          <motion.a
+            {...fade}
+            href="https://www.trustpilot.com/evaluate/medmaster.at"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-[var(--border)] hover:bg-[var(--surface)] transition-colors text-sm font-medium text-[var(--text-primary)]"
+          >
+            <Star className="w-4 h-4 text-[#00b67a] fill-[#00b67a]" />
+            Auf Trustpilot bewerten
+            <ArrowRight className="w-3.5 h-3.5" />
+          </motion.a>
         </div>
       </section>
 
