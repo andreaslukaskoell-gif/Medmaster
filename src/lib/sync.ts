@@ -16,12 +16,16 @@ function isSchemaMissing(err: unknown): boolean {
   return (
     code === "PGRST301" ||
     code === "PGRST204" ||
+    code === "PGRST200" ||
     code === "42703" ||
+    code === "42P01" ||
     msg.includes("404") ||
+    msg.includes("400") ||
     msg.includes("relation") ||
     msg.includes("does not exist") ||
     msg.includes("column") ||
-    msg.includes("Could not find")
+    msg.includes("Could not find") ||
+    msg.includes("Could not perform")
   );
 }
 

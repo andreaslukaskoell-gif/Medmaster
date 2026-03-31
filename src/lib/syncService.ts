@@ -216,6 +216,11 @@ export async function pushStatsToSupabase(
         const msg = err instanceof Error ? err.message : String(err);
         console.warn("[sync] Push stichwort_stats failed (continuing):", msg);
         errors.push(`stichwort_stats: ${msg}`);
+        if (isSchemaMissingError(err)) {
+          setSchemaSkip();
+          useSyncStatus.getState().setSyncing(false);
+          return { ok: false, error: "Schema missing" };
+        }
         if (isNetworkError(err)) addToOfflineQueue(userId);
       }
     }
@@ -240,6 +245,11 @@ export async function pushStatsToSupabase(
         const msg = err instanceof Error ? err.message : String(err);
         console.warn("[sync] Push fach_stats failed (continuing):", msg);
         errors.push(`fach_stats: ${msg}`);
+        if (isSchemaMissingError(err)) {
+          setSchemaSkip();
+          useSyncStatus.getState().setSyncing(false);
+          return { ok: false, error: "Schema missing" };
+        }
         if (isNetworkError(err)) addToOfflineQueue(userId);
       }
     }
