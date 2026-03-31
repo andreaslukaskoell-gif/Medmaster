@@ -66,18 +66,20 @@ if (isSchemaSkipActive()) {
     .select("id")
     .limit(1)
     .maybeSingle()
-    .then(({ error }) => {
-      if (error) {
+    .then(
+      ({ error }) => {
+        if (error) {
+          setSchemaSkip();
+          completeProbe(false);
+        } else {
+          completeProbe(true);
+        }
+      },
+      () => {
         setSchemaSkip();
         completeProbe(false);
-      } else {
-        completeProbe(true);
       }
-    })
-    .catch(() => {
-      setSchemaSkip();
-      completeProbe(false);
-    });
+    );
 } else {
   probeResult = false;
 }
