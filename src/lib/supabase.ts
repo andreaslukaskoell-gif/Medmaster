@@ -28,16 +28,20 @@ function createNoopFromBuilder(): PromiseLike<{ data: null; error: null }> {
     data: null as null,
     error: null as null,
   });
-  const chainable: PromiseLike<{ data: null; error: null }> = {
-    then(onfulfilled?, onrejected?) {
-      return Promise.resolve(empty).then(onfulfilled, onrejected);
+  // Callable proxy: methods like .insert(), .select(), .upsert() return the builder itself
+  const builder: unknown = new Proxy(function () {}, {
+    get(_target, prop) {
+      if (prop === "then") {
+        return (onfulfilled?: (v: unknown) => unknown, onrejected?: (e: unknown) => unknown) =>
+          Promise.resolve(empty).then(onfulfilled, onrejected);
+      }
+      return builder; // chain: .from().select().eq().single() etc.
     },
-  };
-  return new Proxy(chainable, {
-    get() {
-      return chainable;
+    apply() {
+      return builder; // .insert({...}), .eq("id", x), etc.
     },
-  }) as PromiseLike<{ data: null; error: null }> & Record<string, unknown>;
+  });
+  return builder as PromiseLike<{ data: null; error: null }> & Record<string, unknown>;
 }
 
 /** Supabase-Client: bei aktivem Schema-Skip liefert .from() einen Noop-Builder (kein Netzwerk). */
