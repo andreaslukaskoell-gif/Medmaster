@@ -121,6 +121,11 @@ serve(async (req) => {
 
     const displayName = profile?.display_name || "MedMaster-Nutzer";
 
+    // Block future signups with this email
+    await supabaseAdmin
+      .from("deleted_emails")
+      .upsert({ email, deleted_at: new Date().toISOString(), reason: "user_requested" });
+
     // Delete the auth user (cascades to all related tables via ON DELETE CASCADE)
     const { error: deleteError } = await supabaseAdmin.auth.admin.deleteUser(userId);
 

@@ -13,6 +13,8 @@ const ERROR_MAP: Record<string, string> = {
   "New password should be different from the old password.":
     "Das neue Passwort muss sich vom alten unterscheiden.",
   "Password should be at least 6 characters": "Passwort muss mindestens 6 Zeichen haben.",
+  signup_blocked:
+    "Dieses Konto wurde auf Wunsch dauerhaft gelöscht und kann nicht erneut erstellt werden. Bei Fragen wende dich an support@medmaster.at.",
 };
 
 export function translateAuthError(message: string): string {
