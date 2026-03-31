@@ -21,7 +21,7 @@ if (missing.length > 0) {
 const rawClient: SupabaseClient | null =
   supabaseUrl && supabaseAnonKey ? createClient(supabaseUrl, supabaseAnonKey) : null;
 
-/** Noop query builder: callable proxy, all methods chain to itself, .then() resolves empty. */
+// ── Noop builder ────────────────────────────────────────────────
 function createNoopFromBuilder(): PromiseLike<{ data: null; error: null }> {
   const empty = Object.freeze({ data: null as null, error: null as null });
   const builder: unknown = new Proxy(function () {}, {
@@ -39,57 +39,64 @@ function createNoopFromBuilder(): PromiseLike<{ data: null; error: null }> {
   return builder as PromiseLike<{ data: null; error: null }> & Record<string, unknown>;
 }
 
-/**
- * Gate: exactly 1 probe request. All .from() calls that arrive while probing
- * return a deferred builder — if probe detects 400, they resolve as noops;
- * if schema is OK, they execute normally after the gate opens.
- */
-let probePromise: Promise<boolean> | null = null;
+// ── Early probe: run immediately on import ──────────────────────
+// This fires a single probe request. Until it resolves, all .from()
+// calls are deferred. After it resolves, they either noop or pass through.
+let probeResult: boolean | null = null; // null = pending, true = OK, false = skip
+let probeResolvers: Array<(ok: boolean) => void> = [];
 
-function runProbe(): Promise<boolean> {
-  if (probePromise) return probePromise;
-  probePromise = (async () => {
-    try {
-      const { error } = await rawClient!.from("profiles").select("id").limit(1).maybeSingle();
-      if (error) {
-        const status = (error as { status?: number }).status ?? 0;
-        if (status === 400 || status === 404) {
-          setSchemaSkip();
-          console.warn("[MedMaster] Supabase-Schema fehlt — DB-Calls deaktiviert.");
-          return false;
-        }
-      }
-      return true; // schema OK
-    } catch {
-      setSchemaSkip();
-      return false;
-    }
-  })();
-  return probePromise;
+function waitForProbe(): Promise<boolean> {
+  if (probeResult !== null) return Promise.resolve(probeResult);
+  return new Promise((resolve) => probeResolvers.push(resolve));
 }
 
-/**
- * Creates a deferred query builder that waits for the probe to complete.
- * If schema is OK → replays the real query. If schema is broken → returns noop.
- */
+function completeProbe(ok: boolean) {
+  probeResult = ok;
+  for (const r of probeResolvers) r(ok);
+  probeResolvers = [];
+}
+
+// Skip already set from previous session navigation
+if (isSchemaSkipActive()) {
+  probeResult = false;
+} else if (rawClient) {
+  // Fire probe immediately
+  rawClient
+    .from("profiles")
+    .select("id")
+    .limit(1)
+    .maybeSingle()
+    .then(({ error }) => {
+      if (error) {
+        setSchemaSkip();
+        completeProbe(false);
+      } else {
+        completeProbe(true);
+      }
+    })
+    .catch(() => {
+      setSchemaSkip();
+      completeProbe(false);
+    });
+} else {
+  probeResult = false;
+}
+
+// ── Deferred builder: collects chain, replays after probe ───────
 function createDeferredBuilder(
   realFrom: SupabaseClient["from"],
   table: string
 ): PromiseLike<{ data: null; error: null }> & Record<string, unknown> {
-  // Collect chained method calls (.select(), .eq(), .insert() etc.)
   const chain: { method: string; args: unknown[] }[] = [];
-
   const builder: unknown = new Proxy(function () {}, {
     get(_target, prop) {
       if (prop === "then") {
-        // Terminal: execute the deferred chain
         return (onfulfilled?: (v: unknown) => unknown, onrejected?: (e: unknown) => unknown) => {
-          return runProbe().then((schemaOk) => {
-            if (!schemaOk) {
+          return waitForProbe().then((ok) => {
+            if (!ok) {
               const empty = { data: null, error: null };
               return onfulfilled ? onfulfilled(empty) : empty;
             }
-            // Replay chain on real client
             let q: unknown = realFrom(table);
             for (const { method, args } of chain) {
               q = (q as Record<string, (...a: unknown[]) => unknown>)[method](...args);
@@ -98,14 +105,12 @@ function createDeferredBuilder(
           });
         };
       }
-      // Record chain call
       return (...args: unknown[]) => {
         chain.push({ method: prop as string, args });
         return builder;
       };
     },
     apply(_target, _thisArg, args) {
-      // Direct function call on builder (rare, but handle it)
       chain.push({ method: "call", args });
       return builder;
     },
@@ -113,22 +118,14 @@ function createDeferredBuilder(
   return builder as PromiseLike<{ data: null; error: null }> & Record<string, unknown>;
 }
 
-/** Supabase-Client: schema-skip + auto-probe gate. */
+// ── Exported client with gate ───────────────────────────────────
 export const supabase: SupabaseClient | null = rawClient
   ? new Proxy(rawClient, {
       get(target, prop, receiver) {
         if (prop === "from") {
-          // Fast path: skip already confirmed
-          if (isSchemaSkipActive()) {
-            return () => createNoopFromBuilder();
-          }
-          // Probe already completed successfully — pass through directly
-          if (probePromise !== null) {
-            // Check synchronously if probe resolved to true
-            let resolved = false;
-            probePromise.then((ok) => { resolved = ok; });
-            // If probe is done and schema is OK, no gate needed
-          }
+          if (probeResult === false) return () => createNoopFromBuilder();
+          if (probeResult === true) return target.from.bind(target);
+          // Probe pending — defer
           return (table: string) => createDeferredBuilder(target.from.bind(target), table);
         }
         return Reflect.get(target, prop, receiver);

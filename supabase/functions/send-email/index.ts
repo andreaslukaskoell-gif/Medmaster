@@ -673,7 +673,12 @@ function getEmailTemplate(
 
 let lastSendError = "";
 
-async function sendEmail(to: string, subject: string, rawHtml: string): Promise<boolean> {
+async function sendEmail(
+  to: string,
+  subject: string,
+  rawHtml: string,
+  fromOverride?: string
+): Promise<boolean> {
   lastSendError = "";
 
   // Minify HTML: collapse whitespace between tags to prevent QP =20 artifacts
@@ -701,7 +706,7 @@ async function sendEmail(to: string, subject: string, rawHtml: string): Promise<
 
   try {
     await client.send({
-      from: FROM_EMAIL,
+      from: fromOverride || FROM_EMAIL,
       to,
       subject,
       html,
@@ -875,10 +880,12 @@ serve(async (req) => {
           if (ok) {
             await logEmail(user.id, templateId, user.email);
             sent++;
+          } else {
+            skipped++;
           }
 
-          // Rate limit: max 10 emails/sec (Resend free tier)
-          await new Promise((r) => setTimeout(r, 100));
+          // Throttle: IONOS allows ~50/hour, so 1 email per 1.5s is safe
+          await new Promise((r) => setTimeout(r, 1500));
         }
 
         // Debug: list users that were skipped and why
@@ -888,10 +895,6 @@ serve(async (req) => {
         const skippedPremium = users.users
           .filter((u: { id: string; email?: string }) => u.email && premiumIds.has(u.id))
           .map((u: { id: string; email?: string }) => u.email);
-        const skippedAlready =
-          users.users.filter(
-            (u: { id: string; email?: string }) => u.email && !premiumIds.has(u.id)
-          ).length - sent;
         return new Response(
           JSON.stringify({
             sent,
@@ -911,16 +914,59 @@ serve(async (req) => {
         );
       }
 
+      // ── Delete user account by email ──
+      case "delete-user": {
+        const { email: delEmail } = body;
+        if (!delEmail) {
+          return new Response(JSON.stringify({ error: "Missing email" }), {
+            status: 400,
+            headers: { "Content-Type": "application/json" },
+          });
+        }
+        // Find user by email
+        let allU2: { id: string; email?: string }[] = [];
+        let pg2 = 1;
+        while (true) {
+          const { data: b } = await supabase.auth.admin.listUsers({ page: pg2, perPage: 100 });
+          if (!b) break;
+          allU2 = allU2.concat(b.users);
+          if (b.users.length < 100) break;
+          pg2++;
+        }
+        const target = allU2.find((u) => u.email === delEmail);
+        if (!target) {
+          return new Response(JSON.stringify({ error: "User not found", email: delEmail }), {
+            status: 404,
+            headers: { "Content-Type": "application/json" },
+          });
+        }
+        // Delete profile first (cascade), then auth user
+        await supabase.from("profiles").delete().eq("id", target.id);
+        await supabase.from("answers").delete().eq("user_id", target.id);
+        await supabase.from("email_logs").delete().eq("user_id", target.id);
+        const { error: delErr } = await supabase.auth.admin.deleteUser(target.id);
+        if (delErr) {
+          return new Response(JSON.stringify({ error: delErr.message, email: delEmail }), {
+            status: 500,
+            headers: { "Content-Type": "application/json" },
+          });
+        }
+        return new Response(JSON.stringify({ deleted: true, email: delEmail, userId: target.id }), {
+          status: 200,
+          headers: { "Content-Type": "application/json" },
+        });
+      }
+
       // ── Send raw HTML email (support replies etc.) ──
       case "send-raw": {
-        const { to, subject, html } = body;
+        const { to, subject, html, from: customFrom } = body;
         if (!to || !subject || !html) {
           return new Response(JSON.stringify({ error: "Missing to, subject, or html" }), {
             status: 400,
             headers: { "Content-Type": "application/json" },
           });
         }
-        const ok = await sendEmail(to, subject, html);
+        const ok = await sendEmail(to, subject, html, customFrom);
         return new Response(JSON.stringify({ sent: ok, ...(ok ? {} : { error: lastSendError }) }), {
           status: ok ? 200 : 500,
           headers: { "Content-Type": "application/json" },
