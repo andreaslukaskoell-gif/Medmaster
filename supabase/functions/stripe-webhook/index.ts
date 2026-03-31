@@ -135,6 +135,76 @@ serve(async (req) => {
           } catch (notifyErr) {
             console.error("Owner notification failed:", notifyErr);
           }
+
+          // ── Send purchase confirmation to customer ──
+          try {
+            const customerEmail = session.customer_details?.email || session.customer_email || "";
+            if (customerEmail) {
+              const { data: profile } = await supabase
+                .from("profiles")
+                .select("display_name")
+                .eq("id", userId)
+                .single();
+              const name = profile?.display_name || "MedAT-Bewerber";
+              const smtpUser = Deno.env.get("SMTP_USER") || "";
+              const smtpPass = Deno.env.get("SMTP_PASS") || "";
+              if (smtpUser && smtpPass) {
+                const smtp2 = new SMTPClient({
+                  connection: {
+                    hostname: "smtp.ionos.de",
+                    port: 465,
+                    tls: true,
+                    auth: { username: smtpUser, password: smtpPass },
+                  },
+                });
+                await smtp2.send({
+                  from: "MedMaster <welcome@medmaster.at>",
+                  to: customerEmail,
+                  subject: "Deine MedMaster Premium Bestellung",
+                  html: `<!DOCTYPE html><html lang="de"><head><meta charset="utf-8"/></head>
+<body style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;max-width:600px;margin:0 auto;padding:32px;color:#334155;line-height:1.7;background:#f8fafc">
+<div style="text-align:center;margin-bottom:24px">
+  <div style="display:inline-block;background:linear-gradient(135deg,#1e3a8a,#2563eb);border-radius:12px;padding:12px 20px">
+    <span style="color:#fff;font-size:18px;font-weight:800;letter-spacing:-0.02em">MedMaster</span>
+  </div>
+</div>
+<div style="background:#fff;border-radius:16px;padding:32px;border:1px solid #e2e8f0">
+  <div style="text-align:center;margin-bottom:24px">
+    <div style="display:inline-block;background:#dcfce7;border-radius:50%;width:56px;height:56px;line-height:56px;font-size:28px">&#10003;</div>
+  </div>
+  <h1 style="font-size:22px;font-weight:700;color:#1e3a8a;margin:0 0 8px;text-align:center">Zahlung erfolgreich!</h1>
+  <p style="text-align:center;color:#64748b;margin:0 0 24px">Vielen Dank f&uuml;r dein Vertrauen, ${name}.</p>
+  <table role="presentation" width="100%" style="margin:0 0 24px;border-collapse:collapse">
+    <tr><td style="padding:12px 16px;border-bottom:1px solid #f1f5f9;font-size:14px;color:#64748b">Produkt</td><td style="padding:12px 16px;border-bottom:1px solid #f1f5f9;font-size:14px;font-weight:600;color:#334155;text-align:right">MedMaster Premium</td></tr>
+    <tr><td style="padding:12px 16px;border-bottom:1px solid #f1f5f9;font-size:14px;color:#64748b">Betrag</td><td style="padding:12px 16px;border-bottom:1px solid #f1f5f9;font-size:14px;font-weight:600;color:#334155;text-align:right">&euro;${session.amount_total ? (session.amount_total / 100).toFixed(2).replace(".", ",") : "29,90"}</td></tr>
+    <tr><td style="padding:12px 16px;border-bottom:1px solid #f1f5f9;font-size:14px;color:#64748b">Typ</td><td style="padding:12px 16px;border-bottom:1px solid #f1f5f9;font-size:14px;font-weight:600;color:#334155;text-align:right">Einmalzahlung &mdash; kein Abo</td></tr>
+    <tr><td style="padding:12px 16px;font-size:14px;color:#64748b">Zugang</td><td style="padding:12px 16px;font-size:14px;font-weight:600;color:#16a34a;text-align:right">Sofort freigeschaltet &#10003;</td></tr>
+  </table>
+  <p style="font-size:14px;color:#334155;margin:0 0 16px"><strong>Was ist jetzt freigeschaltet?</strong></p>
+  <ul style="font-size:14px;color:#475569;margin:0 0 24px;padding-left:20px">
+    <li>5.230+ BMS-Wissensfragen (Bio, Chemie, Physik, Mathe)</li>
+    <li>Unbegrenzte kognitive Aufgaben</li>
+    <li>Textverst&auml;ndnis &amp; Soziales Entscheiden</li>
+    <li>MedAT-Simulationen</li>
+    <li>Lernplan, Fortschritt &amp; Statistiken</li>
+  </ul>
+  <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto 24px">
+    <tr><td style="background:linear-gradient(135deg,#1e3a8a,#2563eb);border-radius:10px;text-align:center">
+      <a href="https://medmaster.at/app" style="display:block;padding:14px 40px;color:#fff;font-weight:700;font-size:16px;text-decoration:none">Jetzt loslegen</a>
+    </td></tr>
+  </table>
+  <p style="font-size:13px;color:#94a3b8;text-align:center;margin:0">Bei Fragen antworte einfach auf diese E-Mail.</p>
+</div>
+<p style="font-size:12px;color:#94a3b8;text-align:center;margin:24px 0 0">MedMaster &mdash; MedAT-Vorbereitung &mdash; medmaster.at</p>
+</body></html>`,
+                });
+                await smtp2.close();
+                console.log(`Purchase confirmation sent to ${customerEmail}`);
+              }
+            }
+          } catch (confirmErr) {
+            console.error("Purchase confirmation email failed:", confirmErr);
+          }
         }
 
         // ── Referral reward: grant 5€ to referrer if applicable ──
