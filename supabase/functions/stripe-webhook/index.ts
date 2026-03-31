@@ -1,6 +1,7 @@
 import { serve } from "https://deno.land/std@0.224.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.49.4";
 import Stripe from "https://esm.sh/stripe@17.7.0";
+import { SMTPClient } from "https://deno.land/x/denomailer@1.6.0/mod.ts";
 
 // TODO: Set these as Supabase Secrets:
 //   supabase secrets set STRIPE_SECRET_KEY=sk_live_...
@@ -100,8 +101,41 @@ serve(async (req) => {
           })
           .eq("id", userId);
 
-        if (error) console.error("Profile update error:", error);
-        else console.log(`User ${userId} upgraded to premium`);
+        if (error) {
+          console.error("Profile update error:", error);
+        } else {
+          console.log(`User ${userId} upgraded to premium`);
+
+          // ── Notify owner about new paying customer ──
+          try {
+            const customerEmail =
+              session.customer_details?.email || session.customer_email || "unbekannt";
+            const amount = session.amount_total
+              ? `€${(session.amount_total / 100).toFixed(2)}`
+              : "€29,90";
+            const smtpUser = Deno.env.get("SMTP_USER") || "";
+            const smtpPass = Deno.env.get("SMTP_PASS") || "";
+            if (smtpUser && smtpPass) {
+              const smtp = new SMTPClient({
+                connection: {
+                  hostname: "smtp.ionos.de",
+                  port: 465,
+                  tls: true,
+                  auth: { username: smtpUser, password: smtpPass },
+                },
+              });
+              await smtp.send({
+                from: "MedMaster <welcome@medmaster.at>",
+                to: "support@medmaster.at",
+                subject: `Neuer Premium-Kunde: ${amount}`,
+                html: `<p><strong>Neuer Premium-Kauf!</strong></p><p>Kunde: ${customerEmail}<br/>Betrag: ${amount}<br/>User-ID: ${userId}<br/>Zeit: ${new Date().toLocaleString("de-AT", { timeZone: "Europe/Vienna" })}</p>`,
+              });
+              await smtp.close();
+            }
+          } catch (notifyErr) {
+            console.error("Owner notification failed:", notifyErr);
+          }
+        }
 
         // ── Referral reward: grant 5€ to referrer if applicable ──
         try {
