@@ -5,6 +5,8 @@
 
 import { track, trackCheckoutStart } from "@/lib/analytics";
 import { validateRedirectUrl } from "@/lib/security";
+import { isNative } from "@/lib/native";
+import { purchasePremium } from "@/lib/iap";
 
 /** Stripe promotion code applied automatically for referred users (€5 off). */
 export const REFERRAL_PROMO_CODE = "FREUND5";
@@ -40,6 +42,20 @@ export function formatPrice(cents: number): string {
  * Returns false if payment link is not configured.
  */
 export function startCheckout(options?: { email?: string; userId?: string }): boolean {
+  // On native iOS/Android: use In-App Purchase instead of Stripe
+  if (isNative) {
+    trackCheckoutStart();
+    purchasePremium().then((result) => {
+      if (result.ok) {
+        track("iap_purchase_success");
+        window.location.href = "/success";
+      } else if (!result.cancelled) {
+        track("iap_purchase_failed", { error: result.error });
+      }
+    });
+    return true;
+  }
+
   if (!PAYMENT_LINK_URL?.trim()) {
     console.warn("[Stripe] VITE_STRIPE_PAYMENT_LINK not configured.");
     return false;
