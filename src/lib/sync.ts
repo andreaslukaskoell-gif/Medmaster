@@ -1,6 +1,6 @@
 import type { SupabaseClient } from "@supabase/supabase-js";
 import { supabase } from "./supabase";
-import { setSchemaSkip, isSchemaSkipActive, clearSchemaSkip } from "./supabaseSchemaSkip";
+import { setSchemaSkip, isSchemaSkipActive } from "./supabaseSchemaSkip";
 import { useStore } from "@/store/useStore";
 import { getLevelFromXP } from "@/lib/progression";
 import type { QuizResult, SpacedItem } from "@/store/useStore";
@@ -30,30 +30,15 @@ export async function pullFromSupabase(userId: string): Promise<void> {
   if (!client) return;
   // Skip Supabase sync for dev placeholder user
   if (import.meta.env.DEV && userId.startsWith("00000000")) return;
-  clearSchemaSkip();
+  // Don't clear schema skip — if the probe already detected missing tables, respect it
+  if (isSchemaSkipActive()) return;
   try {
-    // Einmalige Probe: wenn profiles-Tabelle fehlt, keine weiteren Requests (weniger Console-Fehler)
+    // Einmalige Probe: wenn profiles-Tabelle fehlt, keine weiteren Requests
     const probe = await client.from("profiles").select("xp").eq("id", userId).maybeSingle();
     if (probe.error) {
-      const code = probe.error.code ?? "";
-      const msg = probe.error.message ?? "";
-      if (
-        code === "PGRST301" ||
-        code === "PGRST204" ||
-        code === "42703" ||
-        String(code).includes("404") ||
-        msg.includes("relation") ||
-        msg.includes("does not exist") ||
-        msg.includes("column") ||
-        msg.includes("Could not find")
-      ) {
-        setSchemaSkip();
-        console.warn(
-          "[main-sync] Supabase-Tabellen fehlen oder Schema nicht deployed. Sync wird diese Session übersprungen."
-        );
-        return;
-      }
-      throw probe.error;
+      setSchemaSkip();
+      console.warn("[main-sync] Supabase-Tabellen fehlen. Sync wird diese Session übersprungen.");
+      return;
     }
 
     const [profileRes, quizRes, srRes, notesRes, bookmarksRes, activityRes] = await Promise.all([
