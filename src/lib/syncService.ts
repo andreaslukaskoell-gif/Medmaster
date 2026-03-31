@@ -479,6 +479,9 @@ let onlineHandler: (() => void) | null = null;
 let beforeUnloadHandler: (() => void) | null = null;
 
 export function startAutoSync(userId: string) {
+  // Clean up any previous sync first (prevents duplicate intervals/listeners)
+  stopAutoSync();
+
   // Initial pull — fire-and-forget; never block or throw (pull returns { ok }, no throw)
   void pullStatsFromSupabase(userId).catch((err) => {
     console.warn("[sync] Initial pull failed (non-blocking):", err);
@@ -491,7 +494,6 @@ export function startAutoSync(userId: string) {
   window.addEventListener("online", onlineHandler);
 
   // Push every 2 minutes
-  stopAutoSync();
   syncInterval = setInterval(
     () => {
       void pushStatsToSupabase(userId);

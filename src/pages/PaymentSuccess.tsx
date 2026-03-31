@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useSearchParams } from "react-router-dom";
 import { CheckCircle2, ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -56,7 +56,14 @@ function Confetti() {
 
 export default function PaymentSuccess() {
   usePageTitle("Zahlung erfolgreich");
+  const [searchParams] = useSearchParams();
   const { refreshProfile, isPremium } = useAuth();
+
+  // Only show this page if redirected from Stripe (payment=success param) or already premium
+  const hasPaymentParam = searchParams.get("payment") === "success";
+  if (!hasPaymentParam && !isPremium) {
+    return <Navigate to="/dashboard" replace />;
+  }
   const [showConfetti, setShowConfetti] = useState(true);
   const [activating, setActivating] = useState(true);
 

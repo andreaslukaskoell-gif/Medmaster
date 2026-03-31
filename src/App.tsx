@@ -99,7 +99,7 @@ function ScrollToTop() {
     const params = new URLSearchParams(search);
     // Stripe Payment Link redirect: ?payment=success → /success
     if (params.get("payment") === "success") {
-      navigate("/success", { replace: true });
+      navigate("/success?payment=success", { replace: true });
       return;
     }
     const ref = sanitizeUrlParam(params.get("ref"));
