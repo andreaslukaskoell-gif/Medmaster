@@ -110,7 +110,10 @@ export function useAuth() {
             trackEvent("login", { method: provider });
           }
         }
-      } else {
+      } else if (event !== "INITIAL_SESSION") {
+        // Only clear profile on explicit sign-out, NOT on initial null session.
+        // INITIAL_SESSION with null session happens during token refresh —
+        // clearing profile here causes a paywall flash for premium users.
         stopAutoSync();
         stopMainSync();
         setProfile(null);
