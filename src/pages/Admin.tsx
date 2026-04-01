@@ -42,6 +42,19 @@ type Stats = {
   generated_at: string;
 };
 
+type UserActivity = {
+  user_id: string;
+  email: string;
+  tier: string;
+  questions_today: number;
+  minutes_today: number;
+  questions_7d: number;
+  minutes_7d: number;
+  chapters_today: number;
+  chapters_7d: number;
+  last_active: string | null;
+};
+
 function StatCard({
   icon: Icon,
   label,
@@ -86,8 +99,25 @@ export default function Admin() {
   usePageTitle("Admin Dashboard");
   const { user, loading: authLoading } = useAuth();
   const [stats, setStats] = useState<Stats | null>(null);
+  const [userActivity, setUserActivity] = useState<UserActivity[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
+
+  const fetchAll = async () => {
+    const [statsRes, activityRes] = await Promise.all([
+      supabase!.rpc("admin_dashboard_stats"),
+      Promise.resolve(supabase!.rpc("admin_user_activity", { lim: 50 })).catch(() => ({ data: null, error: null })),
+    ]);
+    if (statsRes.error) {
+      setError(statsRes.error.message);
+    } else {
+      setStats(statsRes.data as Stats);
+    }
+    if (activityRes.data) {
+      setUserActivity(activityRes.data as UserActivity[]);
+    }
+    setLoading(false);
+  };
 
   useEffect(() => {
     if (authLoading) return;
@@ -96,16 +126,7 @@ export default function Admin() {
       setLoading(false);
       return;
     }
-
-    (async () => {
-      const { data, error: rpcErr } = await supabase!.rpc("admin_dashboard_stats");
-      if (rpcErr) {
-        setError(rpcErr.message);
-      } else {
-        setStats(data as Stats);
-      }
-      setLoading(false);
-    })();
+    fetchAll();
   }, [user, authLoading]);
 
   if (loading || authLoading) {
@@ -138,7 +159,7 @@ export default function Admin() {
           </p>
         </div>
         <button
-          onClick={() => { setLoading(true); supabase!.rpc("admin_dashboard_stats").then(({ data }) => { setStats(data as Stats); setLoading(false); }); }}
+          onClick={() => { setLoading(true); fetchAll(); }}
           className="text-sm px-4 py-2 rounded-lg bg-[var(--accent)] text-white font-medium hover:opacity-90"
         >
           Aktualisieren
@@ -243,6 +264,138 @@ export default function Admin() {
           </div>
         </div>
       </div>
+
+      {/* User Activity: Today vs 7d */}
+      {userActivity.length > 0 && (
+        <div className="bg-[var(--surface)] border border-[var(--border)] rounded-xl p-5 mt-8">
+          <h2 className="text-sm font-semibold text-[var(--text-primary)] mb-4 flex items-center gap-2">
+            <Activity className="w-4 h-4 text-emerald-500" />
+            User-Aktivität — Heute vs. letzte 7 Tage
+          </h2>
+
+          {/* Summary row */}
+          <div className="grid grid-cols-3 gap-4 mb-6">
+            <div className="bg-blue-50 dark:bg-blue-950/30 rounded-lg p-3 text-center">
+              <div className="text-xl font-bold text-blue-700 dark:text-blue-300">
+                {userActivity.reduce((s, u) => s + u.questions_today, 0)}
+              </div>
+              <div className="text-xs text-blue-600 dark:text-blue-400">Fragen heute</div>
+              <div className="text-[10px] text-[var(--muted)] mt-0.5">
+                {Math.round(userActivity.reduce((s, u) => s + u.questions_7d, 0) / 7)}/Tag im Schnitt
+              </div>
+            </div>
+            <div className="bg-emerald-50 dark:bg-emerald-950/30 rounded-lg p-3 text-center">
+              <div className="text-xl font-bold text-emerald-700 dark:text-emerald-300">
+                {userActivity.reduce((s, u) => s + u.chapters_today, 0)}
+              </div>
+              <div className="text-xs text-emerald-600 dark:text-emerald-400">Kapitel heute</div>
+              <div className="text-[10px] text-[var(--muted)] mt-0.5">
+                {Math.round(userActivity.reduce((s, u) => s + u.chapters_7d, 0) / 7)}/Tag im Schnitt
+              </div>
+            </div>
+            <div className="bg-purple-50 dark:bg-purple-950/30 rounded-lg p-3 text-center">
+              <div className="text-xl font-bold text-purple-700 dark:text-purple-300">
+                {userActivity.reduce((s, u) => s + u.minutes_today, 0)}
+              </div>
+              <div className="text-xs text-purple-600 dark:text-purple-400">Minuten heute</div>
+              <div className="text-[10px] text-[var(--muted)] mt-0.5">
+                {Math.round(userActivity.reduce((s, u) => s + u.minutes_7d, 0) / 7)}/Tag im Schnitt
+              </div>
+            </div>
+          </div>
+
+          {/* User table */}
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="text-[10px] uppercase tracking-wider text-[var(--muted)] border-b border-[var(--border)]">
+                  <th className="text-left pb-2 pr-3">User</th>
+                  <th className="text-right pb-2 px-2">Fragen heute</th>
+                  <th className="text-left pb-2 px-2 w-28">vs. 7d</th>
+                  <th className="text-right pb-2 px-2">Kapitel heute</th>
+                  <th className="text-left pb-2 px-2 w-28">vs. 7d</th>
+                  <th className="text-right pb-2 px-2">Min. heute</th>
+                  <th className="text-right pb-2 pl-2">Zuletzt</th>
+                </tr>
+              </thead>
+              <tbody>
+                {userActivity.map((u) => {
+                  const qAvg7d = u.questions_7d / 7;
+                  const cAvg7d = u.chapters_7d / 7;
+                  return (
+                    <tr key={u.user_id} className="border-b border-[var(--border)]/50 hover:bg-[var(--surface)]/50">
+                      <td className="py-2.5 pr-3">
+                        <div className="flex items-center gap-2">
+                          <span className="font-medium text-[var(--text-primary)] truncate max-w-[180px]">
+                            {u.email}
+                          </span>
+                          {u.tier === "premium" && (
+                            <span className="text-[9px] font-bold px-1.5 py-0.5 rounded-full bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300">
+                              PRO
+                            </span>
+                          )}
+                        </div>
+                      </td>
+                      <td className="text-right px-2 font-semibold text-[var(--text-primary)]">
+                        {u.questions_today}
+                      </td>
+                      <td className="px-2">
+                        <ActivityBar value={u.questions_today} avg={qAvg7d} color="blue" />
+                      </td>
+                      <td className="text-right px-2 font-semibold text-[var(--text-primary)]">
+                        {u.chapters_today}
+                      </td>
+                      <td className="px-2">
+                        <ActivityBar value={u.chapters_today} avg={cAvg7d} color="emerald" />
+                      </td>
+                      <td className="text-right px-2 text-[var(--text-primary)]">
+                        {u.minutes_today > 0 ? `${u.minutes_today}m` : "–"}
+                      </td>
+                      <td className="text-right pl-2 text-xs text-[var(--muted)] whitespace-nowrap">
+                        {u.last_active ? timeAgo(u.last_active) : "–"}
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+/** Mini-Balken: heutiger Wert vs. 7-Tage-Durchschnitt */
+function ActivityBar({ value, avg, color }: { value: number; avg: number; color: "blue" | "emerald" | "purple" }) {
+  const max = Math.max(value, avg, 1);
+  const valuePct = (value / max) * 100;
+  const avgPct = (avg / max) * 100;
+  const isAbove = value >= avg;
+
+  const colors = {
+    blue: { bar: "bg-blue-500", avg: "bg-blue-300 dark:bg-blue-700" },
+    emerald: { bar: "bg-emerald-500", avg: "bg-emerald-300 dark:bg-emerald-700" },
+    purple: { bar: "bg-purple-500", avg: "bg-purple-300 dark:bg-purple-700" },
+  };
+
+  return (
+    <div className="flex items-center gap-1.5">
+      <div className="relative w-full h-3 bg-[var(--border)]/30 rounded-full overflow-hidden">
+        {/* 7d average marker */}
+        <div
+          className={`absolute top-0 h-full rounded-full ${colors[color].avg} opacity-40`}
+          style={{ width: `${Math.max(avgPct, 3)}%` }}
+        />
+        {/* Today bar */}
+        <div
+          className={`absolute top-0 h-full rounded-full ${colors[color].bar}`}
+          style={{ width: `${Math.max(valuePct, value > 0 ? 3 : 0)}%` }}
+        />
+      </div>
+      <span className={`text-[10px] font-semibold whitespace-nowrap ${isAbove ? "text-emerald-600 dark:text-emerald-400" : "text-[var(--muted)]"}`}>
+        {avg > 0 ? `${Math.round((value / avg) * 100)}%` : value > 0 ? "neu" : "–"}
+      </span>
     </div>
   );
 }
