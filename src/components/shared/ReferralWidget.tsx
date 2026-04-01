@@ -10,7 +10,7 @@ import {
 import { trackEvent } from "@/lib/analyticsTracker";
 import { useReferralReward } from "@/hooks/useReferralReward";
 
-export function ReferralWidget() {
+export function ReferralWidget({ compact }: { compact?: boolean } = {}) {
   const { user } = useAuth();
   const reward = useReferralReward();
   const [copied, setCopied] = useState(false);
@@ -57,8 +57,8 @@ export function ReferralWidget() {
         </div>
       </div>
 
-      {/* Compact share row: link input + copy + share buttons */}
-      <div className="flex items-center gap-1.5">
+      {/* Share row: link input + copy + share buttons */}
+      <div className={`flex items-center gap-1.5${compact ? " hidden" : ""}`}>
         <input
           type="text"
           readOnly

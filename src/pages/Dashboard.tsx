@@ -248,9 +248,141 @@ export default function Dashboard() {
           />
         </div>
       )}
-      <div className="max-w-5xl mx-auto px-4 py-6 pb-12">
+      <div className="max-w-5xl mx-auto px-4 pb-12">
         <SyncIndicator />
         <PromoEndBanner />
+
+        {/* ─── Hero Header with halo (like BMS subject pages) ─── */}
+        <div className="text-center hero-orbs py-8">
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <span className="text-[11px] font-bold uppercase tracking-[0.15em] px-3 py-1 rounded-md text-[var(--accent)] bg-[var(--accent)]/[0.08]">
+              Dashboard
+            </span>
+          </div>
+          <h1 className="text-2xl sm:text-[3rem] sm:leading-tight font-bold text-[var(--foreground)] tracking-tight mb-2 heading-glow">
+            Dashboard
+          </h1>
+          <p className="text-lg text-[var(--muted)]">
+            Deine MedAT-Vorbereitung im Überblick
+          </p>
+        </div>
+
+        {/* ─── Greeting card with streak & countdown ─── */}
+        <div className="card-glass p-6 mb-6">
+          <div className="flex items-start justify-between gap-4 mb-5">
+            <div>
+              <h2 className="text-2xl font-bold text-[var(--text-primary)] tracking-tight">
+                {displayName ? `${getGreetingByTime()}, ${displayName}` : getGreetingByTime()}
+              </h2>
+              {concretePlan && (
+                <div className="flex flex-wrap gap-2 mt-3">
+                  {concretePlan.bmsRead.length > 0 && (
+                    <Link
+                      to="/bms"
+                      className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium text-[var(--accent)] bg-[var(--accent)]/[0.06] hover:bg-[var(--accent)]/[0.1] transition-colors"
+                    >
+                      <BookOpen className="w-3 h-3" />
+                      {concretePlan.bmsRead.length} Kapitel lernen
+                    </Link>
+                  )}
+                  {concretePlan.bmsReview.length > 0 && (
+                    <Link
+                      to="/bms"
+                      className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium text-[var(--accent)] bg-[var(--accent)]/[0.06] hover:bg-[var(--accent)]/[0.1] transition-colors"
+                    >
+                      <RefreshCw className="w-3 h-3" />
+                      {concretePlan.bmsReview.length} wiederholen
+                    </Link>
+                  )}
+                  {concretePlan.bmsQuestions.length > 0 && (
+                    <Link
+                      to="/fragen-trainer"
+                      className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium text-[var(--accent)] bg-[var(--accent)]/[0.06] hover:bg-[var(--accent)]/[0.1] transition-colors"
+                    >
+                      <ListChecks className="w-3 h-3" />
+                      BMS-Fragen
+                    </Link>
+                  )}
+                  {concretePlan.kffTasks.length > 0 && (
+                    <Link
+                      to="/kff"
+                      className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium text-[var(--accent)] bg-[var(--accent)]/[0.06] hover:bg-[var(--accent)]/[0.1] transition-colors"
+                    >
+                      <Brain className="w-3 h-3" />
+                      KFF
+                    </Link>
+                  )}
+                  {concretePlan.tvTexts > 0 && (
+                    <Link
+                      to="/tv"
+                      className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium text-[var(--accent)] bg-[var(--accent)]/[0.06] hover:bg-[var(--accent)]/[0.1] transition-colors"
+                    >
+                      <FileText className="w-3 h-3" />
+                      TV
+                    </Link>
+                  )}
+                  {concretePlan.sekTasks.length > 0 && (
+                    <Link
+                      to="/sek"
+                      className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium text-[var(--accent)] bg-[var(--accent)]/[0.06] hover:bg-[var(--accent)]/[0.1] transition-colors"
+                    >
+                      <Heart className="w-3 h-3" />
+                      SEK
+                    </Link>
+                  )}
+                </div>
+              )}
+            </div>
+            <div className="shrink-0 flex items-center gap-2.5">
+              {flameStreak > 0 && (
+                <Tooltip
+                  content={`${flameStreak} ${flameStreak === 1 ? "Tag" : "Tage"} in Folge aktiv`}
+                  position="top"
+                >
+                  <div className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-amber-50 dark:bg-amber-900/20 border border-amber-200/60 dark:border-amber-800/30">
+                    <StreakFlameIcon
+                      streak={flameStreak}
+                      hasActivityToday={flameHasActivity}
+                      size="sm"
+                      className="w-4 h-4"
+                    />
+                    <span className="text-sm font-bold text-amber-700 dark:text-amber-400 leading-tight">
+                      {flameStreak}
+                    </span>
+                  </div>
+                </Tooltip>
+              )}
+              {days > 0 && (
+                <div className="flex flex-col items-center px-3 py-1.5 rounded-lg bg-[var(--accent)]/[0.06] border border-[var(--accent)]/[0.12]">
+                  <span className="text-lg font-bold text-[var(--accent)] leading-tight tabular-nums">
+                    {days}
+                  </span>
+                  <span className="text-[10px] text-[var(--muted)] leading-tight">
+                    Tage bis MedAT
+                  </span>
+                </div>
+              )}
+            </div>
+          </div>
+
+          {/* BMS Progress */}
+          <div className="pt-4 border-t border-[var(--border)]">
+            <div className="flex items-center justify-between text-sm mb-1.5">
+              <span className="text-[var(--text-secondary)]">BMS-Fortschritt</span>
+              <Tooltip
+                content={`${bmsProgressDone} von ${bmsProgressTotal} Unterkapitel abgeschlossen`}
+                position="top"
+              >
+                <span className="font-semibold text-[var(--text-primary)]">
+                  {bmsProgressPct} %
+                </span>
+              </Tooltip>
+            </div>
+            <div className="progress-premium w-full">
+              <div className="progress-fill" style={{ width: `${bmsProgressPct}%` }} />
+            </div>
+          </div>
+        </div>
 
         {/* ─── First-action guidance for new users (hidden after first activity) ─── */}
         {(quizResults ?? []).length === 0 && completedChapters.length === 0 && (
@@ -335,147 +467,28 @@ export default function Dashboard() {
           </section>
         )}
 
-        {/* ─── Weiterlernen card ─── */}
-        <ContinueLearningCard completedChapters={completedChapters} />
-
-        {/* ─── Quick Quiz (mobile-prominent) ─── */}
-        {isMobile && (quizResults ?? []).length > 0 && (
-          <Link to="/fragen-trainer" className="block mb-4 card-glass p-4 group">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-[var(--accent)]/10 flex items-center justify-center shrink-0">
-                <Zap className="w-5 h-5 text-[var(--accent)]" />
-              </div>
-              <div className="flex-1 min-w-0">
-                <p className="text-sm font-semibold text-[var(--text-primary)]">Quick Quiz</p>
-                <p className="text-xs text-[var(--muted)]">10 Fragen · gemischte Fächer</p>
-              </div>
-              <ArrowRight className="w-4 h-4 text-[var(--muted)] group-hover:translate-x-0.5 transition-transform" />
-            </div>
-          </Link>
-        )}
-
         <motion.div variants={stagger} initial="initial" animate="animate" className="space-y-5">
-          {/* Hero: Greeting + Key Metrics — with atmospheric orbs behind */}
-          <motion.section variants={tileMotion} aria-label="Start" className="hero-orbs">
-            <div className="card-glass p-6">
-              <div className="flex items-start justify-between gap-4 mb-5">
-                <div>
-                  <h1 className="text-2xl font-bold text-[var(--text-primary)] tracking-tight">
-                    {displayName ? `${getGreetingByTime()}, ${displayName}` : getGreetingByTime()}
-                  </h1>
-                  {concretePlan && (
-                    <div className="flex flex-wrap gap-2 mt-3">
-                      {concretePlan.bmsRead.length > 0 && (
-                        <Link
-                          to="/bms"
-                          className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium text-[var(--accent)] bg-[var(--accent)]/[0.06] hover:bg-[var(--accent)]/[0.1] transition-colors"
-                        >
-                          <BookOpen className="w-3 h-3" />
-                          {concretePlan.bmsRead.length} Kapitel lernen
-                        </Link>
-                      )}
-                      {concretePlan.bmsReview.length > 0 && (
-                        <Link
-                          to="/bms"
-                          className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium text-[var(--accent)] bg-[var(--accent)]/[0.06] hover:bg-[var(--accent)]/[0.1] transition-colors"
-                        >
-                          <RefreshCw className="w-3 h-3" />
-                          {concretePlan.bmsReview.length} wiederholen
-                        </Link>
-                      )}
-                      {concretePlan.bmsQuestions.length > 0 && (
-                        <Link
-                          to="/fragen-trainer"
-                          className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium text-[var(--accent)] bg-[var(--accent)]/[0.06] hover:bg-[var(--accent)]/[0.1] transition-colors"
-                        >
-                          <ListChecks className="w-3 h-3" />
-                          BMS-Fragen
-                        </Link>
-                      )}
-                      {concretePlan.kffTasks.length > 0 && (
-                        <Link
-                          to="/kff"
-                          className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium text-[var(--accent)] bg-[var(--accent)]/[0.06] hover:bg-[var(--accent)]/[0.1] transition-colors"
-                        >
-                          <Brain className="w-3 h-3" />
-                          KFF
-                        </Link>
-                      )}
-                      {concretePlan.tvTexts > 0 && (
-                        <Link
-                          to="/tv"
-                          className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium text-[var(--accent)] bg-[var(--accent)]/[0.06] hover:bg-[var(--accent)]/[0.1] transition-colors"
-                        >
-                          <FileText className="w-3 h-3" />
-                          TV
-                        </Link>
-                      )}
-                      {concretePlan.sekTasks.length > 0 && (
-                        <Link
-                          to="/sek"
-                          className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium text-[var(--accent)] bg-[var(--accent)]/[0.06] hover:bg-[var(--accent)]/[0.1] transition-colors"
-                        >
-                          <Heart className="w-3 h-3" />
-                          SEK
-                        </Link>
-                      )}
-                    </div>
-                  )}
-                </div>
-                <div className="shrink-0 flex items-center gap-2.5">
-                  {flameStreak > 0 && (
-                    <Tooltip
-                      content={`${flameStreak} ${flameStreak === 1 ? "Tag" : "Tage"} in Folge aktiv`}
-                      position="top"
-                    >
-                      <div className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-amber-50 dark:bg-amber-900/20 border border-amber-200/60 dark:border-amber-800/30">
-                        <StreakFlameIcon
-                          streak={flameStreak}
-                          hasActivityToday={flameHasActivity}
-                          size="sm"
-                          className="w-4 h-4"
-                        />
-                        <span className="text-sm font-bold text-amber-700 dark:text-amber-400 leading-tight">
-                          {flameStreak}
-                        </span>
-                      </div>
-                    </Tooltip>
-                  )}
-                  {days > 0 && (
-                    <div className="flex flex-col items-center px-3 py-1.5 rounded-lg bg-[var(--accent)]/[0.06] border border-[var(--accent)]/[0.12]">
-                      <span className="text-lg font-bold text-[var(--accent)] leading-tight tabular-nums">
-                        {days}
-                      </span>
-                      <span className="text-[10px] text-[var(--muted)] leading-tight">
-                        Tage bis MedAT
-                      </span>
-                    </div>
-                  )}
-                </div>
-              </div>
+          {/* ─── Weiterlernen card ─── */}
+          <ContinueLearningCard completedChapters={completedChapters} />
 
-              {/* BMS Progress — inside the hero card */}
-              <div className="pt-4 border-t border-[var(--border)]">
-                <div className="flex items-center justify-between text-sm mb-1.5">
-                  <span className="text-[var(--text-secondary)]">BMS-Fortschritt</span>
-                  <Tooltip
-                    content={`${bmsProgressDone} von ${bmsProgressTotal} Unterkapitel abgeschlossen`}
-                    position="top"
-                  >
-                    <span className="font-semibold text-[var(--text-primary)]">
-                      {bmsProgressPct} %
-                    </span>
-                  </Tooltip>
+          {/* ─── Quick Quiz (mobile-prominent) ─── */}
+          {isMobile && (quizResults ?? []).length > 0 && (
+            <Link to="/fragen-trainer" className="block card-glass p-4 group">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-xl bg-[var(--accent)]/10 flex items-center justify-center shrink-0">
+                  <Zap className="w-5 h-5 text-[var(--accent)]" />
                 </div>
-                <div className="progress-premium w-full">
-                  <div className="progress-fill" style={{ width: `${bmsProgressPct}%` }} />
+                <div className="flex-1 min-w-0">
+                  <p className="text-sm font-semibold text-[var(--text-primary)]">Quick Quiz</p>
+                  <p className="text-xs text-[var(--muted)]">10 Fragen · gemischte Fächer</p>
                 </div>
+                <ArrowRight className="w-4 h-4 text-[var(--muted)] group-hover:translate-x-0.5 transition-transform" />
               </div>
-            </div>
-          </motion.section>
+            </Link>
+          )}
 
-          {/* Daily Challenge — clean, compact */}
-          <motion.section variants={tileMotion} aria-label="BMS des Tages">
+          {/* ─── BMS des Tages + Freunde einladen — side by side ─── */}
+          <motion.section variants={tileMotion} aria-label="BMS des Tages & Referral" className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {dailyResult ? (
               <Link to="/daily" className="block card-glass p-4">
                 <div className="flex items-center gap-3">
@@ -510,6 +523,7 @@ export default function Dashboard() {
                 </div>
               </Link>
             )}
+            <ReferralWidget compact />
           </motion.section>
 
           {/* Adaptive widgets — Tagesplan, Schwachstellen, Letzte Aktivität */}
@@ -540,11 +554,6 @@ export default function Dashboard() {
               <Heatmap />
             </div>
           </motion.section>
-
-          {/* Referral widget — separated, lower priority */}
-          <ScrollReveal>
-            <ReferralWidget />
-          </ScrollReveal>
 
           {/* Schwächen-Analyse (server-side, nur wenn Daten vorhanden) */}
           <ScrollReveal>
@@ -663,7 +672,7 @@ function ContinueLearningCard({ completedChapters }: { completedChapters: string
   if (!data) return null;
 
   return (
-    <section className="mb-6" aria-label="Weiterlernen">
+    <section aria-label="Weiterlernen">
       <Link
         to={data.link}
         className="block card-glass shadow-sm hover:shadow-md transition-shadow border-l-4"
