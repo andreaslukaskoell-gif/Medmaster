@@ -112,6 +112,16 @@ export default function BMSKapitelView({
   const storeCompleted = useStore((s) => s.completedChapters);
   const completedChapters = storeCompleted || [];
 
+  const { getLimit: getPermLimit } = usePermissions();
+  const ukLimit = getPermLimit("bms_uks_per_subject"); // null = unlimited
+
+  // Count UKs in chapters before this one in the same subject
+  const uksBefore = useMemo(() => {
+    return chaptersInSubject
+      .slice(0, currentChapterIndex)
+      .reduce((sum, ch) => sum + (ch?.unterkapitel?.length ?? 0), 0);
+  }, [chaptersInSubject, currentChapterIndex]);
+
   if (!kapitel || !kapitel.id) {
     return (
       <div className="max-w-4xl mx-auto p-6 text-center">
@@ -132,6 +142,9 @@ export default function BMSKapitelView({
     (u) => u && u.id && completedChapters.includes(u.id)
   ).length;
   const totalUK = unterkapitel.length;
+  // How many UKs in this chapter are free
+  const freeUKsInChapter =
+    ukLimit !== null ? Math.min(totalUK, Math.max(0, ukLimit - uksBefore)) : totalUK;
   const isKapitelDone = completedChapters.includes(kapitel.id);
   const progressPct = totalUK > 0 ? Math.round((completedUK / totalUK) * 100) : 0;
 
@@ -160,20 +173,6 @@ export default function BMSKapitelView({
       />
     );
   }
-
-  const { getLimit } = usePermissions();
-  const ukLimit = getLimit("bms_uks_per_subject"); // null = unlimited
-
-  // Count UKs in chapters before this one in the same subject
-  const uksBefore = useMemo(() => {
-    return chaptersInSubject
-      .slice(0, currentChapterIndex)
-      .reduce((sum, ch) => sum + (ch?.unterkapitel?.length ?? 0), 0);
-  }, [chaptersInSubject, currentChapterIndex]);
-
-  // How many UKs in this chapter are free
-  const freeUKsInChapter =
-    ukLimit !== null ? Math.min(totalUK, Math.max(0, ukLimit - uksBefore)) : totalUK;
 
   const firstIncomplete = unterkapitel.findIndex(
     (u, i) =>
