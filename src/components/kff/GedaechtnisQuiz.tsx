@@ -180,7 +180,7 @@ export function GedaechtnisSetup({ onLearn, onBack }: { onLearn: () => void; onB
         <CardHeader>
           <CardTitle className="text-lg">Training</CardTitle>
           <p className="text-sm text-[var(--muted)]">
-            Trainingsaufgaben aus der Datenbank (8 Pässe + bis zu 25 Fragen) oder lokal generiert.
+            Trainingsaufgaben aus der Datenbank (8 Pässe + bis zu 25 Fragen).
           </p>
         </CardHeader>
         <CardContent className="space-y-6">
@@ -232,7 +232,10 @@ export function GedaechtnisLearn({ onStart, onBack }: { onStart: () => void; onB
     if (!started) return;
     const t = setInterval(() => {
       setSecondsLeft((s) => {
-        if (s <= 1) { clearInterval(t); return 0; }
+        if (s <= 1) {
+          clearInterval(t);
+          return 0;
+        }
         return s - 1;
       });
     }, 1000);
@@ -319,7 +322,9 @@ export function GedaechtnisInterferenz({
   // Stable ref for onComplete — prevents useEffect from re-firing when parent
   // re-renders and passes a new anonymous function reference.
   const onCompleteRef = useRef(onComplete);
-  useEffect(() => { onCompleteRef.current = onComplete; }, [onComplete]);
+  useEffect(() => {
+    onCompleteRef.current = onComplete;
+  }, [onComplete]);
 
   const task = tasks[taskIndex];
 
@@ -426,7 +431,13 @@ export function GedaechtnisInterferenz({
                 ? `${opt.value[0]}, ${opt.value[1]}`
                 : (opt.text ?? "Keine der genannten");
               return (
-                <button key={opt.key} onClick={() => handleSelect(opt.key)} className={cls} role="radio" aria-checked={isSelected}>
+                <button
+                  key={opt.key}
+                  onClick={() => handleSelect(opt.key)}
+                  className={cls}
+                  role="radio"
+                  aria-checked={isSelected}
+                >
                   <span className="font-semibold shrink-0">{opt.key})</span>
                   {label}
                 </button>

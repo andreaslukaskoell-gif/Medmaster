@@ -479,7 +479,7 @@ export default function LandingPage() {
                   label: "BMS-Fragen",
                   sub: "mit detaillierten Erklärungen",
                 },
-                { text: "∞", label: "KFF-Aufgaben", sub: "algorithmisch generiert" },
+                { text: "∞", label: "KFF-Aufgaben", sub: "alle 5 Untertests" },
                 {
                   counter: 100,
                   suffix: "%",
@@ -631,7 +631,7 @@ export default function LandingPage() {
                   "Figuren zusammensetzen",
                   "Gedächtnis & Merkfähigkeit",
                 ],
-                footer: "Unbegrenzt viele algorithmisch generierte Aufgaben",
+                footer: "Unbegrenzt viele Übungsaufgaben",
                 link: "/medat-kff-ueben",
                 linkLabel: "KFF testen",
               },
@@ -955,7 +955,7 @@ export default function LandingPage() {
                   ]),
               {
                 q: "Was unterscheidet MedMaster von anderen Anbietern?",
-                a: "Vier Dinge: Erstens decken wir alle 4 MedAT-Bereiche ab — nicht nur BMS. Zweitens ist unser Lernsystem adaptiv — es erkennt deine Schwächen und passt den Lernplan automatisch an. Drittens kosten andere Plattformen €69–599 (oft mit Abo), während MedMaster einmalig €29,90 kostet. Viertens: KFF-Aufgaben werden algorithmisch generiert und validiert — du bekommst immer frische Aufgaben. Dazu eine realistische Prüfungssimulation mit echten MedAT-Zeitlimits.",
+                a: "Vier Dinge: Erstens decken wir alle 4 MedAT-Bereiche ab — nicht nur BMS. Zweitens ist unser Lernsystem adaptiv — es erkennt deine Schwächen und passt den Lernplan automatisch an. Drittens kosten andere Plattformen €69–599 (oft mit Abo), während MedMaster einmalig €29,90 kostet. Viertens: 10.000+ KFF-Aufgaben — du bekommst immer frische Aufgaben. Dazu eine realistische Prüfungssimulation mit echten MedAT-Zeitlimits.",
               },
             ].map((faq) => (
               <FAQItem key={faq.q} q={faq.q} a={faq.a} isMobile={isMobile} />

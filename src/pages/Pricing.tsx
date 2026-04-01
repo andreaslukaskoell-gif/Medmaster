@@ -15,7 +15,7 @@ import { ReferralWidget } from "@/components/shared/ReferralWidget";
 const features = [
   "5.000+ BMS-Fragen mit Erklärungen",
   "Alle 174 Lerneinheiten (Theorie)",
-  "10.000+ KFF-Übungen (algorithmisch generiert)",
+  "10.000+ KFF-Übungen",
   "10 TV-Textsets mit MC-Fragen",
   "230+ SEK-Aufgaben",
   "Realistische Prüfungssimulation im MedAT-Format",

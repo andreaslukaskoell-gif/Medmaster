@@ -69,15 +69,15 @@ const FAQ = [
   },
   {
     q: "Kann man KFF trainieren?",
-    a: "Ja! KFF-Aufgaben sind trainierbar. Je mehr du übst, desto schneller erkennst du Muster bei Zahlenfolgen, wirst sicherer bei logischen Schlüssen und verbesserst dein räumliches Denken. MedMaster generiert algorithmisch 10.000+ verschiedene Aufgaben.",
+    a: "Ja! KFF-Aufgaben sind trainierbar. Je mehr du übst, desto schneller erkennst du Muster bei Zahlenfolgen, wirst sicherer bei logischen Schlüssen und verbesserst dein räumliches Denken. MedMaster bietet 10.000+ verschiedene Aufgaben.",
   },
   {
     q: "Wie viel Zeit hat man für KFF im MedAT?",
     a: "Die Zeitlimits variieren je nach Untertest: Zahlenfolgen ca. 25 Min (15 Aufgaben), Implikationen ca. 10 Min (10 Aufgaben), Wortflüssigkeit ca. 20 Min (15 Aufgaben), Figuren ca. 15 Min (15 Aufgaben), Gedächtnis ca. 25 Min (Lern- + Prüfphase).",
   },
   {
-    q: "Wie werden KFF-Aufgaben auf MedMaster generiert?",
-    a: "MedMaster nutzt algorithmische Generatoren mit Validierung: Jede Aufgabe wird automatisch auf Eindeutigkeit und Lösbarkeit geprüft. Das heißt: 10.000+ verschiedene Aufgaben, nie Wiederholungen, immer exakt eine richtige Lösung.",
+    q: "Wie funktionieren die KFF-Aufgaben auf MedMaster?",
+    a: "Jede Aufgabe wird auf Eindeutigkeit und Lösbarkeit geprüft. Das heißt: 10.000+ verschiedene Aufgaben, keine Wiederholungen, immer exakt eine richtige Lösung.",
   },
 ];
 
@@ -461,8 +461,8 @@ export default function KFFDemo() {
               10.000+ KFF-Aufgaben — kostenlos
             </h2>
             <p className="text-sm text-[var(--muted)] max-w-md mx-auto mb-6">
-              MedMaster generiert algorithmisch 10.000+ Aufgaben für alle 5 KFF-Untertests. Kein
-              Auswendiglernen, keine Wiederholungen.
+              10.000+ Aufgaben für alle 5 KFF-Untertests. Kein Auswendiglernen, keine
+              Wiederholungen.
             </p>
             <Link
               to="/login"

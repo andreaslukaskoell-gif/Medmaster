@@ -425,7 +425,7 @@ export default function PaidLanding() {
           >
             {[
               { value: "Tausende", label: "BMS-Fragen", sub: "mit detaillierten Erklärungen" },
-              { value: "Unbegrenzt", label: "KFF-Aufgaben", sub: "algorithmisch generiert" },
+              { value: "Unbegrenzt", label: "KFF-Aufgaben", sub: "alle 5 Untertests" },
               { value: "Alle", label: "Stichwörter abgedeckt", sub: "offizielle Stichwortliste" },
               { value: "Realitätsnah", label: "Testsimulationen", sub: "echte MedAT-Zeitlimits" },
             ].map((s) => (

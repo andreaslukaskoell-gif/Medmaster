@@ -174,11 +174,11 @@ export const blogArticles: BlogArticle[] = [
         <h2>Übung macht den Meister — aber richtig</h2>
         <p>
           Das Problem mit festen Aufgabenpools: Nach 2-3 Durchgängen kennst du die Antworten
-          auswendig und lernst nichts mehr. Algorithmisch generierte Aufgaben lösen dieses Problem —
-          jede Aufgabe ist neu, und du trainierst echtes Mustererkennen statt Gedächtnis.
+          auswendig und lernst nichts mehr. Mit 10.000+ verschiedenen Aufgaben löst MedMaster dieses
+          Problem — jede Aufgabe ist neu, und du trainierst echtes Mustererkennen statt Gedächtnis.
         </p>
 
-        <CTA text="10.000+ Zahlenfolgen üben — algorithmisch generiert, nie Wiederholungen." />
+        <CTA text="10.000+ Zahlenfolgen üben — immer neue Aufgaben, nie Wiederholungen." />
       </>
     ),
   },
@@ -642,7 +642,7 @@ export const blogArticles: BlogArticle[] = [
           regelmäßigem KFF-Training.
         </p>
 
-        <CTA text="Alle 5 KFF-Untertests mit algorithmisch generierten Aufgaben trainieren — nie Wiederholungen." />
+        <CTA text="Alle 5 KFF-Untertests trainieren — 10.000+ Aufgaben, nie Wiederholungen." />
       </>
     ),
   },
@@ -826,8 +826,8 @@ export const blogArticles: BlogArticle[] = [
           Die fünf KFF-Untertests (Zahlenfolgen, Figuren zusammensetzen, Wortflüssigkeit,
           Implikationen erkennen, Gedächtnis und Merkfähigkeit) bleiben gleich. Allerdings variieren
           die konkreten Aufgabenformate leicht von Jahr zu Jahr. Deshalb ist es wichtig, mit
-          vielfältigen Aufgaben zu trainieren und sich nicht auf einen festen Pool zu verlassen.
-          Algorithmisch generierte Aufgaben bieten hier einen klaren Vorteil.
+          vielfältigen Aufgaben zu trainieren und sich nicht auf einen festen Pool zu verlassen. Ein
+          großer, vielfältiger Aufgabenpool bietet hier einen klaren Vorteil.
         </p>
 
         <h2>Termine und Anmeldung 2026</h2>
@@ -1778,7 +1778,7 @@ export const blogArticles: BlogArticle[] = [
           werden vom Angstuntertest zum Punktelieferanten.
         </p>
 
-        <CTA text="Übe Implikationen mit über 40 offiziellen und hunderten generierten Aufgaben — mit Erklärungen für jede Lösung." />
+        <CTA text="Übe Implikationen mit über 40 offiziellen und hunderten weiteren Aufgaben — mit Erklärungen für jede Lösung." />
       </>
     ),
   },
@@ -1847,7 +1847,7 @@ export const blogArticles: BlogArticle[] = [
           zu schärfen.
         </p>
 
-        <CTA text="Trainiere Figuren zusammensetzen mit automatisch generierten Aufgaben in drei Schwierigkeitsstufen." />
+        <CTA text="Trainiere Figuren zusammensetzen mit Aufgaben in drei Schwierigkeitsstufen." />
       </>
     ),
   },
