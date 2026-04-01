@@ -1,5 +1,5 @@
 import type { QuizResult } from "@/store/useStore";
-import { getQuestionSubject } from "@/lib/bmsLookup";
+import { getQuestionSubject, getQuestionChapter } from "@/lib/bmsLookup";
 import { getStichwortForQuestion } from "@/store/adaptiveLearning";
 import { getDirectStichwortId } from "@/data/questions/index";
 import { getStichwortById } from "@/data/stichwortliste";
@@ -43,8 +43,10 @@ export function aggregateWrongAnswersByTopic(quizResults: QuizResult[]): {
       totalWrong += 1;
       const subject = getQuestionSubject(a.questionId) || r.subject || "Sonstige";
       const topicId =
-        getDirectStichwortId(a.questionId) || getStichwortForQuestion(a.questionId) || "unbekannt";
-      const topicLabel = getStichwortById(topicId)?.thema ?? topicId;
+        getDirectStichwortId(a.questionId) || getStichwortForQuestion(a.questionId) || null;
+      const topicLabel = topicId
+        ? (getStichwortById(topicId)?.thema ?? topicId)
+        : (getQuestionChapter(a.questionId) ?? "Sonstiges");
       if (!bySubjectTopic.has(subject)) bySubjectTopic.set(subject, new Map());
       const topicMap = bySubjectTopic.get(subject)!;
       const key = topicLabel;

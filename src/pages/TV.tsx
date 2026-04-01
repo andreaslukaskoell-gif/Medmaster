@@ -767,78 +767,8 @@ export default function TV() {
         )}
       </div>
 
-      {/* Per-set gating handled inline below */}
-
-      {/* MC Text Sets — primary section */}
-      {allTextSets.length > 0 && (
-        <section className="space-y-3">
-          <div className="flex items-baseline justify-between">
-            <h2 className="text-lg font-semibold text-[var(--text-primary)]">Testsets</h2>
-            <span className="text-xs text-[var(--muted)]">Je 5 Texte mit MC-Fragen</span>
-          </div>
-          <div className="card-glass divide-y divide-[var(--border)] overflow-hidden">
-            {allTextSets.map((set, i) => {
-              const totalQ = set.texts.reduce((sum, t) => sum + t.questions.length, 0);
-              const isSetLocked = tvTextLimit !== null && i >= tvTextLimit;
-              return (
-                <div
-                  key={set.id}
-                  className={`${isMobile ? "flex flex-col gap-2 px-3 py-3" : "flex items-center gap-4 px-5 py-3.5"} ${isSetLocked ? "opacity-50" : "hover:bg-[var(--accent)]/3"} transition-colors group`}
-                >
-                  <div className="flex items-center gap-3 min-w-0 flex-1">
-                    <span className="text-xs font-bold text-[var(--muted)] tabular-nums w-5 text-center shrink-0">
-                      {i + 1}
-                    </span>
-                    <div className="flex-1 min-w-0">
-                      <span
-                        className={`text-sm font-medium truncate block ${isSetLocked ? "text-[var(--muted)]" : "text-[var(--text-primary)]"}`}
-                      >
-                        {set.name}
-                      </span>
-                    </div>
-                    <span className="text-xs text-[var(--muted)] shrink-0 tabular-nums">
-                      {totalQ} Fragen
-                    </span>
-                  </div>
-                  {isSetLocked ? (
-                    <span className="text-xs text-[var(--muted)] shrink-0 ml-auto">Premium</span>
-                  ) : (
-                    <div
-                      className={`flex items-center gap-2 shrink-0 ${isMobile ? "ml-8" : "ml-auto"}`}
-                    >
-                      <Button
-                        variant="premium"
-                        size="sm"
-                        onClick={() => handleStartSet(i, "practice")}
-                      >
-                        <Play className="w-4 h-4 mr-1" /> Üben
-                      </Button>
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        onClick={() => handleStartSet(i, "exam")}
-                        title="35 Minuten Timer"
-                      >
-                        <Timer className="w-4 h-4 mr-1" /> Prüfung
-                      </Button>
-                    </div>
-                  )}
-                </div>
-              );
-            })}
-            {tvTextLimit !== null && allTextSets.length > tvTextLimit && (
-              <div className="p-4">
-                <PaywallBanner feature={`Alle ${allTextSets.length} Textsets freischalten`} />
-              </div>
-            )}
-          </div>
-        </section>
-      )}
-
-      {/* Offizielles Aussagen-Format */}
-      <section
-        className={`space-y-3 border-t border-[var(--border)] ${isMobile ? "pt-5" : "pt-8"}`}
-      >
+      {/* Offizielles Aussagen-Format — MedAT-relevantester Modus zuerst */}
+      <section className="space-y-3">
         <div className={`flex ${isMobile ? "flex-col gap-2" : "items-baseline justify-between"}`}>
           <div className="flex items-center gap-2">
             <h2 className="text-lg font-semibold text-[var(--text-primary)]">Offizielles Format</h2>
@@ -918,6 +848,74 @@ export default function TV() {
           </div>
         )}
       </section>
+
+      {/* MC Text Sets */}
+      {allTextSets.length > 0 && (
+        <section
+          className={`space-y-3 border-t border-[var(--border)] ${isMobile ? "pt-5" : "pt-8"}`}
+        >
+          <div className="flex items-baseline justify-between">
+            <h2 className="text-lg font-semibold text-[var(--text-primary)]">Testsets</h2>
+            <span className="text-xs text-[var(--muted)]">Je 5 Texte mit MC-Fragen</span>
+          </div>
+          <div className="card-glass divide-y divide-[var(--border)] overflow-hidden">
+            {allTextSets.map((set, i) => {
+              const totalQ = set.texts.reduce((sum, t) => sum + t.questions.length, 0);
+              const isSetLocked = tvTextLimit !== null && i >= tvTextLimit;
+              return (
+                <div
+                  key={set.id}
+                  className={`${isMobile ? "flex flex-col gap-2 px-3 py-3" : "flex items-center gap-4 px-5 py-3.5"} ${isSetLocked ? "opacity-50" : "hover:bg-[var(--accent)]/3"} transition-colors group`}
+                >
+                  <div className="flex items-center gap-3 min-w-0 flex-1">
+                    <span className="text-xs font-bold text-[var(--muted)] tabular-nums w-5 text-center shrink-0">
+                      {i + 1}
+                    </span>
+                    <div className="flex-1 min-w-0">
+                      <span
+                        className={`text-sm font-medium truncate block ${isSetLocked ? "text-[var(--muted)]" : "text-[var(--text-primary)]"}`}
+                      >
+                        {set.name}
+                      </span>
+                    </div>
+                    <span className="text-xs text-[var(--muted)] shrink-0 tabular-nums">
+                      {totalQ} Fragen
+                    </span>
+                  </div>
+                  {isSetLocked ? (
+                    <span className="text-xs text-[var(--muted)] shrink-0 ml-auto">Premium</span>
+                  ) : (
+                    <div
+                      className={`flex items-center gap-2 shrink-0 ${isMobile ? "ml-8" : "ml-auto"}`}
+                    >
+                      <Button
+                        variant="premium"
+                        size="sm"
+                        onClick={() => handleStartSet(i, "practice")}
+                      >
+                        <Play className="w-4 h-4 mr-1" /> Üben
+                      </Button>
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        onClick={() => handleStartSet(i, "exam")}
+                        title="35 Minuten Timer"
+                      >
+                        <Timer className="w-4 h-4 mr-1" /> Prüfung
+                      </Button>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+            {tvTextLimit !== null && allTextSets.length > tvTextLimit && (
+              <div className="p-4">
+                <PaywallBanner feature={`Alle ${allTextSets.length} Textsets freischalten`} />
+              </div>
+            )}
+          </div>
+        </section>
+      )}
 
       {/* Klassischer Modus */}
       <section

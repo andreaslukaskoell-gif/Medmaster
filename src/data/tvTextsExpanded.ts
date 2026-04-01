@@ -29,7 +29,7 @@ export interface TVTextSet {
 // ---------------------------------------------------------------------------
 const set1: TVTextSet = {
   id: "tv-set-1",
-  name: "Textverständnis Set 1",
+  name: "Set 1: Alltag und Wissen",
   difficulty: "leicht",
   texts: [
     {
@@ -497,7 +497,7 @@ const set1: TVTextSet = {
 // ---------------------------------------------------------------------------
 const set2: TVTextSet = {
   id: "tv-set-2",
-  name: "Textverständnis Set 2",
+  name: "Set 2: Mensch und Natur",
   difficulty: "leicht",
   texts: [
     {
@@ -973,7 +973,7 @@ const set2: TVTextSet = {
 // ---------------------------------------------------------------------------
 const set3: TVTextSet = {
   id: "tv-set-3",
-  name: "Textverständnis Set 3",
+  name: "Set 3: Wissenschaft und Technik",
   difficulty: "mittel",
   texts: [
     {
@@ -1463,7 +1463,7 @@ const set3: TVTextSet = {
 // ---------------------------------------------------------------------------
 const set4: TVTextSet = {
   id: "tv-set-4",
-  name: "Textverständnis Set 4",
+  name: "Set 4: Psyche und Umwelt",
   difficulty: "mittel",
   texts: [
     {
@@ -1953,7 +1953,7 @@ const set4: TVTextSet = {
 // ---------------------------------------------------------------------------
 const set5: TVTextSet = {
   id: "tv-set-5",
-  name: "Textverständnis Set 5",
+  name: "Set 5: Kognition und Gesellschaft",
   difficulty: "schwer",
   texts: [
     {
