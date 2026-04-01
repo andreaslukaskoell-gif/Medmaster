@@ -144,6 +144,9 @@ export function useAuth() {
       return;
     }
     try {
+      // Force token refresh before querying — expired JWT causes RLS to return null
+      await supabase.auth.getUser();
+
       const { data, error } = await supabase
         .from("profiles")
         .select("*")
