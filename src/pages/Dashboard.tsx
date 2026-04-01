@@ -15,7 +15,6 @@ import {
   ListChecks,
   RefreshCw,
   Puzzle,
-  CalendarClock,
   Zap,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -40,7 +39,6 @@ import { buildConcreteDailyPlan } from "@/lib/concreteDailyPlan";
 import { getPlanAdaptation } from "@/lib/planAdaptation";
 // prognoseSummary moved into widgets
 import { alleKapitel, getKapitelById, findChapterByUnterkapitelId } from "@/data/bmsKapitel";
-import { pathForChapter } from "@/lib/bmsRoutes";
 import { useTodayEngine } from "@/hooks/useTodayEngine";
 import { useViewportMode } from "@/hooks/useViewportMode";
 import { usePullToRefresh } from "@/hooks/usePullToRefresh";
@@ -79,7 +77,6 @@ export default function Dashboard() {
   const goalAchievedByDate = useStore((s) => s.goalAchievedByDate ?? STABLE_EMPTY_OBJ);
   const smartAdjustDismissedUntil = useStore((s) => s.smartAdjustDismissedUntil);
   const dismissSmartAdjust = useStore((s) => s.dismissSmartAdjust);
-  const userProgress = useStore((s) => s.userProgress ?? STABLE_EMPTY_OBJ);
   // Defensive: always filter out null/corrupt entries from quizResults
   const quizResults = useMemo(
     () => rawQuizResults.filter((r): r is QuizResult => r != null && typeof r === "object"),
@@ -357,9 +354,6 @@ export default function Dashboard() {
           </Link>
         )}
 
-        {/* ─── Fällige Wiederholungen ─── */}
-        <DueReviewsCard userProgress={userProgress} />
-
         <motion.div variants={stagger} initial="initial" animate="animate" className="space-y-5">
           {/* Hero: Greeting + Key Metrics — with atmospheric orbs behind */}
           <motion.section variants={tileMotion} aria-label="Start" className="hero-orbs">
@@ -599,197 +593,6 @@ export default function Dashboard() {
 }
 
 // StreakShareButton removed from Dashboard — streak sharing moved to Fortschritt page
-
-function DueReviewsCard({
-  userProgress,
-}: {
-  userProgress: Record<string, import("@/store/useStore").ChapterProgress>;
-}) {
-  const todayStr = useMemo(() => new Date().toISOString().split("T")[0], []);
-
-  const dueItems = useMemo(() => {
-    const entries = Object.entries(userProgress ?? {});
-    if (entries.length === 0) return [];
-
-    const due: {
-      ukId: string;
-      kapitelId: string;
-      kapitelTitle: string;
-      ukTitle: string;
-      subject: string;
-      nextReviewDate: string;
-      lastReviewed: string;
-      overdueDays: number;
-      link: string;
-    }[] = [];
-
-    for (const [ukId, progress] of entries) {
-      if (!progress?.nextReviewDate || progress.nextReviewDate > todayStr) continue;
-
-      const match = findChapterByUnterkapitelId(ukId);
-      if (!match) continue;
-
-      const { kapitel, index } = match;
-      const uk = (kapitel.unterkapitel ?? [])[index];
-      if (!uk) continue;
-
-      const overdueDays = Math.floor(
-        (new Date(todayStr).getTime() - new Date(progress.nextReviewDate).getTime()) /
-          (1000 * 60 * 60 * 24)
-      );
-
-      due.push({
-        ukId,
-        kapitelId: kapitel.id,
-        kapitelTitle: kapitel.title,
-        ukTitle: uk.title,
-        subject: kapitel.subject,
-        nextReviewDate: progress.nextReviewDate,
-        lastReviewed: progress.lastReviewed,
-        overdueDays,
-        link: `${pathForChapter(kapitel.subject, kapitel.id)}?uk=${index}`,
-      });
-    }
-
-    // Sort most overdue first
-    due.sort((a, b) => b.overdueDays - a.overdueDays);
-    return due;
-  }, [userProgress, todayStr]);
-
-  // Find next upcoming review date if nothing is due
-  const nextReviewDate = useMemo(() => {
-    if (dueItems.length > 0) return null;
-    const entries = Object.entries(userProgress ?? {});
-    if (entries.length === 0) return null;
-
-    let earliest = "";
-    for (const [, progress] of entries) {
-      if (!progress?.nextReviewDate) continue;
-      if (!earliest || progress.nextReviewDate < earliest) {
-        earliest = progress.nextReviewDate;
-      }
-    }
-    return earliest || null;
-  }, [userProgress, dueItems.length]);
-
-  // Don't render if no progress tracked at all
-  if (Object.keys(userProgress ?? {}).length === 0) return null;
-
-  const displayItems = dueItems.slice(0, 5);
-  const remaining = dueItems.length - displayItems.length;
-
-  const formatDate = (dateStr: string) => {
-    try {
-      const d = new Date(dateStr + "T00:00:00");
-      return d.toLocaleDateString("de-AT", { day: "numeric", month: "short" });
-    } catch {
-      return dateStr;
-    }
-  };
-
-  const subjectAccent: Record<string, string> = {
-    biologie: "var(--accent-bio)",
-    chemie: "var(--accent-chem)",
-    physik: "var(--accent-phys)",
-    mathematik: "var(--accent-math)",
-  };
-
-  return (
-    <section className="mb-6" aria-label="Fällige Wiederholungen">
-      <div className="card-glass shadow-sm">
-        <div className="p-5">
-          <div className="flex items-center gap-3 mb-4">
-            <div className="w-10 h-10 rounded-xl bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center shrink-0">
-              <CalendarClock className="w-5 h-5 text-amber-600 dark:text-amber-400" />
-            </div>
-            <div className="flex-1 min-w-0">
-              <h2 className="text-sm font-semibold text-[var(--text-primary)]">
-                Fällige Wiederholungen
-              </h2>
-              <p className="text-xs text-[var(--muted)]">
-                {dueItems.length > 0
-                  ? `${dueItems.length} ${dueItems.length === 1 ? "Kapitel" : "Kapitel"} zur Wiederholung fällig`
-                  : "Alles aktuell!"}
-              </p>
-            </div>
-            {dueItems.length > 0 && (
-              <span className="shrink-0 bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 text-xs font-bold px-2.5 py-1 rounded-full">
-                {dueItems.length}
-              </span>
-            )}
-          </div>
-
-          {dueItems.length === 0 && nextReviewDate && (
-            <div className="flex items-center gap-2 text-sm text-[var(--muted)] bg-[var(--surface)] rounded-lg px-4 py-3">
-              <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
-              <span>
-                Nächste Wiederholung am{" "}
-                <span className="font-medium text-[var(--text-primary)]">
-                  {formatDate(nextReviewDate)}
-                </span>
-              </span>
-            </div>
-          )}
-
-          {displayItems.length > 0 && (
-            <div className="space-y-2">
-              {displayItems.map((item) => (
-                <Link
-                  key={item.ukId}
-                  to={item.link}
-                  className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[var(--surface)] transition-colors group"
-                >
-                  <span
-                    className="w-2 h-2 rounded-full shrink-0"
-                    style={{ backgroundColor: subjectAccent[item.subject] ?? "var(--accent)" }}
-                  />
-                  <div className="flex-1 min-w-0">
-                    <p className="text-sm font-medium text-[var(--text-primary)] truncate">
-                      {item.ukTitle}
-                    </p>
-                    <p className="text-xs text-[var(--muted)] truncate">
-                      {item.kapitelTitle}
-                      {item.overdueDays > 0 && (
-                        <span className="text-amber-600 dark:text-amber-400 ml-1.5">
-                          {item.overdueDays === 1
-                            ? "1 Tag überfällig"
-                            : `${item.overdueDays} Tage überfällig`}
-                        </span>
-                      )}
-                      {item.overdueDays === 0 && (
-                        <span className="text-amber-600 dark:text-amber-400 ml-1.5">
-                          Heute fällig
-                        </span>
-                      )}
-                    </p>
-                  </div>
-                  <span
-                    className="shrink-0 text-xs font-medium px-3 py-1.5 rounded-lg transition-colors"
-                    style={{
-                      backgroundColor: "color-mix(in srgb, rgb(217 119 6) 10%, transparent)",
-                      color: "rgb(217 119 6)",
-                    }}
-                  >
-                    Jetzt wiederholen
-                    <ArrowRight className="w-3 h-3 inline ml-1" />
-                  </span>
-                </Link>
-              ))}
-              {remaining > 0 && (
-                <Link
-                  to="/bms?filter=due"
-                  className="block text-center text-xs font-medium text-amber-600 dark:text-amber-400 hover:underline py-1"
-                >
-                  +{remaining} weitere fällige Kapitel anzeigen
-                </Link>
-              )}
-            </div>
-          )}
-        </div>
-      </div>
-    </section>
-  );
-}
 
 const SUBJECT_ACCENT: Record<string, string> = {
   biologie: "var(--accent-bio)",
