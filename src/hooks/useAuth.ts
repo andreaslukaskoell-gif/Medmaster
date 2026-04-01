@@ -138,11 +138,15 @@ export function useAuth() {
     };
   }, []);
 
+  const fetchProfileRef = useRef<string | null>(null);
   async function fetchProfile(userId: string) {
     if (!supabase || (isDev && userId.startsWith("00000000"))) {
       setLoading(false);
       return;
     }
+    // Prevent concurrent fetches — only skip if same userId already in-flight
+    if (fetchProfileRef.current === userId) return;
+    fetchProfileRef.current = userId;
     try {
       const { data, error } = await supabase
         .from("profiles")
@@ -152,7 +156,6 @@ export function useAuth() {
 
       if (error) {
         console.warn("[useAuth] Profile fetch error:", error.message);
-        setLoading(false);
         return;
       }
 
@@ -172,7 +175,7 @@ export function useAuth() {
             if (!p.username?.trim()) p.username = googleName;
             supabase
               .from("profiles")
-              .update({ display_name: googleName, username: p.username })
+              .update({ display_name: googleName })
               .eq("id", userId)
               .then(() => {});
           }
@@ -208,6 +211,7 @@ export function useAuth() {
         } as Profile);
       }
     } finally {
+      fetchProfileRef.current = null;
       setLoading(false);
     }
   }
@@ -337,6 +341,7 @@ export function useAuth() {
       : ("starter" as const);
   const isAuthenticated = !!user;
   const isPremium = tier === "premium";
+
 
   /** Re-fetch the profile from Supabase (e.g. after payment upgrade).
    *  Stable reference — safe to use in useEffect deps. */
