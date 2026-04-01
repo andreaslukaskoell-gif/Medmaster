@@ -79,20 +79,18 @@ export default function PaymentSuccess() {
       setActivating(false);
       return;
     }
-    let cancelled = false;
     let attempts = 0;
-    const poll = async () => {
-      while (!cancelled && attempts < 15) {
-        attempts++;
-        await refreshProfile();
-        await new Promise((r) => setTimeout(r, 2000));
+    const interval = setInterval(() => {
+      attempts++;
+      if (attempts > 30) {
+        // 60s total — give up polling, show success anyway
+        clearInterval(interval);
+        setActivating(false);
+        return;
       }
-      if (!cancelled) setActivating(false);
-    };
-    poll();
-    return () => {
-      cancelled = true;
-    };
+      refreshProfile();
+    }, 2000);
+    return () => clearInterval(interval);
   }, [isPremium, refreshProfile]);
 
   return (

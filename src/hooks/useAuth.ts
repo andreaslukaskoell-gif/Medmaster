@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, useRef, useCallback } from "react";
 import { supabase } from "@/lib/supabase";
 import { startAutoSync, stopAutoSync, pushStatsToSupabase } from "@/lib/syncService";
 import { startMainSync, stopMainSync } from "@/lib/sync";
@@ -45,6 +45,8 @@ export function useAuth() {
   const [profile, setProfile] = useState<Profile | null>(null);
   const [session, setSession] = useState<Session | null>(null);
   const [loading, setLoading] = useState(!isDev);
+  const userRef = useRef<User | null>(user);
+  userRef.current = user;
 
   useEffect(() => {
     if (isDev) {
@@ -116,11 +118,20 @@ export function useAuth() {
       }
     });
 
+    // Re-fetch profile when user returns to tab (e.g. after Stripe payment in new tab)
+    const handleVisibility = () => {
+      if (document.visibilityState === "visible" && userRef.current) {
+        fetchProfile(userRef.current.id);
+      }
+    };
+    document.addEventListener("visibilitychange", handleVisibility);
+
     return () => {
       clearTimeout(authTimeout);
       subscription.unsubscribe();
       stopAutoSync();
       stopMainSync();
+      document.removeEventListener("visibilitychange", handleVisibility);
     };
   }, []);
 
@@ -324,10 +335,13 @@ export function useAuth() {
   const isAuthenticated = !!user;
   const isPremium = tier === "premium";
 
-  /** Re-fetch the profile from Supabase (e.g. after payment upgrade). */
-  function refreshProfile() {
-    if (user) fetchProfile(user.id);
-  }
+  /** Re-fetch the profile from Supabase (e.g. after payment upgrade).
+   *  Stable reference — safe to use in useEffect deps. */
+  const refreshProfile = useCallback(() => {
+    const uid = userRef.current?.id;
+    if (uid) fetchProfile(uid);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   // Memoize return object to prevent new reference on every render.
   // Functions are intentionally excluded — they read latest state via closure
