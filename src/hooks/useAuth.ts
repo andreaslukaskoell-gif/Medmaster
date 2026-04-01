@@ -138,15 +138,11 @@ export function useAuth() {
     };
   }, []);
 
-  const fetchProfileRef = useRef<string | null>(null);
   async function fetchProfile(userId: string) {
     if (!supabase || (isDev && userId.startsWith("00000000"))) {
       setLoading(false);
       return;
     }
-    // Prevent concurrent fetches — only skip if same userId already in-flight
-    if (fetchProfileRef.current === userId) return;
-    fetchProfileRef.current = userId;
     try {
       const { data, error } = await supabase
         .from("profiles")
@@ -156,12 +152,14 @@ export function useAuth() {
 
       if (error) {
         console.warn("[useAuth] Profile fetch error:", error.message);
+        // Don't clear existing profile on fetch error
+        setLoading(false);
         return;
       }
 
       if (data) {
-        // Google-Login: display_name aus user_metadata übernehmen falls leer
         const p = data as Profile;
+        // Google-Login: display_name aus user_metadata übernehmen falls leer
         if (!p.display_name?.trim() && supabase) {
           const {
             data: { user: currentUser },
@@ -172,7 +170,6 @@ export function useAuth() {
           const googleName = meta?.full_name?.trim() || meta?.name?.trim();
           if (googleName) {
             p.display_name = googleName;
-            if (!p.username?.trim()) p.username = googleName;
             supabase
               .from("profiles")
               .update({ display_name: googleName })
@@ -182,36 +179,32 @@ export function useAuth() {
         }
         setProfile(p);
         identifyUser(userId, {
-          email: p.username,
+          email: p.display_name || "",
           name: p.display_name,
           tier: p.subscription_tier,
         });
         setTrackerUserId(userId);
       } else {
-        // Neuer User: kein Profil in DB → Standard-Profil für Welcome-State
-        const {
-          data: { user: currentUser },
-        } = await supabase.auth.getUser();
-        const meta = currentUser?.user_metadata as
-          | { full_name?: string; name?: string }
-          | undefined;
-        const googleName = meta?.full_name?.trim() || meta?.name?.trim() || "";
-        setProfile({
-          id: userId,
-          username: googleName,
-          display_name: googleName || null,
-          avatar_url: null,
-          medat_type: "medat",
-          test_date: null,
-          subscription_tier: "starter",
-          subscription_expires_at: null,
-          xp: 0,
-          level: 1,
-          streak_days: 0,
-        } as Profile);
+        // No profile in DB — only set fallback if we don't already have a profile
+        // (prevents downgrading premium → starter on transient RLS/JWT issues)
+        setProfile((prev) => {
+          if (prev) return prev; // keep existing profile
+          return {
+            id: userId,
+            username: "",
+            display_name: null,
+            avatar_url: null,
+            medat_type: "medat",
+            test_date: null,
+            subscription_tier: "starter",
+            subscription_expires_at: null,
+            xp: 0,
+            level: 1,
+            streak_days: 0,
+          } as Profile;
+        });
       }
     } finally {
-      fetchProfileRef.current = null;
       setLoading(false);
     }
   }
@@ -341,6 +334,7 @@ export function useAuth() {
       : ("starter" as const);
   const isAuthenticated = !!user;
   const isPremium = tier === "premium";
+
 
 
   /** Re-fetch the profile from Supabase (e.g. after payment upgrade).
