@@ -144,14 +144,11 @@ export function useAuth() {
       return;
     }
     try {
-      // Force token refresh before querying — expired JWT causes RLS to return null
-      await supabase.auth.getUser();
-
-      const { data, error } = await supabase
-        .from("profiles")
-        .select("*")
-        .eq("id", userId)
-        .maybeSingle();
+      // Use RPC to bypass RLS timing issues with JWT tokens
+      const { data, error } = await supabase.rpc("get_my_profile").then(
+        (res) => ({ data: res.data as Record<string, unknown> | null, error: res.error }),
+        () => ({ data: null, error: null })
+      );
 
       if (error) {
         console.warn("[useAuth] Profile fetch error:", error.message);
@@ -161,7 +158,7 @@ export function useAuth() {
       }
 
       if (data) {
-        const p = data as Profile;
+        const p = data as unknown as Profile;
         // Google-Login: display_name aus user_metadata übernehmen falls leer
         if (!p.display_name?.trim() && supabase) {
           const {
