@@ -59,6 +59,24 @@ export default function BMSKapitelView({
   const { setBreadcrumbs } = useBreadcrumb();
   const [autoAnimateRef] = useAutoAnimate({ duration: 250 });
 
+  const storeCompleted = useStore((s) => s.completedChapters);
+  const completedChapters = storeCompleted || [];
+
+  const { getLimit: getPermLimit } = usePermissions();
+  const ukLimit = getPermLimit("bms_uks_per_subject"); // null = unlimited
+
+  // Count UKs in chapters before this one in the same subject
+  const uksBefore = useMemo(() => {
+    return chaptersInSubject
+      .slice(0, currentChapterIndex)
+      .reduce((sum, ch) => sum + (ch?.unterkapitel?.length ?? 0), 0);
+  }, [chaptersInSubject, currentChapterIndex]);
+
+  // Compute free UK limit early so effects and conditional returns can use it
+  const totalUKCount = kapitel?.unterkapitel?.length ?? 0;
+  const maxFreeUKs =
+    ukLimit !== null ? Math.min(totalUKCount, Math.max(0, ukLimit - uksBefore)) : totalUKCount;
+
   useEffect(() => {
     if (location.pathname) useAdaptiveStore.getState().setLastPath(location.pathname);
   }, [location.pathname]);
@@ -81,22 +99,23 @@ export default function BMSKapitelView({
       Number.isFinite(initialUkIndex) &&
       kapitel?.unterkapitel?.length
     ) {
-      const idx =
-        initialUkIndex >= 0 && initialUkIndex < kapitel.unterkapitel.length ? initialUkIndex : null;
+      const inBounds = initialUkIndex >= 0 && initialUkIndex < kapitel.unterkapitel.length;
+      // Block access to locked UKs via URL
+      const idx = inBounds && initialUkIndex < maxFreeUKs ? initialUkIndex : null;
       const t = setTimeout(() => setActiveUKIndex(idx), 0);
       return () => clearTimeout(t);
     }
     const resumeId = useAdaptiveStore.getState().resumeToUnterkapitelId;
     if (!resumeId || !kapitel?.unterkapitel?.length) return;
     const idx = kapitel.unterkapitel.findIndex((u) => u?.id === resumeId);
-    if (idx >= 0) {
+    if (idx >= 0 && idx < maxFreeUKs) {
       const t = setTimeout(() => {
         setActiveUKIndex(idx);
         useAdaptiveStore.getState().setResumeToUnterkapitelId(null);
       }, 0);
       return () => clearTimeout(t);
     }
-  }, [kapitel?.id, kapitel?.unterkapitel, initialUkIndex]);
+  }, [kapitel?.id, kapitel?.unterkapitel, initialUkIndex, maxFreeUKs]);
 
   useEffect(() => {
     if (activeUKIndex !== null || !kapitel?.id) return;
@@ -108,19 +127,6 @@ export default function BMSKapitelView({
     const id = requestAnimationFrame(() => window.scrollTo(0, y));
     return () => cancelAnimationFrame(id);
   }, [activeUKIndex, kapitel?.id]);
-
-  const storeCompleted = useStore((s) => s.completedChapters);
-  const completedChapters = storeCompleted || [];
-
-  const { getLimit: getPermLimit } = usePermissions();
-  const ukLimit = getPermLimit("bms_uks_per_subject"); // null = unlimited
-
-  // Count UKs in chapters before this one in the same subject
-  const uksBefore = useMemo(() => {
-    return chaptersInSubject
-      .slice(0, currentChapterIndex)
-      .reduce((sum, ch) => sum + (ch?.unterkapitel?.length ?? 0), 0);
-  }, [chaptersInSubject, currentChapterIndex]);
 
   if (!kapitel || !kapitel.id) {
     return (
@@ -142,9 +148,7 @@ export default function BMSKapitelView({
     (u) => u && u.id && completedChapters.includes(u.id)
   ).length;
   const totalUK = unterkapitel.length;
-  // How many UKs in this chapter are free
-  const freeUKsInChapter =
-    ukLimit !== null ? Math.min(totalUK, Math.max(0, ukLimit - uksBefore)) : totalUK;
+  const freeUKsInChapter = maxFreeUKs;
   const isKapitelDone = completedChapters.includes(kapitel.id);
   const progressPct = totalUK > 0 ? Math.round((completedUK / totalUK) * 100) : 0;
 

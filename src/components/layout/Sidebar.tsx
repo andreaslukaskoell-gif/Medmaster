@@ -154,7 +154,7 @@ function NavItemRow({
 
 export function Sidebar({ open, onClose }: { open: boolean; onClose: () => void }) {
   const { user, signOut } = useAuth();
-  const { isLocked: isFeatureLocked } = usePermissions();
+  const { isLocked: isFeatureLocked, getLimit } = usePermissions();
   const location = useLocation();
   const lastPathRef = useRef<HTMLDivElement>(null);
 
@@ -241,6 +241,18 @@ export function Sidebar({ open, onClose }: { open: boolean; onClose: () => void 
       mathematik: "var(--accent-math)",
     };
 
+    // Compute how many UKs in this chapter are free
+    const ukLimit = getLimit("bms_uks_per_subject");
+    let freeUKs = kapitel.unterkapitel.length;
+    if (ukLimit !== null && bmsModule) {
+      const allChaptersInSubject = bmsModule.alleKapitel.filter((k) => k.subject === subjectSlug);
+      const chapterIdx = allChaptersInSubject.findIndex((k) => k.id === chapterId);
+      const uksBefore = allChaptersInSubject
+        .slice(0, chapterIdx)
+        .reduce((sum, ch) => sum + (ch?.unterkapitel?.length ?? 0), 0);
+      freeUKs = Math.min(kapitel.unterkapitel.length, Math.max(0, ukLimit - uksBefore));
+    }
+
     return {
       subject: subjectSlug,
       subjectLabel: subjectConfig[subjectSlug].label,
@@ -249,8 +261,9 @@ export function Sidebar({ open, onClose }: { open: boolean; onClose: () => void 
       currentUkIndex,
       accent: accentMap[subjectSlug] ?? "var(--accent)",
       overviewPath: `/bms/${subjectSlug}`,
+      freeUKs,
     };
-  }, [pathname, searchParams, bmsModule]);
+  }, [pathname, searchParams, bmsModule, getLimit]);
 
   const lastPathLabel = useMemo(() => {
     if (!lastPath || lastPath === "/" || lastPath === "/bms") return null;
@@ -443,9 +456,23 @@ export function Sidebar({ open, onClose }: { open: boolean; onClose: () => void 
             {/* Unterkapitel list */}
             <div className="max-h-[min(45vh,360px)] overflow-y-auto mt-1 space-y-0.5 sidebar-scroll">
               {chapterContext.kapitel.unterkapitel.map((uk, idx) => {
-                const isCurrentUk = idx === chapterContext.currentUkIndex;
-                const isCompleted = completedChapters.includes(uk.id);
+                const isUkLocked = idx >= chapterContext.freeUKs;
+                const isCurrentUk = !isUkLocked && idx === chapterContext.currentUkIndex;
+                const isCompleted = !isUkLocked && completedChapters.includes(uk.id);
                 const href = `${pathForChapter(chapterContext.subject, chapterContext.chapterId)}?uk=${idx}`;
+
+                if (isUkLocked) {
+                  return (
+                    <div
+                      key={uk.id}
+                      className="flex items-center gap-2 px-3 py-1.5 text-xs rounded-md text-[var(--muted)] opacity-40 cursor-default"
+                      style={{ borderLeft: "2px solid transparent" }}
+                    >
+                      <Lock className="w-3 h-3 shrink-0" />
+                      <span className="truncate">{uk.title}</span>
+                    </div>
+                  );
+                }
 
                 return (
                   <RouterLink
