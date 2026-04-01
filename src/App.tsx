@@ -63,6 +63,7 @@ const ContentAudit = lazyRetry(() => import("@/pages/ContentAudit"));
 const AdminPreview = lazyRetry(() => import("@/pages/AdminPreview"));
 const AdminDashboard = lazyRetry(() => import("@/pages/AdminDashboard"));
 const AdminTasksPage = lazyRetry(() => import("@/pages/AdminTasksPage"));
+const AdminStats = lazyRetry(() => import("@/pages/Admin"));
 const AuthPage = lazyRetry(() => import("@/pages/AuthPage"));
 const ForgotPasswordPage = lazyRetry(() => import("@/pages/ForgotPasswordPage"));
 const Prognose = lazyRetry(() => import("@/pages/Prognose"));
@@ -406,6 +407,7 @@ export default function App() {
                     </AdminGuard>
                   }
                 />
+                <Route path="/admin/stats" element={<AdminStats />} />
                 <Route path="/prognose" element={<Prognose />} />
                 <Route path="/performance" element={<PerformanceOverview />} />
                 <Route path="/fortschritt" element={<FortschrittPage />} />
