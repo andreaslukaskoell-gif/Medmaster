@@ -83,12 +83,12 @@ export function isPromoActive(): boolean {
  * in dev mode everyone is premium, otherwise use actual tier.
  */
 function effectiveTier(tier: Tier): Tier {
-  // ?paywall=test in URL forces starter tier for local testing
-  if (
-    typeof window !== "undefined" &&
-    new URLSearchParams(window.location.search).get("paywall") === "test"
-  ) {
-    return tier;
+  if (typeof window !== "undefined") {
+    const pw = new URLSearchParams(window.location.search).get("paywall");
+    // ?paywall=test  → use actual tier (bypass promo/dev)
+    if (pw === "test") return tier;
+    // ?paywall=starter → force starter for QA testing
+    if (pw === "starter") return "starter";
   }
   if (import.meta.env.DEV || isPromoActive()) return "premium";
   return tier;
