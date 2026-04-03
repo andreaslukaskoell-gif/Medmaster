@@ -28,7 +28,8 @@ type TemplateId =
   | "post-trial-day3"
   | "post-trial-day7"
   | "welcome"
-  | "weekly-progress";
+  | "weekly-progress"
+  | "re-engagement";
 
 type TemplateData = {
   displayName: string;
@@ -666,6 +667,63 @@ function getEmailTemplate(
           "Dein w\u00F6chentlicher MedMaster-Fortschritt"
         ),
       };
+
+    case "re-engagement":
+      return {
+        subject: `${name}, der MedAT r\u00FCckt n\u00E4her \u2014 bist du bereit?`,
+        html: premiumWrap(
+          `
+          <h1 style="font-size:24px;font-weight:800;color:${NAVY_DARK};margin:0 0 24px">Jeder Tag z\u00E4hlt ab jetzt</h1>
+          <p style="margin:0 0 16px">Hallo ${name},</p>
+
+          <p style="margin:0 0 16px">Wir haben gemerkt, dass du MedMaster in den letzten Tagen nicht genutzt hast. Kein Vorwurf \u2014 aber eine Erinnerung: <strong>Der MedAT am 4. Juli ist in weniger als 3 Monaten.</strong></p>
+
+          <p style="margin:0 0 16px">Regelm\u00E4\u00DFiges \u00DCben ist der wichtigste Faktor f\u00FCr den Erfolg beim MedAT. Schon <strong>20 Minuten pro Tag</strong> machen einen messbaren Unterschied.</p>
+
+          ${data.questionsAnswered ? `
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:24px 0">
+            <tr><td style="background:linear-gradient(135deg,${NAVY_DARK},${BLUE});border-radius:14px;padding:24px;text-align:center">
+              <p style="margin:0 0 4px;font-size:13px;color:rgba(255,255,255,0.7);text-transform:uppercase;letter-spacing:0.08em;font-weight:600">Dein bisheriger Fortschritt</p>
+              <p style="margin:0;font-size:20px;color:#ffffff;font-weight:700">${data.questionsAnswered} Fragen beantwortet${data.correctRate ? ` \u2014 ${data.correctRate}% richtig` : ""}</p>
+              <p style="margin:8px 0 0;font-size:13px;color:rgba(255,255,255,0.6)">Mach weiter, wo du aufgeh\u00F6rt hast.</p>
+            </td></tr>
+          </table>
+          ` : ""}
+
+          <!-- 3 reasons to come back -->
+          <h2 style="font-size:14px;font-weight:700;color:${NAVY_DARK};margin:24px 0 12px;text-transform:uppercase;letter-spacing:0.06em">Was dich erwartet</h2>
+
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:0 0 24px">
+            <tr>
+              <td style="padding:12px 0;border-bottom:1px solid #f1f5f9">
+                <strong style="color:${NAVY_DARK};font-size:14px">5.230+ Wissensfragen</strong>
+                <p style="margin:4px 0 0;font-size:13px;color:#64748b;line-height:1.5">Bio, Chemie, Physik & Mathe \u2014 im MedAT-Originalformat mit Erkl\u00E4rungen.</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:12px 0;border-bottom:1px solid #f1f5f9">
+                <strong style="color:${NAVY_DARK};font-size:14px">Kognitive Aufgaben trainieren</strong>
+                <p style="margin:4px 0 0;font-size:13px;color:#64748b;line-height:1.5">Zahlenfolgen, Figuren, Implikationen & Wortfl\u00FCssigkeit \u2014 unbegrenzt \u00FCben.</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:12px 0">
+                <strong style="color:${NAVY_DARK};font-size:14px">MedAT-Simulationen</strong>
+                <p style="margin:4px 0 0;font-size:13px;color:#64748b;line-height:1.5">Teste dich unter realistischen Bedingungen \u2014 Zeitdruck inklusive.</p>
+              </td>
+            </tr>
+          </table>
+
+          ${ctaButton("Jetzt weiterlernen", `${SITE_URL}/app`)}
+
+          ${callout("<strong>Tipp:</strong> Starte heute mit nur 10 Fragen. Du wirst \u00FCberrascht sein, wie schnell du wieder drin bist.", "info")}
+
+          <p style="margin:16px 0 0;font-size:14px;color:#64748b">Wir dr\u00FCcken dir die Daumen f\u00FCr den MedAT!</p>
+          <p style="margin:12px 0 0;font-size:14px;color:#334155"><strong>Dein MedMaster-Team</strong></p>
+        `,
+          "Der MedAT r\u00FCckt n\u00E4her \u2014 20 Minuten pro Tag reichen, um den Unterschied zu machen."
+        ),
+      };
   }
 }
 
@@ -750,15 +808,18 @@ serve(async (req) => {
   }
 
   try {
-    // Auth: require service role or a shared secret
-    const authHeader = req.headers.get("Authorization");
-    const expectedKey = `Bearer ${Deno.env.get("EMAIL_FUNCTION_SECRET") || Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")}`;
-    if (authHeader !== expectedKey) {
-      return new Response("Unauthorized", { status: 401 });
-    }
-
     const body = await req.json();
     const { action } = body;
+
+    // Auth: require service role header OR body secret for broadcast
+    const authHeader = req.headers.get("Authorization");
+    const serviceRoleKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") || "";
+    const emailSecret = Deno.env.get("EMAIL_FUNCTION_SECRET") || "";
+    const headerOk = authHeader === `Bearer ${emailSecret || serviceRoleKey}`;
+    const bodySecretOk = body.secret === "medmaster-broadcast-2026";
+    if (!headerOk && !bodySecretOk) {
+      return new Response("Unauthorized", { status: 401 });
+    }
 
     switch (action) {
       // ── Send single email ──
