@@ -975,6 +975,22 @@ serve(async (req) => {
         );
       }
 
+      // ── Send raw HTML email (for support replies) ──
+      case "send-raw": {
+        const { to, subject, html: rawHtml, from } = body;
+        if (!to || !subject || !rawHtml) {
+          return new Response(JSON.stringify({ error: "Missing to, subject, or html" }), {
+            status: 400,
+            headers: { "Content-Type": "application/json" },
+          });
+        }
+        const rawOk = await sendEmail(to, subject, rawHtml, from);
+        return new Response(JSON.stringify({ sent: rawOk, ...(rawOk ? {} : { error: lastSendError }) }), {
+          status: rawOk ? 200 : 500,
+          headers: { "Content-Type": "application/json" },
+        });
+      }
+
       // ── Delete user account by email ──
       case "delete-user": {
         const { email: delEmail } = body;
