@@ -4,10 +4,11 @@
  */
 
 import { supabase } from "./supabase";
-import { isSchemaSkipActive } from "./supabaseSchemaSkip";
 
 function skip() {
-  return !supabase || isSchemaSkipActive();
+  // Only skip if supabase is not initialized — never skip due to schema errors,
+  // as that blocks ALL writes (quiz results, streaks, etc.) for the entire session
+  return !supabase;
 }
 
 // ── Quiz Results ──────────────────────────────────────────────
@@ -23,18 +24,24 @@ type QuizResultPayload = {
 };
 
 export async function syncQuizResult(payload: QuizResultPayload) {
-  if (skip()) return;
+  // Don't skip quiz results — they are critical for analytics and user progress
+  if (!supabase) return;
   try {
     const {
       data: { user },
-    } = await supabase!.auth.getUser();
+    } = await supabase.auth.getUser();
     if (!user) return;
-    await supabase!.from("quiz_results").insert({
+    const scorePct = payload.total > 0 ? (payload.score / payload.total) * 100 : 0;
+    const { error } = await supabase.from("quiz_results").insert({
       user_id: user.id,
+      score_pct: Math.round(scorePct * 10) / 10,
       ...payload,
     });
-  } catch {
-    // silent — localStorage is primary
+    if (error) {
+      console.warn("[syncQuizResult] Insert failed:", error.message);
+    }
+  } catch (err) {
+    console.warn("[syncQuizResult] Error:", err instanceof Error ? err.message : err);
   }
 }
 

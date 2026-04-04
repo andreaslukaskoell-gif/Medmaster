@@ -92,22 +92,28 @@ export function useAuth() {
         startAutoSync(session.user.id);
         startMainSync(session.user.id);
 
-        // Track new signups and returning logins
+        // Track new signups and returning logins — deduplicate to prevent spam
+        // onAuthStateChange fires SIGNED_IN on every token refresh, not just real logins
         if (event === "SIGNED_IN") {
-          const createdAt = new Date(session.user.created_at).getTime();
-          const isNewUser = Date.now() - createdAt < 60_000; // created less than 60s ago
-          const provider = session.user.app_metadata?.provider || "unknown";
-          if (isNewUser) {
-            trackConversion("signup_completed", {
-              method: provider,
-              ref: getStoredRef(),
-              utm: getStoredUtm(),
-              gclid: getStoredGclid(),
-              fbclid: getStoredFbclid(),
-              email: session.user.email,
-            });
-          } else {
-            trackEvent("login", { method: provider });
+          const loginKey = `mm_login_tracked_${session.user.id}`;
+          const lastTracked = sessionStorage.getItem(loginKey);
+          if (!lastTracked) {
+            sessionStorage.setItem(loginKey, Date.now().toString());
+            const createdAt = new Date(session.user.created_at).getTime();
+            const isNewUser = Date.now() - createdAt < 60_000; // created less than 60s ago
+            const provider = session.user.app_metadata?.provider || "unknown";
+            if (isNewUser) {
+              trackConversion("signup_completed", {
+                method: provider,
+                ref: getStoredRef(),
+                utm: getStoredUtm(),
+                gclid: getStoredGclid(),
+                fbclid: getStoredFbclid(),
+                email: session.user.email,
+              });
+            } else {
+              trackEvent("login", { method: provider });
+            }
           }
         }
       } else if (event !== "INITIAL_SESSION") {
