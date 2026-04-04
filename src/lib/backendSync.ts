@@ -50,12 +50,13 @@ export async function syncQuizResult(payload: QuizResultPayload) {
 export async function syncSrsReview(questionId: string, correct: boolean) {
   if (skip()) return;
   try {
-    await supabase!.rpc("sync_srs_review", {
+    const { error } = await supabase!.rpc("sync_srs_review", {
       p_question_id: questionId,
       p_correct: correct,
     });
-  } catch {
-    // silent
+    if (error) console.warn("[syncSrsReview]", error.message);
+  } catch (err) {
+    console.warn("[syncSrsReview]", err instanceof Error ? err.message : err);
   }
 }
 
@@ -72,7 +73,7 @@ export async function syncStreak(data: {
       data: { user },
     } = await supabase!.auth.getUser();
     if (!user) return;
-    await supabase!.from("user_streaks").upsert(
+    const { error } = await supabase!.from("user_streaks").upsert(
       {
         user_id: user.id,
         current_streak: data.current_streak,
@@ -84,8 +85,9 @@ export async function syncStreak(data: {
       },
       { onConflict: "user_id" }
     );
-  } catch {
-    // silent
+    if (error) console.warn("[syncStreak]", error.message);
+  } catch (err) {
+    console.warn("[syncStreak]", err instanceof Error ? err.message : err);
   }
 }
 
@@ -109,12 +111,13 @@ export async function syncSimulationResult(payload: SimulationPayload) {
       data: { user },
     } = await supabase!.auth.getUser();
     if (!user) return;
-    await supabase!.from("simulation_results").insert({
+    const { error } = await supabase!.from("simulation_results").insert({
       user_id: user.id,
       ...payload,
     });
-  } catch {
-    // silent
+    if (error) console.warn("[syncSimulation]", error.message);
+  } catch (err) {
+    console.warn("[syncSimulation]", err instanceof Error ? err.message : err);
   }
 }
 
@@ -180,7 +183,7 @@ export async function syncLeaderboard(data: {
       data: { user },
     } = await supabase!.auth.getUser();
     if (!user) return;
-    await supabase!.from("leaderboard_snapshots").upsert(
+    const { error } = await supabase!.from("leaderboard_snapshots").upsert(
       {
         user_id: user.id,
         ...data,
@@ -188,8 +191,9 @@ export async function syncLeaderboard(data: {
       },
       { onConflict: "user_id" }
     );
-  } catch {
-    // silent
+    if (error) console.warn("[syncLeaderboard]", error.message);
+  } catch (err) {
+    console.warn("[syncLeaderboard]", err instanceof Error ? err.message : err);
   }
 }
 
