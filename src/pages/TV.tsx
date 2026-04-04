@@ -25,6 +25,7 @@ import { stripMarkdownAsterisks } from "@/utils/formatExplanation";
 import { useViewportMode } from "@/hooks/useViewportMode";
 import { usePermissions } from "@/hooks/usePermissions";
 import { PaywallBanner } from "@/components/ui/paywall";
+import { UsageLimitWarning } from "@/components/ui/UsageLimitWarning";
 import { tvStrategyGuide, tvTexts } from "@/data/tvData";
 import { tvTextSets } from "@/data/tvTextsExpanded";
 import { tvTextSets2 } from "@/data/tvTextsExpanded2";
@@ -79,6 +80,7 @@ export default function TV() {
   const checkStreak = useStore((s) => s.checkStreak);
   const saveQuizResult = useStore((s) => s.saveQuizResult);
   const logActivity = useStore((s) => s.logActivity);
+  const quizResults = useStore((s) => s.quizResults ?? []);
   const getMinutes = useSessionTimer();
 
   const tvText = tvTexts[selectedTextIndex];
@@ -766,6 +768,15 @@ export default function TV() {
           </div>
         )}
       </div>
+
+      {/* Usage warning for starter users */}
+      {tvTextLimit !== null && (
+        <UsageLimitWarning
+          used={quizResults?.filter((r) => r.type === "tv").length ?? 0}
+          limit={tvTextLimit}
+          label="TV-Texte"
+        />
+      )}
 
       {/* Offizielles Aussagen-Format — MedAT-relevantester Modus zuerst */}
       <section className="space-y-3">

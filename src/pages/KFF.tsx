@@ -10,6 +10,7 @@ import { useAuth } from "@/hooks/useAuth";
 import { useViewportMode } from "@/hooks/useViewportMode";
 import { usePermissions } from "@/hooks/usePermissions";
 import { PaywallBanner } from "@/components/ui/paywall";
+import { UsageLimitWarning } from "@/components/ui/UsageLimitWarning";
 import { trackEvent } from "@/lib/analyticsTracker";
 import { FirstTimeKffIntro } from "@/components/kff/FirstTimeKffIntro";
 import { ZahlenfolgenQuiz } from "@/components/kff/ZahlenfolgenQuiz";
@@ -322,6 +323,13 @@ export default function KFF() {
           </p>
         )}
       </div>
+
+      {/* Usage warning for starter users */}
+      {kffPerSubtest !== null && (() => {
+        const totalUsed = modules.reduce((s, m) => s + m.stats.total, 0);
+        const totalLimit = modules.length * kffPerSubtest;
+        return <UsageLimitWarning used={totalUsed} limit={totalLimit} label="KFF-Übungen" />;
+      })()}
 
       {/* Module cards */}
       <div className={isMobile ? "space-y-3" : "space-y-4"}>

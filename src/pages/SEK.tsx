@@ -20,6 +20,7 @@ import { FloatingQuestionCounter } from "@/components/ui/FloatingQuestionCounter
 import { usePageTitle } from "@/hooks/usePageTitle";
 import { usePermissions } from "@/hooks/usePermissions";
 import { PaywallBanner } from "@/components/ui/paywall";
+import { UsageLimitWarning } from "@/components/ui/UsageLimitWarning";
 import StrategyGuideView from "@/components/shared/StrategyGuideView";
 import { sekStrategyGuide } from "@/data/sekData";
 import { OfficialInstructionCard } from "@/components/shared/OfficialInstructionCard";
@@ -214,6 +215,13 @@ export default function SEK() {
           </div>
         )}
       </div>
+
+      {/* Usage warning for starter users */}
+      {sekPerSubtest !== null && (() => {
+        const totalUsed = subtests.reduce((s, t) => s + t.stats.total, 0);
+        const totalLimit = subtests.length * sekPerSubtest;
+        return <UsageLimitWarning used={totalUsed} limit={totalLimit} label="SEK-Aufgaben" />;
+      })()}
 
       {/* Subtest Cards */}
       <div className="card-glass divide-y divide-[var(--border)] overflow-hidden">

@@ -26,6 +26,7 @@ import { ShareResultButton } from "@/components/shared/ShareResultButton";
 import { getQuizShareText } from "@/lib/shareUtils";
 import { trackQuizComplete } from "@/lib/analytics";
 import { trackEvent } from "@/lib/analyticsTracker";
+import { PostQuizUpgradePrompt } from "@/components/ui/PostQuizUpgradePrompt";
 
 const subjectColors: Record<string, { bg: string; text: string; label: string }> = {
   biologie: {
@@ -343,6 +344,8 @@ export default function BMSQuiz({ subject, onBack, questionCount }: Props) {
             </div>
           );
         })()}
+
+        <PostQuizUpgradePrompt score={score} total={questions.length} subject={subject} />
 
         <div className="space-y-4">
           {questions.map((q: Question, i: number) => {
