@@ -25,6 +25,8 @@ export type GedaechtnisQuestion = {
   source?: string; // z.B. "IB_GM_26.pdf – Beispielaufgabe X"
   /** Optional photo URL for image-based questions (e.g. "Welche Blutgruppe hat diese Person?") */
   photoUrl?: string;
+  /** 1 = direkte Abfrage, 2 = Umkehr (Attribut→Name), 3 = Cross-Reference/Photo */
+  difficulty?: 1 | 2 | 3;
 };
 
 export type OfficialGedaechtnisSet = {

@@ -881,6 +881,14 @@ export function generateGedaechtnisQuestionsFromPasses(
     photoUrl?: string;
   };
 
+  // Builder difficulty mapping:
+  // 1 = direct (Name → Attribut), 2 = reverse (Attribut → Name), 3 = cross-ref / photo
+  const builderDifficulty: Record<number, 1 | 2 | 3> = {
+    0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1,     // direct lookups
+    6: 2, 7: 2, 8: 2, 9: 2, 10: 2, 11: 2,    // reverse lookups
+    12: 3, 13: 3, 14: 3, 15: 3, 16: 3, 17: 3, 18: 3, 19: 3, // cross-ref + photo
+  };
+
   const builders: Array<(p: AllergyPass) => BuilderResult | null> = [
     // ── Direct lookups (Name → Attribut) ──
     // 0: Name → Geburtstag
@@ -1027,6 +1035,10 @@ export function generateGedaechtnisQuestionsFromPasses(
   // Track builder type usage to ensure variety across question types
   const builderUsage = new Map<number, number>();
 
+  // Difficulty distribution targets: ~40% easy, ~40% medium, ~20% hard
+  const diffTargets = { 1: Math.round(count * 0.4), 2: Math.round(count * 0.4), 3: Math.max(1, count - Math.round(count * 0.4) - Math.round(count * 0.4)) };
+  const diffCounts = { 1: 0, 2: 0, 3: 0 };
+
   let attempts = 0;
   const maxAttempts = count * 10; // More attempts for 20 builders
 
@@ -1034,6 +1046,10 @@ export function generateGedaechtnisQuestionsFromPasses(
     attempts++;
     const p = passes[randInt(0, passes.length - 1)];
     const builderIdx = randInt(0, builders.length - 1);
+    const diff = builderDifficulty[builderIdx] ?? 1;
+
+    // Soft cap on difficulty distribution (allow overflow only in last 25% of attempts)
+    if (diffCounts[diff] >= diffTargets[diff] && attempts < maxAttempts * 0.75) continue;
 
     // Soft cap: avoid overusing any single builder type (max 3 per type)
     if ((builderUsage.get(builderIdx) ?? 0) >= 3 && attempts < maxAttempts - count) continue;
@@ -1042,8 +1058,9 @@ export function generateGedaechtnisQuestionsFromPasses(
     if (usedCombos.has(key)) continue;
     usedCombos.add(key);
 
-    const b = builders[builderIdx](p);
-    if (!b || !b.correct) continue;
+    const rawB = builders[builderIdx](p);
+    if (!rawB || !rawB.correct) continue;
+    const b = { ...rawB, difficulty: builderDifficulty[builderIdx] ?? (1 as const) };
 
     const qIdx = questions.length;
     const makeECorrect = eIndices.has(qIdx);
@@ -1071,9 +1088,11 @@ export function generateGedaechtnisQuestionsFromPasses(
       question: b.question,
       options,
       correctIndex,
+      difficulty: b.difficulty,
       ...(b.photoUrl ? { photoUrl: b.photoUrl } : {}),
     });
     builderUsage.set(builderIdx, (builderUsage.get(builderIdx) ?? 0) + 1);
+    diffCounts[b.difficulty]++;
   }
 
   return questions;
