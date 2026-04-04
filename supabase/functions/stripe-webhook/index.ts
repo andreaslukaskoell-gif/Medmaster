@@ -1,6 +1,6 @@
 import { serve } from "https://deno.land/std@0.224.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.49.4";
-import Stripe from "https://esm.sh/stripe@17.7.0";
+import Stripe from "https://esm.sh/stripe@22.0.0";
 import { SMTPClient } from "https://deno.land/x/denomailer@1.6.0/mod.ts";
 
 // TODO: Set these as Supabase Secrets:
@@ -11,13 +11,11 @@ import { SMTPClient } from "https://deno.land/x/denomailer@1.6.0/mod.ts";
 //   URL: https://<project-ref>.supabase.co/functions/v1/stripe-webhook
 //   Events: checkout.session.completed, customer.subscription.updated, customer.subscription.deleted
 
-const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY")!, {
-  apiVersion: "2023-10-16",
-});
+const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY")!);
 
-const webhookSecret = Deno.env.get("STRIPE_WEBHOOK_SECRET") || "whsec_blbj3bTH1PEs76o7BY5DP1Vwpf2CHJiz";
-if (!Deno.env.get("STRIPE_WEBHOOK_SECRET")) {
-  console.warn("STRIPE_WEBHOOK_SECRET not in env, using hardcoded fallback");
+const webhookSecret = Deno.env.get("STRIPE_WEBHOOK_SECRET");
+if (!webhookSecret) {
+  console.error("STRIPE_WEBHOOK_SECRET is not set");
 }
 
 // Use service role to bypass RLS for profile updates
@@ -75,21 +73,7 @@ serve(async (req) => {
       return new Response("Missing stripe-signature header", { status: 400 });
     }
 
-    // Try signature verification, fall back to parsing + API verification
-    let event: Stripe.Event;
-    try {
-      event = stripe.webhooks.constructEvent(body, signature, webhookSecret);
-    } catch (sigErr) {
-      console.warn("Signature verification failed, verifying event via API:", (sigErr as Error).message);
-      // Parse the body and verify the event exists via Stripe API
-      const parsed = JSON.parse(body);
-      if (!parsed?.id?.startsWith("evt_")) {
-        return new Response("Invalid event payload", { status: 400 });
-      }
-      // Retrieve event directly from Stripe to confirm authenticity
-      event = await stripe.events.retrieve(parsed.id);
-      console.log("Event verified via API:", event.id, event.type);
-    }
+    const event = stripe.webhooks.constructEvent(body, signature, webhookSecret!);
 
     switch (event.type) {
       case "checkout.session.completed": {
