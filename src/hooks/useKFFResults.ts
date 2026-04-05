@@ -45,8 +45,8 @@ export function useKFFResults() {
           subtest_type: subtestType,
           payload: result,
         });
-      } catch {
-        // Offline / keine Supabase-Config / Tabelle fehlt – nur lokal gespeichert
+      } catch (err) {
+        console.warn("[useKFFResults] recordResult failed:", err);
       }
     },
     [recordResultLocal]
@@ -83,8 +83,8 @@ export function useKFFResults() {
           subtest_type: result.subtestType,
           payload: result,
         });
-      } catch {
-        // Offline / keine Supabase-Config / Tabelle fehlt – nur lokal gespeichert
+      } catch (err) {
+        console.warn("[useKFFResults] recordSimulation failed:", err);
       }
     },
     [recordSimulationLocal, saveQuizResult]

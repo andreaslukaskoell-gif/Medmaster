@@ -40,11 +40,20 @@ export default function MedATOnboarding() {
 
     if (supabase && user) {
       try {
-        await supabase
+        const { error: upsertError } = await supabase
           .from("profiles")
           .upsert({ id: user.id, display_name: trimmed, username: trimmed }, { onConflict: "id" });
-      } catch {
-        console.warn("[onboarding] profile upsert failed");
+        if (upsertError) {
+          console.warn("[onboarding] profile upsert error:", upsertError.message);
+          setError("Profil konnte nicht gespeichert werden. Bitte versuche es erneut.");
+          setSaving(false);
+          return;
+        }
+      } catch (err) {
+        console.warn("[onboarding] profile upsert failed:", err);
+        setError("Profil konnte nicht gespeichert werden. Bitte versuche es erneut.");
+        setSaving(false);
+        return;
       }
     }
 

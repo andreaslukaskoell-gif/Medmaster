@@ -78,7 +78,7 @@ export function ExitIntentCapture() {
     try {
       // Store in leads table (upsert to avoid duplicates)
       if (supabase) {
-        await supabase.from("leads").upsert(
+        const { error: insertError } = await supabase.from("leads").upsert(
           {
             email: trimmed,
             source: "exit_intent",
@@ -89,6 +89,12 @@ export function ExitIntentCapture() {
           },
           { onConflict: "email" }
         );
+        if (insertError) {
+          console.warn("[ExitIntentCapture] lead upsert error:", insertError.message);
+          setError("Etwas ist schiefgelaufen. Bitte versuche es erneut.");
+          setLoading(false);
+          return;
+        }
       }
 
       trackConversion("lead_captured", { source: "exit_intent", email: trimmed });

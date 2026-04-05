@@ -180,7 +180,11 @@ export function useAuth() {
               .from("profiles")
               .update({ display_name: googleName })
               .eq("id", userId)
-              .then(() => {});
+              .then(({ error: updateErr }) => {
+                if (updateErr) {
+                  console.warn("[useAuth] Google display_name update failed:", updateErr.message);
+                }
+              });
           }
         }
         setProfile(p);

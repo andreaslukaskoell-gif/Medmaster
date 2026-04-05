@@ -214,7 +214,7 @@ async function pushQuizResults(client: SupabaseClient, userId: string, results: 
   const rows = results.map((r) => ({
     id: r.id,
     user_id: userId,
-    type: r.type,
+    quiz_type: r.type,
     subject: r.subject ?? null,
     score: r.score,
     total: r.total,

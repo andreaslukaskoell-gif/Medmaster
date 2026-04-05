@@ -54,7 +54,7 @@ export default function BlogIndex() {
     setNlState("loading");
     try {
       if (supabase) {
-        await supabase.from("leads").upsert(
+        const { error: insertError } = await supabase.from("leads").upsert(
           {
             email: trimmed,
             source: "newsletter",
@@ -65,6 +65,11 @@ export default function BlogIndex() {
           },
           { onConflict: "email" }
         );
+        if (insertError) {
+          console.warn("[BlogIndex] newsletter signup error:", insertError.message);
+          setNlState("error");
+          return;
+        }
       }
       trackEvent("newsletter_signup", { source: "blog_index" });
       setNlState("done");
