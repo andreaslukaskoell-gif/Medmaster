@@ -15,6 +15,7 @@ import {
   Clock,
   BarChart3,
   Eye,
+  Lock,
 } from "lucide-react";
 
 const OWNER_ID = "ea304abb-6b1c-4b50-b870-0404f92306ec";
@@ -161,6 +162,7 @@ export default function Admin() {
   const { user, loading: authLoading } = useAuth();
   const [stats, setStats] = useState<Stats | null>(null);
   const [daily, setDaily] = useState<DailyRow[]>([]);
+  const [funnelData, setFunnelData] = useState<Record<string, number>>({});
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
 
@@ -176,6 +178,28 @@ export default function Admin() {
     }
     if (dailyRes.data && Array.isArray(dailyRes.data)) {
       setDaily(dailyRes.data as DailyRow[]);
+    }
+
+    // Fetch paywall & conversion funnel events (last 30 days)
+    const thirtyDaysAgo = new Date(Date.now() - 30 * 86400000).toISOString();
+    const funnelEvents = [
+      "paywall_shown", "paywall_clicked", "upgrade_card_clicked",
+      "post_quiz_upgrade_shown", "post_quiz_upgrade_clicked",
+      "usage_limit_warning_shown", "usage_limit_warning_clicked",
+      "conversion_signup_completed", "conversion_checkout_started",
+      "conversion_purchase_completed",
+    ];
+    const { data: eventsData } = await supabase!
+      .from("analytics_events")
+      .select("event_name")
+      .in("event_name", funnelEvents)
+      .gte("created_at", thirtyDaysAgo);
+    if (eventsData) {
+      const counts: Record<string, number> = {};
+      for (const e of eventsData) {
+        counts[e.event_name] = (counts[e.event_name] || 0) + 1;
+      }
+      setFunnelData(counts);
     }
     setLoading(false);
   };
@@ -414,6 +438,80 @@ export default function Admin() {
         <StatCard icon={Activity} label="Aktiv 7d" value={stats.active_7d} sub={`${stats.active_30d} letzte 30d`} accent="#10b981" />
         <StatCard icon={Target} label="Fragen gesamt" value={stats.total_questions_answered.toLocaleString("de-AT")} />
       </div>
+
+      {/* ── Paywall & Conversion Funnel ── */}
+      {Object.keys(funnelData).length > 0 && (
+        <div className="bg-[var(--surface)] border border-[var(--border)] rounded-xl p-5 mb-8">
+          <h2 className="text-sm font-semibold text-[var(--text-primary)] mb-4 flex items-center gap-2">
+            <Lock className="w-4 h-4 text-amber-500" />
+            Paywall & Conversion Funnel (30 Tage)
+          </h2>
+          <div className="space-y-3">
+            {[
+              { key: "paywall_shown", label: "Paywall angezeigt", color: "#6b7280" },
+              { key: "paywall_clicked", label: "→ Paywall geklickt", color: "#f59e0b" },
+              { key: "upgrade_card_clicked", label: "→ Upgrade-Card geklickt", color: "#f59e0b" },
+              { key: "post_quiz_upgrade_shown", label: "Post-Quiz Prompt gezeigt", color: "#6b7280" },
+              { key: "post_quiz_upgrade_clicked", label: "→ Post-Quiz geklickt", color: "#f59e0b" },
+              { key: "usage_limit_warning_shown", label: "Limit-Warning gezeigt", color: "#6b7280" },
+              { key: "usage_limit_warning_clicked", label: "→ Limit-Warning geklickt", color: "#f59e0b" },
+              { key: "conversion_signup_completed", label: "Signup abgeschlossen", color: "#10b981" },
+              { key: "conversion_checkout_started", label: "Checkout gestartet", color: "#2563eb" },
+              { key: "conversion_purchase_completed", label: "Kauf abgeschlossen", color: "#10b981" },
+            ].map(({ key, label, color }) => {
+              const count = funnelData[key] || 0;
+              if (count === 0) return null;
+              const maxCount = Math.max(...Object.values(funnelData), 1);
+              const pct = Math.round((count / maxCount) * 100);
+              return (
+                <div key={key} className="flex items-center gap-3">
+                  <div className="w-44 text-xs text-[var(--muted)] truncate">{label}</div>
+                  <div className="flex-1 h-5 bg-[var(--border)]/50 rounded-full overflow-hidden">
+                    <div
+                      className="h-full rounded-full transition-all"
+                      style={{ width: `${Math.max(pct, 2)}%`, background: color }}
+                    />
+                  </div>
+                  <span className="text-sm font-semibold text-[var(--text-primary)] w-12 text-right">{count}</span>
+                </div>
+              );
+            })}
+          </div>
+          {/* Conversion Rates */}
+          {(() => {
+            const shown = funnelData["paywall_shown"] || 0;
+            const clicked = (funnelData["paywall_clicked"] || 0) + (funnelData["upgrade_card_clicked"] || 0);
+            const purchased = funnelData["conversion_purchase_completed"] || 0;
+            const signups = funnelData["conversion_signup_completed"] || 0;
+            return (
+              <div className="mt-4 pt-4 border-t border-[var(--border)] grid grid-cols-2 lg:grid-cols-4 gap-4">
+                <div className="text-center">
+                  <div className="text-lg font-bold text-[var(--text-primary)]">
+                    {shown > 0 ? `${Math.round((clicked / shown) * 100)}%` : "–"}
+                  </div>
+                  <div className="text-[10px] text-[var(--muted)] uppercase">Paywall → Klick</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-[var(--text-primary)]">
+                    {signups > 0 ? `${Math.round((purchased / signups) * 100)}%` : "–"}
+                  </div>
+                  <div className="text-[10px] text-[var(--muted)] uppercase">Signup → Kauf</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-emerald-600">{purchased}</div>
+                  <div className="text-[10px] text-[var(--muted)] uppercase">Käufe total</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-[var(--text-primary)]">
+                    {purchased > 0 ? `€${(purchased * 29.9).toFixed(0)}` : "–"}
+                  </div>
+                  <div className="text-[10px] text-[var(--muted)] uppercase">Umsatz (est.)</div>
+                </div>
+              </div>
+            );
+          })()}
+        </div>
+      )}
 
       {/* Signups Chart */}
       <div className="bg-[var(--surface)] border border-[var(--border)] rounded-xl p-5 mb-8">
