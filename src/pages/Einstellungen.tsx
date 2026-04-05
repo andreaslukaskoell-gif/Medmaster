@@ -188,15 +188,21 @@ export default function Einstellungen() {
             <Shield className="w-4 h-4 text-[var(--muted)] shrink-0" />
             <div className="flex-1 min-w-0">
               <p className="text-sm font-medium text-[var(--foreground)]">Status</p>
-              <p className="text-xs text-[var(--muted)]">
-                {profile?.subscription_tier === "premium" ||
-                profile?.subscription_tier === "standard" ||
-                profile?.subscription_tier === "pro"
-                  ? "Premium"
-                  : new Date() < new Date("2026-04-01T00:00:00+02:00")
-                    ? "Gratis (bis 31. März)"
-                    : "Kostenlos"}
-              </p>
+              {profile?.subscription_tier === "premium" ||
+              profile?.subscription_tier === "standard" ||
+              profile?.subscription_tier === "pro" ? (
+                <p className="text-xs text-emerald-600 font-medium">Premium</p>
+              ) : (
+                <div className="flex items-center gap-2">
+                  <p className="text-xs text-[var(--muted)]">Starter (eingeschränkt)</p>
+                  <Link
+                    to="/preise"
+                    className="text-xs font-semibold text-[var(--accent)] hover:underline"
+                  >
+                    Upgrade
+                  </Link>
+                </div>
+              )}
             </div>
           </div>
         </div>

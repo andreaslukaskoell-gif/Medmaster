@@ -149,7 +149,8 @@ export async function fetchWeaknessAnalysis(): Promise<WeaknessResult | null> {
     });
     if (error) throw error;
     return data as WeaknessResult;
-  } catch {
+  } catch (err) {
+    console.warn("[fetchWeaknessAnalysis]", err instanceof Error ? err.message : err);
     return null;
   }
 }
@@ -162,7 +163,8 @@ export async function exportUserData(): Promise<Record<string, unknown> | null> 
     const { data, error } = await supabase!.rpc("export_user_data");
     if (error) throw error;
     return data as Record<string, unknown>;
-  } catch {
+  } catch (err) {
+    console.warn("[exportUserData]", err instanceof Error ? err.message : err);
     return null;
   }
 }
@@ -219,7 +221,8 @@ export async function fetchLeaderboard(
       .limit(limit);
     if (error) throw error;
     return (data ?? []) as LeaderboardEntry[];
-  } catch {
+  } catch (err) {
+    console.warn("[fetchLeaderboard]", err instanceof Error ? err.message : err);
     return [];
   }
 }
