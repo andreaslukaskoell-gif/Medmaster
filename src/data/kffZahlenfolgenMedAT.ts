@@ -150,30 +150,31 @@ function ensureInteger(n: number): number {
 
 /** Leicht: 1–2 Operatoren, kleine Zahlen, single operation or simple alternating (+/−). */
 function pickOpsEasy(rand: () => number): { type: OpType; value: number }[] {
+  // MedAT-konform: mindestens 2 verschiedene Operatoren, typisch 2-3er Zyklen.
+  // Keine Single-Op-Folgen (+1, +1, +1...) — die sind zu trivial.
+  // Orientiert an offiziellen IB ZF 26 Beispielen.
   const choices: { type: OpType; value: number }[][] = [
-    // Single operations — recognizable pattern
-    [{ type: "+", value: 4 }],
-    [{ type: "+", value: 6 }],
-    [{ type: "+", value: 7 }],
-    [{ type: "×", value: 2 }],
-    [{ type: "×", value: 3 }],
-    [{ type: "−", value: 3 }],
-    // Two alternating operations — still straightforward
-    [
-      { type: "+", value: 3 },
-      { type: "+", value: 5 },
-    ],
+    // 2-op cycles: Addition + Subtraktion
     [
       { type: "+", value: 4 },
       { type: "−", value: 2 },
     ],
     [
-      { type: "×", value: 2 },
-      { type: "+", value: 1 },
-    ],
-    [
       { type: "+", value: 5 },
       { type: "−", value: 1 },
+    ],
+    [
+      { type: "+", value: 3 },
+      { type: "+", value: 5 },
+    ],
+    [
+      { type: "+", value: 8 },
+      { type: "−", value: 4 },
+    ],
+    // 2-op cycles: Multiplikation + Addition/Subtraktion
+    [
+      { type: "×", value: 2 },
+      { type: "+", value: 1 },
     ],
     [
       { type: "×", value: 2 },
@@ -183,15 +184,40 @@ function pickOpsEasy(rand: () => number): { type: OpType; value: number }[] {
       { type: "+", value: 2 },
       { type: "×", value: 2 },
     ],
-    // Alternating +a, +b (velumed-Stil)
     [
-      { type: "+", value: 8 },
-      { type: "+", value: 4 },
+      { type: "×", value: 2 },
+      { type: "+", value: 3 },
     ],
-    // Alternating: +3, +1 (net progression)
+    // 3-op cycles: wie offizielle Beispiele (+a, ×b, -c)
+    [
+      { type: "+", value: 4 },
+      { type: "×", value: 2 },
+      { type: "−", value: 4 },
+    ],
+    [
+      { type: "×", value: 2 },
+      { type: "+", value: 3 },
+      { type: "−", value: 2 },
+    ],
     [
       { type: "+", value: 3 },
-      { type: "+", value: 1 },
+      { type: "×", value: 2 },
+      { type: "−", value: 3 },
+    ],
+    [
+      { type: "+", value: 2 },
+      { type: "+", value: 3 },
+      { type: "−", value: 1 },
+    ],
+    [
+      { type: "×", value: 2 },
+      { type: "−", value: 2 },
+      { type: "+", value: 4 },
+    ],
+    [
+      { type: "+", value: 5 },
+      { type: "−", value: 3 },
+      { type: "+", value: 2 },
     ],
   ];
   return choices[Math.floor(rand() * choices.length)];
