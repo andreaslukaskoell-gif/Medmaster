@@ -163,12 +163,16 @@ function MedATGuard({ children }: { children: ReactNode }) {
 }
 
 function AdminGuard({ children }: { children: React.ReactNode }) {
-  // Admin pages (editor, audit, tasks) are dev-only.
-  // AnalyticsDashboard has its own password gate and is routed separately.
-  if (!import.meta.env.DEV) {
-    return <Navigate to="/dashboard" replace />;
+  const { user, loading } = useAuth();
+  // In dev, allow all access
+  if (import.meta.env.DEV) return <>{children}</>;
+  // In production, require admin email
+  if (loading) return <PageLoadingSkeleton />;
+  const adminEmail = import.meta.env.VITE_ADMIN_EMAIL || "";
+  if (adminEmail && user?.email?.toLowerCase() === adminEmail.toLowerCase()) {
+    return <>{children}</>;
   }
-  return <>{children}</>;
+  return <Navigate to="/dashboard" replace />;
 }
 
 function BMSQuizWrapper() {
