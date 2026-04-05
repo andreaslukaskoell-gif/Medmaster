@@ -93,6 +93,17 @@ Wenn wir mehr Übungsaufgaben (Zahlenfolgen, Implikationen, Wortflüssigkeit) ge
 - Never use `localStorage.clear()` — only clear specific keys
 - Run `npm run build` before committing to catch errors
 - **Nach Änderungen an BMS-Pool-Dateien:** `npm run audit-bms` ausführen (0 Fehler anstreben)
+- **Nie mehrere Pushes schnell hintereinander** — Commits sammeln, EIN Push
+- **Vor Push:** `npm run validate-vercel` (in `npm run check` enthalten)
+- **Nach Push:** `npm run healthcheck` — 14 kritische Routen auf 200 prüfen
+
+### Vercel (KRITISCH — Produktion)
+
+- `vercel.json` ist kritische Infrastruktur — nie blind ändern
+- `buildCommand` MUSS `"npm run build"` sein — NIE playwright/puppeteer/chromium
+- SPA-Fallback MUSS `"destination": "/"` sein — NIE `"/index.html"` (cleanUrls-Bug!)
+- `npm run validate-vercel` prüft alles automatisch, blockt bei Fehler
+- `npm run healthcheck` testet 14 Routen auf Production nach Deploy
 
 ## What to Avoid
 
