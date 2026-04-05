@@ -1034,22 +1034,6 @@ serve(async (req) => {
         });
       }
 
-      // ── Send raw HTML email (support replies etc.) ──
-      case "send-raw": {
-        const { to, subject, html, from: customFrom } = body;
-        if (!to || !subject || !html) {
-          return new Response(JSON.stringify({ error: "Missing to, subject, or html" }), {
-            status: 400,
-            headers: { "Content-Type": "application/json" },
-          });
-        }
-        const ok = await sendEmail(to, subject, html, customFrom);
-        return new Response(JSON.stringify({ sent: ok, ...(ok ? {} : { error: lastSendError }) }), {
-          status: ok ? 200 : 500,
-          headers: { "Content-Type": "application/json" },
-        });
-      }
-
       // ── Debug user counts ──
       case "debug-users": {
         let allU: { id: string; email?: string }[] = [];
