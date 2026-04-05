@@ -1299,7 +1299,11 @@ export function hasVisualSolutionForImplikationTask(task: ImplikationTask): bool
   return validateImplikationTask(task);
 }
 
-/** Übungsaufgaben für ImplikationenUeben und ImplikationenSimulation. Nur validierte Aufgaben. */
+/** Pool-Zielgröße: ~1000 Aufgaben (statisch + generiert). */
+const IMPLIKATION_POOL_TARGET = 1000;
+
+/** Übungsaufgaben für ImplikationenUeben und ImplikationenSimulation.
+ * Statischer Pool (91) + dynamisch generierte Aufgaben bis ~1000. Nur validierte Aufgaben. */
 function getValidImplikationenTasks(): ImplikationTask[] {
   const invalid: string[] = [];
   const valid = IMPLIKATION_PRACTICE_TASKS.filter((t) => {
@@ -1309,6 +1313,31 @@ function getValidImplikationenTasks(): ImplikationTask[] {
   });
   if (import.meta.env?.DEV && invalid.length > 0) {
     console.warn("[KFF Implikationen] Ungültige Aufgaben (ausgefiltert):", invalid.join(", "));
+  }
+
+  // Fill up to target with generated tasks
+  if (valid.length < IMPLIKATION_POOL_TARGET) {
+    const needed = IMPLIKATION_POOL_TARGET - valid.length;
+    const existingIds = new Set(valid.map((t) => t.id));
+    const existingPremises = new Set(valid.map((t) => `${t.premise1}|${t.premise2}`));
+    let generated = 0;
+    let attempts = 0;
+    const maxAttempts = needed * 5;
+    while (generated < needed && attempts < maxAttempts) {
+      attempts++;
+      // Cycle through difficulties: 40% diff 1, 40% diff 2, 20% diff 3
+      const diffRoll = Math.random();
+      const diff: 1 | 2 | 3 = diffRoll < 0.4 ? 1 : diffRoll < 0.8 ? 2 : 3;
+      const task = generateImplicationTask(diff);
+      if (!task) continue;
+      if (existingIds.has(task.id)) continue;
+      const premiseKey = `${task.premise1}|${task.premise2}`;
+      if (existingPremises.has(premiseKey)) continue;
+      existingIds.add(task.id);
+      existingPremises.add(premiseKey);
+      valid.push(task);
+      generated++;
+    }
   }
   return valid;
 }
@@ -1342,7 +1371,7 @@ export const implikationenTasks: ImplikationTask[] = rebalanceEAnswerRate(
 // Offizielle Vorbilder: Stofftiere/Spielsachen/Wertanlagen, Nüsse/Gewürze/Pflanzen,
 // Menschen/Säugetiere/Lebewesen, Kinder/Lebewesen/Erwachsene
 const NOUN_TRIPLETS: [string, string, string][] = [
-  // Tier-Taxonomie
+  // Tier-Taxonomie (20)
   ["Hunde", "Säugetiere", "Haustiere"],
   ["Katzen", "Raubtiere", "Haustiere"],
   ["Vögel", "Wirbeltiere", "Lebewesen"],
@@ -1353,7 +1382,17 @@ const NOUN_TRIPLETS: [string, string, string][] = [
   ["Insekten", "Wirbellose", "Lebewesen"],
   ["Reptilien", "Wirbeltiere", "Wildtiere"],
   ["Pinguine", "Vögel", "Wildtiere"],
-  // Menschen & Berufe
+  ["Wale", "Säugetiere", "Meerestiere"],
+  ["Bären", "Raubtiere", "Wildtiere"],
+  ["Papageien", "Vögel", "Haustiere"],
+  ["Schlangen", "Reptilien", "Wildtiere"],
+  ["Schmetterlinge", "Insekten", "Fluginsekten"],
+  ["Haie", "Fische", "Raubtiere"],
+  ["Eulen", "Vögel", "Nachttiere"],
+  ["Frösche", "Amphibien", "Wildtiere"],
+  ["Schildkröten", "Reptilien", "Haustiere"],
+  ["Kaninchen", "Säugetiere", "Haustiere"],
+  // Menschen & Berufe (25)
   ["Kinder", "Lebewesen", "Erwachsene"],
   ["Ärzte", "Akademiker", "Berufstätige"],
   ["Studenten", "Akademiker", "Erwachsene"],
@@ -1364,21 +1403,54 @@ const NOUN_TRIPLETS: [string, string, string][] = [
   ["Handwerker", "Berufstätige", "Angestellte"],
   ["Mediziner", "Naturwissenschaftler", "Akademiker"],
   ["Sänger", "Musiker", "Künstler"],
-  // Pflanzen & Natur
+  ["Richter", "Beamte", "Akademiker"],
+  ["Architekten", "Planer", "Berufstätige"],
+  ["Köche", "Handwerker", "Angestellte"],
+  ["Piloten", "Berufstätige", "Angestellte"],
+  ["Ingenieure", "Akademiker", "Berufstätige"],
+  ["Maler", "Künstler", "Handwerker"],
+  ["Tänzer", "Künstler", "Sportler"],
+  ["Forscher", "Wissenschaftler", "Akademiker"],
+  ["Polizisten", "Beamte", "Berufstätige"],
+  ["Journalisten", "Berufstätige", "Autoren"],
+  ["Zahnärzte", "Mediziner", "Akademiker"],
+  ["Apotheker", "Akademiker", "Berufstätige"],
+  ["Fotografen", "Künstler", "Berufstätige"],
+  ["Bauarbeiter", "Handwerker", "Arbeiter"],
+  ["Schriftsteller", "Autoren", "Künstler"],
+  // Pflanzen & Natur (15)
   ["Rosen", "Blumen", "Pflanzen"],
   ["Eichen", "Laubbäume", "Bäume"],
   ["Tulpen", "Blumen", "Gartengewächse"],
   ["Tannen", "Nadelbäume", "Bäume"],
   ["Pilze", "Lebewesen", "Waldgewächse"],
   ["Sträucher", "Pflanzen", "Gartengewächse"],
-  // Nahrung & Alltag
+  ["Kakteen", "Pflanzen", "Wüstenpflanzen"],
+  ["Farne", "Pflanzen", "Waldpflanzen"],
+  ["Moose", "Pflanzen", "Bodendecker"],
+  ["Birken", "Laubbäume", "Bäume"],
+  ["Gräser", "Pflanzen", "Grünflächen"],
+  ["Orchideen", "Blumen", "Zierpflanzen"],
+  ["Disteln", "Pflanzen", "Wildkräuter"],
+  ["Efeu", "Kletterpflanzen", "Pflanzen"],
+  ["Weinreben", "Pflanzen", "Nutzpflanzen"],
+  // Nahrung & Alltag (15)
   ["Nüsse", "Gewürze", "Pflanzen"],
   ["Äpfel", "Früchte", "Nahrungsmittel"],
   ["Tomaten", "Gemüse", "Nahrungsmittel"],
   ["Backwaren", "Nahrungsmittel", "Lebensmittel"],
   ["Gewürze", "Pflanzen", "Nahrungsmittel"],
   ["Getränke", "Lebensmittel", "Flüssigkeiten"],
-  // Gegenstände & Konzepte
+  ["Kartoffeln", "Gemüse", "Nahrungsmittel"],
+  ["Kirschen", "Früchte", "Steinobst"],
+  ["Nudeln", "Teigwaren", "Nahrungsmittel"],
+  ["Käsesorten", "Milchprodukte", "Lebensmittel"],
+  ["Brotsorten", "Backwaren", "Lebensmittel"],
+  ["Bananen", "Früchte", "Importwaren"],
+  ["Kräuter", "Pflanzen", "Gewürze"],
+  ["Olivenöle", "Speiseöle", "Lebensmittel"],
+  ["Schokoladen", "Süßwaren", "Lebensmittel"],
+  // Gegenstände & Konzepte (20)
   ["Stofftiere", "Spielsachen", "Wertanlagen"],
   ["Autos", "Fahrzeuge", "Maschinen"],
   ["Geigen", "Musikinstrumente", "Wertgegenstände"],
@@ -1387,7 +1459,19 @@ const NOUN_TRIPLETS: [string, string, string][] = [
   ["Diamanten", "Edelsteine", "Wertanlagen"],
   ["Medikamente", "Arzneimittel", "Chemikalien"],
   ["Kleidungsstücke", "Textilien", "Gebrauchsgegenstände"],
-  // Wissenschaft & Technik
+  ["Uhren", "Zeitmesser", "Wertgegenstände"],
+  ["Lampen", "Beleuchtungen", "Einrichtungen"],
+  ["Schlüssel", "Werkzeuge", "Gebrauchsgegenstände"],
+  ["Spiegel", "Möbelstücke", "Einrichtungen"],
+  ["Vasen", "Behälter", "Dekorationen"],
+  ["Kerzen", "Lichtquellen", "Dekorationen"],
+  ["Taschen", "Behälter", "Accessoires"],
+  ["Brillen", "Sehhilfen", "Hilfsmittel"],
+  ["Schuhe", "Kleidungsstücke", "Gebrauchsgegenstände"],
+  ["Teppiche", "Bodenbeläge", "Einrichtungen"],
+  ["Regale", "Möbelstücke", "Aufbewahrungen"],
+  ["Vorhänge", "Textilien", "Einrichtungen"],
+  // Wissenschaft & Technik (15)
   ["Theoreme", "Beweise", "Erkenntnisse"],
   ["Atome", "Materie", "Teilchen"],
   ["Planeten", "Himmelskörper", "Objekte"],
@@ -1398,7 +1482,12 @@ const NOUN_TRIPLETS: [string, string, string][] = [
   ["Enzyme", "Proteine", "Katalysatoren"],
   ["Elektronen", "Teilchen", "Ladungsträger"],
   ["Moleküle", "Verbindungen", "Substanzen"],
-  // Geographie & Orte
+  ["Kristalle", "Feststoffe", "Mineralien"],
+  ["Galaxien", "Sternsysteme", "Objekte"],
+  ["Fossilien", "Funde", "Zeugnisse"],
+  ["Legierungen", "Materialien", "Werkstoffe"],
+  ["Algorithmen", "Verfahren", "Werkzeuge"],
+  // Geographie & Orte (15)
   ["Flüsse", "Gewässer", "Landschaftselemente"],
   ["Berge", "Erhebungen", "Landschaftselemente"],
   ["Inseln", "Landmassen", "Gebiete"],
@@ -1407,7 +1496,14 @@ const NOUN_TRIPLETS: [string, string, string][] = [
   ["Vulkane", "Berge", "Naturphänomene"],
   ["Städte", "Siedlungen", "Regionen"],
   ["Dörfer", "Siedlungen", "Gemeinden"],
-  // Musik & Kultur
+  ["Gletscher", "Eismassen", "Landschaftselemente"],
+  ["Höhlen", "Hohlräume", "Naturwunder"],
+  ["Ozeane", "Gewässer", "Ökosysteme"],
+  ["Täler", "Landschaftsformen", "Gebiete"],
+  ["Küsten", "Landschaftselemente", "Grenzgebiete"],
+  ["Steppen", "Landschaften", "Ökosysteme"],
+  ["Fjorde", "Gewässer", "Küstenformen"],
+  // Musik & Kultur (15)
   ["Opern", "Musikwerke", "Kunstformen"],
   ["Romane", "Literatur", "Kunstwerke"],
   ["Gedichte", "Literatur", "Texte"],
@@ -1416,7 +1512,14 @@ const NOUN_TRIPLETS: [string, string, string][] = [
   ["Sinfonien", "Musikwerke", "Kompositionen"],
   ["Theater", "Kulturstätten", "Gebäude"],
   ["Museen", "Kulturstätten", "Einrichtungen"],
-  // Medizin (MedAT-relevant)
+  ["Ballette", "Tanzstücke", "Kunstformen"],
+  ["Dramen", "Theaterstücke", "Literatur"],
+  ["Aquarelle", "Gemälde", "Kunstwerke"],
+  ["Hymnen", "Musikstücke", "Gesänge"],
+  ["Mosaike", "Kunstwerke", "Dekorationen"],
+  ["Märchen", "Erzählungen", "Literatur"],
+  ["Sagen", "Erzählungen", "Überlieferungen"],
+  // Medizin (10)
   ["Organe", "Gewebe", "Körperteile"],
   ["Knochen", "Gewebe", "Skelettteile"],
   ["Muskeln", "Gewebe", "Organe"],
@@ -1425,17 +1528,41 @@ const NOUN_TRIPLETS: [string, string, string][] = [
   ["Hormone", "Botenstoffe", "Substanzen"],
   ["Antikörper", "Proteine", "Abwehrstoffe"],
   ["Impfstoffe", "Arzneimittel", "Präparate"],
-  // Sport & Freizeit
+  ["Vitamine", "Nährstoffe", "Substanzen"],
+  ["Blutgefäße", "Leitungen", "Körperteile"],
+  // Sport & Freizeit (10)
   ["Ballspiele", "Sportarten", "Aktivitäten"],
   ["Marathons", "Wettbewerbe", "Veranstaltungen"],
   ["Schwimmer", "Sportler", "Athleten"],
   ["Trainer", "Berufstätige", "Vereinsmitglieder"],
   ["Turniere", "Wettbewerbe", "Ereignisse"],
-  // Fahrzeuge & Transport
+  ["Wanderungen", "Aktivitäten", "Freizeitbeschäftigungen"],
+  ["Skifahrer", "Sportler", "Wintersportler"],
+  ["Tennisplätze", "Sportanlagen", "Einrichtungen"],
+  ["Wettkämpfe", "Veranstaltungen", "Wettbewerbe"],
+  ["Radrennen", "Sportarten", "Wettbewerbe"],
+  // Fahrzeuge & Transport (10)
   ["Züge", "Fahrzeuge", "Transportmittel"],
   ["Schiffe", "Fahrzeuge", "Wasserfahrzeuge"],
   ["Flugzeuge", "Fahrzeuge", "Transportmittel"],
   ["Fahrräder", "Fahrzeuge", "Sportgeräte"],
+  ["Busse", "Fahrzeuge", "Transportmittel"],
+  ["Motorräder", "Fahrzeuge", "Zweiräder"],
+  ["Straßenbahnen", "Fahrzeuge", "Transportmittel"],
+  ["Segelboote", "Wasserfahrzeuge", "Sportgeräte"],
+  ["Lastwagen", "Fahrzeuge", "Nutzfahrzeuge"],
+  ["Hubschrauber", "Fluggeräte", "Transportmittel"],
+  // Gebäude & Räume (10)
+  ["Kirchen", "Gotteshäuser", "Gebäude"],
+  ["Schulen", "Bildungseinrichtungen", "Gebäude"],
+  ["Krankenhäuser", "Einrichtungen", "Gebäude"],
+  ["Bibliotheken", "Einrichtungen", "Gebäude"],
+  ["Burgen", "Bauwerke", "Denkmäler"],
+  ["Brücken", "Bauwerke", "Verbindungen"],
+  ["Türme", "Bauwerke", "Gebäude"],
+  ["Stadien", "Sportanlagen", "Gebäude"],
+  ["Schlösser", "Bauwerke", "Sehenswürdigkeiten"],
+  ["Rathäuser", "Verwaltungsgebäude", "Gebäude"],
 ];
 
 type SyllogismPattern = {
