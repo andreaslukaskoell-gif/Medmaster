@@ -525,7 +525,11 @@ serve(async (req) => {
   const authHeader = req.headers.get("Authorization") || "";
   const cronHeader = req.headers.get("x-cron-secret") || "";
   const serviceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") || "";
-  const cronSecret = Deno.env.get("SUPPORT_BOT_SECRET") || "07C30942-A991-4EC7-B808-1FAC41E62D9B";
+  const cronSecret = Deno.env.get("SUPPORT_BOT_SECRET") || "";
+  if (!cronSecret && !serviceKey) {
+    console.error("[auth] No SUPPORT_BOT_SECRET or SUPABASE_SERVICE_ROLE_KEY configured");
+    return new Response(JSON.stringify({ error: "Server misconfigured" }), { status: 500, headers: { "Content-Type": "application/json" } });
+  }
 
   let bodySecret = "";
   try {

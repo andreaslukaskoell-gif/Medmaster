@@ -160,7 +160,7 @@ serve(async (req) => {
               from: "MedMaster <welcome@medmaster.at>",
               to: "support@medmaster.at",
               subject: `Neuer Premium-Kunde: ${amount}`,
-              html: `<p><strong>Neuer Premium-Kauf!</strong></p><p>Kunde: ${customerEmail}<br/>Betrag: ${amount}<br/>User-ID: ${userId}<br/>Zeit: ${new Date().toLocaleString("de-AT", { timeZone: "Europe/Vienna" })}</p>`,
+              html: `<p><strong>Neuer Premium-Kauf!</strong></p><p>Kunde: ${(customerEmail || "").replace(/[<>&"']/g, c => ({"<":"&lt;",">":"&gt;","&":"&amp;","\"":"&quot;","'":"&#39;"}[c] || c))}<br/>Betrag: ${amount}<br/>User-ID: ${userId}<br/>Zeit: ${new Date().toLocaleString("de-AT", { timeZone: "Europe/Vienna" })}</p>`,
             });
             await smtp.close();
           }
@@ -205,7 +205,7 @@ serve(async (req) => {
   <div style="display:inline-block;background:#dcfce7;border-radius:50%;width:56px;height:56px;line-height:56px;font-size:28px">&#10003;</div>
 </div>
 <h1 style="font-size:22px;font-weight:700;color:#1e3a8a;margin:0 0 8px;text-align:center">Zahlung erfolgreich!</h1>
-<p style="text-align:center;color:#64748b;margin:0 0 24px">Vielen Dank f&uuml;r dein Vertrauen, ${name}.</p>
+<p style="text-align:center;color:#64748b;margin:0 0 24px">Vielen Dank f&uuml;r dein Vertrauen, ${(name || "").replace(/[<>&"']/g, c => ({"<":"&lt;",">":"&gt;","&":"&amp;","\"":"&quot;","'":"&#39;"}[c] || c))}.</p>
 <table role="presentation" width="100%" style="margin:0 0 24px;border-collapse:collapse">
   <tr><td style="padding:12px 16px;border-bottom:1px solid #f1f5f9;font-size:14px;color:#64748b">Produkt</td><td style="padding:12px 16px;border-bottom:1px solid #f1f5f9;font-size:14px;font-weight:600;color:#334155;text-align:right">MedMaster Premium</td></tr>
   <tr><td style="padding:12px 16px;border-bottom:1px solid #f1f5f9;font-size:14px;color:#64748b">Betrag</td><td style="padding:12px 16px;border-bottom:1px solid #f1f5f9;font-size:14px;font-weight:600;color:#334155;text-align:right">&euro;${session.amount_total ? (session.amount_total / 100).toFixed(2).replace(".", ",") : "29,90"}</td></tr>

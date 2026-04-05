@@ -1,6 +1,6 @@
 import { serve } from "https://deno.land/std@0.224.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.49.4";
-import Stripe from "https://esm.sh/stripe@17.7.0";
+import Stripe from "https://esm.sh/stripe@22.0.0";
 
 // TODO: Set these as Supabase Secrets:
 //   supabase secrets set STRIPE_SECRET_KEY=sk_live_...

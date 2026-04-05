@@ -407,7 +407,7 @@ export default function App() {
                     </AdminGuard>
                   }
                 />
-                <Route path="/admin/stats" element={<AdminStats />} />
+                <Route path="/admin/stats" element={<AdminGuard><AdminStats /></AdminGuard>} />
                 <Route path="/prognose" element={<Prognose />} />
                 <Route path="/performance" element={<PerformanceOverview />} />
                 <Route path="/fortschritt" element={<FortschrittPage />} />
