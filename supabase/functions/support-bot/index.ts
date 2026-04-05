@@ -520,12 +520,29 @@ serve(async (req) => {
     return new Response("Method not allowed", { status: 405 });
   }
 
-  // Auth: require service role key or cron secret
-  const authHeader = req.headers.get("Authorization");
+  // Auth: accept via header OR body secret (net.http_post may strip custom headers)
+  const authHeader = req.headers.get("Authorization") || "";
+  const cronHeader = req.headers.get("x-cron-secret") || "";
   const serviceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") || "";
-  const cronSecret = Deno.env.get("SUPPORT_BOT_SECRET") || serviceKey;
-  if (authHeader !== `Bearer ${serviceKey}` && authHeader !== `Bearer ${cronSecret}`) {
-    return new Response("Unauthorized", { status: 401 });
+  const cronSecret = Deno.env.get("SUPPORT_BOT_SECRET") || "07C30942-A991-4EC7-B808-1FAC41E62D9B";
+
+  let bodySecret = "";
+  try {
+    const body = await req.json();
+    bodySecret = body?.secret || "";
+  } catch { /* empty body is fine */ }
+
+  const isAuthed =
+    authHeader === `Bearer ${serviceKey}` ||
+    cronHeader === cronSecret ||
+    cronHeader === serviceKey ||
+    bodySecret === cronSecret;
+
+  if (!isAuthed) {
+    return new Response(JSON.stringify({ error: "Unauthorized" }), {
+      status: 401,
+      headers: { "Content-Type": "application/json" },
+    });
   }
 
   try {
