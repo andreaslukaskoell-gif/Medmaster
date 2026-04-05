@@ -1299,7 +1299,7 @@ export function hasVisualSolutionForImplikationTask(task: ImplikationTask): bool
   return validateImplikationTask(task);
 }
 
-/** Pool-Zielgröße: ~1000 Aufgaben (statisch + generiert). */
+/** Pool-Zielgröße: statisch + generiert. Lazy-init via Proxy, so no build-time cost. */
 const IMPLIKATION_POOL_TARGET = 1000;
 
 /** Übungsaufgaben für ImplikationenUeben und ImplikationenSimulation.
@@ -1315,28 +1315,101 @@ function getValidImplikationenTasks(): ImplikationTask[] {
     console.warn("[KFF Implikationen] Ungültige Aufgaben (ausgefiltert):", invalid.join(", "));
   }
 
-  // Fill up to target with generated tasks
+  // Fill up to target with deterministic generated tasks.
+  // Uses all triplet×pattern combinations systematically (not random) so the
+  // pool is identical on every page load → seenIds tracking works correctly.
   if (valid.length < IMPLIKATION_POOL_TARGET) {
-    const needed = IMPLIKATION_POOL_TARGET - valid.length;
-    const existingIds = new Set(valid.map((t) => t.id));
     const existingPremises = new Set(valid.map((t) => `${t.premise1}|${t.premise2}`));
-    let generated = 0;
-    let attempts = 0;
-    const maxAttempts = needed * 5;
-    while (generated < needed && attempts < maxAttempts) {
-      attempts++;
-      // Cycle through difficulties: 40% diff 1, 40% diff 2, 20% diff 3
-      const diffRoll = Math.random();
-      const diff: 1 | 2 | 3 = diffRoll < 0.4 ? 1 : diffRoll < 0.8 ? 2 : 3;
-      const task = generateImplicationTask(diff);
-      if (!task) continue;
-      if (existingIds.has(task.id)) continue;
-      const premiseKey = `${task.premise1}|${task.premise2}`;
+    const patternsD1 = SYLLOGISM_PATTERNS.filter((p) => p.difficulty === 1);
+    const patternsD2 = SYLLOGISM_PATTERNS.filter((p) => p.difficulty === 2);
+    const patternsD3 = SYLLOGISM_PATTERNS.filter((p) => p.difficulty === 3);
+    // Interleave difficulties: 40% D1, 40% D2, 20% D3
+    const allCombos: { pattern: SyllogismPattern; tripletIdx: number }[] = [];
+    for (let ti = 0; ti < NOUN_TRIPLETS.length; ti++) {
+      for (const p of patternsD1) allCombos.push({ pattern: p, tripletIdx: ti });
+      for (const p of patternsD2) allCombos.push({ pattern: p, tripletIdx: ti });
+      for (const p of patternsD3) allCombos.push({ pattern: p, tripletIdx: ti });
+    }
+    // Deterministic shuffle using a simple seed-based approach
+    const seededShuffle = <T,>(arr: T[]): T[] => {
+      const out = [...arr];
+      let seed = 42;
+      for (let i = out.length - 1; i > 0; i--) {
+        seed = (seed * 1664525 + 1013904223) & 0x7fffffff;
+        const j = seed % (i + 1);
+        [out[i], out[j]] = [out[j]!, out[i]!];
+      }
+      return out;
+    };
+    const shuffled = seededShuffle(allCombos);
+
+    for (const { pattern, tripletIdx } of shuffled) {
+      if (valid.length >= IMPLIKATION_POOL_TARGET) break;
+      const [rawA, rawB, rawC] = NOUN_TRIPLETS[tripletIdx];
+      // Deterministic "shuffle" of triplet positions based on pattern + triplet index
+      const rotations: [string, string, string][] = [
+        [rawA, rawB, rawC],
+        [rawB, rawC, rawA],
+        [rawC, rawA, rawB],
+      ];
+      const [A, B, C] = rotations[(tripletIdx + SYLLOGISM_PATTERNS.indexOf(pattern)) % 3];
+      let premise1: string;
+      let premise2: string;
+      if (pattern.structure === "chain") {
+        premise1 = buildPremiseText(pattern.quantifier1, A, B);
+        premise2 = buildPremiseText(pattern.quantifier2, B, C);
+      } else {
+        premise1 = buildPremiseText(pattern.quantifier1, A, B);
+        premise2 = buildPremiseText(pattern.quantifier2, C, B);
+      }
+      const premiseKey = `${premise1}|${premise2}`;
       if (existingPremises.has(premiseKey)) continue;
-      existingIds.add(task.id);
-      existingPremises.add(premiseKey);
-      valid.push(task);
-      generated++;
+
+      // Build conclusion
+      let correctText = "";
+      if (pattern.conclusion) {
+        const { quantifier, direction } = pattern.conclusion;
+        const [subj, pred] = direction === "AC" ? [A, C] : [C, A];
+        correctText = buildConclusionText(quantifier, subj, pred);
+      }
+      // Build distractors deterministically
+      const quantifiers: ("Alle" | "Einige" | "Keine")[] = ["Alle", "Einige", "Keine"];
+      const allConclusions: string[] = [];
+      for (const q of quantifiers) {
+        allConclusions.push(buildConclusionText(q, A, C));
+        allConclusions.push(buildConclusionText(q, C, A));
+      }
+      const wrongOptions = allConclusions.filter((c) => c !== correctText);
+      let options: [string, string, string, string, string];
+      let correctAnswer: number;
+      if (!pattern.conclusion) {
+        options = [wrongOptions[0], wrongOptions[1], wrongOptions[2], wrongOptions[3], "Keine der Schlussfolgerungen ist richtig."];
+        correctAnswer = 4;
+      } else {
+        const wrongPick = wrongOptions.slice(0, 3);
+        // Deterministic placement of correct answer based on triplet index
+        const pos = tripletIdx % 4;
+        const abcd = [...wrongPick];
+        abcd.splice(pos, 0, correctText);
+        options = [abcd[0], abcd[1], abcd[2], abcd[3], "Keine der Schlussfolgerungen ist richtig."];
+        correctAnswer = pos;
+      }
+      // Stable ID based on premise content (same premises = same ID across loads)
+      const stableId = `imp-g-${premiseKey.length}-${A.slice(0,3)}-${pattern.difficulty}-${tripletIdx}`;
+      const task: ImplikationTask = {
+        id: stableId,
+        premise1,
+        premise2,
+        options,
+        correctAnswer,
+        explanation: buildExplanationForPattern(pattern, A, B, C),
+        difficulty: pattern.difficulty,
+        rulesApplied: pattern.rulesApplied,
+      };
+      if (validateImplikationTask(task)) {
+        existingPremises.add(premiseKey);
+        valid.push(task);
+      }
     }
   }
   return valid;
@@ -1358,9 +1431,18 @@ export function rebalanceEAnswerRate(tasks: ImplikationTask[], maxERate = 0.22):
   return tasks.filter((t) => t.correctAnswer !== 4 || keepIds.has(t.id));
 }
 
-export const implikationenTasks: ImplikationTask[] = rebalanceEAnswerRate(
-  getValidImplikationenTasks()
-);
+let _cachedImplikationenTasks: ImplikationTask[] | null = null;
+
+/** Lazy-initialized pool: generated once on first access, then cached.
+ * Appears as a normal array to consumers via Proxy — no API change needed. */
+export const implikationenTasks: ImplikationTask[] = new Proxy([] as ImplikationTask[], {
+  get(target, prop, receiver) {
+    if (!_cachedImplikationenTasks) {
+      _cachedImplikationenTasks = rebalanceEAnswerRate(getValidImplikationenTasks());
+    }
+    return Reflect.get(_cachedImplikationenTasks, prop, receiver);
+  },
+});
 
 // =============================================================================
 // GENERATOR: Dynamische Implikations-Aufgaben
