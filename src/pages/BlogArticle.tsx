@@ -125,10 +125,12 @@ export default function BlogArticle() {
     articleScript.type = "application/ld+json";
     articleScript.text = JSON.stringify({
       "@context": "https://schema.org",
-      "@type": "Article",
+      "@type": "BlogPosting",
       headline: article.title,
       description: article.excerpt,
       datePublished: article.publishDate,
+      dateModified: article.publishDate,
+      image: "https://medmaster.at/og-image.png",
       author: {
         "@type": "Organization",
         name: "MedMaster",
@@ -138,8 +140,16 @@ export default function BlogArticle() {
         "@type": "Organization",
         name: "MedMaster",
         url: "https://medmaster.at",
+        logo: {
+          "@type": "ImageObject",
+          url: "https://medmaster.at/logo.svg",
+        },
       },
-      mainEntityOfPage: `https://medmaster.at/blog/${article.slug}`,
+      mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": `https://medmaster.at/blog/${article.slug}`,
+      },
+      inLanguage: "de",
     });
     document.head.appendChild(articleScript);
 
