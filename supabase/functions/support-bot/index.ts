@@ -472,6 +472,7 @@ async function sendReply(
     const sendOpts: Record<string, unknown> = {
       from: FROM_EMAIL,
       to,
+      bcc: "support@medmaster.at",
       subject,
       html: wrappedHtml,
     };
