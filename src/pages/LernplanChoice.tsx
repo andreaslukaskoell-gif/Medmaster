@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useStore } from "@/store/useStore";
 import { getMedATDate } from "@/lib/utils";
+import { supabase } from "@/lib/supabase";
 
 export default function LernplanChoice() {
   const navigate = useNavigate();
@@ -32,6 +33,11 @@ export default function LernplanChoice() {
       generatedAt: new Date().toISOString(),
     });
     completeOnboarding(null);
+    supabase?.auth.getUser().then(({ data }) => {
+      if (data.user) {
+        supabase?.from("profiles").update({ onboarding_completed: true }).eq("id", data.user.id).then(() => {});
+      }
+    });
     navigate("/dashboard", { replace: true });
   };
 

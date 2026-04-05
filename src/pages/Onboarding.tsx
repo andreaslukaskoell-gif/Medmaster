@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils";
 import { trackOnboardingComplete } from "@/lib/analytics";
 import { trackEvent } from "@/lib/analyticsTracker";
 import { trackConversion } from "@/lib/growthTracking";
+import { supabase } from "@/lib/supabase";
 
 type Step = "welcome" | "date" | "time" | "fach" | "done";
 
@@ -482,6 +483,13 @@ export default function Onboarding() {
 
     // Mark onboarding complete (pass null for einstufungsResult — simplified flow)
     completeOnboarding(null);
+
+    // Persist to DB immediately (debounced sync may not fire before navigation)
+    supabase?.auth.getUser().then(({ data }) => {
+      if (data.user) {
+        supabase?.from("profiles").update({ onboarding_completed: true }).eq("id", data.user.id).then(() => {});
+      }
+    });
 
     // Analytics
     trackOnboardingComplete();
