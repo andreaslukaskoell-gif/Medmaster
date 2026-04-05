@@ -1412,7 +1412,52 @@ function getValidImplikationenTasks(): ImplikationTask[] {
       }
     }
   }
-  return valid;
+  // ---------------------------------------------------------------------------
+  // Deterministic seeded shuffle + difficulty interleaving
+  // Ensures no 3 consecutive tasks share the same difficulty, so sessions feel
+  // varied from the very first task instead of starting with 14× difficulty-1.
+  // ---------------------------------------------------------------------------
+  const seededShuffleFinal = <T,>(arr: T[], seed: number): T[] => {
+    const out = [...arr];
+    let s = seed;
+    for (let i = out.length - 1; i > 0; i--) {
+      s = (s * 1664525 + 1013904223) & 0x7fffffff;
+      const j = s % (i + 1);
+      [out[i], out[j]] = [out[j]!, out[i]!];
+    }
+    return out;
+  };
+
+  const shuffled2 = seededShuffleFinal(valid, 12345);
+
+  // Interleave: ensure no 3 consecutive tasks have the same difficulty.
+  // Greedy approach: build result by pulling from shuffled list, deferring any
+  // task that would create a streak of 3.
+  const interleaved: ImplikationTask[] = [];
+  const remaining = [...shuffled2];
+  while (remaining.length > 0) {
+    const len = interleaved.length;
+    const last2Same =
+      len >= 2 &&
+      interleaved[len - 1]!.difficulty === interleaved[len - 2]!.difficulty;
+    const blockedDifficulty = last2Same ? interleaved[len - 1]!.difficulty : null;
+
+    // Find first candidate that doesn't violate the constraint
+    let picked = -1;
+    for (let i = 0; i < remaining.length; i++) {
+      if (remaining[i]!.difficulty !== blockedDifficulty) {
+        picked = i;
+        break;
+      }
+    }
+    // If all remaining have the blocked difficulty, just take the first one
+    // (can't avoid streak — graceful degradation)
+    if (picked === -1) picked = 0;
+
+    interleaved.push(remaining.splice(picked, 1)[0]!);
+  }
+
+  return interleaved;
 }
 
 /**
