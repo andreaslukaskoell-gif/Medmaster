@@ -1306,13 +1306,22 @@ export default function FragenTrainer() {
             });
 
           if (allSubjectsExceeded) {
+            // Calculate personal stats for Aha-Moment
+            const bmsResults = quizResults.filter((r) => r.type === "bms");
+            const totalAnswered = bmsResults.reduce((s, r) => s + r.total, 0);
+            const totalCorrect = bmsResults.reduce((s, r) => s + r.score, 0);
+            const avgPct = totalAnswered > 0 ? Math.round((totalCorrect / totalAnswered) * 100) : 0;
+
             return (
               <Paywall feature="Fragen-Trainer">
-                <div className="text-center py-12 space-y-3">
-                  <h2 className="text-2xl font-bold text-[var(--text-primary)]">Fragen-Trainer</h2>
+                <div className="text-center py-12 space-y-4">
+                  <h2 className="text-2xl font-bold text-[var(--text-primary)]">Starke Leistung!</h2>
+                  <p className="text-4xl font-bold text-[var(--accent)]">{avgPct}% richtig</p>
                   <p className="text-[var(--muted)]">
-                    Du hast je {questionsPerSubjectLimit} Gratis-Fragen pro Fach beantwortet.
-                    Schalte alle 5.000+ BMS-Fragen frei.
+                    {totalAnswered} Fragen beantwortet — {avgPct >= 70 ? "du bist auf einem guten Weg!" : "mit gezieltem Training wird das noch besser."}
+                  </p>
+                  <p className="text-sm text-[var(--muted)]">
+                    Schalte alle 5.000+ BMS-Fragen, Schwachstellen-Analyse und Testsimulation frei.
                   </p>
                 </div>
               </Paywall>
