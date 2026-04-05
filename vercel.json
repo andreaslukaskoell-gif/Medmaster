@@ -35,6 +35,6 @@
     { "source": "/llms-full.txt", "destination": "/llms-full.txt" },
     { "source": "/.well-known/security.txt", "destination": "/.well-known/security.txt" },
     { "source": "/manifest.json", "destination": "/manifest.json" },
-    { "source": "/(.*)", "destination": "/index.html" }
+    { "source": "/(.*)", "destination": "/" }
   ]
 }
