@@ -1333,12 +1333,11 @@ function pickFibonacci(
 function pickPatternType(difficulty: DifficultyLevel, rand: () => number): PatternType {
   const r = rand();
   if (difficulty === "easy") {
-    // 35% periodic, 20% growing-diff, 15% interleaved, 15% fibonacci, 15% quadratic
-    if (r < 0.35) return "periodic";
-    if (r < 0.55) return "growing-diff";
-    if (r < 0.7) return "interleaved";
-    if (r < 0.85) return "fibonacci";
-    return "quadratic";
+    // Easy: mostly simple cyclic ops (2er/3er) + simple growing-diff. No fibonacci/quadratic.
+    // 50% periodic (simple 2er/3er-Zyklen), 30% growing-diff, 20% interleaved
+    if (r < 0.5) return "periodic";
+    if (r < 0.8) return "growing-diff";
+    return "interleaved";
   }
   if (difficulty === "medium") {
     // 30% periodic, 20% growing-diff, 20% interleaved, 15% fibonacci, 15% quadratic
@@ -1356,9 +1355,9 @@ function pickPatternType(difficulty: DifficultyLevel, rand: () => number): Patte
   return "quadratic";
 }
 
-/** Prüft ob eine Folge sinnvolle Werte hat (keine zu großen Zahlen, alle ganzzahlig). */
+/** Prüft ob eine Folge sinnvolle Werte hat (alle ganzzahlig, nicht zu groß). Negative Zahlen erlaubt. */
 function isReasonableSequence(seq: number[]): boolean {
-  return seq.every((n) => Number.isInteger(n) && !isNaN(n) && n >= 0 && n <= 5000);
+  return seq.every((n) => Number.isInteger(n) && !isNaN(n) && n >= -500 && n <= 5000);
 }
 
 /** Convert a valid task to have E as the correct answer by replacing the correct option with a distractor. */
@@ -1511,9 +1510,9 @@ function makeTaskECorrect(task: SequenceTask, rand: () => number): SequenceTask 
 const MAX_SEQUENCE_VALIDATE_RETRIES = 10;
 
 export function generateSequenceTask(difficulty: DifficultyLevel, seed: number): SequenceTask {
-  // ~8% chance of E being correct (medium/hard only)
+  // E only for medium/hard (15%), never for easy — easy should be straightforward
   const eRand = seedRng(seed * 31 + 7);
-  const shouldMakeE = eRand() < 0.15;
+  const shouldMakeE = difficulty !== "easy" && eRand() < 0.15;
 
   for (let retry = 0; retry < MAX_SEQUENCE_VALIDATE_RETRIES; retry++) {
     const result = generateSequenceTaskInner(difficulty, seed + retry);
@@ -1949,8 +1948,19 @@ function zfDifficultyForIndex(i: number): DifficultyLevel {
 /** Generiert mehrere Aufgaben (gemischt nach Schwierigkeit, 30/40/30). */
 export function generateSequenceTaskSet(count: number, baseSeed: number): SequenceTask[] {
   const out: SequenceTask[] = [];
+  const seenRules = new Set<string>();
+  let offset = 0;
   for (let i = 0; i < count; i++) {
-    out.push(generateSequenceTask(zfDifficultyForIndex(i), baseSeed + i * 7919));
+    // Retry with different seeds to avoid duplicate rule types in a single set
+    let task: SequenceTask;
+    let attempts = 0;
+    do {
+      task = generateSequenceTask(zfDifficultyForIndex(i), baseSeed + (i + offset) * 7919);
+      offset++;
+      attempts++;
+    } while (seenRules.has(task.rule) && attempts < 5);
+    seenRules.add(task.rule);
+    out.push(task);
   }
   return out;
 }
