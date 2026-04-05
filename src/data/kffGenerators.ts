@@ -1687,49 +1687,43 @@ const WORD_POOL_MITTEL = [
 ];
 
 const WORD_POOL_SCHWER = [
-  // Medizinische/wissenschaftliche Wörter (8-12+ Buchstaben)
+  // Medizinische/wissenschaftliche Wörter (8-14 Buchstaben, max 14!)
   "KARDIOLOGIE",
   "NEUROLOGIE",
   "DERMATOLOGIE",
   "PNEUMOLOGIE",
-  "RHEUMATOLOGIE",
-  "ENDOKRINOLOGIE",
   "PATHOLOGIE",
   "ONKOLOGIE",
   "RADIOLOGIE",
   "NEPHROLOGIE",
   "IMMUNOLOGIE",
-  "PHARMAKOLOGIE",
-  "EPIDEMIOLOGIE",
-  "MIKROBIOLOGIE",
   "HISTOLOGIE",
-  // Zusammengesetzte med./wiss. Wörter (11+ Buchstaben)
   "KRANKENHAUS",
   "HERZKAMMER",
   "RIPPENFELL",
   "INTELLIGENZ",
   "TERRITORIUM",
   "BLUTKREISLAUF",
-  "NETZHAUTABLOESUNG",
   "STOFFWECHSEL",
-  "SCHILDDRUESE",
-  "BAUCHSPEICHELDRUESE",
   "NERVENSYSTEM",
   "IMMUNSYSTEM",
-  "KREISLAUFSYSTEM",
-  "VERDAUUNGSTRAKT",
-  "KNOCHENGERUEST",
-  "CHROMOSOMENSATZ",
   "DOPPELHELIX",
   "ZELLTEILUNG",
-  "MITOCHONDRIUM",
-  "RIBOSOM",
   "BLUTGERINNUNG",
-  "SAUERSTOFFTRANSPORT",
   "ERBINFORMATION",
   "GENEXPRESSION",
-  "PROTEINBIOSYNTHESE",
-  "ELEKTRONENMIKROSKOP",
+  "DURCHBLUTUNG",
+  "BINDEGEWEBE",
+  "HERZRHYTHMUS",
+  "BLUTZUCKER",
+  "NIERENSTEIN",
+  "SCHWERKRAFT",
+  "GLEICHSTROM",
+  "WACHSTUMSFUGE",
+  "GRUNDWASSER",
+  "MAGNETFELD",
+  "KERNSPALTUNG",
+  "WELLENFUNKTION",
   // Originale 42 Wörter
   "BLITZABLEITER",
   "KRANKENSCHWESTER",
@@ -2003,8 +1997,13 @@ export function generateWortflüssigkeit(
         : WORD_POOL_SCHWER;
 
   // MedAT-Stil: Optionen A–D sind Buchstaben aus dem Wort, E = "-" (Keine der Antworten ist richtig)
+  // VMC: Wörter 5-9 Buchstaben offiziell; wir erlauben bis 14 für schwer.
+  const maxLen = difficulty === "leicht" ? 8 : difficulty === "mittel" ? 12 : 14;
+  const filtered = pool.filter((w) => w.length <= maxLen && w.length >= 5);
+  const effectivePool = filtered.length >= 10 ? filtered : pool;
+
   for (let attempt = 0; attempt < 50; attempt++) {
-    const word = pool[randInt(0, pool.length - 1)];
+    const word = effectivePool[randInt(0, effectivePool.length - 1)];
     const correctFirst = word[0];
     const lettersInWord = [...new Set(word.split(""))];
 
