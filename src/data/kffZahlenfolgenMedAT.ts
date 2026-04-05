@@ -1525,7 +1525,12 @@ export function generateSequenceTask(difficulty: DifficultyLevel, seed: number):
     }
     return result;
   }
-  return generateSequenceTaskInner(difficulty, seed + MAX_SEQUENCE_VALIDATE_RETRIES);
+  // Last resort: generate with different seed and ONLY return if valid.
+  // If still invalid, fall back to a simple guaranteed-correct periodic task.
+  const lastResort = generateSequenceTaskInner(difficulty, seed + MAX_SEQUENCE_VALIDATE_RETRIES);
+  if (validateSequenceTask(lastResort)) return lastResort;
+  // Guaranteed fallback: simple periodic task that can't fail validation
+  return generatePeriodicTask(difficulty === "hard" ? "medium" : difficulty, seedRng(seed + 999));
 }
 
 function generateSequenceTaskInner(difficulty: DifficultyLevel, seed: number): SequenceTask {
