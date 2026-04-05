@@ -264,6 +264,122 @@ function generateCombined(): { seq: number[]; answer: [number, number]; explanat
   }
 }
 
+/** Verschachtelte Reihen mit verschiedenen Operationen (×, ÷ abwechselnd) — wie ÖH Med Wien */
+function generateNestedOps(): { seq: number[]; answer: [number, number]; explanation: string } {
+  const variant = randInt(0, 2);
+  if (variant === 0) {
+    // Abwechselnd ÷ und × (z.B. 96,24,48,12,24,6,12,3)
+    const divBy = [2, 3, 4][randInt(0, 2)];
+    const mulBy = [2, 3][randInt(0, 1)];
+    let start = divBy * mulBy * divBy * mulBy * randInt(1, 3);
+    start = Math.max(start, 24);
+    const seq: number[] = [start];
+    for (let i = 1; i < 7; i++) {
+      seq.push(i % 2 === 1 ? seq[i - 1] / divBy : seq[i - 1] * mulBy);
+    }
+    const a8 = 7 % 2 === 1 ? seq[6] / divBy : seq[6] * mulBy;
+    const a9 = 8 % 2 === 1 ? a8 / divBy : a8 * mulBy;
+    if (!Number.isInteger(a8) || !Number.isInteger(a9) || a8 < 1 || a9 < 1) return generateNested();
+    return { seq, answer: [a8, a9], explanation: `Abwechselnd ÷${divBy} und ×${mulBy}.` };
+  } else if (variant === 1) {
+    // Abwechselnd ×factor und -subtract (z.B. 3, 9, 6, 18, 15, 45, 42 → ×3, -3)
+    const factor = [2, 3][randInt(0, 1)];
+    const sub = randInt(2, 5);
+    const start = randInt(2, 6);
+    const seq: number[] = [start];
+    for (let i = 1; i < 7; i++) {
+      seq.push(i % 2 === 1 ? seq[i - 1] * factor : seq[i - 1] - sub);
+    }
+    const a8 = 7 % 2 === 1 ? seq[6] * factor : seq[6] - sub;
+    const a9 = 8 % 2 === 1 ? a8 * factor : a8 - sub;
+    if (a8 < 0 || a9 < 0 || a8 > 9999) return generateCombined();
+    return { seq, answer: [a8, a9], explanation: `Abwechselnd ×${factor} und −${sub}.` };
+  } else {
+    // Abwechselnd ÷ und − (z.B. 789,774,258,243,81,66,22,7)
+    const sub = randInt(10, 20);
+    const divBy = 3;
+    const start = sub + divBy * (sub + divBy * (sub + divBy * randInt(2, 5)));
+    const seq: number[] = [start];
+    for (let i = 1; i < 7; i++) {
+      seq.push(i % 2 === 1 ? seq[i - 1] - sub : seq[i - 1] / divBy);
+    }
+    const a8 = 7 % 2 === 1 ? seq[6] - sub : seq[6] / divBy;
+    const a9 = 8 % 2 === 1 ? a8 - sub : a8 / divBy;
+    if (!Number.isInteger(a8) || !Number.isInteger(a9) || a8 < 1) return generateNested();
+    return { seq, answer: [a8, a9], explanation: `Abwechselnd −${sub} und ÷${divBy}.` };
+  }
+}
+
+/** Abnehmende Differenzen (z.B. -99, -88, -77, -66...) — wie ÖH Med Wien Q4 */
+function generateDecreasingDiff(): { seq: number[]; answer: [number, number]; explanation: string } {
+  const start = randInt(300, 700);
+  const diffStart = randInt(30, 99);
+  const diffStep = [7, 8, 9, 10, 11][randInt(0, 4)];
+  const seq: number[] = [start];
+  let currentDiff = diffStart;
+  for (let i = 1; i < 7; i++) {
+    seq.push(seq[i - 1] - currentDiff);
+    currentDiff -= diffStep;
+  }
+  const a8 = seq[6] - currentDiff;
+  const a9 = a8 - (currentDiff - diffStep);
+  if (a8 < 0 || a9 < 0) return generateDifference();
+  return {
+    seq,
+    answer: [a8, a9],
+    explanation: `Abnehmende Differenzen: Die Abstände sinken um jeweils ${diffStep}: ${diffStart}, ${diffStart - diffStep}, ${diffStart - 2 * diffStep}...`,
+  };
+}
+
+/** Periodische Folge — Wiederholung eines Blocks (z.B. 84,89,83,78,84,89,83,78) */
+function generatePeriodic(): { seq: number[]; answer: [number, number]; explanation: string } {
+  const period = [3, 4][randInt(0, 1)];
+  const block: number[] = [];
+  for (let i = 0; i < period; i++) block.push(randInt(10, 95));
+  const seq: number[] = [];
+  for (let i = 0; i < 7; i++) seq.push(block[i % period]);
+  const a8 = block[7 % period];
+  const a9 = block[8 % period];
+  return {
+    seq,
+    answer: [a8, a9],
+    explanation: `Periodische Folge mit Periode ${period}: Der Block [${block.join(", ")}] wiederholt sich.`,
+  };
+}
+
+/** Verschachtelte Reihen mit ×/÷ statt nur + (z.B. 6,48,12,96,24,192,48,384) */
+function generateNestedMultiplicative(): {
+  seq: number[];
+  answer: [number, number];
+  explanation: string;
+} {
+  const factorA = [2, 3][randInt(0, 1)];
+  const factorB = [2, 3, 4][randInt(0, 2)];
+  const startA = randInt(2, 8);
+  const startB = startA * factorB;
+  const seq: number[] = [];
+  let aVal = startA;
+  let bVal = startB;
+  for (let i = 0; i < 7; i++) {
+    if (i % 2 === 0) {
+      seq.push(aVal);
+      aVal *= factorA;
+    } else {
+      seq.push(bVal);
+      bVal *= factorA;
+    }
+  }
+  // pos 7 is odd → B series, pos 8 is even → A series
+  const a8 = bVal;
+  const a9 = aVal;
+  if (a8 > 9999 || a9 > 9999) return generateNested();
+  return {
+    seq,
+    answer: [a8, a9],
+    explanation: `Zwei verschachtelte geometrische Reihen: Ungerade Positionen ×${factorA}, gerade Positionen ×${factorA}. Startwerte: ${startA} und ${startB}.`,
+  };
+}
+
 function generatePairDistractors(correct: [number, number], count: number): string[] {
   const distractors = new Set<string>();
   const correctStr = `${correct[0]}, ${correct[1]}`;
@@ -317,10 +433,13 @@ export function generateZahlenfolge(
     const generators = [
       generateFibonacciLike,
       generateDifference,
-      generateSquare,
       generatePower,
       generateNested,
       generateCombined,
+      generateNestedOps,
+      generateDecreasingDiff,
+      generatePeriodic,
+      generateNestedMultiplicative,
     ];
     result = generators[randInt(0, generators.length - 1)]();
   }

@@ -174,7 +174,43 @@ export function getPoolBMSFragen(uk_ids: string[], count = 8): BMSFrage[] {
 }
 
 /**
+ * Pick `count` questions with difficulty-weighted selection.
+ * Target mix: 25% leicht (1), 50% mittel (2), 25% schwer (3).
+ * Falls not enough in a bucket, fill from others.
+ */
+function pickDifficultyWeighted(pool: BMSFrage[], count: number): BMSFrage[] {
+  const leicht = shuffle(pool.filter((q) => q.schwierigkeit === 1));
+  const mittel = shuffle(pool.filter((q) => q.schwierigkeit === 2));
+  const schwer = shuffle(pool.filter((q) => q.schwierigkeit === 3));
+
+  const nLeicht = Math.round(count * 0.25);
+  const nSchwer = Math.round(count * 0.25);
+  const nMittel = count - nLeicht - nSchwer;
+
+  const picked: BMSFrage[] = [];
+  const take = (bucket: BMSFrage[], n: number) => {
+    const taken = bucket.splice(0, n);
+    picked.push(...taken);
+    return n - taken.length; // deficit
+  };
+
+  let deficit = 0;
+  deficit += take(leicht, nLeicht);
+  deficit += take(mittel, nMittel);
+  deficit += take(schwer, nSchwer);
+
+  // Fill deficit from remaining questions in any bucket
+  if (deficit > 0) {
+    const remaining = shuffle([...leicht, ...mittel, ...schwer]);
+    picked.push(...remaining.slice(0, deficit));
+  }
+
+  return shuffle(picked);
+}
+
+/**
  * Get BMS questions by subject (from static pool): Typ A/M + Typ K eingemischt.
+ * Uses difficulty-weighted selection: 25% leicht, 50% mittel, 25% schwer.
  */
 export function getBMSFragenBySubject(
   subject: "biologie" | "chemie" | "physik" | "mathematik",
@@ -183,9 +219,8 @@ export function getBMSFragenBySubject(
   const questions = getQuestionsBySubject(subject);
   const typAM = questions.map((q) => questionToBMSFrage(q, q.chapter));
   const typK = TYP_K_BY_SUBJECT[subject] ?? [];
-  const combined = shuffle([...typAM, ...typK]);
-  const selected = combined.slice(0, Math.min(count, combined.length));
-  return filterValidBMSFragen(selected);
+  const valid = filterValidBMSFragen([...typAM, ...typK]);
+  return pickDifficultyWeighted(valid, Math.min(count, valid.length));
 }
 
 /** UK-ID → Kapitel-ID für Filterung nach gelernten Kapiteln (Typ K). */
@@ -223,7 +258,6 @@ export function getBMSFragenBySubjectFromChapters(
     return chId != null && completedChapterIds.has(chId);
   });
 
-  const combined = shuffle([...typAM, ...typK]);
-  const selected = combined.slice(0, Math.min(count, combined.length));
-  return filterValidBMSFragen(selected);
+  const valid = filterValidBMSFragen([...typAM, ...typK]);
+  return pickDifficultyWeighted(valid, Math.min(count, valid.length));
 }
