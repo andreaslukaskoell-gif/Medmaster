@@ -104,38 +104,45 @@ export async function loadBMSChaptersFromSupabase(): Promise<Kapitel[]> {
       return [];
     }
 
-    // Load subchapters for each chapter
-    const chaptersWithSubchapters = await Promise.all(
-      data.map(async (chapterRow) => {
-        const { data: subchapters, error: subError } = await client
-          .from("bms_subchapters")
-          .select("*")
-          .eq("chapter_id", chapterRow.id)
-          .order("order_index", { ascending: true });
+    // Load ALL subchapters in one batch query (avoids N+1)
+    const chapterIds = data.map((ch) => ch.id);
+    const { data: allSubchapters, error: subError } = await client
+      .from("bms_subchapters")
+      .select("*")
+      .in("chapter_id", chapterIds)
+      .order("order_index", { ascending: true });
 
-        if (subError) {
-          console.error(`Error loading subchapters for ${chapterRow.id}:`, subError);
-        }
+    if (subError) {
+      console.error("Error loading subchapters:", subError);
+    }
 
-        const kapitel = dbRowToKapitel(chapterRow);
-        if (!kapitel) return null;
+    // Group subchapters by chapter_id
+    const subsByChapter = new Map<string, typeof allSubchapters>();
+    for (const sub of allSubchapters || []) {
+      const list = subsByChapter.get(sub.chapter_id) || [];
+      list.push(sub);
+      subsByChapter.set(sub.chapter_id, list);
+    }
 
-        // Convert subchapters
-        if (subchapters && subchapters.length > 0) {
-          kapitel.unterkapitel = subchapters.map((sub) => ({
-            id: sub.id,
-            title: sub.title,
-            content: sub.content || "",
-            lernziele: sub.lernziele || [],
-            sections: sub.sections || [],
-            merksätze: sub.merksätze || [],
-            selfTest: sub.self_test || [],
-          })) as Unterkapitel[];
-        }
+    const chaptersWithSubchapters = data.map((chapterRow) => {
+      const kapitel = dbRowToKapitel(chapterRow);
+      if (!kapitel) return null;
 
-        return kapitel;
-      })
-    );
+      const subchapters = subsByChapter.get(chapterRow.id);
+      if (subchapters && subchapters.length > 0) {
+        kapitel.unterkapitel = subchapters.map((sub) => ({
+          id: sub.id,
+          title: sub.title,
+          content: sub.content || "",
+          lernziele: sub.lernziele || [],
+          sections: sub.sections || [],
+          merksätze: sub.merksätze || [],
+          selfTest: sub.self_test || [],
+        })) as Unterkapitel[];
+      }
+
+      return kapitel;
+    });
 
     // Filter out null entries and ghost chapters with no unterkapitel
     return chaptersWithSubchapters.filter(
@@ -172,33 +179,40 @@ export async function loadBMSChaptersBySubject(
       return [];
     }
 
-    // Load subchapters for each chapter
-    const chaptersWithSubchapters = await Promise.all(
-      data.map(async (chapterRow) => {
-        const { data: subchapters } = await client
-          .from("bms_subchapters")
-          .select("*")
-          .eq("chapter_id", chapterRow.id)
-          .order("order_index", { ascending: true });
+    // Load ALL subchapters in one batch query (avoids N+1)
+    const chapterIds = data.map((ch) => ch.id);
+    const { data: allSubchapters } = await client
+      .from("bms_subchapters")
+      .select("*")
+      .in("chapter_id", chapterIds)
+      .order("order_index", { ascending: true });
 
-        const kapitel = dbRowToKapitel(chapterRow);
-        if (!kapitel) return null;
+    const subsByChapter = new Map<string, typeof allSubchapters>();
+    for (const sub of allSubchapters || []) {
+      const list = subsByChapter.get(sub.chapter_id) || [];
+      list.push(sub);
+      subsByChapter.set(sub.chapter_id, list);
+    }
 
-        if (subchapters && subchapters.length > 0) {
-          kapitel.unterkapitel = subchapters.map((sub) => ({
-            id: sub.id,
-            title: sub.title,
-            content: sub.content || "",
-            lernziele: sub.lernziele || [],
-            sections: sub.sections || [],
-            merksätze: sub.merksätze || [],
-            selfTest: sub.self_test || [],
-          })) as Unterkapitel[];
-        }
+    const chaptersWithSubchapters = data.map((chapterRow) => {
+      const kapitel = dbRowToKapitel(chapterRow);
+      if (!kapitel) return null;
 
-        return kapitel;
-      })
-    );
+      const subchapters = subsByChapter.get(chapterRow.id);
+      if (subchapters && subchapters.length > 0) {
+        kapitel.unterkapitel = subchapters.map((sub) => ({
+          id: sub.id,
+          title: sub.title,
+          content: sub.content || "",
+          lernziele: sub.lernziele || [],
+          sections: sub.sections || [],
+          merksätze: sub.merksätze || [],
+          selfTest: sub.self_test || [],
+        })) as Unterkapitel[];
+      }
+
+      return kapitel;
+    });
 
     return chaptersWithSubchapters.filter((ch): ch is Kapitel => ch !== null);
   } catch (error) {
