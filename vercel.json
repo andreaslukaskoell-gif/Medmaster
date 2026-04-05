@@ -1,5 +1,5 @@
 {
-  "buildCommand": "npx playwright install chromium --with-deps && npm run build:seo",
+  "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "cleanUrls": true,
   "trailingSlash": false,
