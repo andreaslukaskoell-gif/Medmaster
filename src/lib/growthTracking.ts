@@ -42,7 +42,7 @@ function fbq(...args: unknown[]) {
 
 /** Track Meta Pixel conversion events mapped to our funnel. */
 export function trackMetaConversion(
-  event: "Lead" | "CompleteRegistration" | "StartTrial" | "ViewContent" | "InitiateCheckout",
+  event: "Lead" | "CompleteRegistration" | "StartTrial" | "ViewContent" | "InitiateCheckout" | "Purchase",
   data?: Record<string, unknown>
 ) {
   if (!metaPixelReady) return;
@@ -233,12 +233,13 @@ export function trackConversion(
     | "signup_completed" // registration finished
     | "activation" // first meaningful action (question answered)
     | "checkout_started" // started payment
+    | "purchase_completed" // payment confirmed (Stripe success page)
     | "lead_captured" // email captured (exit-intent, newsletter)
     | "onboarding_completed", // finished onboarding steps
   properties?: Record<string, unknown>
 ) {
-  // Dedup: signup_completed and checkout_started must fire only once per session
-  if (event === "signup_completed" || event === "checkout_started") {
+  // Dedup: these must fire only once per session
+  if (event === "signup_completed" || event === "checkout_started" || event === "purchase_completed") {
     if (_firedConversions.has(event)) return;
     _firedConversions.add(event);
   }
@@ -274,6 +275,13 @@ export function trackConversion(
     trackGtagConversion(GTAG_CONV_SIGNUP, undefined, userEmail);
   } else if (event === "checkout_started" && GTAG_CONV_CHECKOUT) {
     trackGtagConversion(GTAG_CONV_CHECKOUT, 29.9, userEmail);
+  } else if (event === "purchase_completed" && GTAG_CONV_CHECKOUT) {
+    trackGtagConversion(GTAG_CONV_CHECKOUT, 29.9, userEmail);
+  }
+
+  // Meta Pixel — purchase event
+  if (event === "purchase_completed") {
+    trackMetaConversion("Purchase", { value: 29.9, currency: "EUR", ...properties });
   }
 }
 

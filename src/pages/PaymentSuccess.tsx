@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { usePageTitle } from "@/hooks/usePageTitle";
 import { useAuth } from "@/hooks/useAuth";
 import { track } from "@/lib/analytics";
+import { trackConversion } from "@/lib/growthTracking";
 
 const CONFETTI_COLORS = ["#10b981", "#3b82f6", "#f59e0b", "#ec4899", "#8b5cf6", "#06b6d4"];
 
@@ -69,6 +70,7 @@ export default function PaymentSuccess() {
 
   useEffect(() => {
     track("payment_success");
+    trackConversion("purchase_completed", { value: 29.9, currency: "EUR" });
     const t = setTimeout(() => setShowConfetti(false), 5000);
     return () => clearTimeout(t);
   }, []);
