@@ -1030,6 +1030,24 @@ export default function LandingPage() {
                 FAQ
               </Link>
               <Link
+                to="/bms-stichwortliste-2026"
+                className="text-[var(--muted)] hover:text-[var(--text-primary)] transition-colors"
+              >
+                Stichwortliste
+              </Link>
+              <Link
+                to="/medat-punkte-rechner"
+                className="text-[var(--muted)] hover:text-[var(--text-primary)] transition-colors"
+              >
+                Punkterechner
+              </Link>
+              <Link
+                to="/preise"
+                className="text-[var(--muted)] hover:text-[var(--text-primary)] transition-colors"
+              >
+                Preise
+              </Link>
+              <Link
                 to="/ueber-uns"
                 className="text-[var(--muted)] hover:text-[var(--text-primary)] transition-colors"
               >

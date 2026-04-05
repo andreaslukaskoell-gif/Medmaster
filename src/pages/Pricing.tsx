@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
-import { usePageTitle } from "@/hooks/usePageTitle";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import { useAuth } from "@/hooks/useAuth";
 import { startCheckout, isPaymentEnabled, formatPrice, isEarlyBirdDay } from "@/lib/stripe";
 import { trackPricingView } from "@/lib/analytics";
@@ -27,7 +27,12 @@ const features = [
 ];
 
 export default function Pricing() {
-  usePageTitle("Preise");
+  usePageMeta({
+    title: "Preise — MedAT Vorbereitung",
+    description: "MedMaster kostet einmalig €29,90 — kein Abo. 5.000+ BMS-Fragen, alle KFF-Untertests, Prüfungssimulation und personalisierter Lernplan. Kostenloser Starter-Zugang verfügbar.",
+    canonical: "https://medmaster.at/preise",
+    ogImage: "https://medmaster.at/og-image.png",
+  });
   const { user } = useAuth();
   const reward = useReferralReward();
 

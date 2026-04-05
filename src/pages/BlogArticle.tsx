@@ -99,6 +99,57 @@ function ShareRow({ slug, title }: { slug: string; title: string }) {
   );
 }
 
+const TOPIC_PRODUCT_LINKS: Record<string, { label: string; to: string; desc: string }[]> = {
+  BMS: [
+    { label: "BMS-Übungsfragen", to: "/medat-uebungsfragen", desc: "5.000+ Fragen mit Erklärungen" },
+    { label: "BMS-Stichwortliste 2026", to: "/bms-stichwortliste-2026", desc: "Alle offiziellen Themen" },
+    { label: "MedAT-Punkterechner", to: "/medat-punkte-rechner", desc: "Ergebnis berechnen" },
+  ],
+  KFF: [
+    { label: "KFF-Training starten", to: "/medat-kff-ueben", desc: "Alle 5 Subtests üben" },
+    { label: "MedAT Guide", to: "/medat-guide", desc: "Alles über den MedAT" },
+    { label: "MedAT-Punkterechner", to: "/medat-punkte-rechner", desc: "Ergebnis berechnen" },
+  ],
+  TV: [
+    { label: "MedAT Guide", to: "/medat-guide", desc: "Aufbau & Strategie" },
+    { label: "BMS-Übungsfragen", to: "/medat-uebungsfragen", desc: "Auch BMS trainieren" },
+    { label: "MedAT-Punkterechner", to: "/medat-punkte-rechner", desc: "Ergebnis berechnen" },
+  ],
+  Strategie: [
+    { label: "MedAT Guide", to: "/medat-guide", desc: "Der komplette Überblick" },
+    { label: "BMS-Übungsfragen", to: "/medat-uebungsfragen", desc: "Direkt üben" },
+    { label: "KFF-Training", to: "/medat-kff-ueben", desc: "Kognitive Fähigkeiten trainieren" },
+  ],
+  Motivation: [
+    { label: "MedAT Guide", to: "/medat-guide", desc: "Dein Fahrplan zum MedAT" },
+    { label: "MedAT-Countdown", to: "/medat-countdown", desc: "Wie viele Tage noch?" },
+    { label: "BMS-Übungsfragen", to: "/medat-uebungsfragen", desc: "Jetzt loslegen" },
+  ],
+};
+
+function TopicLinks({ topic }: { topic: string }) {
+  const links = TOPIC_PRODUCT_LINKS[topic] ?? TOPIC_PRODUCT_LINKS.Strategie;
+  return (
+    <div className="mt-10 pt-6 border-t border-[var(--border)]">
+      <p className="text-sm font-semibold text-[var(--text-secondary)] mb-3">Passend zum Thema</p>
+      <div className="grid grid-cols-3 gap-3">
+        {links.map((link) => (
+          <Link
+            key={link.to}
+            to={link.to}
+            className="group flex flex-col gap-1 p-4 rounded-xl border border-[var(--border)] bg-[var(--card)] hover:border-[var(--accent)]/40 transition-all"
+          >
+            <span className="text-sm font-semibold text-[var(--accent)] group-hover:underline">
+              {link.label}
+            </span>
+            <span className="text-xs text-[var(--muted)]">{link.desc}</span>
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export default function BlogArticle() {
   const { slug } = useParams<{ slug: string }>();
   const article = blogArticles.find((a) => a.slug === slug);
@@ -180,10 +231,9 @@ export default function BlogArticle() {
   const relatedArticles = useMemo(() => {
     if (!article) return [];
     const others = blogArticles.filter((a) => a.slug !== article.slug);
-    // Shuffle and pick 3
-    // eslint-disable-next-line react-hooks/purity
-    const shuffled = [...others].sort(() => Math.random() - 0.5);
-    return shuffled.slice(0, 3);
+    const sameTopic = others.filter((a) => a.topic === article.topic);
+    const rest = others.filter((a) => a.topic !== article.topic);
+    return [...sameTopic, ...rest].slice(0, 3);
   }, [article]);
 
   if (!article) {
@@ -273,6 +323,9 @@ export default function BlogArticle() {
 
         {/* Content */}
         <div className="prose-medmaster">{article.content}</div>
+
+        {/* Relevant product links based on topic */}
+        <TopicLinks topic={article.topic} />
 
         {/* Author */}
         <div className="mt-10 pt-6 border-t border-[var(--border)] flex items-center gap-3">
