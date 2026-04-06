@@ -94,6 +94,11 @@ export function useAuth() {
 
         // Track new signups and returning logins — deduplicate to prevent spam
         // onAuthStateChange fires SIGNED_IN on every token refresh, not just real logins
+        if (event === "PASSWORD_RECOVERY") {
+          // User clicked password reset link — redirect to reset page
+          window.location.href = "/reset-password";
+          return;
+        }
         if (event === "SIGNED_IN") {
           const loginKey = `mm_login_tracked_${session.user.id}`;
           const lastTracked = sessionStorage.getItem(loginKey);
@@ -336,7 +341,9 @@ export function useAuth() {
 
   async function resetPassword(email: string) {
     if (!supabase) return { error: new Error("Supabase nicht konfiguriert") };
-    const { error } = await supabase.auth.resetPasswordForEmail(email);
+    const { error } = await supabase.auth.resetPasswordForEmail(email, {
+      redirectTo: `${window.location.origin}/reset-password`,
+    });
     return { error };
   }
 

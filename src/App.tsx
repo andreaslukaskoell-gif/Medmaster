@@ -66,6 +66,7 @@ const AdminTasksPage = lazyRetry(() => import("@/pages/AdminTasksPage"));
 const AdminStats = lazyRetry(() => import("@/pages/Admin"));
 const AuthPage = lazyRetry(() => import("@/pages/AuthPage"));
 const ForgotPasswordPage = lazyRetry(() => import("@/pages/ForgotPasswordPage"));
+const ResetPasswordPage = lazyRetry(() => import("@/pages/ResetPasswordPage"));
 const Prognose = lazyRetry(() => import("@/pages/Prognose"));
 const PerformanceOverview = lazyRetry(() => import("@/pages/PerformanceOverview"));
 const BMSQuiz = lazyRetry(() => import("@/pages/BMSQuiz"));
@@ -281,6 +282,7 @@ export default function App() {
             {/* Legacy /register URLs redirect to unified auth page */}
             <Route path="/register" element={<Navigate to="/login" replace />} />
             <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+            <Route path="/reset-password" element={<ResetPasswordPage />} />
             <Route path="/legal" element={<Legal />} />
             <Route path="/impressum" element={<Legal />} />
             <Route path="/datenschutz" element={<Legal />} />
