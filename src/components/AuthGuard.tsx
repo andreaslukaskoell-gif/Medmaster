@@ -1,9 +1,7 @@
 import { useState, useEffect } from "react";
 import type { ReactNode } from "react";
 import { Navigate, useLocation } from "react-router-dom";
-import { AnimatePresence, motion } from "framer-motion";
 import { useAuth } from "@/hooks/useAuth";
-import { AppSplash } from "@/components/ui/AppSplash";
 
 export function AuthGuard({ children }: { children: ReactNode }) {
   const { isAuthenticated, loading } = useAuth();
@@ -44,20 +42,8 @@ export function AuthGuard({ children }: { children: ReactNode }) {
     return <Navigate to="/login" replace state={{ from: location.pathname }} />;
   }
 
-  return (
-    <>
-      <AnimatePresence>
-        {loading && <AppSplash key="splash" />}
-      </AnimatePresence>
-      {!loading && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.3, ease: "easeOut" }}
-        >
-          {children}
-        </motion.div>
-      )}
-    </>
-  );
+  // Render shell + content immediately — tier is cached in localStorage,
+  // so premium users never see a paywall flash. Skeletons in individual
+  // pages handle the content loading state.
+  return <>{children}</>;
 }

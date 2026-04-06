@@ -193,6 +193,8 @@ export function useAuth() {
           }
         }
         setProfile(p);
+        // Cache tier in localStorage for instant premium detection on next reload
+        try { localStorage.setItem("mm_tier", p.subscription_tier || "starter"); } catch { /* ignore */ }
         identifyUser(userId, {
           email: p.display_name || "",
           name: p.display_name,
@@ -283,6 +285,7 @@ export function useAuth() {
     resetAnalytics();
     setTrackerUserId(null);
     if (supabase) await supabase.auth.signOut();
+    try { localStorage.removeItem("mm_tier"); } catch { /* ignore */ }
     setUser(null);
     setProfile(null);
     setSession(null);
@@ -347,7 +350,12 @@ export function useAuth() {
     return { error };
   }
 
-  const rawTier = profile?.subscription_tier || "starter";
+  // Use cached tier from localStorage for instant premium detection on reload.
+  // Updated whenever profile is fetched. Prevents paywall flash for premium users.
+  const cachedTier = (() => {
+    try { return localStorage.getItem("mm_tier") as "premium" | "starter" | null; } catch { return null; }
+  })();
+  const rawTier = profile?.subscription_tier || cachedTier || "starter";
   // Map legacy 3-tier values to binary model
   const tier =
     rawTier === "standard" || rawTier === "pro" || rawTier === "premium"
