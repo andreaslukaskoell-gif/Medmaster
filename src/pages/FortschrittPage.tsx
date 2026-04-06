@@ -273,6 +273,16 @@ export default function FortschrittPage() {
     <div className="min-h-screen bg-[var(--dashboard-bg)]">
       <div className="max-w-6xl mx-auto px-4 py-8 pb-12">
 
+        {/* ── Hero Heading ─────────────────────────────────── */}
+        <div className="hero-orbs text-center mb-8 py-6">
+          <h1 className="heading-glow text-2xl sm:text-[2.75rem] sm:leading-tight font-bold text-[var(--text-primary)] mb-2">
+            Fortschritt
+          </h1>
+          <p className="text-[var(--muted)]">
+            Leistung, Trends und Schwachstellen auf einen Blick.
+          </p>
+        </div>
+
         {/* ══════════════════════════════════════════════════════
             HERO: Readiness Ring + Key Stats
         ══════════════════════════════════════════════════════ */}
@@ -570,24 +580,17 @@ export default function FortschrittPage() {
         )}
 
         {/* ══════════════════════════════════════════════════════
-            EMPTY STATE (no data yet)
+            EMPTY STATE (no quiz data yet)
         ══════════════════════════════════════════════════════ */}
         {!hasAnyData && (
-          <div className="card-glass p-12 text-center mb-6">
-            <BarChart3 className="w-12 h-12 text-[var(--muted)] mx-auto mb-4 opacity-40" />
-            <p className="text-lg font-semibold text-[var(--text-primary)] mb-2">
-              Noch keine Lerndaten
+          <div className="card-glass p-10 text-center mb-6">
+            <BarChart3 className="w-10 h-10 text-[var(--muted)] mx-auto mb-3 opacity-30" />
+            <p className="text-sm font-medium text-[var(--text-primary)] mb-1">
+              Noch keine Quiz-Ergebnisse
             </p>
-            <p className="text-sm text-[var(--muted)] max-w-sm mx-auto mb-4">
-              Absolviere deinen ersten Test, um hier detaillierte Analysen und Trends zu sehen.
+            <p className="text-xs text-[var(--muted)] max-w-xs mx-auto">
+              Sobald du BMS-, KFF- oder TV-Quizze absolvierst, erscheinen hier Trends und Analysen.
             </p>
-            <Link
-              to="/bms"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[var(--accent)] text-white text-sm font-medium hover:opacity-90 transition-opacity"
-            >
-              Jetzt starten
-              <ArrowRight className="w-4 h-4" />
-            </Link>
           </div>
         )}
 
