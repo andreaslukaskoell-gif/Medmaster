@@ -6,7 +6,7 @@ import Stripe from "https://esm.sh/stripe@22.0.0";
 //   supabase secrets set STRIPE_SECRET_KEY=sk_live_...
 //   supabase secrets set SITE_URL=https://medmaster.at
 const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY")!, {
-  apiVersion: "2023-10-16",
+  apiVersion: "2025-12-18.acacia",
 });
 
 const ALLOWED_ORIGIN = Deno.env.get("SITE_URL") || "https://medmaster.at";

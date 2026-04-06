@@ -73,7 +73,7 @@ serve(async (req) => {
       return new Response("Missing stripe-signature header", { status: 400 });
     }
 
-    const event = stripe.webhooks.constructEvent(body, signature, webhookSecret!);
+    const event = await stripe.webhooks.constructEventAsync(body, signature, webhookSecret!);
 
     switch (event.type) {
       case "checkout.session.completed": {
@@ -95,10 +95,71 @@ serve(async (req) => {
               "No user ID in checkout session — no client_reference_id and email lookup failed",
               { email: session.customer_details?.email || session.customer_email }
             );
-            break;
+            // CRITICAL: Customer paid but we can't find their account!
+            // 1. Save to pending_upgrades so it's never lost
+            const alertEmail = session.customer_details?.email || session.customer_email || "unbekannt";
+            const amountCents = session.amount_total || 0;
+            try {
+              await supabase.from("pending_upgrades").upsert({
+                stripe_session_id: session.id,
+                customer_email: alertEmail,
+                amount_cents: amountCents,
+                status: "pending",
+              }, { onConflict: "stripe_session_id" });
+              console.log(`Saved pending upgrade: ${alertEmail} / ${session.id}`);
+            } catch (dbErr) {
+              console.error("Failed to save pending upgrade:", dbErr);
+            }
+
+            // 2. Send alert email so we can manually fix this
+            try {
+              const amount = amountCents
+                ? `€${(amountCents / 100).toFixed(2)}`
+                : "unbekannt";
+              const smtpUser = Deno.env.get("SMTP_USER") || "";
+              const smtpPass = Deno.env.get("SMTP_PASS") || "";
+              if (smtpUser && smtpPass) {
+                const alertSmtp = new SMTPClient({
+                  connection: {
+                    hostname: "smtp.ionos.de",
+                    port: 465,
+                    tls: true,
+                    auth: { username: smtpUser, password: smtpPass },
+                  },
+                });
+                await alertSmtp.send({
+                  from: "MedMaster <welcome@medmaster.at>",
+                  to: "support@medmaster.at",
+                  subject: `ZAHLUNG OHNE ZUORDNUNG: ${alertEmail}`,
+                  html: `<p><strong>ACHTUNG: Ein Kunde hat bezahlt, aber konnte keinem Account zugeordnet werden!</strong></p>
+<p>E-Mail bei Stripe: ${(alertEmail).replace(/[<>&"']/g, c => ({"<":"&lt;",">":"&gt;","&":"&amp;","\"":"&quot;","'":"&#39;"}[c] || c))}</p>
+<p>Betrag: ${amount}</p>
+<p>Session-ID: ${session.id}</p>
+<p>Zeit: ${new Date().toLocaleString("de-AT", { timeZone: "Europe/Vienna" })}</p>
+<p>Gespeichert in <code>pending_upgrades</code> Tabelle.</p>
+<p><strong>Aktion:</strong> User in Supabase finden und auf premium setzen, dann pending_upgrade auf resolved setzen.</p>`,
+                });
+                await alertSmtp.close();
+              }
+            } catch (alertErr) {
+              console.error("Alert email failed:", alertErr);
+            }
+            // Return 200 so Stripe doesn't retry — we saved the payment
+            return new Response(JSON.stringify({ received: true, pending: true }), {
+              status: 200,
+              headers: { "Content-Type": "application/json" },
+            });
           }
           console.log(`Matched user by email fallback: ${userId}`);
         }
+
+        // Check if user is already premium (idempotent — don't re-send emails on retries)
+        const { data: existingProfile } = await supabase
+          .from("profiles")
+          .select("subscription_tier")
+          .eq("id", userId)
+          .single();
+        const alreadyPremium = existingProfile?.subscription_tier === "premium";
 
         // One-time payment model: upgrade to premium
         const { error, count } = await supabase
@@ -136,6 +197,12 @@ serve(async (req) => {
           console.log(`User ${userId} — profile created with premium`);
         } else {
           console.log(`User ${userId} upgraded to premium`);
+        }
+
+        // Skip emails if user was already premium (retry/duplicate event)
+        if (alreadyPremium) {
+          console.log(`User ${userId} already premium — skipping emails (idempotent retry)`);
+          break;
         }
 
         // ── Notify owner about new paying customer ──
@@ -340,6 +407,45 @@ serve(async (req) => {
         break;
       }
 
+      case "payment_intent.payment_failed": {
+        const pi = event.data.object as Stripe.PaymentIntent;
+        const failEmail = pi.last_payment_error?.payment_method?.billing_details?.email
+          || (pi.customer ? "Stripe-Kunde" : "unbekannt");
+        const failReason = pi.last_payment_error?.message || "unbekannt";
+        console.error(`Payment failed: ${failEmail} — ${failReason}`);
+
+        // Notify owner about failed payment attempt
+        try {
+          const smtpUser = Deno.env.get("SMTP_USER") || "";
+          const smtpPass = Deno.env.get("SMTP_PASS") || "";
+          if (smtpUser && smtpPass) {
+            const failSmtp = new SMTPClient({
+              connection: {
+                hostname: "smtp.ionos.de",
+                port: 465,
+                tls: true,
+                auth: { username: smtpUser, password: smtpPass },
+              },
+            });
+            await failSmtp.send({
+              from: "MedMaster <welcome@medmaster.at>",
+              to: "support@medmaster.at",
+              subject: `Zahlung fehlgeschlagen: ${failEmail}`,
+              html: `<p><strong>Eine Zahlung ist fehlgeschlagen.</strong></p>
+<p>Kunde: ${(failEmail).replace(/[<>&"']/g, c => ({"<":"&lt;",">":"&gt;","&":"&amp;","\"":"&quot;","'":"&#39;"}[c] || c))}</p>
+<p>Grund: ${(failReason).replace(/[<>&"']/g, c => ({"<":"&lt;",">":"&gt;","&":"&amp;","\"":"&quot;","'":"&#39;"}[c] || c))}</p>
+<p>Betrag: ${pi.amount ? `€${(pi.amount / 100).toFixed(2)}` : "unbekannt"}</p>
+<p>Zeit: ${new Date().toLocaleString("de-AT", { timeZone: "Europe/Vienna" })}</p>
+<p>Der Kunde hat möglicherweise ein Problem mit seiner Karte oder Zahlungsmethode.</p>`,
+            });
+            await failSmtp.close();
+          }
+        } catch (notifyErr) {
+          console.error("Failed payment notification error:", notifyErr);
+        }
+        break;
+      }
+
       default:
         console.log(`Unhandled event: ${event.type}`);
     }
@@ -349,7 +455,43 @@ serve(async (req) => {
       headers: { "Content-Type": "application/json" },
     });
   } catch (err) {
-    console.error("Webhook error:", err);
+    const secretSet = !!webhookSecret;
+    const secretLen = webhookSecret?.length || 0;
+    const secretPrefix = webhookSecret?.substring(0, 10) || "EMPTY";
+    const errMsg = (err as Error).message || "";
+    console.error(`Webhook error (secret set: ${secretSet}, len: ${secretLen}, prefix: ${secretPrefix}):`, errMsg);
+
+    // Alert on signature verification failure — this is how the tagelang-kaputt bug happened
+    if (errMsg.includes("signature") || errMsg.includes("webhook") || errMsg.includes("No signatures found")) {
+      try {
+        const smtpUser = Deno.env.get("SMTP_USER") || "";
+        const smtpPass = Deno.env.get("SMTP_PASS") || "";
+        if (smtpUser && smtpPass) {
+          const alertSmtp = new SMTPClient({
+            connection: {
+              hostname: "smtp.ionos.de",
+              port: 465,
+              tls: true,
+              auth: { username: smtpUser, password: smtpPass },
+            },
+          });
+          await alertSmtp.send({
+            from: "MedMaster <welcome@medmaster.at>",
+            to: "support@medmaster.at",
+            subject: "🚨 STRIPE WEBHOOK KAPUTT — Signatur-Fehler!",
+            html: `<p><strong>Der Stripe Webhook schlägt fehl!</strong></p>
+<p>Fehler: ${(errMsg).replace(/[<>&"']/g, c => ({"<":"&lt;",">":"&gt;","&":"&amp;","\"":"&quot;","'":"&#39;"}[c] || c))}</p>
+<p>Zeit: ${new Date().toLocaleString("de-AT", { timeZone: "Europe/Vienna" })}</p>
+<p><strong>Zahlungen werden NICHT verarbeitet!</strong> Kunden zahlen und bekommen keinen Premium-Zugang.</p>
+<p>Fix: <code>supabase secrets set STRIPE_WEBHOOK_SECRET=whsec_... --project-ref nnelpgrzxwsltrttuiuw</code></p>`,
+          });
+          await alertSmtp.close();
+        }
+      } catch (alertErr) {
+        console.error("Signature alert email failed:", alertErr);
+      }
+    }
+
     // Don't leak internal error details to the caller
     return new Response("Webhook processing failed", { status: 400 });
   }

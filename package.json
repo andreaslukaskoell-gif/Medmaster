@@ -17,6 +17,8 @@
     "check": "npm run typecheck && npm run audit-bms && npm run qa-kff && npm run audit-security && npm run validate-vercel",
     "validate-vercel": "npx tsx scripts/validate-vercel.mts",
     "healthcheck": "npx tsx scripts/healthcheck-prod.mts",
+    "check-payments": "npx tsx scripts/check-payments.mts",
+    "test-webhook": "npx tsx scripts/test-webhook-e2e.mts",
     "audit-deps": "npm audit --production --audit-level=high",
     "audit-security": "npx tsx scripts/security-check.mts",
     "audit-bms": "npx tsx scripts/audit-bms-questions.mts",

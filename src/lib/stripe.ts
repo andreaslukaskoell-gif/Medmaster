@@ -11,14 +11,6 @@ import { purchasePremium } from "@/lib/iap";
 /** Stripe promotion code applied automatically for referred users (€5 off). */
 export const REFERRAL_PROMO_CODE = "FREUND5";
 
-/** Early-bird promo: €5 off on last day of free promo (March 31, 2026). */
-export const EARLY_BIRD_CODE = "EARLYBIRD";
-const EARLY_BIRD_DATE = "2026-03-31";
-
-/** True on March 31, 2026 (last day of free promo). */
-export function isEarlyBirdDay(): boolean {
-  return new Date().toLocaleDateString("sv-SE", { timeZone: "Europe/Vienna" }) === EARLY_BIRD_DATE;
-}
 
 export const PRICING = {
   oneTime: {
@@ -74,14 +66,10 @@ export function startCheckout(options?: { email?: string; userId?: string }): bo
   if (options?.email) url.searchParams.set("prefilled_email", options.email);
   if (options?.userId) url.searchParams.set("client_reference_id", options.userId);
 
-  // Pre-fill promo code: early-bird on last promo day, or referral discount
-  if (isEarlyBirdDay()) {
-    url.searchParams.set("prefilled_promo_code", EARLY_BIRD_CODE);
-  } else {
-    const referredBy = sessionStorage.getItem("medmaster_ref") || sessionStorage.getItem("mm_ref");
-    if (referredBy) {
-      url.searchParams.set("prefilled_promo_code", REFERRAL_PROMO_CODE);
-    }
+  // Pre-fill referral promo code if user was referred
+  const referredBy = sessionStorage.getItem("medmaster_ref") || sessionStorage.getItem("mm_ref");
+  if (referredBy) {
+    url.searchParams.set("prefilled_promo_code", REFERRAL_PROMO_CODE);
   }
 
   track("checkout_redirect", { url: url.origin + url.pathname });

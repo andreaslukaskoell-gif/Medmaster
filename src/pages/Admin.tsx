@@ -163,6 +163,7 @@ export default function Admin() {
   const [stats, setStats] = useState<Stats | null>(null);
   const [daily, setDaily] = useState<DailyRow[]>([]);
   const [funnelData, setFunnelData] = useState<Record<string, number>>({});
+  const [pendingUpgrades, setPendingUpgrades] = useState<{ id: string; customer_email: string; amount_cents: number; created_at: string }[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
 
@@ -201,6 +202,15 @@ export default function Admin() {
       }
       setFunnelData(counts);
     }
+
+    // Fetch pending upgrades (unresolved payments)
+    const { data: pendingData } = await supabase!
+      .from("pending_upgrades")
+      .select("id, customer_email, amount_cents, created_at")
+      .eq("status", "pending")
+      .order("created_at", { ascending: false });
+    if (pendingData) setPendingUpgrades(pendingData);
+
     setLoading(false);
   };
 
@@ -438,6 +448,29 @@ export default function Admin() {
         <StatCard icon={Activity} label="Aktiv 7d" value={stats.active_7d} sub={`${stats.active_30d} letzte 30d`} accent="#10b981" />
         <StatCard icon={Target} label="Fragen gesamt" value={stats.total_questions_answered.toLocaleString("de-AT")} />
       </div>
+
+      {/* ── Pending Upgrades Alert ── */}
+      {pendingUpgrades.length > 0 && (
+        <div className="bg-red-500/10 border border-red-500/30 rounded-xl p-5 mb-6">
+          <h2 className="text-sm font-semibold text-red-600 dark:text-red-400 mb-3 flex items-center gap-2">
+            <ShieldAlert className="w-4 h-4" />
+            {pendingUpgrades.length} Zahlung(en) ohne Zuordnung!
+          </h2>
+          <p className="text-xs text-[var(--muted)] mb-3">
+            Diese Kunden haben bezahlt, konnten aber keinem Account zugeordnet werden. Bitte manuell prüfen und freischalten.
+          </p>
+          <div className="space-y-2">
+            {pendingUpgrades.map((p) => (
+              <div key={p.id} className="flex items-center justify-between bg-[var(--surface)] rounded-lg px-3 py-2 text-sm">
+                <span className="font-medium">{p.customer_email}</span>
+                <span className="text-[var(--muted)]">
+                  {p.amount_cents ? `€${(p.amount_cents / 100).toFixed(2)}` : "?"} — {new Date(p.created_at).toLocaleDateString("de-AT")}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
 
       {/* ── Paywall & Conversion Funnel ── */}
       {Object.keys(funnelData).length > 0 && (

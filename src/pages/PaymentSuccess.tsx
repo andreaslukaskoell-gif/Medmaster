@@ -76,18 +76,22 @@ export default function PaymentSuccess() {
   }, []);
 
   // Poll for premium status — webhook may take a few seconds
+  const [activationFailed, setActivationFailed] = useState(false);
   useEffect(() => {
     if (isPremium) {
       setActivating(false);
+      setActivationFailed(false);
       return;
     }
     let attempts = 0;
     const interval = setInterval(() => {
       attempts++;
       if (attempts > 30) {
-        // 60s total — give up polling, show success anyway
+        // 60s total — activation failed, show honest error
         clearInterval(interval);
         setActivating(false);
+        setActivationFailed(true);
+        track("activation_failed_timeout");
         return;
       }
       refreshProfile();
@@ -106,12 +110,18 @@ export default function PaymentSuccess() {
 
           <div className="space-y-2">
             <h1 className="text-2xl font-bold text-[var(--text-primary)]">
-              {activating ? "Premium wird aktiviert …" : "Willkommen bei MedMaster Premium!"}
+              {activating
+                ? "Premium wird aktiviert …"
+                : activationFailed
+                  ? "Freischaltung dauert etwas länger"
+                  : "Willkommen bei MedMaster Premium!"}
             </h1>
             <p className="text-[var(--muted)]">
               {activating
                 ? "Deine Zahlung war erfolgreich. Dein Account wird gerade freigeschaltet — dauert nur einen Moment."
-                : "Deine Zahlung war erfolgreich. Du hast jetzt vollen Zugang zu allen Features — 5.000+ BMS-Fragen, Simulationen, Lernplan und mehr."}
+                : activationFailed
+                  ? "Deine Zahlung ist eingegangen, aber die automatische Freischaltung dauert noch. Bitte lade die Seite in ein paar Minuten neu. Falls es dann noch nicht klappt, schreib uns an support@medmaster.at — wir schalten dich sofort frei."
+                  : "Deine Zahlung war erfolgreich. Du hast jetzt vollen Zugang zu allen Features — 5.000+ BMS-Fragen, Simulationen, Lernplan und mehr."}
             </p>
           </div>
 
@@ -130,12 +140,26 @@ export default function PaymentSuccess() {
             </div>
           </div>
 
-          <Button className="w-full" size="lg" asChild>
-            <Link to="/dashboard">
-              Zum Dashboard
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </Link>
-          </Button>
+          {activationFailed ? (
+            <div className="space-y-3">
+              <Button className="w-full" size="lg" onClick={() => { setActivating(true); setActivationFailed(false); refreshProfile(); }}>
+                Nochmal prüfen
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+              <Button variant="outline" className="w-full" size="lg" asChild>
+                <a href="mailto:support@medmaster.at?subject=Premium%20Freischaltung&body=Meine%20Zahlung%20ist%20eingegangen%20aber%20Premium%20wurde%20nicht%20aktiviert.">
+                  Support kontaktieren
+                </a>
+              </Button>
+            </div>
+          ) : (
+            <Button className="w-full" size="lg" asChild>
+              <Link to="/dashboard">
+                Zum Dashboard
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
+            </Button>
+          )}
 
           <p className="text-xs text-[var(--muted)]">
             Dein Kauf wird per E-Mail bestätigt. Bei Fragen:{" "}
