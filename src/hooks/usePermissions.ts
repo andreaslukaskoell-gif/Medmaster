@@ -22,8 +22,10 @@ export function usePermissions() {
       promo,
       loading: isLoading,
       permissions,
-      isLocked: (feature: keyof FeatureLimits) => isFeatureLocked(effectiveT, feature),
-      getLimit: (feature: keyof FeatureLimits) => getLimit(effectiveT, feature),
+      // During loading: never lock features (optimistic) — prevents paywall flash for premium users.
+      // Once loading is done, use the real tier to determine locks.
+      isLocked: (feature: keyof FeatureLimits) => isLoading ? false : isFeatureLocked(effectiveT, feature),
+      getLimit: (feature: keyof FeatureLimits) => isLoading ? null : getLimit(effectiveT, feature),
     };
   }, [tier, isPremium, isLoading]);
 }
