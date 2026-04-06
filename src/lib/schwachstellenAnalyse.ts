@@ -4,17 +4,6 @@ import { getStichwortForQuestion } from "@/store/adaptiveLearning";
 import { getDirectStichwortId } from "@/data/questions/index";
 import { getStichwortById } from "@/data/stichwortliste";
 
-/** Pro Thema (Stichwort) oder Fach: Anzahl falscher Antworten */
-export type TopicErrorCount = {
-  subject: string;
-  topicId: string | null;
-  topicLabel: string;
-  count: number;
-};
-
-/** Root-Cause: Heuristik, da wir keine echte Kategorisierung speichern */
-export type ErrorType = "Wissenslücke" | "Flüchtigkeit";
-
 const SUBJECT_LABELS: Record<string, string> = {
   biologie: "Biologie",
   chemie: "Chemie",
@@ -22,138 +11,140 @@ const SUBJECT_LABELS: Record<string, string> = {
   mathematik: "Mathematik",
 };
 
-/**
- * Aggregiert falsche BMS-Antworten nach Fach und Thema (Stichwort).
- * Für Treemap: hierarchy subject -> topics mit size = Fehleranzahl.
- */
-export function aggregateWrongAnswersByTopic(quizResults: QuizResult[]): {
-  bySubjectTopic: Map<string, Map<string, number>>;
+export type FachStats = {
+  fach: string;
+  label: string;
+  answered: number;
+  wrong: number;
+  accuracy: number;
+  topWeakTopics: { label: string; count: number }[];
+};
+
+export type AnalysisResult = {
+  fachStats: FachStats[];
+  topWeakTopics: { label: string; fach: string; fachLabel: string; count: number }[];
   totalWrong: number;
   totalAnswered: number;
-} {
-  const bySubjectTopic = new Map<string, Map<string, number>>();
+  overallAccuracy: number;
+  actionSentence: string;
+};
+
+/**
+ * Resolve a readable topic label for a question.
+ * Cascade: Stichwort thema → Chapter title → chapter ID prefix → Fach fallback
+ */
+function resolveTopicLabel(questionId: string, fachLabel: string): string {
+  // 1. Try Stichwort
+  const topicId = getDirectStichwortId(questionId) || getStichwortForQuestion(questionId);
+  if (topicId) {
+    const sw = getStichwortById(topicId);
+    if (sw?.thema) return sw.thema;
+  }
+
+  // 2. Try chapter title
+  const chapterTitle = getQuestionChapter(questionId);
+  if (chapterTitle) return chapterTitle;
+
+  // 3. Try chapter ID — make it human-readable
+  const chapterId = getQuestionChapterId(questionId);
+  if (chapterId) {
+    // e.g. "bio-kap1" → "Kapitel 1", "ch-kap3" → "Kapitel 3"
+    const kapMatch = chapterId.match(/kap(\d+)/);
+    if (kapMatch) return `${fachLabel} Kap. ${kapMatch[1]}`;
+    return chapterId;
+  }
+
+  // 4. Ultimate fallback — use Fach name (NOT "Allgemein")
+  return `${fachLabel} (Sonstiges)`;
+}
+
+/**
+ * Full analysis of wrong answers, grouped by Fach with per-topic breakdown.
+ */
+export function analyzeErrors(quizResults: QuizResult[]): AnalysisResult {
+  const fachAnswered = new Map<string, number>();
+  const fachWrong = new Map<string, number>();
+  const fachTopics = new Map<string, Map<string, number>>();
   let totalWrong = 0;
   let totalAnswered = 0;
 
   for (const r of quizResults) {
     if (r.type !== "bms") continue;
     for (const a of r.answers || []) {
+      const subject = getQuestionSubject(a.questionId) || r.subject || "sonstige";
       totalAnswered += 1;
-      if (a.correct) continue;
-      totalWrong += 1;
+      fachAnswered.set(subject, (fachAnswered.get(subject) ?? 0) + 1);
 
-      // Resolve subject
-      const subject = getQuestionSubject(a.questionId) || r.subject || "Sonstige";
+      if (!a.correct) {
+        totalWrong += 1;
+        fachWrong.set(subject, (fachWrong.get(subject) ?? 0) + 1);
 
-      // Resolve topic label — cascade: Stichwort > Chapter title > chapter ID > fallback
-      const topicId =
-        getDirectStichwortId(a.questionId) || getStichwortForQuestion(a.questionId) || null;
-      let topicLabel: string;
-      if (topicId) {
-        topicLabel = getStichwortById(topicId)?.thema ?? topicId;
-      } else {
-        // Use chapter title as fallback (much better than "Sonstiges")
-        const chapterTitle = getQuestionChapter(a.questionId);
-        if (chapterTitle) {
-          topicLabel = chapterTitle;
-        } else {
-          // Last resort: extract a readable label from the chapter ID
-          const chapterId = getQuestionChapterId(a.questionId);
-          topicLabel = chapterId ?? "Allgemein";
-        }
+        const fachLabel = SUBJECT_LABELS[subject] ?? subject;
+        const topicLabel = resolveTopicLabel(a.questionId, fachLabel);
+
+        if (!fachTopics.has(subject)) fachTopics.set(subject, new Map());
+        const topicMap = fachTopics.get(subject)!;
+        topicMap.set(topicLabel, (topicMap.get(topicLabel) ?? 0) + 1);
       }
-
-      if (!bySubjectTopic.has(subject)) bySubjectTopic.set(subject, new Map());
-      const topicMap = bySubjectTopic.get(subject)!;
-      topicMap.set(topicLabel, (topicMap.get(topicLabel) ?? 0) + 1);
     }
   }
 
-  return { bySubjectTopic, totalWrong, totalAnswered };
-}
+  // Build per-Fach stats
+  const fachOrder = ["biologie", "chemie", "physik", "mathematik"];
+  const fachStats: FachStats[] = fachOrder
+    .filter((f) => (fachAnswered.get(f) ?? 0) > 0)
+    .map((fach) => {
+      const answered = fachAnswered.get(fach) ?? 0;
+      const wrong = fachWrong.get(fach) ?? 0;
+      const accuracy = answered > 0 ? Math.round(((answered - wrong) / answered) * 100) : 0;
+      const topicMap = fachTopics.get(fach) ?? new Map<string, number>();
+      const topWeakTopics = Array.from(topicMap.entries())
+        .map(([label, count]) => ({ label, count }))
+        .sort((a, b) => b.count - a.count)
+        .slice(0, 3);
 
-/**
- * Heuristik: Anteil Wissenslücke vs. Flüchtigkeit.
- * Ohne echte Kategorisierung: z.B. 65% Wissenslücke, 35% Flüchtigkeit.
- */
-export function getRootCauseDistribution(totalWrong: number): {
-  Wissenslücke: number;
-  Flüchtigkeit: number;
-} {
-  if (totalWrong === 0) return { Wissenslücke: 0, Flüchtigkeit: 0 };
-  const wissenslücke = Math.round(totalWrong * 0.65);
-  const flüchtigkeit = totalWrong - wissenslücke;
-  return { Wissenslücke: wissenslücke, Flüchtigkeit: flüchtigkeit };
-}
+      return {
+        fach,
+        label: SUBJECT_LABELS[fach] ?? fach,
+        answered,
+        wrong,
+        accuracy,
+        topWeakTopics,
+      };
+    })
+    .sort((a, b) => b.wrong - a.wrong);
 
-/**
- * Treemap-Daten für Recharts: { name, value, children?: { name, value }[] }
- */
-export function buildTreemapData(
-  bySubjectTopic: Map<string, Map<string, number>>
-): { name: string; value: number; children?: { name: string; value: number }[] }[] {
-  const result: { name: string; value: number; children?: { name: string; value: number }[] }[] =
-    [];
-  for (const [subject, topicMap] of bySubjectTopic) {
-    const children = Array.from(topicMap.entries())
-      .map(([name, value]) => ({ name, value }))
-      .filter((c) => c.value > 0)
-      .sort((a, b) => b.value - a.value);
-    const value = children.reduce((s, c) => s + c.value, 0);
-    if (value === 0) continue;
-    result.push({
-      name: SUBJECT_LABELS[subject] ?? subject,
-      value,
-      children: children.length > 0 ? children : undefined,
-    });
-  }
-  return result.sort((a, b) => b.value - a.value);
-}
-
-/**
- * Donut-Daten: Root-Cause-Verteilung
- */
-export function buildDonutData(rootCause: {
-  Wissenslücke: number;
-  Flüchtigkeit: number;
-}): { name: string; value: number }[] {
-  return [
-    { name: "Wissenslücke", value: rootCause.Wissenslücke },
-    { name: "Flüchtigkeit", value: rootCause.Flüchtigkeit },
-  ].filter((d) => d.value > 0);
-}
-
-/**
- * Generiert Handlungsempfehlung
- */
-export function buildActionSentence(
-  rootCause: { Wissenslücke: number; Flüchtigkeit: number },
-  totalAnswered: number,
-  bySubjectTopic: Map<string, Map<string, number>>
-): string {
-  if (totalAnswered === 0 || rootCause.Flüchtigkeit === 0) {
-    if (totalAnswered === 0) return "Löse Quizze, damit wir deine Fehler analysieren können.";
-    const topSubject = getTopSubjectByWrong(bySubjectTopic);
-    if (topSubject) {
-      return `Die meisten Fehler liegen in ${topSubject}. Fokussiere dich beim Lernen auf dieses Fach.`;
-    }
-    return "Weiter so – mit mehr Übung werden Fehlerquellen klarer.";
-  }
-  const pctLost = Math.round((rootCause.Flüchtigkeit / totalAnswered) * 100);
-  const topSubject = getTopSubjectByWrong(bySubjectTopic);
-  const fachLabel = topSubject ? (SUBJECT_LABELS[topSubject] ?? topSubject) : "einem Fach";
-  return `Du verlierst etwa ${pctLost}% deiner Punkte durch Flüchtigkeitsfehler – besonders in ${fachLabel}. Arbeite an deiner Konzentration, nicht am Stoff!`;
-}
-
-function getTopSubjectByWrong(bySubjectTopic: Map<string, Map<string, number>>): string | null {
-  let max = 0;
-  let top: string | null = null;
-  for (const [subject, topicMap] of bySubjectTopic) {
-    const total = Array.from(topicMap.values()).reduce((s, v) => s + v, 0);
-    if (total > max) {
-      max = total;
-      top = subject;
+  // Global top weak topics across all Fächer
+  const allTopics: { label: string; fach: string; fachLabel: string; count: number }[] = [];
+  for (const [fach, topicMap] of fachTopics) {
+    for (const [label, count] of topicMap) {
+      allTopics.push({ label, fach, fachLabel: SUBJECT_LABELS[fach] ?? fach, count });
     }
   }
-  return top;
+  const topWeakTopics = allTopics.sort((a, b) => b.count - a.count).slice(0, 5);
+
+  const overallAccuracy =
+    totalAnswered > 0 ? Math.round(((totalAnswered - totalWrong) / totalAnswered) * 100) : 0;
+
+  // Build action sentence
+  let actionSentence: string;
+  if (totalAnswered === 0) {
+    actionSentence = "Löse BMS-Quizze, damit wir deine Fehler analysieren können.";
+  } else if (totalWrong === 0) {
+    actionSentence = "Perfekt — keine Fehler bisher! Weiter so.";
+  } else {
+    const worstFach = fachStats[0];
+    if (worstFach && worstFach.wrong > 0) {
+      const worstTopic = worstFach.topWeakTopics[0];
+      if (worstTopic) {
+        actionSentence = `Fokussiere dich auf ${worstTopic.label} in ${worstFach.label} — dort machst du die meisten Fehler (${worstTopic.count}×).`;
+      } else {
+        actionSentence = `${worstFach.label} ist dein schwächstes Fach (${worstFach.accuracy}% richtig). Arbeite gezielt daran.`;
+      }
+    } else {
+      actionSentence = "Gute Basis — trainiere deine Schwachstellen gezielt weiter.";
+    }
+  }
+
+  return { fachStats, topWeakTopics, totalWrong, totalAnswered, overallAccuracy, actionSentence };
 }

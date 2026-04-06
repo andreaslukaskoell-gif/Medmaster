@@ -1,275 +1,183 @@
 import { useMemo } from "react";
-import { Treemap, ResponsiveContainer, Tooltip, PieChart, Pie, Cell } from "recharts";
 import { useStore } from "@/store/useStore";
 import { useIsMounted } from "@/hooks/useIsMounted";
+import { RadarHexagonSkeleton } from "@/components/skeletons/AppSkeletons";
+import { analyzeErrors } from "@/lib/schwachstellenAnalyse";
+import { TrendingDown, AlertTriangle, BarChart3 } from "lucide-react";
 
 const STABLE_EMPTY_ARR: never[] = [];
-import { RadarHexagonSkeleton } from "@/components/skeletons/AppSkeletons";
-import {
-  aggregateWrongAnswersByTopic,
-  getRootCauseDistribution,
-  buildTreemapData,
-  buildDonutData,
-  buildActionSentence,
-} from "@/lib/schwachstellenAnalyse";
 
-const MIDNIGHT = "#0f172a";
-const SLATE_800 = "#1e293b";
-const SLATE_600 = "#475569";
-const SLATE_500 = "#64748b";
+const FACH_COLORS: Record<string, { bar: string; bg: string; ring: string; text: string }> = {
+  biologie: { bar: "#10b981", bg: "rgba(16,185,129,0.08)", ring: "#10b981", text: "text-emerald-400" },
+  chemie: { bar: "#ef4444", bg: "rgba(239,68,68,0.08)", ring: "#ef4444", text: "text-red-400" },
+  physik: { bar: "#3b82f6", bg: "rgba(59,130,246,0.08)", ring: "#3b82f6", text: "text-blue-400" },
+  mathematik: { bar: "#8b5cf6", bg: "rgba(139,92,246,0.08)", ring: "#8b5cf6", text: "text-violet-400" },
+};
 
-const DONUT_COLORS = ["#f43f5e", "#fb923c"];
-
-/** Continuous color scale: low errors = slate, high errors = warm red */
-function getTreemapFill(value: number, maxValue: number): string {
-  if (maxValue <= 0) return SLATE_800;
-  const ratio = value / maxValue;
-  if (ratio >= 0.7) return "#e11d48"; // rose-600
-  if (ratio >= 0.5) return "#f43f5e"; // rose-500
-  if (ratio >= 0.3) return "#fb7185"; // rose-400
-  if (ratio >= 0.15) return "#6366f1"; // indigo-500
-  return "#475569"; // slate-600
+function AccuracyRing({ value, size = 64, stroke = 5, color }: { value: number; size?: number; stroke?: number; color: string }) {
+  const r = (size - stroke) / 2;
+  const circ = 2 * Math.PI * r;
+  const offset = circ - (value / 100) * circ;
+  return (
+    <svg width={size} height={size} className="shrink-0">
+      <circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke="rgba(255,255,255,0.06)" strokeWidth={stroke} />
+      <circle
+        cx={size / 2} cy={size / 2} r={r} fill="none"
+        stroke={color} strokeWidth={stroke} strokeLinecap="round"
+        strokeDasharray={circ} strokeDashoffset={offset}
+        transform={`rotate(-90 ${size / 2} ${size / 2})`}
+        style={{ transition: "stroke-dashoffset 0.8s ease" }}
+      />
+      <text x={size / 2} y={size / 2} textAnchor="middle" dominantBaseline="central" fill="white" fontSize={size * 0.22} fontWeight={700}>
+        {value}%
+      </text>
+    </svg>
+  );
 }
 
 export function SchwachstellenAnalyse() {
   const mounted = useIsMounted();
   const quizResults = useStore((s) => s.quizResults ?? STABLE_EMPTY_ARR);
 
-  const { treemapRoot, donutData, actionSentence, totalWrong, totalAnswered } = useMemo(() => {
-    const {
-      bySubjectTopic,
-      totalWrong: tw,
-      totalAnswered: ta,
-    } = aggregateWrongAnswersByTopic(quizResults);
-    const rootCause = getRootCauseDistribution(tw);
-    const treemapNodes = buildTreemapData(bySubjectTopic);
-    const maxValue = Math.max(0, ...treemapNodes.flatMap((n) => n.children?.map((c) => c.value) ?? [n.value]));
-    const treemapRoot = {
-      name: "Fehler",
-      children: treemapNodes.map((n) => ({
-        ...n,
-        children: n.children?.map((c) => ({
-          ...c,
-          fill: getTreemapFill(c.value, maxValue),
-        })),
-        fill: n.children?.length ? SLATE_800 : getTreemapFill(n.value, maxValue),
-      })),
-    };
-    const donutData = buildDonutData(rootCause);
-    const actionSentence = buildActionSentence(rootCause, ta, bySubjectTopic);
-    return {
-      treemapRoot,
-      donutData,
-      actionSentence,
-      totalWrong: tw,
-      totalAnswered: ta,
-    };
-  }, [quizResults]);
-
-  const hasData = totalWrong > 0 || totalAnswered > 0;
+  const analysis = useMemo(() => analyzeErrors(quizResults), [quizResults]);
+  const { fachStats, topWeakTopics, totalWrong, totalAnswered, overallAccuracy, actionSentence } = analysis;
+  const hasData = totalAnswered > 0;
 
   return (
-    <div
-      className="rounded-2xl overflow-hidden border border-[var(--border)]/50"
-      style={{ background: MIDNIGHT }}
-    >
-      <div className="p-5 border-b border-white/5">
-        <div className="flex items-center justify-between">
-          <div>
-            <h2 className="text-lg font-bold text-white">Fehler-Analyse</h2>
-            <p className="text-sm text-slate-400 mt-0.5">
-              Wo du die meisten Fehler machst (Größe = Anzahl) · Root-Cause-Verteilung
-            </p>
+    <div className="rounded-2xl overflow-hidden border border-white/[0.06]" style={{ background: "#0c1220" }}>
+      {/* Header */}
+      <div className="px-6 py-5 border-b border-white/[0.06] flex items-center justify-between">
+        <div className="flex items-center gap-3">
+          <div className="w-9 h-9 rounded-lg flex items-center justify-center" style={{ background: "rgba(239,68,68,0.12)" }}>
+            <BarChart3 className="w-4.5 h-4.5 text-red-400" />
           </div>
-          {hasData && (
-            <div className="flex items-center gap-4 text-xs text-slate-400">
-              <span>
-                <strong className="text-white">{totalAnswered}</strong> beantwortet
-              </span>
-              <span>
-                <strong className="text-rose-400">{totalWrong}</strong> falsch
-              </span>
-              <span>
-                <strong className="text-emerald-400">
-                  {totalAnswered > 0 ? Math.round(((totalAnswered - totalWrong) / totalAnswered) * 100) : 0}%
-                </strong>{" "}
-                richtig
-              </span>
-            </div>
-          )}
+          <div>
+            <h2 className="text-[15px] font-semibold text-white tracking-tight">Fehler-Analyse</h2>
+            <p className="text-xs text-slate-500 mt-0.5">Leistung nach Fach und Thema</p>
+          </div>
         </div>
+        {hasData && (
+          <div className="flex items-center gap-5 text-xs">
+            <div className="text-right">
+              <div className="text-slate-500">Beantwortet</div>
+              <div className="text-white font-semibold text-sm tabular-nums">{totalAnswered.toLocaleString("de-AT")}</div>
+            </div>
+            <div className="text-right">
+              <div className="text-slate-500">Falsch</div>
+              <div className="text-red-400 font-semibold text-sm tabular-nums">{totalWrong.toLocaleString("de-AT")}</div>
+            </div>
+            <div className="text-right">
+              <div className="text-slate-500">Genauigkeit</div>
+              <div className={`font-semibold text-sm tabular-nums ${overallAccuracy >= 60 ? "text-emerald-400" : overallAccuracy >= 40 ? "text-amber-400" : "text-red-400"}`}>
+                {overallAccuracy}%
+              </div>
+            </div>
+          </div>
+        )}
       </div>
 
-      <div className="p-5 space-y-5">
+      {/* Body */}
+      <div className="p-6">
         {!mounted ? (
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            <div className="lg:col-span-2">
-              <RadarHexagonSkeleton height={280} className="rounded-xl" />
-            </div>
-            <div className="h-[280px] rounded-xl overflow-hidden bg-white/5 skeleton-shimmer animate-pulse" />
-          </div>
+          <RadarHexagonSkeleton height={200} className="rounded-xl" />
         ) : !hasData ? (
-          <p className="text-slate-500 text-sm text-center py-8">
-            Noch keine BMS-Quizze absolviert. Sobald Fehler vorliegen, siehst du hier Treemap und
-            Empfehlung.
-          </p>
+          <div className="text-center py-10">
+            <div className="w-12 h-12 rounded-full mx-auto mb-3 flex items-center justify-center" style={{ background: "rgba(255,255,255,0.04)" }}>
+              <BarChart3 className="w-5 h-5 text-slate-600" />
+            </div>
+            <p className="text-slate-500 text-sm">Löse BMS-Quizze, um deine Fehler-Analyse zu sehen.</p>
+          </div>
         ) : (
-          <>
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-              {/* Treemap: Fehler nach Fach/Thema */}
-              <div className="lg:col-span-2 h-[300px] rounded-xl overflow-hidden" style={{ background: SLATE_800 + "40" }}>
-                {totalWrong > 0 ? (
-                  <ResponsiveContainer width="100%" height="100%">
-                    <Treemap
-                      data={[treemapRoot]}
-                      dataKey="value"
-                      nameKey="name"
-                      aspectRatio={1.6}
-                      stroke={MIDNIGHT}
-                      content={({ x, y, width, height, name, value, fill, depth }) => {
-                        if (depth === 0) return <g />;
-
-                        const tooSmall = width < 50 || height < 28;
-                        const fontSize = Math.min(11, Math.max(8, width / 10));
-                        const maxChars = Math.floor(width / (fontSize * 0.55));
-                        const displayName =
-                          name && name.length > maxChars
-                            ? name.slice(0, maxChars - 1) + "…"
-                            : name;
-
-                        return (
-                          <g>
-                            <rect
-                              x={x}
-                              y={y}
-                              width={width}
-                              height={height}
-                              fill={typeof fill === "string" ? fill : SLATE_800}
-                              stroke={MIDNIGHT}
-                              strokeWidth={2}
-                              rx={4}
-                            />
-                            {!tooSmall && (
-                              <>
-                                <text
-                                  x={x + width / 2}
-                                  y={y + height / 2 - (height > 44 ? 7 : 0)}
-                                  textAnchor="middle"
-                                  dominantBaseline="central"
-                                  fill="white"
-                                  fontSize={fontSize}
-                                  fontWeight={600}
-                                >
-                                  {displayName}
-                                </text>
-                                {height > 44 && (
-                                  <text
-                                    x={x + width / 2}
-                                    y={y + height / 2 + 10}
-                                    textAnchor="middle"
-                                    fill={SLATE_500}
-                                    fontSize={9}
-                                  >
-                                    {value} Fehler
-                                  </text>
-                                )}
-                              </>
-                            )}
-                          </g>
-                        );
-                      }}
-                    >
-                      <Tooltip
-                        contentStyle={{
-                          background: SLATE_800,
-                          border: `1px solid ${SLATE_600}`,
-                          borderRadius: 8,
-                          fontSize: 12,
-                        }}
-                        labelStyle={{ color: "white", fontWeight: 600 }}
-                        formatter={(value?: number) => [`${value ?? 0} Fehler`, ""]}
-                        labelFormatter={(label: unknown) =>
-                          typeof label === "string" ? label : String(label ?? "")
-                        }
-                      />
-                    </Treemap>
-                  </ResponsiveContainer>
-                ) : (
-                  <div className="h-full flex items-center justify-center text-slate-500 text-sm">
-                    Noch keine Fehler in BMS-Quizzen
-                  </div>
-                )}
-              </div>
-
-              {/* Donut: Wissenslücke vs. Flüchtigkeit */}
-              <div className="h-[300px] flex flex-col items-center justify-center rounded-xl" style={{ background: SLATE_800 + "40" }}>
-                <div className="w-full max-w-[200px] h-[200px]">
-                  {totalWrong > 0 && donutData.length > 0 ? (
-                    <ResponsiveContainer width="100%" height="100%">
-                      <PieChart>
-                        <Pie
-                          data={donutData}
-                          dataKey="value"
-                          nameKey="name"
-                          cx="50%"
-                          cy="50%"
-                          innerRadius={55}
-                          outerRadius={80}
-                          paddingAngle={3}
-                          stroke={MIDNIGHT}
-                          strokeWidth={3}
-                        >
-                          {donutData.map((_, i) => (
-                            <Cell key={i} fill={DONUT_COLORS[i % DONUT_COLORS.length]} />
-                          ))}
-                        </Pie>
-                        <Tooltip
-                          contentStyle={{
-                            background: SLATE_800,
-                            border: `1px solid ${SLATE_600}`,
-                            borderRadius: 8,
-                            fontSize: 12,
-                          }}
-                          formatter={(value?: number, name?: string) => [
-                            `${value ?? 0} (${totalWrong > 0 ? Math.round(((value ?? 0) / totalWrong) * 100) : 0}%)`,
-                            name ?? "",
-                          ]}
-                        />
-                      </PieChart>
-                    </ResponsiveContainer>
-                  ) : (
-                    <div className="h-full flex items-center justify-center text-slate-500 text-sm">
-                      —
+          <div className="space-y-6">
+            {/* Per-Fach Accuracy Bars */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+              {fachStats.map((fs) => {
+                const fc = FACH_COLORS[fs.fach] ?? FACH_COLORS.biologie;
+                const wrongPct = fs.answered > 0 ? (fs.wrong / fs.answered) * 100 : 0;
+                return (
+                  <div key={fs.fach} className="rounded-xl p-4" style={{ background: "rgba(255,255,255,0.02)" }}>
+                    <div className="flex items-center gap-3 mb-3">
+                      <AccuracyRing value={fs.accuracy} size={52} stroke={4} color={fc.ring} />
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center justify-between mb-1">
+                          <span className="text-sm font-medium text-white">{fs.label}</span>
+                          <span className="text-xs text-slate-500 tabular-nums">{fs.answered} Fragen</span>
+                        </div>
+                        {/* Bar: correct portion (colored) + wrong portion (red) */}
+                        <div className="h-2 rounded-full overflow-hidden" style={{ background: "rgba(255,255,255,0.06)" }}>
+                          <div
+                            className="h-full rounded-full transition-all duration-700"
+                            style={{
+                              width: `${100 - wrongPct}%`,
+                              background: `linear-gradient(90deg, ${fc.bar}, ${fc.bar}88)`,
+                            }}
+                          />
+                        </div>
+                        <div className="flex items-center justify-between mt-1.5">
+                          <span className="text-[10px] text-slate-500">{fs.wrong} Fehler</span>
+                          <span className={`text-[10px] font-medium ${fc.text}`}>{fs.accuracy}% richtig</span>
+                        </div>
+                      </div>
                     </div>
-                  )}
-                </div>
-                {/* Legend */}
-                <div className="flex items-center gap-4 mt-3">
-                  <div className="flex items-center gap-1.5">
-                    <span className="w-2.5 h-2.5 rounded-full bg-rose-500" />
-                    <span className="text-xs text-slate-400">Wissenslücke</span>
+                    {/* Top weak topics */}
+                    {fs.topWeakTopics.length > 0 && (
+                      <div className="flex flex-wrap gap-1.5 mt-1 pl-[64px]">
+                        {fs.topWeakTopics.map((t) => (
+                          <span
+                            key={t.label}
+                            className="text-[10px] px-2 py-0.5 rounded-full text-slate-400"
+                            style={{ background: fc.bg }}
+                          >
+                            {t.label} <span className="text-slate-500">({t.count})</span>
+                          </span>
+                        ))}
+                      </div>
+                    )}
                   </div>
-                  <div className="flex items-center gap-1.5">
-                    <span className="w-2.5 h-2.5 rounded-full bg-orange-400" />
-                    <span className="text-xs text-slate-400">Flüchtigkeit</span>
-                  </div>
-                </div>
-              </div>
+                );
+              })}
             </div>
 
-            {/* Handlungsempfehlung */}
-            <div
-              className="rounded-xl p-4 border"
-              style={{
-                background: "rgba(255, 51, 102, 0.06)",
-                borderColor: "rgba(255, 51, 102, 0.2)",
-              }}
-            >
-              <p className="text-sm font-medium text-slate-200 leading-relaxed">
-                {actionSentence}
-              </p>
+            {/* Top 5 Weak Topics */}
+            {topWeakTopics.length > 0 && (
+              <div className="rounded-xl p-4" style={{ background: "rgba(239,68,68,0.04)", border: "1px solid rgba(239,68,68,0.08)" }}>
+                <div className="flex items-center gap-2 mb-3">
+                  <TrendingDown className="w-3.5 h-3.5 text-red-400" />
+                  <span className="text-xs font-medium text-red-400 uppercase tracking-wider">Größte Schwachstellen</span>
+                </div>
+                <div className="space-y-2">
+                  {topWeakTopics.map((t, i) => {
+                    const maxCount = topWeakTopics[0].count;
+                    const barWidth = maxCount > 0 ? (t.count / maxCount) * 100 : 0;
+                    const fc = FACH_COLORS[t.fach] ?? FACH_COLORS.biologie;
+                    return (
+                      <div key={`${t.fach}-${t.label}`} className="flex items-center gap-3">
+                        <span className="text-[10px] font-mono text-slate-600 w-4 text-right">{i + 1}</span>
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-center justify-between mb-0.5">
+                            <span className="text-xs text-slate-300 truncate">{t.label}</span>
+                            <span className="text-[10px] text-slate-500 ml-2 shrink-0">{t.fachLabel} · {t.count}×</span>
+                          </div>
+                          <div className="h-1 rounded-full" style={{ background: "rgba(255,255,255,0.04)" }}>
+                            <div
+                              className="h-full rounded-full transition-all duration-500"
+                              style={{ width: `${barWidth}%`, background: fc.ring }}
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
+
+            {/* Action Recommendation */}
+            <div className="flex items-start gap-3 rounded-xl p-4" style={{ background: "rgba(251,191,36,0.04)", border: "1px solid rgba(251,191,36,0.1)" }}>
+              <AlertTriangle className="w-4 h-4 text-amber-400 mt-0.5 shrink-0" />
+              <p className="text-sm text-slate-300 leading-relaxed">{actionSentence}</p>
             </div>
-          </>
+          </div>
         )}
       </div>
     </div>

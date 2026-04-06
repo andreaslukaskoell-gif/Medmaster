@@ -597,112 +597,122 @@ export default function SchwachstellenTrainer() {
         items={[{ label: "Dashboard", href: "/" }, { label: "Schwachstellen-Trainer" }]}
       />
 
-      <div className="flex items-center gap-3">
-        <div className="w-10 h-10 bg-red-100 dark:bg-red-900/30 rounded-xl flex items-center justify-center">
-          <Target className="w-5 h-5 text-red-600 dark:text-red-400" />
+      {/* Premium Hero Header */}
+      <div className="relative overflow-hidden rounded-2xl border border-[var(--border)]" style={{ background: "linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%)" }}>
+        <div className="absolute inset-0 opacity-20" style={{ background: "radial-gradient(circle at 70% 30%, rgba(239,68,68,0.3), transparent 60%)" }} />
+        <div className="relative px-6 py-6 flex items-center justify-between">
+          <div>
+            <h1 className="text-2xl font-bold text-white tracking-tight">Schwachstellen-Trainer</h1>
+            <p className="text-sm text-slate-400 mt-1">Gezieltes Training deiner schwächsten Themen</p>
+          </div>
+          {/* Readiness Ring */}
+          <div className="flex items-center gap-6">
+            <div className="text-right hidden md:block">
+              <div className="flex items-center gap-1.5 justify-end">
+                <Flame className="w-4 h-4 text-orange-400" />
+                <span className="text-lg font-bold text-orange-400 tabular-nums">{profile.dailyChallengeStreak}</span>
+              </div>
+              <p className="text-[11px] text-slate-500 mt-0.5">{profile.totalQuestionsAnswered.toLocaleString("de-AT")} Fragen</p>
+            </div>
+            <div className="hidden md:block w-px h-10 bg-white/10" />
+            <div className="text-center">
+              <svg width={72} height={72}>
+                <circle cx={36} cy={36} r={30} fill="none" stroke="rgba(255,255,255,0.06)" strokeWidth={5} />
+                <circle
+                  cx={36} cy={36} r={30} fill="none"
+                  stroke={readiness >= 60 ? "#10b981" : readiness >= 30 ? "#f59e0b" : "#ef4444"}
+                  strokeWidth={5} strokeLinecap="round"
+                  strokeDasharray={2 * Math.PI * 30}
+                  strokeDashoffset={2 * Math.PI * 30 * (1 - readiness / 100)}
+                  transform="rotate(-90 36 36)"
+                  style={{ transition: "stroke-dashoffset 1s ease" }}
+                />
+                <text x={36} y={33} textAnchor="middle" dominantBaseline="central" fill="white" fontSize={18} fontWeight={700}>{readiness}%</text>
+                <text x={36} y={48} textAnchor="middle" fill="#94a3b8" fontSize={8}>READINESS</text>
+              </svg>
+            </div>
+          </div>
         </div>
-        <div>
-          <h1 className="text-2xl font-bold text-[var(--text-primary)]">Schwachstellen-Trainer</h1>
-          <p className="text-sm text-[var(--muted)]">Gezielt schwache Themen trainieren</p>
+        {/* Mini stats strip */}
+        <div className="border-t border-white/[0.06] grid grid-cols-3 divide-x divide-white/[0.06]">
+          {[
+            { label: "MedAT Readiness", value: `${readiness}%`, color: readiness >= 60 ? "text-emerald-400" : readiness >= 30 ? "text-amber-400" : "text-red-400" },
+            { label: "Tages-Streak", value: `${profile.dailyChallengeStreak}`, color: "text-orange-400" },
+            { label: "Stichworte geübt", value: `${totalPracticed}/${totalStichworte}`, color: "text-blue-400" },
+          ].map((s) => (
+            <div key={s.label} className="px-4 py-3 text-center">
+              <div className={`text-sm font-bold tabular-nums ${s.color}`}>{s.value}</div>
+              <p className="text-[10px] text-slate-500 mt-0.5">{s.label}</p>
+            </div>
+          ))}
         </div>
       </div>
 
-      {/* High-End Fehler-Analyse: Treemap + Donut + Handlungsempfehlung */}
+      {/* Fehler-Analyse */}
       <SchwachstellenAnalyse />
 
-      {/* Readiness & Stats Row */}
-      <div className="card-glass p-0 grid grid-cols-3 divide-x divide-[var(--border)]">
-        <div className="p-5 text-center">
-          <div className="text-3xl font-bold text-[var(--accent)]">{readiness}%</div>
-          <p className="text-xs text-[var(--muted)] mt-1">MedAT Readiness</p>
-          <Progress value={readiness} className="mt-3" />
-        </div>
-        <div className="p-5 text-center">
-          <div className="flex items-center justify-center gap-1.5">
-            <Flame className="w-5 h-5 text-orange-500" />
-            <span className="text-3xl font-bold text-orange-600 dark:text-orange-400">
-              {profile.dailyChallengeStreak}
-            </span>
-          </div>
-          <p className="text-xs text-[var(--muted)] mt-1">Tages-Streak</p>
-          <p className="text-xs text-[var(--muted)]">
-            {profile.totalQuestionsAnswered} Fragen beantwortet
-          </p>
-        </div>
-        <div className="p-5 text-center">
-          <div className="text-3xl font-bold text-emerald-600 dark:text-emerald-400">
-            {totalPracticed}/{totalStichworte}
-          </div>
-          <p className="text-xs text-[var(--muted)] mt-1">Stichworte geübt</p>
-          <Progress value={(totalPracticed / totalStichworte) * 100} className="mt-3" />
-        </div>
-      </div>
-
-      {/* Daily Challenge + Smart Recovery */}
+      {/* Action Cards: Daily Challenge + Smart Recovery */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <Card className="border-2 border-orange-200 dark:border-orange-800">
-          <CardHeader className="pb-3">
-            <CardTitle className="flex items-center gap-2 text-lg">
-              <Zap className="w-5 h-5 text-orange-500" />
-              Tägliche Challenge
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="pb-5">
-            <p className="text-sm text-[var(--muted)] mb-4">
-              15 adaptive Fragen aus deinen Schwachstellen — Bonus-XP und Streak-Aufbau!
-            </p>
-            <Button onClick={startDailyChallenge} className="gap-2">
-              <Play className="w-4 h-4" />
-              Challenge starten
-            </Button>
-          </CardContent>
-        </Card>
+        <button
+          onClick={startDailyChallenge}
+          className="group relative overflow-hidden rounded-xl border border-orange-500/20 p-5 text-left transition-all hover:border-orange-500/40 hover:shadow-lg hover:shadow-orange-500/5 cursor-pointer"
+          style={{ background: "linear-gradient(135deg, rgba(251,146,60,0.06), rgba(251,146,60,0.02))" }}
+        >
+          <div className="flex items-center gap-3 mb-2">
+            <div className="w-9 h-9 rounded-lg flex items-center justify-center bg-orange-500/10">
+              <Zap className="w-4 h-4 text-orange-400" />
+            </div>
+            <div>
+              <span className="text-sm font-semibold text-[var(--text-primary)]">Tägliche Challenge</span>
+              <p className="text-xs text-[var(--muted)]">15 adaptive Fragen</p>
+            </div>
+          </div>
+          <p className="text-xs text-[var(--muted)] leading-relaxed">
+            Fragen aus deinen Schwachstellen — Bonus-XP und Streak-Aufbau.
+          </p>
+          <div className="mt-3 inline-flex items-center gap-1.5 text-xs font-medium text-orange-500 group-hover:gap-2.5 transition-all">
+            <Play className="w-3 h-3" />
+            Challenge starten
+            <ArrowRight className="w-3 h-3" />
+          </div>
+        </button>
 
         {hasCriticalErrorPattern(quizResults ?? []) && (
-          <Card className="border-2 border-purple-200 dark:border-purple-800">
-            <CardHeader className="pb-3">
-              <CardTitle className="flex items-center gap-2 text-lg">
-                <RefreshCw className="w-5 h-5 text-purple-500" />
-                Smart Recovery
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="pb-5">
-              <p className="text-sm text-[var(--muted)] mb-4">
-                Falsch beantwortete Fragen nochmal durchgehen — mit Erklärung vor jeder Frage.
-              </p>
-              <Button
-                variant="outline"
-                onClick={() => navigate("/schwachstellen/recovery")}
-                className="gap-2"
-              >
-                <RefreshCw className="w-4 h-4" />
-                Recovery starten
-              </Button>
-            </CardContent>
-          </Card>
+          <button
+            onClick={() => navigate("/schwachstellen/recovery")}
+            className="group relative overflow-hidden rounded-xl border border-purple-500/20 p-5 text-left transition-all hover:border-purple-500/40 hover:shadow-lg hover:shadow-purple-500/5 cursor-pointer"
+            style={{ background: "linear-gradient(135deg, rgba(139,92,246,0.06), rgba(139,92,246,0.02))" }}
+          >
+            <div className="flex items-center gap-3 mb-2">
+              <div className="w-9 h-9 rounded-lg flex items-center justify-center bg-purple-500/10">
+                <RefreshCw className="w-4 h-4 text-purple-400" />
+              </div>
+              <div>
+                <span className="text-sm font-semibold text-[var(--text-primary)]">Smart Recovery</span>
+                <p className="text-xs text-[var(--muted)]">Fehlerfragen wiederholen</p>
+              </div>
+            </div>
+            <p className="text-xs text-[var(--muted)] leading-relaxed">
+              Falsch beantwortete Fragen nochmal durchgehen — mit Erklärung vor jeder Frage.
+            </p>
+            <div className="mt-3 inline-flex items-center gap-1.5 text-xs font-medium text-purple-500 group-hover:gap-2.5 transition-all">
+              <RefreshCw className="w-3 h-3" />
+              Recovery starten
+              <ArrowRight className="w-3 h-3" />
+            </div>
+          </button>
         )}
       </div>
 
       {/* Weak Topics */}
-      <Card>
-        <CardHeader className="pb-3">
-          <CardTitle className="flex items-center gap-2 text-lg">
-            <Target className="w-5 h-5 text-red-500" />
-            Deine Schwachstellen
-            {weakTopics.length === 0 && (
-              <Badge variant="default" className="ml-2 text-xs">
-                Noch keine Daten
-              </Badge>
-            )}
-          </CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-3">
-          {weakTopics.length === 0 ? (
-            <p className="text-sm text-[var(--muted)]">
-              Bearbeite zuerst einige Quizze, damit deine Schwachstellen erkannt werden.
-            </p>
-          ) : (
-            weakTopics.map((topic) => {
+      {weakTopics.length > 0 && (
+        <div className="space-y-3">
+          <div className="flex items-center gap-2 px-1">
+            <Target className="w-4 h-4 text-red-500" />
+            <h2 className="text-sm font-semibold text-[var(--text-primary)]">Deine Schwachstellen</h2>
+          </div>
+          <div className="space-y-2">
+            {weakTopics.map((topic) => {
               const sw = alleStichworteListe.find((s) => s.id === topic.stichwortId);
               const fc = fachColors[topic.fach];
               const chapterLink =
@@ -718,18 +728,24 @@ export default function SchwachstellenTrainer() {
               return (
                 <div
                   key={topic.stichwortId}
-                  className={`flex items-center justify-between p-3 rounded-lg ${fc?.bg || "bg-[var(--surface)]"}`}
+                  className="flex items-center justify-between p-3.5 rounded-xl border border-[var(--border)] bg-[var(--surface)] hover:border-[var(--border-hover)] transition-colors"
                 >
                   <div className="flex-1 min-w-0">
-                    <div className="flex items-center gap-2 mb-1">
-                      <span className={`text-sm font-medium ${fc?.text || ""}`}>{topic.thema}</span>
-                      <Badge variant="default" className="text-[10px]">
+                    <div className="flex items-center gap-2 mb-1.5">
+                      <div className={`w-2 h-2 rounded-full ${fc?.accent || "bg-slate-400"}`} />
+                      <span className="text-sm font-medium text-[var(--text-primary)]">{topic.thema}</span>
+                      <span className={`text-[10px] px-1.5 py-0.5 rounded-full ${fc?.bg || ""} ${fc?.text || ""}`}>
                         {fc?.label || topic.fach}
-                      </Badge>
+                      </span>
                     </div>
-                    <div className="flex items-center gap-3">
-                      <Progress value={topic.rate} className="flex-1 max-w-[120px]" />
-                      <span className="text-xs text-[var(--muted)]">{topic.rate}%</span>
+                    <div className="flex items-center gap-3 ml-4">
+                      <div className="h-1.5 flex-1 max-w-[140px] rounded-full bg-[var(--border)] overflow-hidden">
+                        <div
+                          className="h-full rounded-full transition-all"
+                          style={{ width: `${topic.rate}%`, background: topic.rate >= 60 ? "#10b981" : topic.rate >= 30 ? "#f59e0b" : "#ef4444" }}
+                        />
+                      </div>
+                      <span className="text-xs tabular-nums text-[var(--muted)]">{topic.rate}%</span>
                       <span className="text-[10px] text-[var(--muted)]">
                         {questionsAvailable} Fragen
                       </span>
@@ -741,7 +757,7 @@ export default function SchwachstellenTrainer() {
                         size="sm"
                         variant="ghost"
                         onClick={() => navigate(chapterLink)}
-                        className="text-xs"
+                        className="text-xs h-8"
                       >
                         <BookOpen className="w-3 h-3 mr-1" />
                         Lernen
@@ -752,6 +768,7 @@ export default function SchwachstellenTrainer() {
                       variant="outline"
                       onClick={() => startFocusedQuiz(topic.stichwortId)}
                       disabled={questionsAvailable === 0}
+                      className="h-8"
                     >
                       <RotateCcw className="w-3 h-3 mr-1" />
                       Üben
@@ -759,66 +776,51 @@ export default function SchwachstellenTrainer() {
                   </div>
                 </div>
               );
-            })
-          )}
-        </CardContent>
-      </Card>
+            })}
+          </div>
+        </div>
+      )}
+
+      {weakTopics.length === 0 && (
+        <Card>
+          <CardContent className="py-8 text-center">
+            <Target className="w-8 h-8 text-[var(--muted)] mx-auto mb-2" />
+            <p className="text-sm text-[var(--muted)]">
+              Bearbeite BMS-Quizze, damit deine Schwachstellen erkannt werden.
+            </p>
+          </CardContent>
+        </Card>
+      )}
 
       {/* Strong Topics */}
       {strongTopics.length > 0 && (
-        <Card>
-          <CardHeader className="pb-3">
-            <CardTitle className="flex items-center gap-2 text-lg">
-              <Trophy className="w-5 h-5 text-yellow-500" />
-              Deine Stärken
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-2">
+        <div className="space-y-3">
+          <div className="flex items-center gap-2 px-1">
+            <Trophy className="w-4 h-4 text-amber-500" />
+            <h2 className="text-sm font-semibold text-[var(--text-primary)]">Deine Stärken</h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
             {strongTopics.map((topic) => {
               const fc = fachColors[topic.fach];
               return (
                 <div
                   key={topic.stichwortId}
-                  className="flex items-center justify-between p-2 rounded-lg bg-green-50 dark:bg-green-900/10"
+                  className="flex items-center justify-between p-3 rounded-xl border border-emerald-500/10 bg-emerald-500/[0.03]"
                 >
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-green-500" />
-                    <span className="text-sm">{topic.thema}</span>
-                    <Badge variant="default" className="text-[10px]">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-500" />
+                    <span className="text-sm text-[var(--text-primary)]">{topic.thema}</span>
+                    <span className={`text-[10px] px-1.5 py-0.5 rounded-full ${fc?.bg || ""} ${fc?.text || ""}`}>
                       {fc?.label}
-                    </Badge>
+                    </span>
                   </div>
-                  <Badge variant="success">{topic.rate}%</Badge>
+                  <span className="text-xs font-semibold text-emerald-500 tabular-nums">{topic.rate}%</span>
                 </div>
               );
             })}
-          </CardContent>
-        </Card>
+          </div>
+        </div>
       )}
-
-      {/* Per-Fach Readiness */}
-      <Card>
-        <CardHeader className="pb-2">
-          <CardTitle className="text-sm font-semibold text-[var(--text-primary)]">Readiness pro Fach</CardTitle>
-        </CardHeader>
-        <CardContent className="grid grid-cols-4 gap-4 pb-5">
-          {(["biologie", "chemie", "physik", "mathematik"] as const).map((fach) => {
-            const r = adaptive.getFachReadiness(fach);
-            const fc = fachColors[fach];
-            return (
-              <div key={fach} className="text-center">
-                <div
-                  className={`w-10 h-10 ${fc.accent} rounded-xl mx-auto mb-2 flex items-center justify-center`}
-                >
-                  <span className="text-white text-sm font-bold">{r}%</span>
-                </div>
-                <p className="text-xs font-medium text-[var(--text-primary)]">{fc.label}</p>
-                <Progress value={r} className="mt-2" />
-              </div>
-            );
-          })}
-        </CardContent>
-      </Card>
     </div>
   );
 }
