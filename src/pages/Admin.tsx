@@ -537,41 +537,62 @@ export default function Admin() {
   const estRevenue = premiumCount * 29.9;
 
   return (
-    <div className="max-w-6xl mx-auto px-6 py-8">
-      {/* ── Header with auto-refresh + time range ── */}
-      <div className="flex items-center justify-between mb-8">
-        <div>
-          <h1 className="text-2xl font-bold text-[var(--text-primary)]">Admin Dashboard</h1>
-          <p className="text-sm text-[var(--muted)] flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse inline-block" />
-            Auto-Refresh · Letzte Aktualisierung {lastRefresh.toLocaleTimeString("de-AT", { hour: "2-digit", minute: "2-digit" })}
-          </p>
-        </div>
-        <div className="flex items-center gap-3">
-          {/* Time Range Picker */}
-          <div className="flex bg-[var(--surface)] border border-[var(--border)] rounded-lg overflow-hidden">
-            {([7, 14, 30] as TimeRange[]).map((r) => (
-              <button
-                key={r}
-                onClick={() => { setTimeRange(r); setLoading(true); }}
-                className={`px-3 py-1.5 text-xs font-medium transition-colors ${
-                  timeRange === r
-                    ? "bg-[var(--accent)] text-white"
-                    : "text-[var(--muted)] hover:text-[var(--text-primary)]"
-                }`}
-              >
-                {r}d
-              </button>
-            ))}
+    <div className="max-w-6xl mx-auto px-6 pt-2 pb-8">
+      {/* ── Sticky Top Bar ── */}
+      <div className="sticky top-0 z-20 -mx-6 px-6 py-2.5 mb-6 bg-[var(--surface)]/95 backdrop-blur border-b border-[var(--border)]">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-6">
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+              <span className="text-sm font-bold text-[var(--text-primary)]">MedMaster</span>
+            </div>
+            <div className="flex items-center gap-4 text-xs">
+              <span className="text-[var(--muted)]">Heute <strong className="text-[var(--text-primary)] text-sm">{todayUsers}</strong></span>
+              <span className="text-[var(--border)]">|</span>
+              <span className="text-[var(--muted)]">7d <strong className="text-[var(--text-primary)] text-sm">{stats.active_7d}</strong></span>
+              <span className="text-[var(--border)]">|</span>
+              <span className="text-[var(--muted)]">30d <strong className="text-[var(--text-primary)] text-sm">{stats.active_30d}</strong></span>
+              <span className="text-[var(--border)]">|</span>
+              <span className="text-[var(--muted)]">Total <strong className="text-[var(--text-primary)] text-sm">{stats.total_users}</strong></span>
+              <span className="text-[var(--border)]">|</span>
+              <span className="text-[var(--muted)]">Premium <strong className="text-amber-500 text-sm">{premiumCount}</strong></span>
+              <span className="text-[var(--border)]">|</span>
+              <span className="text-[var(--muted)]">€ <strong className="text-emerald-600 text-sm">{estRevenue.toFixed(0)}</strong></span>
+            </div>
           </div>
-          <button
-            onClick={() => { setLoading(true); fetchAll(); }}
-            className="text-sm px-4 py-2 rounded-lg bg-[var(--accent)] text-white font-medium hover:opacity-90 flex items-center gap-2"
-          >
-            <RefreshCw className="w-3.5 h-3.5" />
-            Aktualisieren
-          </button>
+          <div className="flex items-center gap-3">
+            <div className="flex bg-[var(--surface)] border border-[var(--border)] rounded-lg overflow-hidden">
+              {([7, 14, 30] as TimeRange[]).map((r) => (
+                <button
+                  key={r}
+                  onClick={() => { setTimeRange(r); setLoading(true); }}
+                  className={`px-2.5 py-1 text-[10px] font-medium transition-colors ${
+                    timeRange === r
+                      ? "bg-[var(--accent)] text-white"
+                      : "text-[var(--muted)] hover:text-[var(--text-primary)]"
+                  }`}
+                >
+                  {r}d
+                </button>
+              ))}
+            </div>
+            <button
+              onClick={() => { setLoading(true); fetchAll(); }}
+              className="p-1.5 rounded-lg bg-[var(--accent)] text-white hover:opacity-90"
+            >
+              <RefreshCw className="w-3.5 h-3.5" />
+            </button>
+            <span className="text-[10px] text-[var(--muted)]">
+              {lastRefresh.toLocaleTimeString("de-AT", { hour: "2-digit", minute: "2-digit" })}
+            </span>
+          </div>
         </div>
+      </div>
+
+      {/* ── Page Title ── */}
+      <div className="mb-8">
+        <h1 className="text-2xl font-bold text-[var(--text-primary)]">Admin Dashboard</h1>
+        <p className="text-sm text-[var(--muted)]">Kommandozentrale für Produkt & User</p>
       </div>
 
       {/* ── Pending Upgrades Alert (TOP — actionable!) ── */}
