@@ -149,7 +149,6 @@ export async function pullFromSupabase(userId: string): Promise<void> {
 
     if (Object.keys(patch).length > 0) {
       useStore.setState(patch);
-      if (import.meta.env.DEV) console.log("[main-sync] Pulled:", Object.keys(patch));
     }
   } catch (err) {
     if (isSchemaMissing(err)) {
@@ -196,7 +195,6 @@ export async function pushToSupabase(userId: string): Promise<void> {
       pushActivityLog(client, userId, s.activityLog),
     ]);
 
-    if (import.meta.env.DEV) console.log("[main-sync] Pushed");
   } catch (err) {
     if (isSchemaMissing(err)) {
       setSchemaSkip();

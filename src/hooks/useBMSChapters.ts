@@ -53,9 +53,8 @@ export function useBMSChapters(selectedSubject: string | null, completedChapters
         if (staticFallback.length > 0) {
           setSupabaseChapters(staticFallback);
           setIsLoading(false);
-          if (import.meta.env.DEV)
-            console.log(
-              `[BMS] Timeout — showing ${staticFallback.length} static chapters as fallback`
+            console.warn(
+              `[bms] Timeout — showing ${staticFallback.length} static chapters as fallback`
             );
         }
       }
@@ -67,13 +66,6 @@ export function useBMSChapters(selectedSubject: string | null, completedChapters
         clearTimeout(fallbackTimer);
         setSupabaseChapters(chapters);
         setIsLoading(false);
-        if (import.meta.env.DEV) {
-          console.log(
-            source === "cache"
-              ? "Showing cached chapters (revalidating in background)"
-              : `Loaded ${chapters.length} chapters from Supabase`
-          );
-        }
       },
       (err) => {
         if (!resolved) {

@@ -100,7 +100,6 @@ export async function loadBMSChaptersFromSupabase(): Promise<Kapitel[]> {
     }
 
     if (!data || data.length === 0) {
-      if (import.meta.env.DEV) console.log("No chapters found in Supabase");
       return [];
     }
 
@@ -374,7 +373,6 @@ export async function syncChaptersToSupabase(chapters: Kapitel[]): Promise<boole
       }
     }
 
-    if (import.meta.env.DEV) console.log(`✅ Synced ${chapters.length} chapters to Supabase`);
     return true;
   } catch (error) {
     console.error("Error syncing chapters to Supabase:", error);

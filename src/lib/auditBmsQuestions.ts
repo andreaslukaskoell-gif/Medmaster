@@ -194,7 +194,7 @@ function getPoolSnapshot(): { fach: string }[] {
 }
 
 export function logAuditReport(report: BmsAuditReport): void {
-  report.summary.forEach((s) => console.log("[BMS-Audit]", s));
+  report.summary.forEach((s) => console.warn("[BMS-Audit]", s));
   if (report.issues.length > 0) {
     console.warn("[BMS-Audit] Fehler (max. 30):", report.issues.slice(0, 30));
   }

@@ -52,6 +52,7 @@ export default function AuthPage() {
   const [isNewUser, setIsNewUser] = useState(false);
   const [otpSent, setOtpSent] = useState(false);
   const [showReregisterConfirm, setShowReregisterConfirm] = useState(false);
+  const [termsAccepted, setTermsAccepted] = useState(false);
   const { signIn, signUp, signInWithGoogle, signInWithOtp } = useAuth();
   const setMedATOnboardingComplete = useStore((s) => s.setMedATOnboardingComplete);
   const navigate = useNavigate();
@@ -148,6 +149,11 @@ export default function AuthPage() {
     setLoading(true);
 
     if (isNewUser) {
+      if (!termsAccepted) {
+        setError("Bitte akzeptiere die AGB und Datenschutzerklärung.");
+        setLoading(false);
+        return;
+      }
       const { error } = await signUp(email, password, "", undefined);
       setLoading(false);
       if (error) {
@@ -169,8 +175,8 @@ export default function AuthPage() {
           fbclid: getStoredFbclid(),
         });
         trackConversion("signup_completed", { method: "email", ref: getStoredRef(), email });
-        // Don't skip onboarding — let user set their display name first
-        navigate("/medat-onboarding");
+        // Go to dashboard — OnboardingWizard overlay handles name + welcome
+        navigate("/dashboard");
       }
     } else {
       const { error } = await signIn(email, password);
@@ -368,7 +374,22 @@ export default function AuthPage() {
                       />
                     </div>
 
-                    <Button type="submit" className="w-full py-5" disabled={loading}>
+                    <label className="flex items-start gap-2 text-xs text-[var(--muted)] cursor-pointer select-none">
+                      <input
+                        type="checkbox"
+                        checked={termsAccepted}
+                        onChange={(e) => setTermsAccepted(e.target.checked)}
+                        className="mt-0.5 rounded border-[var(--border)] accent-[var(--accent)]"
+                      />
+                      <span>
+                        Ich akzeptiere die{" "}
+                        <Link to="/agb" target="_blank" className="text-[var(--accent)] hover:underline">AGB</Link>{" "}
+                        und{" "}
+                        <Link to="/datenschutz" target="_blank" className="text-[var(--accent)] hover:underline">Datenschutzerklärung</Link>.
+                      </span>
+                    </label>
+
+                    <Button type="submit" className="w-full py-5" disabled={loading || !termsAccepted}>
                       {loading ? "Wird gesendet..." : "Anmeldelink senden"}
                     </Button>
                   </form>
@@ -434,7 +455,24 @@ export default function AuthPage() {
                       </button>
                     </div>
 
-                    <Button type="submit" className="w-full py-5" disabled={loading}>
+                    {isNewUser && (
+                      <label className="flex items-start gap-2 text-xs text-[var(--muted)] cursor-pointer select-none">
+                        <input
+                          type="checkbox"
+                          checked={termsAccepted}
+                          onChange={(e) => setTermsAccepted(e.target.checked)}
+                          className="mt-0.5 rounded border-[var(--border)] accent-[var(--accent)]"
+                        />
+                        <span>
+                          Ich akzeptiere die{" "}
+                          <Link to="/agb" target="_blank" className="text-[var(--accent)] hover:underline">AGB</Link>{" "}
+                          und{" "}
+                          <Link to="/datenschutz" target="_blank" className="text-[var(--accent)] hover:underline">Datenschutzerklärung</Link>.
+                        </span>
+                      </label>
+                    )}
+
+                    <Button type="submit" className="w-full py-5" disabled={loading || (isNewUser && !termsAccepted)}>
                       {loading ? "Wird verarbeitet..." : isNewUser ? "Konto erstellen" : "Anmelden"}
                     </Button>
 
@@ -468,11 +506,7 @@ export default function AuthPage() {
             </div>
 
             <p className="text-center text-xs text-[var(--muted)] leading-relaxed">
-              Mit der Anmeldung akzeptierst du die{" "}
-              <Link to="/agb" target="_blank" className="text-[var(--accent)] hover:underline">
-                AGB
-              </Link>{" "}
-              und{" "}
+              Wir verarbeiten deine Daten gemäß unserer{" "}
               <Link
                 to="/datenschutz"
                 target="_blank"

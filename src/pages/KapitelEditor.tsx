@@ -549,7 +549,6 @@ export default function KapitelEditor() {
       console.warn("Konnte Datei-Existenz nicht prüfen, verwende Basis-Name:", error);
     }
 
-    console.log(`📝 Generierter eindeutiger Dateiname: ${filename} (aus Basis: ${baseFilename})`);
     return filename;
   };
 
@@ -599,19 +598,12 @@ export default function KapitelEditor() {
             isIndexFile
           );
 
-          console.log(`📁 Speichere Datei: ${relativePath}`, {
-            baseFilename,
-            uniqueFilename,
-            isIndexFile,
-          });
-
           // Erstelle Datei (create: true erlaubt Überschreiben, aber wir haben bereits einen eindeutigen Namen)
           const fileHandle = await currentHandle.getFileHandle(uniqueFilename, { create: true });
           const writable = await fileHandle.createWritable();
           await writable.write(content);
           await writable.close();
 
-          console.log(`✅ Datei gespeichert: ${relativePath} (als ${uniqueFilename})`);
           return { success: true, filename: uniqueFilename };
         } catch (error) {
           console.error("Fehler beim Speichern im Projektordner:", error);
@@ -629,7 +621,6 @@ export default function KapitelEditor() {
       a.click();
       document.body.removeChild(a);
       URL.revokeObjectURL(url);
-      console.log(`📥 Datei als Download bereitgestellt: ${baseFilename}`);
       return { success: false, filename: baseFilename };
     } catch (error: any) {
       console.error("Fehler beim Speichern:", error);
@@ -645,8 +636,7 @@ export default function KapitelEditor() {
         a.click();
         document.body.removeChild(a);
         URL.revokeObjectURL(url);
-        console.log(`📥 Datei als Download bereitgestellt: ${baseFilename}`);
-        return { success: false, filename: baseFilename };
+          return { success: false, filename: baseFilename };
       } catch (downloadError) {
         console.error("Fehler beim Download:", downloadError);
         return { success: false, filename: baseFilename };
@@ -777,7 +767,6 @@ export default function KapitelEditor() {
           icon: subjectIcons[subject] || "📚",
           estimatedTime: "",
         });
-        console.log("✅ New chapter created with subchapter:", chapterId, chapterTitle);
       } else {
         // Existierendes Überkapitel verwenden
         const existingChapter =
@@ -792,7 +781,6 @@ export default function KapitelEditor() {
           icon: existingChapter.icon,
           estimatedTime: existingChapter.estimatedTime || "",
         });
-        console.log("✅ Subchapter added to existing chapter:", chapterId);
       }
 
       // Lade aktualisiertes Kapitel
@@ -802,8 +790,6 @@ export default function KapitelEditor() {
       }
 
       const allSubchapters = updatedChapter.unterkapitel || [];
-
-      console.log(`📚 Chapter now has ${allSubchapters.length} subchapter(s)`);
 
       // Generiere TypeScript-Code mit ALLEN Unterkapiteln
       const subchaptersCode = allSubchapters

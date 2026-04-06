@@ -246,12 +246,6 @@ export async function pushStatsToSupabase(
       }
     }
 
-    if (import.meta.env.DEV)
-      console.log("[sync] Pushed stats to Supabase:", {
-        stichwortCount: stichwortRows.length,
-        fachCount: fachRows.length,
-        errors: errors.length > 0 ? errors : undefined,
-      });
     useSyncStatus.getState().setLastSynced(new Date().toISOString());
     return {
       ok: true,
@@ -307,7 +301,6 @@ export async function pullStatsFromSupabase(
       return { ok: true };
     }
     if (!profileData) {
-      if (import.meta.env.DEV) console.log("[sync] No profile row yet, keeping local state");
       return { ok: true };
     }
 
@@ -345,7 +338,6 @@ export async function pullStatsFromSupabase(
     const remoteHasData = (profileData?.total_questions_answered ?? 0) > 0 || swData.length > 0;
 
     if (!remoteHasData) {
-      if (import.meta.env.DEV) console.log("[sync] No remote data found, keeping localStorage");
       return { ok: true };
     }
 
@@ -357,8 +349,6 @@ export async function pullStatsFromSupabase(
     const localTotal = localProfile.totalQuestionsAnswered;
 
     if (remoteTotal <= localTotal && localTotal > 0) {
-      if (import.meta.env.DEV)
-        console.log("[sync] Local data is newer, pushing to Supabase instead");
       await pushStatsToSupabase(userId);
       return { ok: true };
     }
@@ -430,11 +420,6 @@ export async function pullStatsFromSupabase(
       },
     });
 
-    if (import.meta.env.DEV)
-      console.log("[sync] Pulled stats from Supabase:", {
-        stichwortCount: Object.keys(stichwortStats).length,
-        totalAnswered: remoteTotal,
-      });
     return { ok: true };
   } catch (err: unknown) {
     const msg = err instanceof Error ? err.message : String(err);

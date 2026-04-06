@@ -108,14 +108,9 @@ export default function BMS() {
     (window as any).showChapters = printChapterOverview;
     (window as any).listChapters = listAllChapters;
     (window as any).migrateBMSChapters = async () => {
-      if (import.meta.env.DEV) console.log("Starte Migration von localStorage zu Supabase...");
       try {
         const result = await migrateBMSChaptersToSupabase();
         if (result.success) {
-          if (import.meta.env.DEV)
-            console.log(
-              `Migration erfolgreich! ${result.chaptersMigrated} Kapitel, ${result.subchaptersMigrated} Unterkapitel migriert.`
-            );
           if (result.errors.length > 0) console.warn("Einige Fehler:", result.errors);
           setTimeout(() => window.location.reload(), 1000);
         } else {
@@ -129,7 +124,6 @@ export default function BMS() {
     };
     (window as any).checkMigrationStatus = async () => {
       const status = await checkMigrationStatus();
-      if (import.meta.env.DEV) console.log("Migration Status:", status);
       return status;
     };
   }, []);
