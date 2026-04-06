@@ -14,18 +14,16 @@ import {
   Tooltip,
 } from "recharts";
 import {
-  Target,
   BarChart3,
-  TrendingUp,
-  Award,
   ArrowRight,
   ArrowUpRight,
   ArrowDownRight,
   Minus,
   CheckCircle2,
-  BookOpen,
   CalendarDays,
   Timer,
+  AlertTriangle,
+  Zap,
 } from "lucide-react";
 import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
 import { StreakFlameIcon } from "@/components/dashboard/StreakFire";
@@ -34,8 +32,7 @@ import { usePageTitle } from "@/hooks/usePageTitle";
 import { useStore, useStoreHydrated } from "@/store/useStore";
 import { useProgressAnalytics } from "@/hooks/useProgressAnalytics";
 import { alleKapitel } from "@/data/bmsKapitel";
-import { getLevelFromXP, getLevelProgressPercent } from "@/lib/progression";
-import { useViewportMode } from "@/hooks/useViewportMode";
+import { getLevelFromXP, getLevelProgressPercent, getLevelName } from "@/lib/progression";
 
 // ── Subject config ──────────────────────────────────────────
 const SUBJECT_CONFIG: Record<string, { label: string; color: string; chartColor: string }> = {
@@ -54,55 +51,94 @@ const SECTION_COLORS: Record<string, string> = {
 
 type TimeRange = 7 | 14 | 30;
 
-// ── Mini Sparkline (pure SVG) ───────────────────────────────
-function MiniSparkline({ data, color }: { data: number[]; color: string }) {
-  const maxVal = Math.max(...data, 1);
-  const w = 112;
-  const h = 32;
-  const pad = 2;
+// ── SVG Readiness Ring ──────────────────────────────────────
+function ReadinessRing({ value, size = 140 }: { value: number; size?: number }) {
+  const strokeWidth = 10;
+  const radius = (size - strokeWidth) / 2;
+  const circumference = 2 * Math.PI * radius;
+  const offset = circumference - (value / 100) * circumference;
+  const color =
+    value >= 70 ? "#10b981" : value >= 40 ? "#f59e0b" : value >= 10 ? "#ef4444" : "var(--border)";
 
-  const points = data.map((v, i) => {
-    const x = pad + (i / (data.length - 1)) * (w - 2 * pad);
-    const y = h - pad - (v / maxVal) * (h - 2 * pad);
-    return `${x},${y}`;
-  });
-
-  const hasData = data.some((v) => v > 0);
-  if (!hasData) {
-    return (
-      <svg width={w} height={h} className="opacity-30">
-        <line
-          x1={pad}
-          y1={h / 2}
-          x2={w - pad}
-          y2={h / 2}
-          stroke={color}
-          strokeWidth={1.5}
-          strokeDasharray="4 4"
+  return (
+    <div className="relative" style={{ width: size, height: size }}>
+      <svg width={size} height={size} className="-rotate-90">
+        <circle
+          cx={size / 2}
+          cy={size / 2}
+          r={radius}
+          fill="none"
+          stroke="var(--border)"
+          strokeWidth={strokeWidth}
+          strokeOpacity={0.3}
         />
+        <circle
+          cx={size / 2}
+          cy={size / 2}
+          r={radius}
+          fill="none"
+          stroke={color}
+          strokeWidth={strokeWidth}
+          strokeLinecap="round"
+          strokeDasharray={circumference}
+          strokeDashoffset={offset}
+          className="transition-all duration-1000 ease-out"
+        />
+      </svg>
+      <div className="absolute inset-0 flex flex-col items-center justify-center">
+        <span className="text-3xl font-bold text-[var(--text-primary)] tabular-nums">{value}%</span>
+        <span className="text-[10px] text-[var(--muted)] uppercase tracking-wider">Readiness</span>
+      </div>
+    </div>
+  );
+}
+
+// ── Mini Sparkline (pure SVG) ───────────────────────────────
+function MiniSparkline({ data, color, width = 120, height = 36 }: { data: number[]; color: string; width?: number; height?: number }) {
+  const pad = 2;
+  // Filter out zero values for a cleaner line (only show active days)
+  const activePoints = data.map((v, i) => ({ v, i })).filter((p) => p.v > 0);
+
+  if (activePoints.length < 2) {
+    return (
+      <svg width={width} height={height} className="opacity-30">
+        <line x1={pad} y1={height / 2} x2={width - pad} y2={height / 2} stroke={color} strokeWidth={1.5} strokeDasharray="4 4" />
       </svg>
     );
   }
 
+  const maxVal = Math.max(...activePoints.map((p) => p.v), 1);
+  const points = activePoints.map((p) => {
+    const x = pad + (p.i / (data.length - 1)) * (width - 2 * pad);
+    const y = height - pad - (p.v / maxVal) * (height - 2 * pad);
+    return `${x},${y}`;
+  });
+
+  // Area fill
+  const firstX = pad + (activePoints[0].i / (data.length - 1)) * (width - 2 * pad);
+  const lastX = pad + (activePoints[activePoints.length - 1].i / (data.length - 1)) * (width - 2 * pad);
+  const areaPoints = `${firstX},${height - pad} ${points.join(" ")} ${lastX},${height - pad}`;
+
   return (
-    <svg width={w} height={h}>
-      <polyline
-        fill="none"
-        stroke={color}
-        strokeWidth={1.5}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        points={points.join(" ")}
-      />
+    <svg width={width} height={height}>
+      <polygon fill={color} fillOpacity={0.1} points={areaPoints} />
+      <polyline fill="none" stroke={color} strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" points={points.join(" ")} />
+      {/* Dot on last value */}
+      {activePoints.length > 0 && (() => {
+        const last = activePoints[activePoints.length - 1];
+        const cx = pad + (last.i / (data.length - 1)) * (width - 2 * pad);
+        const cy = height - pad - (last.v / maxVal) * (height - 2 * pad);
+        return <circle cx={cx} cy={cy} r={2.5} fill={color} />;
+      })()}
     </svg>
   );
 }
 
 // ── Trend Icon ──────────────────────────────────────────────
 function TrendIcon({ trend }: { trend: "up" | "down" | "stable" }) {
-  if (trend === "up") return <ArrowUpRight className="w-4 h-4 text-emerald-500" />;
-  if (trend === "down") return <ArrowDownRight className="w-4 h-4 text-red-500" />;
-  return <Minus className="w-4 h-4 text-[var(--muted)]" />;
+  if (trend === "up") return <ArrowUpRight className="w-3.5 h-3.5 text-emerald-500" />;
+  if (trend === "down") return <ArrowDownRight className="w-3.5 h-3.5 text-red-500" />;
+  return <Minus className="w-3.5 h-3.5 text-[var(--muted)]" />;
 }
 
 // ── Score color helper ──────────────────────────────────────
@@ -112,13 +148,7 @@ function scoreColor(pct: number): string {
   return "text-red-500";
 }
 
-function scoreBg(pct: number): string {
-  if (pct >= 70) return "bg-emerald-500/10";
-  if (pct >= 40) return "bg-amber-500/10";
-  return "bg-red-500/10";
-}
-
-// ── Type badge color ────────────────────────────────────────
+// ── Type badge ──────────────────────────────────────────────
 function typeBadge(type: string) {
   const map: Record<string, { bg: string; text: string }> = {
     bms: { bg: "bg-teal-500/15", text: "text-teal-600 dark:text-teal-400" },
@@ -129,35 +159,29 @@ function typeBadge(type: string) {
   };
   const style = map[type] ?? { bg: "bg-[var(--surface)]", text: "text-[var(--muted)]" };
   return (
-    <span
-      className={`text-[10px] uppercase font-semibold tracking-wider px-2 py-0.5 rounded-full ${style.bg} ${style.text}`}
-    >
+    <span className={`text-[10px] uppercase font-semibold tracking-wider px-2 py-0.5 rounded-full ${style.bg} ${style.text}`}>
       {type === "simulation" ? "SIM" : (type || "BMS").toUpperCase()}
     </span>
   );
 }
 
-// ── Format duration ─────────────────────────────────────────
+// ── Format helpers ──────────────────────────────────────────
 function formatDuration(minutes?: number): string {
   if (!minutes) return "--";
-  if (minutes < 1) return "<1 Min";
-  if (minutes < 60) return `${Math.round(minutes)} Min`;
+  if (minutes < 1) return "<1m";
+  if (minutes < 60) return `${Math.round(minutes)}m`;
   const h = Math.floor(minutes / 60);
   const m = Math.round(minutes % 60);
   return `${h}h ${m}m`;
 }
 
-// ── Format date ─────────────────────────────────────────────
 function formatDate(dateStr: string): string {
-  // Handle ISO "2026-03-20" format
   const isoMatch = dateStr.match(/^(\d{4})-(\d{2})-(\d{2})/);
-  if (isoMatch) return `${isoMatch[3]}.${isoMatch[2]}.${isoMatch[1]}`;
-  // Handle German "20.3.2026" format — already in display format
-  if (/^\d{1,2}\.\d{1,2}\.\d{4}$/.test(dateStr)) return dateStr;
+  if (isoMatch) return `${isoMatch[3]}.${isoMatch[2]}`;
+  if (/^\d{1,2}\.\d{1,2}\.\d{4}$/.test(dateStr)) return dateStr.split(".").slice(0, 2).join(".");
   return dateStr;
 }
 
-// ── Subject label for session ───────────────────────────────
 function subjectLabel(subject?: string): string {
   if (!subject) return "--";
   return SUBJECT_CONFIG[subject]?.label ?? subject;
@@ -170,7 +194,6 @@ function subjectLabel(subject?: string): string {
 export default function FortschrittPage() {
   usePageTitle("Fortschritt");
   const { isLocked } = usePermissions();
-  const { isMobile } = useViewportMode();
   const hydrated = useStoreHydrated();
 
   const completedChapters = useStore((s) => s.completedChapters ?? []);
@@ -187,6 +210,7 @@ export default function FortschrittPage() {
     accuracyOverTime,
     practiceDistribution,
     recentSessions,
+    overallReadiness,
     weakTopics,
     totalStats,
   } = analytics;
@@ -207,23 +231,27 @@ export default function FortschrittPage() {
 
   const level = getLevelFromXP(xp);
   const levelProgress = getLevelProgressPercent(xp);
+  const levelName = getLevelName(level);
 
-  // Filter accuracyOverTime by selected timeRange
+  // Filter accuracyOverTime: only days with activity for chart
   const filteredAccuracy = useMemo(() => {
     return accuracyOverTime.slice(-timeRange);
   }, [accuracyOverTime, timeRange]);
 
-  // Weak topics grouped by subject (top 2 per subject)
-  const weakBySubject = useMemo(() => {
-    const grouped: Record<string, string[]> = {};
-    for (const t of weakTopics) {
-      if (!grouped[t.fach]) grouped[t.fach] = [];
-      if (grouped[t.fach].length < 2) grouped[t.fach].push(t.topic);
-    }
-    return grouped;
-  }, [weakTopics]);
+  // Accuracy chart: connect only active days (skip zeros)
+  const activeAccuracy = useMemo(() => {
+    return filteredAccuracy.filter((d) => d.overall > 0);
+  }, [filteredAccuracy]);
 
-  // Wait for store hydration to avoid flashing empty state when data exists in localStorage
+  // Weak topics (top 5 across all subjects)
+  const topWeakTopics = useMemo(() => weakTopics.slice(0, 5), [weakTopics]);
+
+  // Overall accuracy %
+  const overallAccuracy = useMemo(() => {
+    if (totalStats.questionsAnswered === 0) return 0;
+    return Math.round((totalStats.correctAnswers / totalStats.questionsAnswered) * 100);
+  }, [totalStats]);
+
   const hasAnyData = hydrated && (recentSessions.length > 0 || totalStats.questionsAnswered > 0);
 
   if (isLocked("fortschritt")) {
@@ -244,155 +272,147 @@ export default function FortschrittPage() {
   return (
     <div className="min-h-screen bg-[var(--dashboard-bg)]">
       <div className="max-w-6xl mx-auto px-4 py-8 pb-12">
-        {/* ── Hero ──────────────────────────────────────── */}
-        <div className="hero-orbs text-center mb-10 py-8">
-          <h1 className="heading-glow text-2xl sm:text-[3rem] sm:leading-tight font-bold text-[var(--text-primary)] mb-2">
-            Fortschritt
-          </h1>
-          <p className="text-[var(--muted)]">
-            Dein analytisches Dashboard — Leistung, Trends und Schwachstellen auf einen Blick.
-          </p>
-        </div>
 
-        {/* ── Quick Stats Bar ───────────────────────────── */}
-        <div className="card-glass mb-6 p-5">
-          <div
-            className={`grid ${isMobile ? "grid-cols-2" : "grid-cols-4"} gap-4 items-center`}
-            data-mobile-keep
-          >
-            <div>
-              <p className="text-xs text-[var(--muted)] uppercase tracking-wide">Level</p>
-              <p className="text-2xl font-bold text-[var(--text-primary)]">
-                <AnimatedCounter value={level} />
-              </p>
-              <div className="mt-1.5">
+        {/* ══════════════════════════════════════════════════════
+            HERO: Readiness Ring + Key Stats
+        ══════════════════════════════════════════════════════ */}
+        <div className="card-glass p-6 mb-6">
+          <div className="flex items-center gap-8">
+            {/* Readiness Ring */}
+            <div className="shrink-0">
+              <ReadinessRing value={overallReadiness} />
+            </div>
+
+            {/* Stats Grid */}
+            <div className="flex-1 grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-4">
+              {/* Level */}
+              <div>
+                <p className="text-xs text-[var(--muted)] mb-1">Level {level}</p>
+                <p className="text-lg font-bold text-[var(--text-primary)]">{levelName}</p>
                 <Progress
                   value={levelProgress}
-                  className="h-1.5 rounded-full bg-[var(--border)]/40"
+                  className="h-1 rounded-full bg-[var(--border)]/40 mt-1.5"
                   barClassName="bg-linear-to-r from-[var(--accent)] to-emerald-400"
                 />
+                <p className="text-[10px] text-[var(--muted)] mt-1">
+                  <AnimatedCounter value={xp} /> XP
+                </p>
               </div>
-            </div>
-            <div>
-              <p className="text-xs text-[var(--muted)] uppercase tracking-wide">XP</p>
-              <p className="text-2xl font-bold text-[var(--text-primary)]">
-                <AnimatedCounter value={xp} />
-              </p>
-              <p className="text-[10px] text-[var(--muted)] mt-1.5">Gesamte Erfahrungspunkte</p>
-            </div>
-            <div className="flex items-center gap-2">
-              <StreakFlameIcon
-                streak={streak}
-                hasActivityToday={hasActivityToday}
-                size="sm"
-                className="w-6 h-6 text-[var(--accent)]"
-              />
+
+              {/* Streak */}
               <div>
-                <p className="text-xs text-[var(--muted)] uppercase tracking-wide">Streak</p>
-                <p className="text-2xl font-bold text-[var(--text-primary)]">
-                  <AnimatedCounter value={streak} suffix=" Tage" />
+                <p className="text-xs text-[var(--muted)] mb-1">Streak</p>
+                <div className="flex items-center gap-1.5">
+                  <StreakFlameIcon streak={streak} hasActivityToday={hasActivityToday} size="sm" className="w-5 h-5" />
+                  <span className="text-lg font-bold text-[var(--text-primary)]">
+                    <AnimatedCounter value={streak} /> Tage
+                  </span>
+                </div>
+                <p className="text-[10px] text-[var(--muted)] mt-1.5">
+                  {hasActivityToday ? "Heute aktiv" : "Heute noch nicht gelernt"}
+                </p>
+              </div>
+
+              {/* Accuracy */}
+              <div>
+                <p className="text-xs text-[var(--muted)] mb-1">Genauigkeit</p>
+                <p className={`text-lg font-bold tabular-nums ${scoreColor(overallAccuracy)}`}>
+                  {overallAccuracy}%
+                </p>
+                <p className="text-[10px] text-[var(--muted)] mt-1.5">
+                  <AnimatedCounter value={totalStats.correctAnswers} /> / <AnimatedCounter value={totalStats.questionsAnswered} /> richtig
+                </p>
+              </div>
+
+              {/* BMS Progress */}
+              <div>
+                <p className="text-xs text-[var(--muted)] mb-1">BMS Kapitel</p>
+                <p className="text-lg font-bold text-[var(--text-primary)] tabular-nums">
+                  {bmsProgressPct}%
+                </p>
+                <Progress
+                  value={bmsProgressPct}
+                  className="h-1 rounded-full bg-[var(--border)]/40 mt-1.5"
+                  barClassName="bg-linear-to-r from-[var(--accent)] to-teal-400"
+                />
+                <p className="text-[10px] text-[var(--muted)] mt-1">
+                  {totalStats.chaptersCompleted}/{totalStats.totalChapters} abgeschlossen
                 </p>
               </div>
             </div>
-            <div>
-              <p className="text-xs text-[var(--muted)] uppercase tracking-wide">BMS Kapitel</p>
-              <p className="text-2xl font-bold text-[var(--text-primary)]">
-                <AnimatedCounter value={bmsProgressPct} suffix="%" />
-              </p>
-              <div className="mt-1.5">
-                <Progress
-                  value={bmsProgressPct}
-                  className="h-1.5 rounded-full bg-[var(--border)]/40"
-                  barClassName="bg-linear-to-r from-[var(--accent)] to-teal-400"
-                />
-              </div>
+          </div>
+
+          {/* Quick stats strip below */}
+          <div className="grid grid-cols-3 gap-4 mt-5 pt-5 border-t border-[var(--border)]/30">
+            <div className="flex items-center gap-2">
+              <CalendarDays className="w-4 h-4 text-blue-500" />
+              <span className="text-sm text-[var(--text-secondary)]">
+                <strong className="text-[var(--text-primary)]"><AnimatedCounter value={totalStats.learningDays} /></strong> Lerntage
+              </span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Timer className="w-4 h-4 text-violet-500" />
+              <span className="text-sm text-[var(--text-secondary)]">
+                <strong className="text-[var(--text-primary)]"><AnimatedCounter value={totalStats.totalMinutes} /></strong> Minuten
+              </span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle2 className="w-4 h-4 text-[var(--accent)]" />
+              <span className="text-sm text-[var(--text-secondary)]">
+                <strong className="text-[var(--text-primary)]"><AnimatedCounter value={totalStats.questionsAnswered} /></strong> Fragen
+              </span>
             </div>
           </div>
         </div>
 
-        {/* ── Subject Performance Grid ──────────────────── */}
-        <div
-          className={`grid ${isMobile ? "grid-cols-2 gap-3" : "grid-cols-4 gap-4"} mb-8`}
-          data-mobile-keep
-        >
+        {/* ══════════════════════════════════════════════════════
+            SUBJECT PERFORMANCE: 4 compact cards
+        ══════════════════════════════════════════════════════ */}
+        <div className="grid grid-cols-4 gap-4 mb-6">
           {(["biologie", "chemie", "physik", "mathematik"] as const).map((subject) => {
             const cfg = SUBJECT_CONFIG[subject];
             const acc = subjectAccuracy[subject];
-            const weak = weakBySubject[subject] ?? [];
 
-            // Color classes by subject
-            const accentClass: Record<string, string> = {
-              emerald: "text-emerald-500",
-              red: "text-red-500",
-              blue: "text-blue-500",
-              amber: "text-amber-500",
+            const dotClass: Record<string, string> = {
+              emerald: "bg-emerald-500", red: "bg-red-500", blue: "bg-blue-500", amber: "bg-amber-500",
             };
             const borderClass: Record<string, string> = {
-              emerald: "border-emerald-500/30",
-              red: "border-red-500/30",
-              blue: "border-blue-500/30",
-              amber: "border-amber-500/30",
-            };
-            const dotClass: Record<string, string> = {
-              emerald: "bg-emerald-500",
-              red: "bg-red-500",
-              blue: "bg-blue-500",
-              amber: "bg-amber-500",
+              emerald: "border-emerald-500/20", red: "border-red-500/20", blue: "border-blue-500/20", amber: "border-amber-500/20",
             };
 
             return (
               <div key={subject} className={`card-glass p-4 border-t-2 ${borderClass[cfg.color]}`}>
-                {/* Header */}
-                <div className="flex items-center gap-2 mb-3">
-                  <div className={`w-2.5 h-2.5 rounded-full ${dotClass[cfg.color]}`} />
-                  <span className="text-sm font-semibold text-[var(--text-primary)]">
-                    {cfg.label}
-                  </span>
-                </div>
-
-                {/* Accuracy */}
-                <div className="flex items-baseline gap-2 mb-1">
-                  <span className={`text-3xl font-bold tabular-nums ${accentClass[cfg.color]}`}>
-                    {acc?.current ?? 0}%
-                  </span>
+                <div className="flex items-center justify-between mb-2">
+                  <div className="flex items-center gap-2">
+                    <div className={`w-2 h-2 rounded-full ${dotClass[cfg.color]}`} />
+                    <span className="text-xs font-semibold text-[var(--text-primary)]">{cfg.label}</span>
+                  </div>
                   <TrendIcon trend={acc?.trend ?? "stable"} />
                 </div>
 
-                {/* Total questions */}
-                <p className="text-xs text-[var(--muted)] mb-3">
-                  {acc?.total ?? 0} Fragen beantwortet
-                </p>
-
-                {/* Sparkline */}
-                <div className="mb-3">
-                  <MiniSparkline data={acc?.sparkline ?? []} color={cfg.chartColor} />
+                <div className="flex items-baseline gap-1.5 mb-1">
+                  <span className="text-2xl font-bold tabular-nums text-[var(--text-primary)]">
+                    {acc?.current ?? 0}%
+                  </span>
                 </div>
 
-                {/* Weak topics */}
-                {weak.length > 0 ? (
-                  <div className="space-y-1">
-                    <p className="text-[10px] text-[var(--muted)] uppercase tracking-wider">
-                      Schwachstellen
-                    </p>
-                    {weak.map((t) => (
-                      <p key={t} className="text-xs text-[var(--text-secondary)] truncate">
-                        {t}
-                      </p>
-                    ))}
-                  </div>
-                ) : (
-                  <p className="text-[10px] text-[var(--muted)] italic">Keine Daten</p>
-                )}
+                <p className="text-[10px] text-[var(--muted)] mb-2">
+                  {acc?.total ?? 0} Fragen
+                </p>
+
+                <MiniSparkline data={acc?.sparkline ?? []} color={cfg.chartColor} width={140} height={32} />
               </div>
             );
           })}
         </div>
 
-        {/* ── Charts: Two-column ────────────────────────── */}
+        {/* ══════════════════════════════════════════════════════
+            SCHWACHSTELLEN + CHARTS (2-column)
+        ══════════════════════════════════════════════════════ */}
         {hasAnyData && (
-          <div className={`grid ${isMobile ? "grid-cols-1 gap-4" : "grid-cols-2 gap-6"} mb-8`}>
-            {/* Accuracy Trend Chart */}
-            <div className="card-glass p-5">
+          <div className="grid grid-cols-3 gap-6 mb-6">
+            {/* Accuracy Trend Chart — takes 2 cols */}
+            <div className="col-span-2 card-glass p-5">
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-sm font-semibold text-[var(--text-primary)]">
                   Genauigkeit im Zeitverlauf
@@ -413,9 +433,9 @@ export default function FortschrittPage() {
                   ))}
                 </div>
               </div>
-              <ResponsiveContainer width="100%" height={260}>
-                <LineChart data={filteredAccuracy}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" strokeOpacity={0.5} />
+              <ResponsiveContainer width="100%" height={240}>
+                <LineChart data={activeAccuracy.length >= 2 ? activeAccuracy : filteredAccuracy}>
+                  <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" strokeOpacity={0.3} />
                   <XAxis
                     dataKey="date"
                     tick={{ fontSize: 10, fill: "var(--muted)" }}
@@ -425,11 +445,7 @@ export default function FortschrittPage() {
                     }}
                     interval="preserveStartEnd"
                   />
-                  <YAxis
-                    domain={[0, 100]}
-                    tick={{ fontSize: 10, fill: "var(--muted)" }}
-                    width={30}
-                  />
+                  <YAxis domain={[0, 100]} tick={{ fontSize: 10, fill: "var(--muted)" }} width={28} />
                   <Tooltip
                     contentStyle={{
                       backgroundColor: "var(--card)",
@@ -441,131 +457,123 @@ export default function FortschrittPage() {
                       const parts = String(v).split("-");
                       return `${parts[2]}.${parts[1]}.${parts[0]}`;
                     }}
+                    formatter={(value?: number, name?: string) => [`${value ?? 0}%`, name ?? ""]}
                   />
-                  <Line
-                    type="monotone"
-                    dataKey="overall"
-                    stroke="var(--accent)"
-                    strokeWidth={2}
-                    dot={false}
-                    name="Gesamt"
-                  />
-                  <Line
-                    type="monotone"
-                    dataKey="bio"
-                    stroke="#10b981"
-                    strokeWidth={1.5}
-                    dot={false}
-                    strokeDasharray="4 2"
-                    name="Bio"
-                  />
-                  <Line
-                    type="monotone"
-                    dataKey="ch"
-                    stroke="#ef4444"
-                    strokeWidth={1.5}
-                    dot={false}
-                    strokeDasharray="4 2"
-                    name="Chemie"
-                  />
-                  <Line
-                    type="monotone"
-                    dataKey="ph"
-                    stroke="#3b82f6"
-                    strokeWidth={1.5}
-                    dot={false}
-                    strokeDasharray="4 2"
-                    name="Physik"
-                  />
-                  <Line
-                    type="monotone"
-                    dataKey="ma"
-                    stroke="#f59e0b"
-                    strokeWidth={1.5}
-                    dot={false}
-                    strokeDasharray="4 2"
-                    name="Mathe"
-                  />
+                  <Line type="monotone" dataKey="overall" stroke="var(--accent)" strokeWidth={2.5} dot={{ r: 3, fill: "var(--accent)" }} activeDot={{ r: 5 }} name="Gesamt" />
+                  <Line type="monotone" dataKey="bio" stroke="#10b981" strokeWidth={1.5} dot={false} strokeDasharray="4 2" name="Bio" />
+                  <Line type="monotone" dataKey="ch" stroke="#ef4444" strokeWidth={1.5} dot={false} strokeDasharray="4 2" name="Chemie" />
+                  <Line type="monotone" dataKey="ph" stroke="#3b82f6" strokeWidth={1.5} dot={false} strokeDasharray="4 2" name="Physik" />
+                  <Line type="monotone" dataKey="ma" stroke="#f59e0b" strokeWidth={1.5} dot={false} strokeDasharray="4 2" name="Mathe" />
                 </LineChart>
               </ResponsiveContainer>
-              {/* Legend */}
-              <div className="flex items-center gap-4 mt-3 justify-center">
+              <div className="flex items-center gap-4 mt-2 justify-center">
                 <span className="flex items-center gap-1 text-[10px] text-[var(--muted)]">
                   <span className="w-3 h-0.5 bg-[var(--accent)] inline-block rounded" /> Gesamt
                 </span>
                 {Object.entries(SUBJECT_CONFIG).map(([, cfg]) => (
-                  <span
-                    key={cfg.label}
-                    className="flex items-center gap-1 text-[10px] text-[var(--muted)]"
-                  >
-                    <span
-                      className="w-3 h-0.5 inline-block rounded"
-                      style={{ backgroundColor: cfg.chartColor }}
-                    />{" "}
-                    {cfg.label.slice(0, 3)}
+                  <span key={cfg.label} className="flex items-center gap-1 text-[10px] text-[var(--muted)]">
+                    <span className="w-3 h-0.5 inline-block rounded" style={{ backgroundColor: cfg.chartColor }} /> {cfg.label.slice(0, 3)}
                   </span>
                 ))}
               </div>
             </div>
 
-            {/* Practice Distribution Chart */}
+            {/* Schwachstellen sidebar — 1 col */}
             <div className="card-glass p-5">
-              <h3 className="text-sm font-semibold text-[var(--text-primary)] mb-4">
-                Lernverteilung pro Woche
-              </h3>
-              <ResponsiveContainer width="100%" height={260}>
-                <BarChart data={practiceDistribution}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" strokeOpacity={0.5} />
-                  <XAxis dataKey="week" tick={{ fontSize: 10, fill: "var(--muted)" }} />
-                  <YAxis tick={{ fontSize: 10, fill: "var(--muted)" }} width={30} />
-                  <Tooltip
-                    contentStyle={{
-                      backgroundColor: "var(--card)",
-                      border: "1px solid var(--border)",
-                      borderRadius: "8px",
-                      fontSize: "12px",
-                    }}
-                  />
-                  <Bar
-                    dataKey="bms"
-                    stackId="a"
-                    fill={SECTION_COLORS.bms}
-                    radius={[0, 0, 0, 0]}
-                    name="BMS"
-                  />
-                  <Bar dataKey="kff" stackId="a" fill={SECTION_COLORS.kff} name="KFF" />
-                  <Bar dataKey="tv" stackId="a" fill={SECTION_COLORS.tv} name="TV" />
-                  <Bar
-                    dataKey="sek"
-                    stackId="a"
-                    fill={SECTION_COLORS.sek}
-                    radius={[3, 3, 0, 0]}
-                    name="SEK"
-                  />
-                </BarChart>
-              </ResponsiveContainer>
-              {/* Legend */}
-              <div className="flex items-center gap-4 mt-3 justify-center">
-                {Object.entries(SECTION_COLORS).map(([key, color]) => (
-                  <span
-                    key={key}
-                    className="flex items-center gap-1 text-[10px] text-[var(--muted)]"
-                  >
-                    <span
-                      className="w-2.5 h-2.5 rounded-sm inline-block"
-                      style={{ backgroundColor: color }}
-                    />
-                    {key.toUpperCase()}
-                  </span>
-                ))}
+              <div className="flex items-center gap-2 mb-4">
+                <AlertTriangle className="w-4 h-4 text-amber-500" />
+                <h3 className="text-sm font-semibold text-[var(--text-primary)]">Top Schwachstellen</h3>
               </div>
+              {topWeakTopics.length > 0 ? (
+                <div className="space-y-3">
+                  {topWeakTopics.map((t, i) => {
+                    const cfg = SUBJECT_CONFIG[t.fach];
+                    return (
+                      <div key={`${t.fach}-${t.topic}-${i}`}>
+                        <div className="flex items-center justify-between mb-1">
+                          <span className="text-xs text-[var(--text-secondary)] truncate flex-1 mr-2">{t.topic}</span>
+                          <span className={`text-xs font-bold tabular-nums ${scoreColor(Math.round(t.successRate * 100))}`}>
+                            {Math.round(t.successRate * 100)}%
+                          </span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <div className="flex-1 h-1.5 rounded-full bg-[var(--border)]/30 overflow-hidden">
+                            <div
+                              className="h-full rounded-full"
+                              style={{
+                                width: `${Math.round(t.successRate * 100)}%`,
+                                backgroundColor: cfg?.chartColor ?? "var(--accent)",
+                              }}
+                            />
+                          </div>
+                          <span className="text-[10px] text-[var(--muted)]">{cfg?.label.slice(0, 3) ?? t.fach}</span>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              ) : (
+                <div className="flex flex-col items-center justify-center py-8 text-center">
+                  <Zap className="w-8 h-8 text-[var(--muted)] opacity-30 mb-2" />
+                  <p className="text-xs text-[var(--muted)]">Absolviere Quizze, um Schwachstellen zu erkennen</p>
+                </div>
+              )}
+              {topWeakTopics.length > 0 && (
+                <Link
+                  to="/schwachstellen"
+                  className="flex items-center gap-1.5 mt-4 pt-3 border-t border-[var(--border)]/30 text-xs font-medium text-[var(--accent)] hover:underline"
+                >
+                  Schwachstellen trainieren
+                  <ArrowRight className="w-3 h-3" />
+                </Link>
+              )}
             </div>
           </div>
         )}
 
-        {/* ── Empty state for charts ────────────────────── */}
+        {/* ══════════════════════════════════════════════════════
+            PRACTICE DISTRIBUTION (full width)
+        ══════════════════════════════════════════════════════ */}
+        {hasAnyData && practiceDistribution.length > 0 && (
+          <div className="card-glass p-5 mb-6">
+            <h3 className="text-sm font-semibold text-[var(--text-primary)] mb-4">
+              Lernverteilung pro Woche
+            </h3>
+            <ResponsiveContainer width="100%" height={200}>
+              <BarChart data={practiceDistribution}>
+                <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" strokeOpacity={0.3} />
+                <XAxis dataKey="week" tick={{ fontSize: 10, fill: "var(--muted)" }} />
+                <YAxis tick={{ fontSize: 10, fill: "var(--muted)" }} width={28} />
+                <Tooltip
+                  contentStyle={{
+                    backgroundColor: "var(--card)",
+                    border: "1px solid var(--border)",
+                    borderRadius: "8px",
+                    fontSize: "12px",
+                  }}
+                />
+                <Bar dataKey="bms" stackId="a" fill={SECTION_COLORS.bms} name="BMS" />
+                <Bar dataKey="kff" stackId="a" fill={SECTION_COLORS.kff} name="KFF" />
+                <Bar dataKey="tv" stackId="a" fill={SECTION_COLORS.tv} name="TV" />
+                <Bar dataKey="sek" stackId="a" fill={SECTION_COLORS.sek} radius={[3, 3, 0, 0]} name="SEK" />
+              </BarChart>
+            </ResponsiveContainer>
+            <div className="flex items-center gap-4 mt-2 justify-center">
+              {Object.entries(SECTION_COLORS).map(([key, color]) => (
+                <span key={key} className="flex items-center gap-1 text-[10px] text-[var(--muted)]">
+                  <span className="w-2.5 h-2.5 rounded-sm inline-block" style={{ backgroundColor: color }} />
+                  {key.toUpperCase()}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* ══════════════════════════════════════════════════════
+            EMPTY STATE (no data yet)
+        ══════════════════════════════════════════════════════ */}
         {!hasAnyData && (
-          <div className="card-glass p-12 text-center mb-8">
+          <div className="card-glass p-12 text-center mb-6">
             <BarChart3 className="w-12 h-12 text-[var(--muted)] mx-auto mb-4 opacity-40" />
             <p className="text-lg font-semibold text-[var(--text-primary)] mb-2">
               Noch keine Lerndaten
@@ -583,175 +591,58 @@ export default function FortschrittPage() {
           </div>
         )}
 
-        {/* ── Recent Timeline ───────────────────────────── */}
+        {/* ══════════════════════════════════════════════════════
+            RECENT SESSIONS (compact timeline)
+        ══════════════════════════════════════════════════════ */}
         {recentSessions.length > 0 && (
-          <div className="card-glass p-5 mb-8">
-            <h3 className="text-sm font-semibold text-[var(--text-primary)] mb-4">
-              Letzte Aktivitäten
-            </h3>
+          <div className="card-glass p-5">
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-sm font-semibold text-[var(--text-primary)]">
+                Letzte Aktivitäten
+              </h3>
+              <Link to="/statistik" className="text-xs text-[var(--accent)] hover:underline flex items-center gap-1">
+                Alle anzeigen <ArrowRight className="w-3 h-3" />
+              </Link>
+            </div>
             <div className="space-y-1">
-              {/* Header */}
-              <div className="grid grid-cols-[80px_60px_120px_1fr_60px_80px] gap-3 px-3 py-2 text-[10px] text-[var(--muted)] uppercase tracking-wider font-medium">
-                <span>Datum</span>
-                <span>Typ</span>
-                <span>Fach</span>
-                <span>Ergebnis</span>
-                <span className="text-right">Dauer</span>
-                <span className="text-right">Quote</span>
-              </div>
-              {recentSessions.map((session, idx) => (
+              {recentSessions.slice(0, 10).map((session, idx) => (
                 <div
                   key={`${session.id}-${idx}`}
-                  className={`grid grid-cols-[80px_60px_120px_1fr_60px_80px] gap-3 px-3 py-2.5 rounded-lg items-center ${scoreBg(session.percentage)}`}
+                  className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[var(--surface)]/50 transition-colors"
                 >
-                  <span className="text-xs text-[var(--text-secondary)] tabular-nums">
+                  <span className="text-xs text-[var(--muted)] tabular-nums w-14 shrink-0">
                     {formatDate(session.date)}
                   </span>
                   {typeBadge(session.type)}
-                  <span className="text-xs text-[var(--text-secondary)] truncate">
+                  <span className="text-xs text-[var(--text-secondary)] truncate flex-1 min-w-0">
                     {subjectLabel(session.subject)}
                   </span>
-                  <div className="flex items-center gap-2">
-                    <div className="flex-1 h-1.5 rounded-full bg-[var(--border)]/40 overflow-hidden">
+                  <div className="flex items-center gap-2 w-32 shrink-0">
+                    <div className="flex-1 h-1.5 rounded-full bg-[var(--border)]/30 overflow-hidden">
                       <div
-                        className="h-full rounded-full transition-all"
+                        className="h-full rounded-full"
                         style={{
                           width: `${session.percentage}%`,
                           backgroundColor:
-                            session.percentage >= 70
-                              ? "#10b981"
-                              : session.percentage >= 40
-                                ? "#f59e0b"
-                                : "#ef4444",
+                            session.percentage >= 70 ? "#10b981" : session.percentage >= 40 ? "#f59e0b" : "#ef4444",
                         }}
                       />
                     </div>
-                    <span className="text-xs text-[var(--muted)] tabular-nums whitespace-nowrap">
+                    <span className="text-xs text-[var(--muted)] tabular-nums w-8 text-right">
                       {session.score}/{session.total}
                     </span>
                   </div>
-                  <span className="text-xs text-[var(--muted)] text-right tabular-nums">
-                    {formatDuration(session.durationMinutes)}
-                  </span>
-                  <span
-                    className={`text-sm font-bold text-right tabular-nums ${scoreColor(session.percentage)}`}
-                  >
+                  <span className={`text-sm font-bold tabular-nums w-10 text-right ${scoreColor(session.percentage)}`}>
                     {session.percentage}%
+                  </span>
+                  <span className="text-[10px] text-[var(--muted)] tabular-nums w-10 text-right">
+                    {formatDuration(session.durationMinutes)}
                   </span>
                 </div>
               ))}
             </div>
           </div>
         )}
-
-        {/* ── Total Learning Stats ──────────────────────── */}
-        <div className="card-glass p-5 mb-8">
-          <h3 className="text-sm font-semibold text-[var(--text-primary)] mb-4">Gesamtstatistik</h3>
-          <div
-            className={`grid ${isMobile ? "grid-cols-3 gap-3" : "grid-cols-5 gap-6"}`}
-            data-mobile-keep
-          >
-            <div className="text-center">
-              <div className="w-10 h-10 rounded-xl bg-[var(--accent)]/10 flex items-center justify-center mx-auto mb-2">
-                <CheckCircle2 className="w-5 h-5 text-[var(--accent)]" />
-              </div>
-              <p className="text-xl font-bold text-[var(--text-primary)] tabular-nums">
-                <AnimatedCounter value={totalStats.questionsAnswered} />
-              </p>
-              <p className="text-[10px] text-[var(--muted)] uppercase tracking-wider">Fragen</p>
-            </div>
-            <div className="text-center">
-              <div className="w-10 h-10 rounded-xl bg-emerald-500/10 flex items-center justify-center mx-auto mb-2">
-                <Target className="w-5 h-5 text-emerald-500" />
-              </div>
-              <p className="text-xl font-bold text-[var(--text-primary)] tabular-nums">
-                <AnimatedCounter value={totalStats.correctAnswers} />
-              </p>
-              <p className="text-[10px] text-[var(--muted)] uppercase tracking-wider">Richtig</p>
-            </div>
-            <div className="text-center">
-              <div className="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center mx-auto mb-2">
-                <CalendarDays className="w-5 h-5 text-blue-500" />
-              </div>
-              <p className="text-xl font-bold text-[var(--text-primary)] tabular-nums">
-                <AnimatedCounter value={totalStats.learningDays} />
-              </p>
-              <p className="text-[10px] text-[var(--muted)] uppercase tracking-wider">Lerntage</p>
-            </div>
-            <div className="text-center">
-              <div className="w-10 h-10 rounded-xl bg-violet-500/10 flex items-center justify-center mx-auto mb-2">
-                <Timer className="w-5 h-5 text-violet-500" />
-              </div>
-              <p className="text-xl font-bold text-[var(--text-primary)] tabular-nums">
-                <AnimatedCounter value={totalStats.totalMinutes} />
-              </p>
-              <p className="text-[10px] text-[var(--muted)] uppercase tracking-wider">Minuten</p>
-            </div>
-            <div className="text-center">
-              <div className="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center mx-auto mb-2">
-                <BookOpen className="w-5 h-5 text-amber-500" />
-              </div>
-              <p className="text-xl font-bold text-[var(--text-primary)] tabular-nums">
-                {totalStats.chaptersCompleted}/{totalStats.totalChapters}
-              </p>
-              <p className="text-[10px] text-[var(--muted)] uppercase tracking-wider">Kapitel</p>
-            </div>
-          </div>
-        </div>
-
-        {/* ── Navigation Cards ──────────────────────────── */}
-        <div
-          className={`grid ${isMobile ? "grid-cols-1 gap-3" : "grid-cols-2 gap-4"} stagger-children`}
-        >
-          <Link to="/schwachstellen">
-            <div className="card-glass p-5 flex items-center gap-4 cursor-pointer hover:shadow-md transition-shadow duration-200">
-              <div className="w-12 h-12 rounded-xl bg-[var(--accent)]/15 flex items-center justify-center shrink-0">
-                <Target className="w-6 h-6 text-[var(--accent)]" />
-              </div>
-              <div className="flex-1 min-w-0">
-                <h2 className="font-semibold text-[var(--text-primary)]">Schwachstellen</h2>
-                <p className="text-sm text-[var(--muted)]">Gezielt Lücken trainieren</p>
-              </div>
-              <ArrowRight className="w-4 h-4 text-[var(--muted)] shrink-0" />
-            </div>
-          </Link>
-          <Link to="/statistik">
-            <div className="card-glass p-5 flex items-center gap-4 cursor-pointer hover:shadow-md transition-shadow duration-200">
-              <div className="w-12 h-12 rounded-xl bg-[var(--foreground)]/10 flex items-center justify-center shrink-0">
-                <BarChart3 className="w-6 h-6 text-[var(--muted)]" />
-              </div>
-              <div className="flex-1 min-w-0">
-                <h2 className="font-semibold text-[var(--text-primary)]">Statistik</h2>
-                <p className="text-sm text-[var(--muted)]">Fragen & Ergebnisse</p>
-              </div>
-              <ArrowRight className="w-4 h-4 text-[var(--muted)] shrink-0" />
-            </div>
-          </Link>
-          <Link to="/prognose">
-            <div className="card-glass p-5 flex items-center gap-4 cursor-pointer hover:shadow-md transition-shadow duration-200">
-              <div className="w-12 h-12 rounded-xl bg-[var(--foreground)]/10 flex items-center justify-center shrink-0">
-                <TrendingUp className="w-6 h-6 text-[var(--muted)]" />
-              </div>
-              <div className="flex-1 min-w-0">
-                <h2 className="font-semibold text-[var(--text-primary)]">Prognose</h2>
-                <p className="text-sm text-[var(--muted)]">Punktestand & MedAT-Vorhersage</p>
-              </div>
-              <ArrowRight className="w-4 h-4 text-[var(--muted)] shrink-0" />
-            </div>
-          </Link>
-          <Link to="/performance">
-            <div className="card-glass p-5 flex items-center gap-4 cursor-pointer hover:shadow-md transition-shadow duration-200">
-              <div className="w-12 h-12 rounded-xl bg-[var(--accent)]/15 flex items-center justify-center shrink-0">
-                <Award className="w-6 h-6 text-[var(--accent)]" />
-              </div>
-              <div className="flex-1 min-w-0">
-                <h2 className="font-semibold text-[var(--text-primary)]">Erfolge & Badges</h2>
-                <p className="text-sm text-[var(--muted)]">Meilensteine & Auszeichnungen</p>
-              </div>
-              <ArrowRight className="w-4 h-4 text-[var(--muted)] shrink-0" />
-            </div>
-          </Link>
-        </div>
       </div>
     </div>
   );
