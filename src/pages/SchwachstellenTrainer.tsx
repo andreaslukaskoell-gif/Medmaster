@@ -46,30 +46,34 @@ import { usePageTitle } from "@/hooks/usePageTitle";
 
 type Mode = "overview" | "daily" | "focused" | "result";
 
-const fachColors: Record<string, { bg: string; text: string; label: string; accent: string }> = {
+const fachColors: Record<string, { bg: string; text: string; label: string; accent: string; cssVar: string }> = {
   biologie: {
-    bg: "bg-emerald-50 dark:bg-emerald-900/20",
-    text: "text-emerald-700 dark:text-emerald-400",
+    bg: "bg-[color-mix(in_srgb,var(--accent-bio)_8%,transparent)]",
+    text: "text-[var(--accent-bio)]",
     label: "Biologie",
-    accent: "bg-emerald-500",
+    accent: "bg-[var(--accent-bio)]",
+    cssVar: "var(--accent-bio)",
   },
   chemie: {
-    bg: "bg-red-50 dark:bg-red-900/20",
-    text: "text-red-700 dark:text-red-400",
+    bg: "bg-[color-mix(in_srgb,var(--accent-chem)_8%,transparent)]",
+    text: "text-[var(--accent-chem)]",
     label: "Chemie",
-    accent: "bg-red-500",
+    accent: "bg-[var(--accent-chem)]",
+    cssVar: "var(--accent-chem)",
   },
   physik: {
-    bg: "bg-blue-50 dark:bg-blue-900/20",
-    text: "text-blue-700 dark:text-blue-400",
+    bg: "bg-[color-mix(in_srgb,var(--accent-phys)_8%,transparent)]",
+    text: "text-[var(--accent-phys)]",
     label: "Physik",
-    accent: "bg-blue-500",
+    accent: "bg-[var(--accent-phys)]",
+    cssVar: "var(--accent-phys)",
   },
   mathematik: {
-    bg: "bg-violet-50 dark:bg-violet-900/20",
-    text: "text-violet-700 dark:text-violet-400",
+    bg: "bg-[color-mix(in_srgb,var(--accent-math)_8%,transparent)]",
+    text: "text-[var(--accent-math)]",
     label: "Mathematik",
-    accent: "bg-violet-500",
+    accent: "bg-[var(--accent-math)]",
+    cssVar: "var(--accent-math)",
   },
 };
 
@@ -305,16 +309,14 @@ export default function SchwachstellenTrainer() {
       <div className="max-w-2xl mx-auto space-y-6">
         {/* Score Header */}
         <div className="text-center py-8">
-          <div className={`inline-flex items-center justify-center w-24 h-24 rounded-full mb-4 ${
-            pct >= 80 ? "bg-emerald-100 dark:bg-emerald-900/30" :
-            pct >= 50 ? "bg-amber-100 dark:bg-amber-900/30" :
-            "bg-red-100 dark:bg-red-900/30"
-          }`}>
-            <span className={`text-3xl font-bold ${
-              pct >= 80 ? "text-emerald-600 dark:text-emerald-400" :
-              pct >= 50 ? "text-amber-600 dark:text-amber-400" :
-              "text-red-600 dark:text-red-400"
-            }`}>
+          <div className="inline-flex items-center justify-center w-24 h-24 rounded-full mb-4" style={{
+            background: pct >= 80 ? "color-mix(in srgb, var(--success) 12%, transparent)" :
+              pct >= 50 ? "color-mix(in srgb, var(--warning) 12%, transparent)" :
+              "color-mix(in srgb, #ef4444 12%, transparent)"
+          }}>
+            <span className="text-3xl font-bold" style={{
+              color: pct >= 80 ? "var(--success)" : pct >= 50 ? "var(--warning)" : "#ef4444"
+            }}>
               {pct}%
             </span>
           </div>
@@ -365,7 +367,7 @@ export default function SchwachstellenTrainer() {
                   ? pathForChapter(sw.fach, sw.linkedChapterId)
                   : null;
                 return (
-                  <div key={q.id} className="p-3 rounded-lg bg-red-50/50 dark:bg-red-900/10 border border-red-200/50 dark:border-red-800/30">
+                  <div key={q.id} className="p-3 rounded-lg border border-[var(--border)] bg-[var(--background)]">
                     <p className="text-sm text-[var(--text-primary)] line-clamp-2">{q.text}</p>
                     <div className="flex items-center gap-2 mt-2">
                       {sw && (
@@ -597,52 +599,54 @@ export default function SchwachstellenTrainer() {
         items={[{ label: "Dashboard", href: "/" }, { label: "Schwachstellen-Trainer" }]}
       />
 
-      {/* Premium Hero Header */}
-      <div className="relative overflow-hidden rounded-2xl border border-[var(--border)]" style={{ background: "linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%)" }}>
-        <div className="absolute inset-0 opacity-20" style={{ background: "radial-gradient(circle at 70% 30%, rgba(239,68,68,0.3), transparent 60%)" }} />
+      {/* Hero Header */}
+      <div className="relative overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--surface)]">
+        <div className="absolute inset-0 opacity-[0.03]" style={{ background: "radial-gradient(circle at 70% 30%, var(--accent), transparent 60%)" }} />
         <div className="relative px-6 py-6 flex items-center justify-between">
           <div>
-            <h1 className="text-2xl font-bold text-white tracking-tight">Schwachstellen-Trainer</h1>
-            <p className="text-sm text-slate-400 mt-1">Gezieltes Training deiner schwächsten Themen</p>
+            <h1 className="text-2xl font-bold text-[var(--text-primary)] tracking-tight" style={{ fontFamily: "var(--font-heading)", letterSpacing: "var(--heading-letter-spacing)" }}>
+              Schwachstellen-Trainer
+            </h1>
+            <p className="text-sm text-[var(--muted)] mt-1">Gezieltes Training deiner schwächsten Themen</p>
           </div>
           {/* Readiness Ring */}
           <div className="flex items-center gap-6">
             <div className="text-right hidden md:block">
               <div className="flex items-center gap-1.5 justify-end">
-                <Flame className="w-4 h-4 text-orange-400" />
-                <span className="text-lg font-bold text-orange-400 tabular-nums">{profile.dailyChallengeStreak}</span>
+                <Flame className="w-4 h-4 text-[var(--warning)]" />
+                <span className="text-lg font-bold text-[var(--warning)] tabular-nums">{profile.dailyChallengeStreak}</span>
               </div>
-              <p className="text-[11px] text-slate-500 mt-0.5">{profile.totalQuestionsAnswered.toLocaleString("de-AT")} Fragen</p>
+              <p className="text-[11px] text-[var(--muted)] mt-0.5">{profile.totalQuestionsAnswered.toLocaleString("de-AT")} Fragen</p>
             </div>
-            <div className="hidden md:block w-px h-10 bg-white/10" />
+            <div className="hidden md:block w-px h-10 bg-[var(--border)]" />
             <div className="text-center">
               <svg width={72} height={72}>
-                <circle cx={36} cy={36} r={30} fill="none" stroke="rgba(255,255,255,0.06)" strokeWidth={5} />
+                <circle cx={36} cy={36} r={30} fill="none" stroke="var(--border)" strokeWidth={5} />
                 <circle
                   cx={36} cy={36} r={30} fill="none"
-                  stroke={readiness >= 60 ? "#10b981" : readiness >= 30 ? "#f59e0b" : "#ef4444"}
+                  stroke="var(--accent)"
                   strokeWidth={5} strokeLinecap="round"
                   strokeDasharray={2 * Math.PI * 30}
                   strokeDashoffset={2 * Math.PI * 30 * (1 - readiness / 100)}
                   transform="rotate(-90 36 36)"
                   style={{ transition: "stroke-dashoffset 1s ease" }}
                 />
-                <text x={36} y={33} textAnchor="middle" dominantBaseline="central" fill="white" fontSize={18} fontWeight={700}>{readiness}%</text>
-                <text x={36} y={48} textAnchor="middle" fill="#94a3b8" fontSize={8}>READINESS</text>
+                <text x={36} y={33} textAnchor="middle" dominantBaseline="central" fill="var(--text-primary)" fontSize={18} fontWeight={700}>{readiness}%</text>
+                <text x={36} y={48} textAnchor="middle" fill="var(--muted)" fontSize={8}>READINESS</text>
               </svg>
             </div>
           </div>
         </div>
         {/* Mini stats strip */}
-        <div className="border-t border-white/[0.06] grid grid-cols-3 divide-x divide-white/[0.06]">
+        <div className="border-t border-[var(--border)] grid grid-cols-3 divide-x divide-[var(--border)]">
           {[
-            { label: "MedAT Readiness", value: `${readiness}%`, color: readiness >= 60 ? "text-emerald-400" : readiness >= 30 ? "text-amber-400" : "text-red-400" },
-            { label: "Tages-Streak", value: `${profile.dailyChallengeStreak}`, color: "text-orange-400" },
-            { label: "Stichworte geübt", value: `${totalPracticed}/${totalStichworte}`, color: "text-blue-400" },
+            { label: "MedAT Readiness", value: `${readiness}%`, color: "text-[var(--accent)]" },
+            { label: "Tages-Streak", value: `${profile.dailyChallengeStreak}`, color: "text-[var(--warning)]" },
+            { label: "Stichworte geübt", value: `${totalPracticed}/${totalStichworte}`, color: "text-[var(--accent)]" },
           ].map((s) => (
             <div key={s.label} className="px-4 py-3 text-center">
               <div className={`text-sm font-bold tabular-nums ${s.color}`}>{s.value}</div>
-              <p className="text-[10px] text-slate-500 mt-0.5">{s.label}</p>
+              <p className="text-[10px] text-[var(--muted)] mt-0.5">{s.label}</p>
             </div>
           ))}
         </div>
@@ -655,12 +659,11 @@ export default function SchwachstellenTrainer() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <button
           onClick={startDailyChallenge}
-          className="group relative overflow-hidden rounded-xl border border-orange-500/20 p-5 text-left transition-all hover:border-orange-500/40 hover:shadow-lg hover:shadow-orange-500/5 cursor-pointer"
-          style={{ background: "linear-gradient(135deg, rgba(251,146,60,0.06), rgba(251,146,60,0.02))" }}
+          className="group relative overflow-hidden rounded-xl border border-[var(--border)] p-5 text-left transition-all hover:border-[var(--border-strong)] hover:shadow-[var(--shadow-md)] cursor-pointer bg-[var(--surface)]"
         >
           <div className="flex items-center gap-3 mb-2">
-            <div className="w-9 h-9 rounded-lg flex items-center justify-center bg-orange-500/10">
-              <Zap className="w-4 h-4 text-orange-400" />
+            <div className="w-9 h-9 rounded-lg flex items-center justify-center" style={{ background: "color-mix(in srgb, var(--warning) 12%, transparent)" }}>
+              <Zap className="w-4 h-4 text-[var(--warning)]" />
             </div>
             <div>
               <span className="text-sm font-semibold text-[var(--text-primary)]">Tägliche Challenge</span>
@@ -670,7 +673,7 @@ export default function SchwachstellenTrainer() {
           <p className="text-xs text-[var(--muted)] leading-relaxed">
             Fragen aus deinen Schwachstellen — Bonus-XP und Streak-Aufbau.
           </p>
-          <div className="mt-3 inline-flex items-center gap-1.5 text-xs font-medium text-orange-500 group-hover:gap-2.5 transition-all">
+          <div className="mt-3 inline-flex items-center gap-1.5 text-xs font-medium text-[var(--accent)] group-hover:gap-2.5 transition-all">
             <Play className="w-3 h-3" />
             Challenge starten
             <ArrowRight className="w-3 h-3" />
@@ -680,12 +683,11 @@ export default function SchwachstellenTrainer() {
         {hasCriticalErrorPattern(quizResults ?? []) && (
           <button
             onClick={() => navigate("/schwachstellen/recovery")}
-            className="group relative overflow-hidden rounded-xl border border-purple-500/20 p-5 text-left transition-all hover:border-purple-500/40 hover:shadow-lg hover:shadow-purple-500/5 cursor-pointer"
-            style={{ background: "linear-gradient(135deg, rgba(139,92,246,0.06), rgba(139,92,246,0.02))" }}
+            className="group relative overflow-hidden rounded-xl border border-[var(--border)] p-5 text-left transition-all hover:border-[var(--border-strong)] hover:shadow-[var(--shadow-md)] cursor-pointer bg-[var(--surface)]"
           >
             <div className="flex items-center gap-3 mb-2">
-              <div className="w-9 h-9 rounded-lg flex items-center justify-center bg-purple-500/10">
-                <RefreshCw className="w-4 h-4 text-purple-400" />
+              <div className="w-9 h-9 rounded-lg flex items-center justify-center" style={{ background: "color-mix(in srgb, var(--accent) 12%, transparent)" }}>
+                <RefreshCw className="w-4 h-4 text-[var(--accent)]" />
               </div>
               <div>
                 <span className="text-sm font-semibold text-[var(--text-primary)]">Smart Recovery</span>
@@ -695,7 +697,7 @@ export default function SchwachstellenTrainer() {
             <p className="text-xs text-[var(--muted)] leading-relaxed">
               Falsch beantwortete Fragen nochmal durchgehen — mit Erklärung vor jeder Frage.
             </p>
-            <div className="mt-3 inline-flex items-center gap-1.5 text-xs font-medium text-purple-500 group-hover:gap-2.5 transition-all">
+            <div className="mt-3 inline-flex items-center gap-1.5 text-xs font-medium text-[var(--accent)] group-hover:gap-2.5 transition-all">
               <RefreshCw className="w-3 h-3" />
               Recovery starten
               <ArrowRight className="w-3 h-3" />
@@ -742,7 +744,7 @@ export default function SchwachstellenTrainer() {
                       <div className="h-1.5 flex-1 max-w-[140px] rounded-full bg-[var(--border)] overflow-hidden">
                         <div
                           className="h-full rounded-full transition-all"
-                          style={{ width: `${topic.rate}%`, background: topic.rate >= 60 ? "#10b981" : topic.rate >= 30 ? "#f59e0b" : "#ef4444" }}
+                          style={{ width: `${topic.rate}%`, background: fc?.cssVar || "var(--accent)" }}
                         />
                       </div>
                       <span className="text-xs tabular-nums text-[var(--muted)]">{topic.rate}%</span>
@@ -805,16 +807,16 @@ export default function SchwachstellenTrainer() {
               return (
                 <div
                   key={topic.stichwortId}
-                  className="flex items-center justify-between p-3 rounded-xl border border-emerald-500/10 bg-emerald-500/[0.03]"
+                  className="flex items-center justify-between p-3 rounded-xl border border-[var(--border)]" style={{ background: "color-mix(in srgb, var(--success) 4%, var(--surface))" }}
                 >
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-500" />
+                    <CheckCircle2 className="w-4 h-4 text-[var(--success)]" />
                     <span className="text-sm text-[var(--text-primary)]">{topic.thema}</span>
                     <span className={`text-[10px] px-1.5 py-0.5 rounded-full ${fc?.bg || ""} ${fc?.text || ""}`}>
                       {fc?.label}
                     </span>
                   </div>
-                  <span className="text-xs font-semibold text-emerald-500 tabular-nums">{topic.rate}%</span>
+                  <span className="text-xs font-semibold text-[var(--success)] tabular-nums">{topic.rate}%</span>
                 </div>
               );
             })}
