@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import type { ReactNode } from "react";
 import { Navigate, useLocation } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
 import { useAuth } from "@/hooks/useAuth";
+import { AppSplash } from "@/components/ui/AppSplash";
 
 export function AuthGuard({ children }: { children: ReactNode }) {
   const { isAuthenticated, loading } = useAuth();
@@ -19,18 +21,8 @@ export function AuthGuard({ children }: { children: ReactNode }) {
   }, [loading]);
 
   // Development: skip auth check so protected pages are directly reachable.
-  // Vite guarantees import.meta.env.DEV === false in production builds,
-  // but we double-check with PROD as a safety net.
   if (import.meta.env.DEV && !import.meta.env.PROD) {
     return <>{children}</>;
-  }
-
-  if (loading && !timedOut) {
-    return (
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-[var(--accent)]" />
-      </div>
-    );
   }
 
   // Timed out but not authenticated — show retry instead of immediate redirect
@@ -48,9 +40,24 @@ export function AuthGuard({ children }: { children: ReactNode }) {
     );
   }
 
-  if (!isAuthenticated) {
+  if (!loading && !isAuthenticated) {
     return <Navigate to="/login" replace state={{ from: location.pathname }} />;
   }
 
-  return <>{children}</>;
+  return (
+    <>
+      <AnimatePresence>
+        {loading && <AppSplash key="splash" />}
+      </AnimatePresence>
+      {!loading && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
+        >
+          {children}
+        </motion.div>
+      )}
+    </>
+  );
 }

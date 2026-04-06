@@ -135,18 +135,8 @@ function ScrollToTop() {
 }
 
 function MedATGuard({ children }: { children: ReactNode }) {
-  const { loading } = useAuth();
-
-  // Don't render while still loading auth/profile — show spinner instead of blank screen
-  if (loading) {
-    return (
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-[var(--accent)]" />
-      </div>
-    );
-  }
-
-  // OnboardingWizard overlay on Dashboard handles name + welcome now
+  // OnboardingWizard overlay on Dashboard handles name + welcome now.
+  // Auth loading is already handled by AuthGuard (AppSplash).
   return <>{children}</>;
 }
 
