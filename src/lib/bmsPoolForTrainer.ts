@@ -8,16 +8,49 @@ import {
   getKapitelById,
 } from "@/data/bmsKapitel/index";
 import { getQuestionsBySubject, type Question } from "@/data/bms/index";
-import { biologiePoolQuestions } from "@/data/bms/biologiePool";
-import { chemiePoolQuestions } from "@/data/bms/chemiePool";
-import { physikPoolQuestions } from "@/data/bms/physikPool";
-import { mathematikPoolQuestions } from "@/data/bms/mathematikPool";
-import { biologiePoolTypK } from "@/data/bms/biologiePoolTypK";
-import { chemiePoolTypK } from "@/data/bms/chemiePoolTypK";
-import { physikPoolTypK } from "@/data/bms/physikPoolTypK";
-import { mathematikPoolTypK } from "@/data/bms/mathematikPoolTypK";
 import type { BMSFrage } from "@/lib/supabaseBMSFragen";
 import { filterValidBMSFragen } from "@/lib/supabaseBMSFragen";
+
+// ── Dynamic pool imports — chunks only downloaded when loadPools() is called ──
+// This prevents starter users from downloading ~4.7 MB of premium question data.
+let _poolsLoaded = false;
+let _biologiePoolQuestions: Question[] = [];
+let _chemiePoolQuestions: Question[] = [];
+let _physikPoolQuestions: Question[] = [];
+let _mathematikPoolQuestions: Question[] = [];
+let _biologiePoolTypK: BMSFrage[] = [];
+let _chemiePoolTypK: BMSFrage[] = [];
+let _physikPoolTypK: BMSFrage[] = [];
+let _mathematikPoolTypK: BMSFrage[] = [];
+
+/** Pre-load all BMS pool chunks. Call once when user is confirmed premium. */
+export async function loadPools(): Promise<void> {
+  if (_poolsLoaded) return;
+  const [bio, chem, phys, math, bioK, chemK, physK, mathK] = await Promise.all([
+    import("@/data/bms/biologiePool"),
+    import("@/data/bms/chemiePool"),
+    import("@/data/bms/physikPool"),
+    import("@/data/bms/mathematikPool"),
+    import("@/data/bms/biologiePoolTypK"),
+    import("@/data/bms/chemiePoolTypK"),
+    import("@/data/bms/physikPoolTypK"),
+    import("@/data/bms/mathematikPoolTypK"),
+  ]);
+  _biologiePoolQuestions = bio.biologiePoolQuestions;
+  _chemiePoolQuestions = chem.chemiePoolQuestions;
+  _physikPoolQuestions = phys.physikPoolQuestions;
+  _mathematikPoolQuestions = math.mathematikPoolQuestions;
+  _biologiePoolTypK = bioK.biologiePoolTypK;
+  _chemiePoolTypK = chemK.chemiePoolTypK;
+  _physikPoolTypK = physK.physikPoolTypK;
+  _mathematikPoolTypK = mathK.mathematikPoolTypK;
+  _poolsLoaded = true;
+}
+
+/** Check if pools are loaded (premium content available). */
+export function arePoolsLoaded(): boolean {
+  return _poolsLoaded;
+}
 
 const OPTION_KEYS = ["A", "B", "C", "D", "E"] as const;
 
@@ -93,10 +126,10 @@ function buildTypAPoolWithUkIds(): BMSFrage[] {
   const indexByChapter = new Map<string, number>();
 
   const allPoolQuestions: Question[] = [
-    ...biologiePoolQuestions,
-    ...chemiePoolQuestions,
-    ...physikPoolQuestions,
-    ...mathematikPoolQuestions,
+    ..._biologiePoolQuestions,
+    ..._chemiePoolQuestions,
+    ..._physikPoolQuestions,
+    ..._mathematikPoolQuestions,
   ];
 
   for (const q of allPoolQuestions) {
@@ -113,17 +146,19 @@ function buildTypAPoolWithUkIds(): BMSFrage[] {
 /** Typ A/M aus Pools + alle Typ-K-Fragen (für UK-Filter und getBMSFragenBySubject). */
 function getAllPoolBMSFragen(): BMSFrage[] {
   const typAM = buildTypAPoolWithUkIds();
-  const typK = [...biologiePoolTypK, ...chemiePoolTypK, ...physikPoolTypK, ...mathematikPoolTypK];
+  const typK = [..._biologiePoolTypK, ..._chemiePoolTypK, ..._physikPoolTypK, ..._mathematikPoolTypK];
   return [...typAM, ...typK];
 }
 
 /** Typ-K-Fragen pro Fach (bereits BMSFrage-Format mit uk_id). */
-const TYP_K_BY_SUBJECT: Record<"biologie" | "chemie" | "physik" | "mathematik", BMSFrage[]> = {
-  biologie: biologiePoolTypK,
-  chemie: chemiePoolTypK,
-  physik: physikPoolTypK,
-  mathematik: mathematikPoolTypK,
-};
+function getTypKBySubject(subject: "biologie" | "chemie" | "physik" | "mathematik"): BMSFrage[] {
+  switch (subject) {
+    case "biologie": return _biologiePoolTypK;
+    case "chemie": return _chemiePoolTypK;
+    case "physik": return _physikPoolTypK;
+    case "mathematik": return _mathematikPoolTypK;
+  }
+}
 
 /**
  * completedIds aus dem Store enthält Kapitel-IDs und/oder Unterkapitel-IDs (uk.id).
@@ -218,7 +253,7 @@ export function getBMSFragenBySubject(
 ): BMSFrage[] {
   const questions = getQuestionsBySubject(subject);
   const typAM = questions.map((q) => questionToBMSFrage(q, q.chapter));
-  const typK = TYP_K_BY_SUBJECT[subject] ?? [];
+  const typK = getTypKBySubject(subject) ?? [];
   const valid = filterValidBMSFragen([...typAM, ...typK]);
   return pickDifficultyWeighted(valid, Math.min(count, valid.length));
 }
@@ -253,7 +288,7 @@ export function getBMSFragenBySubjectFromChapters(
   const typAM = questions.map((q) => questionToBMSFrage(q, q.chapter));
 
   const ukToChapter = getUkIdToChapterId();
-  const typK = (TYP_K_BY_SUBJECT[subject] ?? []).filter((f) => {
+  const typK = (getTypKBySubject(subject) ?? []).filter((f) => {
     const chId = ukToChapter.get(f.uk_id) ?? findChapterByUnterkapitelId(f.uk_id)?.kapitel.id;
     return chId != null && completedChapterIds.has(chId);
   });

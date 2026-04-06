@@ -495,13 +495,16 @@ export function startAutoSync(userId: string) {
   };
   window.addEventListener("online", onlineHandler);
 
-  // Push every 2 minutes
-  syncInterval = setInterval(
-    () => {
-      void pushStatsToSupabase(userId);
-    },
-    2 * 60 * 1000
-  );
+  // Push every 2 minutes, staggered 60s from main sync to avoid simultaneous profile writes
+  syncInterval = setTimeout(() => {
+    void pushStatsToSupabase(userId);
+    syncInterval = setInterval(
+      () => {
+        void pushStatsToSupabase(userId);
+      },
+      2 * 60 * 1000
+    );
+  }, 60 * 1000);
 
   // Push when user switches tabs/minimizes — visibilitychange fires reliably,
   // unlike beforeunload which kills async work
@@ -515,6 +518,7 @@ export function startAutoSync(userId: string) {
 
 export function stopAutoSync() {
   if (syncInterval) {
+    clearTimeout(syncInterval);  // clearTimeout works for both setTimeout and setInterval IDs
     clearInterval(syncInterval);
     syncInterval = null;
   }

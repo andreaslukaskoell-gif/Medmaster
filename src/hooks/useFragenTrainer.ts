@@ -23,6 +23,8 @@ import {
   getPoolBMSFragen,
   getBMSFragenBySubject,
   getAllPoolBMSFragenForUKs,
+  loadPools,
+  arePoolsLoaded,
 } from "@/lib/bmsPoolForTrainer";
 import type { FSRSRating } from "@/lib/fsrs";
 
@@ -136,7 +138,14 @@ export function useFragenTrainer(
   const subjectKey = subjectId ?? "";
   const ukIdsKey = uk_ids.join(",");
   useEffect(() => {
-    const t = setTimeout(() => {
+    let cancelled = false;
+    const run = async () => {
+      // Ensure BMS pools are loaded (dynamic import for premium content)
+      if (!arePoolsLoaded()) {
+        await loadPools().catch(() => {});
+      }
+      if (cancelled) return;
+
       if (subjectId) {
         // Mit initialFragen: sofort nutzen, kein Ladezustand
         if (initialFragenOption != null && initialFragenOption.length > 0) {
@@ -222,8 +231,9 @@ export function useFragenTrainer(
       startTimeRef.current = Date.now();
       resetQuestionState();
       recordedRef.current = false;
-    }, 0);
-    return () => clearTimeout(t);
+    };
+    run();
+    return () => { cancelled = true; };
     // subjectId / uk_ids intentionally omitted: we key off subjectKey/ukIdsKey to avoid unnecessary resets
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [

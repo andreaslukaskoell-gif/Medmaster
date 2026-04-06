@@ -194,6 +194,10 @@ export function useAuth() {
           tier: p.subscription_tier,
         });
         setTrackerUserId(userId);
+        // Pre-load premium BMS pools only for paying users (reduces bundle for starters)
+        if (p.subscription_tier === "premium") {
+          import("@/lib/bmsPoolForTrainer").then((m) => m.loadPools()).catch(() => {});
+        }
       } else {
         // No profile in DB — only set fallback if we don't already have a profile
         // (prevents downgrading premium → starter on transient RLS/JWT issues)
