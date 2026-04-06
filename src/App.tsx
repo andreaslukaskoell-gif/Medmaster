@@ -1,5 +1,6 @@
 import { lazy, Suspense, useEffect, type ComponentType } from "react";
 import { PageLoadingSkeleton } from "@/components/ui/page-states";
+import { Toaster } from "sonner";
 import type { ReactNode } from "react";
 
 /** Retry dynamic import once on chunk load failure (happens after deployments). */
@@ -47,9 +48,11 @@ const LandingPage = lazyRetry(() => import("@/pages/LandingPage"));
 const Dashboard = lazyRetry(() => import("@/pages/Dashboard"));
 const MedATOnboarding = lazyRetry(() => import("@/pages/MedATOnboarding"));
 const LernplanChoice = lazyRetry(() => import("@/pages/LernplanChoice"));
-const Onboarding = lazyRetry(() => import("@/pages/Onboarding"));
 const BMS = lazyRetry(() => import("@/pages/BMS"));
 const KFF = lazyRetry(() => import("@/pages/KFF"));
+const ImplikationenLernen = lazyRetry(() => import("@/pages/ImplikationenLernen"));
+const ZahlenfolgenLernen = lazyRetry(() => import("@/pages/ZahlenfolgenLernen"));
+const WortfluessigkeitLernen = lazyRetry(() => import("@/pages/WortfluessigkeitLernen"));
 const TV = lazyRetry(() => import("@/pages/TV"));
 const SEK = lazyRetry(() => import("@/pages/SEK"));
 const Simulation = lazyRetry(() => import("@/pages/Simulation"));
@@ -131,24 +134,10 @@ function ScrollToTop() {
   return null;
 }
 
-function OnboardingGuard() {
-  const onboardingCompleted = useStore((s) => s.onboardingCompleted);
-  if (onboardingCompleted) return <Navigate to="/dashboard" replace />;
-  return <Onboarding />;
-}
-
 function MedATGuard({ children }: { children: ReactNode }) {
-  const hasCompletedMedATOnboarding = useStore((s) => s.hasCompletedMedATOnboarding);
-  const { profile, loading } = useAuth();
-  const location = useLocation();
+  const { loading } = useAuth();
 
-  // Server-side check: if profile has a real display_name (not email), onboarding is done
-  // This prevents re-triggering onboarding on new devices/cleared localStorage
-  const uname = profile?.username?.trim();
-  const hasNameInDB = !!profile?.display_name?.trim() || !!(uname && !uname.includes("@"));
-  const isComplete = hasCompletedMedATOnboarding || hasNameInDB;
-
-  // Don't redirect while still loading auth/profile — show spinner instead of blank screen
+  // Don't render while still loading auth/profile — show spinner instead of blank screen
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-screen">
@@ -157,9 +146,7 @@ function MedATGuard({ children }: { children: ReactNode }) {
     );
   }
 
-  if (!isComplete && location.pathname !== "/onboarding/medat") {
-    return <Navigate to="/onboarding/medat" replace />;
-  }
+  // OnboardingWizard overlay on Dashboard handles name + welcome now
   return <>{children}</>;
 }
 
@@ -321,7 +308,8 @@ export default function App() {
               >
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/today" element={<TodayPage />} />
-                <Route path="/onboarding" element={<OnboardingGuard />} />
+                {/* Old /onboarding route removed — OnboardingWizard overlay handles it */}
+                <Route path="/onboarding" element={<Navigate to="/dashboard" replace />} />
                 <Route
                   path="/bms"
                   element={
@@ -422,6 +410,9 @@ export default function App() {
                 <Route path="/formelsammlung" element={<Formelsammlung />} />
                 <Route path="/einstellungen" element={<Einstellungen />} />
                 <Route path="/diagram-demo" element={<DiagramDemo />} />
+                <Route path="/lernen/implikationen" element={<ImplikationenLernen />} />
+                <Route path="/lernen/zahlenfolgen" element={<ZahlenfolgenLernen />} />
+                <Route path="/lernen/wortfluessigkeit" element={<WortfluessigkeitLernen />} />
 
                 {/* 404 Catch-all for protected routes */}
                 <Route path="*" element={<NotFound404 />} />
@@ -433,6 +424,14 @@ export default function App() {
           </Routes>
         </Suspense>
       </BrowserRouter>
+      <Toaster
+        position="bottom-right"
+        toastOptions={{
+          style: { background: "var(--card)", color: "var(--text-primary)", border: "1px solid var(--border)" },
+        }}
+        richColors
+        closeButton
+      />
     </MotionConfig>
   );
 }

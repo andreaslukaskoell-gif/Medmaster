@@ -18,11 +18,14 @@ import {
   Timer,
   RotateCcw,
   Download,
+  Lock,
 } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
 import { exportUserData } from "@/lib/backendSync";
 import { useStore } from "@/store/useStore";
 import { usePageMeta } from "@/hooks/usePageMeta";
+import { supabase } from "@/lib/supabase";
+import { toast } from "sonner";
 
 const FONT_OPTIONS: { value: "small" | "normal" | "large"; label: string }[] = [
   { value: "small", label: "Klein" },
@@ -100,6 +103,87 @@ function SettingRow({
       </div>
       {children}
     </div>
+  );
+}
+
+function PasswordChangeSection() {
+  const [newPw, setNewPw] = useState("");
+  const [confirmPw, setConfirmPw] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [open, setOpen] = useState(false);
+
+  const handleChange = async () => {
+    if (newPw.length < 8) {
+      toast.error("Passwort muss mindestens 8 Zeichen haben.");
+      return;
+    }
+    if (!/[a-z]/.test(newPw) || !/[A-Z]/.test(newPw) || !/\d/.test(newPw)) {
+      toast.error("Passwort muss Klein- und Großbuchstaben sowie eine Zahl enthalten.");
+      return;
+    }
+    if (newPw !== confirmPw) {
+      toast.error("Passwörter stimmen nicht überein.");
+      return;
+    }
+    setLoading(true);
+    const { error } = await supabase!.auth.updateUser({ password: newPw });
+    setLoading(false);
+    if (error) {
+      toast.error(error.message || "Passwort konnte nicht geändert werden.");
+    } else {
+      toast.success("Passwort erfolgreich geändert.");
+      setNewPw("");
+      setConfirmPw("");
+      setOpen(false);
+    }
+  };
+
+  return (
+    <section className="space-y-3">
+      <h2 className="text-xs font-semibold uppercase tracking-widest text-[var(--muted)]">
+        Sicherheit
+      </h2>
+      <div className="card-glass divide-y divide-[var(--border)]">
+        <button
+          type="button"
+          onClick={() => setOpen(!open)}
+          className="flex items-center gap-3 px-4 py-3.5 w-full text-left hover:bg-[var(--surface-hover)] transition-colors"
+        >
+          <Lock className="w-4 h-4 text-[var(--muted)] shrink-0" />
+          <span className="flex-1 text-sm font-medium text-[var(--foreground)]">Passwort ändern</span>
+          <ChevronRight className={`w-4 h-4 text-[var(--muted)] transition-transform ${open ? "rotate-90" : ""}`} />
+        </button>
+        {open && (
+          <div className="px-4 py-4 space-y-3">
+            <input
+              type="password"
+              value={newPw}
+              onChange={(e) => setNewPw(e.target.value)}
+              placeholder="Neues Passwort (min. 8 Zeichen)"
+              autoComplete="new-password"
+              className="w-full px-3 py-2 rounded-lg border border-[var(--border)] bg-[var(--card)] text-[var(--text-primary)] text-sm outline-none focus:ring-2 focus:ring-[var(--accent)]"
+            />
+            <input
+              type="password"
+              value={confirmPw}
+              onChange={(e) => setConfirmPw(e.target.value)}
+              placeholder="Passwort bestätigen"
+              autoComplete="new-password"
+              className="w-full px-3 py-2 rounded-lg border border-[var(--border)] bg-[var(--card)] text-[var(--text-primary)] text-sm outline-none focus:ring-2 focus:ring-[var(--accent)]"
+            />
+            <p className="text-xs text-[var(--muted)]">Mind. 8 Zeichen, Groß- und Kleinbuchstaben + Zahl</p>
+            <button
+              type="button"
+              onClick={handleChange}
+              disabled={loading || !newPw || !confirmPw}
+              className="w-full py-2 rounded-lg bg-[var(--accent)] text-white text-sm font-medium hover:opacity-90 transition-opacity disabled:opacity-50"
+            >
+              {loading ? "Wird gespeichert..." : "Passwort ändern"}
+            </button>
+          </div>
+        )}
+      </div>
+    </section>
   );
 }
 
@@ -205,8 +289,29 @@ export default function Einstellungen() {
               )}
             </div>
           </div>
+          {(profile?.subscription_tier === "premium" ||
+            profile?.subscription_tier === "standard" ||
+            profile?.subscription_tier === "pro") && (
+            <div className="flex items-center gap-3 px-4 py-3.5">
+              <FileText className="w-4 h-4 text-[var(--muted)] shrink-0" />
+              <div className="flex-1 min-w-0">
+                <p className="text-sm font-medium text-[var(--foreground)]">Kaufbeleg</p>
+                <p className="text-xs text-[var(--muted)]">
+                  Deine Rechnung wurde per E-Mail an{" "}
+                  <span className="font-medium">{user?.email}</span> gesendet.
+                  Bei Fragen:{" "}
+                  <a href="mailto:support@medmaster.at" className="text-[var(--accent)] hover:underline">
+                    support@medmaster.at
+                  </a>
+                </p>
+              </div>
+            </div>
+          )}
         </div>
       </section>
+
+      {/* ── Passwort ändern ──────────────────────────────────── */}
+      <PasswordChangeSection />
 
       {/* ── Freunde einladen ─────────────────────────────────── */}
       <section className="space-y-3">
