@@ -455,7 +455,11 @@ export default function Einstellungen() {
               setExporting(true);
               const data = await exportUserData();
               setExporting(false);
-              if (!data) return;
+              if (!data) {
+                toast.error("Export fehlgeschlagen. Bitte versuche es später erneut.");
+                return;
+              }
+              toast.success("Daten werden heruntergeladen.");
               const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
               const url = URL.createObjectURL(blob);
               const a = document.createElement("a");
@@ -514,6 +518,7 @@ export default function Einstellungen() {
                   onClick={() => {
                     resetProgress();
                     setShowResetConfirm(false);
+                    toast.success("Lernfortschritt wurde zurückgesetzt.");
                   }}
                   className="px-4 py-2 text-xs font-medium text-white bg-amber-500 hover:bg-amber-600 rounded-lg transition-colors cursor-pointer"
                 >
