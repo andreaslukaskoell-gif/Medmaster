@@ -208,7 +208,7 @@ export async function pushToSupabase(userId: string): Promise<void> {
 async function pushQuizResults(client: SupabaseClient, userId: string, results: QuizResult[]) {
   if (results.length === 0) return;
   const rows = results.map((r) => ({
-    id: r.id,
+    // Don't send client-generated IDs (e.g. "kff-zf-123") — DB expects UUID
     user_id: userId,
     quiz_type: r.type,
     subject: r.subject ?? null,
@@ -220,8 +220,8 @@ async function pushQuizResults(client: SupabaseClient, userId: string, results: 
   for (let i = 0; i < rows.length; i += 200) {
     const { error } = await client
       .from("quiz_results")
-      .upsert(rows.slice(i, i + 200), { onConflict: "id" });
-    if (error) throw error;
+      .insert(rows.slice(i, i + 200));
+    if (error && !error.message.includes("duplicate")) throw error;
   }
 }
 
