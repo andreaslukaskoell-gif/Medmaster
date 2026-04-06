@@ -27,6 +27,11 @@ if (typeof dsn === "string" && dsn.trim().length > 0) {
   });
 }
 
+// ── Global unhandled promise rejection handler ──
+window.addEventListener("unhandledrejection", (event) => {
+  Sentry.captureException(event.reason ?? new Error("Unhandled promise rejection"));
+});
+
 // ── Attribution capture (always) ──
 // Store UTM, gclid, fbclid, ref in sessionStorage regardless of consent.
 // This ensures signup attribution works even without analytics consent.

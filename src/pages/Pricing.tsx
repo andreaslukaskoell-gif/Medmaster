@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-import { Check, ArrowRight } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Check, ArrowRight, Shield, Lock, RotateCcw, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -144,7 +144,23 @@ export default function Pricing() {
             </Button>
           )}
 
-          <div className="mt-4 text-center space-y-1">
+          {/* Trust badges */}
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-4 text-xs text-[var(--muted)]">
+            <div className="flex items-center gap-1.5">
+              <Lock className="w-3.5 h-3.5" />
+              <span>Sichere Zahlung via Stripe</span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <Shield className="w-3.5 h-3.5" />
+              <span>DSGVO-konform</span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <RotateCcw className="w-3.5 h-3.5" />
+              <span>14 Tage Geld-zurück-Garantie</span>
+            </div>
+          </div>
+
+          <div className="mt-3 text-center space-y-1">
             <p className="text-xs text-[var(--muted)]">
               Keine Kreditkarte nötig{isFreePromo ? " — komplett gratis bis 31. März" : ""}.
             </p>
@@ -205,6 +221,93 @@ export default function Pricing() {
           </div>
         </div>
       </div>
+
+      {/* Starter vs Premium comparison */}
+      <div className="space-y-4">
+        <h3 className="text-lg font-semibold text-[var(--text-primary)] text-center">
+          Starter vs. Premium
+        </h3>
+        <div className="card-glass overflow-hidden">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-[var(--border)]">
+                <th className="text-left px-4 py-3 text-[var(--muted)] font-medium">Feature</th>
+                <th className="px-4 py-3 text-[var(--muted)] font-medium text-center">Starter</th>
+                <th className="px-4 py-3 font-medium text-center text-[var(--accent)]">Premium</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-[var(--border)]">
+              {([
+                ["BMS-Fragen", "50 / Fach", "5.230+"],
+                ["Lerneinheiten (Theorie)", "5 / Fach", "Alle 174"],
+                ["KFF-Übungen", "20 / Subtest", "Unbegrenzt"],
+                ["TV-Textsets", "2", "Alle 10"],
+                ["SEK-Aufgaben", "5 / Subtest", "230+"],
+                ["Prüfungssimulation", "—", "Unbegrenzt"],
+                ["Lernplan & Prognose", "—", "Voll"],
+                ["Schwachstellen-Trainer", "—", "Voll"],
+                ["Spaced Repetition", "—", "Voll"],
+              ] as const).map(([feature, starter, premium]) => (
+                <tr key={feature}>
+                  <td className="px-4 py-2.5 text-[var(--text-primary)]">{feature}</td>
+                  <td className="px-4 py-2.5 text-center text-[var(--muted)]">{starter}</td>
+                  <td className="px-4 py-2.5 text-center font-medium text-[var(--text-primary)]">{premium}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      {/* FAQ */}
+      <div className="space-y-4 pb-8">
+        <h3 className="text-lg font-semibold text-[var(--text-primary)] text-center">
+          Häufige Fragen
+        </h3>
+        <div className="space-y-2">
+          <FaqItem q="Kann ich MedMaster kostenlos testen?">
+            Ja! Der Starter-Zugang ist kostenlos und enthält 50 BMS-Fragen pro Fach,
+            20 KFF-Übungen pro Subtest und 2 TV-Textsets. Keine Kreditkarte nötig.
+          </FaqItem>
+          <FaqItem q="Gibt es eine Geld-zurück-Garantie?">
+            Ja. Wenn du innerhalb von 14 Tagen nach dem Kauf nicht zufrieden bist,
+            erstatten wir dir den vollen Betrag. Einfach an support@medmaster.at schreiben.
+          </FaqItem>
+          <FaqItem q="Ist das ein Abo?">
+            Nein. MedMaster ist eine Einmalzahlung von €29,90. Kein Abo, keine versteckten
+            Kosten, kein automatisches Verlängern.
+          </FaqItem>
+          <FaqItem q="Wie aktuell sind die Fragen?">
+            Alle Inhalte werden laufend aktualisiert und orientieren sich am MedAT 2026.
+            Updates sind im Preis inklusive.
+          </FaqItem>
+          <FaqItem q="Wie sicher ist die Zahlung?">
+            Die Zahlung wird über Stripe abgewickelt — den weltweit führenden Zahlungsanbieter.
+            Deine Kartendaten werden nie auf unseren Servern gespeichert. Alles DSGVO-konform.
+          </FaqItem>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function FaqItem({ q, children }: { q: string; children: React.ReactNode }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="card-glass">
+      <button
+        type="button"
+        onClick={() => setOpen(!open)}
+        className="flex items-center gap-3 w-full px-4 py-3.5 text-left"
+      >
+        <span className="flex-1 text-sm font-medium text-[var(--text-primary)]">{q}</span>
+        <ChevronDown className={`w-4 h-4 text-[var(--muted)] transition-transform ${open ? "rotate-180" : ""}`} />
+      </button>
+      {open && (
+        <div className="px-4 pb-3.5 text-sm text-[var(--muted)] leading-relaxed">
+          {children}
+        </div>
+      )}
     </div>
   );
 }
