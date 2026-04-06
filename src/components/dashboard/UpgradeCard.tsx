@@ -3,6 +3,7 @@ import { ArrowRight, Sparkles, BookOpen, Brain, BarChart3, Target } from "lucide
 import { Button } from "@/components/ui/button";
 import { usePermissions } from "@/hooks/usePermissions";
 import { useUsageLimits } from "@/hooks/useUsageLimits";
+import { useAdaptiveStore } from "@/store/adaptiveLearning";
 import { trackEvent } from "@/lib/analyticsTracker";
 
 const PREMIUM_FEATURES = [
@@ -12,12 +13,19 @@ const PREMIUM_FEATURES = [
   { icon: BarChart3, label: "Lernplan & Prognose" },
 ];
 
+/** Minimum questions answered before showing upgrade card */
+const MIN_QUESTIONS_BEFORE_UPGRADE = 5;
+
 export function UpgradeCard() {
   const { isPremium } = usePermissions();
   const limits = useUsageLimits();
+  const totalAnswered = useAdaptiveStore((s) => s.profile.totalQuestionsAnswered);
 
   // Don't show for premium users
   if (isPremium) return null;
+
+  // Don't show until user has answered enough questions to see value
+  if (totalAnswered < MIN_QUESTIONS_BEFORE_UPGRADE) return null;
 
   // Show usage progress if user has started
   const hasUsage = limits.bmsQuestionsUsed > 0 || limits.kffExercisesUsed > 0;
@@ -30,10 +38,10 @@ export function UpgradeCard() {
         </div>
         <div className="flex-1 min-w-0">
           <h3 className="font-semibold text-[var(--text-primary)] mb-1">
-            Hol dir den vollen Zugang
+            Du lernst schon gut — hol dir den vollen Zugang
           </h3>
           <p className="text-sm text-[var(--muted)] mb-3">
-            Einmalig €29,90 — kein Abo, kein Stress.
+            {totalAnswered} Fragen beantwortet. Einmalig €29,90 für alles — kein Abo.
           </p>
 
           {hasUsage && (
@@ -66,7 +74,7 @@ export function UpgradeCard() {
 
           <Link
             to="/preise"
-            onClick={() => trackEvent("upgrade_card_clicked", { location: "dashboard" })}
+            onClick={() => trackEvent("upgrade_card_clicked", { location: "dashboard", totalAnswered })}
           >
             <Button size="sm" className="gap-1.5">
               Premium freischalten

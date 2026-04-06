@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { AlertTriangle, ArrowRight } from "lucide-react";
 import { Button } from "./button";
 import { trackEvent } from "@/lib/analyticsTracker";
+import { usePermissions } from "@/hooks/usePermissions";
 import { useRef, useEffect } from "react";
 
 type Props = {
@@ -15,15 +16,19 @@ type Props = {
  * Displays nothing if under threshold or if limit is null (unlimited).
  */
 export function UsageLimitWarning({ used, limit, label }: Props) {
+  const { loading } = usePermissions();
   const pct = Math.round((used / limit) * 100);
   const tracked = useRef(false);
 
   useEffect(() => {
-    if (pct >= 80 && !tracked.current) {
+    if (!loading && pct >= 80 && !tracked.current) {
       tracked.current = true;
       trackEvent("usage_limit_warning_shown", { label, used, limit, pct });
     }
-  }, [pct, label, used, limit]);
+  }, [loading, pct, label, used, limit]);
+
+  // Don't show while auth is loading — prevents false warnings for premium users
+  if (loading) return null;
 
   if (pct < 80) return null;
 

@@ -31,10 +31,10 @@ export function PostQuizUpgradePrompt({ score, total, subject }: Props) {
 
   const message =
     pct >= 80
-      ? "Starkes Ergebnis! Mit dem Schwachstellen-Trainer und der Testsimulation holst du noch mehr raus."
+      ? `${pct}% richtig — stark! Mit Testsimulation und Schwachstellen-Trainer holst du die letzten Punkte.`
       : pct >= 50
-        ? "Guter Anfang! Die Schwachstellen-Analyse zeigt dir genau, wo du nacharbeiten musst."
-        : "Kein Stress — mit dem Lernplan und gezielten Übungen wirst du schnell besser.";
+        ? `${pct}% richtig — gute Basis! Die Schwachstellen-Analyse zeigt dir, wo du am schnellsten Punkte holst.`
+        : `${pct}% richtig — da geht noch was! Mit dem Lernplan und 4.950+ weiteren Fragen wirst du schnell besser.`;
 
   const features =
     pct >= 50

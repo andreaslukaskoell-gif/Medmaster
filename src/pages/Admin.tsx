@@ -143,6 +143,13 @@ type LiveFeedItem = {
   visitor_id: string;
 };
 
+type OnlineUser = {
+  user_email: string | null;
+  visitor_id: string | null;
+  current_page: string | null;
+  last_seen: string;
+};
+
 type UserSearchResult = {
   id: string;
   email: string;
@@ -350,6 +357,7 @@ export default function Admin() {
   const [heatmap, setHeatmap] = useState<HeatmapCell[]>([]);
   const [segments, setSegments] = useState<UserSegments | null>(null);
   const [liveFeed, setLiveFeed] = useState<LiveFeedItem[]>([]);
+  const [onlineUsers, setOnlineUsers] = useState<OnlineUser[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState<UserSearchResult[] | null>(null);
   const [searchLoading, setSearchLoading] = useState(false);
@@ -360,7 +368,7 @@ export default function Admin() {
   const refreshTimer = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const fetchAll = useCallback(async () => {
-    const [statsRes, dailyRes, retentionRes, sectionRes, atRiskRes, trafficRes, onboardingRes, quizRes, heatmapRes, segmentsRes, feedRes] = await Promise.all([
+    const [statsRes, dailyRes, retentionRes, sectionRes, atRiskRes, trafficRes, onboardingRes, quizRes, heatmapRes, segmentsRes, feedRes, onlineRes] = await Promise.all([
       supabase!.rpc("admin_dashboard_stats"),
       supabase!.rpc("admin_daily_overview", { days_back: timeRange }),
       supabase!.rpc("admin_retention_stats"),
@@ -372,6 +380,7 @@ export default function Admin() {
       supabase!.rpc("admin_engagement_heatmap", { days_back: timeRange }),
       supabase!.rpc("admin_user_segments"),
       supabase!.rpc("admin_live_feed", { limit_count: 20 }),
+      supabase!.rpc("admin_users_online"),
     ]);
     if (statsRes.error) {
       setError(statsRes.error.message);
@@ -407,6 +416,9 @@ export default function Admin() {
     }
     if (feedRes.data && Array.isArray(feedRes.data)) {
       setLiveFeed(feedRes.data as LiveFeedItem[]);
+    }
+    if (onlineRes.data && Array.isArray(onlineRes.data)) {
+      setOnlineUsers(onlineRes.data as OnlineUser[]);
     }
 
     // Fetch paywall & conversion funnel events
@@ -1612,6 +1624,46 @@ export default function Admin() {
                       ))}
                     </div>
                   )}
+                </div>
+              );
+            })}
+          </div>
+        )}
+      </div>
+
+      {/* ══════════════════════════════════════════════════════ */}
+      {/* SECTION: Users Online Now                               */}
+      {/* ══════════════════════════════════════════════════════ */}
+      <div className="bg-[var(--surface)] border border-[var(--border)] rounded-xl p-5 mt-8">
+        <h2 className="text-sm font-semibold text-[var(--text-primary)] mb-4 flex items-center gap-2">
+          <Globe className="w-4 h-4 text-green-500" />
+          <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+          Gerade online ({onlineUsers.length})
+        </h2>
+        {onlineUsers.length === 0 ? (
+          <p className="text-xs text-[var(--muted)]">Keine aktiven User in den letzten 5 Minuten.</p>
+        ) : (
+          <div className="space-y-1.5 max-h-60 overflow-y-auto">
+            <div className="flex items-center gap-3 text-[10px] font-semibold text-[var(--muted)] uppercase tracking-wider pb-1 border-b border-[var(--border)]">
+              <span className="w-48 shrink-0">User</span>
+              <span className="flex-1">Aktuelle Seite</span>
+              <span className="w-20 text-right shrink-0">Zuletzt</span>
+            </div>
+            {onlineUsers.map((u, i) => {
+              const label = u.user_email || (u.visitor_id ? `anon-${u.visitor_id.slice(0, 8)}` : "anon");
+              const ago = Math.round((Date.now() - new Date(u.last_seen).getTime()) / 1000);
+              const agoStr = ago < 60 ? `${ago}s` : `${Math.round(ago / 60)}m`;
+              return (
+                <div key={i} className="flex items-center gap-3 text-xs py-1.5 px-2 rounded hover:bg-[var(--border)]/20">
+                  <span className="w-48 shrink-0 truncate font-medium text-[var(--text-primary)]">
+                    {label}
+                  </span>
+                  <span className="flex-1 truncate text-[var(--accent)]">
+                    {u.current_page || "–"}
+                  </span>
+                  <span className="w-20 text-right shrink-0 text-[var(--muted)] font-mono text-[10px]">
+                    vor {agoStr}
+                  </span>
                 </div>
               );
             })}

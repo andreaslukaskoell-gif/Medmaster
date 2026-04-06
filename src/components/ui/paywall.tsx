@@ -3,6 +3,7 @@ import { Lock } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "./button";
 import { trackEvent } from "@/lib/analyticsTracker";
+import { usePermissions } from "@/hooks/usePermissions";
 
 type Props = {
   feature: string;
@@ -10,13 +11,17 @@ type Props = {
 };
 
 export function Paywall({ feature, children }: Props) {
+  const { loading } = usePermissions();
   const tracked = useRef(false);
   useEffect(() => {
-    if (!tracked.current) {
+    if (!loading && !tracked.current) {
       tracked.current = true;
       trackEvent("paywall_shown", { feature, type: "overlay" });
     }
-  }, [feature]);
+  }, [feature, loading]);
+
+  // Don't show paywall while auth is still loading — prevents false paywall flash
+  if (loading) return <>{children}</>;
 
   return (
     <div className="relative">
@@ -40,13 +45,16 @@ export function Paywall({ feature, children }: Props) {
 }
 
 export function PaywallBanner({ feature }: { feature: string }) {
+  const { loading } = usePermissions();
   const tracked = useRef(false);
   useEffect(() => {
-    if (!tracked.current) {
+    if (!loading && !tracked.current) {
       tracked.current = true;
       trackEvent("paywall_shown", { feature, type: "banner" });
     }
-  }, [feature]);
+  }, [feature, loading]);
+
+  if (loading) return null;
 
   return (
     <div className="bg-[var(--surface)] border border-[var(--border)] rounded-xl p-4 flex items-center gap-4">

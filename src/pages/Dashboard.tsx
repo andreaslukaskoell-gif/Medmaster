@@ -50,6 +50,7 @@ import { WeaknessWidget } from "@/components/dashboard/WeaknessWidget";
 import { RecentActivityWidget } from "@/components/dashboard/RecentActivityWidget";
 import { PromoEndBanner } from "@/components/dashboard/PromoEndBanner";
 import { UpgradeCard } from "@/components/dashboard/UpgradeCard";
+import { StreakRiskBanner, StreakMilestone, DailyGoalNudge } from "@/components/dashboard/RetentionHooks";
 
 // Stable defaults — prevent infinite re-render loops in Zustand selectors.
 // `?? []` inside a selector creates a NEW reference every render if the value is nullish,
@@ -252,7 +253,10 @@ export default function Dashboard() {
       <div className="max-w-5xl mx-auto px-4 pb-12">
         <SyncIndicator />
         <PromoEndBanner />
+        <StreakRiskBanner />
+        <DailyGoalNudge />
         <UpgradeCard />
+        <StreakMilestone />
 
         {/* ─── Hero Header with halo (like BMS subject pages) ─── */}
         <div className="text-center hero-orbs py-8">
