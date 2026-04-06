@@ -60,23 +60,26 @@ export default function PaymentSuccess() {
   const [searchParams] = useSearchParams();
   const { refreshProfile, isPremium } = useAuth();
 
-  // Only show this page if redirected from Stripe (payment=success param) or already premium
+  // All hooks MUST be before any early return (React Rules of Hooks)
   const hasPaymentParam = searchParams.get("payment") === "success";
-  if (!hasPaymentParam && !isPremium) {
-    return <Navigate to="/dashboard" replace />;
-  }
   const [showConfetti, setShowConfetti] = useState(true);
   const [activating, setActivating] = useState(true);
+  const [activationFailed, setActivationFailed] = useState(false);
 
   useEffect(() => {
+    if (!hasPaymentParam && !isPremium) return;
     track("payment_success");
     trackConversion("purchase_completed", { value: 29.9, currency: "EUR" });
     const t = setTimeout(() => setShowConfetti(false), 5000);
     return () => clearTimeout(t);
-  }, []);
+  }, [hasPaymentParam, isPremium]);
+
+  // Only show this page if redirected from Stripe (payment=success param) or already premium
+  if (!hasPaymentParam && !isPremium) {
+    return <Navigate to="/dashboard" replace />;
+  }
 
   // Poll for premium status — webhook may take a few seconds
-  const [activationFailed, setActivationFailed] = useState(false);
   useEffect(() => {
     if (isPremium) {
       setActivating(false);

@@ -361,9 +361,8 @@ export function startMainSync(userId: string) {
     }, 500);
   });
 
-  // Push when user leaves — visibilitychange fires reliably before tab close,
-  // beforeunload async calls get killed by the browser
-  window.addEventListener("beforeunload", handleUnload);
+  // Push when user switches tabs or minimizes — visibilitychange fires reliably,
+  // unlike beforeunload which kills async work
   document.addEventListener("visibilitychange", handleVisibilitySync);
 }
 
@@ -380,13 +379,8 @@ export function stopMainSync() {
     clearTimeout(debounceTimer);
     debounceTimer = null;
   }
-  window.removeEventListener("beforeunload", handleUnload);
   document.removeEventListener("visibilitychange", handleVisibilitySync);
   currentUserId = null;
-}
-
-function handleUnload() {
-  if (currentUserId) pushToSupabase(currentUserId);
 }
 
 function handleVisibilitySync() {

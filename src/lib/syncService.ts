@@ -486,7 +486,7 @@ async function processOfflineQueue(): Promise<boolean> {
 
 let syncInterval: ReturnType<typeof setInterval> | null = null;
 let onlineHandler: (() => void) | null = null;
-let beforeUnloadHandler: (() => void) | null = null;
+let visibilityHandler: (() => void) | null = null;
 
 export function startAutoSync(userId: string) {
   // Clean up any previous sync first (prevents duplicate intervals/listeners)
@@ -511,11 +511,14 @@ export function startAutoSync(userId: string) {
     2 * 60 * 1000
   );
 
-  // Push on page unload (named fn so it can be removed)
-  beforeUnloadHandler = () => {
-    pushStatsToSupabase(userId);
+  // Push when user switches tabs/minimizes — visibilitychange fires reliably,
+  // unlike beforeunload which kills async work
+  visibilityHandler = () => {
+    if (document.visibilityState === "hidden") {
+      void pushStatsToSupabase(userId);
+    }
   };
-  window.addEventListener("beforeunload", beforeUnloadHandler);
+  document.addEventListener("visibilitychange", visibilityHandler);
 }
 
 export function stopAutoSync() {
@@ -527,8 +530,8 @@ export function stopAutoSync() {
     window.removeEventListener("online", onlineHandler);
     onlineHandler = null;
   }
-  if (beforeUnloadHandler) {
-    window.removeEventListener("beforeunload", beforeUnloadHandler);
-    beforeUnloadHandler = null;
+  if (visibilityHandler) {
+    document.removeEventListener("visibilitychange", visibilityHandler);
+    visibilityHandler = null;
   }
 }

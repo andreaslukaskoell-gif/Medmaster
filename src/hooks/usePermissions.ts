@@ -7,9 +7,12 @@ export function usePermissions() {
   const { tier, isPremium, loading } = useAuth();
 
   return useMemo(() => {
-    // While auth is loading, assume premium to avoid paywall flash
-    const effectivePremium = loading ? true : isPremium;
-    const effectiveT: "starter" | "premium" = loading ? "premium" : tier;
+    // While auth is loading, use starter permissions but mark as loading
+    // so callers can show a loading state instead of paywall.
+    // Previously this assumed premium during loading, which could be exploited
+    // by blocking Supabase to keep loading=true indefinitely.
+    const effectiveT: "starter" | "premium" = loading ? "starter" : tier;
+    const effectivePremium = loading ? false : isPremium;
     const permissions = getPermissions(effectiveT);
     const promo = isPromoActive();
 

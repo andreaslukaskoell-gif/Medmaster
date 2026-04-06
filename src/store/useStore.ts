@@ -775,7 +775,7 @@ export const useStore = create<AppState>()(
             xp: s.xp,
             daily_goal_minutes: s.dailyGoalMinutes,
           })
-        );
+        ).catch(() => {});
       },
 
       toggleDarkMode: () =>
@@ -867,12 +867,12 @@ export const useStore = create<AppState>()(
             duration_seconds: result.durationMinutes ? result.durationMinutes * 60 : undefined,
             answers: result.answers,
           })
-        );
+        ).catch(() => {});
       },
 
       updateSpacedRepetition: (questionId, correct) => {
         // Fire-and-forget backend SRS sync
-        import("@/lib/backendSync").then(({ syncSrsReview }) => syncSrsReview(questionId, correct));
+        import("@/lib/backendSync").then(({ syncSrsReview }) => syncSrsReview(questionId, correct)).catch(() => {});
         set((s) => {
           const existing = s.spacedRepetition[questionId];
           const now = new Date().toISOString().split("T")[0];
@@ -1033,7 +1033,7 @@ export const useStore = create<AppState>()(
               })
               .reduce((sum, [, v]) => sum + v.questions * 10, 0),
           })
-        );
+        ).catch(() => {});
       },
 
       toggleFlagQuestion: (id) =>

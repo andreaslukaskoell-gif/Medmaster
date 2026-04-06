@@ -307,22 +307,26 @@ export function logPageTime(page: string) {
 // ── Session Duration Tracking ──────────────────────────────────────────────
 
 let sessionStartTime = 0;
+let sessionTrackingInitialized = false;
+
+function logSessionEnd() {
+  if (!sessionStartTime) return;
+  const seconds = Math.round((Date.now() - sessionStartTime) / 1000);
+  if (seconds >= 3) {
+    trackEvent("session_end", { session_duration_seconds: seconds });
+  }
+}
+
+function handleSessionVisibility() {
+  if (document.visibilityState === "hidden") logSessionEnd();
+}
 
 /** Call once on app start to begin tracking total session duration. */
 export function initSessionDurationTracking() {
   if (typeof window === "undefined") return;
+  if (sessionTrackingInitialized) return;
+  sessionTrackingInitialized = true;
   sessionStartTime = Date.now();
 
-  const logSessionEnd = () => {
-    if (!sessionStartTime) return;
-    const seconds = Math.round((Date.now() - sessionStartTime) / 1000);
-    if (seconds >= 3) {
-      trackEvent("session_end", { session_duration_seconds: seconds });
-    }
-  };
-
-  window.addEventListener("beforeunload", logSessionEnd);
-  document.addEventListener("visibilitychange", () => {
-    if (document.visibilityState === "hidden") logSessionEnd();
-  });
+  document.addEventListener("visibilitychange", handleSessionVisibility);
 }

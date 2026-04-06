@@ -144,9 +144,7 @@ export async function fetchWeaknessAnalysis(): Promise<WeaknessResult | null> {
       data: { user },
     } = await supabase!.auth.getUser();
     if (!user) return null;
-    const { data, error } = await supabase!.rpc("get_weakness_analysis", {
-      p_user_id: user.id,
-    });
+    const { data, error } = await supabase!.rpc("get_weakness_analysis");
     if (error) throw error;
     return data as WeaknessResult;
   } catch (err) {

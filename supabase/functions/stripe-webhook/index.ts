@@ -457,9 +457,8 @@ serve(async (req) => {
   } catch (err) {
     const secretSet = !!webhookSecret;
     const secretLen = webhookSecret?.length || 0;
-    const secretPrefix = webhookSecret?.substring(0, 10) || "EMPTY";
     const errMsg = (err as Error).message || "";
-    console.error(`Webhook error (secret set: ${secretSet}, len: ${secretLen}, prefix: ${secretPrefix}):`, errMsg);
+    console.error(`Webhook error (secret set: ${secretSet}, len: ${secretLen}):`, errMsg);
 
     // Alert on signature verification failure — this is how the tagelang-kaputt bug happened
     if (errMsg.includes("signature") || errMsg.includes("webhook") || errMsg.includes("No signatures found")) {
