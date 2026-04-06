@@ -19,8 +19,6 @@ function isSchemaMissing(err: unknown): boolean {
     code === "PGRST200" ||
     code === "42703" ||
     code === "42P01" ||
-    msg.includes("404") ||
-    msg.includes("400") ||
     msg.includes("relation") ||
     msg.includes("does not exist") ||
     msg.includes("column") ||

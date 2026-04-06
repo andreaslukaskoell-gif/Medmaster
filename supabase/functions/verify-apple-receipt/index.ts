@@ -16,9 +16,15 @@ const APPLE_VERIFY_URL = "https://buy.itunes.apple.com/verifyReceipt";
 const APPLE_SANDBOX_URL = "https://sandbox.itunes.apple.com/verifyReceipt";
 const APPLE_SHARED_SECRET = Deno.env.get("APPLE_SHARED_SECRET") ?? "";
 
+function requireEnv(name: string): string {
+  const v = Deno.env.get(name);
+  if (!v) throw new Error(`Missing required env var: ${name}`);
+  return v;
+}
+
 const supabase = createClient(
-  Deno.env.get("SUPABASE_URL")!,
-  Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
+  requireEnv("SUPABASE_URL"),
+  requireEnv("SUPABASE_SERVICE_ROLE_KEY")
 );
 
 const EXPECTED_BUNDLE_ID = "at.medmaster.app";

@@ -6,14 +6,40 @@ import { SMTPClient } from "https://deno.land/x/denomailer@1.6.0/mod.ts";
 //   Uses IONOS SMTP (welcome@medmaster.at) via denomailer
 //   Secrets needed: SMTP_USER, SMTP_PASS (already set from Supabase Auth config)
 
+function requireEnv(name: string): string {
+  const v = Deno.env.get(name);
+  if (!v) throw new Error(`Missing required env var: ${name}`);
+  return v;
+}
+
 const SMTP_USER = Deno.env.get("SMTP_USER") || "";
 const SMTP_PASS = Deno.env.get("SMTP_PASS") || "";
 const SITE_URL = Deno.env.get("SITE_URL") || "https://medmaster.at";
 const FROM_EMAIL = "MedMaster <welcome@medmaster.at>";
 
+// ── Email validation ──
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+function isValidEmail(email: string): boolean {
+  return typeof email === "string" && EMAIL_REGEX.test(email) && email.length <= 254;
+}
+
+// ── Rate limiting (in-memory, per cold-start instance) ──
+const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
+function checkRateLimit(key: string, maxPerMinute = 10): boolean {
+  const now = Date.now();
+  const entry = rateLimitMap.get(key);
+  if (!entry || now > entry.resetAt) {
+    rateLimitMap.set(key, { count: 1, resetAt: now + 60_000 });
+    return true;
+  }
+  if (entry.count >= maxPerMinute) return false;
+  entry.count++;
+  return true;
+}
+
 const supabase = createClient(
-  Deno.env.get("SUPABASE_URL")!,
-  Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
+  requireEnv("SUPABASE_URL"),
+  requireEnv("SUPABASE_SERVICE_ROLE_KEY")
 );
 
 // ── Email Templates ──
@@ -816,7 +842,8 @@ serve(async (req) => {
     const serviceRoleKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") || "";
     const emailSecret = Deno.env.get("EMAIL_FUNCTION_SECRET") || "";
     const headerOk = authHeader === `Bearer ${emailSecret || serviceRoleKey}`;
-    const bodySecretOk = body.secret === "medmaster-broadcast-2026";
+    const broadcastSecret = Deno.env.get("BROADCAST_SECRET") || "";
+    const bodySecretOk = broadcastSecret !== "" && body.secret === broadcastSecret;
     if (!headerOk && !bodySecretOk) {
       return new Response("Unauthorized", { status: 401 });
     }
@@ -827,6 +854,12 @@ serve(async (req) => {
         const { userId, templateId, templateData } = body;
         if (!userId || !templateId || !templateData?.email) {
           return new Response(JSON.stringify({ error: "Missing userId, templateId, or email" }), {
+            status: 400,
+            headers: { "Content-Type": "application/json" },
+          });
+        }
+        if (!isValidEmail(templateData.email)) {
+          return new Response(JSON.stringify({ error: "Invalid email format" }), {
             status: 400,
             headers: { "Content-Type": "application/json" },
           });
@@ -981,6 +1014,18 @@ serve(async (req) => {
         if (!to || !subject || !rawHtml) {
           return new Response(JSON.stringify({ error: "Missing to, subject, or html" }), {
             status: 400,
+            headers: { "Content-Type": "application/json" },
+          });
+        }
+        if (!isValidEmail(to)) {
+          return new Response(JSON.stringify({ error: "Invalid recipient email" }), {
+            status: 400,
+            headers: { "Content-Type": "application/json" },
+          });
+        }
+        if (!checkRateLimit(`send-raw:${to}`, 10)) {
+          return new Response(JSON.stringify({ error: "Rate limit exceeded" }), {
+            status: 429,
             headers: { "Content-Type": "application/json" },
           });
         }

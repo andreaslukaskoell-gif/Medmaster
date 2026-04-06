@@ -64,15 +64,22 @@ if (isSchemaSkipActive()) {
   Promise.resolve(rawClient.from("profiles").select("id").limit(1).maybeSingle())
     .then(({ error }) => {
       if (error) {
-        setSchemaSkip();
-        completeProbe(false);
+        const code = typeof error === "object" && "code" in error ? String(error.code) : "";
+        const msg = typeof error === "object" && "message" in error ? String(error.message) : "";
+        const isSchemaError =
+          code === "PGRST301" || code === "42P01" || code === "42703" ||
+          msg.includes("relation") || msg.includes("does not exist");
+        if (isSchemaError) {
+          setSchemaSkip();
+        }
+        completeProbe(!isSchemaError);
       } else {
         completeProbe(true);
       }
     })
     .catch(() => {
-      setSchemaSkip();
-      completeProbe(false);
+      // Network error — don't set schema skip, assume optimistic
+      completeProbe(true);
     });
 } else {
   probeResult = false;

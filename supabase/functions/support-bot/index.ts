@@ -21,9 +21,15 @@ const BOT_ENABLED = Deno.env.get("SUPPORT_BOT_ENABLED") !== "false"; // kill swi
 // The bot MUST ONLY access `support_logs`. No other tables. No RPC. No auth admin.
 // We use the service role key for auth but wrap it to prevent misuse.
 
+function requireEnv(name: string): string {
+  const v = Deno.env.get(name);
+  if (!v) throw new Error(`Missing required env var: ${name}`);
+  return v;
+}
+
 const _rawClient = createClient(
-  Deno.env.get("SUPABASE_URL")!,
-  Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
+  requireEnv("SUPABASE_URL"),
+  requireEnv("SUPABASE_SERVICE_ROLE_KEY")
 );
 
 const ALLOWED_TABLES = ["support_logs"] as const;

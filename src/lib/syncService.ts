@@ -17,23 +17,15 @@ function isSchemaMissingError(err: unknown): boolean {
   const msg = err instanceof Error ? err.message : String(err);
   const code =
     err && typeof err === "object" && "code" in err ? String((err as { code: string }).code) : "";
-  const status =
-    err && typeof err === "object" && "status" in err
-      ? Number((err as { status: number }).status)
-      : 0;
   return (
     code === "PGRST301" ||
     code === "PGRST204" || // column not found
     code === "42703" || // PostgreSQL: undefined column
-    status === 400 || // Bad Request — typically missing table/column
-    status === 404 ||
-    msg.includes("404") ||
-    msg.includes("400") ||
+    code === "42P01" || // PostgreSQL: undefined table
     msg.includes("relation") ||
     msg.includes("does not exist") ||
     msg.includes("column") ||
-    msg.includes("Could not find") ||
-    msg.includes("is not a function")
+    msg.includes("Could not find")
   );
 }
 

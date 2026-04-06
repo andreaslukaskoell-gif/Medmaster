@@ -11,7 +11,13 @@ import { SMTPClient } from "https://deno.land/x/denomailer@1.6.0/mod.ts";
 //   URL: https://<project-ref>.supabase.co/functions/v1/stripe-webhook
 //   Events: checkout.session.completed, customer.subscription.updated, customer.subscription.deleted
 
-const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY")!);
+function requireEnv(name: string): string {
+  const v = Deno.env.get(name);
+  if (!v) throw new Error(`Missing required env var: ${name}`);
+  return v;
+}
+
+const stripe = new Stripe(requireEnv("STRIPE_SECRET_KEY"));
 
 const webhookSecret = Deno.env.get("STRIPE_WEBHOOK_SECRET");
 if (!webhookSecret) {
@@ -20,8 +26,8 @@ if (!webhookSecret) {
 
 // Use service role to bypass RLS for profile updates
 const supabase = createClient(
-  Deno.env.get("SUPABASE_URL")!,
-  Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
+  requireEnv("SUPABASE_URL"),
+  requireEnv("SUPABASE_SERVICE_ROLE_KEY")
 );
 
 /** Map Stripe Price IDs to subscription tiers.
@@ -377,15 +383,17 @@ serve(async (req) => {
         const tier = priceId ? tierFromPriceId(priceId) : "standard";
         const active = ["active", "trialing"].includes(subscription.status);
 
-        const { error } = await supabase
+        const { error, count } = await supabase
           .from("profiles")
           .update({
             subscription_tier: active ? tier : "starter",
             updated_at: new Date().toISOString(),
           })
-          .eq("stripe_customer_id", customerId);
+          .eq("stripe_customer_id", customerId)
+          .select("id", { count: "exact", head: true });
 
         if (error) console.error("Subscription update error:", error);
+        else if (count === 0) console.warn(`[stripe-webhook] No profile found for stripe_customer_id=${customerId} (subscription.updated)`);
         else console.log(`Customer ${customerId} → ${active ? tier : "starter"}`);
         break;
       }
@@ -394,15 +402,17 @@ serve(async (req) => {
         const subscription = event.data.object as Stripe.Subscription;
         const customerId = subscription.customer as string;
 
-        const { error } = await supabase
+        const { error, count } = await supabase
           .from("profiles")
           .update({
             subscription_tier: "starter",
             updated_at: new Date().toISOString(),
           })
-          .eq("stripe_customer_id", customerId);
+          .eq("stripe_customer_id", customerId)
+          .select("id", { count: "exact", head: true });
 
         if (error) console.error("Subscription delete error:", error);
+        else if (count === 0) console.warn(`[stripe-webhook] No profile found for stripe_customer_id=${customerId} (subscription.deleted)`);
         else console.log(`Customer ${customerId} → starter (cancelled)`);
         break;
       }

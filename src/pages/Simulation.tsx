@@ -781,6 +781,10 @@ export default function Simulation() {
   void sectionStartTime;
   const [simVariant, setSimVariant] = useState<number | undefined>(undefined);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const sectionsRef = useRef(sections);
+  sectionsRef.current = sections;
+  const currentSectionIdxRef = useRef(currentSectionIdx);
+  currentSectionIdxRef.current = currentSectionIdx;
   const addXP = useStore((s) => s.addXP);
   const checkStreak = useStore((s) => s.checkStreak);
   const saveQuizResult = useStore((s) => s.saveQuizResult);
@@ -1120,7 +1124,7 @@ export default function Simulation() {
       timerRef.current = setInterval(() => {
         setLearnTimeLeft((t) => {
           if (t <= 1) {
-            const sec = sections[currentSectionIdx];
+            const sec = sectionsRef.current[currentSectionIdxRef.current];
             if (sec?.sectionType === "kff-gedaechtnis-learn") {
               advanceSection();
             } else {

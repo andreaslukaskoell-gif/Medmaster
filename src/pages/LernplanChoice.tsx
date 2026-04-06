@@ -35,7 +35,7 @@ export default function LernplanChoice() {
     completeOnboarding(null);
     supabase?.auth.getUser().then(({ data }) => {
       if (data.user) {
-        supabase?.from("profiles").update({ onboarding_completed: true }).eq("id", data.user.id).then(() => {});
+        Promise.resolve(supabase?.from("profiles").update({ onboarding_completed: true }).eq("id", data.user.id)).catch((err: unknown) => console.warn("[onboarding] Failed to persist onboarding_completed:", err));
       }
     });
     navigate("/dashboard", { replace: true });
