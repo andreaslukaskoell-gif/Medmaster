@@ -92,9 +92,22 @@ import { isNative, setupAppListeners, setStatusBarLight } from "@/lib/native";
 
 if ("serviceWorker" in navigator && import.meta.env.PROD && !isNative) {
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register("/sw.js").catch(() => {
-      // SW registration failed — app works fine without it
-    });
+    navigator.serviceWorker.register("/sw.js").then((reg) => {
+      // Check for updates every 5 minutes
+      setInterval(() => reg.update().catch(() => {}), 5 * 60 * 1000);
+
+      // Listen for SW update messages — reload on next navigation
+      navigator.serviceWorker.addEventListener("message", (event) => {
+        if (event.data?.type === "SW_UPDATED") {
+          // Reload on next user-initiated navigation to avoid interrupting active sessions
+          const originalPushState = history.pushState.bind(history);
+          history.pushState = function (...args) {
+            originalPushState(...args);
+            window.location.reload();
+          };
+        }
+      });
+    }).catch(() => {});
   });
 }
 
