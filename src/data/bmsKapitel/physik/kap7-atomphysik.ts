@@ -13,7 +13,7 @@ export const physKap7: Kapitel = {
     {
       id: "ph-7-01",
       title: "Atommodelle und Spektroskopie",
-      imageUrl: "/images/bms/ch-atommodell.jpg",
+      imageUrl: "/images/bms/ch-atommodell.webp",
       imageCaption: "Abb.: Atommodelle von Dalton bis zum Orbitalmodell (OpenStax, CC BY 4.0)",
       stichworte: [
         "Atommodelle",

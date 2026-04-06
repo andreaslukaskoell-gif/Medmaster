@@ -8,7 +8,7 @@ export const archivedChemBindungUKs: Unterkapitel[] = [
   {
     id: "ch-6-04",
     title: "Chemische Bindungen in biologischen Molekülen",
-    imageUrl: "/images/bms/ch-peptidbindung.jpg",
+    imageUrl: "/images/bms/ch-peptidbindung.webp",
     imageCaption: "Abb.: Peptidbindung zwischen zwei Aminosäuren (OpenStax, CC BY 4.0)",
     stichworte: [
       "Glycosidische Bindung",

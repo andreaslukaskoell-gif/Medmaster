@@ -1127,7 +1127,7 @@ Q_warm = 1200 J, W = 400 J → Q_kalt = 1200 − 400 = 800 J.
     {
       id: "ph-4-04",
       title: "Phasenübergänge und Ideales Gas",
-      imageUrl: "/images/bms/ch-aggregatzustaende.jpg",
+      imageUrl: "/images/bms/ch-aggregatzustaende.webp",
       imageCaption: "Abb.: Aggregatzustände und Phasenübergänge (OpenStax, CC BY 4.0)",
       stichworte: [
         "Ideales Gasgesetz",

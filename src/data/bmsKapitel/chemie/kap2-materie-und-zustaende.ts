@@ -25,7 +25,7 @@ export const chemKapMaterie: Kapitel = {
         "Kinetische Gastheorie",
         "Kompressibilitätsfaktor",
       ],
-      imageUrl: "/images/bms/ch-aggregatzustaende.jpg",
+      imageUrl: "/images/bms/ch-aggregatzustaende.webp",
       imageCaption:
         "Abb.: Gasförmiger, flüssiger und fester Aggregatzustand auf molekularer Ebene — Grundlage der Gasgesetze (OpenStax, CC BY 4.0)",
       content: `Kaum eine Gleichung begegnet angehenden Medizinerinnen und Medizinern so häufig wie **pV = nRT**.
@@ -342,7 +342,7 @@ Die **Maxwell-Boltzmann-Verteilung** beschreibt, wie die Geschwindigkeiten der e
     {
       id: "ch-4-01",
       title: "Aggregatzustände und molekulare Basis",
-      imageUrl: "/images/bms/ch-aggregatzustaende.jpg",
+      imageUrl: "/images/bms/ch-aggregatzustaende.webp",
       imageCaption: "Abb.: Die drei Aggregatzustände auf molekularer Ebene (OpenStax, CC BY 4.0)",
       stichworte: [
         "Aggregatzustände",
@@ -684,7 +684,7 @@ Nicht alle Feststoffe sind kristallin. **Amorphe Feststoffe** (Glas, viele Kunst
     {
       id: "ch-4-02",
       title: "Phasenübergänge – Energetik und Bedingungen",
-      imageUrl: "/images/bms/ch-aggregatzustaende.jpg",
+      imageUrl: "/images/bms/ch-aggregatzustaende.webp",
       imageCaption:
         "Abb.: Die drei Aggregatzustände und ihre Phasenübergänge auf molekularer Ebene (OpenStax, CC BY 4.0)",
       stichworte: [

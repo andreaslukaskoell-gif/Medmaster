@@ -11,7 +11,7 @@ export const bioKapAnatomieGewebe: Kapitel = {
     {
       id: "bio-2-01",
       title: "Epithelgewebe — Formen, Schichtungen und Funktionen",
-      imageUrl: "/images/bms/bio-epidermis-schichten.jpg",
+      imageUrl: "/images/bms/bio-epidermis-schichten.webp",
       imageCaption: "Abb.: Schichten der Epidermis mit Zelltypen (OpenStax, CC BY 4.0)",
       diagram: "epithelial-tissue",
       stichworte: [

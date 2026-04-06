@@ -15,7 +15,7 @@ export const chemKapReaktionen: Kapitel = {
     {
       id: "ch-7-01",
       title: "Reaktionstypen und Grundprinzipien",
-      imageUrl: "/images/bms/ch-chemische-reaktionen.jpg",
+      imageUrl: "/images/bms/ch-chemische-reaktionen.webp",
       imageCaption:
         "Abb.: Synthese-, Zersetzungs- und Austauschreaktionen im Überblick — dargestellt am Wort-Analogie-Modell (OpenStax, CC BY 4.0)",
       stichworte: [
@@ -396,7 +396,7 @@ Klinisch relevant:
     {
       id: "ch-7-02",
       title: "Reaktionskinetik — Geschwindigkeit und Faktoren",
-      imageUrl: "/images/bms/ch-enzymatische-reaktion.jpg",
+      imageUrl: "/images/bms/ch-enzymatische-reaktion.webp",
       imageCaption: "Abb.: Enzym-Substrat-Komplex und katalysierte Reaktion (OpenStax, CC BY 4.0)",
       stichworte: [
         "Reaktionsgeschwindigkeit",
@@ -721,7 +721,7 @@ Michaelis-Menten erklärt, warum Enzyme bei hoher Substratkonzentration sättige
     {
       id: "ch-8-02",
       title: "Chemisches Gleichgewicht und Massenwirkungsgesetz",
-      imageUrl: "/images/bms/ch-enzymatische-reaktion.jpg",
+      imageUrl: "/images/bms/ch-enzymatische-reaktion.webp",
       imageCaption:
         "Abb.: Enzym-Substrat-Komplex im Schlüssel-Schloss-Modell — vier Schritte: Bindung, Katalyse, Produktbildung, Freisetzung (OpenStax, CC BY 4.0)",
       diagram: "equilibrium",
@@ -1047,7 +1047,7 @@ Das Massenwirkungsgesetz beschreibt die O₂-Bindung an Hämoglobin: Hb + O₂ �
     {
       id: "ch-8-03",
       title: "Le Chatelier-Prinzip — Störung des Gleichgewichts",
-      imageUrl: "/images/bms/ch-enzymatische-reaktion.jpg",
+      imageUrl: "/images/bms/ch-enzymatische-reaktion.webp",
       imageCaption:
         "Abb.: Enzym-Substrat-Komplex im Schlüssel-Schloss-Modell — Katalysatoren beschleunigen die Gleichgewichtseinstellung, ohne die Lage zu ändern (OpenStax, CC BY 4.0)",
       content: `Wenn ein chemisches Gleichgewicht einmal eingestellt ist, bleibt es nicht zwingend dort stehen. Temperatur, Druck und Konzentrationsänderungen können das Gleichgewicht verschieben — und genau dieses Verhalten beschreibt eines der nützlichsten Prinzipien der Chemie.
@@ -1338,7 +1338,7 @@ CO₂ + H₂O ⇌ H₂CO₃ ⇌ H⁺ + HCO₃⁻
     {
       id: "ch-7-05",
       title: "Thermodynamik — Enthalpie, Entropie, Gibbs-Energie",
-      imageUrl: "/images/bms/ch-chemische-reaktionen.jpg",
+      imageUrl: "/images/bms/ch-chemische-reaktionen.webp",
       imageCaption:
         "Abb.: Grundlegende Reaktionstypen — Synthese, Zersetzung und Austausch als Basis thermodynamischer Energiebilanzen (OpenStax, CC BY 4.0)",
       stichworte: [

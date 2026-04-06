@@ -968,7 +968,7 @@ Die wichtigsten Teratogene: Folsäuremangel (Neuralrohrdefekte), Alkohol (fetale
     {
       id: "bio-9-03",
       title: "Phylogenetik — Stammbäume, Homologie und Analogie",
-      imageUrl: "/images/bms/bio-stammbaum-analyse.png",
+      imageUrl: "/images/bms/bio-stammbaum-analyse.webp",
       imageCaption:
         "Abb.: Stammbaumanalyse — Symbole und phylogenetische Verwandtschaft (Wikimedia Commons, CC0)",
       stichworte: [
@@ -1883,7 +1883,7 @@ Die **Implantation** (Einnistung) ist das Einbetten der Blastozyste in die **Geb
     {
       id: "bio-9-10",
       title: "Gastrulation und die drei Keimblätter",
-      imageUrl: "/images/bms/bio-gastrulation.png",
+      imageUrl: "/images/bms/bio-gastrulation.webp",
       imageCaption:
         "Abb.: Gastrulation — Bildung der drei Keimblätter (Wikimedia Commons, Public Domain)",
       stichworte: [

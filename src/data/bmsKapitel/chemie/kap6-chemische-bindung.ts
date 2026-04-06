@@ -10,7 +10,7 @@ export const chemKap6: Kapitel = {
     {
       id: "ch-6-01",
       title: "Ionenbindung — Entstehung und Eigenschaften",
-      imageUrl: "/images/bms/ch-ionenbindung.jpg",
+      imageUrl: "/images/bms/ch-ionenbindung.webp",
       imageCaption:
         "Abb.: Elektronenübertragung von Natrium auf Chlor und das resultierende NaCl-Kristallgitter (OpenStax, CC BY 4.0)",
       stichworte: [
@@ -431,7 +431,7 @@ Die Eigenschaften und Löslichkeitsregeln ionischer Verbindungen sind nicht nur 
     {
       id: "ch-6-02",
       title: "Kovalente Bindung — Polarität und Hybridisierung",
-      imageUrl: "/images/bms/ch-kovalente-bindung.jpg",
+      imageUrl: "/images/bms/ch-kovalente-bindung.webp",
       imageCaption:
         "Abb.: Kovalente Bindungen — gemeinsame Elektronenpaare in H–H, O=O und CO₂ (OpenStax, CC BY 4.0)",
       stichworte: [
@@ -1034,7 +1034,7 @@ Ein Molekül ist aromatisch (besonders stabil), wenn es die **Hückel-Regel** (K
     {
       id: "ch-6-03",
       title: "Van-der-Waals, Wasserstoffbrücken und Metallbindung",
-      imageUrl: "/images/bms/ch-wasserstoffbruecken.jpg",
+      imageUrl: "/images/bms/ch-wasserstoffbruecken.webp",
       imageCaption:
         "Abb.: Wasserstoffbrücken zwischen Wassermolekülen — O–H···O-Wechselwirkungen im H₂O-Netzwerk (OpenStax, CC BY 4.0)",
       stichworte: [

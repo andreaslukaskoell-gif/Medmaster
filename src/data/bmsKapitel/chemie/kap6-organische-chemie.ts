@@ -14,7 +14,7 @@ export const chemKapOrganisch: Kapitel = {
     {
       id: "ch-12-01",
       title: "Kohlenwasserstoffe — Alkane, Alkene, Alkine",
-      imageUrl: "/images/bms/ch-kovalente-bindung.jpg",
+      imageUrl: "/images/bms/ch-kovalente-bindung.webp",
       imageCaption:
         "Abb.: Kovalente Bindungen — Einfachbindung (H–H), Doppelbindung (O=O) und Doppelbindungen im CO₂ mit Elektronenpaar-Darstellung (OpenStax, CC BY 4.0)",
       content: `Ein einziges Kohlenstoffatom kann vier stabile Bindungen eingehen — und genau diese Vielseitigkeit macht Kohlenstoff zum Baustein aller Biomoleküle, von der Glucose im Blut bis zum Cholesterin in der Zellmembran. Die organische Chemie beginnt bei den einfachsten Kohlenstoffverbindungen: den Kohlenwasserstoffen.
@@ -389,7 +389,7 @@ In der Atemgasanalytik gelten Kohlenwasserstoffe wie Ethan und Pentan als Biomar
     {
       id: "ch-12-03",
       title: "Funktionelle Gruppen der Organik",
-      imageUrl: "/images/bms/ch-dehydratation-hydrolyse.jpg",
+      imageUrl: "/images/bms/ch-dehydratation-hydrolyse.webp",
       imageCaption: "Abb.: Dehydratation und Hydrolyse organischer Moleküle (OpenStax, CC BY 4.0)",
       content: `Funktionelle Gruppen bestimmen die chemischen Eigenschaften organischer Moleküle. In diesem Unterkapitel lernst du die wichtigsten Gruppen kennen — von Alkoholen über Aldehyde und Ketone bis zu Carbonsäuren und Estern — und ihre Bedeutung für Biochemie und Pharmakologie.
 
@@ -690,7 +690,7 @@ Amine sind als Neurotransmitter und Signalmoleküle von zentraler klinischer Bed
     {
       id: "ch-13-01",
       title: "Aminosäuren und Proteine",
-      imageUrl: "/images/bms/ch-aminosaeure.jpg",
+      imageUrl: "/images/bms/ch-aminosaeure.webp",
       imageCaption:
         "Abb.: Grundstruktur einer Aminosäure mit funktionellen Gruppen (OpenStax, CC BY 4.0)",
       content: `Aminosäuren sind die Bausteine aller Proteine — und damit die molekulare Grundlage des Lebens.
@@ -1152,7 +1152,7 @@ Beispiele: ACE-Hemmer (kompetitiv), Statine (kompetitiv an HMG-CoA-Reduktase), P
     {
       id: "ch-13-02",
       title: "Kohlenhydrate — Mono-, Di- und Polysaccharide",
-      imageUrl: "/images/bms/ch-kohlenhydrate.jpg",
+      imageUrl: "/images/bms/ch-kohlenhydrate.webp",
       imageCaption:
         "Abb.: Haworth-Projektionen der Hexosen (Glucose, Fructose, Galactose) und der Pentosen (Desoxyribose, Ribose) (OpenStax, CC BY 4.0)",
       content: `Kohlenhydrate liefern den Großteil der Energie für den menschlichen Stoffwechsel und sind zentrale Bausteine von Zellwänden, Glykoproteinen und Nukleinsäuren. Ihre Chemie reicht von einfachen Zuckern bis zu riesigen Polysacchariden.
@@ -1449,7 +1449,7 @@ Die klinische Bedeutung der Kohlenhydrate zeigt sich besonders eindrücklich bei
     {
       id: "ch-13-03",
       title: "Lipide — Fette, Phospholipide und Steroide",
-      imageUrl: "/images/bms/ch-triglycerid.jpg",
+      imageUrl: "/images/bms/ch-triglycerid.webp",
       imageCaption:
         "Abb.: Veresterung von Glycerin mit drei Fettsäuren zum Triglycerid unter Abspaltung von 3 H₂O (OpenStax, CC BY 4.0)",
       stichworte: [
@@ -1978,7 +1978,7 @@ Gehirn, Herzmuskel und Skelettmuskel können Ketonkörper als alternatives Subst
     {
       id: "ch-13-04",
       title: "Nukleinsäuren — DNA und RNA",
-      imageUrl: "/images/bms/ch-nukleotid.jpg",
+      imageUrl: "/images/bms/ch-nukleotid.webp",
       imageCaption:
         "Abb.: Nukleotid-Aufbau (Phosphat + Pentose + Base), Pyrimidine (C, T, U) und Purine (A, G) sowie Polynukleotidkette mit Phosphodiesterbindungen (OpenStax, CC BY 4.0)",
       stichworte: [

@@ -15,7 +15,7 @@ export const chemKapAtom: Kapitel = {
     {
       id: "ch-1-01",
       title: "Atommodelle und Atomaufbau",
-      imageUrl: "/images/bms/ch-atommodell.jpg",
+      imageUrl: "/images/bms/ch-atommodell.webp",
       imageCaption:
         "Abb.: Historische Atommodelle von Dalton bis zum Orbitalmodell (OpenStax, CC BY 4.0)",
       stichworte: [
@@ -340,7 +340,7 @@ Die **Ordnungszahl Z** (Protonenzahl) gibt an, wie viele Protonen im Kern sitzen
     {
       id: "ch-1-02",
       title: "Elektronenkonfiguration und Quantenzahlen",
-      imageUrl: "/images/bms/ch-elektronenschalen.jpg",
+      imageUrl: "/images/bms/ch-elektronenschalen.webp",
       imageCaption:
         "Abb.: Elektronenkonfiguration und Schalen im Bohr-Modell (OpenStax, CC BY 4.0)",
       stichworte: [
@@ -713,7 +713,7 @@ Die Konzepte der Elektronenkonfiguration und des Magnetismus sind nicht nur theo
     {
       id: "ch-1-04",
       title: "Massenzahl, Atommasse und Mol-Konzept",
-      imageUrl: "/images/bms/ch-atommodell.jpg",
+      imageUrl: "/images/bms/ch-atommodell.webp",
       imageCaption:
         "Abb.: Vom Atom zum Mol — Atombau als Grundlage der Massenberechnung (OpenStax, CC BY 4.0)",
       stichworte: [
@@ -1020,7 +1020,7 @@ C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O (vollständige Oxidation von Gluk
     {
       id: "ch-2-01",
       title: "Intermolekulare Wechselwirkungen",
-      imageUrl: "/images/bms/ch-wasserstoffbruecken.jpg",
+      imageUrl: "/images/bms/ch-wasserstoffbruecken.webp",
       imageCaption:
         "Abb.: Wasserstoffbrückenbindungen als wichtigste intermolekulare Wechselwirkung (OpenStax, CC BY 4.0)",
       stichworte: [
@@ -1324,7 +1324,7 @@ Proteinfaltung und -funktion basieren auf einem Netzwerk aus H-Brücken, hydroph
     {
       id: "ch-2-03",
       title: "Aggregatzustände, Phasenübergänge und Kolloidchemie",
-      imageUrl: "/images/bms/ch-aggregatzustaende.jpg",
+      imageUrl: "/images/bms/ch-aggregatzustaende.webp",
       imageCaption: "Abb.: Aggregatzustände und Phasenübergänge (OpenStax, CC BY 4.0)",
       stichworte: [
         "Aggregatzustand",
@@ -1653,7 +1653,7 @@ Neben den klassischen Aggregatzuständen gibt es fein verteilte Systeme, die wed
     {
       id: "ch-5-01",
       title: "Aufbau und Ordnungsprinzip des PSE",
-      imageUrl: "/images/bms/ch-periodensystem.jpg",
+      imageUrl: "/images/bms/ch-periodensystem.webp",
       imageCaption: "Abb.: Aufbau und Ordnungsprinzip des Periodensystems (OpenStax, CC BY 4.0)",
       stichworte: [
         "Periodensystem",
@@ -1965,7 +1965,7 @@ Halb- und vollgefüllte d-Schalen sind besonders stabil — die ausführliche Er
     {
       id: "ch-5-02",
       title: "Periodische Trends — Eigenschaften im PSE",
-      imageUrl: "/images/bms/ch-periodensystem.jpg",
+      imageUrl: "/images/bms/ch-periodensystem.webp",
       imageCaption: "Abb.: Periodische Trends im PSE — Atomradius, IE, EN (OpenStax, CC BY 4.0)",
       stichworte: [
         "Effektive Kernladung",
@@ -2282,7 +2282,7 @@ Trend: In der Periode↑; in der Gruppe↓. Höchste EN: Fluor (oben rechts im P
     {
       id: "ch-5-03",
       title: "Wichtige Elementgruppen",
-      imageUrl: "/images/bms/ch-periodensystem.jpg",
+      imageUrl: "/images/bms/ch-periodensystem.webp",
       imageCaption: "Abb.: Periodensystem mit hervorgehobenen Elementgruppen (OpenStax, CC BY 4.0)",
       stichworte: [
         "Alkalimetalle",

@@ -11,7 +11,7 @@ export const chemKapAnorganisch: Kapitel = {
     {
       id: "ch-9-01",
       title: "Wasser — Eigenschaften und biologische Bedeutung",
-      imageUrl: "/images/bms/ch-wasserstoffbruecken.jpg",
+      imageUrl: "/images/bms/ch-wasserstoffbruecken.webp",
       imageCaption:
         "Abb.: Wasserstoffbrückenbindungen zwischen drei H₂O-Molekülen — δ⁺-Wasserstoff wechselwirkt mit δ⁻-Sauerstoff des Nachbarmoleküls (OpenStax, CC BY 4.0)",
       stichworte: [
@@ -360,7 +360,7 @@ Der **hydrophobe Effekt** ist primär entropisch getrieben: Apolare Moleküle in
         "Das Bicarbonat-Puffersystem und Henderson-Hasselbalch berechnen und interpretieren können",
         "Acetyl-CoA als zentrale metabolische Schnittstelle benennen",
       ],
-      imageUrl: "/images/bms/ch-kovalente-bindung.jpg",
+      imageUrl: "/images/bms/ch-kovalente-bindung.webp",
       imageCaption:
         "Abb.: Kovalente Bindungen — H–H-Einfachbindung, O=O-Doppelbindung und CO₂ mit zwei C=O-Doppelbindungen (OpenStax, CC BY 4.0)",
       content: `Kein anderes Element bildet so viele verschiedene Verbindungen wie Kohlenstoff. Seine einzigartige Fähigkeit, stabile Ketten, Ringe und Verzweigungen zu formen, macht es zum zentralen Baustein aller organischen Moleküle und damit des Lebens selbst.
@@ -641,7 +641,7 @@ Metabolisch zentrale Kohlenstoffverbindungen:
         "Salpeter- und Schwefelsäure als Industriesäuren und ihre Reaktionen darstellen",
         "Die medizinische Bedeutung von Iod (Schilddrüse), Chlor (Desinfektion) und Fluor (Kariesprophylaxe) erläutern",
       ],
-      imageUrl: "/images/bms/ch-periodensystem.jpg",
+      imageUrl: "/images/bms/ch-periodensystem.webp",
       imageCaption:
         "Abb.: NIST-Periodensystem der Elemente — Hauptgruppen mit Stickstoff (N), Schwefel (S) und den Halogenen (F, Cl, Br, I) hervorgehoben (OpenStax, CC BY 4.0)",
       content: `Nach Wasserstoff, Sauerstoff und Kohlenstoff ist Stickstoff das vierte Schlüsselelement der Biologie. Er steckt in jeder Aminosäure, jeder Nukleinbase und vielen Cofaktoren — und ist dennoch als N₂-Gas erstaunlich reaktionsträge.
@@ -1003,7 +1003,7 @@ Die Halogene (F, Cl, Br, I) sind starke Oxidationsmittel mit abnehmender Oxidati
     {
       id: "ch-10-01",
       title: "Säure-Base-Definitionen und pH-Wert",
-      imageUrl: "/images/bms/ch-ph-skala.jpg",
+      imageUrl: "/images/bms/ch-ph-skala.webp",
       imageCaption: "Abb.: pH-Skala von sauer bis basisch (OpenStax, CC BY 4.0)",
       stichworte: [
         "Arrhenius-Definition",
@@ -1326,7 +1326,7 @@ Der Blut-pH des Menschen liegt im Normbereich bei **7,35–7,45**. Eine Abweichu
     {
       id: "ch-10-02",
       title: "Starke und schwache Säuren/Basen – Ka, Kb, pKa",
-      imageUrl: "/images/bms/ch-ph-skala.jpg",
+      imageUrl: "/images/bms/ch-ph-skala.webp",
       imageCaption: "Abb.: pH-Skala mit Beispielen starker und schwacher Säuren/Basen",
       stichworte: [
         "Starke Säure vollständige Dissoziation",
@@ -1693,7 +1693,7 @@ Die **Magensäure** (HCl, pH ~ 1-2) ist die einzige starke Säure im Körper und
         "Vitamin C Antioxidans",
         "Redox-Gleichung ausgleichen",
       ],
-      imageUrl: "/images/bms/ch-ionenbindung.jpg",
+      imageUrl: "/images/bms/ch-ionenbindung.webp",
       imageCaption:
         "Abb.: Elektronentransfer bei der Ionenbildung — Grundlage der Redoxchemie (OpenStax, CC BY 4.0)",
       content: `Von der Zellatmung über die Photosynthese bis zur Korrosion von Implantaten — Redoxreaktionen gehören zu den häufigsten chemischen Prozessen in Natur und Medizin. In jeder Redoxreaktion werden Elektronen von einem Teilchen auf ein anderes übertragen.
@@ -1972,7 +1972,7 @@ Bei der **Komproportionierung** reagieren zwei verschiedene Oxidationsstufen des
         "Blei-Akkumulator",
         "Brennstoffzelle",
       ],
-      imageUrl: "/images/bms/ch-ionenbindung.jpg",
+      imageUrl: "/images/bms/ch-ionenbindung.webp",
       imageCaption:
         "Abb.: Elektronentransfer zwischen Natrium und Chlor — Grundprinzip elektrochemischer Prozesse (OpenStax, CC BY 4.0)",
       content: `Ein Herzschrittmacher muss 10 Jahre lang zuverlässig Strom liefern — tief im Brustkorb, ohne Wartung. Die Batterie, die das ermöglicht, basiert auf denselben elektrochemischen Prinzipien wie das einfache Daniell-Element aus dem 19. Jahrhundert. Wer Galvanische Zellen versteht, versteht auch Batterien, Korrosion und sogar die Blutgasanalyse im Krankenhaus.

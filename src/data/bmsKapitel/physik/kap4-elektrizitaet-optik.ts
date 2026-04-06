@@ -2433,7 +2433,7 @@ Kinetische Energie: E = eU = 1,6·10⁻¹⁴ J. Impuls: p = √(2mE) = √(2 · 
     {
       id: "ph-6-04",
       title: "Optik des Auges und Sehfehler",
-      imageUrl: "/images/bms/bio-auge.jpg",
+      imageUrl: "/images/bms/bio-auge.webp",
       imageCaption: "Abb.: Aufbau des Auges mit Linse und Netzhaut (OpenStax, CC BY 4.0)",
       stichworte: [
         "Akkommodation",

@@ -11,7 +11,7 @@ export const chemKapStoech: Kapitel = {
     {
       id: "ch-3s-01",
       title: "Mol-Konzept & Avogadro",
-      imageUrl: "/images/bms/ch-atommodell.jpg",
+      imageUrl: "/images/bms/ch-atommodell.webp",
       imageCaption:
         "Abb.: Planetenmodell und Elektronenwolke eines Heliumatoms — Grundlage für das Zählen von Teilchen (OpenStax, CC BY 4.0)",
       stichworte: [
@@ -215,7 +215,7 @@ Dieses Konzept macht das PSE zu einem universellen Nachschlagewerk für stöchio
     {
       id: "ch-3s-02",
       title: "Stöchiometrie & Reaktionsgleichungen",
-      imageUrl: "/images/bms/ch-chemische-reaktionen.jpg",
+      imageUrl: "/images/bms/ch-chemische-reaktionen.webp",
       imageCaption:
         "Abb.: Reaktionstypen — Synthese, Zersetzung und Austauschreaktion am BOOKWORM-Beispiel (OpenStax, CC BY 4.0)",
       stichworte: [
@@ -455,7 +455,7 @@ Bei der vollständigen Oxidation von 1 mol Glucose (180 g) entstehen 6 mol CO₂
     {
       id: "ch-3s-03",
       title: "Lösungen, Konzentration & Löslichkeit",
-      imageUrl: "/images/bms/ch-loesungen.jpg",
+      imageUrl: "/images/bms/ch-loesungen.webp",
       imageCaption:
         "Abb.: Osmotische Wirkung auf Erythrozyten — hypertonisch, isotonisch und hypotonisch (OpenStax, CC BY 4.0)",
       stichworte: [

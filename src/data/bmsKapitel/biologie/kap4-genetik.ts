@@ -3280,7 +3280,7 @@ Die Kopplungsanalyse wurde historisch genutzt, um **Krankheitsgene zu kartieren*
     {
       id: "bio-4-14",
       title: "Genetische Diagnostik — PID, PND und Genetische Beratung",
-      imageUrl: "/images/bms/bio-amniozentese.png",
+      imageUrl: "/images/bms/bio-amniozentese.webp",
       imageCaption:
         "Abb.: Amniozentese — Fruchtwasserpunktion zur pränatalen Diagnostik (Wikimedia Commons, CC BY-SA 4.0)",
       stichworte: [
