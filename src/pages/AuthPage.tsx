@@ -141,8 +141,12 @@ export default function AuthPage() {
 
     if (!email.trim()) return;
     if (!checkThrottle()) return;
-    if (password.length < 6) {
-      setError("Passwort muss mindestens 6 Zeichen haben.");
+    if (password.length < 8) {
+      setError("Passwort muss mindestens 8 Zeichen haben.");
+      return;
+    }
+    if (isNewUser && (!/[a-z]/.test(password) || !/[A-Z]/.test(password) || !/\d/.test(password))) {
+      setError("Passwort muss Klein- und Großbuchstaben sowie eine Zahl enthalten.");
       return;
     }
 
@@ -433,7 +437,7 @@ export default function AuthPage() {
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         placeholder={
-                          isNewUser ? "Passwort wählen (min. 6 Zeichen)" : "Dein Passwort"
+                          isNewUser ? "Passwort wählen (min. 8 Zeichen, A-z + 0-9)" : "Dein Passwort"
                         }
                         required
                         autoComplete={isNewUser ? "new-password" : "current-password"}
