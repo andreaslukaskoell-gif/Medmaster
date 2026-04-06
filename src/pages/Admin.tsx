@@ -103,6 +103,7 @@ type AtRiskData = {
     active_days: number;
     last_seen: string;
     days_inactive: number;
+    last_email_sent: string | null;
   }[];
 };
 
@@ -442,6 +443,22 @@ export default function Admin() {
     setLastRefresh(new Date());
   }, [timeRange]);
 
+  const [emailLogging, setEmailLogging] = useState<string | null>(null); // user_id currently being logged
+
+  const handleLogEmail = useCallback(async (userId: string, email: string, type: string = "re_engagement") => {
+    setEmailLogging(userId);
+    await supabase!.rpc("admin_log_email", {
+      p_user_email: email,
+      p_user_id: userId,
+      p_email_type: type,
+      p_subject: type === "re_engagement" ? "Wir vermissen dich bei MedMaster!" : null,
+    });
+    // Refresh at-risk data to show updated last_email_sent
+    const { data } = await supabase!.rpc("admin_at_risk_users");
+    if (data) setAtRisk(data as AtRiskData);
+    setEmailLogging(null);
+  }, []);
+
   const handleUserSearch = useCallback(async (query: string) => {
     if (!query.trim() || query.trim().length < 2) {
       setSearchResults(null);
@@ -697,23 +714,37 @@ export default function Admin() {
           </p>
           <div className="space-y-2">
             {atRisk.users.slice(0, 8).map((u) => (
-              <div key={u.user_id} className="flex items-center justify-between bg-[var(--surface)] rounded-lg px-3 py-2 text-sm">
-                <div className="flex items-center gap-3 min-w-0 flex-1">
-                  <span className="font-medium truncate">{u.email}</span>
-                  <span
-                    className="text-[10px] font-semibold px-2 py-0.5 rounded-full shrink-0"
-                    style={{
-                      background: u.subscription_tier === "premium" ? "rgba(245,158,11,0.12)" : "rgba(100,116,139,0.1)",
-                      color: u.subscription_tier === "premium" ? "#f59e0b" : "var(--muted)",
-                    }}
-                  >
-                    {u.subscription_tier || "starter"}
-                  </span>
+              <div key={u.user_id} className="bg-[var(--surface)] rounded-lg px-3 py-2 text-sm">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-3 min-w-0 flex-1">
+                    <span className="font-medium truncate">{u.email}</span>
+                    <span
+                      className="text-[10px] font-semibold px-2 py-0.5 rounded-full shrink-0"
+                      style={{
+                        background: u.subscription_tier === "premium" ? "rgba(245,158,11,0.12)" : "rgba(100,116,139,0.1)",
+                        color: u.subscription_tier === "premium" ? "#f59e0b" : "var(--muted)",
+                      }}
+                    >
+                      {u.subscription_tier || "starter"}
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-3 text-xs text-[var(--muted)] shrink-0">
+                    <span>{u.active_days}d aktiv</span>
+                    <span className="text-red-500 font-medium">{u.days_inactive}d inaktiv</span>
+                    <button
+                      onClick={(e) => { e.stopPropagation(); handleLogEmail(u.user_id, u.email, "re_engagement"); }}
+                      disabled={emailLogging === u.user_id}
+                      className="px-2 py-1 rounded bg-amber-500/15 text-amber-700 dark:text-amber-400 text-[10px] font-semibold hover:bg-amber-500/25 disabled:opacity-50"
+                    >
+                      {emailLogging === u.user_id ? "..." : "E-Mail geloggt"}
+                    </button>
+                  </div>
                 </div>
-                <div className="flex items-center gap-4 text-xs text-[var(--muted)] shrink-0">
-                  <span>{u.active_days}d aktiv</span>
-                  <span className="text-red-500 font-medium">{u.days_inactive}d inaktiv</span>
-                </div>
+                {u.last_email_sent && (
+                  <div className="mt-1 text-[10px] text-[var(--muted)]">
+                    Letzte E-Mail: {new Date(u.last_email_sent).toLocaleDateString("de-AT", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" })}
+                  </div>
+                )}
               </div>
             ))}
             {atRisk.count > 8 && (
