@@ -1,16 +1,16 @@
 import type { QuizResult } from "@/store/useStore";
-import { getQuestionSubject, getQuestionChapter } from "@/lib/bmsLookup";
+import { getQuestionSubject, getQuestionChapter, getQuestionChapterId } from "@/lib/bmsLookup";
 import { getStichwortForQuestion } from "@/store/adaptiveLearning";
 import { getDirectStichwortId } from "@/data/questions/index";
 import { getStichwortById } from "@/data/stichwortliste";
 
 /** Pro Thema (Stichwort) oder Fach: Anzahl falscher Antworten */
-export interface TopicErrorCount {
+export type TopicErrorCount = {
   subject: string;
   topicId: string | null;
   topicLabel: string;
   count: number;
-}
+};
 
 /** Root-Cause: Heuristik, da wir keine echte Kategorisierung speichern */
 export type ErrorType = "Wissenslücke" | "Flüchtigkeit";
@@ -41,16 +41,31 @@ export function aggregateWrongAnswersByTopic(quizResults: QuizResult[]): {
       totalAnswered += 1;
       if (a.correct) continue;
       totalWrong += 1;
+
+      // Resolve subject
       const subject = getQuestionSubject(a.questionId) || r.subject || "Sonstige";
+
+      // Resolve topic label — cascade: Stichwort > Chapter title > chapter ID > fallback
       const topicId =
         getDirectStichwortId(a.questionId) || getStichwortForQuestion(a.questionId) || null;
-      const topicLabel = topicId
-        ? (getStichwortById(topicId)?.thema ?? topicId)
-        : (getQuestionChapter(a.questionId) ?? "Sonstiges");
+      let topicLabel: string;
+      if (topicId) {
+        topicLabel = getStichwortById(topicId)?.thema ?? topicId;
+      } else {
+        // Use chapter title as fallback (much better than "Sonstiges")
+        const chapterTitle = getQuestionChapter(a.questionId);
+        if (chapterTitle) {
+          topicLabel = chapterTitle;
+        } else {
+          // Last resort: extract a readable label from the chapter ID
+          const chapterId = getQuestionChapterId(a.questionId);
+          topicLabel = chapterId ?? "Allgemein";
+        }
+      }
+
       if (!bySubjectTopic.has(subject)) bySubjectTopic.set(subject, new Map());
       const topicMap = bySubjectTopic.get(subject)!;
-      const key = topicLabel;
-      topicMap.set(key, (topicMap.get(key) ?? 0) + 1);
+      topicMap.set(topicLabel, (topicMap.get(topicLabel) ?? 0) + 1);
     }
   }
 
@@ -60,7 +75,6 @@ export function aggregateWrongAnswersByTopic(quizResults: QuizResult[]): {
 /**
  * Heuristik: Anteil Wissenslücke vs. Flüchtigkeit.
  * Ohne echte Kategorisierung: z.B. 65% Wissenslücke, 35% Flüchtigkeit.
- * Später: pro Frage kategorisieren (z.B. "nah dran" = Flüchtigkeit).
  */
 export function getRootCauseDistribution(totalWrong: number): {
   Wissenslücke: number;
@@ -110,7 +124,7 @@ export function buildDonutData(rootCause: {
 }
 
 /**
- * Generiert Handlungsempfehlung: "Du verlierst X% durch Flüchtigkeit in [Fach]. Arbeite an Konzentration!"
+ * Generiert Handlungsempfehlung
  */
 export function buildActionSentence(
   rootCause: { Wissenslücke: number; Flüchtigkeit: number },

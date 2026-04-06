@@ -672,7 +672,7 @@ function getEmailTemplate(
 
           ${callout("<strong>Tipp:</strong> Starte mit den Wissensfragen \u2014 dort lernst du die Grundlagen und kannst sofort Fragen beantworten.", "info")}
           ${ctaButton("Jetzt loslegen", `${SITE_URL}/app/bms`)}
-          <p style="color:#64748b;font-size:13px;margin:0">Voller Zugang bis 1. April \u2014 danach einmalig &euro;29,90 f\u00FCr Premium.</p>
+          <p style="color:#64748b;font-size:13px;margin:0">Teste MedMaster kostenlos \u2014 Premium mit allen Features f\u00FCr einmalig &euro;29,90.</p>
         `,
           "Willkommen bei MedMaster \u2014 starte jetzt deine MedAT-Vorbereitung"
         ),

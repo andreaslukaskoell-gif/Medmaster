@@ -6,7 +6,7 @@ import { useStore } from "@/store/useStore";
 
 // Lazy-load getDirectStichwortId to avoid pulling in 20 question part files
 let _getDirectStichwortId: ((id: string) => string | undefined) | null = null;
-async function loadDirectStichwortId(): Promise<(id: string) => string | undefined> {
+export async function loadDirectStichwortId(): Promise<(id: string) => string | undefined> {
   if (!_getDirectStichwortId) {
     const mod = await import("@/data/questions/index");
     _getDirectStichwortId = mod.getDirectStichwortId;
@@ -21,7 +21,7 @@ function getDirectStichwortIdSync(id: string): string | undefined {
 let _allBmsQuestions: Question[] | null = null;
 let questionStichwortMap: Map<string, string> | null = null;
 
-async function loadBmsQuestions(): Promise<Question[]> {
+export async function loadBmsQuestions(): Promise<Question[]> {
   if (!_allBmsQuestions) {
     const { allBmsQuestions } = await import("@/data/bms");
     _allBmsQuestions = allBmsQuestions;
@@ -628,6 +628,30 @@ export const useAdaptiveStore = create<AdaptiveState>()(
       },
 
       initializeFromQuizResults: (results) => {
+        // Count incoming answers
+        let incomingTotal = 0;
+        for (const r of results) incomingTotal += r.answers.length;
+
+        // Skip if adaptive store already has >= this many answers (already hydrated)
+        const currentTotal = get().profile.totalQuestionsAnswered;
+        if (currentTotal >= incomingTotal) return;
+
+        // Reset stats before replaying to avoid double-counting
+        set((state) => ({
+          profile: {
+            ...state.profile,
+            stichwortStats: {},
+            totalQuestionsAnswered: 0,
+            totalCorrect: 0,
+            fachStats: {
+              biologie: { ...defaultFachStat, recommendedDailyQuestions: 15 },
+              chemie: { ...defaultFachStat, recommendedDailyQuestions: 10 },
+              physik: { ...defaultFachStat, recommendedDailyQuestions: 8 },
+              mathematik: { ...defaultFachStat, recommendedDailyQuestions: 5 },
+            },
+          },
+        }));
+
         const { recordAnswer } = get();
         let totalAdded = 0;
         let correctAdded = 0;

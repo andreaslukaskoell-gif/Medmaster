@@ -7,6 +7,9 @@ import { StatsUrgency } from "./compositions/StatsUrgency";
 import { RichtigOderFalsch } from "./compositions/RichtigOderFalsch";
 import { ImplikationenChallenge } from "./compositions/ImplikationenChallenge";
 import { FigurenChallenge } from "./compositions/FigurenChallenge";
+import { CheatSheet } from "./compositions/CheatSheet";
+import { MistakeReveal } from "./compositions/MistakeReveal";
+import { SpeedRound } from "./compositions/SpeedRound";
 import { BMSExplainer } from "./compositions/BMSExplainer";
 import { BMSExplainerVoiceover } from "./compositions/BMSExplainerVoiceover";
 import { BlutgruppenExplainer } from "./compositions/BlutgruppenExplainer";
@@ -17,11 +20,11 @@ import { FPS, WIDTH, HEIGHT } from "./shared/brand";
 export const RemotionRoot: React.FC = () => {
   return (
     <>
-      {/* 22s — BMS quiz with poll + countdown + reveal + triple CTA */}
+      {/* 15s — BMS quiz with poll + countdown + reveal + triple CTA */}
       <Composition
         id="QuizChallenge"
         component={QuizChallenge}
-        durationInFrames={660}
+        durationInFrames={450}
         fps={FPS}
         width={WIDTH}
         height={HEIGHT}
@@ -165,6 +168,92 @@ export const RemotionRoot: React.FC = () => {
           ],
           correctIndex: 1,
           explanation: "Die 2 Teile setzen sich exakt zur gewählten Figur zusammen.",
+        }}
+      />
+
+      {/* 15s — Cheat sheet: 5 facts about a topic */}
+      <Composition
+        id="CheatSheet"
+        component={CheatSheet}
+        durationInFrames={450}
+        fps={FPS}
+        width={WIDTH}
+        height={HEIGHT}
+        defaultProps={{
+          subject: "Biologie",
+          topic: "Zellbiologie",
+          facts: [
+            "Mitochondrien haben eigene ringfoermige DNA",
+            "Die Zellmembran besteht aus einer Phospholipid-Doppelschicht",
+            "Ribosomen sind die Proteinfabriken der Zelle",
+            "Das raue ER hat Ribosomen, das glatte nicht",
+            "Lysosomen verdauen zelleigene und fremde Stoffe",
+          ],
+        }}
+      />
+
+      {/* 12s — Mistake reveal: common wrong assumption corrected */}
+      <Composition
+        id="MistakeReveal"
+        component={MistakeReveal}
+        durationInFrames={360}
+        fps={FPS}
+        width={WIDTH}
+        height={HEIGHT}
+        defaultProps={{
+          subject: "Biologie",
+          mistake: "Arterien fuehren immer sauerstoffreiches Blut",
+          correction: "Arterien fuehren Blut VOM Herzen weg — egal ob O2-reich oder -arm",
+          explanation:
+            "Die Lungenarterie transportiert sauerstoffarmes Blut vom rechten Ventrikel zur Lunge.",
+        }}
+      />
+
+      {/* 27s — Speed round: 3 quick questions */}
+      <Composition
+        id="SpeedRound"
+        component={SpeedRound}
+        durationInFrames={810}
+        fps={FPS}
+        width={WIDTH}
+        height={HEIGHT}
+        defaultProps={{
+          subject: "Biologie",
+          questions: [
+            {
+              question: "Welches Organell produziert ATP?",
+              options: [
+                { id: "a", text: "Ribosom" },
+                { id: "b", text: "Mitochondrium" },
+                { id: "c", text: "Golgi-Apparat" },
+                { id: "d", text: "Lysosom" },
+                { id: "e", text: "Zellkern" },
+              ],
+              correctOptionId: "b",
+            },
+            {
+              question: "DNA-Replikation ist...",
+              options: [
+                { id: "a", text: "konservativ" },
+                { id: "b", text: "semikonservativ" },
+                { id: "c", text: "dispersiv" },
+                { id: "d", text: "retrograd" },
+                { id: "e", text: "unidirektional" },
+              ],
+              correctOptionId: "b",
+            },
+            {
+              question: "Welches Vitamin ist fettloeslich?",
+              options: [
+                { id: "a", text: "Vitamin C" },
+                { id: "b", text: "Vitamin B12" },
+                { id: "c", text: "Vitamin D" },
+                { id: "d", text: "Folsaeure" },
+                { id: "e", text: "Niacin" },
+              ],
+              correctOptionId: "c",
+            },
+          ],
         }}
       />
 

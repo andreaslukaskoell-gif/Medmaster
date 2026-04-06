@@ -43,7 +43,13 @@ const COMP_TO_FILE = {
   ImplikationenChallenge: "implikationen-challenge",
   FigurenChallenge: "figuren-challenge",
   BMSExplainerVoiceover: "bms-explainer-voiceover",
+  CheatSheet: "cheat-sheet",
+  MistakeReveal: "mistake-reveal",
+  SpeedRound: "speed-round",
 };
+
+// Max posts per day
+const POSTS_PER_DAY = 2;
 
 // ── Performance Signal Weights ──────────────────────────────
 // These define HOW MUCH each metric matters for scoring.
@@ -129,6 +135,9 @@ function inferComposition(caption) {
   if (c.includes("schluss") || c.includes("implikation")) return "ImplikationenChallenge";
   if (c.includes("wusstest du") || c.includes("💡")) return "TippDesTages";
   if (c.includes("87%") || c.includes("16.000") || c.includes("📊")) return "StatsUrgency";
+  if (c.includes("cheat sheet") || c.includes("spickzettel") || c.includes("5 fakten") || c.includes("📋")) return "CheatSheet";
+  if (c.includes("fehler") || c.includes("❌→✅") || c.includes("90% machen")) return "MistakeReveal";
+  if (c.includes("speed round") || c.includes("30 sekunden") || c.includes("⚡")) return "SpeedRound";
   if (c.includes("medat-frage") || c.includes("bms-frage") || c.includes("a–e")) return "QuizChallenge";
   return "QuizChallenge";
 }
@@ -314,18 +323,15 @@ function analyzePerformance(cache) {
 function selectComposition(history, perfAnalysis) {
   const { rankings } = perfAnalysis;
 
-  // Hard rule: don't repeat same composition as yesterday
-  const yesterday = history
+  // HARD RULE: Never repeat the last composition. Ever.
+  const sortedSuccessful = history
     .filter(h => h.success)
-    .sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp))[0];
-  const yesterdayComp = yesterday?.composition;
+    .sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+  const lastComp = sortedSuccessful[0]?.composition;
 
-  // Also avoid same comp within last 2 days for variety
-  const twoDaysAgo = Date.now() - 2 * 24 * 60 * 60 * 1000;
+  // Avoid same comp within last 3 posts for variety
   const recentComps = new Set(
-    history
-      .filter(h => h.success && new Date(h.timestamp).getTime() > twoDaysAgo)
-      .map(h => h.composition)
+    sortedSuccessful.slice(0, 3).map(h => h.composition)
   );
 
   // If no performance data yet, use a balanced initial order
@@ -359,11 +365,11 @@ function selectComposition(history, perfAnalysis) {
       const trendMult = Math.min(Math.max(r.trend, 0.7), 1.5);
       weight *= trendMult;
 
-      // Recency penalty: posted yesterday = 0.1x, 2 days ago = 0.3x
-      if (r.composition === yesterdayComp) {
-        weight *= 0.1;
+      // HARD BLOCK: Never repeat the LAST composition. Period.
+      if (r.composition === lastComp) {
+        weight = 0; // Completely eliminate
       } else if (recentComps.has(r.composition)) {
-        weight *= 0.3;
+        weight *= 0.2; // Strong penalty for recent 3
       }
 
       // Bottom performer penalty: if clearly underperforming (< 50% of median), reduce
@@ -460,17 +466,20 @@ const MEDAT_DATE = new Date("2026-07-03");
 const daysUntil = Math.ceil((MEDAT_DATE - new Date()) / (1000 * 60 * 60 * 24));
 
 const CTA_BLOCKS = [
-  "📩 Schick an deinen MedAT-Lernpartner!\n🔖 Speichern für die Vorbereitung!",
-  "📩 Markiere jemanden der MedAT macht!\n🔖 Speichern & später nochmal anschauen!",
-  "📩 Teilen mit deiner Lerngruppe!\n🔖 Speichern für die Wiederholung!",
-  "💬 Kommentiere dein Ergebnis!\n📩 Teilen mit deiner MedAT-Lerngruppe!",
+  "📩 Schick das an deinen MedAT-Lernpartner!\n🔖 Speichern & beim Lernen nochmal anschauen!",
+  "📩 Markiere jemanden, der das wissen muss!\n🔖 Speichern für die Wiederholung!",
+  "📩 Teile das mit deiner Lerngruppe!\n💬 Kommentiere deine Antwort!",
+  "💬 Schreib dein Ergebnis in die Kommentare!\n📩 Teilen mit deiner MedAT-Crew!",
+  "🔖 Speichern = beim nächsten Lernen wieder parat!\n📩 Schick's an jemanden der MedAT macht!",
 ];
 
-const FOOTER = daysUntil > 21
-  ? "\n\n📱 Gratis bis Ende März → medmaster.at"
+const FOOTER = daysUntil > 60
+  ? "\n\n📱 MedAT-Training mit 5000+ Aufgaben → medmaster.at"
+  : daysUntil > 14
+  ? `\n\n⏰ Noch ${daysUntil} Tage bis zum MedAT — jetzt starten → medmaster.at`
   : daysUntil > 0
-  ? `\n\n📱 Noch ${daysUntil} Tage gratis → medmaster.at`
-  : "\n\n📱 Jetzt MedAT-Training starten → medmaster.at";
+  ? `\n\n🔥 Nur noch ${daysUntil} Tage! Jetzt oder nie → medmaster.at`
+  : "\n\n📱 MedAT-Training mit 5000+ Aufgaben → medmaster.at";
 
 function caption(hooks, hashtags) {
   return `${pick(hooks)}\n\n${pick(CTA_BLOCKS)}${FOOTER}\n\n${hashtags}`;
@@ -478,68 +487,102 @@ function caption(hooks, hashtags) {
 
 const CAPTIONS_FN = {
   QuizChallenge: () => caption([
-    "Schaffst du diese MedAT-Frage? 🧠\n\n98% antworten FALSCH — Kommentiere deinen Buchstaben!",
-    "Diese BMS-Frage kostet die meisten 1 Punkt. 🧠\n\nKommentiere A–E bevor du die Lösung siehst!",
-    "Hier verlieren die meisten ihren Studienplatz. 🧠\n\nWelche Antwort wählst du?",
-    "So sieht eine echte BMS-Frage aus. 🧠\n\nWürdest du den Punkt holen? Kommentiere A–E!",
-    "Diese Frage trennt Medizinstudenten von Bewerbern. 🧠\n\nKommentiere deinen Buchstaben!",
-  ], "#MedAT #MedAT2026 #Medizinstudium #BMS #MedUniWien"),
+    "STOPP — beantworte die Frage bevor du weiterschrollst! 🧠\n\nKommentiere A–E, dann schau die Lösung!",
+    "Diese Frage trennt Medizinstudenten von Bewerbern. 🧠\n\nDie meisten tippen falsch — und du?",
+    "1 Frage. 5 Optionen. Nur 1 ist richtig. 🧠\n\nKommentiere deinen Buchstaben JETZT!",
+    "Dein Prof würde diese Frage stellen. 🧠\n\nSchaffst du sie in 30 Sekunden? Kommentiere A–E!",
+    "Wer das falsch hat, verliert einen Punkt im MedAT. 🧠\n\nKommentiere bevor du die Auflösung siehst!",
+    "Echte MedAT-Frage — traust du dich? 🧠\n\nA, B, C, D oder E? Kommentiere!",
+  ], "#MedAT #MedAT2026 #Medizinstudium #BMS #MedUniWien #Aufnahmeprüfung"),
 
   TippDesTages: () => caption([
-    "Wusstest du das? 💡\n\nDie meisten MedAT-Bewerber wissen es NICHT!",
-    "Diesen Fakt vergessen 90% in der Prüfung. 💡\n\nSpeichere ihn dir!",
-    "1 Fakt, der dir im MedAT Punkte bringt. 💡",
-    "Hättest du das gewusst? 💡\n\nGenau sowas kommt im BMS-Teil dran.",
-  ], "#MedAT #MedAT2026 #Medizin #Lerntipps #BMS"),
+    "Diesen Fakt kennen 90% der MedAT-Bewerber NICHT. 💡\n\nSpeichern, bevor du ihn vergisst!",
+    "1 Fakt = 1 Punkt mehr im MedAT. 💡\n\nSo einfach kann Vorbereitung sein.",
+    "Die meisten lernen das erst in der Prüfung — zu spät. 💡\n\nJetzt speichern!",
+    "Hättest du das gewusst? 💡\n\nGenau DAS kommt im BMS dran. Speichern!",
+    "Dein Lernpartner weiß das wahrscheinlich nicht. 💡\n\nSchick's ihm!",
+  ], "#MedAT #MedAT2026 #Medizin #Lerntipps #BMS #Prüfungsvorbereitung"),
 
   ZahlenfolgeChallenge: () => caption([
-    "Findest du das Muster? 🔢\n\nKommentiere die nächste Zahl BEVOR du die Auflösung siehst!",
-    "KFF-Zahlenfolge: Erkennst du die Regel? 🔢\n\nKommentiere die nächste Zahl!",
-    "Zahlenfolgen = geschenkte Punkte im KFF. 🔢\n\nAber nur wenn du das Muster siehst!",
-    "90% brauchen zu lange für diese Zahlenfolge. 🔢\n\nWie schnell findest du die Regel?",
-  ], "#MedAT #MedAT2026 #KFF #Zahlenfolgen #Aufnahmeprüfung"),
+    "Findest du die Regel in 15 Sekunden? 🔢\n\nKommentiere die nächste Zahl!",
+    "Die meisten sehen das Muster NICHT. 🔢\n\nKommentiere die nächste Zahl, bevor du die Lösung siehst!",
+    "Zahlenfolgen = geschenkte KFF-Punkte. 🔢\n\nAber nur wenn du schnell genug bist!",
+    "Stoppe die Zeit — wie lange brauchst du? 🔢\n\nKommentiere: Zahl + Sekunden!",
+    "Im MedAT hast du 25 Sekunden pro Aufgabe. 🔢\n\nSchaffst du es? Los!",
+  ], "#MedAT #MedAT2026 #KFF #Zahlenfolgen #Aufnahmeprüfung #Logik"),
 
   WortRaetsel: () => caption([
-    "Welches Wort ergibt sich? 🔤\n\nKommentiere deine Lösung!",
-    "Ein Wort, wenige Sekunden Zeit. 🔤\n\nSchaffst du es?",
-    "Wortflüssigkeit trainieren = KFF-Punkte sichern. 🔤\n\nFindest du das Wort?",
-    "Wie schnell findest du das richtige Wort? 🔤",
+    "6 Buchstaben. 1 Wort. Findest du es? 🔤\n\nKommentiere deine Lösung!",
+    "Wortflüssigkeit ist der einfachste KFF-Untertest — wenn du übst. 🔤\n\nLos, welches Wort?",
+    "Die meisten brauchen zu lange. Und du? 🔤\n\nKommentiere das Wort + deine Zeit!",
+    "Buchstaben-Salat oder klares Wort? 🔤\n\nKommentiere, was du siehst!",
+    "Wer das in 5 Sekunden hat, ist MedAT-ready. 🔤\n\nSchaffst du es?",
   ], "#MedAT #MedAT2026 #KFF #Wortflüssigkeit #Aufnahmeprüfung"),
 
   StatsUrgency: () => caption([
-    `Noch ${daysUntil} Tage bis zum MedAT. Was hast du schon geschafft? 📊`,
-    "16.000 Bewerber. 1.850 Plätze. Deine Vorbereitung entscheidet. 📊",
-    "Jeder 8. bekommt einen Platz. Die anderen 7 haben zu wenig geübt. 📊",
-  ], "#MedAT #MedAT2026 #Aufnahmeprüfung #Medizin #Lerntipps"),
+    `${daysUntil} Tage. 16.000 Bewerber. 1.850 Plätze.\n\nWas hast du heute schon gelernt? 📊`,
+    "Jeder 8. bekommt einen Platz.\n\nDie anderen 7 haben zu spät angefangen. Sei nicht Nr. 7. 📊",
+    `Noch ${daysUntil} Tage bis zum MedAT.\n\nWer JETZT nicht übt, hat im Juli ein Problem. 📊`,
+    "87% der MedAT-Bewerber werden abgelehnt.\n\nDer Unterschied? Vorbereitung. 📊",
+    `${daysUntil} Tage trennen dich von deinem Studienplatz.\n\nJeder Tag zählt. 📊`,
+  ], "#MedAT #MedAT2026 #Aufnahmeprüfung #Medizin #Motivation #Studienplatz"),
 
   RichtigOderFalsch: () => caption([
-    "Richtig oder Falsch? 3 MedAT-Aussagen 🧠\n\nKommentiere: 3/3, 2/3, 1/3 oder 0/3!",
-    "3 Aussagen aus dem BMS. Wie viele kannst du? 🧠\n\nKommentiere dein Ergebnis!",
-    "Die meisten schaffen nur 1/3. Und du? 🧠\n\nKommentiere ehrlich!",
-    "Richtig oder Falsch — klingt einfach, oder? 🧠\n\nProbier's!",
+    "3 Aussagen. Richtig oder Falsch?\n\nKommentiere: 3/3, 2/3, 1/3 oder 0/3! 🧠",
+    "Die meisten schaffen nur 1 von 3. Und du? 🧠\n\nKommentiere ehrlich dein Ergebnis!",
+    "Klingt einfach — ist es aber nicht. 🧠\n\nRichtig oder Falsch? Probier's!",
+    "Trau dich: Kommentiere dein Ergebnis BEVOR du die Lösung siehst. 🧠\n\n3/3 = MedAT-ready!",
+    "Wer 3/3 schafft, darf das Reel teilen. Deal? 🧠",
   ], "#MedAT #MedAT2026 #BMS #Prüfungsvorbereitung #MedUniWien"),
 
   ImplikationenChallenge: () => caption([
-    "Welcher Schluss ist zwingend? 🧠\n\nKommentiere A–E!",
-    "Implikationen = der schwerste KFF-Untertest. 🧠\n\nSchaffst du diese Aufgabe?",
-    "2 Prämissen, 5 Optionen, 1 zwingende Schlussfolgerung. 🧠\n\nWelche?",
-    "Hier scheitern die meisten im KFF. 🧠\n\nKommentiere deinen Buchstaben!",
-  ], "#MedAT #MedAT2026 #KFF #Implikationen #Logik"),
+    "2 Prämissen. 5 Optionen. 1 zwingende Antwort. 🧠\n\nWelche? Kommentiere A–E!",
+    "Der schwerste KFF-Untertest — und die meisten üben ihn zu wenig. 🧠\n\nSchaffst du diese?",
+    "Logisch denken unter Zeitdruck. 🧠\n\nKommentiere deinen Buchstaben!",
+    "Implikationen = da wo die meisten Punkte liegen lassen. 🧠\n\nZeig dass du es kannst!",
+    "Welcher Schluss ist ZWINGEND? 🧠\n\nNicht raten — begründen! Kommentiere A–E!",
+  ], "#MedAT #MedAT2026 #KFF #Implikationen #Logik #Aufnahmeprüfung"),
 
   FigurenChallenge: () => caption([
-    "Welche Figur passt? 🧩\n\nKommentiere A–E!",
-    "Figuren zusammensetzen: Siehst du es auf den ersten Blick? 🧩",
-    "2 Teile, 1 richtige Figur. Welche? 🧩\n\nKommentiere A–E!",
-    "Räumliches Denken im MedAT. 🧩\n\nFindest du die Kombination?",
-  ], "#MedAT #MedAT2026 #KFF #Figuren #Aufnahmeprüfung"),
+    "2 Teile → 1 Figur. Welche passt? 🧩\n\nKommentiere A–E!",
+    "Räumliches Denken in 20 Sekunden. 🧩\n\nSiehst du es auf den ersten Blick?",
+    "Die meisten drehen die Teile im Kopf falsch. 🧩\n\nKommentiere A–E!",
+    "Im MedAT hast du 25 Sekunden. Hier hast du beliebig viel Zeit. 🧩\n\nNutz sie!",
+    "Figuren zusammensetzen = Training für dein räumliches Vorstellungsvermögen. 🧩\n\nWelche Figur?",
+  ], "#MedAT #MedAT2026 #KFF #Figuren #Aufnahmeprüfung #Raumvorstellung"),
 
   BMSExplainerVoiceover: () => caption([
-    "In 50 Sekunden verstehst du dieses BMS-Thema. 🎓\n\nSpeichern & nochmal anschauen!",
-    "BMS-Wissen in unter einer Minute. 🎓\n\nSo lernst du effizient für den MedAT!",
-    "Dieses Thema kommt im MedAT. 🎓\n\nIn 50 Sekunden erklärt — speichern!",
-    "Endlich verständlich erklärt. 🎓\n\nBMS-Vorbereitung in unter einer Minute!",
-    "Das musst du für den MedAT wissen. 🎓\n\n50 Sekunden, 1 Thema, 0 Verwirrung!",
-  ], "#MedAT #MedAT2026 #BMS #Medizinstudium #MedUniWien"),
+    "50 Sekunden. 1 Thema. Alles was du wissen musst. 🎓\n\nSpeichern & nochmal anschauen!",
+    "Besser als 2 Stunden Skript lesen. 🎓\n\nDieses BMS-Thema in unter einer Minute!",
+    "Dein Kurzzeit-Gedächtnis liebt kurze Videos. 🎓\n\nSpeichern & vor der Prüfung nochmal schauen!",
+    "Endlich verständlich erklärt — ohne Lehrbuch-Deutsch. 🎓\n\nSpeichern!",
+    "Das kommt im MedAT. Garantiert. 🎓\n\n50 Sekunden, die sich lohnen!",
+    "Wenn du nur 1 Reel heute speicherst — nimm dieses. 🎓",
+  ], "#MedAT #MedAT2026 #BMS #Medizinstudium #MedUniWien #Biologie"),
+
+  CheatSheet: () => caption([
+    "5 Fakten, die im MedAT drankommen. 📋\n\nSpeichern = beim Lernen parat!",
+    "Dein Cheat Sheet für die Prüfung. 📋\n\nSpeichern & nochmal anschauen!",
+    "5 Fakten in 15 Sekunden. 📋\n\nWie viele wusstest du?",
+    "Wenn du nur 1 Reel heute speicherst — nimm dieses. 📋\n\n5 prüfungsrelevante Fakten!",
+    "Dein MedAT-Spickzettel. 📋\n\nSpeichern & vor der Prüfung nochmal schauen!",
+  ], "#MedAT #MedAT2026 #BMS #Lerntipps #CheatSheet #Prüfungsvorbereitung"),
+
+  MistakeReveal: () => caption([
+    "90% machen diesen Fehler im MedAT. ❌→✅\n\nMachst du ihn auch?",
+    "FALSCH! So denken die meisten — und verlieren Punkte. ❌→✅\n\nSchick das an jemanden!",
+    "Dieser Fehler kostet dich 1 Punkt. ❌→✅\n\nJetzt weißt du es besser!",
+    "Hättest du's richtig gehabt? ❌→✅\n\nKommentiere ehrlich!",
+    "Den Fehler machen sogar Tutoren. ❌→✅\n\nSpeichern & nie wieder falsch machen!",
+  ], "#MedAT #MedAT2026 #BMS #HäufigerFehler #Prüfungsvorbereitung"),
+
+  SpeedRound: () => caption([
+    "3 Fragen. 30 Sekunden. Schaffst du alle? ⚡\n\nKommentiere: 3/3, 2/3, 1/3 oder 0/3!",
+    "Speed Round! Wie viele schaffst du? ⚡\n\nKommentiere dein Ergebnis ehrlich!",
+    "30 Sekunden MedAT-Training. ⚡\n\nKommentiere & challenge deinen Lernpartner!",
+    "Wer 3/3 hat, darf teilen. Deal? ⚡\n\nKommentiere dein Ergebnis!",
+    "Schneller als du denkst — 3 Fragen, 30 Sekunden. ⚡\n\nSchaffst du alle 3?",
+  ], "#MedAT #MedAT2026 #BMS #SpeedRound #Quiz #Aufnahmeprüfung"),
 };
 
 // ── Render & Upload ─────────────────────────────────────────
@@ -882,12 +925,12 @@ async function main() {
     return;
   }
 
-  // ── Strict 1/day enforcement ──────────────────────────────
+  // ── Strict 2/day enforcement ──────────────────────────────
   const history = loadHistory();
   const today = new Date().toISOString().slice(0, 10);
   const todayPosts = history.filter(h => h.timestamp.startsWith(today) && h.success);
-  if (todayPosts.length > 0 && !dry && !args.includes("--force")) {
-    console.log(`Already posted today (${todayPosts[0].composition}). Exactly 1/day.`);
+  if (todayPosts.length >= POSTS_PER_DAY && !dry && !args.includes("--force")) {
+    console.log(`Already posted ${todayPosts.length}x today. Max ${POSTS_PER_DAY}/day.`);
     return;
   }
 

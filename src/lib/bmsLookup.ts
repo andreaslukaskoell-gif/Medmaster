@@ -6,14 +6,18 @@ let questionChapterMap: Map<string, string> | null = null;
 
 function getSubjectMap(): Map<string, string> {
   if (!questionSubjectMap) {
-    questionSubjectMap = new Map(allBmsQuestions.map((q) => [q.id, q.subject]));
+    const qs = allBmsQuestions;
+    if (qs.length === 0) return new Map(); // Don't cache empty — lazy load not ready yet
+    questionSubjectMap = new Map(qs.map((q) => [q.id, q.subject]));
   }
   return questionSubjectMap;
 }
 
 function getChapterMap(): Map<string, string> {
   if (!questionChapterMap) {
-    questionChapterMap = new Map(allBmsQuestions.map((q) => [q.id, q.chapter]));
+    const qs = allBmsQuestions;
+    if (qs.length === 0) return new Map();
+    questionChapterMap = new Map(qs.map((q) => [q.id, q.chapter]));
   }
   return questionChapterMap;
 }
@@ -28,4 +32,9 @@ export function getQuestionChapter(questionId: string): string | undefined {
   if (!chapterId) return undefined;
   const kap = alleKapitel.find((k) => k.id === chapterId);
   return kap?.title ?? chapterId;
+}
+
+/** Returns the raw chapter ID (e.g. "bio-kap2") for a question. */
+export function getQuestionChapterId(questionId: string): string | undefined {
+  return getChapterMap().get(questionId);
 }

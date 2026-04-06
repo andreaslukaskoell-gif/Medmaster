@@ -47,6 +47,28 @@ export type BlutgruppenExplainerProps = {
   subtitles: { text: string; startFrame: number; endFrame: number }[];
 };
 
+export type CheatSheetProps = {
+  subject: string;
+  topic: string;
+  facts: string[];
+};
+
+export type MistakeRevealProps = {
+  subject: string;
+  mistake: string;
+  correction: string;
+  explanation: string;
+};
+
+export type SpeedRoundProps = {
+  questions: {
+    question: string;
+    options: { id: string; text: string }[];
+    correctOptionId: string;
+  }[];
+  subject: string;
+};
+
 export type FigurenPoint = { x: number; y: number };
 export type FigurenPolygon = { points: FigurenPoint[] };
 

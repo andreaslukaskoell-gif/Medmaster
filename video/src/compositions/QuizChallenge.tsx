@@ -1,8 +1,8 @@
 import React from "react";
-import { AbsoluteFill, Sequence, interpolate, useCurrentFrame } from "remotion";
+import { AbsoluteFill, Sequence, Audio, interpolate, staticFile, useCurrentFrame } from "remotion";
 import { BrandedBackground } from "../shared/BrandedBackground";
 import { SafeArea } from "../shared/SafeArea";
-import { HookText } from "../shared/HookText";
+import { ThumbnailHook } from "../shared/ThumbnailHook";
 import { CountdownRing } from "../shared/CountdownRing";
 import { OptionCard } from "../shared/OptionCard";
 import { SubjectBadge } from "../shared/SubjectBadge";
@@ -14,23 +14,14 @@ import type { QuizChallengeProps } from "../types";
 
 const LETTERS = ["A", "B", "C", "D", "E"];
 
-// Scene 1: Hook — instant text, no fade (0–1.5s = 0–45f)
+// Scene 1: Hook — instant text, no fade (0–1s = 0–30f)
 const HookScene: React.FC = () => {
   return (
     <BrandedBackground>
-      <SafeArea style={{ alignItems: "center", justifyContent: "center", gap: 30 }}>
-        <HookText text="Schaffst du diese MedAT-Frage?" fontSize={68} />
-        <div
-          style={{
-            fontSize: 40,
-            color: BRAND.accent,
-            fontWeight: 700,
-            textShadow: "0 2px 8px rgba(0,0,0,0.4)",
-          }}
-        >
-          98% antworten FALSCH
-        </div>
-      </SafeArea>
+      <ThumbnailHook
+        text="Schaffst du diese MedAT-Frage?"
+        subtext="Die meisten antworten FALSCH"
+      />
     </BrandedBackground>
   );
 };
@@ -183,7 +174,7 @@ const RevealScene: React.FC<QuizChallengeProps> = ({
   );
 };
 
-// Scene 5: Triple CTA (17–20s = 510–600f)
+// Scene 5: Triple CTA
 const CTAScene: React.FC = () => {
   return (
     <BrandedBackground>
@@ -198,10 +189,10 @@ const CTAScene: React.FC = () => {
             marginBottom: 20,
           }}
         >
-          Tausende MedAT-Fragen
+          5000+ MedAT-Aufgaben
         </div>
         <div style={{ fontSize: 36, color: BRAND.accent, fontWeight: 700, marginBottom: 30 }}>
-          Gratis bis Ende März!
+          Jetzt starten!
         </div>
         <TripleCTA />
       </SafeArea>
@@ -209,26 +200,38 @@ const CTAScene: React.FC = () => {
   );
 };
 
-// 22s = 660 frames @ 30fps
+// 15s = 450 frames @ 30fps (optimized for completion rate)
 export const QuizChallenge: React.FC<QuizChallengeProps> = (props) => {
   return (
     <AbsoluteFill>
-      <Sequence from={0} durationInFrames={45}>
+      {/* Background music */}
+      <Audio src={staticFile("audio/bgm-lofi.mp3")} volume={0.12} loop />
+      {/* Hook: 1s */}
+      <Sequence from={0} durationInFrames={30}>
         <HookScene />
       </Sequence>
-      <Sequence from={45} durationInFrames={150}>
+      {/* Question + Options: 4s */}
+      <Sequence from={30} durationInFrames={120}>
         <QuestionScene {...props} />
       </Sequence>
-      <Sequence from={195} durationInFrames={60}>
+      {/* Poll prompt: 1.5s */}
+      <Sequence from={150} durationInFrames={45}>
         <PollScene />
       </Sequence>
-      <Sequence from={255} durationInFrames={120}>
+      {/* Countdown: 2.5s */}
+      <Sequence from={195} durationInFrames={75}>
         <CountdownScene />
       </Sequence>
-      <Sequence from={375} durationInFrames={150}>
+      {/* Correct SFX */}
+      <Sequence from={270} durationInFrames={15}>
+        <Audio src={staticFile("audio/correct.mp3")} volume={0.5} />
+      </Sequence>
+      {/* Reveal: 3s */}
+      <Sequence from={270} durationInFrames={90}>
         <RevealScene {...props} />
       </Sequence>
-      <Sequence from={525} durationInFrames={135}>
+      {/* CTA: 3s */}
+      <Sequence from={360} durationInFrames={90}>
         <CTAScene />
       </Sequence>
     </AbsoluteFill>

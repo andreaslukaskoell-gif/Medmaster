@@ -1948,21 +1948,32 @@ function zfDifficultyForIndex(i: number): DifficultyLevel {
 /** Generiert mehrere Aufgaben (gemischt nach Schwierigkeit, 30/40/30). */
 export function generateSequenceTaskSet(count: number, baseSeed: number): SequenceTask[] {
   const out: SequenceTask[] = [];
-  const seenRules = new Set<string>();
   let offset = 0;
   for (let i = 0; i < count; i++) {
-    // Retry with different seeds to avoid duplicate rule types in a single set
+    // Retry to avoid same pattern type appearing twice in a row
     let task: SequenceTask;
     let attempts = 0;
+    const prevRule = out.length > 0 ? extractPatternType(out[out.length - 1]!.rule) : "";
     do {
       task = generateSequenceTask(zfDifficultyForIndex(i), baseSeed + (i + offset) * 7919);
       offset++;
       attempts++;
-    } while (seenRules.has(task.rule) && attempts < 5);
-    seenRules.add(task.rule);
+    } while (extractPatternType(task.rule) === prevRule && attempts < 8);
     out.push(task);
   }
   return out;
+}
+
+/** Extrahiert den groben Mustertyp aus dem rule-String für Duplikat-Vermeidung. */
+function extractPatternType(rule: string): string {
+  const r = rule.toLowerCase();
+  if (r.includes("fibonacci")) return "fibonacci";
+  if (r.includes("verschachtelt")) return "interleaved";
+  if (r.includes("zweite differenz")) return "growing-diff";
+  if (r.includes("quadratisch") || r.includes("n²") || r.includes("n³")) return "quadratic";
+  if (r.includes("zyklus") || r.includes("periodisch") || r.includes("×") || r.includes("+") || r.includes("−"))
+    return "periodic";
+  return rule.slice(0, 20);
 }
 
 // =============================================================================

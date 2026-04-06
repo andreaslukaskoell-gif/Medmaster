@@ -3569,41 +3569,55 @@ const TRAINING_INVALID_MODES: TrainingInvalidMode[] = [
 ];
 
 const TRAINING_MODES: TrainingSyllogismMode[] = [
+  // Reihenfolge: P1-Typen gemischt (Alle, Einige, Keine) für D1-Vielfalt
   {
+    // Barbara: Alle M sind P + Alle S sind M → Alle S sind P
     p1: (_s, m, p) => `Alle ${m.p} sind ${p.p}`,
     p2: (s, m) => `Alle ${s.p} sind ${m.p}`,
     conclusion: (s, _m, p) => `Alle ${s.p} sind ${p.p}`,
     name: "Barbara",
   },
   {
+    // Disamis (Figure 3): Einige M sind P + Alle M sind S → Einige S sind P
+    p1: (_s, m, p) => `Einige ${m.p} sind ${p.p}`,
+    p2: (s, m) => `Alle ${m.p} sind ${s.p}`,
+    conclusion: (s, _m, p) => `Einige ${s.p} sind ${p.p}`,
+    name: "Disamis",
+  },
+  {
+    // Celarent: Alle M sind keine P + Alle S sind M → Alle S sind keine P
     p1: (_s, m, p) => `Alle ${m.p} sind keine ${p.p}`,
     p2: (s, m) => `Alle ${s.p} sind ${m.p}`,
     conclusion: (s, _m, p) => `Alle ${s.p} sind keine ${p.p}`,
     name: "Celarent",
   },
   {
+    // Bocardo (Figure 3): Einige M sind keine P + Alle M sind S → Einige S sind keine P
+    p1: (_s, m, p) => `Einige ${m.p} sind keine ${p.p}`,
+    p2: (s, m) => `Alle ${m.p} sind ${s.p}`,
+    conclusion: (s, _m, p) => `Einige ${s.p} sind keine ${p.p}`,
+    name: "Bocardo",
+  },
+  {
+    // Darii: Alle M sind P + Einige S sind M → Einige S sind P
     p1: (_s, m, p) => `Alle ${m.p} sind ${p.p}`,
     p2: (s, m) => `Einige ${s.p} sind ${m.p}`,
     conclusion: (s, _m, p) => `Einige ${s.p} sind ${p.p}`,
     name: "Darii",
   },
   {
+    // Ferio: Alle M sind keine P + Einige S sind M → Einige S sind keine P
     p1: (_s, m, p) => `Alle ${m.p} sind keine ${p.p}`,
     p2: (s, m) => `Einige ${s.p} sind ${m.p}`,
     conclusion: (s, _m, p) => `Einige ${s.p} sind keine ${p.p}`,
     name: "Ferio",
   },
   {
+    // Darapti: Alle M sind P + Alle M sind S → Einige S sind P
     p1: (_s, m, p) => `Alle ${m.p} sind ${p.p}`,
     p2: (s, m) => `Alle ${m.p} sind ${s.p}`,
     conclusion: (s, _m, p) => `Einige ${s.p} sind ${p.p}`,
     name: "Darapti",
-  },
-  {
-    p1: (_s, m, p) => `Einige ${m.p} sind ${p.p}`,
-    p2: (s, m) => `Alle ${m.p} sind ${s.p}`,
-    conclusion: (s, _m, p) => `Einige ${s.p} sind ${p.p}`,
-    name: "Disamis",
   },
   {
     // Festino (Figure 2): Alle P sind keine M + Einige S sind M → Einige S sind keine P
@@ -3618,13 +3632,6 @@ const TRAINING_MODES: TrainingSyllogismMode[] = [
     p2: (s, m) => `Einige ${s.p} sind keine ${m.p}`,
     conclusion: (s, _m, p) => `Einige ${s.p} sind keine ${p.p}`,
     name: "Baroco",
-  },
-  {
-    // Bocardo (Figure 3): Einige M sind keine P + Alle M sind S → Einige S sind keine P
-    p1: (_s, m, p) => `Einige ${m.p} sind keine ${p.p}`,
-    p2: (s, m) => `Alle ${m.p} sind ${s.p}`,
-    conclusion: (s, _m, p) => `Einige ${s.p} sind keine ${p.p}`,
-    name: "Bocardo",
   },
   {
     // Bramantip (Figure 4): Alle P sind M + Alle M sind S → Einige S sind P
@@ -3753,9 +3760,11 @@ export function generateImplicationTrainingTask(difficulty: 1 | 2 | 3): Implikat
     }
 
     // Valid syllogism mode (one of A–D is correct)
+    // D1: indices 0-8 (Barbara, Celarent, Darii, Ferio, Darapti, Disamis, Festino, Baroco, Bocardo)
+    // — ensures P1 variety: Alle, Einige, Keine all represented
     const mode =
       difficulty === 1
-        ? TRAINING_MODES[randInt(0, 3)]
+        ? TRAINING_MODES[randInt(0, Math.min(8, TRAINING_MODES.length - 1))]
         : TRAINING_MODES[randInt(0, TRAINING_MODES.length - 1)];
 
     const premise1 = mode.p1(s, m, p);

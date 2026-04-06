@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import { ArrowRight, Sparkles, BookOpen, Brain, BarChart3, Target } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { usePermissions } from "@/hooks/usePermissions";
@@ -31,7 +32,11 @@ export function UpgradeCard() {
   const hasUsage = limits.bmsQuestionsUsed > 0 || limits.kffExercisesUsed > 0;
 
   return (
-    <div className="rounded-xl border border-[var(--accent)]/20 bg-linear-to-br from-[var(--accent)]/[0.04] to-transparent p-5 mb-6">
+    <motion.div
+      initial={{ opacity: 0, height: 0, marginBottom: 0 }}
+      animate={{ opacity: 1, height: "auto", marginBottom: 24 }}
+      transition={{ duration: 0.35, ease: "easeOut" }}
+      className="rounded-xl border border-[var(--accent)]/20 bg-linear-to-br from-[var(--accent)]/[0.04] to-transparent p-5 overflow-hidden">
       <div className="flex items-start gap-4">
         <div className="w-10 h-10 rounded-xl bg-[var(--accent)]/10 flex items-center justify-center shrink-0">
           <Sparkles className="w-5 h-5 text-[var(--accent)]" />
@@ -83,7 +88,7 @@ export function UpgradeCard() {
           </Link>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

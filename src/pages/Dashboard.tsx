@@ -252,11 +252,6 @@ export default function Dashboard() {
       )}
       <div className="max-w-5xl mx-auto px-4 pb-12">
         <SyncIndicator />
-        <PromoEndBanner />
-        <StreakRiskBanner />
-        <DailyGoalNudge />
-        <UpgradeCard />
-        <StreakMilestone />
 
         {/* ─── Hero Header with halo (like BMS subject pages) ─── */}
         <div className="text-center hero-orbs py-8">
@@ -272,6 +267,13 @@ export default function Dashboard() {
             Deine MedAT-Vorbereitung im Überblick
           </p>
         </div>
+
+        {/* Banners — placed after stable hero to prevent CLS */}
+        <PromoEndBanner />
+        <StreakRiskBanner />
+        <DailyGoalNudge />
+        <UpgradeCard />
+        <StreakMilestone />
 
         {/* ─── Greeting card with streak & countdown ─── */}
         <div className="card-glass p-6 mb-6">

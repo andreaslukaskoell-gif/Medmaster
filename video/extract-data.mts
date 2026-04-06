@@ -153,4 +153,76 @@ for (let i = 0; i < 30; i++) {
 writeFileSync(resolve(OUT, "figuren.json"), JSON.stringify(fzPool, null, 2));
 console.log(`Generated ${fzPool.length} Figuren tasks`);
 
+// Extract CheatSheet data — group BMS questions by chapter, pick key facts
+const cheatsheetPool: any[] = [];
+const byChapter: Record<string, any[]> = {};
+for (const q of good) {
+  const qAny = q as any;
+  const chapter = qAny.chapter || "unknown";
+  if (!byChapter[chapter]) byChapter[chapter] = [];
+  byChapter[chapter].push(qAny);
+}
+for (const [chapter, questions] of Object.entries(byChapter)) {
+  if (questions.length < 5) continue;
+  // Pick 5 questions with good explanations as "facts"
+  const picked = questions
+    .filter((q: any) => q.explanation && q.explanation.length > 30)
+    .sort(() => Math.random() - 0.5)
+    .slice(0, 5);
+  if (picked.length === 5) {
+    // Extract the core fact from the explanation (first sentence)
+    const facts = picked.map((q: any) => {
+      const firstSentence = q.explanation.split(/[.!]/)[0].trim();
+      return firstSentence.length > 20 ? firstSentence : q.explanation.slice(0, 100);
+    });
+    cheatsheetPool.push({
+      subject: subjectFromId(picked[0].id),
+      topic: chapter,
+      facts,
+    });
+  }
+}
+writeFileSync(resolve(OUT, "cheatsheets.json"), JSON.stringify(cheatsheetPool, null, 2));
+console.log(`Generated ${cheatsheetPool.length} CheatSheet sets`);
+
+// Extract MistakeReveal data — hard questions with clear wrong/right distinction
+const mistakePool: any[] = [];
+const hardQuestions = good.filter((q: any) => q.difficulty === 3 || q.difficulty === "schwer");
+const mistakeCandidates = hardQuestions.length >= 20 ? hardQuestions : good;
+for (const q of mistakeCandidates.sort(() => Math.random() - 0.5).slice(0, 30)) {
+  const qAny = q as any;
+  const correctOpt = qAny.options.find((o: any) => o.id === qAny.correctOptionId);
+  const wrongOpt = qAny.options.find((o: any) => o.id !== qAny.correctOptionId);
+  if (correctOpt && wrongOpt) {
+    mistakePool.push({
+      subject: subjectFromId(qAny.id),
+      mistake: wrongOpt.text,
+      correction: correctOpt.text,
+      explanation: qAny.explanation?.slice(0, 150) || "",
+    });
+  }
+}
+writeFileSync(resolve(OUT, "mistakes.json"), JSON.stringify(mistakePool, null, 2));
+console.log(`Generated ${mistakePool.length} MistakeReveal sets`);
+
+// Extract SpeedRound data — groups of 3 easy questions
+const speedPool: any[] = [];
+const easyQuestions = good
+  .filter((q: any) => q.difficulty === 1 || q.difficulty === "leicht")
+  .sort(() => Math.random() - 0.5);
+const fallbackQuestions = easyQuestions.length >= 30 ? easyQuestions : good.sort(() => Math.random() - 0.5);
+for (let i = 0; i + 2 < fallbackQuestions.length && speedPool.length < 20; i += 3) {
+  const qs = fallbackQuestions.slice(i, i + 3);
+  speedPool.push({
+    subject: subjectFromId((qs[0] as any).id),
+    questions: qs.map((q: any) => ({
+      question: q.text,
+      options: q.options,
+      correctOptionId: q.correctOptionId,
+    })),
+  });
+}
+writeFileSync(resolve(OUT, "speedrounds.json"), JSON.stringify(speedPool, null, 2));
+console.log(`Generated ${speedPool.length} SpeedRound sets`);
+
 console.log(`Output: ${OUT}`);

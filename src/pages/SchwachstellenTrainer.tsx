@@ -44,7 +44,7 @@ import { usePageTitle } from "@/hooks/usePageTitle";
 // Types & Helpers
 // ============================================================
 
-type Mode = "overview" | "daily" | "focused";
+type Mode = "overview" | "daily" | "focused" | "result";
 
 const fachColors: Record<string, { bg: string; text: string; label: string; accent: string }> = {
   biologie: {
@@ -100,6 +100,7 @@ export default function SchwachstellenTrainer() {
   usePageTitle("Schwachstellen-Trainer");
   const { isLocked: isFeatureLocked } = usePermissions();
   const [mode, setMode] = useState<Mode>("overview");
+  const [hydrated, setHydrated] = useState(false);
   const [focusStichwortId, setFocusStichwortId] = useState<string | null>(null);
   const [quizQuestions, setQuizQuestions] = useState<typeof allBmsQuestions>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -110,6 +111,14 @@ export default function SchwachstellenTrainer() {
   const [aiTutorQ, setAiTutorQ] = useState<{
     question: (typeof allBmsQuestions)[0];
     userAnswer: string;
+  } | null>(null);
+  const [lastResult, setLastResult] = useState<{
+    score: number;
+    total: number;
+    questions: typeof allBmsQuestions;
+    answers: Record<string, string>;
+    wasDaily: boolean;
+    minutes: number;
   } | null>(null);
 
   const navigate = useNavigate();
@@ -123,15 +132,36 @@ export default function SchwachstellenTrainer() {
   const quizResults = useStore((s) => s.quizResults);
   const getMinutes = useSessionTimer();
 
+  // ── Hydrate adaptive store from quiz history on first load ──
+  useEffect(() => {
+    let cancelled = false;
+    async function hydrate() {
+      const { loadBmsQuestions, loadDirectStichwortId } = await import("@/store/adaptiveLearning");
+      await Promise.all([loadBmsQuestions(), loadDirectStichwortId()]);
+      if (cancelled) return;
+      const results = useStore.getState().quizResults ?? [];
+      const bmsResults = results.filter(
+        (r) => r.type === "bms" && r.answers && r.answers.length > 0
+      );
+      if (bmsResults.length > 0) {
+        useAdaptiveStore.getState().initializeFromQuizResults(bmsResults);
+      }
+      setHydrated(true);
+    }
+    hydrate();
+    return () => { cancelled = true; };
+  }, []);
+
   const readiness = adaptive.getMedATReadiness();
   const weakTopics = adaptive.getWeakestTopics(10);
   const strongTopics = adaptive.getStrongestTopics(5);
   const { profile } = adaptive;
 
   const dailyQuestions = useMemo(() => {
+    if (!hydrated) return [];
     return adaptive.getAdaptiveQuestions(15);
-    // eslint-disable-next-line react-hooks/exhaustive-deps -- adaptive from store, intentionally stable
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- run once after hydration
+  }, [hydrated]);
 
   useEffect(() => {
     const sw = searchParams.get("stichwort");
@@ -209,6 +239,7 @@ export default function SchwachstellenTrainer() {
 
   function finishQuiz() {
     const score = quizQuestions.filter((q) => answers[q.id] === q.correctOptionId).length;
+    const minutes = getMinutes();
     saveQuizResult({
       id: `schwachstellen-${Date.now()}`,
       type: "bms",
@@ -217,18 +248,20 @@ export default function SchwachstellenTrainer() {
       total: quizQuestions.length,
       date: new Date().toLocaleDateString("de-AT"),
       timestamp: new Date().toISOString(),
-      durationMinutes: getMinutes(),
+      durationMinutes: minutes,
       answers: quizQuestions.map((q) => ({
         questionId: q.id,
         selectedAnswer: answers[q.id] || "",
         correct: answers[q.id] === q.correctOptionId,
       })),
     });
-    addXP(score * 15); // Bonus XP for targeted practice
+    addXP(score * 15);
     checkStreak();
-    logActivity(quizQuestions.length, getMinutes());
-    if (mode === "daily") adaptive.completeDailyChallenge();
-    setMode("overview");
+    logActivity(quizQuestions.length, minutes);
+    const wasDaily = mode === "daily";
+    if (wasDaily) adaptive.completeDailyChallenge();
+    setLastResult({ score, total: quizQuestions.length, questions: quizQuestions, answers, wasDaily, minutes });
+    setMode("result");
   }
 
   // Keyboard shortcuts for quiz
@@ -248,6 +281,135 @@ export default function SchwachstellenTrainer() {
       if (showResult) handleNext();
     },
   });
+
+  // ============================================================
+  // Result View
+  // ============================================================
+
+  if (mode === "result" && lastResult) {
+    const { score, total, questions: rQuestions, answers: rAnswers, wasDaily, minutes } = lastResult;
+    const pct = Math.round((score / total) * 100);
+    const wrongQs = rQuestions.filter((q) => rAnswers[q.id] !== q.correctOptionId);
+
+    // Find next weak topic to suggest
+    const nextWeak = weakTopics.find((t) => {
+      const available = allBmsQuestions.filter((q) => {
+        const d = getDirectStichwortId(q.id);
+        if (d === t.stichwortId) return true;
+        return getStichwortForQuestion(q.id) === t.stichwortId;
+      }).length;
+      return available > 0 && t.stichwortId !== focusStichwortId;
+    });
+
+    return (
+      <div className="max-w-2xl mx-auto space-y-6">
+        {/* Score Header */}
+        <div className="text-center py-8">
+          <div className={`inline-flex items-center justify-center w-24 h-24 rounded-full mb-4 ${
+            pct >= 80 ? "bg-emerald-100 dark:bg-emerald-900/30" :
+            pct >= 50 ? "bg-amber-100 dark:bg-amber-900/30" :
+            "bg-red-100 dark:bg-red-900/30"
+          }`}>
+            <span className={`text-3xl font-bold ${
+              pct >= 80 ? "text-emerald-600 dark:text-emerald-400" :
+              pct >= 50 ? "text-amber-600 dark:text-amber-400" :
+              "text-red-600 dark:text-red-400"
+            }`}>
+              {pct}%
+            </span>
+          </div>
+          <h2 className="text-2xl font-bold text-[var(--text-primary)]">
+            {pct >= 80 ? "Stark!" : pct >= 50 ? "Gut gemacht!" : "Dranbleiben!"}
+          </h2>
+          <p className="text-[var(--muted)] mt-1">
+            {score} von {total} richtig
+            {wasDaily && " — Daily Challenge"}
+            {minutes > 0 && ` · ${minutes} Min.`}
+          </p>
+        </div>
+
+        {/* Score Bar */}
+        <div className="card-glass p-4">
+          <div className="flex items-center justify-between text-sm mb-2">
+            <span className="text-[var(--muted)]">Ergebnis</span>
+            <span className="font-medium text-[var(--text-primary)]">{score}/{total}</span>
+          </div>
+          <Progress value={pct} />
+          <div className="flex justify-between mt-3 text-xs text-[var(--muted)]">
+            <span className="flex items-center gap-1">
+              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />
+              {score} richtig
+            </span>
+            <span className="flex items-center gap-1">
+              <XCircle className="w-3.5 h-3.5 text-red-500" />
+              {total - score} falsch
+            </span>
+          </div>
+        </div>
+
+        {/* Wrong Answers Summary */}
+        {wrongQs.length > 0 && (
+          <Card>
+            <CardHeader className="pb-2">
+              <CardTitle className="text-base flex items-center gap-2">
+                <XCircle className="w-4 h-4 text-red-500" />
+                Falsche Antworten ({wrongQs.length})
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-2">
+              {wrongQs.map((q) => {
+                const sw = alleStichworteListe.find(
+                  (s) => s.id === (getDirectStichwortId(q.id) || getStichwortForQuestion(q.id))
+                );
+                const chapterLink = sw?.linkedChapterId && sw?.fach
+                  ? pathForChapter(sw.fach, sw.linkedChapterId)
+                  : null;
+                return (
+                  <div key={q.id} className="p-3 rounded-lg bg-red-50/50 dark:bg-red-900/10 border border-red-200/50 dark:border-red-800/30">
+                    <p className="text-sm text-[var(--text-primary)] line-clamp-2">{q.text}</p>
+                    <div className="flex items-center gap-2 mt-2">
+                      {sw && (
+                        <Badge variant="default" className="text-[10px]">{sw.thema}</Badge>
+                      )}
+                      {chapterLink && (
+                        <button
+                          onClick={() => navigate(chapterLink)}
+                          className="text-[10px] text-[var(--accent)] hover:underline flex items-center gap-0.5"
+                        >
+                          <BookOpen className="w-3 h-3" />
+                          Nachlesen
+                        </button>
+                      )}
+                    </div>
+                  </div>
+                );
+              })}
+            </CardContent>
+          </Card>
+        )}
+
+        {/* Actions */}
+        <div className="flex flex-col gap-3">
+          {nextWeak && (
+            <Button onClick={() => startFocusedQuiz(nextWeak.stichwortId)} className="gap-2">
+              <Target className="w-4 h-4" />
+              Nächste Schwachstelle: {nextWeak.thema} ({nextWeak.rate}%)
+            </Button>
+          )}
+          {wasDaily && (
+            <Button variant="outline" onClick={() => startDailyChallenge()} className="gap-2" disabled={dailyQuestions.length === 0}>
+              <RotateCcw className="w-4 h-4" />
+              Nochmal spielen
+            </Button>
+          )}
+          <Button variant="ghost" onClick={() => setMode("overview")} className="gap-2">
+            <ArrowLeft className="w-4 h-4" />
+            Zurück zur Übersicht
+          </Button>
+        </div>
+      </div>
+    );
+  }
 
   // ============================================================
   // Quiz View
@@ -449,37 +611,31 @@ export default function SchwachstellenTrainer() {
       <SchwachstellenAnalyse />
 
       {/* Readiness & Stats Row */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <Card>
-          <CardContent className="p-5 text-center">
-            <div className="text-3xl font-bold text-[var(--accent)]/60">{readiness}%</div>
-            <p className="text-xs text-[var(--muted)] mt-1">MedAT Readiness</p>
-            <Progress value={readiness} className="mt-3" />
-          </CardContent>
-        </Card>
-        <Card>
-          <CardContent className="p-5 text-center">
-            <div className="flex items-center justify-center gap-1">
-              <Flame className="w-5 h-5 text-orange-500" />
-              <span className="text-3xl font-bold text-orange-600 dark:text-orange-400">
-                {profile.dailyChallengeStreak}
-              </span>
-            </div>
-            <p className="text-xs text-[var(--muted)] mt-1">Tages-Streak</p>
-            <p className="text-xs text-[var(--muted)]">
-              {profile.totalQuestionsAnswered} Fragen beantwortet
-            </p>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardContent className="p-5 text-center">
-            <div className="text-3xl font-bold text-emerald-600 dark:text-emerald-400">
-              {totalPracticed}/{totalStichworte}
-            </div>
-            <p className="text-xs text-[var(--muted)] mt-1">Stichworte geübt</p>
-            <Progress value={(totalPracticed / totalStichworte) * 100} className="mt-3" />
-          </CardContent>
-        </Card>
+      <div className="card-glass p-0 grid grid-cols-3 divide-x divide-[var(--border)]">
+        <div className="p-5 text-center">
+          <div className="text-3xl font-bold text-[var(--accent)]">{readiness}%</div>
+          <p className="text-xs text-[var(--muted)] mt-1">MedAT Readiness</p>
+          <Progress value={readiness} className="mt-3" />
+        </div>
+        <div className="p-5 text-center">
+          <div className="flex items-center justify-center gap-1.5">
+            <Flame className="w-5 h-5 text-orange-500" />
+            <span className="text-3xl font-bold text-orange-600 dark:text-orange-400">
+              {profile.dailyChallengeStreak}
+            </span>
+          </div>
+          <p className="text-xs text-[var(--muted)] mt-1">Tages-Streak</p>
+          <p className="text-xs text-[var(--muted)]">
+            {profile.totalQuestionsAnswered} Fragen beantwortet
+          </p>
+        </div>
+        <div className="p-5 text-center">
+          <div className="text-3xl font-bold text-emerald-600 dark:text-emerald-400">
+            {totalPracticed}/{totalStichworte}
+          </div>
+          <p className="text-xs text-[var(--muted)] mt-1">Stichworte geübt</p>
+          <Progress value={(totalPracticed / totalStichworte) * 100} className="mt-3" />
+        </div>
       </div>
 
       {/* Daily Challenge + Smart Recovery */}
@@ -641,25 +797,28 @@ export default function SchwachstellenTrainer() {
       )}
 
       {/* Per-Fach Readiness */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-        {(["biologie", "chemie", "physik", "mathematik"] as const).map((fach) => {
-          const r = adaptive.getFachReadiness(fach);
-          const fc = fachColors[fach];
-          return (
-            <Card key={fach}>
-              <CardContent className="p-4 text-center">
+      <Card>
+        <CardHeader className="pb-2">
+          <CardTitle className="text-sm font-semibold text-[var(--text-primary)]">Readiness pro Fach</CardTitle>
+        </CardHeader>
+        <CardContent className="grid grid-cols-4 gap-4 pb-5">
+          {(["biologie", "chemie", "physik", "mathematik"] as const).map((fach) => {
+            const r = adaptive.getFachReadiness(fach);
+            const fc = fachColors[fach];
+            return (
+              <div key={fach} className="text-center">
                 <div
-                  className={`w-8 h-8 ${fc.accent} rounded-lg mx-auto mb-2 flex items-center justify-center`}
+                  className={`w-10 h-10 ${fc.accent} rounded-xl mx-auto mb-2 flex items-center justify-center`}
                 >
-                  <span className="text-white text-xs font-bold">{r}%</span>
+                  <span className="text-white text-sm font-bold">{r}%</span>
                 </div>
-                <p className="text-xs font-medium">{fc.label}</p>
+                <p className="text-xs font-medium text-[var(--text-primary)]">{fc.label}</p>
                 <Progress value={r} className="mt-2" />
-              </CardContent>
-            </Card>
-          );
-        })}
-      </div>
+              </div>
+            );
+          })}
+        </CardContent>
+      </Card>
     </div>
   );
 }

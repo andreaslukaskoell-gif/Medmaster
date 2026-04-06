@@ -27,10 +27,11 @@ export function StreakRiskBanner() {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: -8 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -8 }}
-      className="rounded-xl border border-amber-300/30 dark:border-amber-700/30 bg-linear-to-r from-amber-50 to-orange-50 dark:from-amber-900/10 dark:to-orange-900/10 p-4 mb-4"
+      initial={{ opacity: 0, height: 0, marginBottom: 0 }}
+      animate={{ opacity: 1, height: "auto", marginBottom: 16 }}
+      exit={{ opacity: 0, height: 0, marginBottom: 0 }}
+      transition={{ duration: 0.3, ease: "easeOut" }}
+      className="rounded-xl border border-amber-300/30 dark:border-amber-700/30 bg-linear-to-r from-amber-50 to-orange-50 dark:from-amber-900/10 dark:to-orange-900/10 p-4 overflow-hidden"
     >
       <div className="flex items-center gap-3">
         <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center shrink-0">
@@ -168,9 +169,11 @@ export function DailyGoalNudge() {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: -4 }}
-      animate={{ opacity: 1, y: 0 }}
-      className="rounded-lg bg-blue-50/50 dark:bg-blue-900/10 border border-blue-200/30 dark:border-blue-800/30 px-4 py-3 mb-4 flex items-center gap-3"
+      initial={{ opacity: 0, height: 0, marginBottom: 0 }}
+      animate={{ opacity: 1, height: "auto", marginBottom: 16 }}
+      exit={{ opacity: 0, height: 0, marginBottom: 0 }}
+      transition={{ duration: 0.3, ease: "easeOut" }}
+      className="rounded-lg bg-blue-50/50 dark:bg-blue-900/10 border border-blue-200/30 dark:border-blue-800/30 px-4 py-3 flex items-center gap-3 overflow-hidden"
     >
       <Zap className="w-4 h-4 text-blue-500 shrink-0" />
       <p className="text-xs text-blue-700 dark:text-blue-400 flex-1">

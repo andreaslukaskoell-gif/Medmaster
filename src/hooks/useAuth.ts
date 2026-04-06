@@ -116,6 +116,22 @@ export function useAuth() {
                 fbclid: getStoredFbclid(),
                 email: session.user.email,
               });
+              // Send welcome email (fire-and-forget)
+              if (session.user.email && supabase) {
+                supabase.functions.invoke("send-email", {
+                  body: {
+                    action: "send",
+                    userId: session.user.id,
+                    templateId: "welcome",
+                    templateData: {
+                      email: session.user.email,
+                      name: session.user.user_metadata?.full_name
+                        || session.user.user_metadata?.name
+                        || session.user.email.split("@")[0],
+                    },
+                  },
+                }).catch(() => {});
+              }
             } else {
               trackEvent("login", { method: provider });
             }

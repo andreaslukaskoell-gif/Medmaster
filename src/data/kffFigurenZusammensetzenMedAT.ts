@@ -2245,11 +2245,11 @@ function applyAsymmetricCuts(
 /** Anzahl Schnitte pro Schwierigkeitsstufe.
  *  IB FZ 26: Intro=2pc, Bsp1=4pc, Bsp2=2pc, Bsp3=6pc, Bsp4=6pc, Bsp5=4pc */
 function numCutsForDifficulty(diff: FZDifficulty, rng: () => number): number {
-  // Calibrated piece counts: easy=2-3, medium=3-5, hard=5-6
-  // Medium needs 3+ cuts to reliably produce 4+ pieces (avoid collapsing to easy-like 3pc)
-  if (diff === "easy") return 1 + Math.floor(rng() * 2); // 1-2 cuts → 2-3 pieces
+  // MedAT-konform (IB FZ 26): easy=3-4, medium=4-5, hard=5-7 Teile
+  // StudyMed/VMC haben ebenfalls 3-5 Teile als Standard
+  if (diff === "easy") return 2 + Math.floor(rng() * 2); // 2-3 cuts → 3-4 pieces
   if (diff === "medium") return 3 + Math.floor(rng() * 2); // 3-4 cuts → 4-5 pieces
-  return 4 + Math.floor(rng() * 2); // 4-5 cuts → 5-6 pieces
+  return 4 + Math.floor(rng() * 3); // 4-6 cuts → 5-7 pieces
 }
 
 /**
@@ -2272,8 +2272,8 @@ export function cutPolygonStrategically(
   const nCuts = numCutsForDifficulty(difficulty, rng);
   const asymPieces = applyAsymmetricCuts(target, nCuts, rng, difficulty);
   // Piece count bounds
-  const minPieces = difficulty === "easy" ? 2 : 3;
-  const maxPieces = difficulty === "easy" ? 3 : difficulty === "medium" ? 5 : 6;
+  const minPieces = difficulty === "easy" ? 3 : difficulty === "medium" ? 4 : 5;
+  const maxPieces = difficulty === "easy" ? 4 : difficulty === "medium" ? 5 : 7;
   if (asymPieces && asymPieces.length >= minPieces && asymPieces.length <= maxPieces) {
     const totalArea = asymPieces.reduce((s, p) => s + polygonArea(p), 0);
     const targetArea = polygonArea(target);
@@ -2351,9 +2351,13 @@ export function cutPolygonStrategically(
   return { target, pieces: [{ points: target.points.map((p) => ({ ...p })) }] };
 }
 
+// Global shape rotation counter to prevent any single shape from dominating
+let _fzShapeRotation = 0;
+
 /**
  * Generiert eine Trainingsaufgabe mit Validator und Duplikat-Schutz.
- * Bei „Schwer“: visuell unterschiedliche Formen, keine Dominanz von Quadrat/Raute/Trapez.
+ * Bei fehlendem forcedShapeIdx: Round-Robin über alle 15 Formen statt Zufall,
+ * damit keine Dominanz von Quadrat/Raute/Trapez entsteht.
  */
 export function generateFigurenTrainingTask(
   difficulty: FZDifficulty,
@@ -2362,25 +2366,26 @@ export function generateFigurenTrainingTask(
   forceECorrect?: boolean
 ): FigureAssembleTask {
   const rng = createRng(seed);
+  // When no shape is forced, rotate through all shapes to prevent any shape dominance
+  const effectiveShapeIdx = forcedShapeIdx ?? (_fzShapeRotation++ % OFFICIAL_TARGET_POLYGONS.length);
   // E-correct ~12% matches official IB FZ 26 benchmark (1 in ~6-7 tasks have E correct).
-  // "Bei einigen Aufgaben kann es vorkommen, dass keine der Antwortmöglichkeiten A bis D richtig ist."
+  // “Bei einigen Aufgaben kann es vorkommen, dass keine der Antwortmöglichkeiten A bis D richtig ist.”
   const makeECorrect = forceECorrect ?? rng() < 0.12;
-  // More attempts for complex shapes (circles, octagon, heptagon) that reject many cuts
-  const shapeVertexCount =
-    forcedShapeIdx != null
-      ? OFFICIAL_TARGET_POLYGONS[forcedShapeIdx % OFFICIAL_TARGET_POLYGONS.length].points.length
-      : 4;
-  const maxAttempts = shapeVertexCount > 8 ? 80 : 50;
+  const maxAttempts = 60;
   for (let attempt = 0; attempt < maxAttempts; attempt++) {
     const { target, pieces } = cutPolygonStrategically(
       difficulty,
       seed + attempt * 9973,
-      forcedShapeIdx
+      effectiveShapeIdx
     );
     if (!isAllowedTarget(target)) continue;
+    // Reject if cutPolygonStrategically fell back to a different shape than requested
+    const actualShapeId = getTargetShapeIdForPolygon(target);
+    const requestedShapeId = SOLUTION_SHAPES[effectiveShapeIdx % SOLUTION_SHAPES.length];
+    if (actualShapeId && requestedShapeId && actualShapeId !== requestedShapeId) continue;
     // Piece count bounds per difficulty
-    const minPcs = difficulty === "easy" ? 2 : 3;
-    const maxPcs = difficulty === "easy" ? 3 : difficulty === "medium" ? 5 : 6;
+    const minPcs = difficulty === "easy" ? 3 : difficulty === "medium" ? 4 : 5;
+    const maxPcs = difficulty === "easy" ? 4 : difficulty === "medium" ? 5 : 7;
     if (pieces.length < minPcs || pieces.length > maxPcs) continue;
     {
       const pa = pieces.map((p) => polygonArea(p));
@@ -2476,7 +2481,7 @@ export function generateFigurenTrainingTask(
     difficulty,
     seed + maxAttempts,
     makeECorrect,
-    forcedShapeIdx
+    effectiveShapeIdx
   );
 }
 
@@ -2490,7 +2495,7 @@ function generateFigurenTrainingTaskFallback(
   for (let fa = 0; fa < maxFallbackAttempts; fa++) {
     const rng = createRng(seed + fa * 31337);
 
-    // Use asymmetric cuts on forced shape (NO CUT_SCHEMES)
+    // Keep the assigned shape — don't rotate to square/rectangle
     const fbShapeIdx =
       forcedShapeIdx != null
         ? forcedShapeIdx % SOLUTION_SHAPES.length
@@ -2498,7 +2503,7 @@ function generateFigurenTrainingTaskFallback(
     const target = { points: OFFICIAL_TARGET_POLYGONS[fbShapeIdx].points.map((p) => ({ ...p })) };
     const nCuts = numCutsForDifficulty(difficulty, rng);
     const pieces = applyAsymmetricCuts(target, nCuts, rng, difficulty);
-    const fbMaxPcs = difficulty === "easy" ? 3 : difficulty === "medium" ? 5 : 6;
+    const fbMaxPcs = difficulty === "easy" ? 4 : difficulty === "medium" ? 5 : 7;
     if (!pieces || pieces.length < 3 || pieces.length > fbMaxPcs) continue;
     const pa = pieces.map((p) => polygonArea(p));
     const paMax = Math.max(...pa),
@@ -2625,12 +2630,24 @@ function generateFigurenTrainingTaskFallback(
       }
     }
   }
-  const { target, pieces } = fbPieces
-    ? { target: fbTarget, pieces: fbPieces }
-    : cutSquareDiagonal();
+  // Use the requested shape even in ultimate fallback — never force square
+  const finalTarget = fbPieces ? fbTarget : { points: OFFICIAL_TARGET_POLYGONS[fbShapeIdx2].points.map((p) => ({ ...p })) };
+  const finalPieces = fbPieces ?? (() => {
+    // Simple split: first point + midpoints as 2 triangles for any polygon
+    const pts = finalTarget.points;
+    if (pts.length >= 3) {
+      const mid = Math.floor(pts.length / 2);
+      return [
+        { points: pts.slice(0, mid + 1) },
+        { points: [pts[0], ...pts.slice(mid)] },
+      ];
+    }
+    return [{ points: pts.map((p: {x: number; y: number}) => ({...p})) }];
+  })();
+  const finalShapeId = getTargetShapeIdForPolygon(finalTarget) ?? SOLUTION_SHAPES[fbShapeIdx2];
   const rng = createRng(seed + 999);
-  const distractors = buildDistractors(target, 3, rng, "");
-  const four: Polygon[] = [target, distractors[0]!, distractors[1]!, distractors[2]!];
+  const distractors = buildDistractors(finalTarget, 3, rng, "");
+  const four: Polygon[] = [finalTarget, distractors[0]!, distractors[1]!, distractors[2]!];
   const order = [0, 1, 2, 3];
   for (let i = 3; i > 0; i--) {
     const j = Math.floor(rng() * (i + 1));
@@ -2644,27 +2661,26 @@ function generateFigurenTrainingTaskFallback(
     four[order[3]!]!,
     OPTION_E,
   ];
-  // Post-rotation quality gate for ultimate fallback
-  let safeDisplayPieces = rotatePiecesForDisplay(pieces, difficulty, rng);
+  let safeDisplayPieces = rotatePiecesForDisplay(finalPieces, difficulty, rng);
   const safeSliver = safeDisplayPieces.some((p) => {
     const bb = polygonBBox(p);
     const ar = (bb.width || 1) / (bb.height || 1);
     return ar > 4 || ar < 0.25;
   });
-  // If rotation creates slivers, use unrotated pieces (safe fallback)
   if (safeSliver)
-    safeDisplayPieces = pieces.map((p) => ({ points: p.points.map((pt) => ({ ...pt })) }));
+    safeDisplayPieces = finalPieces.map((p) => ({ points: p.points.map((pt) => ({ ...pt })) }));
+  const shapeName = SHAPE_NAMES_AKK[finalShapeId] ?? "die Figur";
   return {
     id: `fz-train-fb-${difficulty}-${seed}-safe`,
     pieces: safeDisplayPieces,
-    originalPieces: pieces.map((p) => ({ points: p.points.map((pt) => ({ ...pt })) })),
-    target,
+    originalPieces: finalPieces.map((p) => ({ points: p.points.map((pt) => ({ ...pt })) })),
+    target: finalTarget,
     options,
     correctIndex,
     difficulty,
-    explanation: `Die ${pieces.length} Teile ergeben zusammengesetzt ein Quadrat. Vergleiche die Umrisse: nur diese Figur stimmt mit der Gesamtfläche und den Winkeln der Teile überein.`,
-    targetShapeId: "square",
-    solutionOverlay: computeSolutionOverlay(target, pieces),
+    explanation: `Die ${finalPieces.length} Teile ergeben zusammengesetzt ${shapeName}. Vergleiche die Umrisse: nur diese Figur stimmt mit der Gesamtfläche und den Winkeln der Teile überein.`,
+    targetShapeId: finalShapeId,
+    solutionOverlay: computeSolutionOverlay(finalTarget, finalPieces),
   };
 }
 

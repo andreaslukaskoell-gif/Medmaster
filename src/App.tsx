@@ -296,46 +296,17 @@ export default function App() {
                   </MedATGuard>
                 }
               >
-                <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/dashboard" element={<Suspense fallback={<PageLoadingSkeleton variant="dashboard" />}><Dashboard /></Suspense>} />
                 <Route path="/today" element={<TodayPage />} />
-                {/* Old /onboarding route removed — OnboardingWizard overlay handles it */}
                 <Route path="/onboarding" element={<Navigate to="/dashboard" replace />} />
-                <Route
-                  path="/bms"
-                  element={
-                    <Suspense fallback={<PageLoadingSkeleton variant="bms" />}>
-                      <BMS />
-                    </Suspense>
-                  }
-                />
-                <Route
-                  path="/bms/quiz/:fach"
-                  element={
-                    <Suspense fallback={<PageLoadingSkeleton variant="quiz" />}>
-                      <BMSQuizWrapper />
-                    </Suspense>
-                  }
-                />
-                <Route
-                  path="/bms/:fach"
-                  element={
-                    <Suspense fallback={<PageLoadingSkeleton variant="bms" />}>
-                      <BMS />
-                    </Suspense>
-                  }
-                />
-                <Route
-                  path="/bms/:fach/:kapitel"
-                  element={
-                    <Suspense fallback={<PageLoadingSkeleton variant="chapter" />}>
-                      <BMS />
-                    </Suspense>
-                  }
-                />
-                <Route path="/kff" element={<KFF />} />
-                <Route path="/tv" element={<TV />} />
-                <Route path="/sek" element={<SEK />} />
-                <Route path="/simulation" element={<Simulation />} />
+                <Route path="/bms" element={<Suspense fallback={<PageLoadingSkeleton variant="bms" />}><BMS /></Suspense>} />
+                <Route path="/bms/quiz/:fach" element={<Suspense fallback={<PageLoadingSkeleton variant="quiz" />}><BMSQuizWrapper /></Suspense>} />
+                <Route path="/bms/:fach" element={<Suspense fallback={<PageLoadingSkeleton variant="bms" />}><BMS /></Suspense>} />
+                <Route path="/bms/:fach/:kapitel" element={<Suspense fallback={<PageLoadingSkeleton variant="chapter" />}><BMS /></Suspense>} />
+                <Route path="/kff" element={<Suspense fallback={<PageLoadingSkeleton />}><KFF /></Suspense>} />
+                <Route path="/tv" element={<Suspense fallback={<PageLoadingSkeleton />}><TV /></Suspense>} />
+                <Route path="/sek" element={<Suspense fallback={<PageLoadingSkeleton />}><SEK /></Suspense>} />
+                <Route path="/simulation" element={<Suspense fallback={<PageLoadingSkeleton variant="quiz" />}><Simulation /></Suspense>} />
                 <Route path="/lernplan" element={<Lernplan />} />
                 <Route path="/statistik" element={<Statistics />} />
                 <Route path="/stichwortliste" element={<StichwortlistePage />} />
