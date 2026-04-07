@@ -16,7 +16,7 @@ export function useReferralAttribution() {
     if (import.meta.env.DEV && user.id.startsWith("00000000")) return;
     attributed.current = true;
 
-    const refCode = getStoredRef();
+    const refCode = getStoredRef() || sessionStorage.getItem("medmaster_ref");
     if (!refCode) return;
 
     // Don't attribute to yourself

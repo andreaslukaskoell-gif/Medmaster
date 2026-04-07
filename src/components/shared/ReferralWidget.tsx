@@ -42,7 +42,7 @@ export function ReferralWidget({ compact }: { compact?: boolean } = {}) {
 
   return (
     <div className="bg-[var(--surface)] rounded-xl border border-[var(--border)] p-3">
-      {/* Compact header row: icon + text + reward status */}
+      {/* Header row */}
       <div className="flex items-center gap-2.5 mb-2">
         <Share2 className="w-4 h-4 text-[var(--accent)] shrink-0" />
         <div className="flex-1 min-w-0">
@@ -57,8 +57,8 @@ export function ReferralWidget({ compact }: { compact?: boolean } = {}) {
         </div>
       </div>
 
-      {/* Share row: link input + copy + share buttons */}
-      <div className={`flex items-center gap-1.5${compact ? " hidden" : ""}`}>
+      {/* Link + share buttons — always visible */}
+      <div className="flex items-center gap-1.5">
         <input
           type="text"
           readOnly
@@ -82,12 +82,14 @@ export function ReferralWidget({ compact }: { compact?: boolean } = {}) {
         >
           WhatsApp
         </button>
-        <button
-          onClick={handleTelegram}
-          className="shrink-0 text-[11px] font-medium px-2.5 py-1.5 rounded-md bg-[#0088cc]/10 text-[#0088cc] hover:bg-[#0088cc]/20 transition-colors cursor-pointer"
-        >
-          Telegram
-        </button>
+        {!compact && (
+          <button
+            onClick={handleTelegram}
+            className="shrink-0 text-[11px] font-medium px-2.5 py-1.5 rounded-md bg-[#0088cc]/10 text-[#0088cc] hover:bg-[#0088cc]/20 transition-colors cursor-pointer"
+          >
+            Telegram
+          </button>
+        )}
       </div>
     </div>
   );
