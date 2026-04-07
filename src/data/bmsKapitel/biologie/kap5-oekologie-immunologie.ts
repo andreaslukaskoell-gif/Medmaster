@@ -1587,8 +1587,12 @@ Bakterienwachstum in geschlossener Kultur (Blutkultur, Nährmedium) durchläuft 
     {
       id: "bio-10-07",
       title: "Biodiversität und Artenschutz",
+      imageUrl: "/images/bms/bio-oekologische-pyramide.svg",
+      imageCaption: "Abb.: Ökologische Pyramide — Trophieebenen und Energiefluss in Ökosystemen",
       stichworte: ["Biodiversität", "Artenvielfalt", "Genetische Diversität", "Ökosystemdiversität", "Rote Liste", "Artenschutz"],
       content: `Biodiversität beschreibt die **Vielfalt des Lebens** auf allen Ebenen — von Genen über Arten bis zu ganzen Ökosystemen. Sie ist Grundlage für stabile Ökosysteme und damit für das menschliche Überleben.
+
+![Ökologische Pyramide](/images/bms/bio-oekologische-pyramide.svg)
 
 ## Drei Ebenen der Biodiversität
 

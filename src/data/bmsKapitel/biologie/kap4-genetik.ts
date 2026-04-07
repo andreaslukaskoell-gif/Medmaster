@@ -3505,6 +3505,8 @@ Die genetische Diagnostik wirft fundamentale Fragen auf, die im MedAT neutral ve
     {
       id: "bio-4-15",
       title: "Kopplungsgruppen und Rekombinationsfrequenz",
+      imageUrl: "/images/bms/bio-mitose-meiose-de.svg",
+      imageCaption: "Abb.: Mitose und Meiose — Crossing-over in der Prophase I ermöglicht Rekombination gekoppelter Gene",
       stichworte: ["Genkopplung", "Kopplungsgruppe", "Rekombinationsfrequenz", "centiMorgan", "Genkarte", "Crossing-over"],
       content: `Bisher haben wir bei Mendels Regeln angenommen, dass Gene frei kombinierbar sind. Doch Gene auf demselben Chromosom werden oft **gemeinsam vererbt** — sie sind **gekoppelt**.
 
