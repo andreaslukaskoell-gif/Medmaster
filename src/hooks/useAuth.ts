@@ -30,6 +30,7 @@ interface Profile {
   xp: number;
   level: number;
   streak_days: number;
+  email_opt_out: boolean;
 }
 
 const isDev = import.meta.env.DEV;

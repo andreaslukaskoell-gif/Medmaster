@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ReferralWidget } from "@/components/shared/ReferralWidget";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import {
   Moon,
   Sun,
@@ -211,6 +211,32 @@ export default function Einstellungen() {
   const [deleting, setDeleting] = useState(false);
   const [deleteError, setDeleteError] = useState<string | null>(null);
   const [exporting, setExporting] = useState(false);
+  const [emailOptOut, setEmailOptOut] = useState(profile?.email_opt_out ?? false);
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  // Handle ?unsubscribe=email from email footer link
+  useEffect(() => {
+    if (searchParams.get("unsubscribe") === "email" && user && supabase && !emailOptOut) {
+      supabase.from("profiles").update({ email_opt_out: true }).eq("id", user.id).then(() => {
+        setEmailOptOut(true);
+        toast.success("E-Mail-Benachrichtigungen deaktiviert.");
+      });
+      setSearchParams({}, { replace: true });
+    }
+  }, [searchParams, user, emailOptOut, setSearchParams]);
+
+  const toggleEmailOptOut = async () => {
+    if (!user || !supabase) return;
+    const newValue = !emailOptOut;
+    setEmailOptOut(newValue);
+    const { error } = await supabase.from("profiles").update({ email_opt_out: newValue }).eq("id", user.id);
+    if (error) {
+      setEmailOptOut(!newValue);
+      toast.error("Fehler beim Speichern.");
+    } else {
+      toast.success(newValue ? "E-Mail-Benachrichtigungen deaktiviert." : "E-Mail-Benachrichtigungen aktiviert.");
+    }
+  };
 
   const handleDeleteAccount = async () => {
     setDeleting(true);
@@ -319,6 +345,34 @@ export default function Einstellungen() {
           Freunde einladen
         </h2>
         <ReferralWidget />
+      </section>
+
+      {/* ── Benachrichtigungen ─────────────────────────────────── */}
+      <section className="space-y-3">
+        <h2 className="text-xs font-semibold uppercase tracking-widest text-[var(--muted)]">
+          Benachrichtigungen
+        </h2>
+        <div className="card-glass divide-y divide-[var(--border)]">
+          <SettingRow
+            icon={Mail}
+            label="E-Mail-Benachrichtigungen"
+            description={emailOptOut ? "Deaktiviert" : "Streak-Erinnerungen, Lerntipps"}
+          >
+            <button
+              type="button"
+              onClick={toggleEmailOptOut}
+              className={`relative w-11 h-6 rounded-full transition-colors cursor-pointer ${
+                !emailOptOut ? "bg-[var(--accent)]" : "bg-[var(--muted)]/30"
+              }`}
+            >
+              <span
+                className={`absolute top-0.5 left-0.5 w-5 h-5 rounded-full bg-white shadow transition-transform ${
+                  !emailOptOut ? "translate-x-5" : "translate-x-0"
+                }`}
+              />
+            </button>
+          </SettingRow>
+        </div>
       </section>
 
       {/* ── Darstellung ────────────────────────────────────────── */}

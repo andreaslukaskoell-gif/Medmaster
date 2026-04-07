@@ -93,9 +93,11 @@ async function processD1Reminders(): Promise<number> {
 
     const { data: profile } = await supabase
       .from("profiles")
-      .select("display_name")
+      .select("display_name, email_opt_out")
       .eq("id", user.id)
       .single();
+
+    if (profile?.email_opt_out) continue;
 
     const ok = await sendTemplateEmail(user.id, "d1-reminder", {
       email: user.email,
@@ -133,9 +135,11 @@ async function processStreakRisk(): Promise<number> {
 
     const { data: profile } = await supabase
       .from("profiles")
-      .select("display_name")
+      .select("display_name, email_opt_out")
       .eq("id", row.user_id)
       .single();
+
+    if (profile?.email_opt_out) continue;
 
     const ok = await sendTemplateEmail(row.user_id, "streak-risk", {
       email: userData.user.email,
@@ -168,7 +172,7 @@ async function processReEngagement(): Promise<number> {
   if (!inactiveUsers) {
     const { data: profiles } = await supabase
       .from("profiles")
-      .select("id, display_name, last_active_date")
+      .select("id, display_name, last_active_date, email_opt_out")
       .lte("last_active_date", threeDaysAgo.toISOString().split("T")[0])
       .gte("last_active_date", sevenDaysAgo.toISOString().split("T")[0]);
 
@@ -176,6 +180,7 @@ async function processReEngagement(): Promise<number> {
 
     let sent = 0;
     for (const profile of profiles) {
+      if (profile.email_opt_out) continue;
       if (await wasRecentlySent(profile.id, "re-engagement", 7)) continue;
 
       const { data: userData } = await supabase.auth.admin.getUserById(profile.id);
