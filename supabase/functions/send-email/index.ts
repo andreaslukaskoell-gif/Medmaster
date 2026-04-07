@@ -76,7 +76,7 @@ const FONT = "-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue
 // ── Premium Email Shell ──
 
 function premiumWrap(body: string, preheader?: string): string {
-  const unsubscribeUrl = `${SITE_URL}/app/einstellungen?unsubscribe=email`;
+  const unsubscribeUrl = `${SITE_URL}/einstellungen?unsubscribe=email`;
 
   return `<!DOCTYPE html>
 <html lang="de" xmlns:v="urn:schemas-microsoft-com:vml">
@@ -673,7 +673,7 @@ function getEmailTemplate(
           </table>
 
           ${callout("<strong>Tipp:</strong> Starte mit den Wissensfragen \u2014 dort lernst du die Grundlagen und kannst sofort Fragen beantworten.", "info")}
-          ${ctaButton("Jetzt loslegen", `${SITE_URL}/app/bms`)}
+          ${ctaButton("Jetzt loslegen", `${SITE_URL}/bms`)}
           <p style="color:#64748b;font-size:13px;margin:0">Teste MedMaster kostenlos \u2014 Premium mit allen Features f\u00FCr einmalig &euro;29,90.</p>
         `,
           "Willkommen bei MedMaster \u2014 starte jetzt deine MedAT-Vorbereitung"
@@ -690,7 +690,7 @@ function getEmailTemplate(
           ${statCards(data.questionsAnswered, data.correctRate)}
           ${!data.questionsAnswered ? callout("Diese Woche hast du noch keine Fragen beantwortet. Schon 15 Minuten pro Tag machen einen Unterschied!", "warning") : ""}
           ${data.daysUntilExam ? countdownBadge(data.daysUntilExam) : ""}
-          ${ctaButton("Weiterlernen", `${SITE_URL}/app`)}
+          ${ctaButton("Weiterlernen", `${SITE_URL}/dashboard`)}
         `,
           "Dein w\u00F6chentlicher MedMaster-Fortschritt"
         ),
@@ -742,7 +742,7 @@ function getEmailTemplate(
             </tr>
           </table>
 
-          ${ctaButton("Jetzt weiterlernen", `${SITE_URL}/app`)}
+          ${ctaButton("Jetzt weiterlernen", `${SITE_URL}/dashboard`)}
 
           ${callout("<strong>Tipp:</strong> Starte heute mit nur 10 Fragen. Du wirst \u00FCberrascht sein, wie schnell du wieder drin bist.", "info")}
 
@@ -784,7 +784,7 @@ function getEmailTemplate(
             </tr>
           </table>
 
-          ${ctaButton("Jetzt erste Fragen beantworten", `${SITE_URL}/app/bms`)}
+          ${ctaButton("Jetzt erste Fragen beantworten", `${SITE_URL}/bms`)}
 
           ${callout("<strong>Tipp:</strong> Wer am ersten Tag startet, bleibt 3x h&auml;ufiger dran. Dein zuk&uuml;nftiges Ich wird dir danken!", "info")}
 
@@ -813,7 +813,7 @@ function getEmailTemplate(
             </td></tr>
           </table>
 
-          ${ctaButton("Streak retten &ndash; jetzt lernen", `${SITE_URL}/app/bms`)}
+          ${ctaButton("Streak retten &ndash; jetzt lernen", `${SITE_URL}/bms`)}
 
           ${callout("<strong>Wusstest du?</strong> Wer einen 7-Tage-Streak erreicht, beantwortet im Schnitt 3x mehr Fragen als Gelegenheitsnutzer.", "info")}
 

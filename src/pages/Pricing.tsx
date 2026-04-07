@@ -19,7 +19,7 @@ const features = [
   "10 TV-Textsets mit MC-Fragen",
   "230+ SEK-Aufgaben",
   "Realistische Prüfungssimulation im MedAT-Format",
-  "KI-adaptives Lernsystem",
+  "Adaptives Lernsystem mit Schwächenanalyse",
   "Spaced Repetition & Schwachstellen-Trainer",
   "Prüfungstag-Prognose",
   "Personalisierter Lernplan",

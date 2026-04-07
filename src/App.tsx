@@ -278,6 +278,7 @@ export default function App() {
             <Route path="/lp/medat" element={<PaidLanding />} />
             <Route path="/lp/bms" element={<PaidLandingBMS />} />
             <Route path="/medat-countdown" element={<MedATCountdown />} />
+            <Route path="/preise" element={<Pricing />} />
 
             {/* Protected routes */}
             <Route
@@ -312,7 +313,6 @@ export default function App() {
                 <Route path="/stichwortliste" element={<StichwortlistePage />} />
                 <Route path="/schwachstellen" element={<SchwachstellenTrainer />} />
                 <Route path="/schwachstellen/recovery" element={<SmartRecoveryPage />} />
-                <Route path="/preise" element={<Pricing />} />
                 <Route path="/success" element={<PaymentSuccess />} />
                 <Route
                   path="/admin/kapitel-editor"

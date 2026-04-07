@@ -74,13 +74,9 @@ export default function PaymentSuccess() {
     return () => clearTimeout(t);
   }, [hasPaymentParam, isPremium]);
 
-  // Only show this page if redirected from Stripe (payment=success param) or already premium
-  if (!hasPaymentParam && !isPremium) {
-    return <Navigate to="/dashboard" replace />;
-  }
-
   // Poll for premium status — webhook may take a few seconds
   useEffect(() => {
+    if (!hasPaymentParam && !isPremium) return;
     if (isPremium) {
       setActivating(false);
       setActivationFailed(false);
@@ -90,7 +86,6 @@ export default function PaymentSuccess() {
     const interval = setInterval(() => {
       attempts++;
       if (attempts > 30) {
-        // 60s total — activation failed, show honest error
         clearInterval(interval);
         setActivating(false);
         setActivationFailed(true);
@@ -100,7 +95,12 @@ export default function PaymentSuccess() {
       refreshProfile();
     }, 2000);
     return () => clearInterval(interval);
-  }, [isPremium, refreshProfile]);
+  }, [hasPaymentParam, isPremium, refreshProfile]);
+
+  // Only show this page if redirected from Stripe (payment=success param) or already premium
+  if (!hasPaymentParam && !isPremium) {
+    return <Navigate to="/dashboard" replace />;
+  }
 
   return (
     <div className="min-h-[60vh] flex items-center justify-center px-4">
