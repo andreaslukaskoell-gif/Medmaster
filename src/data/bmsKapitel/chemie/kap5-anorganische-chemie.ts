@@ -1693,12 +1693,7 @@ Die **Magensäure** (HCl, pH ~ 1-2) ist die einzige starke Säure im Körper und
         "Vitamin C Antioxidans",
         "Redox-Gleichung ausgleichen",
       ],
-      imageUrl: "/images/bms/ch-ionenbindung.webp",
-      imageCaption:
-        "Abb.: Elektronentransfer bei der Ionenbildung — Grundlage der Redoxchemie (OpenStax, CC BY 4.0)",
       content: `Von der Zellatmung über die Photosynthese bis zur Korrosion von Implantaten — Redoxreaktionen gehören zu den häufigsten chemischen Prozessen in Natur und Medizin. In jeder Redoxreaktion werden Elektronen von einem Teilchen auf ein anderes übertragen.
-
-{{IMAGE}}
 
 ## Definitionen: OIL RIG
 
@@ -1972,12 +1967,7 @@ Bei der **Komproportionierung** reagieren zwei verschiedene Oxidationsstufen des
         "Blei-Akkumulator",
         "Brennstoffzelle",
       ],
-      imageUrl: "/images/bms/ch-ionenbindung.webp",
-      imageCaption:
-        "Abb.: Elektronentransfer zwischen Natrium und Chlor — Grundprinzip elektrochemischer Prozesse (OpenStax, CC BY 4.0)",
       content: `Ein Herzschrittmacher muss 10 Jahre lang zuverlässig Strom liefern — tief im Brustkorb, ohne Wartung. Die Batterie, die das ermöglicht, basiert auf denselben elektrochemischen Prinzipien wie das einfache Daniell-Element aus dem 19. Jahrhundert. Wer Galvanische Zellen versteht, versteht auch Batterien, Korrosion und sogar die Blutgasanalyse im Krankenhaus.
-
-{{IMAGE}}
 
 ---
 

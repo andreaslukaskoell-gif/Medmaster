@@ -2965,8 +2965,6 @@ Der Lymphknoten filtert Lymphe und initiiert Immunantworten. Seine zonale Archit
 
 **Thymus** (oberes Mediastinum): Reifungsort der T-Zellen aus dem Knochenmark. Größte Aktivität vor der Pubertät, dann Involution:
 
-{{DIAGRAM:immune-response}}
-
 1. **Positive Selektion** (Cortex): T-Zellen, die MHC-I oder MHC-II erkennen, überleben (~3–5 % aller Thymozyten)
 2. **Negative Selektion** (Mark): T-Zellen, die Selbst-Antigene zu stark erkennen → Apoptose (zentrale Toleranz → verhindert Autoimmunität)
 

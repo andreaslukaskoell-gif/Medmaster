@@ -2145,8 +2145,6 @@ Die vier AB0-Blutgruppen werden durch drei Allele (I^A, I^B, i⁰) bestimmt. Jed
 
 ## Kodominanz — Beide Allele werden exprimiert
 
-{{DIAGRAM:pedigree-analysis}}
-
 Kodominanz bedeutet, dass beide Allele eines heterozygoten Individuums vollständig exprimiert werden und im Phänotyp erkennbar sind. Dies unterscheidet sich von dominanter/rezessiver Vererbung (ein Allel unterdrückt das andere) und von unvollständiger Dominanz (Intermediärphänotyp). Bei Blutgruppe AB werden sowohl A- als auch B-Antigen auf den roten Blutkörperchen exprimiert — beide Allele I^A und I^B sind aktiv und produzieren ihre jeweilige Glykosyltransferase. Wichtig für forensische Genetik und Vaterschaftstests: Eine Person mit Blutgruppe AB kann nicht Blutgruppe 0-Eltern haben (da keiner das AB-Kind-Allel weitergeben kann). Blutgruppen-Mismatch kann Vaterschaft ausschließen, aber nie beweisen.
 
 > **Merke:** Kodominanz: beide Allele werden exprimiert. AB = I^A I^B → A-Antigen + B-Antigen. Unterschied zu Dominanz/Rezessivität und unvollständiger Dominanz.
@@ -2303,8 +2301,8 @@ In der klinischen Praxis gilt traditionell: Blutgruppe 0 Rh-negativ (0-) als uni
     {
       id: "bio-11-04",
       title: "Rhesusfaktor — Vererbung, Inkompatibilität und Anti-D",
-      imageUrl: "/images/wiki-abo-blood-de.svg",
-      imageCaption: "Abb.: Erythrozyten mit Oberflächenantigenen (OpenStax, CC BY 4.0)",
+      imageUrl: "/images/bms/bio-blutgruppen.webp",
+      imageCaption: "Abb.: Blutgruppensysteme — AB0 und Rhesus bestimmen die Transfusionskompatibilität",
       stichworte: [
         "Rh-positiv",
         "Rh-negativ",
@@ -2314,11 +2312,7 @@ In der klinischen Praxis gilt traditionell: Blutgruppe 0 Rh-negativ (0-) als uni
       ],
       content: `Neben dem AB0-System ist der Rhesusfaktor das klinisch wichtigste Blutgruppenmerkmal — vor allem wegen der Rhesus-Inkompatibilität in der Schwangerschaft.
 
-{{IMAGE}}
-
 ## Rhesusfaktor — Definition
-
-{{DIAGRAM:blood-groups}}
 
 Das **Rhesus-System** ist das medizinisch bedeutsamste Blutgruppensystem nach AB0. Das wichtigste Antigen ist das **D-Antigen (Rh-D)**, kodiert durch das RHD-Gen auf Chromosom 1.
 
@@ -2339,8 +2333,6 @@ Das **Rhesus-System** ist das medizinisch bedeutsamste Blutgruppensystem nach AB
 
 ## Rhesus-Inkompatibilität — Schritt für Schritt
 
-{{DIAGRAM:pedigree-analysis}}
-
 Der Pathomechanismus der Rhesus-Inkompatibilität verläuft in zwei Phasen. Phase 1 (Sensibilisierung): Bei einer ersten Rh+ Schwangerschaft oder durch Bluttransfusion gelangen Rh+ Erythrozyten in die Zirkulation der Rh- Mutter. Das Rh-D-Antigen ist stark immunogen. Die Mutter bildet zunächst IgM-Anti-D-Antikörper (IgM kann Plazenta nicht passieren → erstes Kind kaum betroffen), dann IgG-Anti-D. Phase 2 (Reaktion): Bei der nächsten Rh+ Schwangerschaft passieren mütterliche IgG-Anti-D die Plazenta. Sie binden an D-Antigen auf fetalen Erythrozyten → Hämolyse durch Komplementaktivierung und ADCC → Anämie → extramedulläre Erythropoese (Leber, Milz) → Hepatomegalie, Splenomegalie → Hydrops fetalis (schwere Ödembildung) im schwersten Fall.
 
 > **Merke:** Rhesus-Inkompatibilität: Rh- Mutter + Rh+ Kind. 1. Schwangerschaft = Sensibilisierung. 2. Schwangerschaft = IgG-Anti-D passiert Plazenta → Hämolyse beim Kind.
@@ -2348,8 +2340,6 @@ Der Pathomechanismus der Rhesus-Inkompatibilität verläuft in zwei Phasen. Phas
 ---
 
 ## Anti-D-Prophylaxe — Wirkmechanismus und Zeitpunkt
-
-{{DIAGRAM:immune-response}}
 
 Die Anti-D-Prophylaxe ist eine der großen Errungenschaften der pränatalen Medizin. Vor ihrer Einführung (1968) war Rhesusinkompatibilität eine der häufigsten Ursachen für perinatale Mortalität. Der Wirkmechanismus basiert auf dem Prinzip der Antikörper-vermittelten Suppression der Immunantwort: Exogen verabreichte Anti-D-IgG-Antikörper binden an Rh+ Erythrozyten in der mütterlichen Zirkulation und führen zu ihrer schnellen Clearance durch Makrophagen der Milz, bevor B-Zellen eine Primärantwort aufbauen können. Der genaue Mechanismus ist nicht vollständig geklärt — möglicherweise spielen auch FcgRIIb (inhibitorische Fc-Rezeptoren auf B-Zellen) eine Rolle. Die Prophylaxe wird in der 28. SSW (pränatale Prophylaxe, da 2% der Mütter sich bereits antepartum sensibilisieren) und innerhalb von 72 Stunden postpartal verabreicht.
 
