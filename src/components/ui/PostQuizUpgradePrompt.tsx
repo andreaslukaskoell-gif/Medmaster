@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom";
 import { ArrowRight, TrendingUp, Target, Zap } from "lucide-react";
 import { Button } from "./button";
 import { usePermissions } from "@/hooks/usePermissions";
+import { useAuth } from "@/hooks/useAuth";
 import { trackEvent } from "@/lib/analyticsTracker";
+import { startCheckout } from "@/lib/stripe";
 import { useEffect, useRef } from "react";
 
 type Props = {
@@ -13,10 +14,11 @@ type Props = {
 
 /**
  * Shows after quiz results for starter users.
- * Tailored message based on performance.
+ * Tailored message based on performance — directs to Stripe checkout.
  */
 export function PostQuizUpgradePrompt({ score, total, subject }: Props) {
   const { isPremium } = usePermissions();
+  const { user } = useAuth();
   const tracked = useRef(false);
   const pct = Math.round((score / total) * 100);
 
@@ -47,6 +49,12 @@ export function PostQuizUpgradePrompt({ score, total, subject }: Props) {
           { icon: Target, text: "4.950+ weitere Fragen pro Fach" },
         ];
 
+  const handleCheckout = () => {
+    trackEvent("post_quiz_upgrade_clicked", { subject, pct });
+    const started = startCheckout({ email: user?.email ?? undefined, userId: user?.id });
+    if (!started) window.location.href = "/preise";
+  };
+
   return (
     <div className="card-glass p-5 border border-[var(--accent)]/15">
       <p className="text-sm text-[var(--text-primary)] font-medium mb-3">
@@ -60,17 +68,10 @@ export function PostQuizUpgradePrompt({ score, total, subject }: Props) {
           </div>
         ))}
       </div>
-      <Link
-        to="/preise"
-        onClick={() =>
-          trackEvent("post_quiz_upgrade_clicked", { subject, pct })
-        }
-      >
-        <Button size="sm" className="gap-1.5">
-          Premium freischalten — €29,90
-          <ArrowRight className="w-3.5 h-3.5" />
-        </Button>
-      </Link>
+      <Button size="sm" className="gap-1.5" onClick={handleCheckout}>
+        Premium freischalten — €29,90
+        <ArrowRight className="w-3.5 h-3.5" />
+      </Button>
     </div>
   );
 }

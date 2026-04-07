@@ -55,7 +55,9 @@ type TemplateId =
   | "post-trial-day7"
   | "welcome"
   | "weekly-progress"
-  | "re-engagement";
+  | "re-engagement"
+  | "d1-reminder"
+  | "streak-risk";
 
 type TemplateData = {
   displayName: string;
@@ -748,6 +750,77 @@ function getEmailTemplate(
           <p style="margin:12px 0 0;font-size:14px;color:#334155"><strong>Dein MedMaster-Team</strong></p>
         `,
           "Der MedAT r\u00FCckt n\u00E4her \u2014 20 Minuten pro Tag reichen, um den Unterschied zu machen."
+        ),
+      };
+
+    case "d1-reminder":
+      return {
+        subject: `${name}, dein erster Schritt wartet auf dich`,
+        html: premiumWrap(
+          `
+          <h1 style="font-size:24px;font-weight:800;color:${NAVY_DARK};margin:0 0 24px">Bereit f&uuml;r den ersten Schritt?</h1>
+          <p style="margin:0 0 16px">Hallo ${name},</p>
+
+          <p style="margin:0 0 16px">Du hast dich gestern bei MedMaster angemeldet &ndash; super! Aber du hast noch keine Frage beantwortet. Kein Problem &ndash; <strong>starte jetzt mit nur 10 Fragen</strong> und du wirst sehen, wie schnell du reinkommst.</p>
+
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:24px 0">
+            <tr>
+              <td style="padding:12px 0;border-bottom:1px solid #f1f5f9">
+                <strong style="color:${NAVY_DARK};font-size:14px">&#9989; 10 Minuten reichen</strong>
+                <p style="margin:4px 0 0;font-size:13px;color:#64748b;line-height:1.5">Starte mit einem kurzen BMS-Quiz &ndash; Bio, Chemie, Physik oder Mathe.</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:12px 0;border-bottom:1px solid #f1f5f9">
+                <strong style="color:${NAVY_DARK};font-size:14px">&#128200; Dein Fortschritt wird gespeichert</strong>
+                <p style="margin:4px 0 0;font-size:13px;color:#64748b;line-height:1.5">Jede Frage z&auml;hlt &ndash; MedMaster merkt sich, wo du stehst.</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:12px 0">
+                <strong style="color:${NAVY_DARK};font-size:14px">&#128170; Jeden Tag ein bisschen besser</strong>
+                <p style="margin:4px 0 0;font-size:13px;color:#64748b;line-height:1.5">Regelm&auml;&szlig;iges &Uuml;ben ist der Schl&uuml;ssel zum MedAT-Erfolg.</p>
+              </td>
+            </tr>
+          </table>
+
+          ${ctaButton("Jetzt erste Fragen beantworten", `${SITE_URL}/app/bms`)}
+
+          ${callout("<strong>Tipp:</strong> Wer am ersten Tag startet, bleibt 3x h&auml;ufiger dran. Dein zuk&uuml;nftiges Ich wird dir danken!", "info")}
+
+          <p style="margin:16px 0 0;font-size:14px;color:#64748b">Viel Erfolg beim Lernen!</p>
+          <p style="margin:12px 0 0;font-size:14px;color:#334155"><strong>Dein MedMaster-Team</strong></p>
+        `,
+          "Du hast dich angemeldet &ndash; jetzt fehlt nur noch der erste Schritt."
+        ),
+      };
+
+    case "streak-risk":
+      return {
+        subject: `${name}, dein Streak ist in Gefahr! &#128293;`,
+        html: premiumWrap(
+          `
+          <h1 style="font-size:24px;font-weight:800;color:${NAVY_DARK};margin:0 0 24px">Dein Streak ist in Gefahr!</h1>
+          <p style="margin:0 0 16px">Hallo ${name},</p>
+
+          <p style="margin:0 0 16px">Du hast bereits mehrere Tage in Folge gelernt &ndash; <strong>lass deinen Streak nicht abreißen!</strong> Schon 5 Minuten reichen, um ihn zu retten.</p>
+
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:24px 0">
+            <tr><td style="background:linear-gradient(135deg,#ea580c,#f97316);border-radius:14px;padding:28px 24px;text-align:center">
+              <div style="font-size:44px;line-height:1">&#128293;</div>
+              <p style="margin:12px 0 0;font-size:14px;color:rgba(255,255,255,0.85);font-weight:600">Dein Streak l&auml;uft heute Nacht ab</p>
+              <p style="margin:8px 0 0;font-size:13px;color:rgba(255,255,255,0.65)">Beantworte eine Frage, um ihn zu behalten.</p>
+            </td></tr>
+          </table>
+
+          ${ctaButton("Streak retten &ndash; jetzt lernen", `${SITE_URL}/app/bms`)}
+
+          ${callout("<strong>Wusstest du?</strong> Wer einen 7-Tage-Streak erreicht, beantwortet im Schnitt 3x mehr Fragen als Gelegenheitsnutzer.", "info")}
+
+          <p style="margin:16px 0 0;font-size:14px;color:#64748b">Bleib dran &ndash; du schaffst das!</p>
+          <p style="margin:12px 0 0;font-size:14px;color:#334155"><strong>Dein MedMaster-Team</strong></p>
+        `,
+          "Dein Lernstreak l&auml;uft heute ab &ndash; 5 Minuten reichen, um ihn zu retten."
         ),
       };
   }

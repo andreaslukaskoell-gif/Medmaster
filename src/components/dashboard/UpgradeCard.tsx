@@ -1,11 +1,12 @@
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles, BookOpen, Brain, BarChart3, Target } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { usePermissions } from "@/hooks/usePermissions";
 import { useUsageLimits } from "@/hooks/useUsageLimits";
 import { useAdaptiveStore } from "@/store/adaptiveLearning";
+import { useAuth } from "@/hooks/useAuth";
 import { trackEvent } from "@/lib/analyticsTracker";
+import { startCheckout } from "@/lib/stripe";
 
 const PREMIUM_FEATURES = [
   { icon: BookOpen, label: "5.000+ BMS-Fragen" },
@@ -15,10 +16,11 @@ const PREMIUM_FEATURES = [
 ];
 
 /** Minimum questions answered before showing upgrade card */
-const MIN_QUESTIONS_BEFORE_UPGRADE = 5;
+const MIN_QUESTIONS_BEFORE_UPGRADE = 1;
 
 export function UpgradeCard() {
   const { isPremium } = usePermissions();
+  const { user } = useAuth();
   const limits = useUsageLimits();
   const totalAnswered = useAdaptiveStore((s) => s.profile.totalQuestionsAnswered);
 
@@ -77,15 +79,18 @@ export function UpgradeCard() {
             ))}
           </div>
 
-          <Link
-            to="/preise"
-            onClick={() => trackEvent("upgrade_card_clicked", { location: "dashboard", totalAnswered })}
+          <Button
+            size="sm"
+            className="gap-1.5"
+            onClick={() => {
+              trackEvent("upgrade_card_clicked", { location: "dashboard", totalAnswered });
+              const started = startCheckout({ email: user?.email ?? undefined, userId: user?.id });
+              if (!started) window.location.href = "/preise";
+            }}
           >
-            <Button size="sm" className="gap-1.5">
-              Premium freischalten
-              <ArrowRight className="w-3.5 h-3.5" />
-            </Button>
-          </Link>
+            Premium freischalten
+            <ArrowRight className="w-3.5 h-3.5" />
+          </Button>
         </div>
       </div>
     </motion.div>

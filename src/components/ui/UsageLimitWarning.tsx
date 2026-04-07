@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom";
 import { AlertTriangle, ArrowRight } from "lucide-react";
 import { Button } from "./button";
 import { trackEvent } from "@/lib/analyticsTracker";
 import { usePermissions } from "@/hooks/usePermissions";
+import { useAuth } from "@/hooks/useAuth";
+import { startCheckout } from "@/lib/stripe";
 import { useRef, useEffect } from "react";
 
 type Props = {
@@ -17,6 +18,7 @@ type Props = {
  */
 export function UsageLimitWarning({ used, limit, label }: Props) {
   const { loading } = usePermissions();
+  const { user } = useAuth();
   const pct = Math.round((used / limit) * 100);
   const tracked = useRef(false);
 
@@ -27,13 +29,17 @@ export function UsageLimitWarning({ used, limit, label }: Props) {
     }
   }, [loading, pct, label, used, limit]);
 
-  // Don't show while auth is loading — prevents false warnings for premium users
   if (loading) return null;
-
   if (pct < 80) return null;
 
   const remaining = Math.max(0, limit - used);
   const isExhausted = remaining === 0;
+
+  const handleCheckout = () => {
+    trackEvent("usage_limit_warning_clicked", { label, remaining });
+    const started = startCheckout({ email: user?.email ?? undefined, userId: user?.id });
+    if (!started) window.location.href = "/preise";
+  };
 
   return (
     <div
@@ -59,18 +65,10 @@ export function UsageLimitWarning({ used, limit, label }: Props) {
           ? `Du hast alle ${limit} kostenlosen ${label} aufgebraucht.`
           : `Noch ${remaining} von ${limit} kostenlosen ${label} übrig.`}
       </p>
-      <Link
-        to="/preise"
-        onClick={() =>
-          trackEvent("usage_limit_warning_clicked", { label, remaining })
-        }
-        className="shrink-0"
-      >
-        <Button size="sm" variant="ghost" className="gap-1 text-xs">
-          {isExhausted ? "Freischalten" : "Upgrade"}
-          <ArrowRight className="w-3 h-3" />
-        </Button>
-      </Link>
+      <Button size="sm" variant="ghost" className="gap-1 text-xs shrink-0" onClick={handleCheckout}>
+        {isExhausted ? "Freischalten" : "Upgrade"}
+        <ArrowRight className="w-3 h-3" />
+      </Button>
     </div>
   );
 }
