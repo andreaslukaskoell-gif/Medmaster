@@ -43,7 +43,7 @@ export async function pullFromSupabase(userId: string): Promise<void> {
       return;
     }
 
-    const [profileRes, quizRes, srRes, notesRes, bookmarksRes, activityRes] = await Promise.all([
+    const [profileRes, quizRes, srRes, notesRes, bookmarksRes, activityRes, streakRes] = await Promise.all([
       client
         .from("profiles")
         .select("xp, level, streak_days, last_active_date, onboarding_completed")
@@ -54,6 +54,7 @@ export async function pullFromSupabase(userId: string): Promise<void> {
       client.from("user_notes").select("chapter_id, content").eq("user_id", userId),
       client.from("user_bookmarks").select("item_type, item_id").eq("user_id", userId),
       client.from("activity_log").select("*").eq("user_id", userId),
+      client.from("user_streaks").select("current_streak, longest_streak, last_active_date, streak_freezes, frozen_days").eq("user_id", userId).maybeSingle(),
     ]);
 
     const state = useStore.getState();
@@ -66,6 +67,24 @@ export async function pullFromSupabase(userId: string): Promise<void> {
       patch.streak = Math.max(state.streak, p.streak_days ?? 0);
       if (p.last_active_date) patch.lastActiveDate = p.last_active_date;
       if (p.onboarding_completed) patch.onboardingCompleted = true;
+    }
+
+    // --- Streak Recovery: user_streaks Tabelle hat vollständige Daten ---
+    if (streakRes.data) {
+      const s = streakRes.data;
+      // Server-Streak gewinnt wenn höher (z.B. nach Browser-Cache-Clear)
+      const serverStreak = s.current_streak ?? 0;
+      if (serverStreak > (patch.streak as number ?? state.streak)) {
+        patch.streak = serverStreak;
+      }
+      if (s.last_active_date && (!state.lastActiveDate || s.last_active_date > state.lastActiveDate)) {
+        patch.lastActiveDate = s.last_active_date;
+      }
+      // Restore freeze data if local is empty (cleared cache)
+      if (state.streakFreezes === undefined || (state.frozenDays?.length ?? 0) === 0) {
+        if (s.streak_freezes != null) patch.streakFreezes = s.streak_freezes;
+        if (Array.isArray(s.frozen_days)) patch.frozenDays = s.frozen_days;
+      }
     }
 
     // --- Quiz Results: Union by ID (only update if changed) ---

@@ -29,7 +29,7 @@ const SERVICE_ROLE_KEY = requireEnv("SUPABASE_SERVICE_ROLE_KEY");
 async function sendTemplateEmail(
   userId: string,
   templateId: string,
-  templateData: { email: string; displayName: string; questionsAnswered?: number; correctRate?: number }
+  templateData: { email: string; displayName: string; questionsAnswered?: number; correctRate?: number; daysUntilExam?: number }
 ): Promise<boolean> {
   const resp = await fetch(`${SUPABASE_URL}/functions/v1/send-email`, {
     method: "POST",
@@ -213,10 +213,64 @@ async function processReEngagement(): Promise<number> {
   return 0;
 }
 
+// ── Weekly Progress: sent every Monday to active users ──
+
+async function processWeeklyProgress(): Promise<number> {
+  const today = new Date();
+  // Only run on Mondays (cron runs daily, but weekly-progress only on Monday)
+  if (today.getUTCDay() !== 1) return 0;
+
+  const sevenDaysAgo = new Date(today);
+  sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
+
+  // Users active in the last 7 days
+  const { data: activeProfiles } = await supabase
+    .from("profiles")
+    .select("id, display_name, last_active_date, email_opt_out")
+    .gte("last_active_date", sevenDaysAgo.toISOString().split("T")[0]);
+
+  if (!activeProfiles?.length) return 0;
+
+  let sent = 0;
+  for (const profile of activeProfiles) {
+    if (profile.email_opt_out) continue;
+    if (await wasRecentlySent(profile.id, "weekly-progress", 6)) continue;
+
+    const { data: userData } = await supabase.auth.admin.getUserById(profile.id);
+    if (!userData?.user?.email) continue;
+
+    const { data: stats } = await supabase
+      .from("quiz_results")
+      .select("score, total")
+      .eq("user_id", profile.id)
+      .gte("created_at", sevenDaysAgo.toISOString());
+
+    const questionsAnswered = stats?.reduce((sum, r) => sum + (r.total ?? 0), 0) ?? 0;
+    const correctTotal = stats?.reduce((sum, r) => sum + (r.score ?? 0), 0) ?? 0;
+    const correctRate = questionsAnswered > 0 ? Math.round((correctTotal / questionsAnswered) * 100) : 0;
+
+    // MedAT 2026: 3. Juli
+    const medat = new Date("2026-07-03T00:00:00+02:00");
+    const daysUntilExam = Math.max(0, Math.ceil((medat.getTime() - today.getTime()) / 86_400_000));
+
+    const ok = await sendTemplateEmail(profile.id, "weekly-progress", {
+      email: userData.user.email,
+      displayName: profile.display_name || "MedAT-Bewerber",
+      questionsAnswered,
+      correctRate,
+      daysUntilExam,
+    });
+    if (ok) sent++;
+
+    await new Promise((r) => setTimeout(r, 1500));
+  }
+
+  return sent;
+}
+
 // ── Main handler ──
 
 serve(async (req) => {
-  // Accept POST (from pg_cron via pg_net) or GET (manual trigger)
   const authHeader = req.headers.get("Authorization");
   const serviceRoleKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") || "";
   if (authHeader !== `Bearer ${serviceRoleKey}`) {
@@ -227,6 +281,7 @@ serve(async (req) => {
     d1_reminders: 0,
     streak_risk: 0,
     re_engagement: 0,
+    weekly_progress: 0,
     errors: [] as string[],
   };
 
@@ -246,6 +301,12 @@ serve(async (req) => {
     results.re_engagement = await processReEngagement();
   } catch (err) {
     results.errors.push(`re-engage: ${err instanceof Error ? err.message : String(err)}`);
+  }
+
+  try {
+    results.weekly_progress = await processWeeklyProgress();
+  } catch (err) {
+    results.errors.push(`weekly: ${err instanceof Error ? err.message : String(err)}`);
   }
 
   return new Response(JSON.stringify(results), {
