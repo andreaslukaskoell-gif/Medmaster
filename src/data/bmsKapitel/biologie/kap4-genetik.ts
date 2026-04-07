@@ -3500,5 +3500,238 @@ Die genetische Diagnostik wirft fundamentale Fragen auf, die im MedAT neutral ve
           "Für eine vollständige **Karyotypisierung** werden fetale Zellen benötigt — das schließt NIPT (nur cffDNA, keine Zellen) und Triple-Test (nur Blutmarker) aus. Unter den invasiven Verfahren hat die **Amniozentese** mit **0,3–0,5 %** das geringste Fehlgeburtsrisiko (vs. Chorionzottenbiopsie 0,5–1 % und Cordozentese 1–2 %). Sie ist das Standardverfahren für die Karyotypisierung ab der 15. SSW.",
       },
     },
+
+    // ─── 15. Kopplungsgruppen und Rekombination ──────────────────────────
+    {
+      id: "bio-4-15",
+      title: "Kopplungsgruppen und Rekombinationsfrequenz",
+      stichworte: ["Genkopplung", "Kopplungsgruppe", "Rekombinationsfrequenz", "centiMorgan", "Genkarte", "Crossing-over"],
+      content: `Bisher haben wir bei Mendels Regeln angenommen, dass Gene frei kombinierbar sind. Doch Gene auf demselben Chromosom werden oft **gemeinsam vererbt** — sie sind **gekoppelt**.
+
+## Genkopplung
+
+Gene auf demselben Chromosom bilden eine **Kopplungsgruppe**. Beim Menschen gibt es **23 Kopplungsgruppen** (entsprechend den 23 Chromosomenpaaren). Gekoppelte Gene werden bei der Meiose **nicht unabhängig** verteilt — sie widersprechen Mendels 3. Regel (freie Kombination).
+
+> **Merke:** Gekoppelte Gene liegen auf demselben Chromosom und werden gemeinsam vererbt. Die Anzahl der Kopplungsgruppen = Anzahl der Chromosomenpaare.
+
+---
+
+## Rekombination durch Crossing-over
+
+Während der **Prophase I** der Meiose können homologe Chromosomen Abschnitte austauschen (**Crossing-over**). Je **weiter zwei Gene auf einem Chromosom auseinanderliegen**, desto wahrscheinlicher ist ein Crossing-over zwischen ihnen — desto höher die **Rekombinationsfrequenz**.
+
+{{DIAGRAM:meiosis}}
+
+| Rekombinationsfrequenz | Bedeutung |
+|------------------------|-----------|
+| **0 %** | Gene liegen sehr nah beieinander, immer gekoppelt |
+| **< 50 %** | Gene sind gekoppelt, aber Rekombination möglich |
+| **50 %** | Gene verhalten sich wie auf verschiedenen Chromosomen (frei kombinierbar) |
+
+---
+
+## CentiMorgan (cM) — Die genetische Entfernung
+
+Die Einheit **centiMorgan (cM)** misst den genetischen Abstand: **1 cM = 1 % Rekombinationsfrequenz**. Aus den Rekombinationsfrequenzen vieler Genpaare lassen sich **Genkarten** erstellen — die relative Anordnung der Gene auf einem Chromosom.
+
+> **Merke:** 1 cM = 1 % Rekombinationsfrequenz. Je weiter Gene auseinander, desto häufiger Crossing-over, desto höher die Rekombinationsfrequenz (max. 50 %).
+
+---
+
+## Zusammenfassung
+
+> **Merke:** Kopplungsgruppen widersprechen Mendels 3. Regel. Crossing-over bricht Kopplung auf. Rekombinationsfrequenz (in cM) = Maß für den Genabstand.`,
+      lernziele: [
+        "Genkopplung und Kopplungsgruppen erklären.",
+        "Rekombinationsfrequenz und centiMorgan definieren.",
+        "Den Zusammenhang zwischen Genabstand und Crossing-over-Häufigkeit beschreiben.",
+      ],
+      sections: [],
+      merksätze: [
+        "Gene auf demselben Chromosom = gekoppelt. Mensch: 23 Kopplungsgruppen.",
+        "1 cM = 1 % Rekombinationsfrequenz. Max. 50 % = wie ungekoppelt.",
+      ],
+      selfTest: [
+        {
+          question: "Zwei Gene liegen auf demselben Chromosom und zeigen eine Rekombinationsfrequenz von 12 %. Was bedeutet das?",
+          options: [
+            "Die Gene liegen auf verschiedenen Chromosomen.",
+            "Die Gene sind 12 cM voneinander entfernt und werden in 12 % der Meiosen durch Crossing-over getrennt.",
+            "Die Gene werden immer gemeinsam vererbt.",
+            "Die Gene zeigen unvollständige Dominanz.",
+            "12 % der Nachkommen sind homozygot.",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Eine Rekombinationsfrequenz von 12 % bedeutet, dass in 12 % der Meiosen ein Crossing-over zwischen den beiden Genen stattfindet. Der genetische Abstand beträgt daher **12 cM**. Die Gene sind **gekoppelt** (< 50 %), aber nicht vollständig — es gibt Rekombinanten.",
+          difficulty: 2,
+          tags: ["kopplungsgruppen", "rekombination", "centimorgan"],
+        },
+      ],
+    },
+
+    // ─── 16. Zwillingsforschung und Heritabilität ────────────────────────
+    {
+      id: "bio-4-16",
+      title: "Zwillingsforschung und Heritabilität",
+      stichworte: ["Eineiige Zwillinge", "Zweieiige Zwillinge", "Konkordanz", "Heritabilität", "Anlage-Umwelt"],
+      content: `Die Zwillingsforschung ist eine klassische Methode, um den Einfluss von **Anlage (Genetik)** und **Umwelt** auf Merkmale zu untersuchen.
+
+## Eineiige vs. zweieiige Zwillinge
+
+| Eigenschaft | Eineiige (monozygot) | Zweieiige (dizygot) |
+|-------------|---------------------|---------------------|
+| **Entstehung** | 1 Eizelle + 1 Spermium → Teilung des Embryos | 2 Eizellen + 2 Spermien |
+| **Genetische Übereinstimmung** | **100 %** (identische DNA) | **~50 %** (wie Geschwister) |
+| **Geschlecht** | Immer gleich | Kann verschieden sein |
+| **Häufigkeit** | ~3–4 pro 1000 Geburten | ~8–12 pro 1000 Geburten |
+
+---
+
+## Konkordanzrate
+
+Die **Konkordanzrate** gibt an, wie häufig beide Zwillinge dasselbe Merkmal zeigen. Vergleicht man eineiige (EZ) mit zweieiigen (ZZ) Zwillingen:
+
+- **Hohe Konkordanz bei EZ, niedrig bei ZZ** → starker genetischer Einfluss
+- **Ähnliche Konkordanz bei EZ und ZZ** → starker Umwelteinfluss
+
+| Merkmal | Konkordanz EZ | Konkordanz ZZ | Interpretation |
+|---------|--------------|--------------|----------------|
+| Blutgruppe | 100 % | 50 % | Rein genetisch |
+| Schizophrenie | ~50 % | ~15 % | Starke genetische Komponente + Umwelt |
+| Masern | ~95 % | ~90 % | Hauptsächlich Umwelt (Exposition) |
+
+> **Merke:** Konkordanz EZ >> Konkordanz ZZ → genetische Ursache. Konkordanz EZ ≈ Konkordanz ZZ → Umweltursache.
+
+---
+
+## Heritabilität
+
+Die **Heritabilität (h²)** schätzt den Anteil der genetischen Varianz an der Gesamtvarianz eines Merkmals in einer Population. Sie liegt zwischen **0** (rein umweltbedingt) und **1** (rein genetisch).
+
+> **Merke:** Heritabilität beschreibt den genetischen Anteil der **Varianz** in einer Population — nicht den genetischen Anteil bei einer Einzelperson.
+
+---
+
+## Zusammenfassung
+
+> **Merke:** EZ = 100 % genetisch identisch. ZZ = 50 %. Konkordanzvergleich trennt Anlage von Umwelt. Heritabilität = genetischer Varianzanteil.`,
+      lernziele: [
+        "Eineiige und zweieiige Zwillinge unterscheiden und ihre Entstehung erklären.",
+        "Konkordanzrate interpretieren und auf Anlage/Umwelt schließen.",
+        "Heritabilität definieren und ihre Aussagekraft einordnen.",
+      ],
+      sections: [],
+      merksätze: [
+        "EZ: 100 % identische DNA, ZZ: ~50 %. Konkordanzvergleich zeigt genetischen Einfluss.",
+        "Heritabilität = Anteil genetischer Varianz an Gesamtvarianz (0–1).",
+      ],
+      selfTest: [
+        {
+          question: "Für ein Merkmal liegt die Konkordanzrate bei eineiigen Zwillingen bei 90 % und bei zweieiigen bei 40 %. Was lässt sich daraus schließen?",
+          options: [
+            "Das Merkmal ist rein umweltbedingt.",
+            "Das Merkmal hat eine starke genetische Komponente, aber auch Umwelteinflüsse spielen eine Rolle.",
+            "Das Merkmal wird autosomal-rezessiv vererbt.",
+            "Eineiige Zwillinge haben immer dasselbe Merkmal.",
+            "Das Merkmal zeigt keine Heritabilität.",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Die deutlich höhere Konkordanz bei EZ (90 %) vs. ZZ (40 %) spricht für eine **starke genetische Komponente**. Da die EZ-Konkordanz aber nicht 100 % beträgt, spielen auch **Umweltfaktoren** eine Rolle (sonst wären EZ immer konkordant).",
+          difficulty: 2,
+          tags: ["zwillingsforschung", "konkordanz", "heritabilität"],
+        },
+      ],
+    },
+
+    // ─── 17. Populationsgenetik und Hardy-Weinberg-Gleichgewicht ─────────
+    {
+      id: "bio-4-17",
+      title: "Populationsgenetik und Hardy-Weinberg-Gleichgewicht",
+      imageUrl: "/images/bms/bio-hardy-weinberg.svg",
+      imageCaption: "Abb.: Hardy-Weinberg-Gleichgewicht — Allelfrequenzen in einer idealen Population",
+      stichworte: ["Hardy-Weinberg", "Allelfrequenz", "Genotypfrequenz", "Genpool", "Populationsgenetik", "p² + 2pq + q² = 1"],
+      content: `Die Populationsgenetik untersucht die Verteilung und Veränderung von **Allelfrequenzen** in Populationen über Generationen hinweg.
+
+## Genpool und Allelfrequenzen
+
+Der **Genpool** ist die Gesamtheit aller Allele in einer Population. Die **Allelfrequenz** gibt an, wie häufig ein bestimmtes Allel im Genpool vorkommt. Für ein Gen mit zwei Allelen A und a gilt:
+
+- **p** = Frequenz des Allels A
+- **q** = Frequenz des Allels a
+- **p + q = 1**
+
+![Hardy-Weinberg-Gleichgewicht](/images/bms/bio-hardy-weinberg.svg)
+
+---
+
+## Hardy-Weinberg-Gleichgewicht
+
+Das **Hardy-Weinberg-Gesetz** beschreibt die erwarteten Genotypfrequenzen in einer **idealen Population**:
+
+**p² + 2pq + q² = 1**
+
+| Genotyp | Frequenz | Bedeutung |
+|---------|----------|-----------|
+| **AA** (homozygot dominant) | p² | |
+| **Aa** (heterozygot) | 2pq | |
+| **aa** (homozygot rezessiv) | q² | |
+
+### Rechenbeispiel
+
+Wenn 1 von 10.000 Menschen eine autosomal-rezessive Erkrankung hat: q² = 1/10.000 = 0,0001 → q = 0,01 → p = 0,99 → **Heterozygote (Überträger):** 2pq = 2 × 0,99 × 0,01 = **~2 %** der Population.
+
+> **Merke:** p² + 2pq + q² = 1. Aus der Häufigkeit Betroffener (q²) lässt sich die Überträgerfrequenz (2pq) berechnen.
+
+---
+
+## Voraussetzungen des Hardy-Weinberg-Gleichgewichts
+
+Die Allelfrequenzen bleiben nur konstant, wenn **alle** folgenden Bedingungen erfüllt sind:
+
+1. **Keine Mutation**
+2. **Keine Selektion**
+3. **Keine Migration** (kein Genfluss)
+4. **Keine Gendrift** (unendlich große Population)
+5. **Zufällige Paarung** (Panmixie)
+
+In der Realität sind diese Bedingungen **nie vollständig erfüllt** — daher verändern sich Allelfrequenzen, und **Evolution** findet statt.
+
+> **Merke:** Jeder Verstoß gegen die 5 Bedingungen verändert Allelfrequenzen = Evolution. Hardy-Weinberg ist das Nullmodell der Populationsgenetik.
+
+---
+
+## Zusammenfassung
+
+> **Merke:** p + q = 1 (Allele), p² + 2pq + q² = 1 (Genotypen). 5 Bedingungen für Gleichgewicht. Abweichung = Evolution.`,
+      lernziele: [
+        "Allelfrequenz und Genotypfrequenz berechnen.",
+        "Das Hardy-Weinberg-Gesetz anwenden (p² + 2pq + q² = 1).",
+        "Die 5 Voraussetzungen des Hardy-Weinberg-Gleichgewichts nennen.",
+      ],
+      sections: [],
+      merksätze: [
+        "p + q = 1 und p² + 2pq + q² = 1. Aus q² (Betroffene) → q → 2pq (Überträger).",
+        "5 Bedingungen: keine Mutation, Selektion, Migration, Gendrift; Panmixie.",
+      ],
+      selfTest: [
+        {
+          question: "In einer Population haben 9 % der Menschen den Genotyp aa (rezessiv). Wie hoch ist die Überträgerfrequenz (Aa)?",
+          options: [
+            "9 %",
+            "21 %",
+            "30 %",
+            "42 %",
+            "49 %",
+          ],
+          correctIndex: 3,
+          explanation:
+            "q² = 0,09 → q = 0,3 → p = 0,7 → 2pq = 2 × 0,7 × 0,3 = **0,42 = 42 %**. Fast die Hälfte der Population sind Überträger, obwohl nur 9 % betroffen sind.",
+          difficulty: 2,
+          tags: ["hardy-weinberg", "populationsgenetik", "allelfrequenz"],
+        },
+      ],
+    },
   ],
 };

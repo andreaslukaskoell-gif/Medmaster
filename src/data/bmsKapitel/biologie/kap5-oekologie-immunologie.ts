@@ -1583,6 +1583,80 @@ Bakterienwachstum in geschlossener Kultur (Blutkultur, Nährmedium) durchläuft 
         "Populationsdynamische Modelle sind essenziell für die Epidemiologie: Das exponentielle Wachstum beschreibt die Anfangsphase einer Epidemie (ungehemmte Ausbreitung), während die logistische Kurve den Verlauf mit zunehmender Herdenimmunität modelliert — die Kapazitätsgrenze K entspricht hier dem Anteil der empfänglichen Bevölkerung. Die Basisreproduktionszahl R₀ (mittlere Anzahl Sekundärinfektionen pro Indexfall) bestimmt, ob eine Infektion exponentiell wächst (R₀ > 1) oder erlischt (R₀ < 1). Dichteabhängige Regulation zeigt sich klinisch bei nosokomialen Infektionen: Überbelegung von Krankenhausstationen erhöht die Übertragungsrate von MRSA und anderen Krankenhauskeimen überproportional.",
     },
 
+    // ─── 7. Biodiversität und Artenschutz ──────────────────────────────
+    {
+      id: "bio-10-07",
+      title: "Biodiversität und Artenschutz",
+      stichworte: ["Biodiversität", "Artenvielfalt", "Genetische Diversität", "Ökosystemdiversität", "Rote Liste", "Artenschutz"],
+      content: `Biodiversität beschreibt die **Vielfalt des Lebens** auf allen Ebenen — von Genen über Arten bis zu ganzen Ökosystemen. Sie ist Grundlage für stabile Ökosysteme und damit für das menschliche Überleben.
+
+## Drei Ebenen der Biodiversität
+
+| Ebene | Beschreibung | Beispiel |
+|-------|-------------|---------|
+| **Genetische Diversität** | Vielfalt der Allele und Gene innerhalb einer Art | Verschiedene Resistenzgene in einer Weizensorte |
+| **Artendiversität** | Anzahl und Häufigkeitsverteilung der Arten in einem Lebensraum | 50 vs. 500 Pflanzenarten auf einer Wiese |
+| **Ökosystemdiversität** | Vielfalt der Lebensräume und Ökosysteme | Wald, Moor, Korallenriff, Steppe |
+
+> **Merke:** Biodiversität = genetische Diversität + Artendiversität + Ökosystemdiversität. Alle drei Ebenen sind voneinander abhängig.
+
+---
+
+## Bedeutung der Biodiversität
+
+- **Ökosystemstabilität:** Artenreiche Systeme sind widerstandsfähiger gegen Störungen (Redundanzhypothese)
+- **Ökosystemdienstleistungen:** Bestäubung, Wasserreinigung, Bodenbildung, Klimaregulation
+- **Genetische Ressourcen:** Ausgangsmaterial für Medikamente, Pflanzenzüchtung, Biotechnologie
+- **Nahrungsnetze:** Jede Art ist Teil eines Nahrungsnetzes — Verlust einer Art kann Kaskadeneffekte auslösen
+
+---
+
+## Bedrohungen
+
+Die wichtigsten Ursachen für den Verlust an Biodiversität (nach IPBES):
+
+1. **Habitatverlust** (Landnutzungsänderung, Abholzung) — größter Treiber
+2. **Übernutzung** (Überfischung, Wilderei)
+3. **Invasive Arten** (Neobiota verdrängen heimische Arten)
+4. **Umweltverschmutzung** (Pestizide, Plastik, Eutrophierung)
+5. **Klimawandel** (Verschiebung von Lebensräumen, Korallenbleiche)
+
+> **Merke:** Die 5 Hauptursachen: Habitatverlust > Übernutzung > Invasive Arten > Verschmutzung > Klimawandel.
+
+---
+
+## Zusammenfassung
+
+> **Merke:** Biodiversität umfasst Gene, Arten und Ökosysteme. Artenreiche Systeme sind stabiler. Habitatverlust ist die größte Bedrohung.`,
+      lernziele: [
+        "Die drei Ebenen der Biodiversität benennen und erklären.",
+        "Die Bedeutung der Biodiversität für Ökosysteme beschreiben.",
+        "Die fünf Hauptursachen des Biodiversitätsverlusts nennen.",
+      ],
+      sections: [],
+      merksätze: [
+        "3 Ebenen: genetische Diversität + Artendiversität + Ökosystemdiversität.",
+        "5 Bedrohungen: Habitatverlust, Übernutzung, Invasive Arten, Verschmutzung, Klimawandel.",
+      ],
+      selfTest: [
+        {
+          question: "Welche Ebene der Biodiversität beschreibt die Vielfalt der Allele innerhalb einer Art?",
+          options: [
+            "Artendiversität",
+            "Ökosystemdiversität",
+            "Genetische Diversität",
+            "Funktionelle Diversität",
+            "Phänotypische Diversität",
+          ],
+          correctIndex: 2,
+          explanation:
+            "Die **genetische Diversität** umfasst die Vielfalt der Allele und Gene **innerhalb einer Art**. Artendiversität beschreibt dagegen die Vielfalt verschiedener Arten in einem Lebensraum, Ökosystemdiversität die Vielfalt der Lebensräume selbst.",
+          difficulty: 1,
+          tags: ["biodiversität", "genetische-diversität"],
+        },
+      ],
+    },
+
     // === from kap11-immunologie ===
 
     {

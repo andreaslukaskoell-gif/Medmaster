@@ -1122,6 +1122,98 @@ Q_warm = 1200 J, W = 400 J → Q_kalt = 1200 − 400 = 800 J.
     },
 
     // ─────────────────────────────────────────────────────────────────
+    // UK ph-4-05: Osmotischer Druck und Kolligative Eigenschaften
+    // ─────────────────────────────────────────────────────────────────
+    {
+      id: "ph-4-05",
+      title: "Osmotischer Druck und Kolligative Eigenschaften",
+      stichworte: ["Osmotischer Druck", "Osmose", "Van-'t-Hoff", "Kolligative Eigenschaften", "Isotonisch", "Hypertonisch", "Hypotonisch"],
+      content: `Der osmotische Druck verbindet Physik mit Medizin — er erklärt, warum Zellen in bestimmten Lösungen schrumpfen oder platzen und ist Grundlage für Infusionstherapie und Dialyse.
+
+## Osmose
+
+**Osmose** ist die Diffusion von Lösungsmittelmolekülen (meist Wasser) durch eine **semipermeable Membran** — von der Seite mit **niedriger** Konzentration gelöster Teilchen zur Seite mit **hoher** Konzentration. Die Membran lässt Wasser durch, aber nicht die gelösten Teilchen.
+
+> **Merke:** Osmose = Wasser wandert durch semipermeable Membran zur höher konzentrierten Seite. Es ist NICHT die gelöste Substanz, die wandert, sondern das Lösungsmittel.
+
+---
+
+## Osmotischer Druck (π)
+
+Der **osmotische Druck** π ist der Druck, der aufgebracht werden muss, um die Osmose zu **verhindern**. Er wird durch die **Van-'t-Hoff-Gleichung** beschrieben:
+
+**π = i · c · R · T**
+
+| Symbol | Bedeutung | Einheit |
+|--------|-----------|---------|
+| **π** | Osmotischer Druck | Pa oder atm |
+| **i** | Van-'t-Hoff-Faktor (Anzahl Teilchen pro Formeleinheit) | dimensionslos |
+| **c** | Stoffmengenkonzentration | mol/L |
+| **R** | Universelle Gaskonstante | 8,314 J/(mol·K) |
+| **T** | Absolute Temperatur | K |
+
+Der Van-'t-Hoff-Faktor **i** berücksichtigt die Dissoziation: NaCl → Na⁺ + Cl⁻ → i = 2; Glucose dissoziiert nicht → i = 1.
+
+> **Merke:** π = i·c·R·T. NaCl hat i = 2 (zwei Ionen), Glucose hat i = 1. Gleiche Molarität NaCl erzeugt doppelt so hohen osmotischen Druck wie Glucose.
+
+---
+
+## Tonizität — Klinische Anwendung
+
+| Lösung | Osmolarität vs. Plasma (~290 mOsm/L) | Wirkung auf Zellen |
+|--------|--------------------------------------|---------------------|
+| **Isotonisch** (0,9 % NaCl) | = Plasma | Zelle behält Form |
+| **Hypotonisch** (z. B. Wasser) | < Plasma | Wasser strömt in Zelle → **Schwellung/Lyse** |
+| **Hypertonisch** (z. B. 10 % NaCl) | > Plasma | Wasser strömt aus Zelle → **Schrumpfung (Krenation)** |
+
+> **Merke:** Isotonisch = 0,9 % NaCl = 290 mOsm/L. Hypotonisch → Zelle schwillt. Hypertonisch → Zelle schrumpft.
+
+---
+
+## Kolligative Eigenschaften
+
+Kolligative Eigenschaften hängen nur von der **Teilchenzahl** ab, nicht von der Art der Teilchen:
+
+1. **Siedepunkterhöhung** — Salzwasser siedet über 100 °C
+2. **Gefrierpunktserniedrigung** — Streusalz senkt den Gefrierpunkt
+3. **Dampfdruckerniedrigung** — Gelöste Teilchen senken den Dampfdruck
+4. **Osmotischer Druck** — steigt mit Teilchenzahl
+
+---
+
+## Zusammenfassung
+
+> **Merke:** π = i·c·R·T. Osmose treibt Wasser zur höher konzentrierten Seite. Isotonisch (0,9 % NaCl) = kein Nettowasserfluss. Kolligative Eigenschaften hängen nur von der Teilchenzahl ab.`,
+      lernziele: [
+        "Osmose und osmotischen Druck erklären.",
+        "Die Van-'t-Hoff-Gleichung anwenden.",
+        "Isotonisch, hypotonisch und hypertonisch unterscheiden.",
+      ],
+      sections: [],
+      merksätze: [
+        "π = i·c·R·T. Osmose = Wasser zur konzentrierteren Seite.",
+        "Isotonisch = 0,9 % NaCl. Hypotonisch → Lyse. Hypertonisch → Krenation.",
+      ],
+      selfTest: [
+        {
+          question: "Eine 0,1 mol/L NaCl-Lösung und eine 0,1 mol/L Glucose-Lösung werden durch eine semipermeable Membran getrennt. In welche Richtung fließt das Wasser?",
+          options: [
+            "Von NaCl nach Glucose.",
+            "Von Glucose nach NaCl, weil NaCl in 2 Ionen dissoziiert und damit mehr Teilchen hat.",
+            "Es gibt keinen Wasserfluss, da die Molarität gleich ist.",
+            "Von NaCl nach Glucose, weil Glucose größere Moleküle hat.",
+            "Das hängt von der Temperatur ab.",
+          ],
+          correctIndex: 1,
+          explanation:
+            "NaCl dissoziiert in Na⁺ und Cl⁻ (i = 2), daher ist die effektive Teilchenkonzentration 0,2 mol/L. Glucose dissoziiert nicht (i = 1), bleibt bei 0,1 mol/L. Die **NaCl-Seite** hat die höhere Osmolarität, also fließt Wasser **von Glucose nach NaCl**.",
+          difficulty: 2,
+          tags: ["osmotischer-druck", "vant-hoff", "tonizität"],
+        },
+      ],
+    },
+
+    // ─────────────────────────────────────────────────────────────────
     // UK ph-4-04: Phasenübergänge und Ideales Gas
     // ─────────────────────────────────────────────────────────────────
     {
