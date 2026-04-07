@@ -1441,8 +1441,6 @@ Das kranke Allel ist **dominant** auf dem X-Chromosom. **Kranker Vater (X^A Y):*
     {
       id: "bio-4-07",
       title: "Blutgruppen: AB0-System",
-      imageUrl: "/images/wiki-x-linked-de.svg",
-      imageCaption: "",
       stichworte: ["AB0", "Blutgruppe", "kodominant", "I^A", "I^B", "i", "Antigen", "Rhesus"],
       content: `Das AB0-Blutgruppensystem ist ein Musterbeispiel für Kodominanz und multiple Allele an einem einzigen Genort — und eine der beliebtesten MedAT-Aufgaben.
 
@@ -2177,8 +2175,6 @@ Vererbung bedeutet: Die DNA (Allele) wird über Keimzellen (Meiose) von Generati
     {
       id: "bio-4-10",
       title: "Tumorgenetik",
-      imageUrl: "/images/wiki-x-linked-de.svg",
-      imageCaption: "",
       stichworte: [
         "Tumorgenetik",
         "Onkogen",
