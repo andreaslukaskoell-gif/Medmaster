@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 320" font-family="system-ui, sans-serif">
+  <!-- Hintergrund -->
+  <rect width="560" height="320" fill="#fff" rx="8"/>
+
+  <!-- Becherglas 1 (vorher) -->
+  <g transform="translate(20,20)">
+    <!-- Glas -->
+    <rect x="10" y="30" width="200" height="200" rx="6" fill="#f0f4ff" stroke="#94a3b8" stroke-width="2"/>
+    <!-- Wasser links (niedrig) -->
+    <rect x="12" y="110" width="88" height="118" fill="#bfdbfe" opacity="0.5"/>
+    <!-- Wasser rechts (hoch) -->
+    <rect x="110" y="70" width="98" height="158" fill="#fecaca" opacity="0.5"/>
+    <!-- Membran -->
+    <line x1="105" y1="35" x2="105" y2="225" stroke="#dc2626" stroke-width="3" stroke-dasharray="8,6"/>
+    <!-- Teilchen rechts (viele) -->
+    <circle cx="135" cy="100" r="6" fill="#7c3aed" opacity="0.7"/>
+    <circle cx="160" cy="120" r="6" fill="#7c3aed" opacity="0.7"/>
+    <circle cx="145" cy="145" r="6" fill="#7c3aed" opacity="0.7"/>
+    <circle cx="175" cy="95" r="6" fill="#7c3aed" opacity="0.7"/>
+    <circle cx="125" cy="170" r="6" fill="#7c3aed" opacity="0.7"/>
+    <circle cx="165" cy="165" r="6" fill="#7c3aed" opacity="0.7"/>
+    <circle cx="150" cy="190" r="6" fill="#7c3aed" opacity="0.7"/>
+    <circle cx="185" cy="140" r="6" fill="#7c3aed" opacity="0.7"/>
+    <circle cx="130" cy="130" r="6" fill="#7c3aed" opacity="0.7"/>
+    <!-- Teilchen links (wenige) -->
+    <circle cx="50" cy="150" r="6" fill="#7c3aed" opacity="0.7"/>
+    <circle cx="75" cy="180" r="6" fill="#7c3aed" opacity="0.7"/>
+    <!-- Labels -->
+    <text x="55" y="20" text-anchor="middle" font-size="11" fill="#64748b" font-weight="600">wenig gelöst</text>
+    <text x="155" y="20" text-anchor="middle" font-size="11" fill="#64748b" font-weight="600">viel gelöst</text>
+    <text x="105" y="255" text-anchor="middle" font-size="12" fill="#475569" font-weight="700">VORHER</text>
+  </g>
+
+  <!-- Pfeil -->
+  <g transform="translate(248,130)">
+    <polygon points="0,10 50,10 50,0 70,20 50,40 50,30 0,30" fill="#0f766e"/>
+    <text x="35" y="58" text-anchor="middle" font-size="10" fill="#0f766e" font-weight="600">Osmose</text>
+  </g>
+
+  <!-- Becherglas 2 (nachher) -->
+  <g transform="translate(310,20)">
+    <!-- Glas -->
+    <rect x="10" y="30" width="200" height="200" rx="6" fill="#f0f4ff" stroke="#94a3b8" stroke-width="2"/>
+    <!-- Wasser links (gesunken) -->
+    <rect x="12" y="140" width="88" height="88" fill="#bfdbfe" opacity="0.5"/>
+    <!-- Wasser rechts (gestiegen) -->
+    <rect x="110" y="55" width="98" height="173" fill="#fecaca" opacity="0.5"/>
+    <!-- Membran -->
+    <line x1="105" y1="35" x2="105" y2="225" stroke="#dc2626" stroke-width="3" stroke-dasharray="8,6"/>
+    <!-- Teilchen rechts (gleich viele, mehr Wasser) -->
+    <circle cx="135" cy="90" r="6" fill="#7c3aed" opacity="0.7"/>
+    <circle cx="160" cy="110" r="6" fill="#7c3aed" opacity="0.7"/>
+    <circle cx="145" cy="140" r="6" fill="#7c3aed" opacity="0.7"/>
+    <circle cx="175" cy="85" r="6" fill="#7c3aed" opacity="0.7"/>
+    <circle cx="125" cy="165" r="6" fill="#7c3aed" opacity="0.7"/>
+    <circle cx="165" cy="160" r="6" fill="#7c3aed" opacity="0.7"/>
+    <circle cx="150" cy="190" r="6" fill="#7c3aed" opacity="0.7"/>
+    <circle cx="185" cy="130" r="6" fill="#7c3aed" opacity="0.7"/>
+    <circle cx="130" cy="120" r="6" fill="#7c3aed" opacity="0.7"/>
+    <!-- Teilchen links (wenige) -->
+    <circle cx="55" cy="170" r="6" fill="#7c3aed" opacity="0.7"/>
+    <circle cx="75" cy="200" r="6" fill="#7c3aed" opacity="0.7"/>
+    <!-- Wasserpegel-Pfeile -->
+    <path d="M45,130 L45,145" stroke="#2563eb" stroke-width="2" marker-end="url(#arrowDown)"/>
+    <path d="M155,65 L155,50" stroke="#2563eb" stroke-width="2" marker-end="url(#arrowUp)"/>
+    <text x="30" y="128" font-size="9" fill="#2563eb" font-weight="600">↓</text>
+    <text x="160" y="48" font-size="9" fill="#2563eb" font-weight="600">↑</text>
+    <!-- Labels -->
+    <text x="105" y="255" text-anchor="middle" font-size="12" fill="#475569" font-weight="700">NACHHER</text>
+  </g>
+
+  <!-- Legende unten -->
+  <g transform="translate(20,290)">
+    <line x1="30" y1="5" x2="65" y2="5" stroke="#dc2626" stroke-width="3" stroke-dasharray="6,4"/>
+    <text x="75" y="9" font-size="11" fill="#475569">Semipermeable Membran</text>
+    <circle cx="240" cy="5" r="6" fill="#7c3aed" opacity="0.7"/>
+    <text x="255" y="9" font-size="11" fill="#475569">Gelöste Teilchen</text>
+    <rect x="370" y="-2" width="14" height="14" fill="#bfdbfe" opacity="0.5" stroke="#94a3b8" stroke-width="0.5"/>
+    <rect x="386" y="-2" width="14" height="14" fill="#fecaca" opacity="0.5" stroke="#94a3b8" stroke-width="0.5"/>
+    <text x="410" y="9" font-size="11" fill="#475569">Wasser</text>
+  </g>
+</svg>

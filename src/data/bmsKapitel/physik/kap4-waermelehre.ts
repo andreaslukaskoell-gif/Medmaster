@@ -1127,14 +1127,14 @@ Q_warm = 1200 J, W = 400 J → Q_kalt = 1200 − 400 = 800 J.
     {
       id: "ph-4-05",
       title: "Osmotischer Druck und Kolligative Eigenschaften",
-      imageUrl: "/images/bms/bio-osmose.webp",
+      imageUrl: "/images/bms/bio-osmose-de.svg",
       imageCaption: "Abb.: Osmose — Wasser wandert durch die semipermeable Membran zur konzentrierteren Seite",
       stichworte: ["Osmotischer Druck", "Osmose", "Van-'t-Hoff", "Kolligative Eigenschaften", "Isotonisch", "Hypertonisch", "Hypotonisch"],
       content: `Der osmotische Druck verbindet Physik mit Medizin — er erklärt, warum Zellen in bestimmten Lösungen schrumpfen oder platzen und ist Grundlage für Infusionstherapie und Dialyse.
 
 ## Osmose
 
-![Osmose](/images/bms/bio-osmose.webp)
+![Osmose](/images/bms/bio-osmose-de.svg)
 
 **Osmose** ist die Diffusion von Lösungsmittelmolekülen (meist Wasser) durch eine **semipermeable Membran** — von der Seite mit **niedriger** Konzentration gelöster Teilchen zur Seite mit **hoher** Konzentration. Die Membran lässt Wasser durch, aber nicht die gelösten Teilchen.
 
