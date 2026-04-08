@@ -111,6 +111,12 @@ Dieses Konzept macht das PSE zu einem universellen Nachschlagewerk für stöchio
       ],
       klinischerBezug:
         "In der Klinik werden Medikamentendosen in mg oder g angegeben, Laborwerte jedoch oft in mmol/L (z. B. Glucose: 3,9–5,5 mmol/L nüchtern). Das Mol-Konzept ist unentbehrlich für die Umrechnung zwischen Masse- und Stoffmengenkonzentration. Infusionslösungen (z. B. Glucose 5 %, NaCl 0,9 %) werden über n = m/M auf ihren molaren Gehalt berechnet, um isotone Bedingungen sicherzustellen.",
+      lernziele: [
+        "Die Avogadro-Zahl und die SI-Definition des Mols korrekt wiedergeben",
+        "Die molare Masse eines Moleküls aus den Atommassen im PSE berechnen",
+        "Die Formeln n = m/M und N = n × N_A sicher anwenden und zwischen Masse, Stoffmenge und Teilchenanzahl umrechnen",
+        "Klinische Dosierungsaufgaben (mg → g → mol) fehlerfrei lösen",
+      ],
 
       altfrage: {
         text: "Wie viele Moleküle Glucose sind in 0,5 mol Glucose enthalten? (N_A = 6,022 × 10²³ mol⁻¹)",
@@ -325,6 +331,12 @@ Bei der vollständigen Oxidation von 1 mol Glucose (180 g) entstehen 6 mol CO₂
       ],
       klinischerBezug:
         "Stöchiometrische Berechnungen sind in der Pharmazie (Wirkstoff-Synthese, Dosierung) und Klinik allgegenwärtig. Antacida neutralisieren Magensäure in definiertem Molverhältnis. Der respiratorische Quotient (RQ) — das stöchiometrische Verhältnis CO₂/O₂ — gibt Auskunft über den Substratmix der Energiegewinnung (RQ = 1,0 für KH, 0,7 für Fette). In der Dialyse wird die Harnstoff-Clearance stöchiometrisch aus der Dialysatmenge berechnet.",
+      lernziele: [
+        "Chemische Reaktionsgleichungen systematisch ausgleichen und die Massenerhaltung prüfen",
+        "Stöchiometrische Koeffizienten als Molverhältnisse interpretieren und für Massenberechnungen nutzen",
+        "Das limitierende Reagenz identifizieren und die maximale Produktmenge berechnen",
+        "Den respiratorischen Quotienten (RQ) aus der Verbrennungsgleichung ableiten",
+      ],
 
       altfrage: {
         text: "Für die vollständige Verbrennung von Methan gilt: CH₄ + 2 O₂ → CO₂ + 2 H₂O. Wie viel Mol O₂ werden benötigt, um 3 mol CH₄ vollständig zu verbrennen?",
@@ -686,6 +698,12 @@ K_sp bestimmt, ob Calciumoxalat (CaC₂O₄) und Calciumphosphat im Urin ausfall
       ],
       klinischerBezug:
         "Konzentrationsangaben sind im klinischen Alltag allgegenwärtig: Blutglucose (mg/dL oder mmol/L), Elektrolyte (mmol/L), Infusionslösungen (% oder g/L). Physiologische Kochsalzlösung (NaCl 0,9 %) ist isoton zum Blutplasma und die meistverwendete Infusionslösung. Laborwerte in verschiedenen Einheitensystemen (SI vs. konventionell) müssen sicher umgerechnet werden. Das Löslichkeitsprodukt erklärt die Bildung von Nierensteinen (CaOx, CaP) und Gallensteinen (Cholesterol). Die Verdünnungsformel wird täglich in Apotheke und auf Station für Medikamenten- und Infusionszubereitungen angewendet.",
+      lernziele: [
+        "Die Konzentrationsmaße Molarität, Massenanteil und Massenkonzentration definieren und ineinander umrechnen",
+        "Die Verdünnungsformel c₁V₁ = c₂V₂ auf klinische Verdünnungsaufgaben anwenden",
+        "Das Löslichkeitsprodukt K_sp erklären und anhand des Ionenprodukts Q vorhersagen, ob ein Niederschlag ausfällt",
+        "Osmolarität und Isotonie für Infusionslösungen berechnen und klinisch einordnen",
+      ],
 
       altfrage: {
         text: "Welche Konzentration hat eine Lösung, die durch Auflösen von 5,85 g NaCl (M = 58,5 g/mol) in Wasser auf ein Gesamtvolumen von 500 mL hergestellt wird?",

@@ -1441,6 +1441,9 @@ Das kranke Allel ist **dominant** auf dem X-Chromosom. **Kranker Vater (X^A Y):*
     {
       id: "bio-4-07",
       title: "Blutgruppen: AB0-System",
+      imageUrl: "/images/wiki-abo-blood-de.svg",
+      imageCaption:
+        "Abb.: AB0-Blutgruppensystem — Antigene, Antikörper und Vererbung (Wikimedia Commons, Public Domain)",
       stichworte: ["AB0", "Blutgruppe", "kodominant", "I^A", "I^B", "i", "Antigen", "Rhesus"],
       content: `Das AB0-Blutgruppensystem ist ein Musterbeispiel für Kodominanz und multiple Allele an einem einzigen Genort — und eine der beliebtesten MedAT-Aufgaben.
 

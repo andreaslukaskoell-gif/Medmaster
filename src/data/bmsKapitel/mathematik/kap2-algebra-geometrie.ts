@@ -1118,6 +1118,12 @@ Probe: √(433² + 250²) = √(187489 + 62500) = √249989 ≈ 500 N ✓
       ],
       klinischerBezug:
         "Kräftezerlegung in der Orthopädie (Muskelzug am Knochen); Drehmoment an Gelenken (M = r × F × sin θ); EKG-Herzachse als Vektorwinkel; Strahlentherapie-Winkelplanung; Optik (Brechungsgesetz: n₁ sin θ₁ = n₂ sin θ₂).",
+      lernziele: [
+        "Sinus, Kosinus und Tangens am rechtwinkligen Dreieck mit SOH-CAH-TOA berechnen",
+        "Winkel zwischen Grad- und Bogenmaß sicher umrechnen",
+        "Den trigonometrischen Pythagoras (sin²α + cos²α = 1) anwenden",
+        "Kräfte in parallele und senkrechte Komponenten zerlegen (F cos α, F sin α)",
+      ],
       altfrage: {
         text: "In einem rechtwinkligen Dreieck ist die Gegenkathete 5 cm und die Hypotenuse 10 cm. Welchen Wert hat sin α?",
         options: [

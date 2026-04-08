@@ -1050,6 +1050,19 @@ Das Massenwirkungsgesetz beschreibt die O₂-Bindung an Hämoglobin: Hb + O₂ �
       imageUrl: "/images/bms/ch-enzymatische-reaktion.webp",
       imageCaption:
         "Abb.: Enzym-Substrat-Komplex im Schlüssel-Schloss-Modell — Katalysatoren beschleunigen die Gleichgewichtseinstellung, ohne die Lage zu ändern (OpenStax, CC BY 4.0)",
+      stichworte: [
+        "Le Chatelier",
+        "Prinzip des kleinsten Zwangs",
+        "Gleichgewichtsverschiebung",
+        "Konzentration",
+        "Druck",
+        "Temperatur",
+        "Haber-Bosch",
+        "Puffergleichgewicht",
+        "Katalysator",
+        "Reaktionsquotient Q",
+        "Gleichgewichtskonstante K",
+      ],
       content: `Wenn ein chemisches Gleichgewicht einmal eingestellt ist, bleibt es nicht zwingend dort stehen. Temperatur, Druck und Konzentrationsänderungen können das Gleichgewicht verschieben — und genau dieses Verhalten beschreibt eines der nützlichsten Prinzipien der Chemie.
 
 {{IMAGE}}

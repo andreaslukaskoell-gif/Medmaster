@@ -2312,6 +2312,10 @@ In der klinischen Praxis gilt traditionell: Blutgruppe 0 Rh-negativ (0-) als uni
       ],
       content: `Neben dem AB0-System ist der Rhesusfaktor das klinisch wichtigste Blutgruppenmerkmal — vor allem wegen der Rhesus-Inkompatibilität in der Schwangerschaft.
 
+{{IMAGE}}
+
+![Blutgruppen](/images/bms/bio-blutgruppen.webp)
+
 ## Rhesusfaktor — Definition
 
 Das **Rhesus-System** ist das medizinisch bedeutsamste Blutgruppensystem nach AB0. Das wichtigste Antigen ist das **D-Antigen (Rh-D)**, kodiert durch das RHD-Gen auf Chromosom 1.

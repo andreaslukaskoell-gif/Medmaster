@@ -2937,6 +2937,8 @@ Ohne funktionierendes Lymphsystem sammelt sich diese Flüssigkeit im Gewebe → 
 
 ## Lymphknoten — Architektur, Immunfunktion und Stationen
 
+![Lymphknoten-Architektur](/images/bms/bio-lymphknoten.webp)
+
 Der Lymphknoten filtert Lymphe und initiiert Immunantworten. Seine zonale Architektur trennt B- und T-Zell-Areale präzise:
 
 - **Cortex** (Rinde): **B-Zellen** in Follikeln (Primärfollikel: ruhend; Sekundärfollikel mit Keimzentrum: aktiv → Antikörper-Produktion). Hier entsteht die humorale Immunantwort
