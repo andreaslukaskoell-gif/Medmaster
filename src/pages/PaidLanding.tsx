@@ -187,8 +187,8 @@ export default function PaidLanding() {
   const [userCount, setUserCount] = useState<number | null>(null);
   const showStickyCTA = useShowStickyCTA();
 
-  const deadline = useMemo(() => new Date("2026-03-31T23:59:59+02:00"), []);
-  const countdown = useCountdown(deadline);
+  const medatDate = useMemo(() => new Date("2026-07-03T08:00:00+02:00"), []);
+  const countdown = useCountdown(medatDate);
 
   useEffect(() => {
     if (!supabase) return;
@@ -334,23 +334,15 @@ export default function PaidLanding() {
         </div>
       </header>
 
-      {/* ─── Urgency bar ─── */}
+      {/* ─── MedAT Countdown bar ─── */}
       {!countdown.expired && (
         <div className="text-center py-2.5 sm:py-3 px-4" style={{ backgroundColor: NAVY }}>
           <p className="text-xs sm:text-sm font-medium text-white/90 tracking-wide flex items-center justify-center gap-2 sm:gap-3">
-            <span>Gratis-Zugang endet in</span>
+            <span>MedAT 2026 in</span>
             <span className="inline-flex gap-1 sm:gap-1.5 font-mono tabular-nums text-xs sm:text-sm">
-              <span className="bg-white/15 rounded px-1.5 py-0.5">{countdown.days}d</span>
-              <span className="bg-white/15 rounded px-1.5 py-0.5">
-                {String(countdown.hours).padStart(2, "0")}h
-              </span>
-              <span className="bg-white/15 rounded px-1.5 py-0.5">
-                {String(countdown.minutes).padStart(2, "0")}m
-              </span>
-              <span className="bg-white/15 rounded px-1.5 py-0.5 hidden sm:inline">
-                {String(countdown.seconds).padStart(2, "0")}s
-              </span>
+              <span className="bg-white/15 rounded px-1.5 py-0.5">{countdown.days} Tagen</span>
             </span>
+            <span>— Jede Lernstunde zählt</span>
           </p>
         </div>
       )}
@@ -581,20 +573,21 @@ export default function PaidLanding() {
                 "Einmalig \u20ac29,90. Kein Abo."
               ) : (
                 <>
-                  Gratis-Zugang endet in{" "}
+                  Noch{" "}
                   <span
                     className={`font-mono tabular-nums ${isMobile ? "text-base" : "text-lg sm:text-2xl"}`}
+                    style={{ color: NAVY }}
                   >
-                    {countdown.days}d {String(countdown.hours).padStart(2, "0")}h{" "}
-                    {String(countdown.minutes).padStart(2, "0")}m
-                  </span>
+                    {countdown.days} Tage
+                  </span>{" "}
+                  bis zum MedAT
                 </>
               )}
             </h3>
             <p className="text-sm text-[var(--text-secondary)] mb-6 sm:mb-8 max-w-md mx-auto leading-relaxed">
               {countdown.expired
                 ? "Kein Abo. Voller Zugang zu allen Fragen, Lerneinheiten und der Prüfungssimulation."
-                : "Wer jetzt startet, lernt bis April gratis — und hat einen Vorsprung gegenüber allen, die noch warten."}
+                : "Einmalig \u20ac29,90 — kein Abo. Voller Zugang zu allen Fragen, Lerneinheiten und der Prüfungssimulation."}
             </p>
             <GoogleBtn
               label="Kostenlos starten"
@@ -653,16 +646,16 @@ export default function PaidLanding() {
                 a: "Ja, vollständig. Alle Inhalte basieren auf der offiziellen Stichwortliste 2026 der Medizinischen Universitäten. Unsere Lerneinheiten decken jedes einzelne Stichwort ab. Sämtliche BMS-Fragen sind im originalen MedAT-Format (A–E, genau eine richtige Antwort) und werden laufend aktualisiert.",
               },
               {
-                q: "Kann ich jederzeit kündigen?",
-                a: "Ja, ohne Wenn und Aber. Es gibt kein Abo, keine automatische Verlängerung und keine Kündigungsfrist. Bis 31. März ist der volle Zugang komplett gratis, danach fällt eine einmalige Zahlung von \u20ac29,90 an. Keine versteckten Kosten.",
+                q: "Gibt es ein Abo?",
+                a: "Nein. MedMaster kostet einmalig \u20ac29,90 \u2014 kein Abo, keine automatische Verl\u00e4ngerung, keine K\u00fcndigungsfrist. Du beh\u00e4ltst vollen Zugang bis zum MedAT 2026.",
               },
               {
                 q: "Reicht MedMaster als Vorbereitung?",
-                a: "MedMaster deckt alle 4 MedAT-Bereiche vollständig ab: BMS, KFF, Textverständnis und SEK. Für den BMS-Teil empfehlen viele Kandidierende ergänzend ein Biologie-Lehrbuch. Die gesamte Übungs- und Simulationskomponente ist komplett abgedeckt \u2014 inklusive adaptivem Lernplan.",
+                a: "MedMaster deckt alle 4 MedAT-Bereiche vollst\u00e4ndig ab: BMS, KFF, Textverst\u00e4ndnis und SEK. F\u00fcr den BMS-Teil empfehlen viele Kandidierende erg\u00e4nzend ein Biologie-Lehrbuch. Die gesamte \u00dcbungs- und Simulationskomponente ist komplett abgedeckt \u2014 inklusive adaptivem Lernplan.",
               },
               {
-                q: "Was passiert nach dem 31. März?",
-                a: "Ab 1. April kostet MedMaster einmalig \u20ac29,90. Kein monatliches Abo, keine wiederkehrenden Kosten. Du behältst vollen Zugang bis zum MedAT 2026. Wer sich jetzt registriert, lernt bis dahin komplett gratis.",
+                q: "Warum ist MedMaster so g\u00fcnstig?",
+                a: "Andere Anbieter verlangen \u20ac200\u2013800 f\u00fcr Kurse. MedMaster ist eine App \u2014 kein Kursraum, keine Trainer-Geh\u00e4lter. Deshalb \u20ac29,90 statt \u20ac500+. Gleicher Inhalt, Bruchteil der Kosten.",
               },
             ].map((faq) => (
               <FAQItem key={faq.q} q={faq.q} a={faq.a} isMobile={isMobile} />

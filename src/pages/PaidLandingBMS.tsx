@@ -182,8 +182,8 @@ export default function PaidLandingBMS() {
   const { signInWithGoogle } = useAuth();
   const [googleError, setGoogleError] = useState("");
 
-  const deadline = useMemo(() => new Date("2026-03-31T23:59:59+02:00"), []);
-  const countdown = useCountdown(deadline);
+  const medatDate = useMemo(() => new Date("2026-07-03T08:00:00+02:00"), []);
+  const countdown = useCountdown(medatDate);
 
   useEffect(() => {
     startPageTimer();
@@ -227,15 +227,15 @@ export default function PaidLandingBMS() {
         },
         {
           "@type": "Question",
-          name: "Was passiert nach dem 31. März?",
+          name: "Warum ist MedMaster so günstig?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Ab 1. April kostet MedMaster einmalig €29,90. Das ist eine einmalige Zahlung — kein monatliches Abo, keine wiederkehrenden Kosten. Du behältst vollen Zugang zu allen BMS-Fragen, Lerneinheiten und der Prüfungssimulation bis zum MedAT 2026. Wer sich jetzt registriert, lernt bis dahin komplett gratis.",
+            text: "Andere Anbieter verlangen €200–800 für MedAT-Kurse. MedMaster ist eine App — kein Kursraum, keine Trainer-Gehälter. Deshalb €29,90 statt €500+. Gleicher Inhalt, Bruchteil der Kosten.",
           },
         },
         {
           "@type": "Question",
-          name: "Kann ich jederzeit kündigen?",
+          name: "Gibt es ein Abo?",
           acceptedAnswer: {
             "@type": "Answer",
             text: "Ja, ohne Wenn und Aber. Es gibt kein Abo, keine automatische Verlängerung und keine Kündigungsfrist. Du kannst deinen Account jederzeit in den Einstellungen löschen — mit einem Klick.",
@@ -317,21 +317,15 @@ export default function PaidLandingBMS() {
         </div>
       </header>
 
-      {/* ─── Urgency bar ─── */}
+      {/* ─── MedAT Countdown bar ─── */}
       {!countdown.expired && (
         <div className="text-center py-3 px-4" style={{ backgroundColor: NAVY }}>
           <p className="text-sm font-medium text-white/90 tracking-wide flex items-center justify-center gap-3">
-            <span>Gratis-Zugang endet in</span>
+            <span>MedAT 2026 in</span>
             <span className="inline-flex gap-1.5 font-mono tabular-nums">
-              <span className="bg-white/15 rounded px-1.5 py-0.5">{countdown.days}d</span>
-              <span className="bg-white/15 rounded px-1.5 py-0.5">
+              <span className="bg-white/15 rounded px-1.5 py-0.5">{countdown.days} Tagen</span>
+              <span className="bg-white/15 rounded px-1.5 py-0.5 hidden sm:inline">
                 {String(countdown.hours).padStart(2, "0")}h
-              </span>
-              <span className="bg-white/15 rounded px-1.5 py-0.5">
-                {String(countdown.minutes).padStart(2, "0")}m
-              </span>
-              <span className="bg-white/15 rounded px-1.5 py-0.5">
-                {String(countdown.seconds).padStart(2, "0")}s
               </span>
             </span>
           </p>
@@ -709,12 +703,12 @@ export default function PaidLandingBMS() {
                 a: "MedMaster deckt den gesamten BMS-Teil vollständig ab: alle Stichwörter, Tausende Übungsfragen, adaptives Lernen und Fortschrittskontrolle pro Thema. Für die Vertiefung in Biologie empfehlen viele ergänzend ein Lehrbuch wie den Campbell. Die Übungs- und Lernkomponente ist aber komplett abgedeckt — inklusive adaptivem Lernplan, der deine Schwächen gezielt trainiert.",
               },
               {
-                q: "Was passiert nach dem 31. März?",
-                a: "Ab 1. April kostet MedMaster einmalig \u20ac29,90. Das ist eine einmalige Zahlung — kein monatliches Abo, keine wiederkehrenden Kosten. Du behältst vollen Zugang zu allen BMS-Fragen, Lerneinheiten und der Prüfungssimulation bis zum MedAT 2026. Wer sich jetzt registriert, lernt bis dahin komplett gratis.",
+                q: "Warum ist MedMaster so g\u00fcnstig?",
+                a: "Andere Anbieter verlangen \u20ac200\u2013800 f\u00fcr Kurse. MedMaster ist eine App \u2014 kein Kursraum, keine Trainer-Geh\u00e4lter. Deshalb \u20ac29,90 statt \u20ac500+. Gleicher Inhalt, Bruchteil der Kosten.",
               },
               {
-                q: "Kann ich jederzeit kündigen?",
-                a: "Ja, ohne Wenn und Aber. Es gibt kein Abo, keine automatische Verlängerung und keine Kündigungsfrist. Du kannst deinen Account jederzeit in den Einstellungen löschen — mit einem Klick.",
+                q: "Gibt es ein Abo?",
+                a: "Nein. Einmalig \u20ac29,90, kein Abo, keine automatische Verl\u00e4ngerung. Du beh\u00e4ltst vollen Zugang bis zum MedAT 2026. Account jederzeit l\u00f6schbar in den Einstellungen.",
               },
             ].map((faq) => (
               <FAQItem key={faq.q} q={faq.q} a={faq.a} />
