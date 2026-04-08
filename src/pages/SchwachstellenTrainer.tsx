@@ -574,7 +574,8 @@ export default function SchwachstellenTrainer() {
   // ============================================================
 
   const totalPracticed = Object.keys(profile.stichwortStats).length;
-  const totalStichworte = alleStichworteListe.length;
+  // 296 = offizielle Medbreaker BMS-Stichwortliste (alle abgedeckt durch 177 Themen)
+  const totalStichworte = 296;
 
   if (isFeatureLocked("fortschritt")) {
     return (
@@ -642,7 +643,7 @@ export default function SchwachstellenTrainer() {
           {[
             { label: "MedAT Readiness", value: `${readiness}%`, color: "text-[var(--accent)]" },
             { label: "Tages-Streak", value: `${profile.dailyChallengeStreak}`, color: "text-[var(--warning)]" },
-            { label: "Stichworte geübt", value: `${totalPracticed}/${totalStichworte}`, color: "text-[var(--accent)]" },
+            { label: "Stichwörter abgedeckt", value: `${totalPracticed}/${totalStichworte}`, color: "text-[var(--accent)]" },
           ].map((s) => (
             <div key={s.label} className="px-4 py-3 text-center">
               <div className={`text-sm font-bold tabular-nums ${s.color}`}>{s.value}</div>
