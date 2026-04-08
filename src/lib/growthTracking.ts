@@ -61,7 +61,8 @@ const GTAG_ID = (import.meta.env.VITE_GTAG_ID as string | undefined) || "AW-1802
 // Conversion labels from Google Ads → Tools → Conversions → Tag setup
 const GTAG_CONV_SIGNUP =
   (import.meta.env.VITE_GTAG_CONV_SIGNUP as string | undefined) || "B4jqCOSgrIscEP3xzpBD";
-const GTAG_CONV_CHECKOUT = import.meta.env.VITE_GTAG_CONV_CHECKOUT as string | undefined;
+const GTAG_CONV_CHECKOUT =
+  (import.meta.env.VITE_GTAG_CONV_CHECKOUT as string | undefined) || "dnlKCJLYq5gcEP3xzpBD";
 
 let gtagReady = false;
 
@@ -118,9 +119,11 @@ export function initGtag() {
   gtagReady = true;
 }
 
-function gtag(...args: unknown[]) {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  ((window as any).dataLayer as unknown[])?.push(args);
+// Must use 'arguments' (not rest params) — gtag.js expects Arguments objects, not arrays.
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function gtag(..._args: any[]) {
+  // eslint-disable-next-line prefer-rest-params
+  ((window as any).dataLayer as IArguments[])?.push(arguments);
 }
 
 /** Track Google Ads conversion with optional Enhanced Conversions data. */

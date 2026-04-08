@@ -58,7 +58,7 @@ function Confetti() {
 export default function PaymentSuccess() {
   usePageTitle("Zahlung erfolgreich");
   const [searchParams] = useSearchParams();
-  const { refreshProfile, isPremium } = useAuth();
+  const { refreshProfile, isPremium, user } = useAuth();
 
   // All hooks MUST be before any early return (React Rules of Hooks)
   const hasPaymentParam = searchParams.get("payment") === "success";
@@ -69,7 +69,7 @@ export default function PaymentSuccess() {
   useEffect(() => {
     if (!hasPaymentParam && !isPremium) return;
     track("payment_success");
-    trackConversion("purchase_completed", { value: 29.9, currency: "EUR" });
+    trackConversion("purchase_completed", { value: 29.9, currency: "EUR", email: user?.email });
     const t = setTimeout(() => setShowConfetti(false), 5000);
     return () => clearTimeout(t);
   }, [hasPaymentParam, isPremium]);
