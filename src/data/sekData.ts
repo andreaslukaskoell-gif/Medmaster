@@ -22,7 +22,7 @@ export const sekStrategyGuide = {
     },
     {
       heading: "Strategie zum Erkennen",
-      content: `1. Schau zürst auf die AUGENPARTIE - sie verrät am meisten:
+      content: `1. Schau zuerst auf die AUGENPARTIE - sie verrät am meisten:
    - Brauen zusammengezogen = negative Emotion (Wut, Trauer)
    - Brauen angehoben = Überraschung oder Angst
    - Krähenfüße = echte Freude

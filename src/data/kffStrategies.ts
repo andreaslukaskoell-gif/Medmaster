@@ -53,7 +53,7 @@ export const KFF_STRATEGIES: Record<KFFStrategyTestType, KFFStrategyContent> = {
     steps: [
       "Identifiziere die drei Mengen (A, B, C) in den zwei Prämissen. Der Mittelterm (in beiden Prämissen vorkommend) ist der Schlüssel.",
       "Übersetze die Quantoren in Mengenbeziehungen: 'Alle A sind B' → A-Kreis vollständig in B. 'Einige A sind B' → A und B überschneiden sich. 'Keine A sind B' → A und B getrennt.",
-      "Wende die 5 goldenen Regeln an: (1) Zwei 'einige' → E. (2) Zwei 'keine' → E. (3) Kein 'keine' in Prämissen → Schluss darf kein 'keine' enthalten. (4) Ein 'keine' → Schluss muss 'keine' enthalten. (5) Ein 'einige' → Schluss muss 'einige' enthalten.",
+      "Wende die Schnellregeln an: (1) Zwei 'einige' → E. (2) Zwei 'keine' → E. (3) Kein 'keine' in Prämissen → Schluss enthält in der Regel kein 'keine'. (4) Mindestens ein 'keine' → Schluss enthält meist 'keine'. (5) Mindestens ein 'einige' → Schluss enthält meist 'einige'. Regeln 3–5 sind Heuristiken, keine absoluten Gesetze — im Zweifel formal mit Euler-Kreisen prüfen.",
       "Prüfe jede Option A–D: Muss diese Aussage in ALLEN denkbaren Fällen wahr sein? Findest du EIN Gegenbeispiel → Option falsch.",
       "Beachte die Richtung: 'Alle A sind B' sagt nichts über 'Alle B sind A' aus. Der Schluss muss die richtige Richtung haben.",
       "Wenn keine Option A–D zwingend ist → E wählen. Bei ca. 20 % der Aufgaben ist E korrekt.",
@@ -113,7 +113,7 @@ export const KFF_STRATEGIES: Record<KFFStrategyTestType, KFFStrategyContent> = {
     ],
     pitfalls: [
       "Sich auf den ersten Einfall fixieren: Wenn das erste Wort nicht alle Buchstaben verwendet, weitersuchen und nicht festbeißen.",
-      "Umlaute erwarten: MedAT-Wortflüssigkeit verwendet KEINE Umlaute (Ä=AE, Ö=OE, Ü=UE) und kein ß (=SZ).",
+      "Umlaute erwarten: Die vorgegebenen Buchstaben enthalten keine Umlaute und kein ß. Du arbeitest nur mit A–Z.",
       "Eigennamen bilden: Nur Hauptwörter aus dem Duden sind gültig. Keine Städte, Personen oder Marken.",
       "Buchstaben doppelt verwenden: Jeder gegebene Buchstabe darf nur so oft verwendet werden, wie er vorkommt.",
       "E zu selten wählen: Bei ca. 10–15 % der Aufgaben beginnt das Wort mit einem Buchstaben, der nicht unter A–D steht.",
