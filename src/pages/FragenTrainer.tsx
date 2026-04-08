@@ -30,6 +30,7 @@ import { Confetti } from "@/components/ui/confetti";
 import { TypAQuestion } from "@/components/bms/TypAQuestion";
 import { TypKQuestion } from "@/components/bms/TypKQuestion";
 import { stripMarkdownAsterisks } from "@/utils/formatExplanation";
+import { QuestionFeedbackButton } from "@/components/shared/QuestionFeedbackButton";
 import { useFragenTrainer } from "@/hooks/useFragenTrainer";
 import type {
   TrainerMode,
@@ -1090,6 +1091,7 @@ function ResultsScreen({
                       Keine Begründung hinterlegt.
                     </p>
                   )}
+                  <QuestionFeedbackButton questionId={frage.id} questionType="bms" />
                 </CardContent>
               </Card>
             ))}
@@ -1170,6 +1172,7 @@ function ResultsScreen({
                       Keine Begründung hinterlegt.
                     </p>
                   )}
+                  <QuestionFeedbackButton questionId={frage.id} questionType="bms" />
                 </CardContent>
               </Card>
             ))}
