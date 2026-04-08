@@ -903,7 +903,7 @@ export default function LandingPage() {
           </motion.p>
           <motion.a
             {...fade}
-            href="https://www.trustpilot.com/review/medmaster.at"
+            href="https://www.trustpilot.com/evaluate/medmaster.at"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-[var(--border)] hover:bg-[var(--surface)] transition-colors text-sm font-medium text-[var(--text-primary)]"
