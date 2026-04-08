@@ -200,7 +200,7 @@ export default function StichwortlistePage() {
       <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "Fortschritt", href: "/fortschritt" }, { label: "Stichwortliste" }]} />
       <div className="hero-orbs text-center py-8">
         <h1 className="heading-glow text-2xl sm:text-[3rem] sm:leading-tight font-bold text-[var(--text-primary)]">
-          BMS-Stichwortliste 2025/2026
+          BMS-Stichwortliste 2026
         </h1>
         <p className="text-[var(--muted)] mt-1">
           Offizielle Prüfungsthemen mit Lernfortschritt-Tracking

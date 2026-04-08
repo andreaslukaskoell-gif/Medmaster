@@ -654,7 +654,7 @@ export default function FortschrittPage() {
         {/* ══════════════════════════════════════════════════════
             NAVIGATION: Unterseiten
         ══════════════════════════════════════════════════════ */}
-        <div className="grid grid-cols-4 gap-3 mt-6">
+        <div className="grid grid-cols-5 gap-3 mt-6">
           <Link to="/schwachstellen" className="card-glass p-4 flex items-center gap-3 hover:shadow-md transition-shadow">
             <div className="w-9 h-9 rounded-lg bg-[var(--accent)]/15 flex items-center justify-center shrink-0">
               <AlertTriangle className="w-4.5 h-4.5 text-[var(--accent)]" />
@@ -680,6 +680,15 @@ export default function FortschrittPage() {
             <div className="min-w-0">
               <p className="text-sm font-semibold text-[var(--text-primary)]">Prognose</p>
               <p className="text-[10px] text-[var(--muted)]">MedAT-Vorhersage</p>
+            </div>
+          </Link>
+          <Link to="/stichwortliste" className="card-glass p-4 flex items-center gap-3 hover:shadow-md transition-shadow">
+            <div className="w-9 h-9 rounded-lg bg-[var(--surface)] flex items-center justify-center shrink-0">
+              <CheckCircle2 className="w-4.5 h-4.5 text-[var(--muted)]" />
+            </div>
+            <div className="min-w-0">
+              <p className="text-sm font-semibold text-[var(--text-primary)]">Stichwortliste</p>
+              <p className="text-[10px] text-[var(--muted)]">296 offizielle Themen</p>
             </div>
           </Link>
           <Link to="/performance" className="card-glass p-4 flex items-center gap-3 hover:shadow-md transition-shadow">
