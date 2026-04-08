@@ -87,7 +87,7 @@ export const blogArticles: BlogArticle[] = [
         <p>
           Die MedUni veröffentlicht jedes Jahr eine Stichwortliste, die exakt vorgibt, welche Themen
           prüfungsrelevant sind. Viele lernen „alles", statt sich an der Liste zu orientieren. Das
-          verschwendet Zeit. Arbeite die 173 offiziellen Stichwörter systematisch ab.
+          verschwendet Zeit. Arbeite die 218 offiziellen Stichwörter systematisch ab.
         </p>
 
         <h2>5. Keine Prüfungssimulationen machen</h2>

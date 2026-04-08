@@ -41,7 +41,7 @@ const FAQ_ITEMS: { q: string; a: string; category: string }[] = [
   {
     category: "BMS",
     q: "Was steht auf der offiziellen Stichwortliste?",
-    a: "Die offizielle Stichwortliste umfasst über 230 Themen aus Biologie (Zellbiologie, Genetik, Humanbiologie, Evolution, Ökologie), Chemie (Allgemeine Chemie, Organische Chemie, Biochemie), Physik (Mechanik, Thermodynamik, Elektrizität, Optik) und Mathematik (Algebra, Stochastik, Einheiten). MedMaster deckt alle offiziellen Stichworte ab.",
+    a: "Die offizielle Stichwortliste umfasst über 230 Themen aus Biologie (Zellbiologie, Genetik, Humanbiologie, Evolution, Ökologie), Chemie (Allgemeine Chemie, Organische Chemie, Biochemie), Physik (Mechanik, Thermodynamik, Elektrizität, Optik) und Mathematik (Algebra, Geometrie, Funktionen, Vektorrechnung). MedMaster deckt alle offiziellen Stichworte ab.",
   },
   {
     category: "BMS",

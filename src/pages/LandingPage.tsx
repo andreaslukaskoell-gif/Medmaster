@@ -614,7 +614,7 @@ export default function LandingPage() {
                   "Biologie — umfassender Fragenpool",
                   "Chemie — organisch & anorganisch",
                   "Physik — Mechanik bis Optik",
-                  "Mathematik — Algebra bis Stochastik",
+                  "Mathematik — Algebra bis Vektorrechnung",
                 ],
                 footer: "Jedes offizielle Stichwort mit Lerneinheit abgedeckt",
                 link: "/medat-uebungsfragen",
@@ -928,7 +928,7 @@ export default function LandingPage() {
             {[
               {
                 q: "Ist das aktuell für den MedAT 2026?",
-                a: "Ja, vollständig. Alle Inhalte basieren auf der offiziellen Stichwortliste 2026 der Medizinischen Universitäten. Unsere Lerneinheiten decken jedes einzelne Stichwort ab — von Zellbiologie über organische Chemie bis Stochastik. Sämtliche BMS-Fragen sind im originalen MedAT-Format (A–E, genau eine richtige Antwort) und werden laufend aktualisiert.",
+                a: "Ja, vollständig. Alle Inhalte basieren auf der offiziellen Stichwortliste 2026 der Medizinischen Universitäten. Unsere Lerneinheiten decken jedes einzelne Stichwort ab — von Zellbiologie über organische Chemie bis Vektorrechnung. Sämtliche BMS-Fragen sind im originalen MedAT-Format (A–E, genau eine richtige Antwort) und werden laufend aktualisiert.",
               },
               {
                 q: "Kann ich jederzeit kündigen?",

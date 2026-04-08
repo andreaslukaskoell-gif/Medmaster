@@ -174,7 +174,7 @@ export default function PaidLandingBMS() {
   usePageMeta({
     title: "BMS lernen für den MedAT 2026 — 5.000+ Fragen, alle 4 Fächer",
     description:
-      "BMS-Vorbereitung für den MedAT 2026: 5.000+ Fragen in Biologie, Chemie, Physik & Mathematik. 173 Lerneinheiten nach offizieller Stichwortliste. Einmalig €29,90.",
+      "BMS-Vorbereitung für den MedAT 2026: 5.000+ Fragen in Biologie, Chemie, Physik & Mathematik. 218 Lerneinheiten nach offizieller Stichwortliste. Einmalig €29,90.",
     canonical: "https://medmaster.at/lp/bms",
     ogImage: "https://medmaster.at/og-image.png",
   });
@@ -206,7 +206,7 @@ export default function PaidLandingBMS() {
           name: "Deckt MedMaster die gesamte BMS-Stichwortliste 2026 ab?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Ja, vollständig. Die 173 Lerneinheiten decken jedes einzelne Stichwort der offiziellen BMS-Liste ab — von Zellbiologie und DNA-Replikation über das Periodensystem und Stöchiometrie bis zu Mechanik, Optik, Trigonometrie und Stochastik. Die über 5.000 BMS-Fragen sind im originalen MedAT-Format (A–E, genau eine richtige Antwort) und werden laufend aktualisiert.",
+            text: "Ja, vollständig. Die 218 Lerneinheiten decken jedes einzelne Stichwort der offiziellen BMS-Liste ab — von Zellbiologie und DNA-Replikation über das Periodensystem und Stöchiometrie bis zu Mechanik, Optik, Trigonometrie und Vektorrechnung. Die über 5.000 BMS-Fragen sind im originalen MedAT-Format (A–E, genau eine richtige Antwort) und werden laufend aktualisiert.",
           },
         },
         {
@@ -397,7 +397,7 @@ export default function PaidLandingBMS() {
           <motion.div {...fade} className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8">
             {[
               { value: "5.000+", label: "BMS-Fragen", sub: "mit Erklärungen" },
-              { value: "173", label: "Lerneinheiten", sub: "offizielle Stichwortliste 2026" },
+              { value: "218", label: "Lerneinheiten", sub: "offizielle Stichwortliste 2026" },
               { value: "4", label: "Fächer", sub: "Bio, Chemie, Physik, Mathe" },
               { value: "100 %", label: "Stichwortliste 2026", sub: "vollständig abgedeckt" },
             ].map((s) => (
@@ -506,7 +506,7 @@ export default function PaidLandingBMS() {
               {
                 icon: Calculator,
                 title: "Mathematik",
-                desc: "Grundlagen, Gleichungen, Funktionen, Trigonometrie, Stochastik, Folgen und Reihen.",
+                desc: "Algebra, Geometrie, Einheiten, Funktionen, Vektorrechnung.",
                 count: "1.050+ Fragen",
               },
             ].map((f) => (
@@ -633,7 +633,7 @@ export default function PaidLandingBMS() {
             </h3>
             <p className="text-sm text-[var(--text-secondary)] mb-8 max-w-md mx-auto leading-relaxed">
               {countdown.expired
-                ? "Einmalige Zahlung. Voller Zugang zu allen 5.000+ BMS-Fragen, 173 Lerneinheiten und der Prüfungssimulation."
+                ? "Einmalige Zahlung. Voller Zugang zu allen 5.000+ BMS-Fragen, 218 Lerneinheiten und der Prüfungssimulation."
                 : "Wer jetzt startet, lernt bis April gratis — und hat einen Vorsprung gegenüber allen, die noch warten."}
             </p>
             <GoogleBtn
@@ -662,7 +662,7 @@ export default function PaidLandingBMS() {
             {(
               [
                 { icon: BookOpen, text: "5.000+ BMS-Fragen" },
-                { icon: Star, text: "173 Lerneinheiten" },
+                { icon: Star, text: "218 Lerneinheiten" },
                 { icon: Zap, text: "Stichwortliste 2026" },
                 { icon: Shield, text: "Kein Abo" },
               ] as { icon: React.ComponentType<{ className?: string }>; text: string }[]
@@ -692,7 +692,7 @@ export default function PaidLandingBMS() {
             {[
               {
                 q: "Deckt MedMaster die gesamte BMS-Stichwortliste 2026 ab?",
-                a: "Ja, vollständig. Die 173 Lerneinheiten decken jedes einzelne Stichwort der offiziellen BMS-Liste ab — von Zellbiologie und DNA-Replikation über das Periodensystem und Stöchiometrie bis zu Mechanik, Optik, Trigonometrie und Stochastik. Die über 5.000 BMS-Fragen sind im originalen MedAT-Format (A\u2013E, genau eine richtige Antwort) und werden laufend aktualisiert.",
+                a: "Ja, vollständig. Die 218 Lerneinheiten decken jedes einzelne Stichwort der offiziellen BMS-Liste ab — von Zellbiologie und DNA-Replikation über das Periodensystem und Stöchiometrie bis zu Mechanik, Optik, Trigonometrie und Vektorrechnung. Die über 5.000 BMS-Fragen sind im originalen MedAT-Format (A\u2013E, genau eine richtige Antwort) und werden laufend aktualisiert.",
               },
               {
                 q: "Wie viele BMS-Fragen gibt es pro Fach?",
@@ -726,7 +726,7 @@ export default function PaidLandingBMS() {
             Null Prozent dem Zufall überlassen.
           </h2>
           <p className="text-white/60 text-base mb-10 max-w-md mx-auto leading-relaxed">
-            5.000+ BMS-Fragen. 4 Fächer. 173 Lerneinheiten. Adaptives Lernsystem. Kein Abo.
+            5.000+ BMS-Fragen. 4 Fächer. 218 Lerneinheiten. Adaptives Lernsystem. Kein Abo.
           </p>
           <GoogleBtn
             label="Jetzt kostenlos starten"

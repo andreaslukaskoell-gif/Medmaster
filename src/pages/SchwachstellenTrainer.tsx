@@ -574,8 +574,8 @@ export default function SchwachstellenTrainer() {
   // ============================================================
 
   const totalPracticed = Object.keys(profile.stichwortStats).length;
-  // 296 = offizielle Medbreaker BMS-Stichwortliste (alle abgedeckt durch 177 Themen)
-  const totalStichworte = 296;
+  // 218 = offizielle BMS-Stichwortliste 2026 (1:1 mit medizinaufnahmetest.at PDFs)
+  const totalStichworte = 218;
 
   if (isFeatureLocked("fortschritt")) {
     return (
