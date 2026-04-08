@@ -801,7 +801,7 @@ Die Stoffmenge allein reicht für die Klinik nicht aus — dort brauchen wir die
 Physiologische Kochsalzlösung: 0,9 % NaCl ist ungefähr 154 mmol/L Na⁺ plus 154 mmol/L Cl⁻ und ergibt ungefähr 308 mosmol/L, isoton zum Blutplasma (ungefähr 290 mosmol/L).
 
 **Osmolarität** [mosmol/L] = Summe aller gelösten Teilchenkonzentrationen (Ionen zählen einzeln).
-Beispiel: 1 mol/L NaCl ergibt 2 mosmol/L (Na+ + Cl- getrennt).
+Beispiel: 1 mol/L NaCl ergibt 2 osmol/L = 2000 mosmol/L (Na⁺ + Cl⁻ getrennt).
 
 ## Klinische Anwendungen in der Pharmakologie
 
@@ -866,7 +866,7 @@ C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O (vollständige Oxidation von Gluk
         },
         {
           heading: "Osmolarität und klinische Relevanz",
-          text: "Osmolarität = Gesamtkonzentration osmotisch aktiver Teilchen [mosmol/L]. Ionen zählen einzeln: 1 mol/L NaCl → 2 mosmol/L. Physiologische Osmolarität Blut ≈ 290 mosmol/L. Hyperosmolare Lösung: zieht Wasser aus Zellen (Dehydrierung). Hypoosmolare Lösung: Wasser strömt in Zellen (Lyse). Isotone Kochsalzlösung (0,9 %) und Ringerlaktat-Lösung werden für intravenöse Infusionen verwendet, da sie isosmolar zum Plasma sind.",
+          text: "Osmolarität = Gesamtkonzentration osmotisch aktiver Teilchen [osmol/L oder mosmol/L]. Ionen zählen einzeln: 1 mol/L NaCl → 2 osmol/L = 2000 mosmol/L. Physiologische Osmolarität Blut ≈ 290 mosmol/L. Hyperosmolare Lösung: zieht Wasser aus Zellen (Dehydrierung). Hypoosmolare Lösung: Wasser strömt in Zellen (Lyse). Isotone Kochsalzlösung (0,9 %) und Ringerlaktat-Lösung werden für intravenöse Infusionen verwendet, da sie isosmolar zum Plasma sind.",
           merksatz:
             "Osmolarität Plasma ≈ 290 mosmol/L. 0,9 % NaCl ≈ 308 mosmol/L (leicht hyperton, klinisch als isoton bezeichnet).",
         },
@@ -965,7 +965,7 @@ C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O (vollständige Oxidation von Gluk
         },
         {
           question: "Eine Lösung enthält 1 mol/L NaCl. Was ist die Osmolarität dieser Lösung?",
-          options: ["2 mosmol/L", "1 mosmol/L", "0,5 mosmol/L", "58,5 mosmol/L", "1000 mosmol/L"],
+          options: ["2 osmol/L", "1 osmol/L", "0,5 osmol/L", "58,5 osmol/L", "1000 osmol/L"],
           correctIndex: 0,
           explanation:
             "NaCl ist ein starkes Elektrolyt und dissoziiert in wässriger Lösung vollständig: NaCl → Na⁺ + Cl⁻. Aus 1 mol/L NaCl entstehen 1 mol/L Na⁺ und 1 mol/L Cl⁻ = 2 mol/L osmotisch aktive Teilchen = 2 osmol/L = 2000 mosmol/L. Klinisch relevant: Physiologische Kochsalzlösung (0,9 % NaCl) enthält ca. 0,154 mol/L NaCl → 0,308 osmol/L ≈ 308 mosmol/L. Das Blutplasma hat eine Osmolarität von etwa 290 mosmol/L. Für Osmolaritätsberechnungen gilt: vollständige Dissoziation annehmen, jedes Ion einzeln zählen.",
