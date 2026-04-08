@@ -12,7 +12,6 @@ import { usePermissions } from "@/hooks/usePermissions";
 import { PaywallBanner } from "@/components/ui/paywall";
 import { UsageLimitWarning } from "@/components/ui/UsageLimitWarning";
 import { trackEvent } from "@/lib/analyticsTracker";
-import { FirstTimeKffIntro } from "@/components/kff/FirstTimeKffIntro";
 import { ZahlenfolgenQuiz } from "@/components/kff/ZahlenfolgenQuiz";
 import {
   GedaechtnisSetup,
@@ -63,8 +62,6 @@ export default function KFF() {
   const { getLimit } = usePermissions();
   const kffPerSubtest = getLimit("kff_per_subtest");
   const kffGmLimit = getLimit("kff_gm");
-  const kffDomainIntroSeen = useStore((s) => s.kffDomainIntroSeen);
-  const markKffDomainIntroSeen = useStore((s) => s.markKffDomainIntroSeen);
   const quizResults = useStore((s) => s.quizResults ?? STABLE_EMPTY_RESULTS);
   const [authTimedOut, setAuthTimedOut] = useState(false);
   const autoStartRef = useRef(false);
@@ -179,15 +176,6 @@ export default function KFF() {
   }
 
   if (view === "figuren-quiz") {
-    if (!kffDomainIntroSeen["figuren"]) {
-      return (
-        <FirstTimeKffIntro
-          strategyKey="figuren"
-          onContinue={() => markKffDomainIntroSeen("figuren")}
-          onBack={() => setView("overview")}
-        />
-      );
-    }
     return (
       <FigurenQuiz
         onBack={() => {
@@ -205,15 +193,6 @@ export default function KFF() {
   }
 
   if (view === "zahlenfolgen") {
-    if (!kffDomainIntroSeen["zahlenfolgen"]) {
-      return (
-        <FirstTimeKffIntro
-          strategyKey="zahlenfolgen"
-          onContinue={() => markKffDomainIntroSeen("zahlenfolgen")}
-          onBack={() => setView("overview")}
-        />
-      );
-    }
     return (
       <ZahlenfolgenQuiz
         onBack={() => {
@@ -226,15 +205,6 @@ export default function KFF() {
     );
   }
   if (view === "gedaechtnis-setup") {
-    if (!kffDomainIntroSeen["gedaechtnis"]) {
-      return (
-        <FirstTimeKffIntro
-          strategyKey="gedaechtnis"
-          onContinue={() => markKffDomainIntroSeen("gedaechtnis")}
-          onBack={() => setView("overview")}
-        />
-      );
-    }
     return (
       <GedaechtnisSetup
         onLearn={() => setView("gedaechtnis-learn")}
@@ -258,15 +228,6 @@ export default function KFF() {
     );
   if (view === "gedaechtnis-quiz") return <GedaechtnisQuiz onBack={() => setView("overview")} />;
   if (view === "implikationen") {
-    if (!kffDomainIntroSeen["implikationen"]) {
-      return (
-        <FirstTimeKffIntro
-          strategyKey="implikationen"
-          onContinue={() => markKffDomainIntroSeen("implikationen")}
-          onBack={() => setView("overview")}
-        />
-      );
-    }
     return (
       <ImplikationenQuiz
         onBack={() => {
@@ -279,15 +240,6 @@ export default function KFF() {
     );
   }
   if (view === "wortflüssigkeit") {
-    if (!kffDomainIntroSeen["wortflüssigkeit"]) {
-      return (
-        <FirstTimeKffIntro
-          strategyKey="wortflüssigkeit"
-          onContinue={() => markKffDomainIntroSeen("wortflüssigkeit")}
-          onBack={() => setView("overview")}
-        />
-      );
-    }
     return (
       <WortflüssigkeitQuiz
         onBack={() => {
