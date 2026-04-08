@@ -12,6 +12,7 @@ import { Progress } from "@/components/ui/progress";
 import { ShareResultButton } from "@/components/shared/ShareResultButton";
 import { getPrognoseShareText } from "@/lib/shareUtils";
 import { usePageTitle } from "@/hooks/usePageTitle";
+import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import {
   TrendingUp,
   TrendingDown,
@@ -755,6 +756,7 @@ export default function Prognose() {
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-6 space-y-8">
+      <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "Fortschritt", href: "/fortschritt" }, { label: "Prognose" }]} />
       {/* Header */}
       <div className="text-center">
         <div className="inline-flex items-center gap-2 text-[var(--accent)]/60 mb-2">

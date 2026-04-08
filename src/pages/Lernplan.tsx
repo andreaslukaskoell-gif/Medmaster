@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { Link } from "react-router-dom";
 import {
   BookOpen,
@@ -111,6 +112,7 @@ export default function Lernplan() {
 
   return (
     <div className="max-w-5xl mx-auto space-y-8">
+      <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "Lernplan" }]} />
       {/* Hero */}
       <div className="hero-orbs text-center py-8">
         <h1 className="text-[3rem] leading-tight font-bold text-[var(--text-primary)] heading-glow">

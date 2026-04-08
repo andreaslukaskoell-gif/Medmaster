@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useCallback, useMemo } from "react";
+import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import {
   ArrowLeft,
   ArrowRight,
@@ -1181,6 +1182,7 @@ export default function Simulation() {
 
     return (
       <div className={`max-w-5xl mx-auto space-y-6 ${isMobile ? "px-3" : ""}`}>
+        <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "Simulation" }]} />
         <div className="hero-orbs text-center py-8">
           <h1 className="text-[3rem] leading-tight font-bold text-[var(--text-primary)] heading-glow">
             Testsimulation

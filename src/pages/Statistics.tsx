@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
 import {
   BarChart,
@@ -84,6 +85,7 @@ export default function Statistics() {
 
   return (
     <div className="max-w-7xl mx-auto space-y-6">
+      <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "Fortschritt", href: "/fortschritt" }, { label: "Statistik" }]} />
       <div>
         <h1 className="text-2xl font-bold text-[var(--text-primary)]">Statistik</h1>
         <p className="text-[var(--muted)] mt-1">Dein Lernfortschritt im Überblick.</p>

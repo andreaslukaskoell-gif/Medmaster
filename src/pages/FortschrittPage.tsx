@@ -1,5 +1,6 @@
 import { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
+import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { usePermissions } from "@/hooks/usePermissions";
 import { Paywall } from "@/components/ui/paywall";
 import {
@@ -274,6 +275,7 @@ export default function FortschrittPage() {
   return (
     <div className="min-h-screen bg-[var(--dashboard-bg)]">
       <div className="max-w-6xl mx-auto px-4 py-8 pb-12">
+        <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "Fortschritt" }]} />
 
         {/* ── Hero Heading ─────────────────────────────────── */}
         <div className="hero-orbs text-center mb-8 py-6">

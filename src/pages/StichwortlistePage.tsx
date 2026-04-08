@@ -1,4 +1,5 @@
 import { useState, useMemo } from "react";
+import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import { Link } from "react-router-dom";
 import {
   BookOpen,
@@ -196,6 +197,7 @@ export default function StichwortlistePage() {
 
   return (
     <div className="max-w-5xl mx-auto space-y-6">
+      <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "Fortschritt", href: "/fortschritt" }, { label: "Stichwortliste" }]} />
       <div className="hero-orbs text-center py-8">
         <h1 className="heading-glow text-2xl sm:text-[3rem] sm:leading-tight font-bold text-[var(--text-primary)]">
           BMS-Stichwortliste 2025/2026

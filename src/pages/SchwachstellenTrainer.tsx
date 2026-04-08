@@ -597,7 +597,7 @@ export default function SchwachstellenTrainer() {
   return (
     <div className="max-w-4xl mx-auto space-y-6">
       <BreadcrumbNav
-        items={[{ label: "Dashboard", href: "/" }, { label: "Schwachstellen-Trainer" }]}
+        items={[{ label: "Dashboard", href: "/" }, { label: "Fortschritt", href: "/fortschritt" }, { label: "Schwachstellen-Trainer" }]}
       />
 
       {/* Hero Header */}

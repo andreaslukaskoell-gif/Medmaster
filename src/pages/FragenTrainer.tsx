@@ -7,6 +7,7 @@
  * 3. Quiz → Ergebnis mit richtig/falsch und Begründung
  */
 import { useState, useMemo, useEffect, useRef, useCallback } from "react";
+import { BreadcrumbNav } from "@/components/ui/breadcrumb-wrapper";
 import {
   ArrowLeft,
   Trophy,
@@ -1296,6 +1297,9 @@ export default function FragenTrainer() {
 
   return (
     <div className="p-6">
+      {screen === "select" && (
+        <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "Fragen-Trainer" }]} />
+      )}
       {screen === "select" &&
         (() => {
           // Check if ALL subjects exceeded their limit
