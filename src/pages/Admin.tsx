@@ -358,6 +358,7 @@ export default function Admin() {
   const [segments, setSegments] = useState<UserSegments | null>(null);
   const [liveFeed, setLiveFeed] = useState<LiveFeedItem[]>([]);
   const [onlineUsers, setOnlineUsers] = useState<OnlineUser[]>([]);
+  const [feedback, setFeedback] = useState<{ id: string; email: string | null; question_id: string; question_type: string; feedback_text: string; created_at: string }[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState<UserSearchResult[] | null>(null);
   const [searchLoading, setSearchLoading] = useState(false);
@@ -450,6 +451,10 @@ export default function Admin() {
       .eq("status", "pending")
       .order("created_at", { ascending: false });
     if (pendingData) setPendingUpgrades(pendingData);
+
+    // Fetch question feedback
+    const { data: fbData } = await supabase!.rpc("admin_question_feedback", { limit_count: 20 });
+    if (fbData && Array.isArray(fbData)) setFeedback(fbData);
 
     setLoading(false);
     setLastRefresh(new Date());
@@ -1514,7 +1519,44 @@ export default function Admin() {
       </div>
 
       {/* ══════════════════════════════════════════════════════ */}
-      {/* SECTION 11: User Search                                */}
+      {/* SECTION 11: Question Feedback                           */}
+      {/* ══════════════════════════════════════════════════════ */}
+      <div className="bg-[var(--surface)] border border-[var(--border)] rounded-xl p-5 mt-8">
+        <h2 className="text-sm font-semibold text-[var(--text-primary)] mb-4 flex items-center gap-2">
+          <AlertTriangle className="w-4 h-4 text-amber-500" />
+          Fragen-Feedback ({feedback.length})
+        </h2>
+        {feedback.length === 0 ? (
+          <p className="text-sm text-[var(--muted)] text-center py-4">
+            Noch kein Feedback von Usern eingegangen.
+          </p>
+        ) : (
+          <div className="space-y-3">
+            {feedback.map((f) => (
+              <div key={f.id} className="border border-[var(--border)] rounded-lg p-3">
+                <div className="flex items-center justify-between mb-1.5">
+                  <div className="flex items-center gap-2">
+                    <span className="text-[10px] font-mono bg-[var(--border)]/50 px-1.5 py-0.5 rounded text-[var(--muted)]">
+                      {f.question_type}
+                    </span>
+                    <span className="text-[10px] font-mono text-[var(--muted)]">{f.question_id}</span>
+                  </div>
+                  <span className="text-[10px] text-[var(--muted)]">
+                    {new Date(f.created_at).toLocaleDateString("de-AT", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" })}
+                  </span>
+                </div>
+                <p className="text-sm text-[var(--text-primary)]">{f.feedback_text}</p>
+                {f.email && (
+                  <p className="text-[10px] text-[var(--muted)] mt-1">{f.email}</p>
+                )}
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+
+      {/* ══════════════════════════════════════════════════════ */}
+      {/* SECTION 12: User Search                                */}
       {/* ══════════════════════════════════════════════════════ */}
       <div className="bg-[var(--surface)] border border-[var(--border)] rounded-xl p-5 mt-8">
         <h2 className="text-sm font-semibold text-[var(--text-primary)] mb-4 flex items-center gap-2">
