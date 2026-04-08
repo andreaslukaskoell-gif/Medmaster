@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { useStore } from "@/store/useStore";
 
 const STORAGE_KEY = "medmaster-review-prompt";
-const TRUSTPILOT_URL = "https://www.trustpilot.com/evaluate/medmaster.at";
+const TRUSTPILOT_URL = "https://www.trustpilot.com/review/medmaster.at";
 
 type ReviewState = {
   dismissed: boolean;
