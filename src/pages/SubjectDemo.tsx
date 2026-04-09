@@ -273,12 +273,18 @@ function LeadCapture({ subject }: { subject: string }) {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
-    const leads = JSON.parse(localStorage.getItem("medmaster_leads") || "[]");
-    leads.push({ email, subject, date: new Date().toISOString(), source: "subject-demo" });
-    localStorage.setItem("medmaster_leads", JSON.stringify(leads));
+    const trimmed = email.trim().toLowerCase();
+    // Store in Supabase leads table (not localStorage — DSGVO)
+    const { supabase } = await import("@/lib/supabase");
+    if (supabase) {
+      await supabase.from("leads").upsert(
+        { email: trimmed, source: "subject-demo", created_at: new Date().toISOString() },
+        { onConflict: "email" }
+      ).then(() => {});
+    }
     setSubmitted(true);
   };
 
@@ -330,6 +336,10 @@ function LeadCapture({ subject }: { subject: string }) {
           Anmelden
         </button>
       </form>
+      <p className="text-xs text-[var(--muted)] mt-2">
+        Mit der Anmeldung stimmst du zu, Lerntipps per E-Mail zu erhalten. Abmeldung jederzeit möglich.{" "}
+        <a href="/datenschutz" className="text-[var(--accent)] hover:underline">Datenschutzerklärung</a>
+      </p>
     </div>
   );
 }

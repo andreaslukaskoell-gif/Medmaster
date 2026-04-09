@@ -200,7 +200,10 @@ export function ExitIntentCapture() {
                   </form>
 
                   <p className="text-center text-xs text-[var(--muted)]">
-                    Kein Spam. Du kannst dich jederzeit abmelden.
+                    Mit dem Absenden stimmst du zu, Lerntipps per E-Mail zu erhalten. Abmeldung jederzeit möglich.{" "}
+                    <a href="/datenschutz" className="text-[var(--accent)] hover:underline">
+                      Datenschutzerklärung
+                    </a>
                   </p>
                 </div>
               )}

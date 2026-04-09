@@ -772,7 +772,16 @@ export function Sidebar({ open, onClose }: { open: boolean; onClose: () => void 
             </button>
           </div>
         )}
-        <p className="text-[11px] text-[var(--muted)] text-center pt-2 opacity-50">medmaster.at</p>
+        <button
+          type="button"
+          onClick={() => {
+            localStorage.removeItem("medmaster_consent");
+            window.location.reload();
+          }}
+          className="block w-full text-[11px] text-[var(--muted)] text-center pt-2 opacity-50 hover:opacity-100 hover:text-[var(--accent)] transition-all cursor-pointer"
+        >
+          Cookie-Einstellungen
+        </button>
       </div>
     </>
   );

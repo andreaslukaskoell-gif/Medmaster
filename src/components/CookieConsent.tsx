@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { useCookieConsent } from "@/hooks/useCookieConsent";
-import { updateGtagConsent } from "@/lib/growthTracking";
+import { initGtagConsentMode, initGtag } from "@/lib/growthTracking";
 
 export function CookieConsentBanner() {
   const { hasConsented, acceptAll, acceptNecessaryOnly, updateConsent } = useCookieConsent();
@@ -28,13 +28,17 @@ export function CookieConsentBanner() {
 
   const handleSaveCustom = () => {
     updateConsent({ analytics, marketing });
-    updateGtagConsent(marketing);
+    if (marketing) {
+      initGtagConsentMode(marketing, analytics);
+      initGtag();
+    }
     window.location.reload();
   };
 
   const handleAcceptAll = () => {
     acceptAll();
-    updateGtagConsent(true);
+    initGtagConsentMode(true, true);
+    initGtag();
     window.location.reload();
   };
 

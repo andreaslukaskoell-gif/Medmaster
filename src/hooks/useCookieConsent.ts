@@ -86,6 +86,11 @@ export function useCookieConsent() {
   };
 }
 
+/** Reset consent — re-shows the cookie banner on next page load. */
+export function resetConsent() {
+  localStorage.removeItem(CONSENT_KEY);
+}
+
 /** Non-hook version for use in main.tsx (outside React tree). */
 export function getStoredConsent(): ConsentState | null {
   return loadConsent();

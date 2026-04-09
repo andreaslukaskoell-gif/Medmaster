@@ -71,7 +71,7 @@ let gtagReady = false;
  * Must be called BEFORE gtag("config") — ideally before the gtag script loads.
  * This allows Google to model conversions even when full consent is denied.
  */
-export function initGtagConsentMode(marketingConsent: boolean) {
+export function initGtagConsentMode(marketingConsent: boolean, analyticsConsent = false) {
   if (typeof window === "undefined") return;
   if (location.hostname === "localhost" || location.hostname === "127.0.0.1") return;
 
@@ -83,18 +83,19 @@ export function initGtagConsentMode(marketingConsent: boolean) {
     ad_storage: marketingConsent ? "granted" : "denied",
     ad_user_data: marketingConsent ? "granted" : "denied",
     ad_personalization: marketingConsent ? "granted" : "denied",
-    analytics_storage: "granted", // basic analytics always allowed for conversion modeling
+    analytics_storage: analyticsConsent ? "granted" : "denied",
     wait_for_update: 500,
   });
 }
 
 /** Update consent state after user interaction with cookie banner. */
-export function updateGtagConsent(marketingConsent: boolean) {
+export function updateGtagConsent(marketingConsent: boolean, analyticsConsent = false) {
   if (!gtagReady) return;
   gtag("consent", "update", {
     ad_storage: marketingConsent ? "granted" : "denied",
     ad_user_data: marketingConsent ? "granted" : "denied",
     ad_personalization: marketingConsent ? "granted" : "denied",
+    analytics_storage: analyticsConsent ? "granted" : "denied",
   });
 }
 
