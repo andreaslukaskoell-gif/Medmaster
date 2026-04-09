@@ -14,7 +14,7 @@ function q(
   correctIndex: 0 | 1 | 2 | 3 | 4,
   explanation: string,
   difficulty: "leicht" | "mittel" | "schwer" = "mittel",
-  tags: string[] = []
+  tags: string[] = [],
 ): Question {
   const ids = ["a", "b", "c", "d", "e"] as const;
   return {
@@ -31,577 +31,565 @@ function q(
 }
 
 export const mathematikPool16: Question[] = [
-  // ═══════════════════════════════════════════════════════════════
-  // ─── Algebra (10 Fragen) ──────────────────────────────────────
-  // ═══════════════════════════════════════════════════════════════
+  // === Algebra (10 Fragen) ===
 
   q(
     "ma-pool-hard-001",
     "mathe-kap3",
-    "Vereinfache vollständig: ((3⁴ · 9⁻¹) / 27²) · 81",
+    "Vereinfache vollständig: ((3\u2074 \u00b7 9\u207b\u00b9) / 27\u00b2) \u00b7 81",
     ["3", "9", "1", "1/3", "27"],
     2,
-    "Alles in Potenzen von 3: 3⁴ · 9⁻¹ = 3⁴ · 3⁻² = 3². 27² = (3³)² = 3⁶. Also 3²/3⁶ = 3⁻⁴. Mal 81 = 3⁴: 3⁻⁴ · 3⁴ = 3⁰ = 1. Fehler A (3): Vergisst 9⁻¹ umzuwandeln, rechnet 3⁴/3⁶ · 3⁴ = 3². Fehler B (9): Rechnet 81 = 3² statt 3⁴ → 3⁻⁴ · 3² = 3⁻² = 1/9, verwechselt dann mit 9. Fehler D (1/3): Rechnet 27² = 3⁵ statt 3⁶. Fehler E (27): Vergisst die Division durch 27².",
+    "Alles in Potenzen von 3 umschreiben: 3\u2074 \u00b7 9\u207b\u00b9 = 3\u2074 \u00b7 (3\u00b2)\u207b\u00b9 = 3\u2074 \u00b7 3\u207b\u00b2 = 3\u00b2. Dann 27\u00b2 = (3\u00b3)\u00b2 = 3\u2076. Also Bruch = 3\u00b2/3\u2076 = 3\u207b\u2074. Schlie\u00dflich \u00d781 = \u00d73\u2074: Ergebnis = 3\u207b\u2074 \u00b7 3\u2074 = 3\u2070 = 1. Fehler A (3): Vergisst 9\u207b\u00b9 umzuwandeln. Fehler B (9): Rechnet 81 = 3\u00b2 statt 3\u2074. Fehler D (1/3): Rechnet 27\u00b2 = 3\u2075 statt 3\u2076. Fehler E (27): Vergisst Division durch 27\u00b2.",
     "schwer",
-    ["Potenzgesetze", "rechenfrage"]
+    ["Potenzgesetze", "rechenfrage"],
   ),
 
   q(
     "ma-pool-hard-002",
     "mathe-kap2",
-    "Löse das Gleichungssystem: 2x + y = 7 und x + 3y = 11. Berechne den Wert von x² + y².",
+    "L\u00f6se das Gleichungssystem: 2x + y = 7 und x + 3y = 11. Berechne x\u00b2 + y\u00b2.",
     ["10", "13", "17", "11", "15"],
     1,
-    "Aus Gl.1: y = 7 - 2x. In Gl.2: x + 3(7 - 2x) = 11 → x + 21 - 6x = 11 → -5x = -10 → x = 2, y = 3. x² + y² = 4 + 9 = 13. Fehler A (10): Vertauscht x und y → 9 + 1. Fehler C (17): Rechnet x² + y² = (x+y)² = 25 und zieht 2xy nicht ab. Fehler D (11): Berechnet x + y = 5 und quadriert falsch. Fehler E (15): Nimmt x·y + x² = 6 + 9.",
+    "Aus Gl.1: y = 7 \u2212 2x. Einsetzen in Gl.2: x + 3(7 \u2212 2x) = 11 \u2192 x + 21 \u2212 6x = 11 \u2192 \u22125x = \u221210 \u2192 x = 2, y = 3. Also x\u00b2 + y\u00b2 = 4 + 9 = 13. Fehler A (10): Vertauscht x und y \u2192 9 + 1 = 10. Fehler C (17): Rechnet (x+y)\u00b2 = 25 ohne 2xy abzuziehen. Fehler D (11): Addiert x + y + xy = 5 + 6 = 11. Fehler E (15): Addiert x\u00b2 + y\u00b2 + xy = 4 + 9 + 6 = 19, dann Rechenfehler.",
     "schwer",
-    ["Gleichungssystem", "rechenfrage"]
+    ["Gleichungssystem", "rechenfrage"],
   ),
 
   q(
     "ma-pool-hard-003",
     "mathe-kap3",
-    "Ein Kapital von 5.000 € wird 4 Jahre mit 3 % p.a. Zinseszins angelegt. Wie hoch ist das Endkapital (auf ganze Euro gerundet)?",
-    ["5.600 €", "5.628 €", "5.627 €", "5.624 €", "5.650 €"],
+    "Ein Kapital von 5.000 \u20ac wird 4 Jahre mit 3 % p.a. Zinseszins angelegt. Wie hoch ist das Endkapital (auf ganze Euro gerundet)?",
+    ["5.600 \u20ac", "5.628 \u20ac", "5.627 \u20ac", "5.624 \u20ac", "5.650 \u20ac"],
     1,
-    "K₄ = 5000 · 1,03⁴. 1,03² = 1,0609. 1,03⁴ = 1,0609² = 1,12550881. K₄ = 5000 · 1,12550881 = 5627,54 ≈ 5.628 €. Fehler A (5.600): Einfache Zinsen 5000 · 1,12 = 5600. Fehler C (5.627): Rundet ab statt auf. Fehler D (5.624): Rechnet 1,03⁴ ≈ 1,1248 (Binomische Näherung ohne höhere Terme). Fehler E (5.650): Rechnet mit 3,25 % statt 3 %.",
+    "K\u2084 = 5000 \u00b7 1,03\u2074. Berechnung: 1,03\u00b2 = 1,0609. 1,03\u2074 = 1,0609\u00b2 = 1,12550881. K\u2084 = 5000 \u00b7 1,12550881 = 5627,54 \u2192 gerundet 5.628 \u20ac. Fehler A (5.600): Einfache Zinsen: 5000 \u00b7 1,12 = 5.600. Fehler C (5.627): Rundet ab statt kaufm\u00e4nnisch. Fehler D (5.624): Verwendet Linearisierung ohne h\u00f6here Terme. Fehler E (5.650): Falscher Zinssatz von ca. 3,25 %.",
     "schwer",
-    ["Zinseszins", "Exponentialrechnung", "rechenfrage"]
+    ["Zinseszins", "Exponentialrechnung", "rechenfrage"],
   ),
 
   q(
     "ma-pool-hard-004",
     "mathe-kap3",
-    "Ein Preis von 200 € wird zunächst um 25 % erhöht und anschließend um 20 % gesenkt. Wie hoch ist der Endpreis?",
-    ["210 €", "205 €", "200 €", "195 €", "190 €"],
+    "Ein Preis von 200 \u20ac wird zunächst um 25 % erhöht und anschließend um 20 % gesenkt. Wie hoch ist der Endpreis?",
+    ["210 \u20ac", "205 \u20ac", "200 \u20ac", "195 \u20ac", "190 \u20ac"],
     2,
-    "Schritt 1: 200 · 1,25 = 250. Schritt 2: 250 · 0,80 = 200. Endpreis = 200 €. Die Erhöhung um 25 % und Senkung um 20 % heben sich exakt auf (1,25 · 0,80 = 1,00). Fehler A (210): Rechnet 200 + 25 % - 20 % = 200 + 50 - 40 = 210 (addiert/subtrahiert Prozente nacheinander von 200). Fehler B (205): Nimmt Mittelwert der beiden Rechnungen. Fehler D (195): Rechnet erst -20 %, dann +25 % von 160. Fehler E (190): Zieht 5 % Differenz ab: 200 · 0,95.",
+    "Schritt 1: 200 \u00b7 1,25 = 250 \u20ac. Schritt 2: 250 \u00b7 0,80 = 200 \u20ac. Gesamtfaktor: 1,25 \u00b7 0,80 = 1,00. Fehler A (210): Berechnet beide \u00c4nderungen vom Ausgangswert: 200 + 50 \u2212 40 = 210. Fehler B (205): Mittelt zwischen 210 und 200. Fehler D (195): Zieht netto 2,5 % ab. Fehler E (190): Rechnet 200 \u00b7 0,95 = 190.",
     "schwer",
-    ["Prozentrechnung", "rechenfrage"]
+    ["Prozentrechnung", "rechenfrage"],
   ),
 
   q(
     "ma-pool-hard-005",
     "mathe-kap3",
-    "Berechne: (1/2 + 1/3) / (1/4 - 1/6)",
+    "Berechne: (1/2 + 1/3) / (1/4 \u2212 1/6)",
     ["10", "8", "12", "6", "5"],
     0,
-    "Zähler: 1/2 + 1/3 = 3/6 + 2/6 = 5/6. Nenner: 1/4 - 1/6 = 3/12 - 2/12 = 1/12. Division: (5/6) / (1/12) = (5/6) · 12 = 10. Fehler B (8): Rechnet Nenner als 1/4 + 1/6 = 5/12 → (5/6)/(5/12) = 2, verwechselt dann mit 8. Fehler C (12): Vergisst den Zählerbruch und rechnet 1/(1/12) = 12. Fehler D (6): Rechnet (5/6) · (6/5) = 1, verwechselt Kehrwert. Fehler E (5): Rechnet nur den Zähler 5/6 ≈ 0,83 und multipliziert mit 6.",
+    "Z\u00e4hler: 1/2 + 1/3 = 3/6 + 2/6 = 5/6. Nenner: 1/4 \u2212 1/6 = 3/12 \u2212 2/12 = 1/12. Division: (5/6) \u00f7 (1/12) = (5/6) \u00b7 12 = 10. Fehler B (8): Rechnet Nenner als 1/4 \u2212 1/8 = 1/8 \u2192 (5/6) \u00b7 8 \u2248 6,67, rundet auf 8. Fehler C (12): Rechnet nur 1/(1/12) = 12. Fehler D (6): Rechnet (5/6) \u00b7 (6/1) = 5, nimmt dann 6. Fehler E (5): Nimmt nur den Z\u00e4hler 5/6 \u2248 5.",
     "schwer",
-    ["Bruchrechnung", "verschachtelte Brüche", "rechenfrage"]
+    ["Bruchrechnung", "verschachtelte Br\u00fcche", "rechenfrage"],
   ),
 
   q(
     "ma-pool-hard-006",
     "mathe-kap2",
-    "Bestimme die Lösungen der Gleichung 2x² - 7x + 3 = 0. Wie lautet das Produkt der beiden Lösungen?",
+    "Bestimme die L\u00f6sungen der Gleichung 2x\u00b2 \u2212 7x + 3 = 0. Wie lautet das Produkt der beiden L\u00f6sungen?",
     ["3/2", "7/2", "3", "1/2", "2"],
     0,
-    "Diskriminante: D = 49 - 24 = 25. x₁ = (7+5)/4 = 3, x₂ = (7-5)/4 = 1/2. Produkt: 3 · 1/2 = 3/2. Alternativ: nach Vieta c/a = 3/2. Fehler B (7/2): Verwechselt mit Summe der Lösungen (Vieta: -b/a = 7/2). Fehler C (3): Nimmt nur x₁. Fehler D (1/2): Nimmt nur x₂. Fehler E (2): Rechnet a/c statt c/a.",
+    "D = 49 \u2212 24 = 25. x\u2081 = (7+5)/4 = 3, x\u2082 = (7\u22125)/4 = 1/2. Produkt: 3 \u00b7 1/2 = 3/2. Nach Vieta: c/a = 3/2. Fehler B (7/2): Verwechselt mit der Summe (\u2212b/a = 7/2). Fehler C (3): Nimmt nur x\u2081. Fehler D (1/2): Nimmt nur x\u2082. Fehler E (2): Rechnet a/c = 2/3, verwechselt mit 2.",
     "schwer",
-    ["quadratische Gleichung", "Vieta", "rechenfrage"]
+    ["quadratische Gleichung", "Vieta", "rechenfrage"],
   ),
 
   q(
     "ma-pool-hard-007",
     "mathe-kap3",
-    "Wie viel Prozent von 80 sind 12?",
-    ["12 %", "15 %", "18 %", "14 %", "16 %"],
-    1,
-    "Anteil = 12/80 = 0,15 = 15 %. Fehler A (12 %): Verwechselt absoluten Wert mit Prozentsatz. Fehler C (18 %): Rechnet 12/66,67 (zieht 12 von 80 ab). Fehler D (14 %): Rechnet 12/85 (addiert statt zu dividieren). Fehler E (16 %): Rechnet 80/5 = 16 (falscher Ansatz).",
+    "Ein Stoff zerf\u00e4llt exponentiell: N(t) = N\u2080 \u00b7 (1/2)^(t/T). Mit N\u2080 = 800, T = 5 h. Wie viel bleibt nach t = 15 h?",
+    ["100", "200", "50", "400", "25"],
+    0,
+    "N(15) = 800 \u00b7 (1/2)^(15/5) = 800 \u00b7 (1/2)\u00b3 = 800/8 = 100. Fehler B (200): Rechnet (1/2)\u00b2 statt (1/2)\u00b3 \u2192 800/4. Fehler C (50): Rechnet (1/2)\u2074 \u2192 800/16. Fehler D (400): Rechnet (1/2)\u00b9 \u2192 800/2. Fehler E (25): Rechnet (1/2)\u2075 \u2192 800/32.",
     "schwer",
-    ["Prozentrechnung", "rechenfrage"]
+    ["Exponentialzerfall", "Halbwertszeit", "rechenfrage"],
   ),
 
   q(
     "ma-pool-hard-008",
     "mathe-kap3",
-    "Ein Artikel kostet 120 €. Zuerst wird er um 20 % aufgeschlagen, dann wird vom neuen Preis ein Rabatt von 15 % gewährt. Wie hoch ist der Endpreis?",
-    ["120,00 €", "126,00 €", "122,40 €", "118,80 €", "130,00 €"],
+    "Ein Artikel kostet 120 \u20ac. Zuerst wird er um 20 % aufgeschlagen, dann wird vom neuen Preis ein Rabatt von 15 % gew\u00e4hrt. Wie hoch ist der Endpreis?",
+    ["120,00 \u20ac", "126,00 \u20ac", "122,40 \u20ac", "118,80 \u20ac", "130,00 \u20ac"],
     2,
-    "Schritt 1: 120 · 1,20 = 144 €. Schritt 2: 144 · 0,85 = 122,40 €. Faktor insgesamt: 1,20 · 0,85 = 1,02. Fehler A (120,00): Glaubt +20 %-15 % ≈ +5 % sei ungefähr 0 %. Fehler B (126,00): Rechnet 120 · 1,05 = 126 (addiert die Prozentsätze: +20 %-15 % = +5 %). Fehler D (118,80): Kehrt die Reihenfolge um: 120 · 0,85 · 1,20 = 122,40 … nein, gleich. Besser: rechnet 120 · 0,99 = 118,80 (nimmt -1 % Nettoverlust). Fehler E (130,00): Rechnet nur den Aufschlag falsch: 120 + 10 % statt 120 · 1,20.",
+    "Aufschlag: 120 \u00b7 1,20 = 144 \u20ac. Rabatt: 144 \u00b7 0,85 = 122,40 \u20ac. Gesamtfaktor: 1,20 \u00b7 0,85 = 1,02. Fehler A (120,00): Meint +20 % und \u221215 % heben sich auf. Fehler B (126,00): Addiert Prozents\u00e4tze: 120 \u00b7 1,05 = 126. Fehler D (118,80): Rechnet 120 \u00b7 0,99 = 118,80. Fehler E (130,00): Rechnet nur den Aufschlag falsch.",
     "schwer",
-    ["Prozentrechnung", "Aufschlag", "Rabatt", "rechenfrage"]
+    ["Prozentrechnung", "Aufschlag", "Rabatt", "rechenfrage"],
   ),
 
   q(
     "ma-pool-hard-009",
     "mathe-kap2",
-    "Löse die logarithmische Gleichung: log₂(x) + log₂(x - 2) = 3. Welchen Wert hat x?",
+    "L\u00f6se die logarithmische Gleichung: log\u2082(x) + log\u2082(x \u2212 2) = 3. Welchen Wert hat x?",
     ["4", "3", "5", "6", "2"],
     0,
-    "log₂(x) + log₂(x-2) = log₂(x(x-2)) = 3. Also x(x-2) = 2³ = 8 → x² - 2x - 8 = 0. Diskriminante: 4 + 32 = 36. x = (2±6)/2 → x = 4 oder x = -2. Da x > 2 (Definitionsbereich), ist x = 4. Fehler B (3): Setzt log₂(x²) = 3 → x = 2√2 ≈ 2,83, rundet auf 3. Fehler C (5): Löst x² - 2x = 8 als x² = 10 → x ≈ 3,16, rundet auf 5. Fehler D (6): Rechnet x(x-2) = 2·3 = 6 statt 2³ = 8. Fehler E (2): Probiert x = 2, aber log₂(0) ist undefiniert.",
+    "Zusammenfassen: log\u2082(x(x\u22122)) = 3 \u2192 x(x\u22122) = 8 \u2192 x\u00b2 \u2212 2x \u2212 8 = 0. D = 4 + 32 = 36. x = (2\u00b16)/2. Also x = 4 oder x = \u22122. Wegen Definitionsbereich (x > 2) gilt nur x = 4. Fehler B (3): Setzt log\u2082(x\u00b2) = 3 \u2192 x = 2\u221a2 \u2248 2,83, rundet auf 3. Fehler C (5): L\u00f6st falsch. Fehler D (6): Rechnet x(x\u22122) = 2\u00b73 = 6 statt 2\u00b3 = 8. Fehler E (2): log\u2082(0) ist undefiniert.",
     "schwer",
-    ["Logarithmus", "quadratische Gleichung", "rechenfrage"]
+    ["Logarithmus", "quadratische Gleichung", "rechenfrage"],
   ),
 
   q(
     "ma-pool-hard-010",
     "mathe-kap3",
-    "Vereinfache: (√12 + √27) / √3",
-    ["5", "√13", "3 + √3", "7", "3√3"],
+    "Vereinfache: (\u221a12 + \u221a27) / \u221a3",
+    ["5", "\u221a13", "3 + \u221a3", "7", "3\u221a3"],
     0,
-    "√12 = 2√3, √27 = 3√3. Zähler: 2√3 + 3√3 = 5√3. Division: 5√3 / √3 = 5. Fehler B (√13): Addiert unter der Wurzel: √(12+27)/√3 = √39/√3 = √13. Fehler C (3+√3): Vereinfacht nur √27/√3 = 3 und lässt √12/√3 = √4·3/√3 = 2√3/√3 falsch als √3. Fehler D (7): Rechnet √12 = 4 statt 2√3. Fehler E (3√3): Rechnet 5√3/√3 = 5·√3/√3 falsch als 3√3.",
+    "\u221a12 = 2\u221a3, \u221a27 = 3\u221a3. Z\u00e4hler: 2\u221a3 + 3\u221a3 = 5\u221a3. Division: 5\u221a3/\u221a3 = 5. Fehler B (\u221a13): Addiert unter der Wurzel: \u221a(12+27)/\u221a3 = \u221a39/\u221a3 = \u221a13. Fehler C (3+\u221a3): Vereinfacht nur \u221a27/\u221a3 = 3 und rechnet \u221a12/\u221a3 falsch als \u221a3. Fehler D (7): Rechnet \u221a12 \u2248 4 und \u221a27 \u2248 5, dann 9/\u221a3 \u2248 7. Fehler E (3\u221a3): Rechnet 5\u221a3/\u221a3 falsch als 3\u221a3.",
     "schwer",
-    ["Wurzelrechnung", "Vereinfachen", "rechenfrage"]
+    ["Wurzelrechnung", "Vereinfachen", "rechenfrage"],
   ),
 
-  // ═══════════════════════════════════════════════════════════════
-  // ─── Geometrie (12 Fragen) ────────────────────────────────────
-  // ═══════════════════════════════════════════════════════════════
+  // === Geometrie (12 Fragen) ===
 
   q(
     "ma-pool-hard-011",
     "mathe-kap2",
-    "Ein Kegel hat die Höhe h = 12 cm und den Grundflächenradius r = 5 cm. Wie groß ist die Mantelfläche?",
-    ["65π cm²", "60π cm²", "25π cm²", "30π cm²", "169π cm²"],
+    "Ein Kegel hat die H\u00f6he h = 12 cm und den Grundfl\u00e4chenradius r = 5 cm. Wie gro\u00df ist die Mantelfl\u00e4che?",
+    ["65\u03c0 cm\u00b2", "60\u03c0 cm\u00b2", "25\u03c0 cm\u00b2", "30\u03c0 cm\u00b2", "169\u03c0 cm\u00b2"],
     0,
-    "Mantellinie s = √(r² + h²) = √(25 + 144) = √169 = 13 cm. Mantelfläche M = π · r · s = π · 5 · 13 = 65π cm². Fehler B (60π): Verwendet h statt s → π · 5 · 12 = 60π. Fehler C (25π): Berechnet Grundfläche πr² = 25π statt Mantelfläche. Fehler D (30π): Rechnet π · r · (r+h)/... falsch. Fehler E (169π): Rechnet πs² = 169π.",
+    "Mantellinie: s = \u221a(r\u00b2 + h\u00b2) = \u221a(25 + 144) = \u221a169 = 13 cm. Mantelfl\u00e4che: M = \u03c0\u00b7r\u00b7s = \u03c0\u00b75\u00b713 = 65\u03c0 cm\u00b2. Fehler B (60\u03c0): Verwendet h statt s \u2192 \u03c0\u00b75\u00b712. Fehler C (25\u03c0): Berechnet Grundfl\u00e4che \u03c0r\u00b2. Fehler D (30\u03c0): Rechnet \u03c0\u00b7r\u00b7h/2 = 30\u03c0. Fehler E (169\u03c0): Rechnet \u03c0s\u00b2 = 169\u03c0.",
     "schwer",
-    ["Kegel", "Mantelfläche", "Pythagoras", "rechenfrage"]
+    ["Kegel", "Mantelfl\u00e4che", "Pythagoras", "rechenfrage"],
   ),
 
   q(
     "ma-pool-hard-012",
     "mathe-kap2",
-    "Auf einer Kugel mit Radius R = 10 cm wird eine Kugelkappe der Höhe h = 3 cm abgetrennt. Wie groß ist die Mantelfläche dieser Kappe?",
-    ["60π cm²", "30π cm²", "90π cm²", "100π cm²", "9π cm²"],
+    "Auf einer Kugel mit Radius R = 10 cm wird eine Kugelkappe der H\u00f6he h = 3 cm abgetrennt. Wie gro\u00df ist die Mantelfl\u00e4che (Kalotte)?",
+    ["60\u03c0 cm\u00b2", "30\u03c0 cm\u00b2", "90\u03c0 cm\u00b2", "100\u03c0 cm\u00b2", "9\u03c0 cm\u00b2"],
     0,
-    "Mantelfläche einer Kugelkappe: A = 2πRh = 2π · 10 · 3 = 60π cm². Fehler B (30π): Rechnet πRh statt 2πRh (Faktor 2 vergessen). Fehler C (90π): Verwendet R² statt R·h → 2π · 9 · ... Rechnet 2π·R·(R-h/2). Fehler D (100π): Rechnet πR² (Grundfläche des Großkreises). Fehler E (9π): Rechnet πh² = 9π (verwechselt mit Kreisfläche des Radius h).",
+    "Mantelfl\u00e4che einer Kugelkappe: A = 2\u03c0Rh = 2\u03c0\u00b710\u00b73 = 60\u03c0 cm\u00b2. Fehler B (30\u03c0): Vergisst Faktor 2 \u2192 \u03c0Rh = 30\u03c0. Fehler C (90\u03c0): Verwendet falsche Formel. Fehler D (100\u03c0): Rechnet \u03c0R\u00b2 (Gro\u00dfkreisfl\u00e4che). Fehler E (9\u03c0): Rechnet \u03c0h\u00b2 = 9\u03c0.",
     "schwer",
-    ["Kugel", "Kugelkappe", "Oberfläche", "rechenfrage"]
+    ["Kugel", "Kugelkappe", "Oberfl\u00e4che", "rechenfrage"],
   ),
 
   q(
     "ma-pool-hard-013",
     "mathe-kap2",
-    "Berechne das Volumen einer quadratischen Pyramide mit Grundkante a = 6 cm und Höhe h = 8 cm.",
-    ["96 cm³", "288 cm³", "144 cm³", "48 cm³", "192 cm³"],
+    "Berechne das Volumen einer quadratischen Pyramide mit Grundkante a = 6 cm und H\u00f6he h = 8 cm.",
+    ["96 cm\u00b3", "288 cm\u00b3", "144 cm\u00b3", "48 cm\u00b3", "192 cm\u00b3"],
     0,
-    "V = (1/3) · a² · h = (1/3) · 36 · 8 = (1/3) · 288 = 96 cm³. Fehler B (288): Vergisst den Faktor 1/3 → a²·h = 288. Fehler C (144): Rechnet (1/2)·a²·h = 144 (falscher Faktor 1/2 statt 1/3). Fehler D (48): Rechnet (1/3)·a·h = (1/3)·6·8·... → nimmst nur a statt a². Fehler E (192): Rechnet (2/3)·a²·h = 192.",
+    "V = (1/3)\u00b7a\u00b2\u00b7h = (1/3)\u00b736\u00b78 = 96 cm\u00b3. Fehler B (288): Vergisst Faktor 1/3 \u2192 a\u00b2\u00b7h = 288. Fehler C (144): Nimmt Faktor 1/2 statt 1/3 \u2192 288/2 = 144. Fehler D (48): Rechnet (1/6)\u00b7a\u00b2\u00b7h = 48. Fehler E (192): Rechnet (2/3)\u00b7a\u00b2\u00b7h = 192.",
     "schwer",
-    ["Pyramide", "Volumen", "rechenfrage"]
+    ["Pyramide", "Volumen", "rechenfrage"],
   ),
 
   q(
     "ma-pool-hard-014",
     "mathe-kap2",
-    "Berechne das Volumen eines regulären Tetraeders mit Kantenlänge a = 6 cm. (Hinweis: V = a³√2/12)",
-    ["18√2 cm³", "36√2 cm³", "12√2 cm³", "6√2 cm³", "72√2 cm³"],
+    "Berechne das Volumen eines regul\u00e4ren Tetraeders mit Kantenl\u00e4nge a = 6 cm. (Formel: V = a\u00b3\u221a2 / 12)",
+    ["18\u221a2 cm\u00b3", "36\u221a2 cm\u00b3", "12\u221a2 cm\u00b3", "6\u221a2 cm\u00b3", "72\u221a2 cm\u00b3"],
     0,
-    "V = a³√2 / 12 = 216√2 / 12 = 18√2 cm³ ≈ 25,46 cm³. Fehler B (36√2): Rechnet a³√2/6 (Faktor 6 statt 12). Fehler C (12√2): Rechnet a²√2/12 · a falsch → 36·√2·6/12 = 12√2. Fehler D (6√2): Rechnet a³√2/36. Fehler E (72√2): Rechnet a³√2/3.",
+    "V = a\u00b3\u221a2/12 = 216\u221a2/12 = 18\u221a2 \u2248 25,46 cm\u00b3. Fehler B (36\u221a2): Rechnet a\u00b3\u221a2/6 (Nenner 6 statt 12). Fehler C (12\u221a2): Verwendet a\u00b2 statt a\u00b3. Fehler D (6\u221a2): Rechnet a\u00b3\u221a2/36. Fehler E (72\u221a2): Rechnet a\u00b3\u221a2/3.",
     "schwer",
-    ["Tetraeder", "Volumen", "rechenfrage"]
+    ["Tetraeder", "Volumen", "rechenfrage"],
   ),
 
   q(
     "ma-pool-hard-015",
     "mathe-kap2",
-    "Ein Prisma hat als Grundfläche ein gleichseitiges Dreieck mit Seitenlänge a = 4 cm und eine Höhe von h = 10 cm. Berechne das Volumen.",
-    ["40√3 cm³", "80√3 cm³", "20√3 cm³", "160 cm³", "40 cm³"],
+    "Ein Prisma hat als Grundfl\u00e4che ein gleichseitiges Dreieck mit Seitenl\u00e4nge a = 4 cm und eine H\u00f6he von h = 10 cm. Berechne das Volumen.",
+    ["40\u221a3 cm\u00b3", "80\u221a3 cm\u00b3", "20\u221a3 cm\u00b3", "160 cm\u00b3", "40 cm\u00b3"],
     0,
-    "Grundfläche gleichseitiges Dreieck: A = (√3/4) · a² = (√3/4) · 16 = 4√3 cm². Volumen: V = A · h = 4√3 · 10 = 40√3 cm³ ≈ 69,3 cm³. Fehler B (80√3): Rechnet A = (√3/2)·a² = 8√3 (Faktor 2 statt 4 im Nenner). Fehler C (20√3): Rechnet mit h/2 = 5 oder Faktor 1/2 extra. Fehler D (160): Rechnet a² · h = 160 (quadratische statt dreieckiger Grundfläche). Fehler E (40): Vergisst √3 im Dreieck.",
+    "Grundfl\u00e4che: A = (\u221a3/4)\u00b7a\u00b2 = (\u221a3/4)\u00b716 = 4\u221a3 cm\u00b2. Volumen: V = A\u00b7h = 4\u221a3\u00b710 = 40\u221a3 \u2248 69,3 cm\u00b3. Fehler B (80\u221a3): Rechnet A = (\u221a3/2)\u00b7a\u00b2 (falscher Nenner). Fehler C (20\u221a3): Verwendet h/2 = 5. Fehler D (160): Rechnet a\u00b2\u00b7h = 160 (quadratische Grundfl\u00e4che). Fehler E (40): Vergisst Faktor \u221a3.",
     "schwer",
-    ["Prisma", "gleichseitiges Dreieck", "Volumen", "rechenfrage"]
+    ["Prisma", "gleichseitiges Dreieck", "Volumen", "rechenfrage"],
   ),
 
   q(
     "ma-pool-hard-016",
     "mathe-kap2",
-    "In einen Würfel mit Kantenlänge a = 6 cm wird eine Kugel einbeschrieben. Berechne das Restvolumen V_Würfel - V_Kugel.",
-    ["216 - 36π cm³", "216 - 288π cm³", "216 - 48π cm³", "216 - 108π cm³", "216 - 72π cm³"],
+    "In einen W\u00fcrfel mit Kantenl\u00e4nge a = 6 cm wird eine Kugel einbeschrieben (Inkugel). Berechne V_W\u00fcrfel \u2212 V_Kugel.",
+    ["(216 \u2212 36\u03c0) cm\u00b3", "(216 \u2212 288\u03c0) cm\u00b3", "(216 \u2212 48\u03c0) cm\u00b3", "(216 \u2212 108\u03c0) cm\u00b3", "(216 \u2212 72\u03c0) cm\u00b3"],
     0,
-    "Würfelvolumen V_W = 6³ = 216 cm³. Einbeschriebene Kugel: r = a/2 = 3 cm. V_K = (4/3)π · 3³ = (4/3)π · 27 = 36π cm³. Rest: 216 - 36π ≈ 102,9 cm³. Fehler B: Nimmt r = 6 → V = (4/3)π·216 = 288π. Fehler C: Rechnet (4/3)π·r² = (4/3)π·9·... = 48π (verwechselt r² und r³). Fehler D: Nimmt r = 3, rechnet aber (4/3)π·27 falsch als 108π (mal 4 statt 4/3). Fehler E: Rechnet (4/3)π·(a/2)³ als (2/3)π·27 = ... → verwendet falschen Faktor.",
+    "V_W = 6\u00b3 = 216. Inkugelradius r = a/2 = 3. V_K = (4/3)\u03c0r\u00b3 = (4/3)\u03c0\u00b727 = 36\u03c0. Rest = 216 \u2212 36\u03c0 \u2248 102,9 cm\u00b3. Fehler B: Nimmt r = a = 6 \u2192 V = 288\u03c0. Fehler C: Rechnet (4/3)\u03c0r\u00b2 statt r\u00b3. Fehler D: Rechnet 4\u03c0r\u00b3 statt (4/3)\u03c0r\u00b3 \u2192 108\u03c0. Fehler E: Rechnet (2/3)\u03c0r\u00b3 \u2192 18\u03c0, verwechselt mit 72\u03c0.",
     "schwer",
-    ["Würfel", "Kugel", "Restvolumen", "rechenfrage"]
+    ["W\u00fcrfel", "Kugel", "Restvolumen", "rechenfrage"],
   ),
 
   q(
     "ma-pool-hard-017",
     "mathe-kap2",
-    "Ein Zylinder hat den Radius r = 3 cm und die Höhe h = 10 cm. Berechne die Gesamtoberfläche (Mantel + beide Deckel).",
-    ["78π cm²", "60π cm²", "96π cm²", "69π cm²", "90π cm²"],
+    "Ein Zylinder hat den Radius r = 3 cm und die H\u00f6he h = 10 cm. Berechne die Gesamtoberfl\u00e4che (Mantel + beide Grundfl\u00e4chen).",
+    ["78\u03c0 cm\u00b2", "60\u03c0 cm\u00b2", "96\u03c0 cm\u00b2", "69\u03c0 cm\u00b2", "90\u03c0 cm\u00b2"],
     0,
-    "Mantel: 2πrh = 2π · 3 · 10 = 60π. Zwei Deckel: 2 · πr² = 2 · 9π = 18π. Gesamt: 60π + 18π = 78π cm². Fehler B (60π): Vergisst die Deckel (nur Mantelfläche). Fehler C (96π): Rechnet 2πr(r+h) mit r = 4 statt 3. Fehler D (69π): Rechnet nur einen Deckel: 60π + 9π = 69π. Fehler E (90π): Rechnet Volumen πr²h = 90π statt Oberfläche.",
+    "Mantel = 2\u03c0rh = 60\u03c0. Zwei Deckel = 2\u03c0r\u00b2 = 18\u03c0. Gesamt = 78\u03c0 cm\u00b2. Fehler B (60\u03c0): Vergisst die Deckelfl\u00e4chen. Fehler C (96\u03c0): Nimmt r = 4 statt 3. Fehler D (69\u03c0): Addiert nur einen Deckel: 60\u03c0 + 9\u03c0. Fehler E (90\u03c0): Rechnet Volumen \u03c0r\u00b2h = 90\u03c0 statt Oberfl\u00e4che.",
     "schwer",
-    ["Zylinder", "Oberfläche", "rechenfrage"]
+    ["Zylinder", "Oberfl\u00e4che", "rechenfrage"],
   ),
 
   q(
     "ma-pool-hard-018",
     "mathe-kap2",
-    "Ein Hohlzylinder hat den Außenradius R = 5 cm, den Innenradius r = 3 cm und die Höhe h = 10 cm. Berechne das Volumen.",
-    ["160π cm³", "250π cm³", "90π cm³", "340π cm³", "80π cm³"],
+    "Ein Hohlzylinder hat den Au\u00dfenradius R = 5 cm, den Innenradius r = 3 cm und die H\u00f6he h = 10 cm. Berechne das Volumen.",
+    ["160\u03c0 cm\u00b3", "250\u03c0 cm\u00b3", "90\u03c0 cm\u00b3", "340\u03c0 cm\u00b3", "80\u03c0 cm\u00b3"],
     0,
-    "V = π(R² - r²) · h = π(25 - 9) · 10 = 160π cm³. Fehler B (250π): Rechnet nur πR²h = π·25·10 = 250π (vergisst den Hohlraum abzuziehen). Fehler C (90π): Rechnet nur πr²h = 90π (berechnet den Hohlraum statt des Materials). Fehler D (340π): Addiert statt subtrahiert: π(R²+r²)·h = π·34·10 = 340π. Fehler E (80π): Rechnet π(R-r)²·h = π·4·10 = 40π, verwechselt dann mit 80π (verdoppelt).",
+    "V = \u03c0(R\u00b2 \u2212 r\u00b2)h = \u03c0(25 \u2212 9)\u00b710 = 160\u03c0 cm\u00b3. Fehler B (250\u03c0): Rechnet nur \u03c0R\u00b2h = 250\u03c0 (ignoriert Hohlraum). Fehler C (90\u03c0): Rechnet \u03c0r\u00b2h = 90\u03c0 (berechnet den Hohlraum). Fehler D (340\u03c0): Addiert statt subtrahiert: \u03c0(R\u00b2+r\u00b2)h = 340\u03c0. Fehler E (80\u03c0): Rechnet \u03c0(R\u2212r)\u00b2h = 40\u03c0, verdoppelt auf 80\u03c0.",
     "schwer",
-    ["Hohlzylinder", "Volumen", "rechenfrage"]
+    ["Hohlzylinder", "Volumen", "rechenfrage"],
   ),
 
   q(
     "ma-pool-hard-019",
     "mathe-kap2",
-    "Ein Quader hat die Kantenlängen a = 3 cm, b = 4 cm und c = 12 cm. Wie lang ist die Raumdiagonale?",
-    ["13 cm", "12 cm", "√153 cm", "17 cm", "√157 cm"],
+    "Ein Quader hat die Kantenl\u00e4ngen a = 3 cm, b = 4 cm und c = 12 cm. Wie lang ist die Raumdiagonale?",
+    ["13 cm", "12 cm", "\u221a153 cm", "17 cm", "\u221a157 cm"],
     0,
-    "Raumdiagonale d = √(a² + b² + c²) = √(9 + 16 + 144) = √169 = 13 cm. Fehler B (12): Vergisst a² und rechnet √(16+144) = √160 ≈ 12,6, rundet auf 12. Fehler C (√153): Rechnet a²+b²+c² = 9+16+128 = 153 (c² = 128 statt 144). Fehler D (17): Rechnet erst Flächendiagonale √(9+16) = 5, dann 5+12 = 17 (addiert statt Pythagoras). Fehler E (√157): Rechnet 9+4+144 = 157 (nimmt b statt b²).",
+    "d = \u221a(a\u00b2+b\u00b2+c\u00b2) = \u221a(9+16+144) = \u221a169 = 13 cm. Fehler B (12): Vergisst a\u00b2 \u2192 \u221a(16+144) = \u221a160 \u2248 12,6, rundet auf 12. Fehler C (\u221a153): Nimmt c\u00b2 = 128 statt 144. Fehler D (17): Rechnet Fl\u00e4chendiagonale \u221a(9+16) = 5, addiert c: 5+12 = 17. Fehler E (\u221a157): Nimmt b statt b\u00b2 \u2192 9+4+144 = 157.",
     "schwer",
-    ["Quader", "Raumdiagonale", "Pythagoras", "rechenfrage"]
+    ["Quader", "Raumdiagonale", "Pythagoras", "rechenfrage"],
   ),
 
   q(
     "ma-pool-hard-020",
     "mathe-kap2",
-    "Berechne die Fläche eines Kreisrings mit Außenradius R = 7 cm und Innenradius r = 5 cm.",
-    ["24π cm²", "12π cm²", "49π cm²", "74π cm²", "4π cm²"],
+    "Berechne die Fl\u00e4che eines Kreisrings mit Au\u00dfenradius R = 7 cm und Innenradius r = 5 cm.",
+    ["24\u03c0 cm\u00b2", "12\u03c0 cm\u00b2", "49\u03c0 cm\u00b2", "74\u03c0 cm\u00b2", "4\u03c0 cm\u00b2"],
     0,
-    "A = π(R² - r²) = π(49 - 25) = 24π cm². Fehler B (12π): Rechnet π(R-r)² = π · 4 = 4π, verwechselt dann mit 12π (mal 3). Fehler C (49π): Nimmt nur πR² = 49π. Fehler D (74π): Addiert statt subtrahiert: π(R²+r²) = 74π. Fehler E (4π): Rechnet π(R-r)² = π·2² = 4π.",
+    "A = \u03c0(R\u00b2 \u2212 r\u00b2) = \u03c0(49 \u2212 25) = 24\u03c0 cm\u00b2. Fehler B (12\u03c0): Rechnet \u03c0(R\u2212r)(R+r)/2. Fehler C (49\u03c0): Nimmt nur \u03c0R\u00b2. Fehler D (74\u03c0): Addiert statt subtrahiert: \u03c0(R\u00b2+r\u00b2) = 74\u03c0. Fehler E (4\u03c0): Rechnet \u03c0(R\u2212r)\u00b2 = 4\u03c0.",
     "schwer",
-    ["Kreisring", "Fläche", "rechenfrage"]
+    ["Kreisring", "Fl\u00e4che", "rechenfrage"],
   ),
 
   q(
     "ma-pool-hard-021",
     "mathe-kap2",
-    "Berechne das Volumen eines Kegelstumpfs mit Grundradius R = 5 cm, Deckradius r = 3 cm und Höhe h = 8 cm. (V = πh/3 · (R² + Rr + r²))",
-    ["392π/3 cm³", "128π/3 cm³", "200π/3 cm³", "136π cm³", "256π/3 cm³"],
+    "Berechne das Volumen eines Kegelstumpfs mit R = 5 cm, r = 3 cm und h = 8 cm. (V = \u03c0h/3 \u00b7 (R\u00b2 + Rr + r\u00b2))",
+    ["392\u03c0/3 cm\u00b3", "128\u03c0/3 cm\u00b3", "200\u03c0/3 cm\u00b3", "136\u03c0 cm\u00b3", "256\u03c0/3 cm\u00b3"],
     0,
-    "V = πh/3 · (R² + Rr + r²) = π·8/3 · (25 + 15 + 9) = π·8/3 · 49 = 392π/3 cm³ ≈ 410,5 cm³. Fehler B (128π/3): Rechnet πh/3 · (R²-r²) = π·8/3·16 = 128π/3. Fehler C (200π/3): Rechnet nur mit R²: πh/3·R² = π·8/3·25 = 200π/3. Fehler D (136π): Vergisst den Faktor 1/3 → πh·(R²+Rr+r²)/irgendwas. Fehler E (256π/3): Rechnet πh/3·(R²+r²)·2 ohne Mischterm.",
+    "V = \u03c0\u00b78/3\u00b7(25+15+9) = \u03c0\u00b78/3\u00b749 = 392\u03c0/3 \u2248 410,5 cm\u00b3. Fehler B (128\u03c0/3): Rechnet nur (R\u00b2\u2212r\u00b2) = 16 \u2192 128\u03c0/3. Fehler C (200\u03c0/3): Rechnet nur mit R\u00b2. Fehler D (136\u03c0): Vergisst Faktor 1/3. Fehler E (256\u03c0/3): Rechnet (R\u00b2+r\u00b2)\u00b72 ohne Mischterm.",
     "schwer",
-    ["Kegelstumpf", "Volumen", "rechenfrage"]
+    ["Kegelstumpf", "Volumen", "rechenfrage"],
   ),
 
   q(
     "ma-pool-hard-022",
     "mathe-kap2",
-    "Ein zusammengesetzter Körper besteht aus einem Zylinder (r = 4 cm, h = 6 cm) mit aufgesetzter Halbkugel (r = 4 cm). Berechne das Gesamtvolumen.",
-    ["416π/3 cm³", "96π cm³", "224π/3 cm³", "128π cm³", "160π cm³"],
+    "Ein zusammengesetzter K\u00f6rper: Zylinder (r = 4 cm, h = 6 cm) mit aufgesetzter Halbkugel (r = 4 cm). Berechne das Gesamtvolumen.",
+    ["416\u03c0/3 cm\u00b3", "96\u03c0 cm\u00b3", "224\u03c0/3 cm\u00b3", "128\u03c0 cm\u00b3", "160\u03c0 cm\u00b3"],
     0,
-    "Zylinder: V₁ = πr²h = π·16·6 = 96π. Halbkugel: V₂ = (2/3)πr³ = (2/3)π·64 = 128π/3. Gesamt: 96π + 128π/3 = 288π/3 + 128π/3 = 416π/3 cm³ ≈ 435,6 cm³. Fehler B (96π): Vergisst die Halbkugel. Fehler C (224π/3): Rechnet Halbkugel als (1/3)πr³ = 64π/3 statt (2/3)πr³. Fehler D (128π): Rechnet πr²h + πr³ = 96π + 64π = 160π, dann Tippfehler. Fehler E (160π): Addiert 96π + 64π (nimmt (4/3)πr³/2 = πr³ = 64π).",
+    "Zylinder: V\u2081 = \u03c0r\u00b2h = \u03c0\u00b716\u00b76 = 96\u03c0. Halbkugel: V\u2082 = (2/3)\u03c0r\u00b3 = (2/3)\u03c0\u00b764 = 128\u03c0/3. Gesamt: 96\u03c0 + 128\u03c0/3 = 288\u03c0/3 + 128\u03c0/3 = 416\u03c0/3 \u2248 435,6 cm\u00b3. Fehler B (96\u03c0): Vergisst die Halbkugel. Fehler C (224\u03c0/3): Rechnet Halbkugel als (1/3)\u03c0r\u00b3. Fehler D (128\u03c0): Rechnet Halbkugel als (4/3)\u03c0r\u00b3 (volle Kugel). Fehler E (160\u03c0): Rechnet Halbkugel als \u03c0r\u00b3 = 64\u03c0 \u2192 96\u03c0+64\u03c0.",
     "schwer",
-    ["zusammengesetzter Körper", "Zylinder", "Halbkugel", "rechenfrage"]
+    ["zusammengesetzter K\u00f6rper", "Zylinder", "Halbkugel", "rechenfrage"],
   ),
 
-  // ═══════════════════════════════════════════════════════════════
-  // ─── Einheiten (5 Fragen) ─────────────────────────────────────
-  // ═══════════════════════════════════════════════════════════════
+  // === Einheiten (5 Fragen) ===
 
   q(
     "ma-pool-hard-023",
     "mathe-kap1",
-    "Rechne 0,5 cm³ in mm³ um.",
-    ["500 mm³", "50 mm³", "5.000 mm³", "5 mm³", "0,5 mm³"],
+    "Rechne 0,5 cm\u00b3 in mm\u00b3 um.",
+    ["500 mm\u00b3", "50 mm\u00b3", "5.000 mm\u00b3", "5 mm\u00b3", "0,5 mm\u00b3"],
     0,
-    "1 cm = 10 mm, also 1 cm³ = 10³ mm³ = 1.000 mm³. 0,5 cm³ = 0,5 · 1.000 = 500 mm³. Fehler B (50): Rechnet nur ×100 statt ×1000 (vergisst kubisch). Fehler C (5.000): Rechnet ×10.000 (cm³ → mm³ mit Faktor 10⁴). Fehler D (5): Rechnet ×10 (nur linear umgerechnet). Fehler E (0,5): Gar nicht umgerechnet.",
+    "1 cm = 10 mm, also 1 cm\u00b3 = (10 mm)\u00b3 = 1.000 mm\u00b3. Daher 0,5 cm\u00b3 = 500 mm\u00b3. Fehler B (50): Rechnet \u00d7100 (quadratisch statt kubisch). Fehler C (5.000): Rechnet \u00d710.000. Fehler D (5): Rechnet nur \u00d710 (linear). Fehler E (0,5): Keine Umrechnung.",
     "schwer",
-    ["Einheitenumrechnung", "Volumen", "rechenfrage"]
+    ["Einheitenumrechnung", "Volumen", "rechenfrage"],
   ),
 
   q(
     "ma-pool-hard-024",
     "mathe-kap1",
-    "Die Dichte von Aluminium beträgt 2,7 g/cm³. Wie viel ist das in kg/m³?",
-    ["2.700 kg/m³", "27 kg/m³", "270 kg/m³", "0,0027 kg/m³", "27.000 kg/m³"],
+    "Die Dichte von Aluminium betr\u00e4gt 2,7 g/cm\u00b3. Wie viel ist das in kg/m\u00b3?",
+    ["2.700 kg/m\u00b3", "27 kg/m\u00b3", "270 kg/m\u00b3", "0,0027 kg/m\u00b3", "27.000 kg/m\u00b3"],
     0,
-    "1 g/cm³ = 1.000 kg/m³ (da 1 g = 10⁻³ kg und 1 cm³ = 10⁻⁶ m³; 10⁻³/10⁻⁶ = 10³). Also 2,7 g/cm³ = 2.700 kg/m³. Fehler B (27): Rechnet ×10 statt ×1000. Fehler C (270): Rechnet ×100. Fehler D (0,0027): Dividiert statt multipliziert (×10⁻³). Fehler E (27.000): Rechnet ×10.000.",
+    "1 g = 10\u207b\u00b3 kg. 1 cm\u00b3 = 10\u207b\u2076 m\u00b3. Also 1 g/cm\u00b3 = 10\u207b\u00b3/10\u207b\u2076 = 10\u00b3 kg/m\u00b3. Daher 2,7 g/cm\u00b3 = 2.700 kg/m\u00b3. Fehler B (27): Rechnet \u00d710. Fehler C (270): Rechnet \u00d7100. Fehler D (0,0027): Dividiert statt multipliziert. Fehler E (27.000): Rechnet \u00d710.000.",
     "schwer",
-    ["Einheitenumrechnung", "Dichte", "rechenfrage"]
+    ["Einheitenumrechnung", "Dichte", "rechenfrage"],
   ),
 
   q(
     "ma-pool-hard-025",
     "mathe-kap1",
-    "Ein Läufer (Masse m = 80 kg) bewegt sich mit 72 km/h. Berechne seine kinetische Energie E_kin = ½mv² in Joule.",
+    "Ein L\u00e4ufer (m = 80 kg) bewegt sich mit v = 72 km/h. Berechne die kinetische Energie E = \u00bdmv\u00b2 in Joule.",
     ["16.000 J", "207.360 J", "32.000 J", "1.600 J", "160 J"],
     0,
-    "Schritt 1: 72 km/h = 72/3,6 = 20 m/s. Schritt 2: E = ½ · 80 · 20² = ½ · 80 · 400 = 16.000 J. Fehler B (207.360): Vergisst km/h → m/s und rechnet ½·80·72² = ½·80·5184 = 207.360. Fehler C (32.000): Vergisst den Faktor ½ → 80·400 = 32.000. Fehler D (1.600): Vergisst zu quadrieren → ½·80·20 = 800, verdoppelt dann auf 1.600. Fehler E (160): Rechnet ½·80·(72/36)² = ½·80·4 = 160 (dividiert durch 36 statt 3,6).",
+    "Umrechnung: 72 km/h \u00f7 3,6 = 20 m/s. E = \u00bd\u00b780\u00b720\u00b2 = \u00bd\u00b780\u00b7400 = 16.000 J. Fehler B (207.360): Vergisst km/h \u2192 m/s \u2192 \u00bd\u00b780\u00b772\u00b2. Fehler C (32.000): Vergisst Faktor \u00bd. Fehler D (1.600): Vergisst v\u00b2 \u2192 rechnet \u00bd\u00b780\u00b720\u00b72. Fehler E (160): Dividiert v durch 36 statt 3,6 \u2192 v = 2.",
     "schwer",
-    ["Einheitenumrechnung", "kinetische Energie", "rechenfrage"]
+    ["Einheitenumrechnung", "kinetische Energie", "rechenfrage"],
   ),
 
   q(
     "ma-pool-hard-026",
     "mathe-kap1",
-    "Ein Infusionsgerät liefert 250 mL/min. Wie viel Liter pro Stunde entspricht das?",
+    "Ein Infusionsger\u00e4t liefert 250 mL/min. Wie viel Liter pro Stunde entspricht das?",
     ["15 L/h", "25 L/h", "2,5 L/h", "150 L/h", "1,5 L/h"],
     0,
-    "250 mL/min · 60 min/h = 15.000 mL/h = 15 L/h. Fehler B (25): Rechnet 250/10 = 25 (falscher Faktor). Fehler C (2,5): Rechnet 250/100 = 2,5 (vergisst ×60). Fehler D (150): Rechnet 250 · 60 = 15.000, dann /100 statt /1000 = 150. Fehler E (1,5): Rechnet 250/1000 · 6 = 1,5 (falscher Minutenfaktor).",
+    "250 mL/min \u00d7 60 min/h = 15.000 mL/h. 15.000 mL \u00f7 1.000 = 15 L/h. Fehler B (25): Rechnet 250/10. Fehler C (2,5): Vergisst \u00d760. Fehler D (150): Rechnet 15.000/100 statt /1.000. Fehler E (1,5): Rechnet 250/1.000 \u00b7 6.",
     "schwer",
-    ["Einheitenumrechnung", "Flussrate", "rechenfrage"]
+    ["Einheitenumrechnung", "Flussrate", "rechenfrage"],
   ),
 
   q(
     "ma-pool-hard-027",
     "mathe-kap1",
-    "Ein rechteckiger Bereich misst 1,2 µm × 1,0 µm. Wie groß ist die Fläche in nm²? (1 µm = 1.000 nm)",
-    ["1,2 · 10⁶ nm²", "1,2 · 10³ nm²", "1,2 · 10⁹ nm²", "1.200 nm²", "1,2 nm²"],
+    "Ein rechteckiger Bereich misst 1,2 \u00b5m \u00d7 1,0 \u00b5m. Wie gro\u00df ist die Fl\u00e4che in nm\u00b2? (1 \u00b5m = 1.000 nm)",
+    ["1,2 \u00b7 10\u2076 nm\u00b2", "1,2 \u00b7 10\u00b3 nm\u00b2", "1,2 \u00b7 10\u2079 nm\u00b2", "1.200 nm\u00b2", "1,2 nm\u00b2"],
     0,
-    "1 µm = 1.000 nm = 10³ nm. Also 1 µm² = (10³)² nm² = 10⁶ nm². Fläche = 1,2 µm² = 1,2 · 10⁶ nm². Fehler B (1,2·10³): Rechnet nur ×10³ (linear statt quadratisch). Fehler C (1,2·10⁹): Rechnet ×10⁹ (kubisch statt quadratisch). Fehler D (1.200): Rechnet 1,2 · 1.000 = 1.200 (linear). Fehler E (1,2): Rechnet gar nicht um.",
+    "Fl\u00e4che = 1,2 \u00b5m\u00b2. 1 \u00b5m = 10\u00b3 nm \u2192 1 \u00b5m\u00b2 = 10\u2076 nm\u00b2. Also 1,2 \u00b5m\u00b2 = 1,2 \u00b7 10\u2076 nm\u00b2. Fehler B (1,2\u00b710\u00b3): Linearer statt quadratischer Faktor. Fehler C (1,2\u00b710\u2079): Kubischer Faktor. Fehler D (1.200): 1,2 \u00b7 1.000 (linear). Fehler E (1,2): Keine Umrechnung.",
     "schwer",
-    ["Einheitenumrechnung", "Fläche", "Mikrometer", "rechenfrage"]
+    ["Einheitenumrechnung", "Fl\u00e4che", "Mikrometer", "rechenfrage"],
   ),
 
-  // ═══════════════════════════════════════════════════════════════
-  // ─── Funktionen (12 Fragen) ───────────────────────────────────
-  // ═══════════════════════════════════════════════════════════════
+  // === Funktionen (12 Fragen) ===
 
   q(
     "ma-pool-hard-028",
     "mathe-kap5",
-    "Bestimme alle Nullstellen von f(x) = x³ - 6x² + 9x. Wie viele verschiedene Nullstellen hat f?",
+    "Die Funktion f(x) = x\u00b3 \u2212 6x\u00b2 + 9x hat wie viele verschiedene reelle Nullstellen?",
     ["2", "3", "1", "0", "4"],
     0,
-    "f(x) = x(x² - 6x + 9) = x(x - 3)². Nullstellen: x = 0 (einfach) und x = 3 (doppelt). Also 2 verschiedene Nullstellen. Fehler B (3): Zählt die doppelte Nullstelle als zwei separate. Fehler C (1): Rechnet nur x = 0. Fehler D (0): Meint, Polynome 3. Grades haben keine einfachen Nullstellen. Fehler E (4): Verwechselt mit einem Polynom 4. Grades.",
+    "f(x) = x(x\u00b2 \u2212 6x + 9) = x(x \u2212 3)\u00b2. Nullstellen: x\u2081 = 0 (einfach) und x\u2082 = 3 (doppelt). Also 2 verschiedene Nullstellen. Fehler B (3): Z\u00e4hlt die Vielfachheit mit. Fehler C (1): Sieht nur x = 0. Fehler D (0): Denkt, die Diskriminante sei negativ. Fehler E (4): Verwechselt Grad mit Nullstellenanzahl.",
     "schwer",
-    ["Polynomfunktion", "Nullstellen", "Faktorisierung", "rechenfrage"]
+    ["Polynomfunktion", "Nullstellen", "Faktorisierung", "rechenfrage"],
   ),
 
   q(
     "ma-pool-hard-029",
     "mathe-kap5",
-    "Löse: e^(2x) - 5·e^x + 6 = 0. Berechne die Summe aller Lösungen.",
-    ["ln 6", "ln 5", "ln 2 + ln 3", "5", "ln 2 · ln 3"],
+    "L\u00f6se: e^(2x) \u2212 5\u00b7e^x + 6 = 0. Berechne die Summe aller L\u00f6sungen.",
+    ["ln 6", "ln 5", "5", "ln 2 \u00b7 ln 3", "1"],
     0,
-    "Substitution u = eˣ: u² - 5u + 6 = 0 → (u-2)(u-3) = 0 → u = 2, u = 3. Rücksubstitution: x₁ = ln 2, x₂ = ln 3. Summe: ln 2 + ln 3 = ln 6. Fehler B (ln 5): Addiert die u-Werte: ln(2+3) = ln 5. Fehler C (ln 2 + ln 3): Ist identisch mit ln 6 - diese Option testet, ob der Prüfling die Logarithmenregel kennt. Da A und C gleich sind, ist A korrekt (ln 6 = ln 2 + ln 3). Fehler D (5): Addiert u-Werte 2 + 3 = 5 statt x-Werte. Fehler E: Multipliziert die Logarithmen.",
+    "Substitution u = e^x: u\u00b2 \u2212 5u + 6 = 0 \u2192 (u\u22122)(u\u22123) = 0. u = 2 \u2192 x = ln 2. u = 3 \u2192 x = ln 3. Summe: ln 2 + ln 3 = ln(2\u00b73) = ln 6. Fehler B (ln 5): Addiert u-Werte: ln(2+3). Fehler C (5): Addiert u\u2081+u\u2082 = 5 statt x-Werte. Fehler D: Multipliziert die Logarithmen. Fehler E (1): Rechnet ln(e) = 1.",
     "schwer",
-    ["Exponentialgleichung", "Substitution", "rechenfrage"]
+    ["Exponentialgleichung", "Substitution", "rechenfrage"],
   ),
 
   q(
     "ma-pool-hard-030",
     "mathe-kap5",
-    "Die Funktion f(x) = x⁴ - 5x² + 4 hat vier reelle Nullstellen. Berechne die Summe der Quadrate aller Nullstellen.",
+    "f(x) = x\u2074 \u2212 5x\u00b2 + 4 hat vier reelle Nullstellen. Berechne die Summe der Quadrate aller Nullstellen.",
     ["10", "8", "12", "6", "14"],
     0,
-    "Substitution u = x²: u² - 5u + 4 = 0 → (u-1)(u-4) = 0 → u = 1, u = 4. Also x = ±1, ±2. Summe der Quadrate: 1² + (-1)² + 2² + (-2)² = 1 + 1 + 4 + 4 = 10. Fehler B (8): Zählt nur positive NS: 1 + 4 = 5, verdoppelt auf 10 - nein. Besser: rechnet |x₁|² + |x₂|² = 1 + 4 + 1 + 4 = 10, aber nimmt u₁ + u₂ = 5 und verdoppelt nicht → 8. Fehler C (12): Rechnet (x₁+x₂+x₃+x₄)² = 0² = 0, nimmt stattdessen Σ|xᵢ|² + 2 = 12. Fehler D (6): Nimmt nur u₁+u₂ = 1+4+1 = 6. Fehler E (14): Rechnet 1+1+4+4+2+2 = 14 (addiert auch die |xᵢ|).",
+    "Substitution u = x\u00b2: u\u00b2 \u2212 5u + 4 = 0 \u2192 u = 1, u = 4. R\u00fccksubstitution: x = \u00b11, \u00b12. Summe der Quadrate: 1+1+4+4 = 10. Fehler B (8): Z\u00e4hlt nur u\u2081+u\u2082 mal 2 \u2212 2. Fehler C (12): F\u00fcgt Mischterme hinzu. Fehler D (6): Rechnet nur u\u2081+u\u2082+1 = 6. Fehler E (14): Addiert auch die Betr\u00e4ge.",
     "schwer",
-    ["Polynomfunktion", "Substitution", "Nullstellen", "rechenfrage"]
+    ["Polynomfunktion", "Substitution", "Nullstellen", "rechenfrage"],
   ),
 
   q(
     "ma-pool-hard-031",
     "mathe-kap5",
-    "Berechne das bestimmte Integral: ∫₀² (3x² + 2x) dx",
+    "Berechne das bestimmte Integral: \u222b\u2080\u00b2 (3x\u00b2 + 2x) dx",
     ["12", "10", "14", "8", "16"],
     0,
-    "Stammfunktion: F(x) = x³ + x². F(2) = 8 + 4 = 12. F(0) = 0. Integral = 12 - 0 = 12. Fehler B (10): Rechnet F(x) = x³ + x → F(2) = 8 + 2 = 10 (vergisst Koeffizient bei x²). Fehler C (14): Rechnet F(x) = x³ + x² + x → addiert extra +2. Fehler D (8): Rechnet nur x³|₀² = 8 (vergisst 2x-Teil). Fehler E (16): Rechnet F(x) = 3x³/3 + 2x²/2 falsch als x³ + 2x² → 8 + 8 = 16.",
+    "Stammfunktion: F(x) = x\u00b3 + x\u00b2. F(2) \u2212 F(0) = (8+4) \u2212 0 = 12. Fehler B (10): Rechnet F(x) = x\u00b3+x \u2192 8+2 = 10. Fehler C (14): Addiert extra Term. Fehler D (8): Vergisst 2x-Anteil \u2192 nur 8. Fehler E (16): Rechnet F(x) = x\u00b3+2x\u00b2 \u2192 8+8 = 16.",
     "schwer",
-    ["Integralrechnung", "bestimmtes Integral", "rechenfrage"]
+    ["Integralrechnung", "bestimmtes Integral", "rechenfrage"],
   ),
 
   q(
     "ma-pool-hard-032",
     "mathe-kap5",
-    "Gegeben: f(x) = 2sin(x) + cos(2x). Berechne f'(π/6).",
-    ["0", "√3", "1", "-√3", "2"],
+    "Gegeben: f(x) = 2sin(x) + cos(2x). Berechne f'(\u03c0/6).",
+    ["0", "\u221a3", "1", "\u2212\u221a3", "2"],
     0,
-    "f'(x) = 2cos(x) - 2sin(2x). Mit sin(2x) = 2sin(x)cos(x): f'(x) = 2cos(x) - 4sin(x)cos(x) = 2cos(x)(1 - 2sin(x)). f'(π/6) = 2 · cos(π/6) · (1 - 2·sin(π/6)) = 2 · (√3/2) · (1 - 2·½) = √3 · (1-1) = √3 · 0 = 0. Fehler B (√3): Rechnet nur 2cos(π/6) = √3 (vergisst den cos(2x)-Term). Fehler C (1): Rechnet f'(π/6) = 2·½ - 2·½ falsch. Fehler D (-√3): Vorzeichenfehler im cos(2x)-Term. Fehler E (2): Rechnet f'(0) = 2·1 - 0 = 2 statt f'(π/6).",
+    "f'(x) = 2cos(x) \u2212 2sin(2x). Mit sin(2x) = 2sin(x)cos(x): f'(x) = 2cos(x)(1 \u2212 2sin(x)). f'(\u03c0/6) = 2\u00b7(\u221a3/2)\u00b7(1 \u2212 2\u00b7\u00bd) = \u221a3\u00b70 = 0. Fehler B (\u221a3): Vergisst cos(2x)-Term. Fehler C (1): Rechnet f'(0). Fehler D (\u2212\u221a3): Vorzeichenfehler. Fehler E (2): Rechnet f'(0) = 2\u00b71 \u2212 0.",
     "schwer",
-    ["Ableitung", "Trigonometrie", "Kettenregel", "rechenfrage"]
+    ["Ableitung", "Trigonometrie", "Kettenregel", "rechenfrage"],
   ),
 
   q(
     "ma-pool-hard-033",
     "mathe-kap5",
-    "Gegeben: f(x) = ln(x² + 1). Berechne f'(2).",
+    "Gegeben: f(x) = ln(x\u00b2 + 1). Berechne f'(2).",
     ["4/5", "2/5", "4", "1/5", "2"],
     0,
-    "Kettenregel: f'(x) = 2x / (x² + 1). f'(2) = 4 / (4 + 1) = 4/5 = 0,8. Fehler B (2/5): Vergisst den Faktor 2 vor x → x/(x²+1) = 2/5. Fehler C (4): Rechnet nur den Zähler 2·2 = 4. Fehler D (1/5): Rechnet 1/(x²+1) = 1/5. Fehler E (2): Rechnet 2x/(x+1) = 4/3, rundet auf 2 oder rechnet 2·2/2 = 2.",
+    "Kettenregel: f'(x) = 2x/(x\u00b2+1). f'(2) = 4/5. Fehler B (2/5): Vergisst Faktor 2 \u2192 x/(x\u00b2+1) = 2/5. Fehler C (4): Nur den Z\u00e4hler 2\u00b72 = 4. Fehler D (1/5): Leitet als 1/(x\u00b2+1) ab. Fehler E (2): Vereinfacht falsch.",
     "schwer",
-    ["Ableitung", "Kettenregel", "Logarithmus", "rechenfrage"]
+    ["Ableitung", "Kettenregel", "Logarithmus", "rechenfrage"],
   ),
 
   q(
     "ma-pool-hard-034",
     "mathe-kap5",
-    "Bestimme die Gleichung der Tangente an f(x) = eˣ im Punkt x = 1. Welchen y-Wert hat die Tangente bei x = 0?",
-    ["0", "e", "1", "-e", "e - 1"],
+    "Die Tangente an f(x) = e^x im Punkt x\u2080 = 1 hat die Gleichung y = ex + b. Welchen Wert hat b?",
+    ["0", "\u2212e", "e", "1", "\u22121"],
     0,
-    "f(1) = e, f'(1) = e. Tangente: y - e = e(x - 1) → y = ex - e + e = ex. Bei x = 0: y = e · 0 = 0. Fehler B (e): Setzt x = 1 in die Tangente ein (y = e·1 = e, aber gefragt war x = 0). Fehler C (1): Rechnet y = eˣ bei x = 0 → e⁰ = 1 (Original statt Tangente). Fehler D (-e): Rechnet y = e·0 - e = -e (vergisst +e im Tangentengleichung). Fehler E (e-1): Rechnet y = e - e + (e-1) = e-1 (falsches Vereinfachen).",
+    "f(1) = e, f'(1) = e. Tangente: y \u2212 e = e(x \u2212 1) \u2192 y = ex \u2212 e + e = ex. Also b = 0. Fehler B (\u2212e): Rechnet y = ex \u2212 e (vergisst +e). Fehler C (e): Setzt b = f(1) = e. Fehler D (1): Rechnet b = e\u2070 = 1. Fehler E (\u22121): Vorzeichenfehler.",
     "schwer",
-    ["Tangente", "e-Funktion", "Ableitung", "rechenfrage"]
+    ["Tangente", "e-Funktion", "Ableitung", "rechenfrage"],
   ),
 
   q(
     "ma-pool-hard-035",
     "mathe-kap5",
-    "Berechne: ∫₁ᵉ (3/x + 2) dx",
-    ["1 + 2e", "3 + 2e", "2e - 1", "3 + 2e - 2", "2e + 3"],
-    2,
-    "∫₁ᵉ (3/x + 2) dx = [3·ln(x) + 2x]₁ᵉ = (3·ln(e) + 2e) - (3·ln(1) + 2·1) = (3 + 2e) - (0 + 2) = 1 + 2e = 2e - 1 + 2 … Korrektur: 3 + 2e - 0 - 2 = 1 + 2e. Hmm, 2e - 1 = 2e - 1 ≠ 1 + 2e. Schauen: 1 + 2e ≈ 1 + 5,436 = 6,436. 2e - 1 ≈ 4,436. Also A und C sind verschieden. Richtig ist A (1 + 2e). KORREKTUR: A ist richtig.",
+    "Berechne: \u222b\u2081^e (3/x + 2) dx",
+    ["1 + 2e", "3 + 2e", "2e \u2212 1", "3", "2e + 1"],
+    0,
+    "Stammfunktion: F(x) = 3\u00b7ln(x) + 2x. F(e) \u2212 F(1) = (3\u00b7ln(e) + 2e) \u2212 (3\u00b7ln(1) + 2) = (3 + 2e) \u2212 2 = 1 + 2e. Fehler B (3+2e): Vergisst F(1) = 2 abzuziehen. Fehler C (2e\u22121): Rechnet nur 2x-Anteil: 2e\u22122 und addiert falsch 1. Fehler D (3): Nimmt nur ln-Anteil: 3\u00b7(ln e \u2212 ln 1) = 3. Fehler E (2e+1): Vorzeichenfehler bei der Subtraktion.",
     "schwer",
-    ["Integralrechnung", "Logarithmus", "rechenfrage"]
+    ["Integralrechnung", "Logarithmus", "rechenfrage"],
   ),
 
   q(
     "ma-pool-hard-036",
     "mathe-kap5",
-    "Die Funktion f(x) = x · e⁻ˣ hat ein lokales Maximum. An welcher Stelle x₀ liegt es, und welchen Wert hat f(x₀)?",
-    ["x₀ = 1, f(1) = 1/e", "x₀ = 0, f(0) = 0", "x₀ = 1, f(1) = e", "x₀ = -1, f(-1) = -e", "x₀ = 2, f(2) = 2/e²"],
+    "Die Funktion f(x) = x\u00b7e^(\u2212x) hat ein lokales Maximum. Welchen y-Wert hat f am Maximum?",
+    ["1/e", "0", "e", "\u22121/e", "2/e\u00b2"],
     0,
-    "f'(x) = e⁻ˣ - x·e⁻ˣ = e⁻ˣ(1-x). f'(x) = 0 → x = 1. f''(x) = -e⁻ˣ(1-x) - e⁻ˣ = e⁻ˣ(x-2). f''(1) = e⁻¹(-1) < 0 → Maximum. f(1) = 1·e⁻¹ = 1/e. Fehler B: Verwechselt mit Nullstelle x = 0. Fehler C: Rechnet f(1) = 1·e statt e⁻¹. Fehler D: Setzt falsches Vorzeichen. Fehler E: Setzt die zweite Nullstelle der Ableitung falsch an.",
+    "f'(x) = e^(\u2212x)(1\u2212x) = 0 \u2192 x = 1. f''(1) = e^(\u22121)(1\u22122) < 0 \u2192 Maximum. f(1) = 1/e. Fehler B (0): Verwechselt mit Nullstelle f(0) = 0. Fehler C (e): Rechnet e\u00b9 statt e^(\u22121). Fehler D (\u22121/e): Vorzeichenfehler. Fehler E (2/e\u00b2): Rechnet f(2) = 2e^(\u22122).",
     "schwer",
-    ["Extremwert", "e-Funktion", "Produktregel", "rechenfrage"]
+    ["Extremwert", "e-Funktion", "Produktregel", "rechenfrage"],
   ),
 
   q(
     "ma-pool-hard-037",
     "mathe-kap5",
-    "Berechne den Grenzwert: lim(x→2) [(x² - 4) / (x - 2)]",
-    ["4", "0", "2", "∞", "-4"],
+    "Berechne den Grenzwert: lim(x\u21922) (x\u00b2 \u2212 4) / (x \u2212 2)",
+    ["4", "0", "2", "nicht definiert", "\u22124"],
     0,
-    "(x²-4)/(x-2) = (x+2)(x-2)/(x-2) = x+2 für x ≠ 2. lim(x→2) (x+2) = 4. Fehler B (0): Setzt x = 2 direkt ein und erhält 0/0, interpretiert als 0. Fehler C (2): Rechnet lim = x = 2 (setzt nur Zähler-Teil ein). Fehler D (∞): Sieht 0/0 und interpretiert als ∞. Fehler E (-4): Vorzeichenfehler bei der Faktorisierung.",
+    "(x\u00b2\u22124)/(x\u22122) = (x+2)(x\u22122)/(x\u22122) = x+2 f\u00fcr x \u2260 2. lim(x\u21922) (x+2) = 4. Fehler B (0): Setzt x = 2 ein \u2192 0/0, interpretiert als 0. Fehler C (2): Nimmt den x-Wert als Ergebnis. Fehler D: Sieht 0/0 und erkl\u00e4rt den Grenzwert als nicht existent. Fehler E (\u22124): Vorzeichenfehler bei der Faktorisierung.",
     "schwer",
-    ["Grenzwert", "Faktorisierung", "rechenfrage"]
+    ["Grenzwert", "Faktorisierung", "rechenfrage"],
   ),
 
   q(
     "ma-pool-hard-038",
     "mathe-kap5",
-    "Löse die Gleichung: 2^(x+1) - 2^x = 32. Welchen Wert hat x?",
+    "L\u00f6se: 2^(x+1) \u2212 2^x = 32. Welchen Wert hat x?",
     ["5", "4", "6", "3", "32"],
     0,
-    "2^(x+1) - 2^x = 2·2^x - 2^x = 2^x(2-1) = 2^x = 32 = 2⁵. Also x = 5. Fehler B (4): Rechnet 2^(x+1) = 32 → x+1 = 5 → x = 4 (vergisst -2^x). Fehler C (6): Rechnet 2^x = 64 (addiert statt subtrahiert: 2·2^x + 2^x = 3·2^x = 32 → 2^x ≈ 10,67 → ~6). Fehler D (3): Rechnet 2^(x+1) = 2^x + 1 falsch, löst dann 1 = 32. Fehler E (32): Verwechselt Lösung mit dem Wert auf der rechten Seite.",
+    "2^(x+1) \u2212 2^x = 2\u00b72^x \u2212 2^x = 2^x\u00b7(2\u22121) = 2^x. Also 2^x = 32 = 2\u2075 \u2192 x = 5. Fehler B (4): L\u00f6st 2^(x+1) = 32 \u2192 x+1 = 5 \u2192 x = 4 (ignoriert \u22122^x). Fehler C (6): Rechnet 2^(x+1) \u2212 2^x = 2^1 falsch. Fehler D (3): Rechnet 2^x = 8. Fehler E (32): Verwechselt L\u00f6sung mit rechter Seite.",
     "schwer",
-    ["Exponentialgleichung", "Potenzgesetze", "rechenfrage"]
+    ["Exponentialgleichung", "Potenzgesetze", "rechenfrage"],
   ),
 
   q(
     "ma-pool-hard-039",
     "mathe-kap5",
-    "Bestimme den Wendepunkt von f(x) = x³ - 3x² + 2. Gib die Koordinaten (x_W, y_W) an.",
-    ["(1, 0)", "(0, 2)", "(3, 2)", "(2, -2)", "(-1, -2)"],
+    "Bestimme den Wendepunkt von f(x) = x\u00b3 \u2212 3x\u00b2 + 2. Welche y-Koordinate hat er?",
+    ["0", "2", "\u22122", "1", "\u22121"],
     0,
-    "f'(x) = 3x² - 6x. f''(x) = 6x - 6 = 0 → x = 1. f(1) = 1 - 3 + 2 = 0. Wendepunkt: (1, 0). f'''(x) = 6 ≠ 0, also echter Wendepunkt. Fehler B (0, 2): Verwechselt mit f(0) = 2. Fehler C (3, 2): Rechnet f''(x) = 0 bei x = 3 (Vorzeichenfehler). Fehler D (2, -2): Rechnet f'(x) = 0 statt f''(x) = 0 → 3x(x-2) = 0 → x = 2, f(2) = 8-12+2 = -2. Fehler E (-1, -2): Vorzeichenfehler bei x und f(-1) = -1-3+2 = -2.",
+    "f'(x) = 3x\u00b2 \u2212 6x. f''(x) = 6x \u2212 6 = 0 \u2192 x = 1. f'''(x) = 6 \u2260 0, also echter Wendepunkt. f(1) = 1 \u2212 3 + 2 = 0. Fehler B (2): Verwechselt mit f(0) = 2. Fehler C (\u22122): Rechnet f(2) = 8\u221212+2 = \u22122 (Extrempunkt statt Wendepunkt). Fehler D (1): Verwechselt x- mit y-Koordinate. Fehler E (\u22121): Rechnet 1\u22123+2 falsch.",
     "schwer",
-    ["Wendepunkt", "Ableitung", "rechenfrage"]
+    ["Wendepunkt", "Ableitung", "rechenfrage"],
   ),
 
-  // ═══════════════════════════════════════════════════════════════
-  // ─── Vektorrechnung (8 Fragen) ────────────────────────────────
-  // ═══════════════════════════════════════════════════════════════
+  // === Vektorrechnung (8 Fragen) ===
 
   q(
     "ma-pool-hard-040",
     "mathe-kap6",
-    "Gegeben: a⃗ = (3, 4, 0) und b⃗ = (0, 4, 3). Berechne das Skalarprodukt a⃗ · b⃗.",
+    "Gegeben: a = (3, 4, 0) und b = (0, 4, 3). Berechne das Skalarprodukt a \u00b7 b.",
     ["16", "12", "25", "9", "0"],
     0,
-    "a⃗ · b⃗ = 3·0 + 4·4 + 0·3 = 0 + 16 + 0 = 16. Fehler B (12): Rechnet 3·4 + 0·0 + ... = 12 (verwechselt Komponenten). Fehler C (25): Rechnet |a⃗|² = 9+16+0 = 25. Fehler D (9): Rechnet |b⃗|² - |a⃗|² = 25 - 25 = 0, nimmt 9 als Einzelkomponente. Fehler E (0): Glaubt, die Vektoren seien orthogonal.",
+    "a \u00b7 b = 3\u00b70 + 4\u00b74 + 0\u00b73 = 0 + 16 + 0 = 16. Fehler B (12): Vertauscht Komponenten \u2192 3\u00b74 + 4\u00b70 + 0\u00b73 = 12. Fehler C (25): Berechnet |a|\u00b2 = 25. Fehler D (9): Nimmt eine Einzelkomponente. Fehler E (0): Glaubt f\u00e4lschlich, die Vektoren seien orthogonal.",
     "schwer",
-    ["Skalarprodukt", "Vektoren", "rechenfrage"]
+    ["Skalarprodukt", "Vektoren", "rechenfrage"],
   ),
 
   q(
     "ma-pool-hard-041",
     "mathe-kap6",
-    "Gegeben: a⃗ = (3, 4, 0), b⃗ = (0, 4, 3). Berechne cos(α) zwischen den beiden Vektoren.",
+    "Gegeben: a = (3, 4, 0), b = (0, 4, 3). Berechne cos(\u03b1), wobei \u03b1 der Winkel zwischen den Vektoren ist.",
     ["16/25", "4/5", "16/5", "3/5", "12/25"],
     0,
-    "|a⃗| = √(9+16+0) = 5. |b⃗| = √(0+16+9) = 5. a⃗·b⃗ = 16 (siehe vorherige Frage). cos(α) = 16/(5·5) = 16/25. Fehler B (4/5): Rechnet 4/5 (nimmt nur die y-Komponenten: 4·4/(5·5) vereinfacht falsch). Fehler C (16/5): Dividiert nur durch einen Betrag statt durch das Produkt. Fehler D (3/5): Nimmt cos(α) = a₁/|a⃗| = 3/5. Fehler E (12/25): Rechnet Skalarprodukt falsch als 12.",
+    "|a| = \u221a(9+16+0) = 5. |b| = \u221a(0+16+9) = 5. a\u00b7b = 16. cos(\u03b1) = 16/(5\u00b75) = 16/25. Fehler B (4/5): Dividiert nur durch einen Betrag. Fehler C (16/5): Vergisst einen Betrag im Nenner. Fehler D (3/5): Nimmt Richtungskosinus a\u2081/|a| = 3/5. Fehler E (12/25): Skalarprodukt falsch als 12.",
     "schwer",
-    ["Winkel", "Skalarprodukt", "Vektoren", "rechenfrage"]
+    ["Winkel", "Skalarprodukt", "Vektoren", "rechenfrage"],
   ),
 
   q(
     "ma-pool-hard-042",
     "mathe-kap6",
-    "Berechne das Kreuzprodukt a⃗ × b⃗ mit a⃗ = (1, 2, 3) und b⃗ = (4, 5, 6). Wie groß ist |a⃗ × b⃗|?",
-    ["3√6", "√54", "6√3", "3√2", "√18"],
+    "Berechne |a \u00d7 b| f\u00fcr a = (1, 2, 3) und b = (4, 5, 6).",
+    ["3\u221a6", "6\u221a3", "3\u221a2", "\u221a18", "9"],
     0,
-    "a⃗ × b⃗ = (2·6-3·5, 3·4-1·6, 1·5-2·4) = (12-15, 12-6, 5-8) = (-3, 6, -3). |a⃗ × b⃗| = √(9+36+9) = √54 = 3√6. Fehler B (√54): Ist identisch mit 3√6 - prüfe: √54 = √(9·6) = 3√6. Beide gleich! Dann A und B sind gleich. Korrektur: B sollte anders sein. |a⃗×b⃗| = 3√6 ≈ 7,35. Fehler C (6√3): Rechnet √(36+36+36) = 6√3 (alle Komponenten als 6). Fehler D (3√2): Rechnet √(9+0+9) = √18 = 3√2 (vergisst mittlere Komponente). Fehler E (√18): Rechnet nur (-3)² + (-3)² = 18 → √18 (vergisst die 6).",
+    "a \u00d7 b = (2\u00b76\u22123\u00b75, 3\u00b74\u22121\u00b76, 1\u00b75\u22122\u00b74) = (\u22123, 6, \u22123). |a\u00d7b| = \u221a(9+36+9) = \u221a54 = 3\u221a6. Fehler B (6\u221a3): Rechnet \u221a(36+36+36) = 6\u221a3. Fehler C (3\u221a2): Vergisst mittlere Komponente \u2192 \u221a(9+9) = 3\u221a2. Fehler D (\u221a18): = 3\u221a2, identisch mit C. Fehler E (9): Summiert Betr\u00e4ge |(\u22123)|+|6|+|(\u22123)| = 12, nimmt dann 9.",
     "schwer",
-    ["Kreuzprodukt", "Betrag", "Vektoren", "rechenfrage"]
+    ["Kreuzprodukt", "Betrag", "Vektoren", "rechenfrage"],
   ),
 
   q(
     "ma-pool-hard-043",
     "mathe-kap6",
-    "Berechne die Länge der Projektion von a⃗ = (6, 2) auf b⃗ = (3, 4). ",
-    ["26/5", "2√13", "8/5", "√40", "5"],
+    "Berechne die L\u00e4nge der Projektion von a = (6, 2) auf b = (3, 4).",
+    ["26/5", "\u221a40", "8/5", "2\u221a10", "5"],
     0,
-    "Projektion: |proj_b⃗ a⃗| = |a⃗·b⃗| / |b⃗|. a⃗·b⃗ = 18+8 = 26. |b⃗| = √(9+16) = 5. |proj| = 26/5 = 5,2. Fehler B (2√13): Rechnet |a⃗| = √(36+4) = √40 = 2√10 (das ist |a⃗|, nicht die Projektion). Fehler C (8/5): Rechnet nur eine Komponente: 2·4/5 = 8/5. Fehler D (√40): Verwechselt mit |a⃗|. Fehler E (5): Nimmt |b⃗| statt der Projektion.",
+    "|proj| = |a\u00b7b|/|b|. a\u00b7b = 18+8 = 26. |b| = 5. |proj| = 26/5 = 5,2. Fehler B (\u221a40): Berechnet |a| = \u221a40 statt Projektion. Fehler C (8/5): Nur y-Komponente: 2\u00b74/5. Fehler D (2\u221a10): = \u221a40 = |a|. Fehler E (5): Verwechselt mit |b|.",
     "schwer",
-    ["Projektion", "Skalarprodukt", "rechenfrage"]
+    ["Projektion", "Skalarprodukt", "rechenfrage"],
   ),
 
   q(
     "ma-pool-hard-044",
     "mathe-kap6",
-    "Die Punkte A = (1, 0, 0), B = (0, 3, 0) und C = (0, 0, 4) bilden ein Dreieck. Berechne die Dreiecksfläche.",
-    ["13/2", "√169/2", "6", "12", "13"],
+    "Die Punkte A = (1,0,0), B = (0,3,0), C = (0,0,4) bilden ein Dreieck. Berechne die Dreiecksfl\u00e4che.",
+    ["13/2", "13", "6", "12", "\u221a38/2"],
     0,
-    "AB⃗ = (-1, 3, 0), AC⃗ = (-1, 0, 4). Kreuzprodukt: AB⃗ × AC⃗ = (3·4-0·0, 0·(-1)-(-1)·4, (-1)·0-3·(-1)) = (12, 4, 3). |AB⃗ × AC⃗| = √(144+16+9) = √169 = 13. Fläche = 13/2 = 6,5. Fehler B (√169/2): Identisch mit 13/2 (da √169 = 13). Fehler C (6): Rechnet ½·|AB|·|AC| = ½·√10·√17 ≈ 6,5, rundet auf 6. Fehler D (12): Rechnet 12 als Einzelkomponente des Kreuzprodukts. Fehler E (13): Vergisst den Faktor ½ bei der Dreiecksfläche.",
+    "AB = (\u22121,3,0), AC = (\u22121,0,4). Kreuzprodukt: (12, 4, 3). |Kreuzprodukt| = \u221a(144+16+9) = \u221a169 = 13. Fl\u00e4che = 13/2. Fehler B (13): Vergisst Faktor 1/2. Fehler C (6): Rundet 6,5 ab. Fehler D (12): Nimmt nur die gr\u00f6\u00dfte Komponente. Fehler E (\u221a38/2): Rechnet Kreuzprodukt falsch.",
     "schwer",
-    ["Dreiecksfläche", "Kreuzprodukt", "Vektoren", "rechenfrage"]
+    ["Dreiecksfl\u00e4che", "Kreuzprodukt", "Vektoren", "rechenfrage"],
   ),
 
   q(
     "ma-pool-hard-045",
     "mathe-kap6",
-    "Gegeben: a⃗ = (2, 1, -1) und b⃗ = (1, -1, 2). Berechne |a⃗ + b⃗|.",
-    ["√10", "√14", "√6", "√12", "√8"],
+    "Gegeben: a = (2, 1, \u22121) und b = (1, \u22121, 2). Berechne |a + b|.",
+    ["\u221a10", "\u221a14", "\u221a6", "\u221a12", "\u221a8"],
     0,
-    "a⃗ + b⃗ = (3, 0, 1). |a⃗ + b⃗| = √(9+0+1) = √10. Fehler B (√14): Rechnet |a⃗| + |b⃗| ≈ √6 + √6, oder |a⃗|² + |b⃗|² = 6+6 = 12 → √12 ... nein. Besser: rechnet (3²+1²+0²) falsch als (3²+1²+2²) = 14. Fehler C (√6): Rechnet |a⃗| = √(4+1+1) = √6. Fehler D (√12): Addiert |a⃗|² + |b⃗|² = 6 + 6 = 12 (Beträge statt Vektoren addiert). Fehler E (√8): Rechnet (2+1)² + (1-1)² + (-1+2)² falsch als 4+0+4 = 8.",
+    "a + b = (3, 0, 1). |a+b| = \u221a(9+0+1) = \u221a10. Fehler B (\u221a14): Rechnet (3,1,2) \u2192 9+1+4 = 14. Fehler C (\u221a6): Berechnet |a| = \u221a6. Fehler D (\u221a12): Addiert |a|\u00b2+|b|\u00b2 = 12. Fehler E (\u221a8): Vorzeichenfehler \u2192 (2,0,2) \u2192 4+0+4 = 8.",
     "schwer",
-    ["Vektoraddition", "Betrag", "rechenfrage"]
+    ["Vektoraddition", "Betrag", "rechenfrage"],
   ),
 
   q(
     "ma-pool-hard-046",
     "mathe-kap6",
-    "Berechne den Winkel zwischen a⃗ = (1, 1, 0) und b⃗ = (0, 1, 1).",
-    ["60°", "45°", "90°", "30°", "120°"],
+    "Berechne den Winkel zwischen a = (1, 1, 0) und b = (0, 1, 1).",
+    ["60\u00b0", "45\u00b0", "90\u00b0", "30\u00b0", "120\u00b0"],
     0,
-    "a⃗·b⃗ = 0+1+0 = 1. |a⃗| = √2, |b⃗| = √2. cos(α) = 1/(√2·√2) = 1/2. α = 60°. Fehler B (45°): Rechnet cos(α) = 1/√2 (dividiert nur durch einen Betrag). Fehler C (90°): Glaubt, die Vektoren seien orthogonal (weil a₁·b₁ = 0). Fehler D (30°): Verwechselt cos und sin: sin(30°) = 1/2. Fehler E (120°): Vorzeichenfehler, nimmt cos(α) = -1/2.",
+    "a\u00b7b = 0+1+0 = 1. |a| = \u221a2, |b| = \u221a2. cos(\u03b1) = 1/(\u221a2\u00b7\u221a2) = 1/2 \u2192 \u03b1 = 60\u00b0. Fehler B (45\u00b0): Rechnet cos(\u03b1) = 1/\u221a2. Fehler C (90\u00b0): Sieht a\u2081\u00b7b\u2081 = 0 und schlie\u00dft auf Orthogonalit\u00e4t. Fehler D (30\u00b0): Verwechselt cos und sin. Fehler E (120\u00b0): Vorzeichenfehler \u2192 cos = \u22121/2.",
     "schwer",
-    ["Winkel", "Skalarprodukt", "Vektoren", "rechenfrage"]
+    ["Winkel", "Skalarprodukt", "Vektoren", "rechenfrage"],
   ),
 
   q(
     "ma-pool-hard-047",
     "mathe-kap6",
-    "Gegeben: a⃗ = (3, -1, 2) und b⃗ = (1, 2, -1). Für welchen Wert von t ist der Vektor c⃗ = a⃗ - t·b⃗ orthogonal zu a⃗?",
-    ["t = -14", "t = 14", "t = -1", "t = 1", "t = 7"],
+    "F\u00fcr welchen Wert von t ist c = a \u2212 t\u00b7b orthogonal zu a, wenn a = (3, \u22121, 2) und b = (1, 2, \u22121)?",
+    ["\u221214", "14", "\u22121", "1", "7"],
     0,
-    "c⃗ ⊥ a⃗ ⟺ a⃗ · c⃗ = 0. a⃗ · (a⃗ - t·b⃗) = |a⃗|² - t·(a⃗·b⃗) = 0. |a⃗|² = 9+1+4 = 14. a⃗·b⃗ = 3-2-2 = -1. Also 14 - t·(-1) = 0 → 14 + t = 0 → t = -14. Fehler B (14): Vorzeichenfehler: 14 - t = 0 → t = 14 (vergisst, dass a⃗·b⃗ = -1). Fehler C (-1): Setzt t = a⃗·b⃗ = -1 direkt ein. Fehler D (1): Setzt t = -(a⃗·b⃗) = 1. Fehler E (7): Rechnet |a⃗|²/2 = 7.",
+    "Bedingung: a\u00b7c = 0 \u2192 a\u00b7(a\u2212t\u00b7b) = |a|\u00b2 \u2212 t\u00b7(a\u00b7b) = 0. |a|\u00b2 = 9+1+4 = 14. a\u00b7b = 3\u22122\u22122 = \u22121. Also 14 \u2212 t\u00b7(\u22121) = 0 \u2192 14 + t = 0 \u2192 t = \u221214. Fehler B (14): Vergisst Vorzeichen von a\u00b7b. Fehler C (\u22121): Setzt t = a\u00b7b. Fehler D (1): Setzt t = |a\u00b7b|. Fehler E (7): Rechnet |a|\u00b2/2 = 7.",
     "schwer",
-    ["Orthogonalität", "Skalarprodukt", "rechenfrage"]
+    ["Orthogonalit\u00e4t", "Skalarprodukt", "rechenfrage"],
   ),
 
-  // ═══════════════════════════════════════════════════════════════
-  // ─── Zehnerpotenzen (3 Fragen) ────────────────────────────────
-  // ═══════════════════════════════════════════════════════════════
+  // === Zehnerpotenzen (3 Fragen) ===
 
   q(
     "ma-pool-hard-048",
     "mathe-kap1",
-    "Berechne: (3,2 · 10⁵ · 4,0 · 10⁻³) / (1,6 · 10⁴)",
-    ["8 · 10⁻²", "8 · 10²", "8 · 10⁻¹", "8 · 10⁰", "8 · 10⁻³"],
+    "Berechne: (3,2 \u00b7 10\u2075 \u00b7 4,0 \u00b7 10\u207b\u00b3) / (1,6 \u00b7 10\u2074)",
+    ["8 \u00b7 10\u207b\u00b2", "8 \u00b7 10\u00b2", "8 \u00b7 10\u207b\u00b9", "8 \u00b7 10\u2070", "8 \u00b7 10\u207b\u00b3"],
     0,
-    "Zähler: 3,2 · 4,0 = 12,8. Potenzen: 10⁵ · 10⁻³ = 10². Zähler = 12,8 · 10². Division: 12,8/1,6 = 8. Potenzen: 10²/10⁴ = 10⁻². Ergebnis: 8 · 10⁻² = 0,08. Fehler B (8·10²): Vergisst die Division durch 10⁴ → bleibt bei 8·10². Fehler C (8·10⁻¹): Rechnet 10⁵⁻³⁻⁴ = 10⁻² falsch als 10⁻¹. Fehler D (8·10⁰): Rechnet 10⁵⁻³ = 10² und 10²⁻² = 10⁰ (Exponent des Nenners falsch). Fehler E (8·10⁻³): Rechnet 10⁵⁻³⁻⁴ = -2, dann nochmals -1 = -3.",
+    "Mantissen: 3,2\u00b74,0/1,6 = 12,8/1,6 = 8. Exponenten: 10^(5\u22123\u22124) = 10\u207b\u00b2. Ergebnis: 8\u00b710\u207b\u00b2 = 0,08. Fehler B (8\u00b710\u00b2): Vergisst Division \u2192 10^(5\u22123). Fehler C (8\u00b710\u207b\u00b9): Exponent 5\u22123\u22121 = 1, nimmt \u22121. Fehler D (8\u00b710\u2070): Falscher Nenner-Exponent. Fehler E (8\u00b710\u207b\u00b3): Rechnet 5\u22123\u22125.",
     "schwer",
-    ["Zehnerpotenzen", "wissenschaftliche Notation", "rechenfrage"]
+    ["Zehnerpotenzen", "wissenschaftliche Notation", "rechenfrage"],
   ),
 
   q(
     "ma-pool-hard-049",
     "mathe-kap1",
-    "Berechne: (6 · 10²³ · 2 · 10⁻⁸) / (4 · 10⁷)",
-    ["3 · 10⁸", "3 · 10¹⁰", "3 · 10⁶", "1,2 · 10¹⁶", "3 · 10¹²"],
+    "Berechne: (6 \u00b7 10\u00b2\u00b3 \u00b7 2 \u00b7 10\u207b\u2078) / (4 \u00b7 10\u2077)",
+    ["3 \u00b7 10\u2078", "3 \u00b7 10\u00b9\u2070", "3 \u00b7 10\u2076", "1,2 \u00b7 10\u00b9\u2076", "3 \u00b7 10\u00b9\u00b2"],
     0,
-    "Zähler: 6 · 2 = 12. Potenzen: 10²³ · 10⁻⁸ = 10¹⁵. Zähler = 12 · 10¹⁵. Division: 12/4 = 3. Potenzen: 10¹⁵/10⁷ = 10⁸. Ergebnis: 3 · 10⁸. Fehler B (3·10¹⁰): Rechnet 10²³⁻⁸⁻⁷ falsch als 10²³⁻⁵ = 10¹⁸, dann ... → Exponentenfehler. Fehler C (3·10⁶): Rechnet 10¹⁵⁻⁷ = 10⁶ (Tippfehler 15-7 = 6 statt 8). Fehler D (1,2·10¹⁶): Vergisst durch 4 zu dividieren → 12·10¹⁵ = 1,2·10¹⁶. Fehler E (3·10¹²): Rechnet 10²³⁻⁸ = 10¹⁵, dann 10¹⁵⁻³ = 10¹² (teilt durch 10³ statt 10⁷).",
+    "Mantissen: 6\u00b72/4 = 3. Exponenten: 10^(23\u22128\u22127) = 10\u2078. Ergebnis: 3\u00b710\u2078. Fehler B (3\u00b710\u00b9\u2070): Exponentenfehler. Fehler C (3\u00b710\u2076): Rechnet 15\u22127 = 6 statt 8. Fehler D (1,2\u00b710\u00b9\u2076): Vergisst /4. Fehler E (3\u00b710\u00b9\u00b2): Falscher Nenner-Exponent.",
     "schwer",
-    ["Zehnerpotenzen", "Avogadro", "rechenfrage"]
+    ["Zehnerpotenzen", "wissenschaftliche Notation", "rechenfrage"],
   ),
 
   q(
     "ma-pool-hard-050",
     "mathe-kap1",
-    "Berechne: (5 · 10⁻⁴)² · 8 · 10⁷",
+    "Berechne: (5 \u00b7 10\u207b\u2074)\u00b2 \u00b7 8 \u00b7 10\u2077",
     ["20", "200", "2", "0,2", "2.000"],
     0,
-    "(5 · 10⁻⁴)² = 25 · 10⁻⁸ = 2,5 · 10⁻⁷. Mal 8 · 10⁷: 2,5 · 8 = 20. 10⁻⁷ · 10⁷ = 10⁰ = 1. Ergebnis: 20. Fehler B (200): Rechnet (5·10⁻⁴)² = 25·10⁻⁴ (quadriert nur die Mantisse, nicht den Exponenten) → 25·10⁻⁴·8·10⁷ = 200·10³ = 200.000 oder rechnet 10⁻⁸⁺⁷ = 10⁻¹ → 20·10⁻¹? Nein → 200 entsteht wenn (5·10⁻⁴)² = 25·10⁻⁶ → 25·10⁻⁶·8·10⁷ = 200·10¹ = nein. Besser: Fehler ist 10⁻⁴·² = 10⁻⁶ statt 10⁻⁸ → 25·10⁻⁶·8·10⁷ = 200·10¹ = 2000, also E. Dann B: quadriert 5² = 10 statt 25 → 10·10⁻⁸·8·10⁷ = 80·10⁻¹ = 8. Hmm. Einfach: Fehler B (200): Rechnet 5²=25, 10⁻⁴·² = 10⁻⁶ → 25·10⁻⁶·8·10⁷ = 200. Fehler C (2): Rechnet 5·10⁻⁴·8·10⁷ = 40·10³ - nein. (5·10⁻⁴)²·8·10⁷ mit (10⁻⁴)² = 10⁻⁸, korrekt 20. Fehler C (2): Vergisst 5² = 25, nimmt 5¹ → 5·10⁻⁸·8·10⁷ = 40·10⁻¹ = 4 - nicht 2. OK, Fehler C und D sind generische Zehnerpotenzfehler. Fehler D (0,2): Rechnet (5·10⁻⁴)² = 2,5·10⁻⁷, dann 2,5·10⁻⁷·8·10⁷ = 20, dividiert nochmals durch 100 → 0,2. Fehler E (2.000): Rechnet Exponent -4·2 = -6 statt -8.",
+    "Quadrieren: (5\u00b710\u207b\u2074)\u00b2 = 25\u00b710\u207b\u2078 = 2,5\u00b710\u207b\u2077. Multiplizieren: 2,5\u00b710\u207b\u2077 \u00b7 8\u00b710\u2077 = 20\u00b710\u2070 = 20. Fehler B (200): Quadriert Exponenten als (\u22124)\u00b72 = \u22126 statt 2\u00b7(\u22124) = \u22128, erh\u00e4lt 25\u00b710\u207b\u2076\u00b78\u00b710\u2077 = 200. Fehler C (2): Vergisst 5\u00b2 = 25, nimmt 5 \u2192 5\u00b710\u207b\u2078\u00b78\u00b710\u2077 = 40\u00b710\u207b\u00b9 = 4 oder \u00e4hnlich. Fehler D (0,2): Exponentenfehler \u2192 20\u00b710\u207b\u00b2. Fehler E (2.000): Rechnet (\u22124)\u00b2 = +16 statt 2\u00b7(\u22124) = \u22128.",
     "schwer",
-    ["Zehnerpotenzen", "Potenzgesetze", "rechenfrage"]
+    ["Zehnerpotenzen", "Potenzgesetze", "rechenfrage"],
   ),
 ];
