@@ -17,7 +17,7 @@ import { useSessionTimer } from "@/hooks/useSessionTimer";
 import { UebungsbeschreibungCard } from "@/components/shared/UebungsbeschreibungCard";
 import { OfficialInstructionCard } from "@/components/shared/OfficialInstructionCard";
 import { OFFICIAL_ZF_INSTRUCTION } from "@/data/kffZahlenfolgenMedAT";
-import { difficultyLabel } from "@/data/kffFigurenZusammensetzenMedAT";
+
 import {
   getLastCount,
   saveLastCount,
@@ -349,9 +349,6 @@ export function ZahlenfolgenQuiz({
                   <span className="font-medium">
                     {i + 1}. {formatZahlenfolgeDisplay(q.sequence)}
                   </span>
-                  <Badge variant="info" className="text-[10px]">
-                    {difficultyLabel(q.difficulty)}
-                  </Badge>
                 </div>
                 {!correct && answers[q.id] !== undefined && (
                   <p className="text-sm text-red-600 dark:text-red-400 ml-7">

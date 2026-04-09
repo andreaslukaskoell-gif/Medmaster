@@ -14,24 +14,6 @@ function shuffle<T>(arr: T[]): T[] {
   return a;
 }
 
-const difficultyLabels: Record<number, { label: string; color: string; bg: string }> = {
-  1: {
-    label: "Leicht",
-    color: "text-green-700 dark:text-green-400",
-    bg: "bg-green-100 dark:bg-green-900/30",
-  },
-  2: {
-    label: "Mittel",
-    color: "text-amber-700 dark:text-amber-400",
-    bg: "bg-amber-100 dark:bg-amber-900/30",
-  },
-  3: {
-    label: "Schwer",
-    color: "text-red-700 dark:text-red-400",
-    bg: "bg-red-100 dark:bg-red-900/30",
-  },
-};
-
 type EndlosPhase = "start" | "playing" | "gameover";
 
 export default function WortfluessigkeitEndlos() {
@@ -317,14 +299,6 @@ export default function WortfluessigkeitEndlos() {
       {/* Word card */}
       <Card>
         <CardContent className="p-6 space-y-5">
-          <div className="flex items-center gap-2">
-            <span
-              className={`text-xs font-medium px-2 py-1 rounded-full ${difficultyLabels[currentWord.difficulty].bg} ${difficultyLabels[currentWord.difficulty].color}`}
-            >
-              {difficultyLabels[currentWord.difficulty].label}
-            </span>
-          </div>
-
           {/* Letter tiles */}
           <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl">
             <div className="flex items-center justify-center gap-2 flex-wrap">

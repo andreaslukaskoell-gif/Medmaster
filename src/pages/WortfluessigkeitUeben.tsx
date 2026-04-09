@@ -1,27 +1,9 @@
 import { useState, useMemo, useCallback, useRef, useEffect } from "react";
-import { CheckCircle2, XCircle, ChevronRight, Filter, RotateCcw, Shuffle, Eye } from "lucide-react";
+import { CheckCircle2, XCircle, ChevronRight, RotateCcw, Shuffle, Eye } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Confetti } from "@/components/ui/confetti";
 import { useKFFResults } from "@/hooks/useKFFResults";
 import { wortfluessigkeitWords, type WortfluessigkeitWord } from "@/data/kffWortfluessigkeit";
-
-const difficultyLabels: Record<number, { label: string; color: string; bg: string }> = {
-  1: {
-    label: "Leicht",
-    color: "text-green-700 dark:text-green-400",
-    bg: "bg-green-100 dark:bg-green-900/30",
-  },
-  2: {
-    label: "Mittel",
-    color: "text-amber-700 dark:text-amber-400",
-    bg: "bg-amber-100 dark:bg-amber-900/30",
-  },
-  3: {
-    label: "Schwer",
-    color: "text-red-700 dark:text-red-400",
-    bg: "bg-red-100 dark:bg-red-900/30",
-  },
-};
 
 const categoryColors: Record<string, string> = {
   Natur: "bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300",
@@ -41,7 +23,6 @@ function shuffle<T>(arr: T[]): T[] {
 }
 
 export default function WortfluessigkeitUeben() {
-  const [difficultyFilter, setDifficultyFilter] = useState<number | null>(null);
   const [isShuffled, setIsShuffled] = useState(false);
   const [shuffledOrder, setShuffledOrder] = useState<number[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -55,10 +36,7 @@ export default function WortfluessigkeitUeben() {
   const inputRef = useRef<HTMLInputElement>(null);
   const { recordResult } = useKFFResults();
 
-  const filteredWords = useMemo(() => {
-    if (difficultyFilter === null) return wortfluessigkeitWords;
-    return wortfluessigkeitWords.filter((w) => w.difficulty === difficultyFilter);
-  }, [difficultyFilter]);
+  const filteredWords = wortfluessigkeitWords;
 
   const orderedWords = useMemo(() => {
     if (isShuffled && shuffledOrder.length > 0) {
@@ -153,54 +131,12 @@ export default function WortfluessigkeitUeben() {
     );
   }
 
-  const diff = difficultyLabels[currentWord.difficulty];
-
   return (
     <div className="space-y-4">
       <Confetti active={showConfetti} />
 
-      {/* Top bar: filter + progress */}
+      {/* Top bar: progress */}
       <div className="flex flex-wrap items-center justify-between gap-3">
-        <div className="flex items-center gap-2">
-          <Filter className="w-4 h-4 text-[var(--muted)]" />
-          <div className="flex gap-1">
-            <button
-              onClick={() => {
-                setDifficultyFilter(null);
-                setCurrentIndex(0);
-                setIsChecked(false);
-                setUserInput("");
-                setShowSolution(false);
-              }}
-              className={`text-xs px-3 py-1.5 rounded-full transition-colors cursor-pointer ${
-                difficultyFilter === null
-                  ? "bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 font-medium"
-                  : "text-[var(--muted)] hover:bg-gray-100 dark:hover:bg-gray-800"
-              }`}
-            >
-              Alle
-            </button>
-            {[1, 2, 3].map((d) => (
-              <button
-                key={d}
-                onClick={() => {
-                  setDifficultyFilter(d);
-                  setCurrentIndex(0);
-                  setIsChecked(false);
-                  setUserInput("");
-                  setShowSolution(false);
-                }}
-                className={`text-xs px-3 py-1.5 rounded-full transition-colors cursor-pointer ${
-                  difficultyFilter === d
-                    ? `${difficultyLabels[d].bg} ${difficultyLabels[d].color} font-medium`
-                    : "text-[var(--muted)] hover:bg-gray-100 dark:hover:bg-gray-800"
-                }`}
-              >
-                {difficultyLabels[d].label}
-              </button>
-            ))}
-          </div>
-        </div>
         <div className="flex items-center gap-3">
           <span className="text-sm text-[var(--muted)]">
             {currentIndex + 1}/{orderedWords.length} —{" "}
@@ -244,11 +180,6 @@ export default function WortfluessigkeitUeben() {
           {/* Badges */}
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <span
-                className={`text-xs font-medium px-2 py-1 rounded-full ${diff.bg} ${diff.color}`}
-              >
-                {diff.label}
-              </span>
               <span
                 className={`text-xs font-medium px-2 py-1 rounded-full ${categoryColors[currentWord.category] || "bg-gray-100 text-gray-600"}`}
               >

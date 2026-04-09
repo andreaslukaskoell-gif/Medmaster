@@ -19,7 +19,6 @@ import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
 import { ExamTimer } from "@/components/shared/ExamTimer";
 import { type ExamMode, EXAM_CONFIG } from "@/data/examConfig";
 import {
-  difficultyLabel,
   generateFigurenTrainingTask,
   SOLUTION_SHAPES,
   polygonToPathScaledToViewBox,
@@ -45,7 +44,6 @@ import {
   getLastCount,
   saveLastCount,
   shuffleSlice,
-  balancedDifficultySession,
   strictUnseen,
   enforceExactCount,
 } from "./kffHelpers";
@@ -143,12 +141,7 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
         }
         final = [...fresh, ...gen];
       }
-      setQuestions(
-        enforceExactCount(
-          balancedDifficultySession(final, target, (t) => t.difficulty),
-          target
-        )
-      );
+      setQuestions(enforceExactCount(shuffleSlice(final, target), target));
       setIndex(0);
       setAnswers({});
       setTimeLeft(90);
@@ -319,12 +312,7 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
                       ...valid,
                       ...shuffleSlice(filterValidFigurenTasks([]), count - valid.length),
                     ];
-                  setQuestions(
-                    enforceExactCount(
-                      balancedDifficultySession(valid, count, (t) => t.difficulty),
-                      count
-                    )
-                  );
+                  setQuestions(enforceExactCount(shuffleSlice(valid, count), count));
                   setIndex(0);
                   setAnswers({});
                   setPhase("quiz");
@@ -348,11 +336,7 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
                   const examCount = EXAM_CONFIG.figuren.questions;
                   setQuestions(
                     enforceExactCount(
-                      balancedDifficultySession(
-                        filterValidFigurenTasks(generated),
-                        examCount,
-                        (t) => t.difficulty
-                      ),
+                      shuffleSlice(filterValidFigurenTasks(generated), examCount),
                       examCount
                     )
                   );
@@ -456,9 +440,6 @@ export function FigurenQuiz({ onBack, autoStart }: { onBack: () => void; autoSta
                     <XCircle className="w-5 h-5 text-red-500" />
                   )}
                   <span className="font-medium text-sm">Aufgabe {i + 1}</span>
-                  <Badge variant="info" className="text-[10px]">
-                    {difficultyLabel(q.difficulty)}
-                  </Badge>
                   {q.source && (
                     <span
                       className="text-[10px] text-[var(--muted)] truncate max-w-[180px]"

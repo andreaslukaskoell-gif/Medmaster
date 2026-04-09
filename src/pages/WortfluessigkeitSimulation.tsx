@@ -20,24 +20,6 @@ import { wortfluessigkeitWords, type WortfluessigkeitWord } from "@/data/kffWort
 const TASK_COUNT = 15;
 const TIME_LIMIT = 300; // 5 minutes
 
-const difficultyLabels: Record<number, { label: string; color: string; bg: string }> = {
-  1: {
-    label: "Leicht",
-    color: "text-green-700 dark:text-green-400",
-    bg: "bg-green-100 dark:bg-green-900/30",
-  },
-  2: {
-    label: "Mittel",
-    color: "text-amber-700 dark:text-amber-400",
-    bg: "bg-amber-100 dark:bg-amber-900/30",
-  },
-  3: {
-    label: "Schwer",
-    color: "text-red-700 dark:text-red-400",
-    bg: "bg-red-100 dark:bg-red-900/30",
-  },
-};
-
 interface TaskResult {
   word: WortfluessigkeitWord;
   userAnswer: string;
@@ -136,10 +118,7 @@ export default function WortfluessigkeitSimulation() {
   }, [timeLeft, phase, finishSimulation]);
 
   const startSimulation = useCallback(() => {
-    const easy = shuffle(wortfluessigkeitWords.filter((w) => w.difficulty === 1)).slice(0, 5);
-    const medium = shuffle(wortfluessigkeitWords.filter((w) => w.difficulty === 2)).slice(0, 5);
-    const hard = shuffle(wortfluessigkeitWords.filter((w) => w.difficulty === 3)).slice(0, 5);
-    const selected = shuffle([...easy, ...medium, ...hard]);
+    const selected = shuffle([...wortfluessigkeitWords]).slice(0, TASK_COUNT);
     setTasks(selected);
     setCurrentIndex(0);
     setUserInput("");
@@ -204,7 +183,7 @@ export default function WortfluessigkeitSimulation() {
               Simulation starten
             </h2>
             <p className="text-sm text-[var(--muted)] max-w-md mx-auto">
-              {TASK_COUNT} zuf&auml;llige W&ouml;rter (5 leicht, 5 mittel, 5 schwer) in{" "}
+              {TASK_COUNT} zuf&auml;llige W&ouml;rter in{" "}
               {Math.floor(TIME_LIMIT / 60)} Minuten — genau wie im echten MedAT.
             </p>
           </div>
@@ -236,16 +215,6 @@ export default function WortfluessigkeitSimulation() {
     const totalTime = results.reduce((sum, r) => sum + r.timeSpent, 0);
     const avgTime = results.length > 0 ? Math.round(totalTime / results.length) : 0;
     const scorePercent = Math.round((correctCount / TASK_COUNT) * 100);
-
-    // Difficulty stats
-    const diffStats = [1, 2, 3].map((d) => {
-      const filtered = results.filter((r) => r.word.difficulty === d);
-      return {
-        difficulty: d,
-        correct: filtered.filter((r) => r.correct).length,
-        total: filtered.length,
-      };
-    });
 
     return (
       <div className="space-y-6">
@@ -304,35 +273,6 @@ export default function WortfluessigkeitSimulation() {
                   text={getSimulationShareText("Wortflüssigkeit", correctCount, TASK_COUNT)}
                 />
               </div>
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* Difficulty statistics */}
-        <Card>
-          <CardContent className="p-5">
-            <h3 className="text-sm font-semibold text-[var(--muted)] uppercase tracking-wider mb-3">
-              Schwierigkeits-Statistik
-            </h3>
-            <div className="grid grid-cols-3 gap-3">
-              {diffStats.map((s) => (
-                <div key={s.difficulty} className="bg-[var(--surface)] rounded-lg p-3 text-center">
-                  <p className="text-xs text-[var(--muted)] mb-1">
-                    {difficultyLabels[s.difficulty].label}
-                  </p>
-                  <p
-                    className={`text-lg font-bold ${
-                      s.correct === s.total
-                        ? "text-green-600 dark:text-green-400"
-                        : s.correct > 0
-                          ? "text-amber-600 dark:text-amber-400"
-                          : "text-red-600 dark:text-red-400"
-                    }`}
-                  >
-                    {s.correct}/{s.total}
-                  </p>
-                </div>
-              ))}
             </div>
           </CardContent>
         </Card>
@@ -479,14 +419,6 @@ export default function WortfluessigkeitSimulation() {
       {/* Word card */}
       <Card>
         <CardContent className="p-6 space-y-5">
-          <div className="flex items-center gap-2">
-            <span
-              className={`text-xs font-medium px-2 py-1 rounded-full ${difficultyLabels[currentWord.difficulty].bg} ${difficultyLabels[currentWord.difficulty].color}`}
-            >
-              {difficultyLabels[currentWord.difficulty].label}
-            </span>
-          </div>
-
           {/* Letter tiles */}
           <div className="bg-[var(--surface)] p-6 rounded-xl">
             <div className="flex items-center justify-center gap-2 flex-wrap">

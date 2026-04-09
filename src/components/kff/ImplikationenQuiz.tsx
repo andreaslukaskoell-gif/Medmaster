@@ -32,10 +32,6 @@ import {
   TaskDbCountHint,
 } from "./kffHelpers";
 
-function impDifficultyLabel(d: 1 | 2 | 3): string {
-  return d === 1 ? "Leicht" : d === 2 ? "Mittel" : "Schwer";
-}
-
 export function ImplikationenQuiz({
   onBack,
   initialQuestionCount,
@@ -374,9 +370,6 @@ export function ImplikationenQuiz({
                     <XCircle className="w-5 h-5 text-red-500" />
                   )}
                   <span className="font-medium text-sm">{i + 1}.</span>
-                  <Badge variant="info" className="text-[10px]">
-                    {impDifficultyLabel(qu.difficulty)}
-                  </Badge>
                 </div>
                 <p className="text-sm text-[var(--text-secondary)] ml-7 mb-1">
                   <strong>Prämisse 1:</strong> {qu.premise1}
