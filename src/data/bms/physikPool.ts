@@ -25,6 +25,7 @@ import { physikPool18 } from "./physikPool18";
 import { physikPool19 } from "./physikPool19";
 import { physikPool20 } from "./physikPool20";
 import { physikPool21 } from "./physikPool21";
+import { physikPool22 } from "./physikPool22";
 import { physikPoolOffiziellStyle } from "./physikPoolOffiziellStyle";
 import { physikWasIstFalsch } from "./physikWasIstFalsch";
 
@@ -56,6 +57,7 @@ export const physikPoolQuestions: Question[] = [
   ...physikPool19,
   ...physikPool20,
   ...physikPool21,
+  ...physikPool22,
   ...physikPoolOffiziellStyle,
   ...physikWasIstFalsch,
 ].filter((q) => !isPlaceholder(q));

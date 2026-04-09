@@ -25,6 +25,7 @@ import { biologiePool18 } from "./biologiePool18";
 import { biologiePool19 } from "./biologiePool19";
 import { biologiePool20 } from "./biologiePool20";
 import { biologiePool21 } from "./biologiePool21";
+import { biologiePool22 } from "./biologiePool22";
 import { biologiePoolOffiziellStyle } from "./biologiePoolOffiziellStyle";
 import { biologieWasIstFalsch } from "./biologieWasIstFalsch";
 
@@ -56,6 +57,7 @@ export const biologiePoolQuestions: Question[] = [
   ...biologiePool19,
   ...biologiePool20,
   ...biologiePool21,
+  ...biologiePool22,
   ...biologiePoolOffiziellStyle,
   ...biologieWasIstFalsch,
 ].filter((q) => !isPlaceholder(q));

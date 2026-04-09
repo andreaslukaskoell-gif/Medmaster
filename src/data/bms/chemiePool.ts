@@ -26,6 +26,7 @@ import { chemiePool19 } from "./chemiePool19";
 import { chemiePool20 } from "./chemiePool20";
 import { chemiePool21 } from "./chemiePool21";
 import { chemiePool22 } from "./chemiePool22";
+import { chemiePool23 } from "./chemiePool23";
 import { chemiePoolOffiziellStyle } from "./chemiePoolOffiziellStyle";
 import { chemieWasIstFalsch } from "./chemieWasIstFalsch";
 
@@ -62,6 +63,7 @@ export const chemiePoolQuestions: Question[] = [
   ...chemiePool20,
   ...chemiePool21,
   ...chemiePool22,
+  ...chemiePool23,
   ...chemiePoolOffiziellStyle,
   ...chemieWasIstFalsch,
 ].filter((q) => !isPlaceholder(q));
