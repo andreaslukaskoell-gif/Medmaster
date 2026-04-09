@@ -129,7 +129,22 @@ function gtag(..._args: any[]) {
 
 /** Track Google Ads conversion with optional Enhanced Conversions data. */
 export function trackGtagConversion(conversionLabel: string, value?: number, userEmail?: string) {
-  if (!gtagReady || !GTAG_ID) return;
+  if (!GTAG_ID) return;
+
+  // If gtag wasn't loaded yet (e.g. consent given after page load), init on demand
+  if (!gtagReady) {
+    try {
+      const consent = JSON.parse(localStorage.getItem("medmaster_consent") || "null");
+      if (consent?.marketing) {
+        initGtagConsentMode(true, consent.analytics ?? false);
+        initGtag();
+      } else {
+        return; // No marketing consent — don't track (DSGVO)
+      }
+    } catch {
+      return;
+    }
+  }
 
   // Enhanced Conversions: send hashed user data for better attribution
   if (userEmail) {
