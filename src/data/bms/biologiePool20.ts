@@ -123,22 +123,6 @@ export const biologiePool20: Question[] = [
     ["Säure-Base-Haushalt", "Blutgasanalyse", "Atmung"]
   ),
   q(
-    "bio-pool-20-007",
-    "bio-kap2",
-    "Welche Aussage zum Renin-Angiotensin-Aldosteron-System (RAAS) ist FALSCH?",
-    [
-      "Renin wird in den juxtaglomerulären Zellen der Niere freigesetzt",
-      "Angiotensinogen wird in der Leber synthetisiert und ist das Substrat für Renin",
-      "ACE (Angiotensin-Converting-Enzyme) wandelt Angiotensin I in Angiotensin II um",
-      "Angiotensin II wirkt vasodilatatorisch und senkt den Blutdruck",
-      "Aldosteron fördert die Natriumrückresorption im distalen Tubulus und Sammelrohr",
-    ],
-    3,
-    "Angiotensin II wirkt stark vasokonstriktorisch und ERHÖHT den Blutdruck. Es stimuliert außerdem die Aldosteronfreisetzung und ADH-Sekretion. ACE-Hemmer nutzen diesen Mechanismus therapeutisch.",
-    "schwer",
-    ["RAAS", "Blutdruckregulation", "Niere", "Hormone"]
-  ),
-  q(
     "bio-pool-20-008",
     "bio-kap2",
     "Bei der Erregungsweiterleitung am Herzen durchläuft der elektrische Impuls verschiedene Strukturen. Welche Reihenfolge ist korrekt?",

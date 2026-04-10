@@ -106,7 +106,8 @@ export async function fetchFragenForUK(uk_id: string): Promise<BMSFrage[]> {
     .from("bms_questions")
     .select("*")
     .eq("uk_id", uk_id)
-    .order("schwierigkeit", { ascending: true });
+    .order("schwierigkeit", { ascending: true })
+    .limit(1000);
 
   if (error) {
     console.error("[supabaseBMSFragen] fetchFragenForUK:", error);
@@ -117,7 +118,7 @@ export async function fetchFragenForUK(uk_id: string): Promise<BMSFrage[]> {
 
 export async function fetchFragenForUKs(uk_ids: string[]): Promise<BMSFrage[]> {
   if (!supabase || !uk_ids.length || isSchemaSkipActive()) return [];
-  const { data, error } = await supabase.from("bms_questions").select("*").in("uk_id", uk_ids);
+  const { data, error } = await supabase.from("bms_questions").select("*").in("uk_id", uk_ids).limit(1000);
 
   if (error) {
     console.error("[supabaseBMSFragen] fetchFragenForUKs:", error);
@@ -263,7 +264,8 @@ export async function fetchMRSData(user_id: string | null): Promise<MRSData | nu
     .select("question_id, fsrs_stability, fsrs_due, answered_at")
     .eq("user_id", user_id)
     .gte("answered_at", thirtyDaysAgo)
-    .order("answered_at", { ascending: false });
+    .order("answered_at", { ascending: false })
+    .limit(1000);
 
   if (error || !data?.length) return null;
 
@@ -321,7 +323,8 @@ export async function fetchErrorPatterns(
   const { data: qData } = await supabase
     .from("bms_questions")
     .select("id, uk_id")
-    .in("uk_id", uk_ids);
+    .in("uk_id", uk_ids)
+    .limit(1000);
 
   if (!qData?.length) return {};
   const qIds = qData.map((q) => q.id);
@@ -332,7 +335,8 @@ export async function fetchErrorPatterns(
     .from("user_question_attempts")
     .select("question_id, correct")
     .eq("user_id", user_id)
-    .in("question_id", qIds);
+    .in("question_id", qIds)
+    .limit(1000);
 
   if (!attempts?.length) return {};
 
@@ -374,7 +378,8 @@ async function fetchFSRSStates(
     .select("question_id, fsrs_stability, fsrs_difficulty, fsrs_due, fsrs_reps, answered_at")
     .eq("user_id", user_id)
     .in("question_id", question_ids)
-    .order("answered_at", { ascending: false });
+    .order("answered_at", { ascending: false })
+    .limit(1000);
 
   if (error || !data) return {};
 

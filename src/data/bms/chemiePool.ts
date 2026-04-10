@@ -29,6 +29,7 @@ import { chemiePool22 } from "./chemiePool22";
 import { chemiePool23 } from "./chemiePool23";
 import { chemiePoolOffiziellStyle } from "./chemiePoolOffiziellStyle";
 import { chemieWasIstFalsch } from "./chemieWasIstFalsch";
+import { chemieWasIstFalsch2 } from "./chemieWasIstFalsch2";
 
 const CHEMIE_PLACEHOLDER = /^Chemie Pool-Frage \d+\.$/;
 const CHEMIE_FRAGE_PLACEHOLDER = /^Chemie-Frage \d+: Welche Aussage trifft zu\?$/;
@@ -66,4 +67,5 @@ export const chemiePoolQuestions: Question[] = [
   ...chemiePool23,
   ...chemiePoolOffiziellStyle,
   ...chemieWasIstFalsch,
+  ...chemieWasIstFalsch2,
 ].filter((q) => !isPlaceholder(q));

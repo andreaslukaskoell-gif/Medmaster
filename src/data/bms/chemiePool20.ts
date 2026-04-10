@@ -492,16 +492,6 @@ export const chemiePool20: Question[] = [
     ["Reaktionsordnung"]
   ),
   q(
-    "ch-pool-20-041",
-    KAP[4],
-    "Welche Oxidationszahl hat Stickstoff in NH₄⁺?",
-    ["+5", "+3", "0", "−3", "+1"],
-    3,
-    "NH₄⁺: H jeweils +1, Summe +1 → N + 4·(+1) = +1 → N = −3.",
-    "mittel",
-    ["Oxidationszahl", "Ammonium"]
-  ),
-  q(
     "ch-pool-20-042",
     KAP[5],
     "Ein Phosphat hat die Form:",
@@ -546,22 +536,6 @@ export const chemiePool20: Question[] = [
     "MgO: Ionenverbindung mit Mg²⁺ und O²⁻, kleine Ionen, hohe Ladung → sehr hoher Schmelzpunkt. NaCl, Eis, Ethanol, Benzol niedriger.",
     "mittel",
     ["Schmelzpunkt", "MgO"]
-  ),
-  q(
-    "ch-pool-20-046",
-    KAP[3],
-    "Bei einer Reaktion mit ΔG > 0:",
-    [
-      "läuft die Hinreaktion freiwillig ab",
-      "läuft die Rückreaktion freiwillig ab",
-      "ist das System im Gleichgewicht",
-      "ändert sich nichts",
-      "ist ΔH immer positiv",
-    ],
-    1,
-    "ΔG > 0: Hinreaktion nicht freiwillig; die Rückreaktion (mit ΔG < 0) läuft freiwillig ab.",
-    "mittel",
-    ["freie Enthalpie"]
   ),
   q(
     "ch-pool-20-047",

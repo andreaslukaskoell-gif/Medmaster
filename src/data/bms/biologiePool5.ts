@@ -143,23 +143,6 @@ export const biologiePool5: Question[] = [
     "mittel",
     ["blutgerinnung", "gerinnungskaskade", "falsch-aussage"]
   ),
-  // ── Niere/Harnwege (bio-kap2) ──────────────────────────────────────
-  q(
-    "bio-pool-318",
-    "bio-kap2",
-    "Welche Aussage zur Niere ist FALSCH?",
-    [
-      "Das Nephron ist die funktionelle Grundeinheit der Niere.",
-      "Im Glomerulus wird das Blut filtriert.",
-      "Der proximale Tubulus resorbiert den Großteil des Primärharns.",
-      "Jede Niere enthält etwa 100.000 Nephrone.",
-      "Die Henle-Schleife ist am Gegenstromprinzip beteiligt.",
-    ],
-    3,
-    "Jede Niere enthält etwa 1 Million (1.000.000) Nephrone, nicht nur 100.000. Diese hohe Zahl ist prüfungsrelevant und wird häufig abgefragt.",
-    "leicht",
-    ["niere", "nephron", "falsch-aussage"]
-  ),
   q(
     "bio-pool-319",
     "bio-kap2",

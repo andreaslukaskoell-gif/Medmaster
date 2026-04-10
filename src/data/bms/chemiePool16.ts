@@ -144,16 +144,6 @@ export const chemiePool16: Question[] = [
     ["Natronlauge", "Dissoziation"]
   ),
   q(
-    "ch-pool-16-012",
-    KAP[5],
-    "Welche Verbindung enthält eine Carbonylgruppe (C=O)?",
-    ["Ethan", "Ethanol", "Ethanal", "Ether", "Ethanamin"],
-    2,
-    "Ethanal (Acetaldehyd) CH₃CHO hat die Carbonylgruppe −CHO. Auch Ketone haben C=O.",
-    "mittel",
-    ["Carbonyl", "Aldehyd"]
-  ),
-  q(
     "ch-pool-16-014",
     KAP[1],
     "Ein Gemisch aus Eis und flüssigem Wasser bei 0 °C und 1 bar hat:",
@@ -288,22 +278,6 @@ export const chemiePool16: Question[] = [
     "Die 3. Periode hat 8 Elemente (Na bis Ar). Ab 4. Periode mit Nebengruppen mehr.",
     "leicht",
     ["Periode", "Periodensystem"]
-  ),
-  q(
-    "ch-pool-16-027",
-    KAP[2],
-    "Welche Aussage zu sp²-Hybridisierung trifft zu?",
-    [
-      "Es entstehen 4 äquivalente sp³-Orbitale (Tetraeder, 109,5°)",
-      "Es entstehen 3 sp²-Orbitale und ein p-Orbital (z. B. bei Ethen)",
-      "Sie kommt nur bei Ionen vor, nicht bei neutralen Atomen",
-      "Es gibt dabei nur Einfachbindungen, keine Mehrfachbindungen",
-      "Kohlenstoff hat dann 5 Bindungen statt der üblichen 4 Bindungen",
-    ],
-    1,
-    "sp²: Ein s- und zwei p-Orbitale → 3 sp²-Orbitale (trigonal planar); ein p-Orbital für π-Bindung (z. B. Ethen).",
-    "mittel",
-    ["Hybridisierung", "sp2"]
   ),
   q(
     "ch-pool-16-028",

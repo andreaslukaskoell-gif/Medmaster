@@ -259,22 +259,6 @@ export const biologiePool18: Question[] = [
     ["Hardy-Weinberg", "Populationsgenetik", "rechenfrage"]
   ),
   q(
-    "bio-pool-18-015",
-    "bio-kap3",
-    "Welche Bedingung gehört NICHT zu den Voraussetzungen des Hardy-Weinberg-Gleichgewichts?",
-    [
-      "Keine Mutation",
-      "Keine Selektion",
-      "Zufällige Paarung (Panmixie)",
-      "Kleine Populationsgröße",
-      "Kein Genfluss (Migration)",
-    ],
-    3,
-    "Hardy-Weinberg setzt eine GROSSE (idealerweise unendliche) Population voraus (D falsch). Weitere Bedingungen: keine Mutation, keine Selektion, Panmixie, kein Genfluss — nur dann bleiben Allelfrequenzen konstant.",
-    "mittel",
-    ["Hardy-Weinberg", "FALSCH"]
-  ),
-  q(
     "bio-pool-18-016",
     "bio-kap3",
     "Bei einer autosomal-rezessiven Erkrankung sind 9 % der Bevölkerung betroffen. Wie groß ist die Heterozygotenfrequenz nach Hardy-Weinberg?",
@@ -671,16 +655,6 @@ export const biologiePool18: Question[] = [
     "Bei der Gastrulation bilden sich die drei Keimblätter: Ektoderm, Mesoderm und Entoderm.",
     "leicht",
     ["Gastrulation", "Keimblätter"]
-  ),
-  q(
-    "bio-pool-18-043",
-    "bio-kap3",
-    "Aus welchem Keimblatt entwickelt sich das Nervensystem?",
-    ["Entoderm", "Mesoderm", "Ektoderm", "Trophoblast", "Mesenchym"],
-    2,
-    "Das Nervensystem entsteht aus dem Ektoderm. Weitere Ektoderm-Derivate: Epidermis, Haarfollikel, Zahnschmelz, Augenlinse, Sinnesepithelien.",
-    "leicht",
-    ["Keimblätter", "Ektoderm"]
   ),
   q(
     "bio-pool-18-044",

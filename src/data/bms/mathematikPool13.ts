@@ -171,16 +171,6 @@ export const mathematikPool13: Question[] = [
     ["Geometrie", "Trapez", "Fläche", "rechenfrage"]
   ),
   q(
-    "ma-pool-13-013",
-    "mathe-kap2",
-    "Welche der folgenden Gleichungen hat keine reelle Lösung?",
-    ["x² = 4", "x² + 1 = 0", "x² − 3 = 0", "2x² = 8", "x² = 0"],
-    1,
-    "x² + 1 = 0 → x² = −1 hat keine reelle Lösung (Quadrat einer reellen Zahl ist nie negativ).",
-    "leicht",
-    ["quadratische Gleichung", "reelle Lösungen"]
-  ),
-  q(
     "ma-pool-13-014",
     "mathe-kap2",
     "Ein Kreiszylinder hat Radius r = 5 cm und Höhe h = 10 cm. Die Mantelfläche (M = 2πrh) beträgt (π ≈ 3,14):",
@@ -383,22 +373,6 @@ export const mathematikPool13: Question[] = [
     "Produktregel: f'(x) = 1 · eˣ + x · eˣ = (1 + x)eˣ.",
     "mittel",
     ["Ableitung", "Produktregel", "Exponentialfunktion"]
-  ),
-  q(
-    "ma-pool-13-034",
-    "mathe-kap5",
-    "Die Funktion f(x) = cos(x) hat im Intervall [0, 2π] Nullstellen bei:",
-    [
-      "x = 0 und x = π",
-      "x = π/2 und x = 3π/2",
-      "x = π und x = 2π",
-      "x = π/4 und x = 5π/4",
-      "x = 0 und x = 2π",
-    ],
-    1,
-    "cos(x) = 0 bei x = π/2 und x = 3π/2 (90° und 270°).",
-    "leicht",
-    ["Trigonometrie", "Kosinusfunktion", "Nullstellen"]
   ),
   q(
     "ma-pool-13-035",

@@ -495,23 +495,6 @@ export const biologiePool22: Question[] = [
   ),
 
   q(
-    "bio-pool-hard-028",
-    "bio-kap3",
-    "Welche Aussage zur Epigenetik ist FALSCH?",
-    [
-      "DNA-Methylierung an CpG-Inseln aktiviert typischerweise die Genexpression",
-      "Histonacetylierung lockert die Chromatinstruktur",
-      "Epigenetische Veränderungen sind potenziell reversibel",
-      "Genomisches Imprinting ist ein epigenetischer Mechanismus",
-      "Epigenetische Modifikationen können an Tochterzellen weitergegeben werden",
-    ],
-    0,
-    "A ist falsch: DNA-Methylierung an CpG-Inseln in Promotoren führt typischerweise zur Genstilllegung (Silencing), NICHT zur Aktivierung. B ist richtig (Acetylierung → offenes Euchromatin → aktive Transkription). C ist richtig (z. B. durch Demethylasen). D ist richtig (elternspezifische Methylierung). E ist richtig (mitotische Vererbung epigenetischer Marker).",
-    "schwer",
-    ["epigenetik", "methylierung", "falsch-aussage"]
-  ),
-
-  q(
     "bio-pool-hard-029",
     "bio-kap3",
     "In einer Population sind 4 % der Menschen von einer autosomal-rezessiven Erkrankung betroffen. Wie groß ist die Heterozygoten-Frequenz (Überträger)?",
@@ -754,23 +737,6 @@ export const biologiePool22: Question[] = [
   ),
 
   q(
-    "bio-pool-hard-043",
-    "bio-kap5",
-    "Welche Bedingung gehört NICHT zu den Voraussetzungen des Hardy-Weinberg-Gleichgewichts?",
-    [
-      "Natürliche Selektion findet statt",
-      "Keine Mutation",
-      "Keine Migration (Genfluss)",
-      "Zufällige Paarung (Panmixie)",
-      "Unendlich große Population",
-    ],
-    0,
-    "A ist die richtige Antwort: Hardy-Weinberg setzt voraus, dass KEINE Selektion stattfindet. Wenn Selektion wirkt, verändern sich die Allelfrequenzen und das Gleichgewicht gilt nicht. B (keine Mutation), C (keine Migration), D (Panmixie) und E (große Population) sind alle echte Voraussetzungen des HWG.",
-    "schwer",
-    ["hardy-weinberg", "voraussetzungen", "evolution"]
-  ),
-
-  q(
     "bio-pool-hard-044",
     "bio-kap5",
     "Zwei Tierarten zeigen ähnliche Körperformen, sind aber nicht nah verwandt (z. B. Delfin und Hai). Wie wird diese Ähnlichkeit evolutionsbiologisch bezeichnet?",
@@ -889,5 +855,177 @@ export const biologiePool22: Question[] = [
     "A ist falsch: Eine B-Zelle produziert zunächst IgM und IgD; erst nach Aktivierung und T-Zell-Hilfe erfolgt der Klassenwechsel (Class Switch) zu IgG, IgA oder IgE. Eine B-Zelle produziert NICHT alle Klassen gleichzeitig. B, C, D und E beschreiben korrekte Aspekte der klonalen Selektion und B-Zell-Biologie.",
     "schwer",
     ["klonale-selektion", "b-zellen", "falsch-aussage"]
+  ),
+
+  // ─── bio-kap4: Proteomik (Stichwort bio-5-05) ─────────────────────
+
+  q(
+    "bio-proteomik-001",
+    "bio-kap4",
+    "Was beschreibt der Begriff 'Proteom'?",
+    [
+      "Die Gesamtheit aller Proteine, die zu einem bestimmten Zeitpunkt in einer Zelle exprimiert werden",
+      "Die DNA-Sequenz eines Organismus",
+      "Die Gesamtheit aller mRNAs einer Zelle",
+      "Die Lipid-Zusammensetzung einer Zellmembran",
+      "Die Summe aller Metaboliten in einer Zelle",
+    ],
+    0,
+    "Das Proteom bezeichnet die Gesamtheit aller Proteine einer Zelle, eines Gewebes oder eines Organismus zu einem bestimmten Zeitpunkt und unter bestimmten Bedingungen. Im Gegensatz zum relativ stabilen Genom ist das Proteom hochdynamisch.",
+    "leicht",
+    ["proteomik", "proteom"]
+  ),
+
+  q(
+    "bio-proteomik-002",
+    "bio-kap4",
+    "Welche Methode wird in der Proteomik zur Trennung von Proteinen nach Größe und isoelektrischem Punkt eingesetzt?",
+    [
+      "PCR",
+      "2D-Gelelektrophorese",
+      "Northern Blot",
+      "DNA-Sequenzierung",
+      "Durchflusszytometrie",
+    ],
+    1,
+    "Die 2D-Gelelektrophorese trennt Proteine in zwei Dimensionen: erst nach isoelektrischem Punkt (isoelektrische Fokussierung) und dann nach Molekülmasse (SDS-PAGE). So können Tausende Proteine gleichzeitig aufgetrennt werden.",
+    "mittel",
+    ["proteomik", "2d-gelelektrophorese"]
+  ),
+
+  q(
+    "bio-proteomik-003",
+    "bio-kap4",
+    "Welches Verfahren identifiziert Proteine anhand ihres Masse-zu-Ladung-Verhältnisses (m/z)?",
+    [
+      "Western Blot",
+      "ELISA",
+      "Massenspektrometrie",
+      "Gel-Filtrationschromatographie",
+      "Immunhistochemie",
+    ],
+    2,
+    "Die Massenspektrometrie (MS) ist die Schlüsseltechnologie der Proteomik. Sie ionisiert Proteine oder Peptide und trennt sie nach ihrem Masse-zu-Ladung-Verhältnis (m/z). Varianten wie MALDI-TOF und ESI-MS/MS ermöglichen hochsensitive Proteinidentifikation.",
+    "mittel",
+    ["proteomik", "massenspektrometrie"]
+  ),
+
+  q(
+    "bio-proteomik-004",
+    "bio-kap4",
+    "Warum kann das Proteom einer Zelle nicht direkt aus dem Genom abgeleitet werden?",
+    [
+      "Weil alternatives Spleißen, posttranslationale Modifikationen und regulierte Expression die Proteinvielfalt erhöhen",
+      "Weil das Genom keine Proteine codiert",
+      "Weil mRNA nicht in Protein übersetzt wird",
+      "Weil alle Gene gleichzeitig exprimiert werden",
+      "Weil es keine Korrelation zwischen Genen und Proteinen gibt",
+    ],
+    0,
+    "Das Proteom ist wesentlich komplexer als das Genom, weil alternatives Spleißen aus einem Gen mehrere Proteinvarianten erzeugen kann, posttranslationale Modifikationen (Phosphorylierung, Glykosylierung etc.) die Funktion verändern und die Genexpression zell- und zeitabhängig reguliert wird.",
+    "schwer",
+    ["proteomik", "alternatives-spleissen", "posttranslationale-modifikation"]
+  ),
+
+  q(
+    "bio-proteomik-005",
+    "bio-kap4",
+    "Was ist der Unterschied zwischen Proteomik und Genomik?",
+    [
+      "Genomik untersucht die DNA-Sequenz, Proteomik die Gesamtheit der Proteine",
+      "Es gibt keinen Unterschied",
+      "Proteomik untersucht die DNA, Genomik die Proteine",
+      "Proteomik ist eine veraltete Methode der Genomik",
+      "Genomik untersucht Lipide, Proteomik untersucht Kohlenhydrate",
+    ],
+    0,
+    "Genomik befasst sich mit der Analyse des gesamten Genoms (DNA-Sequenz, Genstruktur, Genregulation), während Proteomik die Gesamtheit der Proteine (Proteom) untersucht — einschließlich Struktur, Funktion, Wechselwirkungen und Modifikationen.",
+    "leicht",
+    ["proteomik", "genomik"]
+  ),
+
+  q(
+    "bio-proteomik-006",
+    "bio-kap4",
+    "Welche posttranslationale Modifikation spielt eine zentrale Rolle in der Signaltransduktion und wird in der Proteomik häufig untersucht?",
+    [
+      "Methylierung der DNA",
+      "Phosphorylierung von Proteinen",
+      "Acetylierung von Lipiden",
+      "Deaminierung von Nucleotiden",
+      "Hydroxylierung von Kohlenhydraten",
+    ],
+    1,
+    "Die Phosphorylierung von Proteinen (an Serin, Threonin oder Tyrosin) ist eine der wichtigsten posttranslationalen Modifikationen in der Signaltransduktion. Die Phosphoproteomik untersucht gezielt diese Modifikationen mittels Anreicherungsstrategien und Massenspektrometrie.",
+    "mittel",
+    ["proteomik", "phosphorylierung", "posttranslationale-modifikation"]
+  ),
+
+  q(
+    "bio-proteomik-007",
+    "bio-kap4",
+    "Was beschreibt der Begriff 'Interaktom' in der Proteomik?",
+    [
+      "Die Gesamtheit aller Protein-Protein-Wechselwirkungen in einer Zelle",
+      "Die Menge aller Gene in einem Organismus",
+      "Die Lipid-Protein-Verhältnisse in Membranen",
+      "Die Gesamtheit aller Metaboliten",
+      "Die Mutationsrate eines Proteins",
+    ],
+    0,
+    "Das Interaktom beschreibt die Gesamtheit aller Protein-Protein-Wechselwirkungen in einer Zelle oder einem Organismus. Methoden wie Yeast-Two-Hybrid-Screening und Co-Immunpräzipitation mit Massenspektrometrie werden verwendet, um Proteininteraktionen systematisch zu erfassen.",
+    "schwer",
+    ["proteomik", "interaktom", "protein-interaktion"]
+  ),
+
+  q(
+    "bio-proteomik-008",
+    "bio-kap4",
+    "Welche Aussage zur MALDI-TOF-Massenspektrometrie ist korrekt?",
+    [
+      "Sie verwendet eine UV-Laser-Ionisierung und misst die Flugzeit der Ionen",
+      "Sie basiert auf der Zentrifugation von Proteinen",
+      "Sie trennt Proteine ausschließlich nach ihrer Ladung",
+      "Sie benötigt immer eine vorherige 2D-Gelelektrophorese",
+      "Sie kann nur DNA-Fragmente analysieren",
+    ],
+    0,
+    "MALDI-TOF (Matrix-Assisted Laser Desorption/Ionization – Time of Flight) ionisiert Proteine oder Peptide in einer kristallinen Matrix mittels UV-Laser. Die Ionen werden beschleunigt und ihre Flugzeit gemessen, die proportional zur Wurzel aus m/z ist. Leichtere Ionen erreichen den Detektor schneller.",
+    "schwer",
+    ["proteomik", "massenspektrometrie", "maldi-tof"]
+  ),
+
+  q(
+    "bio-proteomik-009",
+    "bio-kap4",
+    "Welche Methode wird verwendet, um ein bestimmtes Protein in einem Proteingemisch spezifisch nachzuweisen?",
+    [
+      "Southern Blot",
+      "Northern Blot",
+      "Western Blot",
+      "Eastern Blot",
+      "Dot Blot ausschließlich",
+    ],
+    2,
+    "Der Western Blot (Immunoblot) trennt Proteine per SDS-PAGE, überträgt sie auf eine Membran und weist ein spezifisches Protein mittels Antikörperbindung nach. Southern Blot detektiert DNA, Northern Blot detektiert RNA.",
+    "mittel",
+    ["proteomik", "western-blot"]
+  ),
+
+  q(
+    "bio-proteomik-010",
+    "bio-kap4",
+    "Welche Aussage über die Proteomik im Vergleich zur Transkriptomik ist FALSCH?",
+    [
+      "Die Transkriptomik misst mRNA-Spiegel, die Proteomik misst Proteinspiegel",
+      "mRNA-Spiegel korrelieren immer perfekt mit den Proteinmengen",
+      "Posttranslationale Modifikationen werden nur von der Proteomik erfasst",
+      "Proteinabbau beeinflusst das Proteom, wird aber von der Transkriptomik nicht erfasst",
+      "Alternatives Spleißen erzeugt Proteinvielfalt, die im Transkriptom nur teilweise sichtbar ist",
+    ],
+    1,
+    "mRNA-Spiegel korrelieren NICHT immer perfekt mit den Proteinmengen. Viele Faktoren beeinflussen die Proteinmenge unabhängig von der mRNA: Translationseffizienz, Proteinstabilität, Proteinabbau und posttranslationale Modifikationen. Daher liefert die Proteomik komplementäre Informationen zur Transkriptomik.",
+    "schwer",
+    ["proteomik", "transkriptomik", "falsch-aussage"]
   ),
 ];

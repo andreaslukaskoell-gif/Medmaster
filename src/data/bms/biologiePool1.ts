@@ -655,15 +655,6 @@ export const biologiePool1: Question[] = [
         ["skelettmuskel", "muskelgewebe", "willkürlich"],
       ],
       [
-        "bio-kap3",
-        "Aus welchem Keimblatt entwickelt sich das Nervensystem?",
-        ["Entoderm", "Mesoderm", "Ektoderm", "Trophoblast", "Chorion"],
-        2,
-        "Das Nervensystem und die Haut entstehen aus dem Ektoderm. Mesoderm → Muskeln, Knochen, Kreislauf; Entoderm → Darm, Leber, Lunge.",
-        "mittel",
-        ["keimblätter", "ektoderm", "embryonalentwicklung"],
-      ],
-      [
         "bio-kap4",
         "Welche Basenpaarung kommt in der DNA vor?",
         [

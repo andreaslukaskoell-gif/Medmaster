@@ -646,22 +646,6 @@ export const chemiePool17: Question[] = [
     ["Luftfeuchtigkeit"]
   ),
   q(
-    "ch-pool-17-057",
-    KAP[2],
-    "Welche Aussage zu sp-Hybridisierung trifft zu?",
-    [
-      "Es gibt 4 sp-Orbitale",
-      "Es gibt 2 sp-Orbitale (linear, z. B. Ethin)",
-      "Sie kommt nur bei Ionen vor",
-      "Es entstehen nur Einfachbindungen",
-      "Kohlenstoff hat 5 Bindungen",
-    ],
-    1,
-    "sp: Ein s- und ein p-Orbital → 2 sp-Orbitale (linear, 180°). Zwei p-Orbitale für π-Bindungen (z. B. C≡C).",
-    "mittel",
-    ["Hybridisierung", "sp"]
-  ),
-  q(
     "ch-pool-17-058",
     KAP[3],
     "Bei einer bimolekularen Reaktion A + B → Produkte:",

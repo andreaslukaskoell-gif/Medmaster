@@ -240,7 +240,7 @@ export async function getUserProgress(
       query = query.eq("subchapter_id", subchapterId);
     }
 
-    const { data, error } = await query.order("updated_at", { ascending: false });
+    const { data, error } = await query.order("updated_at", { ascending: false }).limit(1000);
 
     if (error) {
       console.error("Error loading user progress:", error);

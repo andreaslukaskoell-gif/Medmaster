@@ -332,23 +332,6 @@ export const chemiePool9: Question[] = [
   ),
 
   q(
-    "ch-pool-9-021",
-    "chem-kap2",
-    "Welche der folgenden Aussagen zur Osmose ist falsch?",
-    [
-      "Osmose ist die Diffusion von Lösungsmittel durch eine semipermeable Membran",
-      "Der osmotische Druck ist proportional zur Konzentration gelöster Teilchen",
-      "In einer hypertonen Lösung schrumpfen Erythrozyten (Krenation)",
-      "Der osmotische Druck wird durch die Van-'t-Hoff-Gleichung beschrieben",
-      "Bei der Osmose wandert das Lösungsmittel von der konzentrierteren zur verdünnteren Seite",
-    ],
-    4,
-    "Bei der Osmose wandert das Lösungsmittel von der verdünnteren zur konzentrierteren Seite (entlang des Konzentrationsgefälles des Lösungsmittels). Aussage E kehrt die Richtung um.",
-    "mittel",
-    ["osmose", "falsch-aussage"]
-  ),
-
-  q(
     "ch-pool-9-022",
     "chem-kap2",
     "Beim Sublimieren von Trockeneis (CO₂) in der Dermatologie geht das CO₂ direkt vom festen in den gasförmigen Zustand über. Welche Aussage ist korrekt?",

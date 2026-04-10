@@ -688,22 +688,6 @@ export const biologiePool11: Question[] = [
     ["Ökologie", "Symbiose"]
   ),
   q(
-    "bio-pool-11-051",
-    "bio-kap4",
-    "Welche Aussage zur Meiose trifft zu?",
-    [
-      "Sie dient dem Wachstum und der Regeneration somatischer Gewebe",
-      "Sie reduziert den Chromosomensatz von diploid auf haploid",
-      "Sie erfolgt ausschließlich in somatischen Körperzellen",
-      "Sie hat nur eine einzige Zellteilung pro Replikationszyklus",
-      "Es gibt kein Crossing-over und damit keine genetische Rekombination",
-    ],
-    1,
-    "Meiose dient der Bildung von Keimzellen und reduziert den Chromosomensatz (diploid → haploid). Zwei aufeinanderfolgende Teilungen.",
-    "leicht",
-    ["Meiose", "Genetik"]
-  ),
-  q(
     "bio-pool-11-052",
     "bio-kap2",
     "Wo wird das Hormon Gastrin gebildet?",

@@ -1351,23 +1351,45 @@ export default function FragenTrainer() {
           return (
             <>
               {questionsPerSubjectLimit !== null && subjectUsage && (
-                <div className="mb-4 flex flex-wrap gap-2">
-                  {(["biologie", "chemie", "physik", "mathematik"] as const).map((f) => {
-                    const used = subjectUsage[f] ?? 0;
-                    const exhausted = used >= questionsPerSubjectLimit;
+                <div className="mb-4 space-y-2">
+                  {(() => {
+                    const totalUsed = Object.values(subjectUsage).reduce((a, b) => a + b, 0);
+                    const totalLimit = questionsPerSubjectLimit * 4;
+                    const totalRemaining = Math.max(0, totalLimit - totalUsed);
+                    const colorClass =
+                      totalRemaining < 5
+                        ? "text-red-600 dark:text-red-400"
+                        : totalRemaining < 10
+                          ? "text-amber-600 dark:text-amber-400"
+                          : "text-[var(--muted)]";
                     return (
-                      <span
-                        key={f}
-                        className={`text-xs px-2.5 py-1 rounded-full ${
-                          exhausted
-                            ? "bg-[var(--muted)]/10 text-[var(--muted)] line-through"
-                            : "bg-[var(--accent)]/10 text-[var(--accent)]"
-                        }`}
-                      >
-                        {f.charAt(0).toUpperCase() + f.slice(1)}: {used}/{questionsPerSubjectLimit}
-                      </span>
+                      <p className={`text-xs ${colorClass}`}>
+                        Noch {totalRemaining} von {totalLimit} Gratis-Fragen übrig
+                      </p>
                     );
-                  })}
+                  })()}
+                  <div className="flex flex-wrap gap-2">
+                    {(["biologie", "chemie", "physik", "mathematik"] as const).map((f) => {
+                      const used = subjectUsage[f] ?? 0;
+                      const remaining = Math.max(0, questionsPerSubjectLimit - used);
+                      const exhausted = used >= questionsPerSubjectLimit;
+                      const colorClass = exhausted
+                        ? "bg-[var(--muted)]/10 text-[var(--muted)] line-through"
+                        : remaining < 5
+                          ? "bg-red-100 dark:bg-red-900/20 text-red-600 dark:text-red-400"
+                          : remaining < 10
+                            ? "bg-amber-100 dark:bg-amber-900/20 text-amber-600 dark:text-amber-400"
+                            : "bg-[var(--accent)]/10 text-[var(--accent)]";
+                      return (
+                        <span
+                          key={f}
+                          className={`text-xs px-2.5 py-1 rounded-full ${colorClass}`}
+                        >
+                          {f.charAt(0).toUpperCase() + f.slice(1)}: {remaining} übrig
+                        </span>
+                      );
+                    })}
+                  </div>
                 </div>
               )}
               <SelectionScreen

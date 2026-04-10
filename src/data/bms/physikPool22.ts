@@ -166,22 +166,6 @@ export const physikPool22: Question[] = [
     ["Carnot", "Wirkungsgrad", "Wärmelehre", "rechenfrage"]
   ),
   q(
-    "ph-pool-hard-013",
-    "phys-kap4",
-    "Welche der folgenden Aussagen zu den Hauptsätzen der Thermodynamik ist FALSCH?",
-    [
-      "Der erste Hauptsatz besagt, dass die innere Energie eines Systems durch Wärme und Arbeit geändert werden kann.",
-      "Der zweite Hauptsatz besagt, dass Wärme nicht spontan von einem kälteren zu einem wärmeren Körper fließen kann.",
-      "Bei einer adiabatischen Expansion eines idealen Gases sinkt die Temperatur.",
-      "Bei einer isochoren Zustandsänderung wird keine Volumenarbeit verrichtet.",
-      "Der Wirkungsgrad einer realen Wärmekraftmaschine kann den Carnot-Wirkungsgrad überschreiten, wenn die Maschine verlustfrei arbeitet.",
-    ],
-    4,
-    "E ist falsch: Der Carnot-Wirkungsgrad ist die theoretische Obergrenze für alle Wärmekraftmaschinen zwischen zwei Temperaturniveaus — keine reale Maschine kann ihn überschreiten, auch nicht im idealisierten verlustfreien Fall (bestenfalls erreichen). A: 1. HS korrekt. B: Clausius-Formulierung des 2. HS. C: Adiabatisch expandierend → keine Wärmezufuhr, Gas verrichtet Arbeit → T sinkt. D: isochor → dV = 0 → W = 0.",
-    "schwer",
-    ["Hauptsätze", "Thermodynamik", "Wärmelehre", "falsch-aussage"]
-  ),
-  q(
     "ph-pool-hard-014",
     "phys-kap4",
     "500 g Wasser bei 80 °C werden mit 300 g Wasser bei 20 °C gemischt. Welche Mischtemperatur stellt sich ein? (c_Wasser = 4,186 kJ/(kg·K), keine Wärmeverluste)",
@@ -610,5 +594,177 @@ export const physikPool22: Question[] = [
     "λ = hc/E = 1240/2,0 = 620 nm (sichtbares Licht, orange-rot). Fehler: 310 nm (E = 4 eV angenommen oder λ/2), 1240 nm (E = 1 eV), 414 nm (E = 3 eV), 248 nm (E = 5 eV).",
     "schwer",
     ["Photon", "Wellenlänge", "Energie", "Atomphysik", "rechenfrage"]
+  ),
+
+  // ─── phys-kap7: Atomaufbau (Stichwort ph-7-01) ────────────────────
+
+  q(
+    "ph-atomaufbau-001",
+    "phys-kap7",
+    "Welche Aussage beschreibt das Bohrsche Atommodell korrekt?",
+    [
+      "Elektronen bewegen sich auf beliebigen Bahnen um den Kern",
+      "Elektronen können sich nur auf diskreten, stationären Bahnen bewegen, ohne Energie abzustrahlen",
+      "Elektronen befinden sich ausschließlich im Atomkern",
+      "Elektronen haben keine definierte Energie",
+      "Das Bohrsche Modell beschreibt Atome ohne Kern",
+    ],
+    1,
+    "Im Bohrschen Atommodell bewegen sich Elektronen auf diskreten Kreisbahnen mit gequanteltem Drehimpuls (L = n·ℏ). Auf diesen stationären Bahnen strahlen sie keine Energie ab. Photonen werden nur beim Übergang zwischen Bahnen emittiert oder absorbiert.",
+    "leicht",
+    ["bohr", "atommodell", "atomaufbau"]
+  ),
+
+  q(
+    "ph-atomaufbau-002",
+    "phys-kap7",
+    "Welche Quantenzahlen beschreiben den Zustand eines Elektrons im Atom vollständig?",
+    [
+      "Nur die Hauptquantenzahl n",
+      "n und l",
+      "n, l und m_l",
+      "n, l, m_l und m_s (Hauptquantenzahl, Nebenquantenzahl, magnetische Quantenzahl, Spinquantenzahl)",
+      "Nur die Spinquantenzahl m_s",
+    ],
+    3,
+    "Vier Quantenzahlen beschreiben den Zustand eines Elektrons vollständig: n (Hauptquantenzahl, Energieniveau), l (Nebenquantenzahl, Orbitalform), m_l (magnetische Quantenzahl, räumliche Orientierung) und m_s (Spinquantenzahl, +½ oder −½).",
+    "mittel",
+    ["quantenzahlen", "atomaufbau"]
+  ),
+
+  q(
+    "ph-atomaufbau-003",
+    "phys-kap7",
+    "Welche Energie hat ein Elektron im Wasserstoffatom auf der n-ten Bahn nach dem Bohrschen Modell?",
+    [
+      "E_n = −13,6 eV / n²",
+      "E_n = 13,6 eV · n²",
+      "E_n = −13,6 eV · n",
+      "E_n = 13,6 eV / n",
+      "E_n = −13,6 eV · n²",
+    ],
+    0,
+    "Die Energieniveaus im Wasserstoffatom nach Bohr betragen E_n = −13,6 eV / n². Die Grundzustandsenergie (n = 1) beträgt −13,6 eV, die Ionisierungsenergie also 13,6 eV. Die Energie wird mit steigendem n weniger negativ (= höher).",
+    "mittel",
+    ["bohr", "energieniveaus", "wasserstoff", "rechenfrage"]
+  ),
+
+  q(
+    "ph-atomaufbau-004",
+    "phys-kap7",
+    "Was besagt das Pauli-Ausschlussprinzip?",
+    [
+      "Zwei Elektronen in einem Atom dürfen nicht in allen vier Quantenzahlen übereinstimmen",
+      "Alle Elektronen müssen den gleichen Spin haben",
+      "Elektronen können sich nur auf der innersten Schale aufhalten",
+      "Die Energie eines Elektrons hängt nicht von der Quantenzahl ab",
+      "Protonen und Elektronen haben identische Massen",
+    ],
+    0,
+    "Das Pauli-Ausschlussprinzip (Pauli-Verbot) besagt, dass keine zwei Fermionen (z. B. Elektronen) in einem System in allen Quantenzahlen übereinstimmen dürfen. In einem Orbital (gleiche n, l, m_l) können daher maximal 2 Elektronen mit entgegengesetztem Spin (m_s = +½ und −½) sein.",
+    "mittel",
+    ["pauli", "quantenzahlen", "atomaufbau"]
+  ),
+
+  q(
+    "ph-atomaufbau-005",
+    "phys-kap7",
+    "Was unterscheidet das Orbitalmodell vom Bohrschen Atommodell?",
+    [
+      "Im Orbitalmodell werden Elektronen als Wellenfunktionen mit Aufenthaltswahrscheinlichkeiten beschrieben, nicht als Teilchen auf festen Bahnen",
+      "Das Orbitalmodell kennt keine Quantenzahlen",
+      "Im Orbitalmodell gibt es keine diskreten Energieniveaus",
+      "Das Orbitalmodell gilt nur für Helium",
+      "Im Orbitalmodell befinden sich alle Elektronen auf derselben Bahn",
+    ],
+    0,
+    "Im quantenmechanischen Orbitalmodell werden Elektronen durch Wellenfunktionen (Schrödinger-Gleichung) beschrieben. Man kann nur Aufenthaltswahrscheinlichkeiten angeben, keine exakten Bahnen. Orbitale sind Aufenthaltsräume mit 90 % Wahrscheinlichkeit. Es gilt für alle Atome, nicht nur Wasserstoff.",
+    "schwer",
+    ["orbitalmodell", "wellenfunktion", "atomaufbau"]
+  ),
+
+  q(
+    "ph-atomaufbau-006",
+    "phys-kap7",
+    "Wie viele Elektronen passen maximal in die Schale mit der Hauptquantenzahl n = 3?",
+    [
+      "2",
+      "8",
+      "18",
+      "32",
+      "10",
+    ],
+    2,
+    "Die maximale Elektronenzahl pro Schale beträgt 2n². Für n = 3: 2 · 3² = 18 Elektronen. Diese verteilen sich auf die Unterschalen 3s (2), 3p (6) und 3d (10).",
+    "leicht",
+    ["elektronenschalen", "atomaufbau", "rechenfrage"]
+  ),
+
+  q(
+    "ph-atomaufbau-007",
+    "phys-kap7",
+    "Welche Spektralserie des Wasserstoffs liegt im sichtbaren Bereich?",
+    [
+      "Lyman-Serie (Übergänge nach n = 1)",
+      "Balmer-Serie (Übergänge nach n = 2)",
+      "Paschen-Serie (Übergänge nach n = 3)",
+      "Brackett-Serie (Übergänge nach n = 4)",
+      "Pfund-Serie (Übergänge nach n = 5)",
+    ],
+    1,
+    "Die Balmer-Serie (Übergänge von höheren Niveaus auf n = 2) liegt im sichtbaren Bereich (ca. 400–700 nm). Die Lyman-Serie liegt im UV, die Paschen-, Brackett- und Pfund-Serien im Infrarot.",
+    "mittel",
+    ["balmer", "spektralserien", "wasserstoff"]
+  ),
+
+  q(
+    "ph-atomaufbau-008",
+    "phys-kap7",
+    "Welche Aussage über die Hundsche Regel ist korrekt?",
+    [
+      "Entartete Orbitale (gleiche Energie) werden zuerst einzeln mit parallelem Spin besetzt",
+      "Elektronen besetzen immer zuerst das Orbital mit dem höchsten Spin",
+      "In jedem Orbital müssen sich die Spins aufheben",
+      "Die Hundsche Regel gilt nur für s-Orbitale",
+      "Orbitale werden immer doppelt besetzt, bevor das nächste begonnen wird",
+    ],
+    0,
+    "Die Hundsche Regel besagt, dass energetisch gleichwertige (entartete) Orbitale zunächst einfach mit parallelem Spin besetzt werden, bevor eine Doppelbesetzung erfolgt. Dies minimiert die Elektron-Elektron-Abstoßung und maximiert den Gesamtspin.",
+    "mittel",
+    ["hundsche-regel", "atomaufbau"]
+  ),
+
+  q(
+    "ph-atomaufbau-009",
+    "phys-kap7",
+    "Was ist die Bedeutung der Nebenquantenzahl l?",
+    [
+      "Sie bestimmt die Form des Orbitals (s, p, d, f)",
+      "Sie bestimmt die Größe des Atoms",
+      "Sie gibt die Anzahl der Neutronen an",
+      "Sie beschreibt den Spin des Elektrons",
+      "Sie bestimmt die Gesamtladung des Atoms",
+    ],
+    0,
+    "Die Nebenquantenzahl l bestimmt die Form des Orbitals: l = 0 → s-Orbital (kugelförmig), l = 1 → p-Orbital (hantelförmig), l = 2 → d-Orbital (rosettenförmig), l = 3 → f-Orbital. Für eine gegebene Hauptquantenzahl n kann l die Werte 0 bis n−1 annehmen.",
+    "leicht",
+    ["nebenquantenzahl", "orbitale", "atomaufbau"]
+  ),
+
+  q(
+    "ph-atomaufbau-010",
+    "phys-kap7",
+    "Ein Wasserstoffatom geht vom Zustand n = 4 auf n = 2 über. Welche Photonenenergie wird emittiert? (E₁ = −13,6 eV)",
+    [
+      "2,55 eV",
+      "3,40 eV",
+      "10,2 eV",
+      "12,75 eV",
+      "1,89 eV",
+    ],
+    0,
+    "ΔE = E₄ − E₂ = (−13,6/16) − (−13,6/4) = −0,85 − (−3,40) = 2,55 eV. Diese Linie (Hβ) gehört zur Balmer-Serie und liegt im blau-grünen Bereich des sichtbaren Spektrums (ca. 486 nm).",
+    "schwer",
+    ["bohr", "energieniveaus", "rechenfrage", "balmer"]
   ),
 ];

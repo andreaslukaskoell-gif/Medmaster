@@ -134,22 +134,6 @@ export const biologiePool16: Question[] = [
     ["Verdauung", "Enzyme"]
   ),
   q(
-    "bio-pool-16-038",
-    "bio-kap5",
-    "Was versteht man unter angeborener Immunität?",
-    [
-      "Nur humorale Antikörper",
-      "Unspezifische, angeborene Abwehr",
-      "Nur T-Zellen",
-      "Nur nach Impfung",
-      "Nur die erworbene (adaptive) Immunabwehr mit Gedächtniszellen",
-    ],
-    1,
-    "Angeborene Abwehr: Haut, Schleimhäute, Phagozyten, NK-Zellen, Komplement – unspezifisch.",
-    "mittel",
-    ["Immunologie", "angeborene Abwehr"]
-  ),
-  q(
     "bio-pool-16-039",
     "bio-kap1",
     "Welches Vitamin ist für die Blutbildung wichtig?",
@@ -164,22 +148,6 @@ export const biologiePool16: Question[] = [
     "Vitamin B12 und Folsäure sind für die DNA-Synthese und Erythropoese nötig.",
     "mittel",
     ["Vitamine", "Blut"]
-  ),
-  q(
-    "bio-pool-16-040",
-    "bio-kap2",
-    "Wo findet der Gasaustausch in der Lunge statt?",
-    [
-      "In den Bronchien",
-      "In den Alveolen",
-      "Nur in der Pleura",
-      "In der Trachea",
-      "Unter dem Zwerchfell",
-    ],
-    1,
-    "In den Lungenbläschen (Alveolen) erfolgt der Gasaustausch.",
-    "leicht",
-    ["Atmung", "Lunge"]
   ),
   q(
     "bio-pool-16-049",

@@ -290,16 +290,6 @@ export const mathematikPool12: Question[] = [
     ["Bruchrechnung", "rechenfrage"]
   ),
   q(
-    "ma-pool-12-024",
-    "mathe-kap3",
-    "Welchen Wert hat 16^(3/4)?",
-    ["4", "6", "8", "12", "64"],
-    2,
-    "16^(3/4) = (16^(1/4))³ = 2³ = 8. Die vierte Wurzel aus 16 ist 2.",
-    "mittel",
-    ["Potenzgesetze", "Wurzeln", "rechenfrage"]
-  ),
-  q(
     "ma-pool-12-025",
     "mathe-kap3",
     "Ein Medikament kostet 45 €. Die Mehrwertsteuer beträgt 10 %. Wie hoch ist der Bruttopreis?",
@@ -338,22 +328,6 @@ export const mathematikPool12: Question[] = [
     "Verwaltung: 100 % − 15 % − 45 % = 40 %. 600 × 0,40 = 240.",
     "mittel",
     ["Prozentrechnung", "rechenfrage"]
-  ),
-  q(
-    "ma-pool-12-029",
-    "mathe-kap3",
-    "Welche Aussage über Logarithmen ist falsch?",
-    [
-      "log(a · b) = log(a) + log(b)",
-      "log(a/b) = log(a) − log(b)",
-      "log(aⁿ) = n · log(a)",
-      "log(a + b) = log(a) + log(b)",
-      "log(1) = 0",
-    ],
-    3,
-    "log(a + b) ≠ log(a) + log(b). Es gibt keine einfache Logarithmusregel für Summen. Die Produktregel lautet log(a · b) = log(a) + log(b).",
-    "mittel",
-    ["Logarithmus", "Falsch-Aussage"]
   ),
   q(
     "ma-pool-12-030",

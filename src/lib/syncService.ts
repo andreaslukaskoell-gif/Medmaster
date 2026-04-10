@@ -310,7 +310,8 @@ export async function pullStatsFromSupabase(
       const { data, error: swErr } = await supabase
         .from("stichwort_stats")
         .select("*")
-        .eq("user_id", userId);
+        .eq("user_id", userId)
+        .limit(1000);
       if (swErr) throw swErr;
       swData = Array.isArray(data) ? (data as unknown[]).filter(isValidStichwortStatRow) : [];
     } catch (err: unknown) {
@@ -325,7 +326,8 @@ export async function pullStatsFromSupabase(
       const { data, error: fachErr } = await supabase
         .from("fach_stats")
         .select("*")
-        .eq("user_id", userId);
+        .eq("user_id", userId)
+        .limit(1000);
       if (fachErr) throw fachErr;
       fachData = Array.isArray(data) ? (data as unknown[]).filter(isValidFachStatRow) : [];
     } catch (err: unknown) {

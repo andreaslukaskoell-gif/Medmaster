@@ -263,22 +263,6 @@ export const biologiePool21: Question[] = [
     ["Dihybrid", "Mendelsche Regeln", "Wahrscheinlichkeit"]
   ),
   q(
-    "bio-pool-21-016",
-    "bio-kap4",
-    "Welche Aussage zur Polymerase-Kettenreaktion (PCR) ist korrekt?",
-    [
-      "PCR verwendet RNA-Polymerase zur Amplifikation von DNA-Abschnitten",
-      "Die Denaturierung erfolgt bei ca. 95 °C, wobei die DNA-Doppelstränge getrennt werden",
-      "PCR benötigt keine Primer, da die Taq-Polymerase die Startstelle selbst erkennt",
-      "Nach 10 Zyklen liegen theoretisch ca. 100 Kopien der Zielsequenz vor",
-      "Die Taq-Polymerase hat eine Korrekturlesefunktion (Proofreading)",
-    ],
-    1,
-    "PCR-Schritte: 1) Denaturierung bei ~95 °C (Strangtrennung), 2) Annealing bei ~55–65 °C (Primerbindung), 3) Elongation bei ~72 °C (Taq-Polymerase verlängert). Nach n Zyklen: 2^n Kopien. 10 Zyklen → 2^10 = 1024 Kopien. Taq hat KEINE Korrekturlesefunktion.",
-    "schwer",
-    ["PCR", "Molekularbiologie", "Taq-Polymerase"]
-  ),
-  q(
     "bio-pool-21-017",
     "bio-kap4",
     "Welche Aussage zu Tumorsuppressorgenen und Onkogenen ist korrekt?",

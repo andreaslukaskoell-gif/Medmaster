@@ -40,22 +40,6 @@ export const mathematikPoolOffiziellStyle: Question[] = [
     ["Trigonometrie", "Tangens", "Steigung"]
   ),
   q(
-    "ma-off-004",
-    "mathe-kap5",
-    "Der Herzschlag eines Patienten verlangsamt sich um a Schläge pro Minute. Der Ruhepuls beträgt f_Ruhe Schläge pro Minute. Ein Medikament beschleunigt den Herzschlag quadratisch mit Faktor b pro Minute. f(t) = f_Ruhe − a·t + b·t². Nach welcher Zeit tritt die minimale Herzfrequenz auf?",
-    [
-      "Nach t = a/(2b) Minuten.",
-      "Nach t = a/b² Minuten.",
-      "Nach t = a/b Minuten.",
-      "Nach t = a²/b Minuten.",
-      "Nach t = 2a/b Minuten.",
-    ],
-    0,
-    "Minimum von f(t): f'(t) = −a + 2b·t = 0 ⇒ t = a/(2b).",
-    "schwer",
-    ["Ableitung", "Extremum", "quadratische Funktion"]
-  ),
-  q(
     "ma-off-005",
     "mathe-kap2",
     "Gegeben ist: a = b/c und d = a⁻¹. Was ist richtig?",

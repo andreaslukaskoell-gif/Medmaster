@@ -665,4 +665,176 @@ export const chemiePool23: Question[] = [
     "schwer",
     ["Anomerie", "Kohlenhydrate", "Isomerie", "Glucose"]
   ),
+
+  // ─── chem-kap1: Teilchen/Welle-Dualismus (Stichwort ch-2-03) ──────
+
+  q(
+    "ch-dualismus-001",
+    "chem-kap1",
+    "Welche Aussage beschreibt den Welle-Teilchen-Dualismus korrekt?",
+    [
+      "Materie und Strahlung zeigen sowohl Wellen- als auch Teilcheneigenschaften",
+      "Licht ist ausschließlich eine Welle",
+      "Elektronen verhalten sich ausschließlich wie Teilchen",
+      "Der Dualismus gilt nur für makroskopische Objekte",
+      "Teilcheneigenschaften und Welleneigenschaften schließen sich gegenseitig aus",
+    ],
+    0,
+    "Der Welle-Teilchen-Dualismus ist ein Grundprinzip der Quantenmechanik: Sowohl elektromagnetische Strahlung (Photonen) als auch Materie (Elektronen, Atome) zeigen je nach Experiment Wellen- oder Teilcheneigenschaften. Beides sind komplementäre Beschreibungen desselben Phänomens.",
+    "leicht",
+    ["teilchen-welle-dualismus", "quantenmechanik"]
+  ),
+
+  q(
+    "ch-dualismus-002",
+    "chem-kap1",
+    "Wie lautet die De-Broglie-Beziehung?",
+    [
+      "λ = h / p (Wellenlänge = Plancksches Wirkungsquantum / Impuls)",
+      "λ = p / h",
+      "λ = h · p",
+      "λ = m · v",
+      "λ = c / h",
+    ],
+    0,
+    "Die De-Broglie-Beziehung λ = h/p = h/(m·v) ordnet jedem Teilchen mit Impuls p eine Materiewelle mit Wellenlänge λ zu. Louis de Broglie postulierte 1924, dass nicht nur Licht, sondern auch Materie Welleneigenschaften besitzt.",
+    "mittel",
+    ["teilchen-welle-dualismus", "de-broglie"]
+  ),
+
+  q(
+    "ch-dualismus-003",
+    "chem-kap1",
+    "Welches Experiment zeigte erstmals den Wellencharakter von Elektronen?",
+    [
+      "Das Rutherford-Streuexperiment",
+      "Das Davisson-Germer-Experiment (Elektronenbeugung an Nickelkristall)",
+      "Der Millikan-Versuch",
+      "Das Michelson-Morley-Experiment",
+      "Der Franck-Hertz-Versuch",
+    ],
+    1,
+    "Das Davisson-Germer-Experiment (1927) zeigte Beugungsmuster bei der Reflexion von Elektronen an einem Nickelkristall — ein eindeutiger Nachweis des Wellencharakters von Elektronen und Bestätigung der De-Broglie-Hypothese.",
+    "schwer",
+    ["teilchen-welle-dualismus", "davisson-germer", "elektronenbeugung"]
+  ),
+
+  q(
+    "ch-dualismus-004",
+    "chem-kap1",
+    "Welche Eigenschaft von Licht beweist seinen Teilchencharakter?",
+    [
+      "Beugung am Spalt",
+      "Interferenz",
+      "Photoelektrischer Effekt",
+      "Polarisation",
+      "Brechung an Grenzflächen",
+    ],
+    2,
+    "Der photoelektrische Effekt (Photoeffekt) beweist den Teilchencharakter von Licht: Licht überträgt Energie in diskreten Quanten (Photonen) auf Elektronen. Die Energie eines Photons ist E = h·f. Beugung, Interferenz und Polarisation sind Welleneigenschaften.",
+    "mittel",
+    ["teilchen-welle-dualismus", "photoeffekt"]
+  ),
+
+  q(
+    "ch-dualismus-005",
+    "chem-kap1",
+    "Warum ist die De-Broglie-Wellenlänge makroskopischer Objekte praktisch nicht beobachtbar?",
+    [
+      "Weil die Masse so groß ist, dass λ = h/(m·v) extrem klein wird (viel kleiner als Atomdurchmesser)",
+      "Weil makroskopische Objekte keine Masse haben",
+      "Weil h für große Objekte nicht gilt",
+      "Weil die Lichtgeschwindigkeit c die Wellenlänge aufhebt",
+      "Weil makroskopische Objekte sich nicht bewegen",
+    ],
+    0,
+    "Für ein Objekt mit großer Masse m ist die De-Broglie-Wellenlänge λ = h/(m·v) unvorstellbar klein (z. B. ≈ 10⁻³⁴ m für einen Ball), da h = 6,626·10⁻³⁴ J·s extrem klein ist. Beugungseffekte treten nur auf, wenn λ in der Größenordnung der Strukturen liegt.",
+    "mittel",
+    ["teilchen-welle-dualismus", "de-broglie"]
+  ),
+
+  q(
+    "ch-dualismus-006",
+    "chem-kap1",
+    "Welche Bedeutung hat der Welle-Teilchen-Dualismus für das Verständnis von Orbitalen?",
+    [
+      "Elektronen in Atomen werden als stehende Materiewellen beschrieben, deren Wellenfunktion die Aufenthaltswahrscheinlichkeit bestimmt",
+      "Elektronen bewegen sich auf festen Kreisbahnen wie Planeten",
+      "Orbitale haben nichts mit dem Dualismus zu tun",
+      "Der Dualismus erklärt nur das Verhalten von Photonen in Atomen",
+      "Elektronen in Orbitalen haben keine Welleneigenschaften",
+    ],
+    0,
+    "Der Welle-Teilchen-Dualismus ist die Grundlage des Orbitalmodells: Elektronen werden als stehende Materiewellen beschrieben (Schrödinger-Gleichung). Die Wellenfunktion ψ liefert über |ψ|² die Aufenthaltswahrscheinlichkeit. Die Quantisierung ergibt sich aus der Randbedingung für stehende Wellen.",
+    "schwer",
+    ["teilchen-welle-dualismus", "orbitale", "wellenfunktion"]
+  ),
+
+  q(
+    "ch-dualismus-007",
+    "chem-kap1",
+    "Welche der folgenden Aussagen zum Compton-Effekt ist korrekt?",
+    [
+      "Ein Photon überträgt beim Stoß mit einem Elektron Impuls und ändert seine Wellenlänge",
+      "Ein Photon wird bei der Streuung vollständig absorbiert",
+      "Der Compton-Effekt beweist den Wellencharakter von Licht",
+      "Beim Compton-Effekt bleibt die Wellenlänge des Photons unverändert",
+      "Der Compton-Effekt tritt nur bei Radiowellen auf",
+    ],
+    0,
+    "Beim Compton-Effekt (1923) stößt ein Photon mit einem Elektron wie ein Teilchen. Das gestreute Photon hat eine größere Wellenlänge (weniger Energie), da es Impuls und Energie auf das Elektron übertragen hat. Dies beweist den Teilchencharakter von Röntgenstrahlung.",
+    "schwer",
+    ["teilchen-welle-dualismus", "compton-effekt"]
+  ),
+
+  q(
+    "ch-dualismus-008",
+    "chem-kap1",
+    "Welche De-Broglie-Wellenlänge hat ein Elektron (m = 9,1 · 10⁻³¹ kg) mit einer Geschwindigkeit von 1,0 · 10⁶ m/s? (h = 6,6 · 10⁻³⁴ J·s)",
+    [
+      "0,73 nm",
+      "7,3 nm",
+      "0,073 nm",
+      "73 nm",
+      "0,0073 nm",
+    ],
+    0,
+    "λ = h/(m·v) = 6,6·10⁻³⁴ / (9,1·10⁻³¹ · 1,0·10⁶) = 6,6·10⁻³⁴ / 9,1·10⁻²⁵ ≈ 7,3·10⁻¹⁰ m = 0,73 nm. Diese Wellenlänge liegt im Bereich von Atomabständen, weshalb Elektronenbeugung an Kristallen möglich ist.",
+    "schwer",
+    ["teilchen-welle-dualismus", "de-broglie", "rechenfrage"]
+  ),
+
+  q(
+    "ch-dualismus-009",
+    "chem-kap1",
+    "Was versteht man unter der Komplementarität in der Quantenmechanik?",
+    [
+      "Wellen- und Teilcheneigenschaften ergänzen sich, können aber nicht gleichzeitig in einem Experiment beobachtet werden",
+      "Wellen und Teilchen sind identisch",
+      "Komplementarität bedeutet, dass nur der Wellencharakter existiert",
+      "Komplementarität gilt nur für Protonen",
+      "Beide Eigenschaften können immer gleichzeitig gemessen werden",
+    ],
+    0,
+    "Das Komplementaritätsprinzip (Bohr, 1928) besagt, dass Wellen- und Teilcheneigenschaften komplementär sind: Sie schließen sich in einem einzelnen Experiment gegenseitig aus, sind aber beide nötig, um Quantenobjekte vollständig zu beschreiben. Welches Verhalten beobachtet wird, hängt vom Versuchsaufbau ab.",
+    "mittel",
+    ["teilchen-welle-dualismus", "komplementaritaet", "bohr"]
+  ),
+
+  q(
+    "ch-dualismus-010",
+    "chem-kap1",
+    "Welche der folgenden Aussagen zum Teilchen-Welle-Dualismus ist FALSCH?",
+    [
+      "Photonen zeigen im Doppelspaltexperiment Interferenzmuster (Wellencharakter)",
+      "Elektronen können an Kristallen gebeugt werden (Wellencharakter)",
+      "Der Dualismus wurde erst im 21. Jahrhundert entdeckt",
+      "Die De-Broglie-Wellenlänge ist umgekehrt proportional zum Impuls",
+      "Der Photoeffekt zeigt den Teilchencharakter von Licht",
+    ],
+    2,
+    "Der Welle-Teilchen-Dualismus wurde NICHT erst im 21. Jahrhundert entdeckt. Einstein erklärte den Photoeffekt 1905, De Broglie postulierte die Materiewellen 1924, Davisson und Germer bestätigten sie experimentell 1927. Alles im frühen 20. Jahrhundert.",
+    "leicht",
+    ["teilchen-welle-dualismus", "falsch-aussage"]
+  ),
 ];

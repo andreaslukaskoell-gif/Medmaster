@@ -64,25 +64,6 @@ export const physikTypKNew2: Question[] = [
     difficulty: "leicht",
     tags: ["typ-k"],
   },
-  // ── 004 Atomphysik – Radioaktivität (mittel) ──
-  {
-    id: "ph-typk-new2-004",
-    subject: "physik",
-    chapter: "phys-kap7",
-    text: "Welche der folgenden Aussagen zum radioaktiven Zerfall sind richtig?\n\n1. Beim α-Zerfall wird ein Helium-4-Kern emittiert.\n2. Die Halbwertszeit ist die Zeit, nach der die Hälfte der Atome zerfallen ist.\n3. Die Zerfallskonstante λ und die Halbwertszeit sind zueinander proportional.\n4. β⁻-Zerfall verwandelt ein Neutron in ein Proton.\n5. Der radioaktive Zerfall folgt einem Exponentialgesetz.",
-    options: [
-      { id: "a", text: "Nur 1, 2, 4 und 5" },
-      { id: "b", text: "Nur 1, 2 und 5" },
-      { id: "c", text: "Nur 1, 3, 4 und 5" },
-      { id: "d", text: "Nur 2, 4 und 5" },
-      { id: "e", text: "Alle (1, 2, 3, 4 und 5)" },
-    ],
-    correctOptionId: "a",
-    explanation:
-      "1, 2, 4, 5 korrekt. 3 falsch: t₁/₂ = ln 2 / λ, also umgekehrt proportional, nicht proportional.",
-    difficulty: "mittel",
-    tags: ["typ-k"],
-  },
   // ── 005 Elektrizität – Kirchhoff (mittel) ──
   {
     id: "ph-typk-new2-005",
@@ -100,25 +81,6 @@ export const physikTypKNew2: Question[] = [
     explanation:
       "1, 2, 4, 5 korrekt. 3 falsch: Die Knotenregel basiert auf der Ladungserhaltung, nicht der Energieerhaltung. Die Maschenregel (5) basiert auf der Energieerhaltung.",
     difficulty: "mittel",
-    tags: ["typ-k"],
-  },
-  // ── 006 Optik – Interferenz (schwer) ──
-  {
-    id: "ph-typk-new2-006",
-    subject: "physik",
-    chapter: "phys-kap5",
-    text: "Welche der folgenden Aussagen zur Interferenz von Licht sind richtig?\n\n1. Konstruktive Interferenz tritt auf, wenn der Gangunterschied ein ganzzahliges Vielfaches der Wellenlänge ist.\n2. Destruktive Interferenz tritt bei einem Gangunterschied von λ/2 auf.\n3. Interferenz kann nur bei kohärentem Licht beobachtet werden.\n4. Beim Doppelspaltversuch entstehen Interferenzmuster.\n5. Der Abstand der Interferenzmaxima ist unabhängig von der Wellenlänge.",
-    options: [
-      { id: "a", text: "Nur 1, 2, 3 und 4" },
-      { id: "b", text: "Nur 1, 3 und 4" },
-      { id: "c", text: "Nur 1 und 4" },
-      { id: "d", text: "Nur 1, 2 und 5" },
-      { id: "e", text: "Alle (1, 2, 3, 4 und 5)" },
-    ],
-    correctOptionId: "a",
-    explanation:
-      "1, 2, 3, 4 korrekt. 5 falsch: Der Abstand der Maxima ist proportional zur Wellenlänge (Δy = λ·L/d).",
-    difficulty: "schwer",
     tags: ["typ-k"],
   },
   // ── 007 Akustik – Doppler-Effekt (mittel) ──
@@ -176,25 +138,6 @@ export const physikTypKNew2: Question[] = [
     explanation:
       "1, 2, 3, 4 korrekt. 5 falsch: Bei Reihenschaltung gilt 1/C_ges = 1/C₁ + 1/C₂ + ..., die Kapazitäten addieren sich nicht direkt.",
     difficulty: "schwer",
-    tags: ["typ-k"],
-  },
-  // ── 010 Medizinische Physik – Röntgen (mittel) ──
-  {
-    id: "ph-typk-new2-010",
-    subject: "physik",
-    chapter: "phys-kap7",
-    text: "Welche der folgenden Aussagen zur Röntgenstrahlung sind richtig?\n\n1. Röntgenstrahlung ist elektromagnetische Strahlung mit kurzer Wellenlänge.\n2. Röntgenstrahlung entsteht durch Abbremsung schneller Elektronen an einer Anode.\n3. Die Energie der Röntgenstrahlung ist unabhängig von der Beschleunigungsspannung.\n4. Röntgenstrahlung kann Materie durchdringen.\n5. Das Röntgenspektrum enthält ein kontinuierliches Bremsspektrum und charakteristische Linien.",
-    options: [
-      { id: "a", text: "Nur 1, 2, 4 und 5" },
-      { id: "b", text: "Nur 1, 2 und 4" },
-      { id: "c", text: "Nur 1, 4 und 5" },
-      { id: "d", text: "Nur 2, 3 und 5" },
-      { id: "e", text: "Alle (1, 2, 3, 4 und 5)" },
-    ],
-    correctOptionId: "a",
-    explanation:
-      "1, 2, 4, 5 korrekt. 3 falsch: Die maximale Energie der Röntgenstrahlung wird durch die Beschleunigungsspannung bestimmt (E_max = e·U).",
-    difficulty: "mittel",
     tags: ["typ-k"],
   },
   // ── 011 Optik – Polarisation (schwer) ──
@@ -309,25 +252,6 @@ export const physikTypKNew2: Question[] = [
     explanation:
       "1, 2, 3, 4 korrekt. 5 falsch: Bei Dispersion ändert sich die Ausbreitungsgeschwindigkeit und die Wellenlänge, aber nicht die Frequenz.",
     difficulty: "mittel",
-    tags: ["typ-k"],
-  },
-  // ── 017 Elektrizität – Elektromagnetische Induktion (schwer) ──
-  {
-    id: "ph-typk-new2-017",
-    subject: "physik",
-    chapter: "phys-kap5",
-    text: "Welche der folgenden Aussagen zur elektromagnetischen Induktion sind richtig?\n\n1. Eine Änderung des magnetischen Flusses induziert eine Spannung.\n2. Die induzierte Spannung ist proportional zur Änderungsrate des Flusses.\n3. Die Lenz'sche Regel besagt, dass der induzierte Strom der Ursache entgegenwirkt.\n4. Induktion tritt auch bei konstantem Magnetfeld auf, wenn die Leiterschleife ruht.\n5. Die Induktionsspannung in einer Spule ist proportional zur Windungszahl.",
-    options: [
-      { id: "a", text: "Nur 1, 2, 3 und 5" },
-      { id: "b", text: "Nur 1, 2 und 3" },
-      { id: "c", text: "Nur 1, 3 und 5" },
-      { id: "d", text: "Nur 1, 2, 4 und 5" },
-      { id: "e", text: "Alle (1, 2, 3, 4 und 5)" },
-    ],
-    correctOptionId: "a",
-    explanation:
-      "1, 2, 3, 5 korrekt. 4 falsch: Bei konstantem Magnetfeld und ruhender Schleife ändert sich der magnetische Fluss nicht, daher keine Induktion.",
-    difficulty: "schwer",
     tags: ["typ-k"],
   },
   // ── 018 Akustik – Resonanz (mittel) ──
@@ -482,25 +406,6 @@ export const physikTypKNew2: Question[] = [
     difficulty: "leicht",
     tags: ["typ-k"],
   },
-  // ── 026 Akustik – Stehende Wellen (schwer) ──
-  {
-    id: "ph-typk-new2-026",
-    subject: "physik",
-    chapter: "phys-kap3",
-    text: "Welche der folgenden Aussagen zu stehenden Wellen sind richtig?\n\n1. Stehende Wellen entstehen durch Überlagerung zweier gegenläufiger Wellen.\n2. An den Schwingungsknoten ist die Amplitude null.\n3. Zwischen zwei Knoten befindet sich ein Schwingungsbauch.\n4. Die Frequenz einer stehenden Welle in einem Rohr hängt nur vom Rohrdurchmesser ab.\n5. Bei einer an beiden Enden offenen Pfeife beträgt die Grundschwingung λ = 2L.",
-    options: [
-      { id: "a", text: "Nur 1, 2, 3 und 5" },
-      { id: "b", text: "Nur 1, 2 und 3" },
-      { id: "c", text: "Nur 1, 3 und 5" },
-      { id: "d", text: "Nur 2, 3, 4 und 5" },
-      { id: "e", text: "Alle (1, 2, 3, 4 und 5)" },
-    ],
-    correctOptionId: "a",
-    explanation:
-      "1, 2, 3, 5 korrekt. 4 falsch: Die Frequenz hängt von der Rohrlänge L und der Schallgeschwindigkeit ab, nicht vom Durchmesser.",
-    difficulty: "schwer",
-    tags: ["typ-k"],
-  },
   // ── 027 Medizinische Physik – Strahlentherapie (schwer) ──
   {
     id: "ph-typk-new2-027",
@@ -556,25 +461,6 @@ export const physikTypKNew2: Question[] = [
     explanation:
       "1, 2, 3, 4 korrekt. 5 falsch: Die elektrische Arbeit ist W = P · t (nicht P / t).",
     difficulty: "leicht",
-    tags: ["typ-k"],
-  },
-  // ── 030 Atomphysik – Bohrsches Atommodell (mittel) ──
-  {
-    id: "ph-typk-new2-030",
-    subject: "physik",
-    chapter: "phys-kap7",
-    text: "Welche der folgenden Aussagen zum Bohrschen Atommodell sind richtig?\n\n1. Elektronen bewegen sich auf diskreten Bahnen um den Kern.\n2. Beim Übergang auf eine niedrigere Bahn wird ein Photon emittiert.\n3. Die Energie der Bahnen ist quantisiert.\n4. Das Modell erklärt die Linienspektren von Wasserstoff.\n5. Elektronen können sich auf beliebigen Bahnen aufhalten.",
-    options: [
-      { id: "a", text: "Nur 1, 2, 3 und 4" },
-      { id: "b", text: "Nur 1, 2 und 3" },
-      { id: "c", text: "Nur 1, 3 und 4" },
-      { id: "d", text: "Nur 2, 3, 4 und 5" },
-      { id: "e", text: "Alle (1, 2, 3, 4 und 5)" },
-    ],
-    correctOptionId: "a",
-    explanation:
-      "1, 2, 3, 4 korrekt. 5 falsch: Im Bohrschen Modell sind nur bestimmte, diskrete Bahnen erlaubt — nicht beliebige.",
-    difficulty: "mittel",
     tags: ["typ-k"],
   },
   // ── 031 Optik – Beugung (schwer) ──
@@ -669,25 +555,6 @@ export const physikTypKNew2: Question[] = [
     correctOptionId: "a",
     explanation:
       "1, 2, 4, 5 korrekt. 3 falsch: Kurzsichtigkeit wird mit einer Zerstreuungslinse (Konkavlinse) korrigiert, nicht mit einer Sammellinse.",
-    difficulty: "leicht",
-    tags: ["typ-k"],
-  },
-  // ── 036 Elektrizität – Ohmsches Gesetz (leicht) ──
-  {
-    id: "ph-typk-new2-036",
-    subject: "physik",
-    chapter: "phys-kap5",
-    text: "Welche der folgenden Aussagen zum Ohmschen Gesetz sind richtig?\n\n1. U = R · I beschreibt den Zusammenhang zwischen Spannung, Widerstand und Strom.\n2. Der Widerstand R hat die Einheit Ohm (Ω).\n3. Bei konstantem Widerstand ist der Strom proportional zur Spannung.\n4. Das Ohmsche Gesetz gilt für alle Leiter.\n5. In einem U-I-Diagramm ergibt ein ohmscher Widerstand eine Gerade durch den Ursprung.",
-    options: [
-      { id: "a", text: "Nur 1, 2, 3 und 5" },
-      { id: "b", text: "Nur 1, 2 und 3" },
-      { id: "c", text: "Nur 1, 3 und 5" },
-      { id: "d", text: "Nur 2, 3, 4 und 5" },
-      { id: "e", text: "Alle (1, 2, 3, 4 und 5)" },
-    ],
-    correctOptionId: "a",
-    explanation:
-      "1, 2, 3, 5 korrekt. 4 falsch: Das Ohmsche Gesetz gilt nur für ohmsche Leiter; Halbleiter, Dioden etc. zeigen nichtlineares Verhalten.",
     difficulty: "leicht",
     tags: ["typ-k"],
   },
@@ -995,25 +862,6 @@ export const physikTypKNew2: Question[] = [
     difficulty: "schwer",
     tags: ["typ-k"],
   },
-  // ── 053 Fluidmechanik – Auftrieb (leicht) ──
-  {
-    id: "ph-typk-new2-053",
-    subject: "physik",
-    chapter: "phys-kap2",
-    text: "Welche der folgenden Aussagen zum Auftrieb sind richtig?\n\n1. Die Auftriebskraft ist gleich der Gewichtskraft der verdrängten Flüssigkeit.\n2. Das Archimedische Prinzip gilt für Flüssigkeiten und Gase.\n3. Ein Körper schwimmt, wenn seine Dichte kleiner als die der Flüssigkeit ist.\n4. Die Auftriebskraft hängt von der Form des Körpers ab.\n5. Im Weltraum wirkt keine Auftriebskraft.",
-    options: [
-      { id: "a", text: "Nur 1, 2, 3 und 5" },
-      { id: "b", text: "Nur 1, 2 und 3" },
-      { id: "c", text: "Nur 1, 3 und 5" },
-      { id: "d", text: "Nur 1, 2, 3 und 4" },
-      { id: "e", text: "Alle (1, 2, 3, 4 und 5)" },
-    ],
-    correctOptionId: "a",
-    explanation:
-      "1, 2, 3, 5 korrekt. 4 falsch: Die Auftriebskraft hängt nur vom Volumen des eingetauchten Körpers ab, nicht von seiner Form.",
-    difficulty: "leicht",
-    tags: ["typ-k"],
-  },
   // ── 054 Elektrizität – Magnetische Flussdichte (mittel) ──
   {
     id: "ph-typk-new2-054",
@@ -1107,25 +955,6 @@ export const physikTypKNew2: Question[] = [
     explanation:
       "1, 2, 4, 5 korrekt. 3 falsch: Astigmatismus führt zu einer verzerrten, nicht punktförmigen Abbildung (Punkt wird zu Strich).",
     difficulty: "schwer",
-    tags: ["typ-k"],
-  },
-  // ── 059 Wärmelehre – Hauptsätze (leicht) ──
-  {
-    id: "ph-typk-new2-059",
-    subject: "physik",
-    chapter: "phys-kap4",
-    text: "Welche der folgenden Aussagen zu den Hauptsätzen der Thermodynamik sind richtig?\n\n1. Der 1. Hauptsatz ist der Energieerhaltungssatz der Thermodynamik.\n2. Wärme kann nicht vollständig in Arbeit umgewandelt werden (2. Hauptsatz).\n3. Am absoluten Nullpunkt (0 K) hat ein idealer Kristall die Entropie null.\n4. Energie kann erzeugt und vernichtet werden.\n5. Die innere Energie eines idealen Gases hängt nur von der Temperatur ab.",
-    options: [
-      { id: "a", text: "Nur 1, 2, 3 und 5" },
-      { id: "b", text: "Nur 1, 2 und 3" },
-      { id: "c", text: "Nur 1, 2 und 5" },
-      { id: "d", text: "Nur 1, 3, 4 und 5" },
-      { id: "e", text: "Alle (1, 2, 3, 4 und 5)" },
-    ],
-    correctOptionId: "a",
-    explanation:
-      "1, 2, 3, 5 korrekt. 4 falsch: Energie kann weder erzeugt noch vernichtet werden — nur umgewandelt (Energieerhaltungssatz).",
-    difficulty: "leicht",
     tags: ["typ-k"],
   },
   // ── 060 Elektrizität – Dioden (schwer) ──
@@ -1354,25 +1183,6 @@ export const physikTypKNew2: Question[] = [
     explanation:
       "1, 2, 3, 4 korrekt. 5 falsch: Steht der Gegenstand innerhalb der Brennweite, erzeugt der Hohlspiegel ein virtuelles, vergrößertes Bild.",
     difficulty: "leicht",
-    tags: ["typ-k"],
-  },
-  // ── 072 Wärmelehre – Phasenübergänge (mittel) ──
-  {
-    id: "ph-typk-new2-072",
-    subject: "physik",
-    chapter: "phys-kap4",
-    text: "Welche der folgenden Aussagen zu Phasenübergängen sind richtig?\n\n1. Beim Schmelzen wird die zugeführte Wärme vollständig in kinetische Energie umgewandelt.\n2. Die Schmelzwärme ist die Energie, die zum Schmelzen pro kg benötigt wird.\n3. Beim Verdampfen bleibt die Temperatur bei konstantem Druck gleich.\n4. Die Verdampfungswärme von Wasser beträgt ca. 2260 kJ/kg.\n5. Sublimation ist der Übergang von fest direkt zu gasförmig.",
-    options: [
-      { id: "a", text: "Nur 2, 3, 4 und 5" },
-      { id: "b", text: "Nur 2, 3 und 5" },
-      { id: "c", text: "Nur 1, 2 und 3" },
-      { id: "d", text: "Nur 2, 4 und 5" },
-      { id: "e", text: "Alle (1, 2, 3, 4 und 5)" },
-    ],
-    correctOptionId: "a",
-    explanation:
-      "2, 3, 4, 5 korrekt. 1 falsch: Beim Schmelzen wird die Energie in potenzielle Energie (Überwindung der Bindungskräfte) umgewandelt, nicht in kinetische Energie.",
-    difficulty: "mittel",
     tags: ["typ-k"],
   },
   // ── 073 Atomphysik – Strahlenschutz (leicht) ──

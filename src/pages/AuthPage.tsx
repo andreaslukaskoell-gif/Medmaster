@@ -378,22 +378,24 @@ export default function AuthPage() {
                       />
                     </div>
 
-                    <label className="flex items-start gap-2 text-xs text-[var(--muted)] cursor-pointer select-none">
-                      <input
-                        type="checkbox"
-                        checked={termsAccepted}
-                        onChange={(e) => setTermsAccepted(e.target.checked)}
-                        className="mt-0.5 rounded border-[var(--border)] accent-[var(--accent)]"
-                      />
-                      <span>
-                        Ich akzeptiere die{" "}
-                        <Link to="/agb" target="_blank" className="text-[var(--accent)] hover:underline">AGB</Link>{" "}
-                        und{" "}
-                        <Link to="/datenschutz" target="_blank" className="text-[var(--accent)] hover:underline">Datenschutzerklärung</Link>.
-                      </span>
-                    </label>
+                    {!savedEmail && (
+                      <label className="flex items-start gap-2 text-xs text-[var(--muted)] cursor-pointer select-none">
+                        <input
+                          type="checkbox"
+                          checked={termsAccepted}
+                          onChange={(e) => setTermsAccepted(e.target.checked)}
+                          className="mt-0.5 rounded border-[var(--border)] accent-[var(--accent)]"
+                        />
+                        <span>
+                          Ich akzeptiere die{" "}
+                          <Link to="/agb" target="_blank" className="text-[var(--accent)] hover:underline">AGB</Link>{" "}
+                          und{" "}
+                          <Link to="/datenschutz" target="_blank" className="text-[var(--accent)] hover:underline">Datenschutzerklärung</Link>.
+                        </span>
+                      </label>
+                    )}
 
-                    <Button type="submit" className="w-full py-5" disabled={loading || !termsAccepted}>
+                    <Button type="submit" className="w-full py-5" disabled={loading || (!savedEmail && !termsAccepted)}>
                       {loading ? "Wird gesendet..." : "Anmeldelink senden"}
                     </Button>
                   </form>

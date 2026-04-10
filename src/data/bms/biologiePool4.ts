@@ -57,16 +57,6 @@ export const biologiePool4: Question[] = [
     ["hardy-weinberg", "evolution"]
   ),
   q(
-    "bio-pool-243",
-    "bio-kap3",
-    "In einer Population sind 16 % der Individuen homozygot rezessiv (aa) für ein bestimmtes Merkmal. Wie hoch ist die Allelfrequenz des dominanten Allels A im Hardy-Weinberg-Gleichgewicht?",
-    ["0,16", "0,40", "0,60", "0,84", "0,36"],
-    2,
-    "q² = 0,16, also q = 0,4. Die Frequenz des dominanten Allels ist p = 1 − q = 1 − 0,4 = 0,6.",
-    "mittel",
-    ["hardy-weinberg", "allelfrequenz"]
-  ),
-  q(
     "bio-pool-244",
     "bio-kap3",
     "Welcher Evolutionsfaktor führt in kleinen Populationen zu zufälligen Änderungen der Allelfrequenz?",
@@ -157,22 +147,6 @@ export const biologiePool4: Question[] = [
     "In der Metaphase reihen sich die kondensierten Chromosomen entlang der Äquatorialebene (Metaphasenplatte) auf. Die Spindelfasern sind an den Kinetochoren befestigt.",
     "leicht",
     ["mitose", "metaphase", "zellteilung"]
-  ),
-  q(
-    "bio-pool-250",
-    "bio-kap4",
-    "Welche Aussage zur Meiose ist FALSCH?",
-    [
-      "In der Meiose I werden homologe Chromosomen getrennt",
-      "Crossing-over findet in der Prophase I statt",
-      "Am Ende der Meiose II entstehen vier haploide Zellen",
-      "In der Meiose II werden homologe Chromosomen getrennt",
-      "Die Meiose dient der Bildung von Keimzellen",
-    ],
-    3,
-    "In der Meiose II werden Schwesterchromatiden getrennt. Die Trennung homologer Chromosomen erfolgt in der Meiose I (Reduktions­teilung).",
-    "leicht",
-    ["meiose", "zellteilung", "falschaussage"]
   ),
   q(
     "bio-pool-251",

@@ -49,11 +49,11 @@ export async function pullFromSupabase(userId: string): Promise<void> {
         .select("xp, level, streak_days, last_active_date, onboarding_completed")
         .eq("id", userId)
         .maybeSingle(),
-      client.from("quiz_results").select("*").eq("user_id", userId),
-      client.from("spaced_repetition").select("*").eq("user_id", userId),
-      client.from("user_notes").select("chapter_id, content").eq("user_id", userId),
-      client.from("user_bookmarks").select("item_type, item_id").eq("user_id", userId),
-      client.from("activity_log").select("*").eq("user_id", userId),
+      client.from("quiz_results").select("*").eq("user_id", userId).limit(1000),
+      client.from("spaced_repetition").select("*").eq("user_id", userId).limit(1000),
+      client.from("user_notes").select("chapter_id, content").eq("user_id", userId).limit(1000),
+      client.from("user_bookmarks").select("item_type, item_id").eq("user_id", userId).limit(1000),
+      client.from("activity_log").select("*").eq("user_id", userId).limit(1000),
       client.from("user_streaks").select("current_streak, longest_streak, last_active_date, streak_freezes, frozen_days").eq("user_id", userId).maybeSingle(),
     ]);
 
@@ -93,6 +93,8 @@ export async function pullFromSupabase(userId: string): Promise<void> {
       const byId = new Map(validResults.map((r) => [r.id, r]));
       let changed = false;
       for (const row of quizRes.data) {
+        // Mark pulled results as already synced so they don't get re-pushed
+        syncedQuizResultIds.add(row.id);
         if (!byId.has(row.id)) {
           changed = true;
           byId.set(row.id, {
@@ -224,10 +226,17 @@ export async function pushToSupabase(userId: string): Promise<void> {
   }
 }
 
+// Track which quiz result IDs have already been pushed to Supabase this session
+const syncedQuizResultIds = new Set<string>();
+
 async function pushQuizResults(client: SupabaseClient, userId: string, results: QuizResult[]) {
   if (results.length === 0) return;
-  const rows = results.map((r) => ({
-    // Don't send client-generated IDs (e.g. "kff-zf-123") — DB expects UUID
+
+  // Only push results that haven't been synced yet (prevents duplicate inserts)
+  const unsyncedResults = results.filter((r) => r.id && !syncedQuizResultIds.has(r.id));
+  if (unsyncedResults.length === 0) return;
+
+  const rows = unsyncedResults.map((r) => ({
     user_id: userId,
     quiz_type: r.type,
     subject: r.subject ?? null,
@@ -241,6 +250,11 @@ async function pushQuizResults(client: SupabaseClient, userId: string, results: 
       .from("quiz_results")
       .insert(rows.slice(i, i + 200));
     if (error && !error.message.includes("duplicate")) throw error;
+  }
+
+  // Mark as synced only after successful insert
+  for (const r of unsyncedResults) {
+    syncedQuizResultIds.add(r.id);
   }
 }
 
@@ -307,7 +321,8 @@ async function pushBookmarks(
   const { data: remote } = await client
     .from("user_bookmarks")
     .select("item_type, item_id")
-    .eq("user_id", userId);
+    .eq("user_id", userId)
+    .limit(1000);
   if (remote) {
     const toDelete = remote.filter((r) => !localIds.has(`${r.item_type}:${r.item_id}`));
     for (const d of toDelete) {
@@ -356,6 +371,13 @@ export function startMainSync(userId: string) {
   stopMainSync();
   currentUserId = userId;
 
+  // Mark all existing local quiz results as already synced
+  // to prevent re-inserting them on the first push
+  const existingResults = useStore.getState().quizResults ?? [];
+  for (const r of existingResults) {
+    if (r?.id) syncedQuizResultIds.add(r.id);
+  }
+
   // Initial Pull
   pullFromSupabase(userId);
 
@@ -395,6 +417,7 @@ export function stopMainSync() {
     debounceTimer = null;
   }
   document.removeEventListener("visibilitychange", handleVisibilitySync);
+  syncedQuizResultIds.clear();
   currentUserId = null;
 }
 

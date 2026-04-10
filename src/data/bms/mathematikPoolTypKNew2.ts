@@ -331,25 +331,6 @@ export const mathematikTypKNew2: Question[] = [
     difficulty: "schwer",
     tags: ["typ-k"],
   },
-  // ── 018 Differentialrechnung – Wendepunkte (mittel) ──
-  {
-    id: "ma-typk-new2-018",
-    subject: "mathematik",
-    chapter: "mathe-kap5",
-    text: "Welche der folgenden Aussagen zu Wendepunkten sind richtig?\n\n1. An einem Wendepunkt ist f''(x) = 0.\n2. An einem Wendepunkt ändert sich die Krümmung der Kurve.\n3. f''(x₀) = 0 und f'''(x₀) ≠ 0 ist hinreichend für einen Wendepunkt.\n4. Die Tangente im Wendepunkt heißt Wendetangente.\n5. Jede Nullstelle von f'' ist ein Wendepunkt.",
-    options: [
-      { id: "a", text: "Nur 1, 2, 3 und 4" },
-      { id: "b", text: "Nur 1, 2 und 3" },
-      { id: "c", text: "Nur 1, 2 und 4" },
-      { id: "d", text: "Nur 2, 3, 4 und 5" },
-      { id: "e", text: "Alle (1, 2, 3, 4 und 5)" },
-    ],
-    correctOptionId: "a",
-    explanation:
-      "1, 2, 3, 4 korrekt. 5 falsch: f''(x₀) = 0 ist notwendig, aber nicht hinreichend — z. B. f(x) = x⁴ hat f''(0) = 0, aber keinen Wendepunkt.",
-    difficulty: "mittel",
-    tags: ["typ-k"],
-  },
   // ── 019 Logarithmen – Rechenregeln (leicht) ──
   {
     id: "ma-typk-new2-019",
@@ -557,25 +538,6 @@ export const mathematikTypKNew2: Question[] = [
     explanation:
       "1, 2, 3, 5 korrekt. 4 falsch: Gegenbeispiel: f(x) = |x| ist stetig, aber in x = 0 nicht differenzierbar.",
     difficulty: "schwer",
-    tags: ["typ-k"],
-  },
-  // ── 030 Vektoren – Grundlagen (leicht) ──
-  {
-    id: "ma-typk-new2-030",
-    subject: "mathematik",
-    chapter: "mathe-kap6",
-    text: "Welche der folgenden Aussagen zu Vektoren sind richtig?\n\n1. Ein Vektor hat Betrag und Richtung.\n2. Zwei Vektoren sind gleich, wenn sie gleiche Komponenten haben.\n3. Der Nullvektor hat den Betrag 0.\n4. Vektoren können nur im ℝ² existieren.\n5. Der Betrag von (3, 4) ist 5.",
-    options: [
-      { id: "a", text: "Nur 1, 2, 3 und 5" },
-      { id: "b", text: "Nur 1, 2 und 3" },
-      { id: "c", text: "Nur 1, 3 und 5" },
-      { id: "d", text: "Nur 1, 2, 4 und 5" },
-      { id: "e", text: "Alle (1, 2, 3, 4 und 5)" },
-    ],
-    correctOptionId: "a",
-    explanation:
-      "1, 2, 3, 5 korrekt (||(3,4)|| = √(9+16) = 5). 4 falsch: Vektoren existieren im ℝ², ℝ³ und allgemein im ℝⁿ.",
-    difficulty: "leicht",
     tags: ["typ-k"],
   },
   // ── 031 Differentialrechnung – Ableitung trigonometrischer Funktionen (mittel) ──
@@ -1108,25 +1070,6 @@ export const mathematikTypKNew2: Question[] = [
     explanation:
       "1, 2, 3, 4 korrekt. 5 falsch: sin(α + β) ≠ sin α + sin β — das ist ein häufiger Fehler.",
     difficulty: "schwer",
-    tags: ["typ-k"],
-  },
-  // ── 059 Gleichungen – Ungleichungen (mittel) ──
-  {
-    id: "ma-typk-new2-059",
-    subject: "mathematik",
-    chapter: "mathe-kap2",
-    text: "Welche der folgenden Aussagen zu Ungleichungen sind richtig?\n\n1. Beim Multiplizieren mit einer negativen Zahl kehrt sich das Relationszeichen um.\n2. Aus a < b folgt a + c < b + c.\n3. Aus a < b und c > 0 folgt a · c < b · c.\n4. |x| < a ist äquivalent zu −a < x < a.\n5. Beim Quadrieren einer Ungleichung bleibt die Richtung immer erhalten.",
-    options: [
-      { id: "a", text: "Nur 1, 2, 3 und 4" },
-      { id: "b", text: "Nur 1, 2 und 3" },
-      { id: "c", text: "Nur 1, 3 und 4" },
-      { id: "d", text: "Nur 2, 3, 4 und 5" },
-      { id: "e", text: "Alle (1, 2, 3, 4 und 5)" },
-    ],
-    correctOptionId: "a",
-    explanation:
-      "1, 2, 3, 4 korrekt. 5 falsch: Beim Quadrieren muss man Fälle unterscheiden (z. B. −3 < −2, aber 9 > 4).",
-    difficulty: "mittel",
     tags: ["typ-k"],
   },
   // ── 060 Funktionen – Umkehrfunktion (mittel) ──

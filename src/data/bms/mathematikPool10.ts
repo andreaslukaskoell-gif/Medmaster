@@ -426,22 +426,6 @@ export const mathematikPool10: Question[] = [
     ["Integral", "Analysis", "Pharmakokinetik", "AUC"]
   ),
   q(
-    "ma-pool-10-039",
-    "mathe-kap5",
-    "Welche der folgenden Eigenschaften hat die Funktion f(x) = e^x?",
-    [
-      "f ist nach oben beschränkt",
-      "f hat genau eine Nullstelle bei x = 0",
-      "f ist streng monoton steigend und überall positiv",
-      "f'(x) ist negativ für x < 0",
-      "f ist symmetrisch zur y-Achse",
-    ],
-    2,
-    "e^x ist für alle x ∈ ℝ positiv (> 0), hat keine Nullstelle, ist streng monoton steigend (f'(x) = e^x > 0) und nicht nach oben beschränkt. f(−x) = e^(−x) ≠ e^x, also keine y-Achsen-Symmetrie.",
-    "leicht",
-    ["Exponentialfunktion", "Eigenschaften", "Analysis"]
-  ),
-  q(
     "ma-pool-10-040",
     "mathe-kap5",
     "Das Sehvermögen nach einer OP: V(t) = 1,2·(1 − e^(−0,5t)) (Visus, t in Wochen). Welchen Grenzwert strebt V(t) für t → ∞ an?",

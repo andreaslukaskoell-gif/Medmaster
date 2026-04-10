@@ -468,16 +468,6 @@ export const chemiePool21: Question[] = [
     ["Inhibitor"]
   ),
   q(
-    "ch-pool-21-041",
-    KAP[4],
-    "Welche Oxidationszahl hat Eisen in FeO?",
-    ["0", "+1", "+2", "+3", "−2"],
-    2,
-    "FeO: Eisen(II)-oxid. O hat −2 → Fe = +2.",
-    "leicht",
-    ["Oxidationszahl", "Eisen"]
-  ),
-  q(
     "ch-pool-21-042",
     KAP[5],
     "Die Silbernitrat-Lösung zum Nachweis von Halogeniden ergibt mit Iodid:",

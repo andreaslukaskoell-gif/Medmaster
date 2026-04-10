@@ -28,8 +28,10 @@ import { physikPool21 } from "./physikPool21";
 import { physikPool22 } from "./physikPool22";
 import { physikPoolOffiziellStyle } from "./physikPoolOffiziellStyle";
 import { physikWasIstFalsch } from "./physikWasIstFalsch";
+import { physikWasIstFalsch2 } from "./physikWasIstFalsch2";
 import { physikTypKNew } from "./physikPoolTypKNew";
 import { physikTypKNew2 } from "./physikPoolTypKNew2";
+import { physikTypKNew3 } from "./physikPoolTypKNew3";
 
 const PHYSIK_PLACEHOLDER = /^Welche der folgenden Aussagen zur Physik trifft zu\?$/;
 
@@ -62,6 +64,8 @@ export const physikPoolQuestions: Question[] = [
   ...physikPool22,
   ...physikPoolOffiziellStyle,
   ...physikWasIstFalsch,
+  ...physikWasIstFalsch2,
   ...physikTypKNew,
   ...physikTypKNew2,
+  ...physikTypKNew3,
 ].filter((q) => !isPlaceholder(q));

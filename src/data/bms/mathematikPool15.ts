@@ -112,16 +112,6 @@ export const mathematikPool15: Question[] = [
     ["Einheiten", "Dichte", "rechenfrage"]
   ),
   q(
-    "ma-pool-15-008",
-    "mathe-kap1",
-    "Wie viele Sekunden hat ein Tag?",
-    ["3600", "36 000", "86 400", "43 200", "864 000"],
-    2,
-    "1 Tag = 24 h × 60 min × 60 s = 86 400 s.",
-    "leicht",
-    ["Einheiten", "Umrechnung", "rechenfrage"]
-  ),
-  q(
     "ma-pool-15-009",
     "mathe-kap1",
     "Ein Blutdruckwert von 16 kPa entspricht wie vielen Pa?",
@@ -292,22 +282,6 @@ export const mathematikPool15: Question[] = [
     "a^(log_a x) = x. Also 5^(log₅ 7) = 7. (Grundlegende Eigenschaft des Logarithmus.)",
     "mittel",
     ["Logarithmus", "Potenzgesetze"]
-  ),
-  q(
-    "ma-pool-15-026",
-    "mathe-kap3",
-    "Welche Aussage über Prozentrechnung ist falsch?",
-    [
-      "100 % Zunahme bedeutet Verdopplung",
-      "50 % Abnahme bedeutet Halbierung",
-      "Eine Zunahme um 10 % gefolgt von einer Abnahme um 10 % ergibt den Ausgangswert",
-      "p % von x ist p/100 × x",
-      "Der Grundwert ist die Bezugsgröße (100 %)",
-    ],
-    2,
-    "1,10 × 0,90 = 0,99 ≠ 1. Man erhält 99 % des Ausgangswerts, also 1 % weniger. Die Aussage ist daher falsch.",
-    "mittel",
-    ["Prozentrechnung", "Falsch-Aussage"]
   ),
   q(
     "ma-pool-15-027",

@@ -108,22 +108,6 @@ export const physikPoolOffiziellStyle: Question[] = [
     ["Spannung", "Potenzial", "E-Lehre"]
   ),
   q(
-    "ph-off-011",
-    "phys-kap1",
-    "Welche der folgenden Einheiten kann man ineinander umrechnen? 1. Joule in Newtonmeter  2. Joule in Elektronenvolt  3. Joule in Kalorien  4. Joule in Watt",
-    [
-      "1. und 3. sind richtig.",
-      "1., 2. und 3. sind richtig.",
-      "4. ist richtig.",
-      "Alle sind richtig.",
-      "2. und 4. sind richtig.",
-    ],
-    1,
-    'J = N·m (Arbeit); 1 eV ≈ 1,6·10⁻¹⁹ J; 1 cal ≈ 4,18 J. Watt (W) ist Leistung, keine Energie – man rechnet Joule nicht "in Watt" um.',
-    "schwer",
-    ["Einheiten", "Joule", "Energie"]
-  ),
-  q(
     "ph-off-013",
     "phys-kap5",
     "230 V (Effektivwert) an der Steckdose bedeutet: 1. Sinusförmige Spannung wechselt zwischen +230 V und −230 V. 2. Eine Gleichspannung von 230 V würde am ohmschen Widerstand die gleiche Leistung ergeben. 3. Der Mittelwert der Spannung über eine Periodendauer ist 230 V. 4. Die Amplitude der sinusförmigen Spannung ist größer als 230 V.",
@@ -174,22 +158,6 @@ export const physikPoolOffiziellStyle: Question[] = [
     "Sichtbares Licht: etwa 380 nm (violett) bis 750 nm (rot). 1 nm = 10⁻⁹ m.",
     "leicht",
     ["Wellenlänge", "Licht", "Optik"]
-  ),
-  q(
-    "ph-off-017",
-    "phys-kap7",
-    "Beim Zerfall radioaktiver Substanzen können folgende ionisierende Strahlungsarten freigesetzt werden: 1. Beta-Strahlung  2. Alpha-Strahlung  3. Gamma-Strahlung  4. Infrarotstrahlung",
-    [
-      "4. ist richtig.",
-      "Alle sind richtig.",
-      "1., 2. und 3. sind richtig.",
-      "1. und 3. sind richtig.",
-      "2. und 4. sind richtig.",
-    ],
-    2,
-    "Ionisierende Strahlung aus Kernzerfall: α (Heliumkerne), β (Elektronen/Positronen), γ (Photonen). Infrarot ist nicht ionisierend und nicht typisch für Kernzerfall.",
-    "schwer",
-    ["Radioaktivität", "Alpha", "Beta", "Gamma"]
   ),
   q(
     "ph-off-018",

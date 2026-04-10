@@ -49,22 +49,6 @@ export const chemieWasIstFalsch: Question[] = [
     ["atombau", "massenzahl"]
   ),
   wif(
-    "ch-wif-002",
-    "chem-kap1",
-    "Welche der folgenden Aussagen zum Periodensystem ist FALSCH?",
-    [
-      "Innerhalb einer Periode nimmt die Elektronegativität von links nach rechts zu.",
-      "Die Ionisierungsenergie nimmt innerhalb einer Gruppe von oben nach unten ab.",
-      "Der Atomradius nimmt innerhalb einer Periode von links nach rechts zu.",
-      "Edelgase stehen in der 18. Gruppe (VIII. Hauptgruppe).",
-      "Die Elemente einer Gruppe haben die gleiche Anzahl an Valenzelektronen.",
-    ],
-    2,
-    "Option C ist falsch. Der Atomradius nimmt innerhalb einer Periode von links nach rechts ab, weil die steigende Kernladung die Elektronenhülle stärker anzieht.",
-    "mittel",
-    ["periodensystem", "atomradius"]
-  ),
-  wif(
     "ch-wif-003",
     "chem-kap1",
     "Welche der folgenden Aussagen zur Elektronenkonfiguration ist FALSCH?",
@@ -211,22 +195,6 @@ export const chemieWasIstFalsch: Question[] = [
     ["aggregatzustaende", "phasenuebergaenge"]
   ),
   wif(
-    "ch-wif-012",
-    "chem-kap2",
-    "Welche der folgenden Aussagen zum idealen Gas ist FALSCH?",
-    [
-      "Das ideale Gasgesetz lautet pV = nRT.",
-      "Bei idealen Gasen werden keine zwischenmolekularen Wechselwirkungen angenommen.",
-      "Das Volumen der Gasteilchen wird beim idealen Gas als vernachlässigbar angenommen.",
-      "Unter Normalbedingungen (0 °C, 1 atm) beträgt das Molvolumen eines idealen Gases 22,4 L.",
-      "Reale Gase verhalten sich bei hohem Druck und tiefer Temperatur besonders ideal.",
-    ],
-    4,
-    "Option E ist falsch. Reale Gase verhalten sich bei hohem Druck und tiefer Temperatur besonders wenig ideal, weil dann zwischenmolekulare Wechselwirkungen und das Eigenvolumen der Teilchen nicht mehr vernachlässigbar sind.",
-    "schwer",
-    ["ideales gas", "gasgesetze"]
-  ),
-  wif(
     "ch-wif-013",
     "chem-kap2",
     "Welche der folgenden Aussagen zu Stoffgemischen ist FALSCH?",
@@ -273,22 +241,6 @@ export const chemieWasIstFalsch: Question[] = [
     "Option D ist falsch. Van-der-Waals-Kräfte (London-Dispersionskräfte) nehmen mit steigender Molekülgrösse zu, weil grössere Elektronenwolken leichter polarisierbar sind.",
     "schwer",
     ["zwischenmolekulare kraefte", "van-der-waals"]
-  ),
-  wif(
-    "ch-wif-016",
-    "chem-kap2",
-    "Welche der folgenden Aussagen zum Dampfdruck ist FALSCH?",
-    [
-      "Der Dampfdruck steigt mit zunehmender Temperatur.",
-      "Am Siedepunkt entspricht der Dampfdruck dem Umgebungsdruck.",
-      "Flüssigkeiten mit starken intermolekularen Kräften haben einen niedrigen Dampfdruck.",
-      "Der Dampfdruck ist unabhängig vom Volumen des Gasraums über der Flüssigkeit.",
-      "Stoffe mit hohem Dampfdruck bei Raumtemperatur sieden bei hohen Temperaturen.",
-    ],
-    4,
-    "Option E ist falsch. Stoffe mit hohem Dampfdruck bei Raumtemperatur haben schwache intermolekulare Kräfte und sieden bei niedrigen Temperaturen (z. B. Diethylether).",
-    "schwer",
-    ["dampfdruck", "siedepunkt"]
   ),
   wif(
     "ch-wif-017",
@@ -518,22 +470,6 @@ export const chemieWasIstFalsch: Question[] = [
   ),
 
   // ─── chem-kap4: Reaktionen und Gleichgewicht (10 Fragen) ───
-  wif(
-    "ch-wif-031",
-    "chem-kap4",
-    "Welche der folgenden Aussagen zum chemischen Gleichgewicht ist FALSCH?",
-    [
-      "Im Gleichgewicht sind die Geschwindigkeiten der Hin- und Rückreaktion gleich.",
-      "Die Gleichgewichtskonstante K ändert sich mit der Temperatur.",
-      "Ein Katalysator verschiebt das chemische Gleichgewicht zugunsten der Produkte.",
-      "Das Massenwirkungsgesetz beschreibt das Verhältnis der Konzentrationen im Gleichgewicht.",
-      "Nach Le Chatelier weicht das System einem äusseren Zwang aus.",
-    ],
-    2,
-    "Option C ist falsch. Ein Katalysator beschleunigt die Einstellung des Gleichgewichts, verschiebt es aber nicht. Er senkt die Aktivierungsenergie für Hin- und Rückreaktion gleichermassen.",
-    "mittel",
-    ["gleichgewicht", "katalysator"]
-  ),
   wif(
     "ch-wif-032",
     "chem-kap4",

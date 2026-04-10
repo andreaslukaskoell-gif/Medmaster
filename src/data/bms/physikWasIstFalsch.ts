@@ -359,23 +359,6 @@ export const physikWasIstFalsch: Question[] = [
     ["falsch-aussage", "fluidmechanik", "kapillarität"]
   ),
 
-  q(
-    "ph-wif-020",
-    "phys-kap2",
-    "Welche der folgenden Aussagen zum Pascal'schen Prinzip ist FALSCH?",
-    [
-      "Druck breitet sich in einer eingeschlossenen Flüssigkeit gleichmäßig aus.",
-      "Hydraulische Pressen nutzen das Pascal'sche Prinzip.",
-      "Bei einer hydraulischen Presse ist die Kraft am großen Kolben größer als am kleinen.",
-      "Bei einer hydraulischen Presse wird der Weg am großen Kolben größer als am kleinen.",
-      "Das Pascal'sche Prinzip erklärt die Funktionsweise von Bremsanlagen.",
-    ],
-    3,
-    "Bei einer hydraulischen Presse ist der Weg am großen Kolben kleiner als am kleinen Kolben. Es gilt F₁ · s₁ = F₂ · s₂ (Energieerhaltung): Der große Kolben liefert zwar mehr Kraft, aber weniger Weg.",
-    "mittel",
-    ["falsch-aussage", "fluidmechanik", "pascal"]
-  ),
-
   // ─── kap3: Schwingungen und Wellen (10 Fragen) ────────────────────
 
   q(
@@ -602,23 +585,6 @@ export const physikWasIstFalsch: Question[] = [
   ),
 
   q(
-    "ph-wif-034",
-    "phys-kap4",
-    "Welche der folgenden Aussagen zu den Hauptsätzen der Thermodynamik ist FALSCH?",
-    [
-      "Der 2. Hauptsatz verbietet, dass Wärme von einem kalten zu einem warmen Körper fließen kann.",
-      "Der 1. Hauptsatz beschreibt die Energieerhaltung.",
-      "Der 2. Hauptsatz besagt, dass Wärme spontan stets vom wärmeren zum kälteren Körper fließt.",
-      "Ein Perpetuum mobile 2. Art würde den 2. Hauptsatz verletzen.",
-      "Die Entropie eines abgeschlossenen Systems kann nicht abnehmen.",
-    ],
-    0,
-    "Der 2. Hauptsatz verbietet nicht den Wärmefluss von kalt nach warm – er verbietet nur, dass dies spontan geschieht. Eine Wärmepumpe oder ein Kühlschrank transportiert Wärme von kalt nach warm, benötigt dafür aber externe Arbeit.",
-    "schwer",
-    ["falsch-aussage", "wärmelehre", "thermodynamik"]
-  ),
-
-  q(
     "ph-wif-035",
     "phys-kap4",
     "Welche der folgenden Aussagen zur Wärmekapazität ist FALSCH?",
@@ -667,23 +633,6 @@ export const physikWasIstFalsch: Question[] = [
     "Wasser dehnt sich beim Gefrieren aus (Anomalie des Wassers). Eis hat ein größeres Volumen als die gleiche Masse flüssigen Wassers, weshalb Eis auf Wasser schwimmt. Gefrierendes Wasser in geschlossenen Rohren kann diese sprengen.",
     "mittel",
     ["falsch-aussage", "wärmelehre", "wärmeausdehnung"]
-  ),
-
-  q(
-    "ph-wif-038",
-    "phys-kap4",
-    "Welche der folgenden Aussagen zur Entropie ist FALSCH?",
-    [
-      "Die Entropie ist ein Maß für die Unordnung eines Systems.",
-      "In einem abgeschlossenen System nimmt die Entropie stets zu oder bleibt gleich.",
-      "Bei reversiblen Prozessen bleibt die Gesamtentropie konstant.",
-      "Lebewesen können lokal die Entropie verringern, indem sie Energie aufwenden.",
-      "Die Entropie eines abgeschlossenen Systems kann spontan abnehmen.",
-    ],
-    4,
-    "Die Entropie eines abgeschlossenen Systems kann gemäß dem 2. Hauptsatz der Thermodynamik nicht spontan abnehmen. Sie kann nur gleich bleiben (reversibler Prozess) oder zunehmen (irreversibler Prozess).",
-    "schwer",
-    ["falsch-aussage", "wärmelehre", "entropie"]
   ),
 
   q(
@@ -980,23 +929,6 @@ export const physikWasIstFalsch: Question[] = [
   ),
 
   q(
-    "ph-wif-056",
-    "phys-kap7",
-    "Welche der folgenden Aussagen zur Kernspaltung ist FALSCH?",
-    [
-      "Bei der Kernspaltung wird ein schwerer Kern in leichtere Fragmente gespalten.",
-      "Bei der Kernspaltung wird Energie absorbiert, da die Bindungsenergie abnimmt.",
-      "Kernspaltung kann durch Beschuss mit Neutronen ausgelöst werden.",
-      "Bei der Spaltung von Uran-235 werden auch Neutronen freigesetzt.",
-      "Eine kontrollierte Kettenreaktion findet in Kernreaktoren statt.",
-    ],
-    1,
-    "Bei der Kernspaltung wird Energie freigesetzt, nicht absorbiert. Die Spaltprodukte haben zusammen eine höhere Bindungsenergie pro Nukleon als der Ausgangskern, und die Differenz wird als kinetische Energie und Strahlung frei.",
-    "schwer",
-    ["falsch-aussage", "atomphysik", "kernspaltung"]
-  ),
-
-  q(
     "ph-wif-057",
     "phys-kap7",
     "Welche der folgenden Aussagen zum photoelektrischen Effekt ist FALSCH?",
@@ -1011,23 +943,6 @@ export const physikWasIstFalsch: Question[] = [
     "Unterhalb der Grenzfrequenz reicht die Energie eines einzelnen Photons (E = h · f) nicht aus, um ein Elektron auszulösen – unabhängig von der Intensität. Mehr Photonen gleicher Frequenz liefern zwar mehr Energie insgesamt, aber kein einzelnes Photon hat genug Energie.",
     "schwer",
     ["falsch-aussage", "atomphysik", "photoeffekt"]
-  ),
-
-  q(
-    "ph-wif-058",
-    "phys-kap7",
-    "Welche der folgenden Aussagen zum Welle-Teilchen-Dualismus ist FALSCH?",
-    [
-      "Licht zeigt sowohl Wellen- als auch Teilcheneigenschaften.",
-      "Auch Elektronen zeigen Welleneigenschaften (de-Broglie-Wellenlänge).",
-      "Das Doppelspaltexperiment zeigt die Wellennatur von Licht.",
-      "Die de-Broglie-Wellenlänge wird mit steigendem Impuls größer.",
-      "Der Welle-Teilchen-Dualismus ist ein Grundprinzip der Quantenmechanik.",
-    ],
-    3,
-    "Die de-Broglie-Wellenlänge ist λ = h/p und nimmt mit steigendem Impuls ab, nicht zu. Je schneller ein Teilchen ist (mehr Impuls), desto kürzer ist seine Wellenlänge.",
-    "schwer",
-    ["falsch-aussage", "atomphysik", "dualismus"]
   ),
 
   q(
