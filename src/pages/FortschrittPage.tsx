@@ -255,7 +255,7 @@ export default function FortschrittPage() {
     return Math.round((totalStats.correctAnswers / totalStats.questionsAnswered) * 100);
   }, [totalStats]);
 
-  const hasAnyData = hydrated && (recentSessions.length > 0 || totalStats.questionsAnswered > 0);
+  const hasAnyData = hydrated && (recentSessions.length > 0 || totalStats.questionsAnswered > 0 || totalStats.learningDays > 0);
 
   if (isLocked("fortschritt")) {
     return (

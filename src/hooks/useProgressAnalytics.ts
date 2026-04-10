@@ -328,12 +328,15 @@ export function useProgressAnalytics(): ProgressAnalytics {
 
   // ── Total Stats ───────────────────────────────────────────
   const totalStats = useMemo((): TotalStats => {
-    const questionsAnswered = quizResults.reduce((s, r) => s + r.total, 0);
+    const quizQuestions = quizResults.reduce((s, r) => s + r.total, 0);
     const correctAnswers = quizResults.reduce((s, r) => s + r.score, 0);
 
     const logEntries = Object.entries(activityLog);
     const learningDays = logEntries.length;
     const totalMinutes = logEntries.reduce((s, [, v]) => s + (v.minutes ?? 0), 0);
+    // Include questions from activityLog (KFF, TV, SEK single tasks) that may not be in quizResults
+    const activityQuestions = logEntries.reduce((s, [, v]) => s + (v.questions ?? 0), 0);
+    const questionsAnswered = Math.max(quizQuestions, activityQuestions);
 
     return {
       questionsAnswered,
