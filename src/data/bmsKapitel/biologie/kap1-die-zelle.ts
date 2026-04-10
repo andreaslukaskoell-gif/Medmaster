@@ -171,7 +171,7 @@ Dieses Phänomen nennt sich **Emergenz** (von lat. *emergere* = hervorkommen): D
             "Überlege: Kann auch unbelebte Materie diese Eigenschaft zeigen?",
             "Schnee und Salz können kristallisieren – aber sie leben nicht.",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["kennzeichen des lebens", "stoffwechsel", "homöostase"],
         },
         {
@@ -263,7 +263,7 @@ Dieses Phänomen nennt sich **Emergenz** (von lat. *emergere* = hervorkommen): D
           correctIndex: 1,
           explanation:
             "Aussagen 1, 3 und 4 sind korrekt. Aussage 2 ist falsch — negative (nicht positive) Rückkopplung ist der häufigste Homöostase-Mechanismus. Aussage 5 ist falsch — Blutgerinnung ist ein klassisches Beispiel für positive Rückkopplung (Thrombin aktiviert weiteres Thrombin).",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["typ-k", "kennzeichen des lebens", "homöostase", "rückkopplung"],
         },
         {
@@ -278,7 +278,7 @@ Dieses Phänomen nennt sich **Emergenz** (von lat. *emergere* = hervorkommen): D
           correctIndex: 3,
           explanation:
             "Aussage D ist falsch. Negative Rückkopplung (nicht positive) ist der häufigste Mechanismus der Homöostase — der Effekt wirkt dem Auslöser entgegen und stabilisiert den Sollwert (z. B. Thermoregulation, Blutzuckerregulation). Positive Rückkopplung verstärkt die Abweichung und kommt nur in Sonderfällen vor (z. B. Blutgerinnung, Geburtswehen). Die übrigen Aussagen sind korrekt.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["falsch-aussage", "kennzeichen des lebens", "homöostase"],
         },
       ],
@@ -463,7 +463,7 @@ Viele Archäen sind **Extremophile**: Thermophile (bis 121°C), Halophile (gesä
             'Der Name gibt es bereits an: "Pro" = vor, "karyon" = Kern.',
             "Haben Bakterien einen Zellkern mit Membran?",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["prokaryoten", "eukaryoten", "zellkern"],
         },
         {
@@ -550,7 +550,7 @@ Viele Archäen sind **Extremophile**: Thermophile (bis 121°C), Halophile (gesä
           correctIndex: 1,
           explanation:
             "Aussagen 1, 2 und 4 sind korrekt. Aussage 3 ist falsch — Prokaryoten besitzen per Definition keinen membranumschlossenen Zellkern (das unterscheidet sie von Eukaryoten). Aussage 5 ist falsch — Prokaryoten haben typischerweise eine zirkuläre DNA (Bakterienchromosom), nicht linear wie Eukaryoten.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["typ-k", "prokaryoten", "eukaryoten", "endosymbiontentheorie"],
         },
       ],
@@ -840,7 +840,7 @@ Ein klinisch wichtiges Beispiel für Glykokalix-Strukturen sind die **ABO-Blutgr
           correctIndex: 3,
           explanation:
             "Aussage D ist falsch. Ungesättigte Fettsäuren erhöhen die Membranfluidität (nicht verringern), weil ihre cis-Doppelbindungen Knicke erzeugen, die eine dichte Packung verhindern. Dadurch entsteht mehr Raum zwischen den Lipiden und die Membran wird fluider. Gesättigte Fettsäuren dagegen packen dicht und machen die Membran starrer. Die übrigen Aussagen sind korrekt.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["falsch-aussage", "zellmembran", "membranfluidität"],
         },
       ],
@@ -1096,7 +1096,7 @@ Na⁺ strömt in die Zelle, während ein anderes Ion **heraus** transportiert wi
           correctIndex: 1,
           explanation:
             "Aussagen 1, 3 und 4 sind korrekt. Aussage 2 ist falsch — Osmose ist ein passiver Prozess (Wasser folgt dem osmotischen Gradienten ohne Energieaufwand). Aussage 5 ist falsch — Aquaporine sind spezifische Wasserkanäle, nicht Glucosetransporter (GLUT-Transporter transportieren Glucose).",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["typ-k", "membrantransport", "osmose", "na-k-atpase"],
         },
         {
@@ -1384,7 +1384,7 @@ Das **glatte ER (gER)** hat keine Ribosomen und übernimmt andere Aufgaben als d
           correctIndex: 1,
           explanation:
             "Aussagen 1, 3 und 4 sind korrekt. Aussage 2 ist falsch — Lysosomen haben einen sauren pH von ca. 4,5 (nicht neutral), der für die sauren Hydrolasen optimal ist. Aussage 5 ist falsch — Peroxisomen sind von einer einfachen Membran umgeben (Doppelmembran haben Mitochondrien und der Zellkern).",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["typ-k", "organellen", "lysosomen", "mitochondrien", "golgi"],
         },
         {
@@ -1399,7 +1399,7 @@ Das **glatte ER (gER)** hat keine Ribosomen und übernimmt andere Aufgaben als d
           correctIndex: 3,
           explanation:
             "Aussage D ist falsch. Peroxisomen sind von einer einfachen (Einzel-)Membran umgeben, nicht von einer Doppelmembran. Doppelmembranen besitzen nur Mitochondrien, Chloroplasten und der Zellkern. Peroxisomen bauen zwar tatsächlich sehr langkettige Fettsäuren (>C22) durch β-Oxidation ab, aber die Aussage über die Doppelmembran ist der typische MedAT-Fehler. Die übrigen Aussagen sind korrekt.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["falsch-aussage", "organellen", "peroxisomen", "doppelmembran"],
         },
       ],
@@ -1655,7 +1655,7 @@ Der **Nucleolus** ist der Ort der Ribosomenfabrikation — keine Membranstruktur
             "Stell dir den Kernporen-Komplex wie eine Sicherheitsschleuse vor.",
             'Proteine brauchen ein "Ticket" (NLS) für den Einlass in den Kern.',
           ],
-          difficulty: 3,
+          difficulty: 2,
           tags: ["kernlokalisierungssignal", "nls", "kernimport"],
         },
         {
@@ -1671,7 +1671,7 @@ Der **Nucleolus** ist der Ort der Ribosomenfabrikation — keine Membranstruktur
           correctIndex: 0,
           explanation:
             "Aussagen 1, 3 und 4 sind korrekt. Aussage 2 ist falsch — Euchromatin ist wenig verdichtet und transkriptionell aktiv; Heterochromatin ist stark verdichtet und inaktiv. Aussage 5 ist falsch — das Barr-Körperchen (inaktives X-Chromosom) ist ein Beispiel für Heterochromatin, nicht Euchromatin.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["typ-k", "zellkern", "chromatin", "nucleolus", "kernporen"],
         },
       ],
@@ -1894,7 +1894,7 @@ Die Schwesterchromatiden trennen sich in jeder haploiden Zelle. Ergebnis: **4 ha
             "Crossing-over = Rekombination. Was ist das Ergebnis der Rekombination?",
             "Neue Kombination väterlicher + mütterlicher Allele = neue genetische Variante.",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["crossing-over", "rekombination", "prophase-i", "meiose"],
         },
         {
@@ -1914,7 +1914,7 @@ Die Schwesterchromatiden trennen sich in jeder haploiden Zelle. Ergebnis: **4 ha
             "2 Chromosomen 21 (normal) + 1 extra = 3 Chromosomen 21 = Trisomie 21.",
             "Trisomie = 47 Chromosomen. Welches Syndrom ist am häufigsten?",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["trisomie-21", "non-disjunction", "down-syndrom"],
         },
         {
@@ -1933,7 +1933,7 @@ Die Schwesterchromatiden trennen sich in jeder haploiden Zelle. Ergebnis: **4 ha
             "G1 → S: Zelle entscheidet, ob sie teilt. Welches Cyclin ist in G1 aktiv?",
             "Rb ist ein Tumorsuppressor — wenn er phosphoryliert wird, lässt er E2F frei.",
           ],
-          difficulty: 3,
+          difficulty: 2,
           tags: ["g1-s-checkpoint", "cyclin-d", "cdk4", "rb", "e2f"],
         },
         {
@@ -1949,7 +1949,7 @@ Die Schwesterchromatiden trennen sich in jeder haploiden Zelle. Ergebnis: **4 ha
           correctIndex: 1,
           explanation:
             "Aussagen 1, 2 und 4 sind korrekt. Aussage 3 ist falsch — nach der Mitose entstehen 2 genetisch identische Tochterzellen (4 genetisch verschiedene Zellen entstehen nach der Meiose). Aussage 5 ist falsch — Cyclin B/CDK1 kontrolliert den G2/M-Checkpoint; der G1/S-Checkpoint wird durch Cyclin D/CDK4 kontrolliert.",
-          difficulty: 3,
+          difficulty: 2,
           tags: ["typ-k", "zellteilung", "meiose", "mitose", "non-disjunction"],
         },
         {
@@ -2236,7 +2236,7 @@ Pyruvat + NADH → Laktat + NAD⁺ [Laktat-Dehydrogenase (LDH)]
             "Komplex IV = Cytochrom-c-Oxidase. Was ist seine Funktion?",
             "Cyanid bindet an Eisen. Welches Eisen ist in Komplex IV?",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["cyanid", "komplex-iv", "atmungskette", "vergiftung"],
         },
         {
@@ -2252,7 +2252,7 @@ Pyruvat + NADH → Laktat + NAD⁺ [Laktat-Dehydrogenase (LDH)]
           correctIndex: 1,
           explanation:
             "Die drei NADH entstehen bei: (1) Isocitrat → α-Ketoglutarat (Isocitrat-DH, Schritt 3), (2) α-Ketoglutarat → Succinyl-CoA (α-Ketoglutarat-DH, Schritt 4), (3) Malat → Oxalacetat (Malat-DH, Schritt 8). FADH₂ entsteht nur bei Succinat → Fumarat (Succinat-DH, Schritt 6). GTP bei Succinyl-CoA → Succinat (Schritt 5). Pyruvat-DH gehört nicht zum Citratzyklus, sondern ist der Brückenschritt davor.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["citratzyklus", "nadh", "isocitrat-dh", "ketoglutarat-dh", "malat-dh"],
         },
         {
@@ -2352,7 +2352,7 @@ Pyruvat + NADH → Laktat + NAD⁺ [Laktat-Dehydrogenase (LDH)]
           correctIndex: 2,
           explanation:
             "Rechnung: Glykolyse: 2 ATP (netto) + 2 NADH (× 2,5 = 5 ATP). Pyruvat-DH: 2 NADH (× 2,5 = 5 ATP). Citratzyklus (×2): 2 GTP (≈ 2 ATP) + 6 NADH (× 2,5 = 15 ATP) + 2 FADH₂ (× 1,5 = 3 ATP). Summe: 2 + 5 + 5 + 2 + 15 + 3 = 32 ATP (maximal). Je nach Shuttle-System für zytosolisches NADH: 30–32 ATP. Ältere Lehrbücher nennen 36–38 ATP (mit alten P/O-Werten 3 bzw. 2). 2 ATP = nur Glykolyse (anaerob). 12 ATP = zu niedrig.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["typ-m", "rechenfrage", "atp-bilanz", "energiestoffwechsel"],
         },
         {

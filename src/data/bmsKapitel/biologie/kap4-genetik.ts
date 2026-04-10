@@ -85,7 +85,7 @@ Ein **Chromosom** ist ein langer DNA-Faden, der zusammen mit **Histonen** (Verpa
           correctIndex: 1,
           explanation:
             "Ein **Gen** ist der DNA-Abschnitt an einem bestimmten **Locus**, der die Information für ein Merkmal oder Produkt trägt. Ein **Allel** ist eine konkrete **Variantenform** dieses Gens — z. B. das Allel für rote Blütenfarbe (A) vs. weiße Blütenfarbe (a). Ein diploider Organismus hat pro Gen zwei Allele (eines auf jedem homologen Chromosom).",
-          difficulty: 1,
+          difficulty: 2,
           tags: ["gen", "allel", "locus"],
         },
         {
@@ -161,7 +161,7 @@ Ein **Chromosom** ist ein langer DNA-Faden, der zusammen mit **Histonen** (Verpa
           correctIndex: 2,
           explanation:
             "Aussagen 1, 3 und 4 sind korrekt. Die DNA-Doppelhelix besteht aus zwei antiparallelen Strängen (1). Nach Chargaff gilt A = T und G = C (3). Der Mensch hat ca. 20.000–25.000 proteincodierende Gene (4). Aussage 2 ist falsch: Adenin paart mit Thymin (2 H-Brücken), Guanin paart mit Cytosin (3 H-Brücken). Aussage 5 ist falsch: Histone sind Proteine, nicht RNA-Moleküle.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["typ-k", "dna-struktur", "chargaff", "histone", "basenpaarung"],
         },
         {
@@ -353,7 +353,7 @@ Chromosomenaberrationen (numerisch oder strukturell) verursachen schwerwiegende 
           correctIndex: 1,
           explanation:
             "**Telomere** sind repetitive DNA-Sequenzen (beim Menschen **TTAGGG**) an den **Chromosomenenden**. Sie schützen die Enden vor Abbau und Fusion. Bei jeder Zellteilung werden sie etwas kürzer (ohne Telomerase).",
-          difficulty: 1,
+          difficulty: 2,
           tags: ["telomere", "chromosom", "TTAGGG"],
         },
         {
@@ -522,7 +522,7 @@ Der **Zellzyklus** umfasst die Vorbereitung der Zellteilung und die Teilung selb
           correctIndex: 2,
           explanation:
             "Die Meiose erzeugt **4 haploide Zellen (n)** aus einer diploiden Ausgangszelle (2n). Meiose I halbiert den Chromosomensatz (2n → n), Meiose II trennt die Schwesterchromatiden. Bei der Oogenese entsteht allerdings nur 1 Eizelle + 3 Polkörper.",
-          difficulty: 1,
+          difficulty: 2,
           tags: ["meiose", "haploid", "keimzelle"],
         },
         {
@@ -553,7 +553,7 @@ Der **Zellzyklus** umfasst die Vorbereitung der Zellteilung und die Teilung selb
           correctIndex: 1,
           explanation:
             "**Mitose:** Trennung der **Schwesterchromatiden** → 2 identische Tochterzellen (2n). **Meiose I:** Trennung der **homologen Chromosomen** → Reduktion auf haploid (n). Meiose II ähnelt der Mitose (Trennung der Schwesterchromatiden).",
-          difficulty: 1,
+          difficulty: 2,
           tags: ["mitose", "meiose", "vergleich"],
         },
         {
@@ -569,7 +569,7 @@ Der **Zellzyklus** umfasst die Vorbereitung der Zellteilung und die Teilung selb
           correctIndex: 1,
           explanation:
             "Aussagen 1, 2 und 4 sind korrekt. Crossing-over findet in der Prophase I statt (Pachytän) und führt zu Rekombination (1). Die Meiose erzeugt vier haploide Zellen (2). Nicht-Disjunktion steigt mit dem mütterlichen Alter (4). Aussage 3 ist falsch: In der Anaphase I werden die homologen Chromosomen getrennt, die Schwesterchromatiden erst in der Anaphase II. Aussage 5 ist falsch: Die DNA-Replikation findet in der S-Phase der Interphase statt, nicht in der M-Phase.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["typ-k", "meiose", "crossing-over", "nicht-disjunktion", "zellzyklus"],
         },
         {
@@ -584,7 +584,7 @@ Der **Zellzyklus** umfasst die Vorbereitung der Zellteilung und die Teilung selb
           correctIndex: 2,
           explanation:
             "Aussage C ist falsch. Die DNA-Replikation findet in der S-Phase der INTERPHASE statt, NICHT in der M-Phase. In der M-Phase (Mitose) werden die bereits replizierten Chromosomen auf die Tochterzellen verteilt. Die Verwechslung von S-Phase und M-Phase ist ein häufiger Fehler im MedAT. Die übrigen Aussagen sind korrekt.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["falsch-aussage", "zellzyklus", "s-phase", "dna-replikation"],
         },
       ],
@@ -830,7 +830,7 @@ Nicht alle Merkmale folgen dem einfachen Mendel-Schema. Drei wichtige Phänomene
           correctIndex: 1,
           explanation:
             "Aussagen 1, 3 und 4 sind korrekt. Die 1. Mendelsche Regel (Uniformitätsregel) besagt, dass alle F₁-Nachkommen reinerbiger Eltern uniform sind (1). Die 3. Regel gilt nur bei unabhängig vererbten Genen (3). Das dihybride Phänotyp-Verhältnis ist 9:3:3:1 (4). Aussage 2 ist falsch: 1:2:1 ist das Genotyp-Verhältnis, das Phänotyp-Verhältnis ist 3:1. Aussage 5 ist falsch: P(aa) bei Aa × Aa = 1/4 = 25 %, nicht 50 %.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["typ-k", "mendel", "spaltungsregel", "unabhängigkeitsregel", "dihybrid"],
         },
         {
@@ -1099,7 +1099,7 @@ Die **Sichelzellanämie** vereint mehrere Konzepte dieses Kapitels:
           correctIndex: 1,
           explanation:
             "Bei **intermediärer** Vererbung hat jeder Genotyp einen eigenen Phänotyp: AA = rot, Aa = rosa, aa = weiß. Daher entspricht das Phänotyp-Verhältnis dem Genotyp-Verhältnis **1:2:1**. Das 3:1-Verhältnis gilt nur bei vollständiger Dominanz.",
-          difficulty: 1,
+          difficulty: 2,
           tags: ["intermediär", "1:2:1", "wunderblume"],
         },
         {
@@ -1115,7 +1115,7 @@ Die **Sichelzellanämie** vereint mehrere Konzepte dieses Kapitels:
           correctIndex: 2,
           explanation:
             "Bei der **Testkreuzung** (× aa): 1:1-Aufspaltung bedeutet, das Individuum war **Aa** (heterozygot). Wäre es AA gewesen, wären **alle** Nachkommen dominant (Aa). Die Testkreuzung ist die Standardmethode, um zwischen AA und Aa zu unterscheiden.",
-          difficulty: 1,
+          difficulty: 2,
           tags: ["testkreuzung", "heterozygot", "genotyp"],
         },
         {
@@ -1147,7 +1147,7 @@ Die **Sichelzellanämie** vereint mehrere Konzepte dieses Kapitels:
           correctIndex: 2,
           explanation:
             "**Pleiotropie** bedeutet: Ein Gen beeinflusst **mehrere, scheinbar unverbundene Merkmale**. Beim Marfan-Syndrom betrifft die FBN1-Mutation Herz (Aorta), Auge (Linse) und Skelett (Finger) gleichzeitig. Das Gegenstück ist **polygene Vererbung** (viele Gene → ein Merkmal).",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["pleiotropie", "marfan", "klinisch"],
         },
         {
@@ -1163,7 +1163,7 @@ Die **Sichelzellanämie** vereint mehrere Konzepte dieses Kapitels:
           correctIndex: 2,
           explanation:
             "**Epistasie** liegt vor, wenn ein Gen die Ausprägung eines **anderen Gens** maskiert. Hier ist Gen E epistatisch über Gen B: Bei ee wird kein Pigment eingelagert → der Hund ist gelb, unabhängig vom B-Genotyp. Das Gen E 'überschreibt' die Wirkung von Gen B.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["epistasie", "labrador", "geninteraktion"],
         },
       ],
@@ -1352,7 +1352,7 @@ Das kranke Allel ist **dominant** auf dem X-Chromosom. **Kranker Vater (X^A Y):*
           correctIndex: 2,
           explanation:
             "Gesunde Eltern mit betroffenen Kindern → **rezessiver** Erbgang (Eltern sind Überträger Aa). Beide Geschlechter betroffen → **autosomal** (nicht X-chromosomal, dort wären fast nur Jungen krank). Aa × Aa → 25 % der Kinder betroffen (aa).",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["autosomal-rezessiv", "stammbaum", "überträger"],
         },
         {
@@ -1383,7 +1383,7 @@ Das kranke Allel ist **dominant** auf dem X-Chromosom. **Kranker Vater (X^A Y):*
           correctIndex: 2,
           explanation:
             "Das **Diagonal-Muster** (betroffener Großvater mütterlicherseits → gesunde Tochter als Konduktorin → betroffener Enkel) ist typisch für **X-chromosomal rezessiv**. Der Großvater (X^a Y) gibt X^a an alle Töchter → die Mutter ist Konduktorin (X^A X^a) → 50 % ihrer Söhne erhalten X^a und sind betroffen.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["x-chromosomal rezessiv", "diagonal-muster", "konduktorin"],
         },
         {
@@ -1413,7 +1413,7 @@ Das kranke Allel ist **dominant** auf dem X-Chromosom. **Kranker Vater (X^A Y):*
           correctIndex: 3,
           explanation:
             "Aussage D ist falsch. Ein betroffener Vater (X^a Y) gibt sein X-Chromosom an seine TÖCHTER weiter (die dann Konduktorinnen sind), aber sein Y-Chromosom an seine Söhne. Daher kann ein Vater eine X-chromosomal rezessive Erkrankung NIE direkt an seinen Sohn vererben. Das typische Muster ist das Diagonal-Muster: betroffener Großvater -> Konduktorin-Tochter -> betroffener Enkel. Die übrigen Aussagen sind korrekt.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["falsch-aussage", "erbgänge", "x-chromosomal", "vererbung"],
         },
       ],
@@ -1546,7 +1546,7 @@ Ein seltener Sonderfall: Menschen mit dem **Bombay-Phänotyp** (h/h) können das
           correctIndex: 3,
           explanation:
             "Vater gibt I^A oder i, Mutter gibt I^B oder i. Kombinationen: I^A I^B (AB), I^A i (A), I^B i (B), i i (0). Alle vier Blutgruppen sind mit je 25 % möglich.",
-          difficulty: 1,
+          difficulty: 2,
           tags: ["blutgruppe", "ab0", "kreuzung"],
         },
         {
@@ -1562,7 +1562,7 @@ Ein seltener Sonderfall: Menschen mit dem **Bombay-Phänotyp** (h/h) können das
           correctIndex: 2,
           explanation:
             "Elternteil 0 (ii) gibt immer i weiter. Elternteil AB (I^A I^B) gibt I^A oder I^B weiter. Kinder: I^A i (Blutgruppe A) oder I^B i (Blutgruppe B). Blutgruppe 0 (ii) oder AB (I^A I^B) ist **nicht** möglich.",
-          difficulty: 1,
+          difficulty: 2,
           tags: ["blutgruppe", "ab0", "kreuzung"],
         },
         {
@@ -1612,7 +1612,7 @@ Ein seltener Sonderfall: Menschen mit dem **Bombay-Phänotyp** (h/h) können das
           correctIndex: 1,
           explanation:
             "Punnett-Quadrat: Mutter gibt I^A oder i, Vater gibt I^B oder i. Vier gleich wahrscheinliche Kombinationen: I^A I^B (AB), I^A i (A), I^B i (B), ii (0). P(Blutgruppe 0) = P(ii) = **1/4 = 25 %**. Typischer Fehler: 0 % (vergessen, dass beide Eltern auch i weitergeben können) oder 50 % (nur den rezessiven Erbgang betrachtet).",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["typ-m", "rechenfrage", "blutgruppe", "ab0", "punnett"],
         },
       ],
@@ -1819,7 +1819,7 @@ Im Kontext der Tumorbiologie: **Onkogene** (GOF in Protoonkogenen, z. B. RAS-Mut
           correctIndex: 2,
           explanation:
             "**Trisomie** (3 Kopien eines Chromosoms) entsteht typischerweise durch **Nicht-Disjunktion** in der Meiose: Die homologen Chromosomen (oder in Meiose II die Schwesterchromatiden) trennen sich nicht → eine Keimzelle erhält zwei Kopien, eine erhält keine. Nach Befruchtung: 47 Chromosomen mit Trisomie. Genmutationen ändern die Sequenz, nicht die Chromosomenzahl.",
-          difficulty: 1,
+          difficulty: 2,
           tags: ["trisomie", "nicht-disjunktion", "meiose"],
         },
         {
@@ -2132,7 +2132,7 @@ Vererbung bedeutet: Die DNA (Allele) wird über Keimzellen (Meiose) von Generati
           correctIndex: 2,
           explanation:
             "Aussagen 1, 3 und 4 sind korrekt. Das Zentraldogma beschreibt DNA → RNA → Protein (1). Introns werden beim Spleißen entfernt, Exons bleiben in der reifen mRNA (3). AUG codiert für Methionin und dient als Startcodon (4). Aussage 2 ist falsch: Die Transkription findet bei Eukaryoten im Zellkern statt, nicht im Zytoplasma. Aussage 5 ist falsch: Die RNA-Polymerase benötigt keinen Primer — im Gegensatz zur DNA-Polymerase.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["typ-k", "genexpression", "transkription", "spleißen", "zentraldogma"],
         },
         {
@@ -2147,7 +2147,7 @@ Vererbung bedeutet: Die DNA (Allele) wird über Keimzellen (Meiose) von Generati
           correctIndex: 2,
           explanation:
             "Aussage C ist falsch. Die RNA-Polymerase benötigt KEINEN Primer — sie kann die Transkription de novo starten, indem sie direkt an den Promotor (z. B. TATA-Box bei Eukaryoten) bindet. Im Gegensatz dazu benötigt die DNA-Polymerase immer einen RNA-Primer (Primase synthetisiert diesen). Dies ist ein wichtiger Unterschied zwischen Replikation und Transkription. Die übrigen Aussagen sind korrekt.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["falsch-aussage", "genexpression", "transkription", "rna-polymerase"],
         },
       ],
@@ -2383,7 +2383,7 @@ Das Verständnis der Tumorgenetik hat die Krebstherapie revolutioniert — Medik
           correctIndex: 1,
           explanation:
             "Ein **Proto-Onkogen** ist ein normales Gen, das das Zellwachstum fördert (z. B. Wachstumsfaktor-Rezeptor). Durch eine **Gain-of-function-Mutation** (Punktmutation, Amplifikation, Translokation) wird es zum **Onkogen** — es ist dauerhaft aktiv wie ein festgeklemmtes Gaspedal. Schon **ein mutiertes Allel** reicht (dominant).",
-          difficulty: 1,
+          difficulty: 2,
           tags: ["onkogen", "proto-onkogen", "tumorgenetik"],
         },
         {
@@ -2399,7 +2399,7 @@ Das Verständnis der Tumorgenetik hat die Krebstherapie revolutioniert — Medik
           correctIndex: 2,
           explanation:
             "Krebs ist ein **mehrstufiger Prozess**: Typischerweise müssen **5–7 Mutationen** in verschiedenen Genen (Onkogene, Tumorsuppressorgene, Reparaturgene) zusammenkommen. Deshalb dauert die Krebsentstehung meist Jahre bis Jahrzehnte, und das Risiko steigt mit dem Alter.",
-          difficulty: 1,
+          difficulty: 2,
           tags: ["karzinogenese", "mehrstufenmodell"],
         },
         {
@@ -2493,7 +2493,7 @@ Das Verständnis der Tumorgenetik hat die Krebstherapie revolutioniert — Medik
           correctIndex: 2,
           explanation:
             "Aussage C ist falsch. p53 ist KEIN Onkogen, sondern ein Tumorsuppressorgen (TP53) — der 'Wächter des Genoms'. p53 hemmt die Zellteilung, induziert DNA-Reparatur oder Apoptose bei irreparablen Schäden. In über 50% aller Tumoren ist p53 INAKTIVIERT (Loss-of-function-Mutation), nicht überaktiv. Die Verwechslung von Onkogenen (Gain-of-function, dominant) und Tumorsuppressorgenen (Loss-of-function, rezessiv) ist ein klassischer MedAT-Fehler. Die übrigen Aussagen sind korrekt.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["falsch-aussage", "tumorgenetik", "p53", "tumorsuppressor"],
         },
       ],
@@ -2678,7 +2678,7 @@ Frauen haben zwei X-Chromosomen (XX), Männer nur eines (XY). Damit Frauen nicht
           correctIndex: 2,
           explanation:
             "**Prader-Willi-Syndrom** entsteht durch Verlust des **väterlichen** 15q11-13. Die mütterlichen Gene in dieser Region sind durch **Imprinting** stillgelegt, daher fehlt bei Verlust des väterlichen Allels die Genexpression vollständig. **Angelman** entsteht dagegen bei Verlust des **mütterlichen** UBE3A in derselben Region.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["imprinting", "prader-willi", "chromosom 15"],
         },
         {
@@ -2718,7 +2718,7 @@ Frauen haben zwei X-Chromosomen (XX), Männer nur eines (XY). Damit Frauen nicht
           correctIndex: 2,
           explanation:
             "Der **Schlüsselunterschied**: Genetische Mutationen verändern die **DNA-Sequenz** (z. B. A → G) und sind meist dauerhaft. Epigenetische Veränderungen betreffen **Markierungen** auf/über der DNA (Methylierung, Histonmodifikation) ohne die Sequenz zu ändern — sie sind potenziell **reversibel** (z. B. durch epigenetische Therapie).",
-          difficulty: 1,
+          difficulty: 2,
           tags: ["epigenetik", "mutation", "reversibel"],
         },
       ],
@@ -2981,7 +2981,7 @@ Beim **reproduktiven Klonen** wird ein genetisch identischer Organismus erzeugt.
           correctIndex: 2,
           explanation:
             "Die **Taq-Polymerase** stammt aus dem thermophilen Bakterium *Thermus aquaticus* und ist **hitzestabil** — sie übersteht die Denaturierung bei 95 °C, ohne ihre Aktivität zu verlieren. Eine herkömmliche DNA-Polymerase würde bei dieser Temperatur denaturieren.",
-          difficulty: 1,
+          difficulty: 2,
           tags: ["pcr", "taq-polymerase", "thermostabil"],
         },
         {
@@ -3012,7 +3012,7 @@ Beim **reproduktiven Klonen** wird ein genetisch identischer Organismus erzeugt.
           correctIndex: 1,
           explanation:
             "**Kleine DNA-Fragmente** wandern am weitesten durch das Agarosegel, weil sie leichter durch die Gelporen schlüpfen. Große Fragmente werden stärker gebremst und bleiben näher an der Auftragsstelle. DNA wandert zur Anode (+), weil sie durch die Phosphatgruppen **negativ geladen** ist.",
-          difficulty: 1,
+          difficulty: 2,
           tags: ["gelelektrophorese", "dna-auftrennung"],
         },
         {
@@ -3193,7 +3193,7 @@ Die Kopplungsanalyse wurde historisch genutzt, um **Krankheitsgene zu kartieren*
           correctIndex: 2,
           explanation:
             "Wenn **gesunde Eltern** ein betroffenes Kind haben, liegt ein **autosomal-rezessiver** Erbgang vor. Beide Eltern sind heterozygote **Konduktoren** (Aa × Aa → 25 % aa). Mukoviszidose ist das Paradebeispiel für autosomal-rezessive Vererbung.",
-          difficulty: 1,
+          difficulty: 2,
           tags: ["erbgang", "autosomal-rezessiv", "mukoviszidose"],
         },
         {
@@ -3433,7 +3433,7 @@ Die genetische Diagnostik wirft fundamentale Fragen auf, die im MedAT neutral ve
           correctIndex: 2,
           explanation:
             "Der **NIPT** analysiert zellfreie fetale DNA (cffDNA) im mütterlichen Blut und erreicht eine Detektionsrate von **> 99 %** für Trisomie 21 — deutlich höher als der Triple-Test. Amniozentese und Chorionzottenbiopsie sind **invasiv**, nicht nicht-invasiv.",
-          difficulty: 1,
+          difficulty: 2,
           tags: ["nipt", "pränataldiagnostik", "trisomie"],
         },
         {
@@ -3479,7 +3479,7 @@ Die genetische Diagnostik wirft fundamentale Fragen auf, die im MedAT neutral ve
           correctIndex: 1,
           explanation:
             "Der Hauptunterschied: **PND** (Pränataldiagnostik) untersucht das ungeborene Kind **während der Schwangerschaft**. **PID** (Präimplantationsdiagnostik) untersucht Embryonen **vor dem Transfer** in die Gebärmutter, also im Rahmen einer **IVF**. Bei PND ist die Schwangerschaft bereits eingetreten, bei PID noch nicht.",
-          difficulty: 1,
+          difficulty: 2,
           tags: ["pnd", "pid", "vergleich"],
         },
       ],
@@ -3565,7 +3565,7 @@ Die Einheit **centiMorgan (cM)** misst den genetischen Abstand: **1 cM = 1 % Rek
           correctIndex: 1,
           explanation:
             "Eine Rekombinationsfrequenz von 12 % bedeutet, dass in 12 % der Meiosen ein Crossing-over zwischen den beiden Genen stattfindet. Der genetische Abstand beträgt daher **12 cM**. Die Gene sind **gekoppelt** (< 50 %), aber nicht vollständig — es gibt Rekombinanten.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["kopplungsgruppen", "rekombination", "centimorgan"],
         },
       ],

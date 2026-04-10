@@ -254,7 +254,7 @@ $$\\vec{v} = r \\cdot \\begin{pmatrix} \\cos\\alpha \\\\ \\sin\\alpha \\end{pmat
             "Achten Sie auf das Vorzeichen: Die zweite Komponente von b ist −1, nicht +1.",
           ],
           tags: ["vektoraddition", "komponentenweise", "vektor"],
-          difficulty: 1,
+          difficulty: 2,
         },
         {
           question:
@@ -337,7 +337,7 @@ $$\\vec{v} = r \\cdot \\begin{pmatrix} \\cos\\alpha \\\\ \\sin\\alpha \\end{pmat
           correctIndex: 2,
           explanation:
             "Aussagen 1, 3 und 5 sind korrekt. Aussage 1: |(3,4)| = √(9+16) = √25 = 5 (pythagoräisches Tripel) ✓. Aussage 2 ist falsch: Vektoraddition ist kommutativ: a + b = b + a ✓. Aussage 3: Der Einheitsvektor ê = v/|v| hat per Definition Betrag 1 ✓. Aussage 4 ist falsch: Parallele Vektoren haben die gleiche Richtung, aber nicht notwendig die gleiche Länge — z. B. (1,2) und (3,6) sind parallel, aber |( 1,2)| = √5 ≠ |(3,6)| = 3√5. Aussage 5: Verbindungsvektor AB = rB − rA = Ziel minus Start ✓.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["typ-k", "vektoroperationen", "vektorrechnung"],
         },
       ],
@@ -640,7 +640,7 @@ Die **Lorentz-Kraft** $\\vec{F} = q(\\vec{v} \\times \\vec{B})$ wirkt auf gelade
             "Da r und F senkrecht stehen (x- und y-Richtung), gilt |M| = |r|×|F|×sin(90°) = |r|×|F|×1.",
           ],
           tags: ["drehmoment", "kreuzprodukt", "biomechanik"],
-          difficulty: 2,
+          difficulty: 3,
         },
         {
           question:
@@ -688,7 +688,7 @@ Die **Lorentz-Kraft** $\\vec{F} = q(\\vec{v} \\times \\vec{B})$ wirkt auf gelade
           correctIndex: 0,
           explanation:
             "Aussage A ist falsch: Das Kreuzprodukt ist antikommutativ: $\\vec{a} \\times \\vec{b} = -(\\vec{b} \\times \\vec{a})$. Das Vertauschen der Reihenfolge dreht das Vorzeichen um. Alle anderen Aussagen sind korrekt: Skalarprodukt = 0 ist der Schnelltest für Orthogonalität (B), das Kreuzprodukt steht senkrecht auf beiden Vektoren (C), mechanische Arbeit ist ein Skalarprodukt (D), und cos(90°) = 0 erklärt, warum orthogonale Vektoren Skalarprodukt 0 haben (E).",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["falsch-aussage", "skalarprodukt", "kreuzprodukt"],
         },
       ],

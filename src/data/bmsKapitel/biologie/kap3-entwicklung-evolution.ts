@@ -1703,22 +1703,6 @@ Bevor ein Spermium die Eizelle durchdringen kann, muss es **kapazitiert** sein. 
       },
       selfTest: [
         {
-          question: "Wo findet die Befruchtung beim Menschen normalerweise statt?",
-          options: [
-            "Im Uterus (Gebärmutterhöhle)",
-            "Im Infundibulum des Eileiters",
-            "In der Ampulle des Eileiters (äußeres Drittel)",
-            "Im Isthmus des Eileiters",
-            "Im Cavum uteri nahe der Tubenöffnung",
-          ],
-          correctIndex: 2,
-          explanation:
-            "Die Befruchtung findet in der Ampulle des Eileiters (Tuba uterina) statt — dem weitesten Abschnitt im äußeren Drittel. Eizelle und Spermien treffen dort aufeinander.",
-          hints: ["Weitester Abschnitt der Tuba.", "Ampulle = äußeres Drittel."],
-          difficulty: 1,
-          tags: ["befruchtung", "ampulle", "eileiter"],
-        },
-        {
           question: "Welche Reaktion verhindert die Polyspermie?",
           options: [
             "Die Akrosomreaktion",

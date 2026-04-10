@@ -287,7 +287,7 @@ Die Eigenschaften und Löslichkeitsregeln ionischer Verbindungen sind nicht nur 
             "Denken Sie an Coulombsche Anziehung im Gitter.",
             "Es ist die Energie beim Zusammentreten gasförmiger Ionen.",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["ionenbindung", "gitterenergie", "born-haber"],
         },
         {
@@ -306,7 +306,7 @@ Die Eigenschaften und Löslichkeitsregeln ionischer Verbindungen sind nicht nur 
             "Coulombsches Gesetz: E ∝ q₁·q₂/r.",
             "Betrachten Sie Ladungszahlen und Ionenradien im Vergleich.",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["mgo", "coulombsches-gesetz", "gitterenergie"],
         },
         {
@@ -325,7 +325,7 @@ Die Eigenschaften und Löslichkeitsregeln ionischer Verbindungen sind nicht nur 
             "Ladungsträger müssen frei beweglich sein.",
             "Im Gitter sind Ionen auf festen Positionen gebunden.",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["leitfähigkeit", "elektrolyt", "ionengitter"],
         },
         {
@@ -339,7 +339,7 @@ Die Eigenschaften und Löslichkeitsregeln ionischer Verbindungen sind nicht nur 
             "Löslichkeit: Hydratationsenthalpie muss Gitterenergie überwinden.",
             "Höhere Ladung → höhere Gitterenergie → schlechtere Löslichkeit.",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["löslichkeit", "gitterenergie", "hydratation"],
         },
         {
@@ -352,7 +352,7 @@ Die Eigenschaften und Löslichkeitsregeln ionischer Verbindungen sind nicht nur 
             "NaCl-Gitter: kubisch-flächenzentriert.",
             "Koordinationszahl hängt vom Radienverhältnis ab.",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["nacl-gitter", "koordinationszahl", "radienverhältnis"],
         },
         {
@@ -372,7 +372,7 @@ Die Eigenschaften und Löslichkeitsregeln ionischer Verbindungen sind nicht nur 
             "Zerlegen Sie den Kreisprozess in seine Teilschritte.",
             "Welcher Schritt setzt Energie frei statt aufzunehmen?",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["born-haber", "gitterenergie", "exotherm"],
         },
         {
@@ -411,7 +411,7 @@ Die Eigenschaften und Löslichkeitsregeln ionischer Verbindungen sind nicht nur 
             "Was passiert bei einer Ionenverschiebung mit den Ladungsverteilungen?",
             "Vergleich mit metallischen Bindungen: Warum sind Metalle nicht spröde?",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["sprödigkeit", "ionenkristall", "scherkraft"],
         },
         {
@@ -421,7 +421,7 @@ Die Eigenschaften und Löslichkeitsregeln ionischer Verbindungen sind nicht nur 
           correctIndex: 2,
           explanation:
             "Aussagen 1, 2, 3 und 5 sind korrekt: Die Gitterenergie (z. B. −786 kJ/mol für NaCl) ist der größte exotherme Beitrag (1). Im festen Zustand sind Ionen fixiert und können keinen Strom leiten (2). Die Gitterenergie ist proportional zu q₁·q₂/r nach Coulomb (3). NaCl hat oktaedrische Koordination mit KZ = 6 (5). Aussage 4 ist falsch — Ionenkristalle sind spröde, nicht plastisch verformbar: Bei Scherkraft kommen gleichnamige Ionen nebeneinander zu liegen, die Abstoßung führt zum Bruch.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["typ-k", "ionenbindung", "gitterenergie"],
         },
       ],
@@ -839,7 +839,7 @@ Ein Molekül ist aromatisch (besonders stabil), wenn es die **Hückel-Regel** (K
             "Zählen Sie bindende + freie Elektronenpaare am Zentralatom.",
             "Ein freies Elektronenpaar → Geometrie ≠ Elektronenanordnung.",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["vsepr", "nh3", "molekülgeometrie"],
         },
         {
@@ -858,7 +858,7 @@ Ein Molekül ist aromatisch (besonders stabil), wenn es die **Hückel-Regel** (K
             "Zeichnen Sie die Dipolvektoren beider C=O-Bindungen.",
             "Linear bedeutet: beide Dipole zeigen in entgegengesetzte Richtungen.",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["co2", "molekülpolarität", "dipole"],
         },
         {
@@ -871,7 +871,7 @@ Ein Molekül ist aromatisch (besonders stabil), wenn es die **Hückel-Regel** (K
             "Wie viele Bindungspartner hat der Carbonyl-Kohlenstoff insgesamt?",
             "C=O: Doppelbindung → welche Hybridisierung erlaubt eine π-Bindung?",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["hybridisierung", "sp2", "carbonylgruppe"],
         },
         {
@@ -890,7 +890,7 @@ Ein Molekül ist aromatisch (besonders stabil), wenn es die **Hückel-Regel** (K
             "σ-Bindung: axiale Überlappung; π-Bindung: laterale Überlappung.",
             "Was passiert mit der p-Orbitalüberlappung bei Rotation?",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["pi-bindung", "rotation", "cis-trans-isomerie"],
         },
         {
@@ -903,7 +903,7 @@ Ein Molekül ist aromatisch (besonders stabil), wenn es die **Hückel-Regel** (K
             "sp³: vier Hybridorbitale, keine freien Paare.",
             "Was ist der Bindungswinkel im idealen Tetraeder?",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["sp3", "methan", "tetraeder"],
         },
         {
@@ -917,7 +917,7 @@ Ein Molekül ist aromatisch (besonders stabil), wenn es die **Hückel-Regel** (K
             "Similia similibus solvuntur — Gleiches löst Gleiches.",
             "Sind Fette polar oder unpolar?",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["löslichkeit", "unpolar", "similia-similibus"],
         },
         {
@@ -950,7 +950,7 @@ Ein Molekül ist aromatisch (besonders stabil), wenn es die **Hückel-Regel** (K
             "sp-Hybridisierung: zwei Hybridorbitale, 180°.",
             "Welches Molekül enthält eine Dreifachbindung?",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["sp-hybridisierung", "ethin", "linear"],
         },
         {
@@ -970,7 +970,7 @@ Ein Molekül ist aromatisch (besonders stabil), wenn es die **Hückel-Regel** (K
             "Einfachbindungen = σ; Doppelbindung = σ + π.",
             "Zählen Sie alle Bindungen im Molekül einzeln.",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["sigma-pi", "ethen", "bindungszählung"],
         },
         {
@@ -990,7 +990,7 @@ Ein Molekül ist aromatisch (besonders stabil), wenn es die **Hückel-Regel** (K
             "Wo im PSE ist Fluor — rechts oben!",
             "Trend: steigende Kernladung → stärkere Anziehung der Bindungselektronen.",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["elektronegativität", "pauling", "periodensystem"],
         },
         {
@@ -1009,7 +1009,7 @@ Ein Molekül ist aromatisch (besonders stabil), wenn es die **Hückel-Regel** (K
             "Polarität = Elektronegativitätsdifferenz.",
             "Fluor hat die höchste EN aller Elemente.",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["polarität", "elektronegativität", "delta-en"],
         },
         {
@@ -1024,7 +1024,7 @@ Ein Molekül ist aromatisch (besonders stabil), wenn es die **Hückel-Regel** (K
           correctIndex: 2,
           explanation:
             "Aussage C ist FALSCH: NH₃ hat NICHT trigonal-planare, sondern trigonal-pyramidale Molekülgeometrie. Stickstoff hat zwar drei Bindungspartner (H), aber zusätzlich ein freies Elektronenpaar. Die vier Elektronenpaare nehmen tetraedrische Anordnung ein, aber da ein Paar frei ist, resultiert eine trigonal-pyramidale Atomgeometrie mit einem Bindungswinkel von 107° (statt 120° bei trigonal planar). Alle anderen Aussagen sind korrekt.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["falsch-aussage", "kovalente-bindung", "vsepr"],
         },
       ],
@@ -1549,7 +1549,7 @@ Das **Bändermodell** verfeinert das Elektronengas-Bild: In einem Kristall über
             "Edelgase sind vollständig unpolar.",
             "Welche Kraft wirkt auch bei komplett unpolaren Teilchen?",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["london-kräfte", "edelgase", "van-der-waals"],
         },
         {
@@ -1569,7 +1569,7 @@ Das **Bändermodell** verfeinert das Elektronengas-Bild: In einem Kristall über
             "Beide Moleküle sind unpolar → nur London-Kräfte.",
             "Was beeinflusst die Stärke von London-Kräften außer der Elektronenzahl?",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["london-kräfte", "verzweigung", "kontaktfläche"],
         },
         {
@@ -1589,7 +1589,7 @@ Das **Bändermodell** verfeinert das Elektronengas-Bild: In einem Kristall über
             "Donor = liefert das H; Akzeptor = liefert das freie Elektronenpaar.",
             "Nur N, O, F sind elektronegativ genug für H-Brücken.",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["wasserstoffbrücken", "donor", "akzeptor"],
         },
         {
@@ -1609,7 +1609,7 @@ Das **Bändermodell** verfeinert das Elektronengas-Bild: In einem Kristall über
             "Zählen Sie die H-Brücken pro Basenpaar.",
             "Mehr H-Brücken = mehr Energie zum Trennen nötig.",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["dna", "gc-paar", "basenpaarung"],
         },
         {
@@ -1629,7 +1629,7 @@ Das **Bändermodell** verfeinert das Elektronengas-Bild: In einem Kristall über
             "Metallbindung = Elektronengas-Modell.",
             "Was ist der Träger des elektrischen Stroms in Metallen?",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["metallbindung", "elektronengas", "leitfähigkeit"],
         },
         {
@@ -1648,7 +1648,7 @@ Das **Bändermodell** verfeinert das Elektronengas-Bild: In einem Kristall über
             "Hexagonales Eisgitter: 4 H-Brücken pro Molekül, offene Struktur.",
             "Warum schwimmt Eis auf Wasser — Dichte-Vergleich?",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["eis", "dichteanomalie", "wasserstoffbrücken"],
         },
         {
@@ -1668,7 +1668,7 @@ Das **Bändermodell** verfeinert das Elektronengas-Bild: In einem Kristall über
             "Was passiert bei Ionenverschiebung mit den Ladungen?",
             "Elektronengas: hält immer zusammen, egal wie Ionen verschoben.",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["duktilität", "metallbindung", "ionenkristall"],
         },
         {
@@ -1688,7 +1688,7 @@ Das **Bändermodell** verfeinert das Elektronengas-Bild: In einem Kristall über
             "London: instantane Dipole, sehr schwach.",
             "H-Brücken: stärker als London, aber schwächer als echte Bindungen.",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["wechselwirkungen", "reihenfolge", "stärke"],
         },
         {
@@ -1728,7 +1728,7 @@ Das **Bändermodell** verfeinert das Elektronengas-Bild: In einem Kristall über
             "Kohlenwasserstoffketten sind unpolar — welche Kräfte wirken bei unpolaren Molekülen?",
             "Kontaktfläche beeinflusst die Stärke der London-Kräfte.",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["london-kräfte", "membran", "fettsäuren"],
         },
         {
@@ -1747,7 +1747,7 @@ Das **Bändermodell** verfeinert das Elektronengas-Bild: In einem Kristall über
             "Permanente Dipole: nur bei polaren Molekülen.",
             "Höhere Temperatur → stärkere thermische Bewegung → weniger Orientierung.",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["dipol-dipol", "temperatur", "polare-moleküle"],
         },
         {
@@ -1767,7 +1767,7 @@ Das **Bändermodell** verfeinert das Elektronengas-Bild: In einem Kristall über
             "Fieber bis 41 °C kann der Körper kompensieren — ab wann wird es kritisch?",
             "Denaturierung betrifft H-Brücken und hydrophobe WW, nicht Peptidbindungen.",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["denaturierung", "fieber", "hitzschlag"],
         },
         {
@@ -1786,7 +1786,7 @@ Das **Bändermodell** verfeinert das Elektronengas-Bild: In einem Kristall über
             "Welche Bindungen bestimmen die 3D-Struktur? Sind es kovalente oder nichtkovalente?",
             "Primärstruktur = Aminosäuresequenz. Bleibt sie bei Denaturierung erhalten?",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["denaturierung", "proteinstruktur", "nichtkovalent"],
         },
       ],

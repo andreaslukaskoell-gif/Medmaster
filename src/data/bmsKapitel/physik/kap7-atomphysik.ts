@@ -206,7 +206,7 @@ Grundzustand n=1: E₁ = −13,6 eV. Ionisation (n→∞): E_∞ = 0 eV. Ionisie
             'Das Ergebnis überraschte Rutherford selbst: "Als würde man eine Artilleriegranate auf Seidenpapier schießen und sie springt zurück."',
           ],
           tags: ["rutherford", "kernmodell", "streuexperiment"],
-          difficulty: 1,
+          difficulty: 2,
         },
         {
           question:
@@ -240,7 +240,7 @@ Grundzustand n=1: E₁ = −13,6 eV. Ionisation (n→∞): E_∞ = 0 eV. Ionisie
             "Achte auf die Einheiten: ε in L·mol⁻¹·cm⁻¹, d in cm, c kommt in mol/L heraus.",
           ],
           tags: ["lambert-beer", "photometrie", "konzentration"],
-          difficulty: 2,
+          difficulty: 3,
         },
         {
           question:
@@ -260,7 +260,7 @@ Grundzustand n=1: E₁ = −13,6 eV. Ionisation (n→∞): E_∞ = 0 eV. Ionisie
             "Bei 660 nm (rotes Licht): Hb absorbiert stark → venöses Blut sieht dunkelrot aus. HbO₂ absorbiert schwächer → arterielles Blut ist hellrot.",
           ],
           tags: ["pulsoximetrie", "hämoglobin", "spektroskopie"],
-          difficulty: 2,
+          difficulty: 3,
         },
         {
           question:
@@ -716,7 +716,7 @@ Das bedeutet: Schon 1 Mikrogramm ¹³¹I hat eine therapeutisch relevante Aktivi
             "Nach n Halbwertszeiten: A = A₀ · (½)ⁿ.",
           ],
           tags: ["radioaktivität", "halbwertszeit", "aktivitätsabfall"],
-          difficulty: 1,
+          difficulty: 2,
         },
         {
           question: "Wie ändert sich ein Atomkern beim Beta-minus-Zerfall?",
@@ -735,7 +735,7 @@ Das bedeutet: Schon 1 Mikrogramm ¹³¹I hat eine therapeutisch relevante Aktivi
             "Massenzahl A = Protonen + Neutronen. Wenn n zu p wird, ändert sich A nicht.",
           ],
           tags: ["beta-zerfall", "kernumwandlung", "ordnungszahl"],
-          difficulty: 1,
+          difficulty: 2,
         },
         {
           question:
@@ -746,7 +746,7 @@ Das bedeutet: Schon 1 Mikrogramm ¹³¹I hat eine therapeutisch relevante Aktivi
             "T½ = ln2/λ = 0,693/0,0866 h⁻¹ ≈ 8,0 Stunden. Dies entspricht der Halbwertszeit von ¹³¹I (genauer: 8,02 Tage – hier wurde ein vereinfachtes Rechenbeispiel mit Stunden gewählt). Die Umrechnung T½ = 0,693/λ ist die grundlegende Formel, die die Halbwertszeit mit der Zerfallskonstanten verknüpft. Für ⁹⁹ᵐTc (T½=6h) wäre λ = 0,693/6h = 0,1155 h⁻¹, für ¹⁸F (T½=110min ≈ 1,83h) wäre λ = 0,693/1,83h ≈ 0,379 h⁻¹.",
           hints: ["Formel: T½ = ln2/λ = 0,693/λ.", "Einheiten beachten: λ in h⁻¹ → T½ in Stunden."],
           tags: ["zerfallskonstante", "halbwertszeit", "radioaktivität"],
-          difficulty: 2,
+          difficulty: 3,
         },
         {
           question: "Warum wird ⁹⁹ᵐTc bevorzugt in der nuklearmedizinischen Diagnostik eingesetzt?",
@@ -765,7 +765,7 @@ Das bedeutet: Schon 1 Mikrogramm ¹³¹I hat eine therapeutisch relevante Aktivi
             '⁹⁹ᵐTc "m" = metastabil; reiner γ-Strahler; T½ = 6h → ideal für Bildgebung.',
           ],
           tags: ["technetium-99m", "nuklearmedizin", "gamma-strahler"],
-          difficulty: 2,
+          difficulty: 3,
         },
         {
           question:
@@ -779,7 +779,7 @@ Das bedeutet: Schon 1 Mikrogramm ¹³¹I hat eine therapeutisch relevante Aktivi
             "Wie oft muss man 800 halbieren, bis man 100 erhält? 800 → 400 → 200 → 100 (3 Schritte).",
           ],
           tags: ["jod-131", "halbwertszeit", "aktivitätsabfall"],
-          difficulty: 2,
+          difficulty: 3,
         },
         {
           question: "Was beschreibt der Massendefekt eines Atomkerns?",
@@ -798,7 +798,7 @@ Das bedeutet: Schon 1 Mikrogramm ¹³¹I hat eine therapeutisch relevante Aktivi
             "Die Masse geht 'verloren', weil sie als Bindungsenergie im Kern gespeichert ist.",
           ],
           tags: ["massendefekt", "bindungsenergie", "einstein"],
-          difficulty: 2,
+          difficulty: 3,
         },
         {
           question: "Welche Strahlung wird beim radioaktiven Zerfall NICHT freigesetzt?",
@@ -817,7 +817,7 @@ Das bedeutet: Schon 1 Mikrogramm ¹³¹I hat eine therapeutisch relevante Aktivi
             "Infrarotstrahlung ist Wärmestrahlung — viel zu wenig Energie, um Atome zu ionisieren.",
           ],
           tags: ["ionisierende-strahlung", "infrarot", "zerfallsarten"],
-          difficulty: 1,
+          difficulty: 2,
         },
         {
           question:
@@ -845,7 +845,7 @@ Das bedeutet: Schon 1 Mikrogramm ¹³¹I hat eine therapeutisch relevante Aktivi
             "Alpha-Teilchen ionisieren stark, verlieren schnell Energie → kurze Reichweite.",
           ],
           tags: ["typ-k", "radioaktivität", "strahlenarten", "zerfall"],
-          difficulty: 2,
+          difficulty: 3,
         },
       ],
     },
@@ -1113,7 +1113,7 @@ Das entspricht dem typischen HU-Bereich von Fett (−100 bis −50 HU). Knochen 
             "Charakteristische Strahlung = Linienspektrum (elementspezifisch). Bremsstrahlung = kontinuierliches Spektrum.",
           ],
           tags: ["bremsstrahlung", "röntgenröhre", "spektrum"],
-          difficulty: 2,
+          difficulty: 3,
         },
         {
           question: "Warum erscheinen Knochen im Röntgenbild heller (weißer) als Weichgewebe?",
@@ -1132,7 +1132,7 @@ Das entspricht dem typischen HU-Bereich von Fett (−100 bis −50 HU). Knochen 
             "Schwächungskoeffizient μ hängt von Ordnungszahl und Dichte ab. Ca (Z=20) > C/H/O (Z=6-8).",
           ],
           tags: ["röntgenbild", "knochen", "weichgewebe"],
-          difficulty: 1,
+          difficulty: 2,
         },
         {
           question:
@@ -1146,7 +1146,7 @@ Das entspricht dem typischen HU-Bereich von Fett (−100 bis −50 HU). Knochen 
             "HVL ist die Dicke für Halbierung. Für n Halbierungen: n × HVL Gesamtdicke.",
           ],
           tags: ["halbwertsschichtdicke", "abschirmung", "blei"],
-          difficulty: 2,
+          difficulty: 3,
         },
         {
           question: "Welche Art von Strahlenschäden an der DNA ist am schwierigsten zu reparieren?",
@@ -1165,7 +1165,7 @@ Das entspricht dem typischen HU-Bereich von Fett (−100 bis −50 HU). Knochen 
             "DSB = beide DNA-Stränge gebrochen → keine Matrize → fehleranfällige Reparatur → Chromosomenaberrationen.",
           ],
           tags: ["dna-schäden", "doppelstrangbruch", "strahlenbiologie"],
-          difficulty: 2,
+          difficulty: 3,
         },
         {
           question:
@@ -1179,7 +1179,7 @@ Das entspricht dem typischen HU-Bereich von Fett (−100 bis −50 HU). Knochen 
             "Verhältnis: (r₁/r₂)² = (2m/4m)² = 1/4. Neue Leistung = alte × 1/4.",
           ],
           tags: ["abstandsgesetz", "strahlenschutz", "dosisleistung"],
-          difficulty: 2,
+          difficulty: 3,
         },
         {
           question:
@@ -1199,7 +1199,7 @@ Das entspricht dem typischen HU-Bereich von Fett (−100 bis −50 HU). Knochen 
             "E_max = e·U — je höher U, desto höher E_max.",
           ],
           tags: ["falsch-aussage", "röntgen", "bremsstrahlung"],
-          difficulty: 2,
+          difficulty: 3,
         },
       ],
     },
@@ -1490,7 +1490,7 @@ Photon mit λ = 0,071 nm wird unter θ = 90° gestreut. Δλ = (h/m_e·c)(1 − 
             "m_e·c² = 0,511 MeV = 511 keV. Da zwei Teilchen annihilieren, entstehen zwei Photonen mit je 511 keV.",
           ],
           tags: ["pet", "annihilation", "ruhemasse"],
-          difficulty: 2,
+          difficulty: 3,
         },
         {
           question: "Warum reichert sich ¹⁸F-FDG in Tumorzellen stärker an als in normalem Gewebe?",
@@ -1509,7 +1509,7 @@ Photon mit λ = 0,071 nm wird unter θ = 90° gestreut. Δλ = (h/m_e·c)(1 − 
             "Tumorzellen: Warburg-Effekt = hoher Glukosestoffwechsel. FDG wird aufgenommen, aber metabolisch blockiert → Akkumulation.",
           ],
           tags: ["fdg", "warburg-effekt", "tumorstoffwechsel"],
-          difficulty: 2,
+          difficulty: 3,
         },
         {
           question: "Welche Aussage zum photoelektrischen Effekt ist korrekt?",
@@ -1528,7 +1528,7 @@ Photon mit λ = 0,071 nm wird unter θ = 90° gestreut. Δλ = (h/m_e·c)(1 − 
             "Photoeffekt: E_kin = hf − φ. Intensität beeinflusst die Anzahl, nicht die Energie der Elektronen.",
           ],
           tags: ["photoeffekt", "grenzfrequenz", "photon"],
-          difficulty: 2,
+          difficulty: 3,
         },
         {
           question:
@@ -1542,7 +1542,7 @@ Photon mit λ = 0,071 nm wird unter θ = 90° gestreut. Δλ = (h/m_e·c)(1 − 
             "Alpha-Teilchen: w_R = 20 (höchster Wichtungsfaktor aller Strahlungsarten).",
           ],
           tags: ["dosimetrie", "äquivalentdosis", "wichtungsfaktor"],
-          difficulty: 1,
+          difficulty: 2,
         },
         {
           question: "Welche Aussage zum Compton-Effekt ist FALSCH?",
@@ -1561,7 +1561,7 @@ Photon mit λ = 0,071 nm wird unter θ = 90° gestreut. Δλ = (h/m_e·c)(1 − 
             "Compton: quasi-freie Elektronen – nur deren Dichte zählt, nicht die Kernladung.",
           ],
           tags: ["compton-effekt", "streuung", "z-abhängigkeit"],
-          difficulty: 2,
+          difficulty: 3,
         },
         {
           question:
@@ -1575,7 +1575,7 @@ Photon mit λ = 0,071 nm wird unter θ = 90° gestreut. Δλ = (h/m_e·c)(1 − 
             "Erst p berechnen, dann λ = h/p. Achte auf konsistente Einheiten (eV → Joule).",
           ],
           tags: ["de-broglie", "materiewellen", "wellenlänge"],
-          difficulty: 2,
+          difficulty: 3,
         },
         {
           question:
@@ -1595,7 +1595,7 @@ Photon mit λ = 0,071 nm wird unter θ = 90° gestreut. Δλ = (h/m_e·c)(1 − 
             "LINAC = Linearbeschleuniger → externe Quelle. Brachytherapie: radioaktive Seeds/Drähte im Tumor.",
           ],
           tags: ["strahlentherapie", "teletherapie", "brachytherapie"],
-          difficulty: 1,
+          difficulty: 2,
         },
       ],
     },

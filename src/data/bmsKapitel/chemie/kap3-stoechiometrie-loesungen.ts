@@ -182,7 +182,7 @@ Dieses Konzept macht das PSE zu einem universellen Nachschlagewerk für stöchio
             "Achtung: 500 mg müssen zuerst in Gramm umgerechnet werden (÷ 1000).",
             "n = 0,5 g / 151 g/mol. Das Ergebnis ist klein — in mmol angeben.",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["medikament", "umrechnung", "mg-g"],
         },
         {
@@ -201,7 +201,7 @@ Dieses Konzept macht das PSE zu einem universellen Nachschlagewerk für stöchio
             "Suche die falsche Aussage. Überlege: Wiegt 1 Mol jedes Stoffes gleich viel?",
             "1 Mol H₂O = 18 g, 1 Mol NaCl = 58,4 g — die Masse hängt von M ab.",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["mol-konzept", "falsch-aussage", "molare-masse"],
         },
         {
@@ -211,7 +211,7 @@ Dieses Konzept macht das PSE zu einem universellen Nachschlagewerk für stöchio
           correctIndex: 2,
           explanation:
             "Aussagen 1, 2, 4 und 5 sind korrekt: Die Avogadro-Konstante beträgt 6,022 × 10²³ mol⁻¹ (1). M(NaCl) = 23 + 35,5 = 58,5 g/mol (2). 1 Da = 1 g/mol (4). 1 Mol H₂O enthält 2 Mol H-Atome und 1 Mol O-Atome gemäß Summenformel (5). Aussage 3 ist falsch — die korrekte Formel lautet n = m/M (Masse geteilt durch molare Masse), nicht umgekehrt. Diese Verwechslung ist ein häufiger MedAT-Fehler.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["typ-k", "mol", "avogadro"],
         },
       ],
@@ -383,7 +383,7 @@ Bei der vollständigen Oxidation von 1 mol Glucose (180 g) entstehen 6 mol CO₂
             "Berechne n(Al) = m/M. Dann Koeffizientenverhältnis 2 Al : 2 AlCl₃ = 1:1.",
             "n(AlCl₃) = n(Al). Dann m = n × M(AlCl₃).",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["stöchiometrie", "massenberechnung", "rechnen"],
         },
         {
@@ -442,7 +442,7 @@ Bei der vollständigen Oxidation von 1 mol Glucose (180 g) entstehen 6 mol CO₂
             "Prüfe für jede Gleichung: Ist die Atomanzahl links = rechts für jedes Element?",
             "Bei D: Wie viele Fe-Atome stehen links, wie viele rechts?",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["ausgleichen", "atombilanzen", "fehlersuche"],
         },
         {
@@ -457,7 +457,7 @@ Bei der vollständigen Oxidation von 1 mol Glucose (180 g) entstehen 6 mol CO₂
           correctIndex: 3,
           explanation:
             "Aussage D ist FALSCH: Der respiratorische Quotient für reine Fettverbrennung beträgt ca. 0,7 (nicht 1,0). RQ = 1,0 gilt für reine Kohlenhydratverbrennung (z. B. Glucose: 6 CO₂ / 6 O₂ = 1,0). Fette benötigen mehr Sauerstoff pro produziertem CO₂, da sie weniger Sauerstoff im Molekül enthalten. Alle anderen Aussagen sind korrekt.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["falsch-aussage", "stöchiometrie", "rq"],
         },
       ],
@@ -729,7 +729,7 @@ K_sp bestimmt, ob Calciumoxalat (CaC₂O₄) und Calciumphosphat im Urin ausfall
             "0,9 % = 0,9 g pro 100 g (oder 100 mL bei ρ ≈ 1). Wie viel ist das in 500 mL?",
             "Dreisatz: 100 mL → 0,9 g, also 500 mL → ?",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["nacl", "massenanteil", "infusion"],
         },
         {
@@ -743,7 +743,7 @@ K_sp bestimmt, ob Calciumoxalat (CaC₂O₄) und Calciumphosphat im Urin ausfall
             "Berechne zuerst n = m/M, dann c = n/V. Vergiss nicht, mL in L umzurechnen!",
             "n = 4/40 = 0,1 mol. V = 0,5 L. c = ?",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["molarität", "naoh", "rechnen"],
         },
         {

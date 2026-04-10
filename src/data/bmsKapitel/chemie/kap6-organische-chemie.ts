@@ -260,7 +260,7 @@ In der Atemgasanalytik gelten Kohlenwasserstoffe wie Ethan und Pentan als Biomar
             "Alkane sind gesättigt — denke an die maximale Anzahl H-Atome pro C.",
             "Methan CH₄ hat 1 C und 4 H: passt welche Formel?",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["alkane", "allgemeine-formel", "cn-h2n2"],
         },
         {
@@ -273,7 +273,7 @@ In der Atemgasanalytik gelten Kohlenwasserstoffe wie Ethan und Pentan als Biomar
             "Die Namen basieren auf griechischen Zahlwörtern: hexa=6, hepta=7, okta=8.",
             "Merkhilfe: Met-Eth-Prop-But-Pent-Hex-Hept-Oct-Non-Dec",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["iupac", "alkan-namen", "heptan"],
         },
         {
@@ -375,7 +375,7 @@ In der Atemgasanalytik gelten Kohlenwasserstoffe wie Ethan und Pentan als Biomar
           correctIndex: 2,
           explanation:
             "Aussagen 1, 3, 4 und 5 sind korrekt: Alkane zeigen typischerweise radikalische Substitution unter UV (1). Bromwasser entfärbt sich durch elektrophile Addition an die Doppelbindung (3). sp²-Hybridisierung bei Alkenen ergibt trigonal-planare Geometrie mit 120°-Winkeln (4). CₙH₂ₙ₊₂ ist die allgemeine Alkan-Formel (5). Aussage 2 ist falsch — die Markovnikov-Regel besagt das Gegenteil: H addiert an das C-Atom mit den MEISTEN H-Atomen (das 'Reiche wird reicher'), nicht an das mit den wenigsten.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["typ-k", "kohlenwasserstoffe", "funktionelle-gruppen"],
         },
       ],
@@ -991,7 +991,7 @@ Beispiele: ACE-Hemmer (kompetitiv), Statine (kompetitiv an HMG-CoA-Reduktase), P
             "Betrachte, was die Seitenkette (R-Gruppe) dieser Aminosäure ist — sie ist die kleinste denkbare.",
           ],
           tags: ["aminosäuren", "chiralität", "glycin"],
-          difficulty: 1,
+          difficulty: 2,
         },
         {
           question:
@@ -1143,7 +1143,7 @@ Beispiele: ACE-Hemmer (kompetitiv), Statine (kompetitiv an HMG-CoA-Reduktase), P
           correctIndex: 3,
           explanation:
             "Aussage D ist FALSCH: Nicht alle 20 proteinogenen Aminosäuren sind essenziell. Nur 8 (bei Erwachsenen) bzw. 10 (bei Kindern) Aminosäuren sind essenziell und müssen über die Nahrung aufgenommen werden (z. B. Valin, Leucin, Isoleucin, Phenylalanin, Tryptophan, Methionin, Threonin, Lysin). Die übrigen kann der Körper selbst synthetisieren (nicht-essenzielle Aminosäuren wie Alanin, Glycin, Serin). Alle anderen Aussagen sind korrekt.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["falsch-aussage", "aminosäuren", "essenzielle-aminosäuren"],
         },
       ],
@@ -1388,7 +1388,7 @@ Die klinische Bedeutung der Kohlenhydrate zeigt sich besonders eindrücklich bei
             "HbA1c ist das 'glykierte' Hämoglobin — über welchen Zeitraum sammelt sich diese Modifikation an?",
           ],
           tags: ["hba1c", "diabetes", "glykierung", "klinisch"],
-          difficulty: 1,
+          difficulty: 2,
         },
         {
           question: "Warum kann der Mensch Cellulose nicht als Energiequelle nutzen?",
@@ -1421,7 +1421,7 @@ Die klinische Bedeutung der Kohlenhydrate zeigt sich besonders eindrücklich bei
             "Hypoglykämie betrifft zuerst das Gehirn — welcher Zucker fehlt dabei?",
           ],
           tags: ["glucose", "gehirn", "hypoglykämie", "energieversorgung"],
-          difficulty: 1,
+          difficulty: 2,
         },
         {
           question:
@@ -1839,7 +1839,7 @@ Gehirn, Herzmuskel und Skelettmuskel können Ketonkörper als alternatives Subst
             "Merke: Fett = 9 kcal/g; KH und Protein = 4 kcal/g.",
           ],
           tags: ["energiedichte", "lipide", "kohlenhydrate", "stoffwechsel"],
-          difficulty: 1,
+          difficulty: 2,
         },
         {
           question: "Was macht Phospholipide zu idealen Membranbestandteilen?",
@@ -1878,7 +1878,7 @@ Gehirn, Herzmuskel und Skelettmuskel können Ketonkörper als alternatives Subst
             "Dichte Packung → stärkere Van-der-Waals-Kräfte → höherer Schmelzpunkt.",
           ],
           tags: ["fettsäuren", "schmelzpunkt", "cis", "gesättigt-ungesättigt"],
-          difficulty: 1,
+          difficulty: 2,
         },
         {
           question:
@@ -1932,7 +1932,7 @@ Gehirn, Herzmuskel und Skelettmuskel können Ketonkörper als alternatives Subst
             "Alle genannten Produkte sind lipophil und haben ein Vierringsystem — was ist deren gemeinsamer Vorläufer?",
           ],
           tags: ["cholesterin", "steroide", "steroidhormone", "biosynthese"],
-          difficulty: 1,
+          difficulty: 2,
         },
         {
           question: "Bei der Verseifung eines Triglycerids mit NaOH entstehen:",
@@ -2262,7 +2262,7 @@ DNA wird ständig durch UV-Strahlung, reaktive Sauerstoffspezies (ROS) und Repli
             "Transfer = Transport. Was wird von wo nach wo transportiert?",
           ],
           tags: ["trna", "anticodon", "translation", "rna-typen"],
-          difficulty: 1,
+          difficulty: 2,
         },
         {
           question:
@@ -2282,7 +2282,7 @@ DNA wird ständig durch UV-Strahlung, reaktive Sauerstoffspezies (ROS) und Repli
             "Das Virus bringt sein eigenes Aktivierungsenzym mit — welcher Vorteil ergibt sich daraus für die Selektivität?",
           ],
           tags: ["aciclovir", "selektivität", "thymidinkinase", "virostatika"],
-          difficulty: 3,
+          difficulty: 2,
         },
         {
           question:

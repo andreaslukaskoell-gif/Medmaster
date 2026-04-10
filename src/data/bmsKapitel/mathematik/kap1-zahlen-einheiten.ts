@@ -1258,16 +1258,6 @@ Lösung: 1 dL = 100 mL = 0,1 L → 1 L = 10 dL → 14 g/dL × 10 = 140 g/L. Dies
           tags: ["volumeneinheiten", "umrechnung", "liter"],
         },
         {
-          question: "1 m³ entspricht wie viel cm³?",
-          options: ["1.000.000 cm³", "1.000 cm³", "100.000 cm³", "10.000 cm³", "100 cm³"],
-          correctIndex: 0,
-          explanation:
-            "1 m = 100 cm. Bei Volumen wird der Faktor kubiert: 1 m³ = (100 cm)³ = 100³ cm³ = 1.000.000 cm³ = 10⁶ cm³. Anschaulich: 1 m³ = 1.000 L (da 1 L = 1 dm³ und 1 m = 10 dm, also 1 m³ = 10³ dm³ = 1.000 L). Ein Badewannenvollbad fasst etwa 150–200 L = 0,15–0,20 m³. Merke: 100³ = 100 × 100 × 100 = 1.000.000.",
-          hints: ["1 m = 100 cm. Was ist 100 hoch 3 (kubiert)?", "100 × 100 × 100 = ?"],
-          difficulty: 2,
-          tags: ["volumeneinheiten", "umrechnung", "kubikmeter"],
-        },
-        {
           question: "Ein Injektionsvolumen beträgt 2 mL. Wie viel cm³ ist das?",
           options: ["2 cm³", "0,2 cm³", "20 cm³", "0,002 cm³", "200 cm³"],
           correctIndex: 0,

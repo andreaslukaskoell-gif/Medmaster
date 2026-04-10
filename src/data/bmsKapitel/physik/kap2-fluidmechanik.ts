@@ -172,7 +172,7 @@ Bei einem echten Blutdruck von 132/88 mmHg würde man 144/100 mmHg messen — un
             "Verwende die Formel p = ρ·g·h — setze alle Werte in SI-Einheiten ein.",
             "1000 · 9,81 · 5 = ? Achte auf die Größenordnung!",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["hydrostatik", "schweredruck", "druck"],
         },
         {
@@ -192,7 +192,7 @@ Bei einem echten Blutdruck von 132/88 mmHg würde man 144/100 mmHg messen — un
             "Denke an das Hydrostatische Paradoxon — was zählt wirklich für den Bodendruck?",
             "p = ρ·g·h enthält keinen Term für die Gefäßform oder das Volumen!",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["hydrostatisches-paradoxon", "bodendruck"],
         },
         {
@@ -206,7 +206,7 @@ Bei einem echten Blutdruck von 132/88 mmHg würde man 144/100 mmHg messen — un
             "Pascalsches Prinzip: Der Druck ist überall gleich → F₁/A₁ = F₂/A₂.",
             "Flächenverhältnis: 200/2 = 100 — die Kraft wird um diesen Faktor verstärkt.",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["pascal", "hydraulische-presse", "kraft"],
         },
         {
@@ -226,7 +226,7 @@ Bei einem echten Blutdruck von 132/88 mmHg würde man 144/100 mmHg messen — un
             "Unterhalb des Herzens ist der Druck HÖHER (Gewicht der Blutsäule).",
             "Berechne Δp = ρ·g·h und rechne in mmHg um (÷ 133).",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["blutdruck", "hydrostatik", "messfehler"],
         },
         {
@@ -245,7 +245,7 @@ Bei einem echten Blutdruck von 132/88 mmHg würde man 144/100 mmHg messen — un
             "Kann eine Maschine Energie aus dem Nichts erzeugen?",
             "Energieerhaltung: W = F·s — wenn F steigt, muss s sinken!",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["pascal", "energieerhaltung", "hydraulische-presse"],
         },
         {
@@ -259,7 +259,7 @@ Bei einem echten Blutdruck von 132/88 mmHg würde man 144/100 mmHg messen — un
             "Prüfe jede Aussage: Gilt das Pascalsche Prinzip für kompressible oder inkompressible Fluide?",
             "In welche Richtung(en) wirkt der hydrostatische Druck?",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["typ-k", "hydrostatik", "pascal"],
         },
       ],
@@ -484,7 +484,7 @@ Auch bei Erwachsenen kann Surfactant-Mangel auftreten: Bei schwerem **ARDS** (Ac
             "Archimedisches Prinzip: F_A = ρ_Fluid · g · V_verdrängt — setze die Werte ein!",
             "1000 · 9,81 · 0,5 = ? Einheiten: kg/m³ · m/s² · m³ = N.",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["archimedes", "auftrieb", "rechenfrage"],
         },
         {
@@ -504,7 +504,7 @@ Auch bei Erwachsenen kann Surfactant-Mangel auftreten: Bei schwerem **ARDS** (Ac
             "Vergleiche: Ist ρ_Körper kleiner, gleich oder größer als ρ_Fluid?",
             "ρ_Körper < ρ_Fluid → der Körper schwimmt und taucht nur teilweise ein.",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["schwimmen", "dichte", "auftrieb"],
         },
         {
@@ -523,7 +523,7 @@ Auch bei Erwachsenen kann Surfactant-Mangel auftreten: Bei schwerem **ARDS** (Ac
             "Tenside = oberflächenaktive Substanzen. Was bedeutet 'aktiv' hier — verstärken oder schwächen?",
             "Denke an Spülmittel: Wasser perlt nicht mehr ab, sondern benetzt flächig — die Oberflächenspannung ist geringer.",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["oberflaechenspannung", "tenside", "falschaussage"],
         },
         {
@@ -543,7 +543,7 @@ Auch bei Erwachsenen kann Surfactant-Mangel auftreten: Bei schwerem **ARDS** (Ac
             "Δp ist umgekehrt proportional zu r. Dreimal kleinerer Radius → dreimal höherer Druck.",
             "Bilde das Verhältnis: Δp₁/Δp₂ = (2σ/r₁) / (2σ/r₂) = r₂/r₁.",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["laplace", "alveolen", "rechenfrage"],
         },
         {
@@ -563,7 +563,7 @@ Auch bei Erwachsenen kann Surfactant-Mangel auftreten: Bei schwerem **ARDS** (Ac
             "Surfactant-Produktion reicht erst ab ca. 35. SSW — was fehlt bei 30. SSW?",
             "Laplace-Gesetz: Ohne Surfactant → hohe σ → hoher Druck in kleinen Alveolen → Kollaps.",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["surfactant", "irds", "klinisch"],
         },
         {
@@ -898,7 +898,7 @@ Die vier Gleichungen (Kontinuität, Bernoulli, Hagen-Poiseuille, Reynolds) wirke
             "Kontinuitätsgleichung: A₁·v₁ = A₂·v₂ → nach v₂ umstellen.",
             "Verhältnis A₁/A₂ = 10/2 = 5 → v₂ = 5 · v₁.",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["kontinuität", "strömung", "geschwindigkeit"],
         },
         {
@@ -917,7 +917,7 @@ Die vier Gleichungen (Kontinuität, Bernoulli, Hagen-Poiseuille, Reynolds) wirke
             "p + ½ρv² = const (bei gleicher Höhe). Was passiert mit p, wenn v steigt?",
             "Venturi-Effekt: Verengung → schneller → niedrigerer Druck.",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["bernoulli", "venturi", "druck"],
         },
         {
@@ -937,7 +937,7 @@ Die vier Gleichungen (Kontinuität, Bernoulli, Hagen-Poiseuille, Reynolds) wirke
             "Kritische Reynolds-Zahlen: Re < 2300 → laminar, Re > 4000 → turbulent.",
             "Re = 3500 liegt dazwischen — was bedeutet das?",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["reynolds", "laminar", "turbulent"],
         },
         {
@@ -957,7 +957,7 @@ Die vier Gleichungen (Kontinuität, Bernoulli, Hagen-Poiseuille, Reynolds) wirke
             "Denke an die Kontinuitätsgleichung: Q̇ = A·v = const.",
             "Milliarden Kapillaren → riesiger Gesamtquerschnitt → v muss sinken!",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["kapillaren", "kontinuität", "stoffaustausch"],
         },
         {
@@ -997,7 +997,7 @@ Die vier Gleichungen (Kontinuität, Bernoulli, Hagen-Poiseuille, Reynolds) wirke
             "Hagen-Poiseuille: Q hängt von r⁴ ab — nicht von r² oder r!",
             "(1/2)⁴ = 1/16. Das ist die dramatische r⁴-Abhängigkeit.",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["hagen-poiseuille", "arteriosklerose", "strömungswiderstand"],
         },
         {
@@ -1036,7 +1036,7 @@ Die vier Gleichungen (Kontinuität, Bernoulli, Hagen-Poiseuille, Reynolds) wirke
             "Unter welchen Bedingungen gilt die Bernoulli-Gleichung? Ideal oder real?",
             "Turbulenz und Reibung führen zu Energieverlusten, die Bernoulli nicht berücksichtigt.",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["falsch-aussage", "bernoulli", "strömung"],
         },
       ],

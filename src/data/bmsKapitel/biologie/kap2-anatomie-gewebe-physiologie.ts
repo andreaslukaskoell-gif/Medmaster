@@ -151,7 +151,7 @@ Sekretionsmechanismen exokriner Drüsen:
             "Welches Epithel hat seinen Namen von der Funktion 'Übergang' zwischen verschiedenen Dehnungszuständen?",
             "Die obersten Zellen dieses Epithels sind charakteristisch gewölbt und haben einen eigenen Namen.",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["urothel", "harnblase", "schirmzellen"],
         },
         {
@@ -165,7 +165,7 @@ Sekretionsmechanismen exokriner Drüsen:
             "Mikrovilli = Bürstensaum — welches Organ ist für Resorption von Nährstoffen spezialisiert?",
             "Säulenförmige Zellen + Mikrovilli + einschichtig: Das ist das Paradebeispiel eines Resorptionsepithels.",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["zylinderepithel", "dünndarm", "mikrovilli"],
         },
         {
@@ -220,7 +220,7 @@ Sekretionsmechanismen exokriner Drüsen:
           correctIndex: 0,
           explanation:
             "Aussagen 1, 2 und 4 sind korrekt. Aussage 3 ist falsch — das Urothel (Übergangsepithel) mit Schirmzellen ist ein eigener Epitheltyp, kein Zylinderepithel. Aussage 5 ist falsch — mehrreihiges (pseudostratifiziertes) Epithel ist einschichtig: Alle Zellen berühren die Basalmembran, nur die Kerne liegen auf verschiedenen Höhen.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["typ-k", "epithelgewebe", "tight junctions", "urothel"],
         },
         {
@@ -235,7 +235,7 @@ Sekretionsmechanismen exokriner Drüsen:
           correctIndex: 2,
           explanation:
             "Aussage C ist falsch. Mehrreihiges (pseudostratifiziertes) Flimmerepithel ist einschichtig — ALLE Zellen berühren die Basalmembran, nur die Kerne liegen auf unterschiedlichen Höhen, was den Eindruck von Mehrschichtigkeit erweckt. Echte Mehrschichtigkeit bedeutet, dass innere Zellen keinen Basalmembrankontakt haben. Dies ist eine klassische MedAT-Falle. Die übrigen Aussagen sind korrekt.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["falsch-aussage", "epithelgewebe", "mehrreihiges epithel"],
         },
       ],
@@ -394,7 +394,7 @@ Sehne, Knorpel und Knochen sehen völlig verschieden aus, bestehen aber alle aus
             "Das häufigste Kollagen hat die kleinste Zahl — welche Nummer ist das?",
             "Sehnen müssen extrem zugfest sein: Welcher Kollagentyp ist für Zugfestigkeit bekannt?",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["kollagen", "kollagen typ i", "sehnen"],
         },
         {
@@ -486,7 +486,7 @@ Sehne, Knorpel und Knochen sehen völlig verschieden aus, bestehen aber alle aus
           correctIndex: 3,
           explanation:
             "Aussagen 1, 3, 4 und 5 sind korrekt. Aussage 2 ist falsch — Osteoklasten stammen aus der hämatopoetischen Zelllinie (Monozyten/Makrophagen-Vorläufer) und bauen Knochen ab (nicht auf). Osteoblasten (mesenchymal) bauen Knochen auf.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["typ-k", "bindegewebe", "knochen", "kollagen", "osteoklasten"],
         },
       ],
@@ -748,7 +748,7 @@ Kein Troponin! Ca2+ bindet **Calmodulin** -> aktiviert **MLCK** (Myosin-Leichtke
           correctIndex: 3,
           explanation:
             "Aussage D ist falsch. Calcium bindet nicht an Myosin, sondern an Troponin C. Dadurch verschiebt sich Tropomyosin und gibt die Bindungsstellen auf Aktin frei, sodass der Myosinkopf an Aktin andocken kann. Der Kraftschlag wird durch die Konformationsänderung des Myosinkopfes ausgelöst (ADP + Pi-Freisetzung). Dies ist ein häufiger MedAT-Fehler — Ca2+ steuert die Kontraktion über Troponin, nicht über Myosin. Die übrigen Aussagen sind korrekt.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["falsch-aussage", "muskelgewebe", "kontraktion", "troponin"],
         },
       ],
@@ -981,7 +981,7 @@ Gliazellen überwiegen numerisch: ca. 10:1 gegenüber Neuronen im ZNS. Sie teile
           correctIndex: 0,
           explanation:
             "Aussagen 1, 2 und 3 sind korrekt. Aussage 4 ist falsch — das Aktionspotential wird am Axonhügel (Axon Initial Segment) initiiert, nicht am Dendritenstamm. Aussage 5 ist falsch — bei Multipler Sklerose werden Oligodendrozyten im ZNS zerstört (nicht Schwann-Zellen im PNS).",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["typ-k", "nervengewebe", "gliazellen", "myelinisierung", "multiple sklerose"],
         },
       ],
@@ -1229,7 +1229,7 @@ Jedes Rückenmarkssegment versorgt über seinen Spinalnerv ein bestimmtes Hautar
           correctIndex: 1,
           explanation:
             "B ist korrekt: Sympathikus (fight-or-flight, T1–L2) nutzt **Noradrenalin** postganglionär und steigert Herzfrequenz (β₁), Bronchodilatation (β₂), Mydriasis (α₁). Parasympathikus (rest-and-digest, kraniosakral) nutzt **ACh** prä- und postganglionär und senkt Herzfrequenz (M₂), fördert Peristaltik und Miosis (M₃). Beide Systeme wirken antagonistisch auf dieselben Organe. A falsch (nicht identisch), C falsch (beide existieren), D falsch (Parasympathikus nutzt ACh, nicht NA), E falsch (β₁ = Sympathikus, nicht beide).",
-          difficulty: 1,
+          difficulty: 2,
           tags: ["sympathikus", "parasympathikus", "vegetatives nervensystem"],
         },
         {
@@ -1496,7 +1496,7 @@ Das **Riechepithel** sitzt in der oberen Nasenmuschel (Regio olfactoria, ~5 cm²
           correctIndex: 1,
           explanation:
             "B ist korrekt: **Stäbchen** (~120 Mio., peripher, NICHT in Fovea): skotopisches Sehen (Dämmerung), Rhodopsin (λ_max ~500 nm), hohe Empfindlichkeit (1 Photon!), niedrige Auflösung (Konvergenz ~100:1). **Zapfen** (~6 Mio., Fovea centralis): photopisches Sehen + Farbsehen, 3 Opsine (S 420 nm, M 530 nm, L 560 nm), hohe Auflösung (1:1 in Fovea). Nachtblindheit = Stäbchen-Defekt (Vitamin-A-Mangel), Rot-Grün-Schwäche = Zapfen-Defekt (X-chromosomal). A falsch (verschiedene Pigmente), C falsch (vertauscht), D falsch (3 Opsine = Zapfen), E falsch (Funktion + Verteilung unterscheiden sich).",
-          difficulty: 1,
+          difficulty: 2,
           tags: ["stäbchen", "zapfen", "retina"],
         },
         {
@@ -1811,7 +1811,7 @@ Dieses Schema ist auf **jede Hormonachse** übertragbar: CRH-ACTH-Cortisol, GnRH
           correctIndex: 1,
           explanation:
             "**Richtig (B):** Bei **primärer Hypothyreose** ist die **Schilddrüse** selbst geschädigt (z. B. Hashimoto-Thyreoiditis, Jodmangel, chirurgische Entfernung) → T₃/T₄ ↓ → **negative Rückkopplung fällt weg** → Hypothalamus/Hypophyse produzieren kompensatorisch **TRH ↑, TSH ↑**. Typische Laborkonstellation: **TSH ↑, T₃/T₄ ↓**.\n\n**Falsch (A):** Bei **sekundärer Hypothyreose** ist die Hypophyse geschädigt (z. B. Tumor, Hypophysitis) → **TSH ↓** → T₃/T₄ ↓. Die Hypophyse ist **nicht** überaktiv, sondern **unteraktiv**. Konstellation: **TSH ↓, T₃/T₄ ↓**.\n\n**Falsch (C):** Erhöhte TSH-Werte und erniedrigte T₃/T₄-Werte sprechen für **Hypothyreose**, nicht Hyperthyreose. Bei Morbus Basedow (TSH-Rezeptor-Antikörper) → T₃/T₄ ↑, TSH ↓.\n\n**Falsch (D):** Die negative Rückkopplung ist **nicht** intakt, da T₃/T₄ ↓ sind und TSH ↑ ist (keine Hemmung).\n\n**Falsch (E):** TRH-Mangel (tertiäre Hypothyreose, Hypothalamus-Störung) führt zu **TSH ↓** (nicht ↑), da der Stimulus für die Hypophyse fehlt. Konstellation: **TRH ↓, TSH ↓, T₃/T₄ ↓**.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["hypothyreose", "tsh", "schilddrüse"],
         },
         {
@@ -1843,7 +1843,7 @@ Dieses Schema ist auf **jede Hormonachse** übertragbar: CRH-ACTH-Cortisol, GnRH
           correctIndex: 1,
           explanation:
             "**Richtig (B):** Cortisol hat vielfältige Wirkungen:\n\n**Metabolisch:**\n- **Leber:** **Glukoneogenese ↑** → Blutzucker ↑ (diabetogene Wirkung)\n- **Muskel/Fett:** Proteinkatabolismus ↑, Lipolyse ↑\n\n**Immunsuppressiv/antiinflammatorisch:**\n- **Phospholipase A₂ ↓** → Arachidonsäure ↓ → **Prostaglandine ↓, Leukotriene ↓** → Entzündung ↓\n- Lymphozyten ↓, Zytokine ↓\n\n**Knochen:**\n- **Osteoblasten ↓** → Knochenaufbau ↓ → **Osteoporose-Risiko ↑** (bei chronischer Therapie)\n\n**Klinisch (Cushing-Syndrom):** Stammfettsucht, Vollmondgesicht, Striae, Hyperglykämie, Osteoporose, Immunsuppression.\n\n**Falsch (A):** Cortisol **steigert** die Glukoneogenese (nicht hemmt) und **erhöht** den Blutzucker (diabetogene Wirkung).\n\n**Falsch (C):** Cortisol ist ein **Glukokortikoid** und wird in der **Nebennierenrinde (Zona fasciculata)** aus Cholesterin synthetisiert, **nicht** im Mark. **Adrenalin** (nicht Cortisol) wird im Nebennierenmark durch PNMT aus Noradrenalin synthetisiert.\n\n**Falsch (D):** Bei chronischer Cortisol-Substitution (exogen) → **CRH ↓, ACTH ↓** (negative Rückkopplung intakt). Langfristig kann dies zur **Nebennierenrinden-Atrophie** führen.\n\n**Falsch (E):** Cortisol ist **immunsuppressiv** und **antiinflammatorisch** (hemmt Prostaglandine, nicht fördert). Es wird therapeutisch bei Autoimmunerkrankungen, Allergien und Transplantationen eingesetzt.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["cortisol", "cushing-syndrom", "kortikosteroide"],
         },
         {
@@ -2245,7 +2245,7 @@ Normaler Blutdruck: **120/80 mmHg** (systolisch/diastolisch). Hypertonie: ≥140
           correctIndex: 2,
           explanation:
             "Aussage C ist falsch. Lungenarterien führen sauerstoffARMES Blut vom rechten Ventrikel zur Lunge — nicht sauerstoffreiches Blut. Sauerstoffreiches Blut fließt über die Lungenvenen von der Lunge zum linken Vorhof. Die Verwechslung von Lungenarterien (O2-arm) und Lungenvenen (O2-reich) ist eine der häufigsten MedAT-Fallen, da hier die Begriffe Arterie/Vene nicht dem O2-Gehalt entsprechen, sondern der Flussrichtung (Arterie = vom Herzen weg, Vene = zum Herzen hin). Die übrigen Aussagen sind korrekt.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["falsch-aussage", "herz-kreislauf", "lungenkreislauf"],
         },
       ],
@@ -2496,7 +2496,7 @@ Das Rhesus-System wird durch das **D-Antigen** definiert: **Rh+ (~85 %)** = D-An
           correctIndex: 1,
           explanation:
             "**Richtig (B):** Der **Hämatokrit (Hkt)** ist der **Volumenanteil der Erythrozyten** (nicht aller Blutzellen) am Gesamtblutvolumen:\n- **Männer:** ~45% (höher wegen Testosteron → Erythropoese ↑)\n- **Frauen:** ~42% (niedriger wegen Menstruation, weniger Testosteron)\n\n**Serum vs. Plasma:**\n- **Plasma:** Flüssiger Anteil des Blutes **mit Fibrinogen** (Gerinnungsfaktor I). Gewinnung: Blut + Antikoagulans (z. B. Heparin, EDTA) → Zentrifugation.\n- **Serum:** Plasma **ohne Fibrinogen** (und andere Gerinnungsfaktoren). Gewinnung: Blut gerinnen lassen → Zentrifugation → Überstand = Serum.\n\n**Falsch (A):** Hämatokrit misst nur **Erythrozyten**, nicht Leukozyten oder Thrombozyten (diese machen <1% des Volumens aus).\n\n**Falsch (C):** **Umgekehrt!** **Plasma** enthält Fibrinogen, **Serum** nicht (da Fibrinogen → Fibrin bei Gerinnung).\n\n**Falsch (D):** Albumin macht ~60% (nicht 90%) der Plasmaproteine aus. Funktion: **Onkotischer Druck** (hält Wasser im Gefäß), Transport (Hormone, Fettsäuren, Bilirubin). **Immunabwehr** ist Aufgabe der **Globuline** (Antikörper, Immunglobuline).\n\n**Falsch (E):** Hkt ↑ (>50%) deutet auf **Polyglobulie** (zu viele Erythrozyten) oder Dehydratation hin, **nicht** auf Anämie. **Anämie** = Hkt ↓, Hb ↓ (zu wenige Erythrozyten).",
-          difficulty: 1,
+          difficulty: 2,
           tags: ["blutbestandteile", "hämatokrit", "erythrozyten"],
         },
         {
@@ -2813,7 +2813,7 @@ Die Immunisierung nutzt das Prinzip der erworbenen Immunität gezielt aus — en
           correctIndex: 0,
           explanation:
             '**Richtig (A):** Die beiden Immunsysteme unterscheiden sich fundamental:\n\n**Angeborene (unspezifische) Immunität:**\n- **Reaktionszeit:** Sofort (~Minuten bis Stunden)\n- **Spezifität:** Unspezifisch (erkennt allgemeine Pathogen-Muster, PAMPs)\n- **Gedächtnis:** **KEIN** Gedächtnis (gleiche Reaktion bei erneutem Kontakt)\n- **Komponenten:** Physikalische Barrieren (Haut, Schleimhäute), Phagozyten (Neutrophile, Makrophagen), NK-Zellen, Komplementsystem, Interferone\n\n**Erworbene (adaptive, spezifische) Immunität:**\n- **Reaktionszeit:** Langsam (~Tage, klonale Expansion benötigt Zeit)\n- **Spezifität:** Hochspezifisch (erkennt spezifische Antigene über TCR/BCR)\n- **Gedächtnis:** **Gedächtnisbildung** (Gedächtnis-T/B-Zellen → schnellere, stärkere Sekundärantwort)\n- **Komponenten:** B-Zellen (Antikörper, humoral), T-Zellen (CD4⁺, CD8⁺, zellulär)\n\n**Falsch (B):** Physikalische Barrieren (Haut, Schleimhäute) gehören zur **angeborenen** Immunität. Antikörper (B-Zellen) und T-Zellen gehören zur **erworbenen** Immunität.\n\n**Falsch (C):** Die **angeborene** Immunität bildet **kein Gedächtnis**. Nur die **erworbene** Immunität bildet Gedächtniszellen (B- und T-Gedächtniszellen) → schnellere Sekundärantwort.\n\n**Falsch (D):** **Umgekehrt!** B- und T-Zellen sind Teil der **erworbenen** Immunität. Makrophagen und Neutrophile (Phagozyten) sind Teil der **angeborenen** Immunität.\n\n**Falsch (E):** Die **erworbene** Immunität kann sehr wohl zwischen "selbst" und "fremd" unterscheiden (Selbsttoleranz durch zentrale [Thymus, Knochenmark] und periphere Toleranz [Treg]). Autoimmunerkrankungen entstehen, wenn diese Selbsttoleranz versagt.',
-          difficulty: 1,
+          difficulty: 2,
           tags: ["angeborene immunität", "erworbene immunität", "immunabwehr"],
         },
         {
@@ -3292,7 +3292,7 @@ Das **Atemzentrum** liegt in der **Medulla oblongata** und im **Pons**. Es gener
           correctIndex: 1,
           explanation:
             "**Richtig (B):** **Surfactant** ist essentiell für die Lungenfunktion:\n\n**Produktion:**\n- **Typ-II-Pneumozyten** (~5% der Alveolaroberfläche) produzieren und sezernieren Surfactant\n\n**Zusammensetzung:**\n- ~**90% Phospholipide** (hauptsächlich **Dipalmitoylphosphatidylcholin, DPPC**)\n- ~10% Proteine (Surfactant-Proteine A, B, C, D)\n\n**Funktion:**\n1. **Senkung der Oberflächenspannung** an der Luft-Flüssigkeits-Grenze in Alveolen\n2. **Verhindert Alveolarkollaps (Atelektase):**\n   - Laplace-Gesetz: **P = 2T/r** (Druck = 2 × Oberflächenspannung / Radius)\n   - Ohne Surfactant: Kleine Alveolen (kleiner Radius r) → hoher Druck P → Kollaps\n   - Mit Surfactant: T ↓ → Druck gleicht sich an → Stabilisierung\n3. **Erleichtert Inspiration** (weniger Kraft nötig)\n\n**Klinisch:**\n- **Neonatales RDS (Frühgeborene <28 Wochen):** Surfactant-Mangel (Typ-II-Pneumozyten unreif) → Atelektase → Hypoxie\n- **Therapie:** Surfactant-Gabe (endotracheal), Beatmung\n- **Prophylaxe:** Betamethason/Dexamethason (Mutter antenatal → Lungenreifung ↑)\n\n**Falsch (A):** **Typ-II-Pneumozyten** (nicht Typ-I) produzieren Surfactant. Typ-I-Pneumozyten (~95% der Oberfläche) sind dünn und für **Gasaustausch** zuständig. Surfactant besteht zu ~90% aus **Phospholipiden** (nicht Proteinen).\n\n**Falsch (C):** Surfactant **senkt** (nicht erhöht) die Oberflächenspannung → verhindert Kollaps.\n\n**Falsch (D):** RDS wird durch **Surfactant-Mangel** (nicht Überschuss) verursacht.\n\n**Falsch (E):** Surfactant-Mangel → hohe Oberflächenspannung → **erschwerte Inspiration** (mehr Kraft nötig, Atelektase-Risiko ↑).",
-          difficulty: 1,
+          difficulty: 2,
           tags: ["surfactant", "alveolen", "atemnotsyndrom"],
         },
         {
@@ -3368,7 +3368,7 @@ Das **Atemzentrum** liegt in der **Medulla oblongata** und im **Pons**. Es gener
           correctIndex: 2,
           explanation:
             "Aussage C ist falsch. Typ-I-Pneumozyten sind für den Gasaustausch zuständig (extrem flach, ~95% der Alveolaroberfläche), produzieren aber KEIN Surfactant. Surfactant wird ausschließlich von Typ-II-Pneumozyten produziert. Die Verwechslung der beiden Pneumozyten-Typen ist eine typische MedAT-Falle. Typ II sind kubisch, machen ~5% der Oberfläche aus und sind die Stammzellen der Alveolen. Die übrigen Aussagen sind korrekt.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["falsch-aussage", "atmung", "pneumozyten", "surfactant"],
         },
       ],
@@ -4097,7 +4097,7 @@ Die Wirbelsäule ist keine gerade Säule, sondern zeigt im Sagittalprofil **vier
           correctIndex: 2,
           explanation:
             "**Richtig (C):** **Osteoblasten** (Knochenaufbau):\n- **Synthese** von Kollagen Typ I (organische Matrix)\n- **Mineralisierung** mit Ca²⁺ und PO₄³⁻ (anorganische Matrix)\n- **Alkalische Phosphatase ↑** (Marker für Knochenaufbau)\n- **Regulation:** PTH ↓, Calcitonin ↑, Vitamin D, Östrogen\n\n**Osteoklasten** (Knochenabbau):\n- **Mehrkernig** (Fusion von Monozyten/Makrophagen)\n- **Resorption:** H⁺ (Ansäuerung → Mineralauflösung) + Proteasen (Kollagenabbau)\n- **Regulation:** RANKL (von Osteoblasten) → aktiviert Osteoklasten via RANK-Rezeptor\n\n**Falsch (A):** **Osteoklasten** (nicht Osteoblasten) sind mehrkernig und bauen Knochen ab.\n\n**Falsch (B):** **Osteoblasten** (nicht Osteoklasten) synthetisieren Kollagen I und mineralisieren.\n\n**Falsch (D):** PTH **stimuliert indirekt Osteoklasten** (über RANKL ↑ von Osteoblasten) → Knochenabbau → Ca²⁺ ↑ im Blut.\n\n**Falsch (E):** Alkalische Phosphatase ist Marker für **Knochenaufbau** (Osteoblasten), nicht Abbau.",
-          difficulty: 1,
+          difficulty: 2,
           tags: ["osteoblasten", "osteoklasten", "knochenumbau"],
         },
         {
@@ -4298,7 +4298,7 @@ Ein Mann produziert täglich rund 200 Millionen Spermien, eine Frau reift pro Zy
           correctIndex: 2,
           explanation:
             "**Richtig (C):** **Hodenzellen:**\n\n**Sertoli-Zellen** (Tubuli seminiferi, somatisch):\n- **Lokalisation:** In den Tubuli seminiferi (Keimepithel)\n- **Funktion:**\n  - **Spermatogenese-Unterstützung:** Ernährung, Phagozytose von degeneriertem Material\n  - **Blut-Hoden-Schranke:** Schützt Keimzellen vor Immunsystem\n  - **Inhibin:** Hemmt FSH (negative Rückkopplung)\n  - **ABP** (Androgen-Binding-Protein): Bindet Testosteron → hohe lokale Konzentration → Spermatogenese ↑\n- **Regulation:** **FSH** → Spermatogenese ↑\n\n**Leydig-Zellen** (Interstitium, endokrin):\n- **Lokalisation:** Im Interstitium (zwischen Tubuli)\n- **Funktion:** **Testosteron-Produktion** (aus Cholesterin)\n- **Regulation:** **LH** → Testosteron ↑\n\n**Testosteron-Wirkung:** Spermatogenese (lokal), sekundäre Geschlechtsmerkmale, negative Rückkopplung (→ GnRH ↓, LH ↓)\n\n**Falsch (A):** **Leydig-Zellen** (nicht Sertoli) produzieren Testosteron und liegen im Interstitium.\n\n**Falsch (B):** **Sertoli-Zellen** (nicht Leydig) unterstützen Spermatogenese und produzieren Inhibin.\n\n**Falsch (D):** **LH** (nicht FSH) stimuliert Leydig-Zellen. **FSH** stimuliert Sertoli-Zellen.\n\n**Falsch (E):** **ABP** wird von **Sertoli-Zellen** produziert und **fördert** (nicht hemmt) Spermatogenese durch Testosteron-Bindung.",
-          difficulty: 1,
+          difficulty: 2,
           tags: ["sertoli-zellen", "leydig-zellen", "hoden"],
         },
         {

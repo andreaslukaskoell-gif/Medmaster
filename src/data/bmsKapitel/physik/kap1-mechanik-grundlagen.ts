@@ -250,7 +250,7 @@ P = 7 531 200 J / 86 400 s ≈ **87 W** — vergleichbar mit einer Glühbirne!
             "Es gibt genau 7 SI-Basisgrößen — Kraft gehört interessanterweise nicht dazu.",
             "Newton = kg·m/s² — das sind alles Basiseinheiten kombiniert!",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["si-einheiten", "basisgrößen", "einheitensystem"],
         },
         {
@@ -264,7 +264,7 @@ P = 7 531 200 J / 86 400 s ≈ **87 W** — vergleichbar mit einer Glühbirne!
             "Gesamtmenge = Konzentration × Volumen — achte auf die Einheiten!",
             "mg/mL × mL = mg — die Einheiten kürzen sich heraus.",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["konzentration", "einheiten", "pharmakologie"],
         },
         {
@@ -278,7 +278,7 @@ P = 7 531 200 J / 86 400 s ≈ **87 W** — vergleichbar mit einer Glühbirne!
             "Druck = Kraft/Fläche. Was ist die Einheit der Kraft? Was ist die Einheit der Fläche?",
             "N/m² = (kg·m·s⁻²)/m² — kürze m² heraus!",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["druck", "pascal", "abgeleitete-einheiten"],
         },
         {
@@ -292,7 +292,7 @@ P = 7 531 200 J / 86 400 s ≈ **87 W** — vergleichbar mit einer Glühbirne!
             "Arbeit W = Kraft × Weg. Einheit: N × m = J.",
             "Achte auf die Größenordnung: 2 N × 0,05 m — multipliziere sorgfältig.",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["arbeit", "kraft", "joule"],
         },
         {
@@ -305,7 +305,7 @@ P = 7 531 200 J / 86 400 s ≈ **87 W** — vergleichbar mit einer Glühbirne!
             "Gewichtskraft F = m × g — die Einheit N = kg·m/s² ergibt sich direkt.",
             "Masse (kg) ist nicht dasselbe wie Gewichtskraft (N) — im Alltag verwechselt, in der Physik streng unterschieden!",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["gewichtskraft", "masse", "newton"],
         },
       ],
@@ -557,7 +557,7 @@ f = 3 x 10¹⁸ Hz. Wellenlänge = c/f = (3 x 10⁸) / (3 x 10¹⁸) = **10⁻¹
             "Wissenschaftliche Notation: genau eine Stelle vor dem Komma. Dann Präfix aus der Zehnerpotenz ablesen.",
             "Mikro = 10⁻⁶. 10⁻⁵ = 10 × 10⁻⁶ = 10 µ — so: 4,5 × 10⁻⁵ m = 45 × 10⁻⁶ m = 45 µm.",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["präfixe", "wissenschaftliche-notation", "einheiten"],
         },
         {
@@ -576,7 +576,7 @@ f = 3 x 10¹⁸ Hz. Wellenlänge = c/f = (3 x 10⁸) / (3 x 10¹⁸) = **10⁻¹
             "1 mL = 1 cm³ = 10⁻⁶ m³ (auswendig lernen!). Von mL zu µL: × 1000.",
             "Kubizierung: (10⁻² m)³ = 10⁻⁶ m³. Den Exponenten mit 3 multiplizieren: -2 × 3 = -6.",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["volumen", "präfixe", "einheiten"],
         },
         {
@@ -589,7 +589,7 @@ f = 3 x 10¹⁸ Hz. Wellenlänge = c/f = (3 x 10⁸) / (3 x 10¹⁸) = **10⁻¹
             "Mantissen multiplizieren: 3 × 4 = 12. Exponenten addieren: 4 + (-7) = -3.",
             "Wenn Mantisse ≥ 10: durch 10 dividieren und Exponent um 1 erhöhen. 12 × 10⁻³ = 1,2 × 10⁻².",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["zehnerpotenzen", "wissenschaftliche-notation", "rechnen"],
         },
         {
@@ -614,7 +614,7 @@ f = 3 x 10¹⁸ Hz. Wellenlänge = c/f = (3 x 10⁸) / (3 x 10¹⁸) = **10⁻¹
           explanation:
             "1,5 × 10⁴ s = 15 000 s. Umrechnung: 1 h = 3600 s, also 15 000 s / 3600 s/h = 4,167 h ≈ 4,17 h. Das entspricht etwa 4 Stunden und 10 Minuten. Zum Vergleich: Die Halbwertszeit von Aspirin beträgt ca. 15–20 min = ~1000–1200 s, die von Phenobarbital ca. 79–120 h = ~285 000–432 000 s, die von Digoxin ca. 36 h. Eine Halbwertszeit von ~4 h liegt im Bereich kurzwirksamer Substanzen wie Morphin (2–4 h) oder Metoprolol (3–7 h). Nach ~5 Halbwertszeiten (hier ~21 h) ist der Wirkstoff praktisch vollständig eliminiert — ein wichtiges Konzept für die Dosierungsplanung.",
           hints: ["1 h = 3600 s. Teile durch 3600.", "1,5 × 10⁴ s = 15 000 s ÷ 3600 ≈ 4,2 h."],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["halbwertszeit", "zeitumrechnung", "pharmakologie"],
         },
       ],
@@ -864,7 +864,7 @@ Re = (1060 x 0,5 x 0,025) / 0,0035 ≈ **3786** → Übergangsbereich, bei Belas
             "Druck = Kraft / Fläche. Was ist die Dimension von Kraft? Von Fläche?",
             "[Kraft] = M·L·T⁻². [Fläche] = L². Also [Druck] = M·L·T⁻²/L² = M·L⁻¹·T⁻².",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["dimensionsanalyse", "druck", "pascal"],
         },
         {
@@ -883,7 +883,7 @@ Re = (1060 x 0,5 x 0,025) / 0,0035 ≈ **3786** → Übergangsbereich, bei Belas
             "Dimension der Energie: M·L²·T⁻² = kg·m²/s². Prüfe jede Option auf diese Dimension.",
             "E = m·v: [m·v] = kg·m/s = Impuls ≠ Energie! Energie braucht v² (Quadrat der Geschwindigkeit).",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["dimensionsanalyse", "energie", "impuls"],
         },
         {
@@ -897,7 +897,7 @@ Re = (1060 x 0,5 x 0,025) / 0,0035 ≈ **3786** → Übergangsbereich, bei Belas
             "1 kcal = 4,184 kJ. Also 2500 kcal × 4,184 = ? kJ. Dann kJ in MJ: ÷ 1000.",
             "2500 × 4,184 = 10 460 kJ = 10,46 MJ.",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["energie", "einheitsumrechnung", "ernährung"],
         },
         {
@@ -930,7 +930,7 @@ Re = (1060 x 0,5 x 0,025) / 0,0035 ≈ **3786** → Übergangsbereich, bei Belas
             "Kettenmultiplikation: 80 mmHg × (1,36 cmH₂O / 1 mmHg) = ?",
             "80 × 1,36 = 108,8. Einheit: mmHg kürzt sich, übrig bleibt cmH₂O.",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["blutdruck", "druck", "einheitsumrechnung"],
         },
       ],
@@ -1100,7 +1100,7 @@ Realistisch braucht CPR ca. **400–500 N** (Federwiderstand des Thorax dominier
             "Stelle F = m·a nach der gesuchten Größe a um: a = F/m.",
             "Setze F = 20 N und m = 4 kg ein und dividiere.",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["newton", "kraft", "beschleunigung"],
         },
         {
@@ -1111,7 +1111,7 @@ Realistisch braucht CPR ca. **400–500 N** (Federwiderstand des Thorax dominier
           explanation:
             "Beim freien Fall gilt v(t) = v₀ + g·t. Mit v₀ = 0 und g = 10 m/s²: v(3 s) = 0 + 10·3 = 30 m/s. Die zurückgelegte Strecke wäre s = ½·g·t² = ½·10·9 = 45 m. Option C (15 m/s) wäre das Ergebnis nach 1,5 s. Option E (45 m/s) entspricht dem Weg in Metern, nicht der Geschwindigkeit. Die Geschwindigkeit beim freien Fall wächst linear mit der Zeit.",
           hints: ["Freier Fall: v(t) = g·t (da v₀ = 0).", "Multipliziere g = 10 m/s² mit t = 3 s."],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["freier-fall", "kinematik", "geschwindigkeit"],
         },
         {
@@ -1130,7 +1130,7 @@ Realistisch braucht CPR ca. **400–500 N** (Federwiderstand des Thorax dominier
             "Aktions- und Reaktionskraft greifen immer an zwei verschiedenen Körpern an.",
             "Würden sie am selben Körper angreifen, würden sie sich aufheben — das ist aber nicht der Fall.",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["newton", "actio-reactio", "kräfte"],
         },
         {
@@ -1172,7 +1172,7 @@ Realistisch braucht CPR ca. **400–500 N** (Federwiderstand des Thorax dominier
             "Prüfe jede Aussage einzeln gegen die drei Newtonschen Gesetze und die Einheitendefinition.",
             "a = F/m: Ist a proportional oder umgekehrt proportional zu F?",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["typ-k", "newton", "kinematik"],
         },
       ],
@@ -1389,7 +1389,7 @@ Bei η = 17 %: metabolischer Verbrauch = 96/0,17 ≈ **565 kJ/Tag ≈ 135 kcal/T
             "Nutze Energieerhaltung: Die potenzielle Energie mgh wird vollständig in kinetische Energie umgewandelt.",
             "E_kin = mgh = 70 kg · 10 m/s² · 1,25 m.",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["energieerhaltung", "potenzielle-energie", "kinetische-energie"],
         },
         {
@@ -1417,7 +1417,7 @@ Bei η = 17 %: metabolischer Verbrauch = 96/0,17 ≈ **565 kJ/Tag ≈ 135 kcal/T
             "Das Arbeit-Energie-Theorem: Die geleistete Arbeit W = F·s entspricht der Änderung der kinetischen Energie.",
             "W = F·s = 20·10 = 200 J = E_kin (da Startzustand: Ruhe, E_kin,0 = 0).",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["arbeit", "energie", "kinetische-energie"],
         },
         {
@@ -1445,7 +1445,7 @@ Bei η = 17 %: metabolischer Verbrauch = 96/0,17 ≈ **565 kJ/Tag ≈ 135 kcal/T
             "Erst Arbeit berechnen: W = mgh = 20·10·0,5 = 100 J.",
             "Dann Leistung: P = W/t = 100 J / 4 s = 25 W.",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["leistung", "arbeit", "wirkungsgrad"],
         },
         {
@@ -1464,7 +1464,7 @@ Bei η = 17 %: metabolischer Verbrauch = 96/0,17 ≈ **565 kJ/Tag ≈ 135 kcal/T
             "Unterscheide elastischen und unelastischen Stoß: Was bleibt jeweils erhalten?",
             "Beim unelastischen Stoß: Impuls ja, kinetische Energie nein.",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["falsch-aussage", "erhaltungssätze", "stoß"],
         },
       ],
@@ -1681,7 +1681,7 @@ Probe: F_H² + F_N² = 40,3² + 110,6² = 1624 + 12 232 = 13 856 ≈ 117,7² = 1
             "Momentengleichgewicht: F₁·d₁ = F₂·d₂. Drehmoment Muskel = Drehmoment Last.",
             "F_M · 4 cm = 50 N · 20 cm → F_M = 50·20/4.",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["statik", "hebel", "drehmoment"],
         },
         {
@@ -1695,7 +1695,7 @@ Probe: F_H² + F_N² = 40,3² + 110,6² = 1624 + 12 232 = 13 856 ≈ 117,7² = 1
             "Kontinuitätsgleichung: A₁·v₁ = A₂·v₂. Löse nach v₂ auf.",
             "v₂ = (A₁/A₂) · v₁ = (5/2500) · 20 cm/s.",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["kontinuität", "strömung", "blutfluss"],
         },
         {
@@ -1723,7 +1723,7 @@ Probe: F_H² + F_N² = 40,3² + 110,6² = 1624 + 12 232 = 13 856 ≈ 117,7² = 1
             "Hydrostatischer Druck: p = ρ·g·h. Alle Einheiten SI: kg/m³, m/s², m → Pa.",
             "1050 · 10 · 1,5 = ?",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["hydrostatik", "druck", "blutdruck"],
         },
         {
@@ -1737,7 +1737,7 @@ Probe: F_H² + F_N² = 40,3² + 110,6² = 1624 + 12 232 = 13 856 ≈ 117,7² = 1
             "Gesamtdruck = p_atm + ρgh. Beide Anteile addieren sich.",
             "Hydrostatischer Anteil: 1000 · 10 · 10 = 100000 Pa = 1 bar.",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["hydrostatik", "druck", "tauchen"],
         },
       ],
@@ -2002,7 +2002,7 @@ Mit Gehstock (60 cm): theta ≈ **16,5°** → doppelte Kippstabilität.
             "Im Inertialsystem (Erde) wirkt nur eine reale Kraft auf den Satelliten: die Gravitationskraft.",
             "Zentrifugalkraft ist eine Scheinkraft im mitrotierenden System — sie ist keine reale Kraft.",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["gravitation", "zentripetalkraft", "satellit"],
         },
         {
@@ -2013,7 +2013,7 @@ Mit Gehstock (60 cm): theta ≈ **16,5°** → doppelte Kippstabilität.
           explanation:
             "a_z = v²/r = (20)²/50 = 400/50 = 8 m/s² ≈ 0,82 g. Diese Beschleunigung wirkt zur Kurvenmitte und wird durch die Reibung zwischen Reifen und Fahrbahn bereitgestellt. Auf nasser Fahrbahn (geringer Reibkoeffizient μ ≈ 0,4) kann maximal a_max = μ·g = 0,4·10 = 4 m/s² durch Reibung erzeugt werden — bei 8 m/s² würde das Auto schleudern. Sicherheitsrelevant: Kurvenradius und Geschwindigkeit sind durch a_z = v²/r verknüpft — doppelte Geschwindigkeit erfordert viermal größeren Kurvenradius.",
           hints: ["Zentripetalbeschleunigung: a_z = v²/r.", "20² = 400. 400/50 = 8 m/s²."],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["kreisbewegung", "zentripetalbeschleunigung", "kurvenfahrt"],
         },
         {
@@ -2033,7 +2033,7 @@ Mit Gehstock (60 cm): theta ≈ **16,5°** → doppelte Kippstabilität.
             "Stell dir vor, du lehnst dich weit vor — wann fällst du um? Wenn das Lot deines Schwerpunkts vor die Zehen gerät.",
             "Standfläche = Fläche zwischen den Füßen. Projektion des SP muss darin liegen.",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["statik", "gleichgewicht", "schwerpunkt"],
         },
         {

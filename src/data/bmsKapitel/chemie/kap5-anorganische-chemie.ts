@@ -181,7 +181,7 @@ Der **hydrophobe Effekt** ist primär entropisch getrieben: Apolare Moleküle in
             "Vergleiche Wasser mit H₂S — gleiche Gruppe, aber sehr unterschiedliche Siedepunkte. Was macht den Unterschied?",
             "Beim Verdampfen ändern Moleküle ihren Aggregatzustand — welche Bindungen werden dabei gebrochen: kovalente oder intermolekulare?",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["wasser", "siedepunkt", "wasserstoffbrücken"],
         },
         {
@@ -201,7 +201,7 @@ Der **hydrophobe Effekt** ist primär entropisch getrieben: Apolare Moleküle in
             "Eis schwimmt auf Wasser — was sagt das über die Dichte von Eis im Vergleich zu flüssigem Wasser?",
             "Denke an einen See im Winter: Von wo friert er zuerst? Oben oder unten? Warum ist das für Fische wichtig?",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["dichteanomalie", "dichtemaximum", "eis-schwimmt"],
         },
         {
@@ -332,7 +332,7 @@ Der **hydrophobe Effekt** ist primär entropisch getrieben: Apolare Moleküle in
           correctIndex: 2,
           explanation:
             "Aussage C ist FALSCH: Beim Sieden von Wasser werden NICHT die kovalenten O-H-Bindungen gebrochen (diese haben eine Bindungsenergie von ~463 kJ/mol), sondern die intermolekularen Wasserstoffbrückenbindungen (~20 kJ/mol pro H-Brücke). Die kovalenten Bindungen bleiben intakt — das Wasser verdampft als H₂O-Moleküle, nicht als getrennte Atome. Alle anderen Aussagen sind korrekt.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["falsch-aussage", "wasser", "siedepunkt"],
         },
       ],
@@ -974,7 +974,7 @@ Die Halogene (F, Cl, Br, I) sind starke Oxidationsmittel mit abnehmender Oxidati
             "Welches Halogen hat den Siedepunkt knapp über Raumtemperatur?",
             "Aggregatzustände der Halogene bei RT: F₂ und Cl₂ sind Gase, I₂ ist ein Feststoff — was ist Br₂?",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["halogene", "aggregatzustand", "brom"],
         },
         {
@@ -1173,7 +1173,7 @@ Der Blut-pH des Menschen liegt im Normbereich bei **7,35–7,45**. Eine Abweichu
             "Brønsted-Base = Protonenakzeptor (nimmt H⁺ auf)",
             "NH₃ + H₂O → NH₄⁺ + OH⁻: Wer gibt H⁺ ab, wer nimmt es auf?",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["brønsted", "nh3", "protonenakzeptor"],
         },
         {
@@ -1193,7 +1193,7 @@ Der Blut-pH des Menschen liegt im Normbereich bei **7,35–7,45**. Eine Abweichu
             "Kw = Produkt aus [H₃O⁺] und [OH⁻], nicht Quotient",
             "In reinem Wasser: [H₃O⁺] = [OH⁻] = 10⁻⁷ mol/L",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["ionenprodukt", "kw", "autoprotolysé"],
         },
         {
@@ -1213,7 +1213,7 @@ Der Blut-pH des Menschen liegt im Normbereich bei **7,35–7,45**. Eine Abweichu
             "pH = −log[H₃O⁺]; pOH = −log[OH⁻]; pH + pOH = 14",
             "Kw = [H₃O⁺] · [OH⁻] = 10⁻¹⁴ → [OH⁻] = 10⁻¹⁴ / [H₃O⁺]",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["ph-rechnen", "poh", "kw-anwendung"],
         },
         {
@@ -1316,7 +1316,7 @@ Der Blut-pH des Menschen liegt im Normbereich bei **7,35–7,45**. Eine Abweichu
           correctIndex: 2,
           explanation:
             "Aussagen 1, 2, 4 und 5 sind korrekt: pKs = −log Ks; je stärker die Säure, desto größer Ks, desto kleiner pKs (1). Korrespondierende Paare unterscheiden sich um H⁺ (2). HCO₃⁻ kann H⁺ abgeben (→ CO₃²⁻) oder aufnehmen (→ H₂CO₃), ist also amphoter (4). HCl ist eine starke Säure: pH = −log(0,01) = 2 (5). Aussage 3 ist falsch — Kw ist temperaturabhängig: Bei 37 °C beträgt Kw ≈ 2,4 × 10⁻¹⁴, bei 25 °C 10⁻¹⁴. Die Autoprotolyse ist endotherm, daher steigt Kw mit der Temperatur.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["typ-k", "ph", "pks"],
         },
       ],
@@ -1552,7 +1552,7 @@ Die **Magensäure** (HCl, pH ~ 1-2) ist die einzige starke Säure im Körper und
             "Je kleiner pKa (auch negativ), desto stärker die Säure",
             "Starke Säuren: pKa << 0; schwache Säuren: pKa > 2",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["pka", "säurestärke", "starke-säure"],
         },
         {
@@ -1565,7 +1565,7 @@ Die **Magensäure** (HCl, pH ~ 1-2) ist die einzige starke Säure im Körper und
             "HNO₃ ist eine starke Säure → vollständige Dissoziation → [H₃O⁺] = c₀",
             "pH = −log(0,01) = −log(10⁻²) = 2",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["hno3", "starke-säure", "ph-rechnen"],
         },
         {
@@ -1619,7 +1619,7 @@ Die **Magensäure** (HCl, pH ~ 1-2) ist die einzige starke Säure im Körper und
             "Bei pH = pKa liegt das Gleichgewicht 50:50 zwischen Säure und korrespondierender Base",
             "pKa2 der Phosphorsäure ≈ 7,2 liegt nah an pH 7",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["phosphorsäure", "dreistufig", "speziesverteilung"],
         },
         {
@@ -1632,7 +1632,7 @@ Die **Magensäure** (HCl, pH ~ 1-2) ist die einzige starke Säure im Körper und
             "NaOH: [OH⁻] = c₀; pOH = −log c₀; pH = 14 − pOH",
             "0,1 = 10⁻¹ → pOH = 1 → pH = 13",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["naoh", "starke-base", "poh-rechnen"],
         },
         {
@@ -1831,7 +1831,7 @@ Bei der **Komproportionierung** reagieren zwei verschiedene Oxidationsstufen des
             "OIL RIG: Oxidation Is Loss, Reduction Is Gain — welcher Buchstabe steht für Elektronenabgabe?",
             "Wenn OZ steigt → Oxidation; wenn OZ sinkt → Reduktion",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["oxidation", "oil-rig", "elektronen-abgabe"],
         },
         {
@@ -1844,7 +1844,7 @@ Bei der **Komproportionierung** reagieren zwei verschiedene Oxidationsstufen des
             "Summenregel: Σ(OZ × n) = 0 für Neutralmolekül",
             "H hat OZ +1, O hat OZ −2 — berechne dann S aus der Gleichung",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["oxidationszahl", "h2so4", "summenregel"],
         },
         {
@@ -1877,7 +1877,7 @@ Bei der **Komproportionierung** reagieren zwei verschiedene Oxidationsstufen des
             "Oxidationsmittel nimmt Elektronen auf — welches Element zieht Elektronen am stärksten an?",
             "F ist das elektronegativste Element im Periodensystem",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["oxidationsmittel", "fluor", "elektronegativität"],
         },
         {
@@ -2195,7 +2195,7 @@ Alle elektrochemischen Systeme basieren auf demselben Prinzip: Elektronentransfe
             "AnOx RedKat: AN-ode = OX-idation; KAT-hode = RED-uktion",
             "In der galvanischen Zelle ist die Anode negativ (Elektronenabgabe = Elektronenüberschuss)",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["galvanische-zelle", "anode-kathode", "anox-redkat"],
         },
         {
@@ -2208,7 +2208,7 @@ Alle elektrochemischen Systeme basieren auf demselben Prinzip: Elektronentransfe
             "E°Zelle = E°Kathode − E°Anode; Kathode hat höheres E°",
             "E°(Cu²⁺/Cu) = +0,34 V; E°(Zn²⁺/Zn) = −0,76 V",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["daniell-element", "zellspannung", "e0-berechnung"],
         },
         {

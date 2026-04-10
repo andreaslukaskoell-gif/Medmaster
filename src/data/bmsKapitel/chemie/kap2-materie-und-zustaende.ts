@@ -196,7 +196,7 @@ Die **Maxwell-Boltzmann-Verteilung** beschreibt, wie die Geschwindigkeiten der e
             "Verwende p₁V₁/T₁ = p₂V₂/T₂ und rechne Celsius in Kelvin um: K = °C + 273,15.",
             "Druckerhöhung verkleinert Volumen (Boyle); Temperaturerhöhung vergrößert es (Charles) – beide Effekte kombinieren.",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["gasgesetze", "boyle-mariotte", "rechnen"],
         },
         {
@@ -215,7 +215,7 @@ Die **Maxwell-Boltzmann-Verteilung** beschreibt, wie die Geschwindigkeiten der e
             "Starke Abweichungen bei hohem Druck UND tiefer Temperatur und/oder polaren Molekülen.",
             "H₂O hat Wasserstoffbrückenbindungen – sehr großes a in van-der-Waals; 100 bar ist extrem hoher Druck.",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["reale-gase", "van-der-waals", "abweichung"],
         },
         {
@@ -234,7 +234,7 @@ Die **Maxwell-Boltzmann-Verteilung** beschreibt, wie die Geschwindigkeiten der e
             "R gilt pro Mol, k_B (Boltzmann) gilt pro Teilchen: R = k_B × N_A.",
             "Einheit von R muss mit pV=nRT konsistent sein: [Pa·m³/(mol·K)] = [J/(mol·K)].",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["gaskonstante", "avogadro", "boltzmann"],
         },
         {
@@ -248,7 +248,7 @@ Die **Maxwell-Boltzmann-Verteilung** beschreibt, wie die Geschwindigkeiten der e
             "n = pV/(RT). Verwende R = 0,08314 L·bar/(mol·K) wenn p in bar und V in L.",
             "Bei STP passen 22,4 L = 1 mol. Bei 2 bar und 0 °C passen in 10 L doppelt so viel wie bei 1 bar.",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["co2-masse", "pv-nrt", "rechnen"],
         },
         {
@@ -267,7 +267,7 @@ Die **Maxwell-Boltzmann-Verteilung** beschreibt, wie die Geschwindigkeiten der e
             "V/n = const bei p, T = const. Die Teilchenzahl – nicht die Masse – bestimmt das Volumen.",
             "Das molare Volumen bei STP (0 °C, 1 bar) = 22,4 L/mol für jedes ideale Gas.",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["avogadro", "molares-volumen", "stp"],
         },
         {
@@ -287,7 +287,7 @@ Die **Maxwell-Boltzmann-Verteilung** beschreibt, wie die Geschwindigkeiten der e
             "b korrigiert das Volumen (Eigenvolumen), a korrigiert den Druck (Anziehungskräfte).",
             "(V − nb) = freies Volumen. nb = Gesamtvolumen aller Moleküle selbst.",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["van-der-waals", "kovolumen", "eigenvolumen"],
         },
         {
@@ -307,7 +307,7 @@ Die **Maxwell-Boltzmann-Verteilung** beschreibt, wie die Geschwindigkeiten der e
             "Boyle-Mariotte: p₁V₁ = p₂V₂. Wie verhält sich das Volumen bei Druckabfall von 4 auf 1 bar?",
             "Bei 30 m Tiefe: 1 bar Luftdruck + 3 bar Wassersäule (je 10 m ≈ 1 bar) = 4 bar gesamt.",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["boyle-mariotte", "tauchen", "dekompressionskrankheit"],
         },
         {
@@ -331,7 +331,7 @@ Die **Maxwell-Boltzmann-Verteilung** beschreibt, wie die Geschwindigkeiten der e
           correctIndex: 2,
           explanation:
             "Aussagen 2, 3 und 5 sind korrekt: Avogadros Gesetz (2) besagt gleiche Teilchenzahl bei gleichem Volumen, Druck und Temperatur. Die van-der-Waals-Gleichung (3) korrigiert tatsächlich mit a (Anziehung) und b (Eigenvolumen). Die RMS-Geschwindigkeit (5) ist proportional zu √T, steigt also mit der Temperatur. Aussage 1 ist falsch — das ideale Gasgesetz gilt nur näherungsweise für reale Gase, besonders bei niedrigem Druck und hoher Temperatur. Aussage 4 ist falsch — das molare Volumen bei STP beträgt 22,4 L/mol, nicht 11,2 L/mol.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["typ-k", "gasgesetze", "avogadro"],
         },
       ],
@@ -524,7 +524,7 @@ Nicht alle Feststoffe sind kristallin. **Amorphe Feststoffe** (Glas, viele Kunst
             "Flüssigkeiten fließen (Teilchen beweglich), aber haben ein eigenes Volumen (Teilchen bleiben zusammen)",
             "Nahordnung bedeutet: lokale Struktur ja, aber kein langreichweitiges Gitter",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["aggregatzustände", "flüssigkeit", "nahordnung"],
         },
         {
@@ -543,7 +543,7 @@ Nicht alle Feststoffe sind kristallin. **Amorphe Feststoffe** (Glas, viele Kunst
             "Die Dichteanomalie des Wassers ist ein zentrales Merkwissen in Chemie und Biologie",
             "Zwischen 0°C und 4°C nimmt die Dichte von Wasser mit steigender Temperatur zu – ungewöhnlich!",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["wasser", "dichteanomalie", "dichtemaximum"],
         },
         {
@@ -562,7 +562,7 @@ Nicht alle Feststoffe sind kristallin. **Amorphe Feststoffe** (Glas, viele Kunst
             "Ionenkristalle (NaCl) haben sehr hohe Schmelzpunkte – was sagt das über die Bindungsstärke?",
             "Denken Sie an die Hierarchie: ionisch > H-Brücken > Dipol-Dipol > London",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["intermolekulare-kräfte", "ionische-wechselwirkung", "hierarchie"],
         },
         {
@@ -582,7 +582,7 @@ Nicht alle Feststoffe sind kristallin. **Amorphe Feststoffe** (Glas, viele Kunst
             "Was passiert in einem See im Winter, wenn die Außentemperatur unter 0°C fällt?",
             "Die Eisschicht oben wirkt wie ein Isolator für das Wasser darunter",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["dichteanomalie", "eis", "biologische-bedeutung"],
         },
         {
@@ -602,7 +602,7 @@ Nicht alle Feststoffe sind kristallin. **Amorphe Feststoffe** (Glas, viele Kunst
             "Welcher Kristalltyp enthält frei bewegliche Elektronen?",
             "Kupferdraht leitet Strom und lässt sich biegen – welchem Kristalltyp entspricht das?",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["kristalltypen", "metallkristall", "duktilität"],
         },
         {
@@ -621,7 +621,7 @@ Nicht alle Feststoffe sind kristallin. **Amorphe Feststoffe** (Glas, viele Kunst
             "Nur die elektronegativsten Elemente: N, O und F können H-Brücken ausbilden",
             "Das H-Atom muss an eines dieser Elemente gebunden sein UND mit einem freien Elektronenpaar wechselwirken",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["wasserstoffbrücken", "h-brücken", "n-o-f"],
         },
         {
@@ -676,7 +676,7 @@ Nicht alle Feststoffe sind kristallin. **Amorphe Feststoffe** (Glas, viele Kunst
           correctIndex: 1,
           explanation:
             "Aussage B ist FALSCH: London-Dispersionskräfte wirken zwischen ALLEN Atomen und Molekülen — auch zwischen unpolaren. Sie entstehen durch instantane induzierte Dipole durch Elektronenfluktuationen und sind bei großen, polarisierbaren Molekülen (z. B. I₂, langkettige Alkane) sogar die dominante intermolekulare Kraft. Alle anderen Aussagen sind korrekt.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["falsch-aussage", "aggregatzustände", "london-kräfte"],
         },
       ],
@@ -892,7 +892,7 @@ Um die kolligativen Eigenschaften in der Praxis anzuwenden, rechnen wir ein klin
           explanation:
             "Endotherm (Energie wird zugeführt) sind die Übergänge zum „freierem“ Zustand: Schmelzen (fest→flüssig), Verdampfen (flüssig→gas), Sublimieren (fest→gas). Exotherm sind Erstarren, Kondensieren, Resublimieren.",
           hints: ["Endotherm = Energie rein. Welche Übergänge brauchen Energiezufuhr?"],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["phasenübergänge", "endotherm", "energetik"],
         },
         {
@@ -909,7 +909,7 @@ Um die kolligativen Eigenschaften in der Praxis anzuwenden, rechnen wir ein klin
           explanation:
             "An der Heizkurve zeigen Phasenübergänge Plateaus: Die zugeführte Wärme wird als latente Wärme (z. B. Schmelzenthalpie) verbraucht, um die Gitterstruktur aufzubrechen bzw. die Molekülanordnung zu ändern — ohne Temperaturänderung.",
           hints: ["Latente Wärme = Enthalpieänderung beim Phasenübergang."],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["heizkurve", "latente-wärme", "phasenübergang"],
         },
         {
@@ -954,7 +954,7 @@ Um die kolligativen Eigenschaften in der Praxis anzuwenden, rechnen wir ein klin
           hints: [
             "Kryoskopie misst alle Teilchen. Die Formel berücksichtigt nur Na⁺, Glucose, Harnstoff.",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["osmolalitätslücke", "kryoskopie", "intoxikation"],
         },
       ],

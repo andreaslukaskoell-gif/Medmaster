@@ -239,7 +239,7 @@ g₁: y = 3x − 2. Senkrechte durch P(6|1): m₂ = −1/3 (weil 3 × (−1/3) =
             "Steigung = Δy/Δx = (y₂−y₁)/(x₂−x₁)",
             "Zähler: Differenz der y-Werte; Nenner: Differenz der x-Werte",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["steigung", "lineare-funktion", "koordinaten"],
         },
         {
@@ -253,7 +253,7 @@ g₁: y = 3x − 2. Senkrechte durch P(6|1): m₂ = −1/3 (weil 3 × (−1/3) =
             "Einsetzen in f(x) = mx + b: y₀ = m×x₀ + b, dann b = y₀ − m×x₀",
             "b = 7 − 2×3 = 7 − 6 = 1",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["lineare-funktion", "y-achsenabschnitt", "algebra"],
         },
         {
@@ -281,7 +281,7 @@ g₁: y = 3x − 2. Senkrechte durch P(6|1): m₂ = −1/3 (weil 3 × (−1/3) =
           explanation:
             "Aus A = 0,8×c + 0,02 folgt: 0,42 = 0,8×c + 0,02 → 0,4 = 0,8×c → c = 0,4/0,8 = 0,5 mmol/L. In der klinischen Chemie wird genau diese Methode genutzt: Man erstellt zunächst eine Kalibrierkurve mit bekannten Standardkonzentrationen, liest die Steigung m (Sensitivität) und den Achsenabschnitt b (Leerwert) ab und berechnet dann unbekannte Konzentrationen durch Umformen der linearen Gleichung.",
           hints: ["Kalibrierkurve umformen: c = (A − b)/m", "c = (0,42 − 0,02)/0,8 = 0,4/0,8"],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["kalibrierkurve", "lineare-funktion", "labor"],
         },
         {
@@ -310,7 +310,7 @@ g₁: y = 3x − 2. Senkrechte durch P(6|1): m₂ = −1/3 (weil 3 × (−1/3) =
           correctIndex: 0,
           explanation:
             "Aussage A ist falsch: Eine Gerade mit Steigung m = 0 verläuft horizontal (parallel zur x-Achse), nicht senkrecht. Eine senkrechte Gerade (parallel zur y-Achse) hat keine definierte Steigung (m → ∞). Alle anderen Aussagen sind korrekt: Steigung = Änderungsrate (B), parallele Geraden haben gleiche Steigung (C), f(0) = b ist der y-Achsenabschnitt (D), negative Steigung bedeutet fallende Funktion (E).",
-          difficulty: 1,
+          difficulty: 2,
           tags: ["falsch-aussage", "lineare-funktionen", "steigung"],
         },
       ],
@@ -889,7 +889,7 @@ Medikament mit T½ = 8 h wird alle 8 h gegeben. Wann ist Steady State erreicht?
           explanation:
             "T½ = ln(2)/k = 0,693/0,0693 = 10 h. Den Wert ln(2) ≈ 0,693 sollte man auswendig kennen. Da k die Einheit h⁻¹ hat, ergibt T½ Stunden. Klinisch: Nach 50 h (5 × T½) wären weniger als 3,1 % der Ausgangsdosis übrig.",
           hints: ["T½ = ln(2)/k ≈ 0,693/k", "T½ = 0,693/0,0693 = 10"],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["halbwertszeit", "zerfallskonstante", "exponentialfunktion"],
         },
         {
@@ -900,7 +900,7 @@ Medikament mit T½ = 8 h wird alle 8 h gegeben. Wann ist Steady State erreicht?
           explanation:
             "18 h / 6 h = 3 Halbwertszeiten. Restmenge = 120 · (½)³ = 120/8 = 15 mg/L. Schritt für Schritt: nach 6 h → 60, nach 12 h → 30, nach 18 h → 15. Bei ganzzahligen T½ ist diese Methode schneller als die e-Funktion.",
           hints: ["n = 18/6 = 3 Halbwertszeiten", "120 × (½)³ = 120/8 = 15"],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["halbwertszeit", "pharmakokinetik", "restmenge"],
         },
         {
@@ -965,7 +965,7 @@ Medikament mit T½ = 8 h wird alle 8 h gegeben. Wann ist Steady State erreicht?
           correctIndex: 2,
           explanation:
             "Aussagen 1, 2, 4 und 5 sind korrekt. Aussage 1: Bei b > 1 und a > 0 wächst die Exponentialfunktion streng monoton ✓. Aussage 2: T½ = ln(2)/k folgt aus e^(−kT½) = ½ ✓. Aussage 3 ist falsch: Quadratische Funktionen können 0, 1 oder 2 Nullstellen haben — abhängig von der Diskriminante D = b² − 4ac. Aussage 4: Die Steigung einer Geraden ist der Quotient aus Höhen- und Längenunterschied ✓. Aussage 5: e⁰ = 1 gilt allgemein für a⁰ = 1 (a ≠ 0) ✓.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["typ-k", "funktionstypen", "eigenschaften"],
         },
       ],

@@ -337,7 +337,7 @@ V(62,8) = 62⁸ ≈ **2,18 × 10¹⁴**. Nur Kleinbuchstaben: 26⁸ ≈ 2,09 × 
             "Alle Objekte anordnen, Reihenfolge zählt → Permutation P(n) = n!",
             "P(4) = 4 × 3 × 2 × 1 = ?",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["permutation", "fakultät", "kombinatorik"],
         },
         {
@@ -351,7 +351,7 @@ V(62,8) = 62⁸ ≈ **2,18 × 10¹⁴**. Nur Kleinbuchstaben: 26⁸ ≈ 2,09 × 
             "Reihenfolge zählt + Wiederholung erlaubt → V(n,k) = nᵏ",
             "V(6,3) = 6 × 6 × 6 = ?",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["variation", "wiederholung", "kombinatorik"],
         },
         {
@@ -756,7 +756,7 @@ P(X=3) = 56 × 0,0507 × 0,0992 ≈ **0,281 ≈ 28,1%**. Erwartungswert: μ = 8 
             "Disjunkt bedeutet A∩B = ∅, also P(A∩B) = 0.",
             "P(A∪B) = P(A) + P(B) − P(A∩B) = 0,4 + 0,3 − 0 = ?",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["additionssatz", "disjunkt", "wahrscheinlichkeit"],
         },
         {
@@ -841,7 +841,7 @@ P(X=3) = 56 × 0,0507 × 0,0992 ≈ **0,281 ≈ 28,1%**. Erwartungswert: μ = 8 
           correctIndex: 2,
           explanation:
             "Aussagen 2, 3, 4 und 5 sind korrekt. Aussage 1 ist falsch: P(A oder B) = P(A) + P(B) gilt nur bei disjunkten (sich ausschließenden) Ereignissen. Im Allgemeinen gilt P(A ∪ B) = P(A) + P(B) − P(A ∩ B) — die Schnittmenge muss abgezogen werden, um Doppelzählung zu vermeiden. Aussage 2: Multiplikationsregel bei Unabhängigkeit ✓. Aussage 3: Komplement-Regel ✓. Aussage 4: Binomialverteilung B(n,p): μ = n × p ✓. Aussage 5: Komplement-Strategie für 'mindestens eins' ✓.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["typ-k", "wahrscheinlichkeitsregeln", "stochastik"],
         },
       ],
@@ -1210,7 +1210,7 @@ Sensitivität ist eine Testeigenschaft (unabhängig von der Prävalenz). PPV hä
           explanation:
             "P(A|B) = P(A∩B) / P(B) = 0,12 / 0,40 = 0,30 = 30%. Die bedingte Wahrscheinlichkeit teilt die Schnittwahrscheinlichkeit durch die Bedingungswahrscheinlichkeit. Dies schränkt den Ergebnisraum auf B ein (40% der Fälle) und fragt, welcher Anteil davon auch A ist (12% von 100% = 30% von 40%).",
           hints: ["P(A|B) = P(A∩B) / P(B).", "0,12 / 0,40 = ?"],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["bedingte-wahrscheinlichkeit", "formel"],
         },
         {
@@ -1255,7 +1255,7 @@ Sensitivität ist eine Testeigenschaft (unabhängig von der Prävalenz). PPV hä
             "Nach 1 roter Kugel: Wie viele Kugeln bleiben? Wie viele davon sind rot?",
             "4 rote, 3 blaue übrig = 7 Kugeln. P = 4/7.",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["bedingte-wahrscheinlichkeit", "ohne-zurücklegen"],
         },
         {
@@ -1283,7 +1283,7 @@ Sensitivität ist eine Testeigenschaft (unabhängig von der Prävalenz). PPV hä
             "Gesunde = 1000 × (1 − 0,05) = 950.",
             "FP = Gesunde × (1 − Spezifität) = 950 × 0,20 = ?",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["vierfeldertafel", "falsch-positiv", "1000-personen"],
         },
         {
@@ -1317,7 +1317,7 @@ Sensitivität ist eine Testeigenschaft (unabhängig von der Prävalenz). PPV hä
           correctIndex: 0,
           explanation:
             "Aussage A ist falsch: P(krank | Test+) ≠ P(Test+ | krank). Das ist genau der Kern des Bayes-Theorems — bedingte Wahrscheinlichkeiten sind nicht symmetrisch. P(Test+ | krank) ist die Sensitivität, P(krank | Test+) ist der PPV. Ein Test mit 95 % Sensitivität bedeutet nicht, dass ein positiver Test 95 % Wahrscheinlichkeit für die Krankheit anzeigt. Alle anderen Aussagen sind korrekt: Sens = TP/(TP+FN) (B), PPV ist prävalenzabhängig (C), das Bayes-Paradox bei niedriger Prävalenz (D), NPV = TN/(TN+FN) (E).",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["falsch-aussage", "bayes", "bedingte-wahrscheinlichkeit"],
         },
       ],
@@ -1789,7 +1789,7 @@ Jeder zweite Gesunde hat mindestens einen "auffälligen" Wert — das ist kein F
             "Wie viele σ liegen 150 und 190 vom Mittelwert 170 entfernt?",
             "150 = μ−2σ, 190 = μ+2σ → 68-95-99,7-Regel anwenden.",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["normalverteilung", "68-95-99.7"],
         },
         {
@@ -1821,7 +1821,7 @@ Jeder zweite Gesunde hat mindestens einen "auffälligen" Wert — das ist kein F
             "PPV = TP/(TP+FP). Berechne: 90/(90+20) = ?",
             "Sens = TP/(TP+FN), Spez = TN/(TN+FP) — beide prüfen.",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["sensitivität", "spezifität", "ppv", "vierfeldertafel"],
         },
         {

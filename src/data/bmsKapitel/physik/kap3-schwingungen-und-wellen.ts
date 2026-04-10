@@ -240,7 +240,7 @@ Eine Infusionspumpe enthält eine federgelagerte Kolbenmasse von m = 50 g. Die F
             "f und T sind Kehrwerte: f = 1/T.",
             "T = 2 s → wie viele Schwingungen in einer Sekunde?",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["schwingung", "frequenz", "periodendauer"],
         },
         {
@@ -257,7 +257,7 @@ Eine Infusionspumpe enthält eine federgelagerte Kolbenmasse von m = 50 g. Die F
           explanation:
             "Die Periodendauer lautet T = 2π√(l/g). T ist proportional zur Wurzel der Länge l. Wenn l auf 4l steigt, gilt T_neu = 2π√(4l/g) = 2·2π√(l/g) = 2·T_alt. Die Periodendauer verdoppelt sich, weil √4 = 2. Eine Vervierfachung von T würde eine 16-fache Länge erfordern.",
           hints: ["T ∝ √l – also nicht linear, sondern Wurzelbeziehung.", "√4 = ?"],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["pendel", "periodendauer", "fadenpendel"],
         },
         {
@@ -311,7 +311,7 @@ Eine Infusionspumpe enthält eine federgelagerte Kolbenmasse von m = 50 g. Die F
             "Dämpfung bedeutet Energieverlust – wohin geht die Energie?",
             "Was ändert sich sichtbar am Schwingungsdiagramm?",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["gedämpfte-schwingung", "amplitude", "dämpfung"],
         },
         {
@@ -325,7 +325,7 @@ Eine Infusionspumpe enthält eine federgelagerte Kolbenmasse von m = 50 g. Die F
             "T ∝ 1/√g – kleineres g bedeutet grösseres T.",
             "√6 ≈ 2,45 – Faktor, um den T zunimmt.",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["pendel", "gravitation", "mond"],
         },
         {
@@ -338,7 +338,7 @@ Eine Infusionspumpe enthält eine federgelagerte Kolbenmasse von m = 50 g. Die F
             "Eine volle Schwingung = 2π Radiant in der Zeit T.",
             "ω = 2πf und f = 1/T → kombinieren.",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["kreisfrequenz", "periodendauer", "schwingung"],
         },
         {
@@ -352,7 +352,7 @@ Eine Infusionspumpe enthält eine federgelagerte Kolbenmasse von m = 50 g. Die F
             "Exponentieller Abfall: t½ = ln(2)/δ, nicht 1/δ.",
             "ln(2) ≈ 0,693 ist ein Standardwert – wie bei radioaktivem Zerfall.",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["gedämpfte-schwingung", "halbwertszeit", "dämpfung"],
         },
         {
@@ -372,7 +372,7 @@ Eine Infusionspumpe enthält eine federgelagerte Kolbenmasse von m = 50 g. Die F
             "Resonanz = Anregungsfrequenz trifft Eigenfrequenz → was passiert mit der Amplitude?",
             "Denke an das MRT: Protonen absorbieren Energie maximal bei der Larmorfrequenz.",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["resonanz", "erzwungene-schwingung", "eigenfrequenz"],
         },
         {
@@ -392,7 +392,7 @@ Eine Infusionspumpe enthält eine federgelagerte Kolbenmasse von m = 50 g. Die F
             "Drei Fälle: Schwingfall, Grenzfall, Kriechfall – welcher ist am schnellsten ohne Überschwingen?",
             "Optimal für Stossdämpfer: nicht schwingen, nicht kriechen → Grenzfall.",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["aperiodischer-grenzfall", "dämpfung", "schwingung"],
         },
       ],
@@ -620,7 +620,7 @@ R = ((6,3 - 1,63)/(6,3 + 1,63))^2 x 10^12 / 10^12 = (4,67/7,93)^2 ungefähr 0,34
             "λ = c/f – Wellenlänge aus Geschwindigkeit und Frequenz.",
             "Einheiten prüfen: m/s ÷ Hz = m/s ÷ (1/s) = m.",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["wellen", "wellenlänge", "schall"],
         },
         {
@@ -640,7 +640,7 @@ R = ((6,3 - 1,63)/(6,3 + 1,63))^2 x 10^12 / 10^12 = (4,67/7,93)^2 ungefähr 0,34
             "Welche Welle breitet sich im Weltraum aus, welche nicht?",
             "Mechanisch vs. elektromagnetisch – was braucht ein Medium?",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["schallwellen", "em-wellen", "medium"],
         },
         {
@@ -660,7 +660,7 @@ R = ((6,3 - 1,63)/(6,3 + 1,63))^2 x 10^12 / 10^12 = (4,67/7,93)^2 ungefähr 0,34
             "λ = c/f – wie ändert sich λ, wenn f steigt (bei gleichem c)?",
             "Kurze Wellenlänge = gute Auflösung; hohe Frequenz = mehr Dämpfung.",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["ultraschall", "auflösung", "frequenz"],
         },
         {
@@ -674,7 +674,7 @@ R = ((6,3 - 1,63)/(6,3 + 1,63))^2 x 10^12 / 10^12 = (4,67/7,93)^2 ungefähr 0,34
             "λ = c/f; Vorsicht bei den Einheiten: MHz = 10⁶ Hz.",
             "1480 ÷ 5000000 = ? Ergebnis in Metern, dann in mm umrechnen.",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["ultraschall", "wellenlänge", "wasser"],
         },
         {
@@ -694,7 +694,7 @@ R = ((6,3 - 1,63)/(6,3 + 1,63))^2 x 10^12 / 10^12 = (4,67/7,93)^2 ungefähr 0,34
             "f bleibt konstant – was gehört zur Quelle, was zum Medium?",
             "λ = c/f – wenn c grösser wird und f gleich bleibt, wird λ …?",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["medienwechsel", "wellenlänge", "frequenz"],
         },
         {
@@ -713,7 +713,7 @@ R = ((6,3 - 1,63)/(6,3 + 1,63))^2 x 10^12 / 10^12 = (4,67/7,93)^2 ungefähr 0,34
             "Trans = quer/senkrecht; Longitudinal = längs/parallel.",
             "Welche Wellenart ist polarisierbar?",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["transversalwelle", "longitudinalwelle", "schwingungsrichtung"],
         },
         {
@@ -724,7 +724,7 @@ R = ((6,3 - 1,63)/(6,3 + 1,63))^2 x 10^12 / 10^12 = (4,67/7,93)^2 ungefähr 0,34
           explanation:
             "λ = c/f = (3×10⁸ m/s) ÷ (6×10¹⁴ Hz) = 5×10⁻⁷ m = 500 nm. 500 nm liegt im grünen Bereich des sichtbaren Lichts. Zum Vergleich: UV beginnt bei ~400 nm (höhere Frequenz), IR beginnt bei ~700 nm (niedrigere Frequenz). Die Formel c = f·λ gilt für alle elektromagnetischen Wellen im Vakuum.",
           hints: ["λ = c/f mit c = 3×10⁸ m/s.", "Ergebnis in Nanometern: 1 nm = 10⁻⁹ m."],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["em-wellen", "licht", "wellenlänge"],
         },
         {
@@ -738,7 +738,7 @@ R = ((6,3 - 1,63)/(6,3 + 1,63))^2 x 10^12 / 10^12 = (4,67/7,93)^2 ungefähr 0,34
             "In welchem Medium ist die Schallgeschwindigkeit höher: Wasser oder Luft?",
             "Welche Wellengröße bleibt beim Medienwechsel konstant?",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["typ-k", "wellen", "schall", "ultraschall"],
         },
       ],
@@ -970,7 +970,7 @@ Ein Taucher, der von unten flach zur Oberfläche blickt (Winkel > 48,8°), sieht
             "Gangunterschied λ/2 entspricht welchem Phasenunterschied in Grad?",
             "Gegenphasige gleiche Amplituden: wie addieren sich +A und −A?",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["interferenz", "gangunterschied", "destruktiv"],
         },
         {
@@ -984,7 +984,7 @@ Ein Taucher, der von unten flach zur Oberfläche blickt (Winkel > 48,8°), sieht
             "Grundschwingung = 1. Harmonische: wie viele Bäuche bildet die Saite?",
             "λ₁ = 2L – warum nicht λ₁ = L?",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["stehende-welle", "harmonische", "grundschwingung"],
         },
         {
@@ -998,7 +998,7 @@ Ein Taucher, der von unten flach zur Oberfläche blickt (Winkel > 48,8°), sieht
             "n-te Harmonische hat (n−1) innere Knoten – direkte Formel.",
             "Zeichne die Saite mit 3 Halbwellen: wo liegen die Knoten?",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["stehende-welle", "knoten", "harmonische"],
         },
         {
@@ -1031,7 +1031,7 @@ Ein Taucher, der von unten flach zur Oberfläche blickt (Winkel > 48,8°), sieht
             "Beugung erlaubt Wellen, in Schattenbereiche vorzudringen – welche Bedingung gilt?",
             "Vergleich: Schall biegt um Häuserecken – Licht nicht (weil λ viel kleiner ist).",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["beugung", "diffraktion", "wellen"],
         },
         {
@@ -1045,7 +1045,7 @@ Ein Taucher, der von unten flach zur Oberfläche blickt (Winkel > 48,8°), sieht
             "Amplituden addieren sich vektoriell – bei 90° Winkel: Pythagoras.",
             "√(A² + A²) = A·√? ",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["interferenz", "überlagerung", "amplitude"],
         },
         {
@@ -1065,7 +1065,7 @@ Ein Taucher, der von unten flach zur Oberfläche blickt (Winkel > 48,8°), sieht
             "Doppler = Frequenzverschiebung bei Relativbewegung.",
             "Was verändert sich, wenn Erythrozyten sich bewegen und Schall reflektieren?",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["doppler-sonographie", "blutfluss", "ultraschall"],
         },
         {
@@ -1084,7 +1084,7 @@ Ein Taucher, der von unten flach zur Oberfläche blickt (Winkel > 48,8°), sieht
             "Was passiert mit der Frequenz beim Doppler-Effekt, wenn sich Quelle und Beobachter entfernen?",
             "Denke an den Rettungswagen: Ton wird tiefer, wenn er sich entfernt.",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["falsch-aussage", "doppler", "wellenphänomene"],
         },
       ],

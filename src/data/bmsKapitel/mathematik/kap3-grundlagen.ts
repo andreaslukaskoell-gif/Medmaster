@@ -255,7 +255,7 @@ Ein **Doppelbruch** ist ein Bruch im Bruch -- in der Klinik allgegenwärtig bei 
           correctIndex: 2,
           explanation:
             "Aussagen 1, 3 und 4 sind korrekt. Aussage 1: Kürzen = Zähler und Nenner durch den ggT teilen ✓. Aussage 2 ist falsch: 3/4 + 1/4 = 4/4 = 1, nicht 4/8 — bei gleichem Nenner werden nur die Zähler addiert, der Nenner bleibt. Aussage 3: Kehrwert = Zähler und Nenner tauschen ✓. Aussage 4: 25/100 = 1/4 ✓. Aussage 5 ist falsch: Division durch einen Bruch = Multiplikation mit dem Kehrwert: (a/b) ÷ (c/d) = (a/b) × (d/c), nicht × (c/d).",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["typ-k", "bruchrechnung", "prozentrechnung"],
         },
       ],
@@ -424,7 +424,7 @@ In der Epidemiologie sind drei Kennzahlen zentral -- alle basieren auf Prozentre
             "Formel: p = Anzahl/Gesamtzahl \u00d7 100.",
             "72/450 kürzen: ggT(72,450) = 18. Also 4/25 = 16/100.",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["prozentrechnung", "prozentsatz", "klinik"],
         },
         {
@@ -509,7 +509,7 @@ In der Epidemiologie sind drei Kennzahlen zentral -- alle basieren auf Prozentre
           correctIndex: 0,
           explanation:
             "Aussage A ist falsch: 100 → +50 % → 150 → −50 % → 75, nicht 100. Das ist die Asymmetrie-Falle der Prozentrechnung — der Grundwert ändert sich nach der ersten Änderung, und 50 % von 150 sind 75, nicht 50. Alle anderen Aussagen stimmen: 72/450 = 16/100 = 16 % (B), 1 ‰ = 0,001 = 0,1 % (C), ARR ist die absolute Differenz zweier Raten in Prozentpunkten (D), 0,9 % (w/v) = 0,9 g/100 mL (E).",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["falsch-aussage", "prozentrechnung", "asymmetrie"],
         },
       ],
@@ -689,7 +689,7 @@ Glucose 5 % und Glucose 20 % sollen zu 500 mL Glucose 8 % gemischt werden:
             "Formel: Gesamtdosis = Dosierung pro kg \u00d7 Körpergewicht.",
             "4 mg/kg \u00d7 65 kg = ? mg.",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["dreisatz", "dosierung", "proportional"],
         },
         {
@@ -717,7 +717,7 @@ Glucose 5 % und Glucose 20 % sollen zu 500 mL Glucose 8 % gemischt werden:
             "Erkennungsfrage: Mehr Assistenten = weniger Zeit \u2192 indirekt!",
             "Produkt = 8 \u00d7 6 = 48 Assistentenstunden. 48 / 12 = ?",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["dreisatz", "indirekt", "antiproportional"],
         },
         {

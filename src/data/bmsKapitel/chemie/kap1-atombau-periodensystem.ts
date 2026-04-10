@@ -212,7 +212,7 @@ Die **Ordnungszahl Z** (Protonenzahl) gibt an, wie viele Protonen im Kern sitzen
             'Die "fast rückwärts gestreuten" Teilchen sind der Schlüssel: Nur ein extrem dichtes, positives Objekt kann ein positives Teilchen so stark abstoßen.',
           ],
           tags: ["rutherford", "atombau", "atomkern"],
-          difficulty: 1,
+          difficulty: 2,
         },
         {
           question:
@@ -232,7 +232,7 @@ Die **Ordnungszahl Z** (Protonenzahl) gibt an, wie viele Protonen im Kern sitzen
             "Positive Ladung (+1) bedeutet, dass das Atom 1 Elektron weniger hat als Protonen besitzt.",
           ],
           tags: ["ordnungszahl", "massenzahl", "ionenladung"],
-          difficulty: 2,
+          difficulty: 3,
         },
         {
           question: "Welche Aussage über Isotope ist korrekt?",
@@ -251,7 +251,7 @@ Die **Ordnungszahl Z** (Protonenzahl) gibt an, wie viele Protonen im Kern sitzen
             "Die Ordnungszahl (Protonenzahl) ist das einzige Merkmal, das ein chemisches Element definiert.",
           ],
           tags: ["isotope", "protonenzahl", "neutronenzahl"],
-          difficulty: 1,
+          difficulty: 2,
         },
         {
           question:
@@ -265,7 +265,7 @@ Die **Ordnungszahl Z** (Protonenzahl) gibt an, wie viele Protonen im Kern sitzen
             "75 % von 35 ist 26,25; 25 % von 37 ist 9,25.",
           ],
           tags: ["atommasse", "isotope", "gewichtetes-mittel"],
-          difficulty: 2,
+          difficulty: 3,
         },
         {
           question:
@@ -279,7 +279,7 @@ Die **Ordnungszahl Z** (Protonenzahl) gibt an, wie viele Protonen im Kern sitzen
             "p-Orbitale bestimmen die Winkel in Molekülen wie H₂O (104,5°) und NH₃ (107°).",
           ],
           tags: ["orbitale", "p-orbital", "quantenmechanik"],
-          difficulty: 2,
+          difficulty: 3,
         },
         {
           question:
@@ -328,7 +328,7 @@ Die **Ordnungszahl Z** (Protonenzahl) gibt an, wie viele Protonen im Kern sitzen
           correctIndex: 2,
           explanation:
             "Aussagen 1, 3 und 5 sind korrekt: Bohr postulierte diskrete Kreisbahnen mit quantisierten Energieniveaus (1). Die Hauptquantenzahl n bestimmt die Schale und den mittleren Kernabstand (3). Das Thomson-Modell ('Rosinenkuchen') beschreibt Elektronen in einer positiven Ladungswolke (5). Aussage 2 ist falsch — Orbitale beschreiben Aufenthaltswahrscheinlichkeiten (|ψ|²), nicht den exakten Ort. Aussage 4 ist falsch — das beschreibt Thomsons Modell, nicht Rutherfords; Rutherford entdeckte den kompakten, positiven Atomkern.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["typ-k", "atommodelle", "quantenzahlen"],
         },
       ],
@@ -581,7 +581,7 @@ Die Konzepte der Elektronenkonfiguration und des Magnetismus sind nicht nur theo
             "n = 3 bedeutet: 2 × (3²) = 2 × 9 = ?",
           ],
           tags: ["elektronenkonfiguration", "hauptschale", "quantenzahlen"],
-          difficulty: 1,
+          difficulty: 2,
         },
         {
           question: "Was beschreibt die Nebenquantenzahl l?",
@@ -600,7 +600,7 @@ Die Konzepte der Elektronenkonfiguration und des Magnetismus sind nicht nur theo
             "l = 0, 1, 2, 3 entspricht den Buchstaben s, p, d, f – die Orbitaltypen.",
           ],
           tags: ["quantenzahlen", "nebenquantenzahl", "orbitale"],
-          difficulty: 1,
+          difficulty: 2,
         },
         {
           question: "Welche Elektronenkonfiguration ist für das Eisen-Ion Fe³⁺ korrekt?",
@@ -632,7 +632,7 @@ Die Konzepte der Elektronenkonfiguration und des Magnetismus sind nicht nur theo
             "Hund → parallel = hohe Multiplizität. Das reduziert die gegenseitige Abstoßung der Elektronen.",
           ],
           tags: ["hundsche-regel", "aufbauprinzip", "elektronenkonfiguration"],
-          difficulty: 2,
+          difficulty: 3,
         },
         {
           question: "Welche Elektronenkonfiguration hat Natrium (Na, Z = 11)?",
@@ -645,7 +645,7 @@ Die Konzepte der Elektronenkonfiguration und des Magnetismus sind nicht nur theo
             "Na steht in Gruppe 1 → 1 Valenzelektron → endet auf ...s¹.",
           ],
           tags: ["elektronenkonfiguration", "natrium", "valenzelektronen"],
-          difficulty: 1,
+          difficulty: 2,
         },
         {
           question:
@@ -684,7 +684,7 @@ Die Konzepte der Elektronenkonfiguration und des Magnetismus sind nicht nur theo
             "Mₛ kann nur +½ oder −½ sein. Daher maximal 2 Elektronen pro Orbital.",
           ],
           tags: ["pauliprinzip", "spin", "quantenzahlen"],
-          difficulty: 2,
+          difficulty: 3,
         },
         {
           question: "Welche Aussage über die Elektronenkonfiguration ist FALSCH?",
@@ -698,7 +698,7 @@ Die Konzepte der Elektronenkonfiguration und des Magnetismus sind nicht nur theo
           correctIndex: 2,
           explanation:
             "Aussage C ist FALSCH: Bei der Ionisierung von Übergangsmetallen werden zuerst die 4s-Elektronen entfernt (nicht die 3d-Elektronen), obwohl 4s vor 3d aufgefüllt wird. Beispiel: Fe → Fe²⁺ verliert beide 4s-Elektronen ([Ar]3d⁶4s² → [Ar]3d⁶). Alle anderen Aussagen sind korrekt: A beschreibt die Hundsche Regel, B das Aufbauprinzip, D die Kupfer-Ausnahme, E das Pauli-Prinzip.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["falsch-aussage", "elektronenkonfiguration", "ionisierung"],
         },
       ],
@@ -914,7 +914,7 @@ C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O (vollständige Oxidation von Gluk
             "18 g = 1 mol Wasser. Wie viele 18-g-Portionen sind in 90 g?",
           ],
           tags: ["mol-konzept", "molare-masse", "rechnen"],
-          difficulty: 1,
+          difficulty: 2,
         },
         {
           question:
@@ -947,7 +947,7 @@ C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O (vollständige Oxidation von Gluk
             'Denken Sie an "1 Dutzend = 12 Stück". 1 Mol = 6,022 × 10²³ Stück.',
           ],
           tags: ["avogadro", "mol-konzept", "teilchenzahl"],
-          difficulty: 1,
+          difficulty: 2,
         },
         {
           question:
@@ -961,7 +961,7 @@ C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O (vollständige Oxidation von Gluk
             "0,500 g ÷ 180 g/mol = ? mol; dann × 1000 = mmol.",
           ],
           tags: ["mol-berechnung", "aspirin", "pharmazie"],
-          difficulty: 2,
+          difficulty: 3,
         },
         {
           question: "Eine Lösung enthält 1 mol/L NaCl. Was ist die Osmolarität dieser Lösung?",
@@ -974,7 +974,7 @@ C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O (vollständige Oxidation von Gluk
             "Osmolarität = Summe aller Ionenkonzentrationen. Zählen Sie jeden Ionentyp einzeln.",
           ],
           tags: ["osmolarität", "dissoziation", "nacl"],
-          difficulty: 2,
+          difficulty: 3,
         },
         {
           question:
@@ -1007,7 +1007,7 @@ C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O (vollständige Oxidation von Gluk
             "35,5 ist ein Mittelwert – einzelne Atome haben 35 oder 37 als Massenzahl, nie 35,5.",
           ],
           tags: ["atommasse", "isotope", "periodensystem"],
-          difficulty: 2,
+          difficulty: 3,
         },
       ],
     },
@@ -1198,7 +1198,7 @@ Proteinfaltung und -funktion basieren auf einem Netzwerk aus H-Brücken, hydroph
             "Was passiert mit der Polarisierbarkeit, wenn mehr Elektronen vorhanden sind?",
           ],
           tags: ["london-kräfte", "van-der-waals", "polarisierbarkeit"],
-          difficulty: 2,
+          difficulty: 3,
         },
         {
           question:
@@ -1212,7 +1212,7 @@ Proteinfaltung und -funktion basieren auf einem Netzwerk aus H-Brücken, hydroph
             'Die Regel heißt: „A=T mit 2, G≡C mit 3 Balken".',
           ],
           tags: ["wasserstoffbrücken", "dna", "basenpaare"],
-          difficulty: 1,
+          difficulty: 2,
         },
         {
           question:
@@ -1232,7 +1232,7 @@ Proteinfaltung und -funktion basieren auf einem Netzwerk aus H-Brücken, hydroph
             "Welche Atome sind elektronegativ genug, um H stark zu polarisieren?",
           ],
           tags: ["wasserstoffbrücken", "donor", "elektronegativität"],
-          difficulty: 2,
+          difficulty: 3,
         },
         {
           question:
@@ -1252,7 +1252,7 @@ Proteinfaltung und -funktion basieren auf einem Netzwerk aus H-Brücken, hydroph
             "Schwefel steht unter Sauerstoff im PSE — was bedeutet das für die Elektronegativität?",
           ],
           tags: ["siedepunkt", "wasserstoffbrücken", "elektronegativität"],
-          difficulty: 2,
+          difficulty: 3,
         },
         {
           question:
@@ -1272,7 +1272,7 @@ Proteinfaltung und -funktion basieren auf einem Netzwerk aus H-Brücken, hydroph
             '"Similia similibus solvuntur" — was bedeutet das?',
           ],
           tags: ["löslichkeit", "london-kräfte", "anästhesie"],
-          difficulty: 2,
+          difficulty: 3,
         },
         {
           question:
@@ -1292,7 +1292,7 @@ Proteinfaltung und -funktion basieren auf einem Netzwerk aus H-Brücken, hydroph
             "Vergleichen Sie die Energien: 10–40 kJ/mol vs. unter 10 kJ/mol.",
           ],
           tags: ["wechselwirkungen", "wasserstoffbrücken", "stärkeranking"],
-          difficulty: 1,
+          difficulty: 2,
         },
         {
           question:
@@ -1525,7 +1525,7 @@ Neben den klassischen Aggregatzuständen gibt es fein verteilte Systeme, die wed
             "Kondensation ist das Gegenteil von Verdampfen — gleich exotherm wie Verdampfen endotherm ist.",
           ],
           tags: ["phasenübergang", "kondensation", "exotherm"],
-          difficulty: 1,
+          difficulty: 2,
         },
         {
           question:
@@ -1545,7 +1545,7 @@ Neben den klassischen Aggregatzuständen gibt es fein verteilte Systeme, die wed
             "Was passiert mit dem Luftdruck in großer Höhe?",
           ],
           tags: ["siedepunkt", "dampfdruck", "luftdruck"],
-          difficulty: 2,
+          difficulty: 3,
         },
         {
           question: "Woran ist ein kolloidales System von einer echten Lösung zu unterscheiden?",
@@ -1564,7 +1564,7 @@ Neben den klassischen Aggregatzuständen gibt es fein verteilte Systeme, die wed
             "Partikelgröße: Lösung <1 nm, Kolloid 1–1000 nm, Suspension >1000 nm.",
           ],
           tags: ["kolloid", "tyndall-effekt", "lösung"],
-          difficulty: 1,
+          difficulty: 2,
         },
         {
           question:
@@ -1603,7 +1603,7 @@ Neben den klassischen Aggregatzuständen gibt es fein verteilte Systeme, die wed
             "Emulsion: Denken Sie an Milch — Fett in Wasser: welcher Aggregatzustand ist die disperse Phase?",
           ],
           tags: ["kolloid", "emulsion", "sol"],
-          difficulty: 2,
+          difficulty: 3,
         },
         {
           question:
@@ -1643,7 +1643,7 @@ Neben den klassischen Aggregatzuständen gibt es fein verteilte Systeme, die wed
             "Bei welcher Temperatur würde Brownsche Bewegung aufhören? Bei 0 K (absoluter Nullpunkt).",
           ],
           tags: ["brownsche-bewegung", "kolloid", "thermische-energie"],
-          difficulty: 2,
+          difficulty: 3,
         },
       ],
     },
@@ -1827,7 +1827,7 @@ Halb- und vollgefüllte d-Schalen sind besonders stabil — die ausführliche Er
             "Periode 3 beginnt mit Na (Z=11) in Gruppe 1 und endet mit Ar (Z=18) in Gruppe 18",
             "Für Gruppen 13-18 in Periode 3: Z = 10 + Gruppenummer",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["periodensystem", "kernladungszahl", "periode-gruppe"],
         },
         {
@@ -1840,7 +1840,7 @@ Halb- und vollgefüllte d-Schalen sind besonders stabil — die ausführliche Er
             "Perioden = waagerechte Zeilen; Gruppen = senkrechte Spalten",
             "Die Periodennummer entspricht der höchsten Hauptquantenzahl der Valenzelektronen",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["periodensystem", "perioden", "gruppen"],
         },
         {
@@ -1859,7 +1859,7 @@ Halb- und vollgefüllte d-Schalen sind besonders stabil — die ausführliche Er
             "Halbmetalle liegen entlang der Treppenlinie zwischen Metallen und Nichtmetallen",
             "Der wichtigste Halbleiter in der Elektronik (Chips) ist ein Halbmetall der 3. Periode",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["halbmetalle", "halbleiter", "silicium"],
         },
         {
@@ -1918,7 +1918,7 @@ Halb- und vollgefüllte d-Schalen sind besonders stabil — die ausführliche Er
             "Mendelejew nutzte Lücken als Vorhersage-Werkzeug, nicht als Eingeständnis von Unwissen",
             "Eka-Aluminium und Eka-Silicium wurden als Gallium und Germanium entdeckt",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["mendelejew", "periodizität", "vorhersage"],
         },
         {
@@ -1937,7 +1937,7 @@ Halb- und vollgefüllte d-Schalen sind besonders stabil — die ausführliche Er
             "Der Block ergibt sich aus dem Orbital, in das das letzte Elektron aufgenommen wird",
             "Gruppe 2 = Erdalkalimetalle = s-Block (Konfiguration ns2)",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["calcium", "s-block", "elektronenkonfiguration"],
         },
         {
@@ -1956,7 +1956,7 @@ Halb- und vollgefüllte d-Schalen sind besonders stabil — die ausführliche Er
             "Die Halbmetalle liegen entlang der Treppenlinie: B, Si, Ge, As, Sb, Te, At",
             "Halbmetalle sind Halbleiter mit temperaturabhängiger Leitfähigkeit",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["halbmetalle", "germanium", "treppenlinie"],
         },
       ],
@@ -2139,7 +2139,7 @@ Trend: In der Periode↑; in der Gruppe↓. Höchste EN: Fluor (oben rechts im P
             "In einer Gruppe nimmt die Hauptquantenzahl n der Valenzelektronen von oben nach unten zu",
             "Mehr Schalen = weiter vom Kern entfernte Valenzelektronen = größerer Radius",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["atomradius", "periode-gruppe", "trends"],
         },
         {
@@ -2158,7 +2158,7 @@ Trend: In der Periode↑; in der Gruppe↓. Höchste EN: Fluor (oben rechts im P
             "Das elektronegativste Element steht oben rechts im PSE (ohne Edelgase)",
             "Halogene haben sehr hohe EN — welches Halogen steht am weitesten oben?",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["elektronegativität", "fluor", "höchste-en"],
         },
         {
@@ -2178,7 +2178,7 @@ Trend: In der Periode↑; in der Gruppe↓. Höchste EN: Fluor (oben rechts im P
             "IE nimmt in einer Gruppe von oben nach unten ab",
             "F, Cl, Br, I sind alle in Gruppe 17 — vergleiche von oben nach unten",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["ionisierungsenergie", "gruppe-trend", "halogene"],
         },
         {
@@ -2194,7 +2194,7 @@ Trend: In der Periode↑; in der Gruppe↓. Höchste EN: Fluor (oben rechts im P
           explanation:
             "ΔEN = 3,16 − 0,93 = 2,23 > 1,7 → Ionenbindung. Natrium gibt Valenzelektron vollständig ab: Na→Na⁺+e⁻ (IE₁=496 kJ/mol) und Cl+e⁻→Cl⁻ (EA=349 kJ/mol). Im Kristallgitter von NaCl sind Na⁺ und Cl⁻ durch elektrostatische Coulomb-Kräfte in kubisch-flächenzentriertem Ionengitter gebunden (Gitterenergie=787 kJ/mol). NaCl ist das wichtigste Elektrolyt im extrazellulären Raum: Plasma ~140 mmol/L Na⁺ und ~100 mmol/L Cl⁻ → osmotischer Druck, Blutvolumen, Membranpotenzial.",
           hints: ["Berechne ΔEN = EN(Cl) − EN(Na)", "Grenzwert für Ionenbindung: ΔEN > 1,7"],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["elektronegativität", "delta-en", "ionenbindung"],
         },
         {
@@ -2254,7 +2254,7 @@ Trend: In der Periode↑; in der Gruppe↓. Höchste EN: Fluor (oben rechts im P
             "Berechne ΔEN = EN(O) − EN(H) = 3,44 − 2,20",
             "Grenzwerte: <0,4 unpolar; 0,4–1,7 polar kovalent; >1,7 ionisch",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["o-h-bindung", "delta-en", "polar-kovalent"],
         },
         {
@@ -2462,7 +2462,7 @@ Unvollständig gefüllte d-Orbitale → variable Oxidationsstufen, Komplexbildun
             "Erdalkalimetalle haben 2 Valenzelektronen in der Konfiguration ns²",
             "Sie geben beide ab und erreichen die stabile Edelgaskonfiguration (leere Valenzschale)",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["erdalkalimetalle", "+2-ion", "edelgaskonfiguration"],
         },
         {
@@ -2481,7 +2481,7 @@ Unvollständig gefüllte d-Orbitale → variable Oxidationsstufen, Komplexbildun
             "Die Schilddrüsenhormone T4 (Thyroxin) und T3 (Triiodthyronin) — die Zahlen verraten die Anzahl von Jodatomen",
             "Das biologisch essentielle Halogen für die Schilddrüse hat Z=53 und steht in Periode 5",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["jod", "schilddrüse", "t3-t4"],
         },
         {
@@ -2501,7 +2501,7 @@ Unvollständig gefüllte d-Orbitale → variable Oxidationsstufen, Komplexbildun
             "Edelgasinertheit: vollständig besetzte Valenzschale — kein Bedarf zur Bindungsbildung",
             "Das schwerste stabile, nicht-radioaktive Edelgas (Periode 5) ist als Narkotikum bekannt",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["edelgase", "xenon", "narkosemittel"],
         },
         {
@@ -2521,7 +2521,7 @@ Unvollständig gefüllte d-Orbitale → variable Oxidationsstufen, Komplexbildun
             "Das Hämoglobin ist rot — das Zentralatom bildet mit O₂ einen farbigen Komplex",
             "Fe-Mangel führt zur häufigsten Anämieform weltweit",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["eisen", "hämoglobin", "sauerstofftransport"],
         },
         {
@@ -2540,7 +2540,7 @@ Unvollständig gefüllte d-Orbitale → variable Oxidationsstufen, Komplexbildun
             "Reaktivität der Alkalimetalle steigt in der Gruppe von oben nach unten — gleicher Trend wie sinkende IE",
             "Cs hat die niedrigste IE der stabilen Alkalimetalle → leichteste Elektronenabgabe → reaktivst",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["alkalimetalle", "reaktivität", "gruppe-trend"],
         },
         {
@@ -2560,7 +2560,7 @@ Unvollständig gefüllte d-Orbitale → variable Oxidationsstufen, Komplexbildun
             "Schilddrüsenhormone T3/T4 enthalten Jod und sind essentiell für Gehirnentwicklung",
             "Das Syndrom bei kongenitaler Hypothyreose durch Jodmangel führt zu irreversibler Hirnschädigung wenn unbehandelt",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["jodmangel", "kretinismus", "hypothyreose"],
         },
         {
@@ -2580,7 +2580,7 @@ Unvollständig gefüllte d-Orbitale → variable Oxidationsstufen, Komplexbildun
             'Co ist Zentralatom eines Vitamins — der Name "Cobalamin" enthält "Cobalt"',
             "Das Vitamin mit Co-Zentralatom ist essentiell für Hämatopoese und Nervenmyelinisierung",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["cobalt", "vitamin-b12", "cobalamin"],
         },
         {

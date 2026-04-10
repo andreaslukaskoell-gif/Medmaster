@@ -117,7 +117,7 @@ In der Ökologie unterscheidet man zwei Kategorien von Umweltfaktoren:
           correctIndex: 1,
           explanation:
             "**Biotop** = der **unbelebte** Lebensraum (Boden, Wasser, Licht, Klima, Nährstoffe). **Biozönose** = die **Lebensgemeinschaft** aller Lebewesen (alle Arten) in diesem Gebiet. Zusammen bilden sie das **Ökosystem** (Biotop + Biozönose in Wechselwirkung).",
-          difficulty: 1,
+          difficulty: 2,
           tags: ["biotop", "biozönose", "ökosystem"],
         },
       ],
@@ -284,7 +284,7 @@ Klinische Parallele: Der **Mensch** ist dank **Thermoregulation** (Schwitzen, Va
           correctIndex: 2,
           explanation:
             "Stenöke Arten (griech. stenos = eng) haben eine enge ökologische Amplitude und eignen sich als Bioindikatoren. Euryöke Arten (Generalisten) haben breite Toleranz.",
-          difficulty: 1,
+          difficulty: 2,
           tags: ["stenök", "bioindikator", "toleranzbereich"],
         },
         {
@@ -300,7 +300,7 @@ Klinische Parallele: Der **Mensch** ist dank **Thermoregulation** (Schwitzen, Va
           correctIndex: 1,
           explanation:
             "Liebigs Minimumgesetz: Das Wachstum wird durch den knappsten Faktor begrenzt. Stickstoff war im Minimum — erst dessen Zugabe ermöglichte den Ertragsdurchbruch.",
-          difficulty: 1,
+          difficulty: 2,
           tags: ["liebig", "minimumgesetz", "limitierender-faktor"],
         },
         {
@@ -332,7 +332,7 @@ Klinische Parallele: Der **Mensch** ist dank **Thermoregulation** (Schwitzen, Va
           correctIndex: 2,
           explanation:
             "In Süßwasserseen ist Phosphor oft der limitierende Faktor für Phytoplankton. Liebig: Der knappste Faktor limitiert.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["phosphor", "liebig", "eutrophierung"],
         },
         {
@@ -364,7 +364,7 @@ Klinische Parallele: Der **Mensch** ist dank **Thermoregulation** (Schwitzen, Va
           correctIndex: 1,
           explanation:
             "Aussagen 1, 3 und 4 sind korrekt. Stenöke Arten haben enge Toleranz und sind gute Bioindikatoren (1). Shelford erweitert Liebig um das Maximum als limitierenden Faktor (3). Euryöke Arten haben breite Toleranz (4). Aussage 2 ist falsch: Nach Liebig begrenzt der im MINIMUM vorhandene Faktor das Wachstum. Aussage 5 ist falsch: Die Brennnessel zeigt stickstoffREICHE Böden an (Ellenberg N8–N9).",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["typ-k", "toleranzkurve", "liebig", "shelford", "bioindikator"],
         },
         {
@@ -380,7 +380,7 @@ Klinische Parallele: Der **Mensch** ist dank **Thermoregulation** (Schwitzen, Va
           correctIndex: 2,
           explanation:
             "Aussage C ist falsch. Nach Liebigs Minimumgesetz begrenzt der im MINIMUM (nicht Überfluss) vorhandene Faktor das Wachstum. Der Faktor, der am knappsten ist, bestimmt die Wachstumsgrenze — selbst wenn alle anderen Faktoren optimal sind. Die Verwechslung von Minimum und Maximum ist eine klassische MedAT-Falle. Shelford erweitert dieses Prinzip, indem auch ein Zuviel (Maximum) limitierend sein kann. Die übrigen Aussagen sind korrekt.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["falsch-aussage", "toleranzkurve", "liebig", "minimumgesetz"],
         },
       ],
@@ -546,7 +546,7 @@ Bei Immunsuppression (z. B. HIV/AIDS mit CD4-T-Zell-Verlust, Chemotherapie-induz
           correctIndex: 1,
           explanation:
             "Der **Lebensraum (Habitat)** ist der physische Ort („wo“). Die **ökologische Nische** umfasst alle abiotischen und biotischen Faktoren, die für die Art wichtig sind, und ihre Rolle im Ökosystem („wie“ und „welche Funktion“).",
-          difficulty: 1,
+          difficulty: 2,
           tags: ["nische", "lebensraum", "habitat"],
         },
         {
@@ -562,7 +562,7 @@ Bei Immunsuppression (z. B. HIV/AIDS mit CD4-T-Zell-Verlust, Chemotherapie-induz
           correctIndex: 1,
           explanation:
             "Ohne Konkurrent *Balanus* nutzt *Chthamalus* einen größeren Bereich (auch untere Zone) = Ausweitung zur fundamentalen Nische. Mit *Balanus* ist die realisierte Nische auf die obere Zone beschränkt. Somit: fundamentale Nische ≥ realisierte Nische; Konkurrenz schränkt die realisierte Nische ein.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["connell", "fundamentale-nische", "realisierte-nische"],
         },
       ],
@@ -769,7 +769,7 @@ Die **Räuberpopulation hinkt der Beutepopulation zeitlich nach** (Höhepunkt de
           correctIndex: 2,
           explanation:
             "Gauß-Experiment (1934): Zwei Arten mit identischer Nische (gleiche Nahrung, gleiches Habitat) können nicht koexistieren; die konkurrenzstärkere Art verdrängt die andere. Koexistenz wäre nur durch Nischendifferenzierung möglich.",
-          difficulty: 1,
+          difficulty: 2,
           tags: ["gauß", "konkurrenzausschluss", "paramecium"],
         },
         {
@@ -785,7 +785,7 @@ Die **Räuberpopulation hinkt der Beutepopulation zeitlich nach** (Höhepunkt de
           correctIndex: 2,
           explanation:
             "Mutualismus (+/+): Beide Partner profitieren. Mykorrhiza: Pilz bekommt Zucker, Pflanze bekommt Wasser und Nährstoffe.",
-          difficulty: 1,
+          difficulty: 2,
           tags: ["mykorrhiza", "mutualismus"],
         },
         {
@@ -833,7 +833,7 @@ Die **Räuberpopulation hinkt der Beutepopulation zeitlich nach** (Höhepunkt de
           correctIndex: 1,
           explanation:
             "Competitive Release (Konkurrenzbefeiung): Ohne Konkurrenten nutzt die Art den vollen Bereich ihrer Fundamentalnische (Fels + Wald), der auf dem Festland durch Konkurrenz auf die Realnische (nur Fels) eingeschränkt war.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["competitive-release", "fundamentalnische", "realnische"],
         },
         {
@@ -849,7 +849,7 @@ Die **Räuberpopulation hinkt der Beutepopulation zeitlich nach** (Höhepunkt de
           correctIndex: 1,
           explanation:
             "r-Strategen: viele kleine Nachkommen, kurze Generationszeit, geringe/keine Brutpflege, hohe Jugendsterblichkeit (Typ-III-Kurve). Beispiele: Bakterien, Insekten, viele Fische. K-Strategen (Option A) zeigen das Gegenteil: wenige Nachkommen, Typ-I-Kurve (Mensch, Elefant).",
-          difficulty: 1,
+          difficulty: 2,
           tags: ["r-strategen", "k-strategen", "überlebenskurve"],
         },
       ],
@@ -1061,7 +1061,7 @@ Bestimmte Schadstoffe werden **nicht abgebaut** und reichern sich entlang der Na
           correctIndex: 4,
           explanation:
             "10%-Regel: Jede Übertragung zwischen Trophieebenen überträgt ca. 10% der Energie. Von Gras (Ebene 1) zum Adler (Ebene 5) sind es 4 Übertragungsschritte: 10.000 × (0,1)⁴ = 10.000 × 0,0001 = 1 kJ. Dies illustriert, warum Nahrungsketten selten mehr als 4–5 Glieder haben.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["10-prozent-regel", "energiefluss", "trophieebene", "nahrungskette"],
         },
         {
@@ -1093,7 +1093,7 @@ Bestimmte Schadstoffe werden **nicht abgebaut** und reichern sich entlang der Na
           correctIndex: 2,
           explanation:
             "N₂-Fixierung (biologische Stickstoffixierung): Rhizobium-Bakterien in Leguminosen-Wurzelknöllchen (Bohnen, Erbsen, Klee) katalysieren durch das Nitrogenase-Enzym: N₂ + 8H⁺ + 8e⁻ + 16 ATP → 2NH₃ + H₂ + 16ADP + 16Pᵢ. Das Produkt NH₃ (Ammoniak, in wässriger Lösung als NH₄⁺) kann von Pflanzen direkt assimiliert werden. Dies ist ökologisch essentiell: Ohne biologische N-Fixierung wäre der atmosphärische N₂ für die meisten Organismen unzugänglich. Der Mutualismus Leguminose-Rhizobium ist fundamental für die globale Stickstoffverfügbarkeit.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["stickstoffixierung", "rhizobium", "nitrogenase", "leguminosen"],
         },
         {
@@ -1109,7 +1109,7 @@ Bestimmte Schadstoffe werden **nicht abgebaut** und reichern sich entlang der Na
           correctIndex: 1,
           explanation:
             "Der fundamentale Unterschied: Phosphor (P) hat kein gasförmiges Reservoir in der Atmosphäre (im Gegensatz zu C als CO₂/CH₄ und N als N₂). Phosphor zirkuliert nur zwischen Gestein, Boden, Wasser und Biomasse. Ein einmal ins Sediment abgesunkener P ist auf geologischen Zeitskalen (Millionen Jahre) gebunden. Für Gewässer-Ökosysteme ist P daher oft der limitierende Nährstoff (Liebig-Minimum). Phosphat-Einträge aus Düngemitteln, Waschmitteln und Kläranlagen führen zu Eutrophierung: Algenblüten → Algentod → bakterieller Abbau → O₂-Verbrauch → Hypoxie → Fischsterben. Die Phosphat-Elimination in Kläranlagen ist deshalb obligatorisch.",
-          difficulty: 2,
+          difficulty: 3,
           tags: [
             "phosphorkreislauf",
             "kein-gas-reservoir",
@@ -1130,7 +1130,7 @@ Bestimmte Schadstoffe werden **nicht abgebaut** und reichern sich entlang der Na
           correctIndex: 2,
           explanation:
             "Die 10%-Regel macht den Unterschied deutlich: Vegetarier (Pflanze → Mensch): 1 trophischer Schritt, ca. 10% Energieübertragung. Fleischesser (Pflanze → Tier → Mensch): 2 trophische Schritte, ca. 1% der Pflanzenenergie erreicht den Menschen. Für dieselbe Menge an Energie benötigt ein Fleischesser ca. 10× mehr Anbaufläche (und Wasser, Dünger) als ein Vegetarier. Auf globaler Ebene: ca. 80% der landwirtschaftlichen Fläche wird für Tierhaltung genutzt, produziert aber nur ca. 20% der menschlichen Kalorien.",
-          difficulty: 1,
+          difficulty: 2,
           tags: ["10-prozent-regel", "vegetarisch", "fleisch", "trophieebene", "ökologie"],
         },
         {
@@ -1146,7 +1146,7 @@ Bestimmte Schadstoffe werden **nicht abgebaut** und reichern sich entlang der Na
           correctIndex: 2,
           explanation:
             "Biomagnifikation: Lipophiles (fettlösliches) Methylquecksilber passiert Biomembranen leicht, lagert sich im Fettgewebe ein und wird renal kaum ausgeschieden. Bei jeder Trophieebene steigt die Konzentration: Wasser → Phytoplankton → Zooplankton → kleine Fische → Raubfische. Der Anreicherungsfaktor kann 10⁶–10⁷ erreichen. Medizinisch: Minamata-Krankheit (Ataxie, Parästhesien, Sehstörungen), teratogen → Schwangere sollten Raubfisch-Konsum limitieren.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["biomagnifikation", "methylquecksilber", "minamata", "lipophil"],
         },
         {
@@ -1162,7 +1162,7 @@ Bestimmte Schadstoffe werden **nicht abgebaut** und reichern sich entlang der Na
           correctIndex: 1,
           explanation:
             "Aussagen 1, 2 und 4 sind korrekt. Pro trophischem Schritt werden ca. 10 % der Energie weitergegeben (1). NPP = GPP − autotrophe Respiration (2). Rhizobium fixiert N₂ in Leguminosen (4). Aussage 3 ist falsch: Der Phosphorkreislauf hat KEIN gasförmiges Reservoir — das unterscheidet ihn vom C- und N-Kreislauf. Aussage 5 ist falsch: Biomagnifikation beschreibt die ZUNAHME von Schadstoffkonzentrationen entlang der Nahrungskette.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["typ-k", "ökosystem", "stoffkreislauf", "biomagnifikation", "10-prozent-regel"],
         },
         {
@@ -1177,7 +1177,7 @@ Bestimmte Schadstoffe werden **nicht abgebaut** und reichern sich entlang der Na
           correctIndex: 2,
           explanation:
             "Aussage C ist falsch. Der Phosphorkreislauf hat KEIN gasförmiges Reservoir in der Atmosphäre — das ist sein entscheidender Unterschied zum Kohlenstoff- und Stickstoffkreislauf. Phosphor zirkuliert ausschließlich über Gestein, Boden, Wasser und Lebewesen (sedimentärer Kreislauf). Dies macht Phosphor zum häufigsten limitierenden Nährstoff in Süßwasserökosystemen. Die übrigen Aussagen sind korrekt.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["falsch-aussage", "ökosystem", "phosphorkreislauf", "stoffkreislauf"],
         },
       ],
@@ -1496,7 +1496,7 @@ Bakterienwachstum in geschlossener Kultur (Blutkultur, Nährmedium) durchläuft 
           correctIndex: 3,
           explanation:
             "FALSCH ist D: Beta-Laktame hemmen die Zellwandsynthese und wirken nur bei aktiver Zellteilung — also maximal in der Exponentialphase, nicht in der stationären Phase, wo die Teilungsrate gering ist.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["bakterienwachstum", "stationäre-phase", "antibiotika"],
         },
         {
@@ -1655,7 +1655,7 @@ Die wichtigsten Ursachen für den Verlust an Biodiversität (nach IPBES):
           correctIndex: 2,
           explanation:
             "Die **genetische Diversität** umfasst die Vielfalt der Allele und Gene **innerhalb einer Art**. Artendiversität beschreibt dagegen die Vielfalt verschiedener Arten in einem Lebensraum, Ökosystemdiversität die Vielfalt der Lebensräume selbst.",
-          difficulty: 1,
+          difficulty: 2,
           tags: ["biodiversität", "genetische-diversität"],
         },
       ],
@@ -1820,7 +1820,7 @@ Das Komplementsystem ist ein kaskadenartiges System aus ca. 30 Plasmaproteinen, 
             "Welches Ig kommt als erstes bei einer neuen Infektion? Das ist der Marker für akute Infektion.",
             "IgM = erstes; IgG = später und dauerhaft. Akut → welches?",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["igm", "akute-infektion", "primärantwort", "serologie"],
         },
         {
@@ -1873,7 +1873,7 @@ Das Komplementsystem ist ein kaskadenartiges System aus ca. 30 Plasmaproteinen, 
             "Welches Ig ist besonders für den Schutz von Schleimhäuten und Sekreten spezialisiert?",
             "IgA = 'A' wie 'Abwehr auf Schleimhäuten'. In Muttermilch, Speichel, Tränen.",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["iga", "schleimhaut", "sekrete", "muttermilch"],
         },
         {
@@ -1889,7 +1889,7 @@ Das Komplementsystem ist ein kaskadenartiges System aus ca. 30 Plasmaproteinen, 
           correctIndex: 2,
           explanation:
             "Aussagen 1, 2, 3 und 5 sind korrekt. IgG hat die klassische Y-Struktur mit 2 schweren + 2 leichten Ketten (1). IgM erscheint als erstes bei der Primärantwort (2). IgA ist das dominante Sekret-Immunglobulin (3). IgG ist das wichtigste Opsonin (5). Aussage 4 ist falsch: IgG (nicht IgE) ist das einzige Immunglobulin, das über FcRn-Rezeptoren aktiv durch die Plazenta transportiert wird.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["typ-k", "antikörper", "immunglobuline", "igg", "igm", "iga"],
         },
         {
@@ -1904,7 +1904,7 @@ Das Komplementsystem ist ein kaskadenartiges System aus ca. 30 Plasmaproteinen, 
           correctIndex: 3,
           explanation:
             "Aussage D ist falsch. IgA ist das dominante Immunglobulin auf SCHLEIMHÄUTEN und in Sekreten (Speichel, Muttermilch, Darminhalt, Tränenflüssigkeit). Als sekretorisches IgA (sIgA-Dimer) bildet es die erste Verteidigungslinie gegen Pathogene an Schleimhautoberflächen (immune exclusion). IgA im Serum liegt als Monomer vor. Die Behauptung, IgA spiele keine Rolle auf Schleimhäuten, ist das genaue Gegenteil der Realität. Die übrigen Aussagen sind korrekt.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["falsch-aussage", "antikörper", "iga", "immunglobuline"],
         },
       ],
@@ -2033,7 +2033,7 @@ Neben der V(D)J-Rekombination und der somatischen Hypermutation verfügt das Imm
             "Was sind Gedächtniszellen, und warum sind sie bei der zweiten Begegnung von Vorteil?",
             "Affinitätsreifung in Keimzentren — welche Zellen haben das bereits durchlaufen?",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["sekundäre-immunantwort", "gedächtnis-b-zellen", "affinitätsreifung", "impfung"],
         },
         {
@@ -2257,7 +2257,7 @@ In der klinischen Praxis gilt traditionell: Blutgruppe 0 Rh-negativ (0-) als uni
             "0-Blut hat keine A- oder B-Antigene. Welche Antikörper hat der A-Empfänger?",
             "Der Empfänger greift Spendererythrozyten an — wenn die keine Antigene haben, gibt es keinen Angriff.",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["transfusion", "universeller-spender", "hämolyse", "ab0-kompatibilität"],
         },
         {
@@ -2293,7 +2293,7 @@ In der klinischen Praxis gilt traditionell: Blutgruppe 0 Rh-negativ (0-) als uni
           correctIndex: 1,
           explanation:
             "Aussagen 1, 2, 4 und 5 sind korrekt. Personen mit Blutgruppe A bilden Anti-B (1). I^A und I^B sind kodominant (2). Vater AB gibt I^A oder I^B, Mutter 0 gibt i⁰ → Kinder sind A oder B (4). 0-Erythrozyten haben keine A/B-Antigene und werden daher nicht angegriffen (5). Aussage 3 ist falsch: Blutgruppe 0 (Genotyp i⁰ i⁰) hat KEINE A- oder B-Antigene — nur das unmodifizierte H-Antigen.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["typ-k", "blutgruppen", "ab0-system", "kodominanz", "transfusion"],
         },
       ],
@@ -2407,7 +2407,7 @@ Die Anti-D-Prophylaxe ist eine der großen Errungenschaften der pränatalen Medi
             "Anti-D-Prophylaxe verhindert die Sensibilisierung — wann droht Sensibilisierung?",
             "28. SSW (präpartal) und <72h postpartal. Beide Zeitpunkte sind wichtig.",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["anti-d-prophylaxe", "rhesus-inkompatibilität", "sensibilisierung", "ssw"],
         },
         {
@@ -2490,7 +2490,7 @@ Die Anti-D-Prophylaxe ist eine der großen Errungenschaften der pränatalen Medi
             "Mehrere ungeschützte Rh+ Schwangerschaften → Sensibilisierung mit zunehmenden IgG-Anti-D-Titern.",
             "Welches Ig passiert die Plazenta und ist mit zunehmenden Schwangerschaften stärker?",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: [
             "morbus-haemolyticus-neonatorum",
             "hydrops-fetalis",
@@ -2510,7 +2510,7 @@ Die Anti-D-Prophylaxe ist eine der großen Errungenschaften der pränatalen Medi
           correctIndex: 2,
           explanation:
             "Aussage C ist falsch. Bei der ERSTEN Schwangerschaft kommt es in der Regel NICHT zu einer schweren Hämolyse, da die Sensibilisierung erst bei der Geburt stattfindet (fetomaternale Transfusion). Die mütterlichen Anti-D-IgG-Antikörper werden erst nach der Sensibilisierung gebildet und sind bei der ersten Schwangerschaft noch nicht (oder kaum) vorhanden. Erst ab der ZWEITEN Schwangerschaft mit einem Rh+ Kind droht die Gefahr, da dann bereits IgG-Anti-D im mütterlichen Blut zirkuliert. Die übrigen Aussagen sind korrekt.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["falsch-aussage", "rhesusfaktor", "sensibilisierung", "morbus-haemolyticus"],
         },
       ],

@@ -289,7 +289,7 @@ Substitution: V_A = 500 − V_B → 0,05(500 − V_B) + 0,20 V_B = 40 → 25 + 0
             "Schritt 1: Dosis = 0,05 × 90 mg. Schritt 2: Konzentration = 10/10 mg/mL.",
             "Volumen = Dosis / Konzentration = 4,5 / 1.",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["dosierung", "morphin", "gleichung"],
         },
         {
@@ -299,7 +299,7 @@ Substitution: V_A = 500 − V_B → 0,05(500 − V_B) + 0,20 V_B = 40 → 25 + 0
           correctIndex: 2,
           explanation:
             "Aussagen 1, 3 und 4 sind korrekt. Aussage 1: Eine lineare Gleichung ax + b = 0 (a ≠ 0) hat genau eine Lösung x = −b/a ✓. Aussage 2 ist falsch: Die Mitternachtsformel x = (−b ± √D)/(2a) gilt für alle quadratischen Gleichungen ax² + bx + c = 0 — die pq-Formel ist die Version für a = 1. Aussage 3: Vieta liefert Summe und Produkt der Nullstellen ✓. Aussage 4: D > 0 → zwei Lösungen, D = 0 → eine, D < 0 → keine reelle ✓. Aussage 5 ist falsch: Bei D = 0 gibt es nur eine Doppellösung, bei D < 0 keine reelle Lösung.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["typ-k", "gleichungen", "loesungsverfahren"],
         },
       ],
@@ -633,7 +633,7 @@ Patient mit [HCO₃⁻] = 12 mmol/L und pCO₂ = 40 mmHg. pH = 6,1 + lg(12/1,2) 
             "Prüfe jede Aussage mit konkreten Zahlen.",
             "Welche Rechenoperation steht im Argument des Logarithmus?",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["logarithmus", "rechenregeln", "falsch-aussage"],
         },
         {
@@ -648,7 +648,7 @@ Patient mit [HCO₃⁻] = 12 mmol/L und pCO₂ = 40 mmHg. pH = 6,1 + lg(12/1,2) 
           correctIndex: 0,
           explanation:
             "Aussage A ist falsch: a⁰ = 1 gilt nur für a ≠ 0. Für a = 0 ist 0⁰ nicht definiert (bzw. in manchen Konventionen als 1 gesetzt, aber mathematisch nicht allgemeingültig). Alle anderen Aussagen stimmen: a⁻ⁿ = 1/aⁿ ist korrekt für a ≠ 0 (B). Die Produktregel des Logarithmus (C) und die Potenz-einer-Potenz-Regel (D) sind korrekte Rechengesetze. Die pH-Faustregel (E) folgt aus lg(2) ≈ 0,3.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["falsch-aussage", "potenzgesetze", "logarithmen"],
         },
       ],
@@ -1147,7 +1147,7 @@ Probe: √(433² + 250²) = √(187489 + 62500) = √249989 ≈ 500 N ✓
             "sin α = Gegenkathete / Hypotenuse = 5/13. Die Ankathete ergibt sich aus dem Satz des Pythagoras: √(13² − 5²) = √(169 − 25) = √144 = 12 cm. Also: sin α = 5/13, cos α = 12/13, tan α = 5/12. Das 5-12-13-Dreieck ist ein pythagoreisches Tripel (5² + 12² = 25 + 144 = 169 = 13²).",
           hints: ["sin α = Gegenkathete / Hypotenuse.", "Gegenkathete = 5 cm, Hypotenuse = 13 cm."],
           tags: ["sinus", "rechtwinkliges-dreieck", "soh-cah-toa"],
-          difficulty: 1,
+          difficulty: 2,
         },
         {
           question: "Wie viel Bogenmaß entsprechen 150°?",
@@ -1200,7 +1200,7 @@ Probe: √(433² + 250²) = √(187489 + 62500) = √249989 ≈ 500 N ✓
             "cos 90° = 0, also Division durch null.",
           ],
           tags: ["tangens", "definition", "einheitskreis"],
-          difficulty: 1,
+          difficulty: 2,
         },
       ],
       diagram: "unit-circle",
@@ -1480,7 +1480,7 @@ Die **Aortenklappenöffnungsfläche** (normal ~3–4 cm²) wird per Echokardiogr
             "A = ½ × (Summe der parallelen Seiten) × Höhe.",
           ],
           tags: ["trapez", "fläche", "geometrie"],
-          difficulty: 1,
+          difficulty: 2,
         },
         {
           question:
@@ -1539,7 +1539,7 @@ Die **Aortenklappenöffnungsfläche** (normal ~3–4 cm²) wird per Echokardiogr
             "Gesamtdosis = Dosierung × KOF = 50 mg/m² × 1,84 m² = 92 mg. Die KOF-basierte Dosierung ist klinisch wichtig, weil die Toxizität von Zytostatika eng mit der Körperoberfläche korreliert.",
           hints: ["Gesamtdosis = Dosierung × KOF (die KOF ist gegeben).", "50 mg/m² × 1,84 m² = ?"],
           tags: ["kof", "zytostatikum", "dosierung"],
-          difficulty: 1,
+          difficulty: 2,
         },
         {
           question:
@@ -1788,7 +1788,7 @@ Die **Lungenalveolen** haben einen Radius von ca. 0,1–0,2 mm; die Gesamtoberfl
             "Zuerst das Produkt a × b × c berechnen, dann mit π/6 multiplizieren.",
           ],
           tags: ["ellipsoid", "tumorvolumen", "ct"],
-          difficulty: 2,
+          difficulty: 3,
         },
         {
           question:
@@ -1802,7 +1802,7 @@ Die **Lungenalveolen** haben einen Radius von ca. 0,1–0,2 mm; die Gesamtoberfl
             "r wird halbiert → r⁴ wird (1/2)⁴ = 1/16 des ursprünglichen Wertes.",
           ],
           tags: ["hagen-poiseuille", "stenose", "blutfluss"],
-          difficulty: 2,
+          difficulty: 3,
         },
         {
           question:
@@ -1924,7 +1924,7 @@ Die vollständige Vektorrechnung mit Grundoperationen, Einheitsvektoren, lineare
             "Welche physikalische Größe braucht eine Richtungsangabe, um vollständig beschrieben zu sein?",
           ],
           tags: ["vektor", "skalar", "grundbegriffe"],
-          difficulty: 1,
+          difficulty: 2,
         },
         {
           question:
@@ -1938,7 +1938,7 @@ Die vollständige Vektorrechnung mit Grundoperationen, Einheitsvektoren, lineare
             "x: 2+(−1) = ?; y: −1+4 = ?; z: 3+2 = ?",
           ],
           tags: ["vektoraddition", "komponentenweise"],
-          difficulty: 1,
+          difficulty: 2,
         },
       ],
     },

@@ -219,7 +219,7 @@ Q = 70 · 3500 · 3 = 735.000 J = 735 kJ ≈ 176 kcal. Diese Energiemenge muss d
             "T[°C] = T[K] − 273,15 — setze T = 310 K ein.",
           ],
           tags: ["temperatur", "kelvin", "celsius"],
-          difficulty: 1,
+          difficulty: 2,
         },
         {
           question:
@@ -233,7 +233,7 @@ Q = 70 · 3500 · 3 = 735.000 J = 735 kJ ≈ 176 kcal. Diese Energiemenge muss d
             "ΔT = 80 °C − 20 °C = 60 K. Dann m = 0,5 kg einsetzen.",
           ],
           tags: ["wärmekapazität", "kalorimetrie", "energie"],
-          difficulty: 1,
+          difficulty: 2,
         },
         {
           question:
@@ -247,7 +247,7 @@ Q = 70 · 3500 · 3 = 735.000 J = 735 kJ ≈ 176 kcal. Diese Energiemenge muss d
             "Einheiten prüfen: α ist in /K, L₀ in m, ΔT in K → ΔL in m. Dann in mm umrechnen.",
           ],
           tags: ["wärmedehnung", "ausdehnungskoeffizient", "länge"],
-          difficulty: 2,
+          difficulty: 3,
         },
         {
           question:
@@ -261,7 +261,7 @@ Q = 70 · 3500 · 3 = 735.000 J = 735 kJ ≈ 176 kcal. Diese Energiemenge muss d
             "T_m = (m₁·T₁ + m₂·T₂)/(m₁ + m₂) — Massen in gleicher Einheit (g oder kg), Temperaturen in °C.",
           ],
           tags: ["mischtemperatur", "kalorimetrie", "wärmekapazität"],
-          difficulty: 2,
+          difficulty: 3,
         },
         {
           question: "Warum hat Wasser sein Dichtemaximum bei 4 °C und nicht bei 0 °C?",
@@ -280,7 +280,7 @@ Q = 70 · 3500 · 3 = 735.000 J = 735 kJ ≈ 176 kcal. Diese Energiemenge muss d
             "Zwischen 0 und 4 °C nimmt die Netzwerkbildung zu → Volumen steigt → Dichte sinkt.",
           ],
           tags: ["wasser", "dichteanomalie", "wasserstoffbrücke"],
-          difficulty: 2,
+          difficulty: 3,
         },
         {
           question: "Ein Patient hat 39,5 °C Fieber. Wie viel Grad Fahrenheit entspricht das?",
@@ -293,7 +293,7 @@ Q = 70 · 3500 · 3 = 735.000 J = 735 kJ ≈ 176 kcal. Diese Energiemenge muss d
             "39,5 × 1,8 = 71,1; dann 71,1 + 32 berechnen.",
           ],
           tags: ["temperatur", "fahrenheit", "celsius"],
-          difficulty: 1,
+          difficulty: 2,
         },
         {
           question: "Welche der folgenden Aussagen zur spezifischen Wärmekapazität ist korrekt?",
@@ -312,7 +312,7 @@ Q = 70 · 3500 · 3 = 735.000 J = 735 kJ ≈ 176 kcal. Diese Energiemenge muss d
             "Vergleichswerte: Wasser 4180, Eis 2090, Eisen 450, Aluminium 900 J/(kg·K).",
           ],
           tags: ["wärmekapazität", "wasser", "spezifisch"],
-          difficulty: 1,
+          difficulty: 2,
         },
         {
           question:
@@ -326,7 +326,7 @@ Q = 70 · 3500 · 3 = 735.000 J = 735 kJ ≈ 176 kcal. Diese Energiemenge muss d
             "c_Eis ≈ 2090 J/(kg·K), c_Wasser ≈ 4180 J/(kg·K).",
           ],
           tags: ["typ-k", "temperatur", "wärmekapazität"],
-          difficulty: 2,
+          difficulty: 3,
         },
       ],
     },
@@ -613,7 +613,7 @@ Ein Läufer schwitzt 1,5 L/h. Verdampfungswärme: 1,5 × 2400 kJ = 3600 kJ/h = *
             "ΔT = 37 − 33 = 4 K, d = 2 cm = 0,02 m einsetzen.",
           ],
           tags: ["wärmeleitung", "fouriergesetz", "wärmestrom"],
-          difficulty: 2,
+          difficulty: 3,
         },
         {
           question:
@@ -633,7 +633,7 @@ Ein Läufer schwitzt 1,5 L/h. Verdampfungswärme: 1,5 × 2400 kJ = 3600 kJ/h = *
             "Luft hat λ ≈ 0,026 W/(m·K) — die niedrigste aller gängigen Stoffe. Materialien, die Luft einschließen, isolieren gut.",
           ],
           tags: ["isolation", "wärmeleitfähigkeit", "verbände"],
-          difficulty: 1,
+          difficulty: 2,
         },
         {
           question:
@@ -653,7 +653,7 @@ Ein Läufer schwitzt 1,5 L/h. Verdampfungswärme: 1,5 × 2400 kJ = 3600 kJ/h = *
             "P₂/P₁ = (T₂/T₁)⁴ = (315/310)⁴ berechnen. (315/310) ≈ 1,016.",
           ],
           tags: ["wärmestrahlung", "stefan-boltzmann", "temperatur"],
-          difficulty: 3,
+          difficulty: 2,
         },
         {
           question: "Warum frieren Frühgeborene schneller als reife Neugeborene?",
@@ -672,7 +672,7 @@ Ein Läufer schwitzt 1,5 L/h. Verdampfungswärme: 1,5 × 2400 kJ = 3600 kJ/h = *
             "Wärmeabgabe ∝ Oberfläche A; Wärmeerzeugung ∝ Volumen V. Frühgeborene haben weniger Fett (Isolation).",
           ],
           tags: ["thermoregulation", "frühgeborene", "oberfläche-volumen"],
-          difficulty: 2,
+          difficulty: 3,
         },
         {
           question:
@@ -692,7 +692,7 @@ Ein Läufer schwitzt 1,5 L/h. Verdampfungswärme: 1,5 × 2400 kJ = 3600 kJ/h = *
             "Wien: Bei 37 °C (310 K) liegt das Maximum der Emission im Infrarotbereich bei λ ≈ 9,4 μm.",
           ],
           tags: ["thermografie", "infrarotstrahlung", "diagnostik"],
-          difficulty: 2,
+          difficulty: 3,
         },
       ],
     },
@@ -1012,7 +1012,7 @@ Q_warm = 1200 J, W = 400 J → Q_kalt = 1200 − 400 = 800 J.
             "1. Hauptsatz: ΔU = Q + W. Wenn W = 0, dann ΔU = Q.",
           ],
           tags: ["thermodynamik", "isochor", "erster-hauptsatz"],
-          difficulty: 1,
+          difficulty: 2,
         },
         {
           question:
@@ -1026,7 +1026,7 @@ Q_warm = 1200 J, W = 400 J → Q_kalt = 1200 − 400 = 800 J.
             "Beide Temperaturen sind schon in Kelvin: η = 1 − 250/500.",
           ],
           tags: ["carnot", "wirkungsgrad", "wärmekraftmaschine"],
-          difficulty: 1,
+          difficulty: 2,
         },
         {
           question: "Welche der folgenden Aussagen über Entropie ist FALSCH?",
@@ -1045,7 +1045,7 @@ Q_warm = 1200 J, W = 400 J → Q_kalt = 1200 − 400 = 800 J.
             "Lokal kann Entropie sinken — aber was gilt für die Gesamtentropie?",
           ],
           tags: ["entropie", "zweiter-hauptsatz", "mikrozustände"],
-          difficulty: 2,
+          difficulty: 3,
         },
         {
           question:
@@ -1085,7 +1085,7 @@ Q_warm = 1200 J, W = 400 J → Q_kalt = 1200 − 400 = 800 J.
             "Was passiert mit der Entropie der Umgebung, wenn ein Organismus Ordnung aufbaut?",
           ],
           tags: ["entropie", "biologie", "zweiter-hauptsatz"],
-          difficulty: 2,
+          difficulty: 3,
         },
         {
           question:
@@ -1096,7 +1096,7 @@ Q_warm = 1200 J, W = 400 J → Q_kalt = 1200 − 400 = 800 J.
             "Nutzarbeit: W = Q_warm − Q_kalt = 800 − 500 = 300 J. Wirkungsgrad: η = W/Q_warm = 300/800 = 0,375 = 37,5 %. Alternativ: η = 1 − Q_kalt/Q_warm = 1 − 500/800 = 37,5 %.",
           hints: ["W = Q_warm − Q_kalt. η = W/Q_warm.", "300/800 = ?"],
           tags: ["wärmekraftmaschine", "wirkungsgrad", "thermodynamik"],
-          difficulty: 2,
+          difficulty: 3,
         },
         {
           question:
@@ -1116,7 +1116,7 @@ Q_warm = 1200 J, W = 400 J → Q_kalt = 1200 − 400 = 800 J.
             "Der zweite Hauptsatz setzt eine absolute Grenze — keine Maschine kann effizienter sein.",
           ],
           tags: ["falsch-aussage", "thermodynamik", "carnot"],
-          difficulty: 2,
+          difficulty: 3,
         },
       ],
     },
@@ -1211,7 +1211,7 @@ Kolligative Eigenschaften hängen nur von der **Teilchenzahl** ab, nicht von der
           correctIndex: 1,
           explanation:
             "NaCl dissoziiert in Na⁺ und Cl⁻ (i = 2), daher ist die effektive Teilchenkonzentration 0,2 mol/L. Glucose dissoziiert nicht (i = 1), bleibt bei 0,1 mol/L. Die **NaCl-Seite** hat die höhere Osmolarität, also fließt Wasser **von Glucose nach NaCl**.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["osmotischer-druck", "vant-hoff", "tonizität"],
         },
       ],
@@ -1497,7 +1497,7 @@ Bei hoher Luftfeuchtigkeit (>80 %) ist die Luft wasserdampfgesättigt → Verdun
             "Erst in Kelvin umrechnen: 27 °C = 300 K, 127 °C = 400 K.",
           ],
           tags: ["ideales-gas", "isochor", "zustandsänderung"],
-          difficulty: 2,
+          difficulty: 3,
         },
         {
           question:
@@ -1508,7 +1508,7 @@ Bei hoher Luftfeuchtigkeit (>80 %) ist die Luft wasserdampfgesättigt → Verdun
             "Q = m · L_f = 0,2 kg · 334 000 J/kg = 66 800 J. Während des Schmelzens bleibt T = 0 °C konstant — die gesamte Energie bricht die Wasserstoffbrücken im Eiskristall auf. Erst wenn alles Eis geschmolzen ist, steigt die Temperatur.",
           hints: ["Latentwärme: Q = m · L_f. Masse in kg: 200 g = 0,2 kg.", "0,2 · 334 000 = ?"],
           tags: ["schmelzwärme", "phasenübergang", "eis"],
-          difficulty: 1,
+          difficulty: 2,
         },
         {
           question: "Welche Aussage zum Phasendiagramm von Wasser ist FALSCH?",
@@ -1527,7 +1527,7 @@ Bei hoher Luftfeuchtigkeit (>80 %) ist die Luft wasserdampfgesättigt → Verdun
             "Eis schwimmt auf Wasser — was sagt das über die Dichte und die Schmelzkurve?",
           ],
           tags: ["phasendiagramm", "wasser-anomalie", "schmelzkurve"],
-          difficulty: 2,
+          difficulty: 3,
         },
         {
           question:
@@ -1547,7 +1547,7 @@ Bei hoher Luftfeuchtigkeit (>80 %) ist die Luft wasserdampfgesättigt → Verdun
             "Gesamtdruck in 30 m = 4 bar. N₂-Anteil bleibt 79 %. Verhältnis zu Oberfläche?",
           ],
           tags: ["henry-gesetz", "tauchen", "dekompression"],
-          difficulty: 2,
+          difficulty: 3,
         },
         {
           question:
@@ -1567,7 +1567,7 @@ Bei hoher Luftfeuchtigkeit (>80 %) ist die Luft wasserdampfgesättigt → Verdun
             "Warum reicht 100 °C nicht? Bakteriensporen können kochendes Wasser überleben.",
           ],
           tags: ["siedepunkt", "autoklav", "dampfdruck"],
-          difficulty: 1,
+          difficulty: 2,
         },
         {
           question:

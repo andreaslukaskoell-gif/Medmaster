@@ -260,7 +260,7 @@ Klinisch relevant:
             "Suche die Reaktion, bei der A + B → AB gilt — also ein neues zusammengesetztes Produkt entsteht.",
           ],
           tags: ["reaktionstypen", "synthese"],
-          difficulty: 1,
+          difficulty: 2,
         },
         {
           question: "Was charakterisiert eine Redoxreaktion auf der Elektronenebene?",
@@ -279,7 +279,7 @@ Klinisch relevant:
             "Redox-Reaktionen ändern die Oxidationszahlen der beteiligten Atome.",
           ],
           tags: ["redox", "oxidation", "reduktion"],
-          difficulty: 1,
+          difficulty: 2,
         },
         {
           question: "Was ist die korrekte Aussage über Katalysatoren?",
@@ -298,7 +298,7 @@ Klinisch relevant:
             "Gleichgewichtslage und Reaktionsenthalpie bleiben unberührt.",
           ],
           tags: ["katalyse", "aktivierungsenergie"],
-          difficulty: 2,
+          difficulty: 3,
         },
         {
           question: "Bei der Reaktion Zn + CuSO₄ → ZnSO₄ + Cu: Was passiert mit Zink?",
@@ -317,7 +317,7 @@ Klinisch relevant:
             "OIL: Oxidation Is Loss — Zink gibt etwas ab.",
           ],
           tags: ["redox", "oxidation", "oxidationszahl"],
-          difficulty: 2,
+          difficulty: 3,
         },
         {
           question: "Welche Aussage zu exothermen und endothermen Reaktionen ist korrekt?",
@@ -336,7 +336,7 @@ Klinisch relevant:
             "Exotherm bedeutet Wärmefreisetzung, nicht automatisch Spontaneität.",
           ],
           tags: ["thermodynamik", "enthalpie", "spontaneität"],
-          difficulty: 2,
+          difficulty: 3,
         },
         {
           question: "Welcher Reaktionstyp liegt bei NaCl + AgNO₃ → AgCl↓ + NaNO₃ vor?",
@@ -355,7 +355,7 @@ Klinisch relevant:
             "Der Pfeil mit ↓ bedeutet: ein unlöslicher Niederschlag entsteht.",
           ],
           tags: ["metathese", "faellungsreaktion", "reaktionstypen"],
-          difficulty: 1,
+          difficulty: 2,
         },
         {
           question:
@@ -384,7 +384,7 @@ Klinisch relevant:
           correctIndex: 2,
           explanation:
             "Aussagen 1, 3 und 5 sind korrekt: Redoxreaktionen beinhalten Elektronentransfer (1). Brønsted-Säure-Base-Reaktionen sind durch Protonenübertragung definiert (3). Exotherme Reaktionen haben ΔH < 0 (5). Aussage 2 ist falsch — das Oxidationsmittel wird selbst reduziert (es nimmt Elektronen auf). Aussage 4 ist falsch — Katalysatoren senken zwar E_A, verschieben aber NICHT das Gleichgewicht; sie beschleunigen Hin- und Rückreaktion gleichermaßen.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["typ-k", "redox", "säure-base"],
         },
       ],
@@ -583,7 +583,7 @@ Michaelis-Menten erklärt, warum Enzyme bei hoher Substratkonzentration sättige
             "Konzentration: mol/L; Zeit: s — was ergibt sich daraus?",
           ],
           tags: ["kinetik", "einheiten", "reaktionsgeschwindigkeit"],
-          difficulty: 1,
+          difficulty: 2,
         },
         {
           question:
@@ -597,7 +597,7 @@ Michaelis-Menten erklärt, warum Enzyme bei hoher Substratkonzentration sättige
             "Teile 0,693 durch den gegebenen k-Wert.",
           ],
           tags: ["kinetik", "halbwertszeit", "erste-ordnung"],
-          difficulty: 2,
+          difficulty: 3,
         },
         {
           question:
@@ -617,7 +617,7 @@ Michaelis-Menten erklärt, warum Enzyme bei hoher Substratkonzentration sättige
             "Der Temperaturkoeffizient Q₁₀ beschreibt, um welchen Faktor v steigt.",
           ],
           tags: ["rgt-regel", "temperatur", "kinetik"],
-          difficulty: 1,
+          difficulty: 2,
         },
         {
           question: "Warum folgt der Ethanolabbau in der Leber einer Kinetik 0. Ordnung?",
@@ -655,7 +655,7 @@ Michaelis-Menten erklärt, warum Enzyme bei hoher Substratkonzentration sättige
             "e^(−kleiner Wert) ist größer als e^(−großer Wert).",
           ],
           tags: ["arrhenius", "katalyse", "aktivierungsenergie"],
-          difficulty: 2,
+          difficulty: 3,
         },
         {
           question: "Bei der Michaelis-Menten-Kinetik: Was gilt, wenn [S] ≫ Kₘ?",
@@ -674,7 +674,7 @@ Michaelis-Menten erklärt, warum Enzyme bei hoher Substratkonzentration sättige
             "Sättigung bedeutet: Alle aktiven Zentren sind belegt.",
           ],
           tags: ["michaelis-menten", "enzymkinetik", "sättigung"],
-          difficulty: 2,
+          difficulty: 3,
         },
         {
           question: "Welche Aussage zur Halbwertszeit einer Reaktion 1. Ordnung ist korrekt?",
@@ -693,7 +693,7 @@ Michaelis-Menten erklärt, warum Enzyme bei hoher Substratkonzentration sättige
             "Für 1. Ordnung: t₁/₂ = ln 2 / k. Ist [A]₀ in dieser Formel enthalten?",
           ],
           tags: ["halbwertszeit", "erste-ordnung", "pharmakokinetik"],
-          difficulty: 2,
+          difficulty: 3,
         },
         {
           question: "Welche Aussage über Reaktionskinetik ist FALSCH?",
@@ -707,7 +707,7 @@ Michaelis-Menten erklärt, warum Enzyme bei hoher Substratkonzentration sättige
           correctIndex: 2,
           explanation:
             "Aussage C ist FALSCH: In der Arrhenius-Gleichung k = A·e^(−E_A/RT) steht E_A mit negativem Vorzeichen im Exponenten. Eine Senkung von E_A macht den Exponenten weniger negativ, was zu einem GRÖSSEREN e-Wert und damit einem GRÖSSEREN k führt — nicht einem kleineren. Genau das ist der Effekt eines Katalysators: E_A sinkt → k steigt → Reaktion wird schneller. Alle anderen Aussagen sind korrekt.",
-          difficulty: 2,
+          difficulty: 3,
           tags: ["falsch-aussage", "kinetik", "arrhenius"],
         },
       ],
@@ -903,7 +903,7 @@ Das Massenwirkungsgesetz beschreibt die O₂-Bindung an Hämoglobin: Hb + O₂ �
             "Koeffizienten werden zu Exponenten im MWG",
             "Produkte im Zähler, Edukte im Nenner",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["massenwirkungsgesetz", "gleichgewichtskonstante", "stöchiometrie"],
         },
         {
@@ -922,7 +922,7 @@ Das Massenwirkungsgesetz beschreibt die O₂-Bindung an Hämoglobin: Hb + O₂ �
             "K_c < 1: Gleichgewicht auf Eduktseite",
             "K_c > 1: Gleichgewicht auf Produktseite",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["gleichgewichtskonstante", "lage", "edukte"],
         },
         {
@@ -941,7 +941,7 @@ Das Massenwirkungsgesetz beschreibt die O₂-Bindung an Hämoglobin: Hb + O₂ �
             "Q: aktuelle Konzentrationen; K_c: Gleichgewichtskonzentrationen",
             "Q < K → vorwärts; Q > K → rückwärts",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["reaktionsquotient", "q-vs-k", "reaktionsrichtung"],
         },
         {
@@ -979,7 +979,7 @@ Das Massenwirkungsgesetz beschreibt die O₂-Bindung an Hämoglobin: Hb + O₂ �
             "Aktivität des reinen Lösungsmittels ≈ 1",
             "Feststoffe und H₂O erscheinen nicht explizit im MWG-Ausdruck",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["mwg", "lösungsmittel", "aktivität"],
         },
         {
@@ -1018,7 +1018,7 @@ Das Massenwirkungsgesetz beschreibt die O₂-Bindung an Hämoglobin: Hb + O₂ �
             "Produkte im Zähler, Edukte im Nenner — Exponenten = Koeffizienten",
             "NH₃² im Zähler → NH₃ ist Produkt mit Koeffizient 2",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["mwg", "haber-bosch", "stöchiometrie"],
         },
         {
@@ -1038,7 +1038,7 @@ Das Massenwirkungsgesetz beschreibt die O₂-Bindung an Hämoglobin: Hb + O₂ �
             "Dynamisch = beide Reaktionen laufen weiter, aber gleich schnell",
             "Netto-Änderung = 0, aber mikroskopisch aktiv",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["dynamisches-gleichgewicht", "definition", "reversibel"],
         },
       ],
@@ -1220,7 +1220,7 @@ CO₂ + H₂O ⇌ H₂CO₃ ⇌ H⁺ + HCO₃⁻
             "Δn = Produkt-Gasmole minus Edukt-Gasmole",
             "Druckerhöhung → Seite mit kleinerem Δn",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["le-chatelier", "druck", "delta-n"],
         },
         {
@@ -1239,7 +1239,7 @@ CO₂ + H₂O ⇌ H₂CO₃ ⇌ H⁺ + HCO₃⁻
             "Le Chatelier: 'Gegenreaktion auf Störung'",
             "Gilt für Konzentration, Druck und Temperatur",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["le-chatelier", "definition", "störung"],
         },
         {
@@ -1259,7 +1259,7 @@ CO₂ + H₂O ⇌ H₂CO₃ ⇌ H⁺ + HCO₃⁻
             "Endotherm: Wärme ist 'Edukt' → Zufuhr von Wärme → mehr Produkte",
             "Van't-Hoff: ΔH > 0 + höhere T → K_c steigt",
           ],
-          difficulty: 2,
+          difficulty: 3,
           tags: ["le-chatelier", "endotherm", "temperatur"],
         },
         {
@@ -1688,7 +1688,7 @@ Thermodynamisch erklärt: Bei höherem T steigt T·ΔS → ΔG wird für exergon
             "Spontan = thermodynamisch begünstigt, nicht Geschwindigkeit",
             "ΔG kombiniert ΔH UND ΔS",
           ],
-          difficulty: 1,
+          difficulty: 2,
           tags: ["gibbs-energie", "spontaneität", "exergon"],
         },
         {
