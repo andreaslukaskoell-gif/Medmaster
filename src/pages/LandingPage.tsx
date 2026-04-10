@@ -338,7 +338,7 @@ export default function LandingPage() {
         </header>
 
         {/* ─── Urgency bar (sticks below header) ─── */}
-        {!countdown.expired && (
+        {!countdown.expired ? (
           <div className="text-center py-2 sm:py-3 px-4" style={{ backgroundColor: NAVY }}>
             <p className="text-xs sm:text-sm font-medium text-white/90 tracking-wide flex items-center justify-center gap-2 sm:gap-3">
               <span>Gratis-Zugang endet in</span>
@@ -352,6 +352,18 @@ export default function LandingPage() {
                 </span>
                 <span className="bg-white/15 rounded px-1.5 py-0.5 hidden sm:inline">
                   {String(countdown.seconds).padStart(2, "0")}s
+                </span>
+              </span>
+            </p>
+          </div>
+        ) : (
+          <div className="text-center py-2 sm:py-3 px-4" style={{ backgroundColor: NAVY }}>
+            <p className="text-xs sm:text-sm font-medium text-white/90 tracking-wide flex items-center justify-center gap-2 sm:gap-3">
+              <Clock className="w-3.5 h-3.5" />
+              <span>
+                MedAT am 3. Juli — noch{" "}
+                <span className="font-bold">
+                  {Math.max(0, Math.ceil((new Date("2026-07-03").getTime() - Date.now()) / 86400000))} Tage
                 </span>
               </span>
             </p>
@@ -1070,6 +1082,18 @@ export default function LandingPage() {
               <Link to="/agb" className="hover:text-[var(--text-primary)] transition-colors">
                 AGB
               </Link>
+              <button
+                type="button"
+                onClick={() => {
+                  import("@/hooks/useCookieConsent").then(({ resetConsent }) => {
+                    resetConsent();
+                    window.location.reload();
+                  });
+                }}
+                className="hover:text-[var(--text-primary)] transition-colors cursor-pointer"
+              >
+                Cookie-Einstellungen
+              </button>
             </div>
           </div>
         </div>

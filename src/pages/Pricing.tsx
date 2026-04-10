@@ -36,6 +36,8 @@ export default function Pricing() {
   const { user } = useAuth();
   const reward = useReferralReward();
 
+  const [widerrufConsent, setWiderrufConsent] = useState(false);
+
   const isFreePromo = new Date() < new Date("2026-04-01T00:00:00+02:00");
   const personalPrice = reward.personalPriceCents;
   const hasDiscount = reward.hasReward;
@@ -91,13 +93,13 @@ export default function Pricing() {
                     </span>
                   </div>
                   <p className="text-sm text-emerald-600 dark:text-emerald-400 font-medium">
-                    Dein persönlicher Preis
+                    Dein persönlicher Preis inkl. MwSt.
                   </p>
                 </>
               ) : (
                 <>
                   <span className="text-4xl font-bold text-[var(--text-primary)]">€29,90</span>
-                  <p className="text-sm text-[var(--muted)]">Einmalig — kein Abo</p>
+                  <p className="text-sm text-[var(--muted)]">Einmalig inkl. MwSt. — kein Abo</p>
                 </>
               )}
             </div>
@@ -112,6 +114,26 @@ export default function Pricing() {
             ))}
           </div>
 
+          {/* FAGG §18 Widerrufsverzicht — Checkbox vor Kauf (nur wenn kostenpflichtig) */}
+          {!isFreePromo && isPaymentEnabled() && user && (
+            <label className="flex items-start gap-3 mb-4 cursor-pointer text-xs text-[var(--muted)] leading-relaxed">
+              <input
+                type="checkbox"
+                checked={widerrufConsent}
+                onChange={(e) => setWiderrufConsent(e.target.checked)}
+                className="accent-[var(--accent)] mt-0.5 shrink-0"
+              />
+              <span>
+                Ich stimme zu, dass die Bereitstellung der digitalen Inhalte sofort nach dem Kauf
+                beginnt, und mir ist bekannt, dass ich damit mein{" "}
+                <a href="/agb" className="text-[var(--accent)] hover:underline" target="_blank">
+                  Widerrufsrecht
+                </a>{" "}
+                verliere (§ 18 Abs. 1 Z 11 FAGG).
+              </span>
+            </label>
+          )}
+
           {isFreePromo ? (
             <Button className="w-full py-6 text-base font-semibold" size="lg" asChild>
               <Link to="/login">
@@ -123,15 +145,16 @@ export default function Pricing() {
             <Button
               className="w-full py-6 text-base font-semibold"
               size="lg"
+              disabled={!widerrufConsent}
               onClick={() => startCheckout({ email: user.email ?? undefined, userId: user.id })}
             >
-              Jetzt kaufen — {formatPrice(personalPrice)}
+              Jetzt kaufen — {formatPrice(personalPrice)} inkl. MwSt.
               <ArrowRight className="w-4 h-4 ml-2" />
             </Button>
           ) : isPaymentEnabled() && !user ? (
             <Button className="w-full py-6 text-base font-semibold" size="lg" asChild>
               <Link to="/login?redirect=/preise">
-                Anmelden & kaufen — {formatPrice(personalPrice)}
+                Anmelden & kaufen — {formatPrice(personalPrice)} inkl. MwSt.
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </Button>
@@ -156,7 +179,7 @@ export default function Pricing() {
             </div>
             <div className="flex items-center gap-1.5">
               <RotateCcw className="w-3.5 h-3.5" />
-              <span>14 Tage Geld-zurück-Garantie</span>
+              <span>14 Tage Widerrufsrecht (FAGG)</span>
             </div>
           </div>
 
@@ -269,9 +292,10 @@ export default function Pricing() {
             Ja! Der Starter-Zugang ist kostenlos und enthält 50 BMS-Fragen pro Fach,
             20 KFF-Übungen pro Subtest und 2 TV-Textsets. Keine Kreditkarte nötig.
           </FaqItem>
-          <FaqItem q="Gibt es eine Geld-zurück-Garantie?">
-            Ja. Wenn du innerhalb von 14 Tagen nach dem Kauf nicht zufrieden bist,
-            erstatten wir dir den vollen Betrag. Einfach an support@medmaster.at schreiben.
+          <FaqItem q="Kann ich vom Kauf zurücktreten?">
+            Ja. Du hast ein gesetzliches Widerrufsrecht von 14 Tagen ab Vertragsschluss
+            (gem. FAGG). Schreib einfach an support@medmaster.at. Details findest du in
+            unseren <a href="/agb" className="text-[var(--accent)] hover:underline">AGB</a>.
           </FaqItem>
           <FaqItem q="Ist das ein Abo?">
             Nein. MedMaster ist eine Einmalzahlung von €29,90. Kein Abo, keine versteckten

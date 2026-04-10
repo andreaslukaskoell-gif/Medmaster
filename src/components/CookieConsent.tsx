@@ -67,14 +67,13 @@ export function CookieConsentBanner() {
                   acceptNecessaryOnly();
                   window.location.reload();
                 }}
-                className="px-4 py-2 text-sm font-medium rounded-lg border border-[var(--border)] text-[var(--text-secondary)] hover:bg-[var(--background)] cursor-pointer"
+                className="px-4 py-2 text-sm font-medium rounded-lg border border-[var(--border)] text-[var(--text-primary)] hover:bg-[var(--background)] cursor-pointer"
               >
                 Nur notwendige
               </button>
               <button
                 onClick={handleAcceptAll}
-                className="px-4 py-2 text-sm font-medium rounded-lg text-white cursor-pointer"
-                style={{ background: "var(--accent)" }}
+                className="px-4 py-2 text-sm font-medium rounded-lg border border-[var(--border)] text-[var(--text-primary)] hover:bg-[var(--background)] cursor-pointer"
               >
                 Alle akzeptieren
               </button>

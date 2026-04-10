@@ -120,6 +120,10 @@ function Impressum() {
             <td className="py-2 text-[var(--foreground)]">Dr. Andreas Lukas Köll</td>
           </tr>
           <tr className="border-b border-[var(--border)]">
+            <td className="py-2 pr-4 font-medium text-[var(--muted)]">Rechtsform</td>
+            <td className="py-2 text-[var(--foreground)]">Einzelunternehmen</td>
+          </tr>
+          <tr className="border-b border-[var(--border)]">
             <td className="py-2 pr-4 font-medium text-[var(--muted)]">Adresse</td>
             <td className="py-2 text-[var(--foreground)]">
               Laudongasse 22/4, 1080 Wien, Österreich
@@ -128,6 +132,12 @@ function Impressum() {
           <tr className="border-b border-[var(--border)]">
             <td className="py-2 pr-4 font-medium text-[var(--muted)]">E-Mail</td>
             <td className="py-2 text-[var(--foreground)]">support@medmaster.at</td>
+          </tr>
+          <tr className="border-b border-[var(--border)]">
+            <td className="py-2 pr-4 font-medium text-[var(--muted)]">Umsatzsteuer</td>
+            <td className="py-2 text-[var(--foreground)]">
+              Umsatzsteuerbefreit gemäß § 6 Abs. 1 Z 27 UStG (Kleinunternehmerregelung)
+            </td>
           </tr>
         </tbody>
       </table>
@@ -142,7 +152,14 @@ function Impressum() {
         Auswärtsgeschäfte-Gesetz (FAGG).
       </p>
 
-      <h2>Aufsichtsbehörde</h2>
+      <h2>Gewerbebehörde</h2>
+      <p>
+        Magistrat der Stadt Wien, MA 63 – Gewerbewesen und rechtliche Angelegenheiten.
+        Freies Gewerbe gemäß § 5 Abs. 2 GewO (Dienstleistungen in der automatischen
+        Datenverarbeitung und Informationstechnik). Mitglied der Wirtschaftskammer Wien.
+      </p>
+
+      <h2>Aufsichtsbehörde (Datenschutz)</h2>
       <p>
         Österreichische Datenschutzbehörde, Barichgasse 40-42, 1030 Wien (
         <a href="https://www.dsb.gv.at" target="_blank" rel="noopener noreferrer">
@@ -181,7 +198,9 @@ function Impressum() {
         <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer">
           ec.europa.eu/consumers/odr
         </a>
-        . Wir sind weder bereit noch verpflichtet, an einem Streitbeilegungsverfahren vor einer
+        . Unsere E-Mail-Adresse:{" "}
+        <a href="mailto:support@medmaster.at">support@medmaster.at</a>. Wir sind weder bereit
+        noch verpflichtet, an einem Streitbeilegungsverfahren vor einer
         Verbraucherschlichtungsstelle teilzunehmen.
       </p>
     </article>
@@ -296,8 +315,11 @@ function Datenschutz() {
           </a>
         </li>
         <li>
-          <strong>Sentry (Functional Software Inc.)</strong> — Fehlerverfolgung zur
-          Qualitätssicherung (berechtigtes Interesse, Art. 6 Abs. 1 lit. f DSGVO):{" "}
+          <strong>Sentry (Functional Software Inc., USA)</strong> — Fehlerverfolgung zur
+          Sicherstellung der Plattformstabilität und raschen Fehlerbehebung. Erfasst werden
+          technische Daten (IP-Adresse, Browser, Fehler-Stack-Traces). Rechtsgrundlage:
+          berechtigtes Interesse an der Qualitätssicherung (Art. 6 Abs. 1 lit. f DSGVO). Sie
+          können der Verarbeitung gemäß Art. 21 DSGVO widersprechen.{" "}
           <a href="https://sentry.io/privacy" target="_blank" rel="noopener noreferrer">
             sentry.io/privacy
           </a>
@@ -310,7 +332,48 @@ function Datenschutz() {
         </li>
       </ul>
 
-      <h2>7. Ihre Rechte</h2>
+      <h2>7. Auftragsverarbeitung</h2>
+      <p>
+        Mit allen unter Abschnitt 6 genannten Dienstleistern bestehen
+        Auftragsverarbeitungsverträge gemäß Art. 28 DSGVO.
+      </p>
+
+      <h2>8. Internationale Datenübermittlung</h2>
+      <p>
+        Einige unserer Dienstleister haben ihren Sitz in den USA. Die Datenübermittlung in
+        die USA erfolgt auf folgenden Rechtsgrundlagen:
+      </p>
+      <ul>
+        <li>
+          <strong>Stripe, Inc.</strong> und <strong>Sentry (Functional Software Inc.)</strong> sind
+          unter dem EU-U.S. Data Privacy Framework (DPF) zertifiziert. Die Europäische Kommission
+          hat für das DPF einen Angemessenheitsbeschluss erlassen (Art. 45 DSGVO). Zertifizierung
+          prüfbar unter{" "}
+          <a href="https://www.dataprivacyframework.gov" target="_blank" rel="noopener noreferrer">
+            dataprivacyframework.gov
+          </a>
+          .
+        </li>
+        <li>
+          <strong>Google Ireland Ltd.</strong> verarbeitet Daten primär in der EU. Soweit
+          Daten in die USA übermittelt werden, erfolgt dies auf Grundlage von
+          Standardvertragsklauseln (Art. 46 Abs. 2 lit. c DSGVO) und dem DPF.
+        </li>
+      </ul>
+      <p>
+        Ergänzend bestehen mit allen US-Dienstleistern Standardvertragsklauseln (SCCs) gemäß
+        Art. 46 Abs. 2 lit. c DSGVO als Absicherung.
+      </p>
+
+      <h2>9. Datensicherheit</h2>
+      <p>
+        Wir treffen angemessene technische und organisatorische Maßnahmen zum Schutz Ihrer Daten
+        gemäß Art. 32 DSGVO. Dazu gehören insbesondere: Verschlüsselung der Datenübertragung
+        (TLS/HTTPS), Zugriffskontrollen auf Datenbankebene, regelmäßige Sicherheitsupdates
+        sowie die Speicherung in EU-Rechenzentren.
+      </p>
+
+      <h2>10. Ihre Rechte</h2>
       <p>Sie haben gemäß DSGVO folgende Rechte:</p>
       <ul>
         <li>
@@ -338,7 +401,7 @@ function Datenschutz() {
         <a href="mailto:support@medmaster.at">support@medmaster.at</a>.
       </p>
 
-      <h2>8. Beschwerderecht</h2>
+      <h2>11. Beschwerderecht</h2>
       <p>Sie haben das Recht, eine Beschwerde bei der zuständigen Aufsichtsbehörde einzureichen:</p>
       <p>
         <strong>Österreichische Datenschutzbehörde</strong>
@@ -355,7 +418,7 @@ function Datenschutz() {
         </a>
       </p>
 
-      <h2>9. Änderungen</h2>
+      <h2>12. Änderungen</h2>
       <p>
         Wir behalten uns vor, diese Datenschutzerklärung bei Bedarf anzupassen, um sie an geänderte
         Rechtslagen oder bei Änderungen des Dienstes anzupassen. Die aktuelle Fassung finden Sie
@@ -441,8 +504,9 @@ function AGB() {
         </li>
       </ul>
       <p>
-        Verstöße werden zivilrechtlich verfolgt. Schadenersatzansprüche in Höhe von bis zu EUR
-        10.000,- pro Verstoß bleiben vorbehalten. Bei Verdacht auf systematische
+        Der Betreiber behält sich sämtliche zivilrechtliche Ansprüche wegen
+        Urheberrechtsverletzungen vor, insbesondere Unterlassung, Beseitigung und
+        Schadenersatz nach dem Urheberrechtsgesetz (UrhG). Bei Verdacht auf systematische
         Urheberrechtsverletzungen wird Strafanzeige erstattet.
       </p>
 
@@ -454,16 +518,36 @@ function AGB() {
         (z.B. per E-Mail an support@medmaster.at).
       </p>
       <p>
-        <strong>Verzicht bei Nutzungsbeginn:</strong> Nehmen Sie vor Ablauf der Widerrufsfrist die
-        von MedMaster angebotene Leistung (Nutzung der Online-Lernplattform) in Anspruch und stimmen
-        ausdrücklich zu, dass die Leistungserbringung vor Ablauf der Rücktrittsfrist beginnt, so
-        erlischt Ihr Widerrufsrecht mit Beginn der Vertragserfüllung (§ 18 Abs. 1 Z 11 FAGG). Die
-        Nutzung beginnt mit dem ersten Aufruf der Lernplattform nach dem Kauf.
+        <strong>Verzicht bei digitalen Inhalten (§ 18 Abs. 1 Z 11 FAGG):</strong> Vor dem
+        Kauf werden Sie aufgefordert, ausdrücklich zuzustimmen, dass die Bereitstellung der
+        digitalen Inhalte sofort beginnt und dass Sie damit Ihr Widerrufsrecht verlieren. Ohne
+        diese ausdrückliche Zustimmung wird der Kauf nicht abgeschlossen. Mit Erteilung der
+        Zustimmung und Beginn der Leistungserbringung erlischt Ihr Widerrufsrecht.
       </p>
       <p>
         <strong>Kündigung:</strong> Da es sich um einen einmaligen Kauf handelt, ist keine Kündigung
         erforderlich. Der Zugang bleibt nach Zahlung zeitlich unbegrenzt bestehen.
       </p>
+
+      <h3>Muster-Widerrufsformular</h3>
+      <p className="text-xs text-[var(--muted)]">
+        (Wenn Sie den Vertrag widerrufen wollen, füllen Sie bitte dieses Formular aus und senden
+        Sie es zurück.)
+      </p>
+      <div className="not-prose bg-[var(--background)] border border-[var(--border)] rounded-lg p-4 text-sm space-y-2">
+        <p>An: Dr. Andreas Lukas Köll, Laudongasse 22/4, 1080 Wien</p>
+        <p>E-Mail: support@medmaster.at</p>
+        <p>
+          Hiermit widerrufe(n) ich/wir (*) den von mir/uns (*) abgeschlossenen Vertrag über die
+          Erbringung der folgenden Dienstleistung: MedMaster Premium-Zugang
+        </p>
+        <p>Bestellt am (*) / erhalten am (*):</p>
+        <p>Name des/der Verbraucher(s):</p>
+        <p>Anschrift des/der Verbraucher(s):</p>
+        <p>Datum:</p>
+        <p>Unterschrift (nur bei Mitteilung auf Papier):</p>
+        <p className="text-[var(--muted)] text-xs">(*) Unzutreffendes streichen.</p>
+      </div>
 
       <h2>8. Kontolöschung</h2>
       <p>
@@ -493,18 +577,16 @@ function AGB() {
         <strong>kein bestimmter Lern- oder Prüfungserfolg garantiert</strong>.
       </p>
       <p>
-        Der Betreiber sowie seine gesetzlichen Vertreter und Erfüllungsgehilfen haften
-        ausschließlich für den Ersatz von vorhersehbaren Schäden, die grob fahrlässig oder
-        vorsätzlich verursacht wurden. Bei grober Fahrlässigkeit ist die Haftung der Höhe nach mit
-        dem Auftragswert beschränkt.
+        Bei <strong>leichter Fahrlässigkeit</strong> ist die Haftung des Betreibers auf den Ersatz
+        vorhersehbarer, vertragstypischer Schäden beschränkt, der Höhe nach begrenzt mit dem
+        Auftragswert. Für mittelbare Schäden, entgangenen Gewinn, Zinsverluste, unterbliebene
+        Einsparungen, Folge- und bloße Vermögensschäden haftet der Betreiber bei leichter
+        Fahrlässigkeit nicht.
       </p>
       <p>
-        Für{" "}
-        <strong>
-          mittelbare Schäden, entgangenen Gewinn, Zinsverluste, unterbliebene Einsparungen, Folge-
-          und bloße Vermögensschäden
-        </strong>{" "}
-        sowie Schäden aus Ansprüchen Dritter haftet der Betreiber nicht.
+        Bei <strong>grober Fahrlässigkeit und Vorsatz</strong> gelten die gesetzlichen
+        Haftungsbestimmungen ohne Einschränkung. Die Haftung für Personenschäden bleibt in
+        jedem Fall unberührt (§ 6 Abs. 1 Z 9 KSchG).
       </p>
 
       <h3>Verfügbarkeit</h3>
@@ -533,15 +615,33 @@ function AGB() {
         Rechtmäßigkeit ergibt sich aus Art. 6 Abs. 1 lit. b DSGVO.
       </p>
 
-      <h2>12. Schlussbestimmungen</h2>
+      <h2>12. Systemvoraussetzungen</h2>
+      <p>
+        MedMaster ist eine webbasierte Anwendung. Voraussetzungen für die Nutzung: ein aktueller
+        Webbrowser (Chrome, Firefox, Safari oder Edge) mit aktiviertem JavaScript sowie eine
+        aktive Internetverbindung. Die Plattform ist für die Desktop-Nutzung optimiert.
+      </p>
+
+      <h2>13. Zahlungsrückforderungen</h2>
+      <p>
+        Im Falle einer Zahlungsrückforderung (Chargeback) über Ihre Bank bitten wir Sie, uns
+        vorab unter{" "}
+        <a href="mailto:support@medmaster.at">support@medmaster.at</a>{" "}
+        zu kontaktieren, damit wir eine einvernehmliche Lösung finden können. Unbegründete
+        Rückforderungen trotz erfolgter Leistungserbringung können zur Sperrung des Kontos führen.
+      </p>
+
+      <h2>14. Schlussbestimmungen</h2>
       <p>
         Es gilt das Recht der Republik Österreich unter Ausschluss des UN-Kaufrechts. Günstigere
         zwingende Verbraucherschutzbestimmungen des Wohnsitzstaates des Nutzers bleiben unberührt
-        (Rom-I-VO 593/2008/EG). Gerichtsstand für Streitigkeiten ist, soweit gesetzlich zulässig,
-        Wien. Sollte eine Bestimmung unwirksam sein, bleibt die Wirksamkeit der übrigen Bestimmungen
-        unberührt; die unwirksame Bestimmung wird durch eine wirtschaftlich gleichwertige ersetzt.
-        Änderungen dieser AGB werden auf dieser Seite veröffentlicht; bei wesentlichen Änderungen
-        werden registrierte Nutzer per E-Mail informiert.
+        (Rom-I-VO 593/2008/EG). Für Verbraucher gelten die gesetzlichen Gerichtsstandregelungen
+        (§ 14 KSchG). Für Unternehmer ist Gerichtsstand Wien.
+      </p>
+      <p>
+        Sollte eine Bestimmung dieser AGB unwirksam sein, bleibt die Wirksamkeit der übrigen
+        Bestimmungen unberührt. Änderungen dieser AGB werden auf dieser Seite veröffentlicht;
+        bei wesentlichen Änderungen werden registrierte Nutzer per E-Mail informiert.
       </p>
       <p>
         Bei Fragen zu diesen AGB wenden Sie sich an{" "}
