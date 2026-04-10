@@ -22,6 +22,7 @@ import { mathematikPool16 } from "./mathematikPool16";
 import { mathematikPoolOffiziellStyle } from "./mathematikPoolOffiziellStyle";
 import { mathematikWasIstFalsch } from "./mathematikWasIstFalsch";
 import { mathematikTypKNew } from "./mathematikPoolTypKNew";
+import { mathematikTypKNew2 } from "./mathematikPoolTypKNew2";
 
 export const mathematikPoolQuestions: Question[] = [
   ...mathematikPool1,
@@ -43,4 +44,5 @@ export const mathematikPoolQuestions: Question[] = [
   ...mathematikPoolOffiziellStyle,
   ...mathematikWasIstFalsch,
   ...mathematikTypKNew,
+  ...mathematikTypKNew2,
 ];
