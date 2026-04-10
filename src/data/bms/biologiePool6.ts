@@ -342,7 +342,7 @@ export const biologiePool6: Question[] = [
     ["Nanometer", "Mikrometer", "Millimeter", "Zentimeter", "Meter"],
     4,
     "Die Gesamtlänge der DNA pro Zellkern wird in Metern angegeben.",
-    "leicht",
+    "mittel",
     ["rechenfrage", "DNA", "Zelle"]
   ),
   q(

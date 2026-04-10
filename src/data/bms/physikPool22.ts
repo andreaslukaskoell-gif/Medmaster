@@ -488,7 +488,7 @@ export const physikPool22: Question[] = [
     ],
     3,
     "D ist falsch: E = hf = hc/λ, die Energie ist UMGEKEHRT proportional zur Wellenlänge (kürzere Wellenlänge → mehr Energie). Korrekt wäre: proportional zur Frequenz. A: De-Broglie korrekt. B: Davisson-Germer-Experiment korrekt. C: Photoeffekt → Teilchen korrekt. E: Compton → Photon hat Impuls p = h/λ korrekt.",
-    "schwer",
+    "mittel",
     ["Welle-Teilchen-Dualismus", "De-Broglie", "Optik", "falsch-aussage"]
   ),
 

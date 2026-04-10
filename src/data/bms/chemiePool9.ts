@@ -32,7 +32,7 @@ export const chemiePool9: Question[] = [
     ["8", "9", "10", "18", "17"],
     1,
     "Ein neutrales Atom hat gleich viele Elektronen wie Protonen. ¹⁸F hat 9 Protonen, also 9 Elektronen.",
-    "mittel",
+    "schwer",
     ["atombau", "elektronen"]
   ),
 
@@ -49,7 +49,7 @@ export const chemiePool9: Question[] = [
     ],
     2,
     "Die Ionisierungsenergie nimmt innerhalb einer Gruppe von oben nach unten AB (nicht zu), da die Valenzelektronen weiter vom Kern entfernt und stärker abgeschirmt sind.",
-    "mittel",
+    "schwer",
     ["periodensystem", "falsch-aussage"]
   ),
 
@@ -83,7 +83,7 @@ export const chemiePool9: Question[] = [
     ],
     1,
     "Barium (Z = 56) ist ein Erdalkalimetall (2. Hauptgruppe) mit der Konfiguration [Xe] 6s². Es hat 2 Valenzelektronen im 6s-Orbital.",
-    "leicht",
+    "mittel",
     ["elektronenkonfiguration", "periodensystem"]
   ),
 
@@ -100,7 +100,7 @@ export const chemiePool9: Question[] = [
     ],
     4,
     "Isotope haben die gleiche Ordnungszahl (= gleiche Protonenzahl = gleiche Elektronenzahl im neutralen Zustand). Sie unterscheiden sich nur in der Neutronenzahl und damit der Massenzahl.",
-    "leicht",
+    "mittel",
     ["isotope", "falsch-aussage"]
   ),
 
@@ -111,7 +111,7 @@ export const chemiePool9: Question[] = [
     ["53", "78", "131", "184", "64"],
     1,
     "Neutronenzahl = Massenzahl − Protonenzahl = 131 − 53 = 78.",
-    "leicht",
+    "mittel",
     ["atombau", "rechenfrage"]
   ),
 
@@ -128,7 +128,7 @@ export const chemiePool9: Question[] = [
     ],
     4,
     "Das Bohr'sche Modell verwendet feste Kreisbahnen, nicht Orbitalwolken. Die Beschreibung als Aufenthaltswahrscheinlichkeit gehört zum quantenmechanischen Orbitalmodell.",
-    "leicht",
+    "mittel",
     ["atommodell", "falsch-aussage"]
   ),
 
@@ -203,7 +203,7 @@ export const chemiePool9: Question[] = [
     ],
     4,
     "Der Dampfdruck ist eine stoffspezifische Größe, die nur von der Temperatur und der Natur der Flüssigkeit abhängt – nicht vom Volumen des Gasraums. Aussage E ist falsch.",
-    "mittel",
+    "schwer",
     ["dampfdruck", "falsch-aussage"]
   ),
 
@@ -220,7 +220,7 @@ export const chemiePool9: Question[] = [
     ],
     1,
     "0,9 % NaCl (9 g/L) ist isotonisch zum Blutplasma (~290 mOsmol/L). NaCl dissoziiert vollständig in Na⁺ und Cl⁻.",
-    "leicht",
+    "mittel",
     ["loesungen", "osmolaritaet"]
   ),
 
@@ -237,7 +237,7 @@ export const chemiePool9: Question[] = [
     ],
     4,
     "Wasserstoffbrücken treten auch zwischen verschiedenen Molekülen auf, z. B. zwischen Wasser und Ethanol oder zwischen DNA-Basenpaaren (A–T, G–C).",
-    "mittel",
+    "schwer",
     ["wasserstoffbruecken", "falsch-aussage"]
   ),
 
@@ -254,7 +254,7 @@ export const chemiePool9: Question[] = [
     ],
     1,
     "Stärkere intermolekulare Kräfte → mehr Energie nötig, um Moleküle in die Gasphase zu überführen → höherer Siedepunkt.",
-    "mittel",
+    "schwer",
     ["intermolekulare-kraefte", "siedepunkt"]
   ),
 
@@ -299,7 +299,7 @@ export const chemiePool9: Question[] = [
     ["0,5 mol/kg", "1,0 mol/kg", "0,52 mol/kg", "2,0 mol/kg", "0,26 mol/kg"],
     1,
     "ΔT = Kb · m → m = ΔT / Kb = 0,52 / 0,52 = 1,0 mol/kg.",
-    "mittel",
+    "schwer",
     ["kolligative-eigenschaften", "rechenfrage"]
   ),
 
@@ -327,7 +327,7 @@ export const chemiePool9: Question[] = [
     ["0,93 °C", "1,86 °C", "3,72 °C", "0,186 °C", "18,6 °C"],
     1,
     "n = 180 g / 180 g/mol = 1 mol. Molalität = 1 mol/kg. ΔT = Kf · m = 1,86 · 1 = 1,86 °C. Der Gefrierpunkt liegt bei −1,86 °C.",
-    "leicht",
+    "mittel",
     ["kolligative-eigenschaften", "rechenfrage"]
   ),
 
@@ -344,7 +344,7 @@ export const chemiePool9: Question[] = [
     ],
     4,
     "Bei der Osmose wandert das Lösungsmittel von der verdünnteren zur konzentrierteren Seite (entlang des Konzentrationsgefälles des Lösungsmittels). Aussage E kehrt die Richtung um.",
-    "leicht",
+    "mittel",
     ["osmose", "falsch-aussage"]
   ),
 
@@ -391,7 +391,7 @@ export const chemiePool9: Question[] = [
     ],
     2,
     "Ionenverbindungen leiten im festen Zustand NICHT den elektrischen Strom, da die Ionen im Gitter fixiert sind. Erst in Lösung oder Schmelze sind die Ionen beweglich und leiten.",
-    "leicht",
+    "mittel",
     ["ionenbindung", "falsch-aussage"]
   ),
 
@@ -453,7 +453,7 @@ export const chemiePool9: Question[] = [
     ],
     3,
     "Bei Gasen unter Normalbedingungen sind die Moleküle so weit voneinander entfernt, dass intermolekulare Kräfte generell sehr schwach sind. Die Aussage, Dipol-Dipol-Kräfte seien die 'stärkste intermolekulare Kraft' bei Gasen, ist irreführend – bei vielen Gasen dominieren London-Dispersionskräfte.",
-    "mittel",
+    "schwer",
     ["dipol", "falsch-aussage"]
   ),
 
@@ -488,7 +488,7 @@ export const chemiePool9: Question[] = [
     ["6 mol", "12 mol", "2 mol", "18 mol", "3 mol"],
     1,
     "Pro mol Glucose werden 6 mol O₂ benötigt. Für 2 mol Glucose: 2 × 6 = 12 mol O₂.",
-    "leicht",
+    "mittel",
     ["stoechiometrie", "rechenfrage"]
   ),
 
@@ -510,7 +510,7 @@ export const chemiePool9: Question[] = [
     ["11,2 L", "22,4 L", "44,8 L", "2,24 L", "33,6 L"],
     1,
     "n(Mg) = 24,3 / 24,3 = 1 mol. Laut Gleichung entsteht 1 mol H₂ pro mol Mg. V = 1 mol × 22,4 L/mol = 22,4 L.",
-    "leicht",
+    "mittel",
     ["stoechiometrie", "rechenfrage"]
   ),
 
@@ -521,7 +521,7 @@ export const chemiePool9: Question[] = [
     ["0,1 mol/L", "0,2 mol/L", "0,5 mol/L", "1,0 mol/L", "0,02 mol/L"],
     1,
     "Verdünnungsgleichung: c₁V₁ = c₂V₂ → c₂ = (2 × 0,05) / 0,5 = 0,2 mol/L.",
-    "leicht",
+    "mittel",
     ["verduennung", "rechenfrage"]
   ),
 
@@ -532,7 +532,7 @@ export const chemiePool9: Question[] = [
     ["80 g", "160 g", "320 g", "240 g", "64 g"],
     1,
     "n(Fe) = 112/56 = 2 mol. Laut Gleichung: 4 mol Fe → 2 mol Fe₂O₃, also 2 mol Fe → 1 mol Fe₂O₃. m = 1 × 160 = 160 g.",
-    "mittel",
+    "schwer",
     ["stoechiometrie", "rechenfrage"]
   ),
 
@@ -543,7 +543,7 @@ export const chemiePool9: Question[] = [
     ["0,56 L", "1,12 L", "2,24 L", "5,60 L", "11,2 L"],
     1,
     "n(CaCO₃) = 5,0/100 = 0,05 mol. 1:1-Verhältnis → 0,05 mol CO₂. V = 0,05 × 22,4 = 1,12 L.",
-    "mittel",
+    "schwer",
     ["stoechiometrie", "rechenfrage"]
   ),
 
@@ -593,7 +593,7 @@ export const chemiePool9: Question[] = [
     ],
     4,
     "1 mol Wasser (H₂O) enthält 1 mol O-Atome, aber 2 mol H-Atome (da jedes Wassermolekül 2 H-Atome hat). Aussage E ist falsch.",
-    "leicht",
+    "mittel",
     ["mol", "falsch-aussage"]
   ),
 
@@ -610,7 +610,7 @@ export const chemiePool9: Question[] = [
     ],
     1,
     "n(N₂) = 14/28 = 0,5 mol. n(H₂) = 6/2 = 3 mol. Für 0,5 mol N₂ braucht man 1,5 mol H₂ (Verhältnis 1:3). Vorhanden: 3 mol H₂ → H₂ ist im Überschuss (1,5 mol übrig).",
-    "mittel",
+    "schwer",
     ["stoechiometrie", "limitierendes-edukt"]
   ),
 
@@ -668,7 +668,7 @@ export const chemiePool9: Question[] = [
     ],
     3,
     "ΔH > 0 (endotherm) und ΔS < 0 (Entropieabnahme) → ΔG = ΔH − TΔS > 0 bei jeder Temperatur → die Reaktion ist NIEMALS spontan. Aussage D ist falsch.",
-    "mittel",
+    "schwer",
     ["gibbs-energie", "falsch-aussage"]
   ),
 
@@ -696,7 +696,7 @@ export const chemiePool9: Question[] = [
     ["3", "6", "8", "16", "4"],
     2,
     "30 °C / 10 °C = 3 Verdopplungen. Faktor = 2³ = 8.",
-    "mittel",
+    "schwer",
     ["reaktionsgeschwindigkeit", "rechenfrage"]
   ),
 
@@ -713,7 +713,7 @@ export const chemiePool9: Question[] = [
     ],
     3,
     "Die Gleichgewichtskonstante K hängt nur von der Temperatur ab, nicht von den Konzentrationen. Konzentrationsänderungen verschieben den Quotienten Q, bis Q = K wiederhergestellt ist.",
-    "mittel",
+    "schwer",
     ["gleichgewicht", "falsch-aussage"]
   ),
 
@@ -758,7 +758,7 @@ export const chemiePool9: Question[] = [
     ],
     2,
     "Enzyme (wie alle Katalysatoren) verändern NICHT die Lage des Gleichgewichts – sie beschleunigen nur die Einstellung des Gleichgewichts, indem sie die Aktivierungsenergie senken.",
-    "leicht",
+    "mittel",
     ["katalyse", "enzyme", "falsch-aussage"]
   ),
 
@@ -816,7 +816,7 @@ export const chemiePool9: Question[] = [
     ],
     3,
     "Die konjugierte Base einer starken Säure ist eine SCHWACHE Base (nicht starke). Beispiel: Cl⁻ (konjugierte Base von HCl) ist eine sehr schwache Base.",
-    "leicht",
+    "mittel",
     ["saeure-base", "falsch-aussage"]
   ),
 
@@ -905,7 +905,7 @@ export const chemiePool9: Question[] = [
     ["6,20", "7,00", "7,20", "7,40", "8,20"],
     2,
     "Henderson-Hasselbalch: pH = pKs + log([A⁻]/[HA]) = 7,20 + log(0,1/0,1) = 7,20 + 0 = 7,20.",
-    "mittel",
+    "schwer",
     ["puffer", "rechenfrage"]
   ),
 

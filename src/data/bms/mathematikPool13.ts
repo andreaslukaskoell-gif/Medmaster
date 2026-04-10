@@ -286,7 +286,7 @@ export const mathematikPool13: Question[] = [
     ["80", "84", "90", "96", "108"],
     3,
     "1200 × 0,08 = 96 Intensivpatienten.",
-    "leicht",
+    "mittel",
     ["Prozentrechnung", "rechenfrage"]
   ),
   q(

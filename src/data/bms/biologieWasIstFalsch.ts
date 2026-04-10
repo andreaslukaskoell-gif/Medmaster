@@ -46,7 +46,7 @@ export const biologieWasIstFalsch: Question[] = [
     ],
     3,
     "Der Golgi-Apparat modifiziert, sortiert und verpackt Proteine, ist aber nicht der Hauptort der Proteinbiosynthese. Die Proteinbiosynthese findet an den Ribosomen statt (frei im Cytoplasma oder am rauen ER).",
-    "leicht",
+    "mittel",
     ["zellorganellen", "golgi-apparat", "ribosomen"]
   ),
   q(
@@ -78,7 +78,7 @@ export const biologieWasIstFalsch: Question[] = [
     ],
     3,
     "Prokaryoten besitzen typischerweise ein einziges ringförmiges Chromosom (und ggf. Plasmide), keine mehreren linearen Chromosomen. Mehrere lineare Chromosomen sind charakteristisch für Eukaryoten.",
-    "leicht",
+    "mittel",
     ["prokaryoten", "eukaryoten", "chromosomen"]
   ),
   q(
@@ -94,7 +94,7 @@ export const biologieWasIstFalsch: Question[] = [
     ],
     3,
     "Erleichterte Diffusion erfolgt entlang des Konzentrationsgradienten (vom Ort höherer zum Ort niedrigerer Konzentration), nicht dagegen. Der Transport gegen den Gradienten erfordert aktiven Transport mit Energieverbrauch.",
-    "mittel",
+    "schwer",
     ["membrantransport", "diffusion", "aktiver-transport"]
   ),
   q(
@@ -110,7 +110,7 @@ export const biologieWasIstFalsch: Question[] = [
     ],
     3,
     "Die Verdopplung der Zentriolen erfolgt in der S-Phase (zusammen mit der DNA-Replikation) und setzt sich in der G2-Phase fort, nicht in der G1-Phase. In der G1-Phase wächst die Zelle und bereitet sich auf die DNA-Synthese vor.",
-    "mittel",
+    "schwer",
     ["zellzyklus", "mitose", "zentriolen"]
   ),
   q(
@@ -126,7 +126,7 @@ export const biologieWasIstFalsch: Question[] = [
     ],
     3,
     "Mikrotubuli bestehen aus Tubulin-Untereinheiten (α- und β-Tubulin), nicht aus Aktin. Aktin bildet die Mikrofilamente. Dieser Unterschied ist prüfungsrelevant.",
-    "mittel",
+    "schwer",
     ["zytoskelett", "mikrotubuli", "aktin"]
   ),
 
@@ -146,7 +146,7 @@ export const biologieWasIstFalsch: Question[] = [
     ],
     3,
     "Die rechte Herzkammer pumpt sauerstoffarmes Blut in die Lungenarterie, nicht sauerstoffreiches. Das Blut wird erst in der Lunge mit Sauerstoff angereichert und gelangt dann über die Lungenvenen zum linken Herzen.",
-    "leicht",
+    "mittel",
     ["blutkreislauf", "herz", "lungenarterie"]
   ),
   q(
@@ -178,7 +178,7 @@ export const biologieWasIstFalsch: Question[] = [
     ],
     3,
     "Das somatische (willkürliche) Nervensystem steuert die Skelettmuskulatur. Die glatte Muskulatur der Eingeweide wird vom vegetativen (autonomen) Nervensystem gesteuert (Sympathikus und Parasympathikus).",
-    "mittel",
+    "schwer",
     ["nervensystem", "somatisch", "vegetativ"]
   ),
   q(
@@ -194,7 +194,7 @@ export const biologieWasIstFalsch: Question[] = [
     ],
     3,
     "ADH (Antidiuretisches Hormon, Vasopressin) fördert die Wasserrückresorption in den Sammelrohren und konzentriert den Harn. Es hemmt also die Wasserausscheidung — das Gegenteil der falschen Aussage.",
-    "mittel",
+    "schwer",
     ["niere", "adh", "harnkonzentrierung"]
   ),
   q(
@@ -210,7 +210,7 @@ export const biologieWasIstFalsch: Question[] = [
     ],
     2,
     "TSH wird in der Adenohypophyse (Hypophysenvorderlappen) produziert und stimuliert dann die Schilddrüse zur Hormonausschüttung (T3/T4). TSH ist kein Schilddrüsenhormon, sondern ein Hypophysenhormon.",
-    "mittel",
+    "schwer",
     ["hormonsystem", "tsh", "hypophyse"]
   ),
   q(
@@ -242,7 +242,7 @@ export const biologieWasIstFalsch: Question[] = [
     ],
     4,
     "Glatte Muskulatur zeigt keine Querstreifung. Die typischen A- und I-Banden durch die regelmäßige Anordnung von Aktin und Myosin finden sich nur in der quergestreiften Muskulatur (Skelett- und Herzmuskel).",
-    "leicht",
+    "mittel",
     ["muskulatur", "querstreifung", "glatte-muskulatur"]
   ),
   q(
@@ -278,7 +278,7 @@ export const biologieWasIstFalsch: Question[] = [
     ],
     1,
     "Mutation ist zwar die ultimative Quelle neuer Allele, aber nicht die einzige Quelle genetischer Variation. Auch Rekombination (durch Crossing-over und unabhängige Assortierung in der Meiose) erzeugt neue Kombinationen genetischer Variation.",
-    "mittel",
+    "schwer",
     ["evolution", "mutation", "rekombination"]
   ),
   q(
@@ -310,7 +310,7 @@ export const biologieWasIstFalsch: Question[] = [
     ],
     3,
     "Bei der Gastrulation entstehen drei Keimblätter: Ektoderm, Mesoderm und Entoderm, nicht nur zwei. Das Mesoderm als mittleres Keimblatt ist essenziell für die Entwicklung von Muskeln, Knochen, Blutgefäßen und weiteren Strukturen.",
-    "mittel",
+    "schwer",
     ["embryologie", "gastrulation", "keimblätter"]
   ),
   q(
@@ -362,7 +362,7 @@ export const biologieWasIstFalsch: Question[] = [
     ],
     3,
     "Die beiden DNA-Stränge verlaufen antiparallel, nicht parallel. Der eine Strang verläuft in 5'→3'-Richtung, der komplementäre Strang in 3'→5'-Richtung. Diese Antiparallelität ist fundamental für Replikation und Transkription.",
-    "leicht",
+    "mittel",
     ["dna", "antiparallel", "doppelhelix"]
   ),
   q(
@@ -378,7 +378,7 @@ export const biologieWasIstFalsch: Question[] = [
     ],
     4,
     "Bei dominant-rezessivem Erbgang spaltet die F2-Generation im Verhältnis 3:1 (phänotypisch) bzw. 1:2:1 (genotypisch) auf, nicht im Verhältnis 1:1. Das 1:1-Verhältnis tritt bei Rückkreuzung (Testkreuzung) eines heterozygoten Individuums mit einem homozygot-rezessiven auf.",
-    "leicht",
+    "mittel",
     ["mendel", "spaltungsregel", "erbgang"]
   ),
   q(
@@ -394,7 +394,7 @@ export const biologieWasIstFalsch: Question[] = [
     ],
     4,
     "Stille (synonyme) Mutationen führen gerade nicht zu einer veränderten Aminosäuresequenz. Durch die Degeneriertheit des genetischen Codes können verschiedene Codons für dieselbe Aminosäure codieren, sodass ein Basenaustausch ohne Auswirkung auf das Protein bleibt.",
-    "leicht",
+    "mittel",
     ["mutation", "stille-mutation", "genetischer-code"]
   ),
   q(
@@ -410,7 +410,7 @@ export const biologieWasIstFalsch: Question[] = [
     ],
     3,
     "Die Zuordnung ist vertauscht: Die Transkription findet im Zellkern statt (DNA→mRNA), die Translation dagegen im Zytoplasma an den Ribosomen (mRNA→Protein). Bei Eukaryoten sind beide Prozesse räumlich getrennt.",
-    "leicht",
+    "mittel",
     ["proteinbiosynthese", "transkription", "translation"]
   ),
   q(
@@ -426,7 +426,7 @@ export const biologieWasIstFalsch: Question[] = [
     ],
     2,
     "Epigenetische Veränderungen betreffen gerade nicht die DNA-Sequenz selbst, sondern regulieren die Genexpression durch Modifikationen wie Methylierung, Histonmodifikation und nicht-codierende RNA — ohne die Basenabfolge zu ändern.",
-    "mittel",
+    "schwer",
     ["epigenetik", "methylierung", "histonmodifikation"]
   ),
   q(
@@ -462,7 +462,7 @@ export const biologieWasIstFalsch: Question[] = [
     ],
     3,
     "IgG (nicht IgM) ist das einzige Immunglobulin, das die Plazenta durchquert und dem Neugeborenen Nestschutz verleiht. IgM ist das größte Immunglobulin (Pentamer) und kann die Plazenta nicht passieren.",
-    "mittel",
+    "schwer",
     ["immunsystem", "immunglobuline", "igm", "igg"]
   ),
   q(
@@ -478,7 +478,7 @@ export const biologieWasIstFalsch: Question[] = [
     ],
     2,
     "Materie wird in Ökosystemen in Kreisläufen recycelt, Energie jedoch nicht. Energie fließt als Einbahnstraße durch das Ökosystem: von der Sonne über Produzenten zu Konsumenten und wird bei jedem Schritt großteils als Wärme abgegeben (Energiefluss, kein Energiekreislauf).",
-    "mittel",
+    "schwer",
     ["ökologie", "energiefluss", "nahrungskette"]
   ),
   q(
@@ -494,7 +494,7 @@ export const biologieWasIstFalsch: Question[] = [
     ],
     4,
     "Antikörper binden hochspezifisch — jeder Antikörper erkennt in der Regel nur ein bestimmtes Antigen (bzw. Epitop). Die Spezifität beruht auf der variablen Region und ist das Grundprinzip der adaptiven Immunantwort.",
-    "leicht",
+    "mittel",
     ["antikörper", "spezifität", "immunglobuline"]
   ),
   q(

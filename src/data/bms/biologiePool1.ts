@@ -46,7 +46,7 @@ export const biologiePool1: Question[] = [
     ["Knorpelzellen", "Erythrozyten", "Knochenzellen", "Muskelzellen", "Eizellen"],
     1,
     "Reife menschliche Erythrozyten haben keinen Zellkern; sie sind kernlos und bikonkav. Alle anderen genannten Zellen sind kernhaltig.",
-    "leicht",
+    "mittel",
     ["erythrozyt", "zellkern", "blut"]
   ),
   q(
@@ -78,7 +78,7 @@ export const biologiePool1: Question[] = [
     ],
     3,
     "Richtig sind 3 und 4: O₂ und ein Teil des CO₂ werden an Hämoglobin gebunden. Der Gasaustausch findet in den Alveolen statt, nicht in den Bronchien. Die gesamte Luftmenge wird nicht mit einem Atemzug erneuert (Residualvolumen bleibt).",
-    "mittel",
+    "schwer",
     ["atmung", "gasaustausch", "hämoglobin"]
   ),
   q(
@@ -136,7 +136,7 @@ export const biologiePool1: Question[] = [
     ],
     4,
     "Das Herz beginnt bereits in der frühen Embryonalentwicklung (ca. 4. Woche) zu schlagen, nicht erst am Ende der 8. Woche. Die anderen Aussagen sind zutreffend.",
-    "mittel",
+    "schwer",
     ["embryonalentwicklung", "herz", "entwicklung"]
   ),
   q(
@@ -178,7 +178,7 @@ export const biologiePool1: Question[] = [
     ["Stoffwechsel", "Reizbarkeit", "Kristallisation", "Fortpflanzung", "Homöostase"],
     2,
     "Kristallisation ist ein physikalisch-chemischer Prozess unbelebter Materie. Die sieben Kennzeichen des Lebens sind: Stoffwechsel, Reizbarkeit, Fortpflanzung, Wachstum, Evolution, Bewegung, Homöostase.",
-    "leicht",
+    "mittel",
     ["kennzeichen des lebens", "stoffwechsel"]
   ),
   q(
@@ -210,7 +210,7 @@ export const biologiePool1: Question[] = [
     ],
     1,
     "Viren haben keine Zellwand, keine Ribosomen und keinen eigenen Stoffwechsel. Antibiotika zielen auf bakterielle Strukturen (Zellwand, Ribosomen etc.), die bei Viren fehlen.",
-    "leicht",
+    "mittel",
     ["viren", "antibiotika", "kennzeichen des lebens"]
   ),
   q(

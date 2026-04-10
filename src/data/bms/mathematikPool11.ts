@@ -52,7 +52,7 @@ export const mathematikPool11: Question[] = [
     ["1 µg", "10 µg", "100 µg", "1000 µg", "0,1 µg"],
     2,
     "Wirkstoff = 2,5 mg/mL × 0,04 mL = 0,1 mg = 100 µg (1 mg = 1000 µg).",
-    "leicht",
+    "mittel",
     ["Einheiten", "Dosisberechnung", "rechenfrage"]
   ),
   q(
@@ -98,7 +98,7 @@ export const mathematikPool11: Question[] = [
     ["4", "40", "400", "4000", "0,4"],
     2,
     "(8,4 × 10⁻³) / (2,1 × 10⁻⁵) = (8,4/2,1) × 10⁽⁻³⁺⁵⁾ = 4 × 10² = 400.",
-    "mittel",
+    "schwer",
     ["wissenschaftliche Notation", "Zehnerpotenzen", "rechenfrage"]
   ),
   q(
@@ -108,7 +108,7 @@ export const mathematikPool11: Question[] = [
     ["9,3 × 10⁻²⁰ g", "9,3 × 10⁻²¹ g", "5,6 × 10⁻²⁰ g", "9,3 × 10⁻¹⁹ g", "5,6 × 10⁻²¹ g"],
     0,
     "56 kDa = 56 000 Da = 5,6 × 10⁴ Da. Masse = 5,6 × 10⁴ × 1,66 × 10⁻²⁴ = 9,296 × 10⁻²⁰ ≈ 9,3 × 10⁻²⁰ g.",
-    "schwer",
+    "mittel",
     ["wissenschaftliche Notation", "Biochemie", "rechenfrage"]
   ),
   q(
@@ -124,7 +124,7 @@ export const mathematikPool11: Question[] = [
     ],
     4,
     "|x − y| = |y| − |x| gilt nicht allgemein; z. B. |3 − 5| = 2, aber |5| − |3| = 2 (stimmt zufällig), aber |5 − 3| = 2 und |3| − |5| = −2. Korrekt ist |x − y| ≥ ||x| − |y||.",
-    "mittel",
+    "schwer",
     ["Betrag", "Zahlenmengen", "Falsch-Aussage"]
   ),
   q(
@@ -364,7 +364,7 @@ export const mathematikPool11: Question[] = [
     ["1/2", "1/4", "1/8", "1/16", "1/3"],
     2,
     "24 h / 8 h = 3 Halbwertszeiten. Restanteil = (1/2)³ = 1/8.",
-    "leicht",
+    "mittel",
     ["Exponentialfunktion", "Halbwertszeit", "rechenfrage"]
   ),
   q(
@@ -400,7 +400,7 @@ export const mathematikPool11: Question[] = [
     ],
     4,
     "f(e²) = ln(e²) = 2 (nicht e²). Die Logarithmusfunktion gibt den Exponenten zurück, nicht die Potenz.",
-    "mittel",
+    "schwer",
     ["Logarithmus", "natürlicher Logarithmus", "Falsch-Aussage"]
   ),
   q(
@@ -582,7 +582,7 @@ export const mathematikPool11: Question[] = [
     ],
     3,
     "P(A ∩ B) = P(A) · P(B) gilt nur für unabhängige Ereignisse. Im Allgemeinen ist P(A ∩ B) = P(A) · P(B|A).",
-    "mittel",
+    "schwer",
     ["Wahrscheinlichkeit", "Unabhängigkeit", "Falsch-Aussage"]
   ),
   q(

@@ -43,7 +43,7 @@ export const biologiePool21: Question[] = [
     ],
     2,
     "Entkoppler dissipieren den Protonengradienten als Wärme. Elektronen fließen weiter, aber die ATP-Synthase kann ohne Gradienten kein ATP produzieren. Die Zelle schaltet auf verstärkte Glykolyse um.",
-    "schwer",
+    "mittel",
     ["Atmungskette", "Entkopplung", "Mitochondrien"]
   ),
   q(
@@ -75,7 +75,7 @@ export const biologiePool21: Question[] = [
     ],
     2,
     "GPCRs (7-Transmembrandomänen-Rezeptoren) aktivieren heterotrimere G-Proteine (α, β, γ). Gs-α stimuliert die Adenylylcyclase → cAMP↑. Gi-α hemmt sie → cAMP↓. cAMP wird durch Phosphodiesterasen abgebaut (nicht synthetisiert). GPCRs haben keine intrinsische Kinaseaktivität.",
-    "schwer",
+    "mittel",
     ["Signaltransduktion", "GPCR", "cAMP"]
   ),
   q(

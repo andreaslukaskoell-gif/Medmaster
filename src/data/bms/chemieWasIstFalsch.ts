@@ -45,7 +45,7 @@ export const chemieWasIstFalsch: Question[] = [
     ],
     2,
     "Option C ist falsch. Die Massenzahl A ist die Summe aus Protonen und Neutronen (nicht Elektronen). Elektronen tragen praktisch nichts zur Masse bei.",
-    "leicht",
+    "mittel",
     ["atombau", "massenzahl"]
   ),
   wif(
@@ -61,7 +61,7 @@ export const chemieWasIstFalsch: Question[] = [
     ],
     2,
     "Option C ist falsch. Der Atomradius nimmt innerhalb einer Periode von links nach rechts ab, weil die steigende Kernladung die Elektronenhülle stärker anzieht.",
-    "leicht",
+    "mittel",
     ["periodensystem", "atomradius"]
   ),
   wif(
@@ -77,7 +77,7 @@ export const chemieWasIstFalsch: Question[] = [
     ],
     2,
     "Option C ist falsch. Ein einzelnes p-Orbital kann maximal 2 Elektronen aufnehmen. Eine p-Unterschale (mit drei p-Orbitalen) fasst insgesamt 6 Elektronen.",
-    "mittel",
+    "schwer",
     ["elektronenkonfiguration", "orbitale"]
   ),
   wif(
@@ -93,7 +93,7 @@ export const chemieWasIstFalsch: Question[] = [
     ],
     3,
     "Option D ist falsch. Das Chlorid-Ion Cl⁻ ist grösser als das neutrale Chlor-Atom, weil das zusätzliche Elektron die Elektronenhülle durch erhöhte Elektron-Elektron-Abstossung ausdehnt.",
-    "mittel",
+    "schwer",
     ["ionen", "ionenradius"]
   ),
   wif(
@@ -109,7 +109,7 @@ export const chemieWasIstFalsch: Question[] = [
     ],
     3,
     "Option D ist falsch. Stickstoff gehört zur 5. Hauptgruppe (Pnikogene). Die 6. Hauptgruppe (Chalkogene) umfasst Sauerstoff, Schwefel, Selen, Tellur und Polonium.",
-    "leicht",
+    "mittel",
     ["hauptgruppen", "periodensystem"]
   ),
   wif(
@@ -125,7 +125,7 @@ export const chemieWasIstFalsch: Question[] = [
     ],
     1,
     "Option B ist falsch. Die Elektronegativität nimmt in einer Hauptgruppe von oben nach unten ab, weil der Atomradius zunimmt und die Anziehung auf Bindungselektronen schwächer wird.",
-    "leicht",
+    "mittel",
     ["elektronegativitaet", "periodensystem"]
   ),
   wif(
@@ -141,7 +141,7 @@ export const chemieWasIstFalsch: Question[] = [
     ],
     1,
     "Option B ist falsch. Die Nebenquantenzahl l kann Werte von 0 bis n−1 annehmen (nicht bis n). Für n = 3 gilt also l = 0, 1 oder 2.",
-    "mittel",
+    "schwer",
     ["quantenzahlen", "orbitale"]
   ),
   wif(
@@ -157,7 +157,7 @@ export const chemieWasIstFalsch: Question[] = [
     ],
     3,
     "Option D ist falsch. Quecksilber (Hg) ist ein Übergangsmetall und bei Raumtemperatur flüssig.",
-    "mittel",
+    "schwer",
     ["uebergangsmetalle", "periodensystem"]
   ),
   wif(
@@ -207,7 +207,7 @@ export const chemieWasIstFalsch: Question[] = [
     ],
     3,
     "Option D ist falsch. Beim Kondensieren (gasförmig → flüssig) wird Energie abgegeben (exotherm), nicht aufgenommen. Die kinetische Energie der Teilchen nimmt ab.",
-    "leicht",
+    "mittel",
     ["aggregatzustaende", "phasenuebergaenge"]
   ),
   wif(
@@ -223,7 +223,7 @@ export const chemieWasIstFalsch: Question[] = [
     ],
     4,
     "Option E ist falsch. Reale Gase verhalten sich bei hohem Druck und tiefer Temperatur besonders wenig ideal, weil dann zwischenmolekulare Wechselwirkungen und das Eigenvolumen der Teilchen nicht mehr vernachlässigbar sind.",
-    "mittel",
+    "schwer",
     ["ideales gas", "gasgesetze"]
   ),
   wif(
@@ -239,7 +239,7 @@ export const chemieWasIstFalsch: Question[] = [
     ],
     3,
     "Option D ist falsch. Emulsionen sind heterogene Gemische (nicht homogene) aus zwei nicht mischbaren Flüssigkeiten (z. B. Öl und Wasser). Homogene Mischungen zweier Flüssigkeiten heissen Lösungen.",
-    "leicht",
+    "mittel",
     ["stoffgemische", "emulsion"]
   ),
   wif(
@@ -255,7 +255,7 @@ export const chemieWasIstFalsch: Question[] = [
     ],
     3,
     "Option D ist falsch. Extraktion nutzt Unterschiede in der Löslichkeit eines Stoffes in zwei nicht mischbaren Lösungsmitteln, nicht Unterschiede in der Dichte.",
-    "mittel",
+    "schwer",
     ["trennverfahren", "extraktion"]
   ),
   wif(
@@ -271,7 +271,7 @@ export const chemieWasIstFalsch: Question[] = [
     ],
     3,
     "Option D ist falsch. Van-der-Waals-Kräfte (London-Dispersionskräfte) nehmen mit steigender Molekülgrösse zu, weil grössere Elektronenwolken leichter polarisierbar sind.",
-    "mittel",
+    "schwer",
     ["zwischenmolekulare kraefte", "van-der-waals"]
   ),
   wif(
@@ -287,7 +287,7 @@ export const chemieWasIstFalsch: Question[] = [
     ],
     4,
     "Option E ist falsch. Stoffe mit hohem Dampfdruck bei Raumtemperatur haben schwache intermolekulare Kräfte und sieden bei niedrigen Temperaturen (z. B. Diethylether).",
-    "mittel",
+    "schwer",
     ["dampfdruck", "siedepunkt"]
   ),
   wif(
@@ -319,7 +319,7 @@ export const chemieWasIstFalsch: Question[] = [
     ],
     2,
     "Option C ist falsch. Schwere Moleküle diffundieren langsamer als leichte bei gleicher Temperatur, weil sie bei gleicher kinetischer Energie eine geringere Geschwindigkeit haben (Graham-Gesetz: v ∝ 1/√M).",
-    "leicht",
+    "mittel",
     ["diffusion", "graham"]
   ),
   wif(
@@ -351,7 +351,7 @@ export const chemieWasIstFalsch: Question[] = [
     ],
     2,
     "Option C ist falsch. Verbindungen können nur durch chemische Reaktionen in ihre Elemente zerlegt werden, nicht durch physikalische Verfahren. Physikalische Trennverfahren (Destillation, Filtration) trennen Gemische, nicht Verbindungen.",
-    "leicht",
+    "mittel",
     ["reinstoffe", "gemische", "verbindungen"]
   ),
 
@@ -369,7 +369,7 @@ export const chemieWasIstFalsch: Question[] = [
     ],
     3,
     "Option D ist falsch. Die Stoffmenge berechnet sich als n = m / M (Masse geteilt durch molare Masse), nicht als Masse mal molare Masse.",
-    "leicht",
+    "mittel",
     ["stoechiometrie", "stoffmenge"]
   ),
   wif(
@@ -385,7 +385,7 @@ export const chemieWasIstFalsch: Question[] = [
     ],
     3,
     "Option D ist falsch. Die Molalität gibt die Stoffmenge pro Kilogramm Lösungsmittel an (mol/kg), nicht pro Liter Lösungsmittel.",
-    "mittel",
+    "schwer",
     ["konzentration", "molalitaet"]
   ),
   wif(
@@ -401,7 +401,7 @@ export const chemieWasIstFalsch: Question[] = [
     ],
     2,
     "Option C ist falsch. Die Löslichkeit von Gasen in Wasser sinkt mit zunehmender Temperatur (Henry-Gesetz). Für die meisten Feststoffe hingegen steigt die Löslichkeit mit der Temperatur.",
-    "mittel",
+    "schwer",
     ["loeslichkeit", "gasloeslichkeit"]
   ),
   wif(
@@ -417,7 +417,7 @@ export const chemieWasIstFalsch: Question[] = [
     ],
     4,
     "Option E ist falsch. Die Summe aller Oxidationszahlen in einem neutralen Molekül ergibt 0, nicht +1. Bei einem Ion ergibt die Summe die Ionenladung.",
-    "leicht",
+    "mittel",
     ["redox", "oxidationszahlen"]
   ),
   wif(
@@ -433,7 +433,7 @@ export const chemieWasIstFalsch: Question[] = [
     ],
     3,
     "Option D ist falsch. Kolligative Eigenschaften hängen nur von der Anzahl der gelösten Teilchen ab, nicht von deren Art oder chemischer Natur.",
-    "mittel",
+    "schwer",
     ["kolligative eigenschaften", "osmose"]
   ),
   wif(
@@ -449,7 +449,7 @@ export const chemieWasIstFalsch: Question[] = [
     ],
     4,
     "Option E ist falsch. Verdünnung verringert (nicht erhöht) die Konzentration der gelösten Teilchen, da das Volumen zunimmt, während die Stoffmenge konstant bleibt.",
-    "leicht",
+    "mittel",
     ["verduennung", "konzentration"]
   ),
   wif(
@@ -465,7 +465,7 @@ export const chemieWasIstFalsch: Question[] = [
     ],
     3,
     "Option D ist falsch. Die empirische Formel von Essigsäure (C₂H₄O₂) ist CH₂O (Verhältnis 1:2:1), nicht C₂H₄O₂. Die Molekülformel ist das Doppelte der empirischen Formel.",
-    "mittel",
+    "schwer",
     ["empirische formel", "molekuelformel"]
   ),
   wif(
@@ -481,7 +481,7 @@ export const chemieWasIstFalsch: Question[] = [
     ],
     3,
     "Option D ist falsch. Ein grösseres K_sp bedeutet eine höhere Löslichkeit, da eine grössere Ionenkonzentration im Gleichgewicht vorliegt.",
-    "mittel",
+    "schwer",
     ["loeslichkeitsprodukt", "gleichgewicht"]
   ),
   wif(
@@ -513,7 +513,7 @@ export const chemieWasIstFalsch: Question[] = [
     ],
     4,
     "Option E ist falsch. Der pH-Wert einer starken Säure (vollständig dissoziiert) mit c = 0,01 mol/L = 10⁻² mol/L beträgt pH = −log(10⁻²) = 2, nicht 3.",
-    "leicht",
+    "mittel",
     ["ph-wert", "saeure"]
   ),
 
@@ -531,7 +531,7 @@ export const chemieWasIstFalsch: Question[] = [
     ],
     2,
     "Option C ist falsch. Ein Katalysator beschleunigt die Einstellung des Gleichgewichts, verschiebt es aber nicht. Er senkt die Aktivierungsenergie für Hin- und Rückreaktion gleichermassen.",
-    "leicht",
+    "mittel",
     ["gleichgewicht", "katalysator"]
   ),
   wif(
@@ -547,7 +547,7 @@ export const chemieWasIstFalsch: Question[] = [
     ],
     1,
     "Option B ist falsch. Katalysatoren senken (nicht erhöhen) die Aktivierungsenergie einer Reaktion, wodurch mehr Teilchen die Energiebarriere überwinden können.",
-    "leicht",
+    "mittel",
     ["reaktionsgeschwindigkeit", "aktivierungsenergie"]
   ),
   wif(
@@ -563,7 +563,7 @@ export const chemieWasIstFalsch: Question[] = [
     ],
     3,
     "Option D ist falsch. Nicht alle exothermen Reaktionen laufen spontan ab. Die Spontanität einer Reaktion wird durch die freie Enthalpie ΔG bestimmt (ΔG = ΔH − TΔS), nicht allein durch ΔH. Auch die Entropieänderung spielt eine Rolle.",
-    "mittel",
+    "schwer",
     ["thermodynamik", "enthalpie", "spontanitaet"]
   ),
   wif(
@@ -579,7 +579,7 @@ export const chemieWasIstFalsch: Question[] = [
     ],
     4,
     "Option E ist falsch. Ein Katalysator hat keinen Einfluss auf die Lage des Gleichgewichts. Er beschleunigt lediglich die Einstellung des Gleichgewichts, indem er Hin- und Rückreaktion gleichermassen beschleunigt.",
-    "mittel",
+    "schwer",
     ["le chatelier", "gleichgewicht"]
   ),
   wif(
@@ -595,7 +595,7 @@ export const chemieWasIstFalsch: Question[] = [
     ],
     3,
     "Option D ist falsch. Starke Säuren haben einen niedrigen (oft negativen) pKs-Wert, nicht einen hohen. Ein hoher pKs-Wert kennzeichnet eine schwache Säure.",
-    "mittel",
+    "schwer",
     ["saeure-base", "pks-wert"]
   ),
   wif(
@@ -611,7 +611,7 @@ export const chemieWasIstFalsch: Question[] = [
     ],
     4,
     "Option E ist falsch. In einer galvanischen Zelle ist die Anode der Minuspol (hier findet die Oxidation statt). In einer Elektrolysezelle hingegen ist die Anode der Pluspol. Diese Verwechslung ist ein häufiger MedAT-Fallstrick.",
-    "mittel",
+    "schwer",
     ["elektrochemie", "galvanische zelle"]
   ),
   wif(
@@ -643,7 +643,7 @@ export const chemieWasIstFalsch: Question[] = [
     ],
     3,
     "Option D ist falsch. Der zweite Hauptsatz der Thermodynamik besagt, dass die Gesamtentropie des Universums bei spontanen Prozessen zunimmt (nicht abnimmt), also ΔS_gesamt > 0.",
-    "mittel",
+    "schwer",
     ["entropie", "thermodynamik"]
   ),
   wif(
@@ -659,7 +659,7 @@ export const chemieWasIstFalsch: Question[] = [
     ],
     4,
     "Option E ist falsch. Das Oxidationsmittel nimmt Elektronen auf und wird selbst reduziert — seine Oxidationszahl sinkt (wird niedriger), nicht höher.",
-    "leicht",
+    "mittel",
     ["redoxreaktion", "oxidationsmittel"]
   ),
   wif(
@@ -693,7 +693,7 @@ export const chemieWasIstFalsch: Question[] = [
     ],
     2,
     "Option C ist falsch. Salze leiten im festen Zustand keinen elektrischen Strom, da die Ionen im Kristallgitter fixiert sind. Erst in der Schmelze oder in Lösung sind die Ionen frei beweglich und ermöglichen Stromleitung.",
-    "leicht",
+    "mittel",
     ["salze", "ionengitter", "leitfaehigkeit"]
   ),
   wif(
@@ -709,7 +709,7 @@ export const chemieWasIstFalsch: Question[] = [
     ],
     3,
     "Option D ist falsch. Essigsäure ist eine schwache Säure (pKs = 4,76), die in Wasser nur teilweise dissoziiert. Starke Säuren wie HCl, H₂SO₄ oder HNO₃ dissoziieren praktisch vollständig.",
-    "leicht",
+    "mittel",
     ["saeuren", "essigsaeure"]
   ),
   wif(
@@ -725,7 +725,7 @@ export const chemieWasIstFalsch: Question[] = [
     ],
     3,
     "Option D ist falsch. Nicht alle Metalle haben höhere Schmelzpunkte als Nichtmetalle. Z. B. schmilzt Quecksilber bei −39 °C und Gallium bei 30 °C, während Kohlenstoff (Diamant, ~3550 °C) oder Silicium (1414 °C) deutlich höhere Schmelzpunkte haben.",
-    "mittel",
+    "schwer",
     ["metalle", "schmelzpunkt"]
   ),
   wif(
@@ -741,7 +741,7 @@ export const chemieWasIstFalsch: Question[] = [
     ],
     3,
     "Option D ist falsch. Iod ist bei Raumtemperatur ein grauschwarzer Feststoff mit metallischem Glanz. Es sublimiert bei Erwärmung zu einem violetten Gas, ist aber bei Raumtemperatur fest.",
-    "leicht",
+    "mittel",
     ["halogene", "aggregatzustand"]
   ),
   wif(
@@ -773,7 +773,7 @@ export const chemieWasIstFalsch: Question[] = [
     ],
     3,
     "Option D ist falsch. Natriumhydroxid (NaOH) ist eine Base (Lauge), kein Salz. Es enthält Hydroxid-Ionen (OH⁻) und ist eine der stärksten anorganischen Basen. Salze entstehen durch Neutralisation einer Säure mit einer Base.",
-    "mittel",
+    "schwer",
     ["nomenklatur", "hydroxide"]
   ),
   wif(
@@ -805,7 +805,7 @@ export const chemieWasIstFalsch: Question[] = [
     ],
     3,
     "Option D ist falsch. Die Knallgasreaktion ist stark exotherm (ΔH = −572 kJ/mol), nicht endotherm. Sie setzt grosse Mengen Energie frei, daher der Name 'Knallgas'.",
-    "leicht",
+    "mittel",
     ["wasserstoff", "knallgas"]
   ),
   wif(
@@ -821,7 +821,7 @@ export const chemieWasIstFalsch: Question[] = [
     ],
     3,
     "Option D ist falsch. Man gibt stets die Säure zum Wasser, niemals umgekehrt. Die Eselsbrücke lautet: 'Erst das Wasser, dann die Säure, sonst geschieht das Ungeheure.' Gibt man Wasser in konzentrierte Schwefelsäure, kann die starke Wärmeentwicklung zum Siedeverzug und Spritzen führen.",
-    "leicht",
+    "mittel",
     ["schwefelsaeure", "sicherheit"]
   ),
   wif(
@@ -855,7 +855,7 @@ export const chemieWasIstFalsch: Question[] = [
     ],
     3,
     "Option D ist falsch. Die Aldehydgruppe (−CHO) charakterisiert Aldehyde, nicht Ketone. Ketone haben die Carbonylgruppe (C=O) zwischen zwei Kohlenstoffatomen (R−CO−R').",
-    "leicht",
+    "mittel",
     ["funktionelle gruppen", "aldehyd", "keton"]
   ),
   wif(
@@ -871,7 +871,7 @@ export const chemieWasIstFalsch: Question[] = [
     ],
     4,
     "Option E ist falsch. Alkane sind unter Normalbedingungen chemisch sehr unreaktiv (daher der Name 'Paraffine' = parum affinis = wenig reaktionsfreudig). Sie reagieren weder mit Säuren noch mit Basen, sondern nur unter drastischen Bedingungen (z. B. radikalische Substitution mit Halogenen).",
-    "leicht",
+    "mittel",
     ["alkane", "reaktivitaet"]
   ),
   wif(
@@ -887,7 +887,7 @@ export const chemieWasIstFalsch: Question[] = [
     ],
     3,
     "Option D ist falsch. Enantiomere haben identische physikalische Eigenschaften (Schmelz-, Siedepunkt, Löslichkeit) und unterscheiden sich nur in der Drehung von polarisiertem Licht und in der Wechselwirkung mit anderen chiralen Molekülen.",
-    "mittel",
+    "schwer",
     ["isomerie", "enantiomere", "chiralitaet"]
   ),
   wif(
@@ -903,7 +903,7 @@ export const chemieWasIstFalsch: Question[] = [
     ],
     3,
     "Option D ist falsch. Pi-Bindungen (π) sind nicht frei drehbar, da sie durch seitliche Überlappung von p-Orbitalen entstehen. Eine Drehung würde die Überlappung zerstören. Nur um Sigma-Bindungen ist freie Rotation möglich.",
-    "mittel",
+    "schwer",
     ["kovalente bindung", "pi-bindung"]
   ),
   wif(
@@ -919,7 +919,7 @@ export const chemieWasIstFalsch: Question[] = [
     ],
     2,
     "Option C ist falsch. Die Veresterung ist eine reversible Gleichgewichtsreaktion. Durch Entfernen des Wassers (z. B. mit einem Trockenmittel) oder durch Überschuss eines Edukts lässt sich das Gleichgewicht zugunsten des Esters verschieben.",
-    "mittel",
+    "schwer",
     ["veresterung", "gleichgewicht"]
   ),
   wif(
@@ -935,7 +935,7 @@ export const chemieWasIstFalsch: Question[] = [
     ],
     3,
     "Option D ist falsch. Der Kohlenstoff in Methan (CH₄) ist sp³-hybridisiert (nicht sp²), was zu der tetraedrischen Geometrie mit Bindungswinkeln von 109,5° führt.",
-    "mittel",
+    "schwer",
     ["hybridisierung", "geometrie"]
   ),
   wif(
@@ -951,7 +951,7 @@ export const chemieWasIstFalsch: Question[] = [
     ],
     4,
     "Option E ist falsch. Benzol hat keine abwechselnden Einfach- und Doppelbindungen. Die 6 π-Elektronen sind vollständig delokalisiert, sodass alle C−C-Bindungen gleich lang sind (ca. 140 pm, zwischen Einfach- und Doppelbindung).",
-    "mittel",
+    "schwer",
     ["aromaten", "benzol", "delokalisierung"]
   ),
   wif(
@@ -967,7 +967,7 @@ export const chemieWasIstFalsch: Question[] = [
     ],
     3,
     "Option D ist falsch. Die Gitterenergie nimmt mit zunehmendem Ionenradius ab (nicht zu), da der Abstand zwischen den Ionen grösser wird und die elektrostatische Anziehung nachlässt (Coulomb-Gesetz: F ∝ 1/r²).",
-    "mittel",
+    "schwer",
     ["ionische bindung", "gitterenergie"]
   ),
   wif(
@@ -983,7 +983,7 @@ export const chemieWasIstFalsch: Question[] = [
     ],
     3,
     "Option D ist falsch. Cellulose kann vom Menschen nicht verdaut werden, da uns das Enzym Cellulase fehlt. Die β-1,4-glykosidischen Bindungen der Cellulose können nur von bestimmten Mikroorganismen (z. B. bei Wiederkäuern) gespalten werden.",
-    "leicht",
+    "mittel",
     ["kohlenhydrate", "cellulose"]
   ),
   wif(
@@ -999,7 +999,7 @@ export const chemieWasIstFalsch: Question[] = [
     ],
     3,
     "Option D ist falsch. Metalle sind im Gegensatz zu ionischen oder kovalenten Kristallen nicht spröde, sondern duktil (dehnbar) und malleabel (verformbar). Die Gitterebenen können übereinander gleiten, ohne dass die Bindung bricht, da das Elektronengas sich anpasst.",
-    "leicht",
+    "mittel",
     ["metallbindung", "duktilitaet"]
   ),
 ];

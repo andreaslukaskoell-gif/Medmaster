@@ -48,7 +48,7 @@ export const physikPool13: Question[] = [
     ["T = f", "T = 1/f", "T = f²", "T = 2πf", "T = f/2π"],
     1,
     "Frequenz f = 1/T (Anzahl Schwingungen pro Sekunde).",
-    "leicht",
+    "mittel",
     ["Frequenz", "Schwingung"]
   ),
   q(
@@ -492,7 +492,7 @@ export const physikPool13: Question[] = [
     ["Druck", "Volumen", "Stoffmenge in mol", "Temperatur in °C", "Masse in kg"],
     2,
     "n = Stoffmenge in Mol (mol). R ≈ 8,314 J/(mol·K).",
-    "leicht",
+    "mittel",
     ["Stoffmenge", "Gasgleichung"]
   ),
   q(

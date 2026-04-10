@@ -48,7 +48,7 @@ export const physikPool18: Question[] = [
     ["c = λ + f", "c = λ · f", "c = λ − f", "c = f/λ", "c = λ²·f"],
     1,
     "c = λ·f (gilt in jedem Medium).",
-    "leicht",
+    "mittel",
     ["Ausbreitungsgeschwindigkeit", "Welle"]
   ),
   q(
@@ -68,7 +68,7 @@ export const physikPool18: Question[] = [
     ["R₁·R₂", "R₁ + R₂", "1/R₁ + 1/R₂", "R₁/R₂", "kleiner als R₁"],
     1,
     "Reihenschaltung: R_ges = R₁ + R₂.",
-    "leicht",
+    "mittel",
     ["Reihenschaltung", "Widerstand"]
   ),
   q(
@@ -94,7 +94,7 @@ export const physikPool18: Question[] = [
     ["s = a·t", "s = ½·a·t²", "s = a/t", "s = v·t nur bei v=const", "s = a²·t"],
     1,
     "s = ½·a·t² bei v₀ = 0.",
-    "leicht",
+    "mittel",
     ["Bewegungsgleichung", "Weg"]
   ),
   q(
@@ -130,7 +130,7 @@ export const physikPool18: Question[] = [
     ["P = I/R", "P = I²·R", "P = R/I", "P = I·R", "P = I/R²"],
     1,
     "P = U·I = I²·R (mit U = R·I).",
-    "leicht",
+    "mittel",
     ["Leistung", "Strom"]
   ),
   q(
@@ -192,7 +192,7 @@ export const physikPool18: Question[] = [
     ["20 W", "80 W", "1,25 W", "9 W", "0,8 W"],
     1,
     "P = I²·R = 16·5 W = 80 W.",
-    "leicht",
+    "mittel",
     ["Joule-Wärme", "Leistung"]
   ),
   q(
@@ -258,7 +258,7 @@ export const physikPool18: Question[] = [
     ["ω = f", "ω = 2π·f", "ω = f/(2π)", "ω = f²", "ω = 1/f"],
     1,
     "ω = 2π·f = 2π/T.",
-    "leicht",
+    "mittel",
     ["Winkelgeschwindigkeit", "Kreisbewegung"]
   ),
   q(
@@ -350,7 +350,7 @@ export const physikPool18: Question[] = [
     ["W = U/Q", "W = U·Q", "W = Q/U", "W = U + Q", "W = U²·Q"],
     1,
     "W = U·Q (Spannung mal Ladung).",
-    "leicht",
+    "mittel",
     ["elektrische Arbeit", "Spannung"]
   ),
   q(
@@ -376,7 +376,7 @@ export const physikPool18: Question[] = [
     ["a = F·m", "a = F/m", "a = m/F", "a = F + m", "a = F − m"],
     1,
     "F = m·a → a = F/m.",
-    "leicht",
+    "mittel",
     ["Kraft", "Beschleunigung"]
   ),
   q(
@@ -434,7 +434,7 @@ export const physikPool18: Question[] = [
     ["Volumen", "Temperatur", "Druck", "Entropie", "Dichte"],
     1,
     "Ideales Gas: U = U(T).",
-    "leicht",
+    "mittel",
     ["innere Energie", "ideales Gas"]
   ),
   q(
@@ -476,7 +476,7 @@ export const physikPool18: Question[] = [
     ["p = E_kin·v", "p = m·v, E_kin = ½·m·v²", "p = E_kin/m", "p = 2·E_kin·v", "E_kin = p·v"],
     1,
     "p = m·v; E_kin = ½·m·v² = p²/(2m).",
-    "leicht",
+    "mittel",
     ["Impuls", "kinetische Energie"]
   ),
   q(
@@ -554,7 +554,7 @@ export const physikPool18: Question[] = [
     ["Q = m/ΔT", "Q = m·c·ΔT", "Q = c/ΔT", "Q = m + c + ΔT", "Q = ΔT/m"],
     1,
     "Q = m·c·ΔT.",
-    "leicht",
+    "mittel",
     ["Wärmemenge", "Temperaturänderung"]
   ),
   q(
@@ -710,7 +710,7 @@ export const physikPool18: Question[] = [
     ["A = N", "A = λ·N", "A = N/λ", "A = N²", "A = N·t"],
     1,
     "A = λ·N (Zerfallsrate).",
-    "leicht",
+    "mittel",
     ["Aktivität", "Zerfall"]
   ),
 ];

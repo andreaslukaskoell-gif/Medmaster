@@ -45,7 +45,7 @@ export const biologiePool18: Question[] = [
     ],
     1,
     "Miller und Urey simulierten die reduzierende Uratmosphäre mit Methan (CH₄), Ammoniak (NH₃), Wasserstoff (H₂) und Wasserdampf (H₂O). Elektrische Entladungen lieferten die Energie für die abiotische Synthese von Aminosäuren.",
-    "leicht",
+    "mittel",
     ["Entstehung des Lebens", "Miller-Urey"]
   ),
   q(
@@ -109,7 +109,7 @@ export const biologiePool18: Question[] = [
     ],
     3,
     "Die Endosymbiontentheorie erklärt die Herkunft von Mitochondrien und Chloroplasten, nicht aber die Entstehung des Zellkerns (D falsch). Die innere Membran entspricht der Bakterienmembran, die äußere der Phagocytose-Vakuole.",
-    "mittel",
+    "schwer",
     ["Endosymbiontentheorie", "FALSCH"]
   ),
 
@@ -161,7 +161,7 @@ export const biologiePool18: Question[] = [
     ],
     1,
     "Gerichtete Selektion: Ein Phänotyp-Extrem wird bevorzugt. Der Mittelwert der Population verschiebt sich in eine Richtung.",
-    "mittel",
+    "schwer",
     ["Evolution", "Selektion", "direktional"]
   ),
   q(
@@ -193,7 +193,7 @@ export const biologiePool18: Question[] = [
     ],
     2,
     "Stabilisierende Selektion: Individuen mit mittlerer Merkmalsausprägung haben den höchsten Fortpflanzungserfolg. Extreme werden selektiert. Beispiel: mittleres Geburtsgewicht bei Säuglingen.",
-    "leicht",
+    "mittel",
     ["Evolution", "Selektion", "stabilisierend"]
   ),
   q(
@@ -271,7 +271,7 @@ export const biologiePool18: Question[] = [
     ],
     3,
     "Hardy-Weinberg setzt eine GROSSE (idealerweise unendliche) Population voraus (D falsch). Weitere Bedingungen: keine Mutation, keine Selektion, Panmixie, kein Genfluss — nur dann bleiben Allelfrequenzen konstant.",
-    "leicht",
+    "mittel",
     ["Hardy-Weinberg", "FALSCH"]
   ),
   q(
@@ -297,7 +297,7 @@ export const biologiePool18: Question[] = [
     ],
     2,
     "Flaschenhalseffekt: Eine drastische Reduktion der Populationsgröße führt durch Zufall zu veränderten Allelfrequenzen. Im Gegensatz dazu entsteht der Gründereffekt, wenn wenige Individuen eine neue Population gründen.",
-    "leicht",
+    "mittel",
     ["Gendrift", "Flaschenhalseffekt"]
   ),
   q(
@@ -313,7 +313,7 @@ export const biologiePool18: Question[] = [
     ],
     1,
     "Gründereffekt: Eine kleine Gruppe gründet eine neue Population. Durch Zufall repräsentieren die Gründer nicht die Allelfrequenzen der Ausgangspopulation — eine Sonderform der Gendrift.",
-    "leicht",
+    "mittel",
     ["Gendrift", "Gründereffekt"]
   ),
   q(
@@ -363,7 +363,7 @@ export const biologiePool18: Question[] = [
     ["Homologe Organe", "Analoge Organe", "Rudimentäre Organe", "Vestigiale Organe", "Atavismen"],
     1,
     "Analoge Organe: gleiche Funktion, aber unterschiedlicher Bauplan und unterschiedliche stammesgeschichtliche Herkunft (konvergente Evolution). Homologe Organe haben dagegen den gleichen Grundbauplan (gemeinsamer Vorfahre).",
-    "leicht",
+    "mittel",
     ["Phylogenetik", "Analogie"]
   ),
   q(
@@ -427,7 +427,7 @@ export const biologiePool18: Question[] = [
     ],
     2,
     "Allopatrische Artbildung: Geographische Isolation trennt eine Population physisch. Unabhängige Mutation, Selektion und Gendrift führen zu genetischer Divergenz und schließlich reproduktiver Isolation.",
-    "leicht",
+    "mittel",
     ["Phylogenetik", "Artbildung", "allopatrisch"]
   ),
 
@@ -473,7 +473,7 @@ export const biologiePool18: Question[] = [
     ],
     3,
     "Genomanalysen zeigen, dass Homo sapiens und Neandertaler sich vermischten: 1–4 % Neandertaler-DNA finden sich heute bei Nicht-Afrikanern (D falsch). Die Kreuzung fand vor ~50 000–60 000 Jahren in Europa/Westasien statt.",
-    "mittel",
+    "schwer",
     ["Hominiden", "Neandertaler", "FALSCH"]
   ),
   q(
@@ -571,7 +571,7 @@ export const biologiePool18: Question[] = [
     ],
     3,
     "Aus einer Spermatozyte I entstehen nach Meiose I + II insgesamt 4 (nicht 2) Spermatiden, die sich alle zu reifen Spermien differenzieren (D falsch).",
-    "mittel",
+    "schwer",
     ["Gametogenese", "Spermatogenese", "FALSCH"]
   ),
 
@@ -855,7 +855,7 @@ export const biologiePool18: Question[] = [
     ],
     2,
     "hCG (humanes Choriongonadotropin) wird ab der Implantation vom Trophoblasten/Plazenta sezerniert. Es erhält das Corpus luteum und damit die Progesteronproduktion in der Frühschwangerschaft. Schwangerschaftstests weisen hCG im Urin oder Blut nach.",
-    "leicht",
+    "mittel",
     ["Plazenta", "hCG"]
   ),
   q(

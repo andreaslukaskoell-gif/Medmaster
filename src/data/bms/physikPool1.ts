@@ -42,7 +42,7 @@ export const physikPool1: Question[] = [
     ],
     1,
     "Mechanische Arbeit W = F · s (Kraft mal Weg in Wegrichtung). Beim Heben gibt es eine Wegstrecke; beim Halten ist die Verschiebung null, daher wird keine Arbeit verrichtet. Die Dauer des Hebens spielt für W nicht direkt eine Rolle (P = W/t wäre Leistung).",
-    "mittel",
+    "schwer",
     ["Arbeit", "Mechanik"]
   ),
   q(
@@ -58,7 +58,7 @@ export const physikPool1: Question[] = [
     ],
     3,
     'Der Massendefekt ist die Differenz: (Summe der Ruhemassen der Nukleonen) minus (tatsächliche Kernmasse). Die Bindungsenergie entspricht dieser "fehlenden" Masse (E = Δm · c²).',
-    "mittel",
+    "schwer",
     ["Massendefekt", "Atomphysik", "Kernphysik"]
   ),
   q(
@@ -74,7 +74,7 @@ export const physikPool1: Question[] = [
     ],
     3,
     "Als Lupe nutzt man die Sammellinse im Nahbereich: Gegenstand innerhalb der einfachen Brennweite (g < f). Dann entsteht ein virtuelles, aufrechtes, vergrößertes Bild.",
-    "mittel",
+    "schwer",
     ["Optik", "Lupe", "Sammellinse"]
   ),
   q(
@@ -84,7 +84,7 @@ export const physikPool1: Question[] = [
     ["+10 V", "+10 Amperesekunden", "+4 V", "+10 J/C", "-10 V"],
     4,
     "U = Potenzial am Pluspol minus Potenzial am Minuspol = (-3 V) - (+7 V) = -10 V. Die Anzeige ist -10 V (Richtung der Messung beachten).",
-    "mittel",
+    "schwer",
     ["Spannung", "Elektrizität", "Potenzial"]
   ),
   q(
@@ -94,7 +94,7 @@ export const physikPool1: Question[] = [
     ["v₂ = v₁", "v₂ − v₁ = 0", "v₂ + v₁ = 0", "v₂ < v₁", "v₂ > v₁"],
     4,
     "Kontinuitätsgleichung: A₁·v₁ = A₂·v₂. Bei kleinerem Querschnitt A₂ ist v₂ größer als v₁.",
-    "leicht",
+    "mittel",
     ["Strömung", "Kontinuität", "Fluide"]
   ),
   q(
@@ -110,7 +110,7 @@ export const physikPool1: Question[] = [
     ],
     0,
     "J = N·m (Energie/Arbeit); 1 eV ≈ 1,602×10⁻¹⁹ J; 1 cal = 4,184 J. Watt ist Leistung (J/s), keine Energieeinheit — Joule in Watt umrechnen ist falsch.",
-    "mittel",
+    "schwer",
     ["Einheiten", "Joule", "Umrechnung"]
   ),
   q(
@@ -136,7 +136,7 @@ export const physikPool1: Question[] = [
     ],
     4,
     "Abgeleitete Größen entstehen aus den sieben SI-Basisgrößen durch Produkt/Quotient/Potenzen (z.B. Kraft N = kg·m/s²). Sie sind messbar und haben abgeleitete SI-Einheiten.",
-    "mittel",
+    "schwer",
     ["abgeleitete Größen", "SI", "Einheiten"]
   ),
   q(
@@ -152,7 +152,7 @@ export const physikPool1: Question[] = [
     ],
     1,
     "Alpha-, Beta- und Gamma-Strahlung sind ionisierend. Infrarot ist elektromagnetische Strahlung geringerer Energie und nicht ionisierend.",
-    "mittel",
+    "schwer",
     ["Radioaktivität", "ionisierende Strahlung", "Alpha", "Beta", "Gamma"]
   ),
   q(
@@ -208,7 +208,7 @@ export const physikPool1: Question[] = [
     ["70 N", "ca. 687 N", "ca. 9,81 N", "70 kg", "9,81 kg"],
     1,
     "Gewichtskraft F_G = m·g = 70 kg · 9,81 m/s² ≈ 687 N. Masse in kg, Kraft in N.",
-    "leicht",
+    "mittel",
     ["Gewichtskraft", "Masse", "Mechanik"]
   ),
   q(
@@ -224,7 +224,7 @@ export const physikPool1: Question[] = [
     ],
     1,
     "Intensive Größen sind unabhängig von der Menge (Temperatur, Druck, Konzentration). Extensive Größen verdoppeln sich beim Zusammenfügen (Masse, Volumen, Energie).",
-    "mittel",
+    "schwer",
     ["intensiv", "extensiv", "Größen"]
   ),
   q(
@@ -244,7 +244,7 @@ export const physikPool1: Question[] = [
     ["1 Pa", "100 Pa", "133 Pa", "1000 Pa", "1013 Pa"],
     2,
     "1 mmHg ≈ 133 Pa. Blutdruck 120 mmHg ≈ 16 kPa.",
-    "mittel",
+    "schwer",
     ["Druck", "mmHg", "Pascal", "Blutdruck"]
   ),
   q(
@@ -254,7 +254,7 @@ export const physikPool1: Question[] = [
     ["kg·m/s²", "kg·m²/s²", "kg·m²/s³", "kg/s²", "m²/s²"],
     2,
     "W = J/s = N·m/s = (kg·m/s²)·m/s = kg·m²/s³.",
-    "mittel",
+    "schwer",
     ["Watt", "Basiseinheiten", "SI"]
   ),
   q(
@@ -270,7 +270,7 @@ export const physikPool1: Question[] = [
     ],
     1,
     "Masse (kg) ist ortsunabhängig. Gewichtskraft F_G = m·g (in N) hängt von g ab (Erde ≈ 9,81 m/s², Mond ≈ 1,62 m/s²).",
-    "mittel",
+    "schwer",
     ["Masse", "Gewichtskraft", "g"]
   ),
   q(
@@ -280,7 +280,7 @@ export const physikPool1: Question[] = [
     ["Kraft", "Leistung", "Druck", "Energie", "Impuls"],
     3,
     "kg·m²/s² = (kg·m/s²)·m = N·m = J (Joule), also Energie oder Arbeit.",
-    "mittel",
+    "schwer",
     ["Einheiten", "Joule", "Dimensionsanalyse"]
   ),
   q(
@@ -296,7 +296,7 @@ export const physikPool1: Question[] = [
     ],
     0,
     "Bei konstanter Geschwindigkeit ist die Nettokraft null (Newton I), aber der Motor verrichtet kontinuierlich Arbeit gegen Reibung und Luftwiderstand. Diese Energie wird in Wärme umgewandelt.",
-    "mittel",
+    "schwer",
     ["Arbeit", "Bewegung", "Kraft"]
   ),
   q(
@@ -306,7 +306,7 @@ export const physikPool1: Question[] = [
     ["c = f + λ", "c = f − λ", "c = f · λ", "c = f / λ", "c = λ / f"],
     2,
     "c = f · λ (Ausbreitungsgeschwindigkeit = Frequenz mal Wellenlänge). Gilt für mechanische Wellen und elektromagnetische Wellen im Vakuum.",
-    "leicht",
+    "mittel",
     ["Welle", "Frequenz", "Wellenlänge"]
   ),
   q(
@@ -322,7 +322,7 @@ export const physikPool1: Question[] = [
     ],
     0,
     "Schall ist eine Longitudinalwelle (Schwingung in Ausbreitungsrichtung). Licht ist eine elektromagnetische Transversalwelle.",
-    "mittel",
+    "schwer",
     ["Schall", "Licht", "Longitudinal", "Transversal"]
   ),
   q(
@@ -338,7 +338,7 @@ export const physikPool1: Question[] = [
     ],
     0,
     'Spannung U = W/Q (Arbeit pro Ladung), Einheit Volt = J/C. Sie beschreibt die "Antriebsstärke" für den Stromfluss.',
-    "mittel",
+    "schwer",
     ["Spannung", "Elektrizität", "Definition"]
   ),
   q(
@@ -348,7 +348,7 @@ export const physikPool1: Question[] = [
     ["U = E · d", "U = E / d", "U = E + d", "U = E − d", "U = d / E"],
     0,
     "Im homogenen Feld: U = E · d (Feldstärke mal Abstand in Feldrichtung). E in V/m, d in m, U in V.",
-    "mittel",
+    "schwer",
     ["elektrisches Feld", "Spannung", "Feldstärke"]
   ),
   q(
@@ -358,7 +358,7 @@ export const physikPool1: Question[] = [
     ["Protonen", "Neutronen", "Elektronen", "Heliumkerne", "Photonen"],
     2,
     "Beta-Minus-Zerfall: Ein Neutron wird zu einem Proton; es werden ein Elektron (β⁻) und ein Antineutrino emittiert.",
-    "mittel",
+    "schwer",
     ["Beta-Strahlung", "Radioaktivität", "Zerfall"]
   ),
   q(
@@ -416,7 +416,7 @@ export const physikPool1: Question[] = [
     ],
     1,
     "Q = m · c · ΔT (c = spezifische Wärmekapazität in J/(kg·K)).",
-    "leicht",
+    "mittel",
     ["Wärme", "Wärmekapazität", "Thermodynamik"]
   ),
   q(
@@ -506,7 +506,7 @@ export const physikPool1: Question[] = [
     ["I = U · R", "I = U / R", "I = R / U", "I = U + R", "I = U − R"],
     1,
     "Ohmsches Gesetz: U = R · I, also I = U / R.",
-    "leicht",
+    "mittel",
     ["Ohmsches Gesetz", "Strom", "Spannung"]
   ),
   q(
@@ -522,7 +522,7 @@ export const physikPool1: Question[] = [
     ],
     2,
     'Joule (J) = Energie; Watt (W) = Leistung = J/s. Verschiedene Größen — man "rechnet" nicht Joule in Watt um.',
-    "mittel",
+    "schwer",
     ["Joule", "Watt", "Einheiten"]
   ),
   q(
@@ -564,7 +564,7 @@ export const physikPool1: Question[] = [
     ["W = 0", "W = F · s", "W = F / s", "W = F + s", "W = F − s"],
     1,
     "Bei konstanter Geschwindigkeit auf rauer Ebene hält die Zugkraft F der Reibungskraft das Gleichgewicht. Die von F verrichtete Arbeit ist W = F · s (Kraft mal Weg in Kraftrichtung).",
-    "mittel",
+    "schwer",
     ["Arbeit", "Kraft", "Weg"]
   ),
   q(
@@ -638,7 +638,7 @@ export const physikPool1: Question[] = [
     ],
     1,
     "Vektoren: Geschwindigkeit, Kraft, Beschleunigung (Betrag + Richtung). Skalare: Masse, Temperatur, Druck, Energie (nur Betrag + Einheit).",
-    "leicht",
+    "mittel",
     ["Skalar", "Vektor", "Größen"]
   ),
   q(

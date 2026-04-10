@@ -111,7 +111,7 @@ export const mathematikPool3: Question[] = [
     ],
     4,
     "Nicht jede reelle Zahl ist rational — irrationale Zahlen wie √2 oder π gehören zu ℝ \\ ℚ. Alle anderen Aussagen sind korrekt.",
-    "leicht",
+    "mittel",
     ["Zahlenmengen", "Falsch-Aussage"]
   ),
   q(
@@ -121,7 +121,7 @@ export const mathematikPool3: Question[] = [
     ["2 mg", "20 mg", "25 mg", "200 mg", "0,2 mg"],
     1,
     "0,25 mg/kg × 80 kg = 20 mg.",
-    "leicht",
+    "mittel",
     ["Dosisberechnung", "rechenfrage"]
   ),
   q(
@@ -195,7 +195,7 @@ export const mathematikPool3: Question[] = [
     ["17 cm", "13 cm", "15 cm", "√119 cm", "14 cm"],
     1,
     "c = √(a² + b²) = √(25 + 144) = √169 = 13 cm.",
-    "leicht",
+    "mittel",
     ["Pythagoras", "rechenfrage"]
   ),
   q(
@@ -261,7 +261,7 @@ export const mathematikPool3: Question[] = [
     ],
     1,
     "Die Aussage ist falsch: Bei Diskriminante D = 0 gibt es eine Doppellösung (nicht zwei verschiedene), bei D < 0 gibt es keine reelle Lösung.",
-    "mittel",
+    "schwer",
     ["Quadratische Gleichung", "Falsch-Aussage"]
   ),
 
@@ -359,7 +359,7 @@ export const mathematikPool3: Question[] = [
     ],
     4,
     "(a + b)ⁿ ≠ aⁿ + bⁿ im Allgemeinen. Dies ist ein häufiger Fehler. Zum Beispiel: (2 + 3)² = 25 ≠ 4 + 9 = 13.",
-    "leicht",
+    "mittel",
     ["Potenzgesetze", "Falsch-Aussage"]
   ),
   q(
@@ -381,7 +381,7 @@ export const mathematikPool3: Question[] = [
     ["1", "2", "3", "6", "1/2"],
     1,
     "k = (y₂ − y₁)/(x₂ − x₁) = (9 − 3)/(4 − 1) = 6/3 = 2.",
-    "leicht",
+    "mittel",
     ["Lineare Funktion", "Steigung", "rechenfrage"]
   ),
   q(
@@ -613,7 +613,7 @@ export const mathematikPool3: Question[] = [
     ["1/32", "1/8", "4/32", "1/4", "2/32"],
     1,
     "Es gibt 4 Asse in 32 Karten. P = 4/32 = 1/8.",
-    "leicht",
+    "mittel",
     ["Wahrscheinlichkeit", "Laplace"]
   ),
   q(
@@ -633,7 +633,7 @@ export const mathematikPool3: Question[] = [
     ["1/4", "1/2", "3/4", "1/3", "2/3"],
     1,
     "Ergebnisraum: {KK, KZ, ZK, ZZ}. Genau einmal Kopf: {KZ, ZK} = 2 von 4. P = 2/4 = 1/2.",
-    "leicht",
+    "mittel",
     ["Wahrscheinlichkeit", "Laplace"]
   ),
   q(

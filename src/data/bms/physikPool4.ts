@@ -141,7 +141,7 @@ export const physikPool4: Question[] = [
     ],
     1,
     "Parallel: gleiche Spannung U an allen Zweigen.",
-    "leicht",
+    "mittel",
     ["Parallelschaltung", "Spannung"]
   ),
   q(
@@ -151,7 +151,7 @@ export const physikPool4: Question[] = [
     ["10 m/s", "50 m/s", "25 m/s", "5 m/s", "100 m/s"],
     1,
     "v = g·t = 10·5 = 50 m/s.",
-    "leicht",
+    "mittel",
     ["freier Fall", "Geschwindigkeit"]
   ),
   q(
@@ -203,7 +203,7 @@ export const physikPool4: Question[] = [
     ],
     1,
     "F_G = m·g; g_Mond ≈ 1,62 m/s² < g_Erde → kleinere Gewichtskraft.",
-    "leicht",
+    "mittel",
     ["Gewichtskraft", "Mond"]
   ),
   q(
@@ -289,7 +289,7 @@ export const physikPool4: Question[] = [
     ["Masse", "Reibungskoeffizient", "Geschwindigkeit", "Weg", "Energie"],
     1,
     "μ = Reibungskoeffizient (dimensionslos), typisch 0,1–1.",
-    "leicht",
+    "mittel",
     ["Reibung", "Reibungskoeffizient"]
   ),
   q(
@@ -461,7 +461,7 @@ export const physikPool4: Question[] = [
     ],
     2,
     "Compton: Streuung von Photonen an Elektronen, Impulsübertrag (Teilchennatur).",
-    "schwer",
+    "mittel",
     ["Compton", "Photon"]
   ),
   q(
@@ -487,7 +487,7 @@ export const physikPool4: Question[] = [
     ["5 m", "10 m", "20 m", "2,5 m", "15 m"],
     1,
     "s = 0,5·5·4 = 10 m.",
-    "leicht",
+    "mittel",
     ["Beschleunigung", "Weg"]
   ),
   q(

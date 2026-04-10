@@ -260,7 +260,7 @@ export const mathematikPool15: Question[] = [
     ["18 %", "20 %", "22 %", "24 %", "26 %"],
     3,
     "36/150 = 0,24 = 24 %.",
-    "leicht",
+    "mittel",
     ["Prozentrechnung", "rechenfrage"]
   ),
   q(
@@ -593,7 +593,7 @@ export const mathematikPool15: Question[] = [
     ["2", "3", "4", "5", "8"],
     2,
     "E(X) = n · p = 50 × 0,08 = 4.",
-    "leicht",
+    "mittel",
     ["Erwartungswert", "Binomialverteilung", "rechenfrage"]
   ),
   q(

@@ -80,10 +80,12 @@ function testWortfluessigkeit(): void {
   }
   for (let i = 0; i < 5; i++) {
     let task = generateWordFluencyTask(2);
+    if (!task) { fail(`generated diff 2 #${i}`, "generator returned null"); continue; }
     let r = validateKFFTask(task, "wortflüssigkeit");
     let attempts = 0;
     while (!r.ok && attempts < 10) {
       task = generateWordFluencyTask(2);
+      if (!task) { attempts++; continue; }
       r = validateKFFTask(task, "wortflüssigkeit");
       attempts++;
     }

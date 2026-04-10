@@ -59,7 +59,7 @@ export const biologiePool3: Question[] = [
     ],
     4,
     "Die ATP-Synthese findet hauptsächlich in den Mitochondrien statt (oxidative Phosphorylierung) und zu einem geringen Anteil im Zytoplasma (Glykolyse). Das raue ER synthetisiert Proteine für den Sekretionsweg, ist aber kein Ort der ATP-Synthese.",
-    "leicht",
+    "mittel",
     ["er", "endoplasmatisches retikulum", "falsch-aussage"]
   ),
   q(
@@ -75,7 +75,7 @@ export const biologiePool3: Question[] = [
     ],
     1,
     "Mikrotubuli bilden die Mitosespindel, die für die Trennung der Chromosomen während der Zellteilung essenziell ist. Colchicin hemmt die Polymerisation der Mikrotubuli und blockiert damit die Mitose. Die anderen genannten Prozesse sind nicht direkt von Mikrotubuli abhängig.",
-    "mittel",
+    "schwer",
     ["mikrotubuli", "colchicin", "mitose", "zytoskelett"]
   ),
   q(
@@ -107,7 +107,7 @@ export const biologiePool3: Question[] = [
     ],
     4,
     "Der osmotische Druck ist direkt proportional zur Konzentration gelöster Teilchen. Alle anderen Aussagen sind korrekt: Osmose geht zum höher konzentrierten Kompartiment, Erythrozyten krenieren in hypertoner und lysieren in hypotoner Lösung.",
-    "leicht",
+    "mittel",
     ["osmose", "osmotischer druck", "falsch-aussage"]
   ),
   q(
@@ -149,7 +149,7 @@ export const biologiePool3: Question[] = [
     ],
     1,
     "Nur Mitochondrien und Chloroplasten besitzen eine Doppelmembran und eigene DNA (zirkuläre Genome). Dies stützt die Endosymbiontentheorie. Lysosomen, Peroxisomen, Golgi und ER haben Einzelmembranen; Ribosomen und Zentrosomen haben keine Membran.",
-    "leicht",
+    "mittel",
     ["mitochondrien", "chloroplasten", "endosymbiontentheorie"]
   ),
   q(
@@ -181,7 +181,7 @@ export const biologiePool3: Question[] = [
     ],
     4,
     "Ein Kennzeichen der Apoptose ist, dass sie KEINE Entzündungsreaktion auslöst. Die Zelle wird in apoptotische Körperchen zerlegt und von Phagozyten aufgenommen, bevor der Inhalt freigesetzt wird. Alle anderen Aussagen sind korrekt.",
-    "mittel",
+    "schwer",
     ["apoptose", "caspasen", "falsch-aussage"]
   ),
   q(
@@ -279,7 +279,7 @@ export const biologiePool3: Question[] = [
     ],
     4,
     "Von ca. 180 Litern Primärharn pro Tag werden etwa 99 % rückresorbiert; nur ca. 1,5–2 Liter Endharn werden ausgeschieden. Die Tubuli und die Henle-Schleife resorbieren Wasser, Elektrolyte, Glukose und Aminosäuren zurück ins Blut.",
-    "leicht",
+    "mittel",
     ["niere", "nephron", "primärharn", "falsch-aussage"]
   ),
   q(
@@ -295,7 +295,7 @@ export const biologiePool3: Question[] = [
     ],
     2,
     "Beim Herzinfarkt (Myokardinfarkt) kommt es durch den Verschluss einer Koronararterie zur Ischämie und Nekrose des Herzmuskelgewebes (Myokard). Die Kardiomyozyten sind quergestreift, aber unwillkürlich innerviert und durch Glanzstreifen (Disci intercalares) verbunden.",
-    "leicht",
+    "mittel",
     ["herzinfarkt", "kardiomyozyten", "myokard"]
   ),
   q(
@@ -385,7 +385,7 @@ export const biologiePool3: Question[] = [
     ],
     3,
     "Thyroxin (T4) wird in der Schilddrüse (Thyroidea) produziert, NICHT in der Nebenschilddrüse. Die Nebenschilddrüse (Parathyroidea) produziert Parathormon (PTH), das den Kalziumspiegel im Blut reguliert. Alle anderen Aussagen sind korrekt.",
-    "mittel",
+    "schwer",
     ["hormone", "thyroxin", "nebenschilddrüse", "falsch-aussage"]
   ),
   q(
@@ -477,7 +477,7 @@ export const biologiePool3: Question[] = [
     ],
     1,
     "Natürliche Selektion wirkt auf den Phänotyp: Individuen mit vorteilhaften Merkmalen überleben und reproduzieren sich besser, wodurch sich die Allelfrequenzen in der Population verschieben. Neue Variationen entstehen durch Mutation und Rekombination, nicht durch Selektion selbst.",
-    "mittel",
+    "schwer",
     ["selektion", "evolution", "phänotyp"]
   ),
   q(
@@ -493,7 +493,7 @@ export const biologiePool3: Question[] = [
     ],
     3,
     "Das Hardy-Weinberg-Gleichgewicht beschreibt eine ideale Population, in der sich die Allelfrequenzen NICHT ändern (Gleichgewicht). Voraussetzungen: große Population, zufällige Paarung, keine Mutation, Migration oder Selektion. In der Realität sind diese Bedingungen nie vollständig erfüllt.",
-    "mittel",
+    "schwer",
     ["hardy-weinberg", "allelfrequenz", "falsch-aussage"]
   ),
   q(
@@ -541,7 +541,7 @@ export const biologiePool3: Question[] = [
     ],
     2,
     "Auf brauner Baumrinde sind braune Käfer besser getarnt und werden seltener von Fressfeinden erbeutet. Es wirkt gerichtete Selektion: Die Häufigkeit des Allels für braune Färbung nimmt zu, während grüne Käfer benachteiligt werden. Dies verschiebt die Merkmalsverteilung in eine Richtung.",
-    "leicht",
+    "mittel",
     ["selektion", "tarnung", "direktionale selektion"]
   ),
   q(
@@ -573,7 +573,7 @@ export const biologiePool3: Question[] = [
     ],
     1,
     "Nach dem Konkurrenzausschlussprinzip (Gause) können zwei Arten NICHT dauerhaft dieselbe ökologische Nische im selben Habitat besetzen — eine Art wird die andere verdrängen. Die Fundamentalnische beschreibt den potenziellen Lebensraum ohne Konkurrenz, die Realnische den tatsächlich genutzten unter Konkurrenzbedingungen.",
-    "mittel",
+    "schwer",
     ["ökologische nische", "konkurrenzausschluss", "falsch-aussage"]
   ),
   q(
@@ -615,7 +615,7 @@ export const biologiePool3: Question[] = [
     ["Parasitismus", "Kommensalismus", "Mutualismus", "Amensalismus", "Prädation"],
     2,
     "Mutualismus ist eine Symbioseform, bei der beide Partner profitieren. Der Clownfisch erhält Schutz vor Fressfeinden, und die Seeanemone profitiert von der Reinigung und dem Nahrungseintrag durch den Fisch. Beim Kommensalismus profitiert nur ein Partner, beim Parasitismus wird ein Partner geschädigt.",
-    "leicht",
+    "mittel",
     ["symbiose", "mutualismus", "ökologie"]
   ),
   q(
@@ -679,7 +679,7 @@ export const biologiePool3: Question[] = [
     ],
     1,
     "Der Appendix vermiformis (Wurmfortsatz) gilt als rudimentäres Organ — ein Überbleibsel des bei Pflanzenfressern größeren Blinddarms. Obwohl er eine gewisse immunologische Funktion hat, ist er ein klassisches Beispiel für ein Rudiment als Evolutionsbeleg.",
-    "leicht",
+    "mittel",
     ["rudiment", "appendix", "evolution"]
   ),
 
@@ -707,7 +707,7 @@ export const biologiePool3: Question[] = [
     ["0 %", "25 %", "50 %", "75 %", "100 %"],
     1,
     "Bei Aa × Aa ergibt sich nach Mendel: 1/4 AA, 2/4 Aa, 1/4 aa. Nur homozygot rezessive Individuen (aa) zeigen das Merkmal phänotypisch. Die Wahrscheinlichkeit beträgt 25 % (1/4).",
-    "leicht",
+    "mittel",
     ["autosomal-rezessiv", "mendel", "kreuzung"]
   ),
   q(
@@ -723,7 +723,7 @@ export const biologiePool3: Question[] = [
     ],
     4,
     "Am Ende der Meiose I entstehen zwei HAPLOIDE Zellen (nicht diploide), da die homologen Chromosomen getrennt werden (Reduktions­teilung). Jede Zelle enthält einen haploiden Chromosomensatz, auch wenn jedes Chromosom noch aus zwei Chromatiden besteht.",
-    "mittel",
+    "schwer",
     ["meiose", "reduktions­teilung", "falsch-aussage"]
   ),
   q(
@@ -921,7 +921,7 @@ export const biologiePool3: Question[] = [
     ],
     3,
     "Bakterien vermehren sich durch binäre Fission (Zweiteilung), NICHT durch Meiose. Meiose ist ein eukaryotischer Zellteilungsprozess zur Bildung haploider Keimzellen. Alle anderen Aussagen sind korrekt: Prokaryoten, Peptidoglykan-Zellwand, Plasmide und Endosporen.",
-    "leicht",
+    "mittel",
     ["bakterien", "zellteilung", "meiose", "falsch-aussage"]
   ),
   q(
@@ -953,7 +953,7 @@ export const biologiePool3: Question[] = [
     ],
     1,
     "Trisomie 21 bedeutet drei Kopien des Chromosoms 21. Die häufigste Ursache ist Non-Disjunction in der Meiose. Eine Translokations-Trisomie (Robertson-Translokation 14;21) kommt in ca. 3–4 % der Fälle vor, aber nicht in allen. 47,XXY ist das Klinefelter-Syndrom.",
-    "leicht",
+    "mittel",
     ["trisomie 21", "down-syndrom", "chromosomenaberration"]
   ),
   q(
@@ -1017,7 +1017,7 @@ export const biologiePool3: Question[] = [
     ],
     2,
     "Personen mit Blutgruppe AB besitzen KEINE Anti-A- oder Anti-B-Antikörper und sind daher Universalempfänger. Sie tragen sowohl A- als auch B-Antigene auf ihren Erythrozyten. Personen mit Blutgruppe 0 besitzen dagegen Anti-A- UND Anti-B-Antikörper.",
-    "mittel",
+    "schwer",
     ["blutgruppen", "kodominanz", "antikörper", "falsch-aussage"]
   ),
   q(

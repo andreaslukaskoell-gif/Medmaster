@@ -115,7 +115,7 @@ export const mathematikPool5: Question[] = [
     ],
     3,
     "e ist irrational. Dass e als Grenzwert darstellbar ist (z. B. lim (1 + 1/n)ⁿ), macht e nicht rational. Eine rationale Zahl müsste als p/q mit ganzen Zahlen darstellbar sein.",
-    "mittel",
+    "schwer",
     ["Euler'sche Zahl", "Falsch-Aussage"]
   ),
   q(
@@ -167,7 +167,7 @@ export const mathematikPool5: Question[] = [
     ["10 cm", "5 cm", "15 cm", "7,5 cm", "3 cm"],
     1,
     "Sei b die Breite, dann l = 2b. U = 2(l + b) = 2(2b + b) = 6b = 30 ⇒ b = 5 cm.",
-    "leicht",
+    "mittel",
     ["Rechteck", "Umfang", "rechenfrage"]
   ),
   q(
@@ -341,7 +341,7 @@ export const mathematikPool5: Question[] = [
     ],
     3,
     "log(a + b) ≠ log(a) · log(b). Es gibt keine einfache Logarithmenregel für die Summe. Alle anderen Regeln sind korrekt.",
-    "mittel",
+    "schwer",
     ["Logarithmus", "Falsch-Aussage"]
   ),
   q(
@@ -573,7 +573,7 @@ export const mathematikPool5: Question[] = [
     ],
     3,
     "Das Skalarprodukt liefert eine Zahl (Skalar), keinen Vektor. Alle anderen Aussagen sind korrekte Eigenschaften.",
-    "mittel",
+    "schwer",
     ["Skalarprodukt", "Falsch-Aussage"]
   ),
 
@@ -585,7 +585,7 @@ export const mathematikPool5: Question[] = [
     ["4/6", "6/10", "2/5", "4/10", "3/5"],
     2,
     "P(rot) = 4/10 = 2/5. (Option D ist äquivalent, aber C ist die gekürzte Form.)",
-    "leicht",
+    "mittel",
     ["Wahrscheinlichkeit", "Laplace"]
   ),
   q(
@@ -681,7 +681,7 @@ export const mathematikPool5: Question[] = [
     ["3", "6", "9", "12", "27"],
     2,
     "Bei 3 Möglichkeiten pro Drehung und 2 Drehungen: 3² = 9 geordnete Paare.",
-    "leicht",
+    "mittel",
     ["Zählprinzip", "rechenfrage"]
   ),
 ];

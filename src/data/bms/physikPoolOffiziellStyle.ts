@@ -84,7 +84,7 @@ export const physikPoolOffiziellStyle: Question[] = [
     ["R₁ : R₂ = 1", "R₁ : R₂ = 4", "R₁ : R₂ = 8", "R₁ : R₂ = 2", "R₁ : R₂ = ½"],
     2,
     "R = ρ·L/A, A ∼ d². R₁/R₂ = (L₁/L₂)·(A₂/A₁) = (100/50)·(2/1)² = 2·4 = 8.",
-    "mittel",
+    "schwer",
     ["elektrischer Widerstand", "E-Lehre"]
   ),
   q(
@@ -94,7 +94,7 @@ export const physikPoolOffiziellStyle: Question[] = [
     ["1,5 m", "6,6 cm", "1,5 cm", "15 cm", "0,66 m"],
     3,
     "λ = c/f = 3·10⁸ / (2·10⁹) m = 0,15 m = 15 cm.",
-    "mittel",
+    "schwer",
     ["Wellenlänge", "Elektromagnetische Welle"]
   ),
   q(
@@ -104,7 +104,7 @@ export const physikPoolOffiziellStyle: Question[] = [
     ["−10 V", "+4 V", "+10 Amperesekunden", "+10 V", "+10 Joule/Coulomb"],
     0,
     "U = V(+) − V(−) = V(Klemme 1) − V(Klemme 2) = (−3) − (+7) = −10 V.",
-    "mittel",
+    "schwer",
     ["Spannung", "Potenzial", "E-Lehre"]
   ),
   q(
@@ -120,7 +120,7 @@ export const physikPoolOffiziellStyle: Question[] = [
     ],
     1,
     'J = N·m (Arbeit); 1 eV ≈ 1,6·10⁻¹⁹ J; 1 cal ≈ 4,18 J. Watt (W) ist Leistung, keine Energie – man rechnet Joule nicht "in Watt" um.',
-    "mittel",
+    "schwer",
     ["Einheiten", "Joule", "Energie"]
   ),
   q(
@@ -136,7 +136,7 @@ export const physikPoolOffiziellStyle: Question[] = [
     ],
     0,
     "Effektivwert U_eff = Û/√2 → Û = 230·√2 V > 230 V (4.). U_eff ist definiert über die gleiche Leistung wie Gleichspannung U_eff (2.).",
-    "mittel",
+    "schwer",
     ["Effektivwert", "Wechselspannung", "E-Lehre"]
   ),
   q(
@@ -188,7 +188,7 @@ export const physikPoolOffiziellStyle: Question[] = [
     ],
     2,
     "Ionisierende Strahlung aus Kernzerfall: α (Heliumkerne), β (Elektronen/Positronen), γ (Photonen). Infrarot ist nicht ionisierend und nicht typisch für Kernzerfall.",
-    "mittel",
+    "schwer",
     ["Radioaktivität", "Alpha", "Beta", "Gamma"]
   ),
   q(
@@ -198,7 +198,7 @@ export const physikPoolOffiziellStyle: Question[] = [
     ["v₂ − v₁ = 0", "v₂ > v₁", "v₂ < v₁", "v₂ + v₁ = 0", "v₂ = v₁"],
     1,
     "Kontinuitätsgleichung: A·v = const. Bei Verengung (kleineres A) wird v größer → v₂ > v₁.",
-    "mittel",
+    "schwer",
     ["Kontinuitätsgleichung", "Strömung", "Mechanik"]
   ),
 ];

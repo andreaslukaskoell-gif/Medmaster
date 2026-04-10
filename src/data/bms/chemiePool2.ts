@@ -495,7 +495,7 @@ export const chemiePool2: Question[] = [
     ["λ = c · ν", "λ · ν = c", "λ = ν / c", "λ + ν = c", "λ = c / ν"],
     4,
     "c = λ · ν (Lichtgeschwindigkeit = Wellenlänge × Frequenz), also λ = c/ν. Je größer die Frequenz, desto kleiner die Wellenlänge.",
-    "leicht",
+    "mittel",
     ["Wellenlänge", "Frequenz", "Licht"]
   ),
   q(

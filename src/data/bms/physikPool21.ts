@@ -48,7 +48,7 @@ export const physikPool21: Question[] = [
     ["c = f + λ", "c = f · λ", "c = f/λ", "c = λ/f", "c = f − λ"],
     1,
     "c = λ·f.",
-    "leicht",
+    "mittel",
     ["Frequenz", "Wellenlänge"]
   ),
   q(
@@ -68,7 +68,7 @@ export const physikPool21: Question[] = [
     ["I = U·R", "I = U/R", "I = R/U", "I = U + R", "I = U²·R"],
     1,
     "Ohmsches Gesetz: I = U/R.",
-    "leicht",
+    "mittel",
     ["Stromstärke", "Ohm"]
   ),
   q(
@@ -126,7 +126,7 @@ export const physikPool21: Question[] = [
     ["J", "W/(m·K)", "W·m", "J/K", "K/m"],
     1,
     "λ in W/(m·K).",
-    "leicht",
+    "mittel",
     ["Wärmeleitfähigkeit", "Einheit"]
   ),
   q(
@@ -136,7 +136,7 @@ export const physikPool21: Question[] = [
     ["R₁ + R₂", "1/", "R₁·R₂", "R₁/R₂", "R₁ − R₂"],
     1,
     "Parallel: 1/R_ges = 1/R₁ + 1/R₂.",
-    "leicht",
+    "mittel",
     ["Parallelschaltung", "Widerstand"]
   ),
   q(
@@ -156,7 +156,7 @@ export const physikPool21: Question[] = [
     ["F_G = m·v", "F_G = m·g", "F_G = m·a beliebig", "F_G = p", "F_G = E/c²"],
     1,
     "F_G = m·g.",
-    "leicht",
+    "mittel",
     ["Gewichtskraft", "Masse"]
   ),
   q(
@@ -176,7 +176,7 @@ export const physikPool21: Question[] = [
     ["J", "J/(mol·K)", "J·mol·K", "K/J", "mol/J"],
     1,
     "R ≈ 8,314 J/(mol·K).",
-    "leicht",
+    "mittel",
     ["Gaskonstante", "Einheit"]
   ),
   q(
@@ -186,7 +186,7 @@ export const physikPool21: Question[] = [
     ["P = I/R", "P = I²·R", "P = R/I", "P = I·R", "P = I/R²"],
     1,
     "P = U·I = I²·R.",
-    "leicht",
+    "mittel",
     ["Leistung", "Strom"]
   ),
   q(
@@ -212,7 +212,7 @@ export const physikPool21: Question[] = [
     ],
     1,
     "Archimedes: F_A = ρ_Fl·V_verdrängt·g.",
-    "leicht",
+    "mittel",
     ["Auftrieb", "Archimedes"]
   ),
   q(
@@ -288,7 +288,7 @@ export const physikPool21: Question[] = [
     ["A = Z − N", "A = Z + N", "A = Z·N", "A = Z/N", "A = N − Z"],
     1,
     "A = Z + N.",
-    "leicht",
+    "mittel",
     ["Massenzahl", "Kern"]
   ),
   q(
@@ -426,7 +426,7 @@ export const physikPool21: Question[] = [
     ["W = U/I", "W = U·I·t", "W = I/(U·t)", "W = U + I + t", "W = U²·I"],
     1,
     "W = U·I·t = P·t.",
-    "leicht",
+    "mittel",
     ["elektrische Arbeit", "Energie"]
   ),
   q(
@@ -570,7 +570,7 @@ export const physikPool21: Question[] = [
     ["Q = m/c·ΔT", "Q = m·c·ΔT", "Q = c/(m·ΔT)", "Q = m + c + ΔT", "Q = ΔT/(m·c)"],
     1,
     "Q = m·c·ΔT.",
-    "leicht",
+    "mittel",
     ["Wärmemenge", "Temperaturänderung"]
   ),
   q(

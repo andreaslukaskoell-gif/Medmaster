@@ -52,7 +52,7 @@ export const mathematikPool12: Question[] = [
     ["311,65 K", "308,15 K", "301,65 K", "265,65 K", "235,35 K"],
     0,
     "T = 38,5 + 273,15 = 311,65 K.",
-    "leicht",
+    "mittel",
     ["Einheiten", "Temperatur", "rechenfrage"]
   ),
   q(
@@ -336,7 +336,7 @@ export const mathematikPool12: Question[] = [
     ["180", "200", "220", "240", "270"],
     3,
     "Verwaltung: 100 % − 15 % − 45 % = 40 %. 600 × 0,40 = 240.",
-    "leicht",
+    "mittel",
     ["Prozentrechnung", "rechenfrage"]
   ),
   q(
@@ -463,7 +463,7 @@ export const mathematikPool12: Question[] = [
     ],
     2,
     "Eine quadratische Funktion hat 0, 1 oder 2 Nullstellen, abhängig von der Diskriminante D = b² − 4ac.",
-    "leicht",
+    "mittel",
     ["quadratische Funktion", "Falsch-Aussage"]
   ),
 
@@ -615,7 +615,7 @@ export const mathematikPool12: Question[] = [
     ["0,45", "0,55", "0,40", "0,60", "0,50"],
     1,
     "P(nicht A) = 1 − P(A) = 1 − 0,45 = 0,55.",
-    "leicht",
+    "mittel",
     ["Wahrscheinlichkeit", "Gegenereignis", "rechenfrage"]
   ),
   q(
@@ -625,7 +625,7 @@ export const mathematikPool12: Question[] = [
     ["1/2", "1/4", "3/8", "1/8", "1/16"],
     1,
     "P(gerade) = 4/8 = 1/2 pro Drehung. P(beide gerade) = 1/2 × 1/2 = 1/4.",
-    "leicht",
+    "mittel",
     ["Wahrscheinlichkeit", "Unabhängigkeit", "rechenfrage"]
   ),
   q(
@@ -665,7 +665,7 @@ export const mathematikPool12: Question[] = [
     ["5", "10", "15", "20", "25"],
     1,
     "Erwartete Falsch-Positive = 200 × 0,05 = 10.",
-    "mittel",
+    "schwer",
     ["Wahrscheinlichkeit", "Erwartungswert", "Diagnostik", "rechenfrage"]
   ),
   q(

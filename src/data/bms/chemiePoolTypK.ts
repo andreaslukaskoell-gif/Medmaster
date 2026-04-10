@@ -3,6 +3,7 @@
  */
 import type { BMSFrage } from "@/lib/supabaseBMSFragen";
 import { chemiePoolTypKExtra } from "./chemiePoolTypKExtra";
+import { chemieTypKNew } from "./chemiePoolTypKNew";
 
 export const chemiePoolTypK: BMSFrage[] = [
   {
@@ -216,4 +217,5 @@ export const chemiePoolTypK: BMSFrage[] = [
     fsrs: null,
   },
   ...chemiePoolTypKExtra,
+  ...chemieTypKNew,
 ];

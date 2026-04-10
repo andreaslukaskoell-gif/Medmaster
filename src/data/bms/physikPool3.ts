@@ -81,7 +81,7 @@ export const physikPool3: Question[] = [
     ["0 N", "5 N", "50 N", "10 N", "5 kg"],
     2,
     "Gleichgewicht: Tischkraft = Gewichtskraft = m·g = 5·10 = 50 N (nach oben).",
-    "leicht",
+    "mittel",
     ["Kräftegleichgewicht", "Normalkraft"]
   ),
   q(
@@ -107,7 +107,7 @@ export const physikPool3: Question[] = [
     ["E = U · d", "E = U / d", "E = d / U", "E = U + d", "E = Q / U"],
     1,
     "Homogenes Feld: E = U/d (V/m).",
-    "leicht",
+    "mittel",
     ["Plattenkondensator", "Feldstärke"]
   ),
   q(
@@ -207,7 +207,7 @@ export const physikPool3: Question[] = [
     ],
     1,
     "P = W/t → W = P·t. P in W (Watt), W in J (Joule).",
-    "leicht",
+    "mittel",
     ["Leistung", "Arbeit"]
   ),
   q(
@@ -249,7 +249,7 @@ export const physikPool3: Question[] = [
     ["10 W", "5 W", "40 W", "0,025 W", "100 W"],
     1,
     "P = R·I² = 20·(0,5)² = 5 W. Oder U = R·I = 10 V, P = U·I = 5 W.",
-    "leicht",
+    "mittel",
     ["Leistung", "Widerstand"]
   ),
   q(
@@ -279,7 +279,7 @@ export const physikPool3: Question[] = [
     ["T = f", "T = 1/f", "T = f²", "T = 2π·f", "f = T²"],
     1,
     "T = 1/f (Periode in s, Frequenz in Hz).",
-    "leicht",
+    "mittel",
     ["Periode", "Frequenz"]
   ),
   q(
@@ -305,7 +305,7 @@ export const physikPool3: Question[] = [
     ["3,6", "1", "0,36", "36", "10"],
     1,
     "v = 36 km/h = 10 m/s. a = Δv/Δt = (10−0)/10 = 1 m/s².",
-    "leicht",
+    "mittel",
     ["Beschleunigung", "Kinematik"]
   ),
   q(
@@ -399,7 +399,7 @@ export const physikPool3: Question[] = [
     ["4 m/s", "ca. 8,9 m/s", "10 m/s", "20 m/s", "0 m/s"],
     1,
     "Energieerhaltung: (1/2)mv² = mgh → v = √(2gh) = √(2·10·4) = √80 ≈ 8,9 m/s.",
-    "mittel",
+    "schwer",
     ["Energieerhaltung", "Wurf"]
   ),
   q(
@@ -623,7 +623,7 @@ export const physikPool3: Question[] = [
     ["10⁶", "5·10⁵", "10⁵", "0", "2·10⁶"],
     1,
     "Nach 1 T½: N = N₀/2 = 5·10⁵.",
-    "leicht",
+    "mittel",
     ["Halbwertszeit", "Zerfall"]
   ),
   q(

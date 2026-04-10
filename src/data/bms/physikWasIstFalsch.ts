@@ -47,7 +47,7 @@ export const physikWasIstFalsch: Question[] = [
     ],
     0,
     "Actio und Reactio (3. Newtonsches Gesetz) wirken stets auf zwei verschiedene Körper, nicht auf denselben. Die Kräfte sind gleich groß, entgegengesetzt gerichtet, greifen aber an unterschiedlichen Körpern an.",
-    "leicht",
+    "mittel",
     ["falsch-aussage", "mechanik", "newton"]
   ),
 
@@ -64,7 +64,7 @@ export const physikWasIstFalsch: Question[] = [
     ],
     1,
     "Die kinetische Energie E_kin = ½ · m · v² ist proportional zum Quadrat der Geschwindigkeit, nicht zur Geschwindigkeit selbst. Verdoppelt man die Geschwindigkeit, vervierfacht sich die kinetische Energie.",
-    "leicht",
+    "mittel",
     ["falsch-aussage", "mechanik", "energie"]
   ),
 
@@ -81,7 +81,7 @@ export const physikWasIstFalsch: Question[] = [
     ],
     2,
     "Die Fallstrecke wächst quadratisch mit der Zeit (s = ½ · g · t²), nicht linear. Die Geschwindigkeit nimmt linear zu (v = g · t), was die quadratische Abhängigkeit der Strecke bewirkt.",
-    "leicht",
+    "mittel",
     ["falsch-aussage", "mechanik", "freier-fall"]
   ),
 
@@ -98,7 +98,7 @@ export const physikWasIstFalsch: Question[] = [
     ],
     3,
     "Bei jeder Kollision in einem abgeschlossenen System bleibt der Gesamtimpuls erhalten – sowohl bei elastischen als auch bei unelastischen Stößen. Bei einem elastischen Stoß bleibt zusätzlich die kinetische Energie erhalten.",
-    "mittel",
+    "schwer",
     ["falsch-aussage", "mechanik", "impuls"]
   ),
 
@@ -115,7 +115,7 @@ export const physikWasIstFalsch: Question[] = [
     ],
     0,
     "Im Coulombschen Reibungsmodell ist die Reibungskraft F_R = μ · F_N und unabhängig von der Größe der Auflagefläche. Dies ist eine häufige Falle: Die Kontaktfläche spielt im idealisierten Modell keine Rolle.",
-    "mittel",
+    "schwer",
     ["falsch-aussage", "mechanik", "reibung"]
   ),
 
@@ -132,7 +132,7 @@ export const physikWasIstFalsch: Question[] = [
     ],
     0,
     "Mechanische Arbeit erfordert eine Kraft und eine Verschiebung in Kraftrichtung (W = F · s · cos α). Beim ruhigen Halten ist die Verschiebung null, daher wird keine mechanische Arbeit verrichtet – auch wenn die Muskulatur physiologisch Energie verbraucht.",
-    "leicht",
+    "mittel",
     ["falsch-aussage", "mechanik", "arbeit", "leistung"]
   ),
 
@@ -149,7 +149,7 @@ export const physikWasIstFalsch: Question[] = [
     ],
     1,
     "Die Zentrifugalkraft ist eine Scheinkraft (Trägheitskraft), die nur in rotierenden Bezugssystemen (Nichtinertialsystemen) auftritt. Im Inertialsystem gibt es nur die Zentripetalkraft als reale Kraft.",
-    "mittel",
+    "schwer",
     ["falsch-aussage", "mechanik", "kreisbewegung"]
   ),
 
@@ -200,7 +200,7 @@ export const physikWasIstFalsch: Question[] = [
     ],
     3,
     "Die Spannenergie einer Feder ist E = ½ · k · x² und somit proportional zum Quadrat der Auslenkung, nicht zur Auslenkung selbst. Die Federkraft F = k · x ist linear, die Energie jedoch quadratisch.",
-    "mittel",
+    "schwer",
     ["falsch-aussage", "mechanik", "energie"]
   ),
 
@@ -219,7 +219,7 @@ export const physikWasIstFalsch: Question[] = [
     ],
     1,
     "Der hydrostatische Druck p = ρ · g · h hängt nur von der Dichte der Flüssigkeit, der Erdbeschleunigung und der Tiefe ab – nicht von der Form des Gefäßes. Dies ist das hydrostatische Paradoxon.",
-    "leicht",
+    "mittel",
     ["falsch-aussage", "fluidmechanik", "druck"]
   ),
 
@@ -236,7 +236,7 @@ export const physikWasIstFalsch: Question[] = [
     ],
     0,
     "Die Auftriebskraft F_A = ρ_Flüssigkeit · g · V_eingetaucht hängt von der Dichte der Flüssigkeit und dem eingetauchten Volumen ab, nicht von der Masse des Körpers. Zwei Körper gleichen Volumens erfahren denselben Auftrieb, unabhängig von ihrer Masse.",
-    "leicht",
+    "mittel",
     ["falsch-aussage", "fluidmechanik", "auftrieb"]
   ),
 
@@ -253,7 +253,7 @@ export const physikWasIstFalsch: Question[] = [
     ],
     1,
     "Nach dem Bernoulli-Prinzip sinkt der statische Druck an einer Verengung, weil die Strömungsgeschwindigkeit zunimmt (Kontinuität: A₁v₁ = A₂v₂). Höhere kinetische Energiedichte = niedrigerer statischer Druck.",
-    "mittel",
+    "schwer",
     ["falsch-aussage", "fluidmechanik", "kontinuität", "bernoulli"]
   ),
 
@@ -270,7 +270,7 @@ export const physikWasIstFalsch: Question[] = [
     ],
     2,
     "In den Venen ist der Blutdruck deutlich niedriger als in den Arterien. Der arterielle Mitteldruck liegt bei etwa 100 mmHg, während er in den Venen auf wenige mmHg abfällt.",
-    "leicht",
+    "mittel",
     ["falsch-aussage", "fluidmechanik", "blutdruck"]
   ),
 
@@ -287,7 +287,7 @@ export const physikWasIstFalsch: Question[] = [
     ],
     3,
     "Die Viskosität von Wasser nimmt mit steigender Temperatur ab, nicht zu. Bei höherer Temperatur bewegen sich die Moleküle schneller, wodurch die intermolekularen Wechselwirkungen abnehmen und die Flüssigkeit dünnflüssiger wird.",
-    "mittel",
+    "schwer",
     ["falsch-aussage", "fluidmechanik", "viskosität"]
   ),
 
@@ -321,7 +321,7 @@ export const physikWasIstFalsch: Question[] = [
     ],
     0,
     "Die Oberflächenspannung nimmt mit steigender Temperatur ab, weil die thermische Bewegung der Moleküle die Kohäsionskräfte schwächt. Bei der Siedetemperatur wird sie null.",
-    "mittel",
+    "schwer",
     ["falsch-aussage", "fluidmechanik", "oberflächenspannung"]
   ),
 
@@ -355,7 +355,7 @@ export const physikWasIstFalsch: Question[] = [
     ],
     4,
     "Die Steighöhe in einer Kapillare ist h = (2 · σ · cos θ) / (ρ · g · r) und hängt direkt von der Oberflächenspannung σ ab. Eine höhere Oberflächenspannung führt zu einer größeren Steighöhe.",
-    "mittel",
+    "schwer",
     ["falsch-aussage", "fluidmechanik", "kapillarität"]
   ),
 
@@ -372,7 +372,7 @@ export const physikWasIstFalsch: Question[] = [
     ],
     3,
     "Bei einer hydraulischen Presse ist der Weg am großen Kolben kleiner als am kleinen Kolben. Es gilt F₁ · s₁ = F₂ · s₂ (Energieerhaltung): Der große Kolben liefert zwar mehr Kraft, aber weniger Weg.",
-    "leicht",
+    "mittel",
     ["falsch-aussage", "fluidmechanik", "pascal"]
   ),
 
@@ -391,7 +391,7 @@ export const physikWasIstFalsch: Question[] = [
     ],
     4,
     "Die Periodendauer eines Fadenpendels T = 2π · √(L/g) hängt nur von der Fadenlänge L und der Erdbeschleunigung g ab, nicht von der Masse. Dies ist ein klassischer MedAT-Fehler.",
-    "leicht",
+    "mittel",
     ["falsch-aussage", "schwingungen", "pendel"]
   ),
 
@@ -408,7 +408,7 @@ export const physikWasIstFalsch: Question[] = [
     ],
     0,
     "Schall ist eine mechanische Welle und benötigt ein Medium zur Ausbreitung. Im Vakuum gibt es keine Teilchen, die Schwingungen übertragen können – daher kann sich Schall im Vakuum nicht ausbreiten.",
-    "leicht",
+    "mittel",
     ["falsch-aussage", "wellen", "akustik"]
   ),
 
@@ -425,7 +425,7 @@ export const physikWasIstFalsch: Question[] = [
     ],
     3,
     "Bei Entfernung einer Schallquelle wird die wahrgenommene Frequenz niedriger und die Wellenlänge größer, nicht kleiner. Die Wellenfronten werden auseinandergezogen.",
-    "mittel",
+    "schwer",
     ["falsch-aussage", "wellen", "doppler"]
   ),
 
@@ -442,7 +442,7 @@ export const physikWasIstFalsch: Question[] = [
     ],
     1,
     "Die Lichtgeschwindigkeit im optisch dichteren Medium ist niedriger als im Vakuum. Es gilt v = c/n, wobei n > 1 den Brechungsindex des Mediums darstellt. In Glas (n ≈ 1,5) beträgt die Lichtgeschwindigkeit nur etwa 2 × 10⁸ m/s.",
-    "leicht",
+    "mittel",
     ["falsch-aussage", "wellen", "optik", "brechung"]
   ),
 
@@ -459,7 +459,7 @@ export const physikWasIstFalsch: Question[] = [
     ],
     2,
     "Sammellinsen erzeugen nur dann ein reelles Bild, wenn der Gegenstand außerhalb der Brennweite liegt. Befindet sich der Gegenstand innerhalb der Brennweite, entsteht ein virtuelles, aufrechtes, vergrößertes Bild (Lupe).",
-    "mittel",
+    "schwer",
     ["falsch-aussage", "wellen", "optik", "linsen"]
   ),
 
@@ -476,7 +476,7 @@ export const physikWasIstFalsch: Question[] = [
     ],
     4,
     "Resonanz ist ein universelles Phänomen und tritt bei allen schwingungsfähigen Systemen auf – mechanischen, elektromagnetischen und akustischen. Beispiel: Schwingkreise in der Elektronik nutzen elektromagnetische Resonanz.",
-    "mittel",
+    "schwer",
     ["falsch-aussage", "schwingungen", "resonanz"]
   ),
 
@@ -493,7 +493,7 @@ export const physikWasIstFalsch: Question[] = [
     ],
     0,
     "Interferenz tritt bei allen Wellenarten auf – sowohl bei Licht- als auch bei Schallwellen und Wasserwellen. Sie ist eine grundlegende Welleneigenschaft und nicht auf eine bestimmte Wellenart beschränkt.",
-    "leicht",
+    "mittel",
     ["falsch-aussage", "wellen", "interferenz"]
   ),
 
@@ -510,7 +510,7 @@ export const physikWasIstFalsch: Question[] = [
     ],
     4,
     "Kurzsichtigkeit (Myopie) wird mit Zerstreuungslinsen (Konkavlinsen) korrigiert, nicht mit Sammellinsen. Die Zerstreuungslinse verschiebt den Brennpunkt nach hinten auf die Netzhaut. Sammellinsen werden bei Weitsichtigkeit eingesetzt.",
-    "leicht",
+    "mittel",
     ["falsch-aussage", "optik", "auge"]
   ),
 
@@ -544,7 +544,7 @@ export const physikWasIstFalsch: Question[] = [
     ],
     4,
     "0 dB bedeutet nicht, dass kein Schall vorhanden ist, sondern dass der Schalldruckpegel an der Hörschwelle liegt (I₀ = 10⁻¹² W/m²). Es ist der Referenzpunkt, nicht die Abwesenheit von Schall.",
-    "mittel",
+    "schwer",
     ["falsch-aussage", "akustik", "dezibel"]
   ),
 
@@ -580,7 +580,7 @@ export const physikWasIstFalsch: Question[] = [
     ],
     2,
     "Wärmestrahlung (Infrarotstrahlung) ist eine elektromagnetische Welle und benötigt kein Medium – sie breitet sich auch im Vakuum aus. So erreicht uns die Sonnenwärme durch das Vakuum des Weltraums.",
-    "leicht",
+    "mittel",
     ["falsch-aussage", "wärmelehre", "wärmeübertragung"]
   ),
 
@@ -597,7 +597,7 @@ export const physikWasIstFalsch: Question[] = [
     ],
     1,
     "Bei isothermer Kompression bleibt definitionsgemäß die Temperatur konstant (isotherm = gleiche Temperatur). Die innere Energie eines idealen Gases hängt nur von der Temperatur ab, bleibt also ebenfalls konstant. Die bei der Kompression zugeführte Arbeit wird als Wärme abgegeben.",
-    "mittel",
+    "schwer",
     ["falsch-aussage", "wärmelehre", "ideales-gas"]
   ),
 
@@ -631,7 +631,7 @@ export const physikWasIstFalsch: Question[] = [
     ],
     1,
     "Die spezifische Wärmekapazität ist eine stoffspezifische Eigenschaft und variiert stark: Wasser hat c ≈ 4186 J/(kg·K), Eisen nur c ≈ 449 J/(kg·K). Sie ist definitiv nicht für alle Stoffe gleich.",
-    "leicht",
+    "mittel",
     ["falsch-aussage", "wärmelehre", "wärmekapazität"]
   ),
 
@@ -648,7 +648,7 @@ export const physikWasIstFalsch: Question[] = [
     ],
     3,
     "Sublimation ist der direkte Übergang von fest zu gasförmig (z. B. Trockeneis), nicht von flüssig zu gasförmig. Der Übergang von flüssig zu gasförmig heißt Verdampfen bzw. Verdunsten.",
-    "leicht",
+    "mittel",
     ["falsch-aussage", "wärmelehre", "phasenübergänge"]
   ),
 
@@ -665,7 +665,7 @@ export const physikWasIstFalsch: Question[] = [
     ],
     1,
     "Wasser dehnt sich beim Gefrieren aus (Anomalie des Wassers). Eis hat ein größeres Volumen als die gleiche Masse flüssigen Wassers, weshalb Eis auf Wasser schwimmt. Gefrierendes Wasser in geschlossenen Rohren kann diese sprengen.",
-    "leicht",
+    "mittel",
     ["falsch-aussage", "wärmelehre", "wärmeausdehnung"]
   ),
 
@@ -682,7 +682,7 @@ export const physikWasIstFalsch: Question[] = [
     ],
     4,
     "Die Entropie eines abgeschlossenen Systems kann gemäß dem 2. Hauptsatz der Thermodynamik nicht spontan abnehmen. Sie kann nur gleich bleiben (reversibler Prozess) oder zunehmen (irreversibler Prozess).",
-    "mittel",
+    "schwer",
     ["falsch-aussage", "wärmelehre", "entropie"]
   ),
 
@@ -716,7 +716,7 @@ export const physikWasIstFalsch: Question[] = [
     ],
     4,
     "Bei adiabatischer Kompression wird Arbeit am Gas verrichtet, und da keine Wärme abfließt (Q = 0), erhöht sich die innere Energie (ΔU = W). Die Temperatur und damit die innere Energie steigen.",
-    "mittel",
+    "schwer",
     ["falsch-aussage", "wärmelehre", "adiabatisch"]
   ),
 
@@ -735,7 +735,7 @@ export const physikWasIstFalsch: Question[] = [
     ],
     4,
     "Das Ohm'sche Gesetz gilt nur für lineare (Ohm'sche) Widerstände. Halbleiterdioden, LEDs und Transistoren zeigen ein nichtlineares Verhalten, bei dem der Widerstand von Spannung und Strom abhängt.",
-    "mittel",
+    "schwer",
     ["falsch-aussage", "elektrizität", "ohm"]
   ),
 
@@ -752,7 +752,7 @@ export const physikWasIstFalsch: Question[] = [
     ],
     1,
     "In einer Reihenschaltung ist die Spannung über jedem Widerstand proportional zu seinem Widerstandswert (Spannungsteiler: U_i = R_i · I). Nur bei gleich großen Widerständen wäre die Spannung gleich.",
-    "leicht",
+    "mittel",
     ["falsch-aussage", "elektrizität", "reihenschaltung"]
   ),
 
@@ -769,7 +769,7 @@ export const physikWasIstFalsch: Question[] = [
     ],
     0,
     "Der Gesamtwiderstand einer Parallelschaltung berechnet sich aus 1/R_ges = 1/R₁ + 1/R₂ + ... und ist stets kleiner als der kleinste Einzelwiderstand. Die Summe der Einzelwiderstände gilt für die Reihenschaltung.",
-    "leicht",
+    "mittel",
     ["falsch-aussage", "elektrizität", "parallelschaltung"]
   ),
 
@@ -786,7 +786,7 @@ export const physikWasIstFalsch: Question[] = [
     ],
     3,
     "Bei konstantem Widerstand gilt P = I² · R, die Leistung ist also proportional zum Quadrat des Stroms, nicht proportional zum Strom. Alternativ: P = U²/R (proportional zum Quadrat der Spannung).",
-    "mittel",
+    "schwer",
     ["falsch-aussage", "elektrizität", "leistung"]
   ),
 
@@ -803,7 +803,7 @@ export const physikWasIstFalsch: Question[] = [
     ],
     0,
     "Gleichnamige Ladungen stoßen sich ab, ungleichnamige ziehen sich an. Das Coulomb-Gesetz lautet F = k · q₁ · q₂ / r²; bei gleichem Vorzeichen der Ladungen ist die Kraft abstoßend.",
-    "leicht",
+    "mittel",
     ["falsch-aussage", "elektrizität", "feld"]
   ),
 
@@ -820,7 +820,7 @@ export const physikWasIstFalsch: Question[] = [
     ],
     3,
     "Magnetische Monopole wurden bisher nicht nachgewiesen. Jeder Magnet hat stets einen Nord- und einen Südpol. Auch beim Zerteilen eines Magneten entstehen wieder vollständige Dipole – isolierte Pole existieren nicht.",
-    "mittel",
+    "schwer",
     ["falsch-aussage", "elektrizität", "magnetismus"]
   ),
 
@@ -837,7 +837,7 @@ export const physikWasIstFalsch: Question[] = [
     ],
     4,
     "Für die Induktion einer Spannung ist eine zeitliche Änderung des magnetischen Flusses erforderlich. Ein konstantes, gleichmäßiges Magnetfeld (ohne Relativbewegung oder Flussänderung) induziert keine Spannung.",
-    "mittel",
+    "schwer",
     ["falsch-aussage", "elektrizität", "induktion"]
   ),
 
@@ -871,7 +871,7 @@ export const physikWasIstFalsch: Question[] = [
     ],
     2,
     "Der Effektivwert ist stets kleiner als der Scheitelwert. Es gilt U_eff = U_max / √2. Bei einer Netzspannung von 230 V (Effektivwert) beträgt der Scheitelwert ca. 325 V.",
-    "mittel",
+    "schwer",
     ["falsch-aussage", "elektrizität", "wechselstrom"]
   ),
 
@@ -888,7 +888,7 @@ export const physikWasIstFalsch: Question[] = [
     ],
     1,
     "Die Coulomb-Kraft wirkt auch im Vakuum – sie benötigt kein Medium. Das Coulomb-Gesetz F = k · q₁ · q₂ / r² gilt universell und ist im Vakuum sogar am stärksten (keine Abschirmung durch ein Dielektrikum).",
-    "leicht",
+    "mittel",
     ["falsch-aussage", "elektrizität", "coulomb"]
   ),
 
@@ -907,7 +907,7 @@ export const physikWasIstFalsch: Question[] = [
     ],
     4,
     "Die Halbwertszeit ist eine kernphysikalische Konstante und kann durch äußere Bedingungen wie Temperatur, Druck oder chemische Bindung praktisch nicht verändert werden. Sie ist eine intrinsische Eigenschaft des Atomkerns.",
-    "mittel",
+    "schwer",
     ["falsch-aussage", "atomphysik", "radioaktivität"]
   ),
 
@@ -924,7 +924,7 @@ export const physikWasIstFalsch: Question[] = [
     ],
     3,
     "Nach drei Halbwertszeiten sind nicht 75 %, sondern 87,5 % der Kerne zerfallen. Es bleiben (½)³ = 1/8 = 12,5 % übrig, also sind 87,5 % zerfallen. Nach zwei Halbwertszeiten sind 75 % zerfallen.",
-    "mittel",
+    "schwer",
     ["falsch-aussage", "atomphysik", "halbwertszeit"]
   ),
 
@@ -941,7 +941,7 @@ export const physikWasIstFalsch: Question[] = [
     ],
     2,
     "Elektronen im Grundzustand befinden sich auf dem energieärmsten Niveau, nicht auf dem energiereichsten. Im Grundzustand besetzen die Elektronen die niedrigsten verfügbaren Energieniveaus (Aufbauprinzip).",
-    "leicht",
+    "mittel",
     ["falsch-aussage", "atomphysik", "atommodell"]
   ),
 
@@ -958,7 +958,7 @@ export const physikWasIstFalsch: Question[] = [
     ],
     2,
     "γ-Strahlung besteht aus Photonen (elektrisch neutral) und wird daher nicht durch ein Magnetfeld abgelenkt. Nur geladene Teilchen (α- und β-Strahlung) erfahren die Lorentzkraft im Magnetfeld.",
-    "leicht",
+    "mittel",
     ["falsch-aussage", "atomphysik", "strahlung"]
   ),
 
@@ -975,7 +975,7 @@ export const physikWasIstFalsch: Question[] = [
     ],
     3,
     "Kernfusion erfordert extrem hohe Temperaturen (ca. 10–100 Millionen Kelvin), um die elektrostatische Abstoßung der positiv geladenen Kerne zu überwinden. Bei Raumtemperatur findet keine spontane Fusion statt.",
-    "leicht",
+    "mittel",
     ["falsch-aussage", "atomphysik", "kernfusion"]
   ),
 
@@ -992,7 +992,7 @@ export const physikWasIstFalsch: Question[] = [
     ],
     1,
     "Bei der Kernspaltung wird Energie freigesetzt, nicht absorbiert. Die Spaltprodukte haben zusammen eine höhere Bindungsenergie pro Nukleon als der Ausgangskern, und die Differenz wird als kinetische Energie und Strahlung frei.",
-    "mittel",
+    "schwer",
     ["falsch-aussage", "atomphysik", "kernspaltung"]
   ),
 
@@ -1043,7 +1043,7 @@ export const physikWasIstFalsch: Question[] = [
     ],
     1,
     "E = m · c² gilt universell für alle Massen, nicht nur für radioaktive Stoffe. Es ist ein allgemeines Prinzip der speziellen Relativitätstheorie, das die Äquivalenz von Masse und Energie für jede Form von Materie beschreibt.",
-    "mittel",
+    "schwer",
     ["falsch-aussage", "atomphysik", "relativität"]
   ),
 

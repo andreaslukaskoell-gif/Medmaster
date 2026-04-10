@@ -61,6 +61,7 @@ type TemplateId =
 
 type TemplateData = {
   displayName: string;
+  name?: string; // alias for displayName (client sends "name")
   email: string;
   questionsAnswered?: number;
   correctRate?: number;
@@ -331,7 +332,7 @@ function getEmailTemplate(
   templateId: TemplateId,
   data: TemplateData
 ): { subject: string; html: string } {
-  const name = data.displayName || "MedAT-Bewerber";
+  const name = data.displayName || data.name || "MedAT-Bewerber";
   const preiseUrl = `${SITE_URL}/preise`;
 
   switch (templateId) {
@@ -910,15 +911,25 @@ serve(async (req) => {
     const body = await req.json();
     const { action } = body;
 
-    // Auth: require service role header OR body secret for broadcast
+    // Auth: require service role header, anon key (for client-side welcome), or body secret for broadcast
     const authHeader = req.headers.get("Authorization");
     const serviceRoleKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") || "";
     const emailSecret = Deno.env.get("EMAIL_FUNCTION_SECRET") || "";
+    const anonKey = Deno.env.get("SUPABASE_ANON_KEY") || "";
     const headerOk = authHeader === `Bearer ${emailSecret || serviceRoleKey}`;
+    // Allow anon key for client-side calls (welcome email on signup)
+    const anonKeyOk = anonKey !== "" && authHeader === `Bearer ${anonKey}`;
     const broadcastSecret = Deno.env.get("BROADCAST_SECRET") || "";
     const bodySecretOk = broadcastSecret !== "" && body.secret === broadcastSecret;
-    if (!headerOk && !bodySecretOk) {
+    if (!headerOk && !anonKeyOk && !bodySecretOk) {
       return new Response("Unauthorized", { status: 401 });
+    }
+    // Anon key callers can only send welcome emails (prevent abuse)
+    if (anonKeyOk && !headerOk && body.action === "send" && body.templateId !== "welcome") {
+      return new Response(JSON.stringify({ error: "Anon key can only send welcome emails" }), {
+        status: 403,
+        headers: { "Content-Type": "application/json" },
+      });
     }
 
     switch (action) {

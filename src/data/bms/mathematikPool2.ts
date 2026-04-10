@@ -58,7 +58,7 @@ export const mathematikPool2: Question[] = [
     ["1/8", "1/4", "1/16", "1/32", "1/2"],
     2,
     "Nach 24 h sind 24/6 = 4 Halbwertszeiten vergangen. Verbleibender Anteil: (1/2)⁴ = 1/16.",
-    "leicht",
+    "mittel",
     ["Halbwertszeit", "Zehnerpotenzen", "Radioaktivität"]
   ),
   q(
@@ -68,7 +68,7 @@ export const mathematikPool2: Question[] = [
     ["7,5 mL", "75 mL", "0,75 mL", "30 mL", "15 mL"],
     1,
     "0,15 g = 150 mg. Volumen = 150 mg ÷ 2 mg/mL = 75 mL → Antwort B.",
-    "leicht",
+    "mittel",
     ["Dosisberechnung", "Konzentration", "Einheiten"]
   ),
   q(
@@ -78,7 +78,7 @@ export const mathematikPool2: Question[] = [
     ["12,5 mL", "50 mL", "0,05 mL", "25 mL", "5 mL"],
     1,
     "0,25 g = 250 mg. Volumen = 250 mg ÷ 5 mg/mL = 50 mL → Antwort B.",
-    "leicht",
+    "mittel",
     ["Dosisberechnung", "Konzentration"]
   ),
   q(
@@ -88,7 +88,7 @@ export const mathematikPool2: Question[] = [
     ["55 mg/dL", "99 mg/dL", "180 mg/dL", "550 mg/dL", "9,9 mg/dL"],
     1,
     "5,5 mmol/L × 180 mg/mmol = 990 mg/L = 99 mg/dL (1 L = 10 dL).",
-    "mittel",
+    "schwer",
     ["Einheitenumrechnung", "Konzentration", "molare Masse"]
   ),
   q(
@@ -166,7 +166,7 @@ export const mathematikPool2: Question[] = [
     ["12,56 cm²", "50,24 cm²", "25,12 cm²", "6,28 cm²", "16 cm²"],
     0,
     "Radius r = 2 cm. Fläche A = π·r² = 3,14 × 4 = 12,56 cm².",
-    "leicht",
+    "mittel",
     ["Kreisfläche", "Geometrie"]
   ),
   q(
@@ -186,7 +186,7 @@ export const mathematikPool2: Question[] = [
     ["(4; 2)", "(3; 4)", "(5; 0)", "(2; 6)", "(6; −2)"],
     0,
     "Addition der Gleichungen: 3x = 12 → x = 4. Einsetzen in x − y = 2: 4 − y = 2 → y = 2. Probe: 2·4 + 2 = 10 ✓",
-    "leicht",
+    "mittel",
     ["Gleichungssystem", "Algebra"]
   ),
   q(
@@ -206,7 +206,7 @@ export const mathematikPool2: Question[] = [
     ["x² − 4 = 0", "x² + 4 = 0", "x² − 4x + 4 = 0", "x² − 4x + 3 = 0", "x² + 4x − 5 = 0"],
     1,
     "x² + 4 = 0 → x² = −4. Da das Quadrat einer reellen Zahl nie negativ ist, hat diese Gleichung keine reelle Lösung. Diskriminante: 0 − 16 = −16 < 0.",
-    "leicht",
+    "mittel",
     ["Quadratische Gleichung", "Diskriminante"]
   ),
   q(
@@ -304,7 +304,7 @@ export const mathematikPool2: Question[] = [
     ["14 mL", "7 mL", "28 mL", "1,4 mL", "280 mL"],
     0,
     "Gesamtdosis = 4 mg/kg × 70 kg = 280 mg. Volumen = 280 mg ÷ 20 mg/mL = 14 mL.",
-    "mittel",
+    "schwer",
     ["Dosisberechnung", "Gewichtsbasierte Dosis", "Pharmazie"]
   ),
   q(
@@ -314,7 +314,7 @@ export const mathematikPool2: Question[] = [
     ["0,2 mol/L", "0,4 mol/L", "0,8 mol/L", "0,1 mol/L", "0,3 mol/L"],
     0,
     "Stoffmenge NaCl = 0,4 mol/L × 0,25 L = 0,1 mol. Gesamtvolumen = 500 mL = 0,5 L. c = 0,1 mol / 0,5 L = 0,2 mol/L.",
-    "mittel",
+    "schwer",
     ["Mischungsrechnung", "Konzentration", "Chemie"]
   ),
   q(
@@ -324,7 +324,7 @@ export const mathematikPool2: Question[] = [
     ["80", "90", "100", "180", "720"],
     1,
     "Richtig-Positive = Sensitivität × Erkrankte = 0,90 × 100 = 90.",
-    "mittel",
+    "schwer",
     ["Sensitivität", "Testtheorie", "Epidemiologie"]
   ),
   q(
@@ -354,7 +354,7 @@ export const mathematikPool2: Question[] = [
     ["39,13 €", "40 €", "41 €", "38,48 €", "43,70 €"],
     1,
     "1,15 × p = 46 → p = 46 / 1,15 = 40 €.",
-    "leicht",
+    "mittel",
     ["Prozentrechnung", "Rückrechnung"]
   ),
   q(
@@ -374,7 +374,7 @@ export const mathematikPool2: Question[] = [
     ["2 mL/min", "200 mL/min", "3,3 mL/min", "0,2 mL/min", "20 mL/min"],
     2,
     "Rate = 500 mL / (2,5 h × 60 min/h) = 500 / 150 ≈ 3,33 mL/min.",
-    "leicht",
+    "mittel",
     ["Infusionsrate", "Dreisatz", "Pflege"]
   ),
   q(
@@ -404,7 +404,7 @@ export const mathematikPool2: Question[] = [
     ["1,2 €", "3 €", "0,48 €", "1,5 €", "12 €"],
     0,
     "Patientenzahl pro Jahr = 40 × 250 = 10.000. Kosten pro Patient = 12.000 / 10.000 = 1,20 €.",
-    "leicht",
+    "mittel",
     ["Dreisatz", "Grundrechnen", "Praxis"]
   ),
 
@@ -524,7 +524,7 @@ export const mathematikPool2: Question[] = [
     ["86,6 N", "50 N", "100 N", "57,7 N", "70,7 N"],
     1,
     "F_x = F · cos(60°) = 100 N × 0,5 = 50 N.",
-    "leicht",
+    "mittel",
     ["Trigonometrie", "Vektorzerlegung", "Physik"]
   ),
   q(
@@ -562,7 +562,7 @@ export const mathematikPool2: Question[] = [
     ["11", "14", "5", "7", "10"],
     0,
     "a · b = 3·1 + 4·2 = 3 + 8 = 11.",
-    "leicht",
+    "mittel",
     ["Skalarprodukt", "Vektoren"]
   ),
   q(
@@ -618,7 +618,7 @@ export const mathematikPool2: Question[] = [
     ["G/2", "G·√3/2", "G/√3", "G", "0"],
     0,
     "Die zur geneigten Fläche parallele Komponente ist G·sin(30°) = G × 0,5 = G/2.",
-    "mittel",
+    "schwer",
     ["Vektorzerlegung", "Kräfte", "Schiefe Ebene", "Physik"]
   ),
   q(
@@ -628,7 +628,7 @@ export const mathematikPool2: Question[] = [
     ["5", "√7", "√25", "7", "√50"],
     0,
     "AB = B − A = (3; 4). |AB| = √(9+16) = √25 = 5.",
-    "leicht",
+    "mittel",
     ["Verbindungsvektor", "Abstand", "Vektoren"]
   ),
   q(

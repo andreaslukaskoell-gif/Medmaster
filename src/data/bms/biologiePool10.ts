@@ -250,7 +250,7 @@ export const biologiePool10: Question[] = [
     ],
     3,
     'Die Nieren liegen retroperitoneal (hinter dem Bauchfell), also nicht "vollständig innerhalb der Bauchhöhle" – sie sind außerhalb des Peritonealraums (D falsch).',
-    "mittel",
+    "schwer",
     ["Niere", "FALSCH"]
   ),
   q(

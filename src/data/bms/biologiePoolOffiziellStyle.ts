@@ -38,7 +38,7 @@ export const biologiePoolOffiziellStyle: Question[] = [
     ["Axone", "Aktionspotentiale", "Dendriten", "Synapsen", "Ranvier-Schnürringe"],
     2,
     "Dendriten leiten Erregungen zum Zellkörper hin (afferente Fortsätze). Axone leiten vom Zellkörper weg (efferent).",
-    "leicht",
+    "mittel",
     ["Nervenzelle", "Neuroanatomie"]
   ),
   q(
@@ -64,7 +64,7 @@ export const biologiePoolOffiziellStyle: Question[] = [
     ["Kleinhirn", "Großhirn", "Zwischenhirn", "Hirnstamm", "Rückenmark"],
     3,
     "Atem- und Kreislaufzentrum liegen im Hirnstamm (Medulla oblongata, Pons).",
-    "leicht",
+    "mittel",
     ["ZNS", "Hirnstamm"]
   ),
   q(
@@ -74,7 +74,7 @@ export const biologiePoolOffiziellStyle: Question[] = [
     ["Cortison", "Glukagon", "Adrenalin", "Glykogen", "Glukose"],
     1,
     "Glukagon (Alpha-Zellen) wirkt antagonistisch zu Insulin und erhöht den Blutzucker. Glykogen und Glukose sind keine Hormone.",
-    "leicht",
+    "mittel",
     ["Bauchspeicheldrüse", "Hormone"]
   ),
   q(
@@ -104,7 +104,7 @@ export const biologiePoolOffiziellStyle: Question[] = [
     ["Nebenschilddrüse", "Schilddrüse", "Keimdrüsen", "Nebenniere", "Hypophyse"],
     4,
     "Somatotropin (STH) wird im Hypophysenvorderlappen gebildet. Mangel führt zu Kleinwuchs, Überschuss zu Riesenwuchs.",
-    "leicht",
+    "mittel",
     ["Hormone", "Hypophyse"]
   ),
   q(
@@ -140,7 +140,7 @@ export const biologiePoolOffiziellStyle: Question[] = [
     ["Samenbläschen", "Samenkanälchen", "Samenleitern", "Prostata", "Nebenhodengängen"],
     4,
     "Die Spermien reifen und werden in den Nebenhodengängen gespeichert. Samenbläschen und Prostata produzieren Bestandteile der Samenflüssigkeit.",
-    "leicht",
+    "mittel",
     ["Reproduktion", "Spermien"]
   ),
   q(
@@ -192,7 +192,7 @@ export const biologiePoolOffiziellStyle: Question[] = [
     ],
     0,
     "Aus den Nierenbecken → Harnleiter (Ureter) → Harnblase → Harnröhre (Urethra). Es gibt nur eine Harnröhre.",
-    "leicht",
+    "mittel",
     ["Niere", "Anatomie"]
   ),
   q(
@@ -281,7 +281,7 @@ export const biologiePoolOffiziellStyle: Question[] = [
     ],
     4,
     "Die freie Kombination der Gene entsteht durch Crossing-over und unabhängige Verteilung in der Meiose, nicht durch die Chromosomenstruktur an sich. Die Aussage ist in dieser Form falsch bzw. irreführend.",
-    "mittel",
+    "schwer",
     ["Chromosomen", "FALSCH"]
   ),
   q(
@@ -297,7 +297,7 @@ export const biologiePoolOffiziellStyle: Question[] = [
     ],
     1,
     "Der Gasaustausch findet in den Alveolen statt, nicht in den Bronchien. Die Bronchien sind die Leitungsbahn (B falsch).",
-    "mittel",
+    "schwer",
     ["Atmung", "FALSCH"]
   ),
   q(

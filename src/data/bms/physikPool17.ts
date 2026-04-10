@@ -132,7 +132,7 @@ export const physikPool17: Question[] = [
     ],
     1,
     "Q = Wärmemenge (Energie in J), T = Temperatur (K oder °C).",
-    "leicht",
+    "mittel",
     ["Wärme", "Temperatur"]
   ),
   q(
@@ -230,7 +230,7 @@ export const physikPool17: Question[] = [
     ["100 N", "16 N", "10 N", "1,6 N", "0 N"],
     1,
     "F_G = m·g = 10·1,6 N = 16 N.",
-    "leicht",
+    "mittel",
     ["Gewichtskraft", "Mond"]
   ),
   q(
@@ -322,7 +322,7 @@ export const physikPool17: Question[] = [
     ],
     1,
     "λ_C = h/(m_e·c) ≈ 2,43 pm; charakteristische Länge für Compton-Effekt.",
-    "schwer",
+    "mittel",
     ["Compton-Wellenlänge", "Quantenphysik"]
   ),
   q(
@@ -642,7 +642,7 @@ export const physikPool17: Question[] = [
     ["nimmt zu", "bleibt konstant", "nimmt ab", "ist null", "ist nur potentiell"],
     1,
     "Energieerhaltung: E_pot + E_kin = const.",
-    "leicht",
+    "mittel",
     ["Energieerhaltung", "Fall"]
   ),
   q(
@@ -684,7 +684,7 @@ export const physikPool17: Question[] = [
     ],
     1,
     "Flug: erhöhte kosmische Strahlung (Höhe).",
-    "leicht",
+    "mittel",
     ["kosmische Strahlung", "Flug"]
   ),
   q(
@@ -694,7 +694,7 @@ export const physikPool17: Question[] = [
     ["größer", "kleiner", "gleich", "doppelt so groß", "unbestimmt"],
     1,
     "Haftreibung > Gleitreibung (μ_H > μ_G).",
-    "leicht",
+    "mittel",
     ["Reibung", "Haft/Gleit"]
   ),
   q(
@@ -734,7 +734,7 @@ export const physikPool17: Question[] = [
     ["Gray", "Sievert", "Becquerel", "Curie nur historisch", "Joule"],
     2,
     "Aktivität in Bq (1 Bq = 1 Zerfall/s); Ci veraltet.",
-    "leicht",
+    "mittel",
     ["Aktivität", "Becquerel"]
   ),
 ];

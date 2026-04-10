@@ -85,7 +85,7 @@ export const mathematikPool4: Question[] = [
     ["{1, 2, 3}", "{0, 1, 2}", "{−3, −1, 0}", "{π, e}", "{√2, √3}"],
     2,
     "{−3, −1, 0} enthält negative Zahlen, die in ℤ, aber nicht in ℕ (hier: ℕ = {1, 2, 3, ...}) liegen. {π, e} und {√2, √3} sind nicht in ℤ.",
-    "leicht",
+    "mittel",
     ["Zahlenmengen", "Teilmenge"]
   ),
   q(
@@ -131,7 +131,7 @@ export const mathematikPool4: Question[] = [
     ],
     4,
     "|a + b| = |a| + |b| gilt nur, wenn a und b dasselbe Vorzeichen haben. Gegenbeispiel: |3 + (−5)| = 2, aber |3| + |−5| = 8.",
-    "mittel",
+    "schwer",
     ["Betragsfunktion", "Falsch-Aussage"]
   ),
   q(
@@ -173,7 +173,7 @@ export const mathematikPool4: Question[] = [
     ["26 cm²", "32 cm²", "20 cm²", "16 cm²", "52 cm²"],
     0,
     "A = (a + c)/2 × h = (8 + 5)/2 × 4 = 13/2 × 4 = 26 cm².",
-    "leicht",
+    "mittel",
     ["Trapez", "Fläche", "rechenfrage"]
   ),
   q(
@@ -229,7 +229,7 @@ export const mathematikPool4: Question[] = [
     ],
     0,
     "Falsch: Ein LGS mit 2 Gleichungen und 2 Unbekannten kann auch 0 oder unendlich viele Lösungen haben (parallele oder identische Geraden).",
-    "mittel",
+    "schwer",
     ["LGS", "Falsch-Aussage"]
   ),
   q(
@@ -357,7 +357,7 @@ export const mathematikPool4: Question[] = [
     ],
     2,
     "√(a + b) ≠ √a + √b im Allgemeinen. Gegenbeispiel: √(9 + 16) = √25 = 5, aber √9 + √16 = 3 + 4 = 7.",
-    "mittel",
+    "schwer",
     ["Wurzeln", "Falsch-Aussage"]
   ),
 
@@ -687,7 +687,7 @@ export const mathematikPool4: Question[] = [
     ["5", "2,5", "10", "0,5", "25"],
     0,
     "Für die Binomialverteilung gilt: E(X) = n · p = 10 · 0,5 = 5.",
-    "leicht",
+    "mittel",
     ["Binomialverteilung", "Erwartungswert", "rechenfrage"]
   ),
 ];

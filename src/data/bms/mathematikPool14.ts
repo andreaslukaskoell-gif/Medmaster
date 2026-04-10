@@ -52,7 +52,7 @@ export const mathematikPool14: Question[] = [
     ["10", "100", "1000", "10 000", "100 000"],
     2,
     "1 mm = 1000 µm. 1000 µm / 1 µm = 1000 Mitochondrien.",
-    "leicht",
+    "mittel",
     ["Einheiten", "Präfixe", "rechenfrage"]
   ),
   q(
@@ -609,7 +609,7 @@ export const mathematikPool14: Question[] = [
     ["0,531", "0,590", "0,656", "0,900", "0,450"],
     1,
     "P = 0,9⁵ = 0,59049 ≈ 0,590.",
-    "mittel",
+    "schwer",
     ["Wahrscheinlichkeit", "Unabhängigkeit", "rechenfrage"]
   ),
   q(

@@ -35,7 +35,7 @@ export const chemiePool3: Question[] = [
     ["Proton", "Elektron", "Neutron", "Kation", "Anion"],
     2,
     "Neutron ist neutral. Proton: positiv. Elektron: negativ. Kation/Anion: geladene Ionen.",
-    "leicht",
+    "mittel",
     ["Neutron", "Atombau"]
   ),
   q(
@@ -185,7 +185,7 @@ export const chemiePool3: Question[] = [
     ],
     3,
     "Gitterenergie = freigesetzte Energie bei Bildung des Gitters aus gasförmigen Ionen (oder zugeführte bei Umkehrung). Nicht die Schmelzenergie.",
-    "mittel",
+    "schwer",
     ["Gitterenergie", "Born-Haber"]
   ),
   q(
@@ -473,7 +473,7 @@ export const chemiePool3: Question[] = [
     ],
     3,
     "Kovalente Bindungen entstehen auch zwischen verschiedenen Atomen (z. B. C−H, C−O, N−H). Gleich oder verschieden ist kein Kriterium.",
-    "mittel",
+    "schwer",
     ["kovalente Bindung"]
   ),
   q(

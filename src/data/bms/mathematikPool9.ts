@@ -41,7 +41,7 @@ export const mathematikPool9: Question[] = [
     ["5,0 ml", "6,0 ml", "7,5 ml", "8,0 ml", "10,0 ml"],
     2,
     "250 mg entsprechen 5 ml, also 1 mg = 0,02 ml. 375 mg · 0,02 ml/mg = 7,5 ml.",
-    "leicht",
+    "mittel",
     ["Dreisatz", "Konzentration", "Medikamentendosierung"]
   ),
 
@@ -52,7 +52,7 @@ export const mathematikPool9: Question[] = [
     ["0,10 ‰/h", "0,12 ‰/h", "0,15 ‰/h", "0,18 ‰/h", "0,20 ‰/h"],
     2,
     "Abbaurate = 1,8 ‰ / 12 h = 0,15 ‰/h. Dies entspricht dem bekannten durchschnittlichen Alkoholabbau des menschlichen Körpers.",
-    "leicht",
+    "mittel",
     ["Algebra", "Steigung", "Blutalkohol"]
   ),
 
@@ -63,7 +63,7 @@ export const mathematikPool9: Question[] = [
     ["6 cm³", "8 cm³", "12 cm³", "16 cm³", "18 cm³"],
     3,
     "Nach 270 Tagen = 3 Verdopplungsperioden: V = 2 · 2³ = 2 · 8 = 16 cm³.",
-    "leicht",
+    "mittel",
     ["Exponentialwachstum", "Potenz", "Tumorwachstum"]
   ),
 
@@ -74,7 +74,7 @@ export const mathematikPool9: Question[] = [
     ["48 m²", "54 m²", "60 m²", "66 m²", "72 m²"],
     2,
     "Ausgangsfläche: 8 · 6 = 48 m². Neue Fläche: 48 · 1,25 = 60 m².",
-    "leicht",
+    "mittel",
     ["Fläche", "Prozent", "Rechteck"]
   ),
 
@@ -85,7 +85,7 @@ export const mathematikPool9: Question[] = [
     ["350 mg", "375 mg", "400 mg", "420 mg", "450 mg"],
     2,
     "500 mg · (1 − 0,20) = 500 · 0,80 = 400 mg pro Tag.",
-    "leicht",
+    "mittel",
     ["Prozentrechnung", "Dosierung", "Algebra"]
   ),
 
@@ -96,7 +96,7 @@ export const mathematikPool9: Question[] = [
     ["1,257 l", "1,414 l", "1,571 l", "1,885 l", "2,000 l"],
     2,
     "V = π · r² · h = 3,14 · 25 · 20 = 1570 cm³ = 1,570 l ≈ 1,571 l.",
-    "leicht",
+    "mittel",
     ["Zylinder", "Volumen", "Geometrie"]
   ),
 
@@ -107,7 +107,7 @@ export const mathematikPool9: Question[] = [
     ["x = 4, y = 6", "x = 5, y = 4", "x = 6, y = 2", "x = 7, y = 0", "x = 3, y = 8"],
     1,
     "Addition der Gleichungen: 3x = 15 ⇒ x = 5. Einsetzen: y = 14 − 2·5 = 4.",
-    "leicht",
+    "mittel",
     ["Gleichungssystem", "Algebra"]
   ),
 
@@ -118,7 +118,7 @@ export const mathematikPool9: Question[] = [
     ["36 %", "40 %", "42 %", "45 %", "50 %"],
     3,
     "180 / 400 = 0,45 = 45 %.",
-    "leicht",
+    "mittel",
     ["Prozentrechnung", "Epidemiologie"]
   ),
 
@@ -184,7 +184,7 @@ export const mathematikPool9: Question[] = [
     ["39 cm", "40 cm", "41 cm", "42 cm", "45 cm"],
     2,
     "c = √(9² + 40²) = √(81 + 1600) = √1681 = 41 cm.",
-    "leicht",
+    "mittel",
     ["Pythagoras", "Dreieck", "Geometrie"]
   ),
 
@@ -195,7 +195,7 @@ export const mathematikPool9: Question[] = [
     ["23,5 %", "24,5 %", "25,0 %", "26,5 %", "27,5 %"],
     3,
     "Gesamtfaktor: 1,15 · 1,10 = 1,265. Erhöhung: 26,5 %.",
-    "mittel",
+    "schwer",
     ["Prozentrechnung", "Dosierung"]
   ),
 
@@ -217,7 +217,7 @@ export const mathematikPool9: Question[] = [
     ["33 %", "40 %", "50 %", "55 %", "60 %"],
     2,
     "Aufschlag = (1,20 − 0,80) / 0,80 = 0,40 / 0,80 = 0,50 = 50 %.",
-    "leicht",
+    "mittel",
     ["Prozentrechnung", "Kalkulation"]
   ),
 
@@ -228,7 +228,7 @@ export const mathematikPool9: Question[] = [
     ["25 cm²", "30 cm²", "32,5 cm²", "60 cm²", "65 cm²"],
     1,
     "b = √(13²−5²) = √(169−25) = √144 = 12 cm. A = (a·b)/2 = (5·12)/2 = 30 cm².",
-    "leicht",
+    "mittel",
     ["Pythagoras", "Dreieck", "Flächenberechnung"]
   ),
 
@@ -278,7 +278,7 @@ export const mathematikPool9: Question[] = [
     ["1,80 m²", "1,90 m²", "2,00 m²", "2,10 m²", "2,20 m²"],
     2,
     "A = √(180·80/3600) = √(14400/3600) = √4 = 2,00 m².",
-    "mittel",
+    "schwer",
     ["Quadratwurzel", "Körperoberfläche", "Medizin"]
   ),
 
@@ -289,7 +289,7 @@ export const mathematikPool9: Question[] = [
     ["Nein; 24 cm²", "Ja; 24 cm²", "Ja; 30 cm²", "Nein; 30 cm²", "Ja; 48 cm²"],
     1,
     "6² + 8² = 36 + 64 = 100 = 10² ✓ Rechtwinkliges Dreieck. A = (6·8)/2 = 24 cm².",
-    "leicht",
+    "mittel",
     ["Pythagoras", "Dreieck", "Flächenberechnung"]
   ),
 
@@ -300,7 +300,7 @@ export const mathematikPool9: Question[] = [
     ["31,5 mg", "33,4 mg", "34,0 mg", "35,0 mg", "36,8 mg"],
     1,
     "Ausgangsdosis: 0,5 · 76 = 38 mg. Neue Dosis: 38 · 0,88 = 33,44 mg ≈ 33,4 mg.",
-    "mittel",
+    "schwer",
     ["Dosierung", "Prozent", "Algebra"]
   ),
 
@@ -368,7 +368,7 @@ export const mathematikPool9: Question[] = [
     ["3 N", "4 N", "5 N", "6 N", "7 N"],
     2,
     "F⃗_res = (4; 3) N. |F⃗_res| = √(16+9) = √25 = 5 N.",
-    "leicht",
+    "mittel",
     ["Vektoraddition", "Betrag", "Biomechanik"]
   ),
 
@@ -440,7 +440,7 @@ export const mathematikPool9: Question[] = [
     ["2", "3", "4", "5", "6"],
     1,
     "|d⃗| = √(1²+2²+2²) = √(1+4+4) = √9 = 3.",
-    "leicht",
+    "mittel",
     ["Betrag", "3D-Vektor", "Geometrie"]
   ),
 
@@ -451,7 +451,7 @@ export const mathematikPool9: Question[] = [
     ["(−3; −4)", "(3; 4)", "(5; 10)", "(−5; −10)", "(4; 3)"],
     1,
     "AB⃗ = B − A = (4−1; 7−3) = (3; 4).",
-    "leicht",
+    "mittel",
     ["Vektor", "Koordinatensystem", "Geometrie"]
   ),
 

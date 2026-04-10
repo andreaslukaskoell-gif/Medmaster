@@ -890,9 +890,9 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
     premise2: "Einige Mikroorganismen sind pathogen.",
     options: [
       "Alle Bakterien sind pathogen.",
-      "Alle Bakterien sind keine pathogen.",
+      "Alle Bakterien sind nicht pathogen.",
       "Einige Bakterien sind pathogen.",
-      "Einige Bakterien sind keine pathogen.",
+      "Einige Bakterien sind nicht pathogen.",
       "Keine der Schlussfolgerungen ist richtig.",
     ],
     correctAnswer: 4,
@@ -1026,9 +1026,9 @@ const IMPLIKATION_PRACTICE_TASKS: ImplikationTask[] = [
     premise2: "Alle Hypothesen sind überprüfbar.",
     options: [
       "Alle Theorien sind überprüfbar.",
-      "Alle Theorien sind keine überprüfbar.",
+      "Alle Theorien sind nicht überprüfbar.",
       "Einige Theorien sind überprüfbar.",
-      "Einige Theorien sind keine überprüfbar.",
+      "Einige Theorien sind nicht überprüfbar.",
       "Keine der Schlussfolgerungen ist richtig.",
     ],
     correctAnswer: 2,

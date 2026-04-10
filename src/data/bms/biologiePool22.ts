@@ -95,7 +95,7 @@ export const biologiePool22: Question[] = [
     ],
     0,
     "V-ATPasen halten den sauren pH (~4,5) in Lysosomen aufrecht. Ohne sauren pH sind die lysosomalen Hydrolasen (Proteasen, Lipasen etc.) inaktiv → Proteinabbau gestört. B betrifft Mitochondrien, nicht Lysosomen. C und D betreffen ER/Golgi unabhängig vom lysosomalen pH. E ist nicht direkt von lysosomaler Ansäuerung abhängig.",
-    "schwer",
+    "mittel",
     ["lysosomen", "v-atpase", "proteinabbau", "transfer"]
   ),
 
@@ -112,7 +112,7 @@ export const biologiePool22: Question[] = [
     ],
     0,
     "SGLT1 ist ein Na⁺/Glucose-Symporter. Na⁺ strömt entlang seines Gradienten (extrazellulär hoch) in die Zelle und nimmt Glucose mit. Dieser Na⁺-Gradient wird primär durch die basolaterale Na⁺/K⁺-ATPase aufrechterhalten. B ist falsch, weil SGLT1 kein ATP hydrolysiert (sekundär aktiv, nicht primär aktiv). C, D und E beschreiben keine relevanten Energiequellen für diesen Transporter.",
-    "schwer",
+    "mittel",
     ["membrantransport", "sglt1", "sekundaer-aktiv", "transfer"]
   ),
 

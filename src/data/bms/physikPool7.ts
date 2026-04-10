@@ -75,7 +75,7 @@ export const physikPool7: Question[] = [
     ["8", "16", "24", "7", "9"],
     0,
     "N = A − Z = 16 − 8 = 8 (Sauerstoff-16).",
-    "leicht",
+    "mittel",
     ["Neutronenzahl", "Kern"]
   ),
   q(

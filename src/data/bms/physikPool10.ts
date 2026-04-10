@@ -423,7 +423,7 @@ export const physikPool10: Question[] = [
     ["1/2", "2", "1", "4", "√2"],
     1,
     "f_n = n·f₁; 2. Harmonische: f₂ = 2·f₁.",
-    "leicht",
+    "mittel",
     ["Harmonische", "Frequenz"]
   ),
   q(

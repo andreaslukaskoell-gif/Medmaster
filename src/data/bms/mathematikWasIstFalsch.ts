@@ -77,7 +77,7 @@ export const mathematikWasIstFalsch: Question[] = [
     ],
     3,
     "Option D ist falsch. |a| = a gilt nur für a ≥ 0. Für negative Zahlen gilt |a| = −a. Beispiel: |−3| = 3 ≠ −3.",
-    "mittel",
+    "schwer",
     ["Betrag"]
   ),
   wif(
@@ -109,7 +109,7 @@ export const mathematikWasIstFalsch: Question[] = [
     ],
     0,
     "Option A ist falsch. Die Summe zweier irrationaler Zahlen muss nicht irrational sein. Gegenbeispiel: √2 + (−√2) = 0, und 0 ist rational.",
-    "mittel",
+    "schwer",
     ["irrationale Zahlen"]
   ),
   wif(
@@ -141,7 +141,7 @@ export const mathematikWasIstFalsch: Question[] = [
     ],
     2,
     "Option C ist falsch. Die Zahl 1 ist per Definition keine Primzahl, da eine Primzahl genau zwei verschiedene Teiler haben muss.",
-    "mittel",
+    "schwer",
     ["Primzahlen"]
   ),
   wif(
@@ -157,7 +157,7 @@ export const mathematikWasIstFalsch: Question[] = [
     ],
     4,
     "Option E ist falsch. Die leere Menge ∅ ist Teilmenge jeder Menge — auch von sich selbst (∅ ⊆ ∅ ist per Definition wahr).",
-    "mittel",
+    "schwer",
     ["Mengenoperationen"]
   ),
   wif(
@@ -173,7 +173,7 @@ export const mathematikWasIstFalsch: Question[] = [
     ],
     3,
     "Option D ist falsch. 0,0072 = 7,2 × 10⁻³ (Komma um 3 Stellen verschoben), nicht 10⁻⁴.",
-    "mittel",
+    "schwer",
     ["wissenschaftliche Notation"]
   ),
 
@@ -239,7 +239,7 @@ export const mathematikWasIstFalsch: Question[] = [
     ],
     3,
     "Option D ist falsch. 5² + 12² = 25 + 144 = 169 = 13², nicht 14². Ein rechtwinkliges Dreieck mit Katheten 5 und 12 hat die Hypotenuse 13.",
-    "mittel",
+    "schwer",
     ["Pythagoras"]
   ),
   wif(
@@ -255,7 +255,7 @@ export const mathematikWasIstFalsch: Question[] = [
     ],
     4,
     "Option E ist falsch. Aus a > b folgt nicht zwingend a² > b². Gegenbeispiel: −1 > −5, aber (−1)² = 1 < 25 = (−5)².",
-    "mittel",
+    "schwer",
     ["Ungleichungen"]
   ),
   wif(
@@ -271,7 +271,7 @@ export const mathematikWasIstFalsch: Question[] = [
     ],
     0,
     "Option A ist falsch. Verdoppelt man den Radius, vervierfacht sich die Fläche: A = π(2r)² = 4πr². Die Fläche wächst quadratisch mit dem Radius.",
-    "mittel",
+    "schwer",
     ["Kreisgeometrie"]
   ),
   wif(
@@ -303,7 +303,7 @@ export const mathematikWasIstFalsch: Question[] = [
     ],
     1,
     "Option B ist falsch. Die Fläche eines Parallelogramms ist A = g · h (Grundseite mal Höhe), nicht a · b (Seite mal Seite). Die Höhe steht senkrecht auf der Grundseite.",
-    "mittel",
+    "schwer",
     ["Flächenberechnung"]
   ),
   wif(
@@ -369,7 +369,7 @@ export const mathematikWasIstFalsch: Question[] = [
     ],
     1,
     "Option B ist falsch. Erhöhung um 50 %: 100 → 150. Senkung um 50 % von 150: 150 · 0,5 = 75. Man landet bei 75, nicht bei 100. Prozentuale Änderungen beziehen sich auf unterschiedliche Grundwerte.",
-    "mittel",
+    "schwer",
     ["Prozentrechnung"]
   ),
   wif(
@@ -385,7 +385,7 @@ export const mathematikWasIstFalsch: Question[] = [
     ],
     2,
     "Option C ist falsch. (−2)⁴ = (−2) · (−2) · (−2) · (−2) = 16, nicht −16. Bei geradem Exponenten wird das Ergebnis positiv.",
-    "leicht",
+    "mittel",
     ["Potenzen"]
   ),
   wif(
@@ -417,7 +417,7 @@ export const mathematikWasIstFalsch: Question[] = [
     ],
     3,
     "Option D ist falsch. ln(x²) = 2 · ln(x), nicht (ln x)². Dies folgt aus dem Potenzgesetz des Logarithmus: ln(aⁿ) = n · ln a.",
-    "mittel",
+    "schwer",
     ["Logarithmen", "natürlicher Logarithmus"]
   ),
   wif(
@@ -433,7 +433,7 @@ export const mathematikWasIstFalsch: Question[] = [
     ],
     4,
     "Option E ist falsch. Bei indirekter Proportionalität halbiert sich y, wenn x verdoppelt wird (y = k/x → y' = k/(2x) = y/2).",
-    "mittel",
+    "schwer",
     ["Proportionalität"]
   ),
   wif(
@@ -449,7 +449,7 @@ export const mathematikWasIstFalsch: Question[] = [
     ],
     0,
     "Option A ist falsch. a − (b − c) = a − b + c, nicht a − b − c. Das Minuszeichen vor der Klammer dreht das Vorzeichen des zweiten Klammerterms um.",
-    "mittel",
+    "schwer",
     ["Rechenregeln", "Klammerregeln"]
   ),
 
@@ -499,7 +499,7 @@ export const mathematikWasIstFalsch: Question[] = [
     ],
     4,
     "Option E ist falsch. Die Ableitung von sin(x) ist cos(x), nicht −cos(x). Es gilt: (sin x)' = cos x und (cos x)' = −sin x.",
-    "mittel",
+    "schwer",
     ["Ableitungen"]
   ),
   wif(
@@ -515,7 +515,7 @@ export const mathematikWasIstFalsch: Question[] = [
     ],
     1,
     "Option B ist falsch. f'(x₀) = 0 ist eine notwendige, aber keine hinreichende Bedingung. Es könnte auch ein Sattelpunkt (Wendepunkt) vorliegen, z. B. bei f(x) = x³ an x = 0.",
-    "mittel",
+    "schwer",
     ["Extremstellen", "Ableitungen"]
   ),
   wif(
@@ -531,7 +531,7 @@ export const mathematikWasIstFalsch: Question[] = [
     ],
     0,
     "Option A ist falsch. f(x) = x² hat nur eine Nullstelle, nämlich x = 0 (doppelte Nullstelle). Der Graph berührt die x-Achse an genau einem Punkt.",
-    "mittel",
+    "schwer",
     ["Funktionsgraphen"]
   ),
   wif(
@@ -563,7 +563,7 @@ export const mathematikWasIstFalsch: Question[] = [
     ],
     4,
     "Option E ist falsch. f(−x) = (−x)² + (−x) = x² − x ≠ x² + x = f(x). Die Funktion ist weder achsen- noch punktsymmetrisch zum Ursprung.",
-    "mittel",
+    "schwer",
     ["Symmetrie", "Funktionen"]
   ),
   wif(
@@ -629,7 +629,7 @@ export const mathematikWasIstFalsch: Question[] = [
     ],
     2,
     "Option C ist falsch. Im Allgemeinen gilt |a⃗ + b⃗| ≤ |a⃗| + |b⃗| (Dreiecksungleichung). Gleichheit gilt nur, wenn die Vektoren parallel und gleichgerichtet sind.",
-    "mittel",
+    "schwer",
     ["Vektoraddition"]
   ),
   wif(
@@ -661,7 +661,7 @@ export const mathematikWasIstFalsch: Question[] = [
     ],
     1,
     "Option B ist falsch. Das Kreuzprodukt ist antikommutativ: a⃗ × b⃗ = −(b⃗ × a⃗). Die Reihenfolge der Faktoren bestimmt die Richtung.",
-    "mittel",
+    "schwer",
     ["Kreuzprodukt"]
   ),
   wif(
@@ -693,7 +693,7 @@ export const mathematikWasIstFalsch: Question[] = [
     ],
     3,
     "Option D ist falsch. |(3, 4, 0)| = √(9 + 16 + 0) = √25 = 5, genau wie |(3, 4)|. Die zusätzliche Null-Komponente ändert den Betrag nicht.",
-    "mittel",
+    "schwer",
     ["Vektorbetrag"]
   ),
   wif(
@@ -709,7 +709,7 @@ export const mathematikWasIstFalsch: Question[] = [
     ],
     4,
     "Option E ist falsch. AB⃗ und BA⃗ haben denselben Betrag, aber entgegengesetzte Richtung: BA⃗ = −AB⃗.",
-    "leicht",
+    "mittel",
     ["Ortsvektoren", "Verbindungsvektoren"]
   ),
   wif(
@@ -807,7 +807,7 @@ export const mathematikWasIstFalsch: Question[] = [
     ],
     3,
     "Option D ist falsch. Im Allgemeinen gilt (n über k) ≠ (n über k+1). Es gilt jedoch (n über k) = (n über n−k) (Symmetrie).",
-    "mittel",
+    "schwer",
     ["Kombinatorik", "Binomialkoeffizient"]
   ),
   wif(
@@ -839,7 +839,7 @@ export const mathematikWasIstFalsch: Question[] = [
     ],
     0,
     "Option A ist falsch. Der Erwartungswert muss kein annehmbarer Wert sein. Beispiel: Beim fairen Würfel ist E(X) = 3,5, aber 3,5 ist kein mögliches Würfelergebnis.",
-    "mittel",
+    "schwer",
     ["Erwartungswert"]
   ),
   wif(
@@ -871,7 +871,7 @@ export const mathematikWasIstFalsch: Question[] = [
     ],
     4,
     "Option E ist falsch. Die Binomialverteilung setzt gerade voraus, dass die Erfolgswahrscheinlichkeit p bei jedem Versuch gleich bleibt (konstant). Wenn sich p ändert, liegt keine Binomialverteilung vor.",
-    "mittel",
+    "schwer",
     ["Binomialverteilung"]
   ),
   wif(
@@ -919,7 +919,7 @@ export const mathematikWasIstFalsch: Question[] = [
     ],
     4,
     "Option E ist falsch. Nicht jedes Zufallsexperiment ist ein Laplace-Experiment. Beispiel: Ein gezinkter Würfel hat keine Gleichverteilung der Ergebnisse.",
-    "leicht",
+    "mittel",
     ["Laplace-Experiment"]
   ),
   wif(

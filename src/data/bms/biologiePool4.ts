@@ -53,7 +53,7 @@ export const biologiePool4: Question[] = [
     ],
     4,
     "Die fünf Bedingungen des Hardy-Weinberg-Gleichgewichts sind: keine Mutation, keine Selektion, keine Migration, Panmixie und unendlich große Population. Geschlechtschromosomale Vererbung ist keine Bedingung.",
-    "leicht",
+    "mittel",
     ["hardy-weinberg", "evolution"]
   ),
   q(
@@ -63,7 +63,7 @@ export const biologiePool4: Question[] = [
     ["0,16", "0,40", "0,60", "0,84", "0,36"],
     2,
     "q² = 0,16, also q = 0,4. Die Frequenz des dominanten Allels ist p = 1 − q = 1 − 0,4 = 0,6.",
-    "leicht",
+    "mittel",
     ["hardy-weinberg", "allelfrequenz"]
   ),
   q(
@@ -233,7 +233,7 @@ export const biologiePool4: Question[] = [
     ["Vier", "Drei", "Zwei", "Eine", "Acht"],
     3,
     "Aus einer primären Oozyte entsteht nur eine funktionelle Eizelle. Die drei anderen Teilungsprodukte (Polkörperchen) sind klein und funktionslos. Dies unterscheidet die Oogenese von der Spermatogenese (4 Spermien).",
-    "leicht",
+    "mittel",
     ["meiose", "oogenese", "eizelle"]
   ),
 
@@ -357,7 +357,7 @@ export const biologiePool4: Question[] = [
     ],
     1,
     "Eine Missense-Mutation verändert ein Codon so, dass eine andere Aminosäure eingebaut wird. Eine stille Mutation ändert die Aminosäure nicht, eine Nonsense-Mutation erzeugt ein Stoppcodon.",
-    "leicht",
+    "mittel",
     ["mutation", "missense", "genexpression"]
   ),
   q(
@@ -401,7 +401,7 @@ export const biologiePool4: Question[] = [
     ],
     1,
     "Zytotoxische T-Zellen (CD8⁺) erkennen virusinfizierte Zellen über MHC-I-präsentierte Antigene und töten sie durch Perforin und Granzyme. NK-Zellen gehören zum angeborenen Immunsystem.",
-    "leicht",
+    "mittel",
     ["cd8", "zytotoxische t-zellen", "immunsystem"]
   ),
   q(
@@ -529,7 +529,7 @@ export const biologiePool4: Question[] = [
     ],
     3,
     "Personen mit Blutgruppe AB besitzen beide Antigene auf ihren Erythrozyten und bilden daher keine Isoagglutinine. AB-Träger sind Universalempfänger für Erythrozytenkonzentrate.",
-    "leicht",
+    "mittel",
     ["blutgruppen", "ab0-system", "antikörper"]
   ),
   q(
@@ -555,7 +555,7 @@ export const biologiePool4: Question[] = [
     ],
     1,
     "Bei der ersten Schwangerschaft sensibilisiert fetales Rh-positives Blut die Rh-negative Mutter. In einer Folgeschwangerschaft mit einem Rh-positiven Fetus können mütterliche Anti-D-IgG-Antikörper die Plazenta passieren und fetale Erythrozyten zerstören (Morbus haemolyticus neonatorum).",
-    "mittel",
+    "schwer",
     ["rhesus", "mhn", "blutgruppen"]
   ),
   q(
@@ -587,7 +587,7 @@ export const biologiePool4: Question[] = [
     ["Serotonin", "Histamin", "Interleukin-10", "Interferon-γ", "Prostaglandin E2"],
     1,
     "Histamin ist der Hauptmediator der Sofortreaktion. Es wird aus den Granula der Mastzellen freigesetzt und bewirkt Vasodilatation, erhöhte Gefäßpermeabilität, Bronchospasmus und Juckreiz.",
-    "leicht",
+    "mittel",
     ["histamin", "mastzellen", "allergie"]
   ),
   q(
@@ -773,7 +773,7 @@ export const biologiePool4: Question[] = [
     ],
     1,
     "Murein (Peptidoglykan) ist ein Polymer aus N-Acetylglucosamin und N-Acetylmuraminsäure und kommt ausschließlich in bakteriellen Zellwänden vor. Eukaryotische Zellen besitzen kein Murein.",
-    "leicht",
+    "mittel",
     ["bakterien", "murein", "peptidoglykan"]
   ),
   q(
@@ -855,7 +855,7 @@ export const biologiePool4: Question[] = [
     ],
     1,
     "Candida albicans ist ein opportunistischer Hefepilz, der bei geschwächtem Immunsystem zu Infektionen führt — von Soor (Mundhöhle) bis zur invasiven Candidämie.",
-    "mittel",
+    "schwer",
     ["candida", "opportunistisch", "pilze"]
   ),
 
@@ -889,7 +889,7 @@ export const biologiePool4: Question[] = [
     ],
     1,
     "Homologe Organe haben den gleichen evolutionären Ursprung (gleicher Grundbauplan), erfüllen aber unterschiedliche Funktionen. Analoge Organe haben verschiedenen Ursprung, aber ähnliche Funktion.",
-    "leicht",
+    "mittel",
     ["homologie", "analogie", "evolution"]
   ),
   q(
@@ -905,7 +905,7 @@ export const biologiePool4: Question[] = [
     ],
     1,
     "Der Wurmfortsatz (Appendix vermiformis) ist beim Menschen ein rudimentäres Organ, das bei pflanzenfressenden Vorfahren als Gärkammer diente. Weitere Beispiele: Steißbein, Weisheitszähne, Ohrmuschelmuskeln.",
-    "leicht",
+    "mittel",
     ["rudimentäre organe", "evolution", "appendix"]
   ),
 

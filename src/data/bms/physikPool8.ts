@@ -35,7 +35,7 @@ export const physikPool8: Question[] = [
     ["Länge", "Kraft", "Zeit", "Stromstärke", "Temperatur"],
     1,
     "Kraft (Newton) ist abgeleitet; Basis: Länge, Masse, Zeit, Strom, Temp., Stoffmenge, Lichtstärke.",
-    "leicht",
+    "mittel",
     ["SI", "Basisgrößen"]
   ),
   q(
@@ -65,7 +65,7 @@ export const physikPool8: Question[] = [
     ["größeres", "kleineres", "gleich", "null", "negatives"],
     1,
     "ΔT = Q/(m·c); c größer → ΔT kleiner.",
-    "leicht",
+    "mittel",
     ["Wärmekapazität", "Temperatur"]
   ),
   q(
@@ -115,7 +115,7 @@ export const physikPool8: Question[] = [
     ["100 K", "373,15 K", "273,15 K", "0 K", "173 K"],
     1,
     "T/K = T/°C + 273,15 → 100 °C = 373,15 K.",
-    "leicht",
+    "mittel",
     ["Kelvin", "Celsius"]
   ),
   q(
@@ -283,7 +283,7 @@ export const physikPool8: Question[] = [
     ["14", "27", "13", "40", "26"],
     0,
     "N = A − Z = 27 − 13 = 14 (Aluminium-27).",
-    "leicht",
+    "mittel",
     ["Neutronenzahl", "Kern"]
   ),
   q(
@@ -359,7 +359,7 @@ export const physikPool8: Question[] = [
     ["null", "Quellenspannung", "Strom mal Zeit", "kleiner als U_Quelle", "größer als U_Quelle"],
     1,
     "Kirchhoff: U_Quelle = Σ U_i (Maschenregel).",
-    "leicht",
+    "mittel",
     ["Reihenschaltung", "Spannung"]
   ),
   q(
@@ -541,7 +541,7 @@ export const physikPool8: Question[] = [
     ["ersten", "zweiten", "dritten", "nullten", "keinem"],
     1,
     "2. Hauptsatz: Wärme fließt spontan von heiß nach kalt.",
-    "leicht",
+    "mittel",
     ["2. Hauptsatz", "Wärmefluss"]
   ),
   q(

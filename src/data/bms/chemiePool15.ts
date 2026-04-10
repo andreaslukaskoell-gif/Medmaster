@@ -48,7 +48,7 @@ export const chemiePool15: Question[] = [
     ["T = θ − 273", "T = θ + 273,15", "T = θ · 273", "T = θ / 273", "T = θ"],
     1,
     "T (K) = θ (°C) + 273,15. 0 °C = 273,15 K.",
-    "leicht",
+    "mittel",
     ["Kelvin", "Temperatur"]
   ),
   q(

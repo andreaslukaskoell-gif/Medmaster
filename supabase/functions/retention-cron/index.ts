@@ -80,9 +80,9 @@ async function processD1Reminders(): Promise<number> {
   for (const user of candidates) {
     if (!user.email) continue;
 
-    // Check if they have any activity (answers)
+    // Check if they have any activity (quiz results)
     const { count } = await supabase
-      .from("answers")
+      .from("quiz_results")
       .select("id", { count: "exact", head: true })
       .eq("user_id", user.id);
 
@@ -187,14 +187,13 @@ async function processReEngagement(): Promise<number> {
       if (!userData?.user?.email) continue;
 
       const { data: stats } = await supabase
-        .from("answers")
-        .select("is_correct")
+        .from("quiz_results")
+        .select("score, total")
         .eq("user_id", profile.id);
 
-      const questionsAnswered = stats?.length || 0;
-      const correctRate = questionsAnswered > 0
-        ? Math.round((stats!.filter((a: { is_correct: boolean }) => a.is_correct).length / questionsAnswered) * 100)
-        : 0;
+      const questionsAnswered = stats?.reduce((sum, r) => sum + (r.total ?? 0), 0) ?? 0;
+      const correctTotal = stats?.reduce((sum, r) => sum + (r.score ?? 0), 0) ?? 0;
+      const correctRate = questionsAnswered > 0 ? Math.round((correctTotal / questionsAnswered) * 100) : 0;
 
       const ok = await sendTemplateEmail(profile.id, "re-engagement", {
         email: userData.user.email,
@@ -268,6 +267,128 @@ async function processWeeklyProgress(): Promise<number> {
   return sent;
 }
 
+// ── Welcome email catch-up: users who signed up but never got a welcome email ──
+
+async function processWelcomeCatchup(): Promise<number> {
+  // Find users created in the last 7 days who never received a welcome email
+  const sevenDaysAgo = new Date();
+  sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
+
+  const { data: recentUsers } = await supabase.auth.admin.listUsers({ perPage: 500 });
+  if (!recentUsers?.users) return 0;
+
+  const candidates = recentUsers.users.filter((u) => {
+    const created = new Date(u.created_at);
+    return created >= sevenDaysAgo && u.email;
+  });
+
+  let sent = 0;
+  for (const user of candidates) {
+    if (!user.email) continue;
+    if (await wasRecentlySent(user.id, "welcome", 30)) continue;
+
+    const { data: profile } = await supabase
+      .from("profiles")
+      .select("display_name, email_opt_out")
+      .eq("id", user.id)
+      .single();
+
+    if (profile?.email_opt_out) continue;
+
+    const ok = await sendTemplateEmail(user.id, "welcome", {
+      email: user.email,
+      displayName: profile?.display_name || user.user_metadata?.full_name || user.email.split("@")[0],
+    });
+    if (ok) sent++;
+
+    await new Promise((r) => setTimeout(r, 1500));
+  }
+
+  return sent;
+}
+
+// ── Post-trial nurturing: free-tier users who haven't upgraded ──
+
+async function processPostTrialNurturing(): Promise<number> {
+  // Promo ended 2026-04-01. Users who signed up before that and are still free get nurturing.
+  const promoEnd = new Date("2026-04-01T00:00:00+02:00");
+  const now = new Date();
+
+  // Get free-tier users (not premium)
+  const { data: freeProfiles } = await supabase
+    .from("profiles")
+    .select("id, display_name, email_opt_out, subscription_tier")
+    .or("subscription_tier.is.null,subscription_tier.eq.free");
+
+  if (!freeProfiles?.length) return 0;
+
+  let sent = 0;
+  for (const profile of freeProfiles) {
+    if (profile.email_opt_out) continue;
+
+    const { data: userData } = await supabase.auth.admin.getUserById(profile.id);
+    if (!userData?.user?.email) continue;
+
+    const createdAt = new Date(userData.user.created_at);
+    // Only users who signed up before promo end (experienced the switch)
+    if (createdAt >= promoEnd) continue;
+
+    const daysSincePromoEnd = Math.floor((now.getTime() - promoEnd.getTime()) / 86_400_000);
+
+    // Get stats for personalization
+    const { data: stats } = await supabase
+      .from("quiz_results")
+      .select("score, total")
+      .eq("user_id", profile.id);
+
+    const questionsAnswered = stats?.reduce((sum, r) => sum + (r.total ?? 0), 0) ?? 0;
+    const correctTotal = stats?.reduce((sum, r) => sum + (r.score ?? 0), 0) ?? 0;
+    const correctRate = questionsAnswered > 0 ? Math.round((correctTotal / questionsAnswered) * 100) : 0;
+
+    // MedAT 2026: 3. Juli
+    const medat = new Date("2026-07-03T00:00:00+02:00");
+    const daysUntilExam = Math.max(0, Math.ceil((medat.getTime() - now.getTime()) / 86_400_000));
+
+    const templateData = {
+      email: userData.user.email,
+      displayName: profile.display_name || "MedAT-Bewerber",
+      questionsAnswered,
+      correctRate,
+      daysUntilExam,
+    };
+
+    // Determine which post-trial template to send based on timing
+    // Day 1 (April 2): post-trial-day1
+    // Day 3 (April 4): post-trial-day3
+    // Day 7+ (April 8+): post-trial-day7
+    let templateId: string | null = null;
+
+    if (daysSincePromoEnd >= 7 && !(await wasRecentlySent(profile.id, "post-trial-day7", 30))) {
+      // Only send day7 if day1 and day3 were already sent (or enough time passed)
+      if ((await wasRecentlySent(profile.id, "post-trial-day3", 30)) || daysSincePromoEnd >= 10) {
+        templateId = "post-trial-day7";
+      }
+    }
+    if (!templateId && daysSincePromoEnd >= 3 && !(await wasRecentlySent(profile.id, "post-trial-day3", 30))) {
+      if ((await wasRecentlySent(profile.id, "post-trial-day1", 30)) || daysSincePromoEnd >= 5) {
+        templateId = "post-trial-day3";
+      }
+    }
+    if (!templateId && daysSincePromoEnd >= 1 && !(await wasRecentlySent(profile.id, "post-trial-day1", 30))) {
+      templateId = "post-trial-day1";
+    }
+
+    if (!templateId) continue;
+
+    const ok = await sendTemplateEmail(profile.id, templateId, templateData);
+    if (ok) sent++;
+
+    await new Promise((r) => setTimeout(r, 1500));
+  }
+
+  return sent;
+}
+
 // ── Main handler ──
 
 serve(async (req) => {
@@ -278,12 +399,20 @@ serve(async (req) => {
   }
 
   const results = {
+    welcome_catchup: 0,
     d1_reminders: 0,
     streak_risk: 0,
     re_engagement: 0,
     weekly_progress: 0,
+    post_trial: 0,
     errors: [] as string[],
   };
+
+  try {
+    results.welcome_catchup = await processWelcomeCatchup();
+  } catch (err) {
+    results.errors.push(`welcome: ${err instanceof Error ? err.message : String(err)}`);
+  }
 
   try {
     results.d1_reminders = await processD1Reminders();
@@ -307,6 +436,12 @@ serve(async (req) => {
     results.weekly_progress = await processWeeklyProgress();
   } catch (err) {
     results.errors.push(`weekly: ${err instanceof Error ? err.message : String(err)}`);
+  }
+
+  try {
+    results.post_trial = await processPostTrialNurturing();
+  } catch (err) {
+    results.errors.push(`post-trial: ${err instanceof Error ? err.message : String(err)}`);
   }
 
   return new Response(JSON.stringify(results), {

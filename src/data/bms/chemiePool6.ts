@@ -61,7 +61,7 @@ export const chemiePool6: Question[] = [
     ],
     3,
     "H-Brücken (~20 kJ/mol) sind deutlich schwächer als kovalente Bindungen (z. B. O−H ~460 kJ/mol).",
-    "leicht",
+    "mittel",
     []
   ),
   q(
@@ -253,7 +253,7 @@ export const chemiePool6: Question[] = [
     ],
     3,
     "Alkohole sind keine typischen Basen (R−OH gibt H⁺ nur schwach ab). Sie haben −OH und können H-Brücken bilden.",
-    "mittel",
+    "schwer",
     []
   ),
   q(
@@ -565,7 +565,7 @@ export const chemiePool6: Question[] = [
     ],
     4,
     "Viele Metalle sind bei 25 °C fest (Eisen, Kupfer, Gold). Quecksilber ist bei RT flüssig.",
-    "leicht",
+    "mittel",
     []
   ),
   q(

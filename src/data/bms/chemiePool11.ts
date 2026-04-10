@@ -42,7 +42,7 @@ export const chemiePool11: Question[] = [
     ],
     1,
     "Rutherford: Goldfolie + Alphateilchen. Die meisten Teilchen passieren ungehindert → leerer Raum; wenige stark abgelenkt → winziger, positiver Kern.",
-    "mittel",
+    "schwer",
     ["Rutherford", "Atommodell", "Kap1"]
   ),
   q(

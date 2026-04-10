@@ -74,6 +74,7 @@ export async function generateAndSaveOne(
   } else if (domain === "kff-wortflüssigkeit") {
     const diffNum = targetDifficulty <= 333 ? 1 : targetDifficulty <= 666 ? 2 : 3;
     const t = generateWordFluencyTask(diffNum as 1 | 2 | 3);
+    if (!t) return null;
     insert = wortflüssigkeitToTask(t, "generated");
   } else if (domain === "kff-merkfähigkeit") {
     // Einzelne Merkfähigkeit-Aufgabe wird nicht isoliert erzeugt; fillPool nutzt Chunk-Logik

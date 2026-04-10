@@ -80,7 +80,7 @@ export const physikPool20: Question[] = [
     ["R = ρ·A/l", "R = ρ·l/A", "R = l/(ρ·A)", "R = A/(ρ·l)", "R = ρ·l·A"],
     1,
     "R = ρ·l/A.",
-    "leicht",
+    "mittel",
     ["Widerstand", "spezifischer Widerstand"]
   ),
   q(
@@ -90,7 +90,7 @@ export const physikPool20: Question[] = [
     ["v = v₀·t", "v = v₀ + a·t", "v = v₀·a·t", "v = v₀/t", "v = a/t"],
     1,
     "v(t) = v₀ + a·t.",
-    "leicht",
+    "mittel",
     ["Geschwindigkeit", "Beschleunigung"]
   ),
   q(
@@ -122,7 +122,7 @@ export const physikPool20: Question[] = [
     ],
     1,
     "Schmelzwärme: Energie für Phasenübergang fest → flüssig bei konstanter T.",
-    "leicht",
+    "mittel",
     ["Schmelzwärme", "Phasenübergang"]
   ),
   q(
@@ -174,7 +174,7 @@ export const physikPool20: Question[] = [
     ["Volumen", "Temperatur", "Druck", "Entropie", "Dichte"],
     1,
     "U = U(T) für ideales Gas.",
-    "leicht",
+    "mittel",
     ["innere Energie", "ideales Gas"]
   ),
   q(
@@ -262,7 +262,7 @@ export const physikPool20: Question[] = [
     ["6 Stunden", "6 Tage", "6 Jahre", "6 Minuten", "unendlich"],
     0,
     "T_½(Tc-99m) ≈ 6 h (geeignet für Szintigraphie).",
-    "mittel",
+    "schwer",
     ["Technetium-99m", "Nuklearmedizin"]
   ),
   q(
@@ -272,7 +272,7 @@ export const physikPool20: Question[] = [
     ["F = m·v", "F = m·v²/r", "F = v/r", "F = m·r", "F = v²/r"],
     1,
     "F_z = m·v²/r.",
-    "leicht",
+    "mittel",
     ["Zentripetalkraft", "Formel"]
   ),
   q(
@@ -318,7 +318,7 @@ export const physikPool20: Question[] = [
     ["W = P·t", "P = W/t", "W = P/t", "P = W·t", "W = P + t"],
     1,
     "P = W/t (Leistung = Arbeit pro Zeit).",
-    "leicht",
+    "mittel",
     ["Arbeit", "Leistung"]
   ),
   q(
@@ -344,7 +344,7 @@ export const physikPool20: Question[] = [
     ],
     1,
     "Verdampfung: Phasenübergang flüssig → gasförmig bei konstanter T.",
-    "leicht",
+    "mittel",
     ["Verdampfung", "Phasenübergang"]
   ),
   q(
@@ -396,7 +396,7 @@ export const physikPool20: Question[] = [
     ["k = λ", "k = 2π/λ", "k = λ·2π", "k = 1/λ", "k = λ²"],
     1,
     "k = 2π/λ.",
-    "leicht",
+    "mittel",
     ["Wellenzahl", "Wellenlänge"]
   ),
   q(
@@ -480,7 +480,7 @@ export const physikPool20: Question[] = [
     ["P = U/R", "P = U²/R", "P = R/U", "P = U·R", "P = U/R²"],
     1,
     "P = U·I = U²/R (mit I = U/R).",
-    "leicht",
+    "mittel",
     ["Leistung", "Spannung"]
   ),
   q(
@@ -632,7 +632,7 @@ export const physikPool20: Question[] = [
     ],
     1,
     "Δλ = λ_C·(1 − cos(θ)); λ_C = h/(m_e·c).",
-    "schwer",
+    "mittel",
     ["Compton-Effekt", "Wellenlängenänderung"]
   ),
   q(
@@ -642,7 +642,7 @@ export const physikPool20: Question[] = [
     ["E = m·h", "E = m·g·h", "E = ½·m·v²", "E = m·v", "E = F·h"],
     1,
     "E_pot = m·g·h.",
-    "leicht",
+    "mittel",
     ["potentielle Energie", "Höhe"]
   ),
   q(
@@ -726,7 +726,7 @@ export const physikPool20: Question[] = [
     ["b = f", "b = 2f", "b = f/2", "b = ∞", "b = 0"],
     1,
     "Bei g = 2f ist b = 2f (1/f = 1/g + 1/b).",
-    "mittel",
+    "schwer",
     ["Linsengleichung", "Bildweite"]
   ),
   q(

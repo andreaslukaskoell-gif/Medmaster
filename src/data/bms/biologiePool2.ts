@@ -85,7 +85,7 @@ export const biologiePool2: Question[] = [
     ],
     3,
     "Die DNA-Replikation findet in der S-Phase statt, nicht in der Telophase. In der Telophase dekondensieren die Chromosomen, die Kernhülle bildet sich neu, und die Zelle bereitet die Zytokinese vor.",
-    "leicht",
+    "mittel",
     ["mitose", "zellteilung", "telophase"]
   ),
   q(
@@ -117,7 +117,7 @@ export const biologiePool2: Question[] = [
     ],
     1,
     "In einer hypotonischen Lösung ist die Konzentration gelöster Teilchen außen geringer als innen. Wasser folgt dem osmotischen Gradienten und strömt in die Zelle, wodurch diese anschwillt. Bei tierischen Zellen kann dies zur Lyse führen.",
-    "leicht",
+    "mittel",
     ["osmose", "hypotonisch", "zellmembran"]
   ),
   q(
@@ -149,7 +149,7 @@ export const biologiePool2: Question[] = [
     ],
     2,
     "Aktiver Transport verbraucht metabolische Energie, um Moleküle entgegen ihrem Konzentrationsgradienten zu transportieren. Passiver Transport hingegen erfolgt ohne Energieverbrauch entlang des Gradienten.",
-    "leicht",
+    "mittel",
     ["transport", "aktiv", "passiv", "atp"]
   ),
   q(
@@ -165,7 +165,7 @@ export const biologiePool2: Question[] = [
     ],
     2,
     "Colchicin hemmt die Polymerisation von Tubulin zu Mikrotubuli. Da der mitotische Spindelapparat aus Mikrotubuli besteht, kann die Chromosomentrennung während der Mitose nicht stattfinden. Die Zellteilung wird blockiert.",
-    "mittel",
+    "schwer",
     ["colchicin", "mikrotubuli", "mitose", "spindelapparat"]
   ),
   q(
@@ -181,7 +181,7 @@ export const biologiePool2: Question[] = [
     ],
     2,
     "Lysosomen enthalten saure Hydrolasen (pH ~4,5–5), die Makromoleküle, defekte Organellen und aufgenommene Partikel abbauen. Bei der Autophagie werden zelleigene Strukturen in Autophagosomen eingeschlossen und mit Lysosomen fusioniert.",
-    "leicht",
+    "mittel",
     ["lysosom", "autophagie", "organellen"]
   ),
   q(
@@ -245,7 +245,7 @@ export const biologiePool2: Question[] = [
     ],
     1,
     "Das Flüssig-Mosaik-Modell beschreibt die Zellmembran als fluide Lipiddoppelschicht, in der Phospholipide und Proteine lateral diffundieren können. Cholesterin moduliert die Fluidität und kommt in beiden Schichten vor.",
-    "leicht",
+    "mittel",
     ["zellmembran", "flüssig-mosaik-modell", "phospholipide"]
   ),
 
@@ -305,7 +305,7 @@ export const biologiePool2: Question[] = [
     ],
     4,
     "Der Sinusknoten besitzt die höchste Eigenfrequenz (~60–80/min) und ist daher der primäre Schrittmacher. Der AV-Knoten hat eine niedrigere Eigenfrequenz (~40–50/min) und übernimmt nur bei Ausfall des Sinusknotens die Schrittmacherfunktion.",
-    "mittel",
+    "schwer",
     ["herz", "erregungsleitung", "sinusknoten"]
   ),
   q(
@@ -509,7 +509,7 @@ export const biologiePool2: Question[] = [
     ["0,16", "0,40", "0,60", "0,84", "0,36"],
     2,
     "q² = 160/1000 = 0,16 → q = 0,4 → p = 1 – q = 0,6. Die Frequenz des dominanten Allels beträgt 0,6 (60 %). Dies ist eine klassische Hardy-Weinberg-Berechnung.",
-    "mittel",
+    "schwer",
     ["hardy-weinberg", "allelfrequenz", "populationsgenetik"]
   ),
   q(
@@ -525,7 +525,7 @@ export const biologiePool2: Question[] = [
     ],
     3,
     "Mykorrhiza ist ein klassisches Beispiel für Mutualismus: Der Pilz liefert Wasser und Mineralstoffe, die Pflanze organische Verbindungen. Es handelt sich nicht um Parasitismus, da beide Partner profitieren.",
-    "leicht",
+    "mittel",
     ["symbiose", "mykorrhiza", "mutualismus"]
   ),
   q(
@@ -605,7 +605,7 @@ export const biologiePool2: Question[] = [
     ],
     2,
     "Bates'sche Mimikry bezeichnet die Nachahmung einer giftigen oder gefährlichen Art durch eine ungiftige Art. Fressfeinde meiden beide aufgrund der Ähnlichkeit. Bei Müller'scher Mimikry sind beide Arten tatsächlich giftig.",
-    "mittel",
+    "schwer",
     ["mimikry", "bates", "evolution"]
   ),
   q(
@@ -637,7 +637,7 @@ export const biologiePool2: Question[] = [
     ],
     1,
     "Adaptive Radiation bezeichnet die Aufspaltung einer Stammform in viele spezialisierte Arten, die verschiedene ökologische Nischen besetzen. Klassische Beispiele sind Darwinfinken und ostafrikanische Buntbarsche.",
-    "mittel",
+    "schwer",
     ["adaptive radiation", "speziation", "buntbarsche"]
   ),
   q(
@@ -669,7 +669,7 @@ export const biologiePool2: Question[] = [
     ],
     1,
     "Koexistierende Arten mit ähnlichen Ansprüchen weichen auf verschiedene ökologische Nischen aus (Nischendifferenzierung/character displacement). Das Gause-Prinzip besagt, dass zwei Arten mit identischer Nische nicht dauerhaft koexistieren können.",
-    "mittel",
+    "schwer",
     ["nische", "koexistenz", "ökologie"]
   ),
   q(
@@ -685,7 +685,7 @@ export const biologiePool2: Question[] = [
     ],
     3,
     "Destruenten (Bakterien, Pilze) spielen eine entscheidende Rolle, indem sie organisches Material abbauen und CO₂ freisetzen. Ohne sie würde sich totes organisches Material unzersetzt anhäufen und der Kohlenstoffkreislauf wäre unterbrochen.",
-    "leicht",
+    "mittel",
     ["kohlenstoffkreislauf", "destruenten", "ökologie"]
   ),
 
@@ -719,7 +719,7 @@ export const biologiePool2: Question[] = [
     ],
     2,
     "Bei der Blutgruppe AB werden sowohl das A- als auch das B-Antigen auf der Erythrozytenoberfläche exprimiert. Da beide Allele gleich stark ausgeprägt werden, liegt Kodominanz vor. Weder A noch B dominiert über das andere.",
-    "leicht",
+    "mittel",
     ["blutgruppen", "kodominanz", "ab0-system"]
   ),
   q(
@@ -729,7 +729,7 @@ export const biologiePool2: Question[] = [
     ["mRNA (messenger-RNA)", "rRNA", "tRNA (transfer-RNA)", "snRNA", "miRNA (micro-RNA)"],
     2,
     "Die tRNA besitzt ein Anticodon, das mit dem mRNA-Codon paart, und trägt die entsprechende Aminosäure an ihrem 3'-Ende (CCA-Sequenz). Aminoacyl-tRNA-Synthetasen beladen die tRNA spezifisch mit der richtigen Aminosäure.",
-    "leicht",
+    "mittel",
     ["translation", "trna", "proteinbiosynthese"]
   ),
   q(
@@ -739,7 +739,7 @@ export const biologiePool2: Question[] = [
     ["0 %", "25 %", "50 %", "75 %", "100 %"],
     1,
     "Mukoviszidose ist autosomal-rezessiv: Aa × Aa → 1 AA : 2 Aa : 1 aa. Nur aa-Individuen erkranken, also beträgt die Wahrscheinlichkeit 25 %. Die Hälfte der Kinder wäre heterozygote Träger (Aa).",
-    "leicht",
+    "mittel",
     ["mukoviszidose", "autosomal-rezessiv", "mendel"]
   ),
   q(
@@ -755,7 +755,7 @@ export const biologiePool2: Question[] = [
     ],
     4,
     "DNA-Polymerasen benötigen einen RNA-Primer als Startpunkt, da sie nur an ein bestehendes 3'-OH-Ende Nukleotide anhängen können. Die Primase synthetisiert diesen kurzen RNA-Primer. Alle anderen Aussagen sind korrekt.",
-    "mittel",
+    "schwer",
     ["replikation", "dna-polymerase", "primer"]
   ),
   q(
@@ -787,7 +787,7 @@ export const biologiePool2: Question[] = [
     ],
     1,
     "Rot-Grün-Farbenblindheit ist X-chromosomal-rezessiv. Ein betroffener Sohn (X^a Y) muss das Allel von seiner Mutter erhalten haben. Da die Mutter phänotypisch normal sieht, ist sie heterozygote Konduktorin (X^A X^a).",
-    "mittel",
+    "schwer",
     ["x-chromosomal", "farbenblindheit", "konduktorin"]
   ),
   q(
@@ -1043,7 +1043,7 @@ export const biologiePool2: Question[] = [
     ["Lebendimpfstoff", "Totimpfstoff", "mRNA-Impfstoff", "Toxoid-Impfstoff", "Konjugatimpfstoff"],
     1,
     "Totimpfstoffe enthalten inaktivierte (abgetötete) Erreger oder deren Bestandteile. Sie können keine Infektion auslösen, sind aber oft weniger immunogen als Lebendimpfstoffe und erfordern daher häufig Booster-Impfungen. Beispiele: Polio-Salk, Hepatitis A.",
-    "leicht",
+    "mittel",
     ["impfstoff", "totimpfstoff", "immunisierung"]
   ),
   q(
@@ -1059,7 +1059,7 @@ export const biologiePool2: Question[] = [
     ],
     1,
     "Grampositive Bakterien erscheinen nach der Gram-Färbung blau-violett, da ihre dicke Peptidoglykanschicht (20–80 nm) den Kristallviolett-Jod-Komplex festhält. Gramnegative Bakterien haben nur eine dünne Peptidoglykanschicht und eine äußere Membran.",
-    "leicht",
+    "mittel",
     ["gramfärbung", "peptidoglykan", "grampositiv"]
   ),
   q(

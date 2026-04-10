@@ -78,7 +78,7 @@ export const physikPool15: Question[] = [
     ["Proton und Elektron", "Neutron und Neutrino", "Alpha-Teilchen", "Positron", "Elektron"],
     1,
     "Neutron und Neutrino sind elektrisch neutral.",
-    "leicht",
+    "mittel",
     ["Neutron", "Ladung"]
   ),
   q(
@@ -188,7 +188,7 @@ export const physikPool15: Question[] = [
     ["T = θ − 273,15", "T = θ + 273,15", "T = θ · 1,8", "T = θ / 273,15", "T = θ"],
     1,
     "T(K) = θ(°C) + 273,15.",
-    "leicht",
+    "mittel",
     ["Temperatur", "Kelvin"]
   ),
   q(
@@ -198,7 +198,7 @@ export const physikPool15: Question[] = [
     ["5 V", "20 V", "8 V", "12 V", "0,2 V"],
     1,
     "U = R·I = 10 Ω · 2 A = 20 V.",
-    "leicht",
+    "mittel",
     ["Ohmsches Gesetz", "Rechnung"]
   ),
   q(
@@ -250,7 +250,7 @@ export const physikPool15: Question[] = [
     ["E = P · t", "E = P / t", "E = P + t", "E = t / P", "E = P − t"],
     0,
     "E = P · t (Energie = Leistung mal Zeit).",
-    "leicht",
+    "mittel",
     ["elektrische Energie", "Leistung"]
   ),
   q(
@@ -350,7 +350,7 @@ export const physikPool15: Question[] = [
     ["sind unabhängig", "f = 1/T", "f = T", "f = 2π·T", "f = T²"],
     1,
     "Frequenz f = 1/T (Einheit Hz).",
-    "leicht",
+    "mittel",
     ["Frequenz", "Periodendauer"]
   ),
   q(
@@ -408,7 +408,7 @@ export const physikPool15: Question[] = [
     ["1,5 N", "6 N", "5 N", "2/3 N", "9 N"],
     1,
     "F = m·a = 2 kg · 3 m/s² = 6 N.",
-    "leicht",
+    "mittel",
     ["Kraft", "Rechnung"]
   ),
   q(
@@ -508,7 +508,7 @@ export const physikPool15: Question[] = [
     ],
     0,
     "2. Hauptsatz: Abwärme muss an kälteres Reservoir abgegeben werden.",
-    "mittel",
+    "schwer",
     ["Wärmekraftmaschine", "Abwärme"]
   ),
   q(
@@ -582,7 +582,7 @@ export const physikPool15: Question[] = [
     ],
     1,
     "Beide in Joule (J) = N·m.",
-    "leicht",
+    "mittel",
     ["Wärme", "Arbeit", "Einheit"]
   ),
   q(

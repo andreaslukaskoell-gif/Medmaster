@@ -70,7 +70,7 @@ export const physikPool12: Question[] = [
     ],
     0,
     "Nullpunkt der Kelvin-Skala = absoluter Nullpunkt; 0 °C = 273,15 K.",
-    "leicht",
+    "mittel",
     ["Temperatur", "Kelvin"]
   ),
   q(
@@ -116,7 +116,7 @@ export const physikPool12: Question[] = [
     ["c = λ + f", "c = λ · f", "c = λ / f", "c = λ² · f", "c = f / λ"],
     1,
     "c = λ · f (Ausbreitungsgeschwindigkeit = Wellenlänge mal Frequenz).",
-    "leicht",
+    "mittel",
     ["Wellenlänge", "c = λf"]
   ),
   q(

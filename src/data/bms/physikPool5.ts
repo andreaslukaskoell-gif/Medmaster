@@ -45,7 +45,7 @@ export const physikPool5: Question[] = [
     ["falsch", "richtig", "nur bei Wechselspannung", "nur bei Gleichspannung", "I wird halbiert"],
     1,
     "U = R·I → I = U/R; U verdoppelt → I verdoppelt.",
-    "leicht",
+    "mittel",
     ["Ohmsches Gesetz"]
   ),
   q(
@@ -87,7 +87,7 @@ export const physikPool5: Question[] = [
     ],
     3,
     "F = m·a gilt in Inertialsystemen unabhängig vom Medium (nicht nur im Vakuum).",
-    "mittel",
+    "schwer",
     ["Kraft", "Newton"]
   ),
   q(
@@ -215,7 +215,7 @@ export const physikPool5: Question[] = [
     ["5", "10", "50", "0,5", "20"],
     1,
     "v = s/t = 100/10 = 10 m/s.",
-    "leicht",
+    "mittel",
     ["Geschwindigkeit", "Durchschnitt"]
   ),
   q(
@@ -529,7 +529,7 @@ export const physikPool5: Question[] = [
     ],
     3,
     "E_pot kann negativ sein (z.B. gebundene Zustände, Bezug im Unendlichen).",
-    "mittel",
+    "schwer",
     ["potentielle Energie"]
   ),
   q(
@@ -549,7 +549,7 @@ export const physikPool5: Question[] = [
     ["größer", "kleiner", "gleich", "90°", "0°"],
     1,
     "Optisch dichter (Wasser): Brechung zum Lot → kleinerer Winkel.",
-    "leicht",
+    "mittel",
     ["Brechung", "Wasser"]
   ),
   q(

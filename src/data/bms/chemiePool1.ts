@@ -109,7 +109,7 @@ export const chemiePool1: Question[] = [
     ],
     4,
     "Die Polarität steigt mit der Elektronegativitätsdifferenz. Li−H hat eine große EN-Differenz (Li ≈1,0, H ≈2,2); Li ist stark elektropositiv. Auch O−H und F−H sind sehr polar; unter den Optionen ist Li−H eine der polarsten.",
-    "mittel",
+    "schwer",
     ["Polare Bindung", "Elektronegativität"]
   ),
   q(
@@ -657,7 +657,7 @@ export const chemiePool1: Question[] = [
     ],
     4,
     'Ideale Gase sind ein Modell; reale Gase verhalten sich bei niedrigem Druck und hoher Temperatur annähernd ideal. Die Aussage "immer flüssig" ist falsch – ideale Gase bleiben bei diesem Modell gasförmig.',
-    "mittel",
+    "schwer",
     ["ideales Gas", "Gasgesetze"]
   ),
   q(

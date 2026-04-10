@@ -488,7 +488,7 @@ export const chemiePool20: Question[] = [
     ],
     1,
     "Aus v = k·[A]^a·[B]^b: Konzentrationen variieren, v messen → Exponenten a, b bestimmen.",
-    "mittel",
+    "schwer",
     ["Reaktionsordnung"]
   ),
   q(

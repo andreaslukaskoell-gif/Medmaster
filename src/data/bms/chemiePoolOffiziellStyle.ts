@@ -58,7 +58,7 @@ export const chemiePoolOffiziellStyle: Question[] = [
     ],
     4,
     "Raumtemperatur ~20–25°C; Pentan (Sdp. 36°C) ist dann flüssig. Heptan siedet höher (flüssig), Butan niedriger (gasförmig). Bei 34°C ist Pentan noch flüssig.",
-    "mittel",
+    "schwer",
     ["Alkane", "Siedepunkt", "Aggregatzustand"]
   ),
   q(
@@ -84,7 +84,7 @@ export const chemiePoolOffiziellStyle: Question[] = [
     ],
     3,
     "Oxidation = Elektronenabgabe. Reduktion = Elektronenaufnahme. Oxidationsmittel nimmt Elektronen auf, Reduktionsmittel gibt ab.",
-    "mittel",
+    "schwer",
     ["Oxidation", "Redox"]
   ),
   q(
@@ -152,7 +152,7 @@ export const chemiePoolOffiziellStyle: Question[] = [
     ],
     3,
     "pV = nRT. V und T verdoppelt → p bleibt gleich (p = nR·T/V, T/V unverändert).",
-    "mittel",
+    "schwer",
     ["ideales Gas", "Gasgleichung"]
   ),
   q(
@@ -162,7 +162,7 @@ export const chemiePoolOffiziellStyle: Question[] = [
     ["Beryllium", "Bor", "Magnesium", "Stickstoff", "Sauerstoff"],
     2,
     "Magnesium (Mg) steht in der 3. Periode. 2. Periode: Li, Be, B, C, N, O, F, Ne.",
-    "leicht",
+    "mittel",
     ["Periodensystem", "Periode"]
   ),
   q(

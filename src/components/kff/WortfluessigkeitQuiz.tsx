@@ -88,6 +88,7 @@ export function WortflüssigkeitQuiz({
         const generated: WordFluencyTask[] = [];
         for (let i = 0; i < questionCount; i++) {
           const t = generateWordFluencyTask(difficultyForIndex(i, levels));
+          if (!t) continue;
           t.id = t.id ?? `wf-gen-${t.solutionWord ?? i}`;
           generated.push(t);
         }
@@ -121,7 +122,7 @@ export function WortflüssigkeitQuiz({
       if (gap > 0) {
         const gen = Array.from({ length: gap }, (_, i) =>
           generateWordFluencyTask(([1, 2, 3] as const)[i % 3])
-        );
+        ).filter((t): t is WordFluencyTask => t !== null);
         final = [...fresh, ...gen] as WordFluencyTask[];
       }
       setQuestions(enforceExactCount(final, questionCount));
@@ -250,6 +251,7 @@ export function WortflüssigkeitQuiz({
                     const generated: WordFluencyTask[] = [];
                     for (let i = 0; i < count - valid.length; i++) {
                       const t = generateWordFluencyTask(difficultyForIndex(i, levels));
+                      if (!t) continue;
                       t.id = t.id ?? `wf-exam-${Date.now()}-${i}`;
                       generated.push(t);
                     }
@@ -275,7 +277,7 @@ export function WortflüssigkeitQuiz({
                   if (g2 > 0) {
                     const gen = Array.from({ length: g2 }, (_, i) =>
                       generateWordFluencyTask(([1, 2, 3] as const)[i % 3])
-                    );
+                    ).filter((t): t is WordFluencyTask => t !== null);
                     final2 = [...f2, ...gen] as WordFluencyTask[];
                   }
                   setQuestions(enforceExactCount(final2, count));

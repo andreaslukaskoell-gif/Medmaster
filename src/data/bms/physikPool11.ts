@@ -786,7 +786,7 @@ export const physikPool11: Question[] = [
     ["λ' = 0,0500 nm", "λ' = 0,0502 nm", "λ' = 0,0524 nm", "λ' = 0,0524 pm", "λ' = 0,0500 pm"],
     1,
     "Δλ = 2,43 pm·(1 − cos 90°) = 2,43 pm·1 = 2,43 pm = 0,00243 nm. λ' = 0,05 + 0,00243 ≈ 0,0524 nm. Option C.",
-    "schwer",
+    "mittel",
     ["compton-effekt", "streuung", "rechenfrage"]
   ),
   q(

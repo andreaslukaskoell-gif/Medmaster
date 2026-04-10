@@ -200,7 +200,7 @@ export const physikPool16: Question[] = [
     ["C·U", "½·C·U²", "C/U²", "U²/C", "C·U²"],
     1,
     "E = ½·C·U² (Energie im elektrischen Feld).",
-    "leicht",
+    "mittel",
     ["Kondensator", "Energie"]
   ),
   q(
@@ -350,7 +350,7 @@ export const physikPool16: Question[] = [
     ["W = F/s", "W = F·s", "W = F·v", "W = F·t", "W = s/F"],
     1,
     "W = F·s (Skalarprodukt: nur Komponente in Wegrichtung).",
-    "leicht",
+    "mittel",
     ["Arbeit", "Definition"]
   ),
   q(
@@ -360,7 +360,7 @@ export const physikPool16: Question[] = [
     ["r", "1/r²", "r²", "1/r", "konstant"],
     1,
     "Intensität I ∝ 1/r² (Energieerhaltung auf Kugelfläche 4πr²).",
-    "mittel",
+    "schwer",
     ["Schallintensität", "Abstandsgesetz"]
   ),
   q(
@@ -390,7 +390,7 @@ export const physikPool16: Question[] = [
     ["Bq (Becquerel, Aktivität)", "Sv oder mSv", "Ci", "Gy/s", "J"],
     1,
     "Äquivalentdosis in Sievert (Sv) bzw. mSv für medizinische Exposition.",
-    "leicht",
+    "mittel",
     ["Röntgen", "Strahlenbelastung"]
   ),
   q(
@@ -430,7 +430,7 @@ export const physikPool16: Question[] = [
     ["1/C₁ + 1/C₂", "C₁ + C₂", "C₁·C₂", "C₁/C₂", "kleiner als C₁"],
     1,
     "Parallel: C_ges = C₁ + C₂.",
-    "leicht",
+    "mittel",
     ["Kondensatoren", "Parallel"]
   ),
   q(
@@ -560,7 +560,7 @@ export const physikPool16: Question[] = [
     ["I = j·A", "I = j/A", "I = j + A", "I = A/j", "I = j²·A"],
     0,
     "j = I/A → I = j·A.",
-    "leicht",
+    "mittel",
     ["Stromdichte", "Stromstärke"]
   ),
   q(
@@ -580,7 +580,7 @@ export const physikPool16: Question[] = [
     ["null", "konstant", "proportional zur Zeit", "nur potentiell", "nur kinetisch"],
     1,
     "Energieerhaltung: E_pot + E_kin = const.",
-    "leicht",
+    "mittel",
     ["Energieerhaltung", "Schwingung"]
   ),
   q(

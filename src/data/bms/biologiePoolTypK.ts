@@ -5,6 +5,7 @@
  */
 import type { BMSFrage } from "@/lib/supabaseBMSFragen";
 import { biologiePoolTypKExtra } from "./biologiePoolTypKExtra";
+import { biologieTypKNew } from "./biologiePoolTypKNew";
 
 export const biologiePoolTypK: BMSFrage[] = [
   {
@@ -410,4 +411,5 @@ export const biologiePoolTypK: BMSFrage[] = [
     fsrs: null,
   },
   ...biologiePoolTypKExtra,
+  ...biologieTypKNew,
 ];

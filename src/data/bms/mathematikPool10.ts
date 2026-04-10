@@ -40,7 +40,7 @@ export const mathematikPool10: Question[] = [
     ["3,3", "33", "333", "0,03", "3300"],
     1,
     "1,2 × 10⁻² ÷ 3,6 × 10⁻⁴ = (1,2/3,6) × 10⁽⁻²⁺⁴⁾ = (1/3) × 10² ≈ 33. Das zweite Präparat ist 33-mal konzentrierter.",
-    "leicht",
+    "mittel",
     ["wissenschaftliche Notation", "Zehnerpotenzen", "Konzentration"]
   ),
   q(
@@ -60,7 +60,7 @@ export const mathematikPool10: Question[] = [
     ["1,2 × 10⁻¹⁵ g", "1,2 × 10⁻¹⁶ g", "1,92 × 10⁻¹⁵ g", "4,8 × 10⁻¹⁶ g", "1,2 × 10⁻¹⁷ g"],
     0,
     "Gesamtmasse = 4,8 × 10⁻²⁰ × 2,5 × 10⁴ = (4,8 × 2,5) × 10⁽⁻²⁰⁺⁴⁾ = 12 × 10⁻¹⁶ = 1,2 × 10⁻¹⁵ g.",
-    "leicht",
+    "mittel",
     ["wissenschaftliche Notation", "Zehnerpotenzen", "Biochemie"]
   ),
   q(
@@ -70,7 +70,7 @@ export const mathematikPool10: Question[] = [
     ["2 min", "4 min", "40 min", "400 min", "0,4 min"],
     1,
     "500 mL = 500 × 10⁻⁶ m³ = 5 × 10⁻⁴ m³. Zeit = Volumen / Rate = 5 × 10⁻⁴ ÷ 1,25 × 10⁻⁴ = 4 min.",
-    "mittel",
+    "schwer",
     ["Einheiten", "Zehnerpotenzen", "Infusion", "klinische Mathematik"]
   ),
   q(
@@ -100,7 +100,7 @@ export const mathematikPool10: Question[] = [
     ["0,074 MBq", "0,74 MBq", "7,4 MBq", "74 MBq", "740 MBq"],
     3,
     "1 MBq = 10⁶ Bq. Daher: 7,4 × 10⁷ Bq ÷ 10⁶ = 7,4 × 10¹ = 74 MBq.",
-    "leicht",
+    "mittel",
     ["Einheiten", "Radioaktivität", "Zehnerpotenzen", "Nuklearmedizin"]
   ),
   q(
@@ -140,7 +140,7 @@ export const mathematikPool10: Question[] = [
     ["16", "80", "160", "800", "1600"],
     2,
     "Faktor = 8 mGy / 0,05 mGy = 8 / 0,05 = 160. Der CT-Scan liefert die 160-fache Strahlendosis des Röntgenbilds.",
-    "leicht",
+    "mittel",
     ["Einheiten", "Dosimetrie", "Radiologie", "Division"]
   ),
   q(
@@ -160,7 +160,7 @@ export const mathematikPool10: Question[] = [
     ["5 × 10⁻⁶ m", "5 × 10⁻⁷ m", "5 × 10⁻⁸ m", "5 × 10⁻⁹ m", "5 × 10⁻¹⁰ m"],
     1,
     "1 nm = 10⁻⁹ m. Also: 500 nm = 500 × 10⁻⁹ m = 5 × 10⁻⁷ m. Sichtbares Licht liegt im Bereich 380–780 nm.",
-    "leicht",
+    "mittel",
     ["wissenschaftliche Notation", "Wellenlänge", "Physik", "Optik"]
   ),
   q(
@@ -170,7 +170,7 @@ export const mathematikPool10: Question[] = [
     ["0,1125 g", "1,125 g", "11,25 g", "112,5 g", "0,01125 g"],
     1,
     "Dosis = 75 kg × 15 mg/kg = 1125 mg = 1,125 g (da 1 g = 1000 mg).",
-    "leicht",
+    "mittel",
     ["Einheiten", "Dosisberechnung", "Antibiotika", "klinische Mathematik"]
   ),
 
@@ -223,7 +223,7 @@ export const mathematikPool10: Question[] = [
     ["502 mL", "1004 mL", "1256 mL", "628 mL", "251 mL"],
     2,
     "r = 4 cm. V = π·r²·h = 3,14 × 16 × 25 = 3,14 × 400 = 1256 cm³ = 1256 mL.",
-    "leicht",
+    "mittel",
     ["Geometrie", "Zylinder", "Volumen", "Infusion"]
   ),
   q(
@@ -273,7 +273,7 @@ export const mathematikPool10: Question[] = [
     ["10 cm", "11 cm", "12 cm", "13 cm", "18,75 cm"],
     2,
     "Verkleinerte Länge = 15 cm × 0,8 = 12 cm. Maßstabsfaktoren werden routinemäßig in der Radiologie verwendet.",
-    "leicht",
+    "mittel",
     ["Algebra", "Proportionen", "Radiologie", "Maßstab"]
   ),
   q(
@@ -313,7 +313,7 @@ export const mathematikPool10: Question[] = [
     ["157 mL", "251 mL", "314 mL", "628 mL", "125 mL"],
     0,
     "V₁ = 3,14 × 4 × 10 = 125,6 mL. V₂ = 3,14 × 9 × 10 = 282,6 mL. Differenz = 282,6 − 125,6 = 157 mL.",
-    "mittel",
+    "schwer",
     ["Geometrie", "Zylinder", "Volumen", "Labor"]
   ),
 
@@ -326,7 +326,7 @@ export const mathematikPool10: Question[] = [
     ["6 h", "9 h", "12 h", "15 h", "18 h"],
     1,
     "800 → 400 → 200 → 100 mg/L: 3 Halbwertszeiten à 3 h = 9 h.",
-    "leicht",
+    "mittel",
     ["Exponentialfunktion", "Halbwertszeit", "Pharmakokinetik"]
   ),
   q(
@@ -372,7 +372,7 @@ export const mathematikPool10: Question[] = [
     ["v = Vmax", "v = Vmax/4", "v = Vmax/2", "v = 2·Vmax", "v = Vmax/3"],
     2,
     "Bei [S] = Km: v = (Vmax·Km)/(Km+Km) = Vmax/2. Km ist die Substratkonzentration bei halber Maximalgeschwindigkeit.",
-    "leicht",
+    "mittel",
     ["Funktion", "Enzymkinetik", "Michaelis-Menten", "Biochemie"]
   ),
   q(
@@ -382,7 +382,7 @@ export const mathematikPool10: Question[] = [
     ["60/min", "75/min", "80/min", "100/min", "120/min"],
     1,
     "Periode T = 0,8 s. Herzfrequenz = 60 / 0,8 = 75 Schläge/min.",
-    "leicht",
+    "mittel",
     ["Sinusfunktion", "Periode", "EKG", "Kardiologie"]
   ),
   q(
@@ -481,7 +481,7 @@ export const mathematikPool10: Question[] = [
     ["7 N", "10 N", "12 N", "14 N", "6 N"],
     1,
     "|F₁+F₂| = |(6, 8, 0)| = √(36+64+0) = √100 = 10 N.",
-    "leicht",
+    "mittel",
     ["Vektoren", "Betrag", "Biomechanik", "Kraftvektoren"]
   ),
   q(
@@ -491,7 +491,7 @@ export const mathematikPool10: Question[] = [
     ["3 cm", "4 cm", "5 cm", "6 cm", "7 cm"],
     2,
     "|r₂−r₁| = |(3, 4, 0)| = √(9+16+0) = √25 = 5 cm.",
-    "leicht",
+    "mittel",
     ["Vektoren", "Abstand", "Radiologie", "MRT"]
   ),
   q(
@@ -617,7 +617,7 @@ export const mathematikPool10: Question[] = [
     ["5 N", "7 N", "9 N", "11 N", "6 N"],
     1,
     "|F₁+F₂+F₃| = |(2, 3, −6)| = √(4+9+36) = √49 = 7 N.",
-    "leicht",
+    "mittel",
     ["Vektoren", "Betrag", "Vektoraddition", "Biomechanik"]
   ),
 

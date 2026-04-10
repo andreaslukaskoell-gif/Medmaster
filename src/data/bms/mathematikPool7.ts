@@ -261,7 +261,7 @@ export const mathematikPool7: Question[] = [
     ],
     1,
     "Die Strahlensätze gelten für beliebige Winkel am Scheitelpunkt, nicht nur für rechte Winkel.",
-    "mittel",
+    "schwer",
     ["Strahlensätze", "Falsch-Aussage"]
   ),
 
@@ -369,7 +369,7 @@ export const mathematikPool7: Question[] = [
     ],
     3,
     "1,1 × 1,1 = 1,21 → 21 % Steigerung, nicht 20 %. Die Fehlannahme beruht auf der Vernachlässigung des Zinseszinseffekts.",
-    "mittel",
+    "schwer",
     ["Prozentrechnung", "Falsch-Aussage"]
   ),
 
@@ -603,7 +603,7 @@ export const mathematikPool7: Question[] = [
     ],
     3,
     "Das Skalarprodukt kann auch negativ sein (wenn der Winkel zwischen den Vektoren größer als 90° ist) oder null (bei senkrechten Vektoren).",
-    "leicht",
+    "mittel",
     ["Vektoren", "Skalarprodukt", "Falsch-Aussage"]
   ),
 
@@ -615,7 +615,7 @@ export const mathematikPool7: Question[] = [
     ["1/5", "2/5", "3/5", "1/2", "4/5"],
     1,
     "Gerade Zahlen: {2, 4} = 2 von 5. P = 2/5.",
-    "leicht",
+    "mittel",
     ["Wahrscheinlichkeit", "Laplace"]
   ),
   q(
@@ -645,7 +645,7 @@ export const mathematikPool7: Question[] = [
     ["0,512", "0,800", "0,240", "0,600", "0,384"],
     0,
     "P(alle 3) = 0,8³ = 0,512.",
-    "mittel",
+    "schwer",
     ["Binomialverteilung", "Unabhängigkeit", "rechenfrage"]
   ),
   q(
@@ -695,7 +695,7 @@ export const mathematikPool7: Question[] = [
     ["90 %", "81,8 %", "97,8 %", "80 %", "95 %"],
     0,
     "Sensitivität = RP/(RP + FN) = 90/(90 + 10) = 90/100 = 90 %.",
-    "mittel",
+    "schwer",
     ["Sensitivität", "Diagnostik", "rechenfrage"]
   ),
   q(
@@ -711,7 +711,7 @@ export const mathematikPool7: Question[] = [
     ],
     4,
     "Die Binomialverteilung gilt für jedes p ∈ [0, 1], nicht nur für p = 0,5. Alle anderen Aussagen sind korrekte Eigenschaften.",
-    "leicht",
+    "mittel",
     ["Binomialverteilung", "Falsch-Aussage"]
   ),
 ];

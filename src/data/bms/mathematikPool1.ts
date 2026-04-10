@@ -43,7 +43,7 @@ export const mathematikPool1: Question[] = [
     ],
     4,
     "Die minimale Herzfrequenz liegt am Minimum von f(t). Ableitung f'(t) = −a + 2b·t = 0 liefert t = a/(2b).",
-    "mittel",
+    "schwer",
     ["Ableitung", "Extremum", "quadratische Funktion"]
   ),
   q(
@@ -85,7 +85,7 @@ export const mathematikPool1: Question[] = [
     ["Cotangens", "keiner", "Cosinus", "Tangens", "Sinus"],
     3,
     "Steigung = Höhendifferenz / horizontale Strecke = Gegenkathete / Ankathete = tan(α). 16% entspricht also dem Tangens des Steigungswinkels.",
-    "leicht",
+    "mittel",
     ["Trigonometrie", "Tangens", "Steigung"]
   ),
   q(
@@ -101,7 +101,7 @@ export const mathematikPool1: Question[] = [
     ],
     2,
     "Das Volumen eines Quaders ist das Produkt der drei Kantenlängen: V = a·b·c. 2·(a·b+a·c+b·c) wäre die Oberfläche.",
-    "leicht",
+    "mittel",
     ["Quader", "Volumen", "Geometrie"]
   ),
   q(

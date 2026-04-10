@@ -64,7 +64,7 @@ export const physikPool19: Question[] = [
     ["kleines λ", "großes λ", "λ = 0", "λ negativ", "λ nur für Gase"],
     1,
     "Große Wärmeleitfähigkeit λ → guter Wärmeleiter.",
-    "leicht",
+    "mittel",
     ["Wärmeleitfähigkeit", "Wärmeleitung"]
   ),
   q(
@@ -218,7 +218,7 @@ export const physikPool19: Question[] = [
     ["p = ρ/h", "p = ρ·g·h", "p = ρ·h", "p = g/h", "p = ρ + h"],
     1,
     "Schweredruck: p = ρ·g·h.",
-    "leicht",
+    "mittel",
     ["Schweredruck", "Flüssigkeit"]
   ),
   q(
@@ -228,7 +228,7 @@ export const physikPool19: Question[] = [
     ["ω = f", "ω = 2π·f", "ω = f/(2π)", "ω = f²", "ω = 1/f"],
     1,
     "ω = 2π·f = 2π/T.",
-    "leicht",
+    "mittel",
     ["Kreisfrequenz", "Frequenz"]
   ),
   q(
@@ -254,7 +254,7 @@ export const physikPool19: Question[] = [
     ["Q·r", "Q/r²", "r²/Q", "Q + r", "1/r"],
     1,
     "E = k·Q/r² (Coulomb-Feld einer Punktladung/Kugel).",
-    "mittel",
+    "schwer",
     ["Feldstärke", "Kugel"]
   ),
   q(
@@ -324,7 +324,7 @@ export const physikPool19: Question[] = [
     ["a = v·t", "a = Δv/Δt", "a = s/t", "a = F·m", "a = v²"],
     1,
     "a = dv/dt = Δv/Δt.",
-    "leicht",
+    "mittel",
     ["Beschleunigung", "Definition"]
   ),
   q(
@@ -440,7 +440,7 @@ export const physikPool19: Question[] = [
     ],
     1,
     "A und Z legen N = A − Z und das Nuklid fest.",
-    "leicht",
+    "mittel",
     ["Massenzahl", "Ordnungszahl"]
   ),
   q(
@@ -450,7 +450,7 @@ export const physikPool19: Question[] = [
     ["kleiner", "größer", "gleich", "halb so groß", "doppelt so groß"],
     1,
     "Haftreibung > Gleitreibung (μ_H > μ_G).",
-    "leicht",
+    "mittel",
     ["Haftreibung", "Gleitreibung"]
   ),
   q(
@@ -496,7 +496,7 @@ export const physikPool19: Question[] = [
     ["E_kin = m·v", "E_kin = ½·m·v²", "E_kin = m·v²", "E_kin = m·g·h", "E_kin = F·s"],
     1,
     "E_kin = ½·m·v².",
-    "leicht",
+    "mittel",
     ["kinetische Energie", "Formel"]
   ),
   q(
@@ -532,7 +532,7 @@ export const physikPool19: Question[] = [
     ["Q = C/U", "Q = C·U", "Q = U/C", "Q = C + U", "Q = C − U"],
     1,
     "Q = C·U.",
-    "leicht",
+    "mittel",
     ["Kondensator", "Ladung"]
   ),
   q(
@@ -568,7 +568,7 @@ export const physikPool19: Question[] = [
     ["0", "λ/b", "b/λ", "2λ/b", "λ/(2b)"],
     1,
     "Einzelspalt: erstes Minimum bei sin(α) = λ/b.",
-    "mittel",
+    "schwer",
     ["Einzelspalt", "Beugung"]
   ),
   q(
@@ -584,7 +584,7 @@ export const physikPool19: Question[] = [
     ],
     1,
     "Q: Prozessgröße (Wärmemenge in J); T: Zustandsgröße (K).",
-    "leicht",
+    "mittel",
     ["Wärme", "Temperatur"]
   ),
   q(
@@ -684,7 +684,7 @@ export const physikPool19: Question[] = [
     ],
     1,
     "CT: viele Einzelaufnahmen → höhere Dosis als Einzelröntgen.",
-    "leicht",
+    "mittel",
     ["CT", "Strahlenbelastung"]
   ),
   q(
@@ -704,7 +704,7 @@ export const physikPool19: Question[] = [
     ["f = T", "f = 1/T", "f = 2π·T", "f = T²", "f = T/2π"],
     1,
     "f = 1/T.",
-    "leicht",
+    "mittel",
     ["Frequenz", "Periodendauer"]
   ),
   q(
@@ -714,7 +714,7 @@ export const physikPool19: Question[] = [
     ["I = U·R", "I = U/R", "I = R/U", "I = U + R", "I = U²·R"],
     1,
     "Ohmsches Gesetz: I = U/R.",
-    "leicht",
+    "mittel",
     ["Stromstärke", "Ohm"]
   ),
   q(

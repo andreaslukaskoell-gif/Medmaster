@@ -69,7 +69,7 @@ export const mathematikPool6: Question[] = [
     ["2", "4", "10", "40", "400"],
     1,
     "200 µL = 0,2 mL. Anzahl Tests: 0,2 / 0,05 = 4.",
-    "leicht",
+    "mittel",
     ["Einheiten", "Mikroliter", "rechenfrage"]
   ),
   q(
@@ -135,7 +135,7 @@ export const mathematikPool6: Question[] = [
     ],
     2,
     "ℕ ist nicht unter Subtraktion abgeschlossen: z. B. 3 − 5 = −2 ∉ ℕ.",
-    "leicht",
+    "mittel",
     ["Natürliche Zahlen", "Falsch-Aussage"]
   ),
 
@@ -243,7 +243,7 @@ export const mathematikPool6: Question[] = [
     ],
     4,
     "(a − b)² = a² − 2ab + b² (nicht +2ab − b²). Der mittlere Term muss negativ sein und b² ist stets positiv.",
-    "leicht",
+    "mittel",
     ["Binomische Formeln", "Falsch-Aussage"]
   ),
 
@@ -305,7 +305,7 @@ export const mathematikPool6: Question[] = [
     ["3/7", "3/12", "11/12", "8/12", "5/6"],
     2,
     "2/3 + 1/4 = 8/12 + 3/12 = 11/12.",
-    "leicht",
+    "mittel",
     ["Bruchrechnung", "rechenfrage"]
   ),
   q(
@@ -517,7 +517,7 @@ export const mathematikPool6: Question[] = [
     ["(6, 8)", "(4, 4)", "(−4, −4)", "(5, 6)", "(1, 2)"],
     1,
     "AB⃗ = B − A = (5−1, 6−2) = (4, 4).",
-    "leicht",
+    "mittel",
     ["Ortsvektor", "Verbindungsvektor"]
   ),
   q(
@@ -579,7 +579,7 @@ export const mathematikPool6: Question[] = [
     ],
     4,
     "Zwei Vektoren im ℝ³ können linear abhängig sein (wenn einer ein Vielfaches des anderen ist). Beispiel: (1, 2, 3) und (2, 4, 6) sind linear abhängig.",
-    "mittel",
+    "schwer",
     ["Vektoren", "Lineare Unabhängigkeit", "Falsch-Aussage"]
   ),
 

@@ -409,7 +409,7 @@ export const chemiePool5: Question[] = [
     ["NaCl", "Diamant", "Wasser", "Eisen", "Quarz"],
     2,
     "Wasser: Schmelzpunkt 0 °C, bei RT flüssig. NaCl, Diamant, Eisen, Quarz haben hohe Schmelzpunkte.",
-    "leicht",
+    "mittel",
     []
   ),
   q(

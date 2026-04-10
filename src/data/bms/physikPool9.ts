@@ -115,7 +115,7 @@ export const physikPool9: Question[] = [
     ["V", "1/T", "T", "1/V", "n"],
     2,
     "Isochor: p ∝ T.",
-    "leicht",
+    "mittel",
     ["ideales Gas", "isochor"]
   ),
   q(
@@ -417,7 +417,7 @@ export const physikPool9: Question[] = [
     ["f₁/2", "2·f₁", "f₁", "f₁²", "√f₁"],
     1,
     "f_n = n·f₁; 2. Harmonische = 2·f₁.",
-    "leicht",
+    "mittel",
     ["Harmonische", "stehende Welle"]
   ),
   q(

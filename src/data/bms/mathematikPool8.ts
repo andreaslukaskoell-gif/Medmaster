@@ -46,7 +46,7 @@ export const mathematikPool8: Question[] = [
     ],
     2,
     "2,4 × 10⁻³ mol/L = 0,0024 mol/L. Beide Schreibweisen sind äquivalent. Die Wissenschaftliche Notation und die Dezimalschreibweise stellen denselben Wert dar.",
-    "leicht",
+    "mittel",
     ["Zehnerpotenzen", "Wissenschaftliche Notation", "Einheiten"]
   ),
 
@@ -68,7 +68,7 @@ export const mathematikPool8: Question[] = [
     ["56 mg/dL", "310 mg/dL", "101 mg/dL", "100,8 mg/dL", "5,6 mg/dL"],
     3,
     "5,6 mmol/L × 18 mg/dL pro mmol/L = 100,8 mg/dL. Dies liegt im Normbereich (70–100 mg/dL nüchtern).",
-    "leicht",
+    "mittel",
     ["Einheiten", "Umrechnung", "Blutzucker"]
   ),
 
@@ -145,7 +145,7 @@ export const mathematikPool8: Question[] = [
     ["12,5 mL/min", "2,08 mL/min", "125 mL/min", "0,208 mL/min", "20,8 mL/min"],
     1,
     "1 L = 1 000 mL, 8 h = 480 min. Rate = 1 000 mL / 480 min ≈ 2,083 mL/min ≈ 2,08 mL/min.",
-    "leicht",
+    "mittel",
     ["Einheiten", "Umrechnung", "Infusionsrate", "mL/min"]
   ),
 
@@ -200,7 +200,7 @@ export const mathematikPool8: Question[] = [
     ["5 mL", "50 mL", "500 mL", "0,05 mL", "0,5 mL"],
     1,
     "Volumen = Stoffmenge / Konzentration = 2,5 mmol / 50 µmol/mL. Umrechnung: 2,5 mmol = 2 500 µmol. V = 2 500 µmol / 50 µmol/mL = 50 mL.",
-    "mittel",
+    "schwer",
     ["Konzentration", "Mol", "Umrechnung", "Laborrechnung"]
   ),
 
@@ -222,7 +222,7 @@ export const mathematikPool8: Question[] = [
     ["30 kG", "300 kG", "3 kG", "0,3 kG", "3 000 kG"],
     0,
     "3 T × 10 000 G/T = 30 000 G. 1 kG = 1 000 G, also 30 000 G = 30 kG.",
-    "leicht",
+    "mittel",
     ["Magnetfeld", "Tesla", "Gauss", "Umrechnung"]
   ),
 
@@ -233,7 +233,7 @@ export const mathematikPool8: Question[] = [
     ["50 %", "25 %", "12,5 %", "6,25 %", "3,125 %"],
     2,
     "12 h = 3 × t₁/₂. Nach 3 Halbwertszeiten: (1/2)³ = 1/8 = 12,5 % der Ausgangsdosis.",
-    "leicht",
+    "mittel",
     ["Halbwertszeit", "Pharmakokinetik", "Exponentialfunktion"]
   ),
 
@@ -255,7 +255,7 @@ export const mathematikPool8: Question[] = [
     ["325,0 mg", "32,5 mg", "3 250 mg", "3,25 mg", "3 250,0 mg"],
     1,
     "3 250 g = 3,25 kg. Dosis = 10 mg/kg × 3,25 kg = 32,5 mg. Typischer Fehler: Gramm statt kg einsetzen gibt 32 500 mg — viel zu viel.",
-    "leicht",
+    "mittel",
     ["Dosisberechnung", "Gewicht", "mg/kg"]
   ),
 
@@ -266,7 +266,7 @@ export const mathematikPool8: Question[] = [
     ["140 µg", "1 400 µg", "14 µg", "200 µg", "700 µg"],
     0,
     "Pro Tag: 100 IE × 0,2 µg/IE = 20 µg. Pro Woche: 20 µg × 7 = 140 µg.",
-    "leicht",
+    "mittel",
     ["Einheiten", "Dosisberechnung", "Umrechnung"]
   ),
 
@@ -301,7 +301,7 @@ export const mathematikPool8: Question[] = [
     ["52 500 mg", "10 500 mg", "105 000 mg", "21 000 mg", "7 350 mg"],
     0,
     "Tagesverbrauch: 3 × 500 mg = 1 500 mg. Wochenverbrauch: 1 500 × 7 = 10 500 mg. Das entspricht 20 % des Vorrats. Vorrat = 10 500 / 0,20 = 52 500 mg.",
-    "mittel",
+    "schwer",
     ["Prozentrechnung", "Algebra", "Dosisberechnung"]
   ),
 
@@ -334,7 +334,7 @@ export const mathematikPool8: Question[] = [
     ["24 cm²", "84 cm²", "48 cm²", "60 cm²", "96 cm²"],
     1,
     "Länge des Verbands: 8 + 2 + 2 = 12 cm. Breite: 3 + 2 + 2 = 7 cm. Fläche = 12 × 7 = 84 cm².",
-    "leicht",
+    "mittel",
     ["Rechteck", "Fläche", "Geometrie"]
   ),
 
@@ -345,7 +345,7 @@ export const mathematikPool8: Question[] = [
     ["18 %", "20 %", "25 %", "28,6 %", "15 %"],
     2,
     "HMV₁ = 72 × 70 = 5 040 mL/min. HMV₂ = 90 × 70 = 6 300 mL/min. Zunahme = (6 300 − 5 040)/5 040 = 1 260/5 040 = 0,25 = 25 %.",
-    "leicht",
+    "mittel",
     ["Herzminutenvolumen", "Prozentrechnung", "Proportionalität"]
   ),
 
@@ -356,7 +356,7 @@ export const mathematikPool8: Question[] = [
     ["7,85 mL", "3,14 mL", "15,7 mL", "1,57 mL", "31,4 mL"],
     0,
     "V = π × r² × h = 3,14 × (0,5)² × 10 = 3,14 × 0,25 × 10 = 7,85 cm³ = 7,85 mL.",
-    "leicht",
+    "mittel",
     ["Zylinder", "Volumen", "Geometrie", "Blutabnahme"]
   ),
 
@@ -389,7 +389,7 @@ export const mathematikPool8: Question[] = [
     ["9,375 %", "7,5 %", "10,7 %", "6 %", "8,3 %"],
     2,
     "Blutvolumen = 0,07 × 80 kg = 5,6 kg ≈ 5 600 mL. Verlust in %: 600/5 600 × 100 ≈ 10,71 %.",
-    "mittel",
+    "schwer",
     ["Prozentrechnung", "Blutvolumen", "Gleichung"]
   ),
 
@@ -461,7 +461,7 @@ export const mathematikPool8: Question[] = [
     ["5 cm", "6 cm", "4 cm", "8 cm", "7,5 cm"],
     1,
     "Breite = 4 × Durchmesser = 4 × 1,5 cm = 6 cm.",
-    "leicht",
+    "mittel",
     ["Geometrie", "Durchmesser", "Längenrechnung"]
   ),
 
@@ -472,7 +472,7 @@ export const mathematikPool8: Question[] = [
     ["600 mg", "550 mg", "650 mg", "700 mg", "500 mg"],
     0,
     "A: 2 × 100 = 200 mg. B: 1 × 250 = 250 mg. C: 3 × 50 = 150 mg. Gesamt: 200 + 250 + 150 = 600 mg.",
-    "leicht",
+    "mittel",
     ["Dosisberechnung", "Addition", "Medikamente"]
   ),
 
@@ -483,7 +483,7 @@ export const mathematikPool8: Question[] = [
     ["0,3 g", "30 g", "3 g", "300 g", "3 000 g"],
     2,
     "m = 0,003 × 10³ = 0,003 × 1 000 = 3 g.",
-    "leicht",
+    "mittel",
     ["Potenz", "Gleichung", "Algebra"]
   ),
 
@@ -494,7 +494,7 @@ export const mathematikPool8: Question[] = [
     ["8", "15", "25", "12", "10"],
     1,
     "Gesamtteile: 3 + 5 = 8. Kleinerer Anteil: 3/8 × 40 = 15 Nachtschichten.",
-    "leicht",
+    "mittel",
     ["Verhältnisrechnung", "Teilung", "Algebra"]
   ),
 
@@ -538,7 +538,7 @@ export const mathematikPool8: Question[] = [
     ["60", "80", "40", "90", "72"],
     1,
     "Verhältnis 2:1, Gesamtteile = 3. Therapiegruppe: (2/3) × 120 = 80 Patienten.",
-    "leicht",
+    "mittel",
     ["Verhältnisrechnung", "Klinische Studie", "Algebra"]
   ),
 
@@ -579,7 +579,7 @@ export const mathematikPool8: Question[] = [
     ],
     0,
     "pH₁ = −log(10⁻⁷) = 7. pH₂ = −log(10⁻⁵) = 5. Änderung: 5 − 7 = −2. Der pH sinkt um 2.",
-    "leicht",
+    "mittel",
     ["Logarithmus", "pH-Wert", "Chemie", "Biochemie"]
   ),
 
@@ -601,7 +601,7 @@ export const mathematikPool8: Question[] = [
     ["37 °C", "37,5 °C", "38 °C", "36,5 °C", "38,5 °C"],
     1,
     "Maximum von sin ist 1. f_max = 37 + 0,5 × 1 = 37,5 °C.",
-    "leicht",
+    "mittel",
     ["Sinusfunktion", "Maximum", "Körpertemperatur"]
   ),
 
@@ -612,7 +612,7 @@ export const mathematikPool8: Question[] = [
     ["Q'(r) = 4k · r³", "Q'(r) = k · r³", "Q'(r) = 4k · r⁵", "Q'(r) = k⁴ · r³", "Q'(r) = 4k³ · r"],
     0,
     "Q(r) = k · r⁴. Ableitung nach r: Q'(r) = 4k · r³ (Potenzregel).",
-    "leicht",
+    "mittel",
     ["Ableitung", "Potenzregel", "Blutfluss", "Hagen-Poiseuille"]
   ),
 
@@ -623,7 +623,7 @@ export const mathematikPool8: Question[] = [
     ["0,4 s", "0,8 s", "2π s", "1,6 s", "2 s"],
     1,
     "Allgemeine Sinusfunktion: f(t) = A·sin(2πt/T). Durch Vergleich: T = 0,8 s (entspricht 75 Schlägen/min).",
-    "leicht",
+    "mittel",
     ["Sinusfunktion", "Periode", "EKG", "Trigonometrie"]
   ),
 
@@ -656,7 +656,7 @@ export const mathematikPool8: Question[] = [
     ["2", "4", "5", "10", "20"],
     2,
     "Anzahl der Generationen = t / Generationszeit = 100 / 20 = 5.",
-    "leicht",
+    "mittel",
     ["Exponentielles Wachstum", "Generationszeit", "Logarithmus"]
   ),
 
@@ -689,7 +689,7 @@ export const mathematikPool8: Question[] = [
     ["0,25 · E_max", "0,5 · E_max", "0,75 · E_max", "E_max", "0"],
     1,
     "E(EC₅₀) = E_max × EC₅₀ / (EC₅₀ + EC₅₀) = E_max × EC₅₀ / (2 × EC₅₀) = 0,5 · E_max. Das ist die Definition von EC₅₀ (effektive Konzentration bei 50 % Maximalwirkung).",
-    "leicht",
+    "mittel",
     ["Hill-Gleichung", "Pharmakologie", "Funktion", "Algebra"]
   ),
 
@@ -700,7 +700,7 @@ export const mathematikPool8: Question[] = [
     ["Bei t = 6 h", "Bei t = 12 h", "Bei t = 24 h", "Bei t = 0 h", "Bei t = 18 h"],
     3,
     "cos(0) = 1 ist das Maximum des Kosinus. cos(2π×0/24) = cos(0) = 1. Maximum bei t = 0 h (und 24 h als Periode). Zu t = 0: p = 120 + 30 = 150 mmHg.",
-    "mittel",
+    "schwer",
     ["Kosinusfunktion", "Maximum", "Blutdruck", "Trigonometrie"]
   ),
 
@@ -777,7 +777,7 @@ export const mathematikPool8: Question[] = [
     ["5 h", "10 h", "20 h", "200 h", "4 h"],
     1,
     "f(t) = 0: 200 − 20t = 0 ⇒ t = 10 h.",
-    "leicht",
+    "mittel",
     ["Lineare Funktion", "Nullstelle", "Pharmakokinetik"]
   ),
 
@@ -810,7 +810,7 @@ export const mathematikPool8: Question[] = [
     ["30°", "45°", "60°", "90°", "75°"],
     2,
     "sin(α) = Gegenkathete/Hypotenuse = 0,866 = sin(60°). Der Gelenkwinkel beträgt 60°.",
-    "leicht",
+    "mittel",
     ["Trigonometrie", "Sinus", "Winkel", "Geometrie"]
   ),
 

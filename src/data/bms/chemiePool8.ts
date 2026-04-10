@@ -611,7 +611,7 @@ export const chemiePool8: Question[] = [
     ["7,5 µmol/min", "5,0 µmol/min", "3,0 µmol/min", "10,0 µmol/min", "2,5 µmol/min"],
     0,
     "v = v_max × [S]/(K_M + [S]) = 10 × 6/(2+6) = 60/8 = 7,5 µmol/min.",
-    "schwer",
+    "mittel",
     ["michaelis-menten", "enzymkinetik", "rechenfrage"]
   ),
 
@@ -661,7 +661,7 @@ export const chemiePool8: Question[] = [
     ["1,13 V", "1,10 V", "1,07 V", "0,97 V", "1,20 V"],
     0,
     "Q = [Zn²⁺]/[Cu²⁺] = 0,1/1 = 0,1. E = 1,10 − (0,0257/2)·ln(0,1) = 1,10 − 0,01285×(−2,303) = 1,10 + 0,0296 ≈ 1,13 V.",
-    "schwer",
+    "mittel",
     ["nernst", "elektrochemie", "rechenfrage"]
   ),
 

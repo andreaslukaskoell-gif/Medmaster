@@ -38,7 +38,7 @@ export const physikPool14: Question[] = [
     ["Masse", "Stromstärke", "Zeit", "Länge", "Temperatur"],
     2,
     "Die Sekunde ist die SI-Basiseinheit für die Zeit.",
-    "leicht",
+    "mittel",
     ["SI", "Zeit"]
   ),
   q(
@@ -74,7 +74,7 @@ export const physikPool14: Question[] = [
     ["halb so groß", "gleich", "doppelt so groß", "vierfach", "achtfach"],
     2,
     "R = ρ · l/A; bei doppelter Länge (A konstant): R verdoppelt sich.",
-    "leicht",
+    "mittel",
     ["Widerstand", "spezifischer Widerstand"]
   ),
   q(
@@ -168,7 +168,7 @@ export const physikPool14: Question[] = [
     ["E = D · x", "E = ½ D · x²", "E = D / x", "E = 2D · x²", "E = D · x²"],
     1,
     "E_feder = ½ D x² (Spannenergie).",
-    "leicht",
+    "mittel",
     ["Federenergie", "Mechanik"]
   ),
   q(
@@ -644,7 +644,7 @@ export const physikPool14: Question[] = [
     ],
     2,
     "Natürliche Strahlenexposition: Boden, Radon, kosmische Strahlung.",
-    "leicht",
+    "mittel",
     ["natürliche Strahlung", "Exposition"]
   ),
   q(

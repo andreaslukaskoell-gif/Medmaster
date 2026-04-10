@@ -36,7 +36,7 @@ export const mathematikPoolOffiziellStyle: Question[] = [
     ["Cotangens", "keiner", "Cosinus", "Sinus", "Tangens"],
     4,
     "Steigung = Höhendifferenz / horizontale Strecke = Gegenkathete / Ankathete = tan(α). 16 % entspricht dem Tangens des Steigungswinkels.",
-    "leicht",
+    "mittel",
     ["Trigonometrie", "Tangens", "Steigung"]
   ),
   q(
@@ -52,7 +52,7 @@ export const mathematikPoolOffiziellStyle: Question[] = [
     ],
     0,
     "Minimum von f(t): f'(t) = −a + 2b·t = 0 ⇒ t = a/(2b).",
-    "mittel",
+    "schwer",
     ["Ableitung", "Extremum", "quadratische Funktion"]
   ),
   q(

@@ -47,7 +47,9 @@ Aufnahmeverfahren: 14 Aufgaben, 21 Minuten (Papier-Bleistift-Test).`;
 
 import { sozialesEntscheiden100 } from "@/data/sozialesEntscheiden100";
 import { emotionenErkennenSet3 } from "@/data/emotionenErkennenSet3";
+import { emotionenErkennenSet4 } from "@/data/emotionenErkennenSet4";
 import { emotionenRegulierenSet3 } from "@/data/emotionenRegulierenSet3";
+import { emotionenRegulierenSet4 } from "@/data/emotionenRegulierenSet4";
 
 // ============================================================
 // EMOTIONEN ERKENNEN — Set 1 (14 Aufgaben)
@@ -1929,12 +1931,14 @@ export const emotionenErkennenTasks: EmotionenErkennenTask[] = [
   ...emotionenErkennenSet1,
   ...emotionenErkennenSet2,
   ...emotionenErkennenSet3,
+  ...emotionenErkennenSet4,
 ];
 
 export const emotionenRegulierenTasks: EmotionenRegulierenTask[] = [
   ...emotionenRegulierenSet1,
   ...emotionenRegulierenSet2,
   ...emotionenRegulierenSet3,
+  ...emotionenRegulierenSet4,
 ];
 
 export const sozialesEntscheidenTasks: SozialesEntscheidenTask[] = [

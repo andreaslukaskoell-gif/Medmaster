@@ -101,7 +101,7 @@ export const physikPool2: Question[] = [
     ["0,5 A", "2 A", "50 A", "5 A", "15 A"],
     0,
     "I = U/R = 5 V / 10 Ω = 0,5 A.",
-    "leicht",
+    "mittel",
     ["Ohmsches Gesetz", "Strom"]
   ),
   q(
@@ -167,7 +167,7 @@ export const physikPool2: Question[] = [
     ["20 Ω", "90 Ω", "30 Ω", "45 Ω", "1800 Ω"],
     1,
     "Reihe: R_ers = R₁ + R₂ = 30 + 60 = 90 Ω.",
-    "leicht",
+    "mittel",
     ["Reihenschaltung", "Widerstand"]
   ),
   q(
@@ -265,7 +265,7 @@ export const physikPool2: Question[] = [
     ["m · v", "m · v²", "(1/2) · m · v²", "m · g · h", "F · s"],
     2,
     "E_kin = (1/2)·m·v². m·g·h = potentielle Energie (Lage).",
-    "leicht",
+    "mittel",
     ["kinetische Energie", "Mechanik"]
   ),
   q(
@@ -275,7 +275,7 @@ export const physikPool2: Question[] = [
     ["m · v²/2", "m · v", "m · g · h", "F · t", "P · t"],
     2,
     "E_pot = m·g·h (Masse, Fallbeschleunigung, Höhe).",
-    "leicht",
+    "mittel",
     ["potentielle Energie", "Energie"]
   ),
   q(
@@ -301,7 +301,7 @@ export const physikPool2: Question[] = [
     ["P = U + I", "P = U · I", "P = U / I", "P = I / U", "P = U − I"],
     1,
     "Elektrische Leistung: P = U · I (Watt).",
-    "leicht",
+    "mittel",
     ["Leistung", "Elektrizität"]
   ),
   q(
@@ -321,7 +321,7 @@ export const physikPool2: Question[] = [
     ["50 km/h", "200 km/h", "100 km/h", "20 km/h", "98 km/h"],
     0,
     "v = s/t = 100 km / 2 h = 50 km/h.",
-    "leicht",
+    "mittel",
     ["Geschwindigkeit", "Kinematik"]
   ),
   q(
@@ -373,7 +373,7 @@ export const physikPool2: Question[] = [
     ],
     3,
     "Arbeit in J (Joule), Leistung in W (Watt = J/s). Verschiedene Einheiten.",
-    "mittel",
+    "schwer",
     ["Arbeit", "Leistung", "Joule"]
   ),
   q(
@@ -409,7 +409,7 @@ export const physikPool2: Question[] = [
     ["m · v²", "m · v", "(1/2)·m·v²", "F · t", "m · g"],
     1,
     "Impuls p = m · v (Vektor), Einheit kg·m/s.",
-    "leicht",
+    "mittel",
     ["Impuls", "Mechanik"]
   ),
   q(
@@ -507,7 +507,7 @@ export const physikPool2: Question[] = [
     ["10 m", "20 m", "5 m", "40 m", "15 m"],
     1,
     "s = (1/2)·g·t² = 0,5 · 10 · 4 = 20 m.",
-    "leicht",
+    "mittel",
     ["freier Fall", "Kinematik"]
   ),
   q(
@@ -549,7 +549,7 @@ export const physikPool2: Question[] = [
     ],
     1,
     "IR: längere Wellenlänge als sichtbares Licht (ca. 750 nm–1 mm). UV: kürzer als sichtbar.",
-    "leicht",
+    "mittel",
     ["Infrarot", "elektromagnetisch"]
   ),
   q(

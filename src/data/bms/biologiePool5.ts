@@ -92,7 +92,7 @@ export const biologiePool5: Question[] = [
     ],
     3,
     "Der Blutdruck nimmt von der Aorta zu den Kapillaren kontinuierlich ab. In den Kapillaren beträgt er nur noch ca. 25–35 mmHg, in der Aorta hingegen ca. 120 mmHg systolisch. Der Druckabfall entsteht durch den Widerstand der Arteriolen.",
-    "leicht",
+    "mittel",
     ["blutdruck", "kapillaren", "falsch-aussage"]
   ),
   q(
@@ -189,7 +189,7 @@ export const biologiePool5: Question[] = [
     ],
     3,
     "Aldosteron FÖRDERT die Natriumrückresorption im distalen Tubulus und Sammelrohr (nicht hemmt). Es wird in der Nebennierenrinde gebildet und steigert die Na⁺-Resorption sowie die K⁺-Sekretion.",
-    "mittel",
+    "schwer",
     ["harnkonzentrierung", "aldosteron", "falsch-aussage"]
   ),
   q(
@@ -199,7 +199,7 @@ export const biologiePool5: Question[] = [
     ["Glucose", "Harnstoff", "Albumin", "Natriumionen", "Kreatinin"],
     2,
     "Albumin (ca. 66 kDa) ist zu groß, um die Filtrationsbarriere des Glomerulus zu passieren. Glucose, Harnstoff, Na⁺ und Kreatinin sind klein genug und werden frei filtriert. Albuminurie ist ein Zeichen für eine Nierenschädigung.",
-    "leicht",
+    "mittel",
     ["niere", "glomerulus", "filtration"]
   ),
   q(
@@ -264,7 +264,7 @@ export const biologiePool5: Question[] = [
     ],
     2,
     "Die Galle wird in den Hepatozyten der LEBER produziert, nicht in der Gallenblase. Die Gallenblase dient nur als Speicher- und Konzentrierungsorgan. Etwa 500–1000 ml Galle werden täglich von der Leber gebildet.",
-    "leicht",
+    "mittel",
     ["gallenblase", "galle", "falsch-aussage"]
   ),
   q(
@@ -297,7 +297,7 @@ export const biologiePool5: Question[] = [
     ],
     3,
     "Der Parasympathikus VERLANGSAMT die Herzfrequenz (negativ chronotrop) über den Nervus vagus. Eine Beschleunigung der Herzfrequenz ist Aufgabe des Sympathikus. Dies ist ein klassischer MedAT-Stolperstein.",
-    "leicht",
+    "mittel",
     ["vegetatives nervensystem", "parasympathikus", "falsch-aussage"]
   ),
   q(
@@ -329,7 +329,7 @@ export const biologiePool5: Question[] = [
     ],
     3,
     "Dopamin wird NICHT ausschließlich im Nebennierenmark produziert. Es wird vor allem in dopaminergen Neuronen des ZNS synthetisiert. Im Nebennierenmark ist es vor allem Vorstufe von Noradrenalin und Adrenalin.",
-    "mittel",
+    "schwer",
     ["neurotransmitter", "dopamin", "falsch-aussage"]
   ),
   q(
@@ -345,7 +345,7 @@ export const biologiePool5: Question[] = [
     ],
     4,
     "Zwischen Dura mater und Arachnoidea liegt der SUBDURALRAUM (Spatium subdurale), nicht der Subarachnoidalraum. Der Subarachnoidalraum liegt zwischen Arachnoidea und Pia mater und enthält den Liquor.",
-    "mittel",
+    "schwer",
     ["hirnhäute", "meningen", "falsch-aussage"]
   ),
   q(
@@ -378,7 +378,7 @@ export const biologiePool5: Question[] = [
     ],
     1,
     "TSH (Thyreoidea-stimulierendes Hormon) wird in der HYPOPHYSE (Adenohypophyse) gebildet, nicht im Hypothalamus. Der Hypothalamus produziert TRH (Thyreotropin-Releasing-Hormon), das die TSH-Freisetzung stimuliert.",
-    "leicht",
+    "mittel",
     ["schilddrüse", "tsh", "falsch-aussage"]
   ),
   q(
@@ -394,7 +394,7 @@ export const biologiePool5: Question[] = [
     ],
     3,
     "ACTH (adrenocorticotropes Hormon) stimuliert die NEBENNIERENRINDE, insbesondere die Cortisolproduktion, nicht das Nebennierenmark. Das Mark wird direkt durch den Sympathikus (präganglionäre cholinerge Neurone) stimuliert.",
-    "mittel",
+    "schwer",
     ["nebenniere", "acth", "falsch-aussage"]
   ),
   q(
@@ -442,7 +442,7 @@ export const biologiePool5: Question[] = [
     ],
     3,
     "Wachstumshormon (GH, Somatotropin) wird in der ADENOHYPOPHYSE (Vorderlappen) produziert, nicht in der Neurohypophyse. Die Neurohypophyse speichert und sezerniert nur Oxytocin und ADH.",
-    "mittel",
+    "schwer",
     ["hypophyse", "hormone", "falsch-aussage"]
   ),
   // ── Verdauung (bio-kap2) ───────────────────────────────────────────
@@ -491,7 +491,7 @@ export const biologiePool5: Question[] = [
     ],
     4,
     "Die Pankreasenzyme sind bei ALKALISCHEM pH optimal aktiv (pH 7–8). Der Pankreassaft enthält Bicarbonat, das den sauren Chymus aus dem Magen neutralisiert. Bei saurem pH wären die Enzyme inaktiv.",
-    "mittel",
+    "schwer",
     ["pankreas", "verdauungsenzyme", "falsch-aussage"]
   ),
   q(
@@ -507,7 +507,7 @@ export const biologiePool5: Question[] = [
     ],
     2,
     "Der Dickdarm besitzt KEINE Zotten. Zotten (Villi) sind charakteristisch für den Dünndarm und dienen der Resorption. Der Dickdarm hat stattdessen Krypten (Lieberkühn-Krypten) mit Becherzellen für die Schleimproduktion.",
-    "leicht",
+    "mittel",
     ["dickdarm", "zotten", "falsch-aussage"]
   ),
   // ── Atmung (bio-kap2) ─────────────────────────────────────────────
@@ -524,7 +524,7 @@ export const biologiePool5: Question[] = [
     ],
     3,
     "Die Ruhige Exspiration ist ein PASSIVER Vorgang: Die Lunge wird nicht aktiv zusammengezogen, sondern zieht sich durch ihre elastischen Rückstellkräfte zusammen, wenn die Atemmuskeln erschlaffen. Nur die forcierte Exspiration ist aktiv.",
-    "leicht",
+    "mittel",
     ["atmung", "exspiration", "falsch-aussage"]
   ),
   q(
@@ -540,7 +540,7 @@ export const biologiePool5: Question[] = [
     ],
     3,
     "CO₂ SENKT die Sauerstoffaffinität des Hämoglobins. Dies ist Teil des Bohr-Effekts: erhöhtes CO₂ und erniedrigter pH im Gewebe fördern die O₂-Abgabe, was physiologisch sinnvoll ist.",
-    "mittel",
+    "schwer",
     ["sauerstofftransport", "bohr-effekt", "falsch-aussage"]
   ),
   q(
@@ -556,7 +556,7 @@ export const biologiePool5: Question[] = [
     ],
     3,
     "Das Residualvolumen kann NICHT mit einem einfachen Spirometer gemessen werden, da es nach maximaler Ausatmung in der Lunge verbleibt. Zur Messung werden spezielle Methoden wie Helium-Verdünnungsmethode oder Bodyplethysmographie benötigt.",
-    "mittel",
+    "schwer",
     ["atemvolumina", "residualvolumen", "falsch-aussage"]
   ),
   q(
@@ -572,7 +572,7 @@ export const biologiePool5: Question[] = [
     ],
     4,
     "Der Kehlkopf besteht aus KNORPEL, nicht aus Knochen. Die wichtigsten Kehlkopfknorpel sind Schildknorpel (Cartilago thyroidea), Ringknorpel (Cartilago cricoidea) und Stellknorpel (Cartilagines arytenoideae).",
-    "leicht",
+    "mittel",
     ["kehlkopf", "larynx", "falsch-aussage"]
   ),
   // ── Immunologie (bio-kap5) ────────────────────────────────────────
@@ -605,7 +605,7 @@ export const biologiePool5: Question[] = [
     ],
     4,
     "IgG (nicht IgD) kann die Plazentaschranke überwinden und sorgt so für den Nestschutz des Neugeborenen. IgD kommt hauptsächlich membrangebunden auf B-Zellen vor und hat eine geringe Serumkonzentration.",
-    "mittel",
+    "schwer",
     ["antikörper", "immunglobuline", "falsch-aussage"]
   ),
   q(
@@ -621,7 +621,7 @@ export const biologiePool5: Question[] = [
     ],
     3,
     "T-Helferzellen produzieren KEINE Antikörper. Antikörper werden von B-Zellen (bzw. Plasmazellen) produziert. T-Helferzellen unterstützen die Immunantwort durch Zytokinfreisetzung und Aktivierung von B-Zellen und Makrophagen.",
-    "leicht",
+    "mittel",
     ["t-zellen", "antikörper", "falsch-aussage"]
   ),
   q(
@@ -637,7 +637,7 @@ export const biologiePool5: Question[] = [
     ],
     4,
     "MHC-I-Moleküle werden von CD8⁺-T-Zellen (zytotoxischen T-Zellen) erkannt, nicht von CD4⁺-T-Zellen. CD4⁺-T-Helferzellen erkennen Antigene auf MHC-II-Molekülen. Die Regel lautet: 8×1=8 (CD8+MHC-I), 4×2=8 (CD4+MHC-II).",
-    "mittel",
+    "schwer",
     ["mhc", "antigenpräsentation", "falsch-aussage"]
   ),
   q(
@@ -670,7 +670,7 @@ export const biologiePool5: Question[] = [
     ],
     3,
     "Bakterien vermehren sich durch BINÄRE FISSION (Zweiteilung), nicht durch Mitose. Mitose ist ein Zellteilungsprozess eukaryotischer Zellen mit Spindelapparat und Chromosomenkondensation, was bei Prokaryoten nicht vorkommt.",
-    "leicht",
+    "mittel",
     ["bakterien", "zellteilung", "falsch-aussage"]
   ),
   q(
@@ -686,7 +686,7 @@ export const biologiePool5: Question[] = [
     ],
     3,
     "Antibiotika sind NICHT wirksam gegen Viren. Sie greifen bakterielle Strukturen an (Zellwand, Ribosomen, DNA-Gyrase). Gegen Viren werden antivirale Medikamente (Virostatika) eingesetzt, z. B. Aciclovir, Oseltamivir.",
-    "mittel",
+    "schwer",
     ["viren", "antibiotika", "falsch-aussage"]
   ),
   q(
@@ -702,7 +702,7 @@ export const biologiePool5: Question[] = [
     ],
     3,
     "Borrelia burgdorferi verursacht BORRELIOSE (Lyme-Krankheit), nicht Tollwut. Tollwut (Rabies) wird durch das Rabiesvirus verursacht. Borreliose wird durch Zeckenbisse übertragen.",
-    "mittel",
+    "schwer",
     ["infektionskrankheiten", "erreger", "falsch-aussage"]
   ),
   q(
@@ -734,7 +734,7 @@ export const biologiePool5: Question[] = [
     ],
     3,
     "Pilze sind EUKARYOTEN, keine Prokaryoten. Sie besitzen einen membranumhüllten Zellkern, ein Endomembransystem und Organellen. Dies unterscheidet sie grundlegend von Bakterien und ist wichtig für die Wahl des Therapeutikums.",
-    "leicht",
+    "mittel",
     ["mykosen", "pilze", "falsch-aussage"]
   ),
   // ── Impfungen (bio-kap5) ──────────────────────────────────────────
@@ -751,7 +751,7 @@ export const biologiePool5: Question[] = [
     ],
     4,
     "Passivimpfungen führen NICHT zu einem immunologischen Gedächtnis, da dem Körper fertige Antikörper verabreicht werden und keine eigene Immunantwort mit Gedächtniszellenbildung stattfindet. Der Schutz hält nur wenige Wochen.",
-    "leicht",
+    "mittel",
     ["impfung", "passivimmunisierung", "falsch-aussage"]
   ),
   q(
@@ -783,7 +783,7 @@ export const biologiePool5: Question[] = [
     ],
     4,
     "Herdenimmunität macht individuelle Impfungen NICHT überflüssig. Sie funktioniert nur, wenn ein ausreichend hoher Anteil der Population geimpft ist. Sinkt die Durchimpfungsrate, bricht der Herdenschutz zusammen und Ausbrüche werden wieder möglich.",
-    "mittel",
+    "schwer",
     ["herdenimmunität", "impfung", "falsch-aussage"]
   ),
   // ── Transplantation (bio-kap5) ────────────────────────────────────
@@ -865,7 +865,7 @@ export const biologiePool5: Question[] = [
     ],
     3,
     "Autoimmunerkrankungen treten bei Personen mit einem ÜBERAKTIVEN/FEHLGELEITETEN Immunsystem auf, nicht bei Immunsupprimierten. Im Gegenteil: Immunsuppressiva werden therapeutisch eingesetzt, um die überschießende Immunreaktion zu dämpfen.",
-    "leicht",
+    "mittel",
     ["autoimmun", "immunsuppression", "falsch-aussage"]
   ),
   q(
@@ -897,7 +897,7 @@ export const biologiePool5: Question[] = [
     ],
     4,
     "Entzündungsmediatoren (Histamin, Prostaglandine, Bradykinin) führen zu einer VASODILATATION, nicht Vasokonstriktion. Die Gefäßerweiterung verursacht die lokale Rötung (Rubor) und Überwärmung (Calor), erhöhte Permeabilität führt zum Ödem (Tumor).",
-    "leicht",
+    "mittel",
     ["entzündung", "vasodilatation", "falsch-aussage"]
   ),
   // ── Weitere Organsysteme (bio-kap2) ───────────────────────────────
@@ -930,7 +930,7 @@ export const biologiePool5: Question[] = [
     ],
     4,
     "Die Skelettmuskulatur wird WILLKÜRLICH gesteuert (über somatomotorische Nerven). Die unwillkürliche Kontraktion ist typisch für die glatte Muskulatur und die Herzmuskulatur. Ausnahme: Reflexe sind unwillkürliche Skelettmuskelkontraktionen.",
-    "leicht",
+    "mittel",
     ["skelettmuskulatur", "willkürlich", "falsch-aussage"]
   ),
   q(
@@ -962,7 +962,7 @@ export const biologiePool5: Question[] = [
     ],
     3,
     "Die Bogengänge sind für das GLEICHGEWICHT zuständig (Drehbeschleunigung), nicht für das Hören. Für das Hören ist die Cochlea mit dem Corti-Organ verantwortlich. Die Bogengänge, Utriculus und Sacculus bilden zusammen das Vestibularorgan.",
-    "leicht",
+    "mittel",
     ["ohr", "bogengänge", "falsch-aussage"]
   ),
   q(
@@ -1043,7 +1043,7 @@ export const biologiePool5: Question[] = [
     ],
     4,
     "Das RAAS wird bei ERNIEDRIGTEM Blutdruck (oder Volumenmangel) aktiviert, nicht bei erhöhtem. Der Blutdruckabfall stimuliert die Reninfreisetzung, was über Angiotensin II zu Vasokonstriktion und über Aldosteron zu Natriumretention führt — beides erhöht den Blutdruck.",
-    "mittel",
+    "schwer",
     ["raas", "blutdruck", "falsch-aussage"]
   ),
   q(
@@ -1091,7 +1091,7 @@ export const biologiePool5: Question[] = [
     ],
     3,
     "Erythrozyten sind KEINE antigenpräsentierenden Zellen. Sie besitzen keinen Zellkern und kein MHC-II auf ihrer Oberfläche. Professionelle APCs sind dendritische Zellen, Makrophagen und B-Zellen.",
-    "mittel",
+    "schwer",
     ["antigenpräsentation", "erythrozyten", "falsch-aussage"]
   ),
   q(

@@ -413,6 +413,7 @@ function generatePairDistractors(correct: [number, number], count: number): stri
   return [...distractors].slice(0, count);
 }
 
+/** @deprecated Not imported anywhere — use Supabase-seeded pool instead. */
 export function generateZahlenfolge(
   difficulty: "leicht" | "mittel" | "schwer"
 ): ZahlenfolgeGenerated {
@@ -460,6 +461,7 @@ export function generateZahlenfolge(
   };
 }
 
+/** @deprecated Not imported anywhere — use Supabase-seeded pool instead. */
 export function generateZahlenfolgenSet(
   count: number,
   difficulty: "leicht" | "mittel" | "schwer"
@@ -1463,7 +1465,6 @@ const WORD_POOL_LEICHT = [
 
 const WORD_POOL_MITTEL = [
   // Medizinische/wissenschaftliche Wörter (6-10 Buchstaben)
-  "DIAGNOSE",
   "THERAPIE",
   "SYNDROM",
   "PROGNOSE",
@@ -1688,11 +1689,8 @@ const WORD_POOL_MITTEL = [
 
 const WORD_POOL_SCHWER = [
   // Medizinische/wissenschaftliche Wörter (8-14 Buchstaben, max 14!)
-  "KARDIOLOGIE",
-  "NEUROLOGIE",
   "DERMATOLOGIE",
   "PNEUMOLOGIE",
-  "PATHOLOGIE",
   "ONKOLOGIE",
   "RADIOLOGIE",
   "NEPHROLOGIE",
@@ -2451,7 +2449,7 @@ export function generateAllWordFluencyTasksFromLexicon(): WordFluencyTask[] {
  * All option letters A-D come from the word's letter set (official MedAT format).
  * Min distinct letters: 5 (1 correct + 4 distractors from word).
  */
-export function generateWordFluencyTask(difficulty: 1 | 2 | 3): WordFluencyTask {
+export function generateWordFluencyTask(difficulty: 1 | 2 | 3): WordFluencyTask | null {
   // Official MedAT WF: words are 7-15 letters (ÖH Wien KFF Skript)
   const allPools = [
     ...TRAINING_WF_WORDS[difficulty],
@@ -2504,7 +2502,7 @@ export function generateWordFluencyTask(difficulty: 1 | 2 | 3): WordFluencyTask 
   return generateWordFluencyTaskFallback(difficulty);
 }
 
-function generateWordFluencyTaskFallback(difficulty: 1 | 2 | 3): WordFluencyTask {
+function generateWordFluencyTaskFallback(difficulty: 1 | 2 | 3): WordFluencyTask | null {
   const pool = TRAINING_WF_WORDS[difficulty];
   // Official MedAT WF: 7-15 letters + at least 5 distinct (all options from word letters)
   const withEnoughLetters = pool.filter(
@@ -2537,7 +2535,7 @@ function generateWordFluencyTaskFallback(difficulty: 1 | 2 | 3): WordFluencyTask
   const distractors = pickSmartDistractors(correctFirst, wordLetterSet, 3);
   const mixed = shuffle([correctFirst, ...distractors.slice(0, 3)]);
   const options = [...mixed, "-"];
-  return {
+  const fallbackTask: WordFluencyTask = {
     id: `wf-train-fb-last-${word}`,
     letters,
     options,
@@ -2546,6 +2544,8 @@ function generateWordFluencyTaskFallback(difficulty: 1 | 2 | 3): WordFluencyTask
     explanation: buildWfExplanation(word, correctFirst, false),
     difficulty,
   };
+  if (validateWordFluencyTask(fallbackTask)) return fallbackTask;
+  return null;
 }
 
 export function generateWordFluencyTrainingSet(
@@ -2554,8 +2554,12 @@ export function generateWordFluencyTrainingSet(
 ): WordFluencyTask[] {
   const used = new Set<string>();
   const out: WordFluencyTask[] = [];
-  while (out.length < count) {
+  let attempts = 0;
+  const maxAttempts = count * 20;
+  while (out.length < count && attempts < maxAttempts) {
+    attempts++;
     const t = generateWordFluencyTask(difficulty);
+    if (!t) continue;
     if (!used.has(t.solutionWord)) {
       used.add(t.solutionWord);
       out.push(t);

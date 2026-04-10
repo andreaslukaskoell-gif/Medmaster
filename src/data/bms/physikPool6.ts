@@ -45,7 +45,7 @@ export const physikPool6: Question[] = [
     ["W = U / Q", "W = U · Q", "W = Q / U", "W = U + Q", "W = I · t"],
     1,
     "W = U·Q (Arbeit = Spannung mal Ladung); auch W = P·t = U·I·t.",
-    "leicht",
+    "mittel",
     ["elektrische Arbeit", "Spannung"]
   ),
   q(
@@ -71,7 +71,7 @@ export const physikPool6: Question[] = [
     ],
     1,
     "Q und W in Joule (J); 1. Hauptsatz: ΔU = Q + W.",
-    "leicht",
+    "mittel",
     ["Wärme", "Arbeit", "Joule"]
   ),
   q(
@@ -91,7 +91,7 @@ export const physikPool6: Question[] = [
     ["10 m/s", "6,5 m/s", "1,6 m/s", "20 m/s", "5 m/s"],
     0,
     "v = a·t = 2,5·4 = 10 m/s.",
-    "leicht",
+    "mittel",
     ["Beschleunigung", "Geschwindigkeit"]
   ),
   q(
@@ -101,7 +101,7 @@ export const physikPool6: Question[] = [
     ["200 kWh", "0,2 kWh", "50 kWh", "2 kWh", "100 kWh"],
     1,
     "W = P·t = 100 W · 2 h = 200 Wh = 0,2 kWh.",
-    "leicht",
+    "mittel",
     ["Energie", "kWh", "Leistung"]
   ),
   q(
@@ -153,7 +153,7 @@ export const physikPool6: Question[] = [
     ],
     1,
     "Compton: Δλ ∝ (1 − cos θ); θ = Streuwinkel.",
-    "schwer",
+    "mittel",
     ["Compton", "Streuwinkel"]
   ),
   q(
@@ -221,7 +221,7 @@ export const physikPool6: Question[] = [
     ["Ladung", "Spannung", "Wärme", "Magnetfeld", "Licht nur (ohne andere Mechanismen)"],
     2,
     "Joulesche Wärme: P = R·I² wird in Wärme umgesetzt.",
-    "leicht",
+    "mittel",
     ["Joulesche Wärme", "Widerstand"]
   ),
   q(
@@ -231,7 +231,7 @@ export const physikPool6: Question[] = [
     ["0 N", "10 N", "100 N", "1 N", "10 kg"],
     2,
     "Gleichgewicht: F_Feder = F_G = m·g = 100 N.",
-    "leicht",
+    "mittel",
     ["Feder", "Kräftegleichgewicht"]
   ),
   q(
@@ -257,7 +257,7 @@ export const physikPool6: Question[] = [
     ["0", "3", "6", "10", "20"],
     2,
     "Verdopplung des Drucks (Faktor 2) → +6 dB (weil 20·log₁₀(2) ≈ 6).",
-    "mittel",
+    "schwer",
     ["Dezibel", "Schalldruck"]
   ),
   q(
@@ -297,7 +297,7 @@ export const physikPool6: Question[] = [
     ["6", "12", "18", "0", "6 Protonen"],
     1,
     "A = Protonen + Neutronen = 6 + 6 = 12 (Kohlenstoff-12).",
-    "leicht",
+    "mittel",
     ["Massenzahl", "Kern"]
   ),
   q(
@@ -343,7 +343,7 @@ export const physikPool6: Question[] = [
     ],
     1,
     "p·V = const (Boyle-Mariotte) bei konstantem n, T.",
-    "leicht",
+    "mittel",
     ["ideales Gas", "Boyle-Mariotte"]
   ),
   q(
@@ -353,7 +353,7 @@ export const physikPool6: Question[] = [
     ["2 W", "200 W", "0,5 W", "5000 W", "50 W"],
     1,
     "P = U²/R = 100²/50 = 200 W (oder I = 2 A, P = U·I = 200 W).",
-    "leicht",
+    "mittel",
     ["Leistung", "Widerstand"]
   ),
   q(
@@ -475,7 +475,7 @@ export const physikPool6: Question[] = [
     ["kleiner als", "größer als", "nur gleich", "nie", "immer"],
     1,
     'COP = Q_ab/W_zu > 1 möglich (Wärmepumpe "vervielfacht" die Antriebsarbeit).',
-    "mittel",
+    "schwer",
     ["Wärmepumpe", "COP"]
   ),
   q(
