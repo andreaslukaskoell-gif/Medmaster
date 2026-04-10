@@ -8,6 +8,8 @@ import { biologiePoolTypKExtra } from "./biologiePoolTypKExtra";
 import { biologieTypKNew } from "./biologiePoolTypKNew";
 import { biologieTypKNew2 } from "./biologiePoolTypKNew2";
 import { biologieTypKNew3 } from "./biologiePoolTypKNew3";
+import { biologieTypKNew4 } from "./biologiePoolTypKNew4";
+import { biologieTypKNew5 } from "./biologiePoolTypKNew5";
 
 export const biologiePoolTypK: BMSFrage[] = [
   {
@@ -416,4 +418,6 @@ export const biologiePoolTypK: BMSFrage[] = [
   ...biologieTypKNew,
   ...biologieTypKNew2,
   ...biologieTypKNew3,
+  ...biologieTypKNew4,
+  ...biologieTypKNew5,
 ];

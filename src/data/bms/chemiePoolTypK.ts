@@ -6,6 +6,8 @@ import { chemiePoolTypKExtra } from "./chemiePoolTypKExtra";
 import { chemieTypKNew } from "./chemiePoolTypKNew";
 import { chemieTypKNew2 } from "./chemiePoolTypKNew2";
 import { chemieTypKNew3 } from "./chemiePoolTypKNew3";
+import { chemieTypKNew4 } from "./chemiePoolTypKNew4";
+import { chemieTypKNew5 } from "./chemiePoolTypKNew5";
 
 export const chemiePoolTypK: BMSFrage[] = [
   {
@@ -222,4 +224,6 @@ export const chemiePoolTypK: BMSFrage[] = [
   ...chemieTypKNew,
   ...chemieTypKNew2,
   ...chemieTypKNew3,
+  ...chemieTypKNew4,
+  ...chemieTypKNew5,
 ];
