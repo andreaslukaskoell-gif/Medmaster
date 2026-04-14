@@ -1,25 +1,18 @@
 /**
  * TypKQuestion — MedAT Typ K (Kombinationsaufgabe)
  *
- * TRAINER-Modus (2 Phasen):
- *   Phase 1: Jede Aussage einzeln ✓/✗ beurteilen
- *   Phase 2: Kombination A-E wählen
- *   → Erklärung pro falsch beurteilter Aussage
- *
- * SIMULATION-Modus:
- *   Direkt: 5 Aussagen sichtbar + Kombinationsoptionen A-E auswählen
+ * MedAT-konform: 5 Aussagen sichtbar + Kombinationsoptionen A-E direkt auswählen.
+ * Nach Auflösung: Erklärung + richtig/falsch pro Aussage.
  *
  * Design: StudyMed-inspired premium layout with clear visual hierarchy.
  */
 import React from "react";
-import { Check, X, AlertCircle, CheckCircle2, XCircle, ArrowRight } from "lucide-react";
+import { Check, X, CheckCircle2, XCircle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { stripMarkdownAsterisks } from "@/utils/formatExplanation";
 import type { BMSFrage } from "@/lib/supabaseBMSFragen";
 import type { TypKKombination } from "@/lib/supabaseBMSFragen";
-import type { TrainerMode } from "@/hooks/useFragenTrainer";
-
 /** MedAT-exakte Optionstexte: „Alle sind richtig.", „1. und 3. sind richtig.", „2. ist richtig." (4 Aussagen, A–E). */
 function formatTypKOptionLabel(k: TypKKombination, totalAussagen: number): string {
   const nummern = (k.nummern ?? []).slice().sort((a, b) => a - b);
@@ -34,25 +27,15 @@ function formatTypKOptionLabel(k: TypKKombination, totalAussagen: number): strin
 
 type Props = {
   frage: BMSFrage;
-  mode: TrainerMode;
-  typKPhase: 1 | 2;
-  typKDecisions: (boolean | null)[];
   typKCombChosen: string | null;
   revealed: boolean;
-  onJudge: (nr: number, decision: boolean) => void;
-  onConfirmPhase1: () => void;
   onChooseCombination: (key: string) => void;
 };
 
 export const TypKQuestion = React.memo(function TypKQuestion({
   frage,
-  mode,
-  typKPhase,
-  typKDecisions,
   typKCombChosen,
   revealed,
-  onJudge,
-  onConfirmPhase1,
   onChooseCombination,
 }: Props) {
   const aussagen = frage.aussagen ?? [];
@@ -63,9 +46,6 @@ export const TypKQuestion = React.memo(function TypKQuestion({
   const stammDisplay =
     (frage.stamm && frage.stamm.trim()) ||
     `[Fragetext fehlt — ID: ${frage.id}. Bitte „Offline-Pool" als Quelle wählen oder Fehler melden.]`;
-
-  // Phase 1 complete when all aussagen have a decision
-  const phase1Complete = aussagen.every((_, i) => typKDecisions[i] != null);
 
   return (
     <div className="space-y-6">
@@ -79,23 +59,19 @@ export const TypKQuestion = React.memo(function TypKQuestion({
         className={`transition-opacity duration-200 ${locked ? "opacity-30 pointer-events-none" : ""}`}
       >
         <p className="text-[11px] font-bold text-[var(--muted)] uppercase tracking-[0.12em] mb-3">
-          {mode === "trainer" && typKPhase === 1
-            ? "Jede Aussage beurteilen:"
-            : "Aussagen:"}
+          Aussagen:
         </p>
 
         <div className="rounded-xl border border-[var(--border)] bg-[var(--surface)] dark:bg-white/[0.02] overflow-hidden">
           {aussagen.map((a, i) => {
-            const decision = typKDecisions[i] ?? null;
             const showResult = revealed;
-            const wasWrong = showResult && decision !== a.korrekt;
             const isLast = i === aussagen.length - 1;
 
             return (
               <div key={a.nr}>
                 <div
                   className={`px-5 py-4 transition-colors ${
-                    wasWrong
+                    showResult && !a.korrekt
                       ? "bg-red-50/80 dark:bg-red-950/15"
                       : showResult && a.korrekt
                         ? "bg-green-50/60 dark:bg-green-950/10"
@@ -106,7 +82,7 @@ export const TypKQuestion = React.memo(function TypKQuestion({
                     {/* Statement number badge */}
                     <span
                       className={`inline-flex items-center justify-center w-7 h-7 rounded-lg text-[13px] font-bold shrink-0 mt-0.5 ${
-                        wasWrong
+                        showResult && !a.korrekt
                           ? "bg-red-100 text-red-600 dark:bg-red-900/30 dark:text-red-400"
                           : showResult && a.korrekt
                             ? "bg-green-100 text-green-600 dark:bg-green-900/30 dark:text-green-400"
@@ -120,36 +96,6 @@ export const TypKQuestion = React.memo(function TypKQuestion({
                     <p className="text-[15px] text-[var(--text-primary)] flex-1 leading-[1.7] pt-0.5">
                       {a.text}
                     </p>
-
-                    {/* TRAINER mode phase 1: ✓/✗ buttons */}
-                    {mode === "trainer" && typKPhase === 1 && !revealed && (
-                      <div className="flex gap-2 shrink-0 ml-2">
-                        <button
-                          onClick={() => onJudge(a.nr, true)}
-                          className={`w-9 h-9 rounded-lg border-2 flex items-center justify-center transition-all cursor-pointer
-                            ${
-                              decision === true
-                                ? "border-green-500 bg-green-50 dark:bg-green-900/30 text-green-600 shadow-sm"
-                                : "border-[var(--border)] text-[var(--muted)]/50 hover:border-green-400 hover:text-green-500 hover:bg-green-50/50"
-                            }`}
-                          title="Richtig"
-                        >
-                          <Check className="w-4 h-4" />
-                        </button>
-                        <button
-                          onClick={() => onJudge(a.nr, false)}
-                          className={`w-9 h-9 rounded-lg border-2 flex items-center justify-center transition-all cursor-pointer
-                            ${
-                              decision === false
-                                ? "border-red-500 bg-red-50 dark:bg-red-900/30 text-red-600 shadow-sm"
-                                : "border-[var(--border)] text-[var(--muted)]/50 hover:border-red-400 hover:text-red-500 hover:bg-red-50/50"
-                            }`}
-                          title="Falsch"
-                        >
-                          <X className="w-4 h-4" />
-                        </button>
-                      </div>
-                    )}
 
                     {/* Result indicator after reveal */}
                     {revealed && (
@@ -166,19 +112,9 @@ export const TypKQuestion = React.memo(function TypKQuestion({
                       </div>
                     )}
 
-                    {/* SIMULATION mode: neutral spacer */}
-                    {mode === "simulation" && !revealed && <div className="w-6 shrink-0" />}
+                    {/* Neutral spacer before reveal */}
+                    {!revealed && <div className="w-6 shrink-0" />}
                   </div>
-
-                  {/* Wrong judgement feedback */}
-                  {wasWrong && (
-                    <div className="mt-2.5 ml-11 flex items-start gap-2">
-                      <AlertCircle className="w-3.5 h-3.5 text-red-500 shrink-0 mt-0.5" />
-                      <p className="text-[13px] text-red-600 dark:text-red-400">
-                        {a.korrekt ? "Diese Aussage ist richtig." : "Diese Aussage ist falsch."}
-                      </p>
-                    </div>
-                  )}
                 </div>
 
                 {/* Separator between statements */}
@@ -191,26 +127,8 @@ export const TypKQuestion = React.memo(function TypKQuestion({
         </div>
       </div>
 
-      {/* ── TRAINER: Phase 1 → Phase 2 button ────────────── */}
-      {mode === "trainer" && typKPhase === 1 && !revealed && !locked && (
-        <button
-          onClick={onConfirmPhase1}
-          disabled={!phase1Complete}
-          className={`w-full flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl text-sm font-semibold transition-all cursor-pointer
-            ${
-              phase1Complete
-                ? "bg-[var(--accent)] hover:bg-[var(--accent-hover)] text-white shadow-sm"
-                : "bg-[var(--border)]/60 text-[var(--muted)] cursor-not-allowed"
-            }`}
-        >
-          Kombination wählen
-          <ArrowRight className="w-4 h-4" />
-        </button>
-      )}
-
       {/* ── KOMBINATIONEN (Answer Options) ───────────────── */}
-      {(mode === "simulation" || (mode === "trainer" && typKPhase === 2)) && (
-        <div
+      <div
           className={`transition-opacity duration-200 ${locked ? "opacity-30 pointer-events-none" : ""}`}
         >
           <p className="text-[11px] font-bold text-[var(--muted)] uppercase tracking-[0.12em] mb-3">
@@ -294,8 +212,7 @@ export const TypKQuestion = React.memo(function TypKQuestion({
               );
             })}
           </div>
-        </div>
-      )}
+      </div>
 
       {/* ── Gesamterklärung after reveal ─────────────────── */}
       <AnimatePresence>

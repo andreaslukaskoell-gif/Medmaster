@@ -34,7 +34,6 @@ import { stripMarkdownAsterisks } from "@/utils/formatExplanation";
 import { QuestionFeedbackButton } from "@/components/shared/QuestionFeedbackButton";
 import { useFragenTrainer } from "@/hooks/useFragenTrainer";
 import type {
-  TrainerMode,
   BMSSubjectId,
   SessionAnswers,
   QuestionSource,
@@ -124,13 +123,6 @@ const _SECONDS_PER_QUESTION: Record<BMSSubjectId, number> = {
   mathematik: 55,
 };
 void _SECONDS_PER_QUESTION; // reserved for Zeitdruck mode
-
-const DIFF_COLOR: Record<number, string> = {
-  1: "bg-green-100  text-green-700  dark:bg-green-900/30  dark:text-green-400",
-  2: "bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400",
-  3: "bg-red-100    text-red-700    dark:bg-red-900/30    dark:text-red-400",
-};
-const DIFF_LABEL: Record<number, string> = { 1: "Leicht", 2: "Mittel", 3: "Schwer" };
 
 function getLocalUserId(): string {
   const key = "medmaster-local-uid";
@@ -449,11 +441,7 @@ function QuizScreen({
     revealed,
     chosenOption,
     chooseOption: rawChooseOption,
-    typKPhase,
-    typKDecisions,
     typKCombChosen,
-    judgeAussage: rawJudgeAussage,
-    confirmTypKPhase1,
     chooseTypKCombination: rawChooseTypKCombination,
     answers,
     timeRemainingSeconds,
@@ -468,14 +456,6 @@ function QuizScreen({
       rawChooseOption(key);
     },
     [rawChooseOption]
-  );
-
-  const judgeAussage = useCallback(
-    (nr: number, correct: boolean) => {
-      hapticLight();
-      rawJudgeAussage(nr, correct);
-    },
-    [rawJudgeAussage]
   );
 
   const chooseTypKCombination = useCallback(
@@ -571,7 +551,6 @@ function QuizScreen({
       if (
         !revealed &&
         currentFrage.typ === "K" &&
-        typKPhase === 2 &&
         currentFrage.kombinationen?.[num - 1]
       ) {
         e.preventDefault();
@@ -584,7 +563,6 @@ function QuizScreen({
   }, [
     sessionDone,
     currentFrage,
-    typKPhase,
     idx,
     answers.length,
     fragen.length,
@@ -763,11 +741,6 @@ function QuizScreen({
         ) : (
           <>
             <div className="flex items-center gap-2 flex-wrap">
-              <span
-                className={`text-xs px-2 py-0.5 rounded-full font-medium ${DIFF_COLOR[currentFrage.schwierigkeit]}`}
-              >
-                {DIFF_LABEL[currentFrage.schwierigkeit]}
-              </span>
               <span className="text-xs px-2 py-0.5 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 rounded-full font-medium">
                 Typ {currentFrage.typ}
               </span>
@@ -797,16 +770,11 @@ function QuizScreen({
                     <>
                       <TypKQuestion
                         frage={currentFrage}
-                        mode={"trainer" as TrainerMode}
-                        typKPhase={typKPhase}
-                        typKDecisions={typKDecisions}
                         typKCombChosen={typKCombChosen}
                         revealed={revealed}
-                        onJudge={judgeAussage}
-                        onConfirmPhase1={confirmTypKPhase1}
                         onChooseCombination={chooseTypKCombination}
                       />
-                      {!isMobile && !revealed && typKPhase === 2 && (
+                      {!isMobile && !revealed && (
                         <p className="text-xs text-muted-foreground mt-2">
                           Tipp: Tasten{" "}
                           <kbd className="px-1 rounded bg-[var(--surface)] font-mono">1</kbd>–

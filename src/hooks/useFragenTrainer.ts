@@ -130,7 +130,7 @@ export function useFragenTrainer(
     setRevealed(false);
     setChosenOption(null);
     setTypKDecisions([]);
-    setTypKPhase(1);
+    setTypKPhase(2);
     setTypKCombChosen(null);
   }, []);
 
@@ -341,13 +341,12 @@ export function useFragenTrainer(
 
   const chooseTypKCombination = useCallback(
     (key: string) => {
-      if (typKPhase !== 2 || typKCombChosen) return;
+      if (typKCombChosen) return;
       recordAndAdvance({
         typKCombChosen: key,
-        typKPhase1: typKDecisions.map((d) => d === true),
       });
     },
-    [typKPhase, typKCombChosen, typKDecisions, recordAndAdvance]
+    [typKCombChosen, recordAndAdvance]
   );
 
   // ── Determine correctness ────────────────────────────────────

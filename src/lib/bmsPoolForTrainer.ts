@@ -93,9 +93,81 @@ export function getChaptersWithPool(): { chapterId: string; ukIds: string[]; tit
   return result;
 }
 
-/** Convert a Typ A pool Question to BMSFrage. Option keys A–E. Rechenfragen (tag "rechenfrage") → typ "M". */
+/**
+ * Parse a pseudo-Typ-K Question (tags: ["typ-k"]) into a real Typ-K BMSFrage.
+ * Returns null if the structure can't be parsed cleanly.
+ */
+function tryParsePseudoTypK(
+  q: Question,
+  uk_id: string,
+  schwierigkeit: 1 | 2 | 3
+): BMSFrage | null {
+  if (!q.tags?.includes("typ-k")) return null;
+  if (q.options.length !== 5) return null;
+
+  // Statements like "1. ..." in the text body
+  const lines = q.text.split(/\r?\n/).map((s) => s.trim()).filter(Boolean);
+  const stammParts: string[] = [];
+  const aussagenRaw: { nr: number; text: string }[] = [];
+  const stmtRe = /^(\d+)\.\s+(.+)$/;
+  for (const line of lines) {
+    const m = line.match(stmtRe);
+    if (m) {
+      aussagenRaw.push({ nr: Number(m[1]), text: m[2] });
+    } else if (aussagenRaw.length === 0) {
+      stammParts.push(line);
+    } else {
+      // continuation of last statement
+      aussagenRaw[aussagenRaw.length - 1].text += " " + line;
+    }
+  }
+  if (aussagenRaw.length < 4 || aussagenRaw.length > 5) return null;
+
+  // Combinations from option text: "Nur 1, 2 und 4" / "Alle" / "Alle (1, 2, 3, 4 und 5)"
+  const validNrs = new Set(aussagenRaw.map((a) => a.nr));
+  const kombinationen = q.options.map((opt, i) => {
+    const key = OPTION_KEYS[i];
+    const text = (opt.text ?? "").trim();
+    const digits = (text.match(/\d+/g) ?? []).map(Number).filter((n) => validNrs.has(n));
+    let nummern = [...new Set(digits)].sort((a, b) => a - b);
+    if (nummern.length === 0 && /^alle\b/i.test(text)) {
+      nummern = aussagenRaw.map((a) => a.nr).sort((a, b) => a - b);
+    }
+    return { key, nummern };
+  });
+
+  const correctId = (q.correctOptionId ?? "a").toLowerCase();
+  const correctIdx = q.options.findIndex((o) => (o.id ?? "").toLowerCase() === correctId);
+  if (correctIdx < 0) return null;
+  const korrekte_option = OPTION_KEYS[correctIdx];
+  const correctSet = new Set(kombinationen[correctIdx].nummern);
+  const aussagen = aussagenRaw.map((a) => ({ ...a, korrekt: correctSet.has(a.nr) }));
+
+  const stamm = stammParts.join(" ").trim();
+  if (!stamm) return null;
+
+  return {
+    id: q.id,
+    typ: "K",
+    fach: q.subject,
+    uk_id,
+    stamm,
+    aussagen,
+    kombinationen,
+    korrekte_option,
+    erklaerung: q.explanation,
+    schwierigkeit,
+    fsrs: null,
+  };
+}
+
+/** Convert a Typ A pool Question to BMSFrage. Option keys A–E. Rechenfragen (tag "rechenfrage") → typ "M". Pseudo-Typ-K (tag "typ-k") → typ "K" mit aussagen/kombinationen. */
 export function questionToBMSFrage(q: Question, uk_id: string): BMSFrage {
   const schwierigkeit = q.difficulty === "schwer" ? 3 : q.difficulty === "mittel" ? 2 : 1;
+
+  const typK = tryParsePseudoTypK(q, uk_id, schwierigkeit);
+  if (typK) return typK;
+
   const optionen = q.options.map((opt, i) => ({
     key: OPTION_KEYS[i] ?? String.fromCharCode(65 + i),
     text: opt.text,
