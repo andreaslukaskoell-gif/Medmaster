@@ -87,6 +87,7 @@ export default function KFF() {
         example: "2, 5, 11, 23, ?",
         badge: "100+",
         strategyKey: "zahlenfolgen" as StrategyKey,
+        learningKey: "zahlenfolgen" as const,
         startView: "zahlenfolgen" as KffView,
         icon: "chart",
         color: "#3b82f6",
@@ -99,6 +100,7 @@ export default function KFF() {
         example: "8 Ausweise → 8 Min. lernen → 25 Fragen",
         badge: "MedAT-Format",
         strategyKey: "gedaechtnis" as StrategyKey,
+        learningKey: "gedaechtnis" as const,
         startView: "gedaechtnis-setup" as KffView,
         icon: "chart",
         color: "#10b981",
@@ -111,6 +113,7 @@ export default function KFF() {
         example: "Alle A sind B. Einige B sind C. → ?",
         badge: "200+",
         strategyKey: "implikationen" as StrategyKey,
+        learningKey: "implikationen" as const,
         startView: "implikationen" as KffView,
         icon: "chart",
         color: "#8b5cf6",
@@ -123,6 +126,7 @@ export default function KFF() {
         example: "FKARE → FARKE? KRAFE? → Antwort: K",
         badge: "720+",
         strategyKey: "wortflüssigkeit" as StrategyKey,
+        learningKey: "wortfluessigkeit" as const,
         startView: "wortflüssigkeit" as KffView,
         icon: "chart",
         color: "#f59e0b",
@@ -135,6 +139,7 @@ export default function KFF() {
         example: "3–5 Teile → 1 aus 5 Figuren wählen",
         badge: "10.000+",
         strategyKey: "figuren" as StrategyKey,
+        learningKey: "figuren" as const,
         startView: "figuren-quiz" as KffView,
         icon: "puzzle",
         color: "#ec4899",
@@ -294,14 +299,11 @@ export default function KFF() {
               className={`card-glass ${isMobile ? "p-3.5" : "p-5"} ${isSubtestLocked ? "opacity-60" : ""}`}
             >
               <div className="flex items-start gap-3">
-                {/* Color bar */}
                 <div
                   className="w-1 self-stretch rounded-full shrink-0"
                   style={{ background: m.color }}
                 />
-
                 <div className="flex-1 min-w-0">
-                  {/* Title row */}
                   <div className="flex items-center gap-2 mb-1 flex-wrap">
                     <h3
                       className={`font-semibold text-[var(--text-primary)] ${isMobile ? "text-sm" : ""}`}
@@ -315,22 +317,16 @@ export default function KFF() {
                       {m.badge}
                     </span>
                   </div>
-
-                  {/* Format explanation */}
                   <p
                     className={`text-[var(--text-secondary)] mb-2 ${isMobile ? "text-xs leading-relaxed" : "text-sm"}`}
                   >
                     {m.format}
                   </p>
-
-                  {/* Example — hide on mobile for compactness */}
                   {!isMobile && (
                     <div className="text-xs text-[var(--muted)] bg-[var(--background)] rounded-lg px-3 py-1.5 inline-block font-mono mb-3">
                       {m.example}
                     </div>
                   )}
-
-                  {/* Progress + Actions */}
                   {m.stats.total > 0 && (
                     <div className="mb-3">
                       <div className="flex items-center gap-3 text-xs text-[var(--muted)] mb-1.5">
@@ -351,7 +347,6 @@ export default function KFF() {
                           {m.stats.pct}% richtig
                         </span>
                       </div>
-                      {/* Mini progress bar */}
                       <div className="h-1.5 w-full rounded-full bg-[var(--border)]">
                         <div
                           className="h-full rounded-full transition-all"
@@ -373,6 +368,17 @@ export default function KFF() {
                   ) : (
                     <div className="flex items-center gap-2">
                       <Button
+                        variant="outline"
+                        size="sm"
+                        className={isMobile ? "flex-1 min-h-[44px]" : ""}
+                        onClick={() => {
+                          setStrategyKey(m.strategyKey);
+                          setView("strategy");
+                        }}
+                      >
+                        <BookOpen className="w-4 h-4 mr-1" /> Strategie
+                      </Button>
+                      <Button
                         variant="premium"
                         size="sm"
                         className={isMobile ? "flex-1 min-h-[44px]" : ""}
@@ -387,17 +393,6 @@ export default function KFF() {
                             ({m.stats.total}/{limit})
                           </span>
                         )}
-                      </Button>
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        className={isMobile ? "flex-1 min-h-[44px]" : ""}
-                        onClick={() => {
-                          setStrategyKey(m.strategyKey);
-                          setView("strategy");
-                        }}
-                      >
-                        <BookOpen className="w-4 h-4 mr-1" /> Strategie
                       </Button>
                     </div>
                   )}
