@@ -38,7 +38,7 @@ export type GrowthExperiment = {
 export type ContentCampaign = {
   id: string;
   title: string;
-  type: "social_post" | "reel" | "blog" | "email" | "seo_page" | "ad";
+  type: "social_post" | "blog" | "email" | "seo_page" | "ad";
   funnelStage: FunnelStage;
   status: "draft" | "scheduled" | "published" | "archived";
   publishDate?: string;

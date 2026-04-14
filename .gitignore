@@ -39,16 +39,6 @@ dist-ssr
 # Storybook build output
 storybook-static
 
-# Video folder (large binaries, never push)
-video/
-
-# Rendered videos (reproducible via render.mjs)
-marketing/reels/*.mp4
-
-# Runtime data
-.reel-post-history.json
-.reel-performance-cache.json
-
 # Temp screenshots
 *.png
 !public/og-*.png
