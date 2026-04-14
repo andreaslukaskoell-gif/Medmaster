@@ -490,9 +490,6 @@ export function ZahlenfolgenQuiz({
               <p className="text-sm text-[var(--muted)]">Keine Optionen geladen.</p>
             )}
           </div>
-          {currentQ.source && (
-            <p className="text-xs text-[var(--muted)] mt-3">Quelle: {currentQ.source}</p>
-          )}
         </CardContent>
       </Card>
       <div className="flex justify-between">

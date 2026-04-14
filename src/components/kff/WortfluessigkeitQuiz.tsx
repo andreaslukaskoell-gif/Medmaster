@@ -404,9 +404,6 @@ export function WortflüssigkeitQuiz({
                     Geprüfte Trainingsaufgabe (MedAT-Logik)
                   </Badge>
                 </div>
-                {qu.source && (
-                  <p className="text-xs text-[var(--muted)] mb-2">Quelle: {qu.source}</p>
-                )}
                 {!correct && answers[id] !== undefined && (
                   <p className="text-sm text-red-600 dark:text-red-400 ml-7">
                     Deine Antwort: {answers[id] === "-" ? "Keine passt" : answers[id]}
@@ -509,9 +506,6 @@ export function WortflüssigkeitQuiz({
           <Badge variant="info" className="mb-2">
             Geprüfte Trainingsaufgabe (MedAT-Logik)
           </Badge>
-          {currentQ.source && (
-            <p className="text-xs text-[var(--muted)] mb-3">Quelle: {currentQ.source}</p>
-          )}
           <p className="text-sm text-[var(--muted)] mb-4">
             Mit welchem Buchstaben beginnt dieses Wort? (oder: Keine passt)
           </p>

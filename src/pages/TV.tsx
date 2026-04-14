@@ -730,12 +730,6 @@ export default function TV() {
   }
 
   // ===== OVERVIEW =====
-  const difficultyColors: Record<string, string> = {
-    leicht: "bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400",
-    mittel: "bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400",
-    schwer: "bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400",
-  };
-
   const displayedLegacyTexts = showAllLegacy ? tvTexts : tvTexts.slice(0, 3);
 
   return (
@@ -778,19 +772,20 @@ export default function TV() {
         />
       )}
 
+      {/* Offizielle Instruktion — prominent am Seitenanfang */}
+      <OfficialInstructionCard
+        title="Offizielle Instruktion: Textverständnis"
+        instruction={OFFICIAL_TV_INSTRUCTION}
+        defaultCollapsed={false}
+      />
+
       {/* Offizielles Aussagen-Format — MedAT-relevantester Modus zuerst */}
       <section className="space-y-3">
-        <div className={`flex ${isMobile ? "flex-col gap-2" : "items-baseline justify-between"}`}>
-          <div className="flex items-center gap-2">
-            <h2 className="text-lg font-semibold text-[var(--text-primary)]">Offizielles Format</h2>
-            <Badge variant="info" className="text-[10px]">
-              MedAT
-            </Badge>
-          </div>
-          <OfficialInstructionCard
-            title="Offizielle Instruktion: Textverständnis"
-            instruction={OFFICIAL_TV_INSTRUCTION}
-          />
+        <div className="flex items-center gap-2">
+          <h2 className="text-lg font-semibold text-[var(--text-primary)]">Offizielles Format</h2>
+          <Badge variant="info" className="text-[10px]">
+            MedAT
+          </Badge>
         </div>
         <p className="text-sm text-[var(--muted)]">
           Aussagen-Kombination: Nummerierte Aussagen bewerten, dann passende Kombination (A–E)

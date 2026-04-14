@@ -9,6 +9,10 @@ import {
   CheckCircle2,
   XCircle,
   Timer,
+  ChevronDown,
+  ChevronUp,
+  AlertTriangle,
+  Target,
 } from "lucide-react";
 import { ExamTimer } from "@/components/shared/ExamTimer";
 import { type ExamMode, EXAM_CONFIG } from "@/data/examConfig";
@@ -23,7 +27,6 @@ import { PaywallBanner } from "@/components/ui/paywall";
 import { UsageLimitWarning } from "@/components/ui/UsageLimitWarning";
 import StrategyGuideView from "@/components/shared/StrategyGuideView";
 import { sekStrategyGuide } from "@/data/sekData";
-import { OfficialInstructionCard } from "@/components/shared/OfficialInstructionCard";
 import { OFFICIAL_EE_INSTRUCTION } from "@/data/emotionenErkennenOffiziell";
 import { OFFICIAL_ER_INSTRUCTION, OFFICIAL_SE_INSTRUCTION } from "@/data/sekDataNew";
 import { sozialesEntscheidenTasks } from "@/data/sekDataNew";
@@ -58,6 +61,214 @@ function shuffle<T>(arr: T[]): T[] {
     [a[i], a[j]] = [a[j], a[i]];
   }
   return a;
+}
+
+type SubtestLearningAidProps = {
+  color: string;
+  example: { situation: string; options: string[]; question: string };
+  steps: string[];
+  rule: string;
+  framework: { title: string; items: { label: string; text: string }[] };
+  pitfalls: string[];
+  instruction: string;
+  instructionTitle: string;
+};
+
+function SubtestLearningAid({
+  color,
+  example,
+  steps,
+  rule,
+  framework,
+  pitfalls,
+  instruction,
+  instructionTitle,
+}: SubtestLearningAidProps) {
+  const [expanded, setExpanded] = useState(false);
+  const [instrOpen, setInstrOpen] = useState(false);
+
+  return (
+    <div className="border-t border-[var(--border)]">
+      {/* ALWAYS VISIBLE: Example + Rule + 3 Steps */}
+      <div className="px-5 pt-5 pb-4 space-y-5">
+        {/* Example */}
+        <div>
+          <h4
+            className="text-[11px] font-semibold uppercase tracking-wider mb-2.5"
+            style={{ color }}
+          >
+            So sieht eine Aufgabe aus
+          </h4>
+          <div
+            className="rounded-lg p-4 border"
+            style={{
+              background: `${color}08`,
+              borderColor: `${color}30`,
+            }}
+          >
+            <p className="text-sm text-[var(--text-primary)] leading-relaxed mb-3">
+              {example.situation}
+            </p>
+            <p className="text-xs font-semibold text-[var(--text-secondary)] mb-2">
+              {example.question}
+            </p>
+            <ul className="space-y-1">
+              {example.options.map((opt, i) => (
+                <li
+                  key={i}
+                  className="text-sm text-[var(--text-secondary)] leading-relaxed"
+                >
+                  {opt}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* The one rule */}
+        <div
+          className="rounded-lg p-3 flex gap-3 items-start"
+          style={{ background: `${color}12` }}
+        >
+          <Target
+            className="w-4 h-4 shrink-0 mt-0.5"
+            style={{ color }}
+          />
+          <div className="flex-1">
+            <div
+              className="text-[10px] font-semibold uppercase tracking-wider mb-1"
+              style={{ color }}
+            >
+              Die wichtigste Regel
+            </div>
+            <p className="text-sm font-medium text-[var(--text-primary)] leading-snug">
+              {rule}
+            </p>
+          </div>
+        </div>
+
+        {/* 3 action steps */}
+        <div>
+          <h4
+            className="text-[11px] font-semibold uppercase tracking-wider mb-3"
+            style={{ color }}
+          >
+            Das musst du tun
+          </h4>
+          <ol className="space-y-2.5">
+            {steps.map((step, i) => (
+              <li
+                key={i}
+                className="text-sm text-[var(--text-primary)] leading-[1.65] flex gap-3"
+              >
+                <span
+                  className="shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold mt-0.5"
+                  style={{ background: color, color: "#fff" }}
+                >
+                  {i + 1}
+                </span>
+                <span className="flex-1 pt-1">{step}</span>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </div>
+
+      {/* Expand toggle for more */}
+      <button
+        type="button"
+        onClick={() => setExpanded((v) => !v)}
+        className="w-full flex items-center justify-between px-5 py-2.5 text-xs font-medium border-t border-[var(--border)] hover:bg-[var(--hover)] transition-colors cursor-pointer text-[var(--muted)]"
+      >
+        <span>
+          {expanded
+            ? "Weniger anzeigen"
+            : "Mehr anzeigen: Cheat-Sheet, typische Fallen, offizielle Instruktion"}
+        </span>
+        {expanded ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
+      </button>
+
+      {expanded && (
+        <div className="px-5 pb-4 space-y-5 pt-4">
+          {/* Framework / Cheat-Sheet */}
+          <div>
+            <h4
+              className="text-[11px] font-semibold uppercase tracking-wider mb-2.5"
+              style={{ color }}
+            >
+              Cheat-Sheet
+            </h4>
+            <p className="text-xs text-[var(--muted)] mb-3 italic">{framework.title}</p>
+            <div
+              className="rounded-lg overflow-hidden border"
+              style={{ borderColor: `${color}30` }}
+            >
+              {framework.items.map((item, i) => (
+                <div
+                  key={i}
+                  className="flex gap-3 px-3 py-2.5 text-sm border-b last:border-b-0"
+                  style={{
+                    borderColor: `${color}20`,
+                    background: i % 2 === 0 ? `${color}06` : "transparent",
+                  }}
+                >
+                  <span
+                    className="shrink-0 font-semibold min-w-[110px]"
+                    style={{ color }}
+                  >
+                    {item.label}
+                  </span>
+                  <span className="flex-1 text-[var(--text-secondary)] leading-relaxed">
+                    {item.text}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Pitfalls */}
+          <div>
+            <h4 className="text-[11px] font-semibold uppercase tracking-wider mb-2.5 text-amber-600 dark:text-amber-400">
+              <AlertTriangle className="w-3.5 h-3.5 inline-block mr-1.5 -mt-0.5" />
+              Typische Fallen
+            </h4>
+            <ul className="space-y-1.5">
+              {pitfalls.map((p, i) => (
+                <li
+                  key={i}
+                  className="text-sm text-[var(--text-secondary)] leading-relaxed flex gap-2.5"
+                >
+                  <span className="text-amber-500 mt-0.5 shrink-0">•</span>
+                  <span className="flex-1">{p}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Official instruction — at the bottom, collapsible */}
+          <div className="pt-2 border-t border-[var(--border)]">
+            <button
+              type="button"
+              onClick={() => setInstrOpen((v) => !v)}
+              className="flex items-center gap-2 text-xs font-medium text-[var(--muted)] hover:text-[var(--text-primary)] transition-colors cursor-pointer"
+            >
+              <span>{instructionTitle}</span>
+              {instrOpen ? (
+                <ChevronUp className="w-3 h-3" />
+              ) : (
+                <ChevronDown className="w-3 h-3" />
+              )}
+            </button>
+            {instrOpen && (
+              <p className="mt-3 text-xs text-[var(--text-secondary)] leading-[1.7] whitespace-pre-line pl-3 border-l-2 border-[var(--border)]">
+                {instruction}
+              </p>
+            )}
+          </div>
+        </div>
+      )}
+    </div>
+  );
 }
 
 export default function SEK() {
@@ -134,48 +345,207 @@ export default function SEK() {
     };
   };
 
-  const subtests = [
+  type Subtest = {
+    id: "erkennen" | "regulieren" | "entscheiden";
+    abbr: string;
+    title: string;
+    format: string;
+    tip: string;
+    example: { situation: string; options: string[]; question: string };
+    steps: string[];
+    rule: string;
+    framework: { title: string; items: { label: string; text: string }[] };
+    pitfalls: string[];
+    taskCount: number;
+    onStart: () => void;
+    stats: ReturnType<typeof sekStats>;
+    uebungId:
+      | "sek-emotionen-erkennen"
+      | "sek-emotionen-regulieren"
+      | "sek-soziales-entscheiden";
+    instruction: string;
+    instructionTitle: string;
+    color: string;
+  };
+
+  const subtests: Subtest[] = [
     {
-      id: "erkennen" as const,
+      id: "erkennen",
       abbr: "EE",
       title: "Emotionen erkennen",
       format:
         "Du liest eine Situation und bewertest für jede der 5 Emotionen: wahrscheinlich oder unwahrscheinlich?",
       tip: "Alle 5 Emotionen müssen korrekt sein — Alles-oder-Nichts",
+      example: {
+        situation:
+          "Maria hat wochenlang jeden Tag für die Prüfung gelernt. Heute bekommt sie ihr Ergebnis: durchgefallen. Sie sitzt allein im Auto und starrt aus dem Fenster.",
+        question: "Ist jede dieser Emotionen bei Maria wahrscheinlich?",
+        options: [
+          "Trauer — wahrscheinlich",
+          "Wut — wahrscheinlich",
+          "Freude — unwahrscheinlich",
+          "Überraschung — unwahrscheinlich",
+          "Ekel — unwahrscheinlich",
+        ],
+      },
+      rule: "Nicht fragen „Was würde ich fühlen?“ — sondern „Was wollte die Person, und was ist daraus geworden?“",
+      steps: [
+        "Lies die Situation und beantworte zwei Fragen: Was wollte die Person? Was ist passiert?",
+        "Gehe die 5 Emotionen einzeln durch. Würde ein durchschnittlicher Mensch in dieser Lage sie empfinden?",
+        "Markiere alle wahrscheinlichen. Mehrere dürfen gleichzeitig stimmen (z. B. Trauer + Wut).",
+      ],
+      framework: {
+        title: "Appraisal-Trigger — welche Bewertung löst welche Emotion aus?",
+        items: [
+          { label: "Freude", text: "Ziel erreicht oder unerwarteter Gewinn" },
+          { label: "Trauer", text: "Verlust, der nicht rückgängig gemacht werden kann" },
+          { label: "Angst", text: "Ziel/Sicherheit bedroht, Ausgang unklar, Kontrolle gering" },
+          {
+            label: "Wut",
+            text: "Ziel blockiert durch jemand anderen, Ungerechtigkeit erlebt",
+          },
+          { label: "Ekel", text: "Verletzung körperlicher Normen (Reiz, Handlung, Substanz)" },
+          { label: "Verachtung", text: "Verletzung moralischer Normen durch eine Person" },
+          { label: "Überraschung", text: "Erwartung gebrochen — neutral, kombinierbar mit anderen" },
+        ],
+      },
+      pitfalls: [
+        "Eigene Reaktion auf die Person projizieren (ich wäre wütend → also ist sie wütend).",
+        "Verachtung und Ekel verwechseln: Verachtung trifft Personen, Ekel trifft Reize und Handlungen.",
+        "Überraschung auf „negativ“ reduzieren — sie ist wertneutral.",
+        "Stereotype ausfüllen statt Text lesen: der Text definiert, was die Person will, nicht dein Vorurteil.",
+      ],
       taskCount: emotionenErkennenOffiziellAlle.length,
       onStart: () => setView("erkennen-quiz"),
       stats: sekStats("Emotionen erkennen"),
-      uebungId: "sek-emotionen-erkennen" as const,
+      uebungId: "sek-emotionen-erkennen",
       instruction: OFFICIAL_EE_INSTRUCTION,
       instructionTitle: "Offizielle Instruktion: Emotionen erkennen",
       color: "#ec4899",
     },
     {
-      id: "regulieren" as const,
+      id: "regulieren",
       abbr: "ER",
       title: "Emotionen regulieren",
       format:
         "Eine Person beschreibt eine belastende Situation — du wählst die beste Bewältigungsstrategie (A–D).",
       tip: "Strategie mit dem höchsten Expertenwert gewinnt",
+      example: {
+        situation:
+          "„Ich habe einen heftigen Streit mit meinem besten Freund. Seit Tagen reden wir nicht mehr, und ich kann nicht aufhören, darüber nachzudenken.“",
+        question: "Welche Reaktion ist die beste?",
+        options: [
+          "A) Ich schreibe ihm und schlage ein ruhiges Gespräch vor.",
+          "B) Ich lenke mich mit Netflix ab und hoffe, dass es sich auflöst.",
+          "C) Ich blockiere ihn und suche mir neue Freunde.",
+          "D) Ich lästere mit anderen über ihn.",
+        ],
+      },
+      rule: "Die beste Antwort löst das Problem — nicht nur das schlechte Gefühl.",
+      steps: [
+        "Frage dich: Was will die Person erreichen? (Beziehung retten, Ruhe finden, Job behalten …)",
+        "Lässt sich die Situation verändern? → Aktiv handeln (reden, Plan machen). Unveränderbar? → Situation neu rahmen / akzeptieren.",
+        "Wähle die Option, die an der Ursache ansetzt — nicht die, die nur kurzfristig ablenkt oder flüchtet.",
+      ],
+      framework: {
+        title: "Welche Strategie ist stark, welche schwach?",
+        items: [
+          {
+            label: "Problem lösen",
+            text: "direkte Kommunikation, konkrete Handlung — stark bei veränderbaren Situationen",
+          },
+          {
+            label: "Neu bewerten",
+            text: "Situation anders rahmen, eigene Ressourcen anerkennen, Akzeptanz — stark bei unveränderbaren Situationen",
+          },
+          {
+            label: "Unterstützung suchen",
+            text: "gezielt eine Person ansprechen, die zur Lösung beitragen kann",
+          },
+          {
+            label: "Regulieren ohne Handlung",
+            text: "kurzfristige Ablenkung, Entspannung — nur brauchbar, wenn Zeit gewonnen werden muss",
+          },
+          {
+            label: "Vermeidung",
+            text: "Flucht, Abbruch, Substanzkonsum, Aggression, pauschale Selbstabwertung — fast immer schwach",
+          },
+        ],
+      },
+      pitfalls: [
+        "„Mit Kolleg:innen darüber reden“ ohne Lösungsansatz — reines Frust-Teilen ist schwach, es sei denn, die Person erhält daraus klare Unterstützung.",
+        "„Ich sage mir, alles wird gut“ ohne Handlung — leere Selbstberuhigung.",
+        "Jobwechsel, Trennung, Abbruch beim ersten Konflikt — Fluchtverhalten statt Bewältigung.",
+        "Eskalation (Konfrontation, Aggression) oder Verdrängung (Ablenkung, Substanzen) werden fast nie als beste Option bewertet.",
+      ],
       taskCount: emotionenRegulierenOffiziellTasks.length,
       onStart: () => setView("regulieren-quiz"),
       stats: sekStats("Emotionen regulieren"),
-      uebungId: "sek-emotionen-regulieren" as const,
+      uebungId: "sek-emotionen-regulieren",
       instruction: OFFICIAL_ER_INSTRUCTION,
       instructionTitle: "Offizielle Instruktion: Emotionen regulieren",
       color: "#f59e0b",
     },
     {
-      id: "entscheiden" as const,
+      id: "entscheiden",
       abbr: "SE",
       title: "Soziales Entscheiden",
       format:
         "Ordne 5 Handlungsoptionen (A–E) von wichtigster zu unwichtigster in einer sozialen Situation.",
       tip: "Rangfolge zählt — je näher an der Expertenlösung, desto mehr Punkte",
+      example: {
+        situation:
+          "Du arbeitest in der Notaufnahme. Ein älterer Patient klagt laut über starke Schmerzen. Gleichzeitig wartet ein Angehöriger auf Auskunft, ein Kollege bittet um Hilfe bei einer Dokumentation, und dein Chef möchte ein Gespräch.",
+        question: "In welcher Reihenfolge (1 = zuerst, 5 = zuletzt) handelst du?",
+        options: [
+          "A) Den Patienten versorgen und Schmerzen lindern",
+          "B) Den Angehörigen kurz informieren, dass du dich gleich kümmerst",
+          "C) Den Kollegen bitten, dass du nach dem Patienten kommst",
+          "D) Mit dem Chef einen späteren Gesprächstermin vereinbaren",
+          "E) Die Dokumentation komplett später machen",
+        ],
+      },
+      rule: "Wer am meisten leidet, wird zuerst geholfen. Du selbst kommst zuletzt.",
+      steps: [
+        "Finde Rang 1: Wer ist am stärksten bedroht oder leidet am meisten? Dort handelst du zuerst.",
+        "Finde Rang 5: Welche Option dient nur dir selbst, ist reine Vermeidung oder bloßer Gehorsam ohne Nutzen? Das kommt zuletzt.",
+        "Ordne die verbleibenden 3: Pflicht (informieren, aufklären) > Perspektive anderer einholen > Eigeninteresse.",
+      ],
+      framework: {
+        title: "Die Rangordnung — was kommt oben, was unten?",
+        items: [
+          {
+            label: "Rang 1",
+            text: "Wohl und Würde anderer schützen — akute Gefahr abwenden, vulnerable Person stabilisieren",
+          },
+          {
+            label: "Rang 2",
+            text: "Berufliche und ethische Pflicht — Schweigepflicht, Ehrlichkeit, Gleichbehandlung, Aufklärung",
+          },
+          {
+            label: "Rang 3",
+            text: "Perspektive anderer einbeziehen — zuhören, nachfragen, Angehörige / Fachkolleg:innen einholen",
+          },
+          {
+            label: "Rang 4",
+            text: "Eigeninteresse und Bequemlichkeit — eigene Ruhe, Karriere, Konfliktvermeidung",
+          },
+          {
+            label: "Rang 5",
+            text: "Blinder Gehorsam oder Strafangst — Regel befolgen, obwohl Betroffene Schaden nehmen",
+          },
+        ],
+      },
+      pitfalls: [
+        "Polizei / Behörden auf Rang 1 bei Alltagskonflikten — zu eskalativ, außer die Situation ist eindeutig kriminell.",
+        "„Eigene Ruhe bewahren / sich nicht einmischen“ auf hohem Rang — fast immer niedrig.",
+        "Anweisungen von Vorgesetzten blind befolgen, obwohl Patient:innen leiden — niedriger Rang, da präkonventionell.",
+        "Extremhandlungen (Beziehung abbrechen, Kündigung) auf Rang 1, wenn mildere Mittel die Situation lösen.",
+      ],
       taskCount: sozialesEntscheidenTasks.length,
       onStart: () => setView("entscheiden-quiz"),
       stats: sekStats("Soziales Entscheiden"),
-      uebungId: "sek-soziales-entscheiden" as const,
+      uebungId: "sek-soziales-entscheiden",
       instruction: OFFICIAL_SE_INSTRUCTION,
       instructionTitle: "Offizielle Instruktion: Soziales Entscheiden",
       color: "#3b82f6",
@@ -223,73 +593,86 @@ export default function SEK() {
         return <UsageLimitWarning used={totalUsed} limit={totalLimit} label="SEK-Aufgaben" />;
       })()}
 
-      {/* Subtest Cards */}
-      <div className="card-glass divide-y divide-[var(--border)] overflow-hidden">
+      {/* Subtest Cards — each with its own instruction */}
+      <div className="space-y-5">
         {subtests.map((s) => {
           const isSubtestLocked = sekPerSubtest !== null && s.stats.total >= sekPerSubtest;
           return (
-            <div
-              key={s.id}
-              className={`${isMobile ? "flex flex-col gap-2 px-3 py-3" : "flex items-center gap-4 px-5 py-4"} ${isSubtestLocked ? "opacity-60" : "hover:bg-[var(--accent)]/2"} transition-colors group`}
-            >
-              <div className="flex items-center gap-3 min-w-0">
-                {/* Color accent */}
+            <div key={s.id} className="space-y-3">
+              {/* Subtest header card */}
+              <div className="card-glass overflow-hidden">
                 <div
-                  className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0"
-                  style={{ background: `${s.color}12` }}
+                  className={`${isMobile ? "flex flex-col gap-3 px-4 py-4" : "flex items-center gap-4 px-5 py-4"}`}
                 >
-                  <span className="text-sm font-bold" style={{ color: s.color }}>
-                    {s.abbr}
-                  </span>
-                </div>
-
-                {/* Content */}
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-2 flex-wrap">
-                    <h3 className="font-semibold text-[var(--text-primary)]">{s.title}</h3>
-                    <span className="text-xs text-[var(--muted)]">{s.taskCount} Aufgaben</span>
-                    {s.stats.total > 0 && (
-                      <span
-                        className={`text-xs font-semibold ${
-                          s.stats.pct >= 70
-                            ? "text-emerald-500"
-                            : s.stats.pct >= 40
-                              ? "text-amber-500"
-                              : "text-red-400"
-                        }`}
-                      >
-                        {s.stats.pct}%
+                  <div className="flex items-center gap-3 min-w-0 flex-1">
+                    {/* Color accent */}
+                    <div
+                      className="w-11 h-11 rounded-xl flex items-center justify-center shrink-0"
+                      style={{ background: `${s.color}15` }}
+                    >
+                      <span className="text-sm font-bold" style={{ color: s.color }}>
+                        {s.abbr}
                       </span>
+                    </div>
+
+                    {/* Content */}
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <h3 className="font-semibold text-[var(--text-primary)]">{s.title}</h3>
+                        <span className="text-xs text-[var(--muted)]">{s.taskCount} Aufgaben</span>
+                        {s.stats.total > 0 && (
+                          <span
+                            className={`text-xs font-semibold ${
+                              s.stats.pct >= 70
+                                ? "text-emerald-500"
+                                : s.stats.pct >= 40
+                                  ? "text-amber-500"
+                                  : "text-red-400"
+                            }`}
+                          >
+                            {s.stats.pct}%
+                          </span>
+                        )}
+                      </div>
+                      <p className="text-sm text-[var(--muted)] mt-0.5">{s.format}</p>
+                      <p className="text-xs text-[var(--muted)] mt-1 italic">{s.tip}</p>
+                    </div>
+                  </div>
+
+                  {/* Actions */}
+                  <div className={`flex items-center gap-2 shrink-0 ${isMobile ? "" : ""}`}>
+                    {isSubtestLocked ? (
+                      <PaywallBanner feature={`${s.title} freischalten`} />
+                    ) : (
+                      <Button
+                        variant="premium"
+                        size="sm"
+                        onClick={s.onStart}
+                        disabled={s.taskCount === 0}
+                      >
+                        <Play className="w-4 h-4 mr-1" /> Üben
+                        {sekPerSubtest !== null && (
+                          <span className="ml-1 text-xs opacity-70">
+                            ({s.stats.total}/{sekPerSubtest})
+                          </span>
+                        )}
+                      </Button>
                     )}
                   </div>
-                  <p className="text-sm text-[var(--muted)] mt-0.5 line-clamp-1">{s.format}</p>
                 </div>
-              </div>
 
-              {/* Actions */}
-              <div className={`flex items-center gap-2 shrink-0 ${isMobile ? "ml-13" : ""}`}>
-                {isSubtestLocked ? (
-                  <PaywallBanner feature={`${s.title} freischalten`} />
-                ) : (
-                  <>
-                    <OfficialInstructionCard
-                      title={s.instructionTitle}
-                      instruction={s.instruction}
-                    />
-                    <Button
-                      variant="premium"
-                      size="sm"
-                      onClick={s.onStart}
-                      disabled={s.taskCount === 0}
-                    >
-                      <Play className="w-4 h-4 mr-1" /> Üben
-                      {sekPerSubtest !== null && (
-                        <span className="ml-1 text-xs opacity-70">
-                          ({s.stats.total}/{sekPerSubtest})
-                        </span>
-                      )}
-                    </Button>
-                  </>
+                {/* Detailed learning aid: explanation, framework, strategy, pitfalls */}
+                {!isSubtestLocked && (
+                  <SubtestLearningAid
+                    color={s.color}
+                    example={s.example}
+                    steps={s.steps}
+                    rule={s.rule}
+                    framework={s.framework}
+                    pitfalls={s.pitfalls}
+                    instruction={s.instruction}
+                    instructionTitle={s.instructionTitle}
+                  />
                 )}
               </div>
             </div>
