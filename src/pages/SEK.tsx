@@ -12,7 +12,6 @@ import {
   ChevronDown,
   ChevronUp,
   AlertTriangle,
-  Target,
 } from "lucide-react";
 import { ExamTimer } from "@/components/shared/ExamTimer";
 import { type ExamMode, EXAM_CONFIG } from "@/data/examConfig";
@@ -87,170 +86,267 @@ function SubtestLearningAid({
   const [expanded, setExpanded] = useState(false);
   const [instrOpen, setInstrOpen] = useState(false);
 
-  return (
-    <div className="border-t border-[var(--border)]">
-      {/* ALWAYS VISIBLE: Example + Rule + 3 Steps */}
-      <div className="px-5 pt-5 pb-4 space-y-5">
-        {/* Example */}
-        <div>
-          <h4
-            className="text-[11px] font-semibold uppercase tracking-wider mb-2.5"
-            style={{ color }}
-          >
-            So sieht eine Aufgabe aus
-          </h4>
-          <div
-            className="rounded-lg p-4 border"
-            style={{
-              background: `${color}08`,
-              borderColor: `${color}30`,
-            }}
-          >
-            <p className="text-sm text-[var(--text-primary)] leading-relaxed mb-3">
-              {example.situation}
-            </p>
-            <p className="text-xs font-semibold text-[var(--text-secondary)] mb-2">
-              {example.question}
-            </p>
-            <ul className="space-y-1">
-              {example.options.map((opt, i) => (
-                <li
-                  key={i}
-                  className="text-sm text-[var(--text-secondary)] leading-relaxed"
-                >
-                  {opt}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+  const softBg = `color-mix(in srgb, ${color} 4%, transparent)`;
+  const softBorder = `color-mix(in srgb, ${color} 18%, transparent)`;
+  const mediumBorder = `color-mix(in srgb, ${color} 28%, transparent)`;
 
-        {/* The one rule */}
-        <div
-          className="rounded-lg p-3 flex gap-3 items-start"
-          style={{ background: `${color}12` }}
-        >
-          <Target
-            className="w-4 h-4 shrink-0 mt-0.5"
-            style={{ color }}
-          />
-          <div className="flex-1">
-            <div
-              className="text-[10px] font-semibold uppercase tracking-wider mb-1"
+  return (
+    <div
+      className="border-t"
+      style={{ borderColor: "var(--border)", background: softBg }}
+    >
+      {/* ALWAYS VISIBLE: Example + Rule + Steps */}
+      <div className="px-6 pt-7 pb-6 space-y-7">
+        {/* EXAMPLE — as a refined case study */}
+        <section>
+          <div className="flex items-center gap-2 mb-3">
+            <span
+              className="text-[10px] font-semibold uppercase tracking-[0.12em]"
               style={{ color }}
             >
-              Die wichtigste Regel
-            </div>
-            <p className="text-sm font-medium text-[var(--text-primary)] leading-snug">
+              Beispielaufgabe
+            </span>
+            <span
+              className="h-px flex-1"
+              style={{ background: `linear-gradient(to right, ${mediumBorder}, transparent)` }}
+            />
+          </div>
+          <figure
+            className="relative rounded-xl overflow-hidden backdrop-blur-sm"
+            style={{
+              background:
+                "linear-gradient(180deg, color-mix(in srgb, var(--surface) 85%, transparent), color-mix(in srgb, var(--surface) 70%, transparent))",
+              border: `1px solid ${softBorder}`,
+              boxShadow: `0 1px 2px rgba(0,0,0,0.03), 0 0 0 1px color-mix(in srgb, ${color} 4%, transparent) inset`,
+            }}
+          >
+            {/* Left accent bar */}
+            <div
+              className="absolute left-0 top-0 bottom-0 w-[3px]"
+              style={{ background: `linear-gradient(to bottom, ${color}, transparent)` }}
+            />
+            <blockquote className="px-6 py-5">
+              <p
+                className="text-[15px] leading-[1.75] text-[var(--text-primary)] font-[450] italic"
+                style={{ fontFeatureSettings: '"ss01", "cv01"' }}
+              >
+                <span
+                  className="text-2xl leading-none mr-0.5 font-serif align-[-0.15em]"
+                  style={{ color }}
+                >
+                  &ldquo;
+                </span>
+                {example.situation}
+                <span
+                  className="text-2xl leading-none ml-0.5 font-serif align-[-0.15em]"
+                  style={{ color }}
+                >
+                  &rdquo;
+                </span>
+              </p>
+              <div
+                className="mt-4 pt-4 border-t"
+                style={{ borderColor: softBorder }}
+              >
+                <p className="text-[12px] font-semibold text-[var(--muted)] uppercase tracking-wider mb-2.5">
+                  {example.question}
+                </p>
+                <ul className="space-y-1.5">
+                  {example.options.map((opt, i) => (
+                    <li
+                      key={i}
+                      className="text-[13.5px] text-[var(--text-secondary)] leading-relaxed flex gap-2.5"
+                    >
+                      <span
+                        className="shrink-0 mt-[9px] w-1 h-1 rounded-full"
+                        style={{ background: color }}
+                      />
+                      <span className="flex-1">{opt}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </blockquote>
+          </figure>
+        </section>
+
+        {/* KEY RULE — pull-quote style, center stage */}
+        <section>
+          <div className="flex items-center gap-2 mb-3">
+            <span
+              className="text-[10px] font-semibold uppercase tracking-[0.12em]"
+              style={{ color }}
+            >
+              Leitprinzip
+            </span>
+            <span
+              className="h-px flex-1"
+              style={{ background: `linear-gradient(to right, ${mediumBorder}, transparent)` }}
+            />
+          </div>
+          <div className="relative py-2">
+            <div
+              className="absolute left-0 top-0 bottom-0 w-[2px]"
+              style={{
+                background: `linear-gradient(to bottom, transparent, ${color}, transparent)`,
+              }}
+            />
+            <p
+              className="pl-5 pr-2 text-[18px] leading-[1.45] font-serif font-medium text-[var(--text-primary)]"
+              style={{ letterSpacing: "-0.01em" }}
+            >
               {rule}
             </p>
           </div>
-        </div>
+        </section>
 
-        {/* 3 action steps */}
-        <div>
-          <h4
-            className="text-[11px] font-semibold uppercase tracking-wider mb-3"
-            style={{ color }}
-          >
-            Das musst du tun
-          </h4>
-          <ol className="space-y-2.5">
+        {/* STEPS — refined playbook */}
+        <section>
+          <div className="flex items-center gap-2 mb-4">
+            <span
+              className="text-[10px] font-semibold uppercase tracking-[0.12em]"
+              style={{ color }}
+            >
+              Lösungsweg
+            </span>
+            <span
+              className="h-px flex-1"
+              style={{ background: `linear-gradient(to right, ${mediumBorder}, transparent)` }}
+            />
+          </div>
+          <ol className="space-y-3">
             {steps.map((step, i) => (
               <li
                 key={i}
-                className="text-sm text-[var(--text-primary)] leading-[1.65] flex gap-3"
+                className="group relative rounded-lg px-4 py-3 transition-colors"
+                style={{
+                  background:
+                    "color-mix(in srgb, var(--surface) 50%, transparent)",
+                  border: `1px solid ${softBorder}`,
+                }}
               >
-                <span
-                  className="shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold mt-0.5"
-                  style={{ background: color, color: "#fff" }}
-                >
-                  {i + 1}
-                </span>
-                <span className="flex-1 pt-1">{step}</span>
+                <div className="flex gap-4">
+                  <span
+                    className="shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-[13px] font-semibold border font-serif"
+                    style={{
+                      color,
+                      borderColor: mediumBorder,
+                      background: `color-mix(in srgb, ${color} 6%, transparent)`,
+                    }}
+                  >
+                    {i + 1}
+                  </span>
+                  <p className="flex-1 text-[14px] leading-[1.65] text-[var(--text-primary)] pt-[5px]">
+                    {step}
+                  </p>
+                </div>
               </li>
             ))}
           </ol>
-        </div>
+        </section>
       </div>
 
-      {/* Expand toggle for more */}
+      {/* EXPAND TOGGLE */}
       <button
         type="button"
         onClick={() => setExpanded((v) => !v)}
-        className="w-full flex items-center justify-between px-5 py-2.5 text-xs font-medium border-t border-[var(--border)] hover:bg-[var(--hover)] transition-colors cursor-pointer text-[var(--muted)]"
+        className="w-full flex items-center justify-center gap-2 px-6 py-3 text-[12px] font-medium border-t hover:bg-[var(--hover)] transition-colors cursor-pointer"
+        style={{
+          borderColor: softBorder,
+          color: expanded ? color : "var(--muted)",
+        }}
       >
-        <span>
-          {expanded
-            ? "Weniger anzeigen"
-            : "Mehr anzeigen: Cheat-Sheet, typische Fallen, offizielle Instruktion"}
+        <span className="tracking-wide">
+          {expanded ? "Weniger anzeigen" : "Cheat-Sheet, Fallen & offizielle Instruktion"}
         </span>
         {expanded ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
       </button>
 
       {expanded && (
-        <div className="px-5 pb-4 space-y-5 pt-4">
-          {/* Framework / Cheat-Sheet */}
-          <div>
-            <h4
-              className="text-[11px] font-semibold uppercase tracking-wider mb-2.5"
-              style={{ color }}
-            >
-              Cheat-Sheet
-            </h4>
-            <p className="text-xs text-[var(--muted)] mb-3 italic">{framework.title}</p>
+        <div className="px-6 pb-6 pt-6 space-y-7">
+          {/* CHEAT-SHEET */}
+          <section>
+            <div className="flex items-center gap-2 mb-3">
+              <span
+                className="text-[10px] font-semibold uppercase tracking-[0.12em]"
+                style={{ color }}
+              >
+                Cheat-Sheet
+              </span>
+              <span
+                className="h-px flex-1"
+                style={{ background: `linear-gradient(to right, ${mediumBorder}, transparent)` }}
+              />
+            </div>
+            <p className="text-[12.5px] text-[var(--muted)] mb-3 font-medium">
+              {framework.title}
+            </p>
             <div
-              className="rounded-lg overflow-hidden border"
-              style={{ borderColor: `${color}30` }}
+              className="rounded-xl overflow-hidden"
+              style={{
+                border: `1px solid ${softBorder}`,
+                background: "color-mix(in srgb, var(--surface) 50%, transparent)",
+              }}
             >
               {framework.items.map((item, i) => (
                 <div
                   key={i}
-                  className="flex gap-3 px-3 py-2.5 text-sm border-b last:border-b-0"
+                  className="grid grid-cols-[130px_1fr] gap-4 px-4 py-3 text-[13.5px]"
                   style={{
-                    borderColor: `${color}20`,
-                    background: i % 2 === 0 ? `${color}06` : "transparent",
+                    borderTop: i === 0 ? "none" : `1px solid ${softBorder}`,
                   }}
                 >
                   <span
-                    className="shrink-0 font-semibold min-w-[110px]"
+                    className="font-semibold text-[12.5px] tracking-wide pt-[1px]"
                     style={{ color }}
                   >
                     {item.label}
                   </span>
-                  <span className="flex-1 text-[var(--text-secondary)] leading-relaxed">
+                  <span className="text-[var(--text-secondary)] leading-[1.6]">
                     {item.text}
                   </span>
                 </div>
               ))}
             </div>
-          </div>
+          </section>
 
-          {/* Pitfalls */}
-          <div>
-            <h4 className="text-[11px] font-semibold uppercase tracking-wider mb-2.5 text-amber-600 dark:text-amber-400">
-              <AlertTriangle className="w-3.5 h-3.5 inline-block mr-1.5 -mt-0.5" />
-              Typische Fallen
-            </h4>
-            <ul className="space-y-1.5">
+          {/* PITFALLS */}
+          <section>
+            <div className="flex items-center gap-2 mb-3">
+              <AlertTriangle className="w-3 h-3 text-amber-500" />
+              <span className="text-[10px] font-semibold uppercase tracking-[0.12em] text-amber-700 dark:text-amber-400">
+                Typische Fallen
+              </span>
+              <span
+                className="h-px flex-1"
+                style={{
+                  background:
+                    "linear-gradient(to right, color-mix(in srgb, #f59e0b 28%, transparent), transparent)",
+                }}
+              />
+            </div>
+            <ul className="space-y-2">
               {pitfalls.map((p, i) => (
                 <li
                   key={i}
-                  className="text-sm text-[var(--text-secondary)] leading-relaxed flex gap-2.5"
+                  className="text-[13.5px] text-[var(--text-secondary)] leading-[1.6] flex gap-3 pl-1"
                 >
-                  <span className="text-amber-500 mt-0.5 shrink-0">•</span>
+                  <span className="text-amber-500 mt-[7px] shrink-0 w-1 h-1 rounded-full bg-amber-500" />
                   <span className="flex-1">{p}</span>
                 </li>
               ))}
             </ul>
-          </div>
+          </section>
 
-          {/* Official instruction — at the bottom, collapsible */}
-          <div className="pt-2 border-t border-[var(--border)]">
+          {/* OFFICIAL INSTRUCTION */}
+          <section
+            className="pt-5 border-t"
+            style={{ borderColor: softBorder }}
+          >
             <button
               type="button"
               onClick={() => setInstrOpen((v) => !v)}
-              className="flex items-center gap-2 text-xs font-medium text-[var(--muted)] hover:text-[var(--text-primary)] transition-colors cursor-pointer"
+              className="flex items-center gap-2 text-[11px] font-semibold text-[var(--muted)] hover:text-[var(--text-primary)] transition-colors cursor-pointer uppercase tracking-[0.1em]"
             >
               <span>{instructionTitle}</span>
               {instrOpen ? (
@@ -260,11 +356,14 @@ function SubtestLearningAid({
               )}
             </button>
             {instrOpen && (
-              <p className="mt-3 text-xs text-[var(--text-secondary)] leading-[1.7] whitespace-pre-line pl-3 border-l-2 border-[var(--border)]">
+              <p
+                className="mt-3 text-[12.5px] text-[var(--text-secondary)] leading-[1.75] whitespace-pre-line pl-4 border-l-2"
+                style={{ borderColor: softBorder }}
+              >
                 {instruction}
               </p>
             )}
-          </div>
+          </section>
         </div>
       )}
     </div>
