@@ -460,19 +460,32 @@ export default function Admin() {
     setLastRefresh(new Date());
   }, [timeRange]);
 
-  const [emailLogging, setEmailLogging] = useState<string | null>(null); // user_id currently being logged
+  const [emailLogging, setEmailLogging] = useState<string | null>(null); // user_id currently being sent
 
-  const handleLogEmail = useCallback(async (userId: string, email: string, type: string = "re_engagement") => {
+  const handleSendEmail = useCallback(async (userId: string, email: string, name: string, type: string = "re_engagement") => {
     setEmailLogging(userId);
-    await supabase!.rpc("admin_log_email", {
-      p_user_email: email,
-      p_user_id: userId,
-      p_email_type: type,
-      p_subject: type === "re_engagement" ? "Wir vermissen dich bei MedMaster!" : null,
-    });
-    // Refresh at-risk data to show updated last_email_sent
-    const { data } = await supabase!.rpc("admin_at_risk_users");
-    if (data) setAtRisk(data as AtRiskData);
+    try {
+      const templateId = type === "re_engagement" ? "re-engagement" : type;
+      const { error } = await supabase!.functions.invoke("send-email", {
+        body: {
+          action: "send",
+          userId,
+          templateId,
+          templateData: { email, name },
+        },
+      });
+      if (error) {
+        console.error("send-email error:", error);
+        alert(`Fehler beim Senden: ${error.message}`);
+      } else {
+        // Refresh at-risk data to show updated last_email_sent
+        const { data } = await supabase!.rpc("admin_at_risk_users");
+        if (data) setAtRisk(data as AtRiskData);
+      }
+    } catch (err) {
+      console.error("send-email exception:", err);
+      alert(`Fehler: ${err}`);
+    }
     setEmailLogging(null);
   }, []);
 
@@ -770,11 +783,11 @@ export default function Admin() {
                     <span>{u.active_days}d aktiv</span>
                     <span className="text-red-500 font-medium">{u.days_inactive}d inaktiv</span>
                     <button
-                      onClick={(e) => { e.stopPropagation(); handleLogEmail(u.user_id, u.email, "re_engagement"); }}
+                      onClick={(e) => { e.stopPropagation(); handleSendEmail(u.user_id, u.email, u.email.split("@")[0]); }}
                       disabled={emailLogging === u.user_id}
                       className="px-2 py-1 rounded bg-amber-500/15 text-amber-700 dark:text-amber-400 text-[10px] font-semibold hover:bg-amber-500/25 disabled:opacity-50"
                     >
-                      {emailLogging === u.user_id ? "..." : "E-Mail geloggt"}
+                      {emailLogging === u.user_id ? "..." : "E-Mail senden"}
                     </button>
                   </div>
                 </div>

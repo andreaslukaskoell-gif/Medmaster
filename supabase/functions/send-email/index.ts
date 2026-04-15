@@ -119,11 +119,7 @@ function premiumWrap(body: string, preheader?: string): string {
                   <tr>
                     <!-- Logo mark -->
                     <td style="vertical-align:middle;padding-right:14px">
-                      <table role="presentation" cellpadding="0" cellspacing="0" style="border-radius:12px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.08)">
-                        <tr><td style="width:44px;height:44px;text-align:center;vertical-align:middle">
-                          <span style="color:#fff;font-size:24px;font-weight:900;font-family:${FONT};line-height:44px">M</span>
-                        </td></tr>
-                      </table>
+                      <img src="https://medmaster.at/logo-512.png" width="44" height="44" alt="MedMaster" style="display:block;border-radius:11px;width:44px;height:44px"/>
                     </td>
                     <!-- Wordmark -->
                     <td style="vertical-align:middle">
@@ -827,6 +823,16 @@ function getEmailTemplate(
   }
 }
 
+// ── MIME subject encoding (RFC 2047 base64, works in all clients) ──
+
+function mimeEncodeSubject(subject: string): string {
+  if (!/[^\x00-\x7F]/.test(subject)) return subject; // ASCII-only: pass through
+  const bytes = new TextEncoder().encode(subject);
+  let binary = "";
+  for (const byte of bytes) binary += String.fromCharCode(byte);
+  return `=?UTF-8?B?${btoa(binary)}?=`;
+}
+
 // ── Send via IONOS SMTP (denomailer) ──
 
 let lastSendError = "";
@@ -866,7 +872,7 @@ async function sendEmail(
     await client.send({
       from: fromOverride || FROM_EMAIL,
       to,
-      subject,
+      subject: mimeEncodeSubject(subject),
       html,
     });
     return true;
@@ -911,17 +917,27 @@ serve(async (req) => {
     const body = await req.json();
     const { action } = body;
 
-    // Auth: require service role header, anon key (for client-side welcome), or body secret for broadcast
+    // Auth: require service role header, anon key (for client-side welcome), body secret for broadcast, or admin JWT
     const authHeader = req.headers.get("Authorization");
     const serviceRoleKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") || "";
     const emailSecret = Deno.env.get("EMAIL_FUNCTION_SECRET") || "";
     const anonKey = Deno.env.get("SUPABASE_ANON_KEY") || "";
-    const headerOk = authHeader === `Bearer ${emailSecret || serviceRoleKey}`;
+    const supabaseUrl = Deno.env.get("SUPABASE_URL") || "";
+    const headerOk = authHeader === `Bearer ${serviceRoleKey}` || (emailSecret !== "" && authHeader === `Bearer ${emailSecret}`);
     // Allow anon key for client-side calls (welcome email on signup)
     const anonKeyOk = anonKey !== "" && authHeader === `Bearer ${anonKey}`;
     const broadcastSecret = Deno.env.get("BROADCAST_SECRET") || "";
     const bodySecretOk = broadcastSecret !== "" && body.secret === broadcastSecret;
-    if (!headerOk && !anonKeyOk && !bodySecretOk) {
+    // Allow admin user JWT (verified via Supabase Auth)
+    const ADMIN_USER_ID = "ea304abb-6b1c-4b50-b870-0404f92306ec";
+    let adminJwtOk = false;
+    if (!headerOk && !anonKeyOk && !bodySecretOk && authHeader?.startsWith("Bearer ") && serviceRoleKey && supabaseUrl) {
+      const token = authHeader.slice(7);
+      const adminClient = createClient(supabaseUrl, serviceRoleKey);
+      const { data: { user: callerUser } } = await adminClient.auth.getUser(token);
+      if (callerUser?.id === ADMIN_USER_ID) adminJwtOk = true;
+    }
+    if (!headerOk && !anonKeyOk && !bodySecretOk && !adminJwtOk) {
       return new Response("Unauthorized", { status: 401 });
     }
     // Anon key callers can only send welcome emails (prevent abuse)
