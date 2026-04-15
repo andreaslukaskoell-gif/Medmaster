@@ -472,6 +472,7 @@ export default function Admin() {
           userId,
           templateId,
           templateData: { email, name },
+          force: true,
         },
       });
       if (error) {
