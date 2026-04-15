@@ -15,7 +15,7 @@ function requireEnv(name: string): string {
 const SMTP_USER = Deno.env.get("SMTP_USER") || "";
 const SMTP_PASS = Deno.env.get("SMTP_PASS") || "";
 const SITE_URL = Deno.env.get("SITE_URL") || "https://medmaster.at";
-const FROM_EMAIL = "MedMaster <welcome@medmaster.at>";
+const FROM_EMAIL = SMTP_USER ? `MedMaster <${SMTP_USER}>` : "MedMaster <welcome@medmaster.at>";
 
 // ── Email validation ──
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -868,17 +868,37 @@ async function sendEmail(
     },
   });
 
+  // Strip HTML to plain text for better deliverability (multipart/alternative)
+  const plainText = html
+    .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, "")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">")
+    .replace(/&nbsp;/g, " ").replace(/&#\d+;/g, "").replace(/&[a-z]+;/g, "")
+    .replace(/\s{2,}/g, "\n")
+    .trim();
+
+  const unsubUrl = `${SITE_URL}/einstellungen?unsubscribe=email`;
+
+  console.log("[send-email] Sending to:", to, "from:", fromOverride || FROM_EMAIL, "smtp_user:", SMTP_USER.substring(0, 6) + "***");
+
   try {
     await client.send({
       from: fromOverride || FROM_EMAIL,
       to,
       subject: mimeEncodeSubject(subject),
       html,
+      content: plainText,
+      headers: {
+        "List-Unsubscribe": `<${unsubUrl}>`,
+        "List-Unsubscribe-Post": "List-Unsubscribe=One-Click",
+        "X-Mailer": "MedMaster/1.0",
+      },
     });
+    console.log("[send-email] SMTP accepted for:", to);
     return true;
   } catch (err) {
     lastSendError = err instanceof Error ? err.message : String(err);
-    console.error("SMTP send error:", lastSendError);
+    console.error("[send-email] SMTP error:", lastSendError, "to:", to);
     return false;
   } finally {
     await client.close();
@@ -906,11 +926,22 @@ async function wasAlreadySent(userId: string, templateId: string): Promise<boole
   return (data?.length ?? 0) > 0;
 }
 
+// ── CORS headers ──
+
+const CORS_HEADERS = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Methods": "POST, OPTIONS",
+  "Access-Control-Allow-Headers": "Authorization, Content-Type, apikey, x-client-info",
+};
+
 // ── Main handler ──
 
 serve(async (req) => {
+  if (req.method === "OPTIONS") {
+    return new Response(null, { status: 204, headers: CORS_HEADERS });
+  }
   if (req.method !== "POST") {
-    return new Response("Method not allowed", { status: 405 });
+    return new Response("Method not allowed", { status: 405, headers: CORS_HEADERS });
   }
 
   try {
@@ -938,13 +969,28 @@ serve(async (req) => {
       if (callerUser?.id === ADMIN_USER_ID) adminJwtOk = true;
     }
     if (!headerOk && !anonKeyOk && !bodySecretOk && !adminJwtOk) {
-      return new Response("Unauthorized", { status: 401 });
+      return new Response("Unauthorized", { status: 401, headers: CORS_HEADERS });
     }
     // Anon key callers can only send welcome emails (prevent abuse)
     if (anonKeyOk && !headerOk && body.action === "send" && body.templateId !== "welcome") {
       return new Response(JSON.stringify({ error: "Anon key can only send welcome emails" }), {
         status: 403,
-        headers: { "Content-Type": "application/json" },
+        headers: { ...CORS_HEADERS, "Content-Type": "application/json" },
+      });
+    }
+
+    // ── SMTP test (anon key allowed, sends to fixed test address) ──
+    if (action === "smtp-test") {
+      const testTo = body.to as string || "";
+      if (!isValidEmail(testTo)) {
+        return new Response(JSON.stringify({ error: "Invalid test email" }), {
+          status: 400, headers: { ...CORS_HEADERS, "Content-Type": "application/json" },
+        });
+      }
+      const ok = await sendEmail(testTo, "MedMaster SMTP Test", premiumWrap("<p>SMTP-Test erfolgreich.</p><p>Diese E-Mail beweist, dass der Versand funktioniert.</p>", "SMTP-Test"));
+      return new Response(JSON.stringify({ sent: ok, smtp_user: SMTP_USER.substring(0, 6) + "***", from: FROM_EMAIL, error: ok ? null : lastSendError }), {
+        status: ok ? 200 : 500,
+        headers: { ...CORS_HEADERS, "Content-Type": "application/json" },
       });
     }
 
@@ -965,10 +1011,11 @@ serve(async (req) => {
           });
         }
 
-        if (await wasAlreadySent(userId, templateId)) {
+        const forceResend = body.force === true || adminJwtOk;
+        if (!forceResend && await wasAlreadySent(userId, templateId)) {
           return new Response(JSON.stringify({ skipped: true, reason: "already_sent" }), {
             status: 200,
-            headers: { "Content-Type": "application/json" },
+            headers: { ...CORS_HEADERS, "Content-Type": "application/json" },
           });
         }
 
@@ -979,7 +1026,7 @@ serve(async (req) => {
 
         return new Response(JSON.stringify({ sent: ok, ...(ok ? {} : { error: lastSendError }) }), {
           status: ok ? 200 : 500,
-          headers: { "Content-Type": "application/json" },
+          headers: { ...CORS_HEADERS, "Content-Type": "application/json" },
         });
       }
 
@@ -1233,11 +1280,11 @@ serve(async (req) => {
       default:
         return new Response(JSON.stringify({ error: `Unknown action: ${action}` }), {
           status: 400,
-          headers: { "Content-Type": "application/json" },
+          headers: { ...CORS_HEADERS, "Content-Type": "application/json" },
         });
     }
   } catch (err) {
     console.error("send-email error:", err);
-    return new Response("Internal error", { status: 500 });
+    return new Response("Internal error", { status: 500, headers: CORS_HEADERS });
   }
 });
