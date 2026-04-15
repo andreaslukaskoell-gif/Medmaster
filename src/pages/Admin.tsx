@@ -466,7 +466,7 @@ export default function Admin() {
     setEmailLogging(userId);
     try {
       const templateId = type === "re_engagement" ? "re-engagement" : type;
-      const { error } = await supabase!.functions.invoke("send-email", {
+      const { data: sendData, error } = await supabase!.functions.invoke("send-email", {
         body: {
           action: "send",
           userId,
@@ -476,12 +476,16 @@ export default function Admin() {
         },
       });
       if (error) {
-        console.error("send-email error:", error);
         alert(`Fehler beim Senden: ${error.message}`);
+      } else if (sendData?.sent === false) {
+        alert(`SMTP-Fehler: ${sendData.error || "Unbekannt"}`);
+      } else if (sendData?.skipped) {
+        alert(`Übersprungen: ${sendData.reason}`);
       } else {
         // Refresh at-risk data to show updated last_email_sent
         const { data } = await supabase!.rpc("admin_at_risk_users");
         if (data) setAtRisk(data as AtRiskData);
+        alert(`E-Mail gesendet an ${email}`);
       }
     } catch (err) {
       console.error("send-email exception:", err);
