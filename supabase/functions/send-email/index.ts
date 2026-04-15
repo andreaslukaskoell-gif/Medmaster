@@ -979,21 +979,6 @@ serve(async (req) => {
       });
     }
 
-    // ── SMTP test (anon key allowed, sends to fixed test address) ──
-    if (action === "smtp-test") {
-      const testTo = body.to as string || "";
-      if (!isValidEmail(testTo)) {
-        return new Response(JSON.stringify({ error: "Invalid test email" }), {
-          status: 400, headers: { ...CORS_HEADERS, "Content-Type": "application/json" },
-        });
-      }
-      const ok = await sendEmail(testTo, "MedMaster SMTP Test", premiumWrap("<p>SMTP-Test erfolgreich.</p><p>Diese E-Mail beweist, dass der Versand funktioniert.</p>", "SMTP-Test"));
-      return new Response(JSON.stringify({ sent: ok, smtp_user: SMTP_USER.substring(0, 6) + "***", from: FROM_EMAIL, error: ok ? null : lastSendError }), {
-        status: ok ? 200 : 500,
-        headers: { ...CORS_HEADERS, "Content-Type": "application/json" },
-      });
-    }
-
     switch (action) {
       // ── Send single email ──
       case "send": {
