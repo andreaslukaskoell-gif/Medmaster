@@ -369,6 +369,9 @@ export function useAuth() {
 
   // Use cached tier from localStorage for instant premium detection on reload.
   // Updated whenever profile is fetched. Prevents paywall flash for premium users.
+  // SECURITY: Optimistic UI hint only. All premium content is gated server-side
+  // via Supabase RLS on `profiles.subscription_tier` — a user editing this value
+  // cannot actually unlock premium features.
   const cachedTier = (() => {
     try { return localStorage.getItem("mm_tier") as "premium" | "starter" | null; } catch { return null; }
   })();

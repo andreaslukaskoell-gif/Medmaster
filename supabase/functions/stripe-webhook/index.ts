@@ -340,27 +340,50 @@ serve(async (req) => {
                   .single();
 
                 if (referrerProfile?.stripe_customer_id) {
-                  // Find the referrer's most recent payment intent
-                  const payments = await stripe.paymentIntents.list({
-                    customer: referrerProfile.stripe_customer_id,
-                    limit: 1,
-                  });
-
-                  const pi = payments.data[0];
-                  if (pi && pi.status === "succeeded") {
-                    // Issue €5 partial refund
-                    await stripe.refunds.create({
-                      payment_intent: pi.id,
-                      amount: 500, // €5.00 in cents
-                      reason: "requested_by_customer",
+                  // Idempotency guard: reserve the session_id BEFORE calling Stripe.
+                  // If Stripe retries this webhook we'll get a duplicate-key error and skip.
+                  const { error: reserveErr } = await supabase
+                    .from("referral_refunds")
+                    .insert({
+                      session_id: session.id,
+                      referrer_id: referral.referrer_id,
+                      amount_cents: 500,
                     });
+
+                  if (reserveErr) {
                     console.log(
-                      `Referral refund: €5 back to ${referral.referrer_id} (PI: ${pi.id})`
+                      `Referral refund skipped (already processed for session ${session.id}): ${reserveErr.message}`
                     );
                   } else {
-                    console.log(
-                      `Referral refund skipped: no successful payment for referrer ${referral.referrer_id}`
-                    );
+                    const payments = await stripe.paymentIntents.list({
+                      customer: referrerProfile.stripe_customer_id,
+                      limit: 1,
+                    });
+
+                    const pi = payments.data[0];
+                    if (pi && pi.status === "succeeded") {
+                      const refund = await stripe.refunds.create({
+                        payment_intent: pi.id,
+                        amount: 500,
+                        reason: "requested_by_customer",
+                      });
+                      await supabase
+                        .from("referral_refunds")
+                        .update({ payment_intent_id: pi.id, refund_id: refund.id })
+                        .eq("session_id", session.id);
+                      console.log(
+                        `Referral refund: €5 back to ${referral.referrer_id} (PI: ${pi.id})`
+                      );
+                    } else {
+                      // Roll back the idempotency marker so a later retry can succeed
+                      await supabase
+                        .from("referral_refunds")
+                        .delete()
+                        .eq("session_id", session.id);
+                      console.log(
+                        `Referral refund skipped: no successful payment for referrer ${referral.referrer_id}`
+                      );
+                    }
                   }
                 }
               }

@@ -948,35 +948,34 @@ serve(async (req) => {
     const body = await req.json();
     const { action } = body;
 
-    // Auth: require service role header, anon key (for client-side welcome), body secret for broadcast, or admin JWT
+    // Auth: require service role header, body secret for broadcast, user JWT (welcome=self-only, other=admin-only)
     const authHeader = req.headers.get("Authorization");
     const serviceRoleKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") || "";
     const emailSecret = Deno.env.get("EMAIL_FUNCTION_SECRET") || "";
-    const anonKey = Deno.env.get("SUPABASE_ANON_KEY") || "";
     const supabaseUrl = Deno.env.get("SUPABASE_URL") || "";
     const headerOk = authHeader === `Bearer ${serviceRoleKey}` || (emailSecret !== "" && authHeader === `Bearer ${emailSecret}`);
-    // Allow anon key for client-side calls (welcome email on signup)
-    const anonKeyOk = anonKey !== "" && authHeader === `Bearer ${anonKey}`;
     const broadcastSecret = Deno.env.get("BROADCAST_SECRET") || "";
     const bodySecretOk = broadcastSecret !== "" && body.secret === broadcastSecret;
-    // Allow admin user JWT (verified via Supabase Auth)
+    // Resolve user JWT once: used for admin + self-welcome paths
     const ADMIN_USER_ID = "ea304abb-6b1c-4b50-b870-0404f92306ec";
     let adminJwtOk = false;
-    if (!headerOk && !anonKeyOk && !bodySecretOk && authHeader?.startsWith("Bearer ") && serviceRoleKey && supabaseUrl) {
+    let authenticatedUserId: string | null = null;
+    if (!headerOk && !bodySecretOk && authHeader?.startsWith("Bearer ") && serviceRoleKey && supabaseUrl) {
       const token = authHeader.slice(7);
       const adminClient = createClient(supabaseUrl, serviceRoleKey);
       const { data: { user: callerUser } } = await adminClient.auth.getUser(token);
-      if (callerUser?.id === ADMIN_USER_ID) adminJwtOk = true;
+      if (callerUser?.id) {
+        authenticatedUserId = callerUser.id;
+        if (callerUser.id === ADMIN_USER_ID) adminJwtOk = true;
+      }
     }
-    if (!headerOk && !anonKeyOk && !bodySecretOk && !adminJwtOk) {
+    // Self-welcome: authenticated user can send ONLY a welcome email to their own userId
+    const selfWelcomeOk = !!authenticatedUserId
+      && body.action === "send"
+      && body.templateId === "welcome"
+      && body.userId === authenticatedUserId;
+    if (!headerOk && !bodySecretOk && !adminJwtOk && !selfWelcomeOk) {
       return new Response("Unauthorized", { status: 401, headers: CORS_HEADERS });
-    }
-    // Anon key callers can only send welcome emails (prevent abuse)
-    if (anonKeyOk && !headerOk && body.action === "send" && body.templateId !== "welcome") {
-      return new Response(JSON.stringify({ error: "Anon key can only send welcome emails" }), {
-        status: 403,
-        headers: { ...CORS_HEADERS, "Content-Type": "application/json" },
-      });
     }
 
     switch (action) {

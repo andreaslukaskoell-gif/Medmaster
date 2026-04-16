@@ -295,6 +295,10 @@ async function fetchUnreadEmails(): Promise<
   }>
 > {
   if (!SUPPORT_IMAP_USER || !SUPPORT_IMAP_PASS) return [];
+  if (/["\r\n]/.test(SUPPORT_IMAP_USER) || /["\r\n]/.test(SUPPORT_IMAP_PASS)) {
+    console.error("IMAP credentials contain forbidden characters (\\\" \\r \\n) — aborting");
+    return [];
+  }
 
   try {
     const conn = await Deno.connectTls({
