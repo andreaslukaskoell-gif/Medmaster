@@ -41,14 +41,13 @@ captureAttributionOnly();
 // Only initialize analytics/marketing if the user has given consent.
 const consent = getStoredConsent();
 
-// Google Ads: only load gtag.js when marketing consent is given (DSGVO).
-// Loading the script without consent transmits IP to Google — not allowed.
+// Google Ads: Consent Mode v2 — gtag.js immer laden, aber mit denied-Defaults.
+// Das erlaubt Google Conversion-Modellierung auch ohne expliziten Consent (DSGVO-konform).
+// Ohne das ist der Conversion-Tag "inaktiv" und "Conversions maximieren" optimiert blind.
 const marketingConsent = consent?.marketing ?? false;
 const analyticsConsent = consent?.analytics ?? false;
-if (marketingConsent) {
-  initGtagConsentMode(marketingConsent, analyticsConsent);
-  initGtag();
-}
+initGtagConsentMode(marketingConsent, analyticsConsent); // defaults setzen (denied wenn kein Consent)
+initGtag(); // Script IMMER laden — Consent Mode v2 regelt den Rest
 
 if (consent?.analytics) {
   // PostHog (analytics) — dynamically loaded
