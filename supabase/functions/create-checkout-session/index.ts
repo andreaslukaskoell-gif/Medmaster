@@ -67,11 +67,13 @@ serve(async (req) => {
       client_reference_id: userId,
       customer_email: userEmail || undefined,
       metadata: { supabase_user_id: userId, referral_eligible: eligibleForDiscount ? "1" : "0" },
-      // CRITICAL: no promo-code input field; discount is server-attached only
-      allow_promotion_codes: false,
     };
+    // Stripe rejects setting both. With discounts attached the promo-code field
+    // is automatically suppressed; without discounts we explicitly suppress it.
     if (eligibleForDiscount) {
       sessionParams.discounts = [{ coupon: REFERRAL_COUPON_ID }];
+    } else {
+      sessionParams.allow_promotion_codes = false;
     }
 
     const session = await stripe.checkout.sessions.create(sessionParams);
