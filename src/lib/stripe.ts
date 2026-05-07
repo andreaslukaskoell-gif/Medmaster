@@ -1,16 +1,13 @@
-// Stripe Payment — uses Stripe Payment Links (no backend required).
-// Create a Payment Link in Stripe Dashboard → paste the URL here.
-// After payment, Stripe redirects to the success URL with ?session_id=.
-// A Supabase webhook (or manual check) upgrades the user to premium.
+// Stripe Checkout — server-driven via the create-checkout-session edge function.
+// The function validates whether the authenticated user is a registered referee
+// before granting the €5 referral discount, so users cannot bypass the referral
+// flow by manually entering a promo code in the Stripe checkout UI.
 
 import { track, trackCheckoutStart } from "@/lib/analytics";
 import { validateRedirectUrl } from "@/lib/security";
 import { isNative } from "@/lib/native";
 import { purchasePremium } from "@/lib/iap";
-
-/** Stripe promotion code applied automatically for referred users (€5 off). */
-export const REFERRAL_PROMO_CODE = "FREUND5";
-
+import { supabase } from "@/lib/supabase";
 
 export const PRICING = {
   oneTime: {
@@ -21,20 +18,23 @@ export const PRICING = {
   },
 };
 
-// Replace with your Stripe Payment Link URL from dashboard.stripe.com/payment-links
-const PAYMENT_LINK_URL = import.meta.env.VITE_STRIPE_PAYMENT_LINK as string | undefined;
-
 export function formatPrice(cents: number): string {
   return `€${(cents / 100).toFixed(2).replace(".", ",")}`;
 }
 
 /**
- * Redirect to Stripe Payment Link.
- * Pass user email for pre-fill and userId for metadata via query params.
- * Returns false if payment link is not configured.
+ * Start a Stripe Checkout session for the current user.
+ * Native iOS/Android skip Stripe in favor of Apple IAP.
+ * Web flow calls the create-checkout-session edge function which server-side
+ * validates referral eligibility before issuing a €5 discount.
  */
-export function startCheckout(options?: { email?: string; userId?: string }): boolean {
-  // On native iOS/Android: use In-App Purchase instead of Stripe
+/**
+ * Starts checkout. Returns true if the flow took over (redirect/IAP launched),
+ * false if the caller should fall back to /preise. Fire-and-forget for backwards
+ * compatibility with existing onClick handlers; the actual redirect happens
+ * asynchronously after a successful edge function call.
+ */
+export function startCheckout(_options?: { email?: string; userId?: string }): boolean {
   if (isNative) {
     trackCheckoutStart();
     purchasePremium().then((result) => {
@@ -48,36 +48,42 @@ export function startCheckout(options?: { email?: string; userId?: string }): bo
     return true;
   }
 
-  if (!PAYMENT_LINK_URL?.trim()) {
-    console.warn("[Stripe] VITE_STRIPE_PAYMENT_LINK not configured.");
-    return false;
-  }
-
-  // Validate payment link domain to prevent open redirect via env var tampering
-  const validated = validateRedirectUrl(PAYMENT_LINK_URL.trim());
-  if (!validated) {
-    console.warn("[Stripe] Payment link URL failed domain validation.");
+  if (!supabase) {
+    console.warn("[Stripe] Supabase client not configured.");
     return false;
   }
 
   trackCheckoutStart();
 
-  const url = new URL(validated);
-  if (options?.email) url.searchParams.set("prefilled_email", options.email);
-  if (options?.userId) url.searchParams.set("client_reference_id", options.userId);
-
-  // Pre-fill referral promo code if user was referred
-  const referredBy = sessionStorage.getItem("medmaster_ref") || sessionStorage.getItem("mm_ref");
-  if (referredBy) {
-    url.searchParams.set("prefilled_promo_code", REFERRAL_PROMO_CODE);
-  }
-
-  track("checkout_redirect", { url: url.origin + url.pathname });
-  window.location.href = url.toString();
+  // Kick off the edge function call; redirect once it returns.
+  supabase.functions
+    .invoke<{ url?: string; eligibleForDiscount?: boolean; error?: string }>(
+      "create-checkout-session",
+      { body: {} }
+    )
+    .then(({ data, error }) => {
+      if (error || !data?.url) {
+        console.warn("[Stripe] checkout session creation failed", error || data?.error);
+        window.location.href = "/preise?checkout=error";
+        return;
+      }
+      const validated = validateRedirectUrl(data.url);
+      if (!validated) {
+        console.warn("[Stripe] Stripe URL failed domain validation.");
+        window.location.href = "/preise?checkout=error";
+        return;
+      }
+      track("checkout_redirect", { eligibleForDiscount: !!data.eligibleForDiscount });
+      window.location.href = validated;
+    })
+    .catch((e) => {
+      console.warn("[Stripe] checkout invoke threw", e);
+      window.location.href = "/preise?checkout=error";
+    });
   return true;
 }
 
-/** Check if payment is configured */
+/** Web checkout is always enabled (the edge function handles availability). */
 export function isPaymentEnabled(): boolean {
-  return !!PAYMENT_LINK_URL?.trim();
+  return true;
 }
