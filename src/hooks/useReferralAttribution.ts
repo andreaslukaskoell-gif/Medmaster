@@ -19,30 +19,12 @@ export function useReferralAttribution() {
     const refCode = getStoredRef() || sessionStorage.getItem("medmaster_ref");
     if (!refCode) return;
 
-    // Don't attribute to yourself
     if (user.id.startsWith(refCode)) return;
 
-    // Find the referrer by matching ref code prefix
-    Promise.resolve(
-      supabase.from("profiles").select("id").ilike("id", `${refCode}%`).limit(1).single()
-    )
-      .then(({ data: referrer }) => {
-        if (!referrer || referrer.id === user.id) return;
-
-        // Insert referral (idempotent — UNIQUE on referee_id)
-        supabase!
-          .from("referrals")
-          .insert({
-            referrer_id: referrer.id,
-            referee_id: user.id,
-            ref_code: refCode,
-          })
-          .then(({ error }) => {
-            if (error && !error.message.includes("duplicate")) {
-              console.warn("[referral]", error.message);
-            }
-          });
-      })
-      .catch(() => {});
+    supabase
+      .rpc("register_referral", { referrer_prefix: refCode })
+      .then(({ error }) => {
+        if (error) console.warn("[referral]", error.message);
+      });
   }, [user]);
 }

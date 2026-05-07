@@ -167,14 +167,22 @@ serve(async (req) => {
           .single();
         const alreadyPremium = existingProfile?.subscription_tier === "premium";
 
-        // One-time payment model: upgrade to premium
+        // One-time payment model: upgrade to premium.
+        // Note: Stripe Payment Links don't always create a Customer for one-off purchases,
+        // so session.customer can be null. We store last_payment_intent_id as a fallback
+        // anchor for downstream operations (e.g. referral auto-refund).
+        const customerId = (session.customer as string | null) ?? null;
+        const paymentIntentId = (session.payment_intent as string | null) ?? null;
+        const profileUpdate: Record<string, unknown> = {
+          subscription_tier: "premium",
+          updated_at: new Date().toISOString(),
+        };
+        if (customerId) profileUpdate.stripe_customer_id = customerId;
+        if (paymentIntentId) profileUpdate.last_payment_intent_id = paymentIntentId;
+
         const { error, count } = await supabase
           .from("profiles")
-          .update({
-            subscription_tier: "premium",
-            stripe_customer_id: session.customer as string,
-            updated_at: new Date().toISOString(),
-          })
+          .update(profileUpdate)
           .eq("id", userId)
           .select("id", { count: "exact", head: true });
 
@@ -191,7 +199,8 @@ serve(async (req) => {
           const { error: insertError } = await supabase.from("profiles").insert({
             id: userId,
             subscription_tier: "premium",
-            stripe_customer_id: session.customer as string,
+            stripe_customer_id: customerId,
+            last_payment_intent_id: paymentIntentId,
           });
           if (insertError) {
             console.error("Profile insert error:", insertError);
@@ -332,16 +341,35 @@ serve(async (req) => {
                 .single();
 
               if (referral?.referrer_id) {
-                // Get the referrer's Stripe customer ID
+                // Resolve the referrer's last successful PaymentIntent.
+                // Prefer last_payment_intent_id (set on every checkout), fall back to
+                // listing via stripe_customer_id (only set when Stripe created a Customer).
                 const { data: referrerProfile } = await supabase
                   .from("profiles")
-                  .select("stripe_customer_id")
+                  .select("stripe_customer_id, last_payment_intent_id")
                   .eq("id", referral.referrer_id)
                   .single();
 
-                if (referrerProfile?.stripe_customer_id) {
+                let pi: Stripe.PaymentIntent | null = null;
+                if (referrerProfile?.last_payment_intent_id) {
+                  try {
+                    pi = await stripe.paymentIntents.retrieve(
+                      referrerProfile.last_payment_intent_id
+                    );
+                  } catch (piErr) {
+                    console.warn("PI retrieve failed:", piErr);
+                  }
+                }
+                if (!pi && referrerProfile?.stripe_customer_id) {
+                  const payments = await stripe.paymentIntents.list({
+                    customer: referrerProfile.stripe_customer_id,
+                    limit: 1,
+                  });
+                  pi = payments.data[0] ?? null;
+                }
+
+                if (pi && pi.status === "succeeded") {
                   // Idempotency guard: reserve the session_id BEFORE calling Stripe.
-                  // If Stripe retries this webhook we'll get a duplicate-key error and skip.
                   const { error: reserveErr } = await supabase
                     .from("referral_refunds")
                     .insert({
@@ -355,13 +383,7 @@ serve(async (req) => {
                       `Referral refund skipped (already processed for session ${session.id}): ${reserveErr.message}`
                     );
                   } else {
-                    const payments = await stripe.paymentIntents.list({
-                      customer: referrerProfile.stripe_customer_id,
-                      limit: 1,
-                    });
-
-                    const pi = payments.data[0];
-                    if (pi && pi.status === "succeeded") {
+                    try {
                       const refund = await stripe.refunds.create({
                         payment_intent: pi.id,
                         amount: 500,
@@ -374,17 +396,19 @@ serve(async (req) => {
                       console.log(
                         `Referral refund: €5 back to ${referral.referrer_id} (PI: ${pi.id})`
                       );
-                    } else {
-                      // Roll back the idempotency marker so a later retry can succeed
+                    } catch (refundCallErr) {
+                      // Roll back idempotency marker so a later retry can succeed
                       await supabase
                         .from("referral_refunds")
                         .delete()
                         .eq("session_id", session.id);
-                      console.log(
-                        `Referral refund skipped: no successful payment for referrer ${referral.referrer_id}`
-                      );
+                      throw refundCallErr;
                     }
                   }
+                } else {
+                  console.log(
+                    `Referral refund skipped: no successful payment for referrer ${referral.referrer_id}`
+                  );
                 }
               }
             } catch (refundErr) {
