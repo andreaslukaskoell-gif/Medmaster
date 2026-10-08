@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/lib/supabase";
 import { useStore } from "@/store/useStore";
-import { usePageTitle } from "@/hooks/usePageTitle";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import { translateAuthError } from "@/lib/authErrors";
 import { trackSignup, trackLogin } from "@/lib/analytics";
 import {
@@ -40,7 +40,12 @@ function saveLastEmail(email: string) {
 }
 
 export default function AuthPage() {
-  usePageTitle("Anmelden & Registrieren");
+  usePageMeta({
+    title: "Anmelden & Registrieren — MedMaster",
+    description:
+      "Melde dich bei MedMaster an oder erstelle einen kostenlosen Account. Starte sofort mit MedAT-Übungsfragen, KFF-Training und Prüfungssimulationen.",
+    canonical: "https://medmaster.at/login",
+  });
   const savedEmail = getLastEmail();
   const [email, setEmail] = useState(savedEmail);
   const [password, setPassword] = useState("");
