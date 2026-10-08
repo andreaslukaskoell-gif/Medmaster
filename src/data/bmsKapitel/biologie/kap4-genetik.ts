@@ -15,53 +15,104 @@ export const bioKapGenetik: Kapitel = {
       imageCaption:
         "Abb.: DNA-Struktur — Adenin, Thymin, Guanin, Cytosin, Zucker-Phosphat-Rückgrat (Wikimedia Commons, CC BY-SA 3.0)",
       stichworte: ["DNA", "Gen", "Chromosom", "Allel", "Locus", "Doppelhelix", "Erbinformation"],
-      content: `Genetik bildet das Fundament der modernen Biologie — von der DNA-Struktur über Vererbungsregeln bis zur Gentechnik ist dieses Thema ein Schwerpunkt im BMS.
+      content: `Jede der etwa 37 Billionen Zellen in deinem Körper trägt denselben Bauplan — rund **2 Meter DNA**, verpackt in **46 Chromosomen**, aufgeteilt in **20 000–25 000 Gene**. Wenn du verstehst, wie DNA, Gen, Allel und Chromosom zusammenhängen, ist der halbe Genetik-Teil des MedAT gewonnen. Der Rest ist Rechnen (Chargaff, Mendel) und Logik (Vererbungsmuster).
 
 {{DIAGRAM:dna-structure}}
 
-## DNA: Träger der Erbinformation
-
-**DNA** (Desoxyribonukleinsäure) ist das Molekül, das die genetische Information speichert. Sie besteht aus zwei antiparallel gewundenen Strängen — der **Doppelhelix**. Jeder Strang ist eine Kette aus **Nukleotiden**: jedes Nukleotid enthält den Zucker Desoxyribose, ein Phosphat und eine von vier **Basen** — Adenin (A), Thymin (T), Guanin (G) oder Cytosin (C).
-
-Die Basen der beiden Stränge paaren sich nach festen Regeln: A immer mit T (zwei Wasserstoffbrücken), G immer mit C (drei Wasserstoffbrücken). Die **Sequenz** der Basen — ihre Reihenfolge entlang des Strangs — ist die eigentliche Erbinformation.
-
-> **Merke:** DNA = Doppelhelix aus Nukleotiden; Basen A, T, G, C; A-T und G-C paaren. Die Sequenz der Basen ist die Erbinformation.
-
-**Chargaff-Regeln:** In jeder doppelsträngigen DNA gilt: **%A = %T** und **%G = %C** — eine direkte Folge der komplementären Basenpaarung. Rechenbeispiel: Wenn A = 27 %, dann T = 27 %, und G = C = (100 % − 54 %) / 2 = **23 %**. Purine (A, G: Zweiring-Basen) sind stets gleich häufig wie Pyrimidine (T, C: Einring-Basen).
-
-> **Merke:** **Chargaff-Regel:** A = T und G = C (in Prozent). Wenn A = 27 % → T = 27 %, G = C = 23 %.
+> **Lernziele:** Nach diesem Kapitel kannst du
+> - DNA, Gen, Allel, Locus und Chromosom definieren und voneinander abgrenzen,
+> - die Chargaff-Regel in Rechenaufgaben anwenden,
+> - homologe Chromosomen von Schwesterchromatiden unterscheiden.
 
 ---
 
-## Gen: funktionelle Einheit auf der DNA
+## DNA — Träger der Erbinformation
 
-Ein **Gen** ist ein Abschnitt der DNA, der die Information für ein bestimmtes Merkmal oder Produkt (z. B. ein Protein oder eine RNA) trägt. Gene liegen an festen Orten auf den Chromosomen; dieser Ort heißt **Locus** (Plural: Loci). Beim Menschen gibt es etwa 20.000–25.000 proteincodierende Gene, verteilt auf 46 Chromosomen.
+**DNA** (Desoxyribonukleinsäure) ist das Molekül, das die genetische Information speichert. Sie besteht aus zwei antiparallel gewundenen Strängen — der **Doppelhelix**, 1953 von Watson und Crick auf Basis von Rosalind Franklins Röntgendaten beschrieben. Jeder Strang ist eine Kette aus **Nukleotiden**: jedes Nukleotid enthält den Zucker **Desoxyribose**, ein **Phosphat** und eine von vier **Basen** — Adenin (A), Thymin (T), Guanin (G) oder Cytosin (C). Zucker und Phosphate bilden das außen liegende **Rückgrat**, die Basen zeigen nach innen und paaren sich.
 
-Ein Gen kann in verschiedenen Varianten vorkommen — diese Varianten nennt man **Allele**. Das Gen für die Blütenfarbe bei Erbsen hat zum Beispiel ein Allel für „rot” und ein Allel für „weiß”. Ein diploider Organismus trägt pro Gen zwei Allele (eines von jedem Elternteil), die am gleichen Locus auf den beiden **homologen Chromosomen** sitzen.
+Die Paarung folgt festen Regeln: **A immer mit T** (zwei Wasserstoffbrücken), **G immer mit C** (drei Wasserstoffbrücken). Weil G-C-Paare drei Brücken haben, sind DNA-Abschnitte mit hohem GC-Anteil **thermisch stabiler** — ein Fakt, der in der Molekularbiologie (PCR-Schmelztemperatur) ständig genutzt wird. Die **Sequenz** der Basen — ihre Reihenfolge entlang des Strangs — ist die eigentliche Erbinformation.
 
-> **Merke:** Gen = DNA-Abschnitt für ein Merkmal/Produkt. Locus = Ort des Gens auf dem Chromosom. Allel = eine von mehreren Varianten eines Gens.
+> **Eselsbrücke:** **AT**mest du, **G**rüß deine **C**ousine. A paart mit T, G mit C.
+
+> **Merke:** DNA = Doppelhelix aus Nukleotiden. Basen: A, T, G, C. A-T zwei Wasserstoffbrücken, G-C drei. Die Sequenz ist die Erbinformation.
 
 ---
 
-## Chromosom: verpackte DNA
+## Chargaff-Regel — rechnen mit Basenverhältnissen
 
-Ein **Chromosom** ist ein langer DNA-Faden, der zusammen mit **Histonen** (Verpackungsproteinen) und weiteren Proteinen zu einer kompakten Struktur organisiert ist. So kann die DNA bei der Zellteilung sauber verteilt werden. Beim Menschen liegt die DNA im Zellkern in 46 Chromosomen vor (23 von der Mutter, 23 vom Vater). Vor der Zellteilung wird jede DNA verdoppelt; dann besteht jedes Chromosom aus zwei identischen **Schwesterchromatiden**, die am **Zentromer** zusammenhängen. Zwei Chromosomen, die dasselbe Set von Genen tragen (eins vom Vater, eins von der Mutter), heißen **homologe Chromosomen** — sie sind nicht identisch, aber entsprechen einander (gleiche Loci, oft unterschiedliche Allele).
+Weil A immer mit T und G immer mit C paart, muss in **jeder doppelsträngigen DNA** gelten: **%A = %T** und **%G = %C**. Die Konsequenz: Wenn du **einen** Basenanteil kennst, kannst du die anderen drei berechnen. Das ist die klassische MedAT-Rechenaufgabe.
+
+> **Beispiel:** Eine DNA-Probe enthält 27 % Adenin. Wie viel Guanin?
+>
+> **Lösung:** Chargaff: A = T → **T = 27 %**. A + T = 54 %. Für G und C bleiben zusammen 100 % − 54 % = **46 %**. Weil G = C → **G = 23 %** (und C = 23 %).
+
+Zusätzliche Schlussfolgerung: Die Summe der **Purine** (A + G, Zweiring-Basen) ist immer gleich der Summe der **Pyrimidine** (T + C, Einring-Basen). Beide zusammen 100 %.
+
+> **Merke:** **Chargaff-Regel** %A = %T und %G = %C. Wenn A = 27 % → T = 27 %, G = C = 23 %. Purine (A + G) = Pyrimidine (T + C) = 50 %.
+
+---
+
+## Gen, Allel und Locus — nicht verwechseln
+
+Ein **Gen** ist ein Abschnitt der DNA, der die Information für ein bestimmtes Produkt trägt (ein Protein oder eine funktionale RNA). Beim Menschen gibt es rund **20 000–25 000 proteincodierende Gene**, verteilt auf 46 Chromosomen. Gene liegen an festen Positionen auf den Chromosomen; diese Position heißt **Locus** (Plural: Loci) — wie eine Hausnummer in einer Straße.
+
+Ein Gen kann in verschiedenen **Varianten** vorkommen — diese Varianten heißen **Allele**. Bekanntes Beispiel: Das AB0-Blutgruppengen hat drei Allele (A, B, 0). Ein diploider Organismus trägt pro Gen **zwei Allele** (eines von jedem Elternteil), die am gleichen Locus auf den beiden **homologen Chromosomen** sitzen.
+
+> **Achtung — häufige Fehler:**
+> - **Gen ≠ Allel:** Das Gen für die Blutgruppe ist eins. Die Allele sind die Varianten (A, B, 0). Ein Mensch hat ein Blutgruppen-Gen, aber zwei Allele davon.
+> - **Locus ist der Ort, nicht das Gen:** Zwei Allele desselben Gens liegen am gleichen Locus — auf den beiden homologen Chromosomen.
+> - **Gen ≠ Protein:** Ein Gen enthält die Bauanleitung; das Protein wird daraus über Transkription + Translation hergestellt.
+
+> **Merke:** Gen = DNA-Abschnitt für ein Produkt. Locus = Ort auf dem Chromosom. Allel = Variante eines Gens. Diploide Organismen haben pro Gen zwei Allele.
+
+---
+
+## Chromosom — die verpackte DNA
+
+Ein **Chromosom** ist ein langer DNA-Faden, der zusammen mit **Histonen** (Verpackungsproteinen) und weiteren Proteinen zu einer kompakten Struktur organisiert ist. Diese Verpackung ist nötig, weil 2 Meter DNA in jeden Zellkern von nur 5–10 µm Durchmesser passen müssen. Beim Menschen liegt die DNA im Zellkern in **46 Chromosomen** vor — 44 **Autosomen** (22 Paare) plus 2 **Geschlechtschromosomen** (XX bei Frauen, XY bei Männern). Je 23 Chromosomen stammen von Mutter bzw. Vater.
+
+Vor der Zellteilung wird jede DNA **verdoppelt**. Danach besteht jedes Chromosom aus **zwei identischen Kopien**, den **Schwesterchromatiden**, die am **Zentromer** zusammengehalten werden. Zwei Chromosomen aus einem Paar — eins vom Vater, eins von der Mutter — heißen **homologe Chromosomen**: sie tragen **dieselben Gene an denselben Loci**, aber oft **unterschiedliche Allele**.
 
 | Begriff | Bedeutung |
 |--------|-----------|
 | **DNA** | Molekül mit der Erbinformation (Doppelhelix, Basen A, T, G, C) |
-| **Gen** | DNA-Abschnitt, der für ein Merkmal/ein Produkt codiert |
+| **Gen** | DNA-Abschnitt, der für ein Merkmal/Produkt codiert |
 | **Locus** | Ort eines Gens auf dem Chromosom |
-| **Allel** | Eine konkrete Variante eines Gens (z. B. A oder a) |
-| **Chromosom** | Verpackter DNA-Strang (mit Histonen); Träger vieler Gene |
-| **Homologe Chromosomen** | Paar aus mütterlichem und väterlichem Chromosom mit gleichen Genorten |
+| **Allel** | Eine konkrete Variante eines Gens (z. B. A, B oder 0) |
+| **Chromosom** | Verpackter DNA-Strang mit Histonen; Träger vieler Gene |
+| **Homologe Chromosomen** | Paar aus mütterlichem und väterlichem Chromosom, gleiche Loci, oft verschiedene Allele |
 | **Schwesterchromatiden** | Zwei identische Kopien eines Chromosoms nach Verdopplung, verbunden am Zentromer |
+| **Zentromer** | Einschnürung, die Schwesterchromatiden zusammenhält |
+| **Karyotyp** | Darstellung aller Chromosomen einer Zelle (geordnet nach Größe) |
+
+> **Merke:** 46 Chromosomen beim Menschen = 44 Autosomen + XY/XX. Homologe Chromosomen = Paar (unterschiedliche Herkunft, gleiche Loci). Schwesterchromatiden = identische Kopien nach Replikation.
 
 ---
 
-## Zusammenhang für die Vererbung
+## MedAT-Fokus
 
-> **Merke:** DNA → Gene (mit Allelen) → auf Chromosomen verpackt. Meiose trennt homologe Chromosomen → je ein Allel pro Gen in der Keimzelle.`,
+> **MedAT-Fokus:** Begriffshierarchie DNA → Gen → Allel → Chromosom muss sitzen. Chargaff-Rechenaufgaben kommen fast jedes Jahr. "Homolog vs. Schwesterchromatiden" ist eine klassische Falle in Falsch-Aussagen.
+
+**Zentral prüfungsrelevant:**
+- Chargaff: **%A = %T, %G = %C**, Rechnen mit einem gegebenen Anteil
+- Gen vs. Allel vs. Locus (die drei dürfen nie verwechselt werden)
+- 46 Chromosomen = 44 Autosomen + 2 Geschlechtschromosomen
+- Homolog ≠ identisch · Schwesterchromatiden = identisch
+- A-T zwei H-Brücken, G-C drei → GC-reiche DNA stabiler
+
+**Prüfungsrelevante Zahlen:**
+- Mensch: ~20 000–25 000 Gene auf 46 Chromosomen
+- 23 Chromosomen von jedem Elternteil
+- DNA-Länge pro Zelle ca. 2 m, Zellkern ca. 5–10 µm
+
+## Zusammenfassung
+
+- DNA = Doppelhelix aus Nukleotiden (Zucker, Phosphat, Base A/T/G/C)
+- Basenpaarung: A-T (2 H-Brücken), G-C (3 H-Brücken); Chargaff: %A = %T, %G = %C
+- Gen = DNA-Abschnitt für ein Produkt; **Allel** = Variante eines Gens; **Locus** = Position
+- Chromosom = verpackte DNA mit Histonen; Mensch 46 (23 vom Vater, 23 von der Mutter)
+- **Homologe** Chromosomen = Paar mit gleichen Loci, oft verschiedenen Allelen
+- **Schwesterchromatiden** = identische Kopien nach Replikation, am Zentromer verbunden`,
       lernziele: [
         "Den Zusammenhang zwischen DNA, Gen und Chromosom beschreiben.",
         "Gen und Allel unterscheiden und Locus erklären.",
@@ -3577,77 +3628,196 @@ Die Einheit **centiMorgan (cM)** misst den genetischen Abstand: **1 cM = 1 % Rek
     {
       id: "bio-4-16",
       title: "Zwillingsforschung und Heritabilität",
-      stichworte: ["Eineiige Zwillinge", "Zweieiige Zwillinge", "Konkordanz", "Heritabilität", "Anlage-Umwelt"],
-      content: `Die Zwillingsforschung ist eine klassische Methode, um den Einfluss von **Anlage (Genetik)** und **Umwelt** auf Merkmale zu untersuchen.
+      stichworte: ["Eineiige Zwillinge", "Zweieiige Zwillinge", "Konkordanz", "Heritabilität", "Anlage-Umwelt", "monozygot", "dizygot", "Varianz"],
+      content: `Wie viel von unserem Verhalten ist angeboren, wie viel durch Umwelt geprägt? Die klassische Antwort auf diese jahrhundertealte Frage liefert bis heute die **Zwillingsforschung** — und ihre Logik ist elegant: Wenn eineiige Zwillinge, die genetisch identisch sind, bei einem Merkmal häufiger übereinstimmen als zweieiige mit nur 50 % Genüberschneidung, muss die Genetik eine Rolle spielen. Für den MedAT ist das Thema beliebt, weil es Begriffe (Konkordanz, Heritabilität), Rechnen und Interpretation kombiniert.
 
-## Eineiige vs. zweieiige Zwillinge
+{{DIAGRAM:dna-helix}}
+
+> **Lernziele:** Nach diesem Kapitel kannst du
+> - eineiige und zweieiige Zwillinge nach Entstehung und genetischer Übereinstimmung unterscheiden,
+> - aus Konkordanzraten den Anteil von Anlage und Umwelt ableiten,
+> - die Heritabilität h² mit der Falconer-Formel abschätzen und ihre Grenzen benennen.
+
+---
+
+## Entstehung: ein befruchtetes Ei oder zwei?
+
+**Eineiige (monozygote) Zwillinge** entstehen aus einer einzigen Zygote: ein Spermium befruchtet eine Eizelle, der Embryo teilt sich dann in zwei genetisch identische Hälften — meist zwischen Tag 3 und Tag 8 nach der Befruchtung. Weil beide aus derselben Zygote stammen, haben sie **100 % identische DNA**, gleiches Geschlecht und sehr ähnliches Aussehen. Die Rate liegt stabil bei etwa **3–4 pro 1000 Geburten** und ist weltweit nahezu konstant — ein Hinweis, dass dieser Teilungsprozess kaum durch Umweltfaktoren beeinflusst wird.
+
+**Zweieiige (dizygote) Zwillinge** entstehen aus zwei Eizellen, die im selben Zyklus freigesetzt und von zwei unterschiedlichen Spermien befruchtet werden. Genetisch sind sie wie **normale Geschwister**: im Mittel ~50 % Übereinstimmung, Geschlecht kann verschieden sein. Ihre Häufigkeit variiert stark (3 bis 20 pro 1000 Geburten) und hängt vom Alter der Mutter, von Hormonbehandlungen und von genetischen Faktoren ab.
 
 | Eigenschaft | Eineiige (monozygot) | Zweieiige (dizygot) |
 |-------------|---------------------|---------------------|
 | **Entstehung** | 1 Eizelle + 1 Spermium → Teilung des Embryos | 2 Eizellen + 2 Spermien |
 | **Genetische Übereinstimmung** | **100 %** (identische DNA) | **~50 %** (wie Geschwister) |
 | **Geschlecht** | Immer gleich | Kann verschieden sein |
-| **Häufigkeit** | ~3–4 pro 1000 Geburten | ~8–12 pro 1000 Geburten |
+| **Blutgruppe** | Immer identisch | Kann abweichen |
+| **Häufigkeit** | ~3–4 / 1000 Geburten | ~3–20 / 1000 Geburten (altersabhängig) |
 
-{{DIAGRAM:dna-helix}}
+> **Merke:** EZ = 100 % identische DNA, immer gleiches Geschlecht. ZZ = ~50 % wie normale Geschwister, Geschlecht kann verschieden sein.
+
+> **Eselsbrücke:** **E**in**ei**ig = **ein** Ei. **Z**weie**ii**g = **zwei** Eier. Je mehr "e", desto mehr Eier.
 
 ---
 
-## Konkordanzrate
+## Konkordanzrate: der Grundstein des Vergleichs
 
-Die **Konkordanzrate** gibt an, wie häufig beide Zwillinge dasselbe Merkmal zeigen. Vergleicht man eineiige (EZ) mit zweieiigen (ZZ) Zwillingen:
+Die **Konkordanzrate** gibt an, bei welchem Anteil der Zwillingspaare **beide** das untersuchte Merkmal zeigen. Beispiel: Von 100 EZ-Paaren, bei denen mindestens ein Zwilling eine Erkrankung hat, zeigen 70 Paare das Merkmal bei beiden — Konkordanz 70 %. Vergleicht man diese Rate zwischen EZ und ZZ, lässt sich die genetische Komponente abschätzen.
 
-- **Hohe Konkordanz bei EZ, niedrig bei ZZ** → starker genetischer Einfluss
-- **Ähnliche Konkordanz bei EZ und ZZ** → starker Umwelteinfluss
+Die Interpretation folgt zwei Mustern:
+
+- **EZ-Konkordanz &gt;&gt; ZZ-Konkordanz** → starker genetischer Einfluss (Gene wirken stärker als Umwelt)
+- **EZ-Konkordanz ≈ ZZ-Konkordanz** → Umwelt dominiert (Gene machen wenig Unterschied)
 
 | Merkmal | Konkordanz EZ | Konkordanz ZZ | Interpretation |
 |---------|--------------|--------------|----------------|
-| Blutgruppe | 100 % | 50 % | Rein genetisch |
-| Schizophrenie | ~50 % | ~15 % | Starke genetische Komponente + Umwelt |
-| Masern | ~95 % | ~90 % | Hauptsächlich Umwelt (Exposition) |
+| Blutgruppe (AB0) | 100 % | ~50 % | rein genetisch |
+| Schizophrenie | ~45 % | ~15 % | starke genetische Komponente plus Umwelt |
+| Typ-1-Diabetes | ~50 % | ~10 % | genetisch, aber Umwelt-Trigger (Virus?) |
+| Masern (bei Exposition) | ~95 % | ~95 % | Umwelt (Infektion) dominiert |
+| Körpergröße | ~95 % | ~55 % | überwiegend genetisch |
 
 > **Merke:** Konkordanz EZ >> Konkordanz ZZ → genetische Ursache. Konkordanz EZ ≈ Konkordanz ZZ → Umweltursache.
 
 ---
 
-## Heritabilität
+## Heritabilität: wie viel Varianz ist genetisch?
 
-Die **Heritabilität (h²)** schätzt den Anteil der genetischen Varianz an der Gesamtvarianz eines Merkmals in einer Population. Sie liegt zwischen **0** (rein umweltbedingt) und **1** (rein genetisch).
+Die **Heritabilität h²** ist der Anteil der **Gesamtvarianz** eines Merkmals in einer Population, der auf **genetische Unterschiede** zurückgeht. Sie liegt zwischen 0 und 1 (bzw. 0 % und 100 %):
 
-> **Merke:** Heritabilität beschreibt den genetischen Anteil der **Varianz** in einer Population — nicht den genetischen Anteil bei einer Einzelperson.
+- h² = 0 → gesamte Variation umweltbedingt (z. B. Händigkeit)
+- h² = 1 → gesamte Variation genetisch (z. B. Blutgruppe)
+- h² = 0,8 → 80 % der beobachteten Unterschiede sind genetisch, 20 % umweltbedingt
+
+Aus Zwillingsstudien lässt sich h² mit der **Falconer-Formel** näherungsweise bestimmen:
+
+**h² ≈ 2 · (Konkordanz_EZ − Konkordanz_ZZ)**
+
+> **Beispiel:** Für die Körpergröße findet man EZ-Konkordanz 95 %, ZZ-Konkordanz 55 %.
+>
+> **Lösung:** h² ≈ 2 · (0,95 − 0,55) = **2 · 0,40 = 0,80** → rund 80 % der Variabilität der Körpergröße in dieser Population sind genetisch.
+
+Typische Werte (Mitteleuropa):
+- Körpergröße: h² ≈ 0,80
+- IQ (im Erwachsenenalter): h² ≈ 0,70
+- Big-5-Persönlichkeit: h² ≈ 0,40–0,50
+- Religiosität: h² ≈ 0,30
+
+> **Merke:** Heritabilität beschreibt den genetischen Anteil der **Varianz in einer Population** — nicht den genetischen Anteil **bei einer Einzelperson**. "80 % genetisch" heißt nicht, dass 80 % deiner Körpergröße aus Genen kommt.
 
 {{DIAGRAM:pedigree-analysis}}
 
 ---
 
+## Grenzen und typische Fehler der Zwillingsforschung
+
+Die Methode ist mächtig, aber nicht perfekt:
+
+- **EEA-Annahme** (equal environments assumption): Vorausgesetzt wird, dass EZ und ZZ in gleich ähnlichen Umwelten aufwachsen. In der Realität werden EZ aber oft gleicher behandelt (gleiche Kleidung, Kinderzimmer, Freunde) — das kann die genetische Komponente **überschätzen**.
+- **Epigenetik:** EZ sind genetisch identisch, aber ihre Genregulation (DNA-Methylierung, Histone) kann im Lauf des Lebens auseinanderdriften — das erklärt, warum EZ bei vielen Erkrankungen nicht 100 % konkordant sind.
+- **Heritabilität ist populations- und umweltspezifisch:** In einer Population mit großen Umweltunterschieden sinkt h²; in einer sehr homogenen Umwelt steigt h². Die Zahl ist also keine biologische Konstante.
+
+> **Achtung — häufige Fehler:**
+> - **"80 % genetisch" ≠ "zu 80 % angeboren bei dir":** h² sagt nichts über die Einzelperson, nur über die Varianz in der Population.
+> - **Konkordanz 100 % bei EZ ≠ "rein genetisch":** Auch gemeinsame intrauterine Umwelt und frühe Prägung spielen eine Rolle.
+> - **Höhere Heritabilität ≠ wichtiger:** Ein Merkmal mit h² = 0,1 kann klinisch viel bedeutsamer sein als eines mit h² = 0,9.
+
+---
+
+## MedAT-Fokus
+
+> **MedAT-Fokus:** Rechenfragen zur Falconer-Formel sind beliebt. Lerne das Muster: aus zwei Konkordanzen h² berechnen, dann Interpretation (Anlage/Umwelt). Begriffe EZ/ZZ, Konkordanz, Heritabilität und Varianz müssen sitzen.
+
+**Zentral prüfungsrelevant:**
+- Entstehung EZ (1 Zygote, später Teilung) vs. ZZ (2 Zygoten)
+- Genetische Übereinstimmung 100 % vs. ~50 %
+- Konkordanzvergleich: EZ >> ZZ → genetisch; EZ ≈ ZZ → Umwelt
+- Falconer-Formel: **h² ≈ 2 · (K_EZ − K_ZZ)**
+- Heritabilität bezieht sich auf **Populationsvarianz**, nicht auf Einzelpersonen
+
+**Prüfungsrelevante Zahlen:**
+- EZ: ~3–4 pro 1000 Geburten (weltweit konstant)
+- Blutgruppe EZ 100 % / ZZ 50 % → Modell "rein genetisch"
+- Körpergröße h² ≈ 0,8 · IQ h² ≈ 0,7 · Persönlichkeit h² ≈ 0,4–0,5
+
 ## Zusammenfassung
 
-> **Merke:** EZ = 100 % genetisch identisch. ZZ = 50 %. Konkordanzvergleich trennt Anlage von Umwelt. Heritabilität = genetischer Varianzanteil.`,
+- EZ = eine Zygote, 100 % identische DNA · ZZ = zwei Zygoten, ~50 % wie Geschwister
+- **Konkordanzrate** = Anteil der Paare, bei denen beide das Merkmal zeigen
+- Höhere Konkordanz bei EZ als bei ZZ → genetische Komponente
+- **Heritabilität h²** = Anteil der genetischen Varianz an der Gesamtvarianz einer Population (Falconer: **h² ≈ 2 · (K_EZ − K_ZZ)**)
+- h² gilt für **Populationen, nicht Einzelpersonen** — und hängt von Umweltbedingungen ab.`,
       lernziele: [
-        "Eineiige und zweieiige Zwillinge unterscheiden und ihre Entstehung erklären.",
-        "Konkordanzrate interpretieren und auf Anlage/Umwelt schließen.",
-        "Heritabilität definieren und ihre Aussagekraft einordnen.",
+        "Eineiige und zweieiige Zwillinge nach Entstehung und genetischer Übereinstimmung unterscheiden.",
+        "Konkordanzrate interpretieren und auf Anteil von Anlage vs. Umwelt schließen.",
+        "Heritabilität h² mit der Falconer-Formel abschätzen und ihre Grenzen benennen.",
       ],
       sections: [],
       merksätze: [
-        "EZ: 100 % identische DNA, ZZ: ~50 %. Konkordanzvergleich zeigt genetischen Einfluss.",
-        "Heritabilität = Anteil genetischer Varianz an Gesamtvarianz (0–1).",
+        "EZ: 100 % identische DNA, immer gleiches Geschlecht. ZZ: ~50 % wie normale Geschwister.",
+        "Konkordanz EZ >> ZZ → genetische Ursache. EZ ≈ ZZ → Umweltursache.",
+        "Falconer-Formel: h² ≈ 2 · (K_EZ − K_ZZ). h² gilt für Populationsvarianz, nicht für Einzelpersonen.",
       ],
       selfTest: [
         {
           question: "Für ein Merkmal liegt die Konkordanzrate bei eineiigen Zwillingen bei 90 % und bei zweieiigen bei 40 %. Was lässt sich daraus schließen?",
           options: [
             "Das Merkmal ist rein umweltbedingt.",
-            "Das Merkmal hat eine starke genetische Komponente, aber auch Umwelteinflüsse spielen eine Rolle.",
+            "Das Merkmal hat eine starke genetische Komponente, aber auch Umweltfaktoren spielen eine Rolle.",
             "Das Merkmal wird autosomal-rezessiv vererbt.",
             "Eineiige Zwillinge haben immer dasselbe Merkmal.",
             "Das Merkmal zeigt keine Heritabilität.",
           ],
           correctIndex: 1,
           explanation:
-            "Die deutlich höhere Konkordanz bei EZ (90 %) vs. ZZ (40 %) spricht für eine **starke genetische Komponente**. Da die EZ-Konkordanz aber nicht 100 % beträgt, spielen auch **Umweltfaktoren** eine Rolle (sonst wären EZ immer konkordant).",
+            "Die deutlich höhere Konkordanz bei EZ (90 %) vs. ZZ (40 %) spricht für eine **starke genetische Komponente**. Da die EZ-Konkordanz aber nicht 100 % beträgt, spielen auch **Umweltfaktoren** eine Rolle (sonst wären EZ immer konkordant). Mit der Falconer-Formel: h² ≈ 2 · (0,90 − 0,40) = 1,0 — hier würde die Formel sogar überschätzen (deckeln bei 1).",
           difficulty: 2,
           tags: ["zwillingsforschung", "konkordanz", "heritabilität"],
+        },
+        {
+          question: "Für die Körpergröße gilt in einer Population eine EZ-Konkordanz von 95 % und eine ZZ-Konkordanz von 55 %. Wie hoch ist die Heritabilität h² nach Falconer?",
+          options: [
+            "0,20",
+            "0,40",
+            "0,55",
+            "0,80",
+            "1,00",
+          ],
+          correctIndex: 3,
+          explanation:
+            "Falconer-Formel: **h² ≈ 2 · (K_EZ − K_ZZ) = 2 · (0,95 − 0,55) = 2 · 0,40 = 0,80**. Rund 80 % der Varianz der Körpergröße in dieser Population lassen sich durch genetische Unterschiede erklären. Beachte: Diese Aussage gilt für die **Population als Ganze**, nicht für eine einzelne Person.",
+          difficulty: 2,
+          tags: ["heritabilität", "falconer", "rechenaufgabe"],
+        },
+        {
+          question: "Welche Aussage zur Heritabilität ist FALSCH?",
+          options: [
+            "Die Heritabilität liegt zwischen 0 und 1.",
+            "Eine Heritabilität von 0,8 bedeutet, dass 80 % der Körpergröße einer einzelnen Person genetisch bedingt sind.",
+            "Die Heritabilität hängt von den Umweltbedingungen der untersuchten Population ab.",
+            "Höhere Umweltvariabilität in der Population senkt die Heritabilität.",
+            "Die Heritabilität beschreibt den genetischen Anteil an der Gesamtvarianz einer Population.",
+          ],
+          correctIndex: 1,
+          explanation:
+            "Die FALSCHE Aussage ist die zweite. Die Heritabilität beschreibt **immer die Varianz in einer Population**, nicht den genetischen Anteil bei einer Einzelperson. Eine Heritabilität von 0,8 bedeutet: 80 % der **Unterschiede** in der Körpergröße **zwischen Personen** in der Population gehen auf genetische Unterschiede zurück. Über eine einzelne Person sagt die Zahl nichts aus.",
+          difficulty: 3,
+          tags: ["heritabilität", "varianz", "falsch-aussage"],
+        },
+        {
+          question: "Welche Aussage über eineiige (monozygote) Zwillinge trifft NICHT zu?",
+          options: [
+            "Sie entstehen aus einer einzigen befruchteten Eizelle, die sich teilt.",
+            "Sie haben immer dasselbe Geschlecht.",
+            "Ihre genetische Übereinstimmung beträgt 100 %.",
+            "Ihre Konkordanz für Masern ist deutlich höher als die von zweieiigen Zwillingen.",
+            "Ihre Häufigkeit ist weltweit relativ konstant (~3–4 pro 1000 Geburten).",
+          ],
+          correctIndex: 3,
+          explanation:
+            "Die NICHT zutreffende Aussage: Für Infektionserkrankungen wie Masern ist die Konkordanz bei EZ und ZZ **nahezu gleich** (~95 %), weil die Ansteckung umweltbedingt (gemeinsamer Haushalt) ist — nicht genetisch. Alle anderen Aussagen stimmen: EZ entstehen aus einer Zygote mit späterer Teilung, haben identische DNA (100 %), immer gleiches Geschlecht, und ihre Häufigkeit ist weltweit konstant im Gegensatz zu ZZ.",
+          difficulty: 2,
+          tags: ["eineiig", "zweieiig", "konkordanz"],
         },
       ],
     },
