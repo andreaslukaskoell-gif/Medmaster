@@ -410,7 +410,7 @@ export default function Dashboard() {
                     to: "/bms",
                     icon: BookOpen,
                     title: "BMS-Fragen üben",
-                    desc: "5.000+ Fragen zu Bio, Chemie, Physik & Mathe",
+                    desc: "6.000+ Fragen zu Bio, Chemie, Physik & Mathe",
                     accent: "var(--accent-bio)",
                     target: "bms",
                   },

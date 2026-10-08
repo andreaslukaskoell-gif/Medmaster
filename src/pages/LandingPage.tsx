@@ -448,9 +448,9 @@ export default function LandingPage() {
             <p className="text-xs sm:text-sm font-medium text-white/90 tracking-wide flex items-center justify-center gap-2 sm:gap-3">
               <Clock className="w-3.5 h-3.5" />
               <span>
-                MedAT am 3. Juli — noch{" "}
+                MedAT am 2. Juli 2027 — noch{" "}
                 <span className="font-bold">
-                  {Math.max(0, Math.ceil((new Date("2026-07-03").getTime() - Date.now()) / 86400000))} Tage
+                  {Math.max(0, Math.ceil((new Date("2027-07-02").getTime() - Date.now()) / 86400000))} Tage
                 </span>
               </span>
             </p>
@@ -573,12 +573,17 @@ export default function LandingPage() {
             {(
               [
                 {
-                  counter: 5000,
+                  counter: 6000,
                   suffix: "+",
                   label: "BMS-Fragen",
                   sub: "mit detaillierten Erklärungen",
                 },
-                { text: "∞", label: "KFF-Aufgaben", sub: "alle 5 Untertests" },
+                {
+                  counter: 3000,
+                  suffix: "+",
+                  label: "KFF-Aufgaben",
+                  sub: "plus Trainings-Generator",
+                },
                 {
                   counter: 100,
                   suffix: "%",

@@ -9,7 +9,7 @@ import { trackEvent } from "@/lib/analyticsTracker";
 import { startCheckout } from "@/lib/stripe";
 
 const PREMIUM_FEATURES = [
-  { icon: BookOpen, label: "5.000+ BMS-Fragen" },
+  { icon: BookOpen, label: "6.000+ BMS-Fragen" },
   { icon: Brain, label: "Schwachstellen-Analyse" },
   { icon: Target, label: "Testsimulation" },
   { icon: BarChart3, label: "Lernplan & Prognose" },

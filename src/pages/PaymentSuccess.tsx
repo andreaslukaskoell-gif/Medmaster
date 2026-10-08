@@ -124,7 +124,7 @@ export default function PaymentSuccess() {
                 ? "Deine Zahlung war erfolgreich. Dein Account wird gerade freigeschaltet — dauert nur einen Moment."
                 : activationFailed
                   ? "Deine Zahlung ist eingegangen, aber die automatische Freischaltung dauert noch. Bitte lade die Seite in ein paar Minuten neu. Falls es dann noch nicht klappt, schreib uns an support@medmaster.at — wir schalten dich sofort frei."
-                  : "Deine Zahlung war erfolgreich. Du hast jetzt vollen Zugang zu allen Features — 5.000+ BMS-Fragen, Simulationen, Lernplan und mehr."}
+                  : "Deine Zahlung war erfolgreich. Du hast jetzt vollen Zugang zu allen Features — 6.000+ BMS-Fragen, Simulationen, Lernplan und mehr."}
             </p>
           </div>
 

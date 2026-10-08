@@ -1262,7 +1262,7 @@ export default function FragenTrainer() {
                     {totalAnswered} Fragen beantwortet — {avgPct >= 70 ? "du bist auf einem guten Weg!" : "mit gezieltem Training wird das noch besser."}
                   </p>
                   <p className="text-sm text-[var(--muted)]">
-                    Schalte alle 5.000+ BMS-Fragen, Schwachstellen-Analyse und Testsimulation frei.
+                    Schalte alle 6.000+ BMS-Fragen, Schwachstellen-Analyse und Testsimulation frei.
                   </p>
                 </div>
               </Paywall>

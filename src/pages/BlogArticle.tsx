@@ -101,7 +101,7 @@ function ShareRow({ slug, title }: { slug: string; title: string }) {
 
 const TOPIC_PRODUCT_LINKS: Record<string, { label: string; to: string; desc: string }[]> = {
   BMS: [
-    { label: "BMS-Übungsfragen", to: "/medat-uebungsfragen", desc: "5.000+ Fragen mit Erklärungen" },
+    { label: "BMS-Übungsfragen", to: "/medat-uebungsfragen", desc: "6.000+ Fragen mit Erklärungen" },
     { label: "BMS-Stichwortliste 2026", to: "/bms-stichwortliste-2026", desc: "Alle offiziellen Themen" },
     { label: "MedAT-Punkterechner", to: "/medat-punkte-rechner", desc: "Ergebnis berechnen" },
   ],
@@ -346,7 +346,7 @@ export default function BlogArticle() {
         {/* Bottom CTA */}
         <div className="mt-10 p-6 sm:p-8 rounded-xl border border-[var(--accent)]/20 bg-[var(--accent)]/5 text-center">
           <h2 className="text-lg font-bold text-[var(--text-primary)] mb-2">
-            Teste dein Wissen — 5.000+ BMS-Fragen warten
+            Teste dein Wissen — 6.000+ BMS-Fragen warten
           </h2>
           <p className="text-sm text-[var(--text-secondary)] mb-4 max-w-md mx-auto">
             Alle 4 MedAT-Bereiche in einer Plattform. Adaptiver Lernplan, 3.000+ KFF-Übungen,

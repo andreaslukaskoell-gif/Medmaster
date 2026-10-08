@@ -74,7 +74,7 @@ function SampleQuestion({ onSignupClick }: { onSignupClick: () => void }) {
         <span className="text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full bg-[var(--accent)]/8 text-[var(--accent)]">
           {q.subject}
         </span>
-        <span className="text-xs text-[var(--muted)] tracking-wide">1 von 5.000+</span>
+        <span className="text-xs text-[var(--muted)] tracking-wide">1 von 6.000+</span>
       </div>
       <p className="text-lg font-semibold text-[var(--text-primary)] leading-relaxed mb-7">
         {q.text}
@@ -172,9 +172,9 @@ function SampleQuestion({ onSignupClick }: { onSignupClick: () => void }) {
 
 export default function PaidLandingBMS() {
   usePageMeta({
-    title: "BMS lernen für den MedAT 2027 — 5.000+ Fragen, alle 4 Fächer",
+    title: "BMS lernen für den MedAT 2027 — 6.000+ Fragen, alle 4 Fächer",
     description:
-      "BMS-Vorbereitung für den MedAT 2027: 5.000+ Fragen in Biologie, Chemie, Physik & Mathematik. 218 Lerneinheiten nach offizieller Stichwortliste. Einmalig €29,90.",
+      "BMS-Vorbereitung für den MedAT 2027: 6.000+ Fragen in Biologie, Chemie, Physik & Mathematik. 218 Lerneinheiten nach offizieller Stichwortliste. Einmalig €29,90.",
     canonical: "https://medmaster.at/lp/bms",
     ogImage: "https://medmaster.at/og-image.png",
   });
@@ -396,7 +396,7 @@ export default function PaidLandingBMS() {
         <div className="max-w-4xl mx-auto px-5 sm:px-8">
           <motion.div {...fade} className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8">
             {[
-              { value: "5.000+", label: "BMS-Fragen", sub: "mit Erklärungen" },
+              { value: "6.000+", label: "BMS-Fragen", sub: "mit Erklärungen" },
               { value: "218", label: "Lerneinheiten", sub: "offizielle Stichwortliste 2026" },
               { value: "4", label: "Fächer", sub: "Bio, Chemie, Physik, Mathe" },
               { value: "100 %", label: "Stichwortliste 2026", sub: "vollständig abgedeckt" },
@@ -461,7 +461,7 @@ export default function PaidLandingBMS() {
                 Systematisch mit MedMaster
               </h3>
               <ul className="space-y-3 text-sm text-[var(--text-secondary)] leading-relaxed">
-                <li>5.000+ Fragen im echten MedAT-Format (A-E)</li>
+                <li>6.000+ Fragen im echten MedAT-Format (A-E)</li>
                 <li>Jedes Stichwort der offiziellen Liste abgedeckt</li>
                 <li>Schwächen werden automatisch erkannt und trainiert</li>
                 <li>Fortschritt pro Fach und Kapitel sichtbar</li>
@@ -633,7 +633,7 @@ export default function PaidLandingBMS() {
             </h3>
             <p className="text-sm text-[var(--text-secondary)] mb-8 max-w-md mx-auto leading-relaxed">
               {countdown.expired
-                ? "Einmalige Zahlung. Voller Zugang zu allen 5.000+ BMS-Fragen, 218 Lerneinheiten und der Prüfungssimulation."
+                ? "Einmalige Zahlung. Voller Zugang zu allen 6.000+ BMS-Fragen, 218 Lerneinheiten und der Prüfungssimulation."
                 : "Wer jetzt startet, lernt bis April gratis — und hat einen Vorsprung gegenüber allen, die noch warten."}
             </p>
             <GoogleBtn
@@ -661,7 +661,7 @@ export default function PaidLandingBMS() {
           <motion.div {...fade} className="flex flex-wrap justify-center gap-3">
             {(
               [
-                { icon: BookOpen, text: "5.000+ BMS-Fragen" },
+                { icon: BookOpen, text: "6.000+ BMS-Fragen" },
                 { icon: Star, text: "218 Lerneinheiten" },
                 { icon: Zap, text: "Stichwortliste 2026" },
                 { icon: Shield, text: "Kein Abo" },
@@ -726,7 +726,7 @@ export default function PaidLandingBMS() {
             Null Prozent dem Zufall überlassen.
           </h2>
           <p className="text-white/60 text-base mb-10 max-w-md mx-auto leading-relaxed">
-            5.000+ BMS-Fragen. 4 Fächer. 218 Lerneinheiten. Adaptives Lernsystem. Kein Abo.
+            6.000+ BMS-Fragen. 4 Fächer. 218 Lerneinheiten. Adaptives Lernsystem. Kein Abo.
           </p>
           <GoogleBtn
             label="Jetzt kostenlos starten"

@@ -347,7 +347,7 @@ const SUBJECTS: Subject[] = [
 
 export default function StichwortlistePublic() {
   usePageMeta({
-    title: "BMS Stichwortliste 2026 — Offizielle MedAT Themen",
+    title: "BMS Stichwortliste 2027 — Offizielle MedAT Themen",
     description:
       "Alle offiziellen BMS-Stichworte für den MedAT 2027. Biologie, Chemie, Physik, Mathematik — mit Lernfortschritt und Übungsfragen.",
     canonical: "https://medmaster.at/bms-stichwortliste-2026",
@@ -423,7 +423,7 @@ export default function StichwortlistePublic() {
             Offiziell — MedAT 2027
           </div>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[var(--text-primary)] mb-4 tracking-tight">
-            BMS Stichwortliste 2026
+            BMS Stichwortliste 2027
           </h1>
           <p className="text-lg text-[var(--muted)] max-w-2xl mx-auto leading-relaxed">
             Die vollständige offizielle Themenliste für den BMS-Teil des MedAT 2027. Alle Stichworte
@@ -513,7 +513,7 @@ export default function StichwortlistePublic() {
           style={{ background: `linear-gradient(135deg, ${NAVY}, #163286)` }}
         >
           <h2 className="text-2xl sm:text-3xl font-bold mb-3">
-            Alle Stichworte mit 5.000+ Fragen üben
+            Alle Stichworte mit 6.000+ Fragen üben
           </h2>
           <p className="text-blue-100 mb-8 max-w-xl mx-auto">
             MedMaster deckt alle offiziellen BMS-Stichworte ab. KI-adaptives Lernen, Fortschritt pro

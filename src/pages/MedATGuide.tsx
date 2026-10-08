@@ -200,7 +200,7 @@ const SECTIONS: { id: string; title: string; content: ContentBlock[] }[] = [
       "Eine strukturierte Vorbereitung über 3–6 Monate ist der Schlüssel zum Erfolg:",
       {
         bold: "6 Monate vorher:",
-        rest: " BMS-Theorie lernen. Kapitel für Kapitel durcharbeiten. MedMaster bietet 174 Lerneinheiten mit Erklärungen und Diagrammen. Parallel leichte BMS-Fragen üben.",
+        rest: " BMS-Theorie lernen. Kapitel für Kapitel durcharbeiten. MedMaster bietet 130 Lerneinheiten mit Erklärungen und Diagrammen. Parallel leichte BMS-Fragen üben.",
       },
       {
         bold: "3 Monate vorher:",
@@ -422,7 +422,7 @@ export default function MedATGuide() {
             Bereit für die MedAT-Vorbereitung?
           </h2>
           <p className="text-[var(--muted)] mb-6 max-w-md mx-auto">
-            Starte jetzt mit 5.000+ Übungsfragen, KI-adaptivem Lernen und Prüfungssimulationen —
+            Starte jetzt mit 6.000+ Übungsfragen, KI-adaptivem Lernen und Prüfungssimulationen —
             komplett kostenlos.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">

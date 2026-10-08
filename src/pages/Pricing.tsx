@@ -13,23 +13,23 @@ import { useReferralReward } from "@/hooks/useReferralReward";
 import { ReferralWidget } from "@/components/shared/ReferralWidget";
 
 const features = [
-  "5.000+ BMS-Fragen mit Erklärungen",
-  "Alle 174 Lerneinheiten (Theorie)",
+  "6.000+ BMS-Fragen mit Erklärungen",
+  "Alle 130 Lerneinheiten (Theorie)",
   "3.000+ KFF-Übungen plus Trainings-Generator",
   "10 TV-Textsets mit MC-Fragen",
-  "230+ SEK-Aufgaben",
+  "100 SEK-Aufgaben",
   "Realistische Prüfungssimulation im MedAT-Format",
   "Adaptives Lernsystem mit Schwächenanalyse",
   "Spaced Repetition & Schwachstellen-Trainer",
   "Prüfungstag-Prognose",
   "Personalisierter Lernplan",
-  "Lebenslanger Zugang zu allen Updates",
+  "Voller Zugang zu allen Updates",
 ];
 
 export default function Pricing() {
   usePageMeta({
     title: "Preise — MedAT Vorbereitung",
-    description: "MedMaster kostet einmalig €29,90 — kein Abo. 5.000+ BMS-Fragen, alle KFF-Untertests, Prüfungssimulation und personalisierter Lernplan. Kostenloser Starter-Zugang verfügbar.",
+    description: "MedMaster kostet einmalig €29,90 — kein Abo. 6.000+ BMS-Fragen, alle KFF-Untertests, Prüfungssimulation und personalisierter Lernplan. Kostenloser Starter-Zugang verfügbar.",
     canonical: "https://medmaster.at/preise",
     ogImage: "https://medmaster.at/og-image.png",
   });
@@ -211,11 +211,11 @@ export default function Pricing() {
       <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-[var(--muted)] py-2">
         <div className="flex items-center gap-1.5">
           <Check className="w-4 h-4 text-emerald-500" />
-          <span>5.230+ BMS-Fragen</span>
+          <span>6.000+ BMS-Fragen</span>
         </div>
         <div className="flex items-center gap-1.5">
           <Check className="w-4 h-4 text-emerald-500" />
-          <span>174 Lerneinheiten</span>
+          <span>130 Lerneinheiten</span>
         </div>
         <div className="flex items-center gap-1.5">
           <Check className="w-4 h-4 text-emerald-500" />
@@ -261,11 +261,11 @@ export default function Pricing() {
             </thead>
             <tbody className="divide-y divide-[var(--border)]">
               {([
-                ["BMS-Fragen", "50 / Fach", "5.230+"],
-                ["Lerneinheiten (Theorie)", "5 / Fach", "Alle 174"],
+                ["BMS-Fragen", "50 / Fach", "6.000+"],
+                ["Lerneinheiten (Theorie)", "5 / Fach", "Alle 130"],
                 ["KFF-Übungen", "20 / Subtest", "Unbegrenzt"],
                 ["TV-Textsets", "2", "Alle 10"],
-                ["SEK-Aufgaben", "5 / Subtest", "230+"],
+                ["SEK-Aufgaben", "5 / Subtest", "100"],
                 ["Prüfungssimulation", "—", "Unbegrenzt"],
                 ["Lernplan & Prognose", "—", "Voll"],
                 ["Schwachstellen-Trainer", "—", "Voll"],

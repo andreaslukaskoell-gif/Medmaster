@@ -68,7 +68,7 @@ const FAQ_ITEMS: { q: string; a: string; category: string }[] = [
   {
     category: "Vorbereitung",
     q: "Welche Bücher brauche ich neben MedMaster?",
-    a: "MedMaster deckt den gesamten BMS-Stoff mit 174 Lerneinheiten ab. Ergänzend empfehlen viele ein Biologie-Lehrbuch (z.B. Campbell) und die offizielle Stichwortliste. Für KFF und SEK reicht MedMaster als alleiniges Tool.",
+    a: "MedMaster deckt den gesamten BMS-Stoff mit 130 Lerneinheiten ab. Ergänzend empfehlen viele ein Biologie-Lehrbuch (z.B. Campbell) und die offizielle Stichwortliste. Für KFF und SEK reicht MedMaster als alleiniges Tool.",
   },
   {
     category: "Vorbereitung",
@@ -260,7 +260,7 @@ export default function FAQPage() {
             <span className="text-sm font-semibold text-[var(--text-primary)]">
               Kostenlos starten
             </span>
-            <span className="text-xs text-[var(--muted)]">5.000+ Fragen</span>
+            <span className="text-xs text-[var(--muted)]">6.000+ Fragen</span>
           </Link>
           <Link
             to="/lp/medat"

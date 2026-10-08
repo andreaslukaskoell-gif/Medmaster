@@ -484,7 +484,7 @@ export default function BMSDemo() {
   usePageMeta({
     title: "MedAT Übungsfragen kostenlos",
     description:
-      "5.000+ MedAT BMS-Übungsfragen und KFF-Aufgaben kostenlos üben — Biologie, Chemie, Physik, Mathematik, Zahlenfolgen, Implikationen und Wortflüssigkeit. Ohne Anmeldung.",
+      "6.000+ MedAT BMS-Übungsfragen und KFF-Aufgaben kostenlos üben — Biologie, Chemie, Physik, Mathematik, Zahlenfolgen, Implikationen und Wortflüssigkeit. Ohne Anmeldung.",
     canonical: "https://medmaster.at/medat-uebungsfragen",
   });
   const [activeTab, setActiveTab] = useState<string>("biologie");
@@ -552,7 +552,7 @@ export default function BMSDemo() {
         {/* ── BMS Section ──────────────────────────────── */}
         <section>
           <SectionHeader
-            title="BMS \u2014 Basiskenntnistest"
+            title="BMS — Basiskenntnistest"
             subtitle="20 Fragen aus Biologie, Chemie, Physik und Mathematik"
             color="bg-blue-500"
           />
@@ -602,7 +602,7 @@ export default function BMSDemo() {
         <section>
           <SectionHeader
             title="Zahlenfolgen"
-            subtitle="Erkenne das Muster und erg\u00e4nze die fehlenden Zahlen"
+            subtitle="Erkenne das Muster und ergänze die fehlenden Zahlen"
             color="bg-amber-500"
           />
           <div className="space-y-4">
@@ -612,10 +612,10 @@ export default function BMSDemo() {
           </div>
         </section>
 
-        {/* ── KFF: Wortfl\u00fcssigkeit ──────────────────── */}
+        {/* ── KFF: Wortflüssigkeit ──────────────────── */}
         <section>
           <SectionHeader
-            title="Wortfl\u00fcssigkeit"
+            title="Wortflüssigkeit"
             subtitle="Finde das Wort und bestimme den Anfangsbuchstaben"
             color="bg-teal-500"
           />

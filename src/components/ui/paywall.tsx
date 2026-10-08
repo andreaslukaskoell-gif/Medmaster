@@ -13,7 +13,7 @@ function daysUntilMedAT(): number {
 }
 
 const PREMIUM_HIGHLIGHTS = [
-  { icon: BookOpen, text: "5.000+ BMS-Fragen mit Erklärungen" },
+  { icon: BookOpen, text: "6.000+ BMS-Fragen mit Erklärungen" },
   { icon: Brain, text: "Schwachstellen-Analyse & Lernplan" },
   { icon: Target, text: "Realistische Prüfungssimulation" },
   { icon: BarChart3, text: "Prognose & Fortschritts-Tracking" },

@@ -132,9 +132,9 @@ function ScoreBar({
 
 export default function MedATPunkterechner() {
   usePageMeta({
-    title: "MedAT Punkte-Rechner 2026 — MedAT Punkte berechnen",
+    title: "MedAT Punkte-Rechner 2027 — MedAT Punkte berechnen",
     description:
-      "MedAT Punkte berechnen: BMS, KFF, TV und SEK eingeben und sofort deinen gewichteten MedAT-Score sehen. Kostenloser MedAT Punkteschlüssel 2026 mit Standort-Einschätzung für Wien, Graz, Innsbruck und Linz.",
+      "MedAT Punkte berechnen: BMS, KFF, TV und SEK eingeben und sofort deinen gewichteten MedAT-Score sehen. Kostenloser MedAT Punkteschlüssel 2027 mit Standort-Einschätzung für Wien, Graz, Innsbruck und Linz.",
     canonical: "https://medmaster.at/medat-punkte-rechner",
     ogImage: "https://medmaster.at/og-image.png",
     ogType: "website",
@@ -170,7 +170,7 @@ export default function MedATPunkterechner() {
     const schema = {
       "@context": "https://schema.org",
       "@type": "WebApplication",
-      name: "MedAT Punkte-Rechner 2026",
+      name: "MedAT Punkte-Rechner 2027",
       description:
         "Berechne deinen MedAT-Score: BMS (40%), KFF (40%), TV (10%) und SEK (10%) gewichtet.",
       url: "https://medmaster.at/medat-punkte-rechner",
@@ -219,7 +219,7 @@ export default function MedATPunkterechner() {
             MedAT 2027
           </div>
           <h1 className="heading-glow text-2xl sm:text-[3rem] sm:leading-tight font-extrabold text-[var(--text-primary)] mb-4">
-            MedAT Punkte-Rechner 2026
+            MedAT Punkte-Rechner 2027
           </h1>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-xl mx-auto">
             Berechne deinen MedAT-Score und finde heraus, ob es für deinen Wunschort reicht.
@@ -443,7 +443,7 @@ export default function MedATPunkterechner() {
             Verbessere deinen Score mit MedMaster
           </h2>
           <p className="text-gray-600 dark:text-gray-400 mb-6 max-w-md mx-auto">
-            Mit 5.000+ Übungsfragen, adaptivem KI-Training und realistischen Prüfungssimulationen.
+            Mit 6.000+ Übungsfragen, adaptivem KI-Training und realistischen Prüfungssimulationen.
           </p>
           <Link
             to="/login"

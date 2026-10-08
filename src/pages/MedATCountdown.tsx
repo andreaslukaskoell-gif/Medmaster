@@ -132,7 +132,7 @@ export default function MedATCountdown() {
     {
       icon: CalendarDays,
       title: "Anmeldung",
-      value: "Marz\u2013April 2026",
+      value: "März–April 2027",
       detail: "Online-Registrierung auf medizinstudieren.at",
     },
     {
@@ -279,7 +279,7 @@ export default function MedATCountdown() {
             </h3>
             <p className="text-sm text-[var(--text-secondary)] mb-8 max-w-md mx-auto leading-relaxed">
               6.000+ BMS-Fragen, 3.000+ KFF-Aufgaben, Testsimulationen und adaptives Lernsystem
-              \u2014 alles in einer App.
+              — alles in einer App.
             </p>
 
             <button
@@ -313,7 +313,7 @@ export default function MedATCountdown() {
               <Link to="/login" className="underline hover:text-[var(--text-secondary)]">
                 Mit E-Mail anmelden
               </Link>
-              {" \u00b7 "}Keine Kreditkarte{" \u00b7 "}Jederzeit k\u00fcndbar
+              {" \u00b7 "}Keine Kreditkarte{" \u00b7 "}Jederzeit kündbar
             </p>
           </motion.div>
         </div>
