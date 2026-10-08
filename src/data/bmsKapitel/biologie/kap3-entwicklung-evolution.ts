@@ -1661,7 +1661,7 @@ Bevor ein Spermium die Eizelle durchdringen kann, muss es **kapazitiert** sein. 
 
 1. **Ankunft des Spermiums:** Das kapazitierte Spermium bindet an die **Zona pellucida** (eine glycoproteinreiche Hülle um die Eizelle). Das Protein **ZP3** auf der Zona löst die Akrosomreaktion aus.
 
-2. **Akrosomreaktion (beim Spermium):** Das **Akrosom** ist ein Organell im Kopf des Spermiums; es enthält Enzyme (z. B. **Akrosin** (Protease, verdaut Zona pellucida), **Hyaluronidase** (spaltet Hyaluronsäure der Eizellhülle)). Bei Kontakt mit der Zona pellucida fusioniert das Akrosom mit der Spermienmembran und setzt diese Enzyme frei. Sie verdauen die Zona pellucida, sodass das Spermium zur Eizellmembran vordringen kann.
+2. **Akrosomreaktion (beim Spermium):** Das **Akrosom** ist ein Organell im Kopf des Spermiums; es enthält Enzyme — **Hyaluronidase** löst die Hyaluronsäure der **Corona radiata** (Kumuluszellen-Hülle), **Akrosin** (Protease) verdaut dann die **Zona pellucida**. Bei Kontakt mit der Zona fusioniert das Akrosom mit der Spermienmembran und setzt diese Enzyme frei, sodass das Spermium zur Eizellmembran vordringen kann.
 
 3. **Fusion und Kortikalreaktion (in der Eizelle):** Sobald die Membranen von Spermium und Eizelle fusionieren, steigt in der Eizelle die Calcium-Konzentration. Das löst die **Kortikalreaktion** aus: **Kortikale Granula** (Vesikel unter der Eizellmembran) entleeren ihren Inhalt in den **perivitellinen Spalt** (Raum zwischen Eizelle und Zona pellucida). Dadurch wird die Zona pellucida chemisch verändert (**Zona-Reaktion**) und für weitere Spermien undurchdringbar — **Polyspermie-Block**. Eine Befruchtung durch mehrere Spermien (Polyspermie) würde zu Triploidie und meist zum Absterben des Embryos führen.
 
