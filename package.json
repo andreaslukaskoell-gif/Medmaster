@@ -9,6 +9,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:local": "NODE_OPTIONS=--max-old-space-size=8192 vite build",
     "build:seo": "vite build && node scripts/prerender.mjs",
     "typecheck": "tsc -b",
     "lint": "eslint .",

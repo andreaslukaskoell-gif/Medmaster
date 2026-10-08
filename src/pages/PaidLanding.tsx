@@ -174,9 +174,9 @@ function SampleQuestion({ onSignupClick }: { onSignupClick: () => void }) {
 
 export default function PaidLanding() {
   usePageMeta({
-    title: "MedAT 2026 Vorbereitung — tausende BMS-Fragen, alle 4 Bereiche",
+    title: "MedAT 2027 Vorbereitung — tausende BMS-Fragen, alle 4 Bereiche",
     description:
-      "Bestehe den MedAT 2026: Tausende BMS-Fragen mit Erklärungen, KFF-Aufgaben mit Generatoren, Prüfungssimulation. Alle 4 Bereiche, einmalig €29,90.",
+      "Bestehe den MedAT 2027: Tausende BMS-Fragen mit Erklärungen, KFF-Aufgaben mit Generatoren, Prüfungssimulation. Alle 4 Bereiche, einmalig €29,90.",
     canonical: "https://medmaster.at/lp/medat",
     ogImage: "https://medmaster.at/og-image.png",
   });
@@ -218,7 +218,7 @@ export default function PaidLanding() {
       mainEntity: [
         {
           "@type": "Question",
-          name: "Ist das aktuell für den MedAT 2026?",
+          name: "Ist das aktuell für den MedAT 2027?",
           acceptedAnswer: {
             "@type": "Answer",
             text: "Ja, vollständig. Alle Inhalte basieren auf der offiziellen Stichwortliste 2026 der Medizinischen Universitäten.",
@@ -338,7 +338,7 @@ export default function PaidLanding() {
       {!countdown.expired && (
         <div className="text-center py-2.5 sm:py-3 px-4" style={{ backgroundColor: NAVY }}>
           <p className="text-xs sm:text-sm font-medium text-white/90 tracking-wide flex items-center justify-center gap-2 sm:gap-3">
-            <span>MedAT 2026 in</span>
+            <span>MedAT 2027 in</span>
             <span className="inline-flex gap-1 sm:gap-1.5 font-mono tabular-nums text-xs sm:text-sm">
               <span className="bg-white/15 rounded px-1.5 py-0.5">{countdown.days} Tagen</span>
             </span>
@@ -355,7 +355,7 @@ export default function PaidLanding() {
             className="text-xs sm:text-sm font-semibold tracking-widest uppercase mb-4 sm:mb-6"
             style={{ color: NAVY }}
           >
-            MedAT 2026 Vorbereitung
+            MedAT 2027 Vorbereitung
           </motion.p>
           <motion.h1
             {...fade}
@@ -642,12 +642,12 @@ export default function PaidLanding() {
           <motion.div {...fade} className="divide-y divide-[var(--border)]">
             {[
               {
-                q: "Ist das aktuell für den MedAT 2026?",
+                q: "Ist das aktuell für den MedAT 2027?",
                 a: "Ja, vollständig. Alle Inhalte basieren auf der offiziellen Stichwortliste 2026 der Medizinischen Universitäten. Unsere Lerneinheiten decken jedes einzelne Stichwort ab. Sämtliche BMS-Fragen sind im originalen MedAT-Format (A–E, genau eine richtige Antwort) und werden laufend aktualisiert.",
               },
               {
                 q: "Gibt es ein Abo?",
-                a: "Nein. MedMaster kostet einmalig \u20ac29,90 \u2014 kein Abo, keine automatische Verl\u00e4ngerung, keine K\u00fcndigungsfrist. Du beh\u00e4ltst vollen Zugang bis zum MedAT 2026.",
+                a: "Nein. MedMaster kostet einmalig \u20ac29,90 \u2014 kein Abo, keine automatische Verl\u00e4ngerung, keine K\u00fcndigungsfrist. Du erh\u00e4ltst vollen Zugang zu allen Features. Aktuelle Preise siehe /preise.",
               },
               {
                 q: "Reicht MedMaster als Vorbereitung?",

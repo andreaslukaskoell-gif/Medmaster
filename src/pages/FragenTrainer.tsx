@@ -1131,7 +1131,7 @@ function ResultsScreen({
 
 export default function FragenTrainer() {
   usePageTitle("Fragen-Trainer");
-  const { isLocked, getLimit } = usePermissions();
+  const { isLocked: _isLocked, getLimit } = usePermissions();
   const questionsPerSubjectLimit = getLimit("bms_questions_per_subject" as keyof FeatureLimits);
   const quizResults = useStore((s) => s.quizResults ?? []);
   const location = useLocation();

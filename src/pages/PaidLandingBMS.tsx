@@ -172,9 +172,9 @@ function SampleQuestion({ onSignupClick }: { onSignupClick: () => void }) {
 
 export default function PaidLandingBMS() {
   usePageMeta({
-    title: "BMS lernen für den MedAT 2026 — 5.000+ Fragen, alle 4 Fächer",
+    title: "BMS lernen für den MedAT 2027 — 5.000+ Fragen, alle 4 Fächer",
     description:
-      "BMS-Vorbereitung für den MedAT 2026: 5.000+ Fragen in Biologie, Chemie, Physik & Mathematik. 218 Lerneinheiten nach offizieller Stichwortliste. Einmalig €29,90.",
+      "BMS-Vorbereitung für den MedAT 2027: 5.000+ Fragen in Biologie, Chemie, Physik & Mathematik. 218 Lerneinheiten nach offizieller Stichwortliste. Einmalig €29,90.",
     canonical: "https://medmaster.at/lp/bms",
     ogImage: "https://medmaster.at/og-image.png",
   });
@@ -321,7 +321,7 @@ export default function PaidLandingBMS() {
       {!countdown.expired && (
         <div className="text-center py-3 px-4" style={{ backgroundColor: NAVY }}>
           <p className="text-sm font-medium text-white/90 tracking-wide flex items-center justify-center gap-3">
-            <span>MedAT 2026 in</span>
+            <span>MedAT 2027 in</span>
             <span className="inline-flex gap-1.5 font-mono tabular-nums">
               <span className="bg-white/15 rounded px-1.5 py-0.5">{countdown.days} Tagen</span>
               <span className="bg-white/15 rounded px-1.5 py-0.5 hidden sm:inline">
@@ -340,7 +340,7 @@ export default function PaidLandingBMS() {
             className="text-sm font-semibold tracking-widest uppercase mb-6"
             style={{ color: NAVY }}
           >
-            BMS-Vorbereitung MedAT 2026
+            BMS-Vorbereitung MedAT 2027
           </motion.p>
           <motion.h1
             {...fade}
@@ -708,7 +708,7 @@ export default function PaidLandingBMS() {
               },
               {
                 q: "Gibt es ein Abo?",
-                a: "Nein. Einmalig \u20ac29,90, kein Abo, keine automatische Verl\u00e4ngerung. Du beh\u00e4ltst vollen Zugang bis zum MedAT 2026. Account jederzeit l\u00f6schbar in den Einstellungen.",
+                a: "Nein. Einmalig \u20ac29,90, kein Abo, keine automatische Verl\u00e4ngerung. Du erh\u00e4ltst vollen Zugang zu allen Features. Account jederzeit l\u00f6schbar in den Einstellungen.",
               },
             ].map((faq) => (
               <FAQItem key={faq.q} q={faq.q} a={faq.a} />

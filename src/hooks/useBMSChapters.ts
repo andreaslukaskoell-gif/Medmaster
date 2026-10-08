@@ -61,7 +61,7 @@ export function useBMSChapters(selectedSubject: string | null, completedChapters
     }, 5000);
 
     loadBMSChaptersSWR(
-      (chapters, source) => {
+      (chapters, _source) => {
         resolved = true;
         clearTimeout(fallbackTimer);
         setSupabaseChapters(chapters);

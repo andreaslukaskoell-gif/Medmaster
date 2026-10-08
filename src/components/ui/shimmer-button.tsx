@@ -17,7 +17,7 @@ type ShimmerButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 export function ShimmerButton({
   children,
   shimmerColor = "rgba(255,255,255,0.15)",
-  shimmerSize = "0.1em",
+  shimmerSize: _shimmerSize = "0.1em",
   background = "linear-gradient(135deg, #1b3ea7 0%, #2563eb 100%)",
   borderRadius = "1rem",
   className,

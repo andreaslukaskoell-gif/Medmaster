@@ -18,7 +18,7 @@ type Props = {
 };
 
 export function OfficialInstructionCard({
-  title = "Offizielle Instruktion (MedAT 2026)",
+  title = "Offizielle Instruktion (MedAT 2027)",
   instruction,
   defaultCollapsed = true,
   variant = "default",

@@ -89,6 +89,7 @@ const UeberUns = lazyRetry(() => import("@/pages/UeberUns"));
 const MedATGuide = lazyRetry(() => import("@/pages/MedATGuide"));
 const MedATPunkterechner = lazyRetry(() => import("@/pages/MedATPunkterechner"));
 const StichwortlistePublic = lazyRetry(() => import("@/pages/StichwortlistePublic"));
+const MedATPlattformVergleich = lazyRetry(() => import("@/pages/MedATPlattformVergleich"));
 const KFFDemo = lazyRetry(() => import("@/pages/KFFDemo"));
 const AnalyticsDashboard = lazyRetry(() => import("@/pages/AnalyticsDashboard"));
 const BlogIndex = lazyRetry(() => import("@/pages/BlogIndex"));
@@ -272,6 +273,8 @@ export default function App() {
             <Route path="/medat-guide" element={<MedATGuide />} />
             <Route path="/medat-punkte-rechner" element={<MedATPunkterechner />} />
             <Route path="/bms-stichwortliste-2026" element={<StichwortlistePublic />} />
+            <Route path="/medat-plattform-vergleich" element={<MedATPlattformVergleich />} />
+            <Route path="/vergleich" element={<Navigate to="/medat-plattform-vergleich" replace />} />
             <Route path="/medat-kff-ueben" element={<KFFDemo />} />
             <Route path="/blog" element={<BlogIndex />} />
             <Route path="/blog/:slug" element={<BlogArticle />} />

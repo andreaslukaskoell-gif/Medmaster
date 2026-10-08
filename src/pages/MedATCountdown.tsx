@@ -7,7 +7,9 @@ import { usePageMeta } from "@/hooks/usePageMeta";
 import { Logo } from "@/components/brand/Logo";
 
 const NAVY = "#1b3ea7";
-const MEDAT_DATE = new Date("2026-07-04T08:00:00+02:00");
+// MedAT 2027 — exaktes Datum wird typischerweise im März bekannt gegeben.
+// Vorläufig: erster Freitag im Juli (historisches Muster).
+const MEDAT_DATE = new Date("2027-07-02T08:00:00+02:00");
 
 /* ── Countdown hook ── */
 function useCountdown(target: Date) {
@@ -30,11 +32,11 @@ function useEventSchema() {
     const data = {
       "@context": "https://schema.org",
       "@type": "Event",
-      name: "MedAT 2026",
+      name: "MedAT 2027",
       description:
         "Aufnahmetest Humanmedizin und Zahnmedizin an den Medizinischen Universitaeten in Oesterreich.",
-      startDate: "2026-07-04",
-      endDate: "2026-07-04",
+      startDate: "2027-07-02",
+      endDate: "2027-07-02",
       eventStatus: "https://schema.org/EventScheduled",
       eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
       location: [
@@ -104,9 +106,9 @@ export default function MedATCountdown() {
   const [googleError, setGoogleError] = useState("");
 
   usePageMeta({
-    title: `MedAT 2026 Countdown \u2014 Noch ${days} Tage bis zum Test`,
+    title: `MedAT 2027 Countdown \u2014 Noch ${days} Tage bis zum Test`,
     description:
-      "Wann ist der MedAT 2026? Live-Countdown zum MedAT-Termin am 4. Juli 2026. Alle Fakten zu Anmeldung, Testorten und Vorbereitung.",
+      "Wann ist der MedAT 2027? Live-Countdown zum n\u00e4chsten MedAT-Termin (Anfang Juli 2027). Alle Fakten zu Anmeldung, Testorten und Vorbereitung.",
     canonical: "https://medmaster.at/medat-countdown",
     ogImage: "https://medmaster.at/og-image.png",
   });
@@ -178,7 +180,7 @@ export default function MedATCountdown() {
             className="text-sm font-semibold tracking-widest uppercase mb-6"
             style={{ color: NAVY }}
           >
-            MedAT 2026 Termin
+            MedAT 2027 Termin
           </motion.p>
 
           <motion.h1
@@ -186,7 +188,7 @@ export default function MedATCountdown() {
             transition={{ ...fade.transition, delay: 0.1 }}
             className="text-5xl font-extrabold text-[var(--text-primary)] leading-tight tracking-tight mb-4"
           >
-            Countdown zum MedAT 2026
+            Countdown zum MedAT 2027
           </motion.h1>
 
           <motion.p
@@ -194,8 +196,9 @@ export default function MedATCountdown() {
             transition={{ ...fade.transition, delay: 0.15 }}
             className="text-lg text-[var(--text-secondary)] mb-4"
           >
-            Der MedAT 2026 findet voraussichtlich am{" "}
-            <strong className="text-[var(--text-primary)]">4. Juli 2026</strong> statt.
+            Der MedAT 2027 findet voraussichtlich am{" "}
+            <strong className="text-[var(--text-primary)]">2. Juli 2027</strong> statt. Das exakte
+            Datum wird typischerweise im März von den Medizin-Unis bekannt gegeben.
           </motion.p>
 
           <motion.p
@@ -214,7 +217,7 @@ export default function MedATCountdown() {
           >
             {expired ? (
               <p className="text-2xl font-bold text-[var(--text-primary)]">
-                Der MedAT 2026 hat bereits stattgefunden.
+                Der MedAT 2027 hat bereits stattgefunden.
               </p>
             ) : (
               <>
@@ -235,7 +238,7 @@ export default function MedATCountdown() {
             {...fade}
             className="text-3xl font-bold text-[var(--text-primary)] text-center mb-14"
           >
-            Die wichtigsten Fakten zum MedAT 2026
+            Die wichtigsten Fakten zum MedAT 2027
           </motion.h2>
           <motion.div {...fade} className="grid grid-cols-2 gap-6">
             {facts.map((f) => (
@@ -275,7 +278,7 @@ export default function MedATCountdown() {
               Starte jetzt mit der Vorbereitung
             </h3>
             <p className="text-sm text-[var(--text-secondary)] mb-8 max-w-md mx-auto leading-relaxed">
-              5.000+ BMS-Fragen, 10.000+ KFF-Aufgaben, Testsimulationen und adaptives Lernsystem
+              6.000+ BMS-Fragen, 3.000+ KFF-Aufgaben, Testsimulationen und adaptives Lernsystem
               \u2014 alles in einer App.
             </p>
 

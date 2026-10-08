@@ -1701,6 +1701,8 @@ Oxidation und Reduktion sind die grundlegendsten Elektronenübertragungsreaktion
 
 Das Teilchen, das Elektronen **abgibt** und dabei oxidiert wird, heißt **Reduktionsmittel** (RM), weil es das andere Teilchen reduziert. Das Teilchen, das Elektronen **aufnimmt** und dabei reduziert wird, heißt **Oxidationsmittel** (OM), weil es das andere Teilchen oxidiert. Im klassischen Beispiel Zn + Cu2+ -> Zn2+ + Cu ist Zink das Reduktionsmittel (gibt 2e- ab) und Cu2+ das Oxidationsmittel (nimmt 2e- auf).
 
+{{DIAGRAM:galvanic-cell}}
+
 ## Oxidationszahlen (Oxidationsstufen)
 
 Um in einer Reaktion zu erkennen, welches Atom oxidiert und welches reduziert wird, brauchen wir ein formales Buchführungssystem: die Oxidationszahlen. Oxidationszahlen (OZ) sind formale, hypothetische Ladungen, die einem Atom zugewiesen werden, als wären alle Bindungen vollständig ionisch.

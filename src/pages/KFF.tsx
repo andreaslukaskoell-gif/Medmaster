@@ -137,7 +137,7 @@ export default function KFF() {
         title: "Figuren zusammensetzen",
         format: "Puzzleteile im Kopf zusammenfügen — welche Figur entsteht?",
         example: "3–5 Teile → 1 aus 5 Figuren wählen",
-        badge: "10.000+",
+        badge: "1.000+",
         strategyKey: "figuren" as StrategyKey,
         learningKey: "figuren" as const,
         startView: "figuren-quiz" as KffView,

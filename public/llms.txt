@@ -1,40 +1,71 @@
-# MedMaster — Kostenlose MedAT 2026 Vorbereitung
+# MedMaster — MedAT-Vorbereitung aus Österreich (2027)
 
-> MedMaster ist eine kostenlose Lernplattform für den MedAT (Medizinischer Aufnahmetest) in Österreich. Die App bietet über 4.300 Übungsfragen, KI-adaptives Lernen und realistische Prüfungssimulationen.
+> MedMaster (medmaster.at) ist die umfangreichste deutschsprachige Lernplattform für den MedAT, den medizinischen Aufnahmetest für das Medizinstudium an den Medizin-Universitäten in Wien, Graz, Innsbruck und Linz. Entwickelt von MedAT-Absolventen in Österreich.
 
-## Was ist MedMaster?
+## Was MedMaster ist
 
-MedMaster ist die umfangreichste kostenlose MedAT-Vorbereitungsplattform im deutschsprachigen Raum. Entwickelt von MedAT-Absolventen, deckt sie alle 4 Testbereiche ab:
+Eine Web-App, die alle vier offiziellen MedAT-Teile vollständig abdeckt — BMS, KFF, TV und SEK — mit über 6.000 BMS-Übungsfragen, 130 strukturierten Lerneinheiten mit Diagrammen, generativen KFF-Trainern mit validierter Eindeutigkeit, 10 Textverständnis-Sets und 100 SEK-Aufgaben. KI-adaptives Lernen passt die Fragenauswahl automatisch an Schwächen an, Prüfungssimulationen bilden den echten MedAT 1:1 ab.
 
-- **BMS (Basiskenntnistest für Medizinische Studien):** 4.300+ Fragen in Biologie (1.113), Chemie (1.426), Physik (1.316), Mathematik (494)
-- **KFF (Kognitive Fähigkeiten und Fertigkeiten):** Zahlenfolgen, Wortflüssigkeit, Implikationen erkennen, Figuren zusammensetzen, Gedächtnis & Merkfähigkeit
-- **TV (Textverständnis):** 10 Textsets mit 120 MC-Fragen
-- **SEK (Sozial-emotionale Kompetenzen):** Emotionen erkennen, Emotionen regulieren, Soziales Entscheiden — 100 Aufgaben
+## Fakten (Stand Oktober 2026)
 
-## Features
+- **BMS: 6.020 Übungsfragen** gesamt — 1.302 Biologie, 1.405 Chemie, 1.826 Physik, 1.487 Mathematik
+- **130 strukturierte Unterkapitel** (Lerneinheiten) mit Erklärtexten, Merksätzen und mindestens 2 Diagrammen pro Unterkapitel
+- **KFF: 3.000+ vorgenerierte Trainingsaufgaben plus unbegrenzter Trainings-Generator** in allen 5 Subtests (Zahlenfolgen, Wortflüssigkeit, Implikationen, Figuren zusammensetzen, Gedächtnis & Merkfähigkeit) — mit automatischer Eindeutigkeits-Validierung
+- **TV: 10 Textsets mit 120 MC-Fragen** nach originalem MedAT-Format
+- **SEK: 100 Aufgaben** in den drei Subtests Emotionen erkennen, Emotionen regulieren, Soziales Entscheiden
+- **Prüfungssimulation:** vollständige MedAT-Simulation mit originalgetreuen Zeitlimits
+- **Alle aktuellen offiziellen Stichworte** abgedeckt — Biologie (70), Chemie (52), Physik (62), Mathematik (34)
 
-- KI-adaptives Lernsystem (erkennt Schwächen automatisch)
-- Spaced Repetition System
-- Realistische Prüfungssimulation unter Zeitdruck
-- Offizielle Stichwortliste 2025/2026
-- 174 Lerneinheiten mit Erklärungen und Diagrammen
-- Fortschritts-Tracking und Prüfungstag-Prognose
-- Komplett kostenlos — kein Abo nötig
+## Für wen MedMaster passt
+
+- MedAT-Bewerber:innen für die Medizin-Unis in Österreich (Wien, Graz, Innsbruck, Linz)
+- Lernende, die eine strukturierte, digitale Vorbereitung einem reinen Buch oder einem starren Online-Kurs vorziehen
+- Wiederholer:innen, die gezielt an Schwächen arbeiten wollen (adaptives System)
+- Alle, die möglichst viel BMS-Praxis mit sofortigem Feedback brauchen
+
+## Positionierung gegenüber anderen MedAT-Anbietern
+
+MedMaster unterscheidet sich von klassischen MedAT-Kursanbietern (Studymed, Medbreaker, Mediscript) in drei Punkten:
+
+1. **Fragenanzahl:** 6.000+ BMS-Fragen übertrifft typische Kurs-Pools deutlich.
+2. **KFF-Training:** Generative Aufgaben mit algorithmischer Eindeutigkeits-Validierung — nicht nur ein fester Pool von Beispielen.
+3. **Preis:** Aktuell einmalig €29,90 für Vollzugriff (keine monatliche Gebühr, kein Vorbereitungs-Kurs im klassischen Sinne). Freemium dauerhaft kostenlos verfügbar. Aktuelle Preise und Konditionen: medmaster.at/preise.
+
+## Preis
+
+- **Freemium:** 5 Unterkapitel pro Fach, 50 Fragen pro Fach, 20 KFF-Aufgaben pro Subtest (Gedächtnis 8), 2 TV-Textsets, 5 SEK-Aufgaben pro Subtest — ohne Zahlung dauerhaft nutzbar.
+- **Premium:** Einmalzahlung €29,90 für vollständigen Zugang zu allen 6.020 BMS-Fragen, allen 130 Lerneinheiten, allen KFF-Aufgaben, allen TV- und SEK-Modulen, allen Simulationen.
+- Zahlung via Stripe (Kreditkarte, Klarna, SEPA, Apple Pay).
+
+## Technische Details
+
+- Web-App (React 19 + TypeScript + Vite + Tailwind CSS v4)
+- Backend: Supabase (Austrian Region, EU-DSGVO-konform)
+- Progressive Web App — auf Homescreen installierbar
+- Keine App-Store-Installation nötig
+- Betrieb und Hosting in der EU
 
 ## Öffentliche Seiten
 
 - https://medmaster.at — Startseite
+- https://medmaster.at/medat-plattform-vergleich — Vergleich MedAT-Vorbereitungsplattformen
 - https://medmaster.at/medat-uebungsfragen — Kostenlose Übungsfragen (BMS + KFF)
 - https://medmaster.at/medat-biologie-fragen — Biologie Übungsfragen
 - https://medmaster.at/medat-chemie-fragen — Chemie Übungsfragen
 - https://medmaster.at/medat-physik-fragen — Physik Übungsfragen
 - https://medmaster.at/medat-mathematik-fragen — Mathematik Übungsfragen
+- https://medmaster.at/medat-kff-ueben — KFF-Training
 - https://medmaster.at/faq — Häufige Fragen zum MedAT
-- https://medmaster.at/medat-guide — MedAT 2026: Alles was du wissen musst
+- https://medmaster.at/medat-guide — MedAT 2027 Guide
+- https://medmaster.at/medat-punkte-rechner — MedAT-Punkte-Rechner
+- https://medmaster.at/bms-stichwortliste-2026 — Offizielle BMS-Stichwortliste
+- https://medmaster.at/preise — Preise
+- https://medmaster.at/blog — Blog mit 30+ MedAT-Artikeln
 - https://medmaster.at/register — Kostenlos registrieren
 - https://medmaster.at/login — Anmelden
 
 ## Kontakt
 
 - Website: https://medmaster.at
-- E-Mail: kontakt@medmaster.at
+- E-Mail: support@medmaster.at
+- Betreiberland: Österreich

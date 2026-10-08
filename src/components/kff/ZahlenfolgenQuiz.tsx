@@ -10,7 +10,7 @@ import { stripMarkdownAsterisks } from "@/utils/formatExplanation";
 import { ExamTimer } from "@/components/shared/ExamTimer";
 import { type ExamMode, EXAM_CONFIG } from "@/data/examConfig";
 import { generateSequenceTaskSet, type SequenceTask } from "@/data/kffZahlenfolgenMedAT";
-import { filterValidSequenceTasks, logPoolWarning } from "@/data/kffValidation";
+import { filterValidSequenceTasks } from "@/data/kffValidation";
 import { getTasksForUserWithWeakness, taskToData } from "@/lib/taskDb";
 import { useStore } from "@/store/useStore";
 import { useSessionTimer } from "@/hooks/useSessionTimer";

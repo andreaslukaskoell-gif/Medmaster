@@ -60,8 +60,6 @@ function shuffle<T>(arr: T[]): T[] {
   return a;
 }
 
-// eslint-disable-next-line
-
 export default function SEK() {
   usePageTitle("SEK – Sozial-emotionale Kompetenzen");
   const { isMobile } = useViewportMode();

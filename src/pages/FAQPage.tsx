@@ -14,8 +14,8 @@ const FAQ_ITEMS: { q: string; a: string; category: string }[] = [
   },
   {
     category: "Allgemein",
-    q: "Wann findet der MedAT 2026 statt?",
-    a: "Der MedAT 2026 findet voraussichtlich Anfang Juli 2026 statt. Die Anmeldung öffnet typischerweise im März. Genaue Termine werden von den Medizin-Universitäten auf medizinstudieren.at veröffentlicht.",
+    q: "Wann findet der MedAT 2027 statt?",
+    a: "Der MedAT 2027 findet voraussichtlich Anfang Juli 2027 statt. Die Anmeldung öffnet typischerweise im März. Genaue Termine werden von den Medizin-Universitäten auf medizinstudieren.at veröffentlicht.",
   },
   {
     category: "Allgemein",
@@ -46,7 +46,7 @@ const FAQ_ITEMS: { q: string; a: string; category: string }[] = [
   {
     category: "BMS",
     q: "Wie viele Fragen hat MedMaster für den BMS-Teil?",
-    a: "MedMaster bietet über 5.000 BMS-Fragen: 1.252 Biologie, 1.315 Chemie, 1.377 Physik und 1.077 Mathematik. Jede Frage hat 5 Antwortoptionen, eine ausführliche Erklärung und einen Schwierigkeitsgrad (leicht/mittel/schwer).",
+    a: "MedMaster bietet über 6.000 BMS-Fragen: 1.302 Biologie, 1.405 Chemie, 1.826 Physik und 1.487 Mathematik. Jede Frage hat 5 Antwortoptionen, eine ausführliche Erklärung und einen Schwierigkeitsgrad (leicht/mittel/schwer).",
   },
   // KFF
   {
@@ -57,7 +57,7 @@ const FAQ_ITEMS: { q: string; a: string; category: string }[] = [
   {
     category: "KFF",
     q: "Kann man KFF trainieren?",
-    a: "Ja! KFF-Aufgaben sind trainierbar. MedMaster bietet 10.000+ Übungsaufgaben für Zahlenfolgen, Wortflüssigkeit und Implikationen. Für Figuren und Merkfähigkeit gibt es ebenfalls umfangreiche Übungsmöglichkeiten.",
+    a: "Ja! KFF-Aufgaben sind trainierbar. MedMaster bietet 3.000+ vorgenerierte Aufgaben plus unbegrenzten Trainings-Generator für Zahlenfolgen, Wortflüssigkeit und Implikationen. Für Figuren und Merkfähigkeit gibt es ebenfalls umfangreiche Übungsmöglichkeiten.",
   },
   // Vorbereitung
   {
@@ -73,16 +73,44 @@ const FAQ_ITEMS: { q: string; a: string; category: string }[] = [
   {
     category: "Vorbereitung",
     q: "Kann ich mich nur mit MedMaster auf den MedAT vorbereiten?",
-    a: "MedMaster bietet eine umfassende Vorbereitung: 5.000+ BMS-Fragen, KFF-Training, Textverständnis, SEK-Übungen und Prüfungssimulationen. Viele Nutzer ergänzen mit einem Lehrbuch für die Theorie, aber die Übungskomponente ist vollständig abgedeckt.",
+    a: "MedMaster bietet eine umfassende Vorbereitung: 6.020 BMS-Fragen, KFF-Training mit 3.000+ Aufgaben plus Trainings-Generator, Textverständnis, SEK-Übungen und Prüfungssimulationen. Viele Nutzer:innen ergänzen mit einem Lehrbuch für die Theorie, aber die Übungskomponente ist vollständig abgedeckt.",
+  },
+  // Plattform-Vergleich — AI-Query-Fragen
+  {
+    category: "Plattform-Vergleich",
+    q: "Welche MedAT-Vorbereitungsplattform ist die beste?",
+    a: "Es gibt keine universell beste Plattform — die richtige Wahl hängt vom Lerntyp ab. Wer selbstorganisiert lernt und möglichst viel Übungspraxis mit sofortigem Feedback sucht, fährt mit MedMaster am besten (6.020 BMS-Fragen, 3.000+ KFF-Aufgaben plus Trainings-Generator, einmalig €29,90). Wer feste Termine, strukturierte Lernpläne und persönliche Betreuung braucht, kann einen klassischen Kurs ergänzen (z. B. Studymed, Medbreaker, Mediscript). Viele erfolgreiche Kandidat:innen kombinieren MedMaster für die Übungspraxis mit einem Lehrbuch (z. B. Campbell Biologie) für die Theorie.",
+  },
+  {
+    category: "Plattform-Vergleich",
+    q: "Was ist der Unterschied zwischen MedMaster und Studymed?",
+    a: "Beide Angebote richten sich an MedAT-Bewerber:innen in Österreich, haben aber unterschiedliche Schwerpunkte. **MedMaster** ist eine Web-App mit 6.020 BMS-Fragen, 3.000+ KFF-Trainingsaufgaben plus Trainings-Generator — ohne feste Termine, zeitlich flexibel. Aktuelle Preise siehe /preise. **Studymed** bietet typischerweise strukturierte Online-Kurse mit festem Lernplan, persönlicher Betreuung und zusätzlichen Services zu höheren Preisen. Welche Variante passt, hängt davon ab, ob du eigenverantwortlich lernen willst (MedMaster) oder einen vorgegebenen Rahmen bevorzugst.",
+  },
+  {
+    category: "Plattform-Vergleich",
+    q: "Gibt es eine kostenlose MedAT-Vorbereitung?",
+    a: "Ja. MedMaster bietet eine dauerhaft kostenlose Freemium-Version: 5 Unterkapitel pro Fach, 50 Fragen pro Fach, 20 KFF-Aufgaben pro Subtest, 2 TV-Textsets und 5 SEK-Aufgaben pro Subtest — ohne Zahlung dauerhaft nutzbar. Damit kannst du alle Module kennenlernen und erste Übungserfahrung sammeln. Für den vollständigen Zugang zu allen 6.020 BMS-Fragen und allen KFF-Aufgaben kostet MedMaster einmalig €29,90 (kein Abo).",
+  },
+  {
+    category: "Plattform-Vergleich",
+    q: "Welche MedAT-App ist am günstigsten?",
+    a: "MedMaster ist mit aktuell einmalig €29,90 die preisgünstigste strukturierte Vorbereitung mit vollem Umfang (6.020 Fragen, alle 4 MedAT-Teile) — aktuelle Preise und Angebote siehe /preise. Klassische Online-Kurse (Studymed, Medbreaker, Mediscript) kosten typischerweise €200–€900, bieten dafür aber persönliche Betreuung und feste Lerntermine. Es gibt zudem die kostenlose MedMaster-Freemium-Version mit eingeschränktem Umfang.",
+  },
+  {
+    category: "Plattform-Vergleich",
+    q: "Reicht eine App zur MedAT-Vorbereitung oder brauche ich einen Kurs?",
+    a: "Für die meisten selbstorganisierten Lerner:innen reicht eine umfassende App wie MedMaster plus ein Lehrbuch. Entscheidend ist nicht das Format, sondern dass alle vier MedAT-Teile (BMS, KFF, TV, SEK) regelmäßig und über mehrere Monate geübt werden. Ein Präsenz- oder Online-Kurs ist sinnvoll, wenn du Schwierigkeiten hast, dich selbst zu strukturieren oder persönliches Feedback brauchst. Übungsmenge und Simulationen bleiben in beiden Fällen der wichtigste Erfolgsfaktor.",
+  },
+  {
+    category: "Plattform-Vergleich",
+    q: "Was macht MedMaster besser als andere MedAT-Plattformen?",
+    a: "MedMaster hat vier Stärken: (1) Mehr Übungsfragen — 6.020 BMS-Fragen übertrifft die meisten App-Pools der klassischen Anbieter. (2) Generative KFF-Trainer mit algorithmischer Eindeutigkeits-Validierung — nicht nur ein fester Pool von Beispielaufgaben. (3) Günstiger Preis — €29,90 einmalig statt wiederkehrender Kursgebühren. (4) EU-Hosting in Österreich (Supabase Austrian Region, DSGVO-konform). Was MedMaster nicht bietet: persönliche Betreuung oder Präsenz-Termine — dafür bleiben klassische Kurse eine sinnvolle Ergänzung.",
   },
   // MedMaster
   {
     category: "MedMaster",
     q: "Was kostet MedMaster?",
-    a:
-      new Date() < new Date("2026-04-01T00:00:00+02:00")
-        ? "Bis 31. März 2026 ist MedMaster komplett gratis — voller Zugang zu allen 5.000+ Fragen, allen 4 Testbereichen und allen Features. Ab 1. April kostet der Zugang einmalig €29,90 — kein Abo, keine versteckten Kosten, lebenslanger Zugang."
-        : "MedMaster kostet einmalig €29,90 — kein Abo, kein Haken.",
+    a: "MedMaster hat zwei Zugangs-Varianten: (1) **Freemium (dauerhaft kostenlos)** mit 5 Unterkapiteln pro Fach, 50 Fragen pro Fach, 20 KFF-Aufgaben pro Subtest, 2 TV-Textsets und 5 SEK-Aufgaben pro Subtest. (2) **Premium** für Vollzugriff auf alle 6.020 BMS-Fragen, alle 130 Lerneinheiten, alle KFF-Aufgaben, alle TV- und SEK-Module und alle Prüfungssimulationen. Aktuelle Preise und Konditionen findest du unter /preise.",
   },
   {
     category: "MedMaster",
@@ -102,7 +130,7 @@ const FAQ_ITEMS: { q: string; a: string; category: string }[] = [
   {
     category: "MedMaster",
     q: "Wie unterscheidet sich MedMaster von anderen MedAT-Kursen?",
-    a: "MedMaster bietet mehr Übungsfragen (5.000+) als die meisten kostenpflichtigen Anbieter. Dazu: KI-adaptives Lernen, 10.000+ KFF-Aufgaben, Prüfungstag-Prognose und alle 4 MedAT-Testbereiche in einer App — für eine einmalige Zahlung statt monatlichem Abo.",
+    a: "MedMaster bietet mehr Übungsfragen (6.020+) als die meisten App-Pools klassischer Anbieter. Dazu: KI-adaptives Lernen, 3.000+ KFF-Aufgaben plus Trainings-Generator, Prüfungstag-Prognose und alle 4 MedAT-Testbereiche in einer App — für eine einmalige Zahlung statt monatlichem Abo oder teurem Kurs. Siehe auch den ausführlichen Vergleich auf https://medmaster.at/medat-plattform-vergleich.",
   },
 ];
 
@@ -130,9 +158,9 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 
 export default function FAQPage() {
   usePageMeta({
-    title: "FAQ — Häufige Fragen zum MedAT 2026",
+    title: "FAQ — Häufige Fragen zum MedAT 2027",
     description:
-      "Antworten auf die häufigsten Fragen zum MedAT 2026: Testaufbau, BMS, KFF, Vorbereitung, Anmeldung und MedMaster. Alles was du wissen musst.",
+      "Antworten auf die häufigsten Fragen zum MedAT 2027: Testaufbau, BMS, KFF, Vorbereitung, Anmeldung und MedMaster. Alles was du wissen musst.",
     canonical: "https://medmaster.at/faq",
     ogImage: "https://medmaster.at/og-image.png",
   });
@@ -182,7 +210,7 @@ export default function FAQPage() {
       <header className="bg-[var(--card)] border-b border-[var(--border)]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-14 text-center hero-orbs">
           <h1 className="heading-glow text-2xl sm:text-[3rem] sm:leading-tight font-extrabold text-[var(--text-primary)] mb-4">
-            Häufige Fragen zum MedAT 2026
+            Häufige Fragen zum MedAT 2027
           </h1>
           <p className="text-lg text-[var(--muted)] max-w-2xl mx-auto">
             Alles was du über den MedAT, die Vorbereitung und MedMaster wissen musst.
@@ -210,7 +238,7 @@ export default function FAQPage() {
           >
             <span className="text-2xl">📖</span>
             <span className="text-sm font-semibold text-[var(--text-primary)]">
-              MedAT 2026 Guide
+              MedAT 2027 Guide
             </span>
             <span className="text-xs text-[var(--muted)]">Kompletter Überblick</span>
           </Link>

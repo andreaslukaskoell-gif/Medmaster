@@ -379,32 +379,6 @@ async function fetchDashboard(): Promise<DashboardData> {
 
 // ── Visual Components ──
 
-function MetricCard({
-  label,
-  value,
-  sub,
-  color,
-}: {
-  label: string;
-  value: string | number;
-  sub?: string;
-  color: string;
-}) {
-  return (
-    <div className="bg-[var(--surface)] rounded-xl p-5 border border-[var(--border)] relative overflow-hidden">
-      <div
-        className="absolute top-0 left-0 right-0 h-1 rounded-t-xl"
-        style={{ background: color }}
-      />
-      <div className="text-xs font-medium text-[var(--muted)] mb-2 uppercase tracking-wide">
-        {label}
-      </div>
-      <div className="text-3xl font-extrabold text-[var(--text-primary)] tabular-nums">{value}</div>
-      {sub && <div className="text-xs text-[var(--muted)] mt-1">{sub}</div>}
-    </div>
-  );
-}
-
 function SparkArea({ data, height = 120 }: { data: DailyStat[]; height?: number }) {
   if (data.length < 2)
     return <p className="text-sm text-[var(--muted)] py-8 text-center">Noch keine Daten</p>;
@@ -1037,7 +1011,6 @@ export default function AnalyticsDashboard() {
           const recent = data.dailyUserActivity.slice(-7);
           const todayActivity = data.dailyUserActivity[data.dailyUserActivity.length - 1];
           const totalSignups7d = recent.reduce((s, d) => s + d.signups, 0);
-          const totalLogins7d = recent.reduce((s, d) => s + d.logins, 0);
           const avgSession7d = recent.filter((d) => d.avg_session_seconds > 0);
           const avgSessionDuration =
             avgSession7d.length > 0

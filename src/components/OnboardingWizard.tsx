@@ -117,7 +117,7 @@ export function OnboardingWizard() {
 
           {/* Trust pills */}
           <div className="flex flex-wrap justify-center gap-2">
-            {["5.000+ Fragen", "10.000+ KFF-Aufgaben", "Alle 4 Bereiche"].map((badge) => (
+            {["6.000+ Fragen", "3.000+ KFF-Aufgaben", "Alle 4 Bereiche"].map((badge) => (
               <span
                 key={badge}
                 className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium bg-[var(--accent)]/8 text-[var(--accent)] ring-1 ring-[var(--accent)]/20"

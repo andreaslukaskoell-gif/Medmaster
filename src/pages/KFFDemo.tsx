@@ -69,7 +69,7 @@ const FAQ = [
   },
   {
     q: "Kann man KFF trainieren?",
-    a: "Ja! KFF-Aufgaben sind trainierbar. Je mehr du übst, desto schneller erkennst du Muster bei Zahlenfolgen, wirst sicherer bei logischen Schlüssen und verbesserst dein räumliches Denken. MedMaster bietet 10.000+ verschiedene Aufgaben.",
+    a: "Ja! KFF-Aufgaben sind trainierbar. Je mehr du übst, desto schneller erkennst du Muster bei Zahlenfolgen, wirst sicherer bei logischen Schlüssen und verbesserst dein räumliches Denken. MedMaster bietet 3.000+ vorgenerierte Aufgaben plus einen unbegrenzten Trainingsmodus mit automatisch validierten Aufgaben.",
   },
   {
     q: "Wie viel Zeit hat man für KFF im MedAT?",
@@ -77,7 +77,7 @@ const FAQ = [
   },
   {
     q: "Wie funktionieren die KFF-Aufgaben auf MedMaster?",
-    a: "Jede Aufgabe wird auf Eindeutigkeit und Lösbarkeit geprüft. Das heißt: 10.000+ verschiedene Aufgaben, keine Wiederholungen, immer exakt eine richtige Lösung.",
+    a: "Jede Aufgabe wird auf Eindeutigkeit und Lösbarkeit geprüft. 3.000+ vorgenerierte Aufgaben plus unbegrenzter Trainingsmodus — keine Wiederholungen, immer exakt eine richtige Lösung.",
   },
 ];
 
@@ -340,7 +340,7 @@ export default function KFFDemo() {
   usePageMeta({
     title: "MedAT KFF Training kostenlos",
     description:
-      "KFF-Aufgaben kostenlos üben: Zahlenfolgen, Implikationen, Wortflüssigkeit, Figuren, Gedächtnis. 10.000+ algorithmische Aufgaben — ohne Anmeldung.",
+      "KFF-Aufgaben kostenlos üben: Zahlenfolgen, Implikationen, Wortflüssigkeit, Figuren, Gedächtnis. 3.000+ Aufgaben plus unbegrenzter Trainings-Generator — ohne Anmeldung.",
     canonical: "https://medmaster.at/medat-kff-ueben",
     ogImage: "https://medmaster.at/og-image.png",
   });
@@ -388,7 +388,7 @@ export default function KFFDemo() {
             Zahlenfolgen, Implikationen und Wortflüssigkeit: teste dein KFF-Level ohne Anmeldung.
           </p>
           <p className="text-sm text-[var(--muted)]">
-            Jeden Tag neue Aufgaben. 10.000+ auf MedMaster verfügbar.
+            Jeden Tag neue Aufgaben. 3.000+ auf MedMaster verfügbar plus Trainings-Generator.
           </p>
         </div>
       </header>
@@ -458,10 +458,10 @@ export default function KFFDemo() {
         <section className="text-center py-8">
           <div className="bg-[var(--surface)] rounded-2xl border border-[var(--border)] p-8 sm:p-12">
             <h2 className="text-2xl font-bold text-[var(--text-primary)] mb-3">
-              10.000+ KFF-Aufgaben — kostenlos
+              3.000+ KFF-Aufgaben — kostenlos
             </h2>
             <p className="text-sm text-[var(--muted)] max-w-md mx-auto mb-6">
-              10.000+ Aufgaben für alle 5 KFF-Untertests. Kein Auswendiglernen, keine
+              3.000+ Aufgaben plus Trainings-Generator für alle 5 KFF-Untertests. Kein Auswendiglernen, keine
               Wiederholungen.
             </p>
             <Link
@@ -494,7 +494,7 @@ export default function KFFDemo() {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
             {[
               { to: "/medat-uebungsfragen", label: "BMS Übungsfragen", sub: "5.000+ Fragen" },
-              { to: "/medat-guide", label: "MedAT 2026 Guide", sub: "Alles zum Test" },
+              { to: "/medat-guide", label: "MedAT 2027 Guide", sub: "Alles zum Test" },
               { to: "/faq", label: "FAQ", sub: "Häufige Fragen" },
               { to: "/challenge", label: "Quiz Challenge", sub: "Teile dein Ergebnis" },
             ].map((link) => (

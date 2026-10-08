@@ -30,9 +30,8 @@ import {
   type FigureAssembleTask,
   OFFICIAL_FZ_INSTRUCTION,
   duplicateGuardClear,
-  polygonArea,
 } from "@/data/kffFigurenZusammensetzenMedAT";
-import { filterValidFigurenTasks, logPoolWarning } from "@/data/kffValidation";
+import { filterValidFigurenTasks } from "@/data/kffValidation";
 import { getTasksForUserWithWeakness, taskToData } from "@/lib/taskDb";
 import { useStore } from "@/store/useStore";
 import { useSessionTimer } from "@/hooks/useSessionTimer";

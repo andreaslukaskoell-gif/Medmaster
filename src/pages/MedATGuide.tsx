@@ -94,7 +94,7 @@ const SECTIONS: { id: string; title: string; content: ContentBlock[] }[] = [
   },
   {
     id: "testaufbau",
-    title: "Testaufbau des MedAT 2026",
+    title: "Testaufbau des MedAT 2027",
     content: [
       "Der MedAT dauert einen ganzen Tag und besteht aus 4 Testteilen mit unterschiedlicher Gewichtung:",
       {
@@ -204,7 +204,7 @@ const SECTIONS: { id: string; title: string; content: ContentBlock[] }[] = [
       },
       {
         bold: "3 Monate vorher:",
-        rest: " KFF-Training starten. Zahlenfolgen, Wortflüssigkeit und Implikationen täglich üben. MedMaster bietet 10.000+ verschiedene Aufgaben. SEK-Strategien lernen.",
+        rest: " KFF-Training starten. Zahlenfolgen, Wortflüssigkeit und Implikationen täglich üben. MedMaster bietet 3.000+ vorgenerierte Aufgaben plus unbegrenzten Trainingsmodus. SEK-Strategien lernen.",
       },
       {
         bold: "1 Monat vorher:",
@@ -280,9 +280,9 @@ function ContentParagraph({ block }: { block: ContentBlock }) {
 
 export default function MedATGuide() {
   usePageMeta({
-    title: "MedAT 2026: Alles was du wissen musst",
+    title: "MedAT 2027: Alles was du wissen musst",
     description:
-      "Kompletter MedAT 2026 Guide: Testaufbau, BMS, KFF, TV, SEK erklärt. Vorbereitungsstrategie, Tipps und kostenlose Übungsfragen. Von MedAT-Absolventen.",
+      "Kompletter MedAT 2027 Guide: Testaufbau, BMS, KFF, TV, SEK erklärt. Vorbereitungsstrategie, Tipps und kostenlose Übungsfragen. Von MedAT-Absolventen.",
     canonical: "https://medmaster.at/medat-guide",
     ogImage: "https://medmaster.at/og-image.png",
     ogType: "article",
@@ -292,8 +292,8 @@ export default function MedATGuide() {
     const articleSchema = {
       "@context": "https://schema.org",
       "@type": "Article",
-      headline: "MedAT 2026: Alles was du wissen musst",
-      description: "Kompletter Guide zum MedAT 2026: Testaufbau, Vorbereitung, Tipps.",
+      headline: "MedAT 2027: Alles was du wissen musst",
+      description: "Kompletter Guide zum MedAT 2027: Testaufbau, Vorbereitung, Tipps.",
       author: { "@type": "Organization", name: "MedMaster" },
       publisher: { "@type": "Organization", name: "MedMaster", url: "https://medmaster.at" },
       mainEntityOfPage: "https://medmaster.at/medat-guide",
@@ -302,7 +302,7 @@ export default function MedATGuide() {
       "@context": "https://schema.org",
       "@type": "HowTo",
       name: "MedAT Vorbereitung — Schritt für Schritt",
-      description: "So bereitest du dich optimal auf den MedAT 2026 vor.",
+      description: "So bereitest du dich optimal auf den MedAT 2027 vor.",
       step: [
         {
           "@type": "HowToStep",
@@ -369,7 +369,7 @@ export default function MedATGuide() {
             Aktualisiert für 2026
           </div>
           <h1 className="heading-glow text-2xl sm:text-[3rem] sm:leading-tight font-extrabold text-[var(--text-primary)] mb-4">
-            MedAT 2026: Alles was du wissen musst
+            MedAT 2027: Alles was du wissen musst
           </h1>
           <p className="text-lg text-[var(--muted)] max-w-2xl mx-auto">
             Testaufbau, Vorbereitung, Tipps — der komplette Guide von MedAT-Absolventen.

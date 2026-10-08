@@ -15,7 +15,7 @@ import { ReferralWidget } from "@/components/shared/ReferralWidget";
 const features = [
   "5.000+ BMS-Fragen mit Erklärungen",
   "Alle 174 Lerneinheiten (Theorie)",
-  "10.000+ KFF-Übungen",
+  "3.000+ KFF-Übungen plus Trainings-Generator",
   "10 TV-Textsets mit MC-Fragen",
   "230+ SEK-Aufgaben",
   "Realistische Prüfungssimulation im MedAT-Format",
@@ -23,7 +23,7 @@ const features = [
   "Spaced Repetition & Schwachstellen-Trainer",
   "Prüfungstag-Prognose",
   "Personalisierter Lernplan",
-  "Updates bis zum MedAT 2026 inklusive",
+  "Lebenslanger Zugang zu allen Updates",
 ];
 
 export default function Pricing() {
@@ -69,7 +69,7 @@ export default function Pricing() {
                 </h2>
                 <Badge className="bg-[var(--accent)] text-white">Alle Features</Badge>
               </div>
-              <p className="text-[var(--muted)]">Alles, was du für den MedAT 2026 brauchst</p>
+              <p className="text-[var(--muted)]">Alles, was du für den MedAT 2027 brauchst</p>
             </div>
             <div className="text-right">
               {isFreePromo ? (
@@ -302,7 +302,7 @@ export default function Pricing() {
             Kosten, kein automatisches Verlängern.
           </FaqItem>
           <FaqItem q="Wie aktuell sind die Fragen?">
-            Alle Inhalte werden laufend aktualisiert und orientieren sich am MedAT 2026.
+            Alle Inhalte werden laufend aktualisiert und orientieren sich am aktuellen MedAT.
             Updates sind im Preis inklusive.
           </FaqItem>
           <FaqItem q="Wie sicher ist die Zahlung?">

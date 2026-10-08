@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/static-components */
 import { useState, useEffect, useMemo, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -224,9 +223,9 @@ function FAQItem({ q, a, isMobile }: { q: string; a: string; isMobile: boolean }
 
 export default function LandingPage() {
   usePageMeta({
-    title: "MedMaster — MedAT 2026 Vorbereitung | Tausende Fragen, Adaptives Lernsystem",
+    title: "MedMaster — MedAT 2027 Vorbereitung | 6.000+ Fragen, Adaptives Lernsystem",
     description:
-      "MedAT 2026 bestehen mit MedMaster: Tausende Übungsfragen, alle 4 Testbereiche (BMS, KFF, TV, SEK), adaptives Lernsystem, Prüfungssimulation. Kostenlos starten.",
+      "MedAT 2027 bestehen mit MedMaster: 6.000+ Übungsfragen, alle 4 Testbereiche (BMS, KFF, TV, SEK), adaptives Lernsystem, Prüfungssimulation. Kostenlos starten.",
     canonical: "https://medmaster.at",
     ogImage: "https://medmaster.at/og-image.png",
   });
@@ -246,6 +245,94 @@ export default function LandingPage() {
       logPageTime("/");
       resetScrollDepth();
       cleanupScroll?.();
+    };
+  }, []);
+
+  useEffect(() => {
+    const softwareSchema = {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      name: "MedMaster",
+      alternateName: "MedMaster — MedAT Vorbereitung",
+      applicationCategory: "EducationalApplication",
+      operatingSystem: "Web, iOS, Android (PWA)",
+      url: "https://medmaster.at",
+      description:
+        "MedAT-Vorbereitungsplattform mit 6.020 BMS-Übungsfragen, 3.000+ KFF-Aufgaben plus Trainings-Generator, Textverständnis, SEK-Modulen, Prüfungssimulation und KI-adaptivem Lernsystem für den medizinischen Aufnahmetest in Österreich.",
+      inLanguage: "de-AT",
+      offers: [
+        {
+          "@type": "Offer",
+          name: "Freemium",
+          price: "0",
+          priceCurrency: "EUR",
+          description: "Dauerhaft kostenlos — eingeschränkter Umfang",
+        },
+        {
+          "@type": "Offer",
+          name: "Premium",
+          price: "29.90",
+          priceCurrency: "EUR",
+          description: "Einmalzahlung für Vollzugriff auf alle Module",
+          availability: "https://schema.org/InStock",
+        },
+      ],
+      featureList: [
+        "6.020 BMS-Übungsfragen (Biologie, Chemie, Physik, Mathematik)",
+        "3.000+ KFF-Trainingsaufgaben in allen 5 Subtests plus unbegrenzter Trainingsmodus",
+        "130 strukturierte Lerneinheiten mit Diagrammen",
+        "10 TV-Textsets und 100 SEK-Aufgaben",
+        "KI-adaptives Lernsystem mit Spaced Repetition",
+        "Realistische Prüfungssimulationen mit originalgetreuen Zeitlimits",
+        "Prüfungstag-Prognose und Schwachstellen-Trainer",
+        "Progressive Web App — offline installierbar",
+      ],
+      provider: {
+        "@type": "Organization",
+        name: "MedMaster",
+        url: "https://medmaster.at",
+      },
+    };
+    const organizationSchema = {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: "MedMaster",
+      url: "https://medmaster.at",
+      logo: "https://medmaster.at/logo.svg",
+      email: "support@medmaster.at",
+      areaServed: { "@type": "Country", name: "Austria" },
+      sameAs: [] as string[],
+      description:
+        "MedMaster ist eine deutschsprachige Lernplattform für den MedAT, den Medizinischen Aufnahmetest für das Medizinstudium an den Medizin-Universitäten in Österreich.",
+    };
+    const websiteSchema = {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: "MedMaster",
+      url: "https://medmaster.at",
+      inLanguage: "de-AT",
+      potentialAction: {
+        "@type": "SearchAction",
+        target: "https://medmaster.at/blog?q={search_term_string}",
+        "query-input": "required name=search_term_string",
+      },
+    };
+    const s1 = document.createElement("script");
+    s1.type = "application/ld+json";
+    s1.textContent = JSON.stringify(softwareSchema);
+    document.head.appendChild(s1);
+    const s2 = document.createElement("script");
+    s2.type = "application/ld+json";
+    s2.textContent = JSON.stringify(organizationSchema);
+    document.head.appendChild(s2);
+    const s3 = document.createElement("script");
+    s3.type = "application/ld+json";
+    s3.textContent = JSON.stringify(websiteSchema);
+    document.head.appendChild(s3);
+    return () => {
+      document.head.removeChild(s1);
+      document.head.removeChild(s2);
+      document.head.removeChild(s3);
     };
   }, []);
 
@@ -397,7 +484,7 @@ export default function LandingPage() {
               }}
             >
               <Sparkles className="w-3.5 h-3.5" />
-              MedAT 2026 Vorbereitung
+              MedAT 2027 Vorbereitung
             </span>
           </BlurFade>
 
@@ -939,8 +1026,8 @@ export default function LandingPage() {
           <motion.div {...fade} className="divide-y divide-[var(--border)]">
             {[
               {
-                q: "Ist das aktuell für den MedAT 2026?",
-                a: "Ja, vollständig. Alle Inhalte basieren auf der offiziellen Stichwortliste 2026 der Medizinischen Universitäten. Unsere Lerneinheiten decken jedes einzelne Stichwort ab — von Zellbiologie über organische Chemie bis Vektorrechnung. Sämtliche BMS-Fragen sind im originalen MedAT-Format (A–E, genau eine richtige Antwort) und werden laufend aktualisiert.",
+                q: "Ist das aktuell für den MedAT 2027?",
+                a: "Ja, vollständig. Alle Inhalte basieren auf der aktuellen offiziellen Stichwortliste der Medizinischen Universitäten. Unsere Lerneinheiten decken jedes einzelne Stichwort ab — von Zellbiologie über organische Chemie bis Vektorrechnung. Sämtliche BMS-Fragen sind im originalen MedAT-Format (A–E, genau eine richtige Antwort) und werden laufend aktualisiert.",
               },
               {
                 q: "Kann ich jederzeit kündigen?",
@@ -956,18 +1043,18 @@ export default function LandingPage() {
                 ? [
                     {
                       q: "Was passiert nach dem 31. März?",
-                      a: "Ab 1. April kostet MedMaster einmalig €29,90. Das ist eine einmalige Zahlung — kein monatliches Abo, keine wiederkehrenden Kosten. Du behältst vollen Zugang zu allen Fragen, Lerneinheiten, der Prüfungssimulation und allen zukünftigen Updates bis zum MedAT 2026. Wer sich jetzt registriert, lernt bis dahin komplett gratis.",
+                      a: "Ab 1. April kostet MedMaster einmalig €29,90. Das ist eine einmalige Zahlung — kein monatliches Abo, keine wiederkehrenden Kosten. Du erhältst vollen Zugang zu allen Fragen, Lerneinheiten, der Prüfungssimulation und allen Updates. Wer sich jetzt registriert, lernt bis zum Promo-Ende komplett gratis.",
                     },
                   ]
                 : [
                     {
                       q: "Was kostet MedMaster?",
-                      a: "MedMaster kostet einmalig €29,90 — kein Abo, keine wiederkehrenden Kosten. Du behältst vollen Zugang zu allen Fragen, Lerneinheiten, der Prüfungssimulation und allen zukünftigen Updates bis zum MedAT 2026.",
+                      a: "MedMaster kostet aktuell einmalig €29,90 — kein Abo, keine wiederkehrenden Kosten. Du erhältst vollen Zugang zu allen Fragen, Lerneinheiten, der Prüfungssimulation und allen Updates. Aktuelle Preise siehe /preise.",
                     },
                   ]),
               {
                 q: "Was unterscheidet MedMaster von anderen Anbietern?",
-                a: "Vier Dinge: Erstens decken wir alle 4 MedAT-Bereiche ab — nicht nur BMS. Zweitens ist unser Lernsystem adaptiv — es erkennt deine Schwächen und passt den Lernplan automatisch an. Drittens kosten andere Plattformen €69–599 (oft mit Abo), während MedMaster einmalig €29,90 kostet. Viertens: 10.000+ KFF-Aufgaben — du bekommst immer frische Aufgaben. Dazu eine realistische Prüfungssimulation mit echten MedAT-Zeitlimits.",
+                a: "Vier Dinge: Erstens decken wir alle 4 MedAT-Bereiche ab — nicht nur BMS. Zweitens ist unser Lernsystem adaptiv — es erkennt deine Schwächen und passt den Lernplan automatisch an. Drittens kosten andere Plattformen €69–599 (oft mit Abo), während MedMaster einmalig €29,90 kostet. Viertens: Umfangreiche KFF-Trainingspools mit über 2.000 vorgenerierten Aufgaben plus unbegrenzter Trainingsmodus durch validierte Generatoren. Dazu eine realistische Prüfungssimulation mit echten MedAT-Zeitlimits.",
               },
             ].map((faq) => (
               <FAQItem key={faq.q} q={faq.q} a={faq.a} isMobile={isMobile} />

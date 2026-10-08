@@ -349,7 +349,7 @@ export default function BlogArticle() {
             Teste dein Wissen — 5.000+ BMS-Fragen warten
           </h2>
           <p className="text-sm text-[var(--text-secondary)] mb-4 max-w-md mx-auto">
-            Alle 4 MedAT-Bereiche in einer Plattform. Adaptiver Lernplan, 10.000+ KFF-Übungen,
+            Alle 4 MedAT-Bereiche in einer Plattform. Adaptiver Lernplan, 3.000+ KFF-Übungen,
             Prüfungssimulation.
           </p>
           <Link

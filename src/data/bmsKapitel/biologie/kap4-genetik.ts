@@ -2198,6 +2198,8 @@ Krebs entsteht, wenn eine Zelle die Kontrolle über ihr eigenes Wachstum verlier
 
 **Der Grundmechanismus:** Normale Zelle → Mutationen in wachstumskontrollierenden Genen → unkontrollierte Teilung → **Tumor** (Neoplasie (Neubildung von Gewebe)) → Einwachsen in Nachbargewebe und Streuung über Blut/Lymphe → **Metastasen** (Tochtergeschwülste in entfernten Organen).
 
+{{DIAGRAM:cell-cycle}}
+
 > **Merke:** Krebs = Akkumulation von 5–7 Mutationen in wachstumskontrollierenden Genen. Nicht eine Mutation, sondern das Zusammenspiel vieler genetischer Treffer macht eine Zelle bösartig.
 
 ---
@@ -3587,6 +3589,8 @@ Die Einheit **centiMorgan (cM)** misst den genetischen Abstand: **1 cM = 1 % Rek
 | **Geschlecht** | Immer gleich | Kann verschieden sein |
 | **Häufigkeit** | ~3–4 pro 1000 Geburten | ~8–12 pro 1000 Geburten |
 
+{{DIAGRAM:dna-helix}}
+
 ---
 
 ## Konkordanzrate
@@ -3611,6 +3615,8 @@ Die **Konkordanzrate** gibt an, wie häufig beide Zwillinge dasselbe Merkmal zei
 Die **Heritabilität (h²)** schätzt den Anteil der genetischen Varianz an der Gesamtvarianz eines Merkmals in einer Population. Sie liegt zwischen **0** (rein umweltbedingt) und **1** (rein genetisch).
 
 > **Merke:** Heritabilität beschreibt den genetischen Anteil der **Varianz** in einer Population — nicht den genetischen Anteil bei einer Einzelperson.
+
+{{DIAGRAM:pedigree-analysis}}
 
 ---
 

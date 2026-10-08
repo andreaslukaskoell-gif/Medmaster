@@ -349,7 +349,7 @@ export default function StichwortlistePublic() {
   usePageMeta({
     title: "BMS Stichwortliste 2026 — Offizielle MedAT Themen",
     description:
-      "Alle offiziellen BMS-Stichworte für den MedAT 2026. Biologie, Chemie, Physik, Mathematik — mit Lernfortschritt und Übungsfragen.",
+      "Alle offiziellen BMS-Stichworte für den MedAT 2027. Biologie, Chemie, Physik, Mathematik — mit Lernfortschritt und Übungsfragen.",
     canonical: "https://medmaster.at/bms-stichwortliste-2026",
   });
 
@@ -367,9 +367,9 @@ export default function StichwortlistePublic() {
     const itemListSchema = {
       "@context": "https://schema.org",
       "@type": "ItemList",
-      name: "BMS Stichwortliste MedAT 2026",
+      name: "BMS Stichwortliste MedAT 2027",
       description:
-        "Offizielle Stichwortliste für den BMS-Teil des MedAT 2026 — Biologie, Chemie, Physik, Mathematik",
+        "Offizielle Stichwortliste für den BMS-Teil des MedAT 2027 — Biologie, Chemie, Physik, Mathematik",
       numberOfItems: allKeywords.length,
       itemListElement: allKeywords.map((item, i) => ({
         "@type": "ListItem",
@@ -420,13 +420,13 @@ export default function StichwortlistePublic() {
             style={{ backgroundColor: "#e8ecf7", color: NAVY }}
           >
             <BookOpen className="w-4 h-4" />
-            Offiziell — MedAT 2026
+            Offiziell — MedAT 2027
           </div>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[var(--text-primary)] mb-4 tracking-tight">
             BMS Stichwortliste 2026
           </h1>
           <p className="text-lg text-[var(--muted)] max-w-2xl mx-auto leading-relaxed">
-            Die vollständige offizielle Themenliste für den BMS-Teil des MedAT 2026. Alle Stichworte
+            Die vollständige offizielle Themenliste für den BMS-Teil des MedAT 2027. Alle Stichworte
             aus Biologie, Chemie, Physik und Mathematik — mit über 5.000 Übungsfragen auf MedMaster.
           </p>
           <div className="flex flex-wrap justify-center gap-3 mt-8">
@@ -537,7 +537,7 @@ export default function StichwortlistePublic() {
             <span className="text-2xl">📖</span>
             <div>
               <span className="text-sm font-semibold text-[var(--text-primary)] block">
-                MedAT 2026 Guide
+                MedAT 2027 Guide
               </span>
               <span className="text-xs text-[var(--muted)]">Alles zum Testaufbau</span>
             </div>

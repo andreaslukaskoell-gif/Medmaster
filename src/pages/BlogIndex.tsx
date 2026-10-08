@@ -107,7 +107,7 @@ export default function BlogIndex() {
       {/* Header */}
       <header className="max-w-4xl mx-auto px-4 sm:px-6 pt-12 pb-8 text-center">
         <h1 className="text-3xl sm:text-4xl font-extrabold text-[var(--text-primary)] tracking-tight mb-3">
-          MedAT 2026 Lerntipps & Strategien
+          MedAT 2027 Lerntipps & Strategien
         </h1>
         <p className="text-[var(--text-secondary)] max-w-xl mx-auto">
           Expertenwissen, Lernstrategien und Praxistipps für deine MedAT-Vorbereitung — von BMS bis
@@ -241,7 +241,7 @@ export default function BlogIndex() {
             <span className="text-sm font-semibold text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors">
               KFF Training
             </span>
-            <p className="text-xs text-[var(--muted)] mt-1">10.000+ Aufgaben</p>
+            <p className="text-xs text-[var(--muted)] mt-1">3.000+ Aufgaben + Generator</p>
           </Link>
         </div>
 
@@ -251,7 +251,7 @@ export default function BlogIndex() {
             Bereit für den MedAT? Jetzt gratis starten
           </h2>
           <p className="text-sm text-[var(--text-secondary)] mb-4 max-w-md mx-auto">
-            5.000+ BMS-Fragen, 10.000+ KFF-Übungen, Prüfungssimulation — alles in einer Plattform.
+            6.000+ BMS-Fragen, 3.000+ KFF-Übungen, Prüfungssimulation — alles in einer Plattform.
           </p>
           <Link
             to="/login"

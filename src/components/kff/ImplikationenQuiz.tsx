@@ -15,7 +15,7 @@ import {
   generateImplicationTaskSet,
   type ImplikationTask,
 } from "@/data/kffImplikationen";
-import { filterValidImplikationTasks, logPoolWarning } from "@/data/kffValidation";
+import { filterValidImplikationTasks } from "@/data/kffValidation";
 import { getTasksForUserWithWeakness, taskToData } from "@/lib/taskDb";
 import { useStore } from "@/store/useStore";
 import { useSessionTimer } from "@/hooks/useSessionTimer";

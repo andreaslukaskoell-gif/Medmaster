@@ -32,7 +32,7 @@ function CTA({ text, to = "/login" }: { text: string; to?: string }) {
 export const blogArticles: BlogArticle[] = [
   {
     slug: "medat-bms-fehler",
-    title: "MedAT 2026: Die 5 häufigsten BMS-Fehler und wie du sie vermeidest",
+    title: "MedAT 2027: Die 5 häufigsten BMS-Fehler und wie du sie vermeidest",
     excerpt:
       "Fast alle MedAT-Kandidierenden machen dieselben Fehler in der BMS-Vorbereitung. Hier sind die Top 5 — und wie du es besser machst.",
     topic: "BMS",
@@ -174,11 +174,11 @@ export const blogArticles: BlogArticle[] = [
         <h2>Übung macht den Meister — aber richtig</h2>
         <p>
           Das Problem mit festen Aufgabenpools: Nach 2-3 Durchgängen kennst du die Antworten
-          auswendig und lernst nichts mehr. Mit 10.000+ verschiedenen Aufgaben löst MedMaster dieses
+          auswendig und lernst nichts mehr. Mit über 3.000 vorgenerierten Aufgaben plus unbegrenztem Trainings-Generator löst MedMaster dieses
           Problem — jede Aufgabe ist neu, und du trainierst echtes Mustererkennen statt Gedächtnis.
         </p>
 
-        <CTA text="10.000+ Zahlenfolgen üben — immer neue Aufgaben, nie Wiederholungen." />
+        <CTA text="1.000+ Zahlenfolgen üben plus unbegrenzter Trainings-Generator — immer neue Aufgaben." />
       </>
     ),
   },
@@ -258,7 +258,7 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: "bms-biologie-wichtigste-themen",
-    title: "BMS Biologie: Die 10 wichtigsten Themen für den MedAT 2026",
+    title: "BMS Biologie: Die 10 wichtigsten Themen für den MedAT 2027",
     excerpt:
       "Nicht alle Biologie-Themen sind gleich prüfungsrelevant. Diese 10 Themen kommen fast jedes Jahr — und bringen die meisten Punkte.",
     topic: "BMS",
@@ -642,7 +642,7 @@ export const blogArticles: BlogArticle[] = [
           regelmäßigem KFF-Training.
         </p>
 
-        <CTA text="Alle 5 KFF-Untertests trainieren — 10.000+ Aufgaben, nie Wiederholungen." />
+        <CTA text="Alle 5 KFF-Untertests trainieren — 3.000+ Aufgaben plus Trainings-Generator." />
       </>
     ),
   },
@@ -790,7 +790,7 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: "medat-2026-aenderungen",
-    title: "MedAT 2026: Was sich ändert und wie du dich vorbereitest",
+    title: "MedAT 2027: Was sich ändert und wie du dich vorbereitest",
     excerpt:
       "Der MedAT wird regelmäßig angepasst. Hier erfährst du, was sich 2026 ändert und wie du deine Vorbereitung darauf ausrichtest.",
     topic: "Strategie",
@@ -847,7 +847,7 @@ export const blogArticles: BlogArticle[] = [
           du anfängst, desto gelassener gehst du in den Testtag.
         </p>
 
-        <CTA text="MedMaster ist für den MedAT 2026 optimiert: Aktuelle Inhalte, alle Testbereiche, adaptive Übungen." />
+        <CTA text="MedMaster ist für den MedAT 2027 optimiert: Aktuelle Inhalte, alle Testbereiche, adaptive Übungen." />
       </>
     ),
   },
@@ -1436,9 +1436,9 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: "medat-anmeldung-2026",
-    title: "MedAT 2026 Anmeldung: Fristen, Ablauf und Tipps",
+    title: "MedAT 2027 Anmeldung: Fristen, Ablauf und Tipps",
     excerpt:
-      "Die Anmeldung zum MedAT 2026 steht bevor. Hier findest du alle Fristen, den genauen Ablauf und Tipps, damit nichts schiefgeht.",
+      "Die Anmeldung zum MedAT 2027 steht bevor. Hier findest du alle Fristen, den genauen Ablauf und Tipps, damit nichts schiefgeht.",
     topic: "Strategie",
     readingTime: 4,
     publishDate: "2026-03-16",
@@ -2007,7 +2007,7 @@ export const blogArticles: BlogArticle[] = [
           Die Auswahl an MedAT-Vorbereitungsmaterialien ist groß — und unübersichtlich. Bücher,
           Online-Plattformen, Kurse, Skripten: Was lohnt sich wirklich? Und wofür solltest du kein
           Geld ausgeben? Hier ist ein ehrlicher Überblick über die beliebtesten Lernmaterialien für
-          den MedAT 2026, basierend auf Erfahrungsberichten erfolgreicher Kandidierender.
+          den MedAT 2027, basierend auf Erfahrungsberichten erfolgreicher Kandidierender.
         </p>
 
         <h2>BMS-Bücher: Schulwissen auffrischen</h2>
@@ -2069,7 +2069,7 @@ export const blogArticles: BlogArticle[] = [
 
   {
     slug: "wann-ist-medat-2026",
-    title: "Wann ist der MedAT 2026? Termin, Uhrzeit und Ablauf",
+    title: "Wann ist der MedAT 2027? Termin, Uhrzeit und Ablauf",
     excerpt:
       "Alle Infos zum MedAT-Termin 2026: Wann findet der Test statt, wie lange dauert er und wann muss man sich anmelden?",
     topic: "Strategie",
@@ -2077,9 +2077,9 @@ export const blogArticles: BlogArticle[] = [
     publishDate: "2026-03-16",
     content: (
       <>
-        <h2>Wann ist der MedAT 2026?</h2>
+        <h2>Wann ist der MedAT 2027?</h2>
         <p>
-          Der MedAT 2026 findet voraussichtlich <strong>Anfang Juli 2026</strong> statt. Den exakten
+          Der MedAT 2027 findet voraussichtlich <strong>Anfang Juli 2026</strong> statt. Den exakten
           Termin geben die Medizinischen Universitäten Wien, Graz, Innsbruck und Linz gemeinsam
           bekannt — in der Regel im Jänner oder Februar des Testjahres. Der MedAT wird an einem
           einzigen Tag durchgeführt, gleichzeitig an allen vier Standorten.
