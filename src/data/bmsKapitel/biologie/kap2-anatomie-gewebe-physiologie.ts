@@ -24,27 +24,37 @@ export const bioKapAnatomieGewebe: Kapitel = {
         "Flimmerepithel",
         "Apikale Polarität",
       ],
-      content: `Gewebe bilden die Bausteine aller Organe — ihre Kenntnis ist für den BMS-Teil unverzichtbar. Dieses Kapitel behandelt die vier Grundgewebearten (Epithel-, Binde-, Muskel- und Nervengewebe) sowie die wichtigsten Organsysteme des Menschen.
+      content: `Rund 85 % aller Krebsarten (Karzinome) entstehen aus Epithelgewebe — kein Zufall, denn Epithelien erneuern sich ständig und sind damit anfällig für Replikationsfehler. Zugleich bilden sie die äußere und innere Oberfläche fast jedes Organs. Für den MedAT sind Formen (Platten/kubisch/zylindrisch), Schichtungen (ein-/mehrschichtig) und die vier Zellkontakte prüfungsrelevant — fast jedes Jahr dabei.
 
-## Grundprinzip: Eigenschaften aller Epithelien
+{{DIAGRAM:epithelial-tissue}}
 
-Epithelien kleiden jede Körperoberfläche und jedes Hohlorgan aus — trotz ihrer Vielfalt teilen **alle** Epithelien drei Grundeigenschaften:
+> **Lernziele:** Nach diesem Kapitel kannst du
+> - die drei Grundeigenschaften aller Epithelien benennen und ihre Bedeutung erklären,
+> - Epitheltypen nach Form und Schichtung klassifizieren und typischen Organen zuordnen,
+> - die vier Zellkontakte funktional abgrenzen und Drüsentypen nach Sekretionsmechanismus unterscheiden.
 
-1. **Polarität**: Die Zelle hat eine **apikale Seite** (zur Körperhöhle hin) und eine **basolaterale Seite** (zur Basalmembran hin). Transporter sind ungleichmäßig verteilt — das ermöglicht **gerichteten Transport** (z. B. SGLT1 apikal, GLUT2 basolateral im Dünndarm).
+---
 
-2. **Basalmembran**: Das Epithel sitzt auf der **Basalmembran**, die es mit dem darunterliegenden Bindegewebe verbindet. Hauptkomponenten: Kollagen IV, Laminin (Verankerungsprotein) und Proteoglykane. Sie verankert das Epithel und wirkt als selektive Barriere.
+## Grundprinzip: Drei Eigenschaften, die alle Epithelien teilen
 
-3. **Avaskulär**: Epithelien haben keine eigenen Blutgefäße — Versorgung erfolgt durch Diffusion aus darunter liegenden Kapillaren. → Hohe Zellerneuerungsrate nötig (Dünndarm alle 3–5 Tage, Haut alle ~2 Wochen)
+Trotz enormer Vielfalt haben **alle** Epithelien drei Grundeigenschaften. Wer diese drei versteht, braucht sich die Einzelheiten jedes Typs nicht mühsam merken — sie folgen aus den Grundprinzipien.
 
-**Zellkontakte in Epithelien:**
-- **Tight Junctions** (Zonula occludens): Versiegeln apikalen Interzellularspalt; Barriere- und Fence-Funktion (trennen apikale und basolaterale Membranproteine). Aus Claudinen und Occludin (Transmembranproteine).
-- **Desmosomen**: Mechanischer Zusammenhalt (Cadherine + Intermediärfilamente). Knotenförmig, gürtelartig.
-- **Gap Junctions**: Direkter Ionenaustausch zwischen Zellen über Connexin-Kanäle. **Herzmuskelzellen sind über Gap Junctions elektrisch verbunden** — so breitet sich die Erregung koordiniert aus (nicht über Tight Junctions oder Desmosomen).
-- **Hemidesmosomen**: Verankerung an Basalmembran (Integrine + Laminin).
+1. **Polarität**: Jede Zelle hat eine **apikale Seite** (zur Körper- oder Organhöhle gerichtet) und eine **basolaterale Seite** (zur Basalmembran hin). Transporter sind ungleichmäßig verteilt — das ermöglicht **gerichteten Transport**: Im Dünndarm sitzt der Zucker-Co-Transporter SGLT1 apikal (nimmt Glukose aus dem Darmlumen auf), der GLUT2 dagegen basolateral (gibt sie ans Blut ab).
+
+2. **Basalmembran**: Das Epithel sitzt auf einer **Basalmembran**, die es mit dem darunterliegenden Bindegewebe verankert. Hauptkomponenten: **Kollagen IV**, **Laminin** (Verankerungsprotein) und Proteoglykane. Sie wirkt zugleich als selektive Barriere und als Leitschiene bei Wundheilung.
+
+3. **Avaskulär**: Epithelien haben keine eigenen Blutgefäße — Versorgung erfolgt per Diffusion aus den Kapillaren des darunterliegenden Bindegewebes. Deshalb können Epithelien nicht beliebig dick werden, und sie erneuern sich schnell: Dünndarmepithel alle 3–5 Tage, Haut alle ~2 Wochen.
+
+**Zellkontakte — die vier Grundtypen:**
+
+- **Tight Junctions** (Zonula occludens): Versiegeln den apikalen Interzellularspalt. Zwei Funktionen in einem: **Barriere** (Flüssigkeit kann nicht zwischen Zellen durchsickern) und **Fence** (trennt apikale von basolateralen Membranproteinen, erhält damit die Polarität). Molekular aus Claudinen und Occludin.
+- **Desmosomen**: Punktförmige mechanische Verankerungen aus Cadherinen plus Intermediärfilamenten. In allen Geweben, die mechanisch belastet werden (Haut, Herzmuskel).
+- **Gap Junctions**: Durchgehende Kanäle aus **Connexin**-Proteinen → direkter Ionen- und Metabolit-Austausch zwischen Nachbarzellen. **Herzmuskelzellen sind über Gap Junctions elektrisch verbunden** — so breitet sich die Erregung koordiniert aus, nicht über Tight Junctions oder Desmosomen (häufige MedAT-Falle!).
+- **Hemidesmosomen**: Halbe Desmosomen zur Verankerung der Epithelzelle an der Basalmembran, aus Integrinen plus Laminin.
+
+> **Eselsbrücke:** **T**ight = **T**rennwand (dicht), **D**esmo = **D**übel (mechanisch), **G**ap = **G**emeinschaftstür (Austausch), **H**emi = **H**alber Dübel (an Basalmembran).
 
 > **Merke:** Tight Junctions = apikal, Barriere + Fence. Desmosomen = mechanisch. Gap Junctions = Ionenaustausch. Hemidesmosomen = Basalmembran-Verankerung.
-
-{{DIAGRAM}}
 
 ---
 
@@ -83,9 +93,45 @@ Sekretionsmechanismen exokriner Drüsen:
 
 **Becherzellen:** Einzellige Schleimdrüsen im Darm- und Atemwegsepithel → sezernieren Muzin (Schleimprotein) (merokrin) → Schleimfilm als Schutz und für mukoziliäre Clearance.
 
-**Klinisch — Kartagener-Syndrom (Primäre Ziliendyskinesie):** Defekte Dynein-Arme der Kinozilien → kein Zilienanschlag → kein Schleimtransport → chronische Bronchitis, Bronchiektasen (dauerhafte Erweiterung der Bronchien), Infertilität. Situs inversus (Organe spiegelverkehrt) in 50% der Fälle (Links-Rechts-Bestimmung in der Embryonalentwicklung durch Nodal-Zilien gestört).
+**Klinisch — Kartagener-Syndrom (Primäre Ziliendyskinesie):** Defekte Dynein-Arme der Kinozilien → kein Zilienanschlag → kein Schleimtransport → chronische Bronchitis, Bronchiektasen (dauerhafte Erweiterung der Bronchien), Infertilität. Situs inversus (Organe spiegelverkehrt) in 50 % der Fälle (Links-Rechts-Bestimmung in der Embryonalentwicklung durch Nodal-Zilien gestört).
 
-> **Merke:** Merokrin = Exozytose (häufig); apokrin = Zellspitze abgeschnürt; holokrin = ganze Zelle = Sekret (Talgdrüse). Kartagener: Dynein-Defekt → Zilien bewegungslos.`,
+> **Merke:** Merokrin = Exozytose (häufig); apokrin = Zellspitze abgeschnürt; holokrin = ganze Zelle = Sekret (Talgdrüse). Kartagener: Dynein-Defekt → Zilien bewegungslos.
+
+---
+
+## Typische Fehler und Prüfungsfallen
+
+> **Achtung — häufige Fehler:**
+> - **Mehrreihig ≠ mehrschichtig.** Mehrreihiges (pseudostratifiziertes) Epithel ist EINschichtig — alle Zellen berühren die Basalmembran, nur die Kerne liegen auf verschiedenen Höhen. Das ist der Lieblings-Trick bei MedAT-Falsch-Aussage-Fragen.
+> - **Gap Junctions ≠ Tight Junctions.** Nur Gap Junctions ermöglichen Ionenaustausch. Herzmuskelzellen sind über Gap Junctions elektrisch gekoppelt, NICHT über Tight oder Desmosomen.
+> - **Urothel ≠ Zylinderepithel.** Das Urothel der Harnblase ist ein eigener Typ (Übergangsepithel) mit Schirmzellen — kein Zylinderepithel.
+> - **Holokrin heißt Zelltod.** Bei Talgdrüsen wird die ganze Zelle zum Sekret — der Zellkern geht dabei mit zugrunde.
+
+---
+
+## MedAT-Fokus
+
+> **MedAT-Fokus:** Epithelgewebe kommt fast jedes Jahr im BMS. Die Fallen liegen bei pseudostratifiziert vs. mehrschichtig, Gap Junctions vs. Tight Junctions und beim Urothel. Lerne die vier Zellkontakte funktional und die drei Sekretionsarten mit Beispielen.
+
+**Zentral prüfungsrelevant:**
+- Drei Grundeigenschaften: Polarität, Basalmembran, avaskulär
+- Vier Zellkontakte: Tight (Barriere+Fence), Desmosom (mechanisch), Gap (Ionen), Hemidesmosom (Basalmembran)
+- Pseudostratifiziert = einschichtig, trotz verschiedener Kernhöhen
+- Urothel = Schirmzellen, Harnblase, dehnbar
+- Sekretion: merokrin (Exozytose, häufig), apokrin (Zellspitze), holokrin (ganze Zelle, Talgdrüse)
+
+**Prüfungsrelevante Zahlen:**
+- Karzinome machen ca. 85 % aller Krebsarten aus (entstehen aus Epithel)
+- Dünndarm-Epithel erneuert sich alle 3–5 Tage, Haut alle ~2 Wochen
+- Kartagener-Syndrom: Situs inversus bei ~50 % der Betroffenen
+
+## Zusammenfassung
+
+- Epithelien sind **polar, avaskulär** und sitzen auf einer **Basalmembran**
+- Klassifikation nach **Form** (Platten, kubisch, zylindrisch) × **Schichtung** (ein-/mehr-/pseudostratifiziert)
+- **Vier Zellkontakte:** Tight (apikal, Barriere), Desmosom (mechanisch), Gap (Ionen), Hemidesmosom (Basalmembran)
+- **Sekretion** exokrin: merokrin > apokrin > holokrin (Talgdrüse)
+- **~85 % aller Krebsarten** entstehen aus Epithelgewebe (Karzinome)`,
       lernziele: [
         "Epitheltypen nach Form und Schichtung benennen und ihren Vorkommen zuordnen",
         "Polarität des Epithels, Basalmembran und wichtige Zellkontakte erklären",
@@ -4195,13 +4241,21 @@ Die Wirbelsäule ist keine gerade Säule, sondern zeigt im Sagittalprofil **vier
         "Progesteron",
         "Befruchtung",
       ],
-      content: `Das Fortpflanzungssystem verbindet Anatomie, Endokrinologie und Genetik — von der Keimzellbildung über den Menstruationszyklus bis zur Befruchtung.
+      content: `Ein Mann produziert täglich rund **200 Millionen Spermien**, eine Frau reift pro Zyklus **nur eine einzige** Eizelle. Diese Asymmetrie prägt die gesamte Fortpflanzungsbiologie — und sie ist der rote Faden für die MedAT-Prüfung dieses Themas. Dazu kommen: Hormonregulation (FSH/LH/Östrogen/Progesteron), zwei Meiose-Arrests in der Oogenese und der LH-Peak als klassisches Beispiel positiver Rückkopplung.
+
+{{DIAGRAM:meiosis}}
+
+> **Lernziele:** Nach diesem Kapitel kannst du
+> - Spermatogenese und Oogenese nach Zeitpunkt, Ergebnis und Hormonregulation vergleichen,
+> - die zwei Oogenese-Arrests (Prophase I pränatal, Metaphase II bis Befruchtung) benennen und begründen,
+> - den Menstruationszyklus mit FSH/LH-Peak/Östrogen/Progesteron erklären und positive von negativer Rückkopplung abgrenzen,
+> - die Rolle von Sertoli- und Leydig-Zellen sowie hCG in der Schwangerschaft erläutern.
+
+---
 
 ## Spermatogenese und Oogenese — Gametogenese im Vergleich
 
-{{IMAGE}}
-
-Ein Mann produziert täglich rund 200 Millionen Spermien, eine Frau reift pro Zyklus nur eine einzige Eizelle — dieser Kontrast prägt die gesamte Fortpflanzungsbiologie. Beide Keimzellentwicklungen nutzen die Meiose, unterscheiden sich aber fundamental in Ergebnis und Zeitplanung:
+Beide Keimzellentwicklungen nutzen die Meiose, unterscheiden sich aber fundamental in Ergebnis und Zeitplanung:
 
 | Merkmal | Spermatogenese | Oogenese |
 |---|---|---|
@@ -4248,7 +4302,48 @@ Ein Mann produziert täglich rund 200 Millionen Spermien, eine Frau reift pro Zy
 
 > **Merke:** **Menstruationszyklus**: FSH → Östrogen ↑ (Follikelphase) → Östrogen ↑↑ → **positive Rückkopplung → LH-Peak** (Tag 14) → Ovulation → Corpus luteum → Progesteron ↑ (Lutealphase). Keine Befruchtung → Corpus luteum degeneriert → Menstruation. **hCG** (Trophoblast ab Tag 6–7): erhält Corpus luteum → Basis des Schwangerschaftstests.
 
-`,
+> **Eselsbrücke:** **FSH** wie **F**ollikel-**S**timulations-**H**ormon = reift den Follikel. **LH** wie **L**oslass-**H**ormon = löst Ovulation aus. Progesteron bereitet die Schwangerschaft vor ("Pro-Gestation").
+
+---
+
+## Typische Fehler und Prüfungsfallen
+
+> **Achtung — häufige Fehler:**
+> - **Oogenese: 1 Eizelle + 3 Polkörperchen**, Spermatogenese: 4 funktionsfähige Spermien. Bei der Frau "verzichtet" das System auf 3 der 4 Meiose-Produkte zugunsten einer einzigen gut ausgestatteten Eizelle.
+> - **Meiose II wird nur bei Befruchtung abgeschlossen.** Die sekundäre Oozyte verlässt den Follikel noch mittendrin (Arrest in Metaphase II) und wartet im Eileiter.
+> - **LH-Peak = positive Rückkopplung**, nicht negative. Hohes Östrogen aktiviert die Hypophyse (statt sie zu hemmen) — klassisches positives Feedback für ein Alles-oder-Nichts-Ereignis.
+> - **Sertoli ≠ Leydig.** Sertoli (in Tubuli, FSH-abhängig, Inhibin, Blut-Hoden-Schranke) vs. Leydig (im Interstitium, LH-abhängig, Testosteron).
+> - **Menstruations-Blut stammt aus dem Endometrium**, nicht aus dem Follikel oder Gelbkörper.
+
+---
+
+## MedAT-Fokus
+
+> **MedAT-Fokus:** Zyklus-Timing (FSH/LH/Östrogen/Progesteron), Oogenese-Arrests und Spermatogenese-Produktzahl sind Standard-Prüfungsfragen. hCG als Schwangerschaftssignal, Sertoli-vs-Leydig-Zuordnung und die positive Rückkopplung des LH-Peaks kommen regelmäßig.
+
+**Zentral prüfungsrelevant:**
+- Spermatogenese: 4 Spermien pro Primärspermatozyt, ~74 Tage, ab Pubertät kontinuierlich
+- Oogenese: 1 Eizelle + 3 Polkörperchen; Arrests Prophase I (pränatal) und Metaphase II (bis Befruchtung)
+- Zyklus: Follikelphase (FSH, Östrogen) → LH-Peak Tag 14 (positive Rückkopplung) → Ovulation → Lutealphase (Corpus luteum, Progesteron)
+- Sertoli (FSH, Inhibin, Blut-Hoden-Schranke) vs. Leydig (LH, Testosteron)
+- Befruchtung: Ampulla tubae; Akrosom-Reaktion → Kortikal-Reaktion → Polyspermie-Block
+- hCG ab Tag 6–7 (Trophoblast) → erhält Corpus luteum → Progesteron bleibt hoch → Schwangerschaft
+
+**Prüfungsrelevante Zahlen:**
+- Spermatogenese ~74 Tage, 200 Millionen Spermien pro Tag
+- Zyklusdauer ~28 Tage, Ovulation ca. Tag 14
+- LH-Peak zu Ovulation: 24–36 h
+- Basaltemperatur-Anstieg nach Ovulation: ~0,5 °C
+- Östrogen-Schwelle für positive Rückkopplung: >200 pg/mL über >2 Tage
+
+## Zusammenfassung
+
+- Spermatogenese: 1 Primärspermatozyt → **4 Spermien** (ab Pubertät, ~74 Tage)
+- Oogenese: 1 Primäroozyt → **1 Eizelle + 3 Polkörperchen**; zwei Meiose-Arrests
+- Zyklus: **FSH → Östrogen → LH-Peak (Tag 14) → Ovulation → Corpus luteum → Progesteron**
+- LH-Peak = **positive Rückkopplung** (Östrogen aktiviert Hypophyse)
+- Sertoli (FSH, Inhibin) · Leydig (LH, Testosteron)
+- Befruchtung in Ampulla tubae; **hCG** erhält Corpus luteum → Schwangerschaft`,
       lernziele: [
         "Die Funktionen von Sertoli-Zellen (Spermatogenese-Unterstützung, Inhibin, Blut-Hoden-Schranke) und Leydig-Zellen (Testosteron unter LH) unterscheiden.",
         "Die Spermatogenese (Spermatogonien → 4 Spermien, ~74 Tage) mit Meiose I/II und Spermiogenese beschreiben.",

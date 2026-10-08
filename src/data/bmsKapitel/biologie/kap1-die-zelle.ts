@@ -29,11 +29,19 @@ export const bioKap1: Kapitel = {
         "Systembiologie",
         "Negative Rückkopplung",
       ],
-      content: `Die Zelle ist die kleinste funktionelle Einheit des Lebens — und damit die Grundlage für fast jede BMS-Frage in Biologie. Dieses Kapitel behandelt den Aufbau eukaryotischer und prokaryotischer Zellen, ihre Organellen, den Membrantransport, die Zellteilung und den Energiestoffwechsel.
+      content: `Was unterscheidet eine lebende Zelle von einem Virus — oder einem Kristall? Die klassische Antwort der Biologie: Leben zeigt sich an sieben Kennzeichen, die alle gleichzeitig erfüllt sein müssen. Für den MedAT ist dieses Thema **Pflichtstoff** — Viren als Grenzfall, Homöostase mit negativer Rückkopplung und die Emergenz-Hierarchie Atom → Zelle → Organismus kommen fast jedes Jahr vor.
+
+{{DIAGRAM:cell-overview}}
+
+> **Lernziele:** Nach diesem Kapitel kannst du
+> - die sieben Kennzeichen des Lebens benennen und mit klinischen Beispielen verknüpfen,
+> - negative und positive Rückkopplung an Blutzucker, Temperatur und Wehen erklären,
+> - Emergenz und die Hierarchie Atom → Zelle → Organismus begründen,
+> - Viren als Grenzfall des Lebens einordnen.
+
+---
 
 ## Die sieben Kennzeichen des Lebens
-
-{{IMAGE}}
 
 Kein einzelnes Merkmal allein definiert Leben — erst ihr Zusammenspiel kennzeichnet ein lebendes System:
 
@@ -111,9 +119,7 @@ Leben ist hierarchisch aufgebaut — auf jeder Ebene entstehen neue Eigenschafte
 
 **Atom → Molekül → Organell → Zelle → Gewebe → Organ → Organsystem → Organismus**
 
-{{DIAGRAM}}
-
-Dieses Phänomen nennt sich **Emergenz** (von lat. *emergere* = hervorkommen): Das Ganze ist mehr als die Summe seiner Teile — die neuen Eigenschaften „kommen hervor”, wenn man die nächsthöhere Ebene betrachtet.
+Dieses Phänomen nennt sich **Emergenz** (von lat. *emergere* = hervorkommen): Das Ganze ist mehr als die Summe seiner Teile — die neuen Eigenschaften „kommen hervor", wenn man die nächsthöhere Ebene betrachtet.
 - Keine einzelne Nervenzelle denkt — aber das Gehirn (Milliarden vernetzte Neuronen) denkt
 - Kein einzelner Herzmuskel pumpt Blut — aber das Herzorgan pumpt
 - Keine einzelne Immunzelle schützt vollständig — aber das Immunsystem schützt
@@ -123,7 +129,45 @@ Dieses Phänomen nennt sich **Emergenz** (von lat. *emergere* = hervorkommen): D
 - Molekülebene: Genmutation (Sichelzellanämie, Krebs)
 - Zellebene: Infektionen, Apoptosedefekte (Apoptose = programmierter Zelltod)
 - Gewebeebene: Fibrose (krankhafte Bindegewebsvermehrung), Atherosklerose (Arterienverkalkung)
-- Systemebene: Sepsis (Blutvergiftung), Herzversagen`,
+- Systemebene: Sepsis (Blutvergiftung), Herzversagen
+
+---
+
+## Typische Fehler und Prüfungsfallen
+
+> **Achtung — häufige Fehler:**
+> - **Virus hat Fortpflanzung ✓, aber keinen Stoffwechsel.** Deshalb wirken Antibiotika nicht gegen Viren (die zielen auf Bakterienstoffwechsel/Zellwand/Ribosomen — alles fehlt bei Viren).
+> - **Negative Rückkopplung ≠ "negativ für den Körper".** Negativ bezieht sich auf das Vorzeichen der Rückmeldung — stabilisiert den Sollwert. Positiv dagegen = Verstärkung, nur bei Alles-oder-Nichts (Wehen, Blutgerinnung, Aktionspotential).
+> - **Homöostase heißt nicht "Konstanz", sondern "dynamisches Gleichgewicht".** Werte dürfen schwanken, nur innerhalb enger Grenzen.
+> - **Emergenz ≠ Reduktionismus.** Emergenz bedeutet: neue Eigenschaften entstehen auf höherer Ebene. Reduktionismus würde versuchen, das Ganze aus den Teilen zu erklären — bei komplexen Systemen reicht das oft nicht.
+
+> **Eselsbrücke:** **StReForWaEvoBeHo** — die sieben Kennzeichen in Reihenfolge.
+
+---
+
+## MedAT-Fokus
+
+> **MedAT-Fokus:** Viren als Grenzfall sind der Klassiker: ja Fortpflanzung + Evolution, aber kein Stoffwechsel/keine Zellstruktur. Negative vs. positive Rückkopplung mit Beispielen muss sitzen. Die Emergenz-Hierarchie wird oft als Reihen-Frage gestellt.
+
+**Zentral prüfungsrelevant:**
+- Die 7 Kennzeichen (StReForWaEvoBeHo) + welche fehlen Viren (Stoffwechsel, Zellstruktur, Wachstum, Reizbarkeit, Bewegung)
+- Negative Rückkopplung: Sensor → Vergleich → Korrektur, wirkt dem Auslöser entgegen (Blutzucker/Insulin, Temperatur, TSH)
+- Positive Rückkopplung: Verstärkung bei Alles-oder-Nichts (Wehen, Blutgerinnung, Aktionspotential)
+- Emergenz-Hierarchie: Atom → Molekül → Organell → Zelle → Gewebe → Organ → Organsystem → Organismus
+- ATP als universelle Energiewährung
+
+**Prüfungsrelevante Zahlen:**
+- Ein Mensch produziert täglich ca. sein eigenes Körpergewicht an ATP
+- Blutzucker-Sollwert: 4–6 mmol/L (nüchtern 3,9–5,5)
+- Aus einer befruchteten Eizelle entstehen >200 verschiedene Zelltypen
+
+## Zusammenfassung
+
+- **7 Kennzeichen des Lebens** (StReForWaEvoBeHo): Stoffwechsel, Reizbarkeit, Fortpflanzung, Wachstum, Evolution, Bewegung, Homöostase
+- **Homöostase** = aktives Halten eines Sollwerts durch **negative Rückkopplung** (Sensor → Vergleich → Korrektur)
+- **Positive Rückkopplung** = Verstärkung bei Alles-oder-Nichts: Wehen, Blutgerinnung, Aktionspotential
+- **Viren** = Grenzfall: Fortpflanzung ✓, Evolution ✓ — Stoffwechsel ✗, Zellstruktur ✗ → kein Ansprechen auf Antibiotika
+- **Emergenz**: Jede Ebene (Atom → Zelle → Organ → Organismus) bringt neue Eigenschaften, die die Teile nicht haben`,
       lernziele: [
         "Die sieben Kennzeichen des Lebens benennen, erläutern und mit klinischen Beispielen verknüpfen",
         "Den Begriff Emergenz im Kontext der Systembiologie präzise erklären und Beispiele nennen",
