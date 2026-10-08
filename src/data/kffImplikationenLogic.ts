@@ -652,6 +652,15 @@ export function parseConclusion(
       object: (someNot[2] ?? "").trim(),
     };
   }
+  // "Keine A sind B" ist semantisch "Alle A sind keine B" (disjunkt) — gleiche Form
+  const keineAsyntax = /^Keine (.+?) sind (.+?)$/i.exec(s);
+  if (keineAsyntax && !/^der Schlussfolgerungen/i.test(keineAsyntax[1] ?? "")) {
+    return {
+      type: "all-not",
+      subject: (keineAsyntax[1] ?? "").trim(),
+      object: (keineAsyntax[2] ?? "").trim(),
+    };
+  }
   const allIn = /^Alle (.+?) sind (.+?)$/i.exec(s);
   if (allIn) {
     return { type: "all", subject: (allIn[1] ?? "").trim(), object: (allIn[2] ?? "").trim() };
