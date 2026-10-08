@@ -207,8 +207,10 @@ function shuffleWithSeed<T>(arr: T[], seed: string): T[] {
 }
 
 function difficultyFromLength(len: number): 1 | 2 | 3 {
-  if (len <= 5) return 1;
-  if (len <= 7) return 2;
+  // MedAT-Spec: 7-15 Buchstaben. Verteilung:
+  // easy: 7-9 Buchstaben | medium: 10-12 | hard: 13-15
+  if (len <= 9) return 1;
+  if (len <= 12) return 2;
   return 3;
 }
 
@@ -256,7 +258,8 @@ function main() {
     if (hasUmlautOrReplacement(raw)) return;
     if (isLikelyVerbInfinitive(raw)) return;
     const w = onlyAZ(raw);
-    if (w.length < 4) return;
+    // MedAT-Spec: Wörter zwischen 7 und 15 Buchstaben
+    if (w.length < 7 || w.length > 15) return;
     if (seen.has(w)) return;
     if (officialWords.has(w)) return;
     if (distinctLetters(w) < 4) return;
